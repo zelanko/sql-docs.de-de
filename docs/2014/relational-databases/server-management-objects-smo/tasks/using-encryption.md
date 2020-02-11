@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 233f5bc9decf5e8246f2aba6836ec5ecb650283b
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72781848"
 ---
 # <a name="using-encryption"></a>Verwenden der Verschlüsselung
@@ -40,7 +40,7 @@ ms.locfileid: "72781848"
  In SMO werden Zertifikate durch das <xref:Microsoft.SqlServer.Management.Smo.Certificate>-Objekt dargestellt. Das <xref:Microsoft.SqlServer.Management.Smo.Certificate>-Objekt verfügt über Eigenschaften, die den öffentlichen Schlüssel, den Namen des Betreffs, die Gültigkeitsdauer und Informationen über den Aussteller festlegen. Die Berechtigung, auf das Zertifikat zuzugreifen, wird über die Methoden `Grant`, `Revoke` und `Deny` gesteuert.  
   
 ## <a name="example"></a>Beispiel  
- Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual&#35; C SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Für das folgende Codebeispiel müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) und [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-basic"></a>Hinzufügen eines Zertifikats in Visual Basic  
  Im Codebeispiel wird ein einfaches Zertifikat mit einem Verschlüsselungskennwort erstellt. Im Gegensatz zu anderen Objekten verfügt die <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>-Methode über mehrere Überladungen. Die im Beispiel verwendete Überladung erstellt ein Zertifikat mit einem Verschlüsselungskennwort.  
@@ -93,5 +93,5 @@ $c.ExpirationDate = "January 01, 2015"
 $c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Verschlüsselungsschlüsseln](using-encryption.md)  

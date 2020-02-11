@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 74470d40bace6e1443ef9eb94f9698e225ff2946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232849"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Ändern von Joinoperatoren (Visual Database Tools)
@@ -28,11 +28,11 @@ ms.locfileid: "63232849"
   
 1.  Klicken Sie im [Diagrammbereich](diagram-pane-visual-database-tools.md)mit der rechten Maustaste auf die zu ändernde Joinlinie, und wählen Sie anschließend im Kontextmenü die Option **Eigenschaften** aus.  
   
-2.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die **Auslassungspunkte (...)**, die rechts neben der Eigenschaft angezeigt werden.  
+2.  Klicken Sie im Eigenschaftenfenster auf **Joinkondition und -typ** und anschließend auf die **Auslassungspunkte (...)** , die rechts neben der Eigenschaft angezeigt werden.  
   
 3.  Wählen Sie im Dialogfeld **Join** einen neuen Operator aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Automatisches Verknüpfen von Tabellen &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md)   
  [Manuelles Verknüpfen von Tabellen &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md)   
  [Erstellen von Abfragen mit Joins &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)  

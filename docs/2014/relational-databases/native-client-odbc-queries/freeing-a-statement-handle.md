@@ -1,5 +1,5 @@
 ---
-title: Freigeben eines Anweisungshandles | Microsoft-Dokumentation
+title: Freigeben eines Anweisungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b1a155f7d2ee6cc5f92d46c2bb744168dc5ebc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200044"
 ---
 # <a name="freeing-a-statement-handle"></a>Freigeben eines Anweisungshandles
-  Es ist effizienter, Anweisungshandles wieder zu verwenden, als sie zu löschen und neu zuzuordnen. Vor dem Ausführen einer neuen SQL-Anweisung für ein Anweisungshandle sollten Anwendungen überprüfen, ob die aktuellen Anweisungseinstellungen korrekt sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im allgemeinen Parameter und Resultsets legt fest, für die alte SQL-Anweisung aufgehoben werden muss, durch den Aufruf [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) mit dem SQL_RESET_PARAMS und SQL_UNBIND "Optionen", und klicken Sie dann die Bindung erneut für die neue SQL-Anweisung.  
+  Es ist effizienter, Anweisungshandles wieder zu verwenden, als sie zu löschen und neu zuzuordnen. Vor dem Ausführen einer neuen SQL-Anweisung für ein Anweisungshandle sollten Anwendungen überprüfen, ob die aktuellen Anweisungseinstellungen korrekt sind. Dazu zählen beispielsweise Anweisungsattribute, Parameterbindungen und Resultsetbindungen. Im Allgemeinen müssen die Bindung von Parametern und Resultsets für die alte SQL-Anweisung aufgehoben werden, indem [SQLFreeStmt](../native-client-odbc-api/sqlfreestmt.md) mit den Optionen SQL_RESET_PARAMS und SQL_UNBIND aufgerufen und dann für die neue SQL-Anweisung erneut gebunden wird.  
   
- Wenn die Anwendung mithilfe der Anweisung abgeschlossen ist, ruft er [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) um die Anweisung freizugeben. Beachten Sie, dass **SQLDisconnect** alle Anweisungen für eine Verbindung automatisch freigibt.  
+ Wenn die Anwendung die Verwendung der-Anweisung abgeschlossen hat, wird [SQLFreeHandle](../native-client-odbc-api/sqlfreehandle.md) aufgerufen, um die-Anweisung freizugeben. Beachten Sie, dass **SQLDisconnect** automatisch alle-Anweisungen für eine Verbindung freigibt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Abfragen &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Abfragen &#40;ODBC-&#41;](executing-queries-odbc.md)  
   
   

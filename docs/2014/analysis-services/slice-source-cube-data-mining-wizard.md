@@ -1,5 +1,5 @@
 ---
-title: Slice-Quellcube (Datamining-Assistent) | Microsoft-Dokumentation
+title: Quellcube in Slice (Data Mining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068597"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Quellcube in Slices aufteilen (Data Mining-Assistent)
@@ -26,20 +26,20 @@ ms.locfileid: "66068597"
   
  Wenn Sie mit Slices und Cubes nicht vertraut sind, empfehlen wir, die folgenden Artikel zu lesen:  
   
--   [Legen Sie die Slice-Eigenschaft von Partition &#40;Analysis Services&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
+-   [Legen Sie die Eigenschaft Partitions Slice &#40;Analysis Services fest&#41;](multidimensional-models/set-the-partition-slice-property-analysis-services.md)  
   
 -   [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)  
   
 > [!NOTE]  
 >  Beachten Sie, dass dynamische MDX-Funktionen (z.B. [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) oder [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) in der Slice-Eigenschaft für Partitionen nicht unterstützt werden. Sie müssen das Slice mit expliziten Tupel- oder Elementverweisen definieren.  
 >   
->  Beispielsweise anstelle von [: &#40;Bereich&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) um einen Bereich zu definieren, müssten Sie jedes Element anhand der bestimmten Jahre auflisten.  
+>  Anstatt beispielsweise [: &#40;Range&#41; &#40;MDX-&#41;](/sql/mdx/range-mdx) zum Definieren eines Bereichs zu verwenden, müssen Sie jedes Element anhand der bestimmten Jahre auflisten.  
 >   
 >  Wenn Sie ein komplexes Slice definieren müssen, empfiehlt sich das Definieren der Tupel im Slice mithilfe eines XMLA-Alter-Skripts. Anschließend können Sie das Befehlszeilentool „Ascmd“ oder die SSIS- [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um unmittelbar vor dem Verarbeiten der Partition das Skript auszuführen und den bestimmten Satz an Elementen zu erstellen.  
   
- **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter:** [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dimension**  
  Wählen Sie die Dimension aus, die Sie in Slices aufteilen möchten.  
   
@@ -51,17 +51,17 @@ ms.locfileid: "66068597"
  **Operator**  
  Wählen Sie den Operator aus, der beim Erstellen eines Sliceausdrucks verwendet werden soll.  
   
- Z. B. Wenn Sie "geography" als Hierarchie ausgewählt haben, Sie können wählen Sie den Operator =, und geben Sie dann "Europe" als Filter, um nur Cubedaten für Europa abzurufen.  
+ Wenn Sie z. b. geography als Hierarchie ausgewählt haben, können Sie den Operator = auswählen und dann "Europe" als Filter eingeben, um nur die Cube-Daten für Europa zu erhalten.  
   
- **Filterausdruck**  
+ **Filter Ausdruck**  
  Geben Sie einen Ausdruck ein, der beim Filtern des Cubes nach der ausgewählten Dimension als Kriterium verwendet werden soll.  
   
  **Parameter**  
  Diese Option wird nicht für Data Mining-Modelle verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Der Assistent &#40;Datamining-Assistent&#41;](completing-the-wizard-data-mining-wizard.md)   
- [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Geben Sie die Verwendung der Miningmodellspalte &#40;Datamining-Assistent&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Der Assistent &#40;Data Mining-Assistenten wird abgeschlossen&#41;](completing-the-wizard-data-mining-wizard.md)   
+ [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Verwendungs &#40;Data Mining-Assistenten für Mining Modell Spalten angeben&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

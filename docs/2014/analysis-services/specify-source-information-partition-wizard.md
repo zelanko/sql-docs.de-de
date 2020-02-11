@@ -1,5 +1,5 @@
 ---
-title: Quellinformationen angeben (Partitions-Assistent) | Microsoft-Dokumentation
+title: Quell Informationen angeben (Partitions-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,29 +13,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068170"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Quellinformationen angeben (Partitions-Assistent)
   Auf der Seite **Quellinformationen angeben** können Sie die Measuregruppe, in der die Partition erstellt werden soll, und die Datenquellensicht und die Filtertabellen für die Partition auswählen.  
   
 > [!CAUTION]  
->  Wenn Sie unter **Verfügbare Tabellen** eine Tabelle angeben, die auch von einer anderen Partition verwendet wird, müssen Sie auf der Seite **Zeilen einschränken** eine Abfrage bereitstellen, da andernfalls die Gefahr besteht, dass die Daten im Cube dupliziert werden.  
+>  Wenn Sie in **Verfügbare Tabellen** eine Tabelle angeben, die von einer anderen Partition verwendet wird, müssen Sie auf der Seite **Zeilen einschränken** eine Abfrage bereitstellen, oder es besteht die Gefahr, dass die Daten im Cube dupliziert werden.  
   
-## <a name="options"></a>Optionen  
- **Measuregruppe**  
+## <a name="options"></a>Tastatur  
+ **Measure-Gruppe**  
  Wählen Sie für die Partition eine Measuregruppe aus.  
   
  **Look in**  
  Wählen Sie die Datenquelle oder Datenquellensicht mit den Quelltabellen für die Partition aus. Die durch die Measuregruppe verwendete Datenquellensicht wird standardmäßig ausgewählt.  
   
- **Filtertabellen**  
+ **Tabellenfilter**  
  Geben Sie die Zeichenfolge ein, die verwendet werden soll, um die unter **Verfügbare Tabellen**angezeigten Tabellen auf der Grundlage des Tabellennamens einzuschränken.  
   
- **Suchen von Tabellen**  
+ **Suchen nach Tabellen**  
  Wählen Sie diese Option aus, um die Liste der Tabellen unter **Verfügbare Tabellen**zu aktualisieren und die Liste weiter einzuschränken, falls in **Tabellenfilter**eine Zeichenfolge eingegeben wurde.  
   
  **Verfügbare Tabellen**  
@@ -48,7 +48,7 @@ ms.locfileid: "66068170"
 > [!NOTE]  
 >  Wenn mehrere Tabellen ausgewählt werden, kann die Seite **Zeilen einschränken** nicht angezeigt werden, und die Zeilen können nicht für die von den ausgewählten Tabellen erstellten Partitionen eingeschränkt werden. Um die Zeilen für die einzelnen Partitionen einzuschränken, führen Sie den Partitions-Assistenten einmal für jede Tabelle aus, von der eine Partition erstellt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

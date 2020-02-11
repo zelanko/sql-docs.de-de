@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay-Sicherheit | Microsoft-Dokumentation
+title: Distributed Replay Sicherheit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c040bde90a54b9327023d1e1889efdd2930d81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150348"
 ---
 # <a name="distributed-replay-security"></a>Distributed Replay-Sicherheit
-  Bevor Sie die Distributed Replay-Funktion von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Thema lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
+  Bevor Sie das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay-Feature installieren und verwenden, sollten Sie die wichtigen Sicherheitsinformationen in diesem Thema lesen. In diesem Thema werden die nach der Installation auszuführenden Sicherheitskonfigurationsschritte beschrieben, die erforderlich sind, bevor Sie Distributed Replay verwenden können. Zudem werden in diesem Thema wichtige Überlegungen im Hinblick auf Datenschutz und wichtige Schritte zum Entfernen von Elementen beschrieben.  
   
 ## <a name="user-and-service-accounts"></a>Benutzer- und Dienstkonten  
  In der folgenden Tabelle werden die Konten beschrieben, die für Distributed Replay verwendet werden. Nach der Installation von Distributed Replay müssen Sie die Sicherheitsprinzipale zuweisen, unter denen der Controller und der Clientdienst ausgeführt werden. Daher empfiehlt es sich, dass Sie die entsprechenden Domänenbenutzerkonten konfigurieren, bevor Sie die Distributed Replay-Funktionen installieren.  
   
-|Benutzerkonto|Anforderungen|  
+|Benutzerkonto|Requirements (Anforderungen)|  
 |------------------|------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Controller|Kann ein Domänenbenutzerkonto oder ein lokales Benutzerkonto sein. Wenn Sie ein lokales Benutzerkonto verwenden, müssen das Verwaltungstool, der Controller und der Client auf demselben Computer ausgeführt werden.<br /><br /> **\*\* Sicherheitshinweis \*\*** Dieses Konto sollte nicht Mitglied der Windows-Gruppe „Administratoren“ sein.|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|Kann ein Domänenbenutzerkonto oder ein lokales Benutzerkonto sein. Wenn Sie ein lokales Benutzerkonto verwenden, müssen der Controller, der Client und der Ziel-SQL-Server auf demselben Computer ausgeführt werden.<br /><br /> **\*\* Sicherheitshinweis \*\*** Dieses Konto sollte nicht Mitglied der Windows-Gruppe „Administratoren“ sein.|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Controller|Kann ein Domänenbenutzerkonto oder ein lokales Benutzerkonto sein. Wenn Sie ein lokales Benutzerkonto verwenden, müssen das Verwaltungstool, der Controller und der Client auf demselben Computer ausgeführt werden.<br /><br /> ** \* \* Sicherheits \* Hinweis** Es wird empfohlen, dass das Konto kein Mitglied der lokalen Administratoren Gruppe in Windows ist.|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|Kann ein Domänenbenutzerkonto oder ein lokales Benutzerkonto sein. Wenn Sie ein lokales Benutzerkonto verwenden, müssen der Controller, der Client und der Ziel-SQL-Server auf demselben Computer ausgeführt werden.<br /><br /> ** \* \* Sicherheits \* Hinweis** Es wird empfohlen, dass das Konto kein Mitglied der lokalen Administratoren Gruppe in Windows ist.|  
 |Interaktives Benutzerkonto, das verwendet wird, um das Distributed Replay-Verwaltungstool auszuführen|Kann entweder ein lokales Benutzerkonto oder ein Domänenbenutzerkonto sein. Um ein lokales Benutzerkonto zu verwenden, müssen das Verwaltungstool und der Controller auf demselben Computer ausgeführt werden.|  
   
- **Wichtige**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie eine oder mehrere Benutzerkonten angeben, die zum Ausführen der Distributed Replay Client-Dienste verwendet werden. Die folgenden Kontotypen werden unterstützt:  
+ **Wichtig**: Wenn Sie Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
   
 -   Domänenbenutzerkonto  
   
@@ -47,9 +49,9 @@ ms.locfileid: "63150348"
   
 1.  Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie auf **starten**, Typ `services.msc` in die **Suche** Feld, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken **** Sie auf Start `services.msc` , geben Sie in das **Suchfeld** ein, und drücken Sie dann die EINGABETASTE.  
   
-    -   Klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `services.msc`, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie im **Startmenü**auf **Ausführen**, geben `services.msc`Sie ein, und drücken Sie die EINGABETASTE.  
   
 2.  Klicken Sie im Dialogfeld **Services** mit der rechten Maustaste auf den Dienst, den Sie konfigurieren möchten, und klicken Sie dann auf **Properties**.  
   
@@ -62,32 +64,37 @@ ms.locfileid: "63150348"
   
 |Konto|Ordnerberechtigungen|  
 |-------------|------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Controller|`<Controller_Installation_Path>\DReplayController` (Lesen, Schreiben, Löschen)<br /><br /> `DReplayServer.xml` Datei (Lesen, Schreiben)|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (Lesen, Schreiben, Löschen)<br /><br /> `DReplayClient.xml` Datei (Lesen, Schreiben)<br /><br /> Die Arbeits- und Ergebnisverzeichnisse, die in der Clientkonfigurationsdatei durch die Elemente `WorkingDirectory` und `ResultDirectory` angegeben werden. (Lesen, Schreiben)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Controller|`<Controller_Installation_Path>\DReplayController`(Lesen, schreiben, löschen)<br /><br /> 
+  `DReplayServer.xml` Datei (Lesen, Schreiben)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|`<Client_Installation_Path>\DReplayClient`(Lesen, schreiben, löschen)<br /><br /> 
+  `DReplayClient.xml` Datei (Lesen, Schreiben)<br /><br /> Die Arbeits- und Ergebnisverzeichnisse, die in der Clientkonfigurationsdatei durch die Elemente `WorkingDirectory` und `ResultDirectory` angegeben werden. (Lesen, Schreiben)|  
   
 ## <a name="dcom-permissions"></a>DCOM-Berechtigungen  
  DCOM wird für die RPC-Kommunikation (Remote Procedure Call) zwischen dem Controller und dem Verwaltungstool und zwischen dem Controller und allen Clients verwendet. Sie müssen computerweite und anwendungsspezifische DCOM-Berechtigungen für den Controller konfigurieren, nachdem die Distributed Replay-Funktionen installiert wurden.  
   
  Führen Sie folgende Schritte aus, um die DCOM-Berechtigungen für den Controller zu konfigurieren:  
   
-1.  **Öffnen Sie dcomcnfg.exe, das Komponentendienste-Snap-in**: Dies ist das Tool, das zum Konfigurieren von DCOM-Berechtigungen verwendet wird.  
+1.  **Öffnen Sie DCOMCNFG. exe, das Komponenten Dienste-Snap-in**: Dieses Tool wird zum Konfigurieren der DCOM-Berechtigungen verwendet.  
   
     1.  Klicken Sie auf dem Controllercomputer auf **Start**.  
   
-    2.  Typ `dcomcnfg.exe` in die **Suche** Feld.  
+    2.  Geben `dcomcnfg.exe` Sie in das **Suchfeld** ein.  
   
     3.  Drücken Sie die EINGABETASTE.  
   
-2.  **Konfigurieren Sie computerweite DCOM-Berechtigungen**: Erteilen Sie die entsprechenden computerweiten DCOM-Berechtigungen für jedes Konto in der folgenden Tabelle aufgeführt. Weitere Informationen zum Festlegen von computerweiten Berechtigungen finden Sie unter [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
+2.  **Konfigurieren von Computer weiten DCOM-Berechtigungen**: erteilen Sie die entsprechenden Computer weiten DCOM-Berechtigungen für jedes Konto, das in der folgenden Tabelle aufgeführt ist. Weitere Informationen zum Festlegen von computerweiten Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
-3.  **Konfigurieren Sie anwendungsspezifische DCOM-Berechtigungen**: Erteilen Sie die entsprechenden anwendungsspezifischen DCOM-Berechtigungen für jedes Konto in der folgenden Tabelle aufgeführt. Der DCOM-Anwendungsname für den Controllerdienst ist **DReplayController**. Weitere Informationen zum Festlegen von anwendungsspezifischen Berechtigungen finden Sie unter [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
+3.  **Konfigurieren von anwendungsspezifischen DCOM-Berechtigungen**: erteilen Sie die entsprechenden anwendungsspezifischen DCOM-Berechtigungen für jedes Konto, das in der folgenden Tabelle aufgeführt ist. Der DCOM-Anwendungsname für den Controllerdienst ist **DReplayController**. Weitere Informationen zum Festlegen von anwendungsspezifischen Berechtigungen finden Sie in [Prüfliste: Verwalten von DCOM-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=185842).  
   
  In der folgenden Tabelle wird beschrieben, welche DCOM-Berechtigungen für das interaktive Benutzerkonto für das Verwaltungstool und die Clientdienstkonten erforderlich sind:  
   
 |Funktion|Konto|Erfordert DCOM-Berechtigungen für den Controller|  
 |-------------|-------------|---------------------------------------------|  
 |Distributed Replay–Verwaltungstool|Das interaktive Benutzerkonto|Lokaler Zugriff<br /><br /> Remotezugriff<br /><br /> Lokaler Start<br /><br /> Remotestart<br /><br /> Lokale Aktivierung<br /><br /> Remoteaktivierung|  
-|Distributed Replay Client|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|Lokaler Zugriff<br /><br /> Remotezugriff<br /><br /> Lokaler Start<br /><br /> Remotestart<br /><br /> Lokale Aktivierung<br /><br /> Remoteaktivierung|  
+|Distributed Replay Client|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienstkonto für Distributed Replay Client|Lokaler Zugriff<br /><br /> Remotezugriff<br /><br /> Lokaler Start<br /><br /> Remotestart<br /><br /> Lokale Aktivierung<br /><br /> Remoteaktivierung|  
   
 > [!IMPORTANT]  
 >  Stellen Sie zum Schutz vor böswilligen Abfragen oder Denial-of-Service-Angriffen sicher, dass nur ein vertrauenswürdiges Benutzerkonto für das Clientdienstkonto verwendet wird. Dieses Konto wird in der Lage sein, eine Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen und Arbeitsauslastungen für diese Instanz zu simulieren.  
@@ -128,7 +135,7 @@ ms.locfileid: "63150348"
   
 -   Löschen Sie alle Ablaufverfolgungsdateien, Zwischendateien, Dispatchdateien und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdateien, die für Tests verwendet wurden. Die Zwischendateien und Dispatchdateien werden im Arbeitsverzeichnis auf dem Controller bzw. dem Client gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Installieren von Distributed Replay](install-distributed-replay-overview.md)  
   

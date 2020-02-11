@@ -1,5 +1,5 @@
 ---
-title: Zuordnen eines Anweisungshandles | Microsoft-Dokumentation
+title: Zuordnen eines Anweisungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,26 +21,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68e3d7a53f96216d158ddbdb1d1d0ca59db5f81f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200254"
 ---
 # <a name="allocating-a-statement-handle"></a>Zuordnen eines Anweisungshandles
-  Bevor eine Anwendung eine Anweisung ausführen kann, muss sie ein Anweisungshandle zuordnen. Dies geschieht durch Aufrufen von **SQLAllocHandle** mit der *HandleType* -Parameter auf SQL_HANDLE_STMT festgelegt und *InputHandle* auf ein Verbindungshandle zeigt.  
+  Bevor eine Anwendung eine Anweisung ausführen kann, muss sie ein Anweisungshandle zuordnen. Dies geschieht durch Aufrufen von **sqlzuordchandle** , wobei der Parameter " *typtype* " auf "SQL_HANDLE_STMT" festgelegt ist und " *InputHandle* " auf ein Verbindungs Handle verweist.  
   
- Anweisungsattribute sind Eigenschaften des Anweisungshandles. Beispielanweisungsattribute können die Verwendung von Lesezeichen und den mit dem Resultset der Anweisung zu verwendenden Cursor beinhalten. Anweisungsattribute werden mit festgelegt [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md), und ihre aktuellen Einstellungen werden abgerufen, indem Sie mithilfe von [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md). Es ist nicht erforderlich, dass eine Anwendung Anweisungsattribute festlegt; alle Anweisungsattribute haben Standardwerte und einige sind treiberspezifisch.  
+ Anweisungsattribute sind Eigenschaften des Anweisungshandles. Beispielanweisungsattribute können die Verwendung von Lesezeichen und den mit dem Resultset der Anweisung zu verwendenden Cursor beinhalten. Anweisungs Attribute werden mit [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)festgelegt, und ihre aktuellen Einstellungen werden mithilfe von [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)abgerufen. Es ist nicht erforderlich, dass eine Anwendung Anweisungsattribute festlegt; alle Anweisungsattribute haben Standardwerte und einige sind treiberspezifisch.  
   
- Gehen Sie bei der Verwendung mehrere ODBC-Anweisungs- und -Verbindungsoptionen vorsichtig vor. Aufrufen von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit *fOption* legen Sie die Zeit, die eine Anwendung eine Verbindung zum Timeout beim Warten auf den zum Herstellen einer Verbindung (0 wartet auf SQL_ATTR_LOGIN_TIMEOUT-Steuerelemente Gibt eine unendliche Wartezeit). Für Sites mit langen Reaktionszeiten kann hierfür ein hoher Wert festgelegt werden, um sicherzustellen, dass zum Herstellen von Verbindungen ausreichend Zeit eingeräumt wird. Jedoch sollte das Intervall stets so niedrig sein, dass der Benutzer nach einer angemessenen Zeitspanne benachrichtig wird, wenn der Treiber keine Verbindung herstellen kann.  
+ Gehen Sie bei der Verwendung mehrere ODBC-Anweisungs- und -Verbindungsoptionen vorsichtig vor. Der Aufruf von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit auf SQL_ATTR_LOGIN_TIMEOUT festgelegter *fOption* steuert die Zeit, die eine Anwendung auf einen Timeout Timeout wartet, während darauf gewartet wird, dass eine Verbindung hergestellt wird (0 gibt eine unbegrenzte Wartezeit an). Für Sites mit langen Reaktionszeiten kann hierfür ein hoher Wert festgelegt werden, um sicherzustellen, dass zum Herstellen von Verbindungen ausreichend Zeit eingeräumt wird. Jedoch sollte das Intervall stets so niedrig sein, dass der Benutzer nach einer angemessenen Zeitspanne benachrichtig wird, wenn der Treiber keine Verbindung herstellen kann.  
   
- Aufrufen von **SQLSetStmtAttr** mit *fOption* auf SQL_ATTR_QUERY_TIMEOUT festgelegt ist, legt ein abfragetimeoutintervall zum Schutz der Server und der Benutzer von lang ausgeführten Abfragen.  
+ Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_QUERY_TIMEOUT festgelegt ist, wird ein Abfrage Timeout Intervall festgelegt, um den Server und den Benutzer vor Abfragen mit langer Laufzeit zu schützen.  
   
- Aufrufen von **SQLSetStmtAttr** mit *fOption* auf SQL_ATTR_MAX_LENGTH festgelegt ist, schränkt die Menge der **Text** und **Image** Daten, die ein Es kann einzelne Anweisung abrufen. Aufrufen von **SQLSetStmtAttr** mit *fOption* auf SQL_ATTR_MAX_ROWS festgelegt beschränkt außerdem ein Rowset mit dem ersten *n* Zeilen ist, die alle für die Anwendung benötigt werden. Beachten Sie, dass das Festlegen von SQL_ATTR_MAX_ROWS bewirkt, dass der Treiber eine SET ROWCOUNT-Anweisung an den Server ausgibt. Dies wirkt sich auf alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisungen, einschließlich Trigger und Updates.  
+ Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_MAX_LENGTH festgelegt ist, wird die Menge an **Text** -und **Bilddaten** , die eine einzelne Anweisung abrufen kann, eingeschränkt. Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_MAX_ROWS festgelegt ist, schränkt auch ein Rowset auf die ersten *n* Zeilen ein, wenn dies alles ist, was die Anwendung erfordert. Beachten Sie, dass das Festlegen von SQL_ATTR_MAX_ROWS bewirkt, dass der Treiber eine SET ROWCOUNT-Anweisung an den Server ausgibt. Dies wirkt sich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf alle-Anweisungen aus, einschließlich Triggern und Updates.  
   
  Gehen Sie beim Festlegen dieser Optionen vorsichtig vor. Im Idealfall sollten alle Anweisungshandle eines Verbindungshandles die gleichen Einstellungen für SQL_ATTR_MAX_LENGTH und SQL_ATTR_MAX_ROWS aufweisen. Wenn der Treiber von einem Anweisungshandle zu einem anderen mit abweichenden Werten für diese Optionen wechselt, muss der Treiber die entsprechenden SET TEXTSIZE- und SET ROWCOUNT-Anweisungen generieren, um die Einstellungen zu ändern. Der Treiber kann diese Anweisungen nicht dem gleichen Batch zuordnen, in dem sich auch die SQL-Anweisung des Benutzers befindet, da die SQL-Anweisung des Benutzers eine Anweisung enthalten kann, die die erste Anweisung in einem Batch darstellen muss. Der Treiber muss die Anweisungen SET TEXTSIZE und SET ROWCOUNT in einem separaten Batch senden, der automatisch einen zusätzlichen Roundtrip zum Server generiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Abfragen &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Abfragen &#40;ODBC-&#41;](executing-queries-odbc.md)  
   
   

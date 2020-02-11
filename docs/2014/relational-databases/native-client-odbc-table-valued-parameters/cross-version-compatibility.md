@@ -1,5 +1,5 @@
 ---
-title: Versionsübergreifende Kompatibilität | Microsoft-Dokumentation
+title: Versions übergreifende Kompatibilität | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f23b0f43b32d737f03cb7c9b00368558e89e9288
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63199996"
 ---
 # <a name="cross-version-compatibility"></a>Versionsübergreifende Kompatibilität
   Konflikte zwischen Versionen können auftreten, wenn Client- oder Serverinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Tabellenwertparameter verarbeiten sollen.  
   
- Im Allgemeinen ist die Tabellenwertparameter-Funktionalität nur für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Clients oder höher verfügbar (unter Verwendung von SQL Server Native Client 10.0), die mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Servern (oder höher) verbunden sind. Neue Spalten in Resultsets von Katalogfunktionen ist nur vorhanden sein, beim Verbinden mit einem [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Server.  
+ Im Allgemeinen ist die Tabellenwertparameter-Funktionalität nur für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Clients oder höher verfügbar (unter Verwendung von SQL Server Native Client 10.0), die mit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Servern (oder höher) verbunden sind. Neue Spalten in Resultsets von Katalog Funktionen sind nur vorhanden, wenn eine [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Verbindung mit einem-Server (oder höher) besteht.  
   
  Wenn eine mit einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client kompilierte Clientanwendung Anweisungen ausführt, für die Tabellenwertparameter erwartet werden, wird dies vom Server als Datenkonvertierungsfehler erkannt, und ODBC gibt einen SQLSTATE 07006-Fehler und die Meldung "Attributverletzung beschränkter Datentypen" zurück.  
   
- Wenn eine Clientanwendung, die mit kompiliert wurde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 oder höher versucht, verwenden Sie Tabellenwertparameter beim Verbinden mit einer Server-Instanz vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client erkennt dies und SQLBindCol, SQLBindParameter SQLSetDescFields und SQLSetDescRec Aufrufe schlagen mit SQLSTATE 07006 und der Meldung fehl "Restricted Daten attributverletzung (die Version von SQLServer für diese Verbindung unterstützt keine Tabellenwertparameter)".  
+ Wenn eine Client Anwendung, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10,0 oder höher kompiliert wurde, versucht, Tabellenwert Parameter zu verwenden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], wenn eine Verbindung mit einer Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz vor hergestellt wurde, dies wird von Native Client erkannt, und die Aufrufe SQLBindCol, SQLBindParameter, sqlsetdescfields und SQLSetDescRec schlagen mit SQLState 07006 und der Meldung "Attribut Verletzung eingeschränkter Datentypen (die Version von SQL Server für diese Verbindung unterstützt keine Tabellenwert Parameter)" fehl.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellenwertparameter &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellenwert Parameter &#40;ODBC-&#41;](table-valued-parameters-odbc.md)  
   
   

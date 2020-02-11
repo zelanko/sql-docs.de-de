@@ -1,5 +1,5 @@
 ---
-title: Was-Wenn-Szenario (Tabellenanalysetools für Excel) | Microsoft-Dokumentation
+title: Was-wäre-wenn-Szenario (Tabellenanalyse Tools für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fef8ca20bd3e137d21b5121f42a0d7fee82ae4a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065391"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Was-wäre-wenn-Szenario (Tabellenanalysetools für Excel)
-  ![Welche Wenn-Szenario-Schaltfläche in Tabellenanalysetools](media/tat-whatif.gif "wäre-wenn-Szenario-Schaltfläche in Tabellenanalysetools")  
+  ![Schaltfläche für Was-wäre-wenn-Szenario in der Leiste "Tabellenanalysetools"](media/tat-whatif.gif "Schaltfläche für Was-wäre-wenn-Szenario in der Leiste "Tabellenanalysetools"")  
   
- Die **What-If** Szenario Tool analysiert Muster in vorhandenen Daten und anschließend können Sie die Auswirkungen zu bewerten, die Änderungen in einer Spalte auf den Wert einer anderen Spalte hätten.  
+ Das **Was-wäre-wenn-** szenariotool analysiert Muster in vorhandenen Daten und ermöglicht es Ihnen, die Auswirkung zu bewerten, die Änderungen in einer Spalte auf den Wert einer anderen Spalte haben.  
   
  Beispielsweise können Sie die Auswirkung einer Preiserhöhung für einen Artikel auf dessen Gesamtumsatz prüfen.  
   
@@ -34,36 +34,36 @@ ms.locfileid: "66065391"
   
 1.  Öffnen Sie eine Excel-Datentabelle.  
   
-2.  Klicken Sie auf **Szenarien**, und wählen Sie dann **What-If**.  
+2.  Klicken Sie auf **Szenarios**und dann auf **Was-wäre-wenn**.  
   
-3.  In der **Szenario** wählen die Spalte, die den Wert ändern, und geben Sie die Änderung als spezifischen Wert oder als Prozentsatz der Änderung (vergrößert oder verringert) für die aktuellen Werte enthält.  
+3.  Wählen Sie im Feld **Szenario** die Spalte aus, die den Wert enthält, den Sie ändern möchten, und geben Sie die Änderung entweder als einen bestimmten Wert oder als Prozentsatz der Änderung (entweder erweitert oder verkleinert) für die aktuellen Werte an.  
   
-4.  In der **was geschieht mit** geben die Spalte, die für die Sie die Auswirkung überprüfen möchten.  
+4.  Geben Sie im Feld **Was geschieht mit** die Spalte an, für die Sie den Effekt bewerten möchten.  
   
-5.  Klicken Sie optional auf **Spalten für die Analyse auswählen** um Spalten auszuwählen, die wahrscheinlich in der Vorhersage nützlich sind. Sie können die Auswahl von Spalten aufheben, die beim Erkennen von Mustern wahrscheinlich wenig nützlich sein werden, z. B. Zeilen-IDs oder Namen.  
+5.  Klicken Sie optional auf **Spalten auswählen, die für die Analyse verwendet werden** sollen, um Spalten auszuwählen, die bei der Vorhersage wahrscheinlich nützlich sind. Sie können die Auswahl von Spalten aufheben, die beim Erkennen von Mustern wahrscheinlich wenig nützlich sein werden, z. B. Zeilen-IDs oder Namen.  
   
-6.  In der **Zeile oder Tabelle angeben** wählen, ob die Auswirkungen, die bewertet werden, für die nur die aktuell ausgewählte Zeile oder den vollständigen Satz von Daten in der Tabelle werden soll.  
+6.  Wählen Sie im Feld **Zeile oder Tabelle angeben** aus, ob die Auswirkung nur für die aktuell ausgewählte Zeile oder für den gesamten Satz von Daten in der Tabelle ausgewertet werden soll.  
   
-7.  Bei Auswahl von **in dieser Zeile**, das Tool zeigt das Ergebnis in das Dialogfeld. Sie können Ihre Auswahl ändern, um andere Szenarien zu testen, während das Dialogfeld geöffnet ist.  
+7.  Wenn Sie in **dieser Zeile**auswählen, zeigt das Tool das Ergebnis im Dialogfeld an. Sie können Ihre Auswahl ändern, um andere Szenarien zu testen, während das Dialogfeld geöffnet ist.  
   
-8.  Bei Auswahl von **ganze Tabelle**, das Tool zeigt eine Statusmeldung in das Dialogfeld, und der ursprünglichen Datentabelle zwei neue Spalten hinzugefügt. Klicken Sie auf **schließen** zum Anzeigen der vollständigen Ergebnisse im Arbeitsblatt.  
+8.  Wenn Sie die **gesamte Tabelle**auswählen, zeigt das Tool eine Statusmeldung im Dialogfeld an und fügt der ursprünglichen Datentabelle zwei neue Spalten hinzu. Klicken Sie auf **Schließen** , um die gesamten Ergebnisse im Arbeitsblatt anzuzeigen.  
   
-### <a name="requirements"></a>Anforderungen  
+### <a name="requirements"></a>Requirements (Anforderungen)  
  Für dieses Tool wird der Microsoft Logistic Regression-Algorithmus verwendet, der Vorhersagen für numerische oder diskrete Werte unterstützt. Um aber die besten Ergebnisse zu erzielen, sollten Sie die folgenden bewährten Methoden anwenden:  
   
 -   Wählen Sie Spalten für die Analyse aus, die nützliche Informationen enthalten.  
   
 -   Wenn Sie zu wenige Spalten einschließen, kann das Erzielen von Ergebnissen erschwert werden.  
   
--   Bei Verwendung der **Wert** Option, Sie müssen einen Wert in das Feld eingeben oder wählen Sie einen Wert aus der Liste.  
+-   Wenn Sie die Option **mit Wert** verwenden, müssen Sie einen Wert in das Feld eingeben oder einen Wert aus der Liste auswählen.  
   
--   Bei Verwendung der **Prozentsatz** aus, legen Sie die Änderung als prozentuale Erhöhung oder Verringerung der. Der Standardwert ist 120 Prozent, das bedeutet eine Erhöhung von 20 Prozent über den aktuellen Wert.  
+-   Wenn Sie die Option **Prozentsatz** verwenden, legen Sie die Änderung als prozentuale Erhöhung oder Verringerung fest. Der Standardwert ist 120 Prozent, das bedeutet eine Erhöhung von 20 Prozent über den aktuellen Wert.  
   
 > [!NOTE]  
 >  Wenn Sie keinen Wert festlegen, wird möglicherweise ein Fehler angezeigt.  
   
 ## <a name="understanding-the-results-of-what-if-analysis"></a>Grundlegendes zu den Ergebnissen der Was-wäre-wenn-Analyse  
- Bei der Erstellung einer **What-If** Szenario, das Tool führt drei Aufgaben:  
+ Wenn Sie ein **Was-wäre-wenn-** Szenario erstellen, erledigt das Tool drei Dinge:  
   
 -   Es wird eine Data Mining-Struktur erstellt, in der wichtige Fakten zu den Daten in der Tabelle gespeichert werden.  
   
@@ -71,19 +71,19 @@ ms.locfileid: "66065391"
   
 -   Es wird eine Vorhersageabfrage für alle von Ihnen angegebenen Werte erstellt.  
   
- Sie können alle Vorhersagen gleichzeitig ausgeben, dazu **ganze Tabelle**. Vom Tool werden daraufhin in der ursprünglichen Datentabelle zwei neue Spalten erstellt.  
+ Sie können alle Vorhersagen gleichzeitig ausgeben, indem Sie die **gesamte Tabelle**angeben. Vom Tool werden daraufhin in der ursprünglichen Datentabelle zwei neue Spalten erstellt.  
   
  Die der Tabelle hinzugefügten Spalten enthalten zwei Informationstypen: den geänderten vorhergesagten Wert sowie das Vertrauen in den Wert. Mit Vertrauen ist die Wahrscheinlichkeit gemeint, dass die Vorhersage zutrifft.  
   
- Sie können Änderungswerte auch nacheinander im Dialogfeld eingeben und die Vorhersagen anschließend interaktiv anzeigen. Dies ist dasselbe wie das Erstellen einer *Singleton-Vorhersageabfrage*. Die Ergebnisse der Vorhersageabfrage werden zusammen mit den folgenden Informationen ausgegeben: dem Erfolg oder Fehler der Vorhersage, dem vorhergesagten Wert sowie dem Vertrauensgrad. Der Vertrauensgrad wird als Leiste mit einer gepunkteten Linie angezeigt. Je länger die gepunktete Linie ist, desto höher ist das Vertrauen in das Ergebnis.  
+ Sie können Änderungswerte auch nacheinander im Dialogfeld eingeben und die Vorhersagen anschließend interaktiv anzeigen. Dies entspricht dem Erstellen einer *SINGLETON-Vorhersage Abfrage*. Die Ergebnisse der Vorhersageabfrage werden zusammen mit den folgenden Informationen ausgegeben: dem Erfolg oder Fehler der Vorhersage, dem vorhergesagten Wert sowie dem Vertrauensgrad. Der Vertrauensgrad wird als Leiste mit einer gepunkteten Linie angezeigt. Je länger die gepunktete Linie ist, desto höher ist das Vertrauen in das Ergebnis.  
   
- Wenn Sie feststellen möchten, die Auswirkungen des Alters Ihrer Kunden auf der Ihr Kaufverhalten kaufen, und erhöhen Sie das kundenalter auf 25, z. B. die **What-If** Tool Abfragen von Datamining-Modells und gibt die Folgendes Ergebnis:  
+ Wenn Sie z. b. versuchen, die Auswirkung der Erhöhung des Alters des Kunden auf den Kauf zu ermitteln und das Alter des Kunden auf 25 zu erhöhen, fragt das **Was-wäre-wenn-** Tool das Data Mining Modell ab und gibt das folgende Ergebnis zurück:  
   
- **Was-wenn-Analyse für Fahrradverkäufe wurde eine Lösung gefunden.**  
+ **Bei der Was-wäre-wenn-Analyse für Fahrradverkäufe wurde eine Lösung gefunden.**  
   
- **'Fahrradverkäufe' = Ja**  
+ **'Fahrradverkäufe' = ja**  
   
- **Vertrauen: Fair**  
+ **Vertrauen: Durchschnittlich**  
   
  Da dieses Ergebnis auf einer vorhandenen Zeile in der Datentabelle beruht, bedeutet das bei einem bestimmten Kunden Folgendes: Wenn alle anderen Werte zum Kunden unverändert bleiben, das Alter des Kunden jedoch auf 25 erhöht wird, kauft der Kunde wahrscheinlich ein Fahrrad.  
   
@@ -92,9 +92,9 @@ ms.locfileid: "66065391"
 ## <a name="related-tools"></a>Verwandte Tools  
  Der Data Mining-Client für Excel, bei dem es sich um ein separates Add-In mit erweiterter Data Mining-Funktionalität handelt, enthält Assistenten zum Erstellen von Data Mining-Modellen, die Verhalten vorhersagen. Weitere Informationen finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).  
   
- Weitere Informationen zu den vom verwendeten Algorithmus die **What-If** Szenario finden Sie unter dem Thema "Microsoft Logistic Regression-Algorithmus" in SQL Server-Onlinedokumentation.  
+ Weitere Informationen zum Algorithmus, der vom **Was-wäre-wenn-Szenario-** Tool verwendet wird, finden Sie im Thema "Microsoft Logistic Regression-Algorithmus" in SQL Server-Onlinedokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  
   
   

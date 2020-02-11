@@ -1,5 +1,5 @@
 ---
-title: Löschen einer Spalte (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Löschen einer Spalte (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067269"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Löschen einer Spalte (SSAS – tabellarisch)
@@ -23,7 +23,7 @@ ms.locfileid: "66067269"
 ## <a name="delete-a-model-table-column"></a>Löschen von Modelltabellenspalten  
   
 > [!NOTE]  
->  Wenn Sie eine Spalte aus einer Modelltabelle löschen, wird die Spalte nicht aus einer Partitionsabfragedefinition gelöscht. Falls die Spalte, die Sie löschen, Teil einer Partition ist, müssen Sie die Spalte manuell aus der Partitionsabfragedefinition löschen. Wenn Sie die Spalte nicht aus der Partitionsabfragedefinition löschen, wird die Spalte bei Verarbeitungsvorgängen abgefragt und Daten zurückgegeben, aber nicht in der Modelltabelle ausgefüllt. Weitere Informationen finden Sie unter [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+>  Wenn Sie eine Spalte aus einer Modelltabelle löschen, wird die Spalte nicht aus einer Partitionsabfragedefinition gelöscht. Falls die Spalte, die Sie löschen, Teil einer Partition ist, müssen Sie die Spalte manuell aus der Partitionsabfragedefinition löschen. Wenn Sie die Spalte nicht aus der Partitionsabfragedefinition löschen, wird die Spalte bei Verarbeitungsvorgängen abgefragt und Daten zurückgegeben, aber nicht in der Modelltabelle ausgefüllt. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md).  
   
 #### <a name="to-delete-a-model-table-column"></a>So löschen Sie eine Modelltabellenspalte  
   
@@ -37,8 +37,8 @@ ms.locfileid: "66067269"
   
 3.  Deaktivieren Sie im Dialogfeld **Tabelleneigenschaften bearbeiten** im Tabellenvorschaufenster die Spalte, die Sie löschen möchten, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Spalten zu einer Tabelle &#40;SSAS – tabellarisch&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Hinzufügen von Spalten zu einer Tabelle &#40;tabellarischen SSAS-&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Partitionen &#40;tabellarischen SSAS-&#41;](partitions-ssas-tabular.md)  
   
   

@@ -17,26 +17,26 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4de7c6a99afcbd7db7c6e233fb737f129b536b8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209765"
 ---
 # <a name="isscommandwithparameters-ole-db"></a>ISSCommandWithParameters (OLE DB)
-  **ISSCommandWithParameters** stellt Unterstützung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -XML- und benutzerdefinierte Typen (UDT) zur Verfügung. Hierbei handelt es sich um eine optionale Schnittstelle, die von der OLE DB-Kernschnittstelle **ICommandWithParameters**erbt. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**stellt **ISSCommandWithParameters** zur Verarbeitung serverspezifischer Datentypen zwei neue Methoden bereit.  
+  **ISSCommandWithParameters** stellt Unterstützung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für XML und benutzerdefinierte Typen (User-Defined Types, UDT) zur Verfügung. Hierbei handelt es sich um eine optionale Schnittstelle, die von der OLE DB-Kernschnittstelle **ICommandWithParameters**erbt. Zusätzlich zu den drei von **ICommandWithParameters**geerbten Methoden **GetParameterInfo**, **MapParameterNames**und **SetParameterInfo**stellt **ISSCommandWithParameters** zur Verarbeitung serverspezifischer Datentypen zwei neue Methoden bereit.  
   
 > [!NOTE]  
->  Die **ISSCommandWithParameters** -Schnittstelle kann bei Einsatz von Dienstkomponenten verwendet werden. Die Dienstkomponenten selbst verwenden diese Schnittstelle jedoch nicht.  
+>  Die **ISSCommandWithParameters** -Schnittstelle kann bei Verwendung von Dienst Komponenten verwendet werden. die Dienst Komponenten selbst verwenden diese Schnittstelle jedoch nicht.  
   
-|Methode|Description|  
+|Methode|BESCHREIBUNG|  
 |------------|-----------------|  
-|[ISSCommandWithParameters::GetParameterProperties &#40;OLE DB&#41;](isscommandwithparameters-getparameterproperties-ole-db.md)|Gibt eine **SSPARAMPROPS** -Eigenschaftssatzstruktur im Array für jeden UDT- oder XML-Parameter zurück, der dem Befehl übergeben wurde. Für andere Parametertypen wird hingegen keine Struktur zurückgegeben.|  
-|[Isscommandwithparameters:: SetParameterProperties &#40;OLE-DB&#41;](isscommandwithparameters-setparameterproperties-ole-db.md)|Legt die Parametereigenschaften auf einer Einzelparameterbasis nach Ordnungszahl fest oder legt Massenparametereigenschaften durch Angabe eines Arrays von **SSPARAMPROPS** -Strukturen fest.|  
+|[' ISSCommandWithParameters:: GetParameterProperties ' &#40;OLE DB&#41;](isscommandwithparameters-getparameterproperties-ole-db.md)|Gibt eine **SSPARAMPROPS** -Eigenschaftssatzstruktur im Array für jeden UDT- oder XML-Parameter zurück, der dem Befehl übergeben wurde. Für andere Parametertypen wird hingegen keine Struktur zurückgegeben.|  
+|[' ISSCommandWithParameters:: SetParameterProperties ' &#40;OLE DB&#41;](isscommandwithparameters-setparameterproperties-ole-db.md)|Legt die Parameter Eigenschaften für einen Parameter auf Grundlage der Ordnungszahl fest oder legt Massen Parameter Eigenschaften durch Angabe eines Arrays von **ssparamproperties** -Strukturen fest.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnittstellen &#40;OLE-DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
- [Using XML Data Types (Verwenden von XML-Datentypen)](../native-client/features/using-xml-data-types.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Schnittstellen &#40;OLE DB&#41;](../../database-engine/dev-guide/interfaces-ole-db.md)   
+ [Verwenden von XML-Datentypen](../native-client/features/using-xml-data-types.md)   
  [Verwenden von benutzerdefinierten Typen](../native-client/features/using-user-defined-types.md)  
   
   

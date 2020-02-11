@@ -1,5 +1,5 @@
 ---
-title: Festlegen des Datentyps einer Spalte (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Festlegen des Datentyps einer Spalte (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066608"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Festlegen des Datentyps einer Spalte (SSAS – tabellarisch)
@@ -50,7 +50,7 @@ ms.locfileid: "66066608"
   
 |Modelldatentypen|  
 |----------------------|  
-|Textmodus<br /><br /> Decimal Number<br /><br /> Ganze Zahl<br /><br /> Währung<br /><br /> TRUE/FALSE<br /><br /> date|  
+|Text<br /><br /> Dezimalzahl<br /><br /> Ganze Zahl<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Date|  
   
  Wenn Sie feststellen, dass die Daten einen falschen bzw. nicht den gewünschten Datentyp aufweisen, haben Sie mehrere Möglichkeiten:  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66066608"
   
  Unter [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md)finden Sie detaillierte Informationen zu den Datentypen, die in Business Intelligence-Semantikmodellen verwendet werden. Zudem wird erläutert, wie die Datentypen implizit konvertiert und wie verschiedene Datentypen in Formeln verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Unterstützte Datentypen &#40;tabellarischen SSAS-&#41;](data-types-supported-ssas-tabular.md)  
   
   

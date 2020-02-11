@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Rollen mit SSMS (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Verwalten von Rollen mit SSMS (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067037"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Verwalten von Rollen mit SSMS (SSAS – tabellarisch)
@@ -36,7 +36,7 @@ ms.locfileid: "66067037"
 > [!CAUTION]  
 >  Wenn Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Arbeitsbereichsdatenbank für tabellarische Modelle zu verwalten, während das Modellprojekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] geöffnet ist, kann die Datei Model.bim beschädigt werden. Wenn Sie Rollen für eine Arbeitsbereichsdatenbank für tabellarische Modelle erstellen und verwalten, verwenden Sie den Rollen-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-###  <a name="bkmk_new_role"></a> So erstellen Sie eine neue Rolle  
+###  <a name="bkmk_new_role"></a>So erstellen Sie eine neue Rolle  
   
 1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, für die Sie eine neue Rolle erstellen möchten, klicken Sie mit der rechten Maustaste auf **Rollen**, und klicken Sie dann auf **Neue Rolle**.  
   
@@ -48,40 +48,40 @@ ms.locfileid: "66067037"
   
 4.  Aktivieren Sie in **Legen Sie die Datenbankberechtigung für diese Rolle fest**eine der folgenden Berechtigungsoptionen:  
   
-    |Berechtigung|Beschreibung|  
+    |Berechtigung|BESCHREIBUNG|  
     |----------------|-----------------|  
     |**Vollzugriff (Administrator)**|Mitglieder können Änderungen am Modellschema vornehmen und alle Daten anzeigen.|  
-    |**Datenbank verarbeiten**|Mitglieder können die Vorgänge Verarbeiten und Alles verarbeiten ausführen. Sie können weder das Modellschema ändern noch Daten anzeigen.|  
+    |**Datenbank verarbeiten**|Mitglieder können Prozesse ausführen und alle Vorgänge verarbeiten. Sie können weder das Modellschema ändern noch Daten anzeigen.|  
     |**Lesen**|Mitglieder dürfen Daten (basierend auf Zeilenfiltern) anzeigen, doch sie können keine Änderungen am Modellschema vornehmen.|  
   
 5.  Klicken Sie im Dialogfeld **Rolle erstellen** im Fenster "Seite auswählen" auf **Mitgliedschaft**.  
   
 6.  Klicken Sie im Mitgliedschaftseinstellungen-Fenster auf **Hinzufügen**, und fügen Sie dann im Dialogfeld **Benutzer oder Gruppen auswählen** die Windows-Benutzer oder die Gruppen hinzu, die Sie als Elemente hinzufügen möchten.  
   
-7.  Wenn die Rolle, die Sie erstellen, Leseberechtigungen aufweist, können Sie Zeilenfilter für jede beliebige Tabelle hinzufügen, in der eine DAX-Formel verwendet wird. Um Zeilenfilter hinzuzufügen der **Rolleneigenschaften - \<Rolename >** Dialogfeld **wählen Sie eine Seite**, klicken Sie auf **Zeilenfilter**.  
+7.  Wenn die Rolle, die Sie erstellen, Leseberechtigungen aufweist, können Sie Zeilenfilter für jede beliebige Tabelle hinzufügen, in der eine DAX-Formel verwendet wird. Um Zeilen Filter hinzuzufügen, klicken Sie im Dialogfeld **Rollen Eigenschaften- \<roleName>** in **Seite auswählen**auf **Zeilen Filter**.  
   
-8.  Im Zeilenfilter-Fenster, wählen Sie eine Tabelle, klicken Sie anschließend auf die **DAX-Filter** Feld, und klicken Sie dann in der **DAX-Filter – \<Tablename >** geben eine DAX-Formel.  
+8.  Wählen Sie im Fenster Zeilen Filter eine Tabelle aus, klicken Sie dann auf das Feld **DAX-Filter** , und geben Sie dann im Feld **DAX-Filter- \<TableName>** eine DAX-Formel ein.  
   
     > [!NOTE]  
-    >  DAX-Filter – \<Tablename > Feld nicht enthalten einen AutoVervollständigen-Abfrage-Editor oder Einfügen einer Funktion. Um beim Schreiben einer DAX-Formel die Funktion zum AutoVervollständigen verwenden zu können, müssen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]einen DAX-Formel-Editor verwenden.  
+    >  Das> Feld DAX \<-Filter-TableName enthält keinen AutoComplete-Abfrage-Editor oder Funktion zum Einfügen von Funktionen. Um beim Schreiben einer DAX-Formel die Funktion zum AutoVervollständigen verwenden zu können, müssen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]einen DAX-Formel-Editor verwenden.  
   
 9. Klicken Sie auf **OK** , um die Rolle zu speichern.  
   
-###  <a name="bkmk_copy_role"></a> So kopieren Sie eine Rolle  
+###  <a name="bkmk_copy_role"></a>So kopieren Sie eine Rolle  
   
 1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie kopieren möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Duplizieren**.  
   
-###  <a name="bkmk_edit_role"></a> So bearbeiten Sie eine Rolle  
+###  <a name="bkmk_edit_role"></a>So bearbeiten Sie eine Rolle  
   
 -   Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie bearbeiten möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Eigenschaften**.  
   
-     In der **Rolleneigenschaften** \<Rolename > Klicken Sie im Dialogfeld können Sie Berechtigungen ändern, hinzufügen oder Entfernen von Mitgliedern und Zeilenfilter hinzufügen oder bearbeiten.  
+     Im Dialogfeld **Rollen Eigenschaften** \<"roleName>" können Sie Berechtigungen ändern, Mitglieder hinzufügen oder entfernen und Zeilen Filter hinzufügen/bearbeiten.  
   
-###  <a name="bkmk_deletet_role"></a> So löschen Sie eine Rolle  
+###  <a name="bkmk_deletet_role"></a>So löschen Sie eine Rolle  
   
 -   Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie löschen möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)  
   
   

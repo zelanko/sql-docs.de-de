@@ -1,5 +1,5 @@
 ---
-title: Zuweisen einer Lese- und Schreibrolle zu einem Paket | Microsoft-Dokumentation
+title: Zuweisen einer Lese-und Schreib Rolle zu einem Paket | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793df21782fd3bcb06ad8cbe91c3ba325b2f8a95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061523"
 ---
 # <a name="assign-a-reader-and-writer-role-to-a-package"></a>Zuweisen einer Lese- und Schreibrolle zu einem Paket

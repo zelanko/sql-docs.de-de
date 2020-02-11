@@ -1,5 +1,5 @@
 ---
-title: Importieren einer Ablaufverfolgungsvorlage (SQL Server Profiler) | Microsoft-Dokumentation
+title: Importieren einer Ablauf Verfolgungs Vorlage (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b87822c99f9c3398f5a2dcda1725025895979d15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228393"
 ---
 # <a name="import-a-trace-template-sql-server-profiler"></a>Importieren einer Ablaufverfolgungsvorlage (SQL Server Profiler)
@@ -32,7 +32,7 @@ ms.locfileid: "63228393"
   
      Die Vorlagedatei wird den verfügbaren Vorlagen im Dialogfeld **Ablaufverfolgungseigenschaften** in der Liste **Vorlage verwenden** hinzugefügt. Den Namen benutzerdefinierter Vorlagen wird die Zeichenfolge **(user)** angehängt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)   
  [Modify a Trace Template &#40;SQL Server Profiler&#41; (Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)   
  [Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105312"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Berichtserstellungskonzepte (Berichts-Generator und SSRS)
@@ -39,10 +39,10 @@ ms.locfileid: "66105312"
  [Datenbereiche und Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)  
  Beschreibt die Datenbereichstypen, die einem Berichtslayout hinzugefügt werden können. Datenbereiche bestimmen die Darstellung eines Berichts: Tabelle, Matrix, Liste oder Diagramm.  
   
- [Berichts-Konzept &#40;Berichts-Generator und SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
+ [Berichts Parameter Konzept &#40;Berichts-Generator und SSRS&#41;](report-parameters-concepts-report-builder-and-ssrs.md)  
  Beschreibt die Möglichkeiten zum Definieren und Verwenden von Berichtsparametern und wie diese unabhängig von der Berichtsdefinition auf dem Berichtsserver verwaltet werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Generator in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)  
   
   

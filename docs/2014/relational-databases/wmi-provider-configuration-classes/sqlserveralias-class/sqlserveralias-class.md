@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0ffbf733db8cbd672f171773e7b44560686e7d1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63223547"
 ---
 # <a name="sqlserveralias-class"></a>SqlServerAlias-Klasse
@@ -30,13 +30,13 @@ ms.locfileid: "63223547"
   
  Ein Serververbindungsalias ist erforderlich, wenn beide der folgenden Situationen eintreten:  
   
--   Der Client stellt über einen Netzwerktransport, der nicht der standardmäßige Netzwerktransport ist, ein Verbindung zu einer Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] her.  
+-   Der Client stellt über einen Netzwerk Transport, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der nicht der standardmäßige Netzwerk Transport ist, eine Verbindung mit einer Instanz von her.  
   
 -   Die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mit der der Client verbunden ist, überwacht einen anderen Named Pipe.  
   
- **Hinweis**: Die [SqlServerAlias-Klasse](sqlserveralias-class.md) erbt die `Put` Methode aus der Provider-Klasse. Es werden jedoch keine Ergebnisse ausgegeben , wie von der `Provider::Put`-Methode angegeben. Weitere Informationen finden Sie in der WMI-Dokumentation.  
+ **Hinweis:** Die [SqlServerAlias-Klasse](sqlserveralias-class.md) erbt `Put` die-Methode von der Provider-Klasse. Es werden jedoch keine Ergebnisse ausgegeben , wie von der `Provider::Put`-Methode angegeben. Weitere Informationen finden Sie in der WMI-Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

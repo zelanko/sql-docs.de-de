@@ -1,5 +1,5 @@
 ---
-title: Aggregationsoptionen festlegen (Assistent für Verwendungsbasierte Optimierung) | Microsoft-Dokumentation
+title: Aggregations Optionen festlegen (Assistent für Verwendungs basierte Optimierung) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8703ec6f199290185829a15a0079cd9b04e42fbc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068763"
 ---
 # <a name="set-aggregation-options-usage-based-optimization-wizard"></a>Aggregationsoptionen festlegen (Assistent für verwendungsbasierte Optimierung)
   Auf der Seite **Aggregationsoptionen festlegen** können Sie den Aggregationsentwurf starten und Speicher- und Leistungslimits für die Aggregationen angeben, die vom Assistenten für verwendungsbasierte Optimierung generiert werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Geschätzter Speicherplatz erreicht**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie die maximale Anzahl von Megabytes (MB) oder Gigabytes (GB) angeben, die zum Generieren der Aggregationen verwendet werden kann.  
   
  **Leistungsgewinn erreicht**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie den maximalen Prozentsatz des Leistungsgewinns angeben, der durch den Aggregationsentwurf schätzungsweise erreicht werden kann. Um die besten Ergebnisse zu erzielen, verwenden Sie die Standardeinstellung von 100 % für den Leistungssteigerungswert, es sei denn, Einschränkungen im Hinblick auf Speicherplatz oder Verarbeitungszeit verhindern dies.  
   
- **Ich klicken Sie auf Beenden**  
+ **Es wird auf 'Beenden' geklickt**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie während des Entwurfs auf **Beenden** klicken.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Aggregationsentwurf.  
   
  **Beenden**  
@@ -41,8 +41,8 @@ ms.locfileid: "66068763"
  **Zurücksetzen**  
  Setzen Sie alle auf der Seite verfügbaren Aggregationsoptionen auf den Standardwert zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwendungsbasierte Optimierung-Assistent F1-Hilfe](usage-based-optimization-wizard-f1-help.md)   
- [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Assistent für Verwendungs basierte Optimierung (F1-Hilfe)](usage-based-optimization-wizard-f1-help.md)   
+ [Analysis Services Assistenten &#40;Mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

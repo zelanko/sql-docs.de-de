@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b49b24db5dfa3c9b522247024e0cbb8dbd1a81d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151265"
 ---
 # <a name="view-plan-guide-properties"></a>Anzeigen der Eigenschaften der Planhinweisliste
@@ -44,7 +44,7 @@ ms.locfileid: "63151265"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente beschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-a-plan-guide"></a>So zeigen Sie die Eigenschaften einer Planhinweisliste an  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63151265"
      **Bereichstyp**  
      Zeigt den Typ der Entität an, in dem die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung enthalten ist. Dies gibt den Kontext zum Abgleich der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung mit der Planhinweisliste an. Mögliche Werte sind **OBJECT**, **SQL**und **TEMPLATE**.  
   
-     **Statement**  
+     **Anweisung**  
      Zeigt die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung an, auf die die Planhinweisliste angewendet wird.  
   
 4.  Klicken Sie auf **OK**.  

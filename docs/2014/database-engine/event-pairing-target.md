@@ -1,5 +1,5 @@
 ---
-title: Ziel ' Paarbildung ' Event | Microsoft-Dokumentation
+title: Ziel der Ereignis Kopplung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064850"
 ---
 # <a name="event-pairing-target"></a>Ziel 'Ereignispaarbildung'
@@ -30,7 +30,7 @@ ms.locfileid: "66064850"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren der Ereignispaarbildung beschrieben.  
   
-|Option|Zulässige Werte|Beschreibung|  
+|Option|Zulässige Werte|BESCHREIBUNG|  
 |------------|--------------------|-----------------|  
 |begin_event|Ein beliebiger Ereignisname, der in der aktuellen Sitzung vorhanden ist.|Der Ereignisname, der das Startereignis in einer paarweise zugeordneten Sequenz angibt.|  
 |end_event|Ein beliebiger Ereignisname, der in der aktuellen Sitzung vorhanden ist.|Der Ereignisname, der das Endereignis in einer paarweise zugeordneten Sequenz angibt.|  
@@ -43,7 +43,7 @@ ms.locfileid: "66064850"
   
  Alle einem Ereignis zugeordneten Daten werden aufgezeichnet und für zukünftige paarweise Zuordnungen gespeichert. Außerdem werden von Aktionen hinzugefügte Daten gesammelt. Die aufgezeichneten Ereignisdaten werden im Arbeitsspeicher gespeichert und verfügen daher über eine feste Begrenzung. Diese Begrenzung basiert auf Systemkapazität und -aktivität. Statt die maximale Arbeitsspeichermenge als Parameter zu verwenden, wird der verwendete Arbeitsspeicher auf Grundlage der verfügbaren Systemressourcen festgelegt. Wenn keine verfügbar sind, werden nicht paarweise zugeordnete Ereignisse, die behalten wurden, gelöscht. Wenn ein Ereignis nicht paarweise zugeordnet wurde und gelöscht wird, wird das übereinstimmende Ereignis als nicht paarweise zugeordnetes Ereignis angezeigt.  
   
- Das Ziel Ereignispaarbildung serialisiert nicht paarweise zugeordnete Ereignisse in einem XML-Format. Dieses Format entspricht keinem Schema. Das Format enthält nur zwei Elementtypen. Die  **\<nicht paarweise zugeordneten >** Element ist das Stammelement, gefolgt von einem. **\<Ereignis >** -Element für jedes nicht zugeordnete Ereignis, das derzeit nachverfolgt wird. Die  **\<Event >** -Element enthält ein Attribut mit dem Namen des nicht paarweise zugeordneten Ereignisses.  
+ Das Ziel Ereignispaarbildung serialisiert nicht paarweise zugeordnete Ereignisse in einem XML-Format. Dieses Format entspricht keinem Schema. Das Format enthält nur zwei Elementtypen. Das ** \<nicht paarweise>** Element ist der Stamm, gefolgt von einem Element. Ereignis>-Element für jedes nicht zugeordnete Ereignis, das derzeit nachverfolgt wird. ** \<** Das ** \<Ereignis>** -Element enthält ein Attribut, das den Namen des nicht paarweise zugeordneten Ereignisses enthält.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das Paarvergleichsziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  
@@ -89,7 +89,7 @@ WHERE xe.name = 'session_name'
 </unpaired>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

@@ -1,5 +1,5 @@
 ---
-title: Von PowerPivot wiederherstellen | Microsoft-Dokumentation
+title: Aus Power Pivot wiederherstellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f90ea08269e79e57c623af41fc2f0fbc09e2fb42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066634"
 ---
 # <a name="restore-from-powerpivot"></a>Von PowerPivot wiederherstellen
   Sie können die Funktion Von PowerPivot wiederherstellen in SQL Server Management Studio verwenden, um eine neue Datenbank für tabellarische Modelle auf einer (im Tabellenmodus ausgeführte) Analysis Services-Instanz zu erstellen oder um eine vorhandene Datenbank aus einer PowerPivot-Arbeitsmappe (.xlsx) wiederherzustellen.  
   
 > [!NOTE]  
->  Die Projektvorlage Aus PowerPivot importieren in SQL Server Data Tools verfügt über ähnliche Funktionen. Weitere Informationen finden Sie unter [aus PowerPivot importieren &#40;SSAS – tabellarisch&#41;](import-from-power-pivot-ssas-tabular.md).  
+>  Die Projektvorlage Aus PowerPivot importieren in SQL Server Data Tools verfügt über ähnliche Funktionen. Weitere Informationen finden Sie unter [Importieren aus Power Pivot &#40;tabellarischen SSAS-&#41;](import-from-power-pivot-ssas-tabular.md).  
   
  Folgendes sollte bei Verwendung der Funktion Von PowerPivot wiederherstellen beachtet werden:  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66066634"
   
 ### <a name="to-restore-from-powerpivot"></a>So stellen Sie Daten von PowerPivot wieder her  
   
-1.  Klicken Sie in SSMS in der Active Directory-Instanz, die Sie wiederherstellen, möchten rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **von PowerPivot wiederherstellen**.  
+1.  Klicken Sie in SSMS in der Active Directory Instanz, die Sie wiederherstellen möchten, mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **aus Power Pivot wiederherstellen**.  
   
-2.  In der **von PowerPivot wiederherstellen** Dialogfeld **Wiederherstellungsquelle**im **Sicherungsdatei**, klicken Sie auf **Durchsuchen**, und wählen Sie dann eine ABF- oder xslx die Datei aus.  
+2.  Klicken Sie im Dialogfeld **von Power Pivot wiederherstellen** unter **Wiederherstellungs Quelle**in **Sicherungsdatei**auf **Durchsuchen**, und wählen Sie dann eine ABF-oder XSLX-Datei aus, aus der wieder hergestellt werden soll.  
   
 3.  Geben Sie in **Datenbank wiederherstellen**unter **Wiederherstellungsziel**den Namen einer neuen oder vorhandenen Datenbank ein. Wenn Sie keinen Namen angeben, wird der Name der Arbeitsmappe verwendet.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "66066634"
   
 5.  Lassen Sie unter **Optionen**das Kontrollkästchen **Sicherheitsinformationen einschließen** aktiviert. Diese Einstellung gilt nicht beim Wiederherstellen von Daten aus einer PowerPivot-Arbeitsmappe.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellarische Modelldatenbanken &#40;SSAS – tabellarisch&#41;](tabular-model-databases-ssas-tabular.md)   
- [Aus PowerPivot importieren &#40;SSAS – tabellarisch&#41;](import-from-power-pivot-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellarische Modell Datenbanken &#40;tabellarischen SSAS-&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Aus Power Pivot &#40;tabellarischen SSAS-&#41;importieren](import-from-power-pivot-ssas-tabular.md)  
   
   

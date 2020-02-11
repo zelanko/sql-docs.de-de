@@ -1,5 +1,5 @@
 ---
-title: Löschen einer Datenquelle im Projektmappen-Explorer (SSAS – mehrdimensional) | Microsoft-Dokumentation
+title: Löschen einer Datenquelle in Projektmappen-Explorer (SSAS Multidimensional) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e3b6dc676c11444c8dd45d1874f77942316a462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075502"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>Löschen einer Datenquelle in Projektmappen-Explorer (SSAS – mehrdimensional)
@@ -43,8 +43,8 @@ ms.locfileid: "66075502"
   
      Nachdem Sie eine Datenquelle aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt gelöscht haben, müssen Sie das geänderte Projekt speichern. Andernfalls erhalten Sie einen Fehler, wenn Sie das Projekt das nächste Mal öffnen, da die zugrunde liegende XML-Datei der gelöschten Datenquelle fehlt, wenn das Projekt versucht, die gelöschte Datenquelle zu laden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen in mehrdimensionalen Modellen](data-sources-in-multidimensional-models.md)   
- [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](supported-data-sources-ssas-multidimensional.md)  
+ [Unterstützte Datenquellen &#40;mehrdimensionalen SSAS-&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

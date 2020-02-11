@@ -1,5 +1,5 @@
 ---
-title: Übersetzungsdetails (Registerkarte Übersetzungen, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Übersetzungs Details (Registerkarte "Übersetzungen", Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065845"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Übersetzungsdetails (Registerkarte Übersetzungen, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Übersetzungsdetails** auf der Registerkarte **Übersetzungen** im Dimensions-Designer können Sie Übersetzungen für die aktuell ausgewählte Dimension definieren und verwalten.  
   
- **Um den Bereich Übersetzungsdetails anzuzeigen.**  
+ **So zeigen Sie den Bereich Übersetzungsdetails an**  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt, und öffnen Sie dann die gewünschte Dimension.  
   
 2.  Klicken Sie auf die Registerkarte **Übersetzungen** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Standardsprache**  
  Legt die Namen der Dimensionsobjekte in der Standardsprache fest.  
   
@@ -37,31 +37,35 @@ ms.locfileid: "66065845"
   
 -   Dimension  
   
-     `Caption`- und `AttributeAllMember`-Eigenschaften  
+     
+  `Caption`- und `AttributeAllMember`-Eigenschaften  
   
--   Attribut  
+-   attribute  
   
-     `Caption`- `AttributeHierarchyDisplayFolder`-Eigenschaft und `NamingTemplate`-Eigenschaft  
+     
+  `Caption`- `AttributeHierarchyDisplayFolder`-Eigenschaft und `NamingTemplate`-Eigenschaft  
   
     > [!NOTE]  
     >  Die `NamingTemplate`-Eigenschaft ist nur für übergeordnete Attribute verfügbar.  
   
 -   Hierarchy  
   
-     `Caption`- und `AllMemberName`-Eigenschaften  
+     
+  `Caption`- und `AllMemberName`-Eigenschaften  
   
 -   Ebene  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
- **\<Language>**  
- Geben Sie den Eigenschaftswert des Dimensionsobjekts in der ausgewählten Sprache an, oder wählen Sie ihn aus. In Abhängigkeit von der bearbeiteten Eigenschaft werden zusätzliche Dialogfelder geöffnet, wenn Sie auf die Schaltfläche mit den Auslassungspunkten ( **...** ) klicken:  
+ **\<Sprach>**  
+ Geben Sie den Eigenschaftswert des Dimensionsobjekts in der ausgewählten Sprache an, oder wählen Sie ihn aus. In Abhängigkeit von der bearbeiteten Eigenschaft werden zusätzliche Dialogfelder geöffnet, wenn Sie auf die Schaltfläche mit den Auslassungspunkten (**...**) klicken:  
   
--   `NamingTemplate`-Eigenschaft  
+-   `NamingTemplate`Property  
   
      Zeigt das [Dialogfeld „Vorlage zur Ebenenbenennung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md) an.  
   
--   `Caption`-Eigenschaft (für Attribute)  
+-   
+  `Caption`-Eigenschaft (für Attribute)  
   
      Zeigt das [Dialogfeld „Attributdatenübersetzung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -77,19 +81,19 @@ ms.locfileid: "66065845"
 > [!NOTE]  
 >  Diese Option ist nur aktiviert, wenn Sie mit der rechten Maustaste auf eine Zelle geklickt haben, um die Übersetzung zu löschen.  
   
- **Neue Beschriftungsspalte**  
- Wählen Sie diese Option aus, um das Dialogfeld **Attributdatenübersetzung** anzuzeigen und um eine neue Beschriftungsspalte zu definieren, wenn Sie im Raster **Übersetzungsdetails** ein Attribut ändern. Zum Aktivieren dieser Option müssen Sie im Raster der **Übersetzungsdetails** eine Zelle in der Übersetzungsspalte eines Attributs auswählen.  
+ **Neue Beschriftungs Spalte**  
+ Wählen Sie diese Option aus, um das Dialogfeld **Attributdatenübersetzung** anzuzeigen und um eine neue Beschriftungsspalte zu definieren, wenn Sie im Raster **Übersetzungsdetails** ein Attribut ändern. Zum Aktivieren dieser Option müssen Sie im Raster der Übersetzungsdetails **** eine Zelle in der Übersetzungsspalte eines Attributs auswählen.  
   
 > [!NOTE]  
 >  Diese Option ist nur aktiviert, wenn Sie mit der rechten Maustaste auf eine Zelle geklickt haben, um die Übersetzungsspalte eines Attributs zu löschen.  
   
- **Beschriftungsspalte bearbeiten**  
+ **Beschriftungs Spalte bearbeiten**  
  Wählen Sie diese Option aus, um das Dialogfeld **Attributdatenübersetzung** anzuzeigen und um eine vorhandene Beschriftungsspalte zu bearbeiten, wenn Sie im Raster **Übersetzungsdetails** ein Attribut ändern.  
   
 > [!NOTE]  
->  Die Option ist nur aktiviert, wenn im Raster **Übersetzungsdetails** eine Zelle in einer Übersetzungsspalte ausgewählt werden muss, die eine Beschriftungsspalte für ein Attribut enthält.  
+>  Die Option ist nur aktiviert, wenn im Raster **Übersetzungs Details** eine Zelle in einer Übersetzungs Spalte ausgewählt werden muss, die eine Beschriftungs Spalte für ein Attribut enthält.  
   
- **Beschriftungsspalte löschen**  
+ **Beschriftungs Spalte löschen**  
  Wählen Sie diese Option aus, um im Raster **Übersetzungsdetails** die Beschriftungsspalte für das ausgewählte Attribut zu löschen.  
   
 > [!NOTE]  
@@ -98,7 +102,7 @@ ms.locfileid: "66065845"
  **Alle Attribute anzeigen**  
  Wählen Sie diese Option aus, um alle für die ausgewählte Dimension definierten Attribute anzuzeigen, einschließlich der Attribute, deren Attributhierarchien deaktiviert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](translations-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

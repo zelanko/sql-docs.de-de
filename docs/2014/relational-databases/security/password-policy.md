@@ -33,10 +33,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7b28043d797585496686dea6fd0c5fad276f16b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187971"
 ---
 # <a name="password-policy"></a>Kennwortrichtlinie
@@ -75,7 +75,7 @@ ms.locfileid: "63187971"
   
     -   Der Kennwortverlauf wird mit dem Wert des aktuellen Kennworthashes initialisiert.  
   
-    -   **Kontosperrdauer**, **Kontensperrungsschwelle**und **Zurücksetzungsdauer des Kontosperrungszählers** sind ebenfalls aktiviert.  
+    -   **Konto Sperr Dauer**, Konto Sperrungs **Schwellenwert**und **Zurücksetzen des Konto Sperrungs Zählers nach** sind ebenfalls aktiviert.  
   
 -   Wenn CHECK_POLICY in OFF geändert wird, kommt es zu folgenden Verhaltensweisen:  
   
@@ -108,13 +108,13 @@ ms.locfileid: "63187971"
   
  [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)  
   
- [ALTER USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
+ [Alter User &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-user-transact-sql)  
   
  [Erstellen eines Anmeldenamens](authentication-access/create-a-login.md)  
   
  [Erstellen eines Datenbankbenutzers](authentication-access/create-a-database-user.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Sichere Kennwörter](strong-passwords.md)  
+ [Sichere Kenn Wörter](strong-passwords.md)  
   
   

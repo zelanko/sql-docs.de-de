@@ -1,5 +1,5 @@
 ---
-title: Tabellarische Modelldatenbanken (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Tabellarische Modell Datenbanken (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24c9487484857d61acede622b1467a1d8c0b7345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066418"
 ---
 # <a name="tabular-model-databases-ssas-tabular"></a>Tabellarische Modelldatenbanken (SSAS – tabellarisch)
@@ -24,16 +24,16 @@ ms.locfileid: "66066418"
  Tabellarische Modelldatenbanken sind einfacher zu erstellen als mehrdimensionale Datenbanken, insbesondere, wenn Sie einen relationalen Datenbankhintergrund haben. Andernfalls sind administrative Aufgaben ähnlich, wenn nicht sogar identisch mit der Datenbankverwaltung einer mehrdimensionalen Datenbank. Es sind die gleichen Tools und Ansätze gültig.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Tabellarische Modelllösungen &#40;tabellarischen SSAS-&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
  [Zugriff auf Daten im tabellarischen Modell](tabular-model-data-access.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
- [Verarbeiten von Datenbanken, Tabellen oder Partitionen](process-database-table-or-partition-analysis-services.md)  
+ [Verarbeiten von Datenbank, Tabelle oder Partition](process-database-table-or-partition-analysis-services.md)  
   
- [Rollen tabellarischer Modelle &#40;SSAS – tabellarisch&#41;](tabular-model-roles-ssas-tabular.md)  
+ [Tabellarische Modell Rollen &#40;tabellarischen SSAS-&#41;](tabular-model-roles-ssas-tabular.md)  
   
- [Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](tabular-model-partitions-ssas-tabular.md)  
+ [Tabellarische Modell Partitionen &#40;tabellarischen SSAS-&#41;](tabular-model-partitions-ssas-tabular.md)  
   
  [Konfigurieren von speicherinternem oder DirectQuery-Zugriff für eine tabellarische Modelldatenbank](enable-directquery-mode-in-ssms.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66066418"
   
  [Synchronisieren von Analysis Services-Datenbanken](../multidimensional-models/synchronize-analysis-services-databases.md)  
   
- [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Wechseln einer Analysis Services Datenbank zwischen Schreib geschütztem Modus und Lese-/Schreibmodus](../multidimensional-models/switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
  [Ändern oder Löschen einer Analysis Services-Datenbank](../multidimensional-models/modify-or-delete-an-analysis-services-database.md)  
   

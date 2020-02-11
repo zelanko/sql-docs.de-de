@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156833"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
@@ -36,7 +36,7 @@ ms.locfileid: "63156833"
   
  Die folgenden Empfehlungen gelten für Aufrufe der systemintern kompilierten gespeicherten Prozedur mithilfe des ODBC-Treibers in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
- Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von `SQLExecDirect` und ODBC CALL-Klauseln auszugeben. Verwenden Sie nicht die [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` Anweisung. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
+ Die effizienteste Methode, eine gespeicherte Prozedur einmal aufzurufen ist, einen direkten RPC-Aufruf mithilfe von `SQLExecDirect` und ODBC CALL-Klauseln auszugeben. Verwenden Sie die [!INCLUDE[tsql](../../../includes/tsql-md.md)] `EXECUTE` -Anweisung nicht. Wenn eine gespeicherte Prozedur mehrmals aufgerufen wird, ist die vorbereitete Ausführung effizienter.  
   
  Das effizienteste Verfahren, um eine gespeicherte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozedur mehrmals aufrufen ist, vorbereitete RPC-Prozeduraufrufe zu verwenden. Vorbereitete RPC-Aufrufe werden mithilfe des ODBC-Treibers von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client folgendermaßen ausgeführt:  
   
@@ -48,7 +48,8 @@ ms.locfileid: "63156833"
   
 -   Mehrmaliges Ausführen der gespeicherte Prozedur mit `SQLExecute`  
   
- Das folgende Codefragment veranschaulicht die vorbereitete Ausführung einer gespeicherten Prozedur zum Hinzufügen von Einzelposten zu einer Bestellung. `SQLPrepare` wird nur einmal und `SQLExecute` mehrmals aufgerufen, einmal pro Prozedurausführung.  
+ Das folgende Codefragment veranschaulicht die vorbereitete Ausführung einer gespeicherten Prozedur zum Hinzufügen von Einzelposten zu einer Bestellung. 
+  `SQLPrepare` wird nur einmal und `SQLExecute` mehrmals aufgerufen, einmal pro Prozedurausführung.  
   
 ```  
 // Bind parameters  
@@ -392,7 +393,7 @@ int _tmain() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Systemintern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

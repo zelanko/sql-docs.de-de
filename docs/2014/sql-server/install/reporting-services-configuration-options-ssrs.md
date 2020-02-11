@@ -17,16 +17,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952126"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services-Konfigurationsoptionen (SSRS)
   Auf der Seite **Reporting Services-Konfiguration** des Installations-Assistenten für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie die Optionen für das Installieren und Konfigurieren eines Berichtsservers angeben. Die Verfügbarkeit einer Installationsoption ist von den Optionen abhängig, die Sie auf der Seite **Funktionsauswahl** ausgewählt haben, und richtet sich danach, ob Sie gleichzeitig mit dem Berichtsserver auch eine lokale Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] installieren.  
   
- Wenn ein SSL-Zertifikat (Secure Sockets Layer) auf dem Computer installiert und an ein starkes Platzhalterzeichen gebunden ist, werden Reporting Services-URLs von Setup in einigen Fällen mit HTTPS-Präfix erstellt. Weitere Informationen zum Zuordnen von Zertifikaten zu Reporting Services-URLs finden Sie unter [Konfigurieren eines Berichts Servers für Secure Sockets Layer (SSL)-Verbindungen](https://go.microsoft.com/fwlink/?LinkId=199089) (https://go.microsoft.com/fwlink/?LinkId=199089) in SQL Server-Onlinedokumentation.  
+ Wenn ein SSL-Zertifikat (Secure Sockets Layer) auf dem Computer installiert und an ein starkes Platzhalterzeichen gebunden ist, werden Reporting Services-URLs von Setup in einigen Fällen mit HTTPS-Präfix erstellt. Weitere Informationen zum Zuordnen von Zertifikaten zu Reporting Services-URLs finden Sie unter [Konfigurieren eines Berichts Servers für Secure Sockets Layer (SSL)](https://go.microsoft.com/fwlink/?LinkId=199089) -Verbindungenhttps://go.microsoft.com/fwlink/?LinkId=199089) (in SQL Server-Onlinedokumentation.  
   
  Aktuelle Informationen zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und zur Installation und Konfiguration dieser Version finden Sie unter [Zusätzliche Installationsinformationen](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "71952126"
 #### <a name="install-only"></a>Nur installieren  
  Installiert die Berichtsserver-Programmdateien, erstellt das Berichtsserver-Dienstkonto und registriert den Windows-Verwaltungsinstrumentationsanbieter des Berichtsservers. Diese Installationsoption wird als "Nur Dateien"-Installation bezeichnet. Wählen Sie diese Option aus, wenn Sie die Standardkonfiguration nicht verwenden möchten. Wenn die Standardkonfiguration nicht installiert werden kann oder wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster installieren, das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]enthält, ist dies die einzige verfügbare Option. Weitere Informationen zu einer ausschließlichen Datei-Installation finden Sie unter [nur-Datei-Installation (Reporting Services)](https://go.microsoft.com/fwlink/?LinkId=199093) (https://go.microsoft.com/fwlink/?LinkId=199093).  
   
- Nach Abschluss des Setups müssen Sie die Berichtsserver-Datenbank erstellen und den Berichtsserver konfigurieren, bevor Sie ihn verwenden können. Verwenden Sie zum Konfigurieren eines Berichtsservers und Erstellen der Datenbank den Reporting Services-Konfigurations-Manager. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen einer Berichts Server-Datenbank (Reporting Services Konfiguration)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) und [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095)).  
+ Nach Abschluss des Setups müssen Sie die Berichtsserver-Datenbank erstellen und den Berichtsserver konfigurieren, bevor Sie ihn verwenden können. Verwenden Sie zum Konfigurieren eines Berichtsservers und Erstellen der Datenbank den Reporting Services-Konfigurations-Manager. Weitere Informationen finden Sie unter Vorgehens [Weise: Erstellen einer Berichts Server-Datenbank (Reporting Services Konfiguration)](https://go.microsoft.com/fwlink/?LinkId=199094) (https://go.microsoft.com/fwlink/?LinkId=199094) und [Konfigurieren einer Berichts Server-Datenbankverbindung](https://go.microsoft.com/fwlink/?LinkId=199095) (https://go.microsoft.com/fwlink/?LinkId=199095)).  
   
 ### <a name="reporting-services-sharepoint-mode"></a>SharePoint-Modus von Reporting Services  
   
@@ -70,12 +70,12 @@ ms.locfileid: "71952126"
   
 -   Führen Sie die Installation über das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium durch. Klicken Sie im Setupordner auf den **-Installationsmedien auf die Datei** rsSharePoint.msi [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , nachdem das Setup von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abgeschlossen ist.  
   
--   Laden Sie das Add-In herunter, und installieren Sie es. Weitere Informationen finden Sie unter [Where to Find the Reporting Services Add-in for SharePoint Products](https://go.microsoft.com/fwlink/?LinkID=208634) (https://go.microsoft.com/fwlink/?LinkID=208634).  
+-   Laden Sie das Add-In herunter, und installieren Sie es. Weitere Informationen finden Sie unter [wo finden Sie das Reporting Services-Add-in für SharePoint](https://go.microsoft.com/fwlink/?LinkID=208634) -https://go.microsoft.com/fwlink/?LinkID=208634)Produkte ().  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurations-Manager für Reporting Services starten](https://go.microsoft.com/fwlink/?LinkId=199096)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Start Konfigurations-Manager für Reporting Services](https://go.microsoft.com/fwlink/?LinkId=199096)   
  [Erstellen einer Berichts Server-Datenbank (Reporting Services Konfiguration)](https://go.microsoft.com/fwlink/?LinkId=199094)   
- [Aktualisieren und Migrieren von Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
+ [Aktualisieren und Migrieren Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628)   
  [Installieren des SharePoint-Modus und einheitlichen Modus von Reporting Services über die Eingabeaufforderung](https://go.microsoft.com/fwlink/?LinkId=217620)  
   
   

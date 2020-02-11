@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7a06d30f25f5c78236fe30f148b254ee817dfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232404"
 ---
 # <a name="use-nested-for-xml-queries"></a>Verwenden von geschachtelten FOR XML-Abfragen
-  Die `xml` -Datentyp und die [TYPE-Direktive in FOR XML-Abfragen](type-directive-in-for-xml-queries.md) ermöglichen von FOR XML-Abfragen zurückgegebene XML-Code sowohl auf dem Server als auch auf dem Client verarbeitet werden.  
+  Der `xml` -Datentyp und die [Type-Direktive in for XML-Abfragen](type-directive-in-for-xml-queries.md) ermöglichen, dass der von for XML-Abfragen zurückgegebene XML-Code sowohl auf dem Server als auch auf dem Client verarbeitet wird.  
   
 ## <a name="processing-with-xml-type-variables"></a>Verarbeiten mit XML-Typvariablen  
  Sie können das Ergebnis einer FOR XML-Abfrage einer `xml`-Typvariablen zuweisen oder das Ergebnis mithilfe einer XQuery-Abfrage abfragen und das daraus entstehende Ergebnis einer `xml`-Typvariablen zur weiteren Verarbeitung zuweisen.  
@@ -83,7 +83,7 @@ SELECT  (SELECT ProductModelID, Name
 ```  
   
 ## <a name="returning-inner-for-xml-query-results-to-outer-queries-as-xml-type-instances"></a>Zurückgeben von Ergebnissen innerer FOR XML-Abfragen als XML-Typinstanzen an äußere Abfragen  
- Sie können geschachtelte `FOR XML`-Abfragen schreiben, bei denen das Ergebnis der inneren Abfrage als `xml`-Typ an die äußere Abfrage zurückgegeben wird. Zum Beispiel:  
+ Sie können geschachtelte `FOR XML`-Abfragen schreiben, bei denen das Ergebnis der inneren Abfrage als `xml`-Typ an die äußere Abfrage zurückgegeben wird. Beispiel:  
   
 ```  
 SELECT Col1,   

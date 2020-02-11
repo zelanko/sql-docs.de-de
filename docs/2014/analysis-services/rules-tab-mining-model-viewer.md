@@ -1,5 +1,5 @@
 ---
-title: "\"Regeln\" (Miningmodell-Viewer) | Microsoft-Dokumentation"
+title: Registerkarte "Regeln" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070103"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Registerkarte "Regeln" (Miningmodell-Viewer)
@@ -27,13 +27,13 @@ ms.locfileid: "66070103"
 > [!WARNING]  
 >  Standardmäßig werden nur die Regeln im Viewer angezeigt, die über dem in **Minimale Wahrscheinlichkeit** definierten Schwellenwert für die Wahrscheinlichkeit liegen. Dieser Wert kann im Viewer nicht verringert werden, da der Wahrscheinlichkeitsschwellenwert für Regelausgaben beim Erstellen des Modells bestimmt wird. Weitere Informationen finden Sie unter [Technische Referenz für den Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Weitere Informationen finden Sie unter** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
@@ -68,10 +68,10 @@ ms.locfileid: "66070103"
  **Langen Namen anzeigen**  
  Zeigt den vollständigen Namen der Regel so an, wie er im Inhalt des Miningmodells enthalten ist.  
   
- **Maximale Zeilenanzahl**  
+ **Maximale Anzahl von Zeilen**  
  Beschränkt die Anzahl der Regeln, die im Viewer angezeigt werden.  
   
- **Wahrscheinlichkeit**  
+ **Probability**  
  In dieser Spalte im Diagramm wird die Wahrscheinlichkeit für jede Regel angezeigt.  
   
  Sie können auf die Spaltenüberschrift klicken, um nach Wahrscheinlichkeit zu sortieren.  
@@ -81,14 +81,14 @@ ms.locfileid: "66070103"
   
  Sie können auf die Spaltenüberschrift klicken, um nach Wichtigkeit zu sortieren.  
   
- **Rule**  
+ **Regel**  
  In dieser Spalte im Diagramm wird die Textbeschreibung für jede Regel angezeigt, dabei wird das mit den Optionen **Anzeigen** und **Langen Namen anzeigen**angegebene Format verwendet.  
   
  Sie können auf die Spaltenüberschrift klicken, um nach dem Text der Regel zu sortieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

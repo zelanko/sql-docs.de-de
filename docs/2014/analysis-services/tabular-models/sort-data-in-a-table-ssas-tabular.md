@@ -1,5 +1,5 @@
 ---
-title: Sortieren von Daten in einer Tabelle (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Sortieren von Daten in einer Tabelle (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc53b6ccc800e2986bf7a6bfdd01c0ef3c3208df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066663"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Sortieren von Daten in einer Tabelle (SSAS – tabellarisch)
@@ -46,9 +46,9 @@ ms.locfileid: "66066663"
     > [!NOTE]  
     >  Wenn die Ergebnisse nicht die erwarteten sind, enthält die Spalte möglicherweise als Text und nicht als Zahlen gespeicherte Zahlen. Zum Beispiel werden aus einigen Abrechnungssystemen importierte negative Zahlen oder Zahlen, denen ein ' (Apostroph) vorangeht, als Text gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Filtern und Sortieren von Daten &#40;SSAS – tabellarisch&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)   
- [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Filtern und Sortieren von Daten &#40;tabellarischen SSAS-&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)   
+ [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)  
   
   

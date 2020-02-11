@@ -1,5 +1,5 @@
 ---
-title: Angeben einer Verbindungszeichenfolge (SSAS) | Microsoft-Dokumentation
+title: Verbindungs Zeichenfolge angeben (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068549"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Verbindungszeichenfolge angeben (SSAS)
@@ -25,13 +25,13 @@ ms.locfileid: "66068549"
  Der entsprechende Anbieter muss auf dem Computer installiert sein, um eine Verbindung mit einer Datenquelle herzustellen. Weitere Informationen zu unterstützten Datenquellen und -anbietern finden Sie unter [Unterstützte Datenquellen &#40;SSAS – tabellarisch&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Anzeigenamen für diese Verbindung**  
+ **Anzeigename für die Verbindung**  
  Geben Sie einen eindeutigen Namen für diese Datenquellenverbindung ein. Dies ist ein Pflichtfeld.  
   
- **Verbindungszeichenfolge**  
+ **Verbindungs Zeichenfolge**  
  Geben Sie eine Verbindungszeichenfolge ein, mit der eine Verbindung zu einer OLE DB- oder ODBC-Datenquelle hergestellt werden soll.  
   
- **Erstellen**  
+ **Entwickeln**  
  Geben Sie die Eigenschaften für eine Verbindungszeichenfolge im Dialogfeld **Datenverknüpfungseigenschaften** an. Weitere Informationen finden Sie in der Hilfe zum Microsoft-Datenlink, die in diesem Dialogfeld verfügbar ist.  
   
  **Verbindung testen**  

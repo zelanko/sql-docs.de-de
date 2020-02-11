@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2daf8fe7e12cec5317335a0dcce273b16d428bcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63215803"
 ---
 # <a name="delete-a-workload-group"></a>Löschen von Arbeitsauslastungsgruppen
@@ -79,7 +79,7 @@ ms.locfileid: "63215803"
   
     -   Falls Sie nach Ausgabe der `DROP WORKLOAD GROUP`-Anweisung beschließen, dass Sie keine Sitzungen explizit stoppen möchten, um die Änderung zu übernehmen, können Sie die Gruppe mit dem gleichen Namen, den sie vor Ausgabe der DROP-Anweisung hatte, neu erstellen und dann in den ursprünglichen Ressourcenpool verschieben.  
   
-3.  Führen Sie die `ALTER RESOURCE GOVERNOR RECONFIGURE` Anweisung.  
+3.  Führen Sie `ALTER RESOURCE GOVERNOR RECONFIGURE` die-Anweisung aus.  
   
 ### <a name="example-transact-sql"></a>Beispiel (Transact-SQL)  
  Das folgende Beispiel löscht die Arbeitsauslastungsgruppe `groupAdhoc`.  
@@ -91,7 +91,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
  [Erstellen eines Ressourcenpools](create-a-resource-pool.md)   
  [Erstellen einer Arbeitsauslastungsgruppe](create-a-workload-group.md)   

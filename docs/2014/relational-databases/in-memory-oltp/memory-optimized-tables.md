@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9123bf89f75fce68a6edd8ba1becd141821fe326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158751"
 ---
 # <a name="memory-optimized-tables"></a>Speicheroptimierte Tabellen
@@ -26,7 +26,7 @@ ms.locfileid: "63158751"
   
      Erläutert, was speicheroptimierte Tabellen sind, und stellt Informationen über die Dauerhaftigkeit von Daten, den Zugriff auf Daten in speicheroptimierten Tabellen und die Leistung sowie Skalierbarkeit bereit.  
   
--   [Native Kompilierung von Tabellen und gespeicherten Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md)  
+-   [Systeminterne Kompilierung von Tabellen und gespeicherten Prozeduren](../in-memory-oltp/natively-compiled-stored-procedures.md)  
   
      Erläutert, wie speicheroptimierte Tabellen und systemintern kompilierten gespeicherten Prozeduren in DLLs kompiliert werden, und stellt Sicherheitsüberlegungen in diesem Zusammenhang dar.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63158751"
   
      Gibt eine Übersicht über die Abfrageverarbeitung für speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp-in-memory-optimization.md)  
   
   

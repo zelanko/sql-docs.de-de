@@ -17,20 +17,20 @@ ms.assetid: 3030c86a-0a74-4fed-ac0f-392e244cb965
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 862f54351eb67d2170d8e9806347eb8608178c23
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/27/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71342041"
 ---
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>Dynamische Verwaltungssichten in Verbindung mit dem SQL Server-Betriebssystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-In diesem Abschnitt werden dynamische Verwaltungs Sichten (DMV) dokumentiert, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Betriebs System (SQLOS) verknüpft sind. SQLOS ist für die Verwaltung von Betriebssystemressourcen zuständig, die für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spezifisch sind.
+In diesem Abschnitt werden dynamische Verwaltungs Sichten (DMV) dokumentiert, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Betriebs System (SQLOS) zugeordnet sind. SQLOS ist für die Verwaltung von Betriebssystemressourcen zuständig, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für spezifisch sind.
 
-SQLOS DMVs sind im Inhaltsverzeichnis aufgelistet. Die meisten dieser und Namen `sys.dm_os_<description>`.
+SQLOS DMVs sind im Inhaltsverzeichnis aufgelistet. Die meisten dieser und werden benannt `sys.dm_os_<description>`.
 
- Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Betriebs System bezogenen dynamischen Verwaltungs Sichten sind [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].  
+ Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamischen Verwaltungs Sichten im Zusammenhang mit dem [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Betriebs System sind.  
   
 |||  
 |-|-|  
@@ -38,7 +38,7 @@ SQLOS DMVs sind im Inhaltsverzeichnis aufgelistet. Die meisten dieser und Namen 
 |**sys.dm_os_memory_allocations**|**sys.dm_os_sublatches**|  
 |**sys.dm_os_worker_local_storage**||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

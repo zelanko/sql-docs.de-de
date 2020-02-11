@@ -1,5 +1,5 @@
 ---
-title: ADO.NET-Quellen-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
+title: ADO NET-Quellen-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8543f1a7bd14db09873aaefb58b74efae0f3cf34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061637"
 ---
 # <a name="ado-net-source-editor-error-output-page"></a>ADO.NET-Quellen-Editor (Seite 'Fehlerausgabe')
@@ -28,11 +28,11 @@ ms.locfileid: "66061637"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Quelle hat.  
   
-2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ADO NET-Quelle.  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf die ADO.NET-Quelle.  
   
 3.  Klicken Sie im **ADO.NET-Quellen-Editor**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "66061637"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET-Quellen-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
- [ADO.NET-Quellen-Editor &#40;Seite „Spalten“&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO NET-Quellen-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/ado-net-source-editor-connection-manager-page.md)   
+ [ADO.net-Quellen-Editor &#40;Seite "Spalten"&#41;](../../2014/integration-services/ado-net-source-editor-columns-page.md)   
  [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md)  
   
   

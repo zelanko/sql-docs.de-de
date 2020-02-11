@@ -14,30 +14,30 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797471"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>Erzwingen des Starts eines Clusters ohne Quorum
   In diesem Thema wird beschrieben, wie der Start eines Windows Server-Failoverclustering-Clusterknotens ohne Quorum erzwungen wird.  Dies ist möglicherweise für die Notfallwiederherstellung sowie in Multisubnetzszenarien erforderlich, um Daten wiederherzustellen die hohe Verfügbarkeit für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen wieder vollständig einrichten zu können.  
   
--   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
+-   Vorbereitungen **:**[Empfehlungen](#Recommendations), [Sicherheit](#Security)    
   
--   **Zum Erzwingen eines Clusters ohne Quorum zu starten:**  [mithilfe von Failovercluster-Manager](#FailoverClusterManagerProcedure), [mithilfe von Powershell](#PowerShellProcedure), [mithilfe von Net.exe](#CommandPromptProcedure)  
+-   So erzwingen Sie den **Start eines Clusters ohne Quorum mithilfe von:** Verwenden von[Failovercluster-Manager](#FailoverClusterManagerProcedure)mithilfe von [PowerShell](#PowerShellProcedure), verwenden von " [net. exe](#CommandPromptProcedure) "    
   
--   **Nachverfolgung:**  [Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum](#FollowUp)  
+-   Nach **Verfolgung:**[Nachverfolgung: nach dem Erzwingen des Cluster Starts ohne Quorum](#FollowUp)    
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
  Ohne anderslautende Angaben sind die in diesem Thema beschriebenen Prozeduren anwendbar, wenn sie von einem beliebigen Knoten im WSFC-Cluster ausgeführt werden.  Sie erzielen jedoch u. U. bessere Ergebnisse und vermeiden Netzwerkprobleme, indem Sie diese Schritte von dem Knoten ausführen, von dem aus der Start ohne Quorum erzwungen werden soll.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Der Benutzer muss einem Domänenkonto entsprechen, das Mitglied der lokalen Administratorgruppe an jedem Knoten des WSFC-Clusters ist.  
   
-##  <a name="FailoverClusterManagerProcedure"></a> Verwenden des Failovercluster-Managers  
+##  <a name="FailoverClusterManagerProcedure"></a>Verwenden von Failovercluster-Manager  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>So erzwingen Sie den Start eines Clusters ohne Quorum  
   
@@ -49,11 +49,11 @@ ms.locfileid: "72797471"
   
 4.  Stellen Sie im Zusammenfassungsbereich sicher, dass für **Quorumkonfiguration** als aktueller Wert  **Warnung: Der Cluster wird im Status "ForceQuorum" ausgeführt**festgelegt ist.  
   
-##  <a name="PowerShellProcedure"></a> Verwenden von PowerShell  
+##  <a name="PowerShellProcedure"></a>Verwenden von PowerShell  
   
 ##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>So erzwingen Sie den Start eines Clusters ohne Quorum  
   
-1.  Starten Sie eine erhöhte Windows PowerShell mithilfe von **Als Administrator ausführen**.  
+1.  Starten Sie eine erhöhte Windows PowerShell mittels **Als Administrator ausführen**.  
   
 2.  Importieren Sie das `FailoverClusters` -Modul, um Cluster-Cmdlets zu aktivieren.  
   
@@ -81,7 +81,7 @@ $nodes = Get-ClusterNode -Cluster $node
 $nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
-##  <a name="CommandPromptProcedure"></a> Verwenden von Net.exe  
+##  <a name="CommandPromptProcedure"></a>Verwenden von "net. exe"  
   
 ### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>So erzwingen Sie den Start eines Clusters ohne Quorum  
   
@@ -101,9 +101,9 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a> Nachverfolgung: Nach dem Erzwingen des Clusterstarts ohne ein Quorum  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erzwingen des Cluster Starts ohne ein Quorum  
   
--   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
+-   NodeWeight-Werte sind neu zu bewerten und zu konfigurieren, um vor der erneuten Onlineschaltung anderer Knoten ein neues Quorum korrekt erstellen zu können. Andernfalls wird für den Cluster u. U. wieder der Offlinemodus aktiviert.  
   
      Weitere Informationen finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).  
   
@@ -119,13 +119,13 @@ net.exe start clussvc /forcequorum
   
      [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](../../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Verwandte Inhalte  
+##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
--   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
+-   [Get-CLUSTERLOG-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>Siehe auch  
- [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
- [Konfigurieren von Cluster-Quorum-NodeWeight-Einstellungen](configure-cluster-quorum-nodeweight-settings.md)   
- [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Taskfokus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Wsfc-Notfall Wiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
+ [Konfigurieren von Cluster-Quorum-nodeweight-Einstellungen](configure-cluster-quorum-nodeweight-settings.md)   
+ [Failovercluster-Cmdlets in Windows PowerShell, aufgelistet nach Aufgaben Fokus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

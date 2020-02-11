@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Lernprogrammszenario | Microsoft-Dokumentation
+title: Analysis Services Tutorial-Szenario | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,15 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 323c98b56e2d77c529fb2adf913b15e51bd77900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062442"
 ---
 # <a name="analysis-services-tutorial-scenario"></a>Analysis Services-Lernprogrammszenario
-  Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
+  Dieses Lernprogramm basiert auf [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], einem fiktiven Unternehmen. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Herstellungsunternehmen, das Fahrräder aus Metall und Verbundwerkstoffen für kommerzielle Märkte in Nordamerika, Europa und Asien produziert und vertreibt. Die Zentrale von [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] befindet sich in Bothell, Washington (USA), wo das Unternehmen 500 Arbeiter beschäftigt. Zusätzlich beschäftigt [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] eine Reihe von regionalen Verkaufsteams für die gesamte Marktbasis.  
   
  In den vergangenen Jahren hat [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] die kleine Fabrik Importadores Neptuno erworben, die sich in Mexiko befindet. Importadores Neptuno stellt einige wichtige Unterkomponenten für die [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] -Produktlinie her. Diese Unterkomponenten werden für die Produktendmontage in Bothell angeliefert. Im Jahr 2005 wurde Importadores Neptuno alleiniger Hersteller und Vertreiber der Tourenrad-Produktgruppe.  
   
@@ -46,7 +47,7 @@ ms.locfileid: "66062442"
 -   Informationen sind schwer zu überwachen. Die Buchhaltungsabteilung verwendet derzeit die **AdventureWorksDW2012** -Datenbank nur als Quelle für Massendatenabfragen. Sie lädt dann die Daten in einzelne Kalkulationstabellen herunter und wendet beträchtliche Zeit für die Vorbereitung der Daten und die Bearbeitung der Kalkulationstabellen auf. Die Unternehmensfinanzberichte sind deshalb schwer zu erstellen, zu überwachen und über das gesamte Unternehmen hinweg zu verwalten.  
   
 ## <a name="the-solution"></a>Die Lösung  
- Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen Analysesystems durchgeführt. Zu der Überprüfung gehörte eine Analyse zum Aufdecken von Lücken, die durch aktuelle Probleme oder zukünftigen Anforderungen entstehen können. Das Data Warehouse-Team hat ermittelt, dass die **AdventureWorksDW2012** -Datenbank eine durchdachte, dimensionsbasierte Datenbank mit konformen Dimensionen und Ersatzschlüsseln ist. Konforme Dimensionen ermöglichen die Verwendung einer Dimension in mehreren Datamarts, beispielsweise einer Zeit- oder Produktdimension. Ersatzschlüssel sind künstliche Schlüssel, die Dimensions- und Faktentabellen verknüpfen, die verwendet werden, um Eindeutigkeit sicherzustellen und die Leistung zu verbessern. Das Data Warehouse-Team hat außerdem ermittelt, dass derzeit keine wesentlichen Probleme beim Laden und Verwalten der Basistabellen in der **AdventureWorksDW2012** -Datenbank vorliegen. Das Team hat sich deshalb entschieden, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Erreichen der folgenden Ziele einzusetzen:  
+ Das Data Warehouse-Team hat kürzlich eine Entwurfsüberprüfung des aktuellen Analysesystems durchgeführt. Zu der Überprüfung gehörte eine Analyse zum Aufdecken von Lücken, die durch aktuelle Probleme oder zukünftigen Anforderungen entstehen können. Das Data Warehouse-Team hat ermittelt, dass die **AdventureWorksDW2012** -Datenbank eine durchdachte, dimensionsbasierte Datenbank mit konformen Dimensionen und Ersatzschlüsseln ist. Konforme Dimensionen ermöglichen die Verwendung einer Dimension in mehreren Datamarts, beispielsweise einer Zeit- oder Produktdimension. Ersatzschlüssel sind künstliche Schlüssel, die Dimensions- und Faktentabellen verknüpfen, die verwendet werden, um Eindeutigkeit sicherzustellen und die Leistung zu verbessern. Das Data Warehouse-Team hat außerdem ermittelt, dass derzeit keine wesentlichen Probleme beim Laden und Verwalten der Basistabellen in der **AdventureWorksDW2012** -Datenbank vorliegen. Das Team hat sich daher für die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Verwendung von entschieden, um Folgendes zu erreichen:  
   
 -   Vereinheitlichung des Datenzugriffs durch eine gemeinsame Metadatenebene für die Analyse und Berichterstellung.  
   
@@ -60,9 +61,9 @@ ms.locfileid: "66062442"
   
 -   Anpassungen für Geschäftsbenutzer außerhalb der USA anhand der örtlichen Gegebenheiten.  
   
- Die Lektionen im Analysis Services-Lernprogramm bieten eine Anleitung zum Erstellen einer Cubedatenbank, die all diese Zielsetzungen erfüllt. Fahren Sie zum Einstieg zur ersten Lektion fort: [Lektion 1: Erstellen ein neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  
+ Die Lektionen im Analysis Services-Lernprogramm bieten eine Anleitung zum Erstellen einer Cubedatenbank, die all diese Zielsetzungen erfüllt. Um mit der Erstellung zu beginnen, gehen Sie zur ersten Lektion über: [Lesson 1: Create a New Tabular Model Project](lesson-1-create-a-new-tabular-model-project.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

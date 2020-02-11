@@ -1,5 +1,5 @@
 ---
-title: Perspektivendetails (Registerkarte ' Perspektiven ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Perspektiven Details (Registerkarte Perspektiven, Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93ad2deb67e1b8526e14ea34eb165659f96fa066
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072057"
 ---
 # <a name="perspective-details-perspectives-tab-cube-designer-analysis-services---multidimensional-data"></a>Perspektivendetails (Registerkarte 'Perspektiven', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
-  Im Bereich für **Perspektivendetails** auf der Registerkarte **Perspektiven** im Cube-Designer können Sie die Metadaten verwalten, die für die Benutzer verfügbar sind, die die ausgewählte Perspektive abfragen.  
+  Im Bereich für Perspektivendetails **** auf der Registerkarte **Perspektiven** im Cube-Designer können Sie die Metadaten verwalten, die für die Benutzer verfügbar sind, die die ausgewählte Perspektive abfragen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Cubeobjekte**  
  Zeigt eine hierarchische Liste von den im Cube enthaltenen Objekten und Eigenschaften an, die in die Perspektive eingeschlossen werden können.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66072057"
 ## <a name="context-menu"></a>Kontextmenü  
  Wenn Sie mit der rechten Maustaste auf eine Zelle in einer Perspektive klicken, die im Bereich **Perspektivendetails** angezeigt wird, wird ein Kontextmenü angezeigt, das die folgenden Optionen enthält:  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Neue Perspektive**|Klicken Sie auf diese Option, um eine neue Perspektive im ausgewählten Cube zu erstellen.|  
 |**Perspektive löschen**|Klicken Sie auf diese Option, um das Dialogfeld **Objekte löschen** anzuzeigen und die ausgewählte Perspektive zu löschen.|  

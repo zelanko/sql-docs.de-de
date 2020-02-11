@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Teilcubes in MDX (Multidimensional Expressions) | Microsoft-Dokumentation
+title: Aufbauen von Teilcubes in MDX (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 197ee30aa65179e8a434d04d20a5f5b643b42efd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074720"
 ---
 # <a name="building-subcubes-in-mdx-mdx"></a>Erstellen von Teilcubes in MDX (MDX)
@@ -53,7 +53,7 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  Aggregatwerte im Teilcube werden visuell summiert. Ein Teilcube enthält beispielsweise `USA`, `WA`und `OR`. Der Aggregatwert für `USA` ist die Summe aus `{WA,OR}` , weil `WA` und `OR` die einzigen Staaten sind, die durch den Teilcube definiert sind. Alle anderen Staaten werden ignoriert.  
   
- Explizite Verweise auf Zellen, die sich außerhalb des Teilcubes befinden, geben Zellwerte zurück, die im Kontext des gesamten Cubes ausgewertet wurden. Beispielsweise erstellen Sie einen Teilcube, der auf das aktuelle Jahr beschränkt ist. Sie verwenden dann die [ParallelPeriod](/sql/mdx/parallelperiod-mdx) -Funktion, um das aktuelle Jahr mit dem vorherigen Jahr zu vergleichen. Die unterschiedlichen Werte wird zurückgegeben, obwohl der Wert des vorherigen Jahres außerhalb des Teilcubes befindet.  
+ Explizite Verweise auf Zellen, die sich außerhalb des Teilcubes befinden, geben Zellwerte zurück, die im Kontext des gesamten Cubes ausgewertet wurden. Beispielsweise erstellen Sie einen Teilcube, der auf das aktuelle Jahr beschränkt ist. Sie verwenden dann die [ParallelPeriod](/sql/mdx/parallelperiod-mdx) -Funktion, um das aktuelle Jahr mit dem vorherigen Jahr zu vergleichen. Der Unterschied in den Werten wird zurückgegeben, obwohl der Wert des vorherigen Jahres außerhalb des Teilcubes liegt.  
   
  Wenn der ursprüngliche Kontext nicht überschrieben wurde, werden SET-Funktionen, die in einer untergeordneten SELECT-Anweisung ausgewertet werden, im Kontext dieser Anweisung ausgewertet. Wurde der Kontext überschrieben, werden SET-Funktionen im Kontext des gesamten Cubes ausgewertet.  
   
@@ -66,8 +66,8 @@ CREATE SUBCUBE Subcube_Identifier AS Subcube_Expression
   
  `SELECT [Account].[Account].Members ON 0, Measures.Members ON 1 FROM Budget`  
   
-## <a name="see-also"></a>Siehe auch  
- [Festlegen des Cubekontexts in einer Abfrage &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Einrichten des Cubekontexts in einer Abfrage &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

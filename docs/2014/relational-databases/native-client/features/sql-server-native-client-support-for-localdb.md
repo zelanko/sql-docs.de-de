@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client-Unterstützung für LocalDB | Microsoft-Dokumentation
+title: SQL Server Native Client Unterstützung für localdb | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a3f5a8214c2966b1958c3a4ea08edbee5af6a2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63225486"
 ---
 # <a name="sql-server-native-client-support-for-localdb"></a>SQL Server Native Client-Unterstützung für LocalDB
   Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]ist eine vereinfachte Version von SQL Server mit dem Namen LocalDB verfügbar. In diesem Thema wird erläutert, wie in einer LocalDB-Instanz eine Verbindung mit einer Datenbank hergestellt wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen zu LocalDB, einschließlich der Installation von LocalDB und der Konfiguration der LocalDB-Instanz, finden Sie unter:  
   
 -   [SQL Server Express LocalDB-Verweis](../../sql-server-express-localdb-reference.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "63225486"
   
 -   Verwenden Sie `sqllocaldb.exe i`, um den Namen der Standardinstanz zu ermitteln.  
   
--   Verwenden Sie das Schlüsselwort der `AttachDBFilename`-Verbindungszeichenfolge, um anzugeben, welche Datenbankdatei der Server anfügen soll. Bei Verwendung `AttachDBFilename`, wenn Sie nicht den Namen der Datenbank mit angeben der **Datenbank** Schlüsselwort für Verbindungszeichenfolgen, die Datenbank wird aus der LocalDB-Instanz entfernt werden, wenn die Anwendung geschlossen wird.  
+-   Verwenden Sie das Schlüsselwort der `AttachDBFilename`-Verbindungszeichenfolge, um anzugeben, welche Datenbankdatei der Server anfügen soll. Wenn Sie `AttachDBFilename`verwenden, wenn Sie den Namen der Datenbank nicht mit dem Schlüsselwort für die **Daten bankverbindungs** Zeichenfolge angeben, wird die Datenbank aus der localdb-Instanz entfernt, wenn die Anwendung geschlossen wird.  
   
 -   Geben Sie in der Verbindungszeichenfolge eine LocalDB-Instanz an:  
   
@@ -39,9 +39,9 @@ ms.locfileid: "63225486"
 SERVER=(localdb)\v11.0  
 ```  
   
- Falls notwendig können Sie eine LocalDB-Instanz mit "sqllocaldb.exe" erstellen. Sie können auch "sqlcmd.exe" verwenden, um Datenbanken in einer LocalDB-Instanz hinzuzufügen und zu ändern. Beispiel: `sqlcmd -S (localdb)\v11.0`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ Falls notwendig können Sie eine LocalDB-Instanz mit "sqllocaldb.exe" erstellen. Sie können auch "sqlcmd.exe" verwenden, um Datenbanken in einer LocalDB-Instanz hinzuzufügen und zu ändern. Beispiel: `sqlcmd -S (localdb)\v11.0`.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](sql-server-native-client-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  
   
   

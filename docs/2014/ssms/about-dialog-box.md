@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe32ce0b356a1c184cd8aba66c9be3d27805f3a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63226225"
 ---
 # <a name="about-dialog-box"></a>Info (Dialogfeld)
-  Das Dialogfeld **Info** stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen zu dem Computer, auf dem das Produkt ausgeführt wird. Bei Evaluierungsversionen ist im Eintrag für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] die Anzahl der Tage aufgeführt, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.  
+  Das **Dialogfeld** info stellt Produktinformationen bereit und ermöglicht Ihnen den Zugriff auf Informationen über den Computer, auf dem das Produkt ausgeführt wird. Für Evaluierungs Kopien listet der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Eintrag die Anzahl der Tage auf, die bis zum Ablaufen der Installation verbleiben. Dieses Dialogfeld steht im Menü **Hilfe** zur Verfügung.   
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Komponentenname**  
  Listet die Namen der einzelnen installierten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Elemente auf.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63226225"
  **Info kopieren**  
  Kopiert die Namen und Versionen der Komponenten in die Zwischenablage von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Allgemeine Benutzeroberflächenelemente](general-user-interface-elements.md)  
   
   

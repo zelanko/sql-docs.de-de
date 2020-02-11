@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df89b0c8f9ee694fcb2a77b21c82c3d7839287d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151532"
 ---
 # <a name="restore-the-default-sql-server-management-studio-configuration"></a>Wiederherstellen der Standardkonfiguration von SQL Server Management Studio
@@ -26,10 +26,10 @@ ms.locfileid: "63151532"
   
 1.  Wenn Sie die Fenster wieder an ihre ursprüngliche Positionen setzen möchten, klicken Sie im Menü **Fenster** auf **Fensterlayout zurücksetzen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Zusammenfassung: Grundlagen zur Navigation](lesson-1-9-summary-basic-navigation.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

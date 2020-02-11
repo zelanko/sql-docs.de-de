@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81d1df159944b96d0945bb45d2c331922d0f46e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074233"
 ---
 # <a name="modifying-data-mdx"></a>Ändern von Daten (MDX)
@@ -27,15 +27,15 @@ ms.locfileid: "66074233"
   
  Updates von Daten sind auf Dimensions- oder Cubeebene möglich.  
   
- **Rückschreiben von Dimensionen**  
+ **Rück Schreiben von Dimensionen**  
  Die [ALTER CUBE-Anweisung (MDX)](/sql/mdx/mdx-data-definition-alter-cube) wird verwendet, um die Daten einer Dimension mit aktiviertem Schreibzugriff zu ändern, und die [REFRESH CUBE-Anweisung (MDX)](/sql/mdx/mdx-data-definition-refresh-cube) wird verwendet, um das Löschen, Erstellen oder Aktualisieren von Attributwerten zu berücksichtigen. Mit der ALTER CUBE-Anweisung können Sie auch komplexe Operationen ausführen, so z. B. das Löschen einer gesamten Unterstruktur in einer Hierarchie oder das Heraufstufen der untergeordneten Elemente eines gelöschten Elements.  
   
- **Cuberückschreiben**  
+ **Cube-Rück schreiben**  
  Sie verwenden die [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) -Anweisung dazu, Änderungen an einem Cube mit aktiviertem Schreibzugriff vorzunehmen. Mit der UPDATE CUBE-Anweisung können Sie ein Tupel mit einem bestimmten Wert aktualisieren. Die [REFRESH CUBE-Anweisung (MDX)](/sql/mdx/mdx-data-definition-refresh-cube) wird zum Aktualisieren von Daten in einer Clientsitzung mit aktualisierten Daten vom Server verwendet.  
   
  Weitere Informationen finden Sie unter [Verwenden von Cuberückschreiben &#40;MDX&#41;](mdx-data-modification-using-cube-writebacks.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

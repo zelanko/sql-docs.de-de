@@ -13,23 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8d65325f8008756a65a584a2538b9d56ebd579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072718"
 ---
 # <a name="use-aggregate-functions"></a>Verwenden von Aggregatfunktionen
   Wird eine Dimension zum Segmentieren eines Measures verwendet, wird das Measure gemäß den in dieser Dimension enthaltenen Hierarchien zusammengefasst. Das Zusammenfassungsverhalten hängt von der für das Measure angegebenen Aggregatfunktion ab. Für die meisten Measures, die numerische Daten enthalten, ist die Aggregatfunktion `Sum`. Der Wert des Measures wird je nach de Ebene, auf der die Hierarchie aktiv ist, zu unterschiedlichen Mengen summiert.  
   
- In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Vordefinierten Aggregationstypen zählen `Sum`, `Min`, `Max`, `Count`, **Distinct Count**, und einige andere spezialisierteren Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
+ In Analysis Services wird jedes Measure, das Sie erstellen, durch eine Aggregationsfunktion gesichert, die den Betrieb des Measures bestimmt. Zu den vordefinierten Aggregations `Min`Typen `Max`zählen `Count` `Sum`,,,, unter **schiedliche Anzahl**und verschiedene andere speziellere Funktionen. Wenn Sie Aggregationen basierend auf komplexen oder benutzerdefinierten Formeln benötigen, können Sie alternativ eine MDX-Berechnung anstelle einer vorgefertigten Aggregationsfunktion erstellen. Wenn Sie beispielsweise ein Measure für einen Prozentwert definieren möchten, würden Sie dies in MDX anhand eines berechneten Measures tun. Siehe [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member).  
   
- Measures, die über den Cube-Assistenten erstellt werden, wird als Teil der Measuredefinition ein Aggregationstyp zugewiesen. Der Aggregationstyp ist immer `Sum`, sofern die Quellspalte numerische Daten enthält. `Sum` wird unabhängig vom Datentyp der Quellspalte zugewiesen. Wenn Sie beispielsweise den Cube-Assistenten zum Erstellen von Measures verwendet und alle Spalten aus einer Faktentabelle abgerufen haben, werden Sie feststellen, dass alle sich daraus ergebenden Measures eine Aggregation von `Sum` aufweisen, selbst wenn die Quelle eine Datums-/Zeitspalte ist. Überprüfen Sie immer die vorab zugeordneten Aggregationsmethoden für Measures, die über den Assistenten erstellt wurden, um sicherzustellen, dass die Aggregationsfunktion geeignet ist.  
+ Measures, die über den Cube-Assistenten erstellt werden, wird als Teil der Measuredefinition ein Aggregationstyp zugewiesen. Der Aggregationstyp ist immer `Sum`, sofern die Quellspalte numerische Daten enthält. 
+  `Sum` wird unabhängig vom Datentyp der Quellspalte zugewiesen. Wenn Sie beispielsweise den Cube-Assistenten zum Erstellen von Measures verwendet und alle Spalten aus einer Faktentabelle abgerufen haben, werden Sie feststellen, dass alle sich daraus ergebenden Measures eine Aggregation von `Sum` aufweisen, selbst wenn die Quelle eine Datums-/Zeitspalte ist. Überprüfen Sie immer die vorab zugeordneten Aggregationsmethoden für Measures, die über den Assistenten erstellt wurden, um sicherzustellen, dass die Aggregationsfunktion geeignet ist.  
   
  Sie können die Aggregationsmethode in der Cubedefinition über [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]oder über MDX zuweisen oder ändern. Weitere Informationen finden Sie unter [Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](create-measures-and-measure-groups-in-multidimensional-models.md) oder [Aggregat & #40;MDX&#41;](/sql/mdx/aggregate-mdx).  
   
-##  <a name="AggFunction"></a> Aggregatfunktionen  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stellt Funktionen zur Verfügung, um Measures über die Dimensionen in Measuregruppen zu aggregieren. Die *Additivität* einer Aggregationsfunktion legt fest, wie das Measure über alle Dimensionen im Cube hinweg aggregiert wird. Aggregationsfunktionen werden nach drei Ebenen der Additivität unterschieden:  
+##  <a name="AggFunction"></a>Aggregatfunktionen  
+ 
+  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] stellt Funktionen zur Verfügung, um Measures über die Dimensionen in Measuregruppen zu aggregieren. Die *Additivität* einer Aggregationsfunktion legt fest, wie das Measure über alle Dimensionen im Cube hinweg aggregiert wird. Aggregationsfunktionen werden nach drei Ebenen der Additivität unterschieden:  
   
  Additiv  
  Ein additives Measure, auch als vollständig additives Measure bezeichnet, kann über alle Dimensionen hinweg innerhalb der Measuregruppe, die das Measure enthält, uneingeschränkt aggregiert werden.  
@@ -57,18 +59,18 @@ ms.locfileid: "66072718"
 |`FirstNonEmpty`|Semiadditiv|Ruft den Wert des ersten nicht leeren untergeordneten Elements ab.|  
 |`LastNonEmpty`|Semiadditiv|Ruft den Wert des letzten nicht leeren untergeordneten Elements ab.|  
   
-##  <a name="bkmk_distinct"></a> About Distinct Count Measures  
+##  <a name="bkmk_distinct"></a>Informationen zu eindeutigen Anzahl Measures  
  Ein Measure mit dem **Aggregate-Funktion** -Eigenschaftswert **Distinct Count** wird als "Distinct Count Measure" bezeichnet. Ein Distinct Count Measure kann verwendet werden, um die Vorkommen der Elemente der untersten Ebene einer Dimension in der Faktentabelle zu zählen. Da nur unterschiedliche Elemente gezählt werden, wird ein mehrfach auftretendes Element nur einmal gezählt. Ein Distinct Count-Measure wird immer in einer speziellen Measuregruppe platziert. Das Einfügen eines Distinct Count-Measures in seine eigene Measuregruppe ist eine bewährte Methode, die zur Leistungsoptimierung in den Designer integriert wurde.  
   
  Distinct Count Measures werden im Allgemeinen dazu verwendet, für jedes Element einer Dimension zu bestimmen, wie viele unterschiedliche Elemente der untersten Ebene einer anderen Dimension Zeilen der Faktentabelle gemeinsam nutzen. Beispielsweise wird in einem Sales-Cube bestimmt, wie viele unterschiedliche Produkte von den einzelnen Kunden und Kundengruppen gekauft wurden. (Auf die einzelnen Elemente der Customers-Dimension bezogen bedeutet das: Von wie vielen unterschiedlichen Elementen der untersten Ebene der Products-Dimension werden Zeilen der Faktentabelle gemeinsam genutzt?) Ein weiteres Beispiel: In einem Cube für die Zählung der Besucher einer Internetsite wird pro Sitebesucher und Sitebesuchergruppe bestimmt, wie viele unterschiedliche Seiten der Internetsite besucht wurden. (Auf die einzelnen Elemente der Site Visitors-Dimension bezogen bedeutet das: Von wie vielen unterschiedlichen Elementen der untersten Ebene der Pages-Dimension werden Zeilen der Faktentabelle gemeinsam genutzt?) In jedem dieser Beispiele werden die Elemente der untersten Ebene der zweiten Dimension über ein Distinct Count Measure gezählt.  
   
  Diese Art von Analyse ist nicht auf zwei Dimensionen beschränkt. Tatsächlich kann ein Distinct Count Measure getrennt und nach einer beliebigen Kombination von Dimensionen des Cubes in Slices aufgeteilt werden, einschließlich der Dimension, die die gezählten Elemente enthält.  
   
- Ein Distinct Count Measure, das zur Zählung von Elementen dient, basiert auf einer Fremdschlüsselspalte der Faktentabelle. (Das heißt, dass die **Source Column**-Eigenschaft des Measures diese Spalte identifiziert.) Diese Spalte verknüpft die Dimensionstabellenspalte, die die über das Distinct Count Measure gezählten Elemente identifiziert.  
+ Ein Distinct Count Measure, das zur Zählung von Elementen dient, basiert auf einer Fremdschlüsselspalte der Faktentabelle. (Das heißt, dass die **Source Column** -Eigenschaft des Measures diese Spalte identifiziert.) Diese Spalte verknüpft die Dimensionstabellenspalte, die die über das Distinct Count Measure gezählten Elemente identifiziert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Measures und Measuregruppen](measures-and-measure-groups.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
- [Define Semiadditive Behavior](define-semiadditive-behavior.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Measures und Measure-Gruppen](measures-and-measure-groups.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Semiadditives Verhalten definieren](define-semiadditive-behavior.md)  
   
   

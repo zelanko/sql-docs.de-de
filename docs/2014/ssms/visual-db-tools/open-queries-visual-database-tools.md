@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48d0e96f2cd7b37683399c599f336f78e1ede3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195041"
 ---
 # <a name="open-queries-visual-database-tools"></a>Öffnen von Abfragen (Visual Database Tools)
@@ -34,7 +34,7 @@ ms.locfileid: "63195041"
 > [!NOTE]  
 >  Standardmäßig öffnet der Abfrage- und Sicht-Designer alle Bereiche (SQL, Kriterien, Diagramm und Ergebnisse); diese Standardeinstellung kann jedoch im Dialogfeld **Optionen** geändert werden. Wenn diese Bereiche geschlossen sind und Sie sie anzeigen möchten, zeigen Sie im Menü **Abfrage-Designer** auf **Bereich**, und klicken Sie anschließend auf den Bereich, den Sie öffnen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Speichern von Abfragen &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](results-pane-visual-database-tools.md)  

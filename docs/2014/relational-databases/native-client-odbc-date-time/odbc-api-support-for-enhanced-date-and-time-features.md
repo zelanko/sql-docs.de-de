@@ -1,5 +1,5 @@
 ---
-title: ODBC API-Unterstützung für verbesserte Datums- und Uhrzeitfunktionen | Microsoft-Dokumentation
+title: ODBC-API-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d898406bb78662ea6b56a923307f432dc68a080f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63210148"
 ---
 # <a name="odbc-api-support-for-enhanced-date-and-time-features"></a>ODBC-API-Unterstützung für verbesserte Funktionen für Datum und Uhrzeit
@@ -54,7 +54,7 @@ ms.locfileid: "63210148"
   
 -   [SQLSetDescRec](../native-client-odbc-api/sqlsetdescrec.md)  
   
--   [SQLSpecialColumns](../native-client-odbc-api/sqlspecialcolumns.md)  
+-   ['SQLSpecialColumns'](../native-client-odbc-api/sqlspecialcolumns.md)  
   
  Die folgenden APIs für das Massenkopieren unterstützen die verbesserten Funktionen für Datum/Uhrzeit:  
   
@@ -68,7 +68,7 @@ ms.locfileid: "63210148"
   
 -   [bcp_setcolfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-setcolfmt.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](date-and-time-improvements-odbc.md)  
   
   

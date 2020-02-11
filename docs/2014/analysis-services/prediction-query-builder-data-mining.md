@@ -1,5 +1,5 @@
 ---
-title: Generator für Vorhersageabfragen (Datamining) | Microsoft-Dokumentation
+title: Vorhersage Abfrage-Generator (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61f0f7c62c6c3f245a87e7e8ce37153f08226a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66070781"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Generator für Vorhersageabfragen (Data Mining)
@@ -22,24 +22,24 @@ ms.locfileid: "66070781"
   
  Für eine exemplarische Vorgehensweise zum Verwenden des Generators für Vorhersageabfragen für die Erstellung von Data Mining-Abfragen empfiehlt es sich, die folgenden Lernprogramme und die Themen durchzugehen:  
   
--   [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
+-   [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Das Erstellen und Abfragen von Datamining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Datamining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Erstellen und Abfragen von Data Mining-Modellen mit DMX: Tutorials &#40;Analysis Services Data Mining-&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Data Mining-Abfragen](data-mining/data-mining-queries.md)  
   
--   [Data Mining-Abfragetasks und -Anweisungen](data-mining/data-mining-query-tasks-and-how-tos.md)  
+-   [Data Mining-Abfragetasks und Anweisungen](data-mining/data-mining-query-tasks-and-how-tos.md)  
   
  Die Ansicht **Miningmodellvorhersage** beinhaltet die folgenden Tools und Dialogfelder:  
   
--   [Entwerfen Sie im Bereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](design-pane-mining-model-prediction-view.md)  
+-   [Entwurfs Bereich &#40;Mining Modell-Vorhersage Ansicht&#41;](design-pane-mining-model-prediction-view.md)  
   
--   [Abfragebereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](query-pane-mining-model-prediction-view.md)  
+-   [Abfrage Bereich &#40;Mining Modell-Vorhersage Ansicht&#41;](query-pane-mining-model-prediction-view.md)  
   
--   [Führen Sie im Bereich &#40;Mining Miningmodellvorhersage-Sicht&#41;](result-pane-mining-model-prediction-view.md)  
+-   [Ergebnisbereich &#40;Mining Modell-Vorhersage Ansicht&#41;](result-pane-mining-model-prediction-view.md)  
   
--   [Dialogfeld Miningstruktur auswählen &#40;Mining Miningmodellvorhersage-Sicht&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
+-   [Dialog Feld Mining Modell auswählen &#40;Mining Modell-Vorhersage Ansicht&#41;](select-mining-model-dialog-box-mining-model-prediction-view.md)  
   
--   [Speichern Sie die Data Mining-Abfragedialogfeld &#40;Mining Miningmodellvorhersage-Sicht&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
+-   [Dialog Feld "Ergebnisse der Data Mining-Abfrage speichern" &#40;Mining Modell-Vorhersage Ansicht&#41;](save-data-mining-query-result-dialog-box-mining-model-prediction-view.md)  
   
   

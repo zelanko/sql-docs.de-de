@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Quellcubedimension (Datamining-Assistent) | Microsoft-Dokumentation
+title: Quellcubedimension auswählen (Data Mining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069229"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Quellcubedimension auswählen (Data Mining-Assistent)
@@ -25,7 +25,7 @@ ms.locfileid: "66069229"
 > [!NOTE]  
 >  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube** ausgewählt haben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Quellcubedimension auswählen**  
  Wählen Sie die Dimension des Cubes aus, der die Quelldaten für Ihre Miningstruktur bereitstellen wird.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "66069229"
   
  Wenn die Dimension, die Sie auswählen, nicht alle verknüpften Attribute enthält, die Sie benötigen, um das Data Mining-Modell zu erstellen, müssen Sie möglicherweise die Dimension ändern. Weitere Informationen finden Sie unter [Definieren von Datenbankdimensionen](multidimensional-models/define-database-dimensions.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Erstellen von Datamining-Struktur &#40;Datamining-Assistent&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
- [Fallschlüssel auswählen &#40;Datamining-Assistent&#41;](select-the-case-key-data-mining-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Erstellen Sie die Data Mining-Struktur &#40;Data Mining-Assistenten&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
+ [Wählen Sie den Fall Schlüssel &#40;Data Mining-Assistenten aus&#41;](select-the-case-key-data-mining-wizard.md)  
   
   

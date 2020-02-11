@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075179"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensionen in mehrdimensionalen Modellen
@@ -35,7 +35,7 @@ ms.locfileid: "66075179"
  Wenn Sie einen Cube erstellen, können Sie dem neuen Cube zudem jede beliebige Dimension hinzufügen, die bereits in der Datenbank vorhanden ist. Diese wurde zuvor möglicherweise schon für einen anderen Cube oder vom Dimensions-Assistenten definiert. Nachdem eine Datenbankdimension definiert wurde, können Sie sie im Dimensions-Designer ändern und konfigurieren. Sie können auch mithilfe des Cube-Designers begrenzte benutzerdefinierte Einstellungen an der Cubedimension vornehmen.  
   
 > [!NOTE]  
->  Mithilfe von XMLA oder Analysis Management Objects (AMO) können Sie Dimensionen, Attribute und Hierarchien auch programmgesteuert entwerfen und konfigurieren. Weitere Informationen finden Sie unter [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) und [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
+>  Mithilfe von XMLA oder Analysis Management Objects (AMO) können Sie Dimensionen, Attribute und Hierarchien auch programmgesteuert entwerfen und konfigurieren. Weitere Informationen finden Sie unter [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla) und [entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
@@ -43,7 +43,7 @@ ms.locfileid: "66075179"
  [Definieren von Datenbankdimensionen](define-database-dimensions.md)  
  Beschreibt das Ändern und Konfigurieren einer Datenbankdimension mithilfe des Dimensions-Designers.  
   
- [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren, Ändern und Konfigurieren eines Datenbankdimensionsattributs mithilfe des Dimensions-Designers.  
   
  [Definieren von Attributbeziehungen](attribute-relationships-define.md)  
@@ -55,7 +55,7 @@ ms.locfileid: "66075179"
  [Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen](../use-the-business-intelligence-wizard-to-enhance-dimensions.md)  
  Beschreibt das Verbessern einer Datenbankdimension mithilfe des Business Intelligence-Assistenten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cubes in mehrdimensionalen Modellen](cubes-in-multidimensional-models.md)  
   
   

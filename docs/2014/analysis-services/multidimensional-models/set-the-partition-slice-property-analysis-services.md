@@ -1,5 +1,5 @@
 ---
-title: Legen Sie die Slice-Eigenschaft des Partition (Analysis Services) | Microsoft-Dokumentation
+title: Festlegen der Eigenschaft "Partitions Slice" (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/05/2015
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d7b41de3505c3b6e3ccf3886254958ee71e456
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072940"
 ---
 # <a name="set-the-partition-slice-property-analysis-services"></a>Festlegen der Slice-Eigenschaft für Partitionen (Analysis Services)
@@ -41,11 +41,11 @@ ms.locfileid: "66072940"
 > [!NOTE]  
 >  Beachten Sie, dass dynamische MDX-Funktionen (z.B. [Generate &#40;MDX&#41;](/sql/mdx/generate-mdx) oder [Except &#40;MDX&#41;](/sql/mdx/except-mdx-function)) in der Slice-Eigenschaft für Partitionen nicht unterstützt werden. Sie müssen das Slice mit expliziten Tupel- oder Elementverweisen definieren.  
 >   
->  Z. B. statt der [: &#40;Bereich&#41; &#40;MDX&#41; ](/sql/mdx/range-mdx) Funktion, um einen Bereich zu definieren, müssen Sie jedes Element anhand der bestimmten Jahre auflisten.  
+>  Anstatt z. b. die [&#40;Range&#41; &#40;MDX&#41;](/sql/mdx/range-mdx) -Funktion zu verwenden, um einen Bereich zu definieren, müssen Sie jedes Element anhand der bestimmten Jahre auflisten.  
 >   
 >  Wenn Sie ein komplexes Slice definieren müssen, empfiehlt sich das Definieren der Tupel im Slice mithilfe eines XMLA-Alter-Skripts. Anschließend können Sie das Befehlszeilentool „Ascmd“ oder die SSIS- [Analysis Services Execute DDL Task](../../integration-services/control-flow/analysis-services-execute-ddl-task.md) -Aufgabe verwenden, um unmittelbar vor dem Verarbeiten der Partition das Skript auszuführen und den bestimmten Satz an Elementen zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)  
   
   

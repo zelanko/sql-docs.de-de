@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a960df20b7b07bffab900589ae4d520541d720c1
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72688663"
 ---
 # <a name="call-stored-procedures-odbc"></a>Aufrufen von gespeicherten Prozeduren (ODBC)
   Wenn eine SQL-Anweisung eine gespeicherte Prozedur mithilfe der ODBC-Aufruf-Escape-Klausel aufruft, sendet der Microsoft SQL Server Treiber die Prozedur mit dem RPC-Mechanismus (remote gespeicherte Prozedur Aufruf) an SQL Server. RPC-Anforderungen umgehen größtenteils das Analysieren der Anwendungen und die Parameterverarbeitung in SQL Server und sind schneller als die Transact-SQL EXECUTE-Anweisung.  
   
- Eine Beispielanwendung, die diese Funktion veranschaulicht, finden Sie unter [Verarbeiten von Rückgabe Codes &#40;und Ausgabe&#41;Parametern (ODBC](running-stored-procedures-process-return-codes-and-output-parameters.md)).  
+ Eine Beispielanwendung, die diese Funktion veranschaulicht, finden Sie unter [Verarbeiten von Rückgabe Codes und Ausgabeparametern &#40;ODBC-&#41;](running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ### <a name="to-run-a-procedure-as-an-rpc"></a>So führen Sie eine Prozedur als RPC aus  
   
@@ -39,11 +39,11 @@ ms.locfileid: "72688663"
 > [!NOTE]  
 >  Wenn eine Anwendung eine Prozedur mit der Transact-SQL EXECUTE-Syntax (statt mit der ODBC CALL-Escapesequenz) übermittelt, gibt der SQL Server ODBC-Treiber den Prozeduraufruf an SQL Server als SQL-Anweisung statt als RPC weiter. Darüber hinaus werden Ausgabeparameter nicht zurückgegeben, wenn die Transact SQL EXECUTE-Anweisung verwendet wird.  
   
-## <a name="see-also"></a>Siehe auch  
- Gewusst [-wie-Themen &#40;zur Ausführung gespeicherter&#41; Prozeduren ODBC](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
- [Batch Verarbeitung von Aufrufen gespeicherter Prozeduren](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
- [Ausführen gespeicherter Prozeduren](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gewusst-wie-Themen zur Ausführung gespeicherter Prozeduren &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)   
+ [Batch Verarbeitung von gespeicherten Prozedur aufrufen](../native-client-odbc-stored-procedures/batching-stored-procedure-calls.md)   
+ [Gespeicherte Prozeduren](../native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [Aufrufen einer gespeicherten Prozedur](../native-client-odbc-stored-procedures/calling-a-stored-procedure.md)   
- [Vorgehensweisen](../native-client-odbc-queries/executing-statements/procedures.md)  
+ [Prozeduren](../native-client-odbc-queries/executing-statements/procedures.md)  
   
   

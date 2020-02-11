@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 624681d8f784d3169b1f5e17a34daef99a71459b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105377"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Renderingverhalten (Berichts-Generator und SSRS)
@@ -127,9 +127,9 @@ ms.locfileid: "66105377"
   
 -   Logische Seitenumbrüche, die für Elemente in einer Tabellen- oder Matrixzelle definiert wurden, werden nicht beibehalten. Dies gilt nicht für Listenelemente.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
+ [Rendern in HTML (Berichts-Generator und SSRS)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

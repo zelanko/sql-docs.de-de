@@ -11,25 +11,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70176106"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>Lektion 1: Erstellen von Azure Storage-Objekten
+# <a name="lesson-1-create-azure-storage-objects"></a>Lektion 1: Erstellen von Azure Storage-Objekten
   Bevor Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherungen im Cloudspeicher erstellen, müssen Sie zunächst ein Speicherkonto und dann einen BLOB-Container erstellen. Lektion 1 führt Sie durch die Schritte zum Anmelden beim Azure-Verwaltungsportal und zum Erstellen eines Speicher Kontos und eines BLOB-Containers.  
   
-## <a name="create-a-storage-account"></a>Erstellen eines Speicher Kontos  
+## <a name="create-a-storage-account"></a>Erstellen eines Speicherkontos  
  Führen Sie die folgenden Schritte aus, um ein Speicherkonto aus dem Azure-Verwaltungsportal zu erstellen:  
   
-1.  Melden Sie sich mit Ihrem Konto beim Azure-Verwaltungsportal an. Wenn Sie nicht über ein Azure-Konto verfügen, besuchen Sie die [Kostenlose Azure-Testversion für 3 Monate](https://go.microsoft.com/fwlink/?LinkId=271927).  
+1.  Melden Sie sich unter Ihrem Konto beim Azure-Verwaltungsportal an. Wenn Sie nicht über ein Azure-Konto verfügen, besuchen Sie die [Kostenlose Azure-Testversion für 3 Monate](https://go.microsoft.com/fwlink/?LinkId=271927).  
   
      ![Azure-Anmeldebildschirm](../../2014/tutorials/media/windowazurelogin-backuptocloud.gif "Azure-Anmeldebildschirm")  
   
 2.  Führen Sie die [hier](https://go.microsoft.com/fwlink/?LinkId=271926)beschriebenen schrittweisen Anweisungen aus, um ein Speicherkonto zu erstellen.  
   
-3.  Navigieren Sie zu dem Speicherkonto, das Sie im vorherigen Schritt erstellt haben. Klicken Sie unten in der Mitte der Webseite auf **Schlüssel verwalten**. Die Kontoinformationen werden angezeigt. Kopieren Sie den Speicherkontonamen und die Zugriffsschlüssel. Diese Informationen sind erforderlich, um gespeicherte SQL-Anmeldeinformation zu erstellen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet diese Informationen, um auf das Speicherkonto zuzugreifen und Sicherungen zu erstellen.  
+3.  Navigieren Sie zu dem Speicherkonto, das Sie im vorherigen Schritt erstellt haben. Klicken Sie unten in der Mitte der Webseite auf **Schlüssel verwalten**. Die Kontoinformationen werden angezeigt. Kopieren Sie den Speicherkontonamen und die Zugriffsschlüssel. Diese Informationen sind erforderlich, um gespeicherte SQL-Anmeldeinformation zu erstellen. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet diese Informationen, um auf das Speicherkonto zuzugreifen und Sicherungen zu erstellen.  
   
      ![Screenshot der Azure Storage Kontoschlüssel](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Screenshot der Azure Storage Kontoschlüssel")  
   
@@ -37,7 +38,7 @@ ms.locfileid: "70176106"
     >  Sie können ein Speicherkonto mithilfe von REST-APIs auch programmgesteuert erstellen. Weitere Informationen finden Sie unter [Erstellen eines Speicher Kontos](https://go.microsoft.com/fwlink/?LinkId=271928).  
   
 ### <a name="create-a-blob-container"></a>Erstellen eines BLOB-Containers  
- Ein Container stellt eine Gruppierung eines Blob-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Die Anzahl der Container für ein Konto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine unbegrenzte Anzahl von BLOBs gespeichert werden.  
+ Ein Container dient zum Gruppieren mehrerer Blobs. Alle BLOBs müssen sich in Containern befinden. Die Anzahl der Container für ein Konto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine beliebige Anzahl von BLOBs gespeichert sein.  
   
  Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:  
   
@@ -57,6 +58,6 @@ ms.locfileid: "70176106"
     >  Container können mithilfe der REST-APIs auch programmgesteuert erstellt werden. Weitere Informationen finden Sie unter [Create Container](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Erstellen Sie eine SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)Anmelde Informationen.  
+ [Lektion 2: Erstellen eines SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)Anmelde Informationen.  
   
   

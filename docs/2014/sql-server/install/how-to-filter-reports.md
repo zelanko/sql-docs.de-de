@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Filtern von Berichten | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Filtern von Berichten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,37 +14,37 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad387683b2a093f680c00885a50b043e8a890cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094888"
 ---
-# <a name="how-to-filter-reports"></a>Gewusst wie: Filtern von Berichten
-  In diesem Thema wird beschrieben, wie Sie den Upgrade Advisor-Berichts-Viewer zum Anwenden von Filtern zu einem Bericht verwenden können.  
+# <a name="how-to-filter-reports"></a>Vorgehensweise: Filtern von Berichten
+  In diesem Thema wird beschrieben, wie Sie mit dem Berichts-Viewer von Upgrade Advisor Filter auf einen Bericht anwenden können.  
   
 ### <a name="to-filter-reports"></a>So filtern Sie Berichte  
   
-1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie filtern möchten. Anweisungen hierzu finden Sie unter [Vorgehensweise: Anzeigen eines Berichts der Upgrade Advisor](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
+1.  Zeigen Sie im Berichts-Viewer den Bericht an, den Sie filtern möchten. Anweisungen finden Sie unter Gewusst [wie: Anzeigen eines Berichts des Upgrade Advisors](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md).  
   
-2.  In der **filtern, indem** wählen Sie eine Art des Problems an:  
+2.  Wählen Sie in der Liste **Filtern nach** einen Problemtyp aus, der angezeigt werden soll:  
   
     -   **Alle Probleme**. Damit werden alle Probleme angezeigt, die nicht als gelöst markiert wurden.  
   
-    -   **Alle ugradeprobleme**. Damit werden alle Probleme angezeigt, die das Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] betreffen.  
+    -   **Alle Upgradeprobleme**. Damit werden alle Probleme angezeigt, die das Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] betreffen.  
   
-    -   **Probleme vor dem upgrade**. Damit werden alle Probleme angezeigt, die vor dem Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] behoben werden sollten oder müssen.  
+    -   **Probleme vor dem Upgrade**. Damit werden alle Probleme angezeigt, die vor dem Update auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] behoben werden sollten oder müssen.  
   
     -   **Alle Migrationsprobleme**. Damit werden alle Probleme angezeigt, die sich auf die Migration von Daten oder Anwendungen zu [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] beziehen.  
   
-    -   **Behobene Probleme**. Damit werden alle Probleme angezeigt, die als gelöst markiert wurden.  
+    -   Behobene **Probleme**. Damit werden alle Probleme angezeigt, die als gelöst markiert wurden.  
   
-    -   **Ungelöste Probleme**. Damit werden alle Probleme angezeigt, die noch nicht gelöst wurden.  
+    -   Nicht **aufgelöste Probleme**. Damit werden alle Probleme angezeigt, die noch nicht gelöst wurden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+ [Gewusst-wie-Themen zum Upgrade Advisor](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

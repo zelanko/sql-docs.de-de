@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63145487"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lektion 1: Herstellen einer Verbindung mit der Datenbank-Engine
@@ -22,12 +22,13 @@ ms.locfileid: "63145487"
   
   
   
-##  <a name="tools"></a> Tools für die ersten Schritte  
+##  <a name="tools"></a>Tools für den Einstieg  
  Im Lieferumfang von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sind eine Vielzahl von Tools enthalten. In diesem Thema wird beschrieben, welche Tools Sie zuerst benötigen und wie das richtige Tool für den Auftrag ausgewählt wird. Auf alle Tools kann über das Menü **Start** zugegriffen werden. Einige Tools wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]werden nicht standardmäßig installiert. Die Tools müssen als Teil der Clientkomponenten während der Ausführung des Setupprogramms installiert werden. Eine vollständige Beschreibung der unten aufgeführten Tools finden Sie, indem Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation danach suchen. [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthält nur eine Teilmenge der Tools.  
   
 ### <a name="basic-tools"></a>Haupttools  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)]-Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. Das Tool ist nicht in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthalten, kann jedoch als separates Download vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)heruntergeladen werden.  
+-   
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ist das Haupttool zum Verwalten von [!INCLUDE[ssDE](../includes/ssde-md.md)] und Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)]-Code. Es wird in der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Shell gehostet. Das Tool ist nicht in [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] enthalten, kann jedoch als separates Download vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)heruntergeladen werden.  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurations-Manager wird sowohl mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als auch mit den Clienttools installiert. Sie können damit Serverprotokolle aktivieren, Protokolloptionen wie z. B. TCP-Ports konfigurieren, Serverdienste so konfigurieren, dass sie automatisch gestartet werden, und Clientcomputer so konfigurieren, dass sie mit dem von Ihnen bevorzugten Verfahren gestartet werden. Mit diesem Tool können erweiterte Konnektivitätselemente konfiguriert, aber keine Funktionen aktiviert werden.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "63145487"
   
 -   Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-##  <a name="connect"></a> Herstellen einer Verbindung mit Management Studio  
+##  <a name="connect"></a>Herstellen einer Verbindung mit Management Studio  
  Es ist sehr einfach, mithilfe von Tools, die auf demselben Computer ausgeführt werden, eine Verbindung mit [!INCLUDE[ssDE](../includes/ssde-md.md)] herzustellen, wenn Sie den Namen der Instanz kennen und wenn Sie die Verbindung als Mitglied der Administratorengruppe auf dem Computer herstellen. Die folgenden Vorgänge müssen auf dem Computer ausgeführt werden, der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]hostet.  
   
 ##### <a name="to-determine-the-name-of-the-instance-of-the-database-engine"></a>So bestimmen Sie den Namen der Instanz der Datenbank-Engine  
@@ -72,11 +73,11 @@ ms.locfileid: "63145487"
   
 2.  Wählen Sie **Datenbank-Engine** aus.  
   
-3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Servername der *<Computername>***\\***<Instanzname>* , wie z.B. **ACCTG_SRVR\SQLEXPRESS**.  
+3.  Geben Sie im Feld **Servername** den Namen der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]ein. Bei der Standardinstanz von SQL Server ist der Servername der Name des Computers. Bei einer benannten Instanz von SQL Server ist der Server Name der *<computer_name>***\\***<* instance_name>, z. b. **ACCTG_SRVR \sqlexpress**.  
   
 4.  Klicken Sie auf **Verbinden**.  
   
-##  <a name="additional"></a> Autorisieren zusätzlicher Verbindungen  
+##  <a name="additional"></a>Autorisierungs zusätzlicher Verbindungen  
  Nachdem Sie eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als Administrator hergestellt haben, besteht eine Ihrer ersten Aufgaben darin, Verbindungen für andere Benutzer zu autorisieren. Dazu erstellen Sie eine Anmeldung und erteilen dieser Anmeldung die Berechtigung, als Benutzer auf eine Datenbank zuzugreifen. Eine Anmeldung kann entweder eine Anmeldung mit Windows-Authentifizierung sein, die Windows-Anmeldeinformationen verwendet, oder eine Anmeldung mit SQL Server-Authentifizierung, die die Authentifizierungsinformationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] speichert und von Ihren Windows-Anmeldeinformationen unabhängig ist. Verwenden Sie nach Möglichkeit immer Windows-Authentifizierung.  
   
 ##### <a name="create-a-windows-authentication-login"></a>So erstellen Sie eine Anmeldung mit Windows-Authentifizierung  
@@ -85,7 +86,7 @@ ms.locfileid: "63145487"
   
      Das Dialogfeld **Anmeldung – Neu** wird angezeigt.  
   
-2.  Auf der **allgemeine** auf der Seite die **Anmeldename** geben einen Windows-Anmeldenamen im Format  *\<Domäne >\\< Login\>* .  
+2.  Geben Sie auf der Seite **Allgemein** im Feld **Anmelde Name** eine Windows-Anmeldung im Format * \<Domain \\><Login\>* ein.  
   
 3.  Wählen Sie (sofern verfügbar) **im Feld** Standarddatenbank [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] aus. Wählen Sie andernfalls **master**aus.  
   
@@ -101,6 +102,6 @@ ms.locfileid: "63145487"
 >  Diese grundlegenden Informationen sollen Ihnen den Einstieg erleichtern. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt eine umfassende Sicherheitsumgebung bereit, da das Thema Sicherheit offensichtlich einen wichtigen Aspekt des Datenbankbetriebs darstellt.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
+ [Lektion 2: Herstellen einer Verbindung von einem anderen Computer](lesson-2-connecting-from-another-computer.md)  
   
   

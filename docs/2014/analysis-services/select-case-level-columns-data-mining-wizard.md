@@ -1,5 +1,5 @@
 ---
-title: Select Case-Spalten (Datamining-Assistent) | Microsoft-Dokumentation
+title: Spalten auf Fallebene auswählen (Data Mining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069655"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Spalten auf Fallebene auswählen (Data Mining-Assistent)
   Verwenden Sie die Seite **Spalten auf Fallebene auswählen** , um die Attribute und Measures der zugrunde liegenden Quellcubedimension auszuwählen, die zu den Spalten auf Fallebene der Miningstruktur werden.  
   
 > [!NOTE]  
->  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube ausgewähl**t haben.  
+>  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube** ausgewählt haben.  
   
- **Weitere Informationen finden Sie unter** [Datamining-Assistent &#40;Analysis Services – Datamining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden Sie unter:** [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Optionen  
- **Verknüpfte Attribute und Measures**  
- Wählen Sie die Attribute und Measures aus, die zu den Spalten auf Fallebene der Miningstruktur werden. Alle ausgewählten Attribute müssen sich in Hierarchien befinden, oder die Attributhierarchien müssen aktiviert sein.  
+## <a name="options"></a>Tastatur  
+ **Verwandte Attribute und Measures**  
+ Wählen Sie die Attribute und Measures aus, die zu den Spalten auf Fallebene der Miningstruktur werden. Alle ausgewählten Attribute müssen sich in Hierarchien befinden oder die Attributhierarchien müssen aktiviert sein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Fallschlüssel auswählen &#40;Datamining-Assistent&#41;](select-the-case-key-data-mining-wizard.md)   
- [Geben Sie die Verwendung der Miningmodellspalte &#40;Datamining-Assistent&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Wählen Sie den Fall Schlüssel &#40;Data Mining-Assistenten aus&#41;](select-the-case-key-data-mining-wizard.md)   
+ [Verwendungs &#40;Data Mining-Assistenten für Mining Modell Spalten angeben&#41;](specify-mining-model-column-usage-data-mining-wizard.md)  
   
   

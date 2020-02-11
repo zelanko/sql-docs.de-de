@@ -1,5 +1,5 @@
 ---
-title: Verschieben eine Analysis Services-Datenbank | Microsoft-Dokumentation
+title: Verschieben einer Analysis Services Datenbank | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66073600"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
@@ -37,13 +37,13 @@ ms.locfileid: "66073600"
 > [!NOTE]  
 >  Wenn Sie eine Datenbank trennen, ohne ihr ein Kennwort zuzuweisen, befindet sich die Datenbank in einem ungesicherten Zustand. Es wird daher empfohlen, dass Sie der Datenbank ein Kennwort zuweisen, um vertrauliche Informationen zu schützen. Zudem sollten Sie die entsprechende Zugriffssicherheit auf den Datenbankordner, die Unterordner und die Dateien anwenden, um den nicht autorisierten Zugriff darauf zu verhindern.  
   
-## <a name="procedures"></a>Vorgehensweisen  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="moving-a-database-interactively-using-ssms"></a>Interaktives Verschieben einer Datenbank mithilfe von SSMS  
   
 1.  Suchen Sie im linken oder rechten Bereich von SSMS nach der zu verschiebenden Datenbank.  
   
-2.  Mit der rechten Maustaste auf die Datenbank, und wählen **trennen...**  
+2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **trennen... aus.**  
   
 3.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie dann auf **OK** , um den Befehl zum Trennen auszuführen.  
   
@@ -51,11 +51,11 @@ ms.locfileid: "66073600"
   
 5.  Suchen Sie im linken oder rechten Bereich von SSMS nach dem Ordner **Datenbanken** .  
   
-6.  Mit der rechten Maustaste auf die **Datenbanken** Ordner, und wählen **anfügen...**  
+6.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbanken** , und wählen Sie **Anfügen aus.**  
   
-7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen ( **...** ) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den neuen Speicherort des Datenbankordners ein. Alternativ können Sie mit der Schaltfläche zum Durchsuchen (**...**) nach dem Daten Bank Ordner suchen.  
   
-8.  Wählen Sie die `ReadWrite` Modus für die Datenbank.  
+8.  Wählen Sie `ReadWrite` den Modus für die Datenbank aus.  
   
 9. Geben Sie das in Schritt 3 verwendete Kennwort ein, und klicken Sie auf **OK** , um den Befehl zum Anfügen auszuführen.  
   
@@ -139,15 +139,15 @@ ms.locfileid: "66073600"
   
 2.  Führen Sie den XMLA-Befehl aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Anfügen und Trennen von Analysis Services-Datenbanken](attach-and-detach-analysis-services-databases.md)   
- [Datenbankspeicherort](database-storage-location.md)   
- [Datenbank-ReadWriteModes](database-readwritemodes.md)   
+ [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)   
+ [Daten Bank Speicherort](database-storage-location.md)   
+ [Datenbanklesemodusmodi](database-readwritemodes.md)   
  [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Detach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [ReadWriteMode-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [DbStorageLocation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ ["Read Write-Mode"-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Dbstorageloation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

@@ -10,25 +10,25 @@ ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Jtoland
 ms.author: Jtoland
 ms.openlocfilehash: fa87f4ac6f5a4caf5da8d5b00200b1dd8c92d53a
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252126"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 
-Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool, das zur Automatisierung der Daten Bank Migration zu SQL Server von Microsoft Access, DB2, MySQL, Oracle und SAP ASE entwickelt wurde.  
+Microsoft SQL Server Migration Assistant (SSMA) ist ein Tool zur Automatisierung der Datenbankmigration von Microsoft Access, DB2, MySQL, Oracle und SAP ASE zu SQL Server.  
   
 ## <a name="migration-sources"></a>Migration von Datenquellen  
   
-- [SQL Server Migration Assistant für den Zugriff](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
+- [SQL Server Migration Assistant for Access](../ssma/access/sql-server-migration-assistant-for-access-accesstosql.md)  
   
-- [SQL Server Migration Assistant für DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
+- [SQL Server Migration Assistant for DB2](../ssma/db2/sql-server-migration-assistant-for-db2-db2tosql.md)  
   
-- [SQL Server Migration Assistant für MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
+- [SQL Server Migration Assistant for MySQL](../ssma/mysql/sql-server-migration-assistant-for-mysql-mysqltosql.md)  
   
-- [SQL Server Migration Assistant für Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
+- [SQL Server Migration Assistant for Oracle](../ssma/oracle/sql-server-migration-assistant-for-oracle-oracletosql.md)  
   
 - [SQL Server Migration Assistant für SAP ASE](../ssma/sybase/sql-server-migration-assistant-for-sybase-sybasetosql.md)  
 
@@ -39,21 +39,21 @@ Informationen zu unterstützten Quellen finden Sie im Download Center für den S
 Die folgenden Ziel Versionen werden für SSMA unterstützt.
 
 - SQL Server 2012
-- SQLServer 2014
+- SQL Server 2014
 - SQL Server 2016
 - SQL Server 2017 unter Windows und Linux
 - SQL Server 2019 unter Windows und Linux
-- Azure SQL-Datenbank
+- Azure SQL-Datenbank
 - Azure SQL Data Warehouse * *
 
-\* * Dieses Ziel wird nur von SSMA für Oracle unterstützt.
+* * Dieses Ziel wird nur von SSMA für Oracle unterstützt.
 
 ## <a name="downloads"></a>Downloads
 
-- [SSMA für Access](https://aka.ms/ssmaforaccess)
+- [SSMA für den Zugriff](https://aka.ms/ssmaforaccess)
 - [SSMA für DB2](https://aka.ms/ssmafordb2)
-- [SSMA für MySql](https://aka.ms/ssmaformysql)
-- [SSMA für die Oracle](https://aka.ms/ssmafororacle)
+- [SSMA für MySQL](https://aka.ms/ssmaformysql)
+- [SSMA für Oracle](https://aka.ms/ssmafororacle)
 - [SSMA für SAP ASE](https://aka.ms/ssmaforsybase)
  
 ## <a name="getting-ssma-support"></a>Erhalten von SSMA-Unterstützung  
@@ -68,7 +68,7 @@ Die folgenden Ziel Versionen werden für SSMA unterstützt.
   
   - [SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456) -Newsgroups, Foren und andere Communityressourcen, die für SQL Server Entwickler nützlich sind.  
   
-- **Unterstützter Support** : Wechseln Sie zu [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) , und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie Ihre Version aus, und wählen Sie dann Anforderung starten aus.  Der unterstützte Support ist im SQL Server Migration Assistant Tool enthalten.  
+- **Unterstützter Support** : wechseln [https://support.microsoft.com/assistedsupportproducts](https://support.microsoft.com/assistedsupportproducts) Sie zu, und suchen Sie nach "SQL Server Migration Assistant".  Wählen Sie Ihre Version aus, und wählen Sie dann Anforderung starten aus.  Der unterstützte Support ist im SQL Server Migration Assistant Tool enthalten.  
   
 - **Premier-Support** : Wenn Sie einen Premier-Vertrag haben, können Sie Premier Support im [Premier Online-Portal](https://premier.microsoft.com/)erhalten.  
   

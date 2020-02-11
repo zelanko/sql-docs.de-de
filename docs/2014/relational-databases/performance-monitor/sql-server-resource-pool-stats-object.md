@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183017"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, 'Statistiken für Ressourcenpools'-Objekt
@@ -25,7 +25,7 @@ ms.locfileid: "63183017"
   
  Jeder aktive Ressourcenpool erstellt eine Instanz des Leistungsobjekts SQLServer:Statistiken für Ressourcenpools, wobei der Name der Instanz dem Namen des Ressourcenpools in der Ressourcenkontrolle entspricht. In der folgenden Tabelle sind die für diese Instanz unterstützten Leistungsindikatoren beschrieben.  
   
-|Indikatorname|Description|  
+|Name des Leistungsindikators|BESCHREIBUNG|  
 |------------------|-----------------|  
 |CPU-Verwendung in %|Die von allen Anforderungen in allen Arbeitsauslastungsgruppen dieses Pools belegte CPU-Bandbreite. Dieser Wert wird relativ zum Computer gemessen und auf alle CPUs im System normalisiert. Dieser Wert ändert sich, wenn sich die für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess verfügbare CPU-Leistung ändert. Der Wert wird auf die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess empfangenen Elemente normalisiert.|  
 |Ziel-CPU-Verwendung in %|Der Zielwert für die CPU-Auslastung in Prozent für den Ressourcenpool. Dieser Wert basiert auf den Konfigurationseinstellungen für den Ressourcenpool und der Systemauslastung.|  
@@ -36,21 +36,21 @@ ms.locfileid: "63183017"
 |Arbeitsspeicherzuweisungen/Sekunde|Die Anzahl von Arbeitsspeicherzuweisungen, die pro Sekunde in diesem Ressourcenpool ausgeführt werden.|  
 |Anzahl aktiver Arbeitsspeicherzuweisungen|Die aktuelle Gesamtanzahl von Arbeitsspeicherzuweisungen. Diese Information ist auch in [sys.dm_exec_query_memory_grants](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql)verfügbar.|  
 |Timeouts für Arbeitsspeicherzuweisungen/Sekunde|Die Anzahl von Timeouts für Arbeitsspeicherzuweisungen pro Sekunde.|  
-|Menge aktiver Arbeitsspeicherzuweisungen (KB)|Der aktuell zugewiesene Gesamtspeichers in Kilobyte (KB). Diese Information ist auch in [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql) verfügbar.|  
+|Menge aktiver Arbeitsspeicherzuweisungen (KB)|Der aktuell zugewiesene Gesamtspeichers in Kilobyte (KB). Diese Information ist auch in [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)verfügbar.|  
 |Anzahl ausstehender Arbeitsspeicherzuweisungen|Die Anzahl von Anforderungen in der Warteschlange, die auf Arbeitsspeicherzuweisungen warten. Diese Information ist auch in [sys.dm_exec_query_resource_semaphores](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql)verfügbar.|  
 |Maximaler Arbeitsspeicher (KB)|Die maximale Menge an Arbeitsspeicher in Kilobyte (KB), die der Ressourcenpool basierend auf den Einstellungen für den Ressourcenpool und dem Serverstatus aufweisen kann.|  
 |Verwendeter Arbeitsspeicher (KB)|Die im Ressourcenpool verwendete Arbeitsspeichermenge in Kilobyte (KB).|  
 |Zielspeicher (KB)|Der Zielarbeitsspeicher in Kilobyte (KB), die der Ressourcenpool, auf Grundlage der Einstellungen für den Ressourcenpool und des Serverstatus, abzurufen versucht.|  
 |E/A-Lesevorgänge von Datenträger/s|Die Anzahl der Lesevorgänge vom Datenträger in der letzten Sekunde.|  
 |Gedrosselte E/A-Lesevorgänge auf Datenträger/s|Die Anzahl der in der letzten Sekunde gedrosselten Lesevorgänge.|  
-|Vom Datenträger gelesene Bytes/s|Die Anzahl der in der letzten Sekunde vom Datenträger gelesenen Bytes.|  
+|Byte gelesen/s |Die Anzahl der in der letzten Sekunde vom Datenträger gelesenen Bytes.|  
 |Durchschnittl. Datenträgerzeit (ms)|Die durchschnittliche Zeit (in Millisekunden) eines Lesevorgangs vom Datenträger.|  
 |E/A-Schreibvorgänge auf Datenträger/s|Die Anzahl der Schreibvorgänge auf den Datenträger in der letzten Sekunde.|  
 |Gedrosselte E/A-Schreibvorgänge auf Datenträger/s|Die Anzahl der in der letzten Sekunde gedrosselten Schreibvorgänge.|  
-|Auf den Datenträger geschriebene Bytes/s|Die Anzahl der in der letzten Sekunde auf den Datenträger geschriebenen Bytes.|  
+| Byte geschrieben/s|Die Anzahl der in der letzten Sekunde auf den Datenträger geschriebenen Bytes.|  
 |Durchschnittl. Datenträgerzeit (ms)/Schreiben E/A|Die durchschnittliche Zeit (in Millisekunden) eines Schreibvorgangs auf den Datenträger.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)   
  [SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt](sql-server-workload-group-stats-object.md)   
  [Ressourcenkontrolle](../resource-governor/resource-governor.md)  

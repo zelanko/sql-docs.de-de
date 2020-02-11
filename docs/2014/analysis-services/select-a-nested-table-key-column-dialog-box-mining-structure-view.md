@@ -1,5 +1,5 @@
 ---
-title: Auswählen einer geschachtelten Tabelle Schlüsselspalte (Dialogfeld) (Miningstruktur-Ansicht) | Microsoft-Dokumentation
+title: Schlüssel Spalte für eine Schlüssel Spalte auswählen (Dialog Feld) (Mining Struktur-Ansicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8edfea95968bee0dc1103f8069ecfe9e0d08e3ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069773"
 ---
 # <a name="select-a-nested-table-key-column-dialog-box-mining-structure-view"></a>Schlüsselspalte für eine geschachtelte Tabelle auswählen (Dialogfeld) (Miningstruktur-Ansicht)
   Verwenden Sie das Dialogfeld **Schlüsselspalte für eine geschachtelte Tabelle auswählen** , um eine Spalte zu bestimmen, die als Schlüssel für die neue geschachtelte Tabelle fungieren soll. Sobald Sie das Dialogfeld schließen, wird der Miningstruktur eine neue Tabelle mit der designierten Schlüsselspalte hinzugefügt. Sie können der geschachtelten Tabelle zusätzliche Spalten hinzufügen, indem Sie mit der rechten Maustaste auf die Struktur klicken und dann auf **Spalte hinzufügen**klicken. Das Dialogfeld enthält unterschiedliche Optionen, abhängig davon, ob Sie mit einem OLAP-Miningmodell oder einem relationalen Miningmodell arbeiten.  
   
-## <a name="options"></a>Optionen  
- **Quelltabelle**  
+## <a name="options"></a>Tastatur  
+ **Quell Tabelle**  
  Die Tabelle, auf der das Miningmodell basiert.  
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
   
- **Quellspalte**  
+ **Quell Spalte**  
  Eine Liste aller verfügbaren Spalten in der Quelltabelle, die Sie als Schlüssel der geschachtelten Tabelle verwenden können.  
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
@@ -45,7 +45,7 @@ ms.locfileid: "66069773"
   
  Diese Option wird nur bei OLAP-Miningmodellen verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Mining-Strukturansicht &#40;Datamining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Strukturansicht &#40;Data Mining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)  
   
   

@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105845"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Achsenbezeichnungen in einem Diagramm (Berichts-Generator und SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66105845"
 ## <a name="types-of-axes"></a>Achsentypen  
  Das Diagramm verfügt über zwei Hauptachsen: die Wertachse und die Kategorieachse.  
   
- ![Kategorie- und Wertachsen eines Diagramms](../media/rsaxes-categorical-vs-value.gif "Chart categorical and value axes")  
+ ![Kategorie- und Wertachsen eines Diagramms](../media/rsaxes-categorical-vs-value.gif "Kategorie- und Wertachsen eines Diagramms")  
   
  Wenn Sie ein Feld aus Ihrem Dataset auf die Entwurfsoberfläche ziehen, bestimmt das Diagramm, ob dieses Feld zur Kategorie- oder zur Wertachse gehört.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "66105845"
   
  Die Achsenskala ist an einen Mindest- und einen Höchstwert gebunden, die den Datenbereich definieren, der an der Anchse angezeigt wird. Das Diagramm berechnet den Mindest- und Höchstwert an jeder Achse auf Grundlage der Werte im Resultset. Auf der Wertachse wird die Skala immer von der kleinsten und größten Zahl im Wertfeld bestimmt. Auf der Kategorieachse werden dieMindest- und Höchstwerttypen abhängig vom Typ des Kategoriefelds bestimmt. Jedes Feld in einem Dataset kann einem von drei Kategoriefeldtypen zugeordnet werden. In der folgenden Tabelle werden diese drei Typen von Kategoriefeldern illustriert.  
   
-|Kategoriefeldtyp|Beschreibung|Beispiel|  
+|Kategoriefeldtyp|BESCHREIBUNG|Beispiel|  
 |-------------------------|-----------------|-------------|  
-|Numerisch|Kategorien werden in numerischer Reihenfolge an der x-Achse dargestellt.|Ein Verkaufsbericht nach Mitarbeiter-ID zeigt die Mitarbeiter-IDs an der x-Achse an.|  
-|Date/Time|Kategorien werden in chronolgischer Reihenfolge an der x-Achse dargestellt.|Bei einem monatlichen Verkaufsbericht werden formatierte Datumsangaben an der x-Achse angezeigt.|  
+|Numeric|Kategorien werden in numerischer Reihenfolge an der x-Achse dargestellt.|Ein Verkaufsbericht nach Mitarbeiter-ID zeigt die Mitarbeiter-IDs an der x-Achse an.|  
+|Datum/Uhrzeit|Kategorien werden in chronolgischer Reihenfolge an der x-Achse dargestellt.|Bei einem monatlichen Verkaufsbericht werden formatierte Datumsangaben an der x-Achse angezeigt.|  
 |Zeichenfolgen|Kategorien werden in der Reihenfolge, in der sie in der Datenquelle vorkommen, an der x-Achse dargestellt.|Bei einem Verkaufsbericht nach Regionen werden die Regionsnamen an der x-Achse angezeigt.|  
   
  Alle Diagrammtypen mit zwei Achsen sind so konzipiert, dass einige Achsenbezeichnungen unterdrückt werden, wenn zu viele Kategorien vorhanden sind, um auf die Achse zu passen. Auf diese Weise wird das Diagramm übersichtlicher und Bezeichnungskollisionen werden vermieden.  
@@ -77,7 +77,7 @@ ms.locfileid: "66105845"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Beispiel für die Berechnung der Achsenbezeichnungen durch das Diagramm  
  Die hier gezeigte Tabelle enthält Beispielumsatzdaten, die in einem Säulendiagramm dargestellt werden sollen. Das Feld Name wird dem Bereich Kategoriegruppen und das Feld Menge dem Bereich Werte hinzugefügt.  
   
-|Name|Quantity|  
+|Name|Menge|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -115,7 +115,7 @@ ms.locfileid: "66105845"
  Bei Balken-, Säulen- und Punktdiagrammen fügt das Diagramm anf den Enden der x-Achse automatisch Seitenränder hinzu. Die Größe der Seitenränder kann nicht geändert werden. Bei allen anderen Diagrammtypen fügt das Diagramm keine Seitenränder hinzu. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Rändern aus einem Diagramm &#40;Berichts-Generator und SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung &#40;Berichts-Generator und SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
  [Positionieren von Bezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
@@ -123,9 +123,9 @@ ms.locfileid: "66105845"
   
  [Hinzufügen oder Entfernen von Rändern aus einem Diagramm &#40;Berichts-Generator und SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Angeben einer logarithmischen Skalierung &#40;Berichts-Generator und SSRS&#41;](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
+ [Angeben einer logarithmischen Skalierung (Berichts-Generator und SSRS)](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)  

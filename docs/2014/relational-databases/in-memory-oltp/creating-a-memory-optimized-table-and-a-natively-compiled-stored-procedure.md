@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 927a89c36019ebc7232a110f5a10fcbf2cfa74af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157978"
 ---
 # <a name="creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure"></a>Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur
@@ -26,7 +26,7 @@ ms.locfileid: "63157978"
   
 -   Erstellen Sie speicheroptimierte Tabellen und Indizes. Weitere Informationen finden Sie unter [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql).  
   
--   Laden Sie die Daten mithilfe des interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)]in die speicheroptimierte Tabelle, und aktualisieren Sie die Statistiken, bevor die systemintern kompilierten gespeicherten Prozeduren erstellt werden. Weitere Informationen finden Sie unter [Statistics for Memory-Optimized Tables](memory-optimized-tables.md).  
+-   Laden Sie die Daten mithilfe des interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)]in die speicheroptimierte Tabelle, und aktualisieren Sie die Statistiken, bevor die systemintern kompilierten gespeicherten Prozeduren erstellt werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
   
 -   Erstellen Sie systemintern kompilierte gespeicherte Prozeduren für den Zugriff auf Daten in speicheroptimierten Tabellen. Weitere Informationen finden Sie unter [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
@@ -232,9 +232,9 @@ ORDER BY so.so_id, sod.lineitem_id
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Codebeispiele für in-Memory-OLTP](in-memory-oltp-code-samples.md)   
- [Migrieren von berechneten Spalten](migrating-computed-columns.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Code Beispiele für in-Memory-OLTP](in-memory-oltp-code-samples.md)   
+ [Migrieren berechneter Spalten](migrating-computed-columns.md)   
  [Implementieren von IDENTITY in einer speicheroptimierten Tabelle](implementing-identity-in-a-memory-optimized-table.md)  
   
   

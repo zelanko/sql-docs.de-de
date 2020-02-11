@@ -1,5 +1,5 @@
 ---
-title: Umschalten einer Analysis Services-Datenbank zwischen Schreib-und Lesemodus | Microsoft-Dokumentation
+title: Wechseln einer Analysis Services-Datenbank zwischen Schreib geschütztem Modus und Lese-/Schreibmodus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 790e509dd29e388dfb697ba577958395a4a046ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072888"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus
@@ -32,30 +32,30 @@ ms.locfileid: "66072888"
   
 -   Mit einem Skript mithilfe von XMLA  
   
-## <a name="procedures"></a>Vorgehensweisen  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-switch-the-readwrite-mode-of-a-database-interactively-using-management-studio"></a>So schalten Sie den Lese-/Schreibmodus einer Datenbank interaktiv mithilfe von Management Studio um  
   
 1.  Suchen Sie im linken oder rechten Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nach der umzuschaltenden Datenbank.  
   
-2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie **Eigenschaften**. Suchen Sie den Datenbankordner, und notieren Sie sich den Speicherort. Ein leerer Datenbankspeicherort weist darauf hin, dass sich der Datenbankordner im Datenordner des Servers befindet.  
+2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Eigenschaften** Suchen Sie den Datenbankordner, und notieren Sie sich den Speicherort. Ein leerer Datenbankspeicherort weist darauf hin, dass sich der Datenbankordner im Datenordner des Servers befindet.  
   
     > [!IMPORTANT]  
     >  Sobald die Datenbank getrennt ist, kann [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Ihnen nicht mehr dabei helfen, den Datenbankspeicherort abzurufen.  
   
-3.  Mit der rechten Maustaste in der Datenbank, und wählen Sie **trennen...**  
+3.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **trennen...**  
   
 4.  Weisen Sie der Datenbank, die getrennt werden soll, ein Kennwort zu, und klicken Sie anschließend auf **OK** , um den Befehl zum Trennen auszuführen.  
   
-5.  Suchen Sie die **Datenbanken** Ordner im linken oder rechten Bereich des [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
+5.  Suchen Sie im linken oder rechten Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]nach dem Ordner **Datenbanken** .  
   
-6.  Mit der rechten Maustaste die **Datenbanken** Ordner, und wählen **anfügen...**  
+6.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbanken** , und wählen Sie **anhängen aus.**  
   
-7.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie die Schaltfläche zum Durchsuchen ( **...** ) nach dem Datenbankordner suchen.  
+7.  Geben Sie im Textfeld **Ordner** den ursprünglichen Speicherort des Datenbankordners ein. Alternativ können Sie mit der Schaltfläche zum Durchsuchen (**...**) nach dem Daten Bank Ordner suchen.  
   
 8.  Wählen Sie den Lese-/Schreibmodus für die Datenbank aus.  
   
-9. Geben Sie das Kennwort, das verwendet wurde, in Schritt 3, und klicken Sie auf **OK** zum Ausführen des Attach-Befehls.  
+9. Geben Sie das in Schritt 3 verwendete Kennwort ein, und klicken Sie auf **OK** , um den Befehl Anfügen auszuführen.  
   
 #### <a name="to-switch-the-readwrite-mode-to-a-database-programmatically-using-amo"></a>So schalten Sie den Lese-/Schreibmodus einer Datenbank programmgesteuert mithilfe von AMO um  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66072888"
   
 1.  Suchen Sie im linken oder rechten Bereich von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nach der umzuschaltenden Datenbank.  
   
-2.  Mit der rechten Maustaste in der Datenbank, und wählen Sie **Eigenschaften**. Suchen Sie den Datenbankordner, und notieren Sie sich den Speicherort. Ein leerer Datenbankspeicherort weist darauf hin, dass sich der Datenbankordner im Datenordner des Servers befindet.  
+2.  Klicken Sie mit der rechten Maustaste auf die Datenbank, und wählen Sie **Eigenschaften** Suchen Sie den Datenbankordner, und notieren Sie sich den Speicherort. Ein leerer Datenbankspeicherort weist darauf hin, dass sich der Datenbankordner im Datenordner des Servers befindet.  
   
     > [!IMPORTANT]  
     >  Sobald die Datenbank getrennt ist, kann [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Ihnen nicht mehr dabei helfen, den Datenbankspeicherort abzurufen.  
@@ -166,15 +166,15 @@ ms.locfileid: "66072888"
   
 2.  Führen Sie den XMLA-Befehl aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
- [Anfügen und Trennen von Analysis Services-Datenbanken](attach-and-detach-analysis-services-databases.md)   
- [Datenbankspeicherort](database-storage-location.md)   
- [Datenbank-ReadWriteModes](database-readwritemodes.md)   
+ [Anfügen und trennen von Analysis Services Datenbanken](attach-and-detach-analysis-services-databases.md)   
+ [Daten Bank Speicherort](database-storage-location.md)   
+ [Datenbanklesemodusmodi](database-readwritemodes.md)   
  [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Detach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [ReadWriteMode-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [DbStorageLocation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ ["Read Write-Mode"-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
+ [Dbstorageloation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

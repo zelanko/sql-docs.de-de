@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie das Miningmodell (Dialogfeld) (Miningmodell-Vorhersageansicht) | Microsoft-Dokumentation
+title: Mining Modell auswählen (Dialog Feld) (Mining Modell-Vorhersage Ansicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069408"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>Miningmodell auswählen-Dialogfeld (Miningmodellvorhersage-Sicht)
@@ -26,9 +26,9 @@ ms.locfileid: "66069408"
   
  Das Dialogfeld enthält eine Strukturansichtliste der einzelnen Miningstrukturen, die in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank vorhanden sind, und alle zugeordneten Miningmodelle. Sie können die einzelnen Miningstrukturen erweitern, um das entsprechende Miningmodell auszuwählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Generator für Vorhersageabfragen &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)   
- [Data Mining Abfrageschnittstellen](data-mining/data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)   
+ [Schnittstellen für Data Mining-Abfragen](data-mining/data-mining-query-tools.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

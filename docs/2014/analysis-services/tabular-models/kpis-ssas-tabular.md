@@ -1,5 +1,5 @@
 ---
-title: KPIs (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: KPIs (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067003"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS – tabellarisch)
@@ -41,13 +41,13 @@ ms.locfileid: "66067003"
  **Zielwert**  
  Ein Zielwert wird entweder durch ein Measure definiert, das zu einem Wert aufgelöst wird, oder durch einen absoluten Wert. Ein Zielwert könnte beispielsweise der Betrag sein, um den die Führungskräfte einer Organisation die Verkaufszahlen oder Gewinne steigern möchten.  
   
- **Statusschwellenwerte**  
+ **Status Schwellenwerte**  
  Ein Statusschwellenwert wird durch den Bereich zwischen einem niedrigen und hohen Schwellenwert oder durch einen festen Wert definiert. Der Statusschwellenwert wird anhand einer Grafik dargestellt, damit Benutzer problemlos den Status des Basiswerts im Vergleich zum Zielwert ermitteln können.  
   
-##  <a name="bkmk_example"></a> Beispiel  
- Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte sie die PivotTable die tatsächlichen Umsatzzahlen in Dollar, das die sollvorgaben in Dollar und eine einfache Statusgrafik angezeigt, die mit dem Status des davon, ob jedes Vertriebsmitarbeiters unten, bei oder oberhalb der sollvorgabe ist. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
+##  <a name="bkmk_example"></a>Beispiel  
+ Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte Sie, dass die Pivottabelle den tatsächlichen Umsatz in Dollar, den Umsatz Kontingent Betrag in Dollar und eine einfache Grafik Anzeige anzeigt, in der der Status der einzelnen Vertriebsmitarbeiter unter, at oder oberhalb des Vertriebs Kontingents angezeigt wird. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
- Zu diesem Zweck trägt der Vertriebsleiter für die Unterstützung des ihr Unternehmens-BI-Lösung-Entwickler tabellarischen AdventureWorks-Modell eine Sales KPI hinzu. Anschließend stellt er mithilfe von [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle her und erstellt eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
+ Zu diesem Zweck trägt der Vertriebsleiter die Hilfe des BI-Lösungs Entwicklers der Organisation ein, um dem tabellarischen AdventureWorks-Modell einen Sales-KPI hinzuzufügen. Anschließend stellt er mithilfe von [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle her und erstellt eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
   
  Im Modell wird ein Measure für die Spalte "SalesAmount" in der Tabelle "FactResellerSales" erstellt, das die tatsächlichen Vertriebszahlen für jeden Vertriebsmitarbeiter in Dollar angibt. Durch dieses Measure wird der Basiswert des KPIs definiert.  
   
@@ -70,23 +70,23 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Nachdem die Measures nun erstellt wurden, um als Basis- und Zielwert des KPIs zu fungieren, wird das Sales-Measure zu einem neuen Sales-KPI erweitert. Im "Sales KPI" ist das Measure "Target SalesAmountQuota" als Zielwert definiert. Der Statusschwellenwert wird als Bereich von Prozentzahlen definiert, wobei 100 % der Zielvorgabe entsprechen. Das würde bedeuten, dass die durch das Sales-Measure definierten tatsächlichen Verkaufszahlen die Vorgaben erfüllen, die im Measure "Target SalesAmountQuota" definiert sind. Zum Definieren der niedrigen und hohen Prozentwerte wird die Statusleiste verwendet, und es wird ein Grafiktyp ausgewählt.  
   
- Der Vertriebsleiter kann jetzt eine PivotTable hinzufügen Basiswert, Zielwert und Status des KPIS dem Feld Werte erstellen. Die Spalte "Employees" wird dem Feld "RowLabel" hinzugefügt, und die Spalte "CalendarYear" wird als Slicer verwendet.  
+ Der Vertriebsleiter kann jetzt eine PivotTables erstellen, indem er den Basiswert, Zielwert und Status des KPIs dem Feld Werte hinzufügt. Die Spalte "Employees" wird dem Feld "RowLabel" hinzugefügt, und die Spalte "CalendarYear" wird als Slicer verwendet.  
   
  Der Vertriebsleiter kann die tatsächlichen Umsatzzahlen, die Vertriebsvorgaben und den Status jedes Vertriebsmitarbeiters jetzt nach Jahr unterteilen. So lassen sich Vertriebstrends über Jahre analysieren, um zu ermitteln, ob die Vertriebsvorgaben für einen Vertriebsmitarbeiter angepasst werden müssen.  
   
-##  <a name="bkmk_create"></a> Erstellen und Bearbeiten von KPIs  
+##  <a name="bkmk_create"></a>Erstellen und Bearbeiten von KPIs  
  Zum Erstellen von KPIs im Modell-Designer verwenden Sie das Dialogfeld Key Performance Indicator. Da KPIs einem Measure zugeordnet werden müssen, erstellen Sie einen KPI, indem Sie ein Measure erweitern, das einen Basiswert ergibt, und dann entweder ein Measure erstellen, das einen Zielwert ergibt, oder einen absoluten Wert eingeben. Nachdem Basismeasure (Wert) und Zielwert definiert wurden, können Sie die Parameter für den Statusschwellenwert zwischen dem Basis- und Zielwert definieren. Der Status wird in einem grafischen Format mit auswählbaren Symbolen, Balken, Diagrammen oder Farben angezeigt. Anschließend können Basiswert, Zielwert und Status einem Bericht oder einer PivotTable als Werte hinzugefügt werden, die für andere Datenfelder in Slices aufgeteilt werden können.  
   
  Um das Dialogfeld **Key Performance Indicator**im Measureraster für eine Tabelle anzuzeigen, klicken Sie mit der rechten Maustaste auf ein Measure, das als Basiswert dient, und klicken Sie dann auf KPI erstellen. Nachdem ein Measure als Basiswert zu einem KPI erweitert wurde, wird im Measureraster neben dem Measurenamen ein Symbol angezeigt, das angibt, dass das Measure einem KPI zugeordnet ist.  
   
 ##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Erstellen und Verwalten von KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
+|[Erstellen und Verwalten von KPIs &#40;tabellarischen SSAS-&#41;](kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md)   
- [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)   
+ [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)  
   
   

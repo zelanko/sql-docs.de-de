@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2ef120e0142b3ccabb03fe8750b02713601d7fd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63224492"
 ---
 # <a name="copy-queries-visual-database-tools"></a>Kopieren von Abfragen (Visual Database Tools)
@@ -37,9 +37,9 @@ ms.locfileid: "63224492"
   
 6.  Klicken Sie mit der rechten Maustaste, und klicken Sie im Kontextmenü auf **Einfügen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Umbenennen von Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
- [Löschen von Abfrageergebnissen &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
+ [Löschen von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](clear-query-results-visual-database-tools.md)   
  [Speichern von Abfragen &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   

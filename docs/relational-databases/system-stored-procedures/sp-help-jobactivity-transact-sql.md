@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobactivity (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_jobactivity (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054984"
 ---
-# <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
+# <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Listet Informationen zum Laufzeitstatus von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen auf.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,14 +40,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` ID des Auftrags. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id`Die Auftrags-ID. *job_id*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+>  Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @session_id = ] session_id` Die Sitzungs-Id, zu der Informationen. *Sitzungs-ID* ist **Int**, hat den Standardwert NULL.  
+`[ @session_id = ] session_id`Die Sitzungs-ID, zu der Informationen gemeldet werden sollen. *session_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -55,37 +55,37 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Resultsets  
  Gibt das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Agent-Sitzungs-ID.|  
 |**job_id**|**uniqueidentifier**|ID für den Auftrag.|  
-|**job_name**|**sysname**|Name des Auftrags.|  
+|**job_name**|**sysname**|Der Name des Auftrags.|  
 |**run_requested_date**|**datetime**|Datum, zu dem die Ausführung des Auftrags angefordert wurde.|  
-|**run_requested_source**|**sysname**|Die Quelle der Anforderung zum Ausführen des Auftrags. Folgende Angaben sind möglich:<br /><br /> **1** = ausführen nach einem Zeitplan<br /><br /> **2** = Ausführen als Reaktion auf eine Warnung<br /><br /> **3** = ausführen beim Start<br /><br /> **4** = ausführen durch einen Benutzer<br /><br /> **6** = ausführen nach CPU im Leerlauf Zeitplan|  
+|**run_requested_source**|**sysname**|Die Quelle der Anforderung zum Ausführen des Auftrags. Enthält einen der folgenden Werte:<br /><br /> **1** = nach einem Zeitplan ausführen<br /><br /> **2** = ausführen als Reaktion auf eine Warnung<br /><br /> **3** = beim Start ausführen<br /><br /> **4** = ausführen nach Benutzer<br /><br /> **6** = Ausführung mit CPU-Leerlauf Zeitplan|  
 |**queued_date**|**datetime**|Datum, an dem die Anforderung in die Warteschlange aufgenommen wurde. NULL, wenn der Auftrag direkt ausgeführt wurde.|  
 |**start_execution_date**|**datetime**|Datum, an dem der Auftrag einem ausführbaren Thread zugewiesen wurde.|  
 |**last_executed_step_id**|**int**|Die Schritt-ID des zuletzt ausgeführten Auftragsschritts.|  
-|**last_exectued_step_date**|**datetime**|Uhrzeit, zu der die Ausführung des zuletzt ausgeführten Auftragsschritts begonnen hat.|  
+|**last_executed_step_date**|**datetime**|Uhrzeit, zu der die Ausführung des zuletzt ausgeführten Auftragsschritts begonnen hat.|  
 |**stop_execution_date**|**datetime**|Uhrzeit, zu der die Ausführung des Auftrags beendet wurde.|  
 |**next_scheduled_run_date**|**datetime**|Datum, an dem die nächste Ausführung des Auftrags geplant ist.|  
 |**job_history_id**|**int**|ID für den Auftragsverlauf in der Auftragsverlaufstabelle.|  
-|**Nachricht**|**nvarchar(1024)**|Meldung, die während der letzten Ausführung des Auftrags ausgegeben wurde.|  
-|**run_status**|**int**|Status, der während der letzten Ausführung des Auftrags zurückgegeben wurde:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = Status unbekannt|  
+|**Nachricht**|**nvarchar (1024)**|Meldung, die während der letzten Ausführung des Auftrags ausgegeben wurde.|  
+|**run_status**|**int**|Status, der während der letzten Ausführung des Auftrags zurückgegeben wurde:<br /><br /> **0** = Fehler<br /><br /> **1** = erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = Unbekannter Status|  
 |**operator_id_emailed**|**int**|ID des Operators, der durch eine E-Mail-Nachricht bei Beendigung des Auftrags benachrichtigt wurde.|  
-|**operator_id_netsent**|**int**|ID des Operators, der über benachrichtigt **net Send** nach Abschluss des Auftrags.|  
+|**operator_id_netsent**|**int**|ID-Nummer des Operators, der bei Abschluss des Auftrags über **net send** benachrichtigt wurde.|  
 |**operator_id_paged**|**int**|ID des Operators, der durch einen Pager bei Beendigung des Auftrags benachrichtigt wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur stellt eine Momentaufnahme des aktuellen Status des Auftrags bereit. Die zurückgegebenen Ergebnisse stellen Informationen zu dem Zeitpunkt der Anforderungsverarbeitung dar.  
   
- Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird bei jedem Start des Agent-Diensts eine Sitzungs-ID erstellt. Die Sitzungs-Id ist in der Tabelle gespeicherten **msdb.dbo.syssessions**.  
+ Vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird bei jedem Start des Agent-Diensts eine Sitzungs-ID erstellt. Die Sitzungs-ID wird in der **msdb. dbo. syssessions**-Tabelle gespeichert.  
   
- Wenn kein *Session_id* bereitgestellt wird, enthält Informationen über die die letzte Sitzung.  
+ Wenn keine *session_id* bereitgestellt wird, werden Informationen über die letzte Sitzung aufgelistet.  
   
- Wenn kein *Job_name* oder *Job_id* bereitgestellt wird, werden Informationen für alle Aufträge aufgeführt.  
+ Wenn keine *job_name* oder *job_id* bereitgestellt wird, werden Informationen zu allen Aufträgen aufgeführt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können Mitglieder der der **Sysadmin** -Serverrolle kann diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -95,7 +95,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** die Aktivität für Aufträge, die im Besitz von anderen Benutzern anzeigen können.  
+ Nur Mitglieder der **sysadmin** -Rolle können die Aktivität für Aufträge anzeigen, die sich im Besitz anderer Benutzer befinden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ist die Aktivität für alle Aufträge aufgeführt, zu deren Anzeige der Benutzer berechtigt ist.  
@@ -108,7 +108,7 @@ EXEC dbo.sp_help_jobactivity ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)  
   
   

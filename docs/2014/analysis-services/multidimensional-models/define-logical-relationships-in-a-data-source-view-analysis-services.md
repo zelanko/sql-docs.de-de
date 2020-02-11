@@ -1,5 +1,5 @@
 ---
-title: Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services) | Microsoft-Dokumentation
+title: Definieren von logischen Beziehungen in einer Datenquellen Sicht (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075621"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services)
@@ -39,15 +39,15 @@ ms.locfileid: "66075621"
   
  Beziehungen sind zielgerichtet. Jedem Wert in der Quellspalte ist ein entsprechender Wert in der Zielspalte zugeordnet. In einem Datenquellensicht-Diagramm, wie z. B. den im Bereich **Diagramm** angezeigten Diagrammen, weist ein Pfeil in der Zeile zwischen zwei Tabellen auf die Richtung der Beziehung hin.  
   
- Dieses Thema enthält folgende Abschnitte:  
+ Dieses Thema enthält die folgenden Abschnitte:  
   
  [So fügen Sie eine Beziehung zwischen Tabellen, benannten Abfragen oder Sichten hinzu](#bkmk_addRel)  
   
- [So können Sie eine Beziehung im Bereich "Diagramm" anzeigen oder ändern](#bkmk_diagrampane)  
+ [So können Sie eine Beziehung im Diagrammbereich anzeigen oder ändern](#bkmk_diagrampane)  
   
  [So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a> So fügen Sie eine Beziehung zwischen Tabellen, benannten Abfragen oder Sichten hinzu  
+##  <a name="bkmk_addRel"></a>So fügen Sie eine Beziehung zwischen Tabellen, benannten Abfragen oder Sichten hinzu  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das Projekt, oder stellen Sie eine Verbindung mit der Datenbank her, das bzw. die die Datenquellensicht enthält, in der Sie eine logische Beziehung hinzufügen möchten.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075621"
   
     4.  Geben Sie optional im Feld **Beschreibung** eine Beschreibung für die Beziehung ein.  
   
-##  <a name="bkmk_diagrampane"></a> So können Sie eine Beziehung im Bereich "Diagramm" anzeigen oder ändern  
+##  <a name="bkmk_diagrampane"></a>So können Sie eine Beziehung im Diagrammbereich anzeigen oder ändern  
   
 -   Klicken Sie im Bereich **Diagramm** im **Datenquellensicht-Designer**mit der rechten Maustaste auf die Beziehung, die Sie anzeigen möchten, und klicken Sie auf **Beziehung bearbeiten** (oder doppelklicken Sie einfach auf den Beziehungspfeil).  Verwenden Sie das Dialogfeld **Beziehung bearbeiten** , um die Beziehung zu ändern.  
   
-##  <a name="bkmk_tablespane"></a> So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern  
+##  <a name="bkmk_tablespane"></a>So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern  
   
 1.  Suchen und erweitern Sie im Bereich **Tabelle** im **Datenquellensicht-Designer**die Tabelle, Sicht oder benannte Abfrage, die die Beziehung enthält, die Sie anzeigen oder ändern möchten.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66075621"
   
 3.  Klicken Sie mit der rechten Maustaste auf die zu ändernde Beziehung, und klicken Sie anschließend auf **Beziehung bearbeiten**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

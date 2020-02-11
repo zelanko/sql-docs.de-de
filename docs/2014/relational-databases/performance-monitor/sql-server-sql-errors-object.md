@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f36cd694756544a44df657d97fd84e1967167b55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63183006"
 ---
 # <a name="sql-server-sql-errors-object"></a>SQL Server, SQL-Fehler-Objekt
-  Durch das Objekt **SQLServer:SQL Errors** in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Indikatoren zum Überwachen von **SQL-Fehlern**zur Verfügung gestellt.  
+  Das **SQLServer: SQL Errors** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft stellt Leistungsindikatoren zum Überwachen von **SQL-Fehlern**bereit.  
   
  In dieser Tabelle werden die Leistungsindikatoren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SQL-Fehler** beschrieben.  
   
-|Leistungsindikatoren von SQL-Fehler bei SQL Server|Description|  
+|Leistungsindikatoren von SQL-Fehler bei SQL Server|BESCHREIBUNG|  
 |------------------------------------|-----------------|  
 |**Fehler/Sekunde**|Anzahl der Fehler/Sekunde.|  
   
@@ -34,12 +34,12 @@ ms.locfileid: "63183006"
 |Element|Definition|  
 |----------|----------------|  
 |**_Total**|Informationen zu allen Fehlern.|  
-|**DB Offline Errors**|Es werden schwere Fehler nachverfolgt, die dazu führen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Datenbank offline schaltet.|  
-|**Info Errors**|Informationen, die sich auf Fehlermeldungen beziehen, die den Benutzern als Informationen zur Verfügung gestellt werden, verursachen jedoch keine Fehler.|  
-|**Kill Connection Errors**|Es werden schwere Fehler nachverfolgt, die dazu führen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die aktuelle Verbindung unterbricht.|  
-|**User Errors**|Informationen zu Benutzerfehlern.|  
+|**DB-Offline Fehler**|Es werden schwere Fehler nachverfolgt, die dazu führen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Datenbank offline schaltet.|  
+|**Info Fehler**|Informationen, die sich auf Fehlermeldungen beziehen, die den Benutzern als Informationen zur Verfügung gestellt werden, verursachen jedoch keine Fehler.|  
+|**Verbindungsfehler beenden**|Es werden schwere Fehler nachverfolgt, die dazu führen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die aktuelle Verbindung unterbricht.|  
+|**Benutzerfehler**|Informationen zu Benutzerfehlern.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)  
   
   

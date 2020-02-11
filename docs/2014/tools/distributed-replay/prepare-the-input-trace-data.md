@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten der Eingabedaten der Ablaufverfolgung | Microsoft-Dokumentation
+title: Vorbereiten der Eingabedaten der Ablauf Verfolgung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7af5d166ec3bc059bc2628512564d92fd4cc6cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149997"
 ---
 # <a name="prepare-the-input-trace-data"></a>Vorbereiten der Eingabedaten für die Ablaufverfolgung
-  Bevor Sie mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion eine verteilte Wiedergabe beginnen können, müssen Sie die Eingabedaten der Ablaufverfolgung vorbereiten, indem Sie im Distributed Replay-Verwaltungstool die Vorbereitungsphase initiieren. In der Vorverarbeitungsphase verarbeitet der Distributed Replay Controller die Ablaufverfolgungsdaten und generiert eine Zwischendatei:  
+  Bevor Sie eine verteilte Wiedergabe mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion starten können, müssen Sie die Eingabedaten der Ablauf Verfolgung vorbereiten, indem Sie die Vorverarbeitungs Phase im Verwaltungs Tool für verteilte Wiedergabe initiieren. In der Vorverarbeitungsphase verarbeitet der Distributed Replay Controller die Ablaufverfolgungsdaten und generiert eine Zwischendatei:  
   
  ![Distributed Replay-Vorverarbeitungsphase](../../database-engine/media/preprocess.gif "Distributed Replay-Vorverarbeitungsphase")  
   
@@ -29,7 +29,7 @@ ms.locfileid: "63149997"
   
 ### <a name="to-prepare-the-input-trace-data"></a>So bereiten Sie die Eingabedaten der Ablaufverfolgung vor  
   
-1.  **(Optional) Ändern Sie Konfigurationseinstellungen vorverarbeiten**: Ändern die vorverarbeitungskonfigurationseinstellungen, z. B. systemsitzungen zu filtern oder die maximale Leerlaufzeit zu konfigurieren möchten müssen Sie ändern die `<PreprocessModifiers>` Element des XML-basierte vorverarbeitungskonfigurationsdatei, `DReplay.exe.preprocess.config`. Wenn Sie die Vorverarbeitungskonfigurationsdatei ändern möchten, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
+1.  **(Optional) Ändern der Vorverarbeitungs Konfigurationseinstellungen**: Wenn Sie die Vorverarbeitungs Konfigurationseinstellungen ändern möchten, z `<PreprocessModifiers>` `DReplay.exe.preprocess.config`. b. ob Sie System Sitzungen filtern oder die maximale Leerlaufzeit konfigurieren möchten, müssen Sie das-Element der XML-basierten Vorverarbeitungs Konfigurationsdatei ändern. Wenn Sie die Vorverarbeitungskonfigurationsdatei ändern möchten, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
   
     1.  Erstellen Sie eine Kopie der Standardkonfigurationsdatei für die Vorverarbeitung `DReplay.exe.preprocess.config`, und benennen Sie die neue Datei um. Die Standardkonfigurationsdatei für die Vorverarbeitung befindet sich im Installationsordner des Verwaltungstools.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "63149997"
   
      Weitere Informationen zur Konfigurationsdatei für die Vorverarbeitung finden Sie unter [Konfigurieren von Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Initiieren der Vorverarbeitungsphase**: Um die Eingabedaten der Ablaufverfolgung vorzubereiten, müssen Sie das Verwaltungstool mit Ausführen der **vorverarbeiten** Option. Weitere Informationen finden Sie unter [Vorverarbeitungsoption &#40;Verwaltungstool „Distributed Replay“&#41;](preprocess-option-distributed-replay-administration-tool.md).  
+2.  **Initiieren der Vorverarbeitungs Phase**: um die Eingabedaten der Ablauf Verfolgung vorzubereiten, müssen Sie das Verwaltungs Tool mit der **Vorverarbeitungs** -Option ausführen. Weitere Informationen finden Sie unter [Vorverarbeitungsoption &#40;Verwaltungstool „Distributed Replay“&#41;](preprocess-option-distributed-replay-administration-tool.md).  
   
     1.  Öffnen Sie das Windows-Befehlszeilenprogramm (`CMD.exe`), und navigieren Sie zum Installationspfad des Verwaltungstools "Distributed Replay" (`DReplay.exe`).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63149997"
   
 3.  Nach Abschluss der Vorverarbeitungsphase wird die Zwischendatei im Controllerarbeitsverzeichnis gespeichert. Zum Initiieren der Ereigniswiedergabephase müssen Sie das Verwaltungstool mit der **replay** -Option ausführen. Weitere Informationen finden Sie unter [Wiedergeben von Ablaufverfolgungsdaten](replay-trace-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Distributed Replay: Anforderungen](distributed-replay-requirements.md)   
  [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   

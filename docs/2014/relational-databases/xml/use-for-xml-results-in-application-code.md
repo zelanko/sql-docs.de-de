@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193338"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
@@ -163,7 +163,7 @@ ms.locfileid: "63193338"
   
 -   **YearOpened:** 1974  
   
--   **Specialty:** Straße  
+-   **Specialty:** Road  
   
 -   **SquareFeet:** 38000  
   
@@ -201,9 +201,11 @@ ms.locfileid: "63193338"
   
  In diesem Beispiel werden jedoch die folgenden verwalteten APIs von Microsoft .NET Framework verwendet, um das Zurückgeben und das Rendering der Ergebnisse der FOR XML-Abfrage zu erzielen.  
   
-1.  `SqlConnection` wird verwendet, um basierend auf dem Inhalt einer angegebenen Verbindungszeichenfolgenvariablen stConn eine Verbindung mit SQL Server zu öffnen.  
+1.  
+  `SqlConnection` wird verwendet, um basierend auf dem Inhalt einer angegebenen Verbindungszeichenfolgenvariablen stConn eine Verbindung mit SQL Server zu öffnen.  
   
-2.  `SqlDataAdapter` wird dann als Datenadapter verwendet, und es verwendet die SQL-Verbindung und eine angegebene SQL-Abfragezeichenfolge, um die FOR XML-Abfrage auszuführen.  
+2.  
+  `SqlDataAdapter` wird dann als Datenadapter verwendet, und es verwendet die SQL-Verbindung und eine angegebene SQL-Abfragezeichenfolge, um die FOR XML-Abfrage auszuführen.  
   
 3.  Nach dem Ausführen der Abfrage wird die `SqlDataAdapter.Fill`-Methode aufgerufen und an eine Instanz eines `DataSet,` MyDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
   
@@ -290,9 +292,9 @@ SqlConnection closed.
 ```  
   
 > [!NOTE]  
->  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` -Datentyp-Unterstützung können Sie anfordern, dass das Ergebnis einer FOR XML-Abfrage als zurückgegeben werden `xml` -Datentyp, statt als Zeichenfolgen- oder imagedaten typisierte durch Angabe der [TYPE-Direktive](type-directive-in-for-xml-queries.md). Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](use-xml-data-in-applications.md)gezeigt wird.  
+>  Mithilfe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `xml` der-Datentyp Unterstützung können Sie anfordern, dass das Ergebnis einer for XML-Abfrage `xml` als-Datentyp zurückgegeben wird, anstatt als Zeichen folgen-oder Image typisierte Daten, indem Sie die [Type-Direktive](type-directive-in-for-xml-queries.md)angeben. Wenn die TYPE-Direktive in FOR XML-Abfragen verwendet wird, ermöglicht sie den programmgesteuerten Zugriff auf die FOR XML-Ergebnisse, wie das auch in [Verwenden von XML-Daten in Anwendungen](use-xml-data-in-applications.md)gezeigt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [FOR XML &#40;SQL Server&#41;](for-xml-sql-server.md)  
   
   

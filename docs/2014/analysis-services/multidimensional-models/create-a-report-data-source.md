@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Berichtsdatenquelle | Microsoft-Dokumentation
+title: Erstellen einer Berichtsdaten Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77cc99e74a1ee9d5d4be08bf7f9ce8d39288bd5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076336"
 ---
 # <a name="create-a-report-data-source"></a>Erstellen einer Berichtsdatenquelle
@@ -39,10 +39,10 @@ ms.locfileid: "66076336"
   
 1.  Klicken Sie auf dem Bibliothekmenüband auf die Registerkarte **Dokumente** .  
   
-2.  Klicken Sie auf **Neues Dokument**  > **Berichtsdatenquelle**.  
+2.  Klicken Sie auf **neue Dokument** > **Berichtsdaten Quelle**.  
   
     > [!NOTE]  
-    >  Wenn das Element **Berichtsdatenquelle** nicht im Menü angezeigt wird, wurde der Inhaltstyp für Berichtsdatenquellen noch nicht für diese Bibliothek aktiviert. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
+    >  Wenn das Element **Berichtsdatenquelle** nicht im Menü angezeigt wird, wurde der Inhaltstyp für Berichtsdatenquellen noch nicht für diese Bibliothek aktiviert. Weitere Informationen finden Sie unter [Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../../reporting-services/add-reporting-services-content-types-to-a-sharepoint-library.md).  
   
 3.  Klicken Sie auf der Seite **Datenquelleneigenschaften** auf **Name**, und geben Sie einen Namen für die RSDS-Verbindungsdatei ein.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66076336"
   
      (Optional) Cubes können über Perspektiven verfügen, die den Benutzern eine Auswahlsicht bereitstellen, in der nur bestimmte Dimensionen und/oder Measuregruppen im Client sichtbar sind. Um eine Perspektive anzugeben, geben Sie den Perspektivennamen als Wert für die Cube-Eigenschaft ein: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<perspectivename>'`  
   
-     (Optional) In Cubes können Metadaten und Datenübersetzungen für unterschiedliche Sprachen innerhalb des Modells angegeben werden. Damit die Übersetzungen (Daten und Metadaten) angezeigt, müssen Sie die "Locale Identifier-Eigenschaft der Verbindungszeichenfolge hinzu: `Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
+     (Optional) In Cubes können Metadaten und Datenübersetzungen für unterschiedliche Sprachen innerhalb des Modells angegeben werden. Um die Übersetzungen (Daten und Metadaten) anzuzeigen, müssen Sie die Eigenschaft "Locale Identifier" der Verbindungs Zeichenfolge hinzufügen:`Data source=<servername>;initial catalog=<multidimensionaldatabasename>-ee;cube='<cubename>'; Locale Identifier=<identifier number>`  
   
 6.  Geben Sie in **Anmeldeinformationen**an, wie der Berichtsserver Anmeldeinformationen für den Zugriff auf die externe Datenquelle erhält.  
   

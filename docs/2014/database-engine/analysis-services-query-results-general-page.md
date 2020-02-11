@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Ergebnisse (Seite Allgemein) | Microsoft-Dokumentation
+title: Abfrageergebnisse Analysis Services (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04dd01f5a91e95152b66247182027c0ba8b5025c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065248"
 ---
 # <a name="analysis-services-query-results-general-page"></a>Ergebnisse der Analysis Services-Abfrage (Seite Allgemein)
   Auf dieser Seite können Sie die Optionen zum Ausführen von Abfragen in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] angeben.  
   
- **Ausführungstimeout**  
+ **Ausführungs Timeout**  
  Gibt die Wartezeit (in Sekunden) an, nach der die Abfrage abgebrochen wird.  
   
  Der Wert '0' gibt an, dass der Wartevorgang unbegrenzt ist bzw. kein Timeout erfolgt.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

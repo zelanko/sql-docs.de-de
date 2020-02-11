@@ -1,5 +1,5 @@
 ---
-title: Ändern von Verbindungen, mit denen Netzwerkprotokolle für Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk oder NWLink IPX SPX | Microsoft-Dokumentation
+title: Ändern Sie die Verbindungen, die die Netzwerkprotokolle Banyan Vines sequenziert Packet Protocol (SPP), Multiprotocol, AppleTalk oder NWLink IPX SPX verwenden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cdbcaa39e3d9630bd4ea50919f31cdbb15a36d14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093900"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Ändern von Verbindungen, die die Netzwerkprotokolle Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk oder NWLink IPX/SPX verwenden
@@ -35,18 +35,18 @@ ms.locfileid: "66093900"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] werden die Netzwerkprotokolle Banyan VINES Sequenced Packet Protocol (SPP), Multiprotocol, AppleTalk und NWLink IPX/SPX nicht unterstützt. Clients, die zuvor Verbindungen mit diesen Protokollen hergestellt haben, müssen ein anderes Protokoll auswählen.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die Clientanwendungen entsprechend, um ein unterstütztes Protokoll zu verwenden, wenn Sie eine Verbindung mit dem Server herstellen. Wenn ein Alias eingerichtet ist, der eines der nicht unterstützten Protokolle verwendet, muss der Alias so geändert werden, dass er eines der unterstützten Protokolle verwendet.  
   
- Wenn Ihre Anwendung Verbindungszeichenfolge speziell verwendet oder lädt, die eines der folgenden Protokolle, von einem der angeben Netzwerke = DBMSRPCN für RPC, NETWORK = DBMSADSN für Appletalk oder NETWORK = DBMSVINN, für Banyan VINES-Eigenschaft, oder indem Sie ein explizites Präfix wie "Spx: *Server\Instanz*"für SPX," bv:*Server*"für Banyan VINES," Adsp:*Server*"für AppleTalk oder" Rpc:*Server*"für Multiprotokoll, müssen dann Sie die Anwendung eines der unterstützten Protokolle verwendet ändern.  
+ Wenn Ihre Anwendungs Verbindungs Zeichenfolge eines dieser Protokolle ausdrücklich verwendet oder lädt, indem Sie entweder Network = dbmsrpcn für RPC, Network = Dbmsadsn für AppleTalk oder Network = Dbmsvinn für Banyan Vines-Eigenschaft angeben, wenn Sie ein explizites Präfix wie z. b. "SPX:*/Instanznamen*" für SPX, "BV:*Server*" für Banyan-Reben, "ADSP:*Server*" für AppleTalk oder "RPC:*Server*" für MultiProtocol verwenden, müssen Sie die Anwendung so ändern, dass eines der unterstützten Protokolle verwendet wird.  
   
  Weitere Informationen finden Sie unter "Auswählen eines Netzwerkprotokolls" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

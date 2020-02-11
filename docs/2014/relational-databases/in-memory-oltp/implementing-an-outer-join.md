@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 532cdf5466445f08d5d415799b9f4afab347e77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158170"
 ---
 # <a name="implementing-an-outer-join"></a>Implementieren eines äußeren Joins
@@ -22,7 +22,7 @@ ms.locfileid: "63158170"
   
  In den Beispielen wird eine Tabellenvariable verwendet, um einen Cursor auf der linken Seite des Joins zu simulieren, und eine weitere Tabellenvariable, um ein einzelnes Resultset zu erstellen. Diese Vorgehensweise ist nur geeignet, wenn eine begrenzte Anzahl von Zeilen verarbeitet wird, da eine zusätzliche Kopie der Datenzeilen erstellt werden muss.  
   
- Eine Variable (@outer) vom Typ t1_type wird zum Durchlaufen der Zeilen von t1 aus mithilfe einer While-Schleife ein Cursor simuliert. Die Variable @result vom Typ t1t2_join_type wird dann verwendet, um das Resultset erstellt.  
+ Eine Variable (@outer) vom Typ t1_type wird zum Durchlaufen der Zeilen aus T1 verwendet, wobei eine while-Schleife zum Simulieren eines Cursors verwendet wird. Die Variable @result vom Typ t1t2_join_type wird dann verwendet, um das Resultset zu erstellen.  
   
  Sie sollten diese Problemumgehung auf ihre Leistungsfähigkeit testen, um sicherzustellen, dass sie in der Anwendung erwartungsgemäß funktioniert.  
   
@@ -112,8 +112,8 @@ GO
 exec dbo.usp_left_join  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md)   
- [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md)   
+ [Von In-Memory OLTP nicht unterstützte Transact-SQL-Konstrukte.](transact-sql-constructs-not-supported-by-in-memory-oltp.md)  
   
   

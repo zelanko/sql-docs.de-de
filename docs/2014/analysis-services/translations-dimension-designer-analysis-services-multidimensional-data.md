@@ -1,5 +1,5 @@
 ---
-title: Übersetzungen (Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Übersetzungen (Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065729"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Übersetzungen (Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -31,11 +31,11 @@ ms.locfileid: "66065729"
  [Übersetzungsdetails](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  
  Im Bereich für **Übersetzungsdetails** können Sie die mit einer Dimension verknüpften Übersetzungen untersuchen und verwalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
- [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Der Dimensions-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
+ [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Dimensionsstruktur &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
- [Browser &#40;Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Dimensions Struktur &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)   
+ [Browser &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](browser-dimension-designer-analysis-services-multidimensional-data.md)  
   
   

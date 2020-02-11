@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung von Verarbeitungsdaten (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Problembehandlung bei Prozessdaten (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065769"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Problembehandlung von Verarbeitungsdaten (SSAS – tabellarisch)
@@ -34,14 +34,14 @@ ms.locfileid: "66065769"
   
 -   [Einschränkungen für Änderungen an einer Datenquelle](#bkmk_rest_changes)  
   
-##  <a name="bkmk_how_df_works"></a> Funktionsweise der Datenverarbeitung  
+##  <a name="bkmk_how_df_works"></a>Funktionsweise der Datenverarbeitung  
  Wenn Sie Daten verarbeiten, werden die Daten im Modell-Designer durch neue Daten ersetzt. Sie können nicht einfach neue Datenzeilen importieren oder Daten ändern. Der Modell-Designer kann nicht nachverfolgen, welche Zeilen zuvor hinzugefügt wurden.  
   
  Die Verarbeitung der Daten findet als Transaktion statt. Das bedeutet, sobald Sie mit dem Aktualisieren der Daten beginnen, kann das gesamte Update entweder erfolgreich sein oder fehlschlagen. Sie haben also nie Daten, die teilweise richtig sind.  
   
  Die manuelle Datenverarbeitung, die Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]initiieren, wird von der lokalen Analysis Services-Instanz im Arbeitsspeicher ausgeführt. Daher kann der Datenverarbeitungsvorgang die Leistung anderer Aufgaben auf dem Computer beeinträchtigen. Wenn Sie jedoch die automatische Verarbeitung der Daten mittels eines Skripts in einem bereitgestellten Modell planen, verwaltet die Analysis Services-Instanz den Importvorgang einschließlich seiner zeitlichen Steuerung.  
   
-##  <a name="bkmk_impact_of_df"></a> Auswirkungen der Datenverarbeitung  
+##  <a name="bkmk_impact_of_df"></a>Auswirkungen der Datenverarbeitung  
  Durch die Datenverarbeitung wird normalerweise die Neuberechnung der Daten ausgelöst.  Verarbeiten von Daten bedeutet, dass aktuelle Daten aus den externen Quellen abgerufen werden; Neuberechnen bedeutet, dass das Ergebnis aller Formeln aktualisiert wird, für die sich die Daten geändert haben. Ein Verarbeitungsvorgang löst normalerweise eine Neuberechnung aus.  
   
  Daher sollten Sie immer die möglichen Auswirkungen beachten, bevor Sie Datenquellen ändern oder die Daten verarbeiten, die aus der Datenquelle abgerufen werden. Zudem sollten Sie sich über die möglichen Folgen im Klaren sein:  
@@ -56,7 +56,7 @@ ms.locfileid: "66065769"
   
 -   Wenn Sie einen Filter ändern, muss das ganze Modell neu berechnet werden.  
   
-##  <a name="bkmk_det_source"></a> Bestimmen der Datenquelle  
+##  <a name="bkmk_det_source"></a>Bestimmen der Datenquelle  
  Wenn Sie nicht sicher sind, woher die Daten im Modell stammen, können Sie mithilfe der Tools in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] Details wie den Quelldateinamen und den Pfad abrufen.  
   
 #### <a name="to-find-the-source-of-existing-data"></a>So ermitteln Sie die Quelle der vorhandenen Daten  
@@ -73,7 +73,7 @@ ms.locfileid: "66065769"
   
 6.  Im Dialogfeld **Verbindungen bearbeiten** werden die Verbindungsinformationen angezeigt, z. B. Datenbankname, Dateipfad oder Berichtspfad.  
   
-##  <a name="bkmk_det_last_ref"></a> Bestimmen, wann die Daten zuletzt aktualisiert wurden  
+##  <a name="bkmk_det_last_ref"></a>Bestimmen, wann die Daten zuletzt aktualisiert wurden  
  Anhand der Tabelleneigenschaften können Sie feststellen, wann die Daten zuletzt aktualisiert wurden.  
   
 #### <a name="to-find-the-date-and-time-that-a-table-was-last-processed"></a>So suchen Sie das Datum und die Uhrzeit der letzten Verarbeitung einer Tabelle  
@@ -84,7 +84,7 @@ ms.locfileid: "66065769"
   
 3.  Im Dialogfeld **Tabelleneigenschaften bearbeiten** wird unter **Letzte Aktualisierung** das Datum angezeigt, an dem die Tabelle zuletzt aktualisiert wurde.  
   
-##  <a name="bkmk_restrictions"></a> Einschränkungen für aktualisierbare Datenquellen  
+##  <a name="bkmk_restrictions"></a>Einschränkungen für aktualisierbare Datenquellen  
  Einige Einschränkungen gelten für die Datenquellen, die von einem bereitgestellten Modell auf einer Analysis Services-Instanz automatisch verarbeitet werden können. Sie sollten nur Datenquellen auswählen, die die folgenden Kriterien erfüllen:  
   
 -   Die Datenquelle muss zum Zeitpunkt der Datenverarbeitung sowie am angegebenen Speicherort verfügbar sein. Wenn sich die ursprüngliche Datenquelle auf einem lokalen Laufwerk des Benutzers befindet, der das Modell erstellt hat, müssen Sie diese Datenquelle entweder aus dem Datenverarbeitungsvorgang ausschließen oder eine Möglichkeit finden, die Datenquelle an einem Speicherort zu veröffentlichen, auf den über eine Netzwerkverbindung zugegriffen werden kann. Wenn Sie eine Datenquelle an einen Netzwerkspeicherort verschieben, müssen Sie das Modell im Modell-Designer öffnen und die Schritte zum Abrufen der Daten wiederholen. Dies ist notwendig, um die in den Eigenschaften der Datenquellenverbindung gespeicherten Verbindungsinformationen wiederherzustellen.  
@@ -97,15 +97,15 @@ ms.locfileid: "66065769"
   
      Auf eine externe Datenquelle wird über eine eingebettete Verbindungszeichenfolge, eine URL oder einen UNC-Pfad zugegriffen, die Sie beim Importieren der ursprünglichen Daten in das Modell unter Verwendung des Tabellenimport-Assistenten angegeben haben. Die ursprünglichen, in der Datenquellenverbindung gespeicherten Verbindungsinformationen werden für nachfolgende Datenaktualisierungsvorgänge wiederverwendet. Es werden keine separaten Verbindungsinformationen zu Datenverarbeitungszwecken erstellt und verwaltet, sondern nur vorhandene Verbindungsinformationen verwendet.  
   
-##  <a name="bkmk_rest_changes"></a> Einschränkungen für Änderungen an einer Datenquelle  
+##  <a name="bkmk_rest_changes"></a>Einschränkungen für Änderungen an einer Datenquelle  
  Für die Änderungen, die Sie an einer Datenquelle vornehmen können, gelten einige Einschränkungen:  
   
 -   Die Datentypen einer Spalte können nur in einen kompatiblen Datentyp geändert werden. Wenn die Daten in der Spalte z. B. Dezimalzahlen enthalten, können Sie den Datentyp nicht in "Ganze Zahl" (Integer) ändern. Sie können jedoch numerische Daten in Text ändern. Weitere Informationen zu Datentypen finden Sie unter [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](tabular-models/data-types-supported-ssas-tabular.md).  
   
 -   Sie können nicht in verschiedenen Tabellen gleichzeitig mehrere Spalten auswählen und die Eigenschaften der Spalten ändern. Sie können nur mit jeweils einer Tabelle oder Sicht arbeiten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Manuelle Verarbeitung von Daten &#40;SSAS – tabellarisch&#41;](manually-process-data-ssas-tabular.md)   
- [Bearbeiten einer vorhandenen Datenquellenverbindung &#40;SSAS – tabellarisch&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Manuelles Verarbeiten von Daten &#40;tabellarischen SSAS-&#41;](manually-process-data-ssas-tabular.md)   
+ [Bearbeiten einer vorhandenen Datenquellen Verbindung &#40;tabellarischen SSAS-&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

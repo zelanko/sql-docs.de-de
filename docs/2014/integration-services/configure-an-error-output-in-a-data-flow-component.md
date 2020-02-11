@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente | Microsoft-Dokumentation
+title: Konfigurieren einer Fehlerausgabe in einer Datenfluss Komponente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060818"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente
@@ -89,11 +89,11 @@ ms.locfileid: "66060818"
     > [!NOTE]  
     >  Die Liste mit den Spalten enthält die Spalten in der Komponenteneingabe, die durch vorherige Fehlerausgaben hinzugefügten Spalten **ErrorCode** und **ErrorColumn** sowie die von dieser Komponente hinzugefügten Spalten **ErrorCode** und **ErrorColumn** .  
   
-7.  Klicken Sie auf **OK.**  
+7.  Klicken Sie auf **OK**.  
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern**, um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehlerbehandlung in Daten](data-flow/error-handling-in-data.md)  
   
   

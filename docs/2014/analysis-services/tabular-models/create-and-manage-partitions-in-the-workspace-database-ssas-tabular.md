@@ -1,5 +1,5 @@
 ---
-title: Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Erstellen und Verwalten von Partitionen in der Arbeitsbereichs Datenbank (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37f1b8c1f97601ab9997fdb6706587f42e1b4e6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067461"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database-ssas-tabular"></a>Erstellen und Verwalten von Partitionen in der Arbeitsbereichsdatenbank (SSAS – tabellarisch)
@@ -35,10 +35,10 @@ ms.locfileid: "66067461"
 > [!NOTE]  
 >  Partitionen in der Arbeitsbereichsdatenbank des Modells können nicht mithilfe des Dialogfelds Partitions-Manager zusammengeführt werden. Partitionen können in einem bereitgestellten Modell nur mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]zusammengeführt werden.  
   
-## <a name="tasks"></a>Richtlinienübersicht  
+## <a name="tasks"></a>Aufgaben  
  Um Partitionen zu erstellen und zu verwalten, verwenden Sie das Dialogfeld **Partitions-Manager** . Sie öffnen das Dialogfeld **Partitions-Manager** , indem Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Tabelle** und dann auf **Partitionen**klicken.  
   
-###  <a name="bkmk_create_new"></a> So erstellen Sie eine neue Partition  
+###  <a name="bkmk_create_new"></a>So erstellen Sie eine neue Partition  
   
 1.  Wählen Sie im Modell-Designer die Tabelle aus, für die Sie eine Partition definieren möchten.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66067461"
   
      Klicken Sie nahe der oberen rechten Ecke des Vorschaufensters auf die Schaltfläche **Abfrage-Editor** , um eine SQL-Anweisung zu verwenden. Geben Sie anschließend im Abfragefenster eine SQL-Abfrage-Anweisung ein (oder kopieren und fügen Sie die Anweisung aus einem anderen Text ein). Um die Anweisung zu überprüfen, klicken Sie auf **Überprüfen**. Um den Abfrage-Designer zu verwenden, klicken Sie auf **Entwurf**.  
   
-###  <a name="bkmk_copy"></a> So kopieren Sie eine Partition  
+###  <a name="bkmk_copy"></a>So kopieren Sie eine Partition  
   
 1.  Überprüfen Sie, ob im **Partitions-Manager**im Listenfeld **Tabelle** die richtige Tabelle angezeigt wird, oder wählen Sie die Tabelle mit der zu kopierenden Partition aus.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "66067461"
   
 3.  Geben Sie in **Partitionsname**einen neuen Namen für die Partition ein.  
   
-###  <a name="bkmk_delete"></a> So löschen Sie eine Partition  
+###  <a name="bkmk_delete"></a>So löschen Sie eine Partition  
   
 1.  Überprüfen Sie, ob im **Partitions-Manager**im Listenfeld **Tabelle** die richtige Tabelle angezeigt wird, oder wählen Sie die zu löschende Partition aus.  
   
 2.  Wählen Sie in der Liste **Partitionen** die zu löschende Partition aus, und klicken Sie auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md)   
- [Verarbeiten von Partitionen in der Arbeitsbereichsdatenbank &#40;SSAS – tabellarisch&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Partitionen &#40;tabellarischen SSAS-&#41;](partitions-ssas-tabular.md)   
+ [Verarbeiten von Partitionen in der Arbeitsbereichs Datenbank &#40;tabellarischen SSAS-&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)  
   
   

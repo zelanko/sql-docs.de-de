@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07934e74138f17317eb0258e2b3ad0fa6d26254a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106322"
 ---
 # <a name="add-3d-effects-to-a-chart-report-builder-and-ssrs"></a>Hinzufügen von 3D-Effekten zu einem Diagramm (Berichts-Generator und SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66106322"
   
     4.  Geben Sie für die **DrawingStyle** -Eigenschaft den Wert **Zylinder** ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [3D, Abschrägungen und andere Effekte in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-3d-bevel-and-other-report-builder.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)  

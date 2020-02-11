@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Anzeigen von Daten Konflikten für Transaktions Veröffentlichungen (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144411"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio)
@@ -32,7 +32,7 @@ ms.locfileid: "63144411"
   
     -   Geben Sie einen Beibehaltungswert für den Parameter @conflict_retention von [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)an.  
   
-    -   Geben Sie den Wert `'conflict_retention'` für die @property Wert von Parameter und einen Beibehaltungswert für den @value Parameter [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql).  
+    -   Geben Sie den Wert `'conflict_retention'` für den @property -Parameter und einen Beibehaltungs Wert @value für den-Parameter [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)an.  
   
 ### <a name="to-view-conflicts"></a>So zeigen Sie Konflikte an  
   
@@ -56,14 +56,14 @@ ms.locfileid: "63144411"
   
     -   Wählen Sie eine oder mehrere Zeilen im oberen Raster aus, und klicken Sie auf **Entfernen**. Die Zeilen werden dann aus der Metatabelle für Konflikte gelöscht.  
   
-    -   Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
+    -   Klicken Sie auf die Schaltfläche mit den Eigenschaften (**...**), um weitere Informationen zu einer in einem Konflikt beteiligten Spalte anzuzeigen.  
   
-    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **...** ), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu schließen.  
+    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu schließen.  
   
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
   
-## <a name="see-also"></a>Siehe auch  
- [Peer-zu-Peer-Transaktionsreplikation](transactional/peer-to-peer-transactional-replication.md)   
- [Queued Updating Conflict Detection and Resolution](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
+ [Erkennen und Auflösen von Konflikten beim Aktualisieren von verzögertem Update](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

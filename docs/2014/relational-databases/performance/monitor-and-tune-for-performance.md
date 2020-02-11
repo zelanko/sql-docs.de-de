@@ -29,10 +29,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 683e8044b235828741fe429f133af82d1977031a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150708"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Überwachen und Optimieren der Leistung
@@ -41,7 +41,7 @@ ms.locfileid: "63150708"
  Durch die fortlaufende Auswertung der Datenbankleistung können Sie die Antwortzeiten minimieren und den Durchsatz maximieren, um so die optimale Leistung zu erzielen. Die effiziente Netzwerklast, Datenträger-E/A und CPU-Nutzung sind der Schlüssel zu Höchstleistungen. Hierzu müssen Sie die Anwendungsanforderungen gründlich analysieren, die logische und physische Struktur der Daten kennen, die Datenbanknutzung bewerten und Kompromisse zwischen gegensätzlichen Nutzungen, wie etwa OLTP (Online Transaction Processing) im Gegensatz zur Entscheidungsunterstützung, aushandeln.  
   
 ## <a name="benefits-of-monitoring-and-tuning-databases-for-performance"></a>Vorteile der Überwachung und Optimierung von Datenbanken für die Leistung  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Microsoft Windows-Betriebssystem stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen können. Es gibt eine Vielzahl von Tools und Techniken, die verwendet werden können, um zu überwachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn Sie wissen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann, können Sie folgende Vorgänge ausführen:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Microsoft Windows-Betriebssystem stellen Hilfsprogramme bereit, mit denen Sie den aktuellen Zustand der Datenbank anzeigen und die Leistung unter veränderten Bedingungen nachverfolgen können. Es gibt eine Reihe von Tools und Techniken, die zur Überwachung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von verwendet werden können. Wenn Sie wissen, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwacht werden kann, können Sie folgende Vorgänge ausführen:  
   
 -   Ermitteln, ob die Leistung verbessert werden kann. Indem Sie beispielsweise die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "63150708"
 |[Anzeigen und Speichern von Ausführungsplänen](display-and-save-execution-plans.md)|Beschreibt, wie Ausführungspläne in einer Datei im XML-Format angezeigt und gespeichert werden.|  
 |[Überwachen der Leistung mit dem Abfragespeicher](monitoring-performance-by-using-the-query-store.md)|Der Abfragespeicher erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)   
  [Datenbankoptimierungsratgeber](database-engine-tuning-advisor.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](../performance-monitor/monitor-resource-usage-system-monitor.md)   

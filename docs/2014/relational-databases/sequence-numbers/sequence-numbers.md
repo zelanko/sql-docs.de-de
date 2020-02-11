@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184402"
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
@@ -229,7 +229,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Generieren von wiederholten Sequenznummern in einem Resultset  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D: Generieren von wiederholten Sequenznummern in einem Resultset  
  Im folgenden Beispiel werden zwei Eigenschaften von Sequenznummern veranschaulicht: die zyklische Verwendung und das Verwenden von `NEXT VALUE FOR` in einer SELECT-Anweisung.  
   
 ```  
@@ -267,7 +267,7 @@ WHERE Name LIKE '%nut%' ;
 ```  
   
 ### <a name="f-resetting-the-sequence-number"></a>F. Zurücksetzen der Sequenznummer  
- In Beispiel E wurden die ersten 79 der `Samples.IDLabel`-Sequenznummern verbraucht. (Ihre Version von `AdventureWorks2012` gibt möglicherweise eine andere Anzahl von Ergebnissen zurück.) Führen Sie Folgendes aus, um die nächsten 79 Sequenznummern (80 bis 158) zuzuweisen.  
+ In Beispiel E wurden die ersten 79 der `Samples.IDLabel`-Sequenznummern verbraucht. (Ihre Version von `AdventureWorks2012` gibt möglicherweise eine andere Anzahl von Ergebnissen zurück.) Führen Sie Folgendes aus, um die nächsten 79 Sequenznummern (80 bis 158) zuzuweisen.  
   
 ```  
 SELECT NEXT VALUE FOR Samples.IDLabel OVER (ORDER BY Name) AS NutID, ProductID, Name, ProductNumber FROM Production.Product  

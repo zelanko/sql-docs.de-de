@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Datamining-Modellen in Visio (Data Mining-Add-ins) | Microsoft-Dokumentation
+title: Anzeigen von Data Mining-Modellen in Visio (Data Mining-Add-Ins) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,17 +16,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c287e840c07d11a527e980f9f07fb39fb3852739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065521"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Anzeigen von Data Mining-Modellen in Visio (Data Mining-Add-Ins)
   Mit Visio-Shapes für das Data Mining können Sie eine Verbindung mit einem Server herstellen und ein Diagramm erstellen, das ein vorhandenes Data Mining-Modell darstellt. Die Diagramme können anschließend mithilfe von Visio-Steuerelementen angepasst werden; Sie können jedoch auch einen Drilldown auf Daten ausführen, einige der zugrunde liegenden Statistiken verfügbar machen und mit dem zugrunde liegenden Modell arbeiten.  
   
 ## <a name="building-a-model-diagram"></a>Erstellen eines Modelldiagramms  
- Wenn Sie die Datei mit der für das Datamining-Shapes in Visio öffnen die **Formen** Bereich die folgenden Shapes angezeigt.  
+ Wenn Sie die Datei öffnen, die die Visio-Formen für Data Mining enthält, zeigt der Bereich **Formen** die folgenden Formen an.  
   
  Wenn die Data Mining-Shapes beim Öffnen von Visio nicht angezeigt werden, öffnen Sie die Vorlagendatei aus dem Installationsordner.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66065521"
 |Visio-Shape|Unterstützte Modelle|  
 |-----------------|----------------------|  
 |Entscheidungsstruktur|Verwenden Sie dieses Shape für Modelle, die auf dem Decision Tree- oder Linear Regression-Algorithmus basieren.|  
-|Abhängigkeitsnetzwerk|Verwenden Sie dieses Shape für Modelle, die auf einem der folgenden Algorithmen basieren: Naive Bayes, Decision Trees oder Association Rules.|  
+|Abhängigkeitsnetzwerk|Verwenden Sie dieses Shape für Diagramme, die auf einem der folgenden Algorithmen basieren: Naive Bayes, Decision Trees oder Association Rules.|  
 |Cluster|Verwenden Sie dieses Shape für Modelle, die auf den Clustering-Algorithmen basieren.|  
   
  Abhängig vom Datentyp im Miningmodell werden vom Assistenten möglicherweise verschiedene Optionen angezeigt. Spalten, die fortlaufende Zahlen enthalten, werden beispielsweise anders visualisiert als Kategorievariablen.  
   
-## <a name="working-with-completed-shapes"></a>Arbeiten mit vollständige Shapes  
+## <a name="working-with-completed-shapes"></a>Arbeiten mit abgeschlossenen Formen  
  Nach Fertigstellung des Diagramms können Sie damit das Data Mining-Modell durchsuchen, oder Sie können das Diagramm optimieren, um es in Präsentationen einzubinden.  
   
 ### <a name="visio-menus"></a>Visio-Menüs  
@@ -72,11 +72,11 @@ ms.locfileid: "66065521"
   
  [Exemplarische Vorgehensweise für das Clusterdiagramm](cluster-diagram-walkthrough-data-mining-add-ins.md)  
   
- [Abhängigkeit Exemplarische Vorgehensweise](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
+ [Exemplarische Vorgehensweise für das Abhängigkeitsnetzwerkdiagramm](dependency-network-diagram-walkthrough-data-mining-add-ins.md)  
   
  [Exemplarische Vorgehensweise für das Entscheidungsstrukturdiagramm](decision-tree-diagram-walkthrough-data-mining-add-ins.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
   
   

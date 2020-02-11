@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b924596a4071f59175faa629006e9e5b220f66ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200233"
 ---
 # <a name="executing-queries-odbc"></a>Ausführen von Abfragen (ODBC)
-  Nachdem eine ODBC-Anwendung ein Verbindungshandle initialisiert und eine Verbindung zu einer Datenquelle hergestellt hat, weist sie dem Verbindungshandle ein oder mehrere Anweisungshandles zu. Die Anwendung kann dann ausführen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anweisungen für das Anweisungshandle. Die übliche Reihenfolge bei der Ausführung einer SQL-Anweisung ist:  
+  Nachdem eine ODBC-Anwendung ein Verbindungshandle initialisiert und eine Verbindung zu einer Datenquelle hergestellt hat, weist sie dem Verbindungshandle ein oder mehrere Anweisungshandles zu. Die Anwendung kann dann- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anweisungen für das Anweisungs Handle ausführen. Die übliche Reihenfolge bei der Ausführung einer SQL-Anweisung ist:  
   
 1.  Festlegen aller erforderlichen Anweisungsattribute.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63200233"
   
 4.  Abrufen der Resultsets.  
   
- Erst nachdem eine Anwendung alle Zeilen in sämtlichen von der SQL-Anweisung zurückgegebenen Resultsets abgerufen hat, kann sie eine weitere Abfrage über dasselbe Anweisungshandle ausführen. Wenn eine Anwendung feststellt, dass es nicht erforderlich ist, um alle Zeilen in einem bestimmten Resultset abzurufen, können sie den Rest des Resultsets durch Aufrufen von entweder Abbrechen [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md).  
+ Erst nachdem eine Anwendung alle Zeilen in sämtlichen von der SQL-Anweisung zurückgegebenen Resultsets abgerufen hat, kann sie eine weitere Abfrage über dasselbe Anweisungshandle ausführen. Wenn eine Anwendung ermittelt, dass es nicht erforderlich ist, alle Zeilen in einem bestimmten Resultset abzurufen, kann Sie den Rest des Resultsets durch Aufrufen von [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) oder [SQLCloseCursor](../native-client-odbc-api/sqlclosecursor.md)abbrechen.  
   
  Wenn Sie in einer ODBC-Anwendung dieselbe SQL-Anweisung mehrfach mit unterschiedlichen Daten ausführen müssen, verwenden Sie bei der Erstellung der SQL-Anweisung eine Parametermarkierung in Form eines Fragezeichens (?):  
   
@@ -42,27 +42,27 @@ ms.locfileid: "63200233"
 INSERT INTO MyTable VALUES (?, ?, ?)  
 ```  
   
- Jede parametermarkierung kann dann an eine Programmvariable gebunden werden, durch den Aufruf [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md).  
+ Jede Parameter Markierung kann dann durch Aufrufen von [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md)an eine Programm Variable gebunden werden.  
   
  Nachdem alle SQL-Anweisungen ausgeführt und ihre Resultsets verarbeitet wurden, gibt die Anwendung das Anweisungshandle frei.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt mehrere Anweisungshandles pro Verbindungshandle. Transaktionen werden auf Verbindungsebene verwaltet, d. h. alle über sämtliche Anweisungshandles auf einem einzelnen Verbindungshandle ausgeführten Aufgaben werden als Bestandteil derselben Transaktion verwaltet.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt mehrere Anweisungs Handles pro Verbindungs Handle. Transaktionen werden auf Verbindungsebene verwaltet, d. h. alle über sämtliche Anweisungshandles auf einem einzelnen Verbindungshandle ausgeführten Aufgaben werden als Bestandteil derselben Transaktion verwaltet.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
 -   [Zuordnen eines Anweisungshandles](allocating-a-statement-handle.md)  
   
--   [Erstellen einer SQL­Anweisung &#40;ODBC&#41;](constructing-an-sql-statement-odbc.md)  
+-   [Erstellen einer SQL-Anweisung &#40;ODBC-&#41;](constructing-an-sql-statement-odbc.md)  
   
 -   [Erstellen von SQL-Anweisungen für Cursor](constructing-sql-statements-for-cursors.md)  
   
 -   [Verwenden von Anweisungsparametern](using-statement-parameters.md)  
   
--   [Ausführen von Anweisungen &#40;ODBC&#41;](executing-statements/executing-statements-odbc.md)  
+-   [Ausführen von Anweisungen &#40;ODBC-&#41;](executing-statements/executing-statements-odbc.md)  
   
 -   [Freigeben eines Anweisungshandles](freeing-a-statement-handle.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

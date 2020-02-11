@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63207067"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
@@ -94,7 +94,7 @@ ms.locfileid: "63207067"
  Diese Informationen sind über [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]und mehrere gespeicherte Replikationsprozeduren verfügbar. Weitere Informationen finden Sie unter [Distributor and Publisher Information Script](distributor-and-publisher-information-script.md).  
   
 ### <a name="does-replication-encrypt-data"></a>Werden bei der Replikation Daten verschlüsselt?  
- Nein. Bei der Replikation werden keine Daten verschlüsselt, die in der Datenbank gespeichert oder über das Netzwerk übertragen werden. Weitere Informationen finden Sie im Abschnitt "Verschlüsselung" des Themas [SQL Server-Replikationssicherheit](../security/view-and-modify-replication-security-settings.md).  
+ Nein. Bei der Replikation werden keine Daten verschlüsselt, die in der Datenbank gespeichert oder über das Netzwerk übertragen werden. Weitere Informationen finden Sie im Abschnitt "Encryption" des Themas [SQL Server-Replikation Security](../security/view-and-modify-replication-security-settings.md).  
   
 ### <a name="how-do-i-replicate-data-over-the-internet"></a>Wie repliziere ich Daten über das Internet?  
  Verwenden Sie Folgendes, um Daten über das Internet zu replizieren:  
@@ -103,7 +103,7 @@ ms.locfileid: "63207067"
   
 -   Die Websynchronisierungsoption für die Mergereplikation. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Bei allen Typen der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikation können Daten über ein VPN repliziert werden. Sie sollten jedoch die Websynchronisierung in Betracht ziehen, falls Sie die Mergereplikation verwenden.  
+ Bei allen Arten der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation können Daten über ein VPN repliziert werden. Falls Sie eine Mergereplikation verwenden, sollten Sie jedoch die Websynchronisierung in Betracht ziehen.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>Wird die Replikation fortgesetzt, wenn eine Verbindung getrennt wird?  
  Ja. Die Replikationsverarbeitung wird an der Stelle fortgesetzt, an der sie beim Trennen der Verbindung unterbrochen wurde. Wenn Sie eine Mergereplikation über ein unzuverlässiges Netzwerk ausführen, sollten Sie die Verwendung logischer Datensätze in Betracht ziehen, mit denen sichergestellt wird, dass aufeinander bezogene Änderungen als Einheit verarbeitet werden. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "63207067"
  Nein. Für die Übertragung von Benutzernamen und Kennwörtern von einem Verleger an einen oder mehrere Abonnenten können Sie ein DTS-Paket erstellen.  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>Was sind Schemas, und wie werden sie repliziert?  
- Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *Schema* zwei Bedeutungen:  
+ Ab [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] hat *Schema* zwei Bedeutungen:  
   
 -   Die Definition eines Objekts, beispielsweise als CREATE TABLE-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "63207067"
   
 -   Geben Sie an, dass Objekte bei einer erneuten Initialisierung des Abonnements nicht gelöscht werden sollen. Führen Sie vor der erneuten Initialisierung einen der folgenden Vorgänge aus:  
   
-    -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie dabei für den**sp_changearticle**-Parameter den Wert 'pre_creation_cmd' (**sp_changemergearticle**) oder 'pre_creation_command' ( **@property** ) und für den **@value** .  
+    -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie für den Parameter **@property** den Wert ' pre_creation_cmd ' ( **@value****sp_changearticle**) oder ' pre_creation_command ' (**sp_changemergearticle**) und für den Parameter den Wert ' none ', ' delete ' oder ' TRUNCATE ' an.  
   
     -   Wählen Sie im Dialogfeld **Artikeleigenschaften – \<Artikel>** im Abschnitt **Zielobjekt** einen Wert von **Vorhandenes Objekt unverändert beibehalten**, **Daten löschen. Wenn ein Artikel einen Zeilenfilter aufweist, nur die dem Filter entsprechenden Daten löschen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
   
@@ -167,7 +167,7 @@ ms.locfileid: "63207067"
  Ja. Für an einer Replikation beteiligte Datenbanken sind mehrere besondere Punkte zu berücksichtigen. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von replizierten Datenbanken](back-up-and-restore-replicated-databases.md).  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>Hat die Replikation Auswirkungen auf die Größe des Transaktionsprotokolls?  
- Die Mergereplikation und die Momentaufnahmereplikation haben im Gegensatz zur Transaktionsreplikation keine Auswirkungen auf die Transaktionsprotokollgröße. Wenn eine Datenbank eine oder mehrere Transaktionsveröffentlichungen enthält, wird das Protokoll erst dann abgeschnitten, wenn alle für die Veröffentlichungen relevanten Transaktionen an die Verteilungsdatenbank übermittelt wurden. Wenn das Transaktionsprotokoll zu umfangreich wird und der Protokolllese-Agent basierend auf einem Zeitplan ausgeführt wird, sollten Sie eine Verkürzung des Intervalls zwischen den Ausführungen in Betracht ziehen. Sie können auch festlegen, dass die Ausführung im kontinuierlichen Modus erfolgt. Wenn der Agent so festgelegt ist, dass er im kontinuierlichen Modus ausgeführt wird (Standardeinstellung), stellen Sie sicher, dass er läuft. Weitere Informationen zum Protokolllese-Agent-Status überprüfen, finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Die Mergereplikation und die Momentaufnahmereplikation haben im Gegensatz zur Transaktionsreplikation keine Auswirkungen auf die Transaktionsprotokollgröße. Wenn eine Datenbank eine oder mehrere Transaktionsveröffentlichungen enthält, wird das Protokoll erst dann abgeschnitten, wenn alle für die Veröffentlichungen relevanten Transaktionen an die Verteilungsdatenbank übermittelt wurden. Wenn das Transaktionsprotokoll zu umfangreich wird und der Protokolllese-Agent basierend auf einem Zeitplan ausgeführt wird, sollten Sie eine Verkürzung des Intervalls zwischen den Ausführungen in Betracht ziehen. Sie können auch festlegen, dass die Ausführung im kontinuierlichen Modus erfolgt. Wenn der Agent so festgelegt ist, dass er im kontinuierlichen Modus ausgeführt wird (Standardeinstellung), stellen Sie sicher, dass er läuft. Weitere Informationen zum Überprüfen Protokolllese-Agent Status finden [Sie unter Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Zudem wird das Transaktionsprotokoll nicht abgeschnitten, bis alle Transaktionen gesichert wurden, wenn Sie für die Veröffentlichungsdatenbank oder für die Verteilungsdatenbank die Option 'sync with backup' festgelegt haben. Wenn das Transaktionsprotokoll zu umfangreich wird und Sie diese Option festgelegt haben, sollten Sie eine Verkürzung des Intervalls zwischen den Transaktionsprotokollsicherungen in Betracht ziehen. Weitere Informationen zum Sichern und Wiederherstellen von an der Transaktionsreplikation beteiligten Datenbanken finden Sie unter [Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation](strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
@@ -184,7 +184,7 @@ ms.locfileid: "63207067"
  Löschen Sie zuerst mit [sp_droparticle](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql), [sp_dropmergearticle](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) oder im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** den Artikel aus der Veröffentlichung, und löschen Sie ihn dann mit `DROP <Object>` aus der Datenbank. Artikel in Momentaufnahme- oder Transaktionsveröffentlichungen können nach dem Hinzufügen von Abonnements nicht mehr gelöscht werden; zuerst müssen die Abonnements gelöscht werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>Wie kann ich in einer veröffentlichten Tabelle Spalten hinzufügen bzw. löschen?  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zahlreiche Schemaänderungen für veröffentliche Objekte einschließlich des Hinzufügens und Löschens von Spalten. Führen Sie beispielsweise ALTER TABLE … DROP COLUMN auf dem Verleger aus, damit die Anweisung auf die Abonnenten repliziert und dann zum Löschen der Spalte ausgeführt wird. Auf Abonnenten, auf denen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird das Hinzufügen und Löschen von Spalten über die gespeicherten Prozeduren [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) und [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)unterstützt. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt zahlreiche Schemaänderungen für veröffentliche Objekte einschließlich des Hinzufügens und Löschens von Spalten. Führen Sie beispielsweise Alter Table... Drop Column auf dem Verleger, und die-Anweisung wird auf den Abonnenten repliziert und dann ausgeführt, um die Spalte zu löschen. Auf Abonnenten, auf denen Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt werden, wird das Hinzufügen und Löschen von Spalten über die gespeicherten Prozeduren [sp_repladdcolumn](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) und [sp_repldropcolumn](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)unterstützt. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="replication-maintenance"></a>Replikationswartung  
   
@@ -207,7 +207,7 @@ ms.locfileid: "63207067"
  Die zum Entfernen einer Replikation aus einer Datenbank erforderlichen Aktionen sind davon abhängig, ob die Datenbank als Veröffentlichungsdatenbank, als Abonnementdatenbank oder beides dient.  
   
 ### <a name="how-do-i-determine-whether-there-are-transactions-or-rows-to-be-replicated"></a>Wie stelle ich fest, ob Transaktionen oder Zeilen repliziert werden müssen?  
- Verwenden Sie für die Transaktionsreplikation gespeicherte Prozeduren oder die Registerkarte **Nicht verteilte Befehle** im Replikationsmonitor. Weitere Informationen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Aufgaben verwenden. Der Replikationsmonitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Verwenden Sie für die Transaktionsreplikation gespeicherte Prozeduren oder die Registerkarte **Nicht verteilte Befehle** im Replikationsmonitor. Weitere Informationen finden Sie unter [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungs Datenbank &#40;Replikations&#41;Programmierung mit Transact-SQL](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Tasks mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
  Verwenden Sie für die Mergereplikation die gespeicherte Prozedur **sp_showpendingchanges**. Weitere Informationen finden Sie unter [sp_showpendingchanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql).  
   
@@ -218,7 +218,7 @@ ms.locfileid: "63207067"
   
 -   Die geschätzte Zeitdauer für die Übermittlung von Befehlen an den Abonnenten. Wenn dieser Wert größer ist, als die zum Generieren und Anwenden einer Momentaufnahme auf den Abonnenten erforderliche Zeit, sollten Sie eine erneute Initialisierung des Abonnenten in Betracht ziehen. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md).  
   
- Weitere Informationen finden Sie unter [Sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) und [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+ Weitere Informationen finden Sie unter [sp_replmonitorsubscriptionpendingcmds &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql) und [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## <a name="replication-and-other-database-features"></a>Replikationen und sonstige Datenbankfunktionen  
   
@@ -228,7 +228,7 @@ ms.locfileid: "63207067"
 ### <a name="does-replication-work-in-conjunction-with-clustering"></a>Ist die Replikation in Verbindung mit dem Cluster funktionsfähig?  
  Ja. Da alle Daten auf einem Datenträgersatz im Cluster gespeichert sind, sind keine besonderen Überlegungen erforderlich.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
   

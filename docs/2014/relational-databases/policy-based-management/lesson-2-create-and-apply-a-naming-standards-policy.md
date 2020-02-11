@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Erstellen und anwenden eine Richtlinie für Benennungsstandards | Microsoft-Dokumentation'
+title: 'Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6bf69e0baf86cf9e56eddcf926444776b4a2116d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63206960"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards
@@ -26,7 +26,7 @@ ms.locfileid: "63206960"
   
 -   [Abonnieren und Überprüfen der Richtlinie 'Finanz_Name'](lesson-2-2-subscribe-to-and-check-the-finance-name-policy.md)  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Erstellen der Richtlinie Finance Name](lesson-2-1-create-the-finance-name-policy.md)  
   
   

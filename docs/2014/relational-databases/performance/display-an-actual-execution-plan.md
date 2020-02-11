@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9403e6e2cf1c341780a06bbdff1c5f38685dd34a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150972"
 ---
 # <a name="display-an-actual-execution-plan"></a>Anzeigen eines tatsächlichen Ausführungsplans
@@ -33,12 +33,12 @@ ms.locfileid: "63150972"
   
 2.  Geben Sie die Abfrage ein, für die Sie den tatsächlichen Ausführungsplan anzeigen möchten.  
   
-3.  Klicken Sie im Menü **Abfrage** auf **Tatsächlichen Ausführungsplan einschließen** , oder klicken Sie auf die Symbolleistenschaltfläche **Tatsächlichen Ausführungsplan einschließen** .  
+3.  Klicken Sie im Menü **Abfrage** auf **tatsächlichen Ausführungsplan einschließen** , oder klicken Sie auf die Symbolleisten Schaltfläche **tatsächlichen Ausführungsplan einschließen** .  
   
 4.  Führen Sie die Abfrage aus, indem Sie auf die Symbolleistenschaltfläche **Ausführen** klicken. Der vom Abfrageoptimierer verwendete Plan wird im Ergebnisbereich auf der Registerkarte **Ausführungsplan** angezeigt. Positionieren Sie die Maus über die logischen und physischen Operatoren, um deren Beschreibung und Eigenschaften in der QuickInfo anzuzeigen.  
   
      Sie können die Operatoreigenschaften auch im Eigenschaftenfenster anzeigen. Falls die Eigenschaften nicht sichtbar sind, klicken Sie mit der rechten Maustaste auf einen Operator, und wählen Sie **Eigenschaften**aus. Wählen Sie einen Operator aus, um seine Eigenschaften anzuzeigen.  
   
-5.  Sie können die Anzeige des Ausführungsplans ändern, indem Sie mit der rechten Maustaste auf den Ausführungsplan klicken und **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern**oder **Zoom anpassen**auswählen. Mit**Vergrößern** und **Verkleinern** können Sie den Ausführungsplan vergrößern bzw. verkleinern. Mit **Vergrößern/Verkleinern** können Sie dagegen einen eigenen Zoomfaktor definieren, z. B. 80 Prozent. Mit**Zoom anpassen** können Sie den Ausführungsplan an die Größe des Ergebnisbereichs anpassen.  
+5.  Sie können die Anzeige des Ausführungsplans ändern, indem Sie mit der rechten Maustaste auf den Ausführungsplan klicken und **Vergrößern**, **Verkleinern**, **Vergrößern/Verkleinern**oder **Zoom anpassen**auswählen. Durch **vergrößern** und verkleinern können Sie den Ausführungsplan vergrößern oder verkleinern, während Sie mit dem **benutzerdefinierten Zoom** -Wert einen eigenen Zoomfaktor definieren können, z. b. die Vergrößerung um 80 Prozent. **** **Mit Zoom anpassen** können Sie den Ausführungsplan so vergrößern, dass er dem Ergebnisbereich entspricht.  
   
   

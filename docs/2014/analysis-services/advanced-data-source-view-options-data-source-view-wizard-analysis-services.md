@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Ansicht Optionen im Dialogfeld Datenquelle (Datenquellensicht-Assistenten) (Analysis Services) | Microsoft-Dokumentation
+title: Erweiterte Optionen für Datenquellen Sicht (Dialog Feld) (Datenquellen Sicht-Assistent) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062846"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Erweiterte Optionen für Datenquellensicht (Dialogfeld) (Datenquellensicht-Assistent) (Analysis Services)
@@ -24,15 +24,15 @@ ms.locfileid: "66062846"
   
  Zum Öffnen des Dialogfelds **Erweiterte Optionen für Datenquellensicht** klicken Sie im Datenquellensicht-Assistenten auf der Seite **Datenquelle auswählen** auf **Erweitert**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Beziehungen abrufen**  
  Zeigt an, ob Details zu Beziehungen von der Datenquelle abgerufen und auf die Datenquellensicht angewendet werden sollen. Wenn Sie diese Option nach dem Erstellen der Beziehungen ändern, werden keine vorhandenen Beziehungen aus der Datenquellensicht entfernt.  
   
  **Auf Schema(s) einschränken**  
  Hiermit geben Sie eine durch Trennzeichen getrennte Liste der Schemas an, die von der Datenquelle abgerufen werden sollen. Falls für diese Option keine Schemanamen aufgelistet sind, gibt es keine Einschränkungen bezüglich der Schemas, die verwendet werden können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen in mehrdimensionalen Modellen](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Unterstützte Datenquellen &#40;mehrdimensionalen SSAS-&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

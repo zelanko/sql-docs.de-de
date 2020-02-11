@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63239025"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
@@ -24,15 +24,15 @@ ms.locfileid: "63239025"
   
 ###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>So fügen Sie das ReportViewer-Steuerelement zu einer Windows-Anwendung hinzu  
   
-1.  Erstellen Sie entweder mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue Windows-Anwendung.  
+1.  Erstellen Sie eine neue Windows-Anwendung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] , [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]indem Sie entweder oder verwenden.  
   
-     \- Oder –  
+     \-Noch  
   
      Öffnen Sie ein bestehendes Windows-Anwendungsprojekt, und fügen Sie ein neues Formular hinzu.  
   
 2.  Suchen Sie das ReportViewer-Steuerelement in der **Toolbox**. Wenn die **Toolbox** nicht sichtbar ist, können Sie über das Menü **Ansicht** darauf zugreifen, indem Sie auf **Toolbox** klicken.  
   
-     ![Auswählen des ReportViewer-Steuerelements](../../../2014/reporting-services/media/windowsapp-toolboxreportviewer.png "Selecting ReportViewer control")  
+     ![Auswählen des ReportViewer-Steuerelements](../../../2014/reporting-services/media/windowsapp-toolboxreportviewer.png "Auswählen des ReportViewer-Steuerelements")  
   
 3.  Ziehen Sie das ReportViewer-Steuerelement auf die Entwurfsoberfläche der Windows Form.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "63239025"
   
  Nachdem das Steuerelement zum Formular hinzugefügt wurde, wird das SmartTag **ReportViewer-Aufgaben** angezeigt, und Sie werden aufgefordert, einen Bericht auszuwählen.  
   
- Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichtsserver bereitgestellt wurde, wählen Sie die Option **\<Server Report>** aus der Dropdownliste **Bericht wählen**. Nach der  **\<Serverbericht >** Option ausgewählt ist, zwei weitere Eigenschaften angezeigt: **URL des Berichtsservers** und **Berichtspfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
+ Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichts Server bereitgestellt wurde, wählen Sie in der Dropdown Liste **Bericht auswählen** die ** \<Option Server Bericht>** aus. Nachdem die ** \<Option Server Bericht>** ausgewählt wurde, werden zwei weitere Eigenschaften angezeigt: **Berichts Server-URL** und **Berichts Pfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
   
- ![Auswählen des Serverberichts](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Select server report")  
+ ![Server Bericht auswählen](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Server Bericht auswählen")  
   
  Wenn der Bericht, den Sie anzeigen möchten, ein Bericht im lokalen Modus ist, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder Sie wählen einen Bericht aus, der bereits Teil eines bestehenden Projekts ist.  
   
- ![Auswählen eines lokalen Berichts](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Select local report")  
+ ![Auswählen eines lokalen Berichts](../../../2014/reporting-services/media/windowsapp-localreportsettings.png "Auswählen eines lokalen Berichts")  
   
 ## <a name="viewing-reports-in-remote-processing-mode"></a>Anzeigen von Berichten im Remoteverarbeitungsmodus  
  Im folgenden Beispiel wird veranschaulicht, wie ein Bericht, der mit dem ReportViewer-Steuerelement in WinForms auf einem Berichtsserver bereitgestellt wurde, gerendert wird. In diesem Beispiel wird der Bericht für Auftragsdetails, der im [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Projekt für Beispielberichte enthalten ist, verwendet.  
@@ -158,7 +158,7 @@ End Class
   
      Die Datei Sales Order Detail.rdl sollte jetzt ein Teil des Projekts sein.  
   
-     ![Umsatz, Bericht für Auftragsdetails](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Sales Order Detail Report")  
+     ![Bericht für Auftragsdetails](../../../2014/reporting-services/media/windowsapp-salesorderdetailreport.png "Bericht für Auftragsdetails")  
   
 5.  Klicken Sie mit der rechten Maustaste auf die Datei „Sales Order Detail.rdl“ im Projektmappen-Explorer, und wählen Sie **Umbenennen** aus. Benennen Sie den Bericht in **Sales Order Detail.rdlc** um, und drücken Sie die EINGABETASTE.  
   
@@ -169,7 +169,7 @@ End Class
   
 6.  Wählen Sie nach dem Umbenennen des Berichts die Datei aus, und suchen Sie das Eigenschaftenfenster. Ändern Sie die Eigenschaft **In Ausgabeverzeichnis kopieren** in **Kopieren, wenn neuer**.  
   
-     ![Konfigurieren der Einstellung für das Kopieren in eine Ausgabe](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Configuring Copy To Output setting")  
+     ![Konfigurieren der Einstellung für das Kopieren in eine Ausgabe](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Konfigurieren der Einstellung für das Kopieren in eine Ausgabe")  
   
      Wenn das Fenster **Eigenschaften** nicht sichtbar ist, können Sie es im Menü **Ansicht** öffnen, indem Sie auf **Eigenschaftenfenster** klicken.  
   
@@ -501,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integrieren von Reporting Services mithilfe der ReportViewer-Steuerelemente](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Integrieren von Reporting Services mit den ReportViewer-Steuerelementen](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

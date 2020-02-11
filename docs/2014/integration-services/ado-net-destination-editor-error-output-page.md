@@ -1,5 +1,5 @@
 ---
-title: ADO.NET-Ziel-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
+title: ADO NET-Ziel-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061771"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO.NET-Ziel-Editor (Seite 'Fehlerausgabe')
@@ -28,11 +28,11 @@ ms.locfileid: "66061771"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Ziel hat.  
   
-2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO NET-Ziel.  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO.NET-Ziel.  
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
@@ -56,8 +56,8 @@ ms.locfileid: "66061771"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO.NET-Ziel-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [ADO.NET-Ziel-Editor &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Der ADO.NET-Ziel-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Der ADO.NET-Ziel-Editor &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

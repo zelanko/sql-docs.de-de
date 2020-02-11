@@ -1,5 +1,5 @@
 ---
-title: Ersetzen Sie die Verwendung der erweiterten gespeicherten Prozedur durch neue gespeicherte Prozeduren ' xp_sqlagent_proxy_account ' | Microsoft-Dokumentation
+title: Ersetzen Sie die Verwendung der erweiterten gespeicherten Prozedur xp_sqlagent_proxy_account durch neue gespeicherte Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092760"
 ---
-# <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>Ersetzen der erweiterten gespeicherten Prozedur xp_sqlagent_proxy_account durch neue gespeicherte Prozeduren
+# <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Ersetzen der erweiterten gespeicherten Prozedur xp_sqlagent_proxy_account durch neue gespeicherte Prozeduren
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent unterstützt mehrere Proxys. Diese Proxys werden anhand eines neuen Satzes gespeicherter Prozeduren definiert. Weitere Informationen über die neuen gespeicherten Prozeduren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents finden Sie unter den folgenden Themen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation:  
   
 -   "sp_add_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
@@ -45,12 +45,12 @@ ms.locfileid: "66092760"
 -   "sp_update_proxy ([!INCLUDE[tsql](../../includes/tsql-md.md)])"  
   
 > [!NOTE]  
->  Nach der Aktualisierung auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], Anweisungen, mit denen die **Xp_sqlagent_proxy_account** erweiterte gespeicherte Prozedur funktioniert nicht. Verwendung **Sp_xp_cmdshell_proxy_account** anstelle von **Xp_sqlagent_proxy_account** Festlegen des Proxys für **Xp_cmdshell**.  
+>  Nachdem Sie auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]aktualisiert haben, funktionieren alle-Anweisungen, die die **xp_sqlagent_proxy_account** erweiterten gespeicherten Prozeduren verwenden, nicht. Verwenden Sie **sp_xp_cmdshell_proxy_account** anstelle von **xp_sqlagent_proxy_account** , um den Proxy für **xp_cmdshell**festzulegen.  
   
 ## <a name="component"></a>Komponente  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Büros  
   
-## <a name="see-also"></a>Siehe auch  
- [Probleme beim Upgrade des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Probleme beim Aktualisieren des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
   

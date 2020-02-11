@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Verbindung (Datenquellen-Assistent) (Analysis Services) definieren | Microsoft-Dokumentation
+title: Wählen Sie aus, wie die Verbindung definiert werden soll (Datenquellen-Assistent) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30e727a207c0aeec93f945cc6f550b0e8f1f56f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069500"
 ---
 # <a name="select-how-to-define-the-connection-data-source-wizard-analysis-services"></a>Wählen Sie aus, wie die Verbindung definiert werden soll (Datenquellen-Assistent) (Analysis Services)
   Mithilfe der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll** können Sie die Datenverbindung für eine Datenquelle erstellen oder auswählen.  
   
-## <a name="options"></a>Optionen  
- **Erstellen Sie eine Datenquelle basierend auf einer vorhandenen oder neuen Verbindung**  
+## <a name="options"></a>Tastatur  
+ **Eine Datenquelle basierend auf einer vorhandenen oder neuen Verbindung erstellen**  
  Wählen Sie die Option aus, um eine vorhandene Verbindungszeichenfolge zu verwenden, oder um eine neue Verbindungszeichenfolge für das Datenquellenobjekt zu erstellen.  
   
  **Datenverbindungen**  
@@ -38,7 +38,7 @@ ms.locfileid: "66069500"
  **Löschen**  
  Wählen Sie diese Option aus, um eine vorhandene Datenquelle zu löschen.  
   
- **Erstellen Sie eine Datenquelle basierend auf einem anderen Objekt**  
+ **Eine Datenquelle basierend auf einem anderen Objekt erstellen**  
  Wählen Sie diese Option aus, wenn die neue Datenquelle auf einem vorhandenen Datenquellenobjekt oder auf einem vorhandenen Projekt basieren soll.  
   
   

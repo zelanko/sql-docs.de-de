@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b416d9f7fdd07613f684fb2b27ac058b60d5b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200438"
 ---
 # <a name="use-rowset-binding-odbc"></a>Verwenden der Rowsetbindung (ODBC)
@@ -69,9 +69,9 @@ ms.locfileid: "63200438"
   
 5.  Jeder Aufruf von [SQLFetch](https://go.microsoft.com/fwlink/?LinkId=58401) oder [SQLFetchScroll](../../native-client-odbc-api/sqlfetchscroll.md) ruft R-Zeilen ab und überträgt die Daten in die gebundenen Spalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden von Cursorn Gewusst-wie-Themen &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
- [Implementieren von Cursorn](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
- [Verwenden von Cursorn &#40;ODBC&#41;](use-cursors-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gewusst-wie-Themen zur Verwendung von Cursorn &#40;ODBC&#41;](using-cursors-how-to-topics-odbc.md)   
+ [Implementierung von Cursorn](../../native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)   
+ [Verwenden von Cursorn &#40;ODBC-&#41;](use-cursors-odbc.md)  
   
   

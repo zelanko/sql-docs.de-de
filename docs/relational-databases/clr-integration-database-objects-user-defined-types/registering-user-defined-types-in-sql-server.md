@@ -33,22 +33,22 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4d9eb0f5e08a67036ede2567965e1400494455f5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72907497"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrieren benutzerdefinierter Typen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Um einen benutzerdefinierten Typ (User-Defined Type, UDT) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu verwenden, müssen Sie ihn registrieren. Beim Registrieren eines UDT muss die Assembly registriert werden und der Typ in der Datenbank, in der er verwendet werden soll, erstellt werden. UDTs beschränken sich auf eine einzelne Datenbank und können nicht in mehreren Datenbanken verwendet werden, es sei denn die gleiche Assembly und der gleiche UDT wurden in jeder Datenbank registriert. Nachdem die UDT-Assembly registriert und der Typ erstellt wurden, können Sie den UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] und im Clientcode verwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
+  Um einen benutzerdefinierten Typ (User-Defined Type, UDT) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in zu verwenden, müssen Sie ihn registrieren. Beim Registrieren eines UDT muss die Assembly registriert werden und der Typ in der Datenbank, in der er verwendet werden soll, erstellt werden. UDTs beschränken sich auf eine einzelne Datenbank und können nicht in mehreren Datenbanken verwendet werden, es sei denn die gleiche Assembly und der gleiche UDT wurden in jeder Datenbank registriert. Nachdem die UDT-Assembly registriert und der Typ erstellt wurden, können Sie den UDT in [!INCLUDE[tsql](../../includes/tsql-md.md)] und im Clientcode verwenden. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 ## <a name="using-visual-studio-to-deploy-udts"></a>Verwenden von Visual Studio zum Bereitstellen von UDTs  
  Am einfachsten stellen Sie den UDT mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio bereit. Verwenden Sie jedoch bei komplexeren Bereitstellungsszenarios und für eine größere Flexibilität [!INCLUDE[tsql](../../includes/tsql-md.md)], wie nachfolgend in diesem Thema beschrieben.  
   
  Führen Sie die folgenden Schritte aus, um einen UDT mit Visual Studio zu erstellen und bereitzustellen:  
   
-1.  Erstellen Sie ein neues **Daten Bank** Projekt in den Knoten **Visual Basic** oder **visuelle C#**  Sprache.  
+1.  Erstellen Sie ein neues **Daten Bank** Projekt im **Visual Basic** -oder **Visual c#** -sprach Knoten.  
   
 2.  Fügen Sie einen Verweis auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank hinzu, die den UDT enthalten wird.  
   
@@ -59,17 +59,18 @@ ms.locfileid: "72907497"
 5.  **Wählen Sie**im Menü **Erstellen** die Option bereitstellen aus. Somit wird die Assembly registriert und der Typ in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank erstellt.  
 
 ## <a name="using-transact-sql-to-deploy-udts"></a>Verwenden von Transact-SQL zum Bereitstellen von UDTs  
- Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY-Syntax wird die Assembly in der Datenbank registriert, in der Sie den UDT verwenden möchten. Sie werden intern in Datenbanksystemtabellen gespeichert, nicht extern im Dateisystem. Wenn die UDTs von externen Assemblys abhängig sind, müssen sie auch in die Datenbank geladen werden. Mit der CREATE TYPE-Anweisung wird der UDT in der Datenbank erstellt, in der er verwendet werden soll. Weitere Informationen finden Sie unter [Create Assembly &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) und [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY-Syntax wird die Assembly in der Datenbank registriert, in der Sie den UDT verwenden möchten. Sie werden intern in Datenbanksystemtabellen gespeichert, nicht extern im Dateisystem. Wenn die UDTs von externen Assemblys abhängig sind, müssen sie auch in die Datenbank geladen werden. Mit der CREATE TYPE-Anweisung wird der UDT in der Datenbank erstellt, in der er verwendet werden soll. Weitere Informationen finden Sie unter [Create Assembly &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md) und [Create Type &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 ### <a name="using-create-assembly"></a>Verwenden von CREATE ASSEMBLY  
  Mit der CREATE ASSEMBLY-Syntax wird die Assembly in der Datenbank registriert, in der Sie den UDT verwenden möchten. Sobald die Assembly registriert wurde, liegen keine Abhängigkeiten vor.  
   
- Das Erstellen mehrerer Versionen der gleichen Assembly in einer Datenbank ist nicht zulässig. Es ist jedoch möglich, mehrere Versionen der gleichen Assembly basierend auf der Kultur in einer bestimmten Datenbank zu erstellen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheidet verschiedene Kulturversionen einer Assembly anhand der Namen, die in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert wurden. Weitere Informationen finden Sie unter "Erstellen und Verwenden von Assemblys mit starkem Namen" im .NET Framework SDK.  
+ Das Erstellen mehrerer Versionen der gleichen Assembly in einer Datenbank ist nicht zulässig. Es ist jedoch möglich, mehrere Versionen der gleichen Assembly basierend auf der Kultur in einer bestimmten Datenbank zu erstellen. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheidet verschiedene Kulturversionen einer Assembly anhand der Namen, die in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert wurden. Weitere Informationen finden Sie unter "Erstellen und Verwenden von Assemblys mit starkem Namen" im .NET Framework SDK.  
   
  Wenn CREATE ASSEMBLY mit dem SAFE- oder EXTERNAL_ACCESS-Berechtigungssatz ausgeführt wird, wird die Assembly überprüft, um sicherzustellen, dass sie überprüfbar und typsicher ist. Wenn Sie keinen Berechtigungssatz angeben, wird standardmäßig SAFE vorausgesetzt. Code mit dem UNSAFE-Berechtigungssatz wird nicht überprüft. Weitere Informationen zu Assemblyberechtigungen finden Sie unter [Entwerfen von Assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
 #### <a name="example"></a>Beispiel  
- Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung wird die Point-Assembly in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der **AdventureWorks** -Datenbank mit dem Safe-Berechtigungs Satz registriert. Wenn die WITH PERMISSION_SET-Klausel nicht angegeben wird, wird die Assembly mit dem SAFE-Berechtigungssatz registriert.  
+ Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden-Anweisung wird die Point [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Assembly in in der **AdventureWorks** -Datenbank mit dem Safe-Berechtigungs Satz registriert. Wenn die WITH PERMISSION_SET-Klausel nicht angegeben wird, wird die Assembly mit dem SAFE-Berechtigungssatz registriert.  
   
 ```  
 USE AdventureWorks;  
@@ -78,7 +79,7 @@ FROM '\\ShareName\Projects\Point\bin\Point.dll'
 WITH PERMISSION_SET = SAFE;  
 ```  
   
- Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung registriert die Assembly mithilfe *< assembly_bits->* -Arguments in der from-Klausel. Dieser **varbinary** -Wert stellt die Datei als Datenstrom von Bytes dar.  
+ Mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Anweisung wird die Assembly mithilfe *<assembly_bits>* -Arguments in der from-Klausel registriert. Dieser **varbinary** -Wert stellt die Datei als Datenstrom von Bytes dar.  
   
 ```  
 USE AdventureWorks;  
@@ -90,12 +91,12 @@ FROM 0xfeac4 ... 21ac78
  Nachdem die Assembly in die Datenbank geladen wurde, können Sie den Typ mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TYPE-Anweisung erstellen. Dadurch wird der Typ der Liste mit verfügbaren Typen für diese Datenbank hinzugefügt. Der Typ hat einen Datenbankbereich und kann nur in der Datenbank, in der er erstellt wurde, verwendet werden. Wenn der UDT bereits in der Datenbank vorhanden ist, schlägt die CREATE TYPE-Anweisung fehl.  
   
 > [!NOTE]  
->  Die CREATE TYPE-Syntax wird auch zum Erstellen von nativen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Alias Datentypen verwendet und soll **sp_addtype** als Mittel zum Erstellen von Alias Datentypen ersetzen. Einige der optionalen Argumente in der CREATE TYPE-Syntax beziehen sich auf das Erstellen von UDTs, sie gelten nicht für das Erstellen von Aliasdatentypen (z. B. Basistyp).  
+>  Die CREATE TYPE-Syntax wird auch zum Erstellen nativer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Alias Datentypen verwendet und soll **sp_addtype** als Mittel zum Erstellen von Alias Datentypen ersetzen. Einige der optionalen Argumente in der CREATE TYPE-Syntax beziehen sich auf das Erstellen von UDTs, sie gelten nicht für das Erstellen von Aliasdatentypen (z. B. Basistyp).  
   
- Weitere Informationen finden Sie unter [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
+ Weitere Informationen finden Sie unter [Create Type &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
 #### <a name="example"></a>Beispiel  
- Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung erstellt den **Punkttyp** . Der externe Name wird mit der zweiteiligen Benennungs Syntax von *AssemblyName*angegeben. *UDTName*.  
+ Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung erstellt den **Punkttyp** . Der externe Name wird mit der zweiteiligen Benennungs Syntax von *AssemblyName*angegeben. *UDTName*.  
   
 ```  
 CREATE TYPE dbo.Point   
@@ -112,7 +113,8 @@ EXTERNAL NAME Point.[Point];
 -   Funktionen, gespeicherte Prozeduren oder Trigger, die Variablen und Parameter des UDT verwenden und in der Datenbank mit der WITH SCHEMABINDING-Klausel erzeugt wurden.  
   
 ### <a name="example"></a>Beispiel  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] muss in der folgenden Reihenfolge ausgeführt werden. Zuerst muss die Tabelle, die auf den **Point** -UDT verweist, gelöscht werden, dann der Typ und schließlich die Assembly.  
+ 
+  [!INCLUDE[tsql](../../includes/tsql-md.md)] muss in der folgenden Reihenfolge ausgeführt werden. Zuerst muss die Tabelle, die auf den **Point** -UDT verweist, gelöscht werden, dann der Typ und schließlich die Assembly.  
   
 ```  
 DROP TABLE dbo.Points;  
@@ -123,7 +125,7 @@ DROP ASSEMBLY Point;
 ### <a name="finding-udt-dependencies"></a>Ermitteln von UDT-Abhängigkeiten  
  Wenn abhängige Objekte, z. B. Tabellen mit UDT-Spaltendefinitionen, vorliegen, schlägt die DROP TYPE-Anweisung fehl. Sie schlägt auch dann fehl, wenn sich in der Datenbank Funktionen, gespeicherte Prozeduren oder Trigger befinden, die mit der WITH SCHEMABINDING-Klausel erstellt wurden, wenn diese Routinen Variablen oder Parameter des benutzerdefinierten Typs verwenden. Sie müssen zuerst alle abhängigen Objekte löschen und dann die DROP TYPE-Anweisung ausführen.  
   
- In der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage werden alle Spalten und Parameter, die einen UDT in der **AdventureWorks** -Datenbank verwenden, lokalisiert.  
+ Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage verwendet alle Spalten und Parameter, die einen UDT in der **AdventureWorks** -Datenbank verwenden.  
   
 ```  
 USE Adventureworks;  
@@ -147,7 +149,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  Nachdem ein UDT in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank erstellt wurde, können Sie ihn nicht mehr ändern; Sie können jedoch die Assembly, auf der der Typ basiert, ändern. Meistens müssen Sie den UDT aus der Datenbank mit der [!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE-Anweisung entfernen, Änderungen an der zugrunde liegenden Assembly vornehmen und sie dann mit der ALTER ASSEMBLY-Anweisung neu laden. Anschließend müssen der UDT und abhängige Objekte neu erstellt werden.  
   
 ### <a name="example"></a>Beispiel  
- Die ALTER ASSEMBLY-Anweisung wird erst verwendet, nachdem Sie Änderungen am Quellcode in der UDT-Anweisung vorgenommen und sie neu kompiliert haben. Die DLL-Datei wird auf den Server kopiert und dort zur neuen Assembly verbunden. Die vollständige Syntax finden Sie unter [Alter &#40;Assembly Transact-&#41;SQL](../../t-sql/statements/alter-assembly-transact-sql.md).  
+ Die ALTER ASSEMBLY-Anweisung wird erst verwendet, nachdem Sie Änderungen am Quellcode in der UDT-Anweisung vorgenommen und sie neu kompiliert haben. Die DLL-Datei wird auf den Server kopiert und dort zur neuen Assembly verbunden. Die vollständige Syntax finden Sie unter [Alter Assembly &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
  Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY-Anweisung wird die Point.dll-Assembly erneut vom angegebenen Speicherort auf dem Datenträger geladen.  
   
@@ -159,7 +161,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>Verwenden von ALTER ASSEMBLY zum Hinzufügen von Quellcode  
  Die ADD FILE-Klausel in der ALTER ASSEMBLY-Syntax ist nicht in CREATE ASSEMBLY vorhanden. Sie können sie verwenden, um Quellcode oder beliebige andere Dateien hinzuzufügen, die einer Assembly zugeordnet sind. Die Dateien werden von ihren ursprünglichen Speicherorten kopiert und in Systemtabellen in der Datenbank gespeichert. Dadurch wird sichergestellt, dass stets der Quellcode oder andere Dateien verfügbar sind, wenn Sie die aktuelle Version des UDT neu erstellen oder dokumentieren müssen.  
   
- Mit der folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Alter Assembly-Anweisung wird der Quellcode der Point.cs-Klasse für den **Point** -UDT hinzugefügt. Dadurch wird der in der Datei Point.cs enthaltene Text kopiert und unter dem Namen "PointSource" in der Datenbank gespeichert.  
+ Die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] Alter Assembly-Anweisung fügt den Quellcode der Point.cs-Klasse für den **Point** -UDT hinzu. Dadurch wird der in der Datei Point.cs enthaltene Text kopiert und unter dem Namen "PointSource" in der Datenbank gespeichert.  
   
 ```  
 ALTER ASSEMBLY Point  
@@ -175,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  Der Name des Objekts.  
   
  **file_id**  
- Eine Zahl, die die einzelnen-Objekte identifiziert, wobei das erste-Objekt, das einem angegebenen **assembly_id** zugeordnet ist, den Wert 1 erhält. Wenn mehrere Objekte mit demselben **assembly_id**verknüpft sind, wird jeder nachfolgende **file_id** -Wert um 1 erhöht.  
+ Eine Zahl, die die einzelnen-Objekte identifiziert, wobei das erste-Objekt, das einem angegebenen zugeordnet ist, **assembly_id** den Wert 1 erhält. Wenn mehrere Objekte mit demselben **assembly_id**verknüpft sind, wird jeder nachfolgende **file_id** Wert um 1 erhöht.  
   
  **inhaltliche**  
  Die Hexadezimaldarstellung der Assembly oder Datei.  
@@ -213,9 +215,9 @@ SELECT CAST(content AS varchar(8000))
   
  In diesen Szenarios findet die für den Server erforderliche Konvertierung automatisch statt. Sie können die Konvertierung nicht explizit mit den [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST- oder CONVERT-Funktionen durchführen.  
   
- Beachten Sie, dass Sie keine Maßnahmen ergreifen müssen, um UDTs zu verwenden, wenn [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Arbeits Tabellen in der **tempdb** -Systemdatenbank erstellt. Dies schließt die Handhabung von Cursorn, Tabellen Variablen und benutzerdefinierten Tabellenwert Funktionen ein, die UDTs enthalten und die **tempdb**transparent nutzen. Wenn Sie jedoch explizit eine temporäre Tabelle in **tempdb** erstellen, die eine UDT-Spalte definiert, muss der UDT in **tempdb** auf die gleiche Weise wie für eine Benutzerdatenbank registriert werden.  
+ Beachten Sie, dass Sie keine Maßnahmen ergreifen müssen, um UDTs zu verwenden [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , wenn Arbeits Tabellen in der **tempdb** -Systemdatenbank erstellt. Dies schließt die Handhabung von Cursorn, Tabellen Variablen und benutzerdefinierten Tabellenwert Funktionen ein, die UDTs enthalten und die **tempdb**transparent nutzen. Wenn Sie jedoch explizit eine temporäre Tabelle in **tempdb** erstellen, die eine UDT-Spalte definiert, muss der UDT in **tempdb** auf die gleiche Weise wie für eine Benutzerdatenbank registriert werden.  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

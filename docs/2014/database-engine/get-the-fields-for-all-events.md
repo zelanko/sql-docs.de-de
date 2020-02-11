@@ -1,5 +1,5 @@
 ---
-title: Abrufen der Felder für alle Ereignisse | Microsoft-Dokumentation
+title: Die Felder für alle Ereignisse erhalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0838367ad699c1278bb6ec42f28161ba76c6fd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064787"
 ---
 # <a name="get-the-fields-for-all-events"></a>Abrufen der Felder für alle Ereignisse
@@ -37,7 +37,7 @@ ms.locfileid: "66064787"
   
  Sie können die vorangehenden Informationen verwenden, wenn Sie Ereignissitzungen konfigurieren, die das Bucketzuordnungsziel verwenden. Weitere Informationen finden Sie unter [SQL Server Extended Events Targets](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
  Bevor Sie eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Sitzung für erweiterte Ereignisse erstellen, sollten Sie Informationen über die mit Ereignissen verbundenen Felder abrufen.  
   
 ## <a name="to-get-the-fields-for-all-events-using-query-editor"></a>So rufen Sie die Felder für alle Ereignisse mittels Abfrage-Editor ab  
@@ -55,8 +55,8 @@ ms.locfileid: "66064787"
     order by package_name, event_name  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. dm_xe_objects &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql)   
  [sys.dm_xe_packages &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-packages-transact-sql)  
   
   
