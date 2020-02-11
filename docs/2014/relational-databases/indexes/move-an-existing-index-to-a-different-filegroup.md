@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63036218"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
@@ -34,7 +34,7 @@ ms.locfileid: "63036218"
   
      [Sicherheit](#Security)  
   
--   **Verschieben eines vorhandenen Indexes in eine andere Dateigruppe mit:**  
+-   **So verschieben Sie einen vorhandenen Index in eine andere Datei Gruppe mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63036218"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63036218"
   
      Wählen Sie bei partitionierten Tabellen und Indizes das Partitionsschema aus, in das der Index verschoben werden soll. Weitere Informationen zu partitionierten Indizes finden Sie unter [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
-     Für das Verschieben von gruppierten Indizes können Sie die Onlineverarbeitung verwenden. Die Onlineverarbeitung ermöglicht, dass Benutzer während des Verschiebungsvorgangs des Indexes auf die dem Index zugrunde liegenden Daten sowie auf nicht gruppierte Indizes zugreifen können. Weitere Informationen finden Sie unter [Perform Index Operations Online](perform-index-operations-online.md).  
+     Für das Verschieben von gruppierten Indizes können Sie die Onlineverarbeitung verwenden. Die Onlineverarbeitung ermöglicht, dass Benutzer während des Verschiebungsvorgangs des Indexes auf die dem Index zugrunde liegenden Daten sowie auf nicht gruppierte Indizes zugreifen können. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](perform-index-operations-online.md) .  
   
      Auf Multiprozessorcomputern mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie die Anzahl der zum Ausführen der Indexanweisung verwendeten Prozessoren mit einem maximalen Grad an Parallelität konfigurieren. Die Funktion für parallele Indexvorgänge ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). Weitere Informationen zu parallelen Indexvorgängen finden Sie unter [Konfigurieren von Parallelindexvorgängen](configure-parallel-index-operations.md).  
   
@@ -101,10 +101,10 @@ ms.locfileid: "63036218"
   
  Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften >** _Indexname_ verfügbar:  
   
- **Dateigruppe**  
+ **Datei Gruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank.  
   
- **FILESTREAM-Dateigruppe**  
+ **FILESTREAM-Datei Gruppe**  
  Gibt die Dateigruppe für FILESTREAM-Daten an. Diese Liste zeigt nur FILESTREAM-Dateigruppen an. Die Standardlistenauswahl ist die Dateigruppe PRIMARY FILESTREAM.  
   
  **Partitionsschema**  
@@ -112,24 +112,24 @@ ms.locfileid: "63036218"
   
  Die Option Partitionsschema ist nicht verfügbar, wenn in der Datenbank keine Partitionsschemas vorhanden sind.  
   
- **Dateidatenstrom-Partitionsschema**  
+ **FILESTREAM-Partitionsschema**  
  Gibt das Partitionsschema für FILESTREAM-Daten an. Das Partitionsschema muss mit dem Schema symmetrisch sein, das in der Option **Partitionsschema** angegeben wird.  
   
  Wenn die Tabelle nicht partitioniert ist, ist das Feld leer.  
   
- **Partitionsschemaparameter**  
+ **Partitionsschema Parameter**  
  Zeigt den Namen der Spalte an, die Teil des Partitionsschemas ist.  
   
  **Tabellenspalte**  
  Wählt die Tabelle oder Sicht aus, die dem Partitionsschema zugeordnet werden soll.  
   
- **Datentyp der Spalte**  
+ **Spaltendatentyp**  
  Zeigt Datentypinformationen zu der Spalte an.  
   
 > [!NOTE]  
 >  Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Spaltendatentyp** „berechnete Spalte“ angezeigt.  
   
- **Onlineverarbeitung von DML-Anweisungen während der Indexverschiebung zulassen**  
+ **Online Verarbeitung von DML-Anweisungen während der Index Verschiebung zulassen**  
  Ermöglicht Benutzern während des Indexvorgangs den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes.  
   
 > [!NOTE]  

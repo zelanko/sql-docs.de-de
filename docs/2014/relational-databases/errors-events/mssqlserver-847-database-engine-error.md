@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874540"
 ---
 # <a name="mssqlserver_847"></a>MSSQLSERVER_847
@@ -29,11 +29,11 @@ ms.locfileid: "70874540"
 |Ereignis-ID|847|  
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
-|Symbolischer Name|Nicht zutreffend|  
+|Symbolischer Name|–|  
 |Meldungstext|Timeout beim Warten auf einen Latch: Klasse „%ls“, ID „%p“, Typ „%d“, Task „0x%p“ : „%d“, Wartezeit „%d“, Flags „0x%I64x“, besitzender Task „0x%p“. Der Wartevorgang wird fortgesetzt.|  
   
 ## <a name="explanation"></a>Erklärung  
- Möglicherweise reagiert ein Computer nicht mehr, oder es kann ein Timeout oder eine andere Unterbrechung des regulären Betriebs auftreten, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Puffer latchfehler in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll geschrieben wird.  
+ Möglicherweise reagiert ein Computer nicht mehr, oder ein Timeout bzw. eine andere Unterbrechung des regulären Betriebs tritt auf, während [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gleichzeitig Pufferlatchfehler in das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll schreibt.  
   
  Wenn im STAT-Feld in der Meldung der Wert 0x04 aktiviert ist, wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein E/A-Vorgang erwartet. Zudem wird möglicherweise die Meldung [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fehlerprotokoll ausgegeben.  
   

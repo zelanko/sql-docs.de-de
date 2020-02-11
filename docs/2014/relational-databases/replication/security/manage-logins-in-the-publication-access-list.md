@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce984303ea0a9e9a85f20e7d921a720be6ef299
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479238"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste
@@ -28,23 +28,23 @@ ms.locfileid: "74479238"
   
  **In diesem Thema**  
   
--   **Bevor Sie beginnen:**  
+-   **Vorbereitungen:**  
   
      [Voraussetzungen](#Prerequisites)  
   
--   **So verwalten Sie Anmeldungen in der Veröffentlichungs Zugriffsliste mit:**  
+-   **So verwalten Sie Anmeldungen in der Veröffentlichungszugriffsliste mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen einem Datenbankbenutzer in der Veröffentlichungsdatenbank die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung zuordnen, bevor Sie die Anmeldung PAL hinzufügen.  
   
-##  <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie verwenden die Veröffentlichungszugriffsliste (Publication Access List, PAL) auf der Seite **Veröffentlichungszugriffsliste** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zum Verwalten der Anmeldenamen. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-manage-logins-in-the-pal"></a>So verwalten Sie Anmeldenamen in der Veröffentlichungszugriffsliste  
@@ -56,7 +56,7 @@ ms.locfileid: "74479238"
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-groups-and-logins-that-belong-to-the-pal"></a>So zeigen Sie Gruppen und Anmeldungen an, die zur PAL gehören  
   

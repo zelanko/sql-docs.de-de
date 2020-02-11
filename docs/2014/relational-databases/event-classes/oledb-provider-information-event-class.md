@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68cf4eb253505f6ade040eb0bf0f877f4fb91d94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032399"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information-Ereignisklasse
@@ -42,7 +42,7 @@ ms.locfileid: "63032399"
   
 ## <a name="oledb-provider-information-event-class-data-columns"></a>Datenspalten der OLEDB Provider Information-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
@@ -66,7 +66,7 @@ ms.locfileid: "63032399"
 |**TextData**|**ntext**|Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wurde.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [OLE-Automatisierungsobjekte in Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  

@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 349e3313a194aa45ae26a106b1f61d7df7ac1f46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211360"
 ---
 # <a name="modify-a-sql-server-agent-proxy"></a>Modify a SQL Server Agent Proxy
-  In diesem Thema wird beschrieben, wie Sie ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]ändern können.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein-Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Proxy [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in [!INCLUDE[tsql](../../includes/tsql-md.md)]mithilfe von oder geändert wird.  
   
  **In diesem Thema**  
   
@@ -31,7 +31,7 @@ ms.locfileid: "68211360"
   
      [Sicherheit](#Security)  
   
--   **So ändern Sie einen SQL Server-Agent-Proxy mit**  
+-   **Ändern eines SQL Server-Agent Proxys mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,7 +43,8 @@ ms.locfileid: "68211360"
   
 -   Von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys werden Anmeldeinformationen zum Speichern von Informationen zu Windows-Benutzerkonten verwendet. Der in der Anmeldeinformation angegebene Benutzer muss über eine Berechtigung des Typs "Anmelden als Stapelverarbeitungsauftrag" auf dem Computer verfügen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird der Subsystemzugriff für einen Proxy überprüft und der Zugriff auf den Proxy jedes Mal dann gewährt, wenn der Auftragsschritt ausgeführt wird. Wenn der Proxyzugriff auf das Subsystem nicht mehr länger möglich ist, erzeugt der Auftragsschritt einen Fehler. Ansonsten wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent die Identität des Benutzers angenommen, der im Proxy angegeben ist und von dem der Auftragsschritt ausgeführt wird.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent wird der Subsystemzugriff für einen Proxy überprüft und der Zugriff auf den Proxy jedes Mal dann gewährt, wenn der Auftragsschritt ausgeführt wird. Wenn der Proxyzugriff auf das Subsystem nicht mehr länger möglich ist, erzeugt der Auftragsschritt einen Fehler. Ansonsten wird vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent die Identität des Benutzers angenommen, der im Proxy angegeben ist und von dem der Auftragsschritt ausgeführt wird.  
   
 -   Wenn die Anmeldung für den Benutzer Zugriffsrecht auf den Proxy hat, oder der Benutzer zu einer Rolle mit Zugriffsrechten auf den Proxy gehört, kann der Benutzer den Proxy in einem Auftragsschritt verwenden.  
   
@@ -52,11 +53,11 @@ ms.locfileid: "68211360"
 ####  <a name="Permissions"></a> Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können Proxykonten erstellen, ändern oder löschen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-includessnoversionincludesssnoversion-mdmd-agent-proxy"></a>So ändern Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy  
   
-1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto enthält, das Sie ändern möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxykonto enthält, das Sie ändern möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "68211360"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Proxykonto, das Sie ändern möchten, und wählen Sie **Eigenschaften**aus.  
   
-6.  Nehmen Sie die erforderlichen Änderungen am Proxykonto im Dialogfeld _Eigenschaften von Proxyname-_ **Proxykonto** vor. Weitere Informationen über die Optionen in diesem Dialogfeld finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](create-a-sql-server-agent-proxy.md).  
+6.  Nehmen Sie im Dialogfeld Eigenschaften des _proxy_name_**Proxy Kontos** nach Bedarf Änderungen am Proxy Konto vor. Weitere Informationen über die Optionen in diesem Dialogfeld finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](create-a-sql-server-agent-proxy.md).  
   
 7.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
@@ -90,6 +91,6 @@ ms.locfileid: "68211360"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_update_proxy &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_update_proxy &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-proxy-transact-sql).  
   
   

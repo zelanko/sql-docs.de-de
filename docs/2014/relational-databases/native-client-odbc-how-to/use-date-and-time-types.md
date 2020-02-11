@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Datums- und Uhrzeittypen | Microsoft-Dokumentation
+title: Verwenden von Datums-und Uhrzeit Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205509"
 ---
 # <a name="use-date-and-time-types"></a>Verwenden von Datums- und Uhrzeittypen
-  In diesem Beispiel wird gezeigt, wie die Datum/Uhrzeit-Datenstrukturen, die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, initialisiert werden. Anschließend werden die Eingabewerte vorbereitet, Parameter gebunden und die Abfrage ausgeführt. Weitere Informationen zur Verwendung dieser Sicherungstypen finden Sie unter [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
+  In diesem Beispiel wird gezeigt, wie die Datum/Uhrzeit-Datenstrukturen, die in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]hinzugefügt wurden, initialisiert werden. Anschließend werden die Eingabewerte vorbereitet, Parameter gebunden und die Abfrage ausgeführt. Weitere Informationen zur Verwendung dieser Typen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen DateTime. Die Standarddatenbank für DateTime sollte tempdb lauten. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  

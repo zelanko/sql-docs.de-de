@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028899"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Gespeicherte Prozeduren für räumliche Indizes: Argumente und Eigenschaften
@@ -26,23 +26,23 @@ ms.locfileid: "69028899"
 
   In diesem Thema sind die Argumente und Eigenschaften gespeicherter Prozeduren für Räumlichkeitsindizes dokumentiert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
  Die Syntax bestimmter gespeicherter Prozeduren für Räumlichkeitsindizes finden Sie in den folgenden Themen:  
   
--   [sp_help_spatial_geometry_index &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Argumente  
 `[ @tabname = ] 'tabname'`Der qualifizierte oder nicht qualifizierte Name der Tabelle, für die der räumliche Index angegeben wurde.  
   
- Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *tabname* ist vom Datentyp **nvarchar**(776) und hat keinen Standardwert.  
+ Anführungszeichen sind nur dann erforderlich, wenn eine qualifizierte Tabelle angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. *tabname ist vom Datentyp* **nvarchar**(776) und hat keinen Standardwert.  
   
 `[ @indexname = ] 'indexname'`Der Name des angegebenen räumlichen Indexes. *Indexname* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standardwert.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "69028899"
   
 `[ @query_sample = ] 'query_sample'`Ist ein repräsentatives Abfrage Beispiel, das verwendet werden kann, um die Nützlichkeit des Indexes zu testen. Dabei kann es sich um ein repräsentatives Objekt oder ein Abfragefenster handeln. *query_sample* ist vom Typ **Geometry** und hat keinen Standardwert.  
   
-`[ @xml_output = ] 'xml_output'`Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist vom Typ **XML** und hat keinen Standardwert.  
+`[ @xml_output = ] 'xml_output'`Ein Ausgabeparameter, der das Resultset in einem XML-Fragment zurückgibt. *xml_output* ist **XML** und hat keinen Standardwert.  
   
 ## <a name="properties"></a>Eigenschaften  
- Legen Sie  **\@verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. Verbo Output > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben.  **\@**  
+ Legen Sie ** \@verboseoutput** = 0 so fest, dass Kerneigenschaften zurückgegeben werden, wie in der folgenden Tabelle dargestellt. Verbo* Output > 0, um alle Eigenschaften des räumlichen Indexes zurückzugeben. ** \@**  
   
  **Base_Table_Rows**  
  Anzahl der Zeilen in der Basistabelle. Der Wert ist " **bigint**".  
@@ -138,7 +138,7 @@ ms.locfileid: "69028899"
  **Total_Number_Of_ObjectCells_In_Level0_In_Index**  
  Anzahl der Zellen Instanzen indizierter Objekte, die sich auf Ebene 0 (Stammzelle, außerhalb des umgebenden Felds für die **Geometrie**befinden) im Mosaik Prozess befinden. Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
   
- Bei **Geometry** -Indizes wird dies ausgelöst, wenn das Begrenzungsfeld des Indexes kleiner als die Daten Domäne ist. Eine große Anzahl von Objekten in Ebene 0 erfordert möglicherweise sekundäre Filter, wenn das Abfragefenster teilweise außerhalb des umgebenden Felds liegt und die Index Leistung verringert (z. b. **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** ist 1). Wenn das Abfragefenster innerhalb des umgebenden Felds liegt, kann eine hohe Anzahl an Objekten in Ebene 0 die Leistung des Indexes tatsächlich verbessern.  
+ Bei **Geometry** -Indizes wird dies ausgelöst, wenn das Begrenzungsfeld des Indexes kleiner als die Daten Domäne ist. Eine große Anzahl von Objekten in Ebene 0 erfordert möglicherweise sekundäre Filter, wenn das Abfragefenster teilweise außerhalb des umgebenden Felds liegt und die Index Leistung verringert (z. b. **Total_Number_Of_ObjectCells_In_Level0_For_QuerySample** 1). Wenn das Abfragefenster innerhalb des umgebenden Felds liegt, kann eine hohe Anzahl an Objekten in Ebene 0 die Leistung des Indexes tatsächlich verbessern.  
   
  NULL und leere Instanzen werden auf Ebene 0 gezählt, wirken sich aber nicht auf die Leistung aus. Ebene 0 hat so viele Zellen wie NULL und leere Instanzen in der Basistabelle. Bei **geografieindizes** hat Ebene 0 so viele Zellen wie NULL und leere Instanzen + 1 Zelle, da das Abfrage Beispiel als 1 gezählt wird.  
   
@@ -155,28 +155,28 @@ ms.locfileid: "69028899"
  Anzahl der Zelleninstanzen indizierter Objekte, die im Mosaikprozess mit dem Genauigkeitsgrad 4 berücksichtigt werden. Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_interior_ObjectCells_In_Level1_In_Index**  
- Anzahl der Zellen, die vollständig von einem Objekt auf Mosaik Ebene 1 abgedeckt werden und daher im Inneren des Objekts sind. (Cell_attributevalue ist 2.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die vollständig von einem Objekt auf Mosaik Ebene 1 abgedeckt werden und daher im Inneren des Objekts sind. (Cell_attributevalue ist 2.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_interior_ObjectCells_In_Level2_In_Index**  
- Anzahl der Zellen, die vollständig von einem Objekt auf Mosaik Ebene 2 abgedeckt werden und daher im Inneren des Objekts sind. (Cell_attribute-Wert ist 2.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die vollständig von einem Objekt auf Mosaik Ebene 2 abgedeckt werden und daher im Inneren des Objekts sind. (Cell_attribute Wert ist 2.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_interior_ObjectCells_In_Level3_In_Index**  
- Anzahl der Zellen, die vollständig von einem Objekt auf Mosaik Ebene 3 abgedeckt werden und daher im Inneren des Objekts sind. (Cell_attribute-Wert ist 2.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die vollständig von einem Objekt auf Mosaik Ebene 3 abgedeckt werden und daher im Inneren des Objekts sind. (Cell_attribute Wert ist 2.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_interior_ObjectCells_In_Level4_In_Index**  
- Anzahl der Zellen, die vollständig von einem Objekt auf Mosaikebene 4 abgedeckt werden und daher im Inneren des Objekts liegen. (Cell_attribute-Wert ist 2.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die vollständig von einem Objekt auf Mosaikebene 4 abgedeckt werden und daher im Inneren des Objekts liegen. (Cell_attribute Wert ist 2.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level1_In_Index**  
- Anzahl der Zellen, die von einem Objekt auf Mosaik Ebene 1 geschnitten werden. (Cell_attribute-Wert ist 1.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die von einem Objekt auf Mosaik Ebene 1 geschnitten werden. (Cell_attribute Wert ist 1.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level2_In_Index**  
- Anzahl der Zellen, die von einem Objekt auf Mosaik Ebene 2 geschnitten werden. (Cell_attribute-Wert ist 1.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die von einem Objekt auf Mosaik Ebene 2 geschnitten werden. (Cell_attribute Wert ist 1.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level3_In_Index**  
- Anzahl der Zellen, die von einem Objekt auf Mosaik Ebene 3 geschnitten werden. (Cell_attribute-Wert ist 1.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die von einem Objekt auf Mosaik Ebene 3 geschnitten werden. (Cell_attribute Wert ist 1.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_intersecting_ObjectCells_In_Level4_In_Index**  
- Anzahl der Zellen, die von einem Objekt auf Mosaikebene 4 geschnitten werden. (Cell_attribute-Wert ist 1.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Zellen, die von einem Objekt auf Mosaikebene 4 geschnitten werden. (Cell_attribute Wert ist 1.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_For_QuerySample**  
  Gibt an, ob sich das Abfragebeispiel in Stammzelle 0 außerhalb des umgebenden Felds befindet, dieses aber berührt. Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
@@ -185,19 +185,19 @@ ms.locfileid: "69028899"
 >  Diese Informationen sind nur hilfreich, um zu ermitteln, ob Objekte vorhanden sind, die nur knapp neben dem umgebenden Feld liegen.  
   
  **Total_Number_Of_Border_ObjectCells_In_Level0_In_Index**  
- Anzahl der Objekte in Ebene 0, die das umgebende Feld berühren. (Cell_attribute-Wert ist 0.)  Der Wert ist " **bigint**".  
+ Anzahl der Objekte in Ebene 0, die das umgebende Feld berühren. (Cell_attribute Wert ist 0.)  Der Wert ist " **bigint**".  
   
  **Total_Number_Of_Border_ObjectCells_In_Level1_In_Index**  
- Anzahl von Objekt Zellen, die eine Rasterzellen Grenze auf der Mosaik Ebene 1 berühren. (Cell_attribute-Wert ist 0.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl von Objekt Zellen, die eine Rasterzellen Grenze auf der Mosaik Ebene 1 berühren. (Cell_attribute Wert ist 0.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_Border_ObjectCells_In_Level2_In_Index**  
- Anzahl von Objekt Zellen, die eine Rasterzellen Grenze auf der Mosaik Ebene 2 berühren. (Cell_attribute-Wert ist 0.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl von Objekt Zellen, die eine Rasterzellen Grenze auf der Mosaik Ebene 2 berühren. (Cell_attribute Wert ist 0.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_Border_ObjectCells_In_Level3_In_Index**  
- Anzahl von Objekt Zellen, die eine Rasterzellen Grenze auf der Mosaik Ebene 3 berühren. (Cell_attribute-Wert ist 0.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl von Objekt Zellen, die eine Rasterzellen Grenze auf der Mosaik Ebene 3 berühren. (Cell_attribute Wert ist 0.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- Anzahl der Objektzellen, die eine Rasterzellenbegrenzung auf Mosaikebene 4 berühren. (Cell_attribute-Wert ist 0.) Dies ist eine Haupteigenschaft. Der Wert ist " **bigint**".  
+ Anzahl der Objektzellen, die eine Rasterzellenbegrenzung auf Mosaikebene 4 berühren. (Cell_attribute Wert ist 0.) Dies ist eine Kern Eigenschaft. Der Wert ist " **bigint**".  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  Prozentsatz des Gesamtbereichs (Summe der Blattzellen) des Rasters, der Blattzellen enthält, die durch ein Objekt abgedeckt werden.  
@@ -210,7 +210,7 @@ ms.locfileid: "69028899"
  Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**, mit der Ausnahme, dass es sich hierbei um teilweise behandelte Zellen handelt. Der Wert ist " **float**".  
   
  **Border_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
- Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** , außer dass es sich hierbei um Rahmen Zellen handelt. Der Wert ist " **float**".  
+ Identisch mit **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage** mit der Ausnahme, dass es sich hierbei um Rahmen Zellen handelt Der Wert ist " **float**".  
   
  **Average_Cells_Per_Object_Normalized_To_Leaf_Grid**  
  Durchschnittliche Anzahl der Zellen pro Objekt, die auf das Blattraster normalisiert sind. Damit erhalten wir einen Anhaltspunkt zur räumlichen Größe des Objekts oder zur Größe der Objekte. Der Wert ist " **float**".  
@@ -300,25 +300,25 @@ ms.locfileid: "69028899"
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt. Dies gilt für alle gespeicherten Prozeduren für Räumlichkeitsindizes.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="examples"></a>Beispiele  
  Beispiele finden Sie in den folgenden Themen:  
   
--   [sp_help_spatial_geometry_index &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
+-   [sp_help_spatial_geometry_index &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
--   [sp_help_spatial_geography_index &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
+-   [sp_help_spatial_geography_index &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren &#40;für räumliche Indizes Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
- [sp_help_spatial_geometry_index &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Prozeduren für räumliche Indizes &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
+ [sp_help_spatial_geometry_index &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [XQuery-Grundlagen](../../xquery/xquery-basics.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  

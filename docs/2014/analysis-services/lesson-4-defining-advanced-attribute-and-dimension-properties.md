@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493992"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
@@ -28,11 +28,11 @@ ms.locfileid: "69493992"
  [Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  In dieser Aufgabe ist eine geänderte Version des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Lernprogrammprojekts, das über mehrere Measuregruppen und zusätzliche Dimensionen verfügt, zu öffnen, zu überprüfen und bereitzustellen.  
   
- [Definieren der Eigenschaften des übergeordneten Attributs in einer Hierarchie aus über- und untergeordneten Elementen](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
+ [Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
  In dieser Aufgabe definieren Sie Ebenennamen in einer über- und untergeordneten Dimension und geben an, ob mit übergeordneten Elementen verknüpfte Daten angezeigt werden sollen. Weitere Informationen finden Sie unter über [-](multidimensional-models/parent-child-dimension.md) /unterordnungshierarchie und [Attribute in über-und untergeordneten Hierarchien](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Automatisches Gruppieren von Attributelementen](lesson-4-3-automatically-grouping-attribute-members.md)  
- In dieser Aufgabe erstellen Sie automatisch Gruppierungen von Attributelementen basierend auf der Verteilung von Elementen innerhalb der Attributhierarchie. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ In dieser Aufgabe erstellen Sie automatisch Gruppierungen von Attributelementen basierend auf der Verteilung von Elementen innerhalb der Attributhierarchie. Weitere Informationen finden Sie unter [Gruppieren von Attribut Elementen &#40;diskretisierungs&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Ausblenden und Deaktivieren von Attributhierarchien](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  In dieser Aufgabe lernen Sie, wie und wann Attributhierarchien zu deaktivieren oder auszublenden sind.  
@@ -47,11 +47,11 @@ ms.locfileid: "69493992"
  In dieser Aufgabe konfigurieren Sie die Eigenschaften UnknownMember und UnknownMemberName, um Fehlerbedingungen zu behandeln, die durch NULL-Dimensionselemente verursacht werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lesson 5: Definieren von Beziehungen zwischen Dimensionen und Measure-Gruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   
- [Tutorial zur &#40;mehrdimensionalen Modellierung von Adventure Works&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

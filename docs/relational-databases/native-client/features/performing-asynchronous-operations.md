@@ -20,30 +20,31 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: de08a6ca5e7f68c1a2537eafb6c837085a3ec254
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761368"
 ---
 # <a name="performing-asynchronous-operations"></a>Ausführen asynchroner Vorgänge
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht es Anwendungen, asynchrone Datenbankvorgänge auszuführen. Die asynchrone Verarbeitung ermöglicht es Methoden, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren. Dadurch kann ein Großteil der Leistungsfähigkeit und Flexibilität des Multithreadings genutzt werden, ohne dass Entwickler Threads explizit erstellen oder die Synchronisation durchführen müssen. Anwendungen fordern die asynchrone Verarbeitung an, wenn sie eine Datenbankverbindung oder das Ergebnis einer Befehlsausführung initialisieren.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Öffnen und Schließen einer Datenbankverbindung  
- Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwenden, können Anwendungen, die für die asynchrone Initialisierung eines Datenquellen Objekts entworfen wurden, vor dem Aufrufen von **IDBInitialize:: Initialisieren**das DBPROPVAL_ASYNCH_INITIALIZE-Bit in der DBPROP_INIT_ASYNCH-Eigenschaft festlegen. Wenn diese Eigenschaft festgelegt ist, antwortet der Anbieter unverzüglich auf den Aufruf von **Initialize** mit S_OK, wenn der Vorgang sofort ausgeführt wird, oder mit DB_S_ASYNCHRONOUS, wenn die Initialisierung asynchron fortgesetzt wird. Anwendungen können die **IDBAsynchStatus** -oder [ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)-Schnittstelle für das Datenquellen Objekt Abfragen und dann **IDBAsynchStatus:: GetStatus** oder[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) aufrufen, um den Status des Initialisierung.  
+ Bei Verwendung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieters können Anwendungen, die für die asynchrone Initialisierung eines Datenquellen Objekts entworfen wurden, das DBPROPVAL_ASYNCH_INITIALIZE Bit in der DBPROP_INIT_ASYNCH-Eigenschaft vor dem Aufrufen von **IDBInitialize:: Initialisieren**festlegen. Wenn diese Eigenschaft festgelegt ist, antwortet der Anbieter unverzüglich auf den Aufruf von **Initialize** mit S_OK, wenn der Vorgang sofort ausgeführt wird, oder mit DB_S_ASYNCHRONOUS, wenn die Initialisierung asynchron fortgesetzt wird. Anwendungen können die **IDBAsynchStatus** -oder [ISSAsynchStatus](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)-Schnittstelle für das Datenquellen Objekt Abfragen und dann **IDBAsynchStatus:: GetStatus** oder[ISSAsynchStatus:: WaitForAsynchCompletion](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-waitforasynchcompletion-ole-db.md) aufrufen, um den Status der Initialisierung zu erhalten.  
   
- Außerdem wurde dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die SSPROP_ISSAsynchStatus-Eigenschaft hinzugefügt. Anbieter, die die **ISSAsynchStatus** -Schnittstelle unterstützen, müssen diese Eigenschaft mit dem Wert VARIANT_TRUE implementieren.  
+ Außerdem wurde dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die SSPROP_ISSAsynchStatus-Eigenschaft hinzugefügt. Anbieter, die die **ISSAsynchStatus**-Schnittstelle unterstützen, müssen diese Eigenschaft mit dem Wert VARIANT_TRUE implementieren.  
   
- **IDBAsynchStatus::Abort** oder [ISSAsynchStatus::Abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) kann aufgerufen werden, um den asynchronen Aufruf von **Initialize** abzubrechen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls erfolgt die Rückgabe durch **IDBInitialize::Initialize** erst, wenn das Datenquellenobjekt vollständig initialisiert wurde.  
+ **IDBAsynchStatus:: Abort** oder [ISSAsynchStatus:: Abort](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) kann aufgerufen werden, um den asynchronen **Initialize** -Aufruf abzubrechen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls erfolgt die Rückgabe durch **IDBInitialize::Initialize** erst, wenn das Datenquellenobjekt vollständig initialisiert wurde.  
   
 > [!NOTE]  
->  Datenquellen Objekte, die für das Verbindungspooling verwendet werden, können die **ISSAsynchStatus** -Schnittstelle im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter nicht aufzurufen. Die **ISSAsynchStatus**-Schnittstelle wird nicht für Datenquellenobjekte aus dem Pool verfügbar gemacht.  
+>  Datenquellen Objekte, die für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbindungspooling verwendet werden, können die **ISSAsynchStatus** -Schnittstelle im Native Client-OLE DB Anbieter nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird nicht für Datenquellenobjekte aus dem Pool verfügbar gemacht.  
 >   
 >  Wenn eine Anwendung die Verwendung der Cursor-Engine explizit erzwingt, unterstützen **IOpenRowset::OpenRowset** und **IMultipleResults::GetResult** keine asynchrone Verarbeitung.  
 >   
->  Außerdem kann die Remoting-Proxy-/Stub-DLL (in MDAC 2,8) die **ISSAsynchStatus** -Schnittstelle nicht in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aufgerufen werden. Die **ISSAsynchStatus**-Schnittstelle wird durch Remoting nicht verfügbar gemacht.  
+>  Außerdem kann die Remoting-Proxy/Stub-DLL (in MDAC 2,8) die **ISSAsynchStatus** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in Native Client nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird durch Remoting nicht verfügbar gemacht.  
 >   
 >  Dienstkomponenten unterstützen **ISSAsynchStatus** nicht.  
   
@@ -65,7 +66,7 @@ ms.locfileid: "73761368"
  Wenn die Ausführung des Befehls abgeschlossen ist, kann **IMultipleResults** wie gewohnt verwendet werden. Es gibt jedoch eine Ausnahme für den synchronen Fall: Möglicherweise wird DB_S_ASYNCHRONOUS zurückgegeben; in diesem Fall kann mit **IDBAsynchStatus** oder **ISSAsynchStatus** ermittelt werden, wann der Vorgang abgeschlossen ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **ISSAsynchStatus::WaitForAsynchCompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang ausgeführt wurde oder die durch *dwMilisecTimeOut* angegebene Zeit verstrichen ist.  
+ Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **ISSAsynchStatus:: WaitForAsynchCompletion** wartet auf das interne Ereignis Objekt, bis der asynchron ausgeführte Vorgang abgeschlossen ist oder die von *dwMilisecTimeOut* angegebene Zeitspanne überschritten wird.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -106,7 +107,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus::WaitForAsynchCompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang ausgeführt oder der *dwMilisecTimeOut*-Wert übergeben wurde.  
+ **ISSAsynchStatus:: WaitForAsynchCompletion** wartet auf das interne Ereignis Objekt, bis der asynchron ausgeführte Vorgang abgeschlossen ist oder der *dwMilisecTimeOut* -Wert erfolgreich ist.  
   
  Im folgenden Beispiel wird die asynchrone Verarbeitung mit mehreren Resultsets veranschaulicht:  
   
@@ -186,7 +187,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
  [Eigenschaften und Verhaltensweisen von Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  

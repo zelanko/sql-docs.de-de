@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Dateien | Microsoft-Dokumentation
+title: Dateien abrufen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 548fac7dbc7d1f2750a130da9847be406361d8bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843656"
 ---
 # <a name="retrieve-files"></a>Abrufen von Dateien
@@ -26,19 +26,19 @@ ms.locfileid: "62843656"
   
  Mit der integrierten Quellcodeverwaltung können Sie Dateien wie folgt abrufen:  
   
--   **Letzte Version abrufen (rekursiv)** Befehl  
+-   Befehl " **neueste Version (rekursiv)" erhalten**  
   
      Ruft die jeweils aktuelle eingecheckte Version der ausgewählten Dateien ab. Wenn eine Projektmappe oder ein Projekt ausgewählt ist, wird mit diesem Befehl die jeweils letzte Version aller Projektmappen und Projektdateien abgerufen.  
   
--   **Erste** Befehl  
+-   Befehl " **Get** "  
   
-     Zeigt die **erhalten** (Dialogfeld), die Sie verwenden können, um die neueste Version einer ausgewählten Datei abzurufen oder um eine Teilmenge der Dateien in der ausgewählten Projektmappe oder Projekt abzurufen.  
+     Zeigt das **Dialogfeld** abrufen an, mit dem Sie die neueste Version einer ausgewählten Datei abrufen oder eine Teilmenge der Dateien in der ausgewählten Projekt Mappe oder im Projekt abrufen können.  
   
 ### <a name="to-retrieve-the-latest-version-of-all-the-files-in-a-project"></a>So rufen Sie die letzte Version aller Dateien in einem Projekt ab  
   
 1.  Wählen Sie im Projektmappen-Explorer das Projekt aus.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **neuste Version abrufen (rekursiv)** .  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **aktuellste Version erhalten (rekursiv)**.  
   
  Die jeweils aktuellen Versionen der Dateien im Projekt werden in den Projektspeicherort auf dem lokalen Datenträger abgerufen.  
   
@@ -46,14 +46,14 @@ ms.locfileid: "62843656"
   
 1.  Wählen Sie im Projektmappen-Explorer das Element aus, das Sie abrufen möchten.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **abrufen**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **Get**.  
   
-3.  In der **erhalten** Dialogfeld klicken Sie auf **OK**. Wenn Sie eine Projektmappe oder ein Projekt im Projektmappen-Explorer ausgewählt haben, können Sie auch die Kontrollkästchen neben den Elementen deaktivieren, die Sie nicht abrufen möchten.  
+3.  Klicken Sie im Dialogfeld **Get** auf **OK**. Wenn Sie eine Projektmappe oder ein Projekt im Projektmappen-Explorer ausgewählt haben, können Sie auch die Kontrollkästchen neben den Elementen deaktivieren, die Sie nicht abrufen möchten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Abrufen (Dialogfeld) &#40;Datenquellen-Steuerelement&#41;](../../2014/database-engine/get-dialog-box-source-control.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dialog Feld "Get" &#40;&#41;der Quell Code Verwaltung](../../2014/database-engine/get-dialog-box-source-control.md)   
  [Festlegen und Abrufen von Versionsinformationen](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Anzeigen der Projektversionsgeschichte](../../2014/database-engine/view-project-history.md)   
+ [Anzeigen des Projektverlaufs](../../2014/database-engine/view-project-history.md)   
  [Anzeigen des Dateistatus](../../2014/database-engine/view-file-status.md)  
   
   

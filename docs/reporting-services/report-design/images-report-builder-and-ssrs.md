@@ -9,10 +9,10 @@ ms.assetid: fcc2db5c-5c26-4607-ae2b-f65c80360536
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: bdcb7800999434cff8b26707ed477c599129e5e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580248"
 ---
 # <a name="images-report-builder-and-ssrs"></a>Bilder (Berichts-Generator und SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "65580248"
   
  Datengebundene Bilder können auch aus in einer Datenbank gespeicherten Binärdaten angezeigt werden. Datenbankbilder sind beispielsweise Bilder, die neben Produktnamen in einer Produktliste angezeigt werden. In der folgenden Abbildung werden die Bilder von Fahrrädern in einer Datenbank gespeichert und im Bericht abgerufen, um die einzelnen Produkte zu veranschaulichen.  
   
- ![Rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "Rs_DataboundBikes")  
+ ![rs_DataboundBikes](../../reporting-services/report-design/media/rs-databoundbikes.gif "rs_DataboundBikes")  
   
   
 ##  <a name="ImagesReportParts"></a> Bilder als Berichtsteile  

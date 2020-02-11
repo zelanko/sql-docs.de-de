@@ -1,5 +1,5 @@
 ---
-title: Geben Sie einen Zielserver&#39;s Speicherort (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Geben Sie einen Ziel Server&#39;s-Speicherort an (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211337"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Angeben eines Zielserverstandorts r&#39;s (SQL Server Management Studio)
@@ -31,7 +31,7 @@ ms.locfileid: "68211337"
   
      [Sicherheit](#Security)  
   
--   **So geben Sie den Speicherort eines Zielservers an mit**  
+-   **So geben Sie den Speicherort eines Zielservers an mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,11 +47,11 @@ ms.locfileid: "68211337"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-specify-a-target-servers-location"></a>So geben Sie den Speicherort eines Zielservers an  
   
-1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Masterserver zu erweitern, auf dem Sie den Speicherort des Zielservers angeben möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Masterserver zu erweitern, auf dem Sie den Speicherort des Zielservers angeben möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserververwaltung**, und klicken Sie auf **Zielserver verwalten**.  
   
@@ -79,6 +79,6 @@ ms.locfileid: "68211337"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_msx_enlist &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_msx_enlist &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-enlist-transact-sql).  
   
   

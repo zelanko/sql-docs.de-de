@@ -14,10 +14,10 @@ ms.assetid: 88afd0d0-4362-4394-8357-4e65388fc0fc
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 817e15d2fe7e91f63628826f58d6a86dd4edbcb3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727918"
 ---
 # <a name="reserved-words-master-data-services"></a>Reservierte Wörter (Master Data Services)
@@ -37,38 +37,39 @@ ms.locfileid: "73727918"
   
 -   [Attribute](../master-data-services/reserved-words-master-data-services.md#attributes)  
   
--   [Element](../master-data-services/reserved-words-master-data-services.md#members)  
+-   [Mitglieder](../master-data-services/reserved-words-master-data-services.md#members)  
   
-##  <a name="models"></a> Modelle  
+##  <a name="models"></a>Bilder  
  Wenn Sie ein Modell erstellen, dessen Name auf **Name** oder **Code**festgelegt ist, darf **Entität mit demselben Namen wie das Modell erstellen** nicht ausgewählt werden, weil **Name** oder **Code** nicht für den Namen einer Entität verwendet werden kann.  
   
-##  <a name="entities"></a> Entitäten  
- **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
+##  <a name="entities"></a>Kleinstunternehmen  
+ 
+  **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
   
-##  <a name="exhierarchies"></a> Explizite Hierarchien  
+##  <a name="exhierarchies"></a>Explizite Hierarchien  
  Für explizite Hierarchienamen können Sie **Name** oder **Code**verwenden.  
   
-##  <a name="attributes"></a> Attribute  
+##  <a name="attributes"></a>Legt  
   
--   **ID**  
+-   **id**  
   
 -   **Code**  
   
--   **EnterUserName**  
+-   **Enter username**  
   
--   **LastChgUserName**  
+-   **Lastchgusername**  
   
 -   **Name**  
   
--   **EnterDTM**  
+-   **Enterdtm**  
   
--   **EnterUserID**  
+-   **Enteruserid**  
   
--   **EnterUserName**  
+-   **Enter username**  
   
--   **LastChgDTM**  
+-   **Lastchgdtm**  
   
--   **LastChgUserID**  
+-   **Lastchguserid**  
   
 -   **Status_ID**  
   
@@ -76,10 +77,10 @@ ms.locfileid: "73727918"
   
 -   **Version_ID**  
   
-##  <a name="members"></a> Element  
+##  <a name="members"></a>Parlamentariern  
  Bei Elementen kann **MDMMemberStatus**, **MDMUnused**oder **ROOT** nicht für den Attributwert **Code** verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Master Data Services Übersicht &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
   

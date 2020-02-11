@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6b705f887e0df06684d33fc7be26aa73ff4048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773688"
 ---
 # <a name="save-your-work-in-table-designer-visual-database-tools"></a>Speichern Ihrer Arbeit im Tabellen-Designer (Visual Database Tools)
@@ -41,7 +41,7 @@ ms.locfileid: "62773688"
 > [!NOTE]  
 >  Um Änderungen aller geöffneten Elemente, z. B. Tabellen, Sichten, gespeicherte Prozeduren, zu speichern, klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabelleneigenschaften &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)  
   
   

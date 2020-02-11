@@ -11,10 +11,10 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1096da19a45e15ab2216cea2f4a4a38ecb05233e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729318"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Erstellen von Proxyklassen für den Master Data Manager-Webdienst
@@ -28,7 +28,7 @@ ms.locfileid: "73729318"
   
 1.  Öffnen Sie die Datei „Web.config“ von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in einem Text-Editor. Diese Datei befindet sich im Ordner "WebApplication" des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Installationspfads.  
   
-2.  Suchen Sie den Bereich **mdsWsHttpBehavior** unter **\<serviceBehaviors>** . Legen Sie für das Element **\<serviceMetadata>** **httpGetEnabled** auf **TRUE** fest.  
+2.  Suchen Sie den Bereich **mdsWsHttpBehavior** unter **\<serviceBehaviors>**. Legen Sie für das Element ** \<serviceMetadata>** den Wert **HttpGetEnabled** auf **true**fest.  
   
     > [!NOTE]  
     >  Wenn Sie Webdienste über Secure Sockets Layer (SSL) aktivieren möchten, legen Sie **httpsGetEnabled** auf **TRUE** im Abschnitt **mdsWsHttpBehavior** der Datei „web.config“ fest. Sie müssen außerdem **mdsWsHTTPBinding** ändern, damit auch hier eine Konfiguration für SSL vorliegt, und den Nicht-SSL-Abschnitt auskommentieren.  
@@ -39,10 +39,10 @@ ms.locfileid: "73729318"
     „You have created a service.“ (Sie haben einen Dienst erstellt.)  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Erstellen von Proxyklassen mit Visual Studio  
- Ist Visual Studio 2010 installiert, lassen sich Proxyklassen am einfachsten durch das Hinzufügen eines **Dienstverweises** zum Projekt erstellen. Die Adresse des Dienstverweises ist die URL der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung, wobei "/service/service.svc" angefügt wird. Beispiel: `https://yourserver/MDS/service/service.svc` Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Aktualisieren oder Entfernen eines Dienstverweises](https://go.microsoft.com/fwlink/?LinkId=221167).  
+ Ist Visual Studio 2010 installiert, lassen sich Proxyklassen am einfachsten durch das Hinzufügen eines **Dienstverweises** zum Projekt erstellen. Die Adresse des Dienstverweises ist die URL der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung, wobei "/service/service.svc" angefügt wird. Beispiel: `https://yourserver/MDS/service/service.svc`. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Aktualisieren oder Entfernen eines Dienstverweises](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Erstellen von Proxyklassen mit "Svcutil.exe"  
- Damit „Svcutil.exe“ auf dem Computer verfügbar ist, muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK installiert sein. Wenn Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] verwenden, müssen Sie den Befehl über die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Eingabeaufforderung ausführen. Weitere Informationen finden Sie unter [ServiceModel Metadata Utility-Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) und [Generieren eines WCF-Clients aus Dienstmetadaten](https://go.microsoft.com/fwlink/?LinkId=164821).  
+ Sie müssen entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK installiert haben, damit "Svcutil. exe" auf Ihrem Computer installiert ist. Wenn Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] verwenden, müssen Sie den Befehl über die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Eingabeaufforderung ausführen. Weitere Informationen finden Sie unter [ServiceModel Metadata Utility-Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) und [Generieren eines WCF-Clients aus Dienstmetadaten](https://go.microsoft.com/fwlink/?LinkId=164821).  
   
  Verwenden Sie zum Erstellen mehrerer C#-Proxyklassen mit "Svcutil.exe" einen Befehl wie folgt:  
   
@@ -53,15 +53,15 @@ svcutil.exe https://<server_name:port>/<virtual_path>/Service/Service.svc
 /namespace:*,Microsoft.MasterDataServices  
 ```  
   
- Erläuterungen:  
+ Hierbei gilt:  
   
--   *servername*:*port* entspricht dem Computernamen und der Portnummer des Computers, auf dem [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gehostet wird.  
+-   *Server*Name:*Port* sind der Computername und die Portnummer des Computers, auf dem [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]gehostet wird.  
   
--   *virtual_path* ist der virtuelle Pfad von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in den Internetinformationsdiensten (IIS).  
+-   *virtual_path* ist der virtuelle Pfad von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in Internetinformationsdienste (IIS).  
   
--   *proxy_name* ist der Name für die generierte Proxydatei.  
+-   *proxy_name* ist der Name für die generierte Proxy Datei.  
   
-## <a name="see-also"></a>Siehe auch  
- [Kategorisierte Webdienstvorgänge &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Kategorisierte Webdienst Vorgänge &#40;Master Data Services&#41;](../../master-data-services/develop/categorized-web-service-operations-master-data-services.md)  
   
   

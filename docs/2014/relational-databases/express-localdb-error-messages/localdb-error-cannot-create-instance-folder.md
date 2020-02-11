@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5375c391b976de111813f55d422a367b3ea874a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62519544"
 ---
-# <a name="localdberrorcannotcreateinstancefolder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
+# <a name="localdb_error_cannot_create_instance_folder"></a>LOCALDB_ERROR_CANNOT_CREATE_INSTANCE_FOLDER
     
 ## <a name="details"></a>Details  
   
@@ -27,7 +27,7 @@ ms.locfileid: "62519544"
 |Ereignis-ID|256|  
 |Ereignisquelle|Lokale SQL Server-Datenbanklaufzeit 12.0|  
 |Komponente|Laufzeit-API der lokalen Datenbank|  
-|Meldungstext|Ordner für die lokale Datenbank-Instanz am kann nicht erstellt werden: %%LOCALAPPDATA%%\Microsoft\Microsoft SQL Server lokale DB\Instances\\< Instanzname\>.|  
+|Meldungstext|Für die lokale Daten Bank Instanz kann kein Ordner erstellt werden unter:%% localappdata%% \ Microsoft\Microsoft SQL Server Local\\ db\instanzen\><Instanzname.|  
   
 ## <a name="explanation"></a>Erklärung  
  Ein Ordner kann nicht unter %userprofile% erstellt werden.  

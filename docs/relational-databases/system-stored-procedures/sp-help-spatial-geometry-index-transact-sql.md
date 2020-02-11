@@ -18,10 +18,10 @@ ms.assetid: f1bcefb1-09c8-4b49-8c51-5d471065849f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e2e5d935fc3d6db5d243ec4b76841f13a60e5a11
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304855"
 ---
 # <a name="sp_help_spatial_geometry_index-transact-sql"></a>sp_help_spatial_geometry_index (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72304855"
 
   Gibt die Namen und Werte für einen angegebenen Satz von Eigenschaften über einen **geometry** -Räumlichkeitsindex zurück. Das Ergebnis wird in einem Tabellenformat zurückgegeben. Sie können wählen, ob ein Kernsatz von Eigenschaften oder alle Eigenschaften des Indexes zurückgegeben werden sollen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,11 +50,11 @@ sp_help_spatial_geometry_index [ @tabname =] 'tabname'
 ## <a name="permissions"></a>Berechtigungen  
  Dem Benutzer muss eine PUBLIC-Rolle zugewiesen werden, um auf die Prozedur zuzugreifen. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eigenschaften, die NULL-Werte enthalten sind, sind nicht in der zurückgegebenen Menge enthalten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird `sp_help_spatial_geometry_index` verwendet, um den räumlichen Index **SIndx_SpatialTable_geometry_col2** zu untersuchen, der für die Tabelle **geometry_col** für das angegebene Abfrage Beispiel in **\@QS**definiert wurde. Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
+ Im folgenden Beispiel wird `sp_help_spatial_geometry_index` verwendet, um den räumlichen Index **SIndx_SpatialTable_geometry_col2** zu untersuchen, der in Table **geometry_col** für das angegebene Abfrage Beispiel in ** \@QS**definiert ist. Dieses Beispiel gibt nur die Kerneigenschaften des angegebenen Indexes zurück.  
   
 ```  
 declare @qs geometry  
@@ -62,7 +62,7 @@ declare @qs geometry
 exec sp_help_spatial_geometry_index 'geometry_col', 'SIndx_SpatialTable_geometry_col2', 0, @qs;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für räumliche Indizes](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index_xml](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)   
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   

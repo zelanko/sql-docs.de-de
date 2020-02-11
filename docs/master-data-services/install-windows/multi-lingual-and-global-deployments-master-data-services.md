@@ -10,10 +10,10 @@ ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a5a8857330b1a4fa532e9e0f43b4596cdf34b48c
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254772"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Mehrsprachige und globale Bereitstellungen (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "75254772"
 ## <a name="how-languages-are-used"></a>Vorgehensweise bei der Verwendung von Sprachen  
  In der folgenden Tabelle wird die Sprachunterstützung für die Komponenten und Tools von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] beschrieben.  
   
-|Komponente oder Tool|Beschreibung|  
+|Komponente oder Tool|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]Setup|Wählen Sie das englische Setupprogramm aus, wenn die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung in anderen Sprachen als der Setupsprache verfügbar sein und unterstützt werden soll. Weitere Informationen finden Sie in der Beschreibung zu [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] unten.|  
 |[!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]|Die Setupsprache bestimmt die Sprache von [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] . Wenn Sie Deutsch als Setupsprache auswählen, ist [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] auf dem betreffenden Computer z. B. in Deutsch verfügbar.|  

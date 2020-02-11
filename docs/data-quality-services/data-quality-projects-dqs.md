@@ -10,10 +10,10 @@ ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 22a92035ea26a4341d4f912c3e6b5cdfaef75efa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251710"
 ---
 # <a name="data-quality-projects-dqs"></a>Data Quality-Projekte (DQS)
@@ -40,7 +40,7 @@ ms.locfileid: "75251710"
  Ausführliche Informationen zur Bereinigungsaktivität in einem Data Quality-Projekt finden Sie unter [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
 ##  <a name="Matching"></a>Data Quality-Projekt: abgleichsaktivität  
- Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie dazu wie folgt vor:  
+ Ein Data Quality-Abgleichsprojekt ermöglicht es Ihnen, Abgleichsaktivitäten auf Grundlage der Abgleichsrichtlinie in einer Wissensdatenbank auszuführen, um Datenduplizierung durch das Identifizieren exakter und ungefährer Treffer zu verhindern und dadurch das Entfernen doppelter Daten zu ermöglichen. Es wird empfohlen, dass Sie die Daten bereinigen, bevor Sie entsprechende Abgleiche ausführen. Gehen Sie folgendermaßen vor:  
   
 1.  Erstellen Sie ein Data Quality-Projekt, wählen Sie die **Bereinigungsaktivität** aus, schließen Sie die Datenbereinigungsaktivität für die Quelldaten ab, und exportieren Sie sie dann in eine Tabelle in einer SQL Server-Datenbank.  
   
@@ -58,10 +58,10 @@ ms.locfileid: "75251710"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie ein Data Quality-Projekt erstellt wird.|[Erstellen eines Data Quality-Projekts](../data-quality-services/create-a-data-quality-project.md)|  
-|Beschreibt, wie ein Data Quality-Projekt geöffnet, entsperrt, umbenannt oder gelöscht wird.|[Öffnen, entsperren, umbenennen und Löschen eines Data Quality-Projekts](open-unlock-rename-and-delete-a-data-quality-project.md)|  
-|Beschreibt, wie ein Integration Services-Projekt in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]geöffnet wird.|[Öffnen Sie Integration Services Projekte in Data Quality-Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
+|Beschreibt, wie ein Data Quality-Projekt geöffnet, entsperrt, umbenannt oder gelöscht wird.|[Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts](open-unlock-rename-and-delete-a-data-quality-project.md)|  
+|Beschreibt, wie ein Integration Services-Projekt in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]geöffnet wird.|[Öffnen von Integration Services-Projekten im Data Quality-Client](../data-quality-services/open-integration-services-projects-in-data-quality-client.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ [DQS-Wissensdatenbanken und -Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
   

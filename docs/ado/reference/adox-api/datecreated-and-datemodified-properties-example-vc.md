@@ -1,5 +1,5 @@
 ---
-title: DateCreated und DateModified Eigenschaften – Beispiel (VC++) | Microsoft-Dokumentation
+title: DateCreated und DateModified-Eigenschaften (z. b. VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07fe23064173ba6e5c64294f9ea89615909cb10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dd6117e48fbdf79af24227b9b5b499afd1a60288
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67966607"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939592"
 ---
 # <a name="datecreated-and-datemodified-properties-example-vc"></a>DateCreated- und DateModified-Eigenschaften – Beispiel (VC++)
-Dieses Beispiel zeigt die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) Eigenschaften durch Hinzufügen eines neuen [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einem vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und Erstellen eines neuen **Tabelle**. Das DateOutput-Verfahren ist erforderlich, damit dieses Beispiel ausführen.  
+In diesem Beispiel werden die [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) -Eigenschaft und die [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) -Eigenschaft durch Hinzufügen einer neuen [Spalte](../../../ado/reference/adox-api/column-object-adox.md) zu einer vorhandenen [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) und durch Erstellen einer neuen **Tabelle**veranschaulicht. Die dateoutput-Prozedur ist erforderlich, damit das Beispiel ausgeführt werden kann.  
   
 ```  
 // BeginDateCreatedCpp.cpp  
@@ -101,7 +101,7 @@ void DateCreatedX() {
     }  
   
     catch(...) {  
-        cout << "Error occured in include files...." << endl;  
+        cout << "Error occurred in include files...." << endl;  
     }  
 }  
   
@@ -114,7 +114,7 @@ void DateOutPut(_bstr_t strTemp , _TablePtr tblTemp) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DateCreated-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
  [DateModified-Eigenschaft (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   

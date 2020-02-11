@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef1a23d21e5945e15d497bab3480b48f8cf3fe6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098211"
 ---
-# <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>ReencryptSecureInformation-Methode (WMI: MSReportServer_ConfigurationSetting)
+# <a name="reencryptsecureinformation-method-wmi-msreportserver_configurationsetting"></a>ReencryptSecureInformation-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert einen neuen Verschlüsselungsschlüssel und verschlüsselt alle sicheren Informationen im Katalog erneut mit diesem neuen Schlüssel  
   
 ## <a name="syntax"></a>Syntax  
@@ -48,7 +48,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die ReencryptSecureInformation-Methode ermöglicht es dem Administrator, den vorhandenen Verschlüsselungsschlüssel durch einen neuen Schlüssel zu ersetzen.  
   
  Bei einem Aufruf dieser Methode generiert der Berichtsserver einen neuen Verschlüsselungsschlüssel und durchläuft den gesamten verschlüsselten Inhalt, um ihn erneut mit diesem neuen Verschlüsselungsschlüssel zu verschlüsseln.  
@@ -57,10 +57,10 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
   
  Wenn diese Methode auf einem Computer in einer Bereitstellung für horizontales Skalieren ausgeführt wird, muss jeder Computer in der Bereitstellung für horizontales Skalieren neu initialisiert werden.  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

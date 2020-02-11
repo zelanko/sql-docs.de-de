@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4f911ebf60852fd4ab11c5813fc567deb2d0c87
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75225403"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste (IIS) 8.0
@@ -38,7 +38,7 @@ ms.locfileid: "75225403"
   
  Dieses Thema enthält die folgenden Abschnitte:  
   
--   [Übersicht über](#bkmk_overview)  
+-   [Übersicht](#bkmk_overview)  
   
 -   [Voraussetzungen](#bkmk_prereq)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "75225403"
 |IIS und Analysis Services auf verschiedenen Computern|Bei dieser Topologie muss der OLE DB-Anbieter für Analysis Services auf dem Webserver installiert werden. Außerdem muss die Datei msmdpump.ini so bearbeitet werden, dass der Speicherort der Analysis Services-Instanz auf dem Remotecomputer angegeben wird.<br /><br /> Diese Topologie fügt einen Doppelhop-Authentifizierungsschritt hinzu, bei dem Anmeldeinformationen vom Client an den Webserver und dann an den Analysis Services-Back-End-Server geleitet werden müssen. Wenn Sie Windows-Anmeldeinformationen und NTLM verwenden, wird ein Fehler ausgegeben, da NTLM keine Delegierung von Clientanmeldeinformationen an einen zweiten Server zulässt. Die gebräuchlichste Lösung ist die Verwendung der Standardauthentifizierung mit SSL (Secure Sockets Layer). Dabei müssen die Benutzer jedoch einen Benutzernamen und ein Kennwort eingeben, wenn Sie auf das virtuelle Verzeichnis MSMDPUMP zugreifen. Ein einfacherer Ansatz wäre, Kerberos zu aktivieren und die eingeschränkte Delegierung von Analysis Services zu konfigurieren, sodass Benutzer auf Analysis Services in transparenter Weise zugreifen können. Einzelheiten finden Sie unter [Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](configure-analysis-services-for-kerberos-constrained-delegation.md) .<br /><br /> Bestimmen Sie, für welche Ports die Blockierung in der Windows-Firewall aufgehoben werden muss. Sie müssen die Blockierung von Ports auf beiden Servern aufheben, um Zugriff auf die Webanwendung in IIS und auf Analysis Services auf einem Remoteserver zu gewähren.|  
 |Clientverbindungen stammen von einer nicht vertrauenswürdigen Domäne oder einer Extranetverbindung|Clientverbindungen von einer nicht vertrauenswürdigen Domäne führen zu weiteren Einschränkungen bei der Authentifizierung. In der Standardeinstellung verwendet Analysis Services die integrierte Windows-Authentifizierung, bei der sich Benutzer in derselben Domäne wie der Server befinden müssen. Extranetbenutzer, die von außerhalb der Domäne eine Verbindung zu IIS herstellen, erhalten einen Verbindungsfehler, wenn der Server für die Verwendung der Standardeinstellungen konfiguriert ist.<br /><br /> Als Problemumgehung können Extranetbenutzer eine Verbindung über ein VPN mit Domänenanmeldeinformationen herstellen. Ein besserer Ansatz könnte jedoch sein, die Standardauthentifizierung und SSL auf der IIS-Website zu aktivieren.|  
   
-##  <a name="bkmk_prereq"></a>Voraussetzung  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
  Bei den Anweisungen in diesem Artikel wird davon ausgegangen, dass IIS bereits konfiguriert und Analysis Services bereits installiert ist. Windows Server 2012 wird mit IIS 8.x als Serverrolle geliefert, die Sie auf dem System aktivieren können.  
   
  **Zusätzliche Konfiguration in IIS 8,0**  
@@ -254,7 +254,7 @@ ms.locfileid: "75225403"
 |-|-|  
 |Anonym|Fügen Sie der Liste „Mitgliedschaft“ das unter **Anmeldeinformationen für anonyme Authentifizierung bearbeiten** in IIS angegebene Konto hinzu. Weitere Informationen finden Sie unter [Anonyme Authentifizierung](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication),|  
 |Windows-Authentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, über die Analysis Services-Daten per Identitätswechsel oder Delegierung angefordert werden.<br /><br /> Falls eingeschränkte Kerberos-Delegierung verwendet wird, benötigen nur die Windows-Benutzer- und -Gruppenkonten, die Zugriff anfordern, Berechtigungen. Für die Anwendungspoolidentität sind keine Berechtigungen erforderlich.|  
-|Standardauthentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, die in der Verbindungszeichenfolge übergeben werden.<br /><br /> Falls Sie Anmeldeinformationen über `EffectiveUserName` in der Verbindungszeichenfolge übergeben, muss die Anwendungspoolidentität außerdem über Administratorrechte in der Analysis Services-Instanz verfügen. Klicken Sie in SSMS mit der rechten Maustaste auf die Instanz #a0 **Eigenschaften** #a1 **Sicherheit** #a2 **Hinzufügen**. Geben Sie die Anwendungspoolidentität ein. Wenn Sie die integrierte Standard Identität verwendet haben, wird das Konto als **IIS apppool\defaultapppool**angegeben.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
+|Standardauthentifizierung|Fügen Sie der Liste Mitgliedschaft die Windows-Benutzer- oder -Gruppenkonten hinzu, die in der Verbindungszeichenfolge übergeben werden.<br /><br /> Falls Sie Anmeldeinformationen über `EffectiveUserName` in der Verbindungszeichenfolge übergeben, muss die Anwendungspoolidentität außerdem über Administratorrechte in der Analysis Services-Instanz verfügen. Klicken Sie in SSMS mit der rechten Maustaste auf die Instanz &#124; **Eigenschaften** &#124; **Sicherheit** &#124; **Hinzufügen**. Geben Sie die Anwendungspoolidentität ein. Wenn Sie die integrierte Standard Identität verwendet haben, wird das Konto als **IIS apppool\defaultapppool**angegeben.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
  Weitere Informationen finden Sie unter [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md).  
   

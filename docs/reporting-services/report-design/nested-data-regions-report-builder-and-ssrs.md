@@ -9,10 +9,10 @@ ms.assetid: 15c2bc9b-428a-47ac-9630-8dde925d0595
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: fd50e97693c254e3b28c431a6b2961fc15df8585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65578714"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Geschachtelte Datenbereiche (Berichts-Generator und SSRS)
@@ -20,7 +20,7 @@ ms.locfileid: "65578714"
   
  Angenommen, eine Matrix (auch bezeichnet als *Tablix*) enthält Bestellungen, die vertikal nach Niederlassung und horizontal nach Quartal gruppiert sind. Sie können der Eckzelle dieses Datenbereichs eine Tabelle oder ein Diagramm hinzufügen, um die Verkäufe aller Niederlassungen zusammenzufassen, oder Sie können einem Matrixspaltenkopf ein Diagramm hinzufügen, um den Anteil der Daten in der Spalte am Verkauf als Prozentsatz aller Verkäufe anzuzeigen.  
   
- ![RS_geschachtelter Datenbereich](../../reporting-services/report-design/media/rs-nesteddataregion.gif "rs_NestedDataRegion")  
+ ![rs_NestedDataRegion](../../reporting-services/report-design/media/rs-nesteddataregion.gif "rs_NestedDataRegion")  
   
  In dieser Abbildung sind das Kreisdiagramm in der Eckzelle und die Sparklinediagramme in den Zeilen geschachtelte Datenbereiche.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "65578714"
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)   
  [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Lernprogramm: Hinzufügen eines KPIs zu einem Bericht &#40;Berichts-Generator&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)  
   
   

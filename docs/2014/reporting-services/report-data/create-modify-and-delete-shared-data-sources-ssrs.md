@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a2239e07cc24842c5cbdf44c8743ea2d79ea7cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107401"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)
@@ -32,12 +32,12 @@ ms.locfileid: "66107401"
   
  Eine freigegebene Datenquelle setzt sich aus folgenden Komponenten zusammen:  
   
-|Teil|Beschreibung|  
+|Teil|BESCHREIBUNG|  
 |----------|-----------------|  
 |Name|Ein Name, der das Element innerhalb der Ordnerhierarchie des Berichtsservers identifiziert.|  
-|Description|Eine Beschreibung, die mit dem Element im Berichts-Manager angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
+|BESCHREIBUNG|Eine Beschreibung, die mit dem Element im Berichts-Manager angezeigt wird, wenn Sie den Inhalt des Ordners anzeigen.|  
 |Verbindungstyp|Die für die Datenquelle verwendete Datenverarbeitungserweiterung. Sie können nur Datenverarbeitungserweiterungen verwenden, die auf dem Berichtsserver bereitgestellt werden. Weitere Informationen zu in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthaltenen Datenverarbeitungserweiterungen finden Sie unter [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md).|  
-|Verbindungszeichenfolge|Die Verbindungszeichenfolge für die Datenbank. Weitere Informationen und Beispiele für Verbindungszeichenfolgen zu häufig verwendeten Datenquellen anzeigen zu können, finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
+|Verbindungszeichenfolge|Die Verbindungszeichenfolge für die Datenbank. Weitere Informationen und Beispiele für Verbindungs Zeichenfolgen zu häufig verwendeten Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)Zeichenfolgen in Reporting Services.|  
 |Anmeldeinformationstyp|Gibt an, wie Anmeldeinformationen für die Verbindung abgerufen werden und ob sie nach dem Herstellen der Verbindung verwendet werden sollen. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md).|  
   
  Eine freigegebene Datenquelle enthält keine Abfrageinformationen für das Abrufen von Daten. Die Abfrage ist stets Bestandteil einer Berichtsdefinition.  
@@ -47,7 +47,7 @@ ms.locfileid: "66107401"
   
  Weitere Informationen zum Erstellen einer freigegebenen Datenquelle finden Sie unter:  
   
--   [Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS-&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
 -   [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66107401"
  Weitere Informationen zum Steuern des Zugriffs auf freigegebene Datenquellen in der Ordnerhierarchie des Berichtsservers finden Sie unter [Sichern freigegebener Datenquellenelemente](../security/secure-shared-data-source-items.md).  
   
 ## <a name="deleting-a-shared-data-source"></a>Löschen einer freigegebenen Datenquelle  
- Sie können eine freigegebene Datenquelle auf die gleiche Weise löschen wie ein Element auf dem Berichtsserver. Im Berichts-Manager Sie öffnen den Ordner, in der Detailansicht, wählen Sie das Element, und klicken Sie auf **löschen**. Auf einer Anwendungsseite auf einer SharePoint-Website, Sie öffnen Sie die SharePoint-Bibliothek, wählen Sie das Element, und klicken Sie auf **löschen**.  
+ Sie können eine freigegebene Datenquelle auf die gleiche Weise löschen wie ein Element auf dem Berichtsserver. Öffnen Sie in Berichts-Manager den Ordner in der Detailansicht, wählen Sie das Element aus, und klicken Sie auf **Löschen**. Öffnen Sie auf einer Anwendungsseite auf einer SharePoint-Website die SharePoint-Bibliothek, wählen Sie das Element aus, und klicken Sie auf **Löschen**.  
   
  Das Löschen der freigegebenen Datenquelle deaktiviert alle Berichte, Modelle und datengesteuerten Abonnements, die sie verwenden. Ohne die Verbindungsinformationen für die Datenquelle werden die Elemente nicht mehr ausgeführt. Zum Aktivieren dieser Elemente müssen Sie jedes Element einzeln öffnen und wie folgt vorgehen:  
   
@@ -68,14 +68,14 @@ ms.locfileid: "66107401"
   
  Das Löschen einer freigegebenen Datenquelle lässt sich nicht rückgängig machen. Wenn Sie versehentlich eine freigegebene Datenquelle löschen, können Sie eine neue Datenquelle mit denselben Eigenschaftswerten erstellen. Sie müssen jeden einzelnen Bericht, jedes Modell und jedes datengesteuerte Abonnement öffnen, um die freigegebene Datenquelle erneut mit dem Element zu verbinden, das die Datenquelle verwendet. Solange die Datenquelleneigenschaften gleich bleiben, funktionieren die Berichte, Modelle und Abonnements jedoch weiterhin wie zuvor.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Verwalten von Berichtsdatenquellen](manage-report-data-sources.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Datenquellen (Eigenschaftenseite) &#40;Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)   
- [Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Die Eigenschaften Seite "Datenquellen" &#40;Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)   
+ [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

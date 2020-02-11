@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63264776"
 ---
 # <a name="custom-report-items"></a>Custom Report Items
@@ -50,7 +50,7 @@ ms.locfileid: "63264776"
  [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)  
  Beschreibt die Infrastrukturklassen benutzerdefinierter Berichtselemente und die verwalteten Wrapperklassen im `Microsoft.ReportDesigner`-Namespace.  
   
-## <a name="see-also"></a>Siehe auch  
- [Technische Referenz &#40;SSRS&#41;](../technical-reference-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Technische Referenz (SSRS)](../technical-reference-ssrs.md)  
   
   

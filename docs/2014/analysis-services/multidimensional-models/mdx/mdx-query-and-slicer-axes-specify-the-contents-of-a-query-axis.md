@@ -1,5 +1,5 @@
 ---
-title: Angeben des Inhalts einer Abfrageachse (MDX) | Microsoft-Dokumentation
+title: Angeben des Inhalts einer Abfrage Achse (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 892198c217918fd2b2a374261c6eac5e31d0a428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074076"
 ---
 # <a name="specifying-the-contents-of-a-query-axis-mdx"></a>Angeben des Inhalts einer Abfrageachse (MDX)
@@ -71,7 +71,7 @@ FROM [Adventure Works]
   
 ```  
   
- Um alle leeren Tupel von einer Achse zu entfernen, können Sie das NON EMPTY-Schlüsselwort vor der Mengendefinition verwenden. Z. B. in den Beispielen, die wir eben gesehen haben sind es keine Daten im Cube ab August 2004 oder höher. Um alle Zeilen, die in keiner Spalte Daten enthalten, aus dem Cellset zu entfernen, fügen Sie einfach NON EMPTY vor der Menge für die ROWS-Achsendefinition ein, wie nachfolgend gezeigt:  
+ Um alle leeren Tupel von einer Achse zu entfernen, können Sie das NON EMPTY-Schlüsselwort vor der Mengendefinition verwenden. In den Beispielen, die bisher aufgetreten sind, gibt es beispielsweise keine Daten im Cube ab dem August 2004. Um alle Zeilen, die in keiner Spalte Daten enthalten, aus dem Cellset zu entfernen, fügen Sie einfach NON EMPTY vor der Menge für die ROWS-Achsendefinition ein, wie nachfolgend gezeigt:  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -114,7 +114,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben des Inhalts einer Slicerachse &#40;MDX&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Angeben des Inhalts einer Slicerachse &#40;MDX-&#41;](mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

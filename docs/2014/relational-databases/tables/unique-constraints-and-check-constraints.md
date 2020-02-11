@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196677"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE- und CHECK-Einschränkungen
@@ -45,13 +45,13 @@ ms.locfileid: "68196677"
   
  Sie können mehrere CHECK-Einschränkungen auf eine einzelne Spalte anwenden. Es ist auch möglich, eine einzelne CHECK-Einschränkung auf mehrere Spalten anzuwenden, indem die Einschränkung auf Tabellenebene erstellt wird. So könnte z. B. eine CHECK-Einschränkung für mehrere Spalten verwendet werden, um sicherzustellen, dass jede Zeile mit dem Wert **USA** in der **country_region** -Spalte auch einen aus zwei Zeichen bestehenden Wert in der **state** -Spalte aufweist. Auf diese Weise können mehrere Bedingungen an einer Stelle überprüft werden.  
   
- CHECK-Einschränkungen sind insofern FOREIGN KEY-Einschränkungen ähnlich, als sie die Werte kontrollieren, die in eine Spalte geschrieben werden. Der Unterschied ist, bestimmen die gültigen Werte: FOREIGN KEY-Einschränkungen rufen die Liste der gültigen Werte aus einer anderen Tabelle, während der CHECK-Einschränkungen die gültigen Werte anhand eines logischen Ausdrucks bestimmen.  
+ CHECK-Einschränkungen sind insofern FOREIGN KEY-Einschränkungen ähnlich, als sie die Werte kontrollieren, die in eine Spalte geschrieben werden. Sie unterscheiden sich jedoch in der Methode, mit der die gültigen Werte bestimmt werden: FOREIGN KEY-Einschränkungen rufen die Liste der gültigen Werte von einer anderen Tabelle ab, und CHECK-Einschränkungen ermitteln die gültigen Werte anhand eines logischen Ausdrucks.  
   
 > [!CAUTION]  
 >  Einschränkungen, die implizite oder explizite Datentypkonvertierungen einschließen, können bei bestimmten Vorgängen einen Fehler erzeugen. So können z. B. Einschränkungen, die für Tabellen definiert werden, die ihrerseits die Quellen von Partitionswechseln sind, bei einer ALTER TABLE...SWITCH-Operation zu einem Fehler führen. Vermeiden Sie deshalb die Datentypkonvertierung in Einschränkungsdefinitionen.  
   
 ### <a name="limitations-of-check-constraints"></a>Beschränkungen bei CHECK-Einschränkungen  
- CHECK-Einschränkungen weisen Werte zurück, die als FALSE ausgewertet werden. Da NULL-Werte als UNKNOWN ausgewertet werden, kann deren Vorhandensein in Ausdrücken zum Überschreiben einer Einschränkung führen. Nehmen wir beispielsweise an, Sie platzieren Sie eine Einschränkung auf ein `int` Spalte **MyColumn** angeben, dass **MyColumn** nur den Wert 10 enthalten (**MyColumn = 10**). Wenn Sie dann den Wert NULL in **MyColumn**einfügen, wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Wert NULL eingefügt, und es wird kein Fehler zurückgegeben.  
+ CHECK-Einschränkungen weisen Werte zurück, die als FALSE ausgewertet werden. Da NULL-Werte als UNKNOWN ausgewertet werden, kann deren Vorhandensein in Ausdrücken zum Überschreiben einer Einschränkung führen. Angenommen, Sie platzieren eine Einschränkung für `int` eine Spalte **myColumn** und geben an, dass **myColumn** nur den Wert 10 enthalten darf (**myColumn = 10**). Wenn Sie dann den Wert NULL in **MyColumn**einfügen, wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] der Wert NULL eingefügt, und es wird kein Fehler zurückgegeben.  
   
  Eine CHECK-Einschränkung gibt TRUE zurück, wenn die von ihr überprüfte Bedingung für alle Zeilen in der Tabelle nicht FALSE ist. CHECK-Einschränkungen werden auf Zeilenebene verwendet. Wenn eine gerade erstellte Tabelle über keinerlei Zeilen verfügt, wird jede CHECK-Einschränkung für diese Tabelle als gültig betrachtet. Dieser Umstand kann zu unerwarteten Ergebnissen führen, wie das im folgenden Beispiel gezeigt wird.  
   

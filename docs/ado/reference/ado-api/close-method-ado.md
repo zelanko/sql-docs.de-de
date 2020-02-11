@@ -18,14 +18,14 @@ ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919933"
 ---
 # <a name="close-method-ado"></a>Close-Methode (ADO)
-Schließt ein geöffnetes Objekt und alle abhängigen Objekte.  
+Schließt ein offenes Objekt und alle abhängigen Objekte.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,24 +34,24 @@ Schließt ein geöffnetes Objekt und alle abhängigen Objekte.
 object.Close  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **schließen** Methode zum Schließen einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), oder ein [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt Um alle zugeordneten Systemressourcen frei. Schließen ein Objekt entfernt es nicht aus dem Arbeitsspeicher. Sie können ändern Sie die eigenschafteneinstellungen, und öffnen sie es später noch mal. Um ein Objekt vom Arbeitsspeicher vollständig zu vermeiden, schließen Sie das Objekt aus, und legen Sie die Objektvariable auf *nichts* (in Visual Basic).  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **Close** -Methode, um eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), einen Datensatz, ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)oder ein [Daten](../../../ado/reference/ado-api/record-object-ado.md) [Strom](../../../ado/reference/ado-api/stream-object-ado.md) Objekt zu schließen, um alle zugeordneten Systemressourcen freizugeben. Durch das Schließen eines Objekts wird es nicht aus dem Arbeitsspeicher entfernt. Sie können die Eigenschaften Einstellungen ändern und Sie später erneut öffnen. Wenn Sie ein Objekt vollständig aus dem Arbeitsspeicher entfernen möchten, schließen Sie das-Objekt, und legen Sie die-Objekt Variable auf *Nothing* (in Visual Basic)  
   
 ## <a name="connection"></a>Verbindung  
- Mithilfe der **schließen** Methode zum Schließen einer **Verbindung** Objekt schließt auch alle aktiven **Recordset** Objekte, die der Verbindung zugeordnet. Ein [Befehl](../../../ado/reference/ado-api/command-object-ado.md) zugeordnete Objekt der **Verbindung** Sie schließen das Objekt wird beibehalten, aber es nicht mehr zugeordnet wird eine **Verbindung** -Objekt, d. h., seine [ ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) Eigenschaft auf festgelegt **nichts**. Darüber hinaus die **Befehl** des Objekts [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung aller Anbieter definierte Parameter werden gelöscht.  
+ Wenn Sie ein **Verbindungs** Objekt mithilfe der **Close** -Methode schließen, werden auch alle aktiven **Recordset** -Objekte geschlossen, die der Verbindung zugeordnet sind. Ein [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das dem zu schließenden **Verbindungs** Objekt zugeordnet ist, wird beibehalten, es wird jedoch nicht mehr einem **Verbindungs** Objekt zugeordnet. Das heißt, die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) -Eigenschaft wird auf " **Nothing**" festgelegt. Außerdem wird die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung des **Befehls** Objekts von allen Anbieter definierten Parametern gelöscht.  
   
- Sie können später aufrufen, die [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode, um die Verbindung mit der gleichen oder einer anderen Datenquelle erneut herzustellen. Während der **Verbindung** -Objekt ist geschlossen, Aufrufen von Methoden, die eine geöffnete Verbindung zur Datenquelle erforderlich ist, wird ein Fehler generiert.  
+ Sie können später die [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode aufzurufen, um die Verbindung mit derselben oder einer anderen Datenquelle wiederherzustellen. Während das **Verbindungs** Objekt geschlossen wird, wird beim Aufrufen von Methoden, die eine geöffnete Verbindung mit der Datenquelle erfordern, ein Fehler generiert.  
   
- Schließen einer **Verbindung** Objekt es zwar öffnen **Recordset** Objekte für die Verbindung ein Rollback alle ausstehenden Änderungen in allen der **Recordset** Objekte. Explizit schließen eine **Verbindung** Objekt (Aufrufen der **schließen** Methode) während eine Transaktion wird ausgeführt, generieren Fehler. Wenn eine **Verbindung** Objekt außerhalb des gültigen Bereichs liegt, während eine Transaktion ausgeführt wird, ADO automatisch ein Rollback der Transaktions.  
+ Wenn Sie ein **Verbindungs** Objekt schließen, während für die Verbindung geöffnete Recordsetobjekte vorhanden sind, wird für alle ausstehenden Änderungen in allen **Recordset** -Objekten ein Rollback ausgeführt. **** Das explizite Schließen eines **Verbindungs** Objekts (Aufrufen der **Close** -Methode) während einer Transaktion wird ein Fehler generiert. Wenn ein **Verbindungs** Objekt den Gültigkeitsbereich verlässt, während eine Transaktion ausgeführt wird, führt ADO automatisch ein Rollback für die Transaktion aus.  
   
 ## <a name="recordset-record-stream"></a>Recordset, Datensatz, Stream  
- Mithilfe der **schließen** Methode zum Schließen einer **Recordset**, **Datensatz**, oder **Stream** Objekt frei, die zugehörigen Daten und exklusiven Zugriff haben Sie möglicherweise auf die Daten über dieses Objekt. Sie können später aufrufen, die [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Attribute der Methode, um das Objekt mit dem gleichen oder geänderten erneut öffnen.  
+ Mithilfe der **Close** -Methode zum Schließen eines **Recordsets**, eines **Datensatzes**oder eines **Stream** -Objekts werden die zugeordneten Daten und alle exklusiven Zugriffe freigegeben, die Sie möglicherweise über dieses bestimmte Objekt haben. Sie können später die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode aufzurufen, um das Objekt mit den gleichen oder geänderten Attributen erneut zu öffnen.  
   
- Während einer **Recordset** -Objekt ist geschlossen, Aufrufen von Methoden, die erfordern einen live-Cursor wird ein Fehler generiert.  
+ Während ein **Recordset** -Objekt geschlossen wird, wird beim Aufrufen von Methoden, die einen Live Cursor erfordern, ein Fehler generiert.  
   
- Wenn ein Bearbeitungsvorgang ausgeführt, während er sich im sofortupdatemodus ist, wird beim Aufrufen der **schließen** Methode wird ein Fehler generiert, rufen Sie stattdessen die [aktualisieren](../../../ado/reference/ado-api/update-method.md) oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode erste. Wenn Sie schließen die **Recordset** im Batchmodus Update verwendet wird, alle Änderungen seit dem letzten Objekt [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) Aufruf verloren.  
+ Wenn im sofortigen Update Modus eine Bearbeitung ausgeführt wird, generiert der Aufruf der **Close** -Methode einen Fehler. Stattdessen müssen Sie zuerst die [Update](../../../ado/reference/ado-api/update-method.md) -oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode aufzurufen. Wenn Sie das **Recordset** -Objekt im Batch Aktualisierungs Modus schließen, gehen alle Änderungen seit dem letzten [Update Batch](../../../ado/reference/ado-api/updatebatch-method.md) -Vorgang verloren.  
   
- Bei Verwendung der [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien eines geöffneten **Recordset** Objekt ist, schließen die ursprünglichen oder einen Klon hat keine Auswirkungen auf der anderen Kopien.  
+ Wenn Sie die [Clone](../../../ado/reference/ado-api/clone-method-ado.md) -Methode verwenden, um Kopien eines geöffneten **Recordset** -Objekts zu erstellen, wirkt sich das Schließen des ursprünglichen oder eines Klons nicht auf andere Kopien aus.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -60,10 +60,10 @@ object.Close
 |[Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|  
 |[Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Öffnen Sie und schließen Sie die Methode – Beispiel (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
- [Öffnen Sie und schließen Sie die Methode – Beispiel (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
- [Öffnen Sie und schließen Sie die Methode – Beispiel (VC++)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
- [Open Sie-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Open-und Close-Methoden Beispiel (VB)](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)   
+ [Open-und Close-Methoden Beispiel (VBScript)](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)   
+ [Open-und Close-Methoden Beispiel (VC + +)](../../../ado/reference/ado-api/open-and-close-methods-example-vc.md)   
+ [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
+ [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

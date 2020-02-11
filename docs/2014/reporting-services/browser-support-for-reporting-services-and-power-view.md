@@ -9,12 +9,12 @@ ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: cd3a3e268e09e882b4e38eee6a620843fcc21a23
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: f82cf64ef78280b3c9562ae28afc71d06a03b1da
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75241202"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76925784"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planen der Unterstützung für Reporting Services und Power View-Browser (Reporting Services 2014)
   Verwenden Sie in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)][!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] einen Webbrowser zum Anzeigen von Berichten und zum Ausführen des Berichts-Managers. Nicht alle Berichtsfunktionen werden von allen Browsern unterstützt. Dieses Thema behandelt die Unterstützung und die Anforderungen für Verwaltungsfunktionen des Berichts-Managers, die Anzeige von Berichten und die ReportViewer-Steuerelemente in Visual Studio. In diesem Thema werden auch die für die unterstützten Browser verfügbaren Funktionen sowie Authentifizierungs- und Skriptanforderungen zusammengefasst.  
@@ -51,7 +51,7 @@ ms.locfileid: "75241202"
   
 - Weitere Informationen zur Unterstützung von SharePoint 2010-Browsern finden Sie unter [Planen der Browserunterstützung (SharePoint Server 2010)](https://technet.microsoft.com/library/cc263526\(office.14\).aspx) (https://technet.microsoft.com/library/cc263526(office.14).aspx).  
   
-|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
 |**Internet Explorer 10 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
@@ -74,7 +74,7 @@ ms.locfileid: "75241202"
   
 -   Weitere Informationen zur Unterstützung von SharePoint 2013-Browsern finden Sie unter [Planen der Browserunterstützung in SharePoint 2013](https://technet.microsoft.com/library/cc263526\(office.15\).aspx) (https://technet.microsoft.com/library/cc263526(office.15).aspx).  
   
-|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10,6-10,9**|  
+|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|  
 |**Internet Explorer 11 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
 |**Internet Explorer 10 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|  
@@ -101,7 +101,7 @@ ms.locfileid: "75241202"
 
  Im Folgenden finden Sie die aktuelle Liste der Browser und Funktionen, die mit dem Berichts-Viewer unterstützt werden. Der Berichts-Viewer unterstützt die Anzeige von Berichten vom [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager und von den SharePoint-Bibliotheken.  
   
-|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**WindowsServer 2008**|**Mac OS X 10,6-10,9**|**iOS 6-7 für iPad**|  
+|**Browser**|**Windows 8 und 8.1**|**Windows 7**|**Windows Server 2012 und 2012 R2**|**Windows Server 2008 R2**|**Windows Server 2008**|**Mac OS X 10,6-10,9**|**iOS 6-7 für iPad**|  
 |-----------------|---------------------------|-------------------|-----------------------------------------|--------------------------------|-----------------------------|------------------------------|----------------------------|  
 |**Internet Explorer 11 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
 |**Internet Explorer 10 (für den Desktop)**|32-Bit, 64-Bit|32-Bit, 64-Bit|32-Bit, 64-Bit|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|  
@@ -128,17 +128,17 @@ ms.locfileid: "75241202"
   
  Weitere Informationen zum URL-Zugriff finden Sie im folgenden Thema:  
   
-- [URL-Zugriffs Parameter Verweis](url-access-parameter-reference.md)  
+- [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
   
 ###  <a name="bkmk_authentication"></a>Authentifizierungsanforderungen
 
  Browser unterstützen spezifische Authentifizierungsschemas, die vom Berichtsserver verarbeitet werden müssen, damit die Clientanforderung nicht fehlschlägt. In der folgenden Tabelle sind die Standardauthentifizierungstypen angegeben, die von den einzelnen unter einem Windows-Betriebssystem ausgeführten Browsern unterstützt werden.  
   
-|**Browsertyp**|**Stützten**|**Browserstandard**|**Server Standard**|  
+|**Browsertyp**|**Unterstützt**|**Browserstandard**|**Serverstandard**|  
 |----------------------|------------------|-------------------------|------------------------|  
 |**Internet Explorer**|Ausgehandelt, Kerberos, NTLM, Standard|Aushandeln|Ja. Die Standardauthentifizierungseinstellungen können mit Internet Explorer verwendet werden.|  
 |**Firefox**|NTLM, Standard|NTLM|Ja. Die Standardauthentifizierungseinstellungen können mit Firefox verwendet werden.|  
-|**Safari**|Einfach|Einfach|Ja. Die Standardauthentifizierungseinstellungen können mit Safari verwendet werden.|  
+|**Safari**|Basic|Basic|Ja. Die Standardauthentifizierungseinstellungen können mit Safari verwendet werden.|  
 |**Tem**|Ausgehandelt, NTLM, Standard|Ausgehandelt|Ja. Die Standardauthentifizierungseinstellungen können mit Chrome verwendet werden.|  
   
 ### <a name="script-requirements"></a>Skriptanforderungen
@@ -147,7 +147,7 @@ ms.locfileid: "75241202"
   
  Wenn die Skripterstellung nicht aktiviert ist, wird beim Öffnen eines Berichts eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
-- **Der Browser unterstützt keine Skripts oder ist so konfiguriert, dass Skripts nicht ausgeführt werden können. Klicken Sie hier, um den Bericht ohne Skripts anzuzeigen**.  
+- **Der Browser unterstützt keine Skripts oder ist so konfiguriert, dass die Ausführung von Skripts nicht zulässig ist. Klicken Sie hier, um den Bericht ohne Skripts anzuzeigen**.  
   
  Wenn Sie den Bericht ohne Skriptunterstützung anzeigen, wird der Bericht ohne Funktionen des Berichts-Viewers, wie z. B. die Berichtssymbolleiste oder die Dokumentstruktur, in HTML gerendert.  
   
@@ -170,7 +170,7 @@ ms.locfileid: "75241202"
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
-|**Browser**|**Windows 8** und **Windows 8.1**|**Windows 7**|**Windows Server 2012** und **2012 R2**|**Windows Server 2008** und **2008 R2**|**WindowsServer 2003**|**Mac OS X 10,6-10,9**|**Anmerkungen**|  
+|**Browser**|**Windows 8** und **Windows 8.1**|**Windows 7**|**Windows Server 2012** und **2012 R2**|**Windows Server 2008** und **2008 R2**|**Windows Server 2003**|**Mac OS X 10,6-10,9**|**Notizen**|  
 |**Internet Explorer 11 (für den Desktop)**|Ja|Ja|Ja|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
 |**Internet Explorer 10 (für den Desktop)**|Ja|Ja|Ja|Nicht unterstützt|Nicht unterstützt|Nicht unterstützt|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  
 |**Internet Explorer 9**|Nicht unterstützt|Ja|Nicht unterstützt|Ja|Ja|Ja|Internet Explorer unterstützt sämtliche ReportViewer-Funktionen.|  

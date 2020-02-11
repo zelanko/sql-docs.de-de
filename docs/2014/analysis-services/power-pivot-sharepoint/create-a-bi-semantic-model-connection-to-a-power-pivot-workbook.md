@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine BI-Semantikmodell-Verbindung mit einer PowerPivot-Arbeitsmappe | Microsoft-Dokumentation
+title: Erstellen einer BI-Semantik Modell Verbindung mit einer Power Pivot-Arbeitsmappe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66071634"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe
@@ -24,34 +24,34 @@ ms.locfileid: "66071634"
   
  Das Thema enthält folgende Abschnitte: Führen Sie jede Aufgabe in der angegebenen Reihenfolge aus.  
   
- [Überprüfen der Voraussetzungen](#bkmk_prereq)  
+ [Voraussetzungen prüfen](#bkmk_prereq)  
   
  [Erstellen einer Verbindung](#bkmk_create)  
   
- [Konfigurieren von SharePoint-Berechtigungen für die BI-Semantikmodellverbindung](#bkmk_permissions)  
+ [Konfigurieren von SharePoint-Berechtigungen für die BI-Semantik Modell Verbindung](#bkmk_permissions)  
   
  [Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe](#bkmk_userdb)  
   
  [Nächste Schritte](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a> Überprüfen der Voraussetzungen  
+##  <a name="bkmk_prereq"></a>Voraussetzungen prüfen  
  Sie benötigen Teilnahmeberechtigungen oder weiterreichende Berechtigungen, um eine BI Semantikmodell-Verbindungsdatei zu erstellen.  
   
- Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden Sie unter [Hinzufügen einer BI Semantic Model Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
+ Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden [Sie unter Hinzufügen eines BI-Semantik Modell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
   
- Sie müssen wissen, dass die URL der PowerPivot-Arbeitsmappe für die Sie eine BI-semantikmodellverbindung einrichten (z. B. http://adventure-works/shared Documents/MyWorkbook.xlsx). Die Arbeitsmappe muss in der gleichen Farm sein.  
+ Sie müssen die URL der Power Pivot-Arbeitsmappe kennen, für die Sie eine BI-Semantik Modell Verbindung einrichten (z. http://adventure-works/shared b. Documents/myworkbook. xlsx). Die Arbeitsmappe muss in der gleichen Farm sein.  
   
  Alle Computer und Benutzer, die Teil der Verbindungssequenz sind, müssen in der gleichen Domäne bzw. vertrauenswürdigen Domäne (bidirektionale Vertrauensstellung) enthalten sein.  
   
-##  <a name="bkmk_create"></a> Erstellen einer Verbindung  
+##  <a name="bkmk_create"></a>Erstellen einer Verbindung  
   
 1.  Klicken Sie in der Bibliothek, die die BI-Semantikmodellverbindung enthalten soll, auf **Dokumente** im SharePoint-Menüband. Klicken Sie in „Neues Dokument“ auf den Pfeil nach unten, und wählen Sie **BISM-Verbindungsdatei** aus, um die Seite „Neue BI-Semantikmodellverbindung“ zu öffnen.  
   
-     ![Neues Dokument Untermenü in einer SharePoint-Bibliothek](../media/ssas-bismconnection-new.gif "neues Dokument Untermenü in einer SharePoint-Bibliothek")  
+     ![Untermenü "Neues Dokument" in einer SharePoint-Bibliothek](../media/ssas-bismconnection-new.gif "Untermenü "Neues Dokument" in einer SharePoint-Bibliothek")  
   
-2.  Legen Sie die **Server** Eigenschaft, um die SharePoint-URL der PowerPivot-Arbeitsmappe (z. B.  **http://mysharepoint/shared Documents/MyWorkbook.xlsx**. In einer Bereitstellung von PowerPivot für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit PowerPivot-Daten nur den Pfad zur Arbeitsmappe an. Der PowerPivot-Systemdienst bestimmt, welcher Server die Daten lädt.  
+2.  Legen Sie die **Server** -Eigenschaft auf die SharePoint-URL der Power Pivot-Arbeitsmappe fest (z. b. ** http://mysharepoint/shared Documents/myworkbook. xlsx**). In einer Bereitstellung von PowerPivot für SharePoint können Daten auf jeden Server in der Farm geladen werden. Aus diesem Grund geben Datenquellenverbindungen mit PowerPivot-Daten nur den Pfad zur Arbeitsmappe an. Der PowerPivot-Systemdienst bestimmt, welcher Server die Daten lädt.  
   
-     Verwenden Sie nicht die **Datenbank** Eigenschaft; sie wird nicht beim Angeben des Speicherorts einer PowerPivot-Arbeitsmappe verwendet.  
+     Verwenden Sie die **Database** -Eigenschaft nicht. Er wird nicht verwendet, wenn der Speicherort einer Power Pivot-Arbeitsmappe angegeben wird.  
   
      Die Seite sollte ähnlich der folgenden Abbildung aussehen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071634"
   
      Wenn Sie über SharePoint-Berechtigungen an der Arbeitsmappe verfügen, wird optional ein zusätzlicher Überprüfungsschritt ausgeführt, der sicherstellt, dass der Speicherort gültig ist. Wenn Sie nicht über die Berechtigung verfügen, auf die Daten zuzugreifen, wird Ihnen die Option gegeben, die BI-Semantikmodellverbindung ohne die Überprüfungsantwort zu speichern.  
   
-##  <a name="bkmk_permissions"></a> Konfigurieren von SharePoint-Berechtigungen für die BI-Semantikmodellverbindung  
+##  <a name="bkmk_permissions"></a>Konfigurieren von SharePoint-Berechtigungen für die BI-Semantik Modell Verbindung  
  Damit eine BI-Semantikmodellverbindung als Datenquelle für eine Excel-Arbeitsmappe oder einen Reporting Services-Bericht verwendet werden kann, muss das BI-Semantikmodell-Verbindungselement über **Leseberechtigungen** in einer SharePoint-Bibliothek verfügen. Die Berechtigungsebene „Lesen“ schließt die Berechtigung **Elemente öffnen** ein, die das Herunterladen von BI-Semantikmodell-Verbindungsinformationen in eine Excel-Desktopanwendung ermöglicht.  
   
  Es gibt mehrere Möglichkeiten, Berechtigungen in SharePoint zu erteilen. Die folgenden Anweisungen erläutern, wie Sie eine neue Gruppe mit dem Namen **BISM-Benutzer** erstellen, die die Berechtigungsstufe **Lesen** haben.  
@@ -88,17 +88,17 @@ ms.locfileid: "66071634"
   
 4.  Klicken Sie auf **Benutzerberechtigungen entfernen**.  
   
-##  <a name="bkmk_userdb"></a> Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe  
+##  <a name="bkmk_userdb"></a>Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe  
  Wenn Sie in einer Excel-Arbeitsmappe eine PowerPivot-Datenbank verwenden, bestimmen die SharePoint-Berechtigungen für die Excel-Arbeitsmappe den Datenzugriff auf die BI-Semantikmodellverbindung. Alle Benutzer, die auf die Arbeitsmappe zugreifen, müssen Leseberechtigungen für die Arbeitsmappe haben, um sie als externe Datenquelle zu verwenden.  
   
  Wenn Sie eine Gruppe **BISM-Benutzer** mithilfe der Anweisungen im vorherigen Abschnitt erstellt haben, haben Benutzer- und Gruppenkonten, die Mitglieder von **BISM-Benutzer** sind, ausreichende Berechtigungen für die Arbeitsmappe und für die BI-Semantikmodell-Verbindungsdatei, wenn die Arbeitsmappe geerbte Berechtigungen verwendet.  
   
-##  <a name="bkmk_next"></a> Nächste Schritte  
+##  <a name="bkmk_next"></a>Nächste Schritte  
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und gesichert haben, können Sie sie als Datenquelle angeben. Weitere Informationen finden Sie unter [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [PowerPivot BI-Semantikmodellverbindung &#40;bism-Datei&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
- [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Power Pivot BI-Semantik Modell Verbindung &#40;. bism-&#41;](power-pivot-bi-semantic-model-connection-bism.md)   
+ [Verwenden einer BI-Semantik Modell Verbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 5: Ausführen von Vorhersageabfragen | Microsoft-Dokumentation'
+title: 'Lektion 5: Ausführen von Vorhersage Abfragen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62822312"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Lektion 5: Ausführen von Vorhersageabfragen
-  In dieser Lektion verwenden Sie die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung zum Erstellen von zwei verschiedene Arten von Vorhersagen auf Grundlage der Entscheidungsstruktur Modellieren Sie erstellt haben, im [ Lektion 2: Hinzufügen von Miningmodellen zur Association-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Diese Vorhersagetypen werden weiter unten definiert.  
+  In dieser Lektion verwenden Sie das Formular [Select from \<Model> Vorhersage Join (DMX)](/sql/dmx/select-from-model-cases-dmx) der SELECT-Anweisung, um basierend auf dem Entscheidungsstruktur Modell, das Sie in [Lektion 2: Hinzufügen von Mining Modellen zur Association-Mining Struktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)erstellt haben, zwei unterschiedliche Vorhersage Typen zu erstellen. Diese Vorhersagetypen werden weiter unten definiert.  
   
- Singleton-Abfrage  
+ SINGLETON-Abfrage  
  Verwenden Sie eine SINGLETON-Abfrage, um Ad-hoc-Werte bereitzustellen, wenn Sie Vorhersagen treffen. Sie können beispielsweise bestimmen, ob ein einzelner Kunde wahrscheinlich ein Fahrradkäufer ist, indem Sie Eingaben wie die Pendelstrecke, die Postleitzahl oder die Anzahl der Kinder des Kunden an die Abfrage übergeben. Die SINGLETON-Abfrage gibt basierend auf diesen Eingaben einen Wert zurück, der angibt, wie wahrscheinlich es ist, dass die Person ein Fahrrad kauft.  
   
  Batchabfrage  
  Verwenden Sie eine Batchabfrage, um zu bestimmen, wer in einer Tabelle möglicher Kunden wahrscheinlich ein Fahrrad kaufen wird. Wenn Sie beispielsweise von der Marketingabteilung eine Liste mit Kunden und Kundenattributen erhalten, können Sie mithilfe einer Batchvorhersage bestimmen, wer wahrscheinlich ein Fahrrad kaufen wird.  
   
- Die [SELECT FROM \<Model > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) Form der SELECT-Anweisung besteht aus drei Teilen:  
+ Das Formular [Select \<from Model> Vorhersage Join (DMX)](/sql/dmx/select-from-model-cases-dmx) der SELECT-Anweisung enthält drei Teile:  
   
 -   Einer Liste der Miningmodellspalten und Vorhersagefunktionen, die in den Ergebnissen zurückgegeben werden. Die Ergebnisse können auch Eingabespalten aus den Quelldaten enthalten.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62822312"
   
 -   Einer Zuordnung von Miningmodellspalten und Quelldaten. Wenn diese Namen übereinstimmen, können Sie NATURAL-Syntax verwenden und auf die Spaltenzuordnungen verzichten.  
   
- Mithilfe von Vorhersagefunktionen lässt sich die Abfrage zusätzlich optimieren. Vorhersagefunktionen stellen zusätzliche Informationen bereit, z. B. die Wahrscheinlichkeit des Eintreffens einer Vorhersage; außerdem bieten sie Unterstützung für die Vorhersage im Trainings-Dataset. Weitere Informationen zu Vorhersagefunktionen finden Sie unter [Funktionen &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+ Mithilfe von Vorhersagefunktionen lässt sich die Abfrage zusätzlich optimieren. Vorhersagefunktionen stellen zusätzliche Informationen bereit, z. B. die Wahrscheinlichkeit des Eintreffens einer Vorhersage; außerdem bieten sie Unterstützung für die Vorhersage im Trainings-Dataset. Weitere Informationen zu Vorhersagefunktionen finden Sie unter [Functions &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
  Die Vorhersagen in diesem Lernprogramm basieren auf der ProspectiveBuyer-Tabelle in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank. Die ProspectiveBuyer-Tabelle enthält eine Liste potenzieller Kunden und die Merkmale dieser Kunden. Die Kunden in dieser Tabelle sind von den zum Erstellen des Entscheidungsstruktur-Miningmodells verwendeten Kunden unabhängig.  
   
@@ -47,8 +47,8 @@ ms.locfileid: "62822312"
   
 -   Erstellen einer Batchabfrage, um zu bestimmen, wer in einer Tabelle möglicher Kunden wahrscheinlich ein Fahrrad kaufen wird.  
   
-## <a name="singleton-query"></a>Singleton-Abfrage  
- Der erste Schritt ist die Verwendung der [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) in einer Singleton-Vorhersageabfrage. Es folgt ein allgemeines Beispiel für die SINGLETON-Anweisung:  
+## <a name="singleton-query"></a>SINGLETON-Abfrage  
+ Der erste Schritt besteht darin, das [Select from &#60;Model&#62; Vorhersage Join &#40;DMX-&#41;](/sql/dmx/select-from-model-cases-dmx) in einer SINGLETON-Vorhersage Abfrage zu verwenden. Es folgt ein allgemeines Beispiel für die SINGLETON-Anweisung:  
   
 ```  
 SELECT <select list> FROM [<mining model name>]   
@@ -76,7 +76,7 @@ ORDER BY <expression>
   
 #### <a name="to-create-a-singleton-prediction-query"></a>So erstellen Sie eine SINGLETON-Vorhersageabfrage  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -94,7 +94,7 @@ ORDER BY <expression>
     [Bike Buyer] AS Buyer, PredictHistogram([Bike Buyer]) AS Statistics  
     ```  
   
-     Die AS-Anweisung wird verwendet, um einen Alias für von der Abfrage zurückgegebene Spalten zu erstellen. Die [PredictHistogram](/sql/dmx/predicthistogram-dmx) Funktion gibt Statistiken zur Vorhersage, einschließlich der Wahrscheinlichkeit und Unterstützungswert zurück. Weitere Informationen zu den Funktionen, die in einer vorhersageanweisung verwendet werden können, finden Sie unter [Funktionen &#40;DMX&#41;](/sql/dmx/functions-dmx).  
+     Die AS-Anweisung wird verwendet, um einen Alias für von der Abfrage zurückgegebene Spalten zu erstellen. Die Funktion " [präthistogram](/sql/dmx/predicthistogram-dmx) " gibt Statistiken zur Vorhersage zurück, einschließlich der Wahrscheinlichkeit und der Unterstützung. Weitere Informationen zu den Funktionen, die in einer Vorhersage Anweisung verwendet werden können, finden Sie unter [Functions &#40;DMX&#41;](/sql/dmx/functions-dmx).  
   
 4.  Ersetzen Sie Folgendes:  
   
@@ -140,16 +140,16 @@ ORDER BY <expression>
        2 AS [Total Children]) AS t  
     ```  
   
-6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+6.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Singleton_Query.dmx`.  
+7.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `Singleton_Query.dmx`.  
   
-8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+8.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
      Die Abfrage gibt eine Vorhersage dazu zurück, ob ein Kunde mit den angegebenen Merkmalen ein Fahrrad kaufen wird, und sie stellt statistische Informationen zu der betreffenden Vorhersage zur Verfügung.  
   
 ## <a name="batch-query"></a>Batchabfrage  
- Der nächste Schritt ist die Verwendung der [SELECT FROM &#60;Modell&#62; PREDICTION JOIN &#40;DMX&#41; ](/sql/dmx/select-from-model-cases-dmx) in einer batchvorhersageabfrage. Das folgende Beispiel ist ein allgemeines Beispiel für eine Batchanweisung:  
+ Der nächste Schritt besteht darin, das [Select from &#60;Model&#62; Vorhersage Join &#40;DMX-&#41;](/sql/dmx/select-from-model-cases-dmx) in einer Batch Vorhersage Abfrage zu verwenden. Das folgende Beispiel ist ein allgemeines Beispiel für eine Batchanweisung:  
   
 ```  
 SELECT TOP <number> <select list>   
@@ -162,7 +162,7 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression>  
 ```  
   
- Wie in der SINGLETON-Abfrage definieren die ersten beiden Codezeilen die Spalten aus dem von der Abfrage zurückgegebenen Miningmodell sowie aus dem Namen des zum Generieren der Vorhersage verwendeten Miningmodells. Im oberen Bereich \<Anzahl >-Anweisung gibt an, dass die Abfrage nur zurückgeben wird die Anzahl oder die Ergebnisse anhand des \<Anzahl >.  
+ Wie in der SINGLETON-Abfrage definieren die ersten beiden Codezeilen die Spalten aus dem von der Abfrage zurückgegebenen Miningmodell sowie aus dem Namen des zum Generieren der Vorhersage verwendeten Miningmodells. Die Top \<Number>-Anweisung gibt an, dass die Abfrage nur die Anzahl oder die Ergebnisse zurück \<gibt, die durch Number> angegeben werden.  
   
  Die nächsten Codezeilen definieren die Quelldaten, auf denen die Vorhersagen basieren:  
   
@@ -171,7 +171,7 @@ OPENQUERY([<datasource>],'<SELECT statement>')
   AS [<input alias>]  
 ```  
   
- Für das Abrufen von Quelldaten stehen Ihnen eine Reihe verschiedener Optionen zur Verfügung, jedoch verwenden Sie in diesem Lernprogramm OPENQUERY. Weitere Informationen zu den verfügbaren Optionen finden Sie unter [ &#60;quelldatenabfrage&#62;](/sql/dmx/source-data-query).  
+ Für das Abrufen von Quelldaten stehen Ihnen eine Reihe verschiedener Optionen zur Verfügung, jedoch verwenden Sie in diesem Lernprogramm OPENQUERY. Weitere Informationen zu den verfügbaren Optionen finden Sie unter [&#60;Quelldaten Abfrage&#62;](/sql/dmx/source-data-query).  
   
  Die nächste Zeile definiert die Zuordnung zwischen den Quellspalten im Miningmodell und den Spalten in den Quelldaten:  
   
@@ -191,11 +191,11 @@ WHERE <where clause, boolean expression,>
 ORDER BY <expression> [DESC|ASC]  
 ```  
   
- Verwenden Sie ORDER BY in Kombination mit dem obersten Element \<Anzahl >-Anweisung, um die Ergebnisse zu filtern, die zurückgegeben werden. In dieser Vorhersage geben Sie z. B. die obersten 10 Fahrradkäufer zurück (sortiert nach der Wahrscheinlichkeit, dass die Vorhersage richtig ist). Mithilfe der [DESC|ASC]-Syntax können Sie festlegen, in welcher Reihenfolge die Ergebnisse angezeigt werden.  
+ Verwenden Sie Order by in Kombination mit \<der Anweisung Top Number>, um die zurückgegebenen Ergebnisse zu filtern. In dieser Vorhersage geben Sie z. B. die obersten 10 Fahrradkäufer zurück (sortiert nach der Wahrscheinlichkeit, dass die Vorhersage richtig ist). Mithilfe der [DESC|ASC]-Syntax können Sie festlegen, in welcher Reihenfolge die Ergebnisse angezeigt werden.  
   
 #### <a name="to-create-a-batch-prediction-query"></a>So erstellen Sie eine Batchvorhersageabfrage  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -327,16 +327,16 @@ ORDER BY <expression> [DESC|ASC]
     ORDER BY PredictProbability([Bike Buyer]) DESC  
     ```  
   
-7.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+7.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-8.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `Batch_Prediction.dmx`.  
+8.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `Batch_Prediction.dmx`.  
   
-9. Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+9. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
      Die Abfrage gibt eine Tabelle mit Kundennamen zurück, eine Vorhersage dazu, ob jeder Kunde ein Fahrrad kaufen wird, und die Wahrscheinlichkeit des Eintreffens der Vorhersage.  
   
  Dies ist der letzte Schritt im Bike Buyer-Lernprogramm. Sie verfügen jetzt über mehrere Miningmodelle, mit denen Sie Ähnlichkeiten zwischen Ihren Kunden untersuchen und vorhersagen können, ob potenzielle Kunden ein Fahrrad kaufen werden.  
   
- Verwenden von DMX in einem Market Basket-Szenario finden Sie unter [Market Basket DMX-Lernprogramm](../../2014/tutorials/market-basket-dmx-tutorial.md).  
+ Informationen zur Verwendung von DMX in einem Market Basket-Szenario finden Sie unter [Market Basket DMX Tutorial](../../2014/tutorials/market-basket-dmx-tutorial.md).  
   
   

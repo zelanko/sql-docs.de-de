@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7b09bb2f08095af33f80fe4161032036482f835
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75228790"
 ---
 # <a name="create-an-availability-group-transact-sql"></a>Erstellen einer Verfügbarkeitsgruppe (Transact-SQL)
@@ -28,16 +28,16 @@ ms.locfileid: "75228790"
 > [!NOTE]  
 >  Als Alternative zur Verwendung von [!INCLUDE[tsql](../../../includes/tsql-md.md)]können Sie den Assistenten zum Erstellen einer Verfügbarkeitsgruppe oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell-Cmdlets verwenden. Weitere Informationen finden Sie unter [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)[Verwenden des Dialogfelds „Neue Verfügbarkeitsgruppe“ &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)[Erstellen einer Verfügbarkeitsgruppe &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md).  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Es wird dringend empfohlen, dass Sie diesen Abschnitt lesen, bevor Sie versuchen, Ihre erste Verfügbarkeitsgruppe zu erstellen.  
   
 ###  <a name="PrerequisitesRestrictions"></a>Voraussetzungen, Einschränkungen und Empfehlungen  
   
 -   Überprüfen Sie vor dem Erstellen einer Verfügbarkeitsgruppe, ob sich die Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die Verfügbarkeitsreplikate hosten, auf verschiedenen WSFC-Konten (Windows Server Failover Clustering) des gleichen WSFC-Failoverclusters befinden. Stellen Sie außerdem sicher, dass alle Serverinstanzen alle anderen [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Voraussetzungen erfüllen. Wenn Sie weitere Informationen wünschen, sollten Sie unbedingt [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md) lesen.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen **sysadmin** -Serverrolle und die CREATE AVAILABILITY GROUP-Serverberechtigung, ALTER ANY AVAILABILITY GROUP-Berechtigung oder CONTROL SERVER-Berechtigung.  
   
 ###  <a name="SummaryTsqlStatements"></a>Zusammenfassung von Tasks und entsprechenden Transact-SQL-Anweisungen  
@@ -116,15 +116,15 @@ ms.locfileid: "75228790"
         GO
         ```  
   
-###  <a name="SampleProcedure"></a>Beispiel für eine Konfigurations Prozedur  
+###  <a name="SampleProcedure"></a> Beispielkonfigurationsprozedur  
  In dieser Beispielkonfiguration wird das Verfügbarkeitsreplikat auf zwei eigenständigen Serverinstanzen erstellt, deren Dienstkonten unter unterschiedlichen – aber vertrauenswürdigen – Domänen (`DOMAIN1` und `DOMAIN2`) ausgeführt werden.  
   
  In der folgenden Tabelle finden Sie eine Zusammenfassung der in dieser Beispielkonfiguration verwendeten Werte.  
   
-|Anfangsrolle|System|Hosten der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz|  
+|Ursprüngliche Rolle|System|Hosten der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz|  
 |------------------|------------|---------------------------------------------|  
 |Primär|`COMPUTER01`|`AgHostInstance`|  
-|Sekundär|`COMPUTER02`|Standardinstanz|  
+|Secondary|`COMPUTER02`|Standardinstanz|  
   
 1.  Erstellen Sie einen Datenbankspiegelungs-Endpunkt namens *dbm_endpoint* auf der Serverinstanz, auf der Sie die Verfügbarkeitsgruppe erstellen möchten (dies ist eine Instanz namens `AgHostInstance` auf `COMPUTER01`). Dieser Endpunkt verwendet Port 7022. Beachten Sie, dass die Serverinstanz, auf der Sie die Verfügbarkeitsgruppe erstellen, das primäre Replikat hostet.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "75228790"
   
      Wenn die Dienstkonten der Serverinstanzen unter unterschiedlichen Domänenbenutzern ausgeführt werden, erstellen Sie auf jeder Serverinstanz eine Anmeldung für die andere Serverinstanz, und gewähren Sie dieser Anmeldung Berechtigungen zum Zugreifen auf den lokalen Datenbankspiegelungs-Endpunkt.  
   
-     Im folgenden Codebeispiel sind die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen zum Erstellen einer Anmeldung und zum Gewähren der Berechtigung für einen Endpunkt für die Anmeldung dargestellt. Das Domänen Konto der Remote Serverinstanz wird hier als *domain_name*\\*user_name*dargestellt.  
+     Im folgenden Codebeispiel sind die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen zum Erstellen einer Anmeldung und zum Gewähren der Berechtigung für einen Endpunkt für die Anmeldung dargestellt. Das Domänenkonto der Remoteserverinstanz wird hier als *domain_name*\\*user_name*dargestellt.  
   
     ```sql
     -- If necessary, create a login for the service account, domain_name\user_name  
@@ -282,14 +282,14 @@ ms.locfileid: "75228790"
     GO
     ```  
   
-###  <a name="CompleteCodeExample"></a>Vervollständigen eines Code Beispiels für die Beispiel Konfigurations Prozedur  
+###  <a name="CompleteCodeExample"></a> Vollständiges Codebeispiel für Beispielkonfigurationsprozedur  
  Im folgenden Beispiel werden die Codebeispiele aus allen Schritten der Beispielkonfigurationsprozedur zusammengeführt. In der folgenden Tabelle werden die in diesem Codebeispiel verwendeten Platzhalterwerte zusammengefasst. Weitere Informationen zu den Schritten in diesem Codebeispiel finden Sie unter [Erforderliche Komponenten für die Verwendung der Beispielkonfigurationsprozedur](#PrerequisitesForExample) und [Beispielkonfigurationsprozedur](#SampleProcedure)weiter oben in diesem Thema.  
   
 |Platzhalter|Beschreibung|  
 |-----------------|-----------------|  
-|\\\\*Dateiserver*\\*sqlbackups*|Fiktive Sicherungsfreigabe.|  
-|\\\\*File Server*\\*sqlbackups\mydb1.bak*|Sicherungsdatei für MyDb1.|  
-|\\\\*File Server*\\*sqlbackups\mydb2.bak*|Sicherungsdatei für MyDb2.|  
+|\\\\*FILESERVER*\\*SQLbackups*|Fiktive Sicherungsfreigabe.|  
+|\\\\*FILESERVER*\\*SQLbackups\MyDb1.bak*|Sicherungsdatei für MyDb1.|  
+|\\\\*FILESERVER*\\*SQLbackups\MyDb2.bak*|Sicherungsdatei für MyDb2.|  
 |*7022*|Jedem Datenbankspiegelungs-Endpunkt zugewiesene Portnummer.|  
 |*COMPUTER01\AgHostInstance*|Serverinstanz, die das ursprüngliche primäre Replikat hostet.|  
 |*COMPUTER02*|Serverinstanz, die das ursprüngliche sekundäre Replikat hostet. Dies ist die Standardserverinstanz auf `COMPUTER02`.|  
@@ -437,58 +437,58 @@ ALTER DATABASE MyDb2 SET HADR AVAILABILITY GROUP = MyAG;
 GO
 ```  
   
-##  <a name="RelatedTasks"></a>Verwandte Aufgaben  
- **So konfigurieren Sie Verfügbarkeits Gruppen-und Replikat Eigenschaften**  
+##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So konfigurieren Sie Verfügbarkeitsgruppen- und Replikateigenschaften**  
   
--   [Ändern des Verfügbarkeits Modus eines Verfügbarkeits Replikats &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
+-   [Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)  
   
--   [Ändern des Failovermodus eines Verfügbarkeits Replikats &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
+-   [Ändern des Failovermodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)  
   
--   [Erstellen oder konfigurieren Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Konfigurieren der flexiblen Failoverrichtlinie zum Steuern der Bedingungen für ein automatisches Failover (AlwaysOn-Verfügbarkeitsgruppen)](configure-flexible-automatic-failover-policy.md)  
   
--   [Geben Sie die Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeits Replikat &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
--   [Konfigurieren der Sicherung auf Verfügbarkeits Replikaten &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
+-   [Konfigurieren der Sicherung auf Verfügbarkeitsreplikaten &#40;SQL Server&#41;](configure-backup-on-availability-replicas-sql-server.md)  
   
--   [Konfigurieren Sie den schreibgeschützten Zugriff auf ein Verfügbarkeits Replikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
+-   [Konfigurieren des schreibgeschützten Zugriffs auf ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](configure-read-only-access-on-an-availability-replica-sql-server.md)  
   
--   [Konfigurieren Sie das schreibgeschützte Routing für eine Verfügbarkeits Gruppe &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
+-   [Konfigurieren des schreibgeschützten Routing für eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
--   [Ändern des Sitzungs Timeouts für ein Verfügbarkeits Replikat &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
+-   [Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **So vervollständigen Sie die Verfügbarkeits Gruppenkonfiguration**  
+ **So schließen Sie die Konfiguration von Verfügbarkeitsgruppen ab**  
   
--   [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeits Gruppe &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
+-   [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
--   [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeits Gruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+-   [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
--   [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeits Gruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
+-   [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
--   [Erstellen oder konfigurieren Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
- **Alternative Möglichkeiten zum Erstellen einer Verfügbarkeits Gruppe**  
+ **Alternative Möglichkeiten zum Erstellen einer Verfügbarkeitsgruppe**  
   
--   [Verwenden Sie den Verfügbarkeits Gruppen-Assistenten &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
+-   [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
   
--   [Verwenden Sie das Dialog Feld neue Verfügbarkeits Gruppe &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
+-   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
--   [Erstellen Sie eine Verfügbarkeits Gruppe &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
+-   [Erstellen einer Verfügbarkeitsgruppe &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md)  
   
  **So aktivieren Sie AlwaysOn-Verfügbarkeitsgruppen**  
   
--   [Aktivieren und deaktivieren Sie AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
+-   [Aktivieren und Deaktivieren von Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](enable-and-disable-always-on-availability-groups-sql-server.md)  
   
  **So konfigurieren Sie einen Datenbankspiegelungs-Endpunkt**  
   
 -   [Erstellen Sie einen Datenbankspiegelungs-Endpunkt für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
--   [Erstellen eines Datenbankspiegelungs-Endpunkts für die Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](../../database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL-&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
+-   [Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)  
   
--   [Geben Sie die Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeits Replikat &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
+-   [Angeben der Endpunkt-URL beim Hinzufügen oder Ändern eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](specify-endpoint-url-adding-or-modifying-availability-replica.md)  
   
  **Problembehandlung für die AlwaysOn-Verfügbarkeitsgruppenkonfiguration**  
   
@@ -496,31 +496,31 @@ GO
   
 -   [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a>Verwandte Inhalte  
+##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
--   **Gt**  
+-   **Blogs:**  
   
      [AlwaysON - HADRON-Lernreihe: Nutzung des Arbeitsthreadpools für HADRON-fähige Datenbanken](https://blogs.msdn.com/b/psssql/archive/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
      [SQL Server AlwaysOn-Teamblogs: Der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blog zu CSS-SQL Server Technikern](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   
--   **Videos**  
+-   **Videos:**  
   
      [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit hoher Verfügbarkeit](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
      [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 2: Erstellen einer unternehmenswichtigen Lösung für hohe Verfügbarkeit mit AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
--   **Whitepaper**  
+-   **Whitepaper:**  
   
      [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
-     [Microsoft-Whitepaper für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
+     [Microsoft-Whitepapers für SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Whitepaper SQL Server Kundenberatungs Teams](http://sqlcat.com/)  
+     [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](../../database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   

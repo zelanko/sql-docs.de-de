@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ea4ce4bfe51f844d6d2916623f5a9cc3ffbe01a6
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781385"
 ---
 # <a name="prepare-and-execute-a-statement-odbc"></a>Vorbereiten und Ausführen von Anweisungen (ODBC)
@@ -79,7 +79,7 @@ ms.locfileid: "73781385"
   
     -   Fügen Sie die S Datenwerte und S Datenlängen in die gebundenen Parameterarrays ein.  
   
-    -   Ruft SQLExecute auf, um die vorbereitete Anweisung auszuführen.  
+    -   Rufen Sie SQLExecute auf, um die vorbereitete Anweisung auszuführen.  
   
     -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, gibt SQLExecute SQL_NEED_DATA zurück. Senden Sie die Daten in Blöcken mithilfe von SQLParamData und SQLPutData.  
   
@@ -109,11 +109,11 @@ ms.locfileid: "73781385"
   
     -   Füllen Sie das gebundene Parameterpufferarray mit Datenwerten.  
   
-    -   Ruft SQLExecute auf, um die vorbereitete Anweisung auszuführen. Der Treiber führt die SQL-Anweisung S Mal aus, einmal für jeden Parametersatz.  
+    -   Rufen Sie SQLExecute auf, um die vorbereitete Anweisung auszuführen. Der Treiber führt die SQL-Anweisung S Mal aus, einmal für jeden Parametersatz.  
   
     -   Wenn Data-at-Execution-Eingabeparameter verwendet werden, gibt SQLExecute SQL_NEED_DATA zurück. Senden Sie die Daten in Blöcken mithilfe von SQLParamData und SQLPutData.  
   
-## <a name="see-also"></a>Siehe auch  
- [Gewusst-wie-Themen &#40;zum Ausführen von Abfragen ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gewusst-wie-Themen zum Ausführen von Abfragen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/executing-queries-how-to-topics-odbc.md)  
   
   

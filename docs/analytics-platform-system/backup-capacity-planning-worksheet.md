@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 46dbdded5adf41a847f017cf4ee203597df13962
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401347"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server-parallele Data Warehouse
@@ -23,7 +23,7 @@ Dieses Arbeitsblatt ist eine Ergänzung zu den Anweisungen unter [erwerben und K
   
 ## <a name="capacity-planning-worksheet-for-backup-servers"></a>Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server  
 
-### <a name="notes"></a>Hinweise  
+### <a name="notes"></a>Notizen  
   
 1.  Dieses Arbeitsblatt gilt für Server, von denen Sicherungs-und Wiederherstellungs Vorgänge für PDW-Datenbanken durchgeführt werden.  
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f4085375ac361bb7ae40e0d69bea919a1ac431dc
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781706"
 ---
 # <a name="create-a-bulk-copy-format-file-odbc"></a>Erstellen einer Formatdatei für das Massenkopieren (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "73781706"
   In diesem Beispiel wird gezeigt, wie mit Funktionen zum Massenkopieren sowohl eine Datendatei als auch eine Formatdatei erstellt werden können. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-create-a-bulk-copy-format-file"></a>So erstellen Sie eine Formatdatei für das Massenkopieren  
   
@@ -62,11 +62,11 @@ ms.locfileid: "73781706"
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
- Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu erstellen.  
+ Führen Sie das erste [!INCLUDE[tsql](../../../includes/tsql-md.md)]Codelisting () aus, um die im Beispiel verwendete Tabelle zu erstellen.  
   
  Kompilieren Sie das zweite Codelisting (C++) mit odbc32.lib und odbcbcp.lib.  
   
- Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die im Beispiel verwendete Tabelle zu löschen.  
+ Führen Sie das dritte [!INCLUDE[tsql](../../../includes/tsql-md.md)]Codelisting () aus, um die im Beispiel verwendete Tabelle zu löschen.  
   
 ```  
 use AdventureWorks  
@@ -214,8 +214,8 @@ IF EXISTS (SELECT name FROM sysobjects WHERE name = 'BCPDate')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Massen Kopieren mithilfe der ODBC &#40;&#41; -Themen SQL Server ODBC-Treibers](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Massen kopieren mit dem SQL Server ODBC-Treiber &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)   
  [Verwenden von Datendateien und Formatdateien](../../../relational-databases/native-client-odbc-bulk-copy-operations/using-data-files-and-format-files.md)  
   
   

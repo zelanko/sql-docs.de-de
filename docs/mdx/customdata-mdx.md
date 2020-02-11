@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d2884e23cbee78acacdb72e386f0e99610e9629f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135827"
 ---
 # <a name="customdata-mdx"></a>CustomData (MDX)
 
 
-  Gibt den Wert des der **CustomData** Verbindungszeichenfolgen-Eigenschaft, wenn definiert ist, andernfalls **null**.  
+  Gibt den Wert der **CustomData** -Verbindungs Zeichenfolgen-Eigenschaft zurück, sofern definiert. andernfalls **null**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -28,10 +28,10 @@ CustomData()
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Die **CustomData** Funktion abrufen kann die **CustomData** Verbindung Zeichenfolgeneigenschaft und übergeben Sie eine Konfigurationseinstellung, die von MDX (Multidimensional Expressions)-Funktionen und-Anweisungen verwendet werden, z. B. [UserName (MDX)](../mdx/username-mdx.md) und [CALL-Anweisung (MDX)](../mdx/mdx-data-manipulation-call.md). Diese Funktion kann z. B. in einem dynamischen Sicherheitsausdruck verwendet werden, zum Auswählen der zulässigen/verweigerten Mengenelemente für den Zeichenfolgenwert in die **CustomData** Verbindungszeichenfolgen-Eigenschaft.  
+ Die **CustomData** -Funktion kann die **CustomData** -Verbindungs Zeichenfolgen-Eigenschaft abrufen und eine Konfigurationseinstellung übergeben, die von MDX-Funktionen und-Anweisungen (Multidimensional Expressions) verwendet wird, wie z. b. [username (MDX)](../mdx/username-mdx.md) und [callstatement (MDX)](../mdx/mdx-data-manipulation-call.md). Diese Funktion kann z. b. in einem dynamischen Sicherheits Ausdruck verwendet werden, um die zulässigen/verweigerten Satz Elemente für den Zeichen folgen Wert in der **CustomData** -Verbindungs Zeichenfolgen-Eigenschaft auszuwählen.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage zeigt den Rückgabewert von der **CustomData** Funktion in einem berechneten Measure:  
+ Die folgende Abfrage zeigt den Wert an, der von der **CustomData** -Funktion in einem berechneten Measure zurückgegeben wird:  
   
 ```  
 WITH MEMBER [Measures].CUSTOMDATADEMO AS CUSTOMDATA()  
@@ -40,7 +40,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

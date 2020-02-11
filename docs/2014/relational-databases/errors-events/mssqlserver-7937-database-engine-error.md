@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a78aac96c0f0362c36367511035d8e4544b2017
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762792"
 ---
-# <a name="mssqlserver7937"></a>MSSQLSERVER_7937
+# <a name="mssqlserver_7937"></a>MSSQLSERVER_7937
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762792"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_MISSING_COLUMN_DIRECTORY|  
-|Meldungstext|Tabellenfehler: FileStream-Verzeichnis für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID ist nicht gefunden.|  
+|Meldungstext|Tabellenfehler: Das Filestream-Verzeichnis für die Spalten-ID C_ID der Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID wurde nicht gefunden.|  
   
 ## <a name="explanation"></a>Erklärung  
  Die angegebene Spalte ist in einer Partition vorhanden; das entsprechende FILESTREAM-Verzeichnis wurde jedoch im FILESTREAM-Datenspeicher nicht gefunden.  
@@ -48,6 +48,6 @@ ms.locfileid: "62762792"
  Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
- Nicht verfügbar. Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Nicht zutreffend Dieser Fehler kann nicht automatisch repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
   

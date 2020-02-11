@@ -1,5 +1,5 @@
 ---
-title: Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQLServer 2014 | Microsoft-Dokumentation
+title: Nicht mehr unterstützte Datenbank-Engine Funktionen in SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -34,49 +34,52 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/28/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67463469"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Datenbank-Engine-Funktionalität in SQL Server 2014
   In diesem Thema werden die [!INCLUDE[ssDE](../includes/ssde-md.md)] -Funktionen beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
   
-## <a name="SQL14"></a> Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a>Nicht mehr unterstützte Features[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  In der folgenden Tabelle sind Funktionen aufgeführt, die nicht mehr in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthalten sind.  
   
-|Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
+|Category|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
 |Kompatibilitätsgrad|Kompatibilitätsgrad 90|Der Kompatibilitätsgrad der Datenbanken muss mindestens auf 100 festgelegt sein. Wird eine Datenbank mit einem Kompatibilitätsgrad unter 100 auf [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] aktualisiert, wird der Kompatibilitätsgrad der Datenbank während des Upgradevorgangs auf 100 festgelegt.|  
   
-## <a name="Denali"></a> Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a>Nicht mehr unterstützte Features[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  In der folgenden Tabelle sind Funktionen aufgeführt, die nicht mehr in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] enthalten sind.  
   
-|Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
+|Category|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
-|Sichern und Wiederherstellen|**BACKUP {DATABASE &#124; LOG} WITH PASSWORD** und **Sicherung {Datenbank &#124; LOG} WITH MEDIAPASSWORD** werden eingestellt. **RESTORE {DATABASE &#124; LOG} mit [MEDIA] PASSWORD**bleibt als veraltet markiert werden.|None|  
-|Sichern und Wiederherstellen|**RESTORE {DATABASE &AMP;#124; LOG}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; LOG}...... MIT RESTRICTED_USER**|  
+|Sichern und Wiederherstellen|Die **Sicherung von {Database &#124; Log} mit Kennwort** und **Backup {Database &#124; log} with MEDIAPASSWORD** wird eingestellt. **Restore {Database &#124; log} with [Media] Password**wird weiterhin als veraltet markiert.|Keine|  
+|Sichern und Wiederherstellen|**{Database &#124; Log} wiederherstellen... mit DBO_ONLY**|**{Database &#124; Log} wiederherstellen...... mit RESTRICTED_USER**|  
 |Kompatibilitätsgrad|Kompatibilitätsgrad 80|Der Kompatibilitätsgrad der Datenbanken muss mindestens auf 90 festgelegt sein.|  
-|Konfigurationsoptionen|`sp_configure 'user instance timeout'` und `'user instances enabled'`|Verwenden Sie die Funktion Lokale Datenbank. Weitere Informationen finden Sie unter [SqlLocalDB-Hilfsprogramm](../tools/sqllocaldb-utility.md)|  
+|Konfigurationsoptionen|`sp_configure 'user instance timeout'` und `'user instances enabled'`|Verwenden Sie die Funktion Lokale Datenbank. Weitere Informationen finden Sie unter [sqllocaldb-Hilfsprogramm](../tools/sqllocaldb-utility.md) .|  
 |Verbindungsprotokolle|Die Unterstützung für das VIA-Protokoll wird eingestellt.|Verwenden Sie stattdessen TCP.|  
-|Datenbankobjekte|`WITH APPEND`-Klausel für Trigger|Erstellen Sie den ganzen Trigger neu.|  
+|Datenbankobjekte|
+  `WITH APPEND`-Klausel für Trigger|Erstellen Sie den ganzen Trigger neu.|  
 |Datenbankoptionen|`sp_dboption`|`ALTER DATABASE`|  
-|Mail|SQL Mail|Verwenden Sie Datenbank-E-Mail. Weitere Informationen finden Sie unter [Database Mail](../relational-databases/database-mail/database-mail.md) und [Use Database Mail Instead Of SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
+|Mail|SQL Mail|Verwenden Sie Datenbank-E-Mail. Weitere Informationen finden Sie unter [Datenbank-E-Mail](../relational-databases/database-mail/database-mail.md) und [Verwenden von Datenbank-E-Mail anstelle von SQL Mail](../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md).|  
 |Arbeitsspeicherverwaltung|Unterstützung für 32-Bit-AWE (Address Windowing Extensions) und für das Hinzufügen von 32-Bit-Speicher im laufenden Systembetrieb (Hot Add Memory).|Verwenden Sie ein 64-Bit-Betriebssystem.|  
 |Metadaten|`DATABASEPROPERTY`|`DATABASEPROPERTYEX`|  
 |Programmierbarkeit|SQL Server-Distributed Management Objects (SQL-DMO)|SQL Server Management Objects (SMO)|  
-|Abfragehinweise|`FASTFIRSTROW`-Hinweis|`OPTION (FAST` *n* `)`.|  
-|Remoteserver|Das Erstellen neuer Remoteserver durch Benutzer mithilfe von `sp_addserver` wird eingestellt. `sp_addserver` mit der Option "local" bleibt erhalten. Während des Upgrades beibehaltene oder durch Replikation erstellte Remoteserver können verwendet werden.|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|  
+|Abfragehinweise|`FASTFIRSTROW`deuteten|`OPTION (FAST`*n* `)`.|  
+|Remoteserver|Das Erstellen neuer Remoteserver durch Benutzer mithilfe von `sp_addserver` wird eingestellt. 
+  `sp_addserver` mit der Option "local" bleibt erhalten. Während des Upgrades beibehaltene oder durch Replikation erstellte Remoteserver können verwendet werden.|Ersetzen Sie Remoteserver mithilfe von Verbindungsservern.|  
 |Sicherheit|`sp_dropalias`|Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Verwenden Sie `sp_dropalias`, um Aliase in aktualisierten Datenbanken zu entfernen.|  
-|Sicherheit|Der Versionsparameter von **PWDCOMPARE** Darstellung eines Werts von einer Anmeldung vor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 wird nicht mehr unterstützt.|None|  
-|Service Broker-Programmierbarkeit in SMO|Die **Microsoft.SqlServer.Management.Smo.Broker.BrokerPriority** -Klasse implementiert nicht mehr die **Microsoft.SqlServer.Management.Smo.IObjectPermission** Schnittstelle.||  
+|Sicherheit|Der Versions Parameter von **PWDCOMPARE** , der einen Wert aus einer Anmeldung vor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 darstellt, wird nicht mehr unterstützt.|Keine|  
+|Service Broker-Programmierbarkeit in SMO|Die **Microsoft. SqlServer. Management. Smo. Broker. brokerpriority** -Klasse implementiert nicht mehr die **Microsoft. SqlServer. Management. Smo. iobjectberechtigungs** -Schnittstelle.||  
 |SET-Optionen|`SET DISABLE_DEF_CNST_CHK`|Keine.|  
 |Systemtabellen|sys.database_principal_aliases|Verwenden Sie anstelle von Aliasen Rollen.|  
-|Transact-SQL|`RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie die Anweisung unter Verwendung der aktuellen **RAISERROR(…)**  Syntax.|  
-|Transact-SQL-Syntax|`COMPUTE / COMPUTE BY`|Verwendung von `ROLLUP`|  
-|Transact-SQL-Syntax|Verwenden von **\* =** und **=&#42;**|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
-|XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Database_file_size_change-Ereignis, Database_file_size_change ersetzt<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
+|Transact-SQL|
+  `RAISERROR` im Format `RAISERROR integer 'string'` wird eingestellt.|Schreiben Sie die Anweisung mithilfe der aktuellen **RAISERROR (...)** -Syntax um.|  
+|Transact-SQL-Syntax|`COMPUTE / COMPUTE BY`|Verwenden Sie `ROLLUP`|  
+|Transact-SQL-Syntax|Verwendung von ** \* ** und **=&#42;**|Verwenden Sie die ANSI-Joinsyntax. Weitere Informationen finden Sie unter [from (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
+|XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Ersetzt durch database_file_size_change event, database_file_size_change<br /><br /> database_file_size_change-Ereignis<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   
  **Zusätzliche XEvent-Änderungen**  
   
@@ -92,7 +95,7 @@ ms.locfileid: "67463469"
   
 -   Hinzugefügte Felder: target_kb, pages_kb  
   
-## <a name="see-also"></a>Siehe auch  
- [Als veraltet markierte Features der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

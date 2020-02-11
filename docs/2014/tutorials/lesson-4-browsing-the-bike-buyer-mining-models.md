@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Durchsuchen der Bike Buyer-Miningmodells | Microsoft-Dokumentation'
+title: 'Lektion 4: Durchsuchen der Bike Buyer-Mining Modelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070889"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lektion 4: Durchsuchen des Bike Buyer-Miningmodells
-  In dieser Lektion verwenden Sie die [SELECT (DMX)](/sql/dmx/select-dmx) Anweisung zum Untersuchen des Inhalts in der Decision Tree- und clustering-Miningmodelle modelliert, die Sie im erstellten [Lektion 2: Hinzufügen von Miningmodellen zur der Vorhersageminingstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  In dieser Lektion verwenden Sie die SELECT-Anweisung [(DMX)](/sql/dmx/select-dmx) zum Durchsuchen des Inhalts in den Entscheidungsstruktur-und Clustering-Mining Modellen, die Sie in [Lektion 2: Hinzufügen von Mining Modellen zur Vorhersage Mining Struktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)erstellt haben.  
   
- Die in einem Miningmodell enthaltenen Spalten entsprechen nicht den Spalten, die durch die Miningstruktur definiert werden; stattdessen handelt es sich um eine bestimmte Gruppe von Spalten, die die vom Algorithmus ermittelten Tendenzen und Muster beschreiben. Diese Miningmodellspalten werden beschrieben, der [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) -Schemarowsets. Beispielsweise enthält die MODEL_NAME-Spalte im Schemarowset für den Inhalt den Namen des Miningmodells. Für ein Clustering-Miningmodell enthält die NODE_CAPTION-Spalte den Namen des jeweiligen Clusters und die NODE_DESCRIPTION-Spalte eine Beschreibung der Merkmale des jeweiligen Clusters. Sie können diese Spalten durchsuchen, indem Sie mit der SELECT FROM \<Modell >. Inhalt in DMX-Anweisung. Sie können diese Anweisung auch verwenden, um die zum Erstellen des Miningmodells verwendeten Daten zu durchsuchen. Drillthrough muss in der Miningstruktur aktiviert sein, um diese Anweisung verwenden zu können. Weitere Informationen zur Anweisung finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ Die in einem Miningmodell enthaltenen Spalten entsprechen nicht den Spalten, die durch die Miningstruktur definiert werden; stattdessen handelt es sich um eine bestimmte Gruppe von Spalten, die die vom Algorithmus ermittelten Tendenzen und Muster beschreiben. Diese Mining Modell Spalten werden im [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) -Schemarowset beschrieben. Beispielsweise enthält die MODEL_NAME-Spalte im Schemarowset für den Inhalt den Namen des Miningmodells. Für ein Clustering-Miningmodell enthält die NODE_CAPTION-Spalte den Namen des jeweiligen Clusters und die NODE_DESCRIPTION-Spalte eine Beschreibung der Merkmale des jeweiligen Clusters. Sie können diese Spalten durchsuchen, indem Sie die \<> Select from Model verwenden. Die Content-Anweisung in DMX. Sie können diese Anweisung auch verwenden, um die zum Erstellen des Miningmodells verwendeten Daten zu durchsuchen. Drillthrough muss in der Miningstruktur aktiviert sein, um diese Anweisung verwenden zu können. Weitere Informationen zur-Anweisung finden Sie unter [Select from &#60;Model&#62;. Fälle &#40;DMX-&#41;](/sql/dmx/select-from-model-content-dmx).  
   
  Sie können auch alle Statuswerte einer diskreten Spalte zurückgeben, indem Sie die SELECT DISTINCT-Anweisung verwenden. Wenn Sie diesen Vorgang beispielsweise für eine Geschlechterspalte durchführen, gibt die Abfrage `male` und `female` zurück.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "63070889"
 -   Prüfen der verschiedenen Status, die für eine bestimmte diskrete Spalte zur Verfügung stehen  
   
 ## <a name="returning-the-content-of-a-mining-model"></a>Zurückgeben des Inhalts eines Miningmodells  
- In dieser Lektion verwenden Sie die [SELECT FROM &#60;Modell&#62;. Inhalt &#40;DMX&#41; ](/sql/dmx/select-from-model-dimension-content-dmx) Anweisung, um den Inhalt des Clusteringmodells zurückzugeben.  
+ In dieser Lektion verwenden Sie das [&#62; Select from &#60;Model. Inhalt &#40;DMX-&#41;](/sql/dmx/select-from-model-dimension-content-dmx) Anweisung, um den Inhalt des Clustering-Modells zurückzugeben.  
   
- Im folgenden ist ein allgemeines Beispiel der SELECT FROM \<Modell >. CONTENT-Anweisung:  
+ Im folgenden finden Sie ein allgemeines Beispiel für die SELECT \<from Model->. Inhalts Anweisung:  
   
 ```  
 SELECT <select list> FROM [<mining model>].CONTENT  
@@ -49,7 +49,7 @@ WHERE <where clause>
 SELECT <select list> FROM [<mining model].CONTENT  
 ```  
   
- Die .CONTENT-Klausel neben dem Namen des Miningmodells gibt an, dass Inhalt aus dem Miningmodell zurückgegeben werden soll. Weitere Informationen zu den Spalten im Miningmodell enthalten sind, finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ Die .CONTENT-Klausel neben dem Namen des Miningmodells gibt an, dass Inhalt aus dem Miningmodell zurückgegeben werden soll. Weitere Informationen zu den Spalten, die im Mining Modell enthalten sind, finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Optional können Sie die letzte Codezeile zum Filtern der von der Anweisung zurückgegebenen Ergebnisse verwenden:  
   
@@ -63,15 +63,15 @@ WHERE <where clause>
 WHERE NODE_SUPPORT > 100  
 ```  
   
- Weitere Informationen zum Verwenden von WHERE-Anweisung finden Sie unter [wählen &#40;DMX&#41;](/sql/dmx/select-dmx).  
+ Weitere Informationen zum Verwenden der WHERE-Anweisung finden [Sie unter SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 #### <a name="to-return-the-content-of-the-clustering-mining-model"></a>So geben Sie den Inhalt des Clustering-Miningmodells zurück  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
-2.  Kopieren Sie das allgemeine Beispiel der SELECT FROM \<Modell >. CONTENT-Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das allgemeine Beispiel der SELECT FROM \<Model->. Inhalts Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -85,7 +85,7 @@ WHERE NODE_SUPPORT > 100
     *  
     ```  
   
-     Sie können auch ersetzen * mit einer Liste aller Spalten in der [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+     Sie können * auch durch eine Liste aller Spalten ersetzen, die im [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset)enthalten sind.  
   
 4.  Ersetzen Sie Folgendes:  
   
@@ -105,18 +105,18 @@ WHERE NODE_SUPPORT > 100
     SELECT * FROM [Clustering].CONTENT  
     ```  
   
-5.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+5.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-6.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `SELECT_CONTENT.dmx`.  
+6.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `SELECT_CONTENT.dmx`.  
   
-7.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+7.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
      Die Abfrage gibt den Inhalt des Miningmodells zurück.  
   
 ## <a name="use-drillthrough"></a>Verwenden von Drillthrough  
- Im nächsten Schritt verwenden Sie die Drillthroughanweisung, um eine Stichprobe der Fälle zurückzugeben, die zum Trainieren des Decision Tree-Miningmodells verwendet wurden. In dieser Lektion verwenden Sie die [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41; ](/sql/dmx/select-from-model-content-dmx) Anweisung, um den Inhalt des Decision Tree-Modell zurückzugeben.  
+ Im nächsten Schritt verwenden Sie die Drillthroughanweisung, um eine Stichprobe der Fälle zurückzugeben, die zum Trainieren des Decision Tree-Miningmodells verwendet wurden. In dieser Lektion verwenden Sie das [&#62; Select from &#60;Model. Fälle &#40;DMX-&#41;](/sql/dmx/select-from-model-content-dmx) Anweisung, um den Inhalt des Entscheidungsstruktur Modells zurückzugeben.  
   
- Im folgenden ist ein allgemeines Beispiel der SELECT FROM \<Modell >. CASES-Anweisung:  
+ Im folgenden finden Sie ein allgemeines Beispiel für die SELECT \<from Model->. Cases-Anweisung:  
   
 ```  
 SELECT <select list>   
@@ -138,15 +138,15 @@ SELECT <select list> FROM [<mining model>].CASES
 WHERE IsInNode('<node id>')  
 ```  
   
- Weitere Informationen zum Verwenden von WHERE-Anweisung mit IsInNode finden Sie unter [SELECT FROM &#60;Modell&#62;. Fällen &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
+ Weitere Informationen zum Verwenden der WHERE-Anweisung mit IsInNode finden [Sie unter Select from &#60;Model&#62;. Fälle &#40;DMX-&#41;](/sql/dmx/select-from-model-content-dmx).  
   
 #### <a name="to-return-the-cases-that-were-used-to-train-the-mining-model"></a>So geben Sie die Fälle zurück, die zum Trainieren des Miningmodells verwendet wurden  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
-2.  Kopieren Sie das allgemeine Beispiel der SELECT FROM \<Modell >. CASES-Anweisung in die leere Abfrage.  
+2.  Kopieren Sie das allgemeine Beispiel der SELECT FROM \<Model->. Cases-Anweisung in die leere Abfrage.  
   
 3.  Ersetzen Sie Folgendes:  
   
@@ -181,11 +181,11 @@ WHERE IsInNode('<node id>')
     FROM [Decision Tree].CASES  
     ```  
   
-5.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+5.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-6.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `SELECT_DRILLTHROUGH.dmx`.  
+6.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `SELECT_DRILLTHROUGH.dmx`.  
   
-7.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+7.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
      Die Abfrage gibt die Quelldaten zurück, die zum Trainieren des Decision Tree-Miningmodells verwendet wurden.  
   
@@ -209,7 +209,7 @@ SELECT DISTINCT [<column>]
   
 #### <a name="to-return-the-states-of-a-discrete-column"></a>So geben Sie die Status einer diskreten Spalte zurück  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -246,17 +246,17 @@ SELECT DISTINCT [<column>]
     FROM [Decision Tree]  
     ```  
   
-5.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+5.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-6.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `SELECT_DISCRETE.dmx`.  
+6.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `SELECT_DISCRETE.dmx`.  
   
-7.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+7.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
      Die Abfrage gibt die möglichen Status der Bike Buyer-Spalte zurück.  
   
  In der nächsten Lektion sagen Sie mithilfe des Decision Tree-Miningmodells vorher, ob potenzielle Kunden ein Fahrrad kaufen werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lesson 5: Ausführen von Vorhersageabfragen](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lektion 5: Ausführen von Vorhersageabfragen](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

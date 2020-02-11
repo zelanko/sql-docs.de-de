@@ -14,10 +14,10 @@ ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b06d77f562864a1b18e492d1db70563b62d4647
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728463"
 ---
 # <a name="create-an-entity-master-data-services"></a>Erstellen einer Entität (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "73728463"
 
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Entität, die Elemente und ihre Attribute enthält.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 -   Es muss ein Modell vorhanden sein. Weitere Informationen finden Sie unter [Erstellen eines Modells &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md).  
   
@@ -69,11 +69,11 @@ ms.locfileid: "73728463"
 ## <a name="grid-columns"></a>Rasterspalten  
  Für jede erstellte Entität wird dem Raster eine Zeile mit dreizehn Spalten hinzugefügt. Das sind die Spalten.  
   
-|NAME|und Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|Status|Der Status der Entität. Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Entität aktualisiert wird.<br /><br /> ![Symbol für Aktualisierungs Status](../master-data-services/media/mds-statusicon-updating.png "Icon zum Aktualisieren des Status ")<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Entität Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![Symbol für Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Icon für Fehlerstatus ")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Icon für OK-Status ")|  
-|NAME|Der Name der Entität.|  
-|und Beschreibung|Die Entitätsbeschreibung.|  
+|Status|Der Status der Entität. Wenn Sie auf **Speichern** klicken, wird das folgende Bild angezeigt, das angibt, dass die Entität aktualisiert wird.<br /><br /> ![Symbol für Aktualisierungs Status](../master-data-services/media/mds-statusicon-updating.png "Symbol für Aktualisierungs Status")<br /><br /> Wenn beim Erstellen oder Bearbeiten einer Entität Fehler auftreten, wird das folgende Bild angezeigt.<br /><br /> ![Symbol für Fehlerstatus](../master-data-services/media/mds-statusicon-error.png "Symbol für Fehlerstatus")<br /><br /> Falls der Status „OK“ lautet, wird das folgende Bild angezeigt.<br /><br /> ![Symbol für Status OK](../master-data-services/media/mds-statusicon-ok.png "Symbol für Status OK")|  
+|Name|Der Name der Entität.|  
+|BESCHREIBUNG|Die Entitätsbeschreibung.|  
 |Stagingtabelle|Der Präfixname der Tabelle, die zum Speichern von Daten verwendet wird.|  
 |Transaktionsprotokolltyp|Der Transaktionsprotokolltyp der Entität.|  
 |Automatische Codeerstellung|Gibt an, ob die automatische Codeerstellung aktiviert ist.|  
@@ -85,18 +85,18 @@ ms.locfileid: "73728463"
 |Aktualisiert von|Der Benutzername des Benutzers, der die Entität zuletzt aktualisiert hat.|  
 |Aktualisiert am|Datum und Uhrzeit, wann die Entität zuletzt aktualisiert wurde.|  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Nächste Schritte  
   
--   [Erstellen eines Textattributs &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
+-   [Erstellen Sie ein Text Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)  
   
 -   [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)  
   
--   [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
+-   [Erstellen Sie ein Datei Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)   
  [Explizite Hierarchien &#40;Master Data Services&#41;](../master-data-services/explicit-hierarchies-master-data-services.md)   
- [Bearbeiten einer Entität &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
- [Löschen einer Entität &#40;Master Data Services&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
+ [Bearbeiten eines Entitäts &#40;Master Data Services&#41;](../master-data-services/edit-an-entity-master-data-services.md)   
+ [Einen Entitäts &#40;Master Data Services löschen&#41;](../master-data-services/delete-an-entity-master-data-services.md)  
   
   

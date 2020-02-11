@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Update- und Delete-Anweisungen positioniert | Microsoft-Dokumentation
+title: Ausführen positionierter Update-und DELETE-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,51 +16,51 @@ ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67913622"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Ausführen einer positionierten Aktualisierung und von DELETE-Anweisungen
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Nachdem eine Anwendung einen Block von Daten mit abgerufen hat **SQLFetchScroll**, diese später aktualisieren oder löschen Sie die Daten im-Block. Zum Ausführen eines positionierten Updates oder löschen, die Anwendung:  
+ Nachdem eine Anwendung einen Datenblock mit **SQLFetchScroll**abgerufen hat, kann Sie die Daten im-Block aktualisieren oder löschen. Um ein positioniertes Update oder DELETE auszuführen, führt die Anwendung Folgendes aus:  
   
-1.  Aufrufe **SQLSetPos** , positionieren Sie den Cursor in der Zeile, die aktualisiert oder gelöscht werden.  
+1.  Ruft **SQLSetPos** auf, um den Cursor in der Zeile zu positionieren, die aktualisiert oder gelöscht werden soll.  
   
-2.  Erstellt ein positioniertes Update oder Delete-Anweisung mit der folgenden Syntax:  
+2.  Erstellt eine positionierte UPDATE-oder DELETE-Anweisung mit der folgenden Syntax:  
   
-     **UPDATE** *Tabellenname*  
+     **** *Tabellennamen* aktualisieren  
   
-     **Legen Sie** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}  
+     **Festlegen** des *Spalten Bezeichners* **=** {*Expression* &#124; **null**}  
   
-     [ **,** *Spaltenbezeichner* **=** {*Ausdruck* &#124; **NULL**}]  
+     [**,** *Spalten Bezeichner* **=** {*Expression* &#124; **null**}]  
   
-     **WHERE CURRENT OF** *Cursorname*  
+     **WHERE CURRENT of** *Cursor-Name*  
   
-     **DELETE FROM** *Tabellenname* **WHERE CURRENT OF** *Cursorname*  
+     **Aus** *Tabellenname* löschen, **wobei Current of** *Cursor Name*  
   
-     Die einfachste Möglichkeit zum Erstellen der **festgelegt** Klausel in einer positioniertes Update-Anweisung ist die Verwendung von parametermarkierungen für jede Spalte aktualisiert werden, und verwenden **SQLBindParameter** binden diese an die Rowset-Puffer für die die Zeile aktualisiert werden. In diesem Fall werden die C-Datentyp des Parameters identisch mit der C-Datentyp, der der Rowset-Puffer.  
+     Die einfachste Möglichkeit zum Erstellen der **Set** -Klausel in einer positionierten Update-Anweisung besteht darin, Parameter Markierungen für jede zu Aktualisier Ende Spalte zu verwenden und **SQLBindParameter** zu verwenden, um diese an die rowsetpuffer für die zu Aktualisier Ende Zeile zu binden. In diesem Fall ist der c-Datentyp des Parameters mit dem c-Datentyp des rowsetpuffers identisch.  
   
-3.  Die Rowset-Puffer für die aktuelle Zeile aktualisiert, wenn es eine positioniertes Update-Anweisung ausgeführt wird. Nach der erfolgreichen Ausführung eine positionierte Update-Anweisung, kopiert die Cursorbibliothek die Werte aus den einzelnen Spalten in der aktuellen Zeile aus, dem Cache.  
-  
-    > [!CAUTION]  
-    >  Wenn die Anwendung nicht ordnungsgemäß die Rowset-Puffer aktualisiert wird vor der Ausführung einer positioniertes Update-Anweisung, sind die Daten im Cache fehlerhaft, nachdem die Anweisung ausgeführt wird.  
-  
-4.  Führt die positioniertes Update oder Delete-Anweisung, die mit einer anderen Anweisung als die Anweisung, die dem Cursor zugeordnet.  
+3.  Aktualisiert die rowsetpuffer für die aktuelle Zeile, wenn eine positionierte UPDATE-Anweisung ausgeführt wird. Nachdem eine positionierte UPDATE-Anweisung erfolgreich ausgeführt wurde, kopiert die Cursor Bibliothek die Werte aus jeder Spalte in der aktuellen Zeile in Ihren Cache.  
   
     > [!CAUTION]  
-    >  Die **, in denen** Klausel erstellt, die von der Cursorbibliothek zum Identifizieren der aktuellen Zeile kann möglicherweise keine Zeilen zu identifizieren, identifizieren eine andere Zeile oder mehr als eine Zeile zu identifizieren. Weitere Informationen finden Sie unter [durchsucht-Anweisungen konstruieren](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
+    >  Wenn die Anwendung die rowsetpuffer nicht ordnungsgemäß aktualisiert, bevor eine positionierte UPDATE-Anweisung ausgeführt wird, sind die Daten im Cache nach der Ausführung der Anweisung falsch.  
   
- Alle positioniert Update und Delete-Anweisungen erfordern ein Cursorname. Um den Cursornamen angeben, die eine Anwendung ruft **SQLSetCursorName** , bevor der Cursor geöffnet wird. Um den Cursornamen, die vom Treiber generierten zu verwenden, eine Anwendung ruft **SQLGetCursorName** nach der der Cursor geöffnet wird.  
+4.  Führt die positionierte UPDATE-oder DELETE-Anweisung mit einer anderen-Anweisung als der dem Cursor zugeordneten-Anweisung aus.  
   
- Nach dem Cursor-Bibliothek führt ein positioniertes Update oder Delete-Anweisung, die Statusarray, Rowset-Puffer und Beibehalten von der Cursorbibliothek-Cache enthalten in der folgenden Tabelle aufgelisteten Werte.  
+    > [!CAUTION]  
+    >  Die **Where** -Klausel, die von der Cursor Bibliothek zum Identifizieren der aktuellen Zeile erstellt wurde, kann keine Zeilen identifizieren, eine andere Zeile identifizieren oder mehr als eine Zeile identifizieren. Weitere Informationen finden Sie unter [Erstellen von durchsuchten Anweisungen](../../../odbc/reference/appendixes/constructing-searched-statements.md).  
   
-|-Anweisung verwendet|Wert in zeilenstatusarray|Werte in<br /><br /> Rowset-Puffer|Werte in<br /><br /> Cache-Puffer|  
+ Alle positionierten Update-und DELETE-Anweisungen erfordern einen Cursor Namen. Zum Angeben des Cursor namens Ruft eine Anwendung **SQLSetCursorName** auf, bevor der Cursor geöffnet wird. Um den vom Treiber generierten Cursor Namen zu verwenden, ruft eine Anwendung **SQLGetCursorName** auf, nachdem der Cursor geöffnet wurde.  
+  
+ Nachdem die Cursor Bibliothek eine positionierte UPDATE-oder DELETE-Anweisung ausgeführt hat, enthalten das Status Array, die rowsetpuffer und der Cache, die von der Cursor Bibliothek verwaltet werden, die in der folgenden Tabelle aufgeführten Werte.  
+  
+|Verwendete Anweisung|Wert im Zeilen Status Array|Werte in<br /><br /> rowsetpuffer|Werte in<br /><br /> Cache Puffer|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
 |Positioniertes Update|SQL_ROW_UPDATED|Neue Werte [1]|Neue Werte [1]|  
-|Positionierte delete|SQL_ROW_DELETED|Alte Werte|Alte Werte|  
+|Positionierter Löschvorgang|SQL_ROW_DELETED|Alte Werte|Alte Werte|  
   
- [1] die Anwendung muss die Werte in den Puffern Rowset aktualisieren, bevor die positionierte Update-Anweisung ausgeführt; nach dem Ausführen der positionierte Update-Anweisung, kopiert die Cursorbibliothek die Werte in den Puffern Rowset aus, dem Cache.
+ [1] die Anwendung muss die Werte in den rowsetpuffern aktualisieren, bevor die positionierte UPDATE-Anweisung ausgeführt wird. nach dem Ausführen der positionierten Update-Anweisung kopiert die Cursor Bibliothek die Werte in den rowsetpuffern in Ihren Cache.

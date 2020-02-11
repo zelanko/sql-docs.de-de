@@ -17,10 +17,10 @@ ms.assetid: bde16e8c-bcd4-4041-8130-55c5450e5f72
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4e01c6773ce28694e95f992f1af49a7cce19e969
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728075"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
@@ -31,51 +31,51 @@ ms.locfileid: "73728075"
   
  Bei Entitäten, für die keine expliziten Hierarchien aktiviert wurden, erfolgen die Zuweisung einer Berechtigung zu einem **Blatt** und die Zuweisung einer Berechtigung zur Entität auf die gleiche Weise.  
   
- **Hinweise:**  
+ **Anmerkungen**  
   
 -   Blattberechtigungen gelten nur für den Funktionsbereich **Explorer** der Benutzeroberfläche.  
   
 -   Den Attributen **Name** und **Code** zugewiesene Berechtigungen werden nicht erzwungen.  
   
-|Berechtigung|und Beschreibung|  
+|Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
-|**Leseberechtigung**|Der Benutzer kann Blattelemente und Attribute lesen.|  
-|**Create**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
-|**Update**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
+|**Lesen**|Der Benutzer kann Blattelemente und Attribute lesen.|  
+|**Stelle**|Der Benutzer kann Blattelemente erstellen und während der Erstellung Attributwerte zuweisen.|  
+|**Alisierungs**|Der Benutzer kann Blattelemente und Attribute aktualisieren.|  
 |**Löschen**|Der Benutzer kann Blattelemente löschen.|  
-|**Verweigern**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
+|**Deny**|Der Zugriff auf die Blattelemente wird vollständig verweigert.|  
   
  Die Berechtigungen Lesen, Erstellen, Aktualisieren und Löschen können kombiniert werden. Wenn Erstellen, Aktualisieren und Löschen zugewiesen werden, wird die Leseberechtigung automatisch zugewiesen.  
   
 ## <a name="attribute-permissions"></a>Attributberechtigungen  
  Attributberechtigungen gelten für die Attributwerte der jeweiligen Entität. Benutzer mit Attributberechtigungen wird lediglich verweigert, Elemente hinzuzufügen oder zu entfernen.  
   
-|Berechtigung|und Beschreibung|  
+|Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
-|**Leseberechtigung**|Der Benutzer kann Attribute lesen.|  
-|**Create**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
-|**Update**|Der Benutzer kann Attribute aktualisieren.|  
-|**Löschen**|Keine Auswirkung.|  
-|**Verweigern**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
+|**Lesen**|Der Benutzer kann Attribute lesen.|  
+|**Stelle**|Der Benutzer kann bei der Erstellung von Elementen Werte zuweisen.|  
+|**Alisierungs**|Der Benutzer kann Attribute aktualisieren.|  
+|**Löschen**|Keine Auswirkungen.|  
+|**Deny**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
 ### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
-|NAME|Code|Subcategory (Aktualisiert)|  
+|Name|Code|Subcategory (Aktualisiert)|  
 |----------|----------|----------------------------|  
-|Mountain-100|BK-M101|{5} Mountain Bikes|  
-|Mountain-100|BK-M201|{5} Mountain Bikes|  
+|Mountain-100|BK-M101|{5}Mountain Bikes|  
+|Mountain-100|BK-M201|{5}Mountain Bikes|  
   
  Sie können im **Explorer**jeden Attributwert in der Spalte „Subcategory“ aktualisieren. Wenn Sie keine Berechtigung für ein Attribut haben, wird das Attribut nicht angezeigt.  
   
 > [!NOTE]  
 >  In diesem Beispiel ist Subcategory ein domänenbasiertes Attribut, das auf der SubcategoryList-Entität basiert. Sie können eine andere Unterkategorie für Mountain-100 auswählen, der SubcategoryList-Entität jedoch keine Elemente hinzufügen bzw. Elemente aus dieser Entität löschen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
- [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
- [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+ [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   
+ [Mitglieder &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Attribute &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

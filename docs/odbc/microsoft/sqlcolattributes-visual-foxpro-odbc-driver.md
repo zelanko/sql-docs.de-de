@@ -1,5 +1,5 @@
 ---
-title: SQLColAttributes (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: SQLColAttribute (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,36 +13,36 @@ ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fb35211160cb7cba866c2b1c9b1cf72340e92ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68132619"
 ---
 # <a name="sqlcolattributes-visual-foxpro-odbc-driver"></a>SQLColAttributes (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Vollständig  
+ Unterstützung: vollständig  
   
- ODBC-API-Übereinstimmung: Kern-Ebene  
+ ODBC-API-Konformität: kernstufe  
   
- Gibt Informationen der Sicherheitsbeschreibung für eine Spalte in einem Resultset zurück. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, eine 32-Bit-Deskriptor-abhängige Wert oder ein ganzzahliger Wert zurückgegeben.  
+ Gibt Deskriptorinformationen für eine Spalte in einem Resultset zurück. Deskriptorinformationen werden als Zeichenfolge, als 32-Bit-deskriptorabhängige Werte oder als ganzzahliger Wert zurückgegeben.  
   
 > [!NOTE]  
->  **SQLColAttributes** kann nicht verwendet werden, um Informationen über die Lesezeichenspalte (Spalte 0) zurückgegeben werden sollen.  
+>  **SQLColAttribute** können nicht zum Zurückgeben von Informationen über die Lesezeichen Spalte (Spalte 0) verwendet werden.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt alle *fDescType* Werte. Die folgende Tabelle enthält Kommentare vom Treiber-Implementierung der ausgewählten Werte.  
+ Der Visual FoxPro-ODBC-Treiber unterstützt alle Werte des *Typs* "vollständig". In der folgenden Tabelle sind Kommentare zur Implementierung ausgewählter Werte des Treibers enthalten.  
   
-|*fDescType*|Kommentar|  
+|*Typ "Typ"*|Comment|  
 |-----------------|-------------|  
-|SQL_COLUMN_AUTO_INCREMENT|"False" zurückgibt: Visual FoxPro weist keine Zählerfelder auf.|  
-|SQL_COLUMN_CASE_SENSITIVE|Wenn der Spaltentyp Zeichen ist, wird immer TRUE zurückgegeben.|  
-|SQL_COLUMN_LABEL|Gibt den Namen der Spalte, die auch von SQL_COLUMN_NAME zurückgegeben wird.|  
-|SQL_COLUMN_MONEY|Gibt TRUE zurück, wenn der Spaltentyp Währung (dargestellt durch "Y" in der Visual FoxPro-Sprache).|  
+|SQL_COLUMN_AUTO_INCREMENT|Gibt false zurück: Visual FoxPro enthält keine Counter-Felder.|  
+|SQL_COLUMN_CASE_SENSITIVE|Gibt immer true zurück, wenn der Spaltentyp ein Zeichen ist.|  
+|SQL_COLUMN_LABEL|Gibt den Spaltennamen zurück, der ebenfalls von SQL_COLUMN_NAME zurückgegeben wird.|  
+|SQL_COLUMN_MONEY|Gibt "true" zurück, wenn der Spaltentyp "Currency" (dargestellt durch "Y" in der Sprache von Visual FoxPro) ist.|  
 |SQL_COLUMN_OWNER_NAME|Gibt immer eine leere Zeichenfolge zurück.|  
 |SQL_COLUMN_QUALIFIER_NAME|Gibt immer eine leere Zeichenfolge zurück.|  
-|SQL_COLUMN_SEARCHABLE|Für Spalten vom Typ Allgemein SQL_UNSEARCHABLE zurückgegeben; Diese Spalten können nicht in einer WHERE-Klausel verwendet werden.<br /><br /> Gibt SQL_SEARCHABLE für Spalten vom Typ Zeichen oder Memo mit NOCPTRANS nicht festgelegt werden; Diese Spalten können in einer WHERE-Klausel mit jedem Vergleichsoperator verwendet werden.<br /><br /> Für alle anderen Spaltentypen SQL_ALL_EXCEPT_LIKE zurückgegeben; Diese Spalten können in einer WHERE-Klausel mit allen Vergleichsoperatoren mit Ausnahme von ähnlichen verwendet werden.|  
+|SQL_COLUMN_SEARCHABLE|Gibt SQL_UNSEARCHABLE für Spalten vom Typ "Allgemein" zurück. Diese Spalten können nicht in einer WHERE-Klausel verwendet werden.<br /><br /> Gibt SQL_SEARCHABLE für Spalten vom Typ ' character ' oder ' Memo ' zurück, bei denen ' nocptrans ' nicht Diese Spalten können in einer WHERE-Klausel mit einem beliebigen Vergleichs Operator verwendet werden.<br /><br /> Gibt SQL_ALL_EXCEPT_LIKE für alle anderen Spaltentypen zurück. Diese Spalten können in einer WHERE-Klausel mit allen Vergleichs Operatoren mit Ausnahme von like verwendet werden.|  
 |SQL_COLUMN_TABLE_NAME|Gibt immer eine leere Zeichenfolge zurück.|  
   
- Weitere Informationen finden Sie unter [SQLColAttributes](../../odbc/reference/syntax/sqlcolattributes-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLColAttribute](../../odbc/reference/syntax/sqlcolattributes-function.md) in der *ODBC Programmer es Reference*.

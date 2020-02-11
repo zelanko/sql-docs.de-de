@@ -1,5 +1,5 @@
 ---
-title: Volltext- und semantische Suche dynamische Verwaltungssichten - Funktionen | Microsoft-Dokumentation
+title: Dynamische Verwaltungs Sichten für die Volltext-und semantische Suche-Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130767"
 ---
-# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Volltext- und semantische Suche dynamische Verwaltungssichten - Funktionen
+# <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>Dynamische Verwaltungs Sichten für die Volltext-und semantische Suche-Funktionen
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Dieser Abschnitt enthält die folgenden dynamischen Verwaltungssichten und -funktionen für die Volltextsuche und semantische Suche.  
@@ -67,8 +67,8 @@ ms.locfileid: "68130767"
  [sys.dm_fts_semantic_similarity_population &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-semantic-similarity-population-transact-sql.md)  
  Gibt eine Zeile mit Statusinformationen über die Auffüllung des Dokumentähnlichkeitsindex für jeden Ähnlichkeitsindex in jeder Tabelle zurück, der ein semantischer Index zugeordnet ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Systemsichten &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [System Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

@@ -1,6 +1,6 @@
 ---
-title: sqlps-Hilfsprogramm | Microsoft-Dokumentation
-ms.custom: ''
+title: sqlps (Hilfsprogramm)
+ms.custom: seo-lt-2019
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -14,19 +14,19 @@ ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: cbc4492aa3c52e08eb6cbce71012da9f91f371aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 6d76286b8632797ab871693a26ff6e19523cc256
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68223741"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "75304824"
 ---
 # <a name="sqlps-utility"></a>sqlps (Hilfsprogramm)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   Das Hilfsprogramm **sqlps** startet eine Windows PowerShell-Sitzung mit geladenem und registriertem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Anbieter sowie geladenen und registrierten Cmdlets. Sie können PowerShell-Befehle oder -Skripts eingeben, die die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -PowerShell-Komponenten verwenden, sodass Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und ihre Objekte verwendet werden können.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen das PowerShell-Modul **sqlps** . Weitere Informationen zum **sqlps** -Modul finden Sie unter [Importieren des SQLPS-Moduls](../relational-databases/scripting/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen das PowerShell-Modul **sqlps**. Weitere Informationen zum **sqlps** -Modul finden Sie unter [Importieren des SQLPS-Moduls](../relational-databases/scripting/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Syntax  
   

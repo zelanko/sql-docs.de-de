@@ -14,14 +14,14 @@ ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d0533a0ee616d4097793eca46c7d45a269142737
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086399"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption-Zuordnung
-Wenn eine Anwendung ruft **SQLGetConnectOption** über einen ODBC *3.x* Treiber, den Aufruf von  
+Wenn eine Anwendung **SQLGetConnectOption** über einen ODBC *3. x* -Treiber aufruft, wird der Aufruf von  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -29,26 +29,26 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  wird wie folgt zugeordnet:  
   
--   Wenn *fOption* gibt an, eine ODBC-definierten Verbindungsoption, die eine Zeichenfolge, die Treiber-Manager ruft zurückgibt.  
+-   Wenn " *f-Option* " eine ODBC-definierte Verbindungs Option angibt, die eine Zeichenfolge zurückgibt, ruft der Treiber-Manager  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   Wenn *fOption* gibt an, eine ODBC-definierten Verbindungsoption, die einen 32-Bit-Ganzzahl-Wert, der Treiber-Manager ruft zurückgibt.  
+-   Wenn " *f Option* " eine ODBC-definierte Verbindungs Option angibt, die einen ganzzahligen Wert von 32 Bit zurückgibt, ruft der Treiber-Manager  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   Wenn *fOption* gibt an, eine treiberdefinierten-Anweisungsoption, die Treiber-Manager-Aufrufe  
+-   Wenn " *f Option* " eine Treiber definierte Anweisungs Option angibt, ruft der Treiber-Manager  
   
     ```  
     SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- In den vorherigen drei Fällen die *ConnectionHandle* Argument festgelegt ist, mit dem Wert im *Hdbc*, *Attribut* Argument festgelegt ist, mit dem Wert im *fOption* , und die *ValuePtr* Argument festgelegt ist, auf den gleichen Wert wie *PvParam*.  
+ In den vorangegangenen drei Fällen wird das *connectionHandle* -Argument auf den Wert in *hdbc*festgelegt, das *Attribut* Argument wird auf den Wert in *fOption*festgelegt, und das *ValuePtr* -Argument wird auf denselben Wert wie *pvParam*festgelegt.  
   
- Für ODBC definierte Zeichenfolge Verbindungsoptionen, des Treiber-Managers festlegt der *Pufferlänge* Argument im Aufruf von **SQLGetConnectAttr** auf die vordefinierte maximale Länge (SQL_MAX_OPTION_STRING_LENGTH); für eine Verbindungsoption keine Zeichenfolgen darstellen *Pufferlänge* auf 0 festgelegt ist.  
+ Für ODBC-definierte Zeichen folgen-Verbindungsoptionen legt der Treiber-Manager das *BufferLength* -Argument im-Befehl auf **SQLGetConnectAttr** auf die vordefinierte maximale Länge (SQL_MAX_OPTION_STRING_LENGTH) fest. für eine nicht-Zeichen folgen-Verbindungs Option wird *BufferLength* auf 0 festgelegt.  
   
- Für eine ODBC *3.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_CONN_OPT_MIN und SQL_CONN_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START. Der Treiber muss die Gültigkeit der Werte für die Option zu überprüfen.
+ Bei einem ODBC *3. x* -Treiber prüft der Treiber-Manager nicht mehr, ob die *Option* zwischen SQL_CONN_OPT_MIN und SQL_CONN_OPT_MAX liegt oder größer als SQL_CONNECT_OPT_DRVR_START ist. Der Treiber muss die Gültigkeit der Optionswerte überprüfen.

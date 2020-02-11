@@ -16,18 +16,18 @@ ms.assetid: e3d7cf2f-c6fb-43c2-8538-4470a6375af5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e034e6464e395c1516eed874ed1c0cff2c32238f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985710"
 ---
 # <a name="atomization-xquery"></a>Atomisierung (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Atomisierung ist das Verfahren, durch das der typisierte Wert eines Elements extrahiert wird. Dieses Verfahren wird unter bestimmten Umständen implizit verwendet. Bestimmte XQuery-Operatoren, wie z. B. arithmetische und Vergleichsoperatoren, sind von diesem Verfahren abhängig. Z. B. Wenn Sie arithmetische Operatoren direkt auf Knoten anwenden, der typisierte Wert eines Knotens wird zuerst abgerufen durch den Aufruf implizit die [datenfunktion](../xquery/data-accessor-functions-data-xquery.md). Auf diese Weise wird der atomare Wert dem arithmetischen Operator als Operand übergeben.  
+  Atomisierung ist das Verfahren, durch das der typisierte Wert eines Elements extrahiert wird. Dieses Verfahren wird unter bestimmten Umständen implizit verwendet. Bestimmte XQuery-Operatoren, wie z. B. arithmetische und Vergleichsoperatoren, sind von diesem Verfahren abhängig. Wenn Sie z. b. arithmetische Operatoren direkt auf Knoten anwenden, wird der typisierte Wert eines Knotens zuerst durch den impliziten Aufruf der [Data-Funktion](../xquery/data-accessor-functions-data-xquery.md)abgerufen. Auf diese Weise wird der atomare Wert dem arithmetischen Operator als Operand übergeben.  
   
- Die folgende Abfrage gibt beispielsweise den Gesamtwert der LaborHours-Attribute zurück. In diesem Fall **data()** implizit auf die Attributknoten angewendet wird.  
+ Die folgende Abfrage gibt beispielsweise den Gesamtwert der LaborHours-Attribute zurück. In diesem Fall werden die **Daten ()** implizit auf die Attribut Knoten angewendet.  
   
 ```  
 declare @x xml  
@@ -39,17 +39,17 @@ set @x='<ROOT><Location LID="1" SetupTime="1.1" LaborHours="3.3" />
 SELECT @x.query('sum(/ROOT/Location/@LaborHours)')  
 ```  
   
- Obwohl nicht erforderlich ist, können Sie auch explizit angeben der **data()** Funktion:  
+ Auch wenn dies nicht erforderlich ist, können Sie die **Data ()** -Funktion explizit angeben:  
   
 ```  
 SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')  
 ```  
   
- Ein anderes Beispiel für die implizite Atomisierung ist das Verwenden von arithmetischen Operatoren. Die **+** Operator erfordert atomarer Werte und **data()** implizit angewendet, um den atomaren Wert des LaborHours-Attributs abrufen. Die Abfrage wird angegeben, für die Instructions-Spalte, der die **Xml** Typ in der ProductModel-Tabelle. Die folgende Abfrage gibt das LaborHours-Attribut dreimal zurück. Beachten Sie in der Abfrage Folgendes:  
+ Ein anderes Beispiel für die implizite Atomisierung ist das Verwenden von arithmetischen Operatoren. Der **+** Operator erfordert atomarische Werte, und **Data ()** wird implizit angewendet, um den atomaren Wert des LaborHours-Attributs abzurufen. Die Abfrage wird für die Instructions-Spalte des **XML** -Typs in der ProductModel-Tabelle angegeben. Die folgende Abfrage gibt das LaborHours-Attribut dreimal zurück. Beachten Sie in der Abfrage Folgendes:  
   
 -   Bei der Konstruktion des OriginalLaborHours-Attributs wird die Atomisierung implizit auf die von (`$WC/@LaborHours`) zurückgegebene Singleton-Sequenz angewendet. Der typisierte Wert des LaborHours-Attributs wird anschließend dem OriginalLaborHours-Attribut zugewiesen.  
   
--   Bei der Konstruktion des UpdatedLaborHoursV1-Attributs macht der arithmetische Operator atomare Werte erforderlich. Aus diesem Grund **data()** implizit auf das von zurückgegebene LaborHours-Attributs angewendet wird (`$WC/@LaborHours`). Anschließend wird dem Attribut der atomare Wert 1 hinzugefügt. Die Konstruktion des updatedlaborhoursv2 zeigt die explizite Anwendung von **data()** , ist jedoch nicht erforderlich.  
+-   Bei der Konstruktion des UpdatedLaborHoursV1-Attributs macht der arithmetische Operator atomare Werte erforderlich. Daher werden die **Daten ()** implizit auf das LaborHours-Attribut angewendet, das von (`$WC/@LaborHours`) zurückgegeben wird. Anschließend wird dem Attribut der atomare Wert 1 hinzugefügt. Die Erstellung des Attributs UpdatedLaborHoursV2 zeigt die explizite Anwendung der **Daten ()**, ist aber nicht erforderlich.  
   
 ```  
 SELECT Instructions.query('  
@@ -74,11 +74,11 @@ where ProductModelID=7
   
  Aus der Atomisierung ergibt sich eine Instanz eines einfachen Datentyps, ein leeres Dataset oder ein Fehler bezüglich des statischen Typs.  
   
- Atomisierung tritt auch in Funktionen, Rückgabewerte von Funktionen, die an Parametern **cast()** Ausdrücke und Sortierung Ausdrücke, die in der Order by-Klausel übergeben.  
+ Die Atomisierung tritt auch in Vergleichs Ausdrucks Parametern auf, die an Funktionen, von Functions zurückgegebene Werte, **Cast ()** -Ausdrücke und in der ORDER BY-Klausel übergebenen Sortier Ausdrücken ausgegeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XQuery-Grundlagen](../xquery/xquery-basics.md)   
- [Vergleichsausdrücke &#40;XQuery&#41;](../xquery/comparison-expressions-xquery.md)   
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+ [Vergleichsausdrücke &#40;XQuery-&#41;](../xquery/comparison-expressions-xquery.md)   
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

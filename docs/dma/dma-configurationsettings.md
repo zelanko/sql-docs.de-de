@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: fc280fa541e2a6b5ea984086d694ffdd3f7c39a8
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056540"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Konfigurieren von Einstellungen für Datenmigrations-Assistent
@@ -39,7 +39,7 @@ Stellen Sie sicher, dass Sie eine Kopie der ursprünglichen Konfigurationsdatei 
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Anzahl von Datenbanken, die parallel bewertet werden sollen
 
-Datenmigrations-Assistent mehrere Datenbanken parallel bewertet. Während der Bewertung Datenmigrations-Assistent extrahiert eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen. Bei diesem Vorgang kann ein Timeout entstehen, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
+Datenmigrations-Assistent mehrere Datenbanken parallel bewertet. Während der Bewertung Datenmigrations-Assistent extrahiert eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen.Bei diesem Vorgang kann ein Timeout entstehen, wenn mehrere Datenbanken auf demselben Server parallel bewertet werden. 
 
 Ab Datenmigrations-Assistent v 2.0 können Sie dies steuern, indem Sie den Konfigurations Wert paralleldatenbanken festlegen. Der Standardwert ist 8.
 
@@ -82,19 +82,19 @@ Ab Datenmigrations-Assistent v 2.0 können Sie den paralleldatenbanken-Konfigura
 Während der Bewertung extrahiert Datenmigrations-Assistent eine Datenebenenanwendung (dacpac), um das Datenbankschema zu verstehen. Dieser Vorgang kann mit Timeouts für extrem große Datenbanken fehlschlagen, oder wenn der Server ausgelastet ist. Ab der Daten Migration v 1.0 können Sie die folgenden Konfigurationswerte ändern, um Fehler zu vermeiden. 
 
 > [!NOTE]
-> Der gesamte &lt;dacfx-&gt; Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
+> Der gesamte &lt;dacfx&gt; -Eintrag ist standardmäßig kommentiert. Entfernen Sie die Kommentare, und ändern Sie den Wert nach Bedarf.
 
 - CommandTimeout
 
-   Dieser Parameter legt die IDbCommand. CommandTimeout-Eigenschaft in *Sekunden*fest. (Standardwert = 60)
+   Dieser Parameter legt die IDbCommand. CommandTimeout-Eigenschaft in *Sekunden*fest.(Standardwert = 60)
 
-- databaseLockTimeout
+- databaselocktimeout
 
-   Dieser Parameter entspricht dem [Festlegen des Timeouts für Sperr\_\_Zeitraum](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*. (Standardwert = 5.000)
+   Dieser Parameter entspricht dem [\_Timeout Zeitraum für\_Sperr Timeout](../t-sql/statements/set-lock-timeout-transact-sql.md) in *Millisekunden*.(Standardwert = 5.000)
 
-- maxDataReaderDegreeOfParallelism
+- maxdatareaderdegreeoarparallelism
 
-  Mit diesem Parameter wird die Anzahl der zu verwendenden SQL-Verbindungspool Verbindungen festgelegt. (Standardwert = 8)
+  Mit diesem Parameter wird die Anzahl der zu verwendenden SQL-Verbindungspool Verbindungen festgelegt.(Standardwert = 8)
 
 ```
 <advisorGroup>
@@ -152,6 +152,6 @@ Jede Regel weist einen Fehlercode im Titel auf. Wenn Sie keine Regeln benötigen
 </workflowSettings>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Datenmigrations-Assistent Download](https://www.microsoft.com/download/details.aspx?id=53595)

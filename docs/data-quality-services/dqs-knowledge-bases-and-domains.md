@@ -10,10 +10,10 @@ ms.assetid: b5879041-db1e-4c6c-b49a-33784ade2942
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: b84c1cee7dd805e68e0742c72980d7fb8a55c54b
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251648"
 ---
 # <a name="dqs-knowledge-bases-and-domains"></a>DQS-Wissensdatenbanken und -Domänen
@@ -148,10 +148,10 @@ ms.locfileid: "75251648"
   
 |||  
 |-|-|  
-|Eine Wissensdatenbank erstellen, öffnen, ihr Informationen hinzufügen und auf ihr die Wissensermittlung ausführen|[Aufbauen einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
+|Eine Wissensdatenbank erstellen, öffnen, ihr Informationen hinzufügen und auf ihr die Wissensermittlung ausführen|[Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
 |Import- und Exportvorgänge auf Domänen und Wissensdatenbanken ausführen|[Importieren und Exportieren von Wissen](../data-quality-services/importing-and-exporting-knowledge.md)|  
 |Einzelne Domänen, eine Domänenregel, ausdrucksbasierte Beziehungen erstellen und Domänenwerte ändern|[Verwalten einer Domäne](../data-quality-services/managing-a-domain.md)|  
-|Eine Verbunddomäne, eine domänenübergreifende Regel erstellen und Wertbeziehungen verwenden|[Verwalten einer Verbund Domäne](../data-quality-services/managing-a-composite-domain.md)|  
+|Eine Verbunddomäne, eine domänenübergreifende Regel erstellen und Wertbeziehungen verwenden|[Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md)|  
 |Die in DQS integrierte DQS-Wissensdatenbank verwenden|[Verwenden der DQS-Standard-Wissensdatenbank](../data-quality-services/using-the-dqs-default-knowledge-base.md)|  
   
   

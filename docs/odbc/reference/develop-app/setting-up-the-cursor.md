@@ -15,15 +15,15 @@ ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107545"
 ---
 # <a name="setting-up-the-cursor"></a>Einrichten des Cursors
-Die Anwendung kann den Cursortyp angeben, vor dem Ausführen einer Anweisung, die ein Ergebnis erstellt. Dies wird mit dem SQL_ATTR_CURSOR_TYPE-Attribut-Anweisung. Wenn die Anwendung nicht explizit einen Typ angeben, wird ein Vorwärtscursor verwendet werden. Um einen gemischten Cursor zu erhalten, eine Anwendung gibt an, einen keysetgesteuerten Cursor deklariert jedoch eine Keysetgröße kleiner als die Größe des Resultsets.  
+Die Anwendung kann den Cursortyp vor dem Ausführen einer Anweisung angeben, die ein Resultset erstellt. Dies erfolgt mit dem SQL_ATTR_CURSOR_TYPE-Anweisungs Attribut. Wenn die Anwendung nicht explizit einen Typ angibt, wird ein Vorwärts Cursor verwendet. Zum erhalten eines gemischten Cursors gibt eine Anwendung einen keysetgesteuerten Cursor an, deklariert jedoch eine Keysetgröße, die kleiner als die resultsetgröße ist.  
   
- Für keysetgesteuerte und gemischte Cursor kann die Anwendung auch die Keysetgröße angeben. Dies wird mit dem Attribut der SQL_ATTR_KEYSET_SIZE-Anweisung. Wenn die Keysetgröße auf 0 (null), die der Standardwert ist festgelegt ist, die Keysetgröße auf die Größe des Resultsets festgelegt ist, und ein keysetgesteuerten Cursors wird verwendet. Die Keysetgröße kann geändert werden, nachdem der Cursor geöffnet wurde.  
+ Für keysetgesteuerte und gemischte Cursor kann die Anwendung auch die Keysetgröße angeben. Dies erfolgt mit dem SQL_ATTR_KEYSET_SIZE-Anweisungs Attribut. Wenn die Keysetgröße auf 0 (Standardwert) festgelegt ist, wird die Größe des Keysets auf die resultsetgröße festgelegt, und ein keysetgesteuerte Cursor wird verwendet. Die Keysetgröße kann geändert werden, nachdem der Cursor geöffnet wurde.  
   
- Die Anwendung kann auch die Rowsetgröße festzulegen; Weitere Informationen finden Sie unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md)weiter oben in diesem Abschnitt.
+ Die Anwendung kann auch die Rowsetgröße festlegen. Weitere Informationen finden Sie weiter oben in diesem Abschnitt unter [Verwenden von Blockcursorn](../../../odbc/reference/develop-app/using-block-cursors.md).

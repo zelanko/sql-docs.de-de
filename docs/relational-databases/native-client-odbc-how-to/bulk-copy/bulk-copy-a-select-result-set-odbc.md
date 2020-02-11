@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3909c8d8b8df5b5bcdb17945eee547e81f73f004
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781992"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Massenkopieren eines SELECT-Resultsets (ODBC)
@@ -28,7 +28,7 @@ ms.locfileid: "73781992"
   In diesem Beispiel wird gezeigt, wie mit Massenkopierfunktionen das Resultset einer SELECT-Anweisung massenkopiert wird. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-bulk-copy-out-the-result-set-of-a-select-statement"></a>So kopieren Sie das Resultset einer SELECT-Anweisung mithilfe eines Massenkopiervorgangs  
   
@@ -52,7 +52,7 @@ ms.locfileid: "73781992"
   
 6.  Rufen Sie [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) auf, um den Massenkopiervorgang auszuführen.  
 
- Wenn Sie diese Schritte ausführen, wird die Datei im systemeigenen Format erstellt. Mithilfe [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)können Sie die Datenwerte in andere Datentypen konvertieren. Weitere Informationen finden Sie unter [Erstellen einer Format Datei &#40;für das Massen kopieren&#41;(ODBC](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md)).  
+ Wenn Sie diese Schritte ausführen, wird die Datei im systemeigenen Format erstellt. Mithilfe [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)können Sie die Datenwerte in andere Datentypen konvertieren. Weitere Informationen finden Sie unter [Erstellen einer Format Datei für das Massen kopieren &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Startseite [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treiber Name ist "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
@@ -165,7 +165,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Massen kopieren mit dem SQL Server ODBC-Treiber Gewusst-wie &#40;-Themen ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Massen kopieren mit dem SQL Server ODBC-Treiber &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
   

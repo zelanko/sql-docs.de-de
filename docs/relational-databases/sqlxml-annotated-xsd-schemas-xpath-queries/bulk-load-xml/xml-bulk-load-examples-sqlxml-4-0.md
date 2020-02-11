@@ -33,10 +33,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f70e66a02637b65e96cccc6001c9702d5253d5cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257370"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Beispiele für XML-Massenladen (SQLXML 4.0)
@@ -200,7 +200,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B: Massenladen von XML-Daten in mehrere Tabellen  
+## <a name="b-bulk-loading-xml-data-in-multiple-tables"></a>B. Massenladen von XML-Daten in mehrere Tabellen  
  In diesem Beispiel besteht das XML-Dokument aus den ** \<Elementen "Customer>** " und ** \<"Order>** ".  
   
 ```xml  
@@ -331,7 +331,7 @@ End Function
 </Schema>  
 ```  
   
-## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>c. Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen  
+## <a name="c-using-chain-relationships-in-the-schema-to-bulk-load-xml"></a>C. Verwenden von Kettenbeziehungen im Schema für das XML-Massenladen  
  Dieses Beispiel zeigt, wie die im Zuordnungsschema festgelegte M:N-Beziehung des XML-Massenladevorgangs zum Laden von Daten in eine Tabelle verwendet wird, die eine M:N-Beziehung darstellt.  
   
  Das folgende XSD-Schema ist ein Beispiel dafür:  
@@ -434,7 +434,7 @@ End Function
   
 5.  Führen Sie den VBScript-Code aus. XML-Massenladen lädt das XML-Dokument in die Tabellen Ord und Product.  
   
-## <a name="d-bulk-loading-in-identity-type-columns"></a>D. Massenladen in Identitätsspalten  
+## <a name="d-bulk-loading-in-identity-type-columns"></a>D: Massenladen in Identitätsspalten  
  Dieses Beispiel zeigt den Umgang mit Identitätsspalten beim Massenladen. In dem Beispiel werden Daten in einem Massenvorgang in drei Tabellen (Ord, Product und OrderDetail) geladen.  
   
  Tabellen:  
@@ -457,7 +457,7 @@ OrderDetail (OrderID, ProductID)
   
  In diesem Fall gibt der XML-Massenladevorgang die Primärschlüssel- bzw. Fremdschlüsselbeziehung zwischen Tabellen an. Der Massenladevorgang fügt zunächst Datensätze in die Tabelle mit den Primärschlüsseln ein und gibt dann die von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] generierten Identitätswerte an die Tabellen mit den Fremdschlüsselspalten weiter. Im folgenden Beispiel fügt der XML-Massenladevorgang Daten in dieser Reihenfolge in Tabellen ein:  
   
-1.  product  
+1.  Produkt  
   
 2.  Ord  
   

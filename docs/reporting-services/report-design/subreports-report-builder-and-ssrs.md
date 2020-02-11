@@ -9,10 +9,10 @@ ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 55373931197535925a9e0d599c9953fd81277c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65574517"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Unterberichte (Berichts-Generator und SSRS)
@@ -21,7 +21,7 @@ ms.locfileid: "65574517"
 > [!NOTE]  
 >  Wenn Sie einen Unterbericht in einem Tablix-Datenbereich verwenden, werden der Unterbericht und seine Parameter für jede Zeile verarbeitet. Wenn viele Zeilen vorhanden sind, sollten Sie sich in einem solchen Fall überlegen, ob ein Drillthroughbericht nicht besser geeignet ist.  
   
- ![rs_Unterbericht](../../reporting-services/report-design/media/rs-subreport.gif "rs_Subreportt")  
+ ![rs_Subreport](../../reporting-services/report-design/media/rs-subreport.gif "rs_Subreport")  
   
  In dieser Abbildung stammen die im Hauptbericht "Verkaufsauftrag" angezeigten Kontaktinformationen eigentlich aus einem Unterbericht "Kontakte".  
   
