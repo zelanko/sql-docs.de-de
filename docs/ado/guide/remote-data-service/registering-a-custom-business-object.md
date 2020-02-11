@@ -1,5 +1,5 @@
 ---
-title: Registrieren ein benutzerdefiniertes Geschäftsobjekt | Microsoft-Dokumentation
+title: Registrieren eines benutzerdefinierten Geschäftsobjekts | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,31 +15,31 @@ ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f998463e0f8190aa040b801d2fd29c732bb31dce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922366"
 ---
 # <a name="registering-a-custom-business-object"></a>Registrieren eines benutzerdefinierten Geschäftsobjekts
-Um ein benutzerdefiniertes Geschäftsobjekt (.dll oder .exe) wurde erfolgreich über den Webserver zu starten, muss das Geschäftsobjekt, das die ProgID in der Registrierung eingegeben werden, wie in diesem Verfahren beschrieben. Dieses Feature von RDS schützt die Sicherheit Ihres Webservers durch nur zulässige ausführbare Dateien ausführen.  
+Damit ein benutzerdefiniertes Geschäftsobjekt (. dll oder. exe) über den Webserver erfolgreich gestartet werden kann, muss die ProgID des Geschäftsobjekts in die Registrierung eingegeben werden, wie in diesem Verfahren erläutert. Diese RDS-Funktion schützt die Sicherheit Ihres Webservers, indem nur sanktionierte ausführbare Dateien ausgeführt werden.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 > [!NOTE]
->  Für MDAC 2.0 und höher und Windows DAC, die Business-Standardobjekts, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), ist nicht standardmäßig während der Installation von MDAC/Windows DAC registriert. Aber wenn **RDSServer.DataFactory** registriert wurde, als für die Ausführung auf dem Computer vor der Installation sicher, wird der Registrierungseintrag für die neue Installation beibehalten.  
+>  Bei MDAC 2,0 und höher und Windows DAC wird das standardmäßige Geschäftsobjekt [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)bei der MDAC-/Windows DAC-Installation nicht standardmäßig registriert. Wenn jedoch **RDSServer. DataFactory** vor der Installation als sicher für die Ausführung auf dem Computer registriert wurde, wird der Registrierungs Eintrag für die neue Installation beibehalten.  
   
 ### <a name="to-register-a-custom-business-object"></a>So registrieren Sie ein benutzerdefiniertes Geschäftsobjekt:  
   
-1.  Klicken Sie auf **starten** , und klicken Sie dann auf **ausführen**.  
+1.  Klicken Sie auf **Start** und dann auf **Ausführen**.  
   
-2.  Typ **"regedit"** , und klicken Sie auf **OK**.  
+2.  Geben Sie **Regedit** ein und klicken Sie auf **OK**.  
   
-3.  Navigieren Sie im Registrierungs-Editor zu den **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\W3SVC\Parameters\ADCLaunch** Registrierungsschlüssel.  
+3.  Navigieren Sie im Registrierungs-Editor zum **HKEY_LOCAL_MACHINE \system\currentcontrolset\services\w3svc\parameters\adclaunch** Registry Key.  
   
-4.  Wählen Sie die **ADCLaunch** Schlüssel, und klicken Sie dann die **bearbeiten**, zeigen Sie auf **neu** , und klicken Sie auf **Schlüssel**.  
+4.  Wählen Sie **adclaunch** Key aus, und zeigen Sie dann im Menü **Bearbeiten**auf **neu** , und klicken Sie auf **Schlüssel**.  
   
-5.  Geben Sie die ProgID des benutzerdefinierten Objekts, und klicken Sie auf **EINGABETASTE**. Lassen Sie die **Wert** Eintrag leer.
+5.  Geben Sie die ProgID Ihres benutzerdefinierten Geschäftsobjekts ein, und drücken Sie die **Eingabe**Taste. Lassen Sie den **Wert** Eintrag leer.
 
 
