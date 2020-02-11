@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 622f575541d1a111e5cda6a28617ad400a977292
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892798"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
@@ -37,7 +37,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *Einfügen*  
  Die Zeichenfolge, die den Namen und den Speicherort der Datei angibt, in die exportiert werden soll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ist in der Anweisung ein Miningmodell angegeben, enthält die sich ergebende Datei auch eine zugeordnete Miningstruktur. Wenn die-Anweisung **with-Abhängigkeiten**angibt, sind alle-Objekte, die zum Verarbeiten des Objekts erforderlich sind (z. b. die Datenquelle und die Datenquellen Sicht), in der ABF-Datei enthalten.  
   
  Sie müssen Datenbank-oder Server Administrator sein, um Objekte aus einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank exportieren oder importieren zu können.  
@@ -56,11 +56,11 @@ EXPORT MINING STRUCTURE [Targeted Mailing], [Forecasting] MINING MODEL Associati
 EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; - &#40;Anweisungs Referenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-statements.md)   
- [DMX IMPORTIEREN &#40;&#41;](../dmx/import-dmx.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [Importieren &#40;DMX-&#41;](../dmx/import-dmx.md)   
  [Exportieren und Importieren von Data Mining-Objekten](https://docs.microsoft.com/analysis-services/data-mining/export-and-import-data-mining-objects)  
   
   

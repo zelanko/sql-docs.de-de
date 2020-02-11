@@ -1,5 +1,5 @@
 ---
-title: Allgemein (Datenbankdesigner) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Allgemein (Datenbank-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081086"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Allgemein (Datenbank-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Allgemein** können Sie die Eigenschaften einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank ändern.  
   
- **Zum Anzeigen der Registerkarte "Allgemein"**  
+ **So zeigen Sie die Registerkarte Allgemein an**  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66081086"
  **Sprache**  
  Wählen Sie die Sprache für die angegebene Übersetzung aus.  
   
- Um dem Raster eine neue Übersetzung hinzuzufügen, klicken Sie auf  **\<neue Übersetzung hinzufügen >** .  
+ Um dem Raster eine neue Übersetzung hinzuzufügen, klicken Sie ** \<auf neue Übersetzungs>hinzufügen **.  
   
  **Übersetzte Beschriftung**  
  Geben Sie die Beschriftung der Datenbank in der entsprechenden Sprache für die Übersetzung ein. Wenn der Eintrag leer bleibt, wird die Standardbeschriftung für die Datenbank verwendet.  
@@ -67,17 +67,17 @@ ms.locfileid: "66081086"
  **Name**  
  Geben Sie den Namen des Kontotyps ein.  
   
- Um einen neuen Kontotyp hinzuzufügen, klicken Sie auf  **\<neuen Kontotyp hinzufügen >** .  
+ Um einen neuen Kontotyp hinzuzufügen, klicken Sie ** \<auf neuen Kontotyp hinzufügen>**.  
   
  **Alias**  
  Legt den Standardnamen des Kontotyps fest, der vom Business Intelligence-Assistenten verwendet wird. Wenn diese Spalte leer bleibt, wird der Standardwert aus der **Name** -Spalte verwendet.  
   
- **Aggregationsfunktion**  
+ **Aggregations Funktion**  
  Wählen Sie die Aggregationsfunktion aus, die für den ausgewählten Kontotyp verwendet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
- [Warnungen &#40;Datenbank-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+ [Mehrdimensionale Modell Datenbanken &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)   
+ [Warnungen &#40;Daten Bank Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](warnings-database-designer-analysis-services-multidimensional-data.md)  
   
   

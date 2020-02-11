@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cec1f30ba728f1cf3b808acb2fb362e21d259a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058158"
 ---
 # <a name="implementation-of-the-parent-package"></a>Implementierung des übergeordneten Pakets
@@ -27,7 +27,7 @@ ms.locfileid: "66058158"
 ## <a name="listing-child-packages"></a>Auflisten untergeordneter Pakete  
  Wenn Sie ein Projekt, das ein übergeordnetes Paket und untergeordnete Pakete enthält, über den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereitstellen, können Sie eine Liste der untergeordneten Pakete anzeigen lassen, die von den übergeordneten Paketen ausgeführt werden. Wenn Sie das übergeordnete Paket ausführen, wird automatisch für das übergeordnete Paket ein Bericht **Übersicht** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]erstellt. Der Bericht führt die untergeordneten Pakete auf, die vom Task "Paket ausführen" ausgeführt wurden, der sich im übergeordneten Paket befindet. Dies wird im folgenden Bild gezeigt.  
   
- ![Übersichtsbericht mit einer Liste von untergeordneten Paketen](media/overviewreport-childpackagelisting.png "Overview Report with list of child packages")  
+ ![Übersichtsbericht mit Liste der untergeordneten Pakete](media/overviewreport-childpackagelisting.png "Übersichtsbericht mit Liste der untergeordneten Pakete")  
   
  Weitere Informationen zum Zugreifen auf den Bericht **Übersicht** finden Sie unter [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  
   

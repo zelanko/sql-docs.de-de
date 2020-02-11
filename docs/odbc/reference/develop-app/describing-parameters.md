@@ -1,5 +1,5 @@
 ---
-title: Beschreibt Parameter | Microsoft-Dokumentation
+title: Beschreiben von Parametern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68040020"
 ---
 # <a name="describing-parameters"></a>Beschreiben von Parametern
-**SQLBindParameter** enthält Argumente, die den Parameter zu beschreiben: die SQL-Datentyp, Genauigkeit und Skalierung. Der Treiber verwendet diese Informationen, oder *Metadaten* umzuwandelnde Wert des Parameters in den Typ, der von der Datenquelle erforderlich sind. Auf den ersten Blick scheint es sich, dass der Treiber in einer besseren Position, die Metadaten von Parametern als die Anwendung wissen ist; Schließlich kann der Treiber mühelos ermitteln, die Metadaten für eine Resultsetspalte. Wie sich herausstellt, ist dies nicht der Fall. Zunächst die meisten Datenquellen bieten keine Möglichkeit für den Treiber, um Metadaten von Parametern zu ermitteln. Zweitens wird die meisten Anwendungen bereits kennen, die Metadaten.  
+**SQLBindParameter** verfügt über Argumente, die den Parameter beschreiben: den SQL-Typ, die Genauigkeit und die Skalierung. Der Treiber verwendet diese Informationen oder *Metadaten,* um den Parameterwert in den von der Datenquelle benötigten Typ zu konvertieren. Auf den ersten Blick scheint es so, als ob sich der Treiber an einer besseren Position befindet, um die Parameter Metadaten zu kennen als die Anwendung. Schließlich kann der Treiber die Metadaten für eine Resultsetspalte problemlos ermitteln. Wie sich herausstellt, ist dies nicht der Fall. Erstens bieten die meisten Datenquellen keine Möglichkeit für den Treiber, Parameter Metadaten zu ermitteln. Zweitens kennen die meisten Anwendungen bereits die Metadaten.  
   
- Wenn eine SQL-Anweisung in der Anwendung hartcodiert ist, weiß der Autor der Anwendung bereits den Typ jedes Parameters an. Wenn eine SQL-Anweisung, die von der Anwendung zur Laufzeit erstellt wird, kann die Metadaten die Anwendung bestimmen, wie sie die Anweisung erstellt. Konstruiert z. B. wenn die Anwendung die-Klausel  
+ Wenn eine SQL-Anweisung in der Anwendung hart codiert ist, kennt der anwendungswriter bereits den Typ der einzelnen Parameter. Wenn eine SQL-Anweisung zur Laufzeit von der Anwendung erstellt wird, kann die Anwendung die Metadaten beim Erstellen der Anweisung ermitteln. Wenn die Anwendung beispielsweise die-Klausel erstellt  
   
 ```  
 WHERE OrderID = ?  
 ```  
   
- Er kann Aufrufen **SQLColumns** für die Spalte "OrderID".  
+ **SQLColumns** kann für die OrderID-Spalte aufgerufen werden.  
   
- Die einzige Situation, in der die Anwendung ganz einfach die Parametermetadaten bestimmen kann nicht, ist, wenn der Benutzer eine parametrisierte Anweisung eingibt. In diesem Fall die Anwendung ruft **SQLPrepare** zum Vorbereiten der Anweisung **SQLNumParams** um zu bestimmen, die Anzahl der Parameter, und **SQLDescribeParam** beschreiben Jeder Parameter. Wie bereits erwähnt wurde, die meisten Datenquellen keine bieten jedoch eine Möglichkeit für den Treiber, um Metadaten von Parametern, also ermitteln **SQLDescribeParam** wird allgemein nicht unterstützt.
+ Die einzige Situation, in der die Anwendung die Parameter Metadaten nicht einfach ermitteln kann, ist der Benutzer, der eine parametrisierte Anweisung eingibt. In diesem Fall ruft die Anwendung **SQLPrepare** auf, um die Anweisung vorzubereiten, **SQLNumParams** , um die Anzahl der Parameter zu bestimmen, und **SQLDescribeParam** , um die einzelnen Parameter zu beschreiben. Wie bereits erwähnt, bieten die meisten Datenquellen jedoch keine Möglichkeit für den Treiber, Parameter Metadaten zu ermitteln, sodass **SQLDescribeParam** nicht häufig unterstützt wird.

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4d2baef508d6273ec6c89cca38961aa22742e69
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73926016"
 ---
 # <a name="sqlnativesql"></a>SQLNativeSql
@@ -26,8 +26,8 @@ ms.locfileid: "73926016"
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber erfüllt **SQLNativeSql** -Anforderungen, ohne auf den Server zuzugreifen. Die Funktion testet die Syntax von SQL-Anweisungen effizient. Durch die Syntaxüberprüfung wird nicht bestimmt, ob Bezeichner oder die Ergebnisse von Ausdrücken in den SQL-Anweisungen gültig sind, und systemeigene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL-Anweisungen, die von **SQLNativeSql** zurückgegeben werden, können möglicherweise nicht ausgeführt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLNativeSql-Funktion](https://go.microsoft.com/fwlink/?LinkID=59358)   
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

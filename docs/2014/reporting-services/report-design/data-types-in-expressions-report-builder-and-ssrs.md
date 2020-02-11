@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891864"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
@@ -30,15 +30,15 @@ ms.locfileid: "68891864"
   
 |RDL-Typ|CLR-Typen|  
 |--------------|---------------|  
-|Zeichenfolge|Standard: Zeichenfolge<br /><br /> Chart, GUID, Timespan|  
-|Boolean|Standard: Boolean|  
+|String|Standard: String<br /><br /> Chart, GUID, Timespan|  
+|Boolean|Standard: Boolesch|  
 |Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Standard: DateTime<br /><br /> DateTimeOffset|  
-|float|Standard: Double<br /><br /> Single, Decimal|  
+|Datetime|Standard: DateTime<br /><br /> DateTimeOffset|  
+|Float|Standard: Double<br /><br /> Single, Decimal|  
 |Binär|Standard: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
 |VariantArray|Array von Variant|  
-|Serializable|Variant oder Typen, die mit Serializable markiert sind oder ISerializable implementieren.|  
+|Serialisierbar|Variant oder Typen, die mit Serializable markiert sind oder ISerializable implementieren.|  
   
 ## <a name="understanding-data-types-and-writing-expressions"></a>Grundlegendes zu Datentypen und zum Schreiben von Ausdrücken  
  Es ist wichtig, dass Sie mit Datentypen vertraut sind, wenn Sie Ausdrücke zum Vergleichen oder Kombinieren von Werten schreiben, zum Beispiel, wenn Sie Gruppierungs- oder Filterausdrücke definieren oder Aggregate berechnen. Vergleiche und Berechnungen können nur mit Elementen des gleichen Datentyps durchgeführt werden. Wenn die Datentypen nicht übereinstimmen, müssen sie explizit in den Berichtselementen durch einen Ausdruck konvertiert werden.  
@@ -65,10 +65,10 @@ ms.locfileid: "68891864"
   
 -   Erstellen Sie ein berechnetes, auf einem bestehenden Berichtsdatasetfeld basierendes Feld, indem Sie einen Ausdruck schreiben, durch den alle Daten in einer Resultsetspalte in eine neue Spalte mit einem anderen Datentyp konvertiert werden. So wird beispielsweise durch den folgenden Ausdruck das Feld Year von einer Ganzzahl in eine Zeichenfolge konvertiert: `=CStr(Fields!Year.Value)`. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX-Abfrage enthält z. b. eine FORMATTED_VALUE erweiterte Eigenschaft für cubewerte, die bereits bei der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
- Berichtsparameter müssen einer von fünf Datentypen sein: Boolean, DateTime, Integer, Float oder Text (auch als String bezeichnet). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
+ Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  
   
 > [!NOTE]  
 >  Berichtsparameter mit einem DateTime-Datentyp unterstützen keine Millisekunden. Sie können zwar einen Parameter erstellen, der auf Werten mit Millisekunden basiert, in der Dropdownliste mit den verfügbaren Werten kann jedoch kein Wert ausgewählt werden, der Datums- oder Zeitwerte mit Millisekunden enthält.  
@@ -108,7 +108,7 @@ ms.locfileid: "68891864"
   
  Sie können diese Daten mit einer der folgenden Methoden in einen oder mehrere CLR-Werte konvertieren:  
   
--   Verwenden Sie in einem Textfeld einen Ausdruck, um Teile der Zeichenfolge zu extrahieren. Zum Beispiel:  
+-   Verwenden Sie in einem Textfeld einen Ausdruck, um Teile der Zeichenfolge zu extrahieren. Beispiel:  
   
     -   Mit dem folgenden Ausdruck wird der Stundenwert der UTC-Zeitzonenverschiebung extrahiert und in Minuten konvertiert: `=CInt(Fields!MyDateTime.Value.Substring(Fields!MyDateTime.Value.Length-5,2)) * 60`  
   
@@ -116,9 +116,9 @@ ms.locfileid: "68891864"
   
     -   Mit dem folgenden Ausdruck wird die Zeichenfolge in einen Datums- und Uhrzeitwert konvertiert: `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Das Ergebnis ist der folgende `DateTime` Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
+         Falls die Zeichenfolge `MyDateTime.Value` eine UTC-Zeitverschiebung aufweist, passt die Funktion `DateTime.Parse` zunächst die UTC-Zeitverschiebung an (7:00 - [`+08:00`] zur UTC-Zeit 23:00 in der vorherigen Nacht). Anschließend wendet die Funktion `DateTime.Parse` die UTC-Zeitverschiebung des lokalen Berichtsservers an und passt die Zeit ggf. noch einmal an die Sommerzeit an. So ist zum Beispiel in Redmond, Washington/USA die lokale Zeitverschiebung, angepasst an die Sommerzeit, `[-07:00]`, das heißt 7 Stunden früher als 23:00. Daraus ergibt sich der folgende `DateTime`-Wert: `2007-07-06 04:07:07 PM` (6. Juli 2007, 16:07).  
   
- Weitere Informationen zum Einfügen von Zeichen folgen `DateTime` in-Datentypen finden Sie unter Generieren von [Datums-und Uhrzeit](https://go.microsoft.com/fwlink/?LinkId=89703)Zeichenfolgen, [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](https://go.microsoft.com/fwlink/?LinkId=89704)und [auswählen zwischen "DateTime", "DateTimeOffset" und "TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) " unter. MSDN.  
+ Weitere Informationen zum Einfügen von Zeichen folgen `DateTime` in-Datentypen finden Sie unter Generieren von [Datums-und Uhrzeit](https://go.microsoft.com/fwlink/?LinkId=89703)Zeichenfolgen, [Formatieren von Datum und Uhrzeit für eine bestimmte Kultur](https://go.microsoft.com/fwlink/?LinkId=89704)und [auswählen zwischen "DateTime", "DateTimeOffset" und "TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) " auf MSDN.  
   
 -   Fügen Sie ein neues berechnetes Feld dem Berichtsdataset hinzu, das einen Ausdruck verwendet, mit dem Teile der Zeichenfolge extrahiert werden. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68891864"
   
  Weitere Informationen zu den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datentypen fin derden Sie unter [Datentypen in der Analysis Services](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) in der [SQL Server Books Onlin dere](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

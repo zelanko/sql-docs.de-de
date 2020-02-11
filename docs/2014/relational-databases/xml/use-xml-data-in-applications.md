@@ -26,10 +26,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d9d64edf29d1e494d25474845295c505caedee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63232429"
 ---
 # <a name="use-xml-data-in-applications"></a>Verwenden von XML-Daten in Anwendungen
@@ -90,7 +90,8 @@ Set objConn = Nothing
   
  In diesem Beispiel wird dargestellt, wie die Datentyp-Kompatibilitätseigenschaft festgelegt wird. Sie ist standardmäßig auf 0 (null) festgelegt, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client verwenden. Wenn Sie den Wert auf 80 festgelegt haben, sorgt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anbieter dafür, dass `xml`-Spalten und Spalten eines benutzerdefinierten Typs als [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-Datentypen angezeigt werden. Dabei handelt es sich um DBTYPE_WSTR und DBTYPE_BYTES.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client muss ebenfalls auf dem Clientcomputer installiert und in der Verbindungszeichenfolge mit „`Provider=SQLNCLI11;...`“ zur Verwendung als Datenanbieter angegeben sein.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client muss ebenfalls auf dem Clientcomputer installiert und in der Verbindungszeichenfolge mit „`Provider=SQLNCLI11;...`“ zur Verwendung als Datenanbieter angegeben sein.  
   
 #### <a name="to-test-this-example"></a>So testen Sie dieses Beispiel  
   
@@ -145,16 +146,16 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Verarbeiten von XML in einer Spalte vom Typ xml mithilfe von ADO.NET  
- Um XML in einer `xml`-Datentypspalte mithilfe von ADO.NET und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu verarbeiten, können Sie das Standardverhalten der `SqlCommand`-Klasse verwenden. Eine `xml`-Datentypspalte und ihre Werte können z. B. mit einem `SqlDataReader` auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer `xml`-Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem `XmlReader`-Typ zuweisen.  
+ Zum Verarbeiten von XML aus `xml` einer-Datentyp Spalte mithilfe von ADO.net [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] und können Sie das Standardverhalten der- `SqlCommand` Klasse verwenden. Eine `xml`-Datentypspalte und ihre Werte können z. B. mit einem `SqlDataReader` auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer `xml`-Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem `XmlReader`-Typ zuweisen.  
   
- Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über die XML-Spaltenwerte in einem Datenleser in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] -SDK-Dokumentation.  
+ Weitere Informationen und Beispielcode finden Sie unter "XML-Spaltenwerte in einem Daten Leser" in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] der SDK-Dokumentation.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Verarbeiten einer Spalte vom Typ xml in Parametern mithilfe von ADO.NET  
  Um einen xml-Datentyp, der als Parameter in ADO.NET und [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] übergeben wird, zu verarbeiten, können Sie den Wert als eine Instanz des `SqlXml`-Datentyps angeben. Es ist keine besondere Verarbeitung erforderlich, da die `xml`-Datentypspalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parameterwerte auf dieselbe Weise annehmen können wie andere Spalten und Datentypen, z. B. `string` oder `integer`.  
   
- Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über die als Befehlsparameter verwendeten XML-Werte in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] -SDK-Dokumentation.  
+ Weitere Informationen und Beispielcode finden Sie unter "XML-Werte als Befehlsparameter" in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] der SDK-Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871277"
 ---
 # <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
-  Systemdatenbanken müssen neu erstellt werden, um Beschädigungen der Systemdatenbanken [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)oder [resource](resource-database.md) zu beheben oder die Standardsortierung auf Serverebene zu ändern. Dieses Thema enthält schrittweise Anweisungen für die Neuerstellung von Systemdatenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  System Datenbanken müssen neu erstellt werden, um Beschädigungs Probleme in den System Datenbanken [Master](master-database.md), [Model](model-database.md), [msdb](msdb-database.md)oder [Resource](resource-database.md) zu beheben oder die Standardsortierung auf Serverebene zu ändern. Dieses Thema enthält schrittweise Anweisungen für die Neuerstellung von Systemdatenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **In diesem Thema**  
   
@@ -31,26 +31,26 @@ ms.locfileid: "62871277"
   
      [Einschränkungen](#Restrictions)  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
--   **Vorgehensweisen:**  
+-   **Abläufen**  
   
      [Neuerstellen von Systemdatenbanken](#RebuildProcedure)  
   
-     [Neuerstellen der resource-Datenbank](#Resource)  
+     [Erneutes Erstellen der Ressourcendatenbank](#Resource)  
   
      [Erstellen einer neuen msdb-Datenbank](#CreateMSDB)  
   
--   **Nachverfolgung:**  
+-   **Zur Nachverfolgung:**  
   
-     [Problembehandlung von Fehlern bei der Neuerstellung](#Troubleshoot)  
+     [Beheben von Fehlern bei der Neuerstellung](#Troubleshoot)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
 ###  <a name="Restrictions"></a> Einschränkungen  
  Bei der Neuerstellung der Systemdatenbanken master, model, msdb und tempdb werden die Datenbanken abgelegt und an ihrem ursprünglichen Speicherort neu erstellt. Wenn in der REBUILD-Anweisung eine neue Sortierung angegeben wird, werden die Systemdatenbanken unter Verwendung dieser Sortiereinstellung erstellt. Alle Benutzeränderungen an diesen Datenbanken gehen verloren. Beispielsweise kann die master&lt;/ -Datenbank benutzerdefinierte Objekte, die msdb&lt;/ -Datenbank geplante Aufträge und die model&lt;/ -Datenbank Änderungen der Standardeinstellungen für Datenbanken enthalten.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Führen Sie die folgenden Aufgaben aus, bevor Sie die Systemdatenbanken neu erstellen, um sicherzustellen, dass Sie die Systemdatenbanken mit ihren aktuellen Einstellungen wiederherstellen können.  
   
 1.  Zeichnen Sie alle serverweiten Konfigurationswerte auf.  
@@ -86,7 +86,7 @@ ms.locfileid: "62871277"
   
 7.  Überprüfen Sie, ob Kopien der Daten und Protokollvorlagendateien der Datenbanken master, model und msdb auf dem lokalen Server vorhanden sind. Der Standardspeicherort für die Vorlagendateien ist C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Vorlagen. Diese Dateien werden während der Neuerstellung verwendet und müssen vorhanden sein, um Setup erfolgreich ausführen zu können. Wenn sie fehlen, führen Sie die Reparaturfunktion von Setup aus, oder kopieren Sie die Dateien manuell vom Installationsmedium. Um die Dateien auf dem Installationsmedium zu suchen, navigieren Sie zum entsprechenden Plattformverzeichnis (x86 oder x64) und dann zu setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Vorlagen.  
   
-##  <a name="RebuildProcedure"></a> Neuerstellen von Systemdatenbanken  
+##  <a name="RebuildProcedure"></a>Neuerstellen von System Datenbanken  
  Mit der folgenden Vorgehensweise werden die Systemdatenbanken master, model, msdb und tempdb  neu erstellt. Sie können die Systemdatenbanken, die neu erstellt werden sollen, nicht angeben. Für gruppierte Instanzen muss diese Vorgehensweise für den aktiven Knoten ausgeführt werden, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource in der entsprechenden Clusteranwendungsgruppe muss zuvor offline geschaltet werden.  
   
  Durch diese Vorgehensweise wird die Ressourcendatenbank nicht neu erstellt. Führen Sie hierzu die Schritte im Abschnitt "Vorgehensweise zum Neuerstellen der resource-Datenbank" weiter unten in diesem Thema aus.  
@@ -99,14 +99,14 @@ ms.locfileid: "62871277"
   
      `Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName /SQLSYSADMINACCOUNTS=accounts [ /SAPWD= StrongPassword ] [ /SQLCOLLATION=CollationName]`  
   
-    |Parametername|Description|  
+    |Parametername|BESCHREIBUNG|  
     |--------------------|-----------------|  
     |/QUIET oder /Q|Gibt an, dass Setup ohne Benutzeroberfläche ausgeführt wird.|  
     |/ACTION=REBUILDDATABASE|Gibt an, dass die Systemdatenbanken vom Setup neu erstellt werden.|  
-    |/INSTANCENAME=*InstanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle `sysadmin` hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie z. B. `NT AUTHORITY\SYSTEM` ein|  
-    |[ /SAPWD=*StrongPassword* ]|Gibt das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` Konto. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> **\*\* Sicherheitshinweis \* \***  der `sa` Konto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konto und oft das Ziel böswilliger Benutzer. Es ist sehr wichtig, dass Sie ein sicheres Kennwort für die `sa`-Anmeldung verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
-    |[ /SQLCOLLATION=*CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> **\*\* Wichtig \*\*** Die Änderung der Sortierung auf Serverebene ändert nicht die Sortierung vorhandener Benutzerdatenbanken. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../collations/set-or-change-the-server-collation.md).|  
+    |/InstanceName =*instanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle `sysadmin` hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie z. B. Folgendes ein: `NT AUTHORITY\SYSTEM`.|  
+    |[ /SAPWD=*StrongPassword* ]|Gibt das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` das Konto an. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> ** \* \* Sicherheits \* Hinweis** Das `sa` Konto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Konto, das häufig von böswilligen Benutzern betroffen ist. Es ist sehr wichtig, dass Sie ein sicheres Kennwort für die `sa`-Anmeldung verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
+    |[ /SQLCOLLATION=*CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> ** \* Wichtig \* \* ** Durch das Ändern der Sortierung auf Serverebene wird die Sortierung vorhandener Benutzer Datenbanken nicht geändert. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../collations/set-or-change-the-server-collation.md).|  
   
 3.  Wenn Setup die Neuerstellung der Systemdatenbanken abgeschlossen hat, wechselt es ohne Meldungen zur Eingabeaufforderung zurück. Lesen Sie die Protokolldatei Summary.txt, um zu überprüfen, ob der Prozess erfolgreich abgeschlossen wurde. Diese Datei befindet sich unter C:\Programme\Microsoft SQL Server\120\Setup Bootstrap\Logs.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62871277"
   
 -   Überprüfen Sie, ob die serverweiten Konfigurationswerte zu den Werten passen, die Sie zuvor aufgezeichnet haben.  
   
-##  <a name="Resource"></a> Neuerstellen der resource-Datenbank  
+##  <a name="Resource"></a>Erneutes Erstellen der Ressourcendatenbank  
  Mit der folgenden Vorgehensweise wird die Ressourcensystemdatenbank neu erstellt. Wenn Sie die Ressourcendatenbank neu erstellen, gehen alle Service Packs und Hotfixes verloren und müssen daher noch einmal angewendet werden.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>So erstellen Sie die Systemdatenbank "resource" neu  
@@ -146,11 +146,11 @@ ms.locfileid: "62871277"
   
 6.  Klicken Sie auf der Seite **Bereit zum Reparieren** auf **Reparieren**. Wenn die Seite Abgeschlossen angezeigt wird, wurde der Vorgang abgeschlossen.  
   
-##  <a name="CreateMSDB"></a> Erstellen einer neuen msdb-Datenbank  
- Wenn die `msdb` -Datenbank beschädigt ist und Sie verfügen nicht über eine Sicherung der `msdb` -Datenbank, Sie können ein neues erstellen `msdb` mithilfe der **Instmsdb** Skript.  
+##  <a name="CreateMSDB"></a>Erstellen einer neuen msdb-Datenbank  
+ Wenn die `msdb` Datenbank beschädigt ist und Sie nicht über eine Sicherung der- `msdb` Datenbank verfügen, können Sie mit dem `msdb` **instmsdb** -Skript eine neue erstellen.  
   
 > [!WARNING]  
->  Neuerstellen der `msdb` -Datenbank mithilfe der **Instmsdb** Skript entfernt alle Informationen, die in gespeicherten `msdb` wie z. B. Aufträge, Warnung, Operatoren, Wartungspläne, Verlauf, Einstellungen für die Richtlinie der richtlinienbasierten Verwaltung , Datenbank-Mail, Leistungs-Data Warehouse usw.  
+>  Durch das `msdb` erneute Erstellen der Datenbank mit dem **instmsdb** -Skript werden alle in `msdb` gespeicherten Informationen, wie z. b. Aufträge, Warnungen, Operatoren, Wartungspläne, Sicherungs Verlauf, Einstellungen der Richtlinien basierten Verwaltung, Datenbank-E-Mail, Leistungs Data Warehouse usw., vermieden.  
   
 1.  Beenden Sie alle Dienste, die mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden sind, einschließlich dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, [!INCLUDE[ssRS](../../includes/ssrs.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)]und allen Anwendungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als Datenspeicher verwenden.  
   
@@ -158,25 +158,25 @@ ms.locfileid: "62871277"
   
      Weitere Informationen finden Sie unter [Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
-3.  Trennen Sie in einem weiteren Befehlszeilenfenster die `msdb` Datenbank durch Ausführen des folgenden Befehls, und Ersetzen Sie dabei  *\<Servername >* mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: `SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
+3.  Trennen Sie die `msdb` Datenbank in einem anderen Befehlszeilenfenster, indem Sie den folgenden Befehl ausführen und dabei * \<Servername>* durch die Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von ersetzen:`SQLCMD -E -S<servername> -dmaster -Q"EXEC sp_detach_db msdb"`  
   
-4.  Benennen Sie die Windows-Explorer mit der `msdb` -Datenbankdateien. Diese befinden sich standardmäßig im Unterordner DATA der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
+4.  Benennen Sie die `msdb` Datenbankdateien mithilfe von Windows-Explorer um. Diese befinden sich standardmäßig im Unterordner DATA der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
   
 5.  Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager zum Beenden und erneuten Starten des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Diensts.  
   
 6.  Stellen Sie in einem Befehlszeilenfenster eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, und führen Sie folgenden Befehl aus: `SQLCMD -E -S<servername> -i"C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.sql" -o" C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Install\instmsdb.out"`  
   
-     Ersetzen Sie *\<Servername>* durch die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Verwenden Sie den Dateisystempfad der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
+     Ersetzen * \<Sie Servername>* durch die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Verwenden Sie den Dateisystempfad der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz.  
   
 7.  Öffnen Sie die Datei **instmsdb.out** im Windows-Editor, und prüfen Sie, ob die Ausgabe fehlerfrei ist.  
   
 8.  Wenden Sie alle installierten Service Packs und Hotfixes auf die Instanz an.  
   
-9. Erstellen Sie erneut gespeicherten Benutzerinhalte der `msdb` Datenbank, z. B. Aufträge, Warnungen usw.  
+9. Erstellen Sie den in der `msdb` Datenbank gespeicherten Benutzer Inhalt, z. b. Aufträge, Warnungen usw. neu.  
   
-10. Sicherung der `msdb` Datenbank.  
+10. Sichern Sie die `msdb`-Datenbank.  
   
-##  <a name="Troubleshoot"></a> Problembehandlung von Fehlern bei der Neuerstellung  
+##  <a name="Troubleshoot"></a>Beheben von Fehlern bei der Neuerstellung  
  Syntaxfehler und andere Laufzeitfehler werden im Eingabeaufforderungsfenster angezeigt. Überprüfen Sie die SETUP-Anweisung auf folgende Syntaxfehler:  
   
 -   Fehlender Schrägstrich (/) vor jedem Parameternamen  
@@ -189,7 +189,7 @@ ms.locfileid: "62871277"
   
  Wenn der Neuerstellungsvorgang abgeschlossen ist, überprüfen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolle auf Fehler. Der Standardprotokollspeicherort ist C:\Programme\Microsoft SQL Server\120\Setup Bootstrap\Protokolle. Um die Protokolldatei zu suchen, die die Ergebnisse des Neuerstellungsprozesses enthält, wechseln Sie über eine Eingabeaufforderung zum Ordner Protokolle, und führen Sie dann `findstr /s RebuildDatabase summary*.*`aus. Diese Suche führt Sie zu den Protokolldateien, die die Ergebnisse der Neuerstellung der Systemdatenbanken enthalten. Öffnen Sie die Protokolldateien, und untersuchen Sie sie auf relevante Fehlermeldungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Systemdatenbanken](system-databases.md)  
   
   

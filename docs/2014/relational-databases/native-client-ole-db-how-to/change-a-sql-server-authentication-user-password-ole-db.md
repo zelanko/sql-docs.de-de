@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 351ce45247fcc4fb76228ab792a97f4e1f915989
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874581"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>Ändern eines SQL Server-Authentifizierungsbenutzerkennworts (OLE DB)
-  Dieses Beispiel veranschaulicht die Verwendung von OLE DB zum Ändern des Kennworts eines Benutzerkontos unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung.  
+  Dieses Beispiel veranschaulicht die Verwendung von OLE DB zum Ändern des Kennworts eines Benutzerkontos mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ## <a name="example"></a>Beispiel  
  Aktualisieren Sie vor dem Erstellen den C++-Code, um die Benutzer-ID, das alte Kennwort und das neue Kennwort anzugeben.  
@@ -30,7 +30,7 @@ ms.locfileid: "70874581"
   
  Kompilieren Sie mit ole32.lib und oleaut32.lib.  
   
- Um dieses Beispiel zu erstellen, benötigen Sie ein Benutzerkonto mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung, für das Sie das Kennwort kennen. Wenn Sie Anmeldungen unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung zulassen möchten, öffnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten Server, und wählen Sie Eigenschaften aus. Wählen Sie Sicherheit aus, und aktivieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Modus und den Windows-Authentifizierungsmodus. Um ein Benutzerkonto unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung hinzuzufügen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten Sicherheit, und wählen Sie Hinzufügen aus.  
+ Sie benötigen ein Benutzerkonto mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung, für das Sie das Kennwort kennen, um dieses Beispiel zu erstellen. Wenn Sie Anmeldungen unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung zulassen möchten, öffnen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten Server, und wählen Sie Eigenschaften aus. Klicken Sie auf „Sicherheit“, und aktivieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Modus und den Windows-Authentifizierungsmodus. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Knoten „Sicherheit“, und wählen Sie „Hinzufügen“ aus, um ein Benutzerkonto unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung hinzuzufügen.  
   
  Auf dem Server, auf dem Sie dieses Beispiel ausführen, muss mindestens eine Anmeldung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung aktiviert sein. Der Server muss außerdem Anmeldungen über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung zulassen.  
   

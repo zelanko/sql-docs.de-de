@@ -16,18 +16,18 @@ ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a9c489a08291aea3d1c50a6418dc8e1e853dce12
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771073"
 ---
-# <a name="sphelparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
+# <a name="sp_helparticledts-transact-sql"></a>sp_helparticledts (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ruft Informationen zu den benutzerdefinierten Tasknamen ab, die beim Erstellen eines Transformationsabonnements mithilfe von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic verwendet werden sollen. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**pre_script_ignore_error_task_name**|**sysname**|Taskname für den Programmiertask, der auftritt, bevor die Momentaufnahmedaten kopiert werden. Die Programmausführung soll beim Auftreten eines Skriptfehlers fortgesetzt werden.|  
 |**pre_script_task_name**|**sysname**|Taskname für den Programmiertask, der auftritt, bevor die Momentaufnahmedaten kopiert werden. Die Programmausführung wird beim Auftreten eines Fehlers beendet.|  
@@ -54,7 +54,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helparticledts** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
  Beim Benennen von Tasks in einem Replikations-DTS-Programm (Data Transformation Services) müssen für die Replikations-Agents bestimmte Namenskonventionen eingehalten werden. Für benutzerdefinierte Tasks, wie z. B. den Task SQL ausführen, stellt der Name eine verkettete Zeichenfolge dar, die aus dem Artikelnamen, einem Präfix und einem optionalen Teil besteht. Wenn Sie den Code schreiben und sich nicht sicher sind, wie die Tasknamen lauten sollen, dann weist das Resultset die zu verwendenden Tasknamen zu.  

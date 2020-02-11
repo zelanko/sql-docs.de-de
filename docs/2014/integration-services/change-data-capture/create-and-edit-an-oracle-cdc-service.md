@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771446"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Erstellen und Bearbeiten eines Oracle CDC Service
@@ -30,7 +30,7 @@ ms.locfileid: "62771446"
   
  Geben Sie im Dialogfeld New Oracle CDC Windows Service oder CDC Service Properties die folgenden Informationen ein.  
   
- Dienstname  
+ Service Name  
  Geben Sie den Namen des neuen Oracle CDC-Windows-Diensts ein. Sie sollten nach Möglichkeit keine langen Namen verwenden. Die Zeichen "/" und "\" dürfen im Dienstnamen nicht verwendet werden.  
   
 > [!NOTE]  
@@ -56,10 +56,10 @@ ms.locfileid: "62771446"
   
      Sie können ein lokales Windows-Konto oder ein Windows-Domänenkonto für das Dienstkonto verwenden. In diesem Fall müssen Sie das **Kennwort** für dieses Konto eingeben. Dieses Konto kann für den lokalen Host gelten oder ein Domänenkonto sein. Beachten Sie, dass Sie das Kennwort, falls es sich ändert, in der Windows-Systemsteuerung unter Lokale Dienste aktualisieren müssen.  
   
- **Servername**: Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz aus, mit der eine Verbindung hergestellt werden soll, z.B. **\\\\<Computername>\\<Instanzname>** . Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
+ **Servername**: Wählen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz aus, mit der eine Verbindung hergestellt werden soll, z.B. **\\\\<Computername\>\\<Instanzname\>** . Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
  **Authentifizierung**  
- Wählen Sie eine der folgenden Optionen aus:  
+ Wählen Sie eines der folgenden Szenarien aus:  
   
 -   **Windows-Authentifizierung:** Wenn Sie diese Option aktivieren, stellt der Oracle CDC Service mithilfe der Dienstkontoidentität eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zielinstanz her. Wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer ausgeführt wird, muss die Windows-Authentifizierung mit Domänenkonten verwendet werden.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62771446"
   
  Informationen zu den Daten, die Sie im Dialogfeld Verbindung mit SQL Server herstellen eingeben müssen, finden Sie unter [Connection to SQL Server](connection-to-sql-server.md).  
   
- **Options**  
+ **Optionen**  
  Klicken Sie auf den Pfeil, um die verfügbaren Optionen anzuzeigen, die konfiguriert werden sollen. Sie können für diese Optionen auch die Standardwerte unverändert lassen. Verfügbare Optionen:  
   
 -   **Verbindungstimeout**: Geben Sie den Zeitraum (in Sekunden) ein, wie lange der CDC Service for Oracle auf eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] warten soll, bevor ein Timeout eintritt. Der Standardwert lautet **15**.  
@@ -87,7 +87,7 @@ ms.locfileid: "62771446"
   
  Das gleiche Masterkennwort muss auch verwendet werden, wenn andere Instanzen des gleichen Diensts auf anderen Knoten eines Clusters in der Konfiguration für hohe Verfügbarkeit eingerichtet werden. Wenn Sie das Masterkennwort vergessen oder ändern, müssen alle in Oracle CDC-Instanzdatenbanken gespeicherten Log Mining-Kennwörter über die CDC Designer Console neu eingegeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Bearbeiten eines CDC Service](how-to-create-and-edit-a-cdc-service.md)  
   
   

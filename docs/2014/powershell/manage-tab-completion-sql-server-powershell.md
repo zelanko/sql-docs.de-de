@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8e759e521d62def1f253ab5ef6423c29fb7fa2b4
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797790"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Verwalten der Befehlszeilenergänzung (SQL Server PowerShell)
@@ -33,8 +33,8 @@ ms.locfileid: "72797790"
  **$SqlServerMaximumChildItems =** *n*  
  Gibt die maximale Anzahl der von **Get-ChildItem**angezeigten Objekte an. Wenn Sie **Get-ChildItem** an einem Pfadknoten ausführen, der mehr als *n* Objekte aufweist, wird die Befehlszeilenergänzungs-Liste bei *n*abgeschnitten. *n* ist eine ganze Zahl. 0 ist die Standardeinstellung und bedeutet, dass die Anzahl der aufgeführten Objekte nicht begrenzt ist.  
   
- **$SqlServerIncludeSystemObjects =** { **$True** |  **$False** }  
- Wenn **$True**, werden Systemobjekte durch Befehlszeilenergänzung und **Get-ChildItem**angezeigt. Wenn **$False**, werden keine Systemobjekte angezeigt. Die Standardeinstellung ist **$False**.  
+ **$SqlServerIncludeSystemObjects =** { **$true** | **$false** }  
+ Wenn **$True**, werden Systemobjekte durch Befehlszeilenergänzung und **Get-ChildItem**angezeigt. Wenn **$False**, werden keine Systemobjekte angezeigt. Die Standardeinstellung ist **$false**.  
   
 ## <a name="set-the-sql-server-tab-completion-variables"></a>Festlegen der Variablen für die SQL Server-Befehlszeilenergänzung  
  Legen Sie für die vom Standardwert zu ändernden Variablen einen neuen Wert fest.  
@@ -49,5 +49,5 @@ $SqlServerIncludeSystemObjects = $False
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-PowerShell](sql-server-powershell.md)  

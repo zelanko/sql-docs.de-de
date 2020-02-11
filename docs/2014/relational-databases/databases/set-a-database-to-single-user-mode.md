@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea6e37603ae997c218db196c14fe7831bef95e81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871232"
 ---
 # <a name="set-a-database-to-single-user-mode"></a>Festlegen des Einzelbenutzermodus für eine Datenbank
@@ -28,7 +28,7 @@ ms.locfileid: "62871232"
   
      [Einschränkungen](#Restrictions)  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
      [Sicherheit](#Security)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62871232"
   
 -   Die Datenbank verbleibt im Einzelbenutzermodus, selbst wenn sich der Benutzer, der die Option festgelegt hat, abmeldet. Dadurch kann ein anderer Benutzer (aber nur einer) eine Verbindung mit der Datenbank herstellen.  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Bevor Sie die Datenbank auf SINGLE_USER festlegen, müssen Sie überprüfen, ob die AUTO_UPDATE_STATISTICS_ASYNC-Option auf OFF festgelegt ist. Wenn diese Option auf ON festgelegt ist, stellt der Hintergrundthread, der zum Aktualisieren von Statistiken verwendet wird, eine Verbindung mit der Datenbank her, und Sie können im Einzelbenutzermodus nicht auf die Datenbank zugreifen. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62871232"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-set-a-database-to-single-user-mode"></a>So legen Sie den Einzelbenutzermodus für eine Datenbank fest  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62871232"
   
  [!code-sql[DatabaseDDL#AlterDatabase8](../../snippets/tsql/SQL14/tsql/databaseddl/transact-sql/alterdatabase.sql#alterdatabase8)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
   

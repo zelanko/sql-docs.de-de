@@ -1,5 +1,5 @@
 ---
-title: Exportieren Sie die Spalte mit der Transformations-Editor (Seite Fehlerausgabe) | Microsoft-Dokumentation
+title: Transformations-Editor für das Exportieren von Spalten (Seite Fehlerausgabe) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eeb6984a0e7ef15b52fd349bccdf3c1bf78f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058939"
 ---
 # <a name="export-column-transformation-editor-error-output-page"></a>Transformations-Editor für das Exportieren von Spalten (Seite Fehlerausgabe)
@@ -26,7 +26,7 @@ ms.locfileid: "66058939"
   
  Weitere Informationen zur Transformation für das Exportieren von Spalten finden Sie unter [Export Column Transformation](data-flow/transformations/export-column-transformation.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Eingabe/Ausgabe**  
  Zeigen Sie den Namen der Ausgabe an. Klicken Sie auf den Namen, um die Sicht zu erweitern und Spalten einzuschließen.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66058939"
  **Anwenden**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformations-Editor für das Exportieren von Spalten &#40;Seite Spalten&#41;](../../2014/integration-services/export-column-transformation-editor-columns-page.md)  
   

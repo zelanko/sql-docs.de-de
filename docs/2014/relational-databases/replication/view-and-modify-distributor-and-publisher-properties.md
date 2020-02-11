@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68212029"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
@@ -33,7 +33,7 @@ ms.locfileid: "68212029"
   
      [Sicherheit](#Security)  
   
--   **So können Sie Verteiler- und Verlegereigenschaften anzeigen und ändern mit:**  
+-   **So können Sie Verteiler-und Verleger Eigenschaften anzeigen und ändern mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68212029"
 ###  <a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>So zeigen Sie die Verteilereigenschaften an oder ändern diese  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68212029"
   
 3.  Sie können die Eigenschaften im Dialogfeld **Verteilereigenschaften – \<Verteiler>** anzeigen und ändern.  
   
-    -   Um die Eigenschaften einer Verteilungsdatenbank anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche Eigenschaften ( **...** ) für die Datenbank auf der Seite **Allgemein** des Dialogfelds.  
+    -   Um die Eigenschaften einer Verteilungsdatenbank anzuzeigen und zu ändern, klicken Sie auf die Schaltfläche Eigenschaften (**...**) für die Datenbank auf der Seite **Allgemein** des Dialogfelds.  
   
     -   Um die mit dem Verteiler verbundenen Verlegereigenschaften anzuzeigen und zu ändern, klicken Sie auf der Seite**Verleger**des Dialogfelds auf die Schaltfläche Eigenschaften ( **...** ) des Verlegers.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68212029"
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation** , und klicken Sie dann auf **Verlegereigenschaften**.  
   
-3.  Anzeigen und ändern Sie die Eigenschaften der **Verlegereigenschaften - \< Verleger >** Dialogfeld.  
+3.  Eigenschaften im Dialogfeld **Verleger Eigenschaften- \< Publisher #b0** anzeigen und ändern.  
   
     -   Ein Benutzer der festen Serverrolle **sysadmin** kann Datenbanken für die Replikation auf der Seite **Veröffentlichungsdatenbanken** aktivieren. Durch das Aktivieren wird eine Datenbank nicht veröffentlicht, sondern Benutzer der festen Datenbankrolle **db_owner** für diese Datenbank können dann eine oder mehrere Veröffentlichungen in der Datenbank erstellen.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "68212029"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Klasse. Geben Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> -Eigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.DistributionPublisher>-Klasse. Geben Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> -Eigenschaft an, und übergeben Sie das <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Objekt aus Schritt 1.  
   
 3.  (Optional) Um Eigenschaften zu ändern, legen Sie einen neuen Wert für eine der definierbaren <xref:Microsoft.SqlServer.Replication.DistributionPublisher> -Eigenschaften fest.  
   
@@ -170,10 +170,10 @@ ms.locfileid: "68212029"
   
 4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> -Methode auf, um die Eigenschaften des Objekts abzurufen.  
   
-5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>-Methode auf. Übergeben Sie den neuen Kennwortwert für den *password* -Parameter.  
+5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert für den *password* -Parameter.  
   
     > [!IMPORTANT]  
-    >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
+    >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmelde Informationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) , die vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-.NET Framework bereitgestellt werden.  
   
 6.  (Optional) Führen Sie die folgenden Schritte aus, um das Kennwort bei jedem Remoteverleger zu ändern, der diesen Verteiler verwendet:  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68212029"
   
     5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert aus Schritt 5 für den *password* -Parameter.  
   
-###  <a name="PShellExample"></a> Beispiel (RMO)  
+###  <a name="PShellExample"></a>Beispiel (RMO)  
  In diesem Beispiel wird gezeigt, wie Verteilungs- und Verteilungsdatenbankeigenschaften geändert werden.  
   
 > [!IMPORTANT]  
@@ -197,13 +197,13 @@ ms.locfileid: "68212029"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Deaktivieren der Veröffentlichung und Verteilung](disable-publishing-and-distribution.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikationsverwaltungsobjekte Konzepte](concepts/replication-management-objects-concepts.md)   
+ [Veröffentlichung und Verteilung deaktivieren](disable-publishing-and-distribution.md)   
  [Verteilung konfigurieren](configure-distribution.md)   
- [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
- [Informationsskript für Verleger und Verteiler](administration/distributor-and-publisher-information-script.md)   
+ [Replikationsverwaltungsobjekte Konzepte](concepts/replication-management-objects-concepts.md)   
+ [Informations Skript für Verteiler und Verleger](administration/distributor-and-publisher-information-script.md)   
  [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)  
+ [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

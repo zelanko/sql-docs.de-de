@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e7cf91baeb6771f0abb52fb5b8f4c4dc2bddafe0
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73785281"
 ---
 # <a name="using-data-files-and-format-files"></a>Verwenden von Datendateien und Formatdateien
@@ -52,9 +52,9 @@ ms.locfileid: "73785281"
   
  Beim Massen kopieren aus einer Datendatei, die von einer Format Datei beschrieben wird, lesen Sie die Format Datei, indem Sie [bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md) nach **bcp_init** , aber vor **bcp_exec**aufrufen.  
   
- Die **bcp_control** -Funktion steuert mehrere Optionen beim Massen Kopieren in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer Datendatei. **bcp_control** legt Optionen fest, z. b. die maximale Anzahl von Fehlern vor dem Beenden, die Zeile in der Datei, in der der Massen Kopiervorgang gestartet werden soll, die Zeile, für die der Vorgang beendet werden soll, und die Batch Größe.  
+ Die **bcp_control** -Funktion steuert beim Massen kopieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus einer Datendatei mehrere Optionen. **bcp_control** legt Optionen fest, z. b. die maximale Anzahl von Fehlern vor dem Beenden, die Zeile in der Datei, in der der Massen Kopiervorgang gestartet werden soll, die Zeile, für die der Vorgang beendet werden soll, und die Batch Größe.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Massen Kopier &#40;Vorgängen (ODBC)&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Kopier Vorgängen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

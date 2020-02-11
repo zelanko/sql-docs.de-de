@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c5c4d515ebe6aa9b4b8120ae909f07dccc74de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101700"
 ---
 # <a name="securable-items"></a>Sicherbare Elemente
@@ -59,7 +59,7 @@ ms.locfileid: "66101700"
 |Freigegebene Datenquellen|Freigegebene Datenquellen können gesichert werden, um den Zugriff auf das Element und seine Eigenschaftsseiten einzuschränken. Weitere Informationen finden Sie unter [Sichern freigegebener Datenquellenelemente](secure-shared-data-source-items.md).|  
 |Freigegebene Datasets|Freigegebenen Datasets können gesichert werden, um die von Benutzern ausführbaren Aktionen zu steuern, z. B. Anzeigen oder Ändern der Definition bzw. Ändern der Eigenschaften eines bestimmten freigegebenen Datasets.<br /><br /> Weitere Informationen finden Sie unter [Sichern von freigegebenen Datasetelementen](secure-shared-dataset-items.md).|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](granting-permissions-on-a-native-mode-report-server.md)   
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   

@@ -1,5 +1,5 @@
 ---
-title: Konfigurationselement (DTA) | Microsoft-Dokumentation
+title: Configuration-Element (DTA) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 934acda419b734f577de4c8127184d3dd18ea650
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150147"
 ---
 # <a name="configuration-element-dta"></a>Configuration-Element (DTA)
@@ -40,13 +40,13 @@ ms.locfileid: "63150147"
   
 ## <a name="element-attributes"></a>Elementattribute  
   
-|Konfigurationsattribut|Description|  
+|Konfigurationsattribut|BESCHREIBUNG|  
 |-----------------------------|-----------------|  
-|`SpecificationMode`|Optional. Gibt an, ob der Datenbankoptimierungsratgeber die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration oder als vollständig neue eigenständige Konfiguration analysieren soll. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:<br /><br /> `Relative`: <br />                  Wertet die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration physischer Entwurfsstrukturen (Indizes, indizierte Sichten, Partitionierung) in der Datenbank aus, die optimiert wird. Zum Beispiel: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Wertet die angegebene Konfiguration als eigenständige Konfiguration aus. Wenn der Absolute-Wert angegeben ist, wird die vorhandene Konfiguration nicht vom Datenbankoptimierungsratgeber berücksichtigt. Zum Beispiel:<br />`<Configuration SpecificationMode="Absolute">`|  
+|`SpecificationMode`|Optional. Gibt an, ob der Datenbankoptimierungsratgeber die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration oder als vollständig neue eigenständige Konfiguration analysieren soll. Mit einem **string** -Datentyp können Sie dieses Attribut mit einem der folgenden zulässigen Werte angeben:<br /><br /> `Relative`: <br />                  Wertet die angegebene Konfiguration im Vergleich zur aktuellen vorhandenen Konfiguration physischer Entwurfsstrukturen (Indizes, indizierte Sichten, Partitionierung) in der Datenbank aus, die optimiert wird. Beispiel: <br />`<Configuration SpecificationMode="Relative">`<br /><br /> `Absolute`: <br />                  Wertet die angegebene Konfiguration als eigenständige Konfiguration aus. Wenn der Absolute-Wert angegeben ist, wird die vorhandene Konfiguration nicht vom Datenbankoptimierungsratgeber berücksichtigt. Beispiel:<br />`<Configuration SpecificationMode="Absolute">`|  
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -57,12 +57,12 @@ ms.locfileid: "63150147"
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[DTAInput-Element &#40;DTA&#41;](dtainput-element-dta.md)|  
-|**Untergeordnete Elemente**|[Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
+|**Untergeordnete Elemente**|[Server-Element für Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
   
 ## <a name="example"></a>Beispiel  
  Ein Beispiel für die Verwendung dieses Elements finden Sie unter [Beispiel für eine XML-Eingabedatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

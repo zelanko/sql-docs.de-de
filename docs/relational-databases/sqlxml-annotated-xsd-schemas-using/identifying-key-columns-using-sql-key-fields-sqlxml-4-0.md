@@ -23,10 +23,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 71d42f9f3f819dc12964ea0f13de92dfc8db5663
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257390"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identifizieren von Schlüsselspalten mithilfe von sql:key-Feldern (SQLXML 4.0)
@@ -126,7 +126,7 @@ ms.locfileid: "75257390"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B: Angeben der sql:key-Felder, um die richtige Schachtelung im Ergebnis zu erzeugen  
+### <a name="b-specifying-sqlkey-fields-to-produce-proper-nesting-in-the-result"></a>B. Angeben der sql:key-Felder, um die richtige Schachtelung im Ergebnis zu erzeugen  
  Im folgenden Schema gibt es keine Hierarchie, die mithilfe ** \<von SQL: Relationship>** angegeben wird. Für das Schema muss weiterhin die **SQL: key-fields-** Anmerkung angegeben werden, um Mitarbeiter in der HumanResources. Employee-Tabelle eindeutig zu identifizieren.  
   
 ```  

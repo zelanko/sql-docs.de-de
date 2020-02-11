@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211371"
 ---
 # <a name="job-activity-monitor"></a>Auftragsaktivitätsmonitor
   Mithilfe dieser Seite können Sie die aktuelle Aktivität von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents anzeigen. Klicken Sie auf **Filter** , um die Anzahl der angezeigten Aufträge zu beschränken. Das Raster **Agentauftragsaktivität** ist schreibgeschützt. Klicken Sie auf die Spaltenheader, um das Raster zu sortieren. Sie können einen Auftrag ändern, indem Sie auf den betreffenden Auftrag doppelklicken und das Dialogfeld **Auftragseigenschaften** öffnen. Klicken Sie mit der rechten Maustaste auf einen Auftrag im Raster, um die Ausführung aller Auftragsschritte zu starten, einen speziellen Auftragsschritt zu starten, den Auftrag zu aktivieren oder zu deaktivieren, den Auftrag zu aktualisieren, den Auftrag zu löschen, den Verlauf des Auftrags anzuzeigen oder die Auftragseigenschaften anzuzeigen. Klicken Sie auf **Aktualisieren** , um das Raster mit den aktuellen Informationen zu aktualisieren.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
- Name des Auftrags.  
+ Der Name des Auftrags.  
   
- **Enabled**  
+ **Aktiviert**  
  Zeigt an, ob der Auftrag aktiviert (**Ja**) oder nicht aktiviert (**Nein**) ist.  
   
  **Status** <sup>1</sup>  
@@ -39,25 +39,25 @@ ms.locfileid: "68211371"
  **Zuletzt ausgeführt**  
  Datum und Uhrzeit, an dem bzw. zu der der Auftrag zuletzt ausgeführt wurde (ausgehend vom lokalen Datum und der lokalen Uhrzeit des Servers).  
   
- **Führen Sie anschließend** <sup>1</sup>  
+ **Nächste ausführen** <sup>1</sup>  
  Datum und Uhrzeit des Zeitpunkts, an dem die nächste Ausführung des Auftrags geplant ist (ausgehend vom lokalen Datum und der lokalen Uhrzeit des Servers).  
   
  **Kategorie**  
  Die dem Auftrag zugewiesene Auftragskategorie.  
   
  **Ausführbar**  
- **Ja** , wenn der Auftrag ausgeführt werden kann; **Nein** , wenn der Auftrag nicht ausgeführt werden kann. Ein Auftrag kann nicht ausgeführt werden, wenn er keine Schritte oder keinen Zielserver aufweist.  
+ **Ja** , wenn der Auftrag ausgeführt werden kann. **Nein** , wenn der Auftrag nicht ausgeführt werden kann. Ein Auftrag kann nicht ausgeführt werden, wenn er keine Schritte oder keinen Zielserver aufweist.  
   
  **Geplant**  
- **Ja** , wenn der Auftrag einem Auftragszeitplan zugewiesen ist; **Nein** , wenn für den Auftrag kein Zeitplan vorhanden ist.  
+ **Ja** , wenn der Auftrag einem Auftrags Zeitplan zugewiesen ist; **Nein** , wenn der Auftrag über keinen Zeitplan verfügt.  
   
- <sup>1</sup>nur Mitglieder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der festen Sysadmin-Serverrolle und die Server-Administratoren, die Gruppe sehen Werte in dieser Spalte. Mitglieder der SQLAgentOperatorRole-Rolle können keine Werte in dieser Spalte sehen.  
+ <sup>1</sup> Nur Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Rolle sysadmin und der Server Administrator Gruppe können Werte in dieser Spalte sehen. Mitglieder der SQLAgentOperatorRole-Rolle können keine Werte in dieser Spalte sehen.  
   
 #### <a name="to-open-the-job-activity-monitor"></a>So öffnen Sie den Auftragsaktivitätsmonitor  
   
 -   Erweitern Sie in **Objekt-Explorer**den verwendeten Server und anschließend **SQL Server-Agent**. Klicken Sie mit der rechten Maustaste auf **Auftragsaktivitätsmonitor**, und klicken Sie dann auf **Auftragsaktivitäten anzeigen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Auftragsaktivität](monitor-job-activity.md)  
   
   

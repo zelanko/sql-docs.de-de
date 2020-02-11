@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5de4600d4f4c3d52d1757218e1f2d9b32f554286
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72797674"
 ---
 # <a name="join-a-secondary-database-to-an-availability-group-sql-server"></a>Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe (SQL Server)
@@ -36,31 +36,31 @@ ms.locfileid: "72797674"
   
 -   **So bereiten Sie eine sekundäre Datenbank vor mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
      [PowerShell](#PowerShellProcedure)  
   
 > [!NOTE]  
->  Informationen dazu, was geschieht, nachdem eine sekundäre Datenbank der Gruppe angehört, finden Sie unter [ &#40;Übersicht&#41;über AlwaysOn-Verfügbarkeitsgruppen SQL Server](overview-of-always-on-availability-groups-sql-server.md).  
+>  Informationen dazu, was geschieht, nachdem eine sekundäre Datenbank der Gruppe angehört, finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md).  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzungen  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das sekundäre Replikat gehostet wird.  
   
--   Das sekundäre Replikat muss bereits mit der Verfügbarkeitsgruppe verknüpft sein. Weitere Informationen finden Sie unter [Join a Secondary Replica to an Availability Group &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
+-   Das sekundäre Replikat muss bereits mit der Verfügbarkeitsgruppe verknüpft sein. Weitere Informationen finden Sie unter [Verknüpfen eines sekundären Replikats mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-replica-to-an-availability-group-sql-server.md).  
   
--   Die sekundäre Datenbank muss vor kurzem vorbereitet worden sein. Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
+-   Die sekundäre Datenbank muss vor kurzem vorbereitet worden sein. Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)erstellt und konfiguriert wird.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So verknüpfen Sie eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das sekundäre Replikat hostet, und erweitern Sie die Serverstruktur.  
@@ -84,7 +84,7 @@ ms.locfileid: "72797674"
   
      dabei ist *Datenbankname* der Name einer hinzuzufügenden Datenbank und *Gruppenname* der Name der Verfügbarkeitsgruppe.  
   
-     Im folgenden Beispiel wird die sekundäre Datenbank `Db1`mit dem lokalen sekundären Replikat der `MyAG` -Verfügbarkeitsgruppe verknüpft.  
+     Im folgenden Beispiel wird die sekundäre Datenbank `Db1` mit dem lokalen sekundären Replikat der `MyAG`-Verfügbarkeitsgruppe verknüpft.  
   
     ```sql
     ALTER DATABASE Db1 SET HADR AVAILABILITY GROUP = MyAG;  
@@ -94,7 +94,7 @@ ms.locfileid: "72797674"
     >  Unter [!INCLUDE[tsql](../../../includes/tsql-md.md)]Erstellen einer Verfügbarkeitsgruppe &#40;Transact-SQL&#41;[ können Sie die Verwendung dieser ](create-an-availability-group-transact-sql.md)-Anweisung im Kontext sehen.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell  
- **So verknüpfen Sie eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe**  
+ **So verknüpfen Sie eine sekundäre Datenbank mit einer Verfügbarkeits Gruppe**  
   
 1.  Ändern Sie das Verzeichnis (`cd`) in die Serverinstanz, die das sekundäre Replikat hostet.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "72797674"
   
 -   [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41; ](overview-of-always-on-availability-groups-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Alter Availability Group &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-availability-group-transact-sql)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Problembehandlung AlwaysOn-Verfügbarkeitsgruppen Konfigurations &#40;SQL Server&#41;gelöscht](troubleshoot-always-on-availability-groups-configuration-sql-server.md)  

@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der CDATA-Anweisung | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der CDATA-Direktive | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa5cec5be4153547d60e1592c21f00470ab1a5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287773"
 ---
-# <a name="example-specifying-the-cdata-directive"></a>Beispiel: Angeben der CDATA-Anweisung
+# <a name="example-specifying-the-cdata-directive"></a>Beispiel: Angeben der CDATA-Direktive
   Wird die Direktive auf **CDATA**festgelegt, werden die enthaltenen Daten nicht entitätscodiert, sondern in den CDATA-Abschnitt eingefügt. Die **CDATA** -Attribute müssen namenlos sein.  
   
  In der folgenden Abfrage wird die Produktmodell-Zusammenfassungsbeschreibung von einem CDATA-Abschnitt umgeben.  
@@ -46,7 +46,7 @@ FOR XML EXPLICIT
 </ProductModel>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

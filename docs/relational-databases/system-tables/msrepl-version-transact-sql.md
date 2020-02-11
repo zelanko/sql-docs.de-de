@@ -18,26 +18,26 @@ ms.assetid: c1330f03-940b-4564-ac42-6030c6e21173
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45dad1cfaa6057cd50ee4c01b484df8250121a46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079151"
 ---
-# <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
+# <a name="msrepl_version-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSrepl_version** -Tabelle enthält eine Zeile mit der aktuellen Version der installierten Replikation. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSrepl_version** Tabelle enthält eine Zeile, in der die aktuelle Version der Replikation installiert ist. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**major_version**|**int**|Die Hauptversionsnummer der Verteilungsdatenbank.|  
 |**minor_version**|**int**|Die Nebenversionsnummer der Verteilungsdatenbank.|  
-|**revision**|**int**|Die Revisionsnummer.|  
-|**db_existed**|**bit**|Gibt an, ob die Verteilungsdatenbank vorhanden, bevor ist **Sp_adddistributiondb** aufgerufen wird.|  
+|**Novel**|**int**|Die Revisionsnummer.|  
+|**db_existed**|**bit**|Gibt an, ob die Verteilungs Datenbank vorhanden ist, bevor **sp_adddistributiondb** aufgerufen wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

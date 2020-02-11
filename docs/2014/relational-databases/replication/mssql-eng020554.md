@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63057120"
 ---
-# <a name="mssqleng020554"></a>MSSQL_ENG020554
+# <a name="mssql_eng020554"></a>MSSQL_ENG020554
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -52,33 +52,33 @@ ms.locfileid: "63057120"
   
      Überprüfen Sie die Fehlerdetails im Replikationsmonitor, und starten Sie den Replikationsmonitor neu, falls er beendet wurde. Den Fehlerdetails ist vielleicht genauer zu entnehmen, warum der Agent nicht ordnungsgemäß ausgeführt wurde. Wenn der Agent ausgeführt wird, sollten Sie ihn auch nicht beenden und wieder starten, weil sich dadurch das Problem verschlimmern kann. Informationen zum Anzeigen des Agentstatus und der Fehlerdetails im Replikationsmonitor finden Sie in den folgenden Themen:  
   
-    -   Der Momentaufnahme-Agent, Protokolllese-Agent und Warteschlangenlese-Agent, finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Informationen zu den Momentaufnahmen-Agent, Protokolllese-Agent und Warteschlangenlese-Agent finden [Sie unter Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-    -   Der Verteilungs-Agent und Merge-Agent finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+    -   Informationen zu den Verteilungs-Agent und Merge-Agent finden [Sie unter Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Wenn der Fehler häufig ausgelöst wird, weil der Agent ausgelastet ist, haben Sie folgende Möglichkeiten:  
   
      Ändern Sie Ihre Anwendung so, dass der Agent weniger Zeit für die Verarbeitung benötigt.  
   
-     Erhöhen Sie im Dialogfeld **Auftragseigenschaften** das Zeitintervall, in dem der Agentstatus geprüft wird. Informationen zum Zugreifen auf dieses Dialogfeld für Replikationsaufträge finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Erhöhen Sie im Dialogfeld **Auftragseigenschaften** das Zeitintervall, in dem der Agentstatus geprüft wird. Informationen zum Zugreifen auf dieses Dialogfeld für Replikations Aufträge finden [Sie unter Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 -   Wenn ein Agent sich nicht bei einem der Computer in der Topologie anmelden kann, haben Sie folgende Möglichkeiten:  
   
-     Es wird empfohlen, den Wert für den **-LoginTimeOut** -Parameter auf einen niedrigeren Wert festzulegen als das Intervall, in dem der Auftrag zur Überprüfung des Replikations-Agents ausgeführt wird. Mitunter wird der Wert für **-LoginTimeOut** aufgrund von Netzwerkproblemen, die zu einem Timeout bei Anmeldungen führen können, relativ hoch angesetzt. Wenn der Wert für **-LoginTimeOut** niedriger festgelegt wird, kann die Replikation spezifischere Informationen zu Fehlern melden, sodass Sie Anmeldeprobleme diagnostizieren können, die durch Probleme bei den Berechtigungen, durch Netzwerkprobleme oder durch andere Probleme hervorgerufen werden. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     Es wird empfohlen, den Wert für den **-LoginTimeOut** -Parameter auf einen niedrigeren Wert festzulegen als das Intervall, in dem der Auftrag zur Überprüfung des Replikations-Agents ausgeführt wird. In einigen Fällen wird der Wert für **-LoginTimeout** aufgrund von Netzwerkproblemen, die zu einem Timeout bei Anmeldungen führen, auf einen höheren Wert festgelegt. Wenn " **-LoginTimeout** " auf einen niedrigeren Wert festgelegt ist, kann die Replikation spezifischere Fehler melden, sodass Sie Anmeldeprobleme beheben können, die durch Berechtigungen, Netzwerkprobleme oder andere Probleme verursacht werden können. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
     -   [Arbeiten mit Replikations-Agent-Profilen](agents/replication-agent-profiles.md)  
   
-    -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
-    -   [Replication Agent Executables Concepts](concepts/replication-agent-executables-concepts.md)zugeordnet ist.  
+    -   [Ausführbare Konzepte für den Replikations-Agent](concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikations-Agentverwaltung](agents/replication-agent-administration.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwaltung des Replikations-Agents](agents/replication-agent-administration.md)   
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)   
- [Replikationsverteilungs Agent](agents/replication-distribution-agent.md)   
- [Replikationsprotokolllese-Agent](agents/replication-log-reader-agent.md)   
- [Replikationsmerge-Agent](agents/replication-merge-agent.md)   
- [Warteschlangenlese-Agent](agents/replication-queue-reader-agent.md)   
- [Replikationsmomentaufnahme-Agent](agents/replication-snapshot-agent.md)  
+ [Replikations Verteilungs-Agent](agents/replication-distribution-agent.md)   
+ [Replikations Protokolllese-Agent](agents/replication-log-reader-agent.md)   
+ [Replikations Merge-Agent](agents/replication-merge-agent.md)   
+ [Replikations Warteschlangenlese-Agent](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

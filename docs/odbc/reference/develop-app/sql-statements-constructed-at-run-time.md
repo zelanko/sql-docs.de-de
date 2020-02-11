@@ -1,5 +1,5 @@
 ---
-title: SQL-Anweisungen, die zur Laufzeit | Microsoft-Dokumentation
+title: Zur Laufzeit erstellte SQL-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107461"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>SQL-Anweisungen, die zur Laufzeit erstellt werden
-Anwendungen, die ad-hoc-Analysen häufig ausführen werden SQL-Anweisungen zur Laufzeit erstellen. Eine Tabelle kann z. B. einen Benutzer die Auswahl von Spalten, aus denen zum Abrufen von Daten zulassen:  
+Anwendungen, die Ad-hoc-Analysen ausführen, erstellen häufig SQL-Anweisungen zur Laufzeit. Beispielsweise kann ein Benutzer mithilfe einer Kalkulations Tabelle Spalten auswählen, aus denen Daten abgerufen werden sollen:  
   
 ```  
 // SQL_Statements_Constructed_at_Run_Time.cpp  
@@ -68,8 +68,8 @@ int main() {
 }  
 ```  
   
- Eine andere Klasse von Anwendungen, die im Allgemeinen SQL-Anweisungen zur Laufzeit erstellt anwendungsentwicklungsumgebungen sind Allerdings sind die Anweisungen, die sie erstellen, in der Anwendung, die sie erstellen, in denen sie in der Regel optimiert und getestet werden können, die hartcodiert.  
+ Eine andere Klasse von Anwendungen, die häufig SQL-Anweisungen zur Laufzeit erstellt, sind Anwendungsentwicklungsumgebungen. Die von Ihnen konstruierenden Anweisungen sind jedoch in der Anwendung hart codiert, in der Sie normalerweise optimiert und getestet werden können.  
   
- Anwendungen, die SQL-Anweisungen zur Laufzeit zu erstellen, können äußerst flexibel an den Benutzer bereitstellen. Wie aus dem vorherigen Beispiel, angesehen werden kann, wodurch die noch nicht über allgemeine Vorgänge wie unterstützte **, in denen** Klauseln **ORDER BY** -Klauseln oder Verknüpfungen durch, Erstellen von SQL-Anweisungen zur Laufzeit ist erheblich komplexer als Anweisungen fest zu programmieren. Darüber hinaus ist die Prüfung solcher Anwendungen problematisch, da sie eine beliebige Anzahl von SQL-Anweisungen erstellen können.  
+ Anwendungen, die SQL-Anweisungen zur Laufzeit erstellen, können dem Benutzer enorme Flexibilität verleihen. Wie aus dem vorherigen Beispiel ersichtlich ist, das nicht einmal solche gängigen Vorgänge als **Where** -Klauseln, **Order by** -Klauseln oder Joins unterstützt, ist das Erstellen von SQL-Anweisungen zur Laufzeit weitaus komplexer als hart codierungsanweisungen. Außerdem ist das Testen solcher Anwendungen problematisch, da Sie eine beliebige Anzahl von SQL-Anweisungen erstellen können.  
   
- Erstellen von SQL-Anweisungen zur Laufzeit ein potenzieller Nachteil ist, dass das dauert wesentlich mehr Zeit, eine Anweisung zu erstellen, als eine hartcodierte-Anweisung verwenden. Glücklicherweise ist dies nur selten relevant. Solche Anwendungen sind tendenziell Benutzeroberfläche intensiv und die Uhrzeit, an die Anwendung, Erstellen von SQL-Anweisungen ist im Allgemeinen klein verglichen mit der Zeit, die der Benutzer Eingabe Kriterien benötigt.
+ Ein potenzieller Nachteil der Erstellung von SQL-Anweisungen zur Laufzeit besteht darin, dass es viel länger dauert, eine-Anweisung zu erstellen, als eine hart codierte Anweisung zu verwenden. Glücklicherweise ist dies selten ein Problem. Solche Anwendungen sind tendenziell Benutzeroberflächen intensiv, und der Zeitpunkt, zu dem die Anwendung das Erstellen von SQL-Anweisungen verbringt, ist im Vergleich zu dem Zeitpunkt, zu dem der Benutzer die Eingabe von Kriterien verbringt

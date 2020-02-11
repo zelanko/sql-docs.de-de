@@ -18,10 +18,10 @@ ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f0196a710f9349e109bcf956eca6e2310c1e051
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72252192"
 ---
 # <a name="sp_oamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72252192"
 
   Ruft eine Methode eines OLE-Objekts auf.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ sp_OAMethod objecttoken , methodname
  *MethodName*  
  Der Name der Methode des OLE-Objekts, das aufgerufen wird.  
   
- _ReturnValue_-**Ausgabe**  
+ _ReturnValue_-**Ausgabe**    
  Der Rückgabewert der Methode des OLE-Objekts. Wenn angegeben, muss es sich um eine lokale Variable vom entsprechenden Datentyp handeln.  
   
  Wenn die Methode einen einzelnen Wert zurückgibt, geben Sie entweder eine lokale Variable für *ReturnValue*an, die den Rückgabewert der Methode in der lokalen Variablen zurückgibt, oder geben Sie keinen *ReturnValue*-Wert an, der den Methodenrückgabewert an den Client als einspaltige einzeilige Resultset zurückgibt.  
@@ -64,17 +64,17 @@ sp_OAMethod objecttoken , methodname
   
 -   Die Methode gibt ein Array als Ausgabeparameter zurück.  
   
-`[ _@parametername = ] parameter[ OUTPUT ]` ist ein Methoden Parameter. Wenn angegeben, muss der *Parameter* ein Wert des entsprechenden Datentyps sein.  
+`[ _@parametername = ] parameter[ OUTPUT ]`Ist ein Methoden Parameter. Wenn angegeben, muss der *Parameter* ein Wert des entsprechenden Datentyps sein.  
   
  Zum Abrufen des Rückgabewerts eines Ausgabe Parameters muss der *Parameter* eine lokale Variable des entsprechenden Datentyps sein, und die **Ausgabe** muss angegeben werden. Wenn ein konstanter Parameter angegeben wird oder wenn **Output** nicht angegeben wird, wird jeder Rückgabewert eines Ausgabe Parameters ignoriert.  
   
- Wenn angegeben, muss Parameter *Name* der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannten Parameters sein. Beachten Sie, dass **@** keine [!INCLUDE[tsql](../../includes/tsql-md.md)] lokale Variable _parametername_is. Das at-Zeichen ( **@** ) wird entfernt, und *Parameter Name*wird als Parameter Name an das OLE-Objekt übergeben. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
+ Wenn angegeben, muss *Parameter Name* der Name des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] benannten Parameters sein. Beachten Sie **@**, dass _parametername_is [!INCLUDE[tsql](../../includes/tsql-md.md)] keine lokale Variable ist. Das at-Zeichen**@**() wird entfernt, und Parameter *Name*wird als Parameter Name an das OLE-Objekt übergeben. Alle benannten Parameter müssen nach den Positionsparametern angegeben werden.  
   
  *n*  
  Ein Platzhalter, der anzeigt, dass mehrere Parameter angegeben werden können.  
   
 > [!NOTE]
->  *\@Parameter Name* kann ein benannter Parameter sein, da er Teil der angegebenen Methode ist und an das-Objekt übergeben wird. Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
+>  Parameter Name kann ein benannter Parameter sein, da er Teil der angegebenen Methode ist und an das-Objekt übergeben wird. * \@* Die anderen Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  
@@ -92,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  Wenn alle Datenwerte einer Spalte denselben Datentyp aufweisen, wird dieser Datentyp für die gesamte Spalte verwendet. Wenn Datenwerte in einer Spalte unterschiedliche Datentypen verwenden, wird der Datentyp für die gesamte Spalte entsprechend der folgenden Tabelle ausgewählt.  
   
-||int|GLEITKOMMAZAHL|money|DateTime|varchar|nvarchar|  
+||INT|float|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -101,16 +101,16 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Sie können auch **sp_OAMethod** verwenden, um einen Eigenschafts Wert zu erhalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures` Konfiguration muss **aktiviert** sein, um alle System Prozeduren für die OLE-Automatisierung verwenden zu können.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures`die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-calling-a-method"></a>A. Aufrufen einer Methode  
- Im folgenden Beispiel wird die `Connect`-Methode des zuvor erstellten **SQLServer** -Objekts aufgerufen.  
+ Im folgenden Beispiel wird die `Connect` -Methode des zuvor erstellten **SQLServer** -Objekts aufgerufen.  
   
 ```  
 EXEC @hr = sp_OAMethod @object, 'Connect', NULL, 'my_server',  
@@ -123,7 +123,7 @@ END;
 ```  
   
 ### <a name="b-getting-a-property"></a>B. Eine Eigenschaft wird erhalten.  
- Im folgenden Beispiel wird die `HostName`-Eigenschaft (des zuvor erstellten **SQLServer** -Objekts) abgerufen und in einer lokalen Variablen gespeichert.  
+ Im folgenden Beispiel wird die `HostName` -Eigenschaft (des zuvor erstellten **SQLServer** -Objekts) abgerufen und in einer lokalen Variablen gespeichert.  
   
 ```  
 DECLARE @property varchar(255);  
@@ -136,8 +136,8 @@ END;
 PRINT @property;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte OLE-Automatisierungs &#40;Prozeduren Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte OLE-Automatisierungs Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
  [OLE-Automatisierungsbeispielskript](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

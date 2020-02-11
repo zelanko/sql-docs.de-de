@@ -17,16 +17,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 465416e87966ba3a80c8e98394c0b1f2009f591b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844461"
 ---
-# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys. database_service_objectives (Azure SQL-Datenbank)
+# <a name="sysdatabase_service_objectives-azure-sql-database"></a>sys.database_service_objectives (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Gibt ggf. die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elastischen Pools für eine Azure SQL-Datenbank oder eine Azure SQL Data Warehouse zurück. Wenn Sie bei der Master-Datenbank auf einem Azure SQL-Datenbankserver angemeldet sind, werden Informationen zu allen Datenbanken zurückgegeben. Für Azure SQL Data Warehouse müssen Sie mit der Master-Datenbank verbunden sein.  
+Gibt ggf. die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des elastischen Pools für eine Azure SQL-Datenbank oder eine Azure SQL Data Warehouse zurück. Wenn eine Anmeldung an der Masterdatenbank in einem Azure SQL-Datenbank-Server besteht, werden Informationen zu allen Datenbanken zurückgegeben. Für Azure SQL Data Warehouse müssen Sie über eine Verbindung mit der Masterdatenbank verfügen.  
   
   
  Informationen zu den Preisen finden Sie unter [SQL-Daten Bankoptionen und-Leistung: Preis](https://azure.microsoft.com/pricing/details/sql-database/) -und [SQL Data Warehouse Preise](https://azure.microsoft.com/pricing/details/sql-data-warehouse/)für SQL-Datenbank.  
@@ -35,9 +35,9 @@ Gibt ggf. die Edition (Dienst Ebene), das Dienst Ziel (Tarif) und den Namen des 
   
  Die sys. database_service_objectives-Sicht enthält die folgenden Spalten.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|database_id|int|Die ID der Datenbank, die innerhalb einer Instanz von Azure SQL-Datenbankserver eindeutig ist. Joinfähig mit [sys. Datenbanken &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|INT|Die ID der Datenbank, die innerhalb einer Instanz von Azure SQL-Datenbankserver eindeutig ist. Joinfähig mit [sys.-Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |Edition|sysname|Die Dienst Ebene für die Datenbank oder Data Warehouse: **Basic**, **Standard**, **Premium** oder **Data Warehouse**.|  
 |service_objective|sysname|Der Tarif der Datenbank. Wenn sich die Datenbank in einem Pool für elastische Datenbanken befindet, wird **elasticpool**zurückgegeben.<br /><br /> Auf dem **Basic** -Level gibt **Basic**zurück.<br /><br /> Eine **einzelne Datenbank in einer Standard Dienst Ebene** gibt eine der folgenden zurück: S0, S1, S2, S3, S4, S6, S7, S9 oder S12.<br /><br /> **Eine Einzel Datenbank in einem Premium** -Tarif gibt Folgendes zurück: P1, P2, P4, P6, P11 oder P15.<br /><br /> **SQL Data Warehouse** gibt DW100 bis DW30000c zurück.<br /><br /> Weitere Informationen finden Sie unter [Einzel Datenbanken](/azure/sql-database/sql-database-dtu-resource-limits-single-databases/), [Pools für elastische](/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools/)Datenbanken, [Data](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu/) Warehouse|  
 |elastic_pool_name|sysname|Der Name des [Pools für elastische](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) Datenbanken, zu dem die Datenbank gehört. Gibt **null** zurück, wenn die Datenbank eine einzelne Datenbank oder ein Datenlager ist.|  
