@@ -1,5 +1,5 @@
 ---
-title: Konfigurationskomponenten | Microsoft-Dokumentation
+title: Konfigurations Komponenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,21 +13,21 @@ ms.assetid: 0b68ff48-12e4-41aa-b9e2-b39ed5023ea7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 248a9e31b176444ad51cb3a62c7c5f12f1b7bde3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068583"
 ---
 # <a name="configuration-components"></a>Konfigurationskomponenten
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003, ist ODBC in das Windows-Betriebssystem enthalten. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Datenquellen werden vom Installationsprogramm-DLL, konfiguriert in aktivieren Aufrufe Treiber DLLs und die Translator-Setup-DLLs einrichten, wenn sie benötigt werden. Das Installationsprogramm-DLL ist entweder direkt über die Systemsteuerung aufgerufen oder geladen und aufgerufen, die von einem anderen Programm, bekannt als die *-Verwaltungsprogramm*. Die folgende Abbildung zeigt die Beziehung zwischen den Konfigurationskomponenten.  
+ Datenquellen werden von der Installer-DLL konfiguriert, die wiederum die DLLs für die Treiber Einrichtung und die Konvertierungs-Setup-DLLs bei Bedarf aufruft. Die Installationsprogramm-dll wird entweder direkt in der Systemsteuerung aufgerufen oder von einem anderen Programm geladen und aufgerufen, das als *Verwaltungs Programm*bezeichnet wird. Die folgende Abbildung zeigt die Beziehung zwischen den Konfigurations Komponenten.  
   
  ![Beziehung zwischen Konfigurationskomponenten](../../../odbc/reference/install/media/pr30.gif "pr30")  
   
- Weitere Informationen zu diesen Komponenten finden Sie unter den folgenden Themen am Ende dieses Abschnitts.  
+ Weitere Informationen zu diesen Komponenten finden Sie in den folgenden Themen am Ende dieses Abschnitts.  
   
 -   [Setupprogramm](../../../odbc/reference/install/setup-program.md)  
   
@@ -35,5 +35,5 @@ ms.locfileid: "68068583"
   
 -   [Setup-DLL für Treiber](../../../odbc/reference/install/driver-setup-dll.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installationskomponenten](../../../odbc/reference/install/installation-components.md)

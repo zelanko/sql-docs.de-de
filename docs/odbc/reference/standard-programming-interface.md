@@ -1,5 +1,5 @@
 ---
-title: Standard-Programmierschnittstelle | Microsoft-Dokumentation
+title: Standard Programmierschnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a241ea92af6c1273039cc45daab232a1fbe763a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081841"
 ---
 # <a name="standard-programming-interface"></a>Standardprogrammierschnittstelle
-Die Programmierschnittstelle ist vielleicht die am häufigsten offensichtlicher Kandidat für die Standardisierung. In der Tat, wenn ODBC entwickelt wird, ANSI und ISO bereits bereitgestellt Standards für embedded SQL und SQL Module. Obwohl keine Standards für eine Datenbank-CLI vorhanden war, wurde die Zugriffsgruppe für den SQL - ein Branchenkonsortium von Datenbankanbieter - angibt, ob eine erstellt in Betracht ziehen; ODBC-Komponenten, die höher ist die Grundlage für ihre Arbeit.  
+Die Programmierschnittstelle ist vielleicht der offensichtlichste Kandidat für die Standardisierung. Tatsächlich wurden bei der Entwicklung von ODBC bereits-ANSI-und ISO-Standards für eingebettete SQL-und SQL-Module bereitgestellt. Obwohl für eine Datenbank-CLI keine Standards vorhanden waren, hat die SQL-Zugriffs Gruppe (ein Branchen Konsortium von Datenbankanbietern) in Erwägung gezogen, ob ein solches erstellt werden sollte. Teile von ODBC wurden später zur Grundlage ihrer Arbeit.  
   
- Eine der Anforderungen für ODBC war, dass eine einzelne Binärdateien der Anwendung mit mehreren DBMS zu arbeiten. Es ist deshalb, dass ODBC embedded SQL oder Modul Sprachen nicht verwendet wird. Obwohl die Sprache in eingebetteten SQL-Modul und den Sprachen standardisiert ist, ist jeweils mit DBMS-spezifische Precompilers verknüpft. Daher Anwendungen müssen neu kompiliert werden, für jede DBMS und die resultierenden Binärdateien funktionieren nur mit einer einzelnen DBMS. Obwohl dies für Anwendungen mit geringem Datenvolumen finden Sie in den Bereichen Minicomputer und Mainframe akzeptabel ist, ist es in der Welt der PC nicht zulässig. Erstens handelt es sich um eine logistische Alptraum mehrere Versionen der Software für Massenanfragen und eingeschweißte für Kunden bereitstellen; Zweitens müssen PC-Anwendungen häufig mehrere DBMS gleichzeitig zugreifen.  
+ Eine der Voraussetzungen für ODBC war, dass eine einzelne Anwendungs Binärdatei mit mehreren DBMSs funktionieren musste. Der Grund hierfür ist, dass ODBC keine eingebetteten SQL-oder Modul Sprachen verwendet. Obwohl die Sprache in eingebetteten SQL-und Modul Sprachen standardisiert ist, ist jede an DBMS-spezifische präcompiler gebunden. Daher müssen Anwendungen für jedes DBMS neu kompiliert werden, und die resultierenden Binärdateien können nur mit einem einzelnen DBMS verwendet werden. Dies ist zwar für Anwendungen mit geringem Volumen in der Minicomputer-und Main Frame-Welt akzeptabel, aber in der Welt der persönlichen Computer nicht akzeptabel. Erstens ist es ein logistischer Alptraum, mehrere Versionen von Software mit umfangreichen Volumen und Verkleinerungs umschließenden Software für Kunden bereitzustellen. Zweitens müssen Anwendungen für persönliche Computer häufig gleichzeitig auf mehrere DBMSs zugreifen.  
   
- Auf der anderen Seite kann eine Call-Level-Interface implementiert werden, über die Bibliotheken oder Datenbanktreiber, die sich auf jedem lokalen Computer befinden; ein anderer Treiber ist für die jeweiligen Datenbankverwaltungssystem erforderlich. Da moderne Betriebssysteme diese Bibliotheken (z. B. Dynamic Link Libraries unter dem Betriebssystem Microsoft® Windows®) zur Laufzeit laden können, wird eine Anwendung auf Daten zugreifen kann aus verschiedenen DBMS-Systeme ohne Neukompilierung und kann auch auf Daten zugreifen. mehrere Datenbanken gleichzeitig. Sobald neue Datenbanktreiber verfügbar sind, können Benutzer nur installieren diese auf ihren Computern ohne ändern, neu kompilieren und verknüpfen Sie ihre datenbankanwendungen erneut. Darüber hinaus eine Call-Level-Interface war ein guter Kandidat für ODBC, da Windows - die Plattform für die ODBC ursprünglich entwickelt wurde-umfassenden Gebrauch von solchen Bibliotheken bereits vorgenommen.
+ Auf der anderen Seite kann eine Schnittstelle auf callsebene durch Bibliotheken oder Datenbanktreiber implementiert werden, die sich auf jedem lokalen Computer befinden. für jedes DBMS ist ein anderer Treiber erforderlich. Da moderne Betriebssysteme solche Bibliotheken (z. b. Dynamic Link Libraries auf dem Betriebssystem Microsoft® Windows®) zur Laufzeit laden können, kann eine einzelne Anwendung ohne Neukompilierung auf Daten aus verschiedenen DBMSs zugreifen und auch auf Daten aus zugreifen. mehrere Datenbanken gleichzeitig. Wenn neue Datenbanktreiber verfügbar werden, können Benutzer diese einfach auf ihren Computern installieren, ohne dass Sie Ihre Datenbankanwendungen ändern, neu kompilieren oder erneut verknüpfen müssen. Außerdem war eine Schnittstelle auf Callcenter-Ebene ein guter Kandidat für ODBC, da Windows-die Plattform, für die ODBC ursprünglich entwickelt wurde, diese Bibliotheken bereits umfassend genutzt hat.

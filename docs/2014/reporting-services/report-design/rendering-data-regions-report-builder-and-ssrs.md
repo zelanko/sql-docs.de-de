@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 918aa5eee3aada465e904cf7f1627f93d1b9bb6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105371"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendern von Datenbereichen (Berichts-Generator und SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66105371"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="tablix-data-regions"></a>Tablix-Datenbereiche  
- Der Tablix-Datenbereich, der es Ihnen ermöglicht, Tabellen, Matrizen und Listen zu erstellen, wird als Raster aus Spalten und Zeilen gerendert. Die Schnittstelle einer Zeile und einer Spalte ist eine Zelle. Beim Rendern kann diese Zelle Daten oder andere Berichtselemente, wie Bilder, Rechtecke, Textfelder oder Unterberichte, enthalten. Ein Tablix-Datenbereich kann vertikal und/oder horizontal wachsen. Außerdem können die Eckzelle, die Kopfzeilenzellen des Datenbereichs sowie die Textzellen des Datenbereichs basierend auf ihren Inhalten wachsen. Wenn sich der Datenbereich über mehrere Seiten erstreckt, werden Berichtselemente, die zur Wiederholung mit dem Datenbereich festgelegt sind, auf jeder Seite gerendert, auf der der Datenbereich angezeigt wird. Weitere Informationen finden Sie unter [listet &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
+ Der Tablix-Datenbereich, der es Ihnen ermöglicht, Tabellen, Matrizen und Listen zu erstellen, wird als Raster aus Spalten und Zeilen gerendert. Die Schnittstelle einer Zeile und einer Spalte ist eine Zelle. Beim Rendern kann diese Zelle Daten oder andere Berichtselemente, wie Bilder, Rechtecke, Textfelder oder Unterberichte, enthalten. Ein Tablix-Datenbereich kann vertikal und/oder horizontal wachsen. Außerdem können die Eckzelle, die Kopfzeilenzellen des Datenbereichs sowie die Textzellen des Datenbereichs basierend auf ihren Inhalten wachsen. Wenn sich der Datenbereich über mehrere Seiten erstreckt, werden Berichtselemente, die zur Wiederholung mit dem Datenbereich festgelegt sind, auf jeder Seite gerendert, auf der der Datenbereich angezeigt wird. Weitere Informationen finden Sie unter [Listen &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md).  
   
 ### <a name="right-to-left"></a>Von rechts nach links  
  Ein Tablix-Datenbereich, der zur Anzeige von rechts nach links festgelegt ist, wird beim Rendering als Spiegelbild der Datenbereichsstruktur von links nach rechts behandelt. Die Ecke des Datenbereichs wird in der oberen rechten Ecke angezeigt. Wenn dynamische Spalten im Bericht vorhanden sind, werden sie nach links erweitert. Rechts-nach-links-Einstellungen beeinflussen die Reihenfolge der Daten im Datenbereich nicht. Ihre Spalten werden lediglich anders angeordnet.  
@@ -46,9 +46,9 @@ ms.locfileid: "66105371"
 ## <a name="chart-gauge-and-map-data-regions"></a>Diagramm-, Maßstabs- und Zuordnungsdatenbereiche  
  Diagramm-, Maßstabs- und Zuordnungsdatenbereiche verhalten sich beim Rendern und Anzeigen im Berichtstext wie Bilder. Werten innerhalb des Datenbereichs können Aktionen zugeordnet sein, beispielsweise ein Link zu einem anderen Bericht oder ein Wechsel zu einem Lesezeichen. Diese Aktionen können ebenfalls gerendert werden, wenn der Renderer dies unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](rendering-report-items-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   

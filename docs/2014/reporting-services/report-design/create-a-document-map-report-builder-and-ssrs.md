@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106167"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Erstellen einer Dokumentstruktur (Berichts-Generator und SSRS)
@@ -48,7 +48,7 @@ ms.locfileid: "66106167"
     > [!NOTE]  
     >  Klicken Sie auf eine Zelle, um die Zeilen- und Spaltenziehpunkte anzuzeigen, und klicken Sie dann auf den Eckziehpunt, wenn Sie einen Tablix-Datenbereich wählen möchten.  
   
-2.  Geben Sie im Eigenschaftenbereich den Text, der in der Dokumentstruktur in angezeigt werden sollen die `DocumentMapLabel` -Eigenschaft, oder geben Sie einen Ausdruck, der ausgewertet wird zu einer Bezeichnung. Geben Sie beispielsweise **Umsatzdiagramm**ein.  
+2.  Geben Sie im Eigenschaften Bereich den Text ein, der in der Dokumentstruktur in der `DocumentMapLabel` -Eigenschaft angezeigt werden soll, oder geben Sie einen Ausdruck ein, der zu einer Bezeichnung ausgewertet wird. Geben Sie beispielsweise **Umsatzdiagramm**ein.  
   
     > [!NOTE]  
     >  Wenn der Eigenschaftenbereich nicht angezeigt wird, klicken Sie in der Registerkarte **Ansicht** in der Gruppe **Ein-/Ausblenden** auf die Option **Eigenschaften**.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106167"
 4.  Fügen Sie die URL in den Berichts-Manager ein, und drücken Sie dann die EINGABETASTE. Der Bericht wird ausgeführt, und die Dokumentstruktur ist ausgeblendet.  
   
 > [!NOTE]  
->  Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Beispielberichte für Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Weitere Informationen zum Herunterladen von Beispiel Berichten finden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Sie unter [Berichts-Generator und Berichts-Designer Beispiel Berichte](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Weitere Informationen finden Sie unter "URL-Zugriff" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
  
   
-## <a name="see-also"></a>Siehe auch  
- [Suchen und Anzeigen von Berichten im Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

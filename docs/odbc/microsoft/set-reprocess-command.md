@@ -1,5 +1,5 @@
 ---
-title: Befehl SET REPROCESS | Microsoft-Dokumentation
+title: Befehl "neu verarbeiten" festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063621"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS-Befehl
-Gibt an, wie viele oder wie lange eine Datei oder einen Datensatz nach dem Versuch nicht erfolgreich Sperren zu sperren.  
+Gibt an, wie oft oder wie lange eine Datei oder ein Datensatz nach einem erfolglosen Sperrversuch gesperrt werden soll.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,27 +30,27 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
 ```  
   
 ## <a name="arguments"></a>Argumente  
- UM *nAttempts*[Sekunden]  
- Gibt die Häufigkeit oder die Anzahl der Sekunden, um zu versuchen, einen Datensatz oder eine Datei zu sperren, sobald Sie versuchen, ein nicht erfolgreichen anfänglichen. Der Standardwert ist 0. Der maximale Wert ist 32.000.  
+ Zu *nattempts*[Sekunden]  
+ Gibt die Anzahl von Sekunden an, die versucht, einen Datensatz oder eine Datei nach einem anfänglichen erfolglosen Versuch zu sperren. Der Standardwert ist 0 (null). der Höchstwert ist 32.000.  
   
- Sekunden gibt an, dass Visual FoxPro Sperren einer Datei oder der Datensatz für *nAttempts* Sekunden. Es ist nur verfügbar, wenn *nAttempts* ist größer als 0 (null).  
+ Seconds gibt an, dass Visual FoxPro versucht, eine Datei oder einen Datensatz für *nattempts* Sekunden zu sperren. Sie ist nur verfügbar, wenn *nattempts* größer als 0 (null) ist.  
   
- Z. B. wenn *nAttempts* 30, Visual FoxPro versucht, einen Datensatz zu sperren oder die Datei bis zu 30 Mal. Wenn Sie sich auch um Sekunden (Legen Sie erneut zu VERARBEITEN und 30 Sekunden) angeben, versucht Visual FoxPro fortlaufend, einen Datensatz oder eine Datei für bis zu 30 Sekunden zu sperren.  
+ Wenn *nattempts* z. b. 30 ist, versucht Visual FoxPro einen Datensatz oder eine Datei bis zu 30-Mal zu sperren. Wenn Sie auch Sekunden einschließen (Set Reprocess to 30 seconds), versucht Visual FoxPro fortlaufend, einen Datensatz oder eine Datei für bis zu 30 Sekunden zu sperren.  
   
- Wenn eine ON ERROR-Routine eingerichtet wurde, und versuchen, einen Befehl aus, um den Datensatz bzw. die Datei zu Sperren nicht erfolgreich sind, wird die ON ERROR-Routine ausgeführt. Jedoch wenn eine Funktion, die Sperre versucht, eine ON ERROR-Routine wird nicht ausgeführt, und die Funktion gibt "false" zurück (. F.).  
+ Wenn eine On-Error-Routine wirksam ist und wenn versucht wird, den Datensatz oder die Datei zu sperren, wird die On Error-Routine ausgeführt. Wenn jedoch eine Funktion die Sperre versucht, wird eine On Error-Routine nicht ausgeführt, und die Funktion gibt false zurück (. F.).  
   
- Wenn eine ON ERROR-Routine nicht aktiv, ein Befehl versucht, den Datensatz bzw. die Datei zu sperren, und die Sperre kann nicht platziert werden, wird ein Fehler generiert. Wenn eine Funktion versucht, die Sperre, die Warnung wird nicht angezeigt, und die Funktion gibt "false" zurück (. F.).  
+ Wenn eine On-Error-Routine nicht wirksam ist, versucht ein Befehl, den Datensatz oder die Datei zu sperren, und die Sperre kann nicht platziert werden. es wird ein Fehler generiert. Wenn eine Funktion versucht, die Sperre zu platzieren, wird die Warnung nicht angezeigt, und die Funktion gibt false zurück. F.).  
   
- Wenn *nAttempts* ist 0 (Standardwert) und Sie geben Sie einen Befehl oder eine Funktion, die versucht, einen Datensatz oder eine Datei zu sperren, Visual FoxPro versucht, den Datensatz zu sperren oder die Datei auf unbestimmte Zeit. Wenn der Eintrag oder Datei verfügbar ist, während Sie warten, zu sperren, wird die Sperre und die die systemmeldung deaktiviert ist. Versucht, eine Funktion, die Sperre, die Funktion gibt "true" zurück (. "T".).  
+ Wenn *nattempts* den Wert 0 (Standardwert) hat und Sie einen Befehl oder eine Funktion ausgeben, der versucht, einen Datensatz oder eine Datei zu sperren, versucht Visual FoxPro unbegrenzt, den Datensatz oder die Datei zu sperren. Wenn der Datensatz oder die Datei für das Sperren verfügbar ist, während Sie warten, wird die Sperre abgelegt und die Systemmeldung gelöscht. Wenn eine Funktion versucht hat, die Sperre zu platzieren, gibt die Funktion true zurück. T.).  
   
- Die ON ERROR-Routine hat Vorrang vor allen weitere Versuche, den Datensatz bzw. die Datei zu sperren, wenn eine ON ERROR-Routine aktiviert ist, und versucht, ein Befehl, den Datensatz bzw. die Datei zu sperren, ist. Die ON ERROR-Routine wird sofort ausgeführt. Visual FoxPro wird nicht versucht, zusätzlichen Eintrag oder Datei gesperrt, und die systemmeldung nicht angezeigt.  
+ Wenn eine On-Error-Routine wirksam ist und ein Befehl versucht, den Datensatz oder die Datei zu sperren, hat die On Error-Routine Vorrang vor zusätzlichen versuchen, den Datensatz oder die Datei zu sperren. Die On Error-Routine wird sofort ausgeführt. Visual FoxPro versucht nicht, zusätzliche Daten Satz-oder Dateisperren zu übernehmen, und die Systemmeldung wird nicht angezeigt.  
   
- Wenn *nAttempts* ist 1, Visual FoxPro versucht, den Datensatz zu sperren oder die Datei auf unbestimmte Zeit und eine ON ERROR-Routine wird nicht ausgeführt.  
+ Wenn *nattempts* den Wert 1 hat, versucht Visual FoxPro unbegrenzt, den Datensatz oder die Datei zu sperren, und eine On Error-Routine wird nicht ausgeführt.  
   
- Wenn eine Sperre, von einem anderen Benutzer auf den Datensatz bzw. die Datei, die Sie sperren möchten erteilt wurden, müssen Sie warten, bis der Benutzer die Sperre aufhebt.  
+ Wenn eine Sperre von einem anderen Benutzer für den Daten Satz oder die Datei, die Sie sperren möchten, festgelegt wurde, müssen Sie warten, bis der Benutzer die Sperre freigibt.  
   
- STARTTYP  
- Gibt an, dass Visual FoxPro den Datensatz zu sperren oder die Datei auf unbestimmte Zeit. (Gruppe für die Aktualisierung-2 ist einen gleichwertigen Befehl.)  
+ in automatisch  
+ Gibt an, dass Visual FoxPro unbegrenzt versucht, den Datensatz oder die Datei zu sperren. (Set Reprocess to-2 ist ein entsprechender Befehl.)  
   
-## <a name="remarks"></a>Hinweise  
- Beim erste Versuch, einen Datensatz oder eine Datei gesperrt ist, nicht immer erfolgreich. In vielen Fällen ist ein Datensatz oder eine Datei von einem anderen Benutzer im Netzwerk gesperrt. Legen Sie erneut VERARBEITEN, bestimmt, ob es sich bei Visual FoxPro stellt weitere Versuche, den Datensatz bzw. die Datei zu sperren, wenn es sich bei der erste Versuch nicht erfolgreich ist. Sie können entweder Häufigkeit angeben, weitere Versuche erfolgen, oder für wie lange die Versuche erfolgen. Eine ON ERROR-Routine wirkt sich auf wie nicht erfolgreich sperren, die Versuche behandelt werden.
+## <a name="remarks"></a>Bemerkungen  
+ Der erste Versuch, einen Datensatz oder eine Datei zu sperren, ist nicht immer erfolgreich. Häufig wird ein Datensatz oder eine Datei von einem anderen Benutzer im Netzwerk gesperrt. Set Reprocess bestimmt, ob Visual FoxPro zusätzliche Versuche zum Sperren des Datensatzes oder der Datei durchführt, wenn der anfängliche Versuch nicht erfolgreich war. Sie können entweder angeben, wie oft zusätzliche Versuche unternommen werden oder wie lange die Versuche unternommen werden. Eine On Error-Routine wirkt sich darauf aus, wie nicht erfolgreiche Sperr Versuche verarbeitet werden.

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ec051870966a3a8cf9d2d028d80a2fc36708ba28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106140"
 ---
 # <a name="create-a-recursive-hierarchy-group-report-builder-and-ssrs"></a>Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)
@@ -50,19 +50,19 @@ ms.locfileid: "66106140"
     > [!NOTE]  
     >  Wenn der Bereich Eigenschaften geschlossen ist, klicken Sie auf der Registerkarte **Ansicht** auf **Eigenschaften** .  
   
-2.  Erweitern Sie im Bereich Eigenschaften den `Padding` Knoten, klicken Sie auf **Links**, und wählen Sie aus der Dropdown-Liste  **\<Ausdruck… >** .  
+2.  Erweitern Sie im Bereich Eigenschaften den Knoten `Padding` , klicken Sie auf **Links**, und wählen Sie ** \< **in der Dropdown Liste den Eintrag Ausdruck... >aus.  
   
 3.  Geben Sie im Ausdruckfenster den folgenden Ausdruck ein:  
   
      `=CStr(2 + (Level()*10)) + "pt"`  
   
-     Die Auffüllung-Eigenschaften erfordern alle eine Zeichenfolge im Format *nnyy*. Dabei steht *nn* für eine Zahl und *yy* für die Maßeinheit. Im obigen Beispielausdruck wird eine Zeichenfolge generiert, bei der die Auffüllung mithilfe der `Level`-Funktion basierend auf der Rekursionsebene vergrößert wird. Eine Zeile mit der Ebene 1 hätte z.B. die Auffüllung (2 + (1\*10))=12pt, und eine Zeile mit der Ebene 3 hätte die Auffüllung (2 + (3\*10))=32pt. Informationen zu den `Level` funktionieren, finden Sie unter [Ebene](report-builder-functions-level-function.md).  
+     Die Auffüllung-Eigenschaften erfordern alle eine Zeichenfolge im Format *nnyy*. Dabei steht *nn* für eine Zahl und *yy* für die Maßeinheit. Im obigen Beispielausdruck wird eine Zeichenfolge generiert, bei der die Auffüllung mithilfe der `Level`-Funktion basierend auf der Rekursionsebene vergrößert wird. Eine Zeile mit der Ebene 1 hätte z.B. die Auffüllung (2 + (1\*10))=12pt, und eine Zeile mit der Ebene 3 hätte die Auffüllung (2 + (3\*10))=32pt. Weitere Informationen zur- `Level` Funktion finden Sie unter [Ebene](report-builder-functions-level-function.md).  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
      Führen Sie den Bericht aus. Der Bericht zeigt eine hierarchische Ansicht der gruppierten Daten an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   

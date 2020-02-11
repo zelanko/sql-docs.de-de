@@ -11,27 +11,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105589"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
-  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Bericht, Teilen in anderen Berichten und von anderen Benutzern wieder verwendet, wenn sie die entsprechenden Berechtigungen verfügen und auf Berichtsservern veröffentlicht werden können.  
+  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Ab können Berichts Teile auf Berichts Servern veröffentlicht und in anderen Berichten und von anderen Benutzern wieder verwendet werden, wenn Sie über die entsprechenden Berechtigungen verfügen.  
   
  Berichtsteile können von mehreren Benutzern und in mehreren Berichten wiederverwendet werden. Benutzer können nach Berichtsteilen auf dem Server suchen und sie einem Bericht hinzufügen.  Benutzer können auch über Updates am Berichtsteil auf dem Server informiert werden und neue Versionen eines Berichtsteils erneut veröffentlichen. Diese Berichterstellungsaktionen können durch Sicherheitsberechtigungen der Reporting Services beeinflusst und gesteuert werden.  In diesem Thema werden Eigenschaften und Verhaltensweisen von Berichtsteilen erörtert, nachdem diese auf dem Server gespeichert wurden.  
   
 ## <a name="managing-report-parts"></a>Verwalten von Berichtsteilen  
- Um berichtsteile zu verwalten, können Sie Berichts-Manager für einen Berichtsserver im einheitlichen Modus oder Anwendungsseiten für einen Berichtsserver im integrierten SharePoint-Modus.  
+ Sie können Berichts-Manager für einen Berichts Server im einheitlichen Modus oder Anwendungs Seiten für einen Berichts Server im integrierten SharePoint-Modus verwenden, um Berichts Teile zu verwalten.  
   
 ### <a name="server-side-interaction-and-search"></a>Serverseitige Interaktion und Suche  
- Berichtsteile können entweder im einheitlichen Modus oder im integrierten SharePoint-Modus auf einem Berichtsserver veröffentlicht werden. Benutzer können die Berichtsteilkatalog-Funktion in einer Berichterstellungsanwendung wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Berichts-Generator verwenden, um Berichtsteile zu suchen und ihren Berichten hinzuzufügen. Wenn ein Benutzer einen Berichtsteil sucht, durchsucht die Suchfunktion unabhängig vom Modus, für den der Server installiert wurde, den Berichtsserverkatalog.  
+ Berichtsteile können entweder im einheitlichen Modus oder im integrierten SharePoint-Modus auf einem Berichtsserver veröffentlicht werden. Benutzer können die Berichts Teil Katalog-Funktion in einer Bericht Erstellungs Anwendung wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Berichts-Generator verwenden, um Berichts Teile zu suchen und ihren Berichten hinzuzufügen. Wenn ein Benutzer einen Berichtsteil sucht, durchsucht die Suchfunktion unabhängig vom Modus, für den der Server installiert wurde, den Berichtsserverkatalog.  
   
  Wenn Berichtsteile von einer Berichterstellungsanwendung wie Berichts-Generator auf einem Berichtsserver im integrierten SharePoint-Modus veröffentlicht werden, wird auch der Berichtsserverkatalog aktualisiert, und die Suchergebnisse aus dem Berichtsteilkatalog entsprechen exakt dem neuen oder aktualisierten Berichtsteil.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Direktes Hochladen von Berichtsteilen in einen SharePoint-Ordner  
- Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Feature zur Berichtsserver-Dateisynchronisierung auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Feature zur Berichtsserver-Dateisynchronisierung auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Aktivieren der Berichts Server Dateisynchronisierung-Funktion in der SharePoint-zentral Administration](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  Die Dateien können auch durch das Aufrufen einiger Reporting Services-Verwaltung-APIs wie GetProperties und SetProperties synchronisiert werden.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66105589"
   
  (*) Neu in dieser Version.  
   
-|Eigenschaft|Description|Berichtsteil<br /><br /> Katalogsuchkriterien|  
+|Eigenschaft|BESCHREIBUNG|Berichtsteil<br /><br /> Katalogsuchkriterien|  
 |--------------|-----------------|---------------------------------------------|  
 |Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
-|Beschreibung|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
+|BESCHREIBUNG|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
 |CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|Ja|  
 |CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
 |ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|Ja|  
@@ -70,18 +70,18 @@ ms.locfileid: "66105589"
 |Aktionen|Rollen|  
 |-------------|-----------|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften, Verwalten der Sicherheit und Herunterladen von Berichtsteilen|Inhalts-Manager<br /><br /> Meine Berichte|  
-|Hinzufügen, Löschen und Herunterladen von Berichtsteilen|Verleger|  
-|Suchen und Wiederverwenden|-Browser<br /><br /> Berichts-Generator|  
+|Hinzufügen, Löschen und Herunterladen von Berichtsteilen|Herausgeber|  
+|Suchen und Wiederverwenden|Browser<br /><br /> Berichts-Generator|  
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Server im integrierten SharePoint-Modus  
   
-|Aktionen|Rolle|  
+|Aktionen|Role|  
 |-------------|----------|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften, Verwalten der Sicherheit und Herunterladen von Berichtsteilen|Vollzugriff|  
-|Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften und Herunterladen von Berichtsteilen|Entwerfen<br /><br /> Mitwirken|  
-|Suchen und Wiederverwenden|Leseberechtigung<br /><br /> Nur anzeigen|  
+|Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften und Herunterladen von Berichtsteilen|Entwurf<br /><br /> Mitwirken|  
+|Suchen und Wiederverwenden|Lesen<br /><br /> Nur anzeigen|  
   
-### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
+### <a name="security-considerations"></a>Sicherheitshinweise  
   
 -   Wenn Berichtsteildefinitionen in einem Bericht wiederverwendet werden, werden sie zusammen mit der identifizierenden Komponenten-ID vollständig in die Berichtsdefinition kopiert. Wenn ein Berichtsteil auf dem Server aktualisiert wird, können Benutzer wählen, die aktualisierten Berichtsteile zu ihrem Bericht herunterzuladen. Die heruntergeladenen Updates sind ebenfalls vollständige Kopien des Berichtsteils in der Berichtsdefinition und ersetzen die vorhandene Version des Berichtsteils, die im Bericht enthalten war.  
   
@@ -90,12 +90,12 @@ ms.locfileid: "66105589"
   
 -   Für Berichtsteile werden die gleichen Berechtigungsrichtlinien wie für den vorhandenen Elementtyp „Ressource“ verwendet. Hinsichtlich der Vererbung von Sicherheitsberechtigungen wird innerhalb eines Ordners nicht zwischen herkömmlichen Ressourcenelementen und Berichtsteilen unterschieden. Beispielsweise erbt der Berichtsteil die gleiche Berechtigungsrichtlinie wie die Bilder im selben Ordner. Wenn diese Unterscheidung erforderlich ist, kann die Sicherheit auf Elementebene für die gewünschten Berichtsteile konfiguriert werden. Andernfalls können Sie Berichtsteile in separaten Ordnern speichern, für die die benötigten Berechtigungen konfiguriert wurden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsteile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
- [Allgemeine Eigenschaftenseite Berichtsteile &#40;Berichts-Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
- [Elemente verschieben-Seite &#40;Berichts-Manager&#41;](../move-items-page-report-manager.md)   
+ [Allgemeine Eigenschaften (Seite), Berichts Teile &#40;Berichts-Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
+ [Die Seite "Elemente verschieben" &#40;Berichts-Manager&#41;](../move-items-page-report-manager.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Problembehandlung bei Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Problembehandlung bei Berichts teilen &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
  [Berichtsteile im Berichts-Designer (SSRS)](report-parts-in-report-designer-ssrs.md)  
   
   

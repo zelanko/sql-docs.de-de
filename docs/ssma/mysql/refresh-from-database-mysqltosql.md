@@ -1,5 +1,5 @@
 ---
-title: Refresh from Database (MySQLToSQL)) aktualisieren | Microsoft-Dokumentation
+title: Aktualisieren aus der Datenbank (mysqltosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,36 +10,36 @@ ms.assetid: 59a6db8f-2db6-4071-9005-928a7231de92
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5acc3153d7305f404c5fc6a0478b83cc0c98bad6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066703"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Aktualisieren der Datenbank (MySqlToSql)
-Die **Refresh from Database aktualisieren** Dialogfeld können Sie auswählen, welche Objekte aus der MySQL-Datenbank zu aktualisieren. Zeilen in das Dialogfeld sind farbcodiert, abhängig vom Status der Metadaten:  
+Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der MySQL-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  
   
--   Wenn die Metadaten des Objekts lokal und in der MySQL-Datenbank geändert hat, ist die Zeile blau.  
+-   Wenn die Objekt Metadaten lokal und in der MySQL-Datenbank geändert wurden, ist die Zeile blau.  
   
--   Wenn die Metadaten des Objekts in der MySQL-Datenbank aber nicht in SSMA geändert hat, ist die Zeile gelb.  
+-   Wenn sich die Objekt Metadaten in der MySQL-Datenbank, aber nicht in SSMA geändert haben, wird die Zeile gelb angezeigt.  
   
--   Wenn die Metadaten des Objekts wurde lokal geändert, aber nicht in der MySQL-Datenbank, die Zeile grün angezeigt wird.  
+-   Wenn sich die Objekt Metadaten lokal geändert haben, aber nicht in der MySQL-Datenbank, wird die Zeile grün angezeigt.  
   
--   Wenn das Objekt in der MySQL-Datenbank neu ist, ist die Zeile rosa.  
+-   Wenn das Objekt in der MySQL-Datenbank neu ist, ist die Zeile Rosa.  
   
-Sie können angeben, Einstellungen für die Aktualisierung von Standard-Objekt in der **Projekteinstellungen** Dialogfeld. Weitere Informationen finden Sie unter [Projekteinstellungen &#40;Synchronisierung&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
+Sie können im Dialogfeld **Projekteinstellungen** die Standardeinstellungen für die Objekt Aktualisierung angeben. Weitere Informationen finden Sie unter [Project Settings &#40;Synchronisierung&#41; &#40;mysqldesql&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)  
   
-Für den Zugriff auf die **Refresh from Database aktualisieren** mit der rechten Maustaste ein Objekt in der MySQL-Metadaten-Explorer, und klicken Sie im Dialogfeld **Refresh from Database aktualisieren**.  
+Um auf das Dialogfeld **aus Datenbank aktualisieren** zuzugreifen, klicken Sie mit der rechten Maustaste auf ein Objekt im MySQL-metadatenexplorer, und klicken Sie auf **aus Datenbank aktualisieren**  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 |||  
 |-|-|  
 |**Begriff**|**Definition**|  
-|**Reduzieren (-)**|Alle Objektgruppen zum Ausblenden von einzelnen Objekten zu reduzieren.|  
+|**Reduzieren (-)**|Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.|  
 |**Erweitern (+)**|Erweitern Sie alle Objektgruppen, um einzelne Objekte anzuzeigen.|  
-|**Gleiche Objekte ein-/ausblenden**|Objekte aus der Liste wird ausgeblendet, wenn die Metadaten des Objekts in der MySQL-Datenbank und in SSMA ist.|  
-|**Refresh from Database (Pfeilschaltfläche) aktualisieren**|Verwenden Sie die Pfeiltaste klicken, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA aktualisiert werden sollen.|  
-|**Aus Datenbank werden nicht aktualisiert werden (X-Schaltfläche)**|Verwenden Sie die X-Schaltfläche, um anzugeben, dass die Metadaten für die ausgewählten Objekte nicht soll, können Sie in der SSMA aktualisiert werden.|  
-|**Legende**|Zeigt eine **Legende** Dialogfeld. Die Legende enthält die Zuordnung zwischen Zeilenfarben und Metadaten-Status.<br /><br />Zu den **Legende** im Dialogfeld auf der Basis von der **aus Datenbank aktualisieren** wählen Sie im Dialogfeld die **oben anzeigen** Kontrollkästchen.|  
+|**Gleichwertige Objekte ausblenden/anzeigen**|Blendet Objekte aus der Liste aus, wenn die Objekt Metadaten in der MySQL-Datenbank und in SSMA identisch sind.|  
+|**Aktualisieren aus der Datenbank (Pfeil Schaltfläche)**|Verwenden Sie die Pfeil Schaltfläche, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA aktualisiert werden sollen.|  
+|**Nicht aus Datenbank aktualisieren (X-Schaltfläche)**|Verwenden Sie die Schaltfläche X, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA nicht aktualisiert werden sollen.|  
+|**Legende**|Zeigt ein Dialogfeld für die **Legende** an. Die Legende enthält die Zuordnung zwischen Zeilen Farben und metadatenzuständen.<br /><br />Aktivieren Sie das Kontrollkästchen **am Anfang anzeigen** , um das Dialogfeld **Legende** oben im Dialogfeld **aus Datenbank aktualisieren** beizubehalten.|  
   

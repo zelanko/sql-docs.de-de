@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea704f5ec6ab26db37bb56b86a42605ab50dd48b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106121"
 ---
 # <a name="creating-recursive-hierarchy-groups-report-builder-and-ssrs"></a>Erstellen von rekursiven Hierarchiegruppen (Berichts-Generator und SSRS)
-  Um rekursive Daten anzuzeigen, in dem die Beziehung zwischen übergeordnetem und untergeordnetem durch Felder im Dataset dargestellt wird, können Sie den Region Gruppenausdruck basierend auf dem untergeordneten Feld festgelegt und die übergeordnete Eigenschaft basierend auf dem übergeordneten Feld festlegen.  
+  Wenn Sie rekursive Daten anzeigen möchten, bei denen die Beziehung zwischen übergeordnetem und untergeordnetem Element durch Felder im Dataset dargestellt wird, können Sie den Datenbereichs Gruppen Ausdruck basierend auf dem untergeordneten Feld festlegen und die übergeordnete Eigenschaft basierend auf dem übergeordneten Feld festlegen.  
   
  Eine hierarchische Anzeige von Daten wird häufig für rekursive Hierarchiegruppen verwendet, z. B. für Angestellte in einem Unternehmensdiagramm. Das Dataset enthält eine Liste mit Mitarbeitern und Managern, wobei die Namen der Manager auch in der Mitarbeiterliste enthalten sind.  
   
@@ -33,9 +33,9 @@ ms.locfileid: "66106121"
  Weitere Informationen finden Sie unter [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) und [Erstellen einer rekursiven Hierarchiegruppe (Berichts-Generator und SSRS)](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md).  
   
 ### <a name="aggregate-functions-that-support-recursion"></a>Aggregatfunktionen zur Unterstützung der Rekursion  
- Sie können Reporting Services-Aggregatfunktionen verwenden, die den Parameter *Rekursiv* akzeptieren, um Zusammenfassungsdaten für eine rekursive Hierarchie zu berechnen. Die folgenden Funktionen akzeptieren `Recursive` als Parameter: [Sum](report-builder-functions-sum-function.md), [Avg](report-builder-functions-avg-function.md), [Count](report-builder-functions-count-function.md), [CountDistinct](report-builder-functions-countdistinct-function.md), [CountRows](report-builder-functions-countrows-function.md), [Max](report-builder-functions-max-function.md), [Min](report-builder-functions-min-function.md), [StDev](report-builder-functions-stdev-function.md), [StDevP](report-builder-functions-stdevp-function.md), [Sum](report-builder-functions-sum-function.md), [Var](report-builder-functions-var-function.md) und [VarP](report-builder-functions-varp-function.md). Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Sie können Reporting Services-Aggregatfunktionen verwenden, die den Parameter *Rekursiv* akzeptieren, um Zusammenfassungsdaten für eine rekursive Hierarchie zu berechnen. Die folgenden Funktionen akzeptieren `Recursive` als Parameter: [Sum](report-builder-functions-sum-function.md), [AVG](report-builder-functions-avg-function.md), count, Count [,](report-builder-functions-countdistinct-function.md) [count](report-builder-functions-count-function.md), [zähltrows](report-builder-functions-countrows-function.md), [Max](report-builder-functions-max-function.md), [Min](report-builder-functions-min-function.md), [StDev](report-builder-functions-stdev-function.md), [StDevP](report-builder-functions-stdevp-function.md), [Sum](report-builder-functions-sum-function.md), [var](report-builder-functions-var-function.md)und [VarP](report-builder-functions-varp-function.md). Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md)   

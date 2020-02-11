@@ -13,20 +13,20 @@ ms.assetid: 49cbfafa-b21e-4e89-b248-9c7098f46b20
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5d73339bc87097d81eade4df0b8ab1604979e07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054062"
 ---
 # <a name="sqlconnect-visual-foxpro-odbc-driver"></a>SQLConnect (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Vollständig  
+ Unterstützung: vollständig  
   
- ODBC-API-Übereinstimmung: Kern-Ebene  
+ ODBC-API-Konformität: kernstufe  
   
- Stellt eine Verbindung her mit einer Datenquelle, die entweder als eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis von [Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md). Der Visual FoxPro-ODBC-Treiber ignoriert die *SzUID*, *CbUID*, *SzAuthStr*, und *CbAuthStr* Argumente.  
+ Stellt eine Verbindung mit einer Datenquelle her, bei der es sich entweder um eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein [Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)Verzeichnis handeln kann. Der Visual FoxPro-ODBC-Treiber ignoriert die Argumente " *szuid*", " *cbuid*", " *szauthstr*" und " *cbauthstr* ".  
   
- Weitere Informationen finden Sie unter [SQLConnect](../../odbc/reference/syntax/sqlconnect-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLCONNECT](../../odbc/reference/syntax/sqlconnect-function.md) in der *ODBC Programmer es Reference*.

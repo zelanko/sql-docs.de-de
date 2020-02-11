@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX für Paradox | Microsoft-Dokumentation
+title: Create Index for Paradox | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,62 +14,62 @@ ms.assetid: 6472bd69-b931-4bc2-a9bf-f1873ed4cdfe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 331613676b748453a56da1e41fe85f04a7715038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081940"
 ---
 # <a name="create-index-for-paradox"></a>CREATE INDEX für Paradox
-Die Syntax der CREATE INDEX-Anweisung für den ODBC-Paradox-Treiber ist:  
+Die Syntax der CREATE INDEX-Anweisung für den ODBC-Paradox-Treiber lautet wie folgt:  
   
- **Erstellen Sie** [**UNIQUE**] **INDEX** *Indexname*  
+ **Create** [**Unique**] *INDEXIndexname* ****  
   
- **ON** *Tabellenname*  
+ **Bei** *Tabellennamen*  
   
- **(** *Spaltenbezeichner* [**ASC**]  
+ **(** *Spalten Bezeichner* [**ASC**]  
   
- [ **,** *Spaltenbezeichner* [**ASC**]...] **)**  
+ [**,** *Spalten Bezeichner* [**ASC**]...] **)**  
   
- Die ODBC-Paradox-Treiber unterstützt nicht die **DESC** Schlüsselwort in der ODBC-SQL-Grammatik für die CREATE INDEX-Anweisung. Die *Tabellenname* -Argument kann den vollständigen Pfad der Tabelle angeben.  
+ Der ODBC-Paradox-Treiber unterstützt das **DESC** -Schlüsselwort in der ODBC-SQL-Grammatik für die CREATE INDEX-Anweisung nicht. Das Argument *Table-Name* kann den vollständigen Pfad der Tabelle angeben.  
   
- Wenn das Schlüsselwort **UNIQUE** angegeben ist, wird die ODBC-Paradox-Treiber wird einen eindeutigen Index erstellt. Der erste eindeutige Index wird als primären Index erstellt. Paradox primary Key-Datei mit dem Namen *Tabellenname*. PX. Primäre Indizes werden jedoch mit folgenden Einschränkungen:  
+ Wenn das **Unique** -Schlüsselwort angegeben ist, erstellt der ODBC-Paradox-Treiber einen eindeutigen Index. Der erste eindeutige Index wird als primärer Index erstellt. Dies ist eine Paradox-Primärschlüssel Datei mit dem Namen " *Table-Name*". Entworfen. Primäre Indizes unterliegen den folgenden Einschränkungen:  
   
--   Der primäre Index muss erstellt werden, bevor alle Zeilen der Tabelle hinzugefügt werden.  
+-   Der primäre Index muss erstellt werden, bevor der Tabelle Zeilen hinzugefügt werden.  
   
--   Ein primärer Index muss bei der ersten "n"-Spalten in einer Tabelle definiert werden.  
+-   Ein primärer Index muss auf den ersten n-Spalten in einer Tabelle definiert werden.  
   
--   Es ist nur ein primärer Index pro Tabelle zulässig.  
+-   Pro Tabelle ist nur ein primärer Index zulässig.  
   
--   Eine Tabelle kann nicht vom Paradox-Treiber aktualisiert werden, wenn ein primärer Index nicht für die Tabelle definiert ist. (Beachten Sie, dass dies nicht "true" für eine leere Tabelle, die aktualisiert werden kann, auch wenn Sie ein eindeutiger Index nicht für die Tabelle definiert ist.)  
+-   Eine Tabelle kann nicht vom Paradox-Treiber aktualisiert werden, wenn kein primärer Index in der Tabelle definiert ist. (Beachten Sie, dass dies für eine leere Tabelle nicht zutrifft, die auch dann aktualisiert werden kann, wenn für die Tabelle kein eindeutiger Index definiert ist.)  
   
--   Die *Indexname* Argument für einen primären Index muss identisch mit dem Basisnamen der Tabelle nach Bedarf Paradox.  
+-   Das *Index-Name-* Argument für einen primären Index muss mit dem Basisnamen der Tabelle übereinstimmen, wie von Paradox verlangt.  
   
- Wenn das Schlüsselwort **UNIQUE** wird weggelassen, wird die ODBC-Paradox-Treiber einen nicht eindeutiger Index erstellt. Dies besteht aus zwei Paradox-sekundären Index-Dateien, die mit dem Namen *Tabellenname*. X*Nn* und *Tabellenname*. Y*Nn*, wobei *Nn* ist die Nummer der Spalte in der Tabelle. Nicht eindeutige Indizes sind jedoch mit folgenden Einschränkungen:  
+ Wenn das Schlüsselwort **Unique** weggelassen wird, erstellt der ODBC-Paradox-Treiber einen nicht eindeutigen Index. Diese besteht aus zwei sekundären Paradox-Indexdateien namens " *Table-Name*". X*NN* und *Tabellenname*. J*NN*, wobei *NN* die Nummer der Spalte in der Tabelle ist. Nicht eindeutige Indizes unterliegen den folgenden Einschränkungen:  
   
--   Bevor ein nicht eindeutiger Index für eine Tabelle erstellt werden kann, muss ein primärer Index für die Tabelle vorhanden sein.  
+-   Bevor ein nicht eindeutiger Index für eine Tabelle erstellt werden kann, muss ein primärer Index für diese Tabelle vorhanden sein.  
   
--   Für Paradox 3. *x*, *Indexname* Argument für jeden Index als primären Index (eindeutigen oder nicht eindeutig) muss den Namen der Spalte identisch sein. Für Paradox 4. *x* und 5. *X*, der Namen des solchen Index kann sein, aber nicht den Namen der Spalte identisch sein.  
+-   Für Paradox 3. *x*, das *Indexnamen* Argument für jeden anderen Index als einen primären Index (eindeutig oder nicht eindeutig) muss mit dem Spaltennamen identisch sein. Für Paradox 4. *x* und 5. *x*, der Name eines solchen Indexes kann sein, muss jedoch nicht mit dem Spaltennamen identisch sein.  
   
--   Nur eine Spalte kann für ein nicht eindeutiger Index angegeben werden.  
+-   Für einen nicht eindeutigen Index kann nur eine Spalte angegeben werden.  
   
- Spalten können nicht hinzugefügt werden, nachdem ein Index für eine Tabelle definiert wurde. Wenn die erste Spalte der Argumentliste einer CREATE TABLE-Anweisung einen Index erstellt wird, kann keine zweite Spalte in der Argumentliste enthalten sein.  
+ Spalten können nicht hinzugefügt werden, nachdem ein Index für eine Tabelle definiert wurde. Wenn die erste Spalte der Argumentliste einer CREATE TABLE-Anweisung einen Index erstellt, kann keine zweite Spalte in der Argumentliste enthalten sein.  
   
- Verwenden Sie z. B. die Verkaufsauftragsnummer und Zahlenspalten als eindeutiger Index für die Tabelle SO_LINES Zeile, die Anweisung ein:  
+ Wenn Sie z. b. die Spalten Sales Order Number und line number als eindeutigen Index für die SO_LINES Tabelle verwenden möchten, verwenden Sie die-Anweisung:  
   
 ```  
 CREATE UNIQUE INDEX SO_LINES  
  ON SO_LINES (SONum, LineNum)  
 ```  
   
- Um die Spalte Teil als ein nicht eindeutiger Index für die Tabelle SO_LINES verwenden möchten, verwenden Sie die Anweisung ein:  
+ Verwenden Sie die-Anweisung, um die Teilenummern Spalte als einen nicht eindeutigen Index für die SO_LINES Tabelle zu verwenden:  
   
 ```  
 CREATE INDEX PartNum  
  ON SO_LINES (PartNum)  
 ```  
   
- Beachten Sie, wenn zwei CREATE INDEX-Anweisungen ausgeführt werden, die erste Anweisung einen primären Index immer mit dem gleichen Namen wie die Tabelle erstellt und die zweite Anweisung einen nicht eindeutigen Index immer mit dem gleichen Namen wie die Spalte erstellt an. Diese Indizes werden auf diese Weise benannt werden, auch wenn unterschiedliche Namen in der CREATE INDEX-Anweisungen eingegeben werden, und selbst wenn der Index eindeutig in der zweiten CREATE INDEX-Anweisung mit der Bezeichnung.  
+ Beachten Sie Folgendes: Wenn zwei CREATE INDEX-Anweisungen ausgeführt werden, erstellt die erste Anweisung immer einen primären Index mit dem gleichen Namen wie die Tabelle, und die zweite Anweisung erstellt immer einen nicht eindeutigen Index mit dem gleichen Namen wie die Spalte. Diese Indizes werden auf diese Weise benannt, auch wenn in den CREATE INDEX-Anweisungen verschiedene Namen eingegeben werden und der Index in der zweiten CREATE INDEX-Anweisung eindeutig bezeichnet wird.  
   
 > [!NOTE]  
->  Anweisungen sind zulässig, wenn Sie die Paradox-Treiber verwenden, ohne die Implementierung der Borland-Datenbank-Engine nur lesen und anfügen.
+>  Wenn Sie den Paradox-Treiber verwenden, ohne den Borland-Datenbank-Engine zu implementieren, sind nur Lese-und Anfügen-Anweisungen zulässig.

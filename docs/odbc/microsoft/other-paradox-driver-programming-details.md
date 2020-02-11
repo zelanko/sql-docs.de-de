@@ -1,5 +1,5 @@
 ---
-title: Weitere Informationen zur Programmierung von Paradox-Treibern | Microsoft-Dokumentation
+title: Weitere Informationen zur Paradox-Treiberprogrammierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ ms.assetid: 0a723323-b2a6-4ac3-81d0-6ed66ec08ab8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b19265c66107e6059639663fac4f6c2ff44219f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043794"
 ---
 # <a name="other-paradox-driver-programming-details"></a>Weitere Informationen zur Programmierung von Paradox-Treibern
 > [!NOTE]  
->  Dieser Abschnitt enthält die Paradox-Treiber-spezifische Informationen über ODBC-Funktionen und andere Programmierdetails. Allgemeine Informationen zu einer Funktion, finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieser Abschnitt enthält Paradox-Treiber spezifische Informationen zu ODBC-Funktionen und anderen Programmier Details. Allgemeine Informationen zu einer Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [SQLColAttributes (Paradox-Treiber)](../../odbc/microsoft/sqlcolattributes-paradox-driver.md)  
   

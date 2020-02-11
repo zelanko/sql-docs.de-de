@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4b79be33eba191349f324473ad5d80abb7b1f398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103522"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Verwalten von Berichtsserverinhalten (einheitlicher SSRS-Modus)
@@ -44,11 +44,12 @@ ms.locfileid: "66103522"
   
 -   Gleichen Sie Berichtsverarbeitungsanforderungen für den Server ab. Planen Sie dazu die Berichtsverarbeitung und geben Sie an, welche bei Bedarf auszuführen bzw. aus dem Cache zu laden sind.  
   
--   Geben Sie die Berechtigung zum Ausführen von Verwaltungsaufgaben mithilfe von vordefinierten Rollen: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
+-   Gewähren Sie anhand von vordefinierten Rollen die Berechtigung zum Ausführen von Verwaltungsaufgaben: **Systemadministrator** und **Inhalts-Manager**. Eine effektive Verwaltung des Berichtsserverinhalts erfordert, dass Sie beiden Rollen zugewiesen sind.  
   
- Tools zum Verwalten von Berichtsserverinhalt schließen [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] bzw. den Berichts-Manager ein. [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Der Berichts-Manager wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Weitere Informationen finden Sie unter [Reporting Services-Tools](../tools/reporting-services-tools.md).  
+ Tools zum Verwalten von Berichtsserverinhalt schließen [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] bzw. den Berichts-Manager ein. 
+  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] ermöglicht es Ihnen, Standards festzulegen und Funktionen zu aktivieren. Der Berichts-Manager wird verwendet, um Benutzern Zugriff auf Berichtsserverelemente und -vorgänge zu gewähren und Berichte und andere Inhaltstypen sowie alle freigegebenen Elemente und Berichtsverteilungsfunktionen anzuzeigen und zu verwenden. Weitere Informationen finden Sie unter [Reporting Services-Tools](../tools/reporting-services-tools.md).  
   
-##  <a name="bkmk_ReportServerItems"></a> Berichtsserverelemente  
+##  <a name="bkmk_ReportServerItems"></a>Berichts Server Elemente  
  Zu Berichtsserverelementen gehören Berichte, freigegebene Datenquellen, freigegebene Datasets, Berichtsteile, Ressourcen (Elemente, die auf einem Berichtsserver gespeichert, jedoch nicht von diesem verarbeitet werden) und Ordner. Elemente können von anderen Elementen abhängen. Beispielsweise kann ein Bericht von den freigegebenen Datenquellen abhängen, auf die er verweist. Wenn Sie ein abhängiges Element verschieben, aktualisiert der Berichtsserver die Verweisinformationen automatisch.  
   
  Sie können Berichtsserverelemente an andere Speicherorte in der Ordnerhierarchie des Berichtsservers verschieben. Beim Verschieben eines Elements werden auch alle zugehörigen Eigenschaften (einschließlich Sicherheitseinstellungen) an den neuen Speicherort verschoben. Wenn Sie einen Ordner verschieben, werden gleichzeitig alle in diesem Ordner enthaltenen Elemente verschoben.  
@@ -57,16 +58,16 @@ ms.locfileid: "66103522"
   
 |Symbol|Verschiebbares Element|  
 |----------|-------------------|  
-|![Berichtsymbol](../media/hlp-16doc.gif "Report icon")|Bericht|  
-|![Symbol verknüpfte Berichte](../media/hlp-16linked.gif "Linked report icon")|Verknüpfter Bericht|  
-|![Ordnersymbol](../media/hlp-16folder.gif "Folder icon")|Ordner|  
-|![Symbol allgemeine Ressource](../media/hlp-16file.gif "generic resource icon")|Allgemeine Ressource|  
-|![Symbol freigegebene Datenquelle](../media/hlp-16datasource.png "Shared data source icon")|Freigegebene Datenquelle|  
+|![Berichts Symbol](../media/hlp-16doc.gif "Bericht (Symbol)")|Bericht|  
+|![Verknüpfter Bericht (Symbol)](../media/hlp-16linked.gif "Verknüpfter Bericht (Symbol)")|Verknüpfter Bericht|  
+|![Ordner (Symbol)](../media/hlp-16folder.gif "Ordner (Symbol)")|Ordner|  
+|![Symbol "generische Ressource"](../media/hlp-16file.gif "allgemeines Ressourcensymbol")|Allgemeine Ressource|  
+|![Symbol für freigegebene Datenquelle](../media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")|Freigegebene Datenquelle|  
 ||Freigegebenes Dataset|  
   
- Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Berechtigung zum Verschieben eines Elements wird erteilt, wenn es sich bei den folgenden Aufgaben in Ihrer rollenzuweisung für das entsprechende Element ausgewählt sind: "Verwalten reports," "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten" aus.  
+ Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: "Berichte verwalten", "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten".  
   
-##  <a name="bkmk_Folders"></a> Ordner  
+##  <a name="bkmk_Folders"></a>Dern  
  Eine Ordnerhierarchie wird für die Adressierung von Elementen verwendet, die von einem Berichtsserver gespeichert und verwaltet werden.  Standardmäßig besteht die Ordnerstruktur aus einem Stammknoten (Home) und reservierten Ordnern, die die optionale Funktion "Meine Berichte" unterstützen. Zusätzliche Ordner sind benutzerdefiniert. Berichtsserverordner sind hilfreich, falls Sie dieselbe Ebene des Zugriffs auf mehrere Elemente gewähren möchten. Berechtigungen, die Sie für den Ordner festlegen, können von Elementen im Ordner sowie von zusätzlichen verzweigten Ordnern geerbt werden. Sie können beispielsweise einen Ordnersatz unter dem Ordner "Home" erstellen, Teamberechtigungen für jeden Ordner zuweisen und dann Teammitgliedern ermöglichen, Ordner unter dem Teamordner je nach Bedarf anzupassen.  
   
  Bei Verwendung eines Browsers für die direkte Verbindung mit einem Berichtsserver entspricht der Stammknoten der Ordnerstruktur dem Namen des virtuellen Berichtsserververzeichnisses. Über den Stammknoten können Sie Ordner je nach Bedarf erstellen, ändern und löschen, um den Berichtsserverinhalt zu organisieren. Sie können Inhalt zu einem Ordner hinzufügen, Elemente zwischen Ordnern verschieben, Ordnernamen oder Speicherorte ändern sowie nicht mehr benötigte Ordner löschen.  
@@ -96,7 +97,7 @@ ms.locfileid: "66103522"
   
 |Ordner|Zweck|  
 |------------|-------------|  
-|Home|Der Stammknoten der Ordnerhierarchie.|  
+|Privat|Der Stammknoten der Ordnerhierarchie.|  
 |Benutzer|Dieser Ordner wird angezeigt, wenn Sie die Funktion "Meine Berichte" aktivieren. Er enthält Unterordner für alle Benutzer der Funktion Meine Berichte und ist nur für Berichtsserveradministratoren verfügbar. Der Name des Unterordners entspricht dem Namen des Benutzers.|  
 |Meine Berichte|Stellt einen persönlichen Arbeitsbereich für jeden Benutzer bereit.|  
   
@@ -117,7 +118,7 @@ ms.locfileid: "66103522"
   
  Die Sichtbarkeit eines Elements in einem Ordner hängt sowohl von den Rollenzuweisungen (d. h. Berechtigung zum Anzeigen eines Elements) als auch von den Anzeigeoptionen für den jeweiligen Ordner ab. Im Berichts-Manager können Sie die Seite Inhalt auf Listenansicht oder Detailansicht festlegen. In einigen Fällen kann ein Bericht oder ein Element in der Listenansicht ausgeblendet sein. Zeigen Sie einen Ordner unbedingt in der Detailansicht an, bevor Sie seinen Inhalt löschen.  
   
-##  <a name="bkmk_Resources"></a> Ressourcen  
+##  <a name="bkmk_Resources"></a>Verfügt  
  Eine Ressource ist ein verwaltetes Element, das auf einem Berichtsserver gespeichert wird, jedoch nicht vom Berichtsserver verarbeitet wird. In der Regel stellt eine Ressource externen Inhalt für die Benutzerberichterstattung bereit. Beispiele beinhalten ein Bild als JPG-Datei, eine ESRI-Shape-Datei mit räumlichen Daten oder eine HTML-Datei mit einer Beschreibung der in einem Bericht verwendeten Geschäftsregeln. Die JPG-, SHP- oder HTML-Datei wird auf dem Berichtsserver gespeichert, wobei der Berichtsserver die Datei jedoch direkt an den Browser weiterleitet, ohne sie zuerst zu verarbeiten. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](../report-design/images-report-builder-and-ssrs.md) und im Abschnitt „Hinzufügen von Daten zu einer Karte“ im [Karten &#40;Berichts-Generator und SSRS&#41;](../report-design/maps-report-builder-and-ssrs.md).  
   
 ### <a name="adding-and-viewing-a-resource"></a>Hinzufügen und Anzeigen einer Ressource  
@@ -125,7 +126,7 @@ ms.locfileid: "66103522"
   
 |Vorgang|Dateityp|  
 |---------------|---------------|  
-|Upload|Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41; ](../reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in einer SharePoint-Bibliothek &#40;Reporting Services im SharePoint-Modus&#41;]... / upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Upload|Zum Hochladen einer Ressource verwenden Sie den Berichts-Manager, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird, oder eine Anwendungsseite auf einer SharePoint-Website, wenn der Berichtsserver im integrierten SharePoint-Modus ausgeführt wird. Weitere Informationen finden Sie unter [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../reports/upload-a-file-or-report-report-manager.md) oder [Hochladen von Dokumenten in eine SharePoint-Bibliothek &#40;Reporting Services im SharePoint-Modus&#41;]. /Upload-Documents-to-a-SharePoint-Library-Reporting-Services-in-SharePoint-Mode.MD).|  
 |Veröffentlichen|Alle Dateien in einem Projekt, die keine Berichte, Berichtsteile, Datenquellen oder Datasets darstellen, werden als Ressourcen hochgeladen. Fügen Sie zum Veröffentlichen einer Ressource einem Projekt im Berichts-Designer ein vorhandenes Objekt hinzu, und veröffentlichen Sie das Projekt dann auf einem Berichtsserver.|  
   
  Alle Ressourcen stehen als Dateien, die anschließend auf einen Berichtsserver hochgeladen werden, in einem Dateisystem bereit. Außer der standardmäßigen Größenbeschränkung von 4 MB in ASP.NET gibt es keine Einschränkungen bezüglich der hochzuladenden Dateien. Zum Veröffentlichen als Ressource auf einem Berichtsserver sind jedoch einige Dateitypen, die über entsprechende MIME-Typen verfügen, besser geeignet als andere. Ressourcen, die auf HTML- und JPG-Dateien basieren, werden z.B. in einem Browserfenster geöffnet, wenn der Benutzer auf die Ressource klickt. Die HTML-Datei wird als Webseite und die JPG-Datei als Bild gerendert. Andererseits können Ressourcen ohne entsprechende MIME-Typen, die auf Desktopanwendungsdateien basieren, beispielsweise im Browserfenster möglicherweise nicht gerendert werden.  
@@ -146,7 +147,7 @@ ms.locfileid: "66103522"
   
  Weitere Informationen finden Sie unter [Aktualisieren einer Ressource &#40;Berichts-Manager&#41;](update-a-resource-report-manager.md).  
   
-##  <a name="bkmk_MyReports"></a> Meine Berichte  
+##  <a name="bkmk_MyReports"></a>Meine Berichte  
  Der Ordner Meine Berichte ist ein persönlicher Arbeitsbereich für jeden Benutzer, der sich bei einem Berichtsserver mit einem gültigen Domänenkonto anmeldet. Dieser spezielle Ordner bietet Speicherplatz für derzeit bearbeitete Berichte, für Berichte, die nicht für die allgemeine Weitergabe gedacht sind, oder für Berichte, die für einen speziellen Zweck geändert wurden. Es ist nicht möglich, die Anzahl oder die Größe der im Ordner Meine Berichte gespeicherten Elemente einzuschränken oder einen Ordner Meine Berichte für Benutzer freizugeben.  
   
  Meine Berichte ordnet den Namen eines virtuellen Ordners, der für jeden Benutzer sichtbar ist (Meine Berichte) einem Masterordner Benutzerordner und einem eindeutigen Unterordner basierend auf dem Benutzernamen zu. Wenn ein Benutzer auf seinen Ordner Meine Berichte zugreift, wird der Benutzer in Wirklichkeit an seinen Unterordner unter Benutzerordner weitergeleitet. Jeder Unterordner enthält Speicherplatz für die Berichte und Elemente, die ein Benutzer zu seinem Ordner "Meine Berichte" hinzufügt.  
@@ -161,26 +162,26 @@ ms.locfileid: "66103522"
   
 |Zeichen|Escapewert|Beispiel|  
 |---------------|------------------|-------------|  
-|(Leerzeichen)|[ ]|*Vorname Nachname* wird zu *Vorname[ ]Nachname*|  
-|\ (umgekehrter Schrägstrich)|Wird durch ein einzelnes Leerzeichen ersetzt|*Domänenname\Benutzername* wird zu *Domänenname Benutzername*|  
-|@ (at-Zeichen)|[at]|*Benutzername*@hotmail.com wird zu *Benutzername*[at]hotmail.com|  
-|& (kaufmännisches Und-Zeichen)|[amp]|*Benutzername*@*Unternehmen*&*Unternehmen.com* wird zu *Benutzername*[at]*Unternehmen*[amp]*Unternehmen.com*|  
-|$ (Dollarzeichen)|[dollar]|*Benutzer* $*Name* wird zu *Benutzer*[ ][dollar]*Name*|  
+|(Leerzeichen)|[ ]|*FirstName LastName* wird zu *FirstName [] LastName*|  
+|\ (umgekehrter Schrägstrich)|Wird durch ein einzelnes Leerzeichen ersetzt|*DomainName\Username* wird zu *Domänen Name Benutzername*|  
+|@ (at-Zeichen)|[at]|*username* @hotmail.com wird zu *username*[at] hotmail. com|  
+|& (kaufmännisches Und-Zeichen)|[amp]|*username*@** Company&*Company.com* wird zu *username*[at]*Company*[amp]*Company.com*|  
+|$ (Dollarzeichen)|[dollar]|*Benutzer* $*Name* wird zu *Benutzer*[] [Dollar]*Name*|  
   
  Die Funktion "Meine Berichte" ist optional. Bei der Installation eines Berichtsservers wird "Meine Berichte" standardmäßig deaktiviert. Weitere Informationen zum Aktivieren dieser Funktion finden Sie unter [Aktivieren und Deaktivieren von "Meine Berichte"](enable-and-disable-my-reports.md). Weitere Informationen finden Sie unter [Sichern von Meine Berichte](../security/secure-my-reports.md).  
   
-## <a name="tasks"></a>Richtlinienübersicht  
+## <a name="tasks"></a>Aufgaben  
  [Hochladen von Dateien in einen Ordner](upload-files-to-a-folder.md)  
   
- [Erstellen, Löschen oder Ändern eines Ordners &#40;Berichts-Manager&#41;](create-delete-or-modify-a-folder-report-manager.md)  
+ [Erstellen, löschen oder Ändern eines Ordners &#40;Berichts-Manager&#41;](create-delete-or-modify-a-folder-report-manager.md)  
   
  [Aktualisieren einer Ressource &#40;Berichts-Manager&#41;](update-a-resource-report-manager.md)  
   
  [Hochladen von Dateien in einen Ordner](upload-files-to-a-folder.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Tools](../tools/reporting-services-tools.md)   
- [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md)   
+ [Rollen und Berechtigungen &#40;Reporting Services&#41;](../security/roles-and-permissions-reporting-services.md)   
  [Reporting Services-Berichte &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)  
   
   

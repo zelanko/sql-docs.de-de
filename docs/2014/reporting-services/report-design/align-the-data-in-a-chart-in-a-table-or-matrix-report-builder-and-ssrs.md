@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74b6e86e6c9e7fd9d293e4c1bdab952468adb4b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106513"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix (Berichts-Generator und SSRS)
   Sparklines und Datenbalken sind kleine, einfache Diagramme, die viel Information mit wenig relevanten Details vermitteln. Wenn Sie diese Option aktivieren, werden die Werte in den Sparklines und Datenbalken in den verschiedenen Zellen in der Tabelle oder Matrix ausgerichtet, auch wenn Sie nicht über alle Werte für die Daten verfügen, auf denen sie basieren.  
   
- ![RS_SparklineDaten ausrichten](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
+ ![rs_SparklineAlignData](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
  In diesem Bild wird das Säulendiagramm für die täglichen Verkäufe jedes Mitarbeiters dargestellt. Beachten Sie, dass Tage, an denen ein Mitarbeiter keine Verkäufe getätigt hat, leer gelassen werden und die nachfolgenden Tage horizontal ausgerichtet werden. Die Diagramme werden auch vertikal ausgerichtet, indem die Größen der unterschiedlichen Diagramme relativ zu einander festgelegt werden. Weitere Informationen finden Sie unter [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
@@ -35,8 +35,8 @@ ms.locfileid: "66106513"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Hinzufügen von Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Hinzufügen von Sparklines und Daten Balken &#40;Berichts-Generator und SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

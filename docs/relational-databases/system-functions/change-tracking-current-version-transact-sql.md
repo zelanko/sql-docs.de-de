@@ -20,18 +20,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e1bf8d568031541df8f4dfa80a4148ad759dad54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043002"
 ---
-# <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
+# <a name="change_tracking_current_version-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine Version zurück, die mit der letzten Transaktion, für die ein Commit ausgeführt wurde, verknüpft ist. Diese Version kann verwendet werden, wenn Sie Änderungen mithilfe von auflisten [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md).  
+  Gibt eine Version zurück, die mit der letzten Transaktion, für die ein Commit ausgeführt wurde, verknüpft ist. Diese Version kann verwendet werden, wenn Sie Änderungen mithilfe von [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md)auflisten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,9 +41,9 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ```  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **bigint**  
+ **BIGINT**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Gibt NULL zurück, wenn die Änderungsnachverfolgung für die Datenbank nicht aktiviert ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -54,7 +54,7 @@ DECLARE @next_baseline bigint;
 SET @next_baseline = CHANGE_TRACKING_CURRENT_VERSION();  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Änderungsnachverfolgungsfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [CHANGETABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/changetable-transact-sql.md)   
  [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md)   

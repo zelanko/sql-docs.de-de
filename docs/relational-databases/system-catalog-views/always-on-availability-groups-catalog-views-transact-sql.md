@@ -1,5 +1,5 @@
 ---
-title: Always On-Verfügbarkeitsgruppen-Katalogsichten (Transact-SQL) | Microsoft-Dokumentation
+title: Katalog Sichten für Always on-Verfügbarkeits Gruppen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,13 +16,13 @@ ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 729374505c322a0b62e762ef27c29f04bebf3c9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68050886"
 ---
-# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On-Verfügbarkeitsgruppen-Katalogsichten (Transact-SQL)
+# <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Katalog Sichten für Always on-Verfügbarkeits Gruppen (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Dieser Abschnitt enthält Katalogsichten und Funktionen, die mit [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]in Verbindung stehen.  
@@ -37,13 +37,13 @@ ms.locfileid: "68050886"
 |[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)||  
   
 > [!NOTE]  
->  Weitere Informationen zu verknüpften verfügbarkeitsdatenbanken finden Sie unter den **Replica_id** und **Group_database_id** Spalten in [sys.databases (Transact-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
+>  Informationen zu verbundenen Verfügbarkeits Datenbanken finden Sie in den **replica_id** -und **group_database_id** Spalten in [sys.-Datenbanken (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.databases (Transact-SQL)](sys-databases-transact-sql.md)   
- [database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
- [Always On-Verfügbarkeitsgruppen (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On-Verfügbarkeitsgruppen dynamische Verwaltungssichten und-Funktionen (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. Datenbanken (Transact-SQL)](sys-databases-transact-sql.md)   
+ [sys. database_mirroring_endpoints (Transact-SQL)](sys-database-mirroring-endpoints-transact-sql.md)   
+ [Always on Verfügbarkeits Gruppen (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Überwachen von Verfügbarkeits Gruppen (Transact-SQL);](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Dynamische Verwaltungs Sichten und-Funktionen für Always on Verfügbarkeits Gruppen (Transact-SQL)](../system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)  
   
   

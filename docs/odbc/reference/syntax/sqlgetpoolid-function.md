@@ -1,5 +1,5 @@
 ---
-title: SQLGetPoolID-Funktion | Microsoft-Dokumentation
+title: Sqlgetpoolid-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061484"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLGetPoolID** Ruft die Pool-ID  
+ **Sqlgetpoolid** Ruft die Pool-ID ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,30 +36,30 @@ SQLRETURN  SQLGetPoolID (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *hDbcInfoToken*  
- [Eingabe] Tokenhandle, die alle Verbindungsinformationen enthält.  
+ *hdbcinfotoken*  
+ Der Tokenhandle, das alle Verbindungsinformationen enthält.  
   
- *pPoolID*  
- [Ausgabe] Die Pool-ID, die verwendet wird, um eine Gruppe von Verbindungen zu identifizieren, die austauschbar verwendet werden können (möglicherweise muss eine zusätzliche zurückgesetzt).  
+ *ppoolid*  
+ Ausgeben Die Pool-ID, die verwendet wird, um eine Gruppe von Verbindungen zu identifizieren, die austauschbar verwendet werden können (möglicherweise eine zusätzliche zurück Setzung erforderlich).  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Bei der **SQLGetPoolID** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und ein **behandeln** von *hDbcInfoToken*.  
+ Wenn **sqlgetpoolid** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, verwendet der Treiber-Manager den **Handlertyp** SQL_HANDLE_DBC_INFO_TOKEN und einen **handle** von *hdbcinfotoken*.  
   
-## <a name="remarks"></a>Hinweise  
- **SQLGetPoolID** verwendet, um die Pool-ID, die anhand eines Satzes von Verbindungsinformationen abzurufen (von **SQLSetConnectAttrForDbcInfo**, **SQLSetDriverConnectInfo**, und  **SQLSetConnectInfo**). Dieser Pool-ID wird verwendet, um eine Gruppe von Verbindungen zu identifizieren, die austauschbar verwendet werden können (möglicherweise muss eine zusätzliche zurückgesetzt). Die Pool-ID wird verwendet werden, um den Verbindungspool für diese Gruppe von Verbindungen zu identifizieren.  
+## <a name="remarks"></a>Bemerkungen  
+ **Sqlgetpoolid** wird zum Abrufen der Pool-ID anhand eines Satzes von Verbindungsinformationen verwendet (von **sqlsetconnectattrfordbcinfo**, **sqlsetdriverconnectinfo**und **sqlsetconnectinfo**). Diese Pool-ID wird verwendet, um eine Gruppe von Verbindungen zu identifizieren, die austauschbar verwendet werden können (möglicherweise eine zusätzliche zurück Setzung erforderlich). Die Pool-ID wird verwendet, um den Verbindungspool für diese Gruppe von Verbindungen zu identifizieren.  
   
- Immer ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Wenn ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen aus *hDbcInfoToken*, und wird SQL_SUCCESS_WITH_INFO zurückgegeben. um die Anwendung im [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen von *hdbcinfotoken*und gibt SQL_SUCCESS_WITH_INFO in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)an die Anwendung zurück.  
   
- Anwendungen sollten diese Funktion nicht direkt aufrufen. Ein ODBC-Treiber, der treiberfähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
+ Anwendungen sollten diese Funktion nicht direkt aufzurufen. Ein ODBC-Treiber, der Treiber fähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
   
- Umfassen Sie sqlspi.h für die Entwicklung von ODBC-Treiber.  
+ Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

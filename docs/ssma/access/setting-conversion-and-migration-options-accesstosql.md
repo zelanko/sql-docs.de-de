@@ -1,5 +1,5 @@
 ---
-title: Festlegen von Konvertierung und Migrationsoptionen (AccessToSQL) | Microsoft-Dokumentation
+title: Festlegen von Konvertierungs-und Migrations Optionen (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -17,73 +17,73 @@ ms.assetid: 0a7304df-2f35-4453-96ef-7ac83dea1167
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e89cfd6768aeedd970889cbaea46bb3e1ceae4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051497"
 ---
-# <a name="setting-conversion-and-migration-options-accesstosql"></a>Festlegen von Konvertierung und Migrationsoptionen (AccessToSQL)
-Für jedes Projekt SSMA können Sie Projekt auf Dokumentebene-Optionen festlegen. Diese Optionen angeben, wie Objekte konvertiert werden, wie Daten migriert werden und Zuordnung von Datentypen für die Quelle, Ziel-Datentypen. Bevor Sie Objekte konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure oder Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, stellen Sie sicher, dass die Konfigurationsoptionen für das Projekt geeignet sind.  
+# <a name="setting-conversion-and-migration-options-accesstosql"></a>Festlegen von Konvertierungs-und Migrations Optionen (accesstosql)
+Für jedes SSMA-Projekt können Sie Optionen auf Projektebene festlegen. Diese Optionen geben an, wie Objekte konvertiert werden, wie Daten migriert werden und wie Quell Datentypen den Ziel Datentypen zugeordnet werden. Vergewissern Sie sich, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Konfigurationsoptionen für das Projekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geeignet sind, bevor Sie Objekte in oder SQL Azure oder Daten in oder SQL Azure migrieren.  
   
-## <a name="configuration-options-and-modes"></a>Optionen für die Konfiguration und -Modi  
-SSMA weist vier Sätze von Konfigurationseinstellungen und vier Modi zum Konfigurieren dieser Einstellungen: Standardmäßig optimistische, vollständig und benutzerdefinierte. Der Standardmodus ist für die meisten Benutzer empfohlen. Verwenden Sie den vollständigen Modus für einfache Konvertierungen. Verwenden Sie den vollständigen Modus, wenn alle Nachrichten angezeigt werden sollen. In den benutzerdefinierten Modus legen Sie die Optionen an.  
+## <a name="configuration-options-and-modes"></a>Konfigurationsoptionen und-Modi  
+SSMA verfügt über vier Sätze von Konfigurationseinstellungen und vier Modi zum Konfigurieren dieser Einstellungen: Standard, vollständig, vollständig und Benutzer definiert. Der Standardmodus wird für die meisten Benutzer empfohlen. Verwenden Sie den optimistischen Modus für einfache Konvertierungen. Verwenden Sie den vollständigen Modus, wenn alle Meldungen angezeigt werden sollen. Im benutzerdefinierten Modus legen Sie die Optionen fest.  
   
-Die Einstellungen werden im Abschnitt "Referenz zur Benutzeroberfläche" in dieser Dokumentation beschrieben. Weitere Informationen über die Einstellungen und wie die Einstellungen in den einzelnen Modi angewendet werden finden Sie unter den folgenden Themen:  
+Diese Einstellungen werden im Abschnitt "Benutzeroberflächen Verweis" in dieser Dokumentation beschrieben. Weitere Informationen zu den Einstellungen und zum Anwenden der Einstellungen in den einzelnen Modi finden Sie in den folgenden Themen:  
   
--   [Project Settings (Conversion) (Projekteinstellungen (Konvertierung)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
+-   [Projekteinstellungen (Konvertierung)](https://msdn.microsoft.com/bcebc635-c638-4ddb-924c-b9ccfef86388)  
   
--   [Project Settings (Migration) (Projekteinstellungen (Migration))](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
+-   [Projekteinstellungen (Migration)](https://msdn.microsoft.com/4caebc9c-8680-4b99-a8fa-89c43161c95d)  
   
--   [Project Settings (GUI) (Projekteinstellungen (GUI))](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
+-   [Projekteinstellungen (GUI)](https://msdn.microsoft.com/cf06baf1-8714-48a3-95dc-781f6ca53693)  
   
--   [Project Settings (Type Mapping) (Projekteinstellungen (Typzuordnung))](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
+-   [Projekteinstellungen (Typzuordnung)](https://msdn.microsoft.com/b87b9683-abed-4677-8c50-18bdba704655)  
   
--   [Project Settings (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
+-   [Projekteinstellungen (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)  
   
 ## <a name="setting-project-options"></a>Festlegen von Projektoptionen  
-In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen sind in der SSMA-Konfigurationsdatei gespeichert und angewendet werden, um neue Projekte, die Sie erstellen.  
+In SSMA können Sie die Standardeinstellungen für alle Projekte konfigurieren. Diese Einstellungen werden in der SSMA-Konfigurationsdatei gespeichert und auf jedes neue Projekt angewendet, das Sie erstellen.  
   
-**Projektoptionen festlegen**  
+**So legen Sie Standard Projektoptionen fest**  
   
-1.  Auf der **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**.  
+1.  Wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus.  
   
-2.  In der **Projekt Standardeinstellungen** (Dialogfeld), führen Sie einen der folgenden:  
+2.  Führen Sie im Dialogfeld **Standard Projekteinstellungen** einen der folgenden Schritte aus:  
   
-    -   Wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, angezeigt oder geändert werden, **Migration Zielversion** Dropdown-Liste, klicken Sie auf **allgemeine** am unteren Rand der linken Seite, und wählen **Konvertierung oder Migration oder SQL Azure**.  
+    -   Wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt/geändert werden müssen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Konvertierung oder Migration oder SQL Azure**aus.  
   
         > [!NOTE]  
-        > SQL Azure-Option steht in der **allgemeine** Registerkarte nur, wenn der Projekttyp erstellt SQL Azure ist.  
+        > SQL Azure Option ist auf der Registerkarte **Allgemein** nur verfügbar, wenn der erstellte Projekttyp SQL Azure ist.  
   
-    -   Wählen Sie zum Auswählen eines vordefinierten Modus **Standard**, **Optimistic**, oder **vollständige** in die **Modus** Dropdown-Listenfeld.  
+    -   Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig** aus.  
   
-    -   Wählen Sie zum Angeben eines benutzerdefinierten Modus **benutzerdefinierte** in die **Modus** wählen Sie eine Option im linken Bereich, klicken Sie auf die Einstellung oder einen Wert im rechten Bereich, und klicken Sie dann wählen oder geben Sie die neue Einstellung oder einen Wert.  
+    -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Feld **Modus** die Option **Benutzer** definiert aus, wählen Sie im linken Bereich eine Option aus, klicken Sie im rechten Bereich auf die Einstellung oder den Wert, und wählen Sie dann die neue Einstellung oder den Wert aus.  
   
-3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
+3.  Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   
-Sie können auch Einstellungen für das aktuelle Projekt anpassen. Diese Einstellungen werden in der aktuellen Projektdatei gespeichert.  
+Sie können auch die Einstellungen für das aktuelle Projekt anpassen. Diese Einstellungen werden in der aktuellen Projektdatei gespeichert.  
   
-**Anpassen der Einstellungen für das aktuelle Projekt**  
+**So passen Sie die Einstellungen für das aktuelle Projekt an**  
   
-1.  Auf der **Tools** , wählen Sie im Menü **Projekteinstellungen**.  
+1.  Wählen Sie **im Menü Extras** die Option **Projekteinstellungen**aus.  
   
-2.  In der **Projekteinstellungen** (Dialogfeld), führen Sie einen der folgenden:  
+2.  Führen Sie im Dialogfeld **Projekteinstellungen** einen der folgenden Schritte aus:  
   
-    -   Wählen Sie zum Auswählen eines vordefinierten Modus **Standard**, **Optimistic**, oder **vollständige** in die **Modus** Dropdown-Listenfeld.  
+    -   Um einen vordefinierten Modus auszuwählen, wählen Sie im Dropdown Feld **Modus** die Option **Standard**, **optimistische**oder **vollständig** aus.  
   
-    -   Wählen Sie zum Angeben eines benutzerdefinierten Modus **benutzerdefinierte** in die **Modus** wählen Sie eine Option im linken Bereich, klicken Sie auf die Einstellung oder einen Wert im rechten Bereich, und klicken Sie dann wählen oder geben Sie die neue Einstellung oder einen Wert.  
+    -   Um einen benutzerdefinierten Modus anzugeben, wählen Sie im Feld **Modus** die Option **Benutzer** definiert aus, wählen Sie im linken Bereich eine Option aus, klicken Sie im rechten Bereich auf die Einstellung oder den Wert, und wählen Sie dann die neue Einstellung oder den Wert aus.  
   
-3.  Klicken Sie auf **OK** zum Speichern der Einstellungen.  
+3.  Klicken Sie auf **OK**, um die Einstellungen zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt bei der Migration hängt von den Anforderungen Ihrer Projekte:  
+Der nächste Schritt der Migration hängt von Ihren Projektanforderungen ab:  
   
--   Wenn die Zuordnung von Datentypen für Quell- und zieleinstellungen anpassen möchten, finden Sie unter [Zuordnung-Quelle und Ziel-Datentypen](mapping-source-and-target-data-types-accesstosql.md)  
+-   Informationen zum Anpassen der Zuordnung von Quell-und Ziel Datentypen finden Sie unter [Zuordnung von Quell-und Ziel Datentypen](mapping-source-and-target-data-types-accesstosql.md)  
   
--   Wenn die Zuordnung der Quell-und Zieldatenbanken anpassen möchten, finden Sie unter [Zuordnung Quell- und Zieldatenbank](mapping-source-and-target-databases-accesstosql.md)  
+-   Informationen zum Anpassen der Zuordnung von Quell-und Ziel Datenbanken finden Sie unter [Zuordnung von Quell-und Ziel Datenbanken](mapping-source-and-target-databases-accesstosql.md) .  
   
--   Andernfalls können Sie die Access-Datenbank-Objektdefinitionen in konvertieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objektdefinitionen. Weitere Informationen finden Sie unter [den Zugriff auf Datenbankobjekte konvertieren](converting-access-database-objects-accesstosql.md)  
+-   Andernfalls können Sie die Objekt Definitionen der Access-Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Objekt Definitionen konvertieren. Weitere Informationen finden Sie unter [umstellen von Access-Datenbankobjekten](converting-access-database-objects-accesstosql.md) .  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

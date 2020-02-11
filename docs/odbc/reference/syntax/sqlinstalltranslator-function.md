@@ -1,5 +1,5 @@
 ---
-title: SQLInstallTranslator-Funktion | Microsoft-Dokumentation
+title: Sqlinstalltranslator-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5b973332c2fe0fa541635d326a3a5adecf6ae91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076115"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.5, als veraltet markiert  
+**Konformitäts**  
+ Eingeführte Version: ODBC 2,5, veraltet  
   
  **Zusammenfassung**  
- In ODBC 3.0 **SQLInstallTranslator** wurde ersetzt durch [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Aufrufe von **SQLInstallTranslator** zugeordnet **SQLInstallTranslatorEx**. Weitere Informationen finden Sie unter **SQLInstallTranslatorEx**.  
+ In ODBC 3,0 wurde **sqlinstalltranslator** durch [sqlinstalltranslatorex](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md)ersetzt. **Sqlinstalltranslator** -Aufrufe werden **sqlinstalltranslatorex**zugeordnet. Weitere Informationen finden Sie unter **sqlinstalltranslatorex**.  
   
- **SQLInstallTranslator** gibt "false" zurück, wenn eine Anwendung die ODBC-Aufrufe *3.x* Treiber-Manager mit der *LpszInfFile* -Argument auf einen anderen Wert als NULL festgelegt. Die Datei Odbc.inf in ODBC *2.x* wird nicht mehr unterstützt, in ODBC *3.x*, dies gilt auch für die Abwärtskompatibilität.
+ **Sqlinstalltranslator** gibt false zurück, wenn eine Anwendung Sie im ODBC *3. x* -Treiber-Manager aufruft, wobei das *lpszinffile* -Argument auf einen anderen Wert als NULL festgelegt ist. Die in ODBC *2. x* verwendete ODBC-INF-Datei wird in ODBC *3. x*nicht mehr unterstützt, selbst aus Gründen der Abwärtskompatibilität.

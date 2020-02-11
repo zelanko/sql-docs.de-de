@@ -1,5 +1,5 @@
 ---
-title: Verwalten von CLR-Integrationsassemblys | Microsoft-Dokumentation
+title: Verwalten von CLR-Integrationsassemblys Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,24 +16,24 @@ ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054450"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Verwalten von CLR-Integrationsassemblys
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Verwalteter Code wird kompiliert und dann in Einheiten bereitgestellt, die Assembly genannt werden. Eine Assembly wird als DLL oder ausführbare Datei (EXE) gepackt. Während eine ausführbare Datei auch alleine ausgeführt werden kann, muss eine DLL in einer vorhandenen Anwendung gehostet werden. Verwaltete DLL-Assemblys in geladen werden können, und von gehosteten [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist es erforderlich, die Assembly mit einer CREATE ASSEMBLY-Anweisung in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu registrieren, bevor sie in den Prozess geladen und verwendet werden kann. Assemblys können auch von einer neueren Version aus mithilfe der ALTER ASSEMBLY-Anweisung aktualisiert oder aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe der DROP ASSEMBLY-Anweisung entfernt werden.  
+  Verwalteter Code wird kompiliert und dann in Einheiten bereitgestellt, die Assembly genannt werden. Eine Assembly wird als DLL oder ausführbare Datei (EXE) gepackt. Während eine ausführbare Datei auch alleine ausgeführt werden kann, muss eine DLL in einer vorhandenen Anwendung gehostet werden. Verwaltete DLL-Assemblys können in geladen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von gehostet werden. Bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist es erforderlich, die Assembly mit einer CREATE ASSEMBLY-Anweisung in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank zu registrieren, bevor sie in den Prozess geladen und verwendet werden kann. Assemblys können auch von einer neueren Version aus mithilfe der ALTER ASSEMBLY-Anweisung aktualisiert oder aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mithilfe der DROP ASSEMBLY-Anweisung entfernt werden.  
   
- Assemblyinformationen befindet sich in der **Sys. assembly_files** Tabelle in der Datenbank, in dem die Assembly installiert wurde. Die **Sys. assembly_files** Tabelle enthält die folgenden Spalten.  
+ Assemblyinformationen werden in der **sys. assembly_files** -Tabelle in der Datenbank gespeichert, in der die Assembly installiert wurde. Die **sys. assembly_files** -Tabelle enthält die folgenden Spalten.  
   
-|Spalte|Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |assembly_id|Der für die Assembly definierte Bezeichner. Diese Nummer wird allen Objekten mit Bezug auf dieselbe Assembly zugewiesen.|  
-|NAME|Der Name des Objekts.|  
-|file_id|Eine Zahl jedes Objekt, wobei das erste Objekt zugeordnet, die einen bestimmten **Assembly_id** wird den Wert 1 erhält. Wenn mehrere Objekte mit dem gleichen verknüpft sind **Assembly_id**, wird jeder nachfolgende **File_id** Wert um 1 erhöht.|  
-|content|Die Hexadezimaldarstellung der Assembly oder Datei.|  
+|name|Der Name des Objekts.|  
+|file_id|Eine Zahl, die die einzelnen-Objekte identifiziert, wobei das erste-Objekt, das einem angegebenen zugeordnet ist, **assembly_id** den Wert 1 erhält. Wenn mehrere Objekte mit demselben **assembly_id**verknüpft sind, wird jeder nachfolgende **file_id** Wert um 1 erhöht.|  
+|Inhalt|Die Hexadezimaldarstellung der Assembly oder Datei.|  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen von Assemblys](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "68054450"
  [Löschen von Assemblys](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)  
  Erläutert das Löschen von CLR-Assemblys aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheit der CLR-Integration](../../../relational-databases/clr-integration/security/clr-integration-security.md)   
  [CLR-Integration und Codezugriffssicherheit](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
   
