@@ -1,5 +1,5 @@
 ---
-title: Standard-C-Datentypen | Microsoft-Dokumentation
+title: C-Standard Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,22 +15,22 @@ ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130011"
 ---
 # <a name="default-c-data-types"></a>Standardmäßige C-Datentypen
-Wenn eine Anwendung SQL_C_DEFAULT in angibt **SQLBindCol**, **SQLGetData**, oder **SQLBindParameter**, der Treiber wird davon ausgegangen, dass der C-der Eingabe- oder Ausgabe Datentyp entspricht dem SQL-Datentyp der Spalte oder des Parameters an die der Puffer gebunden ist.  
+Wenn eine Anwendung SQL_C_DEFAULT in **SQLBindCol**, **SQLGetData**oder **SQLBindParameter**angibt, geht der Treiber davon aus, dass der C-Datentyp der Ausgabe oder des Eingabe Puffers dem SQL-Datentyp der Spalte oder des Parameters entspricht, an die der Puffer gebunden ist.  
   
 > [!IMPORTANT]  
->  Interoperable Anwendungen ausführen können sollten nicht SQL_C_DEFAULT verwenden. Stattdessen sollten sie immer die C-Typ des Puffers angeben, die sie verwenden. Dies ist da Treiber den Standard-C-Typ aus den folgenden Gründen nicht immer richtig ermitteln können:  
+>  Interoperable Anwendungen sollten SQL_C_DEFAULT nicht verwenden. Stattdessen sollten Sie immer den C-Typ des Puffers angeben, den Sie verwenden. Dies liegt daran, dass Treiber den Standard-C-Typ aus den folgenden Gründen nicht immer ordnungsgemäß bestimmen können:  
   
--   Wenn das DBMS einen SQL-Datentyp einer Spalte oder Parameter fördert, kann nicht vom Treiber nicht den ursprünglichen SQL-Datentyp einer Spalte oder Parameter ermittelt. Es kann nicht aus diesem Grund den entsprechenden Standard-C-Datentyp bestimmen.  
+-   Wenn das DBMS einen SQL-Datentyp einer Spalte oder eines Parameters herauf stuft, kann der Treiber den ursprünglichen SQL-Datentyp einer Spalte oder eines Parameters nicht ermitteln. Daher kann der entsprechende C-Standard Datentyp nicht bestimmt werden.  
   
--   Wenn der Treiber, ob eine bestimmte Spalte oder Parameter signiert ist, nicht ermitteln kann, wie häufig der Fall ist, wenn der Wert ist sollten vom DBMS, verarbeitet der Treiber kann nicht bestimmt werden, ob der Typ der entsprechenden Standard-C-Daten mit oder ohne Vorzeichen sein.  
+-   Wenn der Treiber nicht bestimmen kann, ob eine bestimmte Spalte oder ein bestimmter Parameter signiert ist, wie es häufig der Fall ist, wenn er vom DBMS verarbeitet wird, kann der Treiber nicht ermitteln, ob der entsprechende C-Standard Datentyp signiert oder nicht signiert werden soll.  
   
-     Da nur als eine Vereinfachung der Programmierung SQL_C_DEFAULT angegeben ist, wird die Anwendung keine Funktionalität verloren, wenn die tatsächliche C-Datentyp angegeben.  
+     Da SQL_C_DEFAULT nur als Programmier Zweck bereitgestellt wird, verliert die Anwendung keine Funktionalität, wenn Sie den tatsächlichen C-Datentyp angibt.  
   
- Eine Tabelle mit den Standard-C-Datentyp für jeden SQL-Datentyp befindet sich im [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)weiter unten in diesem Anhang.
+ Eine Tabelle, die den c-Standard Datentyp für jeden SQL-Datentyp enthält, ist in den Daten [Typen "Daten aus SQL in C" weiter](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md)unten in diesem Anhang enthalten.

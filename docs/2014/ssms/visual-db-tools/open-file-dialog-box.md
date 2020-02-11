@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57e89016641469cbb3215429ff0f2b9053f758c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63138894"
 ---
 # <a name="open-file-dialog-box"></a>Datei öffnen (Dialogfeld)
@@ -67,7 +67,7 @@ ms.locfileid: "63138894"
  **Neuer Ordner**  
  Zeigt das Dialogfeld **Neuer Ordner** an. Verwenden Sie diese Option, um unterhalb des Ordners, der im Dropdown-Listenfeld **Suchen in** ausgewählt wurde, einen untergeordneten Ordner zu erstellen.  
   
-## <a name="views"></a>Ansichten  
+## <a name="views"></a>Sichten  
  Stellt Optionen bereit, mit denen der Inhalt des im Dropdown-Listenfeld **Sichten** ausgewählten Elements angeordnet und angezeigt werden kann.  
   
  **Miniaturansicht**  

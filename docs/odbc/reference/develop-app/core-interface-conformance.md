@@ -1,5 +1,5 @@
 ---
-title: Core-Schnittstellenübereinstimmung | Microsoft-Dokumentation
+title: Konformität der Kernschnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,56 +15,56 @@ ms.assetid: aaaa864a-6477-45ff-a50a-96d8db66a252
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02e8aabf808ebf11f2e241fc7d330f794dbb0112
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002116"
 ---
 # <a name="core-interface-conformance"></a>Schnittstellenübereinstimmung auf Kernebene
-Alle ODBC-Treiber müssen mindestens ein Kernebenen-aufweisen schnittstellenübereinstimmung. Da die Funktionen der Kernebene diejenigen, die durch die meisten generischen interoperablen Anwendungen erforderlich sind, kann solche Anwendungen der Treiber verwenden. Die Funktionen der Kernebene entsprechen auch auf die Funktionen, die in der ISO-CLI-Spezifikation definiert und auf die nonoptional Funktionen, die in der Open Group-CLI-Spezifikation definiert. Ein Kernebenen-Schnittstelle-konformen ODBC-Treiber kann die Anwendung Folgendes tun:  
+Alle ODBC-Treiber müssen mindestens eine Schnittstellen Übereinstimmung auf Kern Ebene aufweisen. Da die Features in der kernstufe diejenigen sind, die für die meisten generischen interoperablen Anwendungen erforderlich sind, kann der Treiber mit solchen Anwendungen arbeiten. Die Features auf der kernstufe entsprechen auch den in der ISO CLI-Spezifikation definierten Features und den nicht optionalen Features, die in der CLI-Spezifikation der Open-Gruppe definiert sind. Mit einem Schnittstellen kompatiblen ODBC-Treiber auf Kern Ebene kann die Anwendung Folgendes ausführen:  
   
--   Zuordnen und freigeben aller Arten von Handles, durch den Aufruf **SQLAllocHandle** und **SQLFreeHandle**.  
+-   Sie können alle Arten von Handles zuordnen und freigeben, indem Sie **SQLAllocHandle** und **SQLFreeHandle**aufrufen.  
   
--   Verwenden Sie alle Arten von der **SQLFreeStmt** Funktion.  
+-   Verwenden Sie alle Formen der **SQLFreeStmt** -Funktion.  
   
--   Binden von Resultsetspalten, durch den Aufruf **SQLBindCol**.  
+-   Binden von Resultsetspalten durch Aufrufen von **SQLBindCol**.  
   
--   Behandeln von dynamischen Parametern, einschließlich der Arrays von Parametern, die in der Eingabe-Richtung nur durch den Aufruf **SQLBindParameter** und **SQLNumParams**. (Parameter in der Ausgabe Richtung sind 203 in feature [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Behandeln von dynamischen Parametern, einschließlich Arrays von Parametern, in der Eingabe Richtung nur durch Aufrufen von **SQLBindParameter** und **sqlnumparameterams**. (Parameter in der Ausgabe Richtung sind die Funktion 203 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Geben Sie einen Bind-Offset.  
+-   Geben Sie einen Bindungs Offset an.  
   
--   Verwenden Sie das Data-at-Execution-Dialogfeld, das im Zusammenhang mit Aufrufen von **SQLParamData** und **SQLPutData**.  
+-   Verwenden Sie das Dialogfeld Data-at-Execution mit Aufrufen von **SQLParamData** und **SQLPutData**.  
   
--   Verwalten von Cursorn und Cursornamen, durch den Aufruf **SQLCloseCursor**, **SQLGetCursorName**, und **SQLSetCursorName**.  
+-   Verwalten von Cursorn und Cursor Namen durch Aufrufen von **SQLCloseCursor**, **SQLGetCursorName**und **SQLSetCursorName**.  
   
--   Erhalten Sie Zugriff auf die Beschreibung (Metadaten) des Resultsets, durch den Aufruf **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**, und **SQLRowCount** . (Verwendung dieser Funktionen auf Spaltennummer 0 zum Abrufen von Metadaten für Lesezeichen 204 in Features sind [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Durch den Aufruf von **SQLColAttribute**, **SQLDescribeCol**, **SQLNumResultCols**und **SQLRowCount**erhalten Sie Zugriff auf die Beschreibung (Metadaten) von Resultsets. (Die Verwendung dieser Funktionen für die Spaltennummer 0 zum Abrufen von Lesezeichen Metadaten ist die Funktion 204 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Wörterbuch mit den Daten, Abfragen, durch den Aufruf der Katalogfunktionen **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**, und **SQLTables**.  
+-   Fragen Sie das Datenwörterbuch ab, indem Sie die Katalog Funktionen **SQLColumns**, **SQLGetTypeInfo**, **SQLStatistics**und **SQLTables**aufrufen.  
   
-     Der Treiber ist nicht für die Unterstützung von mehrteiliger Namen der Datenbanktabellen und-Sichten erforderlich. (Weitere Informationen finden Sie unter 101-Feature in [Ebene-1-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-1-interface-conformance.md) und Funktionen Sie 201 in [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) Es gibt jedoch bestimmte Funktionen der SQL-92-Spezifikation, z. B. Spalte Qualifikation und Namen von Indizes, syntaktisch mit mehrteiligen Namen. Die vorhandene Liste der ODBC-Funktionen ist nicht vorgesehen, neue Optionen in dieser Aspekte der SQL-92 einführen.  
+     Der Treiber ist nicht erforderlich, um mehrteilige Namen von Datenbanktabellen und-Sichten zu unterstützen. (Weitere Informationen finden Sie unter Feature 101 in der Schnittstellen Konformität der [Ebene 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md) und Feature 201 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).) Bestimmte Funktionen der SQL-92-Spezifikation, wie z. b. die Spalten Qualifizierung und Namen von Indizes, sind jedoch syntaktisch mit der mehrteiligen Benennung vergleichbar. Die aktuelle Liste der ODBC-Funktionen ist nicht für die Einführung neuer Optionen in diese Aspekte von SQL-92 gedacht.  
   
--   Verwalten von Datenquellen und Verbindungen durch den Aufruf **SQLConnect**, **SQLDataSources**, **SQLDisconnect**, und **SQLDriverConnect**. Abrufen von Informationen auf den Treiber, unabhängig davon, welche ODBC level sie, durch den Aufruf unterstützen **SQLDrivers**.  
+-   Verwalten von Datenquellen und Verbindungen durch Aufrufen von **SQLCONNECT**, **SQLDataSources**, **SQLDisconnect**und **SQLDriverConnect**. Abrufen von Informationen zu Treibern, unabhängig davon, welche ODBC-Ebene Sie unterstützen, durch Aufrufen von **SQLDrivers**.  
   
--   Vorbereiten und Ausführen von SQL-Anweisungen, durch den Aufruf **SQLExecDirect**, **SQLExecute**, und **SQLPrepare**.  
+-   Vorbereiten und Ausführen von SQL-Anweisungen durch Aufrufen von **SQLExecDirect**, **SQLExecute**und **SQLPrepare**.  
   
--   Rufen Sie eine Zeile eines Resultsets oder mehrere Zeilen, nur vorwärts durch Aufrufen von **SQLFetch** oder durch Aufrufen von **SQLFetchScroll** mit der *FetchOrientation* Argument Legen Sie auf SQL_FETCH_NEXT.  
+-   Abrufen einer Zeile eines Resultsets oder mehrerer Zeilen in Vorwärtsrichtung, durch Aufrufen von **SQLFetch** oder durch Aufrufen von **SQLFetchScroll** , wobei das *FetchOrientation* -Argument auf SQL_FETCH_NEXT festgelegt ist.  
   
--   Abrufen eine ungebundene Spalte in Teilen, durch den Aufruf **SQLGetData**.  
+-   Abrufen einer ungebundenen Spalte in Teilen, indem **SQLGetData**aufgerufen wird.  
   
--   Abrufen der aktuellen Werte aller Attribute, durch Aufrufen von **SQLGetConnectAttr**, **SQLGetEnvAttr**, und **SQLGetStmtAttr**, und legen Sie alle Attribute auf ihre Standardwerte zurück und bestimmte Attribute auf benutzerdefinierte Werte festlegen, durch den Aufruf **SQLSetConnectAttr**, **SQLSetEnvAttr**, und **SQLSetStmtAttr**.  
+-   Rufen Sie die aktuellen Werte aller Attribute durch Aufrufen von **SQLGetConnectAttr**, **SQLGetEnvAttr**und **SQLGetStmtAttr**ab, legen Sie alle Attribute auf ihre Standardwerte fest, und legen Sie bestimmte Attribute auf nicht standardmäßige Werte fest, indem Sie **SQLSetConnectAttr**, **SQLSetEnvAttr**und **sqlsetstmt**  
   
--   Bearbeiten von bestimmten Feldern der Deskriptoren, durch den Aufruf **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**, und **SQLSetDescRec**.  
+-   Bearbeiten bestimmter Deskriptorfelder durch Aufrufen von **SQLCopyDesc**, **SQLGetDescField**, **SQLGetDescRec**, **SQLSetDescField**und **SQLSetDescRec**.  
   
--   Abrufen von Diagnoseinformationen, durch den Aufruf **SQLGetDiagField** und **SQLGetDiagRec**.  
+-   Rufen Sie Diagnoseinformationen ab, indem Sie **SQLGetDiagField** und **SQLGetDiagRec**aufrufen.  
   
--   Treiber-Funktionen, durch den Aufruf erkennt **SQLGetFunctions** und **SQLGetInfo**. Darüber hinaus erkennt das Ergebnis Ersetzungen, die an eine SQL-Anweisung vorgenommen werden, bevor sie mit der Datenquelle, durch den Aufruf gesendet wird **SQLNativeSql**.  
+-   Erkennen von Treiberfunktionen durch Aufrufen von **SQLGetFunctions** und **SQLGetInfo**. Sie können auch das Ergebnis von Text Ersetzungen ermitteln, die vor dem Senden an die Datenquelle durch Aufrufen von **SQLNativeSql**an eine SQL-Anweisung vorgenommen wurden.  
   
--   Verwenden Sie die Syntax der **SQLEndTran** Commit eine Transaktion. Ein Kernebenen-Treiber muss "true" Transaktionen nicht unterstützt; die Anwendung kann nicht aus diesem Grund für das SQL_ATTR_AUTOCOMMIT-Verbindungsattribut SQL_ROLLBACK noch SQL_AUTOCOMMIT_OFF angeben. (Weitere Informationen finden Sie unter Feature 109 [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Verwenden Sie die Syntax von **SQLEndTran** , um einen Commit für eine Transaktion durchführen. Ein Treiber auf Kern Ebene muss keine echten Transaktionen unterstützen. Daher kann die Anwendung weder SQL_ROLLBACK noch SQL_AUTOCOMMIT_OFF für das SQL_ATTR_AUTOCOMMIT Connection-Attribut angeben. (Weitere Informationen finden Sie unter Feature 109 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
--   Rufen Sie **SQLCancel** um das Dialogfeld "Data-at-Execution" abzubrechen und im multithread-Umgebungen zum Abbrechen einer ODBC-Ausführung in einem anderen Thread. Unterstützung für asynchrone Ausführung von Funktionen noch die Verwendung des Core-Level-Interface-Standards nicht anordnet **SQLCancel** zum Abbrechen von einer ODBC-Funktion, die asynchron ausgeführt wird. Weder für die Plattform als auch für den ODBC-Treiber muss für den Treiber voneinander unabhängige Aktivitäten zur gleichen Zeit durchführen multithread sein. Allerdings muss der ODBC-Treiber in multithread-Umgebungen threadsicher sein. Serialisierung von Anforderungen aus der Anwendung ist eine konforme Möglichkeit zum Implementieren dieser Spezifikation ist, obwohl es schwerwiegende Leistungsprobleme erstellen kann.  
+-   Rufen Sie **SQLCancel** auf, um das Dialogfeld Data-at-Execution abzubrechen und in Multithreadumgebungen eine ODBC-Funktion abzubrechen, die in einem anderen Thread ausgeführt wird. Die Schnittstellen Konformität auf Kern Ebene unterstützt weder die asynchrone Ausführung von Funktionen noch die Verwendung von **SQLCancel** , um eine asynchrone Ausführung einer ODBC-Funktion abzubrechen. Weder die Plattform noch der ODBC-Treiber benötigen Multithread, damit der Treiber unabhängige Aktivitäten gleichzeitig durchführen muss. In Umgebungen mit mehreren Threads muss der ODBC-Treiber jedoch Thread sicher sein. Die Serialisierung von Anforderungen von der Anwendung ist eine konforme Methode zur Implementierung dieser Spezifikation, auch wenn Sie schwerwiegende Leistungsprobleme verursachen kann.  
   
--   Abrufen der SQL_BEST_ROWID Zeile identifizieren-Spalte mit Tabellen, durch den Aufruf **SQLSpecialColumns**. (Unterstützung für SQL_ROWVER 208 in Features sind [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
+-   Rufen Sie die SQL_BEST_ROWID Zeilen identifizierende Spalte der Tabellen ab, indem Sie **SQLSpecialColumns**aufrufen. (Unterstützung für SQL_ROWVER ist die Funktion 208 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)  
   
     > [!IMPORTANT]  
-    >  ODBC-Treiber müssen die Funktionen in der Konformitätsgrad des Core-Schnittstelle implementieren.
+    >  ODBC-Treiber müssen die Funktionen in der Kern Schnittstellen-Konformitäts Ebene implementieren.

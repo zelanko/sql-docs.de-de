@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0 | Microsoft-Dokumentation
+title: Verwenden von Updategrams zum Ändern von Daten in SQLXML 4,0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -25,46 +25,46 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b615062ae70c5a7b7ee18869aaa20951dec29b2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014602"
 ---
 # <a name="using-updategrams-to-modify-data-in-sqlxml-40"></a>Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0
-  Sie können ändern (einfügen, aktualisieren oder löschen) eine Datenbank in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus einem vorhandenen XML-Dokument mithilfe eines Updategrams oder der OPENXML- [!INCLUDE[tsql](../../../includes/tsql-md.md)] Funktion.  
+  Mithilfe eines Update grams oder der OPENXML [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Funktion können Sie eine Datenbank in aus einem vorhandenen XML-Dokument ändern (einfügen, aktualisieren oder löschen).  
   
  Dieser Abschnitt enthält Informationen über Updategrams und Beispiele für ihre Verwendung.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Einführung in Updategrams &#40;SQLXML 4.0&#41;](introduction-to-updategrams-sqlxml-4-0.md)  
+ [Einführung in Update grams &#40;SQLXML 4,0&#41;](introduction-to-updategrams-sqlxml-4-0.md)  
  Stellt grundlegende Informationen und Beispiele für Updategrams bereit.  
   
- [Angeben eines Zuordnungsschemas in einem Updategram &#40;SQLXML 4.0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
+ [Angeben eines Schemas mit Anmerkungen in einem Update Gram &#40;SQLXML 4,0&#41;](specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md)  
  Erklärt anhand von Beispielen die Zuordnungsschemas mit Anmerkungen in Updategrams.  
   
- [NULL-Behandlung &#40;SQLXML 4.0&#41;](null-handling-sqlxml-4-0.md)  
+ [NULL-Behandlung &#40;SQLXML 4,0&#41;](null-handling-sqlxml-4-0.md)  
  Beschreibt das Angeben von NULL für Element- und Attributwerte.  
   
- [Einfügen von Daten mit XML-Updategrams &#40;SQLXML 4.0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Einfügen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](inserting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Beschreibt anhand von Beispielen das Verwenden von Updategrams zum Einfügen von Daten.  
   
- [Löschen von Daten mit XML-Updategrams &#40;SQLXML 4.0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Löschen von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](deleting-data-using-xml-updategrams-sqlxml-4-0.md)  
  Beschreibt anhand von Beispielen das Verwenden von Updategrams zum Löschen von Daten.  
   
- [Aktualisieren von Daten mit XML-Updategrams &#40;SQLXML 4.0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
+ [Aktualisieren von Daten mit XML-Update grams &#40;SQLXML 4,0&#41;](updating-data-using-xml-updategrams-sqlxml-4-0.md)  
  Beschreibt anhand von Beispielen das Verwenden von Updategrams zum Ändern vorhandener Daten.  
   
- [Übergeben von Parametern an Updategrams &#40;SQLXML 4.0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
+ [Übergeben von Parametern an Updategrams &#40;SQLXML 4,0&#41;](passing-parameters-to-updategrams-sqlxml-4-0.md)  
  Beschreibt anhand von Beispielen das Weitergeben von Parametern an Updategrams.  
   
- [Behandeln von Problemen mit der Datenbankparallelität in Updategramms &#40;SQLXML 4.0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
+ [Behandeln von Parallelitäts Problemen in der Datenbank in Update grams &#40;SQLXML 4,0&#41;](handling-database-concurrency-issues-in-updategrams-sqlxml-4-0.md)  
  Beschreibt die verschiedenen Ebenen des möglichen Schutzes für das Behandeln von Parallelitätsproblemen in Updategrams und stellt Beispiele bereit.  
   
- [Updategram-Beispielanwendungen &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
+ [Updategram-Beispielanwendungen &#40;SQLXML 4,0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
  Stellt Beispielanwendungen bereit, die Updategrams verwenden.  
   
- [Richtlinien und Einschränkungen von XML-Updategrams &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
+ [Richtlinien und Einschränkungen von XML-Update grams &#40;SQLXML 4,0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  Listet einige wichtige Aspekte für das Arbeiten mit Updategrams auf.  
   
   

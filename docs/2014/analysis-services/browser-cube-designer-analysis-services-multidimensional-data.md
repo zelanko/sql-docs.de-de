@@ -1,5 +1,5 @@
 ---
-title: Browser (Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Browser (Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,40 +13,40 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4415fedb492eb32c2929c50999cad1542b41ca78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064621"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Browser (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Untersuchen Sie im Cube-Designer auf der Registerkarte **Browser** Dimensionen, Measures und KPIs in einem Cube. In [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]wurde der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cubebrowser in den MDX-Abfrage-Designer integriert und stellt ein grafische Benutzeroberfläche bereit, auf der Sie MDX-Abfragen, Filter und Slicecubes erstellen und einen Drilldown in Hierarchien ausführen.  
   
- Die **Browser** Registerkarte verfügt über zwei Modi: **Entwurfsmodus** und **Abfragemodus**. In jedem der Modi können Sie die Objekte im Bereich **Metadaten** zur Untersuchung des Cubes verwenden oder Elemente aus dem Bereich **Metadaten** in den Abfragebereich ziehen, um eine MDX-Abfrage zu erstellen, mit der die Daten abgerufen werden, die Sie verwenden möchten.  
+ Die Registerkarte **Browser** verfügt über zwei Modi: **Entwurfsmodus** und **Abfragemodus**. In jedem der Modi können Sie die Objekte im Bereich **Metadaten** zur Untersuchung des Cubes verwenden oder Elemente aus dem Bereich **Metadaten** in den Abfragebereich ziehen, um eine MDX-Abfrage zu erstellen, mit der die Daten abgerufen werden, die Sie verwenden möchten.  
   
- **Durchsuchen Sie und Fragen Sie mithilfe der Grafischen Entwurfsmodus ab**  
+ **Durchsuchen und Abfragen mithilfe des grafischen Entwurfsmodus**  
   
  In der folgenden Abbildung wird die Schnittstelle **Browser** im grafischen **Entwurfsmodus**angezeigt.  
   
- ![Analysis Services-MDX-Abfrage-Designer, Entwurfsansicht](media/rsqd-dsawas-mdx-designmode.gif "Analysis Services MDX query designer, design view")  
+ ![MDX-Abfrage-Designer für Analysis Services, Entwurfsansicht](media/rsqd-dsawas-mdx-designmode.gif "MDX-Abfrage-Designer für Analysis Services, Entwurfsansicht")  
   
- Während Sie im grafischen Entwurfsmodus arbeiten werden, wenn die **AutoExecute** (![Automatisches Ausführen der Abfrage](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste auf die Umschaltfläche aktiviert ist, die **Browser** führt eine Abfrage jedes Mal, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können auch manuell ausführen, die Abfrage mithilfe der **Abfrage ausführen** (![führen Sie die Abfrage](media/rsqdicon-run.gif "führen Sie die Abfrage")) auf der Symbolleiste.  
+ Wenn Sie im grafischen Entwurfs Modus arbeiten und die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste aktiviert ist, führt der **Browser** jedes Mal eine Abfrage aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage auch manuell mithilfe der Schaltfläche **Abfrage ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.  
   
  Um vom grafischen Abfrage-Designer in den **Abfragemodus** zu wechseln und mit dem Text der MDX-Anweisungen zu arbeiten, klicken Sie auf der Symbolleiste auf die Schaltfläche **Entwurfsmodus** .  
   
- **Durchsuchen Sie und Fragen Sie mithilfe von MDX-Textmodus ab**  
+ **Durchsuchen und Abfragen mithilfe des MDX-Textmodus**  
   
  Im MDX-Testentwurfsmodus können Sie direkt mit MDX arbeiten. Der Bereich **Metadaten** ist immer noch verfügbar, damit Sie dem Abfrageentwurfsbereich Objekte hinzufügen können. Sie können zudem per Drag &amp; Drop MDX-Funktionen und -Operatoren aus der Liste in den Bereich **Funktionen** verschieben.  
   
  In der folgenden Abbildung wird die Schnittstelle **Browser** für den Abfragemodus angezeigt.  
   
- ![Analysis Services-MDX-Abfrage-Designer, Abfrageansicht](media/rsqd-dsawas-mdx-querymode.gif "Analysis Services MDX query designer, query view")  
+ ![MDX-Abfrage-Designer für Analysis Services, Abfrageansicht](media/rsqd-dsawas-mdx-querymode.gif "MDX-Abfrage-Designer für Analysis Services, Abfrageansicht")  
   
  Sie können mit der Arbeit im grafischen Entwurfsmodus beginnen, alle erforderlichen Objekte hinzufügen, Filter hinzufügen, um den Cube in Slices aufzuteilen, und dann in den Textmodus wechseln, um die generierte Standard-MDX-Abfrage zu erweitern, und zusätzliche Elementeigenschaften und Zelleigenschaften einfügen.  
   
  Im Bereich **Metadaten** werden Registerkarten für **Metadaten** und **Funktionen**angezeigt. Auf der Registerkarte **Metadaten** können Sie Dimensionen, Hierarchien, KPIs und Measures in den Abfrageentwurfsbereich ziehen. Auf der Registerkarte **Funktionen** können Sie Funktionen in den Abfrageentwurfsbereich ziehen. Wenn Sie die Abfrage ausführen, werden im Abfrageentwurfsbereich die Ergebnisse für die MDX-Abfrage angezeigt. Sie können auch auf der **Symbolleiste** auf **In Excel analysieren** klicken, um die Daten nach Microsoft Office Excel zu exportieren und die Ergebnisse wie normale Benutzer in einer PivotTable anzuzeigen. In den folgenden Abschnitten werden die Symbolleiste und die jeweiligen Bereiche für die einzelnen **Browsermodi** ausführlicher beschrieben.  
   
- Beachten Sie, dass während der Arbeit im Textmodus die **AutoExecute** (![Automatisches Ausführen der Abfrage](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste auf die Umschaltfläche ist nicht verfügbar. Allerdings können Sie Abfragen manuell ausführen, mit der **Abfrage ausführen** (![führen Sie die Abfrage](media/rsqdicon-run.gif "führen Sie die Abfrage")) auf der Symbolleiste.  
+ Beachten Sie, dass während der Arbeit im Textmodus die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste nicht verfügbar ist. Sie können Abfragen jedoch manuell mithilfe der Schaltfläche **Abfrage ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.  
   
 ## <a name="sections"></a>Abschnitte  
  **Symbolleiste**  
@@ -61,9 +61,9 @@ ms.locfileid: "66064621"
  **Filter und Abfrage**  
  Verwenden Sie diesen Bereich der Entwurfsoberfläche, um MDX-Abfragen zu erstellen, indem Sie Objekte per Drag &amp; Drop aus dem Bereich **Metadaten** verschieben und Filterkriterien auf dem Quellcube oder der Dimension angeben. Weitere Informationen finden Sie unter [Abfrage und Daten &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Cubeobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cubeobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)  
+ [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)  
   
   

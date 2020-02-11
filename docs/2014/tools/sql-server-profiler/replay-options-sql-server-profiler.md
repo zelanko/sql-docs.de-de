@@ -1,5 +1,5 @@
 ---
-title: Wiedergabeoptionen (SQL Server Profiler) | Microsoft-Dokumentation
+title: Wiedergabe Optionen (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e91a501a899a6ba2b18790ac2da6e7c45b270b07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63025743"
 ---
 # <a name="replay-options-sql-server-profiler"></a>Wiedergabeoptionen (SQL Server Profiler)
@@ -50,14 +50,14 @@ ms.locfileid: "63025743"
  Optimiert die Leistung und deaktiviert das Debuggen. Die Ereignisse werden in der Reihenfolge wiedergegeben, in der sie für eine bestimmte Serverprozess-ID (SPID) aufgezeichnet wurden, aber die Reihenfolge der SPIDs ist nicht sichergestellt.  
   
  **Wiedergabeergebnisse anzeigen**  
- Hiermit wird das Ergebnis der Wiedergabe angezeigt. Diese Option ist die Standardeinstellung. Wenn die wiedergegebene Ablaufverfolgung sehr groß ist, sollten Sie diese Option eventuell deaktivieren, um Datenträgerspeicher zu sparen.  
+ Hiermit wird das Ergebnis der Wiedergabe angezeigt. Dies ist die Standardoption. Wenn die wiedergegebene Ablaufverfolgung sehr groß ist, sollten Sie diese Option eventuell deaktivieren, um Datenträgerspeicher zu sparen.  
   
 > [!NOTE]  
 >  Für eine optimale Wiedergabeleistung wird empfohlen, Ereignisse mithilfe mehrerer Threads wiederzugeben und die Wiedergabeergebnisse nicht anzuzeigen.  
   
 ## <a name="advanced-replay-options"></a>Erweiterte Wiedergabeoptionen  
  **System-SPIDs wiedergeben**  
- Alle System-SPIDs wiedergeben. Diese Option ist die Standardeinstellung.  
+ Alle System-SPIDs wiedergeben. Dies ist die Standardoption.  
   
  **Nur eine SPID wiedergeben**  
  Gibt die SPID-Nummer wieder, die Sie aus der Liste auswählen.  
@@ -77,9 +77,9 @@ ms.locfileid: "63025743"
 ## <a name="about-the-health-monitor"></a>Informationen zur Systemüberwachung  
  Die Systemüberwachung ist ein Anwendungsthread, der die simulierten Prozesse bei der Wiedergabe einer Ablaufverfolgung überwacht und jene Prozesse beendet, die bei der Wiedergabe blockiert sind. Auf der Registerkarte **Erweiterte Wiedergabeoptionen** des Dialogfelds **Wiedergabekonfiguration** können Sie angeben, nach wie vielen Sekunden die Systemüberwachung einen blockierten Prozess beenden soll (**Wartezeit für Systemüberwachung**). Wenn Sie dieses Intervall auf 0 festlegen, werden simulierte blockierende Prozesse bei der Wiedergabe der Ablaufverfolgung niemals durch die Systemüberwachung beendet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Wiedergeben von Ablaufverfolgungen](replay-traces.md)   
- [Replay Requirements](replay-requirements.md)   
+ [Anforderungen für die Wiedergabe](replay-requirements.md)   
  [Überlegungen zum Wiedergeben von Ablaufverfolgungen &#40;SQL Server Profiler&#41;](considerations-for-replaying-traces-sql-server-profiler.md)  
   
   

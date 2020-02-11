@@ -26,13 +26,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211044"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
+  
   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine funktionsreiche Benutzeroberfläche zum Erstellen und Verwalten von Ablaufverfolgungen sowie zum Analysieren und Wiedergeben von Ablaufverfolgungsergebnissen. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann.  
   
 > [!IMPORTANT]  
@@ -42,12 +43,13 @@ ms.locfileid: "68211044"
   
 ||||  
 |-|-|-|  
-|**Feature\Zielarbeitsauslastung**|**Relationale Engine**|**Analysis Services**|  
-|**Ablaufverfolgungssammlung**|Grafische Benutzeroberfläche für erweiterte Ereignisse in SQL Server Management Studio|SQL Server Profiler|  
-|**Ablaufverfolgungswiedergabe**|Distributed Replay|SQL Server Profiler|  
+|**Feature\zielworkloads**|**Relationale Engine**|**Analysis Services**|  
+|**Ablauf Verfolgungs Erfassung**|Grafische Benutzeroberfläche für erweiterte Ereignisse in SQL Server Management Studio|SQL Server Profiler|  
+|**Ablauf Verfolgungs Wiedergabe**|Distributed Replay|SQL Server Profiler|  
   
 ## <a name="benefits-of-sql-server-profiler"></a>Vorteile von SQL Server Profiler  
- Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine grafische Benutzeroberfläche für die SQL-Ablaufverfolgung zur Überwachung einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder Analysis Services. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche gespeicherten Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird beispielsweise für folgende Aktivitäten verwendet:  
+ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist eine grafische Benutzeroberfläche für die SQL-Ablaufverfolgung zur Überwachung einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder Analysis Services. Daten über die einzelnen Ereignisse können aufgezeichnet und in einer Datei oder Tabelle zur späteren Analyse gespeichert werden. Beispielsweise können Sie eine Produktionsumgebung überwachen und feststellen, welche gespeicherten Prozeduren langsam ablaufen und dadurch die Leistung beeinträchtigen. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] wird beispielsweise für folgende Aktivitäten verwendet:  
   
 -   Schrittweises Untersuchen problematischer Abfragen, um die Ursache des Problems zu ermitteln.  
   
@@ -59,7 +61,8 @@ ms.locfileid: "68211044"
   
 -   Korrelieren von Leistungsindikatoren zur Diagnose von Problemen.  
   
- [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] unterstützt auch die Überwachung von Aktionen, die für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Durch Überwachungen werden sicherheitsbezogene Aktionen aufgezeichnet, die später von einem Sicherheitsadministrator überprüft werden können.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] unterstützt auch die Überwachung von Aktionen, die für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Durch Überwachungen werden sicherheitsbezogene Aktionen aufgezeichnet, die später von einem Sicherheitsadministrator überprüft werden können.  
   
 ## <a name="sql-server-profiler-concepts"></a>SQL Server Profiler-Konzepte  
  Um [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwenden zu können, müssen Sie die Begriffe verstehen, mit denen die Funktionsweise des Tools beschrieben wird.  
@@ -67,7 +70,7 @@ ms.locfileid: "68211044"
 > [!NOTE]  
 >  Für die Arbeit mit [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ist es hilfreich, die SQL-Ablaufverfolgung zu verstehen. Weitere Informationen finden Sie unter [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
- **Event**  
+ **Ereignis**  
  Ein Ereignis ist eine Aktion, die innerhalb einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]generiert wird. Im Folgenden sind Beispiele dafür aufgeführt:  
   
 -   Anmeldeverbindungen, fehlgeschlagene und getrennte Verbindungen.  
@@ -95,15 +98,15 @@ ms.locfileid: "68211044"
  **EventClass**  
  Eine Ereignisklasse ist ein Ereignistyp, dessen Ablauf verfolgt werden kann. Die Ereignisklasse enthält alle Daten, die von einem Ereignis berichtet werden können. Im Folgenden sind Beispiele für Ereignisklassen aufgeführt:  
   
--   **SQL:BatchCompleted**  
+-   **SQL: batchabgeschlossene**  
   
 -   **Audit Login**  
   
 -   **Audit Logout**  
   
--   **Lock:Acquired**  
+-   **Sperre: abgerufen**  
   
--   **Lock:Released**  
+-   **Sperre: freigegeben**  
   
  **EventCategory**  
  Eine Ereigniskategorie bestimmt, wie Ereignisse innerhalb von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zusammengefasst werden. So sind beispielsweise alle Sperrereignisklassen in der Ereigniskategorie **Sperren** zusammengefasst. Ereigniskategorien sind jedoch nur in [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]vorhanden. Dieser Begriff drückt nicht aus, wie Engine-Ereignisse gruppiert werden.  
@@ -111,10 +114,10 @@ ms.locfileid: "68211044"
  **DataColumn**  
  Eine Datenspalte ist ein Attribut einer Ereignisklasse, die in der Ablaufverfolgung erfasst ist. Da von der Ereignisklasse der Typ der Daten festgelegt wird, die gesammelt werden können, gelten nicht alle Datenspalten für alle Ereignisklassen. In einer Ablaufverfolgung, in der die **Lock:Acquired** -Ereignisklasse erfasst wird, enthält die **BinaryData** -Datenspalte beispielsweise den Wert der gesperrten Seiten-ID oder der Zeile, aber die **Integer Data** -Datenspalte enthält keine Werte, weil sie nicht auf die erfasste Ereignisklasse anwendbar ist.  
   
- **Vorlage**  
+ **Fungiert**  
  Eine Vorlage definiert die Standardkonfiguration für eine Ablaufverfolgung. Dazu gehören insbesondere die Ereignisklassen, die mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]überwacht werden sollen. Sie können beispielsweise eine Vorlage erstellen, mit der die zu verwendenden Ereignisse, Datenspalten und Filter angegeben werden. Eine Vorlage wird nicht ausgeführt, sondern als Datei mit der Erweiterung TDF gespeichert. Nach dem Speichern steuert die Vorlage die Ablaufverfolgungsdaten, die beim Starten einer auf der Vorlage basierenden Ablaufverfolgung erfasst werden.  
   
- **Ablaufverfolgung**  
+ **Ablauf Verfolgungs**  
  Eine Ablaufverfolgung zeichnet Daten auf der Grundlage der ausgewählten Ereignisklassen, Datenspalten und Filter auf. Sie können beispielsweise eine Ablaufverfolgung erstellen, um Ausnahmefehler aufzuzeichnen. Wählen Sie dazu die **Exception** -Ereignisklasse und die Datenspalten **Fehler**, **Status**und **Schweregrad** aus. Daten aus diesen drei Spalten müssen gesammelt werden, damit die Ablaufverfolgung sinnvolle Daten als Ergebnis liefert. Sie können dann eine solcherart konfigurierte Ablaufverfolgung ausführen und Daten aufgrund aller **Exception** -Ereignisse sammeln, die auf dem Server auftreten. Ablaufverfolgungsdaten können gespeichert oder sofort für Analysezwecke verwendet werden. Ablaufverfolgungen können zu einem späteren Zeitpunkt wiedergegeben werden, obwohl bestimmte Ereignisse wie **Exception** -Ereignisse nie wiedergegeben werden. Sie können die Ablaufverfolgung als Vorlage speichern, um in Zukunft ähnliche Ablaufverfolgungen zu erstellen.  
   
  SQL Server bietet zwei Möglichkeiten für die Ablaufverfolgung einer Instanz von SQL Server: [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] und gespeicherte Systemprozeduren.  
@@ -131,49 +134,49 @@ ms.locfileid: "68211044"
 |Listet die vordefinierten Vorlagen, die SQL Server zum Überwachen bestimmter Ereignistypen bereitstellt, und die zum Wiedergeben von Ablaufverfolgungen erforderlichen Berechtigungen auf.|[Vorlagen und Berechtigungen in SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)|  
 |Beschreibt, wie SQL Server Profiler ausgeführt wird.|[Erforderliche Berechtigungen zum Ausführen von SQL Server Profiler](permissions-required-to-run-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgung erstellt wird.|[Erstellen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](create-a-trace-sql-server-profiler.md)|  
-|Beschreibt, wie Ereignisse und Datenspalten für eine Ablaufverfolgungsdatei angegeben werden.|[Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
-|Beschreibt, wie Ablaufverfolgungsergebnisse in einer Datei gespeichert werden.|[Speichern von Ablaufverfolgungsergebnissen in einer Datei &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)|  
-|Beschreibt, wie Ablaufverfolgungsergebnisse in einer Tabelle gespeichert werden.|[Speichern von Ablaufverfolgungsergebnissen in einer Tabelle &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)|  
+|Beschreibt, wie Ereignisse und Datenspalten für eine Ablaufverfolgungsdatei angegeben werden.|[Angeben von Ereignissen und Datenspalten für eine Ablauf Verfolgungs Datei &#40;SQL Server Profiler&#41;](specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
+|Beschreibt, wie Ablaufverfolgungsergebnisse in einer Datei gespeichert werden.|[Speichert Ablauf Verfolgungs Ergebnisse in einer Datei &#40;SQL Server Profiler&#41;](save-trace-results-to-a-file-sql-server-profiler.md)|  
+|Beschreibt, wie Ablaufverfolgungsergebnisse in einer Tabelle gespeichert werden.|[Speichern von Ablauf Verfolgungs Ergebnissen in einer Tabelle &#40;SQL Server Profiler&#41;](save-trace-results-to-a-table-sql-server-profiler.md)|  
 |Beschreibt, wie Ereignisse in einer Ablaufverfolgung gefiltert werden.|[Filtern von Ereignissen in einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](filter-events-in-a-trace-sql-server-profiler.md)|  
-|Beschreibt, wie Filterinformationen angezeigt werden.|[Anzeigen von Filterinformationen &#40;SQL Server Profiler&#41;](view-filter-information-sql-server-profiler.md)|  
+|Beschreibt, wie Filterinformationen angezeigt werden.|[Filter Informationen &#40;SQL Server Profiler anzeigen&#41;](view-filter-information-sql-server-profiler.md)|  
 |Beschreibt, wie ein Filter geändert wird.|[Ändern eines Filters &#40;SQL Server Profiler&#41;](modify-a-filter-sql-server-profiler.md)|  
 |Beschreibt, wie eine maximale Dateigröße für eine Ablaufverfolgungsdatei (SQL Server Profiler) festgelegt wird.|[Festlegen einer maximalen Dateigröße für eine Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](set-a-maximum-file-size-for-a-trace-file-sql-server-profiler.md)|  
 |Beschreibt, wie eine maximale Tabellengröße für eine Ablaufverfolgungstabelle festgelegt wird.|[Festlegen der maximalen Tabellengröße für eine Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](set-a-maximum-table-size-for-a-trace-table-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgung gestartet wird.|[Starten einer Ablaufverfolgung](start-a-trace.md)|  
 |Beschreibt, wie eine Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server automatisch gestartet wird.|[Automatisches Starten einer Ablaufverfolgung nach dem Herstellen einer Verbindung mit einem Server &#40;SQL Server Profiler&#41;](start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)|  
-|Beschreibt, wie Ereignisse basierend auf der Ereignisstartzeit gefiltert werden.|[Filtern von Ereignissen nach Ereignisstartzeit &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
+|Beschreibt, wie Ereignisse basierend auf der Ereignisstartzeit gefiltert werden.|[Ereignisse basierend auf der Ereignis Start Zeit &#40;SQL Server Profiler Filtern&#41;](filter-events-based-on-the-event-start-time-sql-server-profiler.md)|  
 |Beschreibt, wie Ereignisse basierend auf der Ereignisendzeit gefiltert werden.|[Filtern von Ereignissen anhand der Ereignisendzeit &#40;SQL Server Profiler&#41;](filter-events-based-on-the-event-end-time-sql-server-profiler.md)|  
-|Beschreibt, wie Serverprozess-IDs (SPIDs) in einer Ablaufverfolgung gefiltert werden.|[Filtern von Server-Prozess-IDs &#40;SPIDs&#41; in einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
+|Beschreibt, wie Serverprozess-IDs (SPIDs) in einer Ablaufverfolgung gefiltert werden.|[Filtert Server-Prozess-IDs &#40;SPIDs&#41; in einer Ablauf Verfolgungs &#40;SQL Server Profiler&#41;](filter-server-process-ids-spids-in-a-trace-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgung angehalten wird.|[Anhalten einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](pause-a-trace-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgung beendet wird.|[Beenden einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](stop-a-trace-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgung ausgeführt wird, nachdem sie angehalten oder beendet wurde.|[Ausführen einer Ablaufverfolgung, nachdem sie angehalten oder beendet wurde &#40;SQL Server Profiler&#41;](run-a-trace-after-it-has-been-paused-or-stopped-sql-server-profiler.md)|  
 |Beschreibt, wie ein Ablaufverfolgungsfenster gelöscht wird.|[Löschen des Inhalts eines Ablaufverfolgungsfensters &#40;SQL Server Profiler&#41;](clear-a-trace-window-sql-server-profiler.md)|  
-|Beschreibt, wie ein Ablaufverfolgungsfenster geschlossen wird.|[Schließen eines Ablaufverfolgungsfensters &#40;SQL Server Profiler&#41;](close-a-trace-window-sql-server-profiler.md)|  
-|Beschreibt, wie Standardeinstellungen für Ablaufverfolgungsdefinitionen festgelegt werden.|[Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)|  
+|Beschreibt, wie ein Ablaufverfolgungsfenster geschlossen wird.|[Schließen Sie ein Ablauf Verfolgungs Fenster &#40;SQL Server Profiler&#41;](close-a-trace-window-sql-server-profiler.md)|  
+|Beschreibt, wie Standardeinstellungen für Ablaufverfolgungsdefinitionen festgelegt werden.|[Standardeinstellungen für Ablauf Verfolgungs Definitionen festlegen &#40;SQL Server Profiler&#41;](set-trace-definition-defaults-sql-server-profiler.md)|  
 |Beschreibt, wie Standardeinstellungen für die Ablaufverfolgungsanzeige festgelegt werden.|[Festlegen der Standardeinstellungen für die Ablaufverfolgungsanzeige &#40;SQL Server Profiler&#41;](set-trace-display-defaults-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgungsdatei geöffnet wird.|[Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgungstabelle geöffnet wird.|[Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)|  
-|Beschreibt, wie eine Ablaufverfolgungstabelle wiedergegeben wird.|[Wiedergeben einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)|  
-|Beschreibt, wie eine Ablaufverfolgungsdatei wiedergegeben wird.|[Wiedergeben einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)|  
-|Beschreibt, wie jeweils ein einzelnes Ereignis wiedergegeben wird.|[Wiedergeben von jeweils einem einzelnen Ereignis &#40;SQL Server Profiler&#41;](replay-a-single-event-at-a-time-sql-server-profiler.md)|  
+|Beschreibt, wie eine Ablaufverfolgungstabelle wiedergegeben wird.|[Wiedergeben einer Ablauf Verfolgungs Tabelle &#40;SQL Server Profiler&#41;](replay-a-trace-table-sql-server-profiler.md)|  
+|Beschreibt, wie eine Ablaufverfolgungsdatei wiedergegeben wird.|[Wiedergeben einer Ablauf Verfolgungs Datei &#40;SQL Server Profiler&#41;](replay-a-trace-file-sql-server-profiler.md)|  
+|Beschreibt, wie jeweils ein einzelnes Ereignis wiedergegeben wird.|[Wiedergeben eines einzelnen Ereignisses zu einem Zeitpunkt &#40;SQL Server Profiler&#41;](replay-a-single-event-at-a-time-sql-server-profiler.md)|  
 |Beschreibt die Wiedergabe bis zu einem Breakpoint.|[Wiedergeben bis zu einem Breakpoint &#40;SQL Server Profiler&#41;](replay-to-a-breakpoint-sql-server-profiler.md)|  
 |Beschreibt die Wiedergabe bis zu einer Cursorposition.|[Wiedergeben bis zu einer Cursorposition &#40;SQL Server Profiler&#41;](replay-to-a-cursor-sql-server-profiler.md)|  
 |Beschreibt, wie ein Transact-SQL-Skript wiedergegeben wird.|[Wiedergeben eines Transact-SQL-Skripts &#40;SQL Server Profiler&#41;](replay-a-transact-sql-script-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgungsvorlage erstellt wird.|[Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](create-a-trace-template-sql-server-profiler.md)|  
-|Beschreibt, wie eine Ablaufverfolgungsvorlage geändert wird.|[Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../database-engine/modify-a-trace-template-sql-server-profiler.md)|  
-|Beschreibt, wie globale Ablaufverfolgungsoptionen festgelegt werden.|[Festlegen globaler Ablaufverfolgungsoptionen &#40;SQL Server Profiler&#41;](set-global-trace-options-sql-server-profiler.md)|  
-|Beschreibt, wie ein Wert oder eine Datenspalte während der Ablaufverfolgung gesucht wird.|[Suchen eines Wertes oder einer Datenspalte während der Ablaufverfolgung &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
+|Beschreibt, wie eine Ablaufverfolgungsvorlage geändert wird.|[Modify a Trace Template &#40;SQL Server Profiler&#41; (Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41)](../../database-engine/modify-a-trace-template-sql-server-profiler.md)|  
+|Beschreibt, wie globale Ablaufverfolgungsoptionen festgelegt werden.|[Festlegen globaler Ablauf Verfolgungs Optionen &#40;SQL Server Profiler&#41;](set-global-trace-options-sql-server-profiler.md)|  
+|Beschreibt, wie ein Wert oder eine Datenspalte während der Ablaufverfolgung gesucht wird.|[Suchen eines Werts oder einer Datenspalte während der Ablauf Verfolgung &#40;SQL Server Profiler&#41;](find-a-value-or-data-column-while-tracing-sql-server-profiler.md)|  
 |Beschreibt, wie eine Vorlage aus einer ausgeführten Ablaufverfolgung abgeleitet wird.|[Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung &#40;SQL Server Profiler&#41;](derive-a-template-from-a-running-trace-sql-server-profiler.md)|  
 |Beschreibt, wie eine Vorlage aus einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle abgeleitet wird.|[Ableiten einer Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)|  
-|Beschreibt, wie ein Transact-SQL-Skript für das Ausführen einer Ablaufverfolgung erstellt wird.|[Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
+|Beschreibt, wie ein Transact-SQL-Skript für das Ausführen einer Ablaufverfolgung erstellt wird.|[Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablauf Verfolgung &#40;SQL Server Profiler&#41;](create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md)|  
 |Beschreibt, wie eine Ablaufverfolgungsvorlage exportiert wird.|[Exportieren einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](export-a-trace-template-sql-server-profiler.md)|  
-|Beschreibt, wie eine Ablaufverfolgungsvorlage importiert wird.|[Importieren einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
-|Beschreibt, wie ein Skript aus einer Ablaufverfolgung extrahiert wird.|[Extrahieren eines Skripts aus einer Ablaufverfolgung &#40;SQL Server Profiler&#41;](extract-a-script-from-a-trace-sql-server-profiler.md)|  
-|Beschreibt, wie eine Ablaufverfolgung mit Windows-Leistungsprotokolldaten korreliert wird.|[Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
-|Beschreibt, wie in einer Ablaufverfolgung angezeigte Spalten organisiert werden.|[Organisieren von in einer Ablaufverfolgung angezeigten Spalten &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
-|Beschreibt, wie SQL Server Profiler gestartet wird.|[Starten des SQL Server Profilers](start-sql-server-profiler.md)|  
+|Beschreibt, wie eine Ablaufverfolgungsvorlage importiert wird.|[Importieren einer Ablauf Verfolgungs Vorlage &#40;SQL Server Profiler&#41;](import-a-trace-template-sql-server-profiler.md)|  
+|Beschreibt, wie ein Skript aus einer Ablaufverfolgung extrahiert wird.|[Extrahieren eines Skripts aus einer Ablauf Verfolgung &#40;SQL Server Profiler&#41;](extract-a-script-from-a-trace-sql-server-profiler.md)|  
+|Beschreibt, wie eine Ablaufverfolgung mit Windows-Leistungsprotokolldaten korreliert wird.|[Korrelieren einer Ablauf Verfolgung mit Windows-Leistungs Protokolldaten &#40;SQL Server Profiler&#41;](../../database-engine/correlate-a-trace-with-windows-performance-log-data-sql-server-profiler.md)|  
+|Beschreibt, wie in einer Ablaufverfolgung angezeigte Spalten organisiert werden.|[Organisieren der in einer Ablauf Verfolgung angezeigten Spalten &#40;SQL Server Profiler&#41;](organize-columns-displayed-in-a-trace-sql-server-profiler.md)|  
+|Beschreibt, wie SQL Server Profiler gestartet wird.|[Starten von SQL Server Profiler](start-sql-server-profiler.md)|  
 |Beschreibt, wie Ablaufverfolgungen und Ablaufverfolgungsvorlagen gespeichert werden.|[Speichern von Ablaufverfolgungen und Ablaufverfolgungsvorlagen](save-traces-and-trace-templates.md)|  
-|Beschreibt, wie Ablaufverfolgungsvorlagen geändert werden.|[Ändern von Ablaufverfolgungsvorlagen](modify-trace-templates.md)|  
+|Beschreibt, wie Ablaufverfolgungsvorlagen geändert werden.|[Ändern von Ablauf Verfolgungs Vorlagen](modify-trace-templates.md)|  
 |Beschreibt, wie eine Ablaufverfolgung mit Windows-Leistungsprotokolldaten korreliert wird.|[Korrelieren einer Ablaufverfolgung mit Windows-Leistungsprotokolldaten](correlate-a-trace-with-windows-performance-log-data.md)|  
 |Beschreibt, wie Ablaufverfolgungen mit SQL Server Profiler angezeigt und analysiert werden.|[Anzeigen und Analysieren von Ablaufverfolgungen mit SQL Server Profiler](view-and-analyze-traces-with-sql-server-profiler.md)|  
 |Beschreibt, wie Deadlocks mit SQL Server Profiler analysiert werden.|[Analysieren von Deadlocks mit SQL Server Profiler](analyze-deadlocks-with-sql-server-profiler.md)|  
@@ -183,11 +186,11 @@ ms.locfileid: "68211044"
 |Listet die kontextbezogenen Hilfethemen für SQL Server Profiler auf.|[SQL Server Profiler (F1-Hilfe)](sql-server-profiler-f1-help.md)|  
 |Listet die von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zur Leistungs- und Aktivitätsüberwachung verwendeten gespeicherten Systemprozeduren auf.|[Gespeicherte Prozeduren von SQL Server Profiler &#40;SQL Server Profiler&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Sperren-Ereigniskategorie](../../relational-databases/event-classes/locks-event-category.md)   
- [Sitzungs-Ereigniskategorie](../../relational-databases/event-classes/sessions-event-category.md)   
- [Gespeicherte Prozeduren (Ereigniskategorie)](../../relational-databases/event-classes/stored-procedures-event-category.md)   
- [TSQL-Ereigniskategorie](../../relational-databases/event-classes/tsql-event-category.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sperren (Ereignis Kategorie)](../../relational-databases/event-classes/locks-event-category.md)   
+ [Sitzungen (Ereignis Kategorie)](../../relational-databases/event-classes/sessions-event-category.md)   
+ [Gespeicherte Prozeduren-Ereignis Kategorie](../../relational-databases/event-classes/stored-procedures-event-category.md)   
+ [Ereignis Kategorie "t-QL"](../../relational-databases/event-classes/tsql-event-category.md)   
  [Überwachen der Serverleistung und -aktivität](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

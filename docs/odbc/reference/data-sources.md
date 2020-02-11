@@ -14,20 +14,20 @@ ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135631"
 ---
 # <a name="data-sources"></a>Projektmappen-Explorer
-Ein *Datenquelle* ist einfach die Quelle der Daten. Es kann eine Datei, die eine bestimmte Datenbank auf ein DBMS oder sogar einem live-Datenfeed sein. Daten können sich auf demselben Computer wie die Anwendung oder auf einem anderen Computer an einer beliebigen Stelle in einem Netzwerk sein. Eine Datenquelle kann z. B. eine Oracle-DBMS auf einem OS/2® Operating System, auf die von Novell® Netware zugegriffen werden; Ein IBM DB2-DBMS erfolgt über ein Gateway; eine Auflistung der Xbase-Dateien in einem Serververzeichnis; oder einer lokalen Microsoft® Access-Datenbankdatei.  
+Eine *Datenquelle* ist einfach die Quelle der Daten. Dabei kann es sich um eine Datei, eine bestimmte Datenbank in einem DBMS oder sogar um einen livedatenfeed handeln. Die Daten befinden sich möglicherweise auf demselben Computer wie das Programm oder auf einem anderen Computer in einem Netzwerk. Beispielsweise kann eine Datenquelle ein Oracle-DBMS sein, das unter einem Betriebssystem mit Betriebssystem/2® ausgeführt wird, auf das Novell® NetWare zugreift. ein IBM DB2-DBMS, auf das über ein Gateway zugegriffen wird; eine Auflistung von xbase-Dateien in einem Serververzeichnis. oder eine lokale Microsoft® Access-Datenbankdatei.  
   
- Für die Datenquelle dient zum Sammeln Sie alle technischen Informationen erforderlich, um Zugriff auf die Daten - der Treibername, Netzwerkadresse, Netzwerksoftware und So weiter – an einem Speicherort, und blenden Sie es dem Benutzer. Der Benutzer sollte sein können, sehen Sie sich eine Liste, die Lohnbuchhaltung, Inventur und Mitarbeiter enthält, Lohnbuchhaltung aus der Liste auswählen und die Verbindung der Anwendung auf die Daten für Gehaltsabrechnungen, ohne zu wissen, wo sich die Gehaltsdaten befindet oder wie die Anwendung darauf zustande gekommen ist.  
+ Der Zweck einer Datenquelle besteht darin, alle technischen Informationen zu erfassen, die für den Zugriff auf die Daten erforderlich sind, den Treiber Namen, die Netzwerkadresse, die Netzwerk Software usw., um Sie für den Benutzer auszublenden. Der Benutzer sollte in der Lage sein, eine Liste mit Gehalts-, Bestands-und Personalinformationen zu sehen, Gehaltsdaten aus der Liste auszuwählen und die Anwendung mit den Gehaltsdaten zu verbinden, ohne zu wissen, wo sich die Abrechnungsdaten befinden oder wie die Anwendung zu ihr gelangt ist.  
   
- Der Begriff *Datenquelle* darf nicht mit ähnlichen Begriffen verwechselt werden. In diesem Handbuch *DBMS* oder *Datenbank* bezieht sich auf ein Datenbankprogramm oder -Engine. Ein weiterer Unterschied besteht zwischen *Desktopdatenbanken,* entwickelten auf PCs ausgeführt und im vollständigen SQL Server und transaktionsunterstützung, häufig fehlen und *Server-Datenbanken* in einem Client ausgeführt / Server-Situation und durch eine eigenständige Datenbank-Engine und die umfangreichen SQL- und die Unterstützung von Transaktionen gekennzeichnet. *Datenbank* bezieht sich auch auf eine bestimmte Sammlung von Daten, z. B. eine Auflistung von Xbase-Dateien in einem Verzeichnis oder einer Datenbank auf SQL Server. Dies entspricht in der Regel den Begriff *Katalog* an anderer Stelle in diesem Handbuch oder der Begriff verwendet *Qualifizierer* in früheren Versionen von ODBC.  
+ Der Begriff " *Datenquelle* " sollte nicht mit ähnlichen Begriffen verwechselt werden. In diesem Handbuch bezieht sich *DBMS* oder die *Datenbank* auf ein Datenbankprogramm oder eine-Engine. Es wird ein weiterer Unterschied zwischen *Desktop Datenbanken hergestellt,* die auf PCs ausgeführt werden und häufig in der vollständigen SQL-und Transaktionsunterstützung fehlen, sowie auf *Server Datenbanken,* die in einer Client-/Serversituation ausgeführt werden sollen und durch eine eigenständige Datenbank-Engine und umfassende Unterstützung für SQL und Transaktionen gekennzeichnet sind. *Datenbank* bezieht sich auch auf eine bestimmte Sammlung von Daten, z. b. eine Sammlung von xbase-Dateien in einem Verzeichnis oder eine Datenbank auf SQL Server. Dies entspricht im Allgemeinen dem Begriff *Catalog,* der an anderer Stelle in diesem Handbuch verwendet wird, oder dem Begriff *Qualifizierer* in früheren Versionen von ODBC.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Typen von Datenquellen](../../odbc/reference/types-of-data-sources.md)  
   

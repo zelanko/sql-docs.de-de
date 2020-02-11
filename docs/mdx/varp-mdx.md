@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: bb28851863864520a67cacbb2cb9a2a84d9fd6a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135056"
 ---
 # <a name="varp-mdx"></a>VarP (MDX)
 
 
-  Gibt die Auffüllungsvarianz eines numerischen Ausdrucks, ausgewertet über einer Menge mithilfe der Formel für die unausgewogene Auffüllung (geteilt durch *n*-1).  
+  Gibt die auffüllungs Varianz eines numerischen Ausdrucks zurück, der für eine Menge mithilfe der Formel für die unausgewogene Auffüllung (geteilt durch *n*-1) ausgewertet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,15 +31,15 @@ VarP(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
- Die **VarP** Funktion gibt die unausgewogene Varianz eines angegebenen numerischen Ausdrucks, ausgewertet über einer angegebenen Menge zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **VarP** -Funktion gibt die unausgewogene Varianz eines angegebenen numerischen Ausdrucks zurück, der über einer angegebenen Menge ausgewertet wird.  
   
- Die **VarP** -Funktion verwendet die unausgewogene Auffüllung Formel, während die [Var](../mdx/var-mdx.md) -Funktion verwendet die Formel für die ausgewogene Auffüllung berechnet wurde.  
+ Die **VarP** -Funktion verwendet die Formel für die unausgewogene Auffüllung, während die [var](../mdx/var-mdx.md) -Funktion die Formel für die ausgewogene Auffüllung verwendet.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

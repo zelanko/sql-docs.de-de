@@ -1,5 +1,5 @@
 ---
-title: Den Standards entsprechende Anwendungen und Treiber | Microsoft-Dokumentation
+title: Standardkonforme Anwendungen und Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,29 +15,29 @@ ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107329"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Standardkonforme Anwendungen und Treiber
-Eine Standards kompatible Anwendung oder der Treiber ist eine, die die Open Group CAE-Spezifikation entspricht "Datenverwaltung: SQL-Call-Level-Interface (CLI)"und dem ISO/IEC 9075-3:1995 (E)-Call-Level-Interface (SQL/CLI).  
+Eine standardkonforme Anwendung oder ein Standardtreiber entspricht der Open Group CAE-Spezifikation "Datenverwaltung: SQL-Befehlszeilenschnittstelle (CLI)" und der "ISO/IEC 9075-3:1995 (E)"-Schnittstelle (SQL/CLI).  
   
- ODBC *3.x* garantiert die folgenden Funktionen:  
+ ODBC *3. x* garantiert die folgenden Features:  
   
--   Eine Anwendung geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert mit einer ODBC- *3.x* Treiber oder eine Standards kompatible beim Kompilieren mit der ODBC-Treiber *3.x* Header-Dateien und verknüpft mit ODBC *3.x* Bibliotheken, und wenn sie den Zugriff auf den über die ODBC-Treiber erhält *3.x* -Treiber-Manager.  
+-   Eine Anwendung, die in die Spezifikationen "Open Group" und "ISO CLI" geschrieben wird, funktioniert mit einem ODBC *3. x* -Treiber oder einem Standard kompatiblen Treiber, wenn dieser mit den ODBC *3. x* -Header Dateien kompiliert und mit ODBC *3* . x-Bibliotheken verknüpft ist und wenn er über den ODBC *3. x* -Treiber-Manager Zugriff auf den Treiber erhält.  
   
--   Mit einer ODBC-Treiber geschrieben, um die Open Group und ISO-CLI-Spezifikationen funktioniert *3.x* Anwendung oder eine Standards kompatible Anwendung, wenn die Kompilierung mit der ODBC *3.x* Header-Dateien und verknüpft mit dem ODBC- *3.x* Bibliotheken, und wenn die Anwendung erhält Zugriff auf den über die ODBC-Treiber *3.x* -Treiber-Manager.  
+-   Ein Treiber, der in die Open Group-und ISO CLI-Spezifikationen geschrieben wird, funktioniert mit einer ODBC *3. x* -Anwendung oder einer Standard kompatiblen Anwendung, wenn diese mit den ODBC *3. x* -Header Dateien kompiliert und mit ODBC *3* . x-Bibliotheken verknüpft ist, und wenn die Anwendung über den ODBC *3. x* -Treiber-Manager Zugriff auf den Treiber erhält.  
   
- Den Standards entsprechende Anwendungen und Treiber werden mit dem Flag für ODBC_STD Kompilierung kompiliert.  
+ Standardkonforme Anwendungen und Treiber werden mit dem ODBC_STD Compile-Flag kompiliert.  
   
- Den Standards entsprechende Anwendungen weisen folgende Verhalten:  
+ Standardkonforme Anwendungen weisen folgendes Verhalten auf:  
   
--   Wenn eine Standards kompatible Anwendung aufruft, **SQLAllocEnv** (das kann auftreten, weil **SQLAllocEnv** ist eine gültige Funktion in der Open Group und ISO-CLI), der Aufruf zugeordnet ist  **SQLAllocHandleStd** zum Zeitpunkt der Kompilierung. Zur Laufzeit ruft die Anwendung daher **SQLAllocHandleStd**. Im Verlauf der Verarbeitung dieser Aufruf wird der Treiber-Manager das SQL_ATTR_ODBC_VERSION-Umgebung-Attribut auf SQL_OV_ODBC3 fest. Ein Aufruf von **SQLAllocHandleStd** ist gleichbedeutend mit einem Aufruf von **SQLAllocHandle** mit einem *HandleType* SQL_HANDLE_ENV und einem Aufruf von **SQLSetEnvAttr** SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC3 festgelegt.  
+-   Wenn eine standardkonforme Anwendung **sqlzuzuordcenv** aufruft (was möglicherweise darauf liegt, dass **sqldepcenv** eine gültige Funktion in der Open Group-und ISO-CLI ist), wird der Aufruf **sqlzuzuordchandlestd** zur Kompilierzeit zugeordnet. Demzufolge wird von der Anwendung zur Laufzeit **sqlzuzugerlestd**aufgerufen. Während der Verarbeitung dieses Aufrufes wird vom Treiber-Manager das SQL_ATTR_ODBC_VERSION-Umgebungs Attribut auf SQL_OV_ODBC3 festgelegt. Ein-Befehl von **sqlzuweichandlestd** entspricht einem **sqlzuordchandle** -Befehl mit dem *Typ* "SQL_HANDLE_ENV" und einem **SQLSetEnvAttr** -Befehl, um SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC3 festzulegen.  
   
--   Wenn eine Standards kompatible Anwendung aufruft, **SQLBindParam** (das kann auftreten, weil **SQLBindParam** ist eine gültige Funktion in der Open Group und ISO-CLI), die ODBC *3.x* Treiber-Manager, ordnet den Aufruf an den entsprechenden Aufruf in **SQLBindParameter**. (Finden Sie unter [SQLBindParam-Zuordnung](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) in Anhang G: Treiber-Richtlinien für Abwärtskompatibilität.)  
+-   Wenn eine standardkonforme Anwendung **SQLBindParam** aufruft (da **SQLBindParam** eine gültige Funktion in der Open Group-und der ISO-CLI ist), ordnet der ODBC *3. x* -Treiber-Manager den Aufruf dem entsprechenden-Aufruf in **SQLBindParameter**zu. (Siehe [SQLBindParam-Zuordnung](../../../odbc/reference/appendixes/sqlbindparam-mapping.md) in Anhang G: Treiber Richtlinien zur Abwärtskompatibilität.)  
   
--   Die ISO-CLI die ODBC ausgerichtet *3.x* Headerdateien enthalten Aliase für Informationstypen, die in Aufrufen verwendet **SQLGetInfo**. Eine Standards kompatible Anwendung kann diese Aliase verwenden, anstatt die ODBC *3.x* Informationstypen. Weitere Informationen finden Sie im nächste Thema, [Headerdateien](../../../odbc/reference/develop-app/header-files.md).  
+-   Die ODBC *3. x* -Header Dateien enthalten Aliase für Informationstypen, die in Aufrufen von **SQLGetInfo**verwendet werden, um die ISO CLI auszurichten. Eine standardkonforme Anwendung kann diese Aliase anstelle der ODBC *3. x* -Informationstypen verwenden. Weitere Informationen finden Sie im nächsten Thema [Header Dateien](../../../odbc/reference/develop-app/header-files.md).  
   
--   Eine Standards kompatible Anwendung muss überprüfen Sie, ob alle Features, die es unterstützt in der Treiber unterstützt werden, mit denen sie zusammenarbeiten werden. Das Anweisungsattribut SQL_ATTR_CURSOR_SCROLLABLE auf SQL_SCROLLABLE und Einstellung festlegen Anweisungsattribut den SQL_ATTR_CURSOR_SENSITIVITY auf SQL_INSENSITIVE oder SQL_SENSITIVE sind Funktionen, die als optionale Funktionen in den Standards verfügbar sind. jedoch nicht enthalten sind, die ODBC *3.x* Core level und daher möglicherweise nicht unterstützt alle ODBC *3.x* Treiber. Eine Standards kompatible Anwendung dieser Funktionen verwendet, sollten sie sicher, dass der Treiber, dem er arbeitet unterstützt.
+-   Eine mit Standards kompatible Anwendung muss überprüfen, ob alle unterstützten Funktionen in dem Treiber unterstützt werden, mit dem Sie arbeiten wird. Das Festlegen des SQL_ATTR_CURSOR_SCROLLABLE Anweisungs Attributs auf SQL_SCROLLABLE und das Festlegen des SQL_ATTR_CURSOR_SENSITIVITY Statement-Attributs auf SQL_INSENSITIVE oder SQL_SENSITIVE sind Funktionen, die als optionale Features in den Standards verfügbar sind, aber nicht in der ODBC *3. x* -kernstufe enthalten sind und daher möglicherweise nicht von allen ODBC *3. x* -Treibern unterstützt werden. Wenn eine standardkonforme Anwendung diese Funktionen verwendet, sollte überprüft werden, ob der Treiber, mit dem Sie arbeiten wird, Sie unterstützt.

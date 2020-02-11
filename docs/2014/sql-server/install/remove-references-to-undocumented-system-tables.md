@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie Verweise auf nicht dokumentierte Systemtabellen | Microsoft-Dokumentation
+title: Entfernen von Verweisen auf nicht dokumentierte Systemtabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093148"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Entfernen von Verweisen auf nicht dokumentierte Systemtabellen
@@ -26,7 +26,7 @@ ms.locfileid: "66093148"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Die folgenden nicht dokumentierten Systemtabellen wurden entfernt:  
   
 -   **spt_datatype_info**  
@@ -80,16 +80,16 @@ ms.locfileid: "66093148"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die Anwendungen entsprechend der folgenden Tabelle.  
   
-|Statt|Verwenden Sie|  
+|Statt|Zweck|  
 |----------------|---------|  
-|**sysfulltextnotify**|**TableFulltextPendingChanges** Eigenschaft der OBJECTPROPERTYEX-Funktion.|  
-|**syslocks**|**Sys. dm_tran_locks** dynamische verwaltungssicht oder Sp_lock, oder die **sys.syslockinfo** -kompatibilitätssicht angezeigt.|  
-|**sysproperties**|**Sys. extended_properties** -Katalogsicht oder der **Fn_listextendedproperty** Funktion|  
-|**sysxlogins**|**Sys. server_principals** Katalogsicht oder **Syslogins** -kompatibilitätssicht angezeigt.|  
-|alle **Spt_** Tabellen|Kein Ersatz verfügbar|  
+|**sysfulltextnotify**|Die **tablefulltextpdingchanges** -Eigenschaft der OBJECTPROPERTYEX-Funktion.|  
+|**syslocks**|dynamische Verwaltungs Sicht **sys. dm_tran_locks** oder sp_lock oder die **sys. syslockinfo** -Kompatibilitäts Sicht.|  
+|**sysproperties**|**sys. extended_properties** -Katalog Sicht oder die **fn_listextendedproperty** -Funktion|  
+|**sysxlogins**|**sys. server_principals** -Katalog Sicht oder **syslogins** -Kompatibilitäts Sicht.|  
+|alle **spt_** Tabellen|Kein Ersatz verfügbar|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

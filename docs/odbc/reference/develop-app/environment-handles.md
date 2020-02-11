@@ -1,5 +1,5 @@
 ---
-title: Umgebungshandles | Microsoft-Dokumentation
+title: Umgebungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114321"
 ---
 # <a name="environment-handles"></a>Umgebungshandles
-Ein *Umgebung* wird von ein globaler Kontext, in denen auf Daten zugreifen, eine Umgebung zugeordnet ist, alle Informationen, die globaler Natur, z. B. ist:  
+Eine *Umgebung* ist ein globaler Kontext, in dem auf Daten zugegriffen werden kann. mit einer Umgebung verknüpft sind alle Informationen, die Global sind, wie z. b.:  
   
--   Status von der Umgebung  
+-   Der Zustand der Umgebung  
   
--   Die aktuelle auf Umgebungsebene-Diagnose  
+-   Die aktuelle Diagnose auf Umgebungs Ebene  
   
--   Die Ziehpunkte der Verbindungen, die derzeit in der Umgebung zugeordnet.  
+-   Die Handles der derzeit in der Umgebung zugewiesenen Verbindungen  
   
--   Die aktuellen Einstellungen der einzelnen Attribute für die Umgebung  
+-   Die aktuellen Einstellungen der einzelnen Umgebungs Attribute  
   
- Innerhalb eines Codeabschnitts, die ODBC (des Treiber-Managers oder eines Treibers) implementiert, gibt ein Umgebungshandle eine Struktur, um diese Informationen enthalten.  
+ Innerhalb eines Code Abschnitts, der ODBC (Treiber-Manager oder Treiber) implementiert, identifiziert ein Umgebungs Handle eine-Struktur, die diese Informationen enthält.  
   
- Umgebungshandles werden in ODBC-Anwendungen nicht häufig verwendet werden. Sie werden immer verwendet, in Aufrufen von **SQLDataSources** und **SQLDrivers** und manchmal verwendet, in Aufrufen von **SQLAllocHandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**, und **SQLGetDiagRec**.  
+ Umgebungs Handles werden in ODBC-Anwendungen nicht häufig verwendet. Sie werden immer in Aufrufen von **SQLDataSources** und **SQLDrivers** verwendet und manchmal in Aufrufen von **sqlfreichandle**, **SQLEndTran**, **SQLFreeHandle**, **SQLGetDiagField**und **SQLGetDiagRec**verwendet.  
   
- Jedes Datenelement Code zum Implementieren von ODBC (des Treiber-Managers oder eines Treibers) enthält eine oder mehrere Umgebungshandles. Der Treiber-Manager führt beispielsweise einen separate Umgebung-Handle für jede Anwendung, die mit ihm verbunden ist. Umgebungshandles zugeordnet sind **SQLAllocHandle** und mit freigegebenen **SQLFreeHandle**.
+ Jedes Code Element, das ODBC implementiert (Treiber-Manager oder Treiber) enthält mindestens ein Umgebungs Handle. Der Treiber-Manager verwaltet z. b. ein separates Umgebungs Handle für jede Anwendung, die mit ihm verbunden ist. Umgebungs Handles werden mit **sqlzuordchandle** zugeordnet und mit **SQLFreeHandle**freigegeben.

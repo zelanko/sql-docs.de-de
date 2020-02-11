@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789819"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Überwachen von Verfügbarkeitsgruppen (Transact-SQL)
@@ -33,17 +33,19 @@ ms.locfileid: "62789819"
  
   
 ##  <a name="Permissions"></a> Berechtigungen  
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Katalogsichten erfordern die VIEW ANY DEFINITION-Berechtigung für die Serverinstanz. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verwaltungssichten erfordern die VIEW SERVER STATE-Berechtigung für den Server.  
+ 
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Katalogsichten erfordern die VIEW ANY DEFINITION-Berechtigung für die Serverinstanz. 
+  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Verwaltungssichten erfordern die VIEW SERVER STATE-Berechtigung für den Server.  
   
-##  <a name="AoAgFeatureOnSI"></a> Überwachen der Funktion AlwaysOn-Verfügbarkeitsgruppen auf einer Serverinstanz  
+##  <a name="AoAgFeatureOnSI"></a>Überwachen der AlwaysOn-Verfügbarkeitsgruppen-Funktion auf einer Server Instanz  
  Verwenden Sie zum Überwachen der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Funktion auf einer Serverinstanz folgende integrierte Funktion:  
   
  [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) -Funktion  
  Gibt Server-Eigenschaftsinformationen dazu zurück, ob [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert ist, und falls ja, ob es auf der Serverinstanz gestartet wurde.  
   
- **Spaltennamen:** IsHadrEnabled, HadrManagerStatus  
+ **Spaltennamen:** Ishadrenabled, hadrmanagerstatus  
   
-##  <a name="WSFC"></a> Überwachen von Verfügbarkeitsgruppen auf dem WSFC-Cluster  
+##  <a name="WSFC"></a>Überwachen von Verfügbarkeits Gruppen im wsfc-Cluster  
  Verwenden Sie zum Überwachen des WSFC-Clusters (Windows Server-Failoverclustering), der eine für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]aktivierte lokale Serverinstanz hostet, die folgenden Sichten:  
   
  [sys.dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)  
@@ -54,14 +56,14 @@ ms.locfileid: "62789819"
  [sys.dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)  
  Wenn der WSFC-Knoten, der die lokale AlwaysOn-fähige Instanz von SQL Server hostet, über ein WSFC-Quorum verfügt, wird eine Zeile für jedes Element, aus denen das Quorum besteht, einschließlich Elementstatus, zurückgegeben.  
   
- **Spaltennamen:** member_name, member_type, member_type_desc, member_state, member_state_desc, number_of_quorum_votes  
+ **Spaltennamen:** MEMBER_NAME, MEMBER_TYPE, member_type_desc, member_state, member_state_desc, number_of_quorum_votes  
   
  [sys.dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
  Gibt eine Zeile für jedes Element zurück, das an der Subnetzkonfiguration einer Verfügbarkeitsgruppe beteiligt ist. Sie können diese dynamische Verwaltungssicht verwenden, um die virtuelle IP-Adresse des Netzwerks zu überprüfen, die für jedes Verfügbarkeitsreplikat konfiguriert ist.  
   
- **Spaltennamen:** member_name, network_subnet_ip, network_subnet_ipv4_mask, network_subnet_prefix_length, is_public, is_ipv4  
+ **Spaltennamen:** MEMBER_NAME, network_subnet_ip, network_subnet_ipv4_mask, network_subnet_prefix_length, is_public, is_ipv4  
   
- **Primärschlüssel:** member_name + network_subnet_IP + network_subnet_prefix_length  
+ **Primärschlüssel:** MEMBER_NAME + network_subnet_IP + network_subnet_prefix_length  
   
  [sys.dm_hadr_instance_node_map](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql)  
  Jede Instanz von SQL Server, auf der ein Verfügbarkeitsreplikat gehostet wird, das mit seiner AlwaysOn-Verfügbarkeitsgruppe verknüpft ist, gibt den Namen des WSFC-Knotens (Windows Server Failover Clustering) zurück, auf dem die Serverinstanz gehostet wird. Die dynamische Verwaltungssicht dient für Folgendes:  
@@ -70,19 +72,19 @@ ms.locfileid: "62789819"
   
 -   Wenn mehrere SQL Server-Instanzen auf dem gleichen WSFC-Knoten gehostet werden, verwendet die Ressourcen-DLL diese dynamische Verwaltungssicht, um die Instanz von SQL Server zu bestimmen, um damit eine Verbindung herzustellen.  
   
- **Spaltennamen:** ag_resource_id, instance_name, node_name  
+ **Spaltennamen:** ag_resource_id, instance_name NODE_NAME  
   
  [sys.dm_hadr_name_id_map](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql)  
  Zeigt die Zuordnung von AlwaysOn-Verfügbarkeitsgruppen an, die die aktuelle Instanz von SQL Server mit drei eindeutigen IDs verknüpft hat: eine Verfügbarkeitsgruppen-ID, eine WSFC-Ressourcen-ID und eine WSFC-Gruppen-ID. Der Zweck dieser Zuordnung ist, das Szenario zu behandeln, in dem die WSFC-Ressource/Gruppe umbenannt wird.  
   
- **Spaltennamen:** ag_name, ag_id, ag_resource_id, ag_group_id  
+ **Spaltennamen:** ag_name, ag_id ag_resource_id, ag_group_id  
   
 > [!NOTE]  
 >  Siehe auch **sys.dm_hadr_availability_replica_cluster_nodes** und **sys.dm_hadr_availability_replica_cluster_states** im Abschnitt [Überwachen von Verfügbarkeitsreplikaten](#AvReplicas) sowie **sys.availability_databases_cluster** und **sys.dm_hadr_database_replica_cluster_states** im Abschnitt [Überwachen von Verfügbarkeitsdatenbanken](#AvDbs) weiter unten in diesem Thema.  
   
- Informationen zu WSFC-Cluster und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], finden Sie unter [Windows Server Failover Clustering &#40;WSFC&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md).  
+ Informationen zu wsfc-Clustern und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Windows Server-Failoverclustering &#40;wsfc-&#41; mit SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md) und [Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen &#40;](failover-clustering-and-always-on-availability-groups-sql-server.md)SQL Server&#41;.  
   
-##  <a name="AvGroups"></a> Überwachen von Verfügbarkeitsgruppen  
+##  <a name="AvGroups"></a>Überwachung von Verfügbarkeits Gruppen  
  Verwenden Sie zum Überwachen der Verfügbarkeitsgruppen, für die die Serverinstanz ein Verfügbarkeitsreplikat hostet, die folgenden Sichten:  
   
  [sys.availability_groups](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)  
@@ -100,7 +102,7 @@ ms.locfileid: "62789819"
   
  **Spaltennamen:** group_id, primary_replica, primary_recovery_health, primary_recovery_health_desc, secondary_recovery_health, secondary_recovery_health_desc, synchronization_health, synchronization_health_desc  
   
-##  <a name="AvReplicas"></a> Überwachen von Verfügbarkeitsreplikaten  
+##  <a name="AvReplicas"></a>Verfügbarkeits Replikate  
  Verwenden Sie zum Überwachen von Verfügbarkeitsreplikaten die folgenden Sichten und Systemfunktion:  
   
  [sys.availability_replicas](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
@@ -134,7 +136,7 @@ ms.locfileid: "62789819"
 > [!NOTE]  
 >  Weitere Informationen zu Leistungsindikatoren für Verfügbarkeitsreplikate (das **SQLServer:Verfügbarkeitsreplikat**  -Leistungsobjekt) finden Sie unter [SQL Server, Verfügbarkeitsreplikat](../../../relational-databases/performance-monitor/sql-server-availability-replica.md).  
   
-##  <a name="AvDbs"></a> Überwachen von Verfügbarkeitsdatenbanken  
+##  <a name="AvDbs"></a>Überwachung von Verfügbarkeits Datenbanken  
  Verwenden Sie zum Überwachen von Verfügbarkeitsdatenbanken die folgenden Sichten:  
   
  [sys.availability_databases_cluster](/sql/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql)  
@@ -143,12 +145,12 @@ ms.locfileid: "62789819"
 > [!NOTE]  
 >  Wenn eine Datenbank einer Verfügbarkeitsgruppe hinzugefügt wird, wird die primäre Datenbank automatisch mit der Gruppe verknüpft. Sekundäre Datenbanken müssen auf jedem sekundären Replikat vorbereitet werden, bevor sie mit der Verfügbarkeitsgruppe verknüpft werden können.  
   
- **Spaltennamen:** group_id, group_database_id, database_name  
+ **Spaltennamen:** group_id, group_database_id database_name  
   
  [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
  Enthält eine Zeile für jede Datenbank in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz. Wenn eine Datenbank zu einem Verfügbarkeitsreplikat gehört, zeigt die Zeile für diese Datenbank die GUID des Replikats und den eindeutigen Bezeichner der Datenbank innerhalb der Verfügbarkeitsgruppe an.  
   
- **[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Spaltennamen:** replica_id, group_database_id  
+ Spaltennamen: replica_id group_database_id ** [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] **  
   
  [sys.dm_hadr_auto_page_repair](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
  Gibt eine Zeile für jede versuchte automatische Seitenreparatur in einer beliebigen Verfügbarkeitsdatenbank auf einem Verfügbarkeitsreplikat zurück, das von der Serverinstanz für eine beliebige Verfügbarkeitsgruppe gehostet wird. Diese Sicht enthält Zeilen für die letzte automatische Seitenreparatur einer bestimmten primären oder sekundären Datenbank. Pro Datenbank können maximal 100 Zeilen angezeigt werden. Sobald das Maximum in der Datenbank erreicht ist, ersetzt die Zeile bei der nächsten automatischen Seitenreparatur einen der bereits vorhandenen Einträge.  
@@ -158,20 +160,20 @@ ms.locfileid: "62789819"
  [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
  Gibt eine Zeile für jede Datenbank zurück, die an einer Verfügbarkeitsgruppe teilnimmt, für die die lokale Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ein Verfügbarkeitsreplikat hostet.  
   
- **Spaltennamen:** database_id, group_id, replica_id, group_database_id, is_local, synchronization_state, synchronization_state_desc, is_commit_participant, synchronization_health, synchronization_health_desc, database_state, database_state_desc, is_suspended, suspend_reason, suspend_reason_desc, recovery_lsn, truncation_lsn, last_sent_lsn, last_sent_time, last_received_lsn, last_received_time, last_hardened_lsn, last_hardened_time, last_redone_lsn, last_redone_time, log_send_queue_size, log_send_rate, redo_queue_size, redo_rate, filestream_send_rate, end_of_log_lsn, last_commit_lsn, last_commit_time, low_water_mark_for_ghosts  
+ **Spaltennamen:** database_id, group_id, replica_id, group_database_id, is_local, synchronization_state, synchronization_state_desc, is_commit_participant, synchronization_health, synchronization_health_desc, database_state, database_state_desc, is_suspended, suspend_reason, suspend_reason_desc, recovery_lsn, truncation_lsn, last_sent_lsn, last_sent_time, last_received_lsn, last_received_time, last_hardened_lsn, last_hardened_time, last_redone_lsn, last_redone_time, log_send_queue_size, log_send_rate, redo_queue_size, redo_rate, filestream_send_rate, end_of_log_lsn, last_commit_lsn, last_commit_time  
   
  [sys.dm_hadr_database_replica_cluster_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
  Gibt eine Zeile mit Informationen zurück, die einen Einblick in den Zustand der Verfügbarkeitsdatenbanken aller Verfügbarkeitsgruppen auf dem WSFC-Cluster (Windows Server-Failoverclustering) geben. Diese dynamische Verwaltungssicht ist nützlich beim Planen oder Reagieren auf ein Failover oder zum Ermitteln des sekundären Replikats in einer Verfügbarkeitsgruppe, das die Protokollkürzung in einer bestimmten primären Datenbank aufhält.  
   
- **Spaltennamen:** replica_id, group_database_id, database_name, is_failover_ready, is_pending_secondary_suspend, is_database_joined, recovery_lsn, truncation_lsn  
+ **Spaltennamen:** replica_id, group_database_id, database_name, is_failover_ready, is_pending_secondary_suspend, is_database_joined, recovery_lsn  
   
 > [!NOTE]  
 >  Der primäre Replikatspeicherort ist die autoritative Quelle für eine Verfügbarkeitsgruppe.  
   
 > [!NOTE]  
->  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokollaktivität in Verfügbarkeitsdatenbanken die folgenden Indikatoren des **SQLServer:Datenbanken**-Leistungsobjekts: **Schreibzeit für Protokollleerungen (ms)** , **Protokollleerungen/Sekunde**, **Protokollpool-Cachefehler/Sekunde**, **Protokollpool-Datenträgerlesevorgänge/Sekunde** und **Protokollpoolanforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Informationen zu den [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Leistungsindikatoren für Verfügbarkeitsdatenbanken (das **SQLServer:Datenbankreplikat** -Leistungsobjekt) finden Sie unter [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Verwenden Sie zum Überwachen der Transaktionsprotokoll Aktivität auf Verfügbarkeits Datenbanken die folgenden Indikatoren des **SQLServer: Datenbanken** -Leistungsobjekts **: Schreibzeit für Protokoll Leerung (MS)**, Protokoll Leerungen **/Sekunde**, **Protokoll Pool-Cache Fehler/Sekunde**, **Protokoll Pool-Lesevorgänge/** Sek. und **Protokoll Pool Anforderungen/Sekunde**. Weitere Informationen finden Sie unter [SQL Server, Datenbankobjekt](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
-##  <a name="AGlisteners"></a> Überwachen von Verfügbarkeitsgruppenlistenern  
+##  <a name="AGlisteners"></a>Überwachung der verfügbarkeitsgruppenlistener  
  Zum Überwachen der Verfügbarkeitsgruppenlistener auf Subnetzen des WSFC-Clusters verwenden Sie die folgenden Sichten:  
   
  [sys.availability_group_listener_ip_addresses](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql)  
@@ -196,7 +198,7 @@ ms.locfileid: "62789819"
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
  **Überwachungsaufgaben für AlwaysOn-Verfügbarkeitsgruppen:**  
   
--   [Verwenden der Details zum Objekt-Explorer zum Überwachen von Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)  
+-   [Verwenden Sie die Objekt-Explorer Details zum Überwachen von Verfügbarkeits Gruppen &#40;SQL Server Management Studio&#41;](use-object-explorer-details-to-monitor-availability-groups.md)  
   
 -   [Anzeigen von Verfügbarkeitsgruppeneigenschaften &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
@@ -204,59 +206,59 @@ ms.locfileid: "62789819"
   
 -   [Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](view-availability-group-listener-properties-sql-server.md)  
   
- **AlwaysOn-Verfügbarkeitsgruppen (Transact-SQL)-Referenz zum Überwachen:**  
+ **Referenz zum Überwachen von AlwaysOn-Verfügbarkeitsgruppen (Transact-SQL):**  
   
 -   [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
   
--   [sys.availability_group_listener_ip_addresses &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql)  
+-   [sys. availability_group_listener_ip_addresses &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-availability-group-listener-ip-addresses-transact-sql)  
   
--   [sys.availability_group_listeners &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql)  
+-   [sys. availability_group_listeners &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-availability-group-listeners-transact-sql)  
   
--   [sys.availability_databases_cluster &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql)  
+-   [sys. availability_databases_cluster &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-availability-databases-cluster-transact-sql)  
   
 -   [sys.availability_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-groups-transact-sql)  
   
--   [sys.availability_read_only_routing_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
+-   [sys. availability_read_only_routing_lists &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-availability-read-only-routing-lists-transact-sql)  
   
--   [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
+-   [sys. availability_replicas &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_cluster_nodes &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
+-   [sys. dm_hadr_availability_replica_cluster_nodes &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-nodes-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
+-   [sys. dm_hadr_availability_replica_cluster_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)  
   
--   [sys.dm_hadr_auto_page_repair &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
+-   [sys. dm_hadr_auto_page_repair &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-auto-page-repair-transact-sql)  
   
--   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql)  
+-   [sys. dm_hadr_availability_group_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
+-   [sys. dm_hadr_availability_replica_cluster_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-cluster-states-transact-sql)  
   
--   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
+-   [sys. dm_hadr_availability_replica_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)  
   
--   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
+-   [sys. dm_hadr_database_replica_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
   
--   [sys.dm_hadr_database_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
+-   [sys. dm_hadr_database_replica_cluster_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
   
--   [sys.dm_hadr_cluster &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)  
+-   [sys. dm_hadr_cluster &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql)  
   
--   [sys.dm_hadr_cluster_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)  
+-   [sys. dm_hadr_cluster_members &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)  
   
--   [sys.dm_hadr_cluster_networks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
+-   [sys. dm_hadr_cluster_networks &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql)  
   
--   [sys.dm_hadr_database_replica_cluster_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
+-   [sys. dm_hadr_database_replica_cluster_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-cluster-states-transact-sql)  
   
--   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
+-   [sys. dm_hadr_database_replica_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)  
   
--   [sys.dm_hadr_instance_node_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql)  
+-   [sys. dm_hadr_instance_node_map &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql)  
   
--   [sys.dm_hadr_name_id_map &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql)  
+-   [sys. dm_hadr_name_id_map &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-name-id-map-transact-sql)  
   
--   [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+-   [sys. dm_os_performance_counters &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
--   [sys.dm_tcp_listener_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)  
+-   [sys. dm_tcp_listener_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql)  
   
--   [sys.fn_hadr_backup_is_preferred_replica &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)  
+-   [sys. fn_hadr_backup_is_preferred_replica &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql)  
   
  **AlwaysOn-Leistungsindikatoren:**  
   
@@ -264,17 +266,17 @@ ms.locfileid: "62789819"
   
 -   [SQL Server, Datenbankreplikat](../../../relational-databases/performance-monitor/sql-server-database-replica.md)  
   
--   [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
+-   [SQL Server, Datenbanken-Objekt](../../../relational-databases/performance-monitor/sql-server-databases-object.md)  
   
- **Richtlinie der richtlinienbasierten Verwaltung für AlwaysOn-Verfügbarkeitsgruppen**  
+ **Richtlinienbasierte Verwaltung für AlwaysOn-Verfügbarkeitsgruppen**  
   
--   [Verwenden von AlwaysOn-Richtlinien zum Anzeigen des Zustands einer verfügbarkeitsgruppe &#40;SQLServer&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
+-   [Verwenden Sie AlwaysOn-Richtlinien, um die Integrität einer Verfügbarkeits Gruppe &#40;SQL Server anzuzeigen&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](always-on-availability-groups-sql-server.md)   
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-availability-groups-sql-server.md)   
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

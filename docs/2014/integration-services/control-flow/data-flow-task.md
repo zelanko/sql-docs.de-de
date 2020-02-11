@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832453"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
@@ -44,9 +44,11 @@ ms.locfileid: "62832453"
  ![Datenflüsse](../media/mw-dts-09.gif "Datenflüsse")  
   
 ## <a name="log-entries"></a>Protokolleinträge  
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`BufferSizeTuning`|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
 |`OnPipelinePostEndOfRowset`|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der `ProcessInput`-Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
@@ -64,9 +66,9 @@ ms.locfileid: "62832453"
   
  Weitere Informationen zur Verwendung dieser Protokolleinträge zum Überwachen und Verbessern der Leistung des Datenflusses finden Sie in einem der folgenden Themen:  
   
--   [Performance Counters](../performance/performance-counters.md)  
+-   [Leistungsindikatoren](../performance/performance-counters.md)  
   
--   [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
+-   [Funktionen für die Datenflussleistung](../data-flow/data-flow-performance-features.md)  
   
 ### <a name="sample-messages-from-a-data-flow-task"></a>Beispielmeldungen aus einem Datenflusstask  
  In der folgenden Tabelle werden Beispielmeldungen für Protokolleinträge für ein sehr einfaches Paket aufgelistet. Das Paket verwendet eine OLE DB-Quelle zum Extrahieren von Daten aus einer Tabelle, eine Transformation zum Sortieren, um die Daten zu sortieren, und ein OLE DB-Ziel, um die Daten in eine andere Tabelle zu schreiben.  
@@ -86,17 +88,17 @@ ms.locfileid: "62832453"
   
  Bei vielen Protokollereignissen werden mehrere Einträge in das Protokoll geschrieben, und die Meldungen für eine Reihe von Protokolleinträgen enthalten komplexe Daten. Damit es einfacher wird, den Inhalt komplexer Meldungen zu verstehen und zu kommunizieren, können Sie den Meldungstext analysieren. Je nach Speicherort des Protokolls können Sie Transact-SQL-Anweisungen oder Skriptkomponenten verwenden, um den komplexen Text in Spalten oder andere zweckmäßigere Formate zu zerlegen.  
   
- Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : OLE DB Source Output : 1180 : Sort : 1181 : Sort Input : 76", in Spalten analysiert. Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
+ Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle : 1180 : Sort : 1181 : Sortiereingabe : 76". Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Spalte|Beschreibung|Wert|  
+|Column|BESCHREIBUNG|value|  
 |------------|-----------------|-----------|  
-|**PathID**|Der Wert der `ID`-Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
+|**Pathid**|Der Wert der `ID`-Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert der `Name`-Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  
-|**ComponentID**|Der Wert des der `ID` Eigenschaft der Transformation zum Sortieren.|1180|  
-|**ComponentName**|Der Wert der `Name`-Eigenschaft der Transformation zum Sortieren.|Sort|  
-|**InputID**|Der Wert der `ID`-Eigenschaft der Eingabe der Transformation zum Sortieren.|1181|  
+|**ComponentID**|Der Wert der- `ID` Eigenschaft der Transformation zum Sortieren.|1180|  
+|**ComponentName**|Der Wert der `Name`-Eigenschaft der Transformation zum Sortieren.|Sortieren|  
+|**Inputid**|Der Wert der `ID`-Eigenschaft der Eingabe der Transformation zum Sortieren.|1181|  
 |**InputName**|Der Wert der `Name`-Eigenschaft der Eingabe der Transformation zum Sortieren.|Sortiereingabe|  
-|**RowsSent**|Die Anzahl von Zeilen, die an die Eingabe der Transformation zum Sortieren gesendet wurden.|76|  
+|**Rowssent**|Die Anzahl von Zeilen, die an die Eingabe der Transformation zum Sortieren gesendet wurden.|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>Konfiguration des Datenflusstasks  
  Eigenschaften können Sie im Fenster **Eigenschaften** oder programmgesteuert festlegen.  

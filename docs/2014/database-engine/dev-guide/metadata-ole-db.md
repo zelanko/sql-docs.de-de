@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 27511f209dbf73906f77c0c5b1721d3cceec287f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780894"
 ---
 # <a name="metadata-ole-db"></a>Metadaten (OLE DB)
@@ -27,10 +27,10 @@ ms.locfileid: "62780894"
  [Metadaten für Parameter und Rowsets](../../relational-databases/native-client-ole-db-date-time/metadata-parameter-and-rowset.md)  
  Stellt Informationen über Strukturen und Befehle in Verbindung mit den OLE DB-Datums- und Uhrzeitverbesserungen bereit.  
   
- [Datums- und Uhrzeit- sowie Schemarowsets](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
+ [Datums-und Uhrzeit-und Schemarowsets](../../relational-databases/native-client-ole-db-date-time/metadata-date-and-time-and-schema-rowsets.md)  
  Enthält Informationen über Updates auf OLE DB-Schemarowsets.  
   
-## <a name="see-also"></a>Siehe auch  
- [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

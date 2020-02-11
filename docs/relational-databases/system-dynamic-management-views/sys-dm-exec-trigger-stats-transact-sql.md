@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_exec_trigger_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_trigger_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,67 +21,67 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 65e54b90fa036e738f2e1e6a28498559051011a5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262211"
 ---
-# <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
+# <a name="sysdm_exec_trigger_stats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die Aggregatleistungsstatistik für zwischengespeicherte Trigger zurück. Diese Sicht enthält eine Zeile pro Trigger, und die Lebensdauer der Zeile entspricht der Verweildauer des Triggers im Cache. Bei Entfernung eines Triggers aus dem Cache wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats**entspricht.  
+  Gibt die Aggregatleistungsstatistik für zwischengespeicherte Trigger zurück. Diese Sicht enthält eine Zeile pro Trigger, und die Lebensdauer der Zeile entspricht der Verweildauer des Triggers im Cache. Bei Entfernung eines Triggers aus dem Cache wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats** entspricht.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, in der sich der Trigger befindet.|  
 |**object_id**|**int**|Objekt-ID des Triggers.|  
-|**type**|**char(2)**|Der Objekttyp:<br /><br /> TA = Assembly (CLR) Trigger<br /><br /> TR = SQL-Trigger|  
-|**Type_desc**|**nvarchar(60)**|Beschreibung des Objekttyps:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary(64)**|Kann zur Korrelation mit Abfragen in **sys.dm_exec_query_stats** verwendet werden, die aus diesem Trigger ausgeführt wurden.|  
-|**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.|  
+|**type**|**char (2)**|Der Objekttyp:<br /><br /> TA = Assembly (CLR) Trigger<br /><br /> TR = SQL-Trigger|  
+|**Type_desc**|**nvarchar (60)**|Beschreibung des Objekttyps:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
+|**sql_handle**|**varbinary (64)**|Kann zur Korrelation mit Abfragen in **sys.dm_exec_query_stats** verwendet werden, die aus diesem Trigger ausgeführt wurden.|  
+|**plan_handle**|**varbinary (64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.|  
 |**cached_time**|**datetime**|Der Zeitpunkt, zu dem der Trigger dem Cache hinzugefügt wurde.|  
 |**last_execution_time**|**datetime**|Der Zeitpunkt, zu dem der Trigger zuletzt ausgeführt wurde.|  
-|**execution_count**|**bigint**|Die Anzahl der Fälle, in denen der Trigger seit ausgeführt wurde der letzten Kompilierung.|  
-|**total_worker_time**|**bigint**|Die Gesamtmenge der CPU-Zeit in Mikrosekunden, die von Ausführungen dieses Triggers genutzt wurde, seit der Kompilierung.|  
-|**last_worker_time**|**bigint**|CPU-Zeit (in Mikrosekunden) für die letzte Ausführung des Triggers.|  
-|**min_worker_time**|**bigint**|Die maximale CPU-Zeit in Mikrosekunden, dieses Triggers jemals eine einzelne Ausführung.|  
-|**max_worker_time**|**bigint**|Die maximale CPU-Zeit in Mikrosekunden, dieses Triggers jemals eine einzelne Ausführung.|  
-|**total_physical_reads**|**bigint**|Die Gesamtanzahl physischer Lesevorgänge für Ausführungen dieses Triggers seit der Kompilierung.|  
-|**last_physical_reads**|**bigint**|Die Anzahl der physischen Lesevorgänge ausgeführt, der letzten Ausführung des Triggers.|  
-|**min_physical_reads**|**bigint**|Die minimale Anzahl physischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
-|**max_physical_reads**|**bigint**|Die maximale Anzahl physischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
-|**total_logical_writes**|**bigint**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieses Triggers seit der Kompilierung.|  
-|**last_logical_writes**|**bigint**|Die Anzahl der logischen Schreibvorgänge ausgeführt, der letzten Ausführung des Triggers.|  
-|**min_logical_writes**|**bigint**|Die minimale Anzahl logischer Schreibvorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
-|**max_logical_writes**|**bigint**|Die maximale Anzahl logischer Schreibvorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
-|**total_logical_reads**|**bigint**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieses Triggers seit der Kompilierung.|  
-|**last_logical_reads**|**bigint**|Die Anzahl der logischen Lesevorgänge ausgeführt, der letzten Ausführung des Triggers.|  
-|**min_logical_reads**|**bigint**|Die minimale Anzahl logischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
-|**max_logical_reads**|**bigint**|Die maximale Anzahl logischer Lesevorgänge, die dieses Triggers eine einzelne Ausführung bisherige.|  
-|**total_elapsed_time**|**bigint**|Die insgesamt verstrichene Zeit in Mikrosekunden, die für abgeschlossene Ausführungen dieses Triggers.|  
-|**last_elapsed_time**|**bigint**|Verstrichene Zeit (in Mikrosekunden) für die letzte abgeschlossene Ausführung dieses Triggers.|  
-|**min_elapsed_time**|**bigint**|Die mindestens verstrichene Zeit in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieses Triggers.|  
-|**max_elapsed_time**|**bigint**|Die maximale verstrichene Zeit in Mikrosekunden, die für eine beliebige abgeschlossene Ausführung dieses Triggers.| 
-|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die übergelaufenen durch die Ausführung dieses Triggers seit der Kompilierung.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Die Anzahl der Seiten überlaufen der letzten Ausführung des Triggers.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Die minimale Anzahl der Seiten, die diesen Trigger jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Die maximale Anzahl der Seiten, die diesen Trigger jemals eine einzelne Ausführung übergelaufen.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**total_page_server_reads**|**bigint**|Die Gesamtanzahl der Seite Server Lesevorgänge für Ausführungen dieses Triggers seit der Kompilierung.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
-|**last_page_server_reads**|**bigint**|Die Anzahl der Seitenlesevorgänge-Server ausgeführt, der letzten Ausführung des Triggers.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
-|**min_page_server_reads**|**bigint**|Die minimale Anzahl von Seitenserver liest, dass dieses Triggers eine einzelne Ausführung bisherige.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
-|**max_page_server_reads**|**bigint**|Die maximale Anzahl von Seitenserver liest, dass dieses Triggers eine einzelne Ausführung bisherige.<br /><br /> **Gilt für**: Hochgradig skalierbaren Azure SQL-Datenbank|  
+|**execution_count**|**BIGINT**|Die Anzahl der Ausführungen des Auslösers seit der letzten Kompilierung.|  
+|**total_worker_time**|**BIGINT**|Die Gesamtmenge der CPU-Zeit (in Mikrosekunden), die von Ausführungen dieses Auslösers seit der Kompilierung verbraucht wurde.|  
+|**last_worker_time**|**BIGINT**|CPU-Zeit (in Mikrosekunden) für die letzte Ausführung des Triggers.|  
+|**min_worker_time**|**BIGINT**|Die maximale CPU-Zeit (in Mikrosekunden), die dieser Triggern während einer einzelnen Ausführung verbraucht hat.|  
+|**max_worker_time**|**BIGINT**|Die maximale CPU-Zeit (in Mikrosekunden), die dieser Triggern während einer einzelnen Ausführung verbraucht hat.|  
+|**total_physical_reads**|**BIGINT**|Die Gesamtanzahl der physischen Lesevorgänge, die von Ausführungen dieses Auslösers seit der Kompilierung durchgeführt wurden.|  
+|**last_physical_reads**|**BIGINT**|Die Anzahl physischer Lesevorgänge bei der letzten Ausführung des Auslösers.|  
+|**min_physical_reads**|**BIGINT**|Die minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieses Auslösers.|  
+|**max_physical_reads**|**BIGINT**|Die maximal zulässige Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieses Auslösers.|  
+|**total_logical_writes**|**BIGINT**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieses Auslösers seit der Kompilierung.|  
+|**last_logical_writes**|**BIGINT**|Die Anzahl der logischen Schreibvorgänge, die bei der letzten Ausführung des Auslösers ausgeführt wurden.|  
+|**min_logical_writes**|**BIGINT**|Die minimale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieses Auslösers.|  
+|**max_logical_writes**|**BIGINT**|Die maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieses Auslösers.|  
+|**total_logical_reads**|**BIGINT**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieses Auslösers seit der Kompilierung.|  
+|**last_logical_reads**|**BIGINT**|Die Anzahl logischer Lesevorgänge bei der letzten Ausführung des Auslösers.|  
+|**min_logical_reads**|**BIGINT**|Die Mindestanzahl logischer Lesevorgänge für eine einzelne Ausführung dieses Auslösers.|  
+|**max_logical_reads**|**BIGINT**|Die maximale Anzahl logischer Lesevorgänge für eine einzelne Ausführung dieses Auslösers.|  
+|**total_elapsed_time**|**BIGINT**|Die insgesamt verstrichene Zeit (in Mikrosekunden) für abgeschlossene Ausführungen dieses Auslösers.|  
+|**last_elapsed_time**|**BIGINT**|Verstrichene Zeit (in Mikrosekunden) für die letzte abgeschlossene Ausführung dieses Triggers.|  
+|**min_elapsed_time**|**BIGINT**|Die mindestens verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieses Auslösers.|  
+|**max_elapsed_time**|**BIGINT**|Die maximal verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieses Auslösers.| 
+|**total_spills**|**BIGINT**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieses Auslösers seit der Kompilierung übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**BIGINT**|Die Anzahl der Seiten, die beim letzten Ausführen des Auslösers übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**BIGINT**|Die Mindestanzahl von Seiten, die dieser Triggern während einer einzelnen Ausführung übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**BIGINT**|Die maximale Anzahl von Seiten, die dieser Triggern während einer einzelnen Ausführung übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_page_server_reads**|**BIGINT**|Die Gesamtanzahl von Seiten Server Lesevorgängen, die von Ausführungen dieses Auslösers seit der Kompilierung ausgeführt wurden.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
+|**last_page_server_reads**|**BIGINT**|Die Anzahl der Seiten Server Lesevorgänge bei der letzten Ausführung des Auslösers.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
+|**min_page_server_reads**|**BIGINT**|Die Mindestanzahl von Seiten Server Lesevorgängen, die dieser Triggern während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
+|**max_page_server_reads**|**BIGINT**|Die maximale Anzahl von Seiten Server Lesevorgängen, die dieser Triggern während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
 
   
-## <a name="remarks"></a>Hinweise  
- In [!INCLUDE[ssSDS](../../includes/sssds-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, diese Informationen bereitstellen, wird jede Zeile, die Daten enthält, die zum verbundenen Mandanten gehören nicht herausgefiltert.  
+## <a name="remarks"></a>Bemerkungen  
+ In [!INCLUDE[ssSDS](../../includes/sssds-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile, die Daten enthält, die nicht zum verbundenen Mandanten gehören, herausgefiltert.  
 
 Statistiken in der Sicht werden nach Abschluss einer Abfrage aktualisiert.  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel gibt Informationen zu den fünf Triggern mit der höchsten durchschnittlichen verstrichenen Zeit zurück.  
@@ -96,11 +96,11 @@ FROM sys.dm_exec_trigger_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[Ausführung bezogene dynamische Verwaltungssichten und-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
-[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+[Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys. dm_exec_query_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
+[sys. dm_exec_procedure_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)   
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
   

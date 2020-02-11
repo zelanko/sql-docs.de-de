@@ -1,5 +1,5 @@
 ---
-title: NS$&lt;Dienstnamen&gt; Eigenschaften (Registerkarte Anmelden) | Microsoft-Dokumentation
+title: Eigenschaften von&lt;NS $&gt; -Dienst Name (Registerkarte "Anmelden") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14a5fbd6b30003b4eaa0ec1592c9a01c150b7e87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63049235"
 ---
 # <a name="nsltservice-namegt-properties-log-on-tab"></a>Eigenschaften von NS$&lt;Dienstname&gt; (Registerkarte „Anmelden“)
   Verwenden Sie im Dialogfeld **Notification Services-Eigenschaften** die Registerkarte **Anmelden** , um das vom [!INCLUDE[ssNS](../../includes/ssns-md.md)] -Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Lokales System**  
  Geben Sie ein lokales Systemkonto an, das kein Kennwort erfordert. Das lokale Systemkonto kann sich allerdings einschränkend auf die Zusammenarbeit mit anderen Servern auswirken. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63049235"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort des Kontos erneut ein.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Dienst.  
   
  **Beenden**  

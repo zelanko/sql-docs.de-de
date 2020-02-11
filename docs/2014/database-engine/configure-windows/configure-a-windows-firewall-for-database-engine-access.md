@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e0eafd8a8eb1d9d73f71ab069dc8bf0795a87bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812297"
 ---
 # <a name="configure-a-windows-firewall-for-database-engine-access"></a>Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff
@@ -68,13 +68,13 @@ ms.locfileid: "62812297"
   
 3.  Wählen Sie im Dialogfeld **Regeltyp** die Option **Port**aus, und klicken Sie anschließend auf **Weiter**.  
   
-4.  Wählen Sie im Dialogfeld **Protokoll und Ports** die Option **TCP**aus. Wählen Sie **bestimmte lokale Ports**, und geben Sie dann die Portnummer der Instanz von der [!INCLUDE[ssDE](../../includes/ssde-md.md)], z. B. `1433` für die Standardinstanz. Klicken Sie auf **Weiter**.  
+4.  Wählen Sie im Dialogfeld **Protokoll und Ports** die Option **TCP**aus. Wählen Sie **bestimmte lokale Ports**aus, und geben Sie dann die Portnummer der Instanz [!INCLUDE[ssDE](../../includes/ssde-md.md)]von ein, `1433` z. b. für die Standard Instanz. Klicken Sie auf **Weiter**.  
   
 5.  Wählen Sie im Dialogfeld **Aktion** die Option **Verbindung zulassen**aus, und klicken Sie anschließend auf **Weiter**.  
   
 6.  Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Verbindung zum [!INCLUDE[ssDE](../../includes/ssde-md.md)]herstellen möchten, und klicken Sie dann auf **Weiter**.  
   
-7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für die Regel ein, und klicken Sie dann auf **Fertig stellen**.  
+7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für diese Regel ein, und klicken Sie dann auf **Fertig stellen**.  
   
 #### <a name="to-open-access-to-sql-server-when-using-dynamic-ports"></a>So ermöglichen Sie den Zugriff auf SQL Server bei der Verwendung von dynamischen Ports  
   
@@ -90,6 +90,6 @@ ms.locfileid: "62812297"
   
 6.  Wählen Sie im Dialogfeld **Profil** beliebige Profile aus, die die Verbindungsumgebung des Computers beschreiben, wenn Sie eine Verbindung zum [!INCLUDE[ssDE](../../includes/ssde-md.md)]herstellen möchten, und klicken Sie dann auf **Weiter**.  
   
-7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für die Regel ein, und klicken Sie dann auf **Fertig stellen**.  
+7.  Geben Sie im Dialogfeld **Name** einen Namen und eine Beschreibung für diese Regel ein, und klicken Sie dann auf **Fertig stellen**.  
   
   

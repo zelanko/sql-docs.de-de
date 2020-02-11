@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210772"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Strategien zum Sichern und Wiederherstellen einer Momentaufnahme- und Transaktionsreplikation
@@ -71,14 +71,14 @@ ms.locfileid: "68210772"
   
  **So legen Sie die Option sync with backup fest**  
   
--   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
+-   Replikationsprogrammierung ([!INCLUDE[tsql](../../../includes/tsql-md.md)]): [Aktivieren koordinierter Sicherungen für die Transaktionsreplikation &#40;Replikationsprogrammierung mit Transact-SQL&#41;](enable-coordinated-backups-for-transactional-replication.md)  
   
 ## <a name="restoring-databases-involved-in-replication"></a>Wiederherstellen der an der Replikation beteiligten Datenbanken  
  Wenn aktuelle Sicherungen verfügbar sind und die entsprechenden Schritte befolgt werden, können Sie alle Datenbanken einer Replikationstopologie wiederherstellen. Die Wiederherstellungsschritte für die Veröffentlichungsdatenbank hängen vom Typ der verwendeten Replikation und den verwendeten Optionen ab. Die Wiederherstellungsschritte für alle anderen Datenbanken sind jedoch vom Typ und den Optionen unabhängig.  
   
  Die Replikation ermöglicht das Wiederherstellen replizierter Datenbanken auf dem Server und in die Datenbank, die zum Erstellen der Sicherung herangezogen wurden. Wenn Sie eine Sicherungskopie einer replizierten Datenbank auf einem anderen Server bzw. in einer anderen Datenbank wiederherstellen, können Replikationseinstellungen nicht beibehalten werden. In diesem Fall müssen nach der Wiederherstellung der Sicherungskopien sämtliche Veröffentlichungen und Abonnements neu erstellt werden.  
   
-### <a name="publisher"></a>Verleger  
+### <a name="publisher"></a>Herausgeber  
  Wiederherstellungsschritte werden für die folgenden Replikationstypen bereitgestellt:  
   
 -   Momentaufnahmereplikation  
@@ -117,7 +117,7 @@ ms.locfileid: "68210772"
   
          Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Informationen anzeigen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungs Datenbank &#40;Replikations&#41;Programmierung mit Transact-SQL](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Tasks mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Entfernen Sie die Replikationskonfiguration vom Verleger, vom Verteiler und von den Abonnenten, und erstellen Sie die Konfiguration dann neu. Geben Sie beim Neuerstellen von Abonnements an, dass der Abonnent bereits über die Daten verfügt. Die Wiederherstellung ist abgeschlossen.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68210772"
   
          Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Informationen anzeigen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+         Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungs Datenbank &#40;Replikations&#41;Programmierung mit Transact-SQL](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Tasks mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
     2.  Verwenden Sie das [Hilfsprogramm "tablediff"](../../../tools/tablediff-utility.md) oder ein anderes Tool, um den Verleger manuell mit dem Abonnenten zu synchronisieren. So können Sie Daten aus der Abonnementdatenbank wiederherstellen, die nicht in der Sicherung der Veröffentlichungsdatenbank enthalten waren. Fahren Sie mit Schritt c fort.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "68210772"
   
      Weitere Informationen zum Starten und Beenden eines Verteilungs-Agents finden Sie unter [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md) und [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-     Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank &#40;Replikationsprogrammierung mit Transact-SQL&#41; ](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Informationen anzeigen und Ausführen von Aufgaben mithilfe des Replikationsmonitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Weitere Informationen zum Überprüfen von Befehlen finden Sie unter [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungs Datenbank &#40;Replikations&#41;Programmierung mit Transact-SQL](../monitor/view-replicated-commands-and-information-in-distribution-database.md) und [Anzeigen von Informationen und Ausführen von Tasks mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 3.  Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden, stellen Sie mit jedem Abonnenten eine Verbindung her, und löschen Sie in der Abonnementdatenbank alle Zeilen aus der [MSreplication_queue &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/msreplication-queue-transact-sql)-Tabelle. Fahren Sie mit Schritt 4 fort.  
   
@@ -199,25 +199,25 @@ ms.locfileid: "68210772"
   
 5.  Führen Sie eine Protokollsicherung oder eine vollständige Sicherung für Datenbank **A** aus. Fahren Sie mit Schritt 6 fort.  
   
-6.  Stellen Sie die Sicherung von Datenbank **A** in der Datenbank **B** wieder her. Datenbank **B** verfügt nun über die Daten aus Datenbank **A**, nicht jedoch über die Replikationskonfiguration. Wenn Sie eine Sicherung auf einem anderen Server wiederherstellen, wird die Replikation entfernt. Folglich ist die Replikation nicht mehr in Datenbank **B** enthalten. Fahren Sie mit Schritt 7 fort.  
+6.  Stellen Sie die Sicherung von Datenbank **A** in der Datenbank **B** wieder her. Datenbank **B** verfügt nun über die Daten aus Datenbank **A**, nicht jedoch über die Replikationskonfiguration. Wenn Sie eine Sicherung auf einem anderen Server wiederherstellen, wird die Replikation entfernt. Folglich ist die Replikation nicht mehr in Datenbank **B** enthalten. Fahren Sie mit Schritt 7 fort,  
   
 7.  Erstellen Sie die Veröffentlichung in Datenbank **B** neu, und erstellen Sie dann die Abonnements zwischen der Datenbank **A** und der Datenbank **B** neu. (Abonnements, die Datenbank **C** mit einbeziehen, werden in einem umfassenderen Schritt behandelt.).  
   
     1.  Erstellen Sie die Veröffentlichung in Datenbank **B** neu. Fahren Sie mit Schritt b fort.  
   
-    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **A**neu. Geben Sie dabei an, dass das Abonnement mit einer Sicherung initialisiert wird (ein Wert **initialize with backup** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt c fort.  
+    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **A**neu. Geben Sie dabei an, dass das Abonnement mit einer Sicherung initialisiert werden soll (der Wert **initialisieren with Backup** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt c fort.  
   
-    3.  Erstellen Sie das Abonnement in Datenbank **A** für die Veröffentlichung in Datenbank **B**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt (ein Wert **replication support only** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt 8 fort.  
+    3.  Erstellen Sie das Abonnement in Datenbank **a** für die Veröffentlichung in Datenbank **B**neu, und geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt (ein Wert **@sync_type** der **Replikations Unterstützung nur** für den-Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt 8 fort.  
   
 8.  Führen Sie die Verteilungs-Agents aus, und synchronisieren Sie die Abonnements in den Datenbanken **A** und **B**. Falls die veröffentlichten Tabellen Identitätsspalten enthalten, fahren Sie mit Schritt 9 fort. Wenn nicht, fahren Sie mit Schritt 10 fort.  
   
 9. Nach der Wiederherstellung wird der Identitätsbereich, den Sie den Tabellen in Datenbank **A** zugewiesen haben, auch in Datenbank **B** verwendet. Stellen Sie sicher, dass die wiederhergestellte Datenbank **B** alle Änderungen aus der fehlerhaften Datenbank **B** empfangen hat, die an die Datenbanken **A** und **C** weitergegeben wurden. Weisen Sie dann den Identitätsbereich für jede Tabelle neu zu.  
   
-    1.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id** . Fahren Sie mit Schritt b fort.  
+    1.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in Datenbank **B** aus, und rufen **@request_id**Sie den Ausgabeparameter ab. Fahren Sie mit Schritt b fort.  
   
     2.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Weitere Informationen finden Sie unter [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../concepts/replication-agent-executables-concepts.md) oder [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Fahren Sie mit Schritt c fort.  
   
-    3.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)unter Angabe des in Schritt B abgerufenen Werts für **@request_id** aus. Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt d fort.  
+    3.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)aus, **@request_id** und geben Sie den in Schritt b abgerufenen Wert an Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt d fort.  
   
     4.  Verwenden Sie [DBCC CHECKIDENT](/sql/t-sql/database-console-commands/dbcc-checkident-transact-sql) , um den einzelnen Tabellen in Datenbank **B** neue Ausgangswerte zuzuweisen, um sicherzustellen, dass ein ordnungsgemäßer Bereich verwendet wird. Fahren Sie mit Schritt 10 fort.  
   
@@ -229,11 +229,11 @@ ms.locfileid: "68210772"
   
     1.  Beenden Sie alle Aktivitäten an allen veröffentlichten Tabellen in der Peer-zu-Peer-Topologie. Fahren Sie mit Schritt b fort.  
   
-    2.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in der Datenbank **B** aus, und rufen Sie den Ausgabeparameter **@request_id** . Fahren Sie mit Schritt c fort.  
+    2.  Führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) in Datenbank **B** aus, und rufen **@request_id**Sie den Ausgabeparameter ab. Fahren Sie mit Schritt c fort.  
   
     3.  Der Verteilungs-Agent wird standardmäßig fortlaufend ausgeführt, folglich sollten Token automatisch an alle Knoten gesendet werden. Wenn der Verteilungs-Agent nicht im fortlaufenden Modus ausgeführt wird, führen Sie den Agent aus. Fahren Sie mit Schritt d fort.  
   
-    4.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)unter Angabe des in Schritt B abgerufenen Werts für **@request_id** aus. Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt e fort.  
+    4.  Führen Sie [sp_helppeerresponses](/sql/relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql)aus, **@request_id** und geben Sie den in Schritt b abgerufenen Wert an Warten Sie, bis alle Knoten angeben, dass sie die Peeranforderung empfangen haben. Fahren Sie mit Schritt e fort.  
   
     5.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt b fort.  
   
@@ -243,7 +243,7 @@ ms.locfileid: "68210772"
   
     1.  Fragen Sie in Datenbank **B**die [MSpeer_lsns](/sql/relational-databases/system-tables/mspeer-lsns-transact-sql) -Tabelle ab, um die Protokollfolgenummer (Log Sequence Number, LSN) der letzten Transaktion abzurufen, die Datenbank **B** von Datenbank **C**erhalten hat.  
   
-    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass das Abonnement basierend auf der LSN initialisiert wird (ein Wert **initialize from lsn** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt b fort.  
+    2.  Erstellen Sie das Abonnement in Datenbank **B** für die Veröffentlichung in Datenbank **C**neu. Geben Sie dabei an, dass das Abonnement basierend auf der LSN initialisiert werden soll (der Wert **initialisieren from LSN** für den **@sync_type** -Parameter von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)). Fahren Sie mit Schritt b fort.  
   
     3.  Erstellen Sie das Abonnement in Datenbank **C** für die Veröffentlichung in Datenbank **B**neu. Geben Sie dabei an, dass der Abonnent bereits über die Daten verfügt. Fahren Sie mit Schritt 13 fort.  
   
@@ -345,7 +345,7 @@ ms.locfileid: "68210772"
   
 2.  Stellen Sie sicher, dass die Datenbank hinsichtlich der Replikationskonfiguration und der Einstellungen mit der Veröffentlichungsdatenbank konsistent ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](back-up-and-restore-replicated-databases.md)   
  [Verteilung konfigurieren](../configure-distribution.md)   

@@ -12,10 +12,10 @@ ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 8aaf6c9cb9f4c7ed0f006492e6e11ce82ef333f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251730"
 ---
 # <a name="data-quality-client-home-screen"></a>Startbildschirm des Data Quality-Clients
@@ -24,7 +24,7 @@ ms.locfileid: "75251730"
 
   Über diesen Bildschirm können Sie auf die Benutzeroberflächen für die drei wichtigsten [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] -Taskgruppen (DSQ) zugreifen: Wissensdatenbank-Verwaltung, Data Quality-Projekte und Verwaltung.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="knowledge-base-management"></a>Wissensdatenbank-Verwaltung  
  Eine DQS-Wissensdatenbank ist ein Repository mit Metadaten, die von DQS zur Verbesserung der Datenqualität verwendet werden. Diese Metadaten werden von der DQS-Plattform in einem computergestützten Wissensermittlungsprozess und vom Data Steward in einem interaktiven Domänenverwaltungsprozess erstellt.  
@@ -52,7 +52,7 @@ ms.locfileid: "75251730"
  **Aktuelles Data Quality-Projekt**  
  Wählen Sie ein bereits erstelltes Projekt aus der Liste auf dem Bildschirm aus. Sie können ein gesperrtes Projekt nur öffnen, wenn Sie es selbst gesperrt haben. Wenn dies der Fall ist, wird das Projekt mit dem Status geöffnet, den es beim Schließen aufwies. Selbiges ist in Klammern angegeben. Wenn das Projekt abgeschlossen wurde, wird es im Exportschritt der Aktivität geöffnet.  
   
-### <a name="administration"></a>Administration  
+### <a name="administration"></a>Verwaltung  
  Die DQS-Verwaltung ermöglicht die Überwachung, Konfiguration und Wartung von DQS.  
   
  **Aktivitäts Überwachung**  
@@ -64,6 +64,6 @@ ms.locfileid: "75251730"
 ## <a name="see-also"></a>Weitere Informationen  
  [DQS-Wissensdatenbanken und-Domänen](../data-quality-services/dqs-knowledge-bases-and-domains.md)   
  [Data Quality-Projekte &#40;DQS-&#41;](../data-quality-services/data-quality-projects-dqs.md)   
- [DQS-Verwaltung](../data-quality-services/dqs-administration.md)  
+ [DQS-Administration](../data-quality-services/dqs-administration.md)  
   
   

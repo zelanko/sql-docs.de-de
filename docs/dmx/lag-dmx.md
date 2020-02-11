@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e2f8b565f8b3d9d5e385b2bba9f183e743ace
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008348"
 ---
 # <a name="lag-dmx"></a>Lag (DMX)
@@ -30,8 +30,8 @@ Lag()
 ## <a name="return-type"></a>Rückgabetyp  
  Ein Skalarwert mit dem Typ integer.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die **Lag** Funktion wird verwendet, auf ein Modell, in denen die KEY TIME-Spalte in einer geschachtelten Tabelle befindet, kann die Funktion muss sich in der untergeordneten Select-Anweisung die sein.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn die **lag** -Funktion für ein Modell verwendet wird, in dem sich die Key Time-Spalte in einer geschachtelten Tabelle befindet, muss sich die Funktion in der untergeordneten SELECT-Anweisung der Anweisung befinden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die Fälle zurückgegeben, die in den letzten 12 Monaten der Daten liegen, die zum Trainieren des Modells verwendet wurden.  
@@ -41,9 +41,9 @@ SELECT * FROM [Forecasting].CASES
 WHERE Lag() < 12  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -17,18 +17,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837520"
 ---
 # <a name="legal-notice-for-documentation"></a>Rechtliche Hinweise für die Dokumentation
-  Dieses Dokument wird "wie besehen" zur Verfügung gestellt. Die in diesen Unterlagen enthaltenen Angaben und Ansichten, einschließlich URLs und anderer Verweise auf Internetwebsites, können ohne vorherige Ankündigung geändert werden. Sie tragen das mit der Nutzung verbundene Risiko.  
+  Dieses Dokument wird so bereitgestellt, wie es ist. Informationen und Stellungnahmen in diesem Dokument einschließlich URLs und anderer Verweise auf Websites können ohne Ankündigung geändert werden. Sie tragen das mit der Nutzung verbundene Risiko.  
   
- Einige der in diesem Dokument dargestellten Beispiele werden nur zu Illustrationszwecken bereitgestellt und sind fiktiv. Es wird keine reale Verknüpfung beabsichtigt oder abgeleitet.  
+ Einige der in diesem Dokument dargestellten Beispiele dienen nur zu Illustrationszwecken und sind frei erfunden. Ähnlichkeiten oder Verbindungen sind rein zufällig und nicht beabsichtigt.  
   
- Dieses Dokument gibt Ihnen keine Rechte auf geistiges Eigentum in Microsoft-Produkten. Sie können dieses Dokument zu internen Zwecken und als Referenz kopieren und verwenden.  
+  Dieses Dokument gibt Ihnen keinerlei geistige Eigentums- oder anderweitige Rechte an irgendeinem Microsoft-Produkt. Sie dürfen dieses Dokument zu internen Referenzzwecken kopieren und verwenden.  
   
  © 2013 Microsoft. Alle Rechte vorbehalten.  
   

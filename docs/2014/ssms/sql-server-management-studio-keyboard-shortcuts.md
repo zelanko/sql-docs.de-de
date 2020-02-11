@@ -21,21 +21,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56c21fd7676e7ee20df37607752aa8076bd42096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127055"
 ---
 # <a name="sql-server-management-studio-keyboard-shortcuts"></a>Tastenkombinationen für SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bietet Benutzern zwei Tastaturschemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Schema mit auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basierenden Tastenkombinationen verwendet. [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]bietet Benutzern zwei Tastatur Schemas. Standardmäßig wird das [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Schema verwendet, wobei Tastenkombinationen auf [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2010 basieren. 
+  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] bietet auch ein dem Standardschema von [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] ähnliches Tastaturschema. Um das Tastaturschema zu ändern oder weitere Tastenkombinationen hinzuzufügen, klicken Sie im Menü **Extras** auf **Optionen**. Wählen Sie das gewünschte Tastaturschema unter **Umgebung**auf der Seite **Tastatur** aus.  
   
 > [!NOTE]  
 >  Klicken Sie oben auf dieser Seite auf **Alle reduzieren** , um nur die Überschriften anzuzeigen.  
   
 ## <a name="menu-activation-keyboard-shortcuts"></a>Tastenkombinationen zur Menüaktivierung  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Wechseln zur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Menüleiste|ALT|ALT|  
 |Aktivieren des Menüs für eine Toolkomponente|ALT+BINDESTRICH|ALT+BINDESTRICH|  
@@ -51,11 +52,11 @@ ms.locfileid: "63127055"
   
 ## <a name="windows-management-and-toolbar-keyboard-shortcuts"></a>Tastenkombinationen für Fensterverwaltung und Symbolleiste  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Schließen des aktuellen untergeordneten MDI-Fensters|STRG+F4|STRG+F4|  
 |Schließen eines Menüs oder Dialogfelds, Abbrechen eines Vorgangs oder Fokussieren des aktuellen Dokumentfensters|ESC|ESC|  
-|Drucken|STRG+P|STRG+P|  
+|print|STRG+P|STRG+P|  
 |Beenden|ALT+F4|ALT+F4|  
 |Ein- und Ausschalten des Vollbildmodus|UMSCHALT+ALT+EINGABE|UMSCHALT+ALT+EINGABE|  
 |Schließen des aktuellen Toolfensters|UMSCHALT+ESC|UMSCHALT+ESC|  
@@ -67,9 +68,9 @@ ms.locfileid: "63127055"
 |Anzeigen des IDE-Navigators mit dem ersten ausgewählten Toolfenster|ALT+F7|Keine Entsprechung|  
 |Wechseln zum nächsten Toolfenster|ALT+F6<br /><br /> oder<br /><br /> F6 im [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrage-Editor|ALT+F6|  
 |Wechseln zum vorherigen Toolfenster|UMSCHALT+ALT+F7|UMSCHALT+ALT+F7|  
-|Wechseln zum nächsten Bereich einer unterteilten Sicht in einem einzelnen Dokument|F6|F6|  
+|Wechseln zum nächsten Bereich einer unterteilten Sicht in einem einzelnen Dokument|F6,|F6,|  
 |Wechseln zum zuvor ausgewählten Fenster|UMSCHALT+ALT+F6<br /><br /> oder<br /><br /> UMSCHALT+F6 im [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrage-Editor|UMSCHALT+ALT+F6|  
-|Wechseln zum vorherigen Bereich einer unterteilten Sicht in einem einzelnen Dokument|UMSCHALT+F6|F6|  
+|Wechseln zum vorherigen Bereich einer unterteilten Sicht in einem einzelnen Dokument|UMSCHALT+F6|F6,|  
 |Anzeigen des Andockmenüs|STRG+Minuszeichen (-)|Keine Entsprechung|  
 |Anzeigen eines Popups mit allen geöffneten Fenstern|STRG+ALT+NACH-UNTEN-TASTE|Keine Entsprechung|  
 |Öffnen eines neuen Fensters des Abfrage-Editors|STRG+O|STRG+O|  
@@ -81,7 +82,7 @@ ms.locfileid: "63127055"
 |Anzeigen des Eigenschaftenfensters|F4|F4|  
 |Anzeigen des **Ausgabefensters**|STRG+ALT+O|Keine Entsprechung|  
 |Anzeigen des Fensters **Aufgabenliste**|STRG+\\, T<br /><br /> oder<br /><br /> STRG+\\, STRG+T|STRG+ALT+K|  
-|Umschalten zwischen der Listenansicht "Details zum Objekt-Explorer" und dem Eigenschaftenbereich "Details zum Objekt-Explorer"|F6|F6|  
+|Umschalten zwischen der Listenansicht "Details zum Objekt-Explorer" und dem Eigenschaftenbereich "Details zum Objekt-Explorer"|F6,|F6,|  
 |Steuern der Teilerleiste, die die Listenansicht "Details" zum Objekt-Explorer und den Eigenschaftenbereich "Details" zum Objekt-Explorer trennt, um die Größe des Anzeigebereichs einzustellen.|TAB-TASTE, dann die NACH-OBEN-TASTE oder STRG+NACH-UNTEN-TASTE|TAB-TASTE, dann die NACH-OBEN-TASTE oder STRG+NACH-UNTEN-TASTE|  
 |Anzeigen der Toolbox|STRG+ALT+X|STRG+ALT+X|  
 |Anzeigen des Lesezeichenfensters|STRG+K, STRG+W|STRG+K, STRG+W|  
@@ -94,7 +95,7 @@ ms.locfileid: "63127055"
   
 ## <a name="cursor-movement-keyboard-shortcuts"></a>Tastenkombinationen für Cursorbewegungen  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Bewegen des Cursors nach links|NACH-LINKS-TASTE|NACH-LINKS-TASTE|  
 |Bewegen des Cursors nach rechts|NACH-RECHTS-TASTE|NACH-RECHTS-TASTE|  
@@ -116,7 +117,7 @@ ms.locfileid: "63127055"
   
 ## <a name="text-selection-keyboard-shortcuts"></a>Tastenkombinationen zur Textmarkierung  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Markieren des Texts von der Cursorposition bis zum Anfang des Dokuments|STRG+UMSCHALT+POS1|STRG+UMSCHALT+POS1|  
 |Markieren des Texts von der Cursorposition bis zum Ende des Dokuments|STRG+UMSCHALT+ENDE|STRG+UMSCHALT+ENDE|  
@@ -135,7 +136,7 @@ ms.locfileid: "63127055"
 |Bewegen des Cursors um eine Zeile nach oben, Erweitern der Markierung|UMSCHALT+ALT+NACH-OBEN-TASTE|UMSCHALT+ALT+NACH-OBEN-TASTE|  
 |Erweitern der Markierung um eine Seite nach oben|UMSCHALT+BILD-AUF|UMSCHALT+BILD-AUF|  
 |Erweitern der Markierung um eine Seite nach unten|UMSCHALT+BILD-AB|UMSCHALT+BILD-AB|  
-|Markieren des gesamten aktuellen Dokuments|CTRL+A|CTRL+A|  
+|Markieren des gesamten aktuellen Dokuments|STRG+A|STRG+A|  
 |Markieren des Worts, auf dem sich der Cursor befindet, bzw. das nächste Wort|STRG+W|STRG+W|  
 |Markieren der aktuellen Position im Editor zurück zur vorherigen Position im Editor|STRG+=|STRG+=|  
 |Erweitern der Markierung zum oberen Rand des aktuellen Fensters|STRG+UMSCHALT+BILD-AUF|STRG+UMSCHALT+BILD-AUF|  
@@ -154,7 +155,7 @@ ms.locfileid: "63127055"
   
 ## <a name="bookmark-keyboard-shortcuts"></a>Tastenkombinationen für Lesezeichen  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Festlegen oder Entfernen eines Lesezeichens in der aktuellen Zeile|STRG+K, STRG+K|STRG+K, STRG+K|  
 |Nächstes Lesezeichen|STRG+K, STRG+N|STRG+K, STRG+N|  
@@ -165,7 +166,7 @@ ms.locfileid: "63127055"
   
 ## <a name="tree-control-keyboard-shortcuts"></a>Tastenkombinationen für die Strukturansicht  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Reduzieren von Strukturknoten|- (auf der Zehnertastatur)|- (auf der Zehnertastatur)|  
 |Erweitern aller Strukturknoten|* (auf der Zehnertastatur)|* (auf der Zehnertastatur)|  
@@ -175,7 +176,7 @@ ms.locfileid: "63127055"
 ## <a name="code-editor-keyboard-shortcuts"></a>Tastenkombinationen für den Code-Editor  
  Nicht alle Tastenkombinationen sind in allen Arten von Code-Editoren implementiert.  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Ein- und Ausschalten des Vollbildmodus|UMSCHALT+ALT+EINGABE|UMSCHALT+ALT+EINGABE|  
 |Durchführen eines Bildlaufs im Text um eine Zeile nach oben|STRG+NACH-OBEN-TASTE|STRG+NACH-OBEN-TASTE|  
@@ -184,8 +185,8 @@ ms.locfileid: "63127055"
 |Wiederherstellen der zuvor rückgängig gemachten Bearbeitung|STRG+UMSCHALT+Z<br /><br /> oder<br /><br /> STRG+Y<br /><br /> oder<br /><br /> ALT+UMSCHALT+RÜCKTASTE|STRG+UMSCHALT+Z<br /><br /> oder<br /><br /> STRG+Y<br /><br /> oder<br /><br /> ALT+UMSCHALT+RÜCKTASTE|  
 |Speichern des ausgewählten Elements|STRG+S|STRG+S|  
 |Alle speichern|STRG+UMSCHALT+S|STRG+UMSCHALT+S|  
-|Schließen|STRG+F4|STRG+F4|  
-|Drucken|STRG+P|STRG+P|  
+|Close (Schließen)|STRG+F4|STRG+F4|  
+|print|STRG+P|STRG+P|  
 |Beenden|ALT+F4|ALT+F4|  
 |Öffnen der aktuellen Datei in einem Browser|STRG+UMSCHALT+W|Keine Entsprechung|  
 |Löschen des gesamten Texts in der aktuellen Datei|STRG+UMSCHALT+ENTF|STRG+UMSCHALT+ENTF|  
@@ -205,15 +206,15 @@ ms.locfileid: "63127055"
 |Anzeigen des geschätzten Ausführungsplans|STRG+UMSCHALT+ALT+L|STRG+L|  
 |Abbrechen der Ausführung der Abfrage|ALT+UNTBR|ALT+UNTBR|  
 |Einbeziehen des tatsächlichen Ausführungsplans in die Abfrageausgabe|STRG+UMSCHALT+ALT+M|STRG+M|  
-|Ausgeben von Ergebnissen als Raster|STRG+UMSCHALT+D|STRG+B|  
+|Ausgeben von Ergebnissen als Raster|STRG+UMSCHALT+D|STRG+D|  
 |Ausgeben von Ergebnissen als Text|STRG+T|STRG+T|  
 |Ausgeben von Ergebnissen in einer Datei|STRG+UMSCHALT+T|STRG+UMSCHALT+F|  
 |Anzeigen oder Ausblenden des Abfrageergebnisbereichs|STRG+R|STRG+R|  
 |Anzeigen des Bereichs für Abfrageergebnisse|STRG+UMSCHALT+ALT+R||  
-|Wechseln zwischen Abfrage- und Ergebnisbereich|F6|F6|  
+|Wechseln zwischen Abfrage- und Ergebnisbereich|F6,|F6,|  
 |Kopieren des Ergebnisrasters und der Kopfzeilen in die Zwischenablage|STRG+UMSCHALT+C|Keine Entsprechung|  
 |Wechseln zum nächsten aktiven Fenster in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]|ALT+F6|ALT+F6|  
-|Öffnen [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]|STRG+ALT+P|STRG+ALT+P|  
+|Öffnen Sie [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].|STRG+ALT+P|STRG+ALT+P|  
 |Anzeigen des Dialogfelds "Abfrage-Designer" über das Fenster des Abfrage-Editors|STRG+UMSCHALT+Q|Keine Entsprechung|  
 |Ausführen der gespeicherten Prozedur des `sp_help`-Systems|ALT+F1|ALT+F1|  
 |Ausführen der gespeicherten Prozedur des `sp_who`-Systems|STRG+1|STRG+1|  
@@ -230,11 +231,11 @@ ms.locfileid: "63127055"
   
 ## <a name="text-manipulation-in-code-editor-keyboard-shortcuts"></a>Tastenkombinationen zur Textmanipulation im Code-Editor  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Einfügen einer neuen Zeile|EINGABE oder UMSCHALT+EINGABE|EINGABE oder UMSCHALT+EINGABE|  
 |Auslagern der Zeichen auf eine Seite des Cursors (gilt nicht für den SQL-Editor)|STRG+T|STRG+T|  
-|Löschen eines Zeichens rechts vom Cursor|DELETE|DELETE|  
+|Löschen eines Zeichens rechts vom Cursor|Delete|Delete|  
 |Löschen eines Zeichens links vom Cursor|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|RÜCKTASTE<br /><br /> oder<br /><br /> UMSCHALT+<br /><br /> RÜCKTASTE|  
 |Löschen des Leerzeichens in der Auswahl oder Löschen des Leerzeichens, das an den Cursor angrenzt, wenn keine Auswahl getroffen wurde|STRG+K, C|Keine Entsprechung|  
 |Einfügen der für den Editor konfigurierten Anzahl von Leerzeichen|TAB|TAB|  
@@ -267,7 +268,7 @@ ms.locfileid: "63127055"
   
 ## <a name="transact-sql-debugger-keyboard-shortcuts"></a>Tastenkombinationen des Transact-SQL-Debuggers  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Starten oder Fortsetzen des Debugvorgangs|ALT+F5|ALT+F5|  
 |Beenden des Debugvorgangs|UMSCHALT+F5|UMSCHALT+F5|  
@@ -301,7 +302,7 @@ ms.locfileid: "63127055"
   
 ## <a name="microsoft-intellisense-keyboard-shortcuts"></a>Tastenkombinationen für Microsoft IntelliSense  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Auflisten von Elementen|STRG+J|STRG+LEERTASTE<br /><br /> oder<br /><br /> STRG+J|  
 |Vervollständigen des Worts|STRG+LEERTASTE<br /><br /> oder<br /><br /> ALT+NACH-RECHTS-TASTE|ALT+NACH-RECHTS-TASTE|  
@@ -319,10 +320,10 @@ ms.locfileid: "63127055"
   
 ## <a name="document-window-and-browser-keyboard-shortcuts"></a>Tastenkombinationen für Dokumentfenster und Browser  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Ein- und Ausschalten des Vollbildmodus|UMSCHALT+ALT+EINGABE|UMSCHALT+ALT+EINGABE|  
-|Wechseln zum nächsten Bereich einer unterteilen Sicht in einem Dokument|F6|F6|  
+|Wechseln zum nächsten Bereich einer unterteilen Sicht in einem Dokument|F6,|F6,|  
 |Wechseln zum vorherigen Dokument im Editor oder Designer|STRG+UMSCHALT+F6<br /><br /> STRG+UMSCHALT+TAB|STRG+UMSCHALT+F6<br /><br /> STRG+UMSCHALT+TAB|  
 |Wechseln zum vorherigen Bereich einer unterteilten Sicht in einem Dokument|UMSCHALT+F6|UMSCHALT+F6|  
 |Zurück, Anzeigen der vorherigen Seite im Anzeigeverlauf|ALT+NACH-LINKS-TASTE|ALT+NACH-LINKS-TASTE|  
@@ -331,7 +332,7 @@ ms.locfileid: "63127055"
   
 ## <a name="solution-explorer-keyboard-shortcuts"></a>Tastenkombinationen im Projektmappen-Explorer  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Anzeigen des Projektmappen-Explorers|STRG+ALT+L|STRG+ALT+L|  
 |Anzeigen des Dialogfelds **Neue Datei** zum Erstellen einer neuen Datei|STRG+N|STRG+N|  
@@ -341,7 +342,7 @@ ms.locfileid: "63127055"
   
 ## <a name="help-and-books-online-keyboard-shortcuts"></a>Tastenkombinationen zur Hilfe und Onlinedokumentation  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Hilfe|F1<br /><br /> oder<br /><br /> UMSCHALT+F1|F1|  
 |Anzeigen der SQL Server-Onlinedokumentation|STRG+F1|Keine Entsprechung|  
@@ -357,14 +358,14 @@ ms.locfileid: "63127055"
   
 ## <a name="search-keyboard-shortcuts"></a>Tastenkombinationen für Suchvorgänge  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Anzeigen des Dialogfelds **Suchen**|STRG+F|STRG+F|  
 |Zeigt die Registerkarte **In Dateien** des Dialogfelds **Suchen** an.|||  
 |Zeigt die Definition für das ausgewählte Symbol an.|F12|Keine Entsprechung|  
 |Zeigt die Liste mit Verweisen für das ausgewählte Symbol an.|UMSCHALT+F12|Keine Entsprechung|  
 |Anzeigen des Dialogfelds **Ersetzen**|STRG+H|STRG+H|  
-|Starten der inkrementellen Suche. Eingeben der zu suchenden Zeichen, oder Drücken von STRG+I zur Suche nach Zeichen aus dem vorherigen Suchvorgang|STRG+S|STRG+S|  
+|Starten der inkrementellen Suche. Eingeben der zu suchenden Zeichen, oder Drücken von STRG+I zur Suche nach Zeichen aus dem vorherigen Suchvorgang|STRG+I|STRG+I|  
 |Suchen des nächsten Vorkommens des vorherigen Suchtexts|F3|F3|  
 |Suchen des vorherigen Vorkommens des Suchtexts|UMSCHALT+F3|UMSCHALT+F3|  
 |Suchen des nächsten Vorkommens des derzeit ausgewählten Texts|STRG+F3|STRG+F3|  
@@ -379,20 +380,20 @@ ms.locfileid: "63127055"
   
 ## <a name="cut-and-paste-keyboard-shortcuts"></a>Tastenkombinationen zum Ausschneiden und Einfügen  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Ausschneiden (Löschen des markierten Elements und Ablegen in der Zwischenablage)|STRG+X<br /><br /> oder<br /><br /> SHIFTRLT+ENTF|STRG+X<br /><br /> oder<br /><br /> UMSCHALT+ENTF|  
 |Schneidet alle ausgewählten Zeilen aus bzw. nur die aktuelle Zeile, wenn nichts ausgewählt ist.|STRG+L<br /><br /> oder<br /><br /> STRG+UMSCHALT+L|Keine Entsprechung|  
-|Kopieren in die Zwischenablage|STRG+C<br /><br /> oder<br /><br /> STRG+EINFG|STRG+C<br /><br /> oder<br /><br /> STRG+EINFG|  
+|Kopieren in die Zwischenablage|STRG + C<br /><br /> oder<br /><br /> STRG+EINFG|STRG + C<br /><br /> oder<br /><br /> STRG+EINFG|  
 |Einfügen aus der Zwischenablage an der Einfügemarke|STRG+V<br /><br /> oder<br /><br /> UMSCHALT+EINFG|STRG+V<br /><br /> oder<br /><br /> UMSCHALT+EINFG|  
 |Einfügen eines Elements aus dem Zwischenablagering bei der Einfügemarke und automatisches Auswählen des eingefügten Elements|STRG+UMSCHALT+V<br /><br /> oder<br /><br /> STRG+enseSHIFT+EINFG|Keine Entsprechung|  
   
 ## <a name="log-viewer-keyboard-shortcuts"></a>Tastenkombinationen für den Protokoll-Viewer  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Aktualisieren|Keine Entsprechung|F5|  
-|Wechseln zwischen den Bereichen **Protokolle auswählen** und **Protokolldateizusammenfassung**|Keine Entsprechung|F6|  
+|Wechseln zwischen den Bereichen **Protokolle auswählen** und **Protokolldateizusammenfassung**|Keine Entsprechung|F6,|  
 |Wechseln zum Bereich **Protokolldateizusammenfassung**|Keine Entsprechung|ALT+S|  
 |Laden eines neuen Protokolls|Keine Entsprechung|STRG+UMSCHALT+L|  
 |Exportieren eines Protokolls|Keine Entsprechung|STRG+UMSCHALT+E|  
@@ -401,38 +402,38 @@ ms.locfileid: "63127055"
   
 ## <a name="activity-monitor-keyboard-shortcuts"></a>Tastenkombinationen für den Aktivitätsmonitor  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Startet Aktivitätsmonitor|CTRLl+ALT+A|CTRLl+ALT+A|  
 |Schließt Aktivitätsmonitor|STRG+F4|STRG+F4|  
 |Aktualisieren|F5|F5|  
 |Filtern der Bildschirmanzeige|STRG+UMSCHALT+F|STRG+UMSCHALT+F|  
-|Durchlaufen durch Bereiche|F6|F6|  
+|Durchlaufen durch Bereiche|F6,|F6,|  
 |Erweitern oder Reduzieren von ausgewähltem Bereich|STRG und + oder -|STRG und + oder -|  
 |Erweitern oder Reduzieren aller Bereiche|+ oder -|+ oder -|  
-|Kopiert die gesamte ausgewählte Zeile im Raster|STRG+C|STRG+C|  
+|Kopiert die gesamte ausgewählte Zeile im Raster|STRG + C|STRG + C|  
 |Zelle kopieren|STRG+UMSCHALT+C|STRG+UMSCHALT+C|  
 |Dropdown zum Filtern im Raster|ALT+NACH-UNTEN|ALT+NACH-UNTEN|  
 |Durchführen eines Bildlaufs nach oder unten im Aktivitätsmonitor|STRG+ALT+NACH-OBEN/NACH-UNTEN|STRG+ALT+NACH-OBEN/NACH-UNTEN|  
   
 ## <a name="replication-monitor-keyboard-shortcuts"></a>Tastenkombinationen für den Replikationsmonitor  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Aktualisieren|F5|F5|  
-|Öffnen eines Detailfensters von einem Raster aus|EINGABE|EINGABE|  
+|Öffnen eines Detailfensters von einem Raster aus|EINGABETASTE|EINGABETASTE|  
   
 ## <a name="replication-conflict-viewer-keyboard-shortcuts"></a>Tastenkombinationen für den Replikationskonflikt-Viewer  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
-|Filter definieren|F6|F6|  
+|Filter definieren|F6,|F6,|  
 |Filter anwenden|F7|F7|  
 |Alle Spalten anzeigen|F8|F8|  
   
 ## <a name="query-designer-keyboard-shortcuts"></a>Abfragen von Designer-Tastenkombinationen  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Abbrechen oder Beenden der aktuell ausgeführten Abfrage|STRG+T|STRG+T|  
 |Anzeigen des Diagrammbereichs vom **Abfrage-Designer**|STRG+1|STRG+1|  
@@ -445,7 +446,7 @@ ms.locfileid: "63127055"
   
 ## <a name="designer-keyboard-shortcuts"></a>Designer-Tastenkombinationen  
   
-|Aktion|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Action|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |------------|-----------------------------|---------------------------------|  
 |Bewegen des ausgewählten Steuerelements nach unten in acht Inkrementen auf der Entwurfsoberfläche|NACH-UNTEN-TASTE|Keine Entsprechung|  
 |Bewegen des ausgewählten Steuerelements nach links in acht Inkrementen auf der Entwurfsoberfläche|NACH-LINKS-TASTE|Keine Entsprechung|  
@@ -457,9 +458,9 @@ ms.locfileid: "63127055"
 |Verringern der Höhe des ausgewählten Steuerelements in acht Inkrementen|UMSCHALT+NACH-OBEN-TASTE|Keine Entsprechung|  
 |Wechseln zum nächsten Steuerelement auf der Seite|TAB|Keine Entsprechung|  
 |Wechseln zum vorherigen Steuerelement auf der Seite|UMSCHALT+TAB|Keine Entsprechung|  
-|Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABE|Keine Entsprechung|  
+|Anzeigen des Rasters auf der Entwurfsoberfläche|EINGABETASTE|Keine Entsprechung|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anpassen von Menüs und Tastenkombinationen](customize-menus-and-shortcut-keys.md)  
   
   

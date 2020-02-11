@@ -19,24 +19,24 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4aeffaf9098e2476db4a0faf95811f3ea5204aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65480926"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Konfigurieren von Schweregraden für DQS-Protokolldateien
   In diesem Thema wird beschrieben, wie Schweregrade für verschiedene Aktivitäten und Module in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) mit [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]konfiguriert werden. Schweregrade definieren die Intensität von Ereignissen, die in DQS auftreten. DQS-Ereignisse verfügen über die folgenden Schweregrade, angefangen mit dem höchsten Schweregrad:  
   
--   **Schwerwiegend:** Kritische Laufzeitfehler, die schwerwiegende/unerwartete Ergebnisse verursachen können.  
+-   Schwer **wiegend: kritische**Laufzeitfehler, die schwerwiegende/unerwartete Ergebnisse verursachen können.  
   
--   **Fehler:** Andere Laufzeitfehler.  
+-   **Fehler**: andere Laufzeitfehler.  
   
--   **Warnen:** Warnung vor Ereignissen, die zu einem Fehler führen können.  
+-   **Warnen**: Warnung zu Ereignissen, die zu einem Fehler führen können.  
   
--   **Info:** Informationen zu allgemeinen Ereignissen, die weder ein Fehler noch eine Warnung sind. Beispiel: Ein DQS-Prozess wurde gestartet.  
+-   **Info**: Informationen zu allgemeinen Ereignissen, bei denen es sich nicht um einen Fehler oder eine Warnung handelt. Beispiel: Ein DQS-Prozess wurde gestartet.  
   
--   **Debuggen:** Detaillierte (ausführliche) Informationen zum Ereignis.  
+-   **Debuggen**: detaillierte (ausführliche) Informationen zum Ereignis.  
   
  Indem Sie Schweregrade für verschiedene DQS-Aktivitäten und -Module konfigurieren, filtern Sie die Informationen, die protokolliert und in die DQS-Protokolldatei für die entsprechende DQS-Aktivität oder das entsprechende DQS-Modul geschrieben werden sollen. Wenn Sie z. B. den Schweregrad einer DQS-Aktivität auf **Warnen**festlegen, werden nur Warnungen und Meldungen mit einem höheren Schweregrad ("Fehler" und "Schwerwiegend") der DQS-Aktivität zugeordnet und protokolliert.  
   
@@ -47,23 +47,23 @@ ms.locfileid: "65480926"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um die Einstellungen für Protokollschweregrade zu konfigurieren.  
   
-##  <a name="ConfigureActivity"></a> Konfigurieren von Schweregraden auf Aktivitätsebene  
- Sie können die Einstellungen für Protokollschweregrade für die folgenden Aktivitäten in DQS konfigurieren: Domänenverwaltung, Wissensermittlung, Abgleichsrichtlinien, Datenbereinigung, Datenabgleich und Verweisdatendienste. Gehen Sie hierzu wie folgt vor:  
+##  <a name="ConfigureActivity"></a>Konfigurieren von Schweregraden auf Aktivitäts Ebene  
+ Sie können die Einstellungen für Protokollschweregrade für die folgenden Aktivitäten in DQS konfigurieren: Domänenverwaltung, Wissensermittlung, Abgleichsrichtlinien, Datenbereinigung, Datenabgleich und Verweisdatendienste. Gehen Sie folgendermaßen vor:  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Konfiguration**.  
   
-3.  Klicken Sie dann auf die Registerkarte **Protokolleinstellungen** . Es werden die folgenden DQS-Aktivitäten aufgeführt, für die Sie einen Schweregrad auswählen können: **Domänenverwaltung**, **Wissensermittlung**, **Bereinigungsprojekt (z. B. RDS)** , **Abgleichsrichtlinie und -projekt** und **RDS**.  
+3.  Klicken Sie anschließend auf die Registerkarte **Protokoll Einstellungen** . Die folgenden DQS-Aktivitäten werden aufgelistet, für die Sie einen Schweregrad auswählen können: **Domänen Verwaltung**, **Wissens**Ermittlung, Bereinigungs **Projekt (ex. RDS)**, abgleichsrichtlinie und abgleichsprojekt und **RDS**. ****  
   
-4.  Wählen Sie für eine DQS-Aktivität den Schweregrad für die Protokollierung aus. Folgende Optionen stehen zur Wahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info** und **Debuggen**. Wenn z. B. nur schwerwiegende Meldungen in die DQS-Protokolldateien für die Wissensermittlungsaktivität geschrieben werden sollen, wählen Sie für die Aktivität **Wissensermittlung** in der Dropdownliste die Option **Schwerwiegend** aus.  
+4.  Wählen Sie für eine DQS-Aktivität den Schweregrad für die Protokollierung aus. Die folgenden Optionen stehen zur Auswahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info**und **Debuggen**. Wenn z. B. nur schwerwiegende Meldungen in die DQS-Protokolldateien für die Wissensermittlungsaktivität geschrieben werden sollen, wählen Sie für die Aktivität **Wissensermittlung** in der Dropdownliste die Option **Schwerwiegend** aus.  
   
     > [!NOTE]  
     >  Standardmäßig ist **Fehler** für jede Aktivität ausgewählt. Diese Einstellung bedeutet, dass für jede Aktivität standardmäßig Fehler und schwerwiegende Meldungen in die DQS-Protokolldateien geschrieben werden.  
   
 5.  Klicken Sie auf **Schließen**.  
   
-##  <a name="ConfigureModule"></a> Konfigurieren von Schweregraden auf Modulebene (Erweitert)  
+##  <a name="ConfigureModule"></a>Konfigurieren von Schweregraden auf Modulebene (erweitert)  
  Im Abschnitt **Erweitert** auf der Registerkarte **Protokolleinstellungen** können Sie die Einstellungen für Protokollschweregrade auf Modulebene konfigurieren. Module sind DQS-Systemassemblys, die verschiedene Funktionen innerhalb einer Funktion in DQS implementieren. Die Domänenverwaltungsaktivität enthält z. B. verschiedene Funktionen, wie z. B. das Definieren von Domänenregeln, Regelbedingungen, domänenübergreifenden Regeln für Verbunddomänen usw.  
   
  In einigen Fällen ist die Granularitätsebene auf Aktivitätsebene nicht ausreichend. Angenommen, Sie möchten ein Problem untersuchen, das in einem bestimmten Modul innerhalb einer Aktivität auftritt. In dem Fall ist eine Option hilfreich, mit der Protokollschweregrade auf Modulebene konfiguriert werden können, um das Problem zu isolieren und genauer nachzuverfolgen.  
@@ -80,7 +80,7 @@ ms.locfileid: "65480926"
   
 2.  Wählen Sie im angezeigten Raster aus der Dropdownliste in der Spalte **Modul** einen Modulnamen aus.  
   
-3.  Wählen Sie als Nächstes aus der Dropdownliste in der Spalte **Schweregrad** einen Schweregrad für das Modul aus. Folgende Optionen stehen zur Wahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info** und **Debuggen**.  
+3.  Wählen Sie als Nächstes aus der Dropdownliste in der Spalte **Schweregrad** einen Schweregrad für das Modul aus. Die folgenden Optionen stehen zur Auswahl: **Schwerwiegend**, **Fehler**, **Warnen**, **Info**und **Debuggen**.  
   
      Sie können z. B. in der Domänenverwaltungsaktivität für die Funktionalitäten der Domänenregeldefinition eine Granularitätsebene festlegen, die sich von der Einstellung für die Domänenverwaltungsaktivität unterscheidet, indem Sie das Modul **Microsoft.Ssdqs.DomainRules.Define** auswählen und einen anderen Protokollschweregrad auswählen. Dementsprechend können Sie eine andere Granularitätsebene für die Funktionalität der domänenübergreifenden Regel festlegen, indem Sie das Modul **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** auswählen und einen anderen Protokollschweregrad auswählen.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "65480926"
   
 5.  Klicken Sie auf **Schließen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien](../../2014/data-quality-services/configure-advanced-settings-for-dqs-log-files.md)  
   
   

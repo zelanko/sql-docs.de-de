@@ -1,5 +1,5 @@
 ---
-title: Vererbte Transaktionen | Microsoft-Dokumentation
+title: Geerbte Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d8e22375e660e6bcd55c8075edaaba067160279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058055"
 ---
 # <a name="inherited-transactions"></a>Vererbte Transaktionen
@@ -37,13 +37,13 @@ ms.locfileid: "66058055"
   
  Die Pakete und Tasks besitzen die folgenden Transaktionsattribute:  
   
--   **TransactionOption** ist für die Pakete A und C auf **Required** festgelegt.  
+-   **Transaktionoption** ist für die Pakete A und C auf **Required** festgelegt.  
   
--   **TransactionOption** ist für die Pakete B und D sowie für die Tasks Paket ausführen B, Paket ausführen D und Paket ausführen F auf **Supported** festgelegt.  
+-   **Transaktionoption** ist für die Pakete b und D sowie für die Tasks Paket b ausführen, Paket ausführen d und Paket ausführen F auf **unterstützt** festgelegt.  
   
--   **TransactionOption** ist für das Paket E sowie für die Tasks Paket ausführen C und Paket ausführen E auf **NotSupported** festgelegt.  
+-   **Transaktionoption** ist für das Paket e sowie für die Tasks Paket C ausführen und Paket ausführen e auf **NotSupported** festgelegt.  
   
- ![Fluss von geerbten Transaktionen](media/mw-dts-executepack.gif "Flow of inherited transactions")  
+ ![Fluss von vererbten Transaktionen](media/mw-dts-executepack.gif "Fluss von vererbten Transaktionen")  
   
  Nur die Pakete B, D und F können Transaktionen von ihren übergeordneten Paketen erben.  
   

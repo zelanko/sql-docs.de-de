@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e040fb9c05683be9d737ea134710c03d36317cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229013"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Always On-Verfügbarkeitsgruppen (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "75229013"
  Eine Verfügbarkeitsgruppe führt auf der Ebene eines Verfügbarkeitsreplikats ein Failover aus. Failover werden nicht durch Datenbankprobleme verursacht, z. B., wenn eine Datenbank aufgrund eines Verlusts einer Datendatei, des Löschens einer Datenbank oder der Beschädigung eines Transaktionsprotokolls, verdächtig wird.  
   
   
-##  <a name="Benefits"></a>Davon  
+##  <a name="Benefits"></a> Vorteile  
  
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] stellen ein breites Spektrum von Optionen bereit, durch die die Datenbankverfügbarkeit verbessert und eine optimale Ressourcenverwendung ermöglicht werden. Die wichtigsten Komponenten sind:  
   
@@ -135,9 +135,9 @@ ms.locfileid: "75229013"
   
 -   [Protokoll Versand](../../log-shipping/about-log-shipping-sql-server.md)  
   
--   [Remote BLOB-Speicher (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
+-   [Remote Blob Store (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md)  
   
--   [Reproduktions](../../install-windows/install-sql-server-replication.md)  
+-   [Replikation](../../install-windows/install-sql-server-replication.md)  
   
 -   [Service Broker](../../configure-windows/sql-server-service-broker.md)  
   
@@ -148,17 +148,17 @@ ms.locfileid: "75229013"
 > [!WARNING]  
 >  Informationen zu Einschränkungen und Einschränkungen bei der Verwendung anderer Funktionen mit [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]finden Sie unter [Always on-Verfügbarkeits Gruppen: Interoperabilität; SQL Server;](always-on-availability-groups-interoperability-sql-server.md).  
   
-##  <a name="RelatedTasks"></a>Verwandte Aufgaben  
+##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Ersten Einstieg in Always on Verfügbarkeits Gruppen SQL Server;](getting-started-with-always-on-availability-groups-sql-server.md)  
   
-##  <a name="RelatedContent"></a>Verwandte Inhalte  
+##  <a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   **Gt**  
   
      [SQL Server Always on Teamblogs: der offizielle SQL Server AlwaysOn-Teamblog](https://blogs.msdn.com/b/sqlalwayson/)  
   
-     [Blog zu CSS-SQL Server Technikern](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)  
   
 -   **Videos**  
   
@@ -168,7 +168,7 @@ ms.locfileid: "75229013"
   
 -   **Whitepaper**  
   
-     [Microsoft SQL Server Always on Lösungs Handbuch für hohe Verfügbarkeit und Notfall Wiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
+     [Microsoft SQL Server Always On-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)  
   
   
   
@@ -178,7 +178,7 @@ ms.locfileid: "75229013"
  [Konfiguration einer Server Instanz für Always on Verfügbarkeits Gruppen; SQL Server;](always-on-availability-groups-sql-server.md)   
  [Erstellung und Konfiguration von Verfügbarkeits Gruppen SQL Server;](creation-and-configuration-of-availability-groups-sql-server.md)   
  [Verwaltung einer Verfügbarkeits Gruppe; SQL Server;](administration-of-an-availability-group-sql-server.md)   
- [Überwachung von Verfügbarkeits Gruppen &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
+ [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)   
  [Übersicht über Transact-SQL-Anweisungen für Always on-Verfügbarkeits Gruppen SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen; SQL Server;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
   

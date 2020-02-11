@@ -1,5 +1,5 @@
 ---
-title: PredictAssociation (DMX) | Microsoft-Dokumentation
+title: Prätassociation (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,19 +8,19 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 3038bd010c5ca76ad26a301bad45ff4e1aa29460
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ea0a9915e062d7b6f15b63e18976e88cc339202d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008060"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76939497"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Sagt eine assoziative Mitgliedschaft voraus.  
   
-Beispielsweise können Sie die PredictAssociation-Funktion, um die Empfehlungen den aktuellen Status der Einkaufswagen eines Kunden abzurufen. 
+Beispielsweise können Sie die Funktion "prätassociation" verwenden, um den Satz der Empfehlungen zu erhalten, wenn der aktuelle Zustand des Warenkorbs für einen Kunden angezeigt wird. 
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,29 +30,29 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ```  
   
 ## <a name="applies-to"></a>Gilt für  
- Algorithmen, die vorhersagbare geschachtelte Tabellen, einschließlich von Zuordnungs- und einige Klassifizierungsalgorithmen enthalten. Klassifikationsalgorithmen, die Unterstützung für geschachtelte Tabellen enthalten die [!INCLUDE[msCoName](../includes/msconame-md.md)] Entscheidungsstrukturen [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes und [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network-Algorithmen.  
+ Algorithmen, die vorhersagbare Tabellen enthalten, einschließlich der Zuordnung und einiger Klassifizierungs Algorithmen. Zu den Klassifizierungs Algorithmen, die die Unterstützung [!INCLUDE[msCoName](../includes/msconame-md.md)] von Netzwerk Tabellen [!INCLUDE[msCoName](../includes/msconame-md.md)] unterstützen, gehören die [!INCLUDE[msCoName](../includes/msconame-md.md)] Algorithmen Decision Trees, Naive Bayes und Neural Network.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- \<Tabellenausdruck >  
+ \<Tabellen Ausdrucks>  
   
-## <a name="remarks"></a>Hinweise  
- Die Optionen für die **PredictAssociation** -Funktion enthalten, EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (Standardwert), INPUT_ONLY, INCLUDE_STATISTICS und INCLUDE_NODE_ID.  
+## <a name="remarks"></a>Bemerkungen  
+ Zu den Optionen für die **prätassociation** -Funktion zählen EXCLUDE_NULL, INCLUDE_NULL, inklusiv, exklusiv (Standard), INPUT_ONLY, INCLUDE_STATISTICS und INCLUDE_NODE_ID.  
   
 > [!NOTE]  
 >  INCLUSIVE, EXCLUSIVE, INPUT_ONLY und INCLUDE_STATISTICS gelten nur für Verweise auf Tabellenspalten, und EXCLUDE_NULL und INCLUDE_NULL gelten nur für Verweise auf skalare Spalten.  
   
- INCLUDE_STATISTICS gibt nur zurück, **$Probability** und **$AdjustedProbability**.  
+ INCLUDE_STATISTICS gibt nur **$Probability** und **$AdjustedProbability**zurück.  
   
- Wenn der numerische Parameter *n* angegeben wird, die **PredictAssociation** Funktion gibt die obersten n am wahrscheinlichsten Werte, die basierend auf der Wahrscheinlichkeit zurück:  
+ Wenn der numerische Parameter *n* angegeben ist, gibt die **prätassociation** -Funktion die obersten n wahrscheinlichsten Werte basierend auf der Wahrscheinlichkeit zurück:  
   
 ```  
 PredictAssociation(colref, [$AdjustedProbability], n)  
 ```  
   
- Wenn Sie einschließen **$AdjustedProbability**, die Anweisung gibt *n* Werte auf Grundlage der **$AdjustedProbability**.  
+ Wenn Sie **$AdjustedProbability**einschließen, gibt die-Anweisung die obersten *n* -Werte basierend auf der **$AdjustedProbability**zurück.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die **PredictAssociation** Funktion zurück, die vier Produkte in der Adventure Works-Datenbank, die am wahrscheinlichsten zusammen verkauft werden werden.  
+ Im folgenden Beispiel werden die vier Produkte in der Adventure Works-Datenbank, die höchstwahrscheinlich zusammen verkauft werden, mithilfe der Funktion " **prätassociation** " zurückgegeben.  
   
 ```  
 SELECT  
@@ -60,7 +60,7 @@ SELECT
 From  
   [Association]  
 ```  
-Das folgende Beispiel veranschaulicht die Verwendung eine geschachtelte Tabelle als Eingabe für die Vorhersagefunktion kann mithilfe der SHAPE-Klausel. SHAPE-Abfrage erstellt ein Rowset mit "CustomerID" als eine Spalte und eine geschachtelte Tabelle als eine zweite Spalte, die die Liste der Produkte enthält, die ein Kunde bereits geladen wurde. 
+Im folgenden Beispiel wird veranschaulicht, wie Sie eine Tabellen Tabelle mithilfe der Shape-Klausel als Eingabe für die Vorhersagefunktion verwenden können. Die Shape-Abfrage erstellt ein Rowset mit CustomerID als eine Spalte und eine in einer Tabelle gespeicherte Tabelle als zweite Spalte, die die Liste der Produkte enthält, die ein Kunde bereits eingegeben hat. 
 
 ~~~~
 SELECT T.[CustomerId], PredictAssociation(MyNestedTable, 5) // returns top 5 associated items
@@ -76,9 +76,9 @@ SHAPE {
 ~~~~  
 
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

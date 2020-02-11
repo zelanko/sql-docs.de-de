@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774974"
 ---
 # <a name="upgrade-database-engine"></a>Aktualisieren der Datenbank-Engine
@@ -43,7 +43,7 @@ ms.locfileid: "62774974"
 >  Bevor Sie eine Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine andere Edition aktualisieren, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird.  
   
 > [!NOTE]  
->  Bei einem upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aus einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition, Enterprise Edition entscheiden: Kernbasierte Lizenzierung, und klicken Sie mit der Enterprise Edition. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Wenn Sie von einer früheren Version der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise-Edition auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wählen Sie zwischen "Enterprise Edition: Core-basierte Lizenzierung" und "Enterprise Edition" aus. Diese Enterprise Editionen unterscheiden sich nur im Hinblick auf den Lizenzierungsmodus. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Prüfliste vor der Aktualisierung  
  Das Setupprogramm von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt das Upgrade von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sie können auch Datenbanken von früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] migrieren. Die Migration kann von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zu einer anderen auf demselben Computer oder zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem anderen Computer erfolgen. Die Migrationsoptionen umfassen die Verwendung des Assistenten zum Kopieren von Datenbanken, die Sicherungs- und Wiederherstellungsfunktionalität, die Verwendung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Import/Export-Assistenten und der Methoden zum Massenexport oder -import.  
@@ -68,11 +68,11 @@ ms.locfileid: "62774974"
   
  Überprüfen Sie die folgenden Probleme, und nehmen Sie nach Bedarf Änderungen vor dem Upgrade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vor:  
   
--   Wenn Sie Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent in MSX/TSX-Beziehungen eingetragen wird, aktualisieren Sie Zielserver vor den Masterservern. Wenn Sie Masterserver vor den Zielservern aktualisieren, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent keine Verbindung mit den Masterinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen.  
+-   Wenn Sie Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in MSX/TSX-Beziehungen eingetragen wird, aktualisieren Sie Zielserver vor den Masterservern. Wenn Sie Masterserver vor den Zielservern aktualisieren, kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent keine Verbindung mit den Masterinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herstellen.  
   
--   Wenn Sie von einer 64-Bit-Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine 64-Bit-Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aktualisieren, müssen Sie vor dem Upgrade von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] aktualisieren.  
+-   Wenn Sie von einer 64-Bit-Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf eine 64-Bit-Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, müssen Sie vor dem Upgrade von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]aktualisieren.  
   
--   Sichern Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankdateien der zu aktualisierenden Instanz, damit diese bei Bedarf wiederhergestellt werden können.  
+-   Sichern Sie alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankdateien der zu aktualisierenden Instanz, damit diese bei Bedarf wiederhergestellt werden können.  
   
 -   Führen Sie die entsprechenden Datenbank-Konsolenbefehle (Database Console Commands, DBCC) für die zu aktualisierenden Datenbanken aus, um deren Konsistenz sicherzustellen.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62774974"
   
 -   Stellen Sie sicher, dass alle Datenbankserver über Anmeldeinformationen in der master-Datenbank verfügen. Dies ist wichtig für das Wiederherstellen einer Datenbank, da sich die Systemanmeldeinformationen in der master-Datenbank befinden.  
   
--   Deaktivieren Sie alle gespeicherten Startprozeduren, da im Rahmen des Upgradeprozesses auch Dienste auf der zu aktualisierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz beendet und gestartet werden. Der Aktualisierungsprozess kann durch beim Start verarbeitete gespeicherte Prozeduren blockiert werden.  
+-   Deaktivieren Sie alle gespeicherten Startprozeduren, da im Rahmen des Upgradeprozesses auch Dienste auf der zu aktualisierenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz beendet und gestartet werden. Der Upgradeprozess kann durch beim Start verarbeitete gespeicherte Prozeduren blockiert werden.  
   
 -   Stellen Sie sicher, dass die Replikation aktuell ist, und beenden Sie die Replikation.  
   
@@ -97,12 +97,12 @@ ms.locfileid: "62774974"
 >  Beim Ausführen des Setup-Programms von SQL Server 2014 wird die SQL Server-Instanz im Rahmen der vor dem Upgrade erfolgenden Überprüfungen beendet und neu gestartet.  
   
 > [!CAUTION]  
->  Wenn Sie auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren, wird die frühere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz überschrieben und ist auf dem Computer folglich nicht mehr vorhanden. Sichern Sie vor dem Upgrade die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und alle anderen der früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zugeordneten Objekte.  
+>  Wenn Sie auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren, wird die frühere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz überschrieben und ist auf dem Computer folglich nicht mehr vorhanden. Sichern Sie vor dem Upgrade die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken und alle anderen der früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zugeordneten Objekte.  
   
  Sie können [!INCLUDE[ssDE](../../includes/ssde-md.md)] aktualisieren, indem Sie den Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden.  
   
 ### <a name="database-compatibility-level-after-upgrade"></a>Datenbank-Kompatibilitätsgrad nach dem Upgrade  
- Der Kompatibilitätsgrad der der `tempdb`, `model`, `msdb` und **Ressource** Datenbanken nach dem Upgrade auf jeweils 120 festgelegt. Die `master`-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.  
+ Die Kompatibilitäts Grade der `tempdb`Ressourcen `model`Datenbanken `msdb` , **** und werden nach dem Upgrade auf 120 festgelegt. Die `master`-Systemdatenbank behält den Kompatibilitätsgrad von vor dem Upgrade bei.  
   
  War der Kompatibilitätsgrad einer Benutzerdatenbank vor dem Upgrade 100 oder höher, wird er nach dem Upgrade beibehalten. War der Kompatibilitätsgrad der aktualisierten Datenbank vor dem Upgrade 90, wird er auf 100 gesetzt, was dem niedrigsten unterstützten Kompatibilitätsgrad in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]entspricht.  
   
@@ -124,7 +124,8 @@ ms.locfileid: "62774974"
   
 -   Füllen Sie die Volltextkataloge wieder auf, um eine konsistente Semantik in Abfrageergebnissen zu gewährleisten.  
   
-     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert neue Wörtertrennungen, die von der Volltextsuche und semantischen Suche verwendet werden. Die Wörtertrennungen werden sowohl bei der Indizierung als auch bei Abfragen verwendet. Wenn Sie die Volltextkataloge nicht neu erstellen, sind die Suchergebnisse möglicherweise inkonsistent. Wenn Sie eine Volltextabfrage senden, die nach einem Ausdruck sucht, der von der Wörtertrennung in einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version und der aktuellen Wörtertrennung unterschiedlich getrennt wird, können Dokumente oder Zeilen, in denen der Ausdruck enthalten ist, möglicherweise nicht abgerufen werden. Das liegt daran, dass die indizierten Ausdrücke anhand einer anderen Logik getrennt wurden als der von der Abfrage verwendeten Logik. Die Lösung besteht darin, die Volltextkataloge mit den neuen Wörtertrennungen aufzufüllen (neu zu erstellen), damit das Verhalten bei der Indizierung und bei Abfragen gleich ist.  
+     
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert neue Wörtertrennungen, die von der Volltextsuche und semantischen Suche verwendet werden. Die Wörtertrennungen werden sowohl bei der Indizierung als auch bei Abfragen verwendet. Wenn Sie die Volltextkataloge nicht neu erstellen, sind die Suchergebnisse möglicherweise inkonsistent. Wenn Sie eine Volltextabfrage senden, die nach einem Ausdruck sucht, der von der Wörtertrennung in einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version und der aktuellen Wörtertrennung unterschiedlich getrennt wird, können Dokumente oder Zeilen, in denen der Ausdruck enthalten ist, möglicherweise nicht abgerufen werden. Das liegt daran, dass die indizierten Ausdrücke anhand einer anderen Logik getrennt wurden als der von der Abfrage verwendeten Logik. Die Lösung besteht darin, die Volltextkataloge mit den neuen Wörtertrennungen aufzufüllen (neu zu erstellen), damit das Verhalten bei der Indizierung und bei Abfragen gleich ist.  
   
      Weitere Informationen finden Sie unter [sp_fulltext_catalog &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-catalog-transact-sql).  
   
@@ -132,9 +133,10 @@ ms.locfileid: "62774974"
   
 -   Überprüfen oder entfernen Sie USE PLAN-Hinweise, die von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generiert werden und auf Abfragen auf partitionierte Tabellen und Indizes angewendet werden.  
   
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert die Art und Weise, wie Abfragen auf partitionierte Tabellen und Indizes verarbeitet werden. Abfragen von partitionierten Objekte, die den USE PLAN-Hinweis für einen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generierten Plan verwenden, enthalten u. U. einen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ungültigen Plan. Wir empfehlen die folgenden Prozeduren, nachdem Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben.  
+     
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändert die Art und Weise, wie Abfragen auf partitionierte Tabellen und Indizes verarbeitet werden. Abfragen von partitionierten Objekte, die den USE PLAN-Hinweis für einen von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] generierten Plan verwenden, enthalten u. U. einen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ungültigen Plan. Wir empfehlen die folgenden Prozeduren, nachdem Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert haben.  
   
-     **Wenn USE PLAN-Hinweis direkt in einer Abfrage angegeben wird:**  
+     **Wenn der USE PLAN-Hinweis direkt in einer Abfrage angegeben wird:**  
   
     1.  Entfernen Sie den USE PLAN-Hinweis aus der Abfrage.  
   
@@ -162,9 +164,9 @@ EXEC sp_fulltext_service 'pause_indexing', 1;
 EXEC sp_fulltext_service 'pause_indexing', 0;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md)   
- [Verwenden Sie mehrerer Versionen und Instanzen von SQLServer](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
+ [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)   
  [Abwärtskompatibilität](../../getting-started/backward-compatibility.md)   
  [Aktualisieren von replizierten Datenbanken](upgrade-replicated-databases.md)  
   

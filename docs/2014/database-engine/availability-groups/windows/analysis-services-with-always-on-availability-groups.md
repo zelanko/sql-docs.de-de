@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889223"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services mit Always On-Verfügbarkeitsgruppen
@@ -23,7 +23,7 @@ ms.locfileid: "68889223"
  Das Verarbeiten und Abfragen sind schreibgeschützte Arbeitsauslastungen. Sie können die Leistung verbessern, indem Sie diese Arbeitsauslastungen in ein lesbares sekundäres Replikat auslagern. Dieses Szenario erfordert zusätzliche Konfiguration. Stellen Sie mithilfe der Prüfliste in diesem Thema sicher, dass Sie alle Schritte ausführen.  
   
   
-##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
  Sie benötigen auf allen Replikaten eine SQL Server-Anmeldung. Verfügbarkeitsgruppen, Listener und Datenbanken müssen von einem Mitglied der **sysadmin** -Rolle konfiguriert werden. Benutzer benötigen jedoch für den Zugriff auf die Datenbank von einem Analysis Services-Client aus lediglich **db_datareader** -Berechtigungen.  
   
  Verwenden Sie einen Datenanbieter, der das TDS (Tabular Data Stream)-Protokoll, Version 7.4 oder höher, unterstützt, z. B. SQL Server Native Client 11.0 oder den Datenanbieter für SQL Server in .NET Framework 4.02.  
@@ -55,13 +55,13 @@ ms.locfileid: "68889223"
   
     -   Wählen Sie in der Dropdownliste **Lesbare sekundäre Rolle** den Eintrag **Nur beabsichtigte Lesevorgänge**aus.  
   
-    -   Wählen Sie in der Dropdownliste **Verbindungen in primärer Rolle** den Eintrag **Alle Verbindungen zulassen**aus. Dies ist die Standardeinstellung.  
+    -   Wählen Sie in der Dropdownliste **Verbindungen in primärer Rolle** den Eintrag **Alle Verbindungen zulassen**aus. Dies ist die Standardoption.  
   
     -   Optional können Sie in der Dropdownliste **Verfügbarkeitsmodus** den Eintrag **Synchroner Commit**auswählen. Dieser Schritt ist nicht erforderlich, jedoch wird durch das Festlegen dieser Option Datenparität zwischen dem primären und sekundären Replikat sichergestellt.  
   
          Diese Eigenschaft ist auch eine Voraussetzung für geplantes Failover. Wenn Sie zu Testzwecken ein geplantes manuelles Failover ausführen möchten, legen Sie für das primäre und das sekundäre Replikat **Verfügbarkeitsmodus** auf **Synchroner Commit** fest.  
   
-#### <a name="step-2-configure-read-only-routing"></a>Schritt 2: Konfigurieren des schreibgeschützten Routings  
+#### <a name="step-2-configure-read-only-routing"></a>Schritt 2: Konfigurieren von schreibgeschütztem Routing  
   
 1.  Stellen Sie eine Verbindung mit dem primären Replikat her.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68889223"
 ##  <a name="bkmk_ssasAODB"></a>Erstellen einer Analysis Services Datenquelle mithilfe einer AlwaysOn-Verfügbarkeits Datenbank  
  In diesem Abschnitt wird das Erstellen einer Analysis Services-Datenquelle beschrieben, die eine Verbindung mit einer Datenbank in einer Verfügbarkeitsgruppe herstellt. Sie können mithilfe dieser Anweisungen eine Verbindung mit einem primären Replikat (Standard) oder einem lesbaren sekundären Replikat konfigurieren, das Sie mit Schritten in einem vorherigen Abschnitt konfiguriert haben. AlwaysOn-Konfigurationseinstellungen sowie die im Client festgelegten Verbindungseigenschaften bestimmen, ob ein primäres oder sekundäres Replikat verwendet wird.  
   
-1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] in einem Analysis Services-Projekt für mehrdimensionale und Data Mining-Modelle mit der rechten Maustaste auf **Datenquellen**, und wählen Sie **Neue Datenquelle** aus. Klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]in einem Analysis Services-Projekt für mehrdimensionale und Data Mining-Modelle mit der rechten Maustaste auf **Datenquellen** , und wählen Sie **Neue Datenquelle**aus. Klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
   
      Alternativ können Sie für ein tabellarisches Modellprojekt auf das Menü „Modell“ und anschließend auf **Aus Datenquelle importieren**klicken.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "68889223"
   
      Um den Namen des Verfügbarkeitsgruppenlisteners zu bestimmen, können Sie einen Datenbankadministrator fragen oder eine Verbindung mit einer Instanz in der Verfügbarkeitsgruppe herstellen und die entsprechende AlwaysOn-Verfügbarkeitskonfiguration anzeigen. Im folgenden Screenshot lautet der Name des Verfügbarkeitsgruppenlisteners **AdventureWorks2**.  
   
-     ![AlwaysOn-Verfügbarkeits Ordner in Management Studio](../../media/ssas-alwaysoninfoinssms.png "AlwaysOn-Verfügbarkeits Ordner in Management Studio")  
+     ![AlwaysOn-Verfügbarkeitsordner in Management Studio](../../media/ssas-alwaysoninfoinssms.png "AlwaysOn-Verfügbarkeitsordner in Management Studio")  
   
 4.  Klicken Sie im Verbindungs-Manager im linken Navigationsbereich auf **Alle** , um das Eigenschaftenraster des Datenanbieters anzuzeigen.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "68889223"
 ##  <a name="bkmk_test"></a> Testen der Konfiguration  
  Nachdem Sie das sekundäre Replikat konfiguriert und in Analysis Services eine Datenquellenverbindung erstellt haben, können Sie überprüfen, ob Verarbeitungs- und Abfragebefehle an das sekundäre Replikat umgeleitet werden. Sie können auch ein geplantes manuelles Failover ausführen, um den Wiederherstellungsplan für dieses Szenario zu überprüfen.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Schritt 1: Überprüfen, ob die Datenquellenverbindung auf das sekundäre Replikat umgeleitet wird  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Schritt 1: Überprüfen, ob die Datenquellenverbindung an das sekundäre Replikat umgeleitet wird  
   
 1.  Starten Sie SQL Server Profiler, und stellen Sie eine Verbindung mit der SQL Server-Instanz her, die das sekundäre Replikat hostet.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "68889223"
   
 3.  Führen Sie in Analysis Services einen Verarbeitungs- oder Abfragebefehl aus. Da Sie die Datenquelle für eine schreibgeschützte Verbindung konfiguriert haben, sollte angezeigt werden, dass der Befehl auf dem sekundären Replikat ausgeführt wird.  
   
-4.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] eine Verbindung mit dem sekundären Replikat her.  
+4.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]eine Verbindung mit dem sekundären Replikat her.  
   
 5.  Erweitern Sie den Knoten **Hohe Verfügbarkeit (immer aktiviert)** und den Knoten **Verfügbarkeitsgruppen** .  
   
@@ -201,7 +201,7 @@ ms.locfileid: "68889223"
 ##  <a name="bkmk_whathappens"></a> Vorgänge nach einem Failover  
  Während eines Failovers geht ein sekundäres Zielreplikat in die primäre Rolle über, und das frühere primäre Replikat geht in die sekundäre Rolle über. Alle Clientverbindungen werden beendet, der Besitz am Verfügbarkeitsgruppenlistener wechselt mit der primären Replikatrolle zu einer neuen SQL Server-Instanz, und der Listenerendpunkt wird an die virtuellen IP-Adressen und TCP-Ports der neuen Instanz gebunden. Weitere Informationen finden Sie unter [Informationen zum Clientverbindungszugriff auf Verfügbarkeitsreplikate &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Wenn es bei der Verarbeitung zu einem Failover kommen sollte, wird die folgende Fehlermeldung in der Protokolldatei oder im Ausgabefenster in Analysis Services zurückgegeben: "OLE DB error: OLE DB or ODBC error: Communication link failure; 08S01; TPC Provider: An existing connection was forcibly closed by the remote host. ; 08S01.“  
+ Wenn während der Verarbeitung ein Failover erfolgt, wird in Analysis Services in der Protokolldatei oder im Ausgabefenster der folgende Fehler angezeigt „OLE DB-Fehler: OLE DB- oder ODBC-Fehler: Kommunikationslinkfehler; 08S01; TPC-Anbieter: Eine vorhandene Verbindung wurde vom Remotehost geschlossen. ; 08S01.“  
   
  Dieser Fehler sollte behoben sein, wenn Sie eine Minute lang warten und es dann erneut versuchen. Sofern die Verfügbarkeitsgruppe ordnungsgemäß für ein lesbares sekundäres Replikat konfiguriert ist, wird die Verarbeitung auf dem neuen sekundären Replikat fortgesetzt, wenn Sie die Verarbeitung erneut starten.  
   
@@ -210,16 +210,16 @@ ms.locfileid: "68889223"
 ##  <a name="bkmk_writeback"></a>Rück schreiben bei Verwendung einer AlwaysOn-Verfügbarkeits Datenbank  
  Rückschreiben ist eine Analysis Services-Funktion, die Was-wäre-wenn-Analysen in Excel unterstützt. Sie wird auch häufig für Budgetierungs- und Prognosetasks in benutzerdefinierten Anwendungen verwendet.  
   
- Die Unterstützung für Rückschreiben erfordert eine READWRITE-Clientverbindung. Wenn Sie in Excel versuchen, in eine schreibgeschützte Verbindung zurückzuschreiben, tritt der folgende Fehler auf: „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“ „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“  
+ Die Unterstützung für Rückschreiben erfordert eine READWRITE-Clientverbindung. Wenn Sie in Excel versuchen, in eine schreibgeschützte Verbindung zurückzuschreiben, tritt der folgende Fehler auf: „Daten konnten nicht aus der externen Datenquelle abgerufen werden“. „Daten konnten nicht aus der externen Datenquelle abgerufen werden.“  
   
  Wenn Sie eine Verbindung ausschließlich für den Zugriff auf ein lesbares sekundäres Replikat konfiguriert haben, müssen Sie jetzt eine neue Verbindung als READWRITE-Verbindung mit dem primären Replikat konfigurieren.  
   
  Erstellen Sie hierzu in einem Analysis Services-Modell eine zusätzliche Datenquelle, um die Lese-/Schreibverbindung zu unterstützen. Wenn Sie die zusätzliche Datenquelle erstellen, verwenden Sie den gleichen Listenernamen und die gleiche Datenbank, die Sie in der schreibgeschützten Verbindung angegeben haben. Behalten Sie jedoch die Standardeinstellung bei, die READWRITE-Verbindungen unterstützt, statt **Anwendungszweck**zu ändern. Jetzt können Sie der Datenquelle neue Fakten- oder Dimensionstabellen hinzufügen, die auf der Datenquelle mit Lese-/Schreibzugriff basieren, und dann für die neuen Tabellen Rückschreiben aktivieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [Aktive sekundäre Replikate: Lesbare sekundäre &#40;Replikate AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [AlwaysOn-Richtlinien für Betriebsprobleme &#40;mit AlwaysOn-Verfügbarkeitsgruppen SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [Aktive sekundäre Replikate: lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn-Richtlinien für Betriebsprobleme mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
  [Erstellen einer Datenquelle (SSAS: mehrdimensional)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Rückschreiben von Dimensionen aktivieren](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   

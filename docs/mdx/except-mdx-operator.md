@@ -1,5 +1,5 @@
 ---
-title: '- (Ausnahme) (MDX) | Microsoft-Dokumentation'
+title: '- Davon (MDX) | Microsoft-Dokumentation'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cf0121d1be3cd2943a801f3c72ca4952b70ec681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139079"
 ---
-# <a name="except-mdx-operator"></a>EXCEPT-Operator (MDX)
+# <a name="except-mdx-operator"></a>Ausnahme (MDX)-Operator
 
 
   Führt eine Mengenoperation aus, die die Differenz zwischen zwei Mengen zurückgibt. Dabei werden doppelte Werte entfernt.  
@@ -34,8 +34,8 @@ Set_Expression - Set_Expression
 ## <a name="return-value"></a>Rückgabewert  
  Eine Menge mit Elementen, die nicht in beiden angegebenen Parametern vorkommen.  
   
-## <a name="remarks"></a>Hinweise  
- Die **- (außer)** Operator ist funktionell gleichwertig mit der [außer](../mdx/except-mdx-function.md) Funktion.  
+## <a name="remarks"></a>Bemerkungen  
+ Der **-(außer)-** Operator ist funktionell gleichwertig mit der-Funktion [mit Ausnahme](../mdx/except-mdx-function.md) von.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung dieses Operators:  
@@ -51,7 +51,7 @@ FROM
     [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

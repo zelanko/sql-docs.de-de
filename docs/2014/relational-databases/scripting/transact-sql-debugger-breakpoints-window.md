@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e3cce22873b00e47c5d03d18cbcd58c29399afc
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243106"
 ---
 # <a name="breakpoints-window"></a>Fenster 'Breakpoints'
-  Im Fenster **Breakpoints** werden alle Breakpoints aufgelistet, die im aktuellen [!INCLUDE[ssDE](../../includes/ssde-md.md)] Abfrage-Editor festgelegt sind. Um die Breakpoints zu verwalten, verwenden Sie die Symbolleiste im Fenster **Breakpoints** . Breakpoints sind Positionen im Code, an denen die Ausführung im Debugmodus angehalten wird, sodass Sie Debugdaten anzeigen können.  
+  Im Fenster **Breakpoints** werden alle Breakpoints aufgelistet, die im aktuellen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor festgelegt sind. Um die Breakpoints zu verwalten, verwenden Sie die Symbolleiste im Fenster **Breakpoints** . Breakpoints sind Positionen im Code, an denen die Ausführung im Debugmodus angehalten wird, sodass Sie Debugdaten anzeigen können.  
   
 ## <a name="task-list"></a>Aufgabenliste  
  **So greifen Sie auf das Fenster Breakpoints zu**  
@@ -30,13 +30,13 @@ ms.locfileid: "75243106"
 ## <a name="breakpoints-window-columns"></a>Spalten des Fensters 'Breakpoints'  
  Standardmäßig listet das Fenster **Breakpoints** die folgenden Spalten auf.  
   
- **Benennen**  
+ **Name**  
  Zeigt den Namen des Breakpoints an. Breakpointnamen werden vom Debugger bereitgestellt. Dieser Name umfasst den Namen aus dem Abfrage-Editor-Fenster der Datenbank-Engine, die den Breakpoint enthält, und die Zeilennummer im Abfrage-Editor, auf die der Breakpoint festgelegt wurde.  
   
- **Anlage**  
+ **Condition**  
  Zeigt **(Keine Bedingung)** an. Der [!INCLUDE[tsql](../../includes/tsql-md.md)] -Debugger unterstützt das Festlegen von Breakpointbedingungen nicht.  
   
- **Treffer Anzahl**  
+ **Trefferanzahl**  
  Zeigt**Immer unterbrechen**an.  
   
  Sie können die folgenden Spalten hinzufügen und entfernen, indem Sie sie in der Liste **Spalten** auswählen.  
@@ -47,13 +47,13 @@ ms.locfileid: "75243106"
  **Bei Treffer**  
  Zeigt **Unterbrechen**an.  
   
- **Kurse**  
+ **Sprache**  
  Zeigt **Transact-SQL** für [!INCLUDE[tsql](../../includes/tsql-md.md)]an.  
   
- **Funktion**  
+ **Function**  
  Zeigt die Nummer der Zeile an, auf der der Breakpoint festgelegt wurde.  
   
- **Datei**  
+ **File**  
  Zeigt den Namen der Quelldatei an, die den Breakpoint enthält, und die Nummer der Zeile, auf der der Breakpoint festgelegt wurde.  
   
  **Adresse**  
@@ -65,16 +65,16 @@ ms.locfileid: "75243106"
 ## <a name="breakpoints-window-toolbar"></a>Symbolleiste des Fensters 'Breakpoints'  
  Wenn das aktuelle [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster aktive Breakpoints enthält, wird im Fenster **Breakpoints** eine Symbolleiste angezeigt, die zum Verwalten der Breakpoints verwendet werden kann.  
   
- **„Löschen“**  
+ **Löschen**  
  Löscht den ausgewählten Breakpoint.  
   
  **Alle Breakpoints löschen**  
  Löscht alle Breakpoints, die im Fenster **Breakpoints** angezeigt werden.  
   
- **Deaktivieren aller Haltepunkte**  
+ **Alle Breakpoints deaktivieren**  
  Deaktiviert alle Breakpoints, sodass sie die Codeausführung nicht mehr anhalten; die Breakpoints werden jedoch beibehalten. Wenn alle Breakpoints deaktiviert sind, wird diese Schaltfläche als **Breakpoints aktivieren**angezeigt.  
   
- **Aktivieren aller Haltepunkte**  
+ **Breakpoints aktivieren**  
  Aktiviert alle Breakpoints, sodass sie die Codeausführung anhalten. Wenn alle Breakpoints aktiviert sind, wird diese Schaltfläche als **Alle Breakpoints deaktivieren**angezeigt.  
   
  **Gehe zu Quellcode**  

@@ -15,17 +15,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c9c90dbb072ace600258edfb4ff13f99ecadf188
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196520"
 ---
 # <a name="ddl-events"></a>DDL-Ereignisse
   Die folgenden Tabellen geben einen Überblick über die DDL-Ereignisse, die verwendet werden können, um einen DDL-Trigger oder eine Ereignisbenachrichtigung auszuführen. Beachten Sie, dass jedes Ereignis einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder einer gespeicherten Prozedur entspricht. Dabei wird die Anweisungssyntax so geändert, dass Unterstriche (_) zwischen Schlüsselwörtern eingefügt werden.  
   
 > [!IMPORTANT]  
->  Gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch DDL-Trigger und Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z. B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
+>  Gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können auch DDL-Trigger und Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z.B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
   
 ## <a name="ddl-statements-that-have-server-or-database-scope"></a>DDL-Anweisungen, die für Server- oder Datenbankbereich gültig sind  
  DDL-Trigger oder Ereignisbenachrichtigungen können erstellt werden, um als Antwort auf die folgenden Ereignisse ausgelöst zu werden, wenn sie in der Datenbank, in der der Trigger oder die Ereignisbenachrichtigung erstellt wurden, oder irgendwo in der Serverinstanz auftreten.  
@@ -112,7 +112,7 @@ ms.locfileid: "68196520"
 |CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
 |CREATE_WORKLOAD_GROUP|CREATE_WORKLOAD_GROUP|CREATE_WORKLOAD_GROUP|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DDL-Trigger](ddl-triggers.md)   
  [Ereignisbenachrichtigungen](../service-broker/event-notifications.md)   
  [DDL-Ereignisgruppen](ddl-event-groups.md)  

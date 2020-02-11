@@ -1,5 +1,5 @@
 ---
-title: Unterstützte Konstrukte für systemintern kompilierte gespeicherte Prozeduren | Microsoft-Dokumentation
+title: Unterstützte Konstrukte für nativ kompilierte gespeicherte Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62467874"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte für systemintern kompilierte gespeicherte Prozeduren
@@ -40,11 +40,11 @@ ms.locfileid: "62467874"
 ## <a name="security"></a>Sicherheit  
  Folgende werden unterstützt:  
   
--   Für Prozeduren: EXECUTE AS OWNER, Self-Service und Benutzer.  
+-   Für Prozeduren: EXECUTE AS SELF, OWNER und Benutzer.  
   
 -   GRANT- und DENY-Berechtigungen in Tabellen und Prozeduren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Systemintern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

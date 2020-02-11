@@ -1,5 +1,5 @@
 ---
-title: Oracle-Software-Patches | Microsoft-Dokumentation
+title: Oracle-Softwarepatches | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,32 +14,32 @@ ms.assetid: 1275157b-f4e1-4c24-b273-c02555e261c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fce38aabddfc3891314940d4b7cb21f02965c083
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100776"
 ---
 # <a name="oracle-software-patches"></a>Oracle-Software-Patches
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Patches für die Oracle-Server-Produkte und die Client-Komponente sind für das ordnungsgemäße Funktionieren von mehreren Microsoft-Produkten und Technologien, einschließlich der Microsoft ODBC-Treiber für Oracle, Microsoft OLE DB-Anbieter für Oracle, Internet Information erforderlich Services (IIS), Component Services (oder Microsoft Transaction Server, wenn Sie Windows NT verwenden), und so weiter.  
-  
-> [!NOTE]  
->  Die folgenden Anweisungen nicht hundertprozentig genau möglicherweise die Oracle-FTP-Site geändert werden kann.  
-  
-### <a name="to-download-the-oracle-software-patches"></a>Die Oracle-Software-Patches herunterladen  
-  
-1.  Verbinden Sie mit der öffentliche FTP-Website unter Oracle-ftp.oracle.com. Die Benutzer-ID ist "anonymous", und das Kennwort ist Ihre e-Mail-Adresse.  
-  
-2.  Navigieren Sie zum folgenden Verzeichnis: /server/wgt_tech/server/windowsNT.  
-  
-3.  Um die relevantesten Patches für Windows 95, Windows 98 und Windows NT/Windows 2000 herunterzuladen, navigieren Sie zum Unterverzeichnis für Ihre Version von Oracle - 7.3 oder 8.0. Die zwei Unterverzeichnissen sind /73patchsets und /80patchsets.  
-  
-4.  Zum Herunterladen von Patches für Oracle netzwerktechnologie, entweder SQL * Net oder Net8, navigieren Sie zu folgendem Verzeichnis: / Netzwerk.  
-  
- Zugreifen auf die FTP-Site in Ihrem Webbrowser funktioniert möglicherweise nicht. Wenn Probleme auftreten, versuchen Sie es mit einem "herkömmlichen" FTP-Client oder die DOS-Eingabeaufforderung verwenden.  
+ Für die ordnungsgemäße Funktionsweise mehrerer Microsoft-Produkte und-Technologien, einschließlich des Microsoft ODBC-Treibers für Oracle, der Microsoft OLE DB-Anbieter für Oracle, Internet Informationen, sind Patches für die Oracle-Server Produkte und deren Client Komponente erforderlich. Dienste (IIS), Komponenten Dienste (oder Microsoft Transaction Server, wenn Sie Windows NT verwenden) usw.  
   
 > [!NOTE]  
->  Da Oracle Fehler in aktuellen Versionen behebt, und sie dann auf frühere Versionen, die mithilfe von Softwarepatches retrofits, empfiehlt es sich, dass Sie die neueste verfügbare Patch herunterladen. Dies gilt insbesondere für die Oracle-Server-Clientkomponenten. Wenn Sie Fragen zur Installation der folgenden Patches haben, wenden Sie sich an den Oracle-Support.
+>  Die folgenden Anweisungen sind möglicherweise nicht vollständig genau, weil die Oracle-FTP-Site Änderungen unterliegt.  
+  
+### <a name="to-download-the-oracle-software-patches"></a>So laden Sie Oracle-Softwarepatches herunter  
+  
+1.  Stellen Sie unter Oracle-FTP.Oracle.com eine Verbindung mit der öffentlichen FTP-Site her. Die Benutzer-ID ist "Anonymous", und das Kennwort ist Ihre e-Mail-Adresse.  
+  
+2.  Navigieren Sie zum folgenden Verzeichnis:/Server/wgt_tech/Server/WindowsNT.  
+  
+3.  Zum Herunterladen von Patches, die für Windows 95, Windows 98 und Windows NT/Windows 2000 am relevantesten sind, navigieren Sie zum Unterverzeichnis für Ihre Version von Oracle-7,3 oder 8,0. Die beiden Unterverzeichnisse lauten/73patchsets und/80patchsets..  
+  
+4.  Navigieren Sie zum Herunterladen von Patches für die Oracle-Netzwerktechnologie (SQL * Net oder Net8) zum folgenden Verzeichnis:/Network.  
+  
+ Der Zugriff auf diese FTP-Site über Ihren Webbrowser funktioniert möglicherweise nicht. Wenn Probleme auftreten, verwenden Sie einen herkömmlichen FTP-Client, oder verwenden Sie die DOS-Eingabeaufforderung.  
+  
+> [!NOTE]  
+>  Da Oracle Fehler in aktuellen Versionen korrigiert und Sie anschließend mithilfe von Softwarepatches auf frühere Versionen abPasst, wird empfohlen, dass Sie den neuesten Patch herunterladen. Dies gilt insbesondere für die Oracle-Server-Client Komponenten. Wenn Sie Fragen zur Installation dieser Patches haben, wenden Sie sich an den Oracle-Support.

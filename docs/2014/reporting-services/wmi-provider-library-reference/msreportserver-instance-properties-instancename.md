@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b8df31e5fc0d7c0f06db477b13f1d13445e9472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097117"
 ---
-# <a name="instancename-property-wmi-msreportserverinstance"></a>InstanceName-Eigenschaft (WMI: MSReportServer_Instance)
+# <a name="instancename-property-wmi-msreportserver_instance"></a>InstanceName-Eigenschaft (WMI: MSReportServer_Instance)
   Gibt den Namen einer Berichtsserverinstanz auf einem bestimmten Computer zurück. Schreibgeschützt.  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,12 +42,12 @@ public string InstanceName;
  Ein `String`-Objekt, das den Namen der Berichtsserverinstanz darstellt.  
   
 ## <a name="example-code"></a>Beispielcode  
- [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_Instance-Member](msreportserver-instance-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_Instance Members (MSReportServer_Instance-Member)](msreportserver-instance-members.md)  
   
   

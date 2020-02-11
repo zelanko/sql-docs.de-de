@@ -1,5 +1,5 @@
 ---
-title: Sys.server_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys. server_resource_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/28/2018
 ms.service: sql-database
@@ -20,47 +20,47 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
 ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68133073"
 ---
-# <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL-Datenbank)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys. server_resource_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Gibt Daten zur CPU-Nutzung, e/a und Speicher für eine verwaltete Instanz von Azure SQL zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Es gibt eine Zeile für alle 15 Sekunden, die berichterstellung. Die zurückgegebenen Daten umfassen CPU-Auslastung, Speichergröße, e/a-Auslastung und eine verwaltete Instanz SKU. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
+Gibt CPU-Auslastung, e/a und Speicherdaten für eine Azure SQL-verwaltete Instanz zurück. Die Daten werden in Intervallen von fünf Minuten gesammelt und aggregiert. Es gibt eine Zeile für jede 15-Sekunden-Berichterstattung. Die zurückgegebenen Daten umfassen CPU-Auslastung, Speichergröße, e/a-Auslastung und SKU für verwaltete Instanzen. Verlaufsdaten werden ungefähr 14 Tage lang beibehalten.
 
-Die **sys.server_resource_stats** Ansicht hat verschiedene Definitionen abhängig von der Version der verwalteten Azure SQL-Instanz, die die Datenbank zugeordnet ist. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
+Die **sys. server_resource_stats** -Sicht hat abhängig von der Version der verwalteten Azure SQL-Instanz, der die Datenbank zugeordnet ist, unterschiedliche Definitionen. Berücksichtigen Sie diese Unterschiede und alle Änderungen, die Ihre Anwendung erfordert, beim Upgrade auf eine neue Serverversion.
  
   
  Die folgende Tabelle beschreibt die verfügbaren Spalten bei einem Server mit der Version 12:  
   
-|Spalte|Datentyp|Beschreibung|  
+|Spalten|Datentyp|BESCHREIBUNG|  
 |----------------------------|---------------|-----------------|  
-|start_time|**datetime2**|UTC-Zeit, die den Anfang des 15-Sekunden-Intervalls reporting|  
-|end_time|**datetime**|UTC-Zeit, die das Ende des 15-Sekunden-Intervalls reporting|
-|resource_type|vom Datentyp nvarchar(128)|Typ der Ressource für die Metriken bereitgestellt werden.|
+|start_time|**datetime2**|UTC-Zeit, die den Beginn des 15-Sekunden-Berichts Intervalls angibt|  
+|end_time|**datetime**|UTC-Zeit, die das Ende des Berichts Intervalls von 15 Sekunden angibt|
+|resource_type|Nvarchar (128)|Der Typ der Ressource, für die Metriken bereitgestellt werden.|
 |resource_name|nvarchar(128)|Der Name der Ressource.|
-|sku|nvarchar(128)|Verwaltete Instanz Dienstebene der Instanz an. Folgende Werte sind möglich: <br><ul><li>Universell</li></ul><ul><li>Unternehmenskritisch</li></ul>|
-|hardware_generation|nvarchar(128)|Hardware-Generation-ID: z.B. Gen 4 oder 5 Gen|
-|virtual_core_count|ssNoversion|Stellt die Anzahl virtueller Kerne pro Instanz (8, 16 oder 24 in der öffentlichen Vorschau)|
-|avg_cpu_percent|decimal(5,2) wird|Durchschnittliche servernutzung als Prozentwert der maximalen Kapazität für die verwaltete Instanz Dienstebene, die von der Instanz verwendet. Dabei handelt es sich als Summe der CPU-Zeit des alle-Ressourcenpools für alle Datenbanken in der Instanz berechnet geteilt durch die verfügbare CPU-Zeit für die jeweilige Ebene im angegebenen Intervall.|
-|reserved_storage_mb|BIGINT|Reserviert Speicher pro Instanz (die Menge an Speicher Leerzeichen Kunden erworben wurden, für die verwaltete Instanz)|
-|storage_space_used_mb|decimal(18,2)|Von allen verwaltete Instanzdatenbanken-Dateien (einschließlich sowohl Benutzer- und Systemdatenbanken) verwendeten Speicher|
-|io_request|BIGINT|Gesamtzahl physischer e/a-Vorgänge innerhalb eines Intervalls|
-|io_bytes_read|BIGINT|Anzahl der physischen gelesenen Bytes innerhalb eines Intervalls|
-|io_bytes_written|BIGINT|Anzahl der physischen, in dem Intervall geschriebenen bytes|
+|sku|nvarchar(128)|Verwaltete Instanz Dienst Ebene der-Instanz. Folgende Werte sind möglich: <br><ul><li>Allgemeiner Zweck</li></ul><ul><li>Unternehmenskritisch</li></ul>|
+|hardware_generation|nvarchar(128)|Bezeichner der Hardware Generierung: z. b. Gen 4 oder Gen 5|
+|virtual_core_count|INT|Stellt die Anzahl virtueller Kerne pro Instanz (8, 16 oder 24 in Public Preview) dar.|
+|avg_cpu_percent|Dezimalzahl (5, 2)|Durchschnittliche Compute-Auslastung als Prozentsatz des Limits der verwaltete Instanz Dienst Ebene, die von der Instanz verwendet wird. Sie wird als Summe der CPU-Zeit aller Ressourcenpools für alle Datenbanken in der Instanz und dividiert durch die verfügbare CPU-Zeit für diese Ebene im angegebenen Intervall berechnet.|
+|reserved_storage_mb|BIGINT|Reservierter Speicher pro Instanz (Menge an Speicherplatz, den der Kunde für die verwaltete Instanz gekauft hat)|
+|storage_space_used_mb|Decimal (18, 2)|Speicher, der von allen Dateien der verwalteten Instanzdatenbanken verwendet wird (einschließlich Benutzer-und System Datenbanken)|
+|io_request|BIGINT|Gesamtanzahl der physischen e/a-Vorgänge innerhalb des Intervalls|
+|io_bytes_read|BIGINT|Anzahl der innerhalb des Intervalls gelesenen physischen bytes|
+|io_bytes_written|BIGINT|Anzahl physischer bytes, die innerhalb des Intervalls geschrieben wurden|
 
  
 > [!TIP]  
->  Mehr Kontext zu Beschränkungen und Dienstebenen zu erhalten, finden Sie unter den Themen [Dienstebenen für die verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
+>  Weitere Informationen zu diesen Grenzwerten und Dienst Ebenen finden Sie in den Themen [verwaltete Instanz Dienst Ebenen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers).  
     
 ## <a name="permissions"></a>Berechtigungen  
- Die Ansicht kann auf alle Benutzerrollen mit Berechtigungen zum Herstellen einer Verbindung mit der **master** Datenbank.  
+ Diese Ansicht ist für alle Benutzer Rollen verfügbar, die über Berechtigungen zum Herstellen einer Verbindung mit der **Master** -Datenbank verfügen.  
   
-## <a name="remarks"></a>Hinweise  
- Vom zurückgegebenen Daten **sys.server_resource_stats** als Avg_cpu, die als Prozentsatz der zulässigen Limits für den Dienst ausgedrückt wird als die Summe in Bytes oder Megabyte (beschrieben in Spaltennamen) verwendet wird Dienstebene/Leistungsstufe, die Sie ausgeführt werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Daten, die von **sys. server_resource_stats** zurückgegeben werden, werden als der Gesamtwert ausgedrückt, der in Byte oder Megabyte (angegeben in Spaltennamen) verwendet wird, und nicht als avg_cpu, der als Prozentsatz der maximal zulässigen Grenzwerte für die Dienst Ebene/Leistungsstufe ausgedrückt wird, die Sie ausführen.  
  
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Datenbanken zurückgegeben, die in der letzten Woche mindestens 80 % der Serverkapazität genutzt haben.  
@@ -77,5 +77,5 @@ GROUP BY resource_name
 HAVING AVG(avg_cpu_percent) >= 80  
 ```  
     
-## <a name="see-also"></a>Siehe auch  
- [Verwaltete Instanz von Dienstebenen](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)
+## <a name="see-also"></a>Weitere Informationen  
+ [Dienst Ebenen verwaltete Instanz](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance#managed-instance-service-tiers)

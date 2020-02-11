@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 7: DQS-Bereinigung Transformation dem Datenfluss hinzufügen | Microsoft-Dokumentation'
+title: 'Aufgabe 7: Hinzufügen der Transformation für die DQS-Bereinigung zum Datenfluss | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,56 +11,56 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488945"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
-  In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Finden Sie unter **[DQS-Bereinigungstransformation](https://msdn.microsoft.com/library/ee677619.aspx)** für Weitere Informationen zur Transformation.  
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
+  In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Weitere Informationen zur Transformation finden Sie unter **[DQS](https://msdn.microsoft.com/library/ee677619.aspx)** -Bereinigungs Transformation.  
   
-1.  Mit der rechten Maustaste **DQS-Bereinigung** in die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Cleanse Supplier Data**, und drücken Sie die **EINGABETASTE**.  
+1.  Klicken Sie **mit der rechten** Maustaste auf **DQS-Bereinigung** , und klicken Sie auf **Umbenennen**. Geben Sie Hersteller **Daten**bereinigen ein, und drücken **Sie Eingabe**Taste.  
   
-2.  Wählen Sie **Read Supplier Data from Excel File**; ziehen Sie den blauen Konnektor zu **Cleanse Supplier Data**. Die Komponenten sind jetzt verbunden.  
+2.  Wählen Sie **Lieferantendaten aus Excel-Datei lesen aus**. Ziehen Sie den blauen Connector, um **Lieferantendaten**zu bereinigen. Die Komponenten sind jetzt verbunden.  
   
-     ![Lieferantendaten lesen -> Lieferantendaten Bereinigen](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Lieferantendaten lesen -> Lieferantendaten bereinigen")  
+     ![Lesen von Lieferantendaten > Bereinigen der Lieferantendaten](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-01.jpg "Lieferantendaten lesen -> Lieferantendaten bereinigen")  
   
-3.  Doppelklicken Sie auf **Lieferantendaten Bereinigen**.  
+3.  Doppelklicken Sie auf **Lieferantendaten**bereinigen.  
   
-4.  In der **DQS-Bereinigung Transformations-Editor**, klicken Sie auf **neu** neben der **Data Quality Services-Verbindungs-Manager-Dropdownliste**.  
+4.  Klicken Sie im Transformations-Editor für die **DQS-Bereinigung**neben der **Dropdown Liste Data Quality-Verbindungs-Manager**auf **neu** .  
   
-5.  In der **DQS-Verbindungs-Manager-Bereinigung** (Dialogfeld), Typ **(local)** oder **Zeitraum** (.) für die Verbindung mit dem lokalen Server. In dieser Lektion wird davon ausgegangen, dass DQS auf einem lokalen Server installiert ist.  
+5.  Geben Sie im Dialogfeld **Verbindungs-Manager für DQS-Bereinigung** **(local)** oder **Period** (.) ein, um eine Verbindung mit dem lokalen Server herzustellen. In dieser Lektion wird davon ausgegangen, dass DQS auf einem lokalen Server installiert ist.  
   
-6.  Klicken Sie auf **Verbindung testen** zum Testen der Verbindung mit DQS-Server.  
+6.  Klicken Sie auf **Verbindung testen** , um die Verbindung mit dem DQS-Server zu testen.  
   
 7.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
-8.  Wählen Sie **Lieferanten** für die **Data Quality-Wissensdatenbank**.  
+8.  Wählen Sie **Suppliers** für die **Data Quality-Wissensdatenbank**aus.  
   
-     ![DQS-Bereinigung Transformations-Editor – Lieferanten (KB)](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "DQS-Bereinigung Transformations-Editor – Lieferanten (KB)")  
+     ![Transformations-Editor für die DQS-Bereinigung – Lieferanten (KB)](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-02.jpg "Transformations-Editor für die DQS-Bereinigung – Lieferanten (KB)")  
   
-9. Wechseln Sie zu der **Zuordnung** auf der oberen Registerkarte.  
+9. Wechseln Sie oben zur Registerkarte **Zuordnung** .  
   
-10. Von **verfügbare Eingabespalten**Option **Lieferantenname**, **ContactEmailAddress**, **Address Line**, **City**, **Zustand**, **Land**, und **Postleitzahl** durch Auswahl der Kontrollkästchen.  
+10. Wählen Sie unter **Verfügbare Eingabe Spalten**die Option **Lieferanten Name**, **contactemailaddress**, **Adresszeile**, **Ort**, **Bundes** **Land, Land**und **Postleitzahl** aus, indem Sie die Kontrollkästchen aktivieren.  
   
-     ![DQS-Bereinigung Transformations-Editor - Zuordnungen](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "DQS-Bereinigung Transformations-Editor - Zuordnungen")  
+     ![Transformations-Editor für die DQS-Bereinigung – Zuordnungen](../../2014/tutorials/media/et-addingdqscleansingtransformtothedataflow-03.jpg "Transformations-Editor für die DQS-Bereinigung – Zuordnungen")  
   
-11. Im unteren Bereich, ordnen Sie diese Spalten mithilfe der Dropdownlisten in der **Domäne** Spalte:  
+11. Ordnen Sie diese Spalten im unteren Bereich mithilfe von Dropdown Listen in der Spalte **Domäne** zu:  
   
-    |Spalte|Domäne|  
+    |Column|Domain|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
-    |ContactEmailAddress|Contact Email|  
+    |ContactEmailAddress|Kontakt-E-Mail|  
     |Adresszeile|Adresszeile|  
-    |Ort|Ort|  
-    |Status|Status|  
+    |City|City|  
+    |State|State|  
     |Country|Country|  
-    |Zip Code|PLZ|  
+    |Zip Code|Zip|  
   
-12. Klicken Sie auf **OK** schließen die **DQS-Bereinigung Transformations-Editor** Dialogfeld.  
+12. Klicken Sie zum Schließen des Dialog Felds **Transformations-Editor für DQS-Bereinigung** auf **OK** .  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 8: Hinzufügen der Transformation für bedingtes Teilen, um die Bereinigungsausgabe zu teilen](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Aufgabe 8: Hinzufügen einer Transformation 'Bedingtes Teilen', um die Bereinigungsausgabe zu teilen](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

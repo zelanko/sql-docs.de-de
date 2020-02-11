@@ -1,5 +1,5 @@
 ---
-title: Bike Buyer DMX Tutorial | Microsoft-Dokumentation
+title: Tutorial zu Bike Buyer DMX | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/19/2018
 ms.prod: sql-server-2014
@@ -17,16 +17,17 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3cf9a0c9e6059330c0b8edbd8228f617ba093564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140556"
 ---
 # <a name="bike-buyer-dmx-tutorial"></a>Bike Buyer-Lernprogramm zur DMX-Abfragesprache
   In diesem Lernprogramm erfahren Sie, wie Miningmodelle mithilfe der Abfragesprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) erstellt, trainiert und analysiert werden. Anschließend verwenden Sie diese Miningmodelle zum Erstellen von Vorhersagen, mit denen sich bestimmen lässt, ob ein Kunde ein Fahrrad kaufen wird.  
   
- Die Miningmodelle werden aus Daten erstellt, die in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank enthalten sind. In dieser Datenbank werden Daten für das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gespeichert. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
+ Die Miningmodelle werden aus Daten erstellt, die in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank enthalten sind. In dieser Datenbank werden Daten für das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gespeichert. 
+  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
  Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, seine Datenanalyse auszuweiten. Dazu soll eine benutzerdefinierte Anwendung erstellt werden, die Data Mining-Funktionalität verwendet. Das Unternehmen erwartet von dieser benutzerdefinierten Anwendung, dass sie folgende Aufgaben ausführen kann:  
@@ -39,17 +40,17 @@ ms.locfileid: "63140556"
   
  Darüber hinaus möchte die Marketingabteilung über die Möglichkeit verfügen, vorhandene Kunden in Kategorien zu gruppieren, die auf Merkmalen wie Wohnort, Anzahl der Kinder und Arbeitsweg basieren. Die Mitarbeiter der Marketingabteilung möchten untersuchen, ob mithilfe dieser Cluster bestimmte Kundengruppen gezielt angesprochen werden können. Dies erfordert ein zusätzliches Miningmodell.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet mehrere Tools, die verwendet werden können, um diese Aufgaben auszuführen:  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]   stellt mehrere Tools bereit, mit denen folgende Aufgaben ausgeführt werden können:  
   
 -   Die DMX-Abfragesprache  
   
--   Die [Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) und [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
+-   Der [Microsoft Decision Trees-Algorithmus](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md) und der [Microsoft Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)  
   
 -   Abfrage-Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
  Data Mining-Erweiterungen (DMX) ist eine von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitgestellte Abfragesprache, mit der Sie Miningmodelle erstellen und die Sie zum Arbeiten mit Mining-Modellen verwenden können. Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees-Algorithmus erstellt Modelle, mit denen sich vorhersagen lässt, ob eine Person ein Fahrrad kaufen wird. Das resultierende Modell akzeptiert als Eingabe einen einzelnen Kunden oder eine Tabelle mit Kunden. Der [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering-Algorithmus kann Gruppierungen von Kunden auf der Basis gemeinsamer Merkmale erstellen. Ziel dieses Lernprogramms ist es, die DMX-Skripts bereitzustellen, die in der benutzerdefinierten Anwendung verwendet werden.  
   
- **Weitere Informationen:** [Data Mining-Projektmappen](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
+ **Weitere Informationen:** [Data Mining-Lösungen](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   
 ## <a name="mining-structure-and-mining-models"></a>Miningstruktur und Miningmodelle  
  Bevor Sie mit dem Erstellen von DMX-Anweisungen beginnen, sollten Sie sich mit dem wichtigsten Objekten vertraut machen, die von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Erstellen von Miningmodellen verwendet werden. Die Miningstruktur ist eine Datenstruktur, die die Datendomäne, aus der die Miningmodelle erstellt werden, definiert. Eine einzelne Miningstruktur kann mehrere Miningmodelle enthalten, die dieselbe Domäne verwenden. Ein Miningmodell wendet einen Miningmodellalgorithmus für die Daten an, welcher durch eine Miningstruktur dargestellt wird.  
@@ -74,7 +75,7 @@ ms.locfileid: "63140556"
   
  **Weitere Informationen**  
   
- [Datamining-Erweiterungen &#40;DMX&#41; Verweis](/sql/dmx/data-mining-extensions-dmx-reference), [verstehen die DMX Select-Anweisung](/sql/dmx/understanding-the-dmx-select-statement), [Struktur und Verwendung von DMX-Vorhersageabfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference), Grundlegendes [zur DMX SELECT-Anweisung](/sql/dmx/understanding-the-dmx-select-statement), [Struktur und Verwendung von DMX-Vorhersage Abfragen](/sql/dmx/structure-and-usage-of-dmx-prediction-queries)  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
  Dieses Lernprogramm ist in die folgenden Lektionen aufgeteilt:  
@@ -82,32 +83,32 @@ ms.locfileid: "63140556"
  [Lektion 1: Erstellen der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-1-creating-the-bike-buyer-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `CREATE`-Anweisung Miningstrukturen erstellt werden.  
   
- [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie einer Miningstruktur mithilfe der `ALTER`-Anweisung Miningmodelle hinzugefügt werden.  
   
  [Lektion 3: Verarbeiten der Bike Buyer-Miningstruktur](../../2014/tutorials/lesson-3-processing-the-bike-buyer-mining-structure.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `INSERT INTO`-Anweisung Miningstrukturen und die zugehörigen Miningmodelle verarbeitet werden.  
   
- [Lektion 4: Durchsuchen der Bike Buyer-Miningmodells](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
+ [Lektion 4: Durchsuchen des Bike Buyer-Miningmodells](../../2014/tutorials/lesson-4-browsing-the-bike-buyer-mining-models.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `SELECT`-Anweisung der Inhalt der Miningmodelle untersucht wird.  
   
- [Lesson 5: Ausführen von Vorhersageabfragen](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Lektion 5: Ausführen von Vorhersageabfragen](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `PREDICTION JOIN`-Anweisung Vorhersagen für Miningmodelle erstellt werden.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Stellen Sie vor dem Durchführen des Lernprogramms sicher, dass Folgendes installiert ist:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASversion2005](../includes/ssasversion2005-md.md)], [!INCLUDE[ssASversion10](../includes/ssasversion10-md.md)], [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]oder [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. So installieren Sie die offiziellen Beispieldatenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], besuchen Sie die [Microsoft SQL Sample Databases](https://go.microsoft.com/fwlink/?LinkId=88417) Seite und wählen Sie die Datenbanken, die Sie installieren möchten...  
+-   Die [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. Um offizielle Beispiel Datenbanken für zu [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]installieren, rufen Sie die Seite [Microsoft SQL-Beispiel Datenbanken](https://go.microsoft.com/fwlink/?LinkId=88417) auf, und wählen Sie die Datenbanken aus, die Sie installieren möchten.  
   
 > [!NOTE]  
->  Zur besseren Anzeige der Lernprogramme empfehlen wir Ihnen, dass Sie der Symbolleiste in der Dokumentanzeige die Schaltflächen **Nächstes Thema** und **Vorheriges Thema** hinzufügen.  
+>  Wenn Sie Tutorials überprüfen, empfiehlt es sich, der Symbolleiste in der Dokument Anzeige die Schaltflächen **Nächstes Thema** und **Vorheriges Thema** hinzuzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Market Basket DMX-Lernprogramm](../../2014/tutorials/market-basket-dmx-tutorial.md)   
- [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tutorial zu Market Basket DMX](../../2014/tutorials/market-basket-dmx-tutorial.md)   
+ [Lernprogramm zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
   

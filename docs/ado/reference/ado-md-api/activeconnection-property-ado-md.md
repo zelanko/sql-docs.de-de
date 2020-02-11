@@ -18,39 +18,39 @@ ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911596"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection-Eigenschaft (ADO MD)
-Gibt an, welche ADO [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt das aktuelle Cellset oder Katalog derzeit gehört.  
+Gibt an, zu welchem ADO- [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt das aktuelle Cellset oder der aktuelle Katalog gehört.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Variant** , das eine Zeichenfolge, die eine Verbindung zu definieren oder **Verbindung** Objekt. Der Standardwert ist leer.  
+ Legt eine **Variante** fest oder gibt Sie zurück, die eine Zeichenfolge enthält, die eine Verbindung oder ein **Verbindungs** Objekt definiert Der Standardwert ist leer.  
   
-## <a name="remarks"></a>Hinweise  
- Sie können diese Eigenschaft festlegen, um eine gültige ADO **Verbindung** Objekt oder eine gültige Verbindungszeichenfolge. Wenn diese Eigenschaft auf eine Verbindungszeichenfolge festgelegt ist, erstellt der Anbieter einen neuen **Verbindung** Objekt mit dieser Definition und öffnet die Verbindung.  
+## <a name="remarks"></a>Bemerkungen  
+ Sie können diese Eigenschaft auf ein gültiges ADO- **Verbindungs** Objekt oder auf eine gültige Verbindungs Zeichenfolge festlegen. Wenn diese Eigenschaft auf eine Verbindungs Zeichenfolge festgelegt ist, erstellt der Anbieter mithilfe dieser Definition ein neues **Verbindungs** Objekt und öffnet die Verbindung.  
   
- Bei Verwendung der *ActiveConnection* Argument der [öffnen](../../../ado/reference/ado-md-api/open-method-ado-md.md) Methode zum Öffnen eine [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) -Objekt, die **ActiveConnection** Eigenschaft wird erben Sie den Wert des Arguments.  
+ Wenn Sie das *ActiveConnection* -Argument der [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) -Methode verwenden, um ein [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) -Objekt zu öffnen, erbt die **ActiveConnection** -Eigenschaft den Wert des-Arguments.  
   
- Festlegen der **ActiveConnection** Eigenschaft eine [Katalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) -Objekt **nichts** frei die zugehörigen Daten, einschließlich der Daten in die [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) Sammlung und allen verknüpften [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md), und [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekte. Schließen einer **Verbindung** -Objekt, das zum Öffnen verwendet wurde eine **Katalog** hat dieselbe Wirkung wie das Festlegen der **ActiveConnection** Eigenschaft **nichts**.  
+ Wenn die **ActiveConnection** -Eigenschaft eines [catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) -Objekts auf **Nothing** festgelegt wird, werden die zugeordneten Daten freigegeben, einschließlich der Daten in der [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) -Auflistung und aller zugehörigen [Dimensions](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) [-,](../../../ado/reference/ado-md-api/member-object-ado-md.md) [Hierarchie](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)-, [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md)-und Element Objekte Das Schließen eines **Verbindungs** Objekts, das zum Öffnen eines **Katalogs** verwendet wurde, hat dieselbe Auswirkung wie das Festlegen der **ActiveConnection** -Eigenschaft auf " **Nothing**".  
   
- Ändern die Standarddatenbank für die Verbindung auf die verwiesen wird durch die **ActiveConnection** Eigenschaft eine **Katalog** Objekt erklärt den Inhalt des der **Katalog**.  
+ Durch Ändern der Standarddatenbank der Verbindung, auf die von der **ActiveConnection** -Eigenschaft eines **Katalog** Objekts verwiesen wird, wird der Inhalt des **Katalogs**ungültig.  
   
- Wird ein Fehler auftreten, wenn Sie versuchen, Sie ändern die **ActiveConnection** -Eigenschaft für ein offenes **Cellset** Objekt.  
+ Wenn Sie versuchen, die **ActiveConnection** -Eigenschaft für ein geöffnetes **Cellset** -Objekt zu ändern, tritt ein Fehler auf.  
   
 > [!NOTE]
->  In Visual Basic Denken Sie daran, mit der **festgelegt** Schlüsselwort beim Festlegen der **ActiveConnection** Eigenschaft, um eine **Verbindung** Objekt. Wenn Sie weglassen der **festgelegt** -Schlüsselwort, Sie tatsächlich Festlegen der **ActiveConnection** -Eigenschaft gleich den **Verbindung** Standardeigenschaft des Objekts,  **"ConnectionString"** . Der Code funktioniert. Erstellen Sie jedoch eine zusätzliche Verbindung zu der Datenquelle, die Auswirkungen auf die Leistung haben können.  
+>  Denken Sie in Visual Basic daran, das **Set** -Schlüsselwort zu verwenden, wenn Sie die **ActiveConnection** -Eigenschaft auf ein **Connection** -Objekt festlegen. Wenn Sie das Set-Schlüsselwort weglassen, **legen** Sie die **ActiveConnection** -Eigenschaft tatsächlich auf die Standard Eigenschaft **ConnectionString**des **Verbindungs** Objekts fest. Der Code funktioniert. Allerdings erstellen Sie eine zusätzliche Verbindung mit der Datenquelle, die negative Auswirkungen auf die Leistung haben kann.  
   
- Wenn Sie den MSOLAP-Datenanbieter verwenden, legen Sie die Datenquelle in einer Verbindungszeichenfolge auf einen Servernamen ein, und legen Sie den ersten Katalog auf den Namen des Katalogs aus der Datenquelle. Verbindung mit einer Cubedatei, die von einem Server getrennt ist, legen Sie den Speicherort auf den vollständigen Pfad zu der. CUB-Datei. In beiden Fällen wird den Anbieter auf der Name des Anbieters fest. Die folgende Zeichenfolge verwendet beispielsweise den MSOLAP-Anbieter für die Verbindung mit einem Katalog mit dem Namen Bobs Video Store auf einem Server mit dem Namen **Servername**:  
+ Wenn Sie den MSOLAP-Datenanbieter verwenden, legen Sie die Datenquelle in einer Verbindungs Zeichenfolge auf einen Servernamen fest, und legen Sie den Anfangs Katalog auf den Namen eines Katalogs aus der Datenquelle fest. Legen Sie den Speicherort auf den vollständigen Pfad fest, um eine Verbindung mit einer Cube-Datei herzustellen, die von einem Server getrennt ist. CUB-Datei. Legen Sie den Anbieter in beiden Fällen auf den Anbieter Namen fest. Die folgende Zeichenfolge verwendet beispielsweise den MSOLAP-Anbieter, um eine Verbindung mit einem Katalog mit dem Namen "BOSB Video Store" auf einem Server namens "Server **Name**" herzustellen:  
   
 ```  
 "Data Source=Servername;Initial Catalog=Bobs Video Store;Provider=msolap"  
 ```  
   
- Die folgende Zeichenfolge eine Verbindung mit einer lokalen Cubedatei an der Position C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub her:  
+ Die folgende Zeichenfolge stellt eine Verbindung mit einer lokalen Cubedatei am Speicherort c:\MSDASDK\samples\oledb\olap\data\bobsvid.Cub her:  
   
 ```  
 "Location=C:\MSDASDK\samples\oledb\olap\data\bobsvid.cub;Provider=msolap"  
@@ -60,9 +60,9 @@ Gibt an, welche ADO [Verbindung](../../../ado/reference/ado-api/connection-objec
   
 |||  
 |-|-|  
-|[Katalogobjekt (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
+|[Catalog-Objekt (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Cellset-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
+ [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Open-Methode (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)

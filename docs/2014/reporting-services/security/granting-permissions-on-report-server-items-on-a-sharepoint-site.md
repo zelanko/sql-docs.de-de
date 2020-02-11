@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101927"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt integrierte Sicherheitsfunktionen bereit, mit denen Sie Zugriff von SharePoint-Websites und -Bibliotheken auf Berichtsserverelemente ermöglichen können. Wenn Sie Benutzern bereits Berechtigungen zugewiesen haben, verfügen diese Benutzer sofort, nachdem Sie die Integrationseinstellungen zwischen [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und einem Berichtsserver konfiguriert haben, über Zugriff auf Berichtsserverelemente und -vorgänge. Mit den vorhandenen Berechtigungen können Sie Berichtsdefinitionen und andere Dokumente hochladen, Berichte anzeigen, Abonnements erstellen und Elemente verwalten.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt integrierte Sicherheitsfunktionen bereit, die Sie verwenden können, um Zugriff auf Berichts Server Elemente zu gewähren, auf die Sie von SharePoint-Websites und-Bibliotheken aus zugreifen können. Wenn Sie Benutzern bereits Berechtigungen zugewiesen haben, verfügen diese Benutzer sofort, nachdem Sie die Integrationseinstellungen zwischen [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] und einem Berichtsserver konfiguriert haben, über Zugriff auf Berichtsserverelemente und -vorgänge. Mit den vorhandenen Berechtigungen können Sie Berichtsdefinitionen und andere Dokumente hochladen, Berichte anzeigen, Abonnements erstellen und Elemente verwalten.  
   
  Wenn keine Berechtigungen zugewiesen wurden oder Sie mit den Sicherheitsfunktionen von [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]nicht vertraut sind, beachten Sie folgende Hinweise:  
   
@@ -42,11 +42,13 @@ ms.locfileid: "66101927"
   
 -   Zu sicherungsfähigen Objekten zählen Websites, Listen, Bibliotheken, Ordner und Dokumente.  
   
--   Eine Berechtigung ist eine Autorisierung zur Ausführung einer bestimmten Task. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt 33 vordefinierte Berechtigungen bereit, die Sie in einer Berechtigungsstufe kombinieren können.  
+-   Eine Berechtigung ist eine Autorisierung zur Ausführung einer bestimmten Task. 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] stellt 33 vordefinierte Berechtigungen bereit, die Sie in einer Berechtigungsstufe kombinieren können.  
   
 -   Eine Berechtigungsebene besteht aus einem Satz von Berechtigungen, die Benutzern oder SharePoint-Gruppen für ein sicherungsfähiges Objekt, z. B. eine Website, eine Bibliothek, eine Liste, einen Ordner, ein Element oder ein Dokument gewährt werden können. Diese Ebene entspricht einer Rollendefinition in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Fünf Berechtigungsebenen sind vordefiniert. Diese können Sie bei Bedarf anpassen, Sie können jedoch auch neue erstellen.  
   
--   Als SharePoint-Gruppe wird eine Gruppe von Benutzern bezeichnet, die Sie zur Verwaltung der Berechtigungen für eine SharePoint-Website und zum Bereitstellen einer E-Mail-Verteilerliste für Websitemitglieder erstellen können. Eine SharePoint-Gruppe besteht aus Windows-Benutzer- und Gruppenkonten oder Benutzeranmeldungen, wenn Sie die Formularauthentifizierung verwenden. [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] werden drei Gruppen bereitgestellt. Diese können Sie bei Bedarf anpassen, Sie können jedoch auch neue erstellen.  
+-   Als SharePoint-Gruppe wird eine Gruppe von Benutzern bezeichnet, die Sie zur Verwaltung der Berechtigungen für eine SharePoint-Website und zum Bereitstellen einer E-Mail-Verteilerliste für Websitemitglieder erstellen können. Eine SharePoint-Gruppe besteht aus Windows-Benutzer- und Gruppenkonten oder Benutzeranmeldungen, wenn Sie die Formularauthentifizierung verwenden. 
+  [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] werden drei Gruppen bereitgestellt. Diese können Sie bei Bedarf anpassen, Sie können jedoch auch neue erstellen.  
   
 -   Mithilfe der Berechtigungsvererbung können Unterwebsites, Listen, Bibliotheken und Elemente die Sicherheitseinstellungen der übergeordneten Website erben. Mit geerbten Berechtigungen können Sie auf in einer SharePoint-Bibliothek gespeicherte Berichtsserverelemente zugreifen. Durch Berechtigungsvererbung und vordefinierte SharePoint-Gruppen kann die Bereitstellung vereinfacht und unmittelbarer Zugriff auf die meisten Berichtsservervorgänge gewährt werden.  
   
@@ -75,7 +77,7 @@ ms.locfileid: "66101927"
  Die integrierten Sicherheitsfunktionen können von den SharePoint-Gruppen nur verwendet werden, wenn Sie diesen Windows-Benutzer- oder Gruppenkonten zugewiesen haben. Mit Ausnahme des Serveradministrators und des Besitzers der Portalwebsite, die beim Installieren der Software automatisch Zugriffsberechtigungen für [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] erhalten, müssen allen Benutzern Berichtigungen für den Serverzugriff gewährt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Use Built-in Security in Windows SharePoint Services for Report Server Items (Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente)](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
  Erläutert, wie mit den vordefinierten SharePoint-Gruppen und Berechtigungsebenen auf Berichtsserverelemente zugegriffen werden kann.  
   
  [SharePoint Site and List Permission Reference for Report Server Items (Referenz zu SharePoint-Website- und Listenberechtigungen für Berichtsserverelemente)](sharepoint-site-and-list-permission-reference-for-report-server-items.md)  
@@ -90,8 +92,8 @@ ms.locfileid: "66101927"
  [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
  Enthält Anweisungen zum Erstellen neuer SharePoint-Gruppen, die über die Berechtigung verfügen, den Berichts-Generator zu starten und die Modellelementsicherheit festzulegen. Dieses Thema enthält zudem allgemeine Richtlinien zum Festlegen benutzerdefinierter Berechtigungen für beliebige Berichtsserverelemente oder -vorgänge.  
   
-## <a name="see-also"></a>Siehe auch  
- [Festlegen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Festlegen von Berechtigungen für Berichts Server Elemente auf einer SharePoint-Website &#40;Reporting Services im integrierten SharePoint-Modus&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)  
   
   

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900559"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
@@ -69,7 +69,7 @@ ms.locfileid: "62900559"
  Diese Transformation weist je eine Eingabe und eine Ausgabe auf. Eine Fehlerausgabe wird nicht unterstützt.  
   
 ## <a name="row-comparison"></a>Zeilenvergleich  
- Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die Exhaustive-Eigenschaft auf `true`, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, ist es ratsam, die Exhaustive-Eigenschaft auf festgelegt `true` nur während der Paketentwicklung.  
+ Wenn Sie die Transformation für Fuzzygruppierung konfigurieren, können Sie den Vergleichsalgorithmus angeben, den die Transformation zum Vergleichen der Zeilen in der Transformationseingabe verwendet. Wenn Sie die-Eigenschaft auf `true`festlegen, vergleicht die Transformation jede Zeile in der Eingabe mit jeder anderen Zeile in der Eingabe. Dieser Vergleichsalgorithmus kann zwar präzisere Ergebnisse produzieren, führt jedoch wahrscheinlich zu einer Einschränkung der Transformationsleistung, sofern die Anzahl der Zeilen in der Eingabe nicht gering ist. Um Leistungsprobleme zu vermeiden, empfiehlt es sich, die Eigenschaft "voll `true` ständig" nur während der Paket Entwicklung auf festzulegen.  
   
 ## <a name="temporary-tables-and-indexes"></a>Temporäre Tabellen und Indizes  
  Zur Laufzeit erstellt die Transformation für Fuzzygruppierung temporäre Objekte wie z. B. Tabellen und Indizes mit potenziell erheblicher Größe in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, zu der die Transformation eine Verbindung herstellt. Die Größe der Tabellen und Indizes ist proportional zur Anzahl der Zeilen in der Transformationseingabe und zur Anzahl der von der Transformation für Fuzzygruppierung erstellten Token.  
@@ -83,15 +83,15 @@ ms.locfileid: "62900559"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzygruppierung** festlegen können:  
   
--   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Verbindungs-Manager“&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Register&#41;Karte Verbindungs-Manager](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Spalten“&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Register&#41;Karte Spalten](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Erweitert“&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Register&#41;Karte erweitert](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62900559"
   
 -   [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Fuzzysuche](lookup-transformation.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   

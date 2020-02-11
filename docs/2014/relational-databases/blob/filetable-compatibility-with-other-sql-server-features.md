@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c8ea6a5fcfe99926c264fc2116a637f8d30c05df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010145"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable-Kompatibilität mit anderen SQL Server-Funktionen
@@ -80,14 +80,14 @@ ms.locfileid: "66010145"
 -   Bei einer unplanmäßigen Beendigung von Win32-Handles, wie beispielsweise beim expliziten Abbrechen von Win32-Handles durch einen Administrator ODER einen Datenbankabsturz, werden während der Wiederherstellungsvorgänge keine Benutzertrigger ausgeführt, obwohl der FILESTREAM von der unplanmäßig beendeten Win32-Anwendung möglicherweise geändert wurde.  
   
 ##  <a name="OtherViews"></a> Sichten und FileTables  
- **Sichten**  
+ **Ansichten**  
  Eine Sicht kann in einer FileTable genau wie in einer anderen Tabelle erstellt werden. Die folgenden Überlegungen gelten jedoch für eine in einer FileTable erstellten Sicht:  
   
 -   Die Sicht weist keine FileTable-Semantik auf. Die Spalten in der Sicht (einschließlich Dateiattributspalten) verhalten sich z. B. wie normale Sichtspalten ohne besondere Semantik. Das gleiche gilt für Zeilen, die Dateien/Verzeichnisse darstellen.  
   
 -   Die Ansicht kann möglicherweise auf Grundlage der Semantik für eine aktualisierbare Ansicht aktualisiert werden, die Updates können jedoch wie in der Tabelle aufgrund der zugrunde liegenden Tabelleneinschränkungen abgelehnt werden.  
   
--   Der Dateipfad für eine Datei kann in der Sicht visuell dargestellt werden, indem er als explizite Spalte in der Sicht hinzugefügt wird. Zum Beispiel:  
+-   Der Dateipfad für eine Datei kann in der Sicht visuell dargestellt werden, indem er als explizite Spalte in der Sicht hinzugefügt wird. Beispiel:  
   
      `CREATE VIEW MP3FILES AS SELECT column1, column2, ..., GetFileNamespacePath() AS PATH, column3,...  FROM Documents`  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66010145"
   
  Sie können den Einschlusstyp der Datenbank auf PARTIAL festlegen, wenn Sie bestimmte Funktionen eigenständiger Datenbanken verwenden möchten, z. B. eigenständige Benutzer. In diesem Fall müssen Sie jedoch beachten, dass einige Datenbankeinstellungen nicht in der Datenbank enthalten sind und nicht automatisch mit der Datenbank verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von FileTables](manage-filetables.md)  
   
   

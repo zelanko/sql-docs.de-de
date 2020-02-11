@@ -17,17 +17,17 @@ ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68794684"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>Von SQLGetInfo zurückgegebenen Werte für dBASE
 In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argument und die von **SQLGetInfo**zurückgegebenen Werte aufgelistet. Diese Informationen können abgerufen werden, indem die im *finfotype* -Argument aufgeführte C-Sprache #defines an **SQLGetInfo** übergeben wird. Weitere Informationen zu den von **SQLGetInfo**zurückgegebenen Werten finden Sie in der *ODBC Programmer es Reference*.  
   
 > [!NOTE]  
->  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt&#124;ein vertikaler Strich () ein bitweises OR dar.  
+>  Wenn **SQLGetInfo** eine 32-Bit-Bitmaske zurückgibt, stellt ein vertikaler Strich (&#124;) ein bitweises OR dar.  
   
 |Infotype|Rückgabewert|  
 |--------------|--------------------|  
@@ -85,7 +85,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_DATA_SOURCE_READ_ONLY|"N" (hängt von der Datenquelle ab)|  
 |SQL_DATABASE_NAME|Aktuelles Datenbankverzeichnis|  
 |SQL_DATETIME_LITERALS|0|  
-|SQL_DBMS_NAME|"DBASE"|  
+|SQL_DBMS_NAME|DBASE|  
 |SQL_DBMS_VER|Mehrere Werte|  
 |SQL_DDL_INDEX|Mehrere Werte|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
@@ -94,7 +94,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_DRIVER_HENV|Wird vom Treiber-Manager verarbeitet.|  
 |SQL_DRIVER_HLIB|Wird vom Treiber-Manager verarbeitet.|  
 |SQL_DRIVER_HSTMT|Wird vom Treiber-Manager verarbeitet.|  
-|SQL_DRIVER_NAME|"OdbcJt32.dll"|  
+|SQL_DRIVER_NAME|"OdbcJt32. dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
 |SQL_DRIVER_VER|"4,00.*nnnn*" (*nnnn* gibt das Builddatum an)|  
 |SQL_DROP_ASSERTION|0|  
@@ -141,7 +141,7 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Mehrere Werte|  
-|SQL_ODBC_SAG_CLI_ KONFORMITÄT|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ Konformität|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|Aus Treiber-Manager|  
 |SQL_OJ_CAPABILITIES|Mehrere Werte|  
@@ -155,12 +155,12 @@ In der folgenden Tabelle werden die C-sprach #defines für das *finfotype* -Argu
 |SQL_SCHEMA_USAGE|0|  
 |SQL_SCROLL_OPTIONS|Mehrere Werte|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
-|SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>"#$%^&\*\_-+=\\ \[]&#124;"|  
+|SQL_SERVER_NAME|DBASE|  
+|SQL_SPECIAL_CHARACTERS|\`\@#$%^&"~\*\? / } {\> " ';:<,.! "\_-+=\\ \[] &#124; "|  
 |SQL_STRING_FUNCTIONS|Mehrere Werte|  
 |SQL_SUBQUERIES|Mehrere Werte|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|GLAUB|  
+|SQL_TABLE_TERM|Glaub|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|Mehrere Werte|  

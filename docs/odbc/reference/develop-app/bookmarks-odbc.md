@@ -14,25 +14,25 @@ ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bab3571ba880658d9f1a2629b899484008428083
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68118789"
 ---
 # <a name="bookmarks-odbc"></a>Textmarken (ODBC)
-Ein Lesezeichen ist ein Wert, der verwendet wird, um eine Zeile mit Daten zu identifizieren. Die Bedeutung des Lesezeichenwerts ist nur dem Treiber oder der Datenquelle bekannt. Der Wert kann so einfach wie eine Zeilennummer oder so komplex wie eine Datenträgeradresse sein. Lesezeichen in ODBC unterscheiden sich etwas von Lesezeichen im real-Onlinedokumentation. In einer echten Buch wird der Reader wird ein Lesezeichen, an einer bestimmten Seite und sucht dann nach diesem Lesezeichen aus, um zur Seite zurückzukehren. In ODBC fordert die Anwendung ein Lesezeichen für bestimmte Zeilen an, speichert es und gibt es an den Cursor für die Rückgabe an die Zeile zurück. Daher sind Lesezeichen in ODBC ähnelt einem Reader schreiben Sie eine Seitenzahl, speichern es aus, und klicken Sie dann die Seite erneut nachschlagen.  
+Ein Lesezeichen ist ein Wert, der verwendet wird, um eine Zeile mit Daten zu identifizieren. Die Bedeutung des Lesezeichenwerts ist nur dem Treiber oder der Datenquelle bekannt. Der Wert kann so einfach wie eine Zeilennummer oder so komplex wie eine Datenträgeradresse sein. Lesezeichen in ODBC unterscheiden sich etwas von Lesezeichen in echten Büchern. In einem echten Buch platziert der Reader ein Lesezeichen auf einer bestimmten Seite und sucht dann nach diesem Lesezeichen, um zur Seite zurückzukehren. In ODBC fordert die Anwendung ein Lesezeichen für bestimmte Zeilen an, speichert es und gibt es an den Cursor für die Rückgabe an die Zeile zurück. Daher ähneln Lesezeichen in ODBC den Lesern, die eine Seitenzahl schreiben, Sie zu speichern und die Seite dann erneut zu suchen.  
   
- Um einen Treiber für die Unterstützung von Lesezeichen zu bestimmen, die eine Anwendung ruft **SQLGetInfo** mit der Option SQL_BOOKMARK_PERSISTENCE. Die Bits in diesem Wert wird beschrieben, welche Vorgänge Lesezeichen überleben, wie z. B., ob Lesezeichen noch gültig sind, nachdem der Cursor geschlossen ist.  
+ Um die Unterstützung von Lesezeichen eines Treibers zu ermitteln, ruft eine Anwendung **SQLGetInfo** mit der SQL_BOOKMARK_PERSISTENCE-Option auf. Die Bits in diesem Wert beschreiben, welche Vorgangs Lesezeichen überleben, wie z. b. ob Lesezeichen nach dem Schließen des Cursors noch gültig sind.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Lesezeichentypen](../../../odbc/reference/develop-app/bookmark-types.md)  
+-   [Textmarkentypen](../../../odbc/reference/develop-app/bookmark-types.md)  
   
--   [Abrufen von Lesezeichen](../../../odbc/reference/develop-app/retrieving-bookmarks.md)  
+-   [Abrufen von Textmarken](../../../odbc/reference/develop-app/retrieving-bookmarks.md)  
   
--   [Scrollen durch Lesezeichen](../../../odbc/reference/develop-app/scrolling-by-bookmark.md)  
+-   [Scrollen durch Textmarken](../../../odbc/reference/develop-app/scrolling-by-bookmark.md)  
   
--   [Aktualisieren, Löschen oder Abrufen nach Lesezeichen](../../../odbc/reference/develop-app/updating-deleting-or-fetching-by-bookmark.md)  
+-   [Aktualisieren, Löschen oder Abrufen durch Textmarke](../../../odbc/reference/develop-app/updating-deleting-or-fetching-by-bookmark.md)  
   
--   [Vergleichen von Lesezeichen](../../../odbc/reference/develop-app/comparing-bookmarks.md)
+-   [Vergleichen von Textmarken](../../../odbc/reference/develop-app/comparing-bookmarks.md)

@@ -18,20 +18,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211926"
 ---
 # <a name="programming-languages"></a>Programmiersprachen
-  In diesem Abschnitt wird beschrieben, wie Sie das Programm [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c# .NET und [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
+  In diesem Abschnitt wird beschrieben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie Sie Management Objects (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) in Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual c# .net [!INCLUDE[msCoName](../../includes/msconame-md.md)] und Visual C++ programmieren.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Erste Schritte in Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Enthält Informationen zum Schreiben eines SMO-Programms in Visual Basic .NET|  
-|[Erste Schritte in Visual C#&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Enthält Informationen zum Schreiben eines SMO-Programms in Visual c# .NET|  
+|[Erste Schritte in Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Stellt Informationen zum Schreiben eines SMO-Programms mit Visual Basic .NET bereit.|  
+|[Einstieg in Visual C&#35; .net](smo-programming-getting-started-in-visual-csharp-net.md)|Stellt Informationen zum Schreiben eines SMO-Programms mit Visual C# .NET bereit.|  
   
- SMO ist eine .NET-Assembly. Zum Programmieren mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework müssen Sie eine Sprache wählen, die von der Common Language Runtime unterstützt wird. In der SMO-Referenz besteht es Syntax für verwaltete Sprachen wie z. B. Visual Basic .NET und Visual c# .NET.  
+ SMO ist eine .NET-Assembly. Zum Programmieren mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework müssen Sie eine Sprache wählen, die von der Common Language Runtime unterstützt wird. Die SMO-Referenz enthält die Syntax für verwaltete Sprachen z. B. Visual Basic .NET und Visual C# .NET.  
   
   

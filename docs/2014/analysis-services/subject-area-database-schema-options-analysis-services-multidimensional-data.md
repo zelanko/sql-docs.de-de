@@ -1,5 +1,5 @@
 ---
-title: Für die Themenbereichsdatenbank Schemaoptionen (Schemagenerierungs-Assistent) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Schema Optionen für die Themenbereichs Datenbank (Schemagenerierungs-Assistent) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2173255654b9ef02c269ec34bd21f93f8bf629a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067977"
 ---
 # <a name="subject-area-database-schema-options-schema-generation-wizard-analysis-services---multidimensional-data"></a>Schemaoptionen für die Themenbereichsdatenbank (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Seite **Schemaoptionen für die Themenbereichsdatenbank** können Sie die Generierung des Schemas steuern und definieren, wie Daten erhalten bleiben.  
   
-## <a name="options"></a>Optionen  
- **Besitzendes schema**  
+## <a name="options"></a>Tastatur  
+ **Besitzendes Schema**  
  Gibt den Namen des Schemas innerhalb der neuen Themenbereichsdatenbank an.  
   
  **Primärschlüssel für Dimensionstabellen erstellen**  
@@ -41,19 +41,19 @@ ms.locfileid: "66067977"
  **Daten bei erneuter Generierung beibehalten**  
  Behält die Daten in der Themenbereichsdatenbank bei Abschluss des Assistenten bei. Wenn Sie diese Option nicht auswählen, werden möglicherweise alle Daten in der Themenbereichsdatenbank ohne Warnung gelöscht.  
   
- **Zeittabelle(n) Auffüllen**  
+ **Zeittabelle(n) auffüllen**  
  Gibt an, wie der Assistent die Zeittabellen auffüllt. Die folgende Tabelle beschreibt die möglichen Werte für diese Option.  
   
 > [!NOTE]  
 >  Diese Option ist nur aktiviert, wenn der Schemagenerierungs-Assistent von einem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt aus mithilfe von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] im Projektmodus aufgerufen wird.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Auffüllen|Die Themenbereichs-Zeittabellen werden aufgefüllt.|  
 |Nicht auffüllen|Die Themenbereichs-Zeittabellen werden nicht aufgefüllt.|  
 |Nur auffüllen, wenn leer|Die Themenbereichs-Zeittabellen werden nur aufgefüllt, wenn sie leer sind.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Schema Schemagenerierungs-Assistent F1-Hilfe &#40;Analysis Services – mehrdimensionale Daten&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Schemagenerierungs-Assistent F1-Hilfe &#40;Analysis Services-mehrdimensionalen Daten&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)  
   
   

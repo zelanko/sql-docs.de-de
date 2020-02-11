@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9371f053f95754cdcb7107559f9e0bc3eca2e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062138"
 ---
 # <a name="data-types-ole-db"></a>Datentypen (OLE DB)
-  Zum Ausführen [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen und verarbeiten die Ergebnisse mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter, Sie müssen wissen, wie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter Zuordnungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentypen zu OLE DB-Datentypen beim Binden Parameter oder Spalten in einem Rowset, und wenn es verwendet die **ITableDefinition** Schnittstelle zum Erstellen einer Tabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Um-Anweisungen auszuführen [!INCLUDE[tsql](../../includes/tsql-md.md)] und die Ergebnisse mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter zu verarbeiten, müssen Sie wissen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wie der Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB-Anbieter Datentypen OLE DB-Datentypen zuordnet, wenn Parameter oder Spalten in einem Rowset gebunden werden, und wenn die **ITableDefinition** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Schnittstelle verwendet wird, um eine Tabelle in zu erstellen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63062138"
   
 -   [SSVARIANT-Struktur](ssvariant-structure.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

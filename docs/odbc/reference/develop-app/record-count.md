@@ -14,13 +14,13 @@ ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d4d684fb6d9614defdca3897c53c4bae9fc231a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138081"
 ---
 # <a name="record-count"></a>Anzahl der Datensätze
-Das Headerfeld SQL_DESC_COUNT ein Deskriptor ist die 1-basierte Index des höchsten Datensatzes, der Daten enthält. Dieses Feld ist nicht die Anzahl der allen Spalten oder Parametern, die gebunden sind. Wenn ein Deskriptor zugeordnet ist, ist der Anfangswert des SQL_DESC_COUNT 0.  
+Das SQL_DESC_COUNT Header-Feld eines Deskriptors ist der 1-basierte Index des höchsten Datensatzes, der Daten enthält. Dieses Feld zählt nicht zu allen Spalten oder Parametern, die gebunden sind. Wenn ein Deskriptor zugeordnet wird, ist der Anfangswert von SQL_DESC_COUNT 0.  
   
- Der Treiber hat eine Aktion zum Zuweisen und verwalten alle gewünschten Speicher zum Speichern von Informationen der Sicherheitsbeschreibung benötigt. Die Anwendung nicht explizit angeben der Größe eines Deskriptors noch reservieren neue Datensätze. Wenn die Anwendung zu einem anwendungsparameterdeskriptor-Datensatz bereitstellt, deren Anzahl größer als der Wert des SQL_DESC_COUNT ist, wird der Treiber automatisch SQL_DESC_COUNT erhöht. Wenn die Anwendung hebt die Bindung der höchsten anwendungsparameterdeskriptor-Datensatz, sinkt der Treiber automatisch SQL_DESC_COUNT, um die Anzahl von den höchsten verbleibenden gebundenen Datensatz enthalten.
+ Der Treiber übernimmt alle erforderlichen Maßnahmen zum Zuordnen und Verwalten des Speichers, der zum Speichern der Deskriptorinformationen erforderlich ist. Die Anwendung gibt nicht explizit die Größe eines Deskriptors an und weist keine neuen Datensätze zu. Wenn die Anwendung Informationen für einen Deskriptordatensatz bereitstellt, dessen Anzahl höher als der Wert von SQL_DESC_COUNT ist, erhöht der Treiber automatisch SQL_DESC_COUNT. Wenn die Anwendung die Bindung des mit dem höchsten Wert nummerierten deskriptordaten Satzes aufhebt, verringert der Treiber automatisch SQL_DESC_COUNT, sodass er die Nummer des höchsten verbleibenden Datensatzes enthält.

@@ -14,28 +14,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a39a6715a9ba8ab08d846aabb96e5b0665a2aa43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200294"
 ---
 # <a name="retrieve-result-set-information-odbc"></a>Abrufen von Resultsetinformationen (ODBC)
     
 ### <a name="to-get-information-about-a-result-set"></a>So rufen Sie Informationen zu einem Resultset ab  
   
-1.  Rufen Sie [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) um die Anzahl der Spalten im Resultset zu erhalten.  
+1.  Führen Sie [SQLNumResultCols](../native-client-odbc-api/sqlnumresultcols.md) aus, um die Anzahl der Spalten im Resultset abzurufen.  
   
 2.  Für jede Spalte im Resultset führt die Anwendung nun Folgendes aus:  
   
-    -   Rufen Sie [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) zum Abrufen von Informationen über die Ergebnisspalte.  
+    -   Führen Sie [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) aus, um Informationen über die Ergebnisspalte abzurufen.  
   
      oder  
   
-    -   Rufen Sie [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) um spezifische Deskriptorinformationen über die Ergebnisspalte abzurufen.  
+    -   Führen Sie [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) aus, um bestimmte Deskriptorinformationen über die Ergebnisspalte abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Ergebnissen: Themen zur Vorgehensweise &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
- [Bestimmen der Eigenschaften eines Resultsets &#40;ODBC&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Themen zur Vorgehensweise bei der Verarbeitung von Ergebnissen &#40;ODBC-&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)   
+ [Bestimmen der Eigenschaften eines Resultsets &#40;ODBC-&#41;](../native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
   

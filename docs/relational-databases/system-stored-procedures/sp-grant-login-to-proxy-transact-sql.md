@@ -18,10 +18,10 @@ ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72005856"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "72005856"
   Gewährt über einen Sicherheitsprinzipal den Zugriff auf einen Proxy.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,21 +44,26 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @login_name = ] 'login_name'` den Anmelde Namen, dem der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@** msdb_role muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @login_name = ] 'login_name'`Der Anmelde Name, dem der Zugriff gewährt werden soll. 
+  *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'` die Server Rolle Fixed, der der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@** msdb_role muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @fixed_server_role = ] 'fixed_server_role'`Die fixierte Server Rolle, für die der Zugriff gewährt werden soll. 
+  *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @msdb_role = ] 'msdb_role'` die Daten Bank Rolle in der **msdb** -Datenbank, um den Zugriff auf zu gewähren. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@login_name**, **\@fixed_server_role**oder **\@** msdb_role muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @msdb_role = ] 'msdb_role'`Die Daten Bank Rolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. 
+  *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_id = ] id` den Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine **\@proxy_id** oder **\@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_id = ] id`Der Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. 
+  *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_name = ] 'proxy_name'` den Namen des Proxys, für den der Zugriff gewährt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine **\@proxy_id** oder **\@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff gewährt werden soll. 
+  *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Remarks  
- **sp_grant_login_to_proxy** muss von der **msdb** -Datenbank aus ausgeführt werden.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_grant_login_to_proxy** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können **sp_grant_login_to_proxy**ausführen.  
@@ -76,9 +81,9 @@ EXEC dbo.sp_grant_login_to_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
- [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen der Anmeldung &#40;Transact-SQL-&#41;](../../t-sql/statements/create-login-transact-sql.md)   
+ [sp_add_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

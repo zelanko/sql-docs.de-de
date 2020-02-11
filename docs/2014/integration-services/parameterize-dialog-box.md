@@ -1,5 +1,5 @@
 ---
-title: Parametrisieren Sie das Dialogfeld | Microsoft-Dokumentation
+title: Dialog Feld ' parametrisieren ' | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d60820ba7c384347aeeec80d8c41f934078eca8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056873"
 ---
 # <a name="parameterize-dialog-box"></a>Parameterize Dialog Box
@@ -29,7 +29,7 @@ ms.locfileid: "66056873"
  **Vorhandenen Parameter verwenden**  
  Aktivieren Sie diese Option, um die Eigenschaft der Aufgaben einem vorhandenen Parameter zuzuordnen und dann den Parameter aus Dropdownliste auszuwählen.  
   
- **Keinen Parameter verwenden**  
+ **Parameter nicht verwenden**  
  Wählen Sie diese Option aus, um einen Verweist auf einen Parameter zu entfernen. Der Parameter wurde nicht gelöscht.  
   
  **Neuen Parameter erstellen**  
@@ -44,10 +44,10 @@ ms.locfileid: "66056873"
  **Wert**  
  Geben Sie den Standardwert für den Parameter an. Dies wird auch als der Entwurfsstandard bezeichnet, der später zur Bereitstellungszeit überschrieben werden kann.  
   
- **Bereich**  
+ **`Scope`**  
  Geben Sie den Bereich des Parameters an, indem Sie die Option **Projekt** oder die Option **Paket** aktivieren. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
- **Vertraulich**  
+ **Sensibel**  
  Geben Sie an, ob der Parameter vertraulich ist, indem Sie das Kontrollkästchen aktivieren oder deaktivieren. Vertrauliche Parameterwerte werden im Katalog verschlüsselt und in Transact-SQL oder SQL Server Management Studio als NULL-Wert angezeigt.  
   
  **Erforderlich**  

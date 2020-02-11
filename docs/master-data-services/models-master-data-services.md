@@ -14,10 +14,10 @@ ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6bee1ab1716eac70d51006b8bb4315b204be67ab
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727948"
 ---
 # <a name="models-master-data-services"></a>Modelle (Master Data Services)
@@ -47,7 +47,7 @@ ms.locfileid: "73727948"
   
  Dieses Bild zeigt die Beziehung zwischen den Objekten in einem Modell an.  
   
- ![Objekte in einem Master Data Services Modell](../master-data-services/media/mds-conc-model-circles.gif "Objekte in einem Master Data Services Modell")  
+ ![Objekte in einem Master Data Services-Modell](../master-data-services/media/mds-conc-model-circles.gif "Objekte in einem Master Data Services-Modell")  
   
 > [!NOTE]  
 >  Abgeleitete Hierarchien sind ebenfalls Modellobjekte, sie werden jedoch nicht im Bild angezeigt. Abgeleitete Hierarchien werden von den domänenbasierten Attributbeziehungen abgeleitet, die zwischen Entitäten vorhanden sind. Weitere Informationen finden Sie unter [Abgeleitete Hierarchien &#40;Master Data Services&#41;](../master-data-services/derived-hierarchies-master-data-services.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "73727948"
 ## <a name="model-example"></a>Modellbeispiel  
  Im folgenden Beispiel gruppieren die Objekte im Produktmodell logisch produktbezogene Daten.  
   
- ![Beispiel für Produktmodell Master Daten](../master-data-services/media/mds-conc-model.gif "Beispiel für Produktmodell Master Daten")  
+ ![Beispiel für Produktmodellmasterdaten](../master-data-services/media/mds-conc-model.gif "Beispiel für Produktmodellmasterdaten")  
   
  Weitere allgemeine Modelle:  
   
@@ -69,17 +69,17 @@ ms.locfileid: "73727948"
   
 -   Geografie: Mögliche Entitäten sind Postleitzahlen, Städte, Landkreise, Staaten, Provinzen, Regionen, Gebiete, Länder und Kontinente.  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie ein Modell, um die Masterdaten zu organisieren.|[Erstellen eines Modells &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
-|Ändern Sie den Namen eines vorhandenen Modells.|[Bearbeiten eines Modells &#40;Master Data Services&#41;](../master-data-services/edit-model-master-data-services.md)|  
-|Löschen Sie ein vorhandenes Modell.|[Löschen eines Modells &#40;Master Data Services&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
+|Erstellen Sie ein Modell, um die Masterdaten zu organisieren.|[Erstellen Sie ein Modell &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
+|Ändern Sie den Namen eines vorhandenen Modells.|[Modell &#40;Master Data Services bearbeiten&#41;](../master-data-services/edit-model-master-data-services.md)|  
+|Löschen Sie ein vorhandenes Modell.|[&#40;Master Data Services eines Modells löschen&#41;](../master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services Übersicht &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
@@ -87,6 +87,6 @@ ms.locfileid: "73727948"
   
 -   [Bereitstellen von Modellen &#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)  
   
--   [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+-   [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

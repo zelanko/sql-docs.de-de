@@ -1,5 +1,5 @@
 ---
-title: Registerkarte ' Kreuzvalidierung ' (Mininggenauigkeitsdiagrammsicht) | Microsoft-Dokumentation
+title: Registerkarte "Kreuz Validierung" (Mining Genauigkeits Diagramm-Sicht) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086620"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Übergreifende Überprüfung (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
-  Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener Genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
+  Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener Genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
   
- Weitere Informationen finden Sie unter [Cross-Validation &#40;Analysis Services - Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
+ Weitere Informationen finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
 > [!NOTE]  
 >  Die übergreifende Überprüfung kann nicht bei Modellen verwendet werden, die mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Algorithmus oder des [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden. Wenn Sie den Bericht für eine Miningstruktur mit diesen Typen von Modellen ausführen, werden die Modelle im Bericht nicht berücksichtigt.  
@@ -62,19 +63,19 @@ ms.locfileid: "66086620"
 > [!NOTE]  
 >  In dem Maße, in dem Sie die Anzahl von Fällen erhöhen, nimmt auch die Verarbeitungszeit zu.  
   
- **Target-Attribut**  
+ **Ziel Attribut**  
  Wählen Sie in der Liste der in allen Modellen vorhandenen vorhersagbaren Spalten eine Spalte aus. Sie können jeweils nur eine vorhersagbare Spalte auswählen, wenn Sie eine übergreifende Überprüfung ausführen.  
   
  Wählen Sie **Cluster**aus, wenn Sie nur Clustermodelle testen möchten.  
   
- **Zielstatus**  
+ **Ziel Status**  
  Geben Sie einen Wert ein, oder wählen Sie in einer Dropdownliste von Werten einen Zielwert aus.  
   
  Der Standardwert ist `null`. Dieser gibt an, dass alle Status zu testen sind.  
   
  Bei Clustermodellen deaktiviert.  
   
- **target**  **threshold**  
+ **Ziel**  **Schwellenwert**  
  Geben Sie einen Wert zwischen 0 und 1 an, mit dem die Vorhersagewahrscheinlichkeit angegeben wird, oberhalb derer ein vorhergesagter Status als richtig gewertet wird. Der Wert kann in Schritten von 0,1 festgelegt werden.  
   
  Der Standardwert ist `null`. Dieser gibt an, dass die wahrscheinlichste Vorhersage als richtig gewertet wird.  
@@ -96,12 +97,12 @@ ms.locfileid: "66086620"
   
  Angenommen, es werden drei Vorhersagen für einen bestimmten Zielstatus erstellt, und die Wahrscheinlichkeiten für die einzelnen Vorhersagen liegen bei 0,05, 0,15 und 0,8. Wenn Sie den Schwellenwert auf 0,5 festgelegt haben, wird nur eine Vorhersage als richtig gewertet. Wenn Sie den **Ziel** **schwellenwert** auf 0,10 festgelegt haben, werden zwei der Vorhersagen als richtig gewertet.  
   
- Wenn **Ziel** **Schwellenwert** nastaven NA hodnotu `null`, dies ist der Standardwert, wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gewertet. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
+ Wenn der **Ziel** **Schwellen** Wert auf `null`festgelegt ist (Dies ist der Standardwert), wird die wahrscheinlichste Vorhersage für jeden Fall als richtig gezählt. In dem gerade genannten Beispiel sind 0,05, 0,15 und 0,8 die Wahrscheinlichkeiten für Vorhersagen in drei verschiedenen Fällen. Obwohl die Wahrscheinlichkeiten sehr unterschiedlich sind, würde jede Vorhersage als richtig gewertet, da jeder Fall nur eine Vorhersage generiert und es sich dabei um die besten Vorhersagen für diese Fälle handelt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)   
- [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
- [Measures in der Kreuzvalidierungsbericht](data-mining/measures-in-the-cross-validation-report.md)   
- [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)   
+ [Übergreifende Überprüfung &#40;Analysis Services Data Mining-&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
+ [Measures im Kreuz Validierungsbericht](data-mining/measures-in-the-cross-validation-report.md)   
+ [Data Mining-gespeicherte Prozeduren &#40;Analysis Services Data Mining-&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

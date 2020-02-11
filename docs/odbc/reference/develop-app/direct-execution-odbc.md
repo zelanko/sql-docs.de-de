@@ -1,5 +1,5 @@
 ---
-title: Direkte Ausführung ODBC | Microsoft-Dokumentation
+title: Direkte Ausführung von ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: dd00a535-b136-494f-913b-410838e3de7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 72d9222be541a8d41b5b9935ac7cbbcfde4da19c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039800"
 ---
 # <a name="direct-execution-odbc"></a>Direkte Ausführung – ODBC
-Direkte Ausführung ist die einfachste Möglichkeit zum Ausführen einer Anweisung. Wenn die Anweisung zur Ausführung übermittelt wird, wird die Datenquelle kompiliert sie zu einem Zugriffsplan und führt dann diesen Zugriffsplan.  
+Die direkte Ausführung ist die einfachste Methode, um eine-Anweisung auszuführen. Wenn die Anweisung zur Ausführung übermittelt wird, kompiliert die Datenquelle Sie in einen Zugriffs Plan und führt dann diesen Zugriffs Plan aus.  
   
- Direkte Ausführung wird häufig von generischen Anwendungen verwendet, das Erstellen und Ausführen von Anweisungen zur Laufzeit. Der folgende Code wird z. B. eine SQL-Anweisung erstellt und ein einziges Mal ausgeführt:  
+ Die direkte Ausführung wird häufig von generischen Anwendungen verwendet, die-Anweisungen zur Laufzeit erstellen und ausführen. Der folgende Code erstellt z. b. eine SQL-Anweisung und führt Sie ein einziges Mal aus:  
   
 ```  
 SQLCHAR *SQLStatement;  
@@ -36,20 +36,20 @@ BuildStatement(SQLStatement);
 SQLExecDirect(hstmt, SQLStatement, SQL_NTS);  
 ```  
   
- Direkte Ausführung funktioniert am besten für Anweisungen, die ein einziges Mal ausgeführt wird. Die wichtigsten Nachteil besteht darin, dass die SQL-Anweisung analysiert wird, jedes Mal, wenn er ausgeführt wird. Die Anwendung kann nicht darüber hinaus Informationen über das Resultset, die von der Anweisung erstellt (sofern vorhanden) erst nach der Ausführung der Anweisung abrufen; Dies ist möglich, wenn die Anweisung vorbereitet und in zwei separaten Schritte ausgeführt werden.  
+ Die direkte Ausführung funktioniert am besten für Anweisungen, die nur einmal ausgeführt werden. Der größte Nachteil besteht darin, dass die SQL-Anweisung bei jeder Ausführung analysiert wird. Darüber hinaus kann die Anwendung keine Informationen über das Resultset abrufen, das von der-Anweisung (sofern vorhanden) erstellt wurde, bis die-Anweisung ausgeführt wird. Dies ist möglich, wenn die-Anweisung in zwei separaten Schritten vorbereitet und ausgeführt wird.  
   
- Zum Ausführen einer Anweisung direkt die Anwendung die folgenden Aktionen ausgeführt:  
+ Um eine Anweisung direkt auszuführen, führt die Anwendung die folgenden Aktionen aus:  
   
-1.  Legt die Werte aller Parameter. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
+1.  Legt die Werte von Parametern fest. Weitere Informationen finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
   
-2.  Aufrufe **SQLExecDirect** und übergibt sie eine Zeichenfolge, die die SQL-Anweisung enthält.  
+2.  Ruft **SQLExecDirect** auf und übergibt ihm eine Zeichenfolge, die die SQL-Anweisung enthält.  
   
-3.  Wenn **SQLExecDirect** aufgerufen wird, wird den Treiber:  
+3.  Wenn **SQLExecDirect** aufgerufen wird, führt der Treiber Folgendes aus:  
   
-    -   Ändert die SQL-Anweisung, um SQL-Grammatik für die Datenquelle zu verwenden, ohne die Anweisung analysieren; Dies schließt das Ersetzen der Escape-Sequenzen, die in beschriebenen [Escapesequenzen in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md). Kann die Anwendung eine SQL-Anweisung geänderte Form durch den Aufruf abrufen **SQLNativeSql**. Escapesequenzen werden nicht ersetzt werden, wenn das SQL_ATTR_NOSCAN-Anweisungsattribut festgelegt ist.  
+    -   Ändert die SQL-Anweisung so, dass die SQL-Grammatik der Datenquelle verwendet wird, ohne die Anweisung zu verwenden. Dies umfasst das Ersetzen der in Escapesequenzen [in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md)beschriebenen Escapesequenzen. Die Anwendung kann das geänderte Formular einer SQL-Anweisung abrufen, indem **SQLNativeSql**aufgerufen wird. Escapesequenzen werden nicht ersetzt, wenn das SQL_ATTR_NOSCAN-Anweisungs Attribut festgelegt ist.  
   
-    -   Ruft die aktuellen Parameterwerte aus, und nach Bedarf konvertiert. Weitere Informationen finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
+    -   Ruft die aktuellen Parameterwerte ab und konvertiert sie nach Bedarf. Weitere Informationen finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.  
   
-    -   Sendet die Anweisung und die konvertierten Parameterwerte an die Datenquelle für die Ausführung an.  
+    -   Sendet die-Anweisung und die konvertierten Parameterwerte zur Ausführung an die Datenquelle.  
   
-    -   Gibt alle Fehler zurück. Dazu gehören Sequenzierung oder Status-Diagnose wie z. B. SQLSTATE 24000 (Ungültiger Cursorstatus), syntaktische Fehler wie z. B. SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) und semantische Fehler, z. B. SQLSTATE 42S02 (Basis-Tabelle oder Sicht wurde nicht gefunden).
+    -   Gibt alle Fehler zurück. Hierzu gehören die Sequenzierung oder Zustandsdiagnose wie SQLSTATE 24000 (Ungültiger Cursor Zustand), syntaktische Fehler wie SQLSTATE 42000 (Syntax Fehler oder Zugriffsverletzung) sowie semantische Fehler wie SQLSTATE 42s02 (Basistabelle oder Sicht nicht gefunden).

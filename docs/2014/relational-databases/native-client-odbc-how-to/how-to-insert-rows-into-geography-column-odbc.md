@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC) | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Einfügen von Zeilen in eine geography-Spalte (ODBC) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206811"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Gewusst wie: Einfügen von Zeilen in eine Geografiespalte (ODBC)
-  In diesem Beispiel werden unter Verwendung zweier verschiedener Bindungen (SQLCCHAR und SQLCBINARY) zwei Zeilen in eine Tabelle mit einer geography-Spalte aus einem WellKnownBinary (WKB) eingefügt. Anschließend wird eine Zeile aus der Tabelle ausgewählt und verwendet:: STAsText(), um es anzuzeigen. Das WKB ist 0x01010000000700ECFAD03A4C4001008000B5DF07C0, und die Anwendung in der Konsole ausgegeben: POINT (56.4595-2.9842).  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Vorgehensweise: Einfügen von Zeilen in eine Geografiespalte (ODBC)
+  In diesem Beispiel werden unter Verwendung zweier verschiedener Bindungen (SQLCCHAR und SQLCBINARY) zwei Zeilen in eine Tabelle mit einer geography-Spalte aus einem WellKnownBinary (WKB) eingefügt. Daraufhin wird im Beispiel eine Zeile aus der Tabelle ausgewählt und mit ::STAsText() angezeigt. Das WKB ist 0x01010000000700ECFAD03A4C4001008000B5DF07C0, und die Anwendung gibt POINT(56.4595 -2.9842) auf der Konsole aus.  
   
  Dieses Beispiel erfordert keine ODBC-Datenquelle, es wird jedoch standardmäßig auf der lokalen Instanz von SQL Server ausgeführt.  
   
  In einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]kann das Beispiel nicht ausgeführt werden.  
   
- Weitere Informationen zu räumlicher Speicherung finden Sie unter [räumliche Daten &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
+ Weitere Informationen zum räumlichen Speicher finden Sie unter [räumliche Daten &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete Tabelle.  

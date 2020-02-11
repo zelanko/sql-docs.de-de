@@ -1,5 +1,5 @@
 ---
-title: Datenbank-Access-Architektur | Microsoft-Dokumentation
+title: Datenbankzugriffs Architektur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: 3811599f-48cb-4205-9fe5-5ab4b240047d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fba8cf4f3f3553fafd2296e294db3a9105de330
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135559"
 ---
 # <a name="database-access-architecture"></a>Architektur für den Datenbankzugriff
-Eine der Fragen bei der Entwicklung von ODBC war der Teil der Architektur der Datenbank zugreifen, zu standardisieren. Die SQL-Programmierschnittstellen beschrieben im vorherigen Abschnitt - embedded SQL, sind SQL-Module und Befehlszeilenschnittstellen - nur ein Teil dieser Architektur. In der Tat da ODBC in erster Linie für die PC-basierte Anwendungen Minicomputer und Mainframe DBMS-Systeme eine Verbindung herstellen sollen wurde, gab es auch eine Anzahl von Netzwerkkomponenten, von die einige standardisiert werden konnte.  
+Eine der Fragen in der Entwicklung von ODBC war, welcher Teil der Datenbankzugriffs Architektur zu standardisieren ist. Die im vorherigen Abschnitt (eingebettete SQL, SQL-Module und CLIs) beschriebenen SQL-Programmierschnittstellen sind nur ein Teil dieser Architektur. Da ODBC in erster Linie dazu gedacht war, persönliche computerbasierte Anwendungen mit Minicomputer und Main Frame-DBMSs zu verbinden, gab es auch eine Reihe von Netzwerkkomponenten, von denen einige standardisiert werden könnten.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Netzwerk-Datenbankzugriff](../../odbc/reference/network-database-access.md)  
+-   [Datenbankzugriff über ein Netzwerk](../../odbc/reference/network-database-access.md)  
   
--   [Standard-Datenbank Zugriff Architekturen](../../odbc/reference/standard-database-access-architectures.md)  
+-   [Standardarchitekturen für den Datenbankzugriff](../../odbc/reference/standard-database-access-architectures.md)  
   
 -   [Die ODBC-Lösung](../../odbc/reference/the-odbc-solution.md)

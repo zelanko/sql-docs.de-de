@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagendateien mit der ' CommandStream '-Eigenschaft | Microsoft-Dokumentation
+title: Ausführen von Vorlagen Dateien mit der CommandStream-Eigenschaft | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f0d753c7e56f4ae90a2b156ee8d521518d0029a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66010912"
 ---
 # <a name="executing-template-files-by-using-the-commandstream-property"></a>Ausführen von Vorlagendateien mit der 'CommandStream'-Eigenschaft
-  In diesem Beispiel wird veranschaulicht, wie Vorlagendateien, die aus SQL- oder XPath-Abfragen bestehende Vorlagendateien mithilfe der ' CommandStream '-Eigenschaft des SqlXmlCommand-Objekt angegeben werden können. In dieser Anwendung eine FileStreamobject für eine Befehlsdatei geöffnet wird, und der Dateidatenstrom wird zugewiesen, als der ' CommandStream ', der ausgeführt wird.  
+  In diesem Beispiel wird veranschaulicht, wie Vorlagen Dateien, die aus SQL-oder XPath-Abfragen bestehen, mithilfe der CommandStream-Eigenschaft des SqlXmlCommand-Objekts angegeben werden können. In dieser Anwendung wird ein filestreamobject für eine Befehlsdatei geöffnet, und der Dateistream wird als CommandStream zugewiesen, der ausgeführt wird.  
   
- Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType.Template (also nicht als TemplateFile) angegeben.  
+ Im folgenden Beispiel wird die CommandType-Eigenschaft als SqlXmlCommandType. Template (nicht als TemplateFile) angegeben.  
   
  Es folgt die Beispiel-XML-Vorlage:  
   
@@ -82,7 +82,7 @@ class Test
   
 1.  Speichern Sie die in diesem Beispiel bereitgestellte XML-Vorlage in einem Ordner.  
   
-2.  Speichern Sie die c#-Code (DocSample.cs), der bereitgestellt wird, in diesem Beispiel im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
+2.  Speichern Sie den c#-Code (DocSample.cs), der in diesem Beispiel bereitgestellt wird, im selben Ordner, in dem das Schema gespeichert ist. (Wenn Sie die Dateien in einem anderen Ordner speichern, müssen Sie den Code bearbeiten und den entsprechenden Verzeichnispfad für das Zuordnungsschema angeben.)  
   
 3.  Kompilieren Sie den Code. Verwenden Sie zur Kompilierung des Codes an der Eingabeaufforderung die folgende Zeichenfolge:  
   

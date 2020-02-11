@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Datamining-Objekten | Microsoft-Dokumentation
+title: Verarbeiten von Data Mining-Objekten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,22 +18,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083148"
 ---
 # <a name="processing-data-mining-objects"></a>Verarbeiten von Data Mining-Objekten
-  Ein Data Mining-Objekt ist vor seiner Verarbeitung nur ein leerer Container. Die*Verarbeitung* eines Data Mining-Modells wird auch als *Training*bezeichnet.  
+  Ein Data Mining-Objekt ist vor seiner Verarbeitung nur ein leerer Container. Die *Verarbeitung* eines Data Mining Modells wird auch als *Training*bezeichnet.  
   
- **Verarbeiten von Miningstrukturen:** Eine Miningstruktur Ruft Daten aus einer externen Datenquelle ab, wie die spaltenbindungen und verwendungsmetadaten definiert, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
+ **Verarbeiten von Mining Strukturen:** Eine Mining Struktur Ruft Daten aus einer externen Datenquelle ab, wie Sie durch die Spalten Bindungen und Verwendungs Metadaten definiert ist, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
   
- **Verarbeiten von Miningmodellen:** Ein Miningmodell ist leer und enthält nur Definitionen aus, bis es verarbeitet wird. Um ein Miningmodell verarbeiten zu können, muss zuerst die zugrunde liegende Miningstruktur verarbeitet werden. Das Miningmodell erhält die Daten aus dem Cache der Miningstruktur, wendet die Filter an, die ggf. für das Modell erstellt wurden, und übergibt dann das Dataset über den Algorithmus, um Muster zu ermitteln. Nachdem das Modell verarbeitet wurde, speichert das Modell nur die Ergebnisse der Verarbeitung, nicht die Daten selbst. Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](process-a-mining-model.md).  
+ **Verarbeiten von Mining Modellen:** Ein Mining Modell ist leer und enthält nur Definitionen, bis es verarbeitet wird. Um ein Miningmodell verarbeiten zu können, muss zuerst die zugrunde liegende Miningstruktur verarbeitet werden. Das Miningmodell erhält die Daten aus dem Cache der Miningstruktur, wendet die Filter an, die ggf. für das Modell erstellt wurden, und übergibt dann das Dataset über den Algorithmus, um Muster zu ermitteln. Nachdem das Modell verarbeitet wurde, speichert das Modell nur die Ergebnisse der Verarbeitung, nicht die Daten selbst. Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](process-a-mining-model.md).  
   
  In der folgenden Abbildung ist jeweils der Datenfluss für die Verarbeitung einer Miningstruktur und für die Verarbeitung eines Miningmodells dargestellt.  
   
- ![Datenverarbeitung: Quelle Struktur Modell](../media/dmcon-modelarch.gif "Datenverarbeitung: Quelle auf Struktur zum Modell")  
+ ![Datenverarbeitung: Quelle-zu-Struktur-zu-Modell](../media/dmcon-modelarch.gif "Datenverarbeitung: Quelle-zu-Struktur-zu-Modell")  
   
 ## <a name="viewing-the-results-of-processing"></a>Anzeigen der Ergebnisse der Verarbeitung  
  Nachdem eine Miningstruktur verarbeitet wurde, enthält sie eine kurze Darstellung der Daten zur Verwendung in statistischen Analysen. Wenn der Cache nicht gelöscht wurde, können Sie wie folgt auf die Daten im Cache zugreifen:  
@@ -55,10 +55,10 @@ ms.locfileid: "66083148"
   
  Weitere Informationen finden Sie unter [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](processing-requirements-and-considerations-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Drillthroughabfragen &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Logische Architektur &#40;Analysis Services – Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Drillthrough-Abfragen &#40;Data Mining-&#41;](drillthrough-queries-data-mining.md)   
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)   
+ [Logische Architektur &#40;Analysis Services Data Mining-&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

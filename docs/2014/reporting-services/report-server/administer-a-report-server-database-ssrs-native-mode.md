@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d155437880f1fb93779a2352bd507ea83de16256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104281"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)
@@ -31,7 +31,7 @@ ms.locfileid: "66104281"
   
  Für die Verwaltung der Berichtsserver-Datenbanken enthält [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Reihe von Tools.  
   
--   Zum Sichern oder Wiederherstellen der Berichtsserver-Datenbank, zum Verschieben einer Berichtsserver-Datenbank oder zum Wiederherstellen einer Berichtsserver-Datenbank können Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle oder die Eingabeaufforderungs-Hilfsprogramme für Datenbanken verwenden. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)](moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) in der SQL Server-Onlinedokumentation.  
+-   Zum Sichern oder Wiederherstellen der Berichts Server-Datenbank, zum Verschieben einer Berichts Server-Datenbank oder zum Wiederherstellen einer Berichts Server- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Datenbank können [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie, die-Befehle oder die Eingabeaufforderungs-Hilfsprogramme für die Datenbank verwenden. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)](moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md) in der SQL Server-Onlinedokumentation.  
   
 -   Um vorhandene Datenbankinhalte in eine andere Berichtsserver-Datenbank zu kopieren, können Sie eine Kopie einer Berichtsserver-Datenbank anfügen und sie mit einer anderen Berichtsserverinstanz verwenden. Oder Sie können ein Skript erstellen und ausführen, das SOAP-Aufrufe verwendet, um Berichtsserverinhalte in einer neuen Datenbank neu zu erstellen. Sie können das Hilfsprogramm **rs** verwenden, um das Skript auszuführen.  
   
@@ -44,12 +44,13 @@ ms.locfileid: "66104281"
   
  Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für die Berichtsserver-Datenbank wird automatisch für das von Ihnen angegebene Konto erstellt.  
   
- Berechtigungen für die Datenbank werden auch automatisch konfiguriert. Das Reporting Services-Konfigurationstool weist das Konto oder den Datenbankbenutzer der `Public`-Rolle und der `RSExecRole`-Rolle für die Berichtsserver-Datenbanken hinzu. `RSExecRole` bietet Berechtigungen für den Zugriff auf die Datenbanktabellen und für das Ausführen von gespeicherten Prozeduren. Die `RSExecRole` wird in Master und Msdb erstellt, wenn Sie die Berichtsserver-Datenbank erstellen. Die `RSExecRole` ist ein Mitglied der `db_owner`-Rolle für die Berichtsserver-Datenbanken, mit der der Berichtsserver sein eigenes Schema zur Unterstützung eines automatischen Upgradeprozesses aktualisieren kann.  
+ Berechtigungen für die Datenbank werden auch automatisch konfiguriert. Das Reporting Services-Konfigurationstool weist das Konto oder den Datenbankbenutzer der `Public`-Rolle und der `RSExecRole`-Rolle für die Berichtsserver-Datenbanken hinzu. 
+  `RSExecRole` bietet Berechtigungen für den Zugriff auf die Datenbanktabellen und für das Ausführen von gespeicherten Prozeduren. `RSExecRole` Wird in Master und msdb erstellt, wenn Sie die Berichts Server-Datenbank erstellen. Die `RSExecRole` ist ein Mitglied der `db_owner`-Rolle für die Berichtsserver-Datenbanken, mit der der Berichtsserver sein eigenes Schema zur Unterstützung eines automatischen Upgradeprozesses aktualisieren kann.  
   
 ## <a name="naming-conventions-for-the-report-server-databases"></a>Benennungskonventionen für die Berichtsserver-Datenbanken  
  Beim Erstellen der primären Datenbank muss der Name der Datenbank den Regeln für [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md)entsprechen. Der Name der temporären Datenbank besteht immer aus dem Namen der primären Berichtsserver-Datenbank und dem Suffix Tempdb. Sie können keinen anderen Namen für die temporäre Datenbank auswählen.  
   
- Das Umbenennen einer Berichtsserver-Datenbank wird nicht unterstützt, da die Berichtsserver-Datenbanken als interne Komponenten betrachtet werden. Das Umbenennen der Berichtsserver-Datenbanken führt zu Fehlern. Besonders wenn Sie die primäre Datenbank umbenennen, wird in einer Fehlermeldung darauf hingewiesen, dass die Datenbanknamen nicht synchronisiert sind. Wenn Sie die ReportServerTempdb-Datenbank umbenennen, tritt später beim Ausführen von Berichten der folgende interne Fehler auf:  
+ Das Umbenennen einer Berichtsserver-Datenbank wird nicht unterstützt, da die Berichtsserver-Datenbanken als interne Komponenten betrachtet werden. Das Umbenennen der Berichtsserver-Datenbanken führt zu Fehlern. Insbesondere, wenn Sie die primäre Datenbank umbenennen, wird in einer Fehlermeldung erläutert, dass die Datenbanknamen nicht synchronisiert sind. Wenn Sie die ReportServerTempDB-Datenbank umbenennen, tritt später beim Ausführen von Berichten der folgende interne Fehler auf:  
   
  "Interner Fehler beim Berichtsserver. Weitere Informationen finden Sie im Fehlerprotokoll. (rsInternalError)  
   
@@ -58,7 +59,7 @@ ms.locfileid: "66104281"
  Dieser Fehler tritt auf, weil der ReportServerTempdb-Name intern gespeichert und von gespeicherten Prozeduren zum Ausführen interner Vorgänge verwendet wird. Nach dem Umbenennen der temporären Datenbank können die gespeicherten Prozeduren nicht mehr ordnungsgemäß ausgeführt werden.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Aktivieren von Momentaufnahmeisolation auf der Berichtsserver-Datenbank  
- Sie können keine Momentaufnahmeisolation auf der Berichtsserver-Datenbank aktivieren. Wenn die Snapshot-Isolation aktiviert ist, wird den folgenden Fehler auftreten: "Der ausgewählte Bericht ist nicht bereit für die Anzeige. Der Bericht wird immer noch gerendert, oder eine Berichtsmomentaufnahme ist nicht verfügbar."  
+ Sie können keine Momentaufnahmeisolation auf der Berichtsserver-Datenbank aktivieren. Wenn die Momentaufnahmeisolation nicht aktiviert ist, tritt folgender Fehler auf: "Der ausgewählte Bericht ist nicht bereit für die Anzeige. Der Bericht wird immer noch gerendert, oder eine Berichtsmomentaufnahme ist nicht verfügbar."  
   
  Wenn Sie die Momentaufnahmeisolation nicht absichtlich aktiviert haben, wurde das Attribut unter Umständen von einer anderen Anwendung festgelegt oder für die **model** -Datenbank ist die Momentaufnahmeisolation aktiviert, sodass alle neuen Datenbanken diese Einstellung übernehmen.  
   
@@ -76,18 +77,18 @@ SET READ_COMMITTED_SNAPSHOT OFF
 ```  
   
 ## <a name="about-database-versions"></a>Informationen zu Datenbankversionen  
- In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]stehen keine expliziten Informationen zur Datenbankversion zur Verfügung. Da Datenbankversionen jedoch immer mit Produktversionen synchronisiert werden, können Sie anhand der Informationen zur Produktversion erkennen, wenn sich die Datenbankversion geändert hat. Informationen zur Produktversion für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird angegeben, über die Dateiversionsinformationen, angezeigt wird, in den Protokolldateien, in den Headern aller SOAP-Aufrufe und die Verbindung mit der Berichtsserver-URL (Wenn Sie z. B. in einen Browser öffnen http://localhost/reportserver).  
+ In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]stehen keine expliziten Informationen zur Datenbankversion zur Verfügung. Da Datenbankversionen jedoch immer mit Produktversionen synchronisiert werden, können Sie anhand der Informationen zur Produktversion erkennen, wenn sich die Datenbankversion geändert hat. Informationen zur Produktversion [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] für werden über die Datei Versionsinformationen angezeigt, die in den Protokolldateien, in den Headern aller SOAP-Aufrufe und beim Herstellen einer Verbindung mit der Berichts Server-URL angezeigt werden (z. b http://localhost/reportserver). Wenn Sie einen Browser in öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Erstellen einer Berichts Server-Datenbank im einheitlichen Modus &#40;SSRS-Configuration Manager&#41;](../install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
- [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Erstellen einer Berichtsserver-Datenbank](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
- [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
+ [Sicherungs-und Wiederherstellungs Vorgänge für Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](report-server-database-ssrs-native-mode.md)   
- [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
- [Speichern verschlüsselter Berichtsserverdaten &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
+ [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

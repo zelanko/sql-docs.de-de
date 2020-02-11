@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68210715"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bewährte Methoden für zeitbasierte Zeilenfilter
@@ -26,7 +26,7 @@ ms.locfileid: "68210715"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Bei einem Filter dieses Typs wird davon ausgegangen, dass zwei Aktionen eingeleitet werden, wenn der Merge-Agent ausgeführt wird: Zeilen, die dem Filter entsprechen, werden auf die Abonnenten repliziert, und für Zeilen, die dem Filter nicht mehr entsprechen, wird auf den Abonnenten ein Cleanup ausgeführt. (Weitere Informationen zu filtern mit `HOST_NAME()`, finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Die Replikation und das Cleanup werden bei einer Mergereplikation jedoch nur für Daten durchgeführt, die seit der letzten Synchronisierung geändert wurden, unabhängig davon, wie ein Zeilenfilter für diese Daten definiert wurde.  
+ Bei einem Filter dieses Typs wird davon ausgegangen, dass zwei Aktionen eingeleitet werden, wenn der Merge-Agent ausgeführt wird: Zeilen, die dem Filter entsprechen, werden auf die Abonnenten repliziert, und für Zeilen, die dem Filter nicht mehr entsprechen, wird auf den Abonnenten ein Cleanup ausgeführt. (Weitere Informationen zum Filtern mit `HOST_NAME()`finden Sie unter [Parameterized Row Filters](parameterized-filters-parameterized-row-filters.md).) Bei der Mergereplikation werden jedoch nur Daten repliziert und bereinigt, die seit der letzten Synchronisierung geändert wurden, unabhängig davon, wie ein Zeilen Filter für diese Daten definiert wird.  
   
  Damit eine Zeile bei der Mergereplikation verarbeitet wird, müssen die Daten in der Zeile dem Zeilenfilter entsprechen, und sie müssen seit der letzten Synchronisierung geändert worden sein. In der **SalesOrderHeader** -Tabelle wird **OrderDate** eingegeben, wenn eine Zeile eingefügt wird. Die Zeilen werden wie erwartet auf den Abonnenten repliziert, da die Einfügung eine Datenänderung darstellt. Befinden sich auf dem Abonnenten jedoch Zeilen, die dem Filter nicht mehr entsprechen (z. B. für Bestellungen, die mehr als sieben Tage zurückliegen), werden sie vom Abonnenten nicht entfernt, es sei denn, sie wurden aus einem anderen Grund aktualisiert.  
   
@@ -57,10 +57,10 @@ WHERE EventCoordID = CONVERT(INT,HOST_NAME()) AND EventDate <= (GETDATE()+6)
   
  Dieser Ansatz gleicht die Mängel bei der Verwendung von `GETDATE()` oder einer anderen zeitbasierten Methode aus. Außerdem muss nicht bestimmt werden, wann Filter für Partitionen ausgewertet werden. Betrachten Sie das folgende Beispiel einer **Events** -Tabelle:  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replizieren**|  
+|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replikat**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|1|  
-|2|Dinner|112|2006-10-10|0|  
+|2|Abendessen|112|2006-10-10|0|  
 |3|Party|112|2006-10-11|0|  
 |4|Wedding|112|2006-10-12|0|  
   
@@ -81,16 +81,16 @@ GO
   
  Die erste Zeile setzt die **Replicate** -Spalte auf **0**zurück, und die zweite Zeile setzt die Spalte für Ereignisse, die in den nächsten sieben Tagen stattfinden, auf **1** . Wenn diese [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung am 07.10.2006 ausgeführt wird, wird die Tabelle folgendermaßen aktualisiert:  
   
-|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replizieren**|  
+|**EventID**|**EventName**|**EventCoordID**|**EventDate**|**Replikat**|  
 |-----------------|-------------------|----------------------|-------------------|-------------------|  
 |1|Reception|112|2006-10-04|0|  
-|2|Dinner|112|2006-10-10|1|  
+|2|Abendessen|112|2006-10-10|1|  
 |3|Party|112|2006-10-11|1|  
 |4|Wedding|112|2006-10-12|1|  
   
  Die Ereignisse für die nächste Woche sind nunmehr als replikationsbereit markiert. Wird der Merge-Agent das nächste Mal für das Abonnement ausgeführt, das der Ereigniskoordinator 112 verwendet, werden die Zeilen 2, 3 und 4 auf den Abonnenten heruntergeladen, und die Zeile 1 wird vom Abonnenten entfernt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [GETDATE &#40;Transact-SQL&#41;](/sql/t-sql/functions/getdate-transact-sql)   
  [Implementieren von Aufträgen](../../../ssms/agent/implement-jobs.md)   
  [Parametrisierte Zeilenfilter](parameterized-filters-parameterized-row-filters.md)  

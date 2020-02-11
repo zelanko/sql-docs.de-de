@@ -13,22 +13,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9ac9035865a472b4f6c019124f6b3fd337e27f77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62893169"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
-  Verwenden der **Spaltenkonvertierungsdetails** im Dialogfeld, um ausführlichere Konvertierungsinformationen für eine einzelne Spalte zu überprüfen. Diese Konvertierungsinformationen enthalten den Datentyp der Spalte an Quelle und Ziel sowie die Konvertierung, die der Assistent ausführt. Auf dieser Seite werden auch die Datentypzuordnungsdateien aufgelistet, anhand derer der Assistent die erforderlichen Datentypkonvertierungen bestimmt. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert diese Datentypzuordnungsdateien während des Setups.  
+  Im Dialogfeld **Spalten Konvertierungs Details** können Sie ausführliche Konvertierungs Informationen zu einer einzelnen Spalte überprüfen. Diese Konvertierungsinformationen enthalten den Datentyp der Spalte an Quelle und Ziel sowie die Konvertierung, die der Assistent ausführt. Auf dieser Seite werden auch die Datentypzuordnungsdateien aufgelistet, anhand derer der Assistent die erforderlichen Datentypkonvertierungen bestimmt. 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert diese Datentypzuordnungsdateien während des Setups.  
   
- **Um das Dialogfeld "Spaltenkonvertierungsdetails" zu öffnen.**  
+ **So öffnen Sie das Dialogfeld 'Spaltenkonvertierungsdetails'**  
   
-1.  Auf der **Datentypenfehler** auf der Seite die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten in der **Tabelle** wählen eine Tabelle.  
+1.  Wählen Sie auf der Seite **Datentyp Probleme überprüfen** des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistenten in der Liste **Tabelle** eine Tabelle aus.  
   
-2.  In der **datentypzuordnung** auflisten, doppelklicken Sie auf die Zeile, die die Spalte enthält, für die Sie Konvertierungsdetails anzeigen möchten.  
+2.  Doppelklicken Sie in der Liste **Datentyp Zuordnung** auf die Zeile, die die Spalte enthält, für die Sie die Konvertierungs Details anzeigen möchten.  
   
- Erfahren Sie mehr über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import / Export-Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
+ Weitere Informationen zum- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   

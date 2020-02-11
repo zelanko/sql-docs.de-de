@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211306"
 ---
 # <a name="view-job-activity"></a>Auftragsaktivitäten anzeigen
@@ -33,7 +33,7 @@ ms.locfileid: "68211306"
   
      [Sicherheit](#Security)  
   
--   **So zeigen Sie die Auftragsaktivität an mit**  
+-   **So zeigen Sie die Auftrags Aktivität an mit:**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -44,15 +44,15 @@ ms.locfileid: "68211306"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-job-activity"></a>So zeigen Sie die Auftragsaktivität an  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie in **Objekt-Explorer**eine Verbindung mit einer Instanz [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]von her, und erweitern Sie dann diese Instanz.  
   
 2.  Erweitern Sie **SQL Server-Agent**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **Auftragsaktivitätsmonitor** , und klicken Sie dann auf **Auftragsaktivitäten anzeigen**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Auftrags Aktivitäts Monitor** , und klicken Sie auf **Auftrag anzeigen**.  
   
 4.  Im **Auftragsaktivitätsmonitor**können Sie Details zu jedem Auftrag anzeigen, der für diesen Server definiert ist.  
   
@@ -79,6 +79,6 @@ ms.locfileid: "68211306"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_help_jobactivity &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_help_jobactivity &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-jobactivity-transact-sql).  
   
   

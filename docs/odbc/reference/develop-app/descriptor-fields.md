@@ -1,5 +1,5 @@
 ---
-title: Deskriptorfelder für | Microsoft-Dokumentation
+title: Deskriptorfelder | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106170"
 ---
 # <a name="descriptor-fields"></a>Deskriptorfelder
-Sicherheitsbeschreibungen enthalten *Header* und *Datensatz* Felder, die Spalten oder Parametern vollständig zu beschreiben.  
+Deskriptoren enthalten *Header* -und *Daten Satz* Felder, in denen Spalten oder Parameter vollständig beschrieben werden.  
   
- Ein Deskriptor enthält eine einzige Kopie eines der folgenden Headerfelder. Ändern ein Headerfeld wirkt sich auf alle Spalten oder Parametern.  
+ Ein Deskriptor enthält eine einzelne Kopie der folgenden Header Felder. Das Ändern eines Header Felds wirkt sich auf alle Spalten oder Parameter aus.  
   
 |||  
 |-|-|  
@@ -33,7 +33,7 @@ Sicherheitsbeschreibungen enthalten *Header* und *Datensatz* Felder, die Spalten
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Ein Deskriptor enthält null oder mehr deskriptordatensätze. Jeder Datensatz wird beschrieben, eine Spalte oder des Parameters, je nach Art des Deskriptors. Wenn eine neue Spalte oder Parameter gebunden ist, wird ein neuer Datensatz auf den Deskriptor hinzugefügt. Wenn eine Spalte oder Parameter aufgehoben wird, wird ein Datensatz aus der Deskriptor entfernt. Jeder Datensatz enthält eine einzige Kopie der folgenden Felder:  
+ Ein Deskriptor enthält keine oder mehrere deskriptordaten Sätze. Jeder Datensatz beschreibt eine Spalte oder einen Parameter, abhängig vom Typ des Deskriptors. Wenn eine neue Spalte oder ein neuer Parameter gebunden wird, wird dem Deskriptor ein neuer Datensatz hinzugefügt. Wenn eine Spalte oder ein Parameter nicht gebunden ist, wird ein Datensatz aus dem Deskriptor entfernt. Jeder Datensatz enthält eine einzelne Kopie der folgenden Felder:  
   
 |||  
 |-|-|  
@@ -54,9 +54,9 @@ Sicherheitsbeschreibungen enthalten *Header* und *Datensatz* Felder, die Spalten
 |SQL_DESC_LITERAL_PREFIX|SQL_DESC_UNSIGNED|  
 |SQL_DESC_LITERAL_SUFFIX|SQL_DESC_UPDATABLE|  
   
- Das Headerfeld einen Deskriptor entsprechen viele Anweisungsattribute. Diese Attribute durch einen Aufruf von **SQLSetStmtAttr** und Festlegen der entsprechenden deskriptorheaderfeld durch Aufrufen von **SQLSetDescField** haben den gleichen Effekt. Das gleiche gilt für **SQLGetStmtAttr** und **SQLGetDescField**, beide die gleiche Informationen abzurufen. Aufrufen der Funktionen der Anweisung anstelle der Deskriptor Funktionen hat den Vorteil, die ein Handle für die Sicherheitsbeschreibung nicht abgerufen werden sollen.  
+ Viele Anweisungs Attribute entsprechen dem Header Feld eines Deskriptors. Wenn diese Attribute durch einen Aufruf von **SQLSetStmtAttr** festgelegt werden und das entsprechende Deskriptorheaderfeld durch Aufrufen von **SQLSetDescField** festgelegt wird, hat dies die gleiche Wirkung. Das gleiche gilt für **SQLGetStmtAttr** und **SQLGetDescField**, von denen beide dieselben Informationen abrufen. Das Aufrufen der Anweisungs Funktionen anstelle der deskriptorfunktionen hat den Vorteil, dass ein Deskriptorhandle nicht abgerufen werden muss.  
   
- Die folgenden Headerfelder können durch Festlegen von Anweisungsattribute festgelegt werden:  
+ Die folgenden Header Felder können durch Festlegen der Anweisungs Attribute festgelegt werden:  
   
 |||  
 |-|-|  
@@ -64,7 +64,7 @@ Sicherheitsbeschreibungen enthalten *Header* und *Datensatz* Felder, die Spalten
 |SQL_DESC_ARRAY_STATUS_PTR|SQL_DESC_ROWS_PROCESSED_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR||  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Anzahl der Datensätze](../../../odbc/reference/develop-app/record-count.md)  
   

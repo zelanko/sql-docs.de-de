@@ -1,5 +1,5 @@
 ---
-title: Prädikat BETWEEN | Microsoft-Dokumentation
+title: Zwischen Prädikat | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 0cc7464b-d788-4720-98d8-411e1169185f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a0ac99729966acdcb03c2aab0175c34bba0c08a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138117"
 ---
 # <a name="between-predicate"></a>BETWEEN-Prädikat
-Die Syntax:  
+Die Syntax ist:  
   
 ```  
 expression1 BETWEEN expression2 AND expression3  
 ```  
   
- Gibt "true" nur, wenn *expression1* ist größer als oder gleich *expression2* und *expression1* ist kleiner als oder gleich *expression3*.  
+ gibt nur dann true zurück, wenn *expression1* größer als oder gleich *expression2* ist und *expression1* kleiner oder gleich *expression3*ist.  
   
- Die Semantik dieser Syntax ist für die Desktop-Datenbanktreiber und Microsoft Jet-Engine unterschiedlich. In der Microsoft Jet-SQL *expression2* kann größer sein als *expression3* , damit die Anweisung "true" zurückgeben werden nur dann, wenn *expression1* ist größer als oder gleich *expression3*, und *expression1* ist kleiner als oder gleich *expression2*.
+ Die Semantik dieser Syntax unterscheidet sich für die Desktop-Datenbanktreiber und das Microsoft Jet-Modul. In Microsoft Jet SQL kann *expression2* größer als *expression3* sein, damit die Anweisung nur dann true zurückgibt, wenn *expression1* größer oder gleich *expression3*und *expression1* kleiner oder gleich *expression2*ist.

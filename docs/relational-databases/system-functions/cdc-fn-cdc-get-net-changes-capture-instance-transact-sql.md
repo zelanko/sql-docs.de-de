@@ -1,5 +1,5 @@
 ---
-title: CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL) | Microsoft-Dokumentation
+title: CDC. fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,26 +17,26 @@ ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68043046"
 ---
-# <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_&lt;Capture_instance&gt; (Transact-SQL)
+# <a name="cdcfn_cdc_get_net_changes_ltcapture_instancegt-transact-sql"></a>CDC. fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Gibt eine nettoänderungszeile für jede Quellzeile geändert im angegebenen Bereich (Log Sequence Zahlen, LSN) zurück.  
+  Gibt eine netzwerkänderungzeile für jede Quellzeile zurück, die innerhalb des angegebenen LSN-Bereichs (Log Sequence Number) geändert wurde.  
   
- **Warten Sie, was einer LSN ist?** Jeder Datensatz in die [SQL Server-Transaktionsprotokoll](../logs/the-transaction-log-sql-server.md) wird eindeutig durch eine protokollfolgenummer (LSN) identifiziert. LSNs sind sortiert, sodass Wenn LSN2 größer als LSN1 ist, der durch den Protokolldatensatz von LSN2 beschriebene Änderung **nach** die Änderung durch den Protokolldatensatz beschrieben wird.  
+ **Warten Sie, was ist eine LSN?** Jeder Datensatz im [SQL Server Transaktionsprotokoll](../logs/the-transaction-log-sql-server.md) wird eindeutig durch eine Protokoll Folge Nummer (Log Sequence Number, LSN) identifiziert. LSNs sind so angeordnet, dass LSN2, wenn größer als LSN1 ist, die durch den Protokolldaten Satz, auf den LSN2 verwiesen wird, **nach** der durch die Protokolldaten Satz-LSN beschriebenen Änderung aufgetreten ist.  
   
- Die LSN eines Protokolldatensatzes, wo ein wichtiges Ereignis aufgetreten ist, kann zum Erstellen richtiger wiederherstellungssequenzen hilfreich sein. Da lsns eine bestimmte Reihenfolge aufweisen, können Sie diese auf Gleichheit und Ungleichheit vergleichen (d. h. \<, >, =, \<=, > =). Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
+ Die LSN eines Protokolldaten Satzes, bei dem ein erhebliches Ereignis aufgetreten ist, kann zum Erstellen richtiger Wiederherstellungs Sequenzen hilfreich sein. Da LSNs geordnet sind, können Sie Sie auf Gleichheit und Ungleichheit ( \<d. h., >, =, \<=, >=) vergleichen. Solche Vergleiche sind beim Erstellen von Wiederherstellungssequenzen hilfreich.  
   
- Wenn eine Quellzeile mehrere Änderungen während des LSN-Bereichs ist, wird eine einzelne Zeile, die den endgültigen Inhalt der Zeile wiedergibt, von der enumerationsfunktion, die unten beschriebenen zurückgegeben. Z. B. wenn eine Transaktion eine Zeile in der Quelltabelle fügt aus, und eine nachfolgende Transaktion innerhalb des LSN-Bereichs eine oder mehrere Spalten in dieser Zeile aktualisiert, gibt die Funktion nur **eine** Zeile, die den aktualisierten Spaltenwerten.  
+ Wenn eine Quellzeile mehrere Änderungen während des LSN-Bereichs aufweist, wird eine einzelne Zeile, die den endgültigen Inhalt der Zeile wieder gibt, von der unten beschriebenen Enumerationsfunktion zurückgegeben. Wenn eine Transaktion z. b. eine Zeile in die Quell Tabelle einfügt und eine nachfolgende Transaktion innerhalb des LSN-Bereichs eine oder mehrere Spalten in dieser Zeile aktualisiert, gibt die Funktion nur **eine** Zeile zurück, die die aktualisierten Spaltenwerte enthält.  
   
- Diese Enumerationsfunktion wird erstellt, wenn eine Quelltabelle für Change Data Capture aktiviert wird und die Nettonachverfolgung angegeben ist. Um die Nettonachverfolgung zu aktivieren, muss die Quelltabelle einen Primärschlüssel oder einen eindeutigen Index aufweisen. Der Funktionsname wird abgeleitet und verwendet das Format CDC. fn_cdc_get_net_changes_*Capture_instance*, wobei *Capture_instance* ist der Wert für die Aufzeichnungsinstanz angegeben wird, wenn die Quelltabelle wurde für Change Data Capture aktiviert. Weitere Informationen finden Sie unter [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Diese Enumerationsfunktion wird erstellt, wenn eine Quelltabelle für Change Data Capture aktiviert wird und die Nettonachverfolgung angegeben ist. Um die Nettonachverfolgung zu aktivieren, muss die Quelltabelle einen Primärschlüssel oder einen eindeutigen Index aufweisen. Der Funktionsname wird abgeleitet und verwendet das Format cdc. fn_cdc_get_net_changes_*capture_instance*, wobei *capture_instance* der Wert ist, der für die Aufzeichnungs Instanz angegeben wurde, als die Quell Tabelle für Change Data Capture aktiviert war. Weitere Informationen finden Sie unter [sys. sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,50 +53,50 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumente  
  *from_lsn*  
- Legen Sie die LSN, die den unteren Endpunkt des LSN-Bereichs, in das Resultset aufgenommen darstellt. *From_lsn* ist **("Binary(10)")** .  
+ Die LSN, die den unteren Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *from_lsn* ist **Binär (10)**.  
   
- Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn größer als oder gleich *From_lsn* in das Resultset enthalten sind.  
+ Im Resultset sind nur Zeilen in der Tabelle [CDC. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungs Tabelle mit einem Wert in __ $ start_lsn größer oder gleich *from_lsn* enthalten.  
   
  *to_lsn*  
- Legen Sie die LSN, die den oberen Endpunkt des LSN-Bereichs, in das Resultset aufgenommen darstellt. *To_lsn* ist **("Binary(10)")** .  
+ Die LSN, die den hohen Endpunkt des LSN-Bereichs darstellt, der im Resultset enthalten sein soll. *to_lsn* ist **Binär (10)**.  
   
- Nur Zeilen aus der [cdc.&#91; Capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderungstabelle mit einem Wert in __ $Start_lsn kleiner als oder gleich *From_lsn* gleich *To_lsn* in das Resultset enthalten sind.  
+ Im Resultset sind nur Zeilen in der Tabelle [CDC. &#91;capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) Änderung mit einem Wert in __ $ start_lsn kleiner oder gleich *from_lsn* oder *gleich to_lsn enthalten* .  
   
- *< Row_filter_option >* :: = {alle | alle mit der Maske | mit Merge}  
+ *<row_filter_option>* :: = {all | all with mask | all with Merge}  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Eine der folgenden Optionen ist möglich:  
   
- all  
- Gibt die LSN der letzten zeilenänderung sowie den Vorgang zum Anwenden der Zeile in den Metadatenspalten __ $Start_lsn und \_ \_$operation. Die Spalte \_ \_$Update_mask ist immer NULL.  
+ alle  
+ Gibt die LSN der letzten Änderung an der Zeile und den Vorgang zurück, der zum Anwenden der Zeile in den Metadatenspalten __ $ \_ \_start_lsn und $Operation erforderlich ist. Die Spalte \_ \_$Update _Mask ist immer NULL.  
   
  all with mask  
- Gibt die LSN der letzten zeilenänderung sowie den Vorgang zum Anwenden der Zeile in den Metadatenspalten __ $Start_lsn und \_ \_$operation. Darüber hinaus, wenn ein Update-Vorgang zurückgegeben (\_\_$operation = 4) im Update geänderten aufgezeichneten Spalten werden in den zurückgegebenen Wert markiert \_ \_$Update_mask.  
+ Gibt die LSN der letzten Änderung an der Zeile und den Vorgang zurück, der zum Anwenden der Zeile in den Metadatenspalten __ $ \_ \_start_lsn und $Operation erforderlich ist. Wenn ein Aktualisierungs Vorgang (\_\_$Operation = 4) zurückgibt, werden die aufgezeichneten Spalten, die im Update geändert wurden, in dem Wert \_ \_gekennzeichnet, der in $Update _Mask zurückgegeben wird.  
   
  all with merge  
- Gibt die LSN der letzten Zeilenänderung in den Metadatenspalten __$start_lsn zurück. Die Spalte \_ \_$operation werden einen von zwei Werten: 1 für löschen oder 5 als Hinweis dafür, dass der Vorgang erforderlich, um die Änderung zu übernehmen, entweder ein Einfügevorgang oder ein Update ist. Die Spalte \_ \_$Update_mask ist immer NULL.  
+ Gibt die LSN der letzten Zeilenänderung in den Metadatenspalten __$start_lsn zurück. Die Spalte \_ \_$Operation ist einer von zwei Werten: 1 für DELETE und 5, um anzugeben, dass der zum Anwenden der Änderung erforderliche Vorgang entweder eine Einfügung oder ein Update ist. Die Spalte \_ \_$Update _Mask ist immer NULL.  
   
  Da die Bestimmung des präzisen Vorgangs für eine bestimmte Änderung die Logik der Abfragekomplexität erhöht, soll diese Option die Abfrageleistung in den Fällen verbessern, in denen zur Angabe des für die Änderungsanwendung notwendigen Vorgangs nur darauf hingewiesen werden muss, dass es sich entweder um einen Einfügevorgang oder um einen Updatevorgang handelt, und die explizite Unterscheidung der beiden Vorgänge nicht notwendig ist. Diese Option eignet sich besonders für Zielumgebungen, in denen Mergevorgänge direkt verfügbar sind, z. B. in einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Umgebung.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|__$start_lsn|**binary(10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Z. B. bei einem Updatevorgang in der Quelltabelle zwei Spalten in zwei Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen, die jeweils mit der gleichen __ $Start_lsnvalue.|  
+|__$start_lsn|**Binär (10)**|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise ein Aktualisierungs Vorgang in der Quell Tabelle zwei Spalten in zwei Zeilen ändert, enthält die Änderungs Tabelle vier Zeilen, die jeweils denselben __ $ start_lsnvalue.|  
 |__$operation|**int**|Identifiziert den Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der erforderlich ist, um die Zeile der Änderungsdaten auf die Zieldatenquelle anzuwenden.<br /><br /> Wenn der Wert des row_filter_option-Parameters 'all' oder 'all with mask' ist, kann der Wert in dieser Spalte einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 4 = Aktualisieren<br /><br /> Wenn der Wert des row_filter_option-Parameters 'all with merge' ist, kann der Wert in dieser Spalte einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen|  
-|__$update_mask|**varbinary(128)**|Eine Bitmaske mit einem Bit, das den einzelnen aufgezeichneten Spalten entspricht, die für die Aufzeichnungsinstanz identifiziert wurden. Für diesen Wert sind alle definierten Bits auf 1 festgelegt, wenn __$operation = 1 oder 2 ist. Wenn \_ \_$operation = 3 oder 4, nur die bits, die geänderten Spalten entsprechen, die auf 1 festgelegt werden.|  
-|*\<erfasste Quelltabellenspalten>*|variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
+|__$update_mask|**varbinary (128)**|Eine Bitmaske mit einem Bit, das den einzelnen aufgezeichneten Spalten entspricht, die für die Aufzeichnungsinstanz identifiziert wurden. Für diesen Wert sind alle definierten Bits auf 1 festgelegt, wenn __$operation = 1 oder 2 ist. Wenn \_ \_$Operation = 3 oder 4, werden nur die Bits, die den geänderten Spalten entsprechen, auf 1 festgelegt.|  
+|*\<erfasste Quell Tabellen Spalten>*|Variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner. Für alle anderen Benutzer ist die SELECT-Berechtigung für alle aufgezeichneten Spalten in der Quelltabelle und, wenn eine Gatingrolle für die Aufzeichnungsinstanz definiert wurde, eine Mitgliedschaft in dieser Datenbankrolle erforderlich. Wenn der Aufrufer nicht über die Berechtigungen zum Anzeigen der Quelldaten verfügt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der angegebene LSN-Bereich nicht in den Zeitraum der Änderungsnachverfolgung der Aufzeichnungsinstanz fällt, gibt die Funktion Fehler 208 (Ungültiger Objektname) zurück.
 
- Änderungen an der eindeutige Bezeichner einer Zeile führt dazu, dass Fn_cdc_get_net_changes zum Anzeigen von des ersten UPDATE-Befehls mit einer DELETE, und klicken Sie dann stattdessen INSERT-Befehl.  Dieses Verhalten ist erforderlich, den Schlüssel vor und nach der Änderung zu verfolgen.
+ Änderungen am eindeutigen Bezeichner einer Zeile bewirken, dass fn_cdc_get_net_changes den anfänglichen Update-Befehl mit dem Befehl delete und then INSERT anzeigt.  Dieses Verhalten ist erforderlich, um den Schlüssel vor und nach der Änderung zu überprüfen.
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die Funktion `cdc.fn_cdc_get_net_changes_HR_Department` zum Melden von Änderungen an der Quelltabelle vorgenommenen `HumanResources.Department` während eines bestimmten Zeitintervalls.  
+ Im folgenden Beispiel wird die- `cdc.fn_cdc_get_net_changes_HR_Department` Funktion verwendet, um die Netto Änderungen zu melden, `HumanResources.Department` die an der Quell Tabelle während eines bestimmten Zeitintervalls vorgenommen wurden.  
   
- Zuerst wird die `GETDATE`-Funktion verwendet, um den Anfang des Zeitintervalls zu markieren. Nachdem mehrere DML-Anweisungen auf die Quelltabelle angewendet wurden, wird die `GETDATE`-Funktion erneut aufgerufen, um das Ende des Zeitintervalls zu identifizieren. Die Funktion [Sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) wird dann verwendet, um das Zeitintervall Change Data Capture Abfragebereichs begrenzt durch den LSN-Werten zuzuordnen. Schließlich wird die `cdc.fn_cdc_get_net_changes_HR_Department`-Funktion abgefragt, um die Nettoänderungen an der Quelltabelle für das Zeitintervall zu erhalten. Beachten Sie, dass die eingefügte und anschließend gelöschte Zeile nicht in dem von der Funktion zurückgegebenen Resultset aufgeführt wird. Der Grund dafür ist, dass eine in einem Abfragefenster zuerst hinzugefügte und dann gelöschte Zeile keine Nettoänderung in der Quelltabelle für das Intervall erzeugt. Bevor Sie dieses Beispiel ausführen, müssen Sie zunächst Beispiel B im ausführen [Sys. sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md).  
+ Zuerst wird die `GETDATE`-Funktion verwendet, um den Anfang des Zeitintervalls zu markieren. Nachdem mehrere DML-Anweisungen auf die Quelltabelle angewendet wurden, wird die `GETDATE`-Funktion erneut aufgerufen, um das Ende des Zeitintervalls zu identifizieren. Die [sys. fn_cdc_map_time_to_lsn](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) -Funktion wird dann verwendet, um das Zeitintervall einem Change Data Capture Abfrage Bereich zuzuordnen, der von LSN-Werten festgelegt wird. Schließlich wird die `cdc.fn_cdc_get_net_changes_HR_Department`-Funktion abgefragt, um die Nettoänderungen an der Quelltabelle für das Zeitintervall zu erhalten. Beachten Sie, dass die eingefügte und anschließend gelöschte Zeile nicht in dem von der Funktion zurückgegebenen Resultset aufgeführt wird. Der Grund dafür ist, dass eine in einem Abfragefenster zuerst hinzugefügte und dann gelöschte Zeile keine Nettoänderung in der Quelltabelle für das Intervall erzeugt. Bevor Sie dieses Beispiel ausführen, müssen Sie zuerst Beispiel B in [sys. sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)ausführen.  
   
 ```  
 USE AdventureWorks2012;  
@@ -125,11 +125,11 @@ SET @to_lsn = sys.fn_cdc_map_time_to_lsn('largest less than or equal', @end_time
 SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [sys. fn_cdc_map_time_to_lsn &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
+ [sys. sp_cdc_enable_table &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys. sp_cdc_help_change_data_capture &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   
   

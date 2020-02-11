@@ -20,30 +20,30 @@ ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104704"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriveConnect-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLDriverConnect** ist eine Alternative zum **SQLConnect**. Datenquellen, die als Argumente in drei weitere Verbindungsinformationen erfordern unterstützt **SQLConnect**, Dialogfelder, um die Benutzer alle Verbindungsinformationen, und Datenquellen, die nicht im System definiert sind Informationen.  
+ **SQLDriverConnect** ist eine Alternative zu **SQLCONNECT**. Es werden Datenquellen unterstützt, die mehr Verbindungsinformationen benötigen als die drei Argumente in **SQLCONNECT**, Dialogfeldern, um den Benutzer zur Eingabe von allen Verbindungsinformationen und Datenquellen aufzufordern, die nicht in den Systeminformationen definiert sind.  
   
- **SQLDriverConnect** bietet die folgenden Verbindungsattribute:  
+ **SQLDriverConnect** stellt die folgenden Verbindungs Attribute bereit:  
   
--   Herstellen einer Verbindungs mit einer Verbindungszeichenfolge mit dem-Datenquellennamen, eine oder mehrere Benutzer-IDs, eine oder mehrere Kennwörter und andere Informationen, die erforderlich sind von der Datenquelle an.  
+-   Stellen Sie eine Verbindung mithilfe einer Verbindungs Zeichenfolge her, die den Datenquellen Namen, eine oder mehrere Benutzer-IDs, ein oder mehrere Kenn Wörter und andere Informationen enthält, die von der Datenquelle benötigt werden.  
   
--   Herstellen einer Verbindungs mit einem Teil der Verbindungszeichenfolge oder keine zusätzlichen Informationen; der Treiber-Manager und der Treiber können jede in diesem Fall den Benutzer zur Verbindung auffordern.  
+-   Herstellen einer Verbindung mithilfe einer partiellen Verbindungs Zeichenfolge oder ohne zusätzliche Informationen in diesem Fall können der Treiber-Manager und der Treiber alle den Benutzer zur Eingabe von Verbindungsinformationen auffordern.  
   
--   Herstellen einer Verbindungs mit einer Datenquelle, die nicht in den Systeminformationen definiert ist. Wenn die Anwendung eine Teilverbindungszeichenfolge bereitstellt, kann der Treiber den Benutzer zur Verbindung auffordern.  
+-   Stellen Sie eine Verbindung mit einer Datenquelle her, die nicht in den Systeminformationen definiert ist. Wenn die Anwendung eine partielle Verbindungs Zeichenfolge bereitstellt, kann der Treiber den Benutzer zur Eingabe von Verbindungsinformationen auffordern.  
   
--   Herstellen einer Verbindungs mit einer Datenquelle mithilfe einer Verbindungszeichenfolge, die aus den Informationen in einer DSN-Datei erstellt.  
+-   Stellen Sie eine Verbindung mit einer Datenquelle her, indem Sie eine aus den Informationen in einer DSN-Datei erstellte Verbindungs Zeichenfolge verwenden.  
   
- Nachdem eine Verbindung hergestellt wurde, **SQLDriverConnect** gibt die vervollständigte Verbindungszeichenfolge zurück. Die Anwendung kann diese Zeichenfolge für die spätere verbindungsanforderungen verwenden. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
+ Nachdem eine Verbindung hergestellt wurde, gibt **SQLDriverConnect** die abgeschlossene Verbindungs Zeichenfolge zurück. Die Anwendung kann diese Zeichenfolge für nachfolgende Verbindungsanforderungen verwenden. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -65,228 +65,228 @@ SQLRETURN SQLDriverConnect(
  [Eingabe] Verbindungshandle.  
   
  *WindowHandle*  
- [Eingabe] Das Fensterhandle. Leitet die Anwendung kann das Handle des übergeordneten Fensters, falls zutreffend, oder ein null-Zeiger, wenn entweder das Fensterhandle ist nicht anwendbar oder **SQLDriverConnect** werden keine Dialogfelder angezeigt.  
+ Der Fenster handle. Die Anwendung kann ggf. das Handle des übergeordneten Fensters übergeben oder einen NULL-Zeiger, wenn entweder das Fenster Handle nicht anwendbar ist oder wenn **SQLDriverConnect** keine Dialogfelder enthält.  
   
  *InConnectionString*  
- [Eingabe] Eine vollständige Verbindungszeichenfolge (siehe die Syntax in "Kommentare"), ein Teil der Verbindungszeichenfolge oder eine leere Zeichenfolge.  
+ Der Eine vollständige Verbindungs Zeichenfolge (siehe die Syntax in "comments"), eine partielle Verbindungs Zeichenfolge oder eine leere Zeichenfolge.  
   
  *StringLength1*  
- [Eingabe] Länge der **InConnectionString*, in Zeichen, wenn die Zeichenfolge Unicode oder Bytes ist, wenn die Zeichenfolge ANSI oder DBCS ist.  
+ Der Länge von **InConnectionString*, in Zeichen, wenn die Zeichenfolge Unicode ist, oder bytes, wenn die Zeichenfolge ANSI oder DBCS ist.  
   
- *OutConnectionString*  
- [Ausgabe] Zeiger auf einen Puffer für die vollständige Verbindungszeichenfolge. Bei erfolgreicher Verbindung auf die Datenquelle enthält dieser Puffer vervollständigte Verbindungszeichenfolge. Anwendungen sollten mindestens 1.024 Zeichen für diesen Puffer zuordnen.  
+ *Outconnectionstring*  
+ Ausgeben Zeiger auf einen Puffer für die abgeschlossene Verbindungs Zeichenfolge. Bei erfolgreicher Verbindung mit der Ziel Datenquelle enthält dieser Puffer die abgeschlossene Verbindungs Zeichenfolge. Anwendungen sollten für diesen Puffer mindestens 1.024 Zeichen zuordnen.  
   
- Wenn *OutConnectionString* NULL ist, *StringLength2Ptr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer zurückgegeben verweist *OutConnectionString*.  
+ Wenn *outconnectionstring* gleich NULL ist, gibt *StringLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *outconnectionstring*verwiesen wird.  
   
- *BufferLength*  
- [Eingabe] Länge der **OutConnectionString* Puffers in Zeichen.  
+ *Pufferlänge*  
+ Der Länge des **outconnectionstring* -Puffers in Zeichen.  
   
  *StringLength2Ptr*  
- [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *OutConnectionString*. Die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich *Pufferlänge*, wird die Verbindungszeichenfolge zumeist im abgeschlossen \* *OutConnectionString* wird abgeschnitten, um  *BufferLength* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden \*soll, die in *outconnectionstring*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird die abgeschlossene Verbindungs Zeichenfolge in \* *outconnectionstring* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
  *DriverCompletion*  
- [Eingabe] Flag, die angibt, ob der Treiber-Manager oder die Treiber für Weitere Informationen zur Verbindung auffordern muss:  
+ Der Flag, das angibt, ob der Treiber-Manager oder Treiber weitere Verbindungsinformationen anfordern muss:  
   
- SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, sql_driver_complete_required lautet oder SQL_DRIVER_NOPROMPT.  
+ SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, SQL_DRIVER_COMPLETE_REQUIRED oder SQL_DRIVER_NOPROMPT.  
   
- (Weitere Informationen finden Sie auf "Kommentare".)  
+ (Weitere Informationen finden Sie unter "Kommentare").  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLDriverConnect** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, entweder ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit eine *fHandleType*SQL_HANDLE_DBC auf, und ein *hHandle* von *ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLDriverConnect** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLDriverConnect** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *ftortype* SQL_HANDLE_DBC und einem *hHandle* von *connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLDriverConnect** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *OutConnectionString* nicht groß genug war, um die komplette Verbindungszeichenfolge und zurückzugeben, damit die Zeichenfolge abgeschnitten wurde. Die Länge der Verbindungszeichenfolge den ungekürzten wird zurückgegeben, **StringLength2Ptr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01S00|Ungültiges Attribut der Verbindungszeichenfolge|Ein ungültiges Attribut-Schlüsselwort in der Verbindungszeichenfolge angegeben wurde (*InConnectionString*), aber der Treiber wurde trotzdem eine Verbindung mit der Datenquelle herstellen können. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01S02|Optionswert geändert|Der Treiber nicht den angegebenen Wert verweist die *ValuePtr* -Argument in **SQLSetConnectAttr** und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01S08|Fehler beim Speichern der Datei-DSN|Die Zeichenfolge in  *\*InConnectionString* enthalten eine **FILEDSN** -Schlüsselwort, aber die DSN-Datei wurde nicht gespeichert. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01S09|Ungültiges Schlüsselwort|(DM) die Zeichenfolge in  *\*InConnectionString* enthalten eine **SAVEFILE** Schlüsselwort, nicht jedoch eine **Treiber** oder **FILEDSN** Schlüsselwort. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08001|Client kann keine Verbindung herstellen.|Der Treiber konnte nicht zum Herstellen einer Verbindung mit der Datenquelle.|  
-|08002|Name der Verbindung verwendet|(DM) der angegebenen *ConnectionHandle* hatte bereits zum Herstellen einer Verbindung mit einer Datenquelle verwendet wurde und die Verbindung weiterhin geöffnet wurde.|  
-|08004|Der Server wies die Verbindung|Die Datenquelle die Herstellung der Verbindung festzulegenden Gründen zurückgewiesen Implementierung definiert.|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die der Treiber versucht wurde, eine Verbindung herstellen, die vor dem Fehler bei der **SQLDriverConnect** Verarbeitung von Funktion abgeschlossen.|  
-|28000|Ungültige Autorisierungsangabe|Die Benutzer-ID oder der autorisierungszeichenfolge oder beides als in der Verbindungszeichenfolge angegebenen (*InConnectionString*), von der Datenquelle definierte Einschränkungen verletzt.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*SzMessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY000|Allgemeiner Fehler: Ungültige Datei-dsn|(DM) die Zeichenfolge in **InConnectionString* ein Datei-DSN-Schlüsselwort enthalten, aber der Name der Datei ".DSN" wurde nicht gefunden.|  
-|HY000|Allgemeiner Fehler: So erstellen Sie Dateipuffer kann nicht|(DM) die Zeichenfolge in **InConnectionString* ein Datei-DSN-Schlüsselwort enthalten, aber die DSN-Datei wurde nicht gelesen werden.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber-Manager wurde kein Speicher erforderlich, um die Unterstützung der Ausführung oder den Abschluss der **SQLDriverConnect** Funktion.<br /><br /> Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY008|Der Vorgang wurde abgebrochen|Die asynchrone Verarbeitung wurde aktiviert, für die *ConnectionHandle*. Die Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, die [SQLCancelHandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) aufgerufen wurde, auf die *ConnectionHandle*, und klicken Sie dann die **SQLDriverConnect** Funktion wurde erneut aufgerufen, auf die *ConnectionHandle*.<br /><br /> Or **SQLDriverConnect** Funktion aufgerufen wurde, und bevor sie ausgeführt wurden, **SQLCancelHandle** aufgerufen wurde, auf die *ConnectionHandle* von einem anderen Thread in einem Multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine andere asynchron ausgeführten Funktion (nicht **SQLDriverConnect**) wurde aufgerufen, die *ConnectionHandle* und wurde noch ausgeführt, wenn die **SQLDriverConnect** Funktion wurde aufgerufen.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Die **SQLDriverConnect** Funktionsaufruf konnte nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *StringLength1* kleiner als 0 und nicht wurde SQL_NTS gleich.<br /><br /> (DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.|  
-|HY092|Ungültiger Attribut-/Optionsbezeichner|(DM) die *DriverCompletion* Argument war SQL_DRIVER_PROMPT, und die *WindowHandle* Argument wurde ein null-Zeiger.|  
-|HY110|Ungültiger Treiberabschluss.|(DM) der Wert für das Argument angegebene *DriverCompletion* war nicht gleich SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, SQL_DRIVER_NOPROMPT oder sql_driver_complete_required lautet.<br /><br /> (DM) Verbindungs-pooling aktiviert wurde, und der Wert für das Argument angegebene *DriverCompletion* war nicht gleich auf SQL_DRIVER_NOPROMPT.|  
-|HYC00|Optionales Feature nicht implementiert.|Der Treiber unterstützt nicht die Version des ODBC-Verhalten, die die Anwendung angefordert hat.|  
-|HYT00|Timeout abgelaufen|Des anmeldungstimeouts ist abgelaufen, bevor Sie die Verbindung mit der Datenquelle abgeschlossen. Das Timeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber, die der angegebene Name der Datenquelle für die Funktion nicht unterstützt.|  
-|IM002|Datenquelle wurde nicht gefunden und kein Standardtreiber angegeben|(DM) die Datenquelle in der Verbindungszeichenfolge angegebenen Namen (*InConnectionString*) wurde nicht gefunden. in den Systeminformationen und gab es keine Standardspezifikation für den Treiber.<br /><br /> (DM) ODBC-Quelle und Standard-Treiber Dateninformationen wurde nicht gefunden werden, in den Systeminformationen.|  
-|IM003|Angegebene Treiber konnte nicht geladen werden|(DM) der Treiber aufgeführt, die in der Angabe der Datenquelle in den Systeminformationen oder gemäß der **Treiber** Schlüsselwort wurde nicht gefunden oder konnte nicht in einem anderen Grund geladen werden.|  
-|IM004|Der Treiber **SQLAllocHandle** auf SQL_HANDLE_ENV auf Fehler|(DM) während der **SQLDriverConnect**, der Treiber-Manager Namens des Treibers **SQLAllocHandle** -Funktion mit einem *fHandleType* SQL_HANDLE_ENV und der Treiber zurückgegeben ein Fehler.|  
-|IM005|Der Treiber **SQLAllocHandle** auf SQL_HANDLE_DBC auf Fehler.|(DM) während der **SQLDriverConnect**, der Treiber-Manager Namens des Treibers **SQLAllocHandle** -Funktion mit einem *fHandleType* SQL_HANDLE_DBC auf, und der Treiber zurückgegeben ein Fehler.|  
-|IM006|Der Treiber **SQLSetConnectAttr** Fehler|(DM) während der **SQLDriverConnect**, der Treiber-Manager Namens des Treibers **SQLSetConnectAttr** -Funktion und der Treiber hat einen Fehler zurückgegeben.|  
-|IM007|Keine Datenquelle oder Treiber angegeben; Dialogfeld nicht zulässig|Kein Datenquellenname oder Treiber wurde in der Verbindungszeichenfolge angegeben und *DriverCompletion* SQL_DRIVER_NOPROMPT wurde.|  
-|IM008|Dialogfehler|Der Treiber hat versucht, seine Anmeldungsdialogfeld anzuzeigen und Fehler.<br /><br /> *WindowHandle* wurde ein null-Zeiger und *DriverCompletion* war nicht SQL_DRIVER_NO_PROMPT.|  
-|IM009|Kann nicht geladen werden Konvertierungs-DLL|Der Treiber konnte den Konvertierungs-DLL zu laden, die für die Datenquelle oder für die Verbindung angegeben wurde.|  
-|IM010|Der Datenquellenname ist zu lang.|(DM) war der Attributwert für das DSN-Schlüsselwort SQL_MAX_DSN_LENGTH Zeichen überschreitet.|  
-|IM011|Der Treibername ist zu lang.|(DM) das Attribut-Wert für die **Treiber** Schlüsselwort war länger als 255 Zeichen lang sein.|  
-|IM012|Syntaxfehler für DRIVER-Schlüsselwort|(DM) der Schlüsselwort-Wert-Paar, für die **Treiber** Schlüsselwort enthalten einen Syntaxfehler.<br /><br /> (DM) die Zeichenfolge in  *\*InConnectionString* enthalten eine **FILEDSN** -Schlüsselwort, aber die DSN-Datei enthielt keine **Treiber** Schlüsselwort oder einen  **DSN** Schlüsselwort.|  
-|IM014|Der angegebene DSN enthält einen architekturkonflikt zwischen dem Treiber und der Anwendung|(DM)-32-Bit-Anwendung verwendet einen DSN Herstellen einer Verbindung mit einer 64-Bit-Treiber. oder umgekehrt.|  
-|IM015|Fehler des Treibers SQLDriverConnect auf SQL_HANDLE_DBC_INFO_HANDLE|Ein Treiber SQL_ERROR zurück, der Treiber-Manager für die Anwendung SQL_ERROR zurück, und die Verbindung schlägt fehl.<br /><br /> Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN, finden Sie unter [Entwickeln von Verbindungspool Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
-|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
-|S1118|Asynchrone Benachrichtigung unterstützt Treiber nicht.|Wenn der Treiber die asynchrone Benachrichtigung nicht unterstützt, können nicht Sie SQL_ATTR_ASYNC_DBC_EVENT oder SQL_ATTR_ASYNC_DBC_RETCODE_PTR festlegen.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *outconnectionstring* war nicht groß genug, um die gesamte Verbindungs Zeichenfolge zurückzugeben, daher wurde die Verbindungs Zeichenfolge abgeschnitten. Die Länge der nicht abgeschnittene Verbindungs Zeichenfolge wird in **StringLength2Ptr*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01S00|Ungültiges Verbindungs Zeichen folgen Attribut.|In der Verbindungs Zeichenfolge (*InConnectionString*) wurde ein ungültiges Attribut Schlüsselwort angegeben, aber der Treiber war trotzdem in der Lage, eine Verbindung mit der Datenquelle herzustellen. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01s02 entsprechen|Optionswert geändert|Der Treiber hat den angegebenen Wert, auf den das *ValuePtr* -Argument in **SQLSetConnectAttr** zeigt, nicht unterstützt und einen ähnlichen Wert ersetzt. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01s08|Fehler beim Speichern des Datei-DSN|Die Zeichenfolge in * \*InConnectionString* enthielt ein **FILEDSN** -Schlüsselwort, aber die DSN-Datei wurde nicht gespeichert. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01s09|Ungültiges Schlüsselwort|(DM) die Zeichenfolge in * \*InConnectionString* enthielt ein **SaveFile** -Schlüsselwort, aber keinen **Treiber** oder ein **FILEDSN** -Schlüsselwort. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08001|Der Client kann keine Verbindung herstellen.|Der Treiber konnte keine Verbindung mit der Datenquelle herstellen.|  
+|08002|Der Verbindungs Name wird verwendet.|(DM) das angegebene *connectionHandle* wurde bereits verwendet, um eine Verbindung mit einer Datenquelle herzustellen, und die Verbindung war immer noch geöffnet.|  
+|08004|Der Server hat die Verbindung abgelehnt.|Die Datenquelle hat die Einrichtung der Verbindung aus Implementierungs Gründen abgelehnt.|  
+|08S01|Kommunikations Verbindungsfehler|Der Kommunikationslink zwischen dem Treiber und der Datenquelle, mit dem der Treiber eine Verbindung herzustellen versuchte, ist fehlgeschlagen, bevor die **SQLDriverConnect** -Funktion die Verarbeitung abgeschlossen hat.|  
+|28000|Ungültige Autorisierungs Spezifikation|Entweder die Benutzer-ID oder die Autorisierungs Zeichenfolge, wie in der Verbindungs Zeichenfolge (*InConnectionString*) angegeben, verstoßen die von der Datenquelle definierten Einschränkungen.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*szmessagetext* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY000|Allgemeiner Fehler: Ungültiger Datei-DSN.|(DM) die Zeichenfolge in **InConnectionString* enthielt ein FILEDSN-Schlüsselwort, aber der Name der DSN-Datei wurde nicht gefunden.|  
+|HY000|Allgemeiner Fehler: der Datei Puffer kann nicht erstellt werden.|(DM) die Zeichenfolge in **InConnectionString* enthielt ein FILEDSN-Schlüsselwort, aber die DSN-Datei war nicht lesbar.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber-Manager konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der **SQLDriverConnect** -Funktion erforderlich ist.<br /><br /> Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Die asynchrone Verarbeitung wurde für *connectionHandle*aktiviert. Die Funktion wurde aufgerufen, und vor der Ausführung der Ausführung wurde die [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md) für *connectionHandle*aufgerufen, und anschließend wurde die **SQLDriverConnect** -Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Oder die **SQLDriverConnect** -Funktion wurde aufgerufen, und vor Abschluss der Ausführung wurde **sqlcancelhandle** für *connectionHandle* von einem anderen Thread in einer Multithread-Anwendung aufgerufen.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine andere asynchron ausgeführte Funktion (nicht **SQLDriverConnect**) wurde für *connectionHandle* aufgerufen und wird noch ausgeführt, als die **SQLDriverConnect** -Funktion aufgerufen wurde.|  
+|HY013|Speicher Verwaltungsfehler|Der **SQLDriverConnect** -Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der für das Argument *StringLength1* angegebene Wert war kleiner als 0 (null) und war nicht gleich SQL_NTS.<br /><br /> (DM) der für das Argument *BufferLength* angegebene Wert war kleiner als 0 (null).|  
+|HY092|Ungültiger Attribut/Options Bezeichner|(DM) das *DriverCompletion* -Argument wurde SQL_DRIVER_PROMPT, und das *WindowHandle* -Argument war ein NULL-Zeiger.|  
+|HY110|Ungültiger Treiber Abschluss.|(DM) der für das Argument *DriverCompletion* angegebene Wert war nicht gleich SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, SQL_DRIVER_COMPLETE_REQUIRED oder SQL_DRIVER_NOPROMPT.<br /><br /> (DM) das Verbindungspooling wurde aktiviert, und der für das Argument *DriverCompletion* angegebene Wert war nicht gleich SQL_DRIVER_NOPROMPT.|  
+|HYC00|Optionales Feature nicht implementiert|Der Treiber unterstützt nicht die von der Anwendung angeforderte Version des ODBC-Verhaltens.|  
+|HYT00|Timeout abgelaufen|Der Anmeldungs Timeout Zeitraum ist abgelaufen, bevor die Verbindung mit der Datenquelle abgeschlossen wurde. Der Timeout Zeitraum wird mithilfe von **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT festgelegt.|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der Treiber, der dem angegebenen Datenquellen Namen entspricht, unterstützt die-Funktion nicht.|  
+|IM002|Die Datenquelle wurde nicht gefunden und es wurde kein Standardtreiber angegeben.|(DM) der in der Verbindungs Zeichenfolge (*InConnectionString*) angegebene Datenquellen Name wurde in den Systeminformationen nicht gefunden, und es gab keine Standardtreiber Spezifikation.<br /><br /> (DM) ODBC-Datenquelle und Standardtreiber Informationen konnten in den Systeminformationen nicht gefunden werden.|  
+|IM003|Der angegebene Treiber konnte nicht geladen werden.|(DM) der in der Datenquellen Spezifikation in den Systeminformationen oder durch das **Treiber** Schlüsselwort angegebene Treiber wurde nicht gefunden oder konnte aus einem anderen Grund nicht geladen werden.|  
+|IM004|Fehler beim Treiber " **sqlzugewiesene CHandle** " auf SQL_HANDLE_ENV|(DM) bei der **SQLDriverConnect**-Funktion hat der Treiber-Manager die **sqlzuweisung** -Funktion des Treibers mit einem *ftortype* von SQL_HANDLE_ENV aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
+|IM005|Fehler beim Treiber von **sqlzugewiesene CHandle** auf SQL_HANDLE_DBC.|(DM) bei der **SQLDriverConnect**-Funktion hat der Treiber-Manager die **sqlzuweisung** -Funktion des Treibers mit einem *ftortype* von SQL_HANDLE_DBC aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
+|IM006|Fehler bei ' **SQLSetConnectAttr** ' des Treibers.|(DM) während der **SQLDriverConnect**-Funktion hat der Treiber-Manager die **SQLSetConnectAttr** -Funktion des Treibers aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
+|IM007|Es wurden keine Datenquellen oder Treiber angegeben. Dialogfeld unzulässig|In der Verbindungs Zeichenfolge wurde kein Datenquellen Name oder-Treiber angegeben, und der *DriverCompletion* wurde SQL_DRIVER_NOPROMPT.|  
+|IM008|Dialog Fehler|Der Treiber hat versucht, das Anmelde Dialogfeld anzuzeigen und ist fehlgeschlagen.<br /><br /> *WindowHandle* war ein NULL-Zeiger, und der *DriverCompletion* war nicht SQL_DRIVER_NO_PROMPT.|  
+|IM009|Übersetzungs-DLL kann nicht geladen werden.|Der Treiber konnte die Übersetzungs-DLL, die für die Datenquelle oder die Verbindung angegeben wurde, nicht laden.|  
+|IM010|Der Datenquellen Name ist zu lang.|(DM) der Attribut Wert für das DSN-Schlüsselwort ist länger als SQL_MAX_DSN_LENGTH Zeichen.|  
+|IM011|Der Treiber Name ist zu lang.|(DM) der Attribut Wert für das **Treiber** Schlüsselwort ist länger als 255 Zeichen.|  
+|IM012|Syntax Fehler für Treiber Schlüsselwort|(DM) das Schlüsselwort-Wert-Paar für das **Treiber** Schlüsselwort enthielt einen Syntax Fehler.<br /><br /> (DM) die Zeichenfolge in * \*InConnectionString* enthielt ein **FILEDSN** -Schlüsselwort, aber die DSN-Datei enthielt kein **Treiber** Schlüsselwort oder **DSN** -Schlüsselwort.|  
+|IM014|Der angegebene DSN enthält einen Architektur Konflikt zwischen dem Treiber und der Anwendung.|(DM) 32-Bit-Anwendung verwendet einen DSN, der eine Verbindung mit einem 64-Bit-Treiber herstellt. oder umgekehrt.|  
+|IM015|Fehler des Treibers SQLDriverConnect auf SQL_HANDLE_DBC_INFO_HANDLE|Wenn ein Treiber SQL_ERROR zurückgibt, wird der Treiber-Manager SQL_ERROR an die Anwendung zurückgegeben, und die Verbindung wird nicht hergestellt.<br /><br /> Weitere Informationen zu SQL_HANDLE_DBC_INFO_TOKEN finden Sie unter [entwickeln von Verbindungs Pool Informationen in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
+|S1118|Der Treiber unterstützt keine asynchrone Benachrichtigung.|Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, können Sie SQL_ATTR_ASYNC_DBC_EVENT oder SQL_ATTR_ASYNC_DBC_RETCODE_PTR nicht festlegen.|  
   
 ## <a name="comments"></a>Kommentare  
- Eine Verbindungszeichenfolge weist die folgende Syntax:  
+ Eine Verbindungs Zeichenfolge weist die folgende Syntax auf:  
   
- *Verbindungszeichenfolge* :: = *leeren Zeichenfolge*[;] &#124; *Attribut*[;] &#124; *Attribut*; *Verbindungszeichenfolgen*  
+ *Connection-String* :: = *empty-string*[;] &#124; *Attribut*[;] &#124; *Attribut*; *Verbindungs Zeichenfolge*  
   
- *leeren Zeichenfolge* :: =*Attribut* :: = *-Schlüsselwort*=*Attribut / Wert* &#124; DRIVER = {[}] *Attribut-Wert*[}]  
+ *empty-string* :: =*Attribute* :: = *Attribute-Keywords*=*Attribute-Value* &#124; Driver = [{]*Attribut-Wert*[}]  
   
- *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
+ *Attribute-Keywords* :: = DSN &#124; UID &#124; pwd &#124; *Driver-defined-Attribute-Schlüsselwort*  
   
- *Attribut-Wert* :: = *-Zeichenfolge*  
+ *Attribute-Value* :: = *Zeichenfolge*  
   
- *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*  
+ *Driver-defined-Attribute-Keywords* :: = *Identifier*  
   
- in denen *zechenfolgen* ist NULL oder mehr Zeichen *Bezeichner* verfügt über eine oder mehrere Zeichen *-Schlüsselwort* wird nicht beachtet; *Attribut / Wert* möglicherweise beachtet werden soll; und der Wert von der **DSN** Schlüsselwort besteht nicht ausschließlich aus Leerzeichen.  
+ , wenn die *Zeichenfolge* NULL oder mehr Zeichen enthält. der *Bezeichner* weist mindestens ein Zeichen auf. beim *Attribut Schlüsselwort* wird die Groß-/Kleinschreibung nicht beachtet. bei *Attribut Wert* kann die Groß-/Kleinschreibung beachtet werden. und der Wert des **DSN** -Schlüssel Worts besteht nicht ausschließlich aus Leerzeichen.  
   
- Aufgrund Verbindung und Initialisierungsdateien Datei Grammatik, Schlüsselwörter und Attribut Werte, die die Zeichen enthalten **[]{}();? \*=! @** nicht eingeschlossen wird, mit Klammern sollte vermieden werden. Der Wert des der **DSN** -Schlüsselwort darf nicht ausschließlich aus Leerzeichen bestehen und darf keine führende Leerzeichen enthalten. Aufgrund der Grammatik der Systeminformationen, Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
+ Aufgrund der Verbindungs Zeichenfolge und der Initialisierungsdatei Grammatik, Schlüsselwörter und Attributwerte, die die Zeichen **[]{}(),;? = \*! @** ist nicht in geschweifte Klammern eingeschlossen. Der Wert des **DSN** -Schlüssel Worts darf nicht nur aus Leerzeichen bestehen und darf keine führenden Leerzeichen enthalten. Aufgrund der Grammatik der Systeminformationen dürfen Schlüsselwörter und Datenquellen Namen keinen umgekehrten Schrägstrich (\\) enthalten.  
   
- Anwendungen müssen keine geschweiften Klammern, um den Wert des Attributs, nach dem Hinzufügen der **Treiber** Schlüsselwort, wenn das Attribut ein Semikolon (;) enthält, in diesem Fall die geschweiften Klammern sind erforderlich. Wenn der Wert des Attributs, den der Treiber empfängt geschweifte Klammern enthält, wird der Treiber sollte nicht entfernt, aber sollten Teil der zurückgegebenen Verbindungszeichenfolge sein.  
+ Anwendungen müssen nach dem **Treiber** Schlüsselwort keine geschweiften Klammern um den Attribut Wert hinzufügen, es sei denn, das Attribut enthält ein Semikolon (;). in diesem Fall sind die geschweiften Klammern erforderlich. Wenn der vom Treiber empfangene Attribut Wert geschweifte Klammern enthält, sollte der Treiber Sie nicht entfernen, sondern muss Teil der zurückgegebenen Verbindungs Zeichenfolge sein.  
   
- Ein Zeichenfolgenwert DSN- oder Verbindungszeichenfolge in geschweifte Klammern eingeschlossen ({}), die keines der Zeichen enthält **[]{}();? \*=! @** wird an den Treiber unverändert übergeben. Wenn Sie diese Zeichen in einem Schlüsselwort zu verwenden, der Treiber-Manager einen Fehler zurück, bei der Arbeit mit Datei-DSNs jedoch übergibt die Verbindungszeichenfolge an den Treiber für reguläre Verbindungszeichenfolgen. Verwenden Sie eingebettete geschweiften Klammern in einem Schlüsselwortwert.  
+ Ein DSN-oder Verbindungs Zeichen folgen Wert, der{}in geschweifte Klammern () eingeschlossen ist, die ein beliebiges Zeichen **[]{}(),;? = \*! @** wird intakt an den Treiber übermittelt. Wenn diese Zeichen jedoch in einem Schlüsselwort verwendet werden, gibt der Treiber-Manager beim Arbeiten mit Datei-DSNs einen Fehler zurück, übergibt jedoch die Verbindungs Zeichenfolge an den Treiber für reguläre Verbindungs Zeichenfolgen. Vermeiden Sie die Verwendung eingebetteter Klammern in einem Schlüsselwort Wert.  
   
- Die Verbindungszeichenfolge kann eine beliebige Anzahl von treiberdefinierten Schlüsselwörter enthalten. Da die **Treiber** Schlüsselwort keine Informationen aus der Systeminformationen verwendet, der Treiber muss genügend Schlüsselwörter definieren, sodass ein Treiber mit einer Datenquelle, die ausschließlich anhand der Informationen in der Verbindungszeichenfolge eine Verbindung herstellen kann. (Weitere Informationen finden Sie unter "Treiber Richtlinien" weiter unten in diesem Abschnitt.) Der Treiber wird definiert, welche Schlüsselwörter für die Verbindung mit der Datenquelle erforderlich sind.  
+ Die Verbindungs Zeichenfolge kann eine beliebige Anzahl von Treiber definierten Schlüsselwörtern enthalten. Da das **Treiber** Schlüsselwort keine Informationen aus den Systeminformationen verwendet, muss der Treiber genügend Schlüsselwörter definieren, damit ein Treiber nur mit den Informationen in der Verbindungs Zeichenfolge eine Verbindung mit einer Datenquelle herstellen kann. (Weitere Informationen finden Sie unter "Treiber Richtlinien" weiter unten in diesem Abschnitt.) Der Treiber definiert, welche Schlüsselwörter erforderlich sind, um eine Verbindung mit der Datenquelle herzustellen.  
   
- Die folgende Tabelle beschreibt die Attributwerte von den **DSN**, **FILEDSN**, **Treiber**, **UID**, **PWD**, und **SAVEFILE** Schlüsselwörter.  
+ In der folgenden Tabelle werden die Attributwerte der Schlüsselwörter **DSN**, **FILEDSN**, **Driver**, **UID**, **pwd**und **SaveFile** beschrieben.  
   
-|Schlüsselwort|Attribut-Wert-Beschreibung|  
+|Schlüsselwort|Attribut Wert Beschreibung|  
 |-------------|---------------------------------|  
-|**DSN**|Name einer Datenquelle, wie vom **SQLDataSources** oder das Dialogfeld Quellen von Daten von **SQLDriverConnect**.|  
-|**DATEI-DSN**|Name einer Datei ".DSN" für die Datenquelle aus, die eine Verbindungszeichenfolge erstellt wird. Diese Datenquellen werden von Dateidatenquellen bezeichnet.|  
-|**TREIBER**|Beschreibung des Treibers, vom dem **SQLDrivers** Funktion. Z. B. Rdb oder SQL Server.|  
-|**UID**|Eine Benutzer-ID|  
-|**PWD**|Das Kennwort für die Benutzer-ID oder eine leere Zeichenfolge, wenn es kein Kennwort für die Benutzer-ID (PWD =;).|  
-|**SAVEFILE**|Der Dateiname, der eine DSN-Datei, in der die Attributwerte des Schlüsselwörter, die verwendet werden, Herstellen der Verbindungs vorhanden, erfolgreichen gespeichert werden soll.|  
+|**DSN**|Der Name einer Datenquelle, wie von **SQLDataSources** oder dem Dialogfeld Datenquellen von **SQLDriverConnect**zurückgegeben.|  
+|**FILEDSN**|Der Name einer DSN-Datei, aus der eine Verbindungs Zeichenfolge für die Datenquelle erstellt wird. Diese Datenquellen werden als Datei Datenquellen bezeichnet.|  
+|**Trei**|Die Beschreibung des Treibers, wie von der **SQLDrivers** -Funktion zurückgegeben. Beispielsweise RDB oder SQL Server.|  
+|**UID**|Eine Benutzer-ID.|  
+|**PWD**|Das Kennwort für die Benutzer-ID oder eine leere Zeichenfolge, wenn kein Kennwort für die Benutzer-ID (PWD =;) vorhanden ist.|  
+|**SaveFile**|Der Dateiname einer DSN-Datei, in der die Attributwerte von Schlüsselwörtern, die zum Herstellen der aktuellen, erfolgreichen Verbindung verwendet werden, gespeichert werden sollen.|  
   
- Weitere Informationen dazu, wie eine Anwendung eine Datenquelle oder Treiber auswählt, finden Sie unter [Auswählen einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ Informationen dazu, wie eine Anwendung eine Datenquelle oder einen Treiber auswählt, finden Sie unter [Auswählen einer Datenquelle oder eines Treibers](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
- Wenn keine Schlüsselwörter in der Verbindungszeichenfolge wiederholt werden, verwendet der Treiber den Wert mit dem ersten Vorkommen des Schlüsselworts. Wenn die **DSN** und **Treiber** Schlüsselwörter in derselben Verbindungszeichenfolge enthalten sind, die der Treiber-Manager und den Treiber verwenden, welches Schlüsselwort an erster Stelle steht.  
+ Wenn Schlüsselwörter in der Verbindungs Zeichenfolge wiederholt werden, verwendet der Treiber den Wert, der mit dem ersten Vorkommen des Schlüssel Worts verknüpft ist. Wenn die **DSN** -und **Treiber** Schlüsselwörter in derselben Verbindungs Zeichenfolge enthalten sind, wird der Treiber-Manager und der Treiber zuerst das jeweils angezeigte Schlüsselwort verwenden.  
   
- Die **FILEDSN** und **DSN** Schlüsselwörter schließen sich gegenseitig: welches Schlüsselwort an erster Stelle steht, wird verwendet und diejenige, die zweite angezeigt wird, wird ignoriert. Die **FILEDSN** und **Treiber** Schlüsselwörter, auf der anderen Seite einander nicht. Wenn irgend eines Schlüsselwortes angezeigt wird, in einer Verbindungszeichenfolge mit **FILEDSN**, und klicken Sie dann den Wert des Attributs, der das Schlüsselwort in der Verbindungszeichenfolge den Wert des Attributs des derselben Schlüsselworts in der DSN-Datei verwendet wird.  
+ Die Schlüsselwörter " **FILEDSN** " und " **DSN** " schließen sich gegenseitig aus: welches Schlüsselwort zuerst angezeigt wird, wird verwendet, und das zweite wird ignoriert. Die Schlüsselwörter " **FILEDSN** " und " **Driver** " hingegen schließen sich nicht gegenseitig aus. Wenn ein beliebiges Schlüsselwort in einer Verbindungs Zeichenfolge mit **FILEDSN**angezeigt wird, wird der Attribut Wert des Schlüssel Worts in der Verbindungs Zeichenfolge anstelle des Attribut Werts desselben Schlüssel Worts in der DSN-Datei verwendet.  
   
- Wenn die **FILEDSN** -Schlüsselwort wird verwendet, die Schlüsselwörter, die in einer DSN-Datei angegeben werden verwendet, um eine Verbindungszeichenfolge zu erstellen. (Weitere Informationen finden Sie unter "Datei Data Sources," weiter unten in diesem Abschnitt.) Die **UID** Schlüsselwort ist optional; eine DSN-Datei kann nur mit erstellt werden die **Treiber** Schlüsselwort. Die **PWD** Schlüsselwort wird nicht in einer DSN-Datei gespeichert. Das Standardverzeichnis für das Speichern und Laden von DSN-Datei werden eine Kombination von angegebene Pfad **CommonFileDir** in "hkey_local_machine\software\microsoft\" Windows\CurrentVersion und "ODBC\DataSources". (Würde CommonFileDir "C:\Program Files\Common Files", würde das Standardverzeichnis "C:\Programme\Microsoft c:\Programme\Gemeinsame Dateien\ODBC\Data Sources" sein.)  
+ Wenn das **FILEDSN** -Schlüsselwort verwendet wird, werden die in einer DSN-Datei angegebenen Schlüsselwörter verwendet, um eine Verbindungs Zeichenfolge zu erstellen. (Weitere Informationen finden Sie unter "Datei Datenquellen" weiter unten in diesem Abschnitt.) Das **UID** -Schlüsselwort ist optional. eine DSN-Datei kann nur mit dem **Treiber** Schlüsselwort erstellt werden. Das **pwd** -Schlüsselwort wird nicht in einer DSN-Datei gespeichert. Das Standardverzeichnis zum Speichern und Laden einer DSN-Datei ist eine Kombination aus dem Pfad, der von **commonfiledir** in HKEY_LOCAL_MACHINE \software\microsoft\ Windows\CurrentVersion und "odbc\datasources" angegeben wird. (Wenn commonfiledir "c:\Programme\Gemeinsame Dateien" lauten, lautet das Standardverzeichnis "c:\Programme\Gemeinsame Dateien\ODBC\Data Sources".)  
   
 > [!NOTE]  
->  Eine DSN-Datei kann bearbeitet werden, direkt durch Aufrufen der [SQLReadFileDSN](../../../odbc/reference/syntax/sqlreadfiledsn-function.md) und [SQLWriteFileDSN](../../../odbc/reference/syntax/sqlwritefiledsn-function.md) Funktionen in die Installationsprogramm-DLL.  
+>  Eine DSN-Datei kann direkt bearbeitet werden, indem die Funktionen [sqllofiledsn](../../../odbc/reference/syntax/sqlreadfiledsn-function.md) und [sqlschreitefiledsn](../../../odbc/reference/syntax/sqlwritefiledsn-function.md) in der Installationsprogramm-dll aufgerufen werden.  
   
- Wenn die **SAVEFILE** -Schlüsselwort wird verwendet, die Attributwerte im Herstellen der Verbindungs vorhanden, erfolgreichen verwendeten Schlüsselwörter werden als eine DSN-Datei mit dem Namen, der den Wert des Attributs gespeichert der **SAVEFILE** Schlüsselwort. Die **SAVEFILE** -Schlüsselwort muss verwendet werden, in Verbindung mit der **Treiber** -Schlüsselwort, das **FILEDSN** -Schlüsselwort oder für beide oder die Funktion gibt SQL_SUCCESS_WITH_INFO mit SQLSTATE 01S09 (ungültiges Schlüsselwort). Die **SAVEFILE** Schlüsselwort muss verwendet werden, bevor Sie die **Treiber** -Schlüsselwort in der Verbindungszeichenfolge oder die Ergebnisse nicht definiert.  
+ Wenn das Schlüsselwort " **SaveFile** " verwendet wird, werden die Attributwerte von Schlüsselwörtern, die zum Herstellen der aktuellen, erfolgreichen Verbindung verwendet werden, als DSN-Datei mit dem Namen des Attribut Werts des **SaveFile** -Schlüssel Worts gespeichert. Das Schlüsselwort " **SaveFile** " muss in Verbindung mit dem **Treiber** Schlüsselwort, dem **FILEDSN** -Schlüsselwort oder beidem verwendet werden, oder die Funktion gibt SQL_SUCCESS_WITH_INFO mit SQLSTATE 01s09 (ungültiges Schlüsselwort) zurück. Das Schlüsselwort " **SaveFile** " muss vor dem **Treiber** Schlüsselwort in der Verbindungs Zeichenfolge angezeigt werden, oder die Ergebnisse sind nicht definiert.  
   
-## <a name="driver-manager-guidelines"></a>Treiber-Manager-Richtlinien  
- Der Treiber-Manager erstellt eine Verbindungszeichenfolge für die Übergabe an den Treiber in der *InConnectionString* Argument des Treibers **SQLDriverConnect** Funktion. Der Treiber-Manager ändert nicht die *InConnectionString* Argument übergeben, von der Anwendung.  
+## <a name="driver-manager-guidelines"></a>Leitfaden für Treiber-Manager  
+ Der Treiber-Manager erstellt eine Verbindungs Zeichenfolge, die an den Treiber im *InConnectionString* -Argument der **SQLDriverConnect** -Funktion des Treibers übergeben werden soll. Der Treiber-Manager ändert das *InConnectionString* -Argument nicht, das von der Anwendung an ihn übermittelt wurde.  
   
- Die Aktion des Treiber-Managers ist auf Grundlage des Werts, der die *DriverCompletion* Argument:  
+ Die Aktion des Treiber-Managers basiert auf dem Wert des *DriverCompletion* -Arguments:  
   
--   SQL_DRIVER_PROMPT: Wenn die Verbindungszeichenfolge entweder keine der **Treiber**, **DSN**, oder **FILEDSN** Schlüsselwort, das der Treiber-Manager zeigt das Dialogfeld "Datenquellen". Erstellt eine Verbindungszeichenfolge aus der Name der Datenquelle vom Dialogfeld zurückgegeben und allen anderen Schlüsselwörtern, die von der Anwendung übergeben. Wenn der Name der Datenquelle zurückgegeben werden, indem Sie das Dialogfeld leer ist, gibt der Treiber-Manager die Schlüsselwort-Wert-Paar DSN = Default. (Dieses Dialogfeld wird eine Datenquelle mit dem Namen "Default" nicht angezeigt.)  
+-   SQL_DRIVER_PROMPT: Wenn die Verbindungs Zeichenfolge weder das **Treiber**-, **DSN**-oder **FILEDSN** -Schlüsselwort enthält, zeigt der Treiber-Manager das Dialogfeld Datenquellen an. Er erstellt eine Verbindungs Zeichenfolge aus dem Datenquellen Namen, der vom Dialogfeld zurückgegeben wird, und allen anderen, von der Anwendung an ihn über gebenden Schlüsselwörtern. Wenn der vom Dialogfeld zurückgegebene Datenquellen Name leer ist, gibt der Treiber-Manager das Schlüsselwort-Wert-Paar DSN = default an. (In diesem Dialogfeld wird keine Datenquelle mit dem Namen "Default" angezeigt.)  
   
--   SQL_DRIVER_COMPLETE oder sql_driver_complete_required lautet: Wenn von der Anwendung angegebene Verbindungszeichenfolge enthält die **DSN** -Schlüsselwort, der Treiber-Manager kopiert die Verbindungszeichenfolge, die von der Anwendung angegeben. Anderenfalls wird die gleichen Aktionen wie beim *DriverCompletion* SQL_DRIVER_PROMPT ist.  
+-   SQL_DRIVER_COMPLETE oder SQL_DRIVER_COMPLETE_REQUIRED: Wenn die von der Anwendung angegebene Verbindungs Zeichenfolge das **DSN** -Schlüsselwort enthält, kopiert der Treiber-Manager die von der Anwendung angegebene Verbindungs Zeichenfolge. Andernfalls werden die gleichen Aktionen wie bei SQL_DRIVER_PROMPT von " *DriverCompletion* " durchführt.  
   
--   SQL_DRIVER_NOPROMPT: Der Treiber-Manager kopiert die Verbindungszeichenfolge, die von der Anwendung angegeben.  
+-   SQL_DRIVER_NOPROMPT: der Treiber-Manager kopiert die von der Anwendung angegebene Verbindungs Zeichenfolge.  
   
- Wenn von der Anwendung angegebene Verbindungszeichenfolge enthält die **Treiber** -Schlüsselwort, der Treiber-Manager kopiert die Verbindungszeichenfolge, die von der Anwendung angegeben.  
+ Wenn die von der Anwendung angegebene Verbindungs Zeichenfolge das **Treiber** Schlüsselwort enthält, kopiert der Treiber-Manager die von der Anwendung angegebene Verbindungs Zeichenfolge.  
   
- Verwenden die Verbindungszeichenfolge, die sie erstellt hat, der Treiber-Manager bestimmt den zu verwendenden Treiber eine Verbindung mit diesen Treiber her und übergibt die Verbindungszeichenfolge, die sie erstellt hat, an den Treiber; Weitere Informationen zur Interaktion zwischen der Treiber-Manager und der Treiber finden Sie im Abschnitt "Kommentare" im [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md). Wenn die Verbindungszeichenfolge keine der **Treiber** -Schlüsselwort, bestimmt der Treiber-Manager, welcher Treiber wie folgt verwenden:  
+ Mithilfe der erstellten Verbindungs Zeichenfolge bestimmt der Treiber-Manager den zu verwendenden Treiber, stellt eine Verbindung mit diesem Treiber her und übergibt die erstellte Verbindungs Zeichenfolge an den Treiber. Weitere Informationen zur Interaktion des Treiber-Managers und des Treibers finden Sie im Abschnitt "Kommentare" in der [SQLCONNECT-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md). Wenn die Verbindungs Zeichenfolge das **Treiber** Schlüsselwort nicht enthält, bestimmt der Treiber-Manager den zu verwendenden Treiber wie folgt:  
   
-1.  Wenn die Verbindungszeichenfolge enthält die **DSN** -Schlüsselwort, ruft der Treiber-Manager ab, der Treiber die Datenquelle die Systeminformationen zugeordnet.  
+1.  Wenn die Verbindungs Zeichenfolge das **DSN** -Schlüsselwort enthält, ruft der Treiber-Manager den Treiber ab, der der Datenquelle aus den Systeminformationen zugeordnet ist.  
   
-2.  Wenn die Verbindungszeichenfolge keine der **DSN** -Schlüsselwort oder die Datenquelle nicht gefunden wird, ruft der Treiber-Manager ab, der Treiber die Standarddatenquelle aus den Systeminformationen zugeordnet. (Weitere Informationen finden Sie unter [Standard Unterschlüssel](../../../odbc/reference/install/default-subkey.md).) Der Treiber-Manager ändert den Wert für die **DSN** Schlüsselwort in der Verbindungszeichenfolge auf "Standard".  
+2.  Wenn die Verbindungs Zeichenfolge das **DSN** -Schlüsselwort nicht enthält oder die Datenquelle nicht gefunden wird, ruft der Treiber-Manager den Treiber ab, der der Standarddaten Quelle aus den Systeminformationen zugeordnet ist. (Weitere Informationen finden Sie unter [Standard Unterschlüssel](../../../odbc/reference/install/default-subkey.md).) Der Treiber-Manager ändert den Wert des **DSN** -Schlüssel Worts in der Verbindungs Zeichenfolge in "Default".  
   
-3.  Wenn die **DSN** Schlüsselwort in der Verbindungszeichenfolge auf "Standard" festgelegt ist, wird der Treiber-Manager ruft des Treibers die Standarddatenquelle aus den Systeminformationen zugeordnet.  
+3.  Wenn das **DSN** -Schlüsselwort in der Verbindungs Zeichenfolge auf "Default" festgelegt ist, ruft der Treiber-Manager den Treiber ab, der der Standarddaten Quelle aus den Systeminformationen zugeordnet ist.  
   
-4.  Wenn die Datenquelle wurde nicht gefunden, und die Standarddatenquelle wurde nicht gefunden, gibt der Treiber-Manager SQL_ERROR mit SQLSTATE IM002 (Datenquelle wurde nicht gefunden und kein Standardtreiber angegeben).  
+4.  Wenn die Datenquelle nicht gefunden wird und die Standarddaten Quelle nicht gefunden wird, gibt der Treiber-Manager SQL_ERROR mit SQLSTATE IM002 zurück (die Datenquelle wurde nicht gefunden, und es wurde kein Standardtreiber angegeben).  
   
 ## <a name="file-data-sources"></a>Dateidatenquellen  
- Wenn die Verbindungszeichenfolge durch die Anwendung im Aufruf angegeben **SQLDriverConnect** enthält die **FILEDSN** -Schlüsselwort, und dieses Schlüsselwort wird nicht ersetzt, entweder durch die **DSN**oder **Treiber** -Schlüsselwort, und klicken Sie dann auf den Treiber-Manager erstellt eine Verbindungszeichenfolge, die anhand der Informationen in die DSN-Datei und die *InConnectionString* Argument. Der Treiber-Manager wird wie folgt aus:  
+ Wenn die von der Anwendung im Befehl **SQLDriverConnect** angegebene Verbindungs Zeichenfolge das **FILEDSN** -Schlüsselwort enthält und dieses Schlüsselwort nicht durch das **DSN** -oder **Treiber** Schlüsselwort ersetzt wird, erstellt der Treiber-Manager mithilfe der Informationen in der DSN-Datei und des *InConnectionString* -Arguments eine Verbindungs Zeichenfolge. Der Treiber-Manager wird wie folgt fortgesetzt:  
   
-1.  Überprüft, ob der Dateiname, der die DSN-Datei gültig ist. Wenn nicht der Fall, SQL_ERROR mit SQLSTATE IM014 wird (Ungültiger Name der Datei-DSN). Der Dateiname ist eine leere Zeichenfolge ("") und SQL_DRIVER_NOPROMPT ist nicht angegeben wird, und klicken Sie dann die **File-Open** Dialogfeld wird angezeigt. Wenn der Dateiname einen gültigen Pfad aber kein Dateiname oder ein ungültiger Dateiname enthält und SQL_DRIVER_NOPROMPT nicht angegeben ist, und klicken Sie dann die **File-Open** Dialogfeld wird angezeigt, mit dem aktuellen Verzeichnis im Dateinamen angegebene festgelegt. Der Dateiname ist eine leere Zeichenfolge ("") oder der Dateiname enthält einen gültigen Pfad aber kein Dateiname oder ein ungültiger Dateiname, SQL_DRIVER_NOPROMPT angegeben wird, und dann wird SQL_ERROR mit SQLSTATE IM014 zurückgegeben (Ungültiger Name der Datei-DSN).  
+1.  Überprüft, ob der Dateiname der DSN-Datei gültig ist. Wenn dies nicht der Fall ist, wird SQL_ERROR mit SQLSTATE IM014 (Ungültiger Name des Datei-DSN) zurückgegeben. Wenn der Dateiname eine leere Zeichenfolge ("") ist und SQL_DRIVER_NOPROMPT nicht angegeben ist, wird das Dialogfeld **Datei öffnen** angezeigt. Wenn der Dateiname einen gültigen Pfad, aber keinen Dateinamen oder einen ungültigen Dateinamen enthält und SQL_DRIVER_NOPROMPT nicht angegeben ist, wird das Dialogfeld **Datei öffnen** angezeigt, in dem das aktuelle Verzeichnis auf das im Dateinamen angegebene Verzeichnis festgelegt ist. Wenn der Dateiname eine leere Zeichenfolge ("") ist oder der Dateiname einen gültigen Pfad, aber keinen Dateinamen oder einen ungültigen Dateinamen enthält, und SQL_DRIVER_NOPROMPT angegeben ist, wird SQL_ERROR mit SQLSTATE IM014 (Ungültiger Name der Datei-DSN) zurückgegeben.  
   
-2.  Liest alle Schlüsselwörter im Abschnitt [ODBC] die DSN-Datei an. Wenn die **Treiber** Schlüsselwort ist nicht vorhanden, wird SQL_ERROR mit SQLSTATE IM012 (Driver-Schlüsselwort Syntaxfehler), mit Ausnahme von, in denen die DSN-Datei ist Dateidatenquelle und enthält daher nur die **DSN** Schlüsselwort.  
+2.  Liest alle Schlüsselwörter im Abschnitt [ODBC] der DSN-Datei. Wenn das **Driver** -Schlüsselwort nicht vorhanden ist, wird SQL_ERROR mit SQLSTATE IM012 (Treiber-Schlüsselwort Syntax Fehler) zurückgegeben, es sei denn, die DSN-Datei ist nicht mehr verfügbar und enthält daher nur das **DSN** -Schlüsselwort.  
   
-     Wenn die Datei als Datenquelle Dateidatenquelle ist, liest der Treiber-Manager den Wert der **DSN** Schlüsselwort und nach Bedarf für die Datenquelle Benutzer oder Systemkonto verweist der Dateidatenquelle verbindet. Schritte 3 bis 5 werden nicht ausgeführt.  
+     Wenn die Datei Datenquelle nicht Share fähig ist, liest der Treiber-Manager den Wert des **DSN** -Schlüssel Worts und stellt nach Bedarf eine Verbindung mit der Benutzer-oder Systemdaten Quelle her, auf die von der nicht Share baren Datei Datenquelle verwiesen wird. Die Schritte 3 bis 5 werden nicht ausgeführt.  
   
-3.  Erstellt eine Verbindungszeichenfolge für den Treiber an. Die Verbindungszeichenfolge der Treiber ist die Kombination der Schlüsselwörter, die in der Datei ".DSN" angegeben und in die ursprüngliche Verbindungszeichenfolge für die Anwendung angegeben. Regeln für die Erstellung der Schlüsselwörter, die sich überlappen die Treiber-Verbindungszeichenfolge werden wie folgt aus:  
+3.  Erstellt eine Verbindungs Zeichenfolge für den Treiber. Die Verbindungs Zeichenfolge des Treibers ist die Vereinigung der in der DSN-Datei angegebenen Schlüsselwörter und der in der ursprünglichen Anwendungs Verbindungs Zeichenfolge angegebenen Schlüsselwörter. Die Regeln für die Erstellung der Treiber Verbindungs Zeichenfolge, in der Schlüsselwörter überlappen, lauten wie folgt:  
   
-    -   Wenn die **Treiber** Schlüsselwort vorhanden ist, in der Verbindungszeichenfolge der Anwendung und den Treibern, die gemäß der **Treiber** -Schlüsselwörter sind nicht in die DSN-Datei und die Verbindungszeichenfolge der Anwendung, und klicken Sie dann die Treiberinformationen in der Datei ".DSN" wird ignoriert, und die Treiberinformationen in der Verbindungszeichenfolge der Anwendung verwendet. Wenn die Treiber, wird angegeben die **Treiber** Schlüsselwort entsprechen den in der DSN-Datei und die Verbindungszeichenfolge der Anwendung, und wobei alle Schlüsselwörter überlappen, in der Verbindungszeichenfolge der Anwendung angegeben haben Vorrang vor denen in der DSN-Datei angegeben.  
+    -   Wenn das **Treiber** Schlüsselwort in der Verbindungs Zeichenfolge der Anwendung vorhanden ist und die von den **Treiber** Schlüsselwörtern angegebenen Treiber in der DSN-Datei und der Verbindungs Zeichenfolge der Anwendung nicht identisch sind, werden die Treiber Informationen in der DSN-Datei ignoriert und die Treiber Informationen in der Anwendungs Verbindungs Zeichenfolge verwendet. Wenn die vom **Treiber** Schlüsselwort angegebenen Treiber in der DSN-Datei und in der Verbindungs Zeichenfolge der Anwendung identisch sind, wenn sich alle Schlüsselwörter überlappen, haben diejenigen, die in der Anwendungs Verbindungs Zeichenfolge angegeben sind, Vorrang vor den in der DSN-Datei angegebenen.  
   
-    -   In der neuen Verbindungszeichenfolge die **FILEDSN** Schlüsselwort wird gelöscht.  
+    -   In der neuen Verbindungs Zeichenfolge wird das **FILEDSN** -Schlüsselwort gelöscht.  
   
-4.  Lädt den Treiber anhand der im Registrierungseintrag HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST an. INI\\< Treibername\>\Driver, in denen \<Treibername > wird angegeben, indem die **Treiber** Schlüsselwort.  
+4.  Der Treiber wird geladen, indem der Registrierungs Eintrag HKEY_LOCAL_MACHINE \software\odbc\odbcinst. angezeigt wird. INI\\<Treiber Name\>\treibers \<, wobei der Treiber Name> durch das **Treiber** Schlüsselwort angegeben wird.  
   
-5.  Wird dem Treiber die neue Verbindungszeichenfolge übergeben.  
+5.  Übergibt den Treiber an die neue Verbindungs Zeichenfolge.  
   
- Beispiele für DSN-Dateien, finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md).  
+ Beispiele für DSN-Dateien finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md).  
   
-## <a name="savefile-keyword"></a>SAVEFILE-Schlüsselwort  
- Wenn von der Anwendung angegebene Verbindungszeichenfolge enthält die **SAVEFILE** -Schlüsselwort, und klicken Sie dann auf den Treiber-Manager speichert Sie die Verbindungszeichenfolge in einer DSN-Datei. Der Treiber-Manager wird wie folgt aus:  
+## <a name="savefile-keyword"></a>SaveFile-Schlüsselwort  
+ Wenn die von der Anwendung angegebene Verbindungs Zeichenfolge das **SaveFile** -Schlüsselwort enthält, speichert der Treiber-Manager die Verbindungs Zeichenfolge in einer DSN-Datei. Der Treiber-Manager wird wie folgt fortgesetzt:  
   
-1.  Überprüft, ob der Dateiname der Datei ".DSN" als den Wert des Attributs enthalten die **SAVEFILE** -Schlüsselwort ist gültig. Wenn nicht der Fall, SQL_ERROR mit SQLSTATE IM014 wird (Ungültiger Name der Datei-DSN). Die Gültigkeit des Dateinamens wird durch Benennungsregeln der standardmäßige bestimmt. Der Dateiname ist eine leere Zeichenfolge ("") und die *DriverCompletion* Argument nicht SQL_DRIVER_NOPROMPT, wird der Dateiname ist ungültig. Wenn der Dateiname bereits, wenn vorhanden ist *DriverCompletion* SQL_DRIVER_NOPROMPT lautet, wird die Datei überschrieben. Wenn *DriverCompletion* ist SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE oder sql_driver_complete_required lautet, ein Dialogfeld fordert den Benutzer an, ob die Datei überschrieben werden soll. Wenn keine eingegeben wird, und klicken Sie dann die **Datei zu speichern,** Dialogfeld wird angezeigt.  
+1.  Überprüft, ob der Dateiname der DSN-Datei, die als Attribut Wert des Schlüssel Worts **SaveFile** enthalten ist, gültig ist. Wenn dies nicht der Fall ist, wird SQL_ERROR mit SQLSTATE IM014 (Ungültiger Name des Datei-DSN) zurückgegeben. Die Gültigkeit des Datei namens wird durch standardmäßige System Benennungs Regeln bestimmt. Wenn der Dateiname eine leere Zeichenfolge ("") ist und das *DriverCompletion* -Argument nicht SQL_DRIVER_NOPROMPT ist, ist der Dateiname gültig. Wenn der Dateiname bereits vorhanden ist, wird die Datei überschrieben, wenn *DriverCompletion* SQL_DRIVER_NOPROMPT wird. Wenn *DriverCompletion* SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE oder SQL_DRIVER_COMPLETE_REQUIRED ist, wird der Benutzer in einem Dialogfeld aufgefordert anzugeben, anzugeben, ob die Datei überschrieben werden soll. Wenn kein eingegeben wird, wird das Dialogfeld **Datei speichern** angezeigt.  
   
-2.  Wenn der Treiber gibt SQL_SUCCESS zurück, der Dateiname keine leere Zeichenfolge war, und der Treiber-Manager die Verbindungsinformationen, die zurückgegeben werden schreibt, der *OutConnectionString* Argument für die angegebene Datei mit dem angegebenen Format in Abschnitt "Verbindungszeichenfolgen" weiter oben in diesem Abschnitt.  
+2.  Wenn der Treiber SQL_SUCCESS zurückgibt und der Dateiname keine leere Zeichenfolge ist, schreibt der Treiber-Manager die im *outconnectionstring* -Argument zurückgegebenen Verbindungsinformationen in die angegebene Datei mit dem im Abschnitt "Verbindungs Zeichenfolgen" weiter oben in diesem Abschnitt angegebenen Format.  
   
-3.  Wenn der Treiber gibt SQL_SUCCESS zurück, und der Dateiname eine leere Zeichenfolge wurde (""), und der Treiber-Manager ruft dann die **Datei zu speichern,** Standarddialogfeld mit der *Hwnd* angegeben und schreibt die Verbindungsinformationen im zurückgegebenen *OutConnectionString* in die Datei in das Standarddialogfeld Datei zu speichern, mit dem im Abschnitt "Verbindungszeichenfolgen" weiter oben in diesem Abschnitt angegebenen Format angegeben.  
+3.  Wenn der Treiber SQL_SUCCESS zurückgibt und der Dateiname eine leere Zeichenfolge ("") war, ruft der Treiber-Manager das Dialogfeld " **Datei speichern** (allgemein)" mit dem angegebenen *HWND* auf und schreibt die in " *outconnectionstring* " zurückgegebenen Verbindungsinformationen in die Datei, die im Abschnitt "Verbindungs Zeichenfolgen" weiter oben in diesem Abschnitt angegeben ist.  
   
-4.  Wenn der Treiber SQL_SUCCESS zurückgegeben wird, wird die *OutConnectionString* Argument mit der Verbindungszeichenfolge der Anwendung.  
+4.  Wenn der Treiber SQL_SUCCESS zurückgibt, wird das *outconnectionstring* -Argument zurückgegeben, das die Verbindungs Zeichenfolge für die Anwendung enthält.  
   
-5.  Wenn der Treiber gibt SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurück, gibt der Treiber-Manager SQLSTATE an die Anwendung zurück.  
+5.  Wenn der Treiber SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgibt, gibt der Treiber-Manager SQLSTATE an die Anwendung zurück.  
   
-## <a name="driver-guidelines"></a>Treiber-Richtlinien  
- Der Treiber überprüft, ob die Verbindungszeichenfolge, die vom Treiber-Manager an sie übergebenen enthält die **DSN** oder **Treiber** Schlüsselwort. Wenn die Verbindungszeichenfolge enthält die **Treiber** -Schlüsselwort, der Treiber kann nicht abrufen von Informationen über die Datenquelle aus der Systeminformationen. Wenn die Verbindungszeichenfolge enthält die **DSN** Schlüsselwort oder enthält keine der **DSN** oder **Treiber** -Schlüsselwort, der Treiber kann Informationen über die Datenquelle abrufen aus den Systeminformationen wie folgt:  
+## <a name="driver-guidelines"></a>Treiber Richtlinien  
+ Der Treiber überprüft, ob die Verbindungs Zeichenfolge, die vom Treiber-Manager an ihn übermittelt wurde, das Schlüsselwort **DSN** oder **Treiber** enthält Wenn die Verbindungs Zeichenfolge das **Treiber** Schlüsselwort enthält, kann der Treiber keine Informationen über die Datenquelle aus den Systeminformationen abrufen. Wenn die Verbindungs Zeichenfolge das **DSN** -Schlüsselwort enthält oder weder das **DSN** -noch das **Driver** -Schlüsselwort enthält, kann der Treiber Informationen über die Datenquelle wie folgt aus den Systeminformationen abrufen:  
   
-1.  Wenn die Verbindungszeichenfolge enthält die **DSN** Schlüsselwort, das der Treiber Ruft die Informationen für die angegebene Datenquelle ab.  
+1.  Wenn die Verbindungs Zeichenfolge das **DSN** -Schlüsselwort enthält, ruft der Treiber die Informationen für die angegebene Datenquelle ab.  
   
-2.  Wenn die Verbindungszeichenfolge keine der **DSN** -Schlüsselwort, das die angegebene Datenquelle wurde nicht gefunden, oder die **DSN** Schlüsselwort auf "Standard" festgelegt ist, ruft der Treiber die Informationen für die Standarddatenquelle .  
+2.  Wenn die Verbindungs Zeichenfolge das **DSN** -Schlüsselwort nicht enthält, die angegebene Datenquelle nicht gefunden wurde oder das **DSN** -Schlüsselwort auf "Default" festgelegt ist, ruft der Treiber die Informationen für die Standarddaten Quelle ab.  
   
- Der Treiber verwendet, alle Informationen, die über die Systeminformationen zu erweitern, die Informationen in der Verbindungszeichenfolge übergeben abgerufen wird. Wenn die Informationen in den Systeminformationen Informationen in der Verbindungszeichenfolge dupliziert, verwendet der Treiber die Informationen in der Verbindungszeichenfolge.  
+ Der Treiber verwendet alle Informationen, die er aus den Systeminformationen abruft, um die an ihn abgerufenen Informationen in der Verbindungs Zeichenfolge zu erweitern. Wenn die Informationen in den Systeminformationen die Informationen in der Verbindungs Zeichenfolge duplizieren, verwendet der Treiber die Informationen in der Verbindungs Zeichenfolge.  
   
- Basierend auf den Wert der *DriverCompletion*, der Treiber fordert den Benutzer für die Verbindungsinformationen, z. B. Benutzer-ID und Kennwort, und eine Verbindung mit der Datenquelle her:  
+ Basierend auf dem Wert von *DriverCompletion*fordert der Treiber den Benutzer zur Eingabe von Verbindungsinformationen auf, z. b. die Benutzer-ID und das Kennwort, und stellt eine Verbindung mit der Datenquelle her:  
   
--   SQL_DRIVER_PROMPT: Der Treiber zeigt ein Dialogfeld, verwenden die Werte aus den Verbindungsinformationen für String und System als Anfangswerte (sofern vorhanden). Wenn der Benutzer das Dialogfeld schließt, verbindet sich der Treiber mit der Datenquelle. Er erstellt auch eine Verbindungszeichenfolge aus dem Wert des der **DSN** oder **Treiber** -Schlüsselwort in \* *InConnectionString* und die Informationen zurückgegeben, die von der Das Dialogfeld. Es wird diese Verbindungszeichenfolge in der **OutConnectionString* Puffer.  
+-   SQL_DRIVER_PROMPT: der Treiber zeigt ein Dialogfeld an, in dem die Werte aus der Verbindungs Zeichenfolge und die Systeminformationen (sofern vorhanden) als Anfangswerte verwendet werden. Wenn der Benutzer das Dialogfeld verlässt, stellt der Treiber eine Verbindung mit der Datenquelle her. Außerdem wird eine Verbindungs Zeichenfolge aus dem Wert des **DSN** oder **Treiber** Schlüsselworts in \* *InConnectionString* und der Informationen, die vom Dialogfeld zurückgegeben werden, erstellt. Diese Verbindungs Zeichenfolge wird im **outconnectionstring* -Puffer platziert.  
   
--   SQL_DRIVER_COMPLETE oder sql_driver_complete_required lautet: Wenn die Verbindungszeichenfolge genügend Informationen enthält, und diese Informationen korrekt ist, verbindet der Treiber auf die Datenquelle und die Kopien \* *InConnectionString* zu \* *OutConnectionString* . Wenn alle Informationen fehlen oder sind falsch ist, verwendet der Treiber die gleichen Aktionen wie beim *DriverCompletion* ist SQL_DRIVER_PROMPT, außer dass bei *DriverCompletion* SQL_DRIVER_COMPLETE_ ist ERFORDERLICH, deaktiviert der Treiber die Steuerelemente für alle Informationen, die für die Verbindung mit der Datenquelle nicht erforderlich.  
+-   SQL_DRIVER_COMPLETE oder SQL_DRIVER_COMPLETE_REQUIRED: Wenn die Verbindungs Zeichenfolge genügend Informationen enthält und diese Informationen korrekt sind, stellt der Treiber eine Verbindung mit der Daten \*Quelle her und kopiert *InConnectionString* in \* *outconnectionstring*. Wenn Informationen fehlen oder nicht korrekt sind, führt der Treiber dieselben Aktionen aus wie bei SQL_DRIVER_PROMPT von " *DriverCompletion* ", mit dem Unterschied, dass der Treiber die Steuerelemente für alle Informationen deaktiviert, die zum Herstellen einer Verbindung mit der Datenquelle nicht erforderlich sind, wenn der *DriverCompletion* SQL_DRIVER_COMPLETE_REQUIRED ist.  
   
--   SQL_DRIVER_NOPROMPT: Wenn die Verbindungszeichenfolge genügend Informationen enthält, verbindet der Treiber auf die Datenquelle und die Kopien \* *InConnectionString* zu \* *OutConnectionString*. Andernfalls gibt der Treiber SQL_ERROR für **SQLDriverConnect**.  
+-   SQL_DRIVER_NOPROMPT: Wenn die Verbindungs Zeichenfolge genügend Informationen enthält, stellt der Treiber eine Verbindung mit der \*Datenquelle her und kopiert *InConnectionString* in \* *outconnectionstring*. Andernfalls gibt der Treiber SQL_ERROR für **SQLDriverConnect**zurück.  
   
- Bei erfolgreichen Verbindung mit der Datenquelle der Treiber auch setzt \* *StringLength2Ptr* der Länge der die ausgegebene Verbindungszeichenfolge, die für die zurückzugebenden in verfügbar ist **OutConnectionString*.  
+ Bei erfolgreicher Verbindung mit der Datenquelle legt \*der Treiber auch *StringLength2Ptr* auf die Länge der Ausgabe Verbindungs Zeichenfolge fest, die in **outconnectionstring*zurückgegeben werden kann.  
   
- Wenn der Benutzer ein Dialogfeld angezeigt, die von der Treiber-Manager oder den Treiber storniert **SQLDriverConnect** SQL_NO_DATA zurückgibt.  
+ Wenn der Benutzer ein Dialogfeld abbricht, das vom Treiber-Manager oder vom Treiber angezeigt wird, gibt **SQLDriverConnect** SQL_NO_DATA zurück.  
   
- Informationen darüber, wie der Treiber-Manager und der Treiber während des Verbindungsprozesses interagieren, finden Sie unter [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ Informationen dazu, wie der Treiber-Manager und der Treiber während des Verbindungs Vorgangs interagieren, finden Sie unter [SQLCONNECT-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
- Wenn ein Treiber unterstützt **SQLDriverConnect**, muss der Treiber-Schlüsselwort Teil die Systeminformationen für den Treiber enthalten die **ConnectFunctions** Schlüsselwort mit dem zweiten Zeichen "Y" festgelegt.  
+ Wenn ein Treiber **SQLDriverConnect**unterstützt, muss der Treiber Schlüsselwortbereich der Systeminformationen für den Treiber das **connectfunctions** -Schlüsselwort enthalten, bei dem das zweite Zeichen auf "Y" festgelegt ist.  
   
-## <a name="connecting-when-connection-pooling-is-enabled"></a>Herstellen einer Verbindung, wenn Verbindungspooling aktiviert ist  
- Verbindungspooling ermöglicht einer Anwendung, die eine Verbindung wiederzuverwenden, die bereits erstellt wurde. Wenn **SQLDriverConnect** aufgerufen wird, wird der Treiber-Manager versucht, zum Herstellen der Verbindung über eine Verbindung, die Teil eines Pools von Verbindungen in einer Umgebung, die für das Verbindungspooling festgelegt wurde. Weitere Informationen zum Verbindungspooling finden Sie unter [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
+## <a name="connecting-when-connection-pooling-is-enabled"></a>Verbindung wird hergestellt, wenn Verbindungs Pooling aktiviert ist  
+ Das Verbindungspooling ermöglicht einer Anwendung, eine bereits erstellte Verbindung wiederzuverwenden. Wenn **SQLDriverConnect** aufgerufen wird, versucht der Treiber-Manager, die Verbindung mithilfe einer Verbindung herzustellen, die zu einem Pool von Verbindungen in einer Umgebung gehört, die für das Verbindungspooling vorgesehen ist. Weitere Informationen zum Verbindungspooling finden Sie unter [SQLCONNECT-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
- Eine Anwendung kann die SQL_ATTR_RESET_CONNECTION festlegen, vor dem Aufrufen von SQLDisconnect für eine Verbindung, Verbindungspooling aktiviert ist. Weitere Informationen finden Sie unter [SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
+ Eine Anwendung kann SQL_ATTR_RESET_CONNECTION festlegen, bevor SQLDisconnect für eine Verbindung aufgerufen wird, bei der das Pooling aktiviert ist. Weitere Informationen finden Sie unter [SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  
   
- Die folgenden Einschränkungen gelten, wenn eine Anwendung ruft **SQLDriverConnect** für eine gepoolte Verbindung die Verbindung:  
+ Die folgenden Einschränkungen gelten, wenn eine Anwendung **SQLDriverConnect** aufruft, um eine Verbindung mit einer gepoolten Verbindung herzustellen:  
   
--   Kein Verbindungs-pooling Verarbeitung erfolgt bei der **SAVEFILE** -Schlüsselwort in der Verbindungszeichenfolge angegeben ist.  
+-   Wenn das Schlüsselwort " **SaveFile** " in der Verbindungs Zeichenfolge angegeben wird, wird keine Verbindungspooling-Verarbeitung durchgeführt.  
   
--   Wenn Verbindungspooling aktiviert ist, **SQLDriverConnect** kann aufgerufen werden, nur mit einer *DriverCompletion* Argument von SQL_DRIVER_NOPROMPT; Wenn **SQLDriverConnect** aufgerufen wird Bei einem anderen *DriverCompletion*, SQLSTATE HY110 (Ungültiger Treiberabschluss) zurückgegeben werden.  
+-   Wenn das Verbindungspooling aktiviert ist, kann **SQLDriverConnect** nur mit einem *DriverCompletion* -Argument von SQL_DRIVER_NOPROMPT aufgerufen werden. Wenn **SQLDriverConnect** mit einem anderen *DriverCompletion*aufgerufen wird, wird SQLSTATE HY110 (ungültiger Treiber Abschluss) zurückgegeben.  
   
 ## <a name="connection-attributes"></a>Verbindungsattribute  
- Das Verbindungsattribut SQL_ATTR_LOGIN_TIMEOUT, legen Sie mithilfe von **SQLSetConnectAttr**, definiert die Anzahl von Sekunden zu warten, bis eine anmeldeanforderung, mit der eine erfolgreiche Verbindung vom Treiber abzuschließen, bevor Sie an die Anwendung zurückgegeben. Wenn der Benutzer aufgefordert wird, um die Verbindungszeichenfolge abzuschließen, beginnt eine Wartezeit für jede Anforderung für die Anmeldung, wenn der Treiber den Verbindungsprozess wird gestartet.  
+ Das SQL_ATTR_LOGIN_TIMEOUT Verbindungs Attribut, das mithilfe von **SQLSetConnectAttr**festgelegt wird, definiert die Anzahl der Sekunden, die gewartet werden soll, bis eine Anmelde Anforderung mit einer erfolgreichen Verbindung des Treibers abgeschlossen ist, bevor Sie an die Anwendung zurückgegeben wird. Wenn der Benutzer aufgefordert wird, die Verbindungs Zeichenfolge abzuschließen, beginnt eine Wartezeit für jede Anmelde Anforderung, wenn der Treiber den Verbindungsvorgang startet.  
   
- Der Treiber die Verbindung im Zugriffsmodus SQL_MODE_READ_WRITE wird standardmäßig geöffnet. Um den Zugriffsmodus SQL_MODE_READ_ONLY festzulegen, muss die Anwendung aufrufen **SQLSetConnectAttr** mit dem Attribut SQL_ATTR_ACCESS_MODE vor dem Aufruf **SQLDriverConnect**.  
+ Der Treiber öffnet die Verbindung standardmäßig im SQL_MODE_READ_WRITE Zugriffsmodus. Um den Zugriffsmodus auf SQL_MODE_READ_ONLY festzulegen, muss die Anwendung **SQLSetConnectAttr** mit dem SQL_ATTR_ACCESS_MODE-Attribut aufrufen, bevor **SQLDriverConnect**aufgerufen wird.  
   
- Wenn eine Standardbibliothek für die Übersetzung in die Systeminformationen für die Datenquelle angegeben ist, wird Sie von der Treiber geladen. Einer anderen übersetzungsbibliothek geladen werden kann, durch den Aufruf **SQLSetConnectAttr** mit dem SQL_ATTR_TRANSLATE_LIB-Attribut. Eine Übersetzungsoption kann angegeben werden, durch den Aufruf **SQLSetConnectAttr** mit der Option SQL_ATTR_TRANSLATE_OPTION.  
+ Wenn eine Standard Übersetzungs Bibliothek in den Systeminformationen für die Datenquelle angegeben ist, wird Sie vom Treiber geladen. Eine andere Übersetzungs Bibliothek kann durch Aufrufen von **SQLSetConnectAttr** mit dem SQL_ATTR_TRANSLATE_LIB-Attribut geladen werden. Eine Übersetzungs Option kann durch Aufrufen von **SQLSetConnectAttr** mit der SQL_ATTR_TRANSLATE_OPTION-Option angegeben werden.  
   
  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
   
@@ -356,16 +356,16 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Ein Handle zuordnen|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Ermitteln und Aufzählen von Werten, die für die Verbindung mit einer Datenquelle|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Zuordnen eines Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Ermitteln und Auflisten von Werten, die zum Herstellen einer Verbindung mit einer Datenquelle erforderlich sind|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Herstellen einer Verbindung mit einer Datenquelle|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Trennen von einer Datenquelle|[SQLDisconnect-Funktion](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Zurückgeben von Beschreibungen der Treiber und Attribute|[SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)|  
-|Ein Handle freigeben|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
-|Ein Verbindungsattribut festlegen|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
+|Trennen der Verbindung mit einer Datenquelle|[SQLDisconnect-Funktion](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|Zurückgeben von Treiber Beschreibungen und-Attributen|[SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)|  
+|Freigeben eines Handles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Festlegen eines Verbindungs Attributs|[SQLSetConnectAttr-Funktion](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

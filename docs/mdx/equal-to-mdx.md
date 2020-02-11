@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 189facb54de244ff220b41ec08c8b02faf5a2c27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139316"
 ---
 # <a name="-equal-to-mdx"></a>= (Ist gleich) (MDX)
@@ -21,7 +21,7 @@ ms.locfileid: "68139316"
   Führt eine Vergleichsoperation aus, die bestimmt, ob der Wert eines MDX-Ausdrucks (Multidimensional Expressions) gleich dem Wert eines anderen MDX-Ausdrucks ist.  
   
 > [!NOTE]  
->  Um Objekte zu vergleichen, verwenden die [IS &#40;MDX&#41; ](../mdx/is-mdx.md) Operator. Verwenden Sie z. B. den IS-Operator, um zu prüfen, ob das aktuelle Element auf einer Abfrageachse ein spezifisches Element ist.  
+>  Um-Objekte zu vergleichen, verwenden Sie den [is &#40;MDX-&#41;](../mdx/is-mdx.md) Operator. Verwenden Sie z. B. den IS-Operator, um zu prüfen, ob das aktuelle Element auf einer Abfrageachse ein spezifisches Element ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,11 +37,11 @@ MDX_Expression = MDX_Expression
 ## <a name="return-value"></a>Rückgabewert  
  Ein boolescher Wert, der auf den folgenden Bedingungen basiert:  
   
--   **"true"** , wenn der Wert des ersten Parameters gleich dem Wert des zweiten Parameters ist.  
+-   **true** , wenn der Wert des ersten Parameters gleich dem Wert des zweiten Parameters ist.  
   
--   **"false"** , wenn der Wert des ersten Parameters nicht gleich dem Wert des zweiten Parameters ist.  
+-   **false** , wenn der Wert des ersten Parameters nicht gleich dem Wert des zweiten Parameters ist.  
   
--   **"true"** Wenn beide Parameter null ist, oder einen Parameter null ist und die anderen Parameter 0 ist gleich.  
+-   **true** , wenn beide Parameter NULL sind oder ein Parameter NULL ist und der andere Parameter den Wert 0 hat.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage enthält Beispiele für diese Bedingungen:  
@@ -74,7 +74,7 @@ MDX_Expression = MDX_Expression
   
  `From [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

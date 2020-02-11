@@ -1,5 +1,5 @@
 ---
-title: Ändern von Tabellen-, Spalten- oder zeilenfilterzuordnungen (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Ändern von Tabellen-, Spalten-oder Zeilen Filter Zuordnungen (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dfee215fef54f942bc7b47cff684cc35c509075c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067638"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Ändern von Tabellen-, Spalten- oder Zeilenfilterzuordnungen (SSAS – tabellarisch)
@@ -43,7 +43,7 @@ ms.locfileid: "66067638"
   
          Falls Sie erneut beginnen möchten, klicken Sie auf **Zeilenfilter löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabelleneigenschaften bearbeiten (Dialogfeld) &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen Eigenschaften bearbeiten (Dialog Feld) &#40;SSAS-&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

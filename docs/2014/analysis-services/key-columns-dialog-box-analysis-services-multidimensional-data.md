@@ -1,5 +1,5 @@
 ---
-title: Schlüssel (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Schlüssel Spalten (Dialog Feld) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,21 +15,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079466"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Schlüsselspalten (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie das Dialogfeld **Schlüsselspalten** , um die **KeyColumns** -Eigenschaft eines Attributs zu ändern. Weitere Informationen finden Sie unter [Ändern der KeyColumn-Eigenschaft eines Attributs](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  
   
- **Um das Dialogfeld Schlüsselspalten anzuzeigen.**  
+ **So zeigen Sie das Dialogfeld Schlüsselspalten an**  
   
 -   Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ein Attribut aus, und klicken Sie dann im Fenster **Eigenschaften** in der**KeyColumns**-Eigenschaftszelle auf die Schaltfläche mit den drei Punkten ( **...** ).  
   
-## <a name="options"></a>Optionen  
- **Quelltabelle**  
+## <a name="options"></a>Tastatur  
+ **Quell Tabelle**  
  Wählen Sie die Quelltabelle aus, für die Sie die Schlüsselspalten auswählen möchten. Sie können die Quelltabelle in der Datenquellensicht in einer Liste aller Tabellen auswählen.  
   
  **Verfügbare Spalten**  
@@ -37,18 +37,18 @@ ms.locfileid: "66079466"
   
  Sie fügen die ausgewählten Spalten der Liste **Schlüsselspalten** hinzu, indem Sie auf die Schaltfläche **>** klicken.  
   
- **Schlüsselspalten**  
+ **Schlüssel Spalten**  
  Definieren Sie die Reihenfolge der ausgewählten Schlüsselspalten. Die Reihenfolge der Schlüsselspalten ist wichtig für die Definition des richtigen zusammengesetzten Schlüssels. Um die Reihenfolge von Schlüsselspalten zu ändern, wählen Sie eine Spalte aus und klicken dann auf die Schaltfläche **Nach oben** oder **Nach unten** .  
   
  Um eine Spalte aus der Liste **Schlüsselspalten** zu entfernen, wählen Sie die Spalte aus, und klicken Sie anschließend auf die Schaltfläche **\<** klicken.  
   
- **Nach oben**  
+ **Up**  
  Klicken Sie auf diese Schaltfläche, um die in der Liste **Schlüsselspalten** ausgewählte Spalte um eine Position nach oben zu verschieben.  
   
 > [!NOTE]  
 >  Diese Option ist nur dann aktiviert, wenn die Liste mehrere Spalten umfasst und eine Spalte ausgewählt ist.  
   
- **Nach unten**  
+ **Auf**  
  Klicken Sie auf diese Schaltfläche, um die in der Liste **Schlüsselspalten** ausgewählte Spalte um eine Position nach unten zu verschieben.  
   
 > [!NOTE]  
@@ -60,7 +60,7 @@ ms.locfileid: "66079466"
  **<**  
  Klicken Sie auf diese Schaltfläche, um die ausgewählte Spalte aus den in der Liste **Schlüsselspalten**aufgeführten Spalten zu entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   
   

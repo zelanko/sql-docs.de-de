@@ -15,22 +15,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ce7bfa0bbeec5c5ca83b7139f0ff28e3994021d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093715"
 ---
-# <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql unterstützt nicht länger 'ED'- und '!!'- Befehle
-  Die **Osql** Hilfsprogramm bietet keine Unterstützung der **ED** und **!!** nicht.  
+# <a name="osql-no-longer-supports-the-ed-and--commands"></a>osql unterstützt nicht länger 'ED'- und '!!'- commands
+  Das Hilfsprogramm **osql** unterstützt nicht die Funktionen " **Ed** " und " **!!** " nicht.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Entfernen Sie Verweise auf die **ED** und **!!** aus den Skripts.  
+ Entfernen Sie Verweise auf das **Ed** -und das **!!** aus den Skripts.  
   
- Wenn Sie verwenden möchten. die **ED** und **!!** Befehle verwenden die **Sqlcmd** anstelle von Hilfsprogramm **Osql**.  
+ Wenn Sie " **Ed** " und " **!!** " verwenden möchten Verwenden Sie das Hilfsprogramm **sqlcmd** anstelle von **osql**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   
