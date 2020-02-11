@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6deb484f6e213e7089c3aef272ebaebeba13a913
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832064"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Editor für den Datenprofilerstellungs-Task (Seite 'Profilanforderungen')
@@ -64,7 +64,7 @@ ms.locfileid: "62832064"
  **Profiltyp**  
  Wählen Sie ein Datenprofil aus folgenden Optionen:  
   
-|Wert|Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Anforderung für Kandidatenschlüsselprofil**|Berechnen Sie ein Kandidatenschlüsselprofil.<br /><br /> Dieses Profil meldet, ob eine Spalte oder eine Gruppe von Spalten ein Schlüssel oder ein ungefährer Schlüssel für die ausgewählte Tabelle ist. Dieses Profil hilft Ihnen auch, Probleme bei den Daten zu identifizieren, z. B. doppelte Werte in einer potenziellen Schlüsselspalte.|  
 |**Anforderung für Verteilungsprofil für Spaltenlänge**|Berechnen Sie ein Verteilungsprofil für Spaltenlänge.<br /><br /> Das Verteilungsprofil für Spaltenlänge dokumentiert alle eindeutigen Längen von Zeichenfolgenwerten in der ausgewählten Spalte sowie den Prozentsatz der Zeilen in der Tabelle, die jede Länge darstellt. Dieses Profil hilft Ihnen, Probleme mit den Daten zu identifizieren, z. B. Werte, die nicht gültig sind. Beispiel: Sie erstellen ein Profil einer Spalte mit den Codes der US-amerikanischen Bundesstaaten, die zwei Zeichen lang sind, und entdecken Werte, die länger als zwei Zeichen sind.|  
@@ -82,7 +82,7 @@ ms.locfileid: "62832064"
  **Verbindungs-Manager**  
  Zeigt den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager an, der eine Verbindung mit der Quelldatenbank herstellt.  
   
- **Anforderungs-ID**  
+ **Anfrage-ID**  
  Zeigt einen Bezeichner für die Anforderung an. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
 #### <a name="columns-common-to-the-five-individual-column-profiles"></a>Spalten, die den fünf einzelnen Spaltenprofilen gemeinsam sind  
@@ -146,7 +146,7 @@ ms.locfileid: "62832064"
   
 -   [Optionen für Anforderung für Wertinklusionsprofil &#40;Datenprofilerstellungs-Task&#41;](value-inclusion-profile-request-options-data-profiling-task.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Editor für den Datenprofilerstellungs-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   

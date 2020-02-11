@@ -1,5 +1,5 @@
 ---
-title: ODER (MDX) | Microsoft-Dokumentation
+title: oder (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 45063e9f2aca6a924289d4d52434535d16c9a08e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68055710"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -35,20 +35,20 @@ Expression1 OR Expression2
  Ein gültiger MDX-Ausdruck, der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein boolescher Wert, der zurückgibt **"true"** Wenn eine oder beide Argumente ausgewertet **"true"** ist, andernfalls **"false"** .  
+ Ein boolescher Wert, der **true** zurückgibt, wenn eines oder beide Argumente als **true**ausgewertet werden. andernfalls **false**.  
   
-## <a name="remarks"></a>Hinweise  
- Die **oder** -Operator behandelt beide Argumente als boolesche Werte (null, 0 (null) als **"false"** ist, andernfalls **"true"** ), bevor der Operator die logische Disjunktion ausführt. In der folgende Tabelle wird veranschaulicht, wie die **oder** Operator die logische Disjunktion ausführt.  
+## <a name="remarks"></a>Bemerkungen  
+ Der **or** -Operator behandelt beide Argumente als boolesche Werte (null, 0, **false**, andernfalls **true**), bevor der Operator die logische Disjunktion ausführt. In der folgenden Tabelle wird veranschaulicht, wie der **or** -Operator die logische Disjunktion ausführt.  
   
 |*Expression1*|*Expression2*|Rückgabewert|  
 |-------------------|-------------------|------------------|  
-|**true**|**true**|**true**|  
-|**true**|**false**|**true**|  
-|**false**|**true**|**true**|  
-|**false**|**false**|**false**|  
+|**Fall**|**Fall**|**Fall**|  
+|**Fall**|**Alarm**|**Fall**|  
+|**Alarm**|**Fall**|**Fall**|  
+|**Alarm**|**Alarm**|**Alarm**|  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage enthält ein berechnetes Measure, das die Zeichenfolge zurückgibt, die "MARRIED OR MALE" ist das aktuelle Element auf der geschlechtshierarchie der Customer-Dimension männlich oder das aktuelle Element auf der ehestatushierarchy der Customer-Dimension verheiratet ist; Andernfalls wird die Zeichenfolge "UNMARRIED oder FEMALE" zurückgegeben.  
+ Die folgende Abfrage enthält ein berechnetes Measure, das die Zeichenfolge "Married or männlich" zurückgibt, wenn das aktuelle Element in der Geschlechts Hierarchie der Customer-Dimension männlich ist oder das aktuelle Element in der Familien Status-Hierarchie der Customer-Dimension verheiratet ist. Andernfalls wird die Zeichenfolge "unverheiratet oder weiblich" zurückgegeben.  
   
 ```  
 WITH  
@@ -65,7 +65,7 @@ FROM [Adventure Works]
 WHERE(MEASURES.ORDEMO)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

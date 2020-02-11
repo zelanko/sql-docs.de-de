@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524256"
 ---
 # <a name="use-the-eventdata-function"></a>Verwenden der EVENTDATA-Funktion
@@ -49,7 +49,7 @@ AS
   
  `CREATE TABLE NewTable (Column1 int);`  
   
- Die `EVENTDATA()` -Anweisung im DDL-Trigger erfasst den Text der `CREATE TABLE` -Anweisung, die nicht zulässig ist. Dies erfolgt mithilfe einer XQuery-Anweisung für die `xml` Daten, die von EVENTDATA und Abrufen von generierten der \<CommandText > Element. Weitere Informationen finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
+ Die `EVENTDATA()` -Anweisung im DDL-Trigger erfasst den Text der `CREATE TABLE` -Anweisung, die nicht zulässig ist. Dies wird erreicht, indem eine XQuery-Anweisung für `xml` die Daten verwendet wird, die von EVENTDATA generiert werden \<, und das CommandText-> Element abgerufen wird. Weitere Informationen finden Sie unter [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server).  
   
 > [!CAUTION]  
 >  EVENTDATA erfasst die Daten von CREATE_SCHEMA-Ereignissen sowie den <schema_element>-Text der entsprechenden CREATE SCHEMA-Definition, sofern vorhanden. Darüber hinaus erkennt EVENTDATA die <schema_element>-Definition als ein gesondertes Ereignis. Deshalb ist es möglich, dass ein DDL-Trigger erstellt wurde, der für ein CREATE_SCHEMA-Ereignis sowie für ein Ereignis, das durch den <schema_element>-Text der CREATE SCHEMA-Definition dargestellt wird, möglicherweise dieselben Ereignisdaten doppelt zurückgibt, wie z. B. die `TSQLCommand`-Daten. Angenommen, ein DDL-Trigger wird für die Ereignisse CREATE_SCHEMA und CREATE_TABLE erstellt, und der folgende Batch wird ausgeführt:  
@@ -129,7 +129,7 @@ GO
   
  Ein ähnliches Beispiel für einen DDL-Trigger wird mit der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank bereitgestellt. Auf das Beispiel können Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Ordner "Datenbanktrigger" zugreifen. Dieser Ordner befindet sich unter dem Ordner **Programmierbarkeit** der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank. Klicken Sie mit der rechten Maustaste auf **ddlDatabaseTriggerLog**, und wählen Sie **Skript für Datenbanktrigger als** aus. Standardmäßig ist der DDL-Trigger **ddlDatabaseTriggerLog** deaktiviert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DDL-Ereignisse](../triggers/ddl-events.md)   
  [DDL-Ereignisgruppen](../triggers/ddl-event-groups.md)  
   

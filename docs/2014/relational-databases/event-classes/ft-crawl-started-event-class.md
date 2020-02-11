@@ -15,18 +15,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b249aff99abbe692e1515397c493109c54c86713
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023890"
 ---
 # <a name="ftcrawl-started-event-class"></a>FT:Crawl Started (Ereignisklasse)
   Die Ereignisklasse **FT:Crawl Started** zeigt an, dass ein Volltextdurchforsten (Auffüllung) gestartet wurde. Mit dieser Ereignisklasse können Sie überprüfen, ob eine Durchforstungsanforderung tatsächlich von Arbeitstasks abgerufen wird.  
   
-## <a name="ft-crawl-started-event-class-data-columns"></a>FT: Crawl Started-Ereignisklasse-Datenspalten  
+## <a name="ft-crawl-started-event-class-data-columns"></a>FT:Crawl Started-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|Datentyp|Description|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**DatabaseID**|**int**|ID der Datenbank, in der das Volltextdurchforsten gestartet wurde. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |**EventClass**|**int**|Ereignistyp = 155.|27|Nein|  
@@ -39,7 +39,7 @@ ms.locfileid: "63023890"
 |**TextData**|**ntext**|Auffüllungstyp für Volltextdurchforsten. Als Wert kann Vollständig, Inkrementell, Manuell oder Automatisch angegeben werden.|1|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

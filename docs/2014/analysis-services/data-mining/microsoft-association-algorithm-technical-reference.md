@@ -1,5 +1,5 @@
 ---
-title: Microsoft Association Algorithm Technical Reference | Microsoft-Dokumentation
+title: Technische Referenz für den Microsoft Association-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084127"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
@@ -42,11 +42,11 @@ ms.locfileid: "66084127"
  Zuordnungsmodelle können auch für numerische Attribute verwendet werden. Wenn die Attribute fortlaufend sind, können die Zahlen *diskretisiert* oder in Buckets gruppiert werden. Die diskretisierten Werte können dann entweder als boolesche Werte oder Attribut/Wert-Paare behandelt werden.  
   
 ### <a name="support-probability-and-importance"></a>Unterstützung, Wahrscheinlichkeit und Wichtigkeit  
- *Unterstützung*, mitunter auch als *Häufigkeit*bezeichnet, steht für die Anzahl der Fälle, in denen das entsprechende Element oder die entsprechende Elementkombination enthalten ist. Nur Elemente, die mindestens die angegebene Menge an Unterstützung haben, können im Modell enthalten sein.  
+ Die *Unterstützung*, bei der issometimes als *Frequency*bezeichnet wird, gibt die Anzahl der Fälle an, die das Ziel Element oder die gewünschte Kombination von Elementen enthalten. Nur Elemente, die mindestens die angegebene Menge an Unterstützung haben, können im Modell enthalten sein.  
   
  Ein *häufig enthaltenes Itemset* bezieht sich auf eine Sammlung von Elementen, bei denen die Elementkombination Unterstützung über dem durch den Parameter MINIMUM_SUPPORT definierten Schwellenwert erhält. Wenn das Itemset beispielsweise {A,B,C} lautet und der Wert MINIMUM_SUPPORT 10 beträgt, muss jedes einzelne Element A, B und C in mindestens 10 Fällen vorhanden sein, um in das Modell aufgenommen zu werden. Die Elementkombination {A,B,C} muss ebenfalls in mindestens 10 Fällen enthalten sein.  
   
- **Hinweis** : Sie können die Anzahl der Itemsets in einem Miningmodell auch steuern, indem Sie die maximale Länge eines Itemsets angeben, wobei Länge in diesem Fall für die Anzahl der Elemente steht.  
+ **Hinweis** Sie können die Anzahl der Itemsets in einem Mining Modell auch steuern, indem Sie die maximale Länge eines Itemsets angeben, wobei length die Anzahl der Elemente angibt.  
   
  Standardmäßig stellt die Unterstützung für ein bestimmtes Element oder Itemset die Anzahl der Fälle dar, die das Element bzw. die Elemente enthalten. Sie können den Wert MINIMUM_SUPPORT auch als prozentualen Anteil der Gesamtfälle im Dataset ausdrücken, indem Sie die Zahl als eine Dezimalzahl kleiner als 1 eingeben. Wenn Sie für MINIMUM_SUPPORT einen Wert von 0,03 angeben, bedeutet dies, dass mindestens 3 Prozent der Gesamtfälle im Dataset dieses Element oder Itemset enthalten müssen, damit es in das Modell aufgenommen wird. Experimentieren Sie mit dem Modell, um festzustellen, ob die Angabe der Anzahl oder des prozentualen Anteils sinnvoller ist.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66084127"
   
  Die Wichtigkeit einer Regel wird anhand des Wahrscheinlichkeitsprotokolls der rechten Seite der Regel in Bezug auf die linke Seite der Regel berechnet. In der Regel `If {A} Then {B}`berechnet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beispielsweise das Verhältnis der Fälle mit A und B gegenüber Fällen mit B, aber ohne A und normalisiert dieses Verhältnis anschließend anhand einer logarithmischen Skalierung.  
   
-### <a name="feature-selection"></a>Funktionsauswahl  
+### <a name="feature-selection"></a>Featureauswahl  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus führt keine automatische Funktionsauswahl aus. Stattdessen stellt der Algorithmus Parameter bereit, die die Daten kontrollieren, die vom Algorithmus verwendet werden. Diese Parameter können Beschränkungen der Größe der einzelnen Itemsets oder die maximale und Mindestunterstützung umfassen, die erforderlich ist, um ein Itemset in das Modell aufzunehmen.  
   
 -   Um Elemente und Ereignisse herauszufiltern, die zu allgemein und daher nicht interessant sind, senken Sie den Wert für MAXIMUM_SUPPORT, um sehr häufig auftretende Itemsets aus dem Modell zu entfernen.  
@@ -73,10 +73,10 @@ ms.locfileid: "66084127"
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus unterstützt mehrere Parameter, die Auswirkungen auf das Verhalten, die Leistung und die Genauigkeit des resultierenden Miningmodells haben.  
   
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
- Die Parameter für ein Miningmodell können Sie jederzeit mit dem Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern. Sie können Parameter auch programmgesteuert ändern, mit der <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> -Auflistung in AMO oder mit der [MiningModels-Element &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA. In der folgenden Tabelle wird jeder Parameter beschrieben.  
+ Die Parameter für ein Miningmodell können Sie jederzeit mit dem Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ändern. Sie können Parameter auch Programm gesteuert ändern, indem Sie <xref:Microsoft.AnalysisServices.MiningModel.AlgorithmParameters%2A> die-Auflistung in AMO oder das [Mining Models-Element &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/collections/miningmodels-element-assl) in XMLA verwenden. In der folgenden Tabelle wird jeder Parameter beschrieben.  
   
 > [!NOTE]  
->  Sie können nicht die Parameter in einem vorhandenen Modell mithilfe einer DMX-Anweisung ändern; Sie müssen die Parameter in der DMX CREATE MODEL oder ALTER Structure… angeben... ADD MODEL festlegen.  
+>  Sie können die Parameter in einem vorhandenen Modell nicht mit einer DMX-Anweisung ändern. Sie müssen die Parameter in DMX CREATE Model oder Alter Structure... Fügen Sie ein Modell hinzu, wenn Sie das Modell erstellen.  
   
  *MAXIMUM_ITEMSET_COUNT*  
  Gibt die maximal zu erzeugende Anzahl von Itemsets an. Wird keine Anzahl angegeben, wird der Standardwert verwendet.  
@@ -89,7 +89,7 @@ ms.locfileid: "66084127"
  *MAXIMUM_ITEMSET_SIZE*  
  Gibt die maximale Anzahl von Elementen an, die in einem Itemset zulässig sind. Wenn Sie diesen Wert auf 0 festlegen, geben Sie dadurch an, dass es für die Größe des Itemsets keine Begrenzung gibt.  
   
- Der Standardwert lautet 3.  
+ Der Standardwert ist 3.  
   
 > [!NOTE]  
 >  Durch Senken dieses Werts kann die zum Erstellen des Modells erforderliche Zeit möglicherweise reduziert werden, da die Verarbeitung des Modells angehalten wird, sobald die Begrenzung erreicht wird.  
@@ -99,12 +99,12 @@ ms.locfileid: "66084127"
   
  Wenn dieser Wert kleiner als 1 ist, entspricht er einem prozentualen Anteil an der Gesamtzahl von Fällen. Werte, die größer als 1 sind, entsprechen der absoluten Anzahl von Fällen, die das Itemset enthalten können.  
   
- Der Standardwert lautet 1.  
+ Der Standardwert ist 1.  
   
  *MINIMUM_ITEMSET_SIZE*  
  Gibt die Mindestanzahl von Elementen an, die in einem Itemset zulässig sind. Wenn Sie diese Zahl erhöhen, enthält das Modell möglicherweise weniger Itemsets. Dies kann nützlich sein, wenn Sie beispielsweise aus einem einzelnen Element bestehende Itemsets ignorieren möchten.  
   
- Der Standardwert lautet 1.  
+ Der Standardwert ist 1.  
   
 > [!NOTE]  
 >  Die Modellverarbeitungszeit kann nicht durch Erhöhen des Mindestwerts reduziert werden, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im Rahmen der Verarbeitung ohnehin Wahrscheinlichkeiten für einzelne Elemente berechnen muss. Durch Erhöhen des Werts können Sie jedoch kleinere Itemsets herausfiltern.  
@@ -147,13 +147,13 @@ ms.locfileid: "66084127"
   
  Gilt für die Miningmodellspalte.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein Associationmodell muss eine Schlüsselspalte, Eingabespalten und eine einzelne vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Vorhersagbares Attribut|Zyklisch, Diskret, Diskretisiert, Tabelle und Sortiert|  
@@ -161,9 +161,9 @@ ms.locfileid: "66084127"
 > [!NOTE]  
 >  Zyklische und sortierte Inhaltstypen werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Association-Algorithmus](microsoft-association-algorithm.md)   
- [Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)   
- [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Beispiele für Zuordnungs Modell Abfragen](association-model-query-examples.md)   
+ [Mining Modell Inhalt von Zuordnungs Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

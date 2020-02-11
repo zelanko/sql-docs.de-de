@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 9591b483380d8bfcaea8404cccfa0279d3bcc035
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957196"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
@@ -94,9 +94,9 @@ ms.locfileid: "74957196"
   
      Links zur Dokumentation für Azure Key Vault  
   
-    -   [Was ist Azure Key Vault?](https://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [Was ist der Azure-Schlüsseltresor?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Beginnen Sie mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
     -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault)  
   
@@ -115,7 +115,7 @@ ms.locfileid: "74957196"
   
 ##  <a name="Step3"></a>Schritt 3: Konfigurieren von SQL Server für die Verwendung eines EKM-Anbieters für das Key Vault  
   
-###  <a name="Permissions"></a>Griff  
+###  <a name="Permissions"></a> Berechtigungen  
  Das gesamte Verfahren erfordert die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** . Bestimmte Aktionen erfordern die folgenden Berechtigungen:  
   
 -   Zum Erstellen eines Kryptografieanbieters ist die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** erforderlich.  
@@ -198,19 +198,19 @@ ms.locfileid: "74957196"
 > [!TIP]  
 >  Benutzer, die den Fehler **kann nicht öffentlichen Schlüssel vom Anbieter exportiert. Anbieterfehlercode: 2053.** erhalten, sollten ihre **get**, **list**, **wrapKey**und **unwrapKey** .  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie unter  
   
--   [sp_configure &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Erstellen eines Kryptografieanbieters &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Create Credential &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [Erstellen eines asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Erstellen der Anmeldung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [Alter Login &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -273,11 +273,11 @@ ms.locfileid: "74957196"
     GO  
     ```  
   
-     Weitere Informationen finden Sie unter den folgenden Links:  
+     Weitere Informationen finden Sie unter  
   
-    -   [Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+    -   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
-    -   [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+    -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 ###  <a name="ExampleB"></a>Beispiel B: Verschlüsseln von Sicherungen mit einem asymmetrischen Schlüssel aus der Key Vault  
  Verschlüsselte Sicherungen werden ab [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]unterstützt. Im folgenden Beispiel wird eine Sicherung erstellt und wiederhergestellt, die mit einem Verschlüsselungsschlüssel verschlüsselt wurde, der durch den asymmetrischen Schlüssel im Schlüsseltresor geschützt wird.  
@@ -342,10 +342,10 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines Kryptografieanbieters &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
- [Create Credential &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
- [Erstellen eines asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
- [Erstellen eines symmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
+ [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)   
+ [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)   
+ [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
+ [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Erweiterbare Schlüsselverwaltung &#40;EKM-&#41;](extensible-key-management-ekm.md)   
  [Aktivieren von TDE mithilfe von EKM](enable-tde-on-sql-server-using-ekm.md)   
  [Sicherungs Verschlüsselung](../../backup-restore/backup-encryption.md)   

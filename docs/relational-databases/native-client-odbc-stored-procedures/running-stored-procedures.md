@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05956ff9111fe9b296da0a35acba42e46e1a47a2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73778078"
 ---
 # <a name="running-stored-procedures"></a>Ausführen gespeicherter Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Bei einer gespeicherten Prozedur handelt es sich um ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt:  
+  Bei einer gespeicherten Prozedur handelt es sich um ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stützten  
   
 -   Gespeicherte Prozeduren:  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73778078"
   
      Erweiterte gespeicherte Prozeduren können C- und C++-Funktionen verwenden, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen nicht verfügbar sind.  
   
-     Ein Beispiel zum Abrufen einer gespeicherten Prozedur finden Sie unter Verarbeiten von [Rückgabe Codes und Ausgabe &#40;Parametern (ODBC&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md)).  
+     Ein Beispiel zum Abrufen einer gespeicherten Prozedur finden Sie unter Verarbeiten von [Rückgabe Codes und Ausgabeparametern &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-how-to/running-stored-procedures-process-return-codes-and-output-parameters.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -68,8 +68,8 @@ ms.locfileid: "73778078"
   
 -   [Verarbeiten von Ergebnissen gespeicherter Prozeduren](../../relational-databases/native-client-odbc-stored-procedures/processing-stored-procedure-results.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41; ](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md) -   
- [Gewusst-wie-Themen &#40;zur Ausführung gespeicherter Prozeduren ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Gewusst-wie-Themen zur Ausführung gespeicherter Prozeduren &#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)  
   
   

@@ -18,19 +18,19 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68702786"
 ---
-# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
+# <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt eine Liste der gespeicherten Prozeduren in der aktuellen Umgebung zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @sp_name = ] 'name'`Der Name der Prozedur, die zum Zurückgeben von Katalog Informationen verwendet wird. *name* ist vom Datentyp **nvarchar(390)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ @sp_name = ] 'name'`Der Name der Prozedur, die zum Zurückgeben von Katalog Informationen verwendet wird. *Name ist vom Datentyp* **nvarchar (390)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ @sp_owner = ] 'schema'`Der Name des Schemas, zu dem die Prozedur gehört. *schema* ist vom Datentyp **nvarchar(384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
+`[ @sp_owner = ] 'schema'`Der Name des Schemas, zu dem die Prozedur gehört. *Schema* ist vom Datentyp **nvarchar (384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
  Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Prozedur mit dem angegebenen Namen enthält, wird diese Prozedur zurückgegeben. Wird ein nicht gekennzeichneter Name einer gespeicherten Prozedur angegeben, durchsucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] die folgenden Schemas in der angegebenen Reihenfolge nach der Prozedur:  
   
@@ -55,31 +55,33 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
-`[ @qualifier = ] 'qualifier'`Der Name des Prozedur Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen im Format (_qualifier_ **.** _schema_ **.** _name_. Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt *qualifier* den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @qualifier = ] 'qualifier'`Der Name des Prozedur Qualifizierers. *Qualifizierer* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen im Format (_qualifier_**.**_schema_**.**_name_. Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob der Unterstrich (_), Prozent (%) oder eckige Klammern []) als Platzhalter Zeichen interpretiert werden. *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob der Unterstrich (_), Prozent (%) oder eckige Klammern []) als Platzhalter Zeichen interpretiert werden. *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
   
- **0** = Mustervergleich ist deaktiviert.  
+ **0** = Muster Vergleich ist deaktiviert.  
   
- **1** = Mustervergleich ist aktiviert.  
+ **1** = Muster Vergleich ist on.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Der Name des Prozedurqualifizierers. Diese Spalte kann NULL enthalten.|  
 |**PROCEDURE_OWNER**|**sysname**|Der Name des Prozedurbesitzers. Diese Spalte gibt immer einen Wert zurück.|  
-|**PROCEDURE_NAME**|**nvarchar(134)**|Der Name der Prozedur. Diese Spalte gibt immer einen Wert zurück.|  
-|**NUM_INPUT_PARAMS**|**int**|Zur künftigen Verwendung reserviert.|  
-|**NUM_OUTPUT_PARAMS**|**int**|Zur künftigen Verwendung reserviert.|  
-|**NUM_RESULT_SETS**|**int**|Zur künftigen Verwendung reserviert.|  
-|**REDE**|**varchar(254)**|Die Beschreibung der Prozedur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
-|**PROCEDURE_TYPE**|**smallint**|Der Prozedurtyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 2,0 zurück. Die folgenden Werte sind möglich:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**PROCEDURE_NAME**|**nvarchar (134)**|Der Name der Prozedur. Diese Spalte gibt immer einen Wert zurück.|  
+|**NUM_INPUT_PARAMS**|**int**|Für die zukünftige Verwendung reserviert.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Für die zukünftige Verwendung reserviert.|  
+|**NUM_RESULT_SETS**|**int**|Für die zukünftige Verwendung reserviert.|  
+|**Rede**|**varchar (254)**|Die Beschreibung der Prozedur. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
+|**PROCEDURE_TYPE**|**smallint**|Der Prozedurtyp. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 2,0 zurück. Die folgenden Werte sind möglich:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-Standardmustervergleich voraussetzen (die Platzhalterzeichen Prozent (%) und Unterstrich (_)).  
   
  Da die Berechtigungen des aktuellen Benutzers zum Ausführungszugriff auf eine bestimmte gespeicherte Prozedur nicht unbedingt überprüft werden, ist der Zugriff nicht unter allen Umständen sichergestellt. Beachten Sie, dass nur eine dreiteilige Benennung verwendet wird. Daher werden nur Informationen zu lokalen gespeicherten Prozeduren und nicht zu remote gespeicherten Prozeduren (die eine vierteilige Benennung erfordern) zurückgegeben, wenn diese für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Wenn das Serverattribut ACCESSIBLE_SPROC im Resultset von **sp_server_info**den Wert Y hat, werden nur Informationen zu den gespeicherten Prozeduren zurückgegeben, die der aktuelle Benutzer ausführen kann.  
@@ -109,8 +111,8 @@ GO
 sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Katalog Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Katalog Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Mit Microsoft Internet Information Services | Microsoft-Dokumentation
+title: Verwenden von Microsoft Internetinformationsdienste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 3328f2f1-b34a-472f-82cf-ad49768ff061
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e531149af21facd80e9e6ddab19a76c3bdc0fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088145"
 ---
 # <a name="using-microsoft-internet-information-services"></a>Verwenden der Microsoft-Internetinformationsdienste
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Wenn Sie schwierigkeiten bei der Herstellen einer Verbindung von innerhalb eines IIS-Skripts (insbesondere, wenn Sie Fehler ORA-12641 erhalten), fügen Sie die folgende Zeile in die Datei Sqlnet.ora:  
+ Wenn Sie Probleme beim Herstellen einer Verbindung innerhalb eines IIS-Skripts haben (insbesondere wenn Sie einen Ora-12641-Fehler erhalten), fügen Sie die folgende Zeile in die Datei "SQLnet. Ora" ein:  
   
 ```  
 SQLNET.AUTHENTICATION_SERVICES = (none)  
 ```  
   
- Dadurch wird die sichere Netzwerkdienste deaktiviert, damit Sie mit dem Verwenden der anonymen Authentifizierung herstellen können.
+ Dadurch werden die sicheren Network Services deaktiviert, sodass Sie eine Verbindung mithilfe der anonymen Authentifizierung herstellen können.

@@ -16,48 +16,48 @@ ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949788"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef-Objekt (ADO MD)
-Stellt einen Cube aus einem mehrdimensionalen Schema, das mit einem Satz von verknüpften Dimensionen dar.  
+Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwandter Dimensionen enthält.  
   
-## <a name="remarks"></a>Hinweise  
- Mit dem Auflistungen und Eigenschaften einer **CubeDef** -Objekts können Sie folgende Möglichkeiten:  
+## <a name="remarks"></a>Bemerkungen  
+ Mit den Auflistungen und Eigenschaften eines **CubeDef** -Objekts können Sie folgende Aufgaben ausführen:  
   
--   Identifizieren einer **CubeDef** mit der [Namen](../../../ado/reference/ado-md-api/name-property-ado-md.md) Eigenschaft.  
+-   Identifizieren Sie eine **CubeDef** mit der [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) -Eigenschaft.  
   
--   Zurückgeben einer Zeichenfolge, die den Cube beschreibt die [Beschreibung](../../../ado/reference/ado-md-api/description-property-ado-md.md) Eigenschaft.  
+-   Gibt eine Zeichenfolge zurück, die den Cube mit der [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) -Eigenschaft beschreibt.  
   
--   Zurückgeben der Dimensionen, die den Cube mit bilden die [Dimensionen](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) Auflistung.  
+-   Gibt die Dimensionen zurück, die den Cube mit der [Dimensions](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md) Auflistung bilden.  
   
--   Weitere Informationen zum Abrufen der **CubeDef** mit dem standard-ADO [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
+-   Rufen Sie zusätzliche Informationen über die **CubeDef** mit der standardmäßigen ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Sammlung ab.  
   
- Die **Eigenschaften** Auflistung enthält die Eigenschaften vom Anbieter bereitgestellt. Die folgende Tabelle enthält Eigenschaften, die möglicherweise verfügbar sind. Die tatsächliche Eigenschaftenliste kann je nach der Implementierung des Anbieters abweichen. Finden Sie unter der Dokumentation für Ihren Anbieter, um eine vollständige Liste der verfügbaren Eigenschaften.  
+ Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|Beschreibung|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
-|CreatedOn|Datum und Uhrzeit der Erstellung des Cubes.|  
-|CubeGUID|GUID des Cubes.|  
+|CreatedOn|Das Datum und die Uhrzeit der Erstellung des Cubes.|  
+|Cubeguid|Die Cube-GUID.|  
 |CubeName|Der Name des Cubes.|  
-|CubeType|Der Typ des Cubes.|  
-|DataUpdatedBy|Benutzer-ID der Person, die der letzten datenaktualisierung durchführen.|  
-|Beschreibung|Eine aussagekräftige Beschreibung des Cubes.|  
-|LastSchemaUpdate|Datum und Uhrzeit der letzten Aktualisierung des Schemas.|  
+|Cubetype|Der Typ des Cubes.|  
+|Dataupdatedby|Die Benutzer-ID der Person, die das letzte Datenupdate durchgeführt hat.|  
+|BESCHREIBUNG|Eine aussagekräftige Beschreibung des Cubes.|  
+|LastSchemaUpdate|Datum und Uhrzeit des letzten Schema Updates.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
-|SchemaUpdatedBy|Benutzer-ID der Person, die Aktualisierung des letzten Schemas ausführen.|  
+|Schemaupdatedby|Die Benutzer-ID der Person, die die letzte Schema Aktualisierung durchgeführt hat.|  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/cubedef-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CubeDef-Beispiel (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [Katalogobjekt (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDefs-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
- [Auflistung von Dimensionen (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
+ [Catalog-Objekt (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
+ [CubeDefs-Sammlung (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)   
+ [Dimensions Auflistung (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

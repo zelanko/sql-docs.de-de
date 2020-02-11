@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c59157c8d6beccdbb2d3e853cb6e035f9f89f61c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62901076"
 ---
 # <a name="sql-server-compact-edition-destination"></a>SQL Server Compact Edition-Ziel
@@ -49,7 +49,7 @@ ms.locfileid: "62901076"
 ## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Festlegen von Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenfluss](data-flow.md)  
   
   

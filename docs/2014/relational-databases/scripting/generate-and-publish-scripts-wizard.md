@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47bf324dd757661a6f49f18b28f810c87ca1419e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242110"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Assistenten zum Generieren und Veröffentlichen von Skripts
@@ -56,7 +56,7 @@ ms.locfileid: "75242110"
   
 2.  **Generieren oder Veröffentlichen eines Skripts mit:**[dem Assistenten zum Generieren und veröffentlichen](#GenPubScriptWiz) von Skripts    
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
  Die Quell- und Zieldatenbank können sich auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] befinden, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher ausgeführt wird.  
   
 ###  <a name="PubHostSvc"></a>Veröffentlichen in einem gehosteten Dienst  
@@ -64,7 +64,7 @@ ms.locfileid: "75242110"
   
  Aktivieren Sie zum Veröffentlichen einer Datenbank in einem Webhostingdienst auf der Seite **Skripterstellungsoptionen festlegen** des Assistenten die Option **In Webdienst veröffentlichen** .  
   
-###  <a name="Permissions"></a>Griff  
+###  <a name="Permissions"></a> Berechtigungen  
  Zum Veröffentlichen einer Datenbank ist mindestens die Mitgliedschaft in der festen Datenbankrolle db_ddladmin in der Ursprungsdatenbank erforderlich. Zum Veröffentlichen eines Datenbankskripts in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Hostinganbieter ist mindestens die Mitgliedschaft in der festen Datenbankrolle db_ddladmin auf der Zieldatenbank erforderlich.  
   
  Außerdem muss bei der Veröffentlichung mit dem Assistenten ein Benutzername mit zugehörigem Kennwort für den Zugriff auf das Konto beim Hostinganbieter angegeben werden. Die Zieldatenbank muss auf dem Hostinganbieter erstellt werden, bevor die Quelldatenbank veröffentlicht wird. Durch die Veröffentlichung werden Objekte in der bestehenden Datenbank überschrieben.  
@@ -82,24 +82,24 @@ ms.locfileid: "75242110"
   
     -   [Seite "Objekte auswählen"](#ChooseObjects)  
   
-    -   [Seite "Skript Optionen festlegen"](#SetScriptOpt)  
+    -   [Seite "Skripterstellungsoptionen festlegen"](#SetScriptOpt)  
   
-    -   [Seite "Erweiterte Skript Optionen"](#AdvScriptOpt)  
+    -   [Seite "Erweiterte Skripterstellungsoptionen"](#AdvScriptOpt)  
   
     -   [Seite "Anbieter verwalten"](#MgProviders)  
   
-    -   [Seite "Erweiterte Veröffentlichungs Optionen"](#AdvPubOpts)  
+    -   [Seite "Erweiterte Veröffentlichungsoptionen"](#AdvPubOpts)  
   
-    -   [Seite "Anbieter Konfiguration"](#ProvConfig)  
+    -   [Seite "Anbieterkonfiguration"](#ProvConfig)  
   
-    -   [Zusammenfassungs Seite](#Summary)  
+    -   [Seite "Zusammenfassung"](#Summary)  
   
     -   [Seite "Skripts speichern oder veröffentlichen"](#SavePubScripts)  
   
-###  <a name="Introduction"></a>Seite "Einführung"  
+###  <a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte zum Generieren oder Veröffentlichen eines Skripts beschrieben.  
   
- **Diese Seite nicht mehr anzeigen** : überspringen Sie diese Seite beim nächsten Start des **Assistenten zum Generieren und Veröffentlichen von Skripts**.  
+ **Diese Seite nicht mehr anzeigen** – Diese Seite wird beim nächsten Starten des **Assistenten zum Generieren und Veröffentlichen von Skripts**übersprungen.  
   
  **Nächste >** : geht zur Seite **Methode auswählen** über.  
   
@@ -110,13 +110,13 @@ ms.locfileid: "75242110"
   
  **Skripterstellung für gesamte Datenbank** : Klicken Sie auf diese Option, um Skripts für alle Objekte in der Datenbank zu generieren und ein Skript für die Datenbank selbst einzuschließen.  
   
- **Bestimmte Datenbankobjekte auswählen** : Klicken Sie auf diese Option, um den Assistenten zum Generieren von Skripts nur für die jeweiligen Objekte in der ausgewählten Datenbank zu beschränken:  
+ **Bestimmte Datenbankobjekte auswählen** – Klicken Sie hier, um den Assistenten auf die Generierung von Skripts für von Ihnen ausgewählte Objekte in der Datenbank einzuschränken:  
   
--   **Datenbankobjekte** : Wählen Sie mindestens ein Objekt aus, das in das Skript eingeschlossen werden soll.  
+-   **Datenbankobjekte** – Wählen Sie mindestens ein Objekt aus, das ins Skript eingeschlossen werden soll.  
   
--   **Alles auswählen** : wählt alle verfügbaren Kontrollkästchen aus.  
+-   **Alles auswählen** – Aktiviert alle verfügbaren Kontrollkästchen.  
   
--   **Auswahl** aufheben: Löscht alle Kontrollkästchen. Sie müssen in diesem Fall mindestens ein Datenbankobjekt auswählen, um den Vorgang fortsetzen zu können.  
+-   **Auswahl aufheben** – Deaktiviert alle Kontrollkästchen. Sie müssen in diesem Fall mindestens ein Datenbankobjekt auswählen, um den Vorgang fortsetzen zu können.  
   
 ###  <a name="SetScriptOpt"></a>Seite "Skript Optionen festlegen"  
  Auf dieser Seite können Sie angeben, ob Skripts vom Assistenten am ausgewählten Speicherort gespeichert werden, oder ob damit Datenbankobjekte bei einem Remotewebhostinganbieter veröffentlicht werden. Für die Veröffentlichung müssen Sie Zugriff auf einen Webdienst haben, der mithilfe des Webdiensts "Datenbank-Veröffentlichungsdienste" installiert wird.  
@@ -244,7 +244,7 @@ ms.locfileid: "75242110"
   
 3.  Standardwerte **veröffentlichen** : schließt Standardobjekte ein, die zum Festlegen von Standardwerten in Tabellen Spalten verwendet werden. Der Standardwert ist " **true**". Weitere Informationen finden Sie unter [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql).  
   
-4.  **Abhängige Objekte veröffentlichen** : veröffentlicht jedes Objekt, das vorhanden sein muss, wenn das Skript für das ausgewählte Objekt ausgeführt wird. Der Standardwert ist " **true**".  
+4.  **Abhängige Objekte veröffentlichen** : veröffentlicht jedes Objekt, das vorhanden sein muss, wenn das Skript für das ausgewählte Objekt ausgeführt wird. Der Standardwert ist **True**.  
   
 5.  **Erweiterte Eigenschaften veröffentlichen** : schließt erweiterte Eigenschaften in das Skript ein, das zur Veröffentlichung an den Anbieter gesendet wird, wenn das Objekt über erweiterte Eigenschaften verfügt. Der Standardwert ist " **true**".  
   
@@ -268,7 +268,7 @@ ms.locfileid: "75242110"
   
  **Tabellen-/Sichtoptionen** : die folgenden Optionen gelten nur für Tabellen oder Sichten.  
   
-1.  **Check-Einschränkungen veröffentlichen** : schließt die Erstellung `CHECK` von Einschränkungen im Veröffentlichungsprozess ein. Der Standardwert ist " **true**". Für `CHECK`-Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
+1.  **Check-Einschränkungen veröffentlichen** : schließt die Erstellung `CHECK` von Einschränkungen im Veröffentlichungsprozess ein. Der Standardwert ist **True**. Für `CHECK`-Einschränkungen ist es erforderlich, dass Daten, die in eine Tabelle eingegeben werden, eine angegebene Bedingung erfüllen. Weitere Informationen finden Sie unter [Unique Constraints and Check Constraints](../tables/unique-constraints-and-check-constraints.md).  
   
 2.  **Fremdschlüssel veröffentlichen** : schließt die Erstellung von Fremdschlüsseln in den Veröffentlichungsprozess ein. Der Standardwert ist " **true**". Mit Fremdschlüsseln können Beziehungen zwischen Tabellen angezeigt und erzwungen werden. Weitere Informationen finden Sie unter [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
@@ -276,7 +276,7 @@ ms.locfileid: "75242110"
   
 4.  **Indizes veröffentlichen** : schließt Indizes für Tabellen in den Veröffentlichungsprozess ein. Der Standardwert ist " **true**". Mit Indizes können Sie Daten schneller finden.  
   
-5.  **Primärschlüssel veröffentlichen** : schließt die Erstellung von primär Schlüsseln in den Veröffentlichungsprozess ein. Der Standardwert ist " **true**". Mit Primärschlüsseln kann jede Zeile einer Tabelle eindeutig identifiziert werden. Weitere Informationen finden Sie unter [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
+5.  **Primärschlüssel veröffentlichen** : schließt die Erstellung von primär Schlüsseln in den Veröffentlichungsprozess ein. Der Standardwert ist **True**. Mit Primärschlüsseln kann jede Zeile einer Tabelle eindeutig identifiziert werden. Weitere Informationen finden Sie unter [Primary and Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md).  
   
 6.  **Veröffentlichungs Trigger** : schließt die Erstellung von DML-Triggern in den Veröffentlichungsprozess ein. Der Standardwert ist " **true**". Ein DML-Trigger ist eine Aktion, die so programmiert ist, dass sie bei Auftreten eines DML-Ereignisses (Data Manipulation Language, Datenbearbeitungssprache) auf dem Datenbankserver ausgeführt wird. Weitere Informationen finden Sie unter [DML Triggers](../triggers/dml-triggers.md).  
   
@@ -319,7 +319,7 @@ ms.locfileid: "75242110"
   
  **Abbrechen** : alle Änderungen, die Sie in diesem Dialogfeld vorgenommen haben, rückgängig machen und zum Assistenten zurückkehren.  
   
-###  <a name="Summary"></a>Zusammenfassungs Seite  
+###  <a name="Summary"></a> Seite "Zusammenfassung"  
  Auf dieser Seite sind die Optionen zusammengefasst, die Sie in diesem Assistenten ausgewählt haben. Um eine Option zu ändern, klicken Sie auf **Zurück**. Um mit der Generierung von Skripts zu beginnen, die gespeichert oder veröffentlicht werden, klicken Sie auf **Weiter**.  
   
  **Überprüfen Sie Ihre Auswahl** : zeigt die Auswahl an, die Sie für die einzelnen Seiten des Assistenten getroffen haben. Erweitern Sie einen Knoten, um die auf der betreffenden Seite ausgewählten Optionen anzuzeigen.  

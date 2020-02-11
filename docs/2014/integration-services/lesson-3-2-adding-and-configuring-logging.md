@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892436"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Schritt 2: Hinzufügen und Konfigurieren der Protokollierung
@@ -28,17 +28,17 @@ ms.locfileid: "62892436"
   
 3.  Wählen Sie auf der Registerkarte **Anbieter und Protokolle** im Feld **Anbietertyp** die Option **SSIS-Protokollanbieter für Textdateien**aus, und klicken Sie anschließend auf **Hinzufügen**.  
   
-     Von Integration Services wird ein neuer Protokollanbieter für Textdateien mit dem Standardnamen **SSIS-Protokollanbieter für Textdateien**zum Paket hinzugefügt. Sie können jetzt den neuen Protokollanbieter konfigurieren.  
+     Integration Services fügt dem Paket einen neuen Protokoll Anbieter für Textdateien mit dem Standardnamen **SSIS-Protokoll Anbieter für Text Dateien**hinzu. Sie können jetzt den neuen Protokollanbieter konfigurieren.  
   
-4.  In der **Namen** Spalte, Datentyp `Lesson 3 Log File`.  
+4.  Geben `Lesson 3 Log File`Sie in der Spalte **Name den Namen** ein.  
   
 5.  Ändern Sie optional **Beschreibung**.  
   
-6.  In der **Konfiguration** Spalte, klicken Sie auf  **\<neue Verbindung >** um das Ziel anzugeben, wohin die Protokollinformationen geschrieben.  
+6.  Klicken Sie **** ** \<** in der Spalte Konfiguration auf neue Verbindungs>, um das Ziel anzugeben, in das die Protokollinformationen geschrieben werden.  
   
      Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp**die Option **Datei erstellen**aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Dateien auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebiger Stelle speichern.  
   
-7.  In der **Datei auswählen** Dialogfeld die **Dateiname** geben `TutorialLog.log`, und klicken Sie auf **öffnen**.  
+7.  Geben `TutorialLog.log`Sie im Dialogfeld **Datei auswählen** im Feld **Dateiname den Namen** ein, und klicken Sie auf **Öffnen**.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Dateiverbindungs-Manager-Editor** zu schließen.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62892436"
   
 12. Klicken Sie auf **Standard** , um die Informationskategorien auszublenden.  
   
-13. Auf der **Anbieter und Protokolle** Registerkarte die **Namen** Spalte `Lesson 3 Log File`. Nach dem Erstellen eines Protokollanbieters für Ihr Paket können Sie diesen optional deaktivieren, um die Protokollierung zeitweise zu deaktivieren, ohne dass Sie einen Protokollanbieter löschen und dann erneut erstellen müssen.  
+13. Wählen Sie `Lesson 3 Log File`auf der Registerkarte **Anbieter und Protokolle** in der Spalte **Name den Namen** aus. Nach dem Erstellen eines Protokollanbieters für Ihr Paket können Sie diesen optional deaktivieren, um die Protokollierung zeitweise zu deaktivieren, ohne dass Sie einen Protokollanbieter löschen und dann erneut erstellen müssen.  
   
 14. Klicken Sie auf **OK**.  
   

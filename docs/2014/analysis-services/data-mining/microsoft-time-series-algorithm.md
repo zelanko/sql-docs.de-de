@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083766"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series-Algorithmus
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus bietet regressionsalgorithmen, die für die Prognose kontinuierlicher Werte wie den Produktverkauf im Laufe der Zeit optimiert sind. Während andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen wie z. B. Entscheidungsstrukturen für die Vorhersage eines Trends zusätzliche Spalten mit neuen Informationen als Eingabe benötigen, ist dies bei einem Zeitreihenmodell nicht der Fall. Ein Zeitreihenmodell kann Trends schon auf Grundlage des ursprünglichen Datasets vorhersagen, das zum Erstellen des Modells verwendet wird. Sie können dem Modell auch neue Daten hinzufügen, wenn Sie eine Vorhersage treffen, und die neuen Daten automatisch in die Trendanalyse einbeziehen.  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus stellt Regressions Algorithmen bereit, die für die Prognose von kontinuierlichen Werten, wie z. b. Produktverkäufe, über einen Zeitraum optimiert sind. Während andere [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Algorithmen wie z. B. Entscheidungsstrukturen für die Vorhersage eines Trends zusätzliche Spalten mit neuen Informationen als Eingabe benötigen, ist dies bei einem Zeitreihenmodell nicht der Fall. Ein Zeitreihenmodell kann Trends schon auf Grundlage des ursprünglichen Datasets vorhersagen, das zum Erstellen des Modells verwendet wird. Sie können dem Modell auch neue Daten hinzufügen, wenn Sie eine Vorhersage treffen, und die neuen Daten automatisch in die Trendanalyse einbeziehen.  
   
  Das folgende Diagramm zeigt ein typisches Modell für die Umsatzvorhersage zu einem Produkt in vier verschiedenen Verkaufsregionen über einen bestimmten Zeitraum. Das Modell im Diagramm stellt die Verkaufszahlen für die einzelnen Regionen in Form roter, gelber, violetter und blauer Linien dar. Die Linie für jeden Region besteht aus zwei Teilen:  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66083766"
   
  Die Kombination der Quelldaten und der Vorhersagedaten wird als *Reihe*bezeichnet.  
   
- ![Ein Beispiel für eine Zeitreihe](../media/time-series.gif "ein Beispiel für ein Zeitreihenmodell")  
+ ![Beispiel einer Zeitreihe](../media/time-series.gif "Beispiel einer Zeitreihe")  
   
  Eine wichtige Funktion des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus besteht in der Möglichkeit, Kreuzvorhersagen zu erstellen. Wenn Sie den Algorithmus mit zwei separaten, jedoch miteinander verknüpften Reihen trainieren, können Sie das daraus resultierende Modell dazu verwenden, das Ergebnis einer Reihe basierend auf dem Verhalten der anderen Reihe vorherzusagen. Beispiel: Die Verkaufsbeobachtungen zu einem Produkt können die Verkaufsprognosen für ein anderes Produkt beeinflussen. Eine Kreuzvorhersage dient auch zum Erstellen eines allgemeinen Modells, das auf mehrere Reihen angewendet werden kann. Zum Beispiel sind die Vorhersagen für eine bestimmte Region instabil, da der Reihe Daten guter Qualität fehlen. Sie könnten aber ein allgemeines Modell mit einem Durchschnittswert für alle vier Regionen trainieren und das Modell anschließend auf die einzelne Reihe anwenden, um für jede Region stabilere Prognosen zu erstellen.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "66083766"
  In jedem Quartal möchte die Firma das Modell mit den letzten Verkaufsdaten und die Vorhersagen aktualisieren, um Trends aus der jüngsten Vergangenheit zu modellieren. Um Werte von Geschäften zu korrigieren, die ihre Verkaufszahlen nicht sorgfältig oder konsequent aktualisieren, wird ein allgemeines Prognosemodell erstellt, anhand dessen Prognosen für alle Regionen getroffen werden.  
   
 ## <a name="how-the-algorithm-works"></a>Funktionsweise des Algorithmus  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet nur einen: Algorithmus: ARTXP. Der ARTXP-Algorithmus war für kurzfristige Vorhersagen optimiert und prognostizierte daher des nächsten wahrscheinlichen Werts in einer Reihe. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwendet, sowohl den ARTXP-Algorithmus als auch einen zweiten Algorithmus mit Namen ARIMA. Der ARIMA-Algorithmus ist für die langfristige Vorhersage optimiert. Eine ausführliche Erklärung der Implementierung der Algorithmen ARTXP und ARIMA finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]verwendete der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus einen einzelnen Algorithmus, ARTxp. Der ARTxp-Algorithmus wurde für kurzfristige Vorhersagen optimiert und hat daher den nächst wahrscheinlichen Wert in einer Reihe vorhergesagt. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]Ab verwendet der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus sowohl den ARTxp-Algorithmus als auch einen zweiten Algorithmus, ARIMA. Der ARIMA-Algorithmus ist für die langfristige Vorhersage optimiert. Eine ausführliche Erklärung der Implementierung der Algorithmen ARTXP und ARIMA finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).  
   
- Standardmäßig mischt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die beiden Algorithmen, wenn Muster analysiert und Vorhersagen getroffen werden. Der Algorithmus trainiert zwei separate Modelle mit den gleichen Daten: ein Modell verwendet den ARTXP-Algorithmus und ein Modell verwendet den ARIMA-Algorithmus. Der Algorithmus kombiniert dann die Ergebnisse der beiden Modelle, um die beste Vorhersage für eine variable Anzahl von Zeitscheiben zu erhalten. Da sich der ARTXP-Algorithmus am besten für kurzfristige Vorhersagen eignet, wird er am Anfang einer Folge von Vorhersagen stärker gewichtet. Bei den Vorhersagen für Zeitscheiben, die weiter in der Zukunft liegen, wird dagegen der ARIMA-Algorithmus immer stärker gewichtet.  
+ Standardmäßig mischt der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die beiden Algorithmen, wenn Muster analysiert und Vorhersagen getroffen werden. Der Algorithmus trainiert zwei separate Modelle mit den gleichen Daten: ein Modell verwendet den ARTxp-Algorithmus, und ein Modell verwendet den ARIMA-Algorithmus. Der Algorithmus kombiniert dann die Ergebnisse der beiden Modelle, um die beste Vorhersage für eine variable Anzahl von Zeitscheiben zu erhalten. Da sich der ARTXP-Algorithmus am besten für kurzfristige Vorhersagen eignet, wird er am Anfang einer Folge von Vorhersagen stärker gewichtet. Bei den Vorhersagen für Zeitscheiben, die weiter in der Zukunft liegen, wird dagegen der ARIMA-Algorithmus immer stärker gewichtet.  
   
- Sie können das Mischen der Algorithmen beeinflussen, wenn Sie eher kurz- oder eher langfristige Vorhersagen in der Zeitreihe wünschen. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard ist, können Sie angeben, die die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus verwenden Sie eine der folgenden Einstellungen:  
+ Sie können das Mischen der Algorithmen beeinflussen, wenn Sie eher kurz- oder eher langfristige Vorhersagen in der Zeitreihe wünschen. Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Standard können Sie angeben, dass der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus eine der folgenden Einstellungen verwendet:  
   
 -   Für kurzfristige Vorhersage nur ARTXP verwenden.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66083766"
   
 -   Standardmischung der beiden Algorithmen verwenden.  
   
- Ab [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)], Sie können anpassen, wie die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die Modelle für die Vorhersage mischt. Wenn Sie ein gemischtes Modell verwenden, werden die beiden Algorithmen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus wie folgt gemischt:  
+ Ab können [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]Sie anpassen, wie der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus die Modelle für die Vorhersage kombiniert. Wenn Sie ein gemischtes Modell verwenden, werden die beiden Algorithmen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus wie folgt gemischt:  
   
 -   Für die ersten Vorhersagen wird stets nur ARTXP verwendet.  
   
@@ -80,11 +80,11 @@ ms.locfileid: "66083766"
   
  Für Zeitreihenmodelle gelten folgende Anforderungen:  
   
--   **Eine einzelne Schlüsselzeitspalte** Jedes Modell muss eine numerische oder Datumsspalte enthalten, die als Fallserie verwendet wird. Diese definiert die Zeitscheiben, die das Modell verwendet. Beim Datentyp der Schlüsselzeitspalte kann es sich entweder um einen datetime-Datentyp oder um einen numerischen Datentyp handeln. Die Spalte muss jedoch fortlaufende Werte enthalten, und die Werte müssen für jede Reihe eindeutig sein. Die Fallreihe für ein Zeitreihenmodell kann nicht in zwei Spalten gespeichert sein, beispielsweise in einer Jahres- und in einer Monatsspalte.  
+-   **Eine einzelne Schlüsselzeit Spalte** Jedes Modell muss eine numerische Spalte oder Datums Spalte enthalten, die als Fallreihe verwendet wird. diese definiert die Zeit Scheiben, die vom Modell verwendet werden. Beim Datentyp der Schlüsselzeitspalte kann es sich entweder um einen datetime-Datentyp oder um einen numerischen Datentyp handeln. Die Spalte muss jedoch fortlaufende Werte enthalten, und die Werte müssen für jede Reihe eindeutig sein. Die Fallreihe für ein Zeitreihenmodell kann nicht in zwei Spalten gespeichert sein, beispielsweise in einer Jahres- und in einer Monatsspalte.  
   
--   **Eine vorhersagbare Spalte** Jedes Modell muss mindestens eine vorhersagbare Spalte enthalten, auf deren Grundlage der Algorithmus das Zeitreihenmodell erstellt. Der Datentyp der vorhersagbaren Spalte muss fortlaufende Werte enthalten. Sie können beispielsweise vorhersagen, wie sich numerische Attribute, z. B. Einkommen, Verkäufe oder Temperatur, im Laufe der Zeit ändern. Sie können als vorhersagbare Spalte jedoch keine Spalte mit diskreten Werten wie Kaufstatus oder Bildungsgrad verwenden.  
+-   **Vorhersagbare Spalte** Jedes Modell muss mindestens eine vorhersagbare Spalte enthalten, um die der Algorithmus das Zeitreihen Modell erstellt. Der Datentyp der vorhersagbaren Spalte muss fortlaufende Werte enthalten. Sie können beispielsweise vorhersagen, wie sich numerische Attribute, z. B. Einkommen, Verkäufe oder Temperatur, im Laufe der Zeit ändern. Sie können als vorhersagbare Spalte jedoch keine Spalte mit diskreten Werten wie Kaufstatus oder Bildungsgrad verwenden.  
   
--   **Eine optionale Reihenschlüsselspalte** Jedes Modell kann eine zusätzliche Schlüsselspalte mit eindeutigen Werten aufweisen, die eine Reihe identifizieren. Die optionale Reihenschlüsselspalte muss eindeutige Werte enthalten. Ein einzelnes Modell kann z. B. Verkaufszahlen für viele Produktmodelle enthalten, solange für jeden Produktnamen in jeder Zeitscheibe nur ein Datensatz vorhanden ist.  
+-   **Eine optionale Reihen Schlüssel Spalte** Jedes Modell kann eine zusätzliche Schlüssel Spalte mit eindeutigen Werten enthalten, die eine Reihe identifizieren. Die optionale Reihenschlüsselspalte muss eindeutige Werte enthalten. Ein einzelnes Modell kann z. B. Verkaufszahlen für viele Produktmodelle enthalten, solange für jeden Produktnamen in jeder Zeitscheibe nur ein Datensatz vorhanden ist.  
   
  Es gibt verschiedene Methoden, Eingabedaten für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Modell zu definieren. Da das Format der Eingabefälle jedoch die Definition des Miningmodells beeinflusst, müssen Sie die Anforderungen Ihres Unternehmens berücksichtigen und die Daten entsprechend aufbereiten. Die beiden folgenden Beispiele zeigen, wie die Eingabedaten das Modell beeinflussen. In beiden Beispielen enthält das vollständige Miningmodell Muster für vier unterschiedliche Reihen:  
   
@@ -98,13 +98,13 @@ ms.locfileid: "66083766"
   
  In beiden Beispielen können Sie neue künftige Verkäufe und Mengen für jedes Produkt vorhersagen. Neue Werte für Produkt oder Zeit können nicht vorhergesagt werden.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Beispiel 1: Zeitreihendataset mit Reihen als Spaltenwerte dargestellt sind  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Beispiel 1: Zeitreihendataset, dessen Reihen als Spaltenwerte dargestellt sind  
  In diesem Beispiel wird die folgende Tabelle von Eingabefällen verwendet:  
   
-|TimeID|Produkt|Sales|Menge|  
+|TimeID|Produkt|Sales|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|A|1000|600|  
-|2/2001|A|1100|500|  
+|1/2001|Ein|1000|600|  
+|2/2001|Ein|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66083766"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- In dieser Tabelle enthält die TimeID-Spalte weiterhin die Fallreihe für das Zeitreihenmodell, und diese Spalte wird als Schlüsselzeitspalte festgelegt. Die Spalten Verkauf und Menge der vorherigen Tabelle sind hier in jeweils zwei Spalten geteilt, denen der Produktname vorangestellt wurde. Dadurch enthält die TimeID-Spalte für jeden Tag nur einen Eintrag. Erstellt ein Zeitreihenmodell, das vier Vorhersagespalten enthält: A_verkauf, a_menge, b_verkauf und b_menge.  
+ In dieser Tabelle enthält die TimeID-Spalte weiterhin die Fallreihe für das Zeitreihenmodell, und diese Spalte wird als Schlüsselzeitspalte festgelegt. Die Spalten Verkauf und Menge der vorherigen Tabelle sind hier in jeweils zwei Spalten geteilt, denen der Produktname vorangestellt wurde. Dadurch enthält die TimeID-Spalte für jeden Tag nur einen Eintrag. So entsteht ein Zeitreihenmodell, das vier Vorhersagespalten enthält: A_Verkauf, A_Menge, B_Verkauf und B_Menge.  
   
  Da Sie die Produkte außerdem auf verschiedene Spalten verteilt haben, müssen Sie keine zusätzliche Reihenschlüsselspalte angeben. Alle Spalten im Modell sind entweder eine Fallreihenspalte oder eine vorhersagbare Spalte.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66083766"
   
 -   Ein Zeitreihenmodell kann gelegentlich auch stark abweichende Vorhersagen erstellen; dies hängt vom 64-Bit-Betriebssystem des Servers ab. Grund für diese Abweichungen ist die unterschiedliche Darstellung und Verarbeitung von Gleitkommazahlen in einem [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basierten System, die sich von der Berechnung durch ein [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-basiertes System unterscheiden. Da die Vorhersageergebnisse für das Betriebssystem spezifisch sein können, empfiehlt es sich, Modelle auf dem gleichen Betriebssystem auszuwerten, das Sie in der Produktion verwenden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   
@@ -152,11 +152,11 @@ ms.locfileid: "66083766"
   
 -   Unterstützt Drillthrough.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)   
- [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)   
- [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)   
+ [Abfrage Beispiele für Zeitreihen Modelle](time-series-model-query-examples.md)   
+ [Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

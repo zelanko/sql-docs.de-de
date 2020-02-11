@@ -1,5 +1,5 @@
 ---
-title: SAP BW-Verbindungs-Manager-Editor | Microsoft-Dokumentation
+title: SAP BW Verbindungs-Manager-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0da11d8f49c1de88297a9bf8876588c8b5aeb81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056281"
 ---
 # <a name="sap-bw-connection-manager-editor"></a>SAP BW-Verbindungs-Manager-Editor
@@ -33,11 +33,11 @@ ms.locfileid: "66056281"
   
     -   Doppelklicken Sie auf den SAP BW-Verbindungs-Manager.  
   
-         -oder-  
+         Oder  
   
     -   Klicken Sie mit der rechten Maustaste auf den SAP BW-Verbindungs-Manager, und wählen Sie dann **Bearbeiten**aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 > [!NOTE]  
 >  Wenn Sie nicht alle Werte kennen, die zur Konfiguration des Verbindungs-Managers erforderlich sind, müssen Sie ggf. Ihren SAP-Administrator um Unterstützung bitten.  
@@ -82,7 +82,7 @@ ms.locfileid: "66056281"
 > [!NOTE]  
 >  Diese Option ist nur verfügbar, wenn Sie die Option **Lastenausgleich verwenden** ausgewählt haben.  
   
- **Gruppieren**  
+ **Gruppe**  
  Beim Herstellen einer Verbindung mit einer Gruppe von Servern mit Lastenausgleich geben Sie den Namen der Servergruppe an.  
   
 > [!NOTE]  
@@ -112,7 +112,7 @@ ms.locfileid: "66056281"
  **Verbindung testen**  
  Testen Sie die Verbindung mithilfe der Werte, die Sie eingegeben haben. Nachdem Sie auf **Verbindung testen**geklickt haben, wird in einem Meldungsfeld angezeigt, ob die Verbindung erfolgreich war oder nicht.  
   
-## <a name="see-also"></a>Siehe auch  
- [F1-Hilfe zu Microsoft Connector 1.1 für SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [F1-Hilfe zu Microsoft Connector 1.1 for SAP BW](microsoft-connector-for-sap-bw-f1-help.md)  
   
   

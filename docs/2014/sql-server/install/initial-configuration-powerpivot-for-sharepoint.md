@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: bc9b053b62a19cbe2c234f87010ae2a9652fb95c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200435"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Anfängliche Konfiguration (PowerPivot für SharePoint)
@@ -298,4 +298,4 @@ ms.locfileid: "74200435"
  [Erstellen und Konfigurieren einer Power Pivot-Dienst Anwendung in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca)   
  [Bereitstellen von Power Pivot-Lösungen in SharePoint](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint)   
  [Aktivieren der Power Pivot-Funktions Integration für Website Sammlungen in der zentral Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)   
- [PowerPivot für SharePoint 2010-Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot for SharePoint 2010 Installation](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  

@@ -22,19 +22,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: abc0228063e62447c34b0236009977a33bddb176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768496"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>Suchen installierter Drucker mit dem Skripttask
-  Die Daten, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen transformiert werden, weisen oft einen gedruckten Bericht als abschließendes Ziel auf. Die `System.Drawing.Printing` -Namespace in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt Klassen zur Arbeit mit Druckern bereit.  
+  Die Daten, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen transformiert werden, weisen oft einen gedruckten Bericht als abschließendes Ziel auf. Der `System.Drawing.Printing` -Namespace in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt Klassen zum Arbeiten mit Druckern bereit.  
   
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Im folgenden Beispiel werden auf dem Server installierte Drucker gesucht, die Papier im Legal-Format, wie es in den USA verwendet wird, unterstützen. Der Code, um unterstützte Papierformate zu überprüfen, wird in einer privaten Funktion gekapselt. Damit Sie den Prozess verfolgen können, den das Skript beim Überprüfen der Einstellungen der einzelnen Drucker durchläuft, verwendet das Skript die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A>-Methode, um eine Informationsmeldung von Druckern mit Papier im Legal-Format sowie eine Warnung von Druckern ohne dieses Papierformat auszulösen. Diese Meldungen werden im Fenster **Ausgabe** der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) IDE angezeigt, wenn Sie das Paket im Designer ausführen.  
   
 #### <a name="to-configure-this-script-task-example"></a>So konfigurieren Sie dieses Skripttaskbeispiel  
@@ -45,7 +45,7 @@ ms.locfileid: "62768496"
   
 3.  Fügen Sie im Skriptprojekt dem **System.Drawing**-Namespace einen Verweis hinzu.  
   
-4.  Verwenden Sie in Ihrem Code `Imports` -Anweisungen zum Importieren der **System.Collections** und `System.Drawing.Printing` Namespaces.  
+4.  Verwenden `Imports` Sie im Code-Anweisungen, um die **System. Collections** und die `System.Drawing.Printing` Namespaces zu importieren.  
   
 ### <a name="code"></a>Code  
   
@@ -141,9 +141,9 @@ public void Main()
         }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Skripttask-Beispiele](../extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

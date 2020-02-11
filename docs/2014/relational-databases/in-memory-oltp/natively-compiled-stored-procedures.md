@@ -13,10 +13,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e9bdc0c104b212f3c26389c1792b6b617634a12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714917"
 ---
 # <a name="natively-compiled-stored-procedures"></a>Systemintern kompilierte gespeicherte Prozeduren
@@ -29,15 +29,15 @@ ms.locfileid: "62714917"
   
 -   [Erstellen systemintern kompilierter gespeicherter Prozeduren](creating-natively-compiled-stored-procedures.md)  
   
--   [ATOMIC-Blöcke](atomic-blocks-in-native-procedures.md)  
+-   [Atomic-Blöcke](atomic-blocks-in-native-procedures.md)  
   
--   [Unterstützte Konstrukte in nativ kompilierten gespeicherten Prozeduren](supported-features-for-natively-compiled-t-sql-modules.md)  
+-   [Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren](supported-features-for-natively-compiled-t-sql-modules.md)  
   
--   [Verwenden von TRY...CATCH in nativ kompilierten gespeicherten Prozeduren](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
+-   [Verwenden von TRY...CATCH in systemintern kompilierten gespeicherten Prozeduren](../../database-engine/using-try-catch-in-natively-compiled-stored-procedures.md)  
   
--   [Unterstützte Konstrukte für nativ kompilierte gespeicherte Prozeduren](supported-ddl-for-natively-compiled-t-sql-modules.md)  
+-   [Unterstützte Konstrukte für systemintern kompilierte gespeicherte Prozeduren](supported-ddl-for-natively-compiled-t-sql-modules.md)  
   
--   [Nativ kompilierte gespeicherte Prozeduren und deren Ausführung mit SET-Optionen](natively-compiled-stored-procedures-and-execution-set-options.md)  
+-   [Systemintern kompilierte gespeicherte Prozeduren und deren Ausführung mit SET-Optionen](natively-compiled-stored-procedures-and-execution-set-options.md)  
   
 -   [Bewährte Vorgehensweisen für den Aufruf von systemintern kompilierten gespeicherten Prozeduren](best-practices-for-calling-natively-compiled-stored-procedures.md)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62714917"
   
 -   [Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen](calling-natively-compiled-stored-procedures-from-data-access-applications.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
   
   

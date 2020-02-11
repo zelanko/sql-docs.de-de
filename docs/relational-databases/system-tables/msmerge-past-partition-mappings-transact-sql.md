@@ -18,28 +18,28 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67984892"
 ---
-# <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
+# <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_past_partition_mappings** Tabelle speichert eine Zeile für jede Partitions-Id eine bestimmte geänderte Zeile gehört, jedoch nicht mehr zugeordnet ist. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
+  In der **MSmerge_past_partition_mappings** Tabelle wird eine Zeile für jede Partitions-ID gespeichert, für die eine bestimmte geänderte Zeile verwendet wurde, die nicht mehr zu gehört. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**publication_number**|**smallint**|Die veröffentlichungsnummer, die in gespeichert ist **Sysmergepublications**.|  
+|**publication_number**|**smallint**|Die Veröffentlichungsnummer, die in **sysmergepublications**gespeichert wird.|  
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
-|**partition_id**|**int**|Die Partitions-ID, die der Zeile zugeordnet ist. Der Wert ist 1, wenn die Änderung der Zeile an alle Abonnenten relevant ist.|  
-|**generation**|**bigint**|Der Wert der Generierung, in der die Partitionsänderung aufgetreten ist.|  
-|**reason**|**tinyint**|Intern-nur zur Verwendung.|  
+|**partition_id**|**int**|Die Partitions-ID, die der Zeile zugeordnet ist. Der Wert ist-1, wenn die Zeilen Änderung für alle Abonnenten relevant ist.|  
+|**Stro**|**BIGINT**|Der Wert der Generierung, in der die Partitionsänderung aufgetreten ist.|  
+|**weshalb**|**tinyint**|Nur intern verwendet.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

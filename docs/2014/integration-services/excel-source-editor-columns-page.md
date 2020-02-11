@@ -1,5 +1,5 @@
 ---
-title: Quellen-Editor für Excel (Spaltenseite) | Microsoft-Dokumentation
+title: Quellen-Editor für Excel (Seite Spalten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66059212"
 ---
 # <a name="excel-source-editor-columns-page"></a>Quellen-Editor für Excel (Seite Spalten)
@@ -26,7 +26,7 @@ ms.locfileid: "66059212"
   
  Weitere Informationen zur Excel-Quelle finden Sie unter [Excel Source](data-flow/excel-source.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare externe Spalten**  
  Zeigt die Liste der in der Datenquelle verfügbaren externen Spalten an. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66059212"
  **Ausgabespalte**  
  Geben Sie für jede Ausgabespalte einen eindeutigen Namen an. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Quellen-Editor für Excel &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
+ [Der Quellen-Editor für Excel &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/excel-source-editor-connection-manager-page.md)   
  [Quellen-Editor für Excel &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/excel-source-editor-error-output-page.md)   
  [Excel-Verbindungs-Manager](connection-manager/excel-connection-manager.md)   
  [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](control-flow/foreach-loop-container.md)  

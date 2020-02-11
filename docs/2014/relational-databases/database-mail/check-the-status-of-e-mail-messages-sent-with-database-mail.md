@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 73d0cf3a374a7f3dda7797238d2c1702360aa955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872326"
 ---
 # <a name="check-the-status-of-e-mail-messages-sent-with-database-mail"></a>Überprüfen des Status von mit Datenbank-E-Mail gesendeten E-Mail-Nachrichten
@@ -27,7 +27,7 @@ ms.locfileid: "62872326"
   
 -   **Vorbereitungen:**  
   
--   **So zeigen Sie den Status der gesendeten E-mail mittels Datenbank-e-Mails an:**  [Transact-SQL](#TsqlProcedure)  
+-   **So zeigen Sie den Status der E-Mail an, die mittels Datenbank-E-Mail gesendet wurde:**  [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
  Datenbank-E-Mail speichert Kopien ausgehender E-Mail-Nachrichten in den Sichten **sysmail_allitems**, **sysmail_sentitems**, **sysmail_unsentitems**und **sysmail_faileditems** der **msdb** -Datenbank. Das externe Programm Datenbank-E-Mail protokolliert die Aktivität und zeigt das Protokoll über das Windows-Anwendungsereignisprotokoll und die **sysmail_event_log** -Sicht der **msdb** -Datenbank an. Führen Sie zum Prüfen des Status einer E-Mail-Nachricht eine Abfrage für diese Sicht aus. Für E-Mail-Nachrichten gibt es vier Statusmöglichkeiten: **sent**, **unsent**, **retrying**und **failed**.  
@@ -71,7 +71,7 @@ WHERE items.recipients LIKE '%danw%'
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail-Protokoll und -Überwachung](database-mail-log-and-audits.md)  
   
   

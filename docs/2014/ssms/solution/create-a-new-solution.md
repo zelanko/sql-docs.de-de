@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8edec14b380a4df9868c97e9b4d9db4feefc4dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282111"
 ---
 # <a name="create-a-new-solution"></a>Erstellen einer neuen Projektmappe
-  Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gestattet es nicht, dass Sie Ordner innerhalb von Projekten erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
+  Wenn Sie ein Projekt erstellen, wird in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Projektmappe dafür erstellt. Sie können jeweils nur eine Projektmappe öffnen. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] gestattet es Ihnen nicht, Ordner innerhalb von Projekten zu erstellen. Erstellen Sie mehrere Projekte, um Ihre Arbeit zu organisieren.  
   
  Klicken Sie zum Öffnen des Projektmappen-Explorers im Menü **Ansicht** auf **Projektmappen-Explorer** .  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63282111"
   
 6.  Klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Projektmappen-Explorer](solution-explorer.md)   
  [Öffnen von Projektmappen aus der Quellcodeverwaltung](../../database-engine/open-solutions-from-source-control.md)  
   

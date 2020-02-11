@@ -1,5 +1,5 @@
 ---
-title: Angeben von Spalteninhalt und Datentyp (Datamining-Assistent) | Microsoft-Dokumentation
+title: Spalten Inhalt und-Datentyp angeben (Data Mining-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068469"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Inhalt und Datentyp der Spalten angeben (Data Mining-Assistent)
@@ -24,9 +24,9 @@ ms.locfileid: "66068469"
   
  Der Datentyp gibt zusätzliche Details zum Typ der in der Spalte enthaltenen Daten und zur Verwendung der Daten während des Trainings an. Einige Inhaltstypen erfordern einen bestimmten Datentyp und umgekehrt. Je nach Algorithmus, den Sie beim Erstellen eines Miningmodells verwenden, müssen Sie unter Umständen einen bestimmten Datentyp angeben. Informationen zu den Inhalts- und Datentypen in Miningmodellen und -strukturen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Weitere Informationen finden Sie unter** [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen finden** Sie unter [Mining Strukturen &#40;Analysis Services-Data Mining-&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Mining Modell Spalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md) .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Miningmodellstruktur**  
  Zeigt die Spalten aus den Ansichten und geschachtelte Tabellen an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66068469"
  **Inhaltstyp**  
  Geben Sie den Inhaltstyp für die Spalte an. Wenn Sie auf der vorherigen Seite des Assistenten angegeben haben, dass die Spalte ein Schlüssel ist, sind die folgenden Werte verfügbar:  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |Key|Geben Sie an, dass die Spalte einen eindeutigen Bezeichner für die Fallreihe enthält.|  
 |Key Sequence|Geben Sie an, dass die Spalte einen Sequenzbezeichner enthält.|  
@@ -44,16 +44,16 @@ ms.locfileid: "66068469"
   
  Wenn Sie die Spalte als Nicht-Schlüsselspalte ausgewählt haben, sind je nach Datentyp die folgenden Werte verfügbar:  
   
-|Option|Description|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
-|Continuous|Geben Sie an, dass die Spalte fortlaufende numerische Werte enthält.|  
+|Fortlaufend|Geben Sie an, dass die Spalte fortlaufende numerische Werte enthält.|  
 |Discretized|Geben Sie an, dass die Spalte numerische Werte enthält, die diskretisiert wurden oder als diskrete Werte behandelt werden können.|  
 |Discrete|Geben Sie an, dass die Spalte Text oder andere nicht numerische Werte enthält.|  
   
- **Data type**  
+ **Datentyp**  
  Geben Sie den Datentyp für die Spalte an.  
   
- Die folgenden Werte sind verfügbar:  
+ Folgende Werte sind verfügbar:  
   
 -   `Boolean`  
   
@@ -65,13 +65,13 @@ ms.locfileid: "66068469"
   
 -   `Text`  
   
- **Erkennen**  
+ **Detect**  
  Analysieren Sie ein Datenbeispiel in allen numerischen Spalten. Ersetzt angegebene Werte für den **Inhaltstyp** durch einen empfohlenen Inhaltstyp.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Assistent F1-Hilfe &#40;Analysis Services – Datamining&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
- [Verbundene Spalten vorschlagen &#40;Datamining-Assistent&#41;](suggest-related-columns-data-mining-wizard.md)   
- [Tabellentypen angeben &#40;Datamining-Assistent&#41;](specify-table-types-data-mining-wizard.md)   
- [Geben Sie Inhalt und Datentyp der Spaltenwerts &#40;Datamining-Assistent&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   
+ [Verwandte Spalten &#40;Data Mining-Assistenten vorschlagen&#41;](suggest-related-columns-data-mining-wizard.md)   
+ [Geben Sie die Tabellentypen &#40;Data Mining-Assistenten an&#41;](specify-table-types-data-mining-wizard.md)   
+ [Geben Sie den Inhalt und den Datentyp der Spalte &#40;Data Mining-Assistenten an&#41;](specify-the-column-s-content-and-data-type-data-mining-wizard.md)  
   
   
