@@ -16,10 +16,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: a5993a5ba452e3d46709462e75a316dba02f7540
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74055968"
 ---
 # <a name="keep-identity-values-when-bulk-importing-data-sql-server"></a>Beibehalten von Identitätswerten beim Massenimport von Daten (SQL Server)
@@ -35,7 +35,7 @@ Wenn die Datendatei keine Werte für die Bezeichnerspalte in der Tabelle enthäl
 ## Beibehalten von Identitätswerten <a name="keep_identity"></a>  
 Um zu verhindern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Massenimport von Datenzeilen in eine Tabelle Identitätswerte zuweist, verwenden Sie den entsprechenden Qualifizierer für den Befehl zur Identitätsbeibehaltung (keepidentity).  Wenn Sie einen Qualifizierer zur Identitätsbeibehaltung angeben, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Identitätswerte in der Datendatei.  Nachfolgend sind diese Qualifizierer aufgeführt:
 
-|Befehl|Qualifizierer zur Identitätsbeibehaltung|Qualifizierertyp|  
+|Get-Help|Qualifizierer zur Identitätsbeibehaltung|Qualifizierertyp|  
 |-------------|------------------------------|--------------------|  
 |bcp|-E|Schalter|  
 |BULK INSERT|KEEPIDENTITY|Argument|  
@@ -46,7 +46,7 @@ Um zu verhindern, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 > [!NOTE]
 >  Weitere Informationen zu einer automatisch inkrementierten Zahl, die in mehreren Tabellen verwendet oder aus Anwendungen aufgerufen werden kann, ohne dass auf eine Tabelle verwiesen wird, finden Sie unter [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md).
  
-## Beispiel-Testbedingungen<a name="etc"></a>  
+## Beispieltestbedingungen<a name="etc"></a>  
 Die in diesem Thema beschriebenen Beispiele basieren auf einer Tabelle, einer Datendatei und einer Formatdatei, die nachstehend definiert werden.
 
 ### **Beispieltabelle**<a name="sample_table"></a>
@@ -304,7 +304,7 @@ SELECT * FROM TestDatabase.dbo.myIdentity;
   
  **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
   
--   [Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
+-   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md)  
   

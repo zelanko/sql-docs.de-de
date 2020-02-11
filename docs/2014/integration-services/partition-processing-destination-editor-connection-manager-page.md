@@ -1,5 +1,5 @@
 ---
-title: Partition Ziel-Editor (Seite Verbindungs-Manager) | Microsoft-Dokumentation
+title: Ziel-Editor für Partitions Verarbeitung (Seite Verbindungs-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 44e116ece7460787f272f0b8cc6e99a4300fc728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056706"
 ---
 # <a name="partition-processing-destination-editor-connection-manager-page"></a>Ziel-Editor für Partitionsverarbeitung (Seite Verbindungs-Manager)
@@ -29,7 +29,7 @@ ms.locfileid: "66056706"
 > [!NOTE]  
 >  Hier beschriebene Tasks gelten nicht für tabellarische Analysis Services-Modelle.  Sie können Partitionsspalten für tabellarische Modelle keine Eingabespalten zuordnen. Sie können stattdessen den Analysis Services-Task "DDL ausführen" [Analysis Services Execute DDL Task](control-flow/analysis-services-execute-ddl-task.md) verwenden, um die Partition zu verarbeiten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Connection manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
@@ -42,15 +42,15 @@ ms.locfileid: "66056706"
  **Verarbeitungsmethode**  
  Wählen Sie die Verarbeitungsmethode aus. Der Standardwert für diese Option ist **Vollständig**.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Hinzufügen (inkrementell)|Führt eine inkrementelle Verarbeitung der Partition aus.|  
 |Vollständig|Führt eine vollständige Verarbeitung der Partition aus.|  
 |Nur Daten|Führt eine Verarbeitung der Updates für die Partition aus.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Partitionsverarbeitung &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
- [Ziel-Editor für Partitionsverarbeitung &#40;Seite „Erweitert“&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Ziel-Editor für Partitions Verarbeitung &#40;Seite Zuordnungen&#41;](../../2014/integration-services/partition-processing-destination-editor-mappings-page.md)   
+ [Ziel-Editor für Partitions Verarbeitung &#40;Seite "Erweitert"&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

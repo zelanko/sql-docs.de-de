@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011951"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
   Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine *Formatdatei* verwenden, um alle für den Massenimport oder -export erforderlichen Informationen zu speichern. Dazu zählen Formatinformationen für jedes Feld einer Datendatei in Bezug auf die betreffende Tabelle.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt zwei Typen von Formatdateien: XML-Formatdateien und Nicht-XML-Formatdateien. Sowohl Nicht-XML-Formatdateien als auch XML-Formatdateien enthalten Beschreibungen jedes Felds in einer Datendatei. XML-Formatdateien enthalten darüber hinaus auch Beschreibungen der entsprechenden Tabellenspalten. Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien. Sowohl Nicht-XML-Formatdateien als auch XML-Formatdateien enthalten Beschreibungen jedes Felds in einer Datendatei. XML-Formatdateien enthalten darüber hinaus auch Beschreibungen der entsprechenden Tabellenspalten. Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66011951"
 -   Durch Verwenden einer Formatdatei ist es möglich, Daten per Massenimport zu kopieren, ohne überflüssige Daten hinzufügen oder löschen oder vorhandene Daten in der Datendatei neu anordnen zu müssen. Formatdateien sind besonders hilfreich, wenn Felder in der Datendatei und Spalten in der Tabelle nicht übereinstimmen.  
   
 ##  <a name="ExamplesOfFFs"></a> Beispiele für Formatdateien  
- Die folgenden Beispiele zeigen das Layout einer Nicht-XML-Formatdatei und einer XML-Formatdatei. Diese Formatdateien entsprechen der `HumanResources.myTeam` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank. Diese Tabelle enthält vier Spalten: `EmployeeID`, `Name`, `Title` und `ModifiedDate`.  
+ Die folgenden Beispiele zeigen das Layout einer Nicht-XML-Formatdatei und einer XML-Formatdatei. Diese Formatdateien entsprechen der `HumanResources.myTeam` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank. Diese Tabelle enthält vier Spalten: `EmployeeID`, `Name`, `Title`und `ModifiedDate`.  
   
 > [!NOTE]  
 >  Informationen zu dieser Tabelle und zum Erstellen der Tabelle finden Sie unter [HumanResources.myTeam-Beispieltabelle & #40;SQL Server& #41;](humanresources-myteam-sample-table-sql-server.md).  
@@ -53,7 +53,7 @@ The contents of this format file are as follows: 9.0
 4       SQLNCHAR      2       100     ""   4     Background               SQL_Latin1_General_CP1_CI_AS  
 ```  
   
- Weitere Informationen finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](non-xml-format-files-sql-server.md).  
+ Weitere Informationen finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)unterstützt wird.  
   
  
   
@@ -128,8 +128,8 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-## <a name="see-also"></a>Siehe auch  
- [Nicht-XML-Formatdateien &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Nicht-XML-Format Dateien &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   

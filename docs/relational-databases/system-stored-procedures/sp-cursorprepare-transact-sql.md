@@ -18,10 +18,10 @@ ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2719e330ec2fde61b91ca11ef93784983c6c418c
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165914"
 ---
 # <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74165914"
 
   Kompiliert die Cursoranweisung oder den Batch in einen Ausführungsplan, erstellt jedoch keinen Cursor. Die kompilierte Anweisung kann später von sp_cursorexecute verwendet werden. Dieses Verfahren, das mit sp_cursorexecute gekoppelt ist, verfügt über die gleiche Funktion wie sp_cursoropen, ist jedoch in zwei Phasen unterteilt. sp_cursorprepare wird aufgerufen, indem ID = 3 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,7 +47,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 >  *prepared_handle* wird anschließend für eine sp_cursorexecute Prozedur bereitgestellt, um einen Cursor zu öffnen. Nach der Erstellung bleibt ein Handle so lange bestehen, bis Sie sich abmelden oder es über die sp_cursorunprepare-Prozedur explizit entfernen.  
   
  *params*  
- Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
+ Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. " *para* meters" ist ein erforderlicher Parameter, der den Eingabe Wert " **ntext**", " **NCHAR**" oder " **nvarchar** " aufruft. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
   
 > [!NOTE]  
 >  Verwenden Sie eine **ntext** -Zeichenfolge als Eingabe Wert, wenn *stmt* parametrisiert und der *scrollopt* -PARAMETERIZED_STMT Wert aktiviert ist.  
@@ -58,17 +58,17 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 > [!NOTE]  
 >  Die Regeln zum Angeben des *stmt* -Werts sind identisch mit denen für sp_cursoropen, mit der Ausnahme, dass der *stmt* -Zeichen folgen Datentyp **ntext**lauten muss.  
   
- *options*  
+ *Optionen*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. *Optionen* erfordern den folgenden **int** -Eingabe Wert.  
   
-|ReplTest1|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Scrolloption. *scrollopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|ReplTest1|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -90,7 +90,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
  *ccopt*  
  Option für die Parallelitätssteuerung. *ccopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|ReplTest1|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  
@@ -104,15 +104,15 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |0x40000|OPTIMISTIC_ACCEPTABLE|  
 |0x80000|OPTIMISITC_ACCEPTABLE|  
   
- Wie bei *scrollpt*können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen anderen Wert als den angeforderten zuweisen.  
+ Wie bei *scrollpt* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann einen anderen Wert als den angeforderten zuweisen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Der RPC-Statusparameter entspricht einem der folgenden Werte:  
   
-|ReplTest1|und Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|0|Success|  
-|0x0001|Failure|  
+|0|Erfolg|  
+|0x0001|Fehler|  
 |1FF6|Es konnten keine Metadaten zurückgegeben werden.<br /><br /> Hinweis: der Grund hierfür ist, dass die Anweisung kein Resultset erzeugt. Beispielsweise handelt es sich um eine INSERT-oder DDL-Anweisung.|  
   
 ## <a name="examples"></a>Beispiele  
@@ -144,12 +144,12 @@ exec sp_cursorclose @p2
  
  Wenn *stmt* parametrisiert und der *scrollopt* -PARAMETERIZED_STMT Wert aktiviert ist, lautet das Format der Zeichenfolge wie folgt:  
   
- { *\<Name der lokalen Variablen > * *\<Datentyp >* } [ ,... *n* ]  
+ { * \<Name der lokalen Variablen> *\<* Datentyp>* } [ ,... *n* ]  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_cursorexecute &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorunprepare &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md) -   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_cursorexecute &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   
+ [sp_cursoropen &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorunprepare &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursorunprepare-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 4d380954be720a6cb839b0c4259a408733f8e176
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056335"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -54,16 +54,16 @@ Beim Verwenden des Zeichenformats sollten Sie Folgendes berücksichtigen:
   
 -   Um den Verlust von Sonderzeichen zu verhindern, verwenden Sie das Unicode-Zeichenformat, oder geben Sie eine Codepage an.  
   
--   Alle [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Format konvertiert. Beim Importieren in eine [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Spalte werden die Daten als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) werden die Daten mithilfe der impliziten Konvertierung von [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
+-   Alle [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Daten, die in einer Zeichenformatdatei gespeichert sind, werden ohne Metadaten gespeichert. Alle Datenwerte werden gemäß den Regeln der impliziten Datenkonvertierung in das [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) -Format konvertiert. Beim Importieren in eine [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) -Spalte werden die Daten als [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)-Datentyp importiert. Beim Importieren in eine Spalte mit einem anderen Datentyp als [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)werden die Daten mithilfe der impliziten Konvertierung von [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) konvertiert. Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md).  
   
--   Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) exportiert [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)-Werte in Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne Symbole für die Zifferngruppierung, wie z.B. Kommas. So wird z.B. eine [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
+-   Das [Hilfsprogramm „bcp“](../../tools/bcp-utility.md) exportiert [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Werte in Datendateien im Zeichenformat mit vier Stellen nach dem Dezimaltrennzeichen und ohne Symbole für die Zifferngruppierung, wie z.B. Kommas. So wird z.B. eine [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md) -Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
 ## Befehlsoptionen für das Zeichenformat<a name="command_options"></a>  
 Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie die folgenden Anweisungen verwenden: [BCP](../../tools/bcp-utility.md), [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) oder [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md). Für einen [bcp](../../tools/bcp-utility.md) -Befehl oder eine [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) -Anweisung können Sie das Datenformat in der Anweisung angeben.  Für eine [INSERT ... SELECT * FROM OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
   
 Das Zeichenformat wird von den folgenden Befehlsoptionen unterstützt:  
   
-|Befehl|Option|und Beschreibung|  
+|Get-Help|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |bcp|**-c**|Bewirkt, dass das Hilfsprogramm „bcp“ Zeichendaten verwendet.\*|  
 |BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
@@ -219,7 +219,7 @@ So verwenden Sie Datenformate für Massenimport oder Massenexport
 -   [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   

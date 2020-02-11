@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63063117"
 ---
 # <a name="deleting-database-objects"></a>Löschen von Datenbankobjekten
@@ -100,16 +100,16 @@ ms.locfileid: "63063117"
  Damit ist das Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen beendet. Beachten Sie, dass dieses Lernprogramm nur eine kurze Übersicht bietet und darin nicht alle Optionen der verwendeten Anweisungen beschrieben werden. Das Entwerfen und Erstellen einer effizienten Datenbankstruktur und das Konfigurieren des sicheren Zugriffs auf die Daten erfordern eine komplexere Datenbank als in diesem Lernprogramm gezeigt.  
   
 ## <a name="return-to-sql-server-tools-portal"></a>Zurück zum Portal für SQL Server-Tools  
- [Tutorial: Schreiben von Transact-SQL-Anweisungen](tutorial-writing-transact-sql-statements.md)  
+ [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](tutorial-writing-transact-sql-statements.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [DROP USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
- [DROP LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
- [DROP PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
- [DROP VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
+ [Drop User &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
+ [Drop Login &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
+ [DROP PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   
+ [Drop View &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-view-transact-sql)   
  [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)   
- [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+ [DROP TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
  [DROP DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-database-audit-specification-transact-sql)  
   
   

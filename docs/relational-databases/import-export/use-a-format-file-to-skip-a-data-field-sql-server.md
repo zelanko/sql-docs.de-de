@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 88d9e3805891c62998afb131ddee7fb202f18b75
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056320"
 ---
 # <a name="use-a-format-file-to-skip-a-data-field-sql-server"></a>Auslassen eines Datenfelds mithilfe einer Formatdatei (SQL Server)
@@ -91,7 +91,7 @@ Vergleichen Sie die vorgenommenen Änderungen:
 2       SQLCHAR 0       25      ","      2     FirstName    SQL_Latin1_General_CP1_CI_AS
 3       SQLCHAR 0       30      "\r\n"   3     LastName     SQL_Latin1_General_CP1_CI_AS
 ```
-**Nach**
+**Nachher**
 ```
 13.0
 4
@@ -104,9 +104,9 @@ Vergleichen Sie die vorgenommenen Änderungen:
 
 Die geänderte Formatdatei entspricht nun Folgendem:
 * 4 Datenfelder
-* Das erste Datenfeld in `myTestSkipField.bcp` ist der ersten Spalte zugeordnet, `myTestSkipField.. PersonID`
+* Das erste Datenfeld in `myTestSkipField.bcp` wird der ersten Spalte zugeordnet, `myTestSkipField.. PersonID`
 * Das zweite Datenfeld in `myTestSkipField.bcp` ist keiner Spalte zugeordnet.
-* Das dritte Datenfeld in `myTestSkipField.bcp` ist der zweiten Spalte zugeordnet, `myTestSkipField.. FirstName`
+* Das dritte Datenfeld in `myTestSkipField.bcp` wird der zweiten Spalte zugeordnet, `myTestSkipField.. FirstName`
 * Das vierte Datenfeld in `myTestSkipField.bcp` ist der dritten Spalte zugeordnet, `myTestSkipField.. LastName`
 
 ### Erstellen einer XML-Formatdatei <a name="xml_format_file"></a>  
@@ -140,7 +140,7 @@ Vergleichen Sie die vorgenommenen Änderungen:
 </BCPFORMAT>
 ```
 
-**Nach**
+**Nachher**
 ```
 \<?xml version="1.0"?>
 \<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -252,7 +252,7 @@ SELECT * FROM TestDatabase.dbo.myTestSkipField;
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [bcp Utility](../../tools/bcp-utility.md)   
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)   
