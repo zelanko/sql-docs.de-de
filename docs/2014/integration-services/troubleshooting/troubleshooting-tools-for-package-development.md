@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62885751"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Tools zur Problembehandlung für die Paketentwicklung
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Funktionen und Tools, mit denen Sie die Problembehandlung von Paketen vornehmen können, während Sie diese in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entwickeln.  
   
 ## <a name="troubleshooting-design-time-validation-issues"></a>Behandlung von Problemen bei der Überprüfung zur Entwurfszeit  
@@ -39,57 +40,60 @@ ms.locfileid: "62885751"
   
 -   Öffnen Sie das Projekt erneut, oder öffnen Sie das Projekt mit dem Paket erneut. Die Überprüfung wird erneut für alle Verbindungen im Paket ausgeführt.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] umfasst die folgenden, zusätzlichen Funktionen, um Ihnen das Vermeiden von Überprüfungsfehlern zu erleichtern:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] umfasst die folgenden, zusätzlichen Funktionen, um Ihnen das Vermeiden von Überprüfungsfehlern zu erleichtern:  
   
--   **Festlegen des gesamten Pakets und aller Verbindungen auf den Offlinemodus, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Im Gegensatz zu den `DelayValidation` -Eigenschaft, die **Offline arbeiten** Option ist verfügbar, noch bevor Sie ein Paket öffnen. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
+-   **Legen Sie alle Pakete und alle Verbindungen so fest, dass Sie offline funktionieren, wenn keine Datenquellen verfügbar sind**. Sie können **Offline arbeiten** im Menü **SSIS** aktivieren. Anders als `DelayValidation` bei der-Eigenschaft ist die Option **Offline arbeiten** auch vor dem Öffnen eines Pakets verfügbar. Sie können die Option **Offline arbeiten** auch aktivieren, um die Vorgänge im Designer zu beschleunigen, und sie lediglich zum Überprüfen des Pakets deaktivieren.  
   
--   **Konfiguration der DelayValidation-Eigenschaft für Paketelemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation`-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. In der Regel sollte bei der Bereitstellung des Pakets diese Eigenschaft für die betreffenden Paketelemente auf dem Wert `True` festgelegt bleiben, da andernfalls die gleichen Überprüfungsfehler zur Laufzeit auftreten.  
+-   **Konfigurieren Sie die DelayValidation-Eigenschaft für Paket Elemente, die bis zur Laufzeit nicht gültig sind**. Zum Verhindern von Überprüfungsfehlern können Sie für Paketelemente, deren Konfigurationen zur Entwurfszeit ungültig sind, `DelayValidation` auf `True` festlegen. Ein Beispiel hierfür wäre ein Datenflusstask, der eine Zieltabelle verwendet, die erst zur Laufzeit durch einen Task 'SQL ausführen' erstellt wird. Die `DelayValidation`-Eigenschaft kann auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. In der Regel sollte bei der Bereitstellung des Pakets diese Eigenschaft für die betreffenden Paketelemente auf dem Wert `True` festgelegt bleiben, da andernfalls die gleichen Überprüfungsfehler zur Laufzeit auftreten.  
   
      Die `DelayValidation`-Eigenschaft kann für einen Datenflusstask, jedoch nicht für einzelne Datenflusskomponenten festgelegt werden. Sie erreichen für einzelne Datenflusskomponenten ein ähnliches Ergebnis, wenn Sie die <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.ValidateExternalMetadata%2A>-Eigenschaft der Datenflusskomponenten auf `false` festlegen. Wenn jedoch der Wert dieser Eigenschaft auf `false` festgelegt ist, erkennt die Komponente keine Änderungen der Metadaten externer Datenquellen.  
   
  Wenn vom Paket verwendete Datenbankobjekte zum Zeitpunkt der Überprüfung gesperrt sind, reagiert der Überprüfungsvorgang möglicherweise nicht mehr. Unter diesen Umständen reagiert der [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ebenfalls nicht mehr. Sie können die Überprüfung fortsetzen, indem Sie die zugehörigen Sitzung in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]schließen. Sie können dieses Problem auch mit den in diesem Abschnitt beschriebenen Einstellungen umgehen.  
   
 ## <a name="troubleshooting-control-flow"></a>Ablaufsteuerung (Problembehandlung)  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält die folgenden Funktionen und Tools, mit denen Sie während der Paketentwicklung Probleme bei der Ablaufsteuerung in Paketen behandeln können:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält die folgenden Funktionen und Tools, mit denen Sie während der Paketentwicklung Probleme bei der Ablaufsteuerung in Paketen behandeln können:  
   
--   **Festlegen von Breakpoints für Tasks, Container sowie für das Paket**. Sie können dabei mithilfe der vom [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer bereitgestellten grafischen Tools Breakpoints festlegen. Breakpoints können auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. Bestimmte Tasks und Container stellen zusätzliche Unterbrechungsbedingungen zum Festlegen von Breakpoints bereit. Beispielsweise können Sie eine Unterbrechungsbedingung für den For-Schleifencontainer aktivieren, welche die Ausführung zu Beginn jeder Iteration der Schleife anhält.  
+-   **Legen Sie Breakpoints für Tasks, Container und das Paket fest**. Sie können dabei mithilfe der vom [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer bereitgestellten grafischen Tools Breakpoints festlegen. Breakpoints können auf Paketebene oder auf der Ebene der einzelnen, in den Paketen enthaltenen Tasks und Container aktiviert werden. Bestimmte Tasks und Container stellen zusätzliche Unterbrechungsbedingungen zum Festlegen von Breakpoints bereit. Beispielsweise können Sie eine Unterbrechungsbedingung für den For-Schleifencontainer aktivieren, welche die Ausführung zu Beginn jeder Iteration der Schleife anhält.  
   
--   **Verwenden der Debugfenster**. Beim Ausführen von Paketen mit Breakpoints ermöglichen die Debugfenster in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Zugriff auf Variablenwerte und Statusmeldungen.  
+-   **Verwenden Sie die Debugfenster**. Beim Ausführen von Paketen mit Breakpoints ermöglichen die Debugfenster in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Zugriff auf Variablenwerte und Statusmeldungen.  
   
--   **Überprüfen der Informationen auf der Registerkarte Status**. [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer werden zusätzliche Informationen zur Ablaufsteuerung beim Ausführen von Paketen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auf der Registerkarte Status werden Tasks und Container in der Ausführungsreihenfolge aufgeführt. Diese Registerkarte enthält außerdem die Start- und Beendigungszeiten, Warnungen und Fehlermeldungen für jeden Task, Container sowie das Paket selbst.  
+-   **Überprüfen Sie die Informationen auf der Registerkarte**Status. [!INCLUDE[ssIS](../../includes/ssis-md.md)] Der-Designer bietet zusätzliche Informationen zur Ablauf Steuerung, wenn Sie ein [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Paket in ausführen. Auf der Registerkarte Status werden Tasks und Container in der Ausführungsreihenfolge aufgeführt. Diese Registerkarte enthält außerdem die Start- und Beendigungszeiten, Warnungen und Fehlermeldungen für jeden Task, Container sowie das Paket selbst.  
   
  Weitere Informationen zu diesen Funktionen finden Sie unter [Debugging Control Flow](debugging-control-flow.md).  
   
 ## <a name="troubleshooting-data-flow"></a>Datenfluss (Problembehandlung)  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält die folgenden Funktionen und Tools, mit denen Sie während der Paketentwicklung Probleme mit Datenflüssen in Paketen behandeln können.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält die folgenden Funktionen und Tools, mit denen Sie während der Paketentwicklung Probleme mit Datenflüssen in Paketen behandeln können.  
   
--   **Durchführen von Tests mit einer Untermenge der Daten**. Wenn Sie für die Problembehandlung des Datenflusses eines Pakets nur eine Stichprobe des Datasets verwenden wollen, können Sie eine Transformation für Prozentwert-Stichproben oder eine Transformation für Zeilenstichproben einschließen, um zur Laufzeit eine Inline-Datenstichprobe zu erstellen. Weitere Informationen finden Sie unter [Percentage Sampling Transformation](../data-flow/transformations/percentage-sampling-transformation.md) und [Row Sampling Transformation](../data-flow/transformations/row-sampling-transformation.md).  
+-   **Testen Sie nur mit einer Teilmenge der Daten**. Wenn Sie für die Problembehandlung des Datenflusses eines Pakets nur eine Stichprobe des Datasets verwenden wollen, können Sie eine Transformation für Prozentwert-Stichproben oder eine Transformation für Zeilenstichproben einschließen, um zur Laufzeit eine Inline-Datenstichprobe zu erstellen. Weitere Informationen finden Sie unter [Percentage Sampling Transformation](../data-flow/transformations/percentage-sampling-transformation.md) und [Row Sampling Transformation](../data-flow/transformations/row-sampling-transformation.md).  
   
--   **Verwenden von Daten-Viewern zum Überwachen des Datenflusses**. Die Daten-Viewer zeigen Datenwerte an, während die Daten zwischen Quellen, Transformationen und Zielen verschoben werden. Ein Daten-Viewer kann Daten in einem Raster anzeigen. Sie können die Daten von einem Daten-Viewer in die Zwischenablage kopieren und anschließend in eine Datei wie z. B. eine Excel-Kalkulationstabelle einfügen. Weitere Informationen finden Sie unter [Hinzufügen eines Daten-Viewers zu einem Datenfluss](../add-a-data-viewer-to-a-data-flow.md).  
+-   **Verwenden Sie Daten-Viewer zum Überwachen von Daten beim Durchlaufen des Datenflusses**. Die Daten-Viewer zeigen Datenwerte an, während die Daten zwischen Quellen, Transformationen und Zielen verschoben werden. Ein Daten-Viewer kann Daten in einem Raster anzeigen. Sie können die Daten von einem Daten-Viewer in die Zwischenablage kopieren und anschließend in eine Datei wie z. B. eine Excel-Kalkulationstabelle einfügen. Weitere Informationen finden Sie unter [Hinzufügen eines Daten-Viewers zu einem Datenfluss](../add-a-data-viewer-to-a-data-flow.md).  
   
--   **Konfigurieren von Fehlerausgaben für Datenflusskomponenten, die Fehlerausgaben unterstützen**. Viele Datenflussquellen, Transformationen und Ziele unterstützen Fehlerausgaben. Sie können die Fehlerausgabe einer Datenflusskomponente so konfigurieren, dass die Fehlerdaten an ein bestimmtes Ziel geleitet werden. Sie können die fehlerhaften oder abgeschnittenen Daten z. B. in einer separaten Textdatei aufzeichnen. Sie können darüber hinaus Fehlerausgaben Daten-Viewer anfügen, in denen Sie nur die fehlerhaften Daten überprüfen. Während der Entwurfszeit zeichnen die Fehlerausgaben fehlerhafte Datenwerte auf, um Sie beim Entwerfen von Paketen mit realistischen Daten zu unterstützen. Im Gegensatz zu anderen Tools und Funktionen zur Problembehandlung, die nur zur Entwurfszeit nützlich sind, bleibt die Nützlichkeit von Fehlerausgaben in der Produktionsumgebung erhalten. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../data-flow/error-handling-in-data.md).  
+-   **Konfigurieren von Fehler Ausgaben für Datenfluss Komponenten, die diese unterstützen**. Viele Datenflussquellen, Transformationen und Ziele unterstützen Fehlerausgaben. Sie können die Fehlerausgabe einer Datenflusskomponente so konfigurieren, dass die Fehlerdaten an ein bestimmtes Ziel geleitet werden. Sie können die fehlerhaften oder abgeschnittenen Daten z. B. in einer separaten Textdatei aufzeichnen. Sie können darüber hinaus Fehlerausgaben Daten-Viewer anfügen, in denen Sie nur die fehlerhaften Daten überprüfen. Während der Entwurfszeit zeichnen die Fehlerausgaben fehlerhafte Datenwerte auf, um Sie beim Entwerfen von Paketen mit realistischen Daten zu unterstützen. Im Gegensatz zu anderen Tools und Funktionen zur Problembehandlung, die nur zur Entwurfszeit nützlich sind, bleibt die Nützlichkeit von Fehlerausgaben in der Produktionsumgebung erhalten. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../data-flow/error-handling-in-data.md).  
   
--   **Aufzeichnen der Anzahl der verarbeiteten Zeilen**. Wenn Sie ein Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ausführen, wird die Anzahl der Zeilen, die einen Pfad durchlaufen haben, im Datenfluss-Designer angezeigt. Dieser Wert wird regelmäßig aktualisiert, während die Daten den Pfad durchlaufen. Sie können dem Datenfluss auch eine Transformation für Zeilenanzahl hinzufügen, um die endgültige Zeilenanzahl in einer Variablen aufzuzeichnen. Weitere Informationen finden Sie unter [Row Count Transformation](../data-flow/transformations/row-count-transformation.md).  
+-   **Erfassen Sie die Anzahl der verarbeiteten Zeilen**. Wenn Sie ein Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer ausführen, wird die Anzahl der Zeilen, die einen Pfad durchlaufen haben, im Datenfluss-Designer angezeigt. Dieser Wert wird regelmäßig aktualisiert, während die Daten den Pfad durchlaufen. Sie können dem Datenfluss auch eine Transformation für Zeilenanzahl hinzufügen, um die endgültige Zeilenanzahl in einer Variablen aufzuzeichnen. Weitere Informationen finden Sie unter [Row Count Transformation](../data-flow/transformations/row-count-transformation.md).  
   
--   **Überprüfen der Informationen auf der Registerkarte Status**. [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer werden zusätzliche Informationen zu Datenflüssen beim Ausführen von Paketen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Auf der Registerkarte Status werden die Datenflusskomponenten in der Ausführungsreihenfolge aufgelistet sowie der Fortschritt der einzelnen Paketphasen in Prozent und die in das Ziel geschriebenen Zeilen.  
+-   **Überprüfen Sie die Informationen auf der Registerkarte**Status. [!INCLUDE[ssIS](../../includes/ssis-md.md)] Der-Designer bietet zusätzliche Informationen zu Daten Flüssen, wenn Sie ein [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Paket in ausführen. Auf der Registerkarte Status werden die Datenflusskomponenten in der Ausführungsreihenfolge aufgelistet sowie der Fortschritt der einzelnen Paketphasen in Prozent und die in das Ziel geschriebenen Zeilen.  
   
  Weitere Informationen zu diesen Funktionen finden Sie unter [Debugging Data Flow](debugging-data-flow.md).  
   
 ## <a name="troubleshooting-scripts"></a>Behandlung von Problemen mit Skripts  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Visual Studio-Tools für Anwendungen (VSTA) ist die Entwicklungsumgebung, in der Sie die vom Skripttask und der Skriptkomponente verwendeten Skripts schreiben. VSTA bietet die folgenden Funktionen und Tools, mit denen Sie während der Paketentwicklung Probleme mit Skripts behandeln können:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) ist die Entwicklungsumgebung, in der Sie die Skripts schreiben, die vom Skript Task und der Skript Komponente verwendet werden. VSTA bietet die folgenden Funktionen und Tools, mit denen Sie während der Paketentwicklung Probleme mit Skripts behandeln können:  
   
--   **Festlegen von Breakpoints für Skripts in Skripttasks.** VSTA stellt ausschließlich Unterstützung für das Debuggen von Skripts in Skripttasks bereit. Die in Skripttasks festgelegten Breakpoints werden mit den Breakpoints in Paketen sowie mit den Breakpoints der in Paketen enthaltenen Tasks und Containern integriert. Auf diese Weise wird das nahtlose Debuggen aller Paketelemente sichergestellt.  
+-   **Legen Sie Breakpoints in Skripts in Skript Tasks fest.** VSTA stellt ausschließlich Unterstützung für das Debuggen von Skripts in Skripttasks bereit. Die in Skripttasks festgelegten Breakpoints werden mit den Breakpoints in Paketen sowie mit den Breakpoints der in Paketen enthaltenen Tasks und Containern integriert. Auf diese Weise wird das nahtlose Debuggen aller Paketelemente sichergestellt.  
   
     > [!NOTE]  
     >  Wenn Sie ein Paket debuggen, das mehrere Skripttasks umfasst, erreicht der Debugger nur in einem Skripttask Breakpoints und ignoriert die Breakpoints in den anderen Skripttasks. Ist ein Skripttask Bestandteil einer Foreach-Schleife oder eines For-Schleifencontainers, dann ignoriert der Debugger nach der ersten Schleifeniteration Breakpoints im Skripttask.  
   
- Weitere Informationen finden Sie unter [Debugging Script](debugging-script.md). Vorschläge zum Debuggen der Skriptkomponente finden Sie unter [Coding and Debugging the Script Component] (.. / extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
+ Weitere Informationen finden Sie unter [Debugging Script](debugging-script.md). Vorschläge zum Debuggen der Skript Komponente finden Sie unter [codieren und Debuggen der Skript Komponente] (.). /extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md.  
   
 ## <a name="troubleshooting-errors-without-a-description"></a>Behandlung von Fehlern ohne Beschreibung  
  Wenn Sie während der Paketentwicklung auf eine [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Fehlernummer ohne dazugehörige Beschreibung stoßen, finden Sie die entsprechende Beschreibung unter [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md). Die Liste enthält zurzeit keine Informationen zur Problembehandlung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Behandlung von Problemen mit Paketausführungstools](troubleshooting-tools-for-package-execution.md)   
- [Data Flow Performance Features](../data-flow/data-flow-performance-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tools zur Problembehandlung für die Paket Ausführung](troubleshooting-tools-for-package-execution.md)   
+ [Funktionen für die Datenflussleistung](../data-flow/data-flow-performance-features.md)  
   
   

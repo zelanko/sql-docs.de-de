@@ -15,13 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b905b7127d10be80d9c30ec7c594fbaedc7d9c00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109691"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
+  
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht datengesteuerte Abonnements, sodass Sie die Verteilung eines Berichts auf der Basis dynamischer Abonnentendaten anpassen können. Datengesteuerte Abonnements sind für folgende Arten von Szenarios gedacht:  
   
 -   Verteilen von Berichten an einen großen Empfängerpool, dessen Mitglieder sich bis zur nächsten Verteilung ändern können. Beispiel: das Verteilen eines Monatsberichts an alle aktuellen Kunden.  
@@ -36,16 +37,16 @@ ms.locfileid: "66109691"
  [Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank](lesson-1-creating-a-sample-subscriber-database.md)  
  In dieser Lektion erfahren Sie, wie eine lokale [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank erstellt wird, die Abonnenteninformationen enthält.  
   
- [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](lesson-2-modifying-the-report-data-source-properties.md).  
+ [Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle](lesson-2-modifying-the-report-data-source-properties.md)  
  In dieser Lektion erfahren Sie, wie Berichtsdatenquelleneigenschaften so geändert werden können, dass der Bericht unbeaufsichtigt ausgeführt werden kann. Für die unbeaufsichtigte Verarbeitung sind gespeicherte Anmeldeinformationen erforderlich. Sie ändern auch das Berichtsdataset, um einen Parameter einzuschließen, der von den Abonnentendaten angegeben wird.  
   
- [Lektion 3: Definieren eines datengesteuerten Abonnements](lesson-3-defining-a-data-driven-subscription.md)  
+ [Lesson 3: Defining a Data-Driven Subscription](lesson-3-defining-a-data-driven-subscription.md)  
  In dieser Lektion erfahren Sie, wie ein datengesteuertes Abonnement definiert wird. In dieser Lektion werden Sie durch die einzelnen Seiten im Assistenten für das datengesteuerte Abonnement geführt.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Datengesteuerte Abonnements werden normalerweise von einem Berichtsserveradministrator erstellt und verwaltet. Für das Anlegen von datengesteuerten Abonnements sind Erfahrungen im Erstellen von Abfragen, Kenntnisse darüber, welche Datenquellen Abonnentendaten enthalten, und erhöhte Berechtigungen auf einem Berichtsserver erforderlich.  
   
- Das Lernprogramm verwendet den in diesem Tutorial erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41; ](create-a-basic-table-report-ssrs-tutorial.md) und Daten aus [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
+ Im Tutorial wird der Bericht verwendet, der im Tutorial [Erstellen eines einfachen Tabellen Berichts &#40;SSRS](create-a-basic-table-report-ssrs-tutorial.md) -Lernprogramm&#41;und Daten aus erstellt wurde.[!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]  
   
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
@@ -65,7 +66,7 @@ ms.locfileid: "66109691"
   
  **Ungefähre Dauer dieses Tutorials:** 30 Minuten. Zusätzliche 30 Minuten werden benötigt, wenn Sie das Lernprogramm für grundlegende Berichte nicht abgeschlossen haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

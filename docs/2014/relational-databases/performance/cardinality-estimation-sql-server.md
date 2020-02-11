@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151046"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
@@ -32,22 +32,22 @@ ms.locfileid: "63151046"
   
  Um optimale Abfrageleistung zu gewährleisten, sollten Sie diesen Empfehlungen folgen, um Ihre Arbeitsauslastung mit der neuen Kardinalitätsschätzung zu testen, bevor Sie sie in das produktive System übernehmen.  
   
-1.  Führen Sie ein Upgrade für alle bestehenden Datenbanken aus, um die neue Kardinalitätsschätzung zu verwenden. Verwenden Sie zu diesem Zweck [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) Kompatibilitätsgrad der Datenbank auf 120 festgelegt.  
+1.  Führen Sie ein Upgrade für alle bestehenden Datenbanken aus, um die neue Kardinalitätsschätzung zu verwenden. Verwenden Sie dazu [ALTER DATABASE Compatibility Level &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) , um den Datenbank-Kompatibilitäts Grad auf 120 festzulegen.  
   
 2.  Führen Sie die Testarbeitsauslastung mit der neuen Kardinalitätsschätzung aus, und beheben Sie etwaige neu auftretende Leistungsprobleme mithilfe derselben Methoden, die sie üblicherweise bei Leistungsproblemen anwenden.  
   
 3.  Wenn sich die Leistung einer bestimmten Abfrage verschlechtert, nachdem Sie die Arbeitsauslastung auf die neue Kardinalitätsschätzung (Datenbank-Kompatibilitätsgrad 120 (SQL Server 2014)) umgestellt haben, können Sie die Abfrage mit dem Ablaufverfolgungsflag 9481 ausführen, um die Version der Kardinalitätsschätzung zu verwenden, die in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und früheren Versionen verwendet wurde. Informationen zum Ausführen einer Abfrage mit einem Ablaufverfolgungsflag finden Sie im KB-Artikel [Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](https://support.microsoft.com/kb/2801413).  
   
-4.  Wenn Sie nicht, dass alle Datenbanken sofort auf die neue kardinalitätsschätzung zu verwenden ändern, können Sie die frühere kardinalitätsschätzung für alle Datenbanken verwenden, indem [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) auf die Datenbank-Kompatibilitätsgrad auf 110 festgelegt.  
+4.  Wenn Sie nicht alle Datenbanken gleichzeitig ändern können, um die neue Kardinalitätsschätzung zu verwenden, können Sie die frühere Kardinalitätsschätzung für alle Datenbanken verwenden, indem Sie [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) verwenden, um den Datenbank-Kompatibilitäts Grad auf 110 festzulegen.  
   
 5.  Wenn die Arbeitsauslastung mit dem Datenbank-Kompatibilitätsgrad 110 ausgeführt wird und Sie eine bestimmte Abfrage mit der neuen Kardinalitätsschätzung testen oder ausführen möchten, können Sie sie mit dem Ablaufverfolgungsflag 2312 ausführen, um die SQL Server 2014-Version der Kardinalitätsschätzung zu verwenden.  Informationen zum Ausführen einer Abfrage mit einem Ablaufverfolgungsflag finden Sie im KB-Artikel [Aktivieren eines SQL Server-Abfrageoptimiererverhaltens, das Pläne beeinflusst und über verschiedene Ablaufverfolgungsflags auf einer spezifischen Abfrageebene gesteuert werden kann](https://support.microsoft.com/kb/2801413).  
   
 ## <a name="new-xevents"></a>Neue XEvents  
  Es gibt zwei neue query_optimizer_estimate_cardinality-XEvents zur Unterstützung der neuen Abfragepläne.  
   
--   *query_optimizer_estimate_cardinality* wird ausgeführt, wenn der Abfrageoptimierer die Kardinalität für einen relationalen Ausdruck schätzt.  
+-   *query_optimizer_estimate_cardinality* tritt auf, wenn der Abfrageoptimierer die Kardinalität für einen relationalen Ausdruck schätzt.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors wird ausgeführt, wenn die beiden Ablaufverfolgungsflags 2312 und 9481 aktiviert sind und versucht wird, sowohl das alte als auch das neue Verhalten der Kardinalitätsschätzung zu erzwingen.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors tritt auf, wenn sowohl Ablaufverfolgungsflags 2312 als auch 9481 aktiviert sind, und versucht, sowohl das alte als auch das neue Verhalten der Kardinalitätsschätzung gleichzeitig zu erzwingen.  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen werden einige Änderungen der neuen Kardinalitätsschätzung veranschaulicht. Der Code für die Kardinalitätsschätzung wurde umgeschrieben. Die Logik ist komplex, sodass nicht alle Änderungen detailliert erläutert werden können.  
@@ -67,15 +67,15 @@ SELECT item, category, amount FROM dbo.Sales AS s WHERE Date = '2013-12-19';
  Dieses Verhalten wurde geändert. Auch wenn die Statistik noch nicht anhand der aktuellen aufsteigenden Daten aktualisiert wurde, die seit dem letzten Statistikupdate hinzugefügt wurden, geht die neue Kardinalitätsschätzung jetzt davon aus, dass die Werte vorhanden sind, und gibt für jeden Spaltenwert die durchschnittliche Kardinalität als Schätzwert zurück.  
   
 ### <a name="example-b-new-cardinality-estimates-assume-filtered-predicates-on-the-same-table-have-some-correlation"></a>Beispiel B. Bei neuen Kardinalitätsschätzungen wird davon ausgegangen, dass gefilterte Prädikate für dieselbe Tabelle eine gewisse Korrelation aufweisen.  
- Bei diesem Beispiel wird angenommen, dass die Tabelle "Cars" 1.000 Zeilen enthält. Beim Hersteller ("Make") ergeben sich 200 Übereinstimmungen für "Honda" und beim Modell 50 Übereinstimmungen für "Civic". Alle Fahrzeuge des Modells "Civic" sind Fabrikate des Herstellers "Honda". Daher entfallen 20 % der Werte in der Spalte "Make" auf "Honda" und 5 % der Werte in der Spalte "Model" auf "Civic". Das ergibt eine tatsächliche Anzahl von 50 Honda Civics. Bei der früheren Kardinalitätsschätzung wurde angenommen, dass die Werte in den Spalten "Make" und "Model" keinen Bezug zueinander haben. Der vorherige Abfrageoptimierer schätzt, es gibt 10 Honda Civics (.05 *.20 \* 1000 Zeilen = 10 Zeilen).  
+ Bei diesem Beispiel wird angenommen, dass die Tabelle "Cars" 1.000 Zeilen enthält. Beim Hersteller ("Make") ergeben sich 200 Übereinstimmungen für "Honda" und beim Modell 50 Übereinstimmungen für "Civic". Alle Fahrzeuge des Modells "Civic" sind Fabrikate des Herstellers "Honda". Daher entfallen 20 % der Werte in der Spalte "Make" auf "Honda" und 5 % der Werte in der Spalte "Model" auf "Civic". Das ergibt eine tatsächliche Anzahl von 50 Honda Civics. Bei der früheren Kardinalitätsschätzung wurde angenommen, dass die Werte in den Spalten "Make" und "Model" keinen Bezug zueinander haben. Der vorherige Abfrageoptimierer schätzt, dass 10 Honda-Civics (. 05 * \* 0,20 1000 Zeilen = 10 Zeilen) vorhanden sind.  
   
 ```  
 SELECT year, purchase_price FROM dbo.Cars WHERE Make = 'Honda' AND Model = 'Civic';  
 ```  
   
- Dieses Verhalten wurde geändert. Die neue Kardinalitätsschätzung geht davon aus, dass zwischen den Spalten "Make" und "Model" eine *gewisse* Korrelation besteht. Der Abfrageoptimierer gibt eine höhere Kardinalitätsschätzung zurück, indem er der Schätzungsgleichung eine exponentielle Komponente hinzufügt. Die Abfrageoptimierer schätzt jetzt, dass 22,36 Zeilen (.05 * SQRT(.20) \* 1000 Zeilen = 22,36 Zeilen) mit dem Prädikat übereinstimmen. Bei der spezifischen Datenverteilung in diesem Szenario liegt der Wert von 22,36 Zeilen näher an den tatsächlichen 50 Zeilen, die von der Abfrage zurückgegeben werden.  
+ Dieses Verhalten wurde geändert. Die neue Kardinalitätsschätzung geht davon aus, dass zwischen den Spalten "Make" und "Model" eine *gewisse* Korrelation besteht. Der Abfrageoptimierer gibt eine höhere Kardinalitätsschätzung zurück, indem er der Schätzungsgleichung eine exponentielle Komponente hinzufügt. Der Abfrageoptimierer schätzt jetzt, dass 22,36 Zeilen (0,05 * sqrt (20) \* 1000 Rows = 22,36 Rows) dem Prädikat entsprechen. Bei der spezifischen Datenverteilung in diesem Szenario liegt der Wert von 22,36 Zeilen näher an den tatsächlichen 50 Zeilen, die von der Abfrage zurückgegeben werden.  
   
- Beachten Sie, dass die Prädikatselektivitäten von der Logik der neuen Kardinalitätsschätzung sortiert werden und der Exponent erhöht wird. Beispielsweise würde die prädikatselektivitäten.05.20 und.25, die kardinalitätsschätzung wäre (.05 * SQRT(.20) \* SQRT(SQRT(.25))).  
+ Beachten Sie, dass die Prädikatselektivitäten von der Logik der neuen Kardinalitätsschätzung sortiert werden und der Exponent erhöht wird. Wenn die Prädikat Selektivität beispielsweise 0,05, 0,20 und 0,25 lauten, wäre die Kardinalitätsschätzung (. 05 * sqrt (. 20) \* sqrt (sqrt (. 25))).  
   
 ### <a name="example-c-new-cardinality-estimates-assume-filtered-predicates-on-different-tables-are-independent"></a>Beispiel C. Bei der neuen Kardinalitätsschätzung wird davon ausgegangen, dass die gefilterten Prädikate für die verschiedenen Tabellen keinen Bezug zueinander haben.  
  In diesem Beispiel setzt die frühere Kardinalitätsschätzung voraus, dass die Prädikatfilter "s.type" und "r.date" in Wechselbeziehung zueinander stehen. Allerdings belegen Tests mit heutigen Arbeitsauslastungen, dass die Prädikatfilter für Spalten in verschiedenen Tabellen in der Regel nicht korrelieren.  
@@ -87,7 +87,7 @@ WHERE s.ticket = r.ticket AND s.type = 'toy' AND r.date = '2013-12-19';
   
  Dieses Verhalten wurde geändert. Die Logik der neuen Kardinalitätsschätzung geht nun davon aus, dass "s.type" nicht mit "r.date" in Wechselbeziehung steht. Praktisch gesehen bedeutet dies, dass "toy" jeden Tag und nicht nur an einem bestimmten Tag zurückgegeben wird. In diesem Fall gibt die neue Kardinalitätsschätzung eine kleinere Zahl zurück als die vorherige Kardinalitätsschätzung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen und Optimieren der Leistung](monitor-and-tune-for-performance.md)  
   
   

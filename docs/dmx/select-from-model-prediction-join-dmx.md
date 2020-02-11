@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX) | Microsoft-Dokumentation
+title: SELECT FROM &lt;Model&gt; Vorhersage Join (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67928325"
 ---
-# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Modell&gt; PREDICTION JOIN (DMX)
+# <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;Model&gt; Vorhersage Join (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Verwendet ein Miningmodell dazu, die Status von Spalten vorherzusagen, die zu einer externen Datenquelle gehören. Die **PREDICTION JOIN** -Anweisung gleicht jeden Fall aus der Quellabfrage mit dem Modell.  
+  Verwendet ein Miningmodell dazu, die Status von Spalten vorherzusagen, die zu einer externen Datenquelle gehören. Die **Vorhersage Join** -Anweisung gleicht jeden Fall von der Quell Abfrage zum Modell ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,31 +33,31 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Dies ist optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
- *Select-Ausdrucksliste*  
+ *Ausdrucks Liste auswählen*  
  Eine durch Trennzeichen getrennte Liste mit Spaltenbezeichnern und Ausdrücken, die aus dem Miningmodell abgeleitet sind.  
   
  *model*  
  Ein Modellbezeichner.  
   
- *Sub auswählen*  
+ *Unterauswahl*  
  Eine eingebettete SELECT-Anweisung.  
   
- *quelldatenabfrage*  
+ *Quelldaten Abfrage*  
  Die Quellabfrage.  
   
- *Liste der JOIN-Zuordnung*  
- Dies ist optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
+ *joinmapping-Liste*  
+ Optional. Ein logischer Ausdruck, in dem Spalten aus dem Modell mit Spalten aus der Quellabfrage verglichen werden.  
   
- *Bedingungsausdruck*  
+ *Bedingungs Ausdruck*  
  Optional. Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
- *expression*  
+ *Begriff*  
  Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird verwendet, um Spalten aus der Quellabfrage auf Spalten im Miningmodell zu richten, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Zuordnung joinliste*> durch den mit einem Gleichheitszeichen (=) verknüpft sind, wie im folgenden Beispiel gezeigt:  
+## <a name="remarks"></a>Bemerkungen  
+ Die ON-Klausel definiert die Zuordnung zwischen den Spalten aus der Quellabfrage und den Spalten aus dem Miningmodell. Diese Zuordnung wird zum Weiterleiten von Spalten aus der Quell Abfrage an Spalten im Mining Modell verwendet, sodass die Spalten als Eingaben verwendet werden können, um die Vorhersagen zu erstellen. Spalten in der \< *Liste der joinzuordnung*> werden mit einem Gleichheitszeichen (=) verknüpft, wie im folgenden Beispiel gezeigt:  
   
 ```  
 [MiningModel].ColumnA = [source data query].Column1 AND   
@@ -69,15 +69,15 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  Die Quellabfrage für den PREDICTION JOIN kann eine Tabellen- oder eine SINGLETON-Abfrage sein.  
   
- Sie können angeben, dass Vorhersagefunktionen, die einen Tabellenausdruck in keine Zurückgeben der \< *select-Ausdrucksliste*> und die \< *Bedingungsausdruck*>.  
+ Sie können Vorhersagefunktionen angeben, die keinen Tabellen Ausdruck in der \< *SELECT-Ausdrucks Liste* zurückgeben> \<und den Bedingungs *Ausdruck*>.  
   
- **NATURAL PREDICTION JOIN** ordnet automatisch zusammen Spaltennamen aus der Quellabfrage, die Spaltennamen im Modell entsprechen. Bei Verwendung von **natürliche PREDICTION**, können Sie die ON-Klausel auslassen.  
+ Der **natürliche Vorhersage Join** ordnet automatisch Spaltennamen aus der Quell Abfrage zu, die den Spaltennamen im Modell entsprechen. Wenn Sie die **natürliche Vorhersage**verwenden, können Sie die ON-Klausel weglassen.  
   
  Die WHERE-Bedingung kann nur auf vorhersagbare Spalten oder verknüpfte Spalten angewendet werden.  
   
  Die ORDER BY-Klausel lässt nur eine einzelne Spalte als Argument zu, d. h. Sie können nicht nach mehreren Spalten sortieren.  
   
-## <a name="example-1-singleton-query"></a>Beispiel 1: Singleton-Abfrage  
+## <a name="example-1-singleton-query"></a>Beispiel 1: SINGLETON-Abfrage  
  Im folgenden Beispiel wird erläutert, wie eine Abfrage erstellt wird, die in Echtzeit vorhersagt, ob eine bestimmte Person ein Fahrrad kauft. In dieser Abfrage werden die Daten nicht in einer Tabelle oder einer anderen Datenquelle gespeichert, sondern direkt in die Abfrage eingegeben. Die Person in der Abfrage hat folgende Merkmale:  
   
 -   35 Jahre alt  
@@ -88,7 +88,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 -   Hat zwei Kinder, die zu Hause leben  
   
- Verwenden das TM Decision Tree-Miningmodell und die bekannten Eigenschaften über das Subjekt, die Abfrage gibt einen booleschen Wert, der angibt, die Person das Fahrrad und einen Satz von tabellarischen ob, zurückgegeben wird gekauft haben die [PredictHistogram &#40;DMX &#41; ](../dmx/predicthistogram-dmx.md) Funktion, die beschreiben, wie die Vorhersage getroffen wurde.  
+ Wenn Sie das TM Decision Tree-Mining Modell und die bekannten Merkmale des Subjekts verwenden, gibt die Abfrage einen booleschen Wert zurück, der beschreibt, ob die Person das Fahrrad gekauft hat, und einen Satz von tabellarischen Werten, die von der [präthistogram &#40;DMX-&#41;](../dmx/predicthistogram-dmx.md) -Funktion zurückgegeben werden, die die Art der Vorhersage beschreiben.  
   
 ```  
 SELECT  
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>Beispiel 2: Verwenden von OPENQUERY  
- Das folgende Beispiel zeigt, wie Sie eine batchvorhersageabfrage zu erstellen, mit einer Liste potenzieller Kunden, die in einem externen Dataset gespeichert wird. Da die Tabelle Bestandteil einer Datenquellensicht ist, die auf einer Instanz von definiert wurde [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], können Sie die Abfrage [OPENQUERY](../dmx/source-data-query-openquery.md) zum Abrufen der Daten. Da sich die Namen der Spalten in der Tabelle aus dem Miningmodell unterscheiden die **ON** -Klausel verwendet werden muss, um die Spalten in der Tabelle den Spalten im Modell zuzuordnen.  
+ Das folgende Beispiel zeigt, wie Sie eine Batch Vorhersage Abfrage erstellen, indem Sie eine Liste potenzieller Kunden verwenden, die in einem externen Dataset gespeichert sind. Da die Tabelle Teil einer Datenquellen Sicht ist, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]definiert wurde, kann die Abfrage [OPENQUERY](../dmx/source-data-query-openquery.md) zum Abrufen der Daten verwenden. Da sich die Namen der Spalten in der Tabelle von denen im Mining Modell unterscheiden, muss die **on** -Klausel verwendet werden, um die Spalten in der Tabelle den Spalten im Modell zuzuordnen.  
   
  Die Abfrage gibt Folgendes zurück: den Vor- und Nachnamen jeder Person in der Tabelle sowie eine boolesche Spalte, die angibt, ob die Personen voraussichtlich ein Fahrrad kauften, dabei bedeutet 0 „wird vermutlich kein Fahrrad kaufen“ und 1 „wird vermutlich ein Fahrrad kaufen“. Die letzte Spalte enthält die Wahrscheinlichkeit für das vorhergesagte Ergebnis.  
   
@@ -162,7 +162,7 @@ ORDER BY [LastName] ASC
   
 -   Mountain-200  
   
- Die [Predict &#40;DMX&#41; ](../dmx/predict-dmx.md) -Funktion ist polymorph und kann mit allen Modelltypen verwendet werden. Sie verwenden den Wert3 als Argument für die Funktion, um die Anzahl der Elemente zu begrenzen, die von der Abfrage zurückgegeben werden. Die **wählen** Liste, die die NATURAL PREDICTION JOIN-Klausel folgt, stellt die Werte als Eingabe für die Vorhersage verwendet.  
+ Die [Vorhersage &#40;DMX-&#41;](../dmx/predict-dmx.md) -Funktion ist polymorph und kann mit allen Modelltypen verwendet werden. Sie verwenden den Wert3 als Argument für die Funktion, um die Anzahl der Elemente zu begrenzen, die von der Abfrage zurückgegeben werden. Die **Select** -Liste, die der Natural Vorhersage Join-Klausel folgt, liefert die Werte, die als Eingabe für die Vorhersage verwendet werden.  
   
 ```  
 SELECT FLATTENED  
@@ -183,12 +183,12 @@ NATURAL PREDICTION JOIN
 |Water Bottle|  
 |Fender Set – Mountain|  
   
- Da die Spalte, die das vorhersagbare Attribut `[v Assoc Seq Line Items]` enthält, eine Tabellenspalte ist, gibt die Abfrage eine einzelne Spalte zurück, die eine geschachtelte Tabelle enthält. Die Spalte der geschachtelten Tabelle erhält standardmäßig den Namen `Expression`. Wenn Ihr Anbieter keine hierarchischen Rowsets unterstützt, können Sie mithilfe der **FLATTENED** Schlüsselwort, wie im folgenden Beispiel gezeigt wird, um die Ergebnisse übersichtlicher zu gestalten.  
+ Da die Spalte, die das vorhersagbare Attribut `[v Assoc Seq Line Items]` enthält, eine Tabellenspalte ist, gibt die Abfrage eine einzelne Spalte zurück, die eine geschachtelte Tabelle enthält. Die Spalte der geschachtelten Tabelle erhält standardmäßig den Namen `Expression`. Wenn Ihr Anbieter keine hierarchischen Rowsets unterstützt, können Sie das **vereinfachte Schlüsselwort** verwenden, wie in diesem Beispiel gezeigt, um das Anzeigen der Ergebnisse zu vereinfachen.  
   
-## <a name="see-also"></a>Siehe auch  
- [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Wählen Sie &#40;DMX-&#41;](../dmx/select-dmx.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

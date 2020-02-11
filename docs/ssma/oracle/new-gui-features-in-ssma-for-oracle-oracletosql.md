@@ -1,5 +1,5 @@
 ---
-title: New GUI Features in SSMA für Oracle (OracleToSQL)-Features | Microsoft-Dokumentation
+title: Neue GUI-Features in SSMA für Oracle (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,117 +10,117 @@ ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
 author: Shamikg
 ms.author: Shamikg
 manager: shamikg
-ms.openlocfilehash: 2304865a421c7aa50fc83119854004f9a1c0e5c1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 295372026ec0a1eed0abb4e62a10bc56fd279d56
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259003"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76910213"
 ---
-# <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Neue GUI-Features in SSMA für Oracle (OracleToSQL)
-In diesem Kapitel wird beschrieben, neuen Features von SSMA-Benutzeroberfläche.  
+# <a name="new-gui-features-in-ssma-for-oracle-oracletosql"></a>Neue GUI-Features in SSMA für Oracle (oracleto SQL)
+In diesem Kapitel werden die neuen Funktionen der SSMA-Benutzeroberfläche beschrieben.  
   
 ## <a name="layouts"></a>Layouts  
-Dieses Feature können Sie wählen Sie eine der zwei vordefinierten Windows Layout oder erstellen Sie eigene Layout. Untermenü Layout für den Zugriff auf das Menü "Ansicht" zeigen Sie auf Layouts. Es können Sie eine der vorhandenen Layouts, fügen Sie neues Layout oder Layouts verwalten.  
+Diese Funktion ermöglicht es Ihnen, eine der beiden vordefinierten Windows-Layouts auszuwählen oder Ihr eigenes Layout zu erstellen. Um auf das layoutuntermenü zuzugreifen, zeigen Sie im Menü Ansicht auf Layouts. Dort können Sie eines der vorhandenen Layouts auswählen, neue Layouts hinzufügen oder Layouts verwalten.  
   
 ### <a name="add-current-layout"></a>Aktuelles Layout hinzufügen  
-Um die aktuellen Windows-Layout speichern zu können, auf das Menü "Ansicht" zeigen Sie auf die Layouts, und klicken Sie dann aktuellen Layout hinzufügen.  
+Zum Speichern des aktuellen Windows-Layouts zeigen Sie im Menü Ansicht auf Layouts, und klicken Sie dann auf Aktuelles Layout hinzufügen.  
   
-### <a name="choose-predefined-layout"></a>Wählen Sie die vordefiniertes layout  
-Um eine der vordefinierten Layouts auszuwählen, auf das Menü "Ansicht" zeigen Sie auf die Layouts, und klicken Sie dann Default Layout oder ohne Explorer. Sie können auch die Tastenkombinationen STRG + Alt + 1 oder Strg + Alt + 2 für vordefinierte Layouts.  
+### <a name="choose-predefined-layout"></a>Vordefiniertes Layout auswählen  
+Um eines der vordefinierten Layouts auszuwählen, zeigen Sie im Menü Ansicht auf Layouts, und klicken Sie dann auf Standard Layout oder ohne Explorer. Sie können auch die Tastenkombinationen STRG + ALT + 1 oder STRG + ALT + 2 für vordefinierte Layouts verwenden.  
   
-### <a name="choose-user-defined-layout"></a>Wählen Sie eine benutzerdefinierte layout  
-Wählen Sie das benutzerdefinierte Layout aus, auf das Menü "Ansicht" zeigen Sie auf der Layouts, und klicken Sie dann eine der das benutzerdefinierte Layout. Sie können auch die Tastenkombinationen für die Layouts definiert.  
+### <a name="choose-user-defined-layout"></a>Benutzerdefiniertes Layout auswählen  
+Um benutzerdefiniertes Layout auszuwählen, zeigen Sie im Menü Ansicht auf Layouts, und klicken Sie dann auf eines der benutzerdefinierten Layouts. Sie können auch Verknüpfungen verwenden, die für die Layouts definiert sind.  
   
-### <a name="manage-layouts"></a>Verwalten von layouts  
-Zum Verwalten von Layouts-Dialogfeld zu öffnen, klicken Sie auf das Menü "Ansicht" zeigen Sie auf die Layouts, und klicken Sie auf Layouts verwalten aus. Im Dialogfeld für die Verwaltung von Layouts finden Sie eine Liste der vorhandenen Layouts auf der linken Seite des Dialogfelds. Es können Sie das Layout so ändern Sie die Einstellungen auswählen. Außerdem können Layouts Reihenfolge in der Liste ändern oder löschen das Layout mithilfe von Schaltflächen am Anfang der Liste. Auf der rechten Seite des Dialogfelds können Sie die folgenden layouteinstellungen ändern:  
+### <a name="manage-layouts"></a>Layouts verwalten  
+Zeigen Sie zum Öffnen des Dialog Felds Layouts verwalten im Menü Ansicht auf Layouts, und klicken Sie dann auf Layouts verwalten. Im Dialogfeld "Layouts verwalten" finden Sie eine Liste der vorhandenen Layouts auf der linken Seite des Dialog Felds. Dort können Sie das Layout auswählen, um die Einstellungen zu ändern. Außerdem können Sie die Reihenfolge der Layouts in der Liste ändern oder das Layout mithilfe der Schaltflächen oben in der Liste löschen. Auf der rechten Seite des Dialog Felds können Sie die folgenden Layouteinstellungen ändern:  
   
 -   Layoutname  
   
--   Synchronisierung der Metadaten-Explorer  
+-   Synchronisierung von Metadaten-Explorers  
   
--   Sichtbarkeit und die Breite der Quelle und Ziel-Metadaten-Explorer  
+-   Sichtbarkeit und Breite des Quell-und zielmetadatenexplorers  
   
--   Einblick in die Quelle oder Ziel-Fenster und ihre Größen angezeigt werden  
+-   Sichtbarkeit der Quell-oder Zielfenster und ihrer Größen  
   
--   Sichtbarkeit und die Höhe von zusätzlichen windows  
+-   Sichtbarkeit und Höhe von hilffenstern  
   
 ## <a name="bookmarks"></a>Lesezeichen  
-Dieser Funktion können Sie ein oder mehrere Lesezeichen in der Quelle festlegen oder Code des ereignisdateiziels, schnell finden Sie ein Lesezeichen mit Tastenkombinationen, Verwalten von Lesezeichen mit einem angezeigten Dialogfeld.  
+Diese Funktion ermöglicht es Ihnen, ein oder mehrere Lesezeichen im Quell-oder Zielcode festzulegen, mithilfe von Verknüpfungen schnell ein Lesezeichen zu finden und die Lesezeichen mit einem benutzerfreundlichen Dialogfeld zu verwalten.  
   
 ### <a name="toggle-bookmark"></a>Lesezeichen umschalten  
-Sie können Set bzw. ein Lesezeichen auf folgende Weise entfernen:  
+Sie können ein Lesezeichen wie folgt festlegen/entfernen:  
   
--   Verwenden Sie die Textmarke ein/aus-Schaltfläche über Quelle oder Ziel-SQL-Fenster  
+-   Lesezeichen mit Schaltfläche im oberen Bereich des Quell-oder Ziel-SQL-Fensters verwenden  
   
--   Klicken Sie auf den grauen Bereich auf der linken Seite des Fensters SQL  
+-   Klicken Sie auf den grauen Bereich auf der linken Seite des SQL-Fensters.  
   
--   Verwenden Sie STRG + UMSCHALT +&lt;0..9&gt; nummeriertes Lesezeichen festlegen  
+-   Verwenden Sie STRG + UMSCHALT&lt;+ 0..&gt; 9 zum Festlegen des nummerierten Lesezeichens.  
   
-### <a name="bookmark-navigation"></a>Um eine Lesezeichennavigation  
-Sie können auf folgende Weise über Lesezeichen kennen:  
+### <a name="bookmark-navigation"></a>Lesezeichen Navigation  
+Die Lesezeichen können wie folgt durchlaufen werden:  
   
--   Verwenden Sie Schaltflächen Nächstes Lesezeichen Vorheriges Lesezeichen oben auf der SQL-Fenster  
+-   Schaltflächen "Nächstes Lesezeichen", Vorheriges Lesezeichen oben im SQL-Fenster verwenden  
   
--   Drücken Sie STRG +&lt;0..9&gt; nummeriertes Lesezeichen gefunden  
+-   Verwenden von STRG&lt;+ 0..&gt; 9 zum Suchen des nummerierten Lesezeichens  
   
--   Verwenden Sie Schaltflächen, die im Dialogfeld "Verwalten von Lesezeichen" Gehe zu "oder" Quelle anzeigen  
+-   Verwenden von Schaltflächen gehe zu oder Quelle anzeigen im Dialogfeld Lesezeichen verwalten  
   
 ### <a name="removing-bookmark"></a>Entfernen von Lesezeichen  
-Sie können ein Lesezeichen auf folgende Weise entfernen:  
+Sie können ein Lesezeichen wie folgt entfernen:  
   
--   Verwenden Sie die Schaltfläche Löschen am oberen Rand des Fensters SQL So entfernen Sie alle Lesezeichen im aktuellen Dokument  
+-   Löschen Sie alle Lesezeichen im aktuellen Dokument mithilfe der Schaltfläche Löschen am oberen Rand des SQL-Fensters.  
   
--   Verwenden Sie Schaltflächen, die im Dialogfeld "Verwalten von Lesezeichen" entfernen "oder" Alle entfernen  
+-   Schaltflächen entfernen oder alle entfernen im Dialogfeld "Lesezeichen verwalten"  
   
-### <a name="manage-bookmarks"></a>Verwalten von Lesezeichen  
-Klicken Sie zum Verwalten von Lesezeichen-Dialogfeld zu öffnen, auf das Menü "Bearbeiten" Verwalten von Lesezeichen ein. Im Dialogfeld sehen Sie eine Liste der vorhandenen Lesezeichen. Sie können die Schaltflächen auf der rechten Seite des Dialogfelds verwenden, um Lesezeichen zu verwalten.  
+### <a name="manage-bookmarks"></a>Lesezeichen verwalten  
+Um das Dialogfeld Lesezeichen verwalten zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.  
   
-## <a name="object-history"></a>Objekt-Verlauf  
-Verlauf der GUI-Objekt können Sie die folgenden Vorteile, wenn Sie Objekte navigieren:  
+## <a name="object-history"></a>Objekt Verlauf  
+Der GUI-Objekt Verlauf bietet Ihnen die folgenden Vorteile beim Navigieren in Objekten:  
   
--   Schaltflächen "zurück" und "Vorwärts navigieren Sie können um die Objekte zu navigieren, die Sie bereits besucht habe  
+-   Sie können die Schaltflächen "zurück" und "Vorwärts" verwenden, um die bereits besuchten Objekte zu navigieren.  
   
--   Wenn Sie auf das Objekt zu sichern, Sichern Sie auf der gleichen Registerkarte, die Sie verlassen haben  
+-   Wenn Sie zurück zum Objekt sind, kehren Sie zurück zur gleichen Registerkarte, die Sie verlassen haben.  
   
--   Wenn Sie wieder auf das Objekt und die Registerkarte ist SQL, Sichern Sie an die gleiche Cursorposition, die Sie verlassen haben  
+-   Wenn Sie zurück zum Objekt sind und die Registerkarte SQL ist, kehren Sie zurück zur gleichen Cursorposition, die Sie verlassen haben.  
   
 ## <a name="advanced-search-capabilities"></a>Erweiterte Suchfunktionen  
-Erweiterte Suchfunktionen können Sie Objektdeklaration finden, das Informationen zu erhalten, schnelle Suche durchführen, führen Sie die erweiterte Suche in Kategorien, die mithilfe von Mustern usw. Objekt und die leistungsfähigen und flexiblen suchen Funktionen bereitstellen.  
+Erweiterte Suchfunktionen stellen die leistungsstarken und flexiblen Suchfunktionen bereit und ermöglichen Ihnen das Auffinden von Objekt Deklaration, das Abrufen von Objektinformationen, das Durchführen einer Schnellsuche, das Ausführen erweiterter Objekt Suchvorgänge in Kategorien mit Mustern  
   
-### <a name="get-quick-information"></a>Abrufen von Informationen  
-Sie können die QuickInfo für das Objekt an der Cursorposition auf folgende Weise abrufen:  
+### <a name="get-quick-information"></a>Schnelle Informationen  
+Sie können schnell Informationen zum Objekt an der Cursorposition auf folgende Weise erhalten:  
   
--   Klicken Sie auf die Schaltfläche QuickInfo oben auf der SQL-Fenster  
+-   Klicken Sie oben im SQL-Fenster auf die QuickInfo-Schaltfläche.  
   
--   QuickInfo mit der rechten Maustaste im Popupmenü auswählen  
+-   Klicken Sie im Kontextmenü mit der rechten Maustaste auf Quick Info.  
   
--   Drücken Sie STRG + UMSCHALT + LEERTASTE  
+-   Drücken Sie STRG + UMSCHALT + LEERTASTE.  
   
-### <a name="find-declaration"></a>Suchen Sie die Deklaration  
-Sie können auf die Deklaration des Objekts an der Cursorposition auf folgende Weise wechseln:  
+### <a name="find-declaration"></a>Deklaration suchen  
+Sie können auf folgende Weise zur Deklaration des Objekts an der Cursorposition wechseln:  
   
--   Klicken Sie auf Gehe zu Deklaration über die SQL-Fenster  
+-   Klicken Sie oben im SQL-Fenster auf die Schaltfläche Gehe zu Deklaration.  
   
--   Gehe zu Deklaration mit der rechten Maustaste im Popupmenü auswählen  
+-   Klicken Sie im Kontextmenü mit der rechten Maustaste auf Gehe zu Deklaration.  
   
--   Drücken Sie F12  
+-   Drücken Sie F12.  
   
 ### <a name="quick-search"></a>Schnellsuche  
-Sie können die schnelle Textsuche, die mit den folgenden Funktionen ausführen:  
+Sie können die Schnellsuche mithilfe der folgenden Funktionen ausführen:  
   
--   Sie können beginnen, suchen, indem Sie mithilfe von STRG + F-Kontextmenü  
+-   Sie können die Suche mit der Tastenkombination STRG + F starten.  
   
--   Sie können letzte Suche vorwärts mit F3 wiederholen  
+-   Sie können den letzten Suchvorgang mit F3 wiederholen.  
   
--   Sie können die letzte Suche rückwärts wiederholen, mit UMSCHALT + F3  
+-   Sie können die letzte Suche rückwärts mit UMSCHALT + F3 wiederholen.  
   
--   Finden Sie weiter Vorkommen des Worts an der Cursorposition mithilfe von STRG + F3  
+-   Sie können das nächste Vorkommen des Worts an der Cursorposition mithilfe von Strg + F3 suchen.  
   
--   Sie können vorherige Vorkommen des Worts an der Cursorposition mithilfe von STRG + UMSCHALT + F3 gefunden  
+-   Sie können das vorherige Vorkommen des Worts an der Cursorposition mithilfe von STRG + UMSCHALT + F3 suchen.  
   
--   Sie können auch alle diese Aktionen mit Menüelementen ausführen.  
+-   Diese Aktionen können auch mit Menü Elementen durchgeführt werden.  
   
 ### <a name="advanced-search"></a>Erweiterte Suche  
-Klicken Sie dann auf Erweiterte Suche, um erweiterte Suche Dialogfeld auf den Punkt im Menü "Bearbeiten" suchen zu öffnen. Im Dialogfeld werden Sie jedes Objekt, das Muster gefunden. Oben im Dialogfeld können Sie Suchkategorien Area "und" Objekt auswählen.  
+Um das Dialogfeld "Erweiterte Suche" zu öffnen, klicken Sie auf der Menüleiste "Bearbeiten" auf Erweiterte Suche. Im Dialogfeld können Sie ein beliebiges Objekt mithilfe eines Musters suchen. Am oberen Rand des Dialog Felds können Sie Suchbereich und Objektkategorien auswählen.  
   

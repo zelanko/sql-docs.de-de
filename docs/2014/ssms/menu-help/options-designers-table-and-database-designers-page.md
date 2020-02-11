@@ -1,5 +1,5 @@
 ---
-title: Optionen (Designer-Tabelle und der Seite "Datenbank-Designer") | Microsoft-Dokumentation
+title: Optionen (Designer-Seite für Tabellen und Datenbankdesigner) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e0157b94227a36db7f1f961ab0b0a69518a8163b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63283661"
 ---
-# <a name="options-designers-table-and-database-designers-page"></a>Optionen (Designer-Tabelle und der Seite "Datenbank-Designer")
+# <a name="options-designers-table-and-database-designers-page"></a>Optionen (Designer-Tabellen-und Datenbank-Designer-Seite)
   Auf dieser Seite können Sie das Standardverhalten des Designers bestimmen. Um auf die Einstellungen zuzugreifen, klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Designer** , und klicken Sie dann auf **Tabellen-Designer**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
@@ -65,7 +65,7 @@ ms.locfileid: "63283661"
   
      Zeigt die Spaltennamen an.  
   
--   **Key**  
+-   **Schlüssel**  
   
      Zeigt den Tabellenkopf und die Primärschlüsselspalten an.  
   
