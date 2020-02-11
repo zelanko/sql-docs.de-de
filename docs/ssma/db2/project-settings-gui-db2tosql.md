@@ -1,5 +1,5 @@
 ---
-title: Project Settings (GUI) (DB2ToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (GUI) (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,34 +10,34 @@ ms.assetid: b2cdb71a-f301-45b3-878c-382356c93b4b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 22825425e7f3eb18994e37efa996fcd784a257f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084541"
 ---
-# <a name="project-settings-gui-db2tosql"></a>Project Settings (GUI) (DB2ToSQL)
-Die GUI-projekteinstellungen können Sie konfigurieren, wie Daten auf angezeigt wird der **Daten** Registerkarte und angibt, ob den Bewertungsbericht nach der Konvertierung oder nicht angezeigt.  
+# <a name="project-settings-gui-db2tosql"></a>Projekteinstellungen (GUI) (DB2ToSQL)
+Mit den Einstellungen des GUI-Projekts können Sie konfigurieren, wie Daten auf der Registerkarte " **Daten** " angezeigt werden und ob der Bewertungsbericht nach der Konvertierung angezeigt werden soll.  
   
-Die GUI-Bereich finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden der **Projekteinstellungen** Dialogfeld festzulegende Optionen der Benutzeroberfläche für das aktuelle Projekt. Die GUI-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, und klicken Sie dann auf **GUI** am unteren Rand im linken Bereich.  
+-   Verwenden Sie das Dialogfeld **Projekteinstellungen** , um Optionen für die Benutzeroberfläche für das aktuelle Projekt festzulegen. Um **auf die GUI** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
--   Verwenden der **Projekt Standardeinstellungen** Dialogfeld festzulegende Optionen der Benutzeroberfläche für alle Projekte. Die GUI-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen Sie die Migration-Projekttyp, die für die Einstellungen erforderlich sind, um angezeigt oder geändert werden, von **Migration Zielversion** Dropdown-Liste, und klicken Sie dann auf **GUI** am unteren Rand im linken Bereich.  
+-   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Optionen  
-**Maximale Zeilenanzahl für die Quelle**  
-Konfiguriert die Anzahl der Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Quelltabelle.  
+## <a name="options"></a>Tastatur  
+**Maximale Zeilennummer für Quelle**  
+Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   
-**Default:** 100  
+**Standard**Wert: 100  
   
-**Maximale Zeilenanzahl für Ziel**  
-Konfiguriert die Anzahl der Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Zieltabelle.  
+**Maximale Zeilennummer für das Ziel**  
+Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Ziel Tabelle angezeigt werden.  
   
-**Default:** 100  
+**Standard**Wert: 100  
   
-**Zeigen Sie Bericht an, nach der Konvertierung**  
-Um einen Bericht anzuzeigen, nachdem Sie Schemas konvertieren, wählen Sie "true". Die resultierende Konvertierungsbericht enthält das gleiche Layout und die Informationen wie den Bewertungsbericht.  
+**Bericht nach der Konvertierung anzeigen**  
+Wenn Sie einen Bericht anzeigen möchten, nachdem Sie Schemas konvertiert haben, wählen Sie true aus. Der resultierende Konvertierungs Bericht enthält das gleiche Layout und die gleichen Informationen wie der Bewertungsbericht.  
   
-**Default:** False  
+**Standard**Wert: false  
   

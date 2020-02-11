@@ -1,5 +1,5 @@
 ---
-title: Verbindungsübergänge | Microsoft-Dokumentation
+title: Verbindungs Übergänge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,288 +15,288 @@ ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019189"
 ---
 # <a name="connection-transitions"></a>Verbindungsübergänge
-ODBC-Verbindungen werden die folgenden Status haben.  
+ODBC-Verbindungen weisen die folgenden Zustände auf.  
   
-|Status|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
-|C0|Nicht zugeordnete Umgebung verfügbaren Verbindung|  
-|C1|Zugeordnete Umgebung verfügbaren Verbindung|  
-|C2|Zugeordnete Verbindung zugeordneten-Umgebung|  
-|C3|Verbindungsfunktion benötigt Daten.|  
+|C0|Nicht zugeordnete Umgebung, nicht zugewiesene Verbindung|  
+|C1|Zugeordnete Umgebung, nicht zugeordnete Verbindung|  
+|C2|Zugeordnete Umgebung, zugeordnete Verbindung|  
+|C3|Verbindungsfunktion benötigt Daten|  
 |C4|Verbundene Verbindung|  
-|C5|Verbindung zugeordnete Anweisung verbunden|  
-|C6|Verbundene Verbindung, die Transaktion ausgeführt. Es ist möglich, dass eine Verbindung im Zustand C6 keine Anweisungen für die Verbindung zugeordnet werden soll. Nehmen wir beispielsweise an, die Verbindung befindet sich im manuellen Commit-Modus und befindet sich im Zustand C4. Wenn eine Anweisung zugeordnet, ausgeführt (Starten einer Transaktion) und anschließend freigegeben ist, wird die Transaktion bleibt aktiv, aber es gibt keine Anweisungen für die Verbindung.|  
+|C5|Verbundene Verbindung, zugewiesene Anweisung|  
+|C6|Verbundene Verbindung, laufende Transaktion. Eine Verbindung kann sich im Status "C6" befinden, ohne dass der Verbindung eine-Anweisung zugeordnet ist. Nehmen Sie beispielsweise an, die Verbindung befindet sich im manuellen Commitmodus und befindet sich im Zustand C4. Wenn eine-Anweisung zugeordnet, ausgeführt (startet eine Transaktion) und dann freigegeben wird, bleibt die Transaktion aktiv, aber es sind keine-Anweisungen für die Verbindung vorhanden.|  
   
- Die folgenden Tabellen zeigen, wie jede ODBC-Funktion wirkt sich der Zustand der Verbindung auf.  
+ Die folgenden Tabellen zeigen, wie sich jede ODBC-Funktion auf den Verbindungsstatus auswirkt.  
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> Keine Env.|C1 nicht zugeordnet.|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1 nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(BEI) [2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
-|(BEI) [3]|(IH)|(08003)|(08003)|C5|--[5]|--[5]|  
-|(BEI) [4]|(IH)|(08003)|(08003)|--[5]|--[5]|--[5]|  
+|C1 [1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|IH 2,2|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
+|IH €|IH|(08003)|(08003)|C5|--[5]|--[5]|  
+|IH 0:|IH|(08003)|(08003)|--[5]|--[5]|--[5]|  
   
- [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
+ [1] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_ENV wurde.  
   
- [2] für diese Zeile zeigt die Übergänge beim *HandleType* wurde SQL_HANDLE_DBC auf.  
+ [2] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DBC wurde.  
   
- [3] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
+ [3] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_STMT wurde.  
   
- [4] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
+ [4] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DESC wurde.  
   
- [5] aufrufen **SQLAllocHandle** mit *OutputHandlePtr* überschreibt dieses Handle ohne Berücksichtigung der vorherige Inhalt Ofthat Handle auf ein gültiges Handle verweist, und verursachen möglicherweise Probleme für ODBC-Treiber. Falsche ODBC-Anwendung programmieren aufrufen, ist **SQLAllocHandle** zweimal mit der gleichen Anwendungsvariablen, die für definierten  *\*OutputHandlePtr* ohne  **SQLFreeHandle** auf das Handle frei, bevor Sie es erneut zugewiesen werden. Überschreiben von ODBC können Handles auf diese Weise zu inkonsistentem Verhalten oder Fehler seitens der ODBC-Treiber führen.  
+ [5] das Aufrufen von **sqlzugewiesene CHandle** mit *outputhandleptr* , das auf ein gültiges Handle verweist, überschreibt dieses Handle ohne Berücksichtigung der vorherigen Inhalte dieses Handles und kann zu Problemen mit ODBC-Treibern führen. Es ist eine falsche ODBC-Anwendungsprogrammierung zum doppelten Aufrufen von **sqlzuordchandle** mit der gleichen Anwendungsvariablen, die für * \*outputhandleptr* definiert ist, ohne **SQLFreeHandle** aufzurufen, um das Handle vor der erneuten Zuordnung freizugeben. Das Überschreiben von ODBC-Handles auf diese Weise kann zu inkonsistenten Verhalten oder Fehlern im Rahmen der ODBC-Treiber führen.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|[D] C3, C4 [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
+|IH|IH|C3 [d] C4 [s]|--[d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5[2]|  
+|IH|IH|IH|IH|IH|--|--[1] C5 [2]|  
   
- [1]. die Verbindung wurde im Manualcommit Modus.  
+ [1] die Verbindung befand sich im manuellen Commit-Modus.  
   
- [2]. die Verbindung wurde im Autocommit Modus.  
+ [2] die Verbindung befand sich im Autocommit-Modus.  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges und SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, sqlauslännkeys, SQLGetTypeInfo, SQLPrimaryKeys, sqlprocedurecolrens, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges und SQLTables  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--|  
   
- [1] für die Verbindung im Autocommit Modus wurde, oder die Datenquelle wurde nicht gestartet, eine Transaktion.  
+ [1] die Verbindung befand sich im Autocommit-Modus, oder die Datenquelle hat keine Transaktion gestartet.  
   
- [2] für die Verbindung wurde im Manualcommit Modus, und die Datenquelle wurde eine Transaktion gestartet.  
+ [2] die Verbindung befand sich im manuellen Commit-Modus, und die Datenquelle hat eine Transaktion gestartet.  
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
+|IH|IH|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField und SQLSetDescRec  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
+|IH|IH|IH|IH|--[1]|--|--|  
   
- [1] in diesem Fall werden die einzigen Deskriptoren für die Anwendung verfügbaren explizit Deskriptoren zugeordnet.  
+ [1] in diesem Zustand sind die einzigen Deskriptoren, die für die Anwendung verfügbar sind, explizit zugeordnete Deskriptoren.  
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources und SQLDrivers  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(08003)|C2|C2|C2|25000|  
+|IH|IH|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 s – n [f]|(08002)|(08002)|(08002)|(08002)|  
+|IH|IH|C4 s--n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(BEI) [1]|--[3]|--[3]|--[3]|--|--|: [4] oder ([5], [6] und [8]) C4 [5] und [7] C5 [5], [6] und [9]|  
-|(BEI) [2]|(IH)|(08003)|(08003)|--|--|C5|  
+|IH 1|--[3]|--[3]|--[3]|--|--|--[4] oder ([5], [6] und [8]) C4 [5] und [7] C5 [5], [6] und [9]|  
+|IH 2,2|IH|(08003)|(08003)|--|--|C5|  
   
- [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
+ [1] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_ENV wurde.  
   
- [2] für diese Zeile zeigt die Übergänge beim *HandleType* wurde SQL_HANDLE_DBC auf.  
+ [2] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DBC wurde.  
   
- [3] da die Verbindung nicht verbunden ist, ist es nicht von der Transaktion betroffen.  
+ [3] da die Verbindung nicht verbunden ist, ist Sie von der Transaktion nicht betroffen.  
   
- [4] für den Commit- oder Rollbackvorgang Fehler bei der Verbindung. In diesem Fall gibt die Funktion SQL_ERROR zurück.  
+ [4] Fehler beim Commit oder Rollback für die Verbindung. In diesem Fall gibt die Funktion SQL_ERROR zurück.  
   
- [5] für den Commit- oder Rollbackvorgang, die auf die Verbindung war erfolgreich. Die Funktion gibt SQL_ERROR zurück, wenn der Commit oder Rollback, die auf eine andere Verbindung fehlgeschlagen ist oder die Funktion gibt SQL_SUCCESS zurück, wenn der Commit oder Rollback für alle Verbindungen erfolgreich war.  
+ [5] das Commit oder Rollback für die Verbindung war erfolgreich. Die Funktion gibt SQL_ERROR zurück, wenn ein Commit oder Rollback für eine andere Verbindung fehlgeschlagen ist, oder die Funktion gibt SQL_SUCCESS zurück, wenn der Commit oder Rollback für alle Verbindungen erfolgreich war.  
   
- [6] Es wurde mindestens eine Anweisung, die bei der Verbindung zugeordnet.  
+ [6] Es wurde mindestens eine-Anweisung für die Verbindung zugeordnet.  
   
- [7] gab es keine Anweisungen für die Verbindung zugewiesen.  
+ [7] Es wurden keine Anweisungen für die Verbindung zugeordnet.  
   
- [8] die Verbindung haben mindestens eine Anweisung für die es wurde von einem geöffneten Cursor, und die Datenquelle beibehalten Cursor bei Transaktionen ein Commit oder Rollback ausgeführt werden, je nachdem, was angewendet wird (je nachdem, ob *' CompletionType '* SQL_ wurde COMMIT oder der SQL_ROLLBACK). Weitere Informationen finden Sie auf die SQL_CURSOR_COMMIT_BEHAVIOR und SQL_CURSOR_ROLLBACK_BEHAVIOR Attribute in [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
+ [8] die Verbindung enthielt mindestens eine Anweisung, für die es einen geöffneten Cursor gab, und die Datenquelle behält Cursor bei, wenn für Transaktionen ein Commit oder ein Rollback ausgeführt wird (je nachdem, ob *CompletionType* SQL_COMMIT oder SQL_ROLLBACK). Weitere Informationen finden Sie in den SQL_CURSOR_COMMIT_BEHAVIOR-und SQL_CURSOR_ROLLBACK_BEHAVIOR-Attributen in [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).  
   
- [9] hätte die Verbindung alle Anweisungen für die geöffnete Cursor gab, wurden die Cursor nicht beibehalten, wenn die Transaktion wurde ein Commit oder Rollback.  
+ [9] Wenn die Verbindung über Anweisungen verfügt, für die öffnende Cursor vorhanden waren, wurden die Cursor nicht beibehalten, als für die Transaktion ein Commit oder Rollback ausgeführt wurde.  
   
 ## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect und SQLExecute  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2] C6[3]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2] C6 [3]|--|  
   
- [1] für die Verbindung im Autocommit Modus, und die ausgeführte Anweisung nicht wurde eine *Cursor* *Spezifikation* (z. B. eine SELECT-Anweisung) oder die Verbindung wurde im Manualcommit-Modus, und die Anweisung ausgeführt eine Transaktion nicht beginnen.  
+ [1] die Verbindung befand sich im Autocommit-Modus, und die ausgeführte Anweisung war keine *Cursor* *Spezifikation* (z. b. eine SELECT-Anweisung). oder die Verbindung befand sich im manuellen Commit-Modus, und die ausgeführte Anweisung hat keine Transaktion begonnen.  
   
- [2] für die Verbindung im Autocommit Modus und die ausgeführte Anweisung wurde eine *Cursor* *Spezifikation* (z. B. eine SELECT-Anweisung).  
+ [2] die Verbindung befand sich im Autocommit-Modus, und die ausgeführte Anweisung war eine *Cursor* *Spezifikation* (z. b. eine SELECT-Anweisung).  
   
- [3] die Verbindung wurde im Manualcommit Modus, und die Datenquelle wurde eine Transaktion gestartet.  
+ [3] die Verbindung befand sich im manuellen Commit-Modus, und die Datenquelle hat eine Transaktion gestartet.  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(BEI) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(BEI) [2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
-|(BEI) [3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--[7] C4 [5] und [8] C5 [6] und [8]|  
-|(BEI) [4]|(IH)|(IH)|(IH)|--|--|--|  
+|IH 1|C0|HY010|HY010|HY010|HY010|HY010|  
+|IH 2,2|IH|C1|HY010|HY010|HY010|HY010|  
+|IH €|IH|IH|IH|IH|C4 [5]--[6]|--[7] C4 [5] und [8] C5 [6] und [8]|  
+|IH 0:|IH|IH|IH|--|--|--|  
   
- [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
+ [1] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_ENV wurde.  
   
- [2] für diese Zeile zeigt die Übergänge beim *HandleType* wurde SQL_HANDLE_DBC auf.  
+ [2] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DBC wurde.  
   
- [3] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
+ [3] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_STMT wurde.  
   
- [4] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
+ [4] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DESC wurde.  
   
- [5] gab es nur eine Anweisung, die bei der Verbindung zugeordnet.  
+ [5] Es wurde nur eine Anweisung für die Verbindung zugeordnet.  
   
- [6] gab es mehrere Anweisungen, die bei der Verbindung zugeordnet.  
+ [6] Es wurden mehrere Anweisungen für die Verbindung zugeordnet.  
   
- [7] die Verbindung wurde im Manualcommit Modus.  
+ [7] die Verbindung befand sich im manuellen Commit-Modus.  
   
- [8] die Verbindung wurde im Autocommit Modus.  
+ [8] die Verbindung befand sich im Autocommit-Modus.  
   
 ## <a name="sqlfreestmt"></a>'SQLFreeStmt'  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(BEI) [1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
-|(BEI) [2]|(IH)|(IH)|(IH)|(IH)|--|--|  
+|IH 1|IH|IH|IH|IH|--|C5 [3]--[4]|  
+|IH 2,2|IH|IH|IH|IH|--|--|  
   
- [1] für diese Zeile zeigt Transaktionen bei der *Option* Argument ist SQL_CLOSE.  
+ [1] diese Zeile zeigt Transaktionen an, wenn das *options* Argument SQL_CLOSE ist.  
   
- [2] für diese Zeile zeigt Transaktionen bei der *Option* Argument ist SQL_UNBIND oder SQL_RESET_PARAMS.  
+ [2] diese Zeile zeigt Transaktionen an, wenn das *options* Argument SQL_UNBIND oder SQL_RESET_PARAMS ist.  
   
- [3] die Verbindung im Autocommit Modus war und keine Cursor geöffnet, auf die Anweisungen, mit Ausnahme des vorliegenden waren.  
+ [3] die Verbindung befand sich im Autocommit-Modus, und es waren keine Cursor für Anweisungen mit Ausnahme dieser Anweisung geöffnet.  
   
- [4] für die Verbindung wurde im Manualcommit-Modus oder im Autocommit Modus war und ein Cursor geöffnet, auf mindestens eine andere Anweisung war.  
+ [4] die Verbindung befand sich im manuellen Commitmodus, oder Sie befand sich im Autocommit-Modus, und ein Cursor war bei mindestens einer anderen Anweisung geöffnet.  
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|BEI|BEI|--[1] 08003[2]|HY010|--|--|--|  
+|IH|IH|--[1] 08003 [2]|HY010|--|--|--|  
   
- [1] der *Attribut* Argument war SQL_ATTR_ACCESS_MODE SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE oder SQL_ATTR_TRACEFILE oder ein Wert für das Verbindungsattribut festgelegt wurde.  
+ [1] das *Attribut* Argument war SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE oder SQL_ATTR_TRACEFILE, oder für das Verbindungs Attribut wurde ein Wert festgelegt.  
   
- [2] der *Attribut* Argument war kein SQL_ATTR_ACCESS_MODE SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE oder SQL_ATTR_TRACEFILE und hatte kein Wert für die Verbindung festgelegt wurde -Attribut.  
+ [2] das *Attribut* Argument war nicht SQL_ATTR_ACCESS_MODE, SQL_ATTR_AUTOCOMMIT, SQL_ATTR_LOGIN_TIMEOUT, SQL_ATTR_ODBC_CURSORS, SQL_ATTR_TRACE oder SQL_ATTR_TRACEFILE, und für das Verbindungs Attribut wurde kein Wert festgelegt.  
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField und SQLGetDiagRec  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(BEI) [1]|--|--|--|--|--|--|  
-|(BEI) [2]|(IH)|--|--|--|--|--|  
-|(BEI) [3]|(IH)|(IH)|(IH)|(IH)|--|--|  
-|(BEI) [4]|(IH)|(IH)|(IH)|--|--|--|  
+|IH 1|--|--|--|--|--|--|  
+|IH 2,2|IH|--|--|--|--|--|  
+|IH €|IH|IH|IH|IH|--|--|  
+|IH 0:|IH|IH|IH|--|--|--|  
   
- [1] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_ENV wurde.  
+ [1] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_ENV wurde.  
   
- [2] für diese Zeile zeigt die Übergänge beim *HandleType* wurde SQL_HANDLE_DBC auf.  
+ [2] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DBC wurde.  
   
- [3] für diese Zeile zeigt die Übergänge beim *HandleType* wurde von SQL_HANDLE_STMT auf.  
+ [3] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_STMT wurde.  
   
- [4] für diese Zeile zeigt die Übergänge beim *HandleType* SQL_HANDLE_DESC wurde.  
+ [4] diese Zeile zeigt Übergänge an, wenn der *Handtyp* SQL_HANDLE_DESC wurde.  
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|BEI|--|--|--|--|--|--|  
+|IH|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|BEI|BEI|HY010|HY010|--|--|--|  
+|IH|IH|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|BEI|BEI|--[1] 08003[2]|08003|--|--|--|  
+|IH|IH|--[1] 08003 [2]|08003|--|--|--|  
   
- [1] der *Informationsart* Argument war SQL_ODBC_VER.  
+ [1] das *InfoType* -Argument wurde SQL_ODBC_VER.  
   
- [2] der *Informationsart* Argument war kein SQL_ODBC_VER.  
+ [2] das *InfoType* -Argument wurde nicht SQL_ODBC_VER.  
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--[3] C5[1]|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--[3] C5 [1]|  
   
- [1] für die Verbindung im Autocommit-Modus, und der Aufruf wurde **SQLMoreResults** die Verarbeitung eines Resultsets einer Spezifikation Cursor wurde nicht initialisiert.  
+ [1] die Verbindung befand sich im Autocommit-Modus, und der **SQLMoreResults** -Befehl hat die Verarbeitung eines Resultsets einer Cursor Spezifikation nicht initialisiert.  
   
- [2] für die Verbindung im Autocommit-Modus, und der Aufruf wurde **SQLMoreResults** wurde die Verarbeitung eines Resultsets von Cursorspezifikation initialisiert.  
+ [2] die Verbindung befand sich im Autocommit-Modus, und der **SQLMoreResults** -Befehl hat die Verarbeitung eines Resultsets einer Cursor Spezifikation initialisiert.  
   
- [3] die Verbindung wurde im Manualcommit Modus.  
+ [3] die Verbindung befand sich im manuellen Commit-Modus.  
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(08003)|(08003)|--|--|--|  
+|IH|IH|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
+|IH|IH|IH|IH|IH|--[1] C6 [2]|--|  
   
- [1] für die Verbindung im Autocommit Modus wurde, oder die Datenquelle wurde nicht gestartet, eine Transaktion.  
+ [1] die Verbindung befand sich im Autocommit-Modus, oder die Datenquelle hat keine Transaktion gestartet.  
   
- [2] für die Verbindung wurde im Manualcommit Modus, und die Datenquelle wurde eine Transaktion gestartet.  
+ [2] die Verbindung befand sich im manuellen Commit-Modus, und die Datenquelle hat eine Transaktion gestartet.  
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|BEI|BEI|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|: [3] und [6] C5 [8] [4] HY011-08002 [5] oder [7]|  
+|IH|IH|--[1] 08003 [2]|HY010|--[3] 08002 [4] HY011 [5]|--[3] 08002 [4] HY011 [5]|--[3] und [6] C5 [8] 08002 [4] HY011 [5] oder [7]|  
   
- [1] der *Attribut* Argument war kein SQL_ATTR_TRANSLATE_LIB oder SQL_ATTR_TRANSLATE_OPTION.  
+ [1] das *Attribut* Argument wurde nicht SQL_ATTR_TRANSLATE_LIB oder SQL_ATTR_TRANSLATE_OPTION.  
   
- [2] der *Attribut* Argument war SQL_ATTR_TRANSLATE_LIB oder SQL_ATTR_TRANSLATE_OPTION.  
+ [2] das *Attribut* Argument wurde SQL_ATTR_TRANSLATE_LIB oder SQL_ATTR_TRANSLATE_OPTION.  
   
- [3] die *Attribut* Argument war kein SQL_ATTR_ODBC_CURSORS oder SQL_ATTR_PACKET_SIZE.  
+ [3] das *Attribut* Argument wurde nicht SQL_ATTR_ODBC_CURSORS oder SQL_ATTR_PACKET_SIZE.  
   
- [4] der *Attribut* Argument war SQL_ATTR_ODBC_CURSORS.  
+ [4] das *Attribut* Argument wurde SQL_ATTR_ODBC_CURSORS.  
   
- [5] die *Attribut* Argument war SQL_ATTR_PACKET_SIZE.  
+ [5] das *Attribut* Argument wurde SQL_ATTR_PACKET_SIZE.  
   
- [6] die *Attribut* Argument war kein SQL_ATTR_AUTOCOMMIT, oder die *Attribut* Argument war SQL_ATTR_AUTOCOMMIT und das Festlegen dieses Attributs keinen commit der Transaktion.  
+ [6] das *Attribut* Argument wurde nicht SQL_ATTR_AUTOCOMMIT, oder das *Attribut* Argument war SQL_ATTR_AUTOCOMMIT, und durch das Festlegen dieses Attributs wurde kein Commit für die Transaktion durchgeführt.  
   
- [7] die *Attribut* Argument war SQL_ATTR_TXN_ISOLATION.  
+ [7] das *Attribut* Argument wurde SQL_ATTR_TXN_ISOLATION.  
   
- [8] die *Attribut* Argument war SQL_ATTR_AUTOCOMMIT und das Festlegen dieses Attributs Commit der Transaktions.  
+ [8] das *Attribut* Argument wurde SQL_ATTR_AUTOCOMMIT, und durch das Festlegen dieses Attributs wurde ein Commit für die Transaktion ausgeführt.  
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|--|--|(HY010)|--|--|--|  
+|IH|--|--|HY010|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>Alle anderen ODBC-Funktionen  
   
-|C0<br /><br /> Keine Env.|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> zugewiesen|C3<br /><br /> Daten erforderlich|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaction|  
+|C0<br /><br /> Keine "-v".|C1<br /><br /> Nicht zugeordnet|C2<br /><br /> Teilte|C3<br /><br /> Benötigen von Daten|C4<br /><br /> Verbunden|C5<br /><br /> -Anweisung.|C6<br /><br /> Transaktion|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|(IH)|(IH)|(IH)|--|--|
+|IH|IH|IH|IH|IH|--|--|
