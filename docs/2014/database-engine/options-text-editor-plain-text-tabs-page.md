@@ -1,5 +1,5 @@
 ---
-title: Optionen (Seite "Text-Editor – unverschlüsselter Text – Tabstopps") | Microsoft-Dokumentation
+title: Optionen (Text-Editor-nur-Text-Registerkarten Seite) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089861"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)
@@ -29,13 +29,13 @@ ms.locfileid: "66089861"
  **Keine**  
  Rückt die nach dem Drücken der Eingabetaste erstellte neue Zeile nicht ein. Der Cursor wird in der ersten Spalte der neuen Zeile platziert.  
   
- **Block**  
+ **Baustein**  
  Rückt die nach dem Drücken der Eingabetaste erstellte neue Zeile automatisch so weit ein wie die vorige Zeile.  
   
- **Smart**  
+ **Intelligent**  
  Im Nur-Text-Editor wird diese Formatierungsart nicht unterstützt.  
   
-## <a name="tabs"></a>Tabstopps  
+## <a name="tabs"></a>Registerkarten  
  **Tabulatorgröße**  
  Legt den Abstand zwischen den Tabstopps fest. Der Standardwert ist vier Leerzeichen.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66089861"
  **Leerzeichen einfügen**  
  Fügt für den Einzug nur Leerzeichen und keine Tabstopps ein. Wenn die **Einzugsgröße** z.B. auf 5 festgelegt ist, werden fünf Leerzeichen eingefügt, wenn Sie die TAB-Taste drücken oder auf der Symbolleiste **Formatierung** auf die Schaltfläche **Einzug vergrößern** klicken.  
   
- **Tabstopps beibehalten**  
+ **Tabulatoren beibehalten**  
  Fügt beim Einzug so viele Tabstopps ein, wie möglich. Jedes Tabulatorzeichen nimmt den Platz so vieler Leerzeichen ein, wie im Feld **Tabulatorgröße**definiert wurden. Wenn die **Einzugsgröße** kein ganzes Vielfaches der **Tabulatorgröße** ist, werden zum Auffüllen der Differenz Leerzeichen verwendet.  
   
   

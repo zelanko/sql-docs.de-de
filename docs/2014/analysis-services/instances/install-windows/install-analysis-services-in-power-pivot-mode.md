@@ -11,22 +11,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cd41c3a139a2e4be03d0204a16cb698b3d36c89
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888655"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   In den Verfahren in diesem Thema werden Sie durch die Installation eines einzelnen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Bereitstellungsmodus geführt. In den Schritten führen Sie u. a. den Installations-Assistenten für SQL Server sowie Konfigurationsaufgaben unter Verwendung der SharePoint 2013-Zentraladministration aus.  
   
- **[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 | SharePoint 201  
+ **[!INCLUDE[applies](../../../includes/applies-md.md)]** SharePoint 2013 | SharePoint 201  
   
  **In diesem Thema:**  
   
  [Hintergrund](#bkmk_background)  
   
- [Erforderliche Komponenten](#bkmk_prereq)  
+ [Voraussetzungen](#bkmk_prereq)  
   
  [Schritt 1: Installieren von PowerPivot für SharePoint](#InstallSQL)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68888655"
   
  [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](#bkmk_firewall)  
   
- [Aktualisieren von Arbeitsmappen und geplanter Datenaktualisierung](#bkmk_upgrade_workbook)  
+ [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierung](#bkmk_upgrade_workbook)  
   
  [Über die Installation auf einem einzelnen Server hinaus: Power Pivot für Microsoft SharePoint](#bkmk_multiple_servers)  
   
@@ -45,15 +45,15 @@ ms.locfileid: "68888655"
   
 -   **Backend-Dienste:** Wenn Sie Power Pivot für Excel verwenden, um Arbeitsmappen zu erstellen, die analytische Daten enthalten, müssen Sie PowerPivot für SharePoint, um in einer Serverumgebung auf diese Daten zuzugreifen. Sie können SQL Server-Setup auf einem Computer ausführen, auf dem SharePoint Server 2013 installiert ist, oder auf einem anderen Computer, der keine SharePoint-Software enthält. Zwischen Analysis Services und SharePoint bestehen keine Abhängigkeiten.  
   
-     **Hinweis**: In diesem Thema wird die Installation des [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers und der Back-End-Dienste beschrieben.  
+     **Hinweis:** In diesem Thema wird die Installation des [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers und der Back-End-Dienste beschrieben.  
   
 -   **Mittlere Ebene:** Verbesserungen an Power Pivot-Erfahrungen in SharePoint, einschließlich Power Pivot-Katalog, planmäßige Datenaktualisierung, Management-Dashboard und Datenanbieter. Weitere Informationen zur Installation und Konfiguration der mittleren Ebene finden Sie unter:  
   
-    -   [Installieren oder Deinstallieren des PowerPivot für SharePoint Add- &#40;in SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+    -   [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
-    -   [Konfigurieren von Power Pivot und bereit &#40;stellen von Lösungen in SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
+    -   [Konfigurieren von Power Pivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
-##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
   
 1.  Sie müssen lokaler Administrator sein, um SQL Server-Setup auszuführen.  
   
@@ -63,16 +63,16 @@ ms.locfileid: "68888655"
   
 4.  Der Name der PowerPivot-Instanz muss vorhanden sein. Der Computer, auf dem Sie Analysis Services im SharePoint-Modus installieren, darf keine benannte PowerPivot-Instanz enthalten.  
   
-5.  Überprüfen Sie die [Hardware-und Software Anforderungen für Analysis Services Server &#40;im Share&#41;Point-Modus SQL Server 2014](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
+5.  Überprüfen Sie die [Hardware-und Software Anforderungen für Analysis Services Server im SharePoint-Modus &#40;SQL Server 2014&#41;](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md).  
   
 6.  Weitere Informationen finden Sie in den Anmerkungen zu dieser Version [SQL Server 2012 Service Pack 1](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389).  
   
-###  <a name="bkmk_sqleditions"></a> Anforderungen für die SQL Server-Edition  
+###  <a name="bkmk_sqleditions"></a>Anforderungen an die SQL Server Edition  
  Nicht alle Business Intelligence-Funktionen sind in allen Editionen von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verfügbar. Weitere Informationen finden Sie [unter von den Editionen von SQL Server 2012 (https://go.microsoft.com/fwlink/?linkid=232473) ](https://go.microsoft.com/fwlink/?linkid=232473) und [Editionen und Komponenten von SQL Server 2014](../../../sql-server/editions-and-components-of-sql-server-2016.md)unterstützte Funktionen.  
   
- Die aktuellen Anmerkungen zu dieser Version finden Sie unter [SQL Server Versions Anmerkungen zu 2012 SP1](ttp://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389) ).  
+ Die aktuellen Anmerkungen zu dieser Version finden Sie unter [SQL Server Versions Anmerkungen zu 2012 SP1](ttp://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389)).  
   
- Die Anmerkungen zu dieser [Version https://go.microsoft.com/fwlink/?LinkId=236893) Microsoft SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
+ Die Anmerkungen zu dieser [Versionhttps://go.microsoft.com/fwlink/?LinkId=236893)Microsoft SQL Server 2012 (](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
 ##  <a name="InstallSQL"></a>Schritt 1: Installieren von PowerPivot für SharePoint  
  In diesem Schritt führen Sie SQL Server-Setup aus, um einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus zu installieren. In einem anschließenden Schritt konfigurieren Sie Excel Services so, dass dieser Server für Arbeitsmappen-Datenmodelle verwendet wird.  
@@ -95,7 +95,7 @@ ms.locfileid: "68888655"
   
 9. Wenn erneut **Setupunterstützungsregeln**angezeigt wird, lesen Sie alle Warnungen und klicken auf **Weiter**.  
   
-     **Hinweis**: Da die Windows-Firewall aktiviert ist, wird eine Warnung angezeigt, dass Ports geöffnet werden, um den Remote Zugriff zu aktivieren.  
+     **Hinweis:** Da die Windows-Firewall aktiviert ist, wird eine Warnung angezeigt, dass Ports geöffnet werden, um den Remote Zugriff zu aktivieren.  
   
 10. Wählen Sie auf der Seite **Setuprolle** die Option **SQL Server PowerPivot für SharePoint**aus. Durch diese Option wird Analysis Services im SharePoint-Modus installiert.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68888655"
   
      Klicken Sie auf **Weiter**.  
   
-     ![Setup Rolle](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "Setup Rolle")  
+     ![Setuprolle](../../../sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "Setuprolle")  
   
 11. Unter Funktionsauswahl wird zu Informationszwecken eine schreibgeschützte Liste der Funktionen angezeigt. Sie können keine Elemente hinzufügen oder entfernen, die vorab für diese Rolle ausgewählt wurden. Klicken Sie auf **Weiter**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "68888655"
   
 13. Legen Sie alle Dienste auf der Seite **Serverkonfiguration** auf den **Starttyp**"Automatisch" fest. Geben Sie das gewünschte Domänenkonto und Kennwort für **SQL Server Analysis Services**an, **(1)** im folgenden Diagramm.  
   
-    -   Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]können Sie ein **Domänenbenutzerkonto** oder ein **NetworkService-Konto** verwenden. Das LocalSystem- oder LocalService-Konto sollte nicht verwendet werden.  
+    -   Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]können Sie ein **** Domänenbenutzerkonto oder ein **** NetworkService-Konto verwenden. Das LocalSystem- oder LocalService-Konto sollte nicht verwendet werden.  
   
     -   Wenn Sie die SQL Server-Datenbank-Engine und den SQL Server-Agent hinzugefügt haben, können Sie die Dienste zur Ausführung unter Domänenbenutzerkonten oder unter dem standardmäßigen virtuellen Konto konfigurieren.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68888655"
   
      Klicken Sie auf **Weiter**.  
   
-     ![SSAS-Server Konfiguration](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS-Server Konfiguration")  
+     ![SSAS Server-Konfiguration](../../../sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS Server-Konfiguration")  
   
 14. Wenn Sie das [!INCLUDE[ssDE](../../../includes/ssde-md.md)]installieren, wird die Seite **Datenbank-Engine-Konfiguration** angezeigt. Klicken Sie in der [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Konfiguration auf **Aktuellen Benutzer hinzufügen** , um Ihrem Benutzerkonto Administratorberechtigungen für die Datenbank-Engine-Instanz zu gewähren.  
   
@@ -138,11 +138,11 @@ ms.locfileid: "68888655"
   
 16. Klicken Sie auf der Seite **Fehlerberichterstellung** auf **Weiter**.  
   
-17. Klicken Sie auf der Seite **Installationsbereit** auf **Installieren**.  
+17. Klicken Sie auf der Seite **Bereit zum Installieren** auf **Installieren**.  
   
 18. Wenn das Dialogfeld **Computerneustart erforderlich**angezeigt wird, klicken Sie auf **OK**.  
   
-19. Wenn die Installation abgeschlossen ist, klicken Sie auf **Schließen**.  
+19. Klicken Sie nach dem Abschluss der Installation auf **Schließen**.  
   
 20. Starten Sie den Computer neu.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "68888655"
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Gewähren von Excel Services-Serveradministratorrechten für Analysis Services  
  Die in diesem Abschnitt beschriebenen Schritte müssen nicht ausgeführt werden, wenn Sie das Dienstkonto für die Excel Services-Anwendung während der Analysis Services-Installation als Analysis Services-Administrator hinzugefügt haben.  
   
-1.  Starten Sie auf dem Analysis Services-Server die Anwendung SQL Server Management Studio, und stellen Sie eine Verbindung mit der Analysis Services-Instanz her, z. B. `[MyServer]\POWERPIVOT`.  
+1.  Starten Sie auf dem Analysis Services-Server die Anwendung SQL Server Management Studio, und stellen Sie eine Verbindung mit der Analysis Services-Instanz her, z. B. `[MyServer]\POWERPIVOT`.  
   
 2.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Instanznamen, und klicken Sie auf **Eigenschaften**.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "68888655"
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Die Änderungen werden innerhalb einiger Minuten wirksam. Alternativ können Sie für den Dienst **Dienste für Excel-Berechnungen** auch auf **Beenden** bzw. **Starten**klicken. Beschreibung  
+7.  Die Änderungen werden innerhalb einiger Minuten wirksam. Alternativ können Sie für den Dienst **Dienste für Excel-Berechnungen** auch auf **Beenden** bzw. **Starten**klicken. To  
   
      Eine andere Möglichkeit besteht darin, eine Eingabeaufforderung unter Verwendung von Administratorprivilegien zu öffnen und `iisreset /noforce`einzugeben.  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68888655"
 ##  <a name="bkmk_verify"></a>Schritt 3: Überprüfen der Integration  
  In den folgenden Schritten erfahren Sie, wie eine neue Arbeitsmappe erstellt und hochgeladen wird, um zu überprüfen, ob die Analysis Services-Integration erfolgreich war. Sie benötigen für diese Schritte eine SQL Server-Datenbank.  
   
-1.  **Hinweis**: Wenn Sie bereits über eine erweiterte Arbeitsmappe mit Slicern oder Filtern verfügen, können Sie Sie in Ihre SharePoint-Dokumentbibliothek hochladen und überprüfen, ob Sie in der Lage sind, mit den Slicern und Filtern in der Dokument Bibliotheks Ansicht zu interagieren.  
+1.  **Hinweis:** Wenn Sie bereits über eine erweiterte Arbeitsmappe mit Slicern oder Filtern verfügen, können Sie Sie in Ihre SharePoint-Dokumentbibliothek hochladen und überprüfen, ob Sie in der Lage sind, mit den Slicern und Filtern in der Dokument Bibliotheks Ansicht zu interagieren.  
   
 2.  Starten Sie in Excel eine neue Arbeitsmappe.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "68888655"
   
 4.  Wählen Sie **Aus SQL Server**.  
   
-5.  Geben Sie im **Datenverbindungs-Assistenten** den Namen der SQL Server-Instanz ein, in der die Datenbank enthalten ist, die Sie verwenden möchten.  
+5.  Geben Sie im **** Datenverbindungs-Assistenten den Namen der SQL Server-Instanz ein, in der die Datenbank enthalten ist, die Sie verwenden möchten.  
   
 6.  Stellen Sie sicher, dass für die Anmeldeinformationen **Windows-Authentifizierung verwenden** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
   
@@ -236,40 +236,40 @@ ms.locfileid: "68888655"
   
 15. Fügen Sie den Bereichen Zeile, Spalten und Wert in der Feldliste Felder hinzu.  
   
-16. Fügen Sie der PivotTable einen Slicer oder Filter hinzu. **Sie sollten diesen Schritt nicht überspringen**. Mithilfe eines Slicers oder Filters können Sie auf einfache Weise die Analysis Services-Installation überprüfen.  
+16. Fügen Sie der PivotTable einen Slicer oder Filter hinzu. Über **springen Sie diesen Schritt nicht**. Mithilfe eines Slicers oder Filters können Sie auf einfache Weise die Analysis Services-Installation überprüfen.  
   
 17. Speichern Sie die Arbeitsmappe in einer Dokumentbibliothek auf einem SharePoint 2013-Server, auf dem Excel Services konfiguriert ist. Sie können die Arbeitsmappe auch auf einer Dateifreigabe speichern und dann in die Dokumentbibliothek auf dem SharePoint 2013-Server hochladen.  
   
 18. Klicken Sie auf den Namen der Arbeitsmappe, um sie in SharePoint anzuzeigen, und klicken Sie auf den Slicer, oder ändern Sie den Filter, den Sie zuvor hinzugefügt haben. Im Fall eines Datenupdates wissen Sie, dass Analysis Services installiert und für Excel Services verfügbar ist. Wenn Sie die Arbeitsmappe in Excel öffnen, verwenden Sie eine zwischengespeicherte Kopie und nicht den Analysis Services-Server.  
   
-##  <a name="bkmk_firewall"></a> Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen  
+##  <a name="bkmk_firewall"></a>Konfigurieren der Windows-Firewall für den Analysis Services Zugriff  
  Anhand der Informationen im Thema [Configure the Windows Firewall to Allow Analysis Services Access](../configure-the-windows-firewall-to-allow-analysis-services-access.md) können Sie feststellen, ob Sie die Blockierung von Ports in einer Firewall aufheben müssen, um den Zugriff auf Analysis Services oder PowerPivot für SharePoint zuzulassen. Führen Sie die Schritte in diesem Thema aus, um Port- und Firewalleinstellungen zu konfigurieren. In der Praxis sollten Sie diese Schritte zusammen ausführen, um den Zugriff auf Ihren Analysis Services-Server zuzulassen.  
   
-##  <a name="bkmk_upgrade_workbook"></a> Aktualisieren von Arbeitsmappen und geplanter Datenaktualisierung  
+##  <a name="bkmk_upgrade_workbook"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierung  
  Welche Schritte Sie zum Aktualisieren von Arbeitsmappen ausführen müssen, die in früheren Versionen von PowerPivot erstellt wurden, hängt von der PowerPivot-Version ab, mit der die Arbeitsmappe erstellt wurde. Weitere Informationen finden Sie unter [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013).  
   
 ##  <a name="bkmk_multiple_servers"></a>Über die Installation auf einem einzelnen Server hinaus: Power Pivot für Microsoft SharePoint  
- **Web-Front-End (WFE)** oder **mittlere Ebene:** : Um einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus in einer größeren SharePoint-Farm zu verwenden und zusätzliche Power Pivot-Funktionen in der Farm zu installieren, führen Sie das Installationspaket **sppowerpivot. msi** auf jedem der SharePoint-Server aus. Mithilfe von spPowerPivot.msi werden die erforderlichen Datenanbieter und das PowerPivot für SharePoint 2013-Konfigurationstool installiert.  
+ **Web-Front-End (WFE)** oder **mittlere Ebene:**: um einen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus in einer größeren SharePoint-Farm zu verwenden und zusätzliche Power Pivot-Funktionen in der Farm zu installieren, führen Sie das Installationspaket **sppowerpivot. msi** auf jedem der SharePoint-Server aus. Mithilfe von spPowerPivot.msi werden die erforderlichen Datenanbieter und das PowerPivot für SharePoint 2013-Konfigurationstool installiert.  
   
  Weitere Informationen zur Installation und Konfiguration der mittleren Ebene finden Sie unter:  
   
--   [Installieren oder Deinstallieren des PowerPivot für SharePoint Add- &#40;in SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
+-   [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)  
   
 -   Informationen zum Herunterladen der MSI-Datei finden Sie unter [Microsoft SQL Server 2014 PowerPivot für Microsoft SharePoint 2013](https://go.microsoft.com/fwlink/?LinkID=324854)  
   
--   [Konfigurieren von Power Pivot und bereit &#40;stellen von Lösungen in SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
+-   [Konfigurieren von Power Pivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013)  
   
- **Redundanz und Serverauslastung:** Wenn Sie einen zweiten oder mehrere [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus installieren, wird [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Server Funktionalität Redundanz bereitgestellt. Durch Hinzufügen zusätzlicher Server wird die Arbeitsauslastung auf mehrere Server verteilt. Weitere Informationen finden Sie unter den folgenden Links:  
+ **Redundanz und Serverauslastung:** Wenn Sie einen zweiten oder mehrere [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus installieren, wird [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] die Server Funktionalität Redundanz bereitgestellt. Durch Hinzufügen zusätzlicher Server wird die Arbeitsauslastung auf mehrere Server verteilt. Weitere Informationen finden Sie unter  
   
--   [Konfigurieren von Analysis Services für die Verarbeitung von Datenmodellen in Excel Services](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
+-   [Konfigurieren Sie Analysis Services für die Verarbeitung von Datenmodellen in Excel Services](https://technet.microsoft.com/library/jj614437\(v=office.15\)) (https://technet.microsoft.com/library/jj614437(v=office.15)).  
   
 -   [Verwalten von Einstellungen für das Excel Services-Datenmodell (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780\(v=office.15\)) (https://technet.microsoft.com/library/jj219780(v=office.15)).  
   
- ![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") [Übermitteln von Feedback und Kontaktinformationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
+ ![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") [übermitteln Sie Feedback und Kontaktinformationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren von Power Pivot zu SharePoint 2013](https://docs.microsoft.com/analysis-services/instances/install-windows/migrate-power-pivot-to-sharepoint-2013)   
- [Installieren oder Deinstallieren des PowerPivot für SharePoint Add- &#40;in SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
- [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
+ [Installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierung &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
   
   

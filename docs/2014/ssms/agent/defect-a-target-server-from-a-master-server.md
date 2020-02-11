@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f51e8f62a6be442c123c5a1309293e204caf08f
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783221"
 ---
 # <a name="defect-a-target-server-from-a-master-server"></a>Vollziehen des Austritts eines Zielservers aus einem Masterserver
@@ -32,22 +32,22 @@ ms.locfileid: "72783221"
   
      [Sicherheit](#Security)  
   
--   **Vollziehen des Austritts eines Zielservers mit:**  
+-   **So verwenden Sie den Austritt eines Zielservers mit:**  
   
-     [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-     [SMO](#PowerShellProcedure)  
+     [Belegte](#PowerShellProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Ausführen dieser gespeicherten Prozedur muss ein Benutzer Mitglied der festen Serverrolle `sysadmin` sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-defect-a-target-server-from-a-master-server"></a>So tragen Sie bei einem Masterserver einen Zielserver aus  
   
@@ -63,7 +63,7 @@ ms.locfileid: "72783221"
   
 1.  Stellen Sie eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
-2.  Klicken Sie auf der Standardleiste auf **Neue Abfrage**.  
+2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
 3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
   
@@ -71,12 +71,12 @@ ms.locfileid: "72783221"
 sp_msx_defect ;  
 ```  
   
- Weitere Informationen finden Sie unter [sp_msx_defect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_msx_defect &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-msx-defect-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a>Verwenden von SQL Server Management Objects (SMO)  
  Verwenden Sie `MsxDefect Method`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Multiserverumgebung](create-a-multiserver-environment.md)   
  [Automatisierte Verwaltung in einem Unternehmen](automated-administration-across-an-enterprise.md)   
- [Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](defect-multiple-target-servers-from-a-master-server.md)  
+ [Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)  
