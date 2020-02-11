@@ -1,5 +1,5 @@
 ---
-title: SQLXML 4.0 Programmierkonzepte | Microsoft-Dokumentation
+title: Programmier Konzepte von SQLXML 4,0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012225"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0-Programmierkonzepte
   SQLXML 3.0 wurde als Webversion angeboten, um zusätzliche clientseitige XML-Funktionalitäten und Erweiterungen zu bestehenden Funktionen wie XSD-Schemas mit Anmerkungen, XML-Massenladen, Unterstützung für Webdienste (SOAP) und Updategrams bereitzustellen.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] führt Version 4.0 von SQLXML ein, die dieselbe Funktionalität wie SQLXML 3.0 bereitstellt. Darüber hinaus bietet sie zusätzliche Updates, um mit neuen Funktionen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, zu funktionieren.  
+ 
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] führt Version 4.0 von SQLXML ein, die dieselbe Funktionalität wie SQLXML 3.0 bereitstellt. Darüber hinaus bietet sie zusätzliche Updates, um mit neuen Funktionen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, zu funktionieren.  
   
  Dieser Abschnitt enthält Informationen zur SQLXML 4.0.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "66012225"
  [Anforderungen zum Ausführen von SQLXML-Beispielen](requirements-for-running-sqlxml-examples.md)  
  Beschreibt die Anforderungen zum Erstellen von funktionstüchtigen Beispielen aus den bereitgestellten SQLXML-Beispielen.  
   
- [Die clientseitige und serverseitige Formatierung &#40;SQLXML 4.0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
+ [Client seitige und Server seitige Formatierung &#40;SQLXML 4,0&#41;](formatting/client-side-and-server-side-formatting-sqlxml-4-0.md)  
  Liefert Informationen über die clientseitige Formatierung im Vergleich zur serverseitigen Formatierung sowie den FOR XML-Befehl zum Konstruieren von XML-Dokumenten.  
   
  [XSD-Schemas mit Anmerkungen in SQLXML 4.0](annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
@@ -51,10 +52,10 @@ ms.locfileid: "66012225"
  [Verwenden von XPath-Abfragen in SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  Beschreibt, wie mit einer Teilmenge der Xpath-Sprache die von dem mit Anmerkungen versehenen XSD-Schema erstellten XML-Sichten abgefragt werden können und liefert Beispiele dazu.  
   
- [Verwenden von Updategramms zum Ändern von Daten in SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
+ [Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Stellt Informationen über Updategrams bereit, die Daten in einer Datenbank ändern, indem sie mit den XML-Sichten verwendet werden, die von den mit Anmerkungen versehenen XSD- oder XDR-Schemas erzeugt wurden.  
   
- [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Beschreibt den XML-Massenladevorgang in SQLXML 4.0.  
   
  [SQLXML 4.0 Data Access Components](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  
@@ -63,7 +64,7 @@ ms.locfileid: "66012225"
  [SQLXML 4.0 .NET Framework-Unterstützung](../../database-engine/dev-guide/sqlxml-4-0-net-framework-support.md)  
  Beschreibt die SQLXML 4.0-Unterstützung für .NET Framework.  
   
- [Zwischenspeichern von Vorlagen, XSL und Schemas &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
+ [Zwischenspeichern von Vorlagen, XSL und Schemas &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/caching-templates-xml-schemas/caching-templates-xsl-and-schemas-sqlxml-4-0.md)  
  Beschreibt die in SQLXML zum Optimieren der Leistung bereitgestellte Zwischenspeicherfunktionalität.  
   
  [Sicherheitsüberlegungen zu SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/security/sqlxml-4-0-security-considerations.md)  
@@ -72,7 +73,7 @@ ms.locfileid: "66012225"
  [Richtlinien und Einschränkungen von SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/guidelines-and-limitations-of-sqlxml-4-0.md)  
  Listet Punkte auf, die bei der Arbeit mit SQLXML 4.0 berücksichtigt werden sollten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
   

@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63012262"
 ---
 # <a name="accessing-the-soap-api"></a>Accessing the SOAP API
@@ -41,7 +41,7 @@ ms.locfileid: "63012262"
   
 -   Der <xref:ReportExecution2005>-Endpunkt ermöglicht es Entwicklern, Berichte programmgesteuert auf einem Berichtsserver zu verarbeiten und zu rendern. Sie können über `ReportExecution2005.asmx?wsdl` auf die WSDL dieses Endpunkts zugreifen.  
   
- Die WSDL kann von Development Kits verwendet werden, die SOAP- und Webdienste unterstützen, wie z.B. das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  
+ WSDL kann von Development Kits verwendet werden, die SOAP-und Webdienste unterstützen, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] z. b. das SDK.  
   
  Das folgende Beispiel zeigt das Format der URL zur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Verwaltungs-WSDL-Datei:  
   
@@ -51,15 +51,15 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  In der folgenden Tabelle werden die einzelnen Elemente in der URL beschrieben.  
   
-|URL-Element|Beschreibung|  
+|URL-Element|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|*server*|Der Name des Servers, auf dem der Berichtsserver eingesetzt wird.|  
-|*berichtsserver*|Der Name des Ordners, der den XML-Webdienst enthält. Dieser wird während des Setups konfiguriert.|  
-|*\<endpunktname>.asmx*|Der Name des Webdienst-Endpunkts.|  
+|*Servers*|Der Name des Servers, auf dem der Berichtsserver eingesetzt wird.|  
+|*Report Server*|Der Name des Ordners, der den XML-Webdienst enthält. Dieser wird während des Setups konfiguriert.|  
+|*\<Endpunkt Name>. asmx*|Der Name des Webdienst-Endpunkts.|  
   
  Weitere Informationen über das WSDL-Format finden Sie in der WSDL-Spezifikation von W3C (World Wide Web Consortium) unter http://www.w3.org/TR/wsdl.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Report Server Web Service (Report Server-Webdienst)](report-server-web-service.md)  
   

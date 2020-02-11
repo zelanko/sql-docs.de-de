@@ -15,24 +15,24 @@ ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ba7c1956bc03835131a440bfe9ad37469a7858e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68112105"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Löschen einer Visual FoxPro-Datenquelle
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>So löschen Sie eine Visual FoxPro-Datenquelle  
   
-1.  Klicken Sie auf Computern unter Windows 2000 öffnen Sie der Windows-Systemsteuerung, und doppelklicken Sie auf Verwaltung.  
+1.  Öffnen Sie auf Computern, auf denen Windows 2000 ausgeführt wird, die Windows-Systemsteuerung, und doppelklicken Sie auf Verwaltung.  
   
-2.  Doppelklicken Sie auf Datenquellen (ODBC) um das Dialogfeld ODBC-Datenquellenadministrator zu öffnen. Dieses Symbol ist verfügbar, nachdem Sie den Visual FoxPro-ODBC-Treiber oder alle ODBC-Treiber-Software installiert haben.  
+2.  Doppelklicken Sie auf Datenquellen (ODBC), um das Dialogfeld ODBC-Datenquellen-Administrator zu öffnen. Dieses Symbol ist verfügbar, nachdem Sie den Visual FoxPro-ODBC-Treiber oder eine beliebige ODBC-Treibersoftware installiert haben.  
   
     > [!NOTE]  
-    >  Wenn Sie eine frühere Version von Windows ausführen, öffnen Sie die Windows-Systemsteuerung, und doppelklicken Sie auf 32-Bit-ODBC- oder ODBC um das Dialogfeld ODBC-Datenquellenadministrator zu öffnen.  
+    >  Wenn Sie eine frühere Version von Windows ausführen, öffnen Sie die Windows-Systemsteuerung, und doppelklicken Sie auf 32-Bit-ODBC oder ODBC, um das Dialogfeld ODBC-Datenquellen-Administrator zu öffnen.  
   
-3.  Wählen Sie den Namen der Datenquelle, die Sie löschen möchten, auf der Registerkarte Benutzer-DSN oder System-DSN.  
+3.  Wählen Sie auf der Registerkarte Benutzer-DSN oder System-DSN den Namen der Datenquelle aus, die Sie löschen möchten.  
   
 4.  Klicken Sie auf Entfernen.  
   
-5.  Klicken Sie auf OK, um Änderungen zu speichern und schließen Sie das Dialogfeld ODBC-Datenquellen-Administrator.
+5.  Klicken Sie auf OK, um die Änderungen zu speichern und das Dialogfeld ODBC-Datenquellen Administrator zu schließen.

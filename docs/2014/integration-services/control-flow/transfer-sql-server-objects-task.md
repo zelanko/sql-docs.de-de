@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 01b985a1bb818e7b3d3612596bb4e2b7fa6fd393
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829465"
 ---
 # <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)
@@ -29,13 +29,13 @@ ms.locfileid: "62829465"
   
  Die folgende Tabelle enthält eine Liste der Objekttypen, die kopiert werden können.  
   
-|Objekt|  
+|Object|  
 |------------|  
 |Tabellen|  
-|Ansichten|  
+|Sichten|  
 |Gespeicherte Prozeduren|  
 |Benutzerdefinierte Funktionen|  
-|Standardwerte|  
+|Standardeinstellungen|  
 |Benutzerdefinierte Datentypen|  
 |Partitionsfunktionen|  
 |Partitionsschemas|  
@@ -73,7 +73,7 @@ ms.locfileid: "62829465"
 ## <a name="transfer-objects-between-instances-of-sql-server"></a>Übertragen von Objekten zwischen den Instanzen von SQL Server  
  Der Task ' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen' unterstützt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quelle bzw. ein -Ziel.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Der Task löst ein Informationsereignis aus, das das übertragene Objekt meldet, sowie ein Warnungsereignis, wenn ein Objekt überschrieben wird. Es wird auch ein Informationsereignis für Aktionen ausgelöst, z. B. das Kürzen von Datenbanktabellen.  
   
  Der Task „ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte übertragen“ meldet keinen schrittweisen Fortschritt der Objektübertragung, sondern nur 0 % und 100 % der Ausführung.  
@@ -106,7 +106,7 @@ ms.locfileid: "62829465"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task ' SQL Server Objekte übertragen ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor für den Task „SQL Server-Objekte übertragen“ &#40;Seite „Objekte“&#41;](../transfer-sql-server-objects-task-editor-objects-page.md)  
   

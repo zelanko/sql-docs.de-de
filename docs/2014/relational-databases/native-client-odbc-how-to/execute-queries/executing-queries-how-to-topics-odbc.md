@@ -1,5 +1,5 @@
 ---
-title: 'Ausführen von Abfragen: Themen zur Vorgehensweise (ODBC) | Microsoft-Dokumentation'
+title: Gewusst-wie-Themen zum Ausführen von Abfragen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b892adaf02f13ec7de150ae1de9966a65ac1d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200390"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Themen zur Vorgehensweise zum Ausführen von Abfragen (ODBC)
@@ -24,15 +24,15 @@ ms.locfileid: "63200390"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Verwenden Sie eine Anweisung &#40;ODBC&#41;](use-a-statement-odbc.md)  
+-   [Verwenden Sie eine Anweisung &#40;ODBC-&#41;](use-a-statement-odbc.md)  
   
--   [Festlegen von Cursoroptionen &#40;ODBC&#41;](set-cursor-options-odbc.md)  
+-   [Festlegen der Cursor Optionen &#40;ODBC-&#41;](set-cursor-options-odbc.md)  
   
--   [Führen Sie eine Anweisung direkt &#40;ODBC&#41;](execute-a-statement-directly-odbc.md)  
+-   [Direktes Ausführen einer Anweisung &#40;ODBC-&#41;](execute-a-statement-directly-odbc.md)  
   
--   [Vorbereiten und Ausführen eine Anweisung &#40;ODBC&#41;](prepare-and-execute-a-statement-odbc.md)  
+-   [Vorbereiten und Ausführen einer Anweisung &#40;ODBC-&#41;](prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweisen zu ODBC](../odbc-how-to-topics.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [ODBC How-to Topics](../odbc-how-to-topics.md)  
   
   

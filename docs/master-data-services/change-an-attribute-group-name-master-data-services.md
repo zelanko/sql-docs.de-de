@@ -13,10 +13,10 @@ ms.assetid: 79510fcf-4c83-4426-bdd4-15b4170ecfbd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 115cb0011be22e482e6d8d8e032d8db21246bbd9
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729711"
 ---
 # <a name="change-an-attribute-group-name-master-data-services"></a>Ändern des Namens einer Attributgruppe (Master Data Services)
@@ -25,12 +25,12 @@ ms.locfileid: "73729711"
 
   Sie können in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]den Namen einer Attributgruppe ändern.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-change-an-attribute-group-name"></a>So ändern Sie den Namen einer Attributgruppe  
   
@@ -50,9 +50,9 @@ ms.locfileid: "73729711"
   
 8.  Klicken Sie auf **Gruppe speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
- [Löschen einer Attributgruppe &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribut Gruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Erstellen Sie eine Attribut Gruppe &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)   
+ [Löschen Sie eine Attribut Gruppe &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-group-master-data-services.md)  
   
   

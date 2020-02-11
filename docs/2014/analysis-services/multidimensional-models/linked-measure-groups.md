@@ -1,5 +1,5 @@
 ---
-title: Verknüpfte Measuregruppen | Microsoft-Dokumentation
+title: Verknüpfte Measure-Gruppen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec38404a32751330d7fefd974fafe3d571d3b11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074781"
 ---
 # <a name="linked-measure-groups"></a>Verknüpfte Measuregruppen
   Eine verknüpfte Measuregruppe basiert auf einer anderen Measuregruppe in einem anderen Cube innerhalb derselben Datenbank oder einer anderen Analysis Services-Datenbank. Eine verknüpfte Measuregruppe kann z. B. verwendet werden, wenn Sie einen Satz von Measures und die entsprechenden Datenwerte in mehreren Cubes wiederverwenden möchten.  
   
- Microsoft empfiehlt, die ursprünglichen und verknüpften Measuregruppen in Projektmappen abzulegen, die auf dem gleichen Server ausgeführt werden. Verknüpfen mit einer Measuregruppe auf einem Remoteserver in einer zukünftigen Version showplanversionen ist (siehe [veraltete Analysis Services-Funktionen in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
+ Microsoft empfiehlt, die ursprünglichen und verknüpften Measuregruppen in Projektmappen abzulegen, die auf dem gleichen Server ausgeführt werden. Das Verknüpfen mit einer Measure-Gruppe auf einem Remote Server wird in einer zukünftigen Version als veraltet eingestuft (siehe [Veraltete Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md)).  
   
 > [!IMPORTANT]  
 >  Verknüpfte Measuregruppen sind schreibgeschützt. Um die neuesten Änderungen zu übernehmen, müssen Sie alle auf dem geänderten Quellobjekt basierenden verknüpften Measuregruppen löschen und neu erstellen. Aus diesem Grund sollten Sie das Kopieren und Einfügen von Measuregruppen als alternative Methode berücksichtigen, wenn zukünftige Änderungen der Measuregruppe erforderlich sind.  
@@ -70,7 +70,7 @@ ms.locfileid: "66074781"
   
  Um eine verknüpfte Measuregruppe zu definieren oder zu verwenden, muss das Windows-Dienstkonto für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz Mitglied einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbankrolle sein, die über `ReadDefinition`- und `Read`-Zugriffsrechte für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Quellinstanz auf den Quellcube und die Measuregruppe verfügt, oder es muss Mitglied der Rolle der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Administratoren für die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Quellinstanz sein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Definieren von verknüpften Dimensionen](define-linked-dimensions.md)  
   
   

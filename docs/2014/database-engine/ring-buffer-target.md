@@ -1,5 +1,5 @@
 ---
-title: Ziel des ringpufferziels | Microsoft-Dokumentation
+title: Ring Puffer Ziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088959"
 ---
 # <a name="ring-buffer-target"></a>Ringpufferziel
@@ -25,15 +25,15 @@ ms.locfileid: "66088959"
   
 -   Bei dem ersten Modus handelt es sich um eine strikte FIFO-Reihenfolge (First-In-First-Out), bei der das älteste Ereignis verworfen wird, wenn der gesamte dem Ziel zugeordnete Arbeitsspeicher verwendet wurde. In diesem Modus (dem Standardmodus) wird die Option "occurrence_number" auf 0 festgelegt.  
   
--   Der zweite Modus ist eine FIFO-Reihenfolge pro Ereignis, bei der eine festgelegte Anzahl von Ereignissen jedes Typs aufbewahrt wird. In diesem Modus werden die ältesten Ereignisse der einzelnen Typen verworfen, wenn der gesamte dem Ziel zugeordnete Arbeitsspeicher verwendet wird. Sie können die Option "occurrence_number" so konfigurieren, dass die Anzahl der für jeden Typ beizubehaltenden Ereignisse angegeben wird.  
+-   Der zweite Modus ist eine FIFO-Reihenfolge pro Ereignis, bei der eine festgelegte Anzahl von Ereignissen jedes Typs aufbewahrt wird. In diesem Modus werden die ältesten Ereignisse des jeweiligen Typs verworfen, wenn der gesamte dem Ziel zugeordnete Arbeitsspeicher verwendet wird. Sie können die Option "occurrence_number" so konfigurieren, dass die Anzahl der für jeden Typ beizubehaltenden Ereignisse angegeben wird.  
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des Ringpufferziels beschrieben.  
   
-|Option|Zulässige Werte|Beschreibung|  
+|Option|Zulässige Werte|BESCHREIBUNG|  
 |------------|--------------------|-----------------|  
-|max_memory|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die Höchstmenge des verfügbaren Arbeitsspeichers in Kilobyte (KB). Vorhandene Ereignisse werden auf Grundlage der Grenze gelöscht, die zuerst erreicht wird: max_event_limit oder max_memory. Der maximale Wert ist 4194303 KB. Ein sorgfältiger Überlegung sollten vorgenommen werden, bevor Sie die Größe des Puffers Ring Grenzwerte im Bereich GB festlegen, wie es anderen speicherverbrauchern im SQL Server auswirken können|  
+|max_memory|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die Höchstmenge des verfügbaren Arbeitsspeichers in Kilobyte (KB). Vorhandene Ereignisse werden auf Grundlage der Grenze gelöscht, die zuerst erreicht wird: max_event_limit oder max_memory. Der Höchstwert beträgt 4194303 KB. Es muss sorgfältig vorgegangen werden, bevor die Ringpuffer Größe auf Limits im GB-Bereich festgelegt wird, da dies Auswirkungen auf andere Arbeitsspeicherconsumer in SQL Server|  
 |max_event_limit|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die maximale Anzahl von Ereignissen, die in ring_buffer behalten wurden. Vorhandene Ereignisse werden auf Grundlage der Grenze gelöscht, die zuerst erreicht wird: max_event_limit oder max_memory. Standardeinstellung = 1000.|  
-|occurrence_number|Einer der folgenden Werte:<br /><br /> 0 (Standard) = Das älteste Ereignis wird verworfen, wenn der gesamte dem Ziel zugeordnete Arbeitsspeicher verwendet wurde.<br /><br /> Alle 32-Bit-Ganzzahl = die Anzahl von Ereignissen jedes Typs beibehalten werden, bevor Sie eine FIFO-Reihenfolge pro Ereignis verworfen werden.<br /><br /> <br /><br /> Dieser Wert ist optional.|Der zu verwendende FIFO-Modus. Wenn dieser auf einen Wert größer als 0 festgelegt ist, die gewünschte Anzahl von Ereignissen, die für jeden Typ im Puffer gespeichert werden sollen.|
+|occurrence_number|Einer der folgenden Werte:<br /><br /> 0 (Standard) = Das älteste Ereignis wird verworfen, wenn der gesamte dem Ziel zugeordnete Arbeitsspeicher verwendet wurde.<br /><br /> Eine beliebige 32-Bit-Ganzzahl = die Anzahl der Ereignisse jedes Typs, die aufbewahrt werden, bevor Sie auf einer FIFO-Basis pro Ereignis verworfen werden.<br /><br /> <br /><br /> Dieser Wert ist optional.|Der zu verwendende FIFO-Modus. Wenn dieser auf einen Wert größer als 0 festgelegt ist, die gewünschte Anzahl von Ereignissen, die für jeden Typ im Puffer gespeichert werden sollen.|
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
@@ -74,7 +74,7 @@ WHERE xe.name = 'session_name'
 ```
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)
 - [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql?view=sql-server-2016)

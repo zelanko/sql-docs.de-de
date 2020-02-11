@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6ffcdda8e1c6a3c85703ad7f3d6ed94ca0ca91fe
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148713"
 ---
 # <a name="setting-properties---smo"></a>Festlegen von Eigenschaften – SMO
@@ -58,11 +58,11 @@ ms.locfileid: "70148713"
  Die <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A>-Methode legt das Verhalten zum Laden von Eigenschaften für die restliche Anwendung oder bis zum Zurücksetzen der Anwendung fest. Sie können das ursprüngliche Verhalten mit der <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A>-Methode speichern und es nach Bedarf wiederherstellen.  
   
 ## <a name="examples"></a>Beispiele  
-Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="getting-and-setting-a-property-in-visual-basic"></a>Abrufen und Festlegen einer Eigenschaft in Visual Basic  
- Dieses Codebeispiel <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> zeigt, wie die-Eigenschaft <xref:Microsoft.SqlServer.Management.Smo.Information> des-Objekts und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
+ <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> Dieses Codebeispiel zeigt, wie die-Eigenschaft des- <xref:Microsoft.SqlServer.Management.Smo.Information> Objekts und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -75,7 +75,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql
 ```
   
 ## <a name="getting-and-setting-a-property-in-visual-c"></a>Abrufen und Festlegen einer Eigenschaft in Visual C#  
- Dieses Codebeispiel <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> zeigt, wie die-Eigenschaft <xref:Microsoft.SqlServer.Management.Smo.Information> des-Objekts und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
+ <xref:Microsoft.SqlServer.Management.Smo.Information.Edition%2A> Dieses Codebeispiel zeigt, wie die-Eigenschaft des- <xref:Microsoft.SqlServer.Management.Smo.Information> Objekts und die <xref:Microsoft.SqlServer.Management.Common.ServerConnection.SqlExecutionModes%2A> -Eigenschaft der- <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> Eigenschaft auf den **ExecuteSQL** -Member des <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> enumerierten Typs festgelegt werden.  
   
 ```csharp  
 {   
@@ -154,7 +154,7 @@ tb.Create();
 ```  
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Durchlaufen aller Eigenschaften eines Objekts in Visual Basic  
- Dieses Codebeispiel durchläuft die **Properties** -Auflistung des <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> -Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
+ Dieses Codebeispiel durchläuft die **Properties** -Auflistung des- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
   
  In dem Beispiel wurde das <xref:Microsoft.SqlServer.Management.Smo.Property>-Objekt in eckige Klammern gesetzt, da es auch ein [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Schlüsselwort ist.  
   
@@ -178,7 +178,7 @@ Next
 ```
   
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-c"></a>Durchlaufen aller Eigenschaften eines Objekts in Visual C#  
- Dieses Codebeispiel durchläuft die **Properties** -Auflistung des <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> -Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
+ Dieses Codebeispiel durchläuft die **Properties** -Auflistung des- <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> Objekts und zeigt Sie auf dem [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Ausgabebildschirm an.  
   
 ```csharp  
 {   
@@ -203,7 +203,8 @@ sp.QuotedIdentifierStatus = false;
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Festlegen von Standardinitialisierungsfeldern in Visual Basic  
  In diesem Codebeispiel wird gezeigt, wie die Anzahl der in einem SMO-Programm initialisierten Objekteigenschaften minimiert wird. Sie müssen die `using System.Collections.Specialized`-Anweisung einschließen, um das <xref:System.Collections.Specialized.StringCollection>-Objekt zu verwenden.  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] kann verwendet werden, um die mit dieser Optimierung an die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendeten Zahlenanweisungen zu vergleichen.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] kann verwendet werden, um die mit dieser Optimierung an die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendeten Zahlenanweisungen zu vergleichen.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -235,7 +236,8 @@ srv.SetDefaultInitFields(typ, sc)
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Festlegen von Standardinitialisierungsfeldern in Visual C#  
  In diesem Codebeispiel wird gezeigt, wie die Anzahl der in einem SMO-Programm initialisierten Objekteigenschaften minimiert wird. Sie müssen die `using System.Collections.Specialized`-Anweisung einschließen, um das <xref:System.Collections.Specialized.StringCollection>-Objekt zu verwenden.  
   
- [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] kann verwendet werden, um die mit dieser Optimierung an die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendeten Zahlenanweisungen zu vergleichen.  
+ 
+  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] kann verwendet werden, um die mit dieser Optimierung an die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendeten Zahlenanweisungen zu vergleichen.  
   
 ```csharp  
 {   

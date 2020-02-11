@@ -16,16 +16,16 @@ ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985759"
 ---
 # <a name="aggregate-functions---min"></a>Aggregatfunktionen – min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt aus einer Sequenz atomarer Werte *$arg*, das eine Element, dessen Wert kleiner als alle anderen Elemente ist.  
+  Gibt aus einer Sequenz atomarer Werte zurück, *$arg*, das ein Element, dessen Wert kleiner ist als der aller anderen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,15 +38,15 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  Sequenz der Elemente, aus denen der Mindestwert zurückgegeben wird.  
   
-## <a name="remarks"></a>Hinweise  
- Alle Typen der atomaren Werte, die übergeben werden **min()** müssen Untertypen des gleichen Basistyps sein. Basistypen, die akzeptiert werden, sind die Typen, unterstützen die **Gt** Vorgang. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:double umgewandelt. Wenn eine Mischung dieser Typen ist, oder wenn andere Werte anderer Typen übergeben werden, wird ein statischer Fehler ausgelöst.  
+## <a name="remarks"></a>Bemerkungen  
+ Alle Typen von atomisierten Werten, die an **Min ()** übermittelt werden, müssen Untertypen desselben Basistyps sein. Zulässige Basis Typen sind Typen, die den **gt** -Vorgang unterstützen. Diese Typen sind z. B. die drei integrierten numerischen Basistypen, die date/time-Basistypen, xs:string, xs:boolean und xdt:untypedAtomic. Werte des Typs xdt:untypedAtomic werden in xs:double umgewandelt. Wenn eine Mischung dieser Typen vorliegt oder andere Werte anderer Typen übermittelt werden, wird ein statischer Fehler ausgelöst.  
   
- Das Ergebnis des **min()** erhält den Basistyp der übergebenen Typen, z. B. xs: Double im Fall von xdt: UntypedAtomic. Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler zurückgegeben.  
+ Das Ergebnis von **Min ()** empfängt den Basistyp der bestandenen Typen, z. b. xs: Double im Fall von xdt: untypedAtomic. Wenn die Eingabe statisch leer ist, wird dies angegeben und ein statischer Fehler zurückgegeben.  
   
- Die **min()** Funktion gibt den Wert 1 zurück, in der Sequenz, die kleiner als alle anderen Werte in der Eingabesequenz ist. Für xs:string-Werte wird die Unicode-Codepunkt-Standardsortierung verwendet. Wenn ein xdt: UntypedAtomic-Wert in xs: Double umgewandelt werden kann, wird der Wert in der Eingabesequenz, ignoriert *$arg*. Wenn die Eingabe eine dynamisch berechnete leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
+ Die **Min ()** -Funktion gibt den einen Wert in der Sequenz zurück, der kleiner als alle anderen in der Eingabe Sequenz ist. Für xs:string-Werte wird die Unicode-Codepunkt-Standardsortierung verwendet. Wenn ein xdt: untypedAtomic-Wert nicht in xs: Double umgewandelt werden kann, wird der Wert in der Eingabe Sequenz ignoriert, *$arg*. Wenn die Eingabe eine dynamisch berechnete leere Sequenz ist, wird die leere Sequenz zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Verwenden der min()-Funktion von XQuery zum Bestimmen der Arbeitsplatzstandorte, die die wenigsten Arbeitsstunden aufweisen  
  Die folgende Abfrage ruft alle Arbeitsplatzstandorte im Fertigungsprozess für das Produktmodell (ProductModelID=7) ab, die die wenigsten Arbeitsstunden aufweisen. Im Allgemeinen wird, wie im folgenden Beispiel gezeigt, ein einziger Arbeitsplatzstandort zurückgegeben. Wenn mehrere Standorte eine gleiche Anzahl von Mindestarbeitsstunden aufweisen, werden alle diese Standorte zurückgegeben.  
@@ -68,9 +68,9 @@ WHERE ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **Namespace** -Schlüsselwort im XQuery-Prolog definiert ein Namespacepräfix. Dieses Präfix wird anschließend im XQuery-Abfragetext verwendet.  
+-   Das **Namespace** -Schlüsselwort im XQuery-Prolog definiert ein Namespace Präfix. Dieses Präfix wird anschließend im XQuery-Abfragetext verwendet.  
   
- Hauptteil der XQuery konstruiert die XML-Daten, die eine \<Location >-Element mit wcid-ATTRIBUT und **LaborHrs** Attribute.  
+ Der XQuery-Text erstellt den XML-Code \<, der über ein Location>-Element mit wcid-und **LaborHrs** -Attributen verfügt.  
   
 -   Die Abfrage ruft außerdem die ProductModelID- und Namenswerte ab.  
   
@@ -85,15 +85,15 @@ ProductModelID   Name              Result
 ## <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die **min()** -Funktion ordnet alle ganzzahligen Werte xs: Decimal.  
+-   Die **Min ()** -Funktion ordnet alle ganzzahligen Werte xs: Decimal zu.  
   
--   Die **min()** -Funktion für Werte des Typs xs: Duration nicht unterstützt.  
+-   Die **Min ()** -Funktion für Werte des Typs xs: Duration wird nicht unterstützt.  
   
 -   Sequenzen, die Typen über Basistypbegrenzungen hinweg mischen, werden nicht unterstützt.  
   
 -   Die Option syntactic, die eine Sortierung bereitstellt, wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

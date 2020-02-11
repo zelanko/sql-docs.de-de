@@ -1,5 +1,5 @@
 ---
-title: Recordset (ADO / WFC-Syntax) | Microsoft-Dokumentation
+title: Recordset (ADO-WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: bd1f571e-007f-432e-ada1-5c3e436c1a22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58e0cde8798f73257a54be5cc95f64474334a153
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931387"
 ---
 # <a name="recordset-ado---wfc-syntax"></a>Recordset (ADO/WFC-Syntax)
-## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
   
 ### <a name="constructors"></a>Konstruktoren  
   
@@ -134,8 +134,8 @@ public com.ms.wfc.data.Fields getFields()
 public AdoProperties getProperties()  
 ```  
   
-### <a name="events"></a>Ereignisse  
- Weitere Informationen zu ADO/WFC-Ereignissen finden Sie unter [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+### <a name="events"></a>Events  
+ Weitere Informationen zu ADO/WFC-Ereignissen finden Sie unter [ADO Event Instantiierung by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -162,5 +162,5 @@ public void addOnWillMove(RecordsetEventHandler handler)
 public void removeOnWillMove(RecordsetEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

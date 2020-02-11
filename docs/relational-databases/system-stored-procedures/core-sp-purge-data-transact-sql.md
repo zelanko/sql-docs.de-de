@@ -1,5 +1,5 @@
 ---
-title: sp_purge_data (Transact-SQL) | Microsoft-Dokumentation
+title: Core. sp_purge_data (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942493"
 ---
-# <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data (Transact-SQL)
+# <a name="coresp_purge_data-transact-sql"></a>core.sp_purge_data (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entfernt Daten basierend auf einer Beibehaltungsrichtlinie aus dem Verwaltungs-Data Warehouse. Diese Prozedur wird täglich vom mdw_purge_data-Auftrag des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents für das Verwaltungs-Data Warehouse ausgeführt, das der angegebenen Instanz zugeordnet ist. Sie können mit dieser gespeicherten Prozedur Daten aus dem Verwaltungs-Data Warehouse bedarfsgesteuert entfernen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,36 +46,36 @@ core.sp_purge_data
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@retention_days =] *Retention_days*  
- Die Anzahl der Tage für die Beibehaltung von Daten in den Verwaltungs-Data Warehouse-Tabellen. Daten mit einem Zeitstempel, die älter sind als *Retention_days* wird entfernt. *Retention_days* ist **Smallint**, hat den Standardwert NULL. Wenn angegeben, muss der Wert positiv sein. Wenn der Wert NULL ist, legt der Wert in der valid_through-Spalte in der core.snapshots-Sicht die Zeilen fest, die entfernt werden können.  
+ [@retention_days =] *retention_days*  
+ Die Anzahl der Tage für die Beibehaltung von Daten in den Verwaltungs-Data Warehouse-Tabellen. Daten mit einem Zeitstempel, der älter als *retention_days* ist, werden entfernt. *retention_days* ist vom Datentyp **smallint**. der Standardwert ist NULL. Wenn angegeben, muss der Wert positiv sein. Wenn der Wert NULL ist, legt der Wert in der valid_through-Spalte in der core.snapshots-Sicht die Zeilen fest, die entfernt werden können.  
   
- [@instance_name =] '*Instance_name*"  
- Der Name der Instanz für den Sammlungssatz. *Instanzname* ist **Sysname**, hat den Standardwert NULL.  
+ [@instance_name = ] "*instance_name*"  
+ Der Name der Instanz für den Sammlungssatz. *instance_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
- *Instanzname* muss der vollqualifizierte Instanzname sein, besteht aus den Namen des Computers und den Instanznamen im Format *Computername*\\*Instancename*. Wenn der Wert NULL ist, wird die Standardinstanz auf dem lokalen Server verwendet.  
+ *instance_name* muss der voll qualifizierte Instanzname sein, der aus dem Computernamen und dem Instanznamen im Format *Computername*\\*instanceName*besteht. Wenn der Wert NULL ist, wird die Standardinstanz auf dem lokalen Server verwendet.  
   
- [@collection_set_uid =] '*Collection_set_uid*"  
- Die GUID für den Sammlungssatz. *Collection_set_uid* ist **Uniqueidentifier**, hat den Standardwert NULL. Wenn der Wert NULL ist, werden die qualifizierenden Zeilen aus allen Sammlungssätzen entfernt. Um diesen Wert abzurufen, fragen Sie die syscollector_collection_sets-Katalogsicht ab.  
+ [@collection_set_uid = ] "*collection_set_uid*"  
+ Die GUID für den Sammlungssatz. *collection_set_uid* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL. Wenn der Wert NULL ist, werden die qualifizierenden Zeilen aus allen Sammlungssätzen entfernt. Um diesen Wert abzurufen, fragen Sie die syscollector_collection_sets-Katalogsicht ab.  
   
- [@duration =] *Dauer*  
- Die maximale Anzahl der Minuten für die Ausführung des Entfernen-Vorgangs. *Dauer* ist **Smallint**, hat den Standardwert NULL. Wenn dieser Wert angegeben ist, muss er 0 (null) oder eine positive ganze Zahl sein. Wenn der Wert NULL ist, wird der Vorgang so lange ausgeführt, bis alle gekennzeichneten Zeilen entfernt sind oder bis der Vorgang manuell beendet wird.  
+ [@duration = ] *Dauer*  
+ Die maximale Anzahl der Minuten für die Ausführung des Entfernen-Vorgangs. *Duration* ist vom Datentyp **smallint**. der Standardwert ist NULL. Wenn dieser Wert angegeben ist, muss er 0 (null) oder eine positive ganze Zahl sein. Wenn der Wert NULL ist, wird der Vorgang so lange ausgeführt, bis alle gekennzeichneten Zeilen entfernt sind oder bis der Vorgang manuell beendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Prozedur wählt Zeilen in der core.snapshots-Sicht aus, die in Abhängigkeit einer Beibehaltungsdauer entfernt werden können. Alle für die Entfernung gekennzeichneten Zeilen werden aus der core.snapshots_internal-Tabelle gelöscht. Das Löschen der vorangehenden Zeilen löst eine Löschweitergabe (cascading delete) in allen Verwaltungs-Data Warehouse-Tabellen aus. Dies wird durch die Verwendung der ON DELETE CASCADE-Klausel erzielt, die für alle Tabellen definiert wird, in denen gesammelte Daten gespeichert werden.  
   
- Jede Momentaufnahme wird mit den zugeordneten Daten in einer expliziten Transaktion gelöscht. Anschließend wird ein Commit ausgeführt. Aus diesem Grund werden, wenn der entfernen-Vorgang manuell beendet oder der angegebene Wert für @duration überschritten wird, nur die nicht gespeicherte Daten bleiben. Diese Daten können bei der nächsten Ausführung des Auftrags entfernt werden.  
+ Jede Momentaufnahme wird mit den zugeordneten Daten in einer expliziten Transaktion gelöscht. Anschließend wird ein Commit ausgeführt. Wenn der Löschvorgang also manuell beendet oder der für angegebene Wert überschritten wird @duration , verbleiben nur die Daten, für die kein Commit ausgeführt wurde. Diese Daten können bei der nächsten Ausführung des Auftrags entfernt werden.  
   
  Die Prozedur muss im Kontext der Verwaltungs-Data Warehouse-Datenbank ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Mdw_admin** (mit EXECUTE-Berechtigung) festen Datenbankrolle.  
+ Erfordert die Mitgliedschaft in der Daten Bank Rolle " **mdw_admin** (mit EXECUTE-Berechtigung)".  
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-running-sppurgedata-with-no-parameters"></a>A. Ausführen von "sp_purge_data" ohne Parameter  
+### <a name="a-running-sp_purge_data-with-no-parameters"></a>A. Ausführen von "sp_purge_data" ohne Parameter  
  Im folgenden Beispiel wird core.sp_purge_data ohne Angabe von Parametern ausgeführt. Daher wird der Standardwert NULL mit dem zugeordneten Verhalten für alle Parameter verwendet.  
   
 ```  
@@ -85,7 +85,7 @@ GO
 ```  
   
 ### <a name="b-specifying-retention-and-duration-values"></a>B. Angeben von Werten für Beibehalten und Dauer  
- Im folgenden Beispiel werden Daten aus dem Verwaltungs-Data Warehouse entfernt, die älter als 7 Tage sind. Darüber hinaus die @duration Parameter wird angegeben, sodass der Vorgang nicht länger als 5 Minuten ausgeführt wird.  
+ Im folgenden Beispiel werden Daten aus dem Verwaltungs-Data Warehouse entfernt, die älter als 7 Tage sind. Außerdem wird der @duration -Parameter angegeben, sodass der Vorgang nicht länger als 5 Minuten ausgeführt wird.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -94,7 +94,7 @@ GO
 ```  
   
 ### <a name="c-specifying-an-instance-name-and-collection-set"></a>C. Angeben eines Instanznamens und eines Sammlungssatzes  
- Im folgenden Beispiel werden Daten aus dem Verwaltungs-Data Warehouse für einen bestimmten Sammlungssatz in der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Da @retention_days nicht angegeben ist, wird der Wert in der Valid_through-Spalte in der core.snapshots-Sicht wird verwendet, um die Zeilen für den Sammlungssatz festzulegen, die entfernt werden.  
+ Im folgenden Beispiel werden Daten aus dem Verwaltungs-Data Warehouse für einen bestimmten Sammlungssatz in der angegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Da @retention_days nicht angegeben ist, wird der Wert in der valid_through-Spalte in der Core. Momentaufnahmen-Sicht verwendet, um die Zeilen für den Sammlungs Satz zu bestimmen, die entfernt werden können.  
   
 ```  
 USE <management_data_warehouse>;  
@@ -107,7 +107,7 @@ EXECUTE core.sp_purge_data @instance_name = @@SERVERNAME, @collection_set_uid = 
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

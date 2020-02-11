@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89db7def474b26ffd25da1495e3efaf0e1af43dd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232693"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>SSIS-Lernprogramm: Bereitstellen von Paketen
@@ -45,7 +45,7 @@ ms.locfileid: "75232693"
 ## <a name="what-you-will-learn"></a>Lernziele  
  Die beste Möglichkeit, sich mit den neuen Tools, Steuerelementen und Features vertraut zu machen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , die in verfügbar sind, besteht darin, Sie zu verwenden. Dieses Lernprogramm führt Sie schrittweise durch die Erstellung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts und das anschließende Hinzufügen der Pakete und weiterer erforderlicher Dateien zum Projekt. Wenn das Projekt vollständig ist, erstellen Sie ein Bereitstellungspaket, kopieren es zum Zielcomputer und installieren dann die Pakete auf dem Zielcomputer.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Dieses Tutorial richtet sich an Benutzer, die bereits mit grundlegenden Dateisystem Vorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]die in verfügbaren neuen Features verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Konzepte besser zu verstehen, die Sie in diesem Tutorial verwenden werden, ist es möglicherweise hilfreich, zunächst die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] folgenden Tutorials [auszuführen: Ausführen des SQL Server-Import/Export-Assistenten](import-export-data/start-the-sql-server-import-and-export-wizard.md) und [SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).  
   
  **Quellcomputer.** Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, müssen die folgenden Komponenten installiert sein:  
@@ -77,10 +77,10 @@ ms.locfileid: "75232693"
  **Geschätzte Zeit zum Bearbeiten dieses Tutorials:** 2 Stunden  
   
 ## <a name="lessons-in-this-tutorial"></a>Lektionen in diesem Lernprogramm  
- [Lektion 1: Vorbereiten der Erstellung des Bereitstellungs Pakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
+ [Lektion 1: Vorbereiten der Erstellung des Bereitstellungspakets](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  In dieser Lektion beginnen Sie mit der Bereitstellung einer ETL-Lösung, indem Sie ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt erstellen und diesem die Pakete und weitere erforderliche Dateien hinzufügen.  
   
- [Lektion 2: Erstellen des Bereitstellungs Pakets](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Lektion 2: Erstellen des Bereitstellungspakets](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  In dieser Lektion erstellen Sie ein Bereitstellungshilfsprogramm und überprüfen, ob das Bereitstellungspaket die notwendigen Dateien enthält.  
   
  [Lektion 3: Installieren von Paketen](../integration-services/lesson-3-install-ssis-package.md)  

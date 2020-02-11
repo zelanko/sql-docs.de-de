@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie Anweisungen, die spaltenebenenberechtigungen für Systemobjekte ändern | Microsoft-Dokumentation
+title: Entfernen Sie Anweisungen, die Berechtigungen auf Spaltenebene für Systemobjekte ändern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b377ac0b9baacdab6461a0e62174538902939bd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093031"
 ---
 # <a name="remove-statements-that-modify-column-level-permissions-on-system-objects"></a>Entfernen von Anweisungen, die Berechtigungen auf Spaltenebene für Systemobjekte ändern
@@ -29,8 +29,8 @@ ms.locfileid: "66093031"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Entfernen Sie Anweisungen aus den Anwendungen, die Berechtigungen auf Spaltenebene für Systemobjekte gewähren, verweigern oder aufheben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

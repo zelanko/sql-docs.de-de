@@ -34,10 +34,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d1e4af8a90a4f83d8200f02910f3e445b49fca91
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73983213"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
@@ -49,7 +49,7 @@ ms.locfileid: "73983213"
   
  Im Gegensatz zu CONTAINS werden bei Abfragen mit CONTAINSTABLE ein Relevanzrangfolgenwert (Relevance Ranking Value, RANK) und ein Volltextschlüssel (KEY) für jede Zeile zurückgeben.  Informationen zu den Formen der Volltextsuche, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -113,7 +113,7 @@ CONTAINSTABLE
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *table*  
+ *glaub*  
  Der Name einer Tabelle, die volltextindiziert wurde. die *Tabelle* kann ein ein-, zwei-, drei-oder vierteilige Datenbankobjekt Name sein. Bei der Abfrage einer Sicht kann nur eine volltextindizierte Basistabelle verwendet werden.  
   
  die *Tabelle* kann keinen Servernamen angeben und kann nicht in Abfragen für Verbindungs Server verwendet werden.  
@@ -122,7 +122,7 @@ CONTAINSTABLE
  Der Name einer oder mehreren Spalten, die für die Volltextsuche indiziert werden. Die Spalten können vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** oder **varbinary(max)** sein.  
   
  *column_list*  
- Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *column_list* muss in Klammern stehen. Sofern nicht *language_term* angegeben ist, muss die Sprache aller Spalten von *column_list* identisch sein.  
+ Gibt an, dass verschiedene, durch Trennzeichen getrennte Spalten angegeben werden können. *column_list* muss in Klammern eingeschlossen werden. Sofern nicht *language_term* angegeben ist, muss die Sprache aller Spalten von *column_list* identisch sein.  
   
  \*  
  Gibt an, dass alle voll Text indizierten Spalten in der *Tabelle* für die Suche nach der angegebenen Such Bedingung verwendet werden sollen. Sofern *language_term* nicht angegeben ist, muss die Sprache aller Spalten in der Tabelle identisch sein.  
@@ -142,12 +142,12 @@ CONTAINSTABLE
  Gibt an, dass nur die *n* höchsten Übereinstimmungen in absteigender Reihenfolge zurückgegeben werden. Gilt nur, wenn ein ganzzahliger Wert ( *n*) angegeben wird. Wenn *top_n_by_rank* mit anderen Parametern kombiniert wird, werden von der Abfrage möglicherweise weniger Zeilen zurückgegeben als die Anzahl von Zeilen, die mit allen Prädikaten übereinstimmen. mit *top_n_by_rank* können Sie die Abfrageleistung erhöhen, indem Sie nur die relevantesten Treffer abrufen.  
   
  <contains_search_condition>  
- Gibt den Suchtext in *column_name* und die Bedingungen für eine Übereinstimmung an. Weitere Informationen zu Suchbedingungen finden Sie [unter &#40;enthält Transact-&#41;SQL](../../t-sql/queries/contains-transact-sql.md).  
+ Gibt den Suchtext in *column_name* und die Bedingungen für eine Übereinstimmung an. Weitere Informationen zu Suchbedingungen finden Sie unter [enthält &#40;Transact-SQL-&#41;](../../t-sql/queries/contains-transact-sql.md).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Volltextprädikate und -funktionen gelten für eine einzelne Tabelle, die im FROM-Prädikat enthalten ist. Um eine Suche in mehreren Tabellen auszuführen, können Sie eine verknüpfte Tabelle in der FROM-Klausel verwenden, um in einem Resultset zu suchen, das aus mindestens zwei Tabellen erstellt wird.  
   
- Die zurückgegebene Tabelle verfügt über eine Spalte mit dem Namen **Key** , die voll Text Schlüsselwerte enthält. Jede voll Text indizierte Tabelle verfügt über eine Spalte, deren Werte garantiert eindeutig sind, und die Werte, die in der **Schlüssel** Spalte zurückgegeben werden, sind die voll Text Schlüsselwerte der Zeilen, die mit den Auswahlkriterien übereinstimmen, die in der Such Bedingung "enthält" angegeben sind. Die **TableFulltextKeyColumn** -Eigenschaft, die von der OBJECTPROPERTYEX-Funktion abgerufen wird, stellt die Identität dieser eindeutigen Schlüssel Spalte bereit. Zum Abrufen der ID der Spalte, die dem voll Text Schlüssel des voll Text Indexes zugeordnet ist, verwenden Sie **sys. fulltext_indexes**. Weitere Informationen finden Sie unter [sys. fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
+ Die zurückgegebene Tabelle verfügt über eine Spalte mit dem Namen **Key** , die voll Text Schlüsselwerte enthält. Jede voll Text indizierte Tabelle verfügt über eine Spalte, deren Werte garantiert eindeutig sind, und die Werte, die in der **Schlüssel** Spalte zurückgegeben werden, sind die voll Text Schlüsselwerte der Zeilen, die mit den Auswahlkriterien übereinstimmen, die in der Such Bedingung "enthält" angegeben sind. Die **TableFulltextKeyColumn** -Eigenschaft, die von der OBJECTPROPERTYEX-Funktion abgerufen wird, stellt die Identität dieser eindeutigen Schlüssel Spalte bereit. Zum Abrufen der ID der Spalte, die dem voll Text Schlüssel des voll Text Indexes zugeordnet ist, verwenden Sie **sys. fulltext_indexes**. Weitere Informationen finden Sie unter [sys. fulltext_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md).  
   
  Geben Sie einen Join mit den CONTAINSTABLE-Zeilen an, um die gewünschten Zeilen der Originaltabelle zu erhalten. CONTAINSTABLE wird meist in folgender Form in der FROM-Klausel einer SELECT-Anweisung verwendet:  
   
@@ -232,7 +232,7 @@ GO
 > [!NOTE]  
 >  Wenn eine Volltextabfrage keine ganze Zahl als maximalen Abstand angibt, entspricht ein Dokument, das nur Treffer enthält, deren Abstand größer als 100 logische Begriffe ist, die NEAR-Anforderungen nicht, und der Rang ist 0.  
   
-### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D. Zurückgeben der obersten 5 Ergebnisse mithilfe von top_n_by_rank  
+### <a name="d-returning-top-5-ranked-results-using-top_n_by_rank"></a>D: Zurückgeben der obersten 5 Ergebnisse mithilfe von top_n_by_rank  
  Im folgenden Beispiel wird die Beschreibung der ersten 5 Produkte zurückgegeben, bei denen die `Description`-Spalte das Wort "aluminium" in der Nähe des Worts "light" oder "lightweight" enthält.  
   
 ```  
@@ -280,12 +280,12 @@ GO
 > [!NOTE]  
 >  Die Sprache *language_term* argumentien, die für die Verwendung von top_n_by_rank nicht erforderlich sind *.*  
   
-## <a name="see-also"></a>Siehe auch  
- [Begrenzen von Suchergebnissen mit Rang](../../relational-databases/search/limit-search-results-with-rank.md)   
- [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
- [Erstellen von Volltextsuchabfragen &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Begrenzen von Suchergebnissen mit rank](../../relational-databases/search/limit-search-results-with-rank.md)   
+ [Abfragen mit voll Text Suche](../../relational-databases/search/query-with-full-text-search.md)   
+ [Erstellen von voll Text Such Abfragen &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/537fa556-390e-4c88-9b8e-679848d94abc)   
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
- [Abfragen mit Volltextsuche](../../relational-databases/search/query-with-full-text-search.md)   
+ [Abfragen mit voll Text Suche](../../relational-databases/search/query-with-full-text-search.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   

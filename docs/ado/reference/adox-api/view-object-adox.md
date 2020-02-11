@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Objekt (ADOX) | Microsoft-Dokumentation
+title: View-Objekt (ADOX) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,33 +16,33 @@ ms.assetid: 653421ce-7b94-43d0-9bc6-4900f8f2af45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6bc26e8d59c29bd7b1b0fbdd0a3a4fdb39f8fee1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964845"
 ---
 # <a name="view-object-adox"></a>View-Objekt (ADOX)
-Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar. Bei der Verwendung in Verbindung mit dem ADO [Befehl](../../../ado/reference/ado-api/command-object-ado.md) -Objekt, das **Ansicht** Objekt kann zum Hinzufügen, löschen oder Ändern von Sichten verwendet werden.  
+Stellt einen gefilterten Satz von Datensätzen oder eine virtuelle Tabelle dar. Bei Verwendung in Verbindung mit dem ADO- [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt kann das **View** -Objekt zum Hinzufügen, löschen oder Ändern von Sichten verwendet werden.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Sicht ist eine virtuelle Tabelle, die aus anderen Datenbanktabellen oder-Ansichten erstellt wurde. Die **Ansicht** Objekt können Sie eine Ansicht erstellen, ohne zu wissen, oder verwenden Sie "CREATE VIEW"-Syntax des Anbieters.  
+## <a name="remarks"></a>Bemerkungen  
+ Eine Sicht ist eine virtuelle Tabelle, die aus anderen Datenbanktabellen oder Sichten erstellt wurde. Mit dem **View** -Objekt können Sie eine Ansicht erstellen, ohne die "Create View"-Syntax des Anbieters kennen oder verwenden zu müssen.  
   
- Mit den Eigenschaften einer **Ansicht** Objekt ist, können Sie:  
+ Mit den Eigenschaften eines **Ansichts** Objekts können Sie folgende Aktionen ausführen:  
   
--   Wählen Sie die Ansicht mit den [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
+-   Identifizieren Sie die Sicht mit der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft.  
   
--   Geben Sie den ADO **Befehl** -Objekt, das verwendet werden kann, hinzufügen, löschen oder Ändern von Sichten mit der [Befehl](../../../ado/reference/adox-api/command-property-adox.md) Eigenschaft.  
+-   Geben Sie das ADO- **Befehls** Objekt an, das verwendet werden kann, um Sichten mit der [Command](../../../ado/reference/adox-api/command-property-adox.md) -Eigenschaft hinzuzufügen, zu löschen oder zu ändern.  
   
--   Zurückgeben von Datumsinformationen der [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) Eigenschaften.  
+-   Gibt Datumsinformationen mit den Eigenschaften [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) und [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) zurück.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [View-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Ansichten und Felder Auflistungen – Beispiel (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Ansichten Append-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views Collection, CommandText-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views Delete-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Sichten und Fields-Auflistungen (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
+ [Beispiele für die Append-Methode (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
+ [Views-Auflistung, CommandText-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
+ [Sichten Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
+ [Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

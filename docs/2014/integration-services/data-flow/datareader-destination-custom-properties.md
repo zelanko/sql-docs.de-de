@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 948ebbc696048915662caaa24b791e6258c459be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827608"
 ---
 # <a name="datareader-destination-custom-properties"></a>Benutzerdefinierte Eigenschaften des DataReader-Ziels
@@ -22,9 +22,9 @@ ms.locfileid: "62827608"
   
  Die folgende Tabelle beschreibt die benutzerdefinierten Eigenschaften des DataReader-Ziels. Alle Eigenschaften außer `DataReader` weisen Lese-/Schreibzugriff auf.  
   
-|Eigenschaftenname|Datentyp|Beschreibung|  
+|Eigenschaftenname|Datentyp|BESCHREIBUNG|  
 |-------------------|---------------|-----------------|  
-|DataReader|Zeichenfolge|Der Klassenname des DataReader-Ziels.|  
+|DataReader|String|Der Klassenname des DataReader-Ziels.|  
 |FailOnTimeout|Boolean|Gibt an, ob ein Fehler ausgegeben wird, wenn ein `ReadTimeout` auftritt. Der Standardwert dieser Eigenschaft ist **False**.|  
 |ReadTimeout|Integer|Die Anzahl von Millisekunden, bevor ein Timeout auftritt. Der Standardwert dieser Eigenschaft beträgt 30000 (30 Sekunden).|  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62827608"
   
  Weitere Informationen finden Sie unter [DataReader Destination](datareader-destination.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Common Properties](../common-properties.md)  
   
   

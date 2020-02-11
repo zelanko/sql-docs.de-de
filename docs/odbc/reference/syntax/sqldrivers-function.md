@@ -20,18 +20,18 @@ ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f54be3d11f4870533513f464c1afdae13e04f367
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104661"
 ---
 # <a name="sqldrivers-function"></a>SQLDrivers-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.0-Standards-Compliance: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 2,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLDrivers** enthält Beschreibungen der Treiber und Treiber-Attribut-Schlüsselwörter. Diese Funktion ist nur vom Treiber-Manager implementiert werden.  
+ **SQLDrivers** listet Treiber Beschreibungen und Treiber Attribut Schlüsselwörter auf. Diese Funktion wird nur vom Treiber-Manager implementiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,78 +49,78 @@ SQLRETURN SQLDrivers(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *EnvironmentHandle*  
- [Eingabe] Umgebungshandles.  
+ *Environment-THandle*  
+ Der Umgebungs Handle.  
   
- *Richtung*  
- [Eingabe] Bestimmt, ob der Treiber-Manager die nächste treiberbeschreibung in der Liste (SQL_FETCH_NEXT ruft) gibt an, ob die Suche am Anfang der Liste (SQL_FETCH_FIRST) beginnt.  
+ *Orientierung*  
+ Der Bestimmt, ob der Treiber-Manager die nächste Treiber Beschreibung in der Liste (SQL_FETCH_NEXT) abruft oder ob die Suche am Anfang der Liste beginnt (SQL_FETCH_FIRST).  
   
- *DriverDescription*  
- [Ausgabe] Zeiger auf einen Puffer, in die die treiberbeschreibung zurückgegeben werden sollen.  
+ *Driverdescription*  
+ Ausgeben Zeiger auf einen Puffer, in den die Treiber Beschreibung zurückgegeben werden soll.  
   
- Wenn *DriverDescription* NULL ist, *DescriptionLengthPtr* gibt immer noch die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) zur zurück in die Puffer verweist *DriverDescription*.  
+ Wenn *driverdescription* auf NULL festgelegt ist, gibt *descriptionlängen PTR* weiterhin die Gesamtzahl der Zeichen (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den von *driverdescription*verwiesen wird.  
   
  *BufferLength1*  
- [Eingabe] Länge der **DriverDescription* Puffers in Zeichen.  
+ Der Länge des **driverdescription* -Puffers in Zeichen.  
   
- *DescriptionLengthPtr*  
- [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *DriverDescription*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *BufferLength1*, um die treiberbeschreibung in \* *DriverDescription* auf abgeschnitten  *BufferLength1* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ *Deskriptionverlängert*  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (ausgenommen des NULL-Beendigungs Zeichens) zurückgegeben werden \*soll, die in *driverdescription*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength1*ist, wird die Treiber Beschreibung in \* *driverdescription* auf *BufferLength1* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
- *DriverAttributes*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Liste der Treiber-Attribut-Wert-Paaren zurück (siehe "Kommentare").  
+ *Driverattribute*  
+ Ausgeben Ein Zeiger auf einen Puffer, in den die Liste der Wert Paare für Treiber Attribute zurückgegeben werden soll (siehe "comments").  
   
- Wenn *DriverAttributes* NULL ist, *AttributesLengthPtr* gibt die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer zurückgegeben verweist *DriverAttributes*.  
+ Wenn *driverattribute* gleich NULL ist, gibt *attributeslängen PTR* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *driverattribute*zeigt.  
   
  *BufferLength2*  
- [Eingabe] Länge der \* *DriverAttributes* Puffers in Zeichen. Wenn die  *\*DriverDescription* Wert ist eine Unicodezeichenfolge (beim Aufrufen von **SQLDriversW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
+ Der Länge des \* *driverattribute* -Puffers in Zeichen. Wenn der * \*driverdescription* -Wert eine Unicode-Zeichenfolge ist (beim Aufrufen von **sqldriversw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
- *AttributesLengthPtr*  
- [Ausgabe] Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierung Byte) zurückgegeben. verfügbar für die zurückzugebenden in \* *DriverAttributes*. Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *BufferLength2*, die Liste der Attribut-Wert-Paare im \* *DriverAttributes* auf abgeschnitten  *BufferLength2* abzüglich der Länge des Zeichens Null-Terminierung vorliegt.  
+ *Attributesverlänptr*  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Bytes (mit Ausnahme des NULL-Beendigungs Bytes) zurückgegeben \*werden soll, die in *driverattribute*zurückgegeben werden können. Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder *gleich BufferLength2*ist, wird die Liste der Attribut \*Wert Paare in *driverattribute* auf *BufferLength2* abzüglich der Länge des NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA zurückgibt, wird SQL_ERROR oder SQL_INVALID_HANDLE.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLDrivers** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO, zurück ein zugeordneten SQLSTATE-Wert abgerufen werden kann, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_ENV und *behandeln* von *EnvironmentHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die in der Regel vom **SQLDrivers** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLDrivers** entweder SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_ENV und einem *handle* von *environmenthandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die normalerweise von **SQLDrivers** zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|(DM)-Treiber-Manager-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgendaten, rechts abgeschnitten|(DM) des Puffers \* *DriverDescription* nicht groß genug war, um die vollständige treiberbeschreibung zurückzugeben. Aus diesem Grund wurde die Beschreibung abgeschnitten. Die Länge der treiberbeschreibung vollständige wird zurückgegeben, \* *DescriptionLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) des Puffers \* *DriverAttributes* war nicht groß genug, um die vollständige Liste der Attribut-Wert-Paaren zurück. Aus diesem Grund wurde die Liste abgeschnitten. Die Länge der Liste den ungekürzten von Attribut-Wert-Paaren zurückgegeben **AttributesLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber-Managers (DM) wurde, kann kein Arbeitsspeicher belegt werden, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich ist.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** wurde aufgerufen, die *StatementHandle* und SQL_PARAM_DATA_ zurückgegeben VERFÜGBAR. Diese Funktion war aufgerufen, bevor Daten für alle Stream-Parameter abgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *BufferLength1* war kleiner als 0.<br /><br /> (DM) für Argument angegebene Wert *BufferLength2* war kleiner als 0 oder gleich 1.|  
-|HY103|Ungültiger Abrufcode|(DM) der Wert für das Argument angegebene *Richtung* war nicht gleich SQL_FETCH_FIRST oder SQL_FETCH_NEXT.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum angehaltenen Zustand, [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|01000|Allgemeine Warnung|(DM) Treiber-Manager-spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|(DM) der Puffer \*" *driverdescription* " war nicht groß genug, um die komplette Treiber Beschreibung zurückzugeben. Daher wurde die Beschreibung abgeschnitten. Die Länge der Beschreibung des kompletten Treibers wird in \* *descriptionlängen PTR*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)<br /><br /> (DM) der Puffer \*" *driverattribute* " war nicht groß genug, um die gesamte Liste der Attribut Wert Paare zurückzugeben. Daher wurde die Liste abgeschnitten. Die Länge der nicht abgeschnittene Liste von Attribut Wert Paaren wird in **attributeslängen PTR*zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|(DM) der Treiber-Manager konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY010|Funktions Sequenz Fehler|(DM) **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** wurde für das *StatementHandle* aufgerufen und SQL_PARAM_DATA_AVAILABLE zurückgegeben. Diese Funktion wurde aufgerufen, bevor Daten für alle gestreuten Parameter abgerufen wurden.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der für das Argument *BufferLength1* angegebene Wert war kleiner als 0 (null).<br /><br /> (DM) der für das Argument *BufferLength2* angegebene Wert war kleiner als 0 (null) oder gleich 1.|  
+|HY103|Ungültiger Abruf Code|(DM) der für die Argument *Richtung* angegebene Wert war nicht gleich SQL_FETCH_FIRST oder SQL_FETCH_NEXT.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLDrivers** gibt zurück, um die treiberbeschreibung in die \* *DriverDescription* Puffer. Es gibt zusätzliche Informationen über den Treiber in der \* *DriverAttributes* Puffer als eine Liste von Schlüsselwort-Wert-Paaren. Alle Schlüsselwörter aufgeführt für Treiber für alle Treiber, mit Ausnahme von zurückgegeben werden in den Systeminformationen **CreateDSN**, die verwendet, um die Erstellung von Datenquellen aufzufordern, und aus diesem Grund ist optional. Jedes Paar wird mit null Byte beendet, und die vollständige Liste mit null Byte beendet ist (d. h. zwei null-Bytes markieren Sie am Ende der Liste). Beispielsweise gibt möglicherweise einen dateibasierten Treibers mithilfe C++-Syntax die folgende Liste der Attribute zurück ("\0" steht für ein Null-Zeichen):  
+ **SQLDrivers** gibt die Treiber Beschreibung im \* *driverdescription* -Puffer zurück. Sie gibt zusätzliche Informationen über den Treiber im \* *driverattribute* -Puffer als Liste von Schlüsselwort-Wert-Paaren zurück. Alle in den Systeminformationen für Treiber aufgeführten Schlüsselwörter werden für alle Treiber zurückgegeben, mit Ausnahme von " **upatedsn**", die zum Anfordern der Erstellung von Datenquellen verwendet wird und daher optional ist. Jedes Paar wird mit einem NULL-Byte beendet, und die gesamte Liste wird mit einem NULL-Byte beendet (d. h., zwei NULL-Bytes markieren das Ende der Liste). Ein Datei basierter Treiber, der die C-Syntax verwendet, könnte z. b. die folgende Liste von Attributen zurückgeben ("\ 0" steht für ein NULL-Zeichen):  
   
 ```  
 FileUsage=1\0FileExtns=*.dbf\0\0  
 ```  
   
- Wenn \* *DriverAttributes* ist nicht groß genug für die gesamte Liste, wird die befehlszeilenergänzungsliste, **SQLDrivers** SQLSTATE 01004 (Daten wurden abgeschnitten) und die Länge der Liste zurückgegeben (mit Ausnahme der letzte Byte von Null-Terminierung vorliegt) wird zurückgegeben, **AttributesLengthPtr*.  
+ Wenn \*" *driverattribute* " nicht groß genug ist, um die gesamte Liste aufzunehmen, wird die Liste abgeschnitten, **SQLDrivers** gibt SQLSTATE 01004 (abgeschnittene Daten) zurück, und die Länge der Liste (mit Ausnahme des endgültigen NULL-Beendigungs Bytes) wird in **attributeslängen PTR*zurückgegeben.  
   
- Schlüsselwörter der Treiber-Attribut werden aus den Systeminformationen hinzugefügt, wenn der Treiber installiert ist. Weitere Informationen finden Sie unter [Installieren von ODBC-Komponenten](../../../odbc/reference/install/installing-odbc-components.md).  
+ Treiber Attribut Schlüsselwörter werden aus den Systeminformationen hinzugefügt, wenn der Treiber installiert wird. Weitere Informationen finden Sie unter [Installieren von ODBC-Komponenten](../../../odbc/reference/install/installing-odbc-components.md).  
   
- Kann eine Anwendung aufrufen **SQLDrivers** mehrere Male auf, alle Treiber Beschreibungen abgerufen. Der Treiber-Manager ruft diese Informationen aus den Systeminformationen ab. Wenn es keine weitere Treiber Beschreibungen gibt **SQLDrivers** SQL_NO_DATA zurückgibt. Wenn **SQLDrivers** mit SQL_FETCH_NEXT aufgerufen wird, unmittelbar nachdem SQL_NO_DATA zurückgegeben wird, um die erste treiberbeschreibung gibt. Informationen zur Verwendung von zurückgegebenen Informationen in einer Anwendungs **SQLDrivers**, finden Sie unter [Auswählen einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ Eine Anwendung kann **SQLDrivers** mehrmals aufrufen, um alle Treiber Beschreibungen abzurufen. Der Treiber-Manager ruft diese Informationen aus den Systeminformationen ab. Wenn keine Treiber Beschreibungen mehr vorhanden sind, gibt **SQLDrivers** SQL_NO_DATA zurück. Wenn **SQLDrivers** mit SQL_FETCH_NEXT unmittelbar nach dem zurückkehren SQL_NO_DATA aufgerufen wird, wird die erste Treiber Beschreibung zurückgegeben. Informationen dazu, wie eine Anwendung die von **SQLDrivers**zurückgegebenen Informationen verwendet, finden Sie unter [Auswählen einer Datenquelle oder eines Treibers](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
- Wenn SQL_FETCH_NEXT, um übergeben wird **SQLDrivers** beim ersten Aufruf ist, **SQLDrivers** gibt die Namen der ersten Datenquelle zurück.  
+ Wenn SQL_FETCH_NEXT zum ersten Mal an **SQLDrivers** weitergegeben wird, gibt **SQLDrivers** den ersten Datenquellen Namen zurück.  
   
- Da **SQLDrivers** implementiert im Treiber-Manager wird für alle Treiber unabhängig davon, einen bestimmten Treiber Einhaltung von Standards unterstützt.  
+ Da **SQLDrivers** im Treiber-Manager implementiert ist, wird es für alle Treiber unabhängig von der Standards-Konformität eines bestimmten Treibers unterstützt.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Ermitteln und Auflisten von Werten, die für die Verbindung mit einer Datenquelle|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
+|Ermitteln und Auflisten von Werten, die für die Verbindung mit einer Datenquelle erforderlich sind|[SQLBrowseConnect-Funktion](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|  
 |Herstellen einer Verbindung mit einer Datenquelle|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Zurückgeben von Datenquellennamen|[SQLDataSources-Funktion](../../../odbc/reference/syntax/sqldatasources-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle mit einer Zeichenfolge oder eines Dialogfelds Verbindungsdialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Zurückgeben von Datenquellen Namen|[SQLDataSources-Funktion](../../../odbc/reference/syntax/sqldatasources-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

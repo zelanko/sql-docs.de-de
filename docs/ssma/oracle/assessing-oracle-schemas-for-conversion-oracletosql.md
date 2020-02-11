@@ -1,5 +1,5 @@
 ---
-title: Bewerten von Oracle-Schemas für die Konvertierung (OracleToSQL) | Microsoft-Dokumentation
+title: Bewerten von Oracle-Schemas für die Konvertierung (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,75 +13,75 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264555"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Bewerten von Oracle-Schemas für die Konvertierung (OracleToSQL)
-Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie sollten bestimmen, wie viel Zeit und Komplexität die Migration werden wird die Migration dauert. SSMA kann ein Bewertungsbericht erstellen, die den Prozentsatz von Objekten, die erfolgreich konvertiert wird. SSMA können Sie außerdem die spezifischen Probleme anzeigen, die dazu führen, dass bei der Konvertierung auftreten.  
+Vor dem Laden von Objekten und dem Migrieren von Daten zu müssen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Sie bestimmen, wie komplex die Migration ist und wie viel Zeit die Migration dauern wird. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, die erfolgreich konvertiert werden. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursachen.  
   
-## <a name="creating-assessment-reports"></a>Erstellen Berichte zur Bewertung  
-Beim Erstellen dieser Bewertungsbericht konvertiert SSMA der ausgewählten Oracle-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax, und klicken Sie dann die Ergebnisse werden angezeigt.  
+## <a name="creating-assessment-reports"></a>Erstellen von Bewertungsberichten  
+Beim Erstellen dieses Bewertungsberichts konvertiert SSMA die ausgewählten Oracle-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die-Syntax und zeigt dann die Ergebnisse an.  
   
-**So erstellen Sie einen Assessment-Bericht**  
+**So erstellen Sie einen Bewertungsbericht**  
   
-1.  Wählen Sie in Oracle-Metadaten-Explorer die Schemas aus, um zu bewerten.  
+1.  Wählen Sie im Oracle-metadatenexplorer die zu übertragenden Schemas aus.  
   
-2.  Um einzelne Objekte zu unterdrücken, deaktivieren Sie die Kontrollkästchen neben den.  
+2.  Deaktivieren Sie die Kontrollkästchen neben den Kontrollkästchen, um einzelne Objekte auszulassen.  
   
-3.  Mit der rechten Maustaste **Schemas**, und wählen Sie dann **Bericht erstellen**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Schemas**, und wählen Sie dann **Bericht erstellen**aus.  
   
-    Sie können auch einzelne Objekte analysieren, indem Sie mit der rechten Maustaste ein Objekt, und wählen Sie dann **Bericht erstellen**.  
+    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen**auswählen.  
   
-    SSMA-Fortschritt wird in der Statusleiste am unteren Rand des Fensters angezeigt. Wenn im Ausgabebereich angezeigt wird, werden auch Meldungen im Ausgabebereich angezeigt.  
+    SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden im Ausgabebereich auch Meldungen angezeigt.  
   
-    Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle: Fenster "Assessment" wird angezeigt.  
+    Wenn die Bewertung fertiggestellt ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Fenster Migration Assistant für Oracle: Assessment Report angezeigt.  
   
-## <a name="using-assessment-reports"></a>Verwenden von Assessment-Berichten  
-Das Fenster Bewertungsbericht enthält drei Bereiche:  
+## <a name="using-assessment-reports"></a>Verwenden von Bewertungsberichten  
+Das Fenster "Bewertungsbericht" enthält drei Bereiche:  
   
--   Der linke Bereich enthält die Hierarchie der Objekte, die in den Bewertungsbericht enthalten sind. Sie können die Hierarchie durchsuchen und Auswählen von Objekten und Kategorien von Objekten um Konvertierungsstatistiken und den Code anzuzeigen.  
+-   Der linke Bereich enthält die Hierarchie der Objekte, die im Bewertungsbericht enthalten sind. Sie können die Hierarchie durchsuchen und Objekte und Kategorien von Objekten auswählen, um Konvertierungsstatistiken und Code anzuzeigen.  
   
--   Der Inhalt im rechten Bereich abhängig ist, für das Element, das im linken Bereich ausgewählt ist.  
+-   Der Inhalt des rechten Bereichs hängt von dem Element ab, das im linken Bereich ausgewählt ist.  
   
-    Wenn eine Gruppe von Objekten ausgewählt ist, ein Schema, oder wenn eine Tabelle ausgewählt ist, der rechte Bereich enthält eine Konvertierung Statistiken Bereich und eine Objekte vom Bereich "Kategorien". Im Bereich Konvertierungsstatistiken zeigt die Konvertierungsstatistiken für die ausgewählten Objekte. Die Objekte nach Bereich "Kategorien" zeigt die Konvertierungsstatistiken für das Objekt oder die Kategorien von Objekten.  
+    Wenn eine Gruppe von Objekten ausgewählt ist, z. b. ein Schema oder wenn eine Tabelle ausgewählt ist, enthält der Rechte Bereich den Bereich Konvertierungs Statistik und den Bereich Objekte nach Kategorien. Im Bereich Konvertierungs Statistik werden die Konvertierungsstatistiken für die ausgewählten Objekte angezeigt. Der Bereich Objekte nach Kategorien zeigt die Konvertierungsstatistiken für das Objekt oder die Kategorien von Objekten an.  
   
-    Wenn eine Funktion, Paket, Prozedur, Sequenz oder Ansicht ausgewählt ist, enthält im rechte Bereich Statistiken, Quellcode und Code des ereignisdateiziels.  
+    Wenn eine Funktion, ein Paket, eine Prozedur, eine Sequenz oder eine Sicht ausgewählt ist, enthält der Rechte Bereich Statistiken, Quellcode und Zielcode.  
   
-    -   Im obere Bereich zeigt die Gesamtstatistik für das Objekt. Möglicherweise müssen Sie erweitern **Statistiken** zum Anzeigen dieser Informationen.  
+    -   Im oberen Bereich werden die Gesamt Statistiken für das Objekt angezeigt. Möglicherweise müssen Sie die **Statistik** erweitern, um diese Informationen anzuzeigen.  
   
-    -   Der Quellbereich zeigt den Quellcode des Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematisch Quellcode.  
+    -   Der Quellbereich zeigt den Quellcode des-Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematischen Quellcode.  
   
-    -   Der Zielbereich zeigt den konvertierten Code an. Roter Text zeigt die problematische Code und Fehlermeldungen.  
+    -   Der Zielbereich zeigt den konvertierten Code. Roter Text zeigt problematische Code und Fehlermeldungen an.  
   
--   Im unteren Bereich zeigt die Konvertierung Nachrichten, gruppiert nach der Meldungsnummer. Klicken Sie auf **Fehler**, **Warnungen**, oder **Informationen** zeigt Kategorien von Nachrichten, und erweitern dann eine Gruppe von Nachrichten. Klicken Sie auf eine einzelne Nachricht aus, wählen Sie im linken Bereich das Objekt und die Details im rechten Bereich angezeigt.  
+-   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Sie können auf **Fehler**, **Warnungen**oder **Informationen** klicken, um Kategorien von Nachrichten anzuzeigen und dann eine Gruppe von Nachrichten zu erweitern. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie die Details im rechten Bereich an.  
   
-## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analysieren der Probleme bei der Konvertierung mit den Bewertungsbericht  
-Im Bereich Konvertierungsstatistiken zeigt die Konvertierungsstatistiken. Wenn der Prozentsatz für eine beliebige Kategorie weniger als 100 Prozent liegt, sollten Sie ermitteln, warum die Konvertierung nicht erfolgreich war.  
+## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analysieren von Konvertierungs Problemen mithilfe des Bewertungsberichts  
+Im Bereich Konvertierungs Statistik werden die Konvertierungsstatistiken angezeigt. Wenn der Prozentsatz für eine Kategorie weniger als 100 Prozent beträgt, sollten Sie bestimmen, warum die Konvertierung nicht erfolgreich war.  
   
-**Probleme bei der Konvertierung anzeigen**  
+**So zeigen Sie Konvertierungsprobleme an**  
   
-1.  Erstellen Sie den Bewertungsbericht, mithilfe der Anweisungen im vorherigen Verfahren.  
+1.  Erstellen Sie den Bewertungsbericht mithilfe der Anweisungen im vorherigen Verfahren.  
   
-2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehlersymbol aus. Erweitern Elemente aus, bis Sie ein einzelnes Element auswählen, die Fehler bei der Konvertierung fortgesetzt werden.  
+2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehler Symbol. Erweitern Sie Elemente, bis Sie ein einzelnes Element auswählen, für das die Konvertierung fehlgeschlagen ist.  
   
-3.  Klicken Sie am oberen Rand des Bereichs für die Quelle, die auf **nächsten Problem**.  
+3.  Klicken Sie oben im Bereich Quelle auf **nächstes Problem**.  
   
-    Der problematische Code ist hervorgehoben, wie der zugehörige Code im Ziel-Navigationsbereich ist.  
+    Der problematische Code wird hervorgehoben, ebenso wie der zugehörige Code im Ziel Navigationsbereich.  
   
-4.  Überprüfen Sie alle Fehlermeldungen, und klicken Sie dann zu bestimmen Sie, was Sie möchten mit dem Objekt, das die Ursache des Konvertierungsproblems:  
+4.  Überprüfen Sie alle Fehlermeldungen, und legen Sie dann fest, was Sie mit dem Objekt tun möchten, das das Konvertierungs Problem verursacht hat:  
   
-    -   Aktualisieren Sie die Oracle-Syntax in SSMA. Sie können die Syntax für die Prozeduren, Funktionen, Trigger, Paketfunktionen und verpackten Prozeduren aktualisieren. Um die Syntax zu aktualisieren, wählen Sie das Objekt im Oracle-Metadaten-Explorer, klicken Sie auf die **SQL** Registerkarte, und ändern Sie den SQL-Code. Wenn Sie vom Element weg navigieren, werden Sie aufgefordert, um die aktualisierte Syntax zu speichern. Sie können die gemeldeten Fehler für das Objekt anzeigen, auf die **Bericht** Registerkarte.  
+    -   Aktualisieren Sie die Oracle-Syntax in SSMA. Sie können die Syntax für Prozeduren, Funktionen, Trigger, Paketfunktionen und Paket Prozeduren aktualisieren. Um die Syntax zu aktualisieren, wählen Sie das Objekt im Bereich Oracle Metadata Explorer aus, klicken Sie auf die Registerkarte **SQL** , und ändern Sie dann den SQL-Code. Wenn Sie vom Element Weg navigieren, werden Sie aufgefordert, die aktualisierte Syntax zu speichern. Sie können die gemeldeten Fehler für das Objekt auf der Registerkarte **Bericht** anzeigen.  
   
-    -   In Oracle können Sie das Oracle-Objekt zum Entfernen oder Überarbeiten problematischen Code ändern. Um den aktualisierten Code in SSMA laden zu können, müssen Sie die Metadaten zu aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle-Datenbank &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
+    -   In Oracle können Sie das Oracle-Objekt ändern, um problematischen Code zu entfernen oder zu überarbeiten. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle Database &#40;oracleto SQL&#41;](../../ssma/oracle/connecting-to-oracle-database-oracletosql.md).  
   
-    -   Sie können das Objekt von der Migration ausschließen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer und Oracle-Metadaten-Explorer, deaktivieren Sie das Kontrollkästchen neben dem Element vor dem Laden der Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Migrieren von Daten aus Oracle.  
+    -   Sie können das Objekt von der Migration ausschließen. Deaktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie im metadatenexplorer und im Oracle-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Objekte in laden und Daten aus Oracle migrieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Konvertieren von Oracle-Schemas &#40;OracleToSQL&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
+[Die Umstellung von Oracle-Schemas &#40;oracleto SQL-&#41;](../../ssma/oracle/converting-oracle-schemas-oracletosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von Oracle-Datenbanken zu SQL Server &#40;oracleto SQL-&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

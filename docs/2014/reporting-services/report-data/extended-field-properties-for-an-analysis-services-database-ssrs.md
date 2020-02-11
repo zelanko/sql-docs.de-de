@@ -10,35 +10,35 @@ ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b601c08633ffe98d6b6005aa3dc34c773810ba3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892033"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feld Eigenschaftswerte in den Bericht einschließen, indem Sie Ausdrücke schreiben, die diese mithilfe der integrierten- `Fields` Auflistung anhand des Namens angeben.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungs Erweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feld Eigenschaftswerte in den Bericht einschließen, indem Sie Ausdrücke schreiben, die diese mithilfe der integrierten- `Fields` Auflistung anhand des Namens angeben.  
   
  Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen gemeinsam verwendet und bestimmten Feldeigenschaftsnamen zugeordnet. Sie sind über die integrierte `Fields`-Auflistung nach Namen verfügbar. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
   
- Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten (MDX)](https://docs.microsoft.com/analysis-services/creating-and-using-property-values-mdx).  
+ Wenn Sie die Abfrage mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -MDX-Abfrage-Designer im grafischen Modus definieren, wird der MDX-Abfrage automatisch ein vordefinierter Satz von Zelleneigenschaften und Dimensionseigenschaften hinzugefügt. Sie können nur erweiterte Eigenschaften verwenden, die in der MDX-Abfrage im Bericht explizit aufgeführt werden. Je nach Bericht möchten Sie möglicherweise den MDX-Standardbefehlstext so ändern, dass weitere im Cube definierte Dimensions- oder benutzerdefinierte Eigenschaften aufgenommen werden. Weitere Informationen über erweiterte Felder in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquellen, finden Sie unter [Erstellen und Verwenden von Eigenschaftswerten (MDX)](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Arbeiten mit Feldeigenschaften in einem Bericht  
  Zu erweiterten Feldeigenschaften zählen vordefinierte Eigenschaften und datenanbieterspezifische Eigenschaften. Feldeigenschaften werden nicht in der Feldliste im **Berichtsdatenbereich** angezeigt, obwohl sie in der für ein Dataset erstellten Abfrage vorhanden sind. Deshalb können Sie keine Feldeigenschaften in Ihre Berichtsentwurfsoberfläche ziehen. Stattdessen ziehen Sie das Feld in den Bericht und ändern anschließend die `Value`-Eigenschaft des Felds in die gewünschte Eigenschaft. Wenn z.B. die Zelldaten aus einem Cube bereits formatiert sind, können Sie die FormattedValue-Feldeigenschaft mithilfe des folgenden Ausdrucks verwenden: `=Fields!FieldName.FormattedValue`.  
   
  Verwenden Sie die folgende Syntax in einem Ausdruck, um auf eine erweiterte Eigenschaft zu verweisen, die nicht vordefiniert ist:  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Feld! FieldName ("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
  Vordefinierte Feldeigenschaften werden in den meisten Fällen auf Measures, Ebenen oder Dimensionen angewendet. Für eine vordefinierte Feldeigenschaft muss ein entsprechender Wert in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle gespeichert sein. Wenn kein Wert vorhanden ist, oder wenn Sie z. B. eine nur Measure-bezogene Feldeigenschaft auf einer Ebene angeben, gibt die Eigenschaft einen NULL-Wert zurück.  
   
  Sie können jede der folgenden Syntaxangaben verwenden, um aus einem Ausdruck auf eine vordefinierte Eigenschaft zu verweisen:  
   
--   *Fields!FieldName.PropertyName*  
+-   *Feld! FieldName. PropertyName*  
   
--   *Fields!FieldName("PropertyName")*  
+-   *Feld! FieldName ("PropertyName")*  
   
  In der folgenden Tabelle wird eine Liste der zur Verfügung stehenden vordefinierten Feldeigenschaften bereitgestellt.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68892033"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Gibt den Datenwert des Felds an.|  
 |`IsMissing`|`Boolean`|Gibt an, ob das Feld im resultierenden Dataset gefunden wurde.|  
-|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Beispielsweise könnte der `UniqueName` Wert für einen Mitarbeiter *[Employee] lauten. [ Mitarbeiter Abteilung]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]* .|  
+|`UniqueName`|`String`|Gibt den vollqualifizierten Namen einer Ebene zurück. Beispielsweise könnte der `UniqueName` Wert für einen Mitarbeiter *[Employee] lauten. [ Mitarbeiter Abteilung]. [Department]. & [Sales]. & [North American Sales Manager]. & [272]*.|  
 |`BackgroundColor`|`String`|Gibt die Hintergrundfarbe zurück, die in der Datenbank für das Feld definiert ist.|  
 |`Color`|`String`|Gibt die Vordergrundfarbe zurück, die in der Datenbank für das Element definiert ist.|  
 |`FontFamily`|`String`|Gibt den Namen der Schriftart an, die in der Datenbank für das Element definiert ist.|  
@@ -99,7 +99,7 @@ FROM [Adventure Works]
 |All Periods|[Date].[Date].[All Periods]|(null)|(null)|(null)|0|  
 |1-Jul-01|[Date].[Date].&[1]|Sonntag|7/1/2001|[Date].[Date].[All Periods]|1|  
 |2-Jul-01|[Date].[Date].&[2]|Montag|7/2/2001|[Date].[Date].[All Periods]|2|  
-|3-Jul-01|[Date].[Date].&[3]|Dienstag|7/3/2001|[Date].[Date].[All Periods]|3|  
+|3-Jul-01|[Date].[Date].&[3]|Tuesday|7/3/2001|[Date].[Date].[All Periods]|3|  
   
  Im grafischen Modus des MDX-Abfrage-Designers erstellte MDX-Standardabfragen enthalten nur die Dimensionseigenschaften MEMBER_CAPTION und UNIQUENAME. In der Standardeinstellung sind diese Werte stets vom Datentyp `String`.  
   
@@ -119,19 +119,19 @@ CELL PROPERTIES
   
  Die folgende Tabelle enthält die ersten vier Zeilen des Ergebnisses im MDX-Ergebnisbereich.  
   
-|Monat|Anzahl Bestellungen|  
+|Monat|OrderCount|  
 |-------------------|-----------------|  
 |January|2,481|  
 |Februar|2,684|  
 |March|2,749|  
 |April|2,739|  
   
- Obwohl die Eigenschaften Teil der MDX-Select-Anweisung sind, werden sie nicht in den Spalten des Resultsets angezeigt. Die Daten sind jedoch für einen Bericht verfügbar und können mit der Funktion für erweiterte Eigenschaften angezeigt werden. Doppelklicken Sie in einem MDX-Abfrageergebnisbereich in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]auf die Zelle, um die Zelleigenschaftswerte anzuzeigen (sofern diese Werte im Cube festgelegt sind). Wenn Sie auf die erste Zelle "Anzahl Bestellungen" mit dem Wert 1.379 klicken, wird ein Popupfenster mit den folgenden Zelleigenschaften angezeigt:  
+ Obwohl die Eigenschaften Teil der MDX-Select-Anweisung sind, werden sie nicht in den Spalten des Resultsets angezeigt. Die Daten sind jedoch für einen Bericht verfügbar und können mit der Funktion für erweiterte Eigenschaften angezeigt werden. In einem MDX-Abfrageergebnis Bereich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]in können Sie auf die Zelle doppelklicken und die Zellen Eigenschaftswerte anzeigen, wenn Sie im Cube festgelegt sind. Wenn Sie auf die erste Zelle "Anzahl Bestellungen" mit dem Wert 1.379 klicken, wird ein Popupfenster mit den folgenden Zelleigenschaften angezeigt:  
   
-|Eigenschaft|Value|  
+|Eigenschaft|value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
-|Value|2481|  
+|VALUE|2481|  
 |BACK_COLOR|(null)|  
 |FORE_COLOR|(null)|  
 |FORMATTED_VALUE|2,481|  
@@ -148,9 +148,9 @@ CELL PROPERTIES
   
  Mit diesem Ausdruck werden die Werte im Feld entsprechend ihres ursprünglichen Datentyps in der Datenquelle sortiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

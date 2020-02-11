@@ -1,5 +1,5 @@
 ---
-title: ODBC-Funktionen und des Visual FoxPro-ODBC-Treibers | Microsoft-Dokumentation
+title: ODBC-Funktionen und der Visual FoxPro-ODBC-Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,25 +21,25 @@ ms.assetid: 512f9cee-ffad-439b-b612-b49c34c32658
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2610383df0f3dde453fe3ba40b10dea85582b9c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915767"
 ---
 # <a name="odbc-functions-and-the-visual-foxpro-odbc-driver"></a>ODBC-Funktionen und der Visual FoxPro-ODBC-Treiber
-Die Themen in diesem Abschnitt enthalten eine kurze Zusammenfassung der ODBC-API-Funktionen und Visual FoxPro-spezifische Details.  
+Die Themen in diesem Abschnitt bieten eine kurze Zusammenfassung der ODBC-API-Funktionen und aller Visual FoxPro-spezifischen Details.  
   
 > [!NOTE]  
->  Allgemeine Informationen zu ODBC-Funktionen, finden Sie unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md) in "ODBC Programmer's Guide".  
+>  Allgemeine Informationen zu ODBC-Funktionen finden Sie in der [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md) im "ODBC-Programmier Handbuch".  
   
- Die ODBC-API-Funktionen verfügen in drei Hauptkategorien einteilen unterteilt: Level-API-Kernfunktionen, Level 1-API-Funktionen und API-Ebene-2-Funktionen.  
+ Die ODBC-API-Funktionen wurden hier in drei Hauptkategorien unterteilt: API-Funktionen der kernstufe, API-Funktionen auf Ebene 1 und API-Funktionen der Ebene 2.  
   
 > [!NOTE]  
->  Einige der Funktionen verhalten sich unterschiedlich je nachdem, ob die Datenquelle, als eine Verbindung mit einem Verzeichnis definiert ist [kostenlose Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md) (DBF-Dateien) oder einer Visual FoxPro- [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) (DBC-Datei). Bestimmte Vorgänge sind nur für Verbindungen mit der Datenbank unterstützt.  
+>  Einige der Funktionen Verhalten sich unterschiedlich, je nachdem, ob die Datenquelle als Verbindung mit einem Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md) (DBF-Dateien) oder einer Visual FoxPro- [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) (DBC-Datei) definiert ist. Bestimmte Vorgänge werden nur für Datenbankverbindungen unterstützt.  
   
-## <a name="core-level-api-support"></a>Core-Level-API-Unterstützung  
- Die ODBC-Core-Level-API-Funktionen sind in der folgenden Tabelle aufgeführt. Alle diese Funktionen werden von der Visual FoxPro-ODBC-Treiber unterstützt.  
+## <a name="core-level-api-support"></a>API-Unterstützung auf Kernebene  
+ Die API-Funktionen der ODBC-Kernebene sind in der folgenden Tabelle aufgeführt. Alle diese Funktionen werden vom Visual FoxPro-ODBC-Treiber unterstützt.  
   
 |||  
 |-|-|  
@@ -47,16 +47,16 @@ Die Themen in diesem Abschnitt enthalten eine kurze Zusammenfassung der ODBC-API
 |[SQLAllocEnv](../../odbc/microsoft/sqlallocenv-visual-foxpro-odbc-driver.md)|[SQLFetch](../../odbc/microsoft/sqlfetch-visual-foxpro-odbc-driver.md)|  
 |[SQLAllocStmt](../../odbc/microsoft/sqlallocstmt-visual-foxpro-odbc-driver.md)|[SQLFreeConnect](../../odbc/microsoft/sqlfreeconnect-visual-foxpro-odbc-driver.md)|  
 |[SQLBindCol](../../odbc/microsoft/sqlbindcol-visual-foxpro-odbc-driver.md)|[SQLFreeEnv](../../odbc/microsoft/sqlfreeenv-visual-foxpro-odbc-driver.md)|  
-|[SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md)|[SQLFreeStmt](../../odbc/microsoft/sqlfreestmt-visual-foxpro-odbc-driver.md)|  
+|[SQLCancel](../../odbc/microsoft/sqlcancel-visual-foxpro-odbc-driver.md)|['SQLFreeStmt'](../../odbc/microsoft/sqlfreestmt-visual-foxpro-odbc-driver.md)|  
 |[SQLColAttributes](../../odbc/microsoft/sqlcolattributes-visual-foxpro-odbc-driver.md)|[SQLGetCursorName](../../odbc/microsoft/sqlgetcursorname-visual-foxpro-odbc-driver.md)|  
 |[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)|[SQLNumResultCols](../../odbc/microsoft/sqlnumresultcols-visual-foxpro-odbc-driver.md)|  
 |[SQLDescribeCol](../../odbc/microsoft/sqldescribecol-visual-foxpro-odbc-driver.md)|[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)|  
 |[SQLDisconnect](../../odbc/microsoft/sqldisconnect-visual-foxpro-odbc-driver.md)|[SQLRowCount](../../odbc/microsoft/sql-row-count-visual-foxpro-odbc-driver.md)|  
 |[SQLError](../../odbc/microsoft/sqlerror-visual-foxpro-odbc-driver.md)|[SQLSetCursorName](../../odbc/microsoft/sqlsetcursorname-visual-foxpro-odbc-driver.md)|  
-|[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
+|[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)|[SQLtransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-1-api-support"></a>Unterstützung von Ebene-1-API  
- Die ODBC-Ebene-1-API-Funktionen sind in der folgenden Tabelle aufgeführt. Alle diese Funktionen sind vollständig oder teilweise von der Visual FoxPro-ODBC-Treiber unterstützt.  
+## <a name="level-1-api-support"></a>API-Unterstützung der Ebene 1  
+ Die ODBC-API-Funktionen der Ebene 1 sind in der folgenden Tabelle aufgeführt. Alle diese Funktionen werden vom Visual FoxPro-ODBC-Treiber vollständig oder teilweise unterstützt.  
   
 |||  
 |-|-|  
@@ -65,12 +65,12 @@ Die Themen in diesem Abschnitt enthalten eine kurze Zusammenfassung der ODBC-API
 |[SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|[SQLPutData](../../odbc/microsoft/sqlputdata-visual-foxpro-odbc-driver.md)|  
 |[SQLGetConnectOption](../../odbc/microsoft/sqlgetconnectoption-visual-foxpro-odbc-driver.md)|[SQLSetConnectOption](../../odbc/microsoft/sqlsetconnectoption-visual-foxpro-odbc-driver.md)|  
 |[SQLGetData](../../odbc/microsoft/sqlgetdata-visual-foxpro-odbc-driver.md)|[SQLSetStmtOption](../../odbc/microsoft/sqlsetstmtoption-visual-foxpro-odbc-driver.md)|  
-|[SQLGetFunctions](../../odbc/microsoft/sqlgetfunctions-visual-foxpro-odbc-driver.md)|[SQLSpecialColumns](../../odbc/microsoft/sqlspecialcolumns-visual-foxpro-odbc-driver.md)|  
-|[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)|[SQLStatistics](../../odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver.md)|  
+|[SQLGetFunctions](../../odbc/microsoft/sqlgetfunctions-visual-foxpro-odbc-driver.md)|['SQLSpecialColumns'](../../odbc/microsoft/sqlspecialcolumns-visual-foxpro-odbc-driver.md)|  
+|[SQLGetInfo](../../odbc/microsoft/sqlgetinfo-visual-foxpro-odbc-driver.md)|['SQLStatistics'](../../odbc/microsoft/sqlstatistics-visual-foxpro-odbc-driver.md)|  
 |[SQLGetStmtOption](../../odbc/microsoft/sqlgetstmtoption-visual-foxpro-odbc-driver.md)|[SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)|  
   
-## <a name="level-2-api-support"></a>Unterstützung von Ebene-2-API  
- Die folgenden ODBC Level 2-API-Funktionen sind vollständig oder teilweise unterstützt:  
+## <a name="level-2-api-support"></a>API-Unterstützung der Ebene 2  
+ Die folgenden ODBC-API-Funktionen der Ebene 2 werden vollständig oder teilweise unterstützt:  
   
 -   [SQLDataSources](../../odbc/microsoft/sqldatasources-visual-foxpro-odbc-driver.md)  
   
@@ -88,9 +88,9 @@ Die Themen in diesem Abschnitt enthalten eine kurze Zusammenfassung der ODBC-API
   
 -   [SQLSetPos](../../odbc/microsoft/sqlsetpos-visual-foxpro-odbc-driver.md)  
   
--   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (teilweise Unterstützung)  
+-   [SQLSetScrollOptions](../../odbc/microsoft/sqlsetscrolloptions-visual-foxpro-odbc-driver.md) (partielle Unterstützung)  
   
- Die folgenden API-Ebene-2-Funktionen werden nicht unterstützt:  
+ Die folgenden API-Funktionen der Ebene 2 werden nicht unterstützt:  
   
 -   SQLBrowseConnect  
   

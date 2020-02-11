@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: cec604ff1a93213fc6308455cadda90e6efa2d61
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401425"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Geräteüberwachung für Analytics Platform System
@@ -38,7 +38,7 @@ Die Werte und Informationen, die auf der SQL Server PDW Appliance überwacht wer
 Zum Überwachen der Appliance sind mehrere Tools verfügbar.  
   
 Verwaltungskonsole  
-SQL Server PDW verfügt über eine Verwaltungskonsole. Hierbei handelt es sich um ein webbasiertes Tool, das Informationen zu Abfragen, Ladungen, Sicherungen und Wiederherstellungen, sperren, Sitzungen, Warnungen und Gerätestatus anzeigt. Die Verwaltungskonsole wird auf dem Gerät ausgeführt. Benutzer stellen über Internet Explorer eine Verbindung mit der Verwaltungskonsole her. Weitere Informationen finden Sie unter:  
+SQL Server PDW verfügt über eine Verwaltungskonsole. Hierbei handelt es sich um ein webbasiertes Tool, das Informationen zu Abfragen, Ladungen, Sicherungen und Wiederherstellungen, sperren, Sitzungen, Warnungen und Gerätestatus anzeigt. Die Verwaltungskonsole wird auf dem Gerät ausgeführt. Benutzer stellen über Internet Explorer eine Verbindung mit der Verwaltungskonsole her. Weitere Informationen finden Sie unter  
   
 -   [Überwachen Sie die Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   
@@ -63,7 +63,7 @@ Wenn Ihre Überwachungslösung keine direkten Transact\--SQL-Abfragen unterstüt
    
 ## <a name="Tasks"></a>Verwandte Überwachungsaufgaben  
   
-|Überwachungs Task|Beschreibung|  
+|Überwachungs Task|BESCHREIBUNG|  
 |-------------------|---------------|  
 |Überwachen Sie die Appliance mithilfe der Verwaltungskonsole.|[Überwachen Sie die Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)|  
 |Überwachen Sie die Appliance mithilfe von System Sichten.|[Überwachen der Appliance mithilfe von System Sichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)|  

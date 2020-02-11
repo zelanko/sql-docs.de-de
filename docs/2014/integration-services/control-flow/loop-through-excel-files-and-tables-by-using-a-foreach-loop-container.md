@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 979a0e0a1e8a05b676d4de7ccda0c5876943d587
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62830581"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer
@@ -32,7 +32,7 @@ ms.locfileid: "62830581"
   
      Wenn Sie keine Variable für das Argument "Erweiterte Eigenschaften" verwenden, müssen Sie es dem Ausdruck, der die Verbindungszeichenfolge enthält, manuell hinzufügen.  
   
-3.  Fügen Sie der Registerkarte **Ablaufsteuerung** einen Foreach-Schleifencontainer hinzu. Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](foreach-loop-container.md).  
+3.  Fügen Sie der Registerkarte **Ablauf Steuerung** einen Foreach-Schleifen Container hinzu. Weitere Informationen zum Konfigurieren des Foreach-Schleifen Containers finden Sie unter [Konfigurieren eines Foreach-Schleifen Containers](foreach-loop-container.md).  
   
 4.  Wählen Sie auf der Seite **Auflistung** des **Foreach-Schleifen-Editors**den Foreach-Dateienumerator aus, geben Sie den Ordner an, in dem sich die Excel-Arbeitsmappen befinden, und geben Sie den Dateifilter an (normalerweise *.xls).  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62830581"
   
 8.  Wählen Sie den neuen Excel-Verbindungs-Manager aus, klicken Sie im Eigenschaftenfenster auf die Eigenschaft **Ausdrücke** , und klicken Sie anschließend auf die Auslassungspunkte.  
   
-9. In der **Eigenschaftsausdrucks-Editor**, wählen die `ConnectionString` -Eigenschaft, und klicken Sie dann auf die Auslassungspunkte.  
+9. Wählen Sie im **Eigenschafts Ausdrucks**-Editor `ConnectionString` die Eigenschaft aus, und klicken Sie dann auf die Auslassungs Punkte.  
   
 10. Geben Sie im Ausdrucks-Generator den folgenden Ausdruck ein:  
   
@@ -69,20 +69,20 @@ ms.locfileid: "62830581"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>So durchlaufen Sie Excel-Tabellen mithilfe des Enumerators für Foreach-ADO.NET-Schemarowset  
   
-1.  Erstellen Sie einen ADO.NET-Verbindungs-Manager, der den Microsoft Jet OLE DB-Anbieter zum Herstellen einer Verbindung mit einer Excel-Arbeitsmappe verwendet. Stellen Sie auf der Seite Alle des Dialogfelds **Verbindungs-Manager** sicher, dass Sie Excel 8.0 als Wert der Eigenschaft für erweiterte Eigenschaften eingeben. Weitere Informationen finden Sie unter [hinzufügen, löschen oder Freigeben eines Verbindungs-Managers in einem Paket](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Erstellen Sie einen ADO.NET-Verbindungs-Manager, der den Microsoft Jet OLE DB-Anbieter zum Herstellen einer Verbindung mit einer Excel-Arbeitsmappe verwendet. Stellen Sie auf der Seite Alle des Dialogfelds **Verbindungs-Manager** sicher, dass Sie Excel 8.0 als Wert der Eigenschaft für erweiterte Eigenschaften eingeben. Weitere Informationen finden Sie unter [Hinzufügen, Löschen oder Freigeben eines Verbindungs-Managers in einem Paket](../add-delete-or-share-a-connection-manager-in-a-package.md)  
   
 2.  Erstellen Sie eine Zeichenfolgenvariable, die bei jeder Iteration der Schleife den Namen der aktuellen Tabelle empfangen wird.  
   
-3.  Fügen Sie der Registerkarte **Ablaufsteuerung** einen Foreach-Schleifencontainer hinzu. Informationen zum Konfigurieren eines Foreach-Schleifencontainers finden Sie unter [Konfigurieren eines Foreach-Schleifencontainers](foreach-loop-container.md).  
+3.  Fügen Sie der Registerkarte **Ablauf Steuerung** einen Foreach-Schleifen Container hinzu. Weitere Informationen zum Konfigurieren des Foreach-Schleifen Containers finden Sie unter [Konfigurieren eines Foreach-Schleifen Containers](foreach-loop-container.md).  
   
 4.  Wählen Sie auf der Seite **Auflistung** des **Foreach-Schleifen-Editors** den Enumerator für Foreach-ADO.NET-Schemarowset aus.  
   
-5.  Wählen Sie als Wert für **Verbindung**den ADO.NET-Verbindungs-Manager aus, den Sie zuvor erstellt haben.  
+5.  Wählen Sie als Wert für **Verbindung** den ADO.NET-Verbindungs-Manager aus, den Sie zuvor erstellt haben.  
   
-6.  Wählen Sie als Wert für **Schema**die Option Tabellen aus.  
+6.  Wählen Sie als Wert für **Schema** die Option Tabellen aus.  
   
     > [!NOTE]  
-    >  Die Liste der Tabellen in einer Excel-Arbeitsmappe schließt sowohl Arbeitsmappen (diese weisen das Suffix $ auf) als auch benannte Bereiche ein. Wenn Sie die Liste nach nur Arbeitsmappen oder nach nur benannten Bereichen filtern müssen, müssen Sie zu diesem Zweck möglicherweise benutzerdefinierten Code in einem Skripttask schreiben. Weitere Informationen finden Sie unter [arbeiten mit Excel-Dateien mit dem Skripttask](script-task.md).  
+    >  Die Liste der Tabellen in einer Excel-Arbeitsmappe schließt sowohl Arbeitsmappen (diese weisen das Suffix $ auf) als auch benannte Bereiche ein. Wenn Sie die Liste nach nur Arbeitsmappen oder nach nur benannten Bereichen filtern müssen, müssen Sie zu diesem Zweck möglicherweise benutzerdefinierten Code in einem Skripttask schreiben. Weitere Informationen finden Sie unter [Arbeiten mit Excel-Dateien mit dem Skripttask](script-task.md)  
   
 7.  Ordnen Sie auf der Seite **Variablenzuordnung** den Index 2 der zuvor erstellten Zeichenfolgenvariablen zu, die den Namen der aktuellen Tabelle enthält.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "62830581"
   
 9. Erstellen Sie Tasks innerhalb des Foreach-Schleifencontainers, die den Excel-Verbindungs-Manager verwenden, um für alle Excel-Tabellen in der angegebenen Arbeitsmappe die gleichen Vorgänge auszuführen. Wenn Sie einen Skripttask zum Überprüfen der aufgezählten Tabellennamen oder zum Arbeiten mit den Tabellen verwenden, müssen Sie die Zeichenfolgenvariable der ReadOnlyVariables-Eigenschaft des Skripttasks hinzufügen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Daten aus Excel importieren oder Exportieren von Daten in Excel mit SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [Konfigurieren eines Foreach-Schleifencontainers](foreach-loop-container.md)   
- [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](../expressions/add-or-change-a-property-expression.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Importieren von Daten aus Excel oder Exportieren von Daten nach Excel mit SQL Server Integration Services (SSIS)](../load-data-to-from-excel-with-ssis.md) [Konfigurieren eines Foreach-Schleifen Containers](foreach-loop-container.md)   
+ [Hinzufügen oder Ändern eines Eigenschafts Ausdrucks](../expressions/add-or-change-a-property-expression.md)   
  [Excel-Verbindungs-Manager](../connection-manager/excel-connection-manager.md)   
  [Excel-Quelle](../data-flow/excel-source.md)   
  [Excel-Ziel](../data-flow/excel-destination.md)   

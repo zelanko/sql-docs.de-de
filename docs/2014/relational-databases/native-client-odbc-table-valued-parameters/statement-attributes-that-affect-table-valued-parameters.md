@@ -1,5 +1,5 @@
 ---
-title: Anweisungsattribute, die Table-Valued Parameter beeinflussen | Microsoft-Dokumentation
+title: Anweisungs Attribute, die sich auf Tabellenwert Parameter auswirken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,21 +14,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19a757f82c2fa2ff2e78453ddf0fea1fbebda3c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62626215"
 ---
 # <a name="statement-attributes-that-affect-table-valued-parameters"></a>Anweisungsattribute, die sich auf Tabellenwertparameter auswirken
   In der folgenden Tabelle werden die Attribute in einem Beschreibungsfeld beschrieben.  
   
-|Attributname|Typ|Beschreibung|  
+|Attributname|type|BESCHREIBUNG|  
 |--------------------|----------|-----------------|  
 |SQL_SOPT_SS_PARAM_FOCUS|SQLUINTEGER|Weitere Informationen zu SQL_SS_PARAM_FOCUS finden Sie unter [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
 |SQL_SOPT_SS_NAME_SCOPE|SQLUINTEGER|Weitere Informationen zu SQL_SS_NAME_SCOPE finden Sie unter [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellenwertparameter &#40;ODBC&#41;](table-valued-parameters-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellenwert Parameter &#40;ODBC-&#41;](table-valued-parameters-odbc.md)  
   
   

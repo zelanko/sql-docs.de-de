@@ -14,13 +14,13 @@ ms.assetid: 8ae6611b-3069-4155-b014-c0c9da37be39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8079c2f49fe64aa94ce061fc47a324087b92f0d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925433"
 ---
 # <a name="errors-ado"></a>Fehler (ADO)
-Alle Vorgänge im Zusammenhang mit ADO-Objekte kann ein oder mehrere Anbieterfehler generieren. Sobald ein Fehler auftritt, eine oder mehrere **Fehler** Objekte befinden sich der **Fehler** Auflistung von der **Verbindung** Objekt. Weitere Informationen zur Behandlung von Warnungen und Fehler in der ADO-Anwendung finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md).  
+Jeder Vorgang, der ADO-Objekte umfasst, kann einen oder mehrere Anbieter Fehler generieren. Wenn jeder Fehler auftritt, werden mindestens ein **Fehler** Objekt in die **Fehler** Auflistung des **Verbindungs** Objekts eingefügt. Ausführliche Informationen zur Behandlung von Warnungen und Fehlern in Ihrer ADO-Anwendung finden Sie unter [Fehlerbehandlung](../../../ado/guide/data/error-handling.md).  
   
- Anwendungsfehler können durch einen separaten Mechanismus ausgelöst werden. Zum Beispiel in Visual Basic die **Err** Objekt auf Anwendungsebene Fehler enthält.
+ Anwendungsfehler können durch einen separaten Mechanismus ausgelöst werden. Beispielsweise enthält das **Err** -Objekt in Visual Basic Fehler auf Anwendungsebene.

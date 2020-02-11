@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: df9d9e51846e286c67a4773823207524755d15dc
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278217"
 ---
 # <a name="rename-logins-matching-fixed-server-role-names"></a>Umbenennen von Anmeldungen, die mit Namen fester Serverrollen identisch sind
@@ -28,14 +28,14 @@ ms.locfileid: "72278217"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>und Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Die folgenden Namen von festen Serverrollen sind reserviert und können nicht als benutzerdefinierte Anmeldenamen verwendet werden.  
   
 -   **sysadmin**  
   
 -   **serveradmin**  
   
--   **setupadmin**  
+-   **festen setupadmin**  
   
 -   **securityadmin**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "72278217"
   
 -   **diskadmin**  
   
--   **bulkadmin**  
+-   **festen bulkadmin**  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Führen Sie vor dem Upgrade die folgenden Schritte aus:  
@@ -60,10 +60,10 @@ ms.locfileid: "72278217"
   
 2.  Löschen Sie die Anmeldungen.  
   
-3.  Verwenden Sie das Verfahren **sp_addlogin** System, um neue Anmeldungen zu erstellen. Geben Sie die SID an, die in Schritt 1 im **\@sid** -Parameter für jeden entsprechenden Anmelde Namen zurückgegeben wurde.  
+3.  Verwenden Sie das Verfahren **sp_addlogin** System, um neue Anmeldungen zu erstellen. Geben Sie die SID an, die in Schritt 1 im ** \@sid** -Parameter für jeden entsprechenden Anmelde Namen zurückgegeben wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

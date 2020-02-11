@@ -16,14 +16,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62920843"
 ---
 # <a name="deploying-clr-database-objects"></a>Bereitstellen von CLR-Datenbankobjekten
-  Die Verteilung einer fertigen Anwendung oder eines Moduls zur Installation und Ausführung auf anderen Computern wird als Bereitstellung bezeichnet. Bei Verwendung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
+  Die Verteilung einer fertigen Anwendung oder eines Moduls zur Installation und Ausführung auf anderen Computern wird als Bereitstellung bezeichnet. Bei Verwendung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
   
  Sobald die CLR-Methoden auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Das Bereitstellungsskript kann manuell oder mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] generiert werden (siehe das Verfahren weiter unten in diesem Thema).  
   
@@ -35,15 +36,15 @@ ms.locfileid: "62920843"
  Stellen Sie sicher, dass alle Compilerfehler und -warnungen aufgelöst werden. Die Assemblys, die die CLR-Routinen enthalten, können dann mit Visual Studio- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anweisungen in einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Datenbank registriert werden.  
   
 > [!NOTE]  
->  Das TCP/IP-Netzwerkprotokoll muss in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz aktiviert werden, damit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio von einem Remotecomputer aus zum Entwickeln, Debuggen und Bereitstellen verwendet werden kann. Weitere Informationen zum Aktivieren des TCP/IP-Protokolls auf dem Server finden Sie unter [Konfigurieren von Clientprotokollen](../../database-engine/configure-windows/configure-client-protocols.md).  
+>  Das TCP/IP-Netzwerkprotokoll muss in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz aktiviert werden, damit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio von einem Remotecomputer aus zum Entwickeln, Debuggen und Bereitstellen verwendet werden kann. Weitere Informationen zum Aktivieren des TCP/IP-Protokolls auf dem Server finden Sie unter [Konfigurieren von Client Protokollen](../../database-engine/configure-windows/configure-client-protocols.md).  
   
 #### <a name="to-deploy-the-assembly-using-visual-studio"></a>So stellen Sie eine Assembly mit Visual Studio bereit  
   
-1.  Erstellen Sie das Projekt durch Auswahl **erstellen** \<Projektname > aus der **erstellen** Menü.  
+1.  Erstellen Sie das Projekt, indem Sie im Menü **Erstellen** die Option Projektname> **Erstellen** \<auswählen.  
   
 2.  Lösen Sie alle Erstellungsfehler und -warnungen vor dem Bereitstellen der Assembly auf dem Testserver auf.  
   
-3.  Wählen Sie **bereitstellen** aus der **erstellen** Menü. Die Assembly wird dann in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz und Datenbank registriert, die bei der Erstellung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Projekts in Visual Studio angegeben wurden.  
+3.  Wählen **Sie** im Menü **Erstellen** die Option bereitstellen aus. Die Assembly wird dann in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz und Datenbank registriert, die bei der Erstellung des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Projekts in Visual Studio angegeben wurden.  
   
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>So stellen Sie die Assembly mit Transact-SQL bereit  
   
@@ -67,7 +68,7 @@ ms.locfileid: "62920843"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Die Prozedur, die Funktion, das Aggregat, der benutzerdefinierte Typ oder der Trigger müssen dann in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt werden. Wenn die `HelloWorld`-Assembly eine Methode namens `HelloWorld` in der `Procedures`-Klasse enthält, dann kann der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code der Abfrage hinzugefügt werden, um in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Prozedur namens `hello` zu erstellen.  
+1.  Die Prozedur, die Funktion, das Aggregat, der benutzerdefinierte Typ oder der Trigger müssen dann in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt werden. Wenn die `HelloWorld`-Assembly eine Methode namens `HelloWorld` in der `Procedures`-Klasse enthält, dann kann der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code der Abfrage hinzugefügt werden, um in `hello` eine Prozedur namens [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu erstellen.  
   
  `CREATE PROCEDURE hello`  
   
@@ -75,10 +76,10 @@ ms.locfileid: "62920843"
   
  `EXTERNAL NAME HelloWorld.Procedures.HelloWorld`  
   
- Weitere Informationen zum Erstellen der verschiedenen Typen verwalteter Datenbankobjekte in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], finden Sie unter [benutzerdefinierte CLR-Funktionen](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), [benutzerdefinierte CLR-Aggregate](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR Benutzerdefinierte Typen](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [CLR-gespeicherte Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md), und [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md).  
+ Weitere Informationen zum Erstellen der verschiedenen Typen von verwalteten Datenbankobjekten in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie unter [CLR-benutzerdefinierte Funktionen](../clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md), benutzerdefinierte CLR [-Aggregate](../clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md), [CLR-benutzerdefinierte Typen](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md), [gespeicherte CLR-Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md)und [CLR-Trigger](../../database-engine/dev-guide/clr-triggers.md).  
   
 ## <a name="deploying-the-assembly-to-production-servers"></a>Bereitstellen der Assembly auf einem Produktionsserver  
- Sobald die CLR-Datenbankobjekte auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Weitere Informationen zum Debuggen verwalteter Datenbankobjekte finden Sie unter [Debuggen von CLR-Datenbankobjekten](debugging-clr-database-objects.md).  
+ Sobald die CLR-Datenbankobjekte auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Weitere Informationen zum Debuggen von verwalteten Datenbankobjekten finden Sie unter [Debugging von CLR-Datenbankobjekten](debugging-clr-database-objects.md).  
   
  Die Bereitstellung verwalteter Datenbankobjekte ähnelt der Bereitstellung gewöhnlicher Datenbankobjekte (Tabellen, [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Routinen usw.). Die Assemblys, in denen die CLR-Datenbankobjekte enthalten sind, können mit einem Bereitstellungsskript auf anderen Servern bereitgestellt werden. Das Bereitstellungsskript kann mit der Funktion "Skripts generieren" von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] erstellt werden. Das Bereitstellungsskript kann auch manuell erstellt oder mit "Skripts generieren" erzeugt und dann manuell abgeändert werden. Nachdem das Bereitstellungsskript erstellt wurde, kann es zur Bereitstellung der verwalteten Datenbankobjekte auf anderen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ausgeführt werden.  
   
@@ -86,26 +87,26 @@ ms.locfileid: "62920843"
   
 1.  Öffnen Sie [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)], und stellen Sie eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz her, in der die bereitzustellende verwaltete Assembly oder das bereitzustellende Datenbankobjekt registriert ist.  
   
-2.  In der **Objekt-Explorer**, erweitern Sie die  **\<Servername >** und **Datenbanken** Strukturen. Mit der rechten Maustaste in der Datenbank, in dem das verwaltete Datenbankobjekt registriert, wählen ist **Aufgaben**, und wählen Sie dann **Skripts generieren**. Der Skript-Assistent wird geöffnet.  
+2.  Erweitern Sie im **Objekt-Explorer**die ** \<Struktur Servername>** und **Datenbanken** . Klicken Sie mit der rechten Maustaste auf die Datenbank, in der das verwaltete Datenbankobjekt registriert ist, wählen Sie **Tasks**und dann **Skripts generieren**aus. Der Skript-Assistent wird geöffnet.  
   
-3.  Wählen Sie die Datenbank aus dem Listenfeld aus, und klicken Sie auf **Weiter**.  
+3.  Wählen Sie die Datenbank aus dem Listenfeld aus, und klicken Sie auf **weiter**.  
   
-4.  In der **Skriptoptionen auswählen** Bereich, klicken Sie auf **Weiter**, oder ändern Sie die Optionen, und klicken Sie dann auf **Weiter**.  
+4.  Klicken Sie im Bereich **Skript Optionen auswählen** auf **weiter**, oder ändern Sie die Optionen, und klicken Sie dann auf **weiter**.  
   
-5.  In der **Objekttypen auswählen** Bereich, wählen Sie den Typ des Datenbankobjekts bereitgestellt werden. Klicken Sie auf **Weiter**.  
+5.  Wählen Sie im Bereich **Objekttypen auswählen** den Typ des Datenbankobjekts aus, das bereitgestellt werden soll. Klicken Sie auf **Weiter**.  
   
-6.  Für jeden Objekttyp, der im ausgewählten der **Objekttypen auswählen** Bereich eine **auswählen \<Typ >** Bereich angezeigt wird. In diesem Bereich stehen alle Instanzen des betreffenden Datenbankobjekttyps zur Auswahl, die in der angegebenen Datenbank registriert sind. Wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf **Weiter**.  
+6.  Für jeden Objekttyp, der im Bereich **Objekttypen auswählen** ausgewählt ist, wird der Bereich ** \<>Typ auswählen** angezeigt. In diesem Bereich stehen alle Instanzen des betreffenden Datenbankobjekttyps zur Auswahl, die in der angegebenen Datenbank registriert sind. Wählen Sie mindestens ein Objekt aus, und klicken Sie auf **weiter**.  
   
-7.  Die **Ausgabeoptionen** Bereich angezeigt wird, wenn alle gewünschten Datenbankobjekttypen ausgewählt wurden. Wählen Sie **Skript in Datei schreiben** , und geben Sie einen Dateipfad für das Skript. Wählen Sie **Weiter**aus. Überprüfen Sie Ihre Auswahl, und klicken Sie auf **Fertig stellen**. Das Bereitstellungsskript wird im angegebenen Dateipfad gespeichert.  
+7.  Der Bereich **Ausgabeoptionen** wird angezeigt, wenn alle gewünschten Datenbankobjekt Typen ausgewählt wurden. Wählen Sie **Skript in Datei aus,** und geben Sie einen Dateipfad für das Skript an. Wählen Sie **Weiter** aus. Prüfen Sie Ihre Auswahl, und klicken Sie auf **Fertig**stellen. Das Bereitstellungsskript wird im angegebenen Dateipfad gespeichert.  
   
 ## <a name="post-deployment-scripts"></a>Skripts nach der Bereitstellung  
  Sie können ein Skript nach der Bereitstellung ausführen.  
   
- Fügen Sie eine Datei mit dem Namen postdeployscript.sql dem Visual Studio-Projektverzeichnis hinzu, um ein nach der Bereitstellung auszuführendes Skript hinzuzufügen. Z. B. mit der rechten Maustaste des Projekts im **Projektmappen-Explorer** , und wählen Sie **vorhandenes Element hinzufügen**. Fügen Sie die Datei in den Stammordner des Projekts und nicht in den Ordner Testskripts ein.  
+ Fügen Sie eine Datei mit dem Namen postdeployscript.sql dem Visual Studio-Projektverzeichnis hinzu, um ein nach der Bereitstellung auszuführendes Skript hinzuzufügen. Klicken Sie beispielsweise in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und wählen Sie **Vorhandenes Element hinzufügen** Fügen Sie die Datei in den Stammordner des Projekts und nicht in den Ordner Testskripts ein.  
   
  Wenn Sie das Projekt bereitstellen, führt Visual Studio nach der Bereitstellung des Projekts dieses Skript aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](common-language-runtime-clr-integration-programming-concepts.md)  
   
   

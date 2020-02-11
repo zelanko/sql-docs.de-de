@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771436"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Erstellen der Funktion zum Abrufen der Änderungsdaten
@@ -76,7 +76,7 @@ ms.locfileid: "62771436"
 > [!NOTE]  
 >  Weitere Informationen über die Syntax dieser gespeicherten Prozedur und ihre Parameter finden Sie unter [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql).  
   
- Die gespeicherte Funktion generiert immer eine Wrapperfunktion, um alle Änderungen aus allen Aufzeichnungsinstanzen zurückzugeben. Wenn der *@supports_net_changes* -Parameter während der Erstellung der Aufzeichnungsinstanz festgelegt wurde, generiert die gespeicherte Prozedur außerdem eine Wrapperfunktion, die die Nettoänderungen von jeder entsprechenden Aufzeichnungsinstanz zurückgibt.  
+ Die gespeicherte Funktion generiert immer eine Wrapperfunktion, um alle Änderungen aus allen Aufzeichnungsinstanzen zurückzugeben. Wenn der *@supports_net_changes* -Parameter beim Erstellen der Aufzeichnungs Instanz festgelegt wurde, generiert die gespeicherte Prozedur außerdem eine Wrapper Funktion, um die Netto Änderungen von jeder anwendbaren Aufzeichnungs Instanz zurückzugeben.  
   
  Die gespeicherte Prozedur gibt ein Resultset mit zwei Spalten zurück:  
   
@@ -108,7 +108,7 @@ deallocate #hfunctions
 ```  
   
 ### <a name="understanding-and-using-the-functions-created-by-the-stored-procedure"></a>Grundlegendes zu den von der gespeicherten Prozedur erstellten Funktionen und deren Verwendung  
- Um die Zeitachse der aufgezeichneten Änderungsdaten systematisch abzuarbeiten, gehen die generierten Wrapperfunktionen davon aus, dass der *@end_time* -Parameter für ein Intervall der *@start_time* -Parameter für das folgende Intervall ist. Wenn diese Konvention eingehalten wird, kann die generierte Wrapperfunktion folgende Aufgaben ausführen:  
+ Um die Zeitachse der aufgezeichneten Änderungs Daten systematisch zu durchlaufen, gehen die generierten *@end_time* Wrapper Funktionen davon aus, dass der *@start_time* Parameter für ein Intervall der-Parameter für das nachfolgende Intervall ist. Wenn diese Konvention eingehalten wird, kann die generierte Wrapperfunktion folgende Aufgaben ausführen:  
   
 -   Zuordnung der Datums-/Zeitwerte zu den intern verwendeten LSN-Werten  
   
@@ -126,7 +126,7 @@ deallocate #hfunctions
   
 -   Die Werte für Startdatum und -uhrzeit sowie für Enddatum und -uhrzeit für das Intervall. Während die Wrapperfunktionen Datums-/Zeitwerte als Endpunkte für das Abfrageintervall verwenden, verwenden die Change Data Capture-Funktionen zwei LSN-Werte als Endpunkte.  
   
--   Den Zeilenfilter. Für die Wrapperfunktionen und die Change Data Capture-Funktionen ist der *@row_filter_option* -Parameter identisch. Weitere Informationen finden Sie unter [cdc.fn_cdc_get_all_changes_&#60;Aufzeichnungsinstanz&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) und [cdc.fn_cdc_get_net_changes_&#60;Aufzeichnungsinstanz&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
+-   Den Zeilenfilter. Für die Wrapper Funktionen und die Change Data Capture Funktionen ist der *@row_filter_option* -Parameter identisch. Weitere Informationen finden Sie unter [cdc.fn_cdc_get_all_changes_&#60;Aufzeichnungsinstanz&#62;  &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql) und [cdc.fn_cdc_get_net_changes_&#60;Aufzeichnungsinstanz&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
  Das von den Wrapperfunktionen zurückgegebene Resultset enthält folgende Daten:  
   
@@ -134,12 +134,12 @@ deallocate #hfunctions
   
 -   Eine Spalte mit dem Namen __CDC_OPERATION, die ein Feld mit einem oder zwei Zeichen verwendet, um den der Zeile zugeordneten Vorgang zu kennzeichnen. Folgende Werte sind für dieses Feld gültig: „I“ für „insert“ (einfügen), „D“ für delete (löschen), „UO“ für „update old values“ (alte Werte aktualisieren) und „UN“ für „update new values“ (neue Werte aktualisieren).  
   
--   Updateflags, wenn Sie diese anfordern, die als bit-Spalten hinter dem Vorgangscode in der vom *@update_flag_list* -Parameter festgelegten Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
+-   UpdateFlags, wenn Sie diese anfordern, die als Bitspalten nach dem Vorgangs Code und in der im- *@update_flag_list* Parameter angegebenen Reihenfolge angezeigt werden. Diese Spalten werden bezeichnet, indem „_uflag“ an den zugeordneten Spaltennamen angehängt wird.  
   
  Wenn Ihr Paket eine Wrapperfunktion aufruft, die alle Änderungen abfragt, gibt die Wrapperfunktion außerdem die Spalten __CDC_STARTLSN und \__CDC_SEQVAL zurück. Diese beiden Spalten sind die erste bzw. die zweite Spalte des Resultsets. Die Wrapperfunktion sortiert das Resultset außerdem auf der Grundlage dieser beiden Spalten.  
   
 ## <a name="writing-your-own-table-value-function"></a>Schreiben einer eigenen Tabellenwert-Funktion  
- Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auch verwenden, um eine eigene Tabellenwert-Wrapperfunktion zu schreiben, die die Change Data Capture-Abfragefunktion aufruft, und die Tabellenwert-Wrapperfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichern. Weitere Informationen zum Erstellen einer Transact-SQL-Funktion finden Sie unter [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
+ Sie können [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auch verwenden, um eine eigene Tabellenwert-Wrapperfunktion zu schreiben, die die Change Data Capture-Abfragefunktion aufruft, und die Tabellenwert-Wrapperfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]speichern. Weitere Informationen zum Erstellen einer Transact-SQL-Funktion finden Sie unter [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
  Das folgende Beispiel definiert eine Tabellenwertfunktion, mit der für das angegebene Änderungsintervall Änderungen von einer Customer-Tabelle abgerufen werden. Diese Funktion verwendet Change Data Capture-Funktionen, um die `datetime`-Werte den binären Protokollfolgenummer-Werten (Log Sequence Number, LSN) zuzuordnen, die die Änderungstabellen intern verwenden. Diese Funktion behandelt auch mehrere besondere Bedingungen:  
   
@@ -206,19 +206,19 @@ go
 ### <a name="retrieving-additional-metadata-with-the-change-data"></a>Abrufen weiterer Metadaten mit den Änderungsdaten  
  Obwohl die zuvor gezeigte vom Benutzer erstellte Tabellenwert-Funktion nur die **__$operation**-Spalte verwendet, gibt die **cdc.fn_cdc_get_net_changes_<Aufzeichnungsinstanz>** -Funktion für jede Änderungszeile vier Metadatenspalten zurück. Wenn Sie diese Werte in Ihrem Datenfluss verwenden möchten, können Sie diese als zusätzliche Spalten aus der Tabellenwert-Wrapperfunktion zurückgeben.  
   
-|Spaltenname|Datentyp|Description|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|`binary(10)`|LSN, die dem Commit für die Änderung zugeordnet wurde.<br /><br /> Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN. Wenn beispielsweise bei einem Updatevorgang in der Quelltabelle zwei unterschiedliche Zeilen geändert werden, enthält die Änderungstabelle vier Zeilen (zwei mit den alten Werten und zwei mit den neuen Werten), die jeweils denselben **__$start_lsn** -Wert aufweisen.|  
-|**__$seqval**|`binary(10)`|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
-|**__$operation**|`int`|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Kann einen der folgenden Werte annehmen:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
-|**__$update_mask**|`varbinary(128)`|Eine Bitmaske, die auf den Spaltenordnungszahlen der Änderungstabelle basiert, die geänderte Spalten identifiziert. Sie könnten diesen Wert überprüfen, wenn Sie bestimmen müssten, welche Spalten sich geändert haben.|  
-|**\<erfasste Quelltabellenspalten>**|variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten ursprünglich keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
+|**__ $/qval**|`binary(10)`|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
+|**__ $-Vorgang**|`int`|Der Vorgang der Datenbearbeitungssprache (Data Manipulation Language, DML), der der Änderung zugeordnet ist. Dabei kann es sich um eine der folgenden Methoden handeln:<br /><br /> 1 = Löschen<br /><br /> 2 = Einfügen<br /><br /> 3 = Update (Werte vor dem Updatevorgang)<br /><br /> 4 = Update (Werte nach dem Updatevorgang)|  
+|**__ $ update_mask**|`varbinary(128)`|Eine Bitmaske, die auf den Spaltenordnungszahlen der Änderungstabelle basiert, die geänderte Spalten identifiziert. Sie könnten diesen Wert überprüfen, wenn Sie bestimmen müssten, welche Spalten sich geändert haben.|  
+|**\<erfasste Quell Tabellen Spalten>**|Variiert|Bei den von der Funktion zurückgegebenen verbleibenden Spalten handelt es sich um die Spalten aus der Quelltabelle, die beim Erstellen der Aufzeichnungsinstanz als aufgezeichnete Spalten identifiziert wurden. Wenn in der Liste der aufgezeichneten Spalten ursprünglich keine Spalten angegeben wurden, werden alle Spalten in der Quelltabelle zurückgegeben.|  
   
  Weitere Informationen finden Sie unter [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql).  
   
 ## <a name="next-step"></a>Nächster Schritt  
  Nach dem Erstellen der Tabellenwertfunktion, mit der Änderungsdaten abgefragt werden, ist der nächste Schritt der Entwurf des Datenflusses im Paket.  
   
- **Nächstes Thema:** [Abrufen und Verstehen der Änderungsdaten](retrieve-and-understand-the-change-data.md)  
+ **Nächstes Thema:** [Abrufen und verstehen der Änderungs Daten](retrieve-and-understand-the-change-data.md)  
   
   

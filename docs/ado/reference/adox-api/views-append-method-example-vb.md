@@ -1,5 +1,5 @@
 ---
-title: Ansichten Append-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Ansichten Append-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: b5b4c082-ac29-4f49-a8b8-e21b554c9b0d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50b24a21c54fcf23dba0748dfba31a99b5bbb1ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964793"
 ---
 # <a name="views-append-method-example-vb"></a>Append-Methode für Sichten – Beispiel (VB)
-Der folgende Code veranschaulicht, wie eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt und die [Ansichten](../../../ado/reference/adox-api/views-collection-adox.md) Auflistung [Append](../../../ado/reference/adox-api/append-method-adox-views.md) Methode, um eine neue Ansicht in der zugrunde liegenden Datenquelle zu erstellen.  
+Der folgende Code veranschaulicht, wie Sie ein [Command](../../../ado/reference/ado-api/command-object-ado.md) -Objekt und [die](../../../ado/reference/adox-api/views-collection-adox.md) Ansichts Auflistungs-Auflistungs [Methode verwenden](../../../ado/reference/adox-api/append-method-adox-views.md) , um eine neue Sicht in der zugrunde liegenden Datenquelle zu erstellen.  
   
 ```  
 ' BeginCreateViewVB  
@@ -61,9 +61,9 @@ End Sub
 ' EndCreateViewVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
+ [Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

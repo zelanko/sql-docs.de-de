@@ -1,5 +1,5 @@
 ---
-title: Sp_scriptdynamicupdproc (Transact-SQL) | Microsoft-Dokumentation
+title: sp_scriptdynamicupdproc (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68126393"
 ---
-# <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
+# <a name="sp_scriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Generiert die CREATE PROCEDURE-Anweisung, die eine dynamische gespeicherte Updateprozedur erstellt. Die UPDATE-Anweisung in der benutzerdefinierten gespeicherten Prozedur wird dynamisch erstellt. Als Grundlage wird die MCALL-Syntax verwendet, die angibt, welche Spalten geändert werden sollen. Verwenden Sie diese gespeicherte Prozedur, wenn die Anzahl von Indizes für die Abonnementtabelle vergrößert wird und die Anzahl von zu ändernden Spalten klein ist. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,19 +37,19 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @artid = ] artid` Die Artikel-ID. *Artid* ist **Int**, hat keinen Standardwert.  
+`[ @artid = ] artid`Ist die Artikel-ID. *artid* ist vom Datentyp **int**und hat keinen Standardwert.  
   
 ## <a name="result-sets"></a>Resultsets  
- Gibt ein Resultset besteht aus einer **nvarchar(4000)** Spalte. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten gespeicherten Prozedur verwendet wird.  
+ Gibt ein Resultset zurück, das aus einer einzelnen **nvarchar (4000)** -Spalte besteht. Das Resultset enthält die vollständige CREATE PROCEDURE-Anweisung, die zum Erstellen der benutzerdefinierten gespeicherten Prozedur verwendet wird.  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_scriptdynamicupdproc** wird in Transaktionsreplikationen verwendet. Die standardmäßige MCALL-Skripterstellungslogik schließt alle Spalten in der UPDATE-Anweisung ein und verwendet ein Bitmuster, um die geänderten Spalten zu bestimmen. Wenn eine Spalte nicht geändert wurde, wird sie wieder auf den bestehenden Wert zurückgesetzt. Normalerweise ist dies unproblematisch. Wenn die Spalte indiziert ist, entsteht zusätzlicher Verarbeitungsaufwand. Beim dynamischen Vorgehen enthält das Update nur die Spalten, die geändert wurden, sodass eine optimale UPDATE-Zeichenfolge bereitgestellt wird. Zur Laufzeit entsteht jedoch zusätzlicher Verarbeitungsaufwand für das Erstellen der dynamischen UPDATE-Anweisung. Es wird empfohlen, dass Sie das dynamische und statische Vorgehen testen und dann die bessere Lösung auswählen.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_scriptdynamicupdproc** wird bei der Transaktions Replikation verwendet. Die standardmäßige MCALL-Skripterstellungslogik schließt alle Spalten in der UPDATE-Anweisung ein und verwendet ein Bitmuster, um die geänderten Spalten zu bestimmen. Wenn eine Spalte nicht geändert wurde, wird sie wieder auf den bestehenden Wert zurückgesetzt. Normalerweise ist dies unproblematisch. Wenn die Spalte indiziert ist, entsteht zusätzlicher Verarbeitungsaufwand. Beim dynamischen Vorgehen enthält das Update nur die Spalten, die geändert wurden, sodass eine optimale UPDATE-Zeichenfolge bereitgestellt wird. Zur Laufzeit entsteht jedoch zusätzlicher Verarbeitungsaufwand für das Erstellen der dynamischen UPDATE-Anweisung. Es wird empfohlen, dass Sie das dynamische und statische Vorgehen testen und dann die bessere Lösung auswählen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_scriptdynamicupdproc**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_scriptdynamicupdproc**ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird ein Artikel erstellt (mit *Artid* festgelegt **1**) auf die **Autoren** -Tabelle in der **Pubs** -Datenbank und gibt an, dass das UPDATE Anweisung ist, die benutzerdefinierte Prozedur ausgeführt wird:  
+ In diesem Beispiel wird ein Artikel (mit *artid* , der auf **1**festgelegt ist) für die **Autoren** Tabelle in der **Pubs** -Datenbank erstellt und angegeben, dass die Update-Anweisung die auszuführende benutzerdefinierte Prozedur ist:  
   
 ```  
 'MCALL sp_mupd_authors'  
@@ -122,7 +122,7 @@ if @@rowcount = 0
   
  Nach dem Ausführen dieser gespeicherten Prozedur können Sie den resultierenden Skriptcode zum manuellen Erstellen der gespeicherten Prozedur auf den Abonnenten verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

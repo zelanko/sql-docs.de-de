@@ -9,12 +9,12 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
-ms.openlocfilehash: 2fef7b88514357deb6cf0a009d12272cc3cf79a2
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.openlocfilehash: 089b76d7167b8561c93b01837dc2189c833362fd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74401400"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76761904"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Konfigurieren von Windows Server Update Services (WSUS) in Analytics Platform System
 In diesen Anweisungen werden die Schritte zum Verwenden des Konfigurations-Assistenten für Windows Server Update Services (WSUS) zum Konfigurieren von WSUS für Analytics Platform System erläutert. Sie müssen WSUS konfigurieren, bevor Sie Software Updates auf das Gerät anwenden können. WSUS ist bereits auf dem virtuellen VMM-Computer des Geräts installiert.  
@@ -24,7 +24,7 @@ Weitere Informationen zum Konfigurieren von WSUS finden Sie auf der WSUS-Website
 > [!WARNING]  
 > Wenn während dieses Konfigurations Vorgangs Fehler auftreten, wenden Sie sich an den Support, und wenden Sie sich an den Support. Ignorieren Sie keine Fehler, oder fahren Sie fort, wenn Fehler auftreten.  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
 Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:  
   
 -   Stellen Sie die Anmelde Informationen für das Domänen Administrator Konto der Analytics Platform System Appliance dar.  
@@ -138,11 +138,14 @@ Zum Konfigurieren von WSUS müssen Sie folgende Schritte ausführen:
 8.  Wählen Sie Produkte aus.  
   
     > [!NOTE]  
-    > Wenn Sie einen Upstreamserver verwenden, können Sie möglicherweise keine Produkte auswählen. Wenn diese Option nicht verfügbar ist, überspringen Sie diesen Schritt.  
+    > Wenn Sie einen Upstreamserver verwenden, können Sie möglicherweise keine Produkte auswählen. Wenn diese Option nicht verfügbar ist, überspringen Sie diesen Schritt.
+
+    > [!WARNING]  
+    > Schließen Sie alle SQL Server 2016-Updates aus.
   
     Deaktivieren Sie alle ausgewählten Updates.  
   
-    Wählen Sie **Windows Server 2012 R2**und **System Center 2012 R2-Virtual Machine Manager**aus, und klicken Sie dann auf **weiter**.  
+    Wählen Sie **SQL Server 2012**, **SQL Server 2014**, **Windows Server 2012 R2**und **System Center 2012 R2-Virtual Machine Manager**aus, und klicken Sie dann auf **weiter**.  
   
 9. Wählen Sie Klassifizierungen aus.  
   

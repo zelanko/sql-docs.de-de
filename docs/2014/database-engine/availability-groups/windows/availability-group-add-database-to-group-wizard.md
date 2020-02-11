@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie das Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen-Assistenten (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeits Gruppen (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62815725"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen (SQL Server Management Studio)
@@ -36,18 +36,18 @@ ms.locfileid: "62815725"
   
      [Sicherheit](#Security)  
   
--   **Zum Hinzufügen einer Datenbank mit:**  [Fügen Sie Datenbank hinzu, um den Assistenten für Verfügbarkeitsgruppen (SQL Server Management Studio)](#SSMSProcedure)  
+-   So **fügen Sie eine Datenbank hinzu mit:**[Assistent zum Hinzufügen von Datenbanken zu Verfügbarkeits Gruppen (SQL Server Management Studio)](#SSMSProcedure)    
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
- Wenn Sie einer verfügbarkeitsgruppe noch nie eine Datenbank hinzugefügt haben, finden Sie im Abschnitt "Verfügbarkeitsdatenbanken" [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
+ Wenn Sie einer Verfügbarkeits Gruppe noch nie eine Datenbank hinzugefügt haben, lesen Sie den Abschnitt "Verfügbarkeits Datenbanken" unter [Voraussetzungen, Einschränkungen und Empfehlungen für die AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Voraussetzungen, Einschränkungen und Empfehlungen  
+###  <a name="Prerequisites"></a>Voraussetzungen, Einschränkungen und Empfehlungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das aktuelle primäre Replikat gehostet wird.  
   
 -   Wenn eine Datenbank verschlüsselt ist oder sogar einen Datenbankverschlüsselungs-Schlüssel (DEK) enthält, können Sie die Datenbank nicht mithilfe von [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] oder [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] einer Verfügbarkeitsgruppe hinzufügen. Selbst wenn eine verschlüsselte Datenbank entschlüsselt wurde, enthalten ihre Protokollsicherungen möglicherweise verschlüsselte Daten. In diesem Fall ist es unter Umständen nicht möglich, die anfängliche Datensynchronisierung vollständig auf der Datenbank durchzuführen. Grund hierfür ist die Tatsache, dass für den Wiederherstellungsprotokollvorgang eventuell das Zertifikat erforderlich ist, das von den Datenbank-Verschlüsselungsschlüsseln (DEKs) verwendet wurde, und dieses Zertifikat möglicherweise nicht verfügbar ist.  
   
-     **So erstellen Sie eine entschlüsselte Datenbank verfügbar für das zu einer verfügbarkeitsgruppe mithilfe des Assistenten zum Hinzufügen**  
+     **So machen Sie eine entschlüsselte Datenbank verfügbar für das Hinzufügen zu einer Verfügbarkeitsgruppe mithilfe des Assistenten:**  
   
     1.  Erstellen Sie eine Protokollsicherung von der primären Datenbank.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "62815725"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER AVAILABILITY GROUP-Berechtigung für die Verfügbarkeitsgruppe, die CONTROL AVAILABILITY GROUP-Berechtigung, die ALTER ANY AVAILABILITY GROUP-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
-##  <a name="SSMSProcedure"></a> Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen(SQL Server Management Studio)  
- **So verwenden Sie den Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen**  
+##  <a name="SSMSProcedure"></a>Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeits Gruppen (SQL Server Management Studio)  
+ **Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeits Gruppen**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Serverinstanz her, die das primäre Replikat der Verfügbarkeitsgruppe hostet, und erweitern Sie die Serverstruktur.  
   
@@ -83,11 +83,11 @@ ms.locfileid: "62815725"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Verfügbarkeitsgruppe, der Sie eine Datenbank hinzufügen, und wählen Sie den Befehl **Datenbank hinzufügen** aus. Dieser Befehl startet den Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen.  
   
-4.  Wählen Sie auf der Seite **Datenbanken auswählen** mindestens eine Datenbank aus. Weitere Informationen finden Sie unter [Seite "Datenbanken" wählen &#40;-Assistent – hinzufügen Datenbankassistenten für neue Verfügbarkeitsgruppen&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
+4.  Wählen Sie auf der Seite **Datenbanken auswählen** mindestens eine Datenbank aus. Weitere Informationen finden Sie unter [Seite "Datenbanken auswählen" &#40;Assistent für neue Verfügbarkeits Gruppen-Assistent zum Hinzufügen einer Datenbank&#41;](select-databases-page-new-availability-group-wizard-and-add-database-wizard.md).  
   
-5.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen aus:  
+5.  Wählen Sie auf der Seite **Anfängliche Datensynchronisierung auswählen** aus, wie die neuen sekundären Datenbanken erstellt und mit der Verfügbarkeitsgruppe verknüpft werden sollen. Wählen Sie eine der folgenden Optionen:  
   
-    -   **Full**  
+    -   **Vollständig**  
   
          Aktivieren Sie diese Option, wenn Ihre Umgebung die Anforderungen zum automatischen Starten der anfänglichen Datensynchronisierung erfüllt. Weitere Informationen finden Sie weiter oben in diesem Thema unter [Voraussetzungen, Einschränkungen und Empfehlungen](#Prerequisites).  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62815725"
         > [!IMPORTANT]  
         >  Informationen zu den erforderlichen Dateisystemberechtigungen finden Sie weiter oben in diesem Thema unter [Erforderliche Komponenten](#Prerequisites).  
   
-    -   **Nur verknüpfen**  
+    -   **Nur beitreten**  
   
          Wenn Sie sekundäre Datenbanken auf den Serverinstanzen, die die sekundären Replikate hosten, manuell vorbereitet haben, können Sie diese Option aktivieren. Der Assistent verknüpft die vorhandenen sekundären Datenbanken mit der Verfügbarkeitsgruppe.  
   
@@ -106,25 +106,25 @@ ms.locfileid: "62815725"
   
          Aktivieren Sie diese Option, wenn Sie eigene Datenbank- und Protokollsicherungen der primären Datenbanken verwenden möchten. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).  
   
-     Weitere Informationen finden Sie unter [anfängliche Datensynchonisierung auswählen &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
+     Weitere Informationen finden Sie unter [Seite "anfängliche Datensynchronisierung auswählen" &#40;AlwaysOn-Verfügbarkeits Gruppen-Assistenten&#41;](select-initial-data-synchronization-page-always-on-availability-group-wizards.md).  
   
 6.  Klicken Sie auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Alle verbinden **, wenn die Instanzen von**, die die Verfügbarkeitsreplikate für diese Verfügbarkeitsgruppe hosten, als ein Dienst unter demselben Benutzerkonto ausgeführt werden. Wenn eine der Serverinstanzen als Dienst unter verschiedenen Konten ausgeführt wird, klicken Sie rechts neben jedem Serverinstanznamen jeweils auf die Schaltfläche **Verbinden** .  
   
-     Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit vorhandenen sekundären Replikaten Seite &#40;Assistent zum Hinzufügen von Replikaten und Assistenten zum Hinzufügen von Datenbanken&#41;](connect-to-existing-secondary-replicas-page.md).  
+     Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit vorhandenen sekundären Replikaten, &#40;&#41;Assistenten zum Hinzufügen von Replikaten und hinzufügen ](connect-to-existing-secondary-replicas-page.md)von  
   
 7.  Auf der Seite **Überprüfung** wird überprüft, ob die in diesem Assistenten angegebenen Werte die Anforderungen des Assistenten für neue Verfügbarkeitsgruppen erfüllen. Um eine Änderung vorzunehmen, können Sie auf **Zurück** klicken, um zu einer vorherigen Assistentenseite zurückzukehren und Werte zu ändern. Klicken Sie anschließend auf **Weiter** , um auf die Seite **Überprüfung** zurückzukehren, und klicken Sie auf **Überprüfung erneut ausführen**.  
   
-     Weitere Informationen finden Sie unter [Seite "Überprüfung" &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](validation-page-always-on-availability-group-wizards.md).  
+     Weitere Informationen finden Sie auf der [Seite Überprüfung &#40;AlwaysOn-Verfügbarkeits Gruppen-Assistenten&#41;](validation-page-always-on-availability-group-wizards.md).  
   
 8.  Überprüfen Sie auf der Seite **Zusammenfassung** die Optionen für die neue Verfügbarkeitsgruppe. Um eine Änderung vorzunehmen, klicken Sie auf **Zurück** , um zu der relevanten Seite zurückzukehren. Nachdem Sie die Änderung vorgenommen haben, klicken Sie auf **Weiter** , um zur Seite **Zusammenfassung** zurückzukehren.  
   
-     Weitere Informationen finden Sie unter [Seite "Zusammenfassung" &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](summary-page-always-on-availability-group-wizards.md).  
+     Weitere Informationen finden Sie unter [Zusammenfassungs Seite &#40;AlwaysOn-Verfügbarkeits Gruppen-Assistenten&#41;](summary-page-always-on-availability-group-wizards.md).  
   
      Wenn Sie mit der Auswahl zufrieden sind, klicken Sie optional auf "Skript", um ein Skript der Schritte zu erstellen, die der Assistent ausführt. Klicken Sie dann zum Erstellen und Konfigurieren der neuen Verfügbarkeitsgruppe auf **Fertig stellen**.  
   
 9. Auf der Seite **Status** wird der Status der Schritte zum Erstellen der Verfügbarkeitsgruppe angezeigt (Konfigurieren von Endpunkten, Erstellen der Verfügbarkeitsgruppe und Hinzufügen des sekundären Replikats zu der Gruppe).  
   
-     Weitere Informationen finden Sie unter [Statusseite &#40;AlwaysOn-Verfügbarkeitsgruppen-Assistenten&#41;](progress-page-always-on-availability-group-wizards.md).  
+     Weitere Informationen finden Sie unter [Fortschritts Seite &#40;AlwaysOn-Verfügbarkeits Gruppen-Assistenten&#41;](progress-page-always-on-availability-group-wizards.md).  
   
 10. Wenn diese Schritte abgeschlossen sind, wird auf der Seite **Ergebnisse** das Ergebnis der einzelnen Schritte angezeigt. Wenn all diese Schritte erfolgreich sind, ist die neue Verfügbarkeitsgruppe vollständig konfiguriert. Wenn einer der Schritte zu einem Fehler führt, müssen Sie die Konfiguration möglicherweise manuell abschließen. Klicken Sie in der Spalte **Ergebnis** auf den zugehörigen Fehlerlink, um weitere Informationen zur Ursache eines bestimmten Fehlers zu erhalten.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "62815725"
   
 -   [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe (SQL Server)](availability-group-add-a-database.md)   
- [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQLServer&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
+ [Hinzufügen einer Datenbank zu einer Verfügbarkeits Gruppe &#40;SQL Server&#41;](availability-group-add-a-database.md)   
+ [Starten Sie die Daten Verschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md)   
  [Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](availability-group-add-a-database.md)  
   
   

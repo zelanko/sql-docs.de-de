@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ddcdec0f624c1d6f70c57e593eaf9da66cbe0419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63065528"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Prüfpunktvorgang für speicheroptimierte Tabellen
@@ -28,9 +28,9 @@ ms.locfileid: "63065528"
   
  Für datenträgerbasierte Tabellen wird ein automatischer Prüfpunkt basierend auf der Konfigurationsoption Wiederherstellungsintervall erstellt. (Weitere Informationen finden Sie unter [Ändern der Zielwiederherstellungszeit einer Datenbank &#40;SQL Server&#41;](../logs/change-the-target-recovery-time-of-a-database-sql-server.md).)  
   
- Für Speicheroptimierte Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Transaktionsprotokolldatei seit dem letzten Prüfpunkt größer als 512 MB ist. 512 MB enthält Transaktionsprotokoll-Datensätze für datenträgerbasierte und Speicheroptimierte Tabellen.  
+ Bei Speicher optimierten Tabellen wird ein automatischer Prüfpunkt erstellt, wenn die Transaktionsprotokoll Datei seit dem letzten Prüfpunkt größer als 512 MB ist. 512 MB enthält Transaktionsprotokoll-Datensätze sowohl für Datenträger basierte als auch für Speicher optimierte Tabellen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten von Speicher für speicheroptimierte Objekte](creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

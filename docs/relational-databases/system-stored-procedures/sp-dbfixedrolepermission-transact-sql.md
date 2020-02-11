@@ -1,5 +1,5 @@
 ---
-title: Sp_dbfixedrolepermission (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dbfixedrolepermission (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108163"
 ---
-# <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
+# <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Zeigt die Berechtigungen einer festen Datenbankrolle an. **Sp_dbfixedrolepermission** gibt korrekte Informationen in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungshierarchie, die in implementiert wurden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen finden Sie unter[Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Zeigt die Berechtigungen einer festen Datenbankrolle an. **sp_dbfixedrolepermission** gibt korrekte Informationen in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]zurück. Die Ausgabe spiegelt nicht die Änderungen an der Berechtigungs Hierarchie wider, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]in implementiert wurden. Weitere Informationen finden Sie unter[Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,22 +42,22 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'` Der Name einer gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festen Datenbankrolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Rolle* nicht angegeben ist, werden die Berechtigungen für alle festen Datenbankrollen angezeigt.  
+`[ @rolename = ] 'role'`Der Name einer gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fixed-Daten Bank Rolle. *Role* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Name der festen Datenbankrolle|  
-|**Berechtigung**|**nvarchar(70)**|Zugeordneten Berechtigungen **DbFixedRole**|  
+|**Berechtigung**|**nvarchar (70)**|Mit **DbFixedRole** verknüpfte Berechtigungen|  
   
-## <a name="remarks"></a>Hinweise  
- Führen Sie zum Anzeigen einer Liste der festen Datenbankrollen **Sp_helpdbfixedrole**. In der folgenden Tabelle werden die festen Datenbankrollen angezeigt.  
+## <a name="remarks"></a>Bemerkungen  
+ Führen Sie **sp_helpdbfixedrole**aus, um eine Liste der fixierten Daten bankrollen anzuzeigen. In der folgenden Tabelle werden die festen Datenbankrollen angezeigt.  
   
-|Feste Datenbankrolle|Beschreibung|  
+|Fixed-Daten Bank Rolle|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |**db_owner**|Datenbankbesitzer|  
 |**db_accessadmin**|Administratoren für den Datenbankzugriff|  
@@ -69,7 +69,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |**db_denydatareader**|Datenbank-Verweigerungsdatenleser|  
 |**db_denydatawriter**|Datenbank-Verweigerungsdatenschreiber|  
   
- Mitglieder der **Db_owner** festen Datenbankrolle haben die Berechtigungen aller anderen festen Datenbankrollen. Führen Sie zum Anzeigen der Berechtigungen für den festen Serverrollen **Sp_srvrolepermission**.  
+ Mitglieder der Daten Bank Rolle **db_owner** verfügen über die Berechtigungen aller anderen Daten bankrollen. Führen Sie **sp_srvrolepermission**aus, um die Berechtigungen für Server Rollen anzuzeigen.  
   
  Das Resultset enthält die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, die ausgeführt werden können, sowie andere spezielle Aktivitäten, die von Mitgliedern der Datenbankrolle ausgeführt werden können.  
   
@@ -84,12 +84,12 @@ EXEC sp_dbfixedrolepermission;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
- [sp_droprolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
- [Sp_helpdbfixedrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
- [sp_srvrolepermission &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
+ [sp_droprolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
+ [sp_helpdbfixedrole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
+ [sp_srvrolepermission &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

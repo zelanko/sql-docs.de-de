@@ -20,25 +20,25 @@ ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 190d60fc5724286118a2209a60f8bee1d0835a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965027"
 ---
 # <a name="type-property-column-adox"></a>Type-Eigenschaft (Spalte) (ADOX)
 Gibt den Datentyp einer Spalte an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** -Wert, der möglich die [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Konstanten. Der Standardwert ist **AdVarWChar**.  
+ Legt einen **Long** -Wert fest, der einer der [datatypenum](../../../ado/reference/ado-api/datatypeenum.md) -Konstanten sein kann, oder gibt ihn zurück. Der Standardwert ist **adVarWchar**.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Eigenschaft ist Lese-/Schreibzugriff, bis die [Spalte](../../../ado/reference/adox-api/column-object-adox.md) Objekt angefügt wird, auf eine Auflistung oder ein anderes Objekt, wonach es schreibgeschützt ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Eigenschaft ist Lese-/Schreibzugriff, bis das [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekt an eine Auflistung oder ein anderes Objekt angefügt wird, nach der es schreibgeschützt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ParentCatalog-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
- [Type-Eigenschaft (Schlüssel) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für eine Beispiel Katalog Eigenschaft (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)   
+ [Type-Eigenschaft (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
  [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

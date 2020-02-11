@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110168"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
-  In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
+  Diese Aufgabe erstellt eine neue Tabelle und füllt sie mit den Daten in der Tabelle "Mitarbeiter **Demo** ". Diese Aufgabe umfasst die folgenden Schritte:  
   
 -   Erstellen Sie eine neue Tabelle, die eine `hierarchyid`-Spalte enthält. Diese Spalte könnte die vorhandenen Spalten **EmployeeID** und **ManagerID** ersetzen. Sie behalten diese Spalten jedoch bei, weil bestehende Anwendungen möglicherweise auf diese Spalten verweisen und weil dann die Daten nach der Übertragung leichter verständlich sind. Gemäß der Tabellendefinition ist **OrgNode** der Primärschlüssel, so dass diese Spalte eindeutige Werte enthalten muss. Der gruppierte Index der Spalte **OrgNode** speichert das Datum in **OrgNode** -Sequenz.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66110168"
   
      `10        4         2`  
   
-3.  Füllen Sie die Tabelle **NewOrg** auf. Verwenden Sie die Methoden GetRoot und ToString, zum Verketten der **Num** von Datumswerten in die `hierarchyid` formatieren, und aktualisieren Sie dann die **OrgNode** Spalte mit den resultierenden hierarchischen Werten:  
+3.  Füllt die Tabelle " **networg** " auf. Verwenden Sie die GetRoot-Methode und die ToString-Methode **** , um die Num `hierarchyid` -Werte im Format zu verketten, und aktualisieren Sie dann die Spalte **OrgNode** mit den resultierenden hierarchischen Werten:  
   
     ```  
     WITH paths(path, EmployeeID)   
@@ -151,7 +151,7 @@ ms.locfileid: "66110168"
   
     ```  
   
-     Die **LogicalNode** Spalte konvertiert die `hierarchyid` Spalte in ein lesbareres Textformat, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie die `ToString()`-Methode verwenden, um die `hierarchyid`-Spalten im logischen Format anzuzeigen.  
+     In der Spalte **LogicalNode** wird `hierarchyid` die Spalte in ein lesbares Textformular konvertiert, das die Hierarchie darstellt. In den restlichen Aufgaben werden Sie die `ToString()`-Methode verwenden, um die `hierarchyid`-Spalten im logischen Format anzuzeigen.  
   
 5.  Löschen Sie die temporäre Tabelle, die nicht mehr benötigt wird:  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66110168"
   
  In der nächsten Aufgabe werden Indizes erstellt, um die hierarchische Struktur zu unterstützen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Optimieren der NewOrg-Tabelle](lesson-1-3-optimizing-the-neworg-table.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Data Migration Settings (OracleToSQL) Einstellungen | Microsoft-Dokumentation
+title: Einstellungen für die Daten Migration (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,47 +11,47 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 2b435b02060d32e61bc3e75054171023262a87b8
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264208"
 ---
 # <a name="data-migration-settings-oracletosql"></a>Einstellungen für die Datenmigration (OracleToSQL)
   
 ## <a name="data-migration-settings"></a>Einstellungen für die Datenmigration  
-**Data Migration Settings** ermöglicht dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
+**Daten Migrations Einstellungen** ermöglichen es dem Benutzer, benutzerdefinierte Abfragen für die Datenmigration zu schreiben.  
   
--   Diese Registerkarte ist verfügbar, wenn **erweiterte Optionen für die Migration von Daten** nastaven NA hodnotu **anzeigen** und wird ausgeblendet, wenn die Einstellung, um festgelegt ist **ausblenden** in den Projekteinstellungen. Weitere Informationen zu Projekteinstellungen für die Migration, finden Sie unter [Project Settings (Migration)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
+-   Diese Registerkarte ist verfügbar, wenn **Erweiterte Daten Migrations Optionen** auf **anzeigen** festgelegt ist und ausgeblendet ist, wenn die Einstellung in den Projekteinstellungen **Ausblenden** festgelegt ist. Weitere Informationen zu den Einstellungen für die Projekt Migration finden Sie unter [Project Settings (Migration)](https://msdn.microsoft.com/fcd6b988-633b-4b2b-9f36-6368b5e86b60) .  
   
--   Analysieren von benutzerdefinierten SQL-Anweisungen in implementiert **Data Migration Settings** Registerkarte der Tabelle.  
+-   Die Verarbeitung von benutzerdefinierten SQL-Anweisungen wird auf der Registerkarte **Daten Migrations Einstellungen** des Tabellen Knotens implementiert.  
   
--   Es folgen die beiden Kontrollkästchen in verfügbaren der **Data Migration Settings** viz.:  
+-   Im folgenden finden Sie die beiden Kontrollkästchen, die in den Einstellungen für die **Daten Migration** angezeigt werden:  
   
-    1.  Abschneiden von SQL Server-Tabelle  
+    1.  SQL Server Tabelle abschneiden  
   
-    2.  Verwenden Sie benutzerdefinierte auswählen  
+    2.  Benutzerdefinierte Auswahl verwenden  
   
-1.  **Abschneiden von SQL Server-Tabelle:**  
-     Hiermit kann die Benutzer ein klares Bild der migrierten Daten an die Zieldatenbank verfügen.  
+1.  **SQL Server Tabelle abschneiden:**  
+     Diese Option ermöglicht dem Benutzer eine klare Ansicht der migrierten Daten in der Zieldatenbank.  
   
-    -   Standardmäßig wird dieses Textfeld überprüft.  
+    -   Standardmäßig ist dieses Textfeld aktiviert.  
   
-    -   Wenn dieses Textfeld deaktiviert ist, werden die Daten, die migriert werden an die vorhandenen Daten auf der Zieldatenbank hinzugefügt werden.  
+    -   Wenn dieses Textfeld nicht aktiviert ist, werden die migrierten Daten den vorhandenen Daten in der Zieldatenbank hinzugefügt.  
   
-2.  **Verwenden Sie benutzerdefinierte auswählen:**  
-     Diese Option ermöglicht dem Benutzer zum Ändern der **wählen** Anweisung vorhanden (**wählen** -Anweisung können die Benutzer zur Auswahl der Daten, das an die Zieldatenbank angezeigt werden).  
+2.  **Benutzerdefinierte Select-Option verwenden:**  
+     Mit dieser Option kann der Benutzer die vorhandene **Select** -Anweisung ändern (die**Select** -Anweisung ermöglicht es Benutzern, die Daten auszuwählen, die in der Zieldatenbank angezeigt werden sollen).  
   
-    1.  In der Standardeinstellung ist deaktiviert dieses Textfeld.  
+    1.  Standardmäßig ist dieses Textfeld deaktiviert.  
   
-    2.  Wenn dieses Textfeld wird überprüft, es ermöglicht Benutzern das Ändern der **wählen** Anweisung vorhanden.  
+    2.  Wenn dieses Textfeld aktiviert ist, können die Benutzer die vorhandene **Select** -Anweisung ändern.  
   
-Es befinden sich zwei Schaltflächen, die vorhanden viz.:  
+Es stehen zwei Schaltflächen zur Verfügung:  
   
--   **Gelten:** Klicken Sie auf **übernehmen** zum Anwenden der Einstellungen, die geändert wurden.  
+-   **Anwenden:** Klicken Sie auf **anwenden** , um die Einstellungen zu übernehmen, die geändert wurden.  
   
--   **Abbrechen:** Klicken Sie auf **Abbrechen** vorhanden wiederhergestellt, bevor die Änderungen durchgeführt werden.  
+-   **Abbrechen:** Klicken Sie auf **Abbrechen** , um die vorhandenen Einstellungen wiederherzustellen, bevor die Änderungen vorgenommen wurden.  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle-Daten in SQLServer](migrating-oracle-data-into-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von Oracle-Daten zu SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md)  
   

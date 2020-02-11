@@ -1,5 +1,5 @@
 ---
-title: "Aufgabe 1: Erstellen des Modells ' Suppliers ', die mit Master Data Manager | Microsoft-Dokumentation"
+title: 'Aufgabe 1: Erstellen eines Lieferanten Modells mit Master Data Manager | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,36 +11,36 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481343"
 ---
-# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Aufgabe 1: Erstellen des Modells „Suppliers“ mit dem Master Data Manager
-  In dieser Aufgabe erstellen Sie ein Modell namens **Lieferanten** in MDS mit **Master Data Manager**.  
+# <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Aufgabe 1: Erstellen des Modells 'Suppliers' mit Master Data Manager
+  In dieser Aufgabe erstellen Sie ein Modell mit dem Namen **Suppliers** in MDS, indem Sie **Master Data Manager**verwenden.  
   
-1.  Navigieren Sie zu [ http://localhost/mds ](http://localhost/mds) starten **Master Data Manager**. Ersetzen Sie die URL durch einen anderen Namen oder eine andere Website, wenn Sie eine Webanwendung konfiguriert haben.  
+1.  Navigieren Sie [http://localhost/mds](http://localhost/mds) zu, um **Master Data Manager**zu starten. Ersetzen Sie die URL durch einen anderen Namen oder eine andere Website, wenn Sie eine Webanwendung konfiguriert haben.  
   
      ![Master Data Manager – Systemverwaltung](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "Master Data Manager – Systemverwaltung")  
   
-2.  Klicken Sie auf **Systemverwaltung** in die **Verwaltungsaufgaben** Abschnitt.  
+2.  Klicken Sie im Abschnitt **administrative Aufgaben** auf **System Verwaltung** .  
   
-3.  Wenn Sie nicht sehen die **Hinzufügen eines Modells** Page, bewegen Sie die Maus über **verwalten** klicken Sie auf der Menüleiste auf **Modelle**, und klicken Sie dann auf **Modell hinzufügen (+)** Symbolleiste Schaltfläche, um ein Modell zu erstellen.  
+3.  Wenn die Seite **Modell hinzufügen** nicht angezeigt wird, zeigen Sie mit der Maus auf **Verwalten** in der Menüleiste, klicken Sie auf **Modelle**, und klicken Sie dann auf die Schaltfläche **Modell hinzufügen (+)** , um ein Modell zu erstellen.  
   
-     ![Verwalten – Modelle (Menü)](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-02.jpg "verwalten – Modelle (Menü)")  
+     ![Verwalten – Modelle (Menü)](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-02.jpg "Verwalten – Modelle (Menü)")  
   
-     ![Modell Symbolleistenschaltfläche Schaltfläche "hinzufügen"](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-03.jpg "Modell Symbolleistenschaltfläche Schaltfläche \"hinzufügen\"")  
+     ![Modell hinzufügen (Symbolleistenschaltfläche)](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-03.jpg "Modell hinzufügen (Symbolleistenschaltfläche)")  
   
-4.  Geben Sie **Lieferanten** für **Modellname**.  
+4.  Geben Sie **Suppliers** als **Modellnamen**ein.  
   
-5.  Klare **Entität mit demselben Namen wie Modell erstellen** Option. Erstellen Sie eine Entität später mithilfe der **MDS-Add-in für Excel**.  
+5.  Löschen Sie die Option **Entität mit gleichem Namen wie Modell erstellen** . Sie erstellen eine Entität später mithilfe der **MDS-Add-in für Excel**.  
   
-     ![Fügen Sie die Modellseite](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-04.jpg "hinzufügen Modell (Seite)")  
+     ![Modell hinzufügen (Seite)](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-04.jpg "Modell hinzufügen (Seite)")  
   
-6.  Klicken Sie auf **Modell speichern** auf der Symbolleiste.  
+6.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Modell speichern**  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-in für Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [Aufgabe 2: Hochladen von Lieferantendaten in MDS mithilfe des MDS-Add-Ins für Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

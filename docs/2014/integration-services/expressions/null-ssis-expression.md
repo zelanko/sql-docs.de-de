@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f4a796b0ab746468ffef3cab5b3480e73b4cf637
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768826"
 ---
 # <a name="null-ssis-expression"></a>NULL (SSIS-Ausdruck)
@@ -37,7 +37,7 @@ NULL(typespec)
 ## <a name="result-types"></a>Ergebnistypen  
  Ein beliebiger gültiger Datentyp mit einem NULL-Wert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  NULL gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  Parameter sind erforderlich, um einen NULL-Wert für bestimmte Datentypen anzufordern. In der folgenden Tabelle sind diese Datentypen und die zugehörigen Parameter aufgelistet.  
@@ -60,7 +60,7 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ISNULL &#40;SSIS-Ausdruck&#41;](null-ssis-expression.md)   
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  
   

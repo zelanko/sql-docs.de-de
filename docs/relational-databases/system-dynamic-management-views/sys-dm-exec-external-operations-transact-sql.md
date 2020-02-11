@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_external_operations (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_external_operations (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -23,28 +23,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d410afc256f0a1c12694f826bc73570cfee84172
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097774"
 ---
-# <a name="sysdmexecexternaloperations-transact-sql"></a>Sys.dm_exec_external_operations (Transact-SQL)
+# <a name="sysdm_exec_external_operations-transact-sql"></a>sys. dm_exec_external_operations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Erfasst Informationen über externe PolyBase-Vorgänge.  
+  Erfasst Informationen über externe polybase-Vorgänge.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|execution_id|**nvarchar(32)**|Eindeutiger Bezeichner der Abfrage zugeordneten PolyBase-Abfrage|Finden Sie unter-ID in [Sys. dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
-|step_index|**int**|Der Index des abfrageschritts|Finden Sie unter Step_index in [dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
-|Operation_-Typ|**nvarchar(128)**|Beschreibt einen Hadoop-Vorgang oder andere externe Vorgänge|"Externen Hadoop-Operation"|  
-|Operation_-name|**nvarchar(4000)**|Gibt an, wie der Status des Auftrags in Prozent (wie viel die Eingabe verwendet wird)|0-1 - multipliziert, um den Faktor 100 (abgeschlossen)|  
-|Map_-Status|**float**|Gibt ggf. an der Status einer Reduce-Aufträge in Prozent|0-1 - multipliziert, um den Faktor 100 (abgeschlossen)|  
+|execution_id|**nvarchar (32)**|Eindeutige Abfrage-ID, die polybase-Abfrage zugeordnet ist|Siehe ID in [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
+|step_index|**int**|Index des Abfrage Schritts|Weitere Informationen finden Sie unter step_index in [sys. dm_exec_distributed_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
+|operation_-Typ|**nvarchar(128)**|Beschreibt einen Hadoop-Vorgang oder einen anderen externen Vorgang.|"Externer Hadoop-Vorgang"|  
+|operation_ Name|**nvarchar(4000)**|Gibt an, wie der Status des Auftrags in Prozent (wie viel die Eingabe verbraucht) ist.|0-1-multipliziert mit Faktor 100 (abgeschlossen)|  
+|map_ Status|**float**|Gibt an, wie der Status eines Reduzierungs Auftrags in Prozent (falls vorhanden) reduziert wird.|0-1-multipliziert mit Faktor 100 (abgeschlossen)|  
   
-## <a name="see-also"></a>Siehe auch  
- [PolyBase-Problembehandlung mit dynamischen Verwaltungssichten](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Problembehandlung bei polybase mit dynamischen Verwaltungs Sichten](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Dynamische Verwaltungssichten in Verbindung mit Datenbank &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

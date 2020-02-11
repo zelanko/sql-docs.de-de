@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a45ff3544fa85f1bfe9cbe7bdd00968c004a3b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62634271"
 ---
 # <a name="change-the-environment-layout"></a>Ändern des Umgebungslayouts
@@ -50,7 +50,7 @@ ms.locfileid: "62634271"
   
 1.  Klicken Sie mit der rechten Maustaste auf die Titelleiste des Objekt-Explorers. Es werden folgende Menüoptionen angezeigt:  
   
-    -   float  
+    -   Float  
   
     -   Andocken  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62634271"
   
     -   Automatisch in Hintergrund  
   
-    -   Ausblenden  
+    -   Hide (Ausblenden)  
   
      Diese Optionen sind auch im Menü **Fenster** verfügbar oder können durch Klicken auf den Pfeil nach unten auf der Symbolleiste aufgerufen werden.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62634271"
   
 9. Wenn Sie die ursprüngliche Konfiguration wiederherstellen möchten, klicken Sie im Menü **Fenster** auf **Fensterlayout zurücksetzen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Anzeigen des Abfragefensters](lesson-1-4-display-the-query-window.md)  
   
   

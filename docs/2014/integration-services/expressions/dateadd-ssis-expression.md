@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3c744d3f28bc27373f3dc9798ba591848d4b720e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769347"
 ---
 # <a name="dateadd-ssis-expression"></a>DATEADD (SSIS-Ausdruck)
@@ -35,7 +35,7 @@ DATEADD(datepart, number, date)
  *datepart*  
  Der Parameter, der angibt, welcher Datumseinheit eine Zahl hinzugefügt werden soll.  
   
- *number*  
+ *Zahl*  
  Der Wert, um den *datepart*inkrementiert wird. Dieser Wert muss ein ganzzahliger Wert sein, der beim Analysieren des Ausdrucks bekannt ist.  
   
  *date*  
@@ -44,21 +44,21 @@ DATEADD(datepart, number, date)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_DBTIMESTAMP  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle sind die datepart-Werte und Abkürzungen aufgeführt, die von der Ausdrucksauswertung erkannt werden. Bei datepart-Namen wird die Groß-/Kleinschreibung nicht berücksichtigt.  
   
 |datepart|Abkürzungen|  
 |--------------|-------------------|  
-|Year|yy, yyyy|  
+|Jahr|yy, yyyy|  
 |Quarter|qq, q|  
-|Month|mm, m|  
+|Month (Monat)|mm, m|  
 |Dayofyear|dy, y|  
-|Day|dd, d|  
+|Day (Tag)|dd, d|  
 |Week|wk, ww|  
-|Arbeitstag|dw, w|  
+|Wochentag|dw, w|  
 |Hour|Hh|  
 |Minute|mi, n|  
-|Zweimal|ss, s|  
+|Sekunde|ss, s|  
 |Millisekunde|Ms|  
   
  Das *number* -Argument muss beim Analysieren des Ausdrucks verfügbar sein. Bei diesem Argument kann es sich um eine Konstante oder eine Variable handeln. Spaltenwerte können nicht verwendet werden, weil diese Werte beim Analysieren des Ausdrucks nicht bekannt sind.  
@@ -90,7 +90,7 @@ DATEADD("day", 21, ModifiedDate)
 DATEADD("yyyy", 2, (DT_DBTIMESTAMP)"8/6/2003")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DATEDIFF &#40;SSIS-Ausdruck&#41;](datediff-ssis-expression.md)   
  [DATEPART &#40;SSIS-Ausdruck&#41;](datepart-ssis-expression.md)   
  [DAY &#40;SSIS-Ausdruck&#41;](day-ssis-expression.md)   

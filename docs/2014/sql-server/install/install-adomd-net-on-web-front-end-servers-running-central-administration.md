@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f36e00a9393dcbdf1f8cbfe878b8382e6a8dac9d
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "71952153"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird
   Wenn Sie PowerPivot für SharePoint in einer Farm installieren, die die Topologie "Zentraladministration ohne Excel Services oder PowerPivot für SharePoint" aufweist, laden Sie die Microsoft ADOMD.NET-Clientbibliothek herunter und installieren diese, wenn Sie Vollzugriff auf die integrierten Berichte im PowerPivot-Management-Dashboard erhalten möchten. Einige Berichte im Dashboard verwenden ADOMD.NET für den Zugriff auf interne Daten, die Berichtsdaten zur PowerPivot-Abfrageverarbeitung und zum Serverzustand in der Farm liefern.  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010  
   
  Bei SharePoint 2013 ist der Anbieter im SQL Server Feature Pack enthalten. Weitere Informationen zum Herunterladen von sppowerpivot. msi finden Sie unter [Microsoft SQL Server 2014 Feature Pack](https://www.microsoft.com/download/details.aspx?id=35577)  
   
@@ -42,9 +42,9 @@ ms.locfileid: "71952153"
   
 3.  Klicken Sie auf **Version**.  
   
-4.  Vergewissern Sie sich, dass die Version 12,00. \<buildnummer > enthält und dass die Beschreibung Microsoft. analysisservice. AdomdClient lautet.  
+4.  Vergewissern Sie sich, dass die Version 12,00 enthält. \<Buildnummer> und die Beschreibung lautet Microsoft. analysisservice. AdomdClient.  
   
-## <a name="see-also"></a>Siehe auch  
- [PowerPivot-Management-Dashboard und -Verwendungsdaten](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
+## <a name="see-also"></a>Weitere Informationen  
+ [PowerPivot-Management-Dashboard und Verwendungsdaten](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

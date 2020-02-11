@@ -13,14 +13,14 @@ ms.assetid: 9bb84114-a1df-4122-a1b8-ad98dcd85cc3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2c357384a3de683c05b2922149e2b61630881922
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926203"
 ---
 # <a name="ado-run-time-errors"></a>ADO-Laufzeitfehler
-ADO-Fehler werden mit dem Programm als Laufzeitfehler gemeldet. Sie können den Mechanismus zum Abfangen von Fehlern Ihre bevorzugte Programmiersprache verwenden, abfangen und behandeln. In Visual Basic verwenden, z. B. die **On Error** Anweisung. In Visual C++ hängt von der Methode, die Sie verwenden, um die ADO-Bibliotheken zugreifen. Mit #import, verwenden eine **Try / Catch** Block. Andernfalls müssen die C++-Programmierer explizit das Fehlerobjekt, das durch den Aufruf abrufen **GetErrorInfo**. Die folgende Visual Basic-Sub-Prozedur veranschaulicht einen ADO-Fehler abfangen:
+ADO-Fehler werden dem Programm als Laufzeitfehler gemeldet. Sie können den fehlerabfang Mechanismus ihrer Programmiersprache verwenden, um Sie abzufangen und zu behandeln. Verwenden Sie beispielsweise in Visual Basic die **On Error** -Anweisung. In Visual C++ hängt dies von der Methode ab, die Sie für den Zugriff auf die ADO-Bibliotheken verwenden. Verwenden Sie #Import einen **try-catch-** Block. Andernfalls müssen C++-Programmierer das Fehler Objekt explizit abrufen, indem Sie **GetErrorInfo**aufrufen. Die folgende Visual Basic unter Prozedur veranschaulicht das Abfangen eines ADO-Fehlers:
 
 ```
 ' BeginErrorHandlingVB01
@@ -78,7 +78,7 @@ End Sub
 ' EndErrorHandlingVB01
 ```
 
- Dies **Form_Load** Ereignisprozedur erstellt absichtlich einen Fehler mit dem Versuch, öffnen Sie die gleichen **Verbindung** zweimal Objekt. Beim zweiten Mal die **öffnen** Methode aufgerufen wird, wird der Fehlerhandler ist aktiviert. In diesem Fall wird der Fehler des Typs ist **AdErrObjectOpen**, sodass der Fehlerhandler die folgende Meldung angezeigt, vor dem Fortsetzen der Ausführung des Programms:
+ Diese **Form_Load** Ereignis Prozedur erstellt absichtlich einen Fehler, indem versucht wird, dasselbe **Verbindungs** Objekt zweimal zu öffnen. Wenn die **Open** -Methode zum zweiten Mal aufgerufen wird, wird der Fehlerhandler aktiviert. In diesem Fall ist der Fehler vom Typ **aderrobjectopen**, sodass der Fehlerhandler vor dem Fortsetzen der Programmausführung die folgende Meldung anzeigt:
 
 ```
 Error #3705: Operation is not allowed when the object is open.
@@ -86,15 +86,15 @@ Error reported by: ADODB.Connection
 Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 ```
 
- Die Fehlermeldung enthält Informationen, die von der Visual Basic bereitgestellten **Err** Objekt, mit Ausnahme der **LastDLLError** -Wert, der hier nicht anwendbar ist. Die Fehlernummer teilt Ihnen mit, welche Fehler aufgetreten ist. Die Beschreibung ist hilfreich in Fällen, in denen Sie nicht, die den Fehler zu behandeln möchten. Sie können es einfach an den Benutzer übergeben. Empfiehlt, sich jedoch in der Regel verwendet für Ihre Anwendung angepasste werden können können nicht alle Fehler erwartungsgemäß; die Beschreibung gibt einen Hinweis, welche Fehler aufgetreten sind. Im Beispielcode wird der Fehler gemeldet wurde, durch die **Verbindung** Objekt. Sie sehen, die der Objekttyp oder Programm-ID finden Sie hier: nicht auf einen Variablennamen ein.
+ Die Fehlermeldung enthält alle Informationen, die vom Visual Basic **Err** -Objekt bereitgestellt werden, mit Ausnahme des **LastDllError** -Werts, der hier nicht gilt. Die Fehlernummer gibt Aufschluss darüber, welcher Fehler aufgetreten ist. Die Beschreibung ist in Fällen nützlich, in denen Sie den Fehler nicht selbst behandeln möchten. Sie können Sie einfach an den Benutzer übergeben. Obwohl Sie normalerweise Nachrichten verwenden möchten, die für Ihre Anwendung angepasst werden, können Sie nicht jeden Fehler vorhersehen. die Beschreibung gibt Aufschluss darüber, was schief gelaufen ist. Im Beispielcode wurde der Fehler vom **Verbindungs** Objekt gemeldet. Hier wird der Objekttyp oder die programmgesteuerte ID angezeigt, kein Variablenname.
 
 > [!NOTE]
->  Die Visual Basic **Err** Objekt enthält nur Informationen zu der zuletzt aufgetretene Fehler. Das ADO **Fehler** Auflistung von der **Verbindung** Objekt enthält ein **Fehler** Objekt für jeden Fehler, die von den neuesten ADO-Vorgang ausgelöst. Verwenden der **Fehler** Sammlung anstelle der **Err** Objekt, das mehrere Fehler zu behandeln. Weitere Informationen zu den **Fehler** Sammlung finden Sie unter [Anbieterfehler](../../../ado/guide/data/provider-errors.md). Allerdings, wenn keine gültige **Verbindung** -Objekt, das **Err** Objekt ist die einzige Quelle für Informationen zur ADO-Fehler.
+>  Das Visual Basic **Err** -Objekt enthält nur Informationen zum letzten Fehler. Die ADO **Errors** -Auflistung des **Connection** -Objekts enthält ein **Error** -Objekt für jeden Fehler, der durch den letzten ADO-Vorgang ausgelöst wird. Verwenden Sie die **Errors** -Auflistung anstelle des **Err** -Objekts, um mehrere Fehler zu behandeln. Weitere Informationen zur **Fehler** Sammlung finden Sie unter [Anbieter Fehler](../../../ado/guide/data/provider-errors.md). Wenn jedoch kein gültiges **Verbindungs** Objekt vorhanden ist, ist das **Err** -Objekt die einzige Quelle für Informationen zu ADO-Fehlern.
 
- Welche Arten von Vorgängen sind wahrscheinlich dazu führen, dass bei der ADO-Fehler? Häufige ADO-Fehler können z. B. ein Objekt öffnet umfassen eine **Verbindung** oder **Recordset**, es wird versucht, Daten zu aktualisieren oder das Aufrufen einer Methode oder Eigenschaft, die von Ihrem Anbieter nicht unterstützt wird.
+ Welche Arten von Vorgängen verursachen wahrscheinlich ADO-Fehler? Häufige ADO-Fehler können das Öffnen eines Objekts sein, z. b. eine **Verbindung** oder ein **Recordset**, das Aktualisieren von Daten oder das Aufrufen einer Methode oder Eigenschaft, die nicht vom Anbieter unterstützt wird.
 
- OLE DB-Fehler übergeben werden können, an Ihrer Anwendung zur Laufzeit Fehler in der **Fehler** Auflistung.
+ OLE DB Fehler können auch als Laufzeitfehler in der **Fehler** Auflistung an die Anwendung übermittelt werden.
 
- Das folgende Thema enthält weitere Informationen zum ADO-Fehler.
+ Im folgenden Thema finden Sie weitere Informationen zu ADO-Fehlern.
 
--   [ADO Error Reference (ADO-Fehlerreferenz)](../../../ado/guide/data/ado-error-reference.md)
+-   [ADO-Fehlerreferenz](../../../ado/guide/data/ado-error-reference.md)

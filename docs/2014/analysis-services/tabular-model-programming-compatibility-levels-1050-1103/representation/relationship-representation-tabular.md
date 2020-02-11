@@ -1,5 +1,5 @@
 ---
-title: Beziehungsdarstellung (tabellarisch) | Microsoft-Dokumentation
+title: Beziehungs Darstellung (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 86a5eff8-4e07-444b-ac15-5695f09aa105
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5acdc8b4e265ee2ebf6d6ffa4e3cc3e65a9b73b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7311fda8b3d4b8054d406ee97749c81f7d588e97
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62757732"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929511"
 ---
 # <a name="relationship-representation-tabular"></a>Beziehungsdarstellung (tabellarisch)
   Eine Beziehung ist eine Verbindung zwischen zwei Tabellen mit Daten. Die Beziehung legt fest, wie die Daten in den beiden Tabellen korreliert werden sollen.  
   
- Finden Sie unter [Beziehungsdarstellung (tabellarisch)](relationship-representation-tabular.md) eine ausführliche Erläuterung zum Erstellen und Bearbeiten der beziehungsdarstellung.  
+ Eine ausführliche Erläuterung zum Erstellen und Bearbeiten der Beziehungs Darstellung finden Sie unter [Beziehungs Darstellung (tabellarisch)](relationship-representation-tabular.md) .  
   
 ## <a name="relationship-representation"></a>Beziehungsdarstellung  
  In tabellarischen Modellen können mehrere Beziehungen zwischen zwei Tabellen definiert werden. Wenn mehrere Beziehungen zwischen zwei Tabellen definiert werden, kann nur eine als Standardbeziehung für das Modell definiert werden und wird als aktive Beziehung bezeichnet. Alle anderen Beziehungen werden als inaktive Beziehungen bezeichnet.  
@@ -50,7 +50,7 @@ private Boolean createRelationship(string PKTableName, string PKColumnName, stri
     //Make sure PKTableName.PKColumnName  is set as PK ==> <attribute>.usage == AMO.AttributeUsage.Key  
     if (tabularDb.Dimensions[PKTableName].Attributes[PKColumnName].Usage != AMO.AttributeUsage.Key)  
     {  
-        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not beeing the PK of the table  
+        //... here we are 'fixing', if there is an issue with PKTableName.PKColumnName not being the PK of the table  
         setPKColumn(tabularDb, PKTableName, PKColumnName);  
     }  
   

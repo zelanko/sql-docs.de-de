@@ -16,18 +16,18 @@ ms.assetid: d56ae218-6128-4ff9-b06c-749914505c7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: eaeeaa5009cb119b40dcde9b8f9baa170d8f7bef
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68762528"
 ---
-# <a name="spreinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
+# <a name="sp_reinitsubscription-transact-sql"></a>sp_reinitsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Kennzeichnet das Abonnement für die erneute Initialisierung. Diese gespeicherte Prozedur wird auf dem Verleger für Pushabonnements ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="arguments"></a>Argumente  
 `[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all.  
   
-`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all. Bei einer Veröffentlichung mit sofortigem Update muss der Artikel **alle**lauten. andernfalls überspringt die gespeicherte Prozedur die Veröffentlichung und meldet einen Fehler.  
+`[ @article = ] 'article'`Der Name des Artikels. der *Artikel* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert all. Bei einer Veröffentlichung mit sofortigem Update ** muss der Artikel **alle**lauten. andernfalls überspringt die gespeicherte Prozedur die Veröffentlichung und meldet einen Fehler.  
   
 `[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
@@ -66,14 +66,14 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_reinitsubscription** wird bei der Transaktions Replikation verwendet.  
   
  **sp_reinitsubscription** wird für die Peer-zu-Peer-Transaktions Replikation nicht unterstützt.  
   
  Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung keine aktualisierbaren Abonnements zulässt, muss der Momentaufnahme-Agent ausgeführt werden, nachdem diese gespeicherte Prozedur ausgeführt wird, sodass Programmdateien für das Schema- und Massenkopieren vorbereitet werden und die Verteilungs-Agents in der Lage sind, die Abonnements neu zu synchronisieren.  
   
- Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung aktualisierbare Abonnements zulässt, führt der Verteilungs-Agent eine erneute Synchronisierung für das Abonnement durch, indem die neuesten Programmdateien für das Schema- und Massenkopieren verwendet werden, die zuvor vom Momentaufnahme-Agent erstellt wurden. Der Verteilungs-Agent synchronisiert das Abonnement nach dem Ausführen von **sp_reinitsubscription**neu, wenn die Verteilungs-Agent nicht ausgelastet ist. Andernfalls kann die Synchronisierung nach dem Nachrichten Intervall erfolgen (angegeben durch Verteilungs-Agent Befehlszeilenparameter: **Messageingeterval**).  
+ Für Abonnements, bei denen die Anfangsmomentaufnahme automatisch angewendet wird und bei denen die Veröffentlichung aktualisierbare Abonnements zulässt, führt der Verteilungs-Agent eine erneute Synchronisierung für das Abonnement durch, indem die neuesten Programmdateien für das Schema- und Massenkopieren verwendet werden, die zuvor vom Momentaufnahme-Agent erstellt wurden. Der Verteilungs-Agent synchronisiert das Abonnement nach dem Ausführen **sp_reinitsubscription**neu, wenn der Verteilungs-Agent nicht ausgelastet ist. Andernfalls kann die Synchronisierung nach dem Nachrichten Intervall erfolgen (angegeben durch Verteilungs-Agent Befehlszeilenparameter: **MessageInterval**).  
   
  **sp_reinitsubscription** hat keine Auswirkung auf Abonnements, bei denen die Anfangs Momentaufnahme manuell angewendet wird.  
   
@@ -91,9 +91,9 @@ sp_reinitsubscription [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** , Mitglieder der festen Daten Bank Rolle **db_owner** oder der Ersteller des Abonnements können **sp_reinitsubscription**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erneutes Initialisieren eines Abonnements](../../relational-databases/replication/reinitialize-a-subscription.md)   
- [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
+ [Abonnements erneut initialisieren](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

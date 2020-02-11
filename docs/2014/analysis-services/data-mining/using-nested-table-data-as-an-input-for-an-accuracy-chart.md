@@ -1,5 +1,5 @@
 ---
-title: Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm | Microsoft-Dokumentation
+title: Verwenden von Daten in einer Datentabelle als Eingabe für ein Genauigkeits Diagramm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082731"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm
@@ -41,9 +41,9 @@ ms.locfileid: "66082731"
   
 2.  Wählen Sie die Registerkarte **Mininggenauigkeitsdiagramm** und anschließend die Registerkarte **Eingabeauswahl** aus.  
   
-3.  Wählen Sie unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**aus.  
+3.  Wählen Sie unter DataSet **auswählen, das für das Genauigkeits Diagramm verwendet werden soll**die Option anderes DataSet **angeben**aus.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  , das externe DataSet aus einer Liste mit Datenquellensichten auf dem aktuellen Server auszuwählen.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um das externe DataSet aus einer Liste mit Datenquellen Sichten auf dem aktuellen Server auszuwählen.  
   
 5.  Klicken Sie auf **Falltabelle auswählen**. Wählen Sie im Dialogfeld **Tabelle auswählen** in der Datenquellensicht die Tabelle aus, die die Falldaten enthält. Klicken Sie anschließend auf **OK**.  
   
@@ -53,8 +53,8 @@ ms.locfileid: "66082731"
   
      Wenn Sie die Beziehung zwischen der geschachtelten Tabelle und der Falltabelle ändern müssen, klicken Sie auf **Join ändern** , um das Dialogfeld **Beziehung erstellen** zu öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Auswählen und Zuordnen von Modelltestdaten](choose-and-map-model-testing-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Auswählen und Zuordnen von Modell Test Daten](choose-and-map-model-testing-data.md)   
  [Anwenden von Filtern zum Modellieren von Testdaten](apply-filters-to-model-testing-data.md)  
   
   

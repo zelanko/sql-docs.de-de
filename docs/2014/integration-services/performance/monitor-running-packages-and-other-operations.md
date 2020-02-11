@@ -1,5 +1,5 @@
 ---
-title: Überwachen von Paketausführungen und anderen Vorgängen | Microsoft-Dokumentation
+title: Überwachen von Paket Ausführungen und anderen Vorgängen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f6a4e147c90fe7c4f25f5c8b821b4787ec3be71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766982"
 ---
 # <a name="monitoring-for-package-executions-and-other-operations"></a>Überwachen von Paketausführungen und anderen Vorgängen
@@ -28,7 +28,7 @@ ms.locfileid: "62766982"
   
      Weitere Informationen finden Sie unter [Berichte für den Integration Services-Server](../reports-for-the-integration-services-server.md).  
   
--   Ansichten  
+-   Sichten  
   
      Weitere Informationen finden Sie unter [Sichten &#40;Integration Services-Katalog&#41;](/sql/integration-services/system-views/views-integration-services-catalog).  
   

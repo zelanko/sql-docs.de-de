@@ -1,5 +1,5 @@
 ---
-title: dm_tran_version_store_space_usage (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_tran_version_store_space_usage (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,32 +21,32 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262663"
 ---
-# <a name="sysdmtranversionstorespaceusage-transact-sql"></a>dm_tran_version_store_space_usage (Transact-SQL)
+# <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
 
-Gibt eine Tabelle, in der gesamten Speicherplatz in ' tempdb ' versionsspeicherdatensätze für jede Datenbank genutzten angezeigt. **dm_tran_version_store_space_usage** ist effizient und nicht teuer nicht über die einzelnen versionsspeicherdatensätze navigieren, und gibt aggregierte Speicher-Versionsspeicher in Tempdb pro Datenbank verarbeitet,.
+Gibt eine Tabelle zurück, die den gesamten Speicherplatz in tempdb anzeigt, der von Versionsspeicher Datensätzen für jede Datenbank verwendet wird. **sys. dm_tran_version_store_space_usage** ist effizient und nicht aufwendig auszuführen, da es nicht durch einzelne Versionsspeicher Datensätze navigiert und den aggregierten Versionsspeicher Bereich zurückgibt, der in tempdb pro Datenbank verbraucht ist.
   
-Jeder Versionsdatensatz wird als binäre Daten verwenden, zusammen mit einigen Informationen protokollierungs- oder Statusinformationen gespeichert. Ähnlich wie Datensätze in Datenbanktabellen werden die Versionsspeicherdatensätze in 8192 Bytes umfassenden Seiten gespeichert. Falls ein Datensatz größer ist als 8192 Bytes, wird er in zwei unterschiedliche Datensätze geteilt.  
+Jeder Versionsdaten Satz wird als Binärdaten und einige Überwachungs-oder Statusinformationen gespeichert. Ähnlich wie Datensätze in Datenbanktabellen werden die Versionsspeicherdatensätze in 8192 Bytes umfassenden Seiten gespeichert. Falls ein Datensatz größer ist als 8192 Bytes, wird er in zwei unterschiedliche Datensätze geteilt.  
   
-Da der Versionsdatensatz als Binärdaten gespeichert wird, treten keine Probleme mit unterschiedlichen Sortierungen aus unterschiedlichen Datenbanken auf. Verwendung **dm_tran_version_store_space_usage** zu überwachen und Planen der Tempdb-Größe, die basierend auf den speicherplatzverbrauchs von Datenbanken in einer SQL Server-Instanz.
+Da der Versionsdatensatz als Binärdaten gespeichert wird, treten keine Probleme mit unterschiedlichen Sortierungen aus unterschiedlichen Datenbanken auf. Verwenden Sie **sys. dm_tran_version_store_space_usage** zum Überwachen und Planen der tempdb-Größe basierend auf der Versionsspeicher-Speicherplatz Verwendung von Datenbanken in einer SQL Server Instanz.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID der Datenbank.|  
-|**reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die in ' tempdb ' für Version reserviert Datensätze in der Datenbank zu speichern.|  
-|**reserved_space_kb**|**bigint**|Insgesamt belegten Speicher in Kilobyte in ' tempdb ' für Version Datensätze in der Datenbank zu speichern.|  
+|**reserved_page_count**|**BIGINT**|Gesamtanzahl der Seiten, die in tempdb für Versionsspeicher Datensätze der Datenbank reserviert sind.|  
+|**reserved_space_kb**|**BIGINT**|Gesamter verwendeter Speicherplatz in Kilobyte in tempdb für Versionsspeicher Datensätze der Datenbank.|  
   
 ## <a name="permissions"></a>Berechtigungen  
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
 
 ## <a name="examples"></a>Beispiele  
-Die folgende Abfrage kann Speicherplatz in tempdb-Datenbank verarbeitet ermittelt von Versionsspeicher jeder Datenbank in verwendet werden, eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. 
+Die folgende Abfrage kann verwendet werden, um den in tempdb verbrauchten Speicherplatz im Versionsspeicher der einzelnen Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken einer-Instanz zu ermitteln. 
   
 ```sql  
 SELECT 
@@ -67,7 +67,7 @@ AdventureWorks2016DW      0                    0
 WideWorldImporters        20                   160             
 ```
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

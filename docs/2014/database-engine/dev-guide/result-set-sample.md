@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f562a49ceb0bcc455c99aad1053af93209717f00
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637639"
 ---
 # <a name="result-set-sample"></a>Beispiel für einen Ergebnissatz
@@ -25,10 +25,12 @@ ms.locfileid: "73637639"
   
  Die APIs für diese Klasse ähneln einem Datenleser, wobei Sie jedoch vorwärts oder rückwärts im Resultset navigieren und andere Befehle auf der Verbindung ausgeben können, wenn das Resultset geöffnet ist. Diese Implementierung ist stark vereinfacht, damit Sie das Beispiel leichter nachvollziehen können. Eine effizientere Implementierung würde das Abrufen mehrerer Zeilen gleichzeitig unterstützen, um eine Verarbeitung der gesamten Datenbank pro abgerufener Zeile zu verhindern. Durch das Verwenden dieser Klasse ist der Speicherbedarf möglicherweise weitaus geringer als beim Auffüllen eines Datasets mit allen Ergebnissen einer Abfrage. Dies ist für die serverseitige Programmierung ein wichtiger Faktor. In diesem Beispiel wird veranschaulicht, wie mithilfe des Attributs "Allow partially trusted callers" angegeben wird, dass es sich bei der Resultset-Assembly um eine Bibliothek handelt, die von anderen Assemblys auf sichere Weise aufgerufen werden kann. Diese Vorgehensweise ist etwas komplexer, jedoch sicherer als das Registrieren der aufrufenden Assembly mithilfe der UNSAFE-Berechtigung. Sie ist sicherer, weil durch das Registrieren der aufrufenden Assembly als SAFE die aufrufende Assembly lediglich auf für den Server externe Ressourcen zugreift und Beschädigungen der Integrität des Servers verhindert werden.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -1411,7 +1413,7 @@ DROP ASSEMBLY ResultSet;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwendungs Szenarien und Beispiele für die CLR-&#41; Integration von Common Language Runtime &#40;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

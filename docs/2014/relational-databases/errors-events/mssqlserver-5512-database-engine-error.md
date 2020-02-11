@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62913621"
 ---
-# <a name="mssqlserver5512"></a>MSSQLSERVER_5512
+# <a name="mssqlserver_5512"></a>MSSQLSERVER_5512
     
 ## <a name="details"></a>Details  
   
@@ -36,6 +36,6 @@ ms.locfileid: "62913621"
  Der Abschneidevorgang ist fehlgeschlagen.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- Die Ursache des Fehlers finden Sie im entsprechenden Windows-Statuscode. Weitere Informationen über diesen Statuscode finden Sie unter [Ereignis- und Fehlermeldungen, die Microsoft-Support](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
+ Die Ursache des Fehlers finden Sie im entsprechenden Windows-Statuscode. Weitere Informationen zu diesem Statuscode finden Sie [unter Ereignis-und Fehlermeldungen unter Microsoft-Support](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

@@ -21,23 +21,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 67ca649678fcc099a2abf1b50866263d6494bec7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242043"
 ---
 # <a name="manage-the-editor-and-view-mode"></a>Verwalten des Editors und des Ansichtsmodus
   Der Editor bietet mehrere Möglichkeiten, die Ansicht des Codes zu steuern.  
   
 ## <a name="changing-the-view-mode"></a>Ändern des Ansichtsmodus  
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügt über einen Ansichtsmodus namens **Dokumente**im Register Format, mit dem Sie mehrere Editoren und Dokumente gleichzeitig öffnen und über Registerkarten am oberen Rand des Editors auf diese zugreifen können. Alternativ können Sie die [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Umgebung im Modus für eine mehrfache Dokumentschnittstelle (MDI, Multiple Document Interface) öffnen, bei dem Fenster ohne Registerkarten verknüpft werden und nebeneinander angezeigt, minimiert oder ähnlich behandelt werden können.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügt über einen Ansichtsmodus namens **Dokumente im Registerformat**. In diesem Modus können Sie mehrere Editoren und Dokumente gleichzeitig öffnen und über Registerkarten am oberen Rand des Editors auf diese zugreifen. Alternativ können Sie die [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Umgebung im Modus für eine mehrfache Dokumentschnittstelle (MDI, Multiple Document Interface) öffnen, bei dem Fenster ohne Registerkarten verknüpft werden und nebeneinander angezeigt, minimiert oder ähnlich behandelt werden können.  
   
 #### <a name="to-switch-between-view-modes"></a>So wechseln Sie den Ansichtsmodus  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen** .  
   
-2.  Klicken Sie auf **Umgebung**. Klicken Sie auf **General**.  
+2.  Klicken Sie auf **Umgebung**. Klicken Sie auf **Allgemein**.  
   
 3.  Klicken Sie auf **Dokumente im Registerformat** oder **MDI-Umgebung**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "75242043"
   
 3.  Klicken Sie auf **Alle Sprachen**.  
   
-4.  Klicken Sie auf **General**.  
+4.  Klicken Sie auf **Allgemein**.  
   
 5.  Wählen Sie **Zeilennummern**aus.  
   

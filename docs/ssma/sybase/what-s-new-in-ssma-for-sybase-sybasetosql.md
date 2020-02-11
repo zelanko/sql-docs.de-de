@@ -1,7 +1,7 @@
 ---
 title: Neues in SSMA für SAP ASE (sybasedesql) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/04/2019
+ms.date: 01/22/2020
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -9,16 +9,27 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 094db4e2d374f79e8102d111d0a9f9bfda22e6b7
-ms.sourcegitcommit: 26868c8ac3217176b370d972a26d307598a10328
+ms.openlocfilehash: 752c099f985cc1695ab30e2d01241aea4c0c754c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74834259"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76516615"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Neues in SSMA für SAP ASE (sybasedesql)
 
 In diesem Artikel werden die Änderungen an SQL Server Migration Assistant (SSMA) für SAP ASE (ehemals SSMA für Sybase) in jeder Version aufgeführt.
+
+## <a name="ssma-v86"></a>SSMA v 8.6
+
+Zusätzlich zu einem Zielsatz von Korrekturen, die zur Verbesserung der Benutzerfreundlichkeit und Leistung entwickelt wurden, wurde die Version Version 8.6 von SSMA für SAP ASE durch Hinzufügen einer Einstellung verbessert, mit der Benutzer die erweiterten SSMA-Eigenschaften im konvertierten Code weglassen können.
+
+Um diese Einstellung zu nutzen, **Navigieren Sie in** > SSMA für SAP ASE zu Extras**Projekteinstellungen** > **Allgemeine** > **Konvertierung**, und aktualisieren Sie **dann unter "** Verschiedenes" den Wert der Einstellung " **Erweiterte Eigenschaften** unterdrücken" auf " **Ja**".
+
+![Einstellung für erweiterte Eigenschaften weglassen](../sybase/media/ssma-omit-extended-properties.png)
+
+> [!IMPORTANT]
+> Mit SSMA Version 8.5 und höher ist .NET 4.7.2 eine erforderliche Installation. Wenn Sie diese Version installieren müssen, können Sie die Lauf Zeit Datei [hier](https://dotnet.microsoft.com/download/dotnet-framework/net472)herunterladen.
 
 ## <a name="ssma-v85"></a>SSMA v 8.5
 
@@ -158,7 +169,7 @@ Die Version Version 7.1 von SSMA für Sybase enthält die folgenden Änderungen:
 
 * SQL Server 2017 unter Windows und Linux CTP1 wird jetzt als Zielplattform für die Migration unterstützt. Diese Funktion befindet sich in der Technical Preview und unterstützt das Schema und die Daten Verschiebung für SQL Server-Zielserver.
 * Unterstützung für automatische Updates, um die neueste Version von SSMA herunterzuladen, sobald Sie verfügbar ist.
-* Installierbare SSMA-Binärdateien werden jetzt über Windows Installer-Paketdateien (MSI) übermittelt.
+* Installierbare SSMA-Binärdateien werden jetzt über Windows Installer Paketdateien (MSI) übermittelt.
 
 ## <a name="may-2016"></a>Mai 2016
 
@@ -291,6 +302,6 @@ Die SSMA-Version vom November 2006 für Sybase enthält die folgenden Änderunge
 
 Die Version von Juli 2006 von SSMA für Sybase war die erste Version.  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Informationen zu den ersten Schritten mit SSMA für Sybase &#40;sybasedesql&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

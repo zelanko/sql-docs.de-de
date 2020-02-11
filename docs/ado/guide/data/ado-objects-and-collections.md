@@ -1,5 +1,5 @@
 ---
-title: ADO-Objekte und Auflistungen | Microsoft-Dokumentation
+title: ADO-Objekte und-Sammlungen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,30 +13,30 @@ ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 89093367532177ec87fb3a5fd86e38e98345962c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926043"
 ---
 # <a name="ado-objects-and-collections"></a>ADO-Objekte und -Collections
-ADO besteht aus den folgenden neun Objekte und vier Auflistungen.  
+ADO besteht aus den folgenden neun Objekten und vier Auflistungen.  
   
-|Objekt oder einer Auflistung|Beschreibung|  
+|Objekt oder Sammlung|BESCHREIBUNG|  
 |--------------------------|-----------------|  
-|**Verbindung** Objekt|Stellt eine eindeutige Sitzung mit einer Datenquelle dar. Im Fall von einem Client/Server-Datenbanksystem kann es eine tatsächliche Netzwerk-Verbindung mit dem Server entsprechen. Abhängig von den Funktionen, die von der Anbieter, einige Auflistungen, Methoden oder Eigenschaften unterstützt eine **Verbindung** Objekt möglicherweise nicht zur Verfügung.|  
-|**Command** -Objekt|Dient zum Definieren der eines bestimmten Befehls z. B. eine SQL-Abfrage für eine Datenquelle ausgeführt werden soll.|  
-|**Recordset** Objekt|Stellt die gesamte Gruppe von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Alle **Recordset** Objekte bestehen aus Datensätzen (Zeilen) und Feldern (Spalten).|  
-|**Datensatz** Objekt|Stellt eine einzelne Zeile mit Daten, entweder von einem **Recordset** oder vom Anbieter. Dieser Datensatz könnte es sich um einen Datenbankdatensatz oder eine andere Art von Objekt z. B. eine Datei oder ein Verzeichnis, abhängig von Ihrem Anbieter darstellen.|  
-|**Stream** Objekt|Stellt einen Datenstrom Binär oder Text dar. Beispielsweise kann ein XML-Dokument in einen Stream für Befehl eingegebene oder zurückgegebene von bestimmten Anbietern wie die Ergebnisse einer Abfrage geladen werden. Ein **Stream** Objekt kann verwendet werden, um die Felder oder Einträge mit diese Datenströme zu bearbeiten.|  
-|**Parameter** Objekt|Stellt einen Parameter oder die zugeordnete Argument ein **Befehl** Objekt, auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur.|  
-|**Feld** Objekt|Stellt eine Spalte mit einem gemeinsamen Datentyp. Jede **Feld** -Objekt entspricht, auf eine Spalte in der **Recordset**.|  
-|**Eigenschaft** Objekt|Repräsentiert eine Eigenschaft eines ADO-Objekts, das vom Anbieter definiert ist. ADO-Objekte verfügen über zwei Typen von Eigenschaften: integrierte und dynamische. Integrierte Eigenschaften sind diese Eigenschaften in ADO und sofort zur Verfügung, um jedes neue Objekt implementiert wird. Die **Eigenschaft** Objekt ist ein Container für die dynamischen Eigenschaften, die vom zugrunde liegenden Anbieter definiert.|  
-|**Error** -Objekt|Enthält Details über den Datenzugriff, die auf einem einzigen Vorgang im Zusammenhang mit der Anbieter beziehen.|  
-|**Felder** Auflistung|Enthält alle der **Feld** Objekte von einem **Recordset** oder **Datensatz** Objekt.|  
-|**Eigenschaften** Auflistung|Enthält alle der **Eigenschaft** Objekte für eine bestimmte Instanz eines Objekts.|  
-|**Parameter** Auflistung|Enthält alle der **Parameter** Objekte von einem **Befehl** Objekt.|  
-|**Fehler** Auflistung|Enthält alle der **Fehler** Objekte, die in Reaktion auf einen einzelnen Anbieter bezogene Fehler erstellt.|  
+|**Verbindungs** Objekt|Stellt eine eindeutige Sitzung mit einer Datenquelle dar. Im Fall eines Client/Server-Datenbanksystems ist es möglicherweise Äquivalent zu einer tatsächlichen Netzwerkverbindung mit dem Server. Abhängig von der vom Anbieter unterstützten Funktionalität sind einige Sammlungen, Methoden oder Eigenschaften eines **Verbindungs** Objekts möglicherweise nicht verfügbar.|  
+|**Command** -Objekt|Wird verwendet, um einen bestimmten Befehl (z. b. eine SQL-Abfrage) zu definieren, der für eine Datenquelle ausgeführt werden soll.|  
+|**Recordset** -Objekt|Stellt den gesamten Satz von Datensätzen aus einer Basistabelle oder die Ergebnisse eines ausgeführten Befehls dar. Alle **Recordset** -Objekte bestehen aus Datensätzen (Zeilen) und Feldern (Spalten).|  
+|**Datensatz** -Objekt|Stellt eine einzelne Daten Zeile dar, entweder aus einem **Recordset** oder aus dem Anbieter. Dieser Datensatz kann je nach Anbieter einen Datenbankdaten Satz oder einen anderen Objekttyp, z. b. eine Datei oder ein Verzeichnis, darstellen.|  
+|**Stream** -Objekt|Stellt einen Stream von Binär-oder Textdaten dar. Beispielsweise kann ein XML-Dokument für Befehlseingaben in einen Stream geladen oder von bestimmten Anbietern als Ergebnisse einer Abfrage zurückgegeben werden. Ein **Stream** -Objekt kann verwendet werden, um Felder oder Datensätze zu bearbeiten, die diese Datenströme enthalten.|  
+|**Parameter** -Objekt|Stellt einen Parameter oder ein Argument dar, der einem **Befehls** Objekt auf Grundlage einer parametrisierten Abfrage oder gespeicherten Prozedur zugeordnet ist.|  
+|**Field** -Objekt|Stellt eine Datenspalte mit einem gemeinsamen Datentyp dar. Jedes **Feld** Objekt entspricht einer Spalte im **Recordset**.|  
+|**Property** -Objekt|Stellt ein Merkmal eines ADO-Objekts dar, das vom Anbieter definiert wird. ADO-Objekte verfügen über zwei Arten von Eigenschaften: integrierte und dynamische Eigenschaften. Integrierte Eigenschaften sind die Eigenschaften, die in ADO implementiert werden und für jedes neue Objekt sofort verfügbar sind. Das **Property** -Objekt ist ein Container für dynamische Eigenschaften, die vom zugrunde liegenden Anbieter definiert werden.|  
+|**Error** -Objekt|Enthält Details zu Datenzugriffs Fehlern, die sich auf einen einzelnen Vorgang beziehen, der den Anbieter einbezieht.|  
+|**Fields** -Auflistung|Enthält alle **Feld** Objekte eines **Recordsets** oder eines **Datensatz** -Objekts.|  
+|**Properties** -Sammlung|Enthält alle **Eigenschafts** Objekte für eine bestimmte Instanz eines-Objekts.|  
+|**Parameter** Sammlung|Enthält alle **Parameter** Objekte eines **Befehls** Objekts.|  
+|**Fehler** Sammlung|Enthält alle Fehler Objekte, die als Reaktion auf einen einzelnen Anbieter **Fehler** erstellt wurden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO-Objektmodell](../../../ado/reference/ado-api/ado-object-model.md)

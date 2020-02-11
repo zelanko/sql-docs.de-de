@@ -1,5 +1,5 @@
 ---
-title: Operatoreigenschaften "und" New-Operator (Seite Allgemein) | Microsoft-Dokumentation
+title: Operator Eigenschaften und neuer Operator (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,44 +13,44 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211346"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Operatoreigenschaften und neuer Operator (Seite „Allgemein“)
-  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von Agentoperatoren in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzeigen und ändern.  
+  Verwenden Sie diese Seite, um die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agentoperatoren anzuzeigen und zu ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Ändern Sie den Namen des Operators.  
   
- **Enabled**  
+ **Aktiviert**  
  Aktiviert den Operator. Bei fehlender Aktivierung werden keine Benachrichtigungen an den Operator gesendet.  
   
- **E-Mail-Name**  
+ **Name der E-Mail**  
  Gibt die E-Mail-Adresse des Operators an.  
   
  **NET SEND-Adresse**  
  Gibt die für **NET SEND**zu verwendende Adresse an.  
   
- **Pager-E-Mail-Name**  
+ **Pager-e-Mail**  
  Gibt die E-Mail-Adresse für den Pager des Operators an.  
   
- **Pager empfangsbereit am**  
+ **Pager nach Zeitplan**  
  Legt fest, zu welchen Zeiten der Pager aktiv ist.  
   
- **Montag - Sonntag**  
+ **Montag-Sonntag**  
  Wählen Sie die Tage aus, an denen der Pager aktiv ist.  
   
- **Arbeitstag - Beginn**  
+ **Workday BEGIN**  
  Wählen Sie die Tageszeit aus, nach deren Eintreten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent Meldungen an den Pager sendet.  
   
- **Arbeitstag - Ende**  
+ **Arbeitstag-Ende**  
  Wählen Sie die Tageszeit aus, nach deren Eintreten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent keine weiteren Meldungen an den Pager sendet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Operatoren](operators.md)  
   
   

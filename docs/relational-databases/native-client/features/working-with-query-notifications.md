@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 286236ec52f1ebb9e1d5639404a48fa91b24aee2
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761339"
 ---
 # <a name="working-with-query-notifications"></a>Arbeiten mit Abfragebenachrichtigungen
@@ -47,7 +47,7 @@ ms.locfileid: "73761339"
   
  Benachrichtigungen werden nur einmal gesendet. Für die kontinuierliche Benachrichtigung bei Datenänderungen müssen Sie ein neues Abonnement erstellen, indem Sie die Abfrage nach der Verarbeitung jeder Benachrichtigung erneut ausführen.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Anwendungen erhalten in der Regel Benachrichtigungen, indem Sie den [!INCLUDE[tsql](../../../includes/tsql-md.md)] [Receive](../../../t-sql/statements/receive-transact-sql.md) -Befehl verwenden, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungs Optionen angegebenen Dienst zugeordnet  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client Anwendungen erhalten in der Regel Benachrichtigungen, [!INCLUDE[tsql](../../../includes/tsql-md.md)] indem Sie den [Receive](../../../t-sql/statements/receive-transact-sql.md) -Befehl verwenden, um Benachrichtigungen aus der Warteschlange zu lesen, die dem in den Benachrichtigungs Optionen angegebenen Dienst zugeordnet  
   
 > [!NOTE]  
 >  Tabellennamen müssen in Abfragen qualifiziert werden, für die Benachrichtigungen erforderlich sind, z. B. `dbo.myTable`. Tabellennamen müssen mit zwei Teilnamen qualifiziert werden. Das Abonnement ist ungültig, wenn drei oder vier Teilnamen verwendet werden.  
@@ -70,16 +70,16 @@ CREATE SERVICE myService ON QUEUE myQueue
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt Consumer-Benachrichtigungen bei der Änderung von Rowsets. Der Consumer erhält in jeder Phase der Rowsetänderung und bei jeder versuchten Änderung eine Benachrichtigung.  
   
 > [!NOTE]  
->  Das übergeben einer Benachrichtigungs Abfrage an den Server mit **ICommand:: Execute** ist die einzige gültige Methode zum Abonnieren von Abfrage Benachrichtigungen mit dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter.  
+>  Das übergeben einer Benachrichtigungs Abfrage an den Server mit **ICommand:: Execute** ist die einzige gültige Methode zum Abonnieren von Abfrage Benachrichtigungen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit dem Native Client OLE DB-Anbieter.  
   
 ### <a name="the-dbpropset_sqlserverrowset-property-set"></a>Die DBPROPSET_SQLSERVERROWSET-Eigenschaftsgruppe  
- Um Abfrage Benachrichtigungen über OLE DB zu unterstützen, fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dem DBPROPSET_SQLSERVERROWSET-Eigenschaften Satz die folgenden neuen Eigenschaften hinzu.  
+ Um Abfrage Benachrichtigungen über OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fügt Native Client die folgenden neuen Eigenschaften der DBPROPSET_SQLSERVERROWSET-Eigenschaften Gruppe hinzu.  
   
-|Name|Typ|Beschreibung|  
+|Name|type|BESCHREIBUNG|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Die Anzahl der Sekunden, die die Abfragebenachrichtigung aktiv bleiben soll.<br /><br /> Der Standardwert ist 432000 Sekunden (5 Tage). Der Mindestwert ist 1 Sekunde und der Höchstwert 2^31-1 Sekunden.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Der Text der Benachrichtigung. Dieser ist benutzerdefiniert und weist kein vordefiniertes Format auf.<br /><br /> Standardmäßig ist die Zeichenfolge leer. Sie können eine Meldung mit 1-2000 Zeichen angeben.|  
-|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit der Syntax *name*=*value* angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
+|SSPROP_QP_NOTIFICATION_OPTIONS|VT_BSTR|Die Abfragebenachrichtigungsoptionen. Diese werden in einer Zeichenfolge mit *Name*=-*Wert* -Syntax angegeben. Der Benutzer ist für das Erstellen des Diensts und Lesen von Benachrichtigungen von der Warteschlange verantwortlich.<br /><br /> Der Standardwert ist eine leere Zeichenfolge.|  
   
  Für das Benachrichtigungsabonnement wird immer ein Commit durchgeführt, unabhängig davon, ob die Anweisung in einer Benutzertransaktion oder im Autocommitmodus ausgeführt wurde oder ob für die Transaktion, in der die Anweisung ausgeführt wurde, ein Commit oder Rollback durchgeführt wurde. Die Serverbenachrichtigung wird bei einer der folgenden unzulässigen Benachrichtigungsbedingungen ausgelöst: bei einer Änderung der zugrunde liegenden Daten oder des zugrunde liegenden Schemas oder bei Erreichung des Timeoutzeitraums, je nachdem, welches Ereignis früher eintritt. Benachrichtigungsregistrierungen werden gelöscht, sobald sie ausgelöst wurden. Nach dem Empfang von Benachrichtigungen muss die Anwendung das Abonnement erneuern für den Fall, dass weitere Updates abgerufen werden sollen.  
   
@@ -107,7 +107,7 @@ RECEIVE * FROM MyQueue
  Weitere Informationen zum DBPROPSET_SQLSERVERROWSET-Eigenschaften Satz finden Sie unter [Eigenschaften und Verhaltensweisen von Rowsets](../../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md).  
   
 ## <a name="sql-server-native-client-odbc-driver"></a>ODBC-Treiber für SQL Server Native Client  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt Abfrage Benachrichtigungen durch das Hinzufügen von drei neuen Attributen zu den Funktionen [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) und [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt Abfrage Benachrichtigungen durch das Hinzufügen von drei neuen Attributen zu den Funktionen [SQLGetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlgetstmtattr.md) und [SQLSetStmtAttr](../../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md) :  
   
 -   SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
   
@@ -127,7 +127,7 @@ RECEIVE * FROM MyQueue
   
 -   **ntext**  
   
--   **image**  
+-   **Klang**  
   
  Wenn eine Benachrichtigungsanforderung für eine Abfrage gesendet wird, die einen dieser Typen zurückgibt, wird die Benachrichtigung sofort mit dem Hinweis ausgelöst, dass das Benachrichtigungsabonnement nicht möglich sei.  
   
@@ -135,7 +135,7 @@ RECEIVE * FROM MyQueue
   
  Die Übermittlung einer Abfrage für eine Benachrichtigung, die vom gleichen Benutzer unter demselben Daten Bank Kontext gesendet wurde und die dieselbe Vorlage, dieselben Parameterwerte, dieselbe Benachrichtigungs-ID und denselben Übermittlungs Speicherort eines vorhandenen aktiven Abonnements aufweist, erneuert die vorhandene Abonnement, das das neue angegebene Timeout zurücksetzt. Dies bedeutet, dass nur eine Benachrichtigung gesendet wird, wenn eine Benachrichtigung für identische Abfragen angefordert wird. Dies gilt sowohl für Abfragen, die in einem Batch dupliziert werden, als auch für Abfragen in einer gespeicherten Prozedur, die mehrmals aufgerufen wurde.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

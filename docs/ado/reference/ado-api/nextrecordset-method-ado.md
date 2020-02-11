@@ -18,14 +18,14 @@ ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932036"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset-Methode (ADO)
-Löscht das aktuelle [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt und gibt die nächste **Recordset** durch eine Reihe von Befehlen gelangt sind.  
+Löscht das aktuelle [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt und gibt das nächste **Recordset** zurück, indem eine Reihe von Befehlen durchlaufen wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,33 +35,33 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine **Recordset** Objekt. Im Syntaxmodell *recordset1* und *recordset2* gleich sein **Recordset** -Objekt, oder Sie können separate Objekte. Verwendung von separaten **Recordset** Objekte, die Zurücksetzen der **ActiveConnection** -Eigenschaft im ursprünglichen **Recordset** (*recordset1*) nach dem **NextRecordset** wird aufgerufen wurde ein Fehler generiert.  
+ Gibt ein **Recordset** -Objekt zurück. Im Syntax Modell können *Recordset1* und *Recordset2* dasselbe **Recordset** -Objekt sein, oder Sie können separate Objekte verwenden. Wenn Sie separate **Recordset** -Objekte verwenden, generiert das Zurücksetzen der **ActiveConnection** -Eigenschaft für das ursprüngliche **Recordset** (*Recordset1*) nach dem Aufrufen von **NextRecordset** einen Fehler.  
   
 #### <a name="parameters"></a>Parameter  
  *RecordsAffected*  
- Optional. Ein **lange** Variablen zu dem der Anbieter gibt die Anzahl der Datensätze, die der aktuelle Vorgang betroffen.  
+ Optional. Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der aktuelle Vorgang ausgewirkt hat.  
   
 > [!NOTE]
->  Dieser Parameter gibt nur die Anzahl der Datensätze, die von einem Vorgang betroffen; Es werden keine Anzahl der Datensätze zurückgegeben, von einer select-Anweisung zum Generieren der **Recordset**.  
+>  Dieser Parameter gibt nur die Anzahl der Datensätze zurück, die von einem Vorgang betroffen sind. Sie gibt nicht die Anzahl von Datensätzen aus einer SELECT-Anweisung zurück, die zum Generieren des **Recordsets verwendet wurde**.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **NextRecordset** -Methode zur Rückgabe der Ergebnisse von den nächsten Befehl in einer zusammengesetzten Command-Anweisung oder einer gespeicherten Prozedur, die mehrere Ergebnisse zurückgibt. Beim Öffnen einer **Recordset** Objekt auf Grundlage einer zusammengesetzten-befehlsanweisung (z. B. "wählen \* von table1; SELECT \* von table2 ") mit der [ausführen](../../../ado/reference/ado-api/execute-method-ado-command.md) Methode für eine [Befehl](../../../ado/reference/ado-api/command-object-ado.md) oder [öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methode für eine **Recordset**, ADO führt nur den ersten Befehl und gibt die Ergebnisse an *Recordset*. Um die Ergebnisse der nachfolgenden Befehle in der Anweisung zuzugreifen, rufen die **NextRecordset** Methode.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **NextRecordset** -Methode, um die Ergebnisse des nächsten Befehls in einer Verbund Befehls Anweisung oder einer gespeicherten Prozedur zurückzugeben, die mehrere Ergebnisse zurückgibt. Wenn Sie ein **Recordset** -Objekt auf der Grundlage einer Verbund Befehls Anweisung öffnen (z. b \* . "SELECT FROM table1; Select \* from table2 ") mithilfe der [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) -Methode für einen [Befehl](../../../ado/reference/ado-api/command-object-ado.md) oder der [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode in einem **Recordset**führt ADO nur den ersten Befehl aus und gibt die Ergebnisse an *Recordset*zurück. Um auf die Ergebnisse der nachfolgenden Befehle in der Anweisung zuzugreifen, müssen Sie die **NextRecordset** -Methode aufrufen.  
   
- Als zusätzliche Ergebnisse vorhanden sind und die **Recordset** nicht getrennt oder Prozessgrenzen, gemarshallt wird, enthält die verbundanweisungen der **NextRecordset** Methode weiterhin zurückgeben **Recordset** Objekte. Wenn ein Zeile zurückgeben-Befehl erfolgreich ausgeführt wird, aber keine Datensätze, die den zurückgegebenen gibt **Recordset** Objekt wird geöffnet, aber leer sein. Tests für diesen Fall, indem Sie überprüfen, ob die [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) Eigenschaften sind beide **"true"** . Wenn ein Befehl nicht auf Zeilen zurückgebende erfolgreich zurückgegebenen ausgeführt wird **Recordset** -Objekt geschlossen, dies kann durch Tests überprüfen, die [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft für die **Recordset**. Wenn es keine weiteren Ergebnisse sind, *Recordset* festgelegt *nichts*.  
+ Solange zusätzliche Ergebnisse vorhanden sind und das **Recordset** , das die Verbund Anweisungen enthält, nicht getrennt oder über Prozess Grenzen hinweg gemarshallt wird, gibt die **NextRecordset** -Methode weiterhin **Recordset** -Objekte zurück. Wenn ein Zeilen Rückgabe Befehl erfolgreich ausgeführt wird, aber keine Datensätze zurückgibt, ist das zurückgegebene **Recordset** -Objekt geöffnet, aber leer. Testen Sie diesen Fall, indem Sie überprüfen, ob die Eigenschaften [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) und [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) beide **zutreffen**. Wenn ein Befehl, der keine Zeilen zurückgibt, erfolgreich ausgeführt wird, wird das zurückgegebene **Recordset** -Objekt geschlossen, das Sie überprüfen können, indem Sie die [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft des **Recordsets**testen. Wenn keine weiteren Ergebnisse vorliegen, wird *Recordset* auf " *Nothing*" festgelegt.  
   
- Die **NextRecordset** Methode ist nicht verfügbar, auf einem nicht verbundenen **Recordset** Objekt, in denen [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) festgelegt wurde **nichts**(in Microsoft Visual Basic) oder NULL (in anderen Sprachen).  
+ Die **NextRecordset** -Methode ist für ein nicht verbundenes **Recordset** -Objekt nicht verfügbar, bei dem [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) auf ' **Nothing** ' (in Microsoft Visual Basic) oder auf NULL (in anderen Sprachen) festgelegt wurde.  
   
- Wenn ein Bearbeitungsvorgang ausgeführt, während er sich im sofortupdatemodus ist, wird beim Aufrufen der **NextRecordset** Methode wird ein Fehler generiert, rufen Sie die [aktualisieren](../../../ado/reference/ado-api/update-method.md) oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode erste.  
+ Wenn im sofortigen Update Modus eine Bearbeitung ausgeführt wird, generiert der Aufruf der **NextRecordset** -Methode einen Fehler. nennen Sie zuerst die [Update](../../../ado/reference/ado-api/update-method.md) -oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode.  
   
- Zum Übergeben von Parametern, für mehr als einen Befehl in die verbundanweisung durch Ausfüllen der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Sammlung oder durch Übergeben eines Arrays mit dem ursprünglichen **öffnen** oder **Execute** aufrufen, müssen die Parameter in der gleichen Reihenfolge in der Auflistung oder ein Array als den dazugehörigen Befehlen in der Reihe Befehl sein. Sie müssen das Einlesen aller Ergebnisse vor dem Lesen von Ausgabeparameterwerte beenden.  
+ Um Parameter für mehr als einen Befehl in der Verbund Anweisung zu übergeben, indem Sie die [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung ausfüllen oder ein Array mit dem ursprünglichen **Open** -oder **Execute** -Befehl übergeben, müssen die Parameter in der gleichen Reihenfolge wie die entsprechenden Befehle in der Befehls Reihe in der Auflistung oder im Array vorliegen. Sie müssen das Lesen aller Ergebnisse abschließen, bevor Sie Ausgabeparameter Werte lesen.  
   
- OLE DB-Anbieter bestimmt, wann jeder Befehl in einer verbundanweisung ausgeführt wird. Die [Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md), z. B. alle Befehle in einem Batch nach dem Empfang der verbundanweisung ausführt. Die resultierende **Recordsets** werden einfach zurückgegeben werden, wenn Sie aufrufen **NextRecordset**.  
+ Der OLE DB-Anbieter bestimmt, wann jeder Befehl in einer Verbund Anweisung ausgeführt wird. Der [Microsoft OLE DB-Anbieter für SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md)führt z. b. alle Befehle in einem Batch aus, wenn die Verbund Anweisung empfangen wird. Die sich ergebenden **Recordsets** werden einfach zurückgegeben, wenn Sie **NextRecordset**aufruft.  
   
- Jedoch können andere Anbieter den nächsten Befehl in einer Anweisung ausführen, nur nach NextRecordset aufgerufen wird. Bei diesen Anbietern, wenn Sie explizit schließen die **Recordset** object, bevor der gesamte Befehl-Anweisung durchlaufen ADO wird nie die restlichen Befehle ausgeführt.  
+ Andere Anbieter führen den nächsten Befehl jedoch möglicherweise nur in einer Anweisung aus, nachdem NextRecordset aufgerufen wurde. Wenn Sie für diese Anbieter das **Recordset** -Objekt explizit schließen, bevor Sie die gesamte Befehls Anweisung durchlaufen, führt ADO die verbleibenden Befehle nie aus.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [NextRecordset-Methode – Beispiel (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [NextRecordset-Methode (Beispiel) (VB)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)   
  [NextRecordset-Methode – Beispiel (VC++)](../../../ado/reference/ado-api/nextrecordset-method-example-vc.md)   

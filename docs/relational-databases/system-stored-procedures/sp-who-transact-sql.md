@@ -1,5 +1,5 @@
 ---
-title: Sp_who (Transact-SQL) | Microsoft-Dokumentation
+title: sp_who (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67950515"
 ---
-# <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
+# <a name="sp_who-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält Informationen zu aktuellen Benutzern, Sitzungen und Prozessen in einer Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Die Informationen können gefiltert werden, damit nur die Prozesse zurückgegeben werden, die sich nicht im Leerlauf befinden, die zu einem bestimmten Benutzer gehören oder die zu einer bestimmten Sitzung gehören.  
+  Stellt Informationen über aktuelle Benutzer, Sitzungen und Prozesse in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]bereit. Die Informationen können gefiltert werden, damit nur die Prozesse zurückgegeben werden, die sich nicht im Leerlauf befinden, die zu einem bestimmten Benutzer gehören oder die zu einer bestimmten Sitzung gehören.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,42 +39,44 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login' | session ID | 'ACTIVE'` Dient zum Filtern des Resultsets.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'`Wird verwendet, um das Resultset zu filtern.  
   
- *Anmeldung* ist **Sysname** , Prozessen, deren Besitzer eines bestimmten Anmeldenamens identifiziert.  
+ *Login* ist vom **Datentyp vom Datentyp sysname** , der die zu einer bestimmten Anmeldung gehörenden Prozesse identifiziert.  
   
- *Sitzungs-ID* ist eine Sitzungs-ID, die zu gehören die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz. *Sitzungs-ID* ist **Smallint**.  
+ die *Sitzungs-ID* ist eine Sitzungs-ID, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die zur Instanz gehört. die *Sitzungs-ID* ist " **smallint**".  
   
- **AKTIVE** schließt Sitzungen, die auf den nächsten Befehl vom Benutzer warten.  
+ **Aktiv** schließt Sitzungen aus, die auf den nächsten Befehl vom Benutzer warten.  
   
  Wenn kein Wert angegeben ist, meldet die Prozedur alle zur Instanz gehörenden Sitzungen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- **Sp_who** gibt ein Resultset mit den folgenden Informationen zurück.  
+ **sp_who** gibt ein Resultset mit den folgenden Informationen zurück.  
   
-|Spalte|Datentyp|Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
-|**spid**|**smallint**|Sitzungs-ID.|  
-|**ecid**|**smallint**|Ausführungskontext-ID für einen bestimmten Thread, der einer bestimmten Sitzungs-ID zugeordnet ist.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, wobei 0 immer stellt dar, den Hauptknoten oder übergeordneten Thread und {1, 2, 3,... *n*} die Subthreads.|  
-|**status**|**NCHAR(30)**|Prozessstatus. Die folgenden Werte sind möglich:<br /><br /> **ruhende**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt die Sitzung zurück.<br /><br /> **Ausführung**. Die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Hintergrund**. Die Sitzung führt einen Hintergrundtask aus, z. B. Deadlockerkennung.<br /><br /> **rollback**. Die Sitzung führt gerade einen Transaktionsrollback aus.<br /><br /> **ausstehende**. Die Sitzung wartet, dass ein Arbeitsthread verfügbar wird.<br /><br /> **ausführbare**. Der Task der Sitzung wartet in der ausführbaren Warteschlange eines Zeitplanungsmoduls darauf, ein Zeitquantum zu erhalten.<br /><br /> **Spinloop**. Der Task der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> **angehalten**. Die Sitzung wartet, dass ein Ereignis, z. B. E/A, abgeschlossen wird.|  
-|**loginame**|**NCHAR(128)**|Dem entsprechenden Prozess zugeordneter Benutzername.|  
-|**hostname**|**NCHAR(128)**|Host- oder Computername für den Prozess.|  
-|**BLK**|**char(5)**|Sitzungs-ID für den blockierenden Prozess, falls vorhanden. Andernfalls ist diese Spalte 0.<br /><br /> Wenn eine Transaktion einer bestimmten Sitzungs-ID zugeordnet ist und durch eine verwaiste verteilte Transaktion blockiert wird, gibt diese Spalte den Wert -2 für die blockierende verwaiste Transaktion zurück.|  
-|**dbname**|**NCHAR(128)**|Vom Prozess verwendete Datenbank.|  
-|**cmd**|**NCHAR(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird.|  
+|**spid**|**smallint**|Sitzungs-ID|  
+|**ecid**|**smallint**|Ausführungskontext-ID für einen bestimmten Thread, der einer bestimmten Sitzungs-ID zugeordnet ist.<br /><br /> Ecid = {0, 1, 2, 3,... *n*}, wobei 0 immer den Haupt-oder übergeordneten Thread darstellt und {1, 2, 3,... *n*} stellt die Subthreads dar.|  
+|**Stands**|**NCHAR (30)**|Prozessstatus. Mögliche Werte:<br /><br /> **ruhende**. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setzt die Sitzung zurück.<br /><br /> wird **ausgeführt**. Die Sitzung führt einen oder mehrere Batches aus. Wenn MARS (Multiple Active Result Sets) aktiviert ist, kann eine Sitzung mehrere Batches ausführen. Weitere Informationen finden Sie unter [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **Hintergrund**. Die Sitzung führt einen Hintergrundtask aus, z. B. Deadlockerkennung.<br /><br /> **Rollback**. Die Sitzung führt gerade einen Transaktionsrollback aus.<br /><br /> **Ausstehend**. Die Sitzung wartet, dass ein Arbeitsthread verfügbar wird.<br /><br /> **ausführbaren**. Der Task der Sitzung wartet in der ausführbaren Warteschlange eines Zeitplanungsmoduls darauf, ein Zeitquantum zu erhalten.<br /><br /> **SPINLOOP**. Der Task der Sitzung wartet darauf, dass ein Spinlock frei wird.<br /><br /> angeh **alten.** Die Sitzung wartet, dass ein Ereignis, z. B. E/A, abgeschlossen wird.|  
+|**loginame**|**NCHAR (128)**|Dem entsprechenden Prozess zugeordneter Benutzername.|  
+|**Hostname**|**NCHAR (128)**|Host- oder Computername für den Prozess.|  
+|**blk**|**char (5)**|Sitzungs-ID für den blockierenden Prozess, falls vorhanden. Andernfalls ist diese Spalte 0.<br /><br /> Wenn eine Transaktion einer bestimmten Sitzungs-ID zugeordnet ist und durch eine verwaiste verteilte Transaktion blockiert wird, gibt diese Spalte den Wert -2 für die blockierende verwaiste Transaktion zurück.|  
+|**dbname**|**NCHAR (128)**|Vom Prozess verwendete Datenbank.|  
+|**cmd**|**NCHAR (16)**|
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Befehl ([!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung, interner [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Prozess usw.), der für den Prozess ausgeführt wird.|  
 |**request_id**|**int**|ID für Anforderungen, die in einer bestimmten Sitzung ausgeführt werden.|  
   
- Bei paralleler Verarbeitung werden für die bestimmte Sitzungs-ID Subthreads erstellt. Der Hauptthread wird mit `spid = <xxx>` und `ecid =0` angegeben. Die anderen Subthreads verfügen über denselben `spid = <xxx>`, jedoch mit **Ecid** > 0.  
+ Bei paralleler Verarbeitung werden für die bestimmte Sitzungs-ID Subthreads erstellt. Der Hauptthread wird mit `spid = <xxx>` und `ecid =0` angegeben. Die anderen Subthreads haben dieselbe `spid = <xxx>`, aber mit **ECID** > 0.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein blockierender Prozess, möglicherweise mit einer exklusiven Sperre, hat Ressourcen, die von einem anderen Prozess benötigt werden.  
   
  Allen verwaisten verteilten Transaktionen wird der Sitzungs-ID-Wert '-2' zugewiesen. Verwaiste verteilte Transaktionen sind verteilte Transaktionen, denen keine Sitzungs-ID zugeordnet ist. Weitere Informationen finden Sie unter [Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen &#40;vollständiges Wiederherstellungsmodell&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md).  
   
- Abfrage der **Is_user_process** Spalte der Sys. dm_exec_sessions, um Systemprozesse von Benutzerprozessen zu trennen.  
+ Fragen Sie die **is_user_process** -Spalte von sys. dm_exec_sessions ab, um System Prozesse von Benutzer Prozessen zu trennen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server, um alle zurzeit ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzuzeigen. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.  
@@ -110,7 +112,7 @@ EXEC sp_who 'active';
 GO  
 ```  
   
-### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>D. Anzeigen eines von einer Sitzungs-ID identifizierten bestimmten Prozesses  
+### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>D: Anzeigen eines von einer Sitzungs-ID identifizierten bestimmten Prozesses  
   
 ```  
 USE master;  
@@ -119,9 +121,9 @@ EXEC sp_who '10' --specifies the process_id;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sys. sysprocesses &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

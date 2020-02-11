@@ -19,23 +19,23 @@ ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004508"
 ---
 # <a name="logical-expressions-xquery"></a>Logische Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery unterstützt die logischen **und** und **oder** Operatoren.  
+  XQuery unterstützt die logischen **and** -und **or** -Operatoren.  
   
 ```  
 expression1 and expression2  
 expression1 or expression2  
 ```  
   
- Die Testausdrücke `expression1,``expression2`im [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] kann dazu führen, eine leere Sequenz, eine Sequenz von einem oder mehreren Knoten oder einen einzelnen booleschen Wert. Basierend auf dem Ergebnis wird der effektive boolesche Wert auf folgende Weise bestimmt:  
+ Die Test Ausdrücke, `expression1,``expression2`, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] können zu einer leeren Sequenz, einer Sequenz von einem oder mehreren Knoten oder einem einzelnen booleschen Wert führen. Basierend auf dem Ergebnis wird der effektive boolesche Wert auf folgende Weise bestimmt:  
   
 -   Wenn der Testausdruck eine leere Sequenz ergibt, ist das Ergebnis des Ausdrucks False.  
   
@@ -45,9 +45,9 @@ expression1 or expression2
   
 -   Anderenfalls wird ein statischer Fehler ausgegeben.  
   
- Die logische **und** und **oder** -Operator klicken Sie dann auf die sich ergebenden booleschen Werte der Ausdrücke mit der logischen Standardsemantik angewendet wird.  
+ Der logische **and** -Operator und der **or** -Operator werden dann auf die resultierenden booleschen Werte der Ausdrücke mit der logischen Standard Semantik angewendet.  
   
- Die folgende Abfrage ruft aus dem Produktkatalog ab, die kleinen Bilder Blickwinkel, den <`Picture`>-Element, für ein bestimmtes Produktmodell. Beachten Sie, dass der Katalog für jedes Produktbeschreibungsdokument eine oder mehrere Produktabbildungen mit verschiedenen Attributen wie z. B. Größe und Ansicht speichern kann.  
+ Mit der folgenden Abfrage werden die kleinen Bilder des <`Picture`>-Elements für ein bestimmtes Produktmodell aus dem Produktkatalog abgerufen. Beachten Sie, dass der Katalog für jedes Produktbeschreibungsdokument eine oder mehrere Produktabbildungen mit verschiedenen Attributen wie z. B. Größe und Ansicht speichern kann.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -73,7 +73,7 @@ where ProductModelID=19
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Ausdrücke](../xquery/xquery-expressions.md)  
   
   

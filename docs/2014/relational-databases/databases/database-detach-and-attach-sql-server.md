@@ -28,16 +28,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762419"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
   Die Daten- und Transaktionsprotokolldateien einer Datenbank können getrennt und anschließend an dieselbe oder eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt werden. Das Trennen und Anfügen einer Datenbank ist hilfreich, wenn Sie die Datenbank in eine andere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ändern oder wenn Sie die Datenbank verschieben möchten.  
   
- Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Speicherformat für Datenträger stimmt in 64-Bit- und in 32-Bit-Umgebungen überein. Daher können Anfügevorgänge für 32-Bit- und 64-Bit-Umgebungen übergreifend ausgeführt werden.  Eine Datenbank, die von einer in der einen Umgebung ausgeführten Serverinstanz getrennt wird, kann an eine Serverinstanz angefügt werden, die in einer anderen Umgebung ausgeführt wird.  
+ Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Speicherformat für Datenträger stimmt in 64-Bit- und in 32-Bit-Umgebungen überein. Daher können Anfügevorgänge für 32-Bit- und 64-Bit-Umgebungen übergreifend ausgeführt werden.  Eine Datenbank, die von einer in der einen Umgebung ausgeführten Serverinstanz getrennt wird, kann an eine Serverinstanz angefügt werden, die in einer anderen Umgebung ausgeführt wird.  
   
   
   
@@ -45,9 +45,9 @@ ms.locfileid: "62762419"
  Dateizugriffsberechtigungen werden während einer Reihe von Datenbankvorgängen festgelegt, einschließlich des Trennens oder Anfügens einer Datenbank.  
   
 > [!IMPORTANT]  
->  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z.B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
+>  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank auf einem nicht Produktionsserver aus, und überprüfen Sie außerdem den Code, z. b. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, in der Datenbank.  
   
-##  <a name="DetachDb"></a> Trennen einer Datenbank  
+##  <a name="DetachDb"></a>Trennen einer Datenbank  
  Durch das Trennen einer Datenbank wird diese aus der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Die Datenbank selbst bleibt jedoch innerhalb der Daten- und Transaktionsprotokolldateien intakt. Diese Dateien können anschließend verwendet werden, um die Datenbank einer beliebigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzufügen. Darin eingeschlossen ist der Server, von dem die Datenbank ursprünglich getrennt wurde.  
   
  Eine Datenbank kann in folgenden Fällen nicht getrennt werden:  
@@ -84,15 +84,15 @@ ms.locfileid: "62762419"
   
 3.  Trennen Sie die Datenbank erneut.  
   
-##  <a name="AttachDb"></a> Anfügen einer Datenbank  
- Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie Anfügen einer [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Server-Instanz, die Katalogdateien von ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien, entspricht der Vorgehensweise in angefügt werden [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
+##  <a name="AttachDb"></a>Anfügen einer Datenbank  
+ Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie eine [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Serverinstanz anfügen, werden die Katalogdateien von Ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien angefügt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], wie in. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
   
  Wenn Sie eine Datenbank anfügen, müssen alle Datendateien (MDF- und NDF-Dateien) verfügbar sein. Wenn eine Datendatei einen anderen Pfad als beim Erstellen oder beim letzten Anfügen der Datenbank aufweist, müssen Sie den aktuellen Pfad der Datei angeben.  
   
 > [!NOTE]  
 >  Wenn die angefügte primäre Datendatei schreibgeschützt ist, geht [!INCLUDE[ssDE](../../includes/ssde-md.md)] davon aus, dass auch die Datenbank schreibgeschützt ist.  
   
- Wenn eine verschlüsselte Datenbank angefügt wird mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], der Besitzer der Datenbank muss der Hauptschlüssel der Datenbank öffnen, indem Sie die folgende Anweisung ausführen: OPEN MASTER KEY-ENTSCHLÜSSELUNG DURCH KENNWORT = **" *`password`* "** . Es wird empfohlen, dass Sie die automatische Entschlüsselung des Hauptschlüssels aktivieren, indem Sie die folgende Anweisung ausführen: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Wenn eine verschlüsselte Datenbank zum ersten Mal an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angefügt wird, muss der Datenbankbesitzer den Masterschlüssel der Datenbank öffnen, indem er die folgende Anweisung ausführt: Open Master Key entschlüsseln by password = **'*`password`*'**. Es empfiehlt sich, die automatische Entschlüsselung des Masterschlüssels zu aktivieren, indem folgende Anweisung ausgeführt wird: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Weitere Informationen finden Sie unter [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) und [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Die Anforderungen für das Anfügen von Protokolldateien hängen wie im Folgenden beschrieben teilweise davon ab, ob die Datenbank Lese-/Schreibzugriff aufweist oder schreibgeschützt ist:  
   
@@ -100,11 +100,11 @@ ms.locfileid: "62762419"
   
      Wenn eine Datenbank mit Lese-/Schreibzugriff eine einzige Protokolldatei aufweist und Sie keinen neuen Speicherort für die Protokolldatei angeben, wird beim Anfügen im alten Speicherort nach der Datei gesucht. Wenn sie gefunden wird, wird die alte Protokolldatei verwendet, unabhängig davon, ob die Datenbank ordnungsgemäß heruntergefahren wurde. Wenn allerdings die alte Protokolldatei nicht gefunden wird und die Datenbank ordnungsgemäß heruntergefahren wurde und keine aktive Protokollkette aufweist, wird beim Anfügen versucht, eine neue Protokolldatei für die Datenbank zu erstellen.  
   
--   Wenn die primäre Datendatei angefügt wird schreibgeschützt ist, ist die [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] der in der primären Datei gespeicherten Protokollspeicherort kann nicht aktualisiert werden.  
+-   Wenn die angefügte primäre Datendatei schreibgeschützt ist, [!INCLUDE[ssDE](../../includes/ssnoversion-md.md)] kann den in der primären Datei gespeicherten Protokoll Speicherort nicht aktualisieren.  
   
   
   
-###  <a name="Metadata"></a> Ändern von Metadaten beim Anfügen einer Datenbank  
+###  <a name="Metadata"></a>Metadatenänderungen beim Anfügen einer Datenbank  
  Wenn eine schreibgeschützte Datenbank getrennt und dann erneut angefügt wird, gehen die Sicherungsinformationen zur aktuellen differenziellen Basis verloren. Bei der *differenziellen Basis* handelt es sich um die letzte vollständige Sicherung aller Daten in der Datenbank oder einer Teilmenge ihrer Dateien oder Dateigruppen. Ohne die Basissicherungsinformationen ist die **master** -Datenbank nicht mehr mit der schreibgeschützten Datenbank synchronisiert. Daher können später erstellte differenzielle Sicherungen zu unerwarteten Ergebnissen führen. Wenn Sie deshalb differenzielle Sicherungen für eine schreibgeschützte Datenbank verwenden, sollten Sie nach dem erneuten Anfügen der Datenbank eine neue differenzielle Basis einrichten, indem Sie eine vollständige Sicherung erstellen. Informationen zum Verwenden von differenziellen Sicherungen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../backup-restore/differential-backups-sql-server.md).  
   
  Beim Anfügen wird die Datenbank gestartet. Im Allgemeinen wird die Datenbank beim Anfügen in genau demselben Status wieder verfügbar gemacht, in dem sie sich unmittelbar vor dem Trennen oder Kopieren befunden hat. Die datenbankübergreifenden Besitzketten für die Datenbank werden durch Trenn- und Anfügevorgänge jedoch deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Außerdem wird TRUSTWORTHY auf OFF festgelegt, wenn die Datenbank angefügt wird. Informationen zum Festlegen von TRUSTWORTHY auf ON finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -132,23 +132,23 @@ ms.locfileid: "62762419"
   
 -   [Anfügen einer Datenbank](attach-a-database.md)  
   
--   [sp_attach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+-   [sp_attach_db &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
--   [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+-   [sp_attach_single_file_db &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
- **So aktualisieren Sie eine Datenbank durch Trennen und Anfügen**  
+ **So aktualisieren Sie eine Datenbank mithilfe von Trenn-und Anfüge Vorgängen**  
   
--   [Aktualisieren einer Datenbank durch Trennen und Anfügen &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
+-   [Aktualisieren einer Datenbank durchtrennen und Anfügen &#40;Transact-SQL-&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
   
- **So verschieben Sie eine Datenbank durch Trennen und Anfügen**  
+ **So verschieben Sie eine Datenbank mithilfe von Trenn-und Anfüge Vorgängen**  
   
--   [Verschieben einer Datenbank durch Trennen und Anfügen &#40;Transact-SQL&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
+-   [Verschieben einer Datenbank durchtrennen und Anfügen &#40;Transact-SQL-&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
   
- **So löschen Sie eine Datenbank-Momentaufnahme**  
+ **So löschen Sie eine Daten Bank Momentaufnahme**  
   
--   [Löschen einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
+-   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)  
   
   

@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62468326"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sichern einer Datenbank mit speicheroptimierten Tabellen
@@ -28,18 +28,18 @@ ms.locfileid: "62468326"
 ## <a name="full-database-backup"></a>Vollständige Datenbanksicherung  
  Diese Erläuterung bezieht sich auf Datenbanksicherungen für Datenbanken, die ausschließlich über dauerhafte speicheroptimierte Tabellen verfügen, da die Sicherung für datenträgerbasierte Tabellen identisch ist. Die Prüfpunktdateipaare in der speicheroptimierten Dateigruppe können unterschiedliche Statusphasen aufweisen. In der folgenden Tabelle wird beschrieben, welcher Teil der Dateien gesichert wird.  
   
-|Status des Prüfpunktdateipaars|Sicherung|  
+|Status des Prüfpunktdateipaars|Backup|  
 |--------------------------------|------------|  
 |PRECREATED|Nur Dateimetadaten|  
 |UNDER CONSTRUCTION|Nur Dateimetadaten|  
-|Active|Dateimetadaten plus verwendete Bytes|  
+|Aktiv|Dateimetadaten plus verwendete Bytes|  
 |Merge source|Dateimetadaten plus verwendete Bytes|  
 |Merge target|Nur Dateimetadaten|  
 |REQUIRED FOR BACKUP/HA|Dateimetadaten plus verwendete Bytes|  
 |IN TRANSITION TO TOMBSTONE|Nur Dateimetadaten|  
 |TOMBSTONE|Nur Dateimetadaten|  
   
- Die Größe von Datenbanksicherungen mit einer oder mehreren speicheroptimierten Tabellen liegt in der Regel über deren Größe im Arbeitsspeicher jedoch unter dem auf dem Datenträger belegten Speicherplatz. Die zusätzliche Größe richtet sich nach der Anzahl gelöschter Zeilen und der Anzahl von Prüfpunktdateipaaren mit dem Status Merge sourceund REQUIRED FOR BACKUP/HA, die indirekt von der Arbeitsauslastung abhängt. Beschreibungen der Statusphasen für prüfpunktdateipaare finden Sie [Sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
+ Die Größe von Datenbanksicherungen mit einer oder mehreren speicheroptimierten Tabellen liegt in der Regel über deren Größe im Arbeitsspeicher jedoch unter dem auf dem Datenträger belegten Speicherplatz. Die zusätzliche Größe richtet sich nach der Anzahl gelöschter Zeilen und der Anzahl von Prüfpunktdateipaaren mit dem Status Merge sourceund REQUIRED FOR BACKUP/HA, die indirekt von der Arbeitsauslastung abhängt. Beschreibungen der Zustände für Prüfpunkt-Datei Paare finden Sie unter [sys. dm_db_xtp_checkpoint_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql).  
   
 ### <a name="estimating-size-of-full-database-backup"></a>Schätzen der Größe einer vollständigen Datenbanksicherung  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62468326"
   
  Das erste Arbeitsauslastungsszenario bezieht sich (hauptsächlich) auf Einfügevorgänge. In diesem Szenario weisen die meisten Datendateien den Status ACTIVE und einige wenige gelöschte Zeilen auf und wurden vollständig geladen. Die Größe der Datenbanksicherung entspricht in etwa der Größe der Daten im Arbeitsspeicher.  
   
- Das zweite arbeitsauslastungsszenario bezieht sich häufige Einfüge-, Lösch-und Updatevorgänge: Im ungünstigsten Fall wurde jedes Prüfpunktdateipaar nach Berücksichtigung der gelöschten Zeilen zu 50 % geladen. Daher ist die Datenbanksicherung mindestens zweimal so groß wie die Daten im Arbeitsspeicher. Zusätzlich wächst die Größe der Datenbanksicherung durch einige Prüfpunktdateipaare mit dem Status „Quelle zusammenführen“ und „Für Backup/HA erforderlich“ weiter an.  
+ Das zweite Arbeitsauslastungsszenario bezieht sich auf häufige Einfüge-, Lösch- und Updatevorgänge: Im ungünstigsten Fall wurde jedes Prüfpunktdateipaar nach Berücksichtigung der gelöschten Zeilen zu 50 % geladen. Daher ist die Datenbanksicherung mindestens zweimal so groß wie die Daten im Arbeitsspeicher. Zusätzlich wächst die Größe der Datenbanksicherung durch einige Prüfpunktdateipaare mit dem Status „Quelle zusammenführen“ und „Für Backup/HA erforderlich“ weiter an.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Differenzielle Sicherungen von Datenbanken mit speicheroptimierten Tabellen  
  Der Speicher für speicheroptimierte Tabellen setzt sich zusammen aus Daten- und Änderungsdateien, wie in [Dauerhaftigkeit für speicheroptimierte Tabellen](memory-optimized-tables.md)beschrieben. Eine differenzielle Sicherung einer Datenbank mit speicheroptimierten Tabellen enthält die folgenden Daten:  
@@ -67,7 +67,7 @@ ms.locfileid: "62468326"
   
  Bei typischen OLTP-Arbeitsauslastungen fallen differenzielle Sicherungen wesentlich kleiner als vollständige Datenbanksicherungen aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen speicheroptimierter Tabellen](restore-and-recovery-of-memory-optimized-tables.md)  
   
   
