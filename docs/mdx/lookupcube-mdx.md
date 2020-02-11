@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ec18b600c369de872df5f6eadf06ef6c30c88efa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098512"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
@@ -35,23 +35,23 @@ LookupCube(Cube_Name, String_Expression )
  *Cube_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen eines Cubes angibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
  *String_Expression*  
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich in der Regel um einen gültigen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, der eine Zeichenfolge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein numerischer Ausdruck angegeben wird, die **LookupCube** Funktion wertet den angegebenen numerischen Ausdruck im angegebenen Cube, und gibt den sich ergebenden numerischen Wert.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein numerischer Ausdruck angegeben wird, wertet die **LookupCube** -Funktion den angegebenen numerischen Ausdruck im angegebenen Cube aus und gibt den resultierenden numerischen Wert zurück.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die **LookupCube** Funktion wertet den angegebenen Zeichenfolgenausdruck im angegebenen Cube aus und gibt den sich ergebenden Zeichenfolgenwert zurück.  
+ Wenn ein Zeichen folgen Ausdruck angegeben wird, wertet die **LookupCube** -Funktion den angegebenen Zeichen folgen Ausdruck im angegebenen Cube aus und gibt den resultierenden Zeichen folgen Wert zurück.  
   
- Die **LookupCube** Funktion funktioniert auf Cubes innerhalb derselben Datenbank wie der Quellcube, auf denen die MDX-Abfrage, enthält die **LookupCube** Funktion ausgeführt wird.  
+ Die **LookupCube** -Funktion funktioniert für Cubes in derselben Datenbank wie der Quellcube, in dem die MDX-Abfrage ausgeführt wird, die die **LookupCube** -Funktion enthält.  
   
 > [!IMPORTANT]  
 >  Sie müssen alle notwendigen aktuellen Elemente in dem numerischen oder Zeichenfolgenausdruck angeben, da der Kontext der aktuellen Abfrage nicht für den abgefragten Cube übernommen wird.  
   
- Jeder Berechnung mithilfe der **LookupCube** Funktion führt wahrscheinlich zu einer schlechten Leistung leiden. Überlegen Sie sich, die Lösung umzugestalten anstatt diese Funktion zu verwenden, damit alle Daten, die Sie benötigen, in einem Cube vorhanden sind.  
+ Jede Berechnung mit der **LookupCube** -Funktion beeinträchtigt wahrscheinlich die Leistung. Überlegen Sie sich, die Lösung umzugestalten anstatt diese Funktion zu verwenden, damit alle Daten, die Sie benötigen, in einem Cube vorhanden sind.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage veranschaulicht die Verwendung von LookupCube:  
@@ -64,7 +64,7 @@ LookupCube(Cube_Name, String_Expression )
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

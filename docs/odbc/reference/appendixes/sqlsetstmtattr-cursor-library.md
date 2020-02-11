@@ -1,5 +1,5 @@
 ---
-title: SQLSetStmtAttr (Cursor Library) | Microsoft-Dokumentation
+title: SQLSetStmtAttr (Cursor Bibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bc222c1c8669769060de4fc0a1390a9bf02e3f31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091693"
 ---
 # <a name="sqlsetstmtattr-cursor-library"></a>SQLSetStmtAttr (Cursorbibliothek)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema erläutert die Verwendung von der **SQLSetStmtAttr** -Funktion in der Cursorbibliothek. Allgemeine Informationen zur **SQLSetStmtAttr**, finden Sie unter [SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ In diesem Thema wird die Verwendung der **SQLSetStmtAttr** -Funktion in der Cursor Bibliothek erläutert. Allgemeine Informationen zu **SQLSetStmtAttr**finden Sie unter [SQLSetStmtAttr-Funktion](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
- Die Cursorbibliothek unterstützt die folgenden Anweisungsattribute mit **SQLSetStmtAttr**:  
+ Die Cursor Bibliothek unterstützt die folgenden Anweisungs Attribute mit **SQLSetStmtAttr**:  
   
 |||  
 |-|-|  
@@ -35,16 +35,16 @@ ms.locfileid: "68091693"
 |SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
 |SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
   
- Die Cursorbibliothek unterstützt nur die SQL_CURSOR_FORWARD_ONLY und SQL_CURSOR_STATIC Werte des Attributs SQL_ATTR_CURSOR_TYPE-Anweisung.  
+ Die Cursor Bibliothek unterstützt nur die SQL_CURSOR_FORWARD_ONLY und SQL_CURSOR_STATIC Werte des Attributs der SQL_ATTR_CURSOR_TYPE Anweisung.  
   
- Für Vorwärtscursor unterstützt die Cursorbibliothek die SQL_CONCUR_READ_ONLY-Wert, der das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf. Für statische Cursor unterstützt die Cursorbibliothek die SQL_CONCUR_READ_ONLY und SQL_CONCUR_VALUES-Werte, der das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf.  
+ Für Vorwärts Cursor unterstützt die Cursor Bibliothek den SQL_CONCUR_READ_ONLY Wert des Attributs der SQL_ATTR_CONCURRENCY Anweisung. Bei statischen Cursorn unterstützt die Cursor Bibliothek die SQL_CONCUR_READ_ONLY und SQL_CONCUR_VALUES Werte des Attributs der SQL_ATTR_CONCURRENCY Anweisung.  
   
- Die Cursorbibliothek unterstützt nur den SQL_SC_NON_UNIQUE-Wert des Attributs SQL_ATTR_SIMULATE_CURSOR-Anweisung.  
+ Die Cursor Bibliothek unterstützt nur den SQL_SC_NON_UNIQUE Wert des Attributs der SQL_ATTR_SIMULATE_CURSOR Anweisung.  
   
- Obwohl die ODBC-Spezifikation Aufrufe unterstützt **SQLSetStmtAttr** mit den Attributen SQL_ATTR_PARAM_BIND_TYPE oder SQL_ATTR_ROW_BIND_TYPE nach **SQLFetch** oder **SQLFetchScroll**  aufgerufen wurde, den Cursor Library nicht. Bevor sie den Bindungstyp im die Cursorbibliothek ändern kann, muss die Anwendung den Cursor zu schließen. Die Cursorbibliothek unterstützt Ändern des SQL_ATTR_ROW_BIND_OFFSET_PTR, SQL_ATTR_PARAM_BIND_OFFSET_PTR, SQL_ATTR_ROWS_FETCHED_PTR fest und Anweisungsattribute SQL_ATTR_PARAMS_PROCESSED_PTR, wenn ein Cursor geöffnet ist.  
+ Obwohl die ODBC-Spezifikation Aufrufe von **SQLSetStmtAttr** mit den SQL_ATTR_PARAM_BIND_TYPE-oder SQL_ATTR_ROW_BIND_TYPE-Attributen unterstützt, nachdem **SQLFetch** oder **SQLFetchScroll** aufgerufen wurde, wird die Cursor Bibliothek nicht verwendet. Bevor der Bindungstyp in der Cursor Bibliothek geändert werden kann, muss der Cursor von der Anwendung geschlossen werden. Die Cursor Bibliothek unterstützt das Ändern der SQL_ATTR_ROW_BIND_OFFSET_PTR-, SQL_ATTR_PARAM_BIND_OFFSET_PTR-, SQL_ATTR_ROWS_FETCHED_PTR-und SQL_ATTR_PARAMS_PROCESSED_PTR-Anweisungs Attribute, wenn ein Cursor geöffnet ist.  
   
- Kann eine Anwendung aufrufen **SQLSetStmtAttr** mit einer **Attribut** von SQL_ATTR_ROW_ARRAY_SIZE, um die Größe des Rowsets zu ändern, während ein Cursor geöffnet ist. Die neue Rowsetgröße werden wirksam, das nächste Mal **SQLFetchScroll** oder **SQLFetch** aufgerufen wird.  
+ Eine Anwendung kann **SQLSetStmtAttr** mit einem **Attribut** von SQL_ATTR_ROW_ARRAY_SIZE aufrufen, um die Rowsetgröße zu ändern, während ein Cursor geöffnet ist. Die neue Rowsetgröße wird beim nächsten Aufrufen von **SQLFetchScroll** oder **SQLFetch** wirksam.  
   
- Die Cursorbibliothek unterstützt das Festlegen der SQL_ATTR_PARAM_BIND_OFFSET_PTR oder SQL_ATTR_ROW_BIND_OFFSET_PTR-Anweisungsattribut, um die Bindung Offsets zu aktivieren. Der Offset für die Bindung wird nicht verwendet werden, für Aufrufe von **SQLFetch** Wenn mit einer ODBC 2. die Cursorbibliothek verwendet wird. *X* Treiber.  
+ Die Cursor Bibliothek unterstützt das Festlegen des SQL_ATTR_PARAM_BIND_OFFSET_PTR oder SQL_ATTR_ROW_BIND_OFFSET_PTR Anweisungs Attributs, um Bindungs Offsets zu aktivieren. Der Bindungs Offset wird nicht für Aufrufe von **SQLFetch** verwendet, wenn die Cursor Bibliothek mit einem ODBC 2 verwendet wird. *x* -Treiber  
   
- Die Cursorbibliothek unterstützt das SQL_ATTR_USE_BOOKMARKS-Anweisungsattribut auf SQL_UB_VARIABLE festlegen.
+ Die Cursor Bibliothek unterstützt das Festlegen des SQL_ATTR_USE_BOOKMARKS Anweisungs Attributs auf SQL_UB_VARIABLE.

@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession2:: Bcpsetbulkmode | Microsoft-Dokumentation'
+title: 'IBCPSession2:: bcpsetbulkmode | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989991"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
-  Ibcpsession2:: Bcpsetbulkmode bietet eine Alternative zum [ibcpsession:: BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spaltenformats. Im Gegensatz zu ibcpsession:: BCPColFmt, bei dem einzelne spaltenformatattribute festgelegt, werden alle Attribute ibcpsession2:: Bcpsetbulkmode fest.  
+  IBCPSession2:: bcpsetbulkmode stellt eine Alternative zum [IBCPSession:: BCPColFmt-&#40;OLE DB&#41;](ibcpsession-bcpcolfmt-ole-db.md) zum Angeben des Spalten Formats bereit. Anders als bei IBCPSession:: bcpcolf, bei dem einzelne Spalten Format Attribute festgelegt werden, werden von IBCPSession2:: bcpsetbulkmode alle Attribute festgelegt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,10 +36,10 @@ HRESULT BCPSetBulkMode (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *property*  
+ *Property*  
  Eine Konstante vom Typ BYTE. Eine Liste der Konstanten finden Sie in der Tabelle im Abschnitt mit Hinweisen.  
   
- *pField*  
+ *pfield*  
  Der Zeiger auf den Wert des Feldabschlusszeichens.  
   
  cbField  
@@ -51,36 +51,36 @@ HRESULT BCPSetBulkMode (
  cbRow  
  Die Länge in Bytes des Zeilenabschlusszeichenwerts.  
   
-## <a name="returns"></a>Rückgabewert  
- Ibcpsession2:: Bcpsetbulkmode kann einen der folgenden zurückgeben:  
+## <a name="returns"></a>Rückgabe  
+ IBCPSession2:: bcpsetbulkmode kann eine der folgenden zurückgeben:  
   
 |||  
 |-|-|  
 |`S_OK`|Die Methode wurde erfolgreich ausgeführt.|  
 |`E_FAIL`|Ein anbieterspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die ISQLServerErrorInfo-Schnittstelle.|  
-|`E_UNEXPECTED`|Die Methode wurde unerwartet aufgerufen. Z. B. die `IBCPSession2::BCPInit` Methode nicht vor dem Aufrufen von ibcpsession2:: Bcpsetbulkmode aufgerufen wurde.|  
+|`E_UNEXPECTED`|Die Methode wurde unerwartet aufgerufen. Beispielsweise wurde die `IBCPSession2::BCPInit` -Methode nicht aufgerufen, bevor IBCPSession2:: bcpsetbulkmode aufgerufen wurde.|  
 |`E_INVALIDARG`|Das Argument war ungültig.|  
 |`E_OUTOFMEMORY`|Fehler aufgrund von nicht genügend Arbeitsspeicher.|  
   
-## <a name="remarks"></a>Hinweise  
- Ibcpsession2:: Bcpsetbulkmode kann zum Massenkopieren aus einer Abfrage oder eine Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
+## <a name="remarks"></a>Bemerkungen  
+ IBCPSession2:: bcpsetbulkmode kann zum Massen kopieren aus einer Abfrage oder einer Tabelle verwendet werden. Wenn IBCPSession2::BCPSetBulkMode zum Massenkopieren aus einer Abfrageanweisung verwendet wird, muss es vor dem Aufruf von `IBCPSession::BCPControl(BCP_OPTIONS_HINTS, ...)` aufgerufen werden, um die Abfrageanweisung anzugeben.  
   
- Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dadurch wird ICommandPrepare:: Prepare einen Fehler zurück, und verhindert das Abrufen von Metadaten. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  
+ Kombinieren Sie nicht in einem einzelnen Befehlstext die RPC-Aufrufsyntax mit der Batchabfragesyntax (z. B.`{rpc func};SELECT * from Tbl`).  Dies bewirkt, dass ICommandPrepare::P repas einen Fehler zurückgibt und verhindert, dass Metadaten abgerufen werden. Verwenden Sie ODBC CALL-Syntax (z. B.`{call func}; SELECT * from Tbl`), wenn Sie die Ausführung gespeicherter Prozeduren und die Batchabfrage in einem einzelnen Befehlstext kombinieren müssen.  
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|property|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in BCP. EXE-Datei, und klicken Sie auf die ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf `BCP_TYPE_SQLCHARACTER`.|  
-|BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der – w-Option in BCP. EXE-Datei und ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf `BCP_TYPE_SQLNCHAR`.|  
-|BCP_OUT_NATIVE_TEXT_MODE|Gibt systemeigene Typen für Nicht-Zeichen-Typen und Unicode für Zeichentypen an.<br /><br /> Entspricht der Option-n in BCP. EXE-Datei und ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf `BCP_TYPE_SQLNCHAR` , wenn der Spaltentyp eine Zeichenfolge ist oder `BCP_TYPE_DEFAULT` Wenn keine Zeichenfolge.|  
-|BCP_OUT_NATIVE_MODE|Gibt systemeigene Datenbanktypen an.<br /><br /> Entspricht der Option-n in BCP. EXE-Datei und ibcpsession:: BCPColFmt mit *eUserDataType* -Eigenschaftensatz auf `BCP_TYPE_DEFAULT`.|  
+|BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in bcp. EXE und in IBCPSession:: BCPColFmt mit der *eUserDataType* -Eigenschaft auf `BCP_TYPE_SQLCHARACTER`festgelegt.|  
+|BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der-w-Option in bcp. EXE und IBCPSession:: BCPColFmt mit der *eUserDataType* -Eigenschaft `BCP_TYPE_SQLNCHAR`ist auf festgelegt.|  
+|BCP_OUT_NATIVE_TEXT_MODE|Gibt systemeigene Typen für Nicht-Zeichen-Typen und Unicode für Zeichentypen an.<br /><br /> Entspricht der Option-N in bcp. EXE und IBCPSession:: BCPColFmt mit der *eUserDataType* -Eigenschaft `BCP_TYPE_SQLNCHAR` ist auf festgelegt, wenn der Spaltentyp eine Zeichenfolge oder `BCP_TYPE_DEFAULT` keine Zeichenfolge ist.|  
+|BCP_OUT_NATIVE_MODE|Gibt systemeigene Datenbanktypen an.<br /><br /> Entspricht der Option-n in bcp. EXE und IBCPSession:: BCPColFmt mit der *eUserDataType* -Eigenschaft `BCP_TYPE_DEFAULT`ist auf festgelegt.|  
   
- Sie können ibcpsession:: Bcpcontrol und ibcpsession2:: Bcpsetbulkmode ibcpsession:: Bcpcontrol Optionen aufrufen, die nicht mit ibcpsession2:: Bcpsetbulkmode in Konflikt stehen. Sie können z. B. ibcpsession:: Bcpcontrol mit Aufrufen `BCP_OPTION_FIRST` und ibcpsession2:: Bcpsetbulkmode.  
+ Sie können IBCPSession:: BCPControl und IBCPSession2:: bcpsetbulkmode für die IBCPSession:: BCPControl-Optionen aufrufen, die nicht mit IBCPSession2:: bcpsetbulkmode in Konflikt stehen. Beispielsweise können Sie IBCPSession:: BCPControl mit `BCP_OPTION_FIRST` und IBCPSession2:: bcpsetbulkmode aufrufen.  
   
- Sie können nicht aufgerufen werden ibcpsession:: Bcpcontrol mit `BCP_OPTION_TEXTFILE` und ibcpsession2:: Bcpsetbulkmode.  
+ Sie können IBCPSession:: BCPControl mit `BCP_OPTION_TEXTFILE` und IBCPSession2:: bcpsetbulkmode nicht aufrufen.  
   
- Wenn Sie versuchen, ibcpsession2:: Bcpsetbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die ibcpsession:: BCPColFmt ibcpsession:: Bcpcontrol und ibcpsession:: Bcpreadfmt enthält, gibt einen der Funktionsaufrufe einen Sequenzfehler zurück. Wenn Sie den Fehler korrigieren möchten, rufen Sie IBCPSession::BCPInit auf, um die Einstellungen zurückzusetzen und den Vorgang neu zu beginnen.  
+ Wenn Sie versuchen, IBCPSession2:: bcpsetbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die IBCPSession:: BCPColFmt, IBCPSession:: BCPControl und IBCPSession:: BCPReadFmt umfasst, gibt einer der Funktionsaufrufe einen Sequenz Fehler Fehler zurück. Wenn Sie den Fehler korrigieren möchten, rufen Sie IBCPSession::BCPInit auf, um die Einstellungen zurückzusetzen und den Vorgang neu zu beginnen.  
   
  In der folgenden Tabelle werden einige Beispiele für Funktionsaufrufe dargestellt, die zu einem Funktionssequenzfehler führen:  
   
@@ -360,7 +360,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [IBCPSession2 &#40;OLE DB&#41;](ibcpsession2-ole-db.md)  
   
   

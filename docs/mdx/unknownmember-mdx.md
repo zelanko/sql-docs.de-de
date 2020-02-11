@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097281"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember (MDX)
@@ -38,20 +38,20 @@ Hierarchy_Expression.UnknownMember
  *Hierarchy_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Hierarchie zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Analysis Services erstellt ein unbekanntes Element einer Hierarchie Faktentabellendaten zuordnen, wenn die Hierarchie nicht bekannt ist. Das unbekannte Element kann sich auf einer der folgenden Ebenen befinden:  
+## <a name="remarks"></a>Bemerkungen  
+ Analysis Services erstellt ein unbekanntes Element, um Fakten Tabellendaten einer Hierarchie zuzuordnen, wenn die Hierarchie nicht bekannt ist. Das unbekannte Element kann sich auf einer der folgenden Ebenen befinden:  
   
 -   Auf der obersten Ebene für nicht aggregierte Attributhierarchien.  
   
--   Klicken Sie auf der ersten Ebene unter der **alle** -Ebene für natürliche Hierarchien.  
+-   Auf der ersten Ebene unterhalb der **all** -Ebene für natürliche Hierarchien.  
   
 -   Auf jeder Ebene für unnatürliche Hierarchien.  
   
- Wenn ein Elementausdruck angegeben ist, die **UnknownMember** Funktion gibt das unbekannte untergeordnete Element des angegebenen Elements zurück. Wenn das angegebene Element nicht vorhanden ist, gibt die Funktion den Wert NULL zurück.  
+ Wenn ein Element Ausdruck angegeben ist, gibt die **UnknownMember** -Funktion das unbekannte Member-Element des angegebenen Elements zurück. Wenn das angegebene Element nicht vorhanden ist, gibt die Funktion den Wert NULL zurück.  
   
- Wenn ein Hierarchieausdruck angegeben wird, die **UnknownMember** Funktion gibt das unbekannte Element auf der obersten Ebene zurück, falls vorhanden.  
+ Wenn ein Hierarchie Ausdruck angegeben wird, gibt die **UnknownMember** -Funktion das unbekannte Element auf der obersten Ebene zurück, sofern vorhanden.  
   
- Wenn das unbekannte Element nicht, auf die Ebene oder einem Element vorhanden ist, das **UnknownMember** -Funktion erstellt ein null-Element.  
+ Wenn das unbekannte Element auf der Ebene oder dem Element nicht vorhanden ist, erstellt die **UnknownMember** -Funktion einen NULL-Member.  
   
 > [!NOTE]  
 >  Wenn kein unbekanntes Element in der Hierarchie oder für das Element vorhanden ist, wird ein Fehler generiert.  
@@ -79,7 +79,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

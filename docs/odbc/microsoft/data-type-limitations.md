@@ -1,5 +1,5 @@
 ---
-title: Datentyp-Einschränkungen | Microsoft-Dokumentation
+title: Einschränkungen des Datentyps | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096464"
 ---
 # <a name="data-type-limitations"></a>Einschränkungen für Datumstypen
-Der Microsoft ODBC Desktop-Datenbanktreiber verursachen die folgenden Einschränkungen für Datentypen:  
+Die Microsoft ODBC Desktop-Datenbanktreiber erzwingen die folgenden Einschränkungen für-Datentypen:  
   
-|Datentyp|Beschreibung|  
+|Datentyp|BESCHREIBUNG|  
 |---------------|-----------------|  
-|Alle Datentypen|Konvertierungsfehler Typ können dazu führen, dass die betreffende Spalte auf NULL festgelegt wird.|  
-|BINARY|Erstellen eine BINÄRE Zeichenfolge der Länge Null-Spalte gibt tatsächlich eine BINÄRE 255-Byte-Spalte zurück.|  
-|DATE|Der DATE-Datentyp kann nicht auf einen anderen Datentyp (oder selbst) durch die CONVERT-Funktion konvertiert werden.|  
-|DECIMAL (genauer numerischer Wert)|Wird nicht unterstützt.|  
-|Gleitkomma-Datentypen|Die Anzahl der Dezimalstellen in eine Gleitkommazahl kann durch das Zahlenformat, legen Sie im Abschnitt der Windows-Systemsteuerung internationale eingeschränkt werden.|  
-|NUMERIC|Unterstützt die maximale Genauigkeit und Dezimalstellen des 28.|  
-|timestamp|Der TIMESTAMP-Datentyp kann nicht auf sich selbst von der CONVERT-Funktion konvertiert werden.|  
-|TINYINT|TINYINT-Werte sind immer ohne Vorzeichen.|  
-|Leere Zeichenfolgen|Wenn eine dBASE, Microsoft Excel, Paradox oder Textdriver verwendet wird, fügt eine Zeichenfolge der Länge 0 (null) in eine Spalte einfügen tatsächlich ein NULL-Wert stattdessen.|
+|Alle Datentypen|Typkonvertierungs Fehler können dazu führen, dass die betroffene Spalte auf NULL festgelegt wird.|  
+|BINARY|Beim Erstellen einer binären Spalte der Länge 0 (null) wird tatsächlich eine 255-Byte-Binär Spalte zurückgegeben.|  
+|DATE|Der Date-Datentyp kann von der Convert-Funktion nicht in einen anderen Datentyp (oder selbst) konvertiert werden.|  
+|Decimal (genau numerisch)|Wird nicht unterstützt.|  
+|Gleit Komma Datentypen|Die Anzahl der Dezimalstellen in einer Gleit Komma Zahl kann durch das Zahlenformat eingeschränkt werden, das im internationalen Abschnitt der Windows-Systemsteuerung festgelegt ist.|  
+|NUMERIC|Unterstützt maximale Genauigkeit und eine Skala von 28.|  
+|timestamp|Der timestamp-Datentyp kann von der Convert-Funktion nicht in sich selbst konvertiert werden.|  
+|TINYINT|TINYINT-Werte sind immer unsigniert.|  
+|Zeichen folgen der Länge 0|Wenn eine dBASE, Microsoft Excel, Paradox oder textdriver verwendet wird, fügt eine Zeichenfolge der Länge 0 (null) in eine Spalte ein, stattdessen wird stattdessen ein NULL-Wert eingefügt.|

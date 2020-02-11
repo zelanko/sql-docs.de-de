@@ -1,5 +1,5 @@
 ---
-title: DataSpace-Objekt und CreateObject-Methode – Beispiel (VBScript) | Microsoft-Dokumentation
+title: DataSpace-Objekt und Beispiel für eine kreateobject-Methode (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 12b0e160-5e5c-441f-bed7-ac0bd061e003
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7c9eb9a15094f6c08bacb9e063c707163548875a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964339"
 ---
 # <a name="dataspace-object-and-createobject-method-example-vbscript"></a>DataSpace-Objekt und CreateObject-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Das folgende Beispiel zeigt, wie Sie mit der [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) Methode der [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) mit dem Standard-Geschäftsobjekt [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Klicken Sie zum Testen dieses Beispiels, schneiden, und fügen Sie diesen Code zwischen den \<Text > und \</Body > Tags in ein normales HTML-Dokument, und nennen Sie sie **DataSpaceVBS.asp**. ASP-Skript wird auf den Server identifiziert.  
+ Im folgenden Beispiel wird gezeigt, wie die Methode "up [Object](../../../ado/reference/rds-api/createobject-method-rds.md) " der RDS-Methode verwendet wird [. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) mit dem Standard Geschäftsobjekt [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md). Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Text>- \<und/Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein, und nennen Sie ihn **dataspacevb. ASP** Das ASP-Skript identifiziert Ihren Server.  
   
 ```  
 <!-- BeginDataSpaceVBS -->  
@@ -130,12 +130,12 @@ The <i>Query</i> Method of the RDSServer.DataFactory is used to bring back a Rec
 <!-- EndDataSpaceVBS -->  
 ```  
   
- Das folgende Beispiel zeigt, wie Sie mit der **CreateObject** Methode zum Erstellen einer Instanz eines benutzerdefinierten Geschäftsobjekts VbBusObj.VbBusObjCls. Außerdem verwendet er die Active Server Pages Skripting, um den Namen des Webservers zu identifizieren.  
+ Im folgenden Beispiel wird gezeigt, wie Sie mit **der Methode "** -Methode" eine Instanz eines benutzerdefinierten Geschäftsobjekts (vbbusobj. VbBusObjCls) erstellen. Außerdem wird die Skripterstellung für die Active Server Seiten verwendet, um den Webserver Namen zu identifizieren.  
   
- Um das vollständige Beispiel anzuzeigen, öffnen Sie die Auswahl der Beispiel-Anwendungen. In der **Clientebene** Spalte **VBScript in Internet Explorer**. In der **mittleren Ebene** Spalte **benutzerdefinierte Visual Basic-Geschäftsobjekt**.  
+ Um das komplette Beispiel anzuzeigen, öffnen Sie die Auswahl der Beispielanwendungen. Wählen Sie in der Spalte **Client Ebene** **in Internet Explorer die Option VBScript aus**. Wählen Sie in der Spalte **mittlere Ebene** die Option **benutzerdefiniertes Visual Basic Geschäftsobjekt**aus.  
   
 > [!NOTE]
->  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben **Trusted_Connection = Yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort die Informationen in der Verbindungszeichenfolge.  
+>  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unterstützt, sollten Sie in der Verbindungs Zeichenfolge **Trusted_Connection = yes** oder **Integrated Security = SSPI** anstelle von Benutzer-ID und Kennwort angeben.  
   
 ```  
 Sub Window_OnLoad()  
@@ -146,8 +146,8 @@ Sub Window_OnLoad()
 End Sub  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CreateObject-Methode (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Methode "kreateobject" (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
  [DataSpace-Objekt (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)
 
 

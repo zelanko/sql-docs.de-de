@@ -1,5 +1,5 @@
 ---
-title: Bookmark-C-Datentyp | Microsoft-Dokumentation
+title: Bookmark C-Datentyp | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,21 +17,21 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125745"
 ---
 # <a name="bookmark-c-data-type"></a>Textmarke, C-Datentyp
-Das Lesezeichen C-Datentyp kann es sich um eine Anwendung ein Lesezeichen abrufen. Die Lesezeichen-C-Typen werden verwendet, nur für die Lesezeichenwerte abzurufen, die variabler Länge werden kann. Sie sollten nicht in andere Datentypen konvertiert werden. Eine Anwendung ruft ein Lesezeichen, legen Sie entweder von Spalte 0 des Ergebnisses mit **SQLBulkOperations** (mit einem Vorgang des SQL_ADD), **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**. Weitere Informationen finden Sie unter [Lesezeichen](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
+Der Datentyp Bookmark C ermöglicht einer Anwendung das Abrufen eines Lesezeichens. Die Lesezeichen-C-Typen werden nur zum Abrufen von Lesezeichen Werten verwendet, die eine Variable Länge aufweisen können. Sie sollten nicht in andere Datentypen konvertiert werden. Eine Anwendung ruft ein Lesezeichen entweder aus der Spalte 0 des Resultsets mit **SQLBulkOperations** (mit dem Vorgang SQL_ADD), **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**ab. Weitere Informationen finden Sie unter [Lesezeichen](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
   
- Die folgende Tabelle enthält den Wert der *CType* für den Lesezeichen C-Datentyp, geben Sie der ODBC-C-Datentyp, der die Lesezeichen C-Datentyp und die Definition dieser Daten implementiert von SQL. H.  
+ In der folgenden Tabelle sind der Wert von *CType* für den Datentyp Bookmark c, der ODBC-c-Datentyp, der den Datentyp Bookmark c implementiert, und die Definition dieses Datentyps aus SQL aufgeführt. Micha.  
   
 > [!NOTE]
->  Der Datentyp SQL_C_BOOKMARK wurde als veraltet markiert. ODBC *3.x* Anwendungen sollten keine SQL_C_BOOKMARK verwenden. ODBC *3.x* SQL_C_BOOKMARK unterstützen nur, wenn sie, arbeiten Sie mit dem ODBC möchten-Treiber müssen *2.x* Anwendungen, die sie verwenden. Der Treiber-Manager ordnet SQL_C_BOOKMARK SQL_C_VARBOOKMARK, wenn eine Anwendung mit einer ODBC-funktioniert *2.x* Treiber.  
+>  Der SQL_C_BOOKMARK-Datentyp ist veraltet. ODBC *3. x* -Anwendungen sollten SQL_C_BOOKMARK nicht verwenden. ODBC *3. x* -Treiber müssen SQL_C_BOOKMARK nur unterstützen, wenn Sie mit ODBC *2. x* -Anwendungen arbeiten möchten, die Sie verwenden. Der Treiber-Manager ordnet SQL_C_VARBOOKMARK SQL_C_BOOKMARK zu, wenn eine Anwendung mit einem ODBC *2. x* -Treiber arbeitet.  
   
-|C-Typ-ID|ODBC-C-Typdefinition|C-Typ|  
+|C-Typbezeichner|ODBC C-Typedef|C-Typ|  
 |-----------------------|--------------------|------------|  
-|SQL_C_BOOKMARK<br />(Veraltet)|LESEZEICHEN|lange ganze Zahl ohne Vorzeichen|  
-|SQL_C_VARBOOKMARK|SQLCHAR *|unsigned char *|
+|SQL_C_BOOKMARK<br />(Veraltet)|Lesezeichen|Ganzzahl ohne Vorzeichen long int|  
+|SQL_C_VARBOOKMARK|SQLCHAR|unsigned char *|

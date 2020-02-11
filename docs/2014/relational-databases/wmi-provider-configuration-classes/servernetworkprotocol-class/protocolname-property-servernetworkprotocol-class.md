@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 7192928377b04fb317f5b55c32f18af1834f4c53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196223"
 ---
 # <a name="protocolname-property-servernetworkprotocol-class"></a>ProtocolName-Eigenschaft (ServerNetworkProtocol-Klasse)
@@ -36,16 +36,16 @@ object
 .ProtocolName [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
- A [ServerNetworkProtocol-Klassenobjekt](servernetworkprotocol-class.md) , das das Netzwerkprotokoll darstellt, das von der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet wird.  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
+ Ein [ServerNetworkProtocol-Klassen](servernetworkprotocol-class.md) Objekt, das das Netzwerkprotokoll darstellt, das von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]der Instanz von verwendet wird.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Eine Zeichenfolge, die den Namen des Server-Netzwerkprotokolls angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

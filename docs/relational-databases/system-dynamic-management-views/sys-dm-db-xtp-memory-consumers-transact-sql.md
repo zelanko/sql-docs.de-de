@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,39 +21,39 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026822"
 ---
-# <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
+# <a name="sysdm_db_xtp_memory_consumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
-  Meldet die Arbeitsspeicherconsumer auf Datenbankebene in der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Datenbank-Engine. Diese Sicht gibt eine Zeile für jeden Arbeitsspeicherconsumer zurück, den die Datenbank-Engine verwendet. Verwenden Sie diese dynamische Verwaltungssicht, um festzustellen, wie der Arbeitsspeicher auf verschiedene interne Objekte verteilt ist.  
+  Meldet die Arbeitsspeicherconsumer auf Datenbankebene in der [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Datenbank-Engine. Diese Sicht gibt eine Zeile für jeden Arbeitsspeicherconsumer zurück, den die Datenbank-Engine verwendet. Verwenden Sie diese DMV, um zu sehen, wie der Arbeitsspeicher auf verschiedene interne Objekte verteilt wird.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|memory_consumer_id|**bigint**|ID (intern) des Arbeitsspeicherconsumers.|  
+|memory_consumer_id|**BIGINT**|ID (intern) des Arbeitsspeicherconsumers.|  
 |memory_consumer_type|**int**|Der Typ des Arbeitsspeicherconsumers:<br /><br /> 0=Aggregation. (Aggregiert die Arbeitsspeichernutzung von mindestens zwei Consumern. Sollte nicht angezeigt werden.)<br /><br /> 2=VARHEAP (Verfolgt die Arbeitsspeichernutzung für einen Heap variabler Länge nach.)<br /><br /> 3=HASH (Verfolgt die Arbeitsspeichernutzung für einen Index nach.)<br /><br /> 5=DB-Seitenpool (Verfolgt die Arbeitsspeichernutzung für einen Datenbank-Seitenpool nach, der für Laufzeitvorgänge verwendet wird, z. B. Tabellenvariablen und einige serialisierbare Scans. Es gibt nur einen Arbeitsspeicherconsumer dieses Typs pro Datenbank.)|  
-|memory_consumer_type_desc|**Nvarchar(64)**|Der Typ des arbeitsspeicherconsumers: VARHEAP, HASH oder PGPOOL.<br /><br /> 0 – (es sollte nicht angezeigt.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> HASH: Keine Beschreibung, da die Object_id gibt an, in der Tabelle und die Index_id den Hashindex selbst.<br /><br /> PGPOOL: Für die Datenbank ist nur ein Seitenpool Datenbank 64-KB-Seitenpool.|  
-|object_id|**bigint**|Die Objekt-ID, der der belegte Arbeitsspeicher attributiert wird. Ein negativer Wert für Systemobjekte.|  
-|xtp_object_id|**bigint**|Die Objekt-ID für die Speicheroptimierte Tabelle.|  
+|memory_consumer_type_desc|**nvarchar (64)**|Typ des Arbeitsspeicherconsumers: VARHEAP, HASH oder PGPOOL.<br /><br /> 0-(es sollte nicht angezeigt werden.)<br /><br /> 2 - VARHEAP<br /><br /> 3 – HASH<br /><br /> 5 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP <br />Datenbankheap. Wird zum Zuordnen von Benutzerdaten für eine Datenbank (d. h. Zeilen) verwendet.<br />Datenbank-Systemheap. Wird zum Zuordnen von Datenbankdaten verwendet, die in Speicherabbilder eingefügt werden und keine Benutzerdaten enthalten.<br />Bereichsindexheap. Ein privater Heap, der vom Breichsindex zum Zuordnen von BW-Seiten verwendet wird.<br /><br /> Hash: keine Beschreibung, da der object_id die Tabelle und den index_id den Hashindex selbst angibt.<br /><br /> Pgpool: für die Datenbank ist nur eine Seiten Pool Datenbank mit einem 64-KB-Seiten Pool vorhanden.|  
+|object_id|**BIGINT**|Die Objekt-ID, der der belegte Arbeitsspeicher attributiert wird. Ein negativer Wert für Systemobjekte.|  
+|xtp_object_id|**BIGINT**|Die Objekt-ID für die Speicher optimierte Tabelle.|  
 |index_id|**int**|Die Index-ID des Consumers (sofern vorhanden). NULL für Basistabellen.|  
-|allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
-|used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap.|  
+|allocated_bytes|**BIGINT**|Anzahl der für den Consumer reservierten Bytes.|  
+|used_bytes|**BIGINT**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
 |partition_count|**int**|Nur interne Verwendung.|  
 |sizeclass_count|**int**|Nur interne Verwendung.|  
 |min_sizeclass|**int**|Nur interne Verwendung.|  
 |max_sizeclass|**int**|Nur interne Verwendung.|  
 |memory_consumer_address|**varbinary**|Interne Adresse des Consumers. Nur zur internen Verwendung.|  
-|xtp_object_id|**bigint**|Die in-Memory-OLTP Objekt-ID, die in der speicheroptimierten Tabelle entspricht.|  
+|xtp_object_id|**BIGINT**|Die in-Memory-OLTP-Objekt-ID, die der Speicher optimierten Tabelle entspricht.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der Ausgabe verweisen die Zuordnungen auf Datenbankebene auf Benutzertabellen, Indizes und Systemtabellen. VARHEAP mit object_id = NULL verweist auf Arbeitsspeicher, der Tabellen mit Spalten variabler Länge zugeordnet ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -64,7 +64,7 @@ ms.locfileid: "68026822"
  Systemtabellen werden nur für Benutzer mit der VIEW DATABASE STATE-Berechtigung zurückgegeben.  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
- Wenn eine Speicheroptimierte Tabelle einen columnstore-Index verfügt, verwendet das System einige interne Tabellen, die bestimmte Menge an Arbeitsspeicher nutzen zu können, zum Nachverfolgen von Daten für den columnstore-Index. Weitere Informationen zu diesen internen Tabellen sowie Beispielabfragen, die mit ihren Speicherverbrauch finden Sie unter [Sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
+ Wenn eine Speicher optimierte Tabelle über einen columnstore--Index verfügt, verwendet das System einige interne Tabellen, die Arbeitsspeicher belegen, um Daten für den columnstore--Index zu verfolgen. Ausführliche Informationen zu diesen internen Tabellen und Beispielabfragen mit der Arbeitsspeicher Nutzung finden Sie unter [sys. memory_optimized_tables_internal_attributes (Transact-SQL)](../../relational-databases/system-catalog-views/sys-memory-optimized-tables-internal-attributes-transact-sql.md).
  
   
 ## <a name="examples"></a>Beispiele  
@@ -111,7 +111,7 @@ NULL       VARHEAP                   NULL        NULL        1405943808         
 (17 row(s) affected)  
 ```  
   
- Der gesamte Speicher zugeordnet und verwendet aus dieser DMV ist identisch mit der Objektebene in [Sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ Der von dieser DMV zugeordnete und verwendete Gesamtspeicher entspricht der Objektebene in [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
   
 ```  
 select  sum(allocated_bytes)/(1024*1024) as total_allocated_MB,   
@@ -123,7 +123,7 @@ total_allocated_MB   total_used_MB
 1358                 1191  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Eine Speicheroptimierte Tabelle dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

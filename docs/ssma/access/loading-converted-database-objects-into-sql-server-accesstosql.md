@@ -1,5 +1,5 @@
 ---
-title: Loading Converted Database Objects into SQLServer (AccessToSQL) | Microsoft-Dokumentation
+title: Laden von konvertierten Datenbankobjekten in SQL Server (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -30,115 +30,115 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67986320"
 ---
-# <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Loading Converted Database Objects into SQLServer (AccessToSQL)
-Nachdem Sie den Zugriff auf Datenbankobjekte, konvertiert haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, laden die daraus resultierende Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können entweder SSMA, die die Objekte zu erstellen, oder Sie können Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus SSMA können Sie die Metadaten mit den eigentlichen Inhalt der aktualisieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank.  
+# <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Laden von konvertierten Datenbankobjekten in SQL Server (accesstosql)
+Nachdem Sie Access-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure konvertiert haben, können Sie die resultierenden Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte in oder SQL Azure laden. Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbank aktualisieren.  
   
-## <a name="choosing-between-synchronization-and-scripts"></a>Auswählen zwischen Synchronisierung und Skripts  
-Wenn Sie die konvertierten Datenbankobjekten in laden möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure ohne Änderungen, können Sie SSMA direkt zu erstellen oder die Datenbankobjekte neu erstellt haben. Diese Methode ist schnell und einfach, aber es lässt sich nicht für die Anpassung der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code, der definiert die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objekte, gespeicherte Prozeduren.  
+## <a name="choosing-between-synchronization-and-scripts"></a>Zwischen Synchronisierung und Skripts auswählen  
+Wenn Sie die konvertierten Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure ohne Änderungen laden möchten, können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, lässt jedoch nicht zu, dass der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Objekte definiert, außer gespeicherten Prozeduren angepasst wird.  
   
-Wenn Sie ändern möchten, die [!INCLUDE[tsql](../../includes/tsql-md.md)] , wird verwendet, um Objekte erstellen, oder wenn Sie mehr Kontrolle über die Objekte erstellen möchten, verwenden SSMA zum Erstellen von Skripts. Sie können dann ändern Sie diese Skripts, jedes Objekt einzeln erstellen und sogar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent planen, erstellen diese Objekte.  
+Wenn Sie das ändern möchten, [!INCLUDE[tsql](../../includes/tsql-md.md)] das zum Erstellen von-Objekten verwendet wird, oder wenn Sie mehr Kontrolle über die Objekt Erstellung haben möchten, verwenden Sie SSMA zum Erstellen von-Skripts. Anschließend können Sie diese Skripts ändern, jedes Objekt einzeln erstellen und sogar den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die Erstellung dieser Objekte zu planen.  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden SSMA zum Synchronisieren von Objekten mit SQLServer  
-Mit SSMA erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekten, Sie wählen die Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer, und klicken Sie dann zu synchronisieren der Objekte mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, wie im folgenden Verfahren dargestellt. Standardmäßig, wenn die Objekte noch in vorhanden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, wenn der SSMA-Metadaten enthält, einige lokale Änderungen oder Updates für die Definition dieser Objekte sehr, SSMA ändern, die Objektdefinitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können das Standardverhalten ändern, indem Sie die Bearbeitung **Projekteinstellungen**.  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden von SSMA zum Synchronisieren von Objekten mit SQL Server  
+Wenn Sie SSMA zum Erstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure von Datenbankobjekten verwenden möchten, wählen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie die Objekte in oder SQL Azure Metadaten-Explorer aus, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und synchronisieren Sie dann die Objekte mit oder SQL Azure, wie im folgenden Verfahren gezeigt. Wenn die Objekte bereits in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure vorhanden sind und die SSMA-Metadaten über lokale Änderungen oder Aktualisierungen der Definition dieser Objekte verfügen, ändert SSMA standardmäßig die Objekt Definitionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure. Sie können das Standardverhalten ändern, indem Sie die **Projekteinstellungen**bearbeiten.  
   
 > [!NOTE]  
-> Sie können auswählen, vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Datenbankobjekte, die aus Access-Datenbanken nicht konvertiert wurden. SSMA wird jedoch nicht neu erstellen oder ändern diese Objekte.  
+> Sie können vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Datenbankobjekte auswählen, die nicht aus Access-Datenbanken konvertiert wurden. Diese Objekte werden von SSMA jedoch nicht neu erstellt oder geändert.  
   
-**Zum Synchronisieren von Objekten mit SQL Server oder SQL Azure**  
+**So synchronisieren Sie Objekte mit SQL Server oder SQL Azure**  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer, erweitern im oberen Bereich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Knoten, und erweitern Sie dann **Datenbanken**.  
+1.  Erweitern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder SQL Azure metadatenexplorer den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Knoten oben oder SQL Azure, und erweitern Sie dann **Datenbanken**.  
   
 2.  Wählen Sie die zu verarbeitenden Objekte aus:  
   
-    -   Um eine vollständige Datenbank zu synchronisieren, wählen Sie das Kontrollkästchen neben dem Datenbanknamen.  
+    -   Aktivieren Sie das Kontrollkästchen neben dem Datenbanknamen, um eine komplette Datenbank zu synchronisieren.  
   
-    -   Klicken Sie zum Synchronisieren, oder lassen Sie einzelne Objekte oder Kategorien von Objekten, aktivieren Sie oder deaktivieren Sie das Kontrollkästchen neben dem Objekt oder einen Ordner.  
+    -   Aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben dem Objekt oder Ordner, um einzelne Objekte oder Kategorien von Objekten zu synchronisieren oder auszulassen.  
   
-3.  Nach Auswahl der Objekte in den Griff [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer mit der rechten Maustaste **Datenbanken**, und klicken Sie dann auf **synchronisieren mit der Datenbank**.  
+3.  Nachdem Sie die zu verarbeitenden Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Metadaten-Explorer ausgewählt haben, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **mit Datenbank synchronisieren**.  
   
-    Sie können auch die einzelne Objekte oder Kategorien von Objekten synchronisieren, indem Sie mit der rechten Maustaste das Objekt oder der übergeordnete Ordner, und klicken Sie dann auf **synchronisieren mit der Datenbank**.  
+    Sie können einzelne Objekte oder Objektkategorien auch synchronisieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **mit Datenbank synchronisieren**klicken.  
   
-    Danach SSMA zeigt die **synchronisieren mit der Datenbank** Dialogfeld hier Sie zwei Gruppen von Elementen sehen. Klicken Sie auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte in einer Struktur dargestellt. Klicken Sie auf der rechten Seite sehen Sie eine Struktur, die dieselben Objekte in der SSMA-Metadaten darstellt. Sie können die Struktur durch Klicken auf Links oder rechts erweitern Schaltfläche "+". Die Richtung der Synchronisierung wird in der Aktionsspalte zwischen die beiden Strukturen angeordnet wurden, angezeigt.  
+    Danach zeigt SSMA das Dialogfeld **mit Datenbank synchronisieren an** , in dem Sie zwei Gruppen von Elementen sehen können. Auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte an, die in einer Struktur dargestellt werden. Auf der rechten Seite sehen Sie eine Baumstruktur, die die gleichen Objekte in SSMA-Metadaten darstellt. Sie können die Struktur erweitern, indem Sie auf die Schaltfläche mit der rechten oder linken Schaltfläche klicken. Die Richtung der Synchronisierung wird in der Aktionsspalte angezeigt, die zwischen den beiden Strukturen platziert ist.  
   
-    Eine Aktion anmelden können drei Zustände aufweisen:  
+    Ein Aktions Vorzeichen kann drei Zustände aufweisen:  
   
-    -   Ein Pfeil nach links bedeutet, dass der Inhalt der Metadaten in der Datenbank (Standard) gespeichert werden soll.  
+    -   Der nach-links-Pfeil bedeutet, dass der Inhalt der Metadaten in der Datenbank gespeichert wird (Standardeinstellung).  
   
-    -   Ein Pfeil nach rechts bedeutet, dass es sich bei Datenbankinhalte die SSMA-Metadaten überschrieben werden.  
+    -   Ein Pfeil nach rechts bedeutet, dass der Daten Bank Inhalt die SSMA-Metadaten überschreibt.  
   
-    -   Ein Kreuz bedeutet, dass keine weitere Aktion durchgeführt wird.  
+    -   Ein Kreuzzeichen bedeutet, dass keine Aktion ausgeführt wird.  
   
-    Klicken Sie auf der Aktion zum Ändern des Zustands. Tatsächliche Synchronisierung wird durchgeführt, wenn Sie auf **OK** -Schaltfläche der **synchronisieren mit der Datenbank** Dialogfeld.  
+    Klicken Sie auf das Aktions Zeichen, um den Status zu ändern. Die eigentliche Synchronisierung wird durchgeführt, wenn Sie im Dialogfeld **mit Datenbank synchronisieren** auf die Schaltfläche **OK** klicken.  
   
 ## <a name="scripting-objects"></a>Skripterstellung für Objekte  
-Wenn Sie speichern möchten [!INCLUDE[tsql](../../includes/tsql-md.md)] Definitionen von konvertierten Datenbankobjekten, oder Sie möchten, ändern die Objektdefinitionen und führen Sie Skripts selbst, können Sie die konvertierte Datenbank Objektdefinitionen zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts.  
+Wenn Sie Definitionen der konvertierten Datenbankobjekte speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] oder die Objekt Definitionen ändern und Skripts selbst ausführen möchten, können Sie die konvertierten Datenbankobjekt Definitionen in [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts speichern.  
   
-**Um ein oder mehrere Objekte in ein Skript zu speichern.**  
+**So speichern Sie ein oder mehrere Objekte in einem Skript**  
   
-1.  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten-Explorer, erweitern Sie den obersten Knoten (Servername) und dann **Datenbanken**.  
+1.  Erweitern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie im metadatenexplorer den obersten Knoten (Servername), und erweitern Sie dann **Datenbanken**.  
   
-2.  Führen Sie eine oder mehrere der folgenden:  
+2.  Führen Sie einen oder mehrere der folgenden Schritte aus:  
   
-    -   Wählen Sie das Kontrollkästchen neben dem Datenbanknamen, damit ein Skript erstellt eine vollständige Datenbank.  
+    -   Aktivieren Sie das Kontrollkästchen neben dem Datenbanknamen, um ein Skript für eine komplette Datenbank zu erstellen.  
   
-    -   Um das Skript aus, oder lassen Sie einzelne Ansichten, erweitern Sie die Datenbank und **Ansichten**, und klicken Sie dann aktivieren oder deaktivieren Sie das Kontrollkästchen neben der Ansicht.  
+    -   Zum Erstellen eines Skripts oder auslassen einzelner Ansichten erweitern Sie die Datenbank, erweitern Sie **Sichten**, und aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben der Ansicht.  
   
-    -   Um das Skript aus, oder lassen Sie einzelne Tabellen, erweitern Sie die Datenbank und **Tabellen**, und klicken Sie dann aktivieren oder deaktivieren Sie das Kontrollkästchen neben der Tabelle.  
+    -   Zum Erstellen eines Skripts oder auslassen einzelner Tabellen erweitern Sie die Datenbank, erweitern Sie **Tabellen**, und aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben der Tabelle.  
   
-    -   Um das Skript aus, oder lassen Sie die einzelnen Indizes für eine Tabelle, erweitern Sie in der Tabelle und **Indizes**, und klicken Sie dann aktivieren oder deaktivieren den Index.  
+    -   Zum Erstellen eines Skripts oder auslassen einzelner Indizes für eine Tabelle erweitern Sie die Tabelle, erweitern Sie **Indizes**, und wählen Sie dann den Index aus, oder löschen Sie ihn.  
   
-3.  Mit der rechten Maustaste **Datenbanken** , und wählen Sie **speichern als Skript**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken** , und wählen Sie **Speichern**unter  
   
-    Sie können auch Skripts für einzelne Objekte. Um das Skript für ein Objekt, unabhängig davon, welche Objekte ausgewählt sind, mit der rechten Maustaste in des Objekts, und wählen Sie **speichern als Skript**.  
+    Sie können auch Skripts für einzelne Objekte erstellen. Wenn Sie ein Skript für ein Objekt erstellen möchten, klicken Sie mit der rechten Maustaste auf das Objekt, und wählen Sie **als Skript speichern**aus.  
   
-4.  In der **speichern unter** Dialogfeld Suchen den Ordner, in dem Sie speichert das Skript, einen Dateinamen in geben möchten, die **Dateiname** ein, und klicken Sie dann auf **OK**.  
+4.  Suchen Sie im Dialogfeld **Speichern** unter den Ordner, in dem Sie das Skript speichern möchten, geben Sie im Feld **Dateiname** einen Dateinamen ein, und klicken Sie dann auf **OK**.  
   
-    SSMA wird die SQL-Dateinamenerweiterung angefügt.  
+    SSMA fügt die Dateinamenerweiterung ". SQL" an.  
   
 ### <a name="modifying-scripts"></a>Ändern von Skripts  
-Nachdem Sie gespeichert haben die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Objektdefinitionen als Skript enthält, können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] das Skript ändern.  
+Nachdem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Objekt Definitionen als Skript gespeichert haben, können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um das Skript zu ändern.  
   
-**Um ein Skript zu ändern.**  
+**So ändern Sie ein Skript**  
   
-1.  Auf der [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Datei** Startmenü **öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Datei** auf **Öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  In der **öffnen** Dialogfeld Suchen wählen Sie die Skriptdatei, und klicken Sie dann auf **OK**.  
+2.  Suchen Sie im Dialogfeld **Öffnen** die Skriptdatei, und wählen Sie Sie aus, und klicken Sie dann auf **OK**.  
   
-3.  Bearbeiten Sie die Skriptdatei mit dem abfrageeditor.  
+3.  Bearbeiten Sie die Skriptdatei mit dem Abfrage-Editor.  
   
-    Weitere Informationen zu den Abfrage-Editor, finden Sie unter "-Editor der Einfachheit halber Befehle und Funktionen" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+    Weitere Informationen zum Abfrage-Editor finden Sie in der-Online Dokumentation unter "praktische Befehle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Features im Editor".  
   
-4.  Wählen Sie zum Speichern des Skripts im Menü Datei **speichern**.  
+4.  Um das Skript zu speichern, wählen Sie im Menü Datei die Option **Speichern**aus.  
   
 ### <a name="running-scripts"></a>Ausführen von Skripts  
-Sie können ein Skript oder einzelne Anweisungen in ausführen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Skript oder einzelne Anweisungen ausführen.  
   
-**Zum Ausführen eines Skripts**  
+**So führen Sie ein Skript aus**  
   
-1.  Auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Datei** Startmenü **öffnen** , und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü **Datei** auf **Öffnen** , und klicken Sie dann auf **Datei.** [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
-2.  In der **öffnen** Dialogfeld Suchen wählen Sie die Skriptdatei, und klicken Sie dann auf **OK**.  
+2.  Suchen Sie im Dialogfeld **Öffnen** die Skriptdatei, und wählen Sie Sie aus, und klicken Sie dann auf **OK**.  
   
-3.  Um das vollständige Skript auszuführen, drücken Sie die **F5** Schlüssel.  
+3.  Drücken Sie die Taste **F5** , um das komplette Skript auszuführen.  
   
-4.  Um einen Satz von Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster, und drücken Sie dann die **F5** Schlüssel.  
+4.  Um einen Satz von-Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster aus, und drücken Sie dann die Taste **F5** .  
   
-Weitere Informationen dazu, wie Sie den Abfrage-Editor verwenden, um Skripts auszuführen, finden Sie unter " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] "Abfrage" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-Online Dokumentation.  
   
-Sie können Skripts auch über die Befehlszeile ausführen, mit der **Sqlcmd** -Hilfsprogramm und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Weitere Informationen zu **Sqlcmd**, finden Sie unter "Hilfsprogramms" Sqlcmd"" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation. Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent finden Sie unter "Automatisieren von Verwaltungsaufgaben ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent)" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+Sie können Skripts auch über die Befehlszeile ausführen, indem Sie das Hilfsprogramm **sqlcmd** und den- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent verwenden. Weitere Informationen zu **sqlcmd**finden Sie unter "sqlcmd Utility" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Online Dokumentation. Weitere Informationen zum- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent finden Sie unter "Automatisieren administrativer Aufgaben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Agent)" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-Online Dokumentation.  
   
-## <a name="securing-objects-in-sql-server"></a>Sichern die Objekte in SQLServer  
-Nachdem Sie die konvertierten Datenbankobjekten in geladen haben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie können die GRANT- und deny-Berechtigungen für diese Objekte. Es ist eine gute Idee, die vor der Migration dazu Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen zum Schützen von in Objekten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter "Security Überlegungen zu Datenbanken und Datenbankanwendungen" in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+## <a name="securing-objects-in-sql-server"></a>Sichern von Objekten in SQL Server  
+Nachdem Sie die konvertierten Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]geladen haben, können Sie Berechtigungen für diese Objekte erteilen und verweigern. Es empfiehlt sich, dies zu tun, bevor Sie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migrieren. Informationen zum Sichern von Objekten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie unter "Sicherheitsüberlegungen für Datenbanken und Datenbankanwendungen" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der-Online Dokumentation.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt des Migrationsvorgangs [Migrieren von Daten in SQL Server](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
+Der nächste Schritt des Migrations Vorgangs besteht darin, [Daten in SQL Server zu migrieren](migrating-access-data-into-sql-server-azure-sql-db-accesstosql.md).  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Access-Datenbanken zu SQLServer](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit DB2-Datenbank (DB2ToSQL) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit der DB2-Datenbank (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,104 +10,104 @@ ms.assetid: 5eb5801d-f0c3-4127-97c0-0b1ef49f4844
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b49e5f53e1efbff6febe37a6f3d02fbb3e9cfc05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68141068"
 ---
-# <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit DB2-Datenbank (DB2ToSQL)
-Zum Migrieren von DB2-Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Sie müssen eine Verbindung, mit der DB2-Datenbank, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten für alle DB2-Schemas, und klicken Sie dann im DB2-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
+# <a name="connecting-to-db2-database-db2tosql"></a>Herstellen einer Verbindung mit der DB2-Datenbank (DB2ToSQL)
+Um DB2-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu zu migrieren, müssen Sie eine Verbindung mit der DB2-Datenbank herstellen, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, ruft SSMA Metadaten zu allen DB2-Schemas ab und zeigt Sie dann im DB2-metadatenexplorer-Bereich an. SSMA speichert Informationen über den Datenbankserver, speichert aber keine Kenn Wörter.  
   
-Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank.  
+Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten.  
   
-Metadaten zu der DB2-Datenbank wird nicht automatisch aktualisiert. Stattdessen sollten Sie die Metadaten in DB2-Metadaten-Explorer zu aktualisieren, müssen Sie manuell es aktualisieren. Weitere Informationen finden Sie im Abschnitt "Aktualisieren der DB2-Metadaten" weiter unten in diesem Thema.  
+Metadaten über die DB2-Datenbank werden nicht automatisch aktualisiert. Wenn Sie die Metadaten im DB2-metadatenexplorer aktualisieren möchten, müssen Sie Sie stattdessen manuell aktualisieren. Weitere Informationen finden Sie im Abschnitt "Aktualisieren von DB2-Metadaten" weiter unten in diesem Thema.  
   
-## <a name="required-db2-permissions"></a>Erforderlichen DB2-Berechtigungen  
-Benutzerautorisierung definiert die Liste der Befehle und Objekte, die für einen Benutzer verfügbar sind. Dadurch werden Benutzeraktionen Listensteuerelemente. In DB2 sind vordefinierte Gruppen von Berechtigungen für die Autorisierung, sowohl auf Instanzebene und auf der Ebene einer DB2-Datenbank. Dies ermöglicht der SSMA zum Abrufen von Metadaten aus Schemas im Besitz des Benutzers eine Verbindung herstellt. Um Metadaten für Objekte in anderen Schemas zu erhalten, und klicken Sie dann die Objekte in diesen Schemas konvertieren, muss das Konto folgenden Berechtigungen verfügen:  
+## <a name="required-db2-permissions"></a>Erforderliche DB2-Berechtigungen  
+Die Benutzer Autorisierung definiert die Liste der Befehle und Objekte, die für einen Benutzer verfügbar sind. Diese Liste steuert Benutzeraktionen. In DB2 gibt es vordefinierte Gruppen von Berechtigungen für die Autorisierung, sowohl auf Instanzebene als auch auf der Ebene einer DB2-Datenbank. Dies ermöglicht SSMA das Abrufen von Metadaten aus Schemas im Besitz des Benutzers, der eine Verbindung herstellt. Zum Abrufen von Metadaten für Objekte in anderen Schemas und zum anschließenden Konvertieren von Objekten in diesen Schemas muss das Konto über die folgenden Berechtigungen verfügen:  
   
--   Schema wird für die schemamigration normalerweise auf öffentlichen zugreifen, wenn das Schlüsselwort "RESTRICT" in erstellen verwendet wurde  
+-   Der Schema Zugriff für die Schema Migration wird öffentlich erteilt, es sei denn, das Einschränkungs Schlüsselwort wurde in CREATE verwendet  
   
--   Datenzugriff für die Datenmigration erfordert DATAACCESS  
+-   Der Datenzugriff für die Datenmigration erfordert DataAccess  
   
 ## <a name="establishing-a-connection-to-db2"></a>Herstellen einer Verbindung mit DB2  
-Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten werden vom SSMA verwendet, wenn Objekte konvertiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Syntax, und wenn es Daten migriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können diese Metadaten im DB2-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
+Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadaten der Datenbank und fügt diese Metadaten dann der Projektdatei hinzu. Diese Metadaten werden von SSMA verwendet, wenn Objekte in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Syntax konvertiert werden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]migriert werden. Sie können diese Metadaten im Bereich DB2-metadatenexplorer durchsuchen und die Eigenschaften einzelner Datenbankobjekte überprüfen.  
   
 > [!IMPORTANT]  
-> Bevor Sie versuchen, eine Verbindung herstellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren.  
+> Bevor Sie versuchen, eine Verbindung herzustellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren kann.  
   
-**Verbindung mit DB2**  
+**Zum Herstellen einer Verbindung mit DB2**  
   
-1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit DB2**.  
+1.  Wählen Sie im Menü **Datei** die Option **mit DB2 verbinden**aus.  
   
-    Wenn Sie zuvor mit DB2 verbunden, gibt der Namen des Befehls werden **Wiederherstellen der Verbindung mit DB2**.  
+    Wenn Sie zuvor eine Verbindung mit DB2 hergestellt haben, wird der Befehls Name **erneut eine Verbindung mit DB2 herstellen**.  
   
-2.  In der **Anbieter** Feld Sie sehen die **OLE DB-Anbieter** dort gilt zurzeit der einzige DB2 Client Access-Provider.  
+2.  Im Feld **Anbieter** wird der **OLE DB Anbieter** angezeigt, der zurzeit der einzige DB2-Client Zugriffs Anbieter ist.  
   
-3.  In der **Manager** Feld, Sie haben die Wahl zwischen **Db2 für zOS erörtert**, oder **DB2 für LUW**  
+3.  Im Feld " **Manager** " können Sie entweder **DB2 für zOS**oder **DB2 für LUW** auswählen.  
   
-4.  In der **Modus** wählen **Modus "Standard"** , oder **verbindungszeichenfolgenmodus**.  
+4.  Wählen Sie im Feld **Modus** entweder den **Standard Modus**oder den **Verbindungs Zeichen folgen Modus**aus.  
   
-    Verwenden Sie Modus "standard", um den Servernamen und Port anzugeben. Verwenden Sie Namen Dienstmodus, um den Namen des DB2-Diensts manuell anzugeben. Verwenden Sie verbindungszeichenfolgenmodus, um eine vollständige Verbindungszeichenfolge bereitstellen.  
+    Verwenden Sie den Standardmodus, um den Servernamen und den Port anzugeben. Verwenden Sie den Dienstnamen Modus, um den DB2-Dienstnamen manuell anzugeben. Verwenden Sie den Verbindungs Zeichen folgen Modus, um eine vollständige Verbindungs Zeichenfolge  
   
-5.  Bei Auswahl von **Modus "Standard"** , geben Sie die folgenden Werte:  
+5.  Wenn Sie den **Standard Modus**auswählen, geben Sie die folgenden Werte an:  
   
-    -   In der **Servernamen** Feld eingeben oder auswählen, den Namen oder IP-Adresse des Datenbankservers.  
+    -   Geben Sie im Feld **Server Name** den Namen oder die IP-Adresse des Datenbankservers ein, oder wählen Sie ihn aus.  
   
-    -   Wenn der Datenbankserver nicht konfiguriert ist, um auf Clientverbindungen standardmäßig port (1521) verwenden, geben Sie die Portnummer, die verwendet wird, für die DB2-Verbindungen in der **Serverport** Feld.  
+    -   Wenn der Datenbankserver nicht für die Annahme von Verbindungen über den Standardport (1521) konfiguriert ist, geben Sie im Feld **Serverport** die Portnummer ein, die für DB2-Verbindungen verwendet wird.  
   
-    -   In der **Serverport** Geben Sie die Nummer des TCP/IP-Ports.  
+    -   Geben Sie im Feld **Serverport** die TCP/IP-Port Nummer ein.  
   
-    -   In der **Anfangskatalog** Geben Sie den Datenbanknamen  
+    -   Geben Sie im Feld **anfangs Katalog** den Datenbanknamen ein.  
   
-    -   In der **Benutzernamen** Geben Sie ein DB2-Konto, das die erforderlichen Berechtigungen verfügt.  
+    -   Geben Sie im Feld **Benutzername** ein DB2-Konto ein, das über die erforderlichen Berechtigungen verfügt.  
   
-    -   In der **Kennwort** Geben Sie das Kennwort für den angegebenen Benutzernamen ein.  
+    -   Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.  
   
-6.  Bei Auswahl von **verbindungszeichenfolgenmodus**, geben Sie eine Verbindungszeichenfolge in der **Verbindungszeichenfolge** Feld.  
+6.  Wenn Sie den **Verbindungs Zeichen folgen Modus**auswählen, geben Sie im Feld **Verbindungs Zeichenfolge** eine Verbindungs Zeichenfolge an.  
   
-    Das folgende Beispiel zeigt eine OLE DB-Verbindungszeichenfolge:  
+    Das folgende Beispiel zeigt eine OLE DB Verbindungs Zeichenfolge:  
   
     `Provider=OraOLEDB.DB2;Data Source=MyDB2DB;User Id=myUsername;Password=myPassword;`  
   
-    Das folgende Beispiel zeigt eine DB2-Client-Verbindungszeichenfolge, die die integrierte Sicherheit verwendet wird:  
+    Das folgende Beispiel zeigt eine DB2-Client Verbindungs Zeichenfolge, die die integrierte Sicherheit verwendet:  
   
     `Data Source=MyDB2DB;Integrated Security=yes;`  
   
-    Weitere Informationen finden Sie unter [auf Oracle Verbinden &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
+    Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Oracle &#40;oracleto SQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md).  
   
-## <a name="reconnecting-to-db2"></a>Wiederherstellen der Verbindung mit DB2  
-Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank. Sie können offline arbeiten, bis Sie die Metadaten aktualisieren, laden Sie die Datenbankobjekte in möchten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und Daten migrieren.  
+## <a name="reconnecting-to-db2"></a>Erneutes Herstellen einer Verbindung mit DB2  
+Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten. Sie können offline arbeiten, bis Sie Metadaten aktualisieren, Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]laden und Daten migrieren möchten.  
   
 ## <a name="refreshing-db2-metadata"></a>Aktualisieren von DB2-Metadaten  
-Metadaten zu der DB2-Datenbank wird nicht automatisch aktualisiert. Die Metadaten in DB2-Metadaten-Explorer ist eine Momentaufnahme der Metadaten, wenn Sie zuerst eine Verbindung hergestellt oder der letzten, dass Sie manuell die Metadaten aktualisiert werden. Sie können die Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
+Metadaten über die DB2-Datenbank werden nicht automatisch aktualisiert. Bei den Metadaten im DB2-metadatenexplorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung hergestellt haben, oder wenn Sie das letzte Mal manuell Sie können Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
   
-**Aktualisieren von Metadaten**  
+**So aktualisieren Sie Metadaten**  
   
 1.  Stellen Sie sicher, dass Sie mit der Datenbank verbunden sind.  
   
-2.  Wählen Sie in DB2-Metadaten-Explorer das Kontrollkästchen neben jedem Schema oder die Datenbank-Objekt, das Sie aktualisieren möchten.  
+2.  Aktivieren Sie im DB2-metadatenexplorer das Kontrollkästchen neben jedem Schema oder Datenbankobjekt, das Sie aktualisieren möchten.  
   
-3.  Mit der rechten Maustaste **Schemas**, oder die einzelnes Schema oder die Datenbank-Objekt, und wählen Sie dann **Refresh from Database aktualisieren**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Schemas**oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.  
   
-    SSMA wird angezeigt, wenn Sie nicht über eine aktive Verbindung verfügen, die **Herstellen einer Verbindung mit DB2** Dialogfeld, sodass Sie eine Verbindung herstellen können.  
+    Wenn Sie nicht über eine aktive Verbindung verfügen, zeigt SSMA das Dialogfeld **mit DB2 verbinden an** , sodass Sie eine Verbindung herstellen können.  
   
-4.  Geben Sie in der Aktualisierung von Datenbank (Dialogfeld) welche Objekte aktualisiert.  
+4.  Geben Sie im Dialogfeld aus Datenbank aktualisieren an, welche Objekte aktualisiert werden sollen.  
   
-    -   Um ein Objekt zu aktualisieren, klicken Sie auf die **Active** Feld neben dem Objekt, bis ein Pfeil angezeigt wird.  
+    -   Um ein Objekt zu aktualisieren, klicken Sie auf das **aktive** Feld neben dem Objekt, bis ein Pfeil angezeigt wird.  
   
-    -   Um zu verhindern, dass ein Objekt aktualisiert wird, klicken Sie auf die **Active** Feld neben dem Objekt, bis ein **X** angezeigt wird.  
+    -   Um zu verhindern, dass ein Objekt aktualisiert wird, klicken Sie auf das **aktive** Feld neben dem Objekt, bis ein **X** angezeigt wird.  
   
-    -   Klicken Sie zum Aktualisieren, oder lehnen Sie eine Kategorie von Objekten ab, auf die **Active** Feld neben dem Ordner "Kategorie".  
+    -   Um eine Kategorie von Objekten zu aktualisieren oder abzulehnen, klicken Sie auf das **aktive** Feld neben dem Kategorieordner.  
   
-    Um die Definitionen der farbcodierung anzuzeigen, klicken Sie auf die **Legende** Schaltfläche.  
+    Um die Definitionen der Farbcodierung anzuzeigen, klicken Sie auf die Schaltfläche **Legende** .  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="next-step"></a>Nächster Schritt  
   
--   Der nächste Schritt des Migrationsvorgangs besteht darin [Herstellen einer Verbindung mit SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e).  
+-   Der nächste Schritt des Migrations Vorgangs besteht darin, eine [Verbindung mit SQL Server](https://msdn.microsoft.com/b59803cb-3cc6-41cc-8553-faf90851410e)herzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von DB2-Datenbanken zu SQLServer &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von DB2-Datenbanken zu SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)  
   

@@ -15,15 +15,15 @@ ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086349"
 ---
 # <a name="multithreading"></a>Multithreading
-Bei multithread-Betriebssystemen müssen der Treiber threadsicher sein. D. h. muss es möglich, dass Anwendungen in mehr als einem Thread dasselbe Handle zu verwenden sein. Wie dies erreicht wird, ist treiberspezifisch, und ist es wahrscheinlich, dass der Treiber alle Versuche, verwenden Sie dasselbe Handle gleichzeitig in zwei verschiedenen Threads serialisiert werden.  
+Bei multithreadbetriebssystemen müssen Treiber Thread sicher sein. Das heißt, es muss möglich sein, dass Anwendungen das gleiche Handle für mehr als einen Thread verwenden können. Wie dies erreicht wird, ist Treiber spezifisch, und es ist wahrscheinlich, dass Treiber alle Versuche serialisieren, gleichzeitig denselben Handle für zwei verschiedene Threads zu verwenden.  
   
- Anwendungen werden häufig mehrere Threads verwenden, anstatt die asynchrone Verarbeitung. Die Anwendung einen separaten Thread erstellt, ruft eine ODBC-Funktion auf und Verarbeitung auf dem Hauptthread fortgesetzt. Anstatt die asynchrone Funktion, ständig abruft wie der Fall ist, wenn das Attribut des SQL_ATTR_ASYNC_ENABLE-Anweisung verwendet wird, können die Anwendung einfach den neu erstellten Thread abgeschlossen.  
+ Anwendungen verwenden häufig mehrere Threads anstelle der asynchronen Verarbeitung. Die Anwendung erstellt einen separaten Thread, ruft eine ODBC-Funktion darauf auf und setzt dann die Verarbeitung im Haupt Thread fort. Anstatt die asynchrone Funktion kontinuierlich abzufragen, wie es der Fall ist, wenn das SQL_ATTR_ASYNC_ENABLE-Anweisungs Attribut verwendet wird, kann die Anwendung den neu erstellten Thread einfach Fertigstellen lassen.  
   
- Funktionen, die ein Anweisungshandle akzeptieren und in einem einzelnen Thread ausgeführt werden können abgebrochen werden, durch den Aufruf **SQLCancel** aus einem anderen Thread mit der gleichen Anweisung zu verarbeiten. Obwohl der Treiber die Verwendung von nicht serialisieren soll **SQLCancel** auf diese Weise besteht keine Garantie, dass der Aufruf **SQLCancel** die Funktion, die auf dem anderen Thread ausgeführt wird, wird tatsächlich abgebrochen.
+ Funktionen, die ein Anweisungs Handle akzeptieren und in einem Thread ausgeführt werden, können durch Aufrufen von **SQLCancel** mit dem gleichen Anweisungs Handle von einem anderen Thread abgebrochen werden. Obwohl Treiber die Verwendung von **SQLCancel** nicht auf diese Weise serialisieren sollten, gibt es keine Garantie, dass das Aufrufen von **SQLCancel** tatsächlich die Funktion abbricht, die auf dem anderen Thread ausgeführt wird.

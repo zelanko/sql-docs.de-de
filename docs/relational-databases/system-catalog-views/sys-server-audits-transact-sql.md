@@ -1,5 +1,5 @@
 ---
-title: Sys. server_audits (Transact-SQL) | Microsoft-Dokumentation
+title: sys. server_audits (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,39 +20,39 @@ ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68124996"
 ---
-# <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
+# <a name="sysserver_audits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Die ID der Überwachung.|  
 |**name**|**sysname**|Der Name der Überwachung.|  
-|**AUDIT_GUID**|**uniqueidentifier**|GUID für die Überwachung, die verwendet wird, zum Auflisten von Überwachungen mit Member Server&#124;während der Server und Datenbank-Überwachungsspezifikationen anfügen.|  
+|**audit_guid**|**uniqueidentifier**|GUID für die Überwachung, die zum Aufzählen von Überwachungen mit Mitglieds Server-&#124;Datenbank-Überwachungs Spezifikationen während der Server Start-und Anfüge Vorgänge für Datenbanken verwendet wird.|  
 |**create_date**|**datetime**|Das UTC-Datum, an dem die Überwachung erstellt wurde|  
 |**modify_date**|**datetime**|Das UTC-Datum, an dem die Überwachung zuletzt geändert wurde.|  
 |**principal_id**|**int**|Die ID des Besitzers der Überwachung gemäß Registrierung beim Server.|  
-|**type**|**char(2)**|Überwachungstyp:<br /><br /> SL – NT-Sicherheitsereignisprotokoll<br /><br /> AL – NT-Anwendungsereignisprotokoll<br /><br /> FL – Datei auf Dateisystem|  
-|**type_desc**|**nvarchar(60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
-|**ON_FAILURE**|**tinyint**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> 0 - fortsetzen<br /><br /> 1 - Shutdown-Server-Instanz<br /><br /> 2 – Fehler bei Vorgang|  
-|**on_failure_desc**|**nvarchar(60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
-|**is_state_enabled**|**tinyint**|0 – deaktiviert<br /><br /> 1 – Aktiviert|  
-|**QUEUE_DELAY**|**int**|Maximale Wartezeit in Millisekunden, bevor auf den Datenträger geschrieben wird. Wenn 0, garantiert die Überwachung einen Schreibvorgang, bevor ein Ereignis fortgesetzt werden kann.|  
-|**Prädikat**|**nvarchar(3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird.|  
+|**type**|**char (2)**|Überwachungstyp:<br /><br /> SL-NT-Sicherheits Ereignisprotokoll<br /><br /> Al-NT-Anwendungs Ereignisprotokoll<br /><br /> FL-Datei im Dateisystem|  
+|**type_desc**|**nvarchar (60)**|SECURITY LOG<br /><br /> APPLICATION LOG<br /><br /> FILE|  
+|**on_failure**|**tinyint**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> 0-fortfahren<br /><br /> 1-Serverinstanz herunterfahren<br /><br /> 2-fehlerhafter Vorgang|  
+|**on_failure_desc**|**nvarchar (60)**|Bei einem Fehler schreiben Sie folgendermaßen einen Aktionseintrag:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
+|**is_state_enabled**|**tinyint**|0-deaktiviert<br /><br /> 1 – Aktiviert|  
+|**queue_delay**|**int**|Maximale Wartezeit in Millisekunden, bevor auf den Datenträger geschrieben wird. Wenn 0, garantiert die Überwachung einen Schreibvorgang, bevor ein Ereignis fortgesetzt werden kann.|  
+|**Prädikat**|**nvarchar (3000)**|Der Prädikatausdruck, der auf das Ereignis angewendet wird.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale mit den **ALTER ANY SERVER AUDIT** oder **VIEW ANY DEFINITION** -Berechtigung haben Zugriff auf diese Katalogsicht. Darüber hinaus der Prinzipal nicht verweigert werden muss **VIEW ANY DEFINITION** Berechtigung.  
+ Prinzipale mit der Berechtigung **Alter any Server Audit** oder **View any Definition** haben Zugriff auf diese Katalog Sicht. Außerdem darf dem Prinzipal die **View any Definition** -Berechtigung nicht verweigert werden.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

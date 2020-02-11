@@ -1,5 +1,5 @@
 ---
-title: 'C in SQL: Zeit | Microsoft-Dokumentation'
+title: 'C zu SQL: Zeit | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019302"
 ---
-# <a name="c-to-sql-time"></a>C in SQL: Uhrzeit
-Der Bezeichner für den Zeitpunkt ODBC C-Datentyp ist:  
+# <a name="c-to-sql-time"></a>C zu SQL: Uhrzeit
+Der Bezeichner für den Zeit-ODBC-C-Datentyp:  
   
  SQL_C_TYPE_TIME  
   
- Die folgende Tabelle zeigt die ODBC-SQL-Datentypen, die in denen C Zeitdaten konvertiert werden können. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ In der folgenden Tabelle werden die ODBC-SQL-Datentypen angezeigt, in die die C-Daten konvertiert werden können. Eine Erläuterung der Spalten und Begriffe in der Tabelle finden [Sie unter Datentypen von C in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|SQL-Typ-ID|Test|SQLSTATE|  
+|SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = 8<br /><br /> Spalte Byte Länge < 8<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = 8<br /><br /> Spalte Zeichen Länge < 8<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Datenwert ist gültig<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Datenwert ist gültig [a]<br /><br /> Wert ist nicht gültig|n/v<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalten Byte Länge >= 8<br /><br /> Spalten Byte Länge < 8<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalten Zeichenlänge >= 8<br /><br /> Spalten Zeichenlänge < 8<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Der Datenwert ist eine gültige Zeit.<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger Zeitpunkt [a]<br /><br /> Der Datenwert ist keine gültige Zeit.|–<br /><br /> 22007|  
   
- [a] das Datum, die Teil des Zeitstempels festgelegt ist, um das aktuelle Datum und die Sekundenbruchteile, die Teil der Zeitstempel auf 0 (null) festgelegt ist.  
+ [a] der Datums Teil des Zeitstempels wird auf das aktuelle Datum festgelegt, und der Teil der Sekundenbruchteile des Zeitstempels wird auf 0 (null) festgelegt.  
   
- Weitere Informationen dazu, welche Werte in einer Struktur SQL_C_TYPE_TIME gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
+ Informationen dazu, welche Werte in einer SQL_C_TYPE_TIME Struktur gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn C Zeitdaten in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten die "*Hh*:*mm*:*ss*" Format.  
+ Wenn Zeit-C-Daten in Zeichen-SQL-Daten konvertiert werden, sind die resultierenden Zeichendaten im Format "*HH*:*mm*:*SS*".  
   
- Der Treiber ignoriert den Längenindikator /-Wert, wenn Daten ab dem Zeitpunkt, zu konvertieren, C-Datentyp ist, und setzt voraus, dass die Größe des Datenpuffers die Größe der Zeit C-Datentyp ist. Der Längenindikator /-Wert übergeben wird die *StrLen_or_Ind* -Argument in **SQLPutData** und in den Puffer, der mit angegebenen die *StrLen_or_IndPtr* -Argument in **SQLBindParameter**. Der Datenpuffer wird angegeben, mit der *DataPtr* -Argument in **SQLPutData** und die *ParameterValuePtr* -Argument in **SQLBindParameter**.
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Time-c-Datentyp und geht davon aus, dass die Größe des Daten Puffers die Größe des c-Datentyps ist. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.

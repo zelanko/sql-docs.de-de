@@ -1,5 +1,5 @@
 ---
-title: Sp_cursor (Transact-SQL) | Microsoft-Dokumentation
+title: sp_cursor (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,22 +18,22 @@ ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108571"
 ---
-# <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
+# <a name="sp_cursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Fordert positionierte Updates an. Mithilfe dieser Prozedur werden Vorgänge für mindestens eine Zeile im Fetchpuffer eines Cursors ausgeführt. Sp_cursor wird aufgerufen, indem ID = 1 in einem tabular Data Stream (TDS)-Paket.  
+  Fordert positionierte Updates an. Mithilfe dieser Prozedur werden Vorgänge für mindestens eine Zeile im Fetchpuffer eines Cursors ausgeführt. sp_cursor wird aufgerufen, indem ID = 1 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
 ||  
 |-|  
-|**Gilt für**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] über [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
+|**Gilt für**: SQL Server ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,21 +44,21 @@ sp_cursor  cursor, optype, rownum, table
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Cursor*  
- Das Cursorhandle. *Cursor* ist ein erforderlicher Parameter, die bei Aufrufen einer **Int** Eingabewert. *Cursor* ist die *behandeln* Wert von SQL Server generiert und von der Prozedur Sp_cursoropen zurückgegeben.  
+ *Hand*  
+ Das Cursorhandle. *Cursor* ist ein erforderlicher Parameter, der einen **int** -Eingabe Wert aufruft. *Cursor* ist der *handle* -Wert, der vom SQL Server generiert und von der sp_cursoropen Prozedur zurückgegeben wird.  
   
  *optype*  
- Ein erforderlicher Parameter, der festlegt, welcher Vorgang vom Cursor ausgeführt wird. *Optype* erfordert eine der folgenden **Int** Eingabewerte.  
+ Ein erforderlicher Parameter, der festlegt, welcher Vorgang vom Cursor ausgeführt wird. *optype* erfordert einen der folgenden **int** -Eingabewerte.  
   
-|Wert|Name|Beschreibung|  
+|value|Name|BESCHREIBUNG|  
 |-----------|----------|-----------------|  
-|0X0001|UPDATE|Wird zum Update mindestens einer Zeile im Fetchpuffer verwendet.  Die Zeilen im angegebenen *Rownum* erneut abgerufen und aktualisiert werden.|  
-|0x0002|DELETE|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die Zeilen im angegebenen *Rownum* erneut abgerufen und gelöscht werden.|  
-|0X0004|INSERT|Fügt Daten ohne erstellen ein SQL **einfügen** Anweisung.|  
+|0X0001|UPDATE|Wird zum Update mindestens einer Zeile im Fetchpuffer verwendet.  Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und aktualisiert.|  
+|0x0002|Delete|Wird zum Löschen mindestens einer Zeile im Fetchpuffer verwendet. Die in *rowNum* angegebenen Zeilen werden erneut aufgerufen und gelöscht.|  
+|0X0004|INSERT|Fügt Daten ein, ohne eine SQL **Insert** -Anweisung zu entwickeln.|  
 |0X0008|REFRESH|Wird verwendet, um den Puffer mithilfe zugrunde liegender Tabellen aufzufüllen, und kann zum Update der Zeile verwendet werden, wenn ein Update- oder Löschvorgang aufgrund der Steuerung durch vollständige Parallelität fehlerhaft ist, oder nachdem ein UPDATE-Vorgang ausgeführt wurde.|  
-|0X10|LOCK|Bewirkt, dass eine SQL Server U-Sperre auf der Seite mit der angegebenen Zeile. Diese Sperre ist mit S-Sperren kompatibel, jedoch nicht mit X-Sperren oder anderen U-Sperren. Kann verwendet werden, um eine kurzfristige Sperre zu implementieren.|  
-|0X20|SETPOSITION|Wird verwendet, nur wenn die Anwendung vor sich geht eine nachfolgende SQL-Server ausstellen DELETE- oder UPDATE-Anweisung positioniert.|  
-|0X40|ABSOLUTE|Kann nur in Verbindung mit UPDATE oder DELETE verwendet werden.  ABSOLUTE wird nur mit KEYSET-Cursorn verwendet (wird für DYNAMIC-Cursor ignoriert, und STATIC-Cursor können nicht aktualisiert werden).<br /><br /> Hinweis: Wenn ABSOLUTE für eine Zeile im Keyset angegeben wird, die nicht abgerufen wurde, der Vorgang kann fehlschlagen, die Überprüfung auf Parallelität, und das Rückgabeergebnis nicht garantiert werden kann.|  
+|0X10|LOCK|Bewirkt, dass eine SQL Server U-Sperre auf der Seite mit der angegebenen Zeile abgerufen wird. Diese Sperre ist mit S-Sperren kompatibel, jedoch nicht mit X-Sperren oder anderen U-Sperren. Kann verwendet werden, um eine kurzfristige Sperre zu implementieren.|  
+|0X20|SETPOSITION|Wird nur verwendet, wenn das Programm eine nachfolgende SQL Server positionierte DELETE-oder Update-Anweisung ausgibt.|  
+|0X40|ABSOLUTE|Kann nur in Verbindung mit UPDATE oder DELETE verwendet werden.  ABSOLUTE wird nur mit KEYSET-Cursorn verwendet (wird für DYNAMIC-Cursor ignoriert, und STATIC-Cursor können nicht aktualisiert werden).<br /><br /> Hinweis: Wenn absolute für eine Zeile im Keyset angegeben ist, die nicht abgerufen wurde, kann der Vorgang die Parallelitäts Überprüfung nicht durchführen, und das Rückgabe Ergebnis kann nicht garantiert werden.|  
   
  *rowNum*  
  Gibt an, welche Zeilen der Cursor im Fetchpuffer verwendet, aktualisiert oder löscht.  
@@ -66,7 +66,7 @@ sp_cursor  cursor, optype, rownum, table
 > [!NOTE]  
 >  Weder dieser Wert noch die über sp_cursor ausgeführten Update- oder Löschvorgänge wirken sich auf den Ausgangspunkt eines Abrufvorgangs RELATIVE, NEXT oder PREVIOUS aus.  
   
- *RowNum* ist ein erforderlicher Parameter, die bei Aufrufen einer **Int** Eingabewert.  
+ *rowNum* ist ein erforderlicher Parameter, der einen **int** -Eingabe Wert aufruft.  
   
  1  
  Gibt die erste Zeile im Fetchpuffer an.  
@@ -84,50 +84,50 @@ sp_cursor  cursor, optype, rownum, table
  Gibt alle Zeilen im Fetchpuffer an.  
   
 > [!NOTE]  
->  Gilt nur für die Verwendung mit AKTUALISIERUNGS-, Lösch-, REFRESH oder LOCK *Optype* Werte.  
+>  Ist nur gültig für die Verwendung mit den *optype* -Werten Update, DELETE, Refresh oder Lock.  
   
- *table*  
- Tabellenname, der die Tabelle identifiziert, die *Optype* gilt, wenn die Cursordefinition einen Join einschließt, oder mehrdeutige Spaltennamen vom zurückgegeben werden die *Wert* Parameter. Wenn keine bestimmte Tabelle festgelegt wird, wird die erste Tabelle in der FROM-Klausel als Standard verwendet. *Tabelle* ist ein optionaler Parameter, die Zeichenfolgen-Eingabewerte erfordert. Die Zeichenfolge kann als beliebiges Zeichen oder UNICODE-Datentyp angegeben werden. *Tabelle* kann ein mehrteiliger Tabellenname sein.  
+ *glaub*  
+ Tabellenname, der die Tabelle identifiziert, auf die sich *optype* bezieht, wenn die Cursor Definition einen Join oder mehrdeutige Spaltennamen enthält, die vom *value* -Parameter zurückgegeben werden. Wenn keine bestimmte Tabelle festgelegt wird, wird die erste Tabelle in der FROM-Klausel als Standard verwendet. *Table* ist ein optionaler Parameter, der einen Zeichen folgen-Eingabe Wert erfordert. Die Zeichenfolge kann als beliebiges Zeichen oder UNICODE-Datentyp angegeben werden. die *Tabelle* kann ein mehrteilige Tabellenname sein.  
   
- *value*  
- Wird zum Einfügen oder Aktualisieren von Werten verwendet. Die *Wert* Abfragezeichenfolgen-Parameter wird nur mit UPDATE und INSERT verwendet *Optype* Werte. Die Zeichenfolge kann als beliebiges Zeichen oder UNICODE-Datentyp angegeben werden.  
+ *Wert*  
+ Wird zum Einfügen oder Aktualisieren von Werten verwendet. Der *Wert* Zeichen folgen Parameter wird nur bei Update-und INSERT- *optype* -Werten verwendet. Die Zeichenfolge kann als beliebiges Zeichen oder UNICODE-Datentyp angegeben werden.  
   
 > [!NOTE]  
->  Die Parameternamen für *Wert* kann vom Benutzer zugewiesen werden.  
+>  Die Parameternamen für *value* können vom Benutzer zugewiesen werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Wenn RPC verwenden zu können, gibt ein positionierter DELETE- oder UPDATE-Vorgang mit der puffernummer 0 eine DONE-Meldung mit einer *Rowcount* von 0 (Fehler) oder 1 (Erfolg) für jede Zeile im Fetchpuffer.  
+ Bei Verwendung eines RPC gibt ein positionierter DELETE-oder Update-Vorgang mit der Puffer Nummer 0 eine done-Meldung mit einer Zeilen *Anzahl* von 0 (Fehler) oder 1 (Erfolg) für jede Zeile im Fetchpuffer zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="optype-parameter"></a>optype-Parameter  
- Mit Ausnahme der Kombinationen von SETPOSITION mit UPDATE, DELETE, REFRESH oder SPERRE; oder ABSOLUTE mit UPDATE oder DELETE, die *Optype* Werte schließen sich gegenseitig.  
+ Mit Ausnahme der Kombinationen von SetPosition mit Update, DELETE, Refresh oder Lock. oder absolut mit Update oder DELETE schließen sich die *optype* -Werte gegenseitig aus.  
   
- Die SET-Klausel des UPDATE-Werts wird erstellt, aus der *Wert* Parameter.  
+ Die SET-Klausel des Update-Werts wird anhand des *value* -Parameters erstellt.  
   
- Ein Vorteil der Verwendung der EINFÜGEVORGANG *Optype* Wert ist, dass Sie die Konvertierung von nicht-Zeichen-Datentypen in das Zeichenformat für einfügungen vermeiden können. Die Werte werden auf die gleiche Weise wie bei UPDATE angegeben. Wenn eine der erforderlichen Spalten nicht eingeschlossen wird, tritt ein INSERT-Fehler auf.  
+ Ein Vorteil der Verwendung des einfügewerts *optype* ist, dass Sie vermeiden können, nicht-Zeichendaten in das Zeichenformat für Einfügungen umzuwandeln. Die Werte werden auf die gleiche Weise wie bei UPDATE angegeben. Wenn eine der erforderlichen Spalten nicht eingeschlossen wird, tritt ein INSERT-Fehler auf.  
   
--   Weder der SETPOSITION-Wert noch die über die sp_cursor-Schnittstelle ausgeführten Update- oder Löschvorgänge wirken sich auf den Ausgangspunkt eines Abrufvorgangs RELATIVE, NEXT oder PREVIOUS aus. Jede Zahl, die keine Zeile im Fetchpuffer angibt, führt dazu, dass die Position auf 1 festgelegt und kein Fehler zurückgegeben wird. Nachdem SETPOSITION ausgeführt wurde, bleibt die Position aktiv, bis der nächste Sp_cursorfetch-Vorgang, T-SQL **abrufen** Vorgang oder Sp_cursor SETPOSITION-Vorgang über den gleichen Cursor. Durch einen nachfolgenden sp_cursorfetch-Vorgang wird die Cursorposition auf die erste Zeile im neuen Fetchpuffer festgelegt, während sich andere Cursoraufrufe nicht auf den Wert der Position auswirken. SETPOSITION kann von einer OR-Klausel mit REFRESH, UPDATE, DELETE oder LOCK verknüpft werden, um den Wert der Position auf die letzte geänderte Zeile festzulegen.  
+-   Weder der SETPOSITION-Wert noch die über die sp_cursor-Schnittstelle ausgeführten Update- oder Löschvorgänge wirken sich auf den Ausgangspunkt eines Abrufvorgangs RELATIVE, NEXT oder PREVIOUS aus. Jede Zahl, die keine Zeile im Fetchpuffer angibt, führt dazu, dass die Position auf 1 festgelegt und kein Fehler zurückgegeben wird. Nachdem SetPosition ausgeführt wurde, bleibt die Position bis zum nächsten sp_cursorfetch Operation, T-SQL **Fetch** -Vorgang oder sp_cursor SetPosition-Vorgang über den gleichen Cursor wirksam. Durch einen nachfolgenden sp_cursorfetch-Vorgang wird die Cursorposition auf die erste Zeile im neuen Fetchpuffer festgelegt, während sich andere Cursoraufrufe nicht auf den Wert der Position auswirken. SETPOSITION kann von einer OR-Klausel mit REFRESH, UPDATE, DELETE oder LOCK verknüpft werden, um den Wert der Position auf die letzte geänderte Zeile festzulegen.  
   
- Wenn eine Zeile im Fetchpuffer nicht, über angegeben wird die *Rownum* Parameter, der die Position wird auf 1 festgelegt werden, und kein Fehler zurückgegeben. Nachdem die Position festgelegt wurde, bleibt sie so lange wirksam, bis der nächste sp_cursorfetch-Vorgang, T-SQL FETCH-Vorgang oder sp_cursor SETPOSITION-Vorgang für den gleichen Cursor ausgeführt wird.  
+ Wenn eine Zeile im Fetchpuffer nicht durch den *rowNum* -Parameter angegeben wird, wird die Position auf 1 festgelegt, ohne dass ein Fehler zurückgegeben wird. Nachdem die Position festgelegt wurde, bleibt sie so lange wirksam, bis der nächste sp_cursorfetch-Vorgang, T-SQL FETCH-Vorgang oder sp_cursor SETPOSITION-Vorgang für den gleichen Cursor ausgeführt wird.  
   
  SETPOSITION kann von einer OR-Klausel mit REFRESH, UPDATE, DELETE oder LOCK verknüpft werden, um die Cursorposition auf die letzte geänderte Zeile festzulegen.  
   
 ## <a name="rownum-parameter"></a>rownum-Parameter  
- Wenn angegeben, die *Rownum* Parameter als die Nummer der Zeile innerhalb des Keysets anstatt die Nummer der Zeile innerhalb des fetchpuffers interpretiert werden kann. Der Benutzer ist für die Einhaltung der Parallelitätssteuerung verantwortlich. Dies bedeutet, dass bei SCROLL_LOCKS-Cursorn eine Sperre für die angegebene Zeile unabhängig verwaltet werden muss (dies kann über eine Transaktion erfolgen). Bei OPTIMISTIC-Cursorn müssen Sie zuvor die Zeile abgerufen haben, um diesen Vorgang auszuführen.  
+ Wenn angegeben, kann der *rowNum* -Parameter als Zeilennummer innerhalb des Keysets anstelle der Zeilennummer innerhalb des Fetchpuffers interpretiert werden. Der Benutzer ist für die Einhaltung der Parallelitätssteuerung verantwortlich. Dies bedeutet, dass bei SCROLL_LOCKS-Cursorn eine Sperre für die angegebene Zeile unabhängig verwaltet werden muss (dies kann über eine Transaktion erfolgen). Bei OPTIMISTIC-Cursorn müssen Sie zuvor die Zeile abgerufen haben, um diesen Vorgang auszuführen.  
   
 ## <a name="table-parameter"></a>table-Parameter  
- Wenn die *Optype* -Wert UPDATE oder INSERT und einem vollständigen Update oder Insert-Anweisung wird als übermittelt die *Wert* -Parameter, der angegebene Wert für *Tabelle* wird ignoriert.  
+ Wenn der *optype* -Wert "Update" oder "Insert" ist und eine vollständige Update-oder INSERT-Anweisung als *value* -Parameter übermittelt wird, wird der für die *Tabelle* angegebene Wert ignoriert.  
   
 > [!NOTE]  
->  Bei Sichten kann nur eine zur Sicht gehörige Tabelle geändert werden. Die *Wert* Spalte Parameternamen müssen die Spaltennamen in der Ansicht widerzuspiegeln, aber der Tabellenname kann sein, die von der zugrunde liegenden Basistabelle (in diesem Fall Sp_cursor des Ansichtsnamens ersetzen wird).  
+>  Bei Sichten kann nur eine zur Sicht gehörige Tabelle geändert werden. Die *Wert* Parameter-Spaltennamen müssen die Spaltennamen in der Sicht widerspiegeln, aber der Tabellenname kann der der zugrunde liegenden Basistabelle entsprechen (in diesem Fall wird sp_cursor durch den Sicht Namen ersetzt).  
   
 ## <a name="value-parameter"></a>value-Parameter  
- Es gibt zwei Alternativen zu den Regeln für die Verwendung von *Wert* wie zuvor im Abschnitt zu Argumenten angegeben:  
+ Es gibt zwei Alternativen zu den Regeln für die Verwendung des *Werts* , wie zuvor im Abschnitt "Arguments" angegeben:  
   
-1.  Können Sie einen Namen mit "\@" als Präfix für den Namen der Spalte in der Select-Liste für jeden benannten *Wert* Parameter. Ein Vorteil dabei ist, dass möglicherweise keine Datenkonvertierung erforderlich ist.  
+1.  Sie können einen Namen verwenden, der dem\@Namen der Spalte in der SELECT-Liste für beliebige benannte *Wert* Parameter vorausgeht. Ein Vorteil dabei ist, dass möglicherweise keine Datenkonvertierung erforderlich ist.  
   
-2.  Verwenden Sie einen Parameter, um eine vollständige Update- oder INSERT-Anweisung übermitteln, oder verwenden mehrere Parameter, um Teile einer Update- oder INSERT-Anweisung übermittelt werden. SQL Server, klicken Sie dann in eine vollständige Anweisung erstellt wird. Beispiele dafür finden Sie im Abschnitt "Beispiele" weiter unten in diesem Thema.  
+2.  Verwenden Sie einen Parameter, um entweder eine komplette Update-oder INSERT-Anweisung zu übermitteln, oder verwenden Sie mehrere Parameter, um Teile einer Update-oder INSERT-Anweisung zu übermitteln, die SQL Server dann in eine Complete-Anweisung Beispiele dafür finden Sie im Abschnitt "Beispiele" weiter unten in diesem Thema.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -139,7 +139,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ UPDATE <table name> ] SET ] {<column name> = expression} [,...n]`  
   
 > [!NOTE]  
->  Wenn UPDATE \<Tabellenname > angegeben ist, wird ein Wert angegeben wird, für die *Tabelle* Parameter wird ignoriert.  
+>  Wenn Update \<Table Name> angegeben wird, wird jeder für den *Table* -Parameter angegebene Wert ignoriert.  
   
  Wenn mehrere Parameter verwendet werden, muss der erste Parameter eine Zeichenfolge in der folgenden Form sein:  
   
@@ -149,7 +149,7 @@ sp_cursor  cursor, optype, rownum, table
   
  `<column name> = expression  [,...n]`  
   
- In diesem Fall die \<Tabellenname > in der erstellten Update-Anweisung ist das einer angegebenen oder standardmäßig auf von der *Tabelle* Parameter.  
+ In diesem Fall ist der \<Tabellenname, der in der konstruierten Update-Anweisung> wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
   
  Für INSERT:  
   
@@ -158,7 +158,7 @@ sp_cursor  cursor, optype, rownum, table
  `[ [ INSERT [INTO] <table name> ] VALUES ] ( <expression> [,...n] )`  
   
 > [!NOTE]  
->  Wenn INSERT  *\<Tabellenname >* angegeben ist, wird ein Wert angegeben wird, für die *Tabelle* Parameter wird ignoriert.  
+>  Wenn Name der Einfügetabelle * \<>* angegeben wird, wird jeder für den *Tabellen* Parameter angegebene Wert ignoriert.  
   
  Wenn mehrere Parameter verwendet werden, muss der erste Parameter eine Zeichenfolge in der folgenden Form sein:  
   
@@ -168,14 +168,14 @@ sp_cursor  cursor, optype, rownum, table
   
  `expression [,...n]`  
   
- es sei denn, VALUES wurde angegeben; in diesem Fall muss der letzte Ausdruck mit einer abschließenden ")" enden. In diesem Fall die  *\<Tabellenname >* in der erstellten UPDATE-Anweisung ist das einer angegebenen oder standardmäßig auf von der *Tabelle* Parameter.  
+ es sei denn, VALUES wurde angegeben; in diesem Fall muss der letzte Ausdruck mit einer abschließenden ")" enden. In diesem Fall ist der * \<Tabellenname* , der in der konstruierten Update-Anweisung>wird, der in der erstellten Update-Anweisung angegebene oder standardmäßig der *Tabellen* Parameter.  
   
 > [!NOTE]  
 >  Es ist möglich, einen Parameter als benannten Parameter zu übermitteln, d. h. "`@VALUES`". In diesem Fall können keine weiteren benannten Parameter verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_cursoropen &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
- [sp_cursorfetch &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_cursoropen &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
+ [sp_cursorfetch &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursorfetch-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

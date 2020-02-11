@@ -1,5 +1,5 @@
 ---
-title: Diesen zurück | Microsoft-Dokumentation
+title: Ruleumum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,21 +16,21 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965248"
 ---
 # <a name="ruleenum"></a>RuleEnum
-Gibt die Regel, um beim Ausführen einer [Schlüssel](../../../ado/reference/adox-api/key-object-adox.md) wird gelöscht.  
+Gibt die Regel an, die befolgt werden soll, wenn eine [Taste](../../../ado/reference/adox-api/key-object-adox.md) gelöscht wird.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adRICascade**|1|CASCADE; kaskadierende Änderungen.|  
-|**adRINone**|0|Standard. Es wird keine Aktion ausgeführt.|  
-|**adRISetDefault**|3|Fremdschlüsselwert wird auf den Standardwert festgelegt.|  
-|**adRISetNull**|2|Foreign Key-Wert wird festgelegt auf Null.|  
+|**adricascade**|1|Kaskadierte Änderungen.|  
+|**adrinone**|0|Default. Es wird keine Aktion ausgeführt.|  
+|**adrisetdefault**|3|Der Fremdschlüssel Wert wird auf den Standardwert festgelegt.|  
+|**adrisetnull**|2|Der Fremdschlüssel Wert ist auf NULL festgelegt.|  
   
 ## <a name="applies-to"></a>Gilt für  
  [DeleteRule-Eigenschaft (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)

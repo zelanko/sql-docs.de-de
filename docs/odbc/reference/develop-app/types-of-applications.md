@@ -1,5 +1,5 @@
 ---
-title: Anwendungstypen | Microsoft-Dokumentation
+title: Anwendungs Typen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,66 +17,66 @@ ms.assetid: d346a64e-a32c-4153-a40f-5b53c2f57ef2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 70263b98f6b0e933f8b14fbfa74428c77317f462
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087803"
 ---
 # <a name="types-of-applications"></a>Anwendungstypen
 ODBC-Anwendungen können wie folgt klassifiziert werden:  
   
--   **Reine ODBC 2.**  
-     **_X_ Anwendung** ein 32-Bit-Anwendung, die:  
+-   **Reines ODBC 2.**  
+     ** _x_ -Anwendung** : eine 32-Bit-Anwendung, die Folgendes:  
   
-    -   Ruft nur ODBC 2. *x* Funktionen (einschließlich der ODBC-1.0-Funktion **SQLSetParam**). Dazu gehören die ODBC-1. *x* Anwendungen, die auf 32 Bits portiert haben.  
+    -   Ruft nur ODBC 2 auf. *x* -Funktionen (einschließlich der ODBC 1,0-Funktion **SQLSetParam**). Dies schließt ODBC 1 ein. *x* -Anwendungen, die in 32-Bit portiert wurden.  
   
-    -   Erwartet, dass ODBC 2. *x* -Verhalten für Funktionen, die Änderungen am Verhalten aufweisen. (Finden Sie unter [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md) für Weitere Informationen.)  
+    -   Erwartet ODBC 2. *x* -Verhalten für Funktionen, die über Verhaltensänderungen verfügen. (Weitere Informationen finden Sie unter [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md) .)  
   
-    -   Nicht mit ODBC 3.5-Headern neu kompiliert wurde.  
+    -   Wurde nicht mit ODBC 3,5-Headern neu kompiliert.  
   
--   **Reine ODBC 2.**  
-     **_X_ Anwendung neu kompiliert** eine reine ODBC 2. *X* -Anwendung, die neu kompiliert wurde mithilfe der ODBC 3.5-Header-Dateien, durch Festlegen von ODBCVER = 0x0250.  
+-   **Reines ODBC 2.**  
+     **_x_ rekompilierte Anwendung** ein reines ODBC 2. *x* -Anwendung, die mithilfe der ODBC 3,5-Header Dateien neu kompiliert wurde, durch Festlegen von ODBCVer = 0x0250.  
   
--   **Reine ODBC 2.**  
-     **_X_ Unicode-Anwendung** eine reine ODBC 2. *X* neu kompiliert die Anwendung, die Unicode-kompatibel ist und verwendet den SQL_WCHAR-Datentyp.  
+-   **Reines ODBC 2.**  
+     **_x_ Unicode-Anwendung** ein reines ODBC 2. *neu* kompilierte Anwendung, die Unicode-kompatibel ist und den SQL_WCHAR-Datentyp verwendet.  
   
--   **Reine Open Group und ISO**-**kompatible ODBC-Anwendung** ein 32-Bit-Anwendung, die:  
+-   **Reine Open Group-und ISO**--**kompatible ODBC-Anwendung** eine 32-Bit-Anwendung, die Folgendes hat:  
   
-    -   Ruft die Funktionen, die in den Open Group oder ISO-CLI-Standards definiert. (Diese Funktionen möglicherweise veraltete 3.0-Funktionen enthalten.)  
+    -   Ruft Funktionen auf, die in den Standards Open Group oder ISO CLI definiert sind. (Diese Funktionen können als veraltet markierte 3,0-Funktionen enthalten.)  
   
-    -   Verwendet nicht die Unicode-Datentypen.  
+    -   Die Unicode-Datentypen werden von nicht verwendet.  
   
-    -   Erwartet, dass ODBC 3.0-Verhalten für Funktionen, die Änderungen am Verhalten aufweisen.  
+    -   Erwartet das ODBC 3,0-Verhalten für Funktionen, die über Verhaltensänderungen verfügen.  
   
--   **Reine ODBC 3.0-Anwendung** ein 32-Bit-Anwendung, die:  
+-   **Reine ODBC 3,0-Anwendung** Eine 32-Bit-Anwendung, die Folgendes hat:  
   
-    -   Mit 3.0-Header wird kompiliert werden.  
+    -   Wird mit 3,0-Headern kompiliert.  
   
-    -   Ruft alle ODBC 3.0-Funktion, die möglicherweise auch solche, die als veraltet markiert werden.  
+    -   Ruft jede ODBC 3,0-Funktion auf, einschließlich derjenigen, die veraltet sind.  
   
-    -   Erwartet, dass ODBC 3.0-Verhalten für Funktionen, die Änderungen am Verhalten aufweisen.  
+    -   Erwartet das ODBC 3,0-Verhalten für Funktionen, die über Verhaltensänderungen verfügen.  
   
--   **Reine ODBC 3.5-Anwendung** ein 32 oder 64-Bit-Anwendung, die:  
+-   **Reine ODBC 3,5-Anwendung** Eine 32-oder 64-Bit-Anwendung, die Folgendes hat:  
   
-    -   Sie können Unicode-Datentypen.  
+    -   Kann Unicode-Datentypen verwenden.  
   
-    -   Ruft beliebige ODBC 3.5-Funktionen, die möglicherweise auch solche, die als veraltet markiert werden.  
+    -   Ruft jede ODBC 3,5-Funktion auf, einschließlich derjenigen, die veraltet sind.  
   
-    -   Erwartet, dass ODBC 3.5-Verhalten für Funktionen, die Änderungen am Verhalten aufweisen.  
+    -   Erwartet das ODBC 3,5-Verhalten für Funktionen, die über Verhaltensänderungen verfügen.  
   
--   **Reine ODBC 3.8 (oder höher)-Anwendung** ein 32-Bit oder 64-Bit-Anwendung, die:  
+-   **Reine ODBC 3,8-Anwendung (oder höher)** Eine 32-Bit-oder 64-Bit-Anwendung, die Folgendes hat:  
   
-    -   Sie können Unicode-Datentypen.  
+    -   Kann Unicode-Datentypen verwenden.  
   
-    -   Ruft beliebige ODBC 3.8-Funktionen, die möglicherweise auch solche, die als veraltet markiert werden.  
+    -   Ruft jede ODBC 3,8-Funktion auf, einschließlich derjenigen, die veraltet sind.  
   
-    -   Erwartet, dass ODBC 3.8-Verhalten für Funktionen, die Änderungen am Verhalten aufweisen.  
+    -   Erwartet das ODBC 3,8-Verhalten für Funktionen, die über Verhaltensänderungen verfügen.  
   
--   **Ersetzt die Anwendung** ein 32 oder 64-Bit-Anwendung, die:  
+-   **Ersetzte Anwendung** Eine 32-oder 64-Bit-Anwendung, die Folgendes hat:  
   
-    -   Implementiert die neue Verhalten für die duplizierte Funktionalität.  
+    -   Implementiert neues Verhalten für duplizierte Funktionen.  
   
-    -   Verwendet keine neuen Features in einer späteren Version von ODBC nur innerhalb der bedingten Code.  
+    -   Verwendet alle neuen Features in einer neueren Version von ODBC nur innerhalb von bedingtem Code.  
   
-    -   Bietet eine eingeschränkte bedingten Code zum Verarbeiten von Änderungen am Verhalten, oder sich werden von einer früheren Version von ODBC-Anwendung registriert hat.
+    -   Weist eingeschränkten bedingten Code auf, um Verhaltensänderungen zu behandeln, oder hat sich als frühere Version der ODBC-Anwendung registriert.

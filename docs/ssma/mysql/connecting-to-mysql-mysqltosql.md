@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit MySQL (MySQLToSQL)) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit MySQL (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,106 +13,106 @@ ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb47c0f06d7133b8c7454a4fa538937a0e78e19
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103170"
 ---
 # <a name="connecting-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
-Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie mit der MySQL-Datenbank verbinden, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, SSMA Ruft Metadaten über alle MySQL-Schemas ab, und anschließend in der MySQL-Metadaten-Explorer-Bereich angezeigt. SSMA speichert Informationen zu den Datenbankserver, aber die Kennwörter werden nicht gespeichert.  
+Um MySQL-Datenbanken zu SQL Server oder SQL Azure zu migrieren, müssen Sie eine Verbindung mit der MySQL-Datenbank herstellen, die Sie migrieren möchten. Wenn Sie eine Verbindung herstellen, werden von SSMA Metadaten zu allen MySQL-Schemas abgerufen und anschließend im Bereich MySQL-metadatenexplorer angezeigt. SSMA speichert Informationen über den Datenbankserver, speichert aber keine Kenn Wörter.  
   
-Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank.  
+Die Verbindung mit der Datenbank bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten.  
   
-Metadaten für die MySQL-Datenbank wird nicht automatisch aktualisiert. Stattdessen sollten Sie die Metadaten in der MySQL-Metadaten-Explorer zu aktualisieren, müssen Sie manuell es aktualisieren. Weitere Informationen finden Sie im Abschnitt "Aktualisieren der MySQL-Metadaten" weiter unten in diesem Thema.  
+Metadaten über die MySQL-Datenbank werden nicht automatisch aktualisiert. Wenn Sie die Metadaten im MySQL-metadatenexplorer aktualisieren möchten, müssen Sie Sie stattdessen manuell aktualisieren. Weitere Informationen finden Sie im Abschnitt "Aktualisieren von MySQL-Metadaten" weiter unten in diesem Thema.  
   
 ## <a name="required-mysql-permissions"></a>Erforderliche MySQL-Berechtigungen  
-Das Konto, das verwendet wird, für die Verbindung mit der MySQL-Datenbank muss zumindest **CONNECT** Berechtigungen. Dies ermöglicht der SSMA zum Abrufen von Metadaten aus Schemas im Besitz des Benutzers eine Verbindung herstellt. Um Metadaten für Objekte in anderen Schemas zu erhalten, und klicken Sie dann die Objekte in diesen Schemas konvertieren, muss das Konto folgenden Berechtigungen verfügen:  
+Das Konto, das zum Herstellen einer Verbindung mit der MySQL-Datenbank verwendet wird, muss mindestens über **Connect** -Berechtigungen verfügen. Dies ermöglicht SSMA das Abrufen von Metadaten aus Schemas im Besitz des Benutzers, der eine Verbindung herstellt. Zum Abrufen von Metadaten für Objekte in anderen Schemas und zum anschließenden Konvertieren von Objekten in diesen Schemas muss das Konto über die folgenden Berechtigungen verfügen:  
   
--   "SHOW" Berechtigungen für Datenbankobjekte  
+-   "Show"-Berechtigungen für Datenbankobjekte  
   
--   "SELECT" auf "Information_schema"  
+-   SELECT-Berechtigung für "Information_schema"  
   
--   "SELECT-Berechtigung für Mysql (für benutzerdefinierte Funktionen)  
+-   SELECT-Berechtigung für MySQL (für UDFs)  
   
 ## <a name="establishing-a-connection-to-mysql"></a>Herstellen einer Verbindung mit MySQL  
-Wenn Sie eine Verbindung mit einer Datenbank herstellen, SSMA liest die Datenbankmetadaten und fügt dann diese Metadaten zu der Projektdatei. Diese Metadaten werden von SSMA verwendet, wenn sie Objekte in SQL Server oder SQL Azure-Syntax konvertiert und Daten in SQL Server oder SQL Azure migriert werden. Sie können diese Metadaten im MySQL-Metadaten-Explorer durchsuchen und überprüfen Sie die Eigenschaften einzelner Datenbankobjekte.  
+Wenn Sie eine Verbindung mit einer Datenbank herstellen, liest SSMA die Metadaten der Datenbank und fügt diese Metadaten dann der Projektdatei hinzu. Diese Metadaten werden von SSMA verwendet, wenn Objekte in SQL Server-oder SQL Azure-Syntax konvertiert und Daten zu SQL Server oder SQL Azure migriert werden. Sie können diese Metadaten im Bereich MySQL-metadatenexplorer durchsuchen und die Eigenschaften einzelner Datenbankobjekte überprüfen.  
   
 > [!IMPORTANT]  
-> Bevor Sie versuchen, eine Verbindung herstellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren.  
+> Bevor Sie versuchen, eine Verbindung herzustellen, stellen Sie sicher, dass der Datenbankserver ausgeführt wird und Verbindungen akzeptieren kann.  
   
-**Verbindung mit MySQL**  
+**So stellen Sie eine Verbindung mit MySQL her**  
   
-1.  Auf der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit MySQL** (diese Option wird nach der Erstellung des Projekts aktiviert werden).  
+1.  Wählen Sie im Menü **Datei** die Option **mit MySQL verbinden** aus. (diese Option wird nach der Projekt Erstellung aktiviert.)  
   
-    Wenn Sie zuvor mit MySQL verbunden sind, gibt der Namen des Befehls werden **Wiederherstellen der Verbindung mit MySQL**.  
+    Wenn Sie zuvor eine Verbindung mit MySQL hergestellt haben, wird der Befehls Name **erneut mit MySQL**verbunden.  
   
-2.  In der **Anbieter** wählen MySQL 5.1 Odbcdriver (vertrauenswürdig). Es ist der Standardanbieter in den Modus "standard".  
+2.  Wählen Sie im Feld **Anbieter** die Option MySQL ODBC 5,1-Treiber (vertrauenswürdig) aus. Dies ist der Standardanbieter im Standardmodus.  
   
-3.  In der **Modus** Kontrollkästchen **Modus "Standard"** . Es handelt sich hierbei um den Standardmodus.  
+3.  Wählen Sie im Feld **Modus** die Option **Standard Modus**aus. Es handelt sich hierbei um den Standardmodus.  
   
-    Verwenden Sie Modus "standard", um den Servernamen und Port anzugeben.  
+    Verwenden Sie den Standardmodus, um den Servernamen und den Port anzugeben.  
   
-4.  In **Modus "Standard"** , geben Sie die folgenden Werte:  
+4.  Geben Sie im **Standard Modus**die folgenden Werte an:  
   
-    1.  In der **Servernamen** Geben Sie den Namen des MySQL-Servers. In der **Serverport** Geben Sie die Portnummer, um 3306 sein. Es ist der Standardport.  
+    1.  Geben Sie im Feld **Server Name** den Namen des MySQL-Servers ein. Geben Sie im Feld **Serverport** die Portnummer 3306 ein. Dies ist der Standardport.  
   
-    2.  In der **Benutzernamen** Geben Sie eine MySQL-Konto, das die erforderlichen Berechtigungen verfügt.  
+    2.  Geben Sie im Feld **Benutzername** ein MySQL-Konto ein, das über die erforderlichen Berechtigungen verfügt.  
   
-    3.  In der **Kennwort** Geben Sie das Kennwort für den angegebenen Benutzernamen ein.  
+    3.  Geben Sie im Feld **Kennwort** das Kennwort für den angegebenen Benutzernamen ein.  
   
-5.  **SSL:** Wenn Sie die sichere Verbindung mit MySQL herstellen möchten, verwenden von Secure Socket Layer (SSL) anhand der **SSL** Kontrollkästchen.  
+5.  **SSL:** Wenn Sie eine sichere Verbindung mit MySQL herstellen möchten, verwenden Sie SSL (Secure Socket Layer), indem Sie das Kontrollkästchen **SSL** aktivieren.  
   
-6.  **Konfigurieren:** Es bietet eine Option aus, um die Verbindung mit MySQL über Secure Socket Layer (SSL) konfigurieren.  
-  
-    > [!NOTE]  
-    > So aktivieren Sie **konfigurieren**, SSL muss festgelegt werden, um **"true"** .  
-  
-    Wird Sie durch Klicken auf die Schaltfläche "Konfigurieren", ein Dialogfeld angezeigt. Definiert [Privacy Enhanced Mail-Zertifikate (PEM)], Verschlüsselung zu verwenden, beim Herstellen einer Verbindung mit MySQL-Datenbank, Pfad, an den folgenden drei Dateien, die in das Dialogfeld vorhanden sein muss:  
-  
-    -   **SSL-Zertifizierungsstelle:** Gibt den Pfad zu einer Datei mit einer Liste von vertrauenswürdigen Zertifizierungsstellen mit SSL.  
-  
-    -   **SSL-Zertifikat:** Gibt den Namen der Datei die SSL-Zertifikat zum Herstellen einer sicheren Verbindung verwendet.  
-  
-    -   **SSL-SCHLÜSSEL:** Gibt den Namen der Schlüsseldatei SSL zum Herstellen einer sicheren Verbindung verwendet.  
+6.  **Konfigurieren:** Es bietet eine Option zum Konfigurieren der Verbindung mit MySQL über Secure Socket Layer (SSL).  
   
     > [!NOTE]  
-    > -   Die **OK** Schaltfläche ist aktiviert, wenn die erforderliche Informationen bereitgestellt wurde. Wenn die Dateipfade ungültig sind, bleiben die Schaltfläche "OK" deaktiviert.  
-    > -   Die **Abbrechen** Schaltfläche wird das Dialogfeld geschlossen und **deaktiviert** das Hauptformular der Verbindung die Option "SSL".  
+    > Zum Aktivieren von **configure**muss SSL auf **true**festgelegt werden.  
   
-7.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+    Wenn Sie auf die Schaltfläche "Konfigurieren" klicken, wird ein Dialogfeld angezeigt. Wenn Sie beim Herstellen einer Verbindung mit einer MySQL-Datenbank die Verschlüsselung verwenden möchten, müssen Sie den Pfad zu den drei folgenden im Dialogfeld vorhandenen Zertifikat Dateien definieren [Privacy Enhanced Mail Zertifikate (PEM)]:  
   
-## <a name="reconnecting-to-mysql"></a>Wiederherstellen der Verbindung mit MySQL  
-Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt zu schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut verbinden, wenn Sie möchten, dass eine aktive Verbindung mit der Datenbank. Sie können offline arbeiten, bis Sie die Metadaten aktualisieren, Laden von Datenbankobjekten in SQL Server- oder SQL Azure, und Daten migrieren möchten.  
+    -   **SSL-Zertifizierungsstelle:** Gibt den Pfad zu einer Datei mit einer Liste mit vertrauenswürdigen SSL-Zertifizierungsstellen an.  
+  
+    -   **SSL-Zertifikat:** Gibt den Namen der SSL-Zertifikatsdatei an, die zum Herstellen einer sicheren Verbindung verwendet werden soll.  
+  
+    -   **SSL-Schlüssel:** Gibt den Namen der SSL-Schlüsseldatei an, die zum Herstellen einer sicheren Verbindung verwendet werden soll.  
+  
+    > [!NOTE]  
+    > -   Die Schaltfläche **OK** ist aktiviert, wenn die erforderlichen Informationen angegeben wurden. Wenn einer der Dateipfade ungültig ist, bleibt die Schaltfläche "OK" deaktiviert.  
+    > -   Mit der Schaltfläche **Abbrechen** wird das Dialogfeld geschlossen, und die Option SSL **wird** aus dem Haupt Verbindungs Formular deaktiviert.  
+  
+7.  Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)  
+  
+## <a name="reconnecting-to-mysql"></a>Erneutes Herstellen einer Verbindung mit MySQL  
+Die Verbindung mit dem Datenbankserver bleibt aktiv, bis Sie das Projekt schließen. Wenn Sie das Projekt erneut öffnen, müssen Sie erneut eine Verbindung herstellen, wenn Sie eine aktive Verbindung mit der Datenbank herstellen möchten. Sie können offline arbeiten, bis Sie Metadaten aktualisieren, Datenbankobjekte in SQL Server oder SQL Azure laden und Daten migrieren möchten.  
   
 ## <a name="refreshing-mysql-metadata"></a>Aktualisieren von MySQL-Metadaten  
-Metadaten für die MySQL-Datenbank wird nicht automatisch aktualisiert. Die Metadaten in der MySQL-Metadaten-Explorer ist eine Momentaufnahme der Metadaten, wenn Sie zuerst eine Verbindung hergestellt oder der letzten, dass Sie manuell die Metadaten aktualisiert werden. Sie können die Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
+Metadaten über die MySQL-Datenbank werden nicht automatisch aktualisiert. Bei den Metadaten im MySQL-metadatenexplorer handelt es sich um eine Momentaufnahme der Metadaten, wenn Sie zum ersten Mal eine Verbindung hergestellt haben, oder wenn Sie das letzte Mal manuell Sie können Metadaten für alle Schemas, ein einzelnes Schema oder einzelne Datenbankobjekte manuell aktualisieren.  
   
-**Aktualisieren von Metadaten**  
+**So aktualisieren Sie Metadaten**  
   
 1.  Stellen Sie sicher, dass Sie mit der Datenbank verbunden sind.  
   
-2.  Wählen Sie in der MySQL-Metadaten-Explorer das Kontrollkästchen neben jedem Schema oder die Datenbank-Objekt, das Sie aktualisieren möchten.  
+2.  Aktivieren Sie im MySQL-metadatenexplorer das Kontrollkästchen neben jedem Schema oder Datenbankobjekt, das Sie aktualisieren möchten.  
   
-3.  Mit der rechten Maustaste **Schemas**, oder die einzelnes Schema oder die Datenbank-Objekt, und wählen Sie dann **Refresh from Database aktualisieren**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Schemas**oder das einzelne Schema oder Datenbankobjekt, und wählen Sie dann **aus Datenbank aktualisieren aus**.  
   
-    SSMA wird angezeigt, wenn Sie nicht über eine aktive Verbindung verfügen, die **Herstellen einer Verbindung mit MySQL** Dialogfeld, sodass Sie eine Verbindung herstellen können.  
+    Wenn Sie nicht über eine aktive Verbindung verfügen, wird das Dialogfeld **mit MySQL Verbinden von** SSMA angezeigt, sodass Sie eine Verbindung herstellen können.  
   
-4.  Geben Sie in der Aktualisierung von Datenbank (Dialogfeld) welche Objekte aktualisiert.  
+4.  Geben Sie im Dialogfeld aus Datenbank aktualisieren an, welche Objekte aktualisiert werden sollen.  
   
-    -   Um ein Objekt zu aktualisieren, klicken Sie auf die **Active** Feld neben dem Objekt, bis ein Pfeil angezeigt wird.  
+    -   Um ein Objekt zu aktualisieren, klicken Sie auf das **aktive** Feld neben dem Objekt, bis ein Pfeil angezeigt wird.  
   
-    -   Um zu verhindern, dass ein Objekt aktualisiert wird, klicken Sie auf die **Active** Feld neben dem Objekt, bis ein **X** angezeigt wird.  
+    -   Um zu verhindern, dass ein Objekt aktualisiert wird, klicken Sie auf das **aktive** Feld neben dem Objekt, bis ein **X** angezeigt wird.  
   
-    -   Klicken Sie zum Aktualisieren, oder lehnen Sie eine Kategorie von Objekten ab, auf die **Active** Feld neben dem Ordner "Kategorie".  
+    -   Um eine Kategorie von Objekten zu aktualisieren oder abzulehnen, klicken Sie auf das **aktive** Feld neben dem Kategorieordner.  
   
-    -   Um die Definitionen der farbcodierung anzuzeigen, klicken Sie auf die **Legende** Schaltfläche.  
+    -   Um die Definitionen der Farbcodierung anzuzeigen, klicken Sie auf die Schaltfläche **Legende** .  
   
 5.  Klicken Sie auf **OK**.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Im nächsten Schritt des Migrationsvorgangs [Herstellen einer Verbindung mit SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
+Der nächste Schritt des Migrations Vorgangs ist das [Herstellen einer Verbindung mit SQL Server &#40;mysqldesql&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

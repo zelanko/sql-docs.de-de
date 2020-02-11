@@ -1,5 +1,5 @@
 ---
-title: Sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft-Dokumentation
+title: sys. memory_optimized_tables_internal_attributes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -21,23 +21,23 @@ author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102383"
 ---
-# <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
+# <a name="sysmemory_optimized_tables_internal_attributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Enthält eine Zeile für jede interne speicheroptimierte Tabelle, die zum Speichern von speicheroptimierten Benutzertabellen verwendet wird. Jede Benutzertabelle entspricht mindestens einer internen Tabelle. Eine einzelne Tabelle wird für die Speicherung von Kerndaten verwendet. Zusätzliche interne Tabellen werden für die Unterstützung von Funktionen wie dem temporalen Columnstore-Index und die Speicherung außerhalb von Zeilen (LOB) für speicheroptimierte Tabellen verwendet.
  
-| Spaltenname  | Datentyp  | Beschreibung |
+| Spaltenname  | Datentyp  | BESCHREIBUNG |
 | :------ |:----------| :-----|
 |object_id  |**int**|       Die ID der Benutzertabelle. Interne speicheroptimierte Tabellen, die der Unterstützung einer Benutzertabelle dienen (wie etwa Speicherung außerhalb der Zeile oder gelöschte Zeilen im Fall von Hk/Columnstore-Kombinationen), weisen die gleiche object_id wie ihr übergeordnetes Objekt auf. |
-|xtp_object_id  |**bigint**|    In-Memory-OLTP-Objekt-ID, die der internen speicheroptimierten Tabelle entspricht, die für die Unterstützung der Benutzertabelle verwendet wird. Sie ist innerhalb der Datenbank eindeutig und kann sich im Lauf der Lebensspanne des Objekts ändern. 
-|Typ|  **int** |   Der Typ der internen Tabelle.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
-|type_desc| **nvarchar(60)**|   Beschreibung des Typs<br/><br/>DELETED_ROWS_TABLE -> Interne Tabelle zur Nachverfolgung gelöschter Zeilen für einen Columnstore-Index<br/>USER_TABLE -> Tabelle, die die zeileninternen Benutzerdaten enthält<br/>DICTIONARIES_TABLE -> Wörterbücher für einen Columnstore-Index<br/>SEGMENTS_TABLE -> Komprimierte Segmente für einen Columnstore-Index<br/>ROW_GROUPS_INFO_TABLE -> Metadaten zu komprimierten Zeilengruppen eines Columnstore-Indexes<br/>INTERNAL OFF-ROW DATA TABLE -> Interne Tabelle, die für die Speicherung einer Spalte außerhalb von Zeilen verwendet wird. In diesem Fall gibt minor_id die column_id an.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Heißes Endsegment der datenträgerbasierten Verlaufstabelle. Zeilen, die in den Verlauf eingefügt werden, werden zuerst in diese interne speicheroptimierte Tabelle eingefügt. Eine Hintergrundaufgabe verschiebt asynchron Zeilen aus dieser internen Tabelle in die datenträgerbasierte Verlaufstabelle. |
+|xtp_object_id  |**BIGINT**|    In-Memory-OLTP-Objekt-ID, die der internen speicheroptimierten Tabelle entspricht, die für die Unterstützung der Benutzertabelle verwendet wird. Sie ist innerhalb der Datenbank eindeutig und kann sich im Lauf der Lebensspanne des Objekts ändern. 
+|type|  **int** |   Der Typ der internen Tabelle.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type_desc| **nvarchar (60)**|   Beschreibung des Typs<br/><br/>DELETED_ROWS_TABLE -> Interne Tabelle zur Nachverfolgung gelöschter Zeilen für einen Columnstore-Index<br/>USER_TABLE -> Tabelle, die die zeileninternen Benutzerdaten enthält<br/>DICTIONARIES_TABLE -> Wörterbücher für einen Columnstore-Index<br/>SEGMENTS_TABLE -> Komprimierte Segmente für einen Columnstore-Index<br/>ROW_GROUPS_INFO_TABLE -> Metadaten zu komprimierten Zeilengruppen eines Columnstore-Indexes<br/>INTERNAL OFF-ROW DATA TABLE -> Interne Tabelle, die für die Speicherung einer Spalte außerhalb von Zeilen verwendet wird. In diesem Fall gibt minor_id die column_id an.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Heißes Endsegment der datenträgerbasierten Verlaufstabelle. Zeilen, die in den Verlauf eingefügt werden, werden zuerst in diese interne speicheroptimierte Tabelle eingefügt. Eine Hintergrundaufgabe verschiebt asynchron Zeilen aus dieser internen Tabelle in die datenträgerbasierte Verlaufstabelle. |
 |minor_id|  **int**|    0 gibt eine Benutzer- oder eine interne Tabelle an<br/><br/>Ein anderer Wert als 0 gibt die ID einer außerhalb von Zeilen gespeicherten Spalte an. Joins mit column_id in sys.columns.<br/><br/>Jeder außerhalb von Zeilen gespeicherten Spalte entspricht eine Zeile in dieser Systemansicht.|
 
 ## <a name="permissions"></a>Berechtigungen  
@@ -97,7 +97,7 @@ WHERE moa.type=5;
 
 ### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>C. Zurückgeben des Speicherverbrauches von Columnstore-Indizes für speicheroptimierte Tabellen
 
-Verwenden Sie die folgende Abfrage, die den Speicherverbrauch von columnstore-Indizes für Speicheroptimierte Tabellen angezeigt:
+Verwenden Sie die folgende Abfrage, um den Arbeitsspeicher Verbrauch von columnstore--Indizes für Speicher optimierte Tabellen anzuzeigen:
 
 ```Transact-SQL
 SELECT
@@ -113,7 +113,7 @@ WHERE moa.type IN (0, 2, 3, 4)
 GROUP BY o.schema_id, moa.object_id, i.name;
 ```
 
-Verwenden Sie die folgende Abfrage schlüsselt den Speicherbedarf für interne Strukturen, die für die columnstore-Indizes für Speicheroptimierte Tabellen verwendet:
+Verwenden Sie die folgende Abfrage, um den Arbeitsspeicher Verbrauch über interne Strukturen hinweg zu unterbrechen, die für columnstore--Indizes in Speicher optimierten Tabellen verwendet werden:
 
 ```Transact-SQL
 SELECT

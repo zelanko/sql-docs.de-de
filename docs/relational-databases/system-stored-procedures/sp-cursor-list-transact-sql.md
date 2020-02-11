@@ -1,5 +1,5 @@
 ---
-title: Sp_cursor_list (Transact-SQL) | Microsoft-Dokumentation
+title: sp_cursor_list (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108582"
 ---
-# <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
+# <a name="sp_cursor_list-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Meldet die Attribute der Servercursor, die aktuell für die Verbindung geöffnet sind.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,51 +41,52 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @cursor_return=] *Cursor_variable_name*Ausgabe  
- Der Name einer deklarierten Cursorvariablen. *Cursor_variable_name* ist **Cursor**, hat keinen Standardwert. Bei dem Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ [ @cursor_return= ] *cursor_variable_name* Ausgeben  
+ Der Name einer deklarierten Cursorvariablen. *cursor_variable_name* ist vom Typ **Cursor**und hat keinen Standardwert. Bei dem Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
- [ @cursor_scope=] *Cursor_scope*  
- Gibt die Ebene der Cursor an, die gemeldet werden sollen. *Cursor_scope* ist **Int**und hat keinen Standardwert und kann einen der folgenden Werte sein.  
+ [ @cursor_scope= ] *cursor_scope*  
+ Gibt die Ebene der Cursor an, die gemeldet werden sollen. *cursor_scope* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Alle lokalen Cursor melden.|  
 |2|Alle globalen Cursor melden.|  
 |3|Lokale und globale Cursor melden.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- sp_cursor_list gibt den Bericht nicht als Resultset, sondern als einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursorausgabeparameter zurück. Dadurch können [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches, gespeicherten Prozeduren und Trigger, um mit die Ausgabe zeilenweise gleichzeitig zu arbeiten. Dies bedeutet außerdem, dass es nicht möglich ist, die Prozedur direkt über Datenbank-API-Funktionen aufzurufen. Der cursor-Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung von cursor-Parametern oder -Variablen nicht.  
+ sp_cursor_list gibt den Bericht nicht als Resultset, sondern als einen [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursorausgabeparameter zurück. Dadurch können [!INCLUDE[tsql](../../includes/tsql-md.md)] Batches, gespeicherte Prozeduren und Trigger jeweils zeilenweise mit der Ausgabe arbeiten. Dies bedeutet außerdem, dass es nicht möglich ist, die Prozedur direkt über Datenbank-API-Funktionen aufzurufen. Der cursor-Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die Datenbank-APIs unterstützen die Bindung von cursor-Parametern oder -Variablen nicht.  
   
  Dies ist das Format des von sp_cursor_list zurückgegebenen Cursors. Das Format des Cursors ist mit dem von sp_describe_cursor zurückgegebenen Format identisch.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|reference_name|**sysname**|Der Name, der zum Verweisen auf den Cursor verwendet wird. Wenn der Verweis auf den Cursor über den Namen, die in einer DECLARE CURSOR-Anweisung angegeben wurde, ist der Verweisname Cursornamen identisch. Wenn der Verweis auf den Cursor über eine Variable erfolgte, ist der Verweisname der Name der Cursorvariablen.|  
-|cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn der Cursor erstellt wurde, indem eine Cursorvariable auf einen Cursor, **Cursor_name** gibt den Namen der Cursorvariablen zurück.  In früheren Versionen gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  
+|reference_name|**sysname**|Der Name, der zum Verweisen auf den Cursor verwendet wird. Wenn sich der Verweis auf den Cursor über dem in einer DECLARE CURSOR-Anweisung angegebenen Namen befunden hat, entspricht der Verweis Name dem Cursor Namen. Wenn der Verweis auf den Cursor über eine Variable erfolgte, ist der Verweisname der Name der Cursorvariablen.|  
+|cursor_name|**sysname**|Der Name des Cursors aus einer DECLARE CURSOR-Anweisung. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in der Cursor erstellt wurde, indem eine Cursor Variable auf einen Cursor festgelegt wurde, gibt **cursor_name** den Namen der Cursor Variablen zurück.  In früheren Versionen gibt diese Ausgabespalte einen systemgenerierten Namen zurück.|  
 |cursor_scope|**smallint**|1 = LOKAL<br /><br /> 2 = GLOBAL|  
 |status|**smallint**|Die gleichen Werte, die von der CURSOR_STATUS-Systemfunktion gemeldet werden:<br /><br /> 1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet. Ein statischer, Keyset- oder Insensitivcursor weist mindestens eine Zeile auf. Bei einem dynamischen Cursor weist das Resultset keine oder mehr Zeilen auf.<br /><br /> 0 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geöffnet, weist aber keine Zeilen auf. Dynamische Cursor geben diesen Wert nie zurück.<br /><br /> -1 = Der Cursor, auf den mit dem Cursornamen oder der Variablen verwiesen wird, ist geschlossen.<br /><br /> -2 = Gilt nur für Cursorvariablen. Der Variablen ist kein Cursor zugewiesen. Möglicherweise hat ein OUTPUT-Parameter der Variablen einen Cursor zugewiesen, aber die gespeicherte Prozedur hat den Cursor vor der Rückgabe geschlossen.<br /><br /> -3 = Ein Cursor oder eine Cursorvariable mit dem angegebenen Namen ist nicht vorhanden, oder für die Cursorvariable wurde kein Cursor reserviert.|  
 |model|**smallint**|1 = Insensitiv (oder statisch)<br /><br /> 2 = Keyset<br /><br /> 3 = dynamisch<br /><br /> 4 = Schneller Vorwärtscursor|  
-|Parallelität|**smallint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
+|concurrency|**smallint**|1 = schreibgeschützt<br /><br /> 2 = Scrollsperre<br /><br /> 3 = Vollständig|  
 |scrollable|**smallint**|0 = Vorwärts<br /><br /> 1 = Scrollfähig|  
 |open_status|**smallint**|0 = Geschlossen<br /><br /> 1 = Geöffnet|  
 |cursor_rows|**int**|Die Anzahl von qualifizierenden Zeilen im Resultset. Weitere Informationen finden Sie unter [@@CURSOR_ROWS](../../t-sql/functions/cursor-rows-transact-sql.md).|  
 |fetch_status|**smallint**|Der Status des letzten Abrufs für diesen Cursor. Weitere Informationen finden Sie unter [@@FETCH_STATUS](../../t-sql/functions/fetch-status-transact-sql.md):<br /><br /> 0 = Abruf erfolgreich.<br /><br /> -1 = Abruf fehlerhaft oder außerhalb des zulässigen Bereichs des Cursors.<br /><br /> -2 = Die angeforderte Zeile fehlt.<br /><br /> -9 = Kein Abruf für Cursor.|  
 |column_count|**smallint**|Die Anzahl von Spalten im Resultset des Cursors.|  
 |row_count|**smallint**|Die Anzahl von Zeilen, auf die sich der letzte Vorgang für den Cursor auswirkt. Weitere Informationen finden Sie unter [@@ROWCOUNT](../../t-sql/functions/rowcount-transact-sql.md).|  
-|last_operation|**smallint**|Der zuletzt ausgeführte Vorgang für den Cursor:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = EINFÜGEN<br /><br /> 4 = UPDATE<br /><br /> 5 = LÖSCHEN<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
+|last_operation|**smallint**|Der zuletzt ausgeführte Vorgang für den Cursor:<br /><br /> 0 = Für den Cursor wurden keine Vorgänge ausgeführt.<br /><br /> 1 = OPEN<br /><br /> 2 = FETCH<br /><br /> 3 = einfügen<br /><br /> 4 = UPDATE<br /><br /> 5 = löschen<br /><br /> 6 = CLOSE<br /><br /> 7 = DEALLOCATE|  
 |cursor_handle|**int**|Ein eindeutiger Wert für den Cursor innerhalb des Serverbereichs.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_cursor_list erstellt eine Liste der aktuellen Servercursor, die für die Verbindung geöffnet sind, und beschreibt die globalen Cursorattribute, wie z. B. die Scrolloptionen und die Aktualisierbarkeit des Cursors. sp_cursor_list listet die folgenden Cursor auf:  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor.  
+-   
+  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor.  
   
--   API-Servercursor geöffnet, die von einer ODBC-Anwendung, die dann SQLSetCursorName zum Benennen des Cursors aufgerufen wird.  
+-   API-Servercursor, die von einer ODBC-Anwendung geöffnet wurden, die dann SQLSetCursorName zum Benennen des Cursors aufgerufen hat.  
   
- Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Sp_describe_cursor zeigt dieselben Informationen an wie Sp_cursor_list, jedoch nur für den angegebenen Cursor.  
+ Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets an. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. sp_describe_cursor meldet die gleichen Informationen wie sp_cursor_list, aber nur für einen angegebenen Cursor.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Ausführungsberechtigungen erhält standardmäßig die public-Rolle.  
@@ -129,7 +130,7 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_add_proxy (Transact-SQL) | Microsoft-Dokumentation
+title: sp_add_proxy (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088465"
 ---
-# <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
+# <a name="sp_add_proxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Fügt den angegebenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Proxy hinzu.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,36 +46,36 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @proxy_name = ] 'proxy_name'` Der Name des zu erstellenden Proxys. Die *Proxy_name* ist **Sysname**, hat den Standardwert NULL. Wenn die *Proxy_name* ist NULL oder eine leere Zeichenfolge, die den Namen des der Proxy wird standardmäßig die *User_name* angegeben.  
+`[ @proxy_name = ] 'proxy_name'`Der Name des zu erstellenden Proxys. Der *proxy_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn die *proxy_name* NULL oder eine leere Zeichenfolge ist, wird der Name des Proxys standardmäßig auf den angegebenen *user_name* eingestellt.  
   
-`[ @enabled = ] is_enabled` Gibt an, ob der Proxy aktiviert ist. Die *Is_enabled* Flag **Tinyint**, hat den Standardwert 1. Wenn *Is_enabled* ist **0**, der Proxy nicht aktiviert und kann nicht von einem Auftragsschritt verwendet werden.  
+`[ @enabled = ] is_enabled`Gibt an, ob der Proxy aktiviert ist. Das *is_enabled* -Flag ist vom Datentyp **tinyint**. der Standardwert ist 1. Wenn *is_enabled* **0**ist, ist der Proxy nicht aktiviert und kann nicht von einem Auftrags Schritt verwendet werden.  
   
-`[ @description = ] 'description'` Eine Beschreibung des Proxys. Die Beschreibung ist **nvarchar(512)** , hat den Standardwert NULL. Mit der Beschreibung können Sie den Proxy dokumentieren. Sie erfüllt keine weiteren Aufgaben für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Daher ist dieses Argument optional.  
+`[ @description = ] 'description'`Eine Beschreibung des Proxys. Die Beschreibung ist vom Datentyp **nvarchar (512)** und hat den Standardwert NULL. Mit der Beschreibung können Sie den Proxy dokumentieren. Sie erfüllt keine weiteren Aufgaben für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent. Daher ist dieses Argument optional.  
   
-`[ @credential_name = ] 'credential_name'` Der Name der Anmeldeinformationen für den Proxy. Die *Credential_name* ist **Sysname**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* muss angegeben werden.  
+`[ @credential_name = ] 'credential_name'`Der Name der Anmelde Informationen für den Proxy. Der *credential_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @credential_id = ] credential_id` Die ID der Anmeldeinformationen für den Proxy. Die *Credential_id* ist **Int**, hat den Standardwert NULL. Entweder *Credential_name* oder *Credential_id* muss angegeben werden.  
+`[ @credential_id = ] credential_id`Die Identifikationsnummer der Anmelde Informationen für den Proxy. Der *credential_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *credential_name* oder *credential_id* angegeben werden.  
   
-`[ @proxy_id = ] id OUTPUT` Die Proxy-ID an den Proxy zugewiesen werden, wenn erfolgreich erstellt.  
+`[ @proxy_id = ] id OUTPUT`Die Proxy-ID, die dem Proxy zugewiesen wird, wenn er erfolgreich erstellt wurde.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Diese gespeicherte Prozedur muss ausgeführt werden, der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese gespeicherte Prozedur muss in der **msdb** -Datenbank ausgeführt werden.  
   
  Von einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Proxy wird die Sicherheit für Auftragsschritte verwaltet, die andere Subsysteme als das [!INCLUDE[tsql](../../includes/tsql-md.md)]-Subsystem verwenden. Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Ein Proxy kann über Zugriff auf eine beliebige Anzahl von Subsystemen verfügen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** festen Sicherheitsrolle diese Prozedur ausführen kann.  
+ Nur Mitglieder der festen Sicherheitsrolle **sysadmin** können diese Prozedur ausführen.  
   
- Mitglieder der **Sysadmin** festen Sicherheitsrolle, die jeden beliebigen Proxy verwenden-Auftragsschritte erstellen. Verwenden Sie die gespeicherte Prozedur [Sp_grant_login_to_proxy &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) anderen Anmeldenamen den Zugriff auf dem Proxy zu gewähren.  
+ Mitglieder der festen Sicherheitsrolle **sysadmin** können Auftrags Schritte erstellen, die einen beliebigen Proxy verwenden. Verwenden Sie die gespeicherte Prozedur [sp_grant_login_to_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) , um anderen Anmeldungen Zugriff auf den Proxy zu gewähren.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird ein Proxy für die Anmeldeinformationen `CatalogApplicationCredential` erstellt. Es wird im Code vorausgesetzt, dass die Anmeldeinformationen bereits vorhanden sind. Weitere Informationen zu Anmeldeinformationen finden Sie unter [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
+ In diesem Beispiel wird ein Proxy für die Anmeldeinformationen `CatalogApplicationCredential` erstellt. Es wird im Code vorausgesetzt, dass die Anmeldeinformationen bereits vorhanden sind. Weitere Informationen zu Anmelde Informationen finden Sie unter [Create Credential &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
 ```  
 USE msdb ;  
@@ -89,9 +89,9 @@ EXEC dbo.sp_add_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)   
- [sp_grant_login_to_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
- [sp_revoke_login_from_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
+ [sp_grant_login_to_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)   
+ [sp_revoke_login_from_proxy &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revoke-login-from-proxy-transact-sql.md)  
   
   

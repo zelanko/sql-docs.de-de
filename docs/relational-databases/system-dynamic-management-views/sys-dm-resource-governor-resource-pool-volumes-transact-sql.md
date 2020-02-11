@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,46 +20,46 @@ ms.assetid: fa692e56-c561-4533-97c5-bc12c600553f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 801997509242bae7af2d2ae438dfdb952be9e1fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090812"
 ---
-# <a name="sysdmresourcegovernorresourcepoolvolumes-transact-sql"></a>Sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
+# <a name="sysdm_resource_governor_resource_pool_volumes-transact-sql"></a>sys. dm_resource_governor_resource_pool_volumes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu den aktuellen Ressourcenpool-E/A-Statistiken für jeden Datenträger zurück. Diese Informationen finden Sie auch auf ressourcenpoolebene in [Sys. dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
+  Gibt Informationen zu den aktuellen Ressourcenpool-E/A-Statistiken für jeden Datenträger zurück. Diese Informationen sind auch auf Ressourcenpool Ebene in [sys. dm_resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)verfügbar.  
   
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |pool_id|**int**|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu.|  
 |volume_name|**sysname**|Der Name des Datenträgervolumes. Lässt keine NULL-Werte zu.|  
-|read_io_queued_total|**int**|Die Gesamtanzahl Lesevorgänge in die Warteschlange eingereiht, seit dem Zurücksetzen der Ressourcenkontrolle ist. Lässt keine NULL-Werte zu.|  
+|read_io_queued_total|**int**|Die Gesamtanzahl der gelesenen e/a-Vorgänge, die seit dem Zurücksetzen des Ressourcen-goven Lässt keine NULL-Werte zu.|  
 |read_io_issued_total|**int**|Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken ausgegeben wurden. Lässt keine NULL-Werte zu.|  
 |read_ios_completed_total|**int**|Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden. Lässt keine NULL-Werte zu.|  
 |read_ios_throttled_total|**int**|Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken gedrosselt wurden. Lässt keine NULL-Werte zu.|  
-|read_bytes_total|**bigint**|Die Gesamtanzahl von Bytes, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken gelesen wurden. Lässt keine NULL-Werte zu.|  
-|read_io_stall_total_ms|**bigint**|Die Gesamtzeit (in Millisekunden) zwischen dem Eingang und Abschluss von E/A-Lesevorgängen. Lässt keine NULL-Werte zu.|  
-|read_io_stall_queued_ms|**bigint**|Die Gesamtzeit (in Millisekunden) zwischen dem Lesen e/a-Eingang und Problem. Dies ist die Verzögerung, die durch die Ressourcenkontrolle für E/A-Vorgänge eingeführt wird. Lässt keine NULL-Werte zu.|  
+|read_bytes_total|**BIGINT**|Die Gesamtanzahl von Bytes, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken gelesen wurden. Lässt keine NULL-Werte zu.|  
+|read_io_stall_total_ms|**BIGINT**|Die Gesamtzeit (in Millisekunden) zwischen dem Eingang und Abschluss von E/A-Lesevorgängen. Lässt keine NULL-Werte zu.|  
+|read_io_stall_queued_ms|**BIGINT**|Gesamtzeit (in Millisekunden) zwischen Lese-e/a-Empfang und Problem. Dies ist die Verzögerung, die durch die Ressourcenkontrolle für E/A-Vorgänge eingeführt wird. Lässt keine NULL-Werte zu.|  
 |write_io_queued_total|**int**|Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken in die Warteschlange eingereiht wurden. Lässt keine NULL-Werte zu.|  
 |write_io_issued_total|**int**|Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken ausgegeben wurden. Lässt keine NULL-Werte zu.|  
 |write_io_completed_total|**int**|Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken abgeschlossen wurden. Lässt keine NULL-Werte zu.|  
 |write_io_throttled_total|**int**|Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken gedrosselt wurden. Lässt keine NULL-Werte zu.|  
-|write_bytes_total|**bigint**|Die Gesamtanzahl von Bytes, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken geschrieben wurden. Lässt keine NULL-Werte zu.|  
-|write_io_stall_total_ms|**bigint**|Die Gesamtzeit (in Millisekunden) zwischen der Ausgabe und dem Abschluss von E/A-Schreibvorgängen. Lässt keine NULL-Werte zu.|  
-|write_io_stall_queued_ms|**bigint**|Die Gesamtzeit (in Millisekunden) zwischen dem Eingang und Abschluss von E/A-Schreibvorgängen. Dies ist die Verzögerung, die durch die Ressourcenkontrolle für E/A-Vorgänge eingeführt wird. Lässt keine NULL-Werte zu.|  
+|write_bytes_total|**BIGINT**|Die Gesamtanzahl von Bytes, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken geschrieben wurden. Lässt keine NULL-Werte zu.|  
+|write_io_stall_total_ms|**BIGINT**|Die Gesamtzeit (in Millisekunden) zwischen der Ausgabe und dem Abschluss von E/A-Schreibvorgängen. Lässt keine NULL-Werte zu.|  
+|write_io_stall_queued_ms|**BIGINT**|Die Gesamtzeit (in Millisekunden) zwischen dem Eingang und Abschluss von E/A-Schreibvorgängen. Dies ist die Verzögerung, die durch die Ressourcenkontrolle für E/A-Vorgänge eingeführt wird. Lässt keine NULL-Werte zu.|  
 |io_issue_violations_total|**int**|Die Gesamtanzahl der E/A-Ausgabeverletzungen. Das heißt, wie häufig die E/A-Ausgaberate unter der reservierten Rate lag. Lässt keine NULL-Werte zu.|  
-|io_issue_delay_total_ms|**bigint**|Die Gesamtzeit (in Millisekunden) zwischen der geplanten Ausgabe und tatsächlichen Ausgabe von E/A-Vorgängen. Lässt keine NULL-Werte zu.|  
+|io_issue_delay_total_ms|**BIGINT**|Die Gesamtzeit (in Millisekunden) zwischen der geplanten Ausgabe und tatsächlichen Ausgabe von E/A-Vorgängen. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [sys.dm_resource_governor_workload_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [sys.resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
+ [sys. dm_resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
+ [sys. resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-resource-pools-transact-sql.md)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)  
   
   

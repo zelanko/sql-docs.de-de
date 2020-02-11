@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit MySQL (MySQLToSQL)) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit MySQL (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,62 +10,62 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103233"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
-Verwenden der **Herstellen einer Verbindung mit MySQL** im Dialogfeld Verbindung mit der MySQL-Datenbank, die Sie migrieren möchten.  
+Verwenden Sie das Dialogfeld **mit MySQL verbinden** , um eine Verbindung mit der MySQL-Datenbank herzustellen, die Sie migrieren möchten.  
   
-Zum Zugriff auf dieses Dialogfeld, in der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit MySQL**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **Wiederherstellen der Verbindung mit MySQL**.  
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit MySQL verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, wird **mit dem Befehl erneut eine Verbindung mit MySQL hergestellt**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Anbieter**  
   
-MySQL-Ressourcenanbieter verfügbar ist, MySQL 5.1 Odbcdriver (vertrauenswürdig).  
+Verfügbarer MySQL-Anbieter ist der MySQL-ODBC 5,1-Treiber (vertrauenswürdig).  
   
 **Mode**  
   
-Der Standardmodus ist Modus "Standard". Im Modus "Standard" Geben Sie ein oder wählen Sie Werte für die MySQL, Servername, Server-Port, Benutzername und Kennwort.  
+Der Standardmodus ist der Standardmodus. Im Standard Modus geben Sie Werte für MySQL, Servername, Serverport, Benutzername und Kennwort ein, oder wählen Sie Sie aus.  
   
 **Servername**  
   
-Geben Sie den MySQL-Servernamen ein. Dies ist ein Modus "Standard"-Option.  
+Geben Sie den Namen des MySQL-Servers ein. Dies ist eine Standard Modus-Option.  
   
 **Serverport**  
   
-Geben Sie den Server-Port. Der Server-Standardport ist 3306. Dies ist ein Modus "Standard"-Option.  
+Geben Sie den Serverport ein. Der Standardserverport ist 3306. Dies ist eine Standard Modus-Option.  
   
 **Benutzername**  
   
-Geben Sie den Benutzernamen ein, dem SSMA für die Verbindung mit der MySQL-Datenbank verwendet werden.  
+Geben Sie den Benutzernamen ein, der von SSMA für die Verbindung mit der MySQL-Datenbank verwendet werden soll.  
   
 **Kennwort**  
   
-Geben Sie das Kennwort für den Benutzernamen ein.  
+Geben Sie das Kennwort für den Benutzernamen ein,  
   
 **SSL**  
   
-Wenn Sie die sichere Verbindung mit MySQL herstellen möchten, verwenden von Secure Socket Layer (SSL) anhand der **SSL** Kontrollkästchen.  
+Wenn Sie eine sichere Verbindung mit MySQL herstellen möchten, verwenden Sie SSL (Secure Socket Layer), indem Sie das Kontrollkästchen **SSL** aktivieren.  
   
 **Konfigurieren**  
   
-Es bietet eine Option aus, um die Verbindung mit MySQL über Secure Socket Layer (SSL) konfigurieren.  
+Es bietet eine Option zum Konfigurieren der Verbindung mit MySQL über Secure Socket Layer (SSL).  
   
 > [!NOTE]  
-> So aktivieren Sie **konfigurieren**, SSL muss festgelegt werden, um **"true"** .  
+> Zum Aktivieren von **configure**muss SSL auf **true**festgelegt werden.  
   
-Wird Sie durch Klicken auf die Schaltfläche "Konfigurieren", ein Dialogfeld angezeigt. Definiert [Privacy Enhanced Mail-Zertifikate (PEM)], Verschlüsselung zu verwenden, beim Herstellen einer Verbindung mit MySQL-Datenbank, Pfad, an den folgenden drei Dateien, die in das Dialogfeld vorhanden sein muss:  
+Wenn Sie auf die Schaltfläche "Konfigurieren" klicken, wird ein Dialogfeld angezeigt. Wenn Sie beim Herstellen einer Verbindung mit einer MySQL-Datenbank die Verschlüsselung verwenden möchten, müssen Sie den Pfad zu den drei folgenden im Dialogfeld vorhandenen Zertifikat Dateien definieren [Privacy Enhanced Mail Zertifikate (PEM)]:  
   
--   **SSL-Zertifizierungsstelle:** Gibt den Pfad zu einer Datei mit einer Liste von vertrauenswürdigen Zertifizierungsstellen mit SSL.  
+-   **SSL-Zertifizierungsstelle:** Gibt den Pfad zu einer Datei mit einer Liste mit vertrauenswürdigen SSL-Zertifizierungsstellen an.  
   
--   **SSL-Zertifikat:** Gibt den Namen der Datei die SSL-Zertifikat zum Herstellen einer sicheren Verbindung verwendet.  
+-   **SSL-Zertifikat:** Gibt den Namen der SSL-Zertifikatsdatei an, die zum Herstellen einer sicheren Verbindung verwendet werden soll.  
   
--   **SSL-SCHLÜSSEL:** Gibt den Namen der Schlüsseldatei SSL zum Herstellen einer sicheren Verbindung verwendet.  
+-   **SSL-Schlüssel:** Gibt den Namen der SSL-Schlüsseldatei an, die zum Herstellen einer sicheren Verbindung verwendet werden soll.  
   
 > [!NOTE]  
-> -   Die **OK** Schaltfläche ist aktiviert, wenn die erforderliche Informationen bereitgestellt wurde. Wenn die Dateipfade ungültig sind, bleiben die Schaltfläche "OK" deaktiviert.  
-> -   Die **Abbrechen** Schaltfläche wird das Dialogfeld geschlossen und **deaktiviert** das Hauptformular der Verbindung die Option "SSL".  
+> -   Die Schaltfläche **OK** ist aktiviert, wenn die erforderlichen Informationen angegeben wurden. Wenn einer der Dateipfade ungültig ist, bleibt die Schaltfläche "OK" deaktiviert.  
+> -   Mit der Schaltfläche **Abbrechen** wird das Dialogfeld geschlossen, und die Option SSL **wird** aus dem Haupt Verbindungs Formular deaktiviert.  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63044055"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Force a Target Server to Poll the Master Server
@@ -30,9 +30,9 @@ ms.locfileid: "63044055"
 > [!NOTE]  
 >  Wenn der Zielserver versucht, den Auftragsstatus durch Hochladen zu übertragen, und dabei nicht auf den Masterserver zugreifen kann, bleibt der Auftragsstatus so lange im Spooler (in der Warteschlange), bis der Masterserver wieder zur Verfügung steht.  
   
--   **Vorbereitungen:**  [Beschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   Vorbereitungen **:**[Einschränkungen](#Restrictions), [Sicherheit](#Security)    
   
--   **So erzwingen Sie, dass ein Zielserver den Masterserver abruft mit:**  [SQL Server Management Studio](#SSMS)  
+-   **Erzwingen des Abrufens des Master Servers durch einen Zielserver mit:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -42,8 +42,8 @@ ms.locfileid: "63044055"
 ###  <a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) und [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-##  <a name="SSMS"></a> Verwendung von SQL Server Management Studio  
- **So erzwingen Sie, dass ein Zielserver den Masterserver abruft**  
+##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+ **So erzwingen Sie, dass ein Zielserver den Master Server abruft**  
   
 1.  Erweitern Sie im **Objekt-Explorer**den Masterserver.  
   

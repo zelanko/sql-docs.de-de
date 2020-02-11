@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105334"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
@@ -28,25 +28,25 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Die IIf-Funktion akzeptiert drei Argumente: Iif (\<Bedingung >, \<danach >, \<#else-Branch >).  
+ Die IIf-Funktion nimmt drei Argumente an: IIf (\<Condition \<>, then Branch \<>, Else Branch>).  
   
  *Logical_Expression*  
- Eine Bedingung, die sich ergibt **"true"** (1) oder **"false"** (0). Es muss sich um einen gültigen logischen Multidimensional Expressions (MDX)-Ausdruck handeln.  
+ Eine Bedingung, die zu **true** (1) oder **false** (0) ausgewertet wird. Es muss sich um einen gültigen logischen Multidimensional Expressions (MDX)-Ausdruck handeln.  
   
- *Expression1 Hinweis [Eager | Strenge | Verzögerte]]*  
- Verwendet, wenn der logische Ausdruck ergibt **"true"** . Expression1 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
+ *Expression1-Hinweis [eifrig | Strict | Verzögert]]*  
+ Wird verwendet, wenn der logische Ausdruck **true**ergibt. Expression1 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
   
- *Expression2 Hinweis [Eager | Strenge | Verzögerte]]*  
- Verwendet, wenn der logische Ausdruck ergibt **"false"** . Expression2 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
+ *Expression2-Hinweis [eifrig | Strict | Verzögert]]*  
+ Wird verwendet, wenn der logische Ausdruck als **false**ausgewertet wird. Expression2 muss ein gültiger Multidimensional Expressions (MDX)-Ausdruck sein.  
   
-## <a name="remarks"></a>Hinweise  
- Die vom logischen Ausdruck angegebene Bedingung ergibt **"false"** Wenn der Wert dieses Ausdrucks 0 (null) ist. Jeder andere Wert ergibt **"true"** .  
+## <a name="remarks"></a>Bemerkungen  
+ Die vom logischen Ausdruck angegebene Bedingung wird zu **false** ausgewertet, wenn der Wert dieses Ausdrucks 0 (null) ist. Alle anderen Werte werden als **true**ausgewertet.  
   
- Wenn die Bedingung ist **"true"** , **IIf** -Funktion den ersten Ausdruck zurück. Andernfalls gibt die Funktion den zweiten Ausdruck zurück.  
+ Wenn die Bedingung " **true**" ist, gibt die **IIf** -Funktion den ersten Ausdruck zurück. Andernfalls gibt die Funktion den zweiten Ausdruck zurück.  
   
  Die angegebene Ausdrücke können Werte oder MDX-Objekte zurückgeben. Ferner muss der Typ der angegebenen Ausdrücke nicht übereinstimmen.  
   
- Die **IIf** Funktion wird zum Erstellen einer Menge von Elementen, die basierend auf Suchkriterien nicht empfohlen. Verwenden Sie stattdessen die [Filter](../mdx/filter-mdx.md) Funktion, um jedes Element in einer angegebenen Menge mit einem logischen Ausdruck auswerten und eine Teilmenge von Elementen zurückzugeben.  
+ Die **IIf** -Funktion wird nicht zum Erstellen eines Satzes von Membern basierend auf Suchkriterien empfohlen. Verwenden Sie stattdessen die [Filter](../mdx/filter-mdx.md) -Funktion, um jedes Element in einer angegebenen Menge anhand eines logischen Ausdrucks auszuwerten und eine Teilmenge der Member zurückzugeben.  
   
 > [!NOTE]  
 >  Wenn die Auswertung einer der beiden Ausdrücke NULL ergibt, ist das Resultset NULL, wenn diese Bedingung erfüllt wird.  
@@ -63,10 +63,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  EAGER und STRICT schließen sich im Tipp gegenseitig aus. Sie können in IIF(,,) für verschiedene Ausdrücke verwendet werden.  
   
- Weitere Informationen finden Sie unter [if Funktionsabfragehinweise in SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) und [Ausführungspläne und Planhinweise für MDX IIF-Funktion und CASE-Anweisung](https://go.microsoft.com/fwlink/?LinkId=269565).  
+ Weitere Informationen finden Sie unter [Abfrage Hinweise der IIf-Funktion in SQL Server Analysis Services 2008](https://go.microsoft.com/fwlink/?LinkId=269540) und [Ausführungspläne und Plan Hinweise für die MDX IIf-Funktion und Case-Anweisung](https://go.microsoft.com/fwlink/?LinkId=269565).  
   
 ## <a name="examples"></a>Beispiele  
- Die folgende Abfrage zeigt eine einfache Verwendung von **IIF** in einem berechneten Measure zur Rückgabe zweier unterschiedlicher Zeichenfolgen, bei der Internet Sales Amount-Measure größer oder kleiner als 10.000 $beträgt:  
+ Die folgende Abfrage zeigt eine einfache Verwendung von **IIf** in einem berechneten Measure, um einen von zwei unterschiedlichen Zeichen folgen Werten zurückzugeben, wenn das Measure Internet Sales Amount größer oder kleiner als $10000 ist:  
   
  `WITH MEMBER MEASURES.IIFDEMO AS`  
   
@@ -130,7 +130,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `WHERE([Product].[Product Categories].[Subcategory].&[26])`  
   
- Folgendes ist ein Beispiel für **IIF** Zurückgeben einer von zwei Mengen innerhalb der Generate-Funktion, um einen komplexen Satz von Tupeln in Zeilen zu erstellen:  
+ Im folgenden finden Sie ein Beispiel für **IIf** , das einen von zwei Sätzen innerhalb der Funktion generieren zurückgibt, um einen komplexen Satz von Tupeln für Zeilen zu erstellen:  
   
  `SELECT {[Measures].[Internet Sales Amount]} ON 0,`  
   
@@ -176,7 +176,7 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

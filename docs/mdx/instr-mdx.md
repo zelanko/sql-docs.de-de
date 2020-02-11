@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105301"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
@@ -27,7 +27,7 @@ InStr([start, ]searched_string, search_string[, compare])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *start*  
+ *begonnen*  
  (Optional) Ein numerischer Ausdruck, der die Startposition für jede Suche festlegt. Wenn Sie diesen Wert weglassen, beginnt die Suche an der ersten Zeichenposition. Wenn Start NULL ist, wird von der Funktion ein nicht definierter Wert zurückgegeben.  
   
  *searched_string*  
@@ -36,30 +36,30 @@ InStr([start, ]searched_string, search_string[, compare])
  *search_string*  
  Der Zeichenfolgenausdruck, nach dem gesucht werden soll.  
   
- *Compare*  
- (optional) Ein ganzzahliger Wert. Dieses Argument wird immer ignoriert. Es wird definiert, für die Kompatibilität mit anderen **Instr** Funktionen in anderen Sprachen.  
+ *Vergleichbar*  
+ (optional) Ein ganzzahliger Wert. Dieses Argument wird immer ignoriert. Es ist für die Kompatibilität mit anderen **InStr** -Funktionen in anderen Sprachen definiert.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein ganzzahliger Wert mit der die Position des ersten *Zeichenfolge2* in *String1*.  
+ Ein ganzzahliger Wert mit der Anfangsposition von *Zeichenfolge2* in *Zeichenfolge1*.  
   
- Darüber hinaus **InStr** Funktion gibt in Abhängigkeit von der Bedingung in der folgenden Tabelle aufgeführten Werte zurück:  
+ Außerdem gibt die **InStr** -Funktion die Werte zurück, die in der folgenden Tabelle aufgeführt sind, abhängig von der Bedingung:  
   
 |Bedingung|Rückgabewert|  
 |---------------|------------------|  
-|String1 hat die Länge 0 (null)|Null (0)|  
+|String1 hat die Länge 0 (null)|NULL (0)|  
 |String1 ist NULL|nicht definiert|  
 |String2 hat die Länge 0 (null)|start|  
 |String2 ist NULL|nicht definiert|  
-|String2 wurde nicht gefunden|Null (0)|  
-|start ist größer als Len(String2)|Null (0)|  
+|String2 wurde nicht gefunden|NULL (0)|  
+|start ist größer als Len(String2)|NULL (0)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!WARNING]  
->  **InStr** führt immer einen Vergleich Groß-/Kleinschreibung.  
+>  **InStr** führt immer einen Vergleich ohne Beachtung der Groß-und Kleinschreibung durch  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel zeigt die Verwendung der **Instr** -Funktion gezeigt sowie verschiedene ergebnisszenarien.  
+ Das folgende Beispiel zeigt die Verwendung der **InStr** -Funktion und zeigt verschiedene Ergebnis Szenarios.  
   
 ```  
 with   

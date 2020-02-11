@@ -19,14 +19,14 @@ ms.assetid: 04b93ef9-11de-47a3-8bd8-ba963c42f182
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f952b21267b73c7ae508f46d896dbfdbb4160e20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100569"
 ---
 # <a name="processing-batches-of-sql-statements"></a>Verarbeiten von Batches von SQL-Anweisungen
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Die Cursorbibliothek unterstützt keine Batches von SQL-Anweisungen, z. B. SQL-Anweisungen, die für die das Anweisungsattribut verweist SQL_ATTR_PARAMSET_SIZE größer als 1 ist. Wenn eine Anwendung einen Batch mit SQL-Anweisungen an die Cursorbibliothek übermittelt werden, sind die Ergebnisse nicht definiert.
+ Die Cursor Bibliothek unterstützt keine Batches von SQL-Anweisungen, einschließlich der SQL-Anweisungen, für die das Attribut der SQL_ATTR_PARAMSET_SIZE Anweisung größer als 1 ist. Wenn eine Anwendung einen Batch von SQL-Anweisungen an die Cursor Bibliothek übermittelt, sind die Ergebnisse nicht definiert.

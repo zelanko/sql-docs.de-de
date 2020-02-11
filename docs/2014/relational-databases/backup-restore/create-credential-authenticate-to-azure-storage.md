@@ -13,26 +13,26 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6de7b5c8f9cdc7162eb9c6a8ddd214d0486255c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175953"
 ---
 # <a name="create-credential---authenticate-to-azure-storage"></a>Erstellen von Anmeldeinformationen – Authentifizieren beim Azure-Speicher
   Im Dialogfeld **URL-Sicherung > Anmeldeinformationen erstellen** können Sie neue SQL-Anmeldeinformationen erstellen.  
   
- Wenn Sie dieses Dialogfeld verwenden, um Anmelde Informationen zu erstellen, müssen Sie ein Azure-Verwaltungs Zertifikat bereitstellen, das dem lokalen Zertifikat Speicher hinzugefügt wurde, oder ein Veröffentlichungs Profil, das auf Ihren Computer heruntergeladen wird, um das Abonnement und die Speicherkonto Informationen zu  
+ Wenn Sie die Anmeldeinformationen mithilfe dieses Dialogfelds erstellen, müssen Sie ein Azure-Verwaltungszertifikat bereitstellen, das dem lokalen Zertifikatspeicher hinzugefügt wurde, oder ein Veröffentlichungsprofil angeben, das auf den Computer heruntergeladen wurde, um das Abonnement und die Speicherkontoinformationen zu überprüfen.  
   
  **SQL-Anmeldeinformationen**  
  Geben Sie den Namen für die SQL-Anmeldeinformationen an, die Sie erstellen möchten.  
   
-## <a name="azure-credentials"></a>Azure-Anmelde Informationen  
+## <a name="azure-credentials"></a>Azure-Anmeldeinformationen  
  **Verwaltungszertifikat**  
- Verwenden Sie diese Option, um ein Zertifikat aus dem lokalen Zertifikat Speicher anzugeben, das mit dem Verwaltungs Zertifikat von Azure übereinstimmt. Weitere Informationen zu Azure-Verwaltungs Zertifikaten finden Sie unter [Erstellen und Hochladen eines Verwaltungs Zertifikats für Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
+ Mit dieser Option geben Sie ein Zertifikat aus dem lokalen Zertifikatspeicher an, das mit dem Verwaltungszertifikat von Azure übereinstimmt. Weitere Informationen zu Azure-Verwaltungszertifikaten finden Sie unter [Erstellen und Hochladen eines Verwaltungszertifikats für Azure](https://go.microsoft.com/fwlink/?LinkId=320781).  
   
  **Abonnement**  
- Wählen Sie Ihre Azure-Abonnement-ID aus dem lokalen Zertifikat Speicher aus, geben Sie Sie ein, oder fügen Sie Sie ein.  
+ Wählen Sie die zugehörige Azure-Abonnement-ID für das Verwaltungszertifikat aus dem lokalen Zertifikatspeicher, oder geben bzw. fügen Sie sie ein.  
   
  **Veröffentlichungsprofil**  
  Verwenden Sie diese Option, wenn ein Veröffentlichungsprofil auf Ihren Computer heruntergeladen wurde. Bei dieser Option werden die Abonnement-ID und das Zertifikat automatisch aufgefüllt.  

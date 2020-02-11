@@ -1,5 +1,5 @@
 ---
-title: Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL | Microsoft-Dokumentation
+title: Zugreifen auf den WMI-Anbieter für die Konfigurations Verwaltung mit WQL | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: adec01de84122552812e5b1b28277d0d399fee56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195874"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>Zugreifen auf WMI-Anbieter für die Konfigurationsverwaltung mit WQL
@@ -29,13 +29,13 @@ ms.locfileid: "68195874"
   
 ### <a name="querying-services-using-wbemtest"></a>Abfragen von Diensten mit WBEMtest  
   
-1.  Von der **starten** Menü klicken Sie auf **ausführen**, und geben Sie dann `WBEMtest`.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**, und geben `WBEMtest`Sie dann ein.  
   
 2.  Das Dialogfeld WBEMtest.exe wird angezeigt. Klicken Sie auf **Verbinden**.  
   
 3.  Geben Sie im ersten Textfeld den Namespace für den WMI-Anbieter für die Computerverwaltung ein: root\Microsoft\SqlServer\ComputerManagement11. Klicken Sie auf **Verbinden**.  
   
-4.  Klicken Sie auf **Abfrage**. Geben Sie eine Abfrage, die die aktuelle, auf dem lokalen Computer ausgeführten Dienste zurückgibt: **Wählen Sie \* FROM SqlService.** Klicken Sie auf **Übernehmen**.  
+4.  Klicken Sie auf **Abfragen**. Geben Sie eine Abfrage ein, die die aktuellen Dienste zurückgibt, die auf dem lokalen Computer ausgeführt werden: **Select \* from SqlService.** Klicken Sie auf **Anwenden**.  
   
 5.  Verfeinern Sie die Abfrage weiter, indem Sie `WHERE ServiceName = "MSSQLSERVER"` hinzufügen.  
   

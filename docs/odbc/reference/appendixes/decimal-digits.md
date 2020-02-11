@@ -1,5 +1,5 @@
 ---
-title: Dezimalstellen | Microsoft-Dokumentation
+title: Dezimalziffern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,39 +16,39 @@ ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130051"
 ---
 # <a name="decimal-digits"></a>Dezimalstellen
-Die *Dezimalstellen* decimal und numeric-Daten-Typen als die maximale Anzahl von Ziffern rechts vom Dezimaltrennzeichen und die Skalierung der Daten definiert ist. Für die ungefähre Anzahl Gleitkomma-Spalten oder Parameter sind keine Dezimalstellen definiert, da die Anzahl der Ziffern rechts neben dem Dezimalzeichen nicht festgelegt ist. Für "DateTime" oder das Intervall-Daten, die eine Komponente für Sekunden enthält, wird als die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in die Sekundenkomponente der Daten die Dezimalstellen definiert.  
+Die *Dezimal* stellen der Datentypen decimal und numeric werden als maximale Anzahl von Ziffern rechts vom Dezimaltrennzeichen oder der Skala der Daten definiert. Für ungefähre Spalten oder Parameter für Gleit Komma Zahlen ist die Skala nicht definiert, da die Anzahl der Ziffern rechts vom Dezimaltrennzeichen nicht korrigiert ist. Für DateTime-oder Interval-Daten, die eine Sekunden Komponente enthalten, werden die Dezimalziffern als die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in der Komponente seconds der Daten definiert.  
   
- Für die Datentypen SQL_DECIMAL und SQL_NUMERIC ist die maximale Dezimalstellen in der Regel identisch mit der maximalen Genauigkeit. Einige Datenquellen verursachen jedoch einen separaten Grenzwert für die maximalen Dezimalstellen. Um zu bestimmen, die minimalen und maximalen Skalierungen, die für einen Datentyp zulässig, eine Anwendung ruft **SQLGetTypeInfo**.  
+ Bei den Datentypen SQL_DECIMAL und SQL_NUMERIC ist die maximale Skalierung in der Regel mit der maximalen Genauigkeit identisch. Einige Datenquellen erzwingen jedoch ein separates Limit für die maximale Skalierung. Um die minimale und maximale Skalierung zu ermitteln, die für einen Datentyp zulässig ist, ruft eine Anwendung **SQLGetTypeInfo**auf.  
   
- Die Dezimalstellen für jeden präzise SQL-Datentyp definiert wird angezeigt, in der folgenden Tabelle.  
+ Die Dezimalstellen, die für jeden präzisen SQL-Datentyp definiert sind, sind in der folgenden Tabelle aufgeführt.  
   
-|SQL-Typ|Dezimalstellen|  
+|SQL-Typ|Dezimalzahlen|  
 |--------------|--------------------|  
-|Alle Zeichen- und Binärtypen [a]|n/v|  
-|SQL_DECIMAL<br />SQL_NUMERIC|Die festgelegte Anzahl von Ziffern rechts vom Dezimaltrennzeichen an. Die Dezimalstellen einer Spalte, die als NUMERIC(10,3) definiert ist z. B. 3. Dies kann eine negative Zahl zum Speichern von sehr großen Zahlen unterstützt werden, ohne mit der Exponentialschreibweise sein; Beispielsweise könnte "12000" als "12" mit einer Skala von-3 gespeichert werden.|  
-|Exakte numerische Typen als SQL_DECIMAL und SQL_NUMERIC [a]|0|  
-|Alle ungefähre Datentypen [a]|n/v|  
-|SQL_TYPE_DATE und alle Intervalltypen mit keine Sekundenkomponente [a]|n/v|  
-|Alle Datetime-Typen mit Ausnahme von SQL_TYPE_DATE und alle Interval-Datentypen zu einer Sekundenkomponente in|Die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in der Sekundenteil des Werts (Sekundenbruchteile). Diese Zahl darf nicht negativ sein.|  
-|SQL_GUID|n/v|  
+|Alle Zeichen-und Binär Typen [a]|–|  
+|SQL_DECIMAL<br />SQL_NUMERIC|Die definierte Anzahl von Ziffern rechts vom Dezimaltrennzeichen. Beispielsweise ist die Skala einer Spalte, die als numerisch (10, 3) definiert ist, 3. Dies kann eine negative Zahl sein, um die Speicherung von sehr großen Zahlen ohne Exponentialnotation zu unterstützen. Beispielsweise könnte "12000" als "12" mit einer Skala von "-3" gespeichert werden.|  
+|Alle exakten numerischen Typen außer SQL_DECIMAL und SQL_NUMERIC [a]|0|  
+|Alle ungefähren Datentypen [a]|–|  
+|SQL_TYPE_DATE und alle Intervall Typen ohne Sekunden Komponente [a]|–|  
+|Alle DateTime-Typen außer SQL_TYPE_DATE und alle Intervall Typen mit einer seconds-Komponente|Die Anzahl der Ziffern auf der rechten Seite des Dezimal Trennzeichens im Sekunden Teil des Werts (Sekundenbruchteile). Diese Zahl darf nicht negativ sein.|  
+|SQL_GUID|–|  
   
- [a] die *DecimalDigits* Argument **SQLBindParameter** wird für diesen Datentyp ignoriert.  
+ [a] das *DecimalDigits* -Argument von **SQLBindParameter** wird für diesen Datentyp ignoriert.  
   
- Die zurückgegebenen Werte für die Dezimalstellen entsprechen nicht den Werten in jeder ein Deskriptorfeld. Die Werte können entweder die SQL_DESC_SCALE oder SQL_DESC_PRECISION Felds, je nach Datentyp, stammen, wie in der folgenden Tabelle gezeigt.  
+ Die Werte, die für die Dezimalstellen zurückgegeben werden, entsprechen nicht den Werten in einem Deskriptorfeld. Die Werte können je nach Datentyp entweder aus dem SQL_DESC_SCALE oder dem Feld SQL_DESC_PRECISION stammen, wie in der folgenden Tabelle dargestellt.  
   
-|SQL-Typ|Für Deskriptorfeld<br /><br /> Dezimalstellen|  
+|SQL-Typ|Deskriptorfeld, das entspricht<br /><br /> Dezimalstellen|  
 |--------------|----------------------------------------------------------|  
-|Alle Zeichen- und Binärtypen|n/v|  
-|Alle exakte numerische Typen|SCALE|  
-|SQL_BIT|n/v|  
-|Alle ungefähren numerischen Typen|n/v|  
-|Alle Datetime-Typen|PRECISION|  
-|Alle Interval-Datentypen zu einer Sekundenkomponente in|PRECISION|  
-|Alle Intervalltypen mit keine Komponente für Sekunden|n/v|
+|Alle Zeichen-und Binär Typen|–|  
+|Alle exakten numerischen Typen|SCALE|  
+|SQL_BIT|–|  
+|Alle ungefähren numerischen Typen|–|  
+|Alle DateTime-Typen|PRECISION|  
+|Alle Intervall Typen mit einer Sekunden Komponente|PRECISION|  
+|Alle Intervall Typen ohne Sekunden Komponente|–|

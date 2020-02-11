@@ -1,5 +1,5 @@
 ---
-title: Sp_OACreate (Transact-SQL) | Microsoft-Dokumentation
+title: sp_OACreate (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107935"
 ---
-# <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
+# <a name="sp_oacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Erstellt eine Instanz eines OLE-Objekts.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,35 +39,35 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *progid*  
- Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"** _OLEComponent_ **.** _Objekt_ **"**  
+ *ProgID*  
+ Der programmtechnische Bezeichner (ProgID, Programmatic Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das folgende Format auf: **'**_OLEComponent_**.** _Objekt_**'**  
   
- *OLEComponent* ist der Komponentenname des OLE-Automatisierungsservers, und *Objekt* ist der Name des OLE-Objekts. Das angegebene OLE-Objekt muss gültig sein und muss unterstützen die **IDispatch** Schnittstelle.  
+ *OLEComponent* ist der Komponenten Name des OLE-Automatisierungs Servers, und *Object* ist der Name des OLE-Objekts. Das angegebene OLE-Objekt muss gültig sein und die **IDispatch** -Schnittstelle unterstützen.  
   
- Beispielsweise ist SQLDMO. SQL Server ist die ProgID des SQL-DMO **SQLServer** Objekt. SQL-DMO besitzt den Komponentennamen SQLDMO, das **SQLServer** Objekt gültig ist, und (z. B. alle SQL-DMO-Objekte) die **SQLServer** -Objekt unterstützt **IDispatch**.  
+ Beispiel: SQLDMO. SQLServer ist die ProgID des SQL-DMO **SQLServer** -Objekts. SQL-DMO verfügt über den Komponentennamen SQLDMO, das **SQLServer** -Objekt ist gültig, und (wie alle SQL-DMO-Objekte), unterstützt das **SQLServer** -Objekt **IDispatch**.  
   
  *clsid*  
- Die Klassen-ID (CLSID, Class Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das Format: **"{** _Nnnnnnnn-Nnnn-Nnnn-Nnnn-Nnnnnnnnnnnn_ **}'** . Das angegebene OLE-Objekt muss gültig sein und muss unterstützen die **IDispatch** Schnittstelle.  
+ Die Klassen-ID (CLSID, Class Identifier) des zu erstellenden OLE-Objekts. Diese Zeichenfolge beschreibt die Klasse des OLE-Objekts und weist das folgende Format auf: **"{**_NNNNNNNNN-nnnn-nnnn-nnnn-nnnnnnnnnnnnn_**}"**. Das angegebene OLE-Objekt muss gültig sein und die **IDispatch** -Schnittstelle unterstützen.  
   
- Beispielsweise ist {00026BA1-0000-0000-C000-000000000046} der CLSID des SQL-DMO **SQLServer** Objekt.  
+ Beispielsweise ist {00026BA1-0000-0000-C000-000000000046} die CLSID des SQL-DMO **SQLServer** -Objekts.  
   
- _Objecttoken_ **Ausgabe**  
- Ist das zurückgegebene Objekttoken, und muss eine lokale Variable des Datentyps **Int**. Dieses Objekttoken identifiziert das erstellte OLE-Objekt und in Aufrufen an die anderen OLE-Automatisierung gespeicherten Prozeduren verwendet wird.  
+ _objecttoken_ - **Ausgabe**  
+ Ist das zurückgegebene Objekt Token und muss eine lokale Variable vom Datentyp " **int**" sein. Dieses Objekt Token identifiziert das erstellte OLE-Objekt und wird in Aufrufen der anderen gespeicherten OLE-Automatisierungs Prozeduren verwendet.  
   
- *context*  
+ *Kontext*  
  Gibt den Ausführungskontext an, in dem das neu erstellte OLE-Objekt ausgeführt wird. Wenn context angegeben wird, ist einer der folgenden Werte möglich:  
   
- **1** = nur in-Process-(DLL) OLE-Server.  
+ **1** = nur in-Process-OLE-Server (. dll).  
   
- **4** = lokal (.exe) OLE nur Server.  
+ **4** = lokaler OLE-Server (. exe).  
   
- **5** = sowohl in-Process- und lokaler OLE-Server zulässig  
+ **5** = sowohl Prozess interne als auch lokaler OLE-Server zulässig  
   
- Wenn nicht angegeben, wird der Standardwert ist **5**. Dieser Wert wird übergeben, als die *DwClsContext* Parameter des Aufrufs von **CoCreateInstance**.  
+ Wenn kein Wert angegeben wird, ist der Standardwert **5**. Dieser Wert wird als *dwClsContext* -Parameter des Aufrufes **cokreateinstance**übergeben.  
   
- Wenn die in-Process-OLE-Server zugelassen wird (mit einem Kontextwert, der **1** oder **5** oder kein Kontextwert angegeben), hat Sie Zugriff auf Speicher und andere Ressourcen im Besitz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ein In-Process-OLE-Server kann den Speicher und die Ressourcen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschädigen und unvorhersehbare Ergebnisse verursachen, wie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriffsverletzung.  
+ Wenn ein Prozess interner OLE-Server (unter Verwendung eines Kontext Werts von **1** oder **5** oder durch Angabe eines Kontext Werts) zulässig ist, hat er Zugriff auf den Arbeitsspeicher und andere Ressourcen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die im Besitz von sind. Ein In-Process-OLE-Server kann den Speicher und die Ressourcen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschädigen und unvorhersehbare Ergebnisse verursachen, wie z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriffsverletzung.  
   
- Wenn Sie als Kontextwert angeben **4**, lokaler OLE-Server keinen Zugriff auf alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen und kann nicht beschädigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Arbeitsspeicher oder Ressourcen.  
+ Wenn Sie einen Kontextwert von **4**angeben, verfügt ein lokaler OLE-Server nicht über Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ressourcen und kann keinen Arbeitsspeicher [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder keine Ressourcen beschädigen.  
   
 > [!NOTE]  
 >  Die Parameter für diese gespeicherte Prozedur werden nicht nach dem Namen, sondern nach der Position angegeben.  
@@ -75,20 +75,20 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler), die dem ganzzahligen Wert von HRESULT entspricht, der vom OLE-Automatisierungsobjekt zurückgegeben wird.  
   
- Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [OLE Automation Rückgabecodes und Fehlerinformationen](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
+ Weitere Informationen zu HRESULT-Rückgabecodes finden Sie unter [Rückgabecodes und Fehlerinformationen der OLE-Automatisierung](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md).  
   
-## <a name="remarks"></a>Hinweise  
- Wenn OLE-Automatisierungsprozeduren aktiviert sind, einen Aufruf von **Sp_OACreate** wird die freigegebene ausführungsumgebung für die OLE-Automatisierung gestartet. Weitere Informationen zum Aktivieren der OLE-Automatisierung finden Sie unter [Ole Automation Serverkonfigurationsoption](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn OLE-Automatisierungs Prozeduren aktiviert sind, wird durch einen **sp_OACreate** die freigegebene Ausführungsumgebung der OLE-Automatisierung gestartet. Weitere Informationen zum Aktivieren der OLE-Automatisierung finden Sie unter [OLE-Automatisierungs Prozeduren (Server Konfigurations Option](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)).  
   
  Das erstellte OLE-Objekt wird automatisch am Ende des [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungsbatches zerstört.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** festen Serverrolle oder die execute-Berechtigung für diese gespeicherte Prozedur direkt. `Ole Automation Procedures` Konfiguration muss **aktiviert** mit einer beliebigen Systemprozedur, die im Zusammenhang mit der OLE-Automatisierung.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die EXECUTE-Berechtigung direkt für diese gespeicherte Prozedur. `Ole Automation Procedures`die Konfiguration muss **aktiviert** sein, um alle System Prozeduren für OLE-Automatisierung verwenden zu können.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-using-progid"></a>A. Verwenden der ProgID  
- Das folgende Beispiel erstellt eine SQL-DMO **SQLServer** Objekt mithilfe seines ProgID.  
+ Im folgenden Beispiel wird ein SQL-DMO- **SQLServer** -Objekt mithilfe der ProgID erstellt.  
   
 ```  
 DECLARE @object int;  
@@ -105,7 +105,7 @@ GO
 ```  
   
 ### <a name="b-using-clsid"></a>B. Verwenden der CLSID  
- Das folgende Beispiel erstellt eine SQL-DMO **SQLServer** Objekt mithilfe seines CLSID.  
+ Im folgenden Beispiel wird ein SQL-DMO- **SQLServer** -Objekt mithilfe seiner CLSID erstellt.  
   
 ```  
 DECLARE @object int;  
@@ -122,9 +122,9 @@ END;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte OLE-Automatisierung Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
- [OLE-Automatisierung Serverkonfigurationsoption](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte OLE-Automatisierungs Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/ole-automation-stored-procedures-transact-sql.md)   
+ [OLE Automation Procedures (Server Konfigurations Option)](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)   
  [OLE-Automatisierungsbeispielskript](../../relational-databases/stored-procedures/ole-automation-sample-script.md)  
   
   

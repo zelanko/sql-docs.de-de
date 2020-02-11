@@ -1,5 +1,5 @@
 ---
-title: SQLCreateDataSource-Funktion | Microsoft-Dokumentation
+title: Sqlkreatedatasource-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0b3a6fced096c779b5ab91bf4e5b6a3f0a66e5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68121386"
 ---
 # <a name="sqlcreatedatasource-function"></a>SQLCreateDataSource-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.0  
+**Konformitäts**  
+ Eingeführte Version: ODBC 2,0  
   
  **Zusammenfassung**  
- **SQLCreateDataSource** zeigt ein Dialogfeld, in dem der Benutzer eine Datenquelle hinzufügen kann.  
+ **Sqlkreatedatasource** zeigt ein Dialogfeld an, mit dem der Benutzer eine Datenquelle hinzufügen kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,71 +44,71 @@ BOOL SQLCreateDataSource(
   
 ## <a name="arguments"></a>Argumente  
  *HWND*  
- [Eingabe] Handle des übergeordneten Fensters.  
+ Der Handle des übergeordneten Fensters.  
   
- *lpszDS*  
- [Eingabe] Datenquellenname. *LpszDS* kann ein null-Zeiger oder eine leere Zeichenfolge sein.  
+ *lpszds*  
+ Der Der Name der Datenquelle. *lpszds* können ein NULL-Zeiger oder eine leere Zeichenfolge sein.  
   
-## <a name="returns"></a>Rückgabewert  
- **SQLCreateDataSource** gibt TRUE zurück, wenn die Datenquelle erstellt wird. Andernfalls wird FALSE zurückgegeben.  
+## <a name="returns"></a>Rückgabe  
+ **Sqlkreatedatasource** gibt true zurück, wenn die Datenquelle erstellt wird. Andernfalls wird false zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLCreateDataSource** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **SQLCreateDataSource** "false" zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von **sqlinstallererror**abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
-|ODBC_ERROR_INVALID_HWND|Ungültiges Fenster-handle|Die *Hwnd* Argument war ungültig oder NULL.|  
-|ODBC_ERROR_INVALID_DSN|Ungültige DSN|Die *LpszDS* Argument enthalten sind, eine Zeichenfolge, die für eine DSN ungültig war.|  
-|ODBC_ERROR_REQUEST_FAILED|*Anforderung* Fehler|Der Aufruf von **ConfigDSN** mit der Option ODBC_ADD_DSN ist fehlgeschlagen.|  
-|ODBC_ERROR_LOAD_LIBRARY_FAILED|Die Treiber oder Translator-Setup-Bibliothek konnte nicht geladen werden.|Der Setup-Treiberbibliothek konnte nicht geladen werden.|  
-|ODBC_ERROR_USER_CANCELED|-Vorgang wurde vom Benutzer abgebrochen|Erstellen einer neuen Datenquelle vom Benutzer abgebrochen.|  
-|ODBC_ERROR_CREATE_DSN_FAILED|Den angeforderte DSN konnte nicht erstellt werden.|Konnte keine Verbindung mit der Datenbank her. der Aufruf von **SQLDriverConnect** für eine erfolgreiche Verbindung nicht in einen Datei-DSN zurückgegeben wurde.<br /><br /> Die Datei konnte nicht geschrieben werden.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund von unzureichendem Speicher nicht ausgeführt werden.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
+|ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *HWND* -Argument war ungültig oder NULL.|  
+|ODBC_ERROR_INVALID_DSN|Ungültiger DSN|Das *lpszds* -Argument enthielt eine Zeichenfolge, die für einen DSN ungültig war.|  
+|ODBC_ERROR_REQUEST_FAILED|*Anforderung* fehlgeschlagen|Fehler beim **ConfigDSN** -Rückruf mit der ODBC_ADD_DSN-Option.|  
+|ODBC_ERROR_LOAD_LIBRARY_FAILED|Die Treiber-oder Konvertierungs-Setup Bibliothek konnte nicht geladen werden.|Die Treiber Setup Bibliothek konnte nicht geladen werden.|  
+|ODBC_ERROR_USER_CANCELED|Benutzer Abbruch Vorgang|Die Erstellung einer neuen Datenquelle wurde vom Benutzer abgebrochen.|  
+|ODBC_ERROR_CREATE_DSN_FAILED|Der angeforderte DSN konnte nicht erstellt werden.|Es konnte keine Verbindung mit der Datenbank hergestellt werden. der **SQLDriverConnect** -Befehl für einen Datei-DSN hat keine erfolgreiche Verbindung zurückgegeben.<br /><br /> In die Datei konnte nicht geschrieben werden.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
   
 ## <a name="comments"></a>Kommentare  
- Wenn *Hwnd* null ist, **SQLCreateDataSource** gibt FALSE zurück. Andernfalls zeigt er die **neue Datenquelle erstellen** Dialogfeld mit einer Seite des Assistenten für die Auswahl des Typs der Datenquelle, die eingerichtet werden, wie in der folgenden Abbildung dargestellt.  
+ Wenn *HWND* NULL ist, gibt **sqlkreatedatasource** den Wert false zurück. Andernfalls wird das Dialogfeld **neue Datenquelle erstellen** mit einer Assistenten Seite angezeigt, mit der Sie den Typ der zu erstellenden Datenquelle auswählen können. Dies ist in der folgenden Abbildung dargestellt.  
   
- ![Erstellen neue Datenquelle (Dialogfeld): Wählen Sie](../../../odbc/reference/syntax/media/ch23a.gif "CH23A")  
+ ![Dialogfeld "Neue Datenquelle erstellen": Typ auswählen](../../../odbc/reference/syntax/media/ch23a.gif "CH23A")  
   
- Die Standardoption ist **Dateidatenquelle**. Wenn eine Datenquelle gewählt wurde und **Weiter** geklickt haben, wird der folgenden Seite des Assistenten, die eine Liste der installierten Treiber enthält angezeigt.  
+ Die Standardoption ist **File Data Source**. Wenn eine Datenquelle ausgewählt und als **nächstes** darauf geklickt wurde, wird die folgende Seite des Assistenten angezeigt, die eine Liste der installierten Treiber enthält.  
   
- ![Erstellen neue Datenquelle (Dialogfeld): Treiber auswählen](../../../odbc/reference/syntax/media/ch23b.gif "CH23B")  
+ ![Dialogfeld "Neue Datenquelle erstellen": Treiber auswählen](../../../odbc/reference/syntax/media/ch23b.gif "CH23B")  
   
- Wenn **Abbrechen** geklickt wird, wird das Dialogfeld verschwindet das Dialogfenster und **SQLCreateDataSource** gibt FALSE zurück, mit dem Fehlercode der ODBC_ERROR_USER_CANCELED. Wenn entweder die **Benutzerdatenquelle** oder **Systemdatenquelle** aktiviert war, die **erweitert** Schaltfläche ist nicht verfügbar.  
+ Wenn Sie auf **Abbrechen** klicken, wird das Dialogfeld ausgeblendet, und **sqlkreatedatasource** gibt mit dem Fehlercode ODBC_ERROR_USER_CANCELED false zurück. Wenn entweder die Option **Benutzerdaten Quelle** oder **System Datenquelle** ausgewählt wurde, ist die Schaltfläche **erweitert** nicht verfügbar.  
   
- Wenn die **Weiter** Schaltfläche geklickt wird, wird eine der folgenden tritt auf, je nachdem, welche Art von Daten Quelle ausgewählt wurde:  
+ Wenn Sie auf die Schaltfläche " **weiter** " klicken, wird je nach ausgewähltem Daten Quellentyp eine der folgenden Aktionen ausgeführt:  
   
--   Wenn **Dateidatenquelle** wurde ausgewählt, wird eine Seite des Assistenten für den Benutzer zur Eingabe eines Namens für die Datei angezeigt.  
+-   Wenn die **Datei Datenquelle** ausgewählt wurde, wird eine Assistenten Seite angezeigt, auf der der Benutzer einen Dateinamen eingeben kann.  
   
--   Wenn entweder **Benutzerdatenquelle** oder **Systemdatenquelle** wurde ausgewählt, wird eine Seite des Assistenten, die den Typ der Datenquelle und Treiber anzeigen zur Überprüfung angezeigt und wann **Fertig stellen** ist geklickt haben, wird die Datenquelle klein eingerichtet werden.  
+-   Wenn entweder **Benutzerdaten Quelle** oder **System Datenquelle** ausgewählt wurde, wird eine Assistenten Seite angezeigt, auf der der Typ der Datenquelle und des Treibers angezeigt wird, um die Überprüfung zu überprüfen. Wenn Sie auf **Fertig** stellen klicken, wird die Datenquelle eingerichtet.  
   
- Wenn **erweitert** geklickt wird auf der Seite Neue Datenquelle erstellen-Assistenten, wird eine Seite des Assistenten für den Benutzer zur Eingabe von treiberspezifische Informationen angezeigt. Geben Sie in das Textfeld, der das Dialogfeld zu öffnen Treiber und Schlüsselwörtern, getrennt durch zurückgegeben wird, wie in der folgenden Abbildung dargestellt.  
+ Wenn Sie auf der Seite neue Datenquelle erstellen auf **erweitert** klicken, wird eine Assistenten Seite angezeigt, auf der der Benutzer Treiber spezifische Informationen eingeben kann. Geben Sie im Textfeld dieses Dialog Felds den durch Returns getrennten Treiber und die Schlüsselwörter ein, wie in der folgenden Abbildung dargestellt.  
   
- ![Erweiterte Einstellungen für die Erstellung des Datei-DSN-Dialogfeld](../../../odbc/reference/syntax/media/ch23c.gif "CH23C")  
+ ![Dialogfeld "Erweiterte Einstellungen für die Datei-DSN-Erstellung"](../../../odbc/reference/syntax/media/ch23c.gif "CH23C")  
   
- Zusätzliche Treiber-spezifische Schlüsselwörter finden Sie unter der Beschreibung des **SQLDriverConnect**. Alle außer **DSN** sind zulässig.  
+ Weitere Treiber spezifische Schlüsselwörter finden Sie unter der Beschreibung von **SQLDriverConnect**. Alle außer **DSN** sind zulässig.  
   
- Der Standardwert für die **überprüfen Sie diese Verbindung** Option ist "true". Diese Standardeinstellung gilt, und zwar unabhängig davon, ob dieser Seite des Assistenten aktiviert ist. Wenn **OK** geklickt wird, wird die Zeichenfolge, die Sie im Textfeld angegeben und die **überprüfen Sie diese Verbindung** Optionswert werden zwischengespeichert. (Wenn die **schließen** Schaltfläche oder **Abbrechen** geklickt wird, eine neu eingegeben treiberspezifische Informationen geht verloren, da Sie im Textfeld die Zeichenfolge angegeben und die **überprüfen Sie diese Verbindung** Optionswert werden nicht zwischengespeichert.)  
+ Der Standardwert für die Option **diese Verbindung überprüfen** ist true. Diese Standardeinstellung gilt unabhängig davon, ob diese Assistenten Seite aktiviert ist. Wenn auf **OK** geklickt wird, werden die im Textfeld angegebene Zeichenfolge und der Wert **dieser Verbindungs Option überprüfen** zwischengespeichert. (Wenn auf die Schaltfläche **Schließen** oder **Abbrechen** geklickt wird, gehen alle neu eingegebenen treiberspezifischen Informationen verloren, da die im Textfeld angegebene Zeichenfolge und der Wert **dieser Verbindungs Option überprüfen** nicht zwischengespeichert werden.)  
   
- Wenn **Dateidatenquelle** in der ersten Seite des Assistenten ausgewählt wurde, und klicken Sie dann nach ein Treiber ausgewählt wurde, und die Werte in den erweiterten Assistenten-Seite eingegeben wurden, die benutzeraufforderung angezeigt wird, einen Dateinamen eingeben. Klicken Sie auf **Durchsuchen** für den Dateinamen in diesem Fall das Standardverzeichnis in Suchen den **Durchsuchen** Feld durch eine Kombination von CommonFileDir in HKEY_LOCAL_MACHINE\SOFTWARE\ angegebene Pfad angegeben ist Microsoft\Windows\CurrentVersion und "ODBC\DataSources". (Wenn CommonFileDir "C:\Program Files\Common Files" war, würde das Standardverzeichnis "C:\Programme\Microsoft c:\Programme\Gemeinsame Dateien\ODBC\Data Sources" sein.)  
+ Wenn auf der ersten Seite des Assistenten die Option **Datei Datenquelle** ausgewählt wurde, dann wird der Benutzer aufgefordert, einen Dateinamen einzugeben, nachdem ein Treiber ausgewählt und die Schlüsselwort Werte auf der Seite erweiterter Assistent eingegeben wurden. Klicken Sie auf **Durchsuchen** , um einen Dateinamen zu suchen. in diesem Fall wird das Standardverzeichnis im Feld durch **Suchen** durch eine Kombination aus dem Pfad angegeben, der von commonfiledir in HKEY_LOCAL_MACHINE \Software\Microsoft\Windows\CurrentVersion und "odbc\datasources" angegeben wird. (Wenn commonfiledir "c:\Programme\Gemeinsame Dateien" war, lautet das Standardverzeichnis "c:\Programme\Gemeinsame Dateien\ODBC\Data Sources".)  
   
- Wenn ein Dateiname eingegeben wurde und **Weiter** geklickt wird, wird die Datei eingegebene Name wird auf Gültigkeit für die standard-Namenskonvention Regeln des Betriebssystems überprüft. Wenn der Dateiname ungültig ist, wird der Benutzer eine Fehlermeldung angezeigt, dass ein ungültiger Dateiname eingegeben wurde benachrichtigt. Nachdem der Benutzer das Meldungsfeld bestätigt, wird der Fokus auf der Seite des Assistenten zurückgegeben, in dem der Dateiname eingegeben wird. Wenn der Dateiname gültig ist, wird eine Seite des Assistenten, die zeigt, die ausgewählten Schlüsselwort-Wert-Paare zur Überprüfung angezeigt, wie in der folgenden Abbildung dargestellt.  
+ Wenn ein Dateiname eingegeben und **dann auf weiter** geklickt wird, wird der eingegebene Dateiname auf Gültigkeit der Standardregeln für die Datei Benennung des Betriebssystems überprüft. Wenn der Dateiname ungültig ist, wird der Benutzer im Feld Fehlermeldung darüber informiert, dass ein ungültiger Dateiname eingegeben wurde. Nachdem der Benutzer das Meldungs Feld bestätigt hat, wird der Fokus auf die Seite des Assistenten zurückgegeben, in der der Dateiname eingegeben wurde. Wenn der Dateiname gültig ist, wird eine Assistenten Seite mit den ausgewählten Schlüsselwort-Wert-Paaren zur Überprüfung angezeigt, wie in der folgenden Abbildung dargestellt.  
   
- ![Erstellen neue Datenquelle (Dialogfeld): Überprüfen Sie](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
+ ![Dialogfeld "Neue Datenquelle erstellen": Überprüfen](../../../odbc/reference/syntax/media/ch23d.gif "CH23D")  
   
- Wenn **Fertig stellen** geklickt wird und **Dateidatenquelle** ausgewählt wurde, als Typ der Datenquelle, und wenn die **Verbindung überprüfen** Option ist "true",  **SQLDriverConnect** aufgerufen wird und die **SAVEFILE** und **Treiber** Schlüsselwörter. Die *DriverCompletion* Argument auf SQL_DRIVER_COMPLETE festgelegt ist. Der Dateiname für die **SAVEFILE** -Schlüsselwort ist der Name, der eingegeben wurde oder ausgewählt und den Namen des Treibers für die **Treiber** -Schlüsselwort ist der Name, der ausgewählt wurde. Wenn eine treiberspezifische-Verbindungszeichenfolge in der erweiterten Assistenten-Seite angegeben wurde, wird diese Zeichenfolge angefügt, nach der **Treiber** Schlüsselwort.  
+ Wenn auf **Fertig** stellen geklickt wird und die **Datei Datenquelle** als Daten Quellentyp ausgewählt wurde, und wenn die Option **diese Verbindung überprüfen** auf true festgelegt ist, wird **SQLDriverConnect** mit den Schlüsselwörtern **SaveFile** und **Driver** aufgerufen. Das Argument *DriverCompletion* ist auf SQL_DRIVER_COMPLETE festgelegt. Der Dateiname für das Schlüsselwort " **SaveFile** " ist der Name, der eingegeben oder ausgewählt wurde, und der Treiber Name für das **Treiber** Schlüsselwort ist der Name, der ausgewählt wurde. Wenn eine Treiber spezifische Verbindungs Zeichenfolge auf der Seite des erweiterten Assistenten angegeben wurde, wird diese Zeichenfolge nach dem **Treiber** Schlüsselwort angefügt.  
   
- Wenn **SQLDriverConnect** gibt SQL_SUCCESS zurück, der Treiber-Manager wurde die Datei-DSN erstellt. **SQLCreateDataSource** gibt TRUE zurück. Wenn **SQLDriverConnect** gibt keine SQL_SUCCESS, eine Warnmeldung zurück Feld gibt an, dass keine Verbindung mit der Datenquelle hergestellt werden konnte. Ein DSN mit minimalen Verbindungsinformationen kann noch erstellt werden. Dieses Meldungsfeld ermöglicht den Benutzer, Abbrechen oder Fortsetzen der Datei-DSN-Erstellung.  
+ Wenn **SQLDriverConnect** SQL_SUCCESS zurückgibt, hat der Treiber-Manager die Datei-DSN erstellt. **Sqlkreatedatasource** gibt true zurück. Wenn **SQLDriverConnect** SQL_SUCCESS nicht zurückgibt, gibt ein Warn Meldungs Feld an, dass keine Verbindung mit der Datenquelle hergestellt werden konnte. Ein DSN mit minimalen Verbindungsinformationen kann weiterhin erstellt werden. Mit diesem Meldungs Feld kann der Benutzer die Datei-DSN-Erstellung entweder abbrechen oder fortsetzen.  
   
- Dieser Prozess wird fortgesetzt, wenn der Benutzer auswählt, um den Vorgang fortzusetzen, erstellen den DSN, als ob die **Verbindung überprüfen** Option auf "false" festgelegt wurden. Wenn der Benutzer abbricht, wird "false" zurückgegeben, für die **SQLCreateDataSource** mit einem Fehlercode von ODBC_ERROR_CREATE_DSN_FAILED.  
+ Wenn der Benutzer die Erstellung des DSN fortsetzt, wird dieser Vorgang fortgesetzt, als ob die Option **diese Verbindung überprüfen** auf false festgelegt ist. Wenn der Benutzer das Abbrechen auswählt, wird false für **sqlkreatedatasource** mit dem Fehlercode ODBC_ERROR_CREATE_DSN_FAILED zurückgegeben.  
   
- Wenn **Dateidatenquelle** als Typ der Datenquelle ausgewählt wurde und die **Verbindung überprüfen** Option ist "false", Datei-DSN wird erstellt, mit der **Treiber** Schlüsselwort und benutzerdefinierte Verbindungszeichenfolge (sofern vorhanden) von der erweiterten Assistenten-Seite. Wenn die Erstellung erfolgreich war, wird "true" zurückgegeben, für die **SQLCreateDataSource**. Wenn die Erstellung der Datei nicht erfolgreich war, benachrichtigt ein Fehlermeldungsfeld den Benutzer mit der Fehler vom Betriebssystem zurückgegeben wurde. "False" wird zurückgegeben, für die **SQLCreateDataSource** mit einem Fehlercode von ODBC_ERROR_CREATE_DSN_FAILED. Weitere Informationen zu Datei-Datenquellen, finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), oder finden Sie unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Wenn die **Datei Datenquelle** als Daten Quellentyp ausgewählt wurde und die Option **diese Verbindung überprüfen** auf false festgelegt ist, wird ein Datei-DSN mit dem **Treiber** Schlüsselwort und der benutzerdefinierten Verbindungs Zeichenfolge (sofern vorhanden) von der erweiterten Assistenten Seite erstellt. Wenn die Dateierstellung erfolgreich war, wird für **sqlkreatedatasource**der Wert true zurückgegeben. Wenn die Dateierstellung nicht erfolgreich war, wird der Benutzer im Fehlermeldungs Feld mit dem Fehler benachrichtigt, der vom Betriebssystem zurückgegeben wurde. "False" wird für " **sqlkreatedatasource** " mit dem Fehlercode "ODBC_ERROR_CREATE_DSN_FAILED" zurückgegeben. Weitere Informationen zu Datei Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)oder unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
- Wenn **Benutzer** oder **Systemdatenquelle** ausgewählt wurde, als Typ der Datenquelle, **ConfigDSN** in der Setup-Treiber-Bibliothek wird aufgerufen, mit der ODBC_ADD_DSN  *Häufigsten*. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
+ Wenn eine **Benutzer** -oder **System Datenquelle** als Daten Quellentyp ausgewählt wurde, wird **ConfigDSN** in der Treiber Setup Bibliothek mit dem ODBC_ADD_DSN *fRequest*aufgerufen. Weitere Informationen finden Sie unter [ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Verwalten von Datenquellen|[SQLManageDataSources](../../../odbc/reference/syntax/sqlmanagedatasources.md)|

@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_schedule (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68008966"
 ---
-# <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
+# <a name="sp_delete_schedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht einen Zeitplan.  
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,27 +40,27 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_id = ] schedule_id` Die Zeitplan-ID des zu löschenden Zeitplans. *Schedule_id* ist **Int**, hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id`Die Zeitplan-ID des zu löschenden Zeitplans. *schedule_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-> **HINWEIS:** Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+> **Hinweis:** Es muss entweder *schedule_id* oder *schedule_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @schedule_name = ] 'schedule_name'` Der Name des zu löschenden Zeitplans. *Schedule_name* ist **Sysname**, hat den Standardwert NULL.  
+`[ @schedule_name = ] 'schedule_name'`Der Name des zu löschenden Zeitplans. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-> **HINWEIS:** Entweder *Schedule_id* oder *Schedule_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+> **Hinweis:** Es muss entweder *schedule_id* oder *schedule_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.  
   
-`[ @force_delete = ] force_delete` Gibt an, ob die Prozedur fehlschlagen soll, wenn der Zeitplan einem Auftrag angefügt ist. *Force_delete* bit und hat den Standardwert **0**. Wenn *Force_delete* ist **0**, die gespeicherte Prozedur fehlschlägt, wenn der Zeitplan einem Auftrag angefügt ist. Wenn *Force_delete* ist **1**, der Zeitplan gelöscht, unabhängig davon, ob der Zeitplan einem Auftrag angefügt ist.  
+`[ @force_delete = ] force_delete`Gibt an, ob die Prozedur fehlschlagen soll, wenn der Zeitplan einem Auftrag angefügt ist. *Force_delete* ist vom Typ Bit. der Standardwert ist **0**. Wenn *force_delete* **0**ist, schlägt die gespeicherte Prozedur fehl, wenn der Zeitplan an einen Auftrag angefügt ist. Wenn *force_delete* **1**ist, wird der Zeitplan gelöscht, unabhängig davon, ob der Zeitplan an einen Auftrag angefügt ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Standardmäßig kann ein Zeitplan nicht gelöscht werden, wenn der Zeitplan einem Auftrag angefügt ist. Um einen Zeitplan zu löschen, die einem Auftrag angefügt ist, geben Sie den Wert **1** für *Force_delete*. Durch das Löschen eines Zeitplans werden derzeit ausgeführte Aufträge nicht beendet.  
+## <a name="remarks"></a>Bemerkungen  
+ Standardmäßig kann ein Zeitplan nicht gelöscht werden, wenn der Zeitplan einem Auftrag angefügt ist. Um einen Zeitplan zu löschen, der einem Auftrag zugeordnet ist, geben Sie für *force_delete*den Wert **1** an. Durch das Löschen eines Zeitplans werden derzeit ausgeführte Aufträge nicht beendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -68,11 +68,11 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 -   **SQLAgentOperatorRole**  
   
- Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Allerdings kann kein Zeitplans gelöscht werden, wenn das Trennen keine Aufträge, lassen würden, wenn der Aufrufer der Zeitplanbesitzer ist.  
+ Hinweis: Der Auftragsbesitzer kann einem Zeitplan einen Auftrag anfügen oder diesen von ihm trennen, und zwar ohne der Zeitplanbesitzer sein zu müssen. Ein Zeitplan kann jedoch nicht gelöscht werden, wenn der Trennvorgang keine Aufträge hat, es sei denn, der Aufrufer ist der Zeit Plan Besitzer.  
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** Rolle kann einen Zeitplan für Aufträge, die von einem anderen Benutzer gehört zu löschen.  
+ Nur Mitglieder der **sysadmin** -Rolle können einen Auftrags Zeitplan löschen, der im Besitz eines anderen Benutzers ist.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -101,8 +101,8 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Aufträgen](../../ssms/agent/implement-jobs.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
+ [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)  
   
   
