@@ -1,5 +1,5 @@
 ---
-title: MarshalOptions-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für die MarshalOptions-Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918239"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions-Eigenschaft – Beispiel (VB)
-Dieses Beispiel verwendet die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) Eigenschaft, um anzugeben, welche Zeilen an den Server - alle Zeilen oder nur geänderte Zeilen gesendet werden.  
+In diesem Beispiel wird die [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) -Eigenschaft verwendet, um anzugeben, welche Zeilen an den Server zurückgesendet werden, und zwar alle Zeilen oder nur geänderte Zeilen.  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -131,6 +131,6 @@ End Sub
 'EndMarshalOptionsVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [MarshalOptions-Eigenschaft (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
  [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)

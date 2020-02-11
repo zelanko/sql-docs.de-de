@@ -11,24 +11,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108433"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lektion 5: Formatieren eines Berichts (Reporting Services)
   Nachdem Sie dem Sales Orders-Bericht einen Datenbereich sowie einige Felder hinzugefügt haben, können Sie die Felder für Datum und Währung sowie die Spaltenköpfe formatieren.  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
 -   [Formatieren des Datums](#bkmk_format_date)  
   
 -   [Formatieren der Währung](#bkmk_format_currency)  
   
--   [Ändern von Textart und Spaltenbreite](#bkmk_change_textstyle)  
+-   [Ändern der Textart und der Spaltenbreite](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a> Formatieren des Datums  
+##  <a name="bkmk_format_date"></a>Formatieren des Datums  
  Im Feld Date werden standardmäßig Datums- und Uhrzeitangaben angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
 #### <a name="to-format-a-date-field"></a>So formatieren Sie ein Datumsfeld  
@@ -37,7 +37,7 @@ ms.locfileid: "66108433"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feldausdruck `[Date]` und anschließend auf das Dialogfeld **Textfeldeigenschaften**.  
   
-3.  Klicken Sie auf **Anzahl**, und klicken Sie dann in der **Kategorie** die Option `Date`.  
+3.  Klicken Sie auf **Zahl**, und wählen **** Sie `Date`dann im Feld Kategorie den Wert aus.  
   
 4.  Wählen Sie im Feld **Typ** die Option **31. Januar 2000**aus.  
   
@@ -45,12 +45,12 @@ ms.locfileid: "66108433"
   
 6.  Zeigen Sie den Bericht in der Vorschau an, um die Änderung am Feld `[Date]` zu sehen, und wechseln Sie dann zurück zur Entwurfsansicht.  
   
-##  <a name="bkmk_format_currency"></a> Formatieren der Währung  
+##  <a name="bkmk_format_currency"></a>Formatieren der Währung  
  Im Feld LineTotal wird eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.  
   
 #### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feldausdruck `[LineTotal]` , und klicken Sie dann auf das Dialogfeld **Textfeldeigenschaften**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feldausdruck `[LineTotal]` und anschließend auf das Dialogfeld **Textfeldeigenschaften**.  
   
 2.  Klicken Sie auf **Zahl**, und wählen Sie im Feld **Kategorie** die Option **Währung**aus.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66108433"
   
     -   **Dezimalstellen: 2**  
   
-    -   **Negative Zahlen: ($12345.00)**  
+    -   **Negative Zahlen: ($12345,00)**  
   
     -   **Symbol: $ Englisch (USA)**  
   
@@ -70,14 +70,14 @@ ms.locfileid: "66108433"
   
 6.  Zeigen Sie den Bericht in der Vorschau an, um die Änderung am Feld `[LineTotal]` zu sehen, und wechseln Sie dann zurück zur Entwurfsansicht.  
   
-##  <a name="bkmk_change_textstyle"></a> Ändern von Textart und Spaltenbreite  
+##  <a name="bkmk_change_textstyle"></a>Ändern der Textart und der Spaltenbreite  
  Sie können auch die Formatierung der Kopfzeile ändern, um diese von den anderen Datenzeilen im Bericht zu unterscheiden. Abschließend passen Sie die Breite der Spalten an.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>So formatieren Sie Kopfzeilen und Tabellenspalten  
   
 1.  Klicken Sie auf die Tabelle, damit die Spalten- und Zeilenhandles über und neben der Tabelle angezeigt werden.  
   
-     ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Design, Tabelle mit Kopfzeile und Detailzeile")  
+     ![Entwurf, Tabelle mit Kopfzeile und Detailzeile](../../2014/tutorials/media/rs-basictabledetailsdesign.gif "Entwurf, Tabelle mit Kopfzeile und Detailzeile")  
   
      Die grauen Balken oberhalb und neben der Tabelle stellen die Spalten- und Zeilenhandles dar.  
   
@@ -85,16 +85,16 @@ ms.locfileid: "66108433"
   
 3.  Markieren Sie die Zeile mit den Spaltenkopfbezeichnungen, und zeigen Sie im Menü **Format** auf **Schriftart** . Klicken Sie dann auf **Fett**.  
   
-4.  Klicken Sie auf **Vorschau** , um eine Vorschau des Berichts anzuzeigen. Der Bericht könnte beispielsweise wie folgt aussehen:  
+4.  Um die Vorschau des Berichts anzuzeigen, klicken Sie auf die Registerkarte **Vorschau** . Dies sollte etwa wie folgt aussehen:  
   
-     ![Vorschau der Tabelle mit fett formatierten Spaltenüberschriften](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Preview of table with bold column headers")  
+     ![Vorschau der Tabelle mit fett formatierten Spaltenüberschriften](../../2014/tutorials/media/rs-basictabledetailsformattedpreview.gif "Vorschau der Tabelle mit fett formatierten Spaltenüberschriften")  
   
 5.  Klicken Sie im Menü **Datei** auf **Alle Speichern** , um den Bericht zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Sie haben erfolgreich Spaltenköpfe sowie Datums- und Währungswerte formatiert. Als Nächstes fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu. Siehe [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
+ Sie haben erfolgreich Spaltenköpfe sowie Datums- und Währungswerte formatiert. Als Nächstes fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu. Siehe [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Renderingverhalten (Berichts-Generator und SSRS)](report-design/rendering-behaviors-report-builder-and-ssrs.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Konvertieren von Daten von C-in SQL-Datentypen | Microsoft-Dokumentation
+title: Datentypen werden von C in SQL-Datentypen umgerechnet | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,60 +21,60 @@ ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019120"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Konvertieren von Daten von C- zu SQL-Datentypen
-Wenn eine Anwendung ruft **SQLExecute** oder **SQLExecDirect**, ruft der Treiber die Daten für alle Parameter gebunden **SQLBindParameter** von Speicherorten die Anwendung. Wenn eine Anwendung ruft **SQLSetPos**, der Treiber Ruft ab, die Daten für ein Update oder Hinzufügen von Spalten mit gebunden **SQLBindCol**. Für Data-at-Execution-Parameter, die Anwendung sendet die Parameterdaten mit **SQLPutData**. Wenn erforderlich, der Treiber die Daten aus den angegebenen Datentyp konvertiert die *ValueType* -Argument in **SQLBindParameter** in den Datentyp, der gemäß der *ParameterType*-Argument in **SQLBindParameter**, und klicken Sie dann die Daten an die Datenquelle sendet.  
+Wenn eine Anwendung **SQLExecute** oder **SQLExecDirect**aufruft, ruft der Treiber die Daten für alle Parameter ab, die mit **SQLBindParameter** an den Speicherorten in der Anwendung gebunden sind. Wenn eine Anwendung **SQLSetPos**aufruft, ruft der Treiber die Daten für einen Update-oder Add-Vorgang aus Spalten ab, die mit **SQLBindCol**gebunden sind. Bei Data-at-Execution-Parametern sendet die Anwendung die Parameterdaten mit **SQLPutData**. Falls erforderlich, konvertiert der Treiber die Daten aus dem Datentyp, der vom *ValueType* -Argument in **SQLBindParameter** angegeben wird, in den Datentyp, der durch das *Parameter Type* -Argument in **SQLBindParameter**angegeben wird, und sendet die Daten dann an die Datenquelle.  
   
- Die folgende Tabelle zeigt die unterstützten Konvertierungen von ODBC-C-Datentypen in ODBC-SQL-Datentypen. Ein ausgefüllten Kreis gibt an, die standardkonvertierung für einen SQL-Datentyp (der C-Datentyp, der aus dem die Daten werden, wenn konvertiert werden der Wert des *ValueType* oder das Deskriptorfeld SQL_DESC_CONCISE_TYPE SQL_C_DEFAULT). Ein leerer Kreis gibt an, eine Konvertierung unterstützt wird.  
+ In der folgenden Tabelle werden die unterstützten Konvertierungen von ODBC C-Datentypen in ODBC-SQL-Datentypen gezeigt. Ein ausgefüllter Kreis gibt die Standard Konvertierung für einen SQL-Datentyp an (der C-Datentyp, von dem die Daten konvertiert werden, wenn der Wert von *ValueType* oder das SQL_DESC_CONCISE_TYPE Deskriptorfeld SQL_C_DEFAULT ist). Ein leerer Kreis gibt eine unterstützte Konvertierung an.  
   
- Das Format der konvertierten Daten ist von der Windows® Land-Einstellung nicht betroffen.  
+ Das Format der konvertierten Daten wird von der Einstellung für das Windows-® Land nicht beeinträchtigt.  
   
- ![Unterstützte Konvertierungen: ODBC C-in SQL-Datentypen](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
+ ![Unterstützte Konvertierungen: ODBC C- in SQL-Datentypen](../../../odbc/reference/appendixes/media/apd1b.gif "apd1b")  
   
- Die Tabellen in den folgenden Abschnitten wird beschrieben, wie die Treiber oder die Datenquelle mit der Datenquelle gesendete Daten konvertiert; Treiber sind erforderlich, um Konvertierungen von alle ODBC C-Datentypen in die ODBC-SQL-Datentypen zu unterstützen, die sie unterstützen. Für einen bestimmten ODBC-C-Datentyp, werden die erste Spalte der Tabelle die zulässige Eingabewerte eines aufgeführt, mit die *ParameterType* -Argument in **SQLBindParameter**. Die zweite Spalte enthält die Ergebnisse eines Tests, die der Treiber ausgeführt werden, um zu bestimmen, ob sie die Daten konvertieren kann. Die dritte Spalte enthält den SQLSTATE zurückgegeben, die für jedes Ergebnis von **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos**, oder **SQLPutData**. Daten werden an die Datenquelle gesendet werden, nur dann, wenn SQL_SUCCESS zurückgegeben wird.  
+ In den Tabellen in den folgenden Abschnitten wird beschrieben, wie der Treiber oder die Datenquelle die an die Datenquelle gesendeten Daten konvertiert. Treiber sind erforderlich, um Konvertierungen von allen ODBC-C-Datentypen in die von Ihnen unterstützten ODBC-SQL-Datentypen zu unterstützen. Für einen bestimmten ODBC-C-Datentyp listet die erste Spalte der Tabelle die zulässigen Eingabewerte des *Parameters Parameter Type* in **SQLBindParameter**auf. In der zweiten Spalte werden die Ergebnisse eines Tests aufgelistet, den der Treiber durchführt, um zu bestimmen, ob die Daten konvertiert werden können. In der dritten Spalte wird der für jedes Ergebnis von **SQLExecDirect**, **SQLExecute**, **SQLBulkOperations**, **SQLSetPos**oder **SQLPutData**zurückgegebene SQLSTATE aufgelistet. Daten werden nur dann an die Datenquelle gesendet, wenn SQL_SUCCESS zurückgegeben wird.  
   
- Wenn die *ParameterType* -Argument in **SQLBindParameter** enthält den Bezeichner für eine ODBC-SQL-Datentyp, der in der Tabelle für einen bestimmten C-Datentyp nicht angezeigt wird **SQLBindParameter**SQLSTATE 07006 zurückgibt (geschützte Daten attributverletzung). Wenn die *ParameterType* -Argument enthält einen Treiber-spezifische Bezeichner und der Treiber unterstützt nicht die Konvertierung von der bestimmten ODBC-C-Datentyp in diesen treiberspezifischen SQL-Datentyp, **SQLBindParameter** SQLSTATE HYC00 zurückgibt (optionales Feature nicht implementiert).  
+ Wenn das *ParameterType* -Argument in **SQLBindParameter** den Bezeichner eines ODBC SQL-Datentyps enthält, der in der Tabelle für einen bestimmten C-Datentyp nicht angezeigt wird, gibt **SQLBindParameter** SQLSTATE 07006 (eingeschränkte Datentyp-Attribut Verletzung) zurück. Wenn das *Parameter Type* -Argument einen treiberspezifischen Bezeichner enthält und der Treiber die Konvertierung des bestimmten ODBC C-Datentyps in diesen treiberspezifischen SQL-Datentyp nicht unterstützt, gibt **SQLBindParameter** SQLSTATE HYC00 (optionales Feature nicht implementiert) zurück.  
   
- Wenn die *ParameterValuePtr* und *StrLen_or_IndPtr* im angegebenen Argumente **SQLBindParameter** sind null-Zeiger, diese Funktion SQLSTATE HY009 zurückgegeben (ungültige die Verwendung eines null-Zeiger). Auch es nicht in den Tabellen angezeigt wird, wird durch eine Anwendung festlegt, den Wert der Längen-/Indikatorpuffer verweist die *StrLen_or_IndPtr* Argument **SQLBindParameter** oder den Wert des der  *StrLen_or_IndPtr* Argument **SQLPutData** auf SQL_NULL_DATA einen NULL-SQL-Daten-Wert angeben. (Die *StrLen_or_IndPtr* Argument entspricht Feld SQL_DESC_OCTET_LENGTH_PTR in APD.) Die Anwendung diese Werte SQL_NTS an, dass der Wert festgelegt \* *ParameterValuePtr* in **SQLBindParameter** oder \* *DataPtr*in **SQLPutData** (verweist das SQL_DESC_DATA_PTR-Feld der APD) ist eine Null-terminierte Zeichenfolge.  
+ Wenn die in **SQLBindParameter** angegebenen Argumente *ParameterValuePtr* und *StrLen_or_IndPtr* beide NULL-Zeiger sind, gibt diese Funktion SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurück. Obwohl Sie in den Tabellen nicht angezeigt wird, legt eine Anwendung den Wert des Längen-/Indikatorpuffers fest, auf den das *StrLen_or_IndPtr* -Argument von **SQLBindParameter** oder den Wert des *StrLen_or_IndPtr* -Arguments von **SQLPutData** SQL_NULL_DATA, um einen Null-SQL-Datenwert anzugeben. (Das *StrLen_or_IndPtr* -Argument entspricht dem SQL_DESC_OCTET_LENGTH_PTR-Feld der APD.) Diese Werte werden von der Anwendung auf SQL_NTS festgelegt, um anzugeben \*, dass der Wert in *ParameterValuePtr* in **SQLBindParameter** oder \* *DataPtr* in **SQLPutData** (auf das das SQL_DESC_DATA_PTR-Feld der APD zeigt) eine NULL-terminierte Zeichenfolge ist.  
   
  Die folgenden Begriffe werden in den Tabellen verwendet:  
   
--   **Die Bytelänge der Daten** : Gibt die Anzahl der Bytes der SQL-Daten, die zum Senden an die Datenquelle verfügbar, unabhängig davon, ob die Daten werden abgeschnitten, bevor sie mit der Datenquelle gesendet wird. Für eine Zeichenfolge enthält dieser Speicherplatz für die Null-Terminierungszeichen keine.  
+-   **Byte Länge der Daten** : die Anzahl von Bytes an SQL-Daten, die an die Datenquelle gesendet werden können, unabhängig davon, ob die Daten abgeschnitten werden, bevor Sie an die Datenquelle gesendet werden. Bei Zeichen folgen Daten enthält dies keinen Platz für das NULL-Terminierungs Zeichen.  
   
--   **Spalte Bytelänge** -Anzahl der Bytes, die zum Speichern der Daten in der Datenquelle erforderlich sind.  
+-   **Spalten Byte Länge** : die Anzahl von Bytes, die zum Speichern der Daten in der Datenquelle erforderlich sind.  
   
--   **Zeichen-Byte-Länge** : maximale Anzahl von Bytes, die zum Anzeigen von Daten in Form von Zeichen erforderlich sind. Dies ist für jeden SQL-Datentyp in gemäß [Größe anzeigen](../../../odbc/reference/appendixes/display-size.md), es sei denn Zeichen-Byte-Länge in Bytes ist, während die Größe der Anzeige in Zeichen ist.  
+-   **Zeichen Byte Länge** : maximale Anzahl von Bytes, die zum Anzeigen von Daten im Zeichenformat erforderlich sind. Dies ist für jeden SQL-Datentyp in der [Anzeige Größe](../../../odbc/reference/appendixes/display-size.md)definiert, mit der Ausnahme, dass die Länge des Zeichen Bytes in Bytes liegt, während die Anzeige Größe in Zeichen angegeben ist.  
   
--   **Anzahl der Ziffern** : Gibt die Anzahl von Zeichen verwendet, um eine Zahl darzustellen, z. B. das Minuszeichen (-), Dezimaltrennzeichen und einem Exponenten (falls erforderlich).  
+-   **Anzahl der Ziffern** -Anzahl der Zeichen, die zur Darstellung einer Zahl verwendet werden, einschließlich Minuszeichen, Dezimaltrennzeichen und Exponent (falls erforderlich).  
   
 -   **Wörter in**   
-     ***Kursiv*** -Elemente, die von der SQL-Grammatik. Die Syntax von grammatikelementen, finden Sie unter [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+     ***kursiv*** -Elemente der SQL-Grammatik. Die Syntax von Grammatik Elementen finden Sie in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [C to SQL: Zeichen](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C zu SQL: Zeichen](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C to SQL: Numerisch](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C zu SQL: numerisch](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
--   [C to SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
+-   [C zu SQL: Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   
--   [C to SQL: Binärdatei](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
+-   [C zu SQL: Binärdaten](../../../odbc/reference/appendixes/c-to-sql-binary.md)  
   
--   [C to SQL: Datum](../../../odbc/reference/appendixes/c-to-sql-date.md)  
+-   [C zu SQL: Datum](../../../odbc/reference/appendixes/c-to-sql-date.md)  
   
--   [C to SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
+-   [C zu SQL: GUID](../../../odbc/reference/appendixes/c-to-sql-guid.md)  
   
--   [C to SQL: Zeit](../../../odbc/reference/appendixes/c-to-sql-time.md)  
+-   [C zu SQL: Uhrzeit](../../../odbc/reference/appendixes/c-to-sql-time.md)  
   
--   [C to SQL: Zeitstempel](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
+-   [C zu SQL: Zeitstempel](../../../odbc/reference/appendixes/c-to-sql-timestamp.md)  
   
--   [C to SQL: Jahr-Monat-Intervalle](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
+-   [C zu SQL: Jahr-Monat-Intervalle](../../../odbc/reference/appendixes/c-to-sql-year-month-intervals.md)  
   
--   [C to SQL: Tag-Zeitintervalle](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
+-   [C zu SQL: Tag-Uhrzeit-Intervalle](../../../odbc/reference/appendixes/c-to-sql-day-time-intervals.md)  
   
--   [C to SQL Data Conversion Examples (Beispiele für die Datenkonvertierung von C zu SQL)](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)
+-   [Beispiele für die Datenkonvertierung von C zu SQL](../../../odbc/reference/appendixes/c-to-sql-data-conversion-examples.md)

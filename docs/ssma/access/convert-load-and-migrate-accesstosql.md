@@ -1,5 +1,5 @@
 ---
-title: Konvertieren, laden und migrieren (AccessToSQL) | Microsoft-Dokumentation
+title: Konvertieren, laden und migrieren (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,24 +14,24 @@ ms.assetid: 4ec83e96-88a5-4b7b-8d5a-f3429d9a936b
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 672aff153c2f31416550bc850af959faca253ff1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006636"
 ---
-# <a name="convert-load-and-migrate-accesstosql"></a>Konvertieren Sie, laden und migrieren Sie (AccessToSQL)
-Die **konvertieren, laden und migrieren** Dialogfeld meldet Status der Migration aus, wenn Sie die Schaltfläche "konvertieren, laden und migrieren" oder der Migrations-Assistent verwenden.  
+# <a name="convert-load-and-migrate-accesstosql"></a>Konvertieren, laden und migrieren (accesstosql)
+Das Dialogfeld **konvertieren, laden und Migrieren** meldet den Migrationsstatus, wenn Sie die Schaltfläche konvertieren, laden und migrieren oder den Migrations-Assistenten verwenden.  
   
-Nachdem die Migration abgeschlossen ist, sehen Sie nur zu Informationszwecken, Warnung und Fehlermeldungen auf den Link in den einzelnen Abschnitten. Der Link zeigt, wie viele Fehler-, Warn- und informationsmeldungen verfügbar, z. B. "0 Fehler, Warnungen von 4."  
+Nach Abschluss der Migration können Sie Informations-, Warn-und Fehlermeldungen anzeigen, indem Sie auf den Link in den einzelnen Abschnitten klicken. Der Link zeigt an, wie viele Fehler-, Warn-und Informationsmeldungen verfügbar sind, z. b. "0 Fehler, 4 Warnungen".  
   
-Die **Migrieren von Daten für die ausgewählten Objekte** Abschnitt der Seite enthält außerdem eine **Bericht** Schaltfläche. Sie können diese Schaltfläche, um einen Data Migration-Bericht anzeigen klicken.  
+Der Abschnitt **Migrieren von Daten für ausgewählte Objekte** der Seite enthält auch eine **Berichts** Schaltfläche. Sie können auf diese Schaltfläche klicken, um einen Daten Migrationsbericht anzuzeigen.  
   
-## <a name="options"></a>Optionen  
-**Bericht**  
-Zeigt den zugehörigen Bericht der Konvertierung oder Migration.  
+## <a name="options"></a>Tastatur  
+**Report**  
+Zeigt den zugeordneten Konvertierungs-oder Migrationsbericht an.  
   
-## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
-[Migration Wizard (Migrations-Assistent)](migration-wizard-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+[Migrations-Assistent](migration-wizard-accesstosql.md)  
   

@@ -13,13 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 95e7bade956c791feceddc32f2a0423c331fe77f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66097112"
 ---
-# <a name="issharepointintegrated-property-wmi-msreportserverinstance"></a>IsSharePointIntegrated-Eigenschaft (WMI: MSReportServer_Instance)
+# <a name="issharepointintegrated-property-wmi-msreportserver_instance"></a>IsSharePointIntegrated-Eigenschaft (WMI: MSReportServer_Instance)
   Gibt an, ob sich der Berichtsserver im integrierten SharePoint-Modus befindet Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] gibt diese Eigenschaft immer `False` zurück, da [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanzen im SharePoint-Modus freigegebene Dienste darstellen und nicht von WMI-Anbietern kontrolliert werden.  
   
 ## <a name="syntax"></a>Syntax  
@@ -35,11 +35,11 @@ public Boolean IsSharePointIntegrated;
 ## <a name="property-values"></a>Eigenschaftswerte  
  Ein `Boolean`-Wert, der angibt, ob sich der Berichtsserver im integrierten SharePoint-Modus befindet  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_Instance-Member](msreportserver-instance-members.md)   
- [MSReportServer_ConfigurationSetting-Klasse](msreportserver-configurationsetting-class.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mitglieder MSReportServer_Instance](msreportserver-instance-members.md)   
+ [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](msreportserver-configurationsetting-class.md)  
   
   

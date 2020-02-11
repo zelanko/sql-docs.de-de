@@ -1,5 +1,5 @@
 ---
-title: Typen von Ereignissen | Microsoft-Dokumentation
+title: Ereignis Typen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,28 +17,28 @@ ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923817"
 ---
 # <a name="types-of-events"></a>Ereignistypen
-Es gibt zwei grundlegende Arten von Ereignissen. "Werden Ereignisse" die aufgerufen werden, bevor ein Vorgang gestartet wird, stehen in der Regel "Wird" im Namen – beispielsweise **WillChangeRecordset** oder **WillConnect**. Ereignisse, die aufgerufen werden, nachdem ein Ereignis in der Regel abgeschlossen wurde enthalten "Abgeschlossen" im Namen – beispielsweise **RecordChangeComplete** oder **ConnectComplete**. Ausnahmen vorhanden sind – z. B. **InfoMessage** –, aber diese treten auf, nachdem der zugeordnete Vorgang abgeschlossen wurde.  
+Es gibt zwei grundlegende Arten von Ereignissen. "Will-Ereignisse", die vor dem Start eines Vorgangs aufgerufen werden, enthalten in der Regel "will" in ihren Namen, z. b. " **WillChangeRecordset** " oder " **WillConnect**". Ereignisse, die nach dem Abschluss eines Ereignisses aufgerufen werden, enthalten in der Regel den Namen "Complete" (z. b. **RecordChangeComplete** oder **ConnectComplete**). Ausnahmen sind vorhanden, z. **b. infomess** . Diese werden jedoch nach Abschluss des zugehörigen Vorgangs auftreten.  
   
-## <a name="will-events"></a>Ereignisse werden  
- -Ereignishandler wird aufgerufen, bevor der Vorgang beginnt Sie die Möglichkeit zum Untersuchen bieten oder ändern die Vorgangsparameter, und klicken Sie dann den Vorgang abbrechen oder erlauben, dass Sie abgeschlossen. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format <strong>wird*Ereignis*</strong>.  
+## <a name="will-events"></a>Ereignisse  
+ Ereignishandler, die aufgerufen werden, bevor der Vorgang gestartet wird, bieten Ihnen die Möglichkeit, die Vorgangs Parameter zu überprüfen oder zu ändern und dann entweder den Vorgang abzubrechen oder den Vorgang abzuschließen. Diese Ereignishandlerroutinen enthalten in der Regel Namen <strong>des** Formulars.</strong>  
   
-## <a name="complete-events"></a>Ereignisse durch Abschluss  
- -Ereignishandler wird aufgerufen, nachdem ein Vorgang abgeschlossen ist, können die Anwendung benachrichtigt, die eine Operation abgeschlossen wurde. Ein solcher Ereignishandler ist auch benachrichtigt werden, wenn ein Ereignishandler wird über einen ausstehenden Vorgang abbricht. Dieser Ereignishandler-Routinen haben in der Regel die Namen im Format  <strong>*Ereignis*abschließen</strong>.  
+## <a name="complete-events"></a>Ereignisse vervollständigen  
+ Ereignishandler, die aufgerufen werden, nachdem ein Vorgang abgeschlossen wurde, können die Anwendung Benachrichtigen, dass ein Vorgang abgeschlossen wurde. Ein solcher Ereignishandler wird auch benachrichtigt, wenn ein Ereignishandler einen ausstehenden Vorgang abbricht. Diese Ereignishandlerroutinen enthalten in der Regel Namen des Formular <strong> *Ereignisses*Complete</strong>.  
   
- Wird und Ereignisse zum Abschluss werden in der Regel paarweise verwendet.  
+ Die Ereignisse werden in der Regel in Paaren verwendet.  
   
 ## <a name="other-events"></a>Andere Ereignisse  
- Die anderen Ereignishandler – d.h. die Ereignisse, deren Namen nicht im Format sind <strong>wird*Ereignis*</strong>  oder  <strong>*Ereignis*abschließen</strong> -erst aufgerufen werden ein Vorgang abgeschlossen ist. Diese Ereignisse sind **trennen**, **EndOfRecordset**, und **InfoMessage**.  
+ Die anderen Ereignishandler, d. h. Ereignisse, deren Namen nicht das Formular darstellen, <strong>werden als*Ereignis* </strong> oder <strong> *Ereignis*abgeschlossen</strong> bezeichnet. Sie werden erst aufgerufen, nachdem ein Vorgang abgeschlossen wurde. Diese Ereignisse sind **Disconnect**, **endosrecordset**und **infomess**.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [Ereignisparameter](../../../ado/guide/data/event-parameters.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+ [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
  [Zusammenwirken der Ereignishandler](../../../ado/guide/data/how-event-handlers-work-together.md)

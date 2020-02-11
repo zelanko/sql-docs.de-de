@@ -19,14 +19,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85767ce54991950e75b39bf909d6d0ff3cb2cd8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085983"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Durchsuchen eines Modells mit Microsoft Time Series-Viewer
-  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zeigt Miningmodelle an, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus ist ein Regressionsalgorithmus, der Data Mining-Modellen zur Vorhersage von kontinuierlichen Spalten, wie z. B. Umsatzzahlen, in Forecastingszenarien erstellt. Diese Zeitreihenmodelle können Informationen auf der Grundlage verschiedener Algorithmen enthalten:  
+  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in zeigt Mining Modelle an, die mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] dem Time Series-Algorithmus erstellt wurden. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus ist ein Regressionsalgorithmus, der Data Mining-Modellen zur Vorhersage von kontinuierlichen Spalten, wie z. B. Umsatzzahlen, in Forecastingszenarien erstellt. Diese Zeitreihenmodelle können Informationen auf der Grundlage verschiedener Algorithmen enthalten:  
   
 -   Dem ARTxp-Algorithmus, der für die kurzfristige Vorhersage optimiert ist  
   
@@ -39,17 +39,18 @@ ms.locfileid: "66085983"
 > [!NOTE]  
 >  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a> Viewer-Registerkarten  
+##  <a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Viewer enthält die folgenden Registerkarten:  
   
--   [Model](#BKMK_Tree)  
+-   [Modells](#BKMK_Tree)  
   
 -   [Diagramme](#BKMK_Charts)  
   
- **Hinweis** Die für den Modellinhalt und in der Mininglegende angezeigten Informationen hängen von dem Algorithmus ab, den das Modell verwendet. Die Registerkarten **Modell** und **Diagramme** bleiben jedoch unabhängig von der Algorithmusmischung unverändert.  
+ **Hinweis** Die Informationen, die für den Modell Inhalt und in der Mining Legende angezeigt werden, hängen von dem Algorithmus ab, den das Modell verwendet. Die Registerkarten **Modell** und **Diagramme** bleiben jedoch unabhängig von der Algorithmusmischung unverändert.  
   
-###  <a name="BKMK_Tree"></a> Model  
- Wenn Sie ein Zeitreihenmodell erstellen, stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das abgeschlossene Modell als Baumstruktur dar. Wenn die Daten mehrere Fallreihen enthalten, erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine separate Baumstruktur für jede Reihe. Beispiel: Sie erstellen Umsatzprognosen für die Regionen Pazifik, Nordamerika und Europa. Die Vorhersagen für jede dieser Regionen sind Fallreihen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt eine separate Struktur für jede von dieser Reihe. Zum Anzeigen einer bestimmten Reihe wählen Sie die Reihe aus der Liste **Struktur** aus.  
+###  <a name="BKMK_Tree"></a>Modells  
+ Wenn Sie ein Zeitreihenmodell erstellen, stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das abgeschlossene Modell als Baumstruktur dar. Wenn die Daten mehrere Fallreihen enthalten, erstellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine separate Baumstruktur für jede Reihe. Beispiel: Sie erstellen Umsatzprognosen für die Regionen Pazifik, Nordamerika und Europa. Die Vorhersagen für jede dieser Regionen sind Fallreihen. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt eine separate Struktur für jede von dieser Reihe. Zum Anzeigen einer bestimmten Reihe wählen Sie die Reihe aus der Liste **Struktur** aus.  
   
  Das Zeitreihenmodell enthält für jede Struktur den Knoten **Alle** und wird dann in eine Reihe von Knoten unterteilt, die periodische Strukturen darstellen, die vom Algorithmus erkannt wurden. Sie können auf jeden Knoten klicken, um Statistiken anzuzeigen, z. B. die Anzahl der Fälle und die Gleichung.  
   
@@ -67,7 +68,7 @@ ms.locfileid: "66085983"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Charts"></a> Diagramme  
+###  <a name="BKMK_Charts"></a>Tabellen  
  Die Registerkarte **Diagramme** zeigt ein Diagramm an, in dem das Verhalten des vorhergesagten Attributs im Lauf der Zeit sowie fünf vorhergesagte zukünftige Werte dargestellt sind. Die vertikale Achse des Diagramms stellt die Werte der Zeitreihe dar, und die horizontale Achse stellt die Zeit dar.  
   
 > [!NOTE]  
@@ -85,10 +86,10 @@ ms.locfileid: "66085983"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-## <a name="see-also"></a>Siehe auch  
- [Tasks und Anweisungen für Miningmodell-Viewer](mining-model-viewer-tasks-and-how-tos.md)   
- [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md)   
- [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Tasks und Anleitungen des Mining Modell-Viewers](mining-model-viewer-tasks-and-how-tos.md)   
+ [Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm.md)   
+ [Abfrage Beispiele für Zeitreihen Modelle](time-series-model-query-examples.md)   
  [Data Mining-Modell-Viewer](data-mining-model-viewers.md)  
   
   

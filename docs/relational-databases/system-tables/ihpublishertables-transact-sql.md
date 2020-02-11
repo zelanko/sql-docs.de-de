@@ -18,27 +18,27 @@ ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67990157"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **IHpublishertables** -Systemtabelle stellt auf dem Verleger gespeicherte Metadaten dar. Diese Tabelle enthält eine Zeile für jede Quelltabelle, die von einer nicht - SQL Server-Verleger mithilfe des aktuellen Verteilers veröffentlicht. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **IHpublishertables** -Systemtabelle stellt Metadaten dar, die auf dem Verleger gespeichert werden. Diese Tabelle enthält eine Zeile für jede Quelltabelle, die von einem anderen als einem SQL Server-Verleger mithilfe des aktuellen Verteilers veröffentlicht wurde. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|Identifiziert eine veröffentlichte Tabelle|  
-|**publisher_id**|**smallint**|Identifiziert den nicht - SQL Server-Verleger aus der die Tabelle veröffentlicht wird.|  
+|**publisher_id**|**smallint**|Identifiziert den Nicht-SQL Server-Verleger, aus dem die Tabelle veröffentlicht wird|  
 |**name**|**sysname**|Der Name der veröffentlichten Tabelle|  
-|**Besitzer**|**sysname**|Der Tabellenbesitzer|  
+|**Eigentor**|**sysname**|Der Tabellenbesitzer|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

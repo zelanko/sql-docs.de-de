@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106264"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
@@ -30,24 +30,24 @@ ms.locfileid: "66106264"
   
  Der Diagrammtyp kann nach dem Erstellen des Diagramms geändert werden. Weitere Informationen finden Sie unter [Ändern eines Diagrammtyps (Berichts-Generator und SSRS)](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Beispielberichte für Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispiel Berichten finden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Sie unter [Berichts-Generator und Berichts-Designer Beispiel Berichte](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Diagrammtyp|Verhältnisdaten anzeigen|Börsendaten anzeigen|Lineare Daten anzeigen|Mehrwertige Daten anzeigen|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
-|[Flächendiagramme &#40;Berichts-Generator und SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Available")||  
-|[Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Available")||  
-|[Datenbalken](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Available")||  
-|[Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Available")||  
-|[Liniendiagramme &#40;Berichts-Generator und SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Available")||  
-|[Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")||||  
-|[Polardiagramme &#40;Berichts-Generator und SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")||||  
-|[Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|  
-|[Punktdiagramme &#40;Berichts-Generator und SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")||![Verfügbar](../media/greencheck.gif "Available")||  
-|[Formdiagramme &#40;Berichts-Generator und SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")||||  
-|[Sparklines](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|![Verfügbar](../media/greencheck.gif "Available")|  
-|[Kursdiagramme &#40;Berichts-Generator und SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Verfügbar](../media/greencheck.gif "Available")||![Verfügbar](../media/greencheck.gif "Available")|  
+|[Flächendiagramme &#40;Berichts-Generator und SSRS&#41;](area-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Verfügbar")||  
+|[Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](bar-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Verfügbar")||  
+|[Datenbalken](sparklines-and-data-bars-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Verfügbar")||  
+|[Säulendiagramme &#40;Berichts-Generator und SSRS&#41;](column-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Verfügbar")||  
+|[Liniendiagramme &#40;Berichts-Generator und SSRS&#41;](line-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Verfügbar")||  
+|[Kreisdiagramme &#40;Berichts-Generator und SSRS&#41;](pie-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Verfügbar")||||  
+|[Polardiagramme &#40;Berichts-Generator und SSRS&#41;](polar-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Verfügbar")||||  
+|[Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](range-charts-report-builder-and-ssrs.md)|||![Verfügbar](../media/greencheck.gif "Verfügbar")|![Verfügbar](../media/greencheck.gif "Verfügbar")|  
+|[Punktdiagramme &#40;Berichts-Generator und SSRS&#41;](scatter-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Verfügbar")||![Verfügbar](../media/greencheck.gif "Verfügbar")||  
+|[Formdiagramme &#40;Berichts-Generator und SSRS&#41;](shape-charts-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Verfügbar")||||  
+|[Sparklines](sparklines-and-data-bars-report-builder-and-ssrs.md)|![Verfügbar](../media/greencheck.gif "Verfügbar")|![Verfügbar](../media/greencheck.gif "Verfügbar")|![Verfügbar](../media/greencheck.gif "Verfügbar")|![Verfügbar](../media/greencheck.gif "Verfügbar")|  
+|[Kursdiagramme &#40;Berichts-Generator und SSRS&#41;](stock-charts-report-builder-and-ssrs.md)||![Verfügbar](../media/greencheck.gif "Verfügbar")||![Verfügbar](../media/greencheck.gif "Verfügbar")|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Hinzufügen eines Diagramms zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  

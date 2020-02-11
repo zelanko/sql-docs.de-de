@@ -1,5 +1,5 @@
 ---
-title: Batchmodus | Microsoft-Dokumentation
+title: Batch Modus | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,16 +15,16 @@ ms.assetid: 0cb548e0-fcb4-4c49-98c8-be287911f826
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 188a95f985ac1d578bca8c7e10ac4c4054c935c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925956"
 ---
 # <a name="batch-mode"></a>Batchmodus
-Batchmodus ist gültig, wenn der **LockType** -Eigenschaftensatz auf **AdLockBatchOptimistic** und BatchUpdates wird vom Anbieter unterstützt. Bestimmte Einstellungen für Sperren sind nicht verfügbar, abhängig von der Cursorposition. Z. B. ein pessimistische Sperren ist nicht verfügbar, wenn die **CursorLocation** nastaven NA hodnotu **AdUseClient**. Umgekehrt kann kein Anbieter optimistische unterstützt, wenn die Cursorposition auf dem Server befindet. Verwenden Sie Batch mit einem Keyset oder static-Cursor wird aktualisiert.  
+Der Batch Modus ist wirksam, wenn die **LockType** -Eigenschaft auf **adlockbatchoptimifest** gelegt ist und die Batch Aktualisierung durch den Anbieter unterstützt wird. Bestimmte Sperrentyp Einstellungen sind in Abhängigkeit von der Cursorposition nicht verfügbar. Beispielsweise ist ein pessimistischer Sperrentyp nicht verfügbar, wenn der **Cursor Location** auf **adUseClient**festgelegt ist. Im Gegensatz dazu kann ein Anbieter eine vollständige Batch-Sperre nicht unterstützen, wenn sich die Cursorposition auf dem Server befindet. Sie sollten die Batch Aktualisierung entweder mit einem Keyset-oder STATIC-Cursor verwenden.  
   
- Die **UpdateBatch** Methode dient zum Senden von **Recordset** Änderungen, die im Kopierpuffer an den Server zum Aktualisieren der Datenquelle gespeichert. Im folgenden Abschnitt, öffnen wir eine **Recordset** im Modus "Batch", nehmen Sie Änderungen an den Kopierpuffer aus, und senden unsere Änderungen an die Datenquelle, die über einen Aufruf an **UpdateBatch**.  
+ Die **UpdateBatch** -Methode wird verwendet, um **recordsetänderungen** im Kopier Puffer an den Server zu senden, um die Datenquelle zu aktualisieren. Im folgenden Abschnitt öffnen wir ein **Recordset** im Batch Modus, nehmen Änderungen am Kopier Puffer vor und senden dann die Änderungen an die Datenquelle mithilfe eines Aufrufens von **UpdateBatch**.  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   
@@ -36,6 +36,6 @@ Batchmodus ist gültig, wenn der **LockType** -Eigenschaftensatz auf **AdLockBat
   
 -   [Erkennen und Lösen von Konflikten](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
   
--   [Trennen und erneutes Herstellen einer Verbindung des Recordsets](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [Trennen und erneutes Herstellen einer Verbindung mit dem Recordset](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Aktualisieren von verknüpften Ergebnissen: Eindeutige Tabelle](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Aktualisieren von verknüpften Ergebnissen: eindeutige Tabelle](../../../ado/guide/data/updating-joined-results-unique-table.md)

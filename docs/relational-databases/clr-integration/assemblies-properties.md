@@ -12,27 +12,27 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027973"
 ---
 # <a name="assemblies---properties"></a>Assemblys: Eigenschaften
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Mithilfe dieser Seite können Sie die für die Assembly festgelegten Eigenschaften anzeigen und ändern.  
   
-## <a name="options"></a>Optionen  
- **AssemblyName**  
+## <a name="options"></a>Tastatur  
+ **Assemblyname**  
  Zeigt den Assemblynamen an, der immer mit dem Namen der CLR-Assembly übereinstimmt.  
   
  **Assemblybesitzer**  
  Geben Sie den Besitzernamen oder Schemanamen ein, oder wählen Sie einen aus der Liste aus.  
   
  **Berechtigungssatz**  
- Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sichere**, **externen Zugriff**, und **Unsafe** Zugriff.  
+ Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sicher**, **Externer Zugriff**und **Uneingeschränkt** .  
   
- **Pfad zur assembly**  
+ **Pfad zur Assembly**  
  Geben Sie den Pfad zur Assemblydatei ein.  
   
  **Durchsuchen**  
@@ -48,7 +48,7 @@ ms.locfileid: "68027973"
  **Version**  
  Zeigt die Versionsnummer der Assembly an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)  
   
   

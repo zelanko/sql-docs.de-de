@@ -1,5 +1,5 @@
 ---
-title: Clustered-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für eine gruppierte Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2eb5e19e166a468a9ee30758da79d503f1b9932
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966950"
 ---
 # <a name="clustered-property-example-vb"></a>Clustered-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Beachten Sie, dass Microsoft Jet-Datenbanken nicht gruppierte Indizes, unterstützen und daher in diesem Beispiel zurückgibt **"false"** für die **Clustered** Eigenschaft aller Indizes in der **Northwind** die Datenbank.  
+In diesem Beispiel wird die [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) -Eigenschaft eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md)veranschaulicht. Beachten Sie, dass Microsoft Jet-Datenbanken keine gruppierten Indizes unterstützen, sodass in diesem Beispiel für die **gruppierte** Eigenschaft aller Indizes in der **Northwind** -Datenbank **false** zurückgegeben wird.  
   
 ```  
 ' BeginClusteredVB  
@@ -72,8 +72,8 @@ End Sub
 ' EndClusteredVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Clustered-Eigenschaft (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

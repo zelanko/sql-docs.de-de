@@ -18,19 +18,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aecaea9bef359ad24aebbd20dd5e9547497043b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092446"
 ---
 # <a name="running-upgrade-advisor-user-interface"></a>Ausführen des Upgrade Advisors (Benutzeroberfläche)
-  Sie können den Upgrade Advisor ausführen, um lokale oder Remotekomponenten während der Upgradeplanung zu analysieren. Der Upgrade Advisor erzeugt einen Bericht für jede Komponente und die Instanz, die analysiert wird.  
+  Sie können den Upgrade Advisor ausführen, um lokale oder Remotekomponenten während der Upgradeplanung zu analysieren. Der Upgrade Advisor erzeugt einen Bericht für jede Komponente und Instanz, die analysiert wird.  
   
 > [!IMPORTANT]  
 >  Der Upgrade Advisor analysiert keine Remoteinstanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Um eine Instanz von [!INCLUDE[ssRS](../../includes/ssrs.md)] zu analysieren, muss der Upgrade Advisor auf dem Computer installiert sein, auf dem [!INCLUDE[ssRS](../../includes/ssrs.md)] installiert ist.  
 >   
->  Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services, muss Ihnen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf demselben Computer installiert.  
+>  Um Integration Services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu analysieren, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] installiert und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf dem gleichen Computer installiert sein.  
   
 ## <a name="running-the-upgrade-advisor-analysis-wizard"></a>Ausführen des Analyse-Assistenten des Upgrade Advisors  
  Das Ausführen des Analyse-Assistenten des Upgrade Advisors erfolgt in sechs Schritten:  
@@ -47,12 +47,12 @@ ms.locfileid: "66092446"
   
 6.  Generieren Sie einen Bericht der Upgradeprobleme.  
   
- Weitere Informationen zu den Upgrade Advisor-Analyse-Assistenten, finden Sie unter [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
+ Weitere Informationen zum Analyse-Assistenten des Upgrade Advisors finden Sie unter Gewusst [wie: Ausführen des Analyse-Assistenten für den Upgrade Advisor](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md).  
   
- Spezielle Informationen, die für jeden Schritt erforderlich ist, finden Sie unter [Upgrade Advisor-Benutzeroberflächenreferenz](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
+ Spezifische Informationen, die für die einzelnen Schritte erforderlich sind, finden Sie unter [Referenz zur Benutzeroberfläche des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md).  
   
-## <a name="running-the-upgrade-advisor-report-viewer"></a>Der Berichts-Viewer von Upgrade Advisor ausführen  
- Sie verwenden den Upgrade Advisor-Berichts-Viewer zum Anzeigen von Berichten, die von der Analyse-Assistenten generiert. Wenn der Bericht geladen wird, können Sie die Komponenten des Berichts nach den folgenden Kriterien filtern:  
+## <a name="running-the-upgrade-advisor-report-viewer"></a>Ausführen des Berichts-Viewers des Upgrade Advisors  
+ Mit dem Berichts-Viewer des Upgrade Advisors können Sie Berichte anzeigen, die vom Analyse-Assistenten des Upgrade Advisors generiert wurden. Wenn der Bericht geladen wird, können Sie die Komponenten des Berichts nach den folgenden Kriterien filtern:  
   
 -   Alle Probleme  
   
@@ -68,15 +68,15 @@ ms.locfileid: "66092446"
   
  Schrittweise Anweisungen zur Verwendung des Berichts-Viewers finden Sie in den folgenden Themen:  
   
--   [Vorgehensweise: Zeigen Sie einen der Upgrade Advisor-Bericht](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
+-   [Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)  
   
--   [Vorgehensweise: Filterberichte](../../../2014/sql-server/install/how-to-filter-reports.md)  
+-   [Vorgehensweise: Filtern von Berichten](../../../2014/sql-server/install/how-to-filter-reports.md)  
   
 -   [Vorgehensweise: Exportieren von Berichten](../../../2014/sql-server/install/how-to-export-reports.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Führen Sie den Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
- [Upgrade Advisor Referenz zur Benutzeroberfläche](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorgehensweise: Ausführen des Analyse-Assistenten des Upgrade Advisors](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Referenz zur Benutzeroberfläche des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   

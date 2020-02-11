@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Ereignissitzungsdaten | Microsoft-Dokumentation
+title: Anzeigen von Ereignis Sitzungsdaten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67131792"
 ---
 # <a name="view-event-session-data"></a>Anzeigen von Ereignissitzungsdaten
@@ -44,9 +44,9 @@ ms.locfileid: "67131792"
   
 -   Zeigen Sie für ein event_file-Ziel die Dateizieldaten (XEL-Datei) mithilfe einer der folgenden Methoden an:  
   
-    -   Verwenden Sie eine Datei -> Öffnen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
+    -   Verwenden Sie Datei > in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]öffnen.
     
-    -   Ziehen und Ablegen die Datei in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. 
+    -   Verschieben Sie die Datei per Drag [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]& amp; Drop in. 
     
     -   Doppelklicken Sie auf die XEL-Datei.  
     
@@ -54,16 +54,16 @@ ms.locfileid: "67131792"
     
     -   [fn_xe_file_target_read_file](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).
     
-    -   Verwenden von Powershell-lesen-SQLXevent in [SQLServer.XEvent Modul](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+    -   Verwenden Sie PowerShell Read-sqlxevent im [SqlServer. XEvent-Modul](https://www.powershellgallery.com/packages/SqlServer.XEvent).
     
-    -   Programmgesteuert mithilfe von XEvents nutzen die [XELite NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
+    -   Programm gesteuertes verarbeiten von xevents mithilfe von [xelite nuget](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite).
     
-    -   Sie können mehrere anzeigen. XEL-Datei dazu **Dateien für erweiterte Ereignisse zusammenführen** aus der Datei -> "Menü öffnen".
+    -   Sie können mehr als eine anzeigen. XEL-Datei durch Auswählen von **Dateien für erweiterte Ereignisse zusammenführen** im Menü Datei-> öffnen.
 
 ### <a name="watching-live-data"></a>Beobachten von Livedaten  
  Sie können Livedaten während der Erfassung anzeigen.  
   
--   Erweitern Sie im Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
+-   Erweitern Sie in Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
 
 -   Klicken Sie mit der rechten Maustaste auf den Sitzungsnamen, und klicken Sie dann auf **Livedaten ansehen** , um die Ablaufverfolgungsdaten anzuzeigen.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "67131792"
   
      Ereignisse werden normalerweise in ungefähr 30 Sekunden angezeigt. Um den Latenzzeitraum zu ändern, können Sie den Wert für **Maximale Verteilungslatenzzeit** auf der Seite **Erweitert** des Dialogfelds **Neue Sitzung** ändern.  
      
--    Live-Daten können gestreamt werden, indem die [SqlServer.XEvent-PowerShell-Modul](https://www.powershellgallery.com/packages/SqlServer.XEvent).
+-    Livedaten können vom [PowerShell-Modul SqlServer. XEvent](https://www.powershellgallery.com/packages/SqlServer.XEvent)gestreamt werden.
      
 ### <a name="to-refresh-target-data"></a>So aktualisieren Sie Zieldaten  
  Das Aktualisieren der Zieldaten wird für event_files-Ziele nicht unterstützt:  
@@ -95,7 +95,7 @@ ms.locfileid: "67131792"
   
  Sie können die zusammengeführten Spalten erstellen, ändern oder löschen:  
   
-1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken und dann **Livedaten ansehen**auswählen.)  
+1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.)  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "67131792"
 ### <a name="filter-results"></a>Filtern von Ergebnissen  
  Sie können Ablaufverfolgungsergebnisse anzeigen und dann Filter anwenden, um die Ablaufverfolgungsergebnisse einzugrenzen, die im Ablaufverfolgungsfenster angezeigt werden. Der Anzeigefilter umfasst einen Zeitfilter und einen erweiterten Filter. Sie filtern mithilfe des Zeitfilters die Ablaufverfolgungsergebnisse nach Ereigniszeitstempel und erstellen mithilfe des erweiterten Filters Filterbedingungen mit Ereignisfeldern und -aktionen. Zwischen Zeit- und erweitertem Filter besteht eine Und-Beziehung.  
   
- So erstellen Sie einen Filter  
+ So erstellen Sie einen Filter:  
   
-1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken und dann **Livedaten ansehen**auswählen.)  
+1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.)  
   
 2.  Wählen Sie im Fenster mit den Ablaufverfolgungsergebnissen die Ergebnisse aus, die Sie filtern möchten, und klicken Sie dann auf der Symbolleiste **Erweiterte Ereignisse** auf die Schaltfläche **Filter**.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "67131792"
 ### <a name="sort-results"></a>Sortieren von Ergebnissen  
  So sortieren Sie die Ergebnisse in aufsteigender oder absteigender Reihenfolge  
   
-1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.)  
+1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.)  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf die Überschrift der Spalte, die Sie sortieren möchten, und klicken Sie auf **Aufsteigend sortieren** oder **Absteigend sortieren**.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "67131792"
   
  Sie können Ergebnisse nach einer einzelnen Spalte oder mehreren Spalten gruppieren.  
   
- Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.)  
+ Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.)  
   
  Um Ergebnisse nach einer einzelnen Spalte zu gruppieren, klicken Sie mit der rechten Maustaste auf die Spaltenüberschrift im Fenster für die Ablaufverfolgungsergebnisse und klicken auf **Nach dieser Spalte gruppieren**. Um die Gruppierung rückgängig zu machen, wählen Sie eine der Zeilen aus, und klicken Sie auf **Alle Gruppierungen entfernen**.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "67131792"
   
 -   max  
   
--   Durchschnitt  
+-   average  
   
 -   count  
   
@@ -159,7 +159,7 @@ ms.locfileid: "67131792"
   
  Die Aggregation wird für eine Gruppe ausgeführt, deshalb müssen Sie die Ergebnisse gruppieren, bevor Sie die Aggregation ausführen können. So aggregieren Sie Ergebnisse  
   
-1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.)  
+1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen. (Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.)  
   
 2.  Klicken Sie auf der Symbolleiste **Erweiterte Ereignisse** auf die Schaltfläche **Aggregation** . Das Dialogfeld Aggregation wird mit den für die Aggregation verfügbaren Spalten angezeigt.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "67131792"
   
     -   Tabellenspalten. Verwenden Sie diese Option, um alle sichtbaren Spalten im Ablaufverfolgungsfenster zu durchsuchen.  
   
-    -   Details. Verwenden Sie diese Option zum Durchsuchen von allen Spalten (höhergestuften und nicht höhergestuften) im Ablaufverfolgungsfenster angezeigt werden, die vor dem Öffnen ausgewählt wurden die **in erweiterten Ereignissen suchen** Dialogfeld.  
+    -   Details. Verwenden Sie diese Option, um alle (höher gestuften und nicht höher gestuften) Spalten im Ablauf Verfolgungs Fenster zu durchsuchen, die vor dem Öffnen des Dialog Felds **in erweiterten Ereignissen suchen** ausgewählt wurden.  
   
     -   *Event_column_name*. Verwenden Sie diese Option, um in einer bestimmten Ereignisspalte aus der Dropdownliste zu suchen.  
   
@@ -219,7 +219,7 @@ ms.locfileid: "67131792"
   
 -   XEL-Datei  
   
--   -Tabelle  
+-   table  
   
 -   CSV-Datei  
   
@@ -238,7 +238,7 @@ ms.locfileid: "67131792"
   
  So zeigen Sie das Deadlockdiagramm an  
   
--   Erweitern Sie im Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
+-   Erweitern Sie in Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
   
 -   Klicken Sie mit der rechten Maustaste auf die Sitzung, die das anzuzeigende konfigurierte Deadlockereignis enthält, und wählen Sie dann **Livedaten ansehen**aus.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "67131792"
   
  So zeigen Sie Abfrageplandiagramme an  
   
-1.  Erweitern Sie im Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
+1.  Erweitern Sie in Objekt-Explorer die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Sitzung mit dem Abfrageplandiagramm, das Sie anzeigen möchten (beispielsweise query_post_compilation_showplan), und wählen Sie dann die Option **Livedaten ansehen**aus.  
   

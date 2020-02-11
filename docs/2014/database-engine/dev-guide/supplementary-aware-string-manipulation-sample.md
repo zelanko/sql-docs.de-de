@@ -10,20 +10,22 @@ ms.assetid: 343a1cd6-94e9-4200-9d17-11cef0d73f73
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: dbbcb468a4de093b6664c71e20716ea62e2b1fc3
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: 2df5fa785f715dbf63c7682148c20bbaf971d0c1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637714"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76928096"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Beispiel für Zeichenfolgendarstellung mit ergänzenden Zeichen
-  Dieses Beispiel für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranschaulicht Zeichenfolgenbearbeitungen mit ergänzenden Zeichen. Dieses Beispiel zeigt die Implementierung von fünf Transact-SQL-Zeichenfolgenfunktionen, die dieselben Bearbeitungsfunktionen für Zeichenfolgen bereitstellen wie die integrierten Funktionen, jedoch zusätzliche Funktionen für ergänzende Zeichen bieten, um sowohl Unicode- als auch Sonderzeichenfolgen bearbeiten zu können. Die fünf Funktionen sind "Lens ()", "`lefts(), rights(), subs()`" und "`replace_s()`", die den integrierten Funktionen `LEN(), LEFT(), RIGHT(), SUBSTRING()` und `REPLACE()` Zeichen folgen Funktionen entsprechen.  
+  Dieses Beispiel für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] veranschaulicht Zeichenfolgenbearbeitungen mit ergänzenden Zeichen. Dieses Beispiel zeigt die Implementierung von fünf Transact-SQL-Zeichenfolgenfunktionen, die dieselben Bearbeitungsfunktionen für Zeichenfolgen bereitstellen wie die integrierten Funktionen, jedoch zusätzliche Funktionen für ergänzende Zeichen bieten, um sowohl Unicode- als auch Sonderzeichenfolgen bearbeiten zu können. Die fünf Funktionen sind "Lens () `lefts(), rights(), subs()` " `replace_s()` und die den integrierten Funktionen `LEN(), LEFT(), RIGHT(), SUBSTRING()` und `REPLACE()` Zeichen folgen Funktionen entsprechen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -78,7 +80,7 @@ ms.locfileid: "73637714"
   
     -   `sqlcmd -E -I -i install.sql -v root = "C:\MySample\"`  
   
-7.  Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
+7.  Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
   
 8.  Führen Sie das Testskript mit dem folgenden Befehl aus:  
   
@@ -151,7 +153,7 @@ if (length < 0)
             if ((start + length) <= 1)  
                 return (String.Empty);  
   
-// The 2 if statements below guarentee that the result will match the substring function in   
+// The 2 if statements below guarantee that the result will match the substring function in   
 // Transact-SQL which will initialize start to 1 by subtracting from the length.  
             if (start <= 0 && length > 0)  
                 length--;  
@@ -352,7 +354,7 @@ Public NotInheritable Class SurrogateStringFunction
             Return String.Empty  
         End If  
   
-        ' The 2 if statements below guarentee that the result will match the substring function in   
+        ' The 2 if statements below guarantee that the result will match the substring function in   
         ' Transact-SQL which will initialize start to 1 by subtracting from the length.  
         If start <= 0 AndAlso length > 0 Then  
             length -= 1  
@@ -685,7 +687,7 @@ USE [AdventureWorks]
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwendungs Szenarien und Beispiele für die CLR-&#41; Integration von Common Language Runtime &#40;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

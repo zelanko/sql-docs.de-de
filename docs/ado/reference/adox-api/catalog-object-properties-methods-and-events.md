@@ -1,5 +1,5 @@
 ---
-title: Katalog-Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Katalog Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,23 +13,23 @@ ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32321406d6de6aad4674bdea6ea9a5c086369259
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967046"
 ---
 # <a name="catalog-object-properties-methods-and-events"></a>Catalog-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [ActiveConnection-Eigenschaft](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+ [ActiveConnection (Eigenschaft)](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
   
  [Groups-Sammlung](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
- [Procedures-Auflistung](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
- [Tables-Auflistung](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tabellen Sammlung](../../../ado/reference/adox-api/tables-collection-adox.md)  
   
- [Users-Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Benutzer Sammlung](../../../ado/reference/adox-api/users-collection-adox.md)  
   
  [Views-Auflistung](../../../ado/reference/adox-api/views-collection-adox.md)  
   
@@ -40,8 +40,8 @@ ms.locfileid: "67967046"
   
  [SetObjectOwner-Methode](../../../ado/reference/adox-api/setobjectowner-method.md)  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)

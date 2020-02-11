@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Legende", Allgemein (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Dialog Feld "Legenden Eigenschaften", "Allgemein" (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,39 +14,39 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108557"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Legendeneigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Mithilfe des Dialogfelds **Legende** können Sie die Darstellung und das Layout der Legende im Diagramm definieren. Weitere Informationen finden Sie unter [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/chart-legend-formatting-report-builder.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen Namen für die Legende ein.  
   
- **Layout**  
+ **Layout **  
  Wählen Sie eine Option aus, um das Layout der Legende anzugeben. Das Standardlegendenlayout ist "Automatische Tabelle".  
   
--   **Hohe Tabelle:** Zeigt den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende vertikal zu erweitern.  
+-   **Hohe Tabelle** Zeigen Sie den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende vertikal zu erweitern.  
   
--   **Spalte:** Zeigt den Inhalt der Legende in einer einzelnen Spalte an.  
+-   **Spalte** Zeigen Sie den Inhalt der Legende in einer einzelnen Spalte an.  
   
--   **Zeile:** Zeigt den Inhalt der Legende in einer einzelnen Zeile an.  
+-   **Zeile** Zeigen Sie den Inhalt der Legende in einer einzelnen Zeile an.  
   
--   **Breite Tabelle:** Zeigt den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende horizontal zu erweitern.  
+-   **Breite Tabelle** Zeigen Sie den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende horizontal zu erweitern.  
   
--   **Automatische Tabelle:** Zeigt den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende je nach verfügbarem Platz im Diagramm horizontal oder vertikal zu erweitern.  
+-   **Automatische Tabelle** Zeigen Sie den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende je nach verfügbarem Platz im Diagramm horizontal oder vertikal zu erweitern.  
   
- **An Diagrammfläche Andocken**  
+ **An Diagrammfläche andocken**  
  Aktivieren Sie diese Option, um die Legende einer Diagrammfläche zuzuordnen.  
   
  **Legende außerhalb von Diagrammfläche anzeigen**  
  Wählen Sie diese Option aus, um die Legende außerhalb der Diagrammfläche anzuzeigen. Diese Option ist nur anwendbar, wenn die Legende an einer Diagrammfläche angedockt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   

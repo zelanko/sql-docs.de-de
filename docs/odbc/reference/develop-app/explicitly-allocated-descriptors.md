@@ -1,5 +1,5 @@
 ---
-title: Explizit reserviert Deskriptoren | Microsoft-Dokumentation
+title: Explizit zugewiesene Deskriptoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: f590251d-56a6-4d58-a405-9e85e68fbc47
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5808265a9ab70b9947cea64fef790497c7229da8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069930"
 ---
 # <a name="explicitly-allocated-descriptors"></a>Explizit zugewiesene Deskriptoren
-Eine Anwendung kann explizit einen Anwendungsdienst-Deskriptor für eine Verbindung zu einem beliebigen Zeitpunkt zuordnen, die sie mit der Datenbank verbunden ist. Durch diese Deskriptorhandles angeben, wie ein Attribut einer Anweisung mit **SQLSetStmtAttr**, die Anwendung leitet den Treiber mit dieser Deskriptor anstelle der entsprechenden implizit zugeordnete Anwendung Deskriptoren. Die Anwendung kann nicht auf alternative Implementierung Deskriptoren angeben.  
+Eine Anwendung kann einen Anwendungs Deskriptor für eine Verbindung jederzeit explizit zuordnen, wenn Sie mit der Datenbank verbunden ist. Durch die Angabe dieses Deskriptorhandles als Attribut eines Anweisungs Handles mithilfe von **SQLSetStmtAttr**weist die Anwendung den Treiber an, diesen Deskriptor anstelle der entsprechenden implizit zugeordneten Anwendungs Deskriptoren zu verwenden. Die Anwendung kann keine alternativen Implementierungs Deskriptoren angeben.  
   
- Eine Anwendung kann mehr als eine Anweisung einen explizit zugewiesenen Deskriptor zuordnen. Nur, wenn eine Anwendung tatsächlich mit der Datenbank verbunden ist kann ein Deskriptor einen explizit zugewiesenen-Deskriptor sein. Die Anwendung kann solche einen Deskriptor explizit oder implizit freigeben, indem Sie seine Verbindung freigeben sein zu müssen.
+ Eine Anwendung kann einen explizit zugeordneten Deskriptor mit mehr als einer Anweisung verknüpfen. Nur wenn eine Anwendung tatsächlich mit der Datenbank verbunden ist, kann es sich bei einem Deskriptor um einen explizit zugewiesenen Deskriptor handeln. Die Anwendung kann einen solchen Deskriptor explizit oder implizit durch Freigeben der Verbindung freigeben.

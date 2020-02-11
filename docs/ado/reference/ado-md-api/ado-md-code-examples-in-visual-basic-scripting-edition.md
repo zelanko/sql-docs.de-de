@@ -1,5 +1,5 @@
 ---
-title: ADO MD-Codebeispiele in Visual Basic Scripting Edition | Microsoft-Dokumentation
+title: ADO MD Code Beispiele in Visual Basic, Scripting Edition | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,20 +15,20 @@ ms.assetid: f2fb2d57-6884-42ef-a18c-2673ba9b85c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1248cd86e657b2e038af908ec1023ab8cfa58bd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947412"
 ---
 # <a name="ado-md-code-examples-in-visual-basic-scripting-edition"></a>ADO MD-Codebeispiele in Visual Basic Scripting Edition
-Die folgenden Beispiele erfordern Microsoft Active Server Pages (ASP) für Microsoft Internet Information Server 4.0.  
+Die folgenden Beispiele erfordern Microsoft Active Server Pages (ASP) für Microsoft Internet Information Server 4,0.  
   
 > [!NOTE]
->  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende, in Ihrem Code-Editor ein. Im Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn partielle Beispiele verwendet werden, oder wenn absatzformatierung verloren geht.  
+>  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende in Ihren Code-Editor ein. Das Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt, wenn Teil Beispiele verwendet werden oder wenn die Absatz Formatierung verloren geht.  
   
--   [Achse-Beispiel](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
+-   [Achsen Beispiel](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
   
--   [Member-Beispiel](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
+-   [Beispiel für Member](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
   
 -   [CubeDef-Beispiel](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)

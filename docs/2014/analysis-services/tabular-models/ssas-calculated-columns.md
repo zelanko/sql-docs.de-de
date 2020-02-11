@@ -1,5 +1,5 @@
 ---
-title: Berechnete Spalten (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Berechnete Spalten (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284893"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Berechnete Spalten (SSAS – tabellarisch)
-  Mithilfe berechneter Spalten in tabellarischen Modellen können Sie dem Modell neue Daten hinzufügen. Anstatt einzufügen, oder Importieren von Werten in der Spalte, erstellen Sie eine DAX-Formel, die zeilenebenenwerte der Spalte definiert. Die berechnete Spalte kann wie jede andere Spalte in einem Bericht, einer PivotTable oder einem PivotChart verwendet werden.  
+  Mithilfe berechneter Spalten in tabellarischen Modellen können Sie dem Modell neue Daten hinzufügen. Anstatt Werte in die Spalte einfügen oder importieren zu müssen, erstellen Sie eine DAX-Formel, die die Zeilen Ebenen Werte der Spalte definiert. Die berechnete Spalte kann wie jede andere Spalte in einem Bericht, einer PivotTable oder einem PivotChart verwendet werden.  
   
 > [!NOTE]  
 >  Berechnete Spalten werden für tabellarische Modelle im DirectQuery-Modus nicht unterstützt. Weitere Informationen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](directquery-mode-ssas-tabular.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "67284893"
   
  Mit dieser Formel wird der Monat aus der Spalte "StartDate" extrahiert. Anschließend wird für jede Zeile in der Tabelle der Wert für das Monatsende berechnet. Der zweite Parameter gibt die Anzahl der Monate vor oder nach dem Monat in "StartDate" an. In diesem Fall entspricht 0 dem gleichen Monat. Wenn der Wert in der Spalte "StartDate" z. B. "01.06.2001" beträgt, beträgt der Wert in der berechneten Spalte "30.06.2001".  
   
-##  <a name="bkmk_naming"></a> Benennen einer berechneten Spalte  
+##  <a name="bkmk_naming"></a>Benennen einer berechneten Spalte  
  Neue berechnete Spalten werden standardmäßig rechts neben anderen Spalten in einer Tabelle hinzugefügt, und die Spalten werden standardmäßig und automatisch **CalculatedColumn1**, **CalculatedColumn2**usw. genannt. Sie können auch mit der rechten Maustaste auf eine Spalte und dann auf Spalte einfügen klicken, um zwischen zwei vorhandenen Spalten eine neue Spalte zu erstellen. Sie können Spalten innerhalb der gleichen Tabelle durch Klicken und Ziehen neu anordnen und Spalten umbenennen, nachdem sie erstellt wurden. Folgende Einschränkungen beim Ändern von berechneten Spalten sollten jedoch beachtet werden:  
   
 -   Jeder Spaltenname muss innerhalb einer Tabelle eindeutig sein.  
@@ -62,7 +62,7 @@ ms.locfileid: "67284893"
   
 -   Einige Zeichen können innerhalb von Spaltennamen nicht verwendet werden. Weitere Informationen finden Sie unter „Benennungsanforderungen“ in der [DAX-Syntaxspezifikation für PowerPivot](/dax/dax-syntax-reference).  
   
-##  <a name="bkmk_perf"></a> Leistung berechneter Spalten  
+##  <a name="bkmk_perf"></a>Leistung berechneter Spalten  
  Die Formel für eine berechnete Spalte kann ressourcenintensiver als die für ein Measure verwendete Formel sein. Ein Grund hierfür ist, dass das Ergebnis für eine berechnete Spalte immer für jede Zeile in einer Tabelle berechnet wird, wohingegen ein Measure nur für die vom Filter definierten Zellen berechnet wird, die in einem Bericht, in der PivotTable oder im PivotChart verwendet werden. Zum Beispiel enthält eine Tabelle mit einer Million Zeilen immer eine berechnete Spalte mit einer Million Ergebnissen, was sich entsprechend auf die Leistung auswirkt. Eine PivotTable filtert Daten jedoch im Allgemeinen, indem eine Zeilen- und Spaltenüberschrift angewendet wird. Daher wird ein Measure nur für die Teilmenge der Daten in jeder Zelle der PivotTable berechnet.  
   
  Eine Formel weist Abhängigkeiten für die Objekte auf, auf die in der Formel verwiesen wird, z. B. andere Spalten oder Ausdrücke, die Werte auswerten. Eine berechnete Spalte, die auf einer anderen Spalte basiert, oder eine Berechnung, die einen Ausdruck mit einem Spaltenverweis enthält, kann beispielsweise erst ausgewertet werden, wenn die andere Spalte ausgewertet wurde. Standardmäßig ist die automatische Aktualisierung in Arbeitsmappen aktiviert, daher können diese Abhängigkeiten die Leistung beeinträchtigen, während Werte und Formeln aktualisiert werden.  
@@ -79,13 +79,13 @@ ms.locfileid: "67284893"
   
 ##  <a name="bkmk_rel_tasks"></a> Verwandte Aufgaben  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Erstellen einer berechneten Spalte &#40;SSAS – tabellarisch&#41;](ssas-calculated-columns-create-a-calculated-column.md)|In den Tasks in diesem Thema wird beschrieben, wie einer Tabelle eine neue berechnete Spalte hinzugefügt wird.|  
+|[Erstellen einer berechneten Spalte &#40;tabellarischen SSAS-&#41;](ssas-calculated-columns-create-a-calculated-column.md)|In den Tasks in diesem Thema wird beschrieben, wie einer Tabelle eine neue berechnete Spalte hinzugefügt wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Tabellen und Spalten &#40;SSAS – tabellarisch&#41;](tables-and-columns-ssas-tabular.md)   
- [Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md)   
- [Berechnungen &#40;SSAS – tabellarisch&#41;](calculations-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Tabellen und Spalten &#40;tabellarischen SSAS-&#41;](tables-and-columns-ssas-tabular.md)   
+ [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)   
+ [Berechnungen &#40;tabellarischen SSAS-&#41;](calculations-ssas-tabular.md)  
   
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e83f539e1ffad77a337fc3e0142379da2ff0f703
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104095"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Konfigurieren eines Berichtsservers für die Remoteverwaltung
@@ -34,7 +34,7 @@ ms.locfileid: "66104095"
   
  `"The RPC server is unavailable. (Exception from HRESULT: 0x800706BA)".`  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Zum Ändern der Firewalleinstellungen müssen Sie lokal angemeldet und Mitglied der lokalen Administratorengruppe sein. Die Windows-Firewalleinstellungen eines Remotecomputers können nicht über eine Remoteverbindung geändert werden.  
   
  Wenn Sie die Remoteverwaltung für einen Benutzer aktivieren möchten, der kein Administrator ist, müssen Sie dem Konto DCOM-Remoteaktivierungsberechtigungen gewähren (Distributed Component Object Model). Anweisungen zum Konfigurieren des Servers für den Zugriff durch Nichtadministratoren sind in diesem Thema enthalten.  
@@ -43,7 +43,7 @@ ms.locfileid: "66104095"
   
  Weitere Informationen finden Sie unter [Connecting Through Windows Firewall](https://go.microsoft.com/fwlink/?LinkId=63615) in der Dokumentation zur Plattform MSDN.  
   
-## <a name="tasks"></a>Richtlinienübersicht  
+## <a name="tasks"></a>Aufgaben  
  Anhand folgender Tasks kann die Konfiguration des Remoteberichtsservers aktiviert werden:  
   
 -   Ports in der Windows-Firewall aktivieren, um Anforderungen in Ports zuzulassen, die vom Berichtsserver und von der Instanz der SQL Server-Datenbank-Engine verwendet werden.  
@@ -60,15 +60,15 @@ ms.locfileid: "66104095"
   
 ### <a name="to-open-ports-in-windows-firewall"></a>So öffnen Sie Ports in der Windows-Firewall  
   
-1.  [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
+1.  [Konfigurieren Sie eine Windows-Firewall für den Datenbank-Engine Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-2.  [Konfigurieren einer Firewall für den Berichtsserverzugriff](configure-a-firewall-for-report-server-access.md).  
+2.  [Konfigurieren einer Firewall für den Zugriff auf den Berichts Server](configure-a-firewall-for-report-server-access.md).  
   
 ### <a name="to-configure-remote-connections-to-the-report-server-database"></a>Konfigurieren von Remoteverbindungen für die Berichtsserver-Datenbank  
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], dann auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
   
-2.  Erweitern Sie im linken Bereich den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann für die Instanz von auf **Protokolle** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+2.  Erweitern Sie im linken Bereich den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann für die Instanz von auf **Protokolle**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3.  Aktivieren Sie im Detailbereich die Protokolle TCP/IP und Named Pipes, und starten Sie dann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst neu.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66104095"
   
 1.  Melden Sie sich als lokaler Administrator an dem Computer an, für den Sie die Remoteverwaltung aktivieren möchten.  
   
-2.  Wenn der Berichtsserver unter Windows Vista ausgeführt wird, mit der rechten Maustaste **Eingabeaufforderung** , und wählen Sie **als Administrator ausführen**. Bei anderen Betriebssystemen öffnen Sie ein Fenster zur Eingabeaufforderung.  
+2.  Wenn der Berichts Server unter Windows Vista ausgeführt wird, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung** , und wählen Sie **als Administrator ausführen**aus. Bei anderen Betriebssystemen öffnen Sie ein Fenster zur Eingabeaufforderung.  
   
 3.  Führen Sie den folgenden Befehl aus:  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66104095"
   
 1.  Zeigen Sie im Menü Start auf **Verwaltung**, und klicken Sie auf **Komponentendienste**.  
   
-     Windows Vista klicken Sie im Startmenü auf **Programme**, klicken Sie auf **ausführen**, und geben Sie dann `mmc comexp.msc`.  
+     Für Windows Vista klicken Sie im Startmenü auf **Alle Programme**, klicken Sie auf **Ausführen**, und geben `mmc comexp.msc`Sie dann ein.  
   
 2.  Öffnen Sie den Ordner Komponentendienste.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "66104095"
   
 13. Aktivieren Sie in der Spalte **Zulassen** die Optionen **Konto aktivieren**, **Remoteaktivierung**und **Sicherheit lesen**, und klicken Sie auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

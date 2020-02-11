@@ -24,10 +24,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c9e709a607d02273c0e2cb0208faf4e9799acf6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75252476"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Einführung in Updategrams (SQLXML 4.0)
@@ -164,7 +164,7 @@ ms.locfileid: "75252476"
   
  Verwenden Sie zum Codieren von Zeichen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die gültige Bezeichner sind, aber keine gültigen XML-Bezeichner sind, "__xHHHH\_\_" als Codierungs Wert, wobei HHHH für den vierstelligen hexadezimalen UCS-2-Code für das Zeichen in der signifikantesten bidirektionalen Reihenfolge steht. Mit diesem Codierungsschema wird ein Leerzeichen durch x0020 (der vierstellige Hexadezimal Code für ein Leerzeichen) ersetzt; Daher wird der Tabellenname [Order Details] in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in XML\_ _x005B_Order_x0020_Details_x005D.  
   
- Ebenso müssen Sie möglicherweise dreiteilige Elementnamen angeben, z. b. \<[Database]. [Besitzer]. [Tabelle] #a0. Da die Klammer Zeichen ([und]) in XML nicht gültig \<sind, müssen Sie diese als _x005B_database_x005D\_. _x005B_owner_x005D\_. _x005B_table_x005D\_> angeben, wobei _x005B\_ die Codierung für die linke eckige Klammer ([) und _x005D\_ die Codierung für die rechte eckige Klammer (]) ist.  
+ Ebenso müssen Sie möglicherweise dreiteilige Elementnamen angeben, z. b. \<[Database]. [Besitzer]. [Tabelle] >. Da die Klammer Zeichen ([und]) in XML nicht gültig \<sind, müssen Sie diese als _x005B_database_x005D\_. _x005B_owner_x005D\_. _x005B_table_x005D\_> angeben, wobei _x005B\_ die Codierung für die linke eckige Klammer ([) und _x005D\_ die Codierung für die rechte eckige Klammer (]) ist.  
   
 ## <a name="executing-updategrams"></a>Ausführen von Updategrams  
  Da ein Updategram eine Vorlage ist, gelten alle Verarbeitungsmechanismen einer Vorlage auch für ein Updategram. Zum Ausführen eines Updategrams in SQLXML 4.0 können Sie eine der beiden folgenden Möglichkeiten verwenden:  

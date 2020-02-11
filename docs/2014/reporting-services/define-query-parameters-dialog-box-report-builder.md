@@ -1,5 +1,5 @@
 ---
-title: Definieren von Parametern (Dialogfeld) (Berichts-Generator) | Microsoft-Dokumentation
+title: Dialog Feld "Abfrage Parameter definieren" (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a66d262efe80c027daf94247482e3bb2826e92a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109361"
 ---
 # <a name="define-query-parameters-dialog-box-report-builder"></a>Abfrageparameter definieren (Dialogfeld) (Berichts-Generator)
   Im Dialogfeld **Abfrageparameter definieren** können Sie Parameterwerte angeben, wenn Sie in einem Abfrage-Designer zur Entwurfszeit eine Abfrage ausführen, um Beispieldaten anzuzeigen. Mit Abfrageparameter werden Daten der Datenquelle gefiltert und die Datenmenge, die ein Bericht verarbeitet, beschränkt. Diese Werte werden nicht in der Berichtsdefinition gespeichert.  
   
-## <a name="options"></a>Optionen  
- **Parametername**  
+## <a name="options"></a>Tastatur  
+ **Parameter Name**  
  Geben Sie den Namen des Abfrageparameters ein, den Sie verwenden möchten.  
   
- **Parameterwert**  
+ **Parameter Wert**  
  Geben Sie den Wert ein, den Sie für den Abfrageparameter verwenden möchten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../../2014/reporting-services/query-designers-report-builder.md)  
   
   
