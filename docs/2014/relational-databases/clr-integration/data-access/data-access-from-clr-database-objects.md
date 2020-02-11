@@ -24,14 +24,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4561c7b8979a919ea144bab6d9b42f722b089e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874080"
 ---
 # <a name="data-access-from-clr-database-objects"></a>Data Access from CLR Database Objects
-  Eine Routine für common Language Runtime (CLR) kann einfach Zugriff auf Daten in der Instanz von [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] in der er, sowie Daten in Remoteinstanzen ausgeführt wird. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Zugriff auf Daten aus einem CLR-Datenbankobjekt mithilfe der .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Daten von verwalteten Clientanwendungen und Anwendungen der mittleren Ebene. Daher können Sie Ihre ADO.NET- und `SqlClient`-Kenntnisse in Clientanwendungen und Anwendungen der mittleren Ebene nutzen.  
+  Eine Common Language Runtime-Routine (CLR) kann problemlos auf Daten zugreifen, die in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] der Instanz von gespeichert sind, in der Sie ausgeführt wird, sowie auf Daten, die in Remote Instanzen gespeichert sind. Auf welche Daten die Routine zugreifen kann, wird durch den Benutzerkontext bestimmt, in dem der Code ausgeführt wird. Greifen Sie in einem CLR-Datenbankobjekt auf Daten zu, indem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Sie die .NET Framework Datenanbieter für Daten von verwalteten Clients und Anwendungen der mittleren Ebene verwenden. Daher können Sie Ihre ADO.NET- und `SqlClient`-Kenntnisse in Clientanwendungen und Anwendungen der mittleren Ebene nutzen.  
   
 > [!NOTE]  
 >  Benutzerdefinierten Typmethoden und benutzerdefinierten Funktionen wird nicht ermöglicht, standardmäßig auf Daten zuzugreifen. Sie müssen die `DataAccess`-Eigenschaft von `SqlMethodAttribute` oder `SqlFunctionAttribute` auf `DataAccessKind.Read` festlegen, um schreibgeschützten Datenzugriff von benutzerdefinierten Typmethoden (User Defined Type, UDT) oder benutzerdefinierten Funktionen zu aktivieren. Datenänderungsvorgänge von UDTs oder benutzerdefinierten Funktionen ausgehend sind nicht zulässig. Ein solcher Versuch löst zur Ausführungszeit eine Ausnahme aus.  
@@ -49,7 +49,7 @@ ms.locfileid: "62874080"
  [Von SQL Server verwendete prozessinterne spezifische Erweiterungen für ADO.NET](../../clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net.md)  
  Erläutert die prozessinternen spezifischen `SqlPipe`, `SqlContext`, `SqlTriggerContext` und `SqlDataRecord`-Objekte.  
   
- [CLR-Integration und -Transaktionen](../../native-client-ole-db-transactions/transactions.md)  
+ [CLR-Integration und Transaktionen](../../native-client-ole-db-transactions/transactions.md)  
  Beschreibt wie das neue vom System.Transactions-Namespace bereitgestellte Transaktionsframework in ADO.NET und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-CLRIntegration einbezogen wird.  
   
  [XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten](../../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md)  

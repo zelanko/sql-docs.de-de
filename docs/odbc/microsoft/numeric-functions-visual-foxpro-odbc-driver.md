@@ -16,42 +16,42 @@ ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044993"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Numerische Funktionen (Visual FoxPro-ODBC-Treiber)
-Die folgende Tabelle beschreibt die numerische ODBC-Funktionen von der Visual FoxPro-ODBC-Treiber unterstützt werden; Wenn die Visual FoxPro-Grammatik für die gleiche Funktion aus der ODBC-Syntax unterscheidet, wird der Visual FoxPro-Äquivalent aufgeführt.  
+In der folgenden Tabelle werden die vom Visual FoxPro-ODBC-Treiber unterstützten numerischen ODBC-Funktionen beschrieben. Wenn die Visual FoxPro-Grammatik für dieselbe Funktion von der ODBC-Syntax abweicht, wird die Entsprechung von Visual FoxPro aufgeführt.  
   
 |ODBC-Grammatik|Visual FoxPro-Grammatik|  
 |------------------|---------------------------|  
-|ABS *(Numeric_exp)*||  
-|ACOS *(Float_exp)*||  
-|ASIN *(Float_exp)*||  
-|ATAN *(Float_exp)*||  
-|Atan2 *(float_exp1, float_exp2)*|ATN2 (*float_exp1, float_exp2*)|  
-|CEILING- *(Numeric_exp)*||  
-|COS *(Float_exp)*||  
-|COT *(Float_exp)*||  
-|Grad *(Numeric_exp)*|RTOD *(Numeric_exp)*|  
-|"Exp" *(Float_exp)*||  
-|FLOOR *(Numeric_exp)*||  
-|LOG *(Float_exp)*||  
-|Log10 *(Float_exp)*||  
-|MOD *(integer_exp1, integer_exp2)*||  
-|PI *( )*||  
-|BOGENMAß *(Numeric_exp)*|DTOR *(numeric_exp)*|  
-|RAND *([Integer_exp])*||  
-|ROUND *(Numeric_exp, Integer_exp)*||  
-|Anmeldung *(Numeric_exp)*||  
-|SIN *(Float_exp)*||  
-|"SQRT" *(Float_exp)*||  
-|TAN *(Float_exp)*||  
+|ABS *(numeric_exp)*||  
+|ACOS *(float_exp)*||  
+|ASIN *(float_exp)*||  
+|Atan *(float_exp)*||  
+|Atan2 *(float_exp1 float_exp2)*|ATN2 (*float_exp1 float_exp2*)|  
+|Ceiling *(numeric_exp)*||  
+|COS *(float_exp)*||  
+|Cot *(float_exp)*||  
+|Grad *(numeric_exp)*|Rtod *(numeric_exp)*|  
+|Exp *(float_exp)*||  
+|Floor *(numeric_exp)*||  
+|Protokoll *(float_exp)*||  
+|LOG10 *(float_exp)*||  
+|MOD *(integer_exp1 integer_exp2)*||  
+|PI *()*||  
+|Radiane *(numeric_exp)*|Dtor *(numeric_exp)*|  
+|Rand *([integer_exp])*||  
+|Round *(numeric_exp, integer_exp)*||  
+|Sign *(numeric_exp)*||  
+|Sin *(float_exp)*||  
+|Sqrt *(float_exp)*||  
+|Tan *(float_exp)*||  
   
- Die folgenden Funktionen werden nicht unterstützt:  
+ Die folgenden numerischen Funktionen werden nicht unterstützt:  
   
- POWER *(Numeric_exp, Integer_exp)*  
+ Strom *(numeric_exp, integer_exp)*  
   
- ABSCHNEIDEN *(Numeric_exp, Integer_exp)*
+ Abschneiden *(numeric_exp integer_exp)*

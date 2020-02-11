@@ -20,14 +20,14 @@ ms.assetid: 4a44f9f6-0265-4c00-8def-d85b6af923b1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bbbc299f13c0d876807476136cede76894bbb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67916696"
 ---
 # <a name="stream-property"></a>Stream-Eigenschaft
-Ruft ab oder legt einen OLE DB **Stream** Objekt aus, bzw. auf eine **ADOStreamConstruction** Objekt.  
+Ruft ein OLE DB **Stream** -Objekt von/für ein **adostreamconstruction** -Objekt ab oder legt es fest.  
   
  Lese-/Schreibzugriff.  
   
@@ -40,13 +40,13 @@ HRESULT put_Stream([in] IUnknown* pStream);
   
 ## <a name="parameters"></a>Parameter  
  *ppStream*  
- Zeiger auf eine OLE DB **Stream** Objekt.  
+ Zeiger auf ein OLE DB **Stream** -Objekt.  
   
  *pStream*  
- OLE DB **Stream** Objekt.  
+ Ein OLE DB **Stream** -Objekt.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Diese Eigenschaftsmethode gibt die standard-HRESULT-Werte zurück. Dies schließt S_OK zurück, und E_FAIL.  
+ Diese Eigenschaften Methode gibt die HRESULT-Standardwerte zurück. Dies schließt S_OK und E_FAIL ein.  
   
 ## <a name="applies-to"></a>Gilt für  
  [ADOStreamConstruction-Schnittstelle](../../../ado/reference/ado-api/adostreamconstruction-interface.md)

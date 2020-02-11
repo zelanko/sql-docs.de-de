@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3b43bbae1dfec9b7d97677b033c50d21635e6537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754829"
 ---
 # <a name="database-mirroring-history"></a>Datenbankspiegelungsverlauf
@@ -26,7 +26,7 @@ ms.locfileid: "62754829"
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Serverinstanz**  
  Der Name der Serverinstanz, von der der Verlauf gemeldet wird.  
   
@@ -62,14 +62,14 @@ ms.locfileid: "62754829"
 > [!NOTE]  
 >  Die Verlaufsliste in diesem Dialogfeld wird nicht automatisch aktualisiert. Klicken Sie entweder auf **Aktualisieren** , oder wählen Sie eine andere Filteroption aus, um die Liste zu aktualisieren. Nur Mitglieder der festen Serverrolle **sysadmin** können den Spiegelungsverlauf aktualisieren.  
   
- **Verlauf**  
+ **History**  
  Zeigt die Verlaufsliste an. Wenn Sie auf einen Spaltenheader klicken, wird das Raster nach der entsprechenden Spalte sortiert. Die Liste enthält folgende Spalten:  
   
-|Spaltenname|Beschreibung|  
+|Spaltenname|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**Aufgezeichnete Zeit**|Timestamp der Verlaufszeile.|  
 |**Rolle**|Die aktuelle Spiegelungsrolle der Serverinstanz für diese Datenbank: Prinzipal oder Spiegel.|  
-|**Spiegelungsstatus**|Status der Datenbank:<br /><br /> Getrennt<br /><br /> Ausstehendes Failover<br /><br /> Angehalten<br /><br /> Synchronisiert<br /><br /> Wird synchronisiert<br /><br /> Unknown|  
+|**Spiegelungsstatus**|Status der Datenbank:<br /><br /> Getrennt<br /><br /> Ausstehendes Failover<br /><br /> Ausgesetzt<br /><br /> Synchronisiert<br /><br /> Wird synchronisiert<br /><br /> Unknown|  
 |**Zeugenverbindung**|Status der Zeugenverbindung in der Spiegelungssitzung der Datenbank: Verbunden oder Getrennt. Wenn kein Zeuge vorhanden ist, ist der Wert NULL.|  
 |**Nicht gesendetes Protokoll**|Größe, in Kilobyte (KB), des nicht gesendeten Protokolls in der Sendewarteschlange auf der Prinzipalserverinstanz.|  
 |**Sendezeit**|Die ungefähre Dauer der Zeit, die die Prinzipalserverinstanz benötigt, um das derzeit in der Sendewarteschlange befindliche Protokoll an die Spiegelserverinstanz zu senden (die *Senderate*). Da die Rate der eingehenden Transaktionen erheblich schwanken kann, handelt es sich bei der Protokollsendezeit um einen Schätzwert. Die Senderate kann jedoch nützlich sein, um die für ein manuelles Failover erforderliche Zeit grob zu schätzen.|  
@@ -81,7 +81,7 @@ ms.locfileid: "62754829"
 |**Wiederherstellungsrate**|Rate, in KB pro Sekunde, mit der Transaktionen in der Spiegeldatenbank wiederhergestellt werden.|  
 |**Spiegelungscommitaufwand**|Durchschnittliche Verzögerung pro Transaktion in Millisekunden (nur im synchronen Modi). Hierbei handelt es sich um die Verzögerung, die entsteht, während die Prinzipalserverinstanz darauf wartet, dass die Spiegelserverinstanz den Transaktionsprotokolldatensatz in die Wiederholungswarteschlange schreibt.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  

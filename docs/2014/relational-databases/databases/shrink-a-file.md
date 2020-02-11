@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f567c92632e99bef38fc1a6eb7a0179929f467c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871212"
 ---
 # <a name="shrink-a-file"></a>Verkleinern einer Datei
@@ -62,7 +62,7 @@ ms.locfileid: "62871212"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-shrink-a-data-or-log-file"></a>So verkleinern Sie eine Daten- oder Protokolldatei  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62871212"
      **Dateiname**  
      Wählen Sie eine Datei aus der Liste der verfügbaren Dateien aus, die der ausgewählten Dateigruppe und dem Dateityp entspricht.  
   
-     **Speicherort**  
+     **Location**  
      Zeigt den vollständigen Pfad zur aktuell ausgewählten Datei an. Dieser Pfad kann nicht bearbeitet, aber in die Zwischenablage kopiert werden.  
   
      **Aktuell zugeordneter Speicherplatz**  
@@ -135,7 +135,7 @@ ms.locfileid: "62871212"
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkfile1)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql)   
  [Verkleinern einer Datenbank](shrink-a-database.md)   
  [Löschen von Daten- oder Protokolldateien aus einer Datenbank](delete-data-or-log-files-from-a-database.md)   

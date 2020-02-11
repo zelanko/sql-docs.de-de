@@ -1,5 +1,5 @@
 ---
-title: Ansichten-Auflistung – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Views-Auflistungs Eigenschaften,-Methoden und-Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b76eb52f9f90e97c47d96e8bb072c2bee33061e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964753"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Views-Collection – Eigenschaften, Methoden und Ereignisse
@@ -26,14 +26,14 @@ ms.locfileid: "67964753"
  [Item-Eigenschaft](../../../ado/reference/ado-api/item-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- [Append-Methode (Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)  
+ [Append-Methode (Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)  
   
- [Delete-Methode (Sammlungen)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete-Methode (Auflistungen)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
   
- [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
- [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

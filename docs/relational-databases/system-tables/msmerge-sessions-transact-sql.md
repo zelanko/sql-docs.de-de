@@ -18,30 +18,30 @@ ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 041b8a9123781ca270c3970a04c620b691e85230
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106356"
 ---
-# <a name="msmergesessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
+# <a name="msmerge_sessions-transact-sql"></a>MSmerge_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSmerge_sessions** -Tabelle enthält Verlaufszeilen mit den Ergebnissen vorheriger auftragssitzungen des Merge-Agent des. Bei jedem Ausführen des Merge-Agents wird der Tabelle eine neue Zeile hinzugefügt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
+  Die **MSmerge_sessions** Tabelle enthält Verlaufs Zeilen mit den Ergebnissen vorheriger Merge-Agent Auftrags Sitzungen. Bei jedem Ausführen des Merge-Agents wird der Tabelle eine neue Zeile hinzugefügt. Diese Tabelle wird in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Die ID der Auftragssitzung des Merge-Agents|  
 |**agent_id**|**int**|Die ID des Merge-Agents|  
 |**start_time**|**datetime**|Der Zeitpunkt, zu dem die Ausführung des Auftrags begonnen hat|  
 |**end_time**|**datetime**|Der Zeitpunkt, zu dem die Ausführung des Auftrags beendet wurde|  
-|**duration**|**int**|Die kumulierte Dauer dieser Auftragssitzung in Sekunden|  
+|**auf**|**int**|Die kumulierte Dauer dieser Auftragssitzung in Sekunden|  
 |**delivery_time**|**int**|Die Anzahl der Sekunden, die für die Anwendung eines Batches von Änderungen benötigt wurden.|  
 |**upload_time**|**int**|Die Anzahl der Sekunden, die für das Hochladen von Änderungen auf den Verleger benötigt wurden.|  
 |**download_time**|**int**|Die Anzahl der Sekunden, die für das Herunterladen von Änderungen auf den Abonnenten benötigt wurden.|  
-|**delivery_rate**|**float**|Die durchschnittliche Anzahl der pro Sekunde übermittelten Befehle.|  
+|**delivery_rate**|**float**|Die durchschnittliche Anzahl der übermittelten Befehle pro Sekunde.|  
 |**time_remaining**|**int**|Die geschätzte Anzahl der in einer aktiven Sitzung verbleibenden Sekunden.|  
-|**percent_complete**|**decimal**|Der geschätzte Prozentsatz der gesamten Änderungen, die in einer aktiven Sitzung bereits übermittelt wurden|  
+|**percent_complete**|**Decimal**|Der geschätzte Prozentsatz der gesamten Änderungen, die in einer aktiven Sitzung bereits übermittelt wurden|  
 |**upload_inserts**|**int**|Die Anzahl der auf dem Verleger angewendeten Einfügungen.|  
 |**upload_updates**|**int**|Die Anzahl der auf dem Verleger angewendeten Updates.|  
 |**upload_deletes**|**int**|Die Anzahl der auf dem Verleger angewendeten Löschungen.|  
@@ -56,14 +56,14 @@ ms.locfileid: "68106356"
 |**download_rows_retried**|**int**|Die Anzahl der auf den Abonnenten heruntergeladenen Zeilen, deren Übermittlung wiederholt werden musste.|  
 |**schema_changes**|**int**|Die Anzahl der während der Sitzung angewendeten Schemaänderungen.|  
 |**metadata_rows_cleanedup**|**int**|Die Anzahl der Zeilen mit Metadaten, für die während der Sitzung ein Cleanup ausgeführt wurde.|  
-|**runstatus**|**int**|Der Ausführungsstatus:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich ausgeführt werden.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = wiederholen.<br /><br /> **6** = Fehler.|  
+|**RunStatus**|**int**|Der Ausführungsstatus:<br /><br /> **1** = Start.<br /><br /> **2** = erfolgreich.<br /><br /> **3** = wird ausgeführt.<br /><br /> **4** = im Leerlauf.<br /><br /> **5** = Wiederholungsversuch.<br /><br /> **6** = Fehler.|  
 |**estimated_upload_changes**|**int**|Die geschätzte Anzahl von Änderungen, die auf dem Verleger angewendet werden mussten|  
 |**estimated_download_changes**|**int**|Die geschätzte Anzahl von Änderungen, die auf dem Abonnenten angewendet werden mussten|  
-|**connection_type**|**int**|Die während des Hochladens verwendete Verbindung:<br /><br /> **1** = des lokalen Netzwerks (LAN).<br /><br /> **2** = DFÜ-Netzwerkverbindung.<br /><br /> **3** = websynchronisierung.|  
+|**connection_type**|**int**|Die während des Hochladens verwendete Verbindung:<br /><br /> **1** = LAN (Local Area Network).<br /><br /> **2** = DFÜ-Netzwerkverbindung.<br /><br /> **3** = Websynchronisierung.|  
 |**timestamp**|**timestamp**|Die Timestampspalte dieser Tabelle.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

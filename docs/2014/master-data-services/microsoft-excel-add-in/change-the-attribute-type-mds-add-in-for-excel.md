@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482763"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Ändern des Attributtyps (MDS-Add-in für Excel)
@@ -25,12 +25,12 @@ ms.locfileid: "65482763"
 > [!NOTE]  
 >  Sie können den Typ oder die Länge der Spalten **Name** oder **Code** nicht aktualisieren.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf die Funktionsbereiche **Systemverwaltung** und **Explorer** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Modell, Entität und Attribut müssen vorhanden sein.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65482763"
   
 -   Der Datentyp des Attributs wird geändert.  
   
--   Generieren Sie eine Kopie des Attributs mit dem Suffix "_old", die nicht über einen beliebigen Wert enthält. Dies wird als bezeichnet ein **veraltet** Attribut.  
+-   Generieren Sie eine Kopie des Attributs mit dem Suffix "_old", das keinen Wert enthält. Dies wird als **veraltet** -Attribut bezeichnet.  
   
  Alle vorhandenen Abhängigkeiten vom ursprünglichen Attribut verweisen jedoch auf das veraltete Attribut und nicht auf das geänderte.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65482763"
   
 -   Da die Logik aufgrund des neuen Datentyps des Attributs u. U. nicht identisch ist, müssen Sie die Geschäftsregeln aktualisieren, sodass diese auf das geänderte Attribut verweisen. Sie müssen jede betroffene Regel bearbeiten und dann die Ausdrücke ändern, um Verweise auf das veraltete Attribut (_old) zu entfernen, damit auf das aktualisierte Attribut verwiesen wird.  
   
--   Sie müssen alle Abonnementsichten unter der Auswahl Integrationsmanagement öffnen, wählen Sie die Zeile anzeigen, öffnen Sie sie für die Bearbeitung durch Klicken auf das Stiftsymbol und klicken Sie dann auf die **speichern Datenträger** Symbol, um die Sichtdefinition zu aktualisieren. Es sind keine weiteren Änderungen erforderlich, um die Sichtsyntax neu zu generieren.  
+-   Sie müssen alle Abonnement Sichten unter der Auswahl Integration Management öffnen, die Zeile anzeigen auswählen, Sie zur Bearbeitung öffnen, indem Sie auf das Stift Symbol klicken und dann auf das Symbol Datenträger **Speichern** klicken, um die Sicht Definition zu aktualisieren. Es sind keine weiteren Änderungen erforderlich, um die Sichtsyntax neu zu generieren.  
   
 -   Stagingtabellen, die das Attribut enthalten, wird eine Spalte für das veraltete Attribut hinzugefügt. Das bedeutet, dass der Stagingcode betroffen ist. Um das veraltete Attribut zu entfernen, können Sie es löschen, nachdem Sie die Geschäftsregeln und Abonnementsichten aktualisiert haben.  
   
@@ -67,13 +67,13 @@ ms.locfileid: "65482763"
   
  Bevor Sie ein veraltetes Attribut löschen, müssen Sie alle Verweise auf das Attribut entfernen, indem Sie die Geschäftsregeln korrigieren und die Abonnementsichten wie oben beschrieben neu generieren. Andernfalls wird beim Versuch, das veraltete Attribut zu löschen, auf der Webseite für die Systemverwaltung in einer Fehlermeldung darauf hingewiesen, dass das Attribut nicht gelöscht werden kann, da ein Objekt darauf verweist.  
   
- Um ein Attribut zu löschen, finden Sie unter [Löschen eines Attributs &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
+ Informationen zum Löschen eines Attributs finden Sie unter [Löschen eines Attributs &#40;Master Data Services&#41;](../delete-an-attribute-master-data-services.md)  
   
 > [!TIP]  
 >  Es ist aufwändig, Datentypen für MDS-Attribute zu ändern, die vorhandene Daten und zugehörige Entitäten aufweisen. Dies gilt insbesondere, wenn eine deklarierte Geschäftsregel oder Abonnementsicht von der Entität abhängt. Als bewährte Methode wird empfohlen, mit einem Datentyp zu beginnen, der flexibel genug ist, um die erforderlichen Werte aufzunehmen. Zeichenfolgen können anfangs kurz sein, müssen aber im Laufe der Zeit u. U. erweitert werden, sodass immer der ungünstigste Fall berücksichtigt werden sollte. Die zusätzliche Länge von Textzeichenfolgen kann Probleme verursachen (da sich breite Textfelder in der grafischen Benutzeroberfläche beispielsweise nur schwer in den Bildschirm einpassen lassen). Daher sollten Sie zu lange Zeichenfolgen vermeiden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Attribute &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
- [Erstellen eines Modells &#40;MDS-Add-In für Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [Ein Modell &#40;MDS-Add-in für Excel wird&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

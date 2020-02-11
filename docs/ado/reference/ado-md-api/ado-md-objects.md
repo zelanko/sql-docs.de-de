@@ -1,5 +1,5 @@
 ---
-title: ADO MD-Objekte | Microsoft-Dokumentation
+title: ADO MD Objekte | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,42 +14,42 @@ ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930576"
 ---
 # <a name="ado-md-objects"></a>ADO MD-Objekte
 
 |||  
 |-|-|  
-|[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Stellt eine mit Feldern fester Breite oder Filterachse eines cellSets, die mit der ausgewählten Elemente ein oder mehrere Dimensionen.|  
-|[Katalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Mehrdimensionale Schemainformationen (d. h. Cubes und zugrunde liegenden Dimensionen, Hierarchien, Ebenen und Elemente), die speziell für eine mehrdimensionale Datenanbieter (MDP) enthält.|  
-|[Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Stellt die Daten am Schnittpunkt der Achsenkoordinaten enthalten, die in einem Cellset dar.|  
-|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Stellt die Ergebnisse einer MDX-Abfrage. Es ist eine Auflistung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt.|  
-|[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Stellt einen Cube aus einem mehrdimensionalen Schema, das mit einem Satz von verknüpften Dimensionen dar.|  
-|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Stellt eine der Dimensionen eines mehrdimensionalen Cubes, die mit einer oder mehreren Hierarchien von Elementen dar.|  
-|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Stellt eine Möglichkeit dar, in dem die Elemente einer Dimension können aggregiert oder "wird durchgeführt." Eine Dimension kann entlang einer oder mehreren Hierarchien aggregiert werden.|  
-|[Level](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält eine Menge von Elementen, von die jede den gleichen Rang innerhalb einer Hierarchie hat.|  
-|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Stellt ein Element einer Ebene in einem Cube, die untergeordneten Elemente ein Element einer Ebene oder ein Mitglied einer Position auf einer Achse eines cellSets dar.|  
-|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Stellt einen Satz von ein oder mehrere Elemente verschiedener Dimensionen, der einen Punkt auf einer Achse definiert.|  
+|[Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Stellt eine Positions-oder Filter Achse eines Cellsets dar, die ausgewählte Elemente aus einer oder mehreren Dimensionen enthält.|  
+|[Katalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Enthält mehrdimensionale Schema Informationen (d. h. Cubes und zugrunde liegende Dimensionen, Hierarchien, Ebenen und Elemente), die für einen mehrdimensionalen Datenanbieter (MDP) spezifisch sind.|  
+|[Cell (Zelle)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Stellt die Daten an der Schnittmenge der Achsen Koordinaten dar, die in einem CellSet enthalten sind.|  
+|[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Stellt die Ergebnisse einer mehrdimensionalen Abfrage dar. Es handelt sich um eine Sammlung von Zellen, die aus Cubes oder anderen Cellsets ausgewählt wurden.|  
+|[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwandter Dimensionen enthält.|  
+|[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Stellt eine der Dimensionen eines mehrdimensionalen Cubes dar, der mindestens eine Hierarchien von Membern enthält.|  
+|[Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|Stellt eine Methode dar, mit der die Elemente einer Dimension aggregiert oder "ein Rollup ausgeführt werden können". Eine Dimension kann entlang einer oder mehrerer Hierarchien aggregiert werden.|  
+|[Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md)|Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer Hierarchie aufweist.|  
+|[Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)|Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eines Members einer Ebene oder einen Member einer Position entlang einer Achse eines Cellsets dar.|  
+|[Position](../../../ado/reference/ado-md-api/position-object-ado-md.md)|Stellt einen Satz von einem oder mehreren Membern verschiedener Dimensionen dar, die einen Punkt auf einer Achse definieren.|  
   
- Darüber hinaus die **Katalog** -Objekt verbunden ist, um ein ADO **Verbindung** -Objekt, das in der standard-ADO-Bibliothek enthalten ist:  
+ Außerdem ist das **catalog** -Objekt mit einem ADO- **Verbindungs** Objekt verbunden, das in der Standard-ADO-Bibliothek enthalten ist:  
   
-|Objekt|Beschreibung|  
+|Object|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Verbindung](../../../ado/reference/ado-api/connection-object-ado.md)|Stellt eine offene Verbindung mit einer Datenquelle dar.|  
   
- Die Beziehungen zwischen diesen Objekten werden dargestellt, der [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md).  
+ Die Beziehungen zwischen diesen Objekten werden im [ADO MD Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)veranschaulicht.  
   
- Viele ADO MD-Objekte können in eine entsprechende Sammlung enthalten sein. Z. B. eine [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) Objekt enthalten sein kann, eine [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) Auflistung von einem **Katalog**. Weitere Informationen finden Sie unter [ADO MD-Auflistungen](../../../ado/reference/ado-md-api/ado-md-collections.md).  
+ Viele ADO MD Objekte können in einer entsprechenden Sammlung enthalten sein. Ein [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) -Objekt kann z. b. in einer [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) -Sammlung eines **Katalogs**enthalten sein. Weitere Informationen finden Sie unter [ADO MD Collections](../../../ado/reference/ado-md-api/ado-md-collections.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO MD-API-Referenz](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
- [ADO MD-Codebeispiele](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
- [ADO MD-Auflistungen](../../../ado/reference/ado-md-api/ado-md-collections.md)   
- [ADO MD-Enumerationskonstanten](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
- [ADO MD-Methoden](../../../ado/reference/ado-md-api/ado-md-methods.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [API-Referenz für ADO MD](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
+ [ADO MD Code Beispiele](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
+ [ADO MD Sammlungen](../../../ado/reference/ado-md-api/ado-md-collections.md)   
+ [Enumerationskonstanten ADO MD](../../../ado/reference/ado-md-api/ado-md-enumerated-constants.md)   
+ [ADO MD Methoden](../../../ado/reference/ado-md-api/ado-md-methods.md)   
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO MD-Eigenschaften](../../../ado/reference/ado-md-api/ado-md-properties.md)

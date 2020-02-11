@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ea37fdca56c222cbebbdcb00956938a92fe2c203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211681"
 ---
 # <a name="view-user-defined-functions"></a>Anzeigen benutzerdefinierter Funktionen
@@ -37,7 +37,7 @@ ms.locfileid: "68211681"
   
      [Sicherheit](#Security)  
   
--   **Abrufen von Informationen zu einer Funktion mit:**  
+-   **So erhalten Sie Informationen zu einer Funktion mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211681"
 ####  <a name="Permissions"></a> Berechtigungen  
  Das Anzeigen aller Abhängigkeiten einer Funktion mithilfe von **sys.sql_expression_dependencies** erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für **sys.sql_expression_dependencies** für die Datenbank. Systemobjektdefinitionen, wie die in OBJECT_DEFINITION zurückgegebenen Definitionen, sind öffentlich sichtbar.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>So zeigen Sie die Eigenschaften einer benutzerdefinierten Funktion an  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68211681"
      **Benutzer**  
      Name des Benutzers dieser Verbindung.  
   
-     **Erstellt am**  
+     **Erstellungsdatum**  
      Zeigt das Datum an, an dem die Funktion erstellt wurde.  
   
      **Ausführen als**  
@@ -88,10 +88,10 @@ ms.locfileid: "68211681"
      **Name**  
      Name der aktuellen Funktion.  
   
-     **Schema**  
+     **Chaos**  
      Zeigt das Schema an, zu dem die Funktion gehört.  
   
-     **Systemobjekt**  
+     **System Objekt**  
      Gibt an, ob es sich bei der Funktion um ein Systemobjekt handelt. Die Werte sind True und False.  
   
      **ANSI NULLS**  
@@ -103,10 +103,10 @@ ms.locfileid: "68211681"
      **Funktionstyp**  
      Typ der benutzerdefinierten Funktion.  
   
-     **Bezeichner in Anführungszeichen**  
+     **Bezeichnerbezeichner**  
      Gibt an, ob das Objekt mit der Option Bezeichner in Anführungszeichen erstellt wurde.  
   
-     **Schema-gebunden**  
+     **Schema gebunden**  
      Gibt an, ob die Funktion Schema-gebunden ist. Die Werte sind True und False. Informationen zu schemagebundenen Funktionen finden Sie im Abschnitt SCHEMABINDING von [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql).  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  

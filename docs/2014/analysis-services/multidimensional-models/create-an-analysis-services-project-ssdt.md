@@ -1,5 +1,5 @@
 ---
-title: Erstellen ein Analysis Services-Projekts (SSDT) | Microsoft-Dokumentation
+title: Erstellen eines Analysis Services Projekts (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313fdd08234e9dd784d45c65d7ee23cd0a0a308c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076243"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Erstellen eines Analysis Services-Projekts (SSDT)
@@ -31,21 +31,21 @@ ms.locfileid: "66076243"
   
  Dieses Thema enthält folgende Abschnitte:  
   
- [Erstellen eines neuen Projekts unter Verwendung der Vorlage "Analysis Services-Projekt"](#bkmk_NewUsingTemplate)  
+ [Erstellen eines neuen Projekts mit der Analysis Services-Projektvorlage](#bkmk_NewUsingTemplate)  
   
- [Erstellen eines neuen Projekts mithilfe einer vorhandenen Analysis Services-Datenbank](#bkmk_NewUsingWizard)  
+ [Erstellen eines neuen Projekts mithilfe einer vorhandenen Analysis Services Datenbank](#bkmk_NewUsingWizard)  
   
- [Hinzufügen eines Analysis Services-Projekts zu einer vorhandenen Projektmappe](#bkmk_AddtoExistingSolution)  
+ [Hinzufügen eines Analysis Services Projekts zu einer vorhandenen Projekt Mappe](#bkmk_AddtoExistingSolution)  
   
- [Erstellen und Bereitstellen der Projektmappe](#bkmk_buildDeploy)  
+ [Erstellen und Bereitstellen der Lösung](#bkmk_buildDeploy)  
   
- [Analysis Services-Projektordner](#bkmk_ProjectFolders)  
+ [Projektordner Analysis Services](#bkmk_ProjectFolders)  
   
- [Analysis Services-Dateitypen](#bkmk_FileTypes)  
+ [Analysis Services Dateitypen](#bkmk_FileTypes)  
   
- [Analysis Services-Elementvorlagen](#bkmk_ItemTemplates)  
+ [Analysis Services Element Vorlagen](#bkmk_ItemTemplates)  
   
-##  <a name="bkmk_NewUsingTemplate"></a> Erstellen eines neuen Projekts unter Verwendung der Vorlage "Analysis Services-Projekt"  
+##  <a name="bkmk_NewUsingTemplate"></a>Erstellen eines neuen Projekts mit der Analysis Services-Projektvorlage  
  Verwenden Sie diese Anweisungen zum Erstellen eines leeren Projekts, in dem Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte definieren, die Sie anschließend als neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank bereitstellen können.  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf **Datei**, zeigen Sie auf **Neu**, und klicken Sie auf **Projekt**. Wählen Sie im Dialogfeld **Neues Projekt** im Bereich **Projekttypen** die Option **Business Intelligence-Projekte**aus.  
@@ -58,13 +58,13 @@ ms.locfileid: "66076243"
   
 5.  Wählen Sie in der Dropdownliste **Projektmappe** die Option **Zur Projektmappe hinzufügen**aus, um das neue Projekt der vorhandenen Projektmappe hinzuzufügen.  
   
-     -oder-  
+     Oder  
   
      Wählen Sie in der Dropdownliste **Projektmappe** die Option **Neue Projektmappe erstellen**aus, um eine neue Projektmappe zu erstellen. Aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**, um einen neuen Ordner für die neue Projektmappe zu erstellen. Geben Sie im Feld **Projektmappenname**den Namen der neuen Projektmappe ein.  
   
 6.  Klicken Sie auf **OK**.  
   
-##  <a name="bkmk_NewUsingWizard"></a> Erstellen eines neuen Projekts mithilfe einer vorhandenen Analysis Services-Datenbank  
+##  <a name="bkmk_NewUsingWizard"></a>Erstellen eines neuen Projekts mithilfe einer vorhandenen Analysis Services Datenbank  
  Erstellen Sie mithilfe des Assistenten zum Importieren einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ein Projekt, das auf den Objekten in der vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank basiert. Wenn Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt auf Grundlage einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank definieren, werden die Metadaten für diese Datenbank in einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geöffnet. Diese Objekte können dann innerhalb des Projekts geändert werden, ohne dass sich dies auf die ursprünglichen Objekte auswirkt, und anschließend in derselben [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, sofern diese Datenbank in den Bereitstellungseigenschaften angegeben ist, oder zu Vergleichszwecken in einer neu erstellten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank bereitgestellt werden. Die vorgenommenen Änderungen haben so lange keine Auswirkungen auf die vorhandene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, bis die Änderungen bereitgestellt werden.  
   
  Sie können auch die Vorlage [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank importieren verwenden, um ein Projekt auf Basis einer Produktionsdatenbank zu erstellen, an der seit der Bereitstellung des ursprünglichen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts Änderungen direkt vorgenommen wurden.  
@@ -89,7 +89,7 @@ ms.locfileid: "66076243"
   
 7.  Öffnen Sie das Fenster Projektmappen-Explorer, um den Inhalt des Projekts anzuzeigen.  
   
-##  <a name="bkmk_AddtoExistingSolution"></a> Hinzufügen eines Analysis Services-Projekts zu einer vorhandenen Projektmappe  
+##  <a name="bkmk_AddtoExistingSolution"></a>Hinzufügen eines Analysis Services Projekts zu einer vorhandenen Projekt Mappe  
  Wenn Sie bereits über eine Projektmappe verfügen, die alle Quelldateien einer Geschäftsanwendung enthält, können Sie dieser Projektmappe ein neues Analysis Services-Projekt hinzufügen.  
   
  Beim Hinzufügen eines vorhandenen Projekts zu einer Projektmappe wird das Projekt der Projektmappe zugeordnet, jedoch nicht kopiert. Wenn das Analysis Services-Projekt in einer anderen Projektmappe erstellt wurde, verbleiben die Projektdateien in der ursprünglichen Projektmappe, für die es erstellt wurde. Dies bedeutet, dass alle Änderungen, die Sie über eine der beiden Projektmappen am Projekt vornehmen, auf den gleichen Satz von Quelldateien angewendet werden. Wenn dieses Verhalten nicht gewünscht ist, sollten Sie die Projektdateien zuerst in den neuen Projektmappenordner kopieren oder verschieben und das Projekt erst dann der Projektmappe hinzufügen.  
@@ -98,11 +98,12 @@ ms.locfileid: "66076243"
   
 2.  Wählen Sie eine DWPROJ-Datei aus, die der Projektmappe hinzugefügt werden soll.  
   
-##  <a name="bkmk_buildDeploy"></a> Erstellen und Bereitstellen der Projektmappe  
+##  <a name="bkmk_buildDeploy"></a>Erstellen und Bereitstellen der Lösung  
  Standardmäßig stellt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein Projekt auf der Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereit. Sie können dieses Bereitstellungsziel ändern, indem Sie im Dialogfeld **Eigenschaftenseiten** des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts eine Änderung der **Server** -Konfigurationseigenschaft vornehmen.  
   
 > [!NOTE]  
->  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verarbeitet beim Bereitstellen einer Projektmappe standardmäßig nur Objekte, die vom Bereitstellungsskript geändert wurden, sowie von ihnen abhängige Objekte. Sie können diese Funktionalität ändern, indem Sie im Dialogfeld **Eigenschaftenseiten** für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine Änderung der Verarbeitungsoption-Konfigurationseigenschaft vornehmen.  
+>  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verarbeitet beim Bereitstellen einer Projektmappe standardmäßig nur Objekte, die vom Bereitstellungsskript geändert wurden, sowie von ihnen abhängige Objekte. Sie können diese Funktionalität ändern, indem Sie im Dialogfeld **Eigenschaftenseiten** für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine Änderung der Verarbeitungsoption-Konfigurationseigenschaft vornehmen.  
   
  Erstellen Sie zu Testzwecken die Projektmappe in einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] und stellen diese bereit. Beim Erstellen einer Projektmappe werden die Objektdefinitionen und Abhängigkeiten im Projekt überprüft und ein Bereitstellungsskript generiert. Beim Bereitstellen einer Projektmappe wird die Bereitstellungs-Engine von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet, um das Bereitstellungsskript an die angegebene Instanz zu senden.  
   
@@ -110,10 +111,10 @@ ms.locfileid: "66076243"
   
  Nachdem das Projekt abgeschlossen ist, können Sie das beim Erstellen der Projektmappe generierte Bereitstellungsskript mithilfe des Bereitstellungs-Assistenten auf den Zielinstanzen bereitstellen, um dort die letzten Test-, Staging- und Bereitstellungsarbeiten auszuführen.  
   
-##  <a name="bkmk_ProjectFolders"></a> Analysis Services-Projektordner  
+##  <a name="bkmk_ProjectFolders"></a>Projektordner Analysis Services  
  Ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt enthält die folgenden Ordner, in denen die im Projekt enthaltenen Elemente organisiert werden.  
   
-|Ordner|Beschreibung|  
+|Ordner|BESCHREIBUNG|  
 |------------|-----------------|  
 |Projektmappen-Explorer|Enthält Datenquellen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellen-Assistenten und bearbeiten Sie sie im Datenquellen-Designer.|  
 |Datenquellensichten|Enthält Datenquellensichten für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Datenquellensicht-Assistenten und bearbeiten Sie sie im Datenquellensicht-Designer.|  
@@ -122,9 +123,9 @@ ms.locfileid: "66076243"
 |Miningstrukturen|Enthält Miningstrukturen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie diese Objekte mit dem Miningmodell-Assistenten und bearbeiten sie im Miningmodell-Designer.|  
 |Rollen|Enthält Datenbankrollen für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen und verwalten Sie Rollen mit dem Rollen-Designer.|  
 |Assemblys|Enthält Verweise auf COM-Bibliotheken und [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework-Assemblys für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt. Erstellen Sie Verweise im Dialogfeld **Verweis hinzufügen** .|  
-|Sonstiges|Enthält alle Dateitypen außer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dateitypen. Fügen Sie diesem Ordner sonstige Dateien hinzu, z. B. Textdateien mit Projektnotizen.|  
+|Verschiedenes|Enthält alle Dateitypen außer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dateitypen. Fügen Sie diesem Ordner sonstige Dateien hinzu, z. B. Textdateien mit Projektnotizen.|  
   
-##  <a name="bkmk_FileTypes"></a> Analysis Services-Dateitypen  
+##  <a name="bkmk_FileTypes"></a>Analysis Services Dateitypen  
  Je nachdem, welche Projekte in die Projektmappe und welche Elemente in die einzelnen Projekte für die betreffende Projektmappe eingefügt wurden, kann eine [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe mehrere Dateitypen enthalten. Normalerweise werden die Dateien aller Projekte in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe im Projektmappenordner gespeichert, wobei für jedes Projekt ein eigener Ordner angelegt wird.  
   
 > [!NOTE]  
@@ -132,10 +133,12 @@ ms.locfileid: "66076243"
   
  Der Projektordner für ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt kann die in der folgenden Tabelle aufgelisteten Dateitypen enthalten.  
   
-|Dateityp|Beschreibung|  
+|Dateityp|BESCHREIBUNG|  
 |---------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projektdefinitionsdatei (DWPROJ)|Enthält Metadaten zu den Elementen, Konfigurationen und Assemblyverweisen, die im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert und enthalten sind.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Benutzereinstellungen für das Projekt (DWPROJ.USER)|Enthält Konfigurationsinformationen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für einen bestimmten Benutzer.|  
+|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projektdefinitionsdatei (DWPROJ)|Enthält Metadaten zu den Elementen, Konfigurationen und Assemblyverweisen, die im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt definiert und enthalten sind.|  
+|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Benutzereinstellungen für das Projekt (DWPROJ.USER)|Enthält Konfigurationsinformationen für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt für einen bestimmten Benutzer.|  
 |Datenquelldatei (DS)|Enthält die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -ASSL-Elemente (Analysis Services Scripting Language), die die Metadaten für eine Datenquelle definieren.|  
 |Datenquellen-Sichtdatei (DSV)|Enthält die ASSL-Elemente, die die Metadaten für eine Datenquellensicht definieren.|  
 |Cubedatei (CUBE)|Enthält die ASSL-Elemente, die die Metadaten für einen Cube definieren, einschließlich Measuregruppen, Measures und Cubedimensionen.|  
@@ -145,23 +148,24 @@ ms.locfileid: "66076243"
 |Datenbankdatei (DATABASE)|Enthält die ASSL-Elemente, die die Metadaten für eine Datenbank definieren, einschließlich Kontotypen, Übersetzungen und Datenbankberechtigungen.|  
 |Datenbank-Rollendatei (ROLE)|Enthält die ASSL-Elemente, die die Metadaten für eine Datenbankrolle definieren, einschließlich Rollenmitglieder.|  
   
-##  <a name="bkmk_ItemTemplates"></a> Analysis Services-Elementvorlagen  
+##  <a name="bkmk_ItemTemplates"></a>Analysis Services Element Vorlagen  
  Wenn Sie über das Dialogfeld **Neues Element hinzufügen** einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt neue Elemente hinzufügen, können Sie wahlweise eine Elementvorlage, ein vordefiniertes Skript oder eine vordefinierte Anweisung verwenden, die die Ausführung einer bestimmten Aktion veranschaulicht.  
   
  Die in der folgenden Tabelle aufgelisteten Elementvorlagen sind in der Kategorie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektelemente im Dialogfeld **Neues Element hinzufügen** verfügbar.  
   
-|Kategorie|Elementvorlage|Description|  
+|Category|Elementvorlage|BESCHREIBUNG|  
 |--------------|-------------------|-----------------|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektelemente|Cube|Startet den Cube-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt einen neuen Cube hinzuzufügen.|  
-||Datenquelle|Startet den Datenquellen-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenquelle hinzuzufügen.|  
+|
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektelemente|Cube|Startet den Cube-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt einen neuen Cube hinzuzufügen.|  
+||Data source|Startet den Datenquellen-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenquelle hinzuzufügen.|  
 ||Datenquellensicht|Startet den Datenquellensicht-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenquellensicht hinzuzufügen.|  
 ||Datenbankrolle|Fügt dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenbankrolle hinzu. Anschließend wird der Rollen-Designer für die neue Datenbankrolle angezeigt.|  
 ||Dimension|Startet den Dimensions-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Datenbankdimension hinzuzufügen.|  
 ||Miningstruktur|Startet den Data Mining-Assistenten, um dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt eine neue Miningstruktur und das zugehörige Miningmodell hinzuzufügen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
+ [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
+ [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

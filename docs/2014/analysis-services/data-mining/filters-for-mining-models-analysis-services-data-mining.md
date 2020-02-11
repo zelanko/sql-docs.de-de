@@ -1,5 +1,5 @@
 ---
-title: Filter für Miningmodelle (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Filter für Mining Modelle (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44e60d60764396361122ed16a4e34f76fc3a6ab6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084427"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filter für Miningmodelle (Analysis Services – Data Mining)
@@ -43,14 +43,14 @@ ms.locfileid: "66084427"
   
 -   Verwenden Sie die Registerkarte **Miningmodelle** im Data Mining-Designer, um mithilfe von Dialogfeldern des Filter-Editors Bedingungen zu erstellen.  
   
--   Geben Sie einen Filterausdruck direkt in die `Filter` -Eigenschaft des Miningmodells.  
+-   Direktes Eingeben eines Filter Ausdrucks in die `Filter` -Eigenschaft des Mining Modells.  
   
 -   Legen Sie mit AMO programmgesteuerte Filterbedingungen für ein Modell fest.  
   
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Erstellen von Modellfiltern unter Verwendung des Data Mining-Designers  
  Sie filtern ein Modell im Data Mining-Designer, indem Sie die `Filter`-Eigenschaft des Miningmodells ändern. Sie können einen Filterausdruck entweder direkt im Bereich **Eigenschaften** eingeben, oder Sie öffnen ein Filterdialogfeld, um Bedingungen zu erstellen.  
   
- Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. Sie können mehrere Bedingungen verknüpfen, indem Sie mithilfe von `AND` / `OR` Operatoren. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren `greater than` und `less than` verwenden. Für diskrete Werte können Sie jedoch nur die Operatoren `= (equal to)`, `!= (not equal to)` und `is null` verwenden.  
+ Es gibt zwei Filterdialogfelder. Mit dem ersten können Sie Bedingungen erstellen, die auf die Falltabelle angewendet werden. Wenn die Datenquelle mehrere Tabellen enthält, wählen Sie zuerst eine Tabelle und dann eine Spalte aus und legen die Operatoren und Bedingungen fest, die für die Spalte gelten sollen. `AND` / Mithilfe `OR` von Operatoren können Sie mehrere Bedingungen verknüpfen. Welche Operatoren für die Definition von Werten verfügbar sind, ist davon abhängig, ob die Spalte diskrete oder fortlaufende Werte enthält. Zum Beispiel können Sie mit fortlaufenden Werten die Operatoren `greater than` und `less than` verwenden. Für diskrete Werte können Sie jedoch nur die Operatoren `= (equal to)`, `!= (not equal to)` und `is null` verwenden.  
   
 > [!NOTE]  
 >  Das Schlüsselwort `LIKE` wird nicht unterstützt. Wenn Sie mehrere diskrete Attribute einfügen möchten, müssen Sie einzelne Bedingungen erstellen und diese mithilfe des Operators `OR` verknüpfen.  
@@ -82,7 +82,7 @@ ms.locfileid: "66084427"
 ### <a name="how-can-i-tell-whether-a-filter-is-being-used"></a>Wie stelle ich fest, ob ein Filter verwendet wird?  
  Sie können auf verschiedene Weisen feststellen, ob auf ein Modell ein Filter angewendet wurde:  
   
--   Klicken Sie im Designer auf die **Miningmodelle** Registerkarte öffnen **Eigenschaften**, und zeigen Sie die `Filter` -Eigenschaft des Miningmodells.  
+-   Klicken Sie im Designer auf die Registerkarte **Mining Modelle** , öffnen Sie **Eigenschaften**, und `Filter` zeigen Sie die-Eigenschaft des Mining Modells an.  
   
 -   In der DMV mit dem Namen DMSCHEMA_MINING_MODELS wird eine Spalte ausgegeben, die den Text des Filters enthält. Sie können die folgende Abfrage für eine DMV verwenden, um die Namen der Modelle und ihre Filter zurückzugeben:  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66084427"
 ### <a name="how-can-i-save-a-filter"></a>Wie kann ich einen Filter speichern?  
  Der Filterausdruck wird als Skript gespeichert, das zusammen mit dem zugehörigen Miningmodell oder der verschachtelten Tabelle gespeichert wird. Wenn Sie den Filtertext löschen, kann dieser nur durch die manuelle Neuerstellung des Filterausdrucks wiederhergestellt werden. Wenn Sie komplexe Filterausdrücke erstellen, sollten Sie daher eine Sicherungskopie des Filtertexts erstellen.  
   
-### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Warum sehe ich Auswirkungen des Filters kann nicht an?  
+### <a name="why-cant-i-see-any-effects-from-the-filter"></a>Warum kann ich keine Auswirkungen des Filters sehen?  
  Immer wenn Sie einen Filterausdruck ändern oder hinzufügen, müssen Sie die Struktur und das Modell neu verarbeiten, bevor Sie die Auswirkungen des Filters sehen können.  
   
 ### <a name="why-do-i-see-filtered-attributes-in-prediction-query-results"></a>Warum sehe ich gefilterte Attribute in den Ergebnissen von Vorhersageabfragen?  
@@ -115,13 +115,13 @@ ms.locfileid: "66084427"
   
 -   Reduzieren ausgeschlossener Werte in einer Kategorie als Teil der Miningstrukturdefinition  
   
-## <a name="related-resources"></a>Verwandte Ressourcen  
- Weitere Informationen zur Filtersyntax und Beispiele für Filterausdrücke finden Sie unter [Model Filter Syntax and Examples &#40;Analysis Services - Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
+## <a name="related-resources"></a>Zugehörige Ressourcen  
+ Weitere Informationen zur Filtersyntax und Beispiele für Filterausdrücke finden Sie unter [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md).  
   
  Informationen zur Verwendung von Modellfiltern beim Testen eines Miningmodells finden Sie unter [Auswählen eines Genauigkeitsdiagrammtyps und Festlegen von Diagrammoptionen](choose-an-accuracy-chart-type-and-set-chart-options.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Modellfiltersyntax und Beispiele &#40;Analysis Services – Data Mining&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Modell Filter Syntax und Beispiele &#40;Analysis Services Data Mining-&#41;](model-filter-syntax-and-examples-analysis-services-data-mining.md)   
+ [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
   
   

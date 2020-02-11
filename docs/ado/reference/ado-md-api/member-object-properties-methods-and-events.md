@@ -1,5 +1,5 @@
 ---
-title: Member Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Member-Objekteigenschaften,-Methoden und-Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949482"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member-Objekt – Eigenschaften, Methoden und Ereignisse
@@ -29,29 +29,29 @@ ms.locfileid: "67949482"
   
  [Description-Eigenschaft](../../../ado/reference/ado-md-api/description-property-ado-md.md)  
   
- [DrilledDown-Eigenschaft](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
+ [DrilledDown (Eigenschaft)](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)  
   
- [LevelDepth-Eigenschaft](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
+ [Leveltiefe (Eigenschaft)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)  
   
- [LevelName-Eigenschaft](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)  
+ [LevelName (Eigenschaft)](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)  
   
  [Name-Eigenschaft](../../../ado/reference/ado-md-api/name-property-ado-md.md)  
   
- [Parent-Eigenschaft](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
+ [Übergeordnete Eigenschaft](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
- [ParentSameAsPrev-Eigenschaft](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [Parametrisameasprev (Eigenschaft)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
- [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- ["Type"-Eigenschaft](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
+ [Type-Eigenschaft](../../../ado/reference/ado-md-api/type-property-ado-md.md)  
   
  [UniqueName-Eigenschaft](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

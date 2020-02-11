@@ -17,20 +17,20 @@ ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4b602d5ff4a94d2888395e6a62f03553fb50f98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68216378"
 ---
 # <a name="implementing-sqlgetdiagrec-and-sqlgetdiagfield"></a>Implementieren von SQLGetDiagRec und SQLGetDiagField
-**SQLGetDiagRec** und **SQLGetDiagField** werden von der Treiber-Manager und jeden Treiber implementiert. Der Treiber-Manager jeden Treiber DiagnoseDatensätze für jede Umgebung, Verbindung, -Anweisung und Deskriptorhandles verwalten und die Datensätze freigeben, nur, wenn Sie mit einer anderen Funktion aufgerufen wird, dass Handle oder das Handle freigegeben wird.  
+**SQLGetDiagRec** und **SQLGetDiagField** werden vom Treiber-Manager und den einzelnen Treibern implementiert. Der Treiber-Manager und jeder Treiber behalten Diagnosedaten Sätze für jede Umgebung, jede Verbindung, jede Anweisung und dieses Deskriptorhandle bei und gibt diese Datensätze nur frei, wenn eine andere Funktion mit diesem Handle aufgerufen oder das Handle freigegeben wird.  
   
- Obwohl sowohl der Treiber-Manager, und jeder Treiber entsprechend der Rangfolge in den ersten Status-Datensatz festlegen müssen [Sequenz der Statusdatensätze](../../../odbc/reference/develop-app/sequence-of-status-records.md), bestimmt der Treiber-Manager, die endgültige Reihenfolge der Datensätze.  
+ Obwohl sowohl der Treiber-Manager als auch der Treiber den ersten Statusdaten Satz gemäß der [Rangfolge der Statusdaten Sätze](../../../odbc/reference/develop-app/sequence-of-status-records.md)bestimmen müssen, bestimmt der Treiber-Manager die endgültige Sequenz von Datensätzen.  
   
- **SQLGetDiagRec** und **SQLGetDiagField** veröffentlichen DiagnoseDatensätze über sich selbst nicht.  
+ **SQLGetDiagRec** und **SQLGetDiagField** veröffentlichen keine Diagnosedaten Sätze über sich selbst.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Regeln der Diagnosebehandlung](../../../odbc/reference/develop-app/diagnostic-handling-rules.md)  
   

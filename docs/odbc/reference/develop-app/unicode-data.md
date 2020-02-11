@@ -16,26 +16,26 @@ ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 899924b5c0847d5f42e383a9e04c33298bb368b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087749"
 ---
 # <a name="unicode-data"></a>Unicode-Daten
-SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die im Unicode-Format nativ auf DBMS befindet. Ein C-Unicode-Datentyp wird bereitgestellt, um eine Anwendung so binden Sie Daten in einen Unicode-Puffer zu ermöglichen. Der Treiber-Manager können Daten aus einem Unicode-C-Typ (SQL_C_WCHAR), um es zu machen konvertieren-Funktion mit einem ANSI-Treiber.  
+SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die nativ auf dem DBMS in Unicode gespeichert werden. Ein C-Unicode-Datentyp wird bereitgestellt, damit eine Anwendung Daten an einen Unicode-Puffer binden kann. Der Treiber-Manager kann Daten von einem Unicode-C-Typ (SQL_C_WCHAR) konvertieren, damit er mit einem ANSI-Treiber funktioniert.  
   
- Eine ODBC 3.0 oder 2. *x* Anwendung immer eine Bindung mit der ANSI-Datentypen. Für eine optimale Leistung sollten eine ODBC 3.5 (oder höhere)-Anwendung in die ANSI-C-Datentyp binden, wenn der SQL-Spaltentyp ANSI ist und in den Unicode-C-Datentyp binden sollten, wenn der SQL-Spaltentyp aus Unicode besteht.  
+ Ein ODBC-3,0 oder 2. die *x* -Anwendung wird immer an die ANSI-Datentypen gebunden. Um eine optimale Leistung zu erzielen, sollte eine ODBC 3,5 (oder höher)-Anwendung an den ANSI-Daten c-Typ gebunden werden, wenn der SQL-Spaltentyp ANSI ist, und eine Bindung an den Unicode-c-Datentyp herstellen, wenn der SQL-Spaltentyp  
   
- Die SQL-Unicode-Typ-Indikatoren sind SQL_WCHAR, SQL_WVARCHAR und SQL_WLONGVARCHAR. SQL_WCHAR-Daten verfügt über eine Zeichenfolge fester Länge, während SQL_WVARCHAR einen Variablen Länge mit einer maximalen deklarierten hat und SQL_WLONGVARCHAR Variablen Länge mit einer maximalen, von denen die Datenquelle abhängig.  
+ Die SQL-Unicode-Typindikatoren sind SQL_WCHAR, SQL_WVARCHAR und SQL_WLONGVARCHAR. SQL_WCHAR Daten verfügen über eine festgelegte Zeichen folgen Länge, während SQL_WVARCHAR eine Variable Länge mit einem deklarierten Maximum aufweist und SQL_WLONGVARCHAR eine Variable Länge mit einem maximalen hat, die von der Datenquelle abhängt.  
   
- Der Typindikator C Unicode ist SQL_C_WCHAR an. Dies ist die Standardeinstellung für die einzelnen Indikatoren der SQL-Unicode-Typ. Alle von der SQL-Datentypen konvertiert werden können SQL_C_WCHAR, und für alle von der SQL-Datentypen SQL_C_WCHAR konvertiert werden kann. Eine Anwendung kann Daten in eine von drei Arten abrufen:  
+ Der C-Unicode-Typindikator ist SQL_C_WCHAR. Dies ist die Standardeinstellung für jeden der SQL-Unicode-Typindikatoren. Alle SQL-Typen können in SQL_C_WCHAR konvertiert werden, und SQL_C_WCHAR können in alle SQL-Typen konvertiert werden. Eine Anwendung kann Daten auf eine von drei Arten abrufen:  
   
--   Ruft die Daten als SQL_C_CHAR.  
+-   Rufen Sie die Daten als SQL_C_CHAR ab.  
   
--   Ruft die Daten als SQL_C_WCHAR an.  
+-   Rufen Sie die Daten als SQL_C_WCHAR ab.  
   
--   Deklarieren Sie die Daten als SQL_C_TCHAR an. Dies ist ein Makro, mit dem SQL_C_WCHAR eingefügt, wenn die Anwendung, als Unicode-Anwendung kompiliert wird oder SQL_C_CHAR eingefügt, wenn es als ANSI-Anwendung kompiliert wird.  
+-   Deklarieren Sie die Daten als SQL_C_TCHAR. Dies ist ein Makro, das SQL_C_WCHAR einfügt, wenn die Anwendung als Unicode-Anwendung kompiliert wird, oder SQL_C_CHAR, wenn Sie als ANSI-Anwendung kompiliert wird, einfügt.  
   
  SQL_C_TCHAR wird in einer Funktion wie folgt deklariert:  
   
@@ -43,8 +43,8 @@ SQL-Unicode-Datentypen werden bereitgestellt, um Daten zu beschreiben, die im Un
 SQLBindParameter(StatementHandle, 1, SQL_PARAM_INPUT, SQL_C_TCHAR, SQL_WCHAR, NameLen, 0, Name, 0, &Name)  
 ```  
   
- Bei der Kompilierung der Anwendung eine Unicode-Anwendung, die *ValueType* Argument aus SQL_C_TCHAR in SQL_C_WCHAR geändert. Bei der Kompilierung der Anwendung als ANSI-Anwendung, die *ValueType* Argument in SQL_C_CHAR geändert.  
+ Wenn die Anwendung als Unicode-Anwendung kompiliert wird, wird das *ValueType* -Argument von SQL_C_TCHAR in SQL_C_WCHAR geändert. Wenn die Anwendung als ANSI-Anwendung kompiliert wird, wird das *ValueType* -Argument in SQL_C_CHAR geändert.  
   
- Unicode-Treiber müssen immer noch mit ANSI-Datentypen, einschließlich SQL_CHAR unterstützen. Wenn eine Anwendung, die Arbeit mit einem Unicode-Treiber SQL_CHAR gebunden, wird der Treiber-Manager die SQL_CHAR-Daten nicht SQL_WCHAR zuordnen. Der Unicode-Treiber muss die SQL_CHAR-Daten akzeptieren.  
+ Unicode-Treiber müssen weiterhin ANSI-Datentypen unterstützen, einschließlich SQL_CHAR. Wenn eine Anwendung, die mit einem Unicode-Treiber arbeitet, an SQL_CHAR gebunden wird, ordnet der Treiber-Manager die SQL_CHAR Daten nicht SQL_WCHAR zu. Der Unicode-Treiber muss die SQL_CHAR Daten akzeptieren.  
   
- Der Treiber-Manager speichert im Unicode-Treiber und die DSN-Namen und ordnet sie ANSI nach Bedarf. Wenn ein Unicode-Zeichen in ein ANSI-Zeichen (wie auftreten können, wenn Zeichen aus einer Codepage, die nicht die systemeigenen Code auf dem Computer ist in der DSN-Namen und Treiber verwendet werden) zugeordnet werden kann, werden die Zeichen, die nicht konvertiert werden können durch eine Standard-Sup Zeichen dargestellt. vom System plied.
+ Der Treiber-Manager speichert Treiber-und DSN-Namen in Unicode und ordnet diese nach Bedarf ANSI zu. Wenn ein Unicode-Zeichen nicht einem ANSI-Zeichen zugeordnet werden kann (wie es vorkommen kann, wenn Zeichen aus einer Codepage, bei der es sich nicht um die systemeigene Codepage des Computers handelt, in Treiber-und DSN-Namen verwendet werden), werden die Zeichen, die nicht konvertiert werden konnten, durch ein Standard Zeichen SUP dargestellt wird vom System pgelogen.
