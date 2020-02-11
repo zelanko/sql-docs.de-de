@@ -16,55 +16,55 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933496"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
-Gibt an, die Informationen, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet.  
+Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenquelle verwendet werden.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert.  
+ Legt einen **Zeichen** folgen Wert fest oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **"ConnectionString"** Eigenschaft, um eine Datenquelle angeben, indem Sie eine ausführliche Verbindungszeichenfolge, die mit einer Reihe von übergeben *Argument* *= Value* Anweisungen durch getrennt ein Semikolon.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **ConnectionString** -Eigenschaft zum Angeben einer Datenquelle, indem Sie eine ausführliche Verbindungs Zeichenfolge mit einer Reihe von *Argument* *= value* -Anweisungen übergeben, die durch Semikolons getrennt sind.  
   
- ADO unterstützt fünf Argumente für die **"ConnectionString"** Eigenschaft; alle anderen Argumente übergeben direkt an den Anbieter ohne jede Verarbeitung von ADO. Die Argumente ADO unterstützt lauten wie folgt aus.  
+ ADO unterstützt fünf Argumente für die **ConnectionString** -Eigenschaft. alle anderen Argumente werden direkt an den Anbieter übergeben, ohne dass Sie von ADO verarbeitet werden. Die von ADO unterstützten Argumente lauten wie folgt.  
   
-|Argument|Beschreibung|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
-|*Provider=*|Gibt den Namen eines Anbieters für die Verbindung verwendet.|  
-|*Dateiname =*|Gibt den Namen einer anbieterspezifischen-Datei (z. B. eine persistente Daten Quellobjekt), die vordefinierten Verbindungsinformationen enthält.|  
-|*Remoteanbieter =*|Gibt den Namen eines Anbieters verwenden, wenn eine Client-Side-Verbindung öffnen. (Nur Remotedaten-Dienst.)|  
-|*Remoteserver =*|Gibt den Pfadnamen des Servers, verwenden Sie beim Öffnen einer Client-Side-Verbindung an. (Nur Remotedaten-Dienst.)|  
-|*URL=*|Gibt die Verbindungszeichenfolge als eine absolute URL identifiziert eine Ressource, z. B. eine Datei oder ein Verzeichnis an.|  
+|*Anbieter =*|Gibt den Namen eines Anbieters an, der für die Verbindung verwendet werden soll.|  
+|*Dateiname =*|Gibt den Namen einer anbieterspezifischen Datei an (z. b. ein persistente Datenquellen Objekt), die voreingestellte Verbindungsinformationen enthält.|  
+|*Remote Anbieter =*|Gibt den Namen eines Anbieters an, der beim Öffnen einer Client seitigen Verbindung verwendet werden soll. (Nur Remote Datendienst.)|  
+|*Remote Server =*|Gibt den Pfadnamen des Servers an, der beim Öffnen einer Client seitigen Verbindung verwendet werden soll. (Nur Remote Datendienst.)|  
+|*URL =*|Gibt die Verbindungs Zeichenfolge als absolute URL an, die eine Ressource identifiziert, z. b. eine Datei oder ein Verzeichnis.|  
   
- Nach dem Festlegen der **"ConnectionString"** -Eigenschaft, und öffnen Sie die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt ist, wird der Anbieter ändert ggf. den Inhalt der Eigenschaft, z. B. durch Zuordnen von ADO definierten Argumentnamen zu ihren Entsprechungen für den bestimmten Anbieter.  
+ Nachdem Sie die **ConnectionString** -Eigenschaft festgelegt und das [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt geöffnet haben, kann der Anbieter den Inhalt der-Eigenschaft ändern, indem Sie z. b. die ADO-definierten Argument Namen ihren Entsprechungen für den jeweiligen Anbieter zuordnet.  
   
- Die **"ConnectionString"** -Eigenschaft erbt automatisch den Wert für die *"ConnectionString"* Argument der [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode, sodass Sie die aktuelle außerKraftsetzenkönnen **"ConnectionString"** -Eigenschaft während der **öffnen** Methodenaufruf.  
+ Die **ConnectionString** -Eigenschaft erbt automatisch den Wert, der für das *ConnectionString* -Argument der [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode verwendet wird, sodass Sie die aktuelle **ConnectionString** -Eigenschaft während des **öffnenden** Methoden Aufrufes überschreiben können.  
   
- Da die *Dateiname* Argument wird ADO, um die zugeordneten Anbieter zu laden, kann nicht übergeben werden, sowohl die *Anbieter* und *Dateiname* Argumente.  
+ Da das *File Name* -Argument bewirkt, dass ADO den zugeordneten Anbieter lädt, können Sie nicht die *Anbieter* -und *Dateinamen* Argumente übergeben.  
   
- Die **"ConnectionString"** Eigenschaft ist Lese-/Schreibzugriff auf, wenn die Verbindung ist geschlossen und Read-only, wenn er geöffnet ist.  
+ Die **ConnectionString** -Eigenschaft ist Lese-/Schreibzugriff, wenn die Verbindung geschlossen und schreibgeschützt ist, wenn Sie geöffnet ist.  
   
- Duplikate eines Arguments in den **"ConnectionString"** Eigenschaft ignoriert werden. Die letzte Instanz von jedem Argument wird verwendet.  
+ Duplikate eines Arguments in der **ConnectionString** -Eigenschaft werden ignoriert. Die letzte Instanz eines beliebigen Arguments wird verwendet.  
   
 > [!NOTE]
->  **Remote Datendienstnutzung** bei Verwendung für eine clientseitige **Verbindung** -Objekt, das **"ConnectionString"** Eigenschaft enthalten kann, nur die *Remoteanbieter* und *Remoteserver* Parameter.  
+>  **Verwendung von Remote Datendiensten** Wenn die **ConnectionString** -Eigenschaft für ein Client seitiges **Verbindungs** Objekt verwendet wird, kann Sie nur den *Remote Anbieter* -und den *Remote Server* Parameter enthalten.  
   
- Die folgende Tabelle enthält die Standard-ADO-Anbieter für jedes Windows-Betriebssystem:  
+ In der folgenden Tabelle sind die Standard-ADO-Anbieter für die einzelnen Windows-Betriebssysteme aufgeführt:  
   
 |Standard-ADO-Anbieter|Windows-Betriebssystem|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> (Um die Lesbarkeit des Quellcodes zu verbessern, explizit angeben der Name des Anbieters in der Verbindungszeichenfolge angegeben.)|Windows 2000 (32-Bit)<br /><br /> Windows XP (32-Bit)<br /><br /> Windows 2003 Server (32-Bit)<br /><br /> Windows Vista (32-Bit)<br /><br /> Windows Vista Service Pack 1 oder höher (32-Bit- und 64-Bit)<br /><br /> Windows-Versionen nach Windows Vista (32-Bit- und 64-Bit)|  
-|Keine Standardeinstellung.<br /><br /> Wenn eine ADO-Anwendung auf eins der folgenden Betriebssysteme ausgeführt wird, und den Anbieter nicht explizit geben, ADO mit folgender Fehler zurückgegeben: "ADODB. Verbindung: Anbieter wird nicht angegeben, und es wurde kein angegebene Standardanbieter "|Windows 2000 (64-Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> Windows 2003 Server (64-Bit)<br /><br /> Windows Vista (64-Bit)|  
+|MSDASQL<br /><br /> (Um die Lesbarkeit des Quellcodes zu verbessern, geben Sie den Anbieter Namen explizit in der Verbindungs Zeichenfolge an.)|Windows 2000 (32 Bit)<br /><br /> Windows XP (32 Bit)<br /><br /> Windows 2003 Server (32 Bit)<br /><br /> Windows Vista (32 Bit)<br /><br /> Windows Vista Service Pack 1 oder höher (32-Bit und 64-Bit)<br /><br /> Windows-Versionen nach Windows Vista (32-Bit und 64-Bit)|  
+|Keine Standardeinstellung.<br /><br /> Wenn eine ADO-Anwendung unter den folgenden Betriebssystemen ausgeführt wird und den Anbieter nicht explizit angibt, gibt ADO den folgenden Fehler zurück: "ADODB. Verbindung: der Anbieter ist nicht angegeben, und es ist kein festgelegter Standardanbieter vorhanden.|Windows 2000 (64 Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> Windows 2003 Server (64 Bit)<br /><br /> Windows Vista (64-Bit)|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString und ConnectionTimeout State-Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [Beispiel für ConnectionString, ConnectionTimeout und State Properties (VC + +)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Anhang A: Anbieter](../../../ado/guide/appendixes/appendix-a-providers.md)

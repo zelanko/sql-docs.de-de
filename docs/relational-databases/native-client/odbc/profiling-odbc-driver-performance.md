@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c15c8920d2a0188a7dbe517149dc369dea95522e
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760707"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Leistungsprofilerstellung des ODBC-Treibers
@@ -71,13 +71,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Netzwerk  
   
--   time  
+-   Time  
   
  In der folgenden Tabelle gelten die Beschreibungen der Felder in der SQLPERF-Datenstruktur auch für die in der Leistungsprotokolldatei erfassten Statistiken.  
   
 ### <a name="application-profile-statistics"></a>Anwendungsprofilstatistiken  
   
-|SQLPERF-Feld|und Beschreibung|  
+|SQLPERF-Feld|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |TimerResolution|Minimale Auflösung der Uhrzeit des Servers in Millisekunden. Dies wird gewöhnlich als 0 (null) angegeben und sollte nur verwendet werden, wenn die angegebene Zahl sehr groß ist. Wenn die minimale Auflösung der Serveruhrzeit größer als das wahrscheinliche Intervall einiger der zeitgeberbasierten Statistikwerte ist, könnte die Statistikdatenmenge unnötig größer werden.|  
 |SQLidu|Anzahl der INSERT-Anweisungen, DELETE-Anweisungen oder UPDATE-Anweisungen nach SQL_PERF_START|  
@@ -106,7 +106,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |SumConnectionsOpened|Summe der Verbindungshandles, die nach SQL_PERF_START geöffnet wurden|  
 |SumConnectionTime|Menge an Zeit insgesamt, die alle Verbindungen nach SQL_PERF_START geöffnet waren. Beispiel: Wenn eine Anwendung 10 Verbindungen geöffnet und jede 5 Sekunden lang offen gehalten hat, beträgt SumConnectionTime 50 Sekunden.|  
 |AvgTimeOpened|Entspricht SumConnectionsOpened/SumConnectionTime|  
-|**Netzwerk Statistiken:**||  
+|**Netzwerkstatistik:**||  
 |ServerRndTrips|Die Anzahl von Malen, die der Treiber Befehle an den Server gesendet und eine Antwort erhalten hat|  
 |BuffersSent|Anzahl von TDS-Paketen (Tabular Data Stream), die vom Treiber nach SQL_PERF_START an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gesendet wurden. Umfangreiche Befehle können mehrere Puffer belegen; wenn also ein umfangreicher Befehl an den Server gesendet wird und er sechs Pakete erfordert, wird ServerRndTrips um eins und BuffersSent um sechs erhöht.|  
 |BuffersRec|Anzahl von TDS-Paketen, die der Treiber von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] empfangen hat, seit die Anwendung mit der Verwendung des Treibers begonnen hat.|  
@@ -115,13 +115,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Zeitstatistiken  
   
-|SQLPERF-Feld|und Beschreibung|  
+|SQLPERF-Feld|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |msExecutionTime|Die kumulierte Verarbeitungszeit des Treibers nach SQL_PERF_START, einschließlich der Wartezeit des Treibers auf Antworten vom Server|  
 |msNetworkServerTime|Die kumulierte Wartezeit des Treibers auf Antworten vom Server|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41; ](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md) -   
- [Gewusst-wie-Themen &#40;zur Profilerstellung für ODBC-Treiber ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
+ [Gewusst-wie-Themen zur Profilerstellung für ODBC-Treiber &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/profiling-odbc-driver-performance-odbc.md)  
   
   

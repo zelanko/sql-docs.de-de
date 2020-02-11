@@ -13,10 +13,10 @@ ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 89c71bd3864fcaa682d3587a54fc2b32c26e5659
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75255591"
 ---
 # <a name="create-a-composite-domain"></a>Erstellen einer Verbunddomäne
@@ -29,14 +29,14 @@ ms.locfileid: "75255591"
   
  Nach dem Erstellen einer Verbunddomäne können Sie die Eigenschaften der Verbunddomäne ändern, einen Verweisdatendienst an die Domäne anfügen, domänenübergreifende Regeln oder Wertebeziehungen erstellen. Wählen Sie hierzu die Verbunddomäne in der Liste **Domäne** auf der Seite **Domänenverwaltung** und dann die entsprechende Registerkarte aus.  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Um eine Verbunddomäne zu erstellen, müssen Sie eine Wissensdatenbank erstellt und geöffnet und mindestens zwei Einzeldomänen erstellt haben, um die Verbunddomäne hinzufügen zu können.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine Verbunddomäne zu erstellen.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a>Erstellen einer Verbund Domäne in der Wissens Ermittlungs Aktivität  

@@ -1,5 +1,5 @@
 ---
-title: OpenSchema-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: OpenSchema-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a16979e7993fd1ac86679d054508b837a0a08c68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931894"
 ---
 # <a name="openschema-method-example-vb"></a>OpenSchema-Methode – Beispiel (VB)
-Dieses Beispiel verwendet die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode zum Anzeigen der den Namen und Typ der einzelnen Tabellen in der ***Pubs*** Datenbank.  
+In diesem Beispiel wird die [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) -Methode verwendet, um den Namen und den Typ der einzelnen Tabellen in der ***Pubs*** -Datenbank anzuzeigen.  
   
 ```  
 'BeginOpenSchemaVB  
@@ -78,12 +78,12 @@ End Sub
 'EndOpenSchemaVB  
 ```  
   
- In diesem Beispiel wird eine TABLE_TYPE-Query-Einschränkung in der **OpenSchema** Methode ***Kriterien*** Argument. Daher nur die Schemainformationen für die Ansichten angegeben, der ***Pubs*** Datenbank zurückgegeben werden. Das Beispiel zeigt anschließend den Namen und den Typ jeder einzelnen Tabelle.  
+ In diesem Beispiel wird eine TABLE_TYPE Query-Einschränkung im **OpenSchema** method ***Criteria*** -Argument angegeben. Folglich werden nur Schema Informationen für die in der ***Pubs*** -Datenbank angegebenen Sichten zurückgegeben. Im Beispiel werden dann die Namen und Typen der einzelnen (n) Tabelle (n) angezeigt.  
   
 ```  
 Attribute VB_Name = "OpenSchema"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

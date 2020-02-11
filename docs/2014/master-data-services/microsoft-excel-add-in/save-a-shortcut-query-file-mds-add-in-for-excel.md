@@ -11,19 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482865"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel)
   Speichern Sie in [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]eine Shortcutabfragedatei, wenn Sie häufig auf den gleichen Satz Daten zugreifen müssen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Das aktive Arbeitsblatt muss von MDS verwaltete Daten im gewünschten Format enthalten. Sie sollten z. B. die Spalten in der von Ihnen gewünschten Reihenfolge anzeigen, wobei alle gewünschten Filter angewendet wurden. Weitere Informationen finden Sie unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) und [Neuanordnen von Spalten &#40;MDS-Add-in für Excel&#41;](reorder-columns-mds-add-in-for-excel.md).  
+-   Das aktive Arbeitsblatt muss von MDS verwaltete Daten im gewünschten Format enthalten. Sie sollten z. B. die Spalten in der von Ihnen gewünschten Reihenfolge anzeigen, wobei alle gewünschten Filter angewendet wurden. Weitere Informationen finden Sie unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) und [Neuordnen von Spalten &#40;MDS-Add-in für Excel&#41;](reorder-columns-mds-add-in-for-excel.md).  
   
 ### <a name="to-save-a-shortcut-query-file"></a>So speichern Sie eine Shortcutabfragedatei  
   
@@ -35,9 +35,9 @@ ms.locfileid: "65482865"
   
 -   Klicken Sie auf den Pfeil unter **Abfrage speichern** , um die Shortcutabfrage anzuzeigen und zu öffnen.  
   
--   [Senden einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
+-   [Senden einer shortcutabfragedatei &#40;MDS-Add-in für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Die shortcutabfragedateien &#40;MDS-Add-in für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

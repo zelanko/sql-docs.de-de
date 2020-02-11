@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771526"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service für Oracle von Attunity
@@ -23,9 +23,9 @@ ms.locfileid: "62771526"
 ## <a name="installation"></a>Installation  
  Der CDC Service for Oracle kann auf jedem unterstützten Windows-Computer mit Zugriff auf die aufgezeichneten Oracle-Quelldatenbanken und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zielinstanz installiert werden, auf der sich die CDC-Zieldatenbank befindet. Der CDC Service benötigt keine lokale Installation der Oracle-Datenbank oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank, nur die unterstützten Clients. Informationen dazu, wo die erforderlichen Datenbankkomponenten installiert werden müssen, finden Sie in diesem Thema unter **Erforderliche Komponenten für die Datenbank** .  
   
- Bei der Installation des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service for Oracle wird die Benutzeroberfläche der Dienstkonfiguration und das Dienstprogramm am ausgewählten Speicherort abgelegt. Der CDC Service for Oracle wird mithilfe der Oracle CDC Service Configuration Console separat konfiguriert. Weitere Informationen zur Konfiguration des Oracle CDC Service finden Sie unter [Change Data Capture Service for Oracle by Attunity F1 Help](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
+ Bei der Installation des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CDC Service for Oracle wird die Benutzeroberfläche der Dienstkonfiguration und das Dienstprogramm am ausgewählten Speicherort abgelegt. Der CDC Service for Oracle wird mithilfe der Oracle CDC Service Configuration Console separat konfiguriert. Weitere Informationen zur Konfiguration des Oracle CDC Service finden Sie unter [Change Data Capture Service für Oracle von Attunity F1 Hilfe](change-data-capture-service-for-oracle-by-attunity-f1-help.md).  
   
- Führen Sie zum Installieren des CDC Service for Oracle **AttunityOracleCdcService.msi** manuell von den SQL Server-Installationsmedien aus. Installationspakete für X86 und X64 befinden sich im **.\Tools\AttunityCDCOracle\\**  auf dem SQL Server-Installationsmedium.  
+ Führen Sie zum Installieren von CDC Service for Oracle **attunityoraclecdcservice. msi** manuell von den SQL Server-Installationsmedien aus. Installationspakete für x86 und x64 befinden sich auf den SQL Server-Installationsmedien unter **.\tools\attunitycdcoracle\\ ** .  
   
  Der CDC Service for Oracle kann auf jedem unterstützten Windows-Computer installiert werden, auf dem der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client installiert ist. Er muss nicht auf dem gleichen Computer installiert sein, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ziel installiert ist.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62771526"
   
 -   [Change Data Capture Service für Oracle von Attunity – Anleitung](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit dem Oracle CDC Service](working-with-the-oracle-cdc-service.md)  
   
   

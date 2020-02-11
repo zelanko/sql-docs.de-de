@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c3e4d6a7875969e254874fa3dde101d986a9f9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781315"
 ---
 # <a name="interfaces-ole-db"></a>Schnittstellen (OLE DB)
-  Zusätzlich zu den OLE DB-Schnittstellen bereitgestellt von der Microsoft Data Access Components (MDAC), die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter implementiert die folgenden OLE DB-Schnittstellen:  
+  Zusätzlich zu den Kern OLE DB Schnittstellen, die von den Microsoft Data Access Components (MDAC) bereitgestellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden, implementiert der Native Client OLE DB-Anbieter die folgenden zusätzlichen OLE DB Schnittstellen:  
   
 -   [IBCPSession &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md)  
   
@@ -30,23 +30,23 @@ ms.locfileid: "62781315"
   
 -   [IColumnsRowset](../../relational-databases/native-client-ole-db-interfaces/icolumnsrowset.md)  
   
--   [ICommand &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
+-   [ICommand &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/icommand-ole-db.md)  
   
 -   [ICommandWithParameters](../../relational-databases/native-client-ole-db-interfaces/icommandwithparameters.md)  
   
--   [IDBProperties &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/idbproperties-ole-db.md)  
+-   [IDBProperties-&#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/idbproperties-ole-db.md)  
   
 -   [IRowsetFastLoad &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-ole-db.md)  
   
--   [ISSAbort &#40;OLE-DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
+-   [ISSAbort &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/issabort-ole-db.md)  
   
 -   [ISSAsynchStatus &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   
--   [ISSCommandWithParameters &#40;OLE-DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+-   [' ISSCommandWithParameters ' &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
--   [ISQLServerErrorInfo &#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
+-   [ISQLServerErrorInfo-&#40;OLE DB&#41;](../../../2014/database-engine/dev-guide/isqlservererrorinfo-ole-db.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE DB&#41; Verweis](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;OLE DB&#41; Referenz](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
   

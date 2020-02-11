@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b97b0129a7cc4ffa21b4a82ad0208a2c1890b27
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313648"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Aufgabe 4: Verwalten und Anzeigen der Ergebnisse
@@ -22,17 +22,17 @@ ms.locfileid: "72313648"
   
 1.  Wählen Sie in der Liste der Domänen **Contact Email** Domain aus.  
   
-2.  Wechseln Sie im rechten Bereich zur Registerkarte **ungültig** . Beachten Sie, dass zwei e-Mail-Adressen, für die das Zeichen ' ' am Ende fehlt. Diese beiden e-Mails sind von der Domänen Regel ungültig, die erfordert, dass alle e-Mail-Adressen mit **\@Adventure-Works.com** (mit ' ') enden. DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
+2.  Wechseln Sie im rechten Bereich zur Registerkarte **ungültig** . Beachten Sie, dass zwei e-Mail-Adressen, für die das Zeichen ' ' am Ende fehlt. Diese beiden e-Mails sind von der Domänen Regel ungültig, die erfordert, dass alle e-Mail-Adressen mit ** \@Adventure-Works.com** (mit ' ') enden. DQS verwendet die Domänenregel bei der Bereinigung, um zu bestimmen, ob eine E-Mail gültig ist. Diese Registerkarte zeigt die Domänenwerte an, die in der Wissensdatenbank als ungültig markiert wurden oder die eine Domänenregel verletzt haben. In diesem Fall haben diese Werte die Domänenregel (E-Mail-Überprüfung) verletzt.  
   
-3.  Geben Sie in der Spalte **korrigieren in** die richtige e-Mail-Adresse ein, die mit **\@Adventure-Works.com** (mit ' ') endet.  
+3.  Geben Sie in der Spalte **korrigieren in** die richtige e-Mail-Adresse ein, die mit ** \@Adventure-Works.com** endet (mit "s").  
   
-     ![Korrekturen an]der e-Mail-Validierungs Regel(../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Korrekturen")  
+     ![Korrekturen der E-Mail-Überprüfungsregel](../../2014/tutorials/media/et-managingandviewingresults-01.jpg "Korrekturen der E-Mail-Überprüfungsregel")  
   
 4.  Klicken Sie für beide Datensätze auf **genehmigen** , um beide Änderungen zu genehmigen. Wenn Sie genehmigen, werden die Datensätze auf die Registerkarte **korrigiert** verschoben. Anstatt jedes Element einzeln zu genehmigen, können Sie alle Änderungen gleichzeitig mithilfe der Symbolleisten Schaltfläche **alle Begriffe genehmigen** genehmigen.  
   
 5.  Wechseln Sie zur Registerkarte **neu** im rechten Bereich. Die Werte in dieser Registerkarte sind die Werte, für die DQS noch nicht genug Informationen in der Wissensdatenbank hat, um zu bestimmen, ob die Werte richtig sind. Daher können keine Änderungen an Domänenwerten vorgenommen oder vorgeschlagen werden.  
   
-6.  Überprüfen Sie die Werte, um zu bestätigen, dass alle e-Mails mit **\@Adventure-Works.com** enden, und klicken Sie auf der Symbolleiste auf **alle Bedingungen genehmigen** . Die genehmigten Werte aus dieser Registerkarte werden auf die Registerkarte **richtig** verschoben.  
+6.  Überprüfen Sie die Werte, um zu bestätigen, dass alle e-Mails mit ** \@Adventure-Works.com** enden, und klicken Sie auf der Symbolleiste auf **alle Bedingungen genehmigen** . Die genehmigten Werte aus dieser Registerkarte werden auf die Registerkarte **richtig** verschoben.  
   
 7.  Wählen Sie die Domäne **Country** aus der Liste der Domänen aus.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "72313648"
   
 9. Beachten Sie, dass die **USA** in **USA** korrigiert werden, weil es sich um Synonyme handelt und **USA** der führende (bevorzugte) Wert ist.  
   
-     ![Korrekturen auf der Grundlage von Synonymen](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "Korrekturen auf Grundlage von Synonymen")  
+     ![Korrekturen auf der Grundlage von Synonymen](../../2014/tutorials/media/et-managingandviewingresults-02.jpg "Korrekturen auf der Grundlage von Synonymen")  
   
 10. Beachten Sie, dass die Schaltfläche **genehmigen** bereits für diese korrigierten Werte ausgewählt ist. Dieses Verhalten ist der Standardwert für die korrigierten Werte. Sie können eine Änderung ablehnen. Wenn Sie dies tun, wird der Wert auf die Registerkarte **ungültig** verschoben.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "72313648"
   
 12. Wechseln Sie zur Registerkarte **korrigiert** im rechten Bereich.  
   
-     ![Korrigierte](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "Lieferanten Namen") korrigierte Lieferanten Namen  
+     ![Korrigierte Lieferantennamen](../../2014/tutorials/media/et-managingandviewingresults-03.jpg "Korrigierte Lieferantennamen")  
   
     1.  Beachten Sie, dass **a. Datum Corp.** in **a. Datum Corporation** korrigiert wird und der **Grund** auf **Begriffs basierte Beziehung festgelegt ist. A. Datum Corporation** ist ein bekannter Domänen Wert für DQS, weil er während des Wissens Ermittlungs Prozesses erkannt wurde. Daher ist DQS für diese Korrektur **100% sicher** .  
   
@@ -74,7 +74,7 @@ ms.locfileid: "72313648"
   
 21. Beachten Sie, dass der **Status** für den Datensatz, der **City** als **Los Angeles** hat, jetzt auf **ca** festgelegt ist. Beachten Sie, dass das Feld " **Grund** **" durch die Regel "City-State Rule" korrigiert wurde**.  
   
-     Regel Korrektur der Orts ![Zustands Regel Korrektur]der(../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Stadtstatus Korrektur")  
+     ![Korrektur der "City-State"-Regel](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "Korrektur der "City-State"-Regel")  
   
 22. Beachten Sie, dass das Optionsfeld **genehmigen** bereits für dieses Element in der Liste ausgewählt ist. Dies ist das Standardverhalten für Elemente auf der Registerkarte **korrigiert** .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "72313648"
   
 24. Klicken Sie in der Symbolleisten Schaltfläche auf **alle Bedingungen genehmigen** , und klicken Sie im **Bestätigungs** Meldungs Feld auf **OK**  
   
-     ![Symbol]leisten Schaltfläche Alle Begriffe genehmigen Symbolleisten Schaltfläche(../../2014/tutorials/media/et-managingandviewingresults-05.jpg "")  
+     ![Alle Begriffe genehmigen (Symbolleistenschaltfläche)](../../2014/tutorials/media/et-managingandviewingresults-05.jpg "Alle Begriffe genehmigen (Symbolleistenschaltfläche)")  
   
 25. Klicken Sie auf **weiter** , um zur Seite **exportieren** zu wechseln.  
   

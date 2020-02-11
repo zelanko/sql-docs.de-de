@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809532"
 ---
 # <a name="server-properties-database-settings-page"></a>Servereigenschaften (Seite Datenbankeinstellungen)
   Auf dieser Seite können Sie Ihre Datenbankeinstellungen anzeigen und ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Standardfüllfaktor für Indizes**  
  Gibt an, bis zu welchem Grad die einzelnen Seiten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gefüllt werden sollen, wenn das Programm mithilfe der vorhandenen Daten einen neuen Index erstellt. Der Füllfaktor wirkt sich auf die Leistung aus, da von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeit für das Teilen von Seiten benötigt wird, wenn diese aufgefüllt werden.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62809532"
 -   Wenn das Kontrollkästchen **Sicherung komprimieren** aktiviert ist, werden neue Sicherungen standardmäßig komprimiert.  
   
     > [!IMPORTANT]  
-    >  Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u.U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch [Resource Governor](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
+    >  Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md) eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).  
   
  Wenn Sie Mitglied der festen Serverrolle **sysadmin** oder **serveradmin** sind, können Sie die Einstellung durch Klicken auf das Kontrollkästchen **Sicherung komprimieren** ändern.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62809532"
  **Wiederherstellungsintervall (Minuten)**  
  Legt die maximale Anzahl von Minuten pro Datenbank für die Wiederherstellung von Datenbanken fest. Die Standardeinstellung ist 0; bei dieser Einstellung wird die Option automatisch von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konfiguriert. In der Praxis bedeutet dies eine Wiederherstellungszeit von weniger als einer Minute und das Auftreten eines Prüfpunktes in Abständen von ungefähr einer Minute bei aktiven Datenbanken. Weitere Informationen finden Sie unter [Configure the recovery interval Server Configuration Option](configure-the-recovery-interval-server-configuration-option.md).  
   
- **Daten**  
+ **Data**  
  Gibt den Standardspeicherort für Datendateien an. Klicken Sie auf die Schaltfläche Durchsuchen, um zu einem neuen Standardspeicherort zu navigieren. Wird erst nach dem Neustart von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wirksam.  
   
  **Log**  
@@ -71,7 +71,7 @@ ms.locfileid: "62809532"
  **Ausgeführte Werte**  
  Zeigt die gegenwärtig ausgeführten Werte für die Optionen in diesem Bereich an. Diese Werte sind schreibgeschützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [Angeben des Füllfaktors für einen Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
   

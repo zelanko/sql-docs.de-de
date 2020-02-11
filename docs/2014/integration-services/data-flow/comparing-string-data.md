@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fe9955ba4f20c4a20e24d99924adce7ff0d992a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62828147"
 ---
 # <a name="comparing-string-data"></a>Vergleichen von Zeichenfolgendaten
@@ -33,7 +33,7 @@ ms.locfileid: "62828147"
   
 -   Die Transformation für bedingtes Teilen kann Zeichenfolgenvergleiche in Ausdrücken verwenden, um zu bestimmen, welche Ausgabe an die Datenzeile gesendet werden soll. Weitere Informationen finden Sie unter [Conditional Split Transformation](transformations/conditional-split-transformation.md).  
   
--   Die Transformation für abgeleitete Spalten kann Zeichenfolgenausdrücke in Ausdrücken verwenden, um neue Spaltenwerte zu generieren. Weitere Informationen finden Sie unter [Derived Column Transformation](transformations/derived-column-transformation.md).  
+-   Die Transformation für abgeleitete Spalten kann Zeichenfolgenausdrücke in Ausdrücken verwenden, um neue Spaltenwerte zu generieren. Weitere Informationen finden Sie unter [Transformation für abgeleitete Spalten](transformations/derived-column-transformation.md).  
   
  Variablen, Variablenzuordnungen und Rangfolgeneinschränkungen verwenden ebenfalls Ausdrücke, die Zeichenfolgenausdrücke einschließen können. Weitere Informationen zu Ausdrücken finden Sie unter [Integration Services-Ausdrücke &#40;SSIS&#41;](../expressions/integration-services-ssis-expressions.md).  
   
@@ -63,11 +63,11 @@ ms.locfileid: "62828147"
  Sie können auch ein Gebietsschema für einen Verbindungs-Manager für Flatfiles und einen Verbindungs-Manager für mehrere Flatfiles angeben.  
   
 ## <a name="setting-comparison-options"></a>Festlegen von Vergleichsoptionen  
- Das Gebietsschema stellt die grundlegenden Regeln zum Vergleichen von Zeichenfolgendaten bereit. Beispielsweise gibt das Gebietsschema die Sortierposition jedes Buchstabens im Alphabet an. Diese Regeln sind jedoch möglicherweise für die Vergleiche mancher Transformationen nicht ausreichend. Deshalb unterstützt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erweiterte Vergleichsoptionen, die über die Vergleichsregeln eines Gebietsschemas hinausgehen. Diese Vergleichsoptionen werden auf Spaltenebene festgelegt. Beispielsweise können Sie mit einer der Vergleichsoptionen Zeichen ohne Zwischenraum ignorieren. Diese Option aus, wie z. B. die Unterscheidung für diakritische Zeichen ignorieren, die "a" und "å" identisch ist wird zu Vergleichszwecken.  
+ Das Gebietsschema stellt die grundlegenden Regeln zum Vergleichen von Zeichenfolgendaten bereit. Beispielsweise gibt das Gebietsschema die Sortierposition jedes Buchstabens im Alphabet an. Diese Regeln sind jedoch möglicherweise für die Vergleiche mancher Transformationen nicht ausreichend. Deshalb unterstützt [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erweiterte Vergleichsoptionen, die über die Vergleichsregeln eines Gebietsschemas hinausgehen. Diese Vergleichsoptionen werden auf Spaltenebene festgelegt. Beispielsweise können Sie mit einer der Vergleichsoptionen Zeichen ohne Zwischenraum ignorieren. Diese Option hat den Effekt, dass diakritische Zeichen wie der Akzent ignoriert werden, wodurch "a" und "å" zu Vergleichszwecken identisch werden.  
   
  In der folgenden Tabelle werden die Vergleichsoptionen und eine Sortiermethode beschrieben.  
   
-|Vergleichsoption|Description|  
+|Vergleichsoption|BESCHREIBUNG|  
 |-----------------------|-----------------|  
 |Groß-/Kleinschreibung ignorieren|Gibt an, ob beim Vergleichen zwischen Groß- und Kleinbuchstaben unterschieden wird. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich die Groß-/Kleinschreibung. Beispielsweise ist dann "ABC" mit "abc" identisch.|  
 |Kanatyp ignorieren|Gibt an, ob beim Vergleichen zwischen den beiden Typen japanischer Kanazeichen unterschieden wird: Hiragana und Katakana. Falls diese Option festgelegt ist, ignoriert der Zeichenfolgenvergleich den Kanatyp.|  
@@ -80,7 +80,7 @@ ms.locfileid: "62828147"
   
  Das **FullySensitive** -Vergleichsflag wird im Dialogfeld **Erweiterter Editor** für die Transformation für Fuzzygruppierung und die Transformation für Fuzzysuche angezeigt. Wenn Sie das **FullySensitive** -Vergleichsflag auswählen, gelten alle Vergleichsoptionen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Datentypen](integration-services-data-types.md)   
  [Schnelle Analyse](../fast-parse.md)   
  [Standardanalyse](../standard-parse.md)  

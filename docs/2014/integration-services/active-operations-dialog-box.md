@@ -1,5 +1,5 @@
 ---
-title: Aktive Vorgänge (Dialogfeld) | Microsoft-Dokumentation
+title: Aktive Vorgänge (Dialog Feld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f930a2e6f3ce84c330a4b7292ebaaba3b2ab871e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062220"
 ---
 # <a name="active-operations-dialog-box"></a>Aktive Vorgänge (Dialogfeld)
@@ -27,7 +27,7 @@ ms.locfileid: "66062220"
   
  **Was möchten Sie tun?**  
   
-1.  [Dialogfeld "Aktive Vorgänge" öffnen](#open_dialog)  
+1.  [Dialog Feld "aktive Vorgänge" öffnen](#open_dialog)  
   
 2.  [Konfigurieren der Optionen](#options)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66062220"
   
 ##  <a name="options"></a> Konfigurieren der Optionen  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Typ**  
- Gibt den Vorgangstyp an. Im folgenden sind die möglichen Werte für die **Typ** Feld und die entsprechenden Werte in der Operations_type-Spalte der Transact-SQL `catalog.operations` anzeigen.  
+ Gibt den Vorgangstyp an. Im folgenden finden Sie die möglichen Werte für das **typanfeld** und die entsprechenden Werte in der operations_type-Spalte der Transact `catalog.operations` -SQL-Sicht.  
   
 |||  
 |-|-|  

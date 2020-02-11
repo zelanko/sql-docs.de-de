@@ -20,22 +20,22 @@ ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68030670"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: Als veraltet markiert  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: deprecated  
   
  **Zusammenfassung**  
- In ODBC 3. *x*, die ODBC 2.0-Funktion **SQLGetStmtOption** wurde ersetzt durch **SQLGetStmtAttr**. Weitere Informationen finden Sie unter [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
+ In ODBC 3. *x*, die ODBC 2,0-Funktion **SQLGetStmtOption** wurde durch **SQLGetStmtAttr**ersetzt. Weitere Informationen finden Sie unter [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  
   
 > [!NOTE]  
->  Für Weitere Informationen zu welcher der Treiber-Manager wird diese Funktion bei einer ODBC 2. zugeordnet. *x* Anwendung arbeitet mit einer ODBC 3. *X* -Treiber verwenden, finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+>  Weitere Informationen dazu, wie der Treiber-Manager diese Funktion bei ODBC 2 zuordnet. die *x* -Anwendung arbeitet mit ODBC 3. zum *x* -Treiber finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

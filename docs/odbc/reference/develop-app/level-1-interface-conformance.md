@@ -1,5 +1,5 @@
 ---
-title: Schnittstellenübereinstimmung der Ebene 1 | Microsoft-Dokumentation
+title: Schnittstellen Konformität der Ebene 1 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135013"
 ---
 # <a name="level-1-interface-conformance"></a>Schnittstellenübereinstimmung auf Ebene 1
-Der Konformitätsgrad des Ebene-1-Schnittstelle enthält die Core-Standards auf Funktionen der Benutzeroberfläche sowie auf zusätzliche Funktionen, z. B. Transaktionen, die in der Regel in einer OLTP-relationale DBMS verfügbar sind. Ein Level 1-Schnittstelle-konformen Treiber kann die Anwendung, zusätzlich zu den Features in der Core-Schnittstelle-Konformitätsgrad Folgendes:  
+Die Schnittstelle für die Schnittstellen Konformität der Ebene 1 umfasst die grundlegende Funktionalität der Schnittstellen Konformität sowie zusätzliche Funktionen, wie z. b. Transaktionen, die normalerweise in einem relationalen OLTP-DBMS verfügbar sind. Mithilfe eines Schnittstellen kompatiblen Treibers der Ebene 1 kann die Anwendung zusätzlich zu den Features im Übereinstimmungs Grad der Kernschnittstelle folgende Aktionen ausführen:  
   
 |||  
 |-|-|  
-|101|Geben Sie das Schema der Datenbank, Tabellen und Sichten (mithilfe von zweiteiligen Namen). (Weitere Informationen finden Sie unter den dreiteiligen Benennung 201 im feature [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
-|102|Rufen Sie "true" asynchrone Ausführung der ODBC-Funktionen, in dem entsprechende ODBC-Funktionen für alle synchron oder alle asynchron auf eine bestimmte Verbindung sind.|  
-|103|Verwenden Sie scrollfähige Cursor, und dadurch Zugriff auf ein Resultset in Methoden als Vorwärtscursor, durch den Aufruf **SQLFetchScroll** mit der *FetchOrientation* Argument als SQL_FETCH_NEXT. (Die SQL_FETCH_BOOKMARK *FetchOrientation* ist im Feature 204 [Ebene-2-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
-|104|Abrufen von Primärschlüsseln von Tabellen, durch den Aufruf **SQLPrimaryKeys**.|  
-|105|Verwenden von gespeicherten Prozeduren, durch die ODBC-Escapesequenz für Prozeduraufrufen und Abfragen von Wörterbuch mit den Daten in Bezug auf die gespeicherten Prozeduren, durch den Aufruf **SQLProcedureColumns** und **SQLProcedures**. (Der Prozess, mit dem Verfahren erstellt werden, und in der Datenquelle gespeichert, ist außerhalb des Bereichs dieses Dokuments.)|  
-|106|Verbinden mit einer Datenquelle, indem Sie interaktiv Durchsuchen von den verfügbaren Servern, durch den Aufruf **SQLBrowseConnect**.|  
-|107|Verwenden von ODBC-Funktionen anstelle von SQL-Anweisungen zum Ausführen bestimmter Datenbankvorgänge: **SQLSetPos** mit SQL_POSITION und SQL_REFRESH.|  
-|108|Zugriff auf den Inhalt der Generierung von Batches und gespeicherte Prozeduren, durch den Aufruf mehrerer Resultsets **SQLMoreResults**.|  
-|109|Trennen von Transaktionen über mehrere ODBC-Funktionen mit "true" Unteilbarkeit und die Option zum Angeben der SQL_ROLLBACK in hinweg **SQLEndTran**.|
+|101|Geben Sie das Schema von Datenbanktabellen und-Sichten an (mit zweit Eider Benennung). (Weitere Informationen finden Sie unter die dreiteilige Benennungs Funktion 201 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
+|102|Rufen Sie die tatsächliche asynchrone Ausführung von ODBC-Funktionen auf, bei denen anwendbare ODBC-Funktionen alle synchron oder alle asynchron für eine bestimmte Verbindung sind.|  
+|103|Verwenden Sie Bild lauffähigen Cursor, und erreichen Sie somit den Zugriff auf ein Resultset in anderen Methoden als vorwärts, indem Sie **SQLFetchScroll** mit dem *FetchOrientation* -Argument außer SQL_FETCH_NEXT aufrufen. (Der SQL_FETCH_BOOKMARK *FetchOrientation* ist in der Funktion 204 in der [Schnittstellen Konformität der Ebene 2](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
+|104|Abrufen von primär Schlüsseln von Tabellen durch Aufrufen von **SQLPrimaryKeys**.|  
+|105|Verwenden Sie gespeicherte Prozeduren über die ODBC-Escapesequenz für Prozedur Aufrufe, und Fragen Sie das Datenwörterbuch nach gespeicherten Prozeduren ab, indem Sie **sqlprocedurecolumschlag** und **SQLProcedures**aufrufen. (Der Prozess, mit dem Prozeduren erstellt und in der Datenquelle gespeichert werden, liegt außerhalb des Umfangs dieses Dokuments.)|  
+|106|Stellen Sie eine Verbindung mit einer Datenquelle her, indem Sie die verfügbaren Server durch Aufrufen von **sqlbrowseconnetct**interaktiv durchsuchen.|  
+|107|Verwenden Sie ODBC-Funktionen anstelle von SQL-Anweisungen, um bestimmte Daten Bank Vorgänge auszuführen: **SQLSetPos** mit SQL_POSITION und SQL_REFRESH.|  
+|108|Durch Aufrufen von **SQLMoreResults**erhalten Sie Zugriff auf den Inhalt mehrerer Resultsets, die durch Batches und gespeicherte Prozeduren generiert werden.|  
+|109|Begrenzen von Transaktionen, die mehrere ODBC-Funktionen umfassen, mit echter Atomizität und der Möglichkeit, SQL_ROLLBACK in **SQLEndTran**anzugeben.|

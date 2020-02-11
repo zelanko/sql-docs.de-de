@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_db_xtp_table_memory_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,26 +22,26 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097944"
 ---
-# <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Gibt Speicherauslastungsstatistiken für jede [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabelle (Benutzer und System) in der aktuellen Datenbank zurück. Die Systemtabellen haben negative Objekt-IDs und werden verwendet, um Laufzeitinformationen für die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine zu speichern. Im Gegensatz zu Benutzerobjekten sind Systemtabellen intern und nur im Arbeitsspeicher vorhanden. Daher werden sie in Katalogsichten nicht aufgeführt. Systemtabellen werden verwendet, um Informationen wie Metadaten für alle Daten/Änderungsdateien im Speicher, Zusammenführungsanforderungen, Wasserzeichen für Änderungsdateien und Zeilenfilterung, gelöschte Tabellen und relevante Informationen für Wiederherstellungen und Sicherungen zu speichern. Die [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Engine unterstützt bis zu 8.192 Daten- und Änderungsdateipaare. Bei großen Datenbanken im Arbeitsspeicher ergibt sich damit eine Arbeitsspeicherauslastung durch Systemtabellen von einigen Megabyte.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Die Objekt-ID der Tabelle. NULL für In-Memory OLTP-Systemtabellen.|  
-|memory_allocated_for_table_kb|**bigint**|Für diese Tabelle zugeordneter Arbeitsspeicher.|  
-|memory_used_by_table_kb|**bigint**|Von der Tabelle verwendeter Arbeitsspeicher einschließlich Zeilenversionen.|  
-|memory_allocated_for_indexes_kb|**bigint**|Für Indizes dieser Tabelle zugeordneter Arbeitsspeicher.|  
-|memory_used_by_indexes_kb|**bigint**|Für Indizes dieser Tabelle verwendeter Speicher.|  
+|memory_allocated_for_table_kb|**BIGINT**|Für diese Tabelle zugeordneter Arbeitsspeicher.|  
+|memory_used_by_table_kb|**BIGINT**|Von der Tabelle verwendeter Arbeitsspeicher einschließlich Zeilenversionen.|  
+|memory_allocated_for_indexes_kb|**BIGINT**|Für Indizes dieser Tabelle zugeordneter Arbeitsspeicher.|  
+|memory_used_by_indexes_kb|**BIGINT**|Für Indizes dieser Tabelle verwendeter Speicher.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Alle Zeilen werden zurückgegeben, wenn Sie über die VIEW DATABASE STATE-Berechtigung für die aktuelle Datenbank verfügen. Andernfalls wird ein leeres Rowset zurückgegeben.  
@@ -212,7 +212,7 @@ used_memory_mb       target_memory_mb
 1356                 3845  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Eine Speicheroptimierte Tabelle dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

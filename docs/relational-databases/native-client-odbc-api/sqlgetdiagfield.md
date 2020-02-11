@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2a3d8d829794692cff6ecb9879e6f62f0b0b91b
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786471"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
@@ -26,7 +26,7 @@ ms.locfileid: "73786471"
 
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-ODBC-Treiber legt die folgenden zusätzlichen Diagnosefelder für **SQLGetDiagField**fest. Diese Felder unterstützen eine umfangreiche Fehlerberichterstellung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anwendungen und sind in allen Diagnosedatensätzen verfügbar, die für verbundene ODBC-Verbindungshandles und ODBC-Anweisungshandles generiert werden. Die Felder werden in sqlncli.h definiert.  
   
-|Diagnosedatensatzfeld|und Beschreibung|  
+|Diagnosedatensatzfeld|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |SQL_DIAG_SS_LINE|Meldet die Zeilennummer einer gespeicherten Prozedur, die einen Fehler verursacht. Der Wert von SQL_DIAG_SS_LINE ist nur aussagekräftig, wenn SQL_DIAG_SS_PROCNAME einen Wert zurückgibt. Der Wert wird als 16-Bit-Ganzzahl ohne Vorzeichen zurückgegeben.|  
 |SQL_DIAG_SS_MSGSTATE|Der Status einer Fehlermeldung. Informationen über den Status der Fehlermeldung finden Sie unter [RAISERROR](../../t-sql/language-elements/raiserror-transact-sql.md). Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
@@ -34,11 +34,12 @@ ms.locfileid: "73786471"
 |SQL_DIAG_SS_SEVERITY|Der Schweregrad der zugehörigen Fehlermeldung. Der Wert wird als 32-Bit-Ganzzahl mit Vorzeichen zurückgegeben.|  
 |SQL_DIAG_SS_SRVNAME|Der Name des Servers, auf dem der Fehler aufgetreten ist. Der Wert wird als Zeichenfolge zurückgegeben. Die Länge der Zeichenfolge (in Zeichen) wird in sqlncli.h durch das SQL_MAX_SQLSERVERNAME-Makro definiert.|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Diagnosefelder, die Zeichendaten, SQL_DIAG_SS_PROCNAME und SQL_DIAG_SS_SRVNAME enthalten, geben diese Daten an den Client mit NULL-Terminierung oder als ANSI- bzw. Unicode-Zeichenfolgen zurück. Falls notwendig sollte die Anzahl von Zeichen der Zeichenbreite entsprechend angepasst werden. Alternativ kann die korrekte Länge der Programmvariablen mit einem übertragbaren C-Datentyp wie TCHAR oder SQLTCHAR sichergestellt werden.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Diagnosefelder, die Zeichendaten, SQL_DIAG_SS_PROCNAME und SQL_DIAG_SS_SRVNAME enthalten, geben diese Daten an den Client mit NULL-Terminierung oder als ANSI- bzw. Unicode-Zeichenfolgen zurück. Falls notwendig sollte die Anzahl von Zeichen der Zeichenbreite entsprechend angepasst werden. Alternativ kann die korrekte Länge der Programmvariablen mit einem übertragbaren C-Datentyp wie TCHAR oder SQLTCHAR sichergestellt werden.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber meldet die folgenden zusätzlichen dynamischen Funktionscodes, die die zuletzt versuchte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anweisung identifizieren. Der dynamische Funktionscode wird im Header (Datensatz 0) des Diagnosedatensatzes zurückgegeben und ist daher bei jeder Ausführung verfügbar (unabhängig davon, ob diese erfolgreich ist oder nicht).  
   
-|Dynamischer Funktionscode|Source|  
+|Dynamischer Funktionscode|`Source`|  
 |---------------------------|------------|  
 |SQL_DIAG_DFC_SS_ALTER_DATABASE|ALTER DATABASE-Anweisung|  
 |SQL_DIAG_DFC_SS_CHECKPOINT|CHECKPOINT-Anweisung|  
@@ -99,10 +100,10 @@ ms.locfileid: "73786471"
 ## <a name="sqlgetdiagfield-and-table-valued-parameters"></a>SQLGetDiagField und Tabellenwertparameter  
  SQLGetDiagField kann verwendet werden, um zwei Diagnose Felder abzurufen: SQL_DIAG_SS_TABLE_COLUMN_NUMBER und SQL_DIAG_SS_TABLE_ROW_NUMBER. Mithilfe dieser Felder können Sie bestimmen, welcher Wert den Fehler oder die Warnung im Zusammenhang mit dem Diagnosedatensatz verursacht hat.  
   
- Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLGetDiagField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59352)   
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

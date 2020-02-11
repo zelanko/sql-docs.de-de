@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit einer DB2-Datenbank (SSAS) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einer DB2-Datenbank (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50818393a81cf3c6db1b54a0752e6fa098277709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087376"
 ---
 # <a name="connect-to-a-db2-database-ssas"></a>Mit einer DB2-Datenbank verbinden (SSAS)
@@ -55,7 +55,7 @@ ms.locfileid: "66087376"
  Geben Sie den Namen des Standardschemas für die ausgewählte Datenbank an.  
   
  **Erweitert**  
- Stellen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** ein.  
+ Legen Sie zusätzliche Verbindungs Eigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
  **Verbindung testen**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  

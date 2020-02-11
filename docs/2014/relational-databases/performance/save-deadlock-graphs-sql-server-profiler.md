@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 33757ad1f8085ce141b8e206f2c3fd99c7dcba90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150705"
 ---
 # <a name="save-deadlock-graphs-sql-server-profiler"></a>Speichern von Deadlockdiagrammen (SQL Server Profiler)
@@ -41,7 +41,7 @@ ms.locfileid: "63150705"
   
     -   Aktivieren Sie das Kontrollkästchen**In Datei speichern** , um die Ablaufverfolgung in einer Datei aufzuzeichnen. Geben Sie einen Wert für **Maximale Dateigröße festlegen**an.  
   
-         Aktivieren Sie optional die Kontrollkästchen **Dateirollover aktivieren** und **Ablaufverfolgungsdaten von Serverprozessen**.  
+         Aktivieren Sie optional die Option **dateirol Lover aktivieren** und Ablauf **Verfolgungs Daten von Server Prozessen**.  
   
     -   Aktivieren Sie das Kontrollkästchen **In Tabelle speichern** , um die Ablaufverfolgung in einer Datenbanktabelle aufzuzeichnen.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "63150705"
   
 10. Klicken Sie auf **Alle Deadlock-XML-Batches in einer einzelnen Datei** , um alle Deadlock Graph-Ereignisse in einer einzigen XML-Datei zu speichern, oder klicken Sie auf **Jeder Deadlock-XML-Batch in einer eigenen Datei**, um für jedes Deadlockdiagramm eine neue XML-Datei zu erstellen.  
   
- Nach dem Speichern der Deadlockdatei können Sie sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen. Weitere Informationen finden Sie unter [Öffnen, Anzeigen und Drucken einer Deadlockdatei &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
+ Nach dem Speichern der Deadlockdatei können Sie sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]öffnen. Weitere Informationen finden Sie unter [Öffnen, anzeigen und Drucken einer Deadlockdatei &#40;SQL Server Management Studio&#41;](open-view-and-print-a-deadlock-file-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysieren von Deadlocks mit SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL) | Microsoft-Dokumentation
+title: Einrichten einer Datenbank-Spiegelungs Sitzung mithilfe der Windows-Authentifizierung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755511"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL)
@@ -35,16 +35,16 @@ ms.locfileid: "62755511"
   
 ### <a name="to-establish-a-database-mirroring-session"></a>So richten Sie eine Datenbank-Spiegelungssitzung ein  
   
-1.  Erstellen Sie die Spiegeldatenbank. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md).  
+1.  Erstellen Sie die Spiegeldatenbank. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
 2.  Richten Sie die Sicherheit auf jeder Serverinstanz ein.  
   
      Jede Serverinstanz in einer Datenbank-Spiegelungssitzung benötigt einen eigenen Datenbank-Spiegelungsendpunkt. Falls der Endpunkt nicht vorhanden ist, müssen Sie ihn erstellen.  
   
     > [!NOTE]  
-    >  Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für die Datenbankspiegelung sind zwei Arten von Transportsicherheit verfügbar: die Windows-Authentifizierung oder die zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+    >  Der für die Datenbankspiegelung von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für die Datenbankspiegelung sind zwei Arten von Transportsicherheit verfügbar: die Windows-Authentifizierung oder die zertifikatbasierte Authentifizierung. Weitere Informationen finden Sie unter [Transport Sicherheit für die Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
-     Stellen Sie sicher, dass auf allen Partnerservern ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl der zu unterstützenden Spiegelungssitzungen darf die Serverinstanz nur einen Endpunkt für die Datenbankspiegelung enthalten. Wenn Sie diese Serverinstanz in Sitzungen zur Datenbankspiegelung ausschließlich für Partner verwenden möchten, können Sie dem Endpunkt die Rolle Partner zuweisen (ROLE **=** PARTNER). Wenn Sie auch den Server in anderen Datenbank-Spiegelungssitzungen für Zeugen verwenden möchten, weisen Sie dem Endpunkt die Rolle ALL zu.  
+     Stellen Sie sicher, dass auf allen Partnerservern ein Endpunkt für die Datenbankspiegelung vorhanden ist. Unabhängig von der Anzahl der zu unterstützenden Spiegelungssitzungen darf die Serverinstanz nur einen Endpunkt für die Datenbankspiegelung enthalten. Wenn Sie diese Serverinstanz ausschließlich für Partner in Datenbank-Spiegelungs Sitzungen verwenden möchten, können Sie die Rolle des Partners dem Endpunkt (Rollen**=** Partner) zuweisen. Wenn Sie auch den Server in anderen Datenbank-Spiegelungssitzungen für Zeugen verwenden möchten, weisen Sie dem Endpunkt die Rolle ALL zu.  
   
      Zum Ausführen der SET PARTNER-Anweisung muss die Option STATE der Endpunkte beider Partner auf STARTED festgelegt sein.  
   
@@ -63,15 +63,15 @@ ms.locfileid: "62755511"
   
 4.  Um den Prinzipalserver als Partner auf der Spiegelungsdatenbank festzulegen, stellen Sie eine Verbindung mit dem Spiegelungsserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=** _<Server-Netzwerkadresse>_  
+     ALTER DATABASE *<database_name>* Set Partner **=** _<server_network_address>_  
   
-     Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist für beide Partner gleich) und *<Server-Netzwerkadresse>* die Servernetzwerkadresse des Prinzipalservers.  
+     Dabei ist *<database_name>* der Name der zu spiegelnden Datenbank (dieser Name ist auf beiden Partnern identisch), und *<server_network_address>* die Servernetzwerk Adresse des Prinzipal Servers ist.  
   
      Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
   
-     TCP<strong>://</strong>\<*Systemadresse>* <strong>:</strong>\<*Port>*  
+     TCP<strong>://</strong>\<*System Adresse>* <strong>:</strong>\<*Port>*  
   
-     Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md)verwendet.  
+     Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md).  
   
      Auf der Spiegelserverinstanz wird z. B. mit der folgenden ALTER DATABASE-Anweisung der Partner als ursprüngliche Prinzipalserverinstanz festgelegt. Der Datenbankname lautet **AdventureWorks**, die Systemadresse ist „DBSERVER1“ (der Name des Partnersystems) und der vom Endpunkt für die Datenbankspiegelung des Partners verwendete Port ist 7022:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62755511"
   
 5.  Um den Spiegelserver als Partner auf der Prinzipaldatenbank festzulegen, stellen Sie eine Verbindung mit dem Prinzipalserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<Datenbankname>* SET PARTNER **=** _<Server-Netzwerkadresse>_  
+     ALTER DATABASE *<database_name>* Set Partner **=** _<server_network_address>_  
   
      Weitere Informationen finden Sie unter Schritt 4.  
   
@@ -209,17 +209,17 @@ ms.locfileid: "62755511"
 > [!NOTE]  
 >  Ein vollständiges Beispiel für das Einrichten der Sicherheitskomponenten, das Vorbereiten der Spiegeldatenbank, das Einrichten der Partner und das Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Zulassen des Netzwerkzugriffs auf einen Datenbank-Spiegelungsendpunkt mithilfe der Windows-Authentifizierung (SQL Server)](../database-mirroring-allow-network-access-windows-authentication.md)   
+ [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Ermöglicht den Netzwerk Zugriff auf einen Datenbankspiegelungs-Endpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
  [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
  [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
- [Datenbankspiegelung und Protokollversand (SQL Server)](database-mirroring-and-log-shipping-sql-server.md)   
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Daten Bank Spiegelung und Protokoll Versand &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Datenbankspiegelung und Replikation (SQL Server)](database-mirroring-and-replication-sql-server.md)   
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Angeben einer Servernetzwerkadresse (Datenbankspiegelung)](specify-a-server-network-address-database-mirroring.md)   
+ [Geben Sie eine Server-Netzwerkadresse &#40;Daten Bank Spiegelung an&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
   
   

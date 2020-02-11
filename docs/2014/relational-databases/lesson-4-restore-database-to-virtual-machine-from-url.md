@@ -11,14 +11,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fb9eaf62514b76e35b73ea87b7820751f670a90f
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175572"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Lektion 5. (Optional) Verschlüsseln Ihrer Datenbank anhand von TDE
-  Optional können Sie die neu erstellte Datenbank verschlüsseln. Die transparente Datenverschlüsselung (TDE) führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Diese Art der Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Weitere Informationen finden Sie unter [transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) und [Verschieben einer TDE-geschützten Datenbank auf eine andere SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
+  Optional können Sie die neu erstellte Datenbank verschlüsseln. Die transparente Datenverschlüsselung (TDE) führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Diese Art der Verschlüsselung verwendet einen Verschlüsselungsschlüssel für die Datenbank (Database Encryption Key, DEK), der in der Datenbankstartseite gespeichert wird, damit er während der Wiederherstellung verfügbar ist. Weitere Informationen finden Sie unter [transparent Data Encryption &#40;TDE&#41;](security/encryption/transparent-data-encryption.md) und [Verschieben einer TDE-geschützten Datenbank auf eine andere SQL Server](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
   
  In dieser Lektion wird davon ausgegangen, dass Sie bereits die folgenden Schritte abgeschlossen haben:  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- Ausführliche Informationen zu den in dieser Lektion verwendeten Transact-SQL-Anweisungen finden Sie unter [CREATE DATABASE &#40;SQL Server Transact-&#41;SQL](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [Create Master Key &#40; . Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [Create Certificate &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)und [sys. DM _database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
+ Ausführliche Informationen zu den in dieser Lektion verwendeten Transact-SQL-Anweisungen finden Sie unter [Create Database &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql), [Create Master Key &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [Create Certificate &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)und [sys. dm_database_encryption_keys &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql).  
   
  **Nächste Lektion:**  
   
- [Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

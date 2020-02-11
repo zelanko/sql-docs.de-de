@@ -1,5 +1,5 @@
 ---
-title: Paketsicherung und-Wiederherstellung (SSIS-Dienst) | Microsoft-Dokumentation
+title: Paket Sicherung und-Wiederherstellung (SSIS-Dienst) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -18,18 +18,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5c775393f7815084e8a79aae4be7f0974886f3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66056931"
 ---
 # <a name="package-backup-and-restore-ssis-service"></a>Paketsicherung und -wiederherstellung (SSIS-Dienst)
     
 > [!IMPORTANT]  
->  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
+>  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete können im Dateisystem oder in „msdb“, einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Systemdatenbank, gespeichert werden. In „msdb“ gespeicherte Pakete können mit den Sicherungs- und Wiederherstellungsfunktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gesichert und wiederhergestellt werden.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Pakete können im Dateisystem oder in der msdb-Datenbank, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] einer-Systemdatenbank, gespeichert werden. In „msdb“ gespeicherte Pakete können mit den Sicherungs- und Wiederherstellungsfunktionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gesichert und wiederhergestellt werden.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Sichern und Wiederherstellen der msdb-Datenbank zu erhalten:  
   
@@ -37,7 +38,7 @@ ms.locfileid: "66056931"
   
 -   [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)  
   
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält das Eingabeaufforderungs-Hilfsprogramm **dtutil** (dtutil.exec), das Sie zum Verwalten von Paketen verwenden können. Weitere Informationen finden Sie unter [dtutil Utility](dtutil-utility.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]enthält das Eingabeaufforderungs-Hilfsprogramm **dtutil** (dtutil. Exec), das Sie zum Verwalten von Paketen verwenden können. Weitere Informationen finden Sie unter [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
  Alle im Paket enthaltenen Konfigurationsdateien werden im Dateisystem gespeichert. Diese Dateien werden nicht gesichert, wenn Sie die msdb-Datenbank sichern. Deshalb müssen Sie sicherstellen, dass die Konfigurationsdateien regelmäßig im Rahmen Ihres Plans zur Sicherung von in „msdb“ gespeicherten Paketen gesichert werden. Um Konfigurationen in das Sichern der msdb-Datenbank einzubeziehen, sollten Sie erwägen, anstelle von dateibasierten Konfigurationen den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurationstyp zu verwenden.  

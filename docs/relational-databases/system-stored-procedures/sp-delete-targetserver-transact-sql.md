@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_targetserver (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_targetserver (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111994"
 ---
-# <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
+# <a name="sp_delete_targetserver-transact-sql"></a>sp_delete_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Entfernt den angegebenen Server aus der Liste der verfügbaren Zielserver.  
    
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,23 +41,23 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server_name = ] 'server'` Der Name des Servers, der als verfügbarer Zielserver entfernt werden soll. *Server* ist **nvarchar(30)** , hat keinen Standardwert.  
+`[ @server_name = ] 'server'`Der Name des Servers, der als verfügbarer Zielserver entfernt werden soll. der *Server* ist vom Datentyp **nvarchar (30)** und hat keinen Standardwert.  
   
-`[ @clear_downloadlist = ] clear_downloadlist` Gibt an, ob die Downloadliste für den Zielserver gelöscht werden soll. *Clear_downloadlist* Typ **Bit**, hat den Standardwert **1**. Wenn *Clear_downloadlist* ist **1**, die Prozedur löscht die Downloadliste für den Server vor dem Löschen des Servers. Wenn *Clear_downloadlist* ist **0**, die Downloadliste nicht deaktiviert ist.  
+`[ @clear_downloadlist = ] clear_downloadlist`Gibt an, ob die Download Liste für den Zielserver gelöscht werden soll. *clear_downloadlist* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *clear_downloadlist* **1**ist, löscht die Prozedur die Download Liste für den Server, bevor der Server gelöscht wird. Wenn *clear_downloadlist* **0**ist, wird die Download Liste nicht gelöscht.  
   
-`[ @post_defection = ] post_defection` Gibt an, ob eine austrittsanweisung auf dem Zielserver bereitgestellt werden soll. *Post_defection* Typ **Bit**, hat den Standardwert 1. Wenn *Post_defection* ist **1**, die Prozedur eine austrittsanweisung auf dem Zielserver vor dem Löschen des Servers. Wenn *Post_defection* ist **0**, bucht die Prozedur keine austrittsanweisung auf dem Zielserver nicht.  
+`[ @post_defection = ] post_defection`Gibt an, ob eine Mängel Anweisung auf dem Zielserver gepostet werden soll. *post_defection* ist vom Typ **Bit**und hat den Standardwert 1. Wenn *post_defection* **1**ist, sendet die Prozedur eine Mängel Anweisung an den Zielserver, bevor der Server gelöscht wird. Wenn *post_defection* **0**ist, stellt die Prozedur keine Fehler Anweisung auf dem Zielserver bereit.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Wird die normale Methode zum Löschen eines Zielservers aufzurufen **Sp_msx_defect** auf dem Zielserver. Verwendung **Sp_delete_targetserver** nur ab, wenn ein manueller Austritt erforderlich ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Der normale Weg zum Löschen eines Zielservers besteht darin, **sp_msx_defect** auf dem Zielserver aufzurufen. Verwenden Sie **sp_delete_targetserver** nur, wenn eine manuelle abaktivierung erforderlich ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** -Serverrolle sein.  
+ Zum Ausführen dieser gespeicherten Prozedur muss den Benutzern die festen Server Rolle **sysadmin** erteilt werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Server `LONDON1` aus der Liste der verfügbaren Auftragsserver entfernt.  
@@ -71,9 +71,9 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_help_targetserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
- [sp_msx_defect &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_help_targetserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
+ [sp_msx_defect &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

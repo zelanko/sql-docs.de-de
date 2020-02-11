@@ -1,5 +1,5 @@
 ---
-title: Ruhende SQL Server 6.5-Anmeldungen können nicht aktualisiert werden kann | Microsoft-Dokumentation
+title: Ruhende SQL Server 6,5-Anmeldungen können nicht aktualisiert werden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e2865607f058c077fc3d12c2e3c2f778450511d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095400"
 ---
 # <a name="dormant-sql-server-65-logins-cannot-be-upgraded"></a>Ein Upgrade ruhender SQL Server 6.5-Anmeldungen kann nicht durchgeführt werden
@@ -41,8 +41,8 @@ SELECT * FROM sysxlogins WHERE (xstatus & 2048) = 2048;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Angeben von Anmeldeinformationen im Berichts-Generator | Microsoft-Dokumentation
+title: Anmelde Informationen in Berichts-Generator angeben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101142"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Angeben von Anmeldeinformationen im Berichts-Generator
@@ -23,7 +23,7 @@ ms.locfileid: "66101142"
  In einer Berichtsdefinition legt jede Datenquellendefinition einen Namen und eine Verbindungszeichenfolge fest, ob integrierte Sicherheit zu verwenden ist und welche Aufforderung anzuzeigen ist, wenn Anmeldeinformationen erforderlich sind, jedoch nicht angegeben wurden. Anmeldeinformationen werden nicht in der Berichtsdefinition gespeichert. Nach Veröffentlichen eines Berichts auf dem Berichtserver können Datenquellen unabhängig von einer Berichtsdefinition verwaltet werden. Datenquellenbesitzer können auf dem Berichtsserver Anmeldeinformationen für eingebettete und freigegebene Datenquellen festlegen.  
   
 > [!NOTE]  
->  Der Berichtsserveradministrator muss einem Benutzer die entsprechenden Berechtigungen zum Durchsuchen des Berichtsservers gewähren, um freigegebene Datenquellen oder Modelle auszuwählen oder Berichte zu öffnen oder zu speichern. Weitere Informationen finden Sie unter [Installation, Deinstallation und Unterstützung von Berichts-Generator](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
+>  Der Berichtsserveradministrator muss einem Benutzer die entsprechenden Berechtigungen zum Durchsuchen des Berichtsservers gewähren, um freigegebene Datenquellen oder Modelle auszuwählen oder Berichte zu öffnen oder zu speichern. Weitere Informationen finden Sie [unter Installieren, deinstallieren und Berichts-Generator-Unterstützung](../../2014/reporting-services/install-uninstall-and-report-builder-support.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  
@@ -57,7 +57,7 @@ ms.locfileid: "66101142"
   
 -   Verwendung eines gespeicherten Benutzernamens und eines gespeicherten Kennworts.  
   
--   Aufforderung zur Eingabe der Anmeldeinformationen durch den Benutzer  
+-   Aufforderung zur Eingabe der Anmeldeinformationen.  
   
 -   Anmeldeinformationen sind nicht erforderlich.  
   
@@ -71,14 +71,14 @@ ms.locfileid: "66101142"
  Wenn Sie eine Aufforderung zur Eingabe von Anmeldeinformationen angeben, muss jeder Benutzer, der auf den Bericht zugreift, einen Benutzernamen und ein Kennwort zum Abrufen der Daten eingeben. Diese Option wird für Berichte mit vertraulichen Daten empfohlen. Bei den angeforderten Anmeldeinformationen kann es sich um die Anmeldeinformationen für ein Windows-Konto oder für eine Datenbank-Anmeldung handeln. Wenn der Datenbankserver die angegebenen Anmeldeinformationen nicht erkennt oder wenn dem angegebenen Benutzer keine Berechtigung zum Abrufen der Daten gewährt wurde, kann die Verbindung nicht hergestellt werden.  
   
 ### <a name="no-credentials"></a>Keine Anmeldeinformationen  
- Für diese Datenquelle sind keine Anmeldeinformationen erforderlich. Um diesen Bericht auf dem Berichtsserver auszuführen, muss das Konto für die unbeaufsichtigte Ausführung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos &#40;SSRS-Konfigurations-Manager&#41; ](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312).  
+ Für diese Datenquelle sind keine Anmeldeinformationen erforderlich. Um diesen Bericht auf dem Berichtsserver auszuführen, muss das Konto für die unbeaufsichtigte Ausführung konfiguriert werden. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md) in der-Dokumentation in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der [-Online](https://go.microsoft.com/fwlink/?linkid=121312)Dokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren und Deinstallieren von Berichts-Generator-Unterstützung](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Unterstützung für Installation, Deinstallation und Berichts-Generator](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)   
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Berichts-Generator-Optionen im Dialogfeld Einstellungen &#40;Berichts-Generator&#41;](report-builder/set-default-options-for-report-builder.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Berichts-Generator Optionen (Dialog Feld), Einstellungen &#40;Berichts-Generator&#41;](report-builder/set-default-options-for-report-builder.md)   
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
   

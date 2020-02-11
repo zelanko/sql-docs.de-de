@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a380b3c4f27df6ad9d60fc27f14a4f5072c676a0
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874501"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Possible Failures During Database Mirroring
@@ -90,7 +90,7 @@ ms.locfileid: "70874501"
   
  Damit eine Verbindung offen bleibt, muss eine Serverinstanz innerhalb der definierten Timeoutzeitspanne einen Ping über diese Verbindung erhalten. Hinzu kommt die Dauer, die zum Senden eines weiteren Pings erforderlich ist. Durch den Empfang eines Pings innerhalb des Timeoutzeitraums wird angezeigt, dass die Verbindung weiterhin offen ist und dass die Serverinstanzen über diese Verbindung kommunizieren. Die Serverinstanz setzt nach dem Empfangen eines Pings die Timeoutzähler dieser Verbindung wieder zurück.  
   
- Wenn während des Timeout Zeitraums kein Ping für eine Verbindung empfangen wird, wird für eine Serverinstanz eine Zeitüberschreitung bei der Verbindung angenommen. Die Serverinstanz schließt die Timeout Verbindung und behandelt das Timeout Ereignis entsprechend dem Zustand und Betriebsmodus der Sitzung.  
+ Empfängt die Verbindung innerhalb des Timeoutzeitraums keinen Pingbefehl, geht die Serverinstanz davon aus, dass bei einer Verbindung ein Timeout aufgetreten ist. Die Serverinstanz schließt die Verbindung, bei der ein Timeout aufgetreten ist, und behandelt das Timeoutereignis gemäß des Status und des Betriebsmodus der Sitzung.  
   
  Ein Timeout wird auch dann als Fehler betrachtet, wenn der andere Server ordnungsgemäß ausgeführt wird. Falls der Timeoutwert einer Sitzung für die normale Reaktionsfähigkeit eines Partners zu niedrig ist, können Fehler auftreten, die in Wirklichkeit keine sind. Ein falscher Fehler tritt auf, wenn eine Serverinstanz erfolgreich Kontakt mit einer anderen Instanz aufnimmt, deren Antwortzeit so langsam ist, dass die Pings nicht vor Ablauf der Timoutspanne eintreffen.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "70874501"
 ## <a name="responding-to-an-error"></a>Reagieren auf Fehler  
  Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Betriebsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen über die Abläufe beim Ausfall eines Partners finden Sie unter [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
  [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
  [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   

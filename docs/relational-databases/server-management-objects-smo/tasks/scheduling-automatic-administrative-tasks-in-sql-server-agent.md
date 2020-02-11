@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e2c852cd3f64e603f6eeab2f48a688dc733b4719
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74094389"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planen von automatischen, administrativen Tasks im SQL Server-Agent
@@ -38,9 +38,9 @@ ms.locfileid: "74094389"
  Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Objekte befinden sich im <xref:Microsoft.SqlServer.Management.Smo.Agent>-Namespace.  
   
 ## <a name="examples"></a>Beispiele  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
-Für Programme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent verwenden, müssen Sie die **using** -Anweisung einschließen, um den Agent-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen **using** -Anweisungen vor allen Deklarationen in der Anwendung ein, z. b.:
+Für Programme, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Agent verwenden, müssen Sie die **using** -Anweisung einschließen, um den Agent-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen **using** -Anweisungen vor allen Deklarationen in der Anwendung ein, z. b.:
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -166,9 +166,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Erstellen einer Warnung in Visual C#  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | Instanz | Comparisionop | Compvalue**  
   
- Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Typ erfordert eckige Klammern, da **Operator** ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Schlüsselwort ist.  
+ Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Typ erfordert eckige Klammern, da **Operator** ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort ist.  
   
 ```csharp  
 {  
@@ -199,9 +199,9 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Erstellen einer Warnung in PowerShell  
  In diesem Codebeispiel wird eine Warnung erstellt, die von einer Leistungsbedingung ausgelöst wird. Die Bedingung muss in einem bestimmten Format bereitgestellt werden:  
   
- **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
+ **ObjectName | CounterName | Instanz | Comparisionop | Compvalue**  
   
- Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Typ erfordert eckige Klammern, da **Operator** ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Schlüsselwort ist.  
+ Ein Operator ist für die Warnungsbenachrichtigung erforderlich. Der <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> Typ erfordert eckige Klammern, da **Operator** ein [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] Schlüsselwort ist.  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  
@@ -266,7 +266,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 //Now users logged on as vLogin can run CmdExec job steps with the specified credentials.   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Agent](../../../ssms/agent/sql-server-agent.md)   
  [Implementieren von Aufträgen](../../../ssms/agent/implement-jobs.md)  
   

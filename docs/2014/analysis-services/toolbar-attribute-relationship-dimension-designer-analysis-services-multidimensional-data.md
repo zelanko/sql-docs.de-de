@@ -1,5 +1,5 @@
 ---
-title: Symbolleiste (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Symbolleiste (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 580641db4007f5a7e414f641a8a0495030405b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66066229"
 ---
 # <a name="toolbar-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -34,15 +34,15 @@ ms.locfileid: "66066229"
   
 -   Doppelklicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer auf eine Dimension, um den Dimensions-Designer zu öffnen, und klicken Sie dann auf die Registerkarte **Attributbeziehung** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Business Intelligence hinzufügen**  
  Öffnet den **Business Intelligence-Assistent** , mit dem Business Intelligence-Funktionen hinzugefügt werden können. Weitere Informationen finden Sie unter [Verwenden des Business Intelligence-Assistenten zum Erweitern von Dimensionen](use-the-business-intelligence-wizard-to-enhance-dimensions.md).  
   
- **Verarbeiten**  
+ **Prozess**  
  Verarbeitet das Objekt.  
   
  **Neue Attributbeziehung**  
- Öffnet das Dialogfeld **Attributbeziehung erstellen** , in dem Sie eine neue Attributbeziehung erstellen können.  
+ Öffnet das Dialogfeld **Attributbeziehung erstellen**, in dem Sie eine neue Attributbeziehung erstellen können.  
   
  **Zoom**  
  Markiert den Prozentwert für die Zoomoption oder zeigt eine Liste verfügbarer Zoomoptionen an.  

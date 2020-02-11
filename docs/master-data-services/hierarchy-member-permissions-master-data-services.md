@@ -14,10 +14,10 @@ ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 41fe545d2a70ea1cbe3ccd05bbbd06174552d3b3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729234"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Berechtigungen für Hierarchieelemente (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73729234"
 
   Berechtigungen für Hierarchieelemente sind optional und sollten nur verwendet werden, wenn ein Benutzer beschränkten Zugriff auf bestimmte Elemente erhalten soll. Wenn Sie keine Berechtigungen auf der Registerkarte **Hierarchieelemente** zuweisen, basieren die Berechtigungen eines Benutzers ausschließlich auf den Berechtigungen, die auf der Registerkarte **Modelle** zugewiesen wurden.  
   
- Berechtigungen für Hierarchie Elemente werden in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Benutzeroberfläche im Funktionsbereich **Benutzer-und Gruppenberechtigungen** auf der Registerkarte **Hierarchie** Elemente zugewiesen. Diese Berechtigungen legen fest, auf welche Elemente ein Benutzer im Funktionsbereich **Explorer** der Benutzeroberfläche zugreifen kann.  
+ Berechtigungen für Hierarchie Elemente werden in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] der Benutzeroberfläche (UI) im Funktionsbereich **Benutzer-und Gruppenberechtigungen** auf der Registerkarte **Hierarchie** Elemente zugewiesen. Diese Berechtigungen legen fest, auf welche Elemente ein Benutzer im Funktionsbereich **Explorer** der Benutzeroberfläche zugreifen kann.  
   
  Auf der Registerkarte **Hierarchieelemente** wird jede Hierarchie als Baumstruktur dargestellt. Wenn Sie eine Berechtigung für einen Knoten in der Struktur zuweisen, erben alle untergeordneten Elemente diese Berechtigung, sofern sie nicht auf einer niedrigeren Ebene explizit zugewiesen wurde.  
   
@@ -37,15 +37,15 @@ ms.locfileid: "73729234"
   
  Berechtigungen für Hierarchieelemente gelten für die Modellversion, denen sie zugewiesen werden, sowie für alle zukünftigen Kopien der Version. Sie gelten nicht für Vorgängerversionen der Version, der sie zugewiesen wurden.  
   
-|Berechtigung|und Beschreibung|  
+|Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
-|**Leseberechtigung**|Die Elemente werden angezeigt.<br /><br /> <br /><br /> Hinweis: Wenn Sie nur dem **Stamm** die **Leseberechtigung**zuweisen, sind die Elemente unter **Stamm** schreibgeschützt. In expliziten Hierarchien und Sammlungen kann der Benutzer jedoch Elemente in den **Stamm** verschieben und dem **Stamm**neue Elemente hinzufügen.|  
-|**Create**|Die Hierarchieelementberechtigung enthält keine Berechtigung zum Erstellen.|  
-|**Update**|Die Elemente werden angezeigt und können vom Benutzer geändert werden. Der Benutzer kann die Elemente außerdem in beliebigen expliziten Hierarchien oder Auflistungen verschieben, denen die Elemente angehören.|  
+|**Lesen**|Die Elemente werden angezeigt.<br /><br /> <br /><br /> Hinweis: Wenn Sie nur dem **Stamm** die **Leseberechtigung**zuweisen, sind die Elemente unter **Stamm** schreibgeschützt. In expliziten Hierarchien und Sammlungen kann der Benutzer jedoch Elemente in den **Stamm** verschieben und dem **Stamm**neue Elemente hinzufügen.|  
+|**Stelle**|Die Hierarchieelementberechtigung enthält keine Berechtigung zum Erstellen.|  
+|**Alisierungs**|Die Elemente werden angezeigt und können vom Benutzer geändert werden. Der Benutzer kann die Elemente außerdem in beliebigen expliziten Hierarchien oder Auflistungen verschieben, denen die Elemente angehören.|  
 |**Löschen**|Die Elemente werden angezeigt und können vom Benutzer gelöscht werden.|  
-|**Verweigern**|Die Elemente werden nicht angezeigt.|  
+|**Deny**|Die Elemente werden nicht angezeigt.|  
   
- Auf der Registerkarte **Hierarchieelemente** werden die zugewiesenen Berechtigungen nicht sofort wirksam. Wie häufig die Berechtigungen angewendet werden, hängt von der Einstellung **Member security processing interval setting** (Intervall für die Verarbeitung der Mitgliedersicherheit) ab, die Sie in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank vornehmen. Eine Anleitung für die sofortige Anwendung von Elementberechtigungen finden Sie unter [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
+ Auf der Registerkarte **Hierarchieelemente** werden die zugewiesenen Berechtigungen nicht sofort wirksam. Wie häufig die Berechtigungen angewendet werden, hängt von der Einstellung **Member security processing interval setting** (Intervall für die Verarbeitung der Mitgliedersicherheit) ab, die Sie in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank vornehmen. Eine Anleitung für die sofortige Anwendung von Elementberechtigungen finden Sie unter [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)neue Elemente hinzufügen.  
   
 > [!NOTE]  
 >  Sie können rekursiven Hierarchien, abgeleiteten Hierarchien mit expliziten Abschlüssen und abgeleiteten Hierarchien mit ausgeblendeten Ebenen keine Hierarchieelementberechtigungen zuweisen.  
@@ -60,16 +60,16 @@ ms.locfileid: "73729234"
   
 -   Wenn einem Hierarchieknoten die Berechtigungen **Aktualisieren** und **Erstellen** und einem anderen die Berechtigungen **Aktualisieren** und **Löschen** zugewiesen sind, können die Elemente im Knoten aktualisiert werden.  
   
--   Wenn einem Hierarchieknoten eine beliebige Kombination der Berechtigungen **Erstellen**/**Lesen**/**Aktualisieren**/**Löschen** und einem anderen Knoten die Berechtigung **Ablehnen** zugewiesen wird, wird der Zugriff auf die Elemente im Knoten verweigert.  
+-   Wenn einem Hierarchie Knoten eine beliebige Kombination **aus Create**/**Read**/**Update**/**Delete** -Berechtigungen und einem anderen Knoten die Berechtigung **verweigern** zugewiesen wird, wird der Zugriff auf die Elemente im Knoten verweigert.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Sicherheitsverbesserungen](https://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
- [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
- [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Hierarchie Element Berechtigungen &#40;Master Data Services zuweisen&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
+ [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
+ [Mitglieder &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   
  [Hierarchien &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md)   
- [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
+ [Sofortiges Anwenden von Element Berechtigungen &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md)  
   
   

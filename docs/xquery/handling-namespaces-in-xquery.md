@@ -1,5 +1,5 @@
 ---
-title: Handhabung von Namespaces in XQuery | Microsoft-Dokumentation
+title: Verarbeiten von Namespaces in XQuery | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004531"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Handhabung von Namespaces in XQuery
@@ -49,7 +49,7 @@ WHERE ProductModelID=7
 ...  
 ```  
   
- Beachten Sie, dass die **Namespace** -Schlüsselwort wird verwendet, um ein neues Namespacepräfix zu definieren "AWMI:". Dieses Präfix muss dann in der Abfrage für alle Elemente verwendet werden, die in diesem Namespace liegen.  
+ Beachten Sie, dass das **Namespace** -Schlüsselwort verwendet wird, um ein neues Namespace Präfix "AWMI:" zu definieren. Dieses Präfix muss dann in der Abfrage für alle Elemente verwendet werden, die in diesem Namespace liegen.  
   
 ### <a name="b-declaring-a-default-namespace"></a>B. Deklarieren eines Standardnamespaces  
  In der vorherigen Abfrage wurde ein neues Namespacepräfix definiert. Dieses Präfix musste dann in der Abfrage verwendet werden, um die gesuchten XML-Strukturen auszuwählen. Alternativ können Sie einen Namespace als Standardnamespace deklarieren, was die folgende geänderte Abfrage zeigt:  
@@ -114,8 +114,8 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
-### <a name="d-construction-using-default-namespaces"></a>D. Konstruktion mit Standardnamespaces  
- Für die Verwendung im konstruierten XML können Sie auch einen Standardnamespace definieren. Z. B. die folgende Abfrage zeigt, wie Sie einen Standardnamespace – "SomeNamespace" angeben können\\, um als Standard für lokal benannte Elemente, die, wie z. B. erstellt werden, verwenden die `<Result>` Element.  
+### <a name="d-construction-using-default-namespaces"></a>D: Konstruktion mit Standardnamespaces  
+ Für die Verwendung im konstruierten XML können Sie auch einen Standardnamespace definieren. Die folgende Abfrage zeigt z. b., wie Sie einen Standard Namespace "URI: SomeNamespace"\\angeben können, der als Standard für die lokal benannten Elemente verwendet werden soll, die erstellt werden, `<Result>` z. b. das-Element.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -145,7 +145,7 @@ where ProductModelID=19
   
  Beachten Sie, dass durch das Überschreiben des Standardelementnamespace oder leerer Namespaces alle in dem konstruierten XML enthaltenen, lokal benannten Elemente anschließend an den überschreibenden Standardnamespace gebunden werden. Wenn Sie Flexibilität bei der XML-Konstruktion benötigen und die Vorteile leerer Namespaces nutzen wollen, sollten Sie aus diesem Grund den Standardelementnamespace nicht überschreiben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

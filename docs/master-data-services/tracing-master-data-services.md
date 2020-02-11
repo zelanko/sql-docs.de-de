@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: fe2c0096aecd1296f7f10ce90a1acae706f3f3af
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727845"
 ---
 # <a name="tracing-master-data-services"></a>Ablaufverfolgung (Master Data Services)
@@ -60,13 +60,13 @@ ms.locfileid: "73727845"
   
 -   Das Protokollformat ist CSV. In der folgenden Tabelle wird das Protokollformat beschrieben.  
   
-    |Element|Beschreibung|  
+    |Element|BESCHREIBUNG|  
     |-------------|-----------------|  
-    |Zeit|Zeitpunkt des Ablaufverfolgungseintrags.|  
+    |Time|Zeitpunkt des Ablaufverfolgungseintrags.|  
     |CorrelationID|Eine Korrelations-ID wird für jede Anforderung zugewiesen. Alle Ablaufverfolgungen, die durch diese Anforderung ausgelöst werden, haben die gleiche Korrelations-ID.<br /><br /> Tritt ein Fehler in der Benutzeroberfläche auf, wird die Korrelations-ID in der Fehlermeldung angezeigt.|  
     |Vorgang|Vorgangsname anfordern. Wenn die Anforderung eine Web-UI-Anforderung ist, ist der Vorgangsname die URL. Wenn die Anforderung eine API-Anforderung ist, ist der Vorgangsname der Dienstname.|  
     |Ebene|Ebene dieses Ablaufverfolgungseintrags.|  
-    |MessageBox|Nachrichtentext der Ablaufverfolgung|  
+    |`Message`|Nachrichtentext der Ablaufverfolgung|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Troubleshooting Logging Improvement](https://go.microsoft.com/fwlink/p/?LinkId=615377)(Problembehandlung der Protokollierungsverbesserung) auf msdn.com.  

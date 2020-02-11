@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Sequence Clustering-Miningmodellstruktur (mittleres Datamining Tutorial) | Microsoft-Dokumentation
+title: Erstellen einer Sequence Clustering-Mining Modellstruktur (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273476"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Erstellen einer Sequence Clustering-Miningmodellstruktur (Mittleres Data Mining Tutorial)
@@ -26,70 +26,70 @@ ms.locfileid: "63273476"
   
 ### <a name="to-create-a-sequence-clustering-structure-and-model"></a>So erstellen Sie eine Sequenzclusterstruktur und ein Sequenzclustermodell  
   
-1.  Im Projektmappen-Explorer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], mit der rechten Maustaste **Miningstrukturen** , und wählen Sie **neue Miningstruktur**.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Projektmappen-Explorer in mit der rechten Maustaste auf **Mining Strukturen** , und wählen Sie **neue Mining Struktur**aus.  
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
-3.  Auf der **Definitionsmethode auswählen** überprüfen Sie, ob Seite **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+3.  Überprüfen Sie auf der Seite **Definitions Methode auswählen** , ob **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **weiter**.  
   
-4.  Auf der **Erstellen von Data Mining-Struktur** Seite, überprüfen Sie, ob die Option **Miningstruktur mit Miningmodell erstellen** ausgewählt ist. Klicken Sie anschließend auf die Dropdownliste für die Option **welche Datamining-Technik möchten Sie verwenden?**, und wählen Sie **Microsoft Sequence Clustering**. Klicken Sie auf **Weiter**.  
+4.  Vergewissern Sie sich auf der Seite **Data Mining-Struktur erstellen** , dass die Option **Mining Struktur mit einem Mining Modell erstellen** ausgewählt ist. Klicken Sie anschließend auf die Dropdown Liste für die Option, **welche Data Mining Technik Sie verwenden möchten?**, und wählen Sie **Microsoft Sequence Clustering**aus. Klicken Sie auf **Weiter**.  
   
-     Die **Datenquellensicht auswählen** Seite wird angezeigt. Klicken Sie unter **verfügbare Datenquellensichten**Option `Orders`.  
+     Die Seite **Datenquellen Sicht auswählen** wird angezeigt. Wählen Sie `Orders`unter **Verfügbare Datenquellen Sichten**die Option aus.  
   
-     Orders ist die gleiche Datenquellensicht, die Sie auch für das Market Basket-Szenario verwendet haben. Wenn Sie diese Datenquellensicht noch nicht erstellt haben, finden Sie unter [Hinzufügen einer Datenquellensicht mit geschachtelten Tabellen &#40;Data Mining Tutorial für fortgeschrittene&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
+     Orders ist die gleiche Datenquellensicht, die Sie auch für das Market Basket-Szenario verwendet haben. Wenn Sie diese Datenquellen Sicht nicht erstellt haben, finden Sie weitere Informationen unter [Hinzufügen einer Datenquellen Sicht mit Tabellen &#40;Data Mining ](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md)-Lernprogramm für fortgeschrittene&#41;.  
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Auf der **Tabellentypen angeben** Seite die **Fall** das Kontrollkästchen neben der **vAssocSeqOrders** Tabelle, und wählen Sie die **geschachtelte** Kontrollkästchen neben der **vAssocSeqLineItems** Tabelle. Klicken Sie auf **Weiter**.  
+6.  Aktivieren Sie auf der Seite **Tabellentypen angeben** neben der Tabelle **vassoctarqorders** das Kontrollkästchen **Fall** , und aktivieren Sie das Kontrollkästchen **Nested** neben der Tabelle **vassoctarqlineitems** . Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
-    >  Wenn ein Fehler auftritt, bei der Auswahl der **Fall** oder **geschachtelte** Kontrollkästchen kann es sein, dass der Join in der Datenquellensicht nicht korrekt ist. Die geschachtelte Tabelle **vAssocSeqLineItems**, muss eine Verbindung mit der Falltabelle **vAssocSeqOrders** durch einen n: 1 Join. Sie können die Beziehung bearbeiten, indem Sie mit der rechten Maustaste auf die Joinlinie klicken und dann die Richtung des Joins umkehren. Weitere Informationen finden Sie unter [erstellen oder Bearbeiten von Beziehung Dialogfeld &#40;Analysis Services – mehrdimensionale Daten&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
+    >  Wenn ein Fehler auftritt, wenn Sie die **Kontrollkästchen für** die Groß-/Kleinschreibung oder die Option aktivieren, ist der Join in der Datenquellen Sicht möglicherweise nicht korrekt. **** Die geschachtelte Table **vassocot qlineitems**muss mit der Fall Tabelle **vassocc-qorders** durch einen n:1-Join verbunden werden. Sie können die Beziehung bearbeiten, indem Sie mit der rechten Maustaste auf die Joinlinie klicken und dann die Richtung des Joins umkehren. Weitere Informationen finden Sie unter [Dialog Feld "Beziehung erstellen oder bearbeiten" &#40;Analysis Services-mehrdimensionalen Daten&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
   
-7.  Auf der **Trainingsdaten** Seite, wählen Sie die Spalten für die Verwendung im Modell durch Auswählen eines Kontrollkästchens wie folgt:  
+7.  Wählen Sie auf der Seite **Trainingsdaten angeben** die Spalten aus, die im Modell verwendet werden sollen, indem Sie wie folgt ein Kontrollkästchen aktivieren:  
   
-    -   **IncomeGroup** wählen Sie die **Eingabe** Kontrollkästchen.  
+    -   **IncomeGroup** Aktivieren Sie das Kontrollkästchen **Eingabe** .  
   
          Diese Spalte enthält interessante Informationen über die Kunden, die Sie für das Clustering verwenden können. Eine Verwendung findet nur im ersten Modell, nicht jedoch im zweiten Modell statt.  
   
-    -   **OrderNumber** wählen Sie die `Key` Kontrollkästchen.  
+    -   **OrderNumber** Aktivieren Sie `Key` das Kontrollkästchen.  
   
          Dieses Feld wird als Bezeichner oder `Key` für die Falltabelle verwendet. Das Schlüsselfeld der Falltabelle sollte nicht als Eingabe verwendet werden, da der Schlüssel eindeutige Werte enthält, die nicht nützlich für das Clustering sind.  
   
-    -   **Region** wählen Sie die **Eingabe** Kontrollkästchen.  
+    -   **Region** Aktivieren Sie das Kontrollkästchen **Eingabe** .  
   
          Diese Spalte enthält interessante Informationen über die Kunden, die Sie für das Clustering verwenden können. Eine Verwendung findet nur im ersten Modell, nicht jedoch im zweiten Modell statt.  
   
-    -   **LineNumber** wählen Sie die `Key` und **Eingabe** Kontrollkästchen.  
+    -   **LineNumber** Aktivieren Sie `Key` die **Kontrollkästchen und** .  
   
-         Die **LineNumber** Feld wird als Bezeichner verwendet werden, für die geschachtelte Tabelle oder `Sequence Key`. Der Schlüssel für eine geschachtelte Tabelle muss immer für die Eingabe verwendet werden.  
+         Das Feld " **LineNumber** " wird als Bezeichner für die geänderte Tabelle oder `Sequence Key`verwendet. Der Schlüssel für eine geschachtelte Tabelle muss immer für die Eingabe verwendet werden.  
   
-    -   **Modell** wählen Sie die **Eingabe** und **vorhersagbar** Kontrollkästchen.  
+    -   **Modell** Aktivieren Sie die Kontrollkästchen **Eingabe** und **vorhersagbar** .  
   
-     Stellen Sie sicher, dass die Auswahl richtig sind, und klicken Sie dann auf **Weiter**.  
+     Überprüfen Sie, ob die Auswahl richtig ist, und klicken Sie dann auf **weiter**.  
   
-8.  Auf der **Inhalt und Datentyp der Spalten angeben** Seite stellen Sie sicher, dass das Raster enthält, die Spalten, Inhaltstypen und Datentypen, die in der folgenden Tabelle dargestellt, und klicken Sie dann auf **Weiter**.  
+8.  Überprüfen Sie auf der Seite **Inhalt und Datentyp der Spalten angeben** , ob das Raster die Spalten, Inhaltstypen und Datentypen enthält, die in der folgenden Tabelle angezeigt werden, und klicken Sie dann auf **weiter**.  
   
     |Tabellen/Spalten|Inhaltstyp|Datentyp|  
     |---------------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Textmodus|  
-    |OrderNumber|Key|Textmodus|  
-    |Region|Discrete|Textmodus|  
+    |IncomeGroup|Discrete|Text|  
+    |OrderNumber|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
     |Zeilennummer|Key Sequence|Long|  
-    |Model|Discrete|Textmodus|  
+    |Modell|Discrete|Text|  
   
-9. Auf der **Testsatz erstellen** Seite, ändern Sie die **Prozentsatz der Testdaten** in 20, und klicken Sie dann auf **Weiter**.  
+9. Ändern Sie auf der Seite **Testsatz erstellen** den **Prozentsatz der zu testenden Daten** auf 20, und klicken Sie dann auf **weiter**.  
   
-10. Auf der **Abschließen des Assistenten** Seite für die **Miningstrukturname**, Typ `Sequence Clustering with Region`.  
+10. Geben `Sequence Clustering with Region`Sie auf der Seite **Assistenten abschließen** für **Mining Struktur Name den Namen**ein.  
   
-11. Für die **Miningmodellname**, Typ `Sequence Clustering with Region`.  
+11. Geben `Sequence Clustering with Region`Sie für **Mining Modellname den Namen**ein.  
   
-12. Überprüfen Sie die **Drillthrough zulassen** ein, und klicken Sie dann auf **Fertig stellen**.  
+12. Aktivieren Sie das Kontrollkästchen **Drillthrough zulassen** , und klicken Sie dann auf **Fertig**stellen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Verarbeiten des Sequenzclustermodells](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft Sequence Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   

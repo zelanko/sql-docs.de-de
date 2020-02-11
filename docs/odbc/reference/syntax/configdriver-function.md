@@ -20,18 +20,18 @@ ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9e6c7759cf63611da167bf54a2e88487abc7b1cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016753"
 ---
 # <a name="configdriver-function"></a>ConfigDriver-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.5  
+**Konformitäts**  
+ Eingeführte Version: ODBC 2,5  
   
  **Zusammenfassung**  
- **ConfigDriver** können Sie ein Setup-Programm installieren und deinstallieren Sie die Funktionen ohne das Programm aufrufen **ConfigDSN**. Diese Funktion führt treiberspezifische Funktionen, wie z. B. treiberspezifische Systeminformationen zu erstellen und DSN-Konvertierung auszuführen, während der Installation, sowie Informationen systemmodifizierungen bereinigen, während der Deinstallation. Diese Funktion wird durch den Setup-DLL für Treiber oder eine separate Setup-DLL verfügbar gemacht.  
+ **ConfigDriver** ermöglicht einem Setup Programm das Ausführen von Installations-und Deinstallations Funktionen, ohne dass das Programm **ConfigDSN**aufruft. Diese Funktion führt Treiber spezifische Funktionen aus, z. b. das Erstellen von treiberspezifischen Systeminformationen und das Ausführen von DSN-Konvertierungen während der Installation sowie das Bereinigen von System Informations Änderungen während der Deinstallation. Diese Funktion wird durch die Treiber-Setup-DLL oder eine separate Setup-DLL verfügbar gemacht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,52 +49,52 @@ BOOL ConfigDriver(
   
 ## <a name="arguments"></a>Argumente  
  *hwndParent*  
- [Eingabe] Handle des übergeordneten Fensters. Die Funktion wird keine Dialogfelder angezeigt, wenn das Handle null ist.  
+ Der Handle des übergeordneten Fensters. Die Funktion zeigt keine Dialogfelder an, wenn das Handle NULL ist.  
   
  *fRequest*  
- [Eingabe] Typ der Anforderung. Die *häufigsten* Argument muss einen der folgenden Werte enthalten:  
+ Der Der Typ der Anforderung. Das *fRequest* -Argument muss einen der folgenden Werte enthalten:  
   
- ODBC_INSTALL_DRIVER: Einen neuen Treiber zu installieren.  
+ ODBC_INSTALL_DRIVER: Installieren Sie einen neuen Treiber.  
   
- ODBC_REMOVE_DRIVER: Treiber zu entfernen.  
+ ODBC_REMOVE_DRIVER: Entfernen eines Treibers.  
   
- Diese Option kann auch sein treiberspezifische, in diesem Fall die *häufigsten* Argument für die erste Option muss über ODBC_CONFIG_DRIVER_MAX + 1 starten. Die *häufigsten* Argument für eine zusätzliche Option muss auch aus einem Wert größer als ODBC_CONFIG_DRIVER_MAX + 1 beginnen.  
+ Diese Option kann auch Treiber spezifisch sein. in diesem Fall muss das *fRequest* -Argument für die erste Option von ODBC_CONFIG_DRIVER_MAX + 1 beginnen. Das *fRequest* -Argument für eine beliebige zusätzliche Option muss auch mit einem Wert beginnen, der größer als ODBC_CONFIG_DRIVER_MAX + 1 ist.  
   
  *lpszDriver*  
- [Eingabe] Der Name des Treibers, der die Systeminformationen im Schlüssel "Odbcinst.ini" registriert.  
+ Der Der Name des Treibers, der im Schlüssel "Odbcinst. ini" der Systeminformationen registriert ist.  
   
- *lpszArgs*  
- [Eingabe] Eine Null-terminierte Zeichenfolge, die mit Argumenten für eine treiberspezifische *häufigsten*.  
+ *lpszargs*  
+ Der Eine NULL-terminierte Zeichenfolge, die Argumente für eine Treiber spezifische *fRequest*enthält.  
   
- *lpszMsg*  
- [Ausgabe] Eine mit Null endende Zeichenfolge, die eine Ausgabenachricht von der Setup-Treiber.  
+ *lpszmsg*  
+ Ausgeben Eine auf NULL endenden Zeichenfolge, die eine Ausgabe Meldung vom Treiber Setup enthält.  
   
- *cbMsgMax*  
- [Eingabe] Länge der *LpszMsg*.  
+ *cbmsgmax*  
+ Der Länge von *lpszmsg*.  
   
- *pcbMsgOut*  
- [Ausgabe] Gesamtzahl der Bytes, die für die Rückgabe in verfügbar *LpszMsg*.  
+ *pcbmsgout*  
+ Ausgeben Die Gesamtanzahl der Bytes, die in " *lpszmsg*" zurückgegeben werden können.  
   
- Wenn die Anzahl der Bytes, die für die Rückgabe verfügbar, größer als oder gleich ist *CbMsgMax*, der Ausgabenachricht im *LpszMsg* auf abgeschnitten *CbMsgMax* minus Null-Terminierung vorliegt Zeichen. Die *PcbMsgOut* Argument kann ein null-Zeiger sein.  
+ Wenn die Anzahl von Bytes, die zurückgegeben werden können, größer oder gleich *cbmsgmax*ist, wird die Ausgabe Nachricht in *lpszmsg* auf *cbmsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt. Das *pcbmsgout* -Argument kann ein NULL-Zeiger sein.  
   
-## <a name="returns"></a>Rückgabewert  
- Die Funktion gibt "true" bei Erfolg, FALSE, wenn ein Fehler auftritt.  
+## <a name="returns"></a>Rückgabe  
+ Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **ConfigDriver** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert an den Installer Fehler Puffer gesendet wird, durch einen Aufruf von **SQLPostInstallerError** und erhalten Sie durch Aufrufen von **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **ConfigDriver** false zurückgibt, wird ein zugeordneter Wert von " * \*Pferd rorcode* " durch einen Aufruf von " **sqlpostinstallererror** " an den Installer-Fehler Puffer gesendet und kann durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_INVALID_HWND|Ungültiges Fenster-handle|Die *HwndParent* Argument war ungültig.|  
-|ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung|Die *häufigsten* Argument war keiner der folgenden:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Der Treiber-spezifische Option war kleiner als oder gleich ODBC_CONFIG_DRIVER_MAX.|  
-|ODBC_ERROR_INVALID_NAME|Ungültiger Name für Treiber oder das Konvertierungsprogramm|Die *LpszDriver* Argument war ungültig. Es konnte nicht in der Registrierung gefunden werden.|  
-|ODBC_ERROR_REQUEST_FAILED|*Anforderung* Fehler|Den angeforderte Vorgang konnte nicht ausgeführt werden die *häufigsten* Argument.|  
-|ODBC_ERROR_DRIVER_SPECIFIC|Oder Translator-treiberspezifischen Fehler|Ein Treiber-spezifische Fehler, für die kein definierten ODBC-Installer-Fehler vorliegt. Die *SzError* Argument in einem Aufruf der **SQLPostInstallerError** Funktion sollte die treiberspezifische Fehlermeldung enthalten.|  
+|ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *hwndParent* -Argument war ungültig.|  
+|ODBC_ERROR_INVALID_REQUEST_TYPE|Ungültiger Typ der Anforderung.|Das *fRequest* -Argument war keiner der folgenden:<br /><br /> ODBC_INSTALL_DRIVER ODBC_REMOVE_DRIVER<br /><br /> Die Treiber spezifische Option war kleiner als oder gleich ODBC_CONFIG_DRIVER_MAX.|  
+|ODBC_ERROR_INVALID_NAME|Ungültiger Treiber-oder Konvertierungs Name|Das *lpszDriver* -Argument war ungültig. Sie konnte nicht in der Registrierung gefunden werden.|  
+|ODBC_ERROR_REQUEST_FAILED|*Anforderung* fehlgeschlagen|Der vom *fRequest* -Argument angeforderte Vorgang konnte nicht durchgeführt werden.|  
+|ODBC_ERROR_DRIVER_SPECIFIC|Treiber-oder Konvertierungs spezifischer Fehler|Ein Treiber spezifischer Fehler, für den kein ODBC-Installationsprogramm Fehler definiert wurde. Das *szerror* -Argument in einem aufzurufenden Befehl der **sqlpostinstallererror** -Funktion sollte die Treiber spezifische Fehlermeldung enthalten.|  
   
 ## <a name="comments"></a>Kommentare  
   
-### <a name="driver-specific-options"></a>Treiberspezifische Optionen  
- Eine Anwendung kann anfordern treiberspezifische Funktionen, die vom Treiber verfügbar gemacht, mit der *häufigsten* Argument. Die *häufigsten* für die erste Option ODBC_CONFIG_DRIVER_MAX plus 1, zusätzliche Optionen werden um 1, die von diesem Wert erhöht werden. Übergeben von Argumenten, die vom Treiber erforderlich sind, für diese Funktion in einer Null-terminierte Zeichenfolge bereitgestellt werden sollen die *LpszArgs* Argument. Treiber, die solche Funktionen bereitstellen, sollten eine Tabelle mit treiberspezifischen Optionen beibehalten. Die Optionen sollten in der Dokumentation zu Driver vollständig dokumentiert werden. Anwendungsentwickler, die treiberspezifische Optionen verwenden, sollten bedenken, dass dies die Anwendung zu weniger interoperable machen wird.  
+### <a name="driver-specific-options"></a>Treiber spezifische Optionen  
+ Eine Anwendung kann mit dem *fRequest* -Argument Treiber spezifische Funktionen anfordern, die vom Treiber verfügbar gemacht werden. Die *häufigste* für die erste Option ist ODBC_CONFIG_DRIVER_MAX Plus 1, und zusätzliche Optionen werden von diesem Wert um 1 erhöht. Alle Argumente, die für diese Funktion für den Treiber erforderlich sind, sollten in einer mit NULL endenden Zeichenfolge bereitgestellt werden, die im *lpszargs* -Argument übergeben wird. Treiber, die diese Funktionalität bereitstellen, sollten eine Tabelle mit treiberspezifischen Optionen verwalten. Die Optionen sollten vollständig in der Treiber Dokumentation dokumentiert werden. Anwendungs Schreiber, die Treiber spezifische Optionen verwenden, sollten sich bewusst sein, dass dadurch die Anwendung weniger interoperabel wird.  
   
 ### <a name="messages"></a>Meldungen  
- Eine Setuproutine Treiber kann eine Textnachricht zu einer Anwendung als eine Null-terminierte Zeichenfolge in die *LpszMsg* Puffer. Die Nachricht wird abgeschnitten und *CbMsgMax* minus der Null-Terminierungszeichen, durch die **ConfigDriver** ausgeführt werden, wenn es größer als oder gleich ist *CbMsgMax* Zeichen.
+ Eine Treiber-Setup Routine kann eine Textnachricht an eine Anwendung als eine mit NULL endende Zeichenfolge im *lpszmsg* -Puffer senden. Die Nachricht wird von der **ConfigDriver** -Funktion auf *cbmsgmax* abzüglich des NULL-Beendigungs Zeichens gekürzt, wenn Sie größer oder gleich *cbmsgmax* -Zeichen ist.

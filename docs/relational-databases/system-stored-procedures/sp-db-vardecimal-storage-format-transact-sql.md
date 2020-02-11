@@ -1,5 +1,5 @@
 ---
-title: Sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft-Dokumentation
+title: sp_db_vardecimal_storage_format (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -23,13 +23,13 @@ ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108225"
 ---
-# <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
+# <a name="sp_db_vardecimal_storage_format-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt den aktuellen vardecimal-Speicherformatstatus einer Datenbank zurück oder aktiviert das vardecimal-Speicherformat für eine Datenbank.  Ab [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] sind Benutzerdatenbanken immer aktiviert. Datenbanken müssen nur in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] für das vardecimal-Speicherformat aktiviert werden.  
@@ -47,21 +47,22 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @dbname=] '*Database_name*"  
- Der Name der Datenbank, für die das Speicherformat geändert werden soll. *Database_name* ist **Sysname**, hat keinen Standardwert. Wenn der Datenbankname ausgelassen wird, wird der vardecimal-Speicherformatstatus aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
+ [ @dbname= ] "*database_name*"  
+ Der Name der Datenbank, für die das Speicherformat geändert werden soll. *database_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn der Datenbankname ausgelassen wird, wird der vardecimal-Speicherformatstatus aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
   
- [ @vardecimal_storage_format=] {'ON' |' AUS "}  
- Gibt an, ob das vardecimal-Speicherformat aktiviert ist. @vardecimal_storage_format kann ON oder OFF sein. Der Parameter ist **varchar(3)** , hat keinen Standardwert. Wenn ein Datenbankname angegeben ist, @vardecimal_storage_format jedoch ausgelassen wird, wird die aktuelle Einstellung der angegebenen Datenbank zurückgegeben. Dieses Argument hat keine Auswirkungen auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höhere Versionen.  
+ [ @vardecimal_storage_format= ] {' On ' | ' Aus "}"  
+ Gibt an, ob das vardecimal-Speicherformat aktiviert ist. 
+  @vardecimal_storage_format kann ON oder OFF sein. Der-Parameter ist vom Datentyp **varchar (3)** und hat keinen Standardwert. Wenn ein Datenbankname angegeben ist, @vardecimal_storage_format jedoch ausgelassen wird, wird die aktuelle Einstellung der angegebenen Datenbank zurückgegeben. Dieses Argument hat keine Auswirkungen auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höhere Versionen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
  Wenn das Datenbankspeicherformat nicht geändert werden kann, wird von sp_db_vardecimal_storage_format ein Fehler zurückgegeben. Wenn sich die Datenbank bereits im angegebenen Zustand befindet, bleibt die gespeicherte Prozedur ohne Wirkung.  
   
- Wenn die @vardecimal_storage_format Argument nicht angegeben wird, werden die Spalten Database Name und Vardecimal State zurückgegeben.  
+ Wenn das @vardecimal_storage_format -Argument nicht angegeben wird, gibt den Spaltendaten Banknamen und den vardecimal-Status zurück.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_db_vardecimal_storage_format gibt den vardecimal-Status zurück, kann den vardecimal-Status aber nicht ändern.  
   
  Unter den folgenden Umständen treten für sp_db_vardecimal_storage_format Fehler auf:  
@@ -74,7 +75,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
   
  Wenn der vardecimal-Speicherformatstatus in OFF geändert werden soll, muss eine Datenbank auf den einfachen Wiederherstellungsmodus festgelegt werden. Wenn eine Datenbank auf den einfachen Wiederherstellungsmodus festgelegt ist, wird die Protokollkette unterbrochen. Führen Sie eine vollständige Datenbanksicherung aus, nachdem Sie den vardecimal-Speicherformatstatus auf OFF festgelegt haben.  
   
- Der Status kann nicht in OFF geändert werden, wenn für einige Tabellen die vardecimal-Datenbankkomprimierung verwendet wird. Um das Speicherformat einer Tabelle zu ändern, verwenden Sie [Sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Wenn Sie bestimmen möchten, für welche Tabellen in einer Datenbank das vardecimal-Speicherformat verwendet wird, verwenden Sie die `OBJECTPROPERTY`-Funktion, und suchen Sie nach der `TableHasVarDecimalStorageFormat`-Eigenschaft, wie im folgenden Beispiel veranschaulicht.  
+ Der Status kann nicht in OFF geändert werden, wenn für einige Tabellen die vardecimal-Datenbankkomprimierung verwendet wird. Verwenden Sie [sp_tableoption](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md), um das Speicherformat einer Tabelle zu ändern. Wenn Sie bestimmen möchten, für welche Tabellen in einer Datenbank das vardecimal-Speicherformat verwendet wird, verwenden Sie die `OBJECTPROPERTY`-Funktion, und suchen Sie nach der `TableHasVarDecimalStorageFormat`-Eigenschaft, wie im folgenden Beispiel veranschaulicht.  
   
 ```  
 USE AdventureWorks2012 ;  
@@ -108,7 +109,7 @@ EXEC sp_tableoption 'Sales.SalesOrderDetail', 'vardecimal storage format', 1 ;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

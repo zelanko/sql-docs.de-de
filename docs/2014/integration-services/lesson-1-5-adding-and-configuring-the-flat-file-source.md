@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 5: Hinzufügen und konfigurieren die Flatfile-Dateiquelle | Microsoft-Dokumentation'
+title: 'Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,28 +11,28 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891538"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle
   In dieser Aufgabe fügen Sie Ihrem Paket eine Flatfilequelle hinzu und konfigurieren sie. Eine Flatfilequelle ist eine Datenflusskomponente, die Metadaten verwendet, die durch einen Flatfile-Verbindungs-Manager definiert werden, um das Format und die Struktur der Daten anzugeben, die aus der Flatfile durch einen Transformationsprozess extrahiert werden. Die Flatfilequelle kann zum Extrahieren von Daten aus einer einzigen Flatfile konfiguriert werden, indem die Dateiformatdefinition verwendet wird, die durch den Flatfile-Verbindungs-Manager zur Verfügung gestellt wird.  
   
- In diesem Tutorial konfigurieren Sie die Flatfilequelle zum Verwenden der `Sample Flat File Source Data` Verbindungs-Manager, die Sie zuvor erstellt haben.  
+ In diesem Tutorial konfigurieren Sie die Flatfilequelle so, dass Sie den `Sample Flat File Source Data` zuvor erstellten Verbindungs-Manager verwendet.  
   
 ### <a name="to-add-a-flat-file-source-component"></a>So fügen Sie eine Flatfilequellen-Komponente hinzu  
   
-1.  Öffnen der **Datenfluss** -Designer, entweder durch Doppelklicken auf die `Extract Sample Currency Data` Datenflusstask oder durch Klicken auf die **Registerkarte Datenfluss**.  
+1.  Öffnen Sie den **Datenfluss** -Designer, indem Sie entweder auf `Extract Sample Currency Data` den Datenfluss Task doppelklicken oder auf die **Registerkarte Datenfluss**klicken.  
   
 2.  Erweitern Sie in der **SSIS-Toolbox**die Option **Weitere Quellen**, und ziehen Sie anschließend **Flatfilequelle** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** .  
   
-3.  Auf der **Datenfluss** Entwurfsoberfläche zum Entwickeln der rechten Maustaste auf die neu hinzugefügte **Flat File Source**, klicken Sie auf **umbenennen**, und ändern Sie den Namen in `Extract Sample Currency Data`.  
+3.  Klicken Sie auf der Entwurfs Oberfläche **Datenfluss** mit der rechten Maustaste auf die neu hinzugefügte **Flatfilequelle**, klicken Sie auf `Extract Sample Currency Data` **Umbenennen**, und ändern Sie den Namen in.  
   
 4.  Doppelklicken Sie auf die Flatfilequelle, um das Dialogfeld Quellen-Editor für Flatfiles zu öffnen.  
   
-5.  In der **Flatfile-Verbindungs-Manager** Kontrollkästchen `Sample Flat File Source Data`.  
+5.  Wählen Sie `Sample Flat File Source Data`im Feld **Verbindungs-Manager für Flatfiles** die Option aus.  
   
 6.  Klicken Sie auf **Spalten** , und überprüfen Sie, ob die Namen der Spalten ordnungsgemäß sind.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "62891538"
   
 8.  Klicken Sie mit der rechten Maustaste auf die Flatfilequelle, und klicken Sie auf **Eigenschaften**.  
   
-9. Überprüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)** .  
+9. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** festgelegt ist.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Flatfilequelle](data-flow/flat-file-source.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)  
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)  
   
   

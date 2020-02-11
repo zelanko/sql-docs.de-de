@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 280f4bc3c20fb65be24ace423f69982ad96bfbff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011113"
 ---
 # <a name="query-with-full-text-search"></a>Abfragen mit Volltextsuche
-  Zum Definieren von Volltextsuchen verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Volltextabfragen Volltextprädikate (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE). Diese unterstützen eine umfangreiche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax, die eine Vielzahl verschiedener Abfrageausdrücke gestattet. Zum Schreiben von Volltextabfragen müssen Sie wissen, wie diese Prädikate und Funktionen verwendet werden.  
+  Zum Definieren von Volltextsuchen verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Volltextabfragen Volltextprädikate (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE). Diese unterstützen eine umfangreiche [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax, die eine Vielzahl verschiedener Abfrageausdrücke gestattet. Zum Schreiben von Volltextabfragen müssen Sie wissen, wie diese Prädikate und Funktionen verwendet werden.  
   
-##  <a name="OV_ft_predicates"></a> Übersicht über die Volltext-Volltextprädikate (CONTAINS und FREETEXT)  
+##  <a name="OV_ft_predicates"></a>Übersicht der voll Text Prädikate (enthält und frei Text)  
  Die Prädikate CONTAINS und FREETEXT geben den Wert TRUE oder FALSE zurück. Sie können nur verwendet werden, um Auswahlkriterien anzugeben, anhand ermittelt wird, ob eine angegebene Zeile mit der Volltextabfrage übereinstimmt. Übereinstimmende Zeilen werden im Resultset zurückgegeben. CONTAINS und FREETEXT werden in der WHERE-Klausel oder der HAVING-Klausel einer SELECT-Anweisung angegeben. Sie können mit beliebigen anderen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prädikaten kombiniert werden, wie z. B. LIKE und BETWEEN.  
   
 > [!NOTE]  
@@ -39,21 +39,21 @@ ms.locfileid: "66011113"
   
 -   Verwenden Sie CONTAINS (oder CONTAINSTABLE) für genaue oder ungenaue (Fuzzy-)Übereinstimmungen mit einzelnen Wörtern und Satzteilen, für innerhalb einer bestimmten Entfernung angrenzende Wörter sowie für gewichtete Übereinstimmungen. Wenn Sie CONTAINS verwenden, müssen Sie mindestens eine Suchbedingung festlegen, die den zu suchenden Text und die Bedingungen für Übereinstimmungen angibt.  
   
-     Sie können logische Operation zwischen Suchbedingungen verwenden. Weitere Informationen finden Sie unter [Verwenden von booleschen Operatoren – AND, OR, AND NOT (in CONTAINS und CONTAINSTABLE)](#Using_Boolean_Operators)weiter unten in diesem Thema.  
+     Sie können logische Operation zwischen Suchbedingungen verwenden. Weitere Informationen finden Sie unter [Verwenden von booleschen Operatoren-and, or und Not (in enthält und CONTAINSTABLE)](#Using_Boolean_Operators)weiter unten in diesem Thema.  
   
 -   Verwenden Sie FREETEXT (oder FREETEXTTABLE), um nach der Bedeutung ohne exakte Übereinstimmungen des Wortlauts, nach angegebenen Wörtern, Ausdrücken oder Sätzen (sogenannten *Freitextzeichenfolgen*) zu suchen. Übereinstimmungen werden dann generiert, wenn ein Begriff oder eine Form eines Begriffs im Volltextindex einer angegebenen Spalte gefunden wird.  
   
  Sie können einen vierteiligen Namen im CONTAINS- oder FREETEXT-Prädikat zum Abfragen von volltextindizierten Spalten der Zieltabellen auf einem Verbindungsserver verwenden. Erstellen Sie zum Vorbereiten eines Remoteservers für den Empfang von Volltextabfragen einen Volltextindex für die Zieltabellen und -spalten auf dem Remoteserver, und fügen Sie anschließend den Remoteserver als Verbindungsserver hinzu.  
   
 > [!NOTE]  
->  Volltextprädikate sind in der [OUTPUT-Klausel](/sql/t-sql/queries/output-clause-transact-sql) nicht zulässig, wenn der Kompatibilitätsgrad der Datenbank auf 100 festgelegt ist.  
+>  Voll Text Prädikate sind in der Output- [Klausel](/sql/t-sql/queries/output-clause-transact-sql) nicht zulässig, wenn der Datenbank-Kompatibilitäts Grad auf 100 festgelegt ist.  
   
  
   
 ### <a name="examples"></a>Beispiele  
   
-#### <a name="a-using-contains-with-simpleterm"></a>A. Verwenden von CONTAINS mit <simple_term>  
- Im folgenden Beispiel werden alle Produkte mit einem Preis von `$80.99` gesucht, die das Wort `"Mountain"` enthalten.  
+#### <a name="a-using-contains-with-simple_term"></a>A. Verwenden von CONTAINS mit <simple_term>  
+ Im folgenden Beispiel werden alle Produkte mit einem Preis von `$80.99` gesucht, die das Wort `"Mountain"`enthalten.  
   
 ```  
 USE AdventureWorks2012  
@@ -81,7 +81,7 @@ GO
   
  
   
-##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a> Übersicht über die Volltextfunktionen (CONTAINSTABLE und FREETEXTTABLE)  
+##  <a name="OV_ft_functions_CONTAINSTABLE_FREETEXTTABLE"></a>Übersicht über die voll Text Funktionen (CONTAINSTABLE und Freitext fähig)  
  Auf die Funktionen CONTAINSTABLE und FREETEXTTABLE wird wie auf einen herkömmlichen Tabellennamen in der FROM-Klausel einer SELECT-Anweisung verwiesen. Sie geben eine Tabelle mit null, einer oder mehreren Zeilen zurück, die die Volltextabfrage erfüllen. Die zurückgegebene Tabelle enthält nur Zeilen der Basistabelle, die die angegebenen Auswahlkriterien in der Volltextsuchbedingung der Funktion erfüllen.  
   
 > [!NOTE]  
@@ -130,7 +130,7 @@ GO
 ```  
   
 #### <a name="b-using-freetexttable"></a>B. Verwenden von FREETEXTTABLE  
- Das folgende Beispiel erweitert eine FREETEXTTABLE-Abfrage so, dass die Zeilen mit dem höchsten Rangfolgenwert zuerst zurückgegeben werden und die Rangfolge jeder Zeile zur Auswahlliste hinzugefügt wird. Um die Abfrage angeben zu können, müssen Sie kennen, die **ProductDescriptionID** ist die eindeutige Schlüsselspalte der `ProductDescription` Tabelle.  
+ Das folgende Beispiel erweitert eine FREETEXTTABLE-Abfrage so, dass die Zeilen mit dem höchsten Rangfolgenwert zuerst zurückgegeben werden und die Rangfolge jeder Zeile zur Auswahlliste hinzugefügt wird. Um die Abfrage anzugeben, müssen Sie wissen, dass **ProductDescriptionID** die eindeutige Schlüssel Spalte für die `ProductDescription` Tabelle ist.  
   
 ```  
 USE AdventureWorks2012  
@@ -165,8 +165,8 @@ GO
   
  
   
-##  <a name="Using_Boolean_Operators"></a> Verwenden von booleschen Operatoren – und, OR, und nicht – in CONTAINS und CONTAINSTABLE  
- Das CONTAINS-Prädikat und die CONTAINSTABLE-Funktion verwenden dieselben Suchbedingungen. Beide unterstützen das Kombinieren mehrerer Suchbegriffe mit booleschen Operatoren – AND, OR und NOT – um logische Operationen auszuführen. Mit AND können Sie z. B. Zeilen suchen, die sowohl "latte" als auch "Croissants" enthalten. Mit AND NOT können Sie z. B. Zeilen suchen, die zwar "Croissants", aber nicht "rustikal" enthalten.  
+##  <a name="Using_Boolean_Operators"></a>Verwenden von booleschen Operatoren, "and", "or" und "Not-in" enthält und CONTAINSTABLE  
+ Das CONTAINS-Prädikat und die CONTAINSTABLE-Funktion verwenden dieselben Suchbedingungen. Beide unterstützen das Kombinieren mehrerer Suchbegriffe mithilfe von booleschen Operatoren (and, or und Not), um logische Operationen auszuführen. Mit AND können Sie z. B. Zeilen suchen, die sowohl "latte" als auch "Croissants" enthalten. Mit AND NOT können Sie z. B. Zeilen suchen, die zwar "Croissants", aber nicht "rustikal" enthalten.  
   
 > [!NOTE]  
 >  Im Gegensatz dazu behandeln FREETEXT und FREETEXTTABLE die booleschen Begriffe als Wörter, nach denen gesucht werden soll.  
@@ -189,7 +189,7 @@ GO
   
  
   
-##  <a name="Additional_Considerations"></a> Zusätzliche Überlegungen zu Volltextabfragen  
+##  <a name="Additional_Considerations"></a>Weitere Überlegungen zu voll Text Abfragen  
  Berücksichtigen Sie beim Schreiben von Volltextabfragen auch Folgendes:  
   
 -   Die LANGUAGE-Option  
@@ -198,7 +198,7 @@ GO
   
 -   Stoppwörter  
   
-     Wenn Sie eine Volltextabfrage definieren, ignoriert die Volltext-Engine Stoppwörter (auch als Füllwörter bezeichnet) in den Suchkriterien. Stoppwörter sind Wörter wie Artikel ("ein" oder "der"), Konjunktionen ("und") oder Hilfsverben ("ist"), die häufig vorkommen können, jedoch bei der Suche nach bestimmtem Text nicht hilfreich sind. Stoppwörter werden in einer Stoppliste aufgelistet. Jedem Volltextindex ist eine bestimmte Stoppliste zugeordnet, die festlegt, welche Stoppwörter bei Abfragen oder im Index während der Indizierung ignoriert werden. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](full-text-search.md).  
+     Wenn Sie eine Volltextabfrage definieren, ignoriert die Volltext-Engine Stoppwörter (auch als Füllwörter bezeichnet) in den Suchkriterien. Stoppwörter sind Wörter wie Artikel ("ein" oder "der"), Konjunktionen ("und") oder Hilfsverben ("ist"), die häufig vorkommen können, jedoch bei der Suche nach bestimmtem Text nicht hilfreich sind. Stoppwörter werden in einer Stoppliste aufgelistet. Jedem Volltextindex ist eine bestimmte Stoppliste zugeordnet, die festlegt, welche Stoppwörter bei Abfragen oder im Index während der Indizierung ignoriert werden. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](full-text-search.md).  
   
 -   Der Thesaurus  
   
@@ -210,7 +210,7 @@ GO
   
 
   
-##  <a name="varbinary"></a> Abfragen von varbinary(max)- und XML-Spalten  
+##  <a name="varbinary"></a>Abfragen von varbinary (max)-und XML-Spalten  
  Wenn ein Volltextindex einer Spalte `varbinary(max)`, `varbinary` oder `xml` erstellt wird, kann die Spalte mit den Volltextprädikaten (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE) wie jede andere volltextindizierte Spalte durchsucht werden.  
   
 > [!IMPORTANT]  
@@ -232,28 +232,28 @@ EXEC sp_fulltext_service @action='load_os_resources', @value=1
 ### <a name="xml-data"></a>xml-Daten  
  In einer `xml`-Datentypspalte werden ausschließlich XML-Dokumente und -Fragmente gespeichert. Für die Dokumente wird immer der XML-Filter verwendet. Ein Typspalte ist daher nicht erforderlich. Bei `xml`-Spalten indiziert der Volltextindex den Inhalt der XML-Elemente und ignoriert die XML-Markups. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt.  
   
- Weitere Informationen zum Abfragen einer `xml` Spalte finden Sie unter [verwenden Volltextsuche mit XML-Spalten](../xml/use-full-text-search-with-xml-columns.md).  
+ Weitere Informationen zum Abfragen einer `xml` -Spalte finden Sie unter Verwenden der [voll Text Suche mit XML-Spalten](../xml/use-full-text-search-with-xml-columns.md).  
   
  
   
-##  <a name="supported"></a> Unterstützte Formen von Abfrageausdrücken  
+##  <a name="supported"></a>Unterstützte Formen von Abfrage Begriffen  
  Dieses Thema enthält eine Zusammenfassung zur Unterstützung der einzelnen Abfrageformen durch die Volltextprädikate und Rowsetwertfunktionen.  
   
 > [!NOTE]  
 >  Für die Syntax eines angegebenen Abfrageausdrucks klicken Sie auf die entsprechenden Links in der Spalte **Unterstützt durch** der folgenden Tabelle.  
   
-|Form des Abfrageausdrucks|Description|Unterstützt durch|  
+|Form des Abfrageausdrucks|BESCHREIBUNG|Unterstützt von|  
 |----------------------|-----------------|------------------|  
-|Mindestens ein Wort oder Ausdruck (*einfacher Begriff*)|Bei der Volltextsuche handelt es sich bei einem Wort (oder einem *Token*) um eine Zeichenfolge, deren Grenzen gemäß den linguistischen Regeln der angegebenen Sprache von entsprechenden Wörtertrennungen identifiziert werden. Ein gültiger Ausdruck besteht aus mehreren Wörtern mit oder ohne Satzzeichen dazwischen.<br /><br /> Beispielsweise ist "Croissant", ein Wort, und klicken Sie auf "Caf?? AU-Lait"ist ein Ausdruck. Solche Wörter und Ausdrücke werden als einfache Begriffe bezeichnet.<br /><br /> Weitere Informationen finden Sie unter [Suchen nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)](#Simple_Term)weiter unten in diesem Thema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) suchen nach einer genauen Entsprechung für den Ausdruck.<br /><br /> [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) teilen den Ausdruck in separate Wörter auf.|  
-|Ein Wort oder Ausdruck, bei dem die Wörter mit dem angegebenen Text beginnen (*Präfixbegriff*)|Ein Präfixbegriff ist eine Zeichenfolge, die einem Wort vorangestellt ist, um ein abgeleitetes Wort oder eine Flexionsform zu erhalten.<br /><br /> Bei einem einzelnen Präfixbegriff sind alle Wörter, die mit dem angegebenen Ausdruck beginnen, Teil des Resultsets. Der Ausdruck "Auto*" ergibt also Übereinstimmungen mit "automatisch", "Automobil" usw.<br /><br /> Im Falle eines Ausdrucks wird jedes Wort innerhalb des Ausdrucks als Präfixbegriff interpretiert. Der Begriff „auto tran\*“ entspricht z. B. „automatic transmission“ und „automobile transducer“, aber nicht „automatic motor transmission“.<br /><br /> Weitere Informationen finden Sie unter [Durchführen von Präfixsuchen (Präfixbegriff)](#Prefix_Term)weiter unten in diesem Thema.|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
-|Flexionsformen eines bestimmten Worts (*Generation Begriff – Flexion*)|Bei den Flexionsformen handelt es sich um die verschiedenen Tempora und Konjugationen eines Verbs oder die Singular- und Pluralformen eines Substantivs. Gehen wir davon aus, dass Sie nach der Flexionsform des Worts "drive" suchen. Wenn mehrere Zeilen in der Tabelle die Wörter "drive", "drives", "drove", "driving" und "driven" enthalten, werden alle in das Resultset aufgenommen, da jedes dieser Wörter durch Flexion aus dem Wort "drive" generiert werden kann.<br /><br /> Weitere Informationen finden Sie unter [Suchen nach Flexionsformen eines bestimmten Worts (Generierungsbegriff)](#Inflectional_Generation_Term)weiter unten in diesem Thema.|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) suchen standardmäßig nach den Flexionsformen aller angegebenen Wörter.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) unterstützen ein optionales INFLECTIONAL-Argument.|  
-|Synonyme Formen eines bestimmten Worts (*Generation Begriff-Thesaurus*)|Ein Thesaurus definiert vom Benutzer angegebene Synonyme für Ausdrücke. Wird einem Thesaurus beispielsweise ein Eintrag "{car, automobile, truck, van}" hinzugefügt, können Sie nach der Thesaurusform des Worts "car" suchen. Alle Zeilen in der abgefragten Tabelle, die die Wörter "automobile", "truck", "van" oder "car" enthalten, finden sich im Resultset, weil jedes dieser Wörter zum Synonymerweiterungssatz gehört, der das Wort "car" enthält.<br /><br /> Informationen zur Struktur von Thesaurusdateien finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md).|[FREETEXT](/sql/t-sql/queries/freetext-transact-sql) und [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) verwenden standardmäßig den Thesaurus.<br /><br /> [CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) unterstützen ein optionales THESAURUS-Argument.|  
-|Ein Wort oder Ausdruck in der Nähe eines anderen Worts oder Ausdrucks (*NEAR-Begriff*)|Ein NEAR-Begriff gibt Wörter oder Ausdrücke an, die zu einander nah sind. Sie können auch die maximale Anzahl von Nicht-Suchbegriffen angeben, die die ersten und letzten Suchbegriffe trennen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen.<br /><br /> Sie suchen beispielsweise die Zeilen, in denen das Wort "ice" sich in der Nähe des Worts "hockey" oder der Ausdruck "ice skating" sich in der Nähe des Ausdrucks "ice hockey" befindet.<br /><br /> Weitere Informationen finden Sie unter [Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR](search-for-words-close-to-another-word-with-near.md).|[CONTAINS](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Mindestens ein Wort oder Ausdruck (*einfacher Begriff*)|Bei der Volltextsuche handelt es sich bei einem Wort (oder einem *Token*) um eine Zeichenfolge, deren Grenzen gemäß den linguistischen Regeln der angegebenen Sprache von entsprechenden Wörtertrennungen identifiziert werden. Ein gültiger Ausdruck besteht aus mehreren Wörtern mit oder ohne Satzzeichen dazwischen.<br /><br /> "Croissant" ist beispielsweise ein Wort und "CAF? au lait "ist ein Ausdruck. Solche Wörter und Ausdrücke werden als einfache Begriffe bezeichnet.<br /><br /> Weitere Informationen finden Sie unter [Suchen nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)](#Simple_Term)weiter unten in diesem Thema.|[Enthält](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) suchen nach einer genauen Entsprechung für den Ausdruck.<br /><br /> " [Freitext](/sql/t-sql/queries/freetext-transact-sql) " und "frei [textfähig](/sql/relational-databases/system-functions/freetexttable-transact-sql) " unterteilen den Ausdruck in separate Wörter.|  
+|Ein Wort oder Ausdruck, bei dem die Wörter mit dem angegebenen Text beginnen (*Präfixbegriff*)|Ein Präfixbegriff ist eine Zeichenfolge, die einem Wort vorangestellt ist, um ein abgeleitetes Wort oder eine Flexionsform zu erhalten.<br /><br /> Bei einem einzelnen Präfixbegriff sind alle Wörter, die mit dem angegebenen Ausdruck beginnen, Teil des Resultsets. Der Ausdruck "Auto*" ergibt also Übereinstimmungen mit "automatisch", "Automobil" usw.<br /><br /> Im Falle eines Ausdrucks wird jedes Wort innerhalb des Ausdrucks als Präfixbegriff interpretiert. Der Begriff „auto tran\*“ entspricht z. B. „automatic transmission“ und „automobile transducer“, aber nicht „automatic motor transmission“.<br /><br /> Weitere Informationen finden Sie unter [Durchführen von Präfixsuchen (Präfixbegriff)](#Prefix_Term)weiter unten in diesem Thema.|[Enthält](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
+|Flexions Formen eines bestimmten Worts (*Generierungs Begriff-INFLECTIONAL*)|Bei den Flexionsformen handelt es sich um die verschiedenen Tempora und Konjugationen eines Verbs oder die Singular- und Pluralformen eines Substantivs. Gehen wir davon aus, dass Sie nach der Flexionsform des Worts "drive" suchen. Wenn mehrere Zeilen in der Tabelle die Wörter "drive", "drives", "drove", "driving" und "driven" enthalten, werden alle in das Resultset aufgenommen, da jedes dieser Wörter durch Flexion aus dem Wort "drive" generiert werden kann.<br /><br /> Weitere Informationen finden Sie unter [Suchen nach Flexionsformen eines bestimmten Worts (Generierungsbegriff)](#Inflectional_Generation_Term)weiter unten in diesem Thema.|" [Fretext](/sql/t-sql/queries/freetext-transact-sql) " und " [fretexfähige](/sql/relational-databases/system-functions/freetexttable-transact-sql) " suchen standardmäßig nach den Flexions Bedingungen aller angegebenen Wörter.<br /><br /> [Enthält](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) unterstützen ein optionales INFLECTIONAL-Argument.|  
+|Synonyme Formen eines bestimmten Worts (*Generierungs Begriff-Thesaurus*)|Ein Thesaurus definiert vom Benutzer angegebene Synonyme für Ausdrücke. Wird einem Thesaurus beispielsweise ein Eintrag "{car, automobile, truck, van}" hinzugefügt, können Sie nach der Thesaurusform des Worts "car" suchen. Alle Zeilen in der abgefragten Tabelle, die die Wörter "automobile", "truck", "van" oder "car" enthalten, finden sich im Resultset, weil jedes dieser Wörter zum Synonymerweiterungssatz gehört, der das Wort "car" enthält.<br /><br /> Informationen zur Struktur von Thesaurusdateien finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md).|" [Fretext](/sql/t-sql/queries/freetext-transact-sql) " und " [fretexctable](/sql/relational-databases/system-functions/freetexttable-transact-sql) " verwenden standardmäßig den Thesaurus.<br /><br /> [Enthält](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) unterstützen ein optionales Thesaurus-Argument.|  
+|Ein Wort oder Ausdruck in der Nähe eines anderen Worts oder Ausdrucks (*Näherungsbegriff*)|Ein NEAR-Begriff gibt Wörter oder Ausdrücke an, die zu einander nah sind. Sie können auch die maximale Anzahl von Nicht-Suchbegriffen angeben, die die ersten und letzten Suchbegriffe trennen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen.<br /><br /> Sie suchen beispielsweise die Zeilen, in denen das Wort "ice" sich in der Nähe des Worts "hockey" oder der Ausdruck "ice skating" sich in der Nähe des Ausdrucks "ice hockey" befindet.<br /><br /> Weitere Informationen finden Sie unter [Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR](search-for-words-close-to-another-word-with-near.md).|[Enthält](/sql/t-sql/queries/contains-transact-sql) und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
 |Wörter oder Ausdrücke mit gewichteten Werten (*gewichteter Begriff*)|Ein Gewichtungswert gibt für jedes Wort und jeden Ausdruck in einer Gruppe von Wörtern und Ausdrücken den Grad der Bedeutung an. Der Gewichtungswert 0,0 ist der niedrigste, und 1,0 ist der höchste mögliche Wert.<br /><br /> Sie können beispielsweise in einer Abfrage, in der nach mehreren Begriffen gesucht wird, jedem Suchwort einen Gewichtungswert zuweisen, der dessen Bedeutung im Vergleich zu den anderen Wörtern in der Suchbedingung angibt. In den Ergebnissen für diesen Abfragetyp werden die relevantesten Zeilen zuerst zurückgegeben, entsprechend der relativen Gewichtung, die Sie den Suchwörtern zugewiesen haben. Das Resultset enthält Dokumente oder Zeilen mit beliebigen angegebenen Ausdrücken (bzw. dem umgebenden Inhalt). Einige Ergebnisse werden jedoch als relevanter bewertet, weil den einzelnen Suchausdrücken verschiedene Gewichtungswerte zugeordnet sind.<br /><br /> Weitere Informationen finden Sie unter [Suchen nach Wörtern oder Ausdrücken mit gewichteten Werten (gewichteter Begriff)](#Weighted_Term)weiter unten in diesem Thema.|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql)|  
   
 
   
-###  <a name="Simple_Term"></a> Suche nach bestimmten Wort oder Ausdruck (einfacher Begriff)  
+###  <a name="Simple_Term"></a>Suchen nach einem bestimmten Wort oder Ausdruck (einfacher Begriff)  
  Sie können in eine Tabelle mithilfe von [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)oder [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) nach einem bestimmten Ausdruck suchen. Wenn Sie z. B. die `ProductReview`-Tabelle in der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]-Datenbank nach allen Kommentaren zu einem Produkt mit dem Begriff "learning curve" durchsuchen möchten, sollten Sie das CONTAINS-Prädikat wie folgt verwenden:  
   
 ```  
@@ -270,8 +270,8 @@ GO
   
  
   
-###  <a name="Prefix_Term"></a> Durchführen von Präfixsuchen (Präfixbegriff)  
- Sie können [CONTAINS](/sql/t-sql/queries/contains-transact-sql) oder [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) verwenden, um nach Wörtern oder Ausdrücken mit einem angegebenen Präfix zu suchen. Alle Einträge in der Spalte, die Text enthalten und mit dem angegebenen Präfix beginnen, werden zurückgegeben. So suchen Sie beispielsweise nach allen Zeilen die das Präfix `top`enthalten, z. B. `top``ple`, `top``ping`und `top`. Die Abfrage lautet folgendermaßen:  
+###  <a name="Prefix_Term"></a>Durchführen von Präfix suchen (Präfix Begriff)  
+ Sie können [CONTAINS](/sql/t-sql/queries/contains-transact-sql) oder [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) verwenden, um nach Wörtern oder Ausdrücken mit einem angegebenen Präfix zu suchen. Alle Einträge in der Spalte, die Text enthalten und mit dem angegebenen Präfix beginnen, werden zurückgegeben. So suchen Sie beispielsweise nach allen Zeilen die das Präfix `top`enthalten, z. B. `top``ple`, `top``ping`und `top`. Die Abfrage sieht folgendermaßen aus:  
   
 ```  
 USE AdventureWorks2012  
@@ -289,7 +289,7 @@ GO
   
  
   
-###  <a name="Inflectional_Generation_Term"></a> Suchen nach Flexionsformen eines bestimmten Worts (Generierungsbegriff)  
+###  <a name="Inflectional_Generation_Term"></a>Suchen nach Flexions Formen eines bestimmten Worts (Generierungs Begriff)  
  Sie können mithilfe von [CONTAINS](/sql/t-sql/queries/contains-transact-sql), [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql), [FREETEXT](/sql/t-sql/queries/freetext-transact-sql)oder [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) nach allen unterschiedlichen Zeiten und Konjugationen eines Verbs oder sowohl die Singular- als auch die Pluralform eines Substantivs (Flexionssuche) bzw. nach Synonymen eines bestimmten Worts (Thesaurussuche) suchen.  
   
  Im folgenden Beispiel wird beispielsweise nach einer Form von "foot" ("foot", "feet" usw.) in der `Comments` -Spalte der `ProductReview` -Tabelle in der `AdventureWorks` -Datenbank gesucht.  
@@ -309,7 +309,7 @@ GO
   
 
   
-###  <a name="Weighted_Term"></a> Suchen nach Wörtern oder Ausdrücken mit gewichteten Werten (gewichteter Begriff)  
+###  <a name="Weighted_Term"></a>Suchen nach Wörtern oder Ausdrücken mit gewichteten Werten (gewichteter Begriff)  
  Sie können [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) verwenden, um nach Wörtern oder Ausdrücken zu suchen und einen Gewichtungswert anzugeben. Die Gewichtung, gemessen als eine Zahl von 0,0 bis 1,0, gibt die Bedeutung für jedes Wort und jeden Ausdruck in einer Gruppe von Wörtern und Ausdrücken an. Der Gewichtungswert 0.0 ist der niedrigste, und 1.0 ist der höchste mögliche Wert.  
   
  Im folgenden Beispiel ist eine Abfrage dargestellt, die mithilfe von Gewichtungen nach allen Kundenadressen sucht, in denen Text, der mit der Zeichenfolge "Bay" beginnt, entweder "Street" oder "View" enthält. Die Zeilen, die mehrere der angegebenen Wörter enthalten, erhalten einen höheren Rang in den Ergebnissen.  
@@ -333,17 +333,17 @@ GO
   
 
   
-##  <a name="tokens"></a> Anzeigen des Tokenisierungsergebnis einer Wörtertrennung, Thesaurus und Stoppliste Kombination  
+##  <a name="tokens"></a>Anzeigen des Tokenisierungsergebnis einer Kombination aus Wörter Trennung, Thesaurus und Stopp Liste  
  Nachdem Sie eine entsprechende Kombination aus Wörtertrennung, Thesaurus und Stoppliste auf eine eingegebene Abfragezeichenfolge angewendet haben, können Sie das Ergebnis der Tokenisierung anzeigen, indem Sie die dynamische Verwaltungssicht **sys.dm_fts_parser** verwenden. Weitere Informationen finden Sie unter [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql).  
   
  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
- [Erstellen von Volltextsuchabfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
+ [Erstellen von voll Text Such Abfragen &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md)   
  [Verbessern der Leistung von Volltextabfragen](improve-the-performance-of-full-text-queries.md)  
   
   

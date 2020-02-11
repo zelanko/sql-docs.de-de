@@ -1,5 +1,5 @@
 ---
-title: Katalogfunktionen | Microsoft-Dokumentation
+title: Katalog Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,22 +16,22 @@ ms.assetid: 81ba9453-c085-47c0-b411-90ca6a5ee428
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 232d2e9b7e9eb695a40058075ea511392e464a32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064400"
 ---
 # <a name="catalog-functions"></a>Katalogfunktionen
-Alle Datenbanken verfügen über eine Struktur, die beschreibt, wie Daten in der Datenbank gespeichert werden. Eine einfache Verkaufsauftrag-Datenbank möglicherweise z. B. die Struktur, in der folgenden Abbildung, in der die ID-Spalten, zum Verknüpfen der Tabellen verwendet werden dargestellt.  
+Alle Datenbanken verfügen über eine Struktur, die beschreibt, wie Daten in der Datenbank gespeichert werden. Beispielsweise könnte eine einfache Verkaufs Auftrags Datenbank die Struktur enthalten, die in der folgenden Abbildung dargestellt ist, in der die ID-Spalten zum Verknüpfen der Tabellen verwendet werden.  
   
  ![Zeigt die Struktur einer einfachen Datenbank](../../../odbc/reference/develop-app/media/pr19.gif "pr19")  
   
- Diese Struktur, zusammen mit anderen Informationen wie z. B. Berechtigungen befindet sich in einem Satz von Systemtabellen, die Namen der Datenbank *Katalog* Dies ist auch bekannt als eine *Datenwörterbuch*.  
+ Diese Struktur wird zusammen mit anderen Informationen, wie z. b. Berechtigungen, in einer Reihe von Systemtabellen gespeichert, die als Katalog der Datenbank bezeichnet *werden* . Dies wird auch als *Datenwörterbuch*bezeichnet.  
   
- Eine Anwendung erkennen, diese Struktur durch Aufrufe von der *Katalogfunktionen*. Die Katalogfunktionen geben Informationen in Resultsets und sind in der Regel implementiert, über **wählen** Anweisungen für die Tabellen im Katalog. Beispielsweise könnte eine Anwendung ein Resultset mit Informationen über alle Tabellen im System oder alle Spalten in einer bestimmten Tabelle anfordern.  
+ Eine Anwendung kann diese Struktur durch Aufrufe der- *Katalog Funktionen*ermitteln. Die Katalog Funktionen geben Informationen in Resultsets zurück und werden in der Regel durch **Select** -Anweisungen für die Tabellen im Katalog implementiert. Beispielsweise könnte eine Anwendung ein Resultset mit Informationen über alle Tabellen im System oder alle Spalten in einer bestimmten Tabelle anfordern.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Verwendung von Katalogdaten](../../../odbc/reference/develop-app/uses-of-catalog-data.md)  
   

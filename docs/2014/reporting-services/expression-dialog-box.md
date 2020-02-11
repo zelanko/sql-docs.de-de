@@ -1,5 +1,5 @@
 ---
-title: Ausdruck (Dialogfeld) | Microsoft-Dokumentation
+title: Dialog Feld "Ausdruck" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -16,18 +16,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109198"
 ---
 # <a name="expression-dialog-box"></a>Ausdruck (Dialogfeld)
-  Verwenden der **Ausdruck** Dialogfeld schreiben [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Ausdrücke für berichtselementeigenschaften-Elementeigenschaften. Mit Ausdrücken können Sie zahlreiche Eigenschaften wie Farbe, Schriftart und Rahmen festlegen. Zur Laufzeit werden die Ausdrücke vom Berichtsprozessor ausgewertet, und das Ergebnis wird durch den Wert der Eigenschaft ersetzt.  
+  Verwenden Sie das Dialogfeld **Ausdruck** , [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] um Ausdrücke für Berichts Element Eigenschaften zu schreiben. Mit Ausdrücken können Sie zahlreiche Eigenschaften wie Farbe, Schriftart und Rahmen festlegen. Zur Laufzeit werden die Ausdrücke vom Berichtsprozessor ausgewertet, und das Ergebnis wird durch den Wert der Eigenschaft ersetzt.  
   
- Ein Ausdruck kann einfach oder komplex sein. Sie können einfache Ausdrücke direkt in einem Textfeld auf der Entwurfsoberfläche oder in einem Dialogfeld eingeben. Verwenden Sie zum Erstellen komplexer Ausdrücke das **Ausdruck** Dialogfeld. Sie können jeweils einen Ausdruck erstellen. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
+ Ein Ausdruck kann einfach oder komplex sein. Sie können einfache Ausdrücke direkt in einem Textfeld auf der Entwurfsoberfläche oder in einem Dialogfeld eingeben. Verwenden Sie das Dialogfeld **Ausdruck** , um komplexe Ausdrücke zu erstellen. Sie können jeweils einen Ausdruck erstellen. Weitere Informationen finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md).  
   
- Zum Öffnen des Dialogfelds **Ausdruck** klicken Sie in Dialogfeldern auf die Ausdrucksschaltfläche (**fx**), oder wählen Sie die Option **Ausdruck** über das Kontextmenü oder die Dropdownlisten im Bereich „Eigenschaften“ aus. Weitere Informationen finden Sie unter [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
+ Zum Öffnen des Dialogfelds **Ausdruck** klicken Sie in Dialogfeldern auf die Ausdrucksschaltfläche (**fx**), oder wählen Sie die Option **Ausdruck** über das Kontextmenü oder die Dropdownlisten im Bereich „Eigenschaften“ aus. Weitere Informationen finden Sie unter [Ausdrucks Verwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md).  
   
  Das Dialogfeld **Ausdruck** enthält ein Codefenster, eine Kategoriestruktur, Kategorieelemente, einen Beschreibungsbereich sowie einen Beispielbereich.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66109198"
 ## <a name="expression-constructs"></a>Ausdruckskonstrukte  
  Ausdrücke beginnen mit einem Gleichheitszeichen (=) und können Konstanten, Literale, Operatoren und Verweise auf integrierte Felder, Auflistungen und Funktionen, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Laufzeitbibliotheksfunktionen, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-CLR-Klassen (Common Language Runtime) sowie benutzerdefinierte Funktionen enthalten. Die folgende Liste beschreibt die Kategorien und Werte, die Sie einem Ausdruck hinzufügen können.  
   
- **Festlegen Sie Ausdruck für:**  _\<PropertyName>_  
+ **Ausdruck festlegen für:**  _\<PropertyName>_  
  Der Name der Eigenschaft, für die Sie einen Ausdruck definieren. Sie können diese Einstellung auch im Eigenschaftenfenster nach dem Namen vornehmen.  
   
  **Konstanten**  
@@ -50,7 +50,7 @@ ms.locfileid: "66109198"
  **Parameter**  
  Bietet eine Liste von Berichtsparametern.  
   
- **Felder (**  _\<Ausgewähltes Dataset >_ **)**  
+ **Felder (** _ \<Ausgewähltes Dataset>_ **)**  
  Zeigt die Liste von Feldern für das in der Datasets-Kategorie ausgewählte Dataset an. Doppelklicken Sie auf ein Feld, um es in das Feld **Ausdruck** zu kopieren.  
   
  **Datasets**  
@@ -65,9 +65,9 @@ ms.locfileid: "66109198"
  **Allgemeine Funktionen**  
  Zeigt allgemeine, nach Typ gruppierte Funktionen an. Wenn Sie im Bereich Element eine Funktion auswählen, werden eine Beschreibung und ein Beispiel angezeigt.  
   
- Zu den häufig verwendeten Funktionen gehören integrierte Berichts- und Aggregationsfunktionen, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Laufzeitbibliotheksfunktionen und [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime (CLR)-Klassen im <xref:System.Math>- und <xref:System.Convert>-Namespace. Sie können auch Verweise auf CLR-Klassen und externe Assemblys hinzufügen, die nicht in der Kategorieliste angezeigt werden. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
+ Zu den häufig verwendeten Funktionen gehören integrierte Berichts- und Aggregationsfunktionen, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Laufzeitbibliotheksfunktionen und [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime (CLR)-Klassen im <xref:System.Math>- und <xref:System.Convert>-Namespace. Sie können auch Verweise auf CLR-Klassen und externe Assemblys hinzufügen, die nicht in der Kategorieliste angezeigt werden. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)-Ausdruck dar.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Codefenster  
  Im oben angezeigten Codefenster können Sie einen Ausdruck eingeben. Wenn Sie das Dialogfeld **Ausdruck** öffnen, enthält das Codefenster den Ausdruck. Sie können den Ausdruck ersetzen oder bearbeiten. Sie können Funktionsaufrufe, Operatoren, Konstanten, Felder, Parameter, Elemente aus den globalen Auflistungen sowie Verweise auf benutzerdefinierten Code hinzufügen. Das Codefenster zeigt Ihre Änderungen sofort an.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "66109198"
  Wenn Sie einen Funktionsnamen, gefolgt von einer linken Klammer, eingeben, wird eine QuickInfo mit Informationen zu den Parametern und Rückgabewerten der Funktion angezeigt.  
   
  **Kategorie**  
- Zeigt Kategorien von Ausdrücken an. Durch Auswahl einer Kategorie wird ein Kontext für die Erstellung eines Ausdrucks bereitgestellt und die Liste der gültigen Werte im Bereich Element geändert. Z. B. für einen Ausdruck für einen Textfeldwert erweitern Sie allgemeine Funktionen, und wählen Sie Aggregatfunktionen anzuzeigende `Avg`, `Count`, und andere Funktionen in der **Element** Bereich.  
+ Zeigt Kategorien von Ausdrücken an. Durch Auswahl einer Kategorie wird ein Kontext für die Erstellung eines Ausdrucks bereitgestellt und die Liste der gültigen Werte im Bereich Element geändert. Beispiel: für einen Ausdruck für einen Textfeldwert erweitern Sie allgemeine Funktionen, und wählen Sie Aggregatfunktionen aus `Avg`, `Count`um, und andere Funktionen im **Element** Bereich anzuzeigen.  
   
  **Element**  
  Zeigt die Liste der gültigen Felder für die ausgewählte Kategorie an. Doppelklicken Sie auf ein Element, um den Ausdruckstext für dieses Element an der Einfügemarke im Codefenster hinzuzufügen.  
@@ -86,14 +86,14 @@ ms.locfileid: "66109198"
  **Werte**  
  Abhängig von der ausgewählten Kategorie und dem Element enthält der dritte Bereich eine Beschreibung, einen Beispielausdruck oder eine Liste gültiger Werte. Ziehen Sie am Rand des Dialogfelds, um den Beispielbereich zu erweitern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
  [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](report-design/group-expression-examples-report-builder-and-ssrs.md)   
- [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
+ [Beispiele für Filter Gleichungen &#40;Berichts-Generator und SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
  [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
  [Hinzufügen eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: Sp_MSchange_merge_agent_properties (Transact-SQL) | Microsoft-Dokumentation
+title: sp_MSchange_merge_agent_properties (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 84c517fe891052ff6e12ee6e92a2d16d912a140b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905194"
 ---
-# <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
+# <a name="sp_mschange_merge_agent_properties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ändert die Eigenschaften eines Merge-Agent-Auftrags, der ausgeführt wird ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version Verteiler. Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
+  Ändert die Eigenschaften eines Merge-Agent Auftrags, der auf einem Verteiler [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mit oder einer höheren Version ausgeführt wird. Diese gespeicherte Prozedur wird zum Ändern von Eigenschaften verwendet, wenn der Verleger in einer Instanz von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt wird. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,35 +43,35 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Veröffentlichungsdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Veröffentlichungs Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db* ist **Sysname**, hat keinen Standardwert.  
+`[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @property = ] 'property'` Ist der zu ändernden veröffentlichungseigenschaft. *Eigenschaft* ist **Sysname**, hat keinen Standardwert.  
+`[ @property = ] 'property'`Die Veröffentlichungs Eigenschaft, die geändert werden soll. *Property* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @value = ] 'value'` Ist der neue Eigenschaftswert. *Wert* ist **nvarchar(524)** , hat den Standardwert NULL.  
+`[ @value = ] 'value'`Der neue Eigenschafts Wert. der Wert ist vom Datentyp **nvarchar (524)** und hat den Standard *Wert* NULL.  
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften des Merge-Agent-Auftrags sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
-|Eigenschaft|Wert|Beschreibung|  
+|Eigenschaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**description**||Kurze Beschreibung des Abonnements.|  
+|**Beschreibung**||Kurze Beschreibung des Abonnements.|  
 |**merge_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**merge_job_password**||Kennwort für das Windows-Konto, unter dem der Agentauftrag ausgeführt wird.|  
 |**publisher_login**||Anmeldename, der beim Herstellen der Verbindung mit einem Verleger zum Synchronisieren des Abonnements verwendet werden soll.|  
-|**publisher_password**||Kennwort des Verlegers.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
+|**publisher_password**||Herausgeber Kennwort<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**publisher_security_mode**|**1**|Windows-Authentifizierung.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Genehmigung.|  
 |**subscriber_login**||Anmeldename, der beim Herstellen der Verbindung mit einem Abonnenten zum Synchronisieren des Abonnements verwendet werden soll.|  
 |**subscriber_password**||Kennwort des Abonnenten.<br /><br /> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]|  
 |**subscriber_security_mode**|**1**|Windows-Authentifizierung.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Genehmigung.|  
   
 > [!NOTE]  
 >  Nach dem Ändern des Anmeldenamens oder Kennworts eines Agents müssen Sie den Agent beenden und neu starten, damit die Änderungen in Kraft treten.  
@@ -79,16 +79,16 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_MSchange_merge_agent_properties** wird bei der Mergereplikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_MSchange_merge_agent_properties** wird bei der Mergereplikation verwendet.  
   
- Wenn der Verleger ausgeführt wird, auf einer Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder höher, verwenden Sie [Sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) so ändern Sie die Eigenschaften eines Merge-Agent-Auftrags, der ein Pushabonnement synchronisiert wird, die auf dem Verteiler ausgeführt wird.  
+ Wenn der Verleger auf einer Instanz von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt wird, sollten Sie [sp_changemergesubscription](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) verwenden, um die Eigenschaften eines Merge-Agent Auftrags zu ändern, der ein Pushabonnement synchronisiert, das auf dem Verteiler ausgeführt wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** feste Serverrolle auf dem Verteiler **Sp_MSchange_merge_agent_properties**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verteiler können **sp_MSchange_merge_agent_properties**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_addmergepushsubscription_agent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)   
+ [sp_addmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)  
   
   
