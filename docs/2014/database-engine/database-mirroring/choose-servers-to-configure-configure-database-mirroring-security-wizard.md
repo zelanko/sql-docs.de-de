@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24e31e60f29970ca1d3a73d3a215447e9dd325bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807237"
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>Zu konfigurierende Server auswählen (Assistent zum Konfigurieren der Sicherheit für die Datenbankspiegelung)
@@ -30,7 +30,7 @@ ms.locfileid: "62807237"
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Prinzipalserverinstanz**  
  Wählen Sie diese Option aus, um die Sicherheit für den Prinzipalserver zu konfigurieren.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62807237"
  **Zeugenserverinstanz**  
  Wählen Sie diese Option aus, um die Sicherheit für den Zeugenserver zu konfigurieren (falls vorhanden).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   

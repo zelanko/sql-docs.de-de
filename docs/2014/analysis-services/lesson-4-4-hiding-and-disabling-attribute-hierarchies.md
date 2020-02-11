@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4381047ad4373a2a5b03dc9ba1c96274b37621f2
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530855"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>Ausblenden und Deaktivieren von Attributhierarchien
@@ -49,25 +49,25 @@ ms.locfileid: "69530855"
   
 2.  Überprüfen Sie, ob die folgenden Attributhierarchien in der **Hierarchie** -Liste vorhanden sind:  
   
-    -   **Base Rate**  
+    -   **Basissatz**  
   
-    -   **Birth Date**  
+    -   **Geburtsdatum**  
   
-    -   **Login ID**  
+    -   **Anmelde-ID**  
   
-    -   **Manager SSN**  
+    -   **Manager-SSN**  
   
     -   **SSN**  
   
 3.  Wechseln Sie auf die Registerkarte **Dimensionsstruktur** , und wählen Sie dann die folgenden Attribute im Bereich **Attribute** aus. Um mehrere Measures auszuwählen, halten Sie beim Klicken die STRG-TASTE gedrückt:  
   
-    -   **Base Rate**  
+    -   **Basissatz**  
   
-    -   **Birth Date**  
+    -   **Geburtsdatum**  
   
-    -   **Login ID**  
+    -   **Anmelde-ID**  
   
-    -   **Manager SSN**  
+    -   **Manager-SSN**  
   
     -   **SSN**  
   
@@ -77,7 +77,7 @@ ms.locfileid: "69530855"
   
      Die folgende Abbildung zeigt die **AttributeHierarchyEnabled** -Eigenschaft mit dem Wert False für die ausgewählten Attribute.  
   
-     ![Attributehierarchyaktivierte Eigenschaft ist auf false festgelegt](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "Attributehierarchyaktivierte Eigenschaft ist auf false festgelegt") .  
+     ![AttributeHierarchyEnabled-Eigenschaft ist auf False festgelegt](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled-Eigenschaft ist auf False festgelegt")  
   
 5.  Klicken Sie im Menü **Erstellen** auf **Analysis Services Tutorial bereitstellen**.  
   
@@ -91,15 +91,15 @@ ms.locfileid: "69530855"
   
 2.  Überprüfen Sie, ob die folgenden Attributhierarchien in der **Hierarchie** -Liste vorhanden sind:  
   
-    -   **Full Name**  
+    -   **Vollständiger Name**  
   
-    -   **Postal Code**  
+    -   **Postleitzahl**  
   
 3.  Wechseln Sie zur Registerkarte **Dimensionsstruktur** , und wählen Sie die folgenden Attribute im Bereich **Attribute** aus, indem Sie die STRG-Taste zur Auswahl mehrerer Attribute gleichzeitig verwenden:  
   
     -   **Vollständiger Name**  
   
-    -   **Postal Code**  
+    -   **Postleitzahl**  
   
 4.  Legen Sie im Eigenschaftenfenster den Wert der **AttributeHierarchyVisible** -Eigenschaft auf **False** für die ausgewählten Attribute fest.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69530855"
   
      Im folgenden Bild wird die **AttributeHierarchyVisible** -Eigenschaft mit dem Wert False gezeigt.  
   
-     ![AttributeHierarchyVisible-Eigenschaft ist auf false festgelegt](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible-Eigenschaft ist auf false festgelegt") .  
+     ![AttributeHierarchyVisible-Eigenschaft ist auf False festgelegt](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible-Eigenschaft ist auf False festgelegt")  
   
 5.  Ziehen Sie das **Postal Code** -Attribut aus dem Bereich **Attribute** in die **Customer Geography** -Benutzerhierarchie im Bereich **Hierarchien und Ebenen** direkt unter der **City** -Ebene.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69530855"
   
      Beachten Sie, dass die ausgeblendeten Ebenen **Postal Code** und **Full Name**in der benutzerdefinierten Hierarchie sichtbar sind.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Sortieren von Attributelementen basierend auf einem sekundären Attribut](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
   
   
