@@ -1,5 +1,5 @@
 ---
-title: FORM (DMX) | Microsoft-Dokumentation
+title: Form (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938118"
 ---
-# <a name="ltsource-data-querygt---shape"></a>&lt;quelldatenabfrage&gt; -Form
+# <a name="ltsource-data-querygt---shape"></a>&lt;Quelldaten Abfrage&gt; -Form
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Kombiniert Abfragen aus mehreren Datenquellen in einer hierarchischen Tabelle (eine Tabelle mit geschachtelten Tabellen), die zur Falltabelle für das Miningmodell wird.  
   
- Die vollständige Syntax eines der **Form** Befehl finden Sie unter den [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK).  
+ Die gesamte Syntax des **Shape** -Befehls ist im [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) Software Development Kit (SDK) dokumentiert.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,26 +39,26 @@ APPEND ({ <child table query> }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Master-Abfrage*  
+ *Master Abfrage*  
  Die Abfrage, die die übergeordnete Tabelle zurückgibt.  
   
- *Abfrage der untergeordneten Tabelle*  
+ *Abfrage für untergeordnete Tabellen*  
  Die Abfrage, die die geschachtelte Tabelle zurückgibt.  
   
- *Master-Spalte*  
+ *Master Spalte*  
  Die Spalte in der übergeordneten Tabelle, die die untergeordneten Zeilen aus dem Ergebnis einer Abfrage der untergeordneten Tabelle (child table query) kennzeichnet.  
   
  *untergeordnete Spalte*  
  Die Spalte in der untergeordneten Tabelle, die die übergeordneten Zeilen aus dem Ergebnis einer Masterabfrage (master query) kennzeichnet.  
   
- *Spaltenname für die Tabelle*  
+ *Spalten Tabellenname*  
  Der neu angefügte Spaltenname in der übergeordneten Tabelle für die geschachtelte Tabelle.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen die Abfragen nach der Spalte sortieren, die die übergeordnete Tabelle und die untergeordnete Tabelle verknüpft.  
   
 ## <a name="examples"></a>Beispiele  
- Können Sie das folgende Beispiel in einer [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md) Anweisung zum Trainieren eines Modells, die eine geschachtelte Tabelle enthält. Die beiden Tabellen in der **Form** Anweisung beziehen sich über die **OrderNumber** Spalte.  
+ Sie können das folgende Beispiel innerhalb einer [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md) -Anweisung verwenden, um ein Modell zu trainieren, das eine geschachtelte Tabelle enthält. Die beiden Tabellen innerhalb der **Shape** -Anweisung werden durch die **OrderNumber** -Spalte verknüpft.  
   
 ```  
 SHAPE {  
@@ -70,10 +70,10 @@ SHAPE {
   RELATE OrderNumber to OrderNumber)   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [&#60;quelldatenabfrage&#62;](../dmx/source-data-query.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; -Datenbearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [&#60;Quelldaten Abfrage&#62;](../dmx/source-data-query.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

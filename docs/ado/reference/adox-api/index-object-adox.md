@@ -16,56 +16,56 @@ ms.assetid: 6b9578c0-bc94-46b9-b801-c18e14b04b31
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7bff462b7c9ffe115cdfd52d1ec1f0a810a50531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966082"
 ---
 # <a name="index-object-adox"></a>Index-Objekt (ADOX)
 Stellt einen Index aus einer Datenbanktabelle dar.  
   
-## <a name="remarks"></a>Hinweise  
- Der folgende Code erstellt ein neues **Index**:  
+## <a name="remarks"></a>Bemerkungen  
+ Mit dem folgenden Code wird ein neuer **Index**erstellt:  
   
 ```  
 Dim obj As New Index  
 ```  
   
- Mit den Eigenschaften und Auflistungen von einer **Index** Objekt ist, können Sie:  
+ Mit den Eigenschaften und Auflistungen eines **Index** Objekts können Sie folgende Aktionen ausführen:  
   
--   Identifizieren Sie den Index mit der [Namen](../../../ado/reference/adox-api/name-property-adox.md) Eigenschaft.  
+-   Identifizieren Sie den Index mit der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft.  
   
--   Zugreifen auf die Datenbankspalten des Index mit der [Spalten](../../../ado/reference/adox-api/columns-collection-adox.md) Auflistung.  
+-   Greifen Sie auf die Daten Bank Spalten des Indexes mit der [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) -Auflistung zu.  
   
--   Gibt an, ob die Indexschlüssel eindeutig sein müssen die [Unique](../../../ado/reference/adox-api/unique-property-adox.md) Eigenschaft.  
+-   Geben Sie an, ob die Index Schlüssel mit der [Unique](../../../ado/reference/adox-api/unique-property-adox.md) -Eigenschaft eindeutig sein müssen.  
   
--   Gibt an, ob der Index den primären Schlüssel für eine Tabelle ist die [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) Eigenschaft.  
+-   Geben Sie an, ob der Index der Primärschlüssel für eine Tabelle mit der [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) -Eigenschaft ist.  
   
--   Gibt an, ob die Datensätze, bei denen null-Werte in ihren Indexfeldern Indexeinträge verfügen die [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) Eigenschaft.  
+-   Geben Sie an, ob Datensätze mit NULL-Werten in ihren Indexfeldern Indexeinträge mit der [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) -Eigenschaft aufweisen.  
   
--   Gibt an, ob der Index gruppiert ist, mit der [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft.  
+-   Geben Sie an, ob der Index mit der [gruppierten](../../../ado/reference/adox-api/clustered-property-adox.md) Eigenschaft gruppiert wird.  
   
--   Zugriff auf die anbieterspezifischen Eigenschaften mit den [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung.  
-  
-> [!NOTE]
->  Beim Anfügen, wird ein Fehler auftreten. ein [Spalte](../../../ado/reference/adox-api/column-object-adox.md) auf die **Spalten** Auflistung von ein **Index** Wenn die **Spalte** ist nicht in einem [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Objekt, das bereits angefügt, um die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung.  
+-   Greifen Sie mit der [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung auf anbieterspezifische Index Eigenschaften zu.  
   
 > [!NOTE]
->  Datenanbieter unterstützen möglicherweise nicht alle Eigenschaften des **Index** Objekte. Wenn Sie einen Wert für eine Eigenschaft festgelegt haben, die vom Anbieter nicht unterstützt wird, wird ein Fehler auftreten. Für den neuen **Index** Objekte aufweist, wird der Fehler auftreten, wenn das Objekt, das die Auflistung angefügt wird. Für vorhandene Objekte tritt der Fehler beim Festlegen der Eigenschaft.  
+>  Wenn eine [Spalte](../../../ado/reference/adox-api/column-object-adox.md) an die **Columns** -Auflistung eines **Indexes** angefügt wird, tritt ein Fehler auf, wenn die **Spalte** nicht in einem [Tabellen](../../../ado/reference/adox-api/table-object-adox.md) Objekt vorhanden ist, das bereits an die [Tabellen](../../../ado/reference/adox-api/tables-collection-adox.md) Auflistung angehängt ist.  
   
 > [!NOTE]
->  Beim Erstellen von **Index** Objekten, die das Vorhandensein einer entsprechenden Standardwert für eine optionale Eigenschaft garantiert nicht, dass es sich bei Ihren Anbieter für die Eigenschaft unterstützt. Weitere Informationen zu den Anbieter Eigenschaften unterstützten finden Sie unter der Dokumentation Ihres Anbieters.  
+>  Der Datenanbieter unterstützt möglicherweise nicht alle Eigenschaften von **Index** Objekten. Wenn Sie einen Wert für eine Eigenschaft festgelegt haben, die nicht vom Anbieter unterstützt wird, tritt ein Fehler auf. Bei neuen **Index** Objekten tritt der Fehler auf, wenn das Objekt an die Auflistung angefügt wird. Bei vorhandenen Objekten tritt der Fehler auf, wenn die-Eigenschaft festgelegt wird.  
+  
+> [!NOTE]
+>  Wenn Sie **Index** Objekte erstellen, gewährleistet das vorhanden sein eines entsprechenden Standardwerts für eine optionale Eigenschaft nicht, dass der Anbieter die-Eigenschaft unterstützt. Weitere Informationen zu den Eigenschaften, die der Anbieter unterstützt, finden Sie in der Dokumentation des Anbieters.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Index-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/index-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Indizes Append-Methode – Beispiel (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [IndexNulls-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
- [PrimaryKey- und Unique-Eigenschaften – Beispiel (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [SortOrder-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Index Append-Methode (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
+ [Beispiel für IndexNulls-Eigenschaft (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)   
+ [Beispiel für PrimaryKey und Unique Properties (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
+ [Sortorider-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/sortorder-property-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
+ [Indexes-Auflistung (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [Properties-Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)

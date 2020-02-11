@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493944"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
@@ -24,7 +24,7 @@ ms.locfileid: "69493944"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Herunterladen und Extrahieren der Projektdatei  
   
-1.  [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
+1.  [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um zur Downloadseite zu wechseln, auf der die Beispiel Projekte für dieses Tutorial aufgeführt sind. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
   
 2.  Klicken Sie auf **Analysis Services Tutorial SQL Server 2012** , um das Paket herunterzuladen, in dem die Projekte für dieses Lernprogramm enthalten sind.  
   
@@ -56,18 +56,18 @@ ms.locfileid: "69493944"
 ### <a name="data-source-view"></a>Datenquellensicht  
  Die Datenquellensicht im erweiterten Projekt enthält eine zusätzliche Faktentabelle und vier zusätzliche Dimensionstabellen aus der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
- Beachten Sie, dass bei zehn Tabellen in der Datenquellen Sicht \<das Diagramm alle Tabellen > überfüllt wird. Dadurch wird das Verständnis der Beziehungen zwischen den Tabellen und die Suche nach bestimmten Tabellen erschwert. Die Tabellen sind in zwei logischen Diagrammen organisiert – das **Internet Sales** - und das **Reseller Sales** -Diagramm, um dieses Problem zu lösen. Diese Diagramme sind jeweils um eine einzelne Faktentabelle herum organisiert. Mithilfe von logischen Diagrammen können Sie eine bestimmte Untermenge der Tabellen in einer Datenquellensicht anzeigen und damit arbeiten, statt immer alle Tabellen und deren Beziehungen in einem einzigen Diagramm anzuzeigen.  
+ Beachten Sie, dass bei zehn Tabellen in der Datenquellen Sicht \<das Diagramm alle Tabellen> überfüllt wird. Dadurch wird das Verständnis der Beziehungen zwischen den Tabellen und die Suche nach bestimmten Tabellen erschwert. Die Tabellen sind in zwei logischen Diagrammen organisiert – das **Internet Sales** - und das **Reseller Sales** -Diagramm, um dieses Problem zu lösen. Diese Diagramme sind jeweils um eine einzelne Faktentabelle herum organisiert. Mithilfe von logischen Diagrammen können Sie eine bestimmte Untermenge der Tabellen in einer Datenquellensicht anzeigen und damit arbeiten, statt immer alle Tabellen und deren Beziehungen in einem einzigen Diagramm anzuzeigen.  
   
 #### <a name="internet-sales-diagram"></a>Internet Sales-Diagramm  
  Das **Internet Sales** -Diagramm enthält die Tabellen, die mit dem Verkauf von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Produkten direkt an Kunden über das Internet verknüpft sind. Bei den Tabellen im Diagramm handelt es sich um die vier Dimensionstabellen und eine Faktentabelle, die Sie in Lektion 1 der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt haben. Nachfolgend sind diese Tabellen aufgeführt:  
   
--   **Geography**  
+-   **Human**  
   
 -   **Kunde**  
   
--   **Datum**  
+-   **Date**  
   
--   **Product**  
+-   **Produkt**  
   
 -   **InternetSales**  
   
@@ -76,17 +76,17 @@ ms.locfileid: "69493944"
   
 -   **Reseller**  
   
--   **Promotion**  
+-   **Ungs**  
   
 -   **SalesTerritory**  
   
--   **Geography**  
+-   **Human**  
   
--   **Datum**  
+-   **Date**  
   
--   **Product**  
+-   **Produkt**  
   
--   **Employee**  
+-   **Mitarbeiter**  
   
 -   **ResellerSales**  
   
@@ -113,10 +113,10 @@ ms.locfileid: "69493944"
 #### <a name="analysis-services-cube"></a>Analysis Services-Cube  
  Der **Analysis Services Tutorial** -Cube enthält jetzt zwei Measuregruppen – die ursprüngliche Measuregruppe basierend auf der **InternetSales** -Tabelle und eine zweite Measuregruppe basierend auf der **ResellerSales** -Tabelle in der **Adventure Works DW 2012** -Datenquellensicht.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md) 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen eines Analysis Services-Projekts](lesson-2-5-deploying-an-analysis-services-project.md)  
   
   

@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1df8207ebf479d22f1e67191dfdd254fb6403fea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63276873"
 ---
 # <a name="browse-for-objects-object-explorer"></a>Nach Objekten suchen (Objekt-Explorer)
   Zeigt eine Liste der Objekte des ausgewählten Typs an. Wählen Sie ein oder mehrere Objekte aus dieser Liste aus, indem Sie das entsprechende Kontrollkästchen aktivieren. Im Feld **Nach Objekten suchen** werden für die Aktion relevante Elemente und ausschließlich die Elemente angezeigt, zu deren Anzeige Sie berechtigt sind.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kontrollkästchen**  
  Aktivieren Sie es, um das Objekt einzuschließen.  
   
- **Symbol**  
+ **Symbol:**  
  Ein Symbol, das den Objekttyp darstellt.  
   
  **Name**  

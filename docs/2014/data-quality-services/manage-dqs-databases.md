@@ -11,17 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5be0404cc35964573b8a66d7874c76a82e7c55f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484475"
 ---
 # <a name="manage-dqs-databases"></a>Manage DQS Databases
   Dieser Abschnitt enthält Informationen zu Datenbankverwaltungsaktionen, z. B. zum Sichern/Wiederherstellen oder Trennen/Anfügen, die für DQS-Datenbanken ausgeführt werden können.  
   
-##  <a name="BackupRestore"></a> Sichern und Wiederherstellen der DQS-Datenbanken  
- Die Sicherung und Wiederherstellung von SQL Server-Datenbanken sind allgemeine Vorgänge, die Datenbankadministratoren ausführen, damit sie in einem Notfall Datenverlust verhindern können, indem sie die Daten aus den Sicherungsdatenbanken wiederherstellen. [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] wird hauptsächlich von zwei SQL Server-Datenbanken implementiert: DQS_MAIN und DQS_PROJECTS. Die Sicherungs- und Wiederherstellungsverfahren für [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Datenbanken sind vergleichbar mit denen für beliebige andere SQL Server-Datenbanken. Bei der Sicherung und Wiederherstellung von DQS-Datenbanken sind jedoch drei Besonderheiten zu beachten:  
+##  <a name="BackupRestore"></a>Sichern und Wiederherstellen der DQS-Datenbanken  
+ Die Sicherung und Wiederherstellung von SQL Server-Datenbanken sind allgemeine Vorgänge, die Datenbankadministratoren ausführen, damit sie in einem Notfall Datenverlust verhindern können, indem sie die Daten aus den Sicherungsdatenbanken wiederherstellen. 
+  [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] wird hauptsächlich von zwei SQL Server-Datenbanken implementiert: DQS_MAIN und DQS_PROJECTS. Die Sicherungs- und Wiederherstellungsverfahren für [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Datenbanken sind vergleichbar mit denen für beliebige andere SQL Server-Datenbanken. Bei der Sicherung und Wiederherstellung von DQS-Datenbanken sind jedoch drei Besonderheiten zu beachten:  
   
 -   Die Sicherungs- und Wiederherstellungsvorgänge der DQS-Datenbanken müssen synchronisiert werden. Andernfalls ist der wiederhergestellte [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] nicht funktionsfähig.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "65484475"
 >  -   Die Protokollkürzung im einfachen Wiederherstellungsmodell kann sich verzögern, wenn die Protokolleinträge über eine längere Zeit aktiv bleiben (z. B. bei einer langen und zeitintensiven Transaktion). Dies kann dann dazu führen, dass das Transaktionsprotokoll schnell an Größe zunimmt. Außerdem wird die Größe der physischen Protokolldatei (LDF-Datei) bei der Protokollkürzung nicht verringert. Um die Größe einer physischen Protokolldatei zu verringern, müssen Sie die Protokolldatei verkleinern. Informationen zum Beheben von Problemen bei Transaktionsprotokollen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md) oder im Microsoft Support-Artikel unter [https://go.microsoft.com/fwlink/?LinkId=237446](https://go.microsoft.com/fwlink/?LinkId=237446).  
 > -   Sie müssen regelmäßig eine vollständige oder differenzielle Sicherung der DQS-Datenbanken ausführen und das Transaktionsprotokoll sichern, um eine Zeitpunktwiederherstellung der Daten auszuführen. Weitere Informationen finden Sie unter [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../relational-databases/backup-restore/full-database-backups-sql-server.md) und [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
-##  <a name="DetachAttach"></a> Trennen/Anfügen der DQS-Datenbanken  
+##  <a name="DetachAttach"></a>Trennen/Anfügen der DQS-Datenbanken  
  Sie können die Daten- und Transaktionsprotokolldateien der DQS-Datenbanken trennen und die Datenbanken dann wieder an dieselbe oder eine andere Instanz von SQL Server anfügen, wenn Sie die DQS-Datenbanken in eine andere Instanz von SQL Server auf demselben Computer ändern oder die Datenbank verschieben möchten.  
   
  Ausführliche Informationen zu den Aspekten, die berücksichtigt werden sollten, bevor oder während Datenbanken in SQL Server getrennt und angefügt werden, finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../relational-databases/databases/database-detach-and-attach-sql-server.md).  
@@ -54,7 +55,7 @@ ms.locfileid: "65484475"
 |Beschreibt das Sichern und Wiederherstellen von DQS-Datenbanken.|[Sichern und Wiederherstellen von DQS-Datenbanken](../../2014/data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Beschreibt das Trennen und Anfügen der DQS-Datenbanken.|[Trennen und Anfügen von DQS-Datenbanken](../../2014/data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [DQS-Verwaltung](../../2014/data-quality-services/dqs-administration.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [DQS-Administration](../../2014/data-quality-services/dqs-administration.md)  
   
   

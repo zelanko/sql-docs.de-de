@@ -1,5 +1,5 @@
 ---
-title: Synchronize-Methode (RDS) | Microsoft-Dokumentation
+title: Synchronisierungsmethode (RDS) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,17 +14,17 @@ ms.assetid: 7af42866-7db2-4174-8251-388a2cf741f2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e280e5f8c9eda472c6448b199ffa94ac18c13751
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963265"
 ---
 # <a name="synchronize-method-rds"></a>Synchronize-Methode (RDS)
-Synchronisieren Sie das angegebene Recordset, mit der Datenbank, die durch die Verbindungszeichenfolge für die Verwendung in ADO 2.5 und höher angegeben.  
+Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge für die Verwendung in ADO 2,5 und höher angegeben wird.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,36 +35,36 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Eine Zeichenfolge verwendet, um mit dem OLE DB-Anbieter hergestellt, in dem die Anforderung gesendet werden. Wenn ein Handler verwendet wird, kann der Handler bearbeiten oder Ersetzen Sie die Verbindungszeichenfolge.  
+ Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieters verwendet wird, an den die Anforderung gesendet wird. Wenn ein Handler verwendet wird, kann der Handler die Verbindungs Zeichenfolge bearbeiten oder ersetzen.  
   
- *HandlerString*  
- Die Zeichenfolge identifiziert, den Handler, der mit dieser Ausführung verwendet werden. Die Zeichenfolge besteht aus zwei Teilen. Der erste Teil enthält den Namen (ProgID) des Handlers verwendet werden. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Handler übergeben werden. Wie die Argumentzeichenfolge interpretiert wird, ist bestimmten Handler. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt, (obwohl die Argumentzeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
+ *Handlerstring*  
+ Die Zeichenfolge identifiziert den Handler, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Handler übermittelt werden sollen. Wie die Argument Zeichenfolge interpretiert wird, ist handlerspezifisch. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt (obwohl die Argument Zeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
   
- *lSynchronizeOptions*  
- Eine Bitmaske der Synchronisierungsoptionen.  
+ *lsynchronizeoptions*  
+ Eine Bitmaske der Synchronisierungs Optionen.  
   
- 1 =*UpdateTransact* Aktualisierungen der Datenbank in einer Transaktion zusammengefasst werden. Die Transaktion wird abgebrochen, wenn eines der Updates ein Fehler auftritt.  
+ 1 =*updatetransact* -Aktualisierungen der Datenbank werden in einer Transaktion umschließt. Die Transaktion wird abgebrochen, wenn ein Update fehlschlägt.  
   
- 2 =*RefreshWithUpdate* bewirkt, dass Zeile Status zurückgegeben werden, wenn weder *aktualisieren* noch *RefreshConflicts* festgelegt ist.  
+ 2 = Refresh*withupdate* bewirkt, dass Zeilen Status zurückgegeben werden, wenn weder Refresh-noch *Refresh* - *Konflikte* festgelegt sind.  
   
- 4 =*aktualisieren* das Recordset mit aktuellen Daten aus der Datenbank aktualisiert wird. Ausstehende Updates werden nicht auf die Datenbank übertragen. Wenn dieses Bit nicht festgelegt ist, das Recordset wird nicht aktualisiert und alle ausstehenden Updates an die Datenbank gesendet werden.  
+ 4 =*Aktualisieren* das Recordset wird mit aktuellen Daten aus der Datenbank aktualisiert. Ausstehende Updates werden nicht an die Datenbank übermittelt. Wenn dieses Bit nicht festgelegt ist, wird das Recordset nicht aktualisiert, und alle ausstehenden Updates werden an die Datenbank übermittelt.  
   
- 8 =*RefreshConflicts* keine Zeilen mit ausstehenden Änderungen aktualisiert. Zeilen, die Fehler beim Aktualisieren werden mit aktuellen Daten aus der Datenbank aktualisiert.  
+ 8 = Aktualisierungs*Konflikte* alle Zeilen mit ausstehenden Änderungen können nicht aktualisiert werden. Die Zeilen, die nicht aktualisiert werden konnten, werden mit den aktuellen Daten aus der Datenbank aktualisiert.  
   
- *ppRecordset*  
- Ein Zeiger auf das Recordset synchronisiert werden.  
+ *pprecordset*  
+ Ein Zeiger auf das Recordset, das synchronisiert werden soll.  
   
- *pStatusArray*  
- Synchronisieren eine Variante, die ein sicheres Array der Status der Zeile für die betroffenen Zeilen zurückgibt. Nicht festgelegt, wenn keine der folgenden Optionen für die Synchronisierung festgelegt werden: *RefreshWithUpdate*, *aktualisieren* und *RefreshConflicts*.  
+ *pstatus Array*  
+ Eine Variante, mit der ein sicheres Array von Zeilen Status für die von der Synchronisierung betroffenen Zeilen zurückgegeben wird. Nicht festgelegt, wenn keine der folgenden Synchronisierungs Optionen festgelegt ist: Refresh *withupdate, Update* *und* *Refresh* .  
   
- *lcid*  
- Die LCID verwendet, um Fehler zu erstellen, die zurückgegeben werden *pInformation*.  
+ *LCID*  
+ Die LCID, die verwendet wird, um Fehler zu erstellen, die in *pinformation*zurückgegeben werden.  
   
- *pInformation*  
- Ein Zeiger auf die von zurückgegebenen Informationsfehler **Execute**. Wenn der Wert NULL ist, wird keine Fehlerinformationen zurückgegeben.  
+ *pinformation*  
+ Ein Zeiger auf Informationen, die von **Execute**zurückgegeben werden. Wenn der Wert NULL ist, werden keine Fehlerinformationen zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
- Die *HandlerString* Parameter kann null sein. Was in diesem Fall geschieht, hängt davon ab, wie die RDS-Server konfiguriert ist. Eine Zeichenfolge Handler "MSDFMAP.handler" gibt an, dass der Handler für Microsoft bereitgestellt (Msdfmap.dll) verwendet werden soll. Eine Zeichenfolge Handler "MASDFMAP.handler,sample.ini" gibt an, dass der Handler für Msdfmap.dll verwendet werden soll und das Argument "sample.ini" an den Ereignishandler übergeben werden sollen. Klicken Sie dann interpretiert Msdfmap.dll das Argument als eine Richtung auf die sample.ini verwenden, um die Verbindungs- und Zeichenfolgen zu überprüfen.  
+## <a name="remarks"></a>Bemerkungen  
+ Der *handlerstring* -Parameter kann NULL sein. Was in diesem Fall geschieht, hängt von der Konfiguration des RDS-Servers ab. Die handlerzeichenfolge "msdfmap. Handler" gibt an, dass der von Microsoft bereitgestellte Handler ("msdfmap. dll") verwendet werden soll. Eine handlerzeichenfolge von "masdfmap. Handler, Sample. ini" gibt an, dass der msdfmap. dll-Handler verwendet werden sollte und dass das Argument "Sample. ini" an den Handler übermittelt werden soll. Msdfmap. dll interpretiert dann das Argument als Richtung, um die Verbindungs-und Abfrage Zeichenfolgen mit der Datei "Sample. ini" zu überprüfen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataFactory-Objekt (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

@@ -19,22 +19,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ddbf842839e917477269c0de7886055d585a196c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250487"
 ---
 # <a name="replication-backward-compatibility"></a>Abwärtskompatibilität von Replikationen
-  In den Themen zur Abwärtskompatibilität werden Änderungen im Verhalten von Replikationen zwischen den verschiedenen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben. Es ist wichtig die Abwärtskompatibilität zu verstehen, wenn Sie ein Upgrade ausführen, oder wenn Sie über mehrere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Replikationstopologie verfügen.  
+  In den Themen im Abschnitt zur Abwärtskompatibilität werden Änderungen im Verhalten zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen der Replikation beschrieben. Es ist wichtig die Abwärtskompatibilität zu verstehen, wenn Sie ein Upgrade ausführen, oder wenn Sie über mehrere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Replikationstopologie verfügen.  
   
  [Als veraltet markierte Funktionen der SQL Server-Replikation](deprecated-features-in-sql-server-replication.md)  
- Replikationsfunktionen, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aufgrund der Abwärtskompatibilität beibehalten wurden, die jedoch in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt werden.  
+ Replikations Funktionen, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] aus Gründen der Abwärtskompatibilität beibehalten wurden, aber in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt werden.  
   
  [Wichtige Änderungen in der SQL Server-Replikation](breaking-changes-in-sql-server-replication.md)  
  Änderungen an Replikationsfunktionen, die möglicherweise Änderungen an Anwendungen erfordern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von replizierten Datenbanken](../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   

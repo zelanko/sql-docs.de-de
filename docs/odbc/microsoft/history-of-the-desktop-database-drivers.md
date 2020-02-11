@@ -15,22 +15,22 @@ ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d225bac273558b928e3e8fd2f41bd121a723f6ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67952371"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Versionsgeschichte der Desktop-Datenbanktreiber
-Die folgende Tabelle zeigt den Versionsverlauf für die Desktop-Datenbanktreiber.  
+Die folgende Tabelle zeigt den Versionsverlauf der Desktop-Datenbanktreiber.  
   
-|Version|Veröffentlichungsdatum|Beschreibung|  
+|Version|Release Date|BESCHREIBUNG|  
 |-------------|------------------|-----------------|  
-|1,0|August 1993|Verwendet der Abfrageprozessor SIMBA erzeugten PageAhead Software. SIMBA empfangen ODBC-Aufrufe und SQL-Anweisungen, verarbeitet diese in Microsoft Jet installierbare ISAM-Aufrufe und anschließend aufgerufen, die Microsoft Jet-ISAM-Dispatch-Ebene, um das Laden, und rufen den entsprechenden installierbaren ISAM-Treiber.|  
-|2.0|Dezember 1994|Wird verwendet, mit ODBC-Version 2.0, die ODBC-Funktionalität erheblich erweitert. Die wesentliche Änderung in der Version 2.0 war, dass die Microsoft Jet-Datenbank-Engine den Abfrageprozessor SIMBA ersetzt. Die Microsoft Jet-Datenbank-Engine integriert die Desktop-Datenbanktreiber viel enger mit dem Microsoft Jet installierbare ISAM-Treiber und Microsoft Access-Technologie. Bedeutende Verbesserungen wurden:<br /><br /> -Native Unterstützung für scrollfähige Cursor.<br />-Native Unterstützung für äußere Joins, aktualisiert und heterogene Joins und Transaktionen.<br />-32-Bit-Versionen der Treiber für Microsoft Windows NT.|  
-|3.0|Oktober 1995|Unterstützung für Windows 95 und Windows NT Workstation oder NT Server 3.51 wird bereitgestellt. Nur 32-Bit-Treiber wurden in dieser Version enthalten; die 16-Bit-Treiber für Windows-Version 3.1 wurden entfernt.|  
-|3.5|Oktober 1996|Diese Treiber wurden Doppelbyte-Zeichensatz (DBCS)-aktiviert, wurden besser geeignet für die Verwendung mit Internet-Anwendungen als in vorherigen Versionen und die Verwendung von Datenquellennamen (DSNs) an die Datei untergebracht. Die Microsoft Access-Treiber wurde in einer RISC-Version für die Verwendung auf Alpha-Plattformen für Windows 95/98 und Windows NT 3.51 und späteren Betriebssystemen freigegeben.|  
-|4.0|Spät 1998|Bietet Unterstützung für Microsoft Jet-Modul-Unicode-Format sowie die Kompatibilität für ANSI-Format von Vorgängerversionen.|  
+|1.0|1993. August|Der von der pageahead-Software erzeugte Simba-Abfrage Prozessor wurde verwendet. Simba hat ODBC-Aufrufe und SQL-Anweisungen empfangen, Sie in Microsoft Jet installierbare ISAM-aufrufen verarbeitet und dann die Microsoft Jet ISAM Dispatch-Schicht aufgerufen, um den entsprechenden installierbaren ISAM-Treiber zu laden und aufzurufen.|  
+|2.0|Dezember 1994|Wird mit ODBC 2,0 verwendet, das die ODBC-Funktionalität erheblich erweitert hat. Die wesentliche Änderung in Version 2,0 war, dass das Microsoft Jet-Datenbankmodul den Simba-Abfrage Prozessor ersetzt hat. Mit der Microsoft Jet-Datenbank-Engine wurden die Desktop-Datenbanktreiber viel enger in die Microsoft Jet installierbaren ISAM-Treiber und die Microsoft Access-Technologie integriert. Bedeutende Verbesserungen:<br /><br /> -Native Unterstützung für scrollbare Cursor.<br />-Native Unterstützung für äußere Joins, aktualisierbare und heterogene Joins und Transaktionen.<br />-32-Bit-Versionen der Treiber für Microsoft Windows NT.|  
+|3.0|Oktober 1995|Unterstützung für Windows 95 und Windows NT-Arbeitsstation oder NT Server 3,51 bereitgestellt. In dieser Version sind nur 32-Bit-Treiber enthalten. die 16-Bit-Treiber für Windows-Version 3,1 wurden entfernt.|  
+|3.5|Oktober 1996|Diese Treiber waren als Double-Byte-Zeichensatz (Double-Byte Character Set, DBCS) aktiviert, eignen sich besser für die Verwendung mit Internet Anwendungen als frühere Versionen und stellten die Verwendung von Datei Datenquellen Namen (DSNs) in Rechnung. Der Microsoft Access-Treiber wurde in einer RISC-Version für die Verwendung auf Alpha Plattformen für Windows 95/98 und Windows NT 3,51 und spätere Betriebssysteme veröffentlicht.|  
+|4.0|Späterer 1998|Bietet Unterstützung für das Unicode-Format des Microsoft Jet-Moduls sowie Kompatibilität für das ANSI-Format früherer Versionen.|  
   
 > [!NOTE]  
->  Die Treiber version3.5 wurden entwickelt, mit ODBC2 arbeiten. *x*. Obwohl sie auch mit ODBC 3.0 funktionieren, unterstützen sie nicht alle ODBC 3.0-Features. Weitere Informationen zur Funktionsweise von diese Treiber mit ODBC-Version 3.0, finden Sie unter [Abwärtskompatibilität und zur Einhaltung von Standards](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).
+>  Die Treiber der Version 3.5 wurden für die Verwendung mit ODBC2 entworfen. *x*. Obwohl Sie auch mit ODBC 3,0 funktionieren, unterstützen Sie nicht alle ODBC 3,0-Features. Weitere Informationen zur Funktionsweise dieser Treiber mit ODBC 3,0 finden Sie unter abwärts [Kompatibilität und Einhaltung von Standards](../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).

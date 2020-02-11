@@ -1,5 +1,5 @@
 ---
-title: 'C in SQL: Datum | Microsoft-Dokumentation'
+title: 'C zu SQL: Datum | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,30 +15,30 @@ ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019408"
 ---
-# <a name="c-to-sql-date"></a>C in SQL: date
-Der Bezeichner für die Date-ODBC-C-Datentyp ist:  
+# <a name="c-to-sql-date"></a>C zu SQL: Datum
+Der Bezeichner für den ODBC-C-Datentyp "Date" lautet:  
   
  SQL_C_TYPE_DATE  
   
- Die folgende Tabelle zeigt die ODBC-SQL-Datentypen, die in denen Datum C-Daten konvertiert werden kann. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ In der folgenden Tabelle werden die ODBC-SQL-Datentypen angezeigt, in die die Daten von Date C konvertiert werden können. Eine Erläuterung der Spalten und Begriffe in der Tabelle finden [Sie unter Datentypen von C in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|SQL-Typ-ID|Test|SQLSTATE|  
+|SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalte-Byte-Länge > = 10<br /><br /> Spalte Byte Länge < 10<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalte Zeichenlänge > = 10<br /><br /> Spalte Zeichen Länge < 10<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Datenwert ist ein gültiges Datum<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Datenwert ist ein gültiges Datum [a]<br /><br /> Datenwert ist kein gültiges Datum|n/v<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Spalten Byte Länge >= 10<br /><br /> Spalten Byte Länge < 10<br /><br /> Der Datenwert ist kein gültiges Datum.|–<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Spalten Zeichenlänge >= 10<br /><br /> Spalten Zeichenlänge < 10<br /><br /> Der Datenwert ist kein gültiges Datum.|–<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Der Datenwert ist ein gültiges Datum.<br /><br /> Der Datenwert ist kein gültiges Datum.|–<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiges Datum [a]<br /><br /> Der Datenwert ist kein gültiges Datum.|–<br /><br /> 22007|  
   
- [a] der Uhrzeitteil des Zeitstempels auf 0 (null) festgelegt ist.  
+ [a] der Uhrzeit Teil des Zeitstempels wird auf 0 (null) festgelegt.  
   
- Weitere Informationen dazu, welche Werte in einer Struktur SQL_C_TYPE_DATE gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
+ Informationen dazu, welche Werte in einer SQL_C_TYPE_DATE Struktur gültig sind, finden Sie unter [C-Datentypen](../../../odbc/reference/appendixes/c-data-types.md)weiter oben in diesem Anhang.  
   
- Wenn C Daten in SQL-Zeichendaten konvertiert werden, werden die resultierende Zeichendaten die "*JJJJ*-*mm*-*TT*" Format.  
+ Wenn date C-Daten in Zeichen-SQL-Daten konvertiert werden, liegen die resultierenden Zeichendaten im Format "*JJJJ*-*mm*-*DD*".  
   
- Der Treiber ignoriert die Längenindikator /-Wert, bei der Konvertierung von Daten von der C-Date-Datentyp, und es wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des Datentyps Date C. Der Längenindikator /-Wert übergeben wird die *StrLen_or_Ind* -Argument in **SQLPutData** und in den Puffer, der mit angegebenen die *StrLen_or_IndPtr* -Argument in **SQLBindParameter**. Der Datenpuffer wird angegeben, mit der *DataPtr* -Argument in **SQLPutData** und die *ParameterValuePtr* -Argument in **SQLBindParameter**.
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus dem Datentyp Date c und geht davon aus, dass die Größe des Daten Puffers der Größe des Datentyps date c entspricht. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.

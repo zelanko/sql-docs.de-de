@@ -1,5 +1,5 @@
 ---
-title: DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Eigenschaften, Methoden und Ereignisse für das DataControl-Objekt (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +13,15 @@ ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cf2f7602d1435b4a4075c437ba7f403b93aeed5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964392"
 ---
 # <a name="datacontrol-object-rds-properties-methods-and-events"></a>DataControl-Objekt (RDS) – Eigenschaften, Methoden und Ereignisse
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="properties"></a>Eigenschaften  
  [Connect-Eigenschaft (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)  
@@ -69,12 +69,12 @@ ms.locfileid: "67964392"
   
  [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  [onError-Ereignis (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)  
   
  [onReadyStateChange-Ereignis (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
 
 

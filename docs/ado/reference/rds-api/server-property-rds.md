@@ -1,5 +1,5 @@
 ---
-title: Servereigenschaft (RDS) | Microsoft-Dokumentation
+title: Server Eigenschaft (RDS) | Microsoft-Dokumentation
 ms.technology: connectivity
 ms.custom: ''
 ms.date: 01/19/2017
@@ -16,24 +16,24 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963476"
 ---
 # <a name="server-property-rds"></a>Servereigenschaft (RDS)
-Gibt das Protokoll (Internet Information Services, IIS), Namen und die Kommunikation an.  
+Gibt den Namen des Internetinformationsdienste (IIS) und das Kommunikationsprotokoll an.  
   
- Sie können festlegen, die **Server** Eigenschaft zur Entwurfszeit in den Objekt-Tags, der die[RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt oder zur Laufzeit im Skriptcode.  
+ Sie können die **Server** -Eigenschaft zur Entwurfszeit in den Objekt Tags des[RDS festlegen. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt oder zur Laufzeit im Skriptcode.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
  **HTTP**  
   
- Während der Entwurfszeit-syntax  
+ Syntax zur Entwurfszeit  
   
 ```  
   
@@ -43,7 +43,7 @@ Gibt das Protokoll (Internet Information Services, IIS), Namen und die Kommunika
   
 ```  
   
- Laufzeit-syntax  
+ Lauf Zeit Syntax  
   
 ```  
   
@@ -54,16 +54,16 @@ awebsrvr:port
   
 ```  
   
- **HTTPS**  
+ **Http**  
   
- Während der Entwurfszeit-syntax  
+ Syntax zur Entwurfszeit  
   
 ```  
   
 <PARAM NAME="Server" VALUE="https://awebsrvr:port">  
 ```  
   
- Laufzeit-syntax  
+ Lauf Zeit Syntax  
   
 ```  
   
@@ -72,7 +72,7 @@ DataControl.Server="https://awebsrvr:port"
   
  **DCOM**  
   
- Während der Entwurfszeit-syntax  
+ Syntax zur Entwurfszeit  
   
 ```  
   
@@ -82,16 +82,16 @@ computername
   
 ```  
   
- Laufzeit-syntax  
+ Lauf Zeit Syntax  
   
 ```  
   
 DataControl.Server="computername"  
 ```  
   
- **In-process**  
+ **Prozess interne**  
   
- Während der Entwurfszeit-syntax  
+ Syntax zur Entwurfszeit  
   
 ```  
   
@@ -99,7 +99,7 @@ DataControl.Server="computername"
   
 ```  
   
- Laufzeit-syntax  
+ Lauf Zeit Syntax  
   
 ```  
   
@@ -107,23 +107,23 @@ DataControl.Server=""
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *Awebsrvr*oder *Computername*  
- Ein **Zeichenfolge** Wert, der eine Internet oder Intranetpfad oder Namen des Computers enthält, wenn der Server auf einem Remotecomputer befindet, oder eine leere Zeichenfolge ist, wenn der Server auf dem lokalen Computer ist.  
+ *awebsrvr*oder *Computername*  
+ Ein **Zeichen** folgen Wert, der einen Internet-oder intranetpfad bzw. einen Computernamen enthält, wenn sich der Server auf einem Remote Computer befindet. oder eine leere Zeichenfolge, wenn sich der Server auf dem lokalen Computer befindet.  
   
- *port*  
- Dies ist optional. Ein Port, der zur Verbindung mit eines Servers mit IIS verwendet wird. Die Nummer des Ports, die in Internet Explorer festgelegt ist (auf der **Ansicht** Menü klicken Sie auf **Optionen**, und wählen Sie dann die **Verbindung** Registerkarte) oder in IIS.  
+ *Port*  
+ Optional. Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
   
  *DataControl*  
- Eine Objektvariable, steht ein **RDS. DataControl** Objekt.  
+ Eine Objekt Variable, die einen **RDS darstellt. DataControl** -Objekt.  
   
-## <a name="remarks"></a>Hinweise  
- Der Server ist der Speicherort, in denen die **RDS. DataControl** Anforderung (d. h. eine Abfrage oder Aktualisierung) verarbeitet. Standardmäßig werden alle Anforderungen von verarbeitet die [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt [MSDFMAP. Handler](../../../ado/guide/remote-data-service/datafactory-customization.md) -Komponente und [MSDFMAP. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) Datei auf dem angegebenen Server. Beachten Sie, dass beim Ändern von Servern zum Abstimmen von Einstellungen in der alten und neuen **MSDFMAP. INI** Dateien. Inkompatibilitäten möglicherweise Anforderungen, die erfolgreich auf einem Server auf einem anderen fehl. Wenn die Server-Eigenschaft, auf die leere Zeichenfolge festgelegt ist "", diese Objekte auf dem lokalen Computer verwendet werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Server ist der Ort, an dem das RDS-Verzeichnis ist **. Die DataControl** -Anforderung (d. h. eine Abfrage oder ein Update) wird verarbeitet. Standardmäßig werden alle Anforderungen vom [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt, [msdfmap, verarbeitet. Handlerkomponente](../../../ado/guide/remote-data-service/datafactory-customization.md) und [msdfmap. INI](../../../ado/guide/remote-data-service/understanding-the-customization-file.md) -Datei auf dem angegebenen Server. Beachten Sie, dass beim Ändern von Servern, um die Einstellungen in der alten und neuen **msdfmap abzustimmen. INI** -Dateien. Inkompatibilitäten können dazu führen, dass auf einem Server erfolgreiche Anforderungen auf einem anderen Server fehlschlagen. Wenn die Server-Eigenschaft auf die leere Zeichenfolge "" festgelegt ist, werden diese Objekte auf dem lokalen Computer verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Server-Eigenschaft – Beispiel (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für eine Server Eigenschaft (VBScript)](../../../ado/reference/rds-api/server-property-example-vbscript.md)   
  [Connect-Eigenschaft (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)   
  [SQL-Eigenschaft](../../../ado/reference/rds-api/sql-property.md)   
  [SubmitChanges-Methode (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)

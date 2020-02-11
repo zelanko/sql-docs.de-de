@@ -1,5 +1,5 @@
 ---
-title: Geschachtelte Tabellen (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Tabellen (Analysis Services Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083249"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen einem Data Mining-Algorithmus Daten in Form einer Reihe von Fällen zugeführt werden, die in einer Falltabelle enthalten sind. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Daten als eine Reihe von Fällen, die in einer Fall Tabelle enthalten sind, in einen Data Mining Algorithmus eingespeist werden. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine eindeutige Methode zum Verarbeiten dieser Fälle mithilfe von- *Tabellen*dar. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
   
- ![Zwei Tabellen mit einer geschachtelten Tabelle kombiniert](../media/nested-tables.gif "zwei Tabellen mit einer geschachtelten Tabelle kombinieren")  
+ ![Zwei Tabellen, die mithilfe einer geschachtelten Tabelle kombiniert sind](../media/nested-tables.gif "Zwei Tabellen, die mithilfe einer geschachtelten Tabelle kombiniert sind")  
   
  In diesem Diagramm enthält die erste Tabelle, bei der es sich um die übergeordnete Tabelle handelt, Kundeninformationen und ordnet jedem Kunden einen eindeutigen Bezeichner zu. Die zweite (untergeordnete) Tabelle enthält die von jedem Kunden getätigten Käufe. Die Käufe in der untergeordneten Tabelle werden durch den eindeutigen Bezeichner, die **CustomerKey** -Spalte, mit der übergeordneten Tabelle verknüpft. Die dritte Tabelle zeigt, wie die beiden Tabellen kombiniert werden.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66083249"
  Geschachtelte Tabellen können entweder programmgesteuert mithilfe von DMX (Data Mining Extensions) oder AMO (Analysis Management Objects) erstellt werden, Sie können aber auch den Data Mining-Assistenten und den Data Mining-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]hierfür verwenden.  
   
 ## <a name="using-nested-table-columns-in-a-mining-model"></a>Verwenden von geschachtelten Tabellenspalten in einem Miningmodell  
- In der Falltabelle ist der Schlüssel oft eine Kundenkennung, ein Produktname oder ein Datum in einer Folge: Daten, die eine Zeile der Tabelle eindeutig identifizieren. verwendet werden. In geschachtelten Tabellen ist der Schlüssel dagegen meist nicht der relationale Schlüssel (oder Fremdschlüssel), sondern die Spalte, die das zu modellierende Attribut enthält.  
+ In der Falltabelle ist der Schlüssel oft eine Kundenkennung, ein Produktname oder ein Datum in einer Folge: Daten, die eine Zeile der Tabelle eindeutig identifizieren. . In geschachtelten Tabellen ist der Schlüssel dagegen meist nicht der relationale Schlüssel (oder Fremdschlüssel), sondern die Spalte, die das zu modellierende Attribut enthält.  
   
  Wenn die Falltabelle beispielsweise Bestellungen enthält und die geschachtelte Tabelle enthält die Artikel der Bestellung, wäre es interessant, die Beziehung zwischen den in der geschachtelten Tabelle gespeicherten Artikeln für mehrere der in der Falltabelle gespeicherten Bestellungen zu modellieren. Obwohl die geschachtelte Tabelle **Items** über den relationalen Schlüssel **OrderID** mit der Falltabelle **Orders**verknüpft ist, sollte **OrderID** nicht als Schlüsselspalte für die geschachtelte Tabelle verwendet werden. Stattdessen sollten Sie die Spalte **Items** als Schlüsselspalte für die geschachtelte Tabelle verwenden, weil diese die zu modellierenden Daten enthält. Meist kann die Spalte **OrderID** im Miningmodell gefahrlos ignoriert werden, weil die Beziehung zwischen der Falltabelle und der geschachtelten Tabelle bereits durch die Definition der Datenquellensicht festgelegt wurde.  
   
@@ -65,8 +65,8 @@ ms.locfileid: "66083249"
   
  Weitere Informationen zum Erstellen und Verwenden von Modellfiltern finden Sie unter [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

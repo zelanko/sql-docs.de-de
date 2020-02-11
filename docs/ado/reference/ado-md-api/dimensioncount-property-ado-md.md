@@ -17,21 +17,21 @@ ms.assetid: 87929cbc-9c38-491a-8616-62d45c51e299
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ccb2ae99761ecfa1fc52cef44e4cf35a5600531
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938497"
 ---
 # <a name="dimensioncount-property-ado-md"></a>DimensionCount-Eigenschaft (ADO MD)
-Gibt die Anzahl der Dimensionen auf eine [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+Gibt die Anzahl der Dimensionen auf einer [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **lange** ganze Zahl, und ist schreibgeschützt.  
+ Gibt eine **lange** ganze Zahl zurück und ist schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Achse-Beispiel (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Dimensionsobjekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Achsen Beispiel (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
+ [Dimension-Objekt (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)

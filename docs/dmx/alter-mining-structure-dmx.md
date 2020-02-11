@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889863"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Wenn Sie die **ALTER MINING STRUCTURE** -Anweisung verwenden, um ein neues Mining Modell zu erstellen, muss die Struktur bereits vorhanden sein. Wenn Sie hingegen die-Anweisung [Create Mining Model &#40;&#41;DMX](../dmx/create-mining-model-dmx.md)verwenden, erstellen Sie ein Modell und generieren die zugrunde liegende Mining Struktur automatisch gleichzeitig.  
+  Erstellt ein neues Miningmodell, das auf einer vorhandenen Miningstruktur basiert.  Wenn Sie die **ALTER MINING STRUCTURE** -Anweisung verwenden, um ein neues Mining Modell zu erstellen, muss die Struktur bereits vorhanden sein. Wenn Sie im Gegensatz dazu die-Anweisung [erstellen, Mining Modell &#40;DMX-&#41;erstellen ](../dmx/create-mining-model-dmx.md), erstellen Sie ein Modell und generieren die zugrunde liegende Mining Struktur automatisch gleichzeitig.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,11 +51,11 @@ USING <algorithm> [(<parameter list>)]
  *Filterkriterien für Filter*  
  Ein Filterausdruck, der für die Spalten in einer geschachtelten Tabelle übernommen wird.  
   
- *algorithm*  
+ *projiziert*  
  Der Name eines Data Mining-Algorithmus, der vom Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe des [DMSCHEMA_MINING_SERVICES-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
@@ -63,7 +63,7 @@ USING <algorithm> [(<parameter list>)]
  *Filterkriterien*  
  Ein Filterausdruck, der für die Spalten in der Falltabelle übernommen wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn die Miningstruktur zusammengesetzte Schlüssel enthält, muss das Miningmodell alle Schlüsselspalten einschließen, die in der Struktur definiert sind.  
   
  Wenn für das Modell keine vorhersagbare Spalte erforderlich ist (z. B. bei Modellen, die mit dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering- oder dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden), müssen Sie in der Anweisung keine Spaltendefinition einschließen. Alle Attribute in dem sich ergebenden Modell werden als Eingaben behandelt.  
@@ -72,7 +72,7 @@ USING <algorithm> [(<parameter list>)]
   
 -   Fügen Sie das **Filter** Schlüsselwort und eine Filterbedingung hinzu. Der Filter wird auf die Fälle im Miningmodell angewendet.  
   
--   Fügen Sie das Schlüsselwort **Drillthrough** hinzu, damit Benutzer des Mining Modells einen Drilldown von den Modellergebnissen zu den Falldaten ausführen können. In Data Mining-Erweiterungen (DMX) kann Drillthrough nur aktiviert werden, wenn Sie das Modell erstellen.  
+-   Fügen Sie das Schlüsselwort Drillthrough hinzu, damit Benutzer des Mining Modells einen **Drilldown** von den Modellergebnissen zu den Falldaten ausführen können. In Data Mining-Erweiterungen (DMX) kann Drillthrough nur aktiviert werden, wenn Sie das Modell erstellen.  
   
  Um die Case-Filterung und den Drillthrough zu verwenden, kombinieren Sie die Schlüsselwörter in einer einzelnen **with** -Klausel, indem Sie die im folgenden Beispiel gezeigte Syntax verwenden:  
   
@@ -103,7 +103,8 @@ USING <algorithm> [(<parameter list>)]
  Sie können einen Filterausdruck definieren, der auf die geschachtelte Tabelle angewendet wird, indem Sie nach der Definition für die Spalte der geschachtelten Tabelle einen Filterkriterienausdruck anhängen.  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die folgenden Modellierungsflags zur Verwendung in Miningmodellspalten:  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die folgenden Modellierungsflags zur Verwendung in Miningmodellspalten:  
   
 > [!NOTE]  
 >  Das NOT NULL-Modellierungsflag gilt für die Miningstrukturspalte. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -111,10 +112,10 @@ USING <algorithm> [(<parameter list>)]
 |||  
 |-|-|  
 |Begriff|Definition|  
-|**REGRESSOR**|Zeigt an, dass der Algorithmus die angegebene Spalte in der Regressionsformel von Regressionsalgorithmen verwenden kann.|  
+|**Regressor**|Zeigt an, dass der Algorithmus die angegebene Spalte in der Regressionsformel von Regressionsalgorithmen verwenden kann.|  
 |**MODEL_EXISTENCE_ONLY**|Gibt an, dass die Werte für die Attributspalte weniger wichtig sind als das Vorhandensein der Attribute.|  
   
- Sie können mehrere Modellierungsflags für eine Spalte definieren. Weitere Informationen zum Verwenden von Modellierungsflags finden Sie unter [Modellierungsflags &#40;DMX&#41;](../dmx/modeling-flags-dmx.md).  
+ Sie können mehrere Modellierungsflags für eine Spalte definieren. Weitere Informationen zum Verwenden von Modellierungsflags finden Sie unter [Modellierungsflags &#40;DMX-&#41;](../dmx/modeling-flags-dmx.md).  
   
 ### <a name="prediction-clause"></a>Vorhersageklausel  
  Die Vorhersageklausel beschreibt, wie die Vorhersagespalte verwendet wird. In der folgenden Tabelle sind die möglichen Klauseln aufgelistet.  
@@ -127,9 +128,9 @@ USING <algorithm> [(<parameter list>)]
 ## <a name="filter-criteria-expressions"></a>Filterkriterienausdrücke  
  Sie können einen Filter definieren, der die im Miningmodell verwendeten Fälle einschränkt. Der Filter kann auf die Spalten der Falltabelle, auf die Zeilen der geschachtelten Tabelle oder auf beides angewendet werden.  
   
- Filterkriterienausdrücke sind vereinfachte DMX-Prädikate und ähneln einer WHERE-Klausel. Filterausdrücke werden auf Formeln reduziert, die grundlegende mathematische Operatoren, Skalare und Spaltennamen verwenden. Eine Ausnahme bildet der EXISTS-Operator. Seine Auswertung ergibt TRUE, wenn mindestens eine Zeile für die Unterabfrage zurückgegeben wird. Prädikate können mithilfe der allgemeinen logischen Operatoren kombiniert werden: And, or und Not.  
+ Filterkriterienausdrücke sind vereinfachte DMX-Prädikate und ähneln einer WHERE-Klausel. Filterausdrücke werden auf Formeln reduziert, die grundlegende mathematische Operatoren, Skalare und Spaltennamen verwenden. Eine Ausnahme bildet der EXISTS-Operator. Seine Auswertung ergibt TRUE, wenn mindestens eine Zeile für die Unterabfrage zurückgegeben wird. Prädikate können mit den allgemeinen logischen Operatoren kombiniert werden: AND, OR und NOT.  
   
- Weitere Informationen zu filtern, die mit Mining Modellen verwendet werden, finden Sie unter [Filter für Mining &#40;Modelle&#41;Analysis Services-Data Mining](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
+ Weitere Informationen zu filtern, die mit Mining Modellen verwendet werden, finden Sie unter [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining).  
   
 > [!NOTE]  
 >  Spalten in einem Filter müssen Miningstrukturspalten sein. Sie können keinen Filter für eine Modellspalte oder eine Spalte mit einem Alias erstellen.  
@@ -137,7 +138,7 @@ USING <algorithm> [(<parameter list>)]
  Weitere Informationen zu DMX-Operatoren und-Syntax finden Sie unter [Mining Modell Spalten](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns).  
   
 ## <a name="parameter-definition-list"></a>Parameterdefinitionsliste (Parameter Definition List)  
- Durch Hinzufügen von Algorithmusparametern zur Parameterliste können Sie die Leistung und die Funktionsweise eines Modells anpassen. Die Parameter, die Sie verwenden können, hängen vom Algorithmus ab, den Sie in der USING-Klausel angeben. Eine Liste der Parameter, die den einzelnen Algorithmen zugeordnet sind, finden Sie unter [Data &#40;Mining-Algorithmen Analysis Services&#41;-Data Mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Durch Hinzufügen von Algorithmusparametern zur Parameterliste können Sie die Leistung und die Funktionsweise eines Modells anpassen. Die Parameter, die Sie verwenden können, hängen vom Algorithmus ab, den Sie in der USING-Klausel angeben. Eine Liste der Parameter, die den einzelnen Algorithmen zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
  Die Syntax der Parameterliste sieht wie folgt aus:  
   
@@ -176,8 +177,8 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Beispiel 3: Hinzufügen eines gefilterten Modells zu einer Struktur mit einer geclusterte Tabelle  
- Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Die im Beispiel verwendete Mining Struktur wurde so geändert, dass eine Spalte **Region** hinzugefügt wird, die Attribute für den Kundenbereich enthält, und eine Spalte **Income Group** , die das Kunden Einkommen mithilfe der Werte **hoch**, Mittel kategorisiert.oder **niedrig**.  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Beispiel 3: Hinzufügen eines gefilterten Modells zu einer Struktur mit einer geschachtelten Tabelle  
+ Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Die im Beispiel verwendete Mining Struktur wurde so geändert, dass Sie eine **Regions** Spalte, die Attribute für den Kundenbereich enthält, und eine Spalte mit **Einkommensgruppen** enthält, die das Kunden Einkommen mithilfe der **** Werte hoch **, Mittel**oder **niedrig**kategorisiert.  
   
  Die Miningstruktur schließt auch eine geschachtelte Tabelle ein, in der die Elemente, die der Kunde gekauft hat, aufgelistet werden.  
   
@@ -200,9 +201,9 @@ WITH FILTER (EXISTS (SELECT * FROM [v Assoc Seq Line Items] WHERE
 USING Microsoft_Decision Trees  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -16,27 +16,27 @@ ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933446"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
-Gibt an, ob die [öffnen](../../../ado/reference/ado-api/open-method-ado-connection.md) Methode eine [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sollte nach dem Herstellen der Verbindung (synchron) oder vor dem zurückgeben (asynchron).  
+Gibt an, ob die [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) -Methode eines [Connection](../../../ado/reference/ado-api/connection-object-ado.md) -Objekts zurückgegeben werden soll, nachdem die Verbindung (synchron) oder vor (asynchron) hergestellt wurde.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adAsyncConnect**|16|Öffnet die Verbindung asynchron aus. Die [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) Ereignis kann verwendet werden, um zu bestimmen, wenn die Verbindung verfügbar ist.|  
-|**adConnectUnspecified**|-1|Standard. Öffnet die Verbindung synchron aus.|  
+|**adasyncconnect**|16|Öffnet die Verbindung asynchron. Das Ereignis [ConnectComplete](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md) kann verwendet werden, um zu bestimmen, wann die Verbindung verfügbar ist.|  
+|**adconnectunspezifiziert**|-1|Default. Öffnet die Verbindung synchron.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.ConnectOption.ASYNCCONNECT|  
-|AdoEnums.ConnectOption.CONNECTUNSPECIFIED|  
+|Adoumums. connectoption. asyncconnect|  
+|Adoesums. connectoption. connectunspezifiziert|  
   
 ## <a name="applies-to"></a>Gilt für  
- [Open-Methode (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)
+ [Open-Methode (ADO-Verbindung)](../../../ado/reference/ado-api/open-method-ado-connection.md)

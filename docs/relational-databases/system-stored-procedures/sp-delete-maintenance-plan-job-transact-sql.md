@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_maintenance_plan_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c67731907d105c6fb2cc48ecf3232d2c9d89c5b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68009208"
 ---
-# <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
+# <a name="sp_delete_maintenance_plan_job-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Trennt den angegebenen Wartungsplan vom angegebenen Auftrag.  
@@ -34,7 +34,7 @@ ms.locfileid: "68009208"
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,15 +45,15 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @plan_id = ] 'plan\_id'` Gibt die ID des Wartungsplans. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @plan_id = ] 'plan\_id'`Gibt die ID des Wartungsplans an. *plan_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
-`[ @job_id = ] 'job\_id'` Gibt die ID des Auftrags, der der Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
+`[ @job_id = ] 'job\_id'`Gibt die ID des Auftrags an, dem der Wartungsplan zugeordnet ist. *job_id* ist vom Datentyp **uniqueidentifier**und muss eine gültige ID sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- **sp_delete_maintenance_plan_job** muss aus der **msdb** -Datenbank ausgeführt werden.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_delete_maintenance_plan_job** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Wenn alle Aufträge aus dem Wartungsplan entfernt wurden, sollten Benutzer **sp_delete_maintenance_plan_db** ausführen, um die verbleibenden Datenbanken aus dem Plan zu entfernen.  
   
@@ -67,8 +67,8 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 EXECUTE   sp_delete_maintenance_plan_job N'FAD6F2AB-3571-11D3-9D4A-00C04FB925FC', N'B8FCECB1-E22C-11D2-AA64-00C04F688EAE';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Wartungspläne](../../relational-databases/maintenance-plans/maintenance-plans.md)   
- [Datenbank-Wartungsplans gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
+ [Gespeicherte Prozeduren für Datenbank-Wartungspläne &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-maintenance-plan-stored-procedures-transact-sql.md)  
   
   

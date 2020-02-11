@@ -17,14 +17,14 @@ ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932822"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress-Ereignis (ADO)
-Die **FetchProgress**Ereignis wird aufgerufen, in regelmäßigen Abständen während einer langen asynchronen Operation zu melden, wie viele weitere Zeilen in das aktuell abgerufen wurden die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Das **FetchProgress**-Ereignis wird in regelmäßigen Abständen aufgerufen, um zu melden, wie viele weitere Zeilen momentan in das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)abgerufen wurden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,24 +34,24 @@ FetchProgress Progress, MaxProgress, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Status*  
- Ein **lange** Wert, der angibt, der Anzahl der Datensätze, die derzeit von der Abrufvorgang abgerufen wurden.  
+ *Progress*  
+ Ein **langer** Wert, der die Anzahl der Datensätze angibt, die zurzeit vom Abruf Vorgang abgerufen wurden.  
   
- *MaxProgress*  
- Ein **lange** erwartet, dass Wert, der angibt, der maximale Anzahl der Datensätze abgerufen werden.  
+ *Maxprogress*  
+ Ein **langer** Wert, der die maximale Anzahl von Datensätzen angibt, die abgerufen werden sollen.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
+ Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert.  
   
- *pRecordset*  
- Ein **Recordset** -Objekt, das das Objekt ist für die die Datensätze abgerufen werden.  
+ *precordset*  
+ Ein **Recordset** -Objekt, bei dem es sich um das Objekt handelt, für das die Datensätze abgerufen werden.  
   
-## <a name="remarks"></a>Hinweise  
- Bei Verwendung **FetchProgress** mit einem untergeordneten Element **Recordset**, beachten Sie, die die *Fortschritt* und *MaxProgress* Parameterwerten abgeleitet werden aus der zugrunde liegenden [Cursordiensts](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) Rowset. Die zurückgegebenen Werte stellen die Gesamtzahl der Datensätze in der zugrunde liegenden Rowsets, nicht nur die Anzahl der Datensätze in das aktuelle Kapitel dar.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn Sie **FetchProgress** mit einem untergeordneten **Recordset**verwenden, beachten Sie, dass die Parameterwerte *Progress* und *maxprogress* vom zugrunde liegenden [Cursor Dienst](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) -Rowset abgeleitet werden. Die zurückgegebenen Werte stellen die Gesamtanzahl der Datensätze im zugrunde liegenden Rowset dar, nicht nur die Anzahl der Datensätze im aktuellen Kapitel.  
   
 > [!NOTE]
->  Verwendung von **FetchProgress** mit Microsoft Visual Basic, Visual Basic 6.0 oder höher ist erforderlich.  
+>  Um **FetchProgress** mit Microsoft Visual Basic zu verwenden, ist Visual Basic 6,0 oder höher erforderlich.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)

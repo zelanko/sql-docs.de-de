@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89d92fc60e18926351cc94e6e6c21a32a7371ed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62638235"
 ---
 # <a name="sql-server-extended-events-engine"></a>Engine für erweiterte Ereignisse von SQL Server
@@ -34,7 +34,7 @@ ms.locfileid: "62638235"
   
  Die folgende Abbildung zeigt eine vereinfachte Ansicht einer Sitzung für erweiterte Ereignisse. Weitere Informationen finden Sie unter [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md).  
   
- ![Detaillierte Architektur von erweiterten Ereignissen](../../database-engine/media/xearchitecturedetailed.gif "Detailed extended events architecture")  
+ ![Detaillierte Architektur von erweiterten Ereignissen](../../database-engine/media/xearchitecturedetailed.gif "Detaillierte Architektur von erweiterten Ereignissen")  
   
  Beachten Sie Folgendes:  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62638235"
   
     -   Wenn Puffer aufgefüllt sind, werden diese an Ziele verteilt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](extended-events.md)  
   
   

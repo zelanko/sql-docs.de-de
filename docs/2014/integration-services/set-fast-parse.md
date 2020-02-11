@@ -1,5 +1,5 @@
 ---
-title: Festlegen der schnellen Analyse | Microsoft-Dokumentation
+title: Schnelle Analyse festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d41b15325586733ab54a37f4c3f007ce0253eaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055814"
 ---
 # <a name="set-fast-parse"></a>Festlegen der schnellen Analyse
@@ -28,7 +28,7 @@ ms.locfileid: "66055814"
   
 3.  Klicken Sie im Bereich **Eingaben und Ausgaben** auf die Spalte, für die die schnelle Analyse aktiviert werden soll.  
   
-4.  Erweitern Sie im Fenster Eigenschaften die **benutzerdefinierte Eigenschaften** Knoten, und legen anschließend die `FastParse` Eigenschaft `True`.  
+4.  Erweitern Sie im Eigenschaftenfenster den Knoten **benutzerdefinierte Eigenschaften** , und legen Sie dann `FastParse` die- `True`Eigenschaft auf fest.  
   
 5.  Klicken Sie auf **OK**.  
   

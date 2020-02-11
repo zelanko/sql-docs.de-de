@@ -1,5 +1,5 @@
 ---
-title: Optionen (Text-Editor – XML – Allgemein) | Microsoft-Dokumentation
+title: Optionen (Text-Editor-XML-Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089200"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Optionen (Text-Editor – XML – Seite „Allgemein“)
   Verwenden Sie dieses Dialogfeld, um das allgemeine Bearbeitungsverhalten des XML-Editors ändern, der für die Bearbeitung von XML-Dokumenten verwendet wird. Zum Anzeigen dieser Einstellungen klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie dann den Unterordner **XML** , und klicken Sie auf **Allgemein**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Festlegen der Optionen an mehreren Stellen  
- Optionen für den XML-Editor können auch im Dialogfeld **Alle Sprachen/Allgemein** festgelegt werden. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des XML-Editors mithilfe dieses Dialogs zurücksetzen.  
+ Optionen für den XML-Editor können auch im Dialogfeld **Alle Sprachen/Allgemein** festgelegt werden. Wenn Sie die Dialogfelder **alle Sprachen** verwenden, um verschiedene Optionen für die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] anderen Editoren festzulegen, z. b. den DMX-oder MDX-Editoren, müssen Sie die XML-Editor-Optionen mithilfe dieses Dialog Felds zurücksetzen  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
- **Member automatisch auflisten**  
+ **Elemente automatisch auflisten**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden während der Eingabe im Editor Listen mit verfügbaren Membern, Eigenschaften, Werten oder Methoden angezeigt. Wählen Sie ein Element aus der Popupliste aus, um es in Ihren Code einzufügen.  
   
  **Erweiterte Member ausblenden**  
  Dieses Kontrollkästchen ist nicht verfügbar.  
   
- **Informationen zu den Parametern**  
+ **Parameter Informationen**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird im Editor an allen verfügbaren Parametern links von der Einfügemarke die vollständige Syntax für die aktuelle Deklaration bzw. Prozedur angezeigt. Der nächste zuweisbare Parameter ist fett hervorgehoben.  
   
 ## <a name="settings"></a>Einstellungen  
@@ -46,7 +46,7 @@ ms.locfileid: "66089200"
 > [!NOTE]  
 >  Diese Markierungspfeile werden nicht in den Code eingefügt und auch nicht gedruckt. Sie dienen lediglich als Hinweis.  
   
- **Wenden Sie Befehle der Bearbeitungsschritte Ausschneiden/Kopieren auf leere Zeilen an, wenn keine Auswahl vorhanden ist**  
+ **Befehle zum Ausschneiden oder Kopieren bei fehlender Auswahl auf leere Zeilen anwenden**  
  Legt fest, wie sich der Editor verhalten soll, wenn Sie die Einfügemarke in eine Leerzeile setzen und auf **Kopieren** oder **Ausschneiden**klicken, ohne eine Auswahl zu treffen.  
   
  Bei aktiviertem Kontrollkästchen wird die Leerzeile kopiert bzw. ausgeschnitten. Wenn Sie anschließend auf **Einfügen**klicken, wird die Leerzeile eingefügt.  

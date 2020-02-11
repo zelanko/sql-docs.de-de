@@ -1,5 +1,5 @@
 ---
-title: LevelDepth-Eigenschaft (ADO MD) | Microsoft-Dokumentation
+title: Leveltiefe-Eigenschaft (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,24 +17,24 @@ ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a1e62432f5d5d91cbce2079eb161a152773ed1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949597"
 ---
 # <a name="leveldepth-property-ado-md"></a>LevelDepth-Eigenschaft (ADO MD)
-Gibt die Anzahl der Ebenen zwischen den Stamm der Hierarchie und einen [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Gibt die Anzahl der Ebenen zwischen dem Stamm der Hierarchie [und einem Element](../../../ado/reference/ado-md-api/member-object-ado-md.md)an.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **lange** ganze Zahl, und ist schreibgeschützt.  
+ Gibt eine **lange** ganze Zahl zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **LevelDepth** -Eigenschaft bestimmt den Abstand des dem [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)Objekt von der Stammebene der Hierarchie. Die **LevelDepth**eines Elements in das Stammverzeichnis ist Ebene 0. Dies entspricht der [Tiefe](../../../ado/reference/ado-md-api/depth-property-ado-md.md) Eigenschaft eine [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **leveltiefe** -Eigenschaft, um den Abstand des [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md)-Objekts von der Stamm Ebene der Hierarchie zu bestimmen. Die **leveltiefe**eines Elements auf der Stamm Ebene ist 0. Dies entspricht der Eigenschaft [Tiefe](../../../ado/reference/ado-md-api/depth-property-ado-md.md) eines [ebenenobjekts](../../../ado/reference/ado-md-api/level-object-ado-md.md) .  
   
 ## <a name="applies-to"></a>Gilt für  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Depth-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/depth-property-ado-md.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Tiefen Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/depth-property-ado-md.md)   
  [Level-Objekt (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)

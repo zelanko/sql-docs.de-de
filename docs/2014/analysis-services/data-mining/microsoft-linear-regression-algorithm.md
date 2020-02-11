@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df1b3616a85d93b4c5fa814ee759880077c03b8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084043"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
@@ -27,7 +27,7 @@ ms.locfileid: "66084043"
   
  Die Beziehung nimmt die Form einer Formel für eine Linie an, die eine Reihe von Daten am besten darstellt. Die Linie des folgenden Diagramms ist z. B. die bestmögliche lineare Darstellung der Daten.  
   
- ![Eine Zeile, die einen Satz von Daten modelliert](../media/linear-regression.gif "einer Zeile, die einen Satz von Daten modelliert.")  
+ ![Eine Gerade als Modell für eine Datenmenge](../media/linear-regression.gif "Eine Gerade als Modell für eine Datenmenge")  
   
  Zu jedem Datenpunkt im Diagramm ist ein Fehler zugeordnet. Dieser wird durch seinen Abstand von der Regressionslinie dargestellt. Der Koeffizient a und der Koeffizient b in der Regressionsgleichung passen den Winkel und die Position der Regressionsgleichung an. Sie können die Regressionsgleichung abrufen, indem Sie a und b anpassen, bis die Summe der Fehler, die mit allen Punkten verknüpft sind, ein Minimum erreicht hat.  
   
@@ -44,11 +44,11 @@ ms.locfileid: "66084043"
 ## <a name="data-required-for-linear-regression-models"></a>Erforderliche Daten für lineare Regressionsmodelle  
  Wenn Sie Daten für die Verwendung in einem linearen Regressionsmodell aufbereiten, müssen Sie sich mit den Anforderungen des jeweiligen Algorithmus vertraut machen. Hierbei müssen Sie auch berücksichtigen, welcher Datenumfang erforderlich ist und wie diese Daten verwendet werden. Für diesen Modelltyp gelten folgende Anforderungen:  
   
--   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
+-   **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
   
--   **Eine vorhersagbare Spalte** Mindestens eine vorhersagbare Spalte ist erforderlich. Sie können mehrere vorhersagbare Attribute in ein Modell aufnehmen, bei denen es sich jedoch um kontinuierliche numerische Datentypen handeln muss. Sie können keinen datetime-Datentyp als vorhersagbares Attribut verwenden, selbst wenn der systemeigene Speicher für die Daten numerisch ist.  
+-   **Vorhersagbare Spalte** Erfordert mindestens eine vorhersagbare Spalte. Sie können mehrere vorhersagbare Attribute in ein Modell aufnehmen, bei denen es sich jedoch um kontinuierliche numerische Datentypen handeln muss. Sie können keinen datetime-Datentyp als vorhersagbares Attribut verwenden, selbst wenn der systemeigene Speicher für die Daten numerisch ist.  
   
--   **Eingabespalten** Eingabespalten müssen kontinuierliche numerische Daten enthalten, und ihnen muss der entsprechende Datentyp zugewiesen sein.  
+-   **Eingabe Spalten** Eingabe Spalten müssen kontinuierliche numerische Daten enthalten, und Ihnen muss der entsprechende Datentyp zugewiesen werden.  
   
  Weitere Informationen finden Sie im Abschnitt „Anforderungen“ unter [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66084043"
   
  Wenn Sie Näheres über die Formel in Erfahrung bringen möchten, können Sie die Koeffizienten und weitere Details mithilfe des [Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)anzeigen.  
   
- Zum Inhalt eines linearen Regressionsmodells zählen Metadaten, die Regressionsformel und statistische Informationen zur Verteilung der Eingabewerte. Weitere Informationen finden Sie unter [Mining Model Content for Linear Regression Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
+ Zum Inhalt eines linearen Regressionsmodells zählen Metadaten, die Regressionsformel und statistische Informationen zur Verteilung der Eingabewerte. Weitere Informationen finden Sie unter [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Erstellen von Vorhersagen  
  Nachdem das Modell verarbeitet wurde, werden die Ergebnisse als Satz von Statistiken gemeinsam mit der linearen Regressionsformel gespeichert, die Sie zum Berechnen zukünftiger Entwicklungen verwenden können. Beispiele zur Verwendung von Abfragen in Verbindung mit einem linearen Regressionsmodell finden Sie unter [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "66084043"
   
  Wenn es sich bei dem vorhersagbaren Attribut um einen kontinuierlichen numerischen Datentyp handelt, können Sie neben der Erstellung eines linearen Regressionsmodells durch Auswahl des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus auch ein Entscheidungsstrukturmodell entwickeln, das Regressionen enthält. In diesem Fall teilt der Algorithmus die Daten, sofern entsprechende Trennpunkte gefunden werden. Für einige Datenbereiche wird jedoch stattdessen eine Regressionsformel erstellt. Weitere Informationen über Regressionsstrukturen innerhalb eines Entscheidungsstrukturmodells finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   
@@ -76,10 +76,10 @@ ms.locfileid: "66084043"
   
 -   Unterstützt die Verwendung von OLAP-Miningmodellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
  [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)   
- [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Beispiele für lineare Regressionsmodell Abfragen](linear-regression-model-query-examples.md)   
+ [Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

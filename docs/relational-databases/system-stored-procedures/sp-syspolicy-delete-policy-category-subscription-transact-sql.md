@@ -1,5 +1,5 @@
 ---
-title: Sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_syspolicy_delete_policy_category_subscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: eeab0120-c869-4c95-a79d-6dc418d0b23a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 1cc965b55cb1f7216d4711c129a5e99bb4da067f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010493"
 ---
-# <a name="spsyspolicydeletepolicycategorysubscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
+# <a name="sp_syspolicy_delete_policy_category_subscription-transact-sql"></a>sp_syspolicy_delete_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht ein Richtlinienkategorieabonnement für eine bestimmte Datenbank.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,12 +39,12 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @policy_category_subscription_id = ] policy_category_subscription_id` Ist der Bezeichner für das richtlinienkategorieabonnement. *Policy_category_subscription_id* ist **Int**.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id`Der Bezeichner für das Richtlinienkategorieabonnement. *policy_category_subscription_id* ist vom Datentyp **int**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie müssen sp_syspolicy_delete_policy_category_subscription im Kontext der Systemdatenbank msdb ausführen.  
   
  Sie können ein Richtlinienkategorieabonnement nicht löschen, wenn das Abonnement beauftragt wurde.  
@@ -52,7 +52,7 @@ sp_syspolicy_delete_policy_category_subscription [ @policy_category_subscription
 ## <a name="permissions"></a>Berechtigungen  
  Diese gespeicherte Prozedur wird im Kontext des aktuellen Besitzers der gespeicherten Prozedur ausgeführt.  
   
- Zum Abrufen von Werten für *Policy_category_subscription_id*, können Sie die folgende Abfrage:  
+ Zum Abrufen von Werten für *policy_category_subscription_id*können Sie die folgende Abfrage verwenden:  
   
 ```  
 SELECT a.policy_category_subscription_id, a.target_object, b.name AS category_name  
@@ -70,8 +70,8 @@ EXEC msdb.dbo.sp_syspolicy_delete_policy_category_subscription @policy_category_
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gespeicherte Prozeduren für Richtlinie der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
- [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gespeicherte Prozeduren der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/policy-based-management-stored-procedures-transact-sql.md)   
+ [sp_syspolicy_update_policy_category_subscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)  
   
   

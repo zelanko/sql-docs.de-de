@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054482"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI-Verbindungs-Manager-Editor
@@ -26,7 +26,7 @@ ms.locfileid: "66054482"
   
  Weitere Informationen zum WMI-Verbindungs-Manager finden Sie unter [WMI Connection Manager](connection-manager/wmi-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Verbindungs-Manager an.  
   
@@ -48,12 +48,12 @@ ms.locfileid: "66054482"
  **Kennwort**  
  Wenn Sie Windows-Authentifizierung nicht verwenden, müssen Sie für die Verbindung das Kennwort angeben.  
   
- **Testen**  
+ **Test**  
  Testen Sie die Verbindungs-Manager-Einstellungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [Konzepte des WMI-Anbieters für die Konfigurations Verwaltung](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Konzepte des WMI-Anbieters für Serverereignisse](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

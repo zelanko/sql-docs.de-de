@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: de9a356589ac6bceb532ed4cecf509f957e3c337
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70153401"
 ---
-# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lektion 4: Ausführen einer Wiederherstellung aus einer vollständigen Datenbanksicherung
+# <a name="lesson-4-perform-a-restore-from-a-full-database-backup"></a>Lektion 4: Ausführen einer Wiederherstellung von einer vollständigen Datenbanksicherung
   In dieser Lektion wird veranschaulicht, wie mithilfe einer T-SQL-Anweisung eine Wiederherstellung von einer vollständigen Datenbanksicherung ausgeführt wird, die in der vorherigen Lektion erstellt wurde.  
   
 ## <a name="perform-a-restore-of-a-database-backup"></a>Ausführen einer Wiederherstellung von einer Datenbanksicherung  
@@ -43,6 +43,6 @@ ms.locfileid: "70153401"
 5.  Überprüfen Sie die T-SQL-Anweisung, und klicken Sie auf **Ausführen**.  
   
 ### <a name="return-to-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme  
- [Tutorial: SQL Server Sicherung und Wiederherstellung in Azure BLOB Storage](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)Dienst.  
+ [Tutorial: SQL Server sichern und Wiederherstellen Azure BLOB Storage Dienstanbieter](../relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).  
   
   

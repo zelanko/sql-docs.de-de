@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_fts_active_catalogs (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_fts_active_catalogs (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/29/2017
 ms.prod: sql
@@ -21,32 +21,32 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265969"
 ---
-# <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
+# <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den Volltextkatalogen zurück, für die zurzeit Auffüllungsaktivitäten auf dem Server ausgeführt werden.  
   
 > [!NOTE]
->  Die folgenden Spalten werden in einer zukünftigen Version entfernt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Is_paused, Previous_status, Previous_status_description, Row_count_in_thousands, Status, Status_description und Worker_count. Verwenden Sie diese Spalten in Neuentwicklungen nicht. Planen Sie die Änderung von Anwendungen, die diese Spalten derzeit verwenden.  
+>  Die folgenden Spalten werden in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt: is_paused, previous_status, previous_status_description, row_count_in_thousands, Status, status_description und worker_count. Verwenden Sie diese Spalten in Neuentwicklungen nicht. Planen Sie die Änderung von Anwendungen, die diese Spalten derzeit verwenden.  
   
  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, die den aktiven Volltextkatalog enthält.|  
 |**catalog_id**|**int**|ID des aktiven Volltextkatalogs.|  
 |**memory_address**|**varbinary(8)**|Adresse von Speicherpuffern, die für Auffüllungsaktivitäten im Zusammenhang mit diesem Volltextkatalog zugeordnet wurden.|  
 |**name**|**nvarchar(128)**|Name des aktiven Volltextkatalogs.|  
 |**is_paused**|**bit**|Gibt an, ob das Auffüllen des aktiven Volltextkatalogs angehalten wurde.|  
-|**status**|**int**|Aktueller Status des Volltextkatalogs. Einer der folgenden Typen:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
-|**status_description**|**nvarchar(120)**|Beschreibung des aktuellen Status des aktiven Volltextkatalogs.|  
-|**previous_status**|**int**|Vorhergehender Status des Volltextkatalogs. Einer der folgenden Typen:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
-|**previous_status_description**|**nvarchar(120)**|Beschreibung des vorhergehenden Status des aktiven Volltextkatalogs.|  
+|**Stands**|**int**|Aktueller Status des Volltextkatalogs. Einer der folgenden:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
+|**status_description**|**nvarchar (120)**|Beschreibung des aktuellen Status des aktiven Volltextkatalogs.|  
+|**previous_status**|**int**|Vorhergehender Status des Volltextkatalogs. Einer der folgenden:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
+|**previous_status_description**|**nvarchar (120)**|Beschreibung des vorhergehenden Status des aktiven Volltextkatalogs.|  
 |**worker_count**|**int**|Anzahl der zurzeit aktiven Arbeitsthreads für diesen Volltextkatalog.|  
 |**active_fts_index_count**|**int**|Anzahl der Volltextindizes, die aufgefüllt werden.|  
 |**auto_population_count**|**int**|Anzahl von Tabellen, bei denen dieser Volltextkatalog automatisch aufgefüllt wird.|  
@@ -55,20 +55,20 @@ ms.locfileid: "68265969"
 |**row_count_in_thousands**|**int**|Geschätzte Zeilenanzahl (in Tausenden) in allen Volltextindizes in diesem Volltextkatalog.|  
 |**is_importing**|**bit**|Gibt an, ob der Volltextkatalog importiert wird:<br /><br /> 1 = Der Katalog wird importiert.<br /><br /> 2 = Der Katalog wird nicht importiert.|  
   
-## <a name="remarks"></a>Hinweise  
- Die Spalte is_importing ist neu in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
+## <a name="remarks"></a>Bemerkungen  
+ Die is_importing Spalte war neu in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
 ## <a name="physical-joins"></a>Physische Joins  
- ![Wesentliche Joins dieser dynamischen verwaltungssicht](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "wesentliche Joins dieser dynamischen verwaltungssicht")  
+ ![Wesentliche Joins dieser dynamischen Verwaltungssicht](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "Wesentliche Joins dieser dynamischen Verwaltungssicht")  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|Beziehung|  
+|Von|To|Beziehung|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  
@@ -91,8 +91,8 @@ AND catalog.database_id = (SELECT dbid FROM sys.sysdatabases WHERE name = DB_NAM
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  
- [Volltextsuche und semantische Suche, dynamische Verwaltungssichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
+ [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

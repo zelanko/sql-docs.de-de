@@ -10,18 +10,18 @@ ms.assetid: ae357f9b-e3e2-4cdf-af02-012acda2e466
 author: MladjoA
 ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 48d1ca9458b4993ad509cc2bbedd8d23b127918c
-ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
+ms.openlocfilehash: 5bd17579393b379baa5cfd08c5ca5930cc32326a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688684"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76917837"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Eine `CompoundCurve` ist eine Auflistung von 0 (null) oder mehr fortlaufenden `CircularString`-Instanzen oder `LineString`-Instanzen von geometry- oder geography-Typen.  
   
 > [!IMPORTANT]  
->  Laden Sie für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in dieser Version, einschließlich des `CompoundCurve` Untertyps, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
+>  Laden Sie für eine ausführliche Beschreibung und Beispiele der neuen räumlichen Funktionen in dieser Version, einschließlich `CompoundCurve` des unter Typs, das Whitepaper [neue räumliche Funktionen in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)herunter.  
   
  Eine leere `CompoundCurve`-Instanz kann instanziiert werden. Damit eine `CompoundCurve` gültig ist, muss sie jedoch die folgenden Kriterien erfüllen:  
   
@@ -29,7 +29,7 @@ ms.locfileid: "72688684"
   
 2.  Die Sequenz von `CircularString`-Instanzen oder `LineString`-Instanzen muss fortlaufend sein.  
   
- Wenn eine `CompoundCurve` eine Sequenz von mehreren `CircularString` und `LineString`-Instanzen enthält, muss der endendpunkt für jede Instanz mit Ausnahme der letzten Instanz der Start Endpunkt für die nächste Instanz in der Sequenz sein. Wenn also der Endpunkt der vorhergehenden Instanz in der Sequenz (4 3 7 2) ist, muss der Anfangspunkt für die nächste Instanz in der Sequenz (4 3 7 2) sein. Beachten Sie, dass die Z-Werte (Höhe) und die M-Werte (Measure) für den Punkt ebenfalls gleich sein müssen. Wenn sich die beiden Punkte unterscheiden, wird ein `System.FormatException` ausgelöst. Punkte in einer `CircularString` müssen über keinen Z-Wert oder M-Wert verfügen. Wenn keine Z- oder M-Werte für den Endpunkt der vorherigen Instanz angegeben sind, kann der Anfangspunkt der nächsten Instanz keine Z- oder M-Werte einschließen. Wenn der Endpunkt für die vorherige Sequenz (4 3) ist, muss der Anfangspunkt für die nächste Sequenz (4 3) sein; (4 3 7 2) ist hingegen nicht möglich. Alle Punkte in einer `CompoundCurve`-Instanz dürfen entweder über keinen Z-Wert verfügen, oder sie müssen denselben Z-Wert aufweisen.  
+ Wenn eine `CompoundCurve` eine Sequenz mehrerer `CircularString` -Instanzen und `LineString` -Instanzen enthält, muss der endendpunkt für jede Instanz mit Ausnahme der letzten Instanz der Start Endpunkt für die nächste Instanz in der Sequenz sein. Wenn also der Endpunkt der vorhergehenden Instanz in der Sequenz (4 3 7 2) ist, muss der Anfangspunkt für die nächste Instanz in der Sequenz (4 3 7 2) sein. Beachten Sie, dass die Z-Werte (Höhe) und die M-Werte (Measure) für den Punkt ebenfalls gleich sein müssen. Wenn sich die beiden Punkte unterscheiden, wird ein `System.FormatException` ausgelöst. Punkte in einer `CircularString` müssen über keinen Z-Wert oder M-Wert verfügen. Wenn keine Z- oder M-Werte für den Endpunkt der vorherigen Instanz angegeben sind, kann der Anfangspunkt der nächsten Instanz keine Z- oder M-Werte einschließen. Wenn der Endpunkt für die vorherige Sequenz (4 3) ist, muss der Anfangspunkt für die nächste Sequenz (4 3) sein; (4 3 7 2) ist hingegen nicht möglich. Alle Punkte in einer `CompoundCurve`-Instanz dürfen entweder über keinen Z-Wert verfügen, oder sie müssen denselben Z-Wert aufweisen.  
   
 ## <a name="compoundcurve-instances"></a>CompoundCurve-Instanzen  
  In der folgenden Abbildung sind gültige `CompoundCurve`-Typen dargestellt.  
@@ -41,7 +41,7 @@ ms.locfileid: "72688684"
   
 1.  Alle von der `CompoundCurve`-Instanz enthaltenen Instanzen sind akzeptierte Kreisbogensegment-Instanzen. Weitere Informationen zu akzeptierten Kreisbogensegment-Instanzen finden Sie unter [LineString](linestring.md) und [CircularString](circularstring.md).  
   
-2.  Alle Kreisbogensegmente in der `CompoundCurve`-Instanz sind verbunden. Der erste Punkt jedes nachfolgenden Kreisbogensegments entspricht dem letzten Punkt des jeweils vorgehenden Kreisbogensegments.  
+2.  Alle Kreisbogensegmente in der `CompoundCurve`-Instanz sind verbunden. Der erste Punkt jedes nachfolgenden Kreisbogen Segments entspricht dem letzten Punkt des vorangehenden Kreisbogen Segments.  
   
     > [!NOTE]  
     >  Dies schließt die Z- und M-Koordinaten ein. Daher müssen alle vier Koordinaten X, Y, Z und M identisch sein.  
@@ -79,7 +79,8 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
   
 ```  
   
- `@g3` ist gültig, da die `CircularString`-Instanz gültig ist. Weitere Informationen zur Gültigkeit der `CircularString` Instanz finden Sie unter [circularstring](circularstring.md).  
+ 
+  `@g3` ist gültig, da die `CircularString`-Instanz gültig ist. Weitere Informationen zur Gültigkeit der- `CircularString` Instanz finden Sie unter [circularstring](circularstring.md).  
   
  Im folgenden Beispiel werden `CompoundCurve` -Instanzen veranschaulicht, die nicht gültig sind.  
   
@@ -90,7 +91,10 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. `@g2` ist ungültig, da die `LineString`-Instanz ungültig ist. `@g3` ist ungültig, da die `CircularString`-Instanz ungültig ist. Weitere Informationen zu gültigen `CircularString` und `LineString` Instanzen finden Sie unter [circularstring](circularstring.md) und [LineString](linestring.md).  
+ 
+  `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. 
+  `@g2` ist ungültig, da die `LineString`-Instanz ungültig ist. 
+  `@g3` ist ungültig, da die `CircularString`-Instanz ungültig ist. Weitere Informationen zu `CircularString` gültigen-und `LineString` -Instanzen finden Sie unter [circularstring](circularstring.md) und [LineString](linestring.md).  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -116,7 +120,7 @@ DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
-### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D. Speichern eines Quadrats in einer CompoundCurve-Instanz  
+### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D: Speichern eines Quadrats in einer CompoundCurve-Instanz  
  Im folgenden Beispiel werden zwei verschiedene Möglichkeiten gezeigt, wie mithilfe einer `CompoundCurve` -Instanz ein Quadrat gespeichert werden kann.  
   
 ```sql  
@@ -176,7 +180,7 @@ SET @g2 = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULAR
 SELECT 'Circle Two', @g2.STLength() AS Perimeter;  -- now we get an accurate amount  
 ```  
   
- Es wird folgende Ausgabe erhalten:  
+ Die Ausgabe lautet wie folgt:  
   
 ```  
 Circle One11.940039...  
@@ -185,7 +189,7 @@ Circle Two12.566370...
   
  Der Umkreis für Circle Two ist ungefähr 4&#x03c0; (4 * PI), der tatsächliche Wert für den Umkreis. Der Umkreis für Circle One ist jedoch sehr ungenau. Durch die `CompoundCurve` -Instanz von Circle One werden ein Kreisbogensegment (ABC) und zwei Liniensegmente (CD, DA) gespeichert. Von der `CompoundCurve` -Instanz müssen zwei Kreisbogensegmente (ABC, CDA) gespeichert werden, um einen Kreis zu definieren. Eine `LineString` -Instanz definiert die zweite Punktmenge (4 2, 2 4, 0 2) in der `CompoundCurve` -Instanz von Circle One. Sie müssen in einer `CircularString` explizit eine `CompoundCurve`-Instanz deklarieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [STIsValid &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)   
  [STLength &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type)   
  [STStartPoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type)   
@@ -193,6 +197,6 @@ Circle Two12.566370...
  [LineString](linestring.md)   
  [CircularString](circularstring.md)   
  [Übersicht über räumliche Datentypen](spatial-data-types-overview.md)   
- [Punkt](point.md)  
+ [Point](point.md)  
   
   

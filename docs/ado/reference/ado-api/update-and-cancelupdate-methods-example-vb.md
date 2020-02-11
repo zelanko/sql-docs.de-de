@@ -1,5 +1,5 @@
 ---
-title: Update- und CancelUpdate-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Update-und CancelUpdate-Methoden (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937832"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update- und CancelUpdate-Methode – Beispiel (VB)
-Dieses Beispiel zeigt die [Update](../../../ado/reference/ado-api/update-method.md) -Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) Methode.  
+In diesem Beispiel wird die [Update](../../../ado/reference/ado-api/update-method.md) -Methode in Verbindung mit der [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode veranschaulicht.  
   
 ```  
 'BeginUpdateVB  
@@ -114,13 +114,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- Dieses Beispiel zeigt die **Update** -Methode in Verbindung mit der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode.  
+ In diesem Beispiel wird die **Update** -Methode in Verbindung mit der [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) -Methode veranschaulicht.  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)

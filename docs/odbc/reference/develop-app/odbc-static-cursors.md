@@ -14,17 +14,17 @@ ms.assetid: 28cb324c-e1c3-4b5c-bc3e-54df87037317
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bcb7c39d39492b91c0b62c5eff2229eb5f61df6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987839"
 ---
 # <a name="odbc-static-cursors"></a>Statische ODBC-Cursor
-Ein statischer Cursor ist in der das Resultset angezeigt wird, statisch sein. Es wird nicht in der Regel Änderungen erkannt, die vorgenommen wurden, um die Mitgliedschaft, Reihenfolge oder Werte im Resultset nach der der Cursor geöffnet wird. Nehmen wir beispielsweise an ein statischer Cursor abruft, eine Zeile und eine andere Anwendung wird diese Zeile aktualisiert. Wenn der statische Cursor die Zeile refetches, sind die Werte, die es erkennt unverändert, obwohl die Änderungen, die von der anderen Anwendung vorgenommen wurden.  
+Ein statischer Cursor ist ein Wert, in dem das Resultset statisch erscheint. Sie erkennt in der Regel keine Änderungen, die an der Mitgliedschaft, der Reihenfolge oder den Werten des Resultsets vorgenommen wurden, nachdem der Cursor geöffnet wurde. Angenommen, ein statischer Cursor Ruft eine Zeile ab, und eine andere Anwendung aktualisiert dann diese Zeile. Wenn der statische Cursor die Zeile wiederholt, werden die angezeigten Werte trotz der Änderungen, die von der anderen Anwendung vorgenommen wurden, unverändert.  
   
- Statische Cursor können eigene Updates, löschungen und einfügungen erkennen, obwohl sie nicht dazu erforderlich sind. Gibt an, ob ein bestimmter statischer Cursor für diese Änderungen erkennt, wird über die Feedbackoption im SQL_STATIC_SENSITIVITY in gemeldet **SQLGetInfo**. Statische Cursor erkennen nie anderen updates, Lösch- und Einfügevorgänge.  
+ Statische Cursor können Ihre eigenen Updates, Löschungen und Einfügungen erkennen, obwohl dies nicht erforderlich ist. Ob ein bestimmter statischer Cursor diese Änderungen erkennt, wird über die SQL_STATIC_SENSITIVITY-Option in **SQLGetInfo**gemeldet. Statische Cursor erkennen nie andere Updates, Löschungen und Einfügungen.  
   
- Die vom Attribut SQL_ATTR_ROW_STATUS_PTR-Anweisung angegebenen zeilenstatusarray kann SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO oder SQL_ROW_ERROR für jede Zeile enthalten. Es zurückgibt SQL_ROW_UPDATED, SQL_ROW_DELETED oder SQL_ROW_ADDED, für die Zeilen aktualisiert, gelöscht oder eingefügt, indem Sie den Mauszeiger, vorausgesetzt, dass der Cursor solche Änderungen erkennen kann.  
+ Das vom SQL_ATTR_ROW_STATUS_PTR Statement-Attribut angegebene Zeilen Status Array kann SQL_ROW_SUCCESS, SQL_ROW_SUCCESS_WITH_INFO oder SQL_ROW_ERROR für jede Zeile enthalten. Es gibt SQL_ROW_UPDATED, SQL_ROW_DELETED oder SQL_ROW_ADDED für Zeilen zurück, die vom Cursor aktualisiert, gelöscht oder eingefügt wurden, vorausgesetzt, dass der Cursor solche Änderungen erkennen kann.  
   
- Statische Cursor werden in der Regel implementiert, durch das Sperren von Zeilen im Resultset oder durch Erstellen einer Kopie oder Momentaufnahme des Ergebnisses festgelegt. Sperren von Zeilen relativ einfach ist, hat aber den Nachteil deutlich weniger. Erstellen einer Kopie ermöglicht mehr Parallelität und können den Cursor zu verfolgen eigene Updates, löschungen und fügt ein durch die Kopie ändern. Eine Kopie ist jedoch teurer zu machen und können aus den zugrunde liegenden Daten abweichen, wenn die Daten von anderen Benutzern geändert werden.
+ Statische Cursor werden in der Regel durch Sperren der Zeilen im Resultset oder durch Erstellen einer Kopie oder Momentaufnahme des Resultsets implementiert. Obwohl das Sperren von Zeilen relativ einfach ist, hat dies den Nachteil, dass die Parallelität erheblich reduziert wird. Das Erstellen einer Kopie ermöglicht eine größere Parallelität und ermöglicht dem Cursor, seine eigenen Aktualisierungen, Löschungen und Einfügungen durch Ändern der Kopie nachzuverfolgen. Allerdings ist eine Kopie kostengünstiger und kann von den zugrunde liegenden Daten abweichen, da diese Daten von anderen Personen geändert werden.

@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgungsdatei | Microsoft-Dokumentation
+title: Ablauf Verfolgungs Datei | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: ec97f949-126f-40a2-b67e-e74520a524cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c94c3718c116b37eb198264887dfb4a319bd1dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67985149"
 ---
 # <a name="trace-file"></a>Ablaufverfolgungsdatei
-Eine Anwendung gibt der Datei entweder durch Festlegen der **TraceFile** Schlüsselwort im Registrierungseintrag Odbc.ini oder durch Aufrufen von **SQLSetConnectAttr** mit das SQL_ATTR_TRACEFILE-Verbindungsattribut. Wenn die Datei nicht vorhanden ist, wenn die Ablaufverfolgung aktiviert ist, wird der Treiber-Manager die Datei erstellt. Jede Anwendung müssen eigene dedizierte Ablaufverfolgungsdatei, um Konflikte zu vermeiden. Eine Anwendung kann mehr als eine Ablaufverfolgungsdatei verwenden; Setup-Programm von der Anwendung bieten den Benutzer eine Auswahl von Ablaufverfolgungsdateien. Wenn die Ablaufverfolgung dynamisch aktiviert ist, kann eine Anwendung auch Ablaufverfolgungsergebnisse, anstatt die Protokollierung zur Ablaufverfolgungsdatei anzeigen.  
+Eine Anwendung gibt die Ablauf Verfolgungs Datei entweder durch Festlegen des **Tracefile** -Schlüssel Worts im Registrierungs Eintrag "ODBC. ini" oder durch Aufrufen von **SQLSetConnectAttr** mit dem SQL_ATTR_TRACEFILE Connection-Attribut an. Wenn die Datei nicht vorhanden ist, wenn die Ablauf Verfolgung aktiviert ist, wird die Datei vom Treiber-Manager erstellt. Jede Anwendung sollte über eine eigene dedizierte Ablauf Verfolgungs Datei verfügen, um Konflikte zu vermeiden. Eine Anwendung kann mehr als eine Ablauf Verfolgungs Datei verwenden. Das Setup Programm einer Anwendung kann dem Benutzer die Auswahl von Ablauf Verfolgungs Dateien ermöglichen. Wenn die Ablauf Verfolgung dynamisch aktiviert ist, kann eine Anwendung auch Ablauf Verfolgungs Ergebnisse anzeigen, anstatt Sie in der Ablauf Verfolgungs Datei zu protokollieren.  
   
- Die Ablaufverfolgungsdatei enthält ein Protokoll der einzelnen ODBC-Funktionsaufruf mit den Datentypen und Werte für alle Argumente. Protokolliert alle Eingabefunktionen und alle zurückgegebene Funktionen mit Rückgabecodes und Fehlerzustände protokolliert.  
+ Die Ablauf Verfolgungs Datei stellt ein Protokoll aller ODBC-Funktionsaufrufe mit den Datentypen und den Werten aller Argumente bereit. Es protokolliert alle Eingabefunktionen und protokolliert alle zurückgegebenen Funktionen mit Rückgabecodes und Fehlerzuständen.  
   
- In ODBC *3.x*, Parameter, Verbindungsfunktionen werden nicht bereitgestellt, um die Ablaufverfolgung-DLL.
+ In ODBC *3. x*werden Parameter für Verbindungsfunktionen nicht für die Trace-dll bereitgestellt.

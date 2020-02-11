@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893515"
 ---
 # <a name="using-member-expressions"></a>Verwenden von Elementausdrücken
@@ -20,7 +20,7 @@ ms.locfileid: "68893515"
 
   Ein Elementausdruck enthält einen Elementbezeichner, eine Elementfunktion oder einen Ausdruck, der in ein Element konvertiert werden kann.  
   
- Elementbezeichner können viele verschiedene Formate haben. Die einfachste Form eines Elementbezeichners besteht aus dem Namen des Elements. Zum Beispiel:  
+ Elementbezeichner können viele verschiedene Formate haben. Die einfachste Form eines Elementbezeichners besteht aus dem Namen des Elements. Beispiel:  
   
 ```  
 SELECT Amount ON 0  
@@ -56,12 +56,12 @@ Dimension_Name
   
 ```  
   
- Es gibt viele MDX-Funktionen, die Elemente zurückgeben. Eine vollständige Liste finden Sie unter [MDX- &#40;Funktionsreferenz&#41; MDX](../mdx/mdx-function-reference-mdx.md) .  
+ Es gibt viele MDX-Funktionen, die Elemente zurückgeben. Eine vollständige Liste finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
 > [!NOTE]  
->  Weitere Informationen zu Elementnamen und Element Schlüsseln finden Sie unter [Arbeiten mit Membern, Tupeln und &#40;Mengen von&#41;MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
+>  Weitere Informationen zu Elementnamen und Element Schlüsseln finden Sie unter [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx).  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausdrücke &#40;(MDX)&#41;](../mdx/expressions-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausdrücke &#40;MDX-&#41;](../mdx/expressions-mdx.md)  
   
   

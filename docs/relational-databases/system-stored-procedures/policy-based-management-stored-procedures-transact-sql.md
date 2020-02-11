@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Prozeduren (Transact-SQL) Richtlinie der richtlinienbasierten Verwaltung | Microsoft-Dokumentation
+title: Gespeicherte Prozeduren für die Richtlinien basierte Verwaltung (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: df64ab19-4e66-4702-96bd-32ad587d00f0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4304bfb3048c8e72a98e4eb24c51b4c7f19d5cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941951"
 ---
 # <a name="policy-based-management-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für die richtlinienbasierte Verwaltung (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die folgenden gespeicherten Systemprozeduren, die für die Richtlinie der richtlinienbasierten Verwaltung verwendet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die folgenden gespeicherten System Prozeduren, die für die Richtlinien basierte Verwaltung verwendet werden.  
   
 > [!IMPORTANT]  
 >  Es werden nur die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation dokumentierten gespeicherten Prozeduren für die richtlinienbasierte Verwaltung unterstützt. Nicht dokumentierte gespeicherte Prozeduren werden von internen Komponenten der richtlinienbasierten Verwaltung verwendet und sollten nicht für die richtlinienbasierte Verwaltung genutzt werden.  
@@ -43,7 +43,7 @@ ms.locfileid: "67941951"
 |[sp_syspolicy_rename_condition](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-condition-transact-sql.md)|[sp_syspolicy_update_policy_category_subscription](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-subscription-transact-sql.md)|  
 |[sp_syspolicy_rename_policy](../../relational-databases/system-stored-procedures/sp-syspolicy-rename-policy-transact-sql.md)||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

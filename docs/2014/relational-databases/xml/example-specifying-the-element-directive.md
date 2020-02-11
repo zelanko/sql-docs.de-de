@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der ELEMENT-Anweisung | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ELEMENT-Direktive | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5fd255c763ca516bce53832884ae57c6c3dd8b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287157"
 ---
 # <a name="example-specifying-the-element-directive"></a>Beispiel: Angeben der ELEMENT-Direktive
@@ -31,7 +31,7 @@ ms.locfileid: "63287157"
 </Employee>  
 ```  
   
- Die Abfrage bleibt dieselbe, mit der Ausnahme, dass Sie nun den Spaltennamen die `ELEMENT`-Direktive hinzufügen. Folglich werden dem <`Name`>-Element anstelle von Attributen die untergeordneten Elemente <`FName`> und <`LName`> hinzugefügt. Die `Employee!1!EmpID`-Spalte gibt keine `ELEMENT`-Direktive an; daher wird `EmpID` als Attribut des <`Employee`>-Elements hinzugefügt.  
+ Die Abfrage bleibt dieselbe, mit der Ausnahme, dass Sie nun den Spaltennamen die `ELEMENT`-Direktive hinzufügen. Folglich werden dem <`FName`>-Element anstelle von Attributen die untergeordneten Elemente <`LName`> und <`Name`> hinzugefügt. Die `Employee!1!EmpID`-Spalte gibt keine `ELEMENT`-Direktive an; daher wird `EmpID` als Attribut des <`Employee`>-Elements hinzugefügt.  
   
 ```  
 SELECT 1    as Tag,  
@@ -83,7 +83,7 @@ FOR XML EXPLICIT;
   
  `...`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

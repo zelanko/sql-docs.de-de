@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit Oracle (OracleToSQL) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit Oracle (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,66 +11,66 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264484"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (OracleToSQL)
-Verwenden der **Herstellen einer Verbindung mit Oracle** im Dialogfeld Verbindung mit der Oracle-Datenbank, die Sie migrieren möchten.  
+Verwenden Sie das Dialogfeld **Verbindung mit Oracle herstellen** , um eine Verbindung mit der Oracle-Datenbank herzustellen, die Sie migrieren möchten.  
   
-Zum Zugriff auf dieses Dialogfeld, in der **Datei** , wählen Sie im Menü **Herstellen einer Verbindung mit Oracle**. Wenn Sie zuvor eine Verbindung hergestellt haben, wird der Befehl ist **Wiederherstellen der Verbindung mit Oracle**.  
+Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Oracle verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl die **Verbindung mit Oracle wieder**her.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Anbieter**  
-Wählen Sie den Access-Datenanbieter für die Verbindung mit der Oracle-Datenbank. Verfügbare Anbieter werden die Oracle-Client-Anbieter und der OLE DB-Anbieter. Der Standardwert ist Oracle-Client-Anbieter.  
+Wählen Sie den Datenzugriffs Anbieter für die Verbindung mit der Oracle-Datenbank aus. Verfügbare Anbieter sind der Oracle-Client Anbieter und der OLE DB-Anbieter. Der Standardwert ist der Oracle-Client Anbieter.  
   
 **Mode**  
-Wählen Sie entweder Standard, TNSNAME oder Verbindungszeichenfolge-Modus.  
+Wählen Sie entweder Standard, TNSNAME oder Verbindungs Zeichen folgen Modus aus.  
   
--   Im Modus "Standard" Geben Sie ein oder wählen Sie Werte für der Anbieter, Servername, ServerPort, Oracle SID, Benutzernamen und das Kennwort.  
+-   Im Standard Modus geben Sie Werte für den Anbieter, den Servernamen, den Serverport, die Oracle-sid, den Benutzernamen und das Kennwort ein bzw. wählen diese aus.  
   
--   Im Modus "TNSNAME" Geben Sie den Connect-Bezeichner (TNS Alias) von der Oracle-Datenbank, Benutzernamen und das Kennwort ein.  
+-   Im TNSNAME-Modus geben Sie den Verbindungs Bezeichner (TNS-Alias) der Oracle-Datenbank, den Benutzernamen und das Kennwort ein.  
   
--   Im Modus "Verbindungszeichenfolge" Geben Sie eine Verbindungszeichenfolge an.  
+-   Im Verbindungs Zeichen folgen Modus geben Sie eine Verbindungs Zeichenfolge an.  
   
     > [!IMPORTANT]  
-    > Wir empfehlen nicht, dass Sie die Verbindungszeichenfolge-Modus verwenden, da der Text zum Beispiel Kennwörter sind, und sie wird als Klartext gesendet.  
+    > Es wird nicht empfohlen, den Verbindungs Zeichen folgen Modus zu verwenden, da der Text Kenn Wörter enthalten kann, und er wird als Klartext gesendet.  
   
-Der Standardwert ist Modus "Standard".  
+Der Standardmodus ist der Standardmodus.  
   
 **Servername**  
-Geben Sie den Oracle-Servernamen ein. Der Standardservername ist identisch mit den Namen des Computers. Dies ist ein Modus "Standard"-Option.  
+Geben Sie den Namen des Oracle-Servers ein. Der Standard Servername ist identisch mit dem Computernamen. Dies ist eine Standard Modus-Option.  
   
 **Serverport**  
-Wenn Sie eine Portnummer als 1521 (Standard) für Verbindungen mit Oracle verwenden, geben Sie die Portnummer ein. Dies ist ein Modus "Standard"-Option.  
+Wenn Sie für Verbindungen mit Oracle eine andere Portnummer als 1521 (Standard) verwenden, geben Sie die Portnummer ein. Dies ist eine Standard Modus-Option.  
   
-**Verbinden Sie Bezeichner**  
-Geben Sie die Oracle connect Bezeichner. Dies ist der Alias der Datenbank, wie in der Datei lokalen "TNSNames.ORA" definiert.  
+**Verbindungs Bezeichner**  
+Geben Sie den Oracle Connect-Bezeichner ein. Dies ist der Alias der Datenbank, wie in der lokalen Datei "tnsnames. Ora" definiert.  
   
-Dies ist eine Option für TNSNAME Modus.  
+Dies ist eine Option für den TNSNAME-Modus.  
   
-**Oracle-SID**  
-Geben Sie die SID für die Datenbank ein. Die SID ist ein Bezeichner, der die Oracle-Datenbank auf einem Computer unterscheidet. Der Standard-SID für eine Datenbank ist die ersten acht Zeichen des Datenbanknamens.  
+**Oracle-sid**  
+Geben Sie die sid für die Datenbank ein. Die SID ist ein Bezeichner, der die Oracle-Datenbank auf einem Computer unterscheidet. Die Standard-sid für eine Datenbank ist die ersten acht Zeichen des Daten Banknamens.  
   
-Dies ist ein Modus "Standard"-Option.  
+Dies ist eine Standard Modus-Option.  
   
 **Benutzername**  
-Geben Sie den Benutzernamen ein, dem SSMA für die Verbindung zur Oracle-Datenbank verwendet werden.  
+Geben Sie den Benutzernamen ein, der von SSMA für die Verbindung mit der Oracle-Datenbank verwendet werden soll.  
   
 **Kennwort**  
-Geben Sie das Kennwort für den Benutzernamen ein.  
+Geben Sie das Kennwort für den Benutzernamen ein,  
   
 **Verbindungszeichenfolge**  
 > [!IMPORTANT]  
-> Wir empfehlen nicht, dass Sie die Verbindungszeichenfolge-Modus verwenden, da der Text zum Beispiel Kennwörter sind, und sie wird als Klartext gesendet.  
+> Es wird nicht empfohlen, den Verbindungs Zeichen folgen Modus zu verwenden, da der Text Kenn Wörter enthalten kann, und er wird als Klartext gesendet.  
   
-Wenn Sie den Modus für die Verbindungszeichenfolge verwenden, geben Sie die vollständige Verbindungszeichenfolge für die Verbindung zu Oracle.  
+Wenn Sie den Verbindungs Zeichen folgen Modus verwenden, geben Sie die vollständige Verbindungs Zeichenfolge für die Verbindung mit Oracle ein.  
   
-Verbindungszeichenfolgen werden von Name-Wert-Paaren bestehen.  
+Verbindungs Zeichenfolgen bestehen aus Parameter Name-Wert-Paaren.  
   
--   OLE DB-Verbindungszeichenfolgen finden Sie unter [Microsoft OLE DB-Anbieter für Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) Artikel in der MSDN Library.  
+-   Informationen OLE DB Verbindungs Zeichenfolgen finden Sie im Artikel [Microsoft OLE DB-Anbieter für Oracle](https://go.microsoft.com/fwlink/?LinkId=85640) in der MSDN Library.  
   
-Für SSMA-Verbindungszeichenfolgen müssen Sie immer enthalten Sie die Provider-Parameter. Stellen Sie außerdem sicher, dass Sie den Port-Parameter einschließen, wenn Sie eine Verbindung mit Oracle herstellen.  
+Fügen Sie für SSMA-Verbindungs Zeichenfolgen immer den Provider-Parameter ein. Stellen Sie außerdem sicher, dass Sie den Port-Parameter einschließen, wenn Sie eine Verbindung mit Oracle herstellen.  
   

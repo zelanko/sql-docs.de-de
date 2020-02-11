@@ -1,5 +1,5 @@
 ---
-title: Zurückgeben von Arrayparametern aus gespeicherten Prozeduren | Microsoft-Dokumentation
+title: Zurückgeben von Array Parametern aus gespeicherten Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987970"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>Zurückgeben von Arrayparametern aus gespeicherten Prozeduren
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- In Oracle 7.3 ist es keine Möglichkeit, einen Datensatztyp PL/SQL, mit Ausnahme von einem PL/SQL-Programm zugreifen. Verfügt eine gepackte Prozedur oder Funktion ein formalen Argument als ein PL/SQL-Datensatztyp definiert, ist es nicht möglich, dieses formale Argument als Parameter zu binden. Verwenden Sie den Typ PL/SQL-Tabelle in der Microsoft ODBC-Treiber für Oracle, zum Aufrufen von Arrayparametern aus Prozeduren, die die richtigen Escapesequenzen enthält.  
+ In Oracle 7,3 gibt es keine Möglichkeit, auf einen PL/SQL-Daten Satz Typ außer einem PL/SQL-Programm zuzugreifen. Wenn ein gepacktes Verfahren oder eine Funktion über ein formales Argument verfügt, das als PL/SQL-Datensatz definiert ist, ist es nicht möglich, dieses formale Argument als Parameter zu binden. Verwenden Sie den PL/SQL-Tabellentyp im Microsoft ODBC Driver for Oracle, um Array Parameter aus Prozeduren aufzurufen, die die richtigen Escapesequenzen enthalten.  
   
- Um die Prozedur aufzurufen, verwenden Sie die folgende Syntax:  
+ Verwenden Sie die folgende Syntax, um die Prozedur aufzurufen:  
   
 ```  
 {call  <package-name>.<proc-or-func>;  
@@ -35,13 +35,13 @@ ms.locfileid: "67987970"
 ```  
   
 > [!NOTE]  
->  Die \<Max-Datensätze angefordert >-Parameter muss größer als oder gleich der Anzahl der Zeilen im Resultset vorhanden sein. Andernfalls Oracle einen Fehler, der für dem Benutzer durch den Treiber übergeben wird.  
+>  Der \<> Parameter ' Max-Records ' angeforderte Wert muss größer oder gleich der Anzahl der im Resultset vorhandenen Zeilen sein. Andernfalls gibt Oracle einen Fehler zurück, der vom Treiber an den Benutzer übermittelt wird.  
 >   
->  PL/SQL-Datensätze können nicht als Arrayparameter verwendet werden. Jedes Arrayparameter kann nur eine Spalte einer Datenbanktabelle darstellen.  
+>  PL/SQL-Datensätze können nicht als Array Parameter verwendet werden. Jeder Array Parameter kann nur eine Spalte einer Datenbanktabelle darstellen.  
   
- Das folgende Beispiel definiert ein Paket mit beiden Verfahren, die verschiedenen Resultsets zurückgeben, und klicken Sie dann bietet zwei Möglichkeiten zum Zurückgeben von Resultsets aus dem Paket.  
+ Im folgenden Beispiel wird ein Paket definiert, das zwei Prozeduren enthält, die unterschiedliche Resultsets zurückgeben und dann zwei Möglichkeiten zur Rückgabe von Resultsets aus dem Paket bereitstellen  
   
-## <a name="package-definition"></a>Paketdefinition:  
+## <a name="package-definition"></a>Paket Definition:  
   
 ```  
 CREATE OR REPLACE PACKAGE SimplePackage AS  
@@ -105,37 +105,37 @@ END proc2;
 END SimplePackage;  
 ```  
   
-#### <a name="to-invoke-procedure-proc1"></a>Zum Aufrufen der Prozedur PROC1  
+#### <a name="to-invoke-procedure-proc1"></a>So rufen Sie Procedure proc1 auf  
   
-1.  Gibt alle Spalten in ein einzelnes Resultset zurück:  
+1.  Gibt alle Spalten in einem einzelnen Resultset zurück:  
   
     ```  
     {call SimplePackage.Proc1( {resultset  3, o_id , ao_course, ao_dept  } ) }  
     ```  
   
-2.  Jede Spalte als ein einzelnes Resultset zurückgeben:  
+2.  Gibt jede Spalte als einzelnes Resultset zurück:  
   
     ```  
     {call SimplePackage.Proc1( {resultset 3, o_id},  {resultset 3, ao_course}, {resultset 3, ao_dept} ) }  
     ```  
   
-     Dies gibt drei Resultsets, eine für jede Spalte zurück.  
+     Dies gibt drei Resultsets zurück, jeweils eine für jede Spalte.  
   
-#### <a name="to-invoke-procedure-proc2"></a>Zum Aufrufen der Prozedur PROC2  
+#### <a name="to-invoke-procedure-proc2"></a>So rufen Sie Procedure Proc2 auf  
   
-1.  Gibt alle Spalten in ein einzelnes Resultset zurück:  
+1.  Gibt alle Spalten in einem einzelnen Resultset zurück:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset  5, ao_Arg2, ao_Arg3} ) }  
     ```  
   
-2.  Jede Spalte als ein einzelnes Resultset zurückgeben:  
+2.  Gibt jede Spalte als einzelnes Resultset zurück:  
   
     ```  
     {call SimplePackage.Proc2( 5 , {resultset 5, ao_Arg2}, {resultset 5, ao_Arg3} ) }  
     ```  
   
- Stellen Sie sicher, dass Ihre Anwendungen alle Abrufen der Resultsets mithilfe der [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) API. Weitere Informationen finden Sie in der *ODBC Programmer's Reference*.  
+ Stellen Sie sicher, dass Ihre Anwendungen alle Resultsets mithilfe der [SQLMoreResults](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md) -API abrufen. Weitere Informationen finden Sie in der *ODBC Programmer es Reference*.  
   
 > [!NOTE]  
->  In den ODBC-Treiber für Oracle, Version 2.0 können nicht Oracle-Funktionen, die PL/SQL-Arrays zurückgeben verwendet werden, um Resultsets zurückzugeben.
+>  Im ODBC-Treiber für Oracle-Version 2,0 können Oracle-Funktionen, die PL/SQL-Arrays zurückgeben, nicht zum Zurückgeben von Resultsets verwendet werden.

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 80c5c5b2f4e6d4f691b7c3977ae2f715f5424e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66011692"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>Überspringen einer Tabellenspalte mithilfe einer Formatdatei (SQL Server)
@@ -47,7 +47,7 @@ GO
   
 ```  
   
- Damit ein Massenimport von Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle ausgeführt werden kann, muss `Col1`das erste Datenfeld von der Formatdatei zugeordnet werden, `Col3`muss das zweite Feld zugeordnet werden. `Col2`wird ausgelassen.  
+ Damit ein Massenimport von Daten aus `myTestSkipCol2.dat` in die `myTestSkipCol` -Tabelle ausgeführt werden kann, muss `Col1` das erste Datenfeld und `Col3` das zweite Feld der Formatdatei zugeordnet werden, während `Col2` übersprungen wird.  
   
 ## <a name="using-a-non-xml-format-file"></a>Verwenden einer Nicht-XML-Formatdatei  
  Sie können eine Nicht-XML-Formatdatei ändern, um eine Tabellenspalte auszulassen. Im Allgemeinen ist das **bcp** -Hilfsprogramm erforderlich, um eine standardmäßige Nicht-XML-Formatdatei zu erstellen und die Standarddatei in einem Text-Editor zu ändern. Die vorhandenen Datenfelder müssen von der geänderten Formatdatei den entsprechenden Tabellenspalten zugeordnet werden, und es muss angegeben werden, welche Tabellenspalten ausgelassen werden. Für die Bearbeitung einer standardmäßigen Nicht-XML-Datendatei stehen zwei Alternativen zur Verfügung. Beide Alternativen zeigen, dass das Datenfeld in der Datendatei nicht vorhanden ist und dass keine Daten in die entsprechende Tabellenspalte eingefügt werden.  
@@ -66,7 +66,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  In der folgenden Abbildung werden Werte in diesen Beispiel-Standardformatdateien gezeigt. In der Abbildung werden außerdem die Namen der einzelnen Formatdateifelder angegeben.  
   
- ![Standardmäßige Nicht-XML-Formatdatei für MyTextSkipCol](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "default non-XML format file for myTestSkipCol")  
+ ![Standardmäßige Nicht-XML-Formatdatei für „myTextSkipCol“](../../database-engine/media/mytestskipcol-f-c-default-fmt.gif "Standardmäßige Nicht-XML-Formatdatei für „myTextSkipCol“")  
   
 > [!NOTE]  
 >  Weitere Informationen zu Formatdateifeldern finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
@@ -89,7 +89,7 @@ bcp AdventureWorks2012..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
      Für "server column name" muss eine Zeichenfolge eingegeben werden, die nicht leer ist; dabei muss es sich jedoch auch nicht um den tatsächlichen Spaltennamen handeln. Für die verbleibenden Formatfelder sind die entsprechenden Standardwerte erforderlich.  
   
-     Das folgende Beispiel wird ebenfalls von der Standardformatdatei der `myTestSkipCol`-Tabelle abgeleitet. Die Werte, die 0 oder NULL sein müssen, werden fett dargestellt.  
+     Das folgende Beispiel wird ebenfalls von der Standardformatdatei der `myTestSkipCol` -Tabelle abgeleitet. Die Werte, die 0 oder NULL sein müssen, werden fett dargestellt.  
   
     ```  
     9.0  
@@ -204,8 +204,8 @@ WITH (FORMATFILE='C:\myTestSkipCol2.xml');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [bcp Utility](../../tools/bcp-utility.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)   

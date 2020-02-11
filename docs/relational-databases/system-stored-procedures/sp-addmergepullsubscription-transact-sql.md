@@ -16,18 +16,18 @@ ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b0a20e2bc7a167698353db31e7c0411fb1a6961
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68769145"
 ---
-# <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
+# <a name="sp_addmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Fügt ein Pullabonnement zu einer Mergeveröffentlichung hinzu. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -51,9 +51,9 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Der Typ des Abonnenten. *subscriber_type* ist vom Datentyp **nvarchar (15)** und kann **Global**, **local** oder **Anonymous**sein. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden lokale Abonnements als Client Abonnements und globale Abonnements als Server Abonnements bezeichnet.  
   
-`[ @subscription_priority = ] subscription_priority`Die Abonnement Priorität. *subscription_priority*ist vom Typ **Real**und hat den Standardwert NULL. Für lokale und anonyme Abonnements ist die Priorität **0,0**. Die Priorität wird vom Standardresolver verwendet, um einen Gewinner zu ermitteln, wenn Konflikte erkannt werden. Für globale Abonnenten muss die Abonnementpriorität kleiner als 100 sein. Dieser Wert gibt die Priorität des Verlegers an.  
+`[ @subscription_priority = ] subscription_priority`Die Abonnement Priorität. *subscription_priority*ist **Real**, der Standardwert ist NULL. Für lokale und anonyme Abonnements ist die Priorität **0,0**. Die Priorität wird vom Standardresolver verwendet, um einen Gewinner zu ermitteln, wenn Konflikte erkannt werden. Für globale Abonnenten muss die Abonnementpriorität kleiner als 100 sein. Dieser Wert gibt die Priorität des Verlegers an.  
   
-`[ @sync_type = ] 'sync_type'`Der Synchronisierungstyp des Abonnements. *sync_type*ist vom Datentyp **nvarchar (15)** . der Standardwert ist **automatisch**. Kann " **Automatic** " oder " **None**" sein. Wenn **automatisch**, werden das Schema und die Anfangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen. Wenn **keiner**vorhanden ist, wird davon ausgegangen, dass der Abonnent bereits über das Schema und die Anfangsdaten für veröffentlichte Tabellen verfügt. Systemtabellen und Daten werden immer übertragen.  
+`[ @sync_type = ] 'sync_type'`Der Synchronisierungstyp des Abonnements. *sync_type*ist vom Datentyp **nvarchar (15)**. der Standardwert ist **automatisch**. Kann " **Automatic** " oder " **None**" sein. Wenn **automatisch**, werden das Schema und die Anfangsdaten für veröffentlichte Tabellen zuerst an den Abonnenten übertragen. Wenn **keiner**vorhanden ist, wird davon ausgegangen, dass der Abonnent bereits über das Schema und die Anfangsdaten für veröffentlichte Tabellen verfügt. Systemtabellen und Daten werden immer übertragen.  
   
 > [!NOTE]  
 >  Es wird nicht empfohlen, den Wert " **None**" anzugeben.  
@@ -63,7 +63,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addmergepullsubscription** wird für die Mergereplikation verwendet.  
   
  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zum Synchronisieren des Abonnements verwendet wird, muss die gespeicherte Prozedur [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) auf dem Abonnenten ausgeführt werden, um einen Agent und einen Auftrag für die Synchronisierung mit der Veröffentlichung zu erstellen.  
@@ -76,13 +76,13 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergepullsubscription**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergepullsubscription_agent &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
- [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
- [sp_helpmergepullsubscription &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_addmergepullsubscription_agent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_helpmergepullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

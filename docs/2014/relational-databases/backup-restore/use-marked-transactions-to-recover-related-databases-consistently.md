@@ -1,5 +1,5 @@
 ---
-title: Mithilfe von markierten Transaktionen zum Wiederherstellen von verwandten Datenbanken (vollständiges Wiederherstellungsmodell) | Microsoft-Dokumentation
+title: Verwenden von markierten Transaktionen zum konsistenten wiederherstellen verwandter Datenbanken (vollständiges Wiederherstellungs Modell) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62877069"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Wiederherstellen von verwandten Datenbanken mithilfe von markierten Transaktionen (vollständiges Wiederherstellungsmodell)
-  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
+  Dieses Thema ist nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant, die das vollständige oder das massenprotokollierte Wiederherstellungsmodell verwenden.  
   
  Wenn Sie Updates für zwei oder mehr Datenbanken, ( *zugehörige Datenbanken*), ausführen, können Sie diese mithilfe von Transaktionsmarkierungen bis zu einem logisch konsistenten Punkt wiederherstellen. Bei dieser Wiederherstellung gehen jedoch alle Transaktionen verloren, für die nach der Markierung, die als Wiederherstellungspunkt verwendet wird, ein Commit ausgeführt wird. Das Markieren von Transaktionen empfiehlt sich nur, wenn Sie verbundene Datenbanken prüfen oder wenn Sie in Kauf nehmen, dass Transaktionen, für die kürzlich ein Commit ausgeführt wurde, verloren gehen.  
   
@@ -173,7 +173,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>Wiederherstellen bis zu einer markierten Transaktion  
  Informationen zum Wiederherstellen einer Datenbank, die markierte Transaktionen enthält, bis zu einer Markierung oder kurz vor einer bestimmten Markierung finden Sie unter [Wiederherstellen verwandter Datenbanken mit einer markierten Transaktion](recovery-of-related-databases-that-contain-marked-transaction.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)   
  [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql)   

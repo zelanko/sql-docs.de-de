@@ -1,5 +1,5 @@
 ---
-title: Ausführen von Vorlagen, die XPath-Abfragen (SQLXMLOLEDB-Anbieter) enthalten. | Microsoft-Dokumentation
+title: Ausführen von Vorlagen, die XPath-Abfragen enthalten (SQLXMLOLEDB-Anbieter) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9c4b5d51597f41b5355acd4995aaf7f988ed53a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013091"
 ---
 # <a name="executing-templates-that-contain-xpath-queries-sqlxmloledb-provider"></a>Ausführen von Vorlagen, die XPath-Abfragen enthalten (SQLXMLOLEDB-Anbieter)
@@ -34,16 +34,16 @@ ms.locfileid: "66013091"
   
 -   Zuordnungsschema  
   
- In dieser ADO-beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (Stamm) besteht angegeben ist, für die XSD-Zuordnungsschema (MySchema.xml), die in der beschriebenen [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41; ](executing-xpath-queries-sqlxmloledb-provider.md).  
+ In dieser ADO-Beispielanwendung wird eine XML-Vorlage, die aus einer XPath-Abfrage (root) besteht, für das XSD-Zuordnungsschema (MySchema. Xml) angegeben, das unter [Ausführen von XPath-Abfragen &#40;SQLXMLOLEDB-Anbieter&#41;](executing-xpath-queries-sqlxmloledb-provider.md)beschrieben wird.  
   
- Die Mapping-Schema-Eigenschaft stellt das XSD-Zuordnungsschema für das die XPath-Abfrage ausgeführt wird. Die Basis-Path-Eigenschaft stellt den Dateipfad zum Zuordnungsschema bereit.  
+ Die Mapping-Schema Eigenschaft stellt das XSD-Zuordnungsschema bereit, für das die XPath-Abfrage ausgeführt wird. Die Eigenschaft Basispfad stellt den Dateipfad zum Zuordnungsschema bereit.  
   
- ClientSideXML-Eigenschaft wird auf "true" festgelegt. Deshalb wird das XML-Dokument auf dem Client generiert.  
+ Die ClientSideXML-Eigenschaft ist auf true festgelegt. Deshalb wird das XML-Dokument auf dem Client generiert.  
   
  In der Anwendung wird eine XPath-Abfrage direkt angegeben. Daher muss der Dialekt {5d531cb2-e6ed-11d2-b252-00c04f681b71} eingeschlossen sein.  
   
 > [!NOTE]  
->  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [Systemanforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
+>  Im Code müssen Sie den Namen der Instanz von Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in der Verbindungszeichenfolge bereitstellen. In diesem Beispiel wird überdies die Verwendung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) als Datenanbieter beschrieben, was die Installation zusätzlicher Netzwerkclientsoftware erforderlich macht. Weitere Informationen finden Sie unter [System Anforderungen für SQL Server Native Client](../../native-client/system-requirements-for-sql-server-native-client.md).  
   
 ```  
 Option Explicit  

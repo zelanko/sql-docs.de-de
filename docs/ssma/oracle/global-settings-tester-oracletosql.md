@@ -1,5 +1,5 @@
 ---
-title: Globale Einstellungen (Tester) (OracleToSQL) | Microsoft-Dokumentation
+title: Globale Einstellungen (Tester) (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,20 +11,20 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264415"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Globale Einstellungen (Tester) (OracleToSQL)
-Mithilfe der Seite "Tester" des der **globale Einstellungen** Dialogfeld die Einstellungen für SSMA-Tester.  
+Verwenden Sie die Seite Tester des Dialog Felds **globale Einstellungen** , um Einstellungen für SSMA-Tester anzugeben.  
   
-Um die Einstellungen für Tester, auf die **Tools** , wählen Sie im Menü **globale Einstellungen**, und klicken Sie auf **Tester** am unteren Rand im linken Bereich.  
+Um **auf die Tester** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, und klicken Sie unten im linken Bereich auf **Tester** .  
   
-## <a name="options"></a>Optionen  
-**Testfähige Objekt analysis**  
-Diese Einstellung gibt an, ob bei der Analyse der getestet werden Objekte. Wählen Sie **Ja** Wenn SSMA-Tester zu analysieren und überprüfen Sie die abhängigen Objekte automatisch angezeigt werden sollen. Ist der Standardsatz der Option **Ja**.  
+## <a name="options"></a>Tastatur  
+**Test fähige Objektanalyse**  
+Diese Einstellung gibt an, ob die Analyse der Test fähigen Objekte durchgeführt werden soll. Wählen Sie **Ja** aus, wenn der SSMA-Tester die abhängigen Objekte analysieren und automatisch überprüfen soll. Der Standard Options Satz ist " **Ja**".  
   
 Die folgenden Optionen sind für diese Einstellung verfügbar:  
   
@@ -32,30 +32,21 @@ Die folgenden Optionen sind für diese Einstellung verfügbar:
   
 2.  Nein  
   
-**Erweiterungstabellen Modus speichern**  
-Diese Einstellung gibt an, wie die internen Hilfstabellen erstellt während der Ausführung des Testfalls zu speichern. Folgende Optionen kann für diese Einstellung festgelegt werden:  
+**Speicher Modus für Hilfstabellen**  
+Diese Einstellung gibt an, wie die internen Hilfstabellen gespeichert werden, die während der Test Fall Ausführung erstellt wurden. Für diese Einstellung können folgende Optionen festgelegt werden:  
   
 1.  Immer löschen  
   
 2.  Immer speichern  
   
-3.  Speichern Sie, wenn die Tabelle Vergleich fehlgeschlagen  
+3.  Beim Vergleichen der Tabelle speichern  
   
-4.  Fordern Sie Benutzer aus, wenn Tabelle Vergleich fehlgeschlagen ist.  
+4.  Beim Tabellenvergleich den Benutzer Fragen  
   
-Die Standard-Option festgelegt ist: **Immer löschen**.  
+Der Standard Options Satz lautet: **immer löschen**.  
   
-**Ausführen von Rollbacks für Daten**  
-Diese Einstellung gibt an, ob ein Rollbackvorgang ausgeführt wird, nach dem Ausführen der einzelnen Testfall. Ist der Standardsatz der Option **keine**.  
-  
-Die folgenden Optionen sind für diese Einstellung verfügbar:  
-  
-1.  Ja  
-  
-2.  Nein  
-  
-**Ausführung von Tests nach dem ersten Fehler beenden**  
-Diese Einstellung gibt an, ob der aktuelle ausgeführten Testfall beendet, wenn bei der Ausführung ein Fehler aufgetreten ist. Ist der Standardsatz der Option **Ja**.  
+**Ausführen eines Daten Rollbacks**  
+Mit dieser Einstellung wird festgelegt, ob nach dem Ausführen der einzelnen Testfälle ein Rollback-Vorgang ausgeführt werden soll. Der Standard Options Satz ist " **Nein**".  
   
 Die folgenden Optionen sind für diese Einstellung verfügbar:  
   
@@ -63,6 +54,15 @@ Die folgenden Optionen sind für diese Einstellung verfügbar:
   
 2.  Nein  
   
-## <a name="see-also"></a>Siehe auch  
-[Finishing Test Case Preparation beenden &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
+**Testausführung nach dem ersten Fehler beendet**  
+Mit dieser Einstellung wird festgelegt, ob der aktuell aktive Testfall beendet werden soll, wenn während der Ausführung ein Fehler aufgetreten ist. Der Standard Options Satz ist " **Ja**".  
+  
+Die folgenden Optionen sind für diese Einstellung verfügbar:  
+  
+1.  Ja  
+  
+2.  Nein  
+  
+## <a name="see-also"></a>Weitere Informationen  
+[Fertigstellung der Test Fall Vorbereitung &#40;oracleto SQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  
   

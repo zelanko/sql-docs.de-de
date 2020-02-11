@@ -1,5 +1,5 @@
 ---
-title: StdevP (MDX) | Microsoft-Dokumentation
+title: STDE VP (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036869"
 ---
 # <a name="stdevp-mdx"></a>StdevP (MDX)
 
 
-  Gibt die Standardabweichung eines numerischen Ausdrucks, ausgewertet über einer Menge mithilfe der Formel für die unausgewogene Auffüllung (geteilt durch *n*).  
+  Gibt die Standardabweichung der Auffüllung eines numerischen Ausdrucks zurück, der für eine Menge mithilfe der Formel für die unausgewogene Auffüllung (dividiert durch *n*) ausgewertet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,11 +31,11 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
- Die **"StDevP"** -Funktion verwendet die unausgewogene Auffüllung Formel, während die [Stdev](../mdx/stdev-mdx.md) -Funktion verwendet die Formel für die ausgewogene Auffüllung berechnet wurde.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **STDE VP** -Funktion verwendet die Formel für die unausgewogene Auffüllung, während die [StDev](../mdx/stdev-mdx.md) -Funktion die Formel für die unausgewogene Auffüllung verwendet.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Standardabweichung für Internet Order Quantity, ausgewertet über die ersten drei Monate des Kalenderjahres 2003, mithilfe der Formel für die unausgewogene Auffüllung zurückgegeben.  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

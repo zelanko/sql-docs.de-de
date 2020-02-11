@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung einer tabellarischen Modelldatenbank (SSAS) mit | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f73a8e9e79a08c3f4a1f1e2b40ff5f83a0e39b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067657"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Herstellen einer Verbindung mit einer tabellarischen Modelldatenbank (SSAS)
@@ -27,13 +27,13 @@ ms.locfileid: "66067657"
   
  [Benutzerberechtigungen für die Datenbank](#bkmk_userpermissions)  
   
- [Administratorberechtigungen für den Server](#bkmk_admin)  
+ [Administrator Berechtigungen auf dem Server](#bkmk_admin)  
   
  [Herstellen einer Verbindung von Excel oder SharePoint aus](#bkmk_excelconn)  
   
- [Beheben von Verbindungsproblemen](#bkmk_Tshoot)  
+ [Problembehandlung bei Verbindungsproblemen](#bkmk_Tshoot)  
   
-##  <a name="bkmk_userpermissions"></a> Benutzerberechtigungen für die Datenbank  
+##  <a name="bkmk_userpermissions"></a>Benutzerberechtigungen für die Datenbank  
  Benutzer, die eine Verbindung mit Tabellendatenbanken herstellen, müssen die Mitgliedschaft in einer Datenbankrolle besitzen, die einen Lesezugriff festlegt.  
   
  Rollen, und gelegentlich auch die Rollenmitgliedschaft, werden definiert, wenn ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird, oder über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Falle von bereitgestellten Modellen. Weitere Informationen zum Erstellen von Rollen mithilfe des Rollen-Managers in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md). Weitere Informationen zum Erstellen und Verwalten von Rollen für ein bereitgestelltes Modell finden Sie unter [Rollen tabellarischer Modelle &#40;SSAS – tabellarisch&#41;](tabular-model-roles-ssas-tabular.md).  
@@ -41,7 +41,7 @@ ms.locfileid: "66067657"
 > [!CAUTION]  
 >  Wenn ein tabellarisches Modellprojekt, dessen Rollen mithilfe des Rollen-Managers in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] definiert wurden, erneut bereitgestellt wird, dann werden die in einem bereitgestellten tabellarischen Modell definierten Rollen überschrieben.  
   
-##  <a name="bkmk_admin"></a> Administratorberechtigungen für den Server  
+##  <a name="bkmk_admin"></a>Administrator Berechtigungen auf dem Server  
  Für Organisationen, die SharePoint zum Hosten von Excel-Arbeitsmappen oder Reporting Services-Berichten verwenden, ist eine zusätzliche Konfiguration erforderlich, um tabellarische Modelldaten für SharePoint-Benutzer verfügbar zu machen. Wenn Sie SharePoint nicht verwenden, überspringen Sie diesen Abschnitt.  
   
  Zum Anzeigen von Excel-Arbeitsmappen oder [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Berichten, die Tabellendaten enthalten, muss das zum Ausführen von Excel Services oder Reporting Services verwendete Konto über Administratorberechtigungen für die Analysis Services-Instanz verfügen. Administratorberechtigungen sind erforderlich, damit diesen Services von der Analysis Services-Instanz vertraut wird.  
@@ -50,7 +50,7 @@ ms.locfileid: "66067657"
   
 1.  Öffnen Sie in der Zentraladministration die Seite "Dienstkonten konfigurieren".  
   
-2.  Wählen Sie den von Excel Services verwendeten Dienstanwendungspool aus. Dies kann **Dienstanwendungspool – Systemstandard für SharePoint-Webdienste** oder einen benutzerdefinierten Anwendungspool. Das von Excel Services verwendete verwaltete Konto wird auf der Seite angezeigt.  
+2.  Wählen Sie den von Excel Services verwendeten Dienstanwendungspool aus. Der **Dienst kann Anwendungs Pool-SharePoint-Webdienste** oder ein benutzerdefinierter Anwendungs Pool sein. Das von Excel Services verwendete verwaltete Konto wird auf der Seite angezeigt.  
   
      Bei SharePoint-Farmen, die Reporting Services im SharePoint-Modus umfassen, müssen Sie die Kontoinformationen für die Reporting Services-Dienstanwendung ebenfalls abrufen.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66067657"
   
 5.  Klicken Sie auf **Hinzufügen**, und geben Sie dann das von Excel Services verwendete Konto ein, gefolgt von dem von Reporting Services verwendeten Konto.  
   
-##  <a name="bkmk_excelconn"></a> Herstellen einer Verbindung von Excel oder SharePoint aus  
+##  <a name="bkmk_excelconn"></a>Herstellen einer Verbindung von Excel oder SharePoint aus  
  Clientbibliotheken, die Zugriff auf Analysis Services-Datenbanken bieten, können verwendet werden, um eine Verbindung mit auf einem Tabellenmodus-Server ausgeführten Modelldatenbanken herzustellen. Bibliotheken umfassen den OLE DB-Anbieter für Analysis Services, ADOMD.NET und AMO.  
   
  Excel verwendet den OLE DB-Anbieter. Wenn Sie entweder über MSOLAP.4 aus SQL Server 2008 R2 (Dateiname msolap100.dll, Version 10.50.1600.1) oder MSOLAP.5 (Dateiname msolap110.dll) verfügen, der mit der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Version von PowerPivot für Excel installiert wird, besitzen Sie eine Version, die eine Verbindung mit tabellarischen Datenbanken herstellt.  
@@ -81,7 +81,7 @@ ms.locfileid: "66067657"
   
 2.  Wählen Sie **Aus Analysis Services**aus.  
   
-3.  Geben Sie unter **Servername**den Namen der Analysis Services-Instanz an, die die Datenbank hostet. Der Servername ist häufig der Name des Computers, auf dem die Software ausgeführt wird. Wenn der Server als benannte Instanz installiert wurde, müssen Sie den Namen im folgenden Format angeben: \<Servername >\\< Instancename\>.  
+3.  Geben Sie unter **Servername**den Namen der Analysis Services-Instanz an, die die Datenbank hostet. Der Servername ist häufig der Name des Computers, auf dem die Software ausgeführt wird. Wenn der Server als benannte Instanz installiert wurde, müssen Sie den Namen im folgenden Format angeben: \<Servername>\\<instanceName.\>  
   
      Die Serverinstanz muss für die eigenständige tabellarische Bereitstellung konfiguriert sein, und die Serverinstanz muss eine eingehende Regel aufweisen, die den Zugriff darauf zulässt. Weitere Informationen finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md) und [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -91,29 +91,29 @@ ms.locfileid: "66067657"
   
  Nachdem die Verbindung hergestellt wurde, können Sie mithilfe der Daten eine PivotTable oder ein PivotChart erstellen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)definieren.  
   
-##  <a name="bkmk_sharepoint"></a> Herstellen einer Verbindung von SharePoint aus  
- Wenn Sie PowerPivot für SharePoint verwenden, können Sie eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen, die die Umleitung zu einer Datenbank ermöglicht, die auf einem Analysis Services-Server im tabellarischen Modus ausgeführt wird. Eine BI-Semantikmodell-Verbindung stellt einen HTTP-Endpunkt für eine Datenbank bereit. Sie vereinfacht auch den Tabellenmodell-Zugriff für Wissensarbeiter, die routinemäßig Dokumente auf einer SharePoint-Website verwenden. Wissensarbeiter müssen nur den Speicherort der BI-Semantikmodell-Verbindungsdatei oder die URL kennen, um auf Tabellenmodell-Datenbanken zuzugreifen. Details zum Serverspeicherort oder Datenbanknamen werden in der BI-Semantikmodell-Verbindung gekapselt. Weitere Informationen zum Erstellen und Verwenden von BI-Semantikmodell-Verbindungsdateien finden Sie unter [PowerPivot BI-Semantikmodellverbindung &#40;bism&#41; ](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) und [eine BI-Semantikmodell-Verbindung mit einem tabellarischen Modell erstellen Datenbank](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
+##  <a name="bkmk_sharepoint"></a>Herstellen einer Verbindung von SharePoint aus  
+ Wenn Sie PowerPivot für SharePoint verwenden, können Sie eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen, die die Umleitung zu einer Datenbank ermöglicht, die auf einem Analysis Services-Server im tabellarischen Modus ausgeführt wird. Eine BI-Semantikmodell-Verbindung stellt einen HTTP-Endpunkt für eine Datenbank bereit. Sie vereinfacht auch den Tabellenmodell-Zugriff für Wissensarbeiter, die routinemäßig Dokumente auf einer SharePoint-Website verwenden. Wissensarbeiter müssen nur den Speicherort der BI-Semantikmodell-Verbindungsdatei oder die URL kennen, um auf Tabellenmodell-Datenbanken zuzugreifen. Details zum Serverspeicherort oder Datenbanknamen werden in der BI-Semantikmodell-Verbindung gekapselt. Weitere Informationen zum Erstellen und Verwenden von BI-Semantik Modell-Verbindungs Dateien finden Sie unter [Power Pivot BI-Semantik Modell Verbindung &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md) und [Erstellen einer BI-Semantik Modell Verbindung mit einer tabellarischen Modelldatenbank](../power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
   
-##  <a name="bkmk_Tshoot"></a> Beheben von Verbindungsproblemen  
+##  <a name="bkmk_Tshoot"></a>Problembehandlung bei Verbindungsproblemen  
  Dieser Abschnitt enthält Ursachen und Lösungsschritte für Probleme, die beim Herstellen einer Verbindung mit einer Tabellenmodell-Datenbank auftreten.  
   
- **Der Datenverbindungs-Assistent kann keine Liste von Datenbanken aus der angegebenen Datenquelle abrufen.**  
+ **Der Datenverbindungs-Assistent kann keine Liste mit Datenbanken aus der angegebenen Datenquelle abrufen.**  
   
  Beim Importieren von Daten tritt dieser Microsoft Excel-Fehler auf, wenn Sie versuchen, mithilfe des Assistenten eine Verbindung mit einer Tabellenmodell-Datenbank auf einem Analysis Services-Remoteserver herzustellen und Sie nicht über ausreichende Berechtigungen verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Fehler beim Versuch, eine Verbindung mit der externen Datenquelle herzustellen. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname >-Sandbox**  
+ **Fehler beim Herstellen einer Verbindung mit der externen Datenquelle. Die folgenden Verbindungen wurden nicht aktualisiert: \<Modellname> Sandbox**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Sie nicht über ausreichende Berechtigungen für den Analysis Services-Remoteserver verfügen. Um diesen Fehler zu beheben, müssen Sie über Benutzerzugriffsrechte für die Datenbank verfügen. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Benutzerzugriff auf Daten.  
   
- **Fehler beim Versuch, diesen Vorgang auszuführen. Laden Sie die Arbeitsmappe erneut, und wiederholen Sie dann, um diesen Vorgang erneut auszuführen.**  
+ **Fehler beim Versuch, diesen Vorgang auszuführen. Laden Sie die Arbeitsmappe erneut, und versuchen Sie dann erneut, diesen Vorgang auszuführen.**  
   
  In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da Excel Services nicht von der Analysis Services-Instanz vertraut wird, in der die Modelldaten bereitgestellt werden. Um diesen Fehler zu beheben, gewähren Sie Excel Services Administratorberechtigung für die Analysis Services-Instanz. Weitere Informationen finden Sie weiter oben in diesem Thema in den Anweisungen zum Gewähren von Administratorberechtigungen. Wenn der Fehler weiterhin auftritt, verwenden Sie wieder den Excel Services-Anwendungspool.  
   
- **Während des Herstellens einer Verbindung mit der in der Arbeitsmappe verwendeten externen Datenquelle ist ein Fehler aufgetreten.**  
+ **Beim Versuch, eine Verbindung mit der in der Arbeitsmappe verwendeten externen Datenquelle herzustellen, ist ein Fehler aufgetreten.**  
   
- In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da der Benutzer nicht über ausreichende SharePoint-Berechtigungen für die Arbeitsmappe verfügt. Der Benutzer muss mindestens über **Leseberechtigungen** verfügen. **Nur anzeigen** -Berechtigungen sind für den Datenzugriff nicht ausreichend.  
+ In SharePoint tritt dieser Microsoft Excel-Fehler auf, wenn Sie eine Dateninteraktion, z. B. das Filtern von Daten, in einer PivotTable durchführen, die Modelldaten verwendet. Der Fehler tritt auf, da der Benutzer nicht über ausreichende SharePoint-Berechtigungen für die Arbeitsmappe verfügt. Der Benutzer muss mindestens über **Leseberechtigungen** verfügen. **Nur anzeigen-** Berechtigungen sind für den Datenzugriff nicht ausreichend.  
   
-## <a name="see-also"></a>Siehe auch  
- [Bereitstellung von Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bereitstellung von Tabellen Modelllösungen &#40;tabellarischen SSAS-&#41;](tabular-model-solution-deployment-ssas-tabular.md)  
   
   

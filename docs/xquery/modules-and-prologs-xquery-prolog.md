@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946608"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Module und Prologe – XQuery-Prolog
@@ -29,7 +29,7 @@ ms.locfileid: "67946608"
 
   Eine XQuery-Abfrage besteht aus einem Prolog und einem Hauptteil (Body). Der XQuery-Prolog besteht aus einer Reihe von Deklarationen und Definitionen, die gemeinsam die für die Verarbeitung der Abfrage erforderliche Umgebung erstellen. In SQL Server kann der XQuery-Prolog Namespacedeklarationen enthalten. Der XQuery-Hauptteil besteht aus einer Sequenz von Ausdrücken, die das beabsichtigte Abfrageergebnis angeben.  
   
- Z. B. die folgende XQuery-Abfrage angegeben ist, für die Instructions-Spalte der **Xml** Typ, der produktionsanweisungen als XML gespeichert. Die Abfrage ruft die Produktionsanweisungen für den Arbeitsplatzstandort `10` ab. Die `query()` Methode der **Xml** -Datentyp wird zum Angeben der XQuery verwendet.  
+ Beispielsweise wird die folgende XQuery für die Instructions-Spalte des **XML** -Typs angegeben, in der Fertigungsanweisungen als XML gespeichert werden. Die Abfrage ruft die Produktionsanweisungen für den Arbeitsplatzstandort `10` ab. Die `query()` -Methode des **XML** -Datentyps wird zum Angeben der XQuery verwendet.  
   
 ```  
 SELECT Instructions.query('declare namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";           
@@ -41,16 +41,17 @@ WHERE ProductModelID=7
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die XQuery-Prolog enthält eine Namespace-Präfixdeklaration (AWMI), `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`.  
+-   Der XQuery-Prolog enthält eine AWMI-Deklaration (Namespace `(namespace AWMI="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions";`prefix),.  
   
 -   Das `declare namespace`-Schlüsselwort definiert ein Namespacepräfix, das später im Hauptteil der Abfrage verwendet wird.  
   
--   `/AWMI:root/AWMI:Location[@LocationID="10"]` ist der Hauptteil der Abfrage.  
+-   
+  `/AWMI:root/AWMI:Location[@LocationID="10"]` ist der Hauptteil der Abfrage.  
   
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
- Eine Namespacedeklaration definiert ein Präfix und ordnet dieses einem Namespace-URI zu, was in der folgenden Abfrage dargestellt ist. In der Abfrage `CatalogDescription` ist ein **Xml** Type-Spalte.  
+ Eine Namespacedeklaration definiert ein Präfix und ordnet dieses einem Namespace-URI zu, was in der folgenden Abfrage dargestellt ist. In der Abfrage `CatalogDescription` ist eine Spalte vom Typ **XML** .  
   
- Indem die XQuery-Abfrage für die Spalte angegeben wird, gibt der Abfrageprolog mit der `declare namespace`-Deklaration an, dass das Präfix `PD`, die Produktbeschreibung, dem Namespace-URI zugeordnet wird. Dieses Präfix wird dann im Hauptteil der Abfrage anstelle der Namespace-URI verwendet. Die Knoten des daraus resultierenden XML befinden sich in dem dem Namespace-URI zugeordneten Namespace.  
+ Indem die XQuery-Abfrage für die Spalte angegeben wird, gibt der Abfrageprolog mit der `declare namespace`-Deklaration an, dass das Präfix `PD`, die Produktbeschreibung, dem Namespace-URI zugeordnet wird. Dieses Präfix wird dann im Hauptteil der Abfrage anstelle der Namespace-URI verwendet.  Die Knoten des daraus resultierenden XML befinden sich in dem dem Namespace-URI zugeordneten Namespace.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -73,7 +74,7 @@ FROM Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Weitere Informationen finden Sie unter, [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
+ Weitere Informationen finden [Sie unter Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
 ### <a name="default-namespace-declaration"></a>Standardnamespacedeklaration  
  Statt ein Namespacepräfix mit der `declare namespace`-Deklaration zu deklarieren, können Sie die `declare default element namespace`-Deklaration verwenden, um einen Standardnamespace für Elementnamen zu binden. In diesem Fall definieren Sie kein Präfix.  
@@ -100,7 +101,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)  
   
   

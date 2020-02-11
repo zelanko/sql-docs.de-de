@@ -17,14 +17,14 @@ ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3902917eb2c219983c6d1ac3c86f738d272aeb5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939845"
 ---
 # <a name="supported-versions-of-foxpro"></a>Unterstützte Versionen von FoxPro
-Microsoft® Visual FoxPro® ODBC Driver in FoxPro-Tabellen gespeicherte Daten zugreifen können. Die folgenden Versionen von FoxPro-Daten werden unterstützt:  
+Sie können den Microsoft® Visual FoxPro-® ODBC-Treiber verwenden, um auf in FoxPro-Tabellen gespeicherte Daten zuzugreifen. Die folgenden Versionen von FoxPro-Daten werden unterstützt:  
   
 -   2.0  
   
@@ -34,8 +34,8 @@ Microsoft® Visual FoxPro® ODBC Driver in FoxPro-Tabellen gespeicherte Daten zu
   
 -   Visual FoxPro (alle Versionen)  
   
- Wenn Sie in der Visual FoxPro gespeicherte Daten zugreifen, können Sie auswählen, für die Verbindung eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) , enthält 0 (null) oder mehr [Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md) oder in einem Verzeichnis [kostenlose Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ Wenn Sie auf Daten zugreifen, die in Visual FoxPro gespeichert sind, können Sie eine Verbindung mit einer [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) herstellen, die keine oder mehrere [Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)enthält.  
   
  Weitere Informationen zum Herstellen einer Verbindung mit einer Datenquelle finden Sie unter [Hinzufügen einer Visual FoxPro-Datenquelle](../../odbc/microsoft/adding-a-visual-foxpro-data-source.md).  
   
- Informationen zum Herunterladen des Treibers finden Sie unter [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).
+ Informationen zum Herunterladen des Treibers finden Sie auf [der Visual FoxPro-ODBC-Treiber-Download Website](https://go.microsoft.com/fwlink/?LinkId=121318).

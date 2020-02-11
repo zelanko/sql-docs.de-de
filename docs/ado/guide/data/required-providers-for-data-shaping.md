@@ -14,10 +14,10 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 732563fc2c4e1cc93beac8712d845b960ae56aaf
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68661277"
 ---
 # <a name="required-providers-for-data-shaping"></a>Erforderliche Anbieter für die Datenstrukturierung
@@ -25,7 +25,7 @@ Die Daten Strukturierung erfordert in der Regel zwei Anbieter. Der Dienstanbiete
   
  Der Name des Dienstanbieters (MSDataShape) kann als Wert der Eigenschaft [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt [Anbieter](../../../ado/reference/ado-api/provider-property-ado.md) oder Verbindungs Zeichenfolge-Schlüsselwort "Provider = MSDataShape;" angegeben werden.  
   
- Der Name des Datenanbieters kann als Wert der dynamischen Eigenschaft **Datenanbieter** angegeben werden, die der Auflistung der **Verbindungs** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) durch den Daten Strukturierungs Dienst für OLE DB oder das Schlüsselwort für die Verbindungs Zeichenfolge hinzugefügt wird. **Datenanbieter =** _Anbieter_".  
+ Der Name des Datenanbieters kann als Wert der dynamischen Eigenschaft **Datenanbieter** angegeben werden, die der Auflistung der **Verbindungs** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) durch den Daten Strukturierungs Dienst für OLE DB oder das Verbindungs Zeichenfolgen-Schlüsselwort "**Datenanbieter =** _Provider_" hinzugefügt wird.  
   
  Es ist kein Datenanbieter erforderlich, wenn das **Recordset** nicht aufgefüllt ist (z. b. wie in einem fertigen **Recordset** , bei dem Spalten mit dem New-Schlüsselwort erstellt werden). Geben Sie in diesem Fall "**Datenanbieter =** None;" an.  
   
@@ -37,7 +37,7 @@ cnn.Provider = "MSDataShape"
 cnn.Open "Data Provider=SQLOLEDB;Integrated Security=SSPI;Database=Northwind"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
  [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)

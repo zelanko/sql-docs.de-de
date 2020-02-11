@@ -15,15 +15,15 @@ ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022101"
 ---
 # <a name="vertical-applications"></a>Vertikale Anwendungen
-Vertikale Anwendungen führen in der Regel eine klar definierte Aufgabe für eine einzelne DBMS. Auftragserfassungsanwendung verfolgt z. B. die Bestellungen in einem Unternehmen. Was diese Arten von Anwendungen gemeinsam haben ist, dass das Datenbankschema in der Regel durch Anwendungsentwickler vorgesehen, während die Anwendung mit einer Reihe von verschiedenen DBMS arbeiten kann, es mit einer einzelnen DBMS für einen einzelnen Kunden funktioniert.  
+Vertikale Anwendungen führen in der Regel eine klar definierte Aufgabe für ein einzelnes DBMS aus. Beispielsweise werden die Bestellungen in einem Unternehmen nachverfolgt. Diese Arten von Anwendungen haben häufig den Wert, dass das Datenbankschema normalerweise vom Anwendungsentwickler entworfen wird und die Anwendung zwar mit einer Reihe von unterschiedlichen DBMSs funktioniert, aber mit einem einzelnen DBMS für einen einzelnen Kunden funktioniert.  
   
- Da vertikale Anwendungen in der Regel auf bestimmte Funktionen, z. B. scrollfähige Cursor oder Transaktionen, erfordern unterstützen sie nur selten allen DBMS. Stattdessen sind sie tendenziell hochgradig interoperabel auf eine begrenzte Anzahl von DBMS-Systeme. Wählen Sie in der Regel vertikal Anwendungsentwickler, die DBMS-Systeme zu unterstützen, die einen Großteil des Markts darstellen, und ignorieren den Rest. Sie können sogar entscheiden, um bestimmte Treiber für diese DBMS, um ihre Tests zu reduzieren und die Supportkosten Produkt zu unterstützen.  
+ Da vertikale Anwendungen normalerweise bestimmte Funktionen erfordern, z. b. scrollfähige Cursor oder Transaktionen, unterstützen Sie selten alle DBMSs. Stattdessen sind Sie in der Regel unter einem begrenzten Satz von DBMSs hochgradig interoperabel. In der Regel wählen vertikale Anwendungsentwickler diese DBMSs unterstützen, die einen großen Anteil des Markts darstellen und den Rest ignorieren. Sie können sogar bestimmte Treiber für diese DBMSs unterstützen, um die Test-und Produktsupport Kosten zu reduzieren.  
   
- Da vertikale Anwendungen auf einen bekannten Satz von DBMS-Systeme unterstützen können, enthalten diese treiberspezifische oder DBMS-spezifischen Code. Solcher Code ist jedoch am besten auf ein Minimum reduziert, da sie zusätzliche Zeit für die Verwaltung erfordert.
+ Da vertikale Anwendungen einen bekannten Satz von DBMSs unterstützen können, enthalten Sie manchmal treiberspezifischen oder DBMS-spezifischen Code. Dieser Code wird jedoch am besten auf ein Minimum beschränkt, da für die Wartung zusätzliche Zeit erforderlich ist.

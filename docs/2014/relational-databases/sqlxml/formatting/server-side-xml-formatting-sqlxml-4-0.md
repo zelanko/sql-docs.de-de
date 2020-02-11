@@ -1,5 +1,5 @@
 ---
-title: Serverseitige XML-Formatierung (SQLXML 4.0) | Microsoft-Dokumentation
+title: Server seitige XML-Formatierung (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af44d854ba28e8e8ac3b1a4572bf9b222f20299b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012210"
 ---
 # <a name="server-side-xml-formatting-sqlxml-40"></a>Serverseitige XML-Formatierung (SQLXML 4.0)
@@ -25,7 +25,7 @@ ms.locfileid: "66012210"
   
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] können Sie XML-Dokumente in Datenbanktabellen speichern und aus Datenbanktabellen abrufen. Um ein XML-Dokument abzurufen, verwenden Sie die FOR XML-Abfrageerweiterung in einer SELECT-Abfrage.  
   
- Nehmen wir beispielsweise an eine Clientanwendung führt einen Befehl für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] besteht aus folgenden [!INCLUDE[tsql](../../../includes/tsql-md.md)] Abfrage:  
+ Nehmen Sie beispielsweise an, eine Client Anwendung führt einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Befehl für aus, der [!INCLUDE[tsql](../../../includes/tsql-md.md)] aus der folgenden Abfrage besteht:  
   
 ```  
 SELECT FirstName, LastName  
@@ -50,11 +50,11 @@ FROM   Person.Contact
   
 -   EXPLICIT  
   
- Weitere Informationen zur FOR XML-Klausel finden Sie unter [Erstellen von XML mit FOR XML](../../xml/for-xml-sql-server.md).  
+ Weitere Informationen zur for XML-Klausel finden Sie unter [Erstellen von XML mithilfe von for XML](../../xml/for-xml-sql-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Architektur der Client- und serverseitigen XML-Formatierung &#40;SQLXML 4.0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
- [Die clientseitige XML-Formatierung &#40;SQLXML 4.0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Architektur der Client seitigen und Server seitigen XML-Formatierung &#40;SQLXML 4,0&#41;](architecture-of-client-side-and-server-side-xml-formatting-sqlxml-4-0.md)   
+ [Client seitige XML-Formatierung &#40;SQLXML 4,0&#41;](client-side-xml-formatting-sqlxml-4-0.md)   
  [FOR XML &#40;SQL Server&#41;](../../xml/for-xml-sql-server.md)  
   
   

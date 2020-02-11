@@ -1,5 +1,5 @@
 ---
-title: TopPercent (MDX) | Microsoft-Dokumentation
+title: Topprozent (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036594"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
@@ -31,25 +31,25 @@ TopPercent(Set_Expression, Percentage, Numeric_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Prozentwert*  
+ *Aler*  
  Ein gültiger numerischer Ausdruck, der den Prozentsatz der zurückzugebenden Tupel angibt.  
   
 > [!IMPORTANT]  
->  *Prozentsatz* muss einem positiven Wert werden negative Werte ein Fehler generiert.  
+>  Der *Prozentsatz* muss ein positiver Wert sein. negative Werte generieren einen Fehler.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
- Die **TopPercent** -Funktion berechnet die Summe der angegebenen numerischen Ausdrucks, ausgewertet über der Menge der Menge in absteigender Reihenfolge sortieren. Anschließend gibt die Funktion die Elemente mit den höchsten Werten zurück, deren kumulativer Prozentsatz vom Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Diese Funktion gibt die kleinste Teilmenge einer Menge zurück, deren kumulativer Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Die zurückgegebenen Elemente werden der Größe nach absteigend sortiert.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **topprozent** -Funktion berechnet die Summe des angegebenen numerischen Ausdrucks, der für die angegebene Menge ausgewertet wurde, und sortiert die Menge in absteigender Reihenfolge. Anschließend gibt die Funktion die Elemente mit den höchsten Werten zurück, deren kumulativer Prozentsatz vom Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Diese Funktion gibt die kleinste Teilmenge einer Menge zurück, deren kumulativer Gesamtwert mindestens dem angegebenen Prozentsatz entspricht. Die zurückgegebenen Elemente werden der Größe nach absteigend sortiert.  
   
 > [!WARNING]  
->  Wenn *Numeric_Expression* klicken Sie dann einen negativen Wert zurückgibt **TopPercent** gibt nur eine (1) Zeile zurück.  
+>  Wenn *numeric_expression* einen negativen Wert zurückgibt, gibt **topprozent** nur eine Zeile (1) zurück.  
 >   
 >  Im zweiten Beispiel wird dieses Verhalten ausführlicher veranschaulicht.  
   
 > [!IMPORTANT]  
->  Wie die [BottomPercent](../mdx/bottompercent-mdx.md) -Funktion, die **TopPercent** Funktion immer die Hierarchie unterbrochen.  
+>  Wie bei der Funktion " [bottomprozent](../mdx/bottompercent-mdx.md) " unterbricht die Funktion " **topprozent** " immer die Hierarchie.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel werden die Orte zurückgegeben, in denen der Wiederverkäufer die ersten 10 % seines Umsatzes in der Kategorie Bike erzielt hat. Das Ergebnis wird in absteigender Reihenfolge sortiert und beginnt mit dem Ort mit dem höchsten Umsatzwert.  
@@ -69,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|Toronto|$3,508,904.84|  
-|London|$1,521,530.09|  
-|Seattle|$1,209,418.16|  
-|Paris|$1,170,425.18|  
+|Toronto|$3.508.904,84|  
+|London|$1.521.530,09|  
+|Seattle|$1.209.418,16|  
+|Paris|$1.170.425,18|  
   
  Der ursprüngliche Datensatz kann mit der folgenden Abfrage abgerufen werden und gibt 588 Zeilen zurück:  
   
@@ -89,7 +89,7 @@ WHERE([Product].[Product Categories].[Bikes])
 ```  
   
 ## <a name="example"></a>Beispiel  
- Die folgende exemplarische Vorgehensweise können die Auswirkungen negative Werte in der *Numeric_Expression*. Zuerst muss ein Kontext erzeugt werden, in dem das Verhalten demonstriert werden kann.  
+ In der folgenden exemplarischen Vorgehensweise werden die Auswirkungen negativer Werte in der *numeric_expression*erläutert. Zuerst muss ein Kontext erzeugt werden, in dem das Verhalten demonstriert werden kann.  
   
  Die folgende Abfrage gibt eine Tabelle mit Werten für Sales Amount, Total Product Cost und Gross Profit für den Wiederverkäufer zurück. Die Tabelle ist in absteigender Reihenfolge nach Gewinnen sortiert. Da nur negative Gewinnwerte vorhanden sind, wird der geringste Verlust zuoberst angezeigt.  
   
@@ -104,12 +104,12 @@ FROM [Adventure Works]
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
-|Blau, 46 Touring-2000|$321,027.03|$333,021.50|($11,994.47)|  
-|Blau 62 Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
+|Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
+|Touring-2000 Blue, 46|$321.027,03|$333.021,50|($11.994,47)|  
+|Touring-3000 Blue, 62|$87.773,61|$100.133,52|($12.359,91)|  
 |...|...|...|...|  
-|Gelb, 46 Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
-|Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
+|Touring-1000 gelb, 46|$1.016.312,83|$1.234.454,27|($218.141,44)|  
+|Touring-1000 Yellow, 60|$1.184.363,30|$1.443.407,51|($259.044,21)|  
   
  Wenn Sie nun die ersten 100 % in der Kategorie Bikes nach Gewinn ermitteln müssten, würden Sie eine mit der folgenden vergleichbare Abfrage schreiben:  
   
@@ -120,13 +120,13 @@ FROM [Adventure Works]
   
 ```  
   
- Beachten Sie, dass in der Abfrage einhundert Prozent (100 %) angefordert werden. Dies bedeutet, dass alle Zeilen zurückgegeben werden sollten. Aber da es negative Werte in der *Numeric_Expression* , wird nur eine Zeile zurückgegeben.  
+ Beachten Sie, dass in der Abfrage einhundert Prozent (100 %) angefordert werden. Dies bedeutet, dass alle Zeilen zurückgegeben werden sollten. Da im *numeric_expression* jedoch negative Werte vorhanden sind, wird nur eine Zeile zurückgegeben.  
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
+|Touring-2000 Blue, 50|$157.444,56|$163.112,57|($5.668,01)|  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

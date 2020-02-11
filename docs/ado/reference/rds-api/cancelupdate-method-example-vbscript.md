@@ -1,5 +1,5 @@
 ---
-title: CancelUpdate-Methode – Beispiel (VBScript) | Microsoft-Dokumentation
+title: CancelUpdate-Methode (Beispiel) (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,17 +15,17 @@ ms.assetid: c23912f0-1288-4727-8fb4-f643b8811cf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b92db747267f250501b11200c870526fe79e713b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964606"
 ---
 # <a name="cancelupdate-method-example-vbscript"></a>CancelUpdate-Methode – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Klicken Sie zum Testen dieses Beispiels, schneiden, und fügen Sie diesen Code zwischen den \<Text > und \</Body > Tags in ein normales HTML-Dokument, und nennen Sie sie **CancelUpdateVBS.asp**. ASP-Skript wird auf Ihrem IIS-Server identifiziert. Sie müssen den Namen des Servers entsprechend Ihrer eigenen Konfiguration zu bearbeiten. Ändern Sie einfach den Wert in der Verbindungszeichenfolge von "myserver", auf den Namen des SQL Server-Installation.  
+ Um dieses Beispiel zu testen, schneiden Sie diesen Code zwischen den \<Text>- \<und/Body-> Tags in einem normalen HTML-Dokument aus, und fügen Sie ihn ein, und nennen Sie ihn **cancelupdatevb. ASP** Das ASP-Skript identifiziert den Internetserver. Sie müssen den Namen des Servers so bearbeiten, dass er ihr eigenes Setup widerspiegelt. Ändern Sie einfach den Wert in der Verbindungs Zeichenfolge von MyServer in den Namen der SQL Server Installation.  
   
 ```  
 <!-- BeginCancelUpdateVBS -->  
@@ -117,7 +117,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CancelUpdate-Methode (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
 
 

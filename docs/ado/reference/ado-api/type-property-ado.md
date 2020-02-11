@@ -17,22 +17,22 @@ ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0ee1058299becb4a7a4234debc097516cb02dd41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937869"
 ---
 # <a name="type-property-ado"></a>Type-Eigenschaft (ADO)
-Gibt an, die betriebliche Typ oder den Datentyp einer [Parameter](../../../ado/reference/ado-api/parameter-object.md), [Feld](../../../ado/reference/ado-api/field-object.md), oder [Eigenschaft](../../../ado/reference/ado-api/property-object-ado.md) Objekt.  
+Gibt den Betriebs Typ oder den Datentyp eines [Parameters](../../../ado/reference/ado-api/parameter-object.md), [Felds](../../../ado/reference/ado-api/field-object.md)oder [Eigenschafts](../../../ado/reference/ado-api/property-object-ado.md) Objekts an.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert.  
+ Legt einen [datatyanum](../../../ado/reference/ado-api/datatypeenum.md) -Wert fest oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Für **Parameter** Objekte, die **Typ** Eigenschaft schreibgeschützt ist. Für den neuen **Feld** Objekte, die angefügt wurden die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Auflistung von einer [Datensatz](../../../ado/reference/ado-api/record-object-ado.md), **Typ** ist Lese-/Schreibzugriff nur, nachdem die [ Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für die **Feld** angegeben wurde und der neue der Datenanbieter wurde erfolgreich hinzugefügt **Feld** durch Aufrufen der [aktualisieren](../../../ado/reference/ado-api/update-method.md)Methode der **Felder** Auflistung.  
+## <a name="remarks"></a>Bemerkungen  
+ Bei **Parameter** Objekten ist die **Type** -Eigenschaft Lese-/Schreibzugriff. Bei neuen **Feld** Objekten, die an die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung eines [Datensatzes](../../../ado/reference/ado-api/record-object-ado.md)angehängt wurden, ist der **Typ** Lese-/Schreibzugriff, wenn die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft für das **Feld** angegeben wurde und der Datenanbieter das neue **Feld** durch Aufrufen der [Update](../../../ado/reference/ado-api/update-method.md) -Methode der **Fields** -Auflistung erfolgreich hinzugefügt hat.  
   
- Für alle anderen Objekte die **Typ** Eigenschaft ist schreibgeschützt.  
+ Für alle anderen Objekte ist die **Type** -Eigenschaft schreibgeschützt.  
   
 ## <a name="applies-to"></a>Gilt für  
   
@@ -40,8 +40,8 @@ Gibt an, die betriebliche Typ oder den Datentyp einer [Parameter](../../../ado/r
 |-|-|-|  
 |[Field-Objekt](../../../ado/reference/ado-api/field-object.md)|[Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)|[Property-Objekt (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Type-Eigenschaft – Beispiel (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
- [Type-Eigenschaft – Beispiel (Eigenschaft) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für eine Typeigenschaft (Feld) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
+ [Typeigenschafts Beispiel (Eigenschaft) (VC + +)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   
  [RecordType-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
- [Type-Eigenschaft (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type-Eigenschaft (ADO-Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)

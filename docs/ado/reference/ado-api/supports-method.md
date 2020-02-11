@@ -1,5 +1,5 @@
 ---
-title: Supports-Methode | Microsoft-Dokumentation
+title: Unterstützt die Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,14 +17,14 @@ ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67936707"
 ---
 # <a name="supports-method"></a>Supports-Methode
-Bestimmt, ob ein angegebener [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt unterstützt, eine bestimmte Art von Funktionalität.  
+Bestimmt, ob ein angegebenes [Recordsetobjekt](../../../ado/reference/ado-api/recordset-object-ado.md) einen bestimmten Funktionstyp unterstützt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,22 +34,22 @@ boolean = recordset.Supports(CursorOptions )
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine **booleschen** Wert, der angibt, ob alle Funktionen von identifiziert die *CursorOptions* Argument vom Anbieter unterstützt werden.  
+ Gibt einen **booleschen** Wert zurück, der angibt, ob alle durch das *Cursor Options* -Argument identifizierten Features vom Anbieter unterstützt werden.  
   
 #### <a name="parameters"></a>Parameter  
- *CursorOptions*  
- Ein **lange** Ausdruck, der eine oder mehrere besteht [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) Werte.  
+ *Cursor Optionen*  
+ Ein **Long** -Ausdruck, der aus einem oder mehreren [Cursor optionenum](../../../ado/reference/ado-api/cursoroptionenum.md) -Werten besteht.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **unterstützt** Methode, um zu bestimmen, welche Funktionalität einer **Recordset** -Objekt unterstützt. Wenn die **Recordset** Objekt unterstützt die Funktionen, deren entsprechenden Konstanten in sind *CursorOptions*, **unterstützt** Methodenrückgabe **"true"** . Andernfalls wird **"false"** .  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **unterstützte** Methode, um zu bestimmen, welche Arten von Funktionen ein **Recordset** -Objekt unterstützt. Wenn das **Recordset** -Objekt die Funktionen unterstützt, deren zugehörige Konstanten in *Cursor Options*enthalten sind, gibt die **unterstützte** Methode **true**zurück. Andernfalls wird **false**zurückgegeben.  
   
 > [!NOTE]
->  Obwohl die **unterstützt** Methodenrückgabewert möglicherweise **"true"** für eine bestimmte Funktionalität, dies garantiert nicht, dass der Anbieter das Feature unter allen Umständen zur Verfügung stellen kann. Die **unterstützt** -Methode einfach zurückgegeben, ob der Anbieter unterstützt den angegebenen Funktionen können unter bestimmten Bedingungen erfüllt sind. Z. B. die **unterstützt** Methode hinweisen, die eine **Recordset** Objekt Updates unterstützt, auch wenn der Cursor auf einen Join mit mehreren Tabellen basiert einige Spalten der sind nicht aktualisierbar.  
+>  Obwohl die **unterstützte** Methode möglicherweise für eine bestimmte Funktionalität **true** zurückgibt, gewährleistet Sie nicht, dass der Anbieter die Funktion unter allen Umständen verfügbar machen kann. Die **unterstützte** Methode gibt einfach zurück, ob der Anbieter die angegebene Funktionalität unterstützen kann, vorausgesetzt, dass bestimmte Bedingungen erfüllt sind. Beispielsweise kann die **unterstützte** Methode angeben, dass ein **Recordset** -Objekt Updates unterstützt, obwohl der Cursor auf einem Join mehrerer Tabellen basiert, einige Spalten, von denen Sie nicht aktualisierbar sind.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Supports – Methodenbeispiel (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Supports – Methodenbeispiel (VC++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Unterstützt Methoden Beispiel (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
+ [Unterstützt Methoden Beispiel (VC + +)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
  [CursorType-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)

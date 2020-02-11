@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_backup (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_backup (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2015
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 808e50ae-ff6e-4520-9ce2-530591d3d59b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 49eb0906a9a5af1fec2abfeec3ef58845b605e69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67941821"
 ---
-# <a name="spdeletebackup-transact-sql"></a>Sp_delete_backup (Transact-SQL)
+# <a name="sp_delete_backup-transact-sql"></a>sp_delete_backup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Löscht alle Momentaufnahmen und die Sicherungsdatei, die einen Snapshot Sicherungssatz aus der angegebenen Datenbank umfassen. Diese gespeicherte Systemprozedur ist die einzige empfohlene Methode zum Verwalten von Sicherungssätzen Momentaufnahme. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+  Löscht alle Momentaufnahmen und die Sicherungsdatei, die einen Momentaufnahme-Sicherungs Satz aus der angegebenen Datenbank enthalten. Diese gespeicherte System Prozedur ist die einzige empfohlene Methode zum Verwalten von Momentaufnahme-Sicherungs Sätzen. Weitere Informationen finden Sie im Artikel zu [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,17 +36,17 @@ sys.sp_delete_backup
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *[ @backup_url =] Backup_meta_file_url*  
- Die URL der Sicherung gelöscht werden muss, die wodurch alle Momentaufnahmen, die mit den angegebenen Sicherungssatz einschließlich die Sicherungsdatei selbst gelöscht.  
+ *[ @backup_url =] backup_meta_file_url*  
+ Die URL der zu löschenden Sicherung, die alle Momentaufnahmen, die den angegebenen Sicherungs Satz enthalten, einschließlich der Sicherungsdatei selbst löscht.  
   
- *[ @db_name =] Datenbankname*  
- Der Name der Datenbank mit der Momentaufnahme gelöscht werden soll. Wenn ein Datenbankname angegeben wird, das System stellt sicher, dass die sicherungs-URL bereitgestellt wird, ist eine sicherungs-URL für die angegebene Datenbank und verwendet [Sp_delete_backup_file_snapshot &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) jede Momentaufnahme löschen. Wenn kein Datenbankname angegeben wird, wird diese Überprüfung nicht ausgeführt.  
+ *[ @db_name =] database_name*  
+ Der Name der Datenbank mit der zu löschenden Momentaufnahme. Wenn ein Datenbankname angegeben wird, überprüft das System, ob die angegebene Backup-URL eine Sicherungs-URL für die angegebene Datenbank ist, und verwendet [sp_delete_backup_file_snapshot &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) , um die einzelnen Momentaufnahmen zu löschen. Wenn kein Datenbankname angegeben wird, wird diese Daten Bank Überprüfung nicht durchgeführt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert ALTER ANY DATABASE-Berechtigung oder ALTER-Berechtigung für die angegebene Datenbank.  
+ Erfordert die ALTER ANY DATABASE-Berechtigung oder die ALTER-Berechtigung für die angegebene Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
- [sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. fn_db_backup_file_snapshots &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
+ [sp_delete_backup_file_snapshot &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)  
   
   

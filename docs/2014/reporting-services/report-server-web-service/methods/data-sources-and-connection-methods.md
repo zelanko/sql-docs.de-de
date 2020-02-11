@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 43f68015c7488c1fcf07ccff612950038f873855
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62518953"
 ---
 # <a name="data-sources-and-connection-methods"></a>Datenquellen- und Verbindungsmethoden
   Mit diesen Methoden können Sie Datenquellenverbindungen und Anmeldeinformationen festlegen und verwalten.  
   
-|Methode|Aktion|  
+|Methode|Action|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CreateDataSource%2A>|Erstellt eine neue Datenquelle in der Berichtsserver-Datenbank oder SharePoint-Bibliothek.|  
 |<xref:ReportService2010.ReportingService2010.DisableDataSource%2A>|Deaktiviert eine Datenquelle, die aktiviert ist.|  
@@ -39,7 +39,7 @@ ms.locfileid: "62518953"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Testet die Verbindung für eine Datenquelle. Diese Methode unterstützt direkte Datenquellentests.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Testet die Verbindung für eine Datenquelle. Diese Methode unterstützt Tests von veröffentlichten Datenquellen, die von Berichten oder Modellen und freigegebenen Datenquellen verwendet werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Berichtsserver-Webdienst](../report-server-web-service.md)   
  [Webdienstmethoden für Berichtsserver](report-server-web-service-methods.md)   

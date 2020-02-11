@@ -1,5 +1,5 @@
 ---
-title: InvokeService (RDS) | Microsoft-Dokumentation
+title: Invokeservice (RDS) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,17 +14,17 @@ ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 86ebb27ebdc5de5a045304afe45cd8653e491827
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963864"
 ---
 # <a name="invokeservice-rds"></a>InvokeService (RDS)
-Gibt einen Zeiger auf eine leistungsfähigere Version des Objekts auf die angeforderte Schnittstelle zurück.  
+Gibt einen Zeiger auf die angeforderte Schnittstelle für eine leistungsfähigere Version des-Objekts zurück.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,26 +36,26 @@ object.InvokeService(REFID riid, IUknown* punkNotSoFunctionalInterface, IUknown*
 #### <a name="parameters"></a>Parameter  
  *riid*  
   
- [in] Der Bezeichner der angeforderten Schnittstelle.  
+ in Der Bezeichner der angeforderten Schnittstelle.  
   
- *punkNotSoFunctionalInterface*  
+ *punklotsofunctionalinterface*  
   
- [in] Das weniger leistungsstarken Quellobjekt.  
+ in Das weniger fähige Quell Objekt.  
   
- *ppunkMoreFunctionalInterface*  
+ *ppunkmorefunctionalinterface*  
   
- [out] Die Adresse der Zeigervariablen, die die im angeforderten Schnittstellenzeiger empfängt *Riid*. Bei erfolgreicher Rückgabe die *PpunkMoreFunctionalInterface* Parameter enthält, den angeforderten Schnittstellenzeiger auf das Objekt. Wenn das Objekt im angegebenen Schnittstelle nicht unterstützt *Riid*, *PpunkMoreFunctionalInterface* auf NULL festgelegt ist.  
+ vorgenommen Die Adresse der Zeiger Variablen, die den in *riid*angeforderten Schnittstellen Zeiger empfängt. Nach erfolgreicher Rückgabe enthält der *ppunkmorefunctionalinterface* -Parameter den angeforderten Schnittstellen Zeiger auf das-Objekt. Wenn das Objekt die in *riid*angegebene Schnittstelle nicht unterstützt, wird *ppunkmorefunctionalinterface* auf NULL festgelegt.  
   
 ## <a name="return-value"></a>Rückgabewert  
- Ein HRESULT-Wert, der gibt an, wenn der Aufruf der **InvokeService** Methode war erfolgreich.  
+ Ein HRESULT-Wert, der angibt, ob der Aufruf der **invokeservice** -Methode erfolgreich war.  
   
-## <a name="remarks"></a>Hinweise  
- Die RDS-Cursor-Engine-Implementierung von **InvokeService** übernimmt das Eingaberowset (oder mehrere "Results"-Objekt), füllt die Cursor-Engine aus dem Eingaberowset und gibt dann einen Zeiger auf sich selbst zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Die RDS-Cursor-Engine-Implementierung von **invokeservice** nimmt das Eingaberowset (oder mehrere Ergebnis Objekte), füllt die Cursor-Engine aus dem Eingaberowset auf und gibt dann einen Zeiger auf sich selbst zurück.  
   
 ## <a name="applies-to"></a>Gilt für  
  [IRDSService-Schnittstelle (RDS)](../../../ado/reference/rds-api/irdsservice-interface-rds.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RDS-Methoden](../../../ado/reference/rds-api/rds-methods.md)
 
 

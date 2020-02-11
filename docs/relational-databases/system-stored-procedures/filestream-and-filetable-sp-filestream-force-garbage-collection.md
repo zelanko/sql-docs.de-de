@@ -1,5 +1,5 @@
 ---
-title: Sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft-Dokumentation
+title: sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/22/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942288"
 ---
-# <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
+# <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Erzwingt die Ausführung des FILESTREAM-Garbage Collectors und löscht alle nicht benötigten FILESTREAM-Dateien.  
   
- Ein FILESTREAM-Container kann erst entfernt werden, wenn alle gelöschten Dateien darin vom Garbage Collector bereinigt wurden. Der FILESTREAM Garbage Collector wird automatisch ausgeführt. Allerdings wird bei Bedarf so entfernen Sie einen Container, vor der Garbage Collector ausgeführt wurde, können Sie Sp_filestream_force_garbage_collection der Garbage Collector manuell ausführen.  
+ Ein FILESTREAM-Container kann erst entfernt werden, wenn alle gelöschten Dateien darin vom Garbage Collector bereinigt wurden. Der FILESTREAM Garbage Collector wird automatisch ausgeführt. Wenn Sie jedoch einen Container entfernen müssen, bevor der Garbage Collector ausgeführt wurde, können Sie sp_filestream_force_garbage_collection verwenden, um die Garbage Collector manuell auszuführen.  
   
   
 ## <a name="syntax"></a>Syntax  
@@ -46,30 +46,31 @@ sp_filestream_force_garbage_collection
  Gibt den Namen der Datenbank an, für die der Garbage Collector ausgeführt werden soll.  
   
 > [!NOTE]  
-> `@dbname` ist **Sysname**. Fehlt die Angabe, wird die aktuelle Datenbank zugrunde gelegt.  
+> `@dbname`ist vom **Datentyp vom Datentyp sysname**. Fehlt die Angabe, wird die aktuelle Datenbank zugrunde gelegt.  
   
  `[ @filename = ] 'logical_file_name'`  
- Gibt den logischen Namen des FILESTREAM-Containers an, für den der Garbage Collector ausgeführt werden soll. `@filename` ist optional. Wenn kein logischer Dateiname angegeben wird, bereinigt der Garbage Collector alle FILESTREAM-Container in der angegebenen Datenbank.  
+ Gibt den logischen Namen des FILESTREAM-Containers an, für den der Garbage Collector ausgeführt werden soll. 
+  `@filename` ist optional. Wenn kein logischer Dateiname angegeben wird, bereinigt der Garbage Collector alle FILESTREAM-Container in der angegebenen Datenbank.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
   
 |||  
 |-|-|  
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |0|Vorgang war erfolgreich.|  
 |1|Fehler beim Vorgang.|  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*file_name*|Gibt den Namen des FILESTREAM-Containers an|  
 |*num_collected_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die vom Garbage Collector in diesem Container erfasst (gelöscht) wurden.|  
-|*num_marked_for_collection_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die für den Garbage Collector in diesem Container markiert wurden. Diese Elemente wurden nicht gelöscht wurde, aber möglicherweise zum Löschen, befolgen die Garbage Collection-Phase.|  
-|*num_unprocessed_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien oder Verzeichnisse) an, die nicht von der Garbage Collection in diesem FILESTREAM-Container erfasst wurden. Elemente können aus unterschiedlichen Gründen nicht verarbeitet werden:<br /><br /> Dateien, die festgesetzt werden müssen, da noch keine Protokollsicherung oder CheckPoint ausgeführt wurden.<br /><br /> Dateien im FULL- oder BULK_LOGGED-Wiederherstellungsmodell.<br /><br /> Es liegt eine aktive Transaktion mit langer Ausführungszeit vor.<br /><br /> Der Replikationsprotokollleser-Auftrag wurde nicht ausgeführt. Finden Sie im Whitepaper [FILESTREAM-Speicher in SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) für Weitere Informationen.|  
+|*num_marked_for_collection_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die für den Garbage Collector in diesem Container markiert wurden. Diese Elemente wurden noch nicht gelöscht, können aber nach der Garbage Collection Phase gelöscht werden.|  
+|*num_unprocessed_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien oder Verzeichnisse) an, die nicht von der Garbage Collection in diesem FILESTREAM-Container erfasst wurden. Elemente können aus unterschiedlichen Gründen nicht verarbeitet werden:<br /><br /> Dateien, die festgesetzt werden müssen, da noch keine Protokollsicherung oder CheckPoint ausgeführt wurden.<br /><br /> Dateien im FULL- oder BULK_LOGGED-Wiederherstellungsmodell.<br /><br /> Es liegt eine aktive Transaktion mit langer Ausführungszeit vor.<br /><br /> Der Auftrag für den Replikations Protokoll Leser wurde nicht ausgeführt. Weitere Informationen finden Sie [im Whitepaper FILESTREAM-Speicher in SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=209156) .|  
 |*last_collected_xact_seqno*|Gibt die letzte Sequenznummer (LSN) für den entsprechenden FILESTREAM-Container an, bis zu der die Dateien von der Garbage Collection erfasst wurden.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Führt den FILESTREAM-Garbage Collector für die betreffende Datenbank (und den FILESTREAM-Container) vollständig aus. Dateien, die nicht mehr benötigt werden, werden vom Garbage Collection-Prozess entfernt. Die Zeit, die benötigt wird, damit dieser Vorgang abgeschlossen werden kann, hängt vom Umfang der FILESTREAM-Daten in dieser Datenbank oder in diesem Container sowie vom Ausmaß der DML-Aktivität im Zusammenhang mit den FILESTREAM-Daten in jüngster Zeit ab. Diese Vorgang kann auch ausgeführt werden, während die Datenbank online ist. Dies kann sich jedoch aufgrund verschiedener E/A-Aktivitäten im Rahmen der Garbage Collection auf die Leistung der Datenbank auswirken.  
   
 > [!NOTE]  
@@ -77,9 +78,9 @@ sp_filestream_force_garbage_collection
   
 Mehrere Aufrufe dieser gespeicherten Prozedur können nur in separaten Containern oder separaten Datenbanken gleichzeitig ausgeführt werden.  
 
-2-Phasen-Vorgängen ausgelöst wurden sollte die gespeicherte Prozedur ausgeführt werden, zweimal aus, um tatsächlich zugrunde liegenden Filestream-Dateien gelöscht.  
+Aufgrund von 2-Phasen-Vorgängen sollte die gespeicherte Prozedur zweimal ausgeführt werden, um zugrunde liegende FILESTREAM-Dateien tatsächlich zu löschen.  
 
-Garbage Collection (GC) basiert auf Abschneiden des Protokolls. Wenn Dateien in einer Datenbank mithilfe des vollständigen Wiederherstellungsmodells vor kurzem gelöscht wurden, sind daher GC-Ed erst, nachdem eine protokollsicherung der die Transaktion Log Teile stammt, und der Log-Teil wird als inaktiv markiert. In einer Datenbank, das einfache Wiederherstellungsmodell verwendet, tritt ein Abschneiden des Protokolls nach einem `CHECKPOINT` für die Datenbank ausgegeben wurde.  
+Die Garbage Collection (GC) basiert auf Protokoll abkürzen. Wenn Dateien in der letzten Zeit in einer Datenbank mit dem vollständigen Wiederherstellungs Modell gelöscht wurden, werden Sie daher erst nach einer Protokoll Sicherung dieser Transaktionsprotokoll Teile und als inaktiv gekennzeichnet. In einer Datenbank, die das einfache Wiederherstellungs Modell verwendet, erfolgt eine Protokoll `CHECKPOINT` Kürzung, nachdem ein für die Datenbank ausgegeben wurde.  
 
 
 ## <a name="permissions"></a>Berechtigungen  
@@ -105,8 +106,8 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
     @filename = N'FSContainer';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+## <a name="see-also"></a>Weitere Informationen  
+[Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Dynamische Verwaltungssichten für Filestream und FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Katalogsichten für Filestream und FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

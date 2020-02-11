@@ -17,14 +17,14 @@ ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f3d9ab76d2f2ed1a6f5dbeaf58be7d2f919acd3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932543"
 ---
 # <a name="flush-method-ado"></a>Flush-Methode (ADO)
-Erzwingt, dass der Inhalt der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) im ADO-Puffer auf das zugrunde liegende Objekt mit dem verbleibenden der **Stream** zugeordnet ist.  
+Erzwingt den Inhalt des verbleibenden [Streams](../../../ado/reference/ado-api/stream-object-ado.md) im ADO-Puffer für das zugrunde liegende Objekt, dem der **Stream** zugeordnet ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,10 +33,10 @@ Erzwingt, dass der Inhalt der [Stream](../../../ado/reference/ado-api/stream-obj
 Stream.Flush  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode kann verwendet werden, um den Inhalt des Streampuffers an das zugrunde liegende Objekt zu senden: z. B. den Knoten oder eine Datei, die von der URL, die die Quelle des dargestellt die **Stream** Objekt. Diese Methode aufgerufen werden soll, wenn Sie möchten sicherstellen, dass alle Änderungen, die vorgenommen, um den Inhalt einer **Stream** geschrieben wurden. Mit ADO es ist jedoch nicht in der Regel notwendig, **leeren**, wie ADO kontinuierlich den Puffer so weit wie möglich im Hintergrund leert. Änderungen an den Inhalt des eine **Stream** erfolgt automatisch, nicht zwischengespeichert, bis **leeren** aufgerufen wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Methode kann verwendet werden, um den Inhalt des Streampuffers an das zugrunde liegende Objekt zu senden, z. b. den Knoten oder die Datei, der durch die URL dargestellt wird, die die Quelle des Daten **Strom** Objekts ist. Diese Methode sollte aufgerufen werden, wenn Sie sicherstellen möchten, dass alle Änderungen, die an den Inhalten eines **Streams** vorgenommen wurden, geschrieben wurden. Allerdings ist es in der Regel nicht **erforderlich, eine Leerung aufzurufen**, da ADO den Puffer fortlaufend im Hintergrund leert. Änderungen am Inhalt eines **Streams** werden automatisch vorgenommen, nicht zwischengespeichert **, bis der** Lösch Modus aufgerufen wird.  
   
- Schließen einer **Stream** mit der [schließen](../../../ado/reference/ado-api/close-method-ado.md) Methode leert den Inhalt des eine **Stream** automatisch; es ist nicht erforderlich, explizit aufzurufen **leeren**unmittelbar vor dem **schließen**.  
+ Durch das Schließen eines **Streams** mit der [Close](../../../ado/reference/ado-api/close-method-ado.md) -Methode wird der Inhalt eines **Streams** automatisch geleert. das Löschen **muss unmittelbar vor** dem **Schließen**nicht explizit aufgerufen werden.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

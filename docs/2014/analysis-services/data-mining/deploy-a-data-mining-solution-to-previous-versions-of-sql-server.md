@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Datamining-Lösungen für frühere Versionen von SQLServer | Microsoft-Dokumentation
+title: Bereitstellen einer Data Mining-Lösung in früheren Versionen von SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc721d58c69b0275c9846863f761d60db66e5aaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084678"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Bereitstellen von Data Mining-Lösungen für frühere Versionen von SQL Server
@@ -30,17 +30,17 @@ ms.locfileid: "66084678"
   
  Die Bereitstellung für eine Instanz von SQL Server 2000 Analysis Services wird nicht unterstützt.  
   
- [Bereitstellen von Zeitreihenmodellen](#bkmk_TimeSeries)  
+ [Bereitstellen von Zeitreihen Modellen](#bkmk_TimeSeries)  
   
- [Bereitstellen von Modellen mit Zurückhaltung](#bkmk_Holdout)  
+ [Bereitstellen von Modellen mit zurückgehaltenen Daten](#bkmk_Holdout)  
   
  [Bereitstellen von Modellen mit Filtern](#bkmk_Filter)  
   
  [Wiederherstellen von Datenbanksicherungen](#bkmk_Backup)  
   
- [Verwenden der Datenbanksynchronisierung](#bkmk_Synch)  
+ [Daten Bank Synchronisierung verwenden](#bkmk_Synch)  
   
-##  <a name="bkmk_TimeSeries"></a> Bereitstellen von Zeitreihenmodellen  
+##  <a name="bkmk_TimeSeries"></a>Bereitstellen von Zeitreihen Modellen  
  Der Microsoft Time Series-Algorithmus wurde in SQL Server 2008 um einen zweiten Algorithmus namens ARIMA ergänzt. Weitere Informationen zu den Änderungen im Time Series-Algorithmus finden Sie unter [Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm.md).  
   
  Zeitreihenminingmodelle, die den neuen ARIMA-Alorithmus nutzen, können daher bei der Bereitstellung für eine Instanz von SQL Server 2005 Analysis Services ein abweichendes Verhalten aufweisen.  
@@ -55,29 +55,29 @@ ms.locfileid: "66084678"
   
  Wenn es sich beim Provider, der als Datenquelle des Modells verwendet wird, um SQL Client Data Provider 10 handelt, müssen Sie auch die Datenquellendefinition ändern, um die vorherige Version von SQL Server Native Client anzugeben. Andernfalls wird von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert, wenn sie angeben, dass der Anbieter nicht registriert wird.  
   
-##  <a name="bkmk_Holdout"></a> Bereitstellen von Modellen mit Zurückhaltung  
+##  <a name="bkmk_Holdout"></a>Bereitstellen von Modellen mit zurückgehaltenen Daten  
  Wenn Sie mithilfe von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] eine Miningstruktur erstellen, die eine Zurückhaltungspartition zum Testen von Data Mining-Modellen umfasst, kann die Miningstruktur für eine Instanz von SQL Server 2005 bereitgestellt werden. Die Partitionierungsdaten gehen dabei jedoch verloren.  
   
  Wenn Sie die Miningstruktur in SQL Server 2005 Analysis Services öffnen, wird in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ein Fehler generiert und die Struktur zum Entfernen der Zurückhaltungspartition neu erstellt.  
   
- Nachdem die Struktur neu erstellt wurde, ist die Größe der zurückhaltungspartition nicht mehr im Eigenschaftenfenster verfügbar; allerdings den Wert \<ddl100_100: holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) möglicherweise immer noch in der ASSL-Skriptdatei vorhanden.  
+ Nachdem die Struktur neu erstellt wurde, ist die Größe der zurück Haltungs Partition nicht mehr in der Eigenschaftenfenster verfügbar. der Wert \<ddl100_100: holdoutmaxprozent>30\</ddl100_100: holdoutmaxprozent>) ist jedoch möglicherweise noch in der ASSL-Skriptdatei vorhanden.  
   
-##  <a name="bkmk_Filter"></a> Bereitstellen von Modellen mit Filtern  
+##  <a name="bkmk_Filter"></a>Bereitstellen von Modellen mit Filtern  
  Wenn Sie mithilfe von [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] einen Filter auf ein Miningmodell anwenden, kann das Modell für eine Instanz von SQL Server 2005 bereitgestellt werden, der Filter wird jedoch nicht angewendet.  
   
  Wenn Sie das Miningmodell öffnen, wird von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein Fehler generiert, und das Modell wird neu erstellt, um den Filter zu entfernen.  
   
-##  <a name="bkmk_Backup"></a> Wiederherstellen von Datenbanksicherungen  
+##  <a name="bkmk_Backup"></a>Wiederherstellen von Datenbanksicherungen  
  Datenbanksicherungen, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] für eine Instanz von SQL Server 2005 erstellt worden sind, können nicht wiederhergestellt werden. Wenn Sie einen entsprechenden Versuch starten, erzeugt SQL Server Management Studio einen Fehler.  
   
  Wenn Sie eine Sicherung einer SQL Server 2005 Analysis Services-Datenbank erstellen und diese Sicherung in einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederherstellen, werden alle Zeitreihenmodelle wie im Abschnitt oben beschrieben geändert.  
   
-##  <a name="bkmk_Synch"></a> Verwenden der Datenbanksynchronisierung  
+##  <a name="bkmk_Synch"></a>Daten Bank Synchronisierung verwenden  
  Die Datenbanksynchronisierung von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zu SQL Server 2005 wird nicht unterstützt.  
   
  Wenn Sie versuchen, eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank zu synchronisieren, gibt der Server einen Fehler zurück, und die Datenbanksynchronisierung schlägt fehl.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Backward Compatibility](../analysis-services-backward-compatibility.md)  
   
   

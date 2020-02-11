@@ -1,5 +1,5 @@
 ---
-title: WillChangeRecordset- und RecordsetChangeComplete-Ereignis (ADO) | Microsoft-Dokumentation
+title: WillChangeRecordset-und RecordsetChangeComplete-Ereignis (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938685"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset- und RecordsetChangeComplete-Ereignis (ADO)
-Die **WillChangeRecordset** Ereignis wird immer dann aufgerufen, bevor Sie ein ausstehender Vorgang ändert die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **RecordsetChangeComplete** Ereignis wird aufgerufen, nachdem die **Recordset** hat sich geändert.  
+Das Ereignis " **WillChangeRecordset** " wird aufgerufen, bevor das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)durch einen ausstehenden Vorgang geändert wird. Das **RecordsetChangeComplete** -Ereignis wird aufgerufen, nachdem das **Recordset** geändert wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,32 +39,32 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) -Wert, der den Grund für dieses Ereignis angibt. Die Werte sind möglich **AdRsnRequery**, **AdRsnResynch**, **AdRsnClose**, **AdRsnOpen**.  
+ Ein [eventreasonenumerationswert](../../../ado/reference/ado-api/eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann **adrsnrequery**, **adrsnresynch**, **adrsnclose**, **adrsnopen**lauten.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
+ Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert.  
   
- Wenn **WillChangeRecordset** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war. Es wird festgelegt, um **AdStatusCantDeny** Wenn dieses Ereignis auf Abbruch des ausstehenden Vorgangs anfordern kann.  
+ Wenn **WillChangeRecordset** aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis ausgelöst hat, erfolgreich war. Sie wird auf **adStatus-kandeny** festgelegt, wenn dieses Ereignis keinen Abbruch des ausstehenden Vorgangs anfordern kann.  
   
- Wenn **RecordsetChangeComplete** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war, **AdStatusErrorsOccurred** Wenn der Vorgang fehlgeschlagen ist, oder **AdStatusCancel** zuvor akzeptierten Vorgangs zugeordnet **WillChangeRecordset** Ereignis abgebrochen wurde.  
+ Wenn **RecordsetChangeComplete** aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis verursacht hat, erfolgreich war, **adstatuuserrorsoccurrred** , wenn der Vorgang fehlgeschlagen ist, oder **adStatus Cancel** , wenn der Vorgang abgebrochen wurde, der dem zuvor akzeptierten Ereignis " **WillChangeRecordset** " zugeordnet ist.  
   
- Vor dem **WillChangeRecordset** zurückgegeben wird, legen Sie diesen Parameter zu **AdStatusCancel** Anforderung Abbrechen des ausstehenden Vorgangs, oder legen Sie diesen Parameter, zu verhindern, dass nachfolgende Benachrichtigungen.  
+ Legen Sie diesen Parameter vor der Rückgabe von " **WillChangeRecordset** " auf " **adStatus Cancel** " fest, um den Abbruch des ausstehenden Vorgangs anzufordern, oder legen Sie diesen Parameter auf "adstatufeunwantedevent" fest, um nachfolgende Benachrichtigungen  
   
- Vor dem **WillChangeRecordset** oder **RecordsetChangeComplete** zurückgegeben wird, legen Sie diesen Parameter zu **AdStatusUnwantedEvent** , nachfolgende Benachrichtigungen zu verhindern.  
+ Bevor " **WillChangeRecordset** " oder " **RecordsetChangeComplete** " zurückgegeben wird, legen Sie diesen Parameter auf **adstatuingunwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern  
   
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird beschrieben, den aufgetretenen Wenn der Wert des *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
   
- *pRecordset*  
- Ein **Recordset** Objekt. Die **Recordset** für die dieses Ereignis aufgetreten ist.  
+ *precordset*  
+ Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
- Ein **WillChangeRecordset** oder **RecordsetChangeComplete** Ereignis kann auftreten, da die **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) oder [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md) Methoden.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein " **WillChangeRecordset** "-oder " **RecordsetChangeComplete** "-Ereignis kann aufgrund der **Recordset** [-oder](../../../ado/reference/ado-api/requery-method.md) [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methoden auftreten.  
   
- Wenn der Anbieter keine Lesezeichen unterstützt eine **RecordsetChange** ereignisbenachrichtigung tritt jedes Mal, die neue Zeilen, die vom Anbieter abgerufen werden. Die Häufigkeit dieses Ereignisses hängt die **RecordsetCacheSize** Eigenschaft.  
+ Wenn der Anbieter keine Lesezeichen unterstützt, tritt jedes Mal eine **recordsetchange** -Ereignis Benachrichtigung auf, wenn neue Zeilen vom Anbieter abgerufen werden. Die Häufigkeit dieses Ereignisses hängt von der **recordsetcachesize** -Eigenschaft ab.  
   
- Sie müssen festlegen, die **AdStatus** Parameter **AdStatusUnwantedEvent** für jeden möglichen **AdReason** Wert, der die ereignisbenachrichtigung für jedes Ereignis vollständig beendet wurde, die enthält ein **AdReason** Parameter.  
+ Sie müssen den **adStatus** -Parameter für jeden möglichen **adReason** -Wert auf **adStatusUnwantedEvent** festlegen, um die Ereignis Benachrichtigung für jedes Ereignis vollständig zu beenden, das einen **adReason** -Parameter enthält.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)

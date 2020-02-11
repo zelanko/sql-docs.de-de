@@ -15,43 +15,43 @@ ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67947587"
 ---
 # <a name="guid-escape-sequences"></a>GUID-Escapesequenzen
-ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
+ODBC verwendet Escapesequenzen für GUID-Literale. Die Syntax dieser Escapesequenz lautet wie folgt:  
   
 ```  
 {guid 'nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn'}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- In BNF-Schreibweise lautet die Syntax:  
+## <a name="remarks"></a>Bemerkungen  
+ In der BNF-Notation lautet die Syntax wie folgt:  
   
- *ODBC-Guid-Escapesequenz* :: =  
-     *Initiator-ODBC-esc-Guid* "*Guid-Wert*" *ODBC-esc-Terminator*  
+ *ODBC-GUID-Escape* :: =  
+     *ODBC-ESC-Initiator-GUID* '*GUID-Wert*' *ODBC-ESC-Terminator*  
   
- *Initiator der ODBC-esc* :: = {  
+ *ODBC-ESC-Initiator* :: = {  
   
- *ODBC-esc-Terminator* :: =}  
+ *ODBC-ESC-Terminator* :: =}  
   
- *GUID-Wert* :: = *Uhr mit geringem Wert Guid-Trennzeichen-Uhr-Middle-Guid-Trennzeichen-Uhr-High-Value-Guid-Trennzeichen-Uhr-Seq-Guid-Trennzeichen Knotenwert*  
+ *GUID-value* :: = *Clock-Low-Value GUID-Separator Clock-Middle-Value GUID-Separator Clock-High-Value GUID-Separator Clock-SQ-Value GUID-Separator Knoten-Value*  
   
- *GUID-Trennzeichen* :: = -  
+ *GUID-Separator* :: =-  
   
- *Clock-mit geringem Wert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-Low-Value* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit hex_digit  
   
- *Clock-Middle-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-Middle-Value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-High-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-High-Value* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-Seq-Value* :: = *Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-*-Wert* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *Clock-Knotenwert* :: = *Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit Hex_digit*  
+ *Clock-Node-Value* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit* hex_digit hex_digit  
   
- *hex_digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
+ *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
   
- Die GUID-literal Escape-Sequenz wird unterstützt, wenn der GUID-Datentyp, die von der Datenquelle unterstützt wird. Es sollte eine Anwendung aufrufen **SQLGetTypeInfo** zu bestimmen, ob dieser Datentyp unterstützt wird.
+ Die Literale GUID-Escapesequenz wird unterstützt, wenn der GUID-Datentyp von der Datenquelle unterstützt wird. Eine Anwendung sollte **SQLGetTypeInfo** aufrufen, um zu bestimmen, ob dieser Datentyp unterstützt wird.

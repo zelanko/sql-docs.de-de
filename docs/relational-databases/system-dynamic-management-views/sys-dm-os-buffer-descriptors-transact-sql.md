@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_buffer_descriptors (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -21,51 +21,51 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7395d52b7c91678f11a37a4da32877f31e5780bf
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265863"
 ---
-# <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
+# <a name="sysdm_os_buffer_descriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt Informationen zu allen Datenseiten zurück, die derzeit im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool sind. Die Ausgabe dieser Sicht kann verwendet werden, um die Verteilung der Datenbankseiten im Pufferpool gemäß der Datenbank, des Objekts oder des Typs zu bestimmen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gibt diese dynamische Verwaltungssicht auch Informationen über die Datenseiten in der Pufferpoolerweiterungsdatei zurück. Weitere Informationen finden Sie unter [Buffer Pool Extension](../../database-engine/configure-windows/buffer-pool-extension.md).  
+  Gibt Informationen zu allen Datenseiten zurück, die derzeit im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool sind. Die Ausgabe dieser Sicht kann verwendet werden, um die Verteilung der Datenbankseiten im Pufferpool gemäß der Datenbank, des Objekts oder des Typs zu bestimmen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] gibt diese dynamische Verwaltungssicht auch Informationen über die Datenseiten in der Pufferpoolerweiterungsdatei zurück. Weitere Informationen finden Sie unter [Puffer Pool Erweiterung](../../database-engine/configure-windows/buffer-pool-extension.md).  
   
  Beim Lesen einer Datenseite vom Datenträger wird die Seite in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Pufferpool kopiert und für die Wiederverwendung zwischengespeichert. Jede zwischengespeicherte Datenseite verfügt über einen Pufferdeskriptor. Pufferdeskriptoren identifizieren jede Datenseite eindeutig, die derzeit in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zwischengespeichert ist. sys.dm_os_buffer_descriptors gibt zwischengespeicherte Seiten für alle Benutzer- und Systemdatenbanken zurück. Dazu zählen auch Seiten, die der Ressourcendatenbank zugeordnet sind.  
   
-> **HINWEIS:** Aufrufen von [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], verwenden Sie den Namen **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **Hinweis:** Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID der Datenbank, die der Seite im Pufferpool zugeordnet ist. Lässt NULL-Werte zu.|  
 |file_id|**int**|ID der Datei, die das persistente Image der Seite speichert. Lässt NULL-Werte zu.|  
 |page_id|**int**|ID der Seite innerhalb der Datei. Lässt NULL-Werte zu.|  
 |page_level|**int**|Indexebene der Seite. Lässt NULL-Werte zu.|  
-|allocation_unit_id|**bigint**|ID der Zuordnungseinheit der Seite. Dieser Wert kann für den Join mit sys.allocation_units verwendet werden. Lässt NULL-Werte zu.|  
-|page_type|**nvarchar(60)**|Geben Sie z. B. der Seite: Datenseite oder Indexseite. Lässt NULL-Werte zu.|  
+|allocation_unit_id|**BIGINT**|ID der Zuordnungseinheit der Seite. Dieser Wert kann für den Join mit sys.allocation_units verwendet werden. Lässt NULL-Werte zu.|  
+|page_type|**nvarchar (60)**|Typ der Seite, z. B. Datenseite oder Indexseite. Lässt NULL-Werte zu.|  
 |row_count|**int**|Anzahl der Zeilen auf der Seite. Lässt NULL-Werte zu.|  
 |free_space_in_bytes|**int**|Umfang des verfügbaren Speicherplatzes auf der Seite (in Byte). Lässt NULL-Werte zu.|  
 |is_modified|**bit**|1 = Seite wurde nach dem Lesen vom Datenträger geändert. Lässt NULL-Werte zu.|  
 |numa_node|**int**|NUMA-Knoten (Non-Uniform Memory Access) für den Puffer. Lässt NULL-Werte zu.|  
-|read_microsec|**bigint**|Die tatsächliche Zeit (in Mikrosekunden), die erforderlich ist, um die Seite in den Puffer einzulesen. Diese Zahl wird zurückgesetzt, wenn der Puffer wiederverwendet wird. Lässt NULL-Werte zu.|  
-|is_in_bpool_extension|**bit**|1 = Seite befindet sich in der pufferpoolerweiterung. Lässt NULL-Werte zu.|  
-|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, dem auf diesem Verteilungspunkt befindet.|  
+|read_microsec|**BIGINT**|Die tatsächliche Zeit (in Mikrosekunden), die erforderlich ist, um die Seite in den Puffer einzulesen. Diese Zahl wird zurückgesetzt, wenn der Puffer wiederverwendet wird. Lässt NULL-Werte zu.|  
+|is_in_bpool_extension|**bit**|1 = die Seite befindet sich in der Pufferpool Erweiterung. Lässt NULL-Werte zu.|  
+|pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], erfordert `VIEW SERVER STATE` Berechtigung.   
-Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarife, erfordert die `VIEW DATABASE STATE` Berechtigung in der Datenbank. Auf [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard und Basic-Version, erfordert die **Serveradministrator** oder **Azure Active Directory-Administrator** Konto.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
-## <a name="remarks"></a>Hinweise  
- Sys. dm_os_buffer_descriptors gibt Seiten, die von der Resource-Datenbank verwendet werden. Sys. dm_os_buffer_descriptors gibt keine Informationen über freie oder gestohlene Seite oder zu Seiten, die beim Lesen Fehler enthielten zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ sys. dm_os_buffer_descriptors gibt Seiten zurück, die von der Ressourcendatenbank verwendet werden. sys. dm_os_buffer_descriptors gibt keine Informationen zu freien oder gestohlenen Seiten zurück oder zu Seiten, die beim Lesen Fehler enthielten.  
   
-|Von|Beschreibung|On|Beziehung|  
+|Von|To|Andererseits|Beziehung|  
 |----------|--------|--------|------------------|  
-|sys.dm_os_buffer_descriptors|sys.databases|database_id|Viele-zu-eins|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|Viele-zu-eins|  
-|sys.dm_os_buffer_descriptors|\<userdb>.sys.database_files|file_id|Viele-zu-eins|  
-|sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|Viele-zu-eins|  
+|sys.dm_os_buffer_descriptors|sys.databases|database_id|n:1|  
+|sys.dm_os_buffer_descriptors|\<der userdb->. sys. allocation_units|allocation_unit_id|n:1|  
+|sys.dm_os_buffer_descriptors|\<der userdb->. sys. database_files|file_id|n:1|  
+|sys.dm_os_buffer_descriptors|sys.dm_os_buffer_pool_extension_configuration|file_id|n:1|  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -112,12 +112,12 @@ GROUP BY name, index_id
 ORDER BY cached_pages_count DESC;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. allocation_units &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  
- [Dynamische Verwaltungssichten in Verbindung mit SQL Server-Betriebssystem &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
+ [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
  [Ressourcendatenbank](../../relational-databases/databases/resource-database.md)   
- [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
+ [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)  
   
   
 

@@ -16,18 +16,18 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f4ad522c13987f7617def29d5ff112a5a26db8b9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771454"
 ---
-# <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
+# <a name="sp_droppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Löscht ein Abonnement in der aktuellen Datenbank des Abonnenten. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Pullabonnementdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,29 +44,29 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
   
 `[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. **all** bezeichnet alle Verleger Datenbanken.  
   
-`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenndies der Wert ist, wird das Abonnement für alle Veröffentlichungen gelöscht.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **dies der Wert ist,** wird das Abonnement für alle Veröffentlichungen gelöscht.  
   
 `[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_droppullsubscription** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
- **sp_droppullsubscription** löscht die entsprechende Zeile in der [MSreplication_subscriptions &#40;-Transact-&#41; SQL](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) -Tabelle und den entsprechenden Verteiler-Agent auf dem Abonnenten. Wenn in [MSreplication_subscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)keine Zeilen verbleiben, wird die Tabelle gelöscht.  
+ **sp_droppullsubscription** löscht die entsprechende Zeile in der [MSreplication_subscriptions &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) Tabelle und den entsprechenden Verteiler-Agent auf dem Abonnenten. Wenn [MSreplication_subscriptions &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md)keine Zeilen verbleiben, wird die Tabelle gelöscht.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_droptranpullsubscription](../../relational-databases/replication/codesnippet/tsql/sp-droppullsubscription-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der festen Server Rolle **sysadmin** oder der Benutzer, der das Pullabonnement erstellt hat, können **sp_droppullsubscription**ausführen. Die festgelegte Daten Bank Rolle **db_owner** kann **sp_droppullsubscription** nur ausführen, wenn der Benutzer, der das Pullabonnement erstellt hat, zu dieser Rolle gehört.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der Benutzer, der das Pullabonnement erstellt hat, können **sp_droppullsubscription**ausführen. Die **db_owner** festgelegte Daten Bank Rolle kann nur **sp_droppullsubscription** ausgeführt werden, wenn der Benutzer, der das Pullabonnement erstellt hat, zu dieser Rolle gehört.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Löschen eines Pullabonnements](../../relational-databases/replication/delete-a-pull-subscription.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_helppullsubscription &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
+ [sp_addpullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)  
   
   

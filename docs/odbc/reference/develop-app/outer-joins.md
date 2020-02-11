@@ -14,26 +14,26 @@ ms.assetid: be1a0203-5da9-4871-9566-4bd3fbc0895c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a4bf875b3afd21f6b8cb211c999401b0ecb80879
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67987811"
 ---
 # <a name="outer-joins"></a>Äußere Verknüpfungen
-ODBC unterstützt die SQL-92 linke, Rechte und vollständige äußere Join-Syntax. Die Escapesequenz für äußere Joins lautet  
+ODBC unterstützt die Syntax von Left, Right und Full Outer Join von SQL-92. Die Escapesequenz für äußere Joins lautet:  
   
- **{ABl.** _äußere Join_ **}**  
+ **{OJ** _Outer-Join_**}**  
   
- wo *äußere Join* ist  
+ Where *Outer Join* ist  
   
- *Tabellenverweis* {**Links &#124; rechts &#124; vollständige} INKLUSIONSVERKNÜPFUNGS** {*Tabellenverweis* &#124; *äußere Join*} **ON**  _Bedingung_  
+ *Tabellen Verweis* {**Left &#124; Right &#124; Full} äußerer Join** {*Table-Reference* &#124; *Outer-Join*} **auf** _Such Bedingung_  
   
- *Tabellenverweis* gibt an, einen Tabellennamen ein, und *Suchbedingung* gibt an, die Join-Bedingung zwischen der *Tabellenverweise*.  
+ *Tabellen Verweis* gibt einen Tabellennamen an, und *Such Bedingung* gibt die Joinbedingung zwischen den *Tabellen verweisen*an.  
   
- Anforderung für einen äußeren Join muss nach angezeigt werden die **FROM** Schlüsselwort und vor der **, in denen** Klausel (falls vorhanden). Weitere Informationen über die vollständige Syntax, finden Sie unter [äußeren Join Escape Sequence](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) in Anhang C: SQL-Grammatik.  
+ Eine äußere joinanforderung muss nach dem **from** -Schlüsselwort und vor der **Where** -Klausel (sofern vorhanden) vorkommen. Umfassende Syntax Informationen finden Sie unter [Escapesequenz für äußere](../../../odbc/reference/appendixes/outer-join-escape-sequence.md) Joins in Anhang C: SQL-Grammatik.  
   
- Die folgenden SQL-Anweisungen erstellen z. B. das gleiche Resultset, das Listet alle Kunden und zeigt die offenen Aufträge hat. Die erste Anweisung verwendet die Syntax der Escapesequenz. Die zweite Anweisung verwendet die systemeigene Syntax für Oracle und ist nicht interoperabel.  
+ Die folgenden SQL-Anweisungen erstellen z. b. das gleiche Resultset, das alle Kunden auflistet, und zeigt an, welches über offene Aufträge verfügt. In der ersten Anweisung wird die Escapesequenzsyntax verwendet. Die zweite Anweisung verwendet die native Syntax für Oracle und ist nicht interoperabel.  
   
 ```  
 SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status  
@@ -45,4 +45,4 @@ SELECT Customers.CustID, Customers.Name, Orders.OrderID, Orders.Status
    WHERE (Orders.Status='OPEN') AND (Customers.CustID= Orders.CustID(+))  
 ```  
   
- Um die Arten von äußeren Verknüpfungen zu bestimmen, die eine Datenquelle und den Treiber zu unterstützen, eine Anwendung ruft **SQLGetInfo** mit der SQL_OJ_CAPABILITIES-flag. Die Arten von äußeren Verknüpfungen, die unterstützt werden möglicherweise Links sind, rechts, vollständige oder geschachtelte äußere Joins; äußere Joins in der die im Spaltennamen die **ON** Klausel müssen sich nicht auf die gleiche Reihenfolge wie ihre entsprechenden Tabellennamen in der **OUTER JOIN** -Klausel; innere Joins zusammen mit äußeren Joins; und äußeren Joins verwenden alle ODBC-Vergleichsoperator. Wenn der Typ der SQL_OJ_CAPABILITIES Informationen 0 zurückgibt, wird keine äußeren Join-Klausel unterstützt.
+ Um die Typen von äußeren Joins zu ermitteln, die von einer Datenquelle und einem Treiber unterstützt werden, ruft eine Anwendung **SQLGetInfo** mit dem SQL_OJ_CAPABILITIES-Flag auf. Die Typen von äußeren Joins, die unterstützt werden können, sind Left, right, Full oder netsted Outer Joins. äußere Joins, bei denen die Spaltennamen in der **on** -Klausel nicht die gleiche Reihenfolge wie ihre jeweiligen Tabellennamen in der **äußeren Join** -Klausel aufweisen. innere Joins in Verbindung mit äußeren Joins; und äußere Joins unter Verwendung eines beliebigen ODBC-Vergleichs Operators. Wenn der SQL_OJ_CAPABILITIES Informationstyp 0 zurückgibt, wird keine Outer Join-Klausel unterstützt.

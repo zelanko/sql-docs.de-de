@@ -1,5 +1,5 @@
 ---
-title: Loading Converted Database Objects into SQLServer (OracleToSQL) | Microsoft-Dokumentation
+title: Laden von konvertierten Datenbankobjekten in SQL Server (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,101 +14,101 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262987"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Laden konvertierter Datenbankobjekte in SQL Server (OracleToSQL)
-Nachdem Sie die Oracle-Schemas zu SQL Server konvertiert haben, können Sie die resultierenden Datenbankobjekte in SQL Server laden. Sie können entweder SSMA, die die Objekte zu erstellen, oder Sie können Skripts für die Objekte und führen Sie die Skripts selbst. Darüber hinaus können mit SSMA Sie Metadaten mit den eigentlichen Inhalt der SQL Server-Datenbank zu aktualisieren.  
+Nachdem Sie Oracle-Schemas in SQL Server konvertiert haben, können Sie die resultierenden Datenbankobjekte in SQL Server laden. Sie können entweder das SSMA-Objekt erstellen, oder Sie können Skripts für die Objekte erstellen und die Skripts selbst ausführen. Außerdem können Sie mit SSMA Ziel Metadaten mit dem tatsächlichen Inhalt SQL Server Datenbank aktualisieren.  
   
-## <a name="choosing-between-synchronization-and-scripts"></a>Auswählen zwischen Synchronisierung und Skripts  
-Wenn Sie die konvertierten Datenbankobjekten in SQL Server ohne Änderungen zu laden möchten, haben Sie SSMA direkt zu erstellen oder die Datenbankobjekte neu erstellt. Dass die Methode kann schnell und einfach, aber es lässt sich nicht für die Anpassung der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code, der die SQL Server-Objekte, gespeicherter Prozeduren definiert.  
+## <a name="choosing-between-synchronization-and-scripts"></a>Zwischen Synchronisierung und Skripts auswählen  
+Wenn Sie die konvertierten Datenbankobjekte ohne Änderungen in SQL Server laden möchten, können Sie die Datenbankobjekte von SSMA direkt erstellen oder neu erstellen. Diese Methode ist schnell und einfach, lässt jedoch nicht zu, dass der [!INCLUDE[tsql](../../includes/tsql-md.md)] Code, der die SQL Server Objekte definiert, außer gespeicherten Prozeduren angepasst wird.  
   
-Wenn Sie ändern möchten, die [!INCLUDE[tsql](../../includes/tsql-md.md)] , wird verwendet, um Objekte erstellen, oder wenn Sie mehr Kontrolle über die Objekte erstellen möchten, verwenden SSMA zum Erstellen von Skripts. Sie können dann diese Skripts ändern, jedes Objekt einzeln erstellen und sogar Verwenden von SQL Server-Agent planen, erstellen diese Objekte.  
+Wenn Sie das ändern möchten, [!INCLUDE[tsql](../../includes/tsql-md.md)] das zum Erstellen von-Objekten verwendet wird, oder wenn Sie mehr Kontrolle über die Objekt Erstellung haben möchten, verwenden Sie SSMA zum Erstellen von-Skripts. Anschließend können Sie diese Skripts ändern, jedes Objekt einzeln erstellen und sogar SQL Server-Agent verwenden, um die Erstellung dieser Objekte zu planen.  
   
-## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden SSMA zum Synchronisieren von Objekten mit SQLServer  
-Um SSMA verwenden, um SQL Server-Datenbankobjekte zu erstellen, wählen Sie die Objekte in SQL Server-Metadaten-Explorer, und synchronisieren Sie die Objekte mit SQL Server, wie im folgenden Verfahren dargestellt. Standardmäßig wird, wenn die Objekte in SQL Server bereits vorhanden sind, und wenn die SSMA-Metadaten neuer ist als das Objekt in SQL Server SSMA die Objektdefinitionen in SQL Server geändert werden. Sie können das Standardverhalten ändern, indem Sie die Bearbeitung **Projekteinstellungen**.  
+## <a name="using-ssma-to-synchronize-objects-with-sql-server"></a>Verwenden von SSMA zum Synchronisieren von Objekten mit SQL Server  
+Wenn Sie SSMA zum Erstellen von SQL Server Datenbankobjekten verwenden möchten, wählen Sie die Objekte in SQL Server Metadaten-Explorer aus, und synchronisieren Sie dann die Objekte mit SQL Server, wie im folgenden Verfahren gezeigt. Wenn die Objekte bereits in SQL Server vorhanden sind und die SSMA-Metadaten neuer als das Objekt in SQL Server sind, ändert SSMA standardmäßig die Objekt Definitionen in SQL Server. Sie können das Standardverhalten ändern, indem Sie die **Projekteinstellungen**bearbeiten.  
   
 > [!NOTE]  
-> Sie können vorhandene SQL Server-Datenbankobjekte auswählen, die aus Oracle-Datenbanken nicht konvertiert wurden. Aber werden diese Objekte nicht neu erstellt oder geändert werden von SSMA.  
+> Sie können vorhandene SQL Server Datenbankobjekte auswählen, die nicht aus Oracle-Datenbanken konvertiert wurden. Diese Objekte werden jedoch nicht von SSMA neu erstellt oder geändert.  
   
-**Zum Synchronisieren von Objekten mit SQL Server**  
+**So synchronisieren Sie Objekte mit SQL Server**  
   
-1.  In SQL Server-Metadaten-Explorer, erweitern Sie den obersten Knoten des SQL Server, und dann **Datenbanken**.  
+1.  Erweitern Sie in SQL Server metadatenexplorer den oberen SQL Server Knoten, und erweitern Sie dann **Datenbanken**.  
   
 2.  Wählen Sie die zu verarbeitenden Objekte aus:  
   
-    -   Um eine vollständige Datenbank zu synchronisieren, wählen Sie das Kontrollkästchen neben dem Datenbanknamen.  
+    -   Aktivieren Sie das Kontrollkästchen neben dem Datenbanknamen, um eine komplette Datenbank zu synchronisieren.  
   
-    -   Klicken Sie zum Synchronisieren, oder lassen Sie einzelne Objekte oder Kategorien von Objekten, aktivieren Sie oder deaktivieren Sie das Kontrollkästchen neben dem Objekt oder einen Ordner.  
+    -   Aktivieren bzw. deaktivieren Sie das Kontrollkästchen neben dem Objekt oder Ordner, um einzelne Objekte oder Kategorien von Objekten zu synchronisieren oder auszulassen.  
   
-3.  Nachdem Sie die zu verarbeitenden in SQL Server-Metadaten-Explorer Objekte ausgewählt haben, mit der rechten Maustaste **Datenbanken**, und klicken Sie dann auf **synchronisieren mit der Datenbank**.  
+3.  Nachdem Sie die zu verarbeitenden Objekte in SQL Server Metadaten-Explorer ausgewählt haben, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **mit Datenbank synchronisieren**.  
   
-    Sie können auch die einzelne Objekte oder Kategorien von Objekten synchronisieren, indem Sie mit der rechten Maustaste das Objekt oder der übergeordnete Ordner, und klicken Sie dann auf **synchronisieren mit der Datenbank**.  
+    Sie können einzelne Objekte oder Objektkategorien auch synchronisieren, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **mit Datenbank synchronisieren**klicken.  
   
-    Danach SSMA zeigt die **synchronisieren mit der Datenbank** Dialogfeld hier Sie zwei Gruppen von Elementen sehen. Klicken Sie auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte in einer Struktur dargestellt. Klicken Sie auf der rechten Seite sehen Sie eine Struktur, die dieselben Objekte in der SSMA-Metadaten darstellt. Sie können die Struktur durch Klicken auf Links oder rechts erweitern Schaltfläche "+". Die Richtung der Synchronisierung wird in der Aktionsspalte zwischen die beiden Strukturen angeordnet wurden, angezeigt.  
+    Danach zeigt SSMA das Dialogfeld **mit Datenbank synchronisieren an** , in dem Sie zwei Gruppen von Elementen sehen können. Auf der linken Seite zeigt SSMA ausgewählte Datenbankobjekte an, die in einer Struktur dargestellt werden. Auf der rechten Seite sehen Sie eine Baumstruktur, die die gleichen Objekte in SSMA-Metadaten darstellt. Sie können die Struktur erweitern, indem Sie auf die Schaltfläche mit der rechten oder linken Schaltfläche klicken. Die Richtung der Synchronisierung wird in der Aktionsspalte angezeigt, die zwischen den beiden Strukturen platziert ist.  
   
-    Eine Aktion anmelden können drei Zustände aufweisen:  
+    Ein Aktions Vorzeichen kann drei Zustände aufweisen:  
   
-    -   Ein Pfeil nach links bedeutet, dass der Inhalt der Metadaten in der Datenbank (Standard) gespeichert werden soll.  
+    -   Der nach-links-Pfeil bedeutet, dass der Inhalt der Metadaten in der Datenbank gespeichert wird (Standardeinstellung).  
   
-    -   Ein Pfeil nach rechts bedeutet, dass es sich bei Datenbankinhalte die SSMA-Metadaten überschrieben werden.  
+    -   Ein Pfeil nach rechts bedeutet, dass der Daten Bank Inhalt die SSMA-Metadaten überschreibt.  
   
-    -   Ein Kreuz bedeutet, dass keine weitere Aktion durchgeführt wird.  
+    -   Ein Kreuzzeichen bedeutet, dass keine Aktion ausgeführt wird.  
   
-Klicken Sie auf der Aktion zum Ändern des Zustands. Tatsächliche Synchronisierung wird durchgeführt, wenn Sie auf **OK** -Schaltfläche der **synchronisieren mit der Datenbank** Dialogfeld.  
+Klicken Sie auf das Aktions Zeichen, um den Status zu ändern. Die eigentliche Synchronisierung wird durchgeführt, wenn Sie im Dialogfeld **mit Datenbank synchronisieren** auf die Schaltfläche **OK** klicken.  
   
 ## <a name="scripting-objects"></a>Skripterstellung für Objekte  
-Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] Definitionen der konvertierten Datenbankobjekte, um die Objektdefinitionen ändern und Ausführen von Skripts selbst, können Sie speichern die konvertierte Datenbank Objektdefinitionen, [!INCLUDE[tsql](../../includes/tsql-md.md)] Skripts.  
+Zum Speichern [!INCLUDE[tsql](../../includes/tsql-md.md)] der Definitionen der konvertierten Datenbankobjekte oder zum Ändern der Objekt Definitionen und zum Ausführen von Skripts können Sie die konvertierten Daten Bank [!INCLUDE[tsql](../../includes/tsql-md.md)] Objekt Definitionen in Skripts speichern.  
   
-**Zum Speichern von Objekten wie Skripts**  
+**So speichern Sie Objekte als Skripts**  
   
-1.  Nachdem Sie die Objekte, die in einem Skript speichern ausgewählt haben, mit der rechten Maustaste **Datenbanken**, und klicken Sie dann auf **speichern als Skript**.  
+1.  Nachdem Sie die zu speichernden Objekte in einem Skript ausgewählt haben, klicken Sie mit der rechten Maustaste auf **Datenbanken**, und klicken Sie dann auf **als Skript speichern**.  
   
-    Sie können auch einzelne Objekte oder Kategorien von Objekten von der rechten Maustaste auf das Objekt oder der übergeordnete Ordner, und klicken Sie dann auf Skripts **speichern als Skript**.  
+    Sie können auch Skripts für einzelne Objekte oder Kategorien von Objekten erstellen, indem Sie mit der rechten Maustaste auf das Objekt oder seinen übergeordneten Ordner klicken und dann auf **als Skript speichern**klicken.  
   
-2.  In der **speichern** Dialogfeld Suchen den Ordner, in der Sie speichert das Skript, einen Dateinamen in eingeben möchten, die **Dateiname** ein, und klicken Sie dann auf OK SSMA wird die SQL-Dateinamenerweiterung angefügt.  
+2.  Suchen Sie im Dialogfeld **Speichern** unter den Ordner, in dem Sie das Skript speichern möchten, geben Sie im Feld **Dateiname** einen Dateinamen ein, und klicken Sie dann auf OK, um die Dateinamenerweiterung ". SQL" anzufügen.  
   
 ### <a name="modifying-scripts"></a>Ändern von Skripts  
-Nachdem Sie die SQL Server-Objektdefinitionen als ein oder mehrere Skripts gespeichert haben, können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzeigen und ändern Sie die Skripts.  
+Nachdem Sie die SQL Server Objekt Definitionen als ein oder mehrere Skripts gespeichert haben, können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um die Skripts anzuzeigen und zu ändern.  
   
-**Um ein Skript zu ändern.**  
+**So ändern Sie ein Skript**  
   
-1.  Auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Datei** Startmenü **öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Datei** auf **Öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  In der **öffnen** Dialogfeld Wählen Sie die Skriptdatei und dann auf OK.
+2.  Wählen Sie im Dialogfeld **Öffnen** die Skriptdatei aus, und klicken Sie dann auf OK.
   
-3.  Bearbeiten Sie die Skriptdatei mit dem abfrageeditor.  
+3.  Bearbeiten Sie die Skriptdatei mit dem Abfrage-Editor.  
   
-    Weitere Informationen zu den Abfrage-Editor finden Sie unter "-Editor der Einfachheit halber Befehle und Funktionen" in SQL Server-Onlinedokumentation.  
+    Weitere Informationen zum Abfrage-Editor finden Sie unter "praktische Befehle und Features im Editor" in SQL Server-Onlinedokumentation.  
   
-4.  Speichern Sie das Skript auf im Menü Datei auf **speichern**.  
+4.  Um das Skript zu speichern, klicken Sie im Menü Datei auf **Speichern**.  
   
 ### <a name="running-scripts"></a>Ausführen von Skripts  
-Sie können ein Skript oder einzelne Anweisungen in ausführen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+Sie können in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ein Skript oder einzelne Anweisungen ausführen.  
   
-**Zum Ausführen eines Skripts**  
+**So führen Sie ein Skript aus**  
   
-1.  Auf der [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Datei** Startmenü **öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Datei** auf **Öffnen**, und klicken Sie dann auf **Datei**.  
   
-2.  In der **öffnen** Dialogfeld Wählen Sie die Skriptdatei, und klicken Sie dann auf OK  
+2.  Wählen Sie im Dialogfeld **Öffnen** die Skriptdatei aus, und klicken Sie dann auf OK.  
   
-3.  Um das vollständige Skript auszuführen, drücken Sie die **F5** Schlüssel.  
+3.  Drücken Sie die Taste **F5** , um das komplette Skript auszuführen.  
   
-4.  Um einen Satz von Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster, und drücken Sie dann die **F5** Schlüssel.  
+4.  Um einen Satz von-Anweisungen auszuführen, wählen Sie die Anweisungen im Abfrage-Editor-Fenster aus, und drücken Sie dann die Taste **F5** .  
   
-Weitere Informationen dazu, wie Sie den Abfrage-Editor verwenden, um Skripts auszuführen, finden Sie unter " [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage" in SQL Server-Onlinedokumentation.  
+Weitere Informationen zur Verwendung des Abfrage-Editors zum Ausführen von Skripts finden Sie unter [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] "Abfrage" in SQL Server-Onlinedokumentation.  
   
-Sie können Skripts auch über die Befehlszeile ausführen, mit der **Sqlcmd** -Hilfsprogramm, und von SQL Server-Agent. Weitere Informationen zu **Sqlcmd**, finden Sie unter "Hilfsprogramms" Sqlcmd"" in SQL Server-Onlinedokumentation. Weitere Informationen zu SQL Server-Agent finden Sie unter "Automatisieren von administrativen Tasks (SQL Server-Agent)" in SQL Server-Onlinedokumentation.  
+Sie können Skripts auch über die Befehlszeile ausführen, indem Sie das Hilfsprogramm **sqlcmd** und die SQL Server-Agent verwenden. Weitere Informationen zu **sqlcmd**finden Sie unter "sqlcmd Utility" in SQL Server-Onlinedokumentation. Weitere Informationen zu SQL Server-Agent finden Sie im Thema zum Automatisieren administrativer Aufgaben (SQL Server-Agent) unter SQL Server-Onlinedokumentation.  
   
-## <a name="securing-objects-in-sql-server"></a>Sichern die Objekte in SQLServer  
-Nachdem Sie die konvertierten Datenbankobjekten in SQL Server geladen haben, können Sie erteilen und Verweigern von Berechtigungen für diese Objekte. Es ist eine gute Idee, klicken Sie hierzu vor dem Migrieren von Daten in SQL Server. Informationen dazu, wie Sie sichere Objekte in SQL Server-Hilfe finden Sie unter "Security Überlegungen zu Datenbanken und Datenbankanwendungen" in SQL Server-Onlinedokumentation.  
+## <a name="securing-objects-in-sql-server"></a>Sichern von Objekten in SQL Server  
+Nachdem Sie die konvertierten Datenbankobjekte in SQL Server geladen haben, können Sie Berechtigungen für diese Objekte erteilen und verweigern. Es empfiehlt sich, dies zu tun, bevor Sie Daten zu SQL Server migrieren. Informationen zum Sichern von Objekten in SQL Server finden Sie unter "Sicherheitsüberlegungen für Datenbanken und Datenbankanwendungen" in SQL Server-Onlinedokumentation.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt des Migrationsvorgangs besteht darin [Migrieren von Daten in SQL Server](migrating-oracle-data-into-sql-server-oracletosql.md).  
+Der nächste Schritt des Migrations Vorgangs besteht darin, [Daten in SQL Server zu migrieren](migrating-oracle-data-into-sql-server-oracletosql.md).  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von Oracle zu SQLServer-Datenbanken &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von Oracle-Datenbanken zu SQL Server &#40;oracleto SQL-&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

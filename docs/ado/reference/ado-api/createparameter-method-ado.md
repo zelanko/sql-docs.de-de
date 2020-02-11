@@ -1,5 +1,5 @@
 ---
-title: CreateParameter-Methode (ADO) | Microsoft-Dokumentation
+title: Kreateparameter-Methode (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933297"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
@@ -34,39 +34,39 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
 ```  
   
 ## <a name="return-value"></a>Rückgabewert  
- Gibt eine **Parameter** Objekt.  
+ Gibt ein **Parameter** Objekt zurück.  
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- Dies ist optional. Ein **Zeichenfolge** -Wert, der den Namen des enthält die **Parameter** Objekt.  
+ Optional. Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
   
  *Typ*  
- Optional. Ein [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) Wert, der angibt, den den Datentyp des der **Parameter** Objekt.  
+ Optional. Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
   
- *Richtung*  
- Dies ist optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) Wert, der angibt, den Typ des **Parameter** Objekt.  
+ *Orientierung*  
+ Optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
   
  *Größe*  
- Optional. Ein **lange** Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
+ Optional. Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
  *Wert*  
- Optional. Ein **Variant** , die angibt, dass des Werts für die **Parameter** Objekt.  
+ Optional. Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **CreateParameter** Methode zum Erstellen eines neuen **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert. Alle Werte, die Sie in den Argumenten übergeben werden geschrieben, mit der entsprechenden **Parameter** Eigenschaften.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die Methode " **kreateparameter** ", um ein neues **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert zu erstellen. Alle Werte, die Sie an die Argumente übergeben, werden in die entsprechenden **Parameter** Eigenschaften geschrieben.  
   
- Diese Methode fügt keinen automatisch die **Parameter** -Objekt an die **Parameter** Auflistung von einem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt. Dadurch können Sie zusätzliche Eigenschaften festzulegen, deren Werte ADO überprüft wird, wenn Sie anfügen, die **Parameter** Objekt, das der Auflistung.  
+ Diese Methode fügt das **Parameter** Objekt nicht automatisch an die **Parameter** Auflistung eines [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts an. Auf diese Weise können Sie zusätzliche Eigenschaften festlegen, deren Werte von ADO überprüft werden, wenn Sie das **Parameter** Objekt an die Auflistung anfügen.  
   
- Wenn Sie angeben, dass einen Datentyp mit variabler Länge, die in der *Typ* -Argument, müssen Sie entweder übergeben eine *Größe* Argument oder eine Gruppe die [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md) Eigenschaft der **Parameter**  Objekt vor dem Anfügen, damit die **Parameter** Auflistung; andernfalls ein Fehler auftritt.  
+ Wenn Sie einen Datentyp variabler Länge im *Typargument* angeben, müssen Sie entweder ein *size* -Argument übergeben oder die [size](../../../ado/reference/ado-api/size-property-ado-parameter.md) -Eigenschaft des **Parameter** Objekts festlegen, bevor es an die **Parameter** Auflistung angehängt wird. Andernfalls tritt ein Fehler auf.  
   
- Wenn Sie einen numerischen Datentyp angeben (**Type** oder **AdDecimal**) in der *Typ* Argument ist, Sie müssen ebenfalls festgelegt. die [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) und [Genauigkeit](../../../ado/reference/ado-api/precision-property-ado.md) Eigenschaften.  
+ Wenn Sie einen numerischen Datentyp (**adNumeric** oder **addecimal**) im *Typargument* angeben, müssen Sie auch die Eigenschaften " [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) " und " [Precision](../../../ado/reference/ado-api/precision-property-ado.md) " festlegen.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Append und CreateParameter – Beispiel (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
- [Append und CreateParameter – Beispiel (VC++)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Append und die Methode "Anfüge Parameter" (VB)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)   
+ [Beispiel für Append und die Methode "append Parameter" (VC + +)](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vc.md)   
  [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)   
  [Parameters-Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)

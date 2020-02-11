@@ -17,14 +17,14 @@ ms.assetid: e113112e-ae42-469e-8e4b-a365a10d9071
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 829f924d8d4893d45a48c193cd27fdd7ac261e3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939712"
 ---
 # <a name="text-file-data-types"></a>Textdatei-Datentypen
-Die folgende Tabelle zeigt, wie Text von Datentypen in ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen, die durch den Text der ODBC-Treiber unterstützt werden.  
+In der folgenden Tabelle wird gezeigt, wie Text Datentypen ODBC-SQL-Datentypen zugeordnet werden. Beachten Sie, dass nicht alle ODBC-SQL-Datentypen vom ODBC-Text Treiber unterstützt werden.  
   
 |Text-Datentyp|ODBC-Datentyp|  
 |--------------------|--------------------|  
@@ -35,16 +35,16 @@ Die folgende Tabelle zeigt, wie Text von Datentypen in ODBC-SQL-Datentypen zugeo
 |LONGCHAR|SQL_LONGVARCHAR|  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** ODBC-Datentypen zurückgegeben. Alle Konvertierungen, die in Anhang D des der *ODBC Programmer's Reference* werden für die SQL-Datentypen, die in der vorherigen Tabelle aufgeführten unterstützt.  
+>  **SQLGetTypeInfo** gibt ODBC-Datentypen zurück. Alle Konvertierungen in Anhang D der *ODBC-Programmier Referenz* werden für die SQL-Datentypen unterstützt, die in der vorherigen Tabelle aufgeführt sind.  
   
- Die folgende Tabelle zeigt die Einschränkungen für Datentypen Text.  
+ In der folgenden Tabelle sind die Einschränkungen für Text Datentypen aufgeführt.  
   
-|Datentyp|Beschreibung|  
+|Datentyp|BESCHREIBUNG|  
 |---------------|-----------------|  
-|CHAR|Erstellen eine CHAR-Spalte 0 (null) oder nicht angegebene Länge gibt tatsächlich eine 255-Bit-Spalte zurück.<br /><br /> In durch Trennzeichen getrennte Dateien wird eine CHAR-Spalte kann, oder Sie besitzen keine Trennzeichen doppelte Anführungszeichen, am Anfang und am Ende; in Dateien mit fester Länge sind die doppelten Anführungszeichen als Trennzeichen nicht verwendet.|  
-|DATETIME|MM-DD-YY (z. B. 01-17-92)<br /><br /> MMM-JJ (z. B. Januar-17-92)<br /><br /> TT-MMM-JJ (z. B. 17 Jan. 92)<br /><br /> JJJJ-MM-TT (z. B. 1992-01-17)<br /><br /> JJJJ-MMM-TT (z. B. 1992-Januar-17)<br /><br /> Gemischte Datumstrennzeichen dürfen nicht in einer Tabelle.<br /><br /> Text-ISAM-Formate ein DATETIME-Feld in den Vereinigten Staaten oder in Europa-Format, je nach der internationalen Einstellung in der Windows-Systemsteuerung.|  
-|GLEITKOMMAZAHL|Die maximale Breite enthält das Zeichen und ein Dezimaltrennzeichen. In Schema.ini wird die Breite wie folgt gekennzeichnet:<br /><br /> 14.083 ist "float" Breite 6<br /><br /> -14.083 ist "float" Breite 7<br /><br /> +14.083 ist "float" Breite 7<br /><br /> 14083. ist "float" Breite 6<br /><br /> ODBC gibt immer 8 für FLOAT-Spalten zurück.<br /><br /> FLOAT-Spalten können z. B. auch in der wissenschaftlichen Schreibweise sein:<br /><br /> -3.04E + 2 ist "float" Breite 8<br /><br /> 25E4 ist "float" Breite 4<br /><br /> **Beachten Sie** Decimal "und" wissenschaftliche Notation kann nicht in einer Spalte kombiniert werden.<br /><br /> NULL-Werte werden durch eine leere aufgefüllten Zeichenfolge fester Länge Dateien dargestellt, und in Dateien mit Trennzeichen ausgelassen werden.<br /><br /> Float-Daten werden mit führenden Leerzeichen aufgefüllt.|  
-|INTEGER|Gültige Werte für Spalten sind-32766 32.767.<br /><br /> In Schema.ini wird die Breite wie folgt gekennzeichnet:<br /><br /> 14083 wird die ganze Zahl Breite 5<br /><br /> 0 ist, ganze Zahl Breite 1<br /><br /> ODBC gibt immer 4 für Spalten zurück.<br /><br /> Die maximale Breite enthält ein Zeichen. Die maximale Breite der Spalte mit ganzen Zahlen ist 11, obwohl die Breite aufgrund von Leerzeichen größer sein kann, die in Tabellen mit festem Format zulässig sind.|  
-|LONGCHAR|Der theoretische beschränken auf der Breite einer Spalte LONGCHAR, entweder eine feste Länge aus, oder durch Trennzeichen getrennte Tabelle kann 65500K. Text-ISAM ist eher zuverlässig unterstützen bis zu ca. 32 KB.|  
+|CHAR|Durch das Erstellen einer char-Spalte mit 0 (null) oder einer nicht angegebenen Länge wird tatsächlich eine 255-Bit-Spalte<br /><br /> In durch Trennzeichen getrennten Dateien kann eine char-Spalte am Anfang und am Ende doppelte Anführungszeichen enthalten. in Dateien mit fester Länge werden doppelte Anführungszeichen nicht als Trennzeichen verwendet.|  
+|DATETIME|MM-dd-yy (z. b. 01-17-92)<br /><br /> Mmm-dd-yy (z. b. Jan-17-92)<br /><br /> DD-mmm-yy (z. b. 17-Jan-92)<br /><br /> Yyyy-mm-dd (z. b. 1992-01-17)<br /><br /> Yyyy-MMM-DD (z. b. 1992-Jan-17)<br /><br /> Trennzeichen für gemischte Datumsangaben sind innerhalb einer Tabelle nicht zulässig.<br /><br /> Der Text ISAM formatiert ein DateTime-Feld im USA-oder europäischen Format, abhängig von der internationalen Einstellung in der Windows-Systemsteuerung.|  
+|GLEITKOMMAZAHL|Die maximale Breite umfasst das Vorzeichen und den Dezimaltrennzeichen. In "Schema. ini" wird die Breite wie folgt angegeben:<br /><br /> 14,083 ist float-Breite 6<br /><br /> -14,083 ist float-Breite 7<br /><br /> + 14,083 ist float-Breite 7<br /><br /> 14083. ist float-Breite 6<br /><br /> ODBC gibt immer 8 für float-Spalten zurück.<br /><br /> FLOAT-Spalten können sich auch in wissenschaftlicher Notation befinden, z. b.:<br /><br /> -3,04 e + 2 ist float-Breite 8<br /><br /> 25e4 ist float-Breite 4<br /><br /> **Hinweis** Die Dezimal-und wissenschaftliche Schreibweise können nicht in einer Spalte gemischt werden.<br /><br /> NULL-Werte werden in Dateien mit fester Länge durch eine leere, aufgefüllte Zeichenfolge dargestellt und in durch Trennzeichen getrennten Dateien ausgelassen.<br /><br /> Float-Daten können mit führenden Leerzeichen aufgefüllt werden.|  
+|INTEGER|Gültige Werte für ganzzahlige Spalten sind 32767 bis 32766.<br /><br /> In "Schema. ini" wird die Breite wie folgt angegeben:<br /><br /> 14083 ist eine ganzzahlige Breite 5<br /><br /> 0 ist ganzzahlige Breite 1<br /><br /> ODBC gibt immer 4 für ganzzahlige Spalten zurück.<br /><br /> Die maximale Breite umfasst ein Vorzeichen. Die maximale Breite einer ganzzahligen Spalte ist 11, obwohl die Breite aufgrund von Leerzeichen, die in Tabellen mit festem Format zulässig sind, größer sein kann.|  
+|LONGCHAR|Der theoretische Grenzwert für die Breite einer LONGCHAR-Spalte in einer Tabelle mit fester Länge oder einer durch Trennzeichen getrennten Tabelle ist 65500k. Der Text-ISAM bietet eine zuverlässige Unterstützung von bis zu etwa 32K.|  
   
- Weitere Einschränkungen für Datentypen finden Sie im [Datumstypen](../../odbc/microsoft/data-type-limitations.md).
+ Weitere Einschränkungen für Datentypen finden Sie unter [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).

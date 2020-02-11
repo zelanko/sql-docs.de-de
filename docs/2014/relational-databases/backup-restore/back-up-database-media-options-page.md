@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154836"
 ---
 # <a name="back-up-database-media-options-page"></a>Datenbank sichern (Seite 'Medienoptionen')
@@ -33,7 +33,7 @@ ms.locfileid: "70154836"
 >  Sie können einen Datenbank-Wartungsplan definieren, um Datenbanksicherungen zu erstellen. Weitere Informationen finden Sie unter [Wartungspläne](../maintenance-plans/maintenance-plans.md) und [Verwenden des Wartungsplanungs-Assistenten](../maintenance-plans/use-the-maintenance-plan-wizard.md).  
   
 > [!NOTE]  
->  Wenn Sie einen Sicherungstask mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
 ## <a name="options"></a>Tastatur  
   
@@ -43,34 +43,34 @@ ms.locfileid: "70154836"
  Nur die Option **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen** wird mit Verschlüsselungsoptionen unterstützt. Wenn Sie die Optionen im Abschnitt **Auf vorhandenen Mediensatz sichern** auswählen, werden die Verschlüsselungsoptionen auf der Seite **Sicherungsoptionen** deaktiviert.  
   
 > [!NOTE]  
->  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md).  
+>  Informationen über Mediensätze finden Sie unter [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)ausgeführt wird.  
   
- **Auf vorhandenen Mediensatz sichern**  
+ **Auf vorhandenen Medien Satz sichern**  
  Sichert eine Datenbank auf einen vorhandenen Mediensatz. Durch Auswahl dieser Option werden drei weitere Optionen aktiviert.  
   
  Wählen Sie eine der folgenden Optionen aus:  
   
- **An vorhandenen Sicherungssatz anfügen**  
+ **An vorhandenen Sicherungs Satz anfügen**  
  Fügt den Sicherungssatz unter Beibehaltung vorheriger Sicherungen an den vorhandenen Mediensatz an.  
   
- **Alle vorhandenen Sicherungssätze überschreiben**  
+ **Alle vorhandenen Sicherungs Sätze überschreiben**  
  Ersetzt alle vorherigen Sicherungen auf dem vorhandenen Mediensatz durch die aktuelle Sicherung.  
   
- **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen**  
+ **Medien Satz Namen und Ablaufzeit des Sicherungs Satzes überprüfen**  
  Legen Sie optional beim Sichern auf einen vorhandenen Mediensatz fest, dass während des Sicherungsvorgangs der Name und das Ablaufdatum der Sicherungssätze überprüft werden.  
   
- **Mediensatzname**  
+ **Medien Satz Name**  
  Wenn **Mediensatznamen und Ablaufzeit des Sicherungssatzes überprüfen** ausgewählt ist, geben Sie optional den Namen des Mediensatzes an, der für diesen Sicherungsvorgang verwendet werden soll.  
   
- **Auf neuen Mediensatz sichern und alle vorhandenen Sicherungssätze löschen**  
+ **Auf neuen Medien Satz sichern und alle vorhandenen Sicherungs Sätze löschen**  
  Mit dieser Option erstellen Sie einen neuen Mediensatz, wobei die vorherigen Sicherungssätze gelöscht werden.  
   
  Durch Auswählen dieser Option werden die folgenden Optionen aktiviert:  
   
- **Name für neuen Mediensatz**  
+ **Name des neuen Medien Satzes**  
  Geben Sie optional einen neuen Namen für den Mediensatz ein.  
   
- **Beschreibung für neuen Mediensatz**  
+ **Beschreibung für neuen Medien Satz**  
  Geben Sie optional eine aussagekräftige Beschreibung für den neuen Mediensatz ein. Die Beschreibung sollte genau genug sein, um den Inhalt akkurat zu vermitteln.  
   
 ### <a name="reliability"></a>Zuverlässigkeit  
@@ -79,7 +79,7 @@ ms.locfileid: "70154836"
  **Sicherung nach dem Abschluss überprüfen**  
  Überprüft, ob der Sicherungssatz vollständig ist und alle Volumes lesbar sind.  
   
- **Vor dem Schreiben auf die Medien Prüfsumme bilden**  
+ **Vor dem Schreiben auf die Medien Prüfsumme ausführen**  
  Überprüft vor dem Schreiben auf die Sicherungsmedien die Prüfsummen. Das Auswählen dieser Option entspricht der Angabe der Option CHECKSUM in der BACKUP-Anweisung von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Durch Auswahl dieser Option kann die Arbeitsauslastung erhöht und der Sicherungsdurchsatz des Sicherungsvorgangs verringert werden. Weitere Informationen zu Sicherungsprüfsummen finden Sie unter [Mögliche Medienfehler während der Sicherung und Wiederherstellung &#40;SQL Server&#41;](possible-media-errors-during-backup-and-restore-sql-server.md).  
   
  **Bei Fehler fortsetzen**  
@@ -92,12 +92,12 @@ ms.locfileid: "70154836"
 >  Informationen zu Transaktionsprotokollsicherungen finden Sie unter [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
  **Transaktionsprotokoll abschneiden**  
- Das Transaktionsprotokoll wird gesichert und abgeschnitten, um Protokollspeicherplatz freizugeben. Die Datenbank bleibt dabei online. Diese Option ist die Standardeinstellung.  
+ Das Transaktionsprotokoll wird gesichert und abgeschnitten, um Protokollspeicherplatz freizugeben. Die Datenbank bleibt dabei online. Dies ist die Standardoption.  
   
- **Protokollfragment sichern und Datenbank im Wiederherstellungsstatus belassen**  
+ **Protokoll Fragment sichern und Datenbank im Wiederherstellungs Status belassen**  
  Das Protokollfragment wird gesichert und die Datenbank im Wiederherstellungsstatus belassen. Diese Option erstellt eine *Sicherung des Protokollfragments*. Dabei werden Protokolle gesichert, die bisher (vom aktiven Protokoll) noch nicht gesichert wurden, i.d.R. als Vorbereitung für die Wiederherstellung einer Datenbank. Die Datenbank steht Benutzern erst wieder zur Verfügung, wenn sie vollständig wiederhergestellt ist.  
   
- Das Auswählen dieser Option entspricht der Angabe von WITH NO_TRUNCATE und NORECOVERY in einer [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
+ Das Auswählen dieser Option entspricht der Angabe von WITH NO_TRUNCATE und NORECOVERY in einer [BACKUP](/sql/t-sql/statements/backup-transact-sql)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]). Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](tail-log-backups-sql-server.md).  
   
 ### <a name="tape-drive"></a>Bandlaufwerk  
  Mit den Optionen des Bereichs **Bandlaufwerk** wird die Bandverwaltung während des Sicherungsvorgangs gesteuert. Diese Optionen sind nur aktiviert, wenn im Dialogfeld **Datenbank sichern** auf der Seite **Allgemein** im Feld [Ziel](../../integration-services/general-page-of-integration-services-designers-options.md) die Option **Band** ausgewählt ist.  
@@ -105,15 +105,15 @@ ms.locfileid: "70154836"
 > [!NOTE]  
 >  Weitere Informationen zum Verwenden von Bandmedien finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](backup-devices-sql-server.md).  
   
- **Band nach dem Sichern entladen**  
+ **Band nach der Sicherung entladen**  
  Nach Abschluss der Sicherung wird das Band entladen.  
   
  **Band vor dem Entladen zurückspulen**  
  Das Band wird vor dem Entladen freigegeben und zurückgespult. Diese Option ist nur aktiviert, wenn **Band nach dem Sichern entladen** ausgewählt ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
- [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
+ [Sichern eines Transaktions Protokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
  [Sichern des Transaktionsprotokolls bei beschädigter Datenbank &#40;SQL Server&#41;](back-up-the-transaction-log-when-the-database-is-damaged-sql-server.md)  
   

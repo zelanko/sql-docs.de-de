@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie die Werte von Variablen und Parametern in einem untergeordneten Paket | Microsoft-Dokumentation
+title: Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2425c15428dbaa05e9d29b2d9a89f8fc7d68f6c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66054731"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket
@@ -78,7 +78,7 @@ ms.locfileid: "66054731"
   
 4.  Wählen Sie im Dialogfeld **Paketkonfigurationsplaner** die Option **Paketkonfigurationen aktivieren**aus, und klicken Sie dann auf **Hinzufügen**.  
   
-5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+5.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **Weiter.**  
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen in der Liste **Konfigurationstyp** die Option **Übergeordnete Paketvariable** aus, und führen Sie eine der folgenden Aktionen aus:  
   
@@ -103,9 +103,9 @@ ms.locfileid: "66054731"
   
 13. Klicken Sie auf **Schließen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
- [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Paket Konfigurationen](../../2014/integration-services/package-configurations.md)   
+ [Erstellen von Paket Konfigurationen](../../2014/integration-services/create-package-configurations.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Generieren von (MDX) | Microsoft-Dokumentation
+title: Generate (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005906"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
@@ -41,13 +41,13 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  *String_Expression*  
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich in der Regel um den Namen des aktuellen Elements (CurrentMember.Name) jedes Tupels in der angegebenen Menge handelt.  
   
- *Trennzeichen*  
+ *Delimiter*  
  Ein gültiges Trennzeichen, ausgedrückt als Zeichenfolgenausdruck.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn Sie ein zweiter Satz angegeben wird, die **generieren** Funktionsergebnis ist eine Gruppe, die durch Anwenden der Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge generiert wird, und dann wird die resultierende verknüpft Mengen durch vereinigungsmengenbildung. Wenn **alle** angegeben ist, wird die Funktion behält Duplikate in der sich ergebenden Menge.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn eine zweite Menge angegeben wird, gibt die **Generate** -Funktion eine Menge zurück, die durch Anwenden der Tupel in der zweiten Menge auf jedes Tupel in der ersten Menge generiert wird. Anschließend wird die resultierende Menge nach Union zusammengeführt. Wenn **all** angegeben wird, behält die Funktion Duplikate in der resultierenden Menge bei.  
   
- Wenn ein Zeichenfolgenausdruck angegeben wird, die **generieren** Funktion gibt eine Zeichenfolge, die durch Auswerten des im angegebenen Zeichenfolgenausdruck für jedes Tupel in der ersten Menge, und klicken Sie dann die Ergebnisse verkettet generiert. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
+ Wenn ein Zeichen folgen Ausdruck angegeben wird, gibt die **Generate** -Funktion eine Zeichenfolge zurück, die durch Auswerten des angegebenen Zeichen folgen Ausdrucks für jedes Tupel in der ersten Menge generiert wird. Anschließend werden die Ergebnisse verkettet. Optional kann die Zeichenfolge begrenzt werden, sodass die einzelnen Ergebnisse in der verketteten Ergebniszeichenfolge voneinander getrennt sind.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -72,7 +72,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
- Die am häufigsten verwendeten praktische Verwendung von **generieren** ist um einen komplexen Mengenausdruck wie TopCount auf eine Menge von Elementen. Die folgende Beispielabfrage zeigt die obersten 10 Produkte für jedes Kalenderjahr in Zeilen an:  
+ Die häufigste praktische Verwendung von **Generate** besteht darin, einen komplexen Mengen Ausdruck, z. b. TopCount, über eine Menge von Membern auszuwerten. Die folgende Beispielabfrage zeigt die obersten 10 Produkte für jedes Kalenderjahr in Zeilen an:  
   
 ```  
 SELECT   
@@ -89,7 +89,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
- Beachten Sie, dass eine andere Top 10 für jedes Jahr, und dass angezeigt wird die Verwendung von **generieren** ist die einzige Möglichkeit, dieses Ergebnis zu erhalten. Ein einfacher Crossjoin der Kalenderjahre und der Menge der obersten 10 Produkte würde mit jährlicher Wiederholung die 10 obersten Produkte der ewigen Bestenliste anzeigen, wie das folgende Beispiel zeigt:  
+ Beachten Sie, dass für jedes Jahr jeweils ein anderer Top 10 angezeigt wird, und dass die Verwendung von **Generate** die einzige Möglichkeit ist, um dieses Ergebnis zu erhalten. Ein einfacher Crossjoin der Kalenderjahre und der Menge der obersten 10 Produkte würde mit jährlicher Wiederholung die 10 obersten Produkte der ewigen Bestenliste anzeigen, wie das folgende Beispiel zeigt:  
   
 ```  
 SELECT   
@@ -104,8 +104,8 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>Zeichenfolge  
- Das folgende Beispiel zeigt die Verwendung von **generieren** gibt eine Zeichenfolge zurück:  
+### <a name="string"></a>String  
+ Das folgende Beispiel zeigt die Verwendung von **Generate** zum Zurückgeben einer Zeichenfolge:  
   
 ```  
 WITH   
@@ -124,9 +124,9 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  Diese Form der **generieren** Funktion ist nützlich, beim Debuggen von Berechnungen, wie Sie zum Zurückgeben einer Zeichenfolge, die die Namen aller Elemente in einer Gruppe anzeigen können. Dies ist möglicherweise einfacher zu lesen als die strikte MDX-Darstellung eines Satzes, der die [SetToStr &#40;MDX&#41; ](../mdx/settostr-mdx.md) -Funktion zurückgegeben wird.  
+>  Diese Form der Funktion **generieren** kann beim Debuggen von Berechnungen nützlich sein, da Sie eine Zeichenfolge mit den Namen aller Member in einer Menge zurückgeben können. Dies ist möglicherweise einfacher zu lesen als die strikte MDX-Darstellung einer Menge, die die [Set&#40;MDX-&#41;](../mdx/settostr-mdx.md) Funktion zurückgibt.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

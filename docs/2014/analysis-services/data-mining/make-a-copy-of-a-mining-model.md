@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie eine Kopie eines Miningmodells | Microsoft-Dokumentation
+title: Erstellen einer Kopie eines Mining Modells | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7464c7d780a420b0f95b59ebde02494bd40661e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084222"
 ---
 # <a name="make-a-copy-of-a-mining-model"></a>Erstellen einer Kopie eines Miningmodells
@@ -37,7 +37,7 @@ ms.locfileid: "66084222"
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     -oder-  
+     Oder  
   
      Wählen Sie das Modell aus. Klicken Sie im Menü **Miningmodell** auf **Neues Miningmodell**.  
   
@@ -47,19 +47,19 @@ ms.locfileid: "66084222"
   
 1.  Wählen Sie das Miningmodell aus.  
   
-2.  In der **Eigenschaften** Fenster, klicken Sie auf das Textfeld für die **Filter** -Eigenschaft, und klicken Sie auf der Build **(...)**  Schaltfläche.  
+2.  Klicken Sie im Fenster **Eigenschaften** auf das Textfeld für die **Filter** -Eigenschaft, und klicken Sie auf die Schaltfläche Erstellen **(...)** .  
   
 3.  Ändern Sie die Filterbedingungen.  
   
      Weitere Informationen zur Verwendung der Dialogfelder des Filter-Editors finden Sie unter [Anwenden eines Filters auf ein Miningmodell](apply-a-filter-to-a-mining-model.md).  
   
-4.  In der **Eigenschaften** Fenster in der `AlgorithmParameters` Textfeld klicken Sie auf **Algorithmusparameter**, und ändern Sie bei Bedarf Algorithmusparameter.  
+4.  Klicken Sie im Fenster **Eigenschaften** in das `AlgorithmParameters` Textfeld, klicken Sie auf die **Parameter "mintalgorithm**", und ändern Sie bei Bedarf Algorithmusparameter.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)   
+ [Mining Modell Tasks und Anleitungen](mining-model-tasks-and-how-tos.md)   
  [Löschen eines Filters aus einem Miningmodell](delete-a-filter-from-a-mining-model.md)  
   
   

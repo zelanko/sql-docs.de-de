@@ -1,5 +1,5 @@
 ---
-title: Tabelle der Einschränkungen von | Microsoft-Dokumentation
+title: Einschränkungen für Tabellennamen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939774"
 ---
 # <a name="table-name-limitations"></a>Einschränkungen für Tabellennamen
-Tabellennamen können keine gültigen Zeichen (z. B. Leerzeichen) enthalten. Wenn Tabellennamen alle Zeichen mit Ausnahme von Buchstaben, Zahlen und Unterstriche enthalten, muss der Namen getrennt werden, indem Sie es in Back Anführungszeichen (') einschließen.  
+Tabellennamen können beliebige gültige Zeichen (z. b. Leerzeichen) enthalten. Wenn Tabellennamen Zeichen enthalten, ausgenommen Buchstaben, Ziffern und Unterstriche, muss der Name begrenzt werden, indem er in backanführungs Zeichen (') eingeschlossen wird.  
   
- Wenn Microsoft Excel-Treibers verwendet wird, und ein Tabellenname wird durch eine datenbankverbindung ein Datenbankverweis nicht qualifiziert, wird die Standarddatenbank impliziert. Wenn Sie ein Namen in Microsoft Excel enthält das "!" Zeichen ist, wird es automatisch eine Übersetzung in das Zeichen "$" stattdessen.  
+ Wenn der Microsoft Excel-Treiber verwendet wird und ein Tabellenname nicht durch einen Daten Bank Verweis qualifiziert ist, wird die Standarddatenbank impliziert. Wenn ein Name in Microsoft Excel das Zeichen "!" enthält, wird er stattdessen automatisch in das Zeichen "$" übersetzt.  
   
- Der Name der Microsoft Excel-Tabelle, die verweist \<Filename > wird für Microsoft Excel, 3.0 und 4.0-Dateien unterstützt. Der Name der Microsoft Excel-Tabelle, die verweist \<Arbeitsmappe-Name > wird für Microsoft Excel 5.0, 7.0 oder 97-Dateien unterstützt.  
+ Der Microsoft Excel-Tabellenname, \<der auf filename verweist> wird für Microsoft Excel 3,0-und 4,0-Dateien unterstützt. Der Microsoft Excel-Tabellenname, \<der auf Arbeitsmappenname> verweist, wird für Microsoft Excel 5,0-, 7,0-oder 97-Dateien unterstützt.  
   
- Wenn die dBASE-Treiber verwendet wird, werden Zeichen mit ASCII-Wert größer als 127 zu unterstrichen konvertiert.  
+ Wenn der dBase-Treiber verwendet wird, werden Zeichen mit einem ASCII-Wert größer als 127 in Unterstriche konvertiert.  
   
- Wenn die Microsoft Access-Treiber verwendet wird, ist der Tabellenname maximal 64 Zeichen umfassen.  
+ Wenn der Microsoft Access-Treiber verwendet wird, ist der Tabellenname auf 64 Zeichen beschränkt.  
   
- Wenn dBASE, Microsoft Excel 3.0 oder 4.0, Text oder Paradox-Treiber verwendet wird, sollte speziellen MS-DOS-Schlüsselwörter CON "," AUX "," LPT1 "und" LPT2 nicht als Tabellennamen verwendet werden.
+ Wenn die dBASE-, Microsoft Excel 3,0-oder 4,0-, Paradox-oder Text-Treiber verwendet werden, sollten die speziellen MS-DOS-Schlüsselwörter con, AUX, LPT1 und LPT2 nicht als Tabellennamen verwendet werden.

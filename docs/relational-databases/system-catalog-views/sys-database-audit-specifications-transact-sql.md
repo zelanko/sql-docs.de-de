@@ -1,5 +1,5 @@
 ---
-title: database_audit_specifications (Transact-SQL) | Microsoft-Dokumentation
+title: sys. database_audit_specifications (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/05/2016
 ms.prod: sql
@@ -20,35 +20,35 @@ ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67940209"
 ---
-# <a name="sysdatabaseauditspecifications-transact-sql"></a>database_audit_specifications (Transact-SQL)
+# <a name="sysdatabase_audit_specifications-transact-sql"></a>sys. database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|Name|**sysname**|Der Name der Überwachung-Spezifikation.|  
+|Name|**sysname**|Der Name der Überwachungs Spezifikation.|  
 |database_specification_id|**int**|Die ID der Datenbankspezifikation.|  
 |create_date|**datetime**|Datum, an dem die Überwachungsspezifikation erstellt wurde.|  
 |modified_date|**datetime**|Datum, an dem die Überwachungsspezifikation zuletzt geändert wurde.|  
-|is_state_enabled|**bit**|Überwachungsspezifikationsstatus:<br /><br /> 0 – DEAKTIVIERT<br /><br /> 1 - AKTIVIERT|  
+|is_state_enabled|**bit**|Überwachungsspezifikationsstatus:<br /><br /> 0-deaktiviert<br /><br /> 1-aktiviert|  
 |audit_GUID|**uniqueidentifer**|GUID für die Überwachung, die diese Spezifikation enthält. Wird während der Enumeration der Elementdatenbank-Überwachungsspezifikationen beim Anfügen/Starten der Datenbank verwendet.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn sich eine Datenbank im schreibgeschützten Modus befindet, kann die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit-Funktion keine Datenbank-Überwachungsspezifikationen hinzufügen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Prinzipale mit den **ALTER ANY DATABASE AUDIT** oder **SICHTDEFINITION** Berechtigungen, die Dbo-Rolle und Mitglieder der festen Datenbankrolle Db_owners haben Zugriff auf diese Katalogsicht. Darüber hinaus der Prinzipal nicht verweigert werden muss **SICHTDEFINITION** Berechtigung.  
+ Prinzipale mit den Berechtigungen **ALTER ANY DATABASE Audit** oder **View Definition** , der dbo-Rolle und Mitglieder der db_owners Fixed-Daten Bank Rolle haben Zugriff auf diese Katalog Sicht. Außerdem darf dem Prinzipal die **View Definition** -Berechtigung nicht verweigert werden.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. installiert haben. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

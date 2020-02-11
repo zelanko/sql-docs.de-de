@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889081"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
@@ -22,7 +22,7 @@ ms.locfileid: "68889081"
   
  Der Name der Miningstruktur ergibt sich, indem "_structure" an den Modellnamen angefügt wird. Dadurch ist sichergestellt, dass sich der Strukturname vom Modellnamen unterscheidet.  
   
- Verwenden Sie zum Erstellen eines Mining Modells für eine vorhandene Mining Struktur die [DMX&#41; - &#40;Anweisung ALTER MINING STRUCTURE](../dmx/alter-mining-structure-dmx.md) .  
+ Um ein Mining Modell für eine vorhandene Mining Struktur zu erstellen, verwenden Sie die Anweisung [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,11 +43,11 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *Spalten Definitionsliste*  
  Eine durch Trennzeichen getrennte Liste mit Spaltendefinitionen.  
   
- *algorithm*  
+ *projiziert*  
  Der Name eines Data Mining-Algorithmus, der vom aktuellen Anbieter definiert wurde.  
   
 > [!NOTE]  
->  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe des [DMSCHEMA_MINING_SERVICES-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
  Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
@@ -94,22 +94,22 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Spalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Datentypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Inhaltstypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Inhaltstypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Spaltenverteilungen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Spalten Verteilungen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Modellierungsflags &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
- Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Spalten Beziehung >-Klausel.  
+ Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Spalten Beziehung>-Klausel.  
   
- **VERKNÜPFT MIT**  
+ **verknüpft mit**  
  Diese Form kennzeichnet eine Wertehierarchie. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
   
  Mit einer Vorhersageklausel können Sie beschreiben, wie die Vorhersagespalte verwendet wird. In der folgenden Tabelle sind die beiden möglichen Klauseln beschrieben.  
   
-|\<Vorhersage >-Klausel|Beschreibung|  
+|\<Vorhersage>-Klausel|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |**PREDICT**|Diese Spalte kann vom Modell vorhergesagt werden, und sie kann in Eingabefällen bereitgestellt werden, um den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
 |**PREDICT_ONLY**|Diese Spalte kann vom Modell vorhergesagt werden, aber ihre Werte können in Eingabefällen nicht dazu verwendet werden, den Wert anderer vorhersagbarer Spalten vorherzusagen.|  
@@ -121,9 +121,9 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 [<parameter> = <value>, <parameter> = <value>,...]  
 ```  
   
- Eine Liste der Parameter, die den einzelnen Algorithmen zugeordnet sind, finden Sie unter [Data Mining &#40;-Algorithmen Analysis Services-&#41;Data Mining](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
+ Eine Liste der Parameter, die den einzelnen Algorithmen zugeordnet sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie ein Modell mit einem integrierten Testdataset erstellen möchten, sollten Sie die Anweisung CREATE MINING STRUCTURE gefolgt von ALTER MINING STRUCTURE verwenden. Jedoch unterstützen nicht alle Modelltypen ein zurückgehaltenes Dataset. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
  Eine exemplarische Vorgehensweise zum Erstellen eines Mining Modells mit der Anweisung "-Anweisung" finden Sie unter [Zeitreihen vorhersagbares DMX-Tutorial](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
@@ -171,10 +171,10 @@ USING Microsoft_Sequence_Clustering
 ```  
   
 ## <a name="time-series-example"></a>Beispiel für den Time Series-Algorithmus  
- Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Zeitreihenalgorithmus verwendet, um mit dem ARTxp-Algorithmus ein neues Miningmodell zu erstellen. ReportingDate ist die Schlüssel Spalte für die Zeitreihen und ModelRegion ist die Schlüssel Spalte für die Datenreihe. In diesem Beispiel wird davon ausgegangen, dass die Periodizität der Daten alle 12 Monate ist. Daher ist der *PERIODICITY_HINT* -Parameter auf 12 festgelegt.  
+ Im folgenden Beispiel wird der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Zeitreihenalgorithmus verwendet, um mit dem ARTxp-Algorithmus ein neues Miningmodell zu erstellen. ReportingDate ist die Schlüssel Spalte für die Zeitreihen und ModelRegion ist die Schlüssel Spalte für die Datenreihe. In diesem Beispiel wird davon ausgegangen, dass die Periodizität der Daten alle 12 Monate ist. Daher wird der *PERIODICITY_HINT* -Parameter auf 12 festgelegt.  
   
 > [!NOTE]  
->  Sie müssen den *PERIODICITY_HINT* -Parameter mithilfe von geschweifter Klammern angeben. Da der Wert eine Zeichenfolge ist, muss er außerdem in einfache Anführungszeichen eingeschlossen werden: "{\<numeric value >}".  
+>  Sie müssen den *PERIODICITY_HINT* -Parameter angeben, indem Sie Klammer Zeichen verwenden. Da der Wert eine Zeichenfolge ist, muss er außerdem in einfache Anführungszeichen eingeschlossen werden: "{\<numeric Value>}".  
   
 ```  
 CREATE MINING MODEL SalesForecast (  
@@ -186,9 +186,9 @@ CREATE MINING MODEL SalesForecast (
 USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP')  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

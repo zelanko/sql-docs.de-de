@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften von Miningmodellen | Microsoft-Dokumentation
+title: Mining Modell Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 030ebd318b310b2c7ca4f85d1f736d168a7adda8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083513"
 ---
 # <a name="mining-model-properties"></a>Miningmodelleigenschaften
@@ -39,9 +39,9 @@ ms.locfileid: "66083513"
 ## <a name="properties-of-models"></a>Eigenschaften von Modellen  
  In der folgenden Tabelle werden die Eigenschaften, die für Miningmodelle spezifisch sind, beschrieben. Darüber hinaus gibt es Eigenschaften, die Sie im Mining in einzelnen Spalten festlegen können.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**Algorithmus**|Legt den Algorithmustyp für das Miningmodell fest.|  
+|**Projiziert**|Legt den Algorithmustyp für das Miningmodell fest.|  
 |**AlgorithmParameters**|Legt Werte für die zu jedem Algorithmustyp verfügbaren Algorithmusparameter fest.|  
 |**Filter**|Legt einen Filter fest, der auf die Daten angewendet wird, die zum Trainieren und Testen des Miningmodells verwendet werden. Die Filterdefinition wird mit dem Modell gespeichert und kann optional verwendet werden, wenn Sie Vorhersageabfragen erstellen oder die Genauigkeit des Modells testen.<br /><br /> Beim Trainieren des Modells ist der Modellfilter nicht optional.|  
 |**Name**|Legt den Namen des Miningmodells fest.|  
@@ -50,7 +50,7 @@ ms.locfileid: "66083513"
 ## <a name="properties-of-model-columns"></a>Eigenschaften der Modellspalte  
  Sie können die folgenden für Data Mining spezifischen Eigenschaften für jede Spalte in einem Miningmodell festlegen. Diese Eigenschaften können für jedes Miningmodell in einer Miningstruktur auf einen unterschiedlichen Wert festgelegt werden.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**Beschreibung**|Beschreibt den Zweck der Miningspalte.|  
 |**Name**|Legt den Namen der Miningmodellspalte fest. Sie können einen neuen Namen eingeben, um einen Alias für die Miningmodellspalte anzugeben.|  
@@ -58,13 +58,13 @@ ms.locfileid: "66083513"
 |**SourceColumnID**|Gibt den Namen der Miningstrukturspalte an, auf der die Modellspalte basiert.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Verwendung**|Legt fest, wie die Spalte vom Miningmodell verwendet wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodellspalten](mining-model-columns.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)   
- [Ändern der Eigenschaften eines Miningmodells](change-the-properties-of-a-mining-model.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Spalten](mining-model-columns.md)   
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Mining Modell Tasks und Anleitungen](mining-model-tasks-and-how-tos.md)   
+ [Ändern der Eigenschaften eines Mining Modells](change-the-properties-of-a-mining-model.md)   
  [Data Mining-Tools](data-mining-tools.md)   
- [Erstellen einer relationalen Miningstruktur](create-a-relational-mining-structure.md)   
+ [Erstellen einer relationalen Mining Struktur](create-a-relational-mining-structure.md)   
  [Erstellen eines Alias für eine Modellspalte](create-an-alias-for-a-model-column.md)  
   
   

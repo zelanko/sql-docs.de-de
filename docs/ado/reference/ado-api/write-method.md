@@ -17,14 +17,14 @@ ms.assetid: 02982e6a-ac5f-4af2-b82e-ce12534b84b2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84e10e8edb6cca3c4e56ac1dd0106b3c641af872
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945907"
 ---
 # <a name="write-method"></a>Write-Methode
-Schreibt binäre Daten in einem [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
+Schreibt Binärdaten in ein Daten [Strom](../../../ado/reference/ado-api/stream-object-ado.md) Objekt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,20 +35,20 @@ Stream.Write Buffer
   
 #### <a name="parameters"></a>Parameter  
  *Buffer*  
- Ein **Variant** , die ein Array von zu schreibenden Bytes enthält.  
+ Ein **Variant** -Wert, der ein Array von zu schreibenden Bytes enthält.  
   
-## <a name="remarks"></a>Hinweise  
- In die angegebenen Bytes geschrieben werden die **Stream** -Objekts ohne Leerzeichen zwischen den einzelnen Bytes.  
+## <a name="remarks"></a>Bemerkungen  
+ Die angegebenen Bytes werden in das **Stream** -Objekt geschrieben, ohne dass zwischen den einzelnen Bytes dazwischen liegende Leerzeichen stehen.  
   
- Die aktuelle [Position](../../../ado/reference/ado-api/position-property-ado.md) festgelegt ist, auf das Byte, die geschriebenen Daten folgt. Die **schreiben** -Methode werden die restlichen Daten in einem Datenstrom nicht abgeschnitten. Wenn diese Bytes abgeschnitten werden sollen, rufen Sie [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Die aktuelle [Position](../../../ado/reference/ado-api/position-property-ado.md) wird auf das Byte festgelegt, das den geschriebenen Daten folgt. Die **Write** -Methode schneidet den Rest der Daten in einem Stream nicht ab. Wenn Sie diese Bytes abschneiden möchten [, wenden Sie](../../../ado/reference/ado-api/seteos-method.md)sich an.  
   
- Wenn Sie nach der aktuellen [EOS](../../../ado/reference/ado-api/eos-property.md) Position der [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) von der **Stream** wird vergrößert werden, um neue Bytes, und **EOS** wird verschoben um die neue letzte Byte in den **Stream**.  
+ Wenn Sie über die aktuelle [EOS](../../../ado/reference/ado-api/eos-property.md) -Position hinaus schreiben, wird die [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) des **Streams** um alle neuen Bytes angehoben, und **EOS** wechselt zum neuen letzten Byte im **Stream**.  
   
 > [!NOTE]
->  Die **schreiben** Methode wird verwendet, mit binären Datenströmen ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeBinary**). Für Textstreams (**Typ** ist **AdTypeText**), verwenden Sie [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
+>  Die **Write** -Methode wird mit binären Datenströmen verwendet ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) : **adTypeBinary**). Verwenden Sie für Textstreams (**Typ** : **adtypetext**) " [Write Text](../../../ado/reference/ado-api/writetext-method.md)".  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [WriteText-Methode](../../../ado/reference/ado-api/writetext-method.md)

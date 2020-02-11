@@ -1,5 +1,5 @@
 ---
-title: Prozeduren Refresh-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Prozeduren Refresh Method example (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 499679bd-287b-487d-bdfb-3803abffec1c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b5201be26bfd9df41c9cb1d8908f59499520878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965377"
 ---
 # <a name="procedures-refresh-method-example-vb"></a>Refresh-Methode für Prozeduren – Beispiel (VB)
-Der folgende Code zeigt die Vorgehensweise beim Aktualisieren der [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md). Dies ist erforderlich, bevor Sie [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md) Objekte aus der **Katalog** zugegriffen werden kann.  
+Der folgende Code zeigt, wie die [Prozeduren](../../../ado/reference/adox-api/procedures-collection-adox.md) Auflistung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md)aktualisiert wird. Dies ist erforderlich, bevor auf [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md) Objekte aus dem **Katalog** zugegriffen werden kann.  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -54,7 +54,7 @@ End Sub
 ' EndProceduresRefreshVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedures-Auflistung (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Prozeduren (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

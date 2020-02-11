@@ -17,14 +17,14 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933375"
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
-Kopiert die angegebene Anzahl von Bytes oder Zeichen (je [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) in der [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in ein anderes **Stream** Objekt.  
+Kopiert die angegebene Anzahl von Zeichen oder bytes (abhängig vom [Typ](../../../ado/reference/ado-api/type-property-ado-stream.md)) im [Stream](../../../ado/reference/ado-api/stream-object-ado.md) in ein anderes **Streamobjekt** .  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,20 +35,20 @@ Stream.CopyTo DestStream, NumChars
   
 #### <a name="parameters"></a>Parameter  
  *DestStream*  
- Der Wert einer Objektvariable, die einen Verweis auf ein offenes enthält **Stream** Objekt. Die aktuelle **Stream** ist auf dem Zielserver kopiert **Stream** gemäß *DestStream*. Das Ziel **Stream** bereits geöffnet sein. Falls nicht, tritt ein Laufzeitfehler auf.  
+ Ein Objektvariablen Wert, der einen Verweis auf ein geöffnetes **Streamobjekt** enthält. Der aktuelle **Stream** wird in den **Zielstream** kopiert, der von *DestStream*angegeben wird. Der **Zielstream** muss bereits geöffnet sein. Wenn dies nicht der Fall ist, tritt ein Laufzeitfehler auf.  
   
 > [!NOTE]
->  Die *DestStream* Parameter möglicherweise keinen Proxy **Stream** Objekt, da dies für den Zugriff auf eine private Schnittstelle erfordert die **Stream** -Objekt, das kann nicht remote auf werden die -Client.  
+>  Der *DestStream* -Parameter ist möglicherweise kein Proxy des Daten **Strom** Objekts, da hierfür der Zugriff auf eine private Schnittstelle für das Daten **Strom** Objekt erforderlich ist, das nicht Remote an den Client übergeben werden kann.  
   
- *"NUMCHARS"*  
- Optional. Ein **Ganzzahl** Wert, der angibt, die Anzahl von Bytes oder Zeichen aus der aktuellen Position in der Quelle kopiert werden **Stream** an das Ziel **Stream**. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes, aus der aktuellen Position bis kopiert werden [EOS](../../../ado/reference/ado-api/eos-property.md).  
+ *NumChars*  
+ Optional. Ein **ganzzahliger** Wert, der die Anzahl der Bytes oder Zeichen angibt, die von der aktuellen Position im Quelldaten **Strom** in den **Zielstream**kopiert werden sollen. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes von der aktuellen Position in [EOS](../../../ado/reference/ado-api/eos-property.md)kopiert werden.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode kopiert die angegebene Anzahl von Zeichen oder Bytes, beginnend mit der aktuellen Position, die gemäß der [Position](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft. Wenn die angegebene Anzahl größer als die verfügbare Anzahl von Bytes bis **EOS**, und klicken Sie dann nur die Zeichen oder Bytes aus der aktuellen Position bis **EOS** beim Übertragungsvorgang kopiert werden. Wenn der Wert des *"NUMCHARS"* ist-1, oder weggelassen wird, werden alle Zeichen oder Bytes, beginnend mit der aktuellen Position kopiert.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Methode kopiert die angegebene Anzahl von Zeichen oder bytes, beginnend bei der aktuellen Position, die durch die [Positions](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft angegeben wird. Wenn die angegebene Anzahl größer als die verfügbare Anzahl von Bytes bis **EOS**ist, werden nur die Zeichen oder Bytes von der aktuellen Position zu **EOS** kopiert. Wenn der Wert von " *NumChars* "-1 ist oder weggelassen wird, werden alle Zeichen oder bytes, die von der aktuellen Position beginnen, kopiert.  
   
- Wenn vorhandene Zeichen oder Bytes in den Zielstream, werden alle Inhalte über den Zeitpunkt, an dem der Kopiervorgang endet, hinaus bleiben, und werden nicht abgeschnitten. **Position** das Byte, die unmittelbar nach das letzte Byte kopiert wird. Wenn diese Bytes abgeschnitten werden sollen, rufen Sie [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ Wenn sich im Zielstream vorhandene Zeichen oder Bytes befinden, bleiben alle Inhalte außerhalb des Punkts, an dem der Kopiervorgang endet, und werden nicht abgeschnitten. **Position** wird das Byte, das unmittelbar auf das letzte kopierte Byte folgt. Wenn Sie diese Bytes abschneiden möchten [, wenden Sie](../../../ado/reference/ado-api/seteos-method.md)sich an.  
   
- **CopyTo** sollte verwendet werden, um Daten in ein Ziel kopiert **Stream** des gleichen Typs wie die Quelle **Stream** (ihre **Typ** eigenschafteneinstellungen werden beide **AdTypeText** oder beides **AdTypeBinary**). Für den Text **Stream** Objekte aufweist, können Sie ändern die [Charset](../../../ado/reference/ado-api/charset-property-ado.md) Einstellung der Eigenschaft des Ziels **Stream** aus einem Zeichensatz in eine andere übersetzt. Darüber hinaus Text **Stream** Objekte können in das Binärformat erfolgreich kopiert werden **Stream** Objekte, sind aber binäre **Stream** Objekte können nicht kopiert werden, in Text **Stream**  Objekte.  
+ **CopyTo** sollte verwendet werden, um Daten in einen **Zielstream** desselben Typs wie den Quelldaten **Strom** zu kopieren (Ihre **typeigenschafts** Einstellungen lauten sowohl **adtypetext** als auch **adTypeBinary**). Bei **textstreamobjekten** können Sie die [CharSet](../../../ado/reference/ado-api/charset-property-ado.md) -Eigenschafts Einstellung des **zielstreams** so ändern, dass Sie von einem Zeichensatz in einen anderen übersetzt wird. Außerdem können **textstreamobjekte** erfolgreich in binäre **Streamobjekte** kopiert werden, aber binäre **Streamobjekte** können nicht in **textstreamobjekte** kopiert werden.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

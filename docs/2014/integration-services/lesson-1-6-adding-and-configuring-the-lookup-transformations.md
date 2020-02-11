@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen | Microsoft-Dokumentation'
+title: 'Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891548"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Schritt 6: Hinzufügen und Konfigurieren der Transformationen zum Suchen
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen
   Nach dem Konfigurieren der Flatfilequelle zum Extrahieren von Daten aus der Quelldatei besteht die nächste Aufgabe darin, die Suchtransformationen zu definieren, die zum Abrufen der Werte für **CurrencyKey** und **DateKey**erforderlich sind. Von einer Transformation zum Suchen wird eine Suche durchgeführt, indem Daten in der angegebenen Eingabespalte mit einer Spalte in einem referenzierten Dataset verknüpft werden. Bei dem Verweisdataset kann es sich um eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Anweisung handeln. In diesem Lernprogramm stellt die Transformation für Suche stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit der Datenbank her, die die Daten enthält, die als Quelle des Verweisdatasets dienen.  
   
 > [!NOTE]  
->  Sie können die Transformation für Suche auch so konfigurieren, dass sie eine Verbindung mit einem Cache herstellt, der das Verweisdataset enthält. Weitere Informationen finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
+>  Sie können die Transformation für Suche auch so konfigurieren, dass sie eine Verbindung mit einem Cache herstellt, der das Verweisdataset enthält. Weitere Informationen finden Sie unter [Transformation für Suche](data-flow/transformations/lookup-transformation.md).  
   
  Für dieses Lernprogramm fügen Sie die folgenden zwei Transformationskomponenten zum Suchen zu dem Paket hinzu und konfigurieren sie:  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62891548"
   
 ### <a name="to-add-and-configure-the-lookup-currency-key-transformation"></a>So fügen Sie die Lookup Currency Key-Transformation hinzu und konfigurieren sie  
   
-1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen Sie anschließend **Suche** auf die Entwurfsoberfläche der Registerkarte **Datenfluss** . Legen Sie „Suche“ direkt unterhalb der **Extract Sample Currency Data** -Quelle ab.  
+1.  Erweitern Sie in der **SSIS-Toolbox**die Option **Allgemein**, und ziehen **Sie dann Suche** auf die Entwurfs Oberfläche der Registerkarte **Datenfluss** . Platzieren Sie die Suche direkt unterhalb der **Extract Sample Currency Data** -Quelle.  
   
 2.  Klicken Sie auf die **Extract Sample Currency Data** -Flatfilequelle, und ziehen Sie den grünen Pfeil auf die neu hinzugefügte Transformation **Suche** , um die zwei Komponenten zu verbinden.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62891548"
   
 9. Klicken Sie mit der rechten Maustaste auf die Lookup Currency Key-Transformation, und klicken Sie auf **Eigenschaften**.  
   
-10. Überprüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)** und **DefaultCodePage** -Eigenschaftensatz auf **1252**.  
+10. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** und die **DefaultCodePage** -Eigenschaft auf **1252**festgelegt ist.  
   
 ### <a name="to-add-and-configure-the--lookup-datekey-transformation"></a>So fügen Sie die Lookup DateKey-Transformation hinzu und konfigurieren sie  
   
@@ -124,16 +124,16 @@ ms.locfileid: "62891548"
   
 9. Überprüfen Sie auf der Seite **Erweitert** die Optionen für die Zwischenspeicherung.  
   
-10. Klicken Sie auf **OK**, um zur Entwurfsoberfläche **Datenfluss** zurückzukehren.  
+10. Klicken Sie auf **OK** , um zur Entwurfsoberfläche **Datenfluss** zurückzukehren.  
   
 11. Klicken Sie mit der rechten Maustaste auf die Lookup Date Key-Transformation, und klicken Sie auf **Eigenschaften**.  
   
-12. Überprüfen Sie im Eigenschaftenfenster, ob die `LocaleID` -Eigenschaftensatz auf **Englisch (Vereinigte Staaten)** und **DefaultCodePage** -Eigenschaftensatz auf **1252**.  
+12. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** und die **DefaultCodePage** -Eigenschaft auf **1252**festgelegt ist.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Suchtransformation](data-flow/transformations/lookup-transformation.md)  
   
   

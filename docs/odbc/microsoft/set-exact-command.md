@@ -1,5 +1,5 @@
 ---
-title: Befehl SET EXACT | Microsoft-Dokumentation
+title: Exakten Befehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997725"
 ---
 # <a name="set-exact-command"></a>SET EXACT-Befehl
-Legt die Regeln zum Vergleichen von zwei Zeichenfolgen unterschiedlicher Länge.  
+Gibt die Regeln für den Vergleich von zwei Zeichen folgen mit unterschiedlichen Längen an.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,40 +30,40 @@ SET EXACT ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ON  
- Gibt an, dass Ausdrücke Zeichen für Zeichen, die Äquivalenz entsprechen müssen. Alle nachgestellten Leerzeichen in den Ausdrücken werden für den Vergleich ignoriert. Für den Vergleich wird der kürzere der beiden Ausdrücke auf der rechten Seite mit Leerzeichen, entsprechend der Länge des längeren Ausdrucks aufgefüllt.  
+ EIN  
+ Gibt an, dass Ausdrücke mit Zeichen übereinstimmen müssen, damit das Zeichen Äquivalent ist. Alle nachfolgenden Leerzeichen in den Ausdrücken werden für den Vergleich ignoriert. Für den Vergleich wird die kürzere der beiden Ausdrücke auf der rechten Seite mit Leerzeichen aufgefüllt, um die Länge des längeren Ausdrucks abzugleichen.  
   
  OFF  
- (Standard). Gibt an, um gleichwertig zu sein, Ausdrücke entsprechen müssen Zeichen für Zeichen, bis das Ende des Ausdrucks auf der rechten Seite erreicht ist.  
+ (Standard) Gibt an, dass Ausdrücke für ein entsprechendes Zeichen übereinstimmen müssen, bis das Ende des Ausdrucks auf der rechten Seite erreicht ist.  
   
-## <a name="remarks"></a>Hinweise  
- Die SET EXACT Einstellung hat keine Auswirkungen, wenn beide Zeichenfolgen die gleiche Länge aufweisen.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Einstellung exakte festlegen hat keine Auswirkung, wenn beide Zeichen folgen dieselbe Länge haben.  
   
-## <a name="string-comparisons"></a>Vergleich von Zeichenfolgen  
- Visual FoxPro verfügt über zwei relationale Operatoren, die auf Gleichheit zu testen.  
+## <a name="string-comparisons"></a>Zeichen folgen Vergleiche  
+ Visual FoxPro verfügt über zwei relationale Operatoren, die auf Gleichheit testen.  
   
- Die = Operator führt einen Vergleich zwischen zwei Werten desselben Typs. Dieser Operator wird zum Vergleichen von Zeichen, numerischen, Datums- und logischer Daten geeignet.  
+ Der Operator = führt einen Vergleich zwischen zwei Werten desselben Typs durch. Dieser Operator eignet sich zum Vergleichen von Zeichen-, numerischen, Datums-und logischen Daten.  
   
- Jedoch beim Vergleichen von Zeichenausdrücke, mit der =-Operator, die Ergebnisse möglicherweise nicht genau Ihren Erwartungen. Zeichenausdrücke verglichen werden Zeichen für Zeichen von links nach rechts, bis einer der Ausdrücke bis zum Ende des Ausdrucks auf der rechten Seite der nicht gleich dem anderem ist die = (SET EXACT OFF), Operator erreicht wird oder bis die Enden der beiden Ausdrücke sind erreicht (SET EXACT ON).  
+ Wenn Sie Zeichen Ausdrücke jedoch mit dem =-Operator vergleichen, entsprechen die Ergebnisse möglicherweise nicht genau Ihren Erwartungen. Zeichen Ausdrücke werden für ein Zeichen von links nach rechts verglichen, bis einer der Ausdrücke nicht gleich dem anderen Ausdruck ist, bis das Ende des Ausdrucks auf der rechten Seite des =-Operators erreicht (exakte Menge festgelegt) wird oder bis die Enden beider Ausdrücke erreicht (genau festlegen für).  
   
- Die ==-Operator kann verwendet werden, wenn ein exakter Vergleich mit Zeichendaten benötigt wird. Wenn zwei Zeichenausdrücken mit verglichen werden die == Operator, die Ausdrücke auf beiden Seiten der dem == Operator muss genau die gleichen Zeichen enthalten, einschließlich Leerzeichen als gleich betrachtet werden. Die SET EXACT Einstellung wird ignoriert, beim Vergleich von Zeichenfolgen mithilfe von ==.  
+ Der Operator = = kann verwendet werden, wenn ein genauer Vergleich der Zeichendaten erforderlich ist. Wenn zwei Zeichen Ausdrücke mit dem Operator = = verglichen werden, müssen die Ausdrücke auf beiden Seiten des = =-Operators genau die gleichen Zeichen (einschließlich Leerzeichen) enthalten, damit Sie als gleich betrachtet werden. Die Einstellung exakte festlegen wird ignoriert, wenn Zeichen folgen mithilfe von = = verglichen werden.  
   
- Die folgende Tabelle zeigt die Auswirkungen der Wahl des Operators und die Einstellung SET EXACT Vergleiche. (Der ein Unterstrich stellt ein Leerzeichen dar.)  
+ In der folgenden Tabelle wird gezeigt, wie sich die Auswahl des Operators und die Einstellung für die genaue Einstellung auf Vergleiche auswirken. (Ein Unterstrich stellt einen leeren Bereich dar.)  
   
-|Vergleich|= DIE GENAUE DEAKTIVIEREN|= DIE GENAUE AUF|== GENAUE ON oder OFF|  
+|Vergleich|= Exact aus|= genau am|= = Genau ein/aus|  
 |----------------|------------------|-----------------|--------------------------|  
-|"abc" = "abc"|Übereinstimmung|Übereinstimmung|Übereinstimmung|  
-|"ab" = "abc"|Keine Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"abc" = "ab"|Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"abc" = "ab_"|Keine Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"ab" = "ab_"|Keine Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|"ab_" = "ab"|Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|"" = "ab"|Keine Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"ab" = ""|Übereinstimmung|Keine Übereinstimmung|Keine Übereinstimmung|  
-|"__" = ""|Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|"" = "___"|Keine Übereinstimmung|Übereinstimmung|Keine Übereinstimmung|  
-|TRIM("___") = ""|Übereinstimmung|Übereinstimmung|Übereinstimmung|  
-|"" TRIM("___") =|Übereinstimmung|Übereinstimmung|Übereinstimmung|  
+|"ABC" = "ABC"|Match|Match|Match|  
+|"ab" = "ABC"|Keine Entsprechung|Keine Entsprechung|Keine Entsprechung|  
+|"ABC" = "ab"|Match|Keine Entsprechung|Keine Entsprechung|  
+|"ABC" = "AB_"|Keine Entsprechung|Keine Entsprechung|Keine Entsprechung|  
+|"ab" = "AB_"|Keine Entsprechung|Match|Keine Entsprechung|  
+|"AB_" = "ab"|Match|Match|Keine Entsprechung|  
+|"" = "ab"|Keine Entsprechung|Keine Entsprechung|Keine Entsprechung|  
+|"ab" = ""|Match|Keine Entsprechung|Keine Entsprechung|  
+|"__" = ""|Match|Match|Keine Entsprechung|  
+|"" = "___"|Keine Entsprechung|Match|Keine Entsprechung|  
+|Trim ("___") = ""|Match|Match|Match|  
+|"" = Trim ("___")|Match|Match|Match|  
   
-## <a name="see-also"></a>Siehe auch  
- [Befehl SET ANSI](../../odbc/microsoft/set-ansi-command.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [SET ANSI-Befehl](../../odbc/microsoft/set-ansi-command.md)

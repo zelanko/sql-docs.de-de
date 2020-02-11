@@ -1,5 +1,5 @@
 ---
-title: Refresh from Database (OracleToSQL) aktualisieren | Microsoft-Dokumentation
+title: Aktualisieren aus der Datenbank (oracletosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,45 +11,45 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266544"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Aktualisieren der Datenbank (OracleToSQL)
-Die **Refresh from Database aktualisieren** Dialogfeld können Sie auswählen, welche Objekte aus der Oracle-Datenbank zu aktualisieren. Zeilen in das Dialogfeld sind farbcodiert, abhängig vom Status der Metadaten:  
+Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der Oracle-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  
   
--   Wenn die Metadaten des Objekts lokal und in der Oracle-Datenbank geändert hat, ist die Zeile blau.  
+-   Wenn die Objekt Metadaten lokal und in der Oracle-Datenbank geändert wurden, ist die Zeile blau.  
   
--   Wenn die Metadaten des Objekts in der Oracle-Datenbank aber nicht in SSMA geändert hat, ist die Zeile gelb.  
+-   Wenn sich die Objekt Metadaten in der Oracle-Datenbank, aber nicht in SSMA geändert haben, wird die Zeile gelb angezeigt.  
   
--   Wenn die Metadaten des Objekts wurde lokal geändert, aber nicht in der Oracle-Datenbank, die Zeile grün ist.  
+-   Wenn sich die Objekt Metadaten lokal geändert haben, aber nicht in der Oracle-Datenbank, ist die Zeile grün.  
   
--   Wenn das Objekt in der Oracle-Datenbank neu ist, ist die Zeile rosa.  
+-   Wenn das Objekt in der Oracle-Datenbank neu ist, ist die Zeile Rosa.  
   
-Sie können angeben, Einstellungen für die Aktualisierung von Standard-Objekt in der **Projekteinstellungen** Dialogfeld. Weitere Informationen finden Sie unter [Projekteinstellungen&#40;Synchronisierung&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
+Sie können im Dialogfeld **Projekteinstellungen** die Standardeinstellungen für die Objekt Aktualisierung angeben. Weitere Informationen finden Sie unter [Project Settings&#40;Synchronisierung&#41; &#40;oracleto SQL&#41;](../../ssma/oracle/project-settings-synchronization-oracletosql.md).  
   
-Für den Zugriff auf die **Refresh from Database aktualisieren** mit der rechten Maustaste ein Objekt in der Oracle-Metadaten-Explorer, und klicken Sie im Dialogfeld **Refresh from Database aktualisieren**.  
+Um auf das Dialogfeld **aus Datenbank aktualisieren** zuzugreifen, klicken Sie mit der rechten Maustaste auf ein Objekt im Oracle Metadata Explorer, und klicken Sie dann auf **aus Datenbank aktualisieren**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Reduzieren (-)**  
-Alle Objektgruppen zum Ausblenden von einzelnen Objekten zu reduzieren.  
+Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.  
   
 **Erweitern (+)**  
 Erweitern Sie alle Objektgruppen, um einzelne Objekte anzuzeigen.  
   
-**Gleiche Objekte ein-/ausblenden**  
-Objekte aus der Liste wird ausgeblendet, wenn die Metadaten des Objekts in der Oracle-Datenbank und in SSMA ist.  
+**Gleichwertige Objekte ausblenden/anzeigen**  
+Blendet Objekte aus der Liste aus, wenn die Objekt Metadaten in der Oracle-Datenbank und in SSMA identisch sind.  
   
-**Refresh from Database (Pfeilschaltfläche) aktualisieren**  
-Verwenden Sie die Pfeiltaste klicken, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA aktualisiert werden sollen.  
+**Aktualisieren aus der Datenbank (Pfeil Schaltfläche)**  
+Verwenden Sie die Pfeil Schaltfläche, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA aktualisiert werden sollen.  
   
-**Aus Datenbank werden nicht aktualisiert werden (X-Schaltfläche)**  
-Verwenden Sie die X-Schaltfläche, um anzugeben, dass die Metadaten für die ausgewählten Objekte nicht soll, können Sie in der SSMA aktualisiert werden.  
+**Nicht aus Datenbank aktualisieren (X-Schaltfläche)**  
+Verwenden Sie die Schaltfläche X, um anzugeben, dass die Metadaten für die ausgewählten Objekte in SSMA nicht aktualisiert werden sollen.  
   
 **Legende**  
-Zeigt eine **Legende** Dialogfeld. Die Legende enthält die Zuordnung zwischen Zeilenfarben und Metadaten-Status.  
+Zeigt ein Dialogfeld für die **Legende** an. Die Legende enthält die Zuordnung zwischen Zeilen Farben und metadatenzuständen.  
   
-Zu den **Legende** im Dialogfeld auf der Basis von der **aus Datenbank aktualisieren** wählen Sie im Dialogfeld die **oben anzeigen** Kontrollkästchen.  
+Aktivieren Sie das Kontrollkästchen **am Anfang anzeigen** , um das Dialogfeld **Legende** oben im Dialogfeld **aus Datenbank aktualisieren** beizubehalten.  
   

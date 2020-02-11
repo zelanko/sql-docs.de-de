@@ -1,5 +1,5 @@
 ---
-title: Erstellen von Testfällen (SybaseToSQL) | Microsoft-Dokumentation
+title: Erstellen von Test Fällen (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,35 +12,35 @@ ms.assetid: b52dfd93-95af-4299-bc8f-83f2a7a6a518
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: b3f54a38ae995dd2c83fd36647393f81b802fde2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67948451"
 ---
 # <a name="creating-test-cases-sybasetosql"></a>Erstellen von Testfällen (SybaseToSQL)
-Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie die Testfälle erstellen, durch Auswählen von Objekten überprüft und getestet und die Test-Parameter angeben.  
+Verwenden Sie den Testfall-Assistenten, um einen Test zu erstellen. Mit diesem Assistenten können Sie Testfälle erstellen, indem Sie getestete und überprüfte Objekte auswählen und die Testparameter angeben.  
   
-## <a name="starting-the-test-case-wizard"></a>Starten des Assistenten für Testfall  
-Zum Starten der Testfall-Assistenten auf **Neuer Testfall...**  aus der **Tester** Menü.  
+## <a name="starting-the-test-case-wizard"></a>Der Testfall-Assistent wird gestartet.  
+Um den Testfall-Assistenten zu starten, klicken Sie im Menü **Tester** auf **neuer Testfall...** .  
   
-Beim Starten, sucht der Assistent Datenbank ssmatester2005db oder ssmatester2008db (je nach Projekttyp) auf dem Quellserver für die Sybase. Es ist die Tester Erweiterungsschema zum Speichern von zusätzlichen Objekte verwendet. Wenn der Assistent Testfall ssmatester2005db oder ssmatester2008db finden kann, wird ein Dialogfeld an, die zum Erstellen der Tester Erweiterung-Datenbank vorgeschlagen angezeigt. (Diesem Fall geschieht in der Regel während der ersten Ausführung der SSMA-Tester.)  
+Beim Start sucht der Assistent nach der Datenbank ssmatester2005db oder ssmatester2008db (abhängig vom Projekttyp) auf dem Sybase-Quell Server. Es ist das Test Erweiterungs Schema, das zum Speichern von Hilfsobjekten verwendet wird. Wenn der Testfall-Assistent ssmatester2005db oder ssmatester2008db nicht finden kann, wird ein Dialogfeld angezeigt, in dem die Erstellung der Tester-Erweiterungs Datenbank vorgeschlagen wird. (Diese Situation tritt in der Regel während der ersten Ausführen von SSMA Tester auf.)  
   
-Wenn das Dialogfeld angezeigt wird, klicken Sie auf **Ja** Tester Sybase-Datenbank auf dem Quellserver zu erstellen. Anschließend wird ein neues Dialogfeld angezeigt, Sie sollten ein oder mehrere Geräte auf dem neuen Tester-Datenbank hinzufügen. Klicken Sie auf **hinzufügen** zum Hinzufügen eines Geräts. In der **Zuordnung von Speicherplatz für Tester Datenbank** Dialogfeld Wählen Sie das Gerät, und geben Sie die Größe von Tester-Datenbank verwendet werden. Darüber hinaus können Sie das separate Gerät für Datenbankprotokolle festlegen. Beachten Sie, dass Sie Sybase-Berechtigungen zum Erstellen von Datenbanken.  
+Wenn das Dialogfeld angezeigt wird, klicken Sie auf **Ja** , um die Sybase-Tester-Datenbank auf dem Quell Server zu erstellen. Daraufhin wird ein neues Dialogfeld angezeigt, in dem Sie ein oder mehrere Geräte hinzufügen müssen, auf denen die neue Tester-Datenbank zu finden ist. Klicken Sie auf **Hinzufügen** , um ein Gerät hinzuzufügen. Wählen Sie im Dialogfeld **Speicherplatz für Tester Datenbank** das Gerät aus, und geben Sie die Größe der Tester-Datenbank an. Darüber hinaus können Sie das separate Gerät für Daten Bank Protokolle festlegen. Beachten Sie, dass Sie über Sybase-Berechtigungen zum Erstellen von Datenbanken verfügen müssen.  
   
-## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Übersicht über das Erstellen von Testfällen, die mithilfe des Assistenten  
-Das Verfahren zum Erstellen eines Testfalls besteht aus fünf Schritten:  
+## <a name="overview-of-creating-test-cases-using-the-wizard"></a>Übersicht über das Erstellen von Test Fällen mithilfe des Assistenten  
+Der Vorgang zum Erstellen eines Testfalls besteht aus fünf Schritten:  
   
-1.  [Initialisieren von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
+1.  [Initialisieren von Test Fällen &#40;Sybase-SQL-&#41;](../../ssma/sybase/initializing-test-cases-sybasetosql.md).  
   
-2.  [Auswählen und Konfigurieren von Objekten mit Test &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
+2.  [Auswählen und Konfigurieren von zu testenden Objekten &#40;sybaseto SQL-&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md).  
   
-3.  [Auswählen und Konfigurieren von betroffenen Objekten &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
+3.  Die [Auswahl und Konfiguration der betroffenen Objekte &#40;Sybase&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md).  
   
-4.  [Customizing Calls Order anpassen &#40;SybaseToSQL&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
+4.  Das [Anpassen von Aufruf Reihenfolge &#40;sybasedesql-&#41;](../../ssma/sybase/customizing-calls-order-sybasetosql.md).  
   
-5.  [Finishing Test Case Preparation beenden &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
+5.  [Fertigstellung der Test Fall Vorbereitung &#40;Sybase&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md).  
   
-## <a name="see-also"></a>Siehe auch  
-[Testen von migrierten Datenbankobjekten &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Testen von migrierten Datenbankobjekten &#40;sybaseto SQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

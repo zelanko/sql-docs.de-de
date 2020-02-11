@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
 ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68661281"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Beispiele für Ausdrücke (Berichts-Generator und SSRS)
@@ -25,23 +25,23 @@ Ausdrücke werden in Berichten häufig zum Steuern des Inhalts und der Darstellu
 
 In diesem Thema sind Beispiele für Ausdrücke enthalten, die in einem Bericht für allgemeine Aufgaben verwendet werden können.  
 
--   [Visual Basic-Funktionen](#VisualBasicFunctions) : Beispiele für Datum, Zeichenfolge, Konvertierung und bedingte [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen.  
+-   [Visual Basic Funktionen](#VisualBasicFunctions) Beispiele für Datums-, Zeichen folgen-, [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Konvertierungs-und bedingte Funktionen.  
 
--   [Berichtsfunktionen:](#ReportFunctions) Beispiele für Aggregate und andere integrierte Berichtsfunktionen  
+-   [Berichtsfunktionen](#ReportFunctions) Beispiele für Aggregate und andere integrierte Berichtsfunktionen.  
 
--   [Darstellung von Berichtsdaten](#AppearanceofReportData) : Beispiele zur Änderung der Darstellung eines Berichts.  
+-   Darstellung [von Berichtsdaten](#AppearanceofReportData) Beispiele für das Ändern des Erscheinungs Bilds eines Berichts.  
 
--   [Eigenschaften](#Properties) Beispiele zum Festlegen von Berichtselementeigenschaften, um Format oder Sichtbarkeit zu steuern.  
+-   [Eigenschaften](#Properties) Beispiele zum Festlegen von Berichts Element Eigenschaften, um Format oder Sichtbarkeit zu steuern.  
 
--   [Parameter](#Parameters) : Beispiele für die Verwendung von Parametern in einem Ausdruck.  
+-   [Parameter](#Parameters) Beispiele für die Verwendung von Parametern in einem Ausdruck.  
 
--   [Benutzerdefinierter Code](#CustomCode) : Beispiele für eingebetteten benutzerdefinierten Code.  
+-   [Benutzerdefinierter Code](#CustomCode) Beispiele für eingebetteten benutzerdefinierten Code.  
 
 Beispiele für Ausdrücke und die jeweiligen Verwendungsmöglichkeiten finden Sie in den folgenden Themen:  
 
--   [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](expression-examples-report-builder-and-ssrs.md)  
 
--   [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Filter Gleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
 
 -   [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)  
 
@@ -49,15 +49,15 @@ Beispiele für Ausdrücke und die jeweiligen Verwendungsmöglichkeiten finden Si
 
 Weitere Informationen zu einfachen und komplexen Ausdrücken, zu den Verwendungsmöglichkeiten von Ausdrücken sowie zu den Verweistypen, die Sie in einen Ausdruck einbinden können, finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md). Weitere Informationen zum Kontext, in dem Ausdrücke zum Berechnen von Aggregaten ausgewertet werden, finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
 
-Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Einführung in Ausdrücke](../tutorial-introducing-expressions.md).  
+Um das Schreiben von Ausdrücken zu erlernen, die viele der Funktionen und Operatoren verwenden, die auch in den beispielhaften Ausdrücken in diesem Thema zum Schreiben von Berichten verwendet werden, finden Sie weitere Informationen unter [Tutorial: Introducing Expressions](../tutorial-introducing-expressions.md).  
 
-Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie unter Dialogfeld ' [Ausdruck](../expression-dialog-box.md) ' oder ' [Ausdruck &#40;'&#41;Berichts-Generator](../expression-dialog-box-report-builder.md).  
+Der Ausdrucks-Editor schließt eine hierarchische Sicht der integrierten Funktionen mit ein. Wenn Sie die Funktion auswählen, wird im Wertebereich ein Codebeispiel angezeigt. Weitere Informationen finden Sie im Dialogfeld [Ausdruck](../expression-dialog-box.md) oder [Dialogfeld Ausdruck &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md).  
 
-## <a name="functions"></a>Funktionen  
+## <a name="functions"></a>Functions  
 
-Viele Ausdrücke in einem Bericht enthalten Funktionen. Mit diesen Funktionen können Sie Daten formatieren, Code anwenden und auf Berichtsmetadaten zugreifen. Sie können Ausdrücke schreiben, die Funktionen aus der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Laufzeitbibliothek sowie aus den Namespaces <xref:System.Convert> und <xref:System.Math> verwenden. Sie können Verweise auf Funktionen aus anderen Assemblys oder benutzerdefinierten Code hinzufügen. Sie können auch Klassen aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]verwenden, einschließlich <xref:System.Text.RegularExpressions>.  
+Viele Ausdrücke in einem Bericht enthalten Funktionen. Mit diesen Funktionen können Sie Daten formatieren, Code anwenden und auf Berichtsmetadaten zugreifen. Sie können Ausdrücke schreiben, die Funktionen aus der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Lauf Zeit Bibliothek und aus den <xref:System.Convert> -und- <xref:System.Math> Namespaces verwenden. Sie können Verweise auf Funktionen aus anderen Assemblys oder benutzerdefinierten Code hinzufügen. Sie können auch Klassen aus [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]verwenden, einschließlich <xref:System.Text.RegularExpressions>.  
 
-###  <a name="VisualBasicFunctions"></a> Visual Basic-Funktionen  
+###  <a name="VisualBasicFunctions"></a>Visual Basic Funktionen  
 Mit [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie die Daten bearbeiten, die in Textfeldern angezeigt oder für Parameter, Eigenschaften oder sonstige Bereiche des Berichts verwendet werden. In diesem Abschnitt werden Beispiele zur Veranschaulichung einiger dieser Funktionen bereitgestellt. Weitere Informationen finden Sie unter [Member der Visual Basic-Laufzeitbibliothek](https://go.microsoft.com/fwlink/?LinkId=198941) bei MSDN.  
 
 Der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] bietet zahlreiche benutzerdefinierte Formatoptionen, z. B. für bestimmte Datumsformate. Weitere Informationen finden Sie unter [Formatierung von Typen](https://go.microsoft.com/fwlink/?LinkId=112024) auf MSDN.  
@@ -76,7 +76,7 @@ Sie können auch einen Ausdruck schreiben, um einen Wert auf ein von Ihnen angeg
 = Round(1.3*5)/5  
 ```  
 
-####  <a name="DateFunctions"></a> Datumsfunktionen  
+####  <a name="DateFunctions"></a>Datumsfunktionen  
 
 -   Die `Today`-Funktion stellt das aktuelle Datum bereit. Mit diesem Ausdruck können Sie in einem Textfeld das Datum im Bericht anzeigen oder aber in einem Parameter Daten basierend auf dem aktuellen Datum filtern.  
 
@@ -90,7 +90,7 @@ Sie können auch einen Ausdruck schreiben, um einen Wert auf ein von Ihnen angeg
 =DateAdd(DateInterval.Month, 6, Parameters!StartDate.Value)  
 ```  
 
--   Die `Year`-Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Mit der `Month`-Funktion und anderen Funktionen können Datumsangaben auch bearbeitet werden. Weitere Informationen finden Sie unter den [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] Dokumentation.  
+-   Die `Year`-Funktion zeigt das Jahr für ein bestimmtes Datum an. Hiermit können Sie Datumsangaben zusammenfassen oder die Jahreszahl für eine Datumsgruppe anzeigen. Dieser Ausdruck liefert das Jahr für eine bestimmte Gruppe von Bestelldaten. Mit der `Month`-Funktion und anderen Funktionen können Datumsangaben auch bearbeitet werden. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
 
 ```  
 =Year(Fields!OrderDate.Value)  
@@ -118,7 +118,8 @@ Bei Verwendung als berechnetes Feld in einem Dataset können Sie diesen Ausdruck
 =FORMAT(Fields!SellStartDate.Value, "dd/MM/yyyy")  
 ```  
 
--   Die `CDate`-Funktion konvertiert den Wert in ein Datum. Die `Now`-Funktion gibt einen Datumswert zurück, der das aktuelle Datum und die aktuelle Uhrzeit des Systems enthält. `DateDiff` gibt einen Long-Wert zurück, der die Zahl der Zeitintervalle zwischen zwei Datumswerten angibt.  
+-   Die `CDate`-Funktion konvertiert den Wert in ein Datum. Die `Now`-Funktion gibt einen Datumswert zurück, der das aktuelle Datum und die aktuelle Uhrzeit des Systems enthält. 
+  `DateDiff` gibt einen Long-Wert zurück, der die Zahl der Zeitintervalle zwischen zwei Datumswerten angibt.  
 
 Im folgenden Beispiel wird das Anfangsdatum des aktuellen Jahres angezeigt.  
 
@@ -162,7 +163,7 @@ Im folgenden Beispiel wird das Anfangsdatum des aktuellen Jahres angezeigt.
 |Vor einem Jahr|`=DateSerial(Year(Parameters!TodaysDate.Value)-1,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 |Vor zwei Jahren|`=DateSerial(Year(Parameters!TodaysDate.Value)-2,Month(Parameters!TodaysDate.Value),Day(Parameters!TodaysDate.Value))`|  
 
-####  <a name="StringFunctions"></a> Zeichenfolgenfunktionen  
+####  <a name="StringFunctions"></a>Zeichen folgen Funktionen  
 
 -   Mithilfe von Verkettungsoperatoren und [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Konstanten können Sie mehrere Felder kombinieren. Der folgende Ausdruck gibt zwei Felder zurück, die sich jeweils in einer eigenen Zeile in demselben Textfeld befinden.  
 
@@ -176,15 +177,15 @@ Im folgenden Beispiel wird das Anfangsdatum des aktuellen Jahres angezeigt.
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Wenn das Textfeld nur ein Datum oder eine Zahl enthält, sollten Sie die Format-Eigenschaft des Textfelds verwenden, um anstelle `Format` der Funktion innerhalb des Textfelds eine Formatierung anzuwenden.  
+Wenn das Textfeld nur ein Datum oder eine Zahl enthält, sollten Sie die Format-Eigenschaft des Textfelds verwenden, um anstelle der `Format` Funktion innerhalb des Textfelds eine Formatierung anzuwenden.  
 
--   Die `Right`Funktionen `Len`, und `InStr` sind nützlich, um eine Teil Zeichenfolge zurückzugeben, z. b. den *Domänen*\\*Benutzernamen* auf den Benutzernamen zu verkürzen. Der folgende Ausdruck gibt den Teil der Zeichenfolge rechts neben einem umgekehrten Schrägstrich (\\) des *User*-Parameters zurück:  
+-   Die `Right`Funktionen `Len`, und `InStr` sind nützlich, um eine Teil Zeichenfolge zurückzugeben, z. b. den *Domänen*\\*Benutzer* Namen auf den Benutzernamen zu verkürzen. Der folgende Ausdruck gibt den Teil der Zeichenfolge rechts neben einem umgekehrten Schrägstrich (\\) des *User*-Parameters zurück:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
 ```  
 
-Der folgende Ausdruck liefert dasselbe Ergebnis, wobei Elemente der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> -Klasse anstelle von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen verwendet werden:  
+Der folgende Ausdruck ergibt denselben Wert wie der vorherige, wobei Member der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.String> -Klasse anstelle von [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen verwendet werden:  
 
 ```  
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
@@ -203,7 +204,7 @@ Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt d
 
 ```  
 
--   Die `Regex` Funktionen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] vonsindnützlich,umdasFormatvorhandenerZeichenfolgenzuändern,z.b.dasFormatieren<xref:System.Text.RegularExpressions> einer Telefonnummer. Der folgende Ausdruck verwendet die `Replace` -Funktion, um das Format einer zehnstelligen Telefonnummer in ein Feld von "*nnn*-*nnn*-*nnnn*" in "(*nnn*) *nnn* - " zu ändern. *nnnn*":  
+-   Die `Regex` Funktionen von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sind nützlich, um das Format vorhandener Zeichen folgen zu ändern, z. b. das Formatieren einer Telefonnummer. Der folgende Ausdruck verwendet die `Replace` -Funktion, um das Format einer zehnstelligen Telefonnummer in ein Feld von "*nnn*-*nnn*-*nnnn*" in "(*nnn*) *nnn*-*nnnn*" zu ändern:  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -212,7 +213,7 @@ Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt d
 > [!NOTE]  
 >  Überprüfen Sie, ob der Wert für Fields!Phone.Value unter Umständen zusätzliche Leerzeichen enthält und vom Typ <xref:System.String>.  
 
-#### <a name="lookup"></a>Suche  
+#### <a name="lookup"></a>Nachschlagen  
 
 -   Durch Angabe eines Schlüsselfelds können Sie mit der `Lookup`-Funktion einen Wert von einem Dataset für eine 1:1-Beziehung, zum Beispiel ein Schlüssel-Wert-Paar, abrufen. Der folgende Ausdruck zeigt den Produktnamen aus einem Dataset („Product“) an, wenn der Produktbezeichner als Grundlage für die Übereinstimmung angegeben ist:  
 
@@ -222,13 +223,14 @@ Das folgende Beispiel hat die gleiche Funktion wie das Beispiel oben und zeigt d
 
 #### <a name="lookupset"></a>LookupSet  
 
--   Indem Sie ein Schlüsselfeld angeben, können Sie mithilfe der `LookupSet`-Funktion einen Satz von Werten für eine 1:n-Beziehung aus einem Dataset abrufen. Beispiel: Eine Person kann mehrere Telefonnummern haben. Nehmen Sie im folgenden Beispiel an, dass das Dataset PhoneList in jeder Zeile einen Personenbezeichner und eine Telefonnummer enthält. `LookupSet` gibt ein Array von Werten zurück. Der folgende Ausdruck kombiniert die Rückgabewerte in eine einzelne Zeichenfolge und zeigt die Liste der Telefonnummern für die mit "ContactID" angegebene Person an:  
+-   Indem Sie ein Schlüsselfeld angeben, können Sie mithilfe der `LookupSet`-Funktion einen Satz von Werten für eine 1:n-Beziehung aus einem Dataset abrufen. Beispiel: Eine Person kann mehrere Telefonnummern haben. Nehmen Sie im folgenden Beispiel an, dass das Dataset PhoneList in jeder Zeile einen Personenbezeichner und eine Telefonnummer enthält. 
+  `LookupSet` gibt ein Array von Werten zurück. Der folgende Ausdruck kombiniert die Rückgabewerte in eine einzelne Zeichenfolge und zeigt die Liste der Telefonnummern für die mit "ContactID" angegebene Person an:  
 
 ```  
 =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  
 ```  
 
-####  <a name="ConversionFunctions"></a> Konvertierungsfunktionen  
+####  <a name="ConversionFunctions"></a>Konvertierungs Funktionen  
 Mithilfe der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können Sie einen Wert von einem Datentyp in einen anderen Datentyp konvertieren. Konvertierungsfunktionen können zum Konvertieren des Standarddatentyps für ein Feld in einen Datentyp verwendet werden, der für Berechnungen oder zum Kombinieren von Text erforderlich ist.  
 
 -   Mit dem folgenden Ausdruck wird die Konstante 500 in den Typ "Decimal" konvertiert, um sie mit einem [!INCLUDE[tsql](../../includes/tsql-md.md)] money-Datentyp im Feld "Wert" für einen Filterausdruck zu vergleichen.  
@@ -243,7 +245,7 @@ Mithilfe der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Funktionen können
 =CStr(Parameters!MySelection.Count)  
 ```  
 
-####  <a name="DecisionFunctions"></a> Entscheidungsfunktionen  
+####  <a name="DecisionFunctions"></a>Entscheidungsfunktionen  
 
 -   Die `Iif`-Funktion gibt einen von zwei Werten zurück, und zwar abhängig davon, ob der Ausdruck mit TRUE ausgewertet wird. Im folgenden Ausdruck wird mit der `Iif`-Funktion der boolesche Wert `True` zurückgegeben, falls der Wert von `LineTotal` 100 überschreitet. Andernfalls wird `False` zurückgegeben:  
 
@@ -298,10 +300,10 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 
 ```  
 
-###  <a name="ReportFunctions"></a> Berichtsfunktionen:  
+###  <a name="ReportFunctions"></a>Berichtsfunktionen  
 In einem Ausdruck können Sie einen Verweis auf weitere Berichtsfunktionen hinzufügen, die Daten in einem Bericht bearbeiten. In diesem Abschnitt werden Beispiele für zwei dieser Funktionen behandelt. Weitere Informationen zu Berichtsfunktionen sowie Beispiele finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
 
-#####  <a name="Sum"></a> Sum  
+#####  <a name="Sum"></a>Pauschalen  
 
 -   Die `Sum`-Funktion gibt die Summe von Werten in einer Gruppe oder einem Datenbereich zurück. Diese Funktion ist hilfreich für die Kopf- oder Fußzeile einer Gruppe. Der folgende Ausdruck zeigt die Summe von Daten in der Gruppe bzw. im Datenbereich Order an:  
 
@@ -315,7 +317,7 @@ In einem Ausdruck können Sie einen Verweis auf weitere Berichtsfunktionen hinzu
 =Sum(IIF(Fields!State.Value = "Finished", 1, 0))  
 ```  
 
-#####  <a name="RowNumber"></a> RowNumber  
+#####  <a name="RowNumber"></a>RowNumber  
 
 -   Mit der `RowNumber`-Funktion, die in einem Textfeld innerhalb eines Datenbereichs verwendet wird, wird die Zeilennummer für jede Instanz des Textfelds angezeigt, in der der Ausdruck enthalten ist. Diese Funktion eignet sich, um Zeilen in einer Tabelle zu nummerieren. Sie ist auch bei komplizierteren Aufgaben hilfreich, z. B. beim Einfügen von Seitenumbrüchen auf der Grundlage der Zeilenanzahl. Weitere Informationen finden Sie weiter unten unter " [Seitenumbrüche](#PageBreaks) ".  
 
@@ -325,10 +327,10 @@ Der Bereich, den Sie für `RowNumber`-Steuerelemente angeben, wenn die Neunumeri
 =RowNumber(Nothing)  
 ```  
 
-##  <a name="AppearanceofReportData"></a> Darstellung von Berichtsdaten  
+##  <a name="AppearanceofReportData"></a>Darstellung von Berichtsdaten  
 Mit Ausdrücken können Sie die Darstellung von Daten in einem Bericht ändern. Beispielsweise können Sie die Werte von zwei Feldern in einem einzigen Textfeld anzeigen, Informationen zum Bericht anzeigen oder die Methode zum Einfügen von Seitenumbrüchen im Bericht ändern.  
 
-###  <a name="PageHeadersandFooters"></a> Seitenkopfzeilen und -fußzeilen  
+###  <a name="PageHeadersandFooters"></a>Seiten Kopfzeilen und-Fußzeilen  
 Beim Entwerfen eines Berichts soll möglicherweise der Name des Berichts und die Seitenzahl in der Fußzeile des Berichts angezeigt werden. Dazu können Sie die folgenden Ausdrücke verwenden:  
 
 -   Der folgende Ausdruck stellt den Namen des Berichts und die Zeit seiner Ausführung bereit. Er kann in einem Textfeld in der Fußzeile oder im Hauptteil des Berichts eingefügt werden. Die Zeit wird mit der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Formatzeichenfolge für ein kurzes Datum formatiert:  
@@ -368,7 +370,7 @@ Das folgende Beispiel beschreibt, wie die Summe einer Seite angezeigt wird. Bei 
 > [!NOTE]  
 >  In einem Seitenkopf oder -fuß kann pro Ausdruck nur auf ein einziges Berichtselement verwiesen werden. In Seitenkopf- und -fußausdrücken können Sie außerdem auf den Textfeldnamen, jedoch nicht auf den tatsächlichen Datenausdruck innerhalb des Textfelds verweisen.  
 
-###  <a name="PageBreaks"></a> Seitenumbrüche  
+###  <a name="PageBreaks"></a>Seitenumbrüche  
 In manchen Berichten möchten Sie möglicherweise einen Seitenumbruch am Ende einer bestimmten Anzahl von Zeilen einfügen, und zwar anstelle von bzw. zusätzlich zu Gruppen oder Berichtselementen. Erstellen Sie dazu eine Gruppe mit den gewünschten Gruppen- oder Detaildatensätzen, und fügen Sie der Gruppe einen Seitenumbruch hinzu. Fügen Sie anschließend einen Gruppenausdruck hinzu, um eine Gruppierung nach einer bestimmten Anzahl von Zeilen durchzuführen.  
 
 -   Der folgende Ausdruck weist im Gruppenausdruck einer Gruppe von jeweils 25 Zeilen eine Zahl zu. Wenn ein Seitenumbruch für die Gruppe definiert ist, ergibt sich aus diesem Ausdruck alle 25 Zeilen ein Seitenumbruch.  
@@ -385,10 +387,10 @@ Damit der Benutzer einen Wert für die Anzahl der Zeilen pro Seite festlegen kan
 
 Weitere Informationen zum Festlegen von Seitenumbrüchen für eine Gruppe finden Sie unter [Hinzufügen eines Seitenumbruchs &#40;Berichts-Generator und SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md).  
 
-##  <a name="Properties"></a> Eigenschaften  
+##  <a name="Properties"></a>Eigenschaften  
 Mit Ausdrücken werden nicht nur Daten in Textfeldern angezeigt. Sie können mit Ausdrücken auch festlegen, wie Eigenschaften auf Berichtselemente angewendet werden. Sie können Formatinformationen für ein Berichtselement ändern oder festlegen, ob es angezeigt wird.  
 
-###  <a name="Formatting"></a> Formatierung  
+###  <a name="Formatting"></a>Ert  
 
 -   Wenn der folgende Ausdruck in der Color-Eigenschaft eines Textfelds verwendet wird, wird die Farbe des Texts basierend auf dem Wert des Felds `Profit` geändert:  
 
@@ -418,7 +420,7 @@ Wenn Sie einen Ausdruck für einen angegebenen Bereich verwenden, müssen Sie m�
 ### <a name="chart-colors"></a>Diagrammfarben  
 Mit benutzerdefiniertem Code können Sie die Reihenfolge steuern, in der Datenpunktwerten Farben zugeordnet werden, um Farben für ein Formdiagramm anzugeben. Dies hilft bei der Verwendung konsistenter Farben für mehrere Diagramme mit gleichen Kategoriegruppen. Weitere Informationen finden Sie unter [Angeben von Farben, die für mehrere Formdiagramme konsistent sind &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md).  
 
-###  <a name="Visibility"></a> Sichtbarkeit  
+###  <a name="Visibility"></a>Transparenz  
 Berichtselemente können mithilfe der Sichtbarkeitseigenschaften ein- und ausgeblendet werden. In einem Datenbereich, wie z. B. einer Tabelle, können die Detailzeilen basierend auf dem Wert eines Ausdrucks anfänglich ausgeblendet werden.  
 
 -   Wenn der folgende Ausdruck für die ursprüngliche Sichtbarkeit von Detailzeilen in einer Gruppe verwendet wird, werden die Detailzeilen für alle Umsätze angezeigt, die im `PctQuota` -Feld den Wert 90 % übersteigen:  
@@ -439,7 +441,7 @@ Berichtselemente können mithilfe der Sichtbarkeitseigenschaften ein- und ausgeb
 =IIF(Fields!Column_1.IsMissing, true, false)  
 ```  
 
-###  <a name="Hyperlinks"></a> URLs  
+###  <a name="Hyperlinks"></a>Del  
 Sie können URLs anpassen, indem Sie die Berichtsdaten verwenden und bedingt steuern, ob URLs als Aktion für ein Textfeld hinzugefügt werden.  
 
 -   Wenn der folgende Ausdruck als Aktion für ein Textfeld verwendet wird, wird eine angepasste URL generiert, die das Datasetfeld `EmployeeID` als URL-Parameter angibt.  
@@ -456,10 +458,10 @@ Weitere Informationen finden Sie unter [Hinzufügen eines Links zu einer URL (Be
 =IIF(Parameters!IncludeURLs.Value,"http://adventure-works.com/productcatalog",Nothing)  
 ```  
 
-##  <a name="ReportData"></a> Berichtsdaten  
+##  <a name="ReportData"></a>Berichtsdaten  
 Mit Ausdrücken können die im Bericht verwendeten Daten bearbeitet werden. Sie können auf Parameter und sonstige Berichtsinformationen verweisen. Es ist sogar möglich, die Abfrage zu ändern, mit der Daten für den Bericht abgerufen werden.  
 
-###  <a name="Parameters"></a> Parameter  
+###  <a name="Parameters"></a>Metern  
 Ausdrücke können in einem Parameter verwendet werden, um den Standardwert für den Parameter zu ändern. Beispielsweise können Sie mithilfe eines Parameters Daten nach einem bestimmten Benutzer basierend auf der Benutzer-ID filtern, mit der der Bericht ausgeführt wird.  
 
 -   Wenn der folgende Ausdruck als Standardwert für einen Parameter verwendet wird, wird die Benutzer-ID der Person abgerufen, die den Bericht ausführt:  
@@ -480,7 +482,7 @@ Ausdrücke können in einem Parameter verwendet werden, um den Standardwert für
 =Fields(Parameters!ParameterField.Value).Value  
 ```  
 
-## <a name="CustomCode"></a> Benutzerdefinierter Code
+## <a name="CustomCode"></a>Benutzerdefinierter Code
 
 In einem Bericht kann benutzerdefinierter Code verwendet werden. Benutzerdefinierter Code ist entweder in einen Bericht eingebettet oder in einer benutzerdefinierten Assembly gespeichert, die im Bericht verwendet wird. Weitere Informationen zu benutzerdefiniertem Code finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)](custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
 
@@ -524,10 +526,10 @@ Der folgende Ausdruck veranschaulicht, wie dieser benutzerdefinierte Code aus ei
 
 Dadurch wird die Ausführung von Laufzeitausnahmen vermieden. Sie können nun einen Ausdruck wie `=IIF(Me.Value < 0, "red", "black")` in der `Color`-Eigenschaft des Textfelds verwenden, um den Text unter Bedingungen anzuzeigen, nämlich abhängig davon, ob die Werte größer oder kleiner als 0 sind.  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
-- [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)
+- [Beispiele für Filter Gleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
+- [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](expression-examples-report-builder-and-ssrs.md)
 - [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)
 - [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)
 - [Häufig verwendete Filter &#40;Berichts-Generator und SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)

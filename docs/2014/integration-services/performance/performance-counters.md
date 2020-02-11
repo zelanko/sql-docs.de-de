@@ -17,13 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 79c9e433a6b5bcf9babee0060fdf028775e0e8a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62889835"
 ---
-# <a name="performance-counters"></a>Performance Counters
+# <a name="performance-counters"></a>Leistungsindikatoren
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert eine Reihe von Leistungsindikatoren, mit denen Sie die Leistung der Datenfluss-Engine überwachen können. Sie können beispielsweise den Indikator "Gespoolte Puffer" überwachen, um zu bestimmen, ob Datenpuffer vorübergehend auf den Datenträger geschrieben werden, während ein Paket ausgeführt wird. Diese Auslagerung reduziert die Leistung und weist darauf hin, dass der Computer nicht genügend Arbeitsspeicher hat.  
   
 > [!NOTE]  
@@ -31,7 +32,7 @@ ms.locfileid: "62889835"
   
  In der folgenden Tabelle sind diese Leistungsindikatoren beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |Gelesene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in allen Datenquellen gelesen hat.|  
 |Geschriebene BLOB-Bytes|Die Anzahl der Bytes der BLOB-Daten (Binary Large Object), die die Datenfluss-Engine in alle Ziele geschrieben hat.|  
@@ -71,13 +72,13 @@ select * from [catalog].[dm_execution_performance_counters] (NULL)
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Tool, [SSIS Performance Visualization für Business Intelligence Development Studio (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=146626) auf codeplex.com.  
+-   Tool, [SSIS Performance Visualization für Business Intelligence Development Studio (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=146626)auf codeplex.com.  
   
--   Video [Messen und Verstehen der Leistung der SSIS-Pakete in Enterprise (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=150497) auf msdn.microsoft.com.  
+-   Video [Messen und Verstehen der Leistung der SSIS-Pakete in Enterprise (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=150497)auf msdn.microsoft.com.  
   
 -   Supportartikel [Der SSIS-Leistungsindikator ist im Systemmonitor nicht mehr verfügbar, wenn Sie ein Upgrade auf Windows Server 2008 ausführen](https://go.microsoft.com/fwlink/?LinkId=235319)auf support.microsoft.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführung von Projekten und Paketen](../packages/run-integration-services-ssis-packages.md)  
   
   

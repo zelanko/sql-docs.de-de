@@ -1,5 +1,5 @@
 ---
-title: Importieren Sie ein Integration Services-Projekt | Microsoft-Dokumentation
+title: Importieren eines Integration Services Projekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac28a67051299b0dbdfc7010d9abe20d0d2d2493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058164"
 ---
 # <a name="import-an-integration-services-project"></a>Importieren eines Integration Services-Projekts
@@ -22,9 +22,9 @@ ms.locfileid: "66058164"
   
 ### <a name="to-import-a-project"></a>So importieren Sie ein Projekt  
   
-1.  Klicken Sie in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]im Menü **Datei** > **auf** Neu **Projekt** .  
+1.  Klicken [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]Sie in im Menü **Datei** auf **Neues** > **Projekt** .  
   
-2.  Erweitern Sie im Bereich **Installierte Vorlagen** des Fensters **Neues Projekt** **Business Intelligence**, und klicken Sie auf **Integration Services**.  
+2.  Erweitern Sie im Bereich **Installierte Vorlagen** des Fensters **Neues Projekt****Business Intelligence**, und klicken Sie auf **Integration Services**.  
   
 3.  Wählen Sie **Integration Services-Assistent zum Importieren von Projekten** aus der Liste der Projekttypen aus.  
   

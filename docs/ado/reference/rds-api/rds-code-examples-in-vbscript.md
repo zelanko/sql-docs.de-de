@@ -1,5 +1,5 @@
 ---
-title: RDS-Codebeispiele in VBScript | Microsoft-Dokumentation
+title: RDS-Code Beispiele in VBScript | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,65 +16,65 @@ ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 27ece72a3d9db6398dd8120941f95de2b8276b9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963794"
 ---
 # <a name="rds-code-examples-in-vbscript"></a>RDS-Codebeispiele in VBScript
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Verwenden Sie die folgenden Codebeispielen, erfahren Sie, wie die RDS-Objekte, Methoden und Eigenschaften verwenden, wenn in Microsoft Visual Basic Scripting Edition (VBScript) geschrieben.  
+ Verwenden Sie die folgenden Codebeispiele, um zu erfahren, wie Sie die RDS-Objekte,-Methoden und-Eigenschaften beim Schreiben in Microsoft Visual Basic Scripting Edition (VBScript) verwenden.  
   
 > [!NOTE]
->  Fügen Sie das gesamte Codebeispiel in Ihrem Code-Editor ein. Im Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn partielle Beispiele verwendet werden, oder wenn absatzformatierung verloren geht.  
+>  Fügen Sie das gesamte Codebeispiel in den Code-Editor ein. Das Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt, wenn Teil Beispiele verwendet werden oder wenn die Absatz Formatierung verloren geht.  
   
 ## <a name="objects"></a>Objekte  
   
--   [DataControl-Objekt-Beispiel](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
+-   [Beispiel für das DataControl-Objekt](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)  
   
--   [DataSpace-Objekt-Beispiel](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [Beispiel für das DataSpace-Objekt](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [Beispiel für DataFactory-Objekt](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [Beispiel für das DataFactory-Objekt](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
 ## <a name="methods"></a>Methoden  
   
--   [Cancel – Methodenbeispiel](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
+-   [Beispiel für eine Abbruch Methode](../../../ado/reference/rds-api/cancel-method-example-vbscript.md)  
   
--   [CancelUpdate-Methode – Beispiel](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
+-   [Beispiel für eine CancelUpdate-Methode](../../../ado/reference/rds-api/cancelupdate-method-example-vbscript.md)  
   
--   [ConvertToString-Methode – Beispiel](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
+-   [ConvertTo String-Methode (Beispiel)](../../../ado/reference/rds-api/converttostring-method-example-vbscript.md)  
   
--   [CreateObject-Methode](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
+-   [Methode "kreateobject"](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)  
   
--   [CreateRecordset-Methode – Beispiel](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
+-   [Beispiel für die Methode "kreaterecordset"](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)  
   
--   [Abfrage-Methode – Beispiel](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
+-   [Beispiel für eine Abfrage Methode](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)  
   
--   [Refresh – Methodenbeispiel](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
+-   [Beispiel für Aktualisierungs Methode](../../../ado/reference/rds-api/refresh-method-example-vbscript.md)  
   
--   [Reset-Methode – Beispiel](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Beispiel für Reset-Methode](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [SubmitChanges-Methode – Beispiel](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
+-   [SubmitChanges-Methode (Beispiel)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)  
   
 ## <a name="properties"></a>Eigenschaften  
   
--   [Connect-Eigenschaft – Beispiel](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
+-   [Beispiel für eine Verbindungs Eigenschaft](../../../ado/reference/rds-api/connect-property-example-vbscript.md)  
   
--   [ExecuteOptions und FetchOptions Eigenschaften – Beispiel](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
+-   [Beispiel für ExecuteOptions und FetchOptions-Eigenschaften](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)  
   
--   [FilterColumn, FilterCriterion, FilterValue, SortColumn und SortDirection-Eigenschaften-Beispiel](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
+-   [Filter Column, Filterkriterium, FilterValue, SortColumn und SortDirection-Eigenschaften (Beispiel)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)  
   
--   [ReadyState-Eigenschaft – Beispiel](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
+-   [Beispiel für eine Read-State-Eigenschaft](../../../ado/reference/rds-api/readystate-property-example-vbscript.md)  
   
--   [Recordset und Sourcerecordse-Eigenschaften-Beispiel](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
+-   [Beispiel für Recordset und SourceRecordset-Eigenschaften](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)  
   
--   [Server-Eigenschaft – Beispiel](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
+-   [Beispiel für eine Server Eigenschaft](../../../ado/reference/rds-api/server-property-example-vbscript.md)  
   
--   [SQL-Eigenschaft – Beispiel](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
+-   [SQL-Eigenschafts Beispiel](../../../ado/reference/rds-api/sql-property-example-vbscript.md)  
   
--   [URL-Eigenschaft – Beispiel](../../../ado/reference/rds-api/url-property-example-vbscript.md)
+-   [Beispiel für URL-Eigenschaft](../../../ado/reference/rds-api/url-property-example-vbscript.md)
 
 

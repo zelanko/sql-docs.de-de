@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68890470"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Ausgabe)
@@ -43,16 +43,16 @@ ms.locfileid: "68890470"
  **Neu**  
  Erstellt einen neuen Verbindungs-Manager. Sie können nur die ADO.NET- und OLE DB-Verbindungsmanagertypen verwenden.  
   
- **Ausgabetabelle**  
+ **Ausgabe Tabelle**  
  Geben Sie die Tabelle an, in die die Vorhersageabfrage ihre Ergebnisse schreiben soll.  
   
- **Ausgabetabelle löschen und erneut erstellen**  
+ **Ausgabe Tabelle löschen und neu erstellen**  
  Gibt an, ob die Vorhersageabfrage den Inhalt in der Zieltabelle überschreiben soll, indem die Tabelle gelöscht und anschließend erneut erstellt wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Editor für Data Mining-Abfragetasks &#40;Registerkarte Abfrage&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Data Mining-Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
+ [Editor für den Data Mining-Abfrage Task &#40;Registerkarte Mining Modell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Editor für Data Mining-Abfrage Tasks &#40;Abfrage Registerkarte&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

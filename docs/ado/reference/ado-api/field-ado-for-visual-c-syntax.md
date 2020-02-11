@@ -16,10 +16,10 @@ ms.assetid: 04631b08-3937-440b-ac09-cd166f239908
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f2d5b70e1c00b34c4f1a32822b7896b088d62376
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932771"
 ---
 # <a name="field-ado-for-visual-c-syntax"></a>Field (ADO für Visual C++-Syntax)
@@ -53,5 +53,5 @@ get_Value(VARIANT *pvar)
 put_Value(VARIANT Val)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)

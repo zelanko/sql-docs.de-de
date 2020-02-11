@@ -1,5 +1,5 @@
 ---
-title: Sp_dropmergepublication (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dropmergepublication (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 9e1cb96e-5889-4f97-88cd-f60cf313ce68
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b675b07466464f706b6503f3d017acd34822b2c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933905"
 ---
-# <a name="spdropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
+# <a name="sp_dropmergepublication-transact-sql"></a>sp_dropmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Löscht eine Mergeveröffentlichung und den zugehörigen Momentaufnahme-Agent. Vor dem Löschen einer Mergeveröffentlichung müssen alle Abonnements gelöscht werden. Die Artikel in der Veröffentlichung werden automatisch gelöscht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Löscht eine Mergeveröffentlichung und den zugehörigen Momentaufnahme-Agent. Vor dem Löschen einer Mergeveröffentlichung müssen alle Abonnements gelöscht werden. Die Artikel in der Veröffentlichung werden automatisch gelöscht. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,35 +40,35 @@ sp_dropmergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung zu löschen. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert. Wenn **alle**, alle vorhandenen mergeveröffentlichungen werden entfernt, und der Momentaufnahme-Agent-Auftrag zugeordnet werden. Wenn Sie einen bestimmten Wert für angeben *Veröffentlichung*, nur diese Veröffentlichung und die zugeordneten Momentaufnahme-Agent-Auftrag gelöscht werden.  
+`[ @publication = ] 'publication'`Der Name der zu löschenden Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Wenn **alle**vorhanden sind, werden alle vorhandenen Mergeveröffentlichungen und der ihr zugeordnete Momentaufnahmen-Agent Auftrag entfernt. Wenn Sie einen bestimmten Wert für die *Veröffentlichung*angeben, werden nur diese Veröffentlichung und der zugehörige Momentaufnahmen-Agent Auftrag gelöscht.  
   
-`[ @ignore_distributor = ] ignore_distributor` Verwendet, um eine Veröffentlichung zu löschen, ohne Cleanuptasks auf dem Verteiler. *Ignore_distributor* ist **Bit**, hat den Standardwert **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
+`[ @ignore_distributor = ] ignore_distributor`Wird verwendet, um eine Veröffentlichung zu löschen, ohne Cleanuptasks auf dem Verteiler auszuführen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Dieser Parameter wird auch bei der Neuinstallation des Verteilers verwendet.  
   
-`[ @reserved = ] reserved` ist für die zukünftige Verwendung reserviert. *reservierte* ist **Bit**, hat den Standardwert **0**.  
+`[ @reserved = ] reserved`Ist für die zukünftige Verwendung reserviert. *reserved* ist vom Typ **Bit**. der Standardwert ist **0**.  
   
-`[ @ignore_merge_metadata = ] ignore_merge_metadata` Nur interne Verwendung.  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata`Nur interne Verwendung.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_dropmergepublication** wird bei der Mergereplikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_dropmergepublication** wird bei der Mergereplikation verwendet.  
   
- **Sp_dropmergepublication** rekursiv löscht alle Artikel, die einer Veröffentlichung zugeordnet sind, und anschließend wird die Veröffentlichung selbst gelöscht. Solange für eine Veröffentlichung ein Abonnement vorhanden ist, kann sie nicht gelöscht werden. Weitere Informationen zum Entfernen von Abonnements finden Sie unter [Delete a Push Subscription](../../relational-databases/replication/delete-a-push-subscription.md) und [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
+ **sp_dropmergepublication** löscht alle Artikel, die einer Veröffentlichung zugeordnet sind, rekursiv und löscht dann die Veröffentlichung selbst. Solange für eine Veröffentlichung ein Abonnement vorhanden ist, kann sie nicht gelöscht werden. Weitere Informationen zum Entfernen von Abonnements finden Sie unter [Löschen eines Pushabonnements](../../relational-databases/replication/delete-a-push-subscription.md) und [Löschen eines](../../relational-databases/replication/delete-a-pull-subscription.md)Pullabonnements.  
   
- Ausführen von **Sp_dropmergepublication** zum Löschen einer Veröffentlichung entfernt nicht veröffentlichten Objekte aus der Veröffentlichungsdatenbank oder der entsprechenden Objekte aus der Abonnementdatenbank. Verwenden Sie DROP \<Objekt > um diese Objekte manuell ggf. entfernen.  
+ Durch das Ausführen **sp_dropmergepublication** zum Löschen einer Veröffentlichung werden veröffentlichte Objekte nicht aus der Veröffentlichungs Datenbank oder den entsprechenden Objekten aus der Abonnement Datenbank entfernt. Verwenden Sie \<Drop Object>, um diese Objekte bei Bedarf manuell zu entfernen.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_dropmergepublication](../../relational-databases/replication/codesnippet/tsql/sp-dropmergepublication-_1.sql)]  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder die **Db_owner** feste Datenbankrolle können ausführen **Sp_dropmergepublication**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_dropmergepublication**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Löschen einer Veröffentlichung](../../relational-databases/replication/publish/delete-a-publication.md)   
- [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

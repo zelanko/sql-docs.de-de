@@ -16,10 +16,10 @@ ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946579"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funktionen für numerische Werte – ceiling 
@@ -38,20 +38,20 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  Anzahl, auf die die Funktion angewendet wird.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Typ des *$arg* ist einer der drei numerischen Basistypen **xs: float**, **xs: double**, oder **xs: decimal**, der Rückgabetyp ist identisch mit die *$arg* Typ.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Typ *$arg* einer der drei numerischen Basis Typen ( **xs: float**, **xs: Double**oder **xs: Decimal**) ist, ist der Rückgabetyp identisch mit dem *$arg* Typ.  
   
- Wenn der Typ des *$arg* ist ein Typ, der von einem der numerischen Typen abgeleitet ist der Rückgabetyp ist der numerische Basistyp.  
+ Wenn der Typ *$arg* ein Typ ist, der von einem der numerischen Typen abgeleitet ist, ist der Rückgabetyp der numerische Basistyp.  
   
- Wenn die Eingabe für die Funktionen Fn: Floor, Fn: CEILING oder Fn: Round **xdt: UntypedAtomic**, es wird implizit umgewandelt in **xs: double**.  
+ Wenn die Eingabe für die FN: Floor-, FN: ceiling-oder fn: Round-Funktionen **xdt: untypedAtomic**ist, wird Sie implizit in **xs: Double**umgewandelt.  
   
  Alle anderen Typen führen zum Generieren eines statischen Fehlers.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-ceiling-xquery-function"></a>A. Verwenden der XQuery-Funktion ceiling()  
- Für Produktmodell 7 gibt die Abfrage eine Liste der Arbeitsplatzstandorte im Produktionsprozess des Produktmodells zurück. Für jeden einzelnen Arbeitsplatzstandort gibt die Abfrage die Standortkennung, die Arbeitsstunden sowie die Losgröße zurück, sofern diese dokumentiert ist. Die Abfrage verwendet die **Ceiling** Funktion, um die Arbeitsstunden als Werte des Typs zurückzugeben **decimal**.  
+ Für Produktmodell 7 gibt die Abfrage eine Liste der Arbeitsplatzstandorte im Produktionsprozess des Produktmodells zurück. Für jeden einzelnen Arbeitsplatzstandort gibt die Abfrage die Standortkennung, die Arbeitsstunden sowie die Losgröße zurück, sofern diese dokumentiert ist. Die Abfrage verwendet die **Ceiling** -Funktion, um die Arbeitsstunden als Werte des Typs " **Decimal**" zurückzugeben.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -73,13 +73,13 @@ WHERE ProductModelID=7
   
 -   Das AWMI-Namespacepräfix steht für Adventure Works Manufacturing Instructions. Dieses Präfix verweist auf denselben Namespace, der im abgefragten Dokument verwendet wird.  
   
--   **Anweisungen** ist ein **Xml** Type-Spalte. Aus diesem Grund die [Query()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) dient zum Angeben von XQuery. Die XQuery-Anweisung wird als Argument der query-Methode angegeben.  
+-   Die **Anweisungen** sind eine Spalte vom Typ **XML** . Daher wird die [Query ()-Methode (XML-Datentyp)](../t-sql/xml/query-method-xml-data-type.md) zum Angeben von XQuery verwendet. Die XQuery-Anweisung wird als Argument der query-Methode angegeben.  
   
--   **für... zurückgeben** ist eine Schleifenkonstruktion. In der Abfrage die **für** Schleife gibt eine Liste mit \<Speicherort > Elemente. Für jeden einzelnen arbeitsplatzstandort die **zurückgeben** -Anweisung in der **für** Schleife beschreibt den XML-Code generiert werden:  
+-   **für... Return** ist ein Schleifen Konstrukt. In der Abfrage identifiziert die **for** -Schleife eine Liste von \<Speicherort> Elementen. Für jeden Arbeitsplatz Standort beschreibt die **Return** -Anweisung in der **for** -Schleife den zu generierenden XML-Code:  
   
-    -   Ein \<Location >-Element mit LocationId- und ein LaborHrs-Attributen ist. Der entsprechende Ausdruck in den geschweiften Klammern ({ }) ruft die erforderlichen Werte aus dem Dokument ab.  
+    -   Ein \<Speicherort> Element mit den Attributen LocationID und laborstd. Der entsprechende Ausdruck in den geschweiften Klammern ({ }) ruft die erforderlichen Werte aus dem Dokument ab.  
   
-    -   Die {$i/@LotSize } Ausdruck ruft das LotSize-Attribut aus dem Dokument, ab, falls vorhanden.  
+    -   Der {$i/@LotSize }-Ausdruck ruft das LotSize-Attribut aus dem Dokument ab, falls vorhanden.  
   
     -   Dies ist das Ergebnis:  
   
@@ -97,10 +97,10 @@ ProductModelID Result
 ### <a name="implementation-limitations"></a>Implementierungseinschränkungen  
  Die folgenden Einschränkungen sind zu beachten:  
   
--   Die **ceiling()** -Funktion ordnet alle ganzzahligen Werte xs: Decimal.  
+-   Die **Ceiling ()** -Funktion ordnet alle ganzzahligen Werte xs: Decimal zu.  
   
-## <a name="see-also"></a>Siehe auch  
- [Floor-Funktion &#40;XQuery&#41;](../xquery/numeric-values-functions-floor.md)   
- [Round-Funktion &#40;XQuery&#41;](../xquery/numeric-values-functions-round.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Floor-Funktion &#40;XQuery-&#41;](../xquery/numeric-values-functions-floor.md)   
+ [Round-Funktion &#40;XQuery-&#41;](../xquery/numeric-values-functions-round.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Datensammler gespeicherte Prozeduren (Transact-SQL) | Microsoft-Dokumentation
+title: Gespeicherte Prozeduren für den Datensammler (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,16 +17,16 @@ ms.assetid: 9dd2824f-ea55-439b-8cd5-3a81fedb1432
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 522efa96e554a7b6eecb6e36c0771cbe95163a37
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67942401"
 ---
 # <a name="data-collector-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für den Datensammler (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL Server unterstützt die folgenden gespeicherten Systemprozeduren, die verwendet werden, um die Arbeit mit dem Datensammler und folgenden Komponenten: Sammlungssätze, auflistelemente und Auflistungstypen.  
+  SQL Server unterstützt die folgenden gespeicherten System Prozeduren, die für die Arbeit mit dem Datensammler und den folgenden Komponenten verwendet werden: Sammlungs Sätze, Sammel Elemente und Auflistungs Typen.  
   
 > [!IMPORTANT]  
 >  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter für die gespeicherten Prozeduren des Datensammlers genau eingegeben und unterstützen die automatische Datentypkonvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
@@ -66,7 +66,7 @@ ms.locfileid: "67942401"
   
 -   sp_syscollector_event_onstatsupdate  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

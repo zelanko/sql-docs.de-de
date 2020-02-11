@@ -17,21 +17,21 @@ ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67943760"
 ---
 # <a name="rowset-size"></a>Rowsetgröße
-Die Größe des Rowsets verwenden, hängt von der Anwendung ab. Bildschirmbasierte Anwendungen gehen häufig von zwei Strategien verfolgen. Die erste ist für die Rowsetgröße festzulegen, die Anzahl der Zeilen, die auf dem Bildschirm angezeigt. Wenn der Benutzer den Bildschirm angepasst wird, wird die Anwendung die Rowsetgröße entsprechend geändert. Die zweite besteht darin, die Rowsetgröße auf einen höheren Wert ein, z. B. 100 festzulegen, die reduziert die Anzahl der Aufrufe an die Datenquelle. Die Anwendung lokal innerhalb des Rowsets möglichst verschiebt und neue Zeilen abruft, nur, wenn es außerhalb des Rowsets verschiebt.  
+Welche Rowsetgröße verwendet werden soll, hängt von der Anwendung ab. Bildschirmbasierte Anwendungen folgen in der Regel einer der beiden Strategien. Der erste besteht darin, die Rowsetgröße auf die Anzahl der auf dem Bildschirm angezeigten Zeilen festzulegen. Wenn der Benutzer die Größe des Bildschirms ändert, ändert die Anwendung die Rowsetgröße entsprechend. Die zweite besteht darin, die Rowsetgröße auf eine größere Zahl, z. b. 100, festzulegen, wodurch die Anzahl der Aufrufe an die Datenquelle reduziert wird. Die Anwendung scrollt nach Möglichkeit lokal innerhalb des Rowsets und ruft neue Zeilen nur dann ab, wenn ein Bildlauf außerhalb des Rowsets durchgeführt wird.  
   
- Andere Anwendungen, z. B. Berichte, für die Größe des Rowsets der größten Anzahl von Zeilen festzulegen, die Anwendung relativ verarbeiten kann – meist mit einer größeren Zeilengruppe, manchmal im Netzwerk Aufwand pro Zeile reduziert ist. Genau wie groß ein Rowset sein kann, hängt von der Größe des jede Zeile und die Menge des verfügbaren Arbeitsspeichers ab.  
+ Andere Anwendungen, wie z. b. Berichte, legen tendenziell die Rowsetgröße auf die größte Anzahl von Zeilen fest, die von der Anwendung angemessen verarbeitet werden können. bei einem größeren Rowset wird der Netzwerk Aufwand pro Zeile manchmal reduziert. Wie groß ein Rowset sein kann, hängt von der Größe der einzelnen Zeilen und der Menge des verfügbaren Arbeitsspeichers ab.  
   
- Rowsetgröße wird durch einen Aufruf von **SQLSetStmtAttr** mit einer *Attribut* SQL_ATTR_ROW_ARRAY_SIZE Argument. Die Anwendung die Größe des Rowsets zu ändern, neue Rowset-Puffer zu binden können (durch Aufrufen von **SQLBindCol** oder das Angeben eines Bindung Offsets) auch nach Zeilen abgerufen wurden, oder beides. Welche Konsequenzen eine Änderung der Größe des Rowsets, abhängig von der Funktion:  
+ Die Rowsetgröße wird durch einen Aufrufen von **SQLSetStmtAttr** mit dem *Attribut* Argument SQL_ATTR_ROW_ARRAY_SIZE festgelegt. Die Anwendung kann die Rowsetgröße ändern, neue rowsetpuffer binden (durch Aufrufen von **SQLBindCol** oder durch Angeben eines Bindungs Offsets), auch nachdem Zeilen abgerufen wurden, oder beides. Die Auswirkungen der Änderung der Rowsetgröße hängen von der Funktion ab:  
   
--   **SQLFetch** und **SQLFetchScroll** die Rowsetgröße zum Zeitpunkt des Aufrufs zu verwenden, um zu bestimmen, wie viele Zeilen abgerufen werden. Allerdings **SQLFetchScroll** mit einem *FetchOrientation* der SQL_FETCH_NEXT inkrementiert der Cursor basierend auf das Rowset der vorhergehenden Abrufvorgang und klicken Sie dann Abrufvorgänge Rowset basierend auf der Größe des aktuellen Rowsets.  
+-   **SQLFetch** und **SQLFetchScroll** verwenden die Rowsetgröße zum Zeitpunkt des Aufrufs, um zu bestimmen, wie viele Zeilen abgerufen werden sollen. Allerdings erhöht **SQLFetchScroll** mit der *FetchOrientation* -SQL_FETCH_NEXT den Cursor basierend auf dem Rowset des vorherigen Abruf Vorgangs und ruft dann ein Rowset basierend auf der aktuellen Rowsetgröße ab.  
   
--   **SQLSetPos** verwendet die Rowsetgröße, die seit dem vorherigen Aufruf von gilt **SQLFetch** oder **SQLFetchScroll**, da **SQLSetPos** verarbeitet ein Rowset wurde bereits festgelegt. **SQLSetPos** auch übernimmt die neue Rowsetgröße Wenn **SQLBulkOperations** wurde aufgerufen, nachdem die Rowsetgröße geändert wurde.  
+-   **SQLSetPos** verwendet die Rowsetgröße, die ab dem vorhergehenden-Befehl von **SQLFetch** oder **SQLFetchScroll**wirksam ist, da **SQLSetPos** auf ein Rowset angewendet wird, das bereits festgelegt wurde. **SQLSetPos** übernimmt außerdem die neue Rowsetgröße, wenn **SQLBulkOperations** aufgerufen wurde, nachdem die Rowsetgröße geändert wurde.  
   
--   **SQLBulkOperations** wird verwendet, die Größe des Rowsets in Kraft zum Zeitpunkt des Aufrufs, da sie Vorgänge in einer Tabelle, die unabhängig des abgerufenen Rowsets ausführt.
+-   **SQLBulkOperations** verwendet die Rowsetgröße, die zum Zeitpunkt des Aufrufes verwendet wird, da Sie Vorgänge für eine Tabelle unabhängig von einem abgerufenen Rowset ausführt.

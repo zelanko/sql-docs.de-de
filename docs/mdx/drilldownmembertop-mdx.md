@@ -1,5 +1,5 @@
 ---
-title: DrilldownMemberTop (MDX) | Microsoft-Dokumentation
+title: Drilldownmembership Top (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1ebb3054ab25729ef5d75034dbee1d720f4dd928
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68031237"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop (MDX)
 
 
-  Führt einen Drilldown bei Elementen in einer angegebenen Menge aus, die in einer angegebenen zweiten Menge vorhanden sind, wobei das Resultset auf eine angegebene Anzahl von Elementen beschränkt wird. Sie können auch diese Funktion einen Drilldown für eine Menge von Tupeln mit der ersten tupelhierarchie oder der optional angegebenen Hierarchie.  
+  Führt einen Drilldown bei Elementen in einer angegebenen Menge aus, die in einer angegebenen zweiten Menge vorhanden sind, wobei das Resultset auf eine angegebene Anzahl von Elementen beschränkt wird. Alternativ führt diese Funktion einen Drilldown für eine Menge von Tupeln mithilfe der ersten tupelhierarchie oder der optional angegebenen Hierarchie aus.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,10 +34,10 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Set_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Count*  
+ *Countdown*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der Tupel angibt, die zurückgegeben werden sollen.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
  *Hierarchy*  
@@ -46,21 +46,21 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Rekursive*  
  Ein Schlüsselwort, das einen rekursiven Vergleich von Mengen angibt.  
   
- *Include_Calc_Members*  
+ *include_calc_members*  
  Ein Schlüsselwort, durch das berechnete Elemente in Drilldownergebnisse eingeschlossen werden können.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein numerischer Ausdruck angegeben wird, die **DrilldownMemberTop** sortiert in absteigender Reihenfolge der untergeordneten Elemente jedes Elements in der ersten Menge entsprechend dem Wert des numerischen Ausdrucks, ausgewertet über der Menge der untergeordneten Funktion Elemente. Wenn kein numerischer Wert angegeben wird, sortiert die Funktion die untergeordneten Elemente jedes Elements in der ersten Menge absteigend nach den Werten der durch die Menge der untergeordneten Elemente dargestellten Zellen, bestimmt durch den Abfragekontext. Dieses Verhalten ähnelt dem der TopCount-Funktion und der Head (MDX)-Funktion, die eine Menge untergeordneter Elemente in natürlicher Reihenfolge ohne Sortierung zurückgeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein numerischer Ausdruck angegeben wird, sortiert die **drilldownmembership Top** -Funktion die untergeordneten Elemente jedes Elements in der ersten Menge in absteigender Reihenfolge nach dem Wert des numerischen Ausdrucks, der über die Menge der untergeordneten Elemente ausgewertet wird. Wenn kein numerischer Wert angegeben wird, sortiert die Funktion die untergeordneten Elemente jedes Elements in der ersten Menge absteigend nach den Werten der durch die Menge der untergeordneten Elemente dargestellten Zellen, bestimmt durch den Abfragekontext. Dieses Verhalten ähnelt dem der TopCount-Funktion und der Head (MDX)-Funktion, die eine Menge untergeordneter Elemente in natürlicher Reihenfolge ohne Sortierung zurückgeben.  
   
- Nach dem Sortieren gibt die **DrilldownMemberTop** Funktionsergebnis ist eine Gruppe, die die übergeordneten Elemente und die Anzahl der untergeordneten Elemente im angegebenen enthält *Count* mit dem höchsten Wert, der in beiden Mengen enthaltenen .  
+ Nach dem Sortieren gibt die **drilldownmembership Top** -Funktion eine Menge zurück, die die übergeordneten Elemente und die in *count* angegebene Anzahl von untergeordneten Elementen mit dem höchsten Wert enthält und in beiden Sätzen enthalten ist.  
   
- Wenn **REKURSIVE** angegeben wird, sortiert die Funktion die erste Menge wie oben beschrieben, und vergleicht dann rekursiv die Elemente der ersten Menge, mit der zweiten Menge hierarchisch organisiert. Die Funktion ruft die Anzahl die oberste untergeordneten Elemente für jedes Element in der ersten Menge, die auch in der zweiten Menge vorhanden ist.  
+ Wenn **recursive** angegeben wird, sortiert die Funktion die erste Menge wie oben beschrieben und vergleicht dann rekursiv die Elemente der ersten Menge, wie Sie in einer Hierarchie angeordnet sind, mit der zweiten Menge. Die-Funktion Ruft die höchste Anzahl von untergeordneten Elementen für jedes Element in der ersten Menge ab, das auch in der zweiten Menge vorhanden ist.  
   
  Die erste Menge kann auch Tupel anstelle von Elementen enthalten. Der Drilldown für Tupel ist eine Erweiterung von OLE DB und gibt eine Menge von Tupeln anstelle von Elementen zurück.  
   
- Die **DrilldownMemberTop** Funktion ist vergleichbar mit der [DrilldownMember](../mdx/drilldownmember-mdx.md) Funktion, statt jedoch alle untergeordneten Elemente für jedes Element in der ersten Menge, der auch einschließlich vorhanden in der zweiten Menge und die **DrilldownMemberTop** Funktion gibt die Anzahl die oberste untergeordneten Elemente für jedes Element zurück.  
+ Die **drilldownmembership Top** -Funktion ähnelt der [DrilldownMember](../mdx/drilldownmember-mdx.md) -Funktion. statt jedoch alle untergeordneten Elemente für jedes Element in der ersten Menge einzuschließen, das auch in der zweiten Menge vorhanden ist, gibt die **drilldownmembership Top** -Funktion die höchste Anzahl der untergeordneten Elemente für jedes Element zurück.  
   
- Abfrage der XMLA-Eigenschaft MdpropMdxDrillFunctions können Sie das Maß an Unterstützung, die der Server die drillingfunktionen bereitgestellt; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) Details.  
+ Durch Abfragen der XMLA-Eigenschaft "mdpropmdxdrillfunctions" können Sie den Grad der Unterstützung überprüfen, den der Server für die Bohr Funktionen bereitstellt. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) .  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein Drilldown in die Bekleidungskategorie durchgeführt, damit die drei Unterkategorien von Bekleidung mit den meisten gelieferten Bestellungen zurückgegeben werden.  
@@ -78,7 +78,7 @@ WHERE [Measures].[Reseller Order Quantity]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   
