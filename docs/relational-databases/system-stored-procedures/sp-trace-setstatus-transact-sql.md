@@ -1,5 +1,5 @@
 ---
-title: Sp_trace_setstatus (Transact-SQL) | Microsoft-Dokumentation
+title: sp_trace_setstatus (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095934"
 ---
-# <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
+# <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert den aktuellen Status der angegebenen Ablaufverfolgung.  
@@ -32,7 +32,7 @@ ms.locfileid: "68095934"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen erweiterte Ereignisse.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @traceid = ] trace_id` Ist die ID der Ablaufverfolgung, die geändert werden. *Trace_id* ist **Int**, hat keinen Standardwert. Der Benutzer verwendet diesen *Trace_id* Wert zu identifizieren, ändern und Steuern der Ablaufverfolgung. Informationen zum Abrufen von der *Trace_id*, finden Sie unter [Sys. fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
+`[ @traceid = ] trace_id`Die ID der Ablauf Verfolgung, die geändert werden soll. *trace_id* ist vom Datentyp **int**und hat keinen Standardwert. Der Benutzer verwendet diesen *trace_id* Wert, um die Ablauf Verfolgung zu identifizieren, zu ändern und zu steuern. Weitere Informationen zum Abrufen des *trace_id*finden Sie unter [sys. fn_trace_getinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-`[ @status = ] status` Gibt die Aktion, die für die Ablaufverfolgung implementiert. *Status* ist **Int**, hat keinen Standardwert.  
+`[ @status = ] status`Gibt die Aktion an, die für die Ablauf Verfolgung implementiert werden soll. *Status* ist vom Datentyp **int**und hat keinen Standardwert.  
   
  In der folgenden Tabelle sind die Status aufgelistet, die möglicherweise angegeben werden.  
   
-|Status|Beschreibung|  
+|Status|BESCHREIBUNG|  
 |------------|-----------------|  
 |**0**|Beendet die angegebene Ablaufverfolgung.|  
 |**1**|Startet die angegebene Ablaufverfolgung.|  
@@ -60,17 +60,17 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|Beschreibung|  
+|Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**0**|Kein Fehler.|  
-|**1**|Unbekannter Fehler.|  
-|**8**|Der angegebene Status ist ungültig.|  
-|**9**|Das angegebene Ablaufverfolgungshandle ist ungültig.|  
-|**13**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
+|**1**|Unknown error. (Unbekannter Fehler.)|  
+|**88**|Der angegebene Status ist ungültig.|  
+|**21.00**|Das angegebene Ablauf Verfolgungs Handle ist ungültig.|  
+|**13,3**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
   
- Wenn die Ablaufverfolgung bereits im Zustand angegeben wird, ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurück **0**.  
+ Wenn die Ablauf Verfolgung bereits in dem angegebenen Zustand ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wird **0**zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Parameter aller gespeicherten Prozeduren der SQL-Ablaufverfolgung (**sp_trace_xx**) haben eine strikte Typbindung. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
  Ein Beispiel zum Verwenden gespeicherter Prozeduren der Ablaufverfolgung finden Sie unter [Erstellen einer Ablaufverfolgung &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
@@ -78,10 +78,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="permissions"></a>Berechtigungen  
  Benutzer müssen über die ALTER TRACE-Berechtigung verfügen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.fn_trace_geteventinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. fn_trace_geteventinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
  [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
+ [sp_trace_generateevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  

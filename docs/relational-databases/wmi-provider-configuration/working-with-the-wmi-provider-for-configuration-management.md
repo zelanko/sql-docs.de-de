@@ -20,10 +20,10 @@ ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: d76cc006e2f8638de9b6d3c21660806239022ec0
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73657374"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung
@@ -39,13 +39,13 @@ Dieser Artikel enthält Anleitungen zum Programmieren mit dem WMI-Anbieter für 
 
 Anwendungen leiten den WMI-Anbieter für die Konfigurationsverwaltung an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter, indem sie eine Verbindung zu einem vom Anbieter definierten WMI-Namespace herstellen. Der Windows WMI-Dienst ordnet diesen Namespace der Anbieter-DLL zu und lädt die dll in den Arbeitsspeicher. Alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mit einem einzigen WMI-Namespace dargestellt.
 
-Der Namespace weist standardmäßig das folgende Format auf. Im Format ist `VV` die Hauptversionsnummer von SQL Server. Die Zahl kann durch Ausführen von `SELECT @@VERSION;`erkannt werden.
+Der Namespace weist standardmäßig das folgende Format auf. Im Format `VV` ist die Hauptversionsnummer von SQL Server. Die Zahl kann durch Ausführen `SELECT @@VERSION;`von ermittelt werden.
 
 ```console
 \\.\root\Microsoft\SqlServer\ComputerManagementVV
 ```
 
-Wenn Sie mithilfe von PowerShell eine Verbindung herstellen, müssen die führenden `\\.\` entfernt werden. Der folgende PowerShell-Code listet z. b. alle WMI-Klassen für eine SQL Server 2016 auf, bei der es sich um die Hauptversion 13 handelt.
+Wenn Sie mithilfe von PowerShell eine Verbindung herstellen, `\\.\` muss die führende entfernt werden. Der folgende PowerShell-Code listet z. b. alle WMI-Klassen für eine SQL Server 2016 auf, bei der es sich um die Hauptversion 13 handelt.
 
 ```powershell
 Get-WmiObject -Namespace 'root\Microsoft\SqlServer\ComputerManagement13' -List
@@ -69,7 +69,7 @@ Sie können den folgenden PowerShell-Code verwenden, um alle verfügbaren WMI-Co
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **Hinweis:** Wenn Sie über die Windows-Firewall eine Verbindung herstellen, müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Weitere Informationen finden Sie im Artikel "Herstellen einer Verbindung über die Windows-Firewall" in der Windows-Verwaltungsinstrumentation Dokumentation auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Hinweis:** Wenn Sie über die Windows-Firewall eine Verbindung herstellen, müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Weitere Informationen finden Sie im Artikel "Herstellen einer Verbindung über die Windows- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall" in der Windows-Verwaltungsinstrumentation Dokumentation auf der MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Berechtigungen und Serverauthentifizierung  
  Für den Zugriff auf den WMI-Anbieter für die Konfigurationsverwaltung muss das WMI-Verwaltungsskript des Clients im Kontext eines Administrators auf dem Zielcomputer ausgeführt werden. Sie müssen ein Mitglied der lokalen Windows-Administratorengruppe auf dem Computer sein, den Sie verwalten möchten.  
@@ -80,7 +80,7 @@ gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerMan
   
  Sicherheitszertifikate werden vom WMI-Anbieter für die Konfigurationsverwaltung unterstützt. Weitere Informationen zu Zertifikaten finden Sie in der [Verschlüsselungs Hierarchie](../../relational-databases/security/encryption/encryption-hierarchy.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)  
   
   

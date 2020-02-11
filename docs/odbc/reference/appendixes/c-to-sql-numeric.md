@@ -1,5 +1,5 @@
 ---
-title: 'C in SQL: Numerische | Microsoft-Dokumentation'
+title: 'C zu SQL: numerisch | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6dc440e27b362fef9c9794cf0005c6af0b435efc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019309"
 ---
-# <a name="c-to-sql-numeric"></a>C in SQL: Numeric
-Der Bezeichner für die numerische ODBC-C-Datentypen sind:  
+# <a name="c-to-sql-numeric"></a>C zu SQL: numerisch
+Die Bezeichner für die numerischen ODBC-C-Datentypen lauten wie folgt:  
   
  SQL_C_STINYINT  
   
@@ -52,19 +52,19 @@ Der Bezeichner für die numerische ODBC-C-Datentypen sind:
   
  SQL_C_UBIGINT  
   
- Die folgende Tabelle zeigt die ODBC-SQL-Datentypen, die in denen numerische C-Daten konvertiert werden können. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ In der folgenden Tabelle werden die ODBC-SQL-Datentypen angezeigt, in die numerische C-Daten konvertiert werden können. Eine Erläuterung der Spalten und Begriffe in der Tabelle finden [Sie unter Datentypen von C in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|SQL-Typ-ID|Test|SQLSTATE|  
+|SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Anzahl der Ziffern < = Spalte-Byte-Länge<br /><br /> Anzahl der Ziffern > Spalte-Byte-Länge|n/v<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Anzahl der Zeichen < Zeichen Spaltenlänge =<br /><br /> Anzahl von Zeichen > Zeichen Spaltenlänge|n/v<br /><br /> 22001|  
-|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|Daten ohne Abschneiden konvertiert oder der Dezimalstellen gekürzt<br /><br /> Daten, die mit Abschneiden von ganzen Zahlen konvertiert|n/v<br /><br /> 22003|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Daten sind innerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Daten sind außerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird|n/v<br /><br /> 22003|  
-|SQL_BIT|Daten sind 0 oder 1<br /><br /> Daten ist größer als 0 ist, kleiner als 2, und nicht gleich-1<br /><br /> Daten ist kleiner als 0 oder größer als oder gleich 2|n/v<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|Die Daten nicht abgeschnitten.<br /><br /> Daten wurden abgeschnitten.|n/v<br /><br /> 22015|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Anzahl der Ziffern <= Spalten Byte Länge<br /><br /> Anzahl von Ziffern > Spalten Byte Länge|–<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Anzahl von Zeichen <= Länge von Spalten Zeichen<br /><br /> Anzahl von Zeichen > Spalten Zeichenlänge|–<br /><br /> 22001|  
+|SQL_DECIMAL [b]<br /><br /> SQL_NUMERIC [b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT [b]<br /><br /> SQL_INTEGER [b]<br /><br /> SQL_BIGINT [b]|Daten, die ohne abschneiden oder durch Abschneiden von Bruch Ziffern konvertiert werden<br /><br /> Mit abschneiden ganzer Ziffern konvertierte Daten|–<br /><br /> 22003|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Die Daten befinden sich innerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird.<br /><br /> Die Daten liegen außerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird.|–<br /><br /> 22003|  
+|SQL_BIT|Die Daten sind 0 oder 1.<br /><br /> Die Daten sind größer als 0 (null), kleiner als 2, nicht gleich 1.<br /><br /> Daten sind kleiner als 0 (null) oder größer oder gleich 2.|–<br /><br /> 22001<br /><br /> 22003|  
+|SQL_INTERVAL_YEAR [a]<br /><br /> SQL_INTERVAL_MONTH [a]<br /><br /> SQL_INTERVAL_DAY [a]<br /><br /> SQL_INTERVAL_HOUR [a]<br /><br /> SQL_INTERVAL_MINUTE [a]<br /><br /> SQL_INTERVAL_SECOND [a]|Daten werden nicht abgeschnitten.<br /><br /> Die Daten wurden abgeschnitten.|–<br /><br /> 22015|  
   
- [a] diese Konvertierungen werden nur für die genaue numerische Datentypen (SQL_C_STINYINT SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG oder SQL_C_NUMERIC) unterstützt. Sie sind nicht für die ungefähre numerische Datentypen (SQL_C_FLOAT oder SQL_C_DOUBLE) unterstützt. Genaue numerische C-Datentypen können nicht auf ein Intervall von SQL-Typ konvertiert werden, deren Genauigkeit Intervall kein einzelnes Feld handelt.  
+ [a] Diese Konvertierungen werden nur für die genauen numerischen Datentypen (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG oder SQL_C_NUMERIC) unterstützt. Sie werden für die ungefähren numerischen Datentypen (SQL_C_FLOAT oder SQL_C_DOUBLE) nicht unterstützt. Exakte numerische C-Datentypen können nicht in einen SQL-Intervalltyp konvertiert werden, dessen Intervall Genauigkeit kein einzelnes Feld ist.  
   
- [b] für den Fall "n/v" möglicherweise ein Treiber optional zurückgeben SQL_SUCCESS_WITH_INFO und 01 s 07 bei einem Teilbereiche wurden abgeschnitten.  
+ [b] für den "n/a"-Fall kann ein Treiber optional SQL_SUCCESS_WITH_INFO und 01s07 zurückgeben, wenn ein Abschneiden in Sekundenbruchteilen vorliegt.  
   
- Der Treiber ignoriert den Längenindikator /-Wert, beim Konvertieren von Daten aus der numerischen C-Datentypen, und es wird davon ausgegangen, dass die Größe des Datenpuffers die Größe des numerischen Datentyps C. Der Längenindikator /-Wert übergeben wird die *StrLen_or_Ind* -Argument in **SQLPutData** und in den Puffer, der mit angegebenen die *StrLen_or_IndPtr* -Argument in **SQLBindParameter**. Der Datenpuffer wird angegeben, mit der *DataPtr* -Argument in **SQLPutData** und die *ParameterValuePtr* -Argument in **SQLBindParameter**.
+ Der Treiber ignoriert den Längen-/indikatorenwert beim Umrechnen von Daten aus den numerischen c-Datentypen und geht davon aus, dass die Größe des Daten Puffers die Größe des numerischen c-Datentyps ist. Der Wert für die Länge/den Indikator wird im *StrLen_Or_Ind* -Argument in **SQLPutData** und in dem Puffer übergeben, der mit dem *StrLen_or_IndPtr* -Argument in **SQLBindParameter**angegeben wird. Der Datenpuffer wird mit dem *DataPtr* -Argument in **SQLPutData** und dem *ParameterValuePtr* -Argument in **SQLBindParameter**angegeben.

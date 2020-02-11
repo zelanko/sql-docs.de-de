@@ -1,5 +1,5 @@
 ---
-title: Klassifizierte Spalten [Datamining] | Microsoft-Dokumentation
+title: Klassifizierte Spalten (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085689"
 ---
 # <a name="classified-columns-data-mining"></a>Klassifizierte Spalten [Data Mining]
@@ -40,10 +40,10 @@ ms.locfileid: "66085689"
   
  In der folgenden Liste werden die Inhaltstypen beschrieben, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für klassifizierte Spalten unterstützt.  
   
- **PROBABILITY**  
+ **Besteht**  
  Der Wert in der Spalte entspricht der Wahrscheinlichkeit des zugeordneten Wertes und ist eine Zahl zwischen 0 und 1.  
   
- **VARIANCE**  
+ **Varianten**  
  Der Wert in der Spalte entspricht der Varianz des zugeordneten Wertes.  
   
  **STDEV**  
@@ -55,12 +55,12 @@ ms.locfileid: "66085689"
  **PROBABILITY_STDEV**  
  Der Wert in der Spalte entspricht der Standardabweichung der Wahrscheinlichkeit des zugeordneten Wertes.  
   
- **Alias**  
+ **Förder**  
  Der Wert in der Spalte entspricht der Gewichtung oder dem Fallreplikationsfaktor des zugeordneten Wertes.  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)   
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)   
- [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Inhaltstypen &#40;Data Mining-&#41;](content-types-data-mining.md)   
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Datentypen &#40;Data Mining-&#41;](data-types-data-mining.md)  
   
   

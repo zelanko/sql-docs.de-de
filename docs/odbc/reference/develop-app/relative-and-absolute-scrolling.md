@@ -1,5 +1,5 @@
 ---
-title: Relatives und absolutes Scrollen | Microsoft-Dokumentation
+title: Relativer und absoluter Bildlauf | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 3d0ff48d-fef5-4c01-bb1d-a583e6269b66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e2034a3922dcd3db77113e08a6c48fe7ac39457f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138062"
 ---
 # <a name="relative-and-absolute-scrolling"></a>Relatives und absolutes Scrollen
-Der Bildlauf Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cursor relativ zur aktuellen Position oder eine absolute Position. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets als auch als relativen abrufen (das Rowset abrufen, *n* Zeilen vom Anfang des aktuellen Rowsets) und absoluten abrufen (Fetch das Rowset starten in Zeile *n*). Wenn *n* ist in einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Folglich bedeutet, dass ein absoluter Abruf von Zeile-1 das Rowset abzurufen, das mit der letzten Zeile im Resultset beginnt.  
+Die meisten Scrolloptionen in **SQLFetchScroll** positionieren den Cursor relativ zur aktuellen Position oder zu einer absoluten Position. **SQLFetchScroll** unterstützt das Abrufen der nächsten, vorherigen, ersten und letzten Rowsets sowie das relative abrufen (Abrufen der Rowsets *n* Zeilen vom Anfang des aktuellen Rowsets) und das absolute abrufen (Abrufen des Rowsets ab Zeile *n*). Wenn *n* bei einem absoluten Abruf negativ ist, werden Zeilen vom Ende des Resultsets gezählt. Folglich bedeutet das absolute Abrufen von Zeile-1, dass das Rowset, das mit der letzten Zeile im Resultset beginnt, abgerufen wird.  
   
- Dynamische Cursor erkennen Zeilen eingefügt und aus dem Resultset gelöscht, es gibt also keine einfache Möglichkeit für dynamic-Cursor, die Zeile an eine bestimmte Anzahl als das Lesen vom Anfang des Resultsets, abzurufen, wodurch der möglicherweise sehr langsam ausgeführt wird. Darüber hinaus ist absoluten abrufen nicht sehr nützlich in dynamischen Cursorn da Zeilennummern ändern, wenn Zeilen eingefügt und gelöscht werden; aus diesem Grund kann nacheinander abrufen die gleiche Anzahl von Zeilen unterschiedliche Zeilen erzielt werden.  
+ Dynamische Cursor erkennen Zeilen, die in das Resultset eingefügt und daraus gelöscht werden. es gibt also keine einfache Möglichkeit, die Zeile von dynamischen Cursorn aus dem Anfang des Resultsets abzurufen. Dies ist wahrscheinlich langsam. Außerdem ist das absolute abrufen bei dynamischen Cursorn nicht sehr nützlich, da sich die Zeilennummern ändern, wenn Zeilen eingefügt und gelöscht werden. aus diesem Grund kann das Abrufen der gleichen Zeilennummer zu unterschiedlichen Zeilen führen.  
   
- Anwendungen, die **SQLFetchScroll** nur Cursor-Funktionen, z. B. Berichte, sind wahrscheinlich passieren das Resultset auf ein einziges Mal und verwenden die Option zum Abrufen des nächsten Rowsets. Bildschirmbasierte Anwendungen, auf der anderen Seite können nutzen alle Funktionen von **SQLFetchScroll**. Wenn die Anwendung die Rowsetgröße auf die Anzahl der Zeilen, die auf dem Bildschirm angezeigt legt, und die Bildschirmpuffer an das Resultset bindet, kann es Vorgänge der Bildlaufleiste direkt in Aufrufe an übersetzen **SQLFetchScroll**.  
+ Anwendungen, die **SQLFetchScroll** nur für Ihre Block Cursor Funktionen verwenden, wie z. b. Berichte, werden das Resultset wahrscheinlich ein einziges Mal durchlaufen, wobei nur die Option zum Abrufen des nächsten Rowsets verwendet wird. Auf der anderen Seite können bildschirmbasierte Anwendungen alle Funktionen von **SQLFetchScroll**nutzen. Wenn die Anwendung die Rowsetgröße auf die auf dem Bildschirm angezeigte Anzahl von Zeilen festlegt und die Bildschirm Puffer an das Resultset bindet, können Schiebe leisten Vorgänge direkt in Aufrufe von **SQLFetchScroll**übersetzt werden.  
   
 |Bildlaufleistenvorgang|SQLFetchScroll-Bildlaufoption|  
 |--------------------------|-------------------------------------|  
@@ -35,12 +35,12 @@ Der Bildlauf Optionen in den meisten **SQLFetchScroll** positionieren Sie den Cu
 |Bild ab|SQL_FETCH_NEXT|  
 |Zeile auf|SQL_FETCH_RELATIVE mit *FetchOffset* gleich-1|  
 |Zeile ab|SQL_FETCH_RELATIVE mit *FetchOffset* gleich 1|  
-|Das Bildlauffeld, oben|SQL_FETCH_FIRST|  
-|Das Bildlauffeld, unten|SQL_FETCH_LAST|  
+|Bild Lauf Feld oben|SQL_FETCH_FIRST|  
+|Bild Lauf Feld unten|SQL_FETCH_LAST|  
 |Zufällige Bildlauffeldposition|SQL_FETCH_ABSOLUTE|  
   
- Solche Anwendungen müssen auch das Bildlauffeld nach einem Bildlauf-Vorgang zu positionieren, das die aktuelle Zeilennummer und die Anzahl der Zeilen erforderlich ist. Für die aktuelle Zeilennummer, Anwendungen entweder des nachvollziehen die aktuelle Zeilennummer oder der Aufruf **SQLGetStmtAttr** mit dem SQL_ATTR_ROW_NUMBER-Attribut, um sie abzurufen.  
+ Solche Anwendungen müssen das Bild Lauf Feld auch nach einem scrollvorgang positionieren, für den die aktuelle Zeilennummer und die Anzahl der Zeilen erforderlich sind. Bei der aktuellen Zeilennummer können Anwendungen entweder die aktuelle Zeilennummer nachverfolgen oder **SQLGetStmtAttr** mit dem SQL_ATTR_ROW_NUMBER-Attribut aufrufen, um Sie abzurufen.  
   
- Die Anzahl der Zeilen im Cursor, der die Größe des Ergebnisses ist festgelegt, wird als Feld SQL_DIAG_CURSOR_ROW_COUNT des Diagnose-Headers zur Verfügung. Der Wert in dieses Feld wird erst nach definiert **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResult** aufgerufen wurde. Diese Anzahl kann es sich um geschätzte Anzahl oder eine genaue Anzahl, abhängig von den Funktionen des Treibers sein. Vom Treiber unterstützt kann bestimmt werden, indem **SQLGetInfo** mit Informationen der Cursortypen-Attribute und überprüft, ob das SQL_CA2_CRC_APPROXIMATE oder SQL_CA2_CRC_EXACT Bit für den Typ des Cursors zurückgegeben wird.  
+ Die Anzahl der Zeilen im Cursor, d. h. die Größe des Resultsets, ist als SQL_DIAG_CURSOR_ROW_COUNT Feld des Diagnose Headers verfügbar. Der Wert in diesem Feld wird erst definiert, nachdem **SQLExecute**, **SQLExecDirect**oder **sqlmoreresult** aufgerufen wurde. Diese Anzahl kann je nach den Funktionen des Treibers entweder eine ungefähre Anzahl oder eine genaue Anzahl sein. Die Unterstützung des Treibers kann durch Aufrufen von **SQLGetInfo** mit den Informationstypen der Cursor Attribute ermittelt werden, und es wird überprüft, ob die SQL_CA2_CRC_APPROXIMATE oder SQL_CA2_CRC_EXACT Bit für den Cursortyp zurückgegeben wird.  
   
- Eine genaue Zeilenanzahl wird für einen dynamischen Cursor nicht unterstützt. Für andere Typen von Cursorn kann vom Treiber entweder genaue oder Ungefähre Zeilenanzahl, aber nicht beides unterstützt. Wenn der Treiber unterstützt, weder die genaue als auch die ungefähre Zeilenanzahl für einen bestimmten Cursor, der SQL_DIAG_CURSOR_ROW_COUNT-Feld enthält die Anzahl der Zeilen, die bisher abgerufen wurden. Unabhängig davon, welche der Treiber unterstützt **SQLFetchScroll** mit einer *Vorgang* von SQL_FETCH_LAST führt dazu, dass das SQL_DIAG_CURSOR_ROW_COUNT Feld die Anzahl der genauen Zeilen enthalten.
+ Eine genaue Zeilen Anzahl wird für einen dynamischen Cursor nie unterstützt. Bei anderen Cursor Typen kann der Treiber entweder eine genaue oder ungefähre Zeilen Anzahl unterstützen, aber nicht beides. Wenn der Treiber weder die genaue noch die ungefähre Zeilen Anzahl für einen bestimmten Cursortyp unterstützt, enthält das SQL_DIAG_CURSOR_ROW_COUNT Feld die Anzahl der bisher abgerufenen Zeilen. Unabhängig davon, was der Treiber unterstützt, bewirkt **SQLFetchScroll** mit einem SQL_FETCH_LAST *Vorgang* , dass das SQL_DIAG_CURSOR_ROW_COUNT Feld die genaue Zeilen Anzahl enthält.

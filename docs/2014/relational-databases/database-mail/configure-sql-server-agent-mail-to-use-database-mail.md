@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d3c2f5f0be09e9a60997308efd72c360348efc60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62872319"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails
@@ -25,23 +25,23 @@ ms.locfileid: "62872319"
   
 -   **Vorbereitungen:**  
   
--   [Erforderliche Komponenten](#Prerequisites)  
+-   [Voraussetzungen](#Prerequisites)  
   
 -   [Sicherheit](#Security)  
   
--   [So konfigurieren Sie mithilfe von SQL Server Management Studio den SQL Server-Agent zur Verwendung von Datenbank-E-Mail](#SSMSProcedure)  
+-   [So konfigurieren Sie SQL Server-Agent für die Verwendung von Datenbank-E-Mail mit SQL Server Management Studio](#SSMSProcedure)  
   
--   [Anschlussaufgaben](#Follow_Up)  
+-   [Nach Verfolgungs Aufgaben](#Follow_Up)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Aktivieren Sie Datenbank-E-Mail.  
   
 -   Erstellen Sie ein Datenbank-E-Mail-Konto für das zu verwendende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto.  
   
--   Erstellen Sie ein Datenbank-E-Mail-Profil für das zu verwendende Konto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes, und fügen Sie den Benutzer zur **DatabaseMailUserRole** in der **msdb** -Datenbank hinzu.  
+-   Erstellen Sie ein Datenbank-E-Mail Profil für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das zu verwendende-Agent-Dienst Konto, und fügen Sie den Benutzer der **DatabaseMailUserRole** in der **msdb** -Datenbank hinzu.  
   
 -   Legen Sie das Profil als Standardprofil für die **msdb** -Datenbank fest.  
   
@@ -50,8 +50,8 @@ ms.locfileid: "62872319"
 ####  <a name="Permissions"></a> Berechtigungen  
  Der Benutzer, der die Profilkonten erstellt und gespeicherte Prozeduren ausführt, sollte Mitglied der festen Serverrolle "sysadmin" sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- **So konfigurieren Sie den SQL Server-Agent zum Verwenden von Datenbank-E-Mail**  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ **So konfigurieren Sie SQL Server-Agent für die Verwendung Datenbank-E-Mail**  
   
 -   Erweitern Sie im Objekt-Explorer eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62872319"
   
 -   Starten Sie SQL Server-Agent neu.  
   
-##  <a name="Follow_Up"></a> Anschlussaufgaben  
+##  <a name="Follow_Up"></a>Nach Verfolgungs Aufgaben  
  Die folgenden Aufgaben sind zum Abschließen der Konfiguration des Agents zum Senden von Warnungen und Benachrichtigungen erforderlich:  
   
 -   [Warnungen](../../ssms/agent/alerts.md)  

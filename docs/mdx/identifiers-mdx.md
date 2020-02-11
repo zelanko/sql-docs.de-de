@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891218"
 ---
 # <a name="identifiers-mdx"></a>Bezeichner (MDX)
@@ -44,7 +44,7 @@ ms.locfileid: "68891218"
   
     -   Der Unterstrich (_).  
   
-3.  Der Bezeichner darf kein reserviertes MDX-Schlüsselwort sein. Für reservierte Schlüsselwörter erfolgt in MDX keine Unterscheidung nach Groß-/Kleinschreibung. Weitere Informationen finden Sie unter [MDX &#40;-Syntax&#41;für reservierte Schlüsselwörter](../mdx/reserved-keywords-mdx-syntax.md).  
+3.  Der Bezeichner darf kein reserviertes MDX-Schlüsselwort sein. Für reservierte Schlüsselwörter erfolgt in MDX keine Unterscheidung nach Groß-/Kleinschreibung. Weitere Informationen finden Sie unter [reservierte Schlüsselwörter &#40;MDX-Syntax&#41;](../mdx/reserved-keywords-mdx-syntax.md).  
   
 4.  Eingebettete Leerzeichen oder Sonderzeichen sind nicht zulässig.  
   
@@ -122,9 +122,9 @@ ms.locfileid: "68891218"
   
  Außerdem ist im vorherigen Beispiel der Bezeichner Measures begrenzt, um zu zeigen, wie mehrere Bezeichner begrenzt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX-Syntax &#40;Elemente MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [MDX-Syntax Elemente &#40;MDX-&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

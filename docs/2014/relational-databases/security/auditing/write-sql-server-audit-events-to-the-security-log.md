@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211971"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll
@@ -47,13 +47,13 @@ ms.locfileid: "68211971"
   
      [Sicherheit](#Security)  
   
--   **So schreiben Sie SQL-Serverüberwachungsereignisse in das Sicherheitsprotokoll**  
+-   **So schreiben Sie SQL Server Überwachungs Ereignisse in das Sicherheitsprotokoll:**  
   
-     [Konfigurieren der Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "auditpol"](#auditpolAccess)  
+     [Konfigurieren der Einstellung für die Überwachung des Objekt Zugriffs in Windows mithilfe von "Auditpol"](#auditpolAccess)  
   
-     [Konfigurieren der Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "secpol"](#secpolAccess)  
+     [Konfigurieren der Einstellung für die Überwachung des Objekt Zugriffs in Windows mithilfe von secpol](#secpolAccess)  
   
-     [Erteilen von Berechtigungen zum Generieren von Sicherheitsüberwachungen für ein Konto mit "secpol"](#secpolPermission)  
+     [Erteilen der Berechtigung zum Generieren von Sicherheits Überwachungen für ein Konto mit "secpol"](#secpolPermission)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -117,7 +117,7 @@ ms.locfileid: "68211971"
   
 7.  Schließen Sie das Tool "Sicherheitsrichtlinie".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md)  
   
   

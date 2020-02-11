@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0807a034f05d723ae19c86e8b00d08309176551c
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095157"
 ---
 # <a name="managing-services-and-network-settings-by-using-wmi-provider"></a>Verwalten von Diensten und Netzwerkeinstellungen durch die Nutzung von WMI-Anbieter
@@ -31,7 +31,7 @@ ms.locfileid: "74095157"
  Das <xref:Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer>-Objekt arbeitet unabhängig von der mit dem <xref:Microsoft.SqlServer.Management.Smo.Server>-Objekt zu einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hergestellten Verbindung und nutzt Windows-Anmeldeinformationen für die Verbindung zum WMI-Dienst.  
   
 ## <a name="example"></a>Beispiel  
-Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
  Für Programme, die den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -WMI-Anbieter verwenden, müssen Sie die **Imports** -Anweisung einschließen, um den WMI-Namespace zu qualifizieren. Fügen Sie die Anweisung nach den anderen **Imports** -Anweisungen und vor jeglichen Deklarationen in der Anwendung wie folgt ein:  
@@ -212,7 +212,7 @@ $svc.ServiceState
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung](../../../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
   
   

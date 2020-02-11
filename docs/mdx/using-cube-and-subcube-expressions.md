@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893530"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Verwenden von Cube- und Teilcubeausdrücken
@@ -23,7 +23,7 @@ ms.locfileid: "68893530"
 ## <a name="cube-expressions"></a>Cubeausdrücke  
  Ein Cubeausdruck enthält entweder einen Cubebezeichner oder das CURRENTCUBE-Schlüsselwort. Er kann deshalb nur ein einfacher Ausdruck sein. In vielen MDX-Anweisung wird, statt einen Cubebezeichner zu verlangen, das CURRENTCUBE-Schlüsselwort verwendet, um den aktuellen Cubekontext anzugeben.  
   
- Ein Cubebezeichner wird in den BNF-Notation-Beschreibungen von MDX-Anweisungen als *CUBE_NAME* angezeigt.  
+ Ein Cubebezeichner wird als *CUBE_NAME* in den BNF-Notation-Beschreibungen von MDX-Anweisungen angezeigt.  
   
  Cubeausdrücke können an mehreren Stellen angezeigt werden. In einer MDX SELECT-Anweisung geben sie den Cube an, von dem Daten abgerufen werden sollen. In der folgenden Beispielabfrage verweist der Ausdruck [Adventure Works] auf den gleichnamigen Cube:  
   
@@ -68,11 +68,11 @@ ms.locfileid: "68893530"
   
  Ein Teilcubebezeichner wird als *Subcube_Name*angezeigt. in BNF-Schreibweisebeschreibungen von MDX-Anweisungen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Die grundlegende MDX-Abfrage &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
- [Aufbauen von Teilcubes in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
- [CREATE SUBCUBE- &#40;Anweisung (MDX)&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Ausdrücke &#40;(MDX)&#41;](../mdx/expressions-mdx.md)   
- [SCOPE-Anweisung &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Die grundlegende MDX-Abfrage &#40;MDX-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [Entwickeln von Teilcubes in MDX-&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [CREATE SUBCUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [Ausdrücke &#40;MDX-&#41;](../mdx/expressions-mdx.md)   
+ [SCOPE-Anweisung &#40;MDX-&#41;](../mdx/mdx-scripting-scope.md)  
   
   

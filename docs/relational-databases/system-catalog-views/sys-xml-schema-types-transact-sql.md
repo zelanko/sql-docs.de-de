@@ -1,5 +1,5 @@
 ---
-title: Sys. xml_schema_types (Transact-SQL) | Microsoft-Dokumentation
+title: sys. xml_schema_types (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,34 +20,34 @@ ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68060428"
 ---
-# <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
+# <a name="sysxml_schema_types-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt eine Zeile pro XML-Schemakomponente zurück, die einem Typ entspricht. Dabei ist **symbol_space** gleich **T**.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten >**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
+|**\<geerbte Spalten>**||Erbt Spalten von [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Typ ist ein abstrakter Typ. Alle Instanzen eines Elements dieses Typs müssen **xsi:type** verwenden, um auf einen abgeleiteten Typ hinzuweisen, der nicht abstrakt ist.<br /><br /> 0 = Typ ist nicht abstrakt. (Standard)|  
 |**allows_mixed_content**|**bit**|1 = Gemischter Inhalt ist zulässig<br /><br /> 0 = Gemischter Inhalt ist nicht zulässig (Standard)|  
-|**is_extension_blocked**|**bit**|1 = ersetzen durch eine Erweiterung des Typs wird in Fällen blockiert, wenn das zugehörige Attribut in der **ComplexType** Definition oder der **BlockDefault** Attribut der übergeordneten \<Schema > elementinformationselement wird auf "Extension" oder "#all" festgelegt.<br /><br /> 0 = Ersetzen durch Erweiterung ist nicht blockiert.|  
-|**is_restriction_blocked**|**bit**|1 = ersetzen durch eine Einschränkung des Typs wird in Fällen blockiert, wenn das zugehörige Attribut in der **ComplexType** Definition oder der **BlockDefault** Attribut der übergeordneten \<Schema > elementinformationselement wird auf "Restriction" oder "#all" festgelegt.<br /><br /> 0 = Ersetzen durch Einschränkung ist nicht blockiert. (Standard)|  
-|**is_final_extension**|**bit**|1 = das Ableiten anhand der Erweiterung des Typs ist nicht möglich, wenn das abschließende Attribut in der **ComplexType** Definition oder der **FinalDefault** Attribut der übergeordneten \<Schema > Informationen zum Element Element wird auf "Extension" oder "#all" festgelegt.<br /><br /> 0 = Erweiterung ist zulässig. (Standard)|  
-|**is_final_restriction**|**bit**|1 = das Ableiten anhand der Einschränkung des Typs ist nicht möglich, wenn das abschließende Attribut in den einfachen oder **ComplexType** Definition oder der **FinalDefault** Attribut der übergeordneten \<Schema >-Element Element mit den Projektmappeninformationen ist auf "Restriction" oder "#all" festgelegt.<br /><br /> 0 = Einschränkung ist zulässig. (Standard)|  
+|**is_extension_blocked**|**bit**|1 = Ersetzung durch eine Erweiterung des Typs wird in-Instanzen blockiert, wenn das Block-Attribut in der **complexType** -Definition oder das **Block default** - \<Attribut des Vorgänger Schemas> Element Informationselement auf "Extension" oder "#All" festgelegt ist.<br /><br /> 0 = Ersetzen durch Erweiterung ist nicht blockiert.|  
+|**is_restriction_blocked**|**bit**|1 = Ersetzung durch eine Einschränkung des Typs wird in-Instanzen blockiert, wenn das Block-Attribut in der **complexType** -Definition oder das Block **default** - \<Attribut des Vorgänger Schemas> Element Informationselement auf "Einschränkung" oder "#All" festgelegt ist.<br /><br /> 0 = Ersetzen durch Einschränkung ist nicht blockiert. (Standard)|  
+|**is_final_extension**|**bit**|1 = Ableitung durch Erweiterung des Typs wird blockiert, wenn das abschließende Attribut in der **complexType** -Definition oder das **Final default** -Attribut des Vorgänger \<Schemas> Element Informationselement auf "Extension" oder "#All" festgelegt ist.<br /><br /> 0 = Erweiterung ist zulässig. (Standard)|  
+|**is_final_restriction**|**bit**|1 = Ableitung durch Einschränkung des Typs wird blockiert, wenn das abschließende Attribut in der Simple-oder **complexType** -Definition oder das **Final default** -Attribut des \<Vorgänger Schemas> Element Informationselement auf "Einschränkung" oder "#All" festgelegt ist.<br /><br /> 0 = Einschränkung ist zulässig. (Standard)|  
 |**is_final_list_member**|**bit**|1 = Dieser einfache Typ kann nicht als Elementtyp in einer Liste verwendet werden.<br /><br /> 0 = Dieser Typ ist ein komplexer Typ oder kann als Listenelementtyp verwendet werden. (Standard)|  
 |**is_final_union_member**|**bit**|1 = Dieser einfache Typ kann nicht als Elementtyp eines Vereinigungstyps verwendet werden.<br /><br /> 0 = Dieser Typ ist ein komplexer Typ oder kann als Vereinigungselementtyp verwendet werden. (Standard)|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [XML-Schemas &#40;XML-Typsystem&#41; Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
+ [XML-Schemas &#40;XML-Typsystem&#41; Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/xml-schemas-xml-type-system-catalog-views-transact-sql.md)  
   
   

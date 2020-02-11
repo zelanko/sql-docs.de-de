@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_backuphistory (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_backuphistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68120056"
 ---
-# <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
+# <a name="sp_delete_backuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Reduziert die Größe der Sicherungs- und Wiederherstellungsverlaufstabellen, indem die Einträge für Sicherungssätze gelöscht werden, die älter sind als das angegebene Datum. Zusätzliche Zeilen hinzugefügt werden, auf die Sicherung und wiederherstellungsverlaufstabellen nach jedem sicherungs- oder Wiederherstellungsvorgang ausgeführt wird; Daher wird empfohlen, dass Sie in regelmäßigen Abständen ausführen **Sp_delete_backuphistory**.  
+  Reduziert die Größe der Sicherungs- und Wiederherstellungsverlaufstabellen, indem die Einträge für Sicherungssätze gelöscht werden, die älter sind als das angegebene Datum. Der Sicherungs-und Wiederherstellungs Verlaufs Tabelle werden nach jedem Sicherungs-oder Wiederherstellungs Vorgang zusätzliche Zeilen hinzugefügt. aus diesem Grund wird empfohlen, **sp_delete_backuphistory**regelmäßig auszuführen.  
   
 > [!NOTE]  
->  Die sicherungs- und Verlaufstabellen befinden sich in der **Msdb** Datenbank.  
+>  Die Sicherungs-und Wiederherstellungs Verlaufs Tabellen befinden sich in der **msdb** -Datenbank.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,16 +42,16 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @oldest_date = ] 'oldest\_date'` Die am weitesten zurückliegende Datum wird in den sicherungs- und Verlaufstabellen beibehalten werden. *Oldest_date* ist **"DateTime"** , hat keinen Standardwert.  
+`[ @oldest_date = ] 'oldest\_date'`Ist das älteste Datum, das in den Sicherungs-und Wiederherstellungs Verlaufs Tabellen beibehalten wird. *oldest_date* ist vom **Datentyp DateTime**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_delete_backuphistory** muss ausgeführt werden, aus der **Msdb** Datenbank und wirkt sich auf den folgenden Tabellen:  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_delete_backuphistory** muss von der **msdb** -Datenbank aus ausgeführt werden und wirkt sich auf die folgenden Tabellen aus:  
   
 -   [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  
   
@@ -72,7 +72,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
  Die physischen Sicherungsdateien werden beibehalten, auch wenn der gesamte Verlauf gelöscht wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Sysadmin** -Serverrolle sein, aber die Berechtigungen für andere Benutzer erteilt werden können.  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** , aber Berechtigungen können anderen Benutzern erteilt werden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden alle Einträge in den Sicherungs- und Wiederherstellungsverlaufstabellen gelöscht, die weiter zurückliegen als der 14. Januar 2010, 00:00:00 Uhr.  
@@ -83,8 +83,8 @@ GO
 EXEC sp_delete_backuphistory @oldest_date = '01/14/2010';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_delete_database_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_delete_database_backuphistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-backuphistory-transact-sql.md)   
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

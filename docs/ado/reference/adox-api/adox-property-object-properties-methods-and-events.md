@@ -1,5 +1,5 @@
 ---
-title: ADOX-Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Eigenschaften, Methoden und Ereignisse des ADOX-Eigenschaften Objekts | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930356"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>ADOX-Property-Objekt – Eigenschaften, Methoden und Ereignisse
@@ -25,15 +25,15 @@ ms.locfileid: "67930356"
   
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
   
- [Type-Eigenschaft (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)  
+ [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
  [Value-Eigenschaft (ADO)](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Property-Objekt (ADOX)](../../../ado/reference/adox-api/property-object-adox.md)

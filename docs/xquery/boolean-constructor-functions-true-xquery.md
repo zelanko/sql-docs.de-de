@@ -1,5 +1,5 @@
 ---
-title: "\"true\"-Funktion (XQuery) | Microsoft-Dokumentation"
+title: true-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/10/2016
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039044"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>Boolesche Konstruktorfunktionen – true (XQuery)
@@ -34,10 +34,10 @@ fn:true() as xs:boolean
 ```  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-true-xquery-boolean-function"></a>A. Verwenden der XQuery Boolean-Funktion true()  
- Das folgende Beispiel fragt eine nicht typisierte **Xml** Variable. Der Ausdruck in der **Value()-Methode** Methode gibt den booleschen Wert **TRUE()"** ist"aaa"den Wert des Attributs. Die **Value()-Methode** Methode der **Xml** -Datentyp konvertiert den booleschen Wert in einen Bitwert und gibt sie zurück.  
+ Im folgenden Beispiel wird eine nicht typisierte **XML** -Variable abgefragt. Der Ausdruck in der **value ()** -Methode gibt den booleschen Wert **true ()** zurück, wenn "AAA" der Attribut Wert ist. Die **value ()** -Methode des **XML** -Datentyps konvertiert den booleschen Wert in ein Bit und gibt ihn zurück.  
   
 ```  
 DECLARE @x XML  
@@ -47,11 +47,11 @@ go
 -- result = 1  
 ```  
   
- Im folgenden Beispiel wird die Abfrage angegeben für eine typisierte **Xml** Spalte. Die `if` -Ausdruck überprüft den typisierten booleschen Wert, der die <`ROOT`>-Element und gibt Sie den konstruierten XML-Code entsprechend zurück. Das Beispiel führt die folgenden Aktionen aus:  
+ Im folgenden Beispiel wird die Abfrage für eine typisierte **XML** -Spalte angegeben. Der `if` Ausdruck überprüft den typisierten booleschen Wert des <`ROOT`> Elements und gibt entsprechend das konstruierte XML zurück. Das Beispiel führt die folgenden Aktionen aus:  
   
--   Erstellt eine XML-schemaauflistung, die definiert die <`ROOT`>-Element des Typs xs: Boolean.  
+-   Erstellt eine XML-Schema Auflistung, die die `ROOT` <> Element des xs: Boolean-Typs definiert.  
   
--   Erstellt eine Tabelle mit typisierter **Xml** Spalte, indem Sie die XML-schemaauflistung.  
+-   Erstellt eine Tabelle mit einer typisierten **XML** -Spalte, indem die XML-Schema Auflistung verwendet wird.  
   
 -   Speichert eine XML-Instanz in der Spalte und fragt sie ab.  
   
@@ -88,7 +88,7 @@ DROP XML SCHEMA COLLECTION SC
 go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Boolesche Konstruktorfunktionen &#40;XQuery&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Boolesche Konstruktorfunktionen &#40;XQuery-&#41;](https://msdn.microsoft.com/library/fa907f39-d4b7-4495-b829-c788928e0f64)  
   
   

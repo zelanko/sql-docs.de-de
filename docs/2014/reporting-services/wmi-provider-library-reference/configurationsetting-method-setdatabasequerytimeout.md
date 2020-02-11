@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff1b75e942de46309df68707cc3acec976adb991
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098072"
 ---
-# <a name="setdatabasequerytimeout-method-wmi-msreportserverconfigurationsetting"></a>SetDatabaseQueryTimeout-Methode (WMI: MSReportServer_ConfigurationSetting)
+# <a name="setdatabasequerytimeout-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseQueryTimeout-Methode (WMI: MSReportServer_ConfigurationSetting)
   Gibt den Standardtimeoutwert für Berichtsserver-Datenbankabfragen an.  
   
 ## <a name="syntax"></a>Syntax  
@@ -41,7 +41,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *LogonTimeout*  
+ *Logontimeout*  
  Der Standardtimeoutwert (in Sekunden) für Berichtsserver-Datenbankabfragen  
   
  *HRESULT*  
@@ -50,10 +50,10 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

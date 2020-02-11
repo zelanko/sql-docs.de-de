@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c53b87f01cd8bbcba4ff8377a98606737654877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255792"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Löschen von Abfrageergebnissen (Visual Database Tools)
@@ -35,9 +35,9 @@ ms.locfileid: "63255792"
   
      Wird beim Löschen des Ergebnisbereichs eine Abfrage ausgeführt, wird diese vom Abfrage- und Sicht-Designer angehalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen von Abfragen &#40;Visual Database Tools&#41;](run-queries-visual-database-tools.md)   
- [Beenden einer Abfrage &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
+ [Beendet eine Abfrage &#40;Visual Database Tools&#41;](stop-a-query-visual-database-tools.md)   
  [Verwenden von Daten im Ergebnisbereich &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

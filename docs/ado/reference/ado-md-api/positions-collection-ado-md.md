@@ -1,5 +1,5 @@
 ---
-title: Positions-Auflistung (ADO MD) | Microsoft-Dokumentation
+title: Positions Auflistung (ADO MD) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,29 +18,29 @@ ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67949213"
 ---
 # <a name="positions-collection-ado-md"></a>Positions-Collection (ADO MD)
-Enthält die [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekte, die einen Punkt auf einer Achse zu definieren.  
+Enthält die [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekte, die einen Punkt auf einer Achse definieren.  
   
-## <a name="remarks"></a>Hinweise  
- **Positionen** ist eine standard-ADO-Auflistung. Mit den Eigenschaften und Methoden einer Sammlung können Sie Folgendes tun:  
+## <a name="remarks"></a>Bemerkungen  
+ **Positionen** ist eine standardmäßige ADO-Auflistung. Mit den Eigenschaften und Methoden einer Sammlung können Sie folgende Aufgaben ausführen:  
   
--   Erhalten Sie die Anzahl der Objekte in der Auflistung mit den [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft.  
+-   Abrufen der Anzahl von Objekten in der Auflistung mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft.  
   
--   Geben Sie ein Objekt zurück, aus der Auflistung mit der standardmäßigen [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
+-   Gibt ein Objekt aus der Auflistung mit der Standard [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft zurück.  
   
--   Aktualisieren Sie die Objekte in der Auflistung über den Anbieter mit der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung vom Anbieter mit der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
 -   [Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cellset-Beispiel (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Axis-Objekt (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
  [Cell-Objekt (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   

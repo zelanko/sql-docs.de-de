@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2dfc75b2af19165931dc50e76f04bc7362b59ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873051"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Bereitstellen einer Datenbank mit DAC
@@ -81,35 +81,35 @@ ms.locfileid: "62873051"
 ##  <a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte des Assistenten zum **Bereitstellen von Datenbanken** beschrieben.  
   
- **Options**  
+ **Optionen**  
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
--   **Weiter** – führt Sie zur Seite **Bereitstellungseinstellungen** .  
+-   **Weiter** : wechselt zur Seite **Bereitstellungs Einstellungen** .  
   
--   **Abbrechen:** bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen** : bricht den Vorgang ab und schließt den Assistenten.  
   
-##  <a name="Deployment_settings"></a> Bereitstellungseinstellungen (Seite)  
+##  <a name="Deployment_settings"></a>Seite mit Bereitstellungs Einstellungen  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
  **Lokaler Host:**  
   
--   **Serververbindungen:** Geben Sie Serververbindungsdetails an, und klicken Sie dann auf **Verbinden**, um die Verbindung zu überprüfen.  
+-   **Server Verbindung** : Geben Sie Server Verbindungsdetails an, und klicken Sie auf **verbinden** , um die Verbindung zu überprüfen.  
   
--   **Neuer Datenbankname:** Geben Sie einen Namen für die neue Datenbank an.  
+-   **Neuer Datenbankname** : Geben Sie einen Namen für die neue Datenbank an.  
   
- **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Datenbankeinstellungen:**  
+ **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Datenbankeinstellungen:**  
   
--   **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Edition:** Wählen Sie die Edition von [!INCLUDE[ssSDS](../../includes/sssds-md.md)] im Dropdownmenü aus.  
+-   Edition: Wählen Sie die Edition [!INCLUDE[ssSDS](../../includes/sssds-md.md)] von im Dropdown Menü aus. ** [!INCLUDE[ssSDS](../../includes/sssds-md.md)] **  
   
--   **Maximale Datenbankgröße:** Wählen Sie die maximale Datenbankgröße im Dropdownmenü aus.  
+-   **Maximale Datenbankgröße** : Wählen Sie die maximale Datenbankgröße im Dropdown Menü aus.  
   
- **Andere Einstellungen:**  
+ **Weitere Einstellungen:**  
   
 -   Geben Sie ein lokales Verzeichnis für die temporäre Datei an, die der BACPAC-Archivdatei entspricht. Beachten Sie, dass die Datei am angegebenen Speicherort erstellt wird und dort verbleibt, nachdem der Vorgang abgeschlossen wurde.  
   
 ##  <a name="Summary"></a> Seite "Zusammenfassung"  
- Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungsvorgang abzubrechen und den Assistenten zu beenden.  
+ Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungs Vorgang abzubrechen und den Assistenten zu beenden.  
   
 ##  <a name="Progress"></a> Status (Seite)  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
@@ -117,10 +117,10 @@ ms.locfileid: "62873051"
 ##  <a name="Results"></a> Ergebnisse (Seite)  
  Auf dieser Seite wird angegeben, ob der Bereitstellungsvorgang erfolgreich war oder ob dabei Fehler auftraten, dabei werden die Ergebnisse jeder Aktion angezeigt. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
- Klicken Sie auf **Fertig stellen** , um den Assistenten zu schließen.  
+ Klicken Sie auf **Fertig** stellen, um den Assistenten zu schließen.  
   
 ## <a name="using-a-net-framework-application"></a>Verwenden einer .NET Framework-Anwendung  
- **Stellen Sie eine Datenbank mithilfe der Methoden DacStoreExport() und Import() in einer .NET Framework-Anwendung bereit.**  
+ **Zum Bereitstellen einer Datenbank mithilfe der Methoden dacstoreexport () und Import () in einer .NET Framework-Anwendung.**  
   
  Laden Sie zum Anzeigen eines Codebeispiels die DAC-Beispielanwendung unter [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)herunter.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "62873051"
   
 6.  Verwenden Sie die `Import`-Methode des `Microsoft.SqlServer.Management.Dac.DacStore`-Typs, um die BACPAC-Datei zu importieren. Geben Sie die beim Exportvorgang erstellte BACPAC-Datei an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](data-tier-applications.md)   
  [Exportieren einer Datenebenenanwendung](export-a-data-tier-application.md)   
  [Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](import-a-bacpac-file-to-create-a-new-user-database.md)  

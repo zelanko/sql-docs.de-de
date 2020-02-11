@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c17f478c8c7735aca0100a2fd99d6315d923bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481083"
 ---
 # <a name="run-a-matching-project"></a>Ausführen eines Abgleichsprojekts
@@ -30,7 +30,7 @@ ms.locfileid: "65481083"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen eine Wissensdatenbank mit einer Abgleichsrichtlinie erstellt haben, die aus einer oder mehreren Abgleichsregeln besteht.  
   
@@ -41,16 +41,16 @@ ms.locfileid: "65481083"
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um ein Abgleichsprojekt auszuführen.  
   
-##  <a name="StartingaMatchingProject"></a> Erster Schritt: Starten eines Abgleichsprojekts  
+##  <a name="StartingaMatchingProject"></a>Erster Schritt: Starten eines abgleichsprojekts  
  Sie führen die Abgleichsaktivität in einem Data Quality-Projekt aus, das Sie in der DQS-Clientanwendung erstellen.  
   
-1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Ausführen der Data Quality-Clientanwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
+1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
 2.  Klicken Sie im Startbildschirm von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] auf **Neues Data Quality-Projekt** , um den Abgleich in einem neuen Data Quality-Projekt auszuführen. Geben Sie unter einen Namen für das Data Quality-Projekt und eine Beschreibung ein, und wählen Sie unter **Wissensdatenbank verwenden**die Wissensdatenbank für den Abgleich aus. Klicken Sie für die Aktivität auf **Abgleich** . Klicken Sie auf **Weiter** , um zur Zuordnungsphase zu wechseln.  
   
-3.  Klicken Sie auf **Data Quality-Projekt öffnen** , um einen Abgleich in einem vorhandenen Data Quality-Projekt auszuführen. Wählen Sie das Projekt aus, und klicken Sie dann auf **Weiter**. (Sie können auch unter **Zuletzt verwendetes Data Quality-Projekt** auf ein Projekt klicken.) Wenn Sie ein Abgleichsprojekt öffnen, das geschlossen wurde, fahren Sie mit der Phase fort, in der die Abgleichsprojektaktivität geschlossen wurde (wie durch die Spalte **Status** in der Projekttabelle oder im Projektnamen unter **Zuletzt verwendetes Data Quality-Projekt** angegeben). Wenn Sie ein Abgleichsprojekt öffnen, das abgeschlossen wurde, wird die Seite **Exportieren** geöffnet (Sie können nicht zu den vorherigen Bildschirmen zurückkehren).  
+3.  Klicken Sie auf **Data Quality-Projekt öffnen** , um einen Abgleich in einem vorhandenen Data Quality-Projekt auszuführen. Wählen Sie das Projekt aus, und klicken Sie dann auf **Weiter**. (Sie können auch unter **Aktuelles Data Quality-Projekt**auf ein Projekt klicken.) Wenn Sie ein abgleichsprojekt öffnen, das geschlossen wurde, fahren Sie mit der Phase fort, in der die abgleichsprojekt-Aktivität geschlossen wurde (wie durch die Spalte **Status** in der Projekt Tabelle oder im Projektnamen unter zuletzt verwendeter **Data Quality-Projekt**angegeben). Wenn Sie ein Abgleichsprojekt öffnen, das abgeschlossen wurde, wird die Seite **Exportieren** geöffnet (Sie können nicht zu den vorherigen Bildschirmen zurückkehren).  
   
-##  <a name="MappingStage"></a> Zuordnungsphase  
+##  <a name="MappingStage"></a>Mapping-Phase  
  In der Zuordnungsphase identifizieren Sie die Quelle der Daten, für die Sie die Abgleichsanalyse ausführen, und Sie ordnen Domänen Quellspalten zu, um die Domänen für die Abgleichsaktivität verfügbar zu machen.  
   
 1.  Um den Abgleich für eine Datenbank auszuführen, übernehmen Sie auf der Seite **Zuordnen** für **Datenquelle** die Einstellung **SQL Server**, wählen Sie die Datenbank aus, für die Sie den Abgleich ausführen möchten, und wählen Sie dann die Tabelle aus. Die Quelldatenbank muss sich in der gleichen SQL Server-Instanz wie der DQS-Server befinden. Andernfalls wird sie nicht in der Dropdownliste angezeigt.  
@@ -62,7 +62,7 @@ ms.locfileid: "65481083"
     > [!NOTE]  
     >  Sie können die Quelldaten nur dann einer DQS-Domäne zuordnen, wenn der Quelldatentyp in DQS unterstützt wird und mit dem DQS-Domänendatentyp übereinstimmt. Informationen zu in DQS unterstützten Datentypen finden Sie unter [Unterstützte SQL Server- und SSIS-Datentypen für DQS-Domänen](../../2014/data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
-4.  Klicken Sie auf das Plussteuerelement **(+)** , um der Zuordnungstabelle eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)** , um eine Zeile zu entfernen.  
+4.  Klicken Sie auf das Plussteuerelement **(+)**, um der Zuordnungstabelle eine Zeile hinzuzufügen, oder auf das Minussteuerelement **(-)**, um eine Zeile zu entfernen.  
   
 5.  Klicken Sie auf **Vorschau der Datenquelle** , um die Daten in der ausgewählten SQL Server-Tabelle oder -Sicht oder im ausgewählten Excel-Arbeitsblatt anzuzeigen.  
   
@@ -73,14 +73,14 @@ ms.locfileid: "65481083"
     > [!NOTE]  
     >  Klicken Sie auf **Schließen** , um die Phase des Abgleichsprojekts zu speichern und zur DQS-Startseite zurückzukehren. Wenn Sie dieses Projekt das nächste Mal öffnen, befindet es sich in derselben Phase. Klicken Sie auf **Abbrechen** , um die Abgleichsaktivität zu beenden, ohne Ihre Arbeit zu speichern, und kehren Sie zur DQS-Startseite zurück.  
   
-##  <a name="MatchingStage"></a> Abgleichsphase  
+##  <a name="MatchingStage"></a>Abgleichsphase  
  In dieser Phase führen Sie einen computerunterstützten Abgleichsprozess aus, der anzeigt, wie viele Übereinstimmungen basierend auf den Abgleichsregeln in den Quelldaten enthalten sind. Durch diesen Prozess wird eine Abgleichsergebnistabelle generiert, in der die von DQS identifizierten Cluster, jeder Datensatz im Cluster mit der zugehörigen Datensatz-ID und die Treffergenauigkeit sowie der anfänglich führende Datensatz für den Cluster angezeigt werden. Der führende Datensatz im Cluster wird zufällig ausgewählt. Sie bestimmen den überdauernden Datensatz durch Auswählen der Survivorship-Regel auf der Seite **Exportieren** , wenn Sie das Abgleichsprojekt ausführen. Jede zusätzliche Zeile in einem Cluster wird als Treffer angesehen, dessen Treffergenauigkeit (im Vergleich zum führenden Datensatz) in der Ergebnistabelle angegeben wird. Die Clusternummer ist mit der Datensatz-ID für den führenden Datensatz im Cluster identisch.  
   
  Sie können die Abgleichsergebnisse nach den gewünschten Daten filtern und unerwünschte Treffer ablehnen. Sie können Profilerstellungsdaten für den gesamten Abgleichsprozess, Details zu den angewendeten Abgleichsregeln und Statistiken zu den Abgleichsergebnissen im Ganzen anzeigen. Der Abgleichsprozess kann überlappende oder nicht überlappende Cluster identifizieren. wenn er mehrfach ausgeführt wird, kann er zudem auf Daten, die neu aus der Quelle kopiert und indiziert wurden, oder auf frühere Daten angewendet werden.  
   
 1.  Wählen Sie auf der Seite **Abgleich**aus der Dropdownliste die Option **Überlappende Cluster** aus, um die Pivotdatensätze und die folgenden Datensätze für alle Cluster anzuzeigen, wenn der Abgleich ausgeführt wird, auch wenn Gruppen von Clustern gemeinsame Datensätze aufweisen. Wählen Sie **Nicht überlappende Cluster** aus, um Cluster anzuzeigen, die als einzelne Cluster gemeinsame Datensätze aufweisen, wenn der Abgleich ausgeführt wird.  
   
-2.  Klicken Sie auf **Erneut aus Datenquelle laden** (Standardeinstellung), um Daten aus der Datenquelle in die Stagingtabelle zu kopieren und neu zu indizieren, wenn Sie das Abgleichsprojekt ausführen. Klicken Sie auf **Für vorherige Daten ausführen** , um ein Abgleichsprojekt auszuführen, ohne die Daten in die Stagingtabelle zu kopieren und neu zu indizieren. **Für vorherige Daten ausführen** ist für die erste Ausführung des Abgleichsprojekts deaktiviert. Dies gilt auch, wenn Sie die Zuordnung auf der Seite **Zuordnen** ändern und in der folgenden Meldung auf **Ja** klicken. In beiden Fällen müssen Sie die Daten erneut indizieren. Die Neuindizierung ist nicht erforderlich, wenn das Abgleichsprojekt nicht geändert wurde. Durch die Ausführung für vorherige Daten kann die Leistung verbessert werden.  
+2.  Klicken Sie auf **Erneut aus Datenquelle laden** (Standardeinstellung), um Daten aus der Datenquelle in die Stagingtabelle zu kopieren und neu zu indizieren, wenn Sie das Abgleichsprojekt ausführen. Klicken Sie auf **Für vorherige Daten ausführen** , um ein Abgleichsprojekt auszuführen, ohne die Daten in die Stagingtabelle zu kopieren und neu zu indizieren. Für **vorherige Daten ausführen** ist für die erste Ausführung des abgleichsprojekts deaktiviert, oder wenn Sie die Zuordnung auf der Seite **map** ändern, und klicken Sie dann im folgenden Popup auf **Ja** . In beiden Fällen müssen Sie die Daten erneut indizieren. Die Neuindizierung ist nicht erforderlich, wenn das Abgleichsprojekt nicht geändert wurde. Durch die Ausführung für vorherige Daten kann die Leistung verbessert werden.  
   
 3.  Klicken Sie auf **Start** , um den Abgleich für die ausgewählte Datenquelle auszuführen.  
   
@@ -96,18 +96,18 @@ ms.locfileid: "65481083"
   
 9. Um einen Datensatz aus den Abgleichsergebnissen auszuschließen, klicken Sie auf das Kontrollkästchen **Abgelehnt** für den Datensatz.  
   
-10. Zum Ändern der minimalen Treffergenauigkeit, durch die der Grad der Übereinstimmung bestimmt wird, die ein Datensatz aufweisen muss, um angezeigt zu werden, wählen Sie das **minimale Treffergenauigkeit**-Symbol über der rechten Seite der Tabelle aus, und geben Sie eine höhere Zahl ein. Die minimale Treffergenauigkeit ist standardmäßig auf 80% festgelegt. Klicken Sie auf **Aktualisieren** , um den Inhalt der Tabelle zu ändern.  
+10. Um die minimale Treffergenauigkeit zu ändern, durch die der Grad der Übereinstimmung bestimmt wird, die ein Datensatz aufweisen muss, um angezeigt zu werden, wählen Sie das **minimale Treffergenauigkeit** -Symbol über der rechten Seite der Tabelle aus, und geben Sie eine höhere Zahl ein. Die minimale Treffergenauigkeit ist standardmäßig auf 80% festgelegt. Klicken Sie auf **Aktualisieren** , um den Inhalt der Tabelle zu ändern.  
   
 11. Nachdem die Analyse abgeschlossen wurde, wird die Schaltfläche **Start** zur Schaltfläche **Neustart** . Klicken Sie auf **Neustart** , um das Analyseprojekt erneut auszuführen. Wenn die Ergebnisse der vorherigen Analyse noch nicht gespeichert wurden, gehen beim Klicken auf **Neustart** jedoch die vorherigen Daten verloren. Klicken Sie zum Fortfahren in dem Popupfenster auf **Ja** . Verlassen Sie während der Ausführung der Analyse nicht die Seite, da ansonsten der Analyseprozess abgebrochen wird.  
   
 12. Klicken Sie auf **Weiter** , um zur Survivorship- und Exportphase zu wechseln.  
   
-##  <a name="SurvivorshipandExportStage"></a> Survivorship- und Exportphase  
+##  <a name="SurvivorshipandExportStage"></a>Survivorship-und Export Phase  
  Im Survivorship-Prozess bestimmt Data Quality Services einen Survivor-Datensatz für jeden Cluster, der die anderen Datensätze ersetzt, die im Cluster mit ihm übereinstimmen. Anschließend werden die übereinstimmenden und/oder Survivorship-Ergebnisse in eine Tabelle in der SQL Server-Datenbank, in einer CSV-Datei oder in einer Excel-Datei exportiert.  
   
  Survivorship ist optional. Sie können die Ergebnisse auch ohne Ausführung von Survivorship exportieren. In diesem Fall verwendet DQS den Pivotdatensatz, der in der Abgleichsanalyse festgelegt wurde. Wenn zwei oder mehr Datensätze in einem Cluster die Survivorship-Regel erfüllen, wählt der Survivorship-Prozess die niedrigste Datensatz-ID in den konfliktverursachenden Datensätzen als Survivor aus. Sie können Survivor mit unterschiedlichen Survivorship-Regeln in verschiedene Dateien oder Tabellen exportieren.  
   
-1.  Wählen Sie auf der Seite **Exportieren** unter **Zieltyp** das Ziel aus, in das die übereinstimmenden Daten exportiert werden sollen: **SQL Server**, **CSV-Datei** oder **Excel-Datei**.  
+1.  Wählen Sie auf der Seite **Exportieren** unter **Zieltyp**das ziel aus, in das die übereinstimmenden Daten exportiert werden sollen: **SQL Server**, **CSV-Datei**oder **Excel-Datei**.  
   
     > [!IMPORTANT]  
     >  Wenn Sie die 64-Bit-Version von Excel verwenden, können Sie die übereinstimmenden Daten nicht in eine Excel-Datei exportieren; Sie können sie nur in eine SQL Server-Datenbank oder eine CSV-Datei exportieren.  
@@ -141,7 +141,7 @@ ms.locfileid: "65481083"
   
     -   Wählen Sie **Pivotdatensatz** (Standardeinstellung) aus, um den Survivor-Datensatz als den ursprünglichen Pivotdatensatz zu identifizieren, der von DQS willkürlich ausgewählt wird.  
   
-    -   Wählen Sie **Vollständigster und längster Datensatz** aus, um den Survivor-Datensatz als den mit der größten Anzahl ausgefüllter Felder und mit der größten Anzahl von Begriffen in jedem Feld zu identifizieren. Alle Quellfelder werden überprüft, auch die Felder, die auf der Seite **Zuordnen** keiner Domäne zugeordnet wurden.  
+    -   Wählen Sie **Vollständigster und längster Datensatz** aus, um den Survivor-Datensatz als den mit der größten Anzahl ausgefüllter Felder und mit der größten Anzahl von Begriffen in jedem Feld zu identifizieren. Alle Quell Felder werden geprüft, auch die Felder, die keiner Domäne auf der Seite " **map** " zugeordnet wurden.  
   
     -   Wählen Sie **Vollständigster Datensatz** aus, um den Survivor-Datensatz als den mit der größten Anzahl ausgefüllter Felder zu identifizieren. Ein ausgefülltes Feld enthält mindestens einen Wert (Zeichenfolge, numerisch oder beides). Alle Quellfelder werden überprüft, auch die Felder, die auf der Seite Zuordnen keiner Domäne zugeordnet wurden. Ein ausgefülltes Feld enthält mindestens einen Wert (Zeichenfolge, numerisch oder beides).  
   
@@ -164,10 +164,10 @@ ms.locfileid: "65481083"
     > [!NOTE]  
     >  Wenn Sie ein Abgleichsprojekt beendet haben und es dann erneut verwenden, verwendet es die Wissensdatenbank in dem Zustand, als es veröffentlicht wurde. Es werden keine Änderungen berücksichtigt, die Sie seit Abschluss des Projekts an der Wissensdatenbank vorgenommen haben. Um die Änderungen oder eine neue Wissensdatenbank zu verwenden, müssen Sie ein neues Abgleichsprojekt erstellen. Wenn Sie jedoch ein Abgleichsprojekt erstellt, aber noch nicht abgeschlossen haben, werden alle an der Abgleichsrichtlinie vorgenommenen und veröffentlichten Änderungen beim Ausführen des Abgleichs in dem Projekt verwendet.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Ausführen eines Abgleichsprojekts  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Ausführen eines abgleichsprojekts  
  Nachdem Sie ein Abgleichsprojekt ausgeführt haben, können Sie die Abgleichsrichtlinie in der Wissensdatenbank ändern und ein anderes Abgleichsprojekt basierend auf der aktualisierten Abgleichsrichtlinie erstellen und ausführen. Weitere Informationen finden Sie unter [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Profiler"></a> Registerkarten „Profiler“ und „Ergebnisse“  
+##  <a name="Profiler"></a>Registerkarten für Profiler und Ergebnisse  
  Die Registerkarten „Profiler“ und „Ergebnisse“ enthalten Statistiken für den Abgleichsprozess.  
   
 ### <a name="profiler-tab"></a>Registerkarte „Profiler“  
@@ -175,27 +175,27 @@ ms.locfileid: "65481083"
   
  Die Quelldatenbankstatistiken umfassen Folgendes:  
   
--   **Datensätze:** Die Gesamtzahl der Datensätze in der Datenbank  
+-   **Datensätze**: die Gesamtanzahl der Datensätze in der Datenbank  
   
--   **Gesamtwerte:** Die Gesamtzahl der Werte in den Feldern  
+-   **Gesamtwerte**: die Gesamtzahl der Werte in den Feldern  
   
--   **Neue Werte:** Die Gesamtzahl der Werte, die seit der vorherigen Ausführung neu sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue Werte**: die Gesamtzahl der Werte, die seit der vorherigen Durchführung neu sind, und Ihr gesamter Prozentsatz.  
   
--   **Eindeutige Werte:** Die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am Ganzen  
+-   **Eindeutige Werte**: die Gesamtzahl der eindeutigen Werte in den Feldern und ihr prozentualer Anteil am ganzen  
   
--   **Neue eindeutige Werte:** Die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und ihr prozentualer Anteil am Ganzen  
+-   **Neue eindeutige Werte**: die Gesamtzahl der eindeutigen Werte, die neu in den Feldern sind, und Ihr gesamter Prozentsatz.  
   
  Die Feldstatistiken umfassen Folgendes:  
   
--   **Feld:** Name des Felds, das in die Zuordnungen eingeschlossen wurde  
+-   **Feld**: Name des Felds, das in den Zuordnungen enthalten war.  
   
--   **Domäne:** Name der Domäne, die dem Feld zugeordnet wurde  
+-   **Domäne**: Name der Domäne, die dem Feld zugeordnet wurde.  
   
--   **Neu:** Die Anzahl der neuen Übereinstimmungen und ihr prozentualer Anteil am Ganzen  
+-   **Neu**: die Anzahl der gefundenen neuen Übereinstimmungen und ihr prozentualer Anteil am Gesamtwert  
   
--   **Eindeutig:** Die Gesamtzahl der eindeutigen Datensätze im Feld und ihr prozentualer Anteil an den Gesamtwerten  
+-   **Eindeutig**: die Anzahl der eindeutigen Datensätze im Feld und deren prozentualer Wert des Gesamtwerts  
   
--   **Vollständigkeit:** Der Prozentsatz, zu dem die Regelausführung abgeschlossen wurde  
+-   **Vollständigkeit**: der Prozentsatz, zu dem die Regel Ausführung beendet wurde.  
   
 ### <a name="matching-policy-notifications"></a>Abgleichsrichtlinienbenachrichtigungen  
  Für die Abgleichsrichtlinienaktivität führen die folgenden Bedingungen zu Benachrichtigungen:  
@@ -213,10 +213,10 @@ ms.locfileid: "65481083"
 ### <a name="matching-rules-tab"></a>Registerkarte „Abgleichsregeln“  
  Klicken Sie auf diese Registerkarte, um eine Liste der Regeln in der Abgleichsrichtlinie und die Bedingungen für eine Regel anzuzeigen.  
   
- **Liste „Regeln“**  
+ **Regel Liste**  
  Zeigt eine Liste aller Abgleichsregeln in der Abgleichsrichtlinie an. Wählen Sie eine der Regeln aus, um die Bedingungen in der Regel in der Tabelle „Abgleichsregel“ anzuzeigen.  
   
- **Tabelle „Abgleichsregel“**  
+ **Abgleichsregel Tabelle**  
  Zeigt jede Bedingung in der ausgewählten Regel an, einschließlich Domäne, Ähnlichkeitswerts, Gewichtung und erforderlicher Auswahl.  
   
 ### <a name="matching-results-tab"></a>Registerkarte „Abgleichsergebnisse“  

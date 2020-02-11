@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Agent-Tabellen (Transact-SQL) | Microsoft-Dokumentation
+title: SQL Server-Agent Tabellen (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 6cb39bfd-079e-4be4-9c42-2fa234c65ce1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fcc811542ad0b7884b703a02b4c983b8752ba200
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68130589"
 ---
 # <a name="sql-server-agent-tables-transact-sql"></a>SQL Server-Agent-Tabellen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  In den Themen in diesem Abschnitt werden die Systemtabellen beschrieben, in denen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendete Informationen gespeichert werden. Alle Tabellen sind im Dbo-Schema in der Msdb-Datenbank.  
+  In den Themen in diesem Abschnitt werden die Systemtabellen beschrieben, in denen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendete Informationen gespeichert werden. Alle Tabellen befinden sich im dbo-Schema in der msdb-Datenbank.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [dbo.sysalerts](../../relational-databases/system-tables/dbo-sysalerts-transact-sql.md)  
@@ -47,7 +47,7 @@ ms.locfileid: "68130589"
  Speichert die Informationen für jeden geplanten Auftrag, der vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt werden soll.  
   
  [dbo.sysjobschedules](../../relational-databases/system-tables/dbo-sysjobschedules-transact-sql.md)  
- Enthält Informationen zum Zeitplan für Aufträge ausgeführt werden soll [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent  
+ Enthält Zeit Plan Informationen für Aufträge, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt werden.  
   
  [dbo.sysjobservers](../../relational-databases/system-tables/dbo-sysjobservers-transact-sql.md)  
  Speichert die Zuordnung oder Beziehung eines bestimmten Auftrags zu einem oder mehreren Zielservern.  

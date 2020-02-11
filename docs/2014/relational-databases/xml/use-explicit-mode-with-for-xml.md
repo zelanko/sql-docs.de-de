@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231273"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
-  Wie im Thema [Erstellen von XML mithilfe von FOR XML](../xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
+  Wie im Thema [Erstellen von XML mithilfe von for XML](../xml/for-xml-sql-server.md)beschrieben, bieten RAW-und Auto-Modus keine viel Kontrolle über die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
   
  Die Abfrage im EXPLICIT-Modus muss so geschrieben werden, dass die zusätzlichen Informationen zu der erforderlichen XML-Ausgabe, wie z. B. die erwartete Schachtelung, explizit als Teil der Abfrage angegeben werden. Das Schreiben von Abfragen im EXPLICIT-Modus kann jedoch aufwendig sein, je nachdem, welche XML-Daten erforderlich sind. Möglicherweise ist das [Verwenden des PATH-Modus](../xml/use-path-mode-with-for-xml.md) mit Schachtelung dem Schreiben von Abfragen im EXPLICIT-Modus als einfachere Alternative vorzuziehen.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63231273"
   
  Zum besseren Verständnis dazu, wie die von der Abfrage generierte Universaltabelle zu einem XML-Ergebnis verarbeitet wird, nehmen Sie einmal an, Sie haben eine Abfrage geschrieben, die die folgende Universaltabelle erstellt:  
   
- ![Beispieluniversaltabelle](../../database-engine/media/xmlutable.gif "Sample universal table")  
+ ![Beispieluniversaltabelle](../../database-engine/media/xmlutable.gif "Beispieluniversaltabelle")  
   
  Beachten Sie hinsichtlich dieser Universaltabelle Folgendes:  
   
@@ -51,11 +51,11 @@ ms.locfileid: "63231273"
   
 -   Beim Generieren der XML-Ausgabe aus dieser Universaltabelle werden die Daten dieser Tabelle vertikal in Spaltengruppen partitioniert. Die Gruppierung wird aufgrund des **Tag** -Wertes und der Spaltennamen bestimmt. Beim Konstruieren der XML-Ausgabe wählt die Verarbeitungslogik jeweils eine Spaltengruppe für jede Zeile aus und konstruiert so ein Element. In diesem Beispiel gilt Folgendes:  
   
-    -   Für den Wert „1“ in der ersten Zeile der **Tag**-Spalte bilden die Spalten, deren Namen dieselbe Tagnummer enthalten, also **Customer!1!cid** und **Customer!1!name**, eine Gruppe. Diese Spalten werden nun beim Verarbeiten der Zeile verwendet. Beachten Sie auch die Form des generierten Elements: <`Customer id=... name=...`>. Das Format der Spaltennamen wird weiter unten in diesem Thema beschrieben.  
+    -   Für den Wert „1“ in der ersten Zeile der **Tag** -Spalte bilden die Spalten, deren Namen dieselbe Tagnummer enthalten, also **Customer!1!cid** und **Customer!1!name**, eine Gruppe. Diese Spalten werden nun beim Verarbeiten der Zeile verwendet. Beachten Sie auch die Form des generierten Elements: <`Customer id=... name=...`>. Das Format der Spaltennamen wird weiter unten in diesem Thema beschrieben.  
   
     -   Für die Zeilen mit dem Wert „2“ in der **Tag**-Spalte bilden die Spalten **Order!2!id** und **Order!2!date** eine Gruppe, die dann zum Konstruieren der Elemente verwendet wird, <`Order id=... date=... /`>.  
   
-    -   Für die Zeilen mit dem Wert „3“ in der **Tag**-Spalte bilden die Spalten **OrderDetail!3!id!id** und **OrderDetail!3!pid!idref** ebenfalls eine Gruppe. Jede dieser Zeilen generiert ein Element, <`OrderDetail id=... pid=...`>, aus diesen Spalten.  
+    -   Für die Zeilen mit dem Wert „3“ in der **Tag** -Spalte bilden die Spalten **OrderDetail!3!id!id** und **OrderDetail!3!pid!idref** ebenfalls eine Gruppe. Jede dieser Zeilen generiert ein Element, <`OrderDetail id=... pid=...`>, aus diesen Spalten.  
   
 -   Beachten Sie, dass die Zeilen beim Generieren der XML-Hierarchie der Reihe nach verarbeitet werden. Die XML-Hierarchie wird wie folgt bestimmt:  
   
@@ -65,14 +65,14 @@ ms.locfileid: "63231273"
         <Customer cid="C1" name="Janine">  
         ```  
   
-    -   In der zweiten Zeile werden der **Tag** -Wert 2 und der **Parent** -Wert 1 aufgeführt. Folglich wird dem <`Customer`>-Element das untergeordnete <`Order`>-Element hinzugefügt.  
+    -   In der zweiten Zeile werden der **Tag** -Wert 2 und der **Parent** -Wert 1 aufgeführt. Folglich wird dem <`Order`>-Element das untergeordnete <`Customer`>-Element hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
            <Order id="O1" date="1/20/1996">  
         ```  
   
-    -   In den nächsten beiden Zeilen werden der **Tag** -Wert 3 und der **Parent** -Wert 2 aufgeführt. Folglich werden dem <`Order`>-Element die beiden untergeordneten <`OrderDetail`>-Elemente hinzugefügt.  
+    -   In den nächsten beiden Zeilen werden der **Tag** -Wert 3 und der **Parent** -Wert 2 aufgeführt. Folglich werden dem <`OrderDetail`>-Element die beiden untergeordneten <`Order`>-Elemente hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -81,7 +81,7 @@ ms.locfileid: "63231273"
               <OrderDetail id="OD2" pid="P2"/>  
         ```  
   
-    -   Die letzte Zeile identifiziert die **Tag** -Nummer 2 und die **Parent** -Tagnummer 1. Folglich wird dem übergeordneten <`Customer`>-Element ein weiteres untergeordnetes <`Order`>-Element hinzugefügt.  
+    -   Die letzte Zeile identifiziert die **Tag** -Nummer 2 und die **Parent** -Tagnummer 1. Folglich wird dem übergeordneten <`Order`>-Element ein weiteres untergeordnetes <`Customer`>-Element hinzugefügt.  
   
         ```  
         <Customer cid="C1" name="Janine">  
@@ -116,21 +116,21 @@ ElementName!TagNumber!AttributeName!Directive
  *TagNumber*  
  Ein eindeutiger, einem Element zugewiesener Tagwert. Dieser Wert bestimmt mithilfe der beiden Metadatenspalten **Tag** und **Parent**die Schachtelung der Elemente in der XML-Ausgabe.  
   
- *AttributeName*  
+ *Attributname*  
  Stellt den Namen des zu konstruierenden Attributs im angegebenen *ElementName*-Element bereit. Dieses Verhalten gilt, wenn kein Wert für *Directive* angegeben wird.  
   
  Wenn einer der Werte *xml* , **cdata**oder **element**für **Directive**angegeben wird, wird dieser Wert zum Konstruieren eines untergeordneten Elements von *ElementName*verwendet, und der Wert der Spalte wird diesem hinzugefügt.  
   
  Wenn Sie einen Wert für *Directive*angeben, kann *AttributeName* leer sein. Beispiel: ElementName!TagNumber!!Directive. In diesem Fall ist der Spaltenwert direkt in *ElementName*enthalten.  
   
- *Directive*  
- *Directive* ist optional und wird zum Bereitstellen zusätzlicher Informationen für das Konstruieren der XML-Ausgabe verwendet. *Directive* hat zwei Aufgaben.  
+ *Direktive*  
+ Die *Direktive* ist optional, und Sie können Sie verwenden, um zusätzliche Informationen für die XML-Erstellung bereitzustellen. Die *Direktive* hat zwei Zwecke.  
   
  Die erste besteht darin, Werte als ID, IDREF und IDREFS zu codieren. Sie können die Schlüsselwörter **ID**, **IDREF**und **IDREFS** als Werte für *Directive*angeben. Diese Direktiven überschreiben die Attributtypen. Außerdem ermöglichen sie, dokumentinterne Links zu erstellen.  
   
  Sie können *Directive* auch verwenden, um anzugeben, wie die Zeichenfolgendaten der XML-Ausgabe zugeordnet werden sollen. Als Werte für **Directive**können die Schlüsselwörter **hide**, **element, elementxsinil**, **xml**, **xmltext** und *cdata*verwendet werden. Die **hide** -Direktive blendet den Knoten aus. Dies kann sich als nützlich erweisen, wenn Sie Werte nur zu Sortierzwecken abrufen, jedoch nicht in der resultierenden XML-Ausgabe verwenden möchten.  
   
- Die **element** -Direktive generiert ein enthaltenes Element anstelle eines Attributs. Die enthaltenen Daten sind als Entität codiert. So wird z. B. das Zeichen **<** zu &lt;. Bei Spaltenwerten von NULL wird kein Element generiert. Wenn Sie möchten, dass für NULL-Spaltenwerte Elemente generiert werden, können Sie die **elementxsinil** -Direktive angeben. Damit wird ein Element mit dem Attribut xsi:nil=TRUE generiert.  
+ Die **element** -Direktive generiert ein enthaltenes Element anstelle eines Attributs. Die enthaltenen Daten sind als Entität codiert. Beispielsweise wird das **<** Zeichen zu &lt;. Bei Spaltenwerten von NULL wird kein Element generiert. Wenn Sie möchten, dass für NULL-Spaltenwerte Elemente generiert werden, können Sie die **elementxsinil** -Direktive angeben. Damit wird ein Element mit dem Attribut xsi:nil=TRUE generiert.  
   
  Die **xml** -Direktive ist mit der **element** -Direktive identisch, mit der Ausnahme, dass keine Entitätscodierung vorgenommen wird. Beachten Sie, dass die **element** -Direktive mit **ID**, **IDREF**oder **IDREFS**kombiniert werden kann; die **xml** -Direktive hingegen ist mit keiner anderen Direktive außer **hide**zulässig.  
   
@@ -149,28 +149,28 @@ ElementName!TagNumber!AttributeName!Directive
   
 -   [Beispiel: Abrufen von Informationen zu Mitarbeitern](../xml/example-retrieving-employee-information.md)  
   
--   [Beispiel: Angeben der ELEMENT-Anweisung](../xml/example-specifying-the-element-directive.md)  
+-   [Beispiel: Angeben der ELEMENT-Direktive](../xml/example-specifying-the-element-directive.md)  
   
--   [Beispiel: Angeben der ELEMENTXSINIL-Anweisung](../xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Beispiel: Angeben der ELEMENTXSINIL-Direktive](../xml/example-specifying-the-elementxsinil-directive.md)  
   
 -   [Beispiel: Erstellen von gleichgeordneten Elementen im EXPLICIT-Modus](../xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Beispiel: Angeben der ID- und IDREF-Anweisungen](../xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Beispiel: Angeben der ID- und der IDREF-Direktive](../xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Beispiel: Angeben der ID- und IDREFS-Anweisungen](../xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Beispiel: Angeben der ID- und der IDREFS-Direktive](../xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Beispiel: Angeben der HIDE-Anweisung](../xml/example-specifying-the-hide-directive.md)  
+-   [Beispiel: Angeben der HIDE-Direktive](../xml/example-specifying-the-hide-directive.md)  
   
--   [Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung](../xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Beispiel: Angeben der CDATA-Anweisung](../xml/example-specifying-the-cdata-directive.md)  
+-   [Beispiel: Angeben der CDATA-Direktive](../xml/example-specifying-the-cdata-directive.md)  
   
--   [Beispiel: Angeben der XMLTEXT-Anweisung](../xml/example-specifying-the-xmltext-directive.md)  
+-   [Beispiel: Angeben der XMLTEXT-Direktive](../xml/example-specifying-the-xmltext-directive.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden des RAW-Modus mit FOR XML](../xml/use-raw-mode-with-for-xml.md)   
- [Verwenden des AUTO-Modus mit FOR XML](../xml/use-auto-mode-with-for-xml.md)   
- [Verwenden des PATH-Modus mit FOR XML](../xml/use-path-mode-with-for-xml.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden des RAW-Modus mit for XML](../xml/use-raw-mode-with-for-xml.md)   
+ [Verwenden des Auto-Modus mit for XML](../xml/use-auto-mode-with-for-xml.md)   
+ [Verwenden des PATH-Modus mit for XML](../xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   

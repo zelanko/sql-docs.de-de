@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62823697"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten
@@ -37,13 +37,13 @@ ms.locfileid: "62823697"
 ## <a name="object-explorer-node-report-parameters-example"></a>Berichtsparameter für Objekt-Explorer-Knoten (Beispiel)  
  Gehen Sie zum Ausführen dieses Beispiels wie folgt vor:  
   
- **So zeigen Sie die Berichtsparameterwerte für einen Knoten im Objekt-Explorer an**  
+ **So zeigen Sie die Berichts Parameterwerte für einen Knoten in Objekt-Explorer an**  
   
 1.  Kopieren Sie den folgenden Beispielcode in eine neue Textdatei, und benennen Sie die Datei mit einer RDL-Erweiterung.  
   
 2.  Kopieren Sie die Berichtsdatei in einen Ordner, den Sie auf dem Datenbankserver für benutzerdefinierte Berichte erstellt haben.  
   
-3.  Klicken Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf einen Knoten im Objekt-Explorer, zeigen Sie auf **Berichte**, und klicken Sie auf „Benutzerdefinierte Berichte“. Suchen Sie im Dialogfeld **Datei öffnen** den Ordner mit den benutzerdefinierten Berichten, wählen Sie die Berichtsdatei aus, und klicken Sie dann auf **Öffnen**.  
+3.  Klicken [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Sie in Objekt-Explorer mit der rechten Maustaste auf einen Knoten, zeigen Sie auf **Berichte**, und klicken Sie auf benutzerdefinierte Berichte. Suchen Sie im Dialogfeld **Datei öffnen** den Ordner mit den benutzerdefinierten Berichten, wählen Sie die Berichtsdatei aus, und klicken Sie dann auf **Öffnen**.  
   
      Wenn ein neuer benutzerdefinierter Bericht erstmalig von einem Knoten des Objekt-Explorers aus geöffnet wird, wird der Liste zuletzt verwendeter Objekte im Kontextmenü dieses Knotens unter **Benutzerdefinierte Berichte** dieser benutzerdefinierte Bericht hinzugefügt. Wenn ein Standardbericht erstmalig geöffnet wird, wird er auch in der Liste zuletzt verwendeter Objekte unter **Benutzerdefinierte Berichte**angezeigt. Wenn eine benutzerdefinierte Berichtsdatei gelöscht wird, wird beim nächsten Auswählen des Elements eine Aufforderung angezeigt, das Element aus der Liste zuletzt verwendeter Objekte zu löschen.  
   
@@ -998,7 +998,7 @@ ms.locfileid: "62823697"
   
  `</Report>`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte Berichte in Management Studio](custom-reports-in-management-studio.md)   
  [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](add-a-custom-report-to-management-studio.md)   
  [Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten](unsuppress-run-custom-report-warnings.md)  

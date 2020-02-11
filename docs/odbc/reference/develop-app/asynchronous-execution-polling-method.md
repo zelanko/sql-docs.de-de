@@ -1,5 +1,5 @@
 ---
-title: Asynchrone Ausführung (Abrufmethode) | Microsoft-Dokumentation
+title: Asynchrone Ausführung (Abruf Methode) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,29 +13,29 @@ ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077051"
 ---
 # <a name="asynchronous-execution-polling-method"></a>Asynchrone Ausführung (Abrufmethode)
-Vor der ODBC 3.8 und der Windows 7-SDK waren asynchrone Vorgänge nur auf Anweisung Funktionen zulässig. Weitere Informationen finden Sie unter den **Anweisung-Vorgänge asynchron ausführen**weiter unten in diesem Thema.  
+Vor ODBC 3,8 und dem Windows 7 SDK waren asynchrone Vorgänge nur für Anweisungs Funktionen zulässig. Weitere Informationen finden Sie unter **asynchrone Vorgänge der Ausführung**von Anweisungen weiter unten in diesem Thema.  
   
- ODBC 3.8 im Windows 7 SDK wurde die asynchrone Ausführung von Vorgängen mit Verbindungen eingeführt. Weitere Informationen finden Sie unter den **Verbindung-Vorgänge asynchron ausführen** weiter unten in diesem Thema.  
+ ODBC 3,8 im Windows 7 SDK führte die asynchrone Ausführung für verbindungsbezogene Vorgänge ein. Weitere Informationen finden Sie weiter unten in diesem Thema im Abschnitt **asynchrones Ausführen von Verbindungs Vorgängen** .  
   
- In der Windows 7-SDK für asynchrone-Anweisung oder Verbindungsvorgängen sendet bestimmt eine Anwendung an, dass der asynchrone Vorgang abgeschlossen ist, verwenden der Abrufmethode war. Ab Windows 8 SDK, können Sie feststellen, dass ein asynchroner Vorgang abgeschlossen ist, verwenden die Benachrichtigungsmethode ist. Weitere Informationen finden Sie unter [asynchrone Ausführung (Benachrichtigungsmethode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
+ Im Windows 7 SDK hat eine Anwendung für asynchrone Anweisungs-oder Verbindungs Vorgänge festgestellt, dass der asynchrone Vorgang mit der Abruf Methode durchgeführt wurde. Ab dem Windows 8 SDK können Sie mithilfe der Benachrichtigungs Methode ermitteln, ob ein asynchroner Vorgang fertiggestellt ist. Weitere Informationen finden Sie unter [asynchrone Ausführung (Benachrichtigungs Methode)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md).  
   
- Standardmäßig werden Treiber ODBC-Funktionen synchron; also die Anwendung ruft eine Funktion, und der Treiber ist keine Steuerung erst zurück, an die Anwendung Ausführung der Funktion abgeschlossen wurde. Einige Funktionen können jedoch asynchron ausgeführt werden; d. h. die Anwendung ruft die Funktion, und die Treiber nach der minimale Verarbeitung übergibt die Steuerung an die Anwendung. Die Anwendung kann dann andere Funktionen aufrufen, während die erste Funktion noch ausgeführt wird.  
+ Standardmäßig werden ODBC-Funktionen von Treibern synchron ausgeführt. Dies bedeutet, dass die Anwendung eine Funktion aufruft und der Treiber die Steuerung erst dann an die Anwendung zurückgibt, wenn die Ausführung der Funktion abgeschlossen ist. Einige Funktionen können jedoch asynchron ausgeführt werden. Das heißt, die Anwendung ruft die-Funktion auf, und der Treiber gibt nach minimaler Verarbeitung die Steuerung an die Anwendung zurück. Die Anwendung kann dann andere Funktionen aufzurufen, während die erste Funktion noch ausgeführt wird.  
   
- Asynchrone Ausführung wird unterstützt, für die meisten Funktionen, die zum größten Teil der Datenquelle ausgeführt werden, wie z. B. die Funktionen zum Herstellen von Verbindungen, Vorbereiten und Ausführen von SQL-Anweisungen, Abrufen von Metadaten, Daten abzurufen und commit der Transaktionen. Es ist besonders hilfreich, wenn die Aufgabe ausgeführt wird, für die Datenquelle sehr lange, wie z. B. einen Anmeldeprozess oder eine komplexe Abfrage in einer großen Datenbank dauert.  
+ Die asynchrone Ausführung wird für die meisten Funktionen unterstützt, die größtenteils in der Datenquelle ausgeführt werden, wie z. b. die Funktionen zum Herstellen von Verbindungen, vorbereiten und Ausführen von SQL-Anweisungen, Abrufen von Metadaten, Abrufen von Daten und committransaktionen. Dies ist besonders hilfreich, wenn der Task, der für die Datenquelle ausgeführt wird, lange Zeit benötigt, z. b. ein Anmeldevorgang oder eine komplexe Abfrage für eine große Datenbank.  
   
- Wenn die Anwendung ausgeführt, eine Funktion mit einer Anweisung oder die Verbindung, die für die asynchrone Verarbeitung aktiviert ist wird, der Treiber führt eine minimale Menge an Verarbeitungstyp (z. B. überprüfen die Argumente für Fehler), übergibt die Verarbeitung an die Datenquelle und gibt zurück die Steuerung an die Anwendung mit dem Rückgabecode SQL_STILL_EXECUTING. Die Anwendung führt anschließend andere Aufgaben. Um zu bestimmen, wenn die asynchrone Funktion abgeschlossen ist, fragt die Anwendung den Treiber in regelmäßigen Abständen durch Aufrufen der Funktion mit den gleichen Argumenten wie ursprünglich verwendet ab. Wenn die Funktion weiterhin ausgeführt wird, gibt sie SQL_STILL_EXECUTING zurück. Wenn sie die Ausführung beendet hat, wird der Code, den er es synchron ausgeführt worden, wie SQL_SUCCESS oder SQL_ERROR SQL_NEED_DATA zurückgegeben. zurückgegeben hätte zurückgegeben.  
+ Wenn die Anwendung eine Funktion mit einer-Anweisung oder-Verbindung ausführt, die für die asynchrone Verarbeitung aktiviert ist, führt der Treiber einen minimalen Verarbeitungsaufwand aus (z. b. das Überprüfen von Argumenten auf Fehler), die Verarbeitung der Datenquelle und die Rückgabe von Steuern Sie die Anwendung mit dem SQL_STILL_EXECUTING Rückgabecode. Die Anwendung führt dann andere Aufgaben aus. Um zu ermitteln, wann die asynchrone Funktion abgeschlossen wurde, ruft die Anwendung den Treiber in regelmäßigen Abständen ab, indem die Funktion mit denselben Argumenten aufgerufen wird, die ursprünglich verwendet wurde. Wenn die Funktion noch ausgeführt wird, wird SQL_STILL_EXECUTING zurückgegeben. Wenn die Ausführung abgeschlossen ist, wird der Code zurückgegeben, der zurückgegeben wurde, wenn er synchron ausgeführt wurde, z. b. SQL_SUCCESS, SQL_ERROR oder SQL_NEED_DATA.  
   
- Gibt an, ob eine Funktion synchron oder asynchron ausgeführt wird, ist treiberspezifisch. Nehmen wir beispielsweise an die resultsetmetadaten im Treiber zwischengespeichert wird. In diesem Fall nur sehr wenig Zeit für die Ausführung dauert **SQLDescribeCol** und der Treiber sollte einfach die Funktion ausführen, statt künstlich Ausführung verzögern. Andererseits, wenn der Treiber zum Abrufen der Metadaten aus der Datenquelle muss, sollte zurückgegeben werden Steuerelement an die Anwendung während sie dies erreicht. Die Anwendung muss daher einen anderen Rückgabecode als SQL_STILL_EXECUTING verarbeiten, wenn sie zunächst eine Funktion asynchron ausgeführt wird.  
+ Ob eine Funktion synchron oder asynchron ausgeführt wird, ist Treiber spezifisch. Nehmen wir beispielsweise an, dass die Resultsetmetadaten im Treiber zwischengespeichert werden. In diesem Fall dauert die Ausführung von **SQLDescribeCol** sehr wenig Zeit, und der Treiber sollte die Funktion einfach ausführen, anstatt die Ausführung künstlich zu verzögern. Wenn der Treiber dagegen die Metadaten aus der Datenquelle abrufen muss, sollte er die Steuerung an die Anwendung zurückgeben. Daher muss die Anwendung einen anderen Rückgabecode als SQL_STILL_EXECUTING verarbeiten können, wenn Sie eine Funktion zum ersten Mal asynchron ausführt.  
   
-## <a name="executing-statement-operations-asynchronously"></a>Anweisung Vorgänge asynchron ausführen  
- Die folgenden Funktionen für die Anweisung für eine Datenquelle verwendet werden und können asynchron ausgeführt werden:  
+## <a name="executing-statement-operations-asynchronously"></a>Asynchrones Ausführen von Anweisungs Operationen  
+ Die folgenden-Anweisungs Funktionen arbeiten auf einer Datenquelle und können asynchron ausgeführt werden:  
   
 ||||  
 |-|-|-|  
@@ -45,19 +45,19 @@ Vor der ODBC 3.8 und der Windows 7-SDK waren asynchrone Vorgänge nur auf Anweis
 |[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
 |[SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
 |[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
-|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
-|[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
+|[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|['SQLProcedures'](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
+|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|['SQLSpecialColumns'](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
+|['SQLStatistics'](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
   
- Asynchrone Ausführung wird auf einer pro-Anweisung oder einer Basis pro Verbindung abhängig von der Datenquelle gesteuert. Das heißt, gibt die Anwendung nicht, dass eine bestimmte Funktion wird asynchron ausgeführt werden, aber jede Funktion, die für eine bestimmte Anweisung ausgeführt wird, die asynchron ausgeführt werden. Um finden ausgecheckt wird die wird unterstützt, eine Anwendung ruft [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) mit einer Option zur SQL_ASYNC_MODE. SQL_AM_CONNECTION wird zurückgegeben, wenn Verbindungsebene asynchrone Ausführung (für ein Anweisungshandle) unterstützt wird. SQL_AM_STATEMENT, wenn auf Anweisungsebene asynchrone Ausführung unterstützt wird.  
+ Die asynchrone Anweisungs Ausführung wird abhängig von der Datenquelle entweder für eine pro-Anweisung oder eine Verbindungs Basis gesteuert. Das heißt, die Anwendung gibt an, dass eine bestimmte Funktion nicht asynchron ausgeführt werden soll, aber dass jede Funktion, die für eine bestimmte Anweisung ausgeführt wird, asynchron ausgeführt werden soll. Um herauszufinden, welche unterstützt wird, ruft eine Anwendung [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) mit der Option SQL_ASYNC_MODE auf. SQL_AM_CONNECTION wird zurückgegeben, wenn die asynchrone Ausführung auf Verbindungs Ebene (für ein Anweisungs Handle) unterstützt wird. SQL_AM_STATEMENT, wenn die asynchrone Ausführung auf Anweisungs Ebene unterstützt wird.  
   
- Um anzugeben, dass Funktionen, die mit einer bestimmten Anweisung ausgeführt werden, werden asynchron, ruft die Anwendung ausgeführt **SQLSetStmtAttr** mit der SQL_ATTR_ASYNC_ENABLE Attribut, und legt es auf SQL_ASYNC_ENABLE_ON. Wenn die asynchrone Verarbeitung Verbindungsebene unterstützt wird, das SQL_ATTR_ASYNC_ENABLE-Anweisungsattribut ist schreibgeschützt und sein Wert ist identisch mit der Verbindungszeichenfolge-Attribut der Verbindung auf der die Anweisung zugewiesen wurde. Es ist treiberspezifisch gibt an, ob der Wert des Attributs Anweisung zum Zeitpunkt Zuordnung oder höher festgelegt ist. Beim Festlegen wird zurückgegeben, wird SQL_ERROR und SQLSTATE HYC00 (optionales Feature nicht implementiert).  
+ Um anzugeben, dass Funktionen, die mit einer bestimmten Anweisung ausgeführt werden, asynchron ausgeführt werden sollen, ruft die Anwendung **SQLSetStmtAttr** mit dem SQL_ATTR_ASYNC_ENABLE-Attribut auf, und legt Sie auf SQL_ASYNC_ENABLE_ON fest. Wenn die asynchrone Verarbeitung auf Verbindungs Ebene unterstützt wird, ist das SQL_ATTR_ASYNC_ENABLE-Anweisungs Attribut schreibgeschützt, und sein Wert ist identisch mit dem Verbindungs Attribut der Verbindung, für die die-Anweisung zugewiesen wurde. Es ist Treiber spezifisch, ob der Wert des Anweisungs Attributs zur Anweisungs Zuordnungs Zeit oder später festgelegt wird. Wenn Sie versuchen, diese festzulegen, wird SQL_ERROR und SQLSTATE HYC00 (optionales Feature nicht implementiert) zurückgegeben.  
   
- Um anzugeben, dass Funktionen, die mit einer bestimmten Verbindung ausgeführt werden, werden asynchron, ruft die Anwendung ausgeführt **SQLSetConnectAttr** mit der SQL_ATTR_ASYNC_ENABLE Attribut, und legt es auf SQL_ASYNC_ENABLE_ON. Alle zukünftigen Anweisungshandles zugeordnet, die für die Verbindung werden für die asynchrone Ausführung aktiviert sein. Es ist treiberdefinierten, ob vorhandene Anweisungshandles durch diese Aktion aktiviert werden. Wenn SQL_ATTR_ASYNC_ENABLE auf SQL_ASYNC_ENABLE_OFF festgelegt ist, wird für alle Anweisungen für die Verbindung im synchronen Modus. Wenn die asynchrone Ausführung aktiviert ist, es gibt zwar eine aktive Anweisung für die Verbindung ein Fehler zurückgegeben.  
+ Um anzugeben, dass Funktionen, die mit einer bestimmten Verbindung ausgeführt werden, asynchron ausgeführt werden sollen, ruft die Anwendung **SQLSetConnectAttr** mit dem SQL_ATTR_ASYNC_ENABLE-Attribut auf, und legt Sie auf SQL_ASYNC_ENABLE_ON fest. Alle zukünftigen Anweisungs Handles, die der Verbindung zugeordnet sind, werden für die asynchrone Ausführung aktiviert. Es ist Treiber definiert, ob vorhandene Anweisungs Handles durch diese Aktion aktiviert werden. Wenn SQL_ATTR_ASYNC_ENABLE auf SQL_ASYNC_ENABLE_OFF festgelegt ist, befinden sich alle Anweisungen für die Verbindung im synchronen Modus. Ein Fehler wird zurückgegeben, wenn die asynchrone Ausführung aktiviert ist, während eine aktive-Anweisung für die Verbindung vorhanden ist.  
   
- Um die maximale Anzahl der aktiven gleichzeitigen Anweisungen im asynchronen Modus zu bestimmen, die der Treiber auf eine bestimmte Verbindung unterstützt, die Anwendung ruft **SQLGetInfo** mit der Option SQL_MAX_ASYNC_CONCURRENT_STATEMENTS.  
+ Um die maximale Anzahl aktiver gleichzeitiger Anweisungen im asynchronen Modus zu ermitteln, die der Treiber für eine bestimmte Verbindung unterstützen kann, ruft die Anwendung **SQLGetInfo** mit der SQL_MAX_ASYNC_CONCURRENT_STATEMENTS-Option auf.  
   
- Der folgende Code veranschaulicht die Funktionsweise des Modells abrufen:  
+ Der folgende Code veranschaulicht die Funktionsweise des Abruf Modells:  
   
 ```  
 SQLHSTMT  hstmt1;  
@@ -75,11 +75,11 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
 // When the statement has finished executing, retrieve the results.  
 ```  
   
- Während eine Funktion asynchron ausgeführt wird, kann Funktionen von die Anwendung auf allen anderen Anweisungen aufrufen. Die Anwendung kann auch Funktionen über eine Verbindung mit Ausnahme des verknüpft ist, mit der asynchronen-Anweisung aufrufen. Aber die Anwendung kann nur aufrufen, die ursprüngliche Funktion und die folgenden Funktionen (mit das Anweisungshandle oder die zugehörige Verbindung, Umgebungshandle), nach einer Anweisung gibt SQL_STILL_EXECUTING:  
+ Während eine Funktion asynchron ausgeführt wird, kann die Anwendung Funktionen für beliebige andere Anweisungen aufzurufen. Die Anwendung kann auch Funktionen für jede Verbindung aufzurufen, mit Ausnahme derjenigen, die der asynchronen-Anweisung zugeordnet ist. Die Anwendung kann jedoch nur die ursprüngliche Funktion und die folgenden Funktionen (mit dem Anweisungs Handle oder der zugehörigen Verbindung, Umgebungs Handle) aufzurufen, nachdem ein Anweisungs Vorgang SQL_STILL_EXECUTING zurückgegeben hat:  
   
 -   [SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)  
   
--   [SQLCancelHandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) (über das Anweisungshandle)  
+-   [Sqlcancelhandle](../../../odbc/reference/syntax/sqlcancelhandle-function.md) (auf dem Anweisungs Handle)  
   
 -   [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)  
   
@@ -101,7 +101,7 @@ while ((rc=SQLExecDirect(hstmt1,"SELECT * FROM Orders",SQL_NTS))==SQL_STILL_EXEC
   
 -   [SQLNativeSql](../../../odbc/reference/syntax/sqlnativesql-function.md)  
   
- Wenn die Anwendung auf eine beliebige Funktion mit der asynchronen-Anweisung oder die Verbindung mit dieser Anweisung verknüpfte aufruft, wird die Funktion gibt SQLSTATE HY010 (Funktion Sequenzfehler), z. B.  
+ Wenn die Anwendung eine andere Funktion mit der asynchronen Anweisung oder mit der Verbindung aufruft, die mit dieser Anweisung verknüpft ist, gibt die Funktion SQLSTATE HY010 (Funktions Sequenz Fehler) zurück, z. b..  
   
 ```  
 SQLHDBC       hdbc1, hdbc2;  
@@ -134,53 +134,53 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 }  
 ```  
   
- Wenn eine Anwendung, eine Funktion aufruft, um festzustellen, ob er immer noch asynchron ausgeführt wird, müssen sie das ursprüngliche Anweisungshandle verwenden. Dies ist, da die asynchrone Ausführung auf einer Basis pro Anweisung nachverfolgt wird. Die Anwendung muss auch gültige Werte für die anderen Argumente angeben: die ursprünglichen Argumente erfolgt – rufen Sie nach fehlerüberprüfung im Treiber-Manager. Nachdem der Treiber das Anweisungshandle überprüft und feststellt, dass die Anweisung asynchron ausgeführt wird, ignoriert sie jedoch alle anderen Argumente an.  
+ Wenn eine Anwendung eine Funktion aufruft, um zu bestimmen, ob Sie noch asynchron ausgeführt wird, muss Sie das ursprüngliche Anweisungs Handle verwenden. Der Grund hierfür ist, dass die asynchrone Ausführung pro Anweisung nachverfolgt wird. Die Anwendung muss auch gültige Werte für die anderen Argumente angeben, die die ursprünglichen Argumente verwenden, um die Fehlerüberprüfung im Treiber-Manager zu erhalten. Nachdem der Treiber jedoch das Anweisungs Handle überprüft und ermittelt hat, dass die Anweisung asynchron ausgeführt wird, werden alle anderen Argumente ignoriert.  
   
- Während eine Funktion asynchron - ausgeführt wird, also nachdem es SQL_STILL_EXECUTING zurückgegeben hat, und vor der Rückgabe eines anderen Codes - Anwendung kann Abbrechen durch Aufrufen von **SQLCancel** oder **SQLCancelHandle** mit dem gleichen Anweisungshandle. Dies ist nicht garantiert, zum Abbrechen der Ausführung. Z. B. die Funktion möglicherweise bereits abgeschlossen haben. Darüber hinaus der Code zurückgegebenes **SQLCancel** oder **SQLCancelHandle** gibt nur an, ob der Versuch, kündigen die Funktion erfolgreich war, nicht nur, ob es sich tatsächlich um die Funktion abgebrochen. Um zu bestimmen, ob die Funktion abgebrochen wurde, ruft die Anwendung die Funktion erneut aus. Wenn die Funktion abgebrochen wurde, gibt SQL_ERROR zurück, und SQLSTATE HY008 (der Vorgang wurde abgebrochen). Wenn die Funktion nicht abgebrochen wurde, wird eine andere Code, z. B. SQL_STILL_EXECUTING, SQL_SUCCESS oder SQL_ERROR mit einem anderen SQLSTATE zurückgegeben.  
+ Während eine Funktion asynchron ausgeführt wird, d. h. Nachdem Sie SQL_STILL_EXECUTING und vor der Rückgabe eines anderen Codes zurückgegeben hat, kann Sie durch Aufrufen von **SQLCancel** oder **sqlcancelhandle** mit demselben Anweisungs Handle abgebrochen werden. Dadurch wird nicht garantiert, dass die Funktions Ausführung abgebrochen wird. Beispielsweise ist die-Funktion möglicherweise bereits fertig. Außerdem gibt der von **SQLCancel** oder **sqlcancelhandle** zurückgegebene Code nur an, ob der Versuch, die Funktion abzubrechen, erfolgreich war und nicht, ob die Funktion tatsächlich abgebrochen wurde. Um zu ermitteln, ob die Funktion abgebrochen wurde, ruft die Anwendung die Funktion erneut auf. Wenn die Funktion abgebrochen wurde, gibt Sie SQL_ERROR und SQLSTATE HY008 (Vorgang abgebrochen) zurück. Wenn die Funktion nicht abgebrochen wurde, gibt Sie einen anderen Code zurück, z. b. SQL_SUCCESS, SQL_STILL_EXECUTING oder SQL_ERROR mit einem anderen SQLSTATE.  
   
- Deaktivieren Sie asynchrone Ausführung einer bestimmten Anweisung aus, wenn der Treiber auf Anweisungsebene asynchronen Verarbeitung können die Anwendung ruft unterstützt **SQLSetStmtAttr** mit der SQL_ATTR_ASYNC_ENABLE Attribut, und legt es auf SQL_ ASYNC_ENABLE_OFF. Wenn der Treiber auf Verbindungsebene, die asynchrone Verarbeitung unterstützt, die Anwendung ruft **SQLSetConnectAttr** um SQL_ATTR_ASYNC_ENABLE auf SQL_ASYNC_ENABLE_OFF, festzulegen, die deaktiviert die asynchrone Ausführung aller Anweisungen auf der die Verbindung.  
+ Um die asynchrone Ausführung einer bestimmten Anweisung zu deaktivieren, wenn der Treiber die asynchrone Verarbeitung auf Anweisungs Ebene unterstützt, ruft die Anwendung **SQLSetStmtAttr** mit dem SQL_ATTR_ASYNC_ENABLE-Attribut auf und legt Sie auf SQL_ASYNC_ENABLE_OFF fest. Wenn der Treiber die asynchrone Verarbeitung auf Verbindungs Ebene unterstützt, ruft die Anwendung **SQLSetConnectAttr** auf, um SQL_ATTR_ASYNC_ENABLE auf SQL_ASYNC_ENABLE_OFF festzulegen. Dadurch wird die asynchrone Ausführung aller Anweisungen für die Verbindung deaktiviert.  
   
- Die Anwendung sollte in der sich wiederholenden Schleife der ursprünglichen Funktion DiagnoseDatensätze verarbeiten. Wenn **SQLGetDiagField** oder **SQLGetDiagRec** wird aufgerufen, wenn es sich bei eine asynchrone Funktion ausgeführt wird, wird die aktuelle Liste der DiagnoseDatensätze zurückgegeben. Jedes Mal, wenn der ursprünglichen Funktionsaufruf wiederholt wird, löscht er die vorherigen DiagnoseDatensätze.  
+ Die Anwendung sollte Diagnosedaten Sätze in der sich wiederholenden Schleife der ursprünglichen Funktion verarbeiten. Wenn **SQLGetDiagField** oder **SQLGetDiagRec** beim Ausführen einer asynchronen Funktion aufgerufen wird, wird die aktuelle Liste der Diagnosedaten Sätze zurückgegeben. Jedes Mal, wenn der ursprüngliche Funktionsaufruf wiederholt wird, werden vorherige Diagnosedaten Sätze gelöscht.  
   
-## <a name="executing-connection-operations-asynchronously"></a>Verbindungsvorgänge der asynchron ausgeführt wird  
- Zugelassen Sie vor der ODBC 3.8 asynchrone Ausführung wurde, für Vorgänge im Zusammenhang mit-Anweisung wie z. B. vorbereiten, führen Sie aus und abzurufen Sie, sowie für Vorgänge mit Metadaten Katalog. In ODBC 3.8 ab ist asynchrone Ausführung auch möglich, dass die Verbindung datenbezogene Vorgänge, die etwa wie eine Verbindung herstellen, trennen, Commit und Rollback.  
+## <a name="executing-connection-operations-asynchronously"></a>Asynchrones Ausführen von Verbindungs Vorgängen  
+ Vor ODBC 3,8 war die asynchrone Ausführung für Anweisungs bezogene Vorgänge (z. b. vorbereiten, ausführen und Abrufen) sowie für Catalog-Metadatenvorgänge zulässig. Ab ODBC 3,8 ist die asynchrone Ausführung auch für verbindungsbezogene Vorgänge möglich, wie z. b. Connect, Disconnect, Commit und Rollback.  
   
- Weitere Informationen zu ODBC 3.8, finden Sie unter [Neuigkeiten in ODBC 3.8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
+ Weitere Informationen zu ODBC 3,8 finden Sie unter [What es New in ODBC 3,8](../../../odbc/reference/what-s-new-in-odbc-3-8.md).  
   
- Verbindungsvorgänge der asynchron ausgeführt wird, ist in den folgenden Szenarien nützlich:  
+ Die asynchrone Ausführung von Verbindungs Vorgängen ist in den folgenden Szenarien nützlich:  
   
--   Wenn eine kleine Anzahl von Threads für eine große Anzahl von Geräten mit sehr hohen Datenraten verwaltet. Um die Reaktionsfähigkeit und Skalierbarkeit zu maximieren, ist es wünschenswert, dass alle Vorgänge asynchron sein müssen.  
+-   Wenn eine kleine Anzahl von Threads eine große Anzahl von Geräten mit sehr hohen Datenraten verwaltet. Um die Reaktionsfähigkeit und Skalierbarkeit zu maximieren, ist es wünschenswert, dass alle Vorgänge asynchron sind.  
   
--   Wenn Sie überlappen von Datenbankvorgängen über mehrere Verbindungen verstrichene Übertragungszeiten reduzieren möchten.  
+-   Wenn Sie Daten Bank Vorgänge über mehrere Verbindungen überlappen möchten, um verstrichene Übertragungszeiten zu verringern.  
   
--   Aktivieren eine Anwendung, die dem Benutzer ermöglichen, alle langsamen Vorgang abbrechen, ohne zu warten, Timeouts, effiziente asynchrone ODBC-Aufrufe sowie die Möglichkeit, Verbindungsvorgänge abzubrechen.  
+-   Effiziente asynchrone ODBC-Aufrufe und die Möglichkeit zum Abbrechen von Verbindungs Vorgängen ermöglichen es einer Anwendung, den Benutzern das Abbrechen eines beliebigen langsamen Vorgangs zu gestatten, ohne auf Timeouts warten zu müssen.  
   
- Die folgenden Funktionen, die auf Verbindungshandles angewendet werden, können nun asynchron ausgeführt werden:  
+ Die folgenden Funktionen, die auf Verbindungs Handles angewendet werden, können jetzt asynchron ausgeführt werden:  
   
 ||||  
 |-|-|-|  
 |[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
 |[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
   
- Um zu bestimmen, ob ein Treiber asynchroner Vorgänge auf diese Funktionen unterstützt, eine Anwendung ruft **SQLGetInfo** mit SQL_ASYNC_DBC_FUNCTIONS. SQL_ASYNC_DBC_CAPABLE wird zurückgegeben, wenn asynchrone Vorgänge unterstützt werden. SQL_ASYNC_DBC_NOT_CAPABLE wird zurückgegeben, wenn asynchrone Vorgänge nicht unterstützt werden.  
+ Um zu ermitteln, ob ein Treiber für diese Funktionen asynchrone Vorgänge unterstützt, ruft eine Anwendung **SQLGetInfo** mit SQL_ASYNC_DBC_FUNCTIONS auf. SQL_ASYNC_DBC_CAPABLE wird zurückgegeben, wenn asynchrone Vorgänge unterstützt werden. SQL_ASYNC_DBC_NOT_CAPABLE wird zurückgegeben, wenn asynchrone Vorgänge nicht unterstützt werden.  
   
- Um anzugeben, dass Funktionen, die mit einer bestimmten Verbindung ausgeführt werden, werden asynchron, ruft die Anwendung ausgeführt **SQLSetConnectAttr** und legt das SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE-Attribut auf SQL_ASYNC_DBC_ENABLE _EIN. Festlegen von ein Verbindungsattribut vor dem Herstellen einer Verbindung immer synchron ausgeführt. Darüber hinaus der Vorgang, der die Verbindung festlegen SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE mit Attribut **SQLSetConnectAttr** immer synchron ausgeführt.  
+ Um anzugeben, dass Funktionen, die mit einer bestimmten Verbindung ausgeführt werden, asynchron ausgeführt werden sollen, ruft die Anwendung **SQLSetConnectAttr** auf und legt das SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE-Attribut auf SQL_ASYNC_DBC_ENABLE_ON fest. Das Festlegen eines Verbindungs Attributs vor dem Herstellen einer Verbindung wird immer synchron ausgeführt. Außerdem wird der Vorgang, der das mit **SQLSetConnectAttr** SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE Connection-Attribut festlegt, immer synchron ausgeführt.  
   
- Eine Anwendung kann asynchrone Operation vor dem Herstellen einer Verbindung ermöglichen. Da der Treiber-Manager die Treiber zu verwenden, bevor Sie eine Verbindung herstellen nicht bestimmen kann, gibt der Treiber-Manager immer erfolgreich in zurück **SQLSetConnectAttr**. Allerdings wird eventuell eine Verbindung herstellen, wenn der ODBC-Treiber keine asynchrone Vorgänge unterstützt.  
+ Eine Anwendung kann vor dem Herstellen einer Verbindung einen asynchronen Vorgang aktivieren. Da der Treiber-Manager nicht ermitteln kann, welcher Treiber verwendet werden muss, bevor er eine Verbindung herstellt, gibt der Treiber-Manager in **SQLSetConnectAttr**immer Erfolg zurück. Möglicherweise kann jedoch keine Verbindung hergestellt werden, wenn der ODBC-Treiber keine asynchronen Vorgänge unterstützt.  
   
- Im Allgemeinen kann gibt es höchstens eine, die asynchrone Ausführung der Funktion eine bestimmte Verbindungshandle oder Anweisungshandle zugeordnet sind. Allerdings kann ein Verbindungshandle mehr als eine zugeordnete Anweisung ausführen zu lassen. Ist kein asynchroner Vorgang, der auf dem Verbindungshandle ausführen, kann ein Handle für die zugeordnete Anweisung einen asynchronen Vorgang ausführen. Auf ähnliche Weise haben Sie einen asynchronen Vorgang für ein Verbindungshandle, wenn es keine asynchronen Vorgänge in Bearbeitung auf alle zugeordneten Anweisungshandle sind. Ein Versuch zum Ausführen eines asynchronen Vorgangs mit der ein Handle, das gerade einen asynchronen Vorgang ausgeführt wird, gibt HY010, "Fehler bei Funktionssequenz" zurück.  
+ Im Allgemeinen kann es höchstens eine asynchron ausgeführte Funktion geben, die einem bestimmten Verbindungs Handle oder Anweisungs Handle zugeordnet ist. Ein Verbindungs Handle kann jedoch mehrere zugeordnete Anweisungs Handles aufweisen. Wenn auf dem Verbindungs Handle kein asynchroner Vorgang ausgeführt wird, kann ein zugeordnetes Anweisungs Handle einen asynchronen Vorgang ausführen. Auf ähnliche Weise können Sie einen asynchronen Vorgang für ein Verbindungs Handle ausführen, wenn für ein zugeordnetes Anweisungs Handle keine asynchronen Vorgänge ausgeführt werden. Wenn Sie versuchen, einen asynchronen Vorgang mit einem Handle auszuführen, das gerade einen asynchronen Vorgang ausführt, wird HY010, "Funktions Sequenz Fehler", zurückgegeben.  
   
- Wenn ein Verbindungsvorgang SQL_STILL_EXECUTING zurückgibt, kann eine Anwendung nur die ursprüngliche Funktion und die folgenden Funktionen für diese Verbindungshandle aufrufen:  
+ Wenn ein Verbindungsvorgang SQL_STILL_EXECUTING zurückgibt, kann eine Anwendung nur die ursprüngliche Funktion und die folgenden Funktionen für dieses Verbindungs Handle aufzurufen:  
   
--   **SQLCancelHandle** (auf dem Verbindungshandle)  
+-   **Sqlcancelhandle** (auf dem Verbindungs Handle)  
   
 -   **SQLGetDiagField**  
   
 -   **SQLGetDiagRec**  
   
--   **SQLAllocHandle** (Zuordnen von ENV/DBC)  
+-   **Sqlzuordchandle** (Zuordnung von "en v/DBC")  
   
--   **SQLAllocHandleStd** (Zuordnen von ENV/DBC)  
+-   **Sqlzuordchandlestd** (Zuordnung von "en v/DBC")  
   
 -   **SQLGetEnvAttr**  
   
@@ -194,25 +194,25 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 -   **SQLGetFunctions**  
   
- Die Anwendung sollte in der sich wiederholenden Schleife der ursprünglichen Funktion DiagnoseDatensätze verarbeiten. Wenn beim Ausführen einer asynchronen Funktion SQLGetDiagField oder SQLGetDiagRec aufgerufen wird, wird die aktuelle Liste der DiagnoseDatensätze zurückgegeben. Jedes Mal, wenn der ursprünglichen Funktionsaufruf wiederholt wird, löscht er die vorherigen DiagnoseDatensätze.  
+ Die Anwendung sollte Diagnosedaten Sätze in der sich wiederholenden Schleife der ursprünglichen Funktion verarbeiten. Wenn SQLGetDiagField oder SQLGetDiagRec beim Ausführen einer asynchronen Funktion aufgerufen wird, wird die aktuelle Liste der Diagnosedaten Sätze zurückgegeben. Jedes Mal, wenn der ursprüngliche Funktionsaufruf wiederholt wird, werden vorherige Diagnosedaten Sätze gelöscht.  
   
- Wenn eine Verbindung wird geöffnet, oder asynchron geschlossen, der Vorgang ist abgeschlossen, wenn die Anwendung im ursprünglichen Funktionsaufruf SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO empfängt.  
+ Wenn eine Verbindung asynchron geöffnet oder geschlossen wird, ist der Vorgang abgeschlossen, wenn die Anwendung SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO im ursprünglichen Funktions aufzurufen empfängt.  
   
- ODBC 3.8, wurde eine neue Funktion hinzugefügt **SQLCancelHandle**. Diese Funktion bricht ab, die sechs Verbindungsfunktionen (**SQLBrowseConnect**, **SQLConnect**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**, und **SQLSetConnectAttr**). Es sollte eine Anwendung aufrufen **SQLGetFunctions** zu bestimmen, ob der Treiber unterstützt **SQLCancelHandle**. Wie bei **SQLCancel**, wenn **SQLCancelHandle** Erfolg zurückgegeben wird, bedeutet dies nicht der Vorgang wurde abgebrochen. Eine Anwendung sollte die ursprüngliche Funktion erneut aus, um zu bestimmen, ob der Vorgang abgebrochen wurde, aufrufen. **SQLCancelHandle** können Sie die asynchrone Vorgänge für Verbindungshandles oder Anweisungshandles Abbrechen. Mithilfe von **SQLCancelHandle** Handle zum Abbrechen eines Vorgangs in einer Anweisung ist der gleiche wie das Aufrufen **SQLCancel**.  
+ ODBC 3,8, **sqlcancelhandle**, wurde eine neue Funktion hinzugefügt. Diese Funktion bricht die sechs Verbindungsfunktionen ab (**sqlbrowseconnetct**, **SQLCONNECT**, **SQLDisconnect**, **SQLDriverConnect**, **SQLEndTran**und **SQLSetConnectAttr**). Eine Anwendung sollte **SQLGetFunctions** aufrufen, um zu bestimmen, ob der Treiber **sqlcancelhandle**unterstützt. Wie bei **SQLCancel**bedeutet dies nicht, dass der Vorgang abgebrochen wurde, wenn **sqlcancelhandle** Erfolg zurückgibt. Eine Anwendung sollte die ursprüngliche Funktion erneut aufzurufen, um zu bestimmen, ob der Vorgang abgebrochen wurde. **Sqlcancelhandle** ermöglicht das Abbrechen von asynchronen Vorgängen für Verbindungs Handles oder Anweisungs Handles. Die Verwendung von **sqlcancelhandle** , um einen Vorgang für ein Anweisungs Handle abzubrechen, entspricht dem Aufrufen von **SQLCancel**.  
   
- Es ist nicht erforderlich, um beide unterstützen **SQLCancelHandle** und asynchrone Verbindungsvorgänge zur gleichen Zeit. Ein-Treiber unterstützt asynchrone Verbindungsvorgängen sendet, nicht jedoch **SQLCancelHandle**, oder umgekehrt.  
+ Es ist nicht erforderlich, gleichzeitig sowohl **sqlcancelhandle** -als auch asynchronen-Verbindungs Vorgänge zu unterstützen. Ein Treiber kann asynchrone Verbindungs Vorgänge unterstützen, jedoch nicht **sqlcancelhandle**(oder umgekehrt).  
   
- Asynchrone Verbindungsvorgänge und **SQLCancelHandle** kann auch verwendet werden, die von ODBC 3.x und ODBC 2.x-Anwendungen mit einer ODBC 3.8-Treiber und der ODBC 3.8-Treiber-Manager. Informationen zum Aktivieren der einer älteren Anwendung auf die neuen Funktionen in höheren ODBC-Version zu verwenden, finden Sie unter [Matrix der Sperrenkompatibilität](../../../odbc/reference/develop-app/compatibility-matrix.md).  
+ Asynchrone Verbindungs Vorgänge und **sqlcancelhandle** können auch von ODBC 3. x-und ODBC 2. x-Anwendungen mit einem ODBC 3,8-Treiber und ODBC 3,8-Treiber-Manager verwendet werden. Informationen dazu, wie Sie eine ältere Anwendung für die Verwendung neuer Features in einer späteren ODBC-Version aktivieren, finden Sie unter [Kompatibilitäts Matrix](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ### <a name="connection-pooling"></a>Verbindungspooling  
- Wenn Verbindungspooling aktiviert ist, werden asynchrone Vorgänge nur minimal zum Herstellen einer Verbindung unterstützt (mit **SQLConnect** und **SQLDriverConnect**) und schließen eine Verbindung mit **SQLDisconnect**. Eine Anwendung sollte können jedoch weiterhin den Rückgabewert SQL_STILL_EXECUTING behandelt **SQLConnect**, **SQLDriverConnect**, und **SQLDisconnect**.  
+ Wenn das Verbindungspooling aktiviert ist, werden asynchrone Vorgänge nur minimal für das Herstellen einer Verbindung (mit **SQLCONNECT** und **SQLDriverConnect**) und das Schließen einer Verbindung mit **SQLDisconnect**unterstützt. Eine Anwendung sollte jedoch weiterhin in der Lage sein, den SQL_STILL_EXECUTING Rückgabewert von **SQLCONNECT**, **SQLDriverConnect**und **SQLDisconnect**zu verarbeiten.  
   
- Wenn Verbindungspooling aktiviert ist, **SQLEndTran** und **SQLSetConnectAttr** für asynchrone Vorgänge unterstützt werden.  
+ Wenn das Verbindungspooling aktiviert ist, werden **SQLEndTran** und **SQLSetConnectAttr** für asynchrone Vorgänge unterstützt.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
- Das folgende Beispiel zeigt, wie Sie mit **SQLSetConnectAttr** zum Aktivieren asynchroner Ausführung für die Verbindung in Zusammenhang stehende Funktionen.  
+### <a name="description"></a>BESCHREIBUNG  
+ Im folgenden Beispiel wird gezeigt, wie Sie **SQLSetConnectAttr** verwenden, um die asynchrone Ausführung für verbindungsbezogene Funktionen zu aktivieren.  
   
 ### <a name="code"></a>Code  
   
@@ -265,8 +265,8 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>Beschreibung  
- Dieses Beispiel zeigt die asynchroner Commit-Vorgängen. Rollback-Operationen können auch auf diese Weise erfolgen.  
+### <a name="description"></a>BESCHREIBUNG  
+ Dieses Beispiel zeigt asynchrone Commit-Vorgänge. Rollback-Vorgänge können auch auf diese Weise ausgeführt werden.  
   
 ### <a name="code"></a>Code  
   
@@ -294,5 +294,5 @@ BOOL AsyncCommit ()
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen von ODBC-Anweisungen](../../../odbc/reference/develop-app/executing-statements-odbc.md)

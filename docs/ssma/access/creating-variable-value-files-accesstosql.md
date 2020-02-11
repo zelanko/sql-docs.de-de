@@ -1,5 +1,5 @@
 ---
-title: Erstellen die Variable Value Files (AccessToSQL) | Microsoft-Dokumentation
+title: Erstellen von Variablen Wert Dateien (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/17/2017
@@ -10,19 +10,19 @@ ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006594"
 ---
-# <a name="creating-variable-value-files-accesstosql"></a>Erstellen die Variable Value Files (AccessToSQL)
-Eine Variable-Datei ist eine XML-Datei mit die Werte der Parameter der Befehle (z. B. die Quelle oder Ziel-Servername), die häufig in Server-Migrationen zu ändern. Wenn eine große Anzahl von datenbankmigrationen auftreten, mehrere Dateien zum Speichern von den Wert der einzelnen Quellserver erstellt und auf die verwiesen wird in einer master-Skript-Datei mit den **- V** -Schalter an der Befehlszeile. Dies hilft bei der Verwaltung von statische Werte in ein paar Skriptdateien mit der Variablenwerte in mehrere Dateien.  
+# <a name="creating-variable-value-files-accesstosql"></a>Erstellen von Variablen Wert Dateien (accesstosql)
+Eine Variablen Wert Datei ist eine XML-Datei, die die Parameterwerte von Befehlen (z. b. der Quell-oder Zielserver Name) umfasst, die sich häufig über Server Migrationen hinweg ändern. Wenn eine große Anzahl von Datenbankmigrationen auftritt, werden mehrere Variablen Dateien zum Speichern des Werts jedes Quell Servers erstellt und in einer Master Skriptdatei mit dem Schalter **-v** in der Befehlszeile referenziert. Dieses Verhalten trägt dazu bei, statische Werte in einigen Skriptdateien mit den Variablen Werten in mehreren Variablen Dateien beizubehalten.  
   
 > [!NOTE]  
-> -  Namen von Variablen sind mit dem Präfix und Suffix mit einem Symbol $ (Dollarzeichen). Wenn eine Variable einen Wert in der Datei der Wert der Variablen nicht zugewiesen ist, tritt ein Fehler während der Analyse der Skriptdatei, wodurch treten des Ausführungsprozess der Konsole.  
-> -  Das Escapezeichen für **$** ist **$$** . Wenn der Wert einer Variable oder ein statischer Wert eines Parameters enthält eine **$** (Dollar)-Symbol, klicken Sie dann **$$** muss angegeben werden, um diese als Zeichen und keiner Variablen zu behandeln.  
-> -  Aus Gründen der Verwaltbarkeit können in Variablen deklariert werden `'variable-group'` Elemente für die logische Trennung von benutzerdefinierten Variablen.  Verwendung dieses Elements ist nicht erforderlich.  
+> -  Variablennamen wird ein Präfix mit einem Suffix von $ (Dollar) vorangestellt. Wenn einer Variablen in der Variablen Wert Datei kein Wert zugewiesen wird, tritt ein Fehler während der Verarbeitung der Skriptdatei auf, was dazu führt, dass der Konsolen Ausführungsprozess beendet wird.  
+> -  Das Escapezeichen **$** für **$$** ist. Wenn der Wert einer Variablen oder eines statischen Werts eines Parameters ein **$** (Dollar-) Symbol enthält, **$$** muss angegeben werden, um ihn als Zeichen anstelle einer Variablen zu behandeln.  
+> -  Aus Gründen der Wartbarkeit können Variablen in `'variable-group'` -Elementen für die logische Trennung von benutzerdefinierten Variablen deklariert werden.  Die Verwendung dieses Elements ist nicht obligatorisch.  
   
 **Beispiele:**  
   
@@ -87,12 +87,12 @@ Eine Variable-Datei ist eine XML-Datei mit die Werte der Parameter der Befehle (
 </variables>  
 ```  
   
-## <a name="variable-value-file-validation"></a>Variablenwert-dateiüberprüfung  
-Benutzer kann ganz einfach überprüfen, seinen Wert der Variablen-Datei anhand der Schemadefinitionsdatei **ConsoleScriptVariablesSchema.xsd** in den Ordner "Schemas" verfügbar.  
+## <a name="variable-value-file-validation"></a>Überprüfung der Variablen Wert Datei  
+Der Benutzer kann die Datei mit den Variablen Werten auf einfache Weise anhand der Schema Definitionsdatei **consolescriptvariablesschema. xsd** überprüfen, die im Ordner "Schemas" verfügbar ist.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt in der Konsole ausgeführt wird [erstellen den Server Connection Files &#40;AccessToSQL&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
+Der nächste Schritt bei der Betriebs Konsole besteht darin, [die Server Verbindungs Dateien &#40;Access Token zu erstellen&#41;](../../ssma/access/creating-the-server-connection-files-accesstosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Erstellen den Server Connection Files (Datenzugriff)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
+## <a name="see-also"></a>Weitere Informationen  
+[Erstellen der Server Verbindungs Dateien (Access)](https://msdn.microsoft.com/829153be-aa8e-4162-87e8-69882feecf19)  
   

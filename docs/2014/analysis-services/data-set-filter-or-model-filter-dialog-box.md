@@ -1,5 +1,5 @@
 ---
-title: Datasetfilter oder Modell Modellfilter (Dialogfeld) | Microsoft-Dokumentation
+title: Daten Satz Filter oder Modell Filter (Dialog Feld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89ba538c3ac3dfd7a262e4ae17cb9ddd6cf7265c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082608"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Datasetfilter oder Modellfilter (Dialogfeld)
@@ -29,35 +29,35 @@ ms.locfileid: "66082608"
 -   Das Raster **Bedingungen** weist Spalten auf, in denen Sie einen Tabellen- oder Spaltennamen, einen Operator oder Zielwerte angeben können. Mithilfe dieses Raster erstellen Sie in Wirklichkeit eine WHERE-Klausel.  
   
 > [!TIP]  
->  Zum Testen der Genauigkeit einer Untergruppe der ursprünglichen Trainingsdaten können Sie die Datenquellensicht hinzufügen, mit der der Trainingssatz als externe Testdaten definiert wurde, und dann Bedingungen im Raster **Datasetfilter** hinzufügen.  
+>  Zum Testen der Genauigkeit einer Teilmenge der ursprünglichen Trainingsdaten können Sie die Datenquellen Sicht hinzufügen, mit der der Trainings Satz als externe Testdaten definiert wurde, und dann Bedingungen im Raster **Datasetfilter** hinzufügen.  
   
- **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Weitere Informationen finden Sie unter:** [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Optionen  
- **Bedingungen**  
+## <a name="options"></a>Tastatur  
+ **Voraus**  
  Zeigt Tabellennamen gefolgt von Spaltennamen mit Bedingungen an.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Und/Oder**|Wählen Sie einen Operator aus, um mehrere Bedingungen zu verknüpfen.|  
+|**Und/oder**|Wählen Sie einen Operator aus, um mehrere Bedingungen zu verknüpfen.|  
 |**Miningstrukturspalte**|Klicken Sie hierauf, um eine Datenquelle auszuwählen, und klicken Sie dann im Raster auf aufeinander folgenden Zeilen, um Spalten aus der Datenquelle hinzuzufügen.<br /><br /> Die erste Zeile im Raster gibt die Datenquellensicht an. Nach Auswahl einer Datenquellensicht wird im Feld **Miningstrukturspalte** ein Tabellensymbol angezeigt, und im Feld **Wert** wird die Kombination aller Kriterien angezeigt, die Sie für diese Datenquelle definiert haben.<br /><br /> Nach Auswahl einer Datenquelle wird im Feld **Miningstrukturspalte** eine Dropdownliste mit den einzelnen Spalten in der Datenquelle angezeigt.|  
 |**Operator**|Wählen Sie in der Liste einen Operator aus.|  
-|**Wert**|Bei Tabellen wird im Feld **Wert** die Kombination aller auf die Datenquelle angewendeten Filter angezeigt. Sie können auch den Build klicken **(...)**  Schalfläche rechts neben dem Textfeld zum Öffnen der **Filter** Dialogfeld und eine Bedingung zu erstellen.|  
+|**Wert**|Bei Tabellen wird im Feld **Wert** die Kombination aller auf die Datenquelle angewendeten Filter angezeigt. Sie können auch auf die Schaltfläche zum Erstellen **(...)** rechts neben dem Textfeld klicken, um das Dialogfeld **Filter** zu öffnen und eine Bedingung zu erstellen.|  
   
- **expression**  
+ **Ausdruck**  
  Zeigt die Gruppe von Kriterien an, die Sie mit dem Raster erstellt haben.  
   
  **Abfrage bearbeiten**  
  Ändert den Filterbearbeitungsmodus, sodass Sie einen Filterausdruck direkt in das Textfeld **Ausdruck** eingeben können.  
   
 > [!NOTE]  
->  Wenn Sie manuell Änderungen am Filterausdruck vorgenommen haben, können Sie nicht mehr in den Rasterbearbeitungsmodus zurückkehren, und zwar auch dann nicht, wenn Sie den Ausdruck auf der Registerkarte **Eingabeauswahl** im Feld **Filterausdruck** gespeichert haben. Wenn Sie einen Ausdruck mithilfe des Rasters erstellen möchten, müssen Sie den vorhandenen Filterausdruck löschen und von Neuem beginnen.  
+>  Nachdem Sie manuell Änderungen am Filter Ausdruck vorgenommen haben, können Sie nicht mehr in den Raster Bearbeitungsmodus zurückkehren, auch nachdem Sie den Ausdruck auf der Registerkarte **Eingabeauswahl** im Feld **Filter Ausdruck** gespeichert haben. Wenn Sie einen Ausdruck mithilfe des Rasters erstellen möchten, müssen Sie den vorhandenen Filter Ausdruck löschen und beginnen.  
   
  **Abfragebearbeitung wiederherstellen**  
  Stellt den vorherigen Zustand des Rasters wieder her und verwirft alle am Filterausdruck vorgenommenen Änderungen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung miningmodelltasks und Anweisungen &#40;Datamining&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Mining-Genauigkeitsdiagramm-Designer &#40;Datamining&#41;](mining-accuracy-chart-designer-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
+ [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)  
   
   

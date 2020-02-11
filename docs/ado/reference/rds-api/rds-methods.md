@@ -14,32 +14,32 @@ ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963682"
 ---
 # <a name="rds-methods"></a>RDS-Methoden
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 |||  
 |-|-|  
-|[Abbrechen (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Bricht die Ausführung einer ausstehenden asynchronen Methodenaufrufs aufgerufen.|  
-|[CancelUpdate-Methode (RDS) –](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Bricht alle Änderungen an der aktuellen oder der neuen Zeile ein **Recordset** Objekt.|  
-|[ConvertToString (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Konvertiert eine **Recordset** in eine MIME-Zeichenfolge, die das die Recordsetdaten darstellt.|  
-|[CreateObject (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Erstellt das Proxy für das Zielobjekt für Unternehmen, und gibt einen Zeiger darauf zurück.|  
-|[CreateRecordset (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Erstellt ein leeres getrennt **Recordset**.|  
-|[Execute-Methode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Führen Sie die Anforderung, und erstellen Sie ein erweitertes Rowset (zur Verwendung mit ADO 2.5 und höher).|  
-|[Execute21-Methode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Führen Sie die Anforderung, und erstellen Sie ein erweitertes Rowset (zur Verwendung mit ADO 2.1).|  
-|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Gibt einen Zeiger auf eine leistungsfähigere Version des Objekts auf die angeforderte Schnittstelle zurück.|  
-|[MoveFirst-, MoveLast-, MoveNext-und MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** Objekt.|  
-|[Abfrage (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Eine gültige SQL-Abfragezeichenfolge verwendet, um zurückzugeben eine **Recordset**.|  
-|[Aktualisieren (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Führt der Datenquelle angegeben, der **Connect** -Eigenschaft und die Ergebnisse der Abfrage-Updates.|  
-|[Zurücksetzen (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt Sie die Sortierung und Filterung für eine clientseitige **Recordset**basierend auf den angegebenen Eigenschaften der sortieren und filtern.|  
-|[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Ausstehende Änderungen lokal zwischengespeichert und aktualisierbare übermittelt **Recordset** mit der Datenquelle angegeben, der **Connect** Eigenschaft.|  
-|[Synchronize-Methode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset, mit der Datenbank, die durch die Verbindungszeichenfolge (zur Verwendung mit ADO 2.5 und höher) angegeben.|  
-|[Synchronize21-Methode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset, mit der Datenbank, die durch die Verbindungszeichenfolge (zur Verwendung mit ADO 2.1) angegeben.|
+|[Abbrechen (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Bricht die Ausführung eines ausstehenden asynchronen Methoden Aufrufes ab.|  
+|[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Bricht alle Änderungen ab, die an der aktuellen oder neuen Zeile eines **Recordset** -Objekts vorgenommen wurden.|  
+|[ConvertTo String (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Konvertiert ein **Recordset** in eine MIME-Zeichenfolge, die die Recordsetdaten darstellt.|  
+|["Kreateobject" (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)|Erstellt den Proxy für das Ziel Geschäftsobjekt und gibt einen Zeiger darauf zurück.|  
+|["Kreaterecordset" (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Erstellt ein leeres, nicht verbundenes **Recordset**.|  
+|[Execute-Methode (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,5 und höher).|  
+|[Execute21-Methode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Führen Sie die Anforderung aus, und erstellen Sie ein erweitertes Datenrowset (für die Verwendung mit ADO 2,1).|  
+|[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Gibt einen Zeiger auf die angeforderte Schnittstelle für eine leistungsfähigere Version des-Objekts zurück.|  
+|["Muvefirst", "muvelast", "muvenext" (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen **Recordset** -Objekt.|  
+|[Abfrage (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Verwendet eine gültige SQL-Abfrage **Zeichenfolge**zum Zurückgeben eines Recordsets.|  
+|[Aktualisieren (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Fragt die in der **Connect** -Eigenschaft angegebene Datenquelle ab und aktualisiert die Abfrageergebnisse.|  
+|[Zurücksetzen (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Führt die Sortierung oder den Filter für ein Client seitiges **Recordset**basierend auf den angegebenen Sortier-und Filtereigenschaften aus.|  
+|[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Übermittelt ausstehende Änderungen des lokal zwischengespeicherten und aktualisierbaren **Recordsets** an die Datenquelle, die in der **Connect** -Eigenschaft angegeben ist.|  
+|[Synchronize-Methode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,5 und höher).|  
+|[Synchronize21-Methode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronisieren Sie das angegebene Recordset mit der Datenbank, die durch die Verbindungs Zeichenfolge angegeben wird (zur Verwendung mit ADO 2,1).|
 
 

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 170e3764795e1bb6db3fc9589ecf1fe486078633
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097302"
 ---
 # <a name="union--mdx"></a>Union (MDX)
@@ -35,17 +35,17 @@ Alternate syntax 2
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *SET-Ausdruck 1*  
+ *Festlegen von Ausdruck 1*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Der Mengenausdruck 2*  
+ *Festlegen von Ausdruck 2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Funktion gibt die Gesamtmenge von zwei oder mehr angegebenen Mengen. Bei Verwendung der Standardsyntax und alternativen Syntax 1 werden Duplikate standardmäßig entfernt. Bei Verwendung der Standardsyntax mit der **alle** Flags bleiben bei der Duplikate in der Vereinigten Menge. Doppelte Werte werden vom Ende her gelöscht. Bei Verwendung der alternativen Syntax 2 werden doppelte Elemente immer beibehalten.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Funktion gibt die Union von zwei oder mehr angegebenen Mengen zurück. Mit der Standard Syntax und mit der alternativen Syntax 1 werden Duplikate standardmäßig gelöscht. Mit der Standard Syntax speichert das **all** -Flag Duplikate in der verbundenen Menge. Doppelte Werte werden vom Ende her gelöscht. Bei Verwendung der alternativen Syntax 2 werden doppelte Elemente immer beibehalten.  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele veranschaulichen das Verhalten der **Union** funktionieren die verschiedenen Syntaxvarianten.  
+ In den folgenden Beispielen wird das Verhalten der **Union** -Funktion unter Verwendung der einzelnen-Syntax veranschaulicht.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Standardsyntax – Löschen der doppelten Werte  
   
@@ -94,8 +94,8 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: PredictVariance (DMX) | Microsoft-Dokumentation
+title: Prävarianz (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 83bcd95d6eb946d15884d57550b826bc7379fb64
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041693"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -31,10 +31,10 @@ PredictVariance(<scalar column reference>)
  Ein skalare Spalte.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein Skalarwert des Typs, der angegebenen  *\<skalarspaltenverweis >* .  
+ Ein Skalarwert des Typs, der durch * \<skalare Spalten Verweis>* angegeben wird.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Spaltenverweis diskret ist **PredictVariance** gibt 0 zurück, weil aus diskreten Werten die Varianz berechnet werden kann.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Spalten Verweis diskret ist, gibt " **prävarianz** " den Wert 0 zurück, da die Varianz nicht aus diskreten Werten berechnet werden kann.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine natürliche PREDICTION JOIN-Anweisung verwendet, um basierend auf dem TM Decision Tree-Miningmodell zu bestimmen, ob es wahrscheinlich ist, dass eine Person ein Fahrrad kaufen wird. Außerdem wird die Varianz für die Vorhersage bestimmt.  
@@ -53,9 +53,9 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

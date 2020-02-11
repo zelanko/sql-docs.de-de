@@ -1,5 +1,5 @@
 ---
-title: Optionen (Abfrageergebnisse und "Abhängigkeitsdienste") | Microsoft-Dokumentation
+title: Optionen (Seite "Abfrageergebnisse und Abhängigkeits Dienste") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,31 +13,31 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481203"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Optionen (Abfrageergebnisse und Seite „Abhängigkeitsdienste“)
-  Geben Sie auf dieser Seite den Server an, mit dem eine Verbindung für Abhängigkeitsdienste hergestellt werden soll. Mithilfe von Abhängigkeitsdiensten können Sie Informationen zu Abhängigkeiten zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Objekten und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten extrahieren, die auf anderen Servern gespeichert sind. Sie objektabhängigkeiten anzeigen, indem die **Objektabhängigkeiten** im Dialogfeld [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
+  Geben Sie auf dieser Seite den Server an, mit dem eine Verbindung für Abhängigkeitsdienste hergestellt werden soll. Mithilfe von Abhängigkeitsdiensten können Sie Informationen zu Abhängigkeiten zwischen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Objekten und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Objekten extrahieren, die auf anderen Servern gespeichert sind. Objektabhängigkeiten werden mithilfe des Dialog Felds **Objektabhängigkeiten** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]angezeigt.  
   
  **Was möchten Sie tun?**  
   
-1.  [Öffnen Sie im Dialogfeld Optionen (Abfrage Ergebnisse / "Abhängigkeitsdienste")](#open_dialog)  
+1.  [Öffnen des Dialogfelds "Optionen" (Seite "Abfrageergebnisse"/"Abhängigkeitsdienste")](#open_dialog)  
   
 2.  [Konfigurieren der Optionen](#options)  
   
-##  <a name="open_dialog"></a> Öffnen Sie im Dialogfeld Optionen (Abfrage Ergebnisse / "Abhängigkeitsdienste")  
+##  <a name="open_dialog"></a>Öffnen Sie das Dialog Feld Optionen (Seite Abfrageergebnisse/Abhängigkeits Dienste).  
   
-1.  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], klicken Sie auf **Optionen** auf die **Tools** Menü.  
+1.  Klicken [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Sie in **im Menü Extras** auf **Optionen** .  
   
 2.  Erweitern Sie **Abfrageergebnisse**, und klicken Sie dann auf **Abhängigkeitsdienste**.  
   
 ##  <a name="options"></a> Konfigurieren der Optionen  
   
-### <a name="options"></a>Optionen  
- **Dependency Services-server**  
+### <a name="options"></a>Tastatur  
+ **Dependency Services-Server**  
  Geben Sie den Server an, auf dem die Abhängigkeitsdienste installiert sind.  
   
  **Authentifizierung**  
@@ -51,5 +51,5 @@ ms.locfileid: "65481203"
  **Kennwort**  
  Geben Sie ein Kennwort an, wenn Sie die SQL Server-Authentifizierung verwenden.  
   
- **Testen**  
+ **Test**  
  Klicken Sie auf die Option, um die Verbindung zu überprüfen.

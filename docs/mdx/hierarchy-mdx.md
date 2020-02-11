@@ -1,5 +1,5 @@
 ---
-title: Hierarchie (MDX) | Microsoft-Dokumentation
+title: Hierarchy (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ba105499fd3f94429c73152f4471541e13e9af98
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68105418"
 ---
 # <a name="hierarchy-mdx"></a>Hierarchy (MDX)
@@ -39,7 +39,7 @@ Level_Expression.Hierarchy
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
 ### <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt den Namen der Calendar-Hierarchie in der Date-Dimension in der AdventureWorks-Cube zurück.  
+ Im folgenden Beispiel wird der Name der Kalender Hierarchie in der Date-Dimension im AdventureWorks-Cube zurückgegeben.  
   
  `WITH`  
   
@@ -53,7 +53,7 @@ Level_Expression.Hierarchy
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

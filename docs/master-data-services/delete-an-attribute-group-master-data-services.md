@@ -14,10 +14,10 @@ ms.assetid: f915e89b-629d-4725-aea6-a7f051978244
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 78ba8b955fe0702a5b1737c1de24426d586f9ffa
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729363"
 ---
 # <a name="delete-an-attribute-group-master-data-services"></a>Löschen einer Attributgruppe (Master Data Services)
@@ -26,14 +26,14 @@ ms.locfileid: "73729363"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Attributgruppe löschen, wenn die Registerkarte nicht länger im Funktionsbereich **Explorer** von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]angezeigt werden muss.  
   
--   **Hinweis** Wenn Attributgruppen vorhanden sind, werden Attribute, die keiner Attributgruppe angehören, in **Explorer**nicht angezeigt. Wenn keine Attributgruppen vorhanden sind, werden alle Attribute angezeigt.  
+-   **Hinweis** Wenn Attribut Gruppen vorhanden sind, werden Attribute, die keiner Attribut Gruppe angehören, nicht im **Explorer**angezeigt. Wenn keine Attributgruppen vorhanden sind, werden alle Attribute angezeigt.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-delete-an-attribute-group"></a>So löschen Sie eine Attributgruppe  
   
@@ -53,8 +53,8 @@ ms.locfileid: "73729363"
   
 8.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
- [Erstellen einer Attributgruppe &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Attribut Gruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)   
+ [Erstellen Sie eine Attribut Gruppe &#40;Master Data Services&#41;](../master-data-services/create-an-attribute-group-master-data-services.md)  
   
   

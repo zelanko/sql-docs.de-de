@@ -1,5 +1,5 @@
 ---
-title: Scrollen und fetchen von Zeilen (ODBC) | Microsoft-Dokumentation
+title: Scrollen und Abrufen von Zeilen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,28 +16,28 @@ ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b326ed0c4e9a196904aa0f5c60b705243ef3bd97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061582"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Durchscrollen und Abrufen von Zeilen (ODBC)
-Wenn Sie einen bildlauffähigen Cursor verwenden, um Anwendungen Aufrufen **SQLFetchScroll** , positionieren Sie den Cursor und Fetch-Zeilen. **SQLFetchScroll** relative Bildlauf unterstützt (Weiter vor und relativ *n* Zeilen), absolute Bildlauf (Vorname, Nachname und Zeile *n*), und die Positionierung von Lesezeichen. Die *FetchOrientation* und *FetchOffset* Argumente in **SQLFetchScroll** welche Rowset abzurufen, geben Sie wie in den folgenden Diagrammen dargestellt.  
+Wenn Sie einen Bild lauffähigen Cursor verwenden, rufen Anwendungen **SQLFetchScroll** auf, um den Cursor zu positionieren und Zeilen abzurufen. **SQLFetchScroll** unterstützt den relativen Bildlauf (Next, vorherige und relative *n* Zeilen), den absoluten Bildlauf (First, Last und Row *n*) und die Positionierung nach Lesezeichen. Die Argumente " *FetchOrientation* " und " *FetchOffset* " in **SQLFetchScroll** geben an, welches Rowset abgerufen werden soll, wie in den folgenden Diagrammen dargestellt.  
   
- ![Abrufen des nächsten, vorherigen, ersten und letzten Rowsets](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
+ ![Abrufen des nächsten, des vorherigen, des ersten und des letzten Rowsets](../../../odbc/reference/develop-app/media/pr20_2.gif "pr20_2")  
   
- **Abrufen des nächsten, vorherigen, ersten und letzten Rowsets**  
+ **Abrufen des nächsten, des vorherigen, des ersten und des letzten Rowsets**  
   
- ![Abrufen des absoluten, relativen und mit Lesezeichen markierten Rowsets](../../../odbc/reference/develop-app/media/pr20_1.gif "pr20_1")  
+ ![Abrufen des absoluten, des relativen und des mit Lesezeichen markierten Rowsets](../../../odbc/reference/develop-app/media/pr20_1.gif "pr20_1")  
   
- **Abrufen des absoluten, relativen und mit Lesezeichen markierten Rowsets**  
+ **Abrufen von absoluten, relativen und mit Lesezeichen markierten Rowsets**  
   
- **SQLFetchScroll** platziert den Cursor in die angegebene Zeile und gibt die Zeilen im Rowset ab, die mit dieser Zeile zurück. Wenn das angegebene Rowset, das Ende des Resultsets überlappt, wird eine partielle Rowset zurückgegeben. Wenn das angegebene Rowset der Start des Ergebnisses überlappt festgelegt ist, wird das erste Rowset im Ergebnis wird in der Regel zurückgegeben; Ausführliche Informationen finden Sie unter den [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) funktionsbeschreibung.  
+ **SQLFetchScroll** positioniert den Cursor in die angegebene Zeile und gibt die Zeilen im Rowset zurück, beginnend mit dieser Zeile. Wenn das angegebene Rowset das Ende des Resultsets überlappt, wird ein partielles Rowset zurückgegeben. Wenn das angegebene Rowset den Anfang des Resultsets überlappt, wird normalerweise das erste Rowset im Resultset zurückgegeben. Ausführliche Informationen finden Sie in der Beschreibung der [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md) -Funktion.  
   
- In einigen Fällen kann die Anwendung soll, um den Cursor zu positionieren, ohne das Abrufen von Daten. Beispielsweise möchten sie überprüfen, ob eine Zeile vorhanden ist oder nur das Lesezeichen für die Zeile zu erhalten, ohne die andere Daten über das Netzwerk. Zu diesem Zweck wird das SQL_ATTR_RETRIEVE_DATA-Anweisungsattribut auf SQL_RD_OFF. Die Variable an die Lesezeichenspalte (sofern vorhanden) gebunden werden unabhängig von der Einstellung dieses Attributs Anweisung immer aktualisiert.  
+ In einigen Fällen kann die Anwendung den Cursor positionieren, ohne Daten abzurufen. Beispielsweise kann es sinnvoll sein, zu testen, ob eine Zeile vorhanden ist, oder nur das Lesezeichen für die Zeile zu erhalten, ohne dass andere Daten über das Netzwerk übertragen werden. Zu diesem Zweck wird das Attribut SQL_ATTR_RETRIEVE_DATA Anweisung auf SQL_RD_OFF festgelegt. Die an die Lesezeichen Spalte (falls vorhanden) gebundene Variable wird immer aktualisiert, unabhängig von der Einstellung dieses Anweisungs Attributs.  
   
- Nach dem das Rowset abgerufen wurde, kann die Anwendung aufrufen **SQLSetPos** zu einer bestimmten Zeile im Rowset oder aktualisieren Sie Zeilen im Rowset zu positionieren. Weitere Informationen zur Verwendung von **SQLSetPos**, finden Sie unter [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
+ Nachdem das Rowset abgerufen wurde, kann die Anwendung **SQLSetPos** aufrufen, um Sie an eine bestimmte Zeile im Rowset zu positionieren oder Zeilen im Rowset zu aktualisieren. Weitere Informationen zur Verwendung von **SQLSetPos**finden Sie unter [Aktualisieren von Daten mit SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Durchführen eines Bildlaufs wird in ODBC 2. unterstützt. *x* Treiber durch **SQLExtendedFetch**. Weitere Informationen finden Sie unter [Blockcursor, scrollbare Cursor und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.
+>  Das Scrollen wird in ODBC 2 unterstützt. *x* -Treiber von **sqlextendecodfetch**. Weitere Informationen finden Sie unter [Blockieren von Cursorn, scrollfähigen Cursorn und Abwärtskompatibilität](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)in Anhang G: Treiber Richtlinien zur Abwärtskompatibilität.

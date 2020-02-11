@@ -1,5 +1,5 @@
 ---
-title: KPIStatus (MDX) | Microsoft-Dokumentation
+title: Kpistatus (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa07788bc00cc3317024d287f1054a67c6447356
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67905884"
 ---
 # <a name="kpistatus-mdx"></a>KPIStatus (MDX)
@@ -31,11 +31,11 @@ KPIStatus(KPI_Name)
  *KPI_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen des KPIs angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Statuswert ist im Allgemeinen ein normalisierter Wert zwischen -1 und 1.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt die KPI-Wert, KPI-Ziel, KPI-Status und KPI-Trend für das Channel Revenue-Measure für die nachfolgenden Werte dreier Elemente der Fiscal Year-Attributhierarchie zurück:  
+ Das folgende Beispiel gibt den KPI-Wert, das KPI-Ziel, den KPI-Status und den KPI-Trend für das channelrevenue-Measure für die nachfolgenden drei Elemente der Fiscal Year-Attribut Hierarchie zurück:  
   
 ```  
 SELECT  
@@ -53,7 +53,7 @@ Descendants
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

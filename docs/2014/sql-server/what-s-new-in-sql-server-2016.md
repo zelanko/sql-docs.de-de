@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 23a1392256e103fa1bc112f11b5c5b97f5c398f1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75237711"
 ---
 # <a name="whats-new-in-sql-server-2014"></a>Neuerungen in SQL Server 2014
@@ -45,7 +45,7 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
   
 -   [Neues in Analysis Services und Business Intelligence](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
--   [Neuerungen bei der SQL Server Installation](install/what-s-new-in-sql-server-installation.md)  
+-   [Neuigkeiten in der SQL Server-Installation](install/what-s-new-in-sql-server-installation.md)  
   
  **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]hat keine wichtigen neuen Features für die folgenden Funktionen eingeführt:**  
   
@@ -94,7 +94,7 @@ This file, at this exact GitHub path, is dedicated to SQL Server version 2014.
 -   **Verbesserte Diagnose für Abfrage Ausführungspläne, die Rest-Prädikat Weitergabe einschließen:** Die tatsächlich gelesenen Zeilen werden nun in den Abfrage Ausführungsplänen angezeigt, um die Problembehandlung bei der Abfrageleistung zu verbessern. Diese Zeilen negieren die Notwendigkeit, SET STATISTICS IO separat zu erfassen. Diese Zeilen ermöglichen es Ihnen außerdem, Informationen im Zusammenhang mit einem Rest-Prädikat-Pushdown in einem Abfrageplan anzuzeigen. Weitere Informationen finden Sie im [Knowledge Base-Artikel KB3107397](https://support.microsoft.com/kb/3107397).
 
 
-## <a name="additional-information"></a>Weitere Informationen  
+## <a name="additional-information"></a>Zusätzliche Informationen  
  [SQL Server 2014-Ressourcen](../2014-toc/index.yml)  
   
  [Anmerkungen zu SQL Server 2014](https://go.microsoft.com/fwlink/p/?linkID=296445)  

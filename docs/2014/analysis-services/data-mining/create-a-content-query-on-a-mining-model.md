@@ -1,5 +1,5 @@
 ---
-title: Eine Inhaltsabfrage für ein Miningmodell erstellen | Microsoft-Dokumentation
+title: Erstellen einer Inhalts Abfrage für ein Mining Modell | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085583"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Erstellen einer Miningmodell-Inhaltsabfrage
@@ -40,11 +40,11 @@ ms.locfileid: "66085583"
   
      Die Vorlage **Inhaltsabfrage** wird im entsprechenden Code-Editor geöffnet. Der Metadatenbereich listet die Modelle auf, die in der aktuellen Datenbank verfügbar sind. Um die Datenbank zu ändern, wählen Sie eine andere Datenbank aus der Liste **Verfügbare Datenbanken** aus.  
   
-5.  Geben Sie den Namen eines Miningmodells in der Zeile `FROM` [ *\<Miningmodell, Name, MyModel >* ]`.CONTENT`. Wenn der Name des Miningmodells Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.  
+5.  Geben Sie den Namen eines Mining Modells in die Zeile `FROM` [*\<Mining Modell, Name, MyModel>*]`.CONTENT`ein. Wenn der Name des Miningmodells Leerzeichen enthält, muss der Name in Klammern eingeschlossen werden.  
   
      Wenn Sie den Namen nicht eingeben möchten, können Sie ein Miningmodell im **Objekt-Explorer** auswählen und in die Vorlage ziehen.  
   
-6.  In der Zeile `SELECT` *\<Auswahlliste, Ausdrucksliste, \* >* , geben Sie den Namen der Spalten in der Mining-Schemarowset.  
+6.  Wählen Sie in der `SELECT`Zeile *Liste, expr-Liste \*, aus, und geben Sie die Namen der Spalten im Schemarowset des Mining Modell Inhalts ein. \< *  
   
      Eine Liste von Spalten, die Sie in Miningmodellinhaltsabfragen zurückgeben können, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)bereitgestellten DMVs eine Abfrage erstellen.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "66085583"
      Im Ergebnisbereich wird der Inhalt des Modells angezeigt.  
   
     > [!NOTE]  
-    >  Um eine Liste aller Schemarowsets, die Sie Abfragen können auf der aktuellen Instanz anzuzeigen, verwenden Sie diese Abfrage: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Eine Liste der für Data Mining spezifischen Schemarowsets finden Sie unter [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
+    >  Um eine Liste aller Schemarowsets anzuzeigen, die Sie für die aktuelle Instanz abfragen können, verwenden Sie die folgende Abfrage: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. Eine Liste der für Data Mining spezifischen Schemarowsets finden Sie unter [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Inhalt &#40;Analysis Services Data Mining-&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

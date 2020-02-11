@@ -1,5 +1,5 @@
 ---
-title: Anhalten einer Ablaufverfolgung (SQL Server Profiler) | Microsoft-Dokumentation
+title: Anhalten einer Ablauf Verfolgung (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4961b68d46f8e4f1627c28c05ab2efb609d9f90d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240474"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>Anhalten einer Ablaufverfolgung (SQL Server Profiler)
@@ -33,7 +33,7 @@ ms.locfileid: "63240474"
   
 2.  Klicken Sie im Menü **Datei** auf **Ablaufverfolgung anhalten**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Profiler](sql-server-profiler.md)  
   
   

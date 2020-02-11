@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6e938e3212e519ab51be1faf3f18e28957ef3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62782278"
 ---
 # <a name="enable-the-lock-pages-in-memory-option-windows"></a>Aktivieren der Option Sperren von Seiten im Speicher (Windows)
@@ -29,7 +29,7 @@ ms.locfileid: "62782278"
   
 ### <a name="to-enable-the-lock-pages-in-memory-option"></a>So aktivieren Sie die Option "Sperren von Seiten im Speicher"  
   
-1.  Klicken Sie im Menü **Start** auf **Ausführen**. In der **öffnen** geben `gpedit.msc`.  
+1.  Klicken Sie im Menü **Start** auf **Ausführen**. Geben `gpedit.msc`Sie im Feld **Öffnen** den Text ein.  
   
 2.  Erweitern Sie in der Konsole **Editor für lokale Gruppenrichtlinien** die Option **Computerkonfiguration**und dann **Windows-Einstellungen**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62782278"
   
 8.  Melden Sie sich ab und anschließend erneut an, damit die Änderung wirksam wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen für den Serverarbeitsspeicher](server-memory-server-configuration-options.md)  
   
   

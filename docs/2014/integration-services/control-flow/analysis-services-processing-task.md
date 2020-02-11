@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 02023482a2f3537872b50ac70f8bfd68d2128e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832965"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services-Verarbeitungstask
@@ -35,7 +35,8 @@ ms.locfileid: "62832965"
   
 -   Batcheinstellungen werden für tabellarische Modelle ignoriert.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt eine Reihe von Tasks ein, die Business Intelligence-Vorgänge ausführen, wie das Ausführen von DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Data Mining-Vorhersageabfragen. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu verwandten Business Intelligence-Tasks zu erhalten:  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] schließt eine Reihe von Tasks ein, die Business Intelligence-Vorgänge ausführen, wie das Ausführen von DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und Data Mining-Vorhersageabfragen. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu verwandten Business Intelligence-Tasks zu erhalten:  
   
 -   [DDL ausführen (Analysis Services-Task)](analysis-services-execute-ddl-task.md)  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62832965"
   
  Dieser Task wird häufig zusammen mit einem Masseneinfügungstask verwendet, der Daten in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle lädt, oder mit einem Datenflusstask, der einen Datenfluss zum Laden von Daten in eine Tabelle implementiert. Beispielsweise könnte der Datenflusstask einen Datenfluss aufweisen, der Daten aus einer OLTP-Datenbank (Online Transactional Database) extrahiert und in eine Faktentabelle in einem Data Warehouse lädt. Anschließend wird der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verarbeitungstask aufgerufen, um den im Data Warehouse erstellten Cube zu verarbeiten.  
   
- Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verarbeitungstask stellt mithilfe eines Verbindungs-Managers von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
+ Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verarbeitungs Task verwendet einen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Verbindungs-Manager, um eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]einer Instanz von herzustellen. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md).  
   
 ## <a name="error-handling"></a>Fehlerbehandlung  
   
@@ -66,9 +67,9 @@ ms.locfileid: "62832965"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Analysis Services-Verarbeitungstask &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Analysis Services Verarbeitungs Task-Editor &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Analysis Services-Verarbeitungstask &#40;Seite „Analysis Services“&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
+-   [Analysis Services Verarbeitungs Task-Editor &#40;Analysis Services Seite&#41;](../analysis-services-processing-task-editor-analysis-services-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: a5ebe1ee911f7500505cdbd1962d28c35461a635
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399466"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Deinstallieren von Microsoft-Updates in Analytics Platform System
 In diesem Artikel wird beschrieben, wie Sie ein zuvor installiertes Microsoft Update auf der Analytics Platform System Appliance deinstallieren.  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
   
 ### <a name="prerequisites"></a>Voraussetzungen  
 Um diese Schritte ausführen zu können, benötigen Sie Folgendes:  
@@ -39,7 +39,7 @@ Um diese Schritte ausführen zu können, benötigen Sie Folgendes:
     ```  
   
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 - [Herunterladen und Anwenden von Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md) 
 - [Anwenden von Analytics-Plattformsystem-Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md)  
 - [Deinstallieren Sie die Analytics Platform System-Hotfixes &#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

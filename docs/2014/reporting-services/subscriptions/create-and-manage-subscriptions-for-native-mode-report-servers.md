@@ -1,5 +1,5 @@
 ---
-title: Erstellen, ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus) | Microsoft-Dokumentation
+title: Erstellen, ändern und Löschen von Standard Abonnements (Reporting Services im einheitlichen Modus) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100989"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Erstellen, Ändern und Löschen von Standardabonnements (Reporting Services im einheitlichen Modus)
@@ -26,42 +26,42 @@ ms.locfileid: "66100989"
  Ein Benutzer, der ein Abonnement erstellt, ist Besitzer dieses Abonnements. Jeder Benutzer kann seine eigenen Abonnements ändern oder löschen.  
   
 > [!NOTE]  
->  Beginnend mit [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können Sie den Besitz eines Abonnements programmgesteuert übertragen. Es gibt keine Benutzeroberfläche, mit der Sie den Besitz von Abonnements übertragen können. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
+>  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Ab können Sie den Besitz eines Abonnements Programm gesteuert übertragen. Es gibt keine Benutzeroberfläche, mit der Sie den Besitz von Abonnements übertragen können. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>.  
   
- In Abhängigkeit von den Einstellungen in der Konfigurationsdatei **RSReportServer.config** können Benutzer zusätzliche Benutzer zu einem Abonnement hinzufügen (z. B. kann ein Manager die E-Mail-Adressen seiner Mitarbeiter hinzufügen, damit jeder eine Kopie des Berichts erhält). Dies wird nur unterstützt, wenn das Feld An: beim Definieren einzelner Abonnements angezeigt wird. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+ In Abhängigkeit von den Einstellungen in der Konfigurationsdatei **RSReportServer.config** können Benutzer zusätzliche Benutzer zu einem Abonnement hinzufügen (z. B. kann ein Manager die E-Mail-Adressen seiner Mitarbeiter hinzufügen, damit jeder eine Kopie des Berichts erhält). Dies wird nur unterstützt, wenn das Feld An: beim Definieren einzelner Abonnements angezeigt wird. Weitere Informationen finden Sie unter [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  Dieses Thema stellt Informationen zu Standardabonnements bereit, die von einzelnen Benutzern erstellt und verwaltet werden. Für datengesteuerte Abonnements gelten unterschiedliche Anforderungen und Schritte, die in einem anderen Thema behandelt werden. Weitere Informationen finden Sie unter [erstellen, ändern und Löschen eines datengesteuerten Abonnements](data-driven-subscriptions.md).  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
--   [Zum Erstellen eines Abonnements](#bkmk_create_subscription)  
+-   [So erstellen Sie ein Abonnement](#bkmk_create_subscription)  
   
--   [So erstellen Sie ein Dateifreigabeabonnement](#bkmk_create_fileshare_subscription)  
+-   [So erstellen Sie ein Dateifreigabe Abonnement](#bkmk_create_fileshare_subscription)  
   
--   [So erstellen Sie ein E-Mail-Abonnement](#bkmk_create_email_subscription)  
+-   [Erstellen eines e-Mail-Abonnements](#bkmk_create_email_subscription)  
   
 -   [So ändern Sie ein Abonnement](#bkmk_modify_subscription)  
   
 -   [So löschen Sie ein Abonnement](#bkmk_delete_subscription)  
   
-##  <a name="bkmk_create_subscription"></a> Zum Erstellen eines Abonnements  
+##  <a name="bkmk_create_subscription"></a>So erstellen Sie ein Abonnement  
  Zur Erstellung eines Abonnements wählen Sie das Tool und den Ansatz aus, die für die Berichtsserverbereitstellung gültig sind:  
   
 -   In diesem Thema wird erläutert, wie mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichts-Manager Abonnements auf einem Berichtsserver im einheitlichen Modus erstellt werden. Nach der Definition eines Abonnements können Sie im Berichts-Manager auf der Seite Meine Abonnements oder auf der Registerkarte **Abonnements** eines bestimmten Berichts darauf zugreifen.  
   
--   [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) erläutert, wie die Anwendungsseiten auf einer SharePoint-Website zum Abonnieren von Berichten auf einem Berichtsserver, der im integrierten SharePoint-Modus ausgeführt wird.  
+-   [Erstellen und Verwalten von Abonnements für Berichts Server im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md) erläutert, wie Sie die Anwendungs Seiten auf einer SharePoint-Website verwenden, um Berichte auf einem Berichts Server zu abonnieren, der im integrierten SharePoint-Modus ausgeführt wird.  
   
  Dieses Thema enthält Anweisungen für das Erstellen eines E-Mail-Abonnements und eines Dateifreigabe-Übermittlungsabonnements.  
   
 -   Zum Verwenden der E-Mail-Übermittlung muss vor dem Erstellen des Abonnements der Berichtsserver für SMTP-Server- oder -Gateway-Verbindungen konfiguriert sein.  
   
--   Zum Verwenden der Dateifreigabeübermittlung müssen bereits Zielordner definiert sein. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+-   Zum Verwenden der Dateifreigabeübermittlung müssen bereits Zielordner definiert sein. Weitere Informationen finden Sie unter [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
  Bevor Sie einen Bericht abonnieren können, muss die Berichtsdatenquelle so konfiguriert sein, dass gespeicherte oder keine Anmeldeinformationen verwendet werden. Weitere Informationen finden Sie unter [Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle](../report-data/store-credentials-in-a-reporting-services-data-source.md). Wenn dies nicht der Fall ist, ist die Schaltfläche **Neues Abonnement** nicht verfügbar.  
   
  In diesem Thema wird nicht erläutert, wie ein datengesteuertes Abonnement erstellt wird. Informationen zum Erstellen eines datengesteuerten Abonnements finden Sie unter [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md) oder in der Onlinehilfe zur Seite „Erstellen eines datengesteuerten Abonnements im Berichts-Manager“.  
   
-###  <a name="bkmk_create_fileshare_subscription"></a> So erstellen Sie ein Dateifreigabeabonnement  
+###  <a name="bkmk_create_fileshare_subscription"></a>So erstellen Sie ein Dateifreigabe Abonnement  
   
 1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
@@ -75,11 +75,11 @@ ms.locfileid: "66100989"
   
 6.  Wählen Sie **Beim Erstellen der Datei eine Dateinamenerweiterung hinzufügen**aus. Mit dieser Option wird dem Dateinamen eine aus drei Zeichen bestehende Dateierweiterung hinzugefügt. Die Dateierweiterung wird vom Berichtsausgabeformat bestimmt, das Sie auswählen.  
   
-7.  In der **Pfad** Text geben einen Universal Naming Convention (UNC)-Pfad zu einem vorhandenen Ordner, in dem Sie die Berichte senden möchten (z. B. \\ \\< Servername\>\\< Meine Berichte\>). Beginnen Sie die Pfadangabe mit zwei umgekehrten Schrägstrichen (\\). Geben Sie keinen umgekehrten Schrägstrich am Ende an.  
+7.  Geben Sie im Textfeld **Pfad** einen Universal Naming Convention (UNC)-Pfad zu einem vorhandenen Ordner ein, an den Sie die Berichte übermitteln möchten ( \\ \\ z. b.\> \\<Servername\><MyReports). Beginnen Sie die Pfadangabe mit zwei umgekehrten Schrägstrichen (\\). Geben Sie keinen umgekehrten Schrägstrich am Ende an.  
   
 8.  Wählen Sie unter Renderformat zur Dateiübermittlung ein Berichtsausgabeformat aus. Wählen Sie ein Format aus, das der Desktopanwendung entspricht, die Sie verwenden, um den Bericht zu öffnen. Vermeiden Sie Formate, die einen Bericht nicht in einem einzigen Datenstrom rendern oder die Interaktivität einführen, die in einer statischen Datei (beispielsweise HTML 4.0) nicht unterstützt wird.  
   
-9. Geben Sie in die Textfelder **Benutzername** und **Kennwort** die Anmeldeinformationen ein, die für den Zugriff auf die Dateifreigabe erforderlich sind. Verwenden Sie für den Benutzernamen das Format *\<Domäne>* \\ *\<Benutzername>* .  
+9. Geben Sie in den Textfeldern **Benutzername** und **Kennwort** die Anmelde Informationen ein, die für den Zugriff auf die Dateifreigabe erforderlich sind. verwenden Sie für den Benutzernamen das Format * \<Domäne>* \\ * \<Benutzername>* .  
   
 10. Geben Sie Optionen zum Überschreiben an. Wenn Sie auf **Die Datei nicht überschreiben, wenn eine frühere Version vorhanden ist**klicken, wird die Übermittlung nicht durchgeführt, falls eine vorhandene Datei entdeckt wird. Wenn Sie auf **Dateinamen inkrementieren, wenn neuere Versionen hinzugefügt werden**klicken, hängt der Berichtsserver eine Zahl an den Dateinamen an, um ihn von vorhandenen Dateien desselben Namens zu unterscheiden.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66100989"
   
  Der Bericht wird als statische Datei übermittelt. Wenn der Bericht interaktive Funktionen enthält (z. B. Links zu zusätzlichen Zeilen oder Spalten), stehen diese Funktionen nicht zur Verfügung.  
   
-###  <a name="bkmk_create_email_subscription"></a> So erstellen Sie ein E-Mail-Abonnement  
+###  <a name="bkmk_create_email_subscription"></a>Erstellen eines e-Mail-Abonnements  
   
 1.  Navigieren Sie im Berichts-Manager auf der Seite **Inhalt** zum Bericht, den Sie abonnieren möchten. Klicken Sie auf den Bericht, um ihn zu öffnen.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "66100989"
   
 3.  Wählen Sie unter **Übermittelt von**die Option **E-Mail**aus. Wenn dieser Übermittlungstyp nicht verfügbar ist, wurde der Berichtsserver nicht für E-Mail-Abonnements konfiguriert.  
   
-4.  Im Feld **An** ist der Empfängername bereits als Ihr Domänenbenutzerkonto angegeben. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ändern der Einstellungen für e-Mail-Adressen finden Sie unter [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
+4.  Im Feld **An** ist der Empfängername bereits als Ihr Domänenbenutzerkonto angegeben. Berichtsserver-Konfigurationseinstellungen legen fest, ob das Feld **An** bereits mit Ihrem Benutzerkonto ausgefüllt wird. Weitere Informationen zum Ändern von e-Mail-Adressen für Konfigurationseinstellungen finden Sie unter [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).  
   
     > [!NOTE]  
     >  Abhängig von Ihren Berechtigungen können Sie auch die E-Mail-Adresse eingeben, an die der Bericht geliefert werden soll. Mehrere E-Mail-Adressen müssen durch ein Semikolon (;) getrennt werden. Sie können weitere E-Mail-Adressen in die Textfelder **Cc**, **Bcc**und **Antwort an** eingeben. Für dieses Verfahren müssen Sie über die Berechtigung zum Verwalten von Abonnements verfügen.  
@@ -141,7 +141,7 @@ ms.locfileid: "66100989"
   
 9. Geben Sie für einen parametrisierten Bericht Parameter an, die für den Bericht in diesem Abonnement verwendet werden sollen. Die von Ihnen angegebenen Parameter können sich von denen unterscheiden, die für die Ausführung des Berichts bei Bedarf oder in anderen geplanten Vorgängen verwendet werden.  
   
-##  <a name="bkmk_modify_subscription"></a> So ändern Sie ein Abonnement  
+##  <a name="bkmk_modify_subscription"></a>So ändern Sie ein Abonnement  
  Ein Abonnement kann jederzeit geändert werden. Falls Sie ein Abonnement ändern, während es verarbeitet wird, werden die aktualisierten Einstellungen verwendet, wenn sie in der Berichtsserver-Datenbank gespeichert werden, bevor die Übermittlungserweiterung die Abonnementdaten erhält. Andernfalls werden die vorhandenen Einstellungen verwendet.  
   
  Um nach einem Abonnement zu suchen, verwenden Sie die Seite **Meine Abonnements** , oder zeigen Sie die mit einem Bericht verknüpften Abonnementdefinitionen an. Es ist nicht möglich, direkt oder basierend auf Besitzernamen, Triggerinformationen, Statusinformationen usw. nach einem Abonnement zu suchen.  
@@ -151,32 +151,32 @@ ms.locfileid: "66100989"
 > [!NOTE]  
 >  Ein Berichtsserveradministrator kann nicht zentral alle einzelnen Abonnements verwalten, die auf einem bestimmten Berichtsserver verwendet werden. Berichtsserveradministratoren können jedoch auf jedes einzelne Abonnement zugreifen, um es zu ändern oder zu löschen.  
   
-##  <a name="bkmk_delete_subscription"></a> So löschen Sie ein Abonnement  
+##  <a name="bkmk_delete_subscription"></a>So löschen Sie ein Abonnement  
  So löschen Sie ein Abonnement  
   
 1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
 2.  Klicken Sie im Berichts-Manager auf der globalen Symbolleiste auf **Meine Abonnements** , und navigieren Sie zu dem Abonnement, das Sie ändern oder löschen möchten.  
   
-3.  Oder suchen Sie stattdessen auf der Registerkarte **Abonnements** eines geöffneten Berichts das Abonnement, das Sie ändern oder löschen möchten. Führen Sie eine der folgenden Aktionen aus:  
+3.  Oder suchen Sie stattdessen auf der Registerkarte **Abonnements** eines geöffneten Berichts das Abonnement, das Sie ändern oder löschen möchten. Führen Sie einen der folgenden Schritte aus:  
   
     1.  Klicken Sie zum Ändern eines Abonnements auf **Bearbeiten**.  
   
     2.  Aktivieren Sie zum Löschen eines Abonnements das Kontrollkästchen neben dem Abonnement, und klicken Sie dann auf **Löschen**.  
   
- In diesem Thema wird nicht beschrieben, wie ein Abonnement beendet wird, das zurzeit auf dem Berichtsserver ausgeführt wird. Weitere Informationen zum Kündigen von Abonnements finden Sie unter [Verwalten eines ausgeführten Prozesses](manage-a-running-process.md)  
+ In diesem Thema wird nicht beschrieben, wie ein Abonnement beendet wird, das zurzeit auf dem Berichtsserver ausgeführt wird. Weitere Informationen zum Abbrechen von Abonnements finden Sie unter [Verwalten eines laufenden Prozesses](manage-a-running-process.md) .  
   
  Wenn Sie ein Abonnement beenden möchten und es nicht finden können, notieren Sie sich den Bericht, den Sie erhalten, und suchen Sie anhand des Namens nach diesem Bericht. Wenn Sie auf den Bericht zugegriffen haben, können Sie sich aus dem Abonnement entfernen. Falls Sie das Abonnement nicht finden können, handelt es sich möglicherweise um ein datengesteuertes Abonnement. Weitere Informationen erhalten Sie von Ihrem Berichtsserveradministrator.  
   
  Ein Abonnement wird automatisch gelöscht, wenn der zugrunde liegende Bericht gelöscht wird. Wenn Sie ein Abonnement während der Verarbeitung löschen, wird das Abonnement beendet, falls der Löschvorgang durchgeführt wird, bevor die Übermittlungserweiterung die Abonnementdaten erhält. Andernfalls wird die Verarbeitung des Abonnements fortgesetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md)   
- [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
- [Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md)   
+ [Erstellen und Verwalten von Abonnements für Berichts Server im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Erstellen und Verwalten von Abonnements für Berichts Server im einheitlichen Modus](../create-manage-subscriptions-native-mode-report-servers.md)   
  [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
- [Verwenden von „Meine Abonnements“](use-my-subscriptions-native-mode-report-server.md)  
+ [Verwenden von "Meine Abonnements"](use-my-subscriptions-native-mode-report-server.md)  
   
   

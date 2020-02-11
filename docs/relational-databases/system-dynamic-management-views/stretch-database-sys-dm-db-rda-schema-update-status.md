@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs
+title: sys. dm_db_rda_schema_update_status (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,35 +17,35 @@ ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67937018"
 ---
-# <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
+# <a name="stretch-database---sysdm_db_rda_schema_update_status"></a>Stretch Database-sys. dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Aufgabe des Schema-Update für das remotedatenarchiv jeder Stretch-aktivierte Tabelle in der aktuellen Datenbank. Aufgaben werden anhand der Task-ID identifiziert.  
+  Enthält eine Zeile für jeden Schema Aktualisierungs Task für das Remote Datenarchiv der einzelnen Stretch-aktivierten Tabellen in der aktuellen Datenbank. Tasks werden durch ihre Aufgaben-IDs identifiziert.  
   
- **dm_db_rda_schema_update_status** is scoped to the current database context. Stellen Sie sicher, dass Sie im Rahmen der Tabelle mit aktivierter Funktion Stretch-Datenbank sind für das Schema Aktualisierungsstatus anzuzeigen.  
+ **dm_db_rda_schema_update_status** ist auf den aktuellen Daten Bank Kontext beschränkt. Stellen Sie sicher, dass Sie sich im Daten Bank Kontext der Stretch-aktivierten Tabelle befinden, für die Sie den Status des Schema Updates anzeigen möchten.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**int**|Die ID der lokalen Stretch-aktivierte Tabelle, deren remotedatenarchiv Schema, wird aktualisiert.|  
-|**database_id**|**int**|Die ID der Datenbank, die lokale Stretch-aktivierte Tabelle enthält.|  
-|**task_id**|**bigint**|Die ID des remote Data Archive Schema Update Tasks.|  
-|**task_type**|**int**|Der Typ des remote Data Archive Schema Update Tasks.|  
-|**task_type_desc**|**nvarchar**|Die Beschreibung des Typs von der remote Data Archive Schemaaufgabe Update.|  
-|**task_state**|**int**|Der Status des remote Data Archive Schema Update Tasks.|  
-|**task_state_des**|**nvarchar**|Die Beschreibung des Status des remote Data Archive Schema Update Tasks.|  
-|**start_time_utc**|**datetime**|Die UTC-Zeit, an der das Schemaupdate Schritte remotedatenarchiv.|  
-|**end_time_utc**|**datetime**|Die UTC-Zeit, an der das Schemaupdate remotedatenarchiv, wurde beendet.|  
-|**error_number**|**int**|Wenn die Aktualisierung des Schemas remote Data Archive, die Fehlernummer des Fehlers ein Fehler, die aufgetreten sind auftritt; andernfalls Null.|  
-|**error_severity**|**int**|Wenn die Aktualisierung des Schemas remote Data Archive, den Schweregrad des Fehlers ein Fehler, die aufgetreten sind auftritt; andernfalls Null.|  
-|**error_state**|**int**|Wenn die Aktualisierung des Schemas remote Data Archive, den Status des Fehlers ein Fehler, die aufgetreten sind auftritt; andernfalls Null. Die Error_state gibt an, die Bedingung oder den Speicherort, in dem der Fehler aufgetreten ist.|  
+|**table_id**|**int**|Die ID der lokalen Stretch-aktivierten Tabelle, deren Remote Datenarchiv-Schema aktualisiert wird.|  
+|**database_id**|**int**|Die ID der Datenbank, die die lokale Stretch-aktivierte Tabelle enthält.|  
+|**task_id**|**BIGINT**|Die ID des Remote-Datenarchiv-Schema Aktualisierungs Tasks.|  
+|**task_type**|**int**|Der Typ der Remote Datenarchiv-Schema Aktualisierungs Aufgabe.|  
+|**task_type_desc**|**nvarchar**|Die Beschreibung des Typs der Aufgabe zum Aktualisieren des Schemas für Remote Datenarchive.|  
+|**task_state**|**int**|Der Status der Aufgabe zum Aktualisieren des Schemas für das Remote Datenarchiv.|  
+|**task_state_des**|**nvarchar**|Die Beschreibung des Zustands der Aufgabe zum Aktualisieren des Schemas für das Remote Datenarchiv.|  
+|**start_time_utc**|**datetime**|Die UTC-Zeit, zu der das Update des Remote Datenarchiv-Schemas gestartet wurde.|  
+|**end_time_utc**|**datetime**|Die UTC-Zeit, zu der das Update des Remote Datenarchiv-Schemas abgeschlossen wurde.|  
+|**error_number**|**int**|Wenn die Aktualisierung des Remote Datenarchiv-Schemas fehlschlägt, wird die Fehlernummer des aufgetretenen Fehlers angezeigt. andernfalls NULL.|  
+|**error_severity**|**int**|Wenn die Aktualisierung des Remote Datenarchiv-Schemas fehlschlägt, wird der Schweregrad des aufgetretenen Fehlers verursacht. andernfalls NULL.|  
+|**error_state**|**int**|Wenn bei der Aktualisierung des Remote Datenarchiv-Schemas ein Fehler auftritt, wird der Status des aufgetretenen Fehlers angezeigt. andernfalls NULL. Der ERROR_STATE gibt die Bedingung oder den Speicherort an, an dem der Fehler aufgetreten ist.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

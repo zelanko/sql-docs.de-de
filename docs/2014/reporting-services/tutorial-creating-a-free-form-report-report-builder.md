@@ -11,21 +11,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 332c67f47c8096cbeb5a94c4e2a288cd532038cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098952"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
   Dieses Lernprogramm zeigt Ihnen, wie Sie einen SSRS-Freiformbericht erstellen, der einem Formularbrief gleicht. Sie können Berichtselemente zu einem Formular mit Textfeldern, Bildern und anderen Datenbereichen anordnen.  
   
  Der Bericht, den Sie in diesem Lernprogramm erstellen, basiert auf Beispielumsatzdaten, die im Lernprogramm enthalten sind. Im Bericht werden Informationen nach Gebiet gruppiert und der Name des Vertriebsmanagers für das Gebiet sowie ausführliche und zusammenfassende Umsatzdaten angezeigt. Der Listendatenbereich wird als Grundlage für den formfreien Bericht verwendet. Anschließend werden folgende Objekte hinzugefügt: ein dekorativer Bereich mit einem Bild, statischer Text mit eingefügten Daten, eine Tabelle zum Anzeigen ausführlicher Informationen und optional Kreis- und Säulendiagramme zum Anzeigen von Zusammenfassungsinformationen.  
   
-##  <a name="BackToTop"></a> Lernziele  
+##  <a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
--   [Erstellen eines leeren Berichts, Datenquelle, und eines Datasets](#BlankReport)  
+-   [Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets](#BlankReport)  
   
 -   [Hinzufügen und Konfigurieren einer Liste](#List)  
   
@@ -47,10 +47,10 @@ ms.locfileid: "66098952"
   
  Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="BlankReport"></a> 1. Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets  
+##  <a name="BlankReport"></a>1. Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets  
   
 > [!NOTE]  
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle für den Bericht benötigt wird. Die Verwendung dieser Art von internen Daten eignet sich hervorragend für Lernzwecke, aber macht die Abfrage lang. .  
@@ -68,15 +68,15 @@ ms.locfileid: "66098952"
   
 #### <a name="to-create-a-new-data-source"></a>So erstellen Sie eine neue Datenquelle  
   
-1.  Klicken Sie im Berichtsdatenbereich auf **Neu**, und klicken Sie dann auf **Datenquelle**.  
+1.  Klicken Sie im Berichtsdaten Bereich auf **neu**, und klicken Sie dann auf **Datenquelle**.  
   
-2.  In der `Name` geben: **ListDataSource**.  
+2.  Geben Sie `Name` im Feld Folgendes ein: **listdatasource**  
   
 3.  Klicken Sie auf **In Bericht eingebettete Verbindung verwenden**.  
   
-4.  Überprüfen Sie, ob der Verbindungstyp Microsoft SQL Server ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Data Source = \<servername>**  
+4.  Überprüfen Sie, ob der Verbindungstyp „Microsoft SQL Server“ ist, und geben Sie anschließend im Feld **Verbindungszeichenfolge** Folgendes ein: **Datenquelle = \<Servername>**.  
   
-     \<Servername >, z.B. Report001, bezeichnet einen Computer, auf dem eine Instanz von SQL Server-Datenbankmoduls installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
+     \<der Servername> z. b. Report001 gibt einen Computer an, auf dem eine Instanz des SQL Server Datenbank-Engine installiert ist. Da die Berichtsdaten nicht aus einer SQL Server-Datenbank extrahiert werden, muss der Name einer Datenbank nicht eingeschlossen werden. Die Standarddatenbank auf dem angegebenen Server wird verwendet, um die Abfrage zu analysieren.  
   
 5.  Klicken Sie auf **Anmeldeinformationen**und geben Sie die zur Verbindung mit der Instanz der SQL Server-Datenbank-Engine benötigten Anmeldeinformationen ein.  
   
@@ -84,9 +84,9 @@ ms.locfileid: "66098952"
   
 #### <a name="to-create-a-new-dataset"></a>So erstellen Sie ein neues Dataset  
   
-1.  Klicken Sie im Berichtsdatenbereich auf **Neu**und anschließend auf **Dataset**.  
+1.  Klicken Sie im Berichtsdaten Bereich auf **neu**, und klicken Sie dann auf **DataSet**.  
   
-2.  In der `Name` geben: **ListDataset.**  
+2.  Geben Sie `Name` im Feld Folgendes ein: **listdataset.**  
   
 3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**und überprüfen Sie, ob **ListDataSource**die Datenquelle ist.  
   
@@ -133,14 +133,15 @@ ms.locfileid: "66098952"
   
      Bei den Abfrageergebnissen handelt es sich um die Daten, die im Bericht angezeigt werden können.  
   
-     ![Abfragedesigner](../../2014/tutorials/media/tutorial-querydesigner.png "Abfragedesigner")  
+     ![Abfrage-Designer](../../2014/tutorials/media/tutorial-querydesigner.png "Abfrage-Designer")  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="List"></a> 2. Hinzufügen und Konfigurieren einer Liste  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt drei Datenbereichsvorlagen bereit: Tabelle, Matrix und Liste. Diese Vorlagen basieren alle auf einem Tablix-Datenbereich.  
+##  <a name="List"></a>2. hinzufügen und Konfigurieren einer Liste  
+ 
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt drei Datenbereichsvorlagen bereit: Tabelle, Matrix und Liste. Diese Vorlagen basieren alle auf einem Tablix-Datenbereich.  
   
- In diesem Lernprogramm verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsgebiete in einem Bericht anzuzeigen, der einem Newsletter ähnelt. Die Informationen werden nach Gebiet gruppiert. Sie fügen eine neue Zeilengruppe hinzu, in der Daten nach Gebiet gruppiert werden, und löschen dann die integrierte Zeilengruppe "Details". Die Listenvorlage ist ideal zum Erstellen von Freiformberichten. Weitere Informationen finden Sie unter [listet &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ In diesem Lernprogramm verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsgebiete in einem Bericht anzuzeigen, der einem Newsletter ähnelt. Die Informationen werden nach Gebiet gruppiert. Sie fügen eine neue Zeilengruppe hinzu, in der Daten nach Gebiet gruppiert werden, und löschen dann die integrierte Zeilengruppe "Details". Die Listenvorlage ist ideal zum Erstellen von Freiformberichten. Weitere Informationen finden Sie unter [Listen &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Für diesen Bericht werden als Papierformat Letter (21,6 x 28) und Ränder mit einer Breite von ca. 2,5 cm verwendet. Eine Berichtsseite, die höher als 22,9 cm oder breiter als 16,5 cm ist, kann zu leeren Seiten führen.  
@@ -159,7 +160,7 @@ ms.locfileid: "66098952"
   
 5.  Klicken Sie mit der rechten Maustaste in die Liste und anschließend auf **Rechteckeigenschaften**.  
   
-     ![Rechteckeigenschaften (Befehl)](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "Rechteckeigenschaften-Befehl")  
+     ![Rechteckeigenschaften (Befehl)](../../2014/tutorials/media/tutorial-rectanglepropertiescommand.png "Rechteckeigenschaften (Befehl)")  
   
 6.  Aktivieren Sie auf der Registerkarte **Allgemein** das Kontrollkästchen **Seitenumbruch hinzufügen nach** .  
   
@@ -169,9 +170,9 @@ ms.locfileid: "66098952"
   
 1.  Klicken Sie im Bereich „Zeilengruppen“ mit der rechten Maustaste auf die Gruppe „Details“, zeigen Sie auf **Gruppe hinzufügen**, und klicken Sie anschließend auf **Übergeordnete Gruppe**.  
   
-     ![Übergeordnete Gruppe Befehl](../../2014/tutorials/media/tutorial-parentgroupcommand.png "Parent Group-Befehl")  
+     ![Übergeordnete Gruppe (Befehl)](../../2014/tutorials/media/tutorial-parentgroupcommand.png "Übergeordnete Gruppe (Befehl)")  
   
-2.  Wählen Sie in der Dropdown-Liste `[Territory].`  
+2.  Wählen Sie in der Dropdown Liste`[Territory].`  
   
 3.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -179,26 +180,26 @@ ms.locfileid: "66098952"
   
 4.  Klicken Sie mit der rechten Maustaste in der Liste auf die Spalte „Territory“, und klicken Sie anschließend auf **Spalten löschen**.  
   
-     ![Löschen von Spalten](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Spalten löschen")  
+     ![Spalten löschen](../../2014/tutorials/media/tutorial-deletecolumnscommand.png "Spalten löschen")  
   
 5.  Klicken Sie auf **Nur Spalten löschen**.  
   
-     ![Löschen Sie im Dialogfeld Spalten](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "löschen (Dialogfeld)")  
+     ![Spalten löschen (Dialogfeld)](../../2014/tutorials/media/tutorial-deletecolumnsdialog.png "Spalten löschen (Dialogfeld)")  
   
 6.  Klicken Sie im Bereich "Zeilengruppen" mit der rechten Maustaste auf die Gruppe **Details** , und klicken Sie dann auf **Gruppe löschen**.  
   
-     ![Löschen der Detailgruppe](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Löschen der Gruppe \"Details\"")  
+     ![Löschen der Detailgruppe](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Löschen der Detailgruppe")  
   
-7.  Klicken Sie auf **Nur Gruppe löschen**.  
+7.  Klicken Sie auf **nur Gruppe löschen**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Graphics"></a> 3. Hinzufügen von Grafiken  
+##  <a name="Graphics"></a>3. Hinzufügen von Grafiken  
  Einer der Vorteile der Verwendung eines Listendatenbereichs besteht darin, dass Berichtselemente wie z. B. Rechtecke und Textfelder überall hingefügt werden können und keine Beschränkung auf ein tabellarisches Layout besteht. Sie verbessern die Darstellung des Berichts durch Hinzufügen einer Grafik (ein mit einer Farbe ausgefülltes Rechteck).  
   
 #### <a name="to-add-graphic-elements-to-the-report"></a>So fügen Sie dem Bericht grafische Elemente hinzu  
   
-1.  Auf der **einfügen** Registerkarte des Menübands, klicken Sie auf **Rechteck**, und ziehen Sie dann ein Rechteck in der oberen linken Ecke der Liste. Legen Sie für das Rechteck eine Höhe von 17,8 cm und eine Breite von 2,5 cm fest.  
+1.  Klicken Sie im Menüband auf der Registerkarte **Einfügen** auf **Rechteck**, und ziehen Sie dann ein Rechteck in die linke obere Ecke der Liste. Legen Sie für das Rechteck eine Höhe von 17,8 cm und eine Breite von 2,5 cm fest.  
   
 2.  Klicken Sie mit der rechten Maustaste auf das Rechteck, und klicken Sie anschließend auf **Rechteckeigenschaften**.  
   
@@ -206,7 +207,7 @@ ms.locfileid: "66098952"
   
 4.  Klicken Sie in der Dropdownliste **Füllfarbe** auf **Weitere Farben**, und wählen Sie dann die Farbe **Dunkelgrau** aus.  
   
-     ![Wählen Sie Füllfarbe](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "wählen Füllfarbe")  
+     ![Auswählen der Füllfarbe](../../2014/tutorials/media/tutorial-selectfillcolorwithnumbers.png "Auswählen der Füllfarbe")  
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -214,7 +215,7 @@ ms.locfileid: "66098952"
   
  Die linke Seite des Berichts enthält nun eine vertikale Grafik, die aus einem dunkelgrauen Rechteck besteht.  
   
-##  <a name="Text"></a> 4. Hinzufügen von Freitext  
+##  <a name="Text"></a>4. Hinzufügen von freiem Formular Text  
  Ein Textfeld enthält statischen Text, der auf jeder Berichtsseite sowie in allen Datenfeldern wiederholt wird.  
   
 #### <a name="to-add-text-to-the-report"></a>So fügen Sie dem Bericht Text hinzu  
@@ -223,16 +224,16 @@ ms.locfileid: "66098952"
   
 2.  Klicken Sie auf der Registerkarte **Einfügen** des Menübands auf **Textfeld**, und ziehen Sie dann ein Textfeld in die linke obere Ecke der Liste, jedoch innerhalb des zuvor hinzugefügten Rechtecks. Legen Sie für das Textfeld eine Höhe von ca. 7,5 cm und eine Breite von ca. 12,7 cm fest.  
   
-3.  Platzieren Sie den Cursor in den oberen Bereich des Textfelds, und geben Sie dann: **Newsletter für** .  
+3.  Setzen Sie den Cursor in den oberen Bereich des Textfelds, und geben Sie anschließend Folgendes ein: **Newsletter für** .  
   
-     ![Hinzufügen von Text für Newsletterüberschriften](../../2014/tutorials/media/tutorial-newsletterfor.png "Add newsletter heading text")  
+     ![Hinzufügen von Text für Newsletterüberschriften](../../2014/tutorials/media/tutorial-newsletterfor.png "Hinzufügen von Text für Newsletterüberschriften")  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "für" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
   
 4.  Ziehen Sie das Feld "Territory" in das Textfeld, und platzieren Sie es nach dem Text, den Sie in Schritt 3 eingegeben haben.  
   
-     ![Hinzufügen von gebietsfelds](../../2014/tutorials/media/tutorial-addterritorialfield.png "hinzufügen gebietsfelds")  
+     ![Hinzufügen eines Gebietsfelds](../../2014/tutorials/media/tutorial-addterritorialfield.png "Hinzufügen eines Gebietsfelds")  
   
 5.  Markieren Sie den gesamten Text, klicken Sie mit der rechten Maustaste, und klicken Sie anschließend auf **Texteigenschaften**.  
   
@@ -244,14 +245,14 @@ ms.locfileid: "66098952"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Platzieren Sie den Cursor unterhalb des Texts, den Sie in Schritt 3 und Datentyp eingegeben: **Hello** .  
+9. Platzieren Sie den Cursor unter dem Text, den Sie in Schritt 3 eingegeben haben, und geben Sie **Hello** ein.  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "Hello" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
   
 10. Ziehen Sie das Feld "FullName" in das Textfeld, ordnen Sie es hinter dem Text an, den Sie in Schritt 9 eingegeben haben, und geben Sie dann ein Komma (,) ein.  
   
-     ![Vollständiger Name-Feld hinzufügen](../../2014/tutorials/media/tutorial-addfullnamefield.png "Feld hinzufügen vollständiger Name")  
+     ![Hinzufügen eines Felds für den vollständigen Namen](../../2014/tutorials/media/tutorial-addfullnamefield.png "Hinzufügen eines Felds für den vollständigen Namen")  
   
 11. Wählen Sie den Text aus, den Sie in Schritt 9 und 10 hinzugefügt haben, klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Texteigenschaften**.  
   
@@ -276,16 +277,16 @@ ms.locfileid: "66098952"
   
 19. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Hinzufügen von newslettertext](../../2014/tutorials/media/tutorial-newslettertext.png "Hinzufügen von newslettertext")  
+     ![Hinzufügen von Newslettertext](../../2014/tutorials/media/tutorial-newslettertext.png "Hinzufügen von Newslettertext")  
   
-20. Platzieren Sie den Cursor unterhalb des Texts, die Sie in Schritt 15 eingefügt haben, und geben Sie dann: **Herzlichen Glückwunsch zum Gesamtumsatz von** .  
+20. Setzen Sie den Cursor unter den Text, den Sie in Schritt 15 eingefügt haben, und geben Sie dann Folgendes ein: **Glückwünsche zum Gesamtumsatz von** .  
   
     > [!NOTE]  
     >  Fügen Sie nach dem Begriff "von" zusätzliche Leerzeichen ein. Durch die Leerzeichen werden der Text und das Feld getrennt, die im nächsten Schritt hinzugefügt werden.  
   
 21. Ziehen Sie das Feld "Sales" in das Textfeld, platzieren Sie es hinter dem in Schritt 20 eingegebenen Text, und geben Sie dann ein Ausrufezeichen (!) ein.  
   
-22. Markieren Sie das Feld "Sales", mit der rechten Maustaste in des Felds, und klicken Sie dann auf **Ausdruck**.  
+22. Markieren Sie das Feld Sales, klicken Sie mit der rechten Maustaste auf das Feld, und klicken Sie dann auf **Ausdruck**.  
   
 23. Ändern Sie im Ausdrucksfeld den Ausdruck folgendermaßen so, dass er die Sum-Funktion einschließt:  
   
@@ -295,7 +296,7 @@ ms.locfileid: "66098952"
   
 24. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     ![Hinzufügen eines Ausdrucks zum sales-Feld](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "Hinzufügen eines Ausdrucks zum sales-Feld")  
+     ![Hinzufügen eines Ausdrucks zum Sales-Feld](../../2014/tutorials/media/tutorial-addexpressiontosalesfield.png "Hinzufügen eines Ausdrucks zum Sales-Feld")  
   
 25. Wählen Sie den Text aus, den Sie in den Schritten 20 bis 23 hinzugefügt haben, klicken Sie mit der rechten Maustaste, und klicken Sie dann auf **Texteigenschaften**.  
   
@@ -307,7 +308,7 @@ ms.locfileid: "66098952"
   
 29. Wählen Sie `[Sum(Sales)]` aus. Klicken Sie anschließend auf der Registerkarte **Home** in der Gruppe **Zahl** auf die Schaltfläche **Währung** .  
   
-     ![Hinzufügen von Währungssymbol](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "Währungssymbol hinzufügen")  
+     ![Hinzufügen eines Währungssymbols](../../2014/tutorials/media/tutorial-addcurrencysymbol.png "Hinzufügen eines Währungssymbols")  
   
 30. Klicken Sie mit der rechten Maustaste auf das Textfeld mit dem Text „Zum Hinzufügen eines Titels klicken“, und klicken Sie anschließend auf **Löschen**.  
   
@@ -319,7 +320,7 @@ ms.locfileid: "66098952"
   
  ![Vorschau für Newsletter](../../2014/tutorials/media/tutorial-newsletters.png "Vorschau für Newsletter")  
   
-##  <a name="Table"></a> 5. Hinzufügen einer Tabelle, die Umsatzdetails anzeigt  
+##  <a name="Table"></a>5. Hinzufügen einer Tabelle, um Umsatz Details anzuzeigen  
  Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen und Matrizen eine Tabelle hinzu. Nach Fertigstellung des Assistenten wird manuell eine Zeile für Summen hinzugefügt.  
   
 #### <a name="to-add-a-table"></a>So fügen Sie eine Tabelle hinzu  
@@ -353,24 +354,24 @@ ms.locfileid: "66098952"
   
 12. Nachdem Sie bestätigt haben, dass die Tabelle ausgewählt wurde, klicken Sie im Zeilengruppenbereich mit der rechten Maustaste auf „Details“, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie dann auf **Nach**.  
   
-     ![Fügen Sie die Summe des Berichts](../../2014/tutorials/media/tutorial-addtotal.png "Summe des Berichts hinzufügen")  
+     ![Hinzufügen einer Summe des Berichts](../../2014/tutorials/media/tutorial-addtotal.png "Hinzufügen einer Summe des Berichts")  
   
 13. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
  Im Bericht wird eine Tabelle mit Umsatzdetails und Gesamtbeträgen angezeigt.  
   
- ![Gesamtumsatz im Bericht](../../2014/tutorials/media/tutorial-reportsalestotals.png "Gesamtumsätze im Bericht")  
+ ![Gesamtumsatz im Bericht](../../2014/tutorials/media/tutorial-reportsalestotals.png "Gesamtumsatz im Bericht")  
   
-##  <a name="Format"></a> 6. Formatieren von Daten  
+##  <a name="Format"></a>6. Formatieren von Daten  
  Formatieren Sie numerische Daten nur als Währung und Datumsangaben nur als Tag- und Uhrzeitangaben.  
   
 #### <a name="to-format-fields-table"></a>So formatieren Sie die Feldtabelle  
   
-1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zu wechseln.  
+1.  Klicken Sie auf **Entwurf** , um zur Entwurfs Ansicht zu wechseln.  
   
 2.  Klicken Sie auf die Tabellenzellen, die `[Sum(SalesSales)]` enthalten, und klicken Sie auf der Registerkarte **Home** in der Gruppe **Zahl** auf die Schaltfläche **Währung** .  
   
-     ![Hinzufügen des Währungssymbols zur Verkaufssumme](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "hinzufügen Währungssymbols zur Verkaufssumme")  
+     ![Hinzufügen eines Währungssymbols zur Verkaufssumme](../../2014/tutorials/media/tutorial-sumsales-currencysymbol.png "Hinzufügen eines Währungssymbols zur Verkaufssumme")  
   
 3.  Klicken Sie auf die Zelle, die `[SalesDate]` enthält, und wählen Sie in der Gruppe **Zahl** aus der Dropdownliste **Datum**aus.  
   
@@ -380,14 +381,14 @@ ms.locfileid: "66098952"
   
  ![Formatieren von Gesamtumsätzen im Bericht](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "Formatieren von Gesamtumsätzen im Bericht")  
   
-##  <a name="Save"></a> 7. Speichern des Berichts  
+##  <a name="Save"></a>7. Speichern des Berichts  
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern. Sie können den Bericht auch in eine Vielzahl von Formaten wie Word und PDF exportieren, indem Sie den Bericht ausführen und das Format aus dem Menü **Exportieren** auswählen.  
   
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
+1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
   
 2.  Klicken Sie auf **Letzte Sites und Server**.  
   
@@ -395,7 +396,7 @@ ms.locfileid: "66098952"
   
      Die Meldung "Verbindung mit Berichtsserver wird hergestellt" wird angezeigt. Nachdem die Verbindung hergestellt wurde, sehen Sie den Inhalt des Berichtsordners, den der Berichtsserveradministrator als Standardspeicherort für Berichte angegeben hat.  
   
-4.  In `Name`, ersetzen Sie den Standardnamen durch **SalesInformationByTerritory**.  
+4.  Ersetzen `Name`Sie in den Standardnamen durch **salesinformationbyterritory**.  
   
 5.  Klicken Sie auf **Speichern**.  
   
@@ -403,15 +404,15 @@ ms.locfileid: "66098952"
   
 #### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer  
   
-1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
+1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
   
 2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
-3.  In `Name`, ersetzen Sie den Standardnamen durch **SalesInformationByTerritory**.  
+3.  Ersetzen `Name`Sie in den Standardnamen durch **salesinformationbyterritory**.  
   
 4.  Klicken Sie auf **Speichern**.  
   
-##  <a name="Line"></a> 8. Hinzufügen einer Zeile, um Bereiche des Berichts zu trennen (optional)  
+##  <a name="Line"></a>8. (optional) Hinzufügen einer Zeile zum Trennen von Bereichen des Berichts  
  Fügen Sie eine Zeile hinzu, um den Leitartikel und die Details des Berichts zu trennen.  
   
 #### <a name="to-add-a-line"></a>So fügen Sie eine Linie hinzu  
@@ -428,9 +429,9 @@ ms.locfileid: "66098952"
   
 6.  Wählen Sie im Bereich **Rahmen** für die Breite den Wert **4 1/2** pt aus, und wählen Sie für Farbe **Rot**aus.  
   
-     ![Fügen Sie die Zeile zum Bericht](../../2014/tutorials/media/tutorial-reportwithline.png "Zeile zum Bericht hinzufügen")  
+     ![Hinzufügen einer Zeile zum Bericht](../../2014/tutorials/media/tutorial-reportwithline.png "Hinzufügen einer Zeile zum Bericht")  
   
-##  <a name="Visualization"></a> 9. (Optional) Hinzufügen von Zusammenfassungsdatenvisualisierung  
+##  <a name="Visualization"></a>9. (optional) Hinzufügen einer Zusammenfassungs Datenvisualisierung  
  Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie in einem Rechteck ein Kreis- und ein Säulendiagramm, um sicherzustellen, dass der Bericht wunschgemäß gerendert wird.  
   
 #### <a name="to-add-a-rectangle"></a>So fügen Sie ein Rechteck hinzu  
@@ -451,7 +452,7 @@ ms.locfileid: "66098952"
   
 4.  Ziehen Sie auf der Seite „Diagrammfelder anordnen“ das Feld „Product“ in **Kategorien**.  
   
-5.  Ziehen Sie Quantity in **Werte**, und klicken Sie dann auf **Weiter**.  
+5.  Ziehen Sie Menge in **Werte**, und klicken Sie dann auf **weiter**.  
   
 6.  Wählen Sie auf der Seite **Format auswählen** im Bereich **Formate** die Option **Schiefer**aus.  
   
@@ -461,11 +462,11 @@ ms.locfileid: "66098952"
   
 9. Ziehen Sie das Diagramm in das Rechteck.  
   
-     ![Hinzufügen von Kreisdiagramm](../../2014/tutorials/media/tutorial-addpiechart.png "Kreisdiagramm hinzufügen")  
+     ![Hinzufügen eines Kreisdiagramms](../../2014/tutorials/media/tutorial-addpiechart.png "Hinzufügen eines Kreisdiagramms")  
   
 10. Klicken Sie mit der rechten Maustaste auf den Diagrammtitel, und klicken Sie dann auf **Titeleigenschaften**.  
   
-11. In der **Diagrammtiteleigenschaften** im Dialogfeld im Titeltext Folgendes ein: **Verkaufte Produktmengen**.  
+11. Geben Sie im Dialogfeld **Diagrammtiteleigenschaften** im Titeltext Folgendes ein: **Verkaufte Produktmengen**.  
   
 12. Klicken Sie auf die Registerkarte **Schriftart** , und klicken Sie in der Liste **Größe** auf **10 pt**.  
   
@@ -475,11 +476,11 @@ ms.locfileid: "66098952"
   
 1.  Klicken Sie auf der Registerkarte **Einfügen** des Menübands im Bereich **Datenvisualisierungen** auf **Diagramm** und anschließend auf **Diagramm-Assistent**.  
   
-2.  Klicken Sie auf der Seite **Dataset auswählen** auf **ListDataset**, und anschließend auf **Weiter**.  
+2.  Klicken Sie auf der Seite **Dataset auswählen** auf **listdataset**, und klicken Sie dann auf **weiter**.  
   
 3.  Klicken Sie auf **Spalte**und anschließend auf **Weiter**.  
   
-4.  Auf der Seite Diagrammfelder anordnen, ziehen Sie das Feld "Product" zu **Kategorien**.  
+4.  Ziehen Sie auf der Seite Diagramm Felder anordnen das Feld Product in **Kategorien**.  
   
 5.  Ziehen Sie „Sales“ in das Feld **Werte** , und klicken Sie anschließend auf **Weiter**.  
   
@@ -495,11 +496,11 @@ ms.locfileid: "66098952"
   
 9. Ziehen Sie das Diagramm in das Rechteck unter dem Kreisdiagramm.  
   
-     ![Diagramm der hinzufügen-Spalte](../../2014/tutorials/media/tutorial-addcolumnchart.png "Säulendiagramm hinzufügen")  
+     ![Hinzufügen eines Säulendiagramms](../../2014/tutorials/media/tutorial-addcolumnchart.png "Hinzufügen eines Säulendiagramms")  
   
-10. Klicken Sie mit der rechten Maustaste auf den Diagrammtitel, und klicken Sie dann auf **Titeleigenschaften**.  
+10. Klicken Sie mit der rechten Maustaste auf den Diagramm Titel, und klicken Sie auf **Titel Eigenschaften**.  
   
-11. In der **Diagrammtiteleigenschaften** im Dialogfeld im Titeltext Folgendes ein: **Produktverkaufszahlen**.  
+11. Geben Sie im Dialogfeld **Diagrammtiteleigenschaften** im Titeltext Folgendes ein: **Produktverkäufe**.  
   
 12. Klicken Sie auf die Registerkarte **Schriftart** , und klicken Sie in der Liste **Größe** auf **10 pt**, und klicken Sie dann auf **OK**.  
   
@@ -520,13 +521,13 @@ ms.locfileid: "66098952"
   
      Im Eigenschaftenbereich zeigt die `Name`-Eigenschaft den Namen des Rechtecks an.  
   
-     ![Name des Rechtecks](../../2014/tutorials/media/tutorial-rectanglename.png "Namen des Rechtecks")  
+     ![Name des Rechtecks](../../2014/tutorials/media/tutorial-rectanglename.png "Name des Rechtecks")  
   
 2.  Klicken Sie auf das Kreisdiagramm.  
   
-3.  In der **Eigenschaften** Bereich, überprüfen Sie, ob die `Parent` Eigenschaft enthält den Namen des Rechtecks.  
+3.  Überprüfen Sie im **Eigenschaften** Bereich, ob `Parent` die-Eigenschaft den Namen des Rechtecks enthält.  
   
-     ![Parent-Eigenschaft für Kreisdiagramm](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "Parent-Eigenschaft für Kreisdiagramm")  
+     ![Übergeordnete Eigenschaft für Kreisdiagramm](../../2014/tutorials/media/tutorial-piechart-parentproperty.png "Übergeordnete Eigenschaft für Kreisdiagramm")  
   
 4.  Klicken Sie auf das Säulendiagramm, und wiederholen Sie die Schritte 2 und 3.  
   
@@ -539,7 +540,7 @@ ms.locfileid: "66098952"
   
 2.  Wenn beide Diagramme markiert sind, klicken Sie mit der rechten Maustaste darauf, zeigen Sie auf **Layout**, und klicken Sie anschließend auf **Breite angleichen**.  
   
-     ![Diagrammbreiten gleich](../../2014/tutorials/media/tutorial-makechartssamewidth.png "Diagrammbreiten identisch")  
+     ![Einstellen derselben Diagrammbreiten](../../2014/tutorials/media/tutorial-makechartssamewidth.png "Einstellen derselben Diagrammbreiten")  
   
     > [!NOTE]  
     >  Das Element, auf das Sie zuerst klicken, bestimmt die Breite aller ausgewählten Elemente.  
@@ -551,11 +552,11 @@ ms.locfileid: "66098952"
  ![SSRS-Lernprogramm, formfreien Bericht](../../2014/tutorials/media/tutorial-reportfinal.png "SSRS-Lernprogramm, formfreien Bericht")  
   
 ## <a name="more-information"></a>Weitere Informationen  
- Weitere Informationen zu Listen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [listet &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Tablix-Daten Region Bereiche &#40;Berichts-Generator und SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md), und [Tablix-Zellen, Zeilen und Spalten &#40;Berichts-Generator&#41; und SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
+ Weitere Informationen zu Listen finden Sie unter [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-matrices-and-lists-report-builder-and-ssrs.md), [Listet &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md), [Tablix-Datenbereichs Bereiche &#40;Berichts-Generator und SSRS-&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md)und [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator&#41; und SSRS](report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
  Weitere Informationen zu Abfrage-Designern finden Sie unter [Abfrage-Designer (Berichts-Generator)](../../2014/reporting-services/query-designers-report-builder.md) und [Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)](report-data/text-based-query-designer-user-interface-report-builder.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

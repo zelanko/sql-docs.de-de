@@ -1,5 +1,5 @@
 ---
-title: Typen von Deskriptoren | Microsoft-Dokumentation
+title: Deskriptortypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,40 +13,40 @@ ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087793"
 ---
 # <a name="types-of-descriptors"></a>Typen von Deskriptoren
 Ein Deskriptor wird verwendet, um einen der folgenden zu beschreiben:  
   
--   Ein Satz von NULL oder mehr Parameter. Ein Parameterdeskriptor kann verwendet werden, um zu beschreiben:  
+-   Ein Satz von 0 (null) oder mehr Parametern. Ein Parameter Deskriptor kann verwendet werden, um Folgendes zu beschreiben:  
   
-    -   Die *Anwendung Parameterpuffer* die entweder die Eingabeargumente dynamische als Satz enthält, von der Anwendung oder die dynamische Ausgabeargumente nach der Ausführung einer **Aufrufen** SQL-Anweisung.  
+    -   Der *Anwendungsparameter Puffer,* der die von der Anwendung festgelegten dynamischen Eingabeargumente oder die dynamischen Argumente der Ausgabe nach der Ausführung einer SQL- **Anweisung enthält** .  
   
-    -   Die *Implementierung Parameterpuffer*. Für dynamische Eingabeargumente enthält die gleichen Argumente wie der Anwendung Parameterpuffer nach der Datenkonvertierung, die die Anwendung angeben kann. Für dynamische Ausgabeargumente enthält die zurückgegebene Argumente, bevor jede Datenkonvertierung, die die Anwendung angeben kann.  
+    -   Der *Implementierungs Parameter Puffer*. Für dynamische Eingabeargumente enthält diese die gleichen Argumente wie der Anwendungsparameter Puffer, nachdem eine beliebige Datenkonvertierung von der Anwendung möglich ist. Für dynamische Ausgabe Argumente enthält diese die zurückgegebenen Argumente, bevor eine von der Anwendung angegebene Datenkonvertierung möglich ist.  
   
-     Für dynamische Eingabeargumente muss die Anwendung auf einem anwendungsparameterdeskriptor ausgeführt, vor dem Ausführen einer SQL-Anweisung, die Marker dynamischer Parameter enthält. Für Eingabe- und dynamische Argumente kann die Anwendung unterschiedliche Datentypen aus den IPD zum Erreichen der Datenkonvertierung angeben.  
+     Bei dynamischen Eingabe Argumenten muss die Anwendung mit einem Anwendungsparameter Deskriptor arbeiten, bevor eine SQL-Anweisung ausgeführt wird, die dynamische Parameter Markierungen enthält. Sowohl für Eingabe-als auch für Ausgabe dynamische Argumente kann die Anwendung unterschiedliche Datentypen aus den Implementierungs Parameter Deskriptoren angeben, um die Datenkonvertierung zu erzielen.  
   
--   Eine einzelne Zeile von Datenbankdaten. Ein Deskriptor für die Zeile kann verwendet werden, um zu beschreiben:  
+-   Eine einzelne Zeile mit Datenbankdaten. Ein Zeilen Deskriptor kann verwendet werden, um Folgendes zu beschreiben:  
   
-    -   Die *Implementierung Zeilenpuffer,* enthält die Zeile aus der Datenbank. (Diese Puffer vom Konzept her Daten enthalten, wie in geschrieben oder aus der Datenbank gelesen. Die gespeicherten Form von Datenbankdaten ist jedoch nicht angegeben. Eine Datenbank kann zusätzliche Konvertierung für die Daten von der Form in der Implementierung Puffer ausführen.)  
+    -   Der *Implementierungs Zeilen Puffer,* der die Zeile aus der Datenbank enthält. (Diese Puffer enthalten konzeptionell Daten, die in die Datenbank geschrieben oder aus ihr gelesen werden. Die gespeicherte Form von Datenbankdaten ist jedoch nicht angegeben. Eine Datenbank kann eine zusätzliche Konvertierung der Daten aus Ihrem Formular im Implementierungs Puffer ausführen.)  
   
-    -   Die *Anwendung Zeilenpuffer,* die die Datenzeile enthält, wie für die Anwendung, die nach der Datenkonvertierung, die die Anwendung angeben kann.  
+    -   Der *Anwendungs Zeilen Puffer,* der die Zeile der Daten enthält, die der Anwendung gemäß der von der Anwendung angegebenen Datenkonvertierung angezeigt werden.  
   
-     Die Anwendung arbeitet mit den Anwendungsdienst-Deskriptor Zeile in jedem Fall, in dem Spaltendaten aus der Datenbank in Anwendungsvariablen angezeigt werden müssen. Um die Datenkonvertierung von Spaltendaten zu erreichen, kann die Anwendung unterschiedliche Datentypen aus den Implementierungszeilendeskriptor angeben.  
+     Die Anwendung wird in jedem Fall mit dem Anwendungs Zeilen Deskriptor betrieben, wenn Spaltendaten aus der Datenbank in Anwendungsvariablen angezeigt werden müssen. Um die Datenkonvertierung von Spaltendaten zu erreichen, kann die Anwendung unterschiedliche Datentypen aus den Zeilen Deskriptoren der Implementierung angeben.  
   
- Der deskriptortypen werden in der folgenden Tabelle zusammengefasst.  
+ Die deskriptortypen sind in der folgenden Tabelle zusammengefasst.  
   
 |Puffertyp|Zeilen|Dynamische Parameter|  
 |-----------------|----------|------------------------|  
-|**Anwendungspuffer**|Zeile anwendungsdeskriptor (ARD)|anwendungsparameterdeskriptor (APD)|  
-|**Implementierung Puffer**|implementierungszeilendeskriptors (IRD)|IPD (Implementierungsparameterdeskriptor, Implementierungszeilendeskriptor)|  
+|**Anwendungs Puffer**|Anwendungs Zeilen Deskriptor (ARD)|Anwendungsparameter Deskriptor (APD)|  
+|**Implementierungs Puffer**|Implementierungs Zeilen Deskriptor (IRD)|Implementierungs Parameter Deskriptor (IPD)|  
   
- Für den Parameter oder den Zeilenpuffer Wenn die Anwendung unterschiedliche Datentypen in der entsprechenden Datensätze die Implementierung und Deskriptoren angibt führt der Treiber Datenkonvertierung, wenn er die Deskriptoren verwendet. Es kann z. B. numerische und Datetime-Werte in Zeichenfolgen--Format konvertieren. (Konvertierungen, die gültige finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
+ Wenn die Anwendung unterschiedliche Datentypen in den entsprechenden Datensätzen der Implementierungs-und Anwendungs Deskriptoren angibt, führt der Treiber die Datenkonvertierung durch, wenn die Deskriptoren verwendet werden. Beispielsweise können numerische Werte und DateTime-Werte in das Zeichen folgen Format konvertiert werden. (Informationen zu gültigen Konvertierungen finden Sie unter [Anhang D: Datentypen](../../../odbc/reference/appendixes/appendix-d-data-types.md).)  
   
- Ein Deskriptor kann verschiedene Rollen ausführen. Verschiedene Anweisungen können beliebige Deskriptoren freigeben, die die Anwendung explizit zuweist. Ein Deskriptor Zeile in einer Anweisung kann als eine Parameterdeskriptor in einer anderen Anweisung dienen.  
+ Mit einem Deskriptor können unterschiedliche Rollen durchgeführt werden. Verschiedene-Anweisungen können alle Deskriptoren gemeinsam verwenden, die von der Anwendung explizit zugewiesen werden. Ein Zeilen Deskriptor in einer Anweisung kann als Parameter Deskriptor in einer anderen Anweisung dienen.  
   
- Es ist immer, ob ein angegebener Deskriptor einen Anwendungsdienst-Deskriptor einer oder mehrerer Implementierung, ist bekannt, auch wenn der Deskriptor noch nicht in einem Datenbankvorgang verwendet wurde. Für die Deskriptoren, die die Implementierung implizit zuweist, zeichnet die Implementierung der vordefinierten Zeile relativ zur das Anweisungshandle verwenden. Alle Deskriptor, der die Anwendung durch Aufrufen von zuordnet **SQLAllocHandle** ist ein Anwendungsdienst-Deskriptor.
+ Es ist immer bekannt, ob es sich bei einem bestimmten Deskriptor um einen Anwendungs Deskriptor oder einen Implementierungs Deskriptor handelt, auch wenn der Deskriptor noch nicht in einem Daten Bank Vorgang verwendet wurde. Bei den Deskriptoren, die von der Implementierung implizit zugewiesen werden, zeichnet die-Implementierung die vordefinierte Zeile relativ zum Anweisungs Handle auf. Jeder Deskriptor, den die Anwendung durch Aufrufen von **sqlzugechandle** zugewiesen, ist ein Anwendungs Deskriptor.

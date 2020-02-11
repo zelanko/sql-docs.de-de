@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Exceldatei | Microsoft-Dokumentation'
+title: 'Aufgabe 5: Exportieren der Bereinigungs Ergebnisse in eine Excel-Datei | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,40 +11,40 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65489127"
 ---
-# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei
-  In dieser Aufgabe exportieren Sie Ergebnisse aus der Bereinigungsaktivität in eine Excel-Datei. Finden Sie unter [Exportphase](https://msdn.microsoft.com/library/hh213061.aspx#Export) Weitere Informationen.  
+# <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Aufgabe 5: Exportieren der Bereinigungsergebnisse in eine Excel-Datei
+  In dieser Aufgabe exportieren Sie Ergebnisse aus der Bereinigungsaktivität in eine Excel-Datei. Weitere Informationen finden Sie im Thema [Exportieren von Stufen](https://msdn.microsoft.com/library/hh213061.aspx#Export) .  
   
-1.  Wählen Sie im rechten Bereich **Excel** für die **Zieltyp**.  
+1.  Wählen Sie im rechten Bereich für den **Zieltyp**die Option **Excel** aus.  
   
-2.  Klicken Sie auf **Durchsuchen**, geben Sie den Namen der Ausgabedatei als **Cleansed Supplier List.xls**, und klicken Sie dann auf **öffnen**.  
+2.  Klicken Sie auf **Durchsuchen**, geben Sie den Namen der Ausgabedatei als **bereinigten Lieferanten List. xls**an, und klicken Sie dann auf **Öffnen**.  
   
-3.  Wählen Sie **Data Only** für die **Ausgabe** Format, um nur die bereinigten Daten exportieren. Die zweite Option **Informationen zu Daten und Bereinigung**, können Sie bereinigungsaktivitätsdetails sowie die bereinigten Daten exportieren. Die **Format standardisieren** Option können Sie alle Ausgabeformate anwenden, Sie für eine Domäne für die Werte dieser Domäne definieren. Sie haben kein Ausgabeformat für die Domänen im Lernprogramm definiert.  
+3.  Wählen Sie **Daten nur** für das **Ausgabe** Format aus, um nur die bereinigten Daten zu exportieren. Mit der zweiten Option ( **Daten-und**Bereinigungs Informationen) können Sie Bereinigungs Aktivitäts Details zusammen mit den bereinigten Daten exportieren. Mit der Option **Format standardisieren** können Sie alle Ausgabeformate, die Sie für eine Domäne definieren, auf die Werte dieser Domäne anwenden. Sie haben kein Ausgabeformat für die Domänen im Lernprogramm definiert.  
   
-     ![Bereinigung der Export der Ergebnisse (Seite)](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "Export Bereinigung Ergebnisse (Seite)")  
+     ![Bereinigungsergebnisse exportieren (Seite)](../../2014/tutorials/media/et-exportingcleansingresultstoanexcelfile.jpg "Bereinigungsergebnisse exportieren (Seite)")  
   
-4.  Klicken Sie auf **exportieren** zum Exportieren der Daten. Klicken Sie nicht auf **Fertig stellen** noch.  
+4.  Klicken Sie auf **exportieren** , um die Daten zu exportieren. Klicken Sie noch nicht auf **Fertig** stellen.  
   
-5.  Klicken Sie auf **schließen** auf die **exportieren** Dialogfeld.  
+5.  Klicken Sie im Dialogfeld **exportieren** auf **Schließen** .  
   
-6.  Klicken Sie auf **Fertig stellen** auf die Aktivität fertig zu stellen. Wenn Sie vergessen haben, um Ergebnisse zu exportieren, bevor Sie auf **Fertig stellen**, klicken Sie auf **Open Data Quality-Projekt** auf der Hauptseite des **DQS-Client**Option **Cleanse Supplier Liste** aus der Liste der Projekte, und klicken Sie auf **Weiter** am unteren Rand des Bildschirms zum Abrufen der **exportieren** Phase der Bereinigungsprozess noch mal. Sie können auch zum wechseln **verwalten und Anzeigen der Ergebnisse** Registerkarte, indem Sie auf **wieder** Schaltfläche.  
+6.  Klicken Sie auf **Fertig** stellen, um die Aktivität abzuschließen. Wenn Sie vergessen haben, die Ergebnisse zu exportieren, bevor Sie auf **Fertig**stellen klicken, klicken Sie auf der Hauptseite des **DQS-Clients**auf **Data Quality-Projekt öffnen** , wählen Sie **Lieferantenliste** bereinigen aus der Liste der Projekte aus, und klicken Sie unten auf dem Bildschirm auf **weiter** , um die **Export** Phase des Bereinigungs Prozesses erneut Sie können auch zur Registerkarte **Ergebnisse verwalten und anzeigen** wechseln, indem Sie auf die Schaltfläche **zurück** klicken.  
   
-7.  Öffnen der **Cleansed Supplier List.xls** und gehen Sie folgendermaßen vor:  
+7.  Öffnen Sie die **Liste der bereinigten Lieferanten. xls** , und gehen Sie wie folgt vor:  
   
-    1.  Sicherstellen, dass es keine e-Mail-Adressen, die mit Adventure-work.com (ohne die Zeichen ") durch Suchen nach Adventure-work.com im Arbeitsblatt.  
+    1.  Stellen Sie sicher, dass keine e-Mail-Adressen vorhanden sind, die mit Adventure-work.com (ohne Zeichen ') enden, indem Sie im Arbeitsblatt nach Adventure-work.com suchen.  
   
-    2.  Vorhanden ist keine **USA** Wert in der **Land** Spalte.  
+    2.  Sehen Sie, dass in der Spalte **Country** kein Wert für **USA** vorhanden ist.  
   
-    3.  Suchen Sie nach **Berlin** und anzuzeigen, die die **Zustand** nastaven NA hodnotu **Zertifizierungsstelle**.  
+    3.  Suchen Sie nach **Los Angeles** , und sehen Sie, dass der **Status** auf **ca**festgelegt ist.  
   
-    4.  Bestätigen Sie, dass es keine Ausdrücke sind **Co.**, **Corp.**, und **Inc.**.  
+    4.  Vergewissern Sie sich, dass keine Begriffe **Co.**, **Corp.** und **Inc.** vorhanden sind.  
   
-    5.  Löschen der **Address Validation** Spalte aus dem Arbeitsblatt, und speichern Sie die Excel-Datei. Diese zusätzliche Spalte entspricht der Verbunddomäne "Address Validation".  
+    5.  Löschen Sie die Spalte **Adressvalidierung** aus der Tabelle, und speichern Sie die Excel-Datei. Diese zusätzliche Spalte entspricht der Verbunddomäne "Address Validation".  
   
 ## <a name="next-step"></a>Nächster Schritt  
  [Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt](../../2014/tutorials/task-6-importing-values-from-the-cleanse-supplier-list-project.md)  

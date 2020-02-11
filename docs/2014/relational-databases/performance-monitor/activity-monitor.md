@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2420a4df5b971ae2190b2a66f24b226f472fee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249343"
 ---
 # <a name="activity-monitor"></a>Aktivitätsmonitor
   Im Aktivitätsmonitor werden Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozessen angezeigt sowie Informationen dazu, welche Auswirkungen diese Prozesse auf die aktuelle Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]haben.  
   
 ## <a name="benefits-of-activity-monitor"></a>Vorteile des Aktivitätsmonitors  
- Aktivitätsmonitor ist ein Dokument mit Registerkarten im Fenster mit den folgenden erweiterbaren und reduzierbaren Bereichen: **Übersicht**, **Active User Tasks** (Aktive Benutzertasks), **Ressourcenwartevorgänge**, **Datendatei-E/A** und **Letzte ressourcenintensive Abfragen**. Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach Informationen ab. Wenn ein Bereich reduziert wird, werden sämtliche Abfrageaktivitäten für diesen Bereich angehalten. Sie können auch einen oder mehrere Bereiche gleichzeitig erweitern, um unterschiedliche Aktivitätstypen für die Instanz anzuzeigen.  
+ Der Aktivitäts Monitor ist ein Dokument Fenster im Register Format mit den folgenden erweiterbaren und reduzierbaren Bereichen: **Übersicht**, **aktive Benutzer Tasks**, **Ressourcen warte**Vorgänge, **Datendatei-e/** a und **aktuelle teure Abfragen**. Wenn ein Bereich erweitert wird, fragt der Aktivitätsmonitor die Instanz nach Informationen ab. Wenn ein Bereich reduziert wird, werden sämtliche Abfrageaktivitäten für diesen Bereich angehalten. Sie können auch einen oder mehrere Bereiche gleichzeitig erweitern, um unterschiedliche Aktivitätstypen für die Instanz anzuzeigen.  
   
- Für die Spalten, die in enthalten sind die **aktive Benutzertasks**, **Ressourcenwartevorgänge**, **Data File i/o**, und **aktuelle wertvolle Abfragen** Bereiche, können Sie die Anzeige auf folgende Weise anpassen:  
+ Für die Spalten, die in den Bereichen **aktive Benutzer Tasks**, **Ressourcen warte**Vorgänge, **Datendatei-e/** a und **aktuelle teure Abfragen** enthalten sind, können Sie die Anzeige auf folgende Weise anpassen:  
   
 1.  Um die Reihenfolge der Spalten zu ändern, klicken Sie auf die Spaltenüberschrift, und ziehen Sie diese an eine andere Stelle des Menübands.  
   

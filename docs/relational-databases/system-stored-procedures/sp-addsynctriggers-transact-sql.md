@@ -1,5 +1,5 @@
 ---
-title: Sp_addsynctriggers (Transact-SQL) | Microsoft-Dokumentation
+title: sp_addsynctriggers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,21 +16,21 @@ ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096209"
 ---
-# <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
+# <a name="sp_addsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Erstellt auf dem Abonnenten Trigger, die mit allen Typen aktualisierbarer Abonnements verwendet werden können (sofortiges Aktualisieren, verzögertes Aktualisieren über eine Warteschlange, sofortiges Aktualisieren mit verzögertem Aktualisieren über eine Warteschlange als Failover). Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnementdatenbank ausgeführt.  
+  Erstellt auf dem Abonnenten Trigger, die mit allen Typen aktualisierbarer Abonnements verwendet werden können (sofortiges Aktualisieren, verzögertes Aktualisieren über eine Warteschlange, sofortiges Aktualisieren mit verzögertem Aktualisieren über eine Warteschlange als Failover). Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Die [Sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) Prozedur sollte verwendet werden, anstelle von **Sp_addsynctrigger**. [Sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) generiert ein Skript, enthält die **Sp_addsynctrigger** aufrufen.  
+>  Die [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) Prozedur sollte anstelle **sp_addsynctrigger**verwendet werden. [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) generiert ein Skript, das die **sp_addsynctrigger** Aufrufe enthält.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,54 +57,54 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @sub_table = ] 'sub_table'` Ist der Name der Abonnententabelle. *Sub_table* ist **Sysname**, hat keinen Standardwert.  
+`[ @sub_table = ] 'sub_table'`Der Name der Abonnenten Tabelle. *sub_table* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @sub_table_owner = ] 'sub_table_owner'` Ist der Name des Besitzers der Abonnententabelle. *Sub_table_owner* ist **Sysname**, hat keinen Standardwert.  
+`[ @sub_table_owner = ] 'sub_table_owner'`Der Name des Besitzers der Abonnenten Tabelle. *sub_table_owner* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegerservers. *Publisher* ist **Sysname**, hat keinen Standardwert.  
+`[ @publisher = ] 'publisher'`Der Name des Verleger Servers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat keinen Standardwert. Mit NULL wird die aktuelle Datenbank verwendet.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Mit NULL wird die aktuelle Datenbank verwendet.  
   
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @ins_proc = ] 'ins_proc'` Ist der Name der gespeicherten Prozedur, die einfügungen durch synchrone Transaktionen auf dem Verleger unterstützt. *Ins_proc* ist **Sysname**, hat keinen Standardwert.  
+`[ @ins_proc = ] 'ins_proc'`Der Name der gespeicherten Prozedur, die synchrone Transaktions Einfügungen auf dem Verleger unterstützt. *ins_proc* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @upd_proc = ] 'upd_proc'` Ist der Name der gespeicherten Prozedur, die Updates durch synchrone Transaktionen auf dem Verleger unterstützt. *Ins_proc* ist **Sysname**, hat keinen Standardwert.  
+`[ @upd_proc = ] 'upd_proc'`Der Name der gespeicherten Prozedur, die synchrone Transaktions Aktualisierungen auf dem Verleger unterstützt. *ins_proc* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @del_proc = ] 'del_proc'` Ist der Name der gespeicherten Prozedur, die löschungen durch synchrone Transaktionen auf dem Verleger unterstützt. *Ins_proc* ist **Sysname**, hat keinen Standardwert.  
+`[ @del_proc = ] 'del_proc'`Der Name der gespeicherten Prozedur, die synchrone Transaktions Löschungen auf dem Verleger unterstützt. *ins_proc* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @cftproc = ] 'cftproc'` Ist der Name der automatisch generierten Prozedur ein, die Veröffentlichungen, die eine verzögerte Aktualisierung ermöglichen. *Cftproc* ist **Sysname**, hat keinen Standardwert. Für Veröffentlichungen mit sofortigem Update ist dieser Wert NULL. Dieser Parameter wird auf Veröffentlichungen angewendet, die verzögerte Updates über eine Warteschlange ermöglichen (verzögertes Update über eine Warteschlange bzw. sofortiges Update mit verzögertem Update über eine Warteschlange als Failover).  
+`[ @cftproc = ] 'cftproc'`Der Name der automatisch generierten Prozedur, die von Veröffentlichungen verwendet wird, die ein verzögertes Update über eine Warteschlange zulassen. *cftproc* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Für Veröffentlichungen mit sofortigem Update ist dieser Wert NULL. Dieser Parameter wird auf Veröffentlichungen angewendet, die verzögerte Updates über eine Warteschlange ermöglichen (verzögertes Update über eine Warteschlange bzw. sofortiges Update mit verzögertem Update über eine Warteschlange als Failover).  
   
-`[ @proc_owner = ] 'proc_owner'` Gibt das Benutzerkonto auf dem verlegerebene an, unter dem alle automatisch generierten gespeicherten Prozeduren zum Aktualisieren von Veröffentlichungen (verzögert und/oder unmittelbar) erstellt wurden. *Proc_owner* ist **Sysname** hat keinen Standardwert.  
+`[ @proc_owner = ] 'proc_owner'`Gibt das Benutzerkonto auf dem Verleger an, unter dem alle automatisch generierten gespeicherten Prozeduren zum Aktualisieren der Veröffentlichung (in der Warteschlange und/oder unmittelbar) erstellt wurden. *proc_owner* ist vom **Datentyp vom Datentyp sysname** und hat keinen Standard.  
   
-`[ @identity_col = ] 'identity_col'` Ist der Name der Identitätsspalte auf dem Verleger. *Identity_col* ist **Sysname**, hat den Standardwert NULL.  
+`[ @identity_col = ] 'identity_col'`Der Name der Identitäts Spalte auf dem Verleger. *identity_col* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @ts_col = ] 'timestamp_col'` Der Name des der **Zeitstempel** Spalte auf dem Verleger. *Timestamp_col* ist **Sysname**, hat den Standardwert NULL.  
+`[ @ts_col = ] 'timestamp_col'`Der Name der **Zeitstempel** -Spalte auf dem Verleger. *timestamp_col* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @filter_clause = ] 'filter_clause'` Ist eine Einschränkung (WHERE)-Klausel, die einen horizontalen Filter definiert. Wenn Sie die Einschränkungsklausel eingeben, lassen Sie das Schlüsselwort, in dem. *Filter_clause*ist **nvarchar(4000)** , hat den Standardwert NULL.  
+`[ @filter_clause = ] 'filter_clause'`Eine Einschränkungs Klausel (WHERE), die einen horizontalen Filter definiert. Wenn Sie die Einschränkungs Klausel eingeben, lassen Sie das Schlüsselwort aus. *filter_clause*ist vom Datentyp **nvarchar (4000)** und hat den Standardwert NULL.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Ist eine Bitmap der Primärschlüsselspalten in der Tabelle an. *Primary_key_bitmap* ist **varbinary(4000)** , hat keinen Standardwert.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'`Ist eine Bitmap der Primärschlüssel Spalten in der Tabelle. *primary_key_bitmap* ist vom Datentyp **varbinary (4000)** und hat keinen Standardwert.  
   
-`[ @identity_support = ] identity_support` Aktiviert und deaktiviert die automatische Behandlung von Identitätsbereichen bei verzögertem verwendet wird. *Identity_support* ist eine **Bit**, hat den Standardwert **0**. **0** bedeutet, dass keine identitätsbereichsunterstützung vorhanden ist, liegen Unterstützung **1** automatische identitätsbereichsunterstützung aktiviert.  
+`[ @identity_support = ] identity_support`Aktiviert und deaktiviert die automatische Behandlung von Identitäts Bereichen, wenn ein verzögertes Update über eine Warteschlange verwendet wird *identity_support* ist ein **Bit**, der Standardwert ist **0**. **0** bedeutet, dass keine Unterstützung für den Identitäts Bereich vorhanden ist, **1** aktiviert die automatische Handhabung von Identitäts Bereichen.  
   
-`[ @independent_agent = ] independent_agent` Gibt an, ob es einen einzelnen Verteilungs-Agent (einen unabhängigen Agent) für diese Veröffentlichung oder einen Verteilungs-Agent pro Veröffentlichung / Abonnementdatenbank-Paar (ein freigegebener Agent). Dieser Wert reflektiert den Wert der independent_agent-Eigenschaft von der auf Verlegerebene definierten Veröffentlichung. *Independent_agent* ähnelt ein wenig mit dem Standardwert **0**. Wenn **0**, der Agent ist ein freigegebener Agent. Wenn **1**, der Agent ist ein unabhängiger Agent.  
+`[ @independent_agent = ] independent_agent`Gibt an, ob ein einzelner Verteilungs-Agent (ein unabhängiger Agent) für diese Veröffentlichung oder ein Verteilungs-Agent pro Veröffentlichungs Datenbank und Abonnement Datenbank-Paar (ein frei gegebener Agent) vorhanden ist. Dieser Wert reflektiert den Wert der independent_agent-Eigenschaft von der auf Verlegerebene definierten Veröffentlichung. *independent_agent* ist ein Bit mit einem Standardwert von **0**. Wenn der Wert **0**ist, ist der Agent ein frei gegebener Agent. Wenn der Wert **1**ist, ist der Agent ein unabhängiger Agent.  
   
-`[ @distributor = ] 'distributor'` Ist der Name des Verteilers. *Verteiler* ist **Sysname**, hat keinen Standardwert.  
+`[ @distributor = ] 'distributor'`Der Name des Verteilers. *Distributor* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @pubversion = ] pubversion` Gibt die Version des Verlegers. *Pubversion* ist **Int**, hat den Standardwert 1. **1** bedeutet, dass die verlegerversion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Servicepack 2 oder früher; **2** bedeutet, dass der Verleger ist [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 3 (SP3) oder höher. *Pubversion* muss explizit festgelegt werden, um **2** Wenn die Verleger-Version ist [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] SP3 oder höher.  
+`[ @pubversion = ] pubversion`Gibt die Version des Verlegers an. *pubversion* ist vom Datentyp **int**und hat den Standardwert 1. **1** bedeutet, dass die Verleger Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 2 oder früher ist. **2** bedeutet, dass es sich [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] bei dem Verleger um Service Pack 3 (SP3) oder höher handelt. *pubversion* muss explizit auf **2** festgelegt werden, wenn die Verleger [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Version SP3 oder höher ist.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_addsynctriggers** wird vom Verteilungs-Agent als Teil der abonnementinitialisierung verwendet. Diese gespeicherte Prozedur wird normalerweise nicht von Benutzern ausgeführt, kann jedoch hilfreich sein, wenn der Benutzer manuell ein nosync-Abonnement einrichten muss.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_addsynctriggers** wird von der Verteilungs-Agent als Teil der Abonnement Initialisierung verwendet. Diese gespeicherte Prozedur wird normalerweise nicht von Benutzern ausgeführt, kann jedoch hilfreich sein, wenn der Benutzer manuell ein nosync-Abonnement einrichten muss.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** -Serverrolle sein oder **Db_owner** feste Datenbankrolle können ausführen **Sp_addsynctriggers**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addsynctriggers**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
- [sp_script_synctran_commands &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktualisierbare Abonnements für die Transaktions Replikation](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
+ [sp_script_synctran_commands &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

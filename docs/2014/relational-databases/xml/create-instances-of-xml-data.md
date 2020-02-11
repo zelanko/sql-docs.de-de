@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637608"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
@@ -40,7 +40,7 @@ ms.locfileid: "62637608"
 -   Verwenden von Massenladen  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Typumwandlung von Zeichenfolgen und Binärinstanzen  
- Sie können analysieren, eines der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] string-Datentypen, z. B. [**n**] [**Var**]**Char**, **[n] Text**,  **Varbinary**, und **Image**, in der `xml` -Datentyp umwandeln (CAST) oder konvertieren (CONVERT) die Zeichenfolge in die `xml` -Datentyp. Nicht typisiertes XML wird überprüft, um die Wohlgeformtheit zu bestätigen. Es ist ein Schema zugeordnet der `xml` , typüberprüfung wird ebenfalls durchgeführt. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
+ Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alle Zeichen folgen-Datentypen, z. b. [**n**] [**var**]**char**, **[n] Text**, **varbinary**und **Image**, im- `xml` Datentyp analysieren, indem Sie die Zeichenfolge `xml` umwandeln (cast) oder konvertieren (Convert). Nicht typisiertes XML wird überprüft, um die Wohlgeformtheit zu bestätigen. Wenn dem Typ ein Schema zugeordnet ist, `xml` wird auch die Validierung ausgeführt. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
   
  XML-Dokumente können unterschiedlich codiert werden (z. B.: UTF-8, UTF-16, Windows-1252). Im Folgenden werden die Regeln erläutert, nach denen Zeichenfolgen- und Binärtypen mit der Codierung des XML-Dokuments interagieren und die das Verhalten des Parsers steuern.  
   
@@ -63,15 +63,16 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
  Wenn ein benutzerdefinierter CLR-Typ eine XML-Serialisierung besitzt, können Instanzen dieses Typs explizit in einen XML-Datentyp umgewandelt werden. Weitere Einzelheiten zur XML-Serialisierung von benutzerdefinierten CLR-Typen finden Sie unter [XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten](../../database-engine/dev-guide/xml-serialization-from-clr-database-objects.md).  
   
 ### <a name="white-space-handling-in-typed-xml"></a>Leerzeichenbehandlung in typisiertem XML  
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Leerzeichen in Elementinhalten als unbedeutend betrachtet, wenn diese in einer Sequenz von Nur-Leerzeichen-Zeichendaten auftreten, die durch ein Markup wie z. B. Begin- oder End-Tags getrennt und nicht in Entitäten geändert werden. (CDATA-Abschnitte werden ignoriert). Diese Behandlung von Leerzeichen unterscheidet sich von der Beschreibung von Leerzeichen in der XML 1.0-Spezifikation, die vom W3C (World Wide Web Consortium) veröffentlicht wird. Die Ursache ist darin zu suchen, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur eine beschränkte Anzahl der in XML 1.0 definierten DTD-Teilmengen erkennt. Weitere Informationen zu den beschränkten DTD-Teilmengen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Leerzeichen in Elementinhalten als unbedeutend betrachtet, wenn diese in einer Sequenz von Nur-Leerzeichen-Zeichendaten auftreten, die durch ein Markup wie z. B. Begin- oder End-Tags getrennt und nicht in Entitäten geändert werden. (CDATA-Abschnitte werden ignoriert). Diese Behandlung von Leerzeichen unterscheidet sich von der Beschreibung von Leerzeichen in der XML 1.0-Spezifikation, die vom W3C (World Wide Web Consortium) veröffentlicht wird. Die Ursache ist darin zu suchen, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur eine beschränkte Anzahl der in XML 1.0 definierten DTD-Teilmengen erkennt. Weitere Informationen zu den beschränkten DTD-Teilmengen, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
  Standardmäßig verwirft der XML-Parser insignifikante Leerzeichen, wenn Zeichenfolgendaten in XML konvertiert werden, wenn eine der folgenden Bedingungen zutrifft:  
   
--   `The xml:space` -Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
+-   
+  `The xml:space` -Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
   
 -   Das `xml:space` -Attribut für ein Element oder eines seiner Vorgängerelemente weist den Standardwert auf.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```  
 declare @x xml  
@@ -85,7 +86,7 @@ select @x
 <root><child/></root>  
 ```  
   
- Sie können dieses Verhalten jedoch ändern. Um Leerzeichen für eine xml DT-Instanz beizubehalten, verwenden Sie den CONVERT-Operator und seinen optionalen *style* -Parameter, um einen Wert von 1 festzulegen. Zum Beispiel:  
+ Sie können dieses Verhalten jedoch ändern. Um Leerzeichen für eine xml DT-Instanz beizubehalten, verwenden Sie den CONVERT-Operator und seinen optionalen *style* -Parameter, um einen Wert von 1 festzulegen. Beispiel:  
   
 ```  
 SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)  
@@ -93,8 +94,8 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Wenn der *style* -Parameter nicht verwendet oder sein Wert auf 0 festgelegt wird, werden insignifikante Leerzeichen für die Konvertierung der xml DT-Instanz nicht beibehalten. Weitere Informationen zum Verwenden des CONVERT-Operators und seines *style*-Parameters beim Konvertieren von Zeichenfolgendaten in XML DT-Instanzen finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwerts in typisiertes XML und Zuweisen des Werts zu einer Spalte  
- Das folgende Beispiel wandelt eine Zeichenfolgenvariable, die eine XML-Fragment enthält den `xml` -Datentyp um und speichert Sie dann in der `xml` Spalte vom Typ:  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Beispiel: Umwandeln eines Zeichenfolgenwertes in typisiertes XML und Zuweisen des Wertes zu einer Spalte  
+ Im folgenden Beispiel wird eine Zeichen folgen Variable, die ein XML-Fragment `xml` enthält, in den-Datentyp umgewandelt `xml` und dann in der Type-Spalte gespeichert:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -103,13 +104,13 @@ DECLARE  @s varchar(100)
 SET @s = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'   
 ```  
   
- Der folgende Insert-Vorgang implizit konvertiert werden, aus einer Zeichenfolge, die `xml` Typ:  
+ Der folgende INSERT-Vorgang konvertiert implizit eine Zeichenfolge in `xml` den-Typ:  
   
 ```  
 INSERT INTO T VALUES (3, @s)   
 ```  
   
- Sie cast() können explizit auf die Zeichenfolge, die die `xml` Typ:  
+ Sie können die Zeichenfolge explizit in den `xml` Typ umwandeln:  
   
 ```  
 INSERT INTO T VALUES (3, cast (@s as xml))  
@@ -122,7 +123,7 @@ INSERT INTO T VALUES (3, convert (xml, @s))
 ```  
   
 ### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Beispiel: Konvertieren einer Zeichenfolge in typisiertes XML und Zuweisen der Zeichenfolge zu einer Spalte  
- Im folgenden Beispiel wird in eine Zeichenfolge konvertiert `xml` geben, einer Variablen zugewiesen, und wählen Sie die `xml` -Datentyp:  
+ Im folgenden Beispiel wird eine Zeichenfolge in den- `xml` Typ konvertiert und einer Variablen des- `xml` Datentyps zugewiesen:  
   
 ```  
 declare @x xml  
@@ -133,7 +134,7 @@ select @x
 ```  
   
 ## <a name="using-the-select-statement-with-a-for-xml-clause"></a>Verwenden der SELECT-Anweisung mit einer FOR XML-Klausel  
- Sie können die FOR XML-Klausel in einer SELECT-Anweisung verwenden, um Ergebnisse als XML zurückzugeben. Zum Beispiel:  
+ Sie können die FOR XML-Klausel in einer SELECT-Anweisung verwenden, um Ergebnisse als XML zurückzugeben. Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -144,9 +145,9 @@ SET @xmlDoc = (SELECT Column1, Column2
  ...  
 ```  
   
- Die SELECT-Anweisung gibt ein XML-Textfragment, das dann während der Zuweisung zur Analyse der `xml` Variablen vom Datentyp.  
+ Die SELECT-Anweisung gibt ein XML-Textfragment zurück, das dann während der Zuweisung zur `xml` Variablen des-Datentyps analysiert wird.  
   
- Sie können auch die [TYPE-Direktive](type-directive-in-for-xml-queries.md) in der FOR XML-Klausel, die direkt ein FOR XML-Abfrageergebnis als zurückgibt `xml` Typ:  
+ Sie können auch die [Type-Direktive](type-directive-in-for-xml-queries.md) in der for XML-Klausel verwenden, die direkt ein for XML `xml` -Abfrageergebnis als Typ zurückgibt:  
   
 ```  
 Declare @xmlDoc xml  
@@ -163,7 +164,7 @@ SELECT @xmlDoc
 <Production.ProductModel ProductModelID="19" Name="Mountain-100" />...  
 ```  
   
- Im folgenden Beispiel, das typisierte `xml` Ergebnis einer FOR XML-Abfrage eingelegt ist ein `xml` Spalte vom Typ:  
+ Im folgenden Beispiel wird das typisierte `xml` Ergebnis einer for XML-Abfrage in eine `xml` Spalte vom Typ eingefügt:  
   
 ```  
 CREATE TABLE T1 (c1 int, c2 xml)  
@@ -183,7 +184,7 @@ go
 >  Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden `xml`-Datentypinstanzen an den Client zurückgegeben, die das Ergebnis unterschiedlicher Serverkonstrukte sind (z. B. FOR XML-Abfragen, für die die TYPE-Direktive verwendet wird, oder bei denen der `xml`-Datentyp verwendet wird, um XML aus SQL-Spalten, -Variablen und -Ausgabeparametern zurückzugeben). Im Clientanwendungscode wird vom ADO.NET-Anbieter angefordert, dass diese `xml`-Datentypinformationen als Binärcode vom Server gesendet werden. Wenn Sie FOR XML jedoch ohne die TYPE-Direktive verwenden, werden die XML-Daten als Zeichenfolgentyp zurückgegeben. Der Clientanbieter ist in jedem Fall fähig, beide XML-Formate zu verarbeiten.  
   
 ## <a name="using-constant-assignments"></a>Verwenden von Konstantenzuweisungen  
- Eine Zeichenfolgenkonstante kann verwendet werden, wo eine Instanz des der `xml` -Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Zum Beispiel:  
+ Eine Zeichen folgen Konstante kann verwendet werden, wenn eine Instanz `xml` des-Datentyps erwartet wird. Dies entspricht einer impliziten CAST-Anweisung für die Zeichenfolge in XML. Beispiel:  
   
 ```  
 DECLARE @xmlDoc xml  
@@ -192,9 +193,9 @@ SET @xmlDoc = '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust>'
 SET @xmlDoc = N'<?xml version="1.0" encoding="ucs-2"?><doc/>'  
 ```  
   
- Im vorherige Beispiel implizit konvertiert die Zeichenfolge, die die `xml` -Datentyp und weist sie einer `xml` Variablen vom Typ.  
+ Im vorherigen Beispiel wird die Zeichenfolge implizit in `xml` den-Datentyp konvertiert und einer `xml` Variablen vom Typ zugewiesen.  
   
- Das folgende Beispiel fügt eine Konstantenzeichenfolge in eine `xml` Spalte vom Typ:  
+ Im folgenden Beispiel wird eine Konstante Zeichenfolge in `xml` eine Spalte vom Typ eingefügt:  
   
 ```  
 CREATE TABLE T(c1 int primary key, c2 xml)  
@@ -205,17 +206,17 @@ INSERT INTO T VALUES (3, '<Cust><Fname>Andrew</Fname><Lname>Fuller</Lname></Cust
 >  Für typisiertes XML wird das XML für das angegebene Schema überprüft. Weitere Informationen finden Sie unter [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md).  
   
 ## <a name="using-bulk-load"></a>Verwenden von Massenkopieren  
- Die verbesserten [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) -Funktionen ermöglichen das Massenkopieren von XML-Dokumenten in der Datenbank. Sie können Massenimport von XML-Instanzen aus Dateien in die `xml` Spalten vom Typ, in der Datenbank. Funktionierende Beispiele finden Sie unter [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Weitere Informationen über das Laden von XML-Dokumenten finden Sie unter [Laden von XML-Daten](load-xml-data.md).  
+ Die verbesserten [OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql) -Funktionen ermöglichen das Massenkopieren von XML-Dokumenten in der Datenbank. Sie können XML-Instanzen aus Dateien in die `xml` Typspalten in der Datenbank Massen laden. Funktionierende Beispiele finden Sie unter [Beispiele für den Massenimport und -export von XML-Dokumenten &#40;SQL Server&#41;](../import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md). Weitere Informationen über das Laden von XML-Dokumenten finden Sie unter [Laden von XML-Daten](load-xml-data.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Abrufen und Abfragen von XML-Daten](retrieve-and-query-xml-data.md)|Beschreibt die Teile von XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md)   
- [xml-Datentypmethoden](/sql/t-sql/xml/xml-data-type-methods)   
+ [XML-Datentypmethoden](/sql/t-sql/xml/xml-data-type-methods)   
  [XML DML &#40;Data Modification Language&#41;](/sql/t-sql/xml/xml-data-modification-language-xml-dml)   
  [XML-Daten &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

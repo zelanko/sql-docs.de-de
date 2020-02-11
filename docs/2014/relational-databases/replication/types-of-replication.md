@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4dd5d28bb3b40417ab9c16b957b48db04f44599f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255447"
 ---
 # <a name="types-of-replication"></a>Replikationstypen
-  In[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stehen für die Verwendung in verteilten Anwendungen die folgenden Replikationstypen zur Verfügung:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet die folgenden Replikations Typen für die Verwendung in verteilten Anwendungen:  
   
 -   Transaktionsreplikation. Weitere Informationen finden Sie unter [Transaktionsreplikation](transactional/transactional-replication.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63255447"
   
  Datenänderungen werden bei der Momentaufnahmereplikation nicht nachverfolgt, sodass jedes Mal, wenn eine Momentaufnahme angewendet wird, die vorhandenen Daten komplett überschrieben werden. Bei der Transaktionsreplikation werden Änderungen im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll nachverfolgt. Bei der Mergereplikation erfolgt die Änderungsnachverfolgung mithilfe von Triggern und Metadatentabellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
   
   

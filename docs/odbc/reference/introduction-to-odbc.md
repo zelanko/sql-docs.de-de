@@ -14,18 +14,18 @@ ms.assetid: dbe0b5a3-d7fa-440d-80b4-6cc00de159dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1792161b472e42c42ea2bfc895bf013802cb656c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093780"
 ---
 # <a name="introduction-to-odbc"></a>Einführung in ODBC
-Dieser Abschnitt bietet eine kurze Geschichte Structured Query Language und ODBC und enthält grundlegende Informationen über die ODBC-Schnittstelle.  
+Dieser Abschnitt enthält eine kurze Geschichte von strukturierte Abfragesprache und ODBC und enthält konzeptionelle Informationen zur ODBC-Schnittstelle.  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   
--   [ODBC Overview (ODBC – Übersicht)](../../odbc/reference/odbc-overview.md)  
+-   [Übersicht über ODBC](../../odbc/reference/odbc-overview.md)  
   
 -   [Einführung in SQL und ODBC](../../odbc/reference/introduction-to-sql-and-odbc.md)  
   

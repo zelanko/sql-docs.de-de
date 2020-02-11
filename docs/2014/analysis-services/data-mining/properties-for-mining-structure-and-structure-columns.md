@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften für Miningstrukturen und Strukturspalten | Microsoft-Dokumentation
+title: Eigenschaften für Mining Struktur-und Struktur Spalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083060"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
@@ -29,7 +29,7 @@ ms.locfileid: "66083060"
 >  Wenn Sie den Wert einer beliebigen Eigenschaft in der Miningstruktur ändern, darunter auch Metadaten wie Name oder Beschreibung, müssen die Miningstruktur und zugehörige Modelle neu verarbeitet werden, bevor Sie das Modell anzeigen oder abfragen können.  
   
 ## <a name="properties-of-mining-structures-and-mining-structure-columns"></a>Eigenschaften von Miningstrukturen und Miningstrukturspalten  
- In der folgenden Tabelle werden die Eigenschaften der für Data Mining spezifischen Miningstruktur und Miningstrukturspalten beschrieben. Diese können auf der Registerkarte **Miningstruktur** angezeigt oder konfiguriert werden. Klicken Sie mit der rechten Maustaste auf ein Element in der Strukturansicht, und klicken Sie anschließend auf **Eigenschaften**, um diese Eigenschaften anzuzeigen oder zu konfigurieren.  
+ In der folgenden Tabelle werden die Eigenschaften für die Mining Struktur und die Mining Struktur Spalten beschrieben, die für Data Mining spezifisch sind und auf der Registerkarte **Mining Struktur** angezeigt oder konfiguriert werden können. Um diese Eigenschaften anzuzeigen oder zu konfigurieren, klicken Sie mit der rechten Maustaste auf ein Element in der Strukturansicht, und klicken Sie dann auf **Eigenschaften**.  
   
 -   Klicken Sie auf die Überschrift der Miningstruktur, um die Eigenschaften der Struktur anzuzeigen.  
   
@@ -37,44 +37,44 @@ ms.locfileid: "66083060"
   
 ### <a name="properties-of-the-mining-structure"></a>Eigenschaften der Miningstruktur  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss festgelegt werden, um `KeepTrainingCases` um Drillthroughs und Zurückgehaltene Daten zu aktivieren.|  
+|**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss auf `KeepTrainingCases` festgelegt werden, um Drillthrough und zurück gehaltene Daten zu aktivieren.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
 |**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
-|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: Zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss festgelegt werden, um `KeepTrainingCases`.|  
-|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: Zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss festgelegt werden, um `KeepTrainingCases`.|  
-|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann.<br /><br /> Hinweis: Zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss festgelegt werden, um `KeepTrainingCases`.|  
-|**ID**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die `Name`-Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
+|**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
+|**HoldoutPercent angegeben**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
+|**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
+|**id**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die `Name`-Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
 |**Sprache**|Gibt die Sprache für die Beschriftungen in der Miningstruktur an.|  
 |`Name`|Gibt den Namen oder Alias der Miningstruktur an.<br /><br /> Wenn Sie den Wert für die Name-Eigenschaft ändern, wird der neue Name nur als Beschriftung oder Alias verwendet. Der Bezeichner für die Miningstruktur wird nicht geändert.|  
-|**Quelle**|Zeigt den Namen und den Typ der Datenquelle an.|  
+|**`Source`**|Zeigt den Namen und den Typ der Datenquelle an.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Eigenschaften der Miningstrukturspalten  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifiziert die Spalte, die eine klassifizierte Spalte beschreibt.|  
-|**Inhalt**|Der Inhaltstyp der Spalte.|  
+|**Inhaltliche**|Der Inhaltstyp der Spalte.|  
 |**Beschreibung**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
 |**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Distribution**|Gibt die Verteilung von Inhalten in der Spalte an.|  
-|**ID**|Zeigt den Bezeichner der Spalte an.<br /><br /> Der Wert der ID-Eigenschaft wird beim Ändern des Werts der Name-Eigenschaft für die Spalte nicht beeinflusst.|  
+|**id**|Zeigt den Bezeichner der Spalte an.<br /><br /> Der Wert der ID-Eigenschaft wird beim Ändern des Werts der Name-Eigenschaft für die Spalte nicht beeinflusst.|  
 |**IsKey**|Gibt an, ob es sich bei der Spalte um eine Schlüsselspalte handelt.|  
 |**KeyColumns**|Enthält die Definition einer Spalte, die der Schlüssel oder Teil eines Schlüssels für ein Attribut ist.|  
 |**ModelingFlags**|Legt weitere Parameter fest, die vom Algorithmus verfügbar gemacht werden.|  
 |`Name`|Name der Spalte.|  
 |**NameColumn**|Identifiziert die Spalte, die den Namen des übergeordneten Elements bereitstellt.|  
-|**Quelle**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)** .<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
-|**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)** .<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**`Source`**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
 |**Typ**|Der Datentyp für den Inhalt der Spalte.|  
   
  Weitere Informationen zum Festlegen oder Ändern von Eigenschaften finden Sie unter [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer relationalen Miningstruktur](create-a-relational-mining-structure.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer relationalen Mining Struktur](create-a-relational-mining-structure.md)   
  [Miningstrukturspalten](mining-structure-columns.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zur Struktur von Recordsets | Microsoft-Dokumentation
+title: Grundlegendes zur Recordsetstruktur | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,17 +13,17 @@ ms.assetid: 3ef36d24-f121-4a5f-84ad-5fc84992e81d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b118feb24ab22346c8bb28c37eded49b1679df9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923739"
 ---
 # <a name="understanding-recordset-structure"></a>Grundlegendes zur Struktur von Recordsets
-Jede **Recordset** verfügt über eine **Felder** Auflistung besteht aus einem oder mehreren **Feld** Objekte. Ein **Feld** Objekt wird in der Regel eine Spalte darstellt. Es werden in den folgenden Themen erläutert, wie zum Navigieren durch die **Felder** Sammlung an, und erhalten Informationen zu den einzelnen Feldern. Anschließend sie diskutieren werden, welche Art von Informationen über verfügbar sind die **Feld** -Objekt und dessen Verwendung.  
+Jedes **Recordset** verfügt über eine **Fields** -Auflistung, die aus einem oder mehreren **Feld** Objekten besteht. Ein **Feld** Objekt stellt in der Regel eine Tabellenspalte dar. In den folgenden Themen wird erläutert, wie Sie durch die Fields-Auflistung navigieren und Informationen zu den einzelnen **Feldern** erhalten. Anschließend wird erläutert, welche Art von Informationen Ihnen über das **Field** -Objekt zur Verfügung steht und wie es verwendet wird.  
   
--   [Fields-Auflistung](../../../ado/guide/data/the-fields-collection.md)  
+-   [Die Fields-Collection](../../../ado/guide/data/the-fields-collection.md)  
   
--   [Field-Objekt](../../../ado/guide/data/the-field-object.md)  
+-   [Das Field-Objekt](../../../ado/guide/data/the-field-object.md)  
   
 -   [Arbeiten mit Recordsets](../../../ado/guide/data/working-with-recordsets.md)

@@ -23,29 +23,31 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011926"
 ---
 # <a name="server-level-roles"></a>Rollen auf Serverebene
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Rollen auf Serverebene bereit, um Sie beim Verwalten der Berechtigungen auf einem Server zu unterstützen. Bei diesen Rollen handelt es sich um Sicherheitsprinzipale, in denen andere Prinzipale gruppiert sind. Der Geltungsbereich der Berechtigungen von Rollen auf Serverebene erstreckt sich auf den gesamten Server. (*Rollen* entsprechen den *Gruppen* im Betriebssystem Windows.)  
   
  Feste Serverrollen werden der Einfachheit halber und zur Gewährung der Abwärtskompatibilität bereitgestellt. Weisen Sie nach Möglichkeit spezifischere Berechtigungen zu.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind neun feste Serverrollen verfügbar. Die den festen Serverrollen erteilten Berechtigungen können nicht geändert werden. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]können Sie benutzerdefinierte Serverrollen erstellen und diesen Berechtigungen auf Serverebene hinzufügen.  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind neun feste Serverrollen verfügbar. Die den festen Serverrollen erteilten Berechtigungen können nicht geändert werden. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] können Sie benutzerdefinierte Serverrollen erstellen und diesen Berechtigungen auf Serverebene hinzufügen.  
   
  Sie können Prinzipale auf Serverebene ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen, Windows-Konten und Windows-Gruppen) zu Rollen auf Serverebene zusammenfassen. Jedes Mitglied einer festen Serverrolle kann der gleichen Rolle andere Anmeldenamen hinzufügen. Mitglieder benutzerdefinierter Serverrollen können der Rolle keine weiteren Serverprinzipale hinzufügen.  
   
 ## <a name="fixed-server-level-roles"></a>Feste Rollen auf Serverebene  
  In der folgenden Tabelle werden die festen Rollen auf Serverebene und deren Möglichkeiten angezeigt.  
   
-|Feste Rolle auf Serverebene|Description|  
+|Feste Rolle auf Serverebene|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |sysadmin|Mitglieder der festen Serverrolle sysadmin können alle Aktivitäten auf dem Server ausführen.|  
 |serveradmin|Mitglieder der festen Serverrolle serveradmin können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.|  
-|securityadmin|Mitglieder der festen Serverrolle securityadmin können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen auf Datenbankebene auch über die Berechtigungen GRANT, DENY und REVOKE, sofern sie Zugriff eine Datenbank haben. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.<br /><br /> **\*\* Sicherheitshinweis \*\*** Durch die Möglichkeit, Zugriff auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)] zu gewähren und Benutzerberechtigungen zu konfigurieren, kann der Sicherheitsadministrator die meisten Serverberechtigungen zuweisen. Die `securityadmin` Rolle behandelt werden als Entsprechung der `sysadmin` Rolle.|  
+|securityadmin|Mitglieder der festen Serverrolle securityadmin können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen auf Datenbankebene auch über die Berechtigungen GRANT, DENY und REVOKE, sofern sie Zugriff eine Datenbank haben. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.<br /><br /> ** \* \* Sicherheits \* Hinweis** Durch die Möglichkeit, Zugriff auf zu [!INCLUDE[ssDE](../../../includes/ssde-md.md)] gewähren und Benutzerberechtigungen zu konfigurieren, kann der Sicherheitsadministrator die meisten Server Berechtigungen zuweisen. Die `securityadmin` Rolle sollte als Äquivalent zur- `sysadmin` Rolle behandelt werden.|  
 |processadmin|Mitglieder der festen Serverrolle processadmin können Prozesse beenden, die in einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]ausgeführt werden.|  
 |setupadmin|Mitglieder der festen Serverrolle „setupadmin“ können Verbindungsserver mithilfe von [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen hinzufügen und entfernen. (Die Verwendung von [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]erfordert die Mitgliedschaft in „sysadmin“.)|  
 |bulkadmin|Mitglieder der festen Serverrolle bulkadmin können die BULK INSERT-Anweisung ausführen.|  
@@ -57,7 +59,7 @@ ms.locfileid: "63011926"
  Jede feste Serverrolle besitzt bestimmte Berechtigungen. Eine Übersicht der Berechtigungen, die Serverrollen zugewiesen sind, finden Sie unter [Feste Serverrollen und feste Datenbankrollen der Datenbank-Engine](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  Die Berechtigung `CONTROL SERVER` ist ähnlich, aber nicht identisch mit der festen Serverrolle `sysadmin`. Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (D. h. `CONTROL SERVER` impliziert keine Mitgliedschaft in der `sysadmin` -Serverrolle sein.) Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen zu wechseln. Die meisten `DBCC`-Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle `sysadmin`. Eine Liste mit 171 im gespeicherter Systemprozeduren, die erfordern `sysadmin` Mitgliedschaft, finden Sie im folgenden Blogbeitrag von Andreas wolter: [CONTROL SERVER gegen Sysadmin/sa: Berechtigungen, Systemprozeduren, DBCC, automatische Schema-Erstellung und Berechtigungen Escalation - Vorbehalte](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  Die Berechtigung `CONTROL SERVER` ist ähnlich, aber nicht identisch mit der festen Serverrolle `sysadmin`. Berechtigungen umfassen keine Rollenmitgliedschaften, und Rollenmitgliedschaften gewähren keine Berechtigungen. (Beispiele: `CONTROL SERVER`impliziert nicht die Mitgliedschaft in der `sysadmin` Server Rolle "Fixed".) Es ist jedoch manchmal möglich, die Identität zwischen Rollen und entsprechenden Berechtigungen anzunehmen. Die meisten `DBCC`-Befehle und viele Systemprozeduren erfordern die Mitgliedschaft in der festen Serverrolle `sysadmin`. Eine Liste mit 171 gespeicherten System Prozeduren, `sysadmin` die eine Mitgliedschaft erfordern, finden Sie im folgenden Blogbeitrag von Andreas Wolter [Control Server im Vergleich zu sysadmin/SA: Berechtigungen, System Prozeduren, DBCC, automatische Schema Erstellung und Berechtigungs Ausweitung](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Berechtigung auf Serverebene  
  Benutzerdefinierten Serverrollen können nur Berechtigungen auf Serverebene hinzugefügt werden. Führen Sie zum Auflisten der Berechtigungen auf Serverebene die folgende Anweisung aus. Folgende Berechtigungen gelten auf Serverebene:  
@@ -71,28 +73,28 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
 ## <a name="working-with-server-level-roles"></a>Arbeiten mit Rollen auf Serverebene  
  In der folgenden Tabelle werden die Befehle, Sichten und Funktionen erklärt, die Sie beim Arbeiten mit Rollen auf Serverebene verwenden können.  
   
-|Funktion|Typ|Beschreibung|  
+|Funktion|type|BESCHREIBUNG|  
 |-------------|----------|-----------------|  
-|[sp_helpsrvrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadaten|Gibt eine Liste von Rollen auf Serverebene zurück.|  
-|[sp_helpsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadaten|Gibt Informationen zu Mitgliedern einer Rolle auf Serverebene zurück.|  
-|[sp_srvrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadaten|Zeigt die Berechtigungen einer Rolle auf Serverebene an.|  
+|[sp_helpsrvrole &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrole-transact-sql)|Metadaten|Gibt eine Liste von Rollen auf Serverebene zurück.|  
+|[sp_helpsrvrolemember &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsrvrolemember-transact-sql)|Metadaten|Gibt Informationen zu Mitgliedern einer Rolle auf Serverebene zurück.|  
+|[sp_srvrolepermission &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql)|Metadaten|Zeigt die Berechtigungen einer Rolle auf Serverebene an.|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Metadaten|Gibt an, ob eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung Mitglied der angegebenen Rolle auf Serverebene ist.|  
 |[sys.server_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-role-members-transact-sql)|Metadaten|Gibt eine Zeile für jedes Mitglied jeder Rolle auf Serverebene zurück.|  
-|[sp_addsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Befehl|Fügt einen Benutzernamen als Mitglied einer Rolle auf Serverebene hinzu. Veraltet. Verwenden Sie stattdessen [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
-|[sp_dropsrvrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Befehl|Entfernt einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen oder einen Windows-Benutzer bzw. eine -Gruppe aus einer Rolle auf Serverebene. Veraltet. Verwenden Sie stattdessen [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
-|[CREATE SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Befehl|Erstellt eine benutzerdefinierte Serverrolle.|  
-|[ALTER SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Befehl|Ändert die Mitgliedschaft einer Serverrolle oder ändert Namen einer benutzerdefinierten Serverrolle.|  
-|[DROP SERVER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Befehl|Entfernt eine benutzerdefinierte Serverrolle.|  
+|[sp_addsrvrolemember &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql)|Get-Help|Fügt einen Benutzernamen als Mitglied einer Rolle auf Serverebene hinzu. Veraltet. Verwenden Sie stattdessen [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
+|[sp_dropsrvrolemember &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsrvrolemember-transact-sql)|Get-Help|Entfernt einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldenamen oder einen Windows-Benutzer bzw. eine -Gruppe aus einer Rolle auf Serverebene. Veraltet. Verwenden Sie stattdessen [ALTER SERVER ROLE](/sql/t-sql/statements/alter-server-role-transact-sql) .|  
+|[Erstellen einer Server Rolle &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-server-role-transact-sql)|Get-Help|Erstellt eine benutzerdefinierte Serverrolle.|  
+|[Alter Server Role &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-server-role-transact-sql)|Get-Help|Ändert die Mitgliedschaft einer Serverrolle oder ändert Namen einer benutzerdefinierten Serverrolle.|  
+|[Löschen der Server Rolle &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-server-role-transact-sql)|Get-Help|Entfernt eine benutzerdefinierte Serverrolle.|  
 |[IS_SRVROLEMEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-srvrolemember-transact-sql)|Funktion|Bestimmt die Mitgliedschaft einer Serverrolle.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rollen auf Datenbankebene](../authentication-access/database-level-roles.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)   
- [Sicherheitsfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
+ [Sicherheitsfunktionen &#40;Transact-SQL-&#41;](/sql/t-sql/functions/security-functions-transact-sql)   
  [Sichern von SQL Server](../securing-sql-server.md)   
- [GRANT (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
- [REVOKE (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
- [DENY (Berechtigungen für Serverprinzipal) &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
- [Erstellen einer Serverrolle](../authentication-access/create-a-server-role.md)  
+ [Erteilen von Berechtigungen für Server Prinzipal &#40;Transact-SQL-&#41;](/sql/t-sql/statements/grant-server-principal-permissions-transact-sql)   
+ [Widerrufen von Server Prinzipal Berechtigungen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/revoke-server-principal-permissions-transact-sql)   
+ [DENY (Berechtigungen für Server Prinzipal) &#40;Transact-SQL-&#41;](/sql/t-sql/statements/deny-server-principal-permissions-transact-sql)   
+ [Erstellen einer Server Rolle](../authentication-access/create-a-server-role.md)  
   
   

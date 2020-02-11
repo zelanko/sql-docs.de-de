@@ -1,5 +1,5 @@
 ---
-title: 'Auftragseigenschaften: Neuer Auftrag (Seite "Warnungen") | Microsoft-Dokumentation'
+title: 'Auftrags Eigenschaften: neuer Auftrag (Seite "Warnungen") | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,29 +13,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68189282"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Warnungen“)
-  Auf dieser Seite können Sie Warnungen für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und verwalten.  
+  Verwenden Sie diese Seite, um die Warnungen für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzuzeigen und zu organisieren.  
   
-## <a name="options"></a>Optionen  
- **Warnungsliste**  
+## <a name="options"></a>Tastatur  
+ **Warnungs Liste**  
  Führt die Warnungen für diesen Auftrag auf.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Erstellt eine neue Warnung für den Auftrag.  
   
  **Bearbeiten**  
  Ändert die ausgewählte Warnungsdefinition.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt die ausgewählte Warnung von dem Auftrag und löscht die Warnung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Warnungen](alerts.md)   
  [Implementieren von Aufträgen](implement-jobs.md)  
   

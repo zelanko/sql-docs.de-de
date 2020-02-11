@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2856bca26e8a49ffdb2ed5187479434c7762015b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702626"
 ---
 # <a name="perspectives"></a>Perspektiven
@@ -32,13 +32,13 @@ ms.locfileid: "62702626"
   
  Ein Cube muss aktualisiert und verarbeitet werden, bevor die Perspektive verwendet werden kann.  
   
- Bei Cubes kann es sich um sehr komplexe Objekte handeln, die Benutzer in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]untersuchen können. Ein einzelner Cube kann den Inhalt eines gesamten Data Warehouse darstellen, wobei mehrere Measuregruppen in einem Cube mehrere Faktentabellen und mehrere Dimensionen basierend auf mehreren Dimensionstabellen darstellen. Ein solcher Cube kann sehr komplex und leistungsstark, aber entmutigend für Benutzer sein, die oft nur mit einem kleinen Teil eines Cubes interagieren müssen, um ihre Business Intelligence- und Berichterstellungsanforderungen zu erfüllen.  
+ Bei Cubes kann es sich um sehr komplexe Objekte handeln, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]die Benutzer in untersuchen können. Ein einzelner Cube kann den Inhalt eines gesamten Data Warehouse darstellen, wobei mehrere Measuregruppen in einem Cube mehrere Faktentabellen und mehrere Dimensionen basierend auf mehreren Dimensionstabellen darstellen. Ein solcher Cube kann sehr komplex und leistungsstark, aber entmutigend für Benutzer sein, die oft nur mit einem kleinen Teil eines Cubes interagieren müssen, um ihre Business Intelligence- und Berichterstellungsanforderungen zu erfüllen.  
   
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Perspektive verwenden, um die wahrgenommene Komplexität eines Cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zu reduzieren. Eine Perspektive definiert eine sichtbare Teilmenge eines Cubes, die fokussierte, unternehmensspezifische oder anwendungsspezifische Sichten für einen Cube bereitstellt. Über die Perspektive wird die Sichtbarkeit der in einem Cube enthaltenen Objekte gesteuert. Die folgenden Objekte können in einer Perspektive angezeigt oder ausgeblendet werden:  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie eine Perspektive verwenden, um die wahrgenommene Komplexität eines Cubes in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]zu reduzieren. Eine Perspektive definiert eine sichtbare Teilmenge eines Cubes, die fokussierte, unternehmensspezifische oder anwendungsspezifische Sichten für einen Cube bereitstellt. Über die Perspektive wird die Sichtbarkeit der in einem Cube enthaltenen Objekte gesteuert. Die folgenden Objekte können in einer Perspektive angezeigt oder ausgeblendet werden:  
   
 -   Dimensionen  
   
--   Attribute  
+-   Attributes  
   
 -   Hierarchien  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62702626"
   
 -   Aktionen  
   
- Zum Beispiel enthält der **Adventure Works** -Cube in der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Beispieldatenbank elf Measuregruppen und einundzwanzig verschiedene Cubedimensionen, die Verkäufe, Verkaufsprognosen und Finanzdaten darstellen. Eine Clientanwendung kann direkt auf den gesamten Cube verweisen. Diese Sicht kann allerdings für einen Benutzer zu umfangreich sein, der versucht, allgemeine Informationen zur Umsatzprognose zu extrahieren. Stattdessen kann dieser Benutzer die Perspektive **Verkaufsziele** verwenden, um die Sicht des **Adventure Works** -Cubes auf die Objekte zu beschränken, die für Umsatzprognosen relevant sind.  
+ Zum Beispiel enthält der **Adventure Works** -Cube in der [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Beispieldatenbank elf Measuregruppen und einundzwanzig verschiedene Cubedimensionen, die Verkäufe, Verkaufsprognosen und Finanzdaten darstellen. Eine Clientanwendung kann direkt auf den gesamten Cube verweisen. Diese Sicht kann allerdings für einen Benutzer zu umfangreich sein, der versucht, allgemeine Informationen zur Umsatzprognose zu extrahieren. Stattdessen kann dieser Benutzer die Perspektive **Verkaufsziele** verwenden, um die Sicht des **Adventure Works** -Cubes auf die Objekte zu beschränken, die für Umsatzprognosen relevant sind.  
   
  Für Objekte in einem Cube, die für den Benutzer durch eine Perspektive nicht sichtbar sind, ist ein direktes Verweisen und Abrufen trotzdem mithilfe von XMLA- (XML for Analysis), MDX- (Multidimensional Expressions) oder DMX-Anweisungen (Data Mining Extensions) möglich. Perspektiven begrenzen nicht den Zugriff auf Objekte in einem Cube und sollten hierfür auch nicht verwendet werden. Stattdessen können Perspektiven verwendet werden, um Endbenutzern den Zugriff auf einen Cube zu erleichtern.  
   

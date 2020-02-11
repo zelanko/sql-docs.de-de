@@ -1,5 +1,5 @@
 ---
-title: Geben Sie Bezeichner | Microsoft-Dokumentation
+title: Typbezeichner | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093025"
 ---
 # <a name="type-identifiers"></a>Typenbezeichner
-Um SQL- und C-Datentypen zu beschreiben, ODBC definiert zwei Sätze von *Typenbezeichner*. Ein Typ-ID beschreibt den Typ der SQL-Spalte oder einem C-Puffer. Es ist ein **#define** Wert und in der Regel als ein Funktionsargument übergeben oder in den Metadaten zurückgegebenen.  
+Um SQL-und C-Datentypen zu beschreiben, definiert ODBC zwei Sätze von *typbezeichlen*. Ein Typbezeichner beschreibt den Typ einer SQL-Spalte oder eines C-Puffers. Dabei handelt es sich um einen **#define** Wert, der im Allgemeinen als Funktions Argument und in den Metadaten zurückgegeben wird.  
   
- Beispielsweise der folgende Aufruf von **SQLBindParameter** bindet eine Variable vom Typ SQL_DATE_STRUCT an eine Date-Parameter in einer SQL­Anweisung. Die C-Typ-ID SQL_C_TYPE_DATE gibt den Typ des der *Datum* Variable und die SQL-Typ-ID SQL_TYPE_DATE gibt Sie den Typ der dynamischen Parameter.  
+ Der folgende Befehl von **SQLBindParameter** bindet z. b. eine Variable vom Typ SQL_DATE_STRUCT an einen Datums Parameter in einer SQL-Anweisung. Der C-Typbezeichner SQL_C_TYPE_DATE gibt den Typ der *Datums* Variablen an, und der SQL-Typbezeichner SQL_TYPE_DATE den Typ des dynamischen Parameters angibt.  
   
 ```  
 SQL_DATE_STRUCT Date;  

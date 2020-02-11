@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 6: Stellen Sie sicher, dass das domänenbasierte Attribut erstellt wird, mithilfe von Master Data Manager | Microsoft-Dokumentation'
+title: 'Aufgabe 6: überprüfen, ob das Domänen basierte Attribut mit Master Data Manager erstellt wurde | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fe3f404d4f41e2977ef389216dcbc9106327266a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65488953"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wurde
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird
   In dieser Aufgabe überprüfen Sie mit **Master Data Manager**, ob die Entität **Bundesland** in **MDS** erstellt wird und ob das Attribut **Bundesland** der Entität **Lieferant** ein domänenbasiertes Attribut ist, das von der Entität **Bundesland** abhängig ist.  
   
 1.  Wechseln Sie zur **Master Data Manger**-Webanwendung.  
@@ -26,9 +26,9 @@ ms.locfileid: "65488953"
   
 3.  Stellen Sie sicher, dass das Modell **Lieferanten** ausgewählt ist, und klicken Sie auf **Explorer**. Sie können die Seite aktualisieren, wenn **Explorer** bereits geöffnet ist.  
   
-4.  Der Mauszeiger über **Entitäten** auf der Menüleiste und nun zwei Entitäten vorhanden sind: **Lieferanten** und **Zustand**.  
+4.  Bewegen Sie die Maus über **Entitäten** in der Menüleiste. Es sind nun zwei Entitäten vorhanden: **Supplier** und **State**.  
   
-     ![Menü "Entitäten" mit Bundesland und Lieferant](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menü \"Entitäten\" mit Bundesland und Lieferant")  
+     ![Menü "Entitäten" mit Bundesland und Lieferant](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-01.jpg "Menü "Entitäten" mit Bundesland und Lieferant")  
   
 5.  Klicken Sie auf **Bundesland**, wenn die Entität noch nicht geöffnet ist.  
   
@@ -40,21 +40,21 @@ ms.locfileid: "65488953"
   
     |Code|Name|  
     |----------|----------|  
-    |CA|California|  
-    |CO|Baden-Württemberg|  
-    |BY|Bayern|  
-    |SL|Saarland|  
-    |SN|Sachsen|  
-    |AL|Thüringen|  
-    |HE|Hessen|  
-    |NI|Niedersachsen|  
-    |RP|Rheinland-Pfalz|  
-    |ST|Sachsen-Anhalt|  
-    |BB|Brandenburg|  
-    |MV|Mecklenburg-Vorpommern|  
-    |SH|Schleswig-Holstein|  
-    |BER|Berlin|  
-    |HH|Hamburg|  
+    |CA|Kalifornien|  
+    |CO|Colorado|  
+    |IL|Illinois|  
+    |SL|District of Columbia|  
+    |FL|Florida|  
+    |AL|Alabama|  
+    |KY|Kentucky|  
+    |MA|Massachusetts|  
+    |AZ|Arizona|  
+    |MI|Michigan|  
+    |MN|Minnesota|  
+    |NJ|New Jersey|  
+    |SH|Nevada|  
+    |NY|New York|  
+    |HH|Ohio|  
     |OK|Oklahoma|  
     |oder|Oregon|  
     |PA|Pennsylvania|  
@@ -76,9 +76,9 @@ ms.locfileid: "65488953"
   
 11. Der Wert für das Feld **Bundesland** kann im Bereich **Details** über die Dropdownliste geändert werden. Sie können auch sehen, dass in der Liste links und in der Dropdownliste im Bereich **Details** zuerst Code und dann der Name in geschweiften Klammern angezeigt wird. Sie können auch jeden beliebigen anderen Wert im Bereich **Details** ändern.  
   
-     ![Status-Attribut mit aktualisiertem Code und Namen](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Attribut mit aktualisiertem Code und Namen angeben")  
+     ![Attribut mit aktualisiertem Code und Namen von Bundesstaaten](../../2014/tutorials/media/et-verifythatthedbaiscreatedusingmdm-02.jpg "Attribut mit aktualisiertem Code und Namen von Bundesstaaten")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 7: Anzeigen von Updates vorgenommen, mit der Master Data Manager in Excel](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
+ [Aufgabe 7: Anzeigen von Updates, die mit Master Data Manager in Excel durchgeführt wurden](../../2014/tutorials/task-7-viewing-updates-made-using-master-data-manager-in-excel.md)  
   
   

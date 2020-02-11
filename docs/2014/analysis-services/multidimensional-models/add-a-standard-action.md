@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer Standardaktion | Microsoft-Dokumentation
+title: Hinzufügen einer Standard Aktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077471"
 ---
 # <a name="add-a-standard-action"></a>Hinzufügen einer Standardaktion
@@ -47,12 +47,12 @@ ms.locfileid: "66077471"
   
     -   Wählen Sie in der Dropdownliste **Typ** den Typ der Aktion aus, den Sie erstellen möchten. In der folgenden Tabelle sind die verfügbaren Aktionstypen aufgelistet.  
   
-        |Typ|Description|  
+        |type|BESCHREIBUNG|  
         |----------|-----------------|  
         |Dataset|Ruft ein Dataset ab.|  
         |Proprietär|Führt einen Vorgang über eine Schnittstelle aus, die nicht in dieser Tabelle aufgelistet ist.|  
         |Rowset|Ruft ein Rowset ab.|  
-        |Statement|Gibt einen OLE DB-Befehl zurück.|  
+        |-Anweisung.|Gibt einen OLE DB-Befehl zurück.|  
         |URL|Zeigt eine Webseite in einem Internetbrowser an.|  
   
     -   Erstellen Sie in **Aktionsausdruck**einen Ausdruck, durch den die Aktion definiert wird. Der Ausdruck muss zu einer Zeichenfolge ausgewertet werden. Sie können entweder den Ausdruck manuell eingeben oder Elemente aus den Registerkarten **Metadaten** und **Funktionen** ziehen.  
@@ -61,9 +61,9 @@ ms.locfileid: "66077471"
   
     -   Geben Sie mithilfe der Dropdownliste **Aufruf** an, wie die Aktion aufgerufen wird. In der folgenden Tabelle werden die verfügbaren Optionen zum Aufrufen einer Aktion beschrieben.  
   
-        |Option|Description|  
+        |Option|Beschreibung|  
         |------------|-----------------|  
-        |Interaktiv|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
+        |Interactive|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
         |Batch|Die Aktion wird als Batchvorgang ausgeführt.|  
         |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube von einem Benutzer geöffnet wird.|  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66077471"
         > [!NOTE]  
         >  Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
   
-    -   In **Aktionsinhalt**, wenn Sie die URL-Typ verwenden, schließen Sie die Internetadresse in Anführungszeichen ein, z. B. "http://www.adventure-works.com".  
+    -   Wenn Sie unter **Aktions Inhalt**den URL-Typ verwenden, schließen Sie die Internet Adresse in Anführungszeichen ein, z. bhttp://www.adventure-works.com. "".  
   
     -   Geben Sie in **Beschreibung**eine Beschreibung für die Aktion ein.  
   

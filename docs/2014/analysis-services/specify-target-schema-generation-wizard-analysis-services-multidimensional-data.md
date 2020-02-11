@@ -1,5 +1,5 @@
 ---
-title: Geben Sie Ziel (Schemagenerierungs-Assistent) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Ziel angeben (Schemagenerierungs-Assistent) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e780758513aebc90dd35399894e78d0096cb0400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66068251"
 ---
 # <a name="specify-target-schema-generation-wizard-analysis-services---multidimensional-data"></a>Ziel angeben (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Identifizieren Sie mithilfe der Seite **Ziel angeben** die Datenquellensicht, in der die relationalen Schemas erstellt werden.  
   
-## <a name="options"></a>Optionen  
- **Erstellen Sie eine neue Datenquellensicht**  
+## <a name="options"></a>Tastatur  
+ **Neue Datenquellensicht erstellen**  
  Wählen Sie diese Option aus, um eine neue Datenquellensicht zu erstellen, die das vom Assistenten generierte relationale Schema enthält.  
   
  **Name der Datenquellensicht**  
@@ -46,8 +46,8 @@ ms.locfileid: "66068251"
  **Vorhandene Datenquellensicht verwenden**  
  Wählen Sie diese Option aus, um eine vorhandene Datenquellensicht auszuwählen, die das vom Assistenten generierte relationale Schema enthält.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schema Schemagenerierungs-Assistent F1-Hilfe &#40;Analysis Services – mehrdimensionale Daten&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Analysis Services-Assistenten &#40;mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Schemagenerierungs-Assistent F1-Hilfe &#40;Analysis Services-mehrdimensionalen Daten&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)   
+ [Analysis Services Assistenten &#40;Mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

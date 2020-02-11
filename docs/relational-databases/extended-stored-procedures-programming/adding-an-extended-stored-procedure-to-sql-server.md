@@ -1,5 +1,5 @@
 ---
-title: Hinzufügen einer erweiterten gespeicherten Prozedur in SQLServer | Microsoft-Dokumentation
+title: Hinzufügen einer erweiterten gespeicherten Prozedur zu SQL Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: 10f1bb74-3b43-4efd-b7ab-7a85a8600a50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: bba543dbf89cb1dd3c0eb8a456a54c3c31c51d02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67903410"
 ---
 # <a name="adding-an-extended-stored-procedure-to-sql-server"></a>Hinzufügen einer erweiterten gespeicherten Prozedur zu SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen die CLR-Integration.  
   
- Eine DLL, die erweiterte gespeicherte Prozedurfunktionen enthält, stellt eine Erweiterung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Um die DLL zu installieren, kopieren Sie die Datei in ein Verzeichnis, beispielsweise das Verzeichnis mit dem Standard [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DLL-Dateien (C:\Program Files\Microsoft SQL Server\MSSQL12.0. *X*\MSSQL\Binn standardmäßig).  
+ Eine DLL, die erweiterte gespeicherte Prozedurfunktionen enthält, stellt eine Erweiterung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar. Um die dll zu installieren, kopieren Sie die Datei in ein Verzeichnis, z. b. das Verzeichnis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , das die dll-Standard Dateien enthält (c:\Programme\Microsoft SQL server\mssql12.0.* x*\MSSQL\Binn standardmäßig).  
   
  Nachdem die DLL mit der erweiterten gespeicherten Prozedur auf den Server kopiert wurde, muss ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemadministrator jede Funktion der in der DLL enthaltenen erweiterten gespeicherten Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrieren. Hierzu wird die gespeicherte Systemprozedur sp_addextendedproc verwendet.  
   
 > [!IMPORTANT]  
->  Der Systemadministrator muss die erweiterte gespeicherte Prozedur sorgfältig überprüfen, um sicherzustellen, dass sie keinen schädlichen oder bösartigen Code enthält, bevor er sie dem Server hinzufügt und anderen Benutzern Berechtigungen zum Ausführen der Prozedur gewährt.  Überprüfen Sie alle Benutzereingaben. Verketten Sie Benutzereingaben nicht vor der Überprüfung. Führen Sie niemals Befehle aus, die sich aus nicht überprüften Benutzereingaben zusammensetzen.  
+>  Der Systemadministrator muss die erweiterte gespeicherte Prozedur sorgfältig überprüfen, um sicherzustellen, dass sie keinen schädlichen oder bösartigen Code enthält, bevor er sie dem Server hinzufügt und anderen Benutzern Berechtigungen zum Ausführen der Prozedur gewährt.  Überprüfen Sie alle Benutzereingaben. Verketten Sie Benutzereingaben nicht, bevor Sie Sie überprüfen. Führen Sie niemals Befehle aus, die sich aus nicht überprüften Benutzereingaben zusammensetzen.  
   
  Der erste Parameter namens sp_addextendedproc gibt den Namen der Funktion an, und der zweite Parameter gibt den Namen der DLL an, in der sich die Funktion befindet. Es ist empfehlenswert, den vollständigen Pfad der DLL anzugeben.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "67903410"
 sp_addextendedproc 'xp_hello', 'c:\Program Files\Microsoft SQL Server\MSSQL13.0.MSSQLSERVER\MSSQL\Binn\xp_hello.dll';  
 ```  
   
- Entspricht der in `sp_addextendedproc` angegebene Funktionsname nicht genau dem Funktionsnamen in der DLL, dann wird der neue Name in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert, kann jedoch nicht verwendet werden. Z. B. zwar `xp_Hello` als registriert eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der erweiterten gespeicherten Prozedur befindet sich in `xp_hello.dll`, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht möglich, die die Funktion in der DLL finden, wenn Sie `xp_Hello` aufrufen, die Funktion später noch mal.  
+ Entspricht der in `sp_addextendedproc` angegebene Funktionsname nicht genau dem Funktionsnamen in der DLL, dann wird der neue Name in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert, kann jedoch nicht verwendet werden. `xp_Hello` Obwohl beispielsweise als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erweiterte gespeicherte Prozedur in `xp_hello.dll`registriert ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Funktion in der dll nicht finden, wenn Sie verwenden `xp_Hello` , um die Funktion zu einem späteren Zeitpunkt aufzurufen.  
   
 ```  
 --Register the function (xp_hello) with an initial upper case  
@@ -93,8 +93,8 @@ Server: Msg 2812, Level 16, State 62, Line 1
   
  Es ist nicht notwendig, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu beenden und neu zu starten.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_addextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_addextendedproc &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproc-transact-sql.md)   
  [sp_dropextendedproc &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproc-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen von berechneten Elementen | Microsoft-Dokumentation
+title: Erstellen berechneter Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076277"
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
@@ -42,7 +42,7 @@ ms.locfileid: "66076277"
   
  Hierarchien werden in Ebenen unterteilt, die Elemente enthalten. Jedes Element erzeugt eine Überschrift. Während des Anzeigens der Daten in einem Cube können Endbenutzer einen Drilldown von einer ausgewählten Überschrift zu zuvor nicht angezeigten untergeordneten Überschriften ausführen. Die Überschrift für das berechnete Element wird zu der Ebene hinzugefügt, die sich direkt unter dem von Ihnen ausgewählten übergeordneten Element befindet.  
   
- **expression**  
+ **Ausdruck**  
  Geben Sie den Ausdruck an, der die Werte des berechneten Elements erzeugt. Dieser Ausdruck kann in MDX (Multidimensional Expressions) geschrieben sein. Der Ausdruck kann Folgendes enthalten:  
   
 -   Datenausdrücke, die für die Komponenten des Cubes stehen, wie Dimensionen, Ebenen, Measures usw.  
@@ -51,7 +51,7 @@ ms.locfileid: "66076277"
   
 -   Zahlen  
   
--   Funktionen  
+-   Functions  
   
  Sie können Cubekomponenten aus der Registerkarte **Metadaten** im Bereich **Berechnungstools** ziehen oder kopieren, um sie schnell zu einem Ausdruck hinzuzufügen.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66076277"
  Formatzeichenfolge  
  Gibt das Format der Zellenwerte an, die auf dem berechneten Element basieren. Die Eigenschaft nimmt dieselben Werte an wie die `Display Format`-Eigenschaft für Measures. Weitere Informationen zu Anzeigeformaten finden Sie unter [Konfigurieren von Measureeigenschaften](configure-measure-properties.md).  
   
- Sichtbar  
+ Visible  
  Bestimmt, ob das berechnete Element beim Abrufen von Cubemetadaten sichtbar oder ausgeblendet ist. Wenn das berechnete Element ausgeblendet ist, kann es trotzdem in MDX-Ausdrücken, -Anweisungen und -Skripts verwendet werden, aber es wird nicht als auswählbares Objekt in Clientbenutzeroberflächen angezeigt.  
   
  Verhalten für nicht leere Elemente  
@@ -80,7 +80,7 @@ ms.locfileid: "66076277"
   
 -   Wenn ein berechnetes Element in der Measuredimension erstellt wird, ist das berechnete Element in dieser Dimension adressierbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Überprüfungen des Argumentwerts | Microsoft-Dokumentation
+title: Argument Wert Überprüfungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 013c8f80a672ed691e7519b318206c406171cfbc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077108"
 ---
 # <a name="argument-value-checks"></a>Überprüfungen des Argumentwerts
-Der Treiber-Manager überprüft die folgenden Typen der Argumente. Sofern nicht anders angegeben, gibt der Treiber-Manager SQL_ERROR zurück, auf Fehler in der Argument-Werte.  
+Der Treiber-Manager überprüft die folgenden Argument Typen. Sofern nicht anders angegeben, gibt der Treiber-Manager SQL_ERROR für Fehler in Argument Werten zurück.  
   
--   Umgebung, Verbindung und Anweisung Handles darf nicht in der Regel mit null-Zeiger sein. Der Treiber-Manager gibt SQL_INVALID_HANDLE zurück, wenn ein null-Handle gefunden wird.  
+-   Umgebungs-, Verbindungs-und Anweisungs Handles dürfen in der Regel keine NULL-Zeiger sein. Der Treiber-Manager gibt SQL_INVALID_HANDLE zurück, wenn er ein NULL-Handle findet.  
   
--   Zeigerargumente, z. B. erforderlichen *OutputHandlePtr* in **SQLAllocHandle** und *CursorName* in **SQLSetCursorName**, nicht möglich NULL-Zeiger.  
+-   Erforderliche Zeigerargumente, z. b. *outputhandleptr* in **sqlzuzugchandle** und *Cursor Name* in **sqlsetcursor Name**, dürfen keine NULL-Zeiger sein.  
   
--   Optionsflags, die nicht-Treiber-spezifische Werte unterstützen, müssen ein gültiger Wert sein. Z. B. *Vorgang* in **SQLSetPos** SQL_POSITION SQL_REFRESH, SQL_UPDATE, SQL_DELETE oder SQL_ADD werden muss.  
+-   Optionsflags, die keine treiberspezifischen Werte unterstützen, müssen ein gültiger Wert sein. Der *Vorgang* in **SQLSetPos** muss z. b. SQL_POSITION, SQL_REFRESH, SQL_UPDATE, SQL_DELETE oder SQL_ADD sein.  
   
--   Optionsflags müssen in der Version von ODBC unterstützt, die vom Treiber unterstützt werden. Z. B. *Informationsart* in **SQLGetInfo** SQL_ASYNC_MODE (eingeführt in ODBC-Version 3.0) nicht beim Aufrufen von ODBC 2.0-Treiber.  
+-   Optionsflags müssen in der Version von ODBC unterstützt werden, die vom Treiber unterstützt wird. Beispielsweise kann *InfoType* in **SQLGetInfo** nicht SQL_ASYNC_MODE (eingeführt in ODBC 3,0), wenn ein ODBC 2,0-Treiber aufgerufen wird.  
   
--   Anzahl von Spalten und Parameter muss größer als 0 oder größer als oder gleich 0 ist, abhängig von der Funktion sein. Der Treiber muss die obere Grenze der diese Argumentwerte, die auf Grundlage des aktuellen Resultsets oder das SQL-Anweisung überprüfen.  
+-   Die Spalten-und Parameter Nummern müssen abhängig von der Funktion größer als 0 (null) oder größer oder gleich 0 sein. Der Treiber muss die Obergrenze dieser Argument Werte basierend auf dem aktuellen Resultset oder der SQL-Anweisung überprüfen.  
   
--   Längenindikator/Argumente und Daten Puffer Länge Argumente müssen die entsprechenden Werte enthalten. Zum Beispiel das Argument, der angibt, die Länge eines Tabellennamens in **SQLColumns** (*NameLength3*) muss SQL_NTS lauten oder einen Wert größer als 0 sein; *Pufferlänge* in **SQLDescribeCol** muss größer als oder gleich 0 sein. Der Treiber möglicherweise müssen Sie auch diesen Argumenten überprüfen. Beispielsweise können sie überprüfen, *NameLength3* ist kleiner als oder gleich der maximalen Länge von einem Tabellennamen in der Datenquelle.
+-   Längen-/indikatorargumente und Datenpuffer Längen-Argumente müssen geeignete Werte enthalten. Beispielsweise muss das Argument, das die Länge eines Tabellennamens in **SQLColumns** (*NameLength3*) angibt, SQL_NTS oder ein Wert größer als 0 sein. *BufferLength* in **SQLDescribeCol** muss größer oder gleich 0 sein. Der Treiber muss möglicherweise auch diese Argumente überprüfen. Beispielsweise kann überprüft werden, ob *NameLength3* kleiner oder gleich der maximalen Länge eines Tabellennamens in der Datenquelle ist.

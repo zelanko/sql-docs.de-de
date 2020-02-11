@@ -1,5 +1,5 @@
 ---
-title: SQLSetPos (Cursor Library) | Microsoft-Dokumentation
+title: SQLSetPos (Cursor Bibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: 574399c3-2bb2-4d19-829c-7c77bd82858d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87ff006e7bead36c2aa6476b99552d1524c213b1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091716"
 ---
 # <a name="sqlsetpos-cursor-library"></a>SQLSetPos (Cursorbibliothek)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema erläutert die Verwendung von der **SQLSetPos** -Funktion in der Cursorbibliothek. Allgemeine Informationen zur **SQLSetPos**, finden Sie unter [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+ In diesem Thema wird die Verwendung der **SQLSetPos** -Funktion in der Cursor Bibliothek erläutert. Allgemeine Informationen zu **SQLSetPos**finden Sie unter [SQLSetPos-Funktion](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
- Die Cursor-Bibliothek unterstützt den SQL_POSITION-Vorgang nur für die *Vorgang* -Argument in **SQLSetPos**. Es unterstützt die SQL_LOCK_NO_CHANGE Wert nur für die *LockType* Argument.  
+ Die Cursor Bibliothek unterstützt den SQL_POSITION Vorgang nur für das *Vorgangs* Argument in **SQLSetPos**. Der SQL_LOCK_NO_CHANGE Wert wird nur für das *LockType* -Argument unterstützt.  
   
- Wenn der Treiber Massenvorgänge nicht unterstützt, gibt die Cursorbibliothek SQLSTATE HYC00 zurück (nicht-Treiber) beim **SQLSetPos** aufgerufen wird und *' RowNumber '* gleich 0. Dieses Verhalten Treiber wird nicht empfohlen.  
+ Wenn der Treiber keine Massen Vorgänge unterstützt, gibt die Cursor Bibliothek SQLSTATE HYC00 (Treiber nicht fähig) zurück, wenn **SQLSetPos** mit *RowNumber* gleich 0 aufgerufen wird. Dieses Treiber Verhalten wird nicht empfohlen.  
   
- Die Cursorbibliothek unterstützt nicht die SQL_UPDATE und SQL_DELETE-Vorgänge in einem Aufruf von **SQLSetPos**. Der Cursor-Bibliothek implementiert eine positionierte aktualisieren oder Löschen von SQL-Anweisung durch das Erstellen einer komplexen aktualisieren oder delete-Anweisung mit einer WHERE-Klausel, die in seinem Cache für jede gebundene Spalte gespeicherten Werte auflistet. Weitere Informationen finden Sie unter [Verarbeitung positioniert Update- und Delete-Anweisungen](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
+ Die Cursor Bibliothek unterstützt die SQL_UPDATE-und SQL_DELETE Vorgänge in einem-Befehl von **SQLSetPos**nicht. Die Cursor Bibliothek implementiert eine positionierte UPDATE-oder DELETE-SQL-Anweisung, indem eine gesuchte Update-oder DELETE-Anweisung mit einer WHERE-Klausel erstellt wird, die die im Cache gespeicherten Werte für jede gebundene Spalte auflistet. Weitere Informationen finden Sie unter [Verarbeiten von positionierten Update-und DELETE-Anweisungen](../../../odbc/reference/appendixes/processing-positioned-update-and-delete-statements.md).  
   
- Wenn der Treiber keine statische Cursor unterstützt, sollte eine Anwendung mit der Cursorbibliothek Aufrufen **SQLSetPos** nur für ein Rowset, das abgerufen werden, indem **SQLExtendedFetch** oder **SQLFetchScroll** , nicht von **SQLFetch**. Die Cursorbibliothek implementiert **SQLExtendedFetch** und **SQLFetchScroll** durch wiederholte Aufrufe von **SQLFetch** (mit einer Rowsetgröße von 1) im Treiber. Die Cursorbibliothek übergibt Aufrufe **SQLFetch**, auf die andere hingegen mit dem Treiber. Wenn **SQLSetPos** wird aufgerufen, in einem mehrzeiligen Rowset abgerufen werden, indem **SQLFetch** , wenn der Treiber keine statische Cursor unterstützt, schlägt der Aufruf fehl, da **SQLSetPos** funktioniert nicht mit Vorwärtscursor. Dies geschieht auch, wenn eine Anwendung erfolgreich aufgerufen wurde **SQLSetStmtAttr** für SQL_ATTR_CURSOR_TYPE SQL_CURSOR_STATIC, festzulegen, die die Cursorbibliothek unterstützt, auch wenn der Treiber keine statische Cursor unterstützt.
+ Wenn der Treiber keine statischen Cursor unterstützt, sollte eine Anwendung, die mit der Cursor Bibliothek arbeitet, **SQLSetPos** nur für ein Rowset aufrufen, das von **SQLExtendedFetch** oder **SQLFetchScroll**abgerufen wurde, nicht von **SQLFetch**. Die Cursor Bibliothek implementiert **SQLExtendedFetch** und **SQLFetchScroll** durch wiederholte Aufrufe von **SQLFetch** (mit einer Rowsetgröße von 1) im Treiber. Die Cursor Bibliothek übergibt Aufrufe von **SQLFetch**auf der anderen Seite an den Treiber. Wenn **SQLSetPos** für ein mehr zeiliges Rowset aufgerufen wird, das von **SQLFetch** abgerufen wird, wenn der Treiber keine statischen Cursor unterstützt, schlägt der Aufruf fehl, da **SQLSetPos** nicht mit Vorwärts Cursor funktioniert. Dies geschieht auch, wenn eine Anwendung **SQLSetStmtAttr** erfolgreich aufgerufen hat, um SQL_ATTR_CURSOR_TYPE auf SQL_CURSOR_STATIC festzulegen, die von der Cursor Bibliothek unterstützt wird, auch wenn der Treiber keine statischen Cursor unterstützt.
