@@ -14,18 +14,18 @@ ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923603"
 ---
 # <a name="using-bookmarks"></a>Verwenden von Textmarken
-Es ist häufig nützlich, um direkt zu einem bestimmten Datensatz zurückgegeben wird, nach dem verschoben haben, der **Recordset** ohne zu scrollen Sie durch jeden Datensatz und Vergleichen von Werten. Z. B., wenn Sie versuchen, suchen Sie für einen Datensatz mit den **finden** -Methode, aber die Suche keine Datensätze zurückgibt, wird automatisch am Ende des der **Recordset**. Wenn Ihr Anbieter unterstützt werden, können Lesezeichen verwendet werden, markieren Sie Ihre aktuelle Position vor der Verwendung der **finden** Methode, sodass Sie für Ihren Standort wiederherstellen können. Ein Lesezeichen ist ein **Variant** Typwert, die eindeutig einen Datensatz in einem **Recordset** Objekt.  
+Es ist häufig nützlich, nach dem Verschieben in das **Recordset** direkt zu einem bestimmten Datensatz zurückzukehren, ohne durch jeden Datensatz scrollen und Werte vergleichen zu müssen. Wenn Sie z. b. versuchen, mit der **Find** -Methode nach einem Datensatz zu suchen, die Suche jedoch keine Datensätze zurückgibt, werden Sie automatisch an jedem Ende des **Recordsets**platziert. Wenn Ihr Anbieter diese unterstützt, können Sie Lesezeichen verwenden, um die Position zu markieren, bevor Sie die **Find** -Methode verwenden, um zu ihrem Speicherort zurückzukehren. Ein Lesezeichen ist ein **Variant** -Typwert, der einen Datensatz in einem **Recordset** -Objekt eindeutig identifiziert.  
   
- Sie können auch ein variant-Array von Lesezeichen mit dem **Recordset-Filter** Methode, um für eine ausgewählte Gruppe von Datensätzen zu filtern. Ausführliche Informationen zu diesem Verfahren finden Sie Filtern der Ergebnisse im Thema [arbeiten mit Recordsets](../../../ado/guide/data/working-with-recordsets.md)weiter unten in diesem Abschnitt.  
+ Sie können auch ein Variant-Array von Lesezeichen mit der **Recordset-Filter** Methode verwenden, um nach einem ausgewählten Satz von Datensätzen zu filtern. Weitere Informationen zu diesem Verfahren finden Sie unter Filtern der Ergebnisse im Thema [Arbeiten mit Recordsets](../../../ado/guide/data/working-with-recordsets.md)weiter unten in diesem Abschnitt.  
   
- Können Sie die **Lesezeichen** Eigenschaft, die ein Lesezeichen für einen Eintrag zu erhalten, oder legen Sie den aktuellen Datensatz in einer **Recordset** Objekt, das den Datensatz, der durch ein gültiges Lesezeichen identifiziert wird. Der folgende code verwendet die **Lesezeichen** Eigenschaft, um ein Lesezeichen festlegen, und klicken Sie dann auf den mit Lesezeichen markierten Eintrag verschieben in einen anderen Datensätzen zurückgeben. Bestimmt, ob Ihre **Recordset** unterstützt Lesezeichen, verwenden die **unterstützt** Methode.  
+ Sie können die **Bookmark** -Eigenschaft verwenden, um ein Lesezeichen für einen Datensatz zu erhalten, oder den aktuellen Datensatz in einem **Recordset** -Objekt auf den Datensatz festlegen, der durch ein gültiges Lesezeichen identifiziert wird. Im folgenden Code wird die **Bookmark** -Eigenschaft verwendet, um ein Lesezeichen festzulegen, und dann nach dem Wechsel zu anderen Datensätzen zum Lesezeichen-Datensatz zurückzukehren. Verwenden Sie die **unterstützte** Methode, um zu bestimmen, ob Ihr **Recordset** Lesezeichen unterstützt.  
   
 ```  
 'BeginBookmarkEg  
@@ -46,6 +46,6 @@ End If
 'EndBookmarkEg  
 ```  
   
- Die [unterstützt](../../../ado/reference/ado-api/supports-method.md) Methode wird später ausführlicher behandelt.  
+ Die [unterstützte](../../../ado/reference/ado-api/supports-method.md) Methode wird später ausführlicher behandelt.  
   
- Außer bei geklonten **Recordsets**, Lesezeichen gelten nur für die **Recordset** in dem sie erstellt wurden, auch wenn Sie der gleiche Befehl verwendet wird. Dies bedeutet, dass Sie kein **Lesezeichen** abgerufen, die von einem **Recordset** zum Verschieben auf den gleichen Datensatz in einer Sekunde **Recordset** mit den gleichen Befehl geöffnet.
+ Mit Ausnahme der Groß-/Kleinschreibung von geklonten **Recordsets**sind Lesezeichen für das **Recordset** , in dem Sie erstellt wurden, eindeutig, auch wenn derselbe Befehl verwendet wird. Dies bedeutet, dass Sie kein **Lesezeichen** , das aus einem **Recordset** abgerufen wurde, verwenden können, um in einem zweiten **Recordset** , das mit demselben Befehl geöffnet wurde, zum gleichen Datensatz zu wechseln.

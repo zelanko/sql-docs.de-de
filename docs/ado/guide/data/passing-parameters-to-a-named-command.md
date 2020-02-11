@@ -14,16 +14,16 @@ ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924693"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Übergeben von Parametern an einen benannten Befehl
-Genauso wie das Ergebnis des Befehls als, sich übergeben wird ein *out* Variablen des benannten Befehls, der Parameter wurde für ein parametrisierter Befehl kann als übergebenen *in* Variablen auf den benannten Befehl.  
+Ebenso wie das Ergebnis des Befehls als *out* -Variable des benannten Befehls ausgegeben wird, können Parameter für einen parametrisierten Befehl als *in* Variablen an den benannten Befehl übermittelt werden.  
   
- Im folgenden Codebeispiel wird versucht, alle Aufträge Abrufen vom Kunden aufgegebene, deren **"CustomerID"** "ALKFI" aus der Northwind-Datenbank ist. Der Wert des **"CustomerID"** angegeben wird, auf die Zeit, wenn der benannte Befehl aufgerufen wird.  
+ Im folgenden Codebeispiel wird versucht, alle Bestellungen des Kunden abzurufen, dessen **CustomerID** "alkfi" aus der Northwind-Datenbank ist. Der Wert von **CustomerID** wird zu dem Zeitpunkt bereitgestellt, zu dem der benannte Befehl aufgerufen wird.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -76,21 +76,21 @@ Set objConn = Nothing
 Set objComm = Nothing  
 ```  
   
- Beachten Sie, dass alle Eingabeparameter müssen alle Output-Variable vor, und die Datentypen der Parameter übereinstimmen oder konvertiert werden können, mit denen die entsprechenden Felder ein. Die folgende Anweisung:  
+ Beachten Sie, dass alle Eingabeparameter allen Ausgabevariablen vorangestellt werden müssen und die Datentypen der Parameter übereinstimmen müssen oder in die entsprechenden Felder konvertiert werden können. Die folgende Anweisung:  
   
 ```  
 objConn.GetOrdersOf 12345, objRs  
 ```  
   
- -führt zu einem Fehler nicht übereinstimmende Datentypen, da die erforderliche Eingabeparameter ist eine **Zeichenfolge** Typ nicht von einer **ganze Zahl** Typ.  
+ -führt zu einem Fehler von nicht übereinstimmenden Datentypen, da der erforderliche Eingabeparameter von einem **Zeichen** Folgentyp und nicht vom **ganzzahligen** Typ ist.  
   
- Die folgenden Aufruf:  
+ Der folgende-Befehl:  
   
 ```  
 objConn.GetOrdersOf "12345", objRs  
 ```  
   
- -ist gültig, aber ergibt ein leeres Resultset, weil keine solche Datensätze in der Datenbank vorhanden sind.  
+ -ist gültig, führt jedoch zu einem leeren Resultset, da in der Datenbank keine Datensätze vorhanden sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

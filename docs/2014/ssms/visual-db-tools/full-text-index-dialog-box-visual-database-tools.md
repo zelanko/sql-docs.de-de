@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: adb00f8b0e7cb009420e9843532c3f3d4deb0833
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028413"
 ---
 # <a name="full-text-index-dialog-box-visual-database-tools"></a>Volltextindex (Dialogfeld) (Visual Database Tools)
@@ -28,11 +28,11 @@ ms.locfileid: "63028413"
 > [!NOTE]  
 >  Eine Volltextindex-Funktionalität ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Ausgewählter Volltextindex**  
  Listet vorhandene Volltextindizes auf. Wählen Sie einen Index aus, um seine Eigenschaften im Datenblatt rechts anzuzeigen. Wenn die Liste leer ist, wurden bisher keine Volltextbeziehungen für die Tabelle definiert.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Erstellen Sie einen neuen Volltextindex.  
   
  **Löschen**  
@@ -59,7 +59,7 @@ ms.locfileid: "63028413"
  **Kategorie Tabellen-Designer**  
  Wenn die Kategorie erweitert ist, werden Eigenschaften angezeigt, die das Verhalten des Indexes festlegen.  
   
- **Active**  
+ **Aktiv**  
  Gibt an, ob Sie zurzeit mit diesem Volltextindex eine Volltextsuche ausführen können.  
   
  **Einstellung für das Nachverfolgen von Änderungen**  
@@ -92,8 +92,8 @@ ms.locfileid: "63028413"
  **Eindeutiger Indexname**  
  Zeigt eine Liste der Namen aller Spalten in dieser Datenbank an, die einen eindeutigen, einspaltigen Index haben. Diese Spalten können verwendet werden, um einen Volltextindex zu erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden Sie den Volltextindizierungs-Assistenten](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden des Volltextindizierungs-Assistenten](../../relational-databases/search/use-the-full-text-indexing-wizard.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
   
   

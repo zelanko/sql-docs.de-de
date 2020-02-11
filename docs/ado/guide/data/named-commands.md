@@ -1,5 +1,5 @@
 ---
-title: Mit dem Namen Befehle | Microsoft-Dokumentation
+title: Benannte Befehle | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924824"
 ---
 # <a name="named-commands"></a>Benannte Befehle
-[Erstellen und Ausführen eines einfachen Befehls](../../../ado/guide/data/creating-and-executing-a-simple-command.md) zeigt eine Möglichkeit, einen Befehl auszuführen. Es ist eine weitere Möglichkeit: Sie können es einen benannten Befehl, und rufen Sie dann diese benannte Befehl, die direkt auf die **Verbindung** Objekt (zugewiesen der **ActiveConnection** Eigenschaft der **Befehl** Objekt). Benennen einen Befehl bedeutet, dass ein Name zugewiesen der **Namen** Eigenschaft eine **Befehl** Objekt. Ein auf ein Objekt angewendeter  
+Beim [Erstellen und Ausführen eines einfachen Befehls](../../../ado/guide/data/creating-and-executing-a-simple-command.md) wird eine Möglichkeit zum Ausführen eines Befehls angezeigt. Es gibt eine weitere Möglichkeit: Sie können einen benannten Befehl erstellen und dann den benannten Befehl direkt für das **Verbindungs** Objekt (zugewiesen an die **ActiveConnection** -Eigenschaft des **Command** -Objekts) aufzurufen. Das Benennen eines Befehls bedeutet, dass der **Name** -Eigenschaft eines **Befehls** Objekts ein Name zugewiesen wird. Beispiel:  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -29,9 +29,9 @@ objCmd.ActiveConnection = objConn
 objConn.GetCustomers objRs  
 ```  
   
- Der benannte Befehl fungiert als handele es sich um eine "benutzerdefinierte Methode" auf die **Verbindung** Objekt. Das Ergebnis des Befehls wird als Out-Parameter dieser Methode"benutzerdefinierten" zurückgegeben.  
+ Der benannte Befehl verhält sich wie eine "benutzerdefinierte Methode" für das **Verbindungs** Objekt. Das Ergebnis des Befehls wird als out-Parameter dieser "benutzerdefinierten Methode" zurückgegeben.  
   
- Das folgende Beispiel veranschaulicht dieses Feature.  
+ Dieses Feature wird im folgenden Beispiel veranschaulicht.  
   
 ```  
 'BeginNamedCmd  
@@ -89,5 +89,5 @@ ErrHandler:
 'EndNamedCmd  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

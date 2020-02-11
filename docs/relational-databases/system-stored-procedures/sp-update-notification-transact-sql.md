@@ -1,5 +1,5 @@
 ---
-title: Sp_update_notification (Transact-SQL) | Microsoft-Dokumentation
+title: sp_update_notification (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084864"
 ---
-# <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
+# <a name="sp_update_notification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktualisiert die Benachrichtigungsmethode für eine Warnbenachrichtigung.  
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,32 +43,32 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @alert_name = ] 'alert'` Der Name der dieser Benachrichtigung zugeordneten Warnung. *Warnung* ist **Sysname**, hat keinen Standardwert.  
+`[ @alert_name = ] 'alert'`Der Name der dieser Benachrichtigung zugeordneten Warnung. *Alert* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @operator_name = ] 'operator'` Der Operator, der beim Auftreten der Warnung benachrichtigt wird. *Operator* ist **Sysname**, hat keinen Standardwert.  
+`[ @operator_name = ] 'operator'`Der Operator, der benachrichtigt wird, wenn die Warnung auftritt. *Operator* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @notification_method = ] notification` Die Methode, mit der der Operator benachrichtigt wird. *Benachrichtigung*ist **Tinyint**und hat keinen Standardwert und kann eine oder mehrere der folgenden Werte sein.  
+`[ @notification_method = ] notification`Die Methode, mit der der Operator benachrichtigt wird. die *Benachrichtigung*ist vom Datentyp **tinyint**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|E-Mail|  
 |**2**|Pager|  
-|**4**|**net send**|  
-|**7**|Alle Methoden|  
+|**4**|**NET SEND**|  
+|**19.00**|Alle Methoden|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_update_notification** muss ausgeführt werden, aus der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_update_notification** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
- Sie können eine Benachrichtigung für einen Operator aus, die nicht über die notwendigen Adressinformationen, die unter Verwendung des angegebenen verfügt aktualisieren *Notification_method*. Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des Microsoft SQL Server-Agents angezeigt.  
+ Sie können eine Benachrichtigung für einen Operator aktualisieren, der nicht über die erforderlichen Adressinformationen verfügt. verwenden Sie dazu den angegebenen *notification_method*. Wenn beim Senden einer E-Mail- oder Pagerbenachrichtigung ein Fehler auftritt, wird der Fehler im Fehlerprotokoll des Microsoft SQL Server-Agents angezeigt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Um diese gespeicherte Prozedur auszuführen, müssen Benutzer gewährt werden die **Sysadmin** -Serverrolle sein.  
+ Zum Ausführen dieser gespeicherten Prozedur muss den Benutzern die festen Server Rolle **sysadmin** erteilt werden.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel ändert die Benachrichtigungsmethode für Benachrichtigungen an `François Ajenstat`für die Warnung `Test Alert`.  
+ Im folgenden Beispiel wird die Benachrichtigungs Methode für Benachrichtigungen geändert, `François Ajenstat`die an für `Test Alert`die Warnung gesendet werden.  
   
 ```  
 USE msdb ;  
@@ -81,10 +81,10 @@ EXEC dbo.sp_update_notification
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
- [sp_delete_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
- [sp_help_notification &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_notification &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
+ [sp_delete_notification &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
+ [sp_help_notification &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -14,11 +14,11 @@ ms.assetid: a89d4bab-ef3c-45c2-aa72-2639b3e0f856
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f5ec0f3943fd52540f094a23e9b3f9f3886e1371
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114079"
 ---
 # <a name="supported-data-types"></a>Unterstützte Datentypen
-Die Datentypen, die vom DBMS unterstützt abweichen erheblich. Eine Anwendung kann bestimmen, die Namen und die Eigenschaften der unterstützten Datentypen durch Aufrufen von **SQLGetTypeInfo**. Aufgrund der großen Unterschiede in den Datentypnamen müssen die Anwendung muss den Datentypnamen zurückgegebenes verwenden **SQLGetTypeInfo** in **CREATE TABLE** Anweisungen. Weitere Informationen finden Sie unter [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md).
+Die von DBMSs unterstützten Datentypen variieren erheblich. Eine Anwendung kann die Namen und Merkmale der unterstützten Datentypen durch Aufrufen von **SQLGetTypeInfo**ermitteln. Aufgrund der breiten Variation von Datentyp Namen muss die Anwendung die Datentyp Namen verwenden, die von **SQLGetTypeInfo** in **CREATE TABLE** -Anweisungen zurückgegeben werden. Weitere Informationen finden Sie unter [Datentypen in ODBC](../../../odbc/reference/develop-app/data-types-in-odbc.md).

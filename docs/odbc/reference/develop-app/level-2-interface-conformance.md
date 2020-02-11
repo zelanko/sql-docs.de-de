@@ -1,5 +1,5 @@
 ---
-title: Ebene-2-Schnittstellenübereinstimmung | Microsoft-Dokumentation
+title: Schnittstellen Konformität der Ebene 2 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,25 +15,25 @@ ms.assetid: 2dc87840-f2fe-43dd-9d7b-bd95523081d9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50e74eaed2d651158834a241563d10b3b2e90d5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915575"
 ---
 # <a name="level-2-interface-conformance"></a>Schnittstellenübereinstimmung auf Ebene 2
-Der Konformitätsgrad des Level 2-Schnittstelle enthält die Ebene-1-Schnittstelle Konformitätsgrad Funktionalität sowie die folgenden Features:  
+Die Schnittstelle für die Schnittstellen Konformität der Ebene 2 umfasst die Funktionen der Schnittstellen Konformität auf Ebene 1 sowie die folgenden Features:  
   
 |||  
 |-|-|  
-|201|Verwenden Sie die dreiteilige Namen von Tabellen und Sichten. (Weitere Informationen finden Sie in der zweiteiligen Benennungskonvention Unterstützungsfunktion 101 in [Ebene-1-Schnittstellenübereinstimmung](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
-|202|Dynamische Parameter zu beschreiben, durch den Aufruf **SQLDescribeParam**.|  
-|203|Verwenden Sie nicht nur Eingabeparameter, aber auch Ausgabe und Eingabe/Ausgabe-Parameter und Ergebniswerte von gespeicherten Prozeduren.|  
-|204|Verwenden von Lesezeichen, einschließlich Abrufen von Lesezeichen, durch den Aufruf **SQLDescribeCol** und **SQLColAttribute** für die Spalte die Zahl 0, Abrufen von auf ein Lesezeichen, durch den Aufruf **SQLFetchScroll** mit der *FetchOrientation* -Argument auf SQL_FETCH_BOOKMARK; und aktualisieren, löschen und Abrufen von Lesezeichen-Vorgängen, durch den Aufruf **SQLBulkOperations** mit der *Vorgang* -Argument auf SQL_UPDATE_BY_BOOKMARK SQL_DELETE_BY_BOOKMARK oder SQL_FETCH_BY_BOOKMARK festgelegt.|  
-|205|Abrufen, die auf Weitere Informationen zum Wörterbuch mit Daten, durch den Aufruf **SQLColumnPrivileges**, **SQLForeignKeys**, und **SQLTablePrivileges**.|  
-|206|Verwenden Sie ODBC-Funktionen anstelle von SQL-Anweisungen, um die zusätzliche, durch Aufrufen von Vorgängen **SQLBulkOperations** mit SQL_ADD, oder **SQLSetPos** SQL_DELETE oder SQL_UPDATE auf. (Unterstützung für Aufrufe von **SQLSetPos** mit der *LockType* -Argument auf SQL_LOCK_EXCLUSIVE oder SQL_LOCK_UNLOCK ist nicht Teil der Ebenen der schnittstellenübereinstimmung, jedoch ist ein optionales Feature.)|  
-|207|Aktivieren Sie die asynchrone Ausführung der ODBC-Funktionen für die angegebene einzelne Anweisungen.|  
-|208|Abrufen der SQL_ROWVER Zeile identifizieren-Spalte mit Tabellen, durch den Aufruf **SQLSpecialColumns**. (Weitere Informationen finden Sie auf die Unterstützung für **SQLSpecialColumns** mit der *IdentifierType* Argument festgelegt wird, um SQL_BEST_ROWID als 20 im feature [Kernschnittstellenübereinstimmung](../../../odbc/reference/develop-app/core-interface-conformance.md) .)|  
-|209|Legen Sie das SQL_ATTR_CONCURRENCY-Anweisungsattribut auf mindestens einen anderen Wert als SQL_CONCUR_READ_ONLY.|  
-|210|Die Fähigkeit, Timeout-anmeldeanforderung und SQL-Abfragen (SQL_ATTR_LOGIN_TIMEOUT und SQL_ATTR_QUERY_TIMEOUT).|  
-|211|Die Möglichkeit, um die Standardisolationsstufe zu ändern; die Fähigkeit zum Ausführen von Transaktionen mit der "serialisierbar" Maß an Isolation.|
+|201|Verwenden Sie dreiteilige Namen von Datenbanktabellen und-Sichten. (Weitere Informationen finden Sie unter die zweiteilige namens Unterstützung 101 in der [Schnittstellen Konformität der Ebene 1](../../../odbc/reference/develop-app/level-1-interface-conformance.md).)|  
+|202|Beschreiben Sie die dynamischen Parameter durch Aufrufen von **SQLDescribeParam**.|  
+|203|Verwenden Sie nicht nur Eingabeparameter, sondern auch Ausgabe-und Eingabe-/Ausgabeparameter sowie Ergebnis Werte gespeicherter Prozeduren.|  
+|204|Verwenden von Lesezeichen, einschließlich Abrufen von Lesezeichen, durch Aufrufen von **SQLDescribeCol** und **SQLColAttribute** für die Spaltennummer 0; Abrufen auf der Grundlage eines Lesezeichens, durch Aufrufen von **SQLFetchScroll** , wobei das *FetchOrientation* -Argument auf SQL_FETCH_BOOKMARK festgelegt ist. und zum Aktualisieren, löschen und Abrufen von Lesezeichen Vorgängen durch Aufrufen von **SQLBulkOperations** mit dem *Operations* -Argument, das auf SQL_UPDATE_BY_BOOKMARK, SQL_DELETE_BY_BOOKMARK oder SQL_FETCH_BY_BOOKMARK festgelegt ist.|  
+|205|Rufen Sie erweiterte Informationen über das Datenwörterbuch ab, indem Sie **SQLColumnPrivileges**, **sqlfremdnkeys**und **SQLTablePrivileges**aufrufen.|  
+|206|Verwenden Sie ODBC-Funktionen anstelle von SQL-Anweisungen, um zusätzliche Daten Bank Vorgänge auszuführen, indem Sie **SQLBulkOperations** mit SQL_ADD oder **SQLSetPos** mit SQL_DELETE oder SQL_UPDATE aufrufen. (Die Unterstützung von Aufrufen von **SQLSetPos** mit dem *Lock Type* -Argument, das auf SQL_LOCK_EXCLUSIVE oder SQL_LOCK_UNLOCK festgelegt ist, ist nicht Teil der Übereinstimmungs Ebenen, aber ist ein optionales Feature.)|  
+|207|Aktivieren Sie die asynchrone Ausführung von ODBC-Funktionen für bestimmte einzelne Anweisungen.|  
+|208|Rufen Sie die SQL_ROWVER Zeilen identifizierende Spalte der Tabellen ab, indem Sie **SQLSpecialColumns**aufrufen. (Weitere Informationen finden Sie unter Unterstützung für **SQLSpecialColumns** , wobei das *bezeichnertype* -Argument auf SQL_BEST_ROWID als Funktion 20 in der [Kern Schnittstellen Konformität](../../../odbc/reference/develop-app/core-interface-conformance.md)festgelegt ist.)|  
+|209|Legen Sie das SQL_ATTR_CONCURRENCY-Anweisungs Attribut auf mindestens einen anderen Wert als SQL_CONCUR_READ_ONLY fest.|  
+|210|Die Möglichkeit zum Timeout der Anmelde Anforderung und der SQL-Abfragen (SQL_ATTR_LOGIN_TIMEOUT und SQL_ATTR_QUERY_TIMEOUT).|  
+|211|Die Möglichkeit, die Standard Isolationsstufe zu ändern; die Möglichkeit, Transaktionen mit der Isolationsstufe "serialisierbar" auszuführen.|

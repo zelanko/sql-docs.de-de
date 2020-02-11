@@ -14,43 +14,43 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2973455ff4ee7e8dc51b2cd07a6423c9b1c36346
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073813"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption-Zuordnung
-Wenn eine Anwendung ruft **SQLGetStmtOption** an die ODBC *3.x* Treiber, den sie den Aufruf von nicht unterstützt  
+Wenn eine Anwendung **SQLGetStmtOption** für einen ODBC *3. x* -Treiber aufruft, der dies nicht unterstützt, wird der Aufruf von  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
 ```  
   
- wird wie folgt ausgegeben:  
+ führt zu folgenden Ergebnissen:  
   
--   Wenn *fOption* gibt an, eine ODBC-definierten Anweisungsoption, die eine Zeichenfolge, die Treiber-Manager ruft zurückgibt  
+-   Wenn " *f Option* " eine ODBC-definierte Anweisungs Option angibt, die eine Zeichenfolge zurückgibt, ruft der Treiber-Manager  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
--   Wenn *fOption* gibt an, eine ODBC-definierten Anweisungsoption, die einen 32-Bit-Ganzzahl-Wert, der Treiber-Manager ruft zurückgibt.  
+-   Wenn " *f Option* " eine ODBC-definierte Anweisungs Option angibt, die einen ganzzahligen Wert von 32 Bit zurückgibt, ruft der Treiber-Manager  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, 0, NULL)  
     ```  
   
--   Wenn *fOption* gibt an, eine treiberdefinierten-Anweisungsoption, die Treiber-Manager-Aufrufe  
+-   Wenn " *f Option* " eine Treiber definierte Anweisungs Option angibt, ruft der Treiber-Manager  
   
     ```  
     SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, NULL)  
     ```  
   
- In den vorherigen drei Fällen die *StatementHandle* Argument festgelegt ist, mit dem Wert im *Befehls beschäftigt*, *Attribut* Argument festgelegt ist, mit dem Wert im *fOption* , und die *ValuePtr* Argument festgelegt ist, auf den gleichen Wert wie *PvParam*.  
+ In den vorangegangenen drei Fällen wird das *StatementHandle* -Argument auf den Wert in *hstmt*festgelegt, das *Attribut* Argument wird auf den Wert in *fOption*festgelegt, und das *ValuePtr* -Argument wird auf denselben Wert wie *pvParam*festgelegt.  
   
- Für ODBC definierte Zeichenfolge Verbindungsoptionen, des Treiber-Managers festlegt der *Pufferlänge* Argument im Aufruf von **SQLGetConnectAttr** auf die vordefinierte maximale Länge (SQL_MAX_OPTION_STRING_LENGTH); für eine Verbindungsoption keine Zeichenfolgen darstellen *Pufferlänge* auf 0 festgelegt ist.  
+ Für ODBC-definierte Zeichen folgen-Verbindungsoptionen legt der Treiber-Manager das *BufferLength* -Argument im-Befehl auf **SQLGetConnectAttr** auf die vordefinierte maximale Länge (SQL_MAX_OPTION_STRING_LENGTH) fest. für eine nicht-Zeichen folgen-Verbindungs Option wird *BufferLength* auf 0 festgelegt.  
   
- Die SQL_GET_BOOKMARK Option-Anweisung ist veraltet in ODBC *3.x*. Für eine ODBC *3.x* -Treiber zur Arbeit mit ODBC *2.x* Anwendungen, die SQL_GET_BOOKMARK, muss er SQL_GET_BOOKMARK unterstützen. Für eine ODBC *3.x* -Treiber zur Arbeit mit ODBC *2.x* Anwendungen, es muss unterstützen SQL_USE_BOOKMARKS auf SQL_UB_ON festlegen und sollte verfügbar zu machen Lesezeichen mit fester Länge. Wenn eine ODBC *3.x* -Treiber unterstützt nur variabler Länge, die Lesezeichen nicht Lesezeichen mit fester Länge, sie muss SQLSTATE HYC00 zurückgeben (optionales Feature nicht implementiert) Wenn ODBC *2.x* Anwendung versucht, SQL_USE_BOOKMARKS auf SQL_UB_ON festgelegt.  
+ Die Option SQL_GET_BOOKMARK Anweisung wurde in ODBC *3. x*als veraltet markiert. Damit ein ODBC *3. x* -Treiber mit ODBC *2. x* -Anwendungen funktioniert, die SQL_GET_BOOKMARK verwenden, muss er SQL_GET_BOOKMARK unterstützen. Damit ein ODBC *3. x* -Treiber mit ODBC *2. x* -Anwendungen funktioniert, muss er das Festlegen von SQL_USE_BOOKMARKS auf SQL_UB_ON unterstützen und Lesezeichen mit fester Länge verfügbar machen. Wenn ein ODBC *3. x* -Treiber nur Lesezeichen mit variabler Länge, keine Lesezeichen fester Länge unterstützt, muss SQLSTATE HYC00 (optionales Feature nicht implementiert) zurückgegeben werden, wenn eine ODBC *2. x* -Anwendung versucht, SQL_USE_BOOKMARKS auf SQL_UB_ON festzulegen.  
   
- Für eine ODBC *3.x* -Treiber verwenden, der Treiber-Manager nicht mehr überprüft, ob *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX ist, oder ist größer als SQL_CONNECT_OPT_DRVR_START. Der Treiber muss dies zu überprüfen.
+ Bei einem ODBC *3. x* -Treiber prüft der Treiber-Manager nicht mehr, ob die *Option* zwischen SQL_STMT_OPT_MIN und SQL_STMT_OPT_MAX liegt oder größer als SQL_CONNECT_OPT_DRVR_START ist. Der Treiber muss dies überprüfen.

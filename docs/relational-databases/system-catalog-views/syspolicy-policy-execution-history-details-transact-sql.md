@@ -1,5 +1,5 @@
 ---
-title: Syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft-Dokumentation
+title: syspolicy_policy_execution_history_details (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,22 +18,22 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094825"
 ---
-# <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
+# <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt die folgenden Informationen an: ausgeführte Bedingungsausdrücke, Ziele der Ausdrücke, Ergebnis der einzelnen Ausführungen, Details zu eventuell aufgetretenen Fehlern. In der folgenden Tabelle werden die Spalten in der syspolicy_execution_history_details-Sicht beschrieben.  
   
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|detail_id|**bigint**|Bezeichner des Datensatzes. Jeder Datensatz stellt den Versuch dar, einen Bedingungsausdruck in einer Richtlinie auszuwerten oder zu erzwingen. Jede Bedingung hat einen Detaildatensatz für die einzelnen Ziele, wenn sie auf mehrere Ziele angewendet wird.|  
-|history_id|**bigint**|Bezeichner des Verlaufsereignisses. Jedes Verlaufsereignis stellt einen Versuch dar, eine Richtlinie auszuführen. Da eine Bedingung mehrere Bedingungsausdrücke und mehrere Ziele haben kann, kann eine history_id mehrere Detaildatensätze erstellen. Verwenden Sie die History_id-Spalte in dieser Ansicht zum Verknüpfen der [Syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) anzeigen.|  
+|detail_id|**BIGINT**|Bezeichner des Datensatzes. Jeder Datensatz stellt den Versuch dar, einen Bedingungsausdruck in einer Richtlinie auszuwerten oder zu erzwingen. Jede Bedingung hat einen Detaildatensatz für die einzelnen Ziele, wenn sie auf mehrere Ziele angewendet wird.|  
+|history_id|**BIGINT**|Bezeichner des Verlaufsereignisses. Jedes Verlaufsereignis stellt einen Versuch dar, eine Richtlinie auszuführen. Da eine Bedingung mehrere Bedingungsausdrücke und mehrere Ziele haben kann, kann eine history_id mehrere Detaildatensätze erstellen. Verwenden Sie die Spalte history_id, um diese Ansicht mit der [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) Ansicht zu verknüpfen.|  
 |target_query_expression|**nvarchar(max)**|Ziel der Richtlinie und syspolicy_policy_execution_history-Sicht.|  
 |execution_date|**datetime**|Datum und Uhrzeit der Erstellung dieses Detaildatensatzes.|  
 |result|**bit**|Erfolg oder Fehler dieses Ziels und der Auswertung des Bedingungsausdrucks:<br /><br /> 0 (Erfolg) oder 1 (Fehler)|  
@@ -41,7 +41,7 @@ ms.locfileid: "68094825"
 |exception_message|**nvarchar(max)**|Von der Ausnahme (falls aufgetreten) generierte Meldung.|  
 |exception|**nvarchar(max)**|Beschreibung der Ausnahme, falls aufgetreten.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Bei der Problembehandlung in der richtlinienbasierten Verwaltung fragen Sie in der syspolicy_policy_execution_history_details-Sicht ab, welche Kombinationen aus Ziel und Bedingungsausdruck fehlgeschlagen sind und wann sie fehlgeschlagen sind. Darüber hinaus überprüfen Sie zugehörige Fehler.  
   
  Die folgende Abfrage verbindet die `syspolicy_policy_execution_history_details` -Sicht mit den Sichten `syspolicy_policy_execution_history_details` und `syspolicy_policies` , um den Namen der Richtlinie, den Namen der Bedingung und die Details zu Fehlern anzuzeigen.  
@@ -68,8 +68,8 @@ WHERE PolHistDet.result = 0 ;
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Sichten der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

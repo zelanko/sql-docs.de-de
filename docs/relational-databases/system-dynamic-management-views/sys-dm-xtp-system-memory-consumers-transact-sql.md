@@ -1,5 +1,5 @@
 ---
-title: dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090094"
 ---
-# <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
+# <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Meldet Arbeitsspeicherconsumer auf Systemebene für [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Der Arbeitsspeicher für diese Consumer stammt entweder aus dem Standardpool (wenn die Zuordnung im Kontext eines Benutzerthreads ist) oder dem internen Pool (wenn die Zuordnung im Kontext eines Systemthreads ist).  
+  Meldet Arbeitsspeicherconsumer auf Systemebene für [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. Der Arbeitsspeicher für diese Consumer stammt entweder aus dem Standard Pool (wenn die Zuordnung im Kontext eines Benutzer Threads erfolgt) oder aus dem internen Pool (wenn die Zuordnung im Kontext eines Systemthreads erfolgt).  
   
 ```  
 -- system memory consumers @ instance  
@@ -37,16 +37,16 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Spaltenname|Typ|Description|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
-|memory_consumer_id|**bigint**|Interne ID für Arbeitsspeicherconsumer.|  
-|memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0 – sollte es nicht angezeigt werden. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1 – LOOKASIDE: Verfolgt die arbeitsspeichernutzung für ein systemlookaside nach.<br /><br /> 2: VARHEAP: Verfolgt die arbeitsspeichernutzung für einen Heap variabler Länge.<br /><br /> 4 – e/a-Seitenpool: Verfolgt die arbeitsspeichernutzung für einen systemseitenpool für e/a-Vorgänge verwendet.|  
-|memory_consumer_type_desc|**nvarchar(16)**|Die Beschreibung des Typs des Arbeitsspeicherconsumers:<br /><br /> 0 – sollte es nicht angezeigt werden.<br /><br /> 1 – LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**Nvarchar(64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP: <br />Der Systemheap. Allgemein. Wird derzeit nur verwendet, um Arbeitselemente der Garbage Collection zuzuordnen.<br />-oder-<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> PGPOOL: Für e/a-System sind Systempools gibt es drei unterschiedliche Größen: System-4-KB-Seitenpool System 64 KB-Seitenpool und System-256-KB Seite Pool.|  
-|lookaside_id|**bigint**|Die ID des threadlokalen Nebenarbeitsspeicheranbieters.|  
-|pagepool_id|**bigint**|Die ID des threadlokalen Seitenpool-Arbeitsspeicheranbieters.|  
-|allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
-|used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap-Arbeitsspeicherconsumer.|  
+|memory_consumer_id|**BIGINT**|Interne ID für Arbeitsspeicherconsumer.|  
+|memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0-es darf nicht angezeigt werden. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1-Lookaside: verfolgt die Arbeitsspeicher Nutzung für ein System Lookaside nach.<br /><br /> 2-varheap: verfolgt die Arbeitsspeicher Nutzung für einen Heap variabler Länge nach.<br /><br /> 4-e/a-Seiten Pool: verfolgt die Arbeitsspeicher Nutzung für einen für e/a-Vorgänge verwendeten System Seiten Pool.|  
+|memory_consumer_type_desc|**nvarchar (16)**|Die Beschreibung des Typs des Arbeitsspeicherconsumers:<br /><br /> 0-es darf nicht angezeigt werden.<br /><br /> 1-Lookaside<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
+|memory_consumer_desc|**nvarchar (64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP <br />Der Systemheap. Allgemeiner Zweck. Wird derzeit nur verwendet, um Arbeitselemente der Garbage Collection zuzuordnen.<br />ODER<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> Pgpool: für e/a-System Pools gibt es drei unterschiedliche Größen: System 4K-Seiten Pool, System 64 K-Seiten Pool und System 256 K-Seiten Pool.|  
+|lookaside_id|**BIGINT**|Die ID des threadlokalen Nebenarbeitsspeicheranbieters.|  
+|pagepool_id|**BIGINT**|Die ID des threadlokalen Seitenpool-Arbeitsspeicheranbieters.|  
+|allocated_bytes|**BIGINT**|Anzahl der für den Consumer reservierten Bytes.|  
+|used_bytes|**BIGINT**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap-Arbeitsspeicherconsumer.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
 |partition_count|**int**|Nur interne Verwendung.|  
 |sizeclass_count|**int**|Nur interne Verwendung.|  
@@ -104,7 +104,7 @@ total_allocated_MB   total_used_MB
 2                    2  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Eine Speicheroptimierte Tabelle dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

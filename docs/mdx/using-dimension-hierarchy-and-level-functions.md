@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Dimensions-, Hierarchie- und Ebenenfunktionen | Microsoft-Dokumentation
+title: Verwenden von Dimensions-, Hierarchie-und Level-Funktionen | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8fa374ef93f56f8cddaed81bc9e3872d1eb206c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097177"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Verwenden von Dimensions-, Hierarchie- und Ebenenfunktionen
@@ -20,7 +20,7 @@ ms.locfileid: "68097177"
 
   Mit Dimensions-, Hierarchie- und Ebenenfunktionen lassen sich die mehrdimensionalen Strukturen traversieren, die in Analysis Services zu finden sind. Üblicherweise verwenden Sie solche Funktionen zusammen mit anderen Funktionen dazu, Informationen zu den Elementen einer Dimension, Hierarchie oder Ebene abzurufen.  
   
- Das folgende Beispiel zeigt, wie Sie mit der **. Dimension**, **. Hierarchie**, und **. Ebene** Funktionen:  
+ Im folgenden Beispiel wird gezeigt, wie verwendet wird **. Dimension**, **. Hierarchie**und **. Level** -Funktionen:  
   
  `WITH`  
   
@@ -42,10 +42,10 @@ ms.locfileid: "68097177"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [Dimension &#40;MDX&#41;](../mdx/dimension-mdx.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dimensions &#40;MDX-&#41;](../mdx/dimension-mdx.md)   
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Hierarchie &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [Ebene &#40;MDX&#41;](../mdx/level-mdx.md)  
+ [Hierarchie &#40;MDX-&#41;](../mdx/hierarchy-mdx.md)   
+ [&#41;der Ebene &#40;MDX](../mdx/level-mdx.md)  
   
   

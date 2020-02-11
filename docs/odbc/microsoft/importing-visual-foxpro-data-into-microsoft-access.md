@@ -17,27 +17,27 @@ ms.assetid: a3591295-0a76-4e3c-b4fa-8bd4f1cde705
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 557b5505b9eb6a15080a7d0495df2e63aefd2d76
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085545"
 ---
 # <a name="importing-visual-foxpro-data-into-microsoft-access"></a>Importieren von Visual FoxPro-Daten in Microsoft Access
-Sie können Daten in einer Visual FoxPro-Datenbank in eine Microsoft Access-Datenbank mithilfe der Option "Importieren" importieren.  
+Sie können Daten, die in einer Visual FoxPro-Datenbank gespeichert sind, mithilfe der Import-Option in eine Microsoft Access-Datenbank importieren.  
   
-### <a name="to-import-visual-foxpro-data-into-a-microsoft-access-database"></a>Visual FoxPro-Daten in einer Microsoft Access-Datenbank importieren  
+### <a name="to-import-visual-foxpro-data-into-a-microsoft-access-database"></a>So importieren Sie Visual FoxPro-Daten in eine Microsoft Access-Datenbank  
   
 1.  Öffnen Sie eine Microsoft Access-Datenbank.  
   
-2.  Wählen Sie im Menü Datei Sie externe Daten zu importieren, klicken Sie dann ein.  
+2.  Wählen Sie im Menü Datei die Option externe Daten importieren und dann importieren aus.  
   
-3.  Wählen Sie in das Dialogfeld "Importieren" ODBC-Datenbanken in der Liste ein.  
+3.  Wählen Sie im Dialogfeld Importieren in der Liste Dateityp die Option ODBC-Datenbanken aus.  
   
-4.  Wählen Sie in das Dialogfeld SQL-Datenquellen der Visual FoxPro-Datenquelle, die eine Verbindung mit dem FoxPro-Daten, die Sie verwenden möchten herstellt, Abfragen, und klicken Sie auf OK.  
+4.  Wählen Sie im Dialogfeld SQL-Datenquellen die Visual FoxPro-Datenquelle aus, die eine Verbindung mit den FoxPro-Daten herstellt, die Sie Abfragen möchten, und klicken Sie auf OK.  
   
-5.  Wählen Sie in das Dialogfeld Importieren von Objekten die eine oder mehrere Tabellen, die Sie verwenden möchten, importieren, und klicken Sie auf OK. Die Namen der Visual FoxPro-Tabellen, die Sie importiert haben, werden in der Registerkarte "Tabellen" der Microsoft Access-Datenbank angezeigt.  
+5.  Wählen Sie im Dialogfeld Objekte importieren mindestens eine Tabelle aus, die Sie importieren möchten, und klicken Sie auf OK. Die Namen der importierten Visual FoxPro-Tabellen werden auf der Registerkarte Tabellen der Microsoft Access-Datenbank angezeigt.  
   
- Microsoft Access können Sie jetzt zum Bearbeiten der Daten in den importierten Visual FoxPro-Tabellen. Die zu importierenden Daten ist eine Momentaufnahme der Daten in der Visual FoxPro gespeichert. Änderungen an importierten Daten werden nicht in der Visual FoxPro-Datenquelle gesendet.  
+ Sie können jetzt Microsoft Access verwenden, um die Daten in den importierten Visual FoxPro-Tabellen zu manipulieren. Bei den importierten Daten handelt es sich um eine Momentaufnahme der in Visual FoxPro gespeicherten Daten. Änderungen, die Sie an importierten Daten vornehmen, werden nicht zurück an die Visual FoxPro-Datenquelle gesendet.  
   
- Wenn Sie möchten, dass Änderungen stellen Sie in Microsoft Access zum Ändern der Daten in der Visual FoxPro-Datenquelle finden Sie unter [Abfragen und Aktualisieren von Visual FoxPro-Daten aus Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).
+ Wenn Sie Änderungen vornehmen möchten, die Sie in Microsoft Access vornehmen, um die Daten in der Visual FoxPro-Datenquelle zu ändern, finden Sie weitere [Informationen Unterabfragen und Aktualisieren von Visual FoxPro-Daten aus Microsoft Access](../../odbc/microsoft/querying-and-updating-visual-foxpro-data-from-microsoft-access.md).

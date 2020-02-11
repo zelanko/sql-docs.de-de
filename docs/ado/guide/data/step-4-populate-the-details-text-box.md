@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 4: Auffüllen des Texfelds "Details" | Microsoft-Dokumentation'
+title: 'Schritt 4: füllen Sie das Textfeld "Details" auf | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -11,14 +11,14 @@ ms.assetid: cb4273e2-c907-4a86-a621-3bf110088228
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 90748ca7f725ddbf947d9686b846695da0c6626c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924067"
 ---
 # <a name="step-4-populate-the-details-text-box"></a>Schritt 4: Auffüllen des Textfelds „Details“
-Zum Auffüllen der texfelds "Details", erstellen Sie eine neue Unterroutine namens **RecFields** und fügen Sie den folgenden Code:  
+Um das Textfeld Details aufzufüllen, erstellen Sie eine neue Unterroutine namens **recfields** , und fügen Sie den folgenden Code ein:  
   
 ```  
 Sub recFields(r As Record, l As ListBox, t As TextBox)  
@@ -44,8 +44,8 @@ Sub recFields(r As Record, l As ListBox, t As TextBox)
 End Sub  
 ```  
   
- Dieser Code füllt `lstDetails` mit den Feldern und Werten des Datensatzes einfache übergeben `recFields`. Wenn die Ressource eine Textdatei ist, wird ein Text-Stream im Ressourcendatensatz geöffnet. Der Code bestimmt, ob der Zeichensatz ASCII ist und den Inhalt der Stream in kopiert `txtDetails`.  
+ Dieser Code füllt `lstDetails` die Felder und Werte des einfachen Datensatzes auf, der an `recFields`weitergegeben wird. Wenn es sich bei der Ressource um eine Textdatei handelt, wird ein Textstream aus dem Ressourcen Daten Satz geöffnet. Der Code bestimmt, ob der Zeichensatz ASCII ist, und kopiert den Daten `txtDetails`Strom Inhalt in.  
   
-## <a name="see-also"></a>Siehe auch  
- [Internet Publishing-Szenario](../../../ado/guide/data/internet-publishing-scenario.md)   
- [Schritt 3: Auffüllen des Listenfelds "Fields"](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Szenario für die Internet Veröffentlichung](../../../ado/guide/data/internet-publishing-scenario.md)   
+ [Schritt 3: Auffüllen des Listenfelds „Fields“](../../../ado/guide/data/step-3-populate-the-fields-list-box.md)

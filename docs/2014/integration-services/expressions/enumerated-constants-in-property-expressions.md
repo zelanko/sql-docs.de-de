@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62898898"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
@@ -29,7 +29,7 @@ ms.locfileid: "62898898"
   
  In diesem Thema werden nur die entsprechenden numerischen Werte für Anzeigenamen von Enumeratoren aufgelistet, deren Elemente häufig in Eigenschaftsausdrücken verwendet werden. Das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objektmodell enthält viele zusätzliche Enumeratoren, die Sie beim Programmieren des Objektmodells verwenden können, um Pakete programmgesteuert zu erstellen oder um benutzerdefinierte Paketelemente, wie z. B. Tasks und Datenflusskomponenten, zu programmieren.  
   
- Neben den benutzerdefinierten Eigenschaften für Pakete und Paketobjekte enthält das Eigenschaftenfenster in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Reihe von Eigenschaften, die für Pakete, Tasks, für die Foreach- und For-Schleife sowie für Sequenzcontainer zur Verfügung stehen. Die allgemeinen Eigenschaften, die mithilfe von Werten aus Enumeratoren festgelegt werden`ForceExecutionResult`, `LoggingMode`, `IsolationLevel`, und `Transaction Option`-finden Sie im Abschnitt "Allgemeine Eigenschaften".  
+ Neben den benutzerdefinierten Eigenschaften für Pakete und Paketobjekte enthält das Eigenschaftenfenster in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine Reihe von Eigenschaften, die für Pakete, Tasks, für die Foreach- und For-Schleife sowie für Sequenzcontainer zur Verfügung stehen. Die allgemeinen Eigenschaften, die durch Werte von`ForceExecutionResult`Enumeratoren, `LoggingMode` `IsolationLevel`, und `Transaction Option`festgelegt werden, sind im Abschnitt Allgemeine Eigenschaften aufgeführt.  
   
  In den folgenden Abschnitten werden Informationen zu den folgenden aufgelisteten Konstanten bereitgestellt:  
   
@@ -41,41 +41,41 @@ ms.locfileid: "62898898"
   
  [Wartungsplantasks](#MaintenancePlanTasks)  
   
- [Allgemeine Eigenschaften](#CommonProperties)  
+ [Common Properties](#CommonProperties)  
   
 ##  <a name="Package"></a> Paket  
  In den folgenden Tabellen finden Sie eine Auflistung der Anzeigenamen und der entsprechenden numerischen Werte für Eigenschaften von Paketen, die Sie mithilfe von Werten eines Enumerators festlegen.  
   
- `PackageType` Eigenschaftensatz-mithilfe von Werten der `DTSPackageType` Enumeration.  
+ `PackageType`Eigenschaften Satz mithilfe von Werten aus der `DTSPackageType` -Enumeration.  
   
 |Anzeigename in DTSPackageType|Numerischer Wert|  
 |-------------------------------------|-------------------|  
-|Default|0|  
+|Standard|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
 |DTSDesigner100|5|  
 |SQLDBMaint|6|  
   
- `CheckpointUsage` Eigenschaftensatz-mithilfe von Werten der `DTSCheckpointUsage` Enumeration.  
+ `CheckpointUsage`Eigenschaften Satz mithilfe von Werten aus der `DTSCheckpointUsage` -Enumeration.  
   
 |Anzeigename in DTSCheckpointUsage|Numerischer Wert|  
 |-----------------------------------------|-------------------|  
-|Never|0|  
+|Nie|0|  
 |IfExists|1|  
 |Always|2|  
   
- `PackagePriorityClass` Eigenschaftensatz-mithilfe von Werten der `DTSPriorityClass` Enumeration.  
+ `PackagePriorityClass`Eigenschaften Satz mithilfe von Werten aus der `DTSPriorityClass` -Enumeration.  
   
 |Anzeigename in DTSPriorityClass|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Default|0|  
+|Standard|0|  
 |AboveNormal|1|  
 |Normal|2|  
 |BelowNormal|3|  
 |Idle|4|  
   
- `ProtectionLevel` Eigenschaftensatz-mithilfe von Werten der `DTSProtectionLevel` Enumeration.  
+ `ProtectionLevel`Eigenschaften Satz mithilfe von Werten aus der `DTSProtectionLevel` -Enumeration.  
   
 |Anzeigename in DTSProtectionLevel|Numerischer Wert|  
 |-----------------------------------------|-------------------|  
@@ -87,21 +87,21 @@ ms.locfileid: "62898898"
 |ServerStorage|5|  
   
 ##  <a name="PrecedenceConstraints"></a> Rangfolgeneinschränkungen  
- `EvalOp` Eigenschaftensatz-mithilfe von Werten der `DTSPrecedenceEvalOp` Enumeration.  
+ `EvalOp`Eigenschaften Satz mithilfe von Werten aus der `DTSPrecedenceEvalOp` -Enumeration.  
   
 |Anzeigename in DTSPrecedenceEvalOp|Numerischer Wert|  
 |------------------------------------------|-------------------|  
-|expression|1|  
+|Ausdruck|1|  
 |Einschränkung|2|  
 |ExpressionAndConstraint|3|  
 |ExpressionOrConstraint|4|  
   
- `Value` Eigenschaftensatz-mithilfe von Werten der `DTSExecResult` Enumeration.  
+ `Value`Eigenschaften Satz mithilfe von Werten aus der `DTSExecResult` -Enumeration.  
   
 |Anzeigename|Numerischer Wert|  
 |-------------------|-------------------|  
-|Erfolgreich|0|  
-|Failure|1|  
+|Erfolg|0|  
+|Fehler|1|  
 |Completion|2|  
 |Canceled|3|  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62898898"
  Die Foreach-Schleife enthält eine Reihe von Enumeratoren mit Eigenschaften, die mithilfe von Eigenschaftsausdrücken festgelegt werden können.  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach-ADO-Enumerator  
- `Type` Eigenschaftensatz-mithilfe von Werten der `ADOEnumerationType` Enumeration.  
+ `Type`Eigenschaften Satz mithilfe von Werten aus der `ADOEnumerationType` -Enumeration.  
   
 |Anzeigename in ADOEnumerationType|Numerischer Wert|  
 |-----------------------------------------|-------------------|  
@@ -118,7 +118,7 @@ ms.locfileid: "62898898"
 |EnumerateRowsInFirstTable|2|  
   
 ### <a name="foreach-nodelist-enumerator"></a>Foreach-NodeList-Enumerator  
- `SourceDocumentType`, `InnerXPathStringSourceType`, und **OuterXPathStringSourceType** Eigenschaften-Satz mithilfe von Werten der `SourceType` Enumeration.  
+ `SourceDocumentType`die `InnerXPathStringSourceType`Eigenschaften, und **OuterXPathStringSourceType** werden mithilfe von Werten aus der `SourceType` -Enumeration festgelegt.  
   
 |Anzeigename in SourceType|Numerischer Wert|  
 |---------------------------------|-------------------|  
@@ -126,7 +126,7 @@ ms.locfileid: "62898898"
 |Variable|1|  
 |DirectInput|2|  
   
- `EnumerationType` Eigenschaftensatz-mithilfe von Werten der `EnumerationType` Enumeration.  
+ `EnumerationType`Eigenschaften Satz mithilfe von Werten aus der `EnumerationType` -Enumeration.  
   
 |Anzeigename in EnumerationType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "62898898"
 |NodeText|2|  
 |ElementCollection|3|  
   
- `InnerElementType` Eigenschaftensatz-mithilfe von Werten der `InnerElementType` Enumeration.  
+ `InnerElementType`Eigenschaften Satz mithilfe von Werten aus der `InnerElementType` -Enumeration.  
   
 |Anzeigename in InnerElementType|Numerischer Wert|  
 |---------------------------------------|-------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "62898898"
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks mit Eigenschaften, die mithilfe von Eigenschaftsausdrücken festgelegt werden können.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)  
- `SourceType` Eigenschaftensatz-mithilfe von Werten der `DDLSourceType` Enumeration.  
+ `SourceType`Eigenschaften Satz mithilfe von Werten aus der `DDLSourceType` -Enumeration.  
   
 |Anzeigename in DDLSourceType|Numerischer Wert|  
 |------------------------------------|-------------------|  
@@ -156,7 +156,7 @@ ms.locfileid: "62898898"
 |Variable|2|  
   
 ### <a name="bulk-insert-task"></a>Masseneinfügungstask  
- `DataFileType` Eigenschaftensatz-mithilfe von Werten der `DTSBulkInsert_DataFileType` Enumeration.  
+ `DataFileType`Eigenschaften Satz mithilfe von Werten aus der `DTSBulkInsert_DataFileType` -Enumeration.  
   
 |Anzeigename in DTSBulkInsert_DataFileType|Numerischer Wert|  
 |--------------------------------------------------|-------------------|  
@@ -166,7 +166,7 @@ ms.locfileid: "62898898"
 |DTSBulkInsert_DataFileType_WideNative|3|  
   
 ### <a name="execute-sql-task"></a>SQL ausführen (Task)  
- `ResultSetType` Eigenschaftensatz-mithilfe von Werten der `ResultSetType` Enumeration.  
+ `ResultSetType`Eigenschaften Satz mithilfe von Werten aus der `ResultSetType` -Enumeration.  
   
 |Anzeigename in ResultSetType|Numerischer Wert|  
 |------------------------------------|-------------------|  
@@ -175,7 +175,7 @@ ms.locfileid: "62898898"
 |ResultSetType_Rowset|3|  
 |ResultSetType_XML|4|  
   
- `SqlStatementSourceType` Eigenschaftensatz-mithilfe von Werten der `SqlStatementSourceType` Enumeration.  
+ `SqlStatementSourceType`Eigenschaften Satz mithilfe von Werten aus der `SqlStatementSourceType` -Enumeration.  
   
 |Anzeigename in SqlStatementSourceType|Numerischer Wert|  
 |---------------------------------------------|-------------------|  
@@ -184,7 +184,7 @@ ms.locfileid: "62898898"
 |Variable|3|  
   
 ### <a name="file-system-task"></a>Task Dateisystem  
- `Operation` Eigenschaftensatz-mithilfe von Werten der `DTSFileSystemOperation` Enumeration.  
+ `Operation`Eigenschaften Satz mithilfe von Werten aus der `DTSFileSystemOperation` -Enumeration.  
   
 |Anzeigename in DTSFileSystemOperation|Numerischer Wert|  
 |---------------------------------------------|-------------------|  
@@ -199,23 +199,23 @@ ms.locfileid: "62898898"
 |DeleteDirectory|8|  
 |DeleteDirectoryContent|9|  
   
- `Attributes` Eigenschaftensatz-mithilfe von Werten der `DTSFileSystemAttributes` Enumeration.  
+ `Attributes`Eigenschaften Satz mithilfe von Werten aus der `DTSFileSystemAttributes` -Enumeration.  
   
 |Anzeigename in DTSFileSystemAttributes|Numerischer Wert|  
 |----------------------------------------------|-------------------|  
 |Normal|0|  
-|Archive|1|  
+|Archivieren|1|  
 |Ausgeblendet|2|  
 |ReadOnly|4|  
 |System|8|  
   
 ### <a name="ftp-task"></a>FTP-Task  
- `Operation` Eigenschaftensatz-mithilfe von Werten der `DTSFTPOp` Enumeration.  
+ `Operation`Eigenschaften Satz mithilfe von Werten aus der `DTSFTPOp` -Enumeration.  
   
 |Anzeigename in DTSFTPOp|Numerischer Wert|  
 |-------------------------------|-------------------|  
 |Send|0|  
-|Receive|1|  
+|Empfangen|1|  
 |DeleteLocal|2|  
 |DeleteRemote|3|  
 |MakeDirLocal|4|  
@@ -224,7 +224,7 @@ ms.locfileid: "62898898"
 |RemoveDirRemote|7|  
   
 ### <a name="message-queue-task"></a>Message Queue Task  
- `MessageType` Eigenschaftensatz-mithilfe von Werten der `MQMessageType` Enumeration.  
+ `MessageType`Eigenschaften Satz mithilfe von Werten aus der `MQMessageType` -Enumeration.  
   
 |Anzeigename in MQMessageType|Numerischer Wert|  
 |------------------------------------|-------------------|  
@@ -233,7 +233,7 @@ ms.locfileid: "62898898"
 |DTSMQMessageType_Variables|2|  
 |DTSMQMessagType_StringMessageToVariable|3|  
   
- `StringCompareType` Eigenschaftensatz-mithilfe von Werten der `MQStringMessageCompare` Enumeration.  
+ `StringCompareType`Eigenschaften Satz mithilfe von Werten aus der `MQStringMessageCompare` -Enumeration.  
   
 |Anzeigename in MQStringMessageCompare|Numerischer Wert|  
 |---------------------------------------------|-------------------|  
@@ -242,7 +242,7 @@ ms.locfileid: "62898898"
 |DTSMQStringMessageCompare_IgnoreCase|2|  
 |DTSMQStringMessageCompare_Contains|3|  
   
- `TaskType` Eigenschaftensatz-mithilfe von Werten der `MQType` Enumeration.  
+ `TaskType`Eigenschaften Satz mithilfe von Werten aus der `MQType` -Enumeration.  
   
 |Anzeigename in MQType|Numerischer Wert|  
 |-----------------------------|-------------------|  
@@ -250,7 +250,7 @@ ms.locfileid: "62898898"
 |DTSMQType_Receiver|1|  
   
 ### <a name="send-mail-task"></a>Mail senden (Task)  
- `MessageSourceType` Eigenschaftensatz-mithilfe von Werten der `SendMailMessageSourceType` Enumeration.  
+ `MessageSourceType`Eigenschaften Satz mithilfe von Werten aus der `SendMailMessageSourceType` -Enumeration.  
   
 |Anzeigename in SendMailMessageSourceType|Numerischer Wert|  
 |------------------------------------------------|-------------------|  
@@ -258,23 +258,23 @@ ms.locfileid: "62898898"
 |FileConnection|1|  
 |Variable|2|  
   
- `Priority` Eigenschaftensatz-mithilfe von Werten der `MailPriority` Enumeration.  
+ `Priority`Eigenschaften Satz mithilfe von Werten aus der `MailPriority` -Enumeration.  
   
 |Anzeigename in MailPriority|Numerischer Wert|  
 |-----------------------------------|-------------------|  
 |High|1|  
 |Normal|3|  
-|Low|5|  
+|Niedrig|5|  
   
 ### <a name="transfer-database-task"></a>Datenbanken übertragen (Task)  
- `Action` Eigenschaftensatz-mithilfe von Werten der `TransferAction` Enumeration.  
+ `Action`Eigenschaften Satz mithilfe von Werten aus der `TransferAction` -Enumeration.  
   
 |Anzeigename in TransferAction|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |Kopieren|0|  
-|Verschieben|1|  
+|Move|1|  
   
- `Method` Eigenschaftensatz-mithilfe von Werten der `TransferMethod` Enumeration.  
+ `Method`Eigenschaften Satz mithilfe von Werten aus der `TransferMethod` -Enumeration.  
   
 |Anzeigename in TransferMethod|Numerischer Wert|  
 |-------------------------------------|-------------------|  
@@ -282,7 +282,7 @@ ms.locfileid: "62898898"
 |DatabaseOnline|1|  
   
 ### <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)  
- `IfObjectExists` Eigenschaftensatz-mithilfe von Werten der `IfObjectExists` Enumeration.  
+ `IfObjectExists`Eigenschaften Satz mithilfe von Werten aus der `IfObjectExists` -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
 |-------------------------------------|-------------------|  
@@ -291,7 +291,7 @@ ms.locfileid: "62898898"
 |Skip|2|  
   
 ### <a name="transfer-jobs-task"></a>Aufträge übertragen (Task)  
- `IfObjectExists` Eigenschaftensatz-mithilfe von Werten der `IfObjectExists` Enumeration.  
+ `IfObjectExists`Eigenschaften Satz mithilfe von Werten aus der `IfObjectExists` -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
 |-------------------------------------|-------------------|  
@@ -300,7 +300,7 @@ ms.locfileid: "62898898"
 |Skip|2|  
   
 ### <a name="transfer-logins-task"></a>Task "Anmeldungen übertragen"  
- `IfObjectExists` Eigenschaftensatz-mithilfe von Werten der `IfObjectExists` Enumeration.  
+ `IfObjectExists`Eigenschaften Satz mithilfe von Werten aus der `IfObjectExists` -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
 |-------------------------------------|-------------------|  
@@ -308,7 +308,7 @@ ms.locfileid: "62898898"
 |Overwrite|1|  
 |Skip|2|  
   
- `LoginsToTransfer` Eigenschaftensatz-mithilfe von Werten der `LoginsToTransfer` Enumeration.  
+ `LoginsToTransfer`Eigenschaften Satz mithilfe von Werten aus der `LoginsToTransfer` -Enumeration.  
   
 |Anzeigename in LoginsToTransfer|Numerischer Wert|  
 |---------------------------------------|-------------------|  
@@ -317,7 +317,7 @@ ms.locfileid: "62898898"
 |AllLoginsFromSelectedDatabases|2|  
   
 ### <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)  
- `IfObjectExists` Eigenschaftensatz-mithilfe von Werten der `IfObjectExists` Enumeration.  
+ `IfObjectExists`Eigenschaften Satz mithilfe von Werten aus der `IfObjectExists` -Enumeration.  
   
 |Anzeigename in IfObjectExists|Numerischer Wert|  
 |-------------------------------------|-------------------|  
@@ -326,15 +326,15 @@ ms.locfileid: "62898898"
 |Skip|2|  
   
 ### <a name="transfer-sql-server-objects-task"></a>SQL Server-Objekte kopieren (Task)  
- `ExistingData` Eigenschaftensatz-mithilfe von Werten der `ExistingData` Enumeration.  
+ `ExistingData`Eigenschaften Satz mithilfe von Werten aus der `ExistingData` -Enumeration.  
   
 |Anzeigename in ExistingData|Numerischer Wert|  
 |-----------------------------------|-------------------|  
-|Ersetzen|0|  
+|Replace|0|  
 |Anfügen|1|  
   
 ### <a name="web-service-task"></a>Webdienst (Task)  
- `OutputType` Eigenschaftensatz-mithilfe von Werten der `DTSOutputType` Enumeration.  
+ `OutputType`Eigenschaften Satz mithilfe von Werten aus der `DTSOutputType` -Enumeration.  
   
 |Anzeigename in DTSOutputType|Numerischer Wert|  
 |------------------------------------|-------------------|  
@@ -342,7 +342,7 @@ ms.locfileid: "62898898"
 |Variable|1|  
   
 ### <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)  
- `OverwriteDestination` Eigenschaftensatz-mithilfe von Werten der `OverwriteDestination` Enumeration.  
+ `OverwriteDestination`Eigenschaften Satz mithilfe von Werten aus der `OverwriteDestination` -Enumeration.  
   
 |Anzeigename in OverwriteDestination|Numerischer Wert|  
 |-------------------------------------------|-------------------|  
@@ -350,7 +350,7 @@ ms.locfileid: "62898898"
 |AppendToDestination|1|  
 |KeepOriginal|2|  
   
- `OutputType` Eigenschaftensatz-mithilfe von Werten der `OutputType` Enumeration.  
+ `OutputType`Eigenschaften Satz mithilfe von Werten aus der `OutputType` -Enumeration.  
   
 |Anzeigename in OutputType|Numerischer Wert|  
 |---------------------------------|-------------------|  
@@ -358,14 +358,14 @@ ms.locfileid: "62898898"
 |PropertyValue|1|  
 |PropertyNameAndValue|2|  
   
- `DestinationType` Eigenschaftensatz-mithilfe von Werten der `DestinationType` Enumeration.  
+ `DestinationType`Eigenschaften Satz mithilfe von Werten aus der `DestinationType` -Enumeration.  
   
 |Anzeigename in DestinationType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `WqlQuerySourceType` Eigenschaftensatz-mithilfe von Werten der `QuerySourceType` Enumeration.  
+ `WqlQuerySourceType`Eigenschaften Satz mithilfe von Werten aus der `QuerySourceType` -Enumeration.  
   
 |Anzeigename in QuerySourceType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
@@ -373,21 +373,21 @@ ms.locfileid: "62898898"
 |DirectInput|1|  
 |Variable|2|  
   
- WMI-Ereignisüberwachung `ActionAtEvent` Eigenschaftensatz mithilfe von Werten der `ActionAtEvent` Enumeration.  
+ `ActionAtEvent` Eigenschaft "WMI-Ereignisüberwachung", die mithilfe von Werten `ActionAtEvent` aus der-Enumeration festgelegt wird.  
   
 |Anzeigename in ActionAtEvent|Numerischer Wert|  
 |------------------------------------|-------------------|  
 |LogTheEventAndFireDTSEvent|0|  
 |LogTheEvent|1|  
   
- `ActionAtTimeout` Eigenschaftensatz-mithilfe von Werten der `ActionAtTimeout` Enumeration.  
+ `ActionAtTimeout`Eigenschaften Satz mithilfe von Werten aus der `ActionAtTimeout` -Enumeration.  
   
 |Anzeigename in ActionAtTimeout|Numerischer Wert|  
 |--------------------------------------|-------------------|  
 |LogTimeoutAndFireDTSEvent|0|  
 |LogTimeout|1|  
   
- `AfterEvent` Eigenschaftensatz-mithilfe von Werten der `AfterEvent` Enumeration.  
+ `AfterEvent`Eigenschaften Satz mithilfe von Werten aus der `AfterEvent` -Enumeration.  
   
 |Anzeigename in AfterEvent|Numerischer Wert|  
 |---------------------------------|-------------------|  
@@ -395,7 +395,7 @@ ms.locfileid: "62898898"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `AfterTimeout` Eigenschaftensatz-mithilfe von Werten der `AfterTimeout` Enumeration.  
+ `AfterTimeout`Eigenschaften Satz mithilfe von Werten aus der `AfterTimeout` -Enumeration.  
   
 |Anzeigename in AfterTimeout|Numerischer Wert|  
 |-----------------------------------|-------------------|  
@@ -403,7 +403,7 @@ ms.locfileid: "62898898"
 |ReturnWithFailure|1|  
 |WatchfortheEventAgain|2|  
   
- `WqlQuerySourceType` Eigenschaftensatz-mithilfe von Werten der `QuerySourceType` Enumeration.  
+ `WqlQuerySourceType`Eigenschaften Satz mithilfe von Werten aus der `QuerySourceType` -Enumeration.  
   
 |Anzeigename in QuerySourceType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
@@ -412,7 +412,7 @@ ms.locfileid: "62898898"
 |Variable|2|  
   
 ### <a name="xml-task"></a>XML-Task  
- `OperationType` Eigenschaftensatz-mithilfe von Werten der `DTSXMLOperation` Enumeration.  
+ `OperationType`Eigenschaften Satz mithilfe von Werten aus der `DTSXMLOperation` -Enumeration.  
   
 |Anzeigename in DTSXMLOperation|Numerischer Wert|  
 |--------------------------------------|-------------------|  
@@ -423,7 +423,7 @@ ms.locfileid: "62898898"
 |Diff|4|  
 |Patch|5|  
   
- `SourceType`, `SecondOperandType`, und `XPathSourceType` Eigenschaften-Satz mithilfe von Werten der `DTSXMLSourceType` Enumeration.  
+ `SourceType`- `SecondOperandType`,- `XPathSourceType` und-Eigenschaften, die mithilfe von Werten `DTSXMLSourceType` aus der-Enumeration festgelegt werden.  
   
 |Anzeigename in DTSXMLSourceType|Numerischer Wert|  
 |---------------------------------------|-------------------|  
@@ -431,33 +431,33 @@ ms.locfileid: "62898898"
 |Variable|1|  
 |DirectInput|2|  
   
- `DestinationType` und **DiffGramDestinationType** Eigenschaften-Satz mithilfe von Werten der `DTSXMLSaveResultTo` Enumeration.  
+ `DestinationType`und **diffgrammdestinationtype** -Eigenschaften, die mithilfe von Werten aus `DTSXMLSaveResultTo` der-Enumeration festgelegt werden.  
   
 |Anzeigename in DTSXMLSaveResultTo|Numerischer Wert|  
 |-----------------------------------------|-------------------|  
 |FileConnection|0|  
 |Variable|1|  
   
- `ValidationType` Eigenschaftensatz-mithilfe von Werten der `DTSXMLValidationType` Enumeration.  
+ `ValidationType`Eigenschaften Satz mithilfe von Werten aus der `DTSXMLValidationType` -Enumeration.  
   
 |Anzeigename in DTSXMLValidationType|Numerischer Wert|  
 |-------------------------------------------|-------------------|  
 |DTD|0|  
 |XSD|1|  
   
- `XPathOperation` Eigenschaftensatz-mithilfe von Werten der `DTSXMLXPathOperation` Enumeration.  
+ `XPathOperation`Eigenschaften Satz mithilfe von Werten aus der `DTSXMLXPathOperation` -Enumeration.  
   
 |Anzeigename in DTSXMLXPathOperation|Numerischer Wert|  
 |-------------------------------------------|-------------------|  
-|Evaluation|0|  
+|Auswertung|0|  
 |Werte|1|  
 |NodeList|2|  
   
- `DiffOptions` Eigenschaftensatz-mithilfe von Werten der `DTSXMLDiffOptions` Enumeration. Die Optionen in diesem Enumerator schließen sich nicht gegenseitig aus. Stellen Sie eine durch Trennzeichen getrennte Liste der anzuwendenden Optionen bereit, um mehrere Optionen zu verwenden.  
+ `DiffOptions`Eigenschaften Satz mithilfe von Werten aus der `DTSXMLDiffOptions` -Enumeration. Die Optionen in diesem Enumerator schließen sich nicht gegenseitig aus. Stellen Sie eine durch Trennzeichen getrennte Liste der anzuwendenden Optionen bereit, um mehrere Optionen zu verwenden.  
   
 |Anzeigename in DTSXMLDiffOptions|Numerischer Wert|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Keine|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -467,7 +467,7 @@ ms.locfileid: "62898898"
 |IgnoreXmlDecl|64|  
 |IgnoreDtd|128|  
   
- `DiffAlgorithm` Eigenschaftensatz-mithilfe von Werten der `DTSXMLDiffAlgorithm` Enumeration.  
+ `DiffAlgorithm`Eigenschaften Satz mithilfe von Werten aus der `DTSXMLDiffAlgorithm` -Enumeration.  
   
 |Anzeigename in DTSXMLDiffAlgorithm|Numerischer Wert|  
 |------------------------------------------|-------------------|  
@@ -483,25 +483,25 @@ ms.locfileid: "62898898"
 ### <a name="all-maintenance-tasks"></a>Alle Wartungstasks  
  Die folgenden Enumerationen werden in allen Wartungstasks verwendet, um die angegebenen Eigenschaften festzulegen.  
   
- `DatabaseSelectionType` Eigenschaftensatz-mithilfe von Werten der `DatabaseSelection` Enumeration.  
+ `DatabaseSelectionType`Eigenschaften Satz mithilfe von Werten aus der `DatabaseSelection` -Enumeration.  
   
 |Anzeigename in DatabaseSelection|Numerischer Wert|  
 |----------------------------------------|-------------------|  
-|None|0|  
+|Keine|0|  
 |All|1|  
 |System|2|  
 |Benutzer|3|  
-|Specific|4|  
+|Spezifisch|4|  
   
- `TableSelectionType` Eigenschaftensatz-mithilfe von Werten der `TableSelection` Enumeration.  
+ `TableSelectionType`Eigenschaften Satz mithilfe von Werten aus der `TableSelection` -Enumeration.  
   
 |Anzeigename in TableSelection|Numerischer Wert|  
 |-------------------------------------|-------------------|  
-|None|0|  
+|Keine|0|  
 |All|1|  
-|Specific|2|  
+|Spezifisch|2|  
   
- `ObjectTypeSelection` Eigenschaftensatz-mithilfe von Werten der `ObjectType` Enumeration.  
+ `ObjectTypeSelection`Eigenschaften Satz mithilfe von Werten aus der `ObjectType` -Enumeration.  
   
 |Anzeigename in ObjectType|Numerischer Wert|  
 |---------------------------------|-------------------|  
@@ -510,21 +510,21 @@ ms.locfileid: "62898898"
 |TableView|2|  
   
 ### <a name="back-up-database-task"></a>Datenbank sichern (Task)  
- `DestinationCreationType` Eigenschaftensatz-mithilfe von Werten der `DestinationType` Enumeration.  
+ `DestinationCreationType`Eigenschaften Satz mithilfe von Werten aus der `DestinationType` -Enumeration.  
   
 |Anzeigename in DestinationType|Numerischer Wert|  
 |--------------------------------------|-------------------|  
 |Auto|0|  
 |Manuell|1|  
   
- `ExistingBackupsAction` Eigenschaftensatz-mithilfe von Werten der `ActionForExistingBackups` Enumeration.  
+ `ExistingBackupsAction`Eigenschaften Satz mithilfe von Werten aus der `ActionForExistingBackups` -Enumeration.  
   
 |Anzeigename in ActionForExistingBackups|Numerischer Wert|  
 |-----------------------------------------------|-------------------|  
 |Anfügen|0|  
 |Overwrite|1|  
   
- `BackupAction` Eigenschaftensatz-mithilfe von Werten der `BackupTaskType` Enumeration. Diese Eigenschaft arbeitet mit der `BackupIsIncremental`-Eigenschaft zusammen, um den Typ der vom Task durchgeführten Sicherung zu definieren.  
+ `BackupAction`Eigenschaften Satz mithilfe von Werten aus der `BackupTaskType` -Enumeration. Diese Eigenschaft arbeitet mit der `BackupIsIncremental`-Eigenschaft zusammen, um den Typ der vom Task durchgeführten Sicherung zu definieren.  
   
 |Anzeigename in BackupTaskType|Numerischer Wert|  
 |-------------------------------------|-------------------|  
@@ -532,7 +532,7 @@ ms.locfileid: "62898898"
 |Dateien|1|  
 |Log|2|  
   
- `BackupDevice` Eigenschaftensatz-mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` Enumeration.  
+ `BackupDevice`Eigenschaften Satz, der mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `DeviceType` -Enumeration festgelegt wird.  
   
 |Anzeigename in DeviceType|Numerischer Wert|  
 |---------------------------------|-------------------|  
@@ -543,68 +543,68 @@ ms.locfileid: "62898898"
 |VirtualDevice|4|  
   
 ### <a name="maintenance-cleanup-task"></a>Wartungscleanup (Task)  
- `FileTypeSelected` Eigenschaftensatz-mithilfe von Werten der `FileType` Enumeration.  
+ `FileTypeSelected`Eigenschaften Satz mithilfe von Werten aus der `FileType` -Enumeration.  
   
 |Anzeigename in FileType|Numerischer Wert|  
 |-------------------------------|-------------------|  
 |FileBackup|0|  
 |FileReport|1|  
   
- `OlderThanTimeUnitType` Eigenschaftensatz-mithilfe von Werten der `TimeUnitType` Enumeration.  
+ `OlderThanTimeUnitType`Eigenschaften Satz mithilfe von Werten aus der `TimeUnitType` -Enumeration.  
   
 |Anzeigename in TimeUnitType|Numerischer Wert|  
 |-----------------------------------|-------------------|  
-|Day|0|  
+|Day (Tag)|0|  
 |Week|1|  
-|Month|2|  
-|Year|3|  
+|Month (Monat)|2|  
+|Jahr|3|  
   
 ### <a name="update-statistics-task"></a>Statistiken aktualisieren (Task)  
- `UpdateType` Eigenschaftensatz-mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` Enumeration.  
+ `UpdateType`Eigenschaften Satz, der mithilfe von Werten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) `StatisticsTarget` -Enumeration festgelegt wird.  
   
 |Anzeigename in StatisticsTarget|Numerischer Wert|  
 |---------------------------------------|-------------------|  
-|Spalte|1|  
+|Column|1|  
 |Index|2|  
 |All|3|  
   
 ##  <a name="CommonProperties"></a> Allgemeine Eigenschaften  
  Pakete, Tasks, die Foreach-Schleife, die For-Schleife und Sequenzcontainer können die folgenden Enumerationen verwenden, um die angegebenen Eigenschaften festzulegen.  
   
- `ForceExecutionResult` Eigenschaftensatz-mithilfe von Werten der `DTSForcedExecResult` Enumeration.  
+ `ForceExecutionResult`Eigenschaften Satz mithilfe von Werten aus der `DTSForcedExecResult` -Enumeration.  
   
 |Anzeigename in DTSForcedExecResult|Numerischer Wert|  
 |------------------------------------------|-------------------|  
-|None|-1|  
-|Erfolgreich|0|  
-|Failure|1|  
+|Keine|-1|  
+|Erfolg|0|  
+|Fehler|1|  
 |Completion|2|  
   
- `IsolationLevel` Eigenschaftensatz-von .NET Framework `IsolationLevel` Enumeration. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
+ `IsolationLevel`Eigenschaft: Festlegung durch die `IsolationLevel` .NET Framework-Enumeration. Weitere Informationen finden Sie in der .NET Framework-Klassenbibliothek unter der [MSDN Library](https://go.microsoft.com/fwlink?LinkId=17313).  
   
- `LoggingMode` Eigenschaftensatz-mithilfe von Werten der `DTSLoggingMode` Enumeration.  
+ `LoggingMode`Eigenschaften Satz mithilfe von Werten aus der `DTSLoggingMode` -Enumeration.  
   
 |Anzeigename in DTSLoggingMode|Numerischer Wert|  
 |-------------------------------------|-------------------|  
 |UseParentSetting|0|  
-|Aktiviert|1|  
+|Enabled|1|  
 |Disabled|2|  
   
- `TransactionOption` Eigenschaftensatz-mithilfe von Werten der `DTSTransactionOption` Enumeration.  
+ `TransactionOption`Eigenschaften Satz mithilfe von Werten aus der `DTSTransactionOption` -Enumeration.  
   
 |Anzeigename in DTSTransactionOption|Numerischer Wert|  
 |-------------------------------------------|-------------------|  
 |NotSupported|0|  
-|Supported|1|  
-|Required|2|  
+|Unterstützt|1|  
+|Erforderlich|2|  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Hinzufügen oder Ändern eines Eigenschaftsausdrucks](add-or-change-a-property-expression.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Eigenschaftsausdrücken in Paketen](use-property-expressions-in-packages.md)   
  [Integration Services-Pakete &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
- [SQL Server Integration Services-Container](../control-flow/integration-services-containers.md)   
+ [Integration Services-Container](../control-flow/integration-services-containers.md)   
  [Integration Services-Tasks](../control-flow/integration-services-tasks.md)   
  [Rangfolgeneinschränkungen](../control-flow/precedence-constraints.md)  
   

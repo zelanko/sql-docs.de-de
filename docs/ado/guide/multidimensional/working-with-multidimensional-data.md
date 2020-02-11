@@ -13,55 +13,55 @@ ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923130"
 ---
 # <a name="working-with-multidimensional-data"></a>Arbeiten mit mehrdimensionalen Daten
-Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Es besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei. Ein *Achse* ist eine Sammlung von Elementen aus einer oder mehreren Dimensionen, die zum Suchen oder Filtern von bestimmten Werten in einem Cube verwendet wird.  
+Ein *Cellset* ist das Ergebnis einer Abfrage für mehrdimensionale Daten. Sie besteht aus einer Auflistung von Achsen, in der Regel nicht mehr als vier Achsen und in der Regel nur zwei oder drei Achsen. Eine *Achse* ist eine Auflistung von Membern aus einer oder mehreren Dimensionen, die zum Suchen oder Filtern bestimmter Werte in einem Cube verwendet wird.  
   
- Ein *Position* ist ein Punkt auf einer Achse. Für eine Achse, bestehend aus einer einzelnen Dimensions sind diese Positionen für eine Teilmenge der Dimensionselemente. Wenn eine Achse besteht aus mehr als eine Dimension, und klicken Sie dann jede Position ist eine zusammengesetzte Entität, die *n* Teile Where *n* ist die Anzahl der Dimensionen, die entlang dieser Achse ausgerichtet. Jeder Teil der Position ist ein Element aus einer einzelnen Dimension.  
+ Eine *Position* ist ein Punkt entlang einer Achse. Bei einer Achse, die aus einer einzelnen Dimension besteht, sind diese Positionen eine Teilmenge der Dimensions Elemente. Wenn eine Achse aus mehr als einer Dimension besteht, ist jede Position eine Verbund Entität, die *n* Teile hat, wobei *n* die Anzahl der Dimensionen ist, die auf dieser Achse ausgerichtet sind. Jeder Teil der Position ist ein Element aus einer einzelnen konstituierenden Dimension.  
   
- Z. B. wenn die geografischen Daten und Dimensionen aus einem Cube mit Verkaufsdaten entlang der x-Achse eines cellSets ausgerichtet werden, kann eine Position entlang dieser Achse Member "USA" und "Computer". enthalten In diesem Beispiel erfordert eine Position entlang der x-Achse zu bestimmen, dass Elemente aus jeder Dimension auf der Achse ausgerichtet werden.  
+ Wenn z. b. die Geography-und Product-Dimensionen eines Cubes, der Umsatzdaten enthält, entlang der x-Achse eines Cellsets ausgerichtet sind, kann eine Position entlang dieser Achse die Elemente "USA" und "Computer" enthalten. In diesem Beispiel ist es erforderlich, dass Elemente aus jeder Dimension auf der Achse ausgerichtet sind, wenn Sie eine Position entlang der x-Achse ermitteln.  
   
- Ein *Zelle* ist ein Objekt, positioniert am Schnittpunkt der Achsenkoordinaten. Jede Zelle verfügt über mehrere Informationspakete zugeordnet, wie z.B. die Daten selbst eine formatierte Zeichenfolge (die anzeigbarer Form von Zellendaten) und den Ordnungswert der Zelle. (Jede Zelle ist eine eindeutige Ordinalwert im Cellset dar. Der Ordinalwert des ersten Zelle in das Cellset ist 0 (null), während die äußerste linke Zelle in der zweiten Zeile eines cellSets mit acht Spalten einen Ordnungswert des acht müssten.)  
+ Eine *Zelle* ist ein Objekt, das an der Schnittmenge der Achsen Koordinaten positioniert ist. Jeder Zelle sind mehrere Informationen zugeordnet, darunter die Daten selbst, eine formatierte Zeichenfolge (die anzeigbare Form von Zelldaten) und der Wert für die Ordnungszahl der Zelle. (Jede Zelle ist ein eindeutiger Ordinalwert im Cellset. Der Ordinalwert der ersten Zelle im Cellset ist 0 (null), während die linke Zelle in der zweiten Zeile eines Cellsets mit acht Spalten einen Ordinalwert von 8 hat.)  
   
- Ein Cube enthält beispielsweise die folgenden sechs Dimensionen (Beachten Sie, dass diese Cubeschema von den in dem Beispiel geringfügig [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ Ein Cube hat z. b. die folgenden sechs Dimensionen (Beachten Sie, dass sich dieses Cubeschema geringfügig von dem Beispiel unter [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)unterscheidet):  
   
 -   Vertriebsmitarbeiter  
   
--   Geography (natürliche Hierarchie) – Kontinente, Länder, Status usw.  
+-   Geography (natürliche Hierarchie): Kontinente, Länder, Bundesstaaten usw.  
   
--   Viertel-Quartale, Monate, Tage  
+-   Quartale, Monate, Tage  
   
 -   Years  
   
--   Measures - Prozent, Verkäufe BudgetedSales  
+-   Measures-Sales, Prozentänderung, BudgetedSales  
   
--   Products  
+-   Produkte  
   
- Das folgende Cellset stellt Umsatz für 1991 für alle Produkte dar:  
+ Das folgende Cellset repräsentiert Verkäufe für 1991 für alle Produkte:  
   
 > [!NOTE]
->  Die Zellenwerte im Beispiel können als Paare von Achse Position Ordnungszahlen angezeigt werden, wobei die erste Ziffer Position auf der x-Achse und die zweite Zahl die Position der y-Achse darstellt.  
+>  Die Zellwerte im Beispiel können als geordnete Paare von Achsen Positions Ordinalzahlen angezeigt werden, wobei die erste Ziffer die Position der x-Achse und die zweite Ziffer der Position der y-Achse darstellt.  
   
- Die Merkmale dieser Cellset lauten wie folgt aus:  
+ Die Merkmale dieses Cellsets lauten wie folgt:  
   
--   Achsendimensionen: Quartale Vertriebsmitarbeiters Geography  
+-   Achsen Dimensionen: Quartale, Vertriebsmitarbeiter, Geografie  
   
--   Filterdimensionen: Measures, Jahren Produkte  
+-   Filter Dimensionen: Measures, Jahre, Produkte  
   
--   Zwei Achsen: Spalten-(X oder Achse 0) und (Achse 1 oder y)  
+-   Zwei Achsen: column (x, Achse 0) und Zeile (y oder Achse 1)  
   
--   x-Achse: zwei geschachtelte Dimensionen "," Vertriebsmitarbeiter "und" Geography  
+-   x-Achse: zwei unter-und Geografiedimensionen, SalesPerson und geography  
   
--   y-Achse: Viertel-dimension  
+-   y-Achse: Quartale-Dimension  
   
- Die x-Achse besitzt zwei geschachtelten Dimensionen: Verkäufer "und" Geography ". Von Geography sind vier Elemente ausgewählt: Seattle, Boston, USA Süd und Japan. Es werden zwei Elemente von Vertriebsmitarbeiter ausgewählt: Valentine und Nash. Dies ergibt insgesamt acht Positionen auf dieser Achse (8 = 4 * 2).  
+ Die x-Achse verfügt über zwei eingefügte Dimensionen: "SalesPerson" und "geography". Aus geography werden vier Mitglieder ausgewählt: Seattle, Boston, USA-Süd und Japan. Zwei Mitglieder werden von SalesPerson ausgewählt: Valentine und Nash. Dies ergibt insgesamt acht Positionen auf dieser Achse (8 = 4 * 2).  
   
- Die einzelnen Koordinaten werden als eine Position mit zwei Membern - eine von der Vertriebsmitarbeiter-Dimension und eine andere von der Geography-Dimension dargestellt:  
+ Jede Koordinate wird als Position mit zwei Membern dargestellt: eine von der SalesPerson-Dimension und eine andere aus der Geography-Dimension:  
   
 ```console
 (Valentine, Seattle), (Valentine, Boston), (Valentine, USA_North),  
@@ -69,17 +69,17 @@ Ein *Cellset* ist das Ergebnis einer Abfrage auf mehrdimensionalen Daten. Es bes
 (Nash, Japan)  
 ```  
   
- Die y-Achse enthält nur eine Dimension mit den folgenden acht Positionen:  
+ Die y-Achse verfügt nur über eine Dimension mit den folgenden acht Positionen:  
   
 ```console
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- CellSets, Zellen, Achsen und Positionen werden alle durch die entsprechenden Objekte in ADO MD dargestellt: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Zelle](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md), und [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Cellsets, Zellen, Achsen und Positionen werden alle in ADO MD durch die entsprechenden Objekte dargestellt: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)und [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
  [ADO (mehrdimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Verwenden von ADO mit ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)

@@ -1,5 +1,5 @@
 ---
-title: Using Test Repositories (OracleToSQL) | Microsoft-Dokumentation
+title: Verwenden von Test Depots (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,68 +13,68 @@ ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: da99b63c986029a1791793fbbd33910bb95d4b7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086806"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Verwenden von Testrepositorys (OracleToSQL)
-Der SSMA-testen-Repository speichert SSMA Tester Testfälle und die Testergebnisse für die spätere Verwendung. Die Repository-Daten in SQL Server-Tabellen gespeichert sind **TestCaseRepository** und **RunTestCaseResultRepository** im Schema **Ssma_oracle_utilities** von **Ssmatesterdb** Datenbank.  
+Das SSMA-testrepository speichert Testfälle und Testergebnisse für SSMA-Tester für die spätere Verwendung. Die Repository-Daten werden in den SQL Server Tabellen **testcaserepository** und **runtestcaseresultrepository** im Schema **ssma_oracle_utilities** der **ssmatesterdb** -Datenbank gespeichert.  
   
-Die folgenden Schaltflächen sind auf das Repository der Testfälle Dialogfeld verfügbar:  
+Die folgenden Schaltflächen sind im Repository des Dialog Felds "Testfälle" verfügbar:  
   
--   Klicken Sie auf die **aktualisieren** Schaltfläche, um die Liste von Testfällen oder Testergebnisse zu aktualisieren.  
+-   Klicken Sie auf die Schaltfläche **Aktualisieren** , um die Testfälle oder Testergebnisse Liste zu aktualisieren.  
   
--   Klicken Sie auf die **schließen** Schaltfläche, um das Repository von Test Cases-Dialogfeld zu schließen.  
+-   Klicken Sie auf die Schaltfläche **Schließen** , um das Repository des Dialog Felds Testfälle zu schließen.  
   
 ## <a name="test-cases-repository"></a>Testfälle-Repository  
-Sie können das Repository von Testfällen anzeigen, indem Sie auf **Testfälle...**  aus der **Tester** Menü. SSMA zeigt dann die **Repository Testfälle** Dialogfenster mit einer Liste von gespeicherten Testfälle auf die **Testfälle** Seite.  
+Sie können das Repository "Testfälle" anzeigen, indem Sie im Menü " **Tester** " auf **Testfälle...** klicken. SSMA zeigt dann das **Repository des** Dialogfensters "Test Fälle" mit einer Liste gespeicherter Testfälle auf der Seite " **Testfälle** " an.  
   
-Das Raster zeigt die folgende Informationen zu jedem Testfall muss:  
+Das Raster zeigt die folgenden Informationen zu den einzelnen Testfällen an:  
   
--   Name: Der Name des Testfalls.  
+-   Name: der Name des Testfalls.  
   
--   Erstellt: Das Erstellungsdatum des Testfalls.  
+-   Erstellt: das Erstellungsdatum für den Testfall.  
   
--   Geändert: Das Datum der letzten Änderung des Testfalls.  
+-   Geändert: das Datum der letzten Änderung des Testfalls.  
   
--   Beschreibung: Die Testfall-Beschreibungen.  
+-   Beschreibung: die Test Fallbeschreibungen.  
   
-Die folgenden Schaltflächen sind auf der Seite "Testfälle" verfügbar:  
+Die folgenden Schaltflächen sind auf der Seite mit den Test Fällen verfügbar:  
   
--   Klicken Sie auf die **hinzufügen** Schaltfläche, um den Testfall-Assistenten ausführen, und erstellen einen neuen Test.  
+-   Klicken Sie auf die Schaltfläche **Hinzufügen** , um den Testfall-Assistenten auszuführen und einen neuen Test zu erstellen.  
   
--   Klicken Sie auf die **entfernen** Schaltfläche, um den ausgewählten Test aus dem Repository zu löschen. Wenn ein Testfall gelöscht wird, werden alle zugehörigen Testergebnisse ebenfalls gelöscht.  
+-   Klicken Sie auf die Schaltfläche **Entfernen** , um den ausgewählten Test aus dem Repository zu löschen. Wenn ein Testfall gelöscht wird, werden alle zugehörigen Testergebnisse ebenfalls gelöscht.  
   
--   Klicken Sie auf die **bearbeiten** Schaltfläche, um den Testfall-Assistenten ausführen und ändern den ausgewählten Test.  
+-   Klicken Sie auf die Schaltfläche **Bearbeiten** , um den Testfall-Assistenten auszuführen und den ausgewählten Test zu ändern.  
   
--   Klicken Sie auf die **ausführen** die Schaltfläche, um die [Ausführen von Testfällen (OracleToSQL)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) Dialogfeld, und führen Sie den ausgewählten Test.  
+-   Klicken Sie auf die Schaltfläche **Ausführen** , um das Dialogfeld [Testfälle ausführen (oracletosql)](https://msdn.microsoft.com/fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02) zu öffnen, und führen Sie den ausgewählten Test aus.  
   
-## <a name="test-results-repository"></a>Ergebnisrepository  
-Sehen Sie auf das Ergebnisrepository der **Testergebnisse** auf der Seite die **Repository Testfälle** Fenster. Öffnen Sie sie durch Klicken auf **Testergebnisse...**  aus der **Tester** Menü.  
+## <a name="test-results-repository"></a>Testergebnisse Repository  
+Sie können das Testergebnisse-Repository auf der Seite **Testergebnisse** im **Repository des Fensters Test Fälle** anzeigen. Öffnen Sie die Datei, indem Sie im Menü **Tester** auf **Testergebnisse...** klicken.  
   
-Sie können zwei Filter auf **Testergebnisse** Seite:  
+Auf **Testergebnisse** Seite können Sie zwei Filter verwenden:  
   
--   Der Name des Testfalls-Filter: Ermöglicht die Auswahl der Testergebnisse anhand des Namens des Testfalls. Dieser Filter die **alle Testfälle** Wert ermöglicht das Anzeigen von Testergebnissen für alle Testfälle.  
+-   Der Filter für den Testfall-Namen: ermöglicht die Auswahl von Testergebnissen nach Testfall Namen. Der Wert für **alle Testfälle** dieses Filters ermöglicht das Anzeigen von Testergebnissen für alle Testfälle.  
   
--   Der Testfall Ausführungsdatum-Filter: Filter-Testergebnisse nach dem Datum speichern. Dieser Filter die **alle Zeitraum** Wert ermöglicht das Anzeigen von Testergebnissen für jedes Datum speichern.  
+-   Der Filter für den Testfall-Ausführungs Datum: filtert Testergebnisse nach dem Datum der Speicherung. Der Wert für den **gesamten Zeitraum** des Filters ermöglicht das Anzeigen von Testergebnissen für jedes Datum der Speicherung.  
   
-Die folgende Informationen zu Testergebnissen wird im Raster angezeigt.  
+Die folgenden Informationen zu den Testergebnissen werden im Raster angezeigt.  
   
--   Name: Name des Testfalls.  
+-   Name: der Name des Testfalls.  
   
--   Gespeichert: Testfall Datum speichern.  
+-   Gespeichert: das Datum der Speicherung von Test Fällen.  
   
--   Ergebnisse: Eine kurze Zusammenfassung der Ausführung des Tests (diese Zelle die QuickInfo zeigt eine vollständige Zusammenfassung der Ausführung des Tests).  
+-   Ergebnisse: eine kurze Zusammenfassung der Testausführung (die QuickInfo der Zelle zeigt eine vollständige Zusammenfassung der Testausführung).  
   
-Die folgenden Schaltflächen sind auf der Seite "Testergebnis" verfügbar:  
+Die folgenden Schaltflächen sind auf der Seite "Test Ergebnisse" verfügbar:  
   
--   Klicken Sie auf die **Ansicht** die Schaltfläche, um [Viewing Test Case Reports &#40;OracleToSQL&#41; ](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) des aktuellen Ergebnis des Testfalls.  
+-   Klicken Sie auf die Schaltfläche **anzeigen** , um die [Anzeige von Test Fall berichten &#40;oracletosql&#41;](../../ssma/oracle/viewing-test-case-reports-oracletosql.md) des aktuellen Test Fall Ergebnisses zu öffnen.  
   
--   Klicken Sie auf die **löschen** Schaltfläche, um das ausgewählte Testergebnis löschen  
+-   Klicken Sie auf die Schaltfläche **Löschen** , um das ausgewählte Test Ergebnis zu löschen  
   
-## <a name="see-also"></a>Siehe auch  
-[Ausführen von Testfällen &#40;OracleToSQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
-[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ausführen von Test Fällen &#40;oracleto SQL&#41;](../../ssma/oracle/running-test-cases-oracletosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

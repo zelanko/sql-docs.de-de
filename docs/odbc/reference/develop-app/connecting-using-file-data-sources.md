@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mithilfe von Dateidatenquellen | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mithilfe von Datei Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,26 +18,26 @@ ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aa340c64f6eb92d803d8918bc99ecf112b19f1e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083108"
 ---
 # <a name="connecting-using-file-data-sources"></a>Herstellen einer Verbindung mithilfe von Dateidatenquellen
-Die Verbindungsinformationen für eine Datenquelle wird in einer DSN-Datei gespeichert. Daher kann die Verbindungszeichenfolge wiederholt durch einen einzelnen Benutzer verwendet oder von mehreren Benutzern gemeinsam genutzt, wenn sie den entsprechenden Treiber installiert haben. Die Datei enthält ein Treibername (oder einen anderen Datenquellennamen im Fall von eine Dateidatenquelle) und optional eine Verbindungszeichenfolge, die von verwendet werden kann **SQLDriverConnect**. Der Treiber-Manager erstellt die Verbindungszeichenfolge für den Aufruf von **SQLDriverConnect** in den Schlüsselwörtern in der Datei ".DSN".  
+Die Verbindungsinformationen für eine Datei Datenquelle werden in einer DSN-Datei gespeichert. Folglich kann die Verbindungs Zeichenfolge wiederholt von einem einzelnen Benutzer verwendet werden oder von mehreren Benutzern gemeinsam verwendet werden, wenn der entsprechende Treiber installiert ist. Die Datei enthält einen Treiber Namen (oder einen anderen Datenquellen Namen im Fall einer nicht in der Share baren Datei Datenquelle) und optional eine Verbindungs Zeichenfolge, die von **SQLDriverConnect**verwendet werden kann. Der Treiber-Manager erstellt die Verbindungs Zeichenfolge für den **SQLDriverConnect** -Befehl aus den Schlüsselwörtern in der DSN-Datei.  
   
- Eine Datenquelle ermöglicht einer Anwendung, die Verbindungsoptionen angeben, ohne dass zum Erstellen einer Verbindungszeichenfolge für die Verwendung mit **SQLDriverConnect**. Die Datei als Datenquelle in der Regel wird erstellt, indem die **SAVEFILE** -Schlüsselwort, das bewirkt, der Treiber-Manager dass, speichern Sie die ausgegebene Verbindungszeichenfolge, die durch einen Aufruf von erstellt **SQLDriverConnect** auf die DSN-Datei. Dass die Verbindungszeichenfolge wiederholt verwendet werden kann, können Sie durch Aufrufen von **SQLDriverConnect** mit der **FILEDSN** Schlüsselwort. Dies optimiert die Verbindung und stellt eine permanente Datenquelle der Verbindungszeichenfolge bereit.  
+ Mit einer Datei Datenquelle kann eine Anwendung Verbindungsoptionen angeben, ohne eine Verbindungs Zeichenfolge für die Verwendung mit **SQLDriverConnect**erstellen zu müssen. Die Datei Datenquelle wird normalerweise durch Angabe des **SaveFile** -Schlüssel Worts erstellt, das bewirkt, dass der Treiber-Manager die von einem **SQLDriverConnect** -Befehl erstellte Ausgabe Verbindungs Zeichenfolge in der DSN-Datei speichert. Diese Verbindungs Zeichenfolge kann wiederholt durch Aufrufen von **SQLDriverConnect** mit dem **FILEDSN** -Schlüsselwort verwendet werden. Dadurch wird der Verbindungsprozess optimiert, und es wird eine persistente Quelle der Verbindungs Zeichenfolge bereitstellt.  
   
- Dateidatenquellen können auch erstellt werden durch Aufrufen von **SQLCreateDataSource** im DLL-Installer. Informationen in die DSN-Datei geschrieben werden kann, durch den Aufruf **SQLWriteFileDSN**, und Lesen aus der Datei ".DSN" durch den Aufruf **SQLReadFileDSN**; beide Funktionen sind auch im DLL-Installer. Informationen zu den Installer-DLL finden Sie unter [Konfigurieren von Datenquellen](../../../odbc/reference/install/configuring-data-sources.md).  
+ Datei Datenquellen können auch durch Aufrufen von **SQLCreateDataSource** in der Installationsprogramm-dll erstellt werden. Sie können Informationen in die DSN-Datei schreiben, indem Sie **sqlwrite tefiledsn**aufrufen und aus der DSN-Datei lesen, indem Sie **sqllesefiledsn**aufrufen. Beide Funktionen sind ebenfalls in der Installationsprogramm-dll. Weitere Informationen zur Installationsprogramm-dll finden Sie unter [Konfigurieren von Datenquellen](../../../odbc/reference/install/configuring-data-sources.md).  
   
- Schlüsselwörter für Verbindungsinformationen sind im Abschnitt [ODBC] eine DSN-Datei. Die mindestens erforderlichen Informationen, die eine freigegebenen DSN-Datei im Abschnitt [ODBC] hätte ist das DRIVER-Schlüsselwort:  
+ Die Schlüsselwörter, die für Verbindungsinformationen verwendet werden, befinden sich im Abschnitt [ODBC] einer DSN-Datei. Die minimalen Informationen, die eine freigegeben. DSN-Datei im [ODBC]-Abschnitt enthalten würde, sind das Driver-Schlüsselwort:  
   
 ```  
 DRIVER = SQL Server  
 ```  
   
- Die gemeinsam nutzbar DSN-Datei enthält eine Verbindungszeichenfolge in der Regel wie folgt aus:  
+ Die Datei "freigegeben. DSN" enthält in der Regel eine Verbindungs Zeichenfolge wie folgt:  
   
 ```  
 DRIVER = SQL Server  
@@ -45,13 +45,13 @@ UID = Larry
 DATABASE = MyDB  
 ```  
   
- Wenn die Datei als Datenquelle Dateidatenquelle ist, enthält nur die DSN-Datei eine **DSN** Schlüsselwort. Wenn der Treiber-Manager die Informationen in eine Dateidatenquelle gesendet wird, Verbindung nach Bedarf für die Datenquelle, angegeben durch die **DSN** Schlüsselwort. Eine Dateidatenquelle DSN-Datei enthält das folgende Schlüsselwort:  
+ Wenn die Datei Datenquelle nicht Share fähig ist, enthält die DSN-Datei nur ein **DSN** -Schlüsselwort. Wenn der Treiber-Manager die Informationen in einer nicht Share baren Datei Datenquelle sendet, stellt er bei Bedarf eine Verbindung mit der Datenquelle her, die durch das **DSN** -Schlüsselwort angegeben wird. Eine nicht Shareable. DSN-Datei enthält das folgende Schlüsselwort:  
   
 ```  
 DSN = MyDataSource  
 ```  
   
- Die für eine Datei als Datenquelle verwendete Verbindungszeichenfolge ist die Kombination der Schlüsselwörter, die in der Datei ".DSN" angegeben und die Schlüsselwörter, die in der Verbindungszeichenfolge im Aufruf angegeben **SQLDriverConnect**. Wenn die Schlüsselwörter in der DSN-Datei mit Schlüsselwörtern in der Verbindungszeichenfolge einen Konflikt verursacht, entscheidet der Treiber-Manager an, die Schlüsselwortwert verwendet werden soll. Weitere Informationen finden Sie unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Die für eine Datei Datenquelle verwendete Verbindungs Zeichenfolge ist die Kombination der Schlüsselwörter, die in der DSN-Datei angegeben sind, und der Schlüsselwörter, die in der Verbindungs Zeichenfolge im **SQLDriverConnect**-Befehl angegeben sind. Wenn eines der Schlüsselwörter in der DSN-Datei mit Schlüsselwörtern in der Verbindungs Zeichenfolge in Konflikt steht, entscheidet der Treiber-Manager, welcher Schlüsselwort Wert verwendet werden soll. Weitere Informationen finden Sie unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [https://support.microsoft.com/kb/165866](https://support.microsoft.com/kb/165866)

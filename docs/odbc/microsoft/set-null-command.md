@@ -1,5 +1,5 @@
 ---
-title: Befehl SET NULL | Microsoft-Dokumentation
+title: NULL-Befehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f8addb9b4c7c200ee8f213bdd959067039ccfff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063669"
 ---
 # <a name="set-null-command"></a>SET NULL-Befehl
-Bestimmt, wie null-Werte, durch die ALTER TABLE - SQL, CREATE TABLE - SQL und INSERT unterstützt werden - SQL-Befehle.  
+Bestimmt, wie NULL-Werte von den Befehlen ALTER TABLE-SQL, CREATE TABLE-SQL und INSERT-SQL unterstützt werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,20 +30,20 @@ SET NULL ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ON  
- (Standard für den Treiber; der Standardwert für Visual FoxPro ist OFF). Gibt an, dass alle Spalten in einer Tabelle mit ALTER TABLE und CREATE TABLE erstellt null-Werte zulässt. Sie können null-Wert-Unterstützung für Spalten in der Tabelle einschließlich der nicht-NULL-Klausel in der Spalte Definitionen überschreiben.  
+ EIN  
+ (Standardwert für den Treiber; der Standardwert für Visual FoxPro ist off.) Gibt an, dass alle Spalten in einer Tabelle, die mit ALTER TABLE und CREATE TABLE erstellt wurde, NULL-Werte zulassen. Sie können die Unterstützung von NULL-Werten für Spalten in der Tabelle überschreiben, indem Sie die not NULL-Klausel in die Spaltendefinitionen einschließen.  
   
- Gibt auch an, dass INSERT - SQL null-Werte in Spalten nicht in einer INSERT - SQL-VALUE-Klausel enthalten eingefügt wird. INSERT - wird SQL null-Werte nur in Spalten einfügen, die null-Werte zulassen.  
+ Gibt auch an, dass INSERT-SQL NULL-Werte in Spalten einfügt, die nicht in der INSERT-SQL-wertklausel enthalten sind. INSERT-SQL fügt NULL-Werte nur in Spalten ein, die NULL-Werte zulassen.  
   
  OFF  
- Gibt an, dass alle Spalten in einer Tabelle mit ALTER TABLE und CREATE TABLE erstellt keine null-Werte zulässt. Sie können null-Wert-Unterstützung für Spalten in der ALTER TABLE und CREATE TABLE festlegen, durch die NULL-Klausel in der Spalte Definitionen.  
+ Gibt an, dass alle Spalten in einer Tabelle, die mit ALTER TABLE und CREATE TABLE erstellt wurde, keine NULL-Werte zulassen. Sie können die Unterstützung von NULL-Werten für Spalten in ALTER TABLE und CREATE TABLE festlegen, indem Sie die NULL-Klausel in die Spaltendefinitionen einschließen.  
   
- Gibt auch an, dass INSERT - SQL leere Werte in Spalten nicht in einer INSERT - SQL-VALUE-Klausel enthalten eingefügt wird.  
+ Gibt auch an, dass INSERT-SQL leere Werte in Spalten einfügt, die nicht in der INSERT-SQL-wertklausel enthalten sind.  
   
-## <a name="remarks"></a>Hinweise  
- SET NULL wirkt sich auf nur wie null-Werte werden von ALTER TABLE, CREATE TABLE und INSERT - SQL unterstützt. Andere Befehle sind nicht betroffen von NULL festgelegt.  
+## <a name="remarks"></a>Bemerkungen  
+ Set NULL wirkt sich nur darauf aus, wie NULL-Werte von ALTER TABLE, CREATE TABLE und INSERT-SQL unterstützt werden. Andere Befehle sind von SET NULL nicht betroffen.  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER TABLE - SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
- [Erstellen Sie Tabelle - SQL-Befehl.](../../odbc/microsoft/create-table-sql-command.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ALTER TABLE-SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
+ [CREATE TABLE-SQL-Befehl](../../odbc/microsoft/create-table-sql-command.md)   
  [INSERT (SQL-Befehl)](../../odbc/microsoft/insert-sql-command.md)

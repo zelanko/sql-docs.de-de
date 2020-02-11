@@ -1,5 +1,5 @@
 ---
-title: dBASE der Überlegungen zur Programmierung von Treibern | Microsoft-Dokumentation
+title: Überlegungen zur Programmierung von dBASE-Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dac34e8b3559b4d77aec411fd636ac7850932a4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096404"
 ---
 # <a name="dbase-driver-programming-considerations"></a>Überlegungen zur Programmierung von dBASE-Treibern
-Dieser Abschnitt enthält die folgenden Themen.  
+Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Programmgesteuertes Festlegen von Optionen für die dBASE-Treiber](../../odbc/microsoft/setting-options-programmatically-for-the-dbase-driver.md)  
   
@@ -34,4 +34,4 @@ Dieser Abschnitt enthält die folgenden Themen.
 -   [Weitere Informationen zur Programmierung von dBASE-Treibern](../../odbc/microsoft/other-dbase-driver-programming-details.md)  
   
 > [!NOTE]  
->  Zugreifen auf dBASE-ISAM-Dateien über die ODBC-Desktop-Datenbanktreiber erfordert die Installation von Borland Datenbank-Engine.
+>  Der Zugriff auf dBASE-ISAM-Dateien über die ODBC Desktop-Datenbanktreiber erfordert die Installation der Datenbankmodul-Datenbank.

@@ -1,5 +1,5 @@
 ---
-title: Sp_dbcmptlevel (Transact-SQL) | Microsoft-Dokumentation
+title: sp_dbcmptlevel (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108211"
 ---
-# <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
+# <a name="sp_dbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Legt für bestimmte Verhalten der Datenbank fest, dass sie mit der angegebenen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompatibel sein müssen.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwendung [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen [ALTER DATABASE-Kompatibilitäts Grad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] name` Ist der Name der Datenbank, für die der Kompatibilitätsgrad geändert werden. Datenbanknamen müssen den Regeln für Bezeichner entsprechen. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
+`[ @dbname = ] name`Der Name der Datenbank, für die der Kompatibilitäts Grad geändert werden soll. Datenbanknamen müssen den Regeln für Bezeichner entsprechen. *Name ist vom Datentyp* **vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @new_cmptlevel = ] version` Ist die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit der die Datenbank kompatibel gemacht werden. *Version* ist **Tinyint**, hat den Standardwert NULL. Folgende Werte sind zulässig:  
+`[ @new_cmptlevel = ] version`Die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mit der die Datenbank kompatibel gemacht werden soll. die *Version* ist vom Datentyp **tinyint**. der Standardwert ist NULL. Folgende Werte sind zulässig:  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -58,23 +58,23 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
  **130** = [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn keine Parameter angegeben werden, oder wenn die *Namen* Parameter nicht angegeben ist, **Sp_dbcmptlevel** gibt einen Fehler zurück.  
+ Wenn keine Parameter angegeben werden oder der *Name* -Parameter nicht angegeben ist, gibt **sp_dbcmptlevel** einen Fehler zurück.  
   
- Wenn *Namen* ohne angegeben *Version*, [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Nachricht mit den aktuellen Kompatibilitätsgrad der angegebenen Datenbank zurückgegeben.  
+ Wenn *Name* ohne *Version*angegeben wird, [!INCLUDE[ssDE](../../includes/ssde-md.md)] gibt eine Meldung zurück, die den aktuellen Kompatibilitäts Grad der angegebenen Datenbank anzeigt.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Beschreibung der Kompatibilitätsgrade finden Sie unter [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
+## <a name="remarks"></a>Bemerkungen  
+ Eine Beschreibung der Kompatibilitäts Grade finden Sie unter [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur der Datenbankbesitzer, Mitglieder der **Sysadmin** festen Serverrolle und die **Db_owner** festen Datenbankrolle "" (Wenn Sie die aktuelle Datenbank ändern), kann diese Prozedur ausführen.  
+ Diese Prozedur kann nur vom Datenbankbesitzer, von Mitgliedern der festen Server Rolle **sysadmin** und der festen Daten Bank Rolle **db_owner** (wenn Sie die aktuelle Datenbank ändern) ausgeführt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Reserved Keywords &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [Alter Database &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [Reservierte Schlüsselwörter &#40;Transact-SQL-&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: ADO-Codebeispiele in Visual Basic | Microsoft-Dokumentation
+title: ADO-Code Beispiele in Visual Basic | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,147 +15,147 @@ ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921199"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>ADO-Codebeispiele in Visual Basic
-Verwenden Sie die folgenden Codebeispielen, erfahren Sie, wie die ADO-Methoden, Eigenschaften und Ereignisse, die beim Schreiben in Visual Basic verwenden.  
+Verwenden Sie die folgenden Codebeispiele, um zu erfahren, wie Sie die ADO-Methoden,-Eigenschaften und-Ereignisse beim Schreiben in Visual Basic verwenden.  
   
 > [!NOTE]
->  Fügen Sie das gesamte Codebeispiel von Anfang bis Ende, in Ihrem Code-Editor ein. Im Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt werden, wenn partielle Beispiele verwendet werden, oder wenn absatzformatierung verloren geht.  
+>  Fügen Sie das gesamte Codebeispiel von Sub in End Sub in den Code-Editor ein. Das Beispiel wird möglicherweise nicht ordnungsgemäß ausgeführt, wenn Teil Beispiele verwendet werden oder wenn die Absatz Formatierung verloren geht.  
   
 ## <a name="methods"></a>Methoden  
   
--   [AddNew-Methode – Beispiel](../../../ado/reference/ado-api/addnew-method-example-vb.md)  
+-   [AddNew-Methode (Beispiel)](../../../ado/reference/ado-api/addnew-method-example-vb.md)  
   
--   [Append und CreateParameter – Beispiel](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)  
+-   [Beispiel für Append und die Methode "Anfüge Parameter"](../../../ado/reference/ado-api/append-and-createparameter-methods-example-vb.md)  
   
--   [AppendChunk und GetChunk-Methode – Beispiel](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)  
+-   [Beispiel für AppendChunk und GetChunk-Methoden](../../../ado/reference/ado-api/appendchunk-and-getchunk-methods-example-vb.md)  
   
--   [BeginTrans, CommitTrans und RollbackTrans-Methode – Beispiel](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)  
+-   [BeginTrans-, CommitTrans-und RollbackTrans-Methoden Beispiel](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)  
   
--   [Cancel – Methodenbeispiel](../../../ado/reference/ado-api/cancel-method-example-vb.md)  
+-   [Beispiel für eine Abbruch Methode](../../../ado/reference/ado-api/cancel-method-example-vb.md)  
   
--   [Clone – Methodenbeispiel](../../../ado/reference/ado-api/clone-method-example-vb.md)  
+-   [Beispiel für eine Klon Methode](../../../ado/reference/ado-api/clone-method-example-vb.md)  
   
--   [CompareBookmarks-Methode – Beispiel](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)  
+-   [CompareBookmarks-Methode (Beispiel)](../../../ado/reference/ado-api/comparebookmarks-method-example-vb.md)  
   
--   [ConvertToString-Methode – Beispiel](../../../ado/reference/ado-api/converttostring-method-example-vb.md)  
+-   [ConvertTo String-Methode (Beispiel)](../../../ado/reference/ado-api/converttostring-method-example-vb.md)  
   
--   [CopyRecord, CopyTo und SaveToFile-Methode – Beispiel](../../../ado/reference/ado-api/copyrecord-copyto-and-savetofile-methods-example-vb.md)  
+-   [CopyRecord-, CopyTo-und savedefile-Methoden Beispiel](../../../ado/reference/ado-api/copyrecord-copyto-and-savetofile-methods-example-vb.md)  
   
--   [CreateRecordset-Methode – Beispiel](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)  
+-   [Beispiel für die Methode "kreaterecordset"](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)  
   
--   [Delete – Methodenbeispiel](../../../ado/reference/ado-api/delete-method-example-vb.md)  
+-   [Beispiel für eine Löschmethode](../../../ado/reference/ado-api/delete-method-example-vb.md)  
   
--   [DeleteRecord und MoveRecord-Methode – Beispiel](../../../ado/reference/ado-api/deleterecord-and-moverecord-methods-example-vb.md)  
+-   [DeleteRecord-und "muverecord"-Methoden Beispiel](../../../ado/reference/ado-api/deleterecord-and-moverecord-methods-example-vb.md)  
   
--   [Execute, Requery und Clear – Beispiel für Methoden](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)  
+-   [Beispiel für Execute, Requery und Clear Methods](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)  
   
--   [Suchen Sie die Methode – Beispiel](../../../ado/reference/ado-api/find-method-example-vb.md)  
+-   [Beispiel für eine Suchmethode](../../../ado/reference/ado-api/find-method-example-vb.md)  
   
--   [GetRows-Methode – Beispiel](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
+-   [Beispiel für eine GetRows-Methode](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
--   [GetString-Methode – Beispiel](../../../ado/reference/ado-api/getstring-method-example-vb.md)  
+-   [Beispiel für die GetString-Methode](../../../ado/reference/ado-api/getstring-method-example-vb.md)  
   
--   [SkipLine-Methode, EOS und LineSeparator Eigenschaften – Beispiel](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
+-   [Beispiel für SkipLine-Methode, EOS und lineseparser-Eigenschaften](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
--   [Move – Methodenbeispiel](../../../ado/reference/ado-api/move-method-example-vb.md)  
+-   [Beispiel für Move-Methode](../../../ado/reference/ado-api/move-method-example-vb.md)  
   
--   [MoveFirst, MoveLast, MoveNext und MovePrevious-Methode – Beispiel](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)  
+-   [Muvefirst-, muvelast-, muvenext-und muveprevious-Methoden Beispiel](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vb.md)  
   
--   [NextRecordset-Methode – Beispiel](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)  
+-   [NextRecordset-Methode (Beispiel)](../../../ado/reference/ado-api/nextrecordset-method-example-vb.md)  
   
--   [Öffnende und schließende-Methode – Beispiel](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)  
+-   [Beispiel für Open-und Close-Methoden](../../../ado/reference/ado-api/open-and-close-methods-example-vb.md)  
   
--   [OpenSchema-Methode – Beispiel](../../../ado/reference/ado-api/openschema-method-example-vb.md)  
+-   [Beispiel für OpenSchema-Methode](../../../ado/reference/ado-api/openschema-method-example-vb.md)  
   
--   [Lesen, ReadText, schreiben und WriteText-Methode – Beispiel](../../../ado/reference/ado-api/read-readtext-write-and-writetext-methods-example-vb.md)  
+-   [Beispiel für Read-, Read-, Write-und Write-Text-Methoden](../../../ado/reference/ado-api/read-readtext-write-and-writetext-methods-example-vb.md)  
   
--   [Refresh – Methodenbeispiel](../../../ado/reference/ado-api/refresh-method-example-vb.md)  
+-   [Beispiel für Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-example-vb.md)  
   
--   [Resync – Methodenbeispiel](../../../ado/reference/ado-api/resync-method-example-vb.md)  
+-   [Beispiel für eine Resync-Methode](../../../ado/reference/ado-api/resync-method-example-vb.md)  
   
--   [Speichern und Open-Methode – Beispiel](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)  
+-   [Beispiel für eine Methode zum Speichern und öffnen](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)  
   
--   [Seek-Methode und Index-Eigenschaft – Beispiel](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)  
+-   [Beispiel für die Seek-Methode und Index-Eigenschaft](../../../ado/reference/ado-api/seek-method-and-index-property-example-vb.md)  
   
--   [Unterstützt-Methode – Beispiel](../../../ado/reference/ado-api/supports-method-example-vb.md)  
+-   [Unterstützt Methoden Beispiel](../../../ado/reference/ado-api/supports-method-example-vb.md)  
   
--   [Update- und CancelUpdate-Methode – Beispiel](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)  
+-   [Beispiel für Update-und CancelUpdate-Methoden](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)  
   
--   [UpdateBatch und CancelBatch-Methode – Beispiel](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)  
+-   [Beispiel für UpdateBatch und CancelBatch-Methoden](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)  
   
 ## <a name="properties"></a>Eigenschaften  
   
--   [AbsolutePage, PageCount und PageSize Eigenschaften – Beispiel](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
+-   [Beispiel für AbsolutePage, PageCount und pageSize-Eigenschaften](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
   
--   [AbsolutePosition und CursorLocation – Beispiel](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)  
+-   [Beispiel für AbsolutePosition und Cursor Location-Eigenschaften](../../../ado/reference/ado-api/absoluteposition-and-cursorlocation-properties-example-vb.md)  
   
--   [ActiveCommand-Eigenschaft – Beispiel](../../../ado/reference/ado-api/activecommand-property-example-vb.md)  
+-   [Beispiel für ActiveCommand-Eigenschaft](../../../ado/reference/ado-api/activecommand-property-example-vb.md)  
   
--   [ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)  
+-   [Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)  
   
--   [ActualSize und DefinedSize – Beispiel](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)  
+-   [Beispiel für ActualSize und DefinedSize-Eigenschaften](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)  
   
--   [Attributes- und Name-Eigenschaften-Beispiel](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)  
+-   [Beispiel für Attribute und namens Eigenschaften](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)  
   
--   [BOF-, EOF- und Bookmark Eigenschaften – Beispiel](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)  
+-   [Beispiel für BOF-, EOF-und Bookmark-Eigenschaften](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)  
   
--   [CacheSize-Eigenschaft – Beispiel](../../../ado/reference/ado-api/cachesize-property-example-vb.md)  
+-   [Beispiel für CacheSize-Eigenschaft](../../../ado/reference/ado-api/cachesize-property-example-vb.md)  
   
--   ["ConnectionString", ConnectionTimeout und State-Eigenschaften – Beispiel](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)  
+-   [Beispiel für ConnectionString, ConnectionTimeout und State Properties](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)  
   
--   [Count-Eigenschaft – Beispiel](../../../ado/reference/ado-api/count-property-example-vb.md)  
+-   [Beispiel für Count-Eigenschaft](../../../ado/reference/ado-api/count-property-example-vb.md)  
   
--   [CursorType, LockType und EditMode Eigenschaften – Beispiel](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)  
+-   [Beispiel für Cursor Type, LockType und EditMode-Eigenschaften](../../../ado/reference/ado-api/cursortype-locktype-and-editmode-properties-example-vb.md)  
   
--   [Description, HelpContext, HelpFile, NativeError, Anzahl, Quelle und SQLState Eigenschaften – Beispiel](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
+-   [Beschreibung, HelpContext, HelpFile, NativeError, Number, Source und SQLSTATE Properties (Beispiel)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)  
   
--   [EOS- und LineSeparator-Eigenschaft, SkipLine-Methode – Beispiel](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
+-   [Eigenschaften von EOS und lineseparser, SkipLine-Methode (Beispiel)](../../../ado/reference/ado-api/eos-and-lineseparator-properties-and-skipline-method-example-vb.md)  
   
--   [Filter und RecordCount – Beispiel](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)  
+-   [Beispiel für Filter-und RecordCount-Eigenschaften](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)  
   
--   [IsolationLevel und Mode Eigenschaften – Beispiel](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)  
+-   [Beispiel für IsolationLevel-und Mode-Eigenschaften](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)  
   
--   [Item-Eigenschaft – Beispiel](../../../ado/reference/ado-api/item-property-example-vb.md)  
+-   [Beispiel für eine Element Eigenschaft](../../../ado/reference/ado-api/item-property-example-vb.md)  
   
--   [MarshalOptions-Eigenschaft – Beispiel](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)  
+-   [Beispiel für die MarshalOptions-Eigenschaft](../../../ado/reference/ado-api/marshaloptions-property-example-vb.md)  
   
--   [MaxRecords-Eigenschaft – Beispiel](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)  
+-   [MaxRecords-Eigenschafts Beispiel](../../../ado/reference/ado-api/maxrecords-property-example-vb.md)  
   
--   [NumericScale und Precision-Eigenschaft – Beispiel](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)  
+-   [Beispiel für NumericScale-und Precision-Eigenschaften](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)  
   
--   [Optimize-Eigenschaft – Beispiel](../../../ado/reference/ado-api/optimize-property-example-vb.md)  
+-   [Beispiel für eine Optimierungs Eigenschaft](../../../ado/reference/ado-api/optimize-property-example-vb.md)  
   
--   [OriginalValue und UnderlyingValue – Beispiel](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)  
+-   [Beispiel für OriginalValue und UnderlyingValue-Eigenschaften](../../../ado/reference/ado-api/originalvalue-and-underlyingvalue-properties-example-vb.md)  
   
--   [Prepared-Eigenschaft – Beispiel](../../../ado/reference/ado-api/prepared-property-example-vb.md)  
+-   [Beispiel für eine vorbereitete Eigenschaft](../../../ado/reference/ado-api/prepared-property-example-vb.md)  
   
--   [Provider- und DefaultDatabase-Eigenschaften-Beispiel](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)  
+-   [Beispiel für Anbieter und DefaultDatabase-Eigenschaften](../../../ado/reference/ado-api/provider-and-defaultdatabase-properties-example-vb.md)  
   
--   [Sort-Eigenschaft – Beispiel](../../../ado/reference/ado-api/sort-property-example-vb.md)  
+-   [Beispiel für eine Sortier Eigenschaft](../../../ado/reference/ado-api/sort-property-example-vb.md)  
   
--   [Source-Eigenschaft – Beispiel](../../../ado/reference/ado-api/source-property-example-vb.md)  
+-   [Beispiel für eine Quell Eigenschaft](../../../ado/reference/ado-api/source-property-example-vb.md)  
   
--   [Status-Eigenschaft – Beispiel](../../../ado/reference/ado-api/state-property-example-vb.md)  
+-   [Beispiel für Zustands Eigenschaft](../../../ado/reference/ado-api/state-property-example-vb.md)  
   
--   [Status-Eigenschaft – Beispiel](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)  
+-   [Beispiel für eine Status Eigenschaft](../../../ado/reference/ado-api/status-property-example-recordset-vb.md)  
   
--   [StayInSync-Eigenschaft – Beispiel](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)  
+-   [Beispiel für die StayInSync-Eigenschaft](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)  
   
--   [Type-Eigenschaft – Beispiel (Field)](../../../ado/reference/ado-api/type-property-example-field-vb.md)  
+-   [Beispiel für eine Typeigenschaft (Feld)](../../../ado/reference/ado-api/type-property-example-field-vb.md)  
   
--   [Type-Eigenschaft – Beispiel (Eigenschaft)](../../../ado/reference/ado-api/type-property-example-property-vb.md)  
+-   [Beispiel für eine Typeigenschaft (Eigenschaft)](../../../ado/reference/ado-api/type-property-example-property-vb.md)  
   
--   [Wert-Eigenschaft – Beispiel](../../../ado/reference/ado-api/value-property-example-vb.md)  
+-   [Beispiel für Wert Eigenschaft](../../../ado/reference/ado-api/value-property-example-vb.md)  
   
--   [Version-Eigenschaft – Beispiel](../../../ado/reference/ado-api/version-property-example-vb.md)  
+-   [Beispiel für eine Versions Eigenschaft](../../../ado/reference/ado-api/version-property-example-vb.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO Codebeispiele (VBScript)](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
- [ADO-Codebeispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Code Beispiele VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
+ [ADO-Code Beispiele in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
+ [Anhang D: ADO-Beispiele](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

@@ -1,5 +1,5 @@
 ---
-title: Für Konvertierungsprogrammspezifikationen | Microsoft-Dokumentation
+title: Unterschlüssel der Konvertierungsspezifikation | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,26 +16,26 @@ ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093801"
 ---
 # <a name="translator-specification-subkeys"></a>Unterschlüssel für Konvertierungsprogrammspezifikationen
-Jede Konvertierer, die in der ODBC-Konvertierungsprogramme-Unterschlüssel aufgeführt verfügt über einen Unterschlüssel selbst. Dieser Unterschlüssel hat den gleichen Namen wie der entsprechende Wert unter dem Unterschlüssel für ODBC-Konvertierungsprogramme. Die Werte unter diesem Unterschlüssel auflisten, die vollständigen Pfade der Konvertierer, Translator-Setup-DLLs und die Verwendungsanzahl der. Die Formate der-Werte sind wie in der folgenden Tabelle gezeigt.  
+Jeder im Unterschlüssel für ODBC-Übersetzer aufgelistete Konvertierer hat seinen eigenen Unterschlüssel. Dieser Unterschlüssel hat denselben Namen wie der entsprechende Wert unter dem ODBC-Übersetzer-Unterschlüssel. Die Werte unter diesem Unterschlüssel Listen die vollständigen Pfade der Konvertierungs-und Konvertierungs-DLLs und der Verwendungs Anzahl auf. Die Formate der Werte sind wie in der folgenden Tabelle dargestellt.  
   
-|Name|Datentyp|Daten|  
+|Name|Datentyp|Data|  
 |----------|---------------|----------|  
-|Translator|REG_SZ|*translator-DLL-path*|  
-|Setup|REG_SZ|*setup-DLL-path*|  
-|UsageCount|REG_DWORD|*count*|  
+|Übersetzer|REG_SZ|*Translator-dll-Pfad*|  
+|Setup|REG_SZ|*Setup-DLL-Pfad*|  
+|Usagecount|REG_DWORD|*count*|  
   
- Informationen über die Verwendungszähler, finden Sie unter [zählen der Verwendung](../../../odbc/reference/install/usage-counting.md) weiter oben in diesem Abschnitt.  
+ Weitere Informationen zu Verwendungs Anzahlen finden Sie unter [Nutzungs Zählung](../../../odbc/reference/install/usage-counting.md) weiter oben in diesem Abschnitt.  
   
- Anwendungen sollten nicht die Verwendungsanzahl der festlegen. ODBC wird dieser Zähler zu verwalten.  
+ Anwendungen sollten die Verwendungs Anzahl nicht festlegen. Diese Anzahl wird von ODBC beibehalten.  
   
- Nehmen wir beispielsweise an den Microsoft Translator verwenden Code Seite verfügt über einen Konvertierungs-DLL, die mit dem Namen Mscpxl32.dll, die die Translator-Setup-Funktionen in der gleichen DLL sind und dass der Konvertierer drei Mal installiert wurde. Die Werte unter dem Unterschlüssel Microsoft Code Seite Translator könnte folgendermaßen aussehen:  
+ Nehmen wir beispielsweise an, der Microsoft-Codepage Translator hat eine Übersetzungs-DLL mit dem Namen Mscpxl32. dll, dass die Konvertierungs Funktionen des Konvertierungs Programms sich in derselben DLL befinden und dass der Konvertierer dreimal installiert wurde. Die Werte unter dem Unterschlüssel Microsoft Code Page Translator können wie folgt lauten:  
   
 ```  
 Translator : REG_SZ : C:\WINDOWS\SYSTEM32\MSCPXL32.DLL  

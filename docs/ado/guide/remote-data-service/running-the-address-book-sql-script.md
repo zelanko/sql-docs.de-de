@@ -1,5 +1,5 @@
 ---
-title: Ausführen des SQL-Skripts in Adressbuch | Microsoft-Dokumentation
+title: Ausführen des Adressbuchs SQL-Skripts | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,61 +14,61 @@ ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5adc631a3c3f7a66c02f9ebfe541fa5e923deb0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922230"
 ---
 # <a name="running-the-address-book-sql-script"></a>Ausführen des Adress Book-SQL-Skripts
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Verwenden Sie entweder das ISQL/Query Analyzer-Befehlszeilen-Hilfsprogramm oder SQL Server Enterprise Manager auf dem enthaltene SQL-Skript (Sampleemp.sql) ausführen, die:  
+ Sie müssen entweder das Befehlszeilenprogramm isql/Query Analyzer oder den SQL Server Enterprise-Manager verwenden, um das enthaltene SQL-Skript (sampleemp. SQL) auszuführen, das Folgendes umfasst:  
   
--   Erstellt eine neue Datenbank AddrBookDB, auf dem Standardgerät an.  
+-   Erstellt eine neue Datenbank, addrbookdb, auf dem Standardgerät.  
   
--   Eine Verbindung mit der Datenbank AddrBookDB.  
+-   Stellt eine Verbindung mit der-Datenbank her, addrbookdb.  
   
 -   Erstellt eine Employee-Tabelle.  
   
--   Füllt die Tabelle mit Beispieldaten.  
+-   Füllt die Tabelle mit Beispiel Daten auf.  
   
--   Führt eine einfache SELECT-Anweisung, um zu überprüfen, ob die Auffüllung der Datenbanktabelle an.  
+-   Führt eine einfache SELECT-Anweisung aus, um die Auffüllung der Datenbanktabelle zu überprüfen.  
   
--   Richtet ein Benutzerkonto namens "Adcdemo" mit dem Kennwort "Adcdemo."  
+-   Richtet ein Benutzerkonto mit dem Namen "adcdemo" mit dem Kennwort "adcdemo" ein.  
   
-#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>Zum Ausführen des Sampleemp.sql-Skripts in Microsoft SQL Server 6.5  
+#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-65"></a>So führen Sie das Skript "sampleemp. SQL" in Microsoft SQL Server 6,5 aus  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, und zeigen Sie dann auf **Microsoft SQL Server 6.5**. Klicken Sie auf **SQL Enterprise Manager**.  
+1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, und zeigen Sie dann auf **Microsoft SQL Server 6,5**. Klicken Sie auf **SQL Enterprise Manager**.  
   
-2.  Von der **Tools** Menü klicken Sie auf **SQL-Abfragetool**.  
+2.  Klicken Sie **im Menü** Extras auf **SQL-Abfrage Tool**.  
   
-3.  Klicken Sie auf **SQL-Skript laden** und navigieren Sie zu c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
+3.  Klicken Sie auf **SQL-Skript laden** , und navigieren Sie zu c:\platform sdk\samples\dataaccess\rds\addressbook.  
   
-4.  Wählen Sie die Datei Sampleemp.sql. Klicken Sie auf **Öffnen**.  
+4.  Wählen Sie die Datei sampleemp. SQL aus. Klicken Sie auf **Öffnen**.  
   
-5.  Klicken Sie auf die **Abfrage ausführen** Schaltfläche (der grüne Pfeil auf der Symbolleiste).  
+5.  Klicken Sie auf die Schaltfläche **Abfrage ausführen** (der grüne Pfeil auf der Symbolleiste).  
   
-6.  Nachdem sie ausgeführt wird, schließen die **Abfrage** und **Enterprise Manager** Windows.  
+6.  Schließen Sie nach der Ausführung die **Abfrage** und die Fenster von **Enterprise Manager** .  
   
-#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>Zum Ausführen des Sampleemp.sql-Skripts in Microsoft SQL Server 7.0  
+#### <a name="to-run-the-sampleempsql-script-in-microsoft-sql-server-70"></a>So führen Sie das Skript "sampleemp. SQL" in Microsoft SQL Server 7,0 aus  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, und zeigen Sie dann auf **Microsoft SQL Server 7.0**. Klicken Sie auf **Enterprise Manager**.  
+1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, und zeigen Sie dann auf **Microsoft SQL Server 7,0**. Klicken Sie auf **Enterprise Manager**.  
   
-2.  Achten Sie darauf, dass die SQL-Server, die Sie verwenden möchten, aus der Liste der registrierten Server in Enterprise Manager ausgewählt ist.  
+2.  Stellen Sie sicher, dass die SQL Server, die Sie verwenden möchten, in der Liste der registrierten Server in Enterprise Manager ausgewählt ist.  
   
-3.  Von der **Tools** Menü klicken Sie auf **SQL Server Query Analyzer**.  
+3.  Klicken Sie **im Menü** Extras auf **SQL Server Query Analyzer**.  
   
-4.  Klicken Sie auf die **SQL-Skript laden** Schaltfläche (im geöffneten Ordner auf der Symbolleiste), und navigieren Sie zu c:\Platform SDK\Samples\DataAccess\RDS\AddressBook.  
+4.  Klicken Sie auf die Schaltfläche **SQL-Skript laden** (den Ordner öffnen auf der Symbolleiste), und navigieren Sie zu c:\platform sdk\samples\dataaccess\rds\addressbook.  
   
-5.  Wählen Sie die Datei Sampleemp.sql. Klicken Sie auf **Öffnen**.  
+5.  Wählen Sie die Datei sampleemp. SQL aus. Klicken Sie auf **Öffnen**.  
   
-6.  Klicken Sie auf die **Abfrage ausführen** Schaltfläche (der grüne Pfeil auf der Symbolleiste) oder **F5**.  
+6.  Klicken Sie auf die Schaltfläche **Abfrage ausführen** (grüner Pfeil auf der Symbolleiste) oder **F5**.  
   
-7.  Nachdem sie ausgeführt wird, schließen die **Abfrage**, **Query Analyzer**, und **Enterprise Manager** Windows.  
+7.  Schließen Sie nach der Ausführung die **Abfrage**, **Abfrage Analyse**und **Enterprise Manager** -Fenster.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen der Adress Book-Beispielanwendung](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
 
 

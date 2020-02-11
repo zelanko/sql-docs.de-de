@@ -20,17 +20,18 @@ ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064125"
 ---
 # <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe (API für erweiterte gespeicherte Prozeduren)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Definiert den Spaltennamen und die Quellen- und Zieldatentypen für eine bestimmte Spalte in einer Zeile.  
   
@@ -81,13 +82,13 @@ srcdata
  *namelen*  
  Gibt die Länge von *column_name* in Byte an. Wenn *namelen* den Wert SRV_NULLTERM hat, muss *column_name* NULL-terminiert sein.  
   
- *desttype*  
+ *destType*  
  Gibt den Datentyp der Spalte mit der Zielzeile an. Dies ist der Datentyp, der an den Client gesendet wird. Der Datentyp muss angegeben werden, auch wenn die Daten NULL sind. Weitere Informationen finden Sie unter [Data Types (Extended Stored Procedure API) (Datentypen (API für erweiterte gespeicherte Prozeduren))](../../relational-databases/extended-stored-procedures-reference/data-types-extended-stored-procedure-api.md).  
   
  *destlen*  
  Gibt die Länge der Daten in Byte an, die an den Client gesendet werden sollen. Für Datentypen mit fester Länge, die keine NULL-Werte zulassen, wird *destlen* ignoriert. Für Datentypen variabler Länge und Datentypen fester Länge, die NULL-Werte zulassen, gibt *destlen* die maximal zulässige Länge der Zieldaten an.  
   
- *srctype*  
+ *srcType*  
  Gibt den Datentyp der Quelldaten an.  
   
  *srclen*  
@@ -98,7 +99,7 @@ srcdata
   
  Wenn *desttype* den Wert SRVDECIMAL oder SRVNUMERIC aufweist, muss der *srcdata*-Parameter ein Zeiger auf eine DBNUMERIC- oder DBDECIMAL-Struktur sein, und die Felder für Genauigkeit und Dezimalstellen müssen bereits auf die gewünschten Werte festgelegt worden sein. Mit DEFAULTPRECISION können Sie eine Standardgenauigkeit angeben und mit DEFAULTSCALE einen Standardwert für die Dezimalstellen.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  Die Nummer der beschriebenen Spalte. Die erste Spalte ist die Spalte 1. Tritt ein Fehler auf, wird 0 zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -114,8 +115,8 @@ srcdata
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [srv_sendrow (API für erweiterte gespeicherte Prozeduren)](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
- [srv_setutype (API für erweiterte gespeicherte Prozeduren)](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
- [srv_setcoldata (API für erweiterte gespeicherte Prozeduren)](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  
+ [srv_sendrow &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
+ [srv_setutype &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
+ [srv_setcoldata &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  
   
   

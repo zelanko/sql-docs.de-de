@@ -1,5 +1,5 @@
 ---
-title: Festlegen der Transaktionsisolation | Microsoft-Dokumentation
+title: Festlegen der Transaktions Isolationsstufe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 64a037f0-5065-4f45-9669-6710404a540c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e59db823f8b84edfb5c92f2d142c8238449e3323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107581"
 ---
 # <a name="setting-the-transaction-isolation-level"></a>Festlegen der Transaktionsisolationsstufe
-Zum Festlegen der Isolationsstufe für Transaktionen verwendet eine Anwendung das Verbindungsattribut SQL_ATTR_TXN_ISOLATION. Wenn die Datenquelle die angeforderte Isolationsstufe nicht unterstützt, kann die Treiber oder die Datenquelle eine höhere Ebene festlegen. Um zu bestimmen, welche Transaktionsisolationsstufen wird eine Datenquelle unterstützt, und welche die Standardisolationsstufe ist, eine Anwendung ruft **SQLGetInfo** mit den Optionen dem SQL_TXN_ISOLATION_OPTION und SQL_DEFAULT_TXN_ISOLATION bzw.  
+Zum Festlegen der Transaktions Isolationsstufe verwendet eine Anwendung das SQL_ATTR_TXN_ISOLATION-Verbindungs Attribut. Wenn die Datenquelle die angeforderte Isolationsstufe nicht unterstützt, kann der Treiber oder die Datenquelle eine höhere Ebene festlegen. Zum Ermitteln der Transaktions Isolations Stufen, die von einer Datenquelle unterstützt werden, und der Standard Isolationsstufe, ruft eine Anwendung **SQLGetInfo** mit den Optionen "SQL_TXN_ISOLATION_OPTION" und "SQL_DEFAULT_TXN_ISOLATION" auf.  
   
- Höhere Stufen der Transaktionsisolation bieten die größtmöglichen Schutz für die Integrität von Datenbankdaten. Serializable-Transaktionen sind immer durch andere Transaktionen nicht betroffen, und daher unbedingt die Datenbankintegrität zu verwalten.  
+ Ein höheres Maß an Transaktions Isolation bietet den meisten Schutz für die Integrität von Datenbankdaten. Serialisierbare Transaktionen sind garantiert von anderen Transaktionen unberührt und gewährleisten daher die Datenbankintegrität.  
   
- Allerdings kann ein höheres Maß an Isolation jeder Transaktion Leistungseinbußen führen, da die Wahrscheinlichkeit erhöht, die die Anwendung auf Daten freigegeben werden Sperren gewartet wird. Eine Anwendung kann auf eine niedrigere Ebene der Isolation zum Erhöhen der Leistung in den folgenden Fällen angeben:  
+ Ein höheres Maß an Transaktions Isolation kann jedoch zu einer geringeren Leistung führen, da dadurch die Wahrscheinlichkeit erhöht wird, dass die Anwendung auf die Freigabe von Sperren von Daten wartet. Eine Anwendung kann eine niedrigere Isolationsstufe angeben, um die Leistung in den folgenden Fällen zu verbessern:  
   
--   Wenn garantiert werden kann, dass, die keine anderen Transaktionen vorhanden sind kann Transaktionen von einer Anwendung beeinträchtigen. Diese Situation tritt nur unter bestimmten Umständen, z. B. wenn eine Person in einem kleinen Unternehmen dBASE-Dateien verwaltet, die persönliche Daten auf einem Computer enthalten und diese Dateien wird nicht freigegeben.  
+-   Wenn gewährleistet werden kann, dass keine anderen Transaktionen vorhanden sind, die die Transaktionen einer Anwendung beeinträchtigen können. Diese Situation tritt nur in bestimmten Situationen auf, z. b. Wenn eine Person in einem kleinen Unternehmen dBASE-Dateien unterhält, die Personaldaten auf einem Computer enthalten und diese Dateien nicht gemeinsam nutzen.  
   
--   Wenn Geschwindigkeit ist wichtiger als die Genauigkeit und ggf. aufgetretenen Fehlern wahrscheinlich klein sein werden. Nehmen wir beispielsweise an, dass ein Unternehmen viele kleine Verkäufe macht und große Sales selten sind. Eine Transaktion, die den Gesamtwert aller geöffneten Sales schätzt können problemlos die Isolationsstufe Read Uncommitted. Obwohl die Transaktion Bestellungen enthalten würde, die geöffnet oder geschlossen und anschließend werden ein Rollback diese würden in der Regel heben sich gegenseitig und die Transaktion wäre viel schneller, weil er nicht blockiert wird, jedes Mal, wenn die It solche eine Bestellung auftritt.  
+-   Wenn die Geschwindigkeit kritischer als die Genauigkeit ist und Fehler wahrscheinlich gering sind. Nehmen wir beispielsweise an, dass ein Unternehmen viele kleine Umsätze durchführt und dass große Umsätze selten sind. Eine Transaktion, die den Gesamtwert aller geöffneten Verkäufe schätzt, kann die Read-Isolationsstufe ohne Commit sicher verwenden. Obwohl die Transaktion Aufträge einschließen würde, die geöffnet oder geschlossen werden und anschließend ein Rollback durchgeführt wird, werden diese in der Regel gegenseitig abgebrochen, und die Transaktion wäre viel schneller, da Sie nicht jedes Mal blockiert wird, wenn eine solche Bestellung auftritt.  
   
- Weitere Informationen finden Sie unter [optimistische Parallelität](../../../odbc/reference/develop-app/optimistic-concurrency.md).
+ Weitere Informationen finden Sie unter [optimistische](../../../odbc/reference/develop-app/optimistic-concurrency.md)Parallelität.

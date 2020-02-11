@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 69144341bd9cff344d4514f076517afac52e2a4b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097296"
 ---
 # <a name="uniquename-mdx"></a>UniqueName (MDX)
@@ -50,8 +50,8 @@ Member_Expression.UniqueName
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **UniqueName** Funktionsergebnis ist der eindeutige Name des Objekts, nicht den Namen, die zurückgegeben werden, indem die [Namen](../mdx/name-mdx.md) Funktion. Der zurückgegebene Name enthält nicht den Namen des Cubes. Das zurückgegebene Ergebnis hängt von den serverseitigen Einstellungen oder von der MDX Unique Name Style-Eigenschaft der Verbindungszeichenfolge ab.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **UniqueName** -Funktion gibt den eindeutigen Namen des Objekts zurück, nicht den Namen, der von der [Name](../mdx/name-mdx.md) -Funktion zurückgegeben wird. Der zurückgegebene Name enthält nicht den Namen des Cubes. Das zurückgegebene Ergebnis hängt von den serverseitigen Einstellungen oder von der MDX Unique Name Style-Eigenschaft der Verbindungszeichenfolge ab.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird der Wert des eindeutigen Namens der Product-Dimension, der Product Categories-Hierarchie, der Subcategory-Ebene und des Bike Racks-Elements im Adventure Works-Cube zurückgegeben.  
@@ -74,7 +74,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

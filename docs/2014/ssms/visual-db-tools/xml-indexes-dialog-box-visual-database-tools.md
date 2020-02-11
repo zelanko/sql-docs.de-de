@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0c946e0e195937dd2e722ac3f092a57e40427b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63228354"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML-Indizes (Dialogfeld) (Visual Database Tools)
   Verwenden Sie das Dialogfeld **XML-Indizes** , um Indizes für Spalten vom Datentyp XML zu erstellen, denn diese können nicht mithilfe des Dialogfelds **Index/Schlüssel** indiziert werden. Jede XML-Spalte kann mehrere XML-Indizes aufweisen, aber der zuerst erstellte Index (der primäre Index) bildet die Basis für alle weiteren Indizes (die sekundären Indizes). Wenn Sie den primären XML-Index löschen, werden auch die sekundären Indizes gelöscht.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Ausgewählter XML-Index**  
  Listet vorhandene XML-Indizes auf. Wird ausgewählt, um die zugehörigen Eigenschaften im rechten Datenblatt anzuzeigen. Falls die Liste leer ist, sind für die Tabelle Indizes definiert worden.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Erstellen Sie einen neuen XML-Index.  
   
  **Löschen**  
@@ -87,7 +87,7 @@ ms.locfileid: "63228354"
  **Zeilensperren sind zulässig**  
  Geben Sie an, ob das Sperren auf Zeilenebene für diesen Index zugelassen ist. Das Zulassen oder Untersagen von Sperren auf Zeilenebene wirkt sich auf die Datenbankleistung aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von XML-Indizes](../../relational-databases/xml/create-xml-indexes.md)  
   
   

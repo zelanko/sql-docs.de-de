@@ -1,5 +1,5 @@
 ---
-title: Anweisungshandles | Microsoft-Dokumentation
+title: Anweisungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 65d6d78b-a8c8-489a-9dad-f8d127a44882
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 730ead7bf90af3b6e6906fe184e0fa3312212137
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107260"
 ---
 # <a name="statement-handles"></a>Anweisungshandles
-Ein *Anweisung* ist am einfachsten vorstellen als SQL-Anweisung, wie z. B. **wählen \* aus Mitarbeiter**. Allerdings wird eine Anweisung ist mehr als nur eine SQL-Anweisung – Es besteht aus der alle Informationen, SQL-Anweisung, wie z. B. alle Resultsets, die von der Anweisung erstellt und in der Ausführung der Anweisung verwendeten Parametern zugeordnet. Eine Anweisung muss auch nicht um eine Anwendung definierte SQL-Anweisung zu erhalten. Wenn ein Katalog funktionieren wie z. B. **SQLTables** ausgeführt wird in einer Anweisung, führt es eine vordefinierte SQL-Anweisung, die eine Liste der Tabellennamen zurückgibt.  
+Eine- *Anweisung* lässt sich am einfachsten als SQL-Anweisung vorstellen, wie z. b. ** \* Select from Employee**. Eine-Anweisung ist jedoch mehr als nur eine SQL-Anweisung. Sie besteht aus allen Informationen, die mit dieser SQL-Anweisung verknüpft sind, wie z. b. alle von der-Anweisung erstellten Resultsets und Parameter, die bei der Ausführung der-Anweisung verwendet werden. Eine-Anweisung muss nicht einmal über eine von der Anwendung definierte SQL-Anweisung verfügen. Wenn z. b. eine Katalog Funktion wie **SQLTables** für eine-Anweisung ausgeführt wird, führt Sie eine vordefinierte SQL-Anweisung aus, die eine Liste von Tabellennamen zurückgibt.  
   
- Jede Anweisung wird durch ein Anweisungshandle identifiziert. Eine Anweisung mit einer einzelnen Verbindung verknüpft ist können, und es mehrere Anweisungen für die Verbindung. Einige Treiber Beschränken der Anzahl aktiver Anweisungen, die sie unterstützen. die SQL_MAX_CONCURRENT_ACTIVITIES option **SQLGetInfo** gibt an, wie viele aktive Anweisungen, die ein Treiber, die über eine einzelne Verbindung unterstützt. Eine Anweisung definiert *active* verfügt es Ergebnisse ausstehen, in dem Ergebnisse sind, entweder ein Resultset oder die Anzahl der von betroffenen Zeilen eine **einfügen**, **UPDATE**, oder **Löschen** -Anweisung oder Daten mit mehreren Aufrufen an gesendet wird **SQLPutData**.  
+ Jede-Anweisung wird durch ein Anweisungs Handle identifiziert. Eine-Anweisung ist einer einzelnen Verbindung zugeordnet, und es können mehrere-Anweisungen für diese Verbindung vorhanden sein. Einige Treiber schränken die Anzahl der aktiven Anweisungen ein, die Sie unterstützen. die Option SQL_MAX_CONCURRENT_ACTIVITIES in **SQLGetInfo** gibt an, wie viele aktive Anweisungen ein Treiber für eine einzelne Verbindung unterstützt. Eine-Anweisung ist so definiert, dass Sie *aktiv* ist, wenn Ergebnisse ausstehen, wobei Ergebnisse entweder ein Resultset oder die Anzahl der von einer **Insert**-, **Update**-oder **Delete** -Anweisung betroffenen Zeilen sind oder dass Daten mit mehreren Aufrufen von **SQLPutData**gesendet werden.  
   
- Innerhalb eines Codeabschnitts, die ODBC (des Treiber-Managers oder eines Treibers) implementiert, identifiziert das Anweisungshandle eine Struktur, die Informationen, wie z. B. enthält:  
+ Innerhalb eines Code Abschnitts, der ODBC (Treiber-Manager oder Treiber) implementiert, identifiziert das Anweisungs Handle eine-Struktur, die Anweisungs Informationen enthält, wie z. b.:  
   
--   Status von der Anweisung  
+-   Der Status der Anweisung.  
   
--   Die aktuelle auf Anweisungsebene-Diagnose  
+-   Die aktuelle Diagnose auf Anweisungs Ebene  
   
--   Die Adressen der Anwendungsvariablen an die Anweisung Parameter gebunden und Resultsetspalten  
+-   Die Adressen der Anwendungsvariablen, die an die Parameter und Resultsetspalten der Anweisung gebunden sind.  
   
--   Die aktuellen Einstellungen der einzelnen Anweisung attribute  
+-   Die aktuellen Einstellungen der einzelnen Anweisungs Attribute  
   
- Anweisungshandles werden in den meisten ODBC-Funktionen verwendet. Sie werden vor allem in den Funktionen verwendet, um den Parameter gebunden und Resultsetspalten (**SQLBindParameter** und **SQLBindCol**), Vorbereiten und Ausführen von Anweisungen (**SQLPrepare** **SQLExecute**, und **SQLExecDirect**), Abrufen von Metadaten (**SQLColAttribute** und **SQLDescribeCol**), Abrufen Ergebnisse (**SQLFetch**), und rufen Sie die Diagnose (**SQLGetDiagField** und **SQLGetDiagRec**). Sie werden auch in Katalogfunktionen verwendet (**SQLColumns**, **SQLTables**usw.) und eine Reihe von weiteren Funktionen.  
+ Anweisungs Handles werden in den meisten ODBC-Funktionen verwendet. Insbesondere werden Sie in den Funktionen verwendet, um Parameter und Resultsetspalten (**SQLBindParameter** und **SQLBindCol**) zu binden. vorbereiten und Ausführen von Anweisungen (**SQLPrepare**, **SQLExecute**und **SQLExecDirect**), Abrufen von Metadaten (**SQLColAttribute** und **SQLDescribeCol**), Abrufen von Ergebnissen (**SQLFetch**) und Abrufen der Diagnose (**SQLGetDiagField** und **SQLGetDiagRec**). Sie werden auch in Katalog Funktionen (**SQLColumns**, **SQLTables**usw.) und einer Reihe weiterer Funktionen verwendet.  
   
- Anweisungshandle zugeordnet sind **SQLAllocHandle** und mit freigegebenen **SQLFreeHandle**.
+ Anweisungs Handles werden mit **sqlzuordchandle** zugeordnet und mit **SQLFreeHandle**freigegeben.

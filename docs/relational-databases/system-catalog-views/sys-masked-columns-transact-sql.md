@@ -1,5 +1,5 @@
 ---
-title: masked_columns (Transact-SQL) | Microsoft-Dokumentation
+title: sys. masked_columns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -19,33 +19,33 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68102376"
 ---
-# <a name="sysmaskedcolumns-transact-sql"></a>masked_columns (Transact-SQL)
+# <a name="sysmasked_columns-transact-sql"></a>sys. masked_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Verwenden der **masked_columns** -Ansicht zum Abfragen von Tabellenspalten, die eine dynamische datenmaskierung-Funktion, die angewendet werden. Diese Ansicht erbt von der **sys.columns** -Ansicht. Sie gibt alle Spalten in der **sys.columns** -Ansicht sowie die Spalten **is_masked** und **masking_function** zurück, wobei angegeben wird, ob die Spalte maskiert ist. Ist dies der Fall, gibt die Ansicht die definierte Maskierungsfunktion an. Diese Ansicht zeigt nur die Spalten an, auf die eine Maskierungsfunktion angewendet wird.  
+  Verwenden Sie die **sys. masked_columns** -Sicht zum Abfragen von Tabellen Spalten, auf die eine dynamische Daten Maskierungs Funktion angewendet wird. Diese Ansicht erbt von der **sys.columns** -Ansicht. Sie gibt alle Spalten in der **sys.columns** -Ansicht sowie die Spalten **is_masked** und **masking_function** zurück, wobei angegeben wird, ob die Spalte maskiert ist. Ist dies der Fall, gibt die Ansicht die definierte Maskierungsfunktion an. Diese Ansicht zeigt nur die Spalten an, auf die eine Maskierungsfunktion angewendet wird.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Die ID des Objekts, zu dem diese Spalte gehört.|  
-|NAME|**sysname**|Der Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
+|name|**sysname**|Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
 |column_id|**int**|ID der Spalte. Ist eindeutig innerhalb des Objekts.<br /><br /> Spalten-IDs sind möglicherweise nicht sequenziell.|  
-|**masked_columns** gibt viele weitere Spalten geerbt von **sys.columns**.|verschiedene|Finden Sie unter [sys.columns &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) für weitere Spaltendefinitionen.|  
-|is_masked|**bit**|Gibt an, ob die Spalte maskiert ist. 1 gibt verdeckter Form an.|  
-|masking_function|**nvarchar(4000)**|Die Maskierungsfunktion für die Spalte.|  
+|**sys. masked_columns** gibt viele weitere Spalten zurück, die von **sys. Columns**geerbt wurden.|Verschiedene|Weitere Spaltendefinitionen finden Sie unter [sys. Columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) .|  
+|is_masked|**bit**|Gibt an, ob die Spalte maskiert ist. 1 weist auf maskiert hin.|  
+|masking_function|**nvarchar(4000)**|Die Maskierungs Funktion für die Spalte.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="permissions"></a>Berechtigungen  
- In dieser Ansicht werden Informationen zu Tabellen zurückgegeben, in denen der Benutzer eine Art der Berechtigung für die Tabelle verfügt, oder wenn der Benutzer die VIEW ANY DEFINITION-Berechtigung verfügt.  
+ Diese Sicht gibt Informationen zu Tabellen zurück, in denen der Benutzer über eine Berechtigung für die Tabelle verfügt, oder wenn der Benutzer über die VIEW ANY DEFINITION-Berechtigung verfügt.  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage Joins **masked_columns** zu **sys.tables** zum Zurückgeben von Informationen zu allen maskiert Spalten.  
+ Die folgende Abfrage verbindet **sys. masked_columns** mit **sys. Tables** , um Informationen zu allen maskierten Spalten zurückzugeben.  
   
 ```  
 SELECT tbl.name as table_name, c.name AS column_name, c.is_masked, c.masking_function  
@@ -55,8 +55,8 @@ JOIN sys.tables AS tbl
 WHERE is_masked = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Dynamische Datenmaskierung](../../relational-databases/security/dynamic-data-masking.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [dynamische Datenmaskierung](../../relational-databases/security/dynamic-data-masking.md)   
  [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)  
   
   

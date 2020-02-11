@@ -1,5 +1,5 @@
 ---
-title: Verwenden des VFP FoxPro-ODBC-Treibers mit Visual Basic-Anwendung | Microsoft-Dokumentation
+title: Verwenden des VFP FoxPro-ODBC-Treibers mit Ihrer Visual Basic Anwendung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,53 +16,53 @@ ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 017e8e7897b2b792d7a864dc336537d76dcad8b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68087979"
 ---
 # <a name="using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application"></a>Verwenden des VFP FoxPro-ODBC-Treibers mit Ihrer Visual Basic-Anwendung
-Ihr Microsoft® Visual Basic®-Anwendung kann mit Visual FoxPro-Daten kommunizieren, indem Sie ein Steuerelement die Verbindung mit einer Visual FoxPro-Datenquelle erstellen.  
+Die Microsoft® Visual Basic®-Anwendung kann mit Visual FoxPro-Daten kommunizieren, indem ein Daten Steuerelement erstellt wird, das eine Verbindung mit einer Visual FoxPro-Datenquelle herstellt.  
   
-#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>Verbindung mit Visual FoxPro-Daten, die über das Steuerelement in Visual Basic  
+#### <a name="to-connect-to-visual-foxpro-data-using-the-data-control-in-visual-basic"></a>So stellen Sie mithilfe des Daten Steuer Elements in eine Verbindung mit Visual FoxPro-Daten her Visual Basic  
   
-1.  Erstellen Sie eine Datenquelle mit dem Namen "test" die Verbindung mit der TasTrade-Beispieldatenbank, die im Visual FoxPro enthalten. Die Visual FoxPro-Standardinstallation fügt die TasTrade-Beispieldatenbank, an der Position:  
+1.  Erstellen Sie eine Datenquelle mit dem Namen "Test", die eine Verbindung mit der in Visual FoxPro enthaltenen Beispieldatenbank "Tastrade" herstellt. In der Standardinstallation von Visual FoxPro wird die Beispieldatenbank "Tastrade" am Speicherort angezeigt:  
   
     ```  
     c:\vfp\samples\mainsamp\data\tastrade.dbc  
     ```  
   
-2.  Klicken Sie in Visual Basic erstellen ein neues Formular, und platzieren Sie ein Textfeld und ein Steuerelement auf.  
+2.  Erstellen Sie in Visual Basic ein neues Formular, und platzieren Sie ein Textfeld und ein Daten Steuerelement.  
   
-3.  Ändern Sie die Connect-Eigenschaft des Steuerelements wie folgt:  
+3.  Ändern Sie die Connect-Eigenschaft des Daten Steuer Elements wie folgt:  
   
     ```  
     ODBC;DATABASE=tastrade;DSN=test  
     ```  
   
-4.  Ändern der Eigenschaft Recordsettyp wie folgt:  
+4.  Ändern Sie die Eigenschaft RecordsetType in Folgendes:  
   
     ```  
     2 - Snapshot  
     ```  
   
-5.  Ändern Sie die Datenherkunft-Eigenschaft wie folgt aus:  
+5.  Ändern Sie die Eigenschaft RecordSource in Folgendes:  
   
     ```  
     customer  
     ```  
   
-6.  Ändern Sie die DataSource-Eigenschaft für das Textfeld, in der Standardname für das Steuerelement die folgenden:  
+6.  Ändern Sie die DataSource-Eigenschaft für das Textfeld in den Standardnamen für das Daten Steuerelement wie folgt:  
   
     ```  
     data1  
     ```  
   
-7.  Ändern Sie das Textfeld DataField-Eigenschaft wie folgt aus:  
+7.  Ändern Sie die Datin-Eigenschaft des Textfelds wie folgt:  
   
     ```  
     customer_id  
     ```  
   
-8.  Führen Sie das Formular, und verwenden Sie das Steuerelement über die Felder der Kunden-Id aus der Visual FoxPro-TasTrade-Beispieldatenbank zu überspringen.
+8.  Führen Sie das Formular aus, und verwenden Sie das Daten Steuerelement, um die Felder Customer ID aus der Beispieldatenbank Visual FoxPro Tastrade zu überspringen.

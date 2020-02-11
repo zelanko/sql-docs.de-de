@@ -1,5 +1,5 @@
 ---
-title: Attribut-Konformität | Microsoft-Dokumentation
+title: Attribut Übereinstimmung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 34fea100-10f9-46d5-bc50-3aa867b70f24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 71f0da7bbd7ef1a37a1f48539c7230bff0ceda15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67909911"
 ---
 # <a name="attribute-conformance"></a>Attributübereinstimmung
-Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODBC-Umgebung, in denen dies gut definiert ist.  
+In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-Umgebungs Attribute angegeben, in denen diese klar definiert ist.  
   
 |Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
@@ -32,22 +32,22 @@ Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODB
 |SQL_ATTR_ODBC_VER|Core|  
 |SQL_ATTR_OUTPUT_NTS|--[1]|  
   
- [1] Dies ist ein optionales Feature und als solches ist nicht Teil der Ebenen der schnittstellenübereinstimmung.  
+ [1] Dies ist ein optionales Feature, das nicht Teil der Konformitätsstufen ist.  
   
- Die folgende Tabelle gibt an, dem Konformitätsgrad des jede ODBC-Verbindungsattributs, in denen dies gut definiert ist.  
+ In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-Verbindungs Attribute angegeben, wobei diese klar definiert ist.  
   
 |Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
 |SQL_ATTR_ACCESS_MODE|Core|  
 |SQL_ATTR_ASYNC_ENABLE|Ebene 1/Ebene 2 [1]|  
-|SQL_ATTR_AUTO_IPD|Ebene 2|  
+|SQL_ATTR_AUTO_IPD|Ebene 2|  
 |SQL_ATTR_AUTOCOMMIT|Ebene 1|  
 |SQL_ATTR_CONNECTION_DEAD|Ebene 1|  
-|SQL_ATTR_CONNECTION_TIMEOUT|Ebene 2|  
-|SQL_ATTR_CURRENT_CATALOG|Ebene 2|  
-|SQL_ATTR_LOGIN_TIMEOUT|Ebene 2|  
+|SQL_ATTR_CONNECTION_TIMEOUT|Ebene 2|  
+|SQL_ATTR_CURRENT_CATALOG|Ebene 2|  
+|SQL_ATTR_LOGIN_TIMEOUT|Ebene 2|  
 |SQL_ATTR_ODBC_CURSORS|Core|  
-|SQL_ATTR_PACKET_SIZE|Ebene 2|  
+|SQL_ATTR_PACKET_SIZE|Ebene 2|  
 |SQL_ATTR_QUIET_MODE|Core|  
 |SQL_ATTR_TRACE|Core|  
 |SQL_ATTR_TRACEFILE|Core|  
@@ -55,11 +55,11 @@ Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODB
 |SQL_ATTR_TRANSLATE_OPTION|Core|  
 |SQL_ATTR_TXN_ISOLATION|Ebene 1/Ebene 2 [2]|  
   
- [1]-Anwendungen, die auf Serverebene Asynchronie (erforderlich für Ebene 1) unterstützen müssen durch Festlegen dieses Attributs auf SQL_TRUE durch Aufrufen von unterstützen **SQLSetConnectAttr**; das Attribut muss nicht auf einen anderen Wert als den Standardwert festgelegt werden. Wert über **SQLSetStmtAttr**. Anwendungen, die auf Anweisungsebene Asynchronie (erforderlich für Ebene 2) unterstützen müssen durch Festlegen dieses Attributs auf SQL_TRUE, die mit beiden-Funktion unterstützen.  
+ [1] Anwendungen, die Asynchronität auf Verbindungs Ebene unterstützen (erforderlich für Ebene 1), müssen das Festlegen dieses Attributs auf SQL_TRUE durch Aufrufen von **SQLSetConnectAttr**unterstützen. das Attribut muss nicht durch **SQLSetStmtAttr**auf einen anderen Wert als seinen Standardwert festgelegt werden können. Anwendungen, die Asynchronität auf Anweisungs Ebene (erforderlich für Ebene 2) unterstützen, müssen das Festlegen dieses Attributs auf SQL_TRUE mithilfe einer der beiden Funktionen unterstützen.  
   
- [2] für Ebene-1-schnittstellenübereinstimmung der Treiber muss einen Wert neben den treiberdefinierten Standardwert unterstützen (durch Aufrufen von verfügbaren **SQLGetInfo** mit der Option SQL_DEFAULT_TXN_ISOLATION). Für Ebene-2-schnittstellenübereinstimmung muss der Treiber auch sql_txn_serializable festgelegt sind unterstützen.  
+ [2] für die Schnittstellen Konformität der Ebene 1 muss der Treiber zusätzlich zu dem vom Treiber definierten Standardwert einen Wert unterstützen (verfügbar durch Aufrufen von **SQLGetInfo** mit der SQL_DEFAULT_TXN_ISOLATION-Option). Bei der Schnittstellen Konformität der Ebene 2 muss der Treiber auch SQL_TXN_SERIALIZABLE unterstützen.  
   
- Die folgende Tabelle gibt an, dem Konformitätsgrad des einzelnen ODBC-Anweisungsattribut, zu dem, in denen dies gut definiert ist.  
+ In der folgenden Tabelle ist die Übereinstimmungs Stufe der einzelnen ODBC-Anweisungs Attribute angegeben, in denen diese ordnungsgemäß definiert ist.  
   
 |Funktion|Übereinstimmungsebene|  
 |--------------|-----------------------|  
@@ -68,13 +68,13 @@ Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODB
 |SQL_ATTR_ASYNC_ENABLE|Ebene 1/Ebene 2 [1]|  
 |SQL_ATTR_CONCURRENCY|Ebene 1/Ebene 2 [2]|  
 |SQL_ATTR_CURSOR_SCROLLABLE|Ebene 1|  
-|SQL_ATTR_CURSOR_SENSITIVITY|Ebene 2|  
-|SQL_ATTR_CURSOR_TYPE|Core-Ebene-2 [3]|  
-|SQL_ATTR_ENABLE_AUTO_IPD|Ebene 2|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|Ebene 2|  
+|SQL_ATTR_CURSOR_SENSITIVITY|Ebene 2|  
+|SQL_ATTR_CURSOR_TYPE|Kern/Ebene 2 [3]|  
+|SQL_ATTR_ENABLE_AUTO_IPD|Ebene 2|  
+|SQL_ATTR_FETCH_BOOKMARK_PTR|Ebene 2|  
 |SQL_ATTR_IMP_PARAM_DESC|Core|  
 |SQL_ATTR_IMP_ROW_DESC|Core|  
-|SQL_ATTR_KEYSET_SIZE|Ebene 2|  
+|SQL_ATTR_KEYSET_SIZE|Ebene 2|  
 |SQL_ATTR_MAX_LENGTH|Ebene 1|  
 |SQL_ATTR_MAX_ROWS|Ebene 1|  
 |SQL_ATTR_METADATA_ID|Core|  
@@ -85,7 +85,7 @@ Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODB
 |SQL_ATTR_PARAM_STATUS_PTR|Core|  
 |SQL_ATTR_PARAMS_PROCESSED_PTR|Core|  
 |SQL_ATTR_PARAMSET_SIZE|Core|  
-|SQL_ATTR_QUERY_TIMEOUT|Ebene 2|  
+|SQL_ATTR_QUERY_TIMEOUT|Ebene 2|  
 |SQL_ATTR_RETRIEVE_DATA|Ebene 1|  
 |SQL_ATTR_ROW_ARRAY_SIZE|Core|  
 |SQL_ATTR_ROW_BIND_OFFSET_PTR|Core|  
@@ -94,11 +94,11 @@ Die folgende Tabelle zeigt dem Konformitätsgrad des jedes Attribut für den ODB
 |SQL_ATTR_ROW_OPERATION_PTR|Ebene 1|  
 |SQL_ATTR_ROW_STATUS_PTR|Core|  
 |SQL_ATTR_ROWS_FETCHED_PTR|Core|  
-|SQL_ATTR_SIMULATE_CURSOR|Ebene 2|  
-|SQL_ATTR_USE_BOOKMARKS|Ebene 2|  
+|SQL_ATTR_SIMULATE_CURSOR|Ebene 2|  
+|SQL_ATTR_USE_BOOKMARKS|Ebene 2|  
   
- [1]-Anwendungen, die auf Serverebene Asynchronie (erforderlich für Ebene 1) unterstützen müssen durch Festlegen dieses Attributs auf SQL_TRUE durch Aufrufen von unterstützen **SQLSetConnectAttr**; das Attribut muss nicht auf einen anderen Wert als den Standardwert festgelegt werden. Wert über **SQLSetStmtAttr**. Anwendungen, die auf Anweisungsebene Asynchronie (erforderlich für Ebene 2) unterstützen müssen durch Festlegen dieses Attributs auf SQL_TRUE, die mit beiden-Funktion unterstützen.  
+ [1] Anwendungen, die Asynchronität auf Verbindungs Ebene unterstützen (erforderlich für Ebene 1), müssen das Festlegen dieses Attributs auf SQL_TRUE durch Aufrufen von **SQLSetConnectAttr**unterstützen. das Attribut muss nicht durch **SQLSetStmtAttr**auf einen anderen Wert als seinen Standardwert festgelegt werden können. Anwendungen, die Asynchronität auf Anweisungs Ebene (erforderlich für Ebene 2) unterstützen, müssen das Festlegen dieses Attributs auf SQL_TRUE mithilfe einer der beiden Funktionen unterstützen.  
   
- [2] ' für Ebene-2-schnittstellenübereinstimmung muss der Treiber SQL_CONCUR_READ_ONLY und mindestens einen anderen Wert unterstützen.  
+ [2] für die Schnittstellen Konformität der Ebene 2 muss der Treiber SQL_CONCUR_READ_ONLY und mindestens einen anderen Wert unterstützen.  
   
- [3] für Ebene-1-schnittstellenübereinstimmung muss der Treiber SQL_CURSOR_FORWARD_ONLY und mindestens einen anderen Wert unterstützen. Für Ebene-2-schnittstellenübereinstimmung muss der Treiber alle Werte, die in diesem Dokument definierte unterstützen.
+ [3] für die Schnittstellen Konformität der Ebene 1 muss der Treiber SQL_CURSOR_FORWARD_ONLY und mindestens einen anderen Wert unterstützen. Bei der Schnittstellen Konformität der Ebene 2 muss der Treiber alle Werte unterstützen, die in diesem Dokument definiert sind.

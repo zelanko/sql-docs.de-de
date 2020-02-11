@@ -1,5 +1,5 @@
 ---
-title: Refresh – Methodenbeispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für eine Aktualisierungs Methode (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 3dc3443b-a1b0-4fbd-908a-6e274dec981c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 58bc25f41171e4258347522efe7a02f2620cfd82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917275"
 ---
 # <a name="refresh-method-example-vc"></a>Refresh-Methode – Beispiel (VC++)
-Dieses Beispiel veranschaulicht die Verwendung der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode zum Aktualisieren der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Sammlung für eine gespeicherte Prozedur [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
+In diesem Beispiel wird die Verwendung der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode zum Aktualisieren der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung für ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt einer gespeicherten Prozedur veranschaulicht.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -233,7 +233,7 @@ Authors with 25 percent royalty
   899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

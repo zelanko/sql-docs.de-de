@@ -1,5 +1,5 @@
 ---
-title: Daten abschneiden Erkennung aktiviert mit ExtendedAnsiSQL | Microsoft-Dokumentation
+title: Daten abschneide Erkennung mithilfe von extendedansisql aktiviert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,11 +14,11 @@ ms.assetid: cec2359b-917d-4e1d-9625-5cd678b62f10
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d7fb67171a796755bf8d6229b9d562f69bd588ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096511"
 ---
 # <a name="data-truncation-detection-enabled-using-extendedansisql"></a>Erkennen einer Datenabschneidung bei aktiviertem ExtendedAnsiSQL
-Wenn das Flag ExtendedAnsiSQL eingeschaltet ist und die Anwendung Daten in einer char- oder binary-Spalte einfügen und Daten werden abgeschnitten, wird das Abschneiden erkannt werden. Wenn das Flag ExtendedAnsiSQL deaktiviert ist, werden ohne Warnung, die Daten abgeschnitten, wie in früheren Versionen von der ODBC-Desktop-Datenbanktreiber.
+Wenn das extendedansisql-Flag aktiviert ist und die Anwendung Daten in eine char-oder Binary-Spalte einfügt und die Daten abgeschnitten werden, wird das Abschneiden erkannt. Wenn das extendedansisql-Flag deaktiviert ist, werden die Daten ohne Warnung gekürzt, wie dies in früheren Versionen der ODBC Desktop-Datenbanktreiber der Fall war.

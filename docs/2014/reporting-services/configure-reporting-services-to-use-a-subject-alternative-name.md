@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Reporting Services zur Verwendung ein alternativen Antragstellernamens | Microsoft-Dokumentation
+title: Konfigurieren Reporting Services für die Verwendung eines alternativen Antragsteller namens | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39cb8593351e97c47fff38ae2d1b6f2b326f49b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109738"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Konfigurieren der Reporting Services für die Verwendung eines alternativen Antragstellernamens
@@ -22,7 +22,7 @@ ms.locfileid: "66109738"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
+|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Einheitlicher Modus|  
   
  Die Anweisungen gelten sowohl für die Berichtsdienst-URL als auch die Webdienst-URL.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66109738"
   
 2.  Wählen Sie auf der Seite **Webdienst-URL** einen SSL-Port und ein SSL-Zertifikat aus.  
   
-     ![Konfigurations-Manager für Reporting Services](media/reportingservices-configurationmanager.png "Reporting Services Configuration Manager")  
+     ![Reporting Services-Konfigurations-Manager](media/reportingservices-configurationmanager.png "Reporting Services-Konfigurations-Manager")  
   
      Der Konfigurations-Manager registriert das SSL-Zertifikat für den Port.  
   
@@ -123,10 +123,10 @@ ms.locfileid: "66109738"
   
 10. Klicken Sie im Konfigurations-Manager für Reporting Services auf der Seite **Berichtsserverstatus** auf **Beenden** , und klicken Sie dann auf **Starten** , um den Berichtsserver neu zu starten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Ändern Sie eine Reporting Services Konfigurationsdatei &#40;RSReportServer. config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

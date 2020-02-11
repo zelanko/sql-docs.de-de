@@ -16,38 +16,38 @@ ms.assetid: 49dc9a49-af7b-433b-be36-7a14ca984fb7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6b33ef7eb4bae796fa2b2da59a7b1dc805d739e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920334"
 ---
 # <a name="cachesize-property-ado"></a>CacheSize-Eigenschaft (ADO)
-Gibt die Anzahl der Datensätze aus einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, das lokal im Arbeitsspeicher zwischengespeichert werden.  
+Gibt die Anzahl von Datensätzen aus einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt an, die lokal im Arbeitsspeicher zwischengespeichert werden.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** -Wert, der größer als 0 sein muss. Standardwert ist 1.  
+ Legt einen **Long** -Wert fest, der größer als 0 sein muss, oder gibt ihn zurück. Der Standardwert ist 1.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **CacheSize** Eigenschaft, um zu steuern, wie viele Datensätze gleichzeitig in den lokalen Arbeitsspeicher vom Anbieter abzurufen. Z. B. wenn die **CacheSize** ist 10, nach dem ersten Öffnen der **Recordset** Objekt ist, wird der Anbieter Ruft die ersten 10 Datensätze in den lokalen Speicher ab. Beim Navigieren durch die **Recordset** Objekt, gibt der Anbieter die Daten aus dem lokalen Speicherpuffer zurück. Sobald Sie hinter dem letzten Datensatz im Cache verschieben, ruft die nächsten 10 Datensätze aus der Datenquelle mit der Anbieter in den Cache ab.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **CacheSize** -Eigenschaft, um zu steuern, wie viele Datensätze gleichzeitig vom Anbieter in den lokalen Speicher abgerufen werden sollen. Wenn die **CacheSize** z. b. 10 ist, ruft der Anbieter nach dem ersten Öffnen des **Recordset** -Objekts die ersten 10 Datensätze in den lokalen Arbeitsspeicher ab. Wenn Sie durch das **Recordset** -Objekt wechseln, gibt der Anbieter die Daten aus dem lokalen Speicherpuffer zurück. Sobald Sie mit dem letzten Datensatz im Cache fortfahren, ruft der Anbieter die nächsten 10 Datensätze aus der Datenquelle in den Cache ab.  
   
 > [!NOTE]
->  **CacheSize** basiert auf der **maximale Anzahl geöffneter Zeilen** -anbieterspezifische Datenquelleneigenschaft (in der **Eigenschaften** Auflistung von der **Recordset** Objekt). Sie können keine festlegen **CacheSize** auf einen Wert größer als **maximale Anzahl geöffneter Zeilen**. Zum Ändern der vom Anbieter geöffnet werden, kann der Anzahl der Zeilen festgelegt **maximale Anzahl geöffneter Zeilen**.  
+>  **CacheSize** basiert auf der maximalen Anzahl von **Open Rows** -anbieterspezifischen Eigenschaften (in der **Properties** -Auflistung des **Recordset** -Objekts). Sie können **CacheSize** nicht auf einen Wert festlegen, der größer ist als die **Maximale Anzahl offener Zeilen**. Um die Anzahl der Zeilen zu ändern, die vom Anbieter geöffnet werden können, legen Sie die **Maximale Anzahl geöffneter Zeilen**fest.  
   
- Der Wert des **CacheSize** angepasst werden kann, während der Lebensdauer der **Recordset** Objekt handelt, sondern durch Ändern dieses Werts wirkt sich nur auf die Anzahl der Datensätze im Cache nach der spätere Zugriffe aus der Datenquelle. Ändern den Wert der Eigenschaft allein ändert sich nicht auf den aktuellen Inhalt des Caches aus.  
+ Der Wert von **CacheSize** kann während der Lebensdauer des **Recordset** -Objekts angepasst werden. Wenn Sie diesen Wert jedoch ändern, wirkt sich dies nur auf die Anzahl der Datensätze im Cache aus, nachdem nachfolgende Abruf Abbilder aus der Datenquelle abgerufen wurden. Wenn Sie den Eigenschafts Wert alleine ändern, wird der aktuelle Inhalt des Caches nicht geändert.  
   
- Wenn weniger Datensätze als abzurufenden **CacheSize** angibt, gibt der Anbieter die übrigen Datensätze zurück, und kein Fehler auftritt.  
+ Wenn weniger Datensätze abgerufen werden müssen, als **CacheSize** angibt, gibt der Anbieter die verbleibenden Datensätze zurück, und es tritt kein Fehler auf.  
   
- Ein **CacheSize** Einstellung von 0 (null) ist nicht zulässig, und gibt einen Fehler zurück.  
+ Eine **CacheSize** -Einstellung von 0 (null) ist nicht zulässig und gibt einen Fehler zurück.  
   
- Aus dem Cache abgerufenen Datensätze widerspiegeln nicht gleichzeitige Änderungen, die andere Benutzer auf die Quelldaten vorgenommen haben. Um ein Update aller zwischengespeicherten Daten zu erzwingen, verwenden die [Resync](../../../ado/reference/ado-api/resync-method.md) Methode.  
+ Aus dem Cache abgerufene Datensätze spiegeln keine gleichzeitigen Änderungen wider, die andere Benutzer an den Quelldaten vorgenommen haben. Verwenden Sie die [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode, um ein Update aller zwischengespeicherten Daten zu erzwingen.  
   
- Wenn **CacheSize** auf einen Wert größer als eins, die Navigationsmethoden festgelegt ist ([verschieben](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) möglicherweise Navigation zu einem Falls der Löschvorgang, nachdem die Datensätze abgerufen wurden, wird der Datensatz, gelöscht. Nach dem Abrufen werden nachfolgende Löschvorgänge nicht in Datencache wiedergegeben werden, bis Sie versuchen, einen Datenwert aus einer gelöschten Zeile zugreifen. Festlegen von jedoch **CacheSize** auf einen beseitigt dieses Problem, da der gelöschte Zeilen nicht abgerufen werden können.  
+ Wenn **CacheSize** auf einen Wert größer als 1 festgelegt ist, können die Navigationsmethoden ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext und MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) zur Navigation zu einem gelöschten Datensatz führen, wenn der Löschvorgang nach dem Abrufen der Datensätze erfolgt. Nach dem ersten Abruf werden nachfolgende Löschvorgänge nicht in Ihren Daten Cache übernommen, bis Sie versuchen, auf einen Datenwert aus einer gelöschten Zeile zuzugreifen. Wenn Sie **CacheSize** auf einen solchen Wert festlegen, wird dieses Problem jedoch vermieden, da gelöschte Zeilen nicht abgerufen werden können  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [CacheSize-Eigenschaft – Beispiel (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [CacheSize-Eigenschaft – Beispiel (VC++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [CacheSize-Eigenschaft (Beispiel) (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
+ [Beispiel für CacheSize-Eigenschaft (VC + +)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
  [CacheSize-Eigenschaft – Beispiel (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)

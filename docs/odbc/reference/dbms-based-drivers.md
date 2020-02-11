@@ -1,5 +1,5 @@
 ---
-title: DBMS-basierten Treibern | Microsoft-Dokumentation
+title: DBMS-basierte Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ ms.assetid: e2208ee0-4cd6-4f0d-bb71-a0b54f7d9330
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fcd2221d9a0bb9cba42745901e5f00a6f8c8415e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68111247"
 ---
 # <a name="dbms-based-drivers"></a>DBMS-basierte Treiber
-DBMS-basierten Treibern werden mit Datenquellen wie z. B. Oracle- oder SQL Server verwendet, die eine eigenständige Datenbank-Engine für den Treiber mit bereitstellen. Diese Treiber Zugriff auf die physischen Daten über die eigenständigen-Engine; d. h. sie SQL-Anweisungen zum Senden und Abrufen der Ergebnisse von der Engine.  
+DBMS-basierte Treiber werden mit Datenquellen wie Oracle oder SQL Server verwendet, die eine eigenständige Datenbank-Engine bereitstellen, die vom Treiber verwendet werden soll. Diese Treiber greifen über die eigenständige Engine auf die physischen Daten zu. Das heißt, dass Sie SQL-Anweisungen an senden und Ergebnisse aus der Engine abrufen.  
   
- Da die DBMS-basierten Treibern auf eine vorhandenen Datenbank-Engine verwenden, sind sie in der Regel einfacher, als dateibasierten Treibern zu schreiben. Obwohl eine DBMS-basierten Treibers ganz einfach durch die Übersetzung von ODBC-Aufrufe in systemeigene API-Aufrufe implementiert werden kann, führt dies in einem langsameren-Treiber. Das zugrunde liegende Data Stream-Protokoll verwenden, das in der Regel ist der Funktionsweise der systemeigenen API ist eine bessere Möglichkeit, einen DBMS-basierten Treiber implementiert werden. Beispielsweise sollten ein SQL Server-Treiber TDS (die Daten streamen Protokoll für SQL Server) verwenden, anstatt der DB-Library (die systemeigene API für SQL Server). Eine Ausnahme von dieser Regel ist, wenn es sich bei ODBC die systemeigene API handelt. Watcom SQL ist beispielsweise eine eigenständige-Engine, die auf dem gleichen Computer wie die Anwendung befindet sich direkt als der Treiber geladen wird.  
+ Da DBMS-basierte Treiber eine vorhandene Datenbank-Engine verwenden, sind Sie in der Regel einfacher zu schreiben als dateibasierte Treiber. Obwohl ein DBMS-basierter Treiber leicht durch die Übersetzung von ODBC-Aufrufen an Native API-Aufrufe implementiert werden kann, führt dies zu einem langsameren Treiber. Eine bessere Möglichkeit zum Implementieren eines DBMS-basierten Treibers besteht darin, das zugrunde liegende Datenstrom Protokoll zu verwenden. Dies ist in der Regel das, was die Native API tut. Beispielsweise sollte ein SQL Server Treiber TDS (das Datenstrom Protokoll für SQL Server) anstelle der DB-Bibliothek (die Native API für SQL Server) verwenden. Eine Ausnahme von dieser Regel ist, wenn ODBC die Native API ist. Beispielsweise ist Watcom SQL eine eigenständige Engine, die sich auf demselben Computer wie die Anwendung befindet und direkt als Treiber geladen wird.  
   
- DBMS-basierten Treibern fungieren als Clients in einer Client-/Server-Konfiguration, in dem die Datenquelle als Server fungiert. In den meisten Fällen befinden sich die Client (Treiber) und Server (Datenquelle) auf verschiedenen Computern zwar sowohl auf dem gleichen Computer unter einem Multitasking-Betriebssystem befinden können. Eine dritte Möglichkeit ist eine *Gateway* die befindet sich zwischen dem Treiber und der Datenquelle. Ein Gateway ist eine Softwarekomponente, die bewirkt, dass ein DBMS an, wie eine andere aus. Zum Verwenden von SQL Server geschriebene Anwendungen können z. B. auch DB2-Daten über das Micro Decisionware DB2-Gateway zugreifen. Dieses Produkt führt DB2, wie SQL Server zu suchen.  
+ DBMS-basierte Treiber fungieren als Client in einer Client-/Serverkonfiguration, bei der die Datenquelle als Server fungiert. In den meisten Fällen befinden sich der Client (Treiber) und der Server (Datenquelle) auf unterschiedlichen Computern, obwohl sich beide auf demselben Computer befinden könnten, auf dem ein Multitasking-Betriebssystem ausgeführt wird. Eine dritte Möglichkeit ist ein *Gateway,* das sich zwischen dem Treiber und der Datenquelle befindet. Ein Gateway ist eine Software, die bewirkt, dass ein DBMS wie ein anderes aussieht. Beispielsweise können Anwendungen, die für die Verwendung von SQL Server geschrieben wurden, auch über das Micro DecisionWare DB2-Gateway auf DB2-Daten zugreifen. Dieses Produkt bewirkt, dass DB2 wie SQL Server aussieht.  
   
- Die folgende Abbildung zeigt drei verschiedene Konfigurationen von DBMS-basierten Treibern. In der ersten Konfiguration befinden sich in der Treiber und die Datenquelle auf demselben Computer. Im zweiten Fall befinden sich in der Treiber und die Datenquelle auf unterschiedlichen Computern. Im dritten die Treiber und die Datenquellensicht, die auf verschiedenen Computern befinden sich, und ein Gateway befindet sich zwischen ihnen, die sich auf noch einem anderen Computer befinden.  
+ Die folgende Abbildung zeigt drei verschiedene Konfigurationen von DBMS-basierten Treibern. In der ersten Konfiguration befinden sich der Treiber und die Datenquelle auf demselben Computer. Im zweiten Bereich befinden sich der Treiber und die Datenquelle auf unterschiedlichen Computern. Im dritten befinden sich der Treiber und die Datenquelle auf unterschiedlichen Computern, und ein Gateway befindet sich auf einem anderen Computer.  
   
- ![Drei Konfigurationen von DBMS&#45;basierte Treiber](../../odbc/reference/media/pr07.gif "pr07")
+ ![Drei Konfigurationen für DBMS-&#45;basierte Treiber](../../odbc/reference/media/pr07.gif "pr07")

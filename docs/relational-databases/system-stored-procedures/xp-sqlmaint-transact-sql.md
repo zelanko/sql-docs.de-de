@@ -1,5 +1,5 @@
 ---
-title: Xp_sqlmaint (Transact-SQL) | Microsoft-Dokumentation
+title: xp_sqlmaint (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,21 +18,21 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091908"
 ---
-# <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
+# <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ruft die **Sqlmaint** -Hilfsprogramm mit der eine Zeichenfolge mit **Sqlmaint**Switches. Die **Sqlmaint** -Hilfsprogramm führt eine Reihe von Wartungsvorgänge für eine oder mehrere Datenbanken.  
+  Ruft das Hilfsprogramm **sqlmaint** mit einer Zeichenfolge auf, die **sqlmaint**-Schalter enthält. Das **sqlmaint** -Hilfsprogramm führt eine Reihe von Wartungs Vorgängen für eine oder mehrere Datenbanken aus.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,16 +42,16 @@ xp_sqlmaint 'switch_string'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **'** *switch_string* **'**  
- Eine Zeichenfolge, enthält die **Sqlmaint** Optionen des Hilfsprogramms. Die Optionen und ihre Werte müssen durch ein Leerzeichen getrennt werden.  
+ **"** *switch_string* **"**  
+ Ist eine Zeichenfolge, die die **sqlmaint** -hilfsprogrammschalter enthält. Die Optionen und ihre Werte müssen durch ein Leerzeichen getrennt werden.  
   
- Die **-?** Switch ist nicht gültig für **Xp_sqlmaint**.  
+ Der **-?** der Schalter ist für **xp_sqlmaint**ungültig.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine Gibt einen Fehler zurück, wenn die **Sqlmaint** Dienstprogramm ein Fehler auftritt.  
+ Keine. Gibt einen Fehler zurück, wenn das Hilfsprogramm **sqlmaint** fehlschlägt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn diese Prozedur von einem Benutzer, die mit SQL Server-Authentifizierung angemeldet aufgerufen, wird der **- U "***Login_id***"** und **-P "***Kennwort***"** Switches werden *Switch_string* vor der Ausführung. Wenn der Benutzer mit Windows-Authentifizierung angemeldet ist *Switch_string* übergeben wird, ohne Änderung **Sqlmaint**.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn diese Prozedur von einem Benutzer aufgerufen wird, der mit SQL Server-Authentifizierung angemeldet ist, werden die Schalter **-U "***login_id***"** und **"-P" für "***Password***"** vor der Ausführung *switch_string* vorangestellt. Wenn der Benutzer mit der Windows-Authentifizierung angemeldet ist, wird *switch_string* ohne Änderung an **sqlmaint**weitergegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -70,7 +70,7 @@ EXEC xp_sqlmaint '-D AdventureWorks2012 -PlanID 02A52657-D546-11D1-9D8A-00A0C905
 The command(s) executed successfully.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sqlmaint (Hilfsprogramm)](../../tools/sqlmaint-utility.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

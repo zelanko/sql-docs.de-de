@@ -1,5 +1,5 @@
 ---
-title: Sp_databases (Transact-SQL) | Microsoft-Dokumentation
+title: sp_databases (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108333"
 ---
-# <a name="spdatabases-transact-sql"></a>sp_databases (Transact-SQL)
+# <a name="sp_databases-transact-sql"></a>sp_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Listet Datenbanken auf, die in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthalten sind bzw. auf die der Zugriff über ein Datenbank-Gateway möglich ist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,20 +39,20 @@ sp_databases
 ```  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|Der Name der Datenbank. Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]stellt diese Spalte den Datenbanknamen dar, der in der Katalogsicht **sys.databases** gespeichert ist.|  
 |**DATABASE_SIZE**|**int**|Die Größe der Datenbank in Kilobyte.|  
-|**"HINWEISE"**|**varchar(254)**|Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt dieses Feld immer NULL zurück.|  
+|**Rede**|**varchar (254)**|Im [!INCLUDE[ssDE](../../includes/ssde-md.md)]gibt dieses Feld immer NULL zurück.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die zurückgegebenen Datenbanknamen können als Parameter für die USE-Anweisung verwendet werden, um den aktuellen Datenbankkontext zu ändern.  
   
- Für**sp_databases** gibt es in Open Database Connectivity (ODBC) keine Entsprechung.  
+ **sp_databases** ist in Open Database Connectivity (ODBC) nicht gleichwertig.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Berechtigung CREATE DATABASE oder ALTER ANY DATABASE oder VIEW ANY DEFINITION sowie die Zugriffsberechtigung für die Datenbank. Die VIEW ANY DEFINITION-Berechtigung darf nicht verweigert worden sein.  
@@ -66,8 +66,8 @@ GO
 EXEC sp_databases;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [HAS_DBACCESS &#40;Transact-SQL&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
+ [HAS_DBACCESS &#40;Transact-SQL-&#41;](../../t-sql/functions/has-dbaccess-transact-sql.md)  
   
   

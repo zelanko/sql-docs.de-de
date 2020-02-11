@@ -14,16 +14,16 @@ ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67901259"
 ---
 # <a name="executing-batches"></a>Ausführen von Batches
-Bevor eine Anwendung einen Batch von Anweisungen ausführt, wird zunächst überprüft, ob diese unterstützt werden. Ruft die Anwendung dazu **SQLGetInfo** mit den Optionen SQL_BATCH_SUPPORT SQL_PARAM_ARRAY_ROW_COUNTS und SQL_PARAM_ARRAY_SELECTS. Die erste Option gibt, ob Zeile Anzahl generiert und das Ergebnis, generiert Set-Anweisungen unterstützt werden, in explizite Batches und Prozeduren, während die letzten beiden Optionen, die Informationen über die Verfügbarkeit der Zeilenanzahl und das Ergebnis zurück, legt in fest parametrisierte die Ausführung.  
+Bevor eine Anwendung einen Batch von-Anweisungen ausführt, sollte Sie zuerst überprüfen, ob Sie unterstützt werden. Hierzu ruft die Anwendung **SQLGetInfo** mit den Optionen SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS und SQL_PARAM_ARRAY_SELECTS auf. Die erste Option gibt an, ob die Zeilen Anzahl-Generierungs-und resultsetgenerierungs Anweisungen in expliziten Batches und Prozeduren unterstützt werden, während die beiden letzten Optionen Informationen zur Verfügbarkeit von Zeilen-und Resultsets in parametrisierten zurückgeben. Niederlage.  
   
- Batches von Anweisungen werden ausgeführt, über **SQLExecute** oder **SQLExecDirect**. Der folgende Aufruf führt z. B. eine explizite Batches von Anweisungen, um einen neuen Verkaufsauftrag zu öffnen.  
+ Batches von Anweisungen werden über **SQLExecute** oder **SQLExecDirect**ausgeführt. Der folgende-Befehl führt z. b. einen expliziten Batch von-Anweisungen zum Öffnen eines neuen Verkaufs Auftrags aus.  
   
 ```  
 SQLCHAR *BatchStmt =  
@@ -37,9 +37,9 @@ SQLCHAR *BatchStmt =
 SQLExecDirect(hstmt, BatchStmt, SQL_NTS);  
 ```  
   
- Wenn ein Batch von generiertem Anweisungen ausgeführt wird, gibt einen oder mehrere Zeilenanzahl oder Ergebnis festgelegt. Informationen dazu, wie Sie diese abrufen, finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
+ Wenn ein Batch von Ergebnis Generierungs Anweisungen ausgeführt wird, gibt er mindestens eine Zeilen Anzahl oder Resultsets zurück. Informationen dazu, wie Sie diese abrufen, finden Sie unter [mehrere Ergebnisse](../../../odbc/reference/develop-app/multiple-results.md).  
   
- Wenn Sie ein Batch von Anweisungen Parametermarker enthält, werden diese nummeriert, in aufsteigender Reihenfolge der Parameter, wie sie in eine andere Anweisung sind. Der folgende Batch von Anweisungen ist z. B. von 1 bis 21 nummerierte Parameter; die in der ersten **einfügen** Anweisung sind nummerierten 1 bis 5 und die in den letzten **einfügen** Anweisung sind nummerierten 18 bis 21.  
+ Wenn ein Batch von-Anweisungen Parameter Markierungen enthält, werden diese in einer zunehmenden Parameterreihenfolge nummeriert, wie Sie in jeder anderen-Anweisung enthalten sind. Der folgende Batch von-Anweisungen hat z. b. Parameter, die von 1 bis 21 nummeriert sind. die in der ersten **Insert** -Anweisung nummerierten 1 bis 5, und die in der letzten **Insert** -Anweisung sind von 18 bis 21 nummeriert.  
   
 ```  
 INSERT INTO Orders (OrderID, CustID, OpenDate, SalesPerson, Status)  
@@ -50,4 +50,4 @@ INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);
 INSERT INTO Lines (OrderID, Line, PartID, Quantity) VALUES (?, ?, ?, ?);  
 ```  
   
- Weitere Informationen zu Parametern finden Sie unter [Anweisungsparametern](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.
+ Weitere Informationen zu Parametern finden Sie unter [Anweisungs Parameter](../../../odbc/reference/develop-app/statement-parameters.md)weiter unten in diesem Abschnitt.

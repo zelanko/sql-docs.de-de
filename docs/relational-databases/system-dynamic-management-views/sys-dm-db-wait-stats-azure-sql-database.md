@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_wait_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
+title: sys. dm_db_wait_stats (Azure SQL-Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.service: sql-database
@@ -20,28 +20,28 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090874"
 ---
-# <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
+# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Gibt Informationen zu allen Wartevorgängen in den Threads zurück, die während des Vorgangs ausgeführt wurden. In dieser aggregierten Sicht können Sie Leistungsprobleme bei [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] sowie bei bestimmten Abfragen und Batches diagnostizieren.  
   
  Bestimmte Arten von Wartezeiten während der Abfrageausführung können auf Engpässe oder Stillstände während der Abfrage hinweisen. Entsprechend können serverweite lange Wartezeiten oder hohe Wartevorgangsanzahlen auf Engpässe oder Hotspots im Zusammenhang mit Abfrageinteraktionen innerhalb der Serverinstanz hinweisen. So weisen beispielsweise Sperrenwartevorgänge auf Datenkonflikte durch Abfragen, Seiten-E/A-Latchwartevorgänge auf langsame E/A-Antwortzeiten und Seitenlatch-Updatewartevorgänge auf ein fehlerhaftes Dateilayout hin.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar(60)**|Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes)weiter unten in diesem Thema.|  
-|waiting_tasks_count|**bigint**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
-|wait_time_ms|**bigint**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit beinhaltet signal_wait_time_ms.|  
-|max_wait_time_ms|**bigint**|Maximale Wartezeit für diesen Wartetyp.|  
-|signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
+|wait_type|**nvarchar (60)**|Der Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes) weiter unten in diesem Thema.|  
+|waiting_tasks_count|**BIGINT**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
+|wait_time_ms|**BIGINT**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit beinhaltet signal_wait_time_ms.|  
+|max_wait_time_ms|**BIGINT**|Maximale Wartezeit für diesen Wartetyp.|  
+|signal_wait_time_ms|**BIGINT**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 -   In dieser dynamischen Verwaltungssicht werden nur Daten für die aktuelle Datenbank angezeigt.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68090874"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
   
-##  <a name="WaitTypes"></a> Wartetypen  
+##  <a name="WaitTypes"></a>Warte Typen  
  Ressourcenwartevorgänge  
  Ressourcenwartevorgänge finden dann statt, wenn ein Arbeitsthread den Zugriff auf eine Ressource anfordert, die nicht verfügbar ist, da sie von einem anderen Arbeitsthread verwendet wird oder noch nicht zur Verfügung steht. Beispiele für Ressourcenwartevorgänge sind Sperren, Latches, Netzwerk- und Datenträger-E/A-Wartevorgänge. Sperren und Latchwartevorgänge sind Vorgänge, die auf Synchronisierungsobjekte warten.  
   
@@ -74,11 +74,11 @@ ms.locfileid: "68090874"
   
  Obwohl der Thread nicht mehr wartet, muss er nicht sofort mit der Ausführung beginnen. Ein solcher Thread wird zunächst in die Warteschlange der ausführbaren Arbeitsthreads eingereiht und muss warten, dass ein Quantum auf dem Zeitplanungsmodul ausgeführt wird.  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Wait-Time-Leistungsindikatoren sind **Bigint** Werte und daher nicht als fehleranfällig zum Rollover wie entsprechenden Leistungsindikatoren in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Warte Zeit Indikatoren sind **bigint** -Werte und somit nicht so anfällig für einen Rollover, wie die entsprechenden Leistungsindikatoren in früheren Versionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von.  
   
  In der folgenden Tabelle werden die Wartetypen für Tasks in einer Liste aufgeführt.  
   
-|Wartetyp|Beschreibung|  
+|Wartetyp|BESCHREIBUNG|  
 |---------------|-----------------|  
 |ABR|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |ASSEMBLY_LOAD|Tritt während des exklusiven Zugriffs auf das Laden einer Assembly auf.|  
@@ -90,7 +90,7 @@ ms.locfileid: "68090874"
 |AUDIT_ON_DEMAND_TARGET_LOCK|Tritt bei einem Wartevorgang auf eine Sperre auf, mit der eine einmalige Initialisierung überwachungsbezogener Ziele von erweiterten Ereignissen sichergestellt werden soll.|  
 |AUDIT_XE_SESSION_MGR|Tritt bei einem Wartevorgang auf eine Sperre auf, mit der das Starten und Beenden überwachungsbezogener Ziele von erweiterten Ereignissen synchronisiert werden soll.|  
 |BACKUP|Tritt auf, wenn ein Task im Rahmen der Sicherungsverarbeitung blockiert wird.|  
-|BACKUP_OPERATOR|Tritt auf, wenn ein Task auf das Einlegen eines Bands wartet. Sie können den Status eines Bands mithilfe von [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)abfragen. Wenn keine Bandeinlegung aussteht, kann dieser Wartetyp auf ein Hardwareproblem mit dem Bandlaufwerk hinweisen.|  
+|BACKUP_OPERATOR|Tritt auf, wenn ein Task auf das Einlegen eines Bands wartet. Sie können den Status eines Bands mithilfe von [sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md) abfragen. Wenn keine Bandeinlegung aussteht, kann dieser Wartetyp auf ein Hardwareproblem mit dem Bandlaufwerk hinweisen.|  
 |BACKUPBUFFER|Tritt auf, wenn ein Sicherungstask auf Daten oder auf einen Puffer wartet, in dem Daten gespeichert werden sollen. Dies ist nur dann ein Standardwartetyp, wenn ein Task auf die Einlegung eines Bands wartet.|  
 |BACKUPIO|Tritt auf, wenn ein Sicherungstask auf Daten oder auf einen Puffer wartet, in dem Daten gespeichert werden sollen. Dies ist nur dann ein Standardwartetyp, wenn ein Task auf die Einlegung eines Bands wartet.|  
 |BACKUPTHREAD|Tritt auf, wenn ein Task auf das Ende eines Sicherungstasks wartet. Die Wartezeiten können lang sein (von einigen Minuten bis zu mehreren Stunden). Wenn der Task, auf den gewartet wird, Teil eines E/A-Prozesses ist, weist dieser Wartetyp nicht auf ein Problem hin.|  
@@ -168,7 +168,7 @@ ms.locfileid: "68090874"
 |FSAGENT|Tritt auf, wenn ein FILESTREAM-Datei-E/A-Vorgang auf eine FILESTREAM-Agent-Ressource wartet, die gerade von einem anderen Datei-E/A-Vorgang verwendet wird.|  
 |FSTR_CONFIG_MUTEX|Tritt bei einem Wartevorgang auf eine andere Neukonfiguration eines FILESTREAM-Funktionen auf, die abgeschlossen werden soll.|  
 |FSTR_CONFIG_RWLOCK|Tritt bei einem Wartevorgang auf die Serialisierung des Zugriffs auf die FILESTREAM-Konfigurationsparameter auf.|  
-|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_RESTART_CRAWL|Tritt auf, wenn ein Volltextcrawl von einem letzten bekannten fehlerfreien Punkt neu gestartet werden muss, um nach einem vorübergehenden Fehler wiederhergestellt zu werden. Durch die Wartezeit können die Arbeitstasks, die zurzeit an der jeweiligen Auffüllung arbeiten, abgeschlossen werden oder den aktuellen Schritt beenden.|  
 |FULLTEXT GATHERER|Tritt bei der Synchronisierung von Volltextvorgängen auf.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -192,27 +192,27 @@ ms.locfileid: "68090874"
 |LATCH_SH|Tritt beim Warten auf einen SH-Latch (gemeinsamen Latch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Liste von LATCH_*-Wartevorgängen ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.|  
 |LATCH_UP|Tritt beim Warten auf einen UP-Latch (Updatelatch) auf. Dazu gehören keine Pufferlatches oder Transaktionsmarkierungslatches. Eine Liste von LATCH_*-Wartevorgängen ist in sys.dm_os_latch_stats verfügbar. Beachten Sie, dass sys.dm_os_latch_stats die Wartevorgänge LATCH_NL, LATCH_SH, LATCH_UP, LATCH_EX und LATCH_DT in einer Gruppe zusammenfasst.|  
 |LAZYWRITER_SLEEP|Tritt auf, wenn Tasks für verzögertes Schreiben angehalten werden. Dieser Wartetyp gibt die Zeitdauer von wartenden Hintergrundtasks an. Wenn Sie nach durch den Benutzer bedingtem Hängen des Computers suchen, sollten Sie diesen Status nicht verwenden.|  
-|LCK_M_BU|Tritt auf, wenn ein Task darauf wartet, eine Massenupdatesperre (BU-Sperre) abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IS|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte gemeinsame Sperre (IS-Sperre) abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IU|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte Updatesperre (IU-Sperre) abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_IX|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte exklusive Sperre (IX-Sperre) abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_NL|Tritt auf, wenn ein Task darauf wartet, eine NULL-Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine NULL-Sperre für den Schlüssel ist eine Sperre, die sofort aufgehoben wird. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_U|Ein Task wartet darauf, eine Updatesperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RIn_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine freigegebene Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RS_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine Bereichsupdatesperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_RX_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_M|Tritt auf, wenn ein Task darauf wartet, eine Schemaänderungssperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SCH_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Schemasperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIU|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter Updatesperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_SIX|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter exklusiver Sperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_UIX|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre mit beabsichtigter exklusiver Sperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
-|LCK_M_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre abzurufen. Eine Matrix der sperrenkompatibilität finden Sie unter [Sys. dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_BU|Tritt auf, wenn ein Task darauf wartet, eine Massenupdatesperre (BU-Sperre) abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IS|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte gemeinsame Sperre (IS-Sperre) abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IU|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte Updatesperre (IU-Sperre) abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_IX|Tritt auf, wenn ein Task darauf wartet, eine beabsichtigte exklusive Sperre (IX-Sperre) abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_NL|Tritt auf, wenn ein Task darauf wartet, eine NULL-Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine NULL-Sperre für den Schlüssel ist eine Sperre, die sofort aufgehoben wird. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_U|Ein Task wartet darauf, eine Updatesperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RIn_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine Einfügungssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine freigegebene Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RS_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine Bereichsupdatesperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_RX_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre für den aktuellen Schlüsselwert und eine exklusive Bereichssperre zwischen dem aktuellen und dem vorherigen Schlüssel abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_M|Tritt auf, wenn ein Task darauf wartet, eine Schemaänderungssperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SCH_S|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Schemasperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIU|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter Updatesperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_SIX|Tritt auf, wenn ein Task darauf wartet, eine gemeinsame Sperre mit beabsichtigter exklusiver Sperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_U|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_UIX|Tritt auf, wenn ein Task darauf wartet, eine Updatesperre mit beabsichtigter exklusiver Sperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
+|LCK_M_X|Tritt auf, wenn ein Task darauf wartet, eine exklusive Sperre abzurufen. Eine Sperr Kompatibilitäts Matrix finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md).|  
 |LOG_RATE_GOVERNOR|Tritt auf, wenn die Datenbank auf ein Kontingent zum Schreiben des Protokolls wartet.|  
 |LOGBUFFER|Tritt auf, wenn ein Task auf Speicherplatz im Protokollpuffer zum Speichern eines Protokolldatensatzes wartet. Durchgehend hohe Werte können darauf hinweisen, dass die Protokollgeräte die Menge der vom Server generierten Protokolldaten nicht bewältigen können.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -224,7 +224,8 @@ ms.locfileid: "68090874"
 |MSQL_DQ|Tritt auf, wenn ein Task auf das Ende eines verteilten Abfragevorgangs wartet. Dieser Wartetyp wird verwendet, um mögliche MARS-Anwendungsdeadlocks (Multiple Active Result Sets) zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der verteilten Abfrage beendet.|  
 |MSQL_XACT_MGR_MUTEX|Tritt auf, wenn ein Task darauf wartet, in den Besitz des Sitzungstransaktions-Managers zu gelangen, um einen Transaktionsvorgang auf Sitzungsebene auszuführen.|  
 |MSQL_XACT_MUTEX|Tritt während der Synchronisierung der Transaktionsverwendung auf. Eine Anforderung muss den Mutex abrufen, bevor sie die Transaktion verwenden kann.|  
-|MSQL_XP|Tritt auf, wenn ein Task auf das Ende einer erweiterten gespeicherten Prozedur wartet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet diesen Wartestatus, um mögliche MARS-Anwendungsdeadlocks zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der erweiterten gespeicherten Prozedur beendet.|  
+|MSQL_XP|Tritt auf, wenn ein Task auf das Ende einer erweiterten gespeicherten Prozedur wartet. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet diesen Wartestatus, um mögliche MARS-Anwendungsdeadlocks zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der erweiterten gespeicherten Prozedur beendet.|  
 |MSSEARCH|Tritt während Aufrufen der Volltextsuche auf. Diese Wartezeit endet, wenn der Volltextvorgang abgeschlossen ist. Sie zeigt keinen Konflikt an, sondern die Dauer von Volltextvorgängen.|  
 |NET_WAITFOR_PACKET|Tritt auf, wenn eine Verbindung während eines Netzwerklesevorgangs auf ein Netzwerkpaket wartet.|  
 |OLEDB|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client aufruft. Dieser Wartetyp wird nicht für die Synchronisierung verwendet. Er zeigt vielmehr die Dauer von Aufrufen des OLE DB-Anbieters an.|  
@@ -250,17 +251,17 @@ ms.locfileid: "68090874"
 |PREEMPTIVE_CLOSEBACKUPVDIDEVICE|Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um ein virtuelles Sicherungsmedium zu schließen.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um Windows-Failoverclustervorgänge auszuführen.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|Tritt auf, wenn das SQLOS-Zeitplanungsmodul in den präemptiven Modus wechselt, um ein COM-Objekt zu erstellen.|  
-|PREEMPTIVE_HADR_LEASE_MECHANISM|Always On Availability Groups lease-Manager, die CSS-Diagnose plant.|  
+|PREEMPTIVE_HADR_LEASE_MECHANISM|Always on Verfügbarkeits Gruppen-Lease-Manager-Planung für die CSS-Diagnose|  
 |PREEMPTIVE_SOSTESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_STRESSDRIVER|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_TESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PREEMPTIVE_XETESTING|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |PRINT_ROLLBACK_PROGRESS|Wird verwendet, um zu warten, während Benutzerprozesse in einer Datenbank beendet werden, die mithilfe der ALTER DATABASE-Beendigungsklausel von einem Status in einen anderen versetzt wurde. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
 |PWAIT_HADR_CHANGE_NOTIFIER_TERMINATION_SYNC|Tritt auf, wenn ein Hintergrundtask auf die Beendigung des Hintergrundtasks wartet, der (über Abruf) Windows Server-Failoverclusteringbenachrichtigungen empfängt.  Nur interne Verwendung.|  
-|PWAIT_HADR_CLUSTER_INTEGRATION|Eine Append, ersetzungs- und/oder Löschvorgang wartet auf eine Schreibsperre in einer Always On-internen Liste (z. B. eine Liste mit Netzwerken, Netzwerkadressen oder verfügbarkeitsgruppenlistenern) abrufen.  Nur interne Verwendung.|  
-|PWAIT_HADR_OFFLINE_COMPLETED|Eine Always On-Verfügbarkeit Gruppe Löschvorgang wartet darauf, dass die zielverfügbarkeitsgruppe offline geht, bevor Sie Windows Server Failover Clustering-Objekte zu zerstören.|  
-|PWAIT_HADR_ONLINE_COMPLETED|Erstellen Sie eine Always On- oder Failover-verfügbarkeitsgruppenvorgang wartet darauf, dass die zielverfügbarkeitsgruppe online geschaltet.|  
-|PWAIT_HADR_POST_ONLINE_COMPLETED|Eine Always On-Verfügbarkeit Gruppe Löschvorgang wartet auf die Beendigung eines Hintergrundtasks, die als Teil eines vorherigen Befehls geplant wurde. Es darf z. B. einen Hintergrundtask geben, der Verfügbarkeitsdatenbanken an die primäre Rolle übergibt. Die DROP AVAILABILITY GROUP-DDL muss auf den Abschluss dieses Hintergrundtasks warten, um Racebedingungen zu verhindern.|  
+|PWAIT_HADR_CLUSTER_INTEGRATION|Ein Anfüge-, Ersetzungs-und/oder Entfernungs Vorgang wartet darauf, eine Schreibsperre für eine Always on interne Liste (z. b. eine Liste von Netzwerken, Netzwerkadressen oder verfügbarkeitsgruppenlistener) zu erfassen.  Nur interne Verwendung.|  
+|PWAIT_HADR_OFFLINE_COMPLETED|Ein Always on Drop Availability Group-Vorgang wartet darauf, dass die Ziel Verfügbarkeits Gruppe offline geschaltet wird, bevor Windows Server-Failoverclustering-Objekte zerstört werden.|  
+|PWAIT_HADR_ONLINE_COMPLETED|Ein Always on Vorgang zum Erstellen oder Failover von Verfügbarkeits Gruppen wartet darauf, dass die Ziel Verfügbarkeits Gruppe online geschaltet wird.|  
+|PWAIT_HADR_POST_ONLINE_COMPLETED|Eine Always on Drop Availability Group-Vorgang wartet auf die Beendigung eines Hintergrund Tasks, der als Teil eines vorherigen Befehls geplant wurde. Es darf z. B. einen Hintergrundtask geben, der Verfügbarkeitsdatenbanken an die primäre Rolle übergibt. Die DROP AVAILABILITY GROUP-DDL muss auf den Abschluss dieses Hintergrundtasks warten, um Racebedingungen zu verhindern.|  
 |PWAIT_HADR_WORKITEM_COMPLETED|Interner Wartevorgang von einem Thread, der auf den Abschluss eines asynchronen Arbeitstasks wartet. Dies ist ein erwarteter Wartevorgang und wird in CSS verwendet.|  
 |PWAIT_MD_LOGIN_STATS|Tritt während der internen Synchronisierung in Metadaten zu Anmeldestatistiken auf.|  
 |PWAIT_MD_RELATION_CACHE|Tritt während der internen Synchronisierung in Metadaten zu Tabelle oder Index auf.|  
@@ -379,11 +380,11 @@ ms.locfileid: "68090874"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Volltext-Wartetyp für den Ruhezustand des Zeitplanungsmoduls. Das Zeitplanungsmodul befindet sich im Leerlauf.|  
-|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
   
   

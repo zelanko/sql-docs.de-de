@@ -1,5 +1,5 @@
 ---
-title: Sp_table_privileges_ex (Transact-SQL) | Microsoft-Dokumentation
+title: sp_table_privileges_ex (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096172"
 ---
-# <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
+# <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Privileginformationen zu der angegebenen Tabelle vom angegebenen Verbindungsserver zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,39 +43,39 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @table_server = ] 'table_server'` Ist der Name des Verbindungsservers, für die Informationen zurückgegeben werden sollen. *Table_server* ist **Sysname**, hat keinen Standardwert.  
+`[ @table_server = ] 'table_server'`Der Name des Verbindungs Servers, für den Informationen zurückgegeben werden sollen. *table_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @table_name = ] 'table_name']` Ist der Name der Tabelle, für die Tabellenprivileginformationen bereitgestellt werden. *TABLE_NAME* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_name = ] 'table_name']`Der Name der Tabelle, für die Tabellen Berechtigungsinformationen bereitgestellt werden sollen. *table_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @table_schema = ] 'table_schema'` Ist das Tabellenschema. Dies ist in einigen DBMS-Umgebungen der Tabellenbesitzer. *TABLE_SCHEMA* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_schema = ] 'table_schema'`Das Tabellen Schema. Dies ist in einigen DBMS-Umgebungen der Tabellenbesitzer. *TABLE_SCHEMA* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @table_catalog = ] 'table_catalog'` Der Name der Datenbank, in der angegebenen *Table_name* befindet. *TABLE_CATALOG* ist **Sysname**, hat den Standardwert NULL.  
+`[ @table_catalog = ] 'table_catalog'`Der Name der Datenbank, in der sich die angegebene *table_name* befindet. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Bestimmt, ob die Zeichen '_', '% s', ' [', und ']' als Platzhalterzeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen "_", "%", "[" und "]" als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Name des Qualifizierers Tabelle. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen (_Qualifizierer_ **.** _Besitzer_ **.** _Namen_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
-|**TABLE_SCHEM**|**sysname**|Name des Tabellenbesitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte dar, den Namen des Datenbankbenutzers, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
+|**TABLE_CAT**|**sysname**|Tabellen qualifizierername. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar. Dieses Feld kann den Wert NULL annehmen.|  
+|**TABLE_SCHEM**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
-|**BERECHTIGENDE (GRANTOR)**|**sysname**|Datenbankbenutzername, Berechtigungen für erteilt hat **TABLE_NAME** aufgeführten **Empfänger**. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], diese Spalte ist immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück. Darüber hinaus kann die GRANTOR-Spalte entweder der Datenbankbesitzer sein (**TABLE_OWNER**) oder ein Benutzer, denen der Datenbankbesitzer die Berechtigung mit der WITH GRANT OPTION-Klausel in der GRANT-Anweisung erteilt.|  
-|**EMPFÄNGER**|**sysname**|Datenbank-Benutzername, dem Berechtigungen für erteilt wurden **TABLE_NAME** aufgeführte **GRANTOR**. Dieses Feld gibt immer einen Wert zurück.|  
-|**BERECHTIGUNGEN**|**Varchar (** 32 **)**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden.<br /><br /> Wählen Sie = **Empfänger** kann Daten für eine oder mehrere Spalten abrufen.<br /><br /> INSERT = **Empfänger** kann Daten für eine oder mehrere Spalten für neue Zeilen bereitstellen.<br /><br /> UPDATE = **Empfänger** kann vorhandene Daten für mindestens eine der Spalten ändern.<br /><br /> DELETE = **Empfänger** kann Zeilen aus der Tabelle entfernen.<br /><br /> REFERENCES = **Empfänger** können auf eine Spalte in einer Fremdschlüsseltabelle in einer Primärschlüssel/Fremdschlüssel-Beziehung verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen mithilfe von Tabelleneinschränkungen definiert.<br /><br /> Der Bereich der Aktion übergeben, um die **Empfänger** durch ein bestimmtes Privileg ist datenquellenabhängig. Die UPDATE-Berechtigung konnte aktivieren Sie z. B. die **Empfänger** so aktualisieren Sie alle Spalten in einer Tabelle für eine Datenquelle und nur die Spalten für die der **berechtigende (Grantor)** verfügt über die UPDATE-Berechtigung für eine andere Datenquelle.|  
-|**IS_GRANTABLE**|**Varchar (** 3 **)**|Gibt an, ob die **Empfänger** ist zulässig, anderen Benutzern Berechtigungen erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
+|**GRANTOR**|**sysname**|Datenbank-Benutzername, der **dem aufgelisteten Empfänger**Berechtigungen für dieses **table_name** erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist diese Spalte immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück. Außerdem kann die GRANTOR-Spalte entweder der Datenbankbesitzer (**TABLE_OWNER**) oder ein Benutzer sein, dem der Datenbankbesitzer mithilfe der WITH GRANT Option-Klausel in der GRANT-Anweisung die Berechtigung erteilt hat.|  
+|**GRANTEE**|**sysname**|Datenbank-Benutzername, dem **vom aufgelisteten**Berechtigungs Element Berechtigungen für dieses **table_name** erteilt wurden. Dieses Feld gibt immer einen Wert zurück.|  
+|**Ehre**|**varchar (** 32 **)**|Eine der verfügbaren Tabellenberechtigungen. Tabellenberechtigungen können folgende Werte annehmen bzw. auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden.<br /><br /> Select = **GRANTEE** kann Daten für eine oder mehrere Spalten abrufen.<br /><br /> INSERT = **GRANTEE** kann für eine oder mehrere Spaltendaten für neue Zeilen bereitstellen.<br /><br /> Update = **GRANTEE** kann vorhandene Daten für eine oder mehrere Spalten ändern.<br /><br /> DELETE = **GRANTEE** kann Zeilen aus der Tabelle entfernen.<br /><br /> References = **GRANTEE** kann in einer Primärschlüssel-/Fremdschlüssel Beziehung auf eine Spalte in einer fremd Tabelle verweisen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Primär-/Fremdschlüsselbeziehungen mithilfe von Tabelleneinschränkungen definiert.<br /><br /> Der **dem Empfänger durch ein** bestimmtes Tabellen Privileg erteilte Aktionsbereich ist Datenquellen abhängig. Beispielsweise **kann die Berechtigung** aktualisieren dem Empfänger ermöglichen, alle Spalten in einer Tabelle in einer Datenquelle zu aktualisieren, und nur die Spalten, für die der **GRANTOR** über die Berechtigung aktualisieren für eine andere Datenquelle verfügt.|  
+|**IS_GRANTABLE**|**varchar (** 3 **)**|Gibt an, **ob der Empfänger** berechtigt ist, anderen Benutzern Berechtigungen zu erteilen. Dies wird häufig als "Berechtigung mit Recht zum Erteilen" bezeichnet. Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist auf eine Datenquelle, für die die "Berechtigung mit Recht zum Erteilen" nicht anwendbar ist.|  
   
-## <a name="remarks"></a>Hinweise  
- Die zurückgegebenen Ergebnisse sind sortiert nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, und **Berechtigungen**.  
+## <a name="remarks"></a>Bemerkungen  
+ Die zurückgegebenen Ergebnisse werden nach **TABLE_QUALIFIER**, **TABLE_OWNER**, **table_name**und **Berechtigungen**geordnet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel werden die Privileginformationen zu Tabellen zurückgegeben, deren Namen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank des angegebenen Verbindungsservers `Product` mit `Seattle1` beginnen. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird als Verbindungsserver angenommen).  
+ In diesem Beispiel werden die Privileginformationen zu Tabellen zurückgegeben, deren Namen in der `Product`-Datenbank des angegebenen Verbindungsservers [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] mit `Seattle1` beginnen. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird als Verbindungs Server angenommen).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   
@@ -84,9 +84,9 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
    @table_catalog ='AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sp_column_privileges_ex &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_column_privileges_ex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Verteilte Abfragen, gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
+ [Gespeicherte Prozeduren für verteilte Abfragen &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

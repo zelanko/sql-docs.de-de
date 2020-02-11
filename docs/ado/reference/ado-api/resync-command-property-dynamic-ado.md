@@ -1,5 +1,5 @@
 ---
-title: Resync-Befehl dynamische Eigenschaft (ADO) | Microsoft-Dokumentation
+title: Resync Command Property-Dynamic (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,26 +14,26 @@ ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917145"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command – dynamische Eigenschaft (ADO)
-Gibt an, ein benutzerdefinierten Befehl-Zeichenfolge, die [Resync](../../../ado/reference/ado-api/resync-method.md) Probleme der Methode zum Aktualisieren der Daten in der Tabelle, die mit dem Namen in der [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamische Eigenschaft.  
+Gibt eine vom Benutzer bereitgestellte Befehls Zeichenfolge an, mit der die Methode für die [erneute Synchronisierung](../../../ado/reference/ado-api/resync-method.md) die Daten in der in der dynamischen Eigenschaft [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) genannten Tabelle aktualisiert.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **Zeichenfolge** Wert, der eine Befehlszeichenfolge ist.  
+ Legt einen **Zeichen** folgen Wert fest, der eine Befehls Zeichenfolge ist.  
   
-## <a name="remarks"></a>Hinweise  
- Die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt ist das Ergebnis einer JOIN-Operation, die auf mehrere Basistabellen ausgeführt. Abhängig von die betroffenen Zeilen die *AffectRecords* Parameter der [Resync](../../../ado/reference/ado-api/resync-method.md) Methode. Der Standard **Resync** Methode wird ausgeführt, wenn die [eindeutige Tabelle](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und **Resync Command** -Eigenschaft nicht festgelegt wurde.  
+## <a name="remarks"></a>Bemerkungen  
+ Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt ist das Ergebnis einer Verknüpfungs Operation, die für mehrere Basistabellen ausgeführt wird. Die betroffenen Zeilen hängen vom *affectrecords* -Parameter der [Resync](../../../ado/reference/ado-api/resync-method.md) -Methode ab. Die Standardmethode für die **Neusynchronisierung** wird ausgeführt, wenn die Eigenschaften [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) und **Resync Command** nicht festgelegt sind.  
   
- Die Befehlszeichenfolge, die von der **Resync Command** Eigenschaft ist ein parametrisierter Befehl oder gespeicherte Prozedur, die die zu aktualisierende Zeile eindeutig identifiziert und gibt eine einzelne Zeile mit die gleiche Anzahl und Reihenfolge der Spalten der Zeile sein aktualisiert. Enthält die Befehlszeichenfolge einen Parameter für jede primäre Schlüsselspalte in der **eindeutige Tabelle**ist, andernfalls ein Laufzeitfehler wird zurückgegeben. Die Parameter werden mit Primärschlüsselwerten, die aus der Zeile aktualisiert werden automatisch ausgefüllt.  
+ Die Befehls Zeichenfolge der **Resync-Befehls** Eigenschaft ist ein parametrisierter Befehl oder eine gespeicherte Prozedur, die die zu Aktualisier Ende Zeile eindeutig identifiziert und eine einzelne Zeile zurückgibt, die die gleiche Anzahl und Reihenfolge der Spalten wie die zu Aktualisier Ende Zeile enthält. Die Befehls Zeichenfolge enthält einen Parameter für jede Primärschlüssel Spalte in der **eindeutigen Tabelle**. Andernfalls wird ein Laufzeitfehler zurückgegeben. Die Parameter werden automatisch mit Primärschlüssel Werten aus der Zeile aufgefüllt, die aktualisiert werden soll.  
   
- Hier sind zwei Beispiele, die basierend auf SQL aus:  
+ Im folgenden finden Sie zwei Beispiele, die auf SQL basieren:  
   
- 1\) der **Recordset** wird durch einen Befehl definiert:  
+ 1\) das **Recordset** wird durch einen Befehl definiert:  
   
 ```  
 SELECT * FROM Customers JOIN Orders ON   
@@ -42,7 +42,7 @@ SELECT * FROM Customers JOIN Orders ON
    ORDER BY CustomerID  
 ```  
   
- Die **Resync Command** Eigenschaft auf festgelegt ist:  
+ Die Eigenschaft für den **Resync-Befehl** ist auf Folgendes festgelegt:  
   
 ```  
 "SELECT * FROM   
@@ -52,9 +52,9 @@ SELECT * FROM Customers JOIN Orders ON
 WHERE Orders.OrderID = ?"  
 ```  
   
- Die **eindeutige Tabelle** ist *Bestellungen* und der Primärschlüssel, *"OrderID"* , parametrisiert wird. Der untergeordneten Select bietet eine einfache Möglichkeit, programmgesteuert sicherstellen, dass die gleiche Anzahl und Reihenfolge der Spalten, wie Sie mit dem ursprünglichen Befehl zurückgegeben werden.  
+ Die **eindeutige Tabelle** ist *Orders* , und der zugehörige Primärschlüssel *OrderID*ist parametrisiert. Die untergeordnete SELECT-Methode bietet eine einfache Möglichkeit, Programm gesteuert sicherzustellen, dass die gleiche Anzahl und Reihenfolge der Spalten wie durch den ursprünglichen Befehl zurückgegeben wird.  
   
- 2\) der **Recordset** wird durch eine gespeicherte Prozedur definiert:  
+ 2\) das **Recordset** wird durch eine gespeicherte Prozedur definiert:  
   
 ```  
 CREATE PROC Custorders @CustomerID char(5) AS   
@@ -63,7 +63,7 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Customers.CustomerID = @CustomerID  
 ```  
   
- Die **Resync** Methode sollte die folgende gespeicherte Prozedur auszuführen:  
+ Die **Resync** -Methode sollte die folgende gespeicherte Prozedur ausführen:  
   
 ```  
 CREATE PROC CustordersResync @ordid int AS   
@@ -72,15 +72,15 @@ Customers.CustomerID = Orders.CustomerID
 WHERE Orders.ordid  = @ordid  
 ```  
   
- Die **Resync Command** Eigenschaft auf festgelegt ist:  
+ Die Eigenschaft für den **Resync-Befehl** ist auf Folgendes festgelegt:  
   
 ```  
 "{call CustordersResync (?)}"  
 ```  
   
- Auch hier die **eindeutige Tabelle** ist *Bestellungen* und der Primärschlüssel, *"OrderID"* , parametrisiert wird.  
+ Auch hier ist die **eindeutige Tabelle** *Orders* , und der zugehörige Primärschlüssel *OrderID*ist parametrisiert.  
   
- **Resync-Befehl** wird eine dynamische Eigenschaft angefügt der **Recordset** Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) Auflistung bei der [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaftensatz auf **AdUseClient**.  
+ Der **Befehl Resync** ist eine dynamische Eigenschaft, die an die Auflistung der **Recordset** -Objekt [Eigenschaften](../../../ado/reference/ado-api/properties-collection-ado.md) angehängt wird, wenn die Eigenschaft [Cursor Location](../../../ado/reference/ado-api/cursorlocation-property-ado.md) auf **adUseClient**festgelegt ist.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

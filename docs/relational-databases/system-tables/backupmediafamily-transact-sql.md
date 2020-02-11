@@ -1,5 +1,5 @@
 ---
-title: Backupmediafamily (Transact-SQL) | Microsoft-Dokumentation
+title: backupmediafamily (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6ea3fd7937447ba3ed0f3ad89965301dead772cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68122882"
 ---
 # <a name="backupmediafamily-transact-sql"></a>backupmediafamily (Transact-SQL)
@@ -30,25 +30,25 @@ ms.locfileid: "68122882"
 
   Enthält eine Zeile für jede Medienfamilie. Wenn sich eine Medienfamilie in einem gespiegelten Mediensatz befindet, verfügt die Familie über eine separate Zeile für jede Spiegelung im Mediensatz. Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
     
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**int**|Eindeutige ID, die den Mediensatz kennzeichnet, in dem diese Familie ein Element ist. Verweise **backupmediaset(media_set_id)**|  
+|**media_set_id**|**int**|Eindeutige ID, die den Mediensatz kennzeichnet, in dem diese Familie ein Element ist. Verweise auf **backupmediaset (media_set_id)**|  
 |**family_sequence_number**|**tinyint**|Position dieser Medienfamilie im Mediensatz.|  
 |**media_family_id**|**uniqueidentifier**|Eindeutige ID, die die Medienfamilie kennzeichnet. Kann den Wert NULL haben.|  
 |**media_count**|**int**|Anzahl der Medien in der Medienfamilie. Kann den Wert NULL haben.|  
-|**logical_device_name**|**nvarchar(128)**|Name dieses Sicherungsmediums in **sys.backup_devices.name**. Wenn dies ein temporäres Sicherungsmedium ist (im Gegensatz zu einem dauerhaften Sicherungsmedium, das in vorhanden **Sys. backup_devices**), den Wert der **Logical_device_name** ist NULL.|  
-|**physical_device_name**|**nvarchar(260)**|Physischer Name des Sicherungsmediums. Kann den Wert NULL haben. Dieses Feld wird von sicherungs-und Wiederherstellungsprozesses gemeinsam genutzt. Es kann es sich um den ursprünglichen Sicherungsziel oder der ursprüngliche Quellpfad für die Wiederherstellung enthalten. Je nachdem, ob sicherungs- oder Wiederherstellungsvorgang zuerst auf einem Server für eine Datenbank aufgetreten ist. Beachten Sie, dass es sich bei aufeinander folgenden Wiederherstellungen aus der gleichen Datei zu sichern wird den Pfad, unabhängig von deren Standort nicht zum Zeitpunkt der Wiederherstellung aktualisiert. Aus diesem Grund **"physical_device_name"** Feld kann nicht verwendet werden, um die verwendete Wiederherstellungspfad finden Sie unter.|  
-|**device_type**|**tinyint**|Typ des Sicherungsmediums:<br /><br /> 2 = Datenträger<br /><br /> 5 = Band<br /><br /> 7 = Virtuelles Medium<br /><br /> 9 = Azure-Speicher<br /><br /> 105 = ein dauerhaftes Sicherungsmedium.<br /><br /> Kann den Wert NULL haben.<br /><br /> Alle permanenter Medien-Namen und Nummern finden Sie in **Sys. backup_devices**.|  
+|**logical_device_name**|**nvarchar(128)**|Name dieses Sicherungs Mediums in **sys. backup_devices. Name**. Handelt es sich hierbei um ein temporäres Sicherungsmedium (im Gegensatz zu einem permanenten Sicherungsmedium, das in **sys. backup_devices**vorhanden ist), ist der Wert von **logical_device_name** NULL.|  
+|**physical_device_name**|**nvarchar(260)**|Physischer Name des Sicherungsmediums. Kann den Wert NULL haben. Dieses Feld wird für den Sicherungs-und Wiederherstellungsprozess freigegeben. Sie kann den ursprünglichen Sicherungszielpfad oder den ursprünglichen Wiederherstellungs Quell Pfad enthalten. Abhängig davon, ob die Sicherung oder Wiederherstellung zuerst auf einem Server für eine Datenbank erfolgt ist. Beachten Sie, dass bei aufeinander folgenden Wiederherstellungen aus derselben Sicherungsdatei der Pfad unabhängig vom Speicherort des Wiederherstellungs Zeitraums nicht aktualisiert wird. Aus diesem Grund kann **physical_device_name** Feld nicht verwendet werden, um den verwendeten Wiederherstellungs Pfad anzuzeigen.|  
+|**device_type**|**tinyint**|Typ des Sicherungsmediums:<br /><br /> 2 = Datenträger<br /><br /> 5 = Band<br /><br /> 7 = Virtuelles Medium<br /><br /> 9 = Azure Storage<br /><br /> 105 = ein dauerhaftes Sicherungsmedium.<br /><br /> Kann den Wert NULL haben.<br /><br /> Alle permanenten Gerätenamen und Gerätenummern finden Sie in **sys. backup_devices**.|  
 |**physical_block_size**|**int**|Physische Blockgröße, die zum Schreiben der Medienfamilie verwendet wurde. Kann den Wert NULL haben.|  
-|**Spiegelserver**|**tinyint**|Spiegelnummer (0-3).|  
+|**OL**|**tinyint**|Spiegelnummer (0-3).|  
   
-## <a name="remarks"></a>Hinweise  
- RESTORE VERIFYONLY FROM *Backup_device* WITH LOADHISTORY füllt die Spalten der **Backupmediaset** Tabelle mit den entsprechenden Werten aus dem mediensatzheader.  
+## <a name="remarks"></a>Bemerkungen  
+ RESTORE VERIFYONLY FROM *backup_device* mit LOADHISTORY füllt die Spalten der **Backup Mediaset** -Tabelle mit den entsprechenden Werten aus dem Medien Satz Header auf.  
   
- Um die Anzahl der Zeilen in dieser Tabelle und in anderen Tabellen sicherungs- und Verlaufstabellen zu verringern, führen Sie die [Sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) gespeicherte Prozedur.  
+ Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sichern und Wiederherstellen von Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupmediaset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupmediaset-transact-sql.md)   

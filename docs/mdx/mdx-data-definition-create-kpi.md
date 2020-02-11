@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098405"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX-Datendefinition – CREATE KPI
@@ -35,13 +35,13 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
  *KPI_Value*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
- *Property_name*  
+ *Property_Name*  
  Eine gültige Zeichenfolge, die den Namen einer KPI-Eigenschaft bereitstellt.  
   
  *Property_Value*  
  Ein gültiger Skalarausdruck, der den Wert der KPI-Eigenschaft definiert.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Angabe eines anderen als des aktuell verbundenen Cubes verursacht einen Fehler. Daher sollten Sie den aktuellen Cube mithilfe von CURRENTCUBE statt mit dem Cubenamen angeben.  
   
 ## <a name="kpi-properties"></a>KPI-Eigenschaften  
@@ -58,44 +58,44 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |CURRENT_TIME_MEMBER|Ein gültiger MDX-Ausdruck, der ein Element in der Zeitdimension zurückgibt. CURRENT_TIME_MEMBER legt den Bezugspunkt für alle relativen Zeitfunktionen fest.|  
 |PARENT_KPI|Eine Zeichenfolge, die den Namen für den übergeordneten KPI bereitstellt.|  
 |CAPTION|Eine Zeichenfolge, die von der Clientanwendung als Beschriftung für den KPI verwendet wird.|  
-|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, in dem der KPI von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Für Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], den umgekehrten Schrägstrich (\\) ebenentrennzeichen ist. Um mehrere Anzeigeordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) um den Ordner zu trennen|  
+|DISPLAY_FOLDER|Eine Zeichenfolge, die den Pfad des Anzeigeordners angibt, in dem der KPI von der Clientanwendung angezeigt wird. Das Trennzeichen für Ordnerebenen wird von der Clientanwendung definiert. Bei den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereitgestellten Tools und Clients ist der umgekehrte schräg\\Strich () das ebenendtrennzeichen. Um mehrere Anzeige Ordner für ein definiertes Element bereitzustellen, verwenden Sie ein Semikolon (;) So trennen Sie die Ordner|  
 |ASSOCIATED_MEASURE_GROUP|Eine Zeichenfolge, die den Namen der Measuregruppe angibt, auf die alle MDX-Berechnungen verweisen sollen.|  
   
- Die Werte für die Eigenschaften GOAL, STATUS und TREND sind MDX-Ausdrücke, die zu einem Wert zwischen -1 und 1 ausgewertet werden sollen. Allerdings wird der tatsächliche Wertebereich für die Eigenschaften von der Clientanwendung definiert. Bei Verwendung von Tools und Clients, die vom [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Durchsuchen von KPIs Werte kleiner als-1 wie-1 behandelt werden, und Werte größer als 1 wie 1 behandelt.  
+ Die Werte für die Eigenschaften GOAL, STATUS und TREND sind MDX-Ausdrücke, die zu einem Wert zwischen -1 und 1 ausgewertet werden sollen. Allerdings wird der tatsächliche Wertebereich für die Eigenschaften von der Clientanwendung definiert. Wenn Sie die von bereitgestellten Tools und Clients [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zum Durchsuchen von KPIs verwenden, werden Werte kleiner als-1 als-1 behandelt, und Werte, die größer als 1 sind, werden als 1 behandelt.  
   
  Sowohl STATUS_GRAPHIC als auch TREND_GRAPHIC sind Zeichenfolgenwerte, mit denen die Clientanwendung die korrekte Gruppe der anzuzeigenden Bilder identifiziert. Diese Zeichenfolgen definieren auch das Verhalten der Anzeigefunktion. Dieses Verhalten umfasst die Anzahl von anzuzeigenden Status (normalerweise eine ungerade Anzahl) sowie die für jeden einzelnen Status zu verwendenden Bilder.  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>KPI-Grafiken in SQL Server-Datentools  
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können KPI-Grafiken entweder über drei oder fünf Status verfügen. In der folgende Tabelle definiert die Werte für die einzelnen Status aufgelistet.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können KPI-Grafiken entweder über drei oder fünf Status verfügen. In der folgenden Tabelle werden Werte für die einzelnen Status aufgelistet.  
   
 |Anzahl von Status für KPI-Grafik|Wert dieser Status|  
 |--------------------------------------|---------------------------|  
-|3|Ungültig = -1 bis -0,5<br /><br /> OK =-0.4999 auf "0.4999"<br /><br /> Gut = 0,50 bis 1|  
+|3|Ungültig = -1 bis -0,5<br /><br /> OK =-0,4999 bis 0,4999<br /><br /> Gut = 0,50 bis 1|  
 |5|Ungültig = -1 bis -0,75<br /><br /> Risiko = -0,7499 bis -0,25<br /><br /> OK = -0,2499 bis 0,2499<br /><br /> Steigend = 0,25 bis 0,7499<br /><br /> Gut = 0,75 bis 1|  
   
 > [!NOTE]  
 >  Für einige Grafiken, z. B. der umgekehrte Maßstab oder umgekehrte Statuspfeil, wird der Bereich umgekehrt. Das heißt, -1 ist gut, und 1 ist schlecht.  
   
- In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] wird anhand des Namens der KPI-Grafik bestimmt, ob die Grafik über drei oder fünf Status verfügt. Die folgende Tabelle enthält die Verwendung, Name und die Anzahl der gibt an, dass [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ordnet den KPI-Grafiken.  
+ In [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] wird anhand des Namens der KPI-Grafik bestimmt, ob die Grafik über drei oder fünf Status verfügt. In der folgenden Tabelle werden die Verwendung, der Name und die Anzahl der [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Zustände aufgelistet, die mit den KPI-Grafiken verknüpft sind.  
   
 |Verwendung der Grafik|Name der KPI-Grafik|Anzahl von Status|  
 |--------------------|-------------------------|----------------------|  
 |Status|Formen|3|  
 |Status|Verkehrsampel|3|  
 |Status|Straßenschilder|3|  
-|Status|Messgerät|3|  
+|Status|Maßstab|3|  
 |Status|Umgekehrter Maßstab|5|  
 |Status|Thermometer|3|  
 |Status|Zylinder|3|  
-|Status|Gesichter|3|  
+|Status|Gesichtserkennung|3|  
 |Status|Varianzpfeil|3|  
 |Trend|Standardpfeil|3|  
 |Trend|Statuspfeil|3|  
 |Trend|Umgekehrter Statuspfeil|5|  
-|Trend|Gesichter|3|  
+|Trend|Gesichtserkennung|3|  
   
-## <a name="see-also"></a>Siehe auch  
- [DROP KPI-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
- [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Drop KPI-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-drop-kpi.md)   
+ [MDX-Daten Definitions Anweisungen &#40;MDX-&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

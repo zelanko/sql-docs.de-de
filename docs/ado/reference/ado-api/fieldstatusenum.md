@@ -1,5 +1,5 @@
 ---
-title: FieldStatusEnum | Microsoft-Dokumentation
+title: Fieldstatus usenum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,52 +16,52 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918665"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
-Gibt an, die [Status](../../../ado/reference/ado-api/status-property-ado-field.md) von einem [Feldobjekt](../../../ado/reference/ado-api/field-object.md).  
+Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-field.md) eines [Feld Objekts](../../../ado/reference/ado-api/field-object.md)an.  
   
- Die **AdFieldPending\***  Werte geben an, den Vorgang, die aufgrund des Status festgelegt werden soll, und kann mit anderen Statuswerte kombiniert werden.  
+ Die **adfieldpending\* ** -Werte geben den Vorgang an, der bewirkt hat, dass der Status festgelegt wurde, und können mit anderen Status Werten kombiniert werden.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adFieldAlreadyExists**|26|Gibt an, dass das angegebene Feld ist bereits vorhanden.|  
-|**adFieldBadStatus**|12|Gibt an, dass ein gültiger Wert von ADO, OLE DB-Anbieter gesendet wurde. Mögliche Ursachen, ein OLE DB-1.0 oder 1.1-Anbieter oder eine falsche Kombination von [Wert](../../../ado/reference/ado-api/value-property-ado.md) und [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  
-|**adFieldCannotComplete**|20|Gibt an, dass der Server, der URL angegeben [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md) den Vorgang konnte nicht abgeschlossen werden.|  
-|**adFieldCannotDeleteSource**|23|Gibt an, dass bei einem Verschiebungsvorgang, eine Struktur oder ein Unterverzeichnis an einem neuen Speicherort verschoben wurde, aber die Quelle nicht gelöscht werden konnte.|  
-|**adFieldCantConvertValue**|2|Gibt an, dass das Feld kann nicht abgerufen oder ohne Verlust von Daten gespeichert werden.|  
-|**adFieldCantCreate**|7|Gibt an, dass das Feld nicht hinzugefügt werden konnte, da der Anbieter eine Einschränkung (z. B. die Anzahl der Felder zulässig) überschreiten.|  
-|**adFieldDataOverflow**|6|Gibt an, dass die vom Anbieter zurückgegebenen Daten den Datentyp des Felds ist ein Überlauf aufgetreten.|  
-|**adFieldDefault**|13|Gibt an, dass der Standardwert für das Feld, beim Festlegen der Daten verwendet wurde.|  
-|**adFieldDoesNotExist**|16|Gibt an, dass das angegebene Feld nicht vorhanden ist.|  
-|**adFieldIgnore**|15|Gibt an, dass dieses Feld bei der Einstellung Datenwerte in der Quelle übersprungen wurde. Der Anbieter legen Sie keinen Wert.|  
-|**adFieldIntegrityViolation**|10|Gibt an, dass das Feld kann nicht geändert werden, da es sich um eine Entität berechneter oder abgeleiteter handelt.|  
-|**adFieldInvalidURL**|17|Gibt an, dass die URL der Datenquelle ungültige Zeichen enthält.|  
-|**adFieldIsNull**|3|Gibt an, dass der Anbieter einen VARIANT-Wert des Typs VT_NULL zurückgegeben und das Feld nicht leer ist.|  
-|**adFieldOK**|0|Standard. Gibt an, dass das Feld wurde erfolgreich hinzugefügt oder gelöscht wurde.|  
-|**adFieldOutOfSpace**|22|Gibt an, dass der Anbieter ist nicht genügend Speicherplatz zum Abschließen eines Verschiebe- oder Kopiervorgang zu erhalten.|  
-|**adFieldPendingChange**|0x40000|Gibt an, entweder, der das Feld wurde gelöscht und anschließend erneut hinzugefügt, z. B. mit einem anderen Datentyp oder, die den Wert des Felds, das bisher einen Status von **AdFieldOK** hat sich geändert. Das endgültige Format des Felds ändert die [Felder](../../../ado/reference/ado-api/fields-collection-ado.md) Sammlung nach der [Update](../../../ado/reference/ado-api/update-method.md) Methode wird aufgerufen.|  
-|**adFieldPendingDelete**|0x20000|Gibt an, dass die **löschen** Vorgang verursacht hat, den Status festgelegt werden. Das Feld für die Löschung markiert die **Felder** Sammlung nach der **Update** Methode wird aufgerufen.|  
-|**adFieldPendingInsert**|0x10000|Gibt an, dass die **Append** Vorgang verursacht hat, den Status festgelegt werden. Die **Feld** markiert, hinzugefügt werden soll die **Felder** Auflistung nach der **Update** Methode wird aufgerufen.|  
-|**adFieldPendingUnknown**|0x80000|Gibt an, dass der Anbieter nicht bestimmen kann, welche Status des Vorgangs-Feld festgelegt werden.|  
-|**adFieldPendingUnknownDelete**|0x100000|Gibt an, dass der Anbieter nicht bestimmen kann, welcher Vorgang verursacht hat, Feldstatus festgelegt werden, und das Feld aus gelöscht wird die **Felder** Sammlung nach der **Update** Methode wird aufgerufen.|  
-|**adFieldPermissionDenied**|9|Gibt an, dass das Feld kann nicht geändert werden, da sie als schreibgeschützt definiert ist.|  
-|**adFieldReadOnly**|24|Gibt an, dass das Feld in der Datenquelle als schreibgeschützt definiert ist.|  
-|**adFieldResourceExists**|19|Gibt an, dass der Anbieter konnte nicht zum Ausführen des Vorgangs, da ein Objekt bereits vorhanden, an die Ziel-URL ist, und es nicht auf das Objekt überschrieben kann.|  
-|**adFieldResourceLocked**|18|Gibt an, dass der Anbieter konnte nicht zum Ausführen des Vorgangs, da die Datenquelle durch mindestens eine andere Anwendung oder den Prozess gesperrt ist.|  
-|**adFieldResourceOutOfScope**|25|Gibt an, dass eine Quelle oder Ziel-URL außerhalb des Bereichs des aktuellen Datensatzes.|  
-|**adFieldSchemaViolation**|11|Gibt an, dass der Wert der Schema-Einschränkung für das Feld verletzt.|  
-|**adFieldSignMismatch**|5|Gibt an, dass die vom Anbieter zurückgegebene Datenwert mit Vorzeichen handelte, aber der Datentyp des Feldwerts ADO kein Vorzeichen hatte.|  
-|**adFieldTruncated**|4|Gibt an, dass die Daten mit variabler Länge abgeschnitten wurden, beim Lesen aus der Datenquelle.|  
-|**adFieldUnavailable**|8|Gibt an, dass der Anbieter den Wert beim Lesen aus der Datenquelle nicht ermitteln konnte. Zum Beispiel die Zeile wurde gerade erstellt haben, der Standardwert für die Spalte war nicht verfügbar und ein neuer Wert mussten noch nicht angegeben wurde.|  
-|**adFieldVolumeNotFound**|21|Gibt an, dass der Anbieter wurde nicht gefunden des Speichervolumes, die von der URL angegeben ist.|  
+|**adfieldalread yexistiert**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
+|**adfieldbadstatus**|12|Gibt an, dass ein ungültiger Statuswert von ADO an den OLE DB-Anbieter gesendet wurde. Zu den möglichen Ursachen gehören ein OLE DB 1,0-oder 1,1-Anbieter oder eine falsche Kombination aus [Wert](../../../ado/reference/ado-api/value-property-ado.md) und [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  
+|**adfieldcannotcomplete**|20|Gibt an, dass der Server der von der [Quelle](../../../ado/reference/ado-api/source-property-ado-record.md) angegebenen URL den Vorgang nicht beenden konnte.|  
+|**adfieldcannotdelta etesource**|23|Gibt an, dass während eines Verschiebungs Vorgangs eine Struktur oder Teilstruktur an eine neue Position verschoben wurde, die Quelle jedoch nicht gelöscht werden konnte.|  
+|**adfieldcantconvertvalue**|2|Gibt an, dass das Feld ohne Datenverlust nicht abgerufen oder gespeichert werden kann.|  
+|**adfieldcantcreate**|7|Gibt an, dass das Feld nicht hinzugefügt werden konnte, da der Anbieter eine Einschränkung überschritten hat (z. b. die zulässige Anzahl von Feldern).|  
+|**adfielddataoverflow**|6|Gibt an, dass die vom Anbieter zurückgegebenen Daten zu einem Überlauf des Datentyps des Felds geführt haben.|  
+|**adfielddefault**|13|Gibt an, dass beim Festlegen von Daten der Standardwert für das Feld verwendet wurde.|  
+|**adfielddoesnotexist**|16|Gibt an, dass das angegebene Feld nicht vorhanden ist.|  
+|**adfieldignore**|15|Gibt an, dass dieses Feld übersprungen wurde, als Datenwerte in der Quelle festgelegt wurden. Der Anbieter hat keinen Wert festgelegt.|  
+|**adfieldintegrityverletzungs**|10|Gibt an, dass das Feld nicht geändert werden kann, da es eine berechnete oder abgeleitete Entität ist.|  
+|**adfieldinvalidurl**|17|Gibt an, dass die Datenquellen-URL ungültige Zeichen enthält.|  
+|**adfieldisnull**|3|Gibt an, dass der Anbieter einen Variant-Wert vom Typ VT_NULL zurückgegeben hat und dass das Feld nicht leer ist.|  
+|**adFieldOK**|0|Default. Gibt an, dass das Feld erfolgreich hinzugefügt oder gelöscht wurde.|  
+|**adfieldouesleerraum**|22|Gibt an, dass der Anbieter nicht genügend Speicherplatz zum Durchführen eines verschiebe-oder Kopiervorgangs abrufen kann.|  
+|**adfieldpdingchange**|0x40000|Gibt an, dass das Feld gelöscht und anschließend erneut hinzugefügt wurde, möglicherweise mit einem anderen Datentyp, oder dass sich der Wert des Felds, das zuvor den Status **adFieldOK** enthielt, geändert hat. In der endgültigen Form des Felds wird die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung geändert, nachdem die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufgerufen wurde.|  
+|**adfieldpdingdelete**|0x20000|Gibt an, dass der **Lösch** Vorgang bewirkt hat, dass der Status festgelegt wurde. Nachdem die **Update** -Methode aufgerufen wurde, wurde das Feld zum Löschen aus der **Fields** -Auflistung markiert.|  
+|**adfieldpdinginsert**|0x10000|Gibt an, dass der Anfüge Vorgang bewirkt hat, **dass der Status** festgelegt wurde. Das **Feld** wurde so gekennzeichnet, dass es der **Fields** -Auflistung hinzugefügt wird, nachdem die **Update** -Methode aufgerufen wurde.|  
+|**adfieldpdingunknown**|0x80000|Gibt an, dass der Anbieter nicht ermitteln kann, welcher Vorgang das Festlegen des Feld Status bewirkt hat.|  
+|**adfieldpdingunknowndelete**|0x100000|Gibt an, dass der Anbieter nicht ermitteln kann, welcher Vorgang den Feld Status festgelegt hat, und dass das Feld nach dem Aufrufen der **Update** -Methode aus der **Fields** -Auflistung gelöscht wird.|  
+|**adfieldpermissiondenied**|9|Gibt an, dass das Feld nicht geändert werden kann, da es als schreibgeschützt definiert ist.|  
+|**adfieldreadonly**|24|Gibt an, dass das Feld in der Datenquelle als schreibgeschützt definiert ist.|  
+|**adfieldresourceist vorhanden**|19|Gibt an, dass der Anbieter den Vorgang nicht ausführen konnte, da ein Objekt bereits an der Ziel-URL vorhanden ist und es nicht in der Lage ist, das Objekt zu überschreiben.|  
+|**adfieldresourcelocked**|18|Gibt an, dass der Anbieter den Vorgang nicht ausführen konnte, da die Datenquelle von mindestens einer anderen Anwendung oder einem anderen Prozess gesperrt ist.|  
+|**adfieldresourceoutrof Scope**|25|Gibt an, dass eine Quell-oder eine Ziel-URL außerhalb des Gültigkeits Bereichs des aktuellen Datensatzes liegt.|  
+|**adfieldschemaverletzung**|11|Gibt an, dass der Wert gegen die Schema Einschränkung der Datenquelle für das Feld verstoßen hat.|  
+|**adfieldsignmismatch**|5|Gibt an, dass der vom Anbieter zurückgegebene Datenwert signiert wurde, der Datentyp des ADO-Feldwerts jedoch nicht signiert wurde.|  
+|**adfieldtruncated**|4|Gibt an, dass Daten variabler Länge beim Lesen aus der Datenquelle abgeschnitten wurden.|  
+|**adfieldunavailable**|8|Gibt an, dass der Anbieter den Wert beim Lesen aus der Datenquelle nicht ermitteln konnte. Beispielsweise wurde die Zeile soeben erstellt, der Standardwert für die Spalte war nicht verfügbar, und es wurde noch kein neuer Wert angegeben.|  
+|**adfieldvolumeinotfound**|21|Gibt an, dass der Anbieter das durch die URL festgestellte Speicher Volume nicht finden kann.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Diese Konstanten keine ADO/WFC-Entsprechungen.  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Diese Konstanten haben keine ADO/WFC-Entsprechungen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Status-Eigenschaft (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Status-Eigenschaft (ADO-Feld)](../../../ado/reference/ado-api/status-property-ado-field.md)

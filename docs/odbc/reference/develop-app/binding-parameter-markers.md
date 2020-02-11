@@ -1,5 +1,5 @@
 ---
-title: Binden von Parametermarkierungen | Microsoft-Dokumentation
+title: Binden von Parameter Markierungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107652"
 ---
 # <a name="binding-parameter-markers"></a>Binden von Parametermarkern
-Die Anwendung bindet Parameter durch den Aufruf **SQLBindParameter**. **SQLBindParameter** bindet einen Parameter zu einem Zeitpunkt. Es gibt die Anwendung Folgendes an:  
+Die Anwendung bindet Parameter durch Aufrufen von **SQLBindParameter**. **SQLBindParameter** bindet jeweils einen Parameter. Dabei gibt die Anwendung Folgendes an:  
   
--   Der Parameter mit der Nummer. Parameter werden in Reihenfolge der zunehmenden Parameter in der SQL-Anweisung beginnt mit der Zahl 1 nummeriert. Während es zulässig ist, geben Sie einen Parameter mit der Nummer, die höher als die Anzahl von Parametern in der SQL-Anweisung, der Wert des Parameters wird ignoriert, wenn die Anweisung ausgeführt wird.  
+-   Die Parameter Nummer. Parameter werden in der zunehmenden Parameterreihenfolge in der SQL-Anweisung nummeriert, beginnend mit der Zahl 1. Es ist zwar zulässig, eine Parameter Nummer anzugeben, die höher ist als die Anzahl der Parameter in der SQL-Anweisung, aber der Parameterwert wird ignoriert, wenn die Anweisung ausgeführt wird.  
   
--   Der Parametertyp (Eingabe, Eingabe/Ausgabe- oder Ausgabe). Mit Ausnahme von Parametern in Prozeduraufrufen sind alle Parameter Eingabeparameter an. Weitere Informationen finden Sie unter [Prozedurparameter](../../../odbc/reference/develop-app/procedure-parameters.md)weiter unten in diesem Abschnitt.  
+-   Der Parametertyp (Input, Input/Output oder Output). Mit Ausnahme der Parameter in Prozedur aufrufen sind alle Parameter Eingabeparameter. Weitere Informationen finden Sie unter [Prozedur Parameter](../../../odbc/reference/develop-app/procedure-parameters.md)weiter unten in diesem Abschnitt.  
   
--   Die C-Daten Typ, Adresse und Byte der Länge der Variablen, die an den Parameter gebunden werden. Der Treiber muss in der Lage, die Daten aus der C-Datentyp in der SQL-Datentyp zu konvertieren, oder ein Fehler zurückgegeben. Eine Liste der unterstützten Konvertierungen, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D: Datentypen.  
+-   Der C-Datentyp, die Adresse und die Byte Länge der Variablen, die an den-Parameter gebunden ist. Der Treiber muss in der Lage sein, die Daten vom C-Datentyp in den SQL-Datentyp zu konvertieren, oder es wird ein Fehler zurückgegeben. Eine Liste der unterstützten Konvertierungen finden [Sie unter Konvertieren von Daten aus C in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D: Datentypen.  
   
--   Die SQL-Datentyp, Genauigkeit und Dezimalstellen des Parameters selbst.  
+-   Der SQL-Datentyp, die Genauigkeit und die Skalierung des Parameters selbst.  
   
--   Die Adresse des ein Längen-/Indikatorpuffer. Es enthält-die Bytelänge der Binär-oder Zeichendatentypen, gibt an, dass die Daten NULL sind, oder gibt an, dass die Daten mit gesendet werden, **SQLPutData**. Weitere Informationen finden Sie unter [mit Längenindikator/Werten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
+-   Die Adresse eines Längen-/Indikatorpuffers. Sie gibt die Byte Länge von Binär-oder Zeichendaten an, gibt an, dass die Daten NULL sind, oder gibt an, dass die Daten mit **SQLPutData**gesendet werden. Weitere Informationen finden Sie unter [Verwenden von Längen-/indikatorenwerten](../../../odbc/reference/develop-app/using-length-and-indicator-values.md).  
   
- Beispielsweise der folgende code bindet *Vertriebsmitarbeiter* und *CustID* Parametern für die Vertriebsmitarbeiter und CustID Spalten. Da *Vertriebsmitarbeiter* Zeichendaten, die eine Variable Länge aufweist, enthält der Code gibt an, die Bytelänge der *Vertriebsmitarbeiter* (11) und bindet *SalesPersonLenOrInd* auf enthalten die Bytelänge der Daten in *Vertriebsmitarbeiter*. Diese Informationen sind nicht erforderlich für *CustID* , da sie ganzzahlige Daten enthält, die feste Länge aufweist.  
+ Der folgende Code bindet z. b. " *SalesPerson* " und " *CustId* " an Parameter für die Spalten "SalesPerson" und "CustID". Da *SalesPerson* Zeichendaten enthält, die eine Variable Länge aufweisen, gibt der Code die Byte Länge von *SalesPerson* (11) an und bindet *salespersonlenorind* an die Byte Länge der Daten in *SalesPerson*. Diese Informationen sind für *CustId* nicht erforderlich, da Sie ganzzahlige Daten mit fester Länge enthalten.  
   
 ```  
 SQLCHAR       SalesPerson[11];  
@@ -58,7 +58,7 @@ CustIDInd = 0;
 SQLExecDirect(hstmt1,"SELECT * FROM Orders WHERE SalesPerson=? AND CustID=?",SQL_NTS);  
 ```  
   
- Wenn **SQLBindParameter** wird aufgerufen, der Treiber speichert diese Informationen in der Struktur für die Anweisung. Wenn die Anweisung ausgeführt wird, verwendet er die Informationen der Parameterdaten abgerufen und an die Datenquelle zu senden.  
+ Wenn **SQLBindParameter** aufgerufen wird, speichert der Treiber diese Informationen in der-Struktur für die-Anweisung. Wenn die-Anweisung ausgeführt wird, werden die-Informationen verwendet, um die Parameterdaten abzurufen und an die Datenquelle zu senden.  
   
 > [!NOTE]  
->  In ODBC-1.0, Parameter gebunden waren **SQLSetParam**. Der Treiber-Manager ordnet Aufrufe zwischen **SQLSetParam** und **SQLBindParameter**, je nachdem, auf die Versionen von ODBC, die von der Anwendung und der Treiber verwendet.
+>  In ODBC 1,0 wurden Parameter mit **SQLSetParam**gebunden. Der Treiber-Manager ordnet Aufrufe zwischen **SQLSetParam** und **SQLBindParameter**zu, abhängig von den Versionen von ODBC, die von der Anwendung und dem Treiber verwendet werden.

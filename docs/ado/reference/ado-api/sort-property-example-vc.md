@@ -1,5 +1,5 @@
 ---
-title: Sortieren-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für eine Sortier Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67930966"
 ---
 # <a name="sort-property-example-vc"></a>Sort-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel verwendet die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) des Objekts [sortieren](../../../ado/reference/ado-api/sort-property.md) Eigenschaft, um die Zeilen der neu anordnen einer **Recordset** abgeleitet der ***Autoren*** Tabelle die **Pubs** Datenbank. Eine sekundäre Dienstprogrammroutine gibt jede Zeile aus.  
+In diesem Beispiel wird die [Sort](../../../ado/reference/ado-api/sort-property.md) -Eigenschaft des [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekts verwendet, um die Zeilen eines **Recordsets** neu anzuordnen, die von der Tabelle " ***Authors*** " der **Pubs** -Datenbank abgeleitet werden. Eine sekundäre hilfsprogrammroutine druckt jede Zeile.  
   
 ```  
 // SortPropertyExample.cpp  
@@ -132,6 +132,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Sort-Eigenschaft](../../../ado/reference/ado-api/sort-property.md)

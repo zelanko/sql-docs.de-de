@@ -1,5 +1,5 @@
 ---
-title: Eingebettete SQL-Beispiel | Microsoft-Dokumentation
+title: Eingebettetes SQL-Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068658"
 ---
 # <a name="embedded-sql-example"></a>Embedded SQL – Beispiel
-Der folgende Code ist eine einfache eingebettete SQL-Programms, in c geschriebenen Das Programm veranschaulicht viele, aber nicht alle, die eingebettete SQL-Techniken. Das Programm fordert den Benutzer für eine Bestellnummer, ruft die Anzahl der Kunden, Vertriebsmitarbeiter und Status des Auftrags ab und zeigt die abgerufene Informationen auf dem Bildschirm.  
+Der folgende Code ist ein einfaches eingebettetes SQL-Programm, das in C geschrieben wurde. Das Programm veranschaulicht viele, aber nicht alle eingebetteten SQL-Techniken. Das Programm fordert den Benutzer auf, eine Bestellnummer einzugeben, ruft die Kundennummer, den Vertriebsmitarbeiter und den Status des Auftrags ab und zeigt die abgerufenen Informationen auf dem Bildschirm an.  
   
 ```cpp  
 int main() {  
@@ -66,10 +66,10 @@ bad_number:
   
  Beachten Sie Folgendes zu diesem Programm:  
   
--   **Hosten von Variablen** die Hostvariablen werden in einem Abschnitt eingeschlossene deklariert die **Abschnitt beginnen, deklarieren Sie** und **ENDABSCHNITT deklarieren** Schlüsselwörter. Jeder Variablenname Host wird durch einen Doppelpunkt (:).) vorangestellt, wenn es in eine eingebettete SQL­Anweisung angezeigt wird. Der Doppelpunkt ermöglicht die vorkompilierten zwischen Hostvariablen und Datenbankobjekte, z. B. Tabellen und Spalten, mit dem gleichen Namen zu unterscheiden.  
+-   **Host Variablen** Die Host Variablen werden in einem Abschnitt deklariert, der in den Schlüsselwörtern " **BEGIN DECLARE SECTION** " und " **End DECLARE SECTION** " enthalten ist. Jedem Host Variablennamen wird ein Doppelpunkt vorangestellt (:) Wenn Sie in einer eingebetteten SQL-Anweisung angezeigt wird. Mit dem Doppelpunkt kann der vorkompilierten zwischen Host Variablen und Datenbankobjekten, z. b. Tabellen und Spalten, unterscheiden, die denselben Namen aufweisen.  
   
--   **Datentypen** der von einem DBMS und einer Hostsprache unterstützten Datentypen können sehr unterschiedlich sein. Dies wirkt sich auf Hostvariablen aus, da sie eine Doppelrolle spielen. Einerseits sind Hostvariablen Programmvariablen, deklariert und vom Host-sprachanweisungen bearbeitet. Auf der anderen Seite werden sie in eingebetteten SQL-Anweisungen verwendet, um Daten abzurufen. Ist keine Host-Sprachtyps an, die einen DBMS-Datentyp entspricht, konvertiert das DBMS automatisch die Daten. Aber da jede DBMS einen eigenen Regeln und eigenheiten des Konvertierungsvorgangs zugeordnet hat, müssen die Host-Variablentypen sorgfältig ausgewählt werden.  
+-   **Datentypen** Die von einem DBMS und einer Host Sprache unterstützten Datentypen können sich erheblich unterscheiden. Dies wirkt sich auf Host Variablen aus, da Sie eine duale Rolle spielen. Auf der einen Seite handelt es sich bei Host Variablen um Programmvariablen, die von Host Sprachanweisungen deklariert und manipuliert werden. Auf der anderen Seite werden Sie in eingebetteten SQL-Anweisungen verwendet, um Datenbankdaten abzurufen. Wenn kein Host Sprachtyp vorhanden ist, der einem DBMS-Datentyp entspricht, konvertiert das DBMS die Daten automatisch. Da jedem DBMS jedoch eigene Regeln und idiosyncraasen zugeordnet sind, müssen die Host Variablen Typen sorgfältig ausgewählt werden.  
   
--   **Fehlerbehandlung** der DBMS-Berichte zu Laufzeitfehlern an das Programm Anwendungen über eine SQL Communications Area oder SQLCA. Im vorherigen Codebeispiel ist die erste embedded SQL-Anweisung SQLCA enthalten. Dadurch wird die vorkompilierten SQLCA-Struktur in das Programm eingeschlossen werden sollen. Dies ist erforderlich, wenn die Anwendung von DBMS zurückgegebenen Fehler verarbeitet werden. Die WHENEVER... GOTO-Anweisung teilt dem vorkompilierten Fehlerbehandlungscode, der Verzweigungen einer bestimmten Bezeichnung, wenn ein Fehler auftritt, generiert.  
+-   **Fehlerbehandlung** Das DBMS meldet Laufzeitfehler an das Anwendungsprogramm über einen SQL-Kommunikationsbereich oder über SQLCA. Im vorangehenden Codebeispiel enthält die erste eingebettete SQL-Anweisung SQLCA. Dies weist den vorkompilierten an, die SQLCA-Struktur in das Programm einzubeziehen. Dies ist immer dann erforderlich, wenn das Programm vom DBMS zurückgegebene Fehler verarbeitet. Das-Mal, wenn... Die GoTo-Anweisung weist den vorkompilierten an, Fehler Behandlungs Code zu generieren, der bei Auftreten eines Fehlers zu einer bestimmten Bezeichnung verzweigt.  
   
--   **Singleton-SELECT** die Anweisung die Daten zurückgeben, wird eine Singleton-SELECT-Anweisung, also gibt, sondern nur eine einzelne Zeile mit Daten. Aus diesem Grund im Codebeispiel nicht deklariert oder Cursor.
+-   **Singleton-Auswahl** Die Anweisung, mit der die Daten zurückgegeben werden, ist eine SELECT-Anweisung in Singleton. Das heißt, dass nur eine einzelne Daten Zeile zurückgegeben wird. Daher deklariert oder verwendet das Codebeispiel keine Cursor.

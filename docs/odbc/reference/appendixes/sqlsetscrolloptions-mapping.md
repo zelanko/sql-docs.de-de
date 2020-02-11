@@ -14,89 +14,89 @@ ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 06b6b0f982b5c8d864e5024c8544f1f8e9af75ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68091697"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions-Zuordnung
-Wenn eine Anwendung ruft **SQLSetScrollOptions** über einen ODBC *3.x* Treiber und der Treiber unterstützt keine **SQLSetScrollOptions**, den Aufruf von  
+Wenn eine Anwendung **SQLSetScrollOptions** über einen ODBC *3. x* -Treiber aufruft und der Treiber **SQLSetScrollOptions**nicht unterstützt, wird der Aufruf von  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
 ```  
   
- wird wie folgt ausgegeben:  
+ führt zu folgenden Ergebnissen:  
   
--   Ein Aufruf von  
+-   Ein-Rückruf  
   
     ```  
     SQLGetInfo(ConnectionHandle, InfoType, InfoValuePtr, BufferLength, StringLengthPtr)  
     ```  
   
-     mit der *Informationsart* Argument festgelegt wird, um einen der Werte in der folgenden Tabelle, abhängig vom Wert der *KeysetSize* -Argument in **SQLSetScrollOptions**.  
+     Wenn das *InfoType* -Argument auf einen der Werte in der folgenden Tabelle festgelegt ist, hängt vom Wert des *keysetsize* -Arguments in **SQLSetScrollOptions**ab.  
   
-    |*KeysetSize-argument*|*Informationsart-argument*|  
+    |*Keysetsize-Argument*|*Infotype-Argument*|  
     |---------------------------|-------------------------|  
     |SQL_SCROLL_FORWARD_ONLY|SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_STATIC|SQL_STATIC_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
     |SQL_SCROLL_DYNAMIC|SQL_DYNAMIC_CURSOR_ATTRIBUTES2|  
-    |Ein Wert größer als die *RowsetSize* Argument|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
+    |Ein Wert, der größer als das *rowsetsize* -Argument ist.|SQL_KEYSET_CURSOR_ATTRIBUTES2|  
   
-     Wenn der Wert des der *KeysetSize* Argument ist nicht aufgeführt, in der obigen Tabelle, die den Aufruf von **SQLSetScrollOptions** SQLSTATE S1107 zurückgibt (Zeilenwert außerhalb des gültigen Bereichs) und keine der folgenden Schritte sind ausgeführt.  
+     Wenn der Wert des Arguments *keysetsize* nicht in der vorangehenden Tabelle aufgeführt ist, gibt der **SQLSetScrollOptions** -Befehl SQLSTATE S1107 (Zeilen Wert außerhalb des gültigen Bereichs) zurück, und es werden keine der folgenden Schritte ausgeführt.  
   
-     Der Treiber-Manager klicken Sie dann wird überprüft, ob das entsprechende Bit, in festgelegt ist der **InfoValuePtr* durch den Aufruf zurückgegebene Wert **SQLGetInfo**, nach dem Wert des der *Parallelität* -Argument in **SQLSetScrollOptions**.  
+     Der Treiber-Manager überprüft dann gemäß dem *Wert des Parallelitäts Arguments in* **SQLSetScrollOptions**, ob das entsprechende Bit im **infovalueptr* -Wert festgelegt ist, der durch den **SQLGetInfo**-Befehl zurückgegeben wird.  
   
-    |*Parallelität* Argument|*Informationsart* Einstellung|  
+    |*Parallelitäts Argument*|*InfoType* -Einstellung|  
     |----------------------------|------------------------|  
     |SQL_CONCUR_READ_ONLY|SQL_CA2_READ_ONLY_CONCURRENCY|  
     |SQL_CONCUR_LOCK|SQL_CA2_LOCK_CONCURRENCY|  
     |SQL_CONCUR_ROWVER|SQL_CA2_ROWVER_CONCURRENCY|  
     |SQL_CONCUR_VALUES|SQL_CA2_VALUES_CONCURRENCY|  
   
-     Wenn die *Parallelität* -Argument ist keiner der Werte in der obigen Tabelle, die den Aufruf von **SQLSetScrollOptions** SQLSTATE S1108 zurückgibt (Parallelitätsoption außerhalb des gültigen Bereichs) und keine der folgenden Schritte sind ausgeführt. Wenn das entsprechende Bit (wie in der obigen Tabelle angegeben) nicht, in festgelegt ist **InfoValuePtr* auf einen der Werte für die *Parallelität* Argument, das den Aufruf von  **SQLSetScrollOptions** SQLSTATE S1C00 zurückgibt (nicht-Treiber) und für keine der folgenden Schritte ausgeführt werden.  
+     Wenn das *Parallelitäts Argument nicht* einer der Werte in der obigen Tabelle ist, gibt der **SQLSetScrollOptions** -Befehl SQLSTATE S1108 (Parallelitäts Option außerhalb des gültigen Bereichs) zurück, und es werden keine der folgenden Schritte ausgeführt. Wenn das entsprechende Bit (wie in der obigen Tabelle angegeben) nicht in **infovalueptr* auf einen der Werte festgelegt wird *, die dem Parallelitäts Argument entsprechen* , gibt der **SQLSetScrollOptions** -Befehl SQLSTATE S1C00 (Treiber nicht fähig) zurück, und es werden keine der folgenden Schritte ausgeführt.  
   
--   Ein Aufruf von  
+-   Ein-Rückruf  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CURSOR_TYPE, ValuePtr, 0)  
     ```  
   
-     mit  *\*ValuePtr* legen Sie auf einen der Werte in der folgenden Tabelle entsprechend dem Wert des der *KeysetSize* -Argument in **SQLSetScrollOptions**.  
+     Wenn * \*ValuePtr* auf einen der Werte in der folgenden Tabelle festgelegt ist, gemäß dem Wert des *keysetsize* -Arguments in **SQLSetScrollOptions**.  
   
-    |*KeysetSize* Argument|*\*ValuePtr*|  
+    |*Keysetsize* -Argument|*\*ValuePtr*|  
     |---------------------------|------------------|  
     |SQL_SCROLL_FORWARD_ONLY|SQL_CURSOR_FORWARD_ONLY|  
     |SQL_SCROLL_STATIC|SQL_CURSOR_STATIC|  
     |SQL_SCROLL_KEYSET_DRIVEN|SQL_CURSOR_KEYSET_DRIVEN|  
     |SQL_SCROLL_DYNAMIC|SQL_CURSOR_DYNAMIC|  
-    |Ein Wert größer als die *RowsetSize* Argument|SQL_CURSOR_KEYSET_DRIVEN|  
+    |Ein Wert, der größer als das *rowsetsize* -Argument ist.|SQL_CURSOR_KEYSET_DRIVEN|  
   
--   Ein Aufruf von  
+-   Ein-Rückruf  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_CONCURRENCY, ValuePtr, 0)  
     ```  
   
-     mit  *\*ValuePtr* legen Sie auf die *Parallelität* -Argument in **SQLSetScrollOptions**.  
+     Wenn * \*ValuePtr* *auf das* Parallelitäts Argument in **SQLSetScrollOptions**festgelegt ist.  
   
--   Wenn die *KeysetSize* Argument im Aufruf von **SQLSetScrollOptions** positiv ist, einen Aufruf von  
+-   Wenn das *keysetsize* -Argument im Aufrufen von **SQLSetScrollOptions** positiv ist, wird ein-Aufrufen von  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ATTR_KEYSET_SIZE, ValuePtr, 0)  
     ```  
   
-     mit  *\*ValuePtr* legen Sie auf die *KeysetSize* -Argument in **SQLSetScrollOptions**.  
+     Wenn * \*ValuePtr* auf das *keysetsize* -Argument in **SQLSetScrollOptions**festgelegt ist.  
   
--   Ein Aufruf von  
+-   Ein-Rückruf  
   
     ```  
     SQLSetStmtAttr(StatementHandle, SQL_ROWSET_SIZE, ValuePtr, 0)  
     ```  
   
-     mit  *\*ValuePtr* legen Sie auf die *RowsetSize* -Argument in **SQLSetScrollOptions**.  
+     Wenn * \*ValuePtr* auf das *rowsetsize* -Argument in **SQLSetScrollOptions**festgelegt ist.  
   
     > [!NOTE]  
-    >  Wenn der Treiber-Manager zugeordnet **SQLSetScrollOptions** für eine Anwendung, die Arbeit mit einer ODBC- *3.x* Treiber, der nicht unterstützt. **SQLSetScrollOptions**, den Treiber Legt Manager die SQL_ROWSET_SIZE setzen Option-Anweisung, nicht das SQL_ATTR_ROW_ARRAY_SIZE-Anweisungsattribut, zu der *RowsetSize* -Argument in **SQLSetScrollOption**. Daher **SQLSetScrollOptions** kann nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen Aufruf zum Abrufen von **SQLFetch** oder **SQLFetchScroll**. Kann verwendet werden, nur dann, wenn das Abrufen von mehreren durch einen Aufruf von Zeilen **SQLExtendedFetch**.
+    >  Wenn der Treiber-Manager **SQLSetScrollOptions** für eine Anwendung zuordnet, die mit einem ODBC *3. x* -Treiber arbeitet, der **SQLSetScrollOptions**nicht unterstützt, legt der Treiber-Manager die SQL_ROWSET_SIZE Anweisungs Option, nicht das SQL_ATTR_ROW_ARRAY_SIZE Statement-Attribut, auf das *rowsetsize* -Argument in **sqlsetscrolloption**fest. Daher kann **SQLSetScrollOptions** nicht von einer Anwendung verwendet werden, wenn mehrere Zeilen durch einen-Befehl von **SQLFetch** oder **SQLFetchScroll**abgerufen werden. Diese Option kann nur verwendet werden, wenn mehrere Zeilen durch einen **sqlextendebug**-Befehl abgerufen werden.

@@ -1,5 +1,5 @@
 ---
-title: Gespeicherte Prozedur Eigenschaften – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für Eigenschaften gespeicherter Prozeduren (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,14 +19,14 @@ ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ff30099e951ec5b461b9f0e22c21164e7258ccc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921620"
 ---
-# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>ActiveConnection, CommandText-Eigenschaft, "CommandTimeout", Befehlstyp (CommandType), Größe und Richtung Eigenschaften – Beispiel (VC++)
-Dieses Beispiel verwendet die [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), ["CommandTimeout"](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Größe](../../../ado/reference/ado-api/size-property-ado-parameter.md), und [Richtung](../../../ado/reference/ado-api/direction-property.md) Eigenschaften zum Ausführen einer gespeicherten Prozedur.  
+# <a name="activeconnection-commandtext-commandtimeout-commandtype-size-and-direction-properties-example-vc"></a>Beispiel für ActiveConnection, CommandText, CommandTimeout, CommandType, Size und Direction Properties (VC + +)
+In diesem Beispiel werden die Eigenschaften [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [size](../../../ado/reference/ado-api/size-property-ado-parameter.md)und [Direction](../../../ado/reference/ado-api/direction-property.md) verwendet, um eine gespeicherte Prozedur auszuführen.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -210,10 +210,10 @@ Authors With  25  Percent Royalty
         899-46-2035, Anne Ringer  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveConnection-Eigenschaft (ADO)](../../../ado/reference/ado-api/activeconnection-property-ado.md)   
  [CommandText-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
  [CommandTimeout-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtimeout-property-ado.md)   
  [CommandType-Eigenschaft (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)   
  [Direction-Eigenschaft](../../../ado/reference/ado-api/direction-property.md)   
- [Size-Eigenschaft (ADO Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)
+ [Size-Eigenschaft (ADO-Parameter)](../../../ado/reference/ado-api/size-property-ado-parameter.md)

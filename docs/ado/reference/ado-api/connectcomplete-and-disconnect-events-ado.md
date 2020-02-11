@@ -1,5 +1,5 @@
 ---
-title: ConnectComplete und Disconnect-Ereignis (ADO) | Microsoft-Dokumentation
+title: ConnectComplete-und Disconnect-Ereignisse (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919577"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>ConnectComplete- und Disconnect-Ereignis (ADO)
-Die **ConnectComplete** Ereignis wird immer dann aufgerufen, nachdem eine Verbindung gestartet. Die **trennen** Ereignis wird immer dann aufgerufen, nachdem eine Verbindung beendet wird.  
+Das **ConnectComplete** -Ereignis wird aufgerufen, nachdem eine Verbindung gestartet wurde. Das **Disconnect** -Ereignis wird aufgerufen, nachdem eine Verbindung beendet wurde.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,18 +39,18 @@ Disconnect adStatus, pConnection
   
 #### <a name="parameters"></a>Parameter  
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird beschrieben, den aufgetretenen Wenn der Wert des *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Wert, der immer gibt **AdStatusOK**.  
+ Ein [EventStatus usenum](../../../ado/reference/ado-api/eventstatusenum.md) -Wert, der immer **adstatuusok**zurückgibt.  
   
- Wenn **ConnectComplete** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusCancel** Wenn eine **WillConnect** Ereignis hat die ausstehende Verbindung Abbruch angefordert.  
+ Wenn **ConnectComplete** aufgerufen wird, wird dieser Parameter auf **adStatus Cancel** festgelegt, wenn ein **WillConnect** -Ereignis einen Abbruch der ausstehenden Verbindung angefordert hat.  
   
- Vor der beiden Ereignisse zurückgibt, legen Sie diesen Parameter auf **AdStatusUnwantedEvent** , nachfolgende Benachrichtigungen zu verhindern. Allerdings schließen und erneuten Öffnen der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) bewirkt, dass diese Ereignisse erneut auftreten.  
+ Bevor beide Ereignisse zurückgegeben werden, legen Sie diesen Parameter auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern. Das schließen und wieder öffnen der [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) bewirkt jedoch, dass diese Ereignisse erneut auftreten.  
   
- *pConnection*  
- Die **Verbindung** -Objekt für die dieses Ereignis gilt.  
+ *pconnection*  
+ Das **Verbindungs** Objekt, für das dieses Ereignis gilt.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)

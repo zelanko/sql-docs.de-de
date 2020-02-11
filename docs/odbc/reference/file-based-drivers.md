@@ -15,17 +15,17 @@ ms.assetid: d92e0c5c-d176-4282-bbe1-d449e2223d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 803da51c8507faa47f92b295d3749f00317bc413
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915387"
 ---
 # <a name="file-based-drivers"></a>Dateibasierte Treiber
-Dateibasierte Treiber werden mit Datenquellen wie z. B. dBASE verwendet, die keine eigenständige Datenbank-Engine für den Treiber bieten verwenden. Diese Treiber greifen Sie direkt auf die physischen Daten, und implementieren Sie eine Datenbank-Engine, SQL-Anweisungen verarbeiten müssen. Als Standardverfahren empfohlen implementieren die Datenbank-Engine in einem dateibasierten Treibern die Teilmenge von ODBC-SQL, die durch die minimale SQL-Konformitätsgrad definiert; eine Liste der SQL-Anweisungen in diesem Konformitätsgrad, finden Sie unter [Anhang C: SQL-Grammatik](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+Dateibasierte Treiber werden mit Datenquellen wie dBase verwendet, die keine eigenständige Datenbank-Engine für den zu verwendenden Treiber bereitstellen. Diese Treiber greifen direkt auf die physischen Daten zu und müssen eine Datenbank-Engine implementieren, um SQL-Anweisungen verarbeiten zu können. Als Standardverfahren implementieren die Datenbank-Engines in dateibasierten Treibern die Teilmenge von ODBC SQL, die durch den minimalen SQL-Konformitäts Grad definiert ist. eine Liste der SQL-Anweisungen in dieser Konformitäts Ebene finden Sie in [Anhang C: SQL-Grammatik](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
- In Vergleich von dateibasierten und DBMS-basierten Treibern sind dateibasierten Treibern zu schreiben, die aufgrund der Datenbank-Engine-Komponente, die weniger kompliziert zu konfigurieren, da es keine Netzwerk sind, und weniger leistungsfähig, da nur wenige Benutzer die Datenbank schreiben können die Module ist so leistungsfähig wie die von Datenbank-Unternehmen.  
+ Beim Vergleichen von dateibasierten und DBMS-basierten Treibern sind dateibasierte Treiber aufgrund der Datenbank-Engine-Komponente schwieriger zu konfigurieren, da keine Netzwerk Teile vorhanden sind und weniger leistungsfähig sind, da nur wenige Personen die Zeit haben, die Datenbank zu schreiben. Engines sind leistungsfähig, die von datenbankunternehmen erzeugt werden.  
   
- Die folgende Abbildung zeigt zwei unterschiedliche Konfigurationen von dateibasierten Treibern, 1, in dem die Daten lokal vorliegen, und die andere, in dem er sich befindet, auf einem Netzwerkserver für die Datei.  
+ In der folgenden Abbildung sind zwei unterschiedliche Konfigurationen von dateibasierten Treibern dargestellt: eine, in der die Daten lokal gespeichert sind, und die andere, in der Sie sich auf einem Netzwerkdatei Server befindet.  
   
- ![Zwei Konfigurationen von Datei&#45;basierte Treiber](../../odbc/reference/media/pr06.gif "pr06")
+ ![Zwei Konfigurationen von Datei&#45;basierten Treibern](../../odbc/reference/media/pr06.gif "pr06")

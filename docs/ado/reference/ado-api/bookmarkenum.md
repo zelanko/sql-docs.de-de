@@ -1,5 +1,5 @@
 ---
-title: BookmarkEnum | Microsoft-Dokumentation
+title: Bookmarkum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,29 +16,29 @@ ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920359"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
-Gibt an, ein Lesezeichen, das angibt, an der der Vorgang beginnen soll.  
+Gibt ein Lesezeichen an, das angibt, wo der Vorgang beginnen soll.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adBookmarkCurrent**|0|Beginnt in den aktuellen Datensatz.|  
-|**adBookmarkFirst**|1|Beginnt in den ersten Datensatz.|  
-|**adBookmarkLast**|2|Beginnt in den letzten Datensatz.|  
+|**adbookmarkcurrent**|0|Beginnt beim aktuellen Datensatz.|  
+|**adbookmarkfirst**|1|Beginnt beim ersten Datensatz.|  
+|**adbookmarklast**|2|Beginnt beim letzten Datensatz.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.Bookmark.CURRENT|  
-|AdoEnums.Bookmark.FIRST|  
-|AdoEnums.Bookmark.LAST|  
+|AdoEnums. Bookmark. Current|  
+|AdoEnums. Bookmark. First|  
+|AdoEnums. Bookmark. Last|  
   
 ## <a name="applies-to"></a>Gilt für  
   

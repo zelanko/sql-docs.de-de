@@ -1,5 +1,5 @@
 ---
-title: Project Settings (GUI) (MySQLToSQL)) | Microsoft-Dokumentation
+title: Projekteinstellungen (GUI) (mysqlto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,34 +10,34 @@ ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67908781"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Projekteinstellungen (GUI) (MySqlToSql)
-Die GUI-projekteinstellungen können Sie konfigurieren, wie Daten auf angezeigt wird der **Daten** Registerkarte und Berichte mit Bewertungsberichte Daten einschließen, wenn.  
+Mithilfe der GUI-Projekteinstellungen können Sie konfigurieren, wie Daten auf der Registerkarte " **Daten** " angezeigt werden und ob Daten Berichte mit Bewertungsberichten eingeschlossen werden sollen.  
   
-Die GUI-Bereich finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden der **Projekteinstellungen** Dialogfeld festzulegende Optionen der Benutzeroberfläche für das aktuelle Projekt. Die GUI-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekteinstellungen**, und klicken Sie dann auf **GUI** am unteren Rand im linken Bereich.  
+-   Verwenden Sie das Dialogfeld **Projekteinstellungen** , um Optionen für die Benutzeroberfläche für das aktuelle Projekt festzulegen. Um **auf die GUI** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
--   Verwenden der **Projekt Standardeinstellungen** Dialogfeld festzulegende Optionen der Benutzeroberfläche für alle Projekte. Die GUI-Einstellungen für den Zugriff auf die **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, und klicken Sie dann auf **GUI** am unteren Rand im linken Bereich.  
+-   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Optionen  
-**Maximale Zeilenanzahl für die Quelle**  
-Konfiguriert die Anzahl der Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Quelltabelle.  
+## <a name="options"></a>Tastatur  
+**Maximale Zeilennummer für Quelle**  
+Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   
-**Default:** 100  
+**Standard**Wert: 100  
   
-**Maximale Zeilenanzahl für Ziel**  
-Konfiguriert die Anzahl der Zeilen mit Daten, die angezeigt wird, auf die **Daten** Registerkarte für die ausgewählte Zieltabelle.  
+**Maximale Zeilennummer für das Ziel**  
+Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Ziel Tabelle angezeigt werden.  
   
-**Default:** 100  
+**Standard**Wert: 100  
   
-**Zeigen Sie Bericht an, nach der Konvertierung**  
-Um einen Bericht anzuzeigen, nachdem Sie Schemas konvertieren, wählen Sie "true". Die resultierende Konvertierungsbericht enthält das gleiche Layout und die Informationen wie den Bewertungsbericht.  
+**Bericht nach der Konvertierung anzeigen**  
+Wenn Sie einen Bericht anzeigen möchten, nachdem Sie Schemas konvertiert haben, wählen Sie true aus. Der resultierende Konvertierungs Bericht enthält das gleiche Layout und die gleichen Informationen wie der Bewertungsbericht.  
   
-**Default:** False  
+**Standard**Wert: false  
   

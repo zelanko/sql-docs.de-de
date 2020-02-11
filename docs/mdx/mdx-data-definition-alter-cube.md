@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68098523"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX-Datendefinition – ALTER CUBE
 
 
-  Ändert die Struktur eines angegebenen Cubes, der normalerweise verwendet wird, um das Rückschreiben von Dimensionen zu unterstützen. Weitere Informationen zur Verwendung des Rückschreibens in einer Anwendung finden Sie in diesem Blogbeitrag: [Erstellen einer Rückschreibeanwendung mit Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977)  
+  Ändert die Struktur eines angegebenen Cubes, der normalerweise verwendet wird, um das Rückschreiben von Dimensionen zu unterstützen. Weitere Informationen zur Verwendung des Rück Schreibens in einer Anwendung finden Sie in diesem Blogbeitrag: [Building a Write Back Application with Analysis Services (Blog)](https://go.microsoft.com/fwlink/?LinkId=394977) .  
   
  Gleichzeitige Rückschreibevorgänge für Dimensionen können zu einem Deadlock führen. Dabei wird die erste Rückschreibung aufgrund der durch die zweite Rückschreibung aufrechterhaltene gemeinsame Sperre für ein Commit blockiert. In diesem Fall wird zwar kein Fehler generiert, allerdings kann keiner der Vorgänge fortgesetzt werden. Schließlich tritt für beide Rückschreibevorgänge ein Timeout auf, und es wird ein Rollback der Änderungen ausgeführt.  
   
@@ -91,13 +91,13 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Ein gültiger Zeichenfolgenausdruck, der, sofern das neue Dimensionselement nicht auf der Stammebene erstellt wird, den Namen des ihm übergeordneten Elements bereitstellt.  
   
- *MemberName*  
+ *Membername*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen bereitstellt.  
   
  *Key_Value*  
  Ein gültiger Skalarausdruck, der den Schlüsselwert des neuen Dimensionselements definiert.  
   
- *Property_name*  
+ *Property_Name*  
  Ein gültiger MDX-Bezeichner (Multidimensional Expressions), der eine Elementeigenschaft darstellt.  
   
  *Property_Value*  
@@ -108,16 +108,16 @@ CELL CALCULATION Calculation_Name
   
 ### <a name="arguments"></a>Argumente  
  *Cube_Name*  
- Ein gültiger Zeichenfolgenausdruck, der einen Cubenamen bereitstellt.  
+ Ein gültiger Zeichen folgen Ausdruck, der einen Cube-Namen bereitstellt.  
   
  *Member_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen oder Elementschlüssel bereitstellt.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Bemerkungen  
  Wenn die WITH DESCENDANTS-Klausel nicht verwendet wird, werden aus den untergeordneten Elementen eines gelöschten Elements untergeordnete Elemente des diesem übergeordneten Elements. Wenn die WITH DESCENDANTS-Klausel verwendet wird, werden alle nachfolgenden Werte einschließlich ihrer Zeilen in der Dimensionstabelle ebenfalls gelöscht.  
   
 > [!NOTE]  
->  Informationen zum Löschen von berechneten Elemente, benannten Mengen, Aktionen und zellenberechnungen finden Sie unter [DROP MEMBER-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [DROP SET-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [DROP ACTION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md), und [DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+>  Informationen zum Löschen berechneter Elemente, benannter Mengen, Aktionen und Zell Berechnungen finden Sie unter [Drop Member Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md), [Drop Set Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md), [Drop Action Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)und [Drop Cell Berechnungs Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
 ## <a name="updating-the-default-dimension-member"></a>Aktualisieren des Standardelements einer Dimension  
  Diese Klausel aktualisiert das Standardelement eines Cubes und wird im MDX-Berechnungsskript zum Definieren eines Standardelements verwendet. Das Standardelement kann für die Datenbankdimension, eine Cubedimension oder einen Anmeldenamen angegeben werden. Das Standardelement kann auch während einer Sitzung geändert werden.  
@@ -129,7 +129,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  Ein gültiger MDX-Ausdruck, der ein einzelnes Element zurückgibt.  
   
-### <a name="remarks"></a>Hinweise  
+### <a name="remarks"></a>Bemerkungen  
  Der angegebene MDX-Ausdruck kann statisch oder dynamisch sein.  
   
 ## <a name="moving-a-dimension-member"></a>Verschieben eines Dimensionselements  
@@ -139,10 +139,10 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen des neuen übergeordneten Elements des zu verschiebenden Dimensionselements bereitstellt.  
   
- *MemberName*  
+ *Membername*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen bereitstellt.  
   
- Unsigned_*ganze Zahl*  
+ Unsigned_*Ganzzahl*  
  Eine gültige Zahl, die die Anzahl der auszulassenden Ebenen angibt.  
   
  Wenn die WITH DESCENDANTS-Klausel angegeben ist, wird die gesamte Struktur verschoben. Wenn die WITH DESCENDANTS-Klausel nicht angegeben ist, werden aus den untergeordneten Elementen des verschobenen übergeordneten Elements untergeordnete Elemente des dem verschobenen Element übergeordneten Elements. Die Verschiebung wirkt sich einfach dahin gehend aus, dass die Werte der übergeordneten Schlüsselspalte in der zugrunde liegenden Dimensionstabelle aktualisiert werden.  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  Mit der UPDATE DIMENSION MEMBER-Klausel können Sie Eigenschaften eines Elements sowie die einem Element zugeordnete benutzerdefinierte Elementformel ändern.  
   
 ### <a name="arguments"></a>Argumente  
- *MemberName*  
+ *Membername*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen bereitstellt.  
   
  *MDX_Expression*  
@@ -161,9 +161,9 @@ CELL CALCULATION Calculation_Name
  Ein gültiger MDX-Skalarausdruck, der den Wert der Eigenschaft eines berechneten Elements definiert.  
   
 ## <a name="creating-a-cell-calculation"></a>Erstellen einer Zellenberechnung  
- Weitere Informationen zum Erstellen einer Zellenberechnung mithilfe der ALTER CUBE-Anweisung finden Sie unter [DROP CELL CALCULATION-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
+ Weitere Informationen zum Erstellen einer Zellen Berechnung mithilfe der ALTER CUBE-Anweisung finden Sie unter [Drop Cell Berechnungs Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Daten Definitions Anweisungen &#40;MDX-&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

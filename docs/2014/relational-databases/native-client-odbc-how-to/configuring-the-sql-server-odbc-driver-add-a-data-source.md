@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126074"
 ---
 # <a name="add-a-data-source-odbc"></a>Hinzufügen einer Datenquelle (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126074"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>So fügen Sie eine Datenquelle mit dem ODBC-Administrator hinzu  
   
-1.  Von der **Systemsteuerung**, Zugriff **Verwaltung** und dann **Datenquellen (ODBC)** . Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Greifen Sie in der **Systemsteuerung**auf **Verwaltung** und dann auf **Datenquellen (ODBC)** zu. Alternativ können Sie odbcad32.exe aufrufen.  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** , und klicken Sie dann auf **Hinzufügen**.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63126074"
   
 1.  Rufen Sie [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) mit einem SAVEFILE=file_name-Parameter in der Verbindungszeichenfolge auf. Wenn die Verbindung erfolgreich ist, erstellt der ODBC-Treiber eine Dateidatenquelle mit den Verbindungsparametern an dem Speicherort, auf den der SAVEFILE-Parameter zeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Themen zur Vorgehensweise: Konfigurieren des SQL Server-ODBC-Treibers](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
   

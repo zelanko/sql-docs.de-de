@@ -1,5 +1,5 @@
 ---
-title: Literalpräfixe und-Suffixe | Microsoft-Dokumentation
+title: Literale Präfixe und Suffixe | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ ms.assetid: 29f468f2-f557-4a92-b31d-569c63cc6272
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 56ee50071f622c114bd6d8d04444e78c0fb69d67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915564"
 ---
 # <a name="literal-prefixes-and-suffixes"></a>Literalpräfixe und -suffixe
-In einer SQL­Anweisung eine *literal* ist eine breitzeichendarstellung eines Werts für die tatsächlichen Daten. Beispielsweise sind in der folgenden Anweisung, ABC, FFFF und 10 Literale:  
+In einer SQL-Anweisung ist ein *Literalzeichen* eine Zeichen Darstellung eines tatsächlichen Datenwerts. In der folgenden Anweisung sind z. b. "ABC", "FFFF" und "10" Literale:  
   
 ```  
 SELECT CharCol, BinaryCol, IntegerCol FROM MyTable  
    WHERE CharCol = 'ABC' AND BinaryCol = 0xFFFF AND IntegerCol = 10  
 ```  
   
- Literale für einige Datentypen erfordern spezielle Präfixe und Suffixe an. Klicken Sie im vorherigen Beispiel Zeichenliterals (ABC) erfordert ein einfaches Anführungszeichen (') als ein Präfix und Suffix, binären Literals (FFFF) erfordert die Zeichen 0 X als Präfix und die Integer-literal (10) nicht benötigen ein Präfix oder suffix.  
+ Literale für einige Datentypen erfordern spezielle Präfixe und Suffixe. Im vorherigen Beispiel erfordert das Zeichen Literale (ABC) ein einzelnes Anführungszeichen (') sowohl als Präfix als auch als Suffix, das binäre Literale (FFFF) erfordert die Zeichen 0x als Präfix, und für das ganzzahlige Literale (10) ist kein Präfix oder Suffix erforderlich.  
   
- Für alle Datentypen mit Ausnahme von Datum, Uhrzeit und Zeitstempel, interoperable Anwendungen ausführen können sollten die Rückgabewerte in den LITERAL_PREFIX-Zeichen und LITERAL_SUFFIX Spalten im Resultset erstellt verwenden **SQLGetTypeInfo**. Für Datum, Uhrzeit, Zeitstempel und Datetime-Intervall-Literale sollten interoperable Anwendungen ausführen können, die Escapesequenzen, die im vorherigen Abschnitt beschrieben verwenden.
+ Für alle Datentypen außer Date, Time und Timestamps sollten interoperable Anwendungen die Werte verwenden, die in den LITERAL_PREFIX-und LITERAL_SUFFIX Spalten im Resultset zurückgegeben werden, das von **SQLGetTypeInfo**erstellt wurde. Bei Datums-, Zeit-, Zeitstempel-und DateTime-Intervall literalen sollten interoperable Anwendungen die im vorherigen Abschnitt beschriebenen Escapesequenzen verwenden.

@@ -1,5 +1,5 @@
 ---
-title: '- (Negativ) (MDX) | Microsoft-Dokumentation'
+title: '- Negative (MDX) | Microsoft-Dokumentation'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 3221a54c8bedd67c28e1bf1f353f2cf7414829ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68088373"
 ---
 # <a name="--negative-mdx"></a>- (Negativ) (MDX)
@@ -28,7 +28,7 @@ ms.locfileid: "68088373"
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der einen numerischen Wert zurückgibt.  
   
 ## <a name="return-value"></a>Rückgabewert  
@@ -52,7 +52,7 @@ WHERE
     {[Measures].[Resell Cost as Negative]}  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

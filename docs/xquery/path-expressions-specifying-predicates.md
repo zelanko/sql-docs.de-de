@@ -1,5 +1,5 @@
 ---
-title: Angeben von Prädikaten in einem Schritt eines Pfadausdrucks | Microsoft-Dokumentation
+title: Angeben von Prädikaten in einem Pfad Ausdrucks Schritt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: 2660ceca-b8b4-4a1f-98a0-719ad5f89f81
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 4e8ba9bb523d4ce7aed76f61c569f5e8b1775972
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67946425"
 ---
 # <a name="path-expressions---specifying-predicates"></a>Pfadausdrücke – Angeben von Prädikaten
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Im Thema beschriebene [Pfadausdrücke in XQuery](../xquery/path-expressions-xquery.md), ein achsenschritt in einem Pfadausdruck umfasst die folgenden Komponenten:  
+  Wie im Thema [Path Expressions in XQuery](../xquery/path-expressions-xquery.md)beschrieben, umfasst ein Achsen Schritt in einem Pfad Ausdruck die folgenden Komponenten:  
   
--   [Eine Achse](../xquery/path-expressions-specifying-axis.md).  
+-   [Eine-Achse](../xquery/path-expressions-specifying-axis.md).  
   
--   Einen Knotentest. Weitere Informationen finden Sie unter [Knotentest angeben, in einem Schritt eines Pfadausdrucks](../xquery/path-expressions-specifying-node-test.md).  
+-   Einen Knotentest. Weitere Informationen finden Sie unter [Angeben eines Knoten Tests in einem Pfad Ausdrucks Schritt](../xquery/path-expressions-specifying-node-test.md).  
   
 -   Null oder mehr Prädikate. Diese Eingabe ist optional.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67946425"
 ## <a name="predicates"></a>Prädikate  
  Ein Prädikat wird zum Filtern einer Knotensequenz durch Anwenden eines angegebenen Tests verwendet. Der Prädikatausdruck ist in eckige Klammern eingeschlossen und an den letzten Knoten in einem Pfadausdruck gebunden.  
   
- Nehmen wir beispielsweise an, die ein SQL-Parameterwert (X) von der **Xml** -Datentyp deklariert, wie im folgenden gezeigt:  
+ Nehmen Sie beispielsweise an, dass ein SQL-Parameterwert (x) des **XML** -Datentyps deklariert ist, wie im folgenden Beispiel gezeigt:  
   
 ```  
 declare @x xml  
@@ -70,13 +70,13 @@ select @x.query('/People/Person[1]/Name')
 select @x.query('/People[1]/Person/Name')  
 ```  
   
- Beachten Sie, dass in jedem Fall das Prädikat an den Knoten im Pfadausdruck gebunden wird, für den es angewendet wird. Der erste Pfadausdruck wählt z. B. das erste <`Name`>-Element innerhalb jeder/People/Person-Knoten und mit der bereitgestellten XML-Instanz gibt Folgendes zurück:  
+ Beachten Sie, dass in jedem Fall das Prädikat an den Knoten im Pfadausdruck gebunden wird, für den es angewendet wird. Beispielsweise wählt der erste Pfad Ausdruck das erste <`Name`>-Element in jedem/People/Person-Knoten aus, und gibt mit der bereitgestellten XML-Instanz Folgendes zurück:  
   
 ```  
 <Name>John</Name><Name>Goofy</Name><Name>Daffy</Name>  
 ```  
   
- Aber der zweite Pfadausdruck wählt alle <`Name`>-Elemente, die unter den ersten/People/Person-Knoten befinden. Deshalb gibt er das folgende Ergebnis zurück:  
+ Der zweite Pfad Ausdruck wählt jedoch alle <`Name`> Elemente aus, die unter dem ersten/People/Person-Knoten liegen. Deshalb gibt er das folgende Ergebnis zurück:  
   
 ```  
 <Name>John</Name>  
@@ -105,7 +105,7 @@ select @x.query('/People/Person[contains(Name[1], "J") and xs:integer(Age[1]) < 
 /child::root/child::Location[attribute::LocationID=10]  
 ```  
   
- Die von diesem Prädikat angegebene Bedingung gilt für alle die <`Location`> untergeordneten Elementknoten. Das führt dazu, dass als Ergebnis nur solche Arbeitsplatzstandorte zurückgegeben werden, bei denen der Attributwert der Standortkennung (LocationID) 10 ist.  
+ Die von diesem Prädikat angegebene Bedingung wird auf alle untergeordneten Knoten `Location` des Knotens <> Elements angewendet. Das führt dazu, dass als Ergebnis nur solche Arbeitsplatzstandorte zurückgegeben werden, bei denen der Attributwert der Standortkennung (LocationID) 10 ist.  
   
  Der vorige Pfadausdruck wird in der folgenden SELECT-Anweisung ausgeführt:  
   
@@ -123,7 +123,7 @@ WHERE ProductModelID=7
   
 1.  Wenn der Wert des Prädikatausdrucks eine leere Sequenz ist, ist der Prädikatwahrheitswert False.  
   
-     Zum Beispiel:  
+     Beispiel:  
   
     ```  
     SELECT Instructions.query('  
@@ -134,11 +134,11 @@ WHERE ProductModelID=7
     WHERE ProductModelID=7  
     ```  
   
-     Der Pfadausdruck in dieser Abfrage gibt nur die <`Location`> Element-Knoten, die über ein LotSize-Attribut verfügen. Wenn das Prädikat für eine bestimmte eine leere Sequenz zurückgibt <`Location`>, dass arbeitsplatzstandort nicht im Ergebnis zurückgegeben wird.  
+     Der Pfad Ausdruck in dieser Abfrage gibt nur die <`Location`> Elementknoten zurück, für die ein LotSize-Attribut angegeben ist. Wenn das Prädikat eine leere Sequenz für eine bestimmte <`Location`> zurückgibt, wird der Arbeitsplatz Speicherort nicht im Ergebnis zurückgegeben.  
   
-2.  Werte können nur xs: Integer, xs: Boolean oder ein Knoten sein.-Prädikat\*. Für Knoten\*, das Prädikat "true", wenn alle Knoten vorhanden sind, und "false" für eine leere Sequenz ergibt. Alle anderen numerischen Typen wie z. B. double und float generieren einen statischen Typisierungsfehler. Der Prädikatwahrheitswert eines Ausdrucks ist ausschließlich dann True, wenn die resultierende ganze Zahl gleich dem Wert der Kontextposition ist. Darüber hinaus nur Integer-Literalwerte und die **last()** -Funktion verringern die Kardinalität des gefilterten schrittausdrucks auf 1.  
+2.  Prädikat Werte können nur xs: Integer, xs: Boolean oder Node\*lauten. Für Node\*wird das Prädikat als true ausgewertet, wenn es Knoten gibt, und false für eine leere Sequenz. Alle anderen numerischen Typen wie z. B. double und float generieren einen statischen Typisierungsfehler. Der Prädikatwahrheitswert eines Ausdrucks ist ausschließlich dann True, wenn die resultierende ganze Zahl gleich dem Wert der Kontextposition ist. Außerdem verringern nur ganzzahlige Literalwerte und die **Last ()** -Funktion die Kardinalität des gefilterten Schritt Ausdrucks auf 1.  
   
-     Die folgende Abfrage ruft beispielsweise den dritten untergeordneten Elementknoten, von der <`Features`> Element.  
+     Die folgende Abfrage ruft z. b. den dritten untergeordneten Elementknoten des <`Features`>-Elements ab.  
   
     ```  
     SELECT CatalogDescription.query('  
@@ -156,11 +156,11 @@ WHERE ProductModelID=7
   
     -   Der dritte Schritt gibt auch ein Platzhalterzeichen (*) an, das alle Knoten im Knotentest anzeigt. Das Prädikat filtert jedoch die Knoten und gibt nur den Knoten in der dritten Position zurück.  
   
-    -   Die Abfrage gibt den dritten untergeordneten Elementknoten des der <`Features`> untergeordnete Elemente des der <`ProductDescription`>-Elemente für den Dokumentenstamm.  
+    -   Die Abfrage gibt den dritten untergeordneten Elementknoten des <`Features`> untergeordneten Elementen des <`ProductDescription`> Elements des Dokument Stamms zurück.  
   
 3.  Wenn der Wert des Prädikatausdrucks ein einfacher Werttyp des booleschen Datentyps ist, entspricht der Prädikatwahrheitswert dem Wert des Prädikatausdrucks.  
   
-     Die folgende Abfrage wird beispielsweise angegeben, für eine **Xml**Variablen vom Typ, der eine XML-Instanz, die Kunden Umfrage XML-Instanz enthält. Die Abfrage ruft solche Kunden ab, die über untergeordnete Elemente verfügen. In dieser Abfrage wird das wäre \<HasChildren > 1\</HasChildren >.  
+     Beispielsweise wird die folgende Abfrage für eine Variable vom Typ **XML**angegeben, die eine XML-Instanz enthält, die XML-Instanz der Kundenumfrage. Die Abfrage ruft solche Kunden ab, die über untergeordnete Elemente verfügen. In dieser Abfrage wäre dies \<HasChildren>1\</HasChildren>.  
   
     ```  
     declare @x xml  
@@ -191,9 +191,9 @@ WHERE ProductModelID=7
   
      Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
-    -   Der Ausdruck in der **für** -Schleife umfasst zwei Schritte aus, und der zweite Schritt gibt ein Prädikat. Der Wert dieses Prädikats ist ein Wert des booleschen Datentyps. Wenn dieser Wert True ist, so ist auch der Wahrheitswert des Prädikats True.  
+    -   Der Ausdruck in der **for** -Schleife umfasst zwei Schritte, und der zweite Schritt gibt ein Prädikat an. Der Wert dieses Prädikats ist ein Wert des booleschen Datentyps. Wenn dieser Wert True ist, so ist auch der Wahrheitswert des Prädikats True.  
   
-    -   Die Abfrage gibt die <`Customer`> Element untergeordnete Elemente, die dem Prädikatwert ist "true", der die \<Umfrage > untergeordneten Elemente des Basisverzeichnisses. Dies ist das Ergebnis:  
+    -   Die Abfrage gibt die <`Customer`> untergeordneten Elementen zurück, deren Prädikat Wert true ist, \<der untergeordneten Umfrage> Elemente des Dokument Stamms. Dies ist das Ergebnis:  
   
         ```  
         <CustomerWithChildren CustomerID="1"/>   
@@ -201,7 +201,7 @@ WHERE ProductModelID=7
   
 4.  Wenn der Wert des Prädikatausdrucks eine Sequenz ist, die mindestens einen Knoten enthält, so ist der Wahrheitswert des Prädikats True.  
   
- Die folgende Abfrage ruft z. B. ProductModelID für Produktmodelle, deren XML-katalogbeschreibung mindestens eine Funktion, die ein untergeordnetes Element von enthält, der <`Features`> Element, aus dem Namespace zugeordnete der **Wm**Präfix.  
+ Die folgende Abfrage ruft beispielsweise ProductModelID für Produktmodelle ab, deren XML-Katalogbeschreibung mindestens eine Funktion enthält, ein untergeordnetes Element des <`Features`>-Elements aus dem Namespace, der dem **WM** -Präfix zugeordnet ist.  
   
 ```  
 SELECT ProductModelID  
@@ -215,11 +215,11 @@ WHERE CatalogDescription.exist('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Gibt an, die WHERE-Klausel der [EXIST()-Methode (XML-Datentyp)](../t-sql/xml/exist-method-xml-data-type.md).  
+-   Die WHERE-Klausel gibt die [exist ()-Methode (XML-Datentyp)](../t-sql/xml/exist-method-xml-data-type.md)an.  
   
--   Der Pfadausdruck in der **exist()** Methode gibt ein Prädikat im zweiten Schritt. Wenn der Prädikatausdruck eine Sequenz von mindestens einer Funktion zurückgibt, ist der Wahrheitswert dieses Prädikatausdrucks True. In diesem Fall, da die **exist()** Methode True zurückgibt, wird die Produktmodell-ID zurückgegeben.  
+-   Der Pfad Ausdruck in der **exist ()** -Methode gibt ein Prädikat im zweiten Schritt an. Wenn der Prädikatausdruck eine Sequenz von mindestens einer Funktion zurückgibt, ist der Wahrheitswert dieses Prädikatausdrucks True. In diesem Fall wird die ProductModelID zurückgegeben, da die **exist ()** -Methode "true" zurückgibt.  
   
 ## <a name="static-typing-and-predicate-filters"></a>Statische Typisierung und Prädikatfilter  
- Die Prädikate können sich auch auf den statisch abgeleiteten Typ eines Ausdrucks auswirken. Integer-Literalwerte und die **last()** -Funktion verringern die Kardinalität des gefilterten schrittausdrucks zumeist auf 1.  
+ Die Prädikate können sich auch auf den statisch abgeleiteten Typ eines Ausdrucks auswirken. Ganzzahlige Literalwerte und die **Last ()** -Funktion verringern die Kardinalität des gefilterten Schritt Ausdrucks auf höchstens einen Wert.  
   
   

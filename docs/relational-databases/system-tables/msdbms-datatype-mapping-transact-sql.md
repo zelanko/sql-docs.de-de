@@ -18,32 +18,32 @@ ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67907546"
 ---
-# <a name="msdbmsdatatypemapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
+# <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSdbms_datatype_mapping** Tabelle enthält die zulässigen datentypzuordnungen vom Datentyp in der Source-Datenbank-Managementsystem (DBMS) für eine oder mehrere bestimmte Datentypen im Ziel-DBMS. Diese Tabelle befindet sich in der **Msdb** Datenbank und wird für heterogene Datenbankreplikation verwendet.  
+  Die **MSdbms_datatype_mapping** Tabelle enthält die zulässigen Datentyp Zuordnungen des Datentyps im Quelldatenbank-Management System (DBMS) mit einem oder mehreren spezifischen Datentypen im Ziel-DBMS. Diese Tabelle wird in der **msdb** -Datenbank gespeichert und für die heterogene Daten Bank Replikation verwendet.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**datatype_mapping_id**|**int**|Identifiziert jede eindeutige Datentypzuordnung.|  
 |**map_id**|**int**|Identifiziert den Quelldatentyp.|  
 |**dest_datatype_id**|**int**|Identifiziert den Zieldatentyp.|  
-|**dest_precision**|**bigint**|Definiert die Genauigkeit des Zieldatentyps, ein Wert von NULL bedeutet, dass die Genauigkeit nicht verwendet wird, und den Wert **-1** bedeutet, dass die Genauigkeit des Quelldatentyps verwendet wird.|  
-|**dest_scale**|**int**|Definiert die Dezimalstellen des Zieldatentyps, ein Wert von NULL bedeutet, dass die Dezimalstellen nicht verwendet werden, und den Wert **-1** bedeutet, dass die Dezimalstellen des Quelldatentyps verwendet wird.|  
-|**dest_length**|**bigint**|Definiert die Länge des Zieldatentyps, ein Wert von NULL bedeutet, dass die Länge nicht verwendet wird, und den Wert **-1** bedeutet, dass die Länge des Quelldatentyps verwendet wird.|  
+|**dest_precision**|**BIGINT**|Definiert die Genauigkeit des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Genauigkeit nicht verwendet wird, und der Wert **-1** bedeutet, dass die Genauigkeit des Quell Datentyps verwendet wird.|  
+|**dest_scale**|**int**|Definiert die Skala des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Skala nicht verwendet wird, und der Wert **-1** bedeutet, dass die Skala des Quell Datentyps verwendet wird.|  
+|**dest_length**|**BIGINT**|Definiert die Länge des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Länge nicht verwendet wird, und der Wert **-1** bedeutet, dass die Länge des Quell Datentyps verwendet wird.|  
 |**dest_nullable**|**bit**|Gibt an, ob die Zielspalte in der Zuordnung NULL-Werte zulässt. Ein Wert von NULL bedeutet, dass diese Definition nicht erforderlich ist.|  
-|**dest_createparams**|**int**|Die Bitmap, die beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für den jeweiligen Datentyp anwendbar sind. Sie beinhaltet Folgendes:<br /><br /> **0 x 1** = mit einfacher Genauigkeit.<br /><br /> **0 x 2** = skalieren.<br /><br /> **0 x 4** = Länge.|  
+|**dest_createparams**|**int**|Die Bitmap, die beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für den jeweiligen Datentyp anwendbar sind. Sie beinhaltet Folgendes:<br /><br /> **0x1** = Genauigkeit.<br /><br /> **0x2** = skalieren.<br /><br /> **0x4** = Länge.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [Angeben von Datentypzuordnungen für einen Oracle-Verleger](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Angeben von Datentyp Zuordnungen für einen Oracle-Verleger](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

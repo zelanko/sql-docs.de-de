@@ -1,5 +1,5 @@
 ---
-title: Setup-Programm | Microsoft-Dokumentation
+title: Setup Programm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/31/2016
 ms.prod: sql
@@ -13,19 +13,19 @@ ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093835"
 ---
 # <a name="setup-program"></a>Setupprogramm
-> **HINWEIS:** Ab Windows XP und Windows Server 2003, **ODBC ist in der Windows-Betriebssystem enthalten**. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
+> **Hinweis:** Ab Windows XP und Windows Server 2003 **ist ODBC im Windows-Betriebssystem enthalten**. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Der Benutzer führt das Setup-Programm, um den Installationsvorgang zu starten. Das Setup-Programm wird von der Anwendung oder den Treiber Entwickler geschrieben. Zusätzlich zur Installation der ODBC-Komponenten können sie andere Software zu installieren. Z. B. können Anwendungsentwickler dasselbe Installationsprogramm sowohl ODBC-Komponenten zu installieren und ihren Anwendungen installieren.  
+ Der Benutzer führt das Setup Programm aus, um den Setup Vorgang zu starten. Das Setup Programm wird von der Anwendung oder dem Treiber Entwickler verfasst. Neben der Installation von ODBC-Komponenten kann auch andere Software installiert werden. Anwendungsentwickler können z. b. das gleiche Setup Programm verwenden, um ODBC-Komponenten zu installieren und ihre Anwendungen zu installieren.  
   
- Entwickler können das Setup-Programm von Grund auf neu, schreiben, mit dem Microsoft® Windows® SDK-Setup-Hilfsprogramme oder Setup-Software anderer Hersteller. Dadurch werden Entwickler vollständige Kontrolle über das Setup-Programm Aussehen und Verhalten. Das Setup-Programm kann geschrieben werden, um zusätzliche Software, z. B. eine ODBC-Anwendung zu installieren. Weitere Informationen zu den Windows SDK-Setup-Hilfsprogramme finden Sie unter der Windows SDK-Dokumentation.  
+ Entwickler können das Setup Programm mit den Microsoft® Windows® SDK-Setup Dienstprogrammen oder von anderen Anbietern von Grund auf neu schreiben. Dadurch erhalten diese Entwickler eine umfassende Kontrolle über das Erscheinungsbild des Setup Programms. Das Setup Programm kann so geschrieben werden, dass zusätzliche Software installiert wird, z. b. eine ODBC-Anwendung. Weitere Informationen zu den Windows SDK-Setup Dienstprogrammen finden Sie in der Windows SDK-Dokumentation.  
   
- Wie viel von der Installation tatsächlich vom Setupprogramm abgeschlossen ist, hängt davon ab, was sie Aufrufe in die Installationsprogramm-DLL fungiert. Das Installationsprogramm-DLL enthält Funktionen für die einzelnen ODBC-Komponenten zu installieren. Ruft das Setup-Programm einfach **SQLInstallDriverManager**, **SQLInstallDriverEx**, oder **SQLInstallTranslatorEx** im Installationsprogramm-DLL für das Abrufen des Pfads, der die Verzeichnis, in dem die Komponente installiert werden und Informationen über die Komponente in der Registrierung hinzugefügt ist. Diese Funktionen sind tatsächlich Dateien nicht kopiert werden; das Setup-Programm wird anhand der Informationen in den Argumenten dieser Funktionen.  
+ Der Umfang der Installation durch das Setup Programm ist von den Funktionen abhängig, die in der Installationsprogramm-dll aufgerufen werden. Die Installationsprogramm-dll enthält Funktionen zum Installieren einzelner ODBC-Komponenten. Das Setup Programm ruft einfach **sqlinstalldrivermanager**, **sqlinstalldriverex**oder **sqlinstalltranslatorex** in der installerdll auf, um den Pfad des Verzeichnisses abzurufen, in dem die Komponente installiert werden soll, und um der Registrierung Informationen zur Komponente hinzuzufügen. Mit diesen Funktionen werden Dateien nicht tatsächlich kopiert. Das Setup Programm führt dies mithilfe der Informationen in den Argumenten dieser Funktionen aus.  
   
- Das Installationsprogramm-DLL enthält auch Funktionen zum Entfernen von ODBC-Komponenten. Der Setup-Programm ruft **SQLRemoveDriverManager**, **SQLRemoveDriver**, oder **SQLRemoveTranslator** im Installationsprogramm-DLL für die Nutzung von einer Komponente zu dekrementieren Anzahl der in der Registrierung und, wenn neue Verwendungsanzahl in der Komponente auf 0 fällt, entfernen Sie alle Informationen über die Komponente aus der Registrierung. Diese Funktionen entfernen Sie die Dateien für die Komponente nicht tatsächlich; das Setup-Programm wird auf 0 fällt die Verwendungsanzahl der neuen.
+ Die Installationsprogramm-dll enthält auch Funktionen zum Entfernen von ODBC-Komponenten. Das Setup Programm ruft **sqlremovedrivermanager**, **sqlremovedriver**oder **sqlremovetranslator** in der Installationsprogramm-dll auf, um die Verwendungs Anzahl einer Komponente in der Registrierung zu verringern. wenn die neue Verwendungs Anzahl der Komponente auf 0 fällt, entfernen Sie alle Informationen über die Komponente aus der Registrierung. Diese Funktionen entfernen nicht tatsächlich die Dateien für die Komponente. Dies wird vom Setup Programm durchführt, wenn die neue Verwendungs Anzahl auf 0 (null) fällt.

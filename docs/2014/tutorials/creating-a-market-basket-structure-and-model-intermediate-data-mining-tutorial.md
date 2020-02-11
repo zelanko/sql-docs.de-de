@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Market Basket-Struktur und eines Modells (mittleres Datamining Tutorial) | Microsoft-Dokumentation
+title: Erstellen von Market Basket-Strukturen und-Modellen (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63190832"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer Warenkorbstruktur und eines Warenkorbmodells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -25,60 +25,61 @@ ms.locfileid: "63190832"
   
 ### <a name="to-create-an-association-mining-structure"></a>So legen Sie die Miningstruktur Association an  
   
-1.  Im Projektmappen-Explorer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], mit der rechten Maustaste **Miningstrukturen** , und wählen Sie **neue Miningstruktur** zu Data Mining-Assistenten zu öffnen.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Projektmappen-Explorer in mit der rechten Maustaste auf **Mining Strukturen** , und wählen Sie **neue Mining Struktur** , um den Data Mining-Assistenten zu öffnen.  
   
 2.  Klicken Sie auf der Seite **Willkommen** auf **Weiter**.  
   
-3.  Auf der **Definitionsmethode auswählen** überprüfen Sie, ob Seite **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **Weiter**.  
+3.  Überprüfen Sie auf der Seite **Definitions Methode auswählen** , ob **aus vorhandener relationaler Datenbank oder Data Warehouse** ausgewählt ist, und klicken Sie dann auf **weiter**.  
   
-4.  Auf der **Erstellen von Data Mining-Struktur** Seite **welche Datamining-Technik möchten Sie verwenden?** Option **Microsoft Association Rules** aus der Liste aus, und klicken Sie dann auf **Weiter**. Die **Datenquellensicht auswählen** Seite wird angezeigt.  
+4.  Wählen Sie auf der Seite **Data Mining-Struktur erstellen** unter **welche Data Mining Technik möchten Sie verwenden?** die Option **Microsoft Association Rules** in der Liste aus, und klicken Sie dann auf **weiter**. Die Seite **Datenquellen Sicht auswählen** wird angezeigt.  
   
-5.  Wählen Sie **Bestellungen**unter **verfügbare Datenquellensichten**, und klicken Sie dann auf **Weiter**.  
+5.  Wählen Sie unter **Verfügbare Datenquellen Sichten**die Option **Orders**aus, und klicken Sie auf **weiter**.  
   
-6.  Auf der **Tabellentypen angeben** Seite in der Zeile für die Tabelle "vassocseqlineitems", wählen Sie die **geschachtelte** aus, und wählen Sie in der Zeile für die geschachtelte Tabelle vAssocSeqOrders, die **Fall** Kontrollkästchen. Klicken Sie auf **Weiter**.  
+6.  Aktivieren Sie auf der Seite **Tabellentypen angeben** in der Zeile für die Tabelle vassoctarqlineitems das Kontrollkästchen **geschachtelte** , und aktivieren Sie in der Zeile für die geschachtelte Table vassoctarqorders das Kontrollkästchen **Fall** . Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Trainingsdaten** Seite, deaktivieren Sie alle Kontrollkästchen, die überprüft werden können. Legen Sie den Schlüssel für die Falltabelle vAssocSeqOrders durch Aktivieren der **Schlüssel** das Kontrollkästchen neben OrderNumber fest.  
+7.  Deaktivieren Sie auf der Seite **Trainingsdaten angeben** alle Kontrollkästchen, die aktiviert werden können. Legen Sie den Schlüssel für die Fall Tabelle vAssocSeqOrders durch Aktivieren des Kontrollkästchens **Schlüssel** neben OrderNumber fest.  
   
-     Da der Zweck der Market Basket-Analyse ist, um zu bestimmen, welche Produkte in einer einzelnen Transaktion enthalten sind, müssen Sie nicht verwenden die **CustomerKey** Feld.  
+     Da der Zweck der Market Basket-Analyse darin besteht, zu bestimmen, welche Produkte in einer einzelnen Transaktion enthalten sind, müssen Sie das Feld **CustomerKey** nicht verwenden.  
   
-8.  Legen Sie den Schlüssel für die geschachtelte Tabelle vAssocSeqLineItems durch Aktivieren der **Schlüssel** Kontrollkästchen neben dem Modell. Die **Eingabe** Kontrollkästchen wird auch automatisch ausgewählt, wenn Sie dies tun. Wählen Sie die **vorhersagbar** Kontrollkästchen `Model` ebenfalls.  
+8.  Legen Sie den Schlüssel für die geschachtelte Table (vAssocSeqLineItems) fest, indem Sie das Kontrollkästchen **Schlüssel** neben Model auswählen. Wenn Sie dies tun, wird das Kontrollkästchen **Eingabe** ebenfalls automatisch ausgewählt. Aktivieren Sie auch das Kontrollkästchen `Model` **vorhersagbar** .  
   
-     In einem Market Basket-Modells, Sie ist nicht wichtig die Reihenfolge der Produkte im Einkaufswagen und aus diesem Grund sollten Sie nicht einschließen **LineNumber** als Schlüssel für die geschachtelte Tabelle. Verwenden Sie **LineNumber** als Schlüssel nur in einem Modell, in dem die Sequenz wichtig ist. In Lektion 4 erstellen Sie ein Modell, das den [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus verwendet.  
+     In einem waren Korb Modell machen Sie sich keine Gedanken über die Reihenfolge der Produkte im Warenkorb. Daher sollten Sie **LineNumber** nicht als Schlüssel für die geclusterte Tabelle einschließen. Sie würden **LineNumber** nur als Schlüssel in einem Modell verwenden, bei dem die Sequenz wichtig ist. In Lektion 4 erstellen Sie ein Modell, das den [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus verwendet.  
   
-9. Wählen Sie das Kontrollkästchen links neben IncomeGroup und Region, aber nehmen Sie keine anderen Angaben. Durch Aktivieren der äußerst linken Spalte fügen Sie der Struktur die Spalten zur späteren Bezugnahme hinzu. Die Spalten werden jedoch nicht im Modell verwendet. Ihre Auswahl sollte wie folgt aussehen:  
+9. Aktivieren Sie das Kontrollkästchen links neben IncomeGroup und Region, aber nehmen Sie keine andere Auswahl vor. Durch Aktivieren der äußerst linken Spalte fügen Sie der Struktur die Spalten zur späteren Bezugnahme hinzu. Die Spalten werden jedoch nicht im Modell verwendet. Ihre Auswahl sollte wie folgt aussehen:  
   
-     ![wie Sie im Dialogfeld aussehen soll](../../2014/tutorials/media/tutorial-configassocmodel.gif "wie das Dialogfeld aussehen soll")  
+     ![Das Dialogfeld sollte folgendermaßen aussehen](../../2014/tutorials/media/tutorial-configassocmodel.gif "Das Dialogfeld sollte folgendermaßen aussehen")  
   
 10. Klicken Sie auf **Weiter**.  
   
-11. Auf der **Inhalt und Datentyp der Spalten angeben**überprüfen Sie die Auswahl, in dem sein, wie in der folgenden Tabelle dargestellt, und klicken Sie dann auf **Weiter**.  
+11. Überprüfen Sie auf der Seite **Inhalt und Datentyp der Spalten angeben**die Auswahl, die in der folgenden Tabelle angezeigt werden soll, und klicken Sie dann auf **weiter**.  
   
-    |Spalte|Inhaltstyp|Datentyp|  
+    |Spalten|Inhaltstyp|Datentyp|  
     |-------------|------------------|---------------|  
-    |IncomeGroup|Discrete|Textmodus|  
-    |Order Number|Key|Textmodus|  
-    |Region|Discrete|Textmodus|  
+    |IncomeGroup|Discrete|Text|  
+    |Order Number|Key|Text|  
+    |Region|Discrete|Text|  
     |vAssocSeqLineItems|||  
-    |Model|Key|Textmodus|  
+    |Modell|Key|Text|  
   
-12. Auf der **erstellen Tests legen** Seite, der Standardwert für die Option **Prozentsatz der Testdaten** liegt bei 30 Prozent. Ändern Sie diese Option, um **0**. Klicken Sie auf **Weiter**.  
+12. Auf der Seite **Testsatz erstellen** ist der Standardwert für die Option **Prozentsatz der zu testenden Daten** auf 30 Prozent festgelegt. Ändern Sie diesen Wert in **0**. Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt andere Diagramme zum Messen der Modellgenauigkeit bereit. Einige Genauigkeitsdiagrammtypen, z. B. das Prognosegütediagramm und der Kreuzvalidierungsbericht, dienen jedoch der Klassifizierung und Schätzung. Eine Unterstützung für assoziative Vorhersagen ist nicht vorgesehen.  
+    >  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt andere Diagramme zum Messen der Modellgenauigkeit bereit. Einige Genauigkeitsdiagrammtypen, z. B. das Prognosegütediagramm und der Kreuzvalidierungsbericht, dienen jedoch der Klassifizierung und Schätzung. Eine Unterstützung für assoziative Vorhersagen ist nicht vorgesehen.  
   
-13. Auf der **Abschließen des Assistenten** auf der Seite **Miningstrukturname**, Typ `Association`.  
+13. Geben `Association`Sie auf der Seite **Assistenten abschließen** unter **Mining Struktur Name den Namen**ein.  
   
-14. In **Miningmodellname**, Typ `Association`.  
+14. Geben `Association`Sie in **Mining Modellname den Namen**ein.  
   
-15. Wählen Sie die Option **Drillthrough zulassen**, und klicken Sie dann auf **Fertig stellen**.  
+15. Wählen Sie die Option **Drillthrough zulassen**aus, und klicken Sie dann auf **Fertig**stellen.  
   
-     Data Mining-Designer wird geöffnet und zeigt die `Association` Miningstruktur, die Sie gerade erstellt haben.  
+     Der Data Mining-Designer wird geöffnet `Association` , um die soeben erstellte Mining Struktur anzuzeigen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Ändern und Verarbeiten der Market Basket-Modells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Ändern und Verarbeiten des Market Basket-Modells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/modify-process-market-basket-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Inhaltstypen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
+ [Inhaltstypen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)  
   
   

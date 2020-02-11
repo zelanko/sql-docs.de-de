@@ -13,23 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09aea8e66b76103c27bdc44ade4df48a1e505e7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63021626"
 ---
 # <a name="publication-peer-to-peer-replication"></a>Veröffentlichung (Peer-zu-Peer-Replikation)
   Auf der Seite **Veröffentlichung** werden Transaktionsveröffentlichungen angezeigt, die für die Peer-zu-Peer-Replikation aktiviert sind. Veröffentlichungen werden auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften** aktiviert.  
   
-## <a name="options"></a>Optionen  
- **Verleger**  
+## <a name="options"></a>Tastatur  
+ **Herausgeber**  
  Zeigt den Server an, mit dem Sie verbunden sind. Um die Verbindung mit einem anderen Server herzustellen, wählen Sie **SQL Server-Verleger suchen**aus.  
   
  **Datenbanken und Veröffentlichungen**  
  Zeigt alle Datenbanken auf dem Server an, die mindestens eine Veröffentlichung enthalten, die für die Peer-zu-Peer-Replikation aktiviert ist. Wählen Sie eine Veröffentlichung aus, um den Vorgang fortzusetzen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikationsprogrammierung mit Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)  
   

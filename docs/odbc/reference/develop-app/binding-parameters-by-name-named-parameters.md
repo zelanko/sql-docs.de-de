@@ -14,31 +14,31 @@ ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3fdd8d00bd6af5479079e66c1ca42f249e033d29
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107640"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Binden von Parametern anhand des Namens (benannte Parameter)
-Bestimmte DBMS ermöglichen eine Anwendung, die Parameter an eine gespeicherte Prozedur nach Namen anstatt anhand der Position im Aufruf Prozedur anzugeben. Solche Parameter heißen *benannte Parameter*. ODBC unterstützt die Verwendung von benannten Parametern. Benannte Parameter werden nur in Aufrufen von gespeicherten Prozeduren verwendet und können nicht in anderen SQL­Anweisungen verwendet werden, in ODBC.  
+Bestimmte DBMSs ermöglichen es einer Anwendung, die Parameter für eine gespeicherte Prozedur anstelle der Position im Prozedur aufzurufen, sondern anhand ihres Namens anzugeben. Solche Parameter werden als *benannte Parameter*bezeichnet. ODBC unterstützt die Verwendung benannter Parameter. In ODBC werden benannte Parameter nur in Aufrufen von gespeicherten Prozeduren verwendet und können nicht in anderen SQL-Anweisungen verwendet werden.  
   
- Der Treiber überprüft den Wert des Felds SQL_DESC_UNNAMED des IPD, zu bestimmen, ob mit dem Namen Parameter verwendet werden. Wenn SQL_DESC_UNNAMED SQL_UNNAMED nicht festgelegt ist, verwendet der Treiber den Namen in SQL_DESC_NAME-Felds des IPD zur Identifizierung des Parameters an. Um den Parameter zu binden, kann eine Anwendung aufrufen **SQLBindParameter** , geben Sie die Parameterinformationen und können Sie **SQLSetDescField** des IPD SQL_DESC_NAME-Felds festgelegt. Wenn benannte Parameter verwendet werden, wird die Reihenfolge der Parameter im Aufruf Prozedur ist nicht wichtig, und die Datensatznummer des Parameters wird ignoriert.  
+ Der Treiber prüft den Wert des SQL_DESC_UNNAMED Felds der IPD, um zu bestimmen, ob benannte Parameter verwendet werden. Wenn SQL_DESC_UNNAMED nicht auf SQL_UNNAMED festgelegt ist, verwendet der Treiber den Namen im SQL_DESC_NAME-Feld der IPD, um den Parameter zu identifizieren. Zum Binden des Parameters kann eine Anwendung **SQLBindParameter** aufrufen, um die Parameterinformationen anzugeben, und anschließend **SQLSetDescField** aufrufen, um das SQL_DESC_NAME-Feld der IPD festzulegen. Wenn benannte Parameter verwendet werden, ist die Reihenfolge des Parameters im Prozedur aufrufen nicht wichtig, und die Datensatznummer des Parameters wird ignoriert.  
   
- Der Unterschied zwischen unbenannte Parameter und benannte Parameter ist in der Beziehung zwischen der Datensatznummer, des Deskriptors und die Anzahl der Parameter in der Prozedur. Wenn unbenannte Parameter verwendet werden, die erste parametermarkierung den ersten Datensatz in der Parameterdeskriptor, bezieht sich auf die wiederum auf den ersten Parameter (in Reihenfolge der Erstellung) im Aufruf Prozedur verknüpft ist. Wenn benannte Parameter verwendet werden, wird die erste parametermarkierung bezieht sich immer noch auf den ersten Datensatz der Parameterdeskriptor, aber die Beziehung zwischen der Datensatznummer, des Deskriptors und die Anzahl der Parameter in der Prozedur ist nicht mehr vorhanden. Benannte Parameter verwenden Sie die Zuordnung der die Datensatznummer Deskriptor nicht an die Prozedur Parameterposition. Stattdessen wird der Datensatz Deskriptorname die Namen der Prozedur Parameter zugeordnet.  
+ Der Unterschied zwischen unbenannten Parametern und benannten Parametern liegt in der Beziehung zwischen der Datensatznummer des Deskriptors und der Parameter Nummer in der Prozedur. Wenn unbenannte Parameter verwendet werden, ist die erste Parameter Markierung mit dem ersten Datensatz im Parameter Deskriptor verknüpft, der wiederum mit dem ersten Parameter (in der Erstellungs Reihenfolge) im-Prozedur aufrufen verknüpft ist. Wenn benannte Parameter verwendet werden, ist die erste Parameter Markierung weiterhin mit dem ersten Datensatz des Parameter Deskriptors verknüpft, aber die Beziehung zwischen der Datensatznummer des Deskriptors und der Parameter Nummer in der Prozedur ist nicht mehr vorhanden. Benannte Parameter verwenden nicht die Zuordnung der Deskriptordatensatz-Nummer zur Prozedur Parameter Position; Stattdessen wird der Name des deskriptoreinbilds dem Prozedur Parameternamen zugeordnet.  
   
 > [!NOTE]  
->  Wenn automatischer Auffüllung des IPD aktiviert ist, wird der Treiber den Deskriptor Auffüllen so, dass die Reihenfolge der deskriptordatensätze die Reihenfolge der Parameter in der Prozedurdefinition entspricht, selbst wenn benannte Parameter verwendet werden.  
+>  Wenn die automatische Auffüllung der IPD aktiviert ist, füllt der Treiber den Deskriptor so auf, dass die Reihenfolge der deskriptordaten Sätze der Reihenfolge der Parameter in der Prozedur Definition entspricht, auch wenn benannte Parameter verwendet werden.  
   
- Wenn ein benannter Parameter verwendet wird, müssen alle Parameter Parameter benannt werden. Ist ein der Parameter kein benannter Parameter, werden klicken Sie dann keine von der Zertifizierungsstelle für die Parameter benannte Parameter. Wenn es eine Mischung aus benannten Parametern und unbenannte Parameter gäbe, wäre das Verhalten treiberabhängig.  
+ Wenn ein benannter Parameter verwendet wird, müssen alle Parameter benannte Parameter sein. Wenn ein beliebiger Parameter kein benannter Parameter ist, werden keine Parameter der Zertifizierungsstelle als Parameter bezeichnet. Wenn eine Mischung aus benannten Parametern und unbenannten Parametern vorhanden wäre, wäre das Verhalten Treiber abhängig.  
   
- Nehmen wir als Beispiel für benannte Parameter an eine SQL-Server, die gespeicherte Prozedur wie folgt definiert wurde:  
+ Angenommen, als Beispiel für benannte Parameter wurde eine gespeicherte Prozedur SQL Server wie folgt definiert:  
   
 ```  
 CREATE PROCEDURE test @title_id int = 1, @quote char(30) AS <blah>  
 ```  
   
- In diesem Verfahren der erste Parameter, @title_id, hat den Standardwert 1. Eine Anwendung kann den folgenden Code verwenden, für das Aufrufen von dieser Prozedur so, dass nur ein dynamischen Parameter angegeben. Dieser Parameter ist ein benannter Parameter, mit dem Namen "\@Anführungszeichen".  
+ In diesem Verfahren hat der erste Parameter @title_idden Standardwert 1. Eine Anwendung kann den folgenden Code verwenden, um diese Prozedur so aufzurufen, dass nur ein dynamischer Parameter angegeben wird. Dieser Parameter ist ein benannter Parameter mit dem\@Namen "Quote".  
   
 ```  
 // Prepare the procedure invocation statement.  

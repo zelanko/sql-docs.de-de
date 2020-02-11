@@ -1,5 +1,5 @@
 ---
-title: Visual C++-Erweiterungen für ADO | Microsoft-Dokumentation
+title: Visual C++ Erweiterungen für ADO | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,28 +16,28 @@ ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: db11e86ab479ad0df4224d59c3408729fa9903ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926377"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Visual C++-Erweiterungen für ADO
-Die bevorzugte Methode für das Programmieren von ADO mit Visual C++ verwendet den **#import** Richtlinie, wie unter [Microsoft Visual C++-ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md). Frühere Versionen von ADO jedoch geliefert, mit einer alternativen Methode der Programmierung mit Visual C++: Visual C++-Erweiterungen. Dieser Abschnitt beschreibt diese Funktion für diejenigen, die Erweiterungen der Visual C++-Code verwalten müssen, aber neuer ADO-Code mit # geschrieben werden soll**importieren**.
+Die bevorzugte Methode zum Programmieren von ADO mit Visual C++ ist die Verwendung der **#Import** -Direktive, wie in [Microsoft Visual C++ ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md)erläutert. In früheren Versionen von ADO gab es jedoch eine Alternative Programmiermethode mithilfe von Visual C++: die Visual C++ Erweiterungen. In diesem Abschnitt wird dieses Feature für diejenigen beschrieben, die Visual C++-Erweiterungs Code verwalten müssen, aber mit #**Import**muss neuer ADO-Code geschrieben werden.
 
- Eine der aufwändigsten Aufträge Visual C++-Programmierer Schriftart beim Abrufen von Daten mit ADO als VARIANT-Datentyp in einen C++-Datentyp zurückgegeben, und Speichern der konvertierten Daten in einer Klasse oder Struktur konvertieren von Daten ist. Abrufen von C++-Daten über einen VARIANT-Datentyp umständlich, sondern beeinträchtigt Leistung ist.
+ Einer der aktivsten Aufträge Visual C++ Programmierern beim Abrufen von Daten mit ADO ist das Konvertieren von Daten, die als Variant-Datentyp zurückgegeben werden, in einen C++-Datentyp und das anschließende Speichern der konvertierten Daten in einer Klasse oder Struktur. Das Abrufen von C++-Daten über einen Variant-Datentyp ist nicht nur mühsam, sondern verringert auch die Leistung.
 
- ADO stellt eine Schnittstelle, die beim Abrufen von Daten in systemeigenen C/C++-Datentypen unterstützt werden, ohne Umweg über eine Variante bereit und bietet außerdem Präprozessormakros, die mithilfe der Benutzeroberfläche zu vereinfachen. Das Ergebnis ist ein flexibles Tool, das ist einfacher zu verwenden und bietet hervorragende Leistung.
+ ADO stellt eine Schnittstelle bereit, die das Abrufen von Daten in systemeigene C/C++-Datentypen unterstützt, ohne dass ein Variant durchlaufen wird. Außerdem werden Präprozessormakros bereitgestellt, die die Verwendung der Das Ergebnis ist ein flexibles Tool, das einfacher zu verwenden ist und eine hohe Leistung aufweist.
 
- Ein häufiges Szenario der C/C++-Client ist, binden Sie einen Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) auf eine C/C++-Struktur oder Klasse, die mit systemeigenen C/C++-Typen. Bei der Verwendung von VARIANTs umfasst das Schreiben von Code für die Konvertierung von Varianten in systemeigenen C/C++-Typen. Visual C++-Erweiterungen für ADO gelten zu diesem Szenario für den Visual C++-Programmierer viel einfacher gestalten.
+ Ein häufiges c/C++-Client Szenario besteht darin, einen Datensatz in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) an eine c/C++-Struktur oder-Klasse zu binden, die systemeigene c/C++-Typen enthält. Beim Durchlaufen von Varianten müssen Sie den Konvertierungs Code von Variant in Native C/C++-Typen schreiben. Die Visual C++ Erweiterungen für ADO sind darauf ausgerichtet, dieses Szenario für die Visual C++ Programmierern viel einfacher zu gestalten.
 
- Finden Sie unter den folgenden Themen Weitere Informationen zu den Visual C++-Erweiterungen für ADO.
+ Weitere Informationen zu den Visual C++-Erweiterungen für ADO finden Sie in den folgenden Themen.
 
--   [Mithilfe von Visual C++-Erweiterungen für ADO](../../../ado/guide/appendixes/using-visual-c-extensions.md)
+-   [Verwenden von Visual C++-Erweiterungen für ADO](../../../ado/guide/appendixes/using-visual-c-extensions.md)
 
 -   [Visual C++-Erweiterungsheader](../../../ado/guide/appendixes/visual-c-extensions-header.md)
 
--   [ADO mit Visual C++-Erweiterungen – Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md)
+-   [Beispiel für ADO mit Visual C++ Erweiterungen](../../../ado/guide/appendixes/visual-c-extensions-example.md)
 
-## <a name="see-also"></a>Siehe auch
- [ADO für Visual C++ – Syntaxindex für COM-](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++-Erweiterungen – Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md) [mithilfe von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C++-Erweiterungsheader](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+## <a name="see-also"></a>Weitere Informationen
+ [ADO for Visual C++ Syntax Index for com](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md) [Visual C++ Extensions example](../../../ado/guide/appendixes/visual-c-extensions-example.md) [using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md) [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)

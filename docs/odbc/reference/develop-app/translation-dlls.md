@@ -1,5 +1,5 @@
 ---
-title: Konvertierungs-DLLs | Microsoft-Dokumentation
+title: Übersetzungs-DLLs | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,17 +13,17 @@ ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086031"
 ---
 # <a name="translation-dlls"></a>Übersetzungs-DLLs
-Die Anwendung und die Datenquellensicht speichern oft Daten in anderen Zeichensätze. ODBC bietet es sich um einen generischen Mechanismus dar, der Daten aus einem Zeichensatz in eine andere übersetzt den Treiber ermöglicht. Es besteht aus einer DLL, die die Übersetzung Funktionen implementiert **SQLDriverToDataSource** und **SQLDataSourceToDriver**, die aufgerufen werden, indem alle übertragenen Daten zwischen der Datenquelle übersetzt der Treiber und Treiber. Diese DLL-Datei geschrieben werden kann, durch den Treiber-Entwickler, Anwendungsentwickler oder einem Drittanbieter.  
+Die Anwendung und die Datenquelle speichern häufig Daten in unterschiedlichen Zeichensätzen. ODBC stellt einen generischen Mechanismus bereit, der es dem Treiber ermöglicht, Daten von einem Zeichensatz in einen anderen zu übersetzen. Sie besteht aus einer DLL, die die Übersetzungsfunktionen **sqldriverydatasource** und **sqldatasourcededriver**implementiert, die vom Treiber aufgerufen werden, um den gesamten Datenfluss zwischen der Datenquelle und dem Treiber zu übersetzen. Diese DLL kann vom Anwendungsentwickler, vom Treiber Entwickler oder von einem Drittanbieter geschrieben werden.  
   
- Der Konvertierungs-DLL für eine bestimmte Datenquelle kann in die Systeminformationen für die Datenquelle angegeben werden. Weitere Informationen finden Sie unter [Datenquellenspezifikationen](../../../odbc/reference/install/data-source-specification-subkeys.md). Sie können auch zur Laufzeit mit der SQL_ATTR_TRANSLATE_DLL und SQL_ATTR_TRANSLATE_OPTION Verbindungsattribute festgelegt werden.  
+ Die Übersetzungs-DLL für eine bestimmte Datenquelle kann in den Systeminformationen für diese Datenquelle angegeben werden. Weitere Informationen finden Sie [unter Datenquellen Spezifikations Unterschlüssel](../../../odbc/reference/install/data-source-specification-subkeys.md). Sie kann auch zur Laufzeit mit den SQL_ATTR_TRANSLATE_DLL-und SQL_ATTR_TRANSLATE_OPTION Verbindungs Attributen festgelegt werden.  
   
- Die Übersetzungsoption wird ein Wert, der nur von einer bestimmten DLL-Übersetzung interpretiert werden kann. Wenn die Übersetzung zwischen verschiedenen Codepages DLL übersetzt wird, kann die Option z. B. die Anzahl von Codepages verwendet werden, von der Anwendung und der Datenquelle geben. Besteht keine Notwendigkeit für eine Übersetzung DLL eine Übersetzungsoption verwenden.  
+ Bei der Übersetzungs Option handelt es sich um einen Wert, der nur von einer bestimmten Übersetzungs-DLL interpretiert werden kann. Wenn die Übersetzungs-DLL beispielsweise zwischen verschiedenen Codepages übersetzt, gibt die Option möglicherweise die Anzahl der Codepages aus, die von der Anwendung und der Datenquelle verwendet werden. Es ist nicht erforderlich, dass eine Übersetzungs-DLL eine Übersetzungs Option verwendet.  
   
- Nach der eine Übersetzung, die DLL angegeben wurde, wird der Treiber geladen und aufgerufen, um alle Datenflüsse zwischen der Anwendung und die Datenquelle übersetzt. Dies schließt alle SQL-Anweisungen und Zeichenparameter, die an die Datenquelle gesendet werden, und alle Zeichens, Metadaten von Zeichen wie z. B. Spaltennamen und Fehlermeldungen abgerufen werden, aus der Datenquelle. Verbindungsdaten ist nicht übersetzt, da der Konvertierungs-DLL nicht erst geladen wird, nachdem die Anwendung eine Verbindung mit der Datenquelle hergestellt hat.
+ Nachdem eine Übersetzungs-DLL angegeben wurde, lädt der Treiber Sie und ruft Sie auf, um den gesamten Datenfluss zwischen der Anwendung und der Datenquelle zu übersetzen. Dies umfasst alle SQL-Anweisungen und Zeichen Parameter, die an die Datenquelle gesendet werden, sowie alle Zeichen Ergebnisse, Zeichen Metadaten wie Spaltennamen und Fehlermeldungen, die aus der Datenquelle abgerufen werden. Die Verbindungsdaten werden nicht übersetzt, weil die Übersetzungs-DLL erst geladen wird, nachdem die Anwendung eine Verbindung mit der Datenquelle hergestellt hat.

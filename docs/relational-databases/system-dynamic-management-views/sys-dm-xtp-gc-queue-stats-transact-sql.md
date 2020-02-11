@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68090198"
 ---
-# <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
+# <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -34,19 +34,19 @@ ms.locfileid: "68090198"
   
  Der Garbage Collection-Hauptthread (Leerlaufthread) verfolgt aktualisierte, gelöschte und eingefügte Zeilen für alle Transaktionen nach, die seit dem letzten Aufruf des Garbage Collection-Hauptthreads abgeschlossen wurden. Sobald er aktiviert wird, überprüft der Garbage Collection-Thread, ob der Zeitstempel der ältesten aktiven Transaktion geändert wurde. Wenn die älteste aktive Transaktion geändert wurde, reiht der Leerlaufthread Arbeitselemente für Transaktionen, deren Schreibmengen nicht mehr benötigt werden, (in Segmenten von 16 Zeilen) in die Warteschlange ein. Wenn Sie z. B. 1.024 Zeilen löschen, enthält die Warteschlange schließlich 64 Garbage Collection-Arbeitselemente mit jeweils 16 gelöschten Zeilen.  Nachdem für eine Benutzertransaktion ein Commit ausgeführt wurde, werden alle im zugehörigen Zeitplanungsmodul in die Warteschlange eingereihten Arbeitsaufgaben ausgewählt. Wenn die Warteschlange im Zeitplanungsmodul keine Arbeitsaufgaben enthält, werden von der Benutzertransaktion alle Warteschlangen im aktuellen NUMA-Knoten durchsucht.  
   
- Sie können feststellen, ob Arbeitsspeicher für gelöschte Zeilen durch die Garbage Collection freigegeben wird, indem Sie sys.dm_xtp_gc_queue_stats ausführen und überprüfen, ob die Arbeitsaufgaben in der Warteschlange verarbeitet werden. Wenn Einträge in der Current_queue_depth nicht verarbeitet werden, oder wenn die Current_queue_depth keine neuen Arbeitselemente hinzugefügt werden, ist dies ein Hinweis, dass die Garbagecollection keinen Arbeitsspeicher freigibt. Z. B. Garbagecollection nicht möglich, wenn eine lange andauernde Transaktion vorhanden ist.  
+ Sie können feststellen, ob Arbeitsspeicher für gelöschte Zeilen durch die Garbage Collection freigegeben wird, indem Sie sys.dm_xtp_gc_queue_stats ausführen und überprüfen, ob die Arbeitsaufgaben in der Warteschlange verarbeitet werden. Wenn Einträge im current_queue_depth nicht verarbeitet werden oder der current_queue_depth keine neuen Arbeitsaufgaben hinzugefügt werden, ist dies ein Hinweis darauf, dass Garbage Collection keinen Arbeitsspeicher freigibt. Beispielsweise kann Garbage Collection nicht ausgeführt werden, wenn eine Transaktion mit langer Laufzeit ausgeführt wird.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Spaltenname|Typ|Description|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Der eindeutige Bezeichner der Warteschlange.|  
-|total_enqueues|**bigint**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers in die Warteschlange eingereiht wurden.|  
-|total_dequeues|**bigint**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers aus der Warteschlange entfernt wurden.|  
-|current_queue_depth|**bigint**|Die aktuelle Anzahl von Arbeitselementen der Garbage Collection, die in dieser Warteschlange vorhanden sind. Dieses Element bedeutet möglicherweise, dass eine oder mehrere Garbage Collections durchgeführt werden sollen.|  
-|maximum_queue_depth|**bigint**|Die maximale Tiefe, die diese Warteschlange aufgewiesen hat.|  
-|last_service_ticks|**bigint**|CPU-Takte zu dem Zeitpunkt, als die Warteschlange zuletzt aktiv war.|  
+|total_enqueues|**BIGINT**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers in die Warteschlange eingereiht wurden.|  
+|total_dequeues|**BIGINT**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers aus der Warteschlange entfernt wurden.|  
+|current_queue_depth|**BIGINT**|Die aktuelle Anzahl von Arbeitselementen der Garbage Collection, die in dieser Warteschlange vorhanden sind. Dieses Element bedeutet möglicherweise, dass eine oder mehrere Garbage Collections durchgeführt werden sollen.|  
+|maximum_queue_depth|**BIGINT**|Die maximale Tiefe, die diese Warteschlange aufgewiesen hat.|  
+|last_service_ticks|**BIGINT**|CPU-Takte zu dem Zeitpunkt, als die Warteschlange zuletzt aktiv war.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung.  
@@ -65,7 +65,7 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 3        15625                15625    0                    15625                1233571605761  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Eine Speicheroptimierte Tabelle dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

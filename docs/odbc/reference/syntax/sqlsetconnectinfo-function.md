@@ -1,5 +1,5 @@
 ---
-title: SQLSetConnectInfo-Funktion | Microsoft-Dokumentation
+title: Sqlsetconnectinfo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68093003"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLSetConnectInfo** dient zum Festlegen von der Datenquelle, Benutzer-ID und das Kennwort in das Verbindungstoken für die Informationen für einer Anwendung [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) aufrufen.  
+ **Sqlsetconnectinfo** wird verwendet, um die Datenquelle, die Benutzer-ID und das Kennwort in das Verbindungs Informations Token für den [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) -Befehl einer Anwendung festzulegen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,43 +41,43 @@ SQLRETURN  SQLSetConnectInfo(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *TokenHandle*  
- [Eingabe] Tokenhandle.  
+ *Tokenhandle*  
+ Der Tokenhandle.  
   
- *ServerName*  
- [Eingabe] Datenquellenname. Daten können sich auf demselben Computer wie die Anwendung oder auf einem anderen Computer an einer beliebigen Stelle in einem Netzwerk sein. Weitere Informationen dazu, wie eine Anwendung eine Datenquelle wählt, finden Sie unter [Auswählen einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ *Servername*  
+ Der Der Name der Datenquelle. Die Daten befinden sich möglicherweise auf demselben Computer wie das Programm oder auf einem anderen Computer in einem Netzwerk. Informationen dazu, wie eine Anwendung eine Datenquelle auswählt, finden Sie unter [Auswählen einer Datenquelle oder eines Treibers](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
  *NameLength1*  
- [Eingabe] Länge der **ServerName* in Zeichen.  
+ Der Länge von **Servername* in Zeichen.  
   
- *UserName*  
- [Eingabe] Benutzer-ID.  
+ *User*  
+ Der Benutzer-ID.  
   
  *NameLength2*  
- [Eingabe] Länge der **Benutzername* in Zeichen.  
+ Der Länge von **Benutzername* in Zeichen.  
   
  *Authentifizierung*  
- [Eingabe] Zeichenfolge zur cloudauthentifizierung (in der Regel das Kennwort).  
+ Der Authentifizierungs Zeichenfolge (in der Regel das Kennwort)  
   
  *NameLength3*  
- [Eingabe] Länge der **Authentifizierung* in Zeichen.  
+ Der Länge der *-*Authentifizierung* in Zeichen.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Identisch mit [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) für eingabeüberprüfungsfehler, mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und **behandeln** von *hDbcInfoToken*.  
+ Identisch mit [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) für Eingabevalidierungsfehler, mit dem Unterschied, dass der Treiber-Manager den **Handlertyp** SQL_HANDLE_DBC_INFO_TOKEN und ein **handle** von *hdbcinfotoken*verwendet.  
   
-## <a name="remarks"></a>Hinweise  
- Immer ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen aus *hDbcInfoToken*, und wird SQL_SUCCESS_WITH_INFO zurückgegeben. um die Anwendung im [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen von *hdbcinfotoken*und gibt SQL_SUCCESS_WITH_INFO in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)an die Anwendung zurück.  
   
- Anwendungen sollten diese Funktion nicht direkt aufrufen. Ein ODBC-Treiber, der treiberfähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
+ Anwendungen sollten diese Funktion nicht direkt aufzurufen. Ein ODBC-Treiber, der Treiber fähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
   
- Umfassen Sie sqlspi.h für die Entwicklung von ODBC-Treiber.  
+ Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

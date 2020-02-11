@@ -1,5 +1,5 @@
 ---
-title: AbsolutePosition und CursorLocation – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für AbsolutePosition und Cursor Location-Eigenschaften (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29307c3764a81f60ad02108ba498daab85bc0b3f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921715"
 ---
-# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition und CursorLocation – Beispiel (VB)
-In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) Eigenschaft kann den Verlauf einer Schleife, die alle Datensätze der listet verfolgen ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Er verwendet den [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) Eigenschaft zum Aktivieren der **AbsolutePosition** Eigenschaft, indem Sie den Cursor auf einen Clientcursor festgelegt.  
+# <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>Beispiel für AbsolutePosition und Cursor Location-Eigenschaften (VB)
+In diesem Beispiel wird veranschaulicht, wie die [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) -Eigenschaft den Fortschritt einer Schleife verfolgen kann, in der alle Datensätze eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md)aufgelistet werden. Er verwendet die [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) -Eigenschaft, um die **AbsolutePosition** -Eigenschaft zu aktivieren, indem der Cursor auf einen Client Cursor festgelegt wird.  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -91,7 +91,7 @@ End Sub
 'EndAbsolutePositionVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [AbsolutePosition-Eigenschaft (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [CursorLocation-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
+ [Cursor Location-Eigenschaft (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,54 +15,54 @@ ms.assetid: 6e6cabcf-a204-40eb-b77d-8a0c4a5e8524
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3987085d7d04bf248bcc728c3bcd1ee5503d9af1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107365"
 ---
 # <a name="sqlstate-mappings"></a>SQLSTATE-Zuordnungen
-In diesem Thema SQLSTATE-Werten für ODBC *2.x* und ODBC *3.x*. Weitere Informationen zu ODBC *3.x* SQLSTATE-Werten, finden Sie unter [Anhang A: ODBC-Fehlercodes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
+In diesem Thema werden SQLSTATE-Werte für ODBC *2. x* und ODBC *3. x*erläutert. Weitere Informationen zu ODBC *3. x* SQLSTATE-Werten finden Sie unter [Anhang A: ODBC-Fehler Codes](../../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).  
   
- In ODBC *3.x*HYxxx SQLSTATEs werden zurückgegeben, anstatt S1xxx und 42Sxx SQLSTATEs statt S00XX zurückgegeben werden. Dies erfolgte, um die Open Group und ISO-Standard entsprechen. In vielen Fällen ist die Zuordnung nicht 1: 1, da die Standards die Interpretation der mehrere SQLSTATEs neu definiert haben.  
+ In ODBC *3. x*werden hyxxx Sqlstates anstelle von S1xxx zurückgegeben, und 42sxx Sqlstates werden anstelle von S00XX zurückgegeben. Dies wurde erreicht, um die Standards "Open Group" und "ISO" auszurichten. In vielen Fällen ist die Zuordnung nicht eins zu eins, da die Standards die Interpretation mehrerer Sqlstates neu definiert haben.  
   
- Wenn eine ODBC *2.x* Anwendung wird aktualisiert, an die ODBC *3.x* Anwendung geändert werden, um ODBC erwarten, dass die Anwendung muss *3.x* SQLSTATEs anstelle von ODBC *2.x* SQLSTATEs. Die folgende Tabelle listet die ODBC *3.x* SQLSTATEs, jede ODBC *2.x* SQLSTATE zugeordnet ist.  
+ Wenn eine ODBC *2. x* -Anwendung auf eine ODBC *3. x* -Anwendung aktualisiert wird, muss die Anwendung so geändert werden, dass ODBC *3. x* Sqlstates anstelle von ODBC *2. x* Sqlstates erwartet wird. In der folgenden Tabelle werden die ODBC *3. x* Sqlstates aufgelistet, denen die einzelnen ODBC *2. x* SQLSTATE zugeordnet sind.  
   
- Wenn umgebungsattributs SQL_ATTR_ODBC_VERSION auf SQL_OV_ODBC2 festgelegt ist, sendet der Treiber ODBC *2.x* SQLSTATEs anstelle von ODBC *3.x* SQLSTATEs beim **SQLGetDiagField**oder **SQLGetDiagRec** aufgerufen wird. Eine bestimmte Zuordnung kann bestimmt werden, anhand der ODBC *2.x* SQLSTATE in Spalte 1 in der folgenden Tabelle, die die ODBC entspricht *3.x* SQLSTATE in Spalte 2.  
+ Wenn das SQL_ATTR_ODBC_VERSION-Umgebungs Attribut auf SQL_OV_ODBC2 festgelegt ist, sendet der Treiber ODBC *2. x* Sqlstates anstelle von ODBC *3. x* Sqlstates, wenn **SQLGetDiagField** oder **SQLGetDiagRec** aufgerufen wird. Eine bestimmte Zuordnung kann durch Notieren von ODBC *2. x* SQLSTATE in Spalte 1 der folgenden Tabelle ermittelt werden, die dem ODBC *3. x* SQLSTATE in Spalte 2 entspricht.  
   
-|ODBC *2.x* SQLSTATE|ODBC *3.x* SQLSTATE|Kommentare|  
+|ODBC *2. x* SQLSTATE|ODBC *3. x* SQLSTATE|Kommentare|  
 |-------------------------|-------------------------|--------------|  
-|01S03|01001||  
-|01S04|01001||  
+|01s03|01001||  
+|01s04|01001||  
 |22003|HY019||  
 |22008|22007||  
 |22005|22018||  
-|24000|07005||  
+|24.000|07005||  
 |37000|42000||  
 |70100|HY018||  
-|S0001|42S01||  
-|S0002|42S02||  
-|S0011|42S11||  
-|S0012|42S12||  
-|S0021|42S21||  
-|S0022|42S22||  
-|S0023|42S23||  
+|S0001|42s01||  
+|S0002|42s02||  
+|S0011|42s11||  
+|S0012|42s12||  
+|S0021|42s21||  
+|S0022|42s22||  
+|S0023|42s23||  
 |S1000|HY000||  
 |S1001|HY001||  
-|S1002|07009|ODBC *2.x* ODBC SQLSTATE S1002 zugeordnet *3.x* SQLSTATE 07009, wenn die zugrunde liegende Funktion **SQLBindCol**, **SQLColAttribute**, **SQLExtendedFetch**, **SQLFetch**, **SQLFetchScroll**, oder **SQLGetData**.|  
+|S1002|07009|ODBC *2. x* SQLSTATE S1002 ist ODBC *3. x* SQLSTATE 07009 zugeordnet, wenn die zugrunde liegende Funktion **SQLBindCol**, **SQLColAttribute**, **sqlextendebug**, **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**ist.|  
 |S1003|HY003||  
 |S1004|HY004||  
 |S1008|HY008||  
-|S1009|HY009|Für eine ungültige Verwendung des null-Zeiger zurückgegeben.|  
-|S1009|HY024|Bei einem ungültigen Attributwert zurückgegeben.|  
-|S1009|HY092|Zum Aktualisieren oder Löschen von Daten durch einen Aufruf zurückgegebenen **SQLSetPos**, oder hinzufügen, aktualisieren oder Löschen von Daten durch einen Aufruf von **SQLBulkOperations**, wenn die Parallelität schreibgeschützt ist.|  
-|S1010|HY007 HY010|SQLSTATE S1010 SQLSTATE HY007 zugeordnet bei **SQLDescribeCol** aufgerufen wird, vor dem Aufruf **SQLPrepare**, **SQLExecDirect**, oder einer Katalogfunktion für die *StatementHandle*. Andernfalls ist SQLSTATE S1010 SQLSTATE HY010 zugeordnet.|  
+|S1009|HY009|Wird für eine ungültige Verwendung eines NULL-Zeigers zurückgegeben.|  
+|S1009|HY024|Wird für einen ungültigen Attribut Wert zurückgegeben.|  
+|S1009|HY092|Wird zum Aktualisieren oder Löschen von Daten durch einen Aufrufen von **SQLSetPos**oder zum Hinzufügen, aktualisieren oder Löschen von Daten durch einen **SQLBulkOperations**-Befehl zurückgegeben, wenn die Parallelität schreibgeschützt ist.|  
+|S1010|HY007 HY010|SQLSTATE S1010 wird SQLSTATE HY007 zugeordnet, wenn **SQLDescribeCol** vor dem Aufrufen von **SQLPrepare**, **SQLExecDirect**oder einer Katalog Funktion für das *StatementHandle*aufgerufen wird. Andernfalls wird SQLSTATE S1010 SQLSTATE HY010 zugeordnet.|  
 |S1011|HY011||  
 |S1012|HY012||  
 |S1090|HY090||  
 |S1091|HY091||  
 |S1092|HY092||  
-|S1093|07009|ODBC *3.x* ODBC SQLSTATE 07009 zugeordnet *2.x* SQLSTATE S1093 ist die zugrunde liegende Funktion **SQLBindParameter** oder **SQLDescribeParam**.|  
+|S1093|07009|ODBC *3. x* SQLSTATE 07009 ist ODBC *2. x* SQLSTATE S1093 zugeordnet, wenn die zugrunde liegende Funktion **SQLBindParameter** oder **SQLDescribeParam**ist.|  
 |S1096|HY096||  
 |S1097|HY097||  
 |S1098|HY098||  
@@ -82,4 +82,4 @@ In diesem Thema SQLSTATE-Werten für ODBC *2.x* und ODBC *3.x*. Weitere Informat
 |S1T00|HYT00||  
   
 > [!NOTE]  
->  ODBC *3.x* ODBC SQLSTATE 07008 zugeordnet *2.x* SQLSTATE S1000.
+>  ODBC *3. x* SQLSTATE 07008 ist ODBC *2. x* SQLSTATE S1000 zugeordnet.

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f4b9667f9d0018920885d4fdf7e5fce3b5a47311
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63061838"
 ---
 # <a name="pauseservice-method-sqlservice-class"></a>PauseService-Methode (SqlService-Klasse)
@@ -37,16 +37,16 @@ object
   
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
- Ein [SqlService-Klassenobjekt](sqlservice-class.md) , das den Dienst darstellt.  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
+ Ein [SqlService-Klassen](sqlservice-class.md) Objekt, das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der 0 beträgt, wenn der Dienst erfolgreich angehalten wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

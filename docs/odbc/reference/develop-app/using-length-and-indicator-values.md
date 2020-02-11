@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Längen- und Indikatorwerten | Microsoft-Dokumentation
+title: Verwenden von Längen-und Indikator Werten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,14 +16,14 @@ ms.assetid: 849792f1-cb1e-4bc2-b568-c0aff0b66199
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b3a0b54617d55033addabc729adbd078680022fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67902471"
 ---
 # <a name="using-length-and-indicator-values"></a>Verwenden von Längen- und Indikatorwerten
-Die Längen-/Indikatorpuffer dient zum Übergeben von der Bytelänge der Daten in den Datenpuffer oder eine spezielle Indikator wie z. B. SQL_NULL_DATA gibt an, dass die Daten NULL sind. Abhängig von der Funktion, in der es verwendet wird, wird ein Längen-/Indikatorpuffer definiert eine SQLINTEGER oder ein SQLSMALLINT sein. Aus diesem Grund wird ein einzelnes Argument benötigt, um es zu beschreiben. Wenn im Datenpuffer eine nondeferred Eingabepuffer ist, enthält dieses Argument die Bytelänge der Daten selbst oder einem Indikatorwert. Es ist häufig mit dem Namen *StrLen_or_Ind* oder einem ähnlichen Namen. Beispielsweise der folgende code ruft **SQLPutData** auf einen Puffer übergeben voller Daten; -die Bytelänge (*ValueLen*) direkt übergeben wird, da im Datenpuffer (*ValuePtr*) ist ein Eingabepuffer.  
+Der Längen-/Indikatorpuffer wird verwendet, um die Byte Länge der Daten im Datenpuffer oder einen speziellen Indikator wie SQL_NULL_DATA zu übergeben, der angibt, dass die Daten NULL sind. Abhängig von der Funktion, in der Sie verwendet wird, wird ein Längen-/Indikatorpuffer als SQLINTEGER oder SQLSMALLINT definiert. Daher ist ein einzelnes Argument erforderlich, um es zu beschreiben. Wenn der Datenpuffer ein nicht verzögerter Eingabepuffer ist, enthält dieses Argument die Byte Länge der Daten selbst oder einen Indikator Wert. Sie wird häufig *StrLen_Or_Ind* oder ein ähnlicher Name genannt. Der folgende Code ruft z. b. **SQLPutData** auf, um einen Puffer mit vollen Daten zu übergeben. die Byte Länge (*valuelen*) wird direkt übermittelt, da der Datenpuffer (*ValuePtr*) ein Eingabepuffer ist.  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -38,7 +38,7 @@ FillBuffer(ValuePtr, sizeof(ValuePtr), &ValueLen);
 SQLPutData(hstmt, ValuePtr, ValueLen);  
 ```  
   
- Ist der Datenpuffer eine verzögerte Eingabepuffer, einen nondeferred Ausgabepuffer oder einem Ausgabepuffer, enthält das Argument die Adresse des Längen-/Indikatorpuffers auf. Es ist häufig mit dem Namen *StrLen_or_IndPtr* oder einem ähnlichen Namen. Beispielsweise der folgende code ruft **SQLGetData** zum Abrufen eines Puffers mit Daten Länge in Byte an die Anwendung in den Längen-/Indikatorpuffer zurückgegeben wird (*ValueLenOrInd*), mit der Adresse ist übergeben **SQLGetData** da der entsprechende Datenpuffer (*ValuePtr*) ist ein nondeferred Ausgabepuffer.  
+ Wenn der Datenpuffer ein verzögerter Eingabepuffer, ein nicht verzögerter Ausgabepuffer oder ein Ausgabepuffer ist, enthält das-Argument die Adresse des Längen-/indikatorenpuffers. Sie wird häufig *StrLen_or_IndPtr* oder ein ähnlicher Name genannt. Der folgende Code ruft z. b. **SQLGetData** auf, um einen Puffer in voller Größe abzurufen. die Byte Länge wird an die Anwendung im Längen-/Indikatorpuffer (*valuelenorind*) zurückgegeben, deren Adresse an **SQLGetData** weitergegeben wird, da der zugehörige Datenpuffer (*ValuePtr*) ein nicht verzögerter Ausgabepuffer ist.  
   
 ```  
 SQLCHAR      ValuePtr[50];  
@@ -46,28 +46,28 @@ SQLINTEGER   ValueLenOrInd;
 SQLGetData(hstmt, 1, SQL_C_CHAR, ValuePtr, sizeof(ValuePtr), &ValueLenOrInd);  
 ```  
   
- Es sei denn, sie insbesondere nicht zulässig ist, ein Längenindikator / pufferargument "0" sein (wenn nondeferred Eingabe) oder ein null-Zeiger (wenn Ausgabe- oder verzögerte Eingabe). Für den Eingabepuffer bewirkt, dass dies den Treiber, um die Bytelänge der Daten zu ignorieren. Dies gibt einen Fehler zurück, wenn Daten mit variabler Länge übergeben jedoch häufig beim Übergeben von Daten fester Länge ungleich Null ist, da weder eine Länge noch einem Indikatorwert erforderlich ist. Für den Ausgabepuffer bewirkt, dass dies den Treiber nicht die Bytelänge der Daten oder einem Indikatorwert zurückgegeben. Dies ist ein Fehler, wenn die Daten, die vom Treiber zurückgegebene NULL ist, jedoch werden häufig beim Abrufen von Daten fester Länge, die NULL-Werte zulässt, da weder eine Länge noch einem Indikatorwert erforderlich ist.  
+ Wenn Sie nicht ausdrücklich zulässig ist, kann ein Längen-/Indikator-pufferargument 0 (bei nicht verzögerter Eingabe) oder ein NULL-Zeiger (bei Ausgabe oder verzögerter Eingabe) sein. Bei Eingabe Puffern bewirkt dies, dass der Treiber die Byte Länge der Daten ignoriert. Dadurch wird ein Fehler zurückgegeben, wenn Daten variabler Länge übergeben werden, dies ist jedoch beim Übergeben von Daten mit fester Länge ungleich NULL üblich, weil weder eine Länge noch ein Indikator Wert benötigt wird. Bei Ausgabe Puffern bewirkt dies, dass der Treiber nicht die Byte Länge der Daten oder einen Indikator Wert zurückgibt. Dies ist ein Fehler, wenn die vom Treiber zurückgegebenen Daten NULL sind, beim Abrufen von Daten mit fester Länge, die keine NULL-Werte zulassen, aber üblich ist, weil weder eine Länge noch ein Indikator Wert benötigt wird.  
   
- Als wenn die Adresse eines Puffers verzögerten Daten an den Treiber übergeben wird muss die Adresse von einer verzögerten Längen-/Indikatorpuffer gültig bleiben, bis der Puffer aufgehoben wird.  
+ Wenn die Adresse eines verzögerten Daten Puffers an den Treiber weitergeleitet wird, muss die Adresse eines verzögerten Längen-/indikatorenpuffers gültig bleiben, bis der Puffer nicht gebunden ist.  
   
- Die folgenden Längen sind als Längenindikator/Werte gültig:  
+ Die folgenden Längen sind als Längen-/Indikatorwerte gültig:  
   
 -   *n*, wobei *n* > 0.  
   
 -   0.  
   
--   SQL_NTS. Eine Zeichenfolge, die der Treiber in den entsprechenden Datenpuffer gesendet wird, Null-terminierte; Dies ist eine praktische Methode für C-Programmierer Zeichenfolgen übergeben werden, ohne die Bytelänge zu berechnen. Dieser Wert ist zulässig, nur, wenn die Anwendung Daten an den Treiber sendet. Wenn der Treiber die Daten an die Anwendung zurückgibt, wird immer die tatsächlichen Bytelänge der Daten zurückgegeben.  
+-   SQL_NTS. Eine Zeichenfolge, die im entsprechenden Datenpuffer an den Treiber gesendet wurde, wird mit Null beendet. Dies ist eine bequeme Möglichkeit für C-Programmierer, Zeichen folgen zu übergeben, ohne die Byte Länge berechnen zu müssen. Dieser Wert ist nur zulässig, wenn die Anwendung Daten an den Treiber sendet. Wenn der Treiber Daten an die Anwendung zurückgibt, wird immer die tatsächliche Byte Länge der Daten zurückgegeben.  
   
- Die folgenden Werte sind als Längenindikator/Werte gültig. SQL_NULL_DATA wird in das Deskriptorfeld SQL_DESC_INDICATOR_PTR gespeichert. Alle anderen Werte werden in das Deskriptorfeld SQL_DESC_OCTET_LENGTH_PTR gespeichert.  
+ Die folgenden Werte sind als Längen-/Indikatorwerte gültig. SQL_NULL_DATA wird im SQL_DESC_INDICATOR_PTR Deskriptorfeld gespeichert. alle anderen Werte werden im Feld SQL_DESC_OCTET_LENGTH_PTR Deskriptor gespeichert.  
   
--   SQL_NULL_DATA. Die Daten ist ein NULL-Daten-Wert, und der Wert im entsprechenden Datenpuffer wird ignoriert. Dieser Wert ist nur für SQL-Daten gesendet oder abgerufen, die vom Treiber zulässig.  
+-   SQL_NULL_DATA. Bei den Daten handelt es sich um einen NULL-Datenwert, und der Wert im entsprechenden Datenpuffer wird ignoriert. Dieser Wert ist nur für SQL-Daten zulässig, die an den Treiber gesendet oder von diesem abgerufen werden.  
   
--   SQL_DATA_AT_EXEC. Der Datenpuffer enthält keine Daten. Stattdessen werden die Daten gesendet werden, mit **SQLPutData** , wenn die Anweisung ausgeführt wird oder wenn **SQLBulkOperations** oder **SQLSetPos** aufgerufen wird. Dieser Wert ist zulässig, nur für SQL-Daten, die an den Treiber gesendet. Weitere Informationen finden Sie unter [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md), und [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
+-   SQL_DATA_AT_EXEC. Der Datenpuffer enthält keine Daten. Stattdessen werden die Daten mit **SQLPutData** gesendet, wenn die-Anweisung ausgeführt wird oder wenn **SQLBulkOperations** oder **SQLSetPos** aufgerufen wird. Dieser Wert ist nur für SQL-Daten zulässig, die an den Treiber gesendet werden. Weitere Informationen finden Sie unter [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md), [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)und [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md).  
   
--   Ergebnis der SQL_LEN_DATA_AT_EXEC (*Länge*) Makro. Dieser Wert ähnelt SQL_DATA_AT_EXEC. Weitere Informationen finden Sie unter [Senden von Long-Daten](../../../odbc/reference/develop-app/sending-long-data.md).  
+-   Ergebnis des SQL_LEN_DATA_AT_EXEC (*length*)-Makros. Dieser Wert ähnelt SQL_DATA_AT_EXEC. Weitere Informationen finden Sie unter [Senden von Long-Daten](../../../odbc/reference/develop-app/sending-long-data.md).  
   
--   SQL_NO_TOTAL. Der Treiber kann nicht die Anzahl der Bytes von long-Daten weiterhin verfügbar, die in einem Ausgabepuffer zurückgegeben bestimmen. Dieser Wert ist nur für SQL-Daten abgerufen, die vom Treiber zulässig.  
+-   SQL_NO_TOTAL. Der Treiber kann nicht bestimmen, wie viele Bytes lange Daten in einem Ausgabepuffer zurückgeben können. Dieser Wert ist nur für SQL-Daten zulässig, die vom Treiber abgerufen werden.  
   
--   SQL_DEFAULT_PARAM. Eine Prozedur ist den Standardwert eines Eingabeparameters in einer Prozedur anstelle des Werts in den entsprechenden Datenpuffer verwenden.  
+-   SQL_DEFAULT_PARAM. Eine Prozedur ist die Verwendung des Standardwerts eines Eingabe Parameters in einer Prozedur anstelle des Werts im entsprechenden Datenpuffer.  
   
--   SQL_COLUMN_IGNORE. **SQLBulkOperations** oder **SQLSetPos** besteht darin, den Wert im Datenpuffer ignoriert. Bei der Aktualisierung einer Zeile mit Daten durch einen Aufruf von **SQLBulkOperations** oder **SQLSetPos** der Spaltenwert nicht geändert wird. Wenn Sie eine neue Zeile mit Daten durch einen Aufruf von einfügen **SQLBulkOperations**, der Wert der Spalte auf den Standardwert festgelegt ist oder, wenn die Spalte keinen standardmäßig auf NULL.
+-   SQL_COLUMN_IGNORE. **SQLBulkOperations** oder **SQLSetPos** dient zum Ignorieren des Werts im Datenpuffer. Wenn Sie eine Daten Zeile durch einen-Befehl von **SQLBulkOperations** oder **SQLSetPos aktualisieren,** wird der Spaltenwert nicht geändert. Beim Einfügen einer neuen Daten Zeile durch einen-Befehl von **SQLBulkOperations**wird der Wert der-Spalte auf den Standardwert festgelegt oder, wenn die Spalte keinen Standardwert hat, auf NULL festgelegt.

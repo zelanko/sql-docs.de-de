@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0a5fded413944c304dfe02675b3577b699adfc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63231236"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>Gestalten von XML mit geschachtelten FOR XML-Abfragen
@@ -97,7 +97,7 @@ FOR XML AUTO, TYPE
 </Production.Product>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von geschachtelten FOR XML-Abfragen](use-nested-for-xml-queries.md)  
   
   
