@@ -1,5 +1,5 @@
 ---
-title: Sp_update_job (Transact-SQL) | Microsoft-Dokumentation
+title: sp_update_job (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,20 +18,20 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68084896"
 ---
-# <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
+# <a name="sp_update_job-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert die Attribute eines Auftrags.  
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,59 +56,59 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` Die ID des Auftrags, der aktualisiert werden. *Job_id*ist **Uniqueidentifier**.  
+`[ @job_id = ] job_id`Die ID des Auftrags, der aktualisiert werden soll. *job_id*ist vom Datentyp **uniqueidentifier**.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name* ist **vom Datentyp nvarchar(128)** .  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name* ist vom Datentyp **nvarchar (128)**.  
   
-> **HINWEIS:** Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.  
+> **Hinweis:** Es muss entweder *job_id* oder *job_name* angegeben werden, aber beide können nicht angegeben werden.  
   
-`[ @new_name = ] 'new_name'` Der neue Name für den Auftrag. *New_name* ist **vom Datentyp nvarchar(128)** .  
+`[ @new_name = ] 'new_name'`Der neue Name für den Auftrag. *new_name* ist vom Datentyp **nvarchar (128)**.  
   
-`[ @enabled = ] enabled` Gibt an, ob der Auftrag aktiviert ist (**1**) oder nicht aktiviert ist (**0**). *aktiviert* ist **Tinyint**.  
+`[ @enabled = ] enabled`Gibt an, ob der Auftrag aktiviert (**1**) oder nicht aktiviert (**0**) ist. *aktiviert* ist **tinyint**.  
   
-`[ @description = ] 'description'` Die Beschreibung des Auftrags. *Beschreibung* ist **nvarchar(512)** .  
+`[ @description = ] 'description'`Die Beschreibung des Auftrags. die *Beschreibung* ist **nvarchar (512)**.  
   
-`[ @start_step_id = ] step_id` Die ID des ersten Schritts zum Ausführen des Auftrags. *Step_id* ist **Int**.  
+`[ @start_step_id = ] step_id`Die ID des ersten Schritts, der für den Auftrag ausgeführt werden soll. *step_id* ist vom Datentyp **int**.  
   
-`[ @category_name = ] 'category'` Die Kategorie des Auftrags. *Kategorie* ist **vom Datentyp nvarchar(128)** .  
+`[ @category_name = ] 'category'`Die Kategorie des Auftrags. *Category* ist vom Datentyp **nvarchar (128)**.  
   
-`[ @owner_login_name = ] 'login'` Der Name der Anmeldung, die den Auftrag besitzt. *Anmeldung* ist **vom Datentyp nvarchar(128)** nur Mitglieder der der **Sysadmin** Serverrolle kann den Auftragsbesitz ändern.  
+`[ @owner_login_name = ] 'login'`Der Name der Anmeldung, die den Auftrag besitzt. *Login* ist vom Datentyp **nvarchar (128)** . nur Mitglieder der festen Server Rolle **sysadmin** können den Auftrags Besitz ändern.  
   
-`[ @notify_level_eventlog = ] eventlog_level` Gibt an, wann einen Eintrag im Microsoft Windows-Anwendungsprotokoll für diesen Auftrag erfolgen. *ist NULL*ist **Int**, und kann einen der folgenden Werte sein.  
+`[ @notify_level_eventlog = ] eventlog_level`Gibt an, wann für diesen Auftrag ein Eintrag in das Microsoft Windows-Anwendungsprotokoll platziert werden soll. *eventlog_level*ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung (Aktion)|  
+|value|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
-|**0**|Never|  
+|**0**|Nie|  
 |**1**|Bei Erfolg|  
-|**2**|Bei einem Fehler|  
-|**3**|Always|  
+|**2**|Bei Fehler|  
+|**€**|Always|  
   
-`[ @notify_level_email = ] email_level` Gibt an, wann nach Abschluss dieses Auftrags eine E-mail gesendet. *Email_level*ist **Int**. *Email_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_email = ] email_level`Gibt an, wann nach Abschluss dieses Auftrags eine e-Mail gesendet werden soll. *email_level*ist vom Datentyp **int**. *email_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_level_netsend = ] netsend_level` Gibt an, wann eine Netzwerknachricht nach dem Abschluss des Auftrags gesendet. *Netsend_level*ist **Int**. *Netsend_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_netsend = ] netsend_level`Gibt an, wann nach Abschluss dieses Auftrags eine Netzwerk Nachricht gesendet werden soll. *netsend_level*ist vom Datentyp **int**. *netsend_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_level_page = ] page_level` Gibt an, wann eine Seite nach dem Abschluss des Auftrags gesendet. *Page_level* ist **Int**. *Page_level*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @notify_level_page = ] page_level`Gibt an, wann nach dem Abschluss dieses Auftrags eine Seite gesendet werden soll. *page_level* ist vom Datentyp **int**. *page_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @notify_email_operator_name = ] 'operator_name'` Der Name des Operators, an die e-Mail-Nachricht, wenn gesendet wird *Email_level* erreicht ist. *e-Mail-Name* ist **vom Datentyp nvarchar(128)** .  
+`[ @notify_email_operator_name = ] 'operator_name'`Der Name des Operators, an den die e-Mail-Nachricht gesendet wird, wenn *email_level* erreicht wird. *email_name* ist vom Datentyp **nvarchar (128)**.  
   
-`[ @notify_netsend_operator_name = ] 'netsend_operator'` Der Name des Operators, an den die Netzwerknachricht gesendet wird. *Netsend_operator* ist **vom Datentyp nvarchar(128)** .  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'`Der Name des Operators, an den die Netzwerk Nachricht gesendet wird. *netsend_operator* ist vom Datentyp **nvarchar (128)**.  
   
-`[ @notify_page_operator_name = ] 'page_operator'` Der Name des Operators, an eine Seite gesendet wird. *Page_operator* ist **vom Datentyp nvarchar(128)** .  
+`[ @notify_page_operator_name = ] 'page_operator'`Der Name des Operators, an den eine Seite gesendet wird. *page_operator* ist vom Datentyp **nvarchar (128)**.  
   
-`[ @delete_level = ] delete_level` Gibt an, wann den Auftrag gelöscht. *delete_level*ist **Int**. *Auftrag nie gelöscht*verwendet die gleichen Werte wie *ist NULL*.  
+`[ @delete_level = ] delete_level`Gibt an, wann der Auftrag gelöscht werden soll. *delete_value*ist vom Datentyp **int**. *delete_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
-`[ @automatic_post = ] automatic_post` Reserviert.  
+`[ @automatic_post = ] automatic_post`Bleiben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_update_job** muss ausgeführt werden, aus der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_update_job** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
- **Sp_update_job** ändert nur die Einstellungen, die für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
+ **sp_update_job** ändert nur die Einstellungen, für die Parameterwerte angegeben werden. Wird ein Parameter nicht angegeben, wird die aktuelle Einstellung beibehalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -118,7 +118,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Nur Mitglieder der **Sysadmin** können diese gespeicherte Prozedur verwenden, um Attribute von Aufträgen zu bearbeiten, die von anderen Benutzern gehören.  
+ Nur Mitglieder der **sysadmin** -Rolle können diese gespeicherte Prozedur verwenden, um die Attribute von Aufträgen zu bearbeiten, die sich im Besitz anderer Benutzer befinden.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden der Name, die Beschreibung und der aktivierte Status des Auftrags `NightlyBackups` geändert.  
@@ -135,10 +135,10 @@ EXEC dbo.sp_update_job
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_delete_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_delete_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

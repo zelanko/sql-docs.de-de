@@ -1,5 +1,5 @@
 ---
-title: Sp_delete_database_backuphistory (Transact-SQL) | Microsoft-Dokumentation
+title: sp_delete_database_backuphistory (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 4c237944-453d-49fb-8d0e-4596945ac147
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff85b52e0b0ed6715b64287f0c0e5abd5a0ae9c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68085812"
 ---
-# <a name="spdeletedatabasebackuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
+# <a name="sp_delete_database_backuphistory-transact-sql"></a>sp_delete_database_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht Informationen zur angegebenen Datenbank aus den Tabellen mit den Sicherungs- und Wiederherstellungsverläufen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,16 +39,16 @@ sp_delete_database_backuphistory [ @database_name = ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database_name = ] database_name` Gibt den Namen der Datenbank, die sicherungs-und Wiederherstellungsvorgängen beteiligt. *Database_name* ist **Sysname**, hat keinen Standardwert.  
+`[ @database_name = ] database_name`Gibt den Namen der Datenbank an, die an Sicherungs-und Wiederherstellungs Vorgängen beteiligt ist. *database_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_delete_database_backuphistory** muss ausgeführt werden, aus der **Msdb** Datenbank.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_delete_database_backuphistory** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Diese gespeicherte Prozedur hat Auswirkungen auf die folgenden Tabellen:  
   
@@ -81,8 +81,8 @@ EXEC sp_delete_database_backuphistory @database_name = 'AdventureWorks2012';
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_delete_backuphistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)   
  [Sicherungsverlauf und Headerinformationen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)  
   
   

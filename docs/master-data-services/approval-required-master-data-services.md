@@ -11,10 +11,10 @@ ms.assetid: b475a53d-269d-49f3-bb42-965c555f80be
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 61d03410e5217175335caf0ca37241b28c887989
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729754"
 ---
 # <a name="approval-required-master-data-services"></a>Genehmigung erforderlich (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "73729754"
 >   
 >  Bei Änderungen, die durch eine Geschäftsregel vorgenommen werden, wird die Genehmigung umgangen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich der Systemverwaltung zuzugreifen.  
@@ -49,7 +49,7 @@ ms.locfileid: "73729754"
   
 4.  Klicken Sie auf **Bearbeiten**, wählen Sie **Genehmigung erforderlich**, und klicken Sie dann auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Changesets &#40;Master Data Services&#41;](../master-data-services/changesets-master-data-services.md)  
   
   

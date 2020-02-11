@@ -1,5 +1,5 @@
 ---
-title: Binden von Parametern ODBC | Microsoft-Dokumentation
+title: Bindungs Parameter ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,39 +13,39 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1bc40d4800e7cd013b7ac908400c0492286314e3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68107633"
 ---
 # <a name="binding-parameters-odbc"></a>Binden von Parametern (ODBC)
-Jeden Parameter in einer SQL-Anweisung muss zugeordnet ist, oder *gebunden,* auf eine Variable in der Anwendung, bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable einem Parameter bindet, beschreibt es die Variable - Adresse, C-Datentyp und So weiter – an den Treiber. Außerdem wird den Parameter selbst - SQL-Datentyp, Genauigkeit und So weiter erläutert. Der Treiber speichert diese Informationen in der Struktur, die sie für diese Anweisung verwaltet und verwendet die Informationen zum Abrufen des Werts aus der Variablen ein, wenn die Anweisung ausgeführt wird.  
+Jeder Parameter in einer SQL-Anweisung muss einer Variablen in der Anwendung zugeordnet oder *gebunden* werden, bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable an einen Parameter bindet, wird die Variable-Address, der C-Datentyp usw. für den Treiber beschrieben. Außerdem wird der Parameter selbst-SQL-Datentyp, Genauigkeit usw. beschrieben. Der Treiber speichert diese Informationen in der Struktur, die er für diese Anweisung verwaltet, und verwendet die Informationen, um den Wert aus der Variablen abzurufen, wenn die Anweisung ausgeführt wird.  
   
- Parameter können gebunden oder erneut vor einer Anweisung jederzeit gebunden werden. Wenn ein Parameter neu gebunden wird, nachdem eine Anweisung ausgeführt wird, gilt die Bindung nicht erst die Anweisung erneut ausgeführt wird. Um einen Parameter an eine andere Variable binden, erneuerte Bindungen eine Anwendung einfach auf den Parameter mit der neuen Variablen; die vorherige Bindung wird automatisch freigegeben.  
+ Parameter können jederzeit vor der Ausführung einer-Anweisung gebunden oder erneut gebunden werden. Wenn ein Parameter nach dem Ausführen einer-Anweisung neu gebunden wird, gilt die Bindung erst, wenn die-Anweisung erneut ausgeführt wird. Um einen Parameter an eine andere Variable zu binden, bindet eine Anwendung einfach den Parameter an die neue Variable. die vorherige Bindung wird automatisch freigegeben.  
   
- Eine Variable an Parameter gebunden bleibt, bis eine andere Variable an den Parameter gebunden ist, bis alle Parameter durch Aufrufen von nicht gebundenen sind **SQLFreeStmt** mit der Option SQL_RESET_PARAMS oder bis die Anweisung aufgehoben wird. Aus diesem Grund muss die Anwendung darauf achten, dass die Variablen nicht erst freigegeben werden, nachdem diese aufgehoben wurden. Weitere Informationen finden Sie unter [zuweisen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Eine Variable bleibt an einen Parameter gebunden, bis eine andere Variable an den-Parameter gebunden ist, bis die Bindung aller Parameter durch Aufrufen von **SQLFreeStmt** mit der SQL_RESET_PARAMS-Option oder bis zur Freigabe der-Anweisung aufgehoben wird. Aus diesem Grund muss die Anwendung sicherstellen, dass die Variablen erst freigegeben werden, wenn die Bindung aufgehoben wurde. Weitere Informationen finden Sie unter [zuordnen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Da parameterbindungen nur Informationen, die in der Struktur, die vom Treiber für die Anweisung verwaltet gespeichert sind, können sie in beliebiger Reihenfolge festgelegt werden. Sie sind auch unabhängig von der SQL-Anweisung, die ausgeführt wird. Nehmen wir beispielsweise an eine Anwendung drei Parameter gebunden, und klicken Sie dann die folgende SQL-Anweisung ausführt:  
+ Da Parameter Bindungen nur Informationen sind, die in der Struktur gespeichert sind, die vom Treiber für die-Anweisung verwaltet wird, können Sie in beliebiger Reihenfolge festgelegt werden. Sie sind auch unabhängig von der ausgeführten SQL-Anweisung. Angenommen, eine Anwendung bindet drei Parameter und führt dann die folgende SQL-Anweisung aus:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Wenn die Anwendung dann sofort die SQL-Anweisung ausgeführt wird  
+ Wenn die Anwendung die SQL-Anweisung sofort ausführt  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- über das Anweisungshandle die parameterbindungen für die **einfügen** Anweisung werden verwendet, da dies die Bindungen in der Anweisung Struktur gespeichert sind. In den meisten Fällen Dies ist eine schlechte Programmiermethode und sollte vermieden werden. Stattdessen sollte die Anwendung aufrufen **SQLFreeStmt** mit der SQL_RESET_PARAMS-Option zum Aufheben der Bindung alle alten Parameter, und dann binden Sie neue.  
+ beim gleichen Anweisungs Handle werden die Parameter Bindungen für die **Insert** -Anweisung verwendet, da es sich dabei um die in der Anweisungs Struktur gespeicherten Bindungen handelt. In den meisten Fällen ist dies eine schlechte Programmierpraxis und sollte vermieden werden. Stattdessen sollte die Anwendung **SQLFreeStmt** mit der SQL_RESET_PARAMS-Option aufgerufen werden, um die Bindung aller alten Parameter aufzuheben und neue zu binden.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Binden von Parametermarkierungen](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
+-   [Binden von Parametermarkern](../../../odbc/reference/develop-app/binding-parameter-markers.md)  
   
 -   [Binden von Parametern anhand des Namens (benannte Parameter)](../../../odbc/reference/develop-app/binding-parameters-by-name-named-parameters.md)  
   
 -   [Offsets der Parameterbindung](../../../odbc/reference/develop-app/parameter-binding-offsets.md)  
   
--   [Describing Parameters (Beschreiben von Parametern)](../../../odbc/reference/develop-app/describing-parameters.md)
+-   [Beschreiben von Parametern](../../../odbc/reference/develop-app/describing-parameters.md)

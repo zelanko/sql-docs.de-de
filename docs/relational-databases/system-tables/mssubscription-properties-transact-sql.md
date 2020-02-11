@@ -18,57 +18,57 @@ ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139721"
 ---
-# <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
+# <a name="mssubscription_properties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSsubscription_properties** -Tabelle enthält Zeilen für die Parameterinformationen, die zum Ausführen von Replikations-Agents auf dem Abonnenten erforderlich sind. Diese Tabelle wird für ein Pullabonnement auf dem Abonnenten in der Abonnementdatenbank und für ein Pushabonnement auf dem Verteiler in der Verteilungsdatenbank gespeichert.  
+  Die **MSsubscription_properties** Tabelle enthält Zeilen für die Parameterinformationen, die zum Ausführen von Replikations-Agents auf dem Abonnenten erforderlich sind. Diese Tabelle wird für ein Pullabonnement auf dem Abonnenten in der Abonnementdatenbank und für ein Pushabonnement auf dem Verteiler in der Verteilungsdatenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**publisher**|**sysname**|Der Name des Verlegers.|  
+|**Gebers**|**sysname**|Der Name des Verlegers.|  
 |**publisher_db**|**sysname**|Der Name der Verlegerdatenbank.|  
-|**publication**|**sysname**|Der Name der Veröffentlichung.|  
-|**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktionsveröffentlichung.<br /><br /> **2** = Merge.|  
-|**publisher_login**|**sysname**|Die Anmelde-ID, die verwendet werden, auf dem Verleger für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
-|**publisher_password**|**nvarchar(524)**|Das (verschlüsselte) Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**publisher_security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server-Authentifizierung.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.<br /><br /> **2** = der Synchronisierungstrigger verwenden einen statischen **Sysservers** -Eintrag für einen Remoteprozeduraufruf (RPC), und *Verleger* muss definiert werden, der **Sysservers**-Tabelle als Remoteserver oder Verbindungsserver.|  
-|**distributor**|**sysname**|Der Name des Verteilers.|  
-|**distributor_login**|**sysname**|Die Anmelde-ID, die auf dem Verteiler für SQL Server-Authentifizierung verwendet.|  
-|**distributor_password**|**nvarchar(524)**|Das Kennwort (verschlüsselt), das auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**distributor_security_mode**|**int**|Der auf dem Verteiler implementierte Sicherheitsmodus:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.<br /><br /> **1** = Windows-Authentifizierung.|  
+|**ung**|**sysname**|Der Name der Veröffentlichung.|  
+|**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktional.<br /><br /> **2** = Merge.|  
+|**publisher_login**|**sysname**|Die Anmelde-ID, die auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger für die Authentifizierung verwendet wird.|  
+|**publisher_password**|**nvarchar (524)**|Das (verschlüsselte) Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
+|**publisher_security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server-Authentifizierung.<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.<br /><br /> **2** = die Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für einen Remote Prozedur Aufruf (RPC), und der *Herausgeber* muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
+|**Verleih**|**sysname**|Der Name des Verteilers.|  
+|**distributor_login**|**sysname**|Die Anmelde-ID, die auf dem Verteiler für die SQL Server-Authentifizierung verwendet wird.|  
+|**distributor_password**|**nvarchar (524)**|Das Kennwort (verschlüsselt), das auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
+|**distributor_security_mode**|**int**|Der auf dem Verteiler implementierte Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung.<br /><br /> **1** = Windows-Authentifizierung.|  
 |**ftp_address**|**sysname**|Die Netzwerkadresse des FTP-Diensts (File Transfer Protocol) für den Verteiler.|  
-|**ftp_port**|**int**|Die Portnummer des FTP-Diensts für den Verteiler.|  
-|**ftp_login**|**sysname**|Der Benutzername, der für die Verbindung mit dem FTP-Dienst verwendet wird.|  
-|**ftp_password**|**nvarchar(524)**|Das u.User-Kennwort für die Verbindung mit dem FTP-Dienst verwendet.|  
+|**ftp_port**|**int**|Die Portnummer des FTP-Dienstanbieter für den Verteiler.|  
+|**ftp_login**|**sysname**|Der zum Herstellen einer Verbindung mit dem FTP-Dienst verwendete Benutzername.|  
+|**ftp_password**|**nvarchar (524)**|Das zum Herstellen der Verbindung mit dem FTP-Dienst verwendete u. User-Kennwort.|  
 |**alt_snapshot_folder**|**nvarchar(255)**|Gibt den Speicherort des anderen Ordners für die Momentaufnahme an.|  
-|**working_directory**|**nvarchar(255)**|Der Name des Arbeitsverzeichnisses zum Speichern von Daten-und Schemadateien verwendet werden soll.|  
-|**use_ftp**|**bit**|Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. Wenn **1**, wird FTP verwendet.|  
+|**working_directory**|**nvarchar(255)**|Der Name des Arbeitsverzeichnisses, das zum Speichern von Daten-und Schema Dateien verwendet wird.|  
+|**use_ftp**|**bit**|Gibt anstelle des normalen Protokolls FTP an, um Momentaufnahmen abzurufen. Bei **einem**Wert von 1 wird FTP verwendet.|  
 |**dts_package_name**|**sysname**|Gibt den Namen des DTS-Pakets (Data Transformation Services) an.|  
-|**dts_package_password**|**nvarchar(524)**|Gibt das Kennwort für das Paket an.|  
+|**dts_package_password**|**nvarchar (524)**|Gibt das Kennwort für das Paket an.|  
 |**dts_package_location**|**int**|Der Speicherort des DTS-Pakets.|  
-|**enabled_for_syncmgr**|**bit**|Gibt an, ob das Abonnement über die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung synchronisiert werden kann.<br /><br /> **0** = Abonnement ist nicht mit der Synchronisierungsverwaltung registriert.<br /><br /> **1** = Abonnement wird bei der Synchronisierungsverwaltung registriert und kann synchronisiert werden, ohne Starten des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
-|**offload_agent**|**bit**|Gibt an, ob der Agent Remote oder nicht aktiviert werden kann. Wenn **0**, der Agent nicht remote aktiviert werden.|  
+|**enabled_for_syncmgr**|**bit**|Gibt an, ob das Abonnement über die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronisierungsverwaltung synchronisiert werden kann.<br /><br /> **0** = Abonnement ist nicht beim Synchronisierungs-Manager registriert.<br /><br /> **1** = das Abonnement wird bei der Synchronisierungs Verwaltung registriert und kann synchronisiert [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]werden, ohne zu starten.|  
+|**offload_agent**|**bit**|Gibt an, ob der Agent Remote aktiviert werden kann. Wenn der Wert **0**ist, kann der Agent nicht remote aktiviert werden.|  
 |**offload_server**|**sysname**|Gibt den Netzwerknamen des Servers an, der für die Remoteaktivierung verwendet wird.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Gibt den Pfad zum Ordner an, in dem die Momentaufnahmedateien gespeichert werden.|  
-|**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTP synchronisiert werden kann. Der Wert **1** bedeutet, dass dieses Feature aktiviert ist.|  
+|**use_web_sync**|**bit**|Gibt an, ob das Abonnement über HTTP synchronisiert werden kann. Der Wert **1** bedeutet, dass diese Funktion aktiviert ist.|  
 |**internet_url**|**nvarchar(260)**|Die URL, die den Speicherort der Replikationsüberwachung für die Websynchronisierung darstellt.|  
-|**internet_login**|**sysname**|Der Anmeldename, der der Merge-Agent verwendet beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
-|**internet_password**|**nvarchar(524)**|Das Kennwort für die Anmeldung, die der Merge-Agent verwendet beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
-|**internet_security_mode**|**int**|Der verwendete Authentifizierungsmodus beim Herstellen einer Verbindung mit dem Webserver, der die websynchronisierung hostet ein Wert von **1** bedeutet, dass Windows-Authentifizierung und einen Wert von **0** bedeutet, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Die Authentifizierung.|  
+|**internet_login**|**sysname**|Die Anmeldung, die der Merge-Agent verwendet, wenn eine Verbindung mit dem Webserver hergestellt wird, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Websynchronisierung mithilfe der-Authentifizierung verwendet.|  
+|**internet_password**|**nvarchar (524)**|Das Kennwort für die Anmeldung, die das Merge-Agent verwendet, wenn eine Verbindung mit dem Webserver hergestellt wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der die Websynchronisierung mithilfe der-Authentifizierung verwendet.|  
+|**internet_security_mode**|**int**|Der Authentifizierungsmodus, der beim Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung verwendet. der Wert **1** steht für die Windows-Authentifizierung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der Wert **0** für die Authentifizierung.|  
 |**internet_timeout**|**int**|Die Zeit in Sekunden, nach der eine Websynchronisierungsanforderung abläuft.|  
-|**hostname**|**sysname**|Gibt den Wert für **HOST_NAME** Wenn diese Funktion verwendet wird, der **, in denen** -Klausel eines joinfilters oder logischen datensatzbeziehung.|  
+|**Hostname**|**sysname**|Gibt den Wert für **HOST_NAME** an, wenn diese Funktion in der **Where** -Klausel eines Joinfilters oder einer logischen Daten Satz Beziehung verwendet wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [Sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0000e0c7a5933003544de22b60a8adc4d9c59c82
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74684446"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Implementierungsanforderungen für benutzerdefinierte Berichtselemente
@@ -49,9 +49,9 @@ ms.locfileid: "74684446"
 >  Standardmäßg wird [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert, das [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -SDK jedoch nicht. Die in diesem Abschnitt vorkommenden Links auf SDK-Inhalte funktionieren nur, wenn das SDK auf Ihrem Computer installiert und die SDK-Dokumentation in der Onlinedokumentation enthalten ist. Fügen Sie das SDK nach der Installation des [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK zur Onlinedokumentation und dem Inhaltsverzeichnis hinzu, indem Sie die Anweisungen unter [Hinzufügen oder Entfernen der Produktdokumentation für SQL Server](../../2014-toc/index.yml) befolgen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichts Element](creating-a-custom-report-item-run-time-component.md)   
+ [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
  [Erstellen einer Entwurfszeit Komponente für ein benutzerdefiniertes Berichts Element](creating-a-custom-report-item-design-time-component.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichts Elements](how-to-deploy-a-custom-report-item.md)   
- [Klassenbibliotheken für benutzerdefinierte Berichts Elemente](custom-report-item-class-libraries.md)  
+ [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)  
   
   

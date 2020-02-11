@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493825"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
@@ -30,15 +30,15 @@ ms.locfileid: "69493825"
   
      In der folgenden Abbildung ist die Registerkarte **Aktionen** des Cube-Designers dargestellt.  
   
-     ![Registerkarte Aktionen des Cube-Designers](../../2014/tutorials/media/l8-action1.gif "Registerkarte Aktionen des Cube-Designers")  
+     ![Aktionen (Registerkarte) des Cube-Designers](../../2014/tutorials/media/l8-action1.gif "Aktionen (Registerkarte) des Cube-Designers")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **Aktionen** auf **Neue Drillthroughaktion** .  
   
      Es wird eine leere Aktionsvorlage im Anzeigebereich angezeigt.  
   
-     ![Leere Aktions Vorlage im Anzeige](../../2014/tutorials/media/l8-action2.gif " Bereich Leere Aktions Vorlage im Anzeige") Bereich  
+     ![Leere Aktionsvorlage im Anzeigebereich](../../2014/tutorials/media/l8-action2.gif "Leere Aktionsvorlage im Anzeigebereich")  
   
-3.  Ändern Sie `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
+3.  Ändern Sie **** `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
   
 4.  Wählen Sie in der Liste **Measuregruppenelemente** die Option **Internet Sales**aus.  
   
@@ -46,19 +46,19 @@ ms.locfileid: "69493825"
   
 6.  Aktivieren Sie in der Liste **Rückgabespalten** die Kontrollkästchen für **Elementbeschreibung** und **Bestellnummer** , und klicken Sie anschließend auf **OK**. In der folgenden Abbildung ist die Aktionsvorlage zu sehen, wie sie zum jetzigen Zeitpunkt in dieser Prozedur aussehen sollte.  
   
-     ![Feld "Drillthrough-Spalten](../../2014/tutorials/media/l8-action3.gif "Feld \"Drillthrough-Spalten") "  
+     ![Drillthroughspalten (Feld)](../../2014/tutorials/media/l8-action3.gif "Drillthroughspalten (Feld)")  
   
 7.  Erweitern Sie das Feld **Weitere Eigenschaften** , wie in der folgenden Abbildung dargestellt.  
   
-     ![Weitere Eigenschaften (Feld)](../../2014/tutorials/media/l8-action4.gif "Weitere Eigenschaften Feld")  
+     ![Weitere Eigenschaften (Feld)](../../2014/tutorials/media/l8-action4.gif "Weitere Eigenschaften (Feld)")  
   
-8.  Geben`10`Sie im Feld **Maximale Zeilen** Anzahl ein.  
+8.  Geben `10`Sie im Feld **Maximale Zeilen** Anzahl ein.  
   
-9. Geben`Drillthrough to Order Details...`Sie im Feld **Beschriftung** den Text ein.  
+9. Geben `Drillthrough to Order Details...`Sie im Feld **Beschriftung** den Text ein.  
   
      Durch diese Einstellungen wird die Anzahl der zurückgegebenen Zeilen beschränkt und die Beschriftung angegeben, die im Clientanwendungsmenü angezeigt wird. In der folgenden Abbildung werden diese Einstellungen im Feld **Weitere Eigenschaften** dargestellt.  
   
-     ![Weitere Eigenschaften Feld](../../2014/tutorials/media/l8-action5.gif "Weitere Eigenschaften Feld")  
+     ![Weitere Eigenschaften (Feld)](../../2014/tutorials/media/l8-action5.gif "Weitere Eigenschaften (Feld)")  
   
 ## <a name="using-the-drillthrough-action"></a>Verwenden der Drillthroughaktion  
   
@@ -80,7 +80,7 @@ ms.locfileid: "69493825"
   
      Die Details der an Adam Powell gelieferten Bestellungen werden im **Datenstichproben-Viewer**angezeigt, wie in der folgenden Abbildung zu sehen ist. Einige zusätzliche Details wären jedoch hilfreich, wie z. B. Bestelldatum, Fälligkeitsdatum und Lieferdatum. Sie fügen diese zusätzlichen Details in der nächsten Prozedur hinzu.  
   
-     ![An Adam Powell gelieferte Aufträge](../../2014/tutorials/media/l8-action6.gif "An Adam Powell gelieferte Aufträge")  
+     ![An Adam Powell versendete Bestellungen](../../2014/tutorials/media/l8-action6.gif "An Adam Powell versendete Bestellungen")  
   
 8.  Schließen von Excel/  
   
@@ -104,11 +104,11 @@ ms.locfileid: "69493825"
   
     -   ShipDateKey  
   
-6.  Ändern Sie die **Name** -Eigenschaft für das **Order Date Key** -Attribut in `Order Date` , und klicken Sie dann auf die Schaltfläche zum Durchsuchen für die **Name Column** -Eigenschaft, und wählen Sie im Dialogfeld **Namensspalte** den Wert **Date** als Quell Tabelle und dann SimpleDate als Quell Spalte. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  Ändern Sie die **Name** -Eigenschaft für das **Order Date Key** -Attribut in `Order Date` , und klicken Sie dann auf die Schaltfläche zum Durchsuchen für die **Name Column** -Eigenschaft, und wählen Sie im Dialogfeld **Namensspalte** den Wert **Date** als Quell Tabelle und SimpleDate als Quell Spalte aus. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Ändern Sie die **Name** -Eigenschaft für das **Due Date Key** -Attribut in `Due Date`, und ändern Sie dann mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar).** .  
+7.  Ändern Sie **die Name** -Eigenschaft für das **Due Date Key** `Due Date`-Attribut in, und ändern Sie dann mithilfe derselben Methode wie das **Order Date Key** -Attribut die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)**.  
   
-8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in `Ship Date`, und ändern Sie dann die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)** .  
+8.  Ändern Sie die **Name** -Eigenschaft für das **Ship Date Key** -Attribut in `Ship Date`, und ändern Sie dann die **Name Column** -Eigenschaft für dieses Attribut in **Date. SimpleDate (WChar)**.  
   
 9. Wechseln Sie zur Registerkarte **Aktionen** des Cube-Designers für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "69493825"
   
      In der folgenden Abbildung sind diese Spalten markiert.  
   
-     ![Feld "Drillthrough-Spalten](../../2014/tutorials/media/l8-action7.gif "Feld \"Drillthrough-Spalten")  
+     ![Drillthroughspalten (Feld)](../../2014/tutorials/media/l8-action7.gif "Drillthroughspalten (Feld)")  
   
 ## <a name="reviewing-the-modified-drillthrough-action"></a>Überprüfen der geänderten Drillthroughaktion  
   
@@ -140,15 +140,15 @@ ms.locfileid: "69493825"
   
      Die Details dieser an Adam Powell gelieferten Bestellungen werden in einem temporären Arbeitsblatt angezeigt. Dies umfasst Artikelbeschreibung, Bestellnummer, Bestelldatum, Fälligkeitsdatum und Versanddatum, wie in der folgenden Abbildung dargestellt.  
   
-     ![An Adam Powell gelieferte Aufträge](../../2014/tutorials/media/l8-action8.gif "An Adam Powell gelieferte Aufträge")  
+     ![An Adam Powell versendete Bestellungen](../../2014/tutorials/media/l8-action8.gif "An Adam Powell versendete Bestellungen")  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 9: Definieren von Perspektiven und Übersetzungen](lesson-9-defining-perspectives-and-translations.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktionen &#40;Analysis Services-Mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [Aktionen in mehrdimensionalen Modellen](multidimensional-models/actions-in-multidimensional-models.md)   
- [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
+ [Dimensions Beziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definieren einer Fakten Beziehung](lesson-5-2-defining-a-fact-relationship.md)   
  [Definieren von Faktenbeziehungen und Faktenbeziehungseigenschaften](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

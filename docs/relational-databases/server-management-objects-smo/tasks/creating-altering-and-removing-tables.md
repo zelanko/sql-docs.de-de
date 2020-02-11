@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b90e081c86aaee9fda1363185263fd6e53d4378f
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74095637"
 ---
 # <a name="creating-altering-and-removing-tables"></a>Erstellen, Ändern und Löschen von Tabellen
@@ -25,7 +25,7 @@ ms.locfileid: "74095637"
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) werden Tabellen durch das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt dargestellt. In der SMO-Objekthierarchie befindet sich das <xref:Microsoft.SqlServer.Management.Smo.Table>-Objekt unter dem <xref:Microsoft.SqlServer.Management.Smo.Database>-Objekt.  
   
 ## <a name="example"></a>Beispiel  
- Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Um die bereitgestellten Codebeispiele verwenden zu können, müssen Sie die Programmierumgebung, die Vorlage und die Programmiersprache wählen, in denen die Anwendung erstellt werden soll. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-table-in-visual-basic"></a>Erstellen, Ändern und Löschen einer Tabelle in Visual Basic  
  In diesem Codebeispiel wird eine Tabelle erstellt, die über mehrere Spalten mit unterschiedlichen Typen und Zwecken verfügt. Der Code bietet darüber hinaus Beispiele dafür, wie ein Identitätsfeld und ein Primärschlüssel erstellt und wie Tabelleneigenschaften geändert werden.  
@@ -175,7 +175,7 @@ $tb.Drop()
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.SqlServer.Management.Smo.Table>  
   
   

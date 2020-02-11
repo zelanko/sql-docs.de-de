@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 878d68858a75bd6e26adbc8080e8956b3a8a061d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761378"
 ---
 # <a name="large-clr-user-defined-types"></a>Große benutzerdefinierte CLR-Typen
@@ -24,9 +24,9 @@ ms.locfileid: "73761378"
 
   In SQL Server 2005 waren benutzerdefinierte Typen (User-Defined Types, UDTs) in der Common Language Runtime (CLR) auf eine Größe von 8.000 Bytes beschränkt. Diese Einschränkung wurde in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und höheren Versionen aufgehoben. CLR-UDTs werden jetzt auf eine ähnliche Weise wie große Objekttypen (LOB) behandelt. UDTs mit genau oder weniger als 8.000 Byte verhalten sich also genau wie in SQL Server 2005. Größere UDTs werden aber unterstützt und zeigen ihre Größe als "unbegrenzt" an.  
   
- Weitere Informationen finden Sie unter [große CLR-benutzerdefinierte Typen &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) und [große CLR-benutzerdefinierte Typen &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
+ Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md) und [große CLR-benutzerdefinierte Typen &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
-## <a name="use-cases"></a>Einsatzgebiete  
+## <a name="use-cases"></a>Anwendungsfälle  
  Für ODBC umfasst die Unterstützung großer UDTs die Möglichkeit zum Versenden von UDT-Werten in Teilen als Data-at-Execution-Parameter. Dies erfolgt mithilfe von SQLPutData.  
   
  Für OLE DB umfasst die Unterstützung großer UDTs die Möglichkeit zum Streamen von UDT-Werten zum und vom Server mithilfe der ISequentialStream-Bindung.  
@@ -37,7 +37,7 @@ ms.locfileid: "73761378"
   
  Bei Anwendungen, die über einen vorhandenen Datenzugriffscode verfügen, können Sie das CLR-UDT-Verhalten auf dem Client nutzen, indem Sie UDTs über systemeigene APIs abrufen und sie mithilfe von C++ CLI Interop in Anwendungen des gemischten Modus instanziieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

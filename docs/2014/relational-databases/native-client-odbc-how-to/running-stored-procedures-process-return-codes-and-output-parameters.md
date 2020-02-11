@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Rückgabecodes und Ausgabeparametern (ODBC) | Microsoft-Dokumentation
+title: Verarbeiten von Rückgabe Codes und Ausgabeparametern (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9b9a581a4f5331479c7dc5ed87fc5d213e8d465
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68205575"
 ---
 # <a name="process-return-codes-and-output-parameters-odbc"></a>Verarbeiten von Rückgabecodes und Ausgabeparametern (ODBC)
-  Gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung erst zur Verfügung, wenn [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt. Wenn ein Fehler von einer gespeicherten Prozedur zurückgegeben wird, rufen Sie SQLMoreResults, um zum nächsten Ergebnis fortzufahren, bis SQL_NO_DATA zurückgegeben wird.  
+  Gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozeduren können ganzzahlige Rückgabecodes und Ausgabeparameter enthalten. Die Rückgabecodes und Ausgabeparameter werden im letzten Paket des Servers gesendet und stehen der Anwendung erst zur Verfügung, wenn [SQLMoreResults](../native-client-odbc-api/sqlmoreresults.md) SQL_NO_DATA zurückgibt. Wenn ein Fehler von einer gespeicherten Prozedur zurückgegeben wird, wird SQLMoreResults aufgerufen, um mit dem nächsten Ergebnis fortzufahren, bis SQL_NO_DATA zurückgegeben wird.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-process-return-codes-and-output-parameters"></a>So verarbeiten Sie Rückgabecodes und Ausgabeparameter  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68205575"
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie einen Rückgabecode und Ausgabeparameter verarbeiten. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt. Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Startseite [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treiber Name ist "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
@@ -188,7 +188,7 @@ DROP PROCEDURE TestParm
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von gespeicherten Prozeduren: Themen zur Vorgehensweise &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gewusst-wie-Themen zur Ausführung gespeicherter Prozeduren &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
   

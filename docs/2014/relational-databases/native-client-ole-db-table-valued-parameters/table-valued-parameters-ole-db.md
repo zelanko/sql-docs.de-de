@@ -1,5 +1,5 @@
 ---
-title: Tabellenwertparameter (OLE DB) | Microsoft-Dokumentation
+title: Tabellenwert Parameter (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e9c58b1837eb017a3cc51652ff404b37690b3849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046429"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Tabellenwertparameter (OLE DB)
-  In diesem Abschnitt wird die Unterstützung für Tabellenwertparameter in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter beschrieben. Übersicht die zusätzliche Übersichtsinformationen finden Sie [Table-Valued Parameters &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Ein Beispiel finden Sie unter [Tabellenwertparametern &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  In diesem Abschnitt wird die Unterstützung für Tabellenwertparameter in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter beschrieben. Weitere Übersichts Informationen finden Sie unter [Tabellenwert Parameter &#40;SQL Server Native Client&#41;](../native-client/features/table-valued-parameters-sql-server-native-client.md). Ein Beispiel finden Sie unter [Verwenden von Tabellenwert Parametern &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Derzeit können Sie mehrzeilige Daten an den Server als Parameter an eine Prozedur mit Parametersätzen senden (der DBPARAMS-Parameter in `ICommand::Execute`). Bei Parametersätzen muss jedes Element des Satzes in einer separaten Remoteprozeduranforderung (Remote Procedure Call, RPC) an den Server gesendet werden. Tabellenwertparameter stellen eine ähnliche Funktionalität bereit, bieten jedoch eine bessere Integration mit dem Server. Dadurch werden die Anzahl von RPC-Anforderungen reduziert und setbasierte Vorgänge auf dem Server aktiviert.  
   
  Tabellenwertparameter werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als OLE DB `Rowset`-Objekte unterstützt. Jedes `Rowset`-Objekt kann vom Consumer (d. h. von der Clientanwendung, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet) als Platzhalter für Tabellenwertparameter bereitgestellt werden. Tabellenwertparameter werden wie andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Parametertypen behandelt. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt Erstellungs-, Ermittlungs-, Spezifizierungs-, Bindungs- und Schemaschnittstellen zur Verfügung.  
@@ -42,12 +42,12 @@ ms.locfileid: "63046429"
   
 -   [OLE DB-Typunterstützung für Tabellenwertparameter](ole-db-table-valued-parameter-type-support.md)  
   
--   [OLE DB-Unterstützung für Tabellenwertparameter-Typen &#40;Methoden&#41;](ole-db-table-valued-parameter-type-support-methods.md)  
+-   [OLE DB Tabellenwert Parameter-Typen Unterstützung &#40;Methoden&#41;](ole-db-table-valued-parameter-type-support-methods.md)  
   
--   [OLE DB-Unterstützung für Tabellenwertparameter-Typen &#40;Eigenschaften&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
+-   [OLE DB Tabellenwert Parameter-Typunterstützung &#40;Eigenschaften&#41;](ole-db-table-valued-parameter-type-support-properties.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE-DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;OLE DB&#41;](../native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Geben Sie Verhalten bei früheren Versionen von SQL-Server (ODBC), verbesserte Datums- und Uhrzeit | Microsoft-Dokumentation
+title: Verbessertes Verhalten des Datums-und Uhrzeittyps mit früheren SQL Server Versionen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,35 +13,36 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44ac9cecce81f7873ca5ef42ba414bd4528e05b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140633"
 ---
 # <a name="enhanced-date-and-time-type-behavior-with-previous-sql-server-versions-odbc"></a>Verbessertes Verhalten des Datums- und Uhrzeittyps bei früheren Versionen von SQL Server (ODBC)
   In diesem Thema wird das erwartete Verhalten beschrieben, wenn eine Clientanwendung, die verbesserte Datums- und Uhrzeitfunktionen verwendet, mit einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kommuniziert und wenn eine Clientanwendung, die Microsoft Data Access Components, Windows Data Access Components oder eine Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] verwendet, Befehle an einen Server sendet, der verbesserte Datums- und Uhrzeitfunktionen unterstützt.  
   
 ## <a name="down-level-client-behavior"></a>Downlevelclient-Verhalten  
- Clientanwendungen, die mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kompiliert wurden, erkennen die neuen Datums-/Uhrzeittypen als nvarchar-Spalten. Der Spalteninhalt sind der literalen Darstellung wie im Abschnitt "Datenformate: Zeichenfolgen und Literale"unter [Datentypunterstützung für ODBC-Datum und Uhrzeit-Verbesserungen](data-type-support-for-odbc-date-and-time-improvements.md). Die Spaltengröße ist die maximale literale Länge mit der für die Spalte angegebenen Genauigkeit in Bruchteilen von Sekunden.  
+ Clientanwendungen, die mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Version vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] kompiliert wurden, erkennen die neuen Datums-/Uhrzeittypen als nvarchar-Spalten. Der Spalten Inhalt ist die literaldarstellungen, wie im Abschnitt "Datenformate: Zeichen folgen und Literale" der [Datentyp Unterstützung für ODBC-Datums-und Uhrzeit Verbesserungen](data-type-support-for-odbc-date-and-time-improvements.md)beschrieben. Die Spaltengröße ist die maximale literale Länge mit der für die Spalte angegebenen Genauigkeit in Bruchteilen von Sekunden.  
   
  Katalog-APIs geben Metadaten zurück, die mit dem an den Client zurückgegebenen Datentypcode früherer Versionen (z. B. nvarchar) und der zugeordneten Darstellung früherer Versionen (z. B. das entsprechende literale Format) übereinstimmt. Der zurückgegebene Datentypname ist jedoch der echte [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Typname.  
   
- SQLDescribeCol, SQLDescribeParam, SQGetDescField und SQLColAttribute zurückgegebene Anweisungsmetadaten gibt Metadaten zurück, die mit dem downleveltyp in jeder Hinsicht, einschließlich der Typname konsistent ist. `nvarchar` ist ein Beispiel für einen Downleveltyp dieser Art.  
+ Anweisungs Metadaten, die von SQLDescribeCol, SQLDescribeParam, SQGetDescField und SQLColAttribute zurückgegeben werden, geben Metadaten zurück, die mit dem Typ der untergeordneten Ebene in jeder Hinsicht konsistent sind, einschließlich des Typnamens. 
+  `nvarchar` ist ein Beispiel für einen Downleveltyp dieser Art.  
   
- Wenn eine kompatibler Client-Anwendung ausgeführt wird, für eine [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Server, an dem schemaänderungen an Datums-/Uhrzeittypen vorgenommen wurden, das erwartete Verhalten ist wie folgt:  
+ Wenn eine Client Anwendung auf einer höheren Ebene für einen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] -Server (oder höher) ausgeführt wird, auf dem Schema Änderungen an Datums-/Uhrzeittypen vorgenommen wurden, sieht das erwartete Verhalten wie folgt aus:  
   
-|SQL Server 2005-Typ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) Typ|ODBC-Clienttyp|Ergebniskonvertierung (SQL zu C)|Parameterkonvertierung (C zu SQL)|  
+|SQL Server 2005-Typ|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher)-Typ|ODBC-Clienttyp|Ergebniskonvertierung (SQL zu C)|Parameterkonvertierung (C zu SQL)|  
 |--------------------------|----------------------------------------------|----------------------|------------------------------------|---------------------------------------|  
-|DATETIME|date|SQL_C_TYPE_DATE|OK|OK (1)|  
+|Datetime|Date|SQL_C_TYPE_DATE|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Zeitfelder werden auf 0 (Null) festgelegt.|OK (2)<br /><br /> Fehler, wenn das Zeitfeld ungleich 0 (null) ist. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK (1)|  
 |||SQL_C_TYPE_TIMESTAMP|Datumsfelder werden auf das aktuelle Datum festgelegt.|OK (2)<br /><br /> Datum wird ignoriert. Fehler, wenn Sekundenbruchteile ungleich 0 sind. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||Time(7)|SQL_C_TIME|Ein Fehler auftritt – Ungültiges Zeitliteral.|OK (1)|  
-|||SQL_C_TYPE_TIMESTAMP|Ein Fehler auftritt – Ungültiges Zeitliteral.|OK (1)|  
-||Datetime2(3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
-||datetime2(7)|SQL_C_TYPE_TIMESTAMP|OK|Wert wird von Clientkonvertierung auf 1/300stel Sekunde gerundet.|  
-|Smalldatetime|date|SQL_C_TYPE_DATE|OK|OK|  
+||Time(7)|SQL_C_TIME|Schlägt fehl-ungültiges Zeit Literale.|OK (1)|  
+|||SQL_C_TYPE_TIMESTAMP|Schlägt fehl-ungültiges Zeit Literale.|OK (1)|  
+||Datetime2 (3)|SQL_C_TYPE_TIMESTAMP|OK|OK (1)|  
+||Datetime2 (7)|SQL_C_TYPE_TIMESTAMP|OK|Wert wird von Clientkonvertierung auf 1/300stel Sekunde gerundet.|  
+|Smalldatetime|Date|SQL_C_TYPE_DATE|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Zeitfelder werden auf 0 (Null) festgelegt.|OK (2)<br /><br /> Fehler, wenn das Zeitfeld ungleich 0 (null) ist. Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||Time(0)|SQL_C_TYPE_TIME|OK|OK|  
 |||SQL_C_TYPE_TIMESTAMP|Datumsfelder werden auf das aktuelle Datum festgelegt.|OK (2)<br /><br /> Datum wird ignoriert. Fehler, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Verwendet [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -65,12 +66,12 @@ ms.locfileid: "63140633"
 ### <a name="column-metadata-returned-by-sqlcolumns-sqlprocedurecolumns-and-sqlspecialcolumns"></a>Von 'SQLColumns', 'SQLProcedureColumns' und 'SWLSpecialColumns' zurückgegebene Spaltenmetadaten  
  Die folgenden Spaltenwerte werden für date/time-Typen zurückgegeben:  
   
-|Spaltentyp|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Spaltentyp|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
-|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
-|COLUMN_SIZE|10|8,10..16|16|23|19, 21..27|26, 28..34|  
-|BUFFER_LENGTH|20|16, 20..32|16|16|38, 42..54|52, 56..68|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
+|COLUMN_SIZE|10|8, 10.. 16|16|23|19, 21..27|26, 28..34|  
+|BUFFER_LENGTH|20|16, 20.. 32|16|16|38, 42.. 54|52, 56.. 68|  
 |DECIMAL_DIGITS|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
 |SQL_DATETIME_SUB|NULL|NULL|SQL_CODE_TIMESTAMP|SQL_CODE_TIMESTAMP|NULL|NULL|  
@@ -82,9 +83,9 @@ ms.locfileid: "63140633"
 ### <a name="data-type-metadata-returned-by-sqlgettypeinfo"></a>Von 'SQLGetTypeInfo' zurückgegebene Datentypmetadaten  
  Die folgenden Spaltenwerte werden für date/time-Typen zurückgegeben:  
   
-|Spaltentyp|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Spaltentyp|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |-----------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_TYPE_TIMESTAMP|SQL_TYPE_TIMESTAMP|SQL_WVARCHAR|SQL_WVARCHAR|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|'|'|'|'|'|'|  
@@ -96,7 +97,7 @@ ms.locfileid: "63140633"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FXED_PREC_SCALE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|SQL_FALSE|  
 |AUTO_UNIQUE_VALUE|NULL|NULL|NULL|NULL|NULL|NULL|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |MAXIMUM_SCALE|NULL|NULL|0|3|NULL|NULL|  
 |SQL_DATA_TYPE|SQL_WVARCHAR|SQL_WVARCHAR|SQL_DATETIME|SQL_DATETIME|SQL_WVARCHAR|SQL_WVARCHAR|  
@@ -108,7 +109,7 @@ ms.locfileid: "63140633"
 ## <a name="down-level-server-behavior"></a>Downlevelserver-Verhalten  
  Wenn bei der Verbindung mit einer Serverinstanz einer früheren Version von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] die neuen Servertypen oder zugehörige Metadatencodes und Deskriptorfelder verwendet werden, wird ein SQL_ERROR zurückgegeben. Es wird ein Diagnosedatensatz mit SQLSTATE HY004 und der Meldung "Ungültiger SQL-Datentyp für Serverversion in Verbindung" oder mit 07006 und der Meldung "Attributverletzung beschränkter Datentypen" zurückgegeben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datums- / Uhrzeitverbesserungen &#40;ODBC&#41;](date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](date-and-time-improvements-odbc.md)  
   
   

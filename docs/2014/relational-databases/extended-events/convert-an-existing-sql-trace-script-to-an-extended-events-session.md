@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015772"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse
@@ -100,7 +100,7 @@ ms.locfileid: "63015772"
 ## <a name="to-create-the-extended-events-session"></a>So erstellen Sie die Sitzung für erweiterte Ereignisse  
  Verwenden Sie den Abfrage-Editor, um die Sitzung für erweiterte Ereignisse zu erstellen und die Ausgabe in eine Dateiziel zu schreiben. Die folgenden Schritte beschreiben eine einzelne Abfrage, mit Erklärungen, um Ihnen zu zeigen, wie die Abfrage erstellt wird. Die vollständige Beispielabfrage finden Sie im Abschnitt "Beispiel" dieses Themas.  
   
-1.  Fügen Sie Anweisungen hinzu, um die Ereignissitzung zu erstellen, und ersetzten Sie*Sitzungsname* durch den Namen, den Sie für die Sitzung für erweiterte Ereignisse verwenden möchten.  
+1.  Fügen Sie Anweisungen hinzu, um die Ereignis Sitzung zu erstellen, und ersetzen Sie s*ession_name* durch den Namen, den Sie für die Sitzung für erweiterte Ereignisse verwenden möchten.  
   
     ```sql
     IF EXISTS(SELECT * FROM sys.server_event_sessions WHERE name='session_name')  
@@ -247,7 +247,7 @@ ADD TARGET package0.asynchronous_file_target
    (SET filename='c:\temp\ExtendedEventsStoredProcs.xel', metadatafile='c:\temp\ExtendedEventsStoredProcs.xem');  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)  
   
   

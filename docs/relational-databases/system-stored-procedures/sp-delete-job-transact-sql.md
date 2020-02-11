@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72306271"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72306271"
 
   Löscht einen Auftrag.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,20 +42,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` ist die Identifikationsnummer des zu löschenden Auftrags. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
+`[ @job_id = ] job_id`Die ID des Auftrags, der gelöscht werden soll. *job_id* ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` ist der Name des Auftrags, der gelöscht werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags, der gelöscht werden soll. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Es muss entweder *job_id* oder *job_name*angegeben werden. Beide können nicht angegeben werden.  
   
-`[ @originating_server = ] 'server'` für die interne Verwendung.  
+`[ @originating_server = ] 'server'`Zur internen Verwendung.  
   
-`[ @delete_history = ] delete_history` gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *delete_history* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_history* **1**ist, wird der Auftrags Verlauf für den Auftrag gelöscht. Wenn *delete_history* **0**ist, wird der Auftrags Verlauf nicht gelöscht.  
+`[ @delete_history = ] delete_history`Gibt an, ob der Verlauf für den Auftrag gelöscht werden soll. *delete_history* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_history* **1**ist, wird der Auftrags Verlauf für den Auftrag gelöscht. Wenn *delete_history* **0**ist, wird der Auftrags Verlauf nicht gelöscht.  
   
- Beachten Sie Folgendes: Wenn ein Auftrag gelöscht und der Verlauf nicht gelöscht wird, werden die Verlaufs Informationen für den Auftrag nicht im Auftrags Verlauf der grafischen Benutzeroberfläche des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents angezeigt. die Informationen befinden sich jedoch weiterhin in der **sysjobhistory** -Tabelle der **msdb** -Datenbank.  
+ Beachten Sie Folgendes: Wenn ein Auftrag gelöscht und der Verlauf nicht gelöscht wird, werden die Verlaufs Informationen für den Auftrag nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in der grafischen Benutzeroberfläche des Agent-Auftragsverlaufs angezeigt. die Informationen befinden sich jedoch weiterhin in der **sysjobhistory** -Tabelle der **msdb** -Datenbank.  
   
-`[ @delete_unused_schedule = ] delete_unused_schedule` gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, wenn Sie nicht an einen anderen Auftrag angefügt sind. *delete_unused_schedule* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_unused_schedule* **1**ist, werden die an diesen Auftrag angefügten Zeitpläne gelöscht, wenn keine anderen Aufträge auf den Zeitplan verweisen. Wenn *delete_unused_schedule* **0**ist, werden die Zeitpläne nicht gelöscht.  
+`[ @delete_unused_schedule = ] delete_unused_schedule`Gibt an, ob die an diesen Auftrag angefügten Zeitpläne gelöscht werden sollen, wenn Sie nicht an einen anderen Auftrag angefügt sind. *delete_unused_schedule* ist vom Typ **Bit**und hat den Standardwert **1**. Wenn *delete_unused_schedule* **1**ist, werden die an diesen Auftrag angefügten Zeitpläne gelöscht, wenn keine anderen Aufträge auf den Zeitplan verweisen. Wenn *delete_unused_schedule* **0**ist, werden die Zeitpläne nicht gelöscht.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -63,17 +63,18 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Remarks  
- Das **\@originating_server** -Argument ist für die interne Verwendung reserviert.  
+## <a name="remarks"></a>Bemerkungen  
+ Das ** \@originating_server** -Argument ist für die interne Verwendung reserviert.  
   
- Das **\@delete_unused_schedule** -Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als **\@delete_unused_schedule** -Argument angeben.  
+ Das ** \@delete_unused_schedule** -Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als ** \@delete_unused_schedule** Argument angeben.  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
+ 
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
  Mit dieser gespeicherten Prozedur können keine Wartungspläne oder Aufträge, die Teil von Wartungsplänen sind, gelöscht werden. Zum Löschen von Wartungsplänen müssen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -97,10 +98,10 @@ EXEC sp_delete_job
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
- [sp_help_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
+ [sp_help_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
+ [sp_update_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

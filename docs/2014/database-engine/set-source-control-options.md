@@ -1,5 +1,5 @@
 ---
-title: Legen Sie Quellcodeverwaltungsoptionen | Microsoft-Dokumentation
+title: Optionen für die Quell Code Verwaltung festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62843734"
 ---
 # <a name="set-source-control-options"></a>Festlegen von Quellcodeverwaltungsoptionen
   Bevor Sie die Funktionen der in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] integrierten Quellcodeverwaltung nutzen können, sollten Sie die Quellcodeverwaltungsoptionen für die unterschiedlichen Umgebungen konfigurieren, in denen Sie arbeiten.  
   
- Sie konfigurieren Quellcodeverwaltungsoptionen mithilfe der **Optionen** im Dialogfeld eine oder mehrere Quellcodeverwaltungsrollen konfigurieren. Eine Rolle besteht aus einer allgemeinen Beschreibung der Einstellung, in der Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verwenden, und den Quellcodeverwaltungsoptionen, die mit dieser Einstellung verknüpft sind.  
+ Sie konfigurieren die Quell Code Verwaltungs Optionen mithilfe des Dialog Felds **Optionen** , um eine oder mehrere Quell Code Verwaltungs Rollen zu konfigurieren. Eine Rolle besteht aus einer allgemeinen Beschreibung der Einstellung, in der Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verwenden, und den Quellcodeverwaltungsoptionen, die mit dieser Einstellung verknüpft sind.  
   
- Wenn Sie z. B. ein unabhängiger Datenbankentwickler sind, entstehen in der Regel keine Konflikte mit anderen Benutzern, wenn Dateien ausgecheckt bleiben, nachdem Sie sie einchecken. Durch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird also eine Rolle für unabhängige Entwickler definiert. Für diese Rolle [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wählt automatisch die **Elemente beim Einchecken ausgecheckt lassen** Option.  
+ Wenn Sie z. B. ein unabhängiger Datenbankentwickler sind, entstehen in der Regel keine Konflikte mit anderen Benutzern, wenn Dateien ausgecheckt bleiben, nachdem Sie sie einchecken. Durch [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wird also eine Rolle für unabhängige Entwickler definiert. Bei dieser Rolle wählt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] automatisch die Option **Elemente beim Einchecken ausgecheckt bleiben aus** .  
   
  Da Sie Rollen definieren und anpassen können, können Sie mit unterschiedlichen Entwicklungseinstellungen arbeiten, ohne die Quellcodeverwaltung bei jedem Einstellungswechsel vollständig neu konfigurieren zu müssen.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "62843734"
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
-2.  In der **Optionen** Dialogfeld erweitern Sie **Quellcodeverwaltung**, und klicken Sie dann auf die **Plug-in-Auswahl** Seite.  
+2.  Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Quell**Code Verwaltung, und klicken Sie dann auf die Seite **Plug-in-Auswahl** .  
   
-     **Aktuelles Quellcodeverwaltungs-Plug-in**  
+     **Aktuelles Quellcodeverwaltungs-Plug-In**  
      Wählen Sie das gewünschte Quellcodeverwaltungsprogramm aus dieser Liste aus. In dieser Liste werden nur die auf diesem Computer installierten Quellcodeverwaltungsclients angezeigt. Wenn auf diesem Computer keine Quellcodeverwaltungsclients installiert sind, enthält die Liste nur den Eintrag Keiner. Wenn Sie Microsoft Source Safe installiert haben, dann werden die folgenden Plug-Ins angezeigt:  
   
     -   Microsoft Visual SourceSafe  
@@ -50,70 +50,72 @@ ms.locfileid: "62843734"
      **Rollenbeschreibung**  
      Wenn Sie eine dieser Rollen auswählen, werden die entsprechenden Quellcodeverwaltungsoptionen automatisch ausgewählt.  
   
-    |Rolle|Description|  
+    |Role|BESCHREIBUNG|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Gibt an, dass Sie die Einstellungen, die am häufigsten verwendet wird, indem Sie verwenden möchten [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern.|  
+    |**Visual SourceSafe**|Gibt an, dass die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen.|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
-    |**Custom**|Gibt an, dass Sie die Einstellungen für eine Rolle geändert haben.|  
+    |**Benutzerdefiniert**|Gibt an, dass Sie die Einstellungen für eine Rolle geändert haben.|  
   
-     **Führen Sie die statusaktualisierungen Hintergrund**  
+     **Statusupdate im Hintergrund**  
      Aktualisiert automatisch die Signalsymbole der Quellcodeverwaltung im Projektmappen-Explorer, wenn sich der Status eines Elements ändert. Wenn Sie bei der Ausführung serverintensiver Vorgänge, insbesondere beim Öffnen einer Projektmappe oder eines Projekts aus der Quellcodeverwaltung, Verzögerungen bemerken, kann das Deaktivieren dieses Kontrollkästchen die Leistung verbessern.  
   
-     **Login ID**  
-     Gibt den Benutzernamen an, der für die Anmeldung beim Quellcode-Verwaltungsanbieter verwendet wird. Wenn von der Quellcodeverwaltungsanbieter unterstützt, dieser Name wird ausgefüllt, automatisch in die **Anmeldung** Dialogfeld Ihren Quellcode-Verwaltungsserver erreichen. Deaktivieren Sie automatische Benutzeranmeldungen, um diese Option zu aktivieren, indem Sie das Administratorprogramm Ihres Quellcode-Verwaltungsanbieters verwenden. Starten Sie anschließend [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] neu.  
+     **Anmelde-ID**  
+     Gibt den Benutzernamen an, der für die Anmeldung beim Quellcode-Verwaltungsanbieter verwendet wird. Wenn Sie von Ihrem Quell Code Verwaltungs Anbieter unterstützt wird, wird dieser Name automatisch im **Anmelde** Dialogfeld ausgefüllt, um den Quell Code Verwaltungs Server zu erreichen. Deaktivieren Sie automatische Benutzeranmeldungen, um diese Option zu aktivieren, indem Sie das Administratorprogramm Ihres Quellcode-Verwaltungsanbieters verwenden. Starten Sie anschließend [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] neu.  
   
      **Erweitert**  
      Zeigt zusätzliche Optionen für das Hinzufügen von Elementen zur Quellcodeverwaltung an. Welche Optionen dies sind, hängt von Ihrem Quellcode-Verwaltungsanbieter ab. Hilfe zu diesen Optionen wird vom Quellcode-Verwaltungsprogramm bereitgestellt.  
   
-4.  Wählen Sie die **Umgebung** Seite.  
+4.  Wählen Sie die Seite **Umgebung** aus.  
   
-5.  In der **Umgebungseinstellungen für Quellcodeverwaltung** wählen die Rolle, die auf dem Sie die Quellcodeverwaltungsoptionen festlegen möchten.  
+5.  Wählen Sie im Feld **Umgebungseinstellungen** für die Quell Code Verwaltung die Rolle aus, für die Sie Quell Code Verwaltungs Optionen festlegen möchten.  
   
-     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wählt automatisch die standardmäßigen Quellcodeverwaltungsoptionen für die Rolle aus, die Sie ausgewählt haben. Wenn Sie eine der Standardoptionen, deaktivieren die **Umgebungseinstellungen für Quellcodeverwaltung** Feld zeigt die **benutzerdefinierte** Option, um anzugeben, dass Sie die ursprünglich ausgewählte Rolle angepasst haben.  
+     
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wählt automatisch die standardmäßigen Quellcodeverwaltungsoptionen für die Rolle aus, die Sie ausgewählt haben. Wenn Sie eine der Standardoptionen deaktivieren, wird im Feld Quell Code Verwaltungs **Umgebung** die Option **Benutzer** definiert angezeigt, um anzugeben, dass Sie die ursprünglich ausgewählte Rolle angepasst haben.  
   
-     **Umgebungseinstellungen für quellcodeverwaltung**  
-     Gibt die Rolle an, die Sie verwenden möchten. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] definiert die folgenden Rollen.  
+     **Umgebungseinstellungen für Quellcodeverwaltung**  
+     Gibt die Rolle an, die Sie verwenden möchten. 
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] definiert die folgenden Rollen.  
   
-    |Rolle|Description|  
+    |Role|BESCHREIBUNG|  
     |----------|-----------------|  
-    |**Visual SourceSafe**|Gibt an, dass Sie die Einstellungen, die am häufigsten verwendet wird, indem Sie verwenden möchten [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern.|  
+    |**Visual SourceSafe**|Gibt an, dass die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen.|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
-    |**Custom**|Gibt an, dass Sie die Einstellungen für eine Rolle geändert haben.|  
+    |**Benutzerdefiniert**|Gibt an, dass Sie die Einstellungen für eine Rolle geändert haben.|  
   
      Wenn Sie eine dieser Rollen auswählen, werden die entsprechenden Quellcodeverwaltungsoptionen automatisch ausgewählt.  
   
-     **Lassen Sie Elemente beim Einchecken ausgecheckt**  
-     Gibt an, dass die Elemente für Sie ausgecheckt bleiben, wenn Sie Elemente zum Aktualisieren des Quellcodeverwaltungsspeichers einchecken. Wenn Sie diese Option für einen bestimmten Eincheckvorgang ändern möchten, klicken Sie auf die **Optionen** Pfeil in der **Einchecken** (Dialogfeld), und deaktivieren Sie die **ausgecheckt lassen** Kontrollkästchen.  
+     **Elemente beim Einchecken ausgecheckt lassen**  
+     Gibt an, dass die Elemente für Sie ausgecheckt bleiben, wenn Sie Elemente zum Aktualisieren des Quellcodeverwaltungsspeichers einchecken. Wenn Sie diese Option für einen bestimmten Eincheck Vorgang ändern möchten, klicken Sie im Dialogfeld **Einchecken** auf den Pfeil **Optionen** , und deaktivieren Sie das Kontrollkästchen **ausgecheckt lassen** .  
   
      **Eingecheckte Elemente**  
-     Zeigt eine Liste der Optionen, die angeben, wie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sollte Verhalten, wenn Sie versuchen, ein Element zu bearbeiten, die nicht ausgecheckt. Die folgenden Tabellen beschreiben die verfügbaren Optionen.  
+     Zeigt eine Liste von Optionen an, die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angeben, wie sich verhalten soll, wenn Sie versuchen, ein nicht ausgechecktes Element zu bearbeiten. In den folgenden Tabellen werden die verfügbaren Optionen beschrieben.  
   
      **Speichern**  
   
-    |Aktion|Description|  
+    |Action|BESCHREIBUNG|  
     |------------|-----------------|  
-    |**Aufforderung zum Auschecken**|Zeigt die **Auschecken** Dialogfeld.|  
-    |**Automatisch auschecken**|Checkt das Element ohne Anzeige der **Auschecken** Dialogfeld. Diese Option ist die Standardeinstellung.|  
+    |**Aufforderung zum Auschecken**|Zeigt das Dialogfeld **Auschecken** an.|  
+    |**Automatisch auschecken**|Checkt das Element aus, ohne das Dialogfeld **Auschecken** anzuzeigen. Dies ist die Standardoption.|  
     |**Speichern unter**|Speichert die Daten in einer neuen Datei.|  
   
-     **Bearbeiten**  
+     **Bearbeitung**  
   
-    |Aktion|Description|  
+    |Action|BESCHREIBUNG|  
     |------------|-----------------|  
-    |**Aufforderung zum Auschecken**|Zeigt die **Auschecken** Dialogfeld.|  
-    |**Aufforderung zum exklusiven Auschecken**|Zeigt die **Auschecken** Dialogfeld.|  
-    |**Automatisch auschecken**|Checkt das Element ohne Anzeige der **Auschecken** Dialogfeld. Diese Option ist die Standardeinstellung.|  
-    |**Keine Aktion durchführen**|Checkt die Datei nicht aus.|  
+    |**Aufforderung zum Auschecken**|Zeigt das Dialogfeld **Auschecken** an.|  
+    |**Aufforderung zum exklusiven Auschecken**|Zeigt das Dialogfeld **Auschecken** an.|  
+    |**Automatisch auschecken**|Checkt das Element aus, ohne das Dialogfeld **Auschecken** anzuzeigen. Dies ist die Standardoption.|  
+    |**Keine Maßnahmen**|Checkt die Datei nicht aus.|  
   
-     **Können Sie eingecheckte Elemente bearbeitet werden**  
-     Gibt an, dass eingecheckte Elemente im Speicher bearbeitet werden können. Wenn Sie dieses Kontrollkästchen aktivieren, eine **bearbeiten** Schaltfläche angezeigt wird, der **Auschecken** im Dialogfeld, wenn Sie versuchen, ein eingechecktes Element zu bearbeiten. Wenn Sie auf diese Schaltfläche klicken, können Sie das Element bearbeiten. Wenn Sie das Element zu speichern versuchen, müssen Sie es erst auschecken, oder Sie wählen einen anderen Speicherort aus.  
+     **Das Bearbeiten von eingecheckten Elementen zulassen**  
+     Gibt an, dass eingecheckte Elemente im Speicher bearbeitet werden können. Wenn Sie dieses Kontrollkästchen aktivieren, wird im Dialogfeld " **Auschecken** " eine Schaltfläche " **Bearbeiten** " angezeigt, wenn Sie versuchen, ein eingechecktes Element zu bearbeiten. Wenn Sie auf diese Schaltfläche klicken, können Sie das Element bearbeiten. Wenn Sie das Element zu speichern versuchen, müssen Sie es erst auschecken, oder Sie wählen einen anderen Speicherort aus.  
   
      **Zurücksetzen**  
-     Setzt die Einstellungen in den Dialogfeldern zur Bestätigung der Quellcodeverwaltung auf die Standardwerte zurück. Z. B., wenn Sie ausgewählt haben die **dieses Dialogfeld nicht mehr anzeigen** Kontrollkästchen in einem Dialogfeld der quellcodeverwaltung, Auswahl der **zurücksetzen** Option wird rückgängig gemacht.  
+     Setzt die Einstellungen in den Dialogfeldern zur Bestätigung der Quellcodeverwaltung auf die Standardwerte zurück. Wenn Sie z. b. das Kontrollkästchen **dieses Dialogfeld nicht mehr anzeigen** im Dialogfeld Quell Code Verwaltung aktiviert haben, wird diese Aktion durch Auswählen der Option **Zurücksetzen** rückgängig gemacht.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen der Versionskontrolle](../../2014/database-engine/source-control-basics.md)   
- [Ändern von Quellcodeverwaltungsverbindungen](../../2014/database-engine/change-source-control-connections.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlagen der Quellen Verwaltung](../../2014/database-engine/source-control-basics.md)   
+ [Ändern von Quell Code Verwaltungs Verbindungen](../../2014/database-engine/change-source-control-connections.md)   
  [Ausschließen von Dateien aus der Quellcodeverwaltung](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

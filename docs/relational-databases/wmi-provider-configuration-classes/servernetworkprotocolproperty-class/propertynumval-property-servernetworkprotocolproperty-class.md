@@ -18,10 +18,10 @@ ms.assetid: 93fce2e8-adf5-48cf-8106-1fead7501a6f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: bb6126eddcc6394c900d61818928e6d52e1826c6
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660551"
 ---
 # <a name="propertynumval-property-servernetworkprotocolproperty-class"></a>PropertyNumVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
@@ -36,15 +36,15 @@ object.PropertyNumVal [= value]
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *object*  
+ *Objekt*  
  A [ServerNetworkProtocolProperty-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocolproperty-class/servernetworkprotocolproperty-class.md) , das ein Attribut des Netzwerkprotokolls in der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein u **uint32** -Wert, der den numerischen Wert der Eigenschaft angibt, auf die verwiesen wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Server Netzwerkprotokollen und Netzwerk Bibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

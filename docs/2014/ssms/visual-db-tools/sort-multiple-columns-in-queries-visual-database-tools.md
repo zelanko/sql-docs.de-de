@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b91bff77f3df9e1416837dead0c0261bf6473e34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63070903"
 ---
 # <a name="sort-multiple-columns-in-queries-visual-database-tools"></a>Sortieren mehrerer Spalten in Abfragen (Visual Database Tools)
@@ -30,8 +30,8 @@ ms.locfileid: "63070903"
   
      Wiederholen Sie diese Schritte für jede Spalte, nach der die Ergebnisse sortiert werden sollen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sortieren und gruppieren Abfrageergebnisse &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Sortieren und Gruppieren von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](sort-and-group-query-results-visual-database-tools.md)   
  [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)  
   
   

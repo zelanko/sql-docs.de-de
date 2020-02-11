@@ -15,17 +15,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 60fdfbecf617f0a4aa92b40b72b1b5e969f69388
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62745880"
 ---
 # <a name="synchronize-a-push-subscription"></a>Synchronisieren eines Pushabonnements
-  In diesem Thema wird beschrieben, wie ein Pushabonnement in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekten (RMO) synchronisiert wird.  
+  In diesem Thema wird beschrieben, wie ein Pushabonnement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [Replikations-Agents](agents/replication-agents-overview.md)oder Replikationsverwaltungsobjekte (RMO) synchronisiert wird.  
   
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Abonnements werden durch den Verteilungs-Agent (für Momentaufnahme- und Transaktionsveröffentlichungen) oder durch den Merge-Agent (für Mergeveröffentlichungen) synchronisiert. Agents können kontinuierlich, bei Bedarf oder nach einem Zeitplan ausgeführt werden. Weitere Informationen zum Angeben von Synchronisierungszeitplänen finden Sie unter [Angeben von Synchronisierungszeitplänen](specify-synchronization-schedules.md).  
   
  Die bedarfsgesteuerte Synchronisierung eines Abonnements kann über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] und the **Alle Abonnements** im Replikationsmonitor erfolgen. Abonnements von Oracle-Veröffentlichungen können vom Abonnenten nicht bedarfsgesteuert synchronisiert werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "62745880"
   
 4.  Klicken Sie mit der rechten Maustaste auf das zu synchronisierende Abonnement, und klicken Sie dann auf **Synchronisierungsstatus anzeigen**.  
   
-5.  Klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen - \<Abonnent>:\<SubscriptionDatabase>** auf **Start**. Nach Abschluss der Synchronisierung wird die Meldung **Synchronisierung abgeschlossen** eingeblendet.  
+5.  Klicken Sie im Dialogfeld **Synchronisierungsstatus anzeigen – \<Subscriber>:\<SubscriptionDatabase>** auf **Start**. Nach Abschluss der Synchronisierung wird die Meldung **Synchronisierung abgeschlossen** eingeblendet.  
   
 6.  Klicken Sie auf **Schließen**.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62745880"
   
 4.  Wenn Sie den Status der Synchronisierung anzeigen möchten, klicken Sie mit der rechten Maustaste auf das Abonnement, und klicken Sie dann auf **Details anzeigen**.  
   
-##  <a name="ReplProg"></a> Verwenden von Replikations-Agents  
+##  <a name="ReplProg"></a>Replikations-Agents  
  Pushabonnements können programmgesteuert oder bei Bedarf synchronisiert werden, indem die entsprechende ausführbare Datei für den Replikations-Agent an der Eingabeaufforderung ausgeführt wird. Welche ausführbare Datei für den Replikations-Agent ausgeführt wird, hängt vom Typ der Veröffentlichung ab, zu der die Pushveröffentlichung gehört.  
   
 #### <a name="to-start-the-distribution-agent-to-synchronize-a-push-subscription-to-a-transactional-publication"></a>So starten Sie den Verteilungs-Agent, um ein Pushabonnement für eine Transaktionsveröffentlichung zu synchronisieren  
@@ -79,21 +79,21 @@ ms.locfileid: "62745880"
   
     -   **-PublisherDB**  
   
-    -   **-Distributor**  
+    -   **-Verteiler**  
   
-    -   **-Subscriber**  
+    -   **-Abonnent**  
   
-    -   **-SubscriberDB**  
+    -   **-Abonnement-DB**  
   
-    -   **-SubscriptionType = 0**  
+    -   **-Abonnement Type = 0**  
   
      Wenn Sie die SQL Server-Authentifizierung verwenden, müssen Sie auch die folgenden Argumente angeben:  
   
-    -   **-DistributorLogin**  
+    -   **-Distributor Login**  
   
-    -   **-DistributorPassword**  
+    -   **-Distributor Password**  
   
-    -   **-DistributorSecurityMode = 0**  
+    -   **-Distributor SecurityMode = 0**  
   
     -   **-PublisherLogin**  
   
@@ -101,11 +101,11 @@ ms.locfileid: "62745880"
   
     -   **-PublisherSecurityMode = 0**  
   
-    -   **-SubscriberLogin**  
+    -   **-Abonniert Login**  
   
-    -   **-SubscriberPassword**  
+    -   **-Abonnement Kennwort**  
   
-    -   **-SubscriberSecurityMode = 0**  
+    -   **-Abonnement Modus = 0**  
   
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -118,23 +118,23 @@ ms.locfileid: "62745880"
   
     -   **-PublisherDB**  
   
-    -   **-Publication**  
+    -   **-Veröffentlichung**  
   
-    -   **-Distributor**  
+    -   **-Verteiler**  
   
-    -   **-Subscriber**  
+    -   **-Abonnent**  
   
-    -   **-SubscriberDB**  
+    -   **-Abonnement-DB**  
   
-    -   **-SubscriptionType = 0**  
+    -   **-Abonnement Type = 0**  
   
      Wenn Sie die SQL Server-Authentifizierung verwenden, müssen Sie auch die folgenden Argumente angeben:  
   
-    -   **-DistributorLogin**  
+    -   **-Distributor Login**  
   
-    -   **-DistributorPassword**  
+    -   **-Distributor Password**  
   
-    -   **-DistributorSecurityMode = 0**  
+    -   **-Distributor SecurityMode = 0**  
   
     -   **-PublisherLogin**  
   
@@ -142,16 +142,16 @@ ms.locfileid: "62745880"
   
     -   **-PublisherSecurityMode = 0**  
   
-    -   **-SubscriberLogin**  
+    -   **-Abonniert Login**  
   
-    -   **-SubscriberPassword**  
+    -   **-Abonnement Kennwort**  
   
-    -   **-SubscriberSecurityMode = 0**  
+    -   **-Abonnement Modus = 0**  
   
         > [!IMPORTANT]  
         >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-###  <a name="TsqlExample"></a> Beispiele (Replikations-Agents)  
+###  <a name="TsqlExample"></a>Beispiele (Replikations-Agents)  
  Im folgenden Beispiel wird der Verteilungs-Agent gestartet, um ein Pushabonnement zu synchronisieren.  
   
  
@@ -270,8 +270,8 @@ REM -- The following command must be supplied without line breaks.
   
  [!code-vb[HowTo#rmo_vb_SyncMergePushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_syncmergepushsub)]  
   
-## <a name="see-also"></a>Siehe auch  
- [Konzepte für Replikationsverwaltungsobjekte (RMO)](concepts/replication-management-objects-concepts.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikationsverwaltungsobjekte Konzepte](concepts/replication-management-objects-concepts.md)   
  [Synchronisieren von Daten](synchronize-data.md)   
  [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   

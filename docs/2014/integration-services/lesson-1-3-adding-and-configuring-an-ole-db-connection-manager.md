@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Hinzufügen und konfigurieren einen OLE DB-Verbindungs-Manager | Microsoft-Dokumentation'
+title: 'Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c22c9ca183a5975b762fd166ee434f305422e6ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62891719"
 ---
-# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers
+# <a name="step-3-adding-and-configuring-an-ole-db-connection-manager"></a>Schritt 3: Hinzufügen und Konfigurieren eines OLE DB-Verbindungs-Managers
   Nach dem Hinzufügen eines Flatfile-Verbindungs-Managers zum Herstellen einer Verbindung mit der Datenquelle besteht die nächste Aufgabe im Hinzufügen eines OLE DB-Verbindungs-Managers zum Herstellen einer Verbindung mit dem Ziel. Ein OLE DB-Verbindungs-Manager ermöglicht einem Paket das Extrahieren von Daten aus einer oder das Laden von Daten in eine OLE DB-kompatible(n) Datenquelle. Mithilfe des OLE DB-Verbindungs-Managers können Sie den Server, die Authentifizierungsmethode und die Standarddatenbank für die Verbindung angeben.  
   
  In dieser Lektion erstellen Sie einen OLE DB-Verbindungs-Manager, der die Windows-Authentifizierung zum Herstellen einer Verbindung mit der lokalen Instanz von **AdventureWorksDB2012**verwendet. Der von Ihnen erstellte OLE DB-Verbindungs-Manager wird auch von anderen Komponenten referenziert, die Sie später in diesem Lernprogramm erstellen werden. Dazu gehören die Transformation zum Suchen und das OLE DB-Ziel.  
@@ -34,7 +34,7 @@ ms.locfileid: "62891719"
   
 4.  Überprüfen Sie in der Gruppe **Am Server anmelden** , ob **Windows-Authentifizierung verwenden** ausgewählt ist.  
   
-5.  In der **Herstellen einer Verbindung mit einer Datenbank** Gruppe in der **Datenbanknamen eingeben oder auswählen** Feld ein, oder wählen `AdventureWorksDW2012`.  
+5.  Geben Sie in der Gruppe **Verbindung mit einer Datenbank herstellen** im Feld **Datenbanknamen eingeben oder** auswählen den Text ein `AdventureWorksDW2012`, oder wählen Sie ihn aus.  
   
 6.  Klicken Sie auf **Verbindung testen** , um zu überprüfen, ob die von Ihnen angegebenen Verbindungseinstellungen gültig sind.  
   
@@ -46,10 +46,10 @@ ms.locfileid: "62891719"
   
 10. Klicken Sie auf **OK**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 4: Hinzufügen eines Datenflusstasks zum Paket](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md)  
   
   

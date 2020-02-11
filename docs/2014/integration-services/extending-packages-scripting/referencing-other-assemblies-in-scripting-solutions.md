@@ -25,17 +25,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6f942e1afe40467e331519f276b360f87f9a6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894734"
 ---
 # <a name="referencing-other-assemblies-in-scripting-solutions"></a>Verweisen auf andere Assemblys in Skriptlösungen
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassenbibliothek bietet Skriptentwicklern leistungsfähige Tools zur Implementierung von benutzerdefinierten Funktionen in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen. In Skripttasks und Skriptkomponenten können ebenfalls benutzerdefinierte verwaltete Assemblys verwendet werden.  
+  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Klassenbibliothek stellt dem Skriptentwickler einen leistungsfähigen Satz von Tools für die Implementierung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] benutzerdefinierten Funktionen in-Paketen zur Verfügung. In Skripttasks und Skriptkomponenten können ebenfalls benutzerdefinierte verwaltete Assemblys verwendet werden.  
   
 > [!NOTE]  
->  Damit Ihre Pakete die Objekte und Methoden eines Webdienstes verwenden können, setzen Sie den Befehl **Webverweis hinzufügen** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) ein. In früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mussten Sie eine Proxyklasse generieren, um einen Webdienst zu verwenden.  
+>  Damit Ihre Pakete die Objekte und Methoden von einem Webdienst verwenden können, verwenden Sie den Befehl **Webverweis hinzufügen** , [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] der in Tools for Applications (VSTA) verfügbar ist. In früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] mussten Sie eine Proxyklasse generieren, um einen Webdienst zu verwenden.  
   
 ## <a name="using-a-managed-assembly"></a>Verwenden einer verwalteten Assembly  
  Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die verwaltete Assembly zur Entwurfszeit findet, müssen Sie die folgenden Schritte ausführen:  
@@ -62,29 +62,29 @@ ms.locfileid: "62894734"
   
  In dieser Liste werden einige der häufig verwendeten [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Klassen beschrieben:  
   
--   `System.Data` Enthält die ADO.NET-Architektur.  
+-   `System.Data`Enthält die ADO.NET-Architektur.  
   
--   `System.IO` Stellt eine Schnittstelle zum Dateisystem und den Datenströmen bereit.  
+-   `System.IO`Stellt eine Schnittstelle für das Dateisystem und Streams bereit.  
   
--   `System.Windows.Forms` Ermöglicht die formularerstellung.  
+-   `System.Windows.Forms`Stellt die Formular Erstellung bereit.  
   
--   `System.Text.RegularExpressions` Stellt Klassen zum Arbeiten mit regulären Ausdrücken bereit.  
+-   `System.Text.RegularExpressions`Stellt Klassen zum Arbeiten mit regulären Ausdrücken bereit.  
   
--   `System.Environment` Gibt Informationen zu den lokalen Computer, den aktuellen Benutzer und Computer- und benutzereinstellungen zurück.  
+-   `System.Environment`Gibt Informationen über den lokalen Computer, den aktuellen Benutzer sowie die Computer-und Benutzereinstellungen zurück.  
   
--   `System.Net` Ermöglicht die Netzwerkkommunikation.  
+-   `System.Net`Ermöglicht die Netzwerkkommunikation.  
   
--   `System.DirectoryServices` Stellt Active Directory.  
+-   `System.DirectoryServices`Macht Active Directory verfügbar.  
   
--   `System.Drawing` Stellt umfangreiche bildbearbeitungsbibliotheken bereit.  
+-   `System.Drawing`Stellt umfangreiche Bild Bearbeitungs Bibliotheken bereit.  
   
--   `System.Threading` Aktiviert Multithreadprogrammierung.  
+-   `System.Threading`Ermöglicht Multithreadprogrammierung.  
   
  Weitere Informationen über [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] finden Sie in der MSDN Library.  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweitern von Paketen mit Skripts](extending-packages-with-scripting.md)  
   
   

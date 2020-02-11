@@ -1,5 +1,5 @@
 ---
-title: Sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft-Dokumentation
+title: sys. query_store_runtime_stats_interval (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -22,37 +22,37 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c76e22bc0041c69ffc8ab9d0632ff69f8518031b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067942"
 ---
-# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>Sys.query_store_runtime_stats_interval (Transact-SQL)
+# <a name="sysquery_store_runtime_stats_interval-transact-sql"></a>sys. query_store_runtime_stats_interval (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Enthält Informationen über die Start- und Endzeit Zeit, die von jedem Intervall, über welche Laufzeit Ausführung Statistikinformationen für eine Abfrage gesammelt wurden.  
+  Enthält Informationen über die Start-und Endzeit jedes Intervalls, in dem Informationen zur Lauf Zeit Ausführungs Statistik für eine Abfrage erfasst wurden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**runtime_stats_interval_id**|**bigint**|Der Primärschlüssel.|
-|**start_time**|**datetimeoffset**|Die Startzeit des Intervalls.|
-|**end_time**|**datetimeoffset**|Die Endzeit des Intervalls.|
-|**Kommentar**|**nvarchar(32)**|Immer NULL.|
+|**runtime_stats_interval_id**|**BIGINT**|Primärschlüssel|
+|**start_time**|**datetimeoffset**|Startzeit des Intervalls.|
+|**end_time**|**datetimeoffset**|Endzeit des Intervalls.|
+|**geäußert**|**nvarchar (32)**|Immer NULL.|
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW DATABASE STATE** Berechtigung.  
+ Erfordert die **View Database State** -Berechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_context_settings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)   
+ [sys. query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_query_text &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)  
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Query Store gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
+ [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a0462af67afbf5ac25c52ded8523ca26678699b9
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72796957"
 ---
 # <a name="creating-altering-and-removing-foreign-keys"></a>Erstellen, Ändern und Löschen von Fremdschlüsseln
@@ -27,7 +27,7 @@ ms.locfileid: "72796957"
  Die Spalten, die den Fremdschlüssel darstellen, werden in der `Columns`-Objekteigenschaft des <xref:Microsoft.SqlServer.Management.Smo.ForeignKey>-Objekts aufgelistet. Der Primärschlüssel, auf den vom Fremdschlüssel verwiesen wird, ist durch die <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedKey%2A>-Eigenschaft dargestellt, die sich in der Tabelle befindet, die in der <xref:Microsoft.SqlServer.Management.Smo.ForeignKey.ReferencedTable%2A>-Eigenschaft angegeben ist.  
   
 ## <a name="example"></a>Beispiel  
- Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual&#35; C SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-foreign-key-in-visual-basic"></a>Erstellen, Ändern und Löschen eines Fremdschlüssels in Visual Basic  
  Dieses Codebeispiel zeigt, wie eine Fremdschlüsselbeziehung zwischen einer oder mehreren Spalten in einer Tabelle und einer Primärschlüsselspalte in einer anderen Tabelle erstellt wird.  

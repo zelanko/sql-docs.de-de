@@ -1,5 +1,5 @@
 ---
-title: Warnung-Eigenschaften – neue Warnung (Seite Allgemein) | Microsoft-Dokumentation
+title: Warnungs Eigenschaften-neue Warnung (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,30 +13,30 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63062148"
 ---
-# <a name="alert-properties-new-alert-general-page"></a>Warnung Eigenschaften – neue Warnung (Seite Allgemein)
-  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Warnungen anzeigen und ändern.  
+# <a name="alert-properties-new-alert-general-page"></a>Warnungs Eigenschaften-neue Warnung (Seite "Allgemein")
+  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Warnungen anzeigen und ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Ändern Sie den Namen der Warnung.  
   
- **Aktivieren von**  
+ **Aktivieren**  
  Aktivieren Sie die Warnung. Wenn die Warnung nicht aktiviert ist, werden die in der Warnung angegebenen Aktionen nicht ausgeführt.  
   
  **Typ**  
  Wählen Sie den Typ der Warnung aus:  
   
--   **SQL Server-Ereigniswarnung** reagiert auf Meldungen im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll.  
+-   **SQL Server Ereignis Warnung** reagiert auf Meldungen im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll.  
   
--   **SQL Server-Leistungsstatuswarnung** reagiert auf eine bestimmte Bedingung in einem Leistungsindikator.  
+-   **SQL Server Leistungs Bedingungs Warnung** antwortet auf eine bestimmte Bedingung in einem Leistungswert.  
   
--   **WMI-Ereigniswarnung** reagiert auf ein WMI-Ereignis (Windows Management Instrumentation).  
+-   Die **WMI-Ereignis Warnung** antwortet auf ein Windows-Verwaltungsinstrumentation Ereignis (WMI).  
   
 ## <a name="sql-server-event-alert-options"></a>Optionen für die SQL Server-Ereigniswarnung  
  **Datenbankname**  
@@ -45,17 +45,17 @@ ms.locfileid: "63062148"
  **Fehlernummer**  
  Geben Sie an, dass dieses Ereignis auf einen Fehler reagiert, und geben Sie die Fehlernummer an.  
   
- **Severity**  
+ **severity**  
  Geben Sie an, dass dieses Ereignis auf alle Meldungen innerhalb eines bestimmten Schweregrads reagiert, und geben Sie den Schweregrad an.  
   
- **Warnung auslösen, wenn eine Meldung Folgendes enthält**  
+ **Warnung generieren, wenn die Meldung enthält**  
  Filtert Ereignisse nach einer bestimmten Zeichenfolge. Wenn diese Option ausgewählt ist, reagiert die Warnung nur auf Ereignisse, die eine bestimmte Zeichenfolge enthalten.  
   
- **Meldungstext**  
+ **Meldungs Text**  
  Geben Sie die Zeichenfolge ein, die zum Filtern von Ereignissen verwendet werden soll.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server-Leistungsstatuswarnungen  
- **Objekt**  
+ **Object**  
  Geben Sie das zu überwachende Leistungsobjekt an.  
   
  **Leistungsindikator**  
@@ -64,7 +64,7 @@ ms.locfileid: "63062148"
  **Instanz**  
  Geben Sie die Instanz des Leistungsindikators an, die überwacht werden soll.  
   
- **Warnung, falls Leistungsindikator**  
+ **Warnung, wenn Counter**  
  Geben Sie das Verhalten des Leistungsindikators an, auf das die Warnung reagiert. Die Warnung könnte beispielsweise auf eine Bedingung reagieren, bei der der Wert des Leistungsindikators **Freier Speicherplatz in 'tempdb' (KB)** unter eine bestimmte Grenze fällt, oder auf eine Bedingung, bei der der Wert für **SQL-Kompilierungen/Sekunde** einen bestimmten Wert übersteigt.  
   
  **Wert**  
@@ -74,12 +74,12 @@ ms.locfileid: "63062148"
  **Namespace**  
  Geben Sie den Namespace an, der für die WQL-Anweisung (WMI Query Language) verwendet werden soll. Es werden nur Namespaces auf dem Computer unterstützt, auf dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird.  
   
- **Dataseteigenschaften**  
+ **Abfrage**  
  Geben Sie die WQL-Anweisung an, die das Ereignis identifiziert, auf das die Warnung reagiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Warnungen](alerts.md)   
- [Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
+ [Verwenden von WQL mit dem WMI-Anbieter für Server Ereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Erstellen einer Warnung mithilfe einer Fehlernummer](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  
   

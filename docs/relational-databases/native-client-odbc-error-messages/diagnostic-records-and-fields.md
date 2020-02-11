@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5bffbd7ce22bf3e1e906e68e880fb76bee36c4b3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783658"
 ---
 # <a name="diagnostic-records-and-fields"></a>Diagnosedatensätze und -felder
@@ -46,9 +46,9 @@ ms.locfileid: "73783658"
   
  **SQLGetDiagField** wird vom ODBC-Treiber-Manager mithilfe von Fehlerinformationen verarbeitet, die er vom zugrunde liegenden Treiber zwischenspeichert. Der ODBC-Treiber-Manager speichert Treiber spezifische Diagnose Felder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. **SQLGetDiagField** gibt SQL_ERROR zurück, wenn es aufgerufen wird, um Treiber spezifische Diagnose Felder zu erhalten, bevor eine erfolgreiche Verbindung hergestellt wurde. Wenn eine ODBC-Verbindungsfunktion SQL_SUCCESS_WITH_INFO zurückgibt, sind noch keine treiberspezifischen Diagnosefelder für die Verbindungsfunktion verfügbar. Sie können **SQLGetDiagField** für Treiber spezifische Diagnose Felder erst aufrufen, nachdem Sie einen weiteren ODBC-Funktionsaufruf nach der Connect-Funktion durchgeführt haben.  
   
- Die meisten Fehler, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber gemeldet werden, können nur mit den von **SQLGetDiagRec**zurückgegebenen Informationen diagnostiziert werden. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-Fehler Handlers für Anwendungen, die den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber verwenden, empfiehlt es sich, auch **SQLGetDiagField** zu verwenden, um mindestens die SQL_DIAG_SS_MSGSTATE-und SQL_DIAG_SS_SEVERITY treiberspezifischen Felder abzurufen. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
+ Die meisten Fehler, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Native Client-ODBC-Treiber gemeldet werden, können nur mit den von **SQLGetDiagRec**zurückgegebenen Informationen diagnostiziert werden. In einigen Fällen sind jedoch die von den treiberspezifischen Diagnosefeldern zurückgegebenen Informationen für die Fehlerdiagnose wichtig. Beim Codieren eines ODBC-Fehler Handlers für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anwendungen, die den Native Client-ODBC-Treiber verwenden, empfiehlt es sich, auch **SQLGetDiagField** zu verwenden, um mindestens die SQL_DIAG_SS_MSGSTATE-und SQL_DIAG_SS_SEVERITY treiberspezifischen Felder abzurufen. Wenn ein bestimmter Fehler an mehreren Orten im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Code ausgelöst werden kann, erkennt der Microsoft Software Service anhand von SQL_DIAG_SS_MSGSTATE, wo genau ein Fehler ausgelöst wurde, was mitunter für die Problemdiagnose hilfreich ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Behandlung von Fehlern und Meldungen](../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
   
   

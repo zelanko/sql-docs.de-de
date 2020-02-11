@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637526"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
@@ -66,8 +66,8 @@ ms.locfileid: "73637526"
   
 |Algorithmus|Analysemethode|Kommentare|  
 |---------------|------------------------|--------------|  
-|Decision Trees|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Wenn irgendeine Spalte nicht binäre kontinuierliche Werte enthält, wird der Interessantheitsgrad für alle Spalten verwendet, um die Konsistenz zu gewährleisten. Andernfalls wird die Standardmethode oder die angegebene Methode verwendet.|  
-|Lineare Regression|Interessantheitsgrad|Der Linear Regression-Algorithmus verwendet nur den Interessantheitsgrad, da er nur kontinuierliche Spalten unterstützt.|  
+|Entscheidungsstrukturen|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Wenn irgendeine Spalte nicht binäre kontinuierliche Werte enthält, wird der Interessantheitsgrad für alle Spalten verwendet, um die Konsistenz zu gewährleisten. Andernfalls wird die Standardmethode oder die angegebene Methode verwendet.|  
+|Linear Regression|Interessantheitsgrad|Der Linear Regression-Algorithmus verwendet nur den Interessantheitsgrad, da er nur kontinuierliche Spalten unterstützt.|  
   
 ### <a name="scalability-and-performance"></a>Skalierbarkeit und Leistung  
  Die Klassifizierung ist eine wichtige Data Mining-Strategie. Im Allgemeinen steigt die Menge an Informationen, die zur Klassifizierung der Fälle erforderlich ist, direkt proportional zur Anzahl der Eingabedatensätze. Dies schränkt den Umfang der Daten ein, die klassifiziert werden können. Der Microsoft Decision Trees-Algorithmus verwendet die folgenden Methoden, um diese Probleme zu lösen, die Leistung zu verbessern und Speicherbeschränkungen aufzuheben:  
@@ -124,7 +124,7 @@ ms.locfileid: "73637526"
  *MAXIMUM_INPUT_ATTRIBUTES*  
  Definiert die Anzahl von Eingabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird.  
   
- Der Standardwert lautet 255.  
+ Der Standardwert ist 255.  
   
  Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "73637526"
  *MAXIMUM_OUTPUT_ATTRIBUTES*  
  Definiert die Anzahl von Ausgabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird.  
   
- Der Standardwert lautet 255.  
+ Der Standardwert ist 255.  
   
  Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.  
   
@@ -142,14 +142,14 @@ ms.locfileid: "73637526"
  *MINIMUM_SUPPORT*  
  Bestimmt die Mindestanzahl von Blattfällen, die zum Generieren einer Teilung in der Entscheidungsstruktur erforderlich sind.  
   
- Der Standardwert lautet 10.  
+ (Standardwert: 10.)  
   
  Sie müssen möglicherweise diesen Wert erhöhen, wenn das Dataset sehr groß ist, um übermäßiges Trainieren zu vermeiden.  
   
  *SCORE_METHOD*  
- Bestimmt die zum Berechnen des Teilungsergebnisses zu verwendende Methode. Die folgenden Optionen stehen zur Verfügung:  
+ Bestimmt die zum Berechnen des Teilungsergebnisses zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
-|ID|NAME|  
+|id|Name|  
 |--------|----------|  
 |1|Entropie|  
 |3|Bayes-Methode mit K2-A-priori-Verteilung|  
@@ -160,20 +160,20 @@ ms.locfileid: "73637526"
  Eine Erläuterung dieser Bewertungsmethoden finden Sie unter [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  *SPLIT_METHOD*  
- Bestimmt die zum Teilen des Knotens zu verwendende Methode. Die folgenden Optionen stehen zur Verfügung:  
+ Bestimmt die zum Teilen des Knotens zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
-|ID|NAME|  
+|id|Name|  
 |--------|----------|  
-|1|**Binary:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
-|2|**Complete:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
-|3|**Both:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder vollständige Teilung verwendet werden soll, um die besten Ergebnisse zu erzielen.|  
+|1|**Binär:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
+|2|**Fertigstellen:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
+|3|**Beides:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder eine komplette Teilung verwendet werden soll, um die besten Ergebnisse zu erzielen.|  
   
- Der Standardwert lautet 3.  
+ Der Standardwert ist 3.  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Tree-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
-|Modellierungsflag|und Beschreibung|  
+|Modellierungsflag|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
@@ -187,13 +187,13 @@ ms.locfileid: "73637526"
   
  Wenn Sie beispielsweise das Kaufverhalten von Kunden mithilfe des Attributs **Einkommen** vorhersagen und das Modellierungsflag REGRESSOR für die Spalte festlegen, versucht der Algorithmus zuerst, die Werte der Spalte **Einkommen** mithilfe einer Standardregressionsformel zuzuordnen. Ist die Abweichung zu groß, dann wird die Regressionsformel ignoriert und die Struktur nach einem anderen Attribut unterteilt. Der Decision Tree-Algorithmus versucht nach der Unterteilung, jedem der Zweige einen Regressor für Einkommen zuzuordnen.  
   
-## <a name="requirements"></a>-Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein Entscheidungsstrukturmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt bestimmte Eingabespalten und vorhersagbare Spalten. Diese sind in der nachstehenden Tabelle aufgelistet. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Ordered, Table|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Ordered, Table|  
@@ -201,9 +201,9 @@ ms.locfileid: "73637526"
 > [!NOTE]  
 >  Zyklische und sortierte Inhaltstypen werden unterstützt, der Algorithmus behandelt sie jedoch als diskrete Werte und führt keine spezielle Verarbeitung durch.  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft Decision Trees Algorithm](microsoft-decision-trees-algorithm.md)   
- [Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)   
- [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
+ [Beispiele für Entscheidungsstruktur-Modell Abfragen](decision-trees-model-query-examples.md)   
+ [Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

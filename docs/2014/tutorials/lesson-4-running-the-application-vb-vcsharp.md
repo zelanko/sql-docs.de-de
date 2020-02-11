@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Ausführen der Anwendung (VB-VC#) | Microsoft-Dokumentation'
+title: 'Lektion 4: Ausführen der Anwendung (VB-VC #) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 85dc3fc5d38db71cd30600f84d3ab3cfd739aeea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137485"
 ---
-# <a name="lesson-4-running-the-application-vb-vc"></a>Lektion 4: Ausführen der Anwendung (VB-VC#)
+# <a name="lesson-4-running-the-application-vb-vc"></a>Lektion 4: Ausführen der Anwendung (VB-VC #)
+  
   [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] bietet einige Methoden zum Erstellen und Ausführen einer Konsolenanwendung von der integrierten Entwicklungsumgebung (IDE, Integrated Development Environment) aus, beispielsweise:  
   
 -   Starten (mit Debuggen)  
@@ -28,7 +29,7 @@ ms.locfileid: "63137485"
   
 ### <a name="to-build-and-run-the-getpropertiessample"></a>So erstellen Sie den GetPropertiesSample-Code und führen ihn aus  
   
-1.  Von der **Debuggen** Menü klicken Sie auf **Starten ohne Debugging**. Dadurch wird sichergestellt, dass das Konsolenfenster geöffnet bleibt, nachdem die Ausführung beendet wurde.  
+1.  Klicken Sie im Menü **Debuggen** auf **Starten ohne Debuggen**. Dadurch wird sichergestellt, dass das Konsolenfenster geöffnet bleibt, nachdem die Ausführung beendet wurde.  
   
      Die Anwendung erzeugt die folgende Ausgabe auf der Konsole:  
   
@@ -43,8 +44,8 @@ ms.locfileid: "63137485"
   
 2.  Drücken Sie eine beliebige Taste, um GetPropertiesSample zu schließen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.SqlServer.ReportingServices2005.ReportingService2005.GetProperties%2A>   
- [Zugreifen auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Zugreifen auf den Report Server-Webdienst mithilfe von Visual Basic oder Visual C&#35; &#40;SSRS-Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

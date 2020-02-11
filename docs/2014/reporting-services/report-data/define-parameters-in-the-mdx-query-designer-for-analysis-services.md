@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45fc220eb4b3dc74e5550312c5658760b6cb699c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892173"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS)
@@ -59,9 +59,9 @@ ms.locfileid: "68892173"
   
 2.  Klicken Sie auf der Symbolleiste auf **Entwurf** , um in den Abfragemodus zu wechseln.  
   
-3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrageparameter** (![Symbol für das Dialogfeld Abfrageparameter](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Symbol für das Dialogfeld Abfrageparameter")). Das Dialogfeld Abfrageparameter wird geöffnet.  
+3.  Klicken Sie auf der MDX-Abfrage-Designer-Symbolleiste auf **Abfrage Parameter** (![Symbol für das Dialogfeld Abfrage Parameter](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Dialogfeld für Abfrageparameter (Symbol)")). Das Dialogfeld Abfrageparameter wird geöffnet.  
   
-4.  Klicken Sie in der Spalte **Parameter** auf **\<Parameter eingeben>** , und geben Sie dann den Namen eines Parameters ein.  
+4.  Klicken Sie in der Spalte **Parameter** auf **\<Parameter eingeben>**, und geben Sie dann den Namen eines Parameters ein.  
   
 5.  Wählen Sie in der Spalte **Dimension** einen Wert aus der Dropdownliste aus.  
   
@@ -81,8 +81,8 @@ ms.locfileid: "68892173"
   
      Um das Dataset anzuzeigen, das verfügbare Werte für den Berichtsparameter enthält, klicken Sie mit der rechten Maustaste auf einen leeren Bereich im Berichtsdatenbereich, und klicken Sie dann auf **Ausgeblendete Datasets anzeigen**. Der Berichtsdatenbereich zeigt alle Datasets im Bericht an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Verbindungstyp für MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
  [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

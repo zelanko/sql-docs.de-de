@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 068b7aa3c068b10b787b99bba26c12a2b680bcd3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727405"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Leistungsoptimierung für R Services: Ergebnisse und Ressourcen
@@ -41,7 +41,7 @@ In dieser Fallstudie testete das Entwicklungsteam von SQL Server R Services die 
 3. Auf die Kopien der Tabelle wurden verschiedene Änderungen angewendet, um SQL Server-Funktionen wie Seitenkomprimierung, Zeilenkomprimierung, Indizierung, Spaltendatenspeicher usw. zu testen.
 4. Die Leistung wurde jeweils vor und nach jeder Optimierung gemessen.
 
-| Tabellenname| und Beschreibung|
+| Tabellenname| Beschreibung|
 |------|------|
 | *airline* | Aus der ursprünglichen XDF-Datei mithilfe von `rxDataStep` konvertierte Daten.|                          |
 | *airlineWithIntCol*   | *DayOfWeek* konvertiert in eine Ganzzahl anstatt in eine Zeichenfolge. Fügt auch eine *rowNum*-Spalte hinzu.|
@@ -92,7 +92,7 @@ In diesem Abschnitt werden die Ergebnisse vor und nach der Ausführung der einze
 
 Im ersten Test wurden die Verwendung von Komprimierung und die Verwendung einer spaltenbasierten Tabelle zur Verringerung der Datengröße miteinander verglichen:
 
-| Tabellenname            | Zeilen     | Reserviert.   | data       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
+| Tabellenname            | Zeilen     | Reserved   | Daten       | index_size | Nicht verwendet  | % Gespeichert (reserviert) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10000000 | 2\.978.816 KB | 2\.972.160 KB | 6\.128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10000000 | 625.784 KB  | 623.744 KB  | 1\.352 KB    | 688 KB  | 79%                 |
@@ -157,7 +157,7 @@ Energiesparoption **Ausgeglichen**:
 |           | 4      | 5 Sekunden    |              |
 |           | 5      | 3,92 Sekunden |              |
 |           | 6      | 3,8 Sekunden  |              |
-|           |        |              | 3.91         |
+|           |        |              | 3,91         |
 |           | 1      | 3,82 Sekunden |              |
 |           | 2      | 3,84 Sekunden |              |
 |           | 3      | 3,86 Sekunden |              |
@@ -199,7 +199,7 @@ In diesem Test wurde ein Modell mit `rxLinMod` trainiert, doch der Code wurde vo
 | Testname             | Durchschnittliche Zeit |
 |-----------------------|--------------|
 | WithTransformation    | 5.1675       |
-| WithoutTransformation | 4.7          |
+| WithoutTransformation | 4,7          |
 
 **Schlussfolgerungen**
 
@@ -268,8 +268,8 @@ Die Testergebnisse zeigen die Zeit, die für das Speichern und Laden des Modells
 
 | Tabellenname | Testname | Durchschnittliche Zeit (Trainieren des Modells) | Zeit zum Speichern/Laden des Modells|
 |------------|------------|------------|------------|
-| airline    | SaveModel| 21.59| 2.08|
-| airline    | LoadModelAndPredict | | 2,09 (einschließlich Zeit für Vorhersagen) |
+| Fluggesellschaft    | SaveModel| 21.59| 2,08|
+| Fluggesellschaft    | LoadModelAndPredict | | 2,09 (einschließlich Zeit für Vorhersagen) |
 
 **Schlussfolgerungen**
 

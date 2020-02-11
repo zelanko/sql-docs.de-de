@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_enable_db (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_cdc_enable_db (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106503"
 ---
-# <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
+# <a name="syssp_cdc_enable_db-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktiviert Change Data Capture für die aktuelle Datenbank. Diese Prozedur muss für eine Datenbank ausgeführt werden, bevor Tabellen in dieser Datenbank für Change Data Capture aktiviert werden können. Change Data Capture zeichnet an aktivierten Tabellen vorgenommene Einfüge-, Update- und Löschvorgänge auf und stellt Informationen zu den einzelnen Änderungen in einem leicht verarbeitbaren relationalen Format dar. Für die geänderten Zeilen werden Spaltendaten, die die Spaltenstruktur der nachverfolgten Quelltabelle widerspiegeln, sowie die Metadaten aufgezeichnet, die zur Anwendung der Änderungen in einer Zielumgebung erforderlich sind.  
@@ -36,7 +36,7 @@ ms.locfileid: "68106503"
 > [!IMPORTANT]
 >  Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,15 +46,15 @@ sys.sp_cdc_enable_db
 ```  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- Change Data Capture kann nicht aktiviert werden, auf [Systemdatenbanken](../../relational-databases/databases/system-databases.md) oder Verteilungsdatenbanken.  
+## <a name="remarks"></a>Bemerkungen  
+ Change Data Capture kann nicht für [System Datenbanken](../../relational-databases/databases/system-databases.md) oder Verteilungs Datenbanken aktiviert werden.  
   
- sys.sp_cdc_enable_db erstellt die Change Data Capture-Objekte, deren Bereich datenbankweit ist, einschließlich von Metatabellen und DDL-Triggern. Außerdem erstellt der cdc-Schema und den cdc-Datenbankbenutzer und setzt die Is_cdc_enabled-Spalte für den Datenbankeintrag in der [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalogsicht auf 1.  
+ sys.sp_cdc_enable_db erstellt die Change Data Capture-Objekte, deren Bereich datenbankweit ist, einschließlich von Metatabellen und DDL-Triggern. Außerdem erstellt er das CDC-Schema und den CDC-Datenbankbenutzer und legt die is_cdc_enabled Spalte für den Datenbankeintrag in der [sys. Database](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) -Katalog Sicht auf 1 fest.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin.  
@@ -69,7 +69,7 @@ EXECUTE sys.sp_cdc_enable_db;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Sys. sp_cdc_disable_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. sp_cdc_disable_db &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Entwickler&#39;-e-Guide (Datenbank-Engine) | Microsoft-Dokumentation
+title: Entwickler&#39;s Guide (Datenbank-Engine) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530951"
 ---
-# <a name="developer39s-guide-database-engine"></a>Entwickler&#39;-e-Guide (Datenbank-Engine)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt einen umfangreichen Satz von Tools zum Entwickeln, Verwalten und Steuern von Datenbankanwendungen bereit.  
+# <a name="developer39s-guide-database-engine"></a>Entwickler&#39;s Guide (Datenbank-Engine)
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]stellt einen umfangreichen Satz von Tools zum entwickeln, verwalten und Steuern von Datenbankanwendungen bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
+ [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
  Beschreibt die Integration der CLR-Komponente (Common Language Runtime) von .NET Framework für [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Das bedeutet, dass Sie gespeicherte Prozeduren, Trigger, benutzerdefinierte Typen, benutzerdefinierte Funktionen, benutzerdefinierte Aggregate und Streaming-Tabellenwertfunktionen in einer beliebigen .NET Framework-Sprache schreiben können, einschließlich [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Basic .NET und [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual C#.  
   
  [Programmierung für SQL Server Native Client](native-client/sql-server-native-client-programming.md)  
@@ -34,12 +34,12 @@ ms.locfileid: "69530951"
  Beschreibt die jüngste Version von SQLXML, die dieselbe Funktionalität wie SQLXML 3.0 bereitstellt. Darüber hinaus bietet sie zusätzliche Updates mit neuen Funktionen, die in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] eingeführt wurden, wie beispielsweise den XML-Datentyp.  
   
  [Konzepte des WMI-Anbieters für die Konfigurationsverwaltung](wmi-provider-configuration/wmi-provider-for-configuration-management.md)  
- Beschreibt eine veröffentlichte Ebene, die mit dem Snap-In des [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Managers für Microsoft Management Console (MMC) und dem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager verwendet wird. Sie bietet eine vereinheitlichte Schnittstellenfunktion zu API-Aufrufen, mit denen die vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager angeforderten Registrierungsvorgänge verwaltet werden, und ermöglicht eine verbesserte Steuerung und Bearbeitung der ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienste.  
+ Beschreibt eine veröffentlichte Ebene, die mit dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager-Snap-in für die Microsoft Management Console (MMC) und [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Configuration Manager verwendet wird. Sie bietet eine vereinheitlichte Schnittstellenfunktion zu API-Aufrufen, mit denen die vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager angeforderten Registrierungsvorgänge verwaltet werden, und ermöglicht eine verbesserte Steuerung und Bearbeitung der ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienste.  
   
  [Konzepte des WMI-Anbieters für Serverereignisse](wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
  Beschreibt, wie die Windows-Verwaltungsinstrumentation (WMI) verwendet wird, um Ereignisse in einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu überwachen.  
   
- [SQL Server Management Objects &#40;SMO&#41; Programmierhandbuch](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
+ [Programmierungshandbuch für SQL Server Management Objects &#40;SMO&#41;](server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
  Enthält Informationen über [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO), eine Auflistung von Objekten, die zum Programmieren aller Aspekte der Verwaltung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vorgesehen sind.  
   
  [Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur](database-engine-extended-stored-procedure-programming.md)  
@@ -51,11 +51,11 @@ ms.locfileid: "69530951"
  [Programmierung eines Ausnahmemeldungsfelds](../database-engine/dev-guide/exception-message-box-programming.md)  
  Beschreibt, wie Sie das Ausnahmemeldungsfeld (eine programmgesteuerte Schnittstelle) in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Programmierung](../analysis-services/dev-guide/data-mining-programming.md)   
  [Entwicklerhandbuch &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [Entwicklerhandbuch &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Entwicklerhandbuch &#40;-Replikation&#41;](replication/concepts/replication-developer-documentation.md)   
+ [Entwicklerhandbuch &#40;Replikations&#41;](replication/concepts/replication-developer-documentation.md)   
  [Entwicklerhandbuch &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: database_role_members (Transact-SQL) | Microsoft-Dokumentation
+title: sys. database_role_members (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/31/2017
 ms.prod: sql
@@ -21,29 +21,29 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079467"
 ---
-# <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
+# <a name="sysdatabase_role_members-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt eine Zeile für jedes Mitglied jeder Datenbankrolle zurück.  Datenbankbenutzer, anderen Datenbankrollen und Anwendungsrollen können Mitglieder einer Datenbankrolle sein. Um Mitglieder einer Rolle hinzuzufügen, verwenden Sie die [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) -Anweisung mit der `ADD MEMBER` Option. Verknüpfen mit [Sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) die Namen der zurückzugebenden der `principal_id` Werte.
+  Gibt eine Zeile für jedes Mitglied jeder Datenbankrolle zurück.  Datenbankbenutzer, Anwendungs Rollen und andere Daten bankrollen können Mitglieder einer Daten Bank Rolle sein. Um Mitglieder zu einer Rolle hinzuzufügen, verwenden Sie die [Alter Role](../../t-sql/statements/alter-role-transact-sql.md) - `ADD MEMBER` Anweisung mit der-Option. Fügen Sie mit [sys. database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) ein, um die Namen `principal_id` der Werte zurückzugeben.
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**role_principal_id**|**int**|Datenbankprinzipal-ID der Rolle.|  
-|**member_principal_id**|**int**|Datenbankprinzipal-ID des Elements.|  
+|**role_principal_id**|**int**|Die Daten Bank Prinzipal-ID der Rolle.|  
+|**member_principal_id**|**int**|Die Daten Bank Prinzipal-ID des Mitglieds.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Jeder Benutzer kann die eigenen Rollenmitgliedschaften anzeigen. Andere Rolle an Mitgliedschaften erfordert die Mitgliedschaft in der `db_securityadmin` feste Datenbankrolle oder `VIEW DEFINITION` für die Datenbank.  
+ Jeder Benutzer kann die eigenen Rollenmitgliedschaften anzeigen. Zum Anzeigen anderer Rollen Mitgliedschaften ist die Mitgliedschaft in `db_securityadmin` der Fixed-Daten `VIEW DEFINITION` Bank Rolle oder in der-Datenbank erforderlich.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="example"></a>Beispiel  
- Die folgende Abfrage gibt die Mitglieder der Datenbankrollen zurück.  
+ Mit der folgenden Abfrage werden die Mitglieder der Daten bankrollen zurückgegeben.  
   
 ```  
 SELECT DP1.name AS DatabaseRoleName,   
@@ -57,12 +57,12 @@ WHERE DP1.type = 'R'
 ORDER BY DP1.name;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
-[ALTER ROLE (Transact-SQLL)](../../t-sql/statements/alter-role-transact-sql.md)      
-[Sys. server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
+[Alter Role (Transact-sqll)](../../t-sql/statements/alter-role-transact-sql.md)      
+[sys.server_role_members (Transact-SQL)](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)   
   
 
 

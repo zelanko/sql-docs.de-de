@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Systemtabellen zu Systemsichten (Transact-SQL) | Microsoft-Dokumentation
+title: Mapping von Systemtabellen zu System Sichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fa6fde13ccf4941e61ec29c9a257aeff9ee214eb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68095732"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>Zuordnen von Systemtabellen zu Systemsichten (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68095732"
 |Systemtabelle|Systemsichten bzw. -funktionen|Art der Sicht bzw. Funktion|  
 |------------------|-------------------------------|------------------------------|  
 |sysaltfiles|[sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|Katalogsicht|  
-|syscacheobjects|[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)<br /><br /> [dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_cached_plan_dependent_objects](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plan-dependent-objects-transact-sql.md)|Dynamische Verwaltungssicht<br /><br /> Dynamische Verwaltungssicht<br /><br /> Dynamische Verwaltungssicht<br /><br /> Dynamische Verwaltungssicht|  
+|syscacheobjects|[sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)<br /><br /> [sys. dm_exec_plan_attributes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_cached_plan_dependent_objects](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plan-dependent-objects-transact-sql.md)|Dynamische Verwaltungssicht<br /><br /> Dynamische Verwaltungssicht<br /><br /> Dynamische Verwaltungssicht<br /><br /> Dynamische Verwaltungssicht|  
 |syscharsets|[sys.syscharsets](../../relational-databases/system-compatibility-views/sys-syscharsets-transact-sql.md)|Kompatibilitätssicht|  
 |sysconfigures|[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)|Katalogsicht|  
 |syscurconfigs|[sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)|Katalogsicht|  
@@ -43,7 +43,7 @@ ms.locfileid: "68095732"
 |syslockinfo|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|Dynamische Verwaltungssicht|  
 |syslocks|[sys.dm_tran_locks](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)|Dynamische Verwaltungssicht|  
 |syslogins|[sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)<br /><br /> [sys.sql_logins](../../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md)|Katalogsicht|  
-|sysmessages|[sys.messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|Katalogsicht|  
+|sysmessages|[sys. Messages](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)|Katalogsicht|  
 |sysoledbusers|[sys.linked_logins](../../relational-databases/system-catalog-views/sys-linked-logins-transact-sql.md)|Katalogsicht|  
 |sysopentapes|[sys.dm_io_backup_tapes](../../relational-databases/system-dynamic-management-views/sys-dm-io-backup-tapes-transact-sql.md)|Dynamische Verwaltungssicht|  
 |sysperfinfo|[sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)|Dynamische Verwaltungssicht|  
@@ -74,7 +74,7 @@ ms.locfileid: "68095732"
 |sysusers|[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)|Katalogsicht|  
 |sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|Katalogsicht|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  

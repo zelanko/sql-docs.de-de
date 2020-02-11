@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0bb23beae7bcf8e47166ea205a3ce4e5a72f0493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126989"
 ---
 # <a name="sql-server-properties-log-on-tab"></a>SQL Server-Eigenschaften (Registerkarte Anmelden)
@@ -25,7 +25,7 @@ ms.locfileid: "63126989"
 >   
 >  Weitere Informationen über das Auswählen eines Kontos zum Ausführen des Dienstes finden Sie unter "Einrichten von Windows-Dienstkonten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Integriertes Konto**  
  **Lokales System**  
  -   Geben Sie das lokale Systemkonto an. Dieses Konto erfordert kein Kennwort. Das lokale Systemkonto kann die Zusammenarbeit mit anderen Servern verhindern. Dies hängt von den Privilegien ab, die dem Konto erteilt wurden.  
@@ -48,7 +48,7 @@ ms.locfileid: "63126989"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort des Kontos erneut ein.  
   
- **Start**  
+ **Starten**  
  Starten Sie den Dienst.  
   
  **Beenden**  

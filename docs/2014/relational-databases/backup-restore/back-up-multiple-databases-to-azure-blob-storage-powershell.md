@@ -11,17 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 701928a722e14cf3eb5c1e678a1dd764597f46ec
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783085"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>Verwenden von PowerShell zum Sichern mehrerer Datenbanken im Azure Blob Storage-Dienst
   Dieses Thema enthält Beispielskripts, die verwendet werden können, um Sicherungen im Azure Blob Storage-Dienst mit PowerShell-Cmdlets zu automatisieren.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>Übersicht über PowerShell-Cmdlets für Sicherungen und Wiederherstellungen  
- `Backup-SqlDatabase` und `Restore-SqlDatabase` sind die beiden wichtigsten Cmdlets, die für Sicherungs- und Wiederherstellungsvorgänge verfügbar sind. Darüber hinaus gibt es andere Cmdlets, die möglicherweise erforderlich sind, um Sicherungen im Azure Blob Storage-Dienst zu automatisieren, wie den Satz von **SqlCredential**-Cmdlets. Im Anschluss finden Sie eine Liste der PowerShell-Cmdlets, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbar sind und die in den Sicherungs- und Wiederherstellungsvorgängen verwendet werden:  
+ 
+  `Backup-SqlDatabase` und `Restore-SqlDatabase` sind die beiden wichtigsten Cmdlets, die für Sicherungs- und Wiederherstellungsvorgänge verfügbar sind. Darüber hinaus gibt es andere Cmdlets, die möglicherweise erforderlich sind, um Sicherungen im Azure Blob Storage-Dienst zu automatisieren, wie den Satz von **SqlCredential**-Cmdlets. Im Anschluss finden Sie eine Liste der PowerShell-Cmdlets, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verfügbar sind und die in den Sicherungs- und Wiederherstellungsvorgängen verwendet werden:  
   
  Backup_SqlDatabase  
  Dieses Cmdlet wird verwendet, um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung zu erstellen.  
@@ -49,9 +50,10 @@ ms.locfileid: "72783085"
   
  Folgende Überlegungen sind bei Beispielskripts zu bedenken:  
   
-1.  **Navigieren durch SQL Server PowerShell-Pfade:** Windows PowerShell implementiert Cmdlets, um in der Pfadstruktur zu navigieren, die die Hierarchie der von einem PowerShell-Anbieter unterstützten Objekte darstellt. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.  
+1.  **Navigieren in SQL Server PowerShell Pfaden:** Windows PowerShell implementiert Cmdlets, um in der Pfad Struktur zu navigieren, die die Hierarchie der von einem PowerShell-Anbieter unterstützten Objekte darstellt. Wenn Sie zu einem Knoten im Pfad navigiert haben, können Sie andere Cmdlets verwenden, um grundlegende Vorgänge für das aktuelle Objekt auszuführen.  
   
-2.  `Get-ChildItem`-Cmdlet: Welche Informationen von `Get-ChildItem` zurückgegeben werden, hängt vom Speicherort in einem SQL Server PowerShell-Pfad ab. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbank-Engine-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das `Get-ChildItem`-Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
+2.  
+  `Get-ChildItem`-Cmdlet: Welche Informationen von `Get-ChildItem` zurückgegeben werden, hängt vom Speicherort in einem SQL Server PowerShell-Pfad ab. Wenn der Speicherort auf der Computerebene liegt, gibt dieses Cmdlets alle SQL Server-Datenbank-Engine-Instanzen zurück, die auf dem Computer installiert sind. Wenn der Speicherort aber auf Objektebene, wie z. B. Datenbanken, liegt, dann gibt dieses Cmdlets eine Liste von Datenbankobjekten zurück.  Standardmäßig gibt das `Get-ChildItem`-Cmdlet keine Systemobjekte zurück.  Wenn Sie den -Force-Parameter verwenden, können Sie die Systemobjekte anzeigen.  
   
      Weitere Informationen finden Sie unter [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md).  
   
@@ -243,5 +245,5 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 }
 ```  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter
+## <a name="see-also"></a>Weitere Informationen
  [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Service](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md) [SQL Server bewährte Methoden und Problem](sql-server-backup-to-url-best-practices-and-troubleshooting.md) Behandlung bei URLs  

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6f7b166ae15e403e2a84bc3a7f3902350c805788
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73760591"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
@@ -37,7 +37,7 @@ ms.locfileid: "73760591"
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Resultsets gezeigt:  
   
-|SQL Server-Datentyp|SQL-Datentyp|Wert|  
+|SQL Server-Datentyp|SQL-Datentyp|value|  
 |--------------------------|-------------------|-----------|  
 |CLR-UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -133,20 +133,20 @@ ms.locfileid: "73760591"
 |Konvertierung von und zu:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Unterstützt|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|Unterstützt|  
 |SQL_C_CHAR|Unterstützt|  
   
- \* Binärdaten werden in eine hexadezimale Zeichenfolge konvertiert.  
+ \*Binärdaten werden in eine hexadezimale Zeichenfolge konvertiert.  
   
  Die unterstützten Konvertierungen von C- zu SQL-Datentypen sind wie folgt:  
   
 |Konvertierung von und zu:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Unterstützt|  
-|SQL_C_BINARY|Supported|  
+|SQL_C_BINARY|Unterstützt|  
 |SQL_C_CHAR|Unterstützt|  
   
- die Konvertierung \* hexadezimal Zeichenfolge in binäre Daten erfolgt  
+ \*Die Konvertierung der hexadezimalen Zeichenfolge in Binärdaten  
   
 ## <a name="sql_variant-support-for-udts"></a>SQL_VARIANT-Unterstützung für UDTs  
  UDTs werden in SQL_VARIANT-Spalten nicht unterstützt.  
@@ -213,7 +213,7 @@ ms.locfileid: "73760591"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Für UDTs werden folgende Werte zurückgegeben:  
   
-|SQL-Datentyp|Typ|Untertyp|Länge|Genauigkeit|Dezimalstellen|  
+|SQL-Datentyp|type|SubType|Länge|Precision|Skalieren|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -233,7 +233,7 @@ ms.locfileid: "73760591"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Die zulässigen Werte für UDTs lauten wie folgt:  
   
-|SQL-Datentyp|Typ|Untertyp|Länge|Genauigkeit|Dezimalstellen|  
+|SQL-Datentyp|type|SubType|Länge|Precision|Skalieren|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (Länge kleiner oder gleich 8.000 Bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (Länge größer als 8.000 Bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -241,7 +241,7 @@ ms.locfileid: "73760591"
 ### <a name="sqlspecialcolumns"></a>'SQLSpecialColumns'  
  Die für die Spalten DATA_TYPE, TYPE_NAME, COLUMN_SIZE, BUFFER_LENGTH und DECIMAL_DIGTS zurückgegebenen UDT-Werte sind im Abschnitt "Von SQLColumns und SQLProcedureColumns zurückgegebene Spaltenmetadaten (Katalogmetadaten)" oben erläutert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Große benutzerdefinierte CLR-Typen](../../../relational-databases/native-client/features/large-clr-user-defined-types.md)  
   
   

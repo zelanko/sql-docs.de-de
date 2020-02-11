@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036863"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
@@ -31,11 +31,11 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Stdev** -Funktion verwendet die ausgewogene Auffüllung Formel, während die ["StDevP"](../mdx/stdevp-mdx.md) -Funktion verwendet die Formel für die unausgewogene Auffüllung berechnet wurde.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **StDev** -Funktion verwendet die Formel für die unausgewogene Auffüllung, während die [STDE VP](../mdx/stdevp-mdx.md) -Funktion die Formel für die unausgewogene Auffüllung verwendet.  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird die Standardabweichung für Internet Order Quantity, ausgewertet über die ersten drei Monate des Kalenderjahres 2003, mithilfe der Formel für die ausgewogene Auffüllung zurückgegeben.  
@@ -51,7 +51,7 @@ SELECT Measures.x ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bde0035ae3c855d2add02003ca9ea84357146f90
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68809854"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>Kreuzvalidierung (Analysis Services - Data Mining)
-  Die *Kreuzvalidierung* ist ein Standardtool in der Analyse und eine wichtige Funktion, die Sie bei der Entwicklung und Feinabstimmung von Data Mining-Modellen unterstützt. Sie verwenden die übergreifende Überprüfung, nachdem Sie eine Miningstruktur und zugehörige Miningmodelle erstellt haben, um die Gültigkeit des Modells sicherzustellen.  Die übergreifende Überprüfung verfügt über die folgenden Anwendungen:  
+  Die *Kreuz Validierung* ist ein Standard Tool in Analytics und ist ein wichtiges Feature, das Sie bei der Entwicklung und Feinabstimmung von Data Mining Modellen unterstützt. Sie verwenden die übergreifende Überprüfung, nachdem Sie eine Miningstruktur und zugehörige Miningmodelle erstellt haben, um die Gültigkeit des Modells sicherzustellen.  Die übergreifende Überprüfung verfügt über die folgenden Anwendungen:  
   
 -   Überprüfen der Stabilität eines bestimmten Miningmodells  
   
@@ -46,9 +46,11 @@ ms.locfileid: "68809854"
   
     -   Die Anzahl von Aufteilungen, in die die Struktur- oder Modelldaten partitioniert werden sollen.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt und trainiert so viele Modelle, wie Aufteilungen vorhanden sind.  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt und trainiert so viele Modelle, wie Aufteilungen vorhanden sind.  
   
--   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt einen Satz von Genauigkeitsmetriken für jede Aufteilung in jedem Modell zurück oder für das Dataset als Ganzes.  
+-   
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gibt einen Satz von Genauigkeitsmetriken für jede Aufteilung in jedem Modell zurück oder für das Dataset als Ganzes.  
   
 ## <a name="configuring-cross-validation"></a>Konfigurieren der Kreuzvalidierung  
  Sie können anpassen, wie die Kreuzvalidierung arbeitet, die die Anzahl der Querschnitte sowie die getesteten Modelle und die Genauigkeitsleiste für Vorhersagen steuert. Wenn Sie die gespeicherten Prozeduren für die Kreuzvalidierung verwenden, können Sie auch das Dataset festlegen, das für die Überprüfung der Modelle verwendet wird. Diese Vielzahl der Auswahlmöglichkeiten bedeutet, dass Sie einfach zahlreiche Sätze von unterschiedlichen Ergebnissen erstellen können, die anschließend verglichen und analysiert werden müssen.  
@@ -60,7 +62,7 @@ ms.locfileid: "68809854"
   
  Das Beispiel im Diagramm veranschaulicht die Verwendung der Daten, wenn drei Aufteilungen angegeben werden.  
   
- ![Segmentierung von Daten in der Kreuz Validierung](../media/xvoverviewmain.gif "Segmentierung von Daten in der Kreuz Validierung")  
+ ![Datensegmentierung durch Kreuzvalidierung](../media/xvoverviewmain.gif "Datensegmentierung durch Kreuzvalidierung")  
   
  In dem Szenario in dem Diagramm enthält die Miningstruktur ein Zurückhaltungsdataset, das zu Testzwecken verwendet wird, das Testdataset wurde jedoch noch nicht für die Kreuzvalidierung hinzugefügt. Als Ergebnis werden alle Daten in dem Trainingsdataset, d. h. 70 Prozent der Daten in der Miningstruktur, für die Kreuzvalidierung verwendet. Der Bericht für die Kreuzvalidierung zeigt die Gesamtzahl der in jeder Partition verwendeten Fälle an.  
   
@@ -82,13 +84,14 @@ ms.locfileid: "68809854"
 ### <a name="choosing-models-and-columns-to-validate"></a>Auswählen von Modellen und Spalten zur Überprüfung  
  Wenn Sie die Registerkarte **Kreuzvalidierung** im Data Mining-Designer verwenden, müssen Sie zunächst aus einer Liste eine vorhersagbare Spalte auswählen. Eine einzelne Miningstruktur kann in der Regel mehrere Miningmodelle unterstützen, von denen nicht alle die gleiche vorhersagbare Spalte verwenden. Wenn Sie die Kreuzvalidierung ausführen, können nur die Modelle in den Bericht aufgenommen werden, die die gleiche vorhersagbare Spalte verwenden.  
   
- Um ein vorhersagbares Attribut auszuwählen, klicken Sie auf **Zielattribut** , und wählen Sie die Spalte aus der Liste aus. Wenn das Ziel Attribut eine in einer Spalte mit einer Spalte oder eine Spalte in einer Tabelle ist, müssen Sie den Namen der Spalte mit dem Namen > (Key) \<in der Format-Tabellen Tabelle eingeben.\< Die > der der Spalte. Wenn die einzige Spalte in der Tabelle, die in der Tabelle verwendet wird, die Schlüssel Spalte \<ist, können Sie den Namen > (Key) für eine Tabellen Tabelle verwenden.  
+ Um ein vorhersagbares Attribut auszuwählen, klicken Sie auf **Zielattribut** , und wählen Sie die Spalte aus der Liste aus. Wenn das Ziel Attribut eine in einer Spalte mit einer Spalte oder eine Spalte in einer Tabelle ist, müssen Sie den Namen der Spalte mit dem Namen> (Key) \<in der Format-Tabellen Tabelle eingeben. \<Die> der der Spalte. Wenn die einzige Spalte in der Tabelle, die in der Tabelle verwendet wird, die Schlüssel Spalte \<ist, können Sie den Namen> (Key) für eine Tabellen Tabelle verwenden.  
   
  Nachdem Sie das vorhersagbare Attribut ausgewählt haben, testet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatisch alle Modelle, die das gleiche vorhersagbare Attribut verwenden. Enthält das Zielattribut nach der Auswahl der vorhersagbaren Spalte diskrete Werte, können Sie optional einen vorhergesagten Status eingeben, wenn es einen bestimmten Wert gibt, den Sie vorhersagen möchten.  
   
  Die Auswahl des vorhergesagten Status beeinflusst die Measures, die zurückgegeben werden. Wenn Sie ein Ziel Attribut angeben, d. h. einen Spaltennamen und keinen bestimmten Wert auswählen, den das Modell Vorhersagen soll, wird das Modell standardmäßig anhand seiner Vorhersage des wahrscheinlichsten Zustands ausgewertet.  
   
- Wenn Sie die Kreuzvalidierung mit Clustermodellen verwenden, gibt es keine vorhersagbare Spalte. Stattdessen wählen Sie im Listenfeld **Zielattribut** den Eintrag **#Cluster** aus der Liste aus. Nachdem Sie diese Option ausgewählt haben, werden andere Optionen, die für Clusteringmodelle nicht relevant sind, z. B. **Zielstatus**, deaktiviert. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testet dann alle Clusteringmodelle, die der Miningstruktur zugeordnet sind.  
+ Wenn Sie die Kreuzvalidierung mit Clustermodellen verwenden, gibt es keine vorhersagbare Spalte. Stattdessen wählen Sie im Listenfeld **Zielattribut** den Eintrag **#Cluster** aus der Liste aus. Nachdem Sie diese Option ausgewählt haben, werden andere Optionen, die für Clusteringmodelle nicht relevant sind, z. B. **Zielstatus**, deaktiviert. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] testet dann alle Clusteringmodelle, die der Miningstruktur zugeordnet sind.  
   
 ## <a name="tools-for-cross-validation"></a>Tools für die Kreuzvalidierung  
  Sie können die Kreuzvalidierung im Data Mining-Designer verwenden, oder Sie können die Kreuzvalidierung ausführen, indem Sie gespeicherte Prozeduren ausführen.  
@@ -111,17 +114,17 @@ ms.locfileid: "68809854"
   
  Für die erste Phase rufen Sie eine gespeicherte Systemprozedur auf, die so viele Partitionen erstellt, wie Sie im Dataset festgelegt haben, und gibt Genauigkeitsergebnisse für jede Partition zurück. Für jede Metrik berechnet Analysis Services anschließend die mittlere und die Standardabweichung für die Partitionen.  
   
--   [SystemGetCrossValidationResults &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetCrossValidationResults &#40;Analysis Services-Data Mining-&#41;](/sql/analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining)  
   
--   [SystemGetClusterCrossValidationResults &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
+-   [SystemGetClusterCrossValidationResults &#40;Analysis Services-Data Mining-&#41;](/sql/analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining)  
   
- **Generieren von Metriken für gesamtes Dataset**  
+ **Generieren von Metriken für das gesamte Dataset**  
   
  In der zweiten Phase rufen Sie einen anderen Satz mit gespeicherten Prozeduren auf. Diese gespeicherten Prozeduren partitionieren nicht das Dataset, sondern generieren Genauigkeitsergebnisse für das festgelegte Dataset als Ganzes. Wenn Sie eine Miningstruktur bereits partitioniert und verarbeitet haben, können Sie diesen zweiten Satz mit gespeicherten Prozeduren aufrufen, um nur die Ergebnisse abzurufen.  
   
--   [SystemGetAccuracyResults &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
+-   [SystemGetAccuracyResults &#40;Analysis Services-Data Mining-&#41;](/sql/analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining)  
   
--   [SystemGetClusterAccuracyResults &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
+-   [SystemGetClusterAccuracyResults &#40;Analysis Services-Data Mining-&#41;](/sql/analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining)  
   
 #### <a name="defining-the-testing-data"></a>Definieren der Testdaten  
  Wenn Sie die gespeicherten Prozeduren für die Kreuzvalidierung ausführen, die die Genauigkeit berechnen (SystemGetAccuracyResults oder SystemGetClusterAccuracyResults), können Sie die Quelle der Daten festlegen, die während der Kreuzvalidierung für den Test verwendet werden. Diese Option ist in der Benutzeroberfläche nicht verfügbar.  
@@ -181,16 +184,16 @@ ms.locfileid: "68809854"
   
 |Themen|Links|  
 |------------|-----------|  
-|Beschreibt, wie Kreuzvalidierungsparameter in SQL Server Development Studio festgelegt werden.|[Übergreifende Überprüfung &#40;Registerkarte, Mininggenauigkeitsdiagramm-Sicht&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
+|Beschreibt, wie Kreuzvalidierungsparameter in SQL Server Development Studio festgelegt werden.|[Registerkarte Kreuz Validierung &#40;Mining Genauigkeits Diagramm Ansicht&#41;](../cross-validation-tab-mining-accuracy-chart-view.md)|  
 |Beschreibt die Metriken, die von der Kreuzvalidierung bereitgestellt werden.|[Kreuzvalidierungsformeln](cross-validation-formulas.md)|  
 |Erklärt das Kreuzvalidierungsberichtsformat und definiert die statistischen für jeden Modelltyp bereitgestellten Measures.|[Measures im Kreuzvalidierungsbericht](measures-in-the-cross-validation-report.md)|  
-|Listet die gespeicherten Prozeduren zum Berechnen von Kreuzvalidierungsstatistiken auf.|[Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
+|Listet die gespeicherten Prozeduren zum Berechnen von Kreuzvalidierungsstatistiken auf.|[Data Mining-gespeicherte Prozeduren &#40;Analysis Services Data Mining-&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)|  
 |||  
 |Beschreibt, wie ein Testdataset für Miningstrukturen und verwandte Modelle erstellt wird.|[Trainings- und Testdatasets](training-and-testing-data-sets.md)|  
-|Siehe Beispiele für weitere Genauigkeitsdiagrammtypen.|[Klassifikationsmatrix &#40;Analysis Services – Data Mining&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinndiagramm &#40;Analysis Services – Data Mining&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punktdiagramm &#40;Analysis Services – Data Mining&#41;](scatter-plot-analysis-services-data-mining.md)|  
-|Beschreibt die Schritte zum Erstellen von verschiedenen Genauigkeitsdiagrammen.|[Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
+|Siehe Beispiele für weitere Genauigkeitsdiagrammtypen.|[Klassifizierungs Matrix &#40;Analysis Services Data Mining-&#41;](classification-matrix-analysis-services-data-mining.md)<br /><br /> [Lift Chart &#40;Analysis Services-Data Mining-&#41;](lift-chart-analysis-services-data-mining.md)<br /><br /> [Gewinn Diagramm &#40;Analysis Services-Data Mining-&#41;](profit-chart-analysis-services-data-mining.md)<br /><br /> [Punkt Diagramm &#40;Analysis Services-Data Mining-&#41;](scatter-plot-analysis-services-data-mining.md)|  
+|Beschreibt die Schritte zum Erstellen von verschiedenen Genauigkeitsdiagrammen.|[Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
   
   

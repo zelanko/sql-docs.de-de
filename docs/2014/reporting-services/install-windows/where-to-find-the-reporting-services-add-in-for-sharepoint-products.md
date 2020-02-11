@@ -12,23 +12,23 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 11/16/2015
 ms.openlocfilehash: adee6ee7d0d769d8e87e228c475b224a3e78675b
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73637877"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte
 
-Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)-Add-In für SharePoint-Produkte und -Technologien (rsSharePoint.msi) ist ein Webdownload, der Funktionen zum Integrieren eines Berichtsservers in eine SharePoint-Bereitstellung bietet.  
+Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)-Add-in für SharePoint-Produkte und-Technologien (rsSharePoint. msi) ist ein Webdownload, der Funktionen zum Integrieren eines Berichts Servers in eine SharePoint-Bereitstellung bietet.  
   
 > [!IMPORTANT]  
->  Eine Liste der unterstützten Kombinationen aus dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Add-in, Berichts Server und SharePoint finden Sie [unter Unterstützte Kombinationen von SharePoint und Reporting Services Server und Add-in &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
+>  Eine Liste der unterstützten Kombinationen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Add-in, Berichts Server und SharePoint finden Sie [unter Unterstützte Kombinationen von SharePoint und Reporting Services Server und Add-in &#40;SQL Server 2014&#41;](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
   
-##  <a name="bkmk_sql14"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services-Add-In für SharePoint-Produkte  
+##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services-Add-in für SharePoint-Produkte  
  Anweisungen zum Herunterladen und Installieren des Add-Ins finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   [Microsoft® SQL Server 2014 Reporting Services-Add-In für Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=53162)  
+-   [Microsoft® SQL Server 2014 Reporting Services-Add-in für Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=53162)  
   
  Die [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Version des Add-Ins ist auch im Installations-Assistenten für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] verfügbar:  
   
@@ -36,16 +36,16 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
 -   Bei einer Installation über die Eingabeaufforderung verwenden Sie die Option **RS_SHPWFE** , um das Add-In zu installieren. Weitere Information zur Installation an der Eingabeaufforderung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] finden Sie unter [Command Prompt Installation of Reporting Services SharePoint Mode and Native Mode](install-reporting-services-at-the-command-prompt.md).  
   
-##  <a name="bkmk_sql11sp1"></a> [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Reporting Services-Add-In für SharePoint-Produkte  
+##  <a name="bkmk_sql11sp1"></a>[!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] Reporting Services-Add-in für SharePoint-Produkte  
  Durch die [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] -Version des Add-Ins und Berichtsservers wird Unterstützung für SharePoint Server 2013 hinzugefügt.  
   
  Anweisungen zum Herunterladen und Installieren des Add-Ins finden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center:  
   
--   **SP1-Add-In:** [Microsoft® SQL Server® 2012 SP1 Reporting Services-Add-In für Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583).  
+-   **SP1-Add-in:**  [Microsoft® SQL Server® 2012 SP1 Reporting Services-Add-in für Microsoft® SharePoint®](https://www.microsoft.com/download/details.aspx?id=35583)(https://www.microsoft.com/download/details.aspx?id=35583)).  
   
--   **SP1:** [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
+-   **SP1:**  [Microsoft® SQL Server® 2012 Service Pack 1 (SP1)](https://www.microsoft.com/download/details.aspx?id=35575) (https://www.microsoft.com/download/details.aspx?id=35575).  
   
-##  <a name="bkmk_sql11"></a> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services-Add-In für SharePoint 2010-Produkte  
+##  <a name="bkmk_sql11"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Reporting Services-Add-in für SharePoint 2010-Produkte  
  Das Add-In kann ab Version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als Teil des SQL Server-Installations-Assistenten auf der Seite mit der Funktionsauswahl installiert werden. Wenn Sie das Add-In herunterladen und separat installieren möchten, steht die aktuelle Version dieser Datei online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft® SQL Server® 2012 Reporting Services-Add-In für Microsoft® SharePoint®-Technologien 2010](https://go.microsoft.com/fwlink/?LinkID=207242) zur Verfügung.  
   
 ##  <a name="bkmk_sql2008r2"></a>SQL Server 2008 R2 Reporting Services-Add-in für SharePoint 2010-Produkte  
@@ -64,9 +64,9 @@ Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](.
   
  Die aktuelle Version dieser Datei steht online im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center unter [Microsoft SQL Server 2008 Reporting Services-Add-In für Microsoft SharePoint-Technologien](https://www.microsoft.com/download/details.aspx?id=622)zur Verfügung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren oder Deinstallieren des Reporting Services-Add-Ins für &#40;SharePoint SharePoint 2010 und Share&#41; Point 2013](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
- [Hinzufügen von Berichts Server-Inhaltstypen &#40;zu einer Bibliothek Reporting Services im integrierten&#41; SharePoint-Modus](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
- [Nach der Deinstallation des Reporting Services-Add-Ins können Sie keine SharePoint-Seiten in der nicht standardmäßigen Zone durchsuchen.](https://support.microsoft.com/kb/2009212)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
+ [Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md)   
+ [Nach dem Deinstallieren Reporting Services Add-Ins können Sie keine SharePoint-Seiten in der nicht standardmäßigen Zone durchsuchen.](https://support.microsoft.com/kb/2009212)  
   
   

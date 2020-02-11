@@ -31,10 +31,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85de606ecea93aba80714d4266e9897dd856879f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092502"
 ---
 # <a name="resolving-upgrade-issues"></a>Beheben von Upgradeproblemen
@@ -50,9 +50,9 @@ ms.locfileid: "66092502"
   
 -   [Probleme beim Replikationsupgrade](../../../2014/sql-server/install/replication-upgrade-issues.md)  
   
--   [Upgradeprobleme bei Reporting Services &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
+-   [Reporting Services Upgradeprobleme &#40;Upgrade Advisor&#41;](../../../2014/sql-server/install/reporting-services-upgrade-issues-upgrade-advisor.md)  
   
--   [Probleme beim Upgrade des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
+-   [Probleme beim Aktualisieren des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  
   
 ## <a name="issues-that-prevent-upgrading"></a>Probleme, die ein Upgrade verhindern  
  Einige Konfigurationen oder Einstellungen in einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verhindern. Wenn das Setup solche Probleme bei der Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erkennt, hält es den Upgradeprozess an und fordert Sie auf, den Upgrade Advisor auszuführen und blockierende Probleme zu beseitigen.  
@@ -60,15 +60,15 @@ ms.locfileid: "66092502"
 ### [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
  Wenn die folgenden Tasks im [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Upgradebericht enthalten sind, müssen Sie die erforderlichen Aktionen durchführen, bevor Sie ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vornehmen.  
   
--   [Trennen der Datenbank-ID 32767](../../../2014/sql-server/install/detach-database-id-32767.md)  
+-   [Datenbank-ID 32767 trennen](../../../2014/sql-server/install/detach-database-id-32767.md)  
   
--   [Umbenennen von Anmeldeinformationen, die mit Namen fester Serverrollen identisch sind](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
+-   [Umbenennen von Anmeldungen, die mit Namen fester Serverrollen identisch sind](../../../2014/sql-server/install/rename-logins-matching-fixed-server-role-names.md)  
   
--   [Umbenennen des Benutzers in „sys“](../../../2014/sql-server/install/rename-user-sys.md)  
+-   [Benennen Sie den Benutzer 'sys' um](../../../2014/sql-server/install/rename-user-sys.md)  
   
--   [Verwenden von „sp_rename“ zum Umbenennen doppelter Indexnamen](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
+-   [Verwenden Sie bei doppelten Indexnamen 'sp_rename' zum Umbenennen](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

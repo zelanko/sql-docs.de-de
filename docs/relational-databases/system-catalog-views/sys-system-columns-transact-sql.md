@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cdb28d10d04c21f0d377777b41c332eb20d1ee9c
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981918"
 ---
 # <a name="syssystem_columns-transact-sql"></a>sys.system_columns (Transact-SQL)
@@ -32,17 +32,17 @@ ms.locfileid: "73981918"
 
   Enthält eine Zeile für jede Spalte von Systemobjekten, die Spalten aufweisen.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Die ID des Objekts, zu dem diese Spalte gehört.|  
-|**name**|**sysname**|Der Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
+|**name**|**sysname**|Name der Spalte. Ist eindeutig innerhalb des Objekts.|  
 |**column_id**|**int**|ID der Spalte. Ist eindeutig innerhalb des Objekts.<br /><br /> Spalten-IDs sind möglicherweise nicht sequenziell.|  
 |**system_type_id**|**tinyint**|Die ID des Systemtyps der Spalte.|  
 |**user_type_id**|**int**|Die ID des vom Benutzer definierten Typs der Spalte.<br /><br /> Stellen Sie einen Join mit der [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) -Katalogsicht für diese Spalte her, um den Namen des Typs zurückzugeben.|  
-|**max_length**|**smallint**|Maximale Länge der Spalte (in Bytes).<br /><br /> -1 = der Spaltendatentyp ist **varchar (max)** , **nvarchar (max)** , **varbinary (max)** oder **XML**.<br /><br /> Bei **Text** Spalten ist der **max_length** Wert 16 oder der Wert, der durch **sp_tableoption** ' Text in row ' festgelegt wird.|  
+|**max_length**|**smallint**|Maximale Länge der Spalte (in Bytes).<br /><br /> -1 = der Spaltendatentyp ist **varchar (max)**, **nvarchar (max)**, **varbinary (max)** oder **XML**.<br /><br /> Bei **Text** Spalten ist der **max_length** Wert 16 oder der Wert, der durch **sp_tableoption** ' Text in row ' festgelegt wird.|  
 |**precision**|**tinyint**|Die Genauigkeit der Spalte, wenn sie auf numerischen Werten basiert; andernfalls 0.|  
 |**scale**|**tinyint**|Dezimalstellen der Spalte, wenn diese numerischen Ursprungs ist, andernfalls 0.|  
-|**collation_name**|**sysname**|Name der Sortierung der Spalte, wenn Zeichen basiert; andernfalls NULL.|  
+|**collation_name**|**sysname**|Name der Sortierung der Spalte, wenn diese zeichenbasiert ist, andernfalls NULL.|  
 |**is_nullable**|**bit**|1 = Spalte lässt NULL-Werte zu.|  
 |**is_ansi_padded**|**bit**|1 = Spalte verwendet ANSI_PADDING ON-Verhalten, wenn es sich um Zeichen- oder Binärdaten bzw. Daten vom Typ Variant handelt.<br /><br /> 0 = Bei der Spalte handelt es sich um Zeichen- oder Binärdaten bzw. Daten vom Typ Variant.|  
 |**is_rowguidcol**|**bit**|1 = Spalte ist eine deklarierte ROWGUIDCOL.|  
@@ -56,21 +56,21 @@ ms.locfileid: "73981918"
 |**is_xml_document**|**bit**|1 = Der Inhalt ist ein vollständiges XML-Dokument.<br /><br /> 0 = der Inhalt ist ein Dokument Fragment, oder der Spaltendatentyp ist nicht **XML**.|  
 |**xml_collection_id**|**int**|Ungleich 0 (null), wenn der Spaltendatentyp **XML** ist und die XML-Daten eingegeben werden. Der Wert entspricht der ID der Auflistung, die den prüfenden XML-Schemanamespace der Spalte enthält.<br /><br /> 0 = Keine XML-Schemaauflistung|  
 |**default_object_id**|**int**|ID des Standard Objekts, unabhängig davon, ob es sich um eine eigenständige [sys. sp_bindefault](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)oder eine Inline-Standard Einschränkung auf Spaltenebene handelt. Die **parent_object_id** -Spalte eines Inline-Standard Objekts auf Spaltenebene ist ein Verweis zurück auf die Tabelle selbst. Ist 0, wenn kein Standardwert vorhanden ist.|  
-|**rule_object_id**|**int**|Die ID der eigenständigen Regel, die mithilfe von **sys. sp_bindrule**an die Spalte gebunden ist.<br /><br /> 0 = Keine eigenständige Regel.<br /><br /> Informationen zu Check-Einschränkungen auf Spaltenebene finden Sie unter [sys. check_constraints &#40;&#41;Transact-SQL](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
+|**rule_object_id**|**int**|Die ID der eigenständigen Regel, die mithilfe von **sys. sp_bindrule**an die Spalte gebunden ist.<br /><br /> 0 = Keine eigenständige Regel.<br /><br /> Informationen zu Check-Einschränkungen auf Spaltenebene finden Sie unter [sys. check_constraints &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md).|  
 |is_sparse|**bit**|1 = Spalte ist eine Sparsespalte. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](../../relational-databases/tables/use-sparse-columns.md).|  
 |is_column_set|**bit**|1 = Spalte ist ein Spaltensatz. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](../../relational-databases/tables/use-column-sets.md).|  
 |generated_always_type|**tinyint**|Der numerische Wert, der den Typ der Spalte darstellt:<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = AS_ROW_START<br /><br /> 2 = AS_ROW_END|  
-|generated_always_type_desc|**nvarchar(60)**|Die Textbeschreibung des Spalten Typs:<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
+|generated_always_type_desc|**nvarchar (60)**|Die Textbeschreibung des Spalten Typs:<br /><br /> NOT_APPLICABLE<br /><br /> AS_ROW_START<br /><br /> AS_ROW_END<br /><br /> **Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Abfragen der SQL Server-System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
- [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys. computed_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
+ [Abfragen der SQL Server System Katalog-FAQ](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [sys. Columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
+ [sys. ALL_COLUMNS &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [sys. computed_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)  
   
   

@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c848277505dde5fabb10247641ee6b7f955d84e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006285"
 ---
-# <a name="comment---mdx-operator-reference"></a>Comment - MDX-Operatorreferenz
+# <a name="comment---mdx-operator-reference"></a>Kommentar: MDX-Operator Referenz
 
 
   Zeigt vom Benutzer bereitgestellten Kommentartext an.  
@@ -31,7 +31,7 @@ ms.locfileid: "68006285"
  *Comment_Text*  
  Die Zeichenfolge, die den Text des Kommentars enthält.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Kommentare können in einer eigenen Zeile, geschachtelt am Ende einer MDX-Skriptzeile (Multidimensional Expressions) oder geschachtelt in einer MDX-Anweisung eingefügt werden. Der Kommentar wird vom Server nicht ausgewertet.  
   
  Verwenden Sie diesen Operator für einzeilige oder geschachtelte Kommentare. Kommentare, die mit -- eingefügt werden, sind vom Zeilenschaltzeichen begrenzt.  
@@ -54,9 +54,9 @@ WHERE
     [Measures].[Gross Profit Margin]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Kommentar &#40;MDX&#41;](../mdx/comment-mdx.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Kommentar &#40;MDX-&#41;](../mdx/comment-mdx.md)   
  [&#40;Kommentar&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)   
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

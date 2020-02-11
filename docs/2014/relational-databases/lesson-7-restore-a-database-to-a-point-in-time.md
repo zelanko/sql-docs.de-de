@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175424"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>Lektion 8: Wiederherstellen einer Datenbank in Azure Storage
@@ -97,6 +97,6 @@ ms.locfileid: "70175424"
   
  **Nächste Lektion:**  
   
- [Lektion 9: Wiederherstellen einer Datenbank aus Azure Storage](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [Lektion 9. Wiederherstellen einer Datenbank aus Azure Storage](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

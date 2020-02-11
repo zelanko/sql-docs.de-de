@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530818"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
   Verwenden Sie die Anweisungen und Links in diesem Thema, um alle Daten- und Projektdateien zu installieren, die in den Analysis Services-Lernprogrammen verwendet werden.  
   
-## <a name="step-1-install-sql-server-software"></a>Schritt 1: Installieren von SQL Server Software  
+## <a name="step-1-install-sql-server-software"></a>Schritt 1: Installieren der SQL Server-Software  
  In den Lektionen dieses Lernprogramms wird vorausgesetzt, dass Sie folgende Software installiert haben. Sämtliche folgende Software wird mit dem SQL Server-Installationsmedium installiert. Zur Vereinfachung der Bereitstellung können Sie alle Funktionen auf einem einzelnen Computer installieren. Um diese Funktionen zu installieren, führen Sie SQL Server-Setup aus, und wählen Sie auf der Seite Funktionsauswahl diese Funktionen aus. Weitere Informationen finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).  
   
 -   Datenbank-Engine  
   
 -   Analysis Services  
   
-     Analysis Services ist nur in diesen Editionen verfügbar: Evaluation, Enterprise, Business Intelligence, Standard.  
+     Analysis Services ist nur in der Evaluation, Enterprise, Business Intelligence und Standard Edition verfügbar.  
   
-     In den Express-Editionen von SQL Server ist Analysis Services nicht enthalten. [Laden Sie die Evaluation Edition herunter](https://go.microsoft.com/fwlink/?LinkId=392824), um die Software kostenlos zu testen.  
+     In den Express-Editionen von SQL Server ist Analysis Services nicht enthalten. [Laden Sie die Evaluierungsversion herunter](https://go.microsoft.com/fwlink/?LinkId=392824) , wenn Sie die Software kostenlos ausprobieren möchten.  
   
      Analysis Services wird standardmäßig als mehrdimensionale Instanz installiert. Sie können diesen Modus überschreiben, indem Sie im Installations-Assistenten auf der Seite für die Serverkonfiguration den tabellarischen Servermodus auswählen. Falls Sie beide Servermodi ausführen möchten, führen Sie SQL Server-Setup auf demselben Computer erneut aus, um eine zweite Analysis Services-Instanz im anderen Modus zu installieren.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "69530818"
   
  Gehen Sie zum Installieren dieser Datenbank wie folgt vor:  
   
-1.  Laden Sie die [ AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770)-Datenbank von der Seite mit Produktbeispielen auf Codeplex herunter.  
+1.  Laden Sie die [AdventureWorkDW2012](https://go.microsoft.com/fwlink/p/?LinkID=221770) -Datenbank von der Seite mit Produktbeispielen auf Codeplex herunter.  
   
      Der Datenbankdateiname ist AdvntureWorksDW2012_Data.mdf. Die Datei sollte sich im Ordner Downloads auf dem Computer befinden.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "69530818"
   
 7.  Entfernen Sie in den Datenbankdetails den Eintrag für die Protokolldatei. Das Setupprogramm geht davon aus, dass Sie über eine Protokolldatei verfügen, allerdings wird im Beispiel keine Protokolldatei verwendet. Wenn Sie die Datenbank anfügen, wird automatisch eine neue Protokolldatei erstellt. Wählen Sie die Protokolldatei aus, klicken Sie auf **Entfernen**, und klicken Sie anschließend auf **OK** , um nur die primäre Datenbankdatei anzufügen.  
   
-## <a name="step-4-grant-database-permissions"></a>Schritt 4: Erteilen von Daten Bank Berechtigungen  
+## <a name="step-4-grant-database-permissions"></a>Schritt 4: Gewähren von Datenbankberechtigungen  
  In den Beispielprojekten werden Einstellungen für den Datenquellenidentitätswechsel verwendet, die den Sicherheitskontext angeben, unter dem Daten importiert oder verarbeitet werden. Standardmäßig geben die Identitätswechseleinstellungen das Analysis Services-Dienstkonto für den Zugriff auf die Daten an. Um diese Standardeinstellung zu verwenden, müssen Sie sicherstellen, dass das Dienstkonto, unter dem Analysis Services ausgeführt wird, über Datenleserberechtigungen für die Datenbank **AdventureWorksDW2012** verfügt.  
   
 > [!NOTE]  
@@ -142,14 +142,14 @@ ms.locfileid: "69530818"
   
      Der Servername für Verbindungen mit Analysis Services wird in den Eigenschaftenseiten des Projekts auf der Registerkarte Bereitstellung angegeben und ebenfalls im Projektmappen-Explorer angezeigt.  
   
-8.  Starten von SQL Server Management Studio Stellen Sie in SQL Server Management Studio eine Verbindung mit Analysis Services her. Überprüfen Sie, ob auf dem Server eine Datenbank mit dem Namen **Analysis Services Tutorial** ausgeführt wird.  
+8.  Starten Sie SQL Server Management Studio. Stellen Sie in SQL Server Management Studio eine Verbindung mit Analysis Services her. Überprüfen Sie, ob auf dem Server eine Datenbank mit dem Namen **Analysis Services Tutorial** ausgeführt wird.  
   
 ## <a name="next-step"></a>Nächster Schritt  
  Jetzt können Sie das Lernprogramm verwenden. Weitere Informationen für den Einstieg finden Sie unter [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren von SQL Server 2014 über den Installations &#40;-Assistenten&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
- [Configure the Windows Firewall to Allow Analysis Services Access](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren Sie SQL Server 2014 über den Installations-Assistenten &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
+ [Konfigurieren der Windows-Firewall für den Analysis Services Zugriff](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
  [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

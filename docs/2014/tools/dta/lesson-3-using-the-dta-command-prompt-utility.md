@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 3: Verwenden des Dta Command Prompt Utility | Microsoft-Dokumentation'
+title: 'Lektion 3: Verwenden des Befehlszeilen-Hilfsprogramms DTA | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e2881a2a118306f9d567236516f05bb29ad2d60a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68186572"
 ---
-# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lektion 3: Verwenden des dta-Befehlszeilenprogramms
-  Mit dem Befehlszeilenprogramm **dta** wird die Funktionalität des Datenbankoptimierungsratgebers erweitert.  
+# <a name="lesson-3-using-the-dta-command-prompt-utility"></a>Lektion 3: Verwenden des Befehlszeilenprogramms dta
+  Das Eingabeaufforderungs-Hilfsprogramm **DTA** bietet zusätzlich zu den Funktionen, die von der Datenbankoptimierungsratgeber bereitgestellt werden.  
   
- Sie können mit Ihren bevorzugten XML-Tools Eingabedateien für das Befehlszeilenprogramm erstellen und dabei das XML-Schema des Datenbankoptimierungsratgebers verwenden. Dieses Schema wird installiert, bei der Installation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und finden Sie unter: C:\Programme\Microsoft Dateien (x86) \Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
+ Sie können mit Ihren bevorzugten XML-Tools Eingabedateien für das Befehlszeilenprogramm erstellen und dabei das XML-Schema des Datenbankoptimierungsratgebers verwenden. Dieses Schema wird zusammen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert. Es befindet sich unter: C:\Programme (x86)\Microsoft SQL Server\110\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd.  
   
  Das XML-Schema des Datenbankoptimierungsratgebers ist auch online auf [dieser Microsoft-Website](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409)verfügbar.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "68186572"
   
  Die Lektion enthält die folgenden Themen:  
   
--   Starten des Befehlzeilenprogramms **dta** und Optimieren einer Arbeitsauslastung  
+-   Starten des Befehlszeilen-Hilfsprogramms **DTA** und Optimieren einer Arbeitsauslastung  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Starten des Befehlzeilenprogramms dta und Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)  
   
   

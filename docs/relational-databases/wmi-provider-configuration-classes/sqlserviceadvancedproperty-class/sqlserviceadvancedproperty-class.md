@@ -18,10 +18,10 @@ ms.assetid: a5d06bde-6058-464c-a4aa-444d83f2331f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 58fb650f9750e81b5e86b86cb5f630a843173930
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73658993"
 ---
 # <a name="sqlserviceadvancedproperty-class"></a>SqlServiceAdvancedProperty-Klasse
@@ -32,7 +32,7 @@ ms.locfileid: "73658993"
   
  Die Klasse zum [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx) stellt Eigenschaften dar, die spezifisch für den Dienst sind. Diese Eigenschaften sind nicht in der Liste der Eigenschaften aufgeführt, die der [SqlService-Klasse](https://technet.microsoft.com/library/ms186497.aspx) zugeordnet sind. Mit der [SqlServiceAdvancedProperty-Klasse](https://technet.microsoft.com/library/ms182447.aspx) können Eigenschaften vom Typ string, numeric oder Boolean dargestellt werden. Sie können mithilfe dieser Klasse die einzigartigen Eigenschaften des angegebenen Diensts anzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Starten, beenden und Anhalten von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Starten, Beenden und Anhalten von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

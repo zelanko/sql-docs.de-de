@@ -1,5 +1,5 @@
 ---
-title: Veröffentlichungseigenschaften für SQL Server-Replikation - | Microsoft-Dokumentation
+title: Eigenschaften der SQL Server-Replikation Veröffentlichung-| Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,19 +21,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17b2e566be6bedbb032b7a4fc06c938075bd32e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022452"
 ---
-# <a name="sql-server-replication-publication-properties"></a>Eigenschaften von SQL Server-Replikation-Veröffentlichung 
-  Dieser Abschnitt enthält Informationen zu allen Seiten des der **Veröffentlichungseigenschaften** Dialogfeld. 
+# <a name="sql-server-replication-publication-properties"></a>Eigenschaften der SQL Server-Replikation Veröffentlichung 
+  Dieser Abschnitt enthält Informationen zu allen Seiten des Dialog Felds **Veröffentlichungs Eigenschaften** . 
 
 ## <a name="general"></a>Allgemein
   Auf der Seite **Allgemein** des Dialogfelds **Veröffentlichungseigenschaften** sind grundlegende Informationen wie Name, Beschreibung und Abonnementablaufrichtlinie der Veröffentlichung enthalten  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Name**  
  Der Name der Veröffentlichung (schreibgeschützt).  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63022452"
  Der Typ der Veröffentlichung (schreibgeschützt).  
   
  **Abonnementablauf**  
- Wählen Sie eine der Ablaufoptionen für das Abonnement aus: **Subscriptions never expire** (Abonnements laufen nie ab) oder **Subscriptions expire** (Abonnements laufen ab) mit einem festen Zeitraum (**Intervall**).  
+ Wählen Sie eine der Optionen für Abonnementablauf aus: **Abonnements laufen nie ab** oder **Abonnements laufen ab**, und geben Sie einen expliziten Zeitraum an (**Intervall**).  
   
  Bei Momentaufnahme- und Transaktionsveröffentlichungen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , die Standardeinstellung **Abonnements laufen nie ab**zu übernehmen.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "63022452"
  Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
  **Kompatibilitätsgrad**  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher; nur für Mergeveröffentlichungen. Wählen Sie die niedrigste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version aus, die für Abonnenten, die mit dieser Veröffentlichung synchronisiert werden, erforderlich ist. Für die Bestimmung des Kompatibilitätsgrades gibt es eine Reihe von Regeln.  
+ Nur [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher; nur Mergeveröffentlichungen. Wählen Sie die niedrigste [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version aus, die für Abonnenten, die mit dieser Veröffentlichung synchronisiert werden, erforderlich ist. Für die Bestimmung des Kompatibilitätsgrades gibt es eine Reihe von Regeln.  
 
-## <a name="filter-rows"></a>Filtern von Zeilen
+## <a name="filter-rows"></a>Zeilen filtern
 
   Mithilfe der Seite **Filterzeilen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie Elemente hinzufügen, bearbeiten oder löschen:  
   
@@ -79,12 +79,12 @@ ms.locfileid: "63022452"
 -   Vermeiden oder Reduzieren von Konflikten beim Aktualisieren von Daten durch Abonnenten, da unterschiedliche Datenpartitionen an verschiedene Abonnenten gesendet werden können (es ist nicht möglich, dass mehrere Abonnenten dieselben Datenwerte aktualisieren).    
 -   Vermeiden der Übertragung vertraulicher Daten. Mithilfe von Zeilenfiltern und Spaltenfiltern kann der Datenzugriff für Abonnenten eingeschränkt werden. Im Fall von Mergereplikationen gelten besondere Sicherheitsüberlegungen, wenn Sie einen parametrisierten Filter verwenden, der HOST_NAME() einschließt. Weitere Informationen finden Sie im Abschnitt über das Filtern mit HOST_NAME() unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Gefilterte Tabellen**  
  Dieser Bereich wird mit Filtern aufgefüllt, während Sie den Tabellenartikeln in der Veröffentlichung Filter hinzufügen. Tabellen mit Zeilenfiltern werden im Bereich als Knoten der obersten Ebene angezeigt. Für Mergeveröffentlichungen werden Tabellen, auf die das Filtern durch einen Joinfilter erweitert wurde, als untergeordnete Knoten angezeigt.  
   
- **Hinzufügen**  
- Klicken Sie auf **Hinzufügen** , um ein Dialogfeld aufzurufen, mit dem Sie Tabellenartikel filtern können. Wenn Sie für eine Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen** klicken, wird sofort ein Dialogfeld geöffnet. Wenn Sie für eine Mergeveröffentlichung auf **Hinzufügen** klicken, werden drei Auswahlmöglichkeiten angezeigt: **Filter hinzufügen**, **Add Join to Extend the Selected Filter** (Join zum Erweitern des ausgewählten Filters hinzufügen) und **Filter automatisch generieren**.  
+ **Add (Hinzufügen)**  
+ Klicken Sie auf **Hinzufügen** , um ein Dialogfeld aufzurufen, mit dem Sie Tabellenartikel filtern können. Wenn Sie für eine Momentaufnahme- oder Transaktionsveröffentlichung auf **Hinzufügen** klicken, wird sofort ein Dialogfeld geöffnet. Wenn Sie für eine Mergeveröffentlichung auf **Hinzufügen** klicken, werden drei Auswahlmöglichkeiten angezeigt: **Filter hinzufügen**; **Join hinzufügen, um den ausgewählten Filter zu erweitern**; **Filter automatisch generieren**.  
   
 -   Wählen Sie **Filter hinzufügen** aus, um das Dialogfeld **Filter hinzufügen** aufzurufen. Mithilfe dieses Dialogfelds können Sie Zeilenfilter auf einen Tabellenartikel anwenden. Im Dialogfeld **Filter hinzufügen** können Sie beispielsweise angeben, dass eine Tabelle mit Kundendaten nur Daten von französischen Kunden enthalten soll, wenn eine Replikation an Abonnenten erfolgt.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "63022452"
   
 Auf dieser Seite haben Sie folgende Möglichkeiten:  
   
--   Legen Sie Eigenschaften für die Übermittlung der Momentaufnahme mittels FTP (File Transfer Protocol) fest. Weitere Informationen finden Sie unter [übertragen von Momentaufnahmen über FTP](transfer-snapshots-through-ftp.md) Windows-Dokumentation zu informieren.  
+-   Legen Sie Eigenschaften für die Übermittlung der Momentaufnahme mittels FTP (File Transfer Protocol) fest. Weitere Informationen finden Sie unter [übertragen von Momentaufnahmen über die FTP](transfer-snapshots-through-ftp.md) -Windows-Dokumentation.  
   
     > [!NOTE]  
     >  Bei jeder Änderung an den FTP-Einstellungen muss eine neue Momentaufnahme erstellt werden.  
   
 -   Festlegen von Eigenschaften zur Websynchronisierung für Mergereplikationen unter [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Dies ermöglicht die Synchronisierung von Abonnements über HTTPS (Secure Hypertext Transfer Protocol). Für die Verwendung der Websynchronisierung müssen Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS-Server (Internetinformationsdienste) konfigurieren. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Auf Momentaufnahmedateien über FTP zugreifen**  
  Wählen Sie die Option **Abonnenten das Herunterladen von Momentaufnahmedateien über FTP (File Transfer Protocol) ermöglichen**aus, und geben Sie Werte für **FTP-Servername**, **Portnummer**, **Pfad des FTP-Stammordners**, **Anmeldename**und **Kennwort**an, damit Momentaufnahmen von den Abonnenten über FTP übermittelt werden können.  
   
@@ -138,13 +138,13 @@ Auf dieser Seite haben Sie folgende Möglichkeiten:
 
   Auf der Seite **Veröffentlichungszugriffsliste** im Dialogfeld **Veröffentlichungseigenschaften** können Sie Anmeldungen, Konten und Gruppen zur Veröffentlichungszugriffsliste (PAL) hinzufügen und aus ihr entfernen. Die PAL ist der primäre Mechanismus für die Sicherung der Verleger. Wenn Sie eine Veröffentlichung erstellen, wird von der Replikation eine PAL für diese Veröffentlichung erstellt. Die PAL, deren Funktionen denen einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Zugriffskontrollliste ähneln, enthält eine Liste von Anmeldungen, Konten und Gruppen, denen die Berechtigung zum Zugriff auf die Veröffentlichung erteilt wurde.  
   
- Wenn ein Abonnent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, wird die Anmeldung des Abonnenten mit den Authentifizierungsinformationen in der PAL verglichen. Dadurch wird zusätzliche Sicherheit für den Verleger erreicht, da die Anmeldung bei Verleger und Verteiler vor einer Verwendung durch ein Clienttool geschützt ist, das direkt beim Verleger Änderungen ausführen könnte. Weitere Informationen finden Sie unter [Sichern des Verlegers](security/secure-the-publisher.md).  
+ Wenn ein Abonnent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, wird die Anmeldung des Abonnenten mit den Authentifizierungsinformationen in der PAL verglichen. Dadurch wird zusätzliche Sicherheit für den Verleger erreicht, da die Anmeldung bei Verleger und Verteiler vor einer Verwendung durch ein Clienttool geschützt ist, das direkt beim Verleger Änderungen ausführen könnte. Weitere Informationen finden Sie unter [Schützen des Verteilers](security/secure-the-publisher.md).  
   
-### <a name="options"></a>Optionen  
- **Hinzufügen**  
+### <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
  Fügen Sie der Liste einen neuen Eintrag hinzu. Nur Benutzer-, Konto- und Gruppennamen, die bereits sowohl auf dem Verleger als auch dem Verteiler definiert sind, können hinzugefügt werden. Sie sind auf beiden Servern definiert, wenn Domänenkonten verwendet werden oder lokale Konten auf beiden Servern erstellt wurden.  
   
- **Entfernen**  
+ **Remove**  
  Entfernen Sie den ausgewählten Eintrag aus der Liste.  
   
  **Alle entfernen**  
@@ -153,14 +153,14 @@ Auf dieser Seite haben Sie folgende Möglichkeiten:
 
   Auf dieser Seite haben Sie folgende Möglichkeiten:  
   
--   Legen Sie Eigenschaften für die Übermittlung der Momentaufnahme mittels FTP (File Transfer Protocol) fest. Weitere Informationen finden Sie unter [übertragen von Momentaufnahmen über FTP](transfer-snapshots-through-ftp.md) Windows-Dokumentation zu informieren.  
+-   Legen Sie Eigenschaften für die Übermittlung der Momentaufnahme mittels FTP (File Transfer Protocol) fest. Weitere Informationen finden Sie unter [übertragen von Momentaufnahmen über die FTP](transfer-snapshots-through-ftp.md) -Windows-Dokumentation.  
   
     > [!NOTE]  
     >  Bei jeder Änderung an den FTP-Einstellungen muss eine neue Momentaufnahme erstellt werden.  
   
 -   Festlegen von Eigenschaften zur Websynchronisierung für Mergereplikationen unter [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen. Dies ermöglicht die Synchronisierung von Abonnements über HTTPS (Secure Hypertext Transfer Protocol). Für die Verwendung der Websynchronisierung müssen Sie einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS-Server (Internetinformationsdienste) konfigurieren. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Auf Momentaufnahmedateien über FTP zugreifen**  
  Wählen Sie die Option **Abonnenten das Herunterladen von Momentaufnahmedateien über FTP (File Transfer Protocol) ermöglichen**aus, und geben Sie Werte für **FTP-Servername**, **Portnummer**, **Pfad des FTP-Stammordners**, **Anmeldename**und **Kennwort**an, damit Momentaufnahmen von den Abonnenten über FTP übermittelt werden können.  
   
@@ -178,15 +178,15 @@ Auf dieser Seite haben Sie folgende Möglichkeiten:
   
  Weitere Informationen zu den für die einzelnen Agents erforderlichen Sicherheitseinstellungen und Berechtigungen finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Sicherheitseinstellungen** oder **Agent erstellen**  
  Klicken Sie, nachdem ein Agentauftrag erstellt wurde, auf **Sicherheitseinstellungen** , um auf ein Dialogfeld zuzugreifen, das Ihnen das Ändern der Sicherheitseinstellungen für einen Agent ermöglicht. Wenn kein Agentauftrag erstellt wurde, klicken Sie zum Erstellen eines Agentauftrags auf **Agent erstellen** , und geben Sie die Sicherheitseinstellungen an.  
 
 ## <a name="data-partitions"></a>Datenpartitionen
   Mithilfe der Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften** können Sie Datenpartitionen für Mergeveröffentlichungen mit parametrisierter Filterung definieren. Nach dem Definieren von Partitionen können Sie Momentaufnahmen für diese Partitionen generieren und verschiedenen Abonnenten auf der Grundlage ihrer Verbindungseigenschaften (Anmelde- und Computername) verschiedene Anfangsdatasets zur Verfügung stellen. Sie können es Abonnenten auch ermöglichen, die Übermittlung und das Generieren von Momentaufnahmen anzufordern, wenn für ihre Partition zum Zeitpunkt der ersten Synchronisierung keine Momentaufnahme verfügbar ist. Weitere Informationen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
-### <a name="options"></a>Optionen  
- **Hinzufügen**  
+### <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
  Klicken Sie auf **Hinzufügen** , um eine Partition zu definieren. Geben Sie im Dialogfeld **Datenpartition hinzufügen** Werte für **HOST_NAME()** und/oder **SUSER_SNAME()** an, und definieren Sie einen Zeitplan zum Aktualisieren von Momentaufnahmen.  
   
  **Bearbeiten**  
@@ -206,22 +206,22 @@ Auf dieser Seite haben Sie folgende Möglichkeiten:
 
 ## <a name="snapshot"></a>Momentaufnahme
 
- Mithilfe der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften** können Sie das Momentaufnahmeformat, den Speicherort des Momentaufnahmeordners und Skripts, die vor und nach der Anwendung der Momentaufnahme ausgeführt werden, festlegen. Der Momentaufnahmeordner muss als Freigabe definiert sein und über ausreichend Berechtigungen verfügen, sodass Agents Dateien im Ordner lesen und schreiben können. Weitere Informationen zum angemessenen Sichern des Ordners finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
+ Mithilfe der Seite **Momentaufnahme** des Dialogfelds **Veröffentlichungseigenschaften** können Sie das Momentaufnahmeformat, den Speicherort des Momentaufnahmeordners und Skripts, die vor und nach der Anwendung der Momentaufnahme ausgeführt werden, festlegen. Der Momentaufnahmeordner muss als Freigabe definiert sein und über ausreichend Berechtigungen verfügen, sodass Agents Dateien im Ordner lesen und schreiben können. Weitere Informationen zum Sichern des Ordners finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
 > [!NOTE]  
 >  Änderungen erfordern eine neue Momentaufnahme für die Veröffentlichung. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](publish/change-publication-and-article-properties.md).  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Momentaufnahmeformat**  
  Wählen Sie für das Momentaufnahmeformat den einheitlichen Modus oder den Zeichenmodus aus.  
   
--   Wählen Sie **Systemeigenes Format von SQL Server - alle Abonnenten müssen Server mit SQL Server sein** aus, wenn alle Abonnenten andere Instanzen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Das systemeigene Momentaufnahmeformat bietet die beste Leistung.    
+-   Wählen Sie **Systemeigenes Format von SQL Server – alle Abonnenten müssen Server mit SQL Server sein** aus, wenn alle Abonnenten andere Instanzen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Das systemeigene Momentaufnahmeformat bietet die beste Leistung.    
 -   Wählen Sie **Zeichen - erforderlich, wenn auf einem Verleger oder Abonnenten SQL Server nicht ausgeführt wird** aus, wenn Abonnenten [!INCLUDE[ssEW](../../includes/ssew-md.md)] ausführen oder es sich um Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten handelt.  
   
  **Speicherort der Momentaufnahmedateien**  
  Wählen Sie den Speicherort zum Speichern der Momentaufnahmedateien aus. Die Dateien können am Standardspeicherort gespeichert werden; Sie können jedoch auch an einem alternativen Speicherort statt dem oder zusätzlich zum Standardspeicherort gespeichert werden. An einem alternativen Speicherort gespeicherte Dateien können komprimiert werden.  
   
--   Wählen Sie **Dateien im Standardordner speichern** aus, um für den Verleger den Standard-Momentaufnahmeordner zu verwenden. Der Speicherort des Momentaufnahmeordners ist in diesem Dialogfeld schreibgeschützt, da er für den Verleger nur im Dialogfeld **Verteilereigenschaften** geändert werden kann. Weitere Informationen finden Sie unter [angeben des standardmäßigen Momentaufnahmespeicherorts](snapshot-options.md#snapshot-folder-locations).   
+-   Wählen Sie **Dateien im Standardordner speichern** aus, um für den Verleger den Standard-Momentaufnahmeordner zu verwenden. Der Speicherort des Momentaufnahmeordners ist in diesem Dialogfeld schreibgeschützt, da er für den Verleger nur im Dialogfeld **Verteilereigenschaften** geändert werden kann. Weitere Informationen finden Sie [unter Angeben des standardmäßigen Momentaufnahme Speicher Orts](snapshot-options.md#snapshot-folder-locations).   
 -   Wählen Sie **Dateien im folgenden Ordner speichern** aus, um anstelle des Standardspeicherorts oder zusätzlich dazu einen alternativen Speicherort anzugeben. Geben Sie in das Textfeld einen Pfad ein, oder klicken Sie auf **Durchsuchen** , und navigieren Sie zu einem Speicherort. Wählen Sie **Momentaufnahmedateien in diesem Ordner komprimieren** aus, um die Dateien am alternativen Momentaufnahmespeicherort zu komprimieren. Der alternative Speicherort kann sich auf einem anderen Server, auf einem Netzlaufwerk oder auf Wechselmedien befinden, z. B. auf CD-ROM oder auf einem Wechseldatenträger. Weitere Informationen finden Sie unter [Alternate Snapshot Folder Locations](alternate-snapshot-folder-locations.md) und [Compressed Snapshots](compressed-snapshots.md).  
   
  **Weitere Skripts ausführen**  
@@ -234,12 +234,12 @@ Auf dieser Seite haben Sie folgende Möglichkeiten:
 
 
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](publish/create-a-publication.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](publish/view-and-modify-publication-properties.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish/publish-data-and-database-objects.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
- [Sicherheit von SQL Server-Replikation](security/view-and-modify-replication-security-settings.md)  
+ [SQL Server-Replikation Sicherheit](security/view-and-modify-replication-security-settings.md)  
  [Initialisieren eines Abonnements mit einer Momentaufnahme](initialize-a-subscription-with-a-snapshot.md)   
   
   

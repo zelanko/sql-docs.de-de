@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4add98b6c085d52238a528c313008bc688ae6e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829502"
 ---
 # <a name="wmi-event-watcher-task"></a>WMI-Ereignisüberwachung (Task)
@@ -58,7 +58,7 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
 ## <a name="custom-logging-messages-available-on-the-wmi-event-watcher-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task "WMI-Ereignisüberwachung"  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Ereignisüberwachung aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Description|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`WMIEventWatcherEventOccurred`|Zeigt an, dass ein vom Task überwachtes Ereignis aufgetreten ist.|  
 |`WMIEventWatcherTimedout`|Zeigt an, dass beim Task ein Timeout eingetreten ist.|  
@@ -75,9 +75,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
 -   Definieren Sie, wie der Task auf das Ereignis antwortet. Der Task kann je nach Ereignis erfolgreich ausgeführt werden oder einen Fehler melden, der Task kann aber auch lediglich das Ereignis erneut überwachen.  
   
--   Geben Sie die Aktion an, die der Task bei einem Timeout der WMI-Abfrage ausführt. Sie können das Timeout und den Status nach dem Timeout protokollieren oder aber ein benutzerdefiniertes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ereignis mit dem Hinweis, dass beim WMI-Ereignis ein Timeout aufgetreten ist, auslösen und das Timeout und den Timeoutstatus protokollieren.  
+-   Geben Sie die Aktion an, die der Task bei einem Timeout der WMI-Abfrage durchführt. Sie können das Timeout und den Status nach dem Timeout protokollieren oder ein benutzerdefiniertes [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Ereignis, das angibt, dass für das WMI-Ereignis ein Timeout aufgetreten ist, und das Timeout und den Timeout Status protokollieren.  
   
--   Definieren Sie, wie der Task auf das Timeout antwortet. Der Task kann erfolgreich ausgeführt werden oder einen Fehler melden, der Task kann aber auch lediglich das Ereignis erneut überwachen.  
+-   Definieren Sie, wie der Task auf das Timeout antwortet. Der Task kann so konfiguriert werden, dass er erfolgreich ist oder fehlschlägt, oder der Task kann das Ereignis nur noch einmal überwachen.  
   
 -   Geben Sie an, wie oft der Task das Ereignis überwacht.  
   
@@ -91,9 +91,9 @@ SELECT * FROM __InstanceCreationEvent WITHIN 10 WHERE TargetInstance ISA "CIM_Di
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task „WMI-Ereignisüberwachung“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task ' WMI-Ereignisüberwachung ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task „WMI-Ereignisüberwachung“ &#40;Seite „WMI-Optionen“&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
+-   [Editor für den Task ' WMI-Ereignisüberwachung ' &#40;Seite WMI-Optionen&#41;](../wmi-event-watcher-task-editor-wmi-options-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4e18ce61356947754423cfb878cf47f90534b40f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62869220"
 ---
-# <a name="mssqlserver233"></a>MSSQLSERVER_233
+# <a name="mssqlserver_233"></a>MSSQLSERVER_233
     
 ## <a name="details"></a>Details  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62869220"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name||  
-|Meldungstext|Es wurde erfolgreich eine Verbindung mit dem Server hergestellt, doch dann ist während des Anmeldevorgangs ein Fehler aufgetreten. (Anbieter: Shared Memory-Anbieter, Fehler: 0 - No process is on the other end of the pipe.) (0 – Kein Prozess ist am anderen Ende der Pipe.) (Microsoft SQL Server, Fehler: 233)|  
+|Meldungstext|Eine Verbindung mit dem Server wurde erfolgreich hergestellt, aber dann trat während des Anmeldevorgangs ein Fehler auf. (Anbieter: Shared Memory-Anbieter, Fehler: 0 – Kein Prozess ist am anderen Ende der Pipe.) (Microsoft SQL Server, Fehler: 233)|  
   
 ## <a name="explanation"></a>Erklärung  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Client kann keine Verbindung mit dem Server herstellen. Dieser Fehler ist möglicherweise darauf zurückzuführen, dass der Server nicht für die Annahme von Remoteverbindungen konfiguriert ist.  
@@ -40,10 +40,10 @@ ms.locfileid: "62869220"
 ## <a name="user-action"></a>Benutzeraktion  
  Verwenden Sie das Tool [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager, um zuzulassen, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remoteverbindungen angenommen werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Netzwerkprotokolle und Netzwerkbibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Netzwerkprotokolle und Netzwerk Bibliotheken](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Client-Netzwerkkonfiguration](../../database-engine/configure-windows/client-network-configuration.md)   
- [Konfigurieren von Clientprotokollen](../../database-engine/configure-windows/configure-client-protocols.md)   
+ [Konfigurieren von Client Protokollen](../../database-engine/configure-windows/configure-client-protocols.md)   
  [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)  
   
   

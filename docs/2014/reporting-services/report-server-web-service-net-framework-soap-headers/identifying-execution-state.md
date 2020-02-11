@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088090fe1572c0a7fd2f1165c7bf1cd6f7eb6839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63020258"
 ---
 # <a name="identifying-execution-state"></a>Identifizieren des Ausführungsstatus
@@ -27,7 +27,8 @@ ms.locfileid: "63020258"
   
  Die Sitzungsverwaltung umfasst die Korrelation einer HTTP-Anforderung mit anderen, früheren Anforderungen, die von der gleichen Sitzung generiert wurden. Ohne Sitzungsverwaltung werden diese Anforderungen aufgrund der verbindungs- und statuslosen Natur des HTTP-Protokolls ohne Beziehung zum Berichtsserver-Webdienst angezeigt.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt kein holistisches Konzept des Sitzungsstatus bereit, wie es z.B. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] macht. Bei der Ausführung von Berichten behält der Berichtsserver jedoch den Status zwischen den Methodenaufrufen in Form einer **Ausführung**bei. Mithilfe einer Ausführung kann der Benutzer auf verschiedene Arten mit dem Bericht interagieren. Dazu gehört das Laden des Berichts vom Berichtsserver, die Einstellung der Anmeldeinformationen und Parameter für den Bericht sowie das Rendern des Berichts.  
+ 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt kein holistisches Konzept des Sitzungsstatus bereit, wie es z.B. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] macht. Bei der Ausführung von Berichten behält der Berichtsserver jedoch den Status zwischen den Methodenaufrufen in Form einer **Ausführung**bei. Mithilfe einer Ausführung kann der Benutzer auf verschiedene Arten mit dem Bericht interagieren. Dazu gehört das Laden des Berichts vom Berichtsserver, die Einstellung der Anmeldeinformationen und Parameter für den Bericht sowie das Rendern des Berichts.  
   
  Während die Clients mit einem Berichtsserver kommunizieren, verwenden sie die Ausführung, um die Berichtsanzeige und Benutzernavigation auf anderen Seiten in einem Bericht zu verwalten oder um bestimmte Abschnitte eines Berichts auszublenden. Eine eindeutige Ausführung ist für jeden Bericht vorhanden, den die Clientanwendung ausführt.  
   
@@ -39,7 +40,7 @@ ms.locfileid: "63020258"
   
  Das folgende Diagramm zeigt den Verarbeitungs- und Renderingpfad für Berichte.  
   
- ![Bericht Verarbeitung/Rendering-Pfad](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Report processing/rendering path")  
+ ![Verarbeitungs-/Renderingpfad für Berichte](../../../2014/reporting-services/media/rs-render-process-diagram.gif "Verarbeitungs-/Renderingpfad für Berichte")  
   
  Um die oben genannten Funktionen zu unterstützen, wurde die aktuelle SOAP-Render-Methode in mehrere Methoden aufgeteilt, die die Phasen der Ausführungsinitialisierung, der Verarbeitung und des Rendering umfassen.  
   
@@ -57,7 +58,7 @@ ms.locfileid: "63020258"
   
  Sie können eine Berichtssitzung auch mit URL-Zugriffsbefehlen verwalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Technische Referenz (SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Using Reporting Services SOAP Headers (Verwenden von Reporting Services SOAP-Headern)](../report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

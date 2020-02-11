@@ -20,13 +20,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4be2287a1c0d43ccfdfaeaca3378f6d10f100134
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882275"
 ---
-# <a name="delete-an-article"></a>Delete an Article
+# <a name="delete-an-article"></a>Löschen eines Artikels
   In diesem Thema wird beschrieben, wie ein Artikel in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] oder Replikationsverwaltungsobjekten (RMO) gelöscht wird. Informationen über die Bedingungen, unter denen Artikel gelöscht werden können, und darüber, ob das Löschen eines Artikels eine neue Momentaufnahme oder die erneute Initialisierung der Abonnements erforderlich macht, finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
   
@@ -35,22 +35,22 @@ ms.locfileid: "73882275"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>So löschen Sie einen Artikel aus einer Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) aus, um einen durch **\@article** angegebenen Artikel aus der durch **\@publication** angegebenen Veröffentlichung zu löschen. Geben Sie fürforce_invalidate_snapshot **den Wert \@1** an.  
+1.  Führen Sie [sp_droparticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droparticle-transact-sql) aus, um einen durch **\@article** angegebenen Artikel aus der durch **\@publication** angegebenen Veröffentlichung zu löschen. Geben Sie für **** force_invalidate_snapshot** den Wert \@1** an.  
   
 2.  (Optional) Um das veröffentlichte Objekt vollständig aus der Veröffentlichungsdatenbank zu löschen, führen Sie den Befehl `DROP <objectname>` auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>So löschen Sie einen Artikel aus einer Mergeveröffentlichung  
   
-1.  Führen Sie [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) aus, um einen durch **\@article** angegebenen Artikel aus der durch **\@publication** angegebenen Veröffentlichung zu löschen. Geben Sie dafür ggf. fürforce_invalidate_snapshot **den Wert \@1** und fürforce_reinit_subscription **den Wert \@1** an.  
+1.  Führen Sie [sp_dropmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql) aus, um einen durch **\@article** angegebenen Artikel aus der durch **\@publication** angegebenen Veröffentlichung zu löschen. Geben Sie dafür ggf. für **** force_invalidate_snapshot** den Wert \@1** und für **** force_reinit_subscription** den Wert \@1** an.  
   
 2.  (Optional) Um das veröffentlichte Objekt vollständig aus der Veröffentlichungsdatenbank zu löschen, führen Sie den Befehl `DROP <objectname>` auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
- Im folgenden Beispiel wird ein Artikel aus einer Transaktionsveröffentlichung gelöscht. Da durch diese Änderung die vorhandene Momentaufnahme ungültig wird, wird für den Parameterforce_invalidate_snapshot **der Wert \@1** angegeben.  
+ Im folgenden Beispiel wird ein Artikel aus einer Transaktionsveröffentlichung gelöscht. Da durch diese Änderung die vorhandene Momentaufnahme ungültig wird, wird für den Parameter **** force_invalidate_snapshot** der Wert \@1** angegeben.  
   
  [!code-sql[HowTo#sp_droparticle](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droparticle)]  
   
- Im folgenden Beispiel werden zwei Artikel aus einer Mergeveröffentlichung gelöscht. Da durch diese Änderungen die vorhandene Momentaufnahme ungültig wird, wird für den Parameterforce_invalidate_snapshot **der Wert \@1** angegeben.  
+ Im folgenden Beispiel werden zwei Artikel aus einer Mergeveröffentlichung gelöscht. Da durch diese Änderungen die vorhandene Momentaufnahme ungültig wird, wird für den Parameter **** force_invalidate_snapshot** der Wert \@1** angegeben.  
   
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergearticle)]
  [!code-sql[HowTo#sp_dropmergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergearticles.sql#sp_dropmergearticle)]  
@@ -62,7 +62,7 @@ ms.locfileid: "73882275"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransArticle> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransArticle>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "73882275"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
   
@@ -90,8 +90,8 @@ ms.locfileid: "73882275"
   
 7.  Trennen Sie alle Verbindungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md)   
- [Konzepte für gespeicherte Systemprozeduren für die Replikation](../concepts/replication-system-stored-procedures-concepts.md)  
+ [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)  
   
   

@@ -20,18 +20,18 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042944"
 ---
-# <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
+# <a name="change_tracking_min_valid_version-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt die mindestens erforderliche Version auf dem Client, der zum Abrufen von änderungsnachverfolgungsinformationen aus der angegebenen Tabelle, bei der Verwendung gültig ist die [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) Funktion.  
+  Gibt die minimale Version auf dem Client zurück, die zum Abrufen von Änderungs nach Verfolgungs Informationen aus der angegebenen Tabelle gültig ist, wenn Sie die [CHANGETABLE](../../relational-databases/system-functions/changetable-transact-sql.md) -Funktion verwenden.  
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
   
 ## <a name="arguments"></a>Argumente  
  *table_object_id*  
- Ist die Objekt-ID der Tabelle an. *Table_object_id* ist ein **Int**.  
+ Die Objekt-ID der Tabelle. *table_object_id* ist vom Datentyp **int**.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **bigint**  
+ **BIGINT**  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie diese Funktion zur Überprüfung des Werts, der die *Last_sync_version* -Parameters für CHANGETABLE. Wenn *Last_sync_version* ist kleiner als der Wert, der von dieser Funktion gemeldet wird, die Ergebnisse, die von einem späteren Aufruf von CHANGETABLE zurückgegeben werden möglicherweise nicht gültig.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie diese Funktion, um den Wert des *last_sync_version* -Parameters für CHANGETABLE zu validieren. Wenn *last_sync_version* kleiner ist als der Wert, der von dieser Funktion gemeldet wird, sind die Ergebnisse, die von einem späteren CHANGETABLE-Befehl zurückgegeben werden, möglicherweise nicht gültig.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION verwendet die folgenden Informationen, um den Rückgabewert zu bestimmen:  
   
@@ -86,7 +86,7 @@ ELSE
 -- Obtain changes using CHANGETABLE(CHANGES ...)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Änderungsnachverfolgungsfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-tracking-functions-transact-sql.md)   
  [sys.change_tracking_tables &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/change-tracking-catalog-views-sys-change-tracking-tables.md)  
   

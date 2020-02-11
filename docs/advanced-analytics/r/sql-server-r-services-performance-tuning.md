@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 4d7b6b91ac3aeaa45c5e6c3e05c12176f5f60b28
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727360"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Leistungsoptimierung für R in SQL Server
@@ -32,7 +32,7 @@ Das Ziel dieser Reihe ist es, Anleitungen für die Techniken zur Leistungsoptimi
 + Der dritte Artikel behandelt Optimierungen in R-Code und Ressourcen für die Operationalisierung.
 + Im vierten Artikel werden die Testmethoden ausführlich beschrieben sowie Ergebnisse und Schlussfolgerungen genannt.
 
-**Gilt für:** SQL Server 2016 R Services, SQL Server Machine Learning Services
+**Anwendungsbereich:** SQL Server 2016 R Services, SQL Server Machine Learning Services
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>Leistungsziele und Zielszenarien
 

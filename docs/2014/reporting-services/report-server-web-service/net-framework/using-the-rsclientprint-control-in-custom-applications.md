@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70155003"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
@@ -29,7 +29,7 @@ ms.locfileid: "70155003"
   
  Entwickler, die die clientseitige Druckfunktion auf Symbolleisten oder in Viewern von Drittanbietern aktivieren möchten, können über das COM-Objekt **RSClientPrint** auf das ActiveX-Steuerelement zugreifen. Das Steuerelement kann frei verteilt werden. In der folgenden Liste sind Empfehlungen für die Verwendung des Steuerelements enthalten:  
   
--   Verwenden Sie das Steuerelement zum Verbessern des Druckes von webbasierten Berichten. Sie können das Objekt in jeder mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] kompatiblen Programmiersprache oder in einem Skript angeben. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms-Anwendungen kann das Steuerelement nicht verwendet werden.  
+-   Verwenden Sie das Steuerelement zum Verbessern des Druckes von webbasierten Berichten. Sie können das Objekt in einer beliebigen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-kompatiblen Programmiersprache oder in einem Skript angeben. In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows Forms-Anwendungen kann das Steuerelement nicht verwendet werden.  
   
 -   Kopieren Sie die CAB-Datei aus den [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Programmdateien, und fügen Sie sie zur Codebasis Ihrer benutzerdefinierten Anwendung hinzu.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70155003"
 -   Lesen Sie sich die Themen in der Onlinedokumentation zur Bildrenderingerweiterung (EMF) durch, um Grundlegendes zum Rendern von Seiten für die Druckvorschau und -ausgabe zu erfahren.  
   
 ## <a name="rsprintclient-overview"></a>Übersicht über RSPrintClient  
- Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. Das ActiveX-Steuerelement **RSPrintClient** druckt den Bericht mithilfe der Bildrenderingerweiterung (EMF). Die folgenden EMF-Geräteinformationen werden verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
+ Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. **RSPrintClient** Das ActiveX-Steuerelement verwendet die imagerenderingerweiterung (EMF), um den Bericht zu drucken. Die folgenden EMF-Geräteinformationen werden verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
   
 ### <a name="language-support"></a>Sprachunterstützung  
  Das Drucksteuerelement stellt Text in der Benutzeroberfläche in unterschiedlichen Sprachen bereit und akzeptiert Eingabewerte mit einer Kalibrierung für unterschiedliche Maßsysteme. Welches Sprach- und Maßsystem verwendet wird, wird durch die Eigenschaften **Culture** und **UICulture** bestimmt. Beide Eigenschaften akzeptieren LCID-Werte. Wenn Sie einen LCID-Wert für eine Sprache angeben, die eine Variante einer unterstützten Sprache ist, wird die Sprache verwendet, die am nächsten zu Ihrer Angabe liegt. Falls Sie einen LCID-Wert angeben, der nicht unterstützt wird und auch keine enge Übereinstimmung mit einem anderen LCID-Wert aufweist, wird Englisch (Vereinigte Staaten) verwendet.  
@@ -57,15 +57,15 @@ ms.locfileid: "70155003"
   
  Sie können erfahren, welche Werte für Seitengrößen und -ränder verwendet werden, wenn Sie mithilfe der **GetProperties**-Methode die Standardwerte abrufen:  
   
--   Mit **PageHeight** und **PageWidth** werden die Standardseitenhöhe und -breite angegeben. Beim Starten des Drucksteuerelements werden diese Eigenschaftswerte zur Auswahl der nächsten verfügbaren Papiergröße für den aktuell ausgewählten Drucker verwendet. Falls der Wert für **PageWidth** größer als der Wert für **PageHeight** ist, wird die Ausrichtung auf Querformat festgelegt. Andernfalls ist sie auf Hochformat festgelegt.  
+-   **PageHeight** und **PageWidth** geben die standardmäßige Seitenhöhe und-Breite an. Beim Starten des Drucksteuerelements werden diese Eigenschaftswerte zur Auswahl der nächsten verfügbaren Papiergröße für den aktuell ausgewählten Drucker verwendet. Falls der Wert für **PageWidth** größer als der Wert für **PageHeight** ist, wird die Ausrichtung auf Querformat festgelegt. Andernfalls ist sie auf Hochformat festgelegt.  
   
--   **LeftMargin**, **RightMargin**, **TopMargin**, und **BottomMargin** werden standardmäßig auf jeweils 12,2 mm festgelegt.  
+-   **LeftMargin**, **RightMargin**, **TopMargin**und **BottomMargin** werden standardmäßig auf 12,2 Millimeter festgelegt.  
   
  Diese Eigenschaften werden in der **Item**-Eigenschaftsauflistung auf dem Berichtsserver gespeichert. Die Werte werden bei jedem Update der Berichtsdefinition überschrieben.  
   
 ### <a name="rsclientprint-properties"></a>RSClientPrint-Eigenschaften  
   
-|property|Type|RW|Standardwert|und Beschreibung|  
+|Eigenschaft|type|RW|Standard|BESCHREIBUNG|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|RW|Berichteinstellung|Ruft den linken Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
 |MarginRight|Double|RW|Berichteinstellung|Ruft den rechten Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
@@ -73,9 +73,9 @@ ms.locfileid: "70155003"
 |MarginBottom|Double|RW|Berichteinstellung|Ruft den unteren Rand ab bzw. legt ihn fest. Wird kein Wert vom Entwickler festgelegt oder im Bericht angegeben, wird 12,2 Millimeter als Standardwert verwendet.|  
 |PageWidth|Double|RW|Berichteinstellung|Ruft die Seitenbreite ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 215,9 Millimeter als Standardwert verwendet.|  
 |PageHeight|Double|RW|Berichteinstellung|Ruft die Seitenhöhe ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 279,4 Millimeter als Standardwert verwendet.|  
-|Culture|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer beispielsweise `3`eingibt, wird der Wert in Millimetern gemessen, wenn die Sprache Französisch oder Zoll ist, wenn es sich um eine englische Sprache (USA) handelt. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|Zeichenfolge|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in folgende Sprachen lokalisiert: Vereinfachtes Chinesisch, Traditionelles Chinesisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authenticate|Boolean|RW|Falsch|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
+|Kultur|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer beispielsweise eingibt `3`, wird der Wert in Millimetern gemessen, wenn die Sprache Französisch oder Zoll ist, wenn die Sprache Englisch (USA) ist. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in folgende Sprachen lokalisiert: Vereinfachtes Chinesisch, Traditionelles Chinesisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Authentifizieren|Boolean|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Festlegen der Authenticate-Eigenschaft  
  Wenn Sie von einer Browsersitzung heraus drucken, muss die `Authenticate`-Eigenschaft nicht festgelegt werden. Im Kontext einer aktiven Sitzung werden alle Anforderungen vom Drucksteuerelement an den Berichtsserver über den Browser verarbeitet. Der Browser legt die für die Kommunikation mit dem Berichtsserver erforderlichen Sitzungsvariablen fest.  
@@ -102,11 +102,11 @@ ms.locfileid: "70155003"
 ### <a name="rsprintclient-support-for-the-print-method"></a>RSPrintClient-Unterstützung für die Print-Methode  
  Das **RSClientPrint**-Objekt unterstützt die zum Starten des Dialogfelds „Drucken“ verwendete **Print**-Methode. Die **Print**-Methode besitzt die folgenden Argumente.  
   
-|Argument|E/A|Type|und Beschreibung|  
+|Argument|E/A|type|BESCHREIBUNG|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|Zeichenfolge|Gibt das virtuelle Verzeichnis des Berichts Servers an (z. b. https://adventure-works/reportserver).|  
-|ReportPathParameters|In|Zeichenfolge|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Beispiel: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|In|Zeichenfolge|Der kurze Name des Berichts (im Beispiel oben lautet der kurze Name Employee Sales Summary). Dieser Name wird im Dialogfeld Drucken und in der Druckerwarteschlange angezeigt.|  
+|ServerPath|In|String|Gibt das virtuelle Verzeichnis des Berichts Servers an (z https://adventure-works/reportserver). b..|  
+|ReportPathParameters|In|String|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Beispiel: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|In|String|Der kurze Name des Berichts (im Beispiel oben lautet der kurze Name Employee Sales Summary). Dieser Name wird im Dialogfeld Drucken und in der Druckerwarteschlange angezeigt.|  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden HTML-Beispiel wird das Angeben der CAB-Datei, der **Print**-Methode und der Eigenschaften in JavaScript angezeigt:  
@@ -141,8 +141,8 @@ ms.locfileid: "70155003"
   
  `</BODY>`  
   
-## <a name="see-also"></a>Siehe auch  
- [Drucken von Berichten in einem Browser mit dem Drucksteuerelement &#40;Berichts-Generator und SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Drucken von Berichten in einem Browser mit dem Drucksteuerelement (Berichts-Generator und SSRS)](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [Geräteinformationseinstellungen für Bilder](../../image-device-information-settings.md)  
   

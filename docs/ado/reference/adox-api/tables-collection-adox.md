@@ -17,40 +17,40 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965131"
 ---
 # <a name="tables-collection-adox"></a>Tables-Collection (ADOX)
-Enthält alle [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) Objekte eines Katalogs.  
+Enthält alle [Tabellen](../../../ado/reference/adox-api/table-object-adox.md) Objekte eines Katalogs.  
   
-## <a name="remarks"></a>Hinweise  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) -Methode für eine **Tabellen** Auflistung für ADOX eindeutig ist. Sie haben folgende Möglichkeiten:  
+## <a name="remarks"></a>Bemerkungen  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) -Methode für eine **Tabellen** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
   
--   Hinzufügen einer neuen Tabelle in der Auflistung der **Append** Methode.  
+-   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Tabelle hinzu.  
   
- Die übrigen Eigenschaften und Methoden sind standard in ADO-Collections. Sie haben folgende Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
   
--   Zugreifen auf eine Tabelle in der Auflistung mit den [Element](../../../ado/reference/ado-api/item-property-ado.md) Eigenschaft.  
+-   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Tabelle in der-Auflistung zu.  
   
--   Zurückgeben der Anzahl der Tabellen in der Auflistung mit den [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft.  
+-   Gibt die Anzahl der in der Auflistung enthaltenen Tabellen mit der [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft zurück.  
   
--   Entfernen einer Tabelle aus der Auflistung mit den [löschen](../../../ado/reference/adox-api/delete-method-adox-collections.md) Methode.  
+-   Entfernen Sie eine Tabelle aus der Sammlung mit der [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) -Methode.  
   
--   Aktualisieren Sie die Objekte in der Auflistung entsprechend der aktuellen Datenbankschema mit dem [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode.  
+-   Aktualisieren Sie die Objekte in der Auflistung, um das aktuelle Datenbankschema mit der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode widerzuspiegeln.  
   
- Einige Anbieter möglicherweise andere Schemaobjekte, z. B. eine Sicht zurück, der **Tabellen** Auflistung. Aus diesem Grund können einige ADOX-Auflistungen mehrere Verweise auf dasselbe Objekt enthalten. Sollten Sie das Objekt löschen aus einer Sammlung, die Änderung ist auch nicht in einer anderen Auflistung, die auf das gelöschte Objekt bis verweist die **aktualisieren** Methode wird aufgerufen, in der Auflistung. Z. B. mit dem OLE DB-Anbieter für Microsoft Jet Ansichten werden zurückgegeben, mit der **Tabellen** Auflistung. Wenn Sie eine Sicht löschen, müssen Sie aktualisieren die **Tabellen** Sammlung aus, bevor die Sammlung wird die Änderung zu übernehmen.  
+ Einige Anbieter geben möglicherweise andere Schema Objekte, z. b. eine Sicht, in der **Tables** -Auflistung zurück. Daher können einige ADOX-Auflistungen mehrere Verweise auf dasselbe Objekt enthalten. Wenn Sie das Objekt aus einer Auflistung löschen, ist die Änderung in einer anderen Sammlung, die auf das gelöschte Objekt verweist, erst dann sichtbar, wenn die **Aktualisierungs** Methode für die Auflistung aufgerufen wird. Beispielsweise werden mit dem OLE DB-Anbieter für Microsoft Jet Sichten mit der **Tables** -Auflistung zurückgegeben. Wenn Sie eine Ansicht löschen, müssen Sie die **Tabellen** Auflistung aktualisieren, bevor die Sammlung die Änderung widerspiegelt.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Tables Collection Properties, Methods, and Events (Tables-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Tables-Collection – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalog ActiveConnection-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Spalten und Tabellen Append-Methode, Name-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Connection Close-Methode, Table Type-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Keys Append-Methode, Typ des Schlüssels, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Katalog ActiveConnection-Eigenschaft (Beispiel) (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
+ [Methoden und Tabellen Append-Methoden, Name Property example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Connection Close-Methode, Table Type-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
+ [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)

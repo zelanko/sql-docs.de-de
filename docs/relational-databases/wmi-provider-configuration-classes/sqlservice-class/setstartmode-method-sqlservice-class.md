@@ -18,10 +18,10 @@ ms.assetid: f6f198b4-f9a4-468c-8977-76462ef06e61
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: edd3b4a5fa4d787292f1978da80c5f7803242010
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73660912"
 ---
 # <a name="setstartmode-method-sqlservice-class"></a>SetStartMode-Methode (SqlService-Klasse)
@@ -36,11 +36,11 @@ object.SetStartMode(StartMode)
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *object*  
- Ein [SqlService-Klassenobjekt](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) , das den Dienst darstellt.  
+ *Objekt*  
+ Ein [SqlService-Klassen](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) Objekt, das den Dienst darstellt.  
   
 #### <a name="parameters"></a>Parameter  
- *StartMode*  
+ *Startmodus*  
  Ein **uint32** -Wert, der den Startmodus der Dienstinstanz angibt.  
   
  Die folgenden Werte sind gültig:  
@@ -58,9 +58,9 @@ object.SetStartMode(StartMode)
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein **uint32** -Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird. Jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   

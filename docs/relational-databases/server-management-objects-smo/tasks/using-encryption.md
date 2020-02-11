@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148314"
 ---
 # <a name="using-encryption"></a>Verwenden der Verschlüsselung
@@ -43,7 +43,7 @@ ms.locfileid: "70148314"
  In SMO werden Zertifikate durch das <xref:Microsoft.SqlServer.Management.Smo.Certificate>-Objekt dargestellt. Das <xref:Microsoft.SqlServer.Management.Smo.Certificate>-Objekt verfügt über Eigenschaften, die den öffentlichen Schlüssel, den Namen des Betreffs, die Gültigkeitsdauer und Informationen über den Aussteller festlegen. Die Berechtigung, auf das Zertifikat zuzugreifen, wird über die Methoden **Grant**, **Revoke** und **Deny** gesteuert.  
   
 ## <a name="example"></a>Beispiel  
- Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+ Für die folgenden Codebeispiele müssen Sie die Programmierungsumgebung, die Programmiervorlage und die Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Hinzufügen eines Zertifikats in Visual C#  
  Im Codebeispiel wird ein einfaches Zertifikat mit einem Verschlüsselungskennwort erstellt. Im Gegensatz zu anderen Objekten verfügt die <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A>-Methode über mehrere Überladungen. Die im Beispiel verwendete Überladung erstellt ein Zertifikat mit einem Verschlüsselungskennwort.  
@@ -93,7 +93,7 @@ $c.Create("pGFD4bb925DGvbd2439587y")
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Verschlüsselungsschlüsseln](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

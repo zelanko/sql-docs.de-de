@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aba9a971b703a3344fc209c1c01943f10c76d767
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833065"
 ---
 # <a name="suggest-column-types-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Spaltentypen vorschlagen
@@ -24,7 +24,7 @@ ms.locfileid: "62833065"
   
  Weitere Informationen zu den von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]verwendeten Datentypen, finden Sie unter [Integration Services-Datentypen](../data-flow/integration-services-data-types.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Anzahl von Zeilen**  
  Geben Sie die Anzahl der Zeilen im vom Algorithmus verwendeten Beispiel an, oder wählen Sie die Anzahl aus.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62833065"
  **Prozentsatz der Auffüllung**  
  Geben Sie den Prozentsatz der Spaltenlänge ein, um den die Länge von Spalten für Zeichendatentypen vergrößert werden soll, oder wählen Sie den Wert aus. Der Prozentsatz muss als ganze Zahl angegeben werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../integration-services-error-and-message-reference.md)   
  [Verbindungs-Manager für Flatfiles](file-connection-manager.md)  
   

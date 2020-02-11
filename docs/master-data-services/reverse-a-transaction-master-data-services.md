@@ -13,10 +13,10 @@ ms.assetid: 6f7c3f07-0f64-4283-8c9c-93facd00a046
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 870341b6ae6a3ffbda345aa7a0abc4a2fe253ac5
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728928"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Umkehren einer Transaktion (Master Data Services)
@@ -25,11 +25,11 @@ ms.locfileid: "73728928"
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Transaktion umkehren, wenn eine Aktion rückgängig gemacht werden muss. Beispiele für Transaktionen sind Attributwertänderungen, Hierarchieverschiebungen oder Elementlöschungen. Dieses Thema gilt für Transaktionen von Entitäten mit dem Transaktionsprotokolltyp „Attribut“. Wechseln Sie auf die Explorer-Seite der Entität, um den Transaktionsverlauf der Entitäten anzuzeigen, die den Transaktionsprotokolltyp „Element“ aufweisen.  
   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Versionsverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
 ### <a name="to-reverse-a-transaction"></a>So kehren Sie eine Transaktion um  
   
@@ -47,9 +47,9 @@ ms.locfileid: "73728928"
   
 7.  Klicken Sie im Bestätigungsdialogfeld auf **OK**. Dem Raster wird eine weitere Transaktion hinzugefügt, um die umgekehrte Transaktion aufzuzeichnen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transaktionen &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)   
- [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
  [Zurücksetzen des Elementrevisionsverlaufs](../master-data-services/rollback-member-revision-history-master-data-services.md)
   
   

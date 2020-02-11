@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 50f082edef5d9a6d4e95b7e37ef6d75f22eb6f2a
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244871"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Wiedergeben einer Ablauf Verfolgung in Assistent für Datenbankexperimente
@@ -163,6 +163,6 @@ Dieses Problem ist in der RTM-Version von SQL Server 2017 bekannt. Weitere Infor
   
 Das Problem wurde im aktuellen kumulativen Update 1 für SQL Server 2017 behoben. Laden Sie die neueste Version von [kumulativem Update 1 für SQL Server 2017](https://support.microsoft.com/help/4038634/cumulative-update-1-for-sql-server-2017)herunter.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Informationen zum Erstellen eines Analyse Berichts, mit dem Sie Einblicke in vorgeschlagene Änderungen erhalten, finden Sie unter [Erstellen von Berichten](database-experimentation-assistant-create-report.md).

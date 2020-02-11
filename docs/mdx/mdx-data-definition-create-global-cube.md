@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d678622c67a83c279cce094b849829e668af30cb
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892149"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX-Datendefinition – CREATE GLOBAL CUBE
 
 
-  Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich. Weitere Informationen zu lokalen Cubes finden Sie unter [lokale Cubes &#40;Analysis Services-Mehrdimensionale&#41;Daten](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
+  Erstellt einen lokal persistenten Cube, der auf einem Teilcube aus einem Cube auf dem Server basiert, und füllt ihn auf. Für die Verbindung mit dem lokal persistenten Cube ist keine Verbindung mit dem Server erforderlich. Weitere Informationen zu lokalen Cubes finden Sie unter [lokale Cubes &#40;Analysis Services-Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -104,7 +104,7 @@ FROM source_cube_name (<param list>)
  dimension_name  
  Der Name der Dimension im lokalen Cube.  
   
- From \<Dim from-Klausel >  
+ From \<Dim from-Klausel>  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
  NOT_RELATED_TO_FACTS  
@@ -113,7 +113,7 @@ FROM source_cube_name (<param list>)
  \<> der Ebene  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein lokaler Cube ist definedin der Begriffe und Definitionen, die ihn definieren. Es gibt zwei Typen von Dimensionen.  
   
 -   Quell Dimensionen: Hierbei handelt es sich um Dimensionen, die Teil eines der weiteren Quellcubes waren.  
@@ -196,8 +196,8 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX für MDX &#40;-Daten Definitions Anweisungen&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [Create Session Cube- &#40;Anweisung (MDX)&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Daten Definitions Anweisungen &#40;MDX-&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [CREATE SESSION CUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   
   

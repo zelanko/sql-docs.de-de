@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 925ab0eb6248ec59284c175e472a237071a0c0bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774814"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Aktualisieren der SQL Server-Verwaltungstools
@@ -34,7 +34,7 @@ ms.locfileid: "62774814"
   
 -   Alle Komponenten in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen gleichzeitig aktualisiert werden. Die Versionsnummern der [!INCLUDE[ssDE](../../includes/ssde-md.md)]-, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]- und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten innerhalb einer Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]müssen identisch sein.  
   
--   Sie können während der Aktualisierung auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten zu einer vorhandenen Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]hinzufügen. Weitere Informationen finden Sie unter [ein Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
+-   Sie können während der Aktualisierung auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten zu einer vorhandenen Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]hinzufügen. Weitere Informationen finden Sie unter [Upgrade auf SQL Server 2014 mit dem Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clienttools wie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber, sqlcmd und osql werden nicht auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert. Die Clienttools werden stattdessen parallel zu Tools älterer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen ausgeführt. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt den Import von Einstellungen aus früheren Versionen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clienttools.  
   
@@ -46,9 +46,9 @@ ms.locfileid: "62774814"
   
 -   Datenbank-E-Mail, die auch als SQLiMail bezeichnet wird, wird mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Komponente von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisiert. Standardmäßig ist Datenbank-E-Mail nach dem Update deaktiviert. Alle Schema-Updates sollten nach dem Upgrade mit einem Updateskript abgeglichen werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md)   
  [Abwärtskompatibilität](../../getting-started/backward-compatibility.md)   
- [Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+ [Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

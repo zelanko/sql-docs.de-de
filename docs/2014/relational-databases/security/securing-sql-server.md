@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891613"
 ---
 # <a name="securing-sql-server"></a>Sichern von SQL Server
@@ -38,7 +38,7 @@ ms.locfileid: "68891613"
   
  Das Implementieren der physischen Netzwerksicherheit beginnt mit dem Fernhalten unbefugter Benutzer vom Netzwerk. Die folgende Tabelle enthält weitere Informationen zu Netzwerksicherheitsinformationen.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] und Netzwerkzugriff auf andere Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|"Konfigurieren und Sichern der Serverumgebung" in der Onlinedokumentation von [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
   
@@ -47,7 +47,7 @@ ms.locfileid: "68891613"
   
  Firewalls stellen ebenfalls effektive Möglichkeiten zum Implementieren von Sicherheit zur Verfügung. Eine Firewall trennt oder beschränkt logisch den Netzwerkverkehr und kann zum Verstärken der Datensicherheitsrichtlinie der Organisation konfiguriert werden. Wenn Sie eine Firewall verwenden, wird die Sicherheit auf Betriebssystemebene erhöht, indem ein Punkt zur Verfügung gestellt wird, auf den der Sicherheitsmaßstab ausgerichtet werden kann. Die folgende Tabelle enthält weitere Informationen zum Verwenden einer Firewall mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Konfigurieren einer Firewall für das Funktionieren mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Konfigurieren einer Firewall für das Funktionieren mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Konfigurieren einer Windows-Firewall für den Zugriff auf den SSIS-Dienst](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
@@ -57,13 +57,13 @@ ms.locfileid: "68891613"
   
  Die Oberflächenreduzierung stellt eine Sicherheitsmaßnahme dar, die das Beenden oder Deaktivieren nicht verwendeter Komponenten beinhaltet. Mithilfe der Oberflächenreduzierung kann die Sicherheit verbessert werden, da weniger Möglichkeiten für Angriffe auf das System vorhanden sind. Der wichtigste Aspekt beim Beschränken des Oberflächenbereichs von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] liegt im Ausführen erforderlicher Dienste mit "geringsten Rechten" durch ausschließliches Erteilen von entsprechenden Rechten an Dienste und Benutzer. Die folgende Tabelle enthält weitere Informationen zu Diensten und Systemzugriff.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
   
  Wenn Ihr [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -System Internetinformationsdienste (Internet Information Services, IIS) verwendet, sind zusätzliche Schritte zum Sichern der Plattformoberfläche erforderlich. Die folgende Tabelle enthält Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Internetinformationsdiensten.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |IIS-Sicherheit mit [!INCLUDE[ssEW](../../includes/ssew-md.md)]|"IIS-Sicherheit" in der Onlinedokumentation von [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Authentifizierung|[Authentifizierung in Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
@@ -72,7 +72,7 @@ ms.locfileid: "68891613"
 ### <a name="sql-server-operating-system-files-security"></a>SQL Server-Betriebssystemdateisicherheit  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Betriebssystemdateien zum Betrieb und zur Datenspeicherung verwendet. Die empfohlene Vorgehensweise für die Dateisicherheit erfordert, den Zugriff auf diese Dateien zu beschränken. Die folgende Tabelle enthält Informationen zu diesen Dateien.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Programmdateien|[Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
   
@@ -88,7 +88,7 @@ GO
 ## <a name="principals-and-database-object-security"></a>Prinzipale und Datenbankobjektsicherheit  
  Prinzipale sind die Personen, Gruppen und Prozesse, denen Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erteilt wurde. „Sicherungsfähige Elemente“ sind der Server, die Datenbank und Objekte in der Datenbank. Jedes der Elemente verfügt über einen Berechtigungssatz, der zum Reduzieren des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Oberflächenbereichs konfiguriert werden kann. In der folgenden Tabelle sind Informationen zu Prinzipalen und sicherungsfähigen Elementen enthalten.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Benutzer, Rollen und Prozesse von Servern und Datenbanken|[Prinzipale &#40;Datenbank-Engine&#41;](authentication-access/principals-database-engine.md)|  
 |Server- und Datenbankobjektsicherheit|[Sicherungsfähige Elemente](securables.md)|  
@@ -97,7 +97,7 @@ GO
 ### <a name="encryption-and-certificates"></a>Verschlüsselung und Zertifikate  
  Durch Verschlüsselung werden keine Probleme der Zugriffssteuerung gelöst. Sie erhöht jedoch die Sicherheit, indem Datenverluste selbst im seltenen Fall einer überbrückten Zugriffssteuerung beschränkt werden. Wenn der Datenbankhostcomputer beispielsweise falsch konfiguriert wurde und ein böswilliger Benutzer Zugriff auf sensible Daten wie Kreditkartennummern gewinnt, sind die gestohlenen Informationen nutzlos, wenn sie verschlüsselt wurden. Die folgende Tabelle enthält weitere Informationen zur Verschlüsselung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Die Verschlüsselungshierarchie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Verschlüsselungshierarchie](encryption/encryption-hierarchy.md)|  
 |Implementieren sicherer Verbindungen|[Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)|  
@@ -105,7 +105,7 @@ GO
   
  Zertifikate sind "Softwareschlüssel", die für zwei Server freigegeben sind, durch die eine sichere Kommunikation über starke Authentifizierung möglich ist. Zertifikate können in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Erweitern der Objekt- und Verbindungssicherheit erstellt und verwendet werden. Die folgende Tabelle enthält Informationen zum Verwenden von Zertifikaten mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Erstellen eines Zertifikats zum Verwenden mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)|  
 |Verwenden eines Zertifikats mit Datenbankspiegelung|[Verwenden von Zertifikaten für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
@@ -121,10 +121,10 @@ GO
 ### <a name="sql-server-security-tools-and-utilities"></a>SQL Server-Sicherheitstools und -Hilfsprogramme  
  Die folgende Tabelle enthält Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools und -Hilfsprogrammen zum Konfigurieren und Verwalten der Sicherheit.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Herstellen einer Verbindung mit, Konfigurieren und Steuern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Verwenden von SQL Server Management Studio](../../database-engine/use-sql-server-management-studio.md)|  
-|Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Ausführen von Abfragen an der Eingabeaufforderung|[sqlcmd (Hilfsprogramm)](../../tools/sqlcmd-utility.md)|  
+|Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Ausführen von Abfragen an der Eingabeaufforderung|[SQLCMD-Hilfsprogramm](../../tools/sqlcmd-utility.md)|  
 |Netzwerkkonfiguration und Steuerung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md)|  
 |Aktivieren und Deaktivieren von Funktionen mit der richtlinienbasierten Verwaltung|[Verwalten von Servern mit der richtlinienbasierten Verwaltung](../policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Bearbeiten symmetrischer Schlüssel für einen Berichtsserver|[rskeymgmt-Hilfsprogramm &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
@@ -132,7 +132,7 @@ GO
 ### <a name="sql-server-security-catalog-views-and-functions"></a>SQL Server-Sicherheitskatalogsichten und -Funktionen  
  In [!INCLUDE[ssDE](../../includes/ssde-md.md)] werden Sicherheitsinformationen in zahlreichen Sichten und Funktionen dargestellt, die für Leistung und Nützlichkeit optimiert sind. Die folgende Tabelle enthält Informationen zu Sicherheitssichten und -funktionen.  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sicherheitskatalogsichten, durch die Informationen zu Berechtigungen, Rollen, Prinzipalen usw. auf Datenbankebene und Serverebene zurückgegeben werden. Außerdem sind Katalogsichten mit Informationen zu Verschlüsselungsschlüsseln, Zertifikaten und Anmeldeinformationen vorhanden.|[Sicherheitskatalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsfunktionen, durch die Informationen zum aktuellen Benutzer, zu Berechtigungen und zu Schemas zurückgegeben werden.|[Sicherheitsfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)|  

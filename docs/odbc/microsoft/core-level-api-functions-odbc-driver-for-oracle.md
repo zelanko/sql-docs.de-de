@@ -1,5 +1,5 @@
 ---
-title: Core-Level-API-Funktionen (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
+title: API-Funktionen der Kernebene (ODBC-Treiber für Oracle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,40 +16,40 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081971"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>API-Funktionen der Kernebene (ODBC-Treiber für Oracle)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Funktionen, die auf dieser Ebene umfassen die Mindestebene von schnittstellenübereinstimmung für ODBC-Treiber.  
+ Zu den Funktionen auf dieser Ebene gehören die minimale Ebene der Schnittstellen Konformität für ODBC-Treiber.  
   
-|API-Funktion|Hinweise|  
+|API-Funktion|Notizen|  
 |------------------|-----------|  
-|**SQLAllocConnect**|Belegt Speicher für ein Verbindungshandle *Hdbc*, in der Umgebung identifizierte *Henv*. Der Treiber-Manager verarbeitet diesen Aufruf und Aufrufe des Treibers **SQLAllocConnect** Funktion jedes Mal, wenn **SQLConnect**, **SQLBrowseConnect**, oder  **SQLDriverConnect** aufgerufen wird.|  
-|**SQLAllocEnv**|Zeigt ein Dialogfeld, das die Anforderung für die Oracle-Clientsoftware angeben, und gibt dann SQL_NULL_HANDLE zurück. Wenn die Oracle-Clientsoftware nicht installiert ist, diese Funktion weist Speicher für ein Umgebungshandle *Henv*, und der ODBC-Aufruf-Level-Schnittstelle für die Verwendung von einer Anwendung initialisiert.|  
-|**SQLAllocStmt**|Belegt Speicher für ein Anweisungshandle, und ordnet das Anweisungshandle von Hdbc angegebene Verbindung. Der Treiber-Manager übergibt diesen Aufruf an den Treiber, der den Speicher für die Struktur des Befehls beschäftigt reserviert.|  
-|**SQLBindCol**|Speicherplatz für eine Ergebnisspalte zugewiesen und gibt den Typ des Ergebnisses.|  
-|**SQLCancel**|Bricht die Verarbeitung für ein Anweisungshandle Befehls beschäftigt ab. In einigen Fällen lässt Oracle nicht Abbrechen einer ausgeführten Anweisung. Dies bedeutet, dass eine ausgeführte Anweisung weiterhin Oracle Abschluss des Prozesses, zu diesem Zeitpunkt die Ergebnisse von den Anweisungen, die vom ODBC-Treiber für Oracle abgebrochen werden.|  
-|**SQLColAttributes**|Gibt Informationen der Sicherheitsbeschreibung für eine Spalte in einem Resultset zurück. Informationen der Sicherheitsbeschreibung wird als eine Zeichenfolge, eine 32-Bit-Deskriptor-abhängige Wert oder ein ganzzahliger Wert zurückgegeben.|  
-|**SQLConnect**|Eine Verbindung mit einer Datenquelle. Um Oracle-Operating System-Authentifizierung verwenden, geben Sie "/" als die *SzUID* Parameter und "" als die *SzAuthStr* Parameter.|  
-|**SQLDescribeCol**|Gibt den Namen, Typ, Genauigkeit, Dezimalstellen und NULL-Zulässigkeit der angegebenen Ergebnisspalte. **Hinweis:  SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
-|**SQLDisconnect**|Schließt eine Verbindung Wenn Verbindungspooling, für die einer freigegebenen Umgebung aktiviert ist aus, und eine Anwendung ruft **SQLDisconnect** für eine Verbindung in der Umgebung, die Verbindung an den Verbindungspool zurückgegeben werden soll, und ist weiterhin verfügbar, mit anderen Komponenten, die mithilfe von die gleichen freigegebenen Umgebung.|  
-|**SQLError**|Fehler oder Status Informationen zu den letzten Fehler zurückgegeben. Der Treiber verwaltet einen Stapel oder eine Liste von Fehlern, die für die zurückgegeben werden, können die *Befehls beschäftigt*, *Hdbc*, und *Henv* Argumente, je nachdem, wie der Aufruf von **SQLError**  erfolgt. Die Fehlerwarteschlange wird nach jeder Anweisung geleert. In der Regel ruft Sie eine Oracle-Fehlermeldung ab, und andernfalls leer ist.|  
-|**SQLExecDirect**|Führt eine neue, nicht vorbereiteter SQL­Anweisung. Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind. Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`. \`Meine "Field1"\`, \`Meiner Tabelle\`.\` Meine "Field2"\` FROM \`meiner Tabelle\`|  
-|**SQLExecute**|Führt eine vorbereitete SQL­Anweisung (eine Anweisung, die bereits vorbereitet, indem **SQLPrepare**). Der Treiber verwendet die aktuellen Werte der Variablen Marker Parameter auf, wenn alle Parameter in der Anweisung vorhanden sind.|  
-|**SQLFetch**|Ruft eine Zeile aus einem Resultset in die Speicherorte, die durch den vorherigen Aufrufen zum angegebenen **SQLBindCol**. Bereitet den Treiber für einen Aufruf von **SQLGetData** für ungebundenen Spalten.|  
-|**SQLFreeConnect**|Gibt ein Verbindungshandle frei und gibt alle für das Handle zugeordneten Arbeitsspeicher frei.|  
-|**SQLFreeEnv**|Schließt den ODBC-Treiber für Oracle und alle mit der Treiber verbundene Speicher frei.|  
-|**SQLFreeStmt**|Beendet die Verarbeitung im Zusammenhang mit einer bestimmten Befehls beschäftigt, schließt alle geöffneten Cursor verknüpft ist, mit der Befehls beschäftigt, ausstehende Ergebnisse verworfen und gibt optional das Anweisungshandle zugeordnete Ressourcen frei.|  
-|**SQLGetCursorName**|Gibt den Namen des Cursors Zusammenhang mit der angegebenen Befehls beschäftigt.|  
-|**SQLNumResultCols**|Gibt die Anzahl der Spalten in ein resultsetcursor zurück.|  
-|**SQLPrepare**|Bereitet eine SQL-Anweisung durch die Planung So optimieren, und führen Sie die Anweisung vor. Die SQL-Anweisung kompiliert wird, für die Ausführung von **SQLExecDirect**.<br /><br /> Wenn Ihre Tabelle, Sicht oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen wieder in Anführungszeichen ein. Wenn Ihre Datenbank eine Tabelle namens enthält z. B. *Meine Tabelle* und das Feld *mein Feld*, schließen Sie jedes Element des Bezeichners wie folgt:<br /><br /> Wählen Sie \`meiner Tabelle\`.\` Mein Feld\` FROM \`meiner Tabelle\`<br /><br /> Weitere Informationen zur Verwendung von Resultsets, die Arrays als formale Parameter enthält, finden Sie unter [Zurückgeben von Arrayparametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
-|**SQLRowCount**|Oracle bietet keine Möglichkeit zum Bestimmen der Anzahl von Zeilen in einem Resultset erst, nachdem Sie die letzte Zeile abrufen, sodass es-1 zurück.|  
-|**SQLSetCursorName**|Ein Handle aktive Anweisung ordnet einen Cursornamen *Befehls beschäftigt*.|  
+|**SQLAllocConnect**|Belegt Speicher für ein Verbindungs Handle, *hdbc*, in der durch *HENV*identifizierten Umgebung. Der Treiber-Manager verarbeitet diesen Aufruf und ruft die **sqlverbincconnect** -Funktion des Treibers immer dann auf, wenn **SQLCONNECT**, **sqlbrowseconnetct**oder **SQLDriverConnect** aufgerufen wird.|  
+|**SQLAllocEnv**|Zeigt ein Dialogfeld an, in dem die Anforderung der Oracle-Client Software angegeben ist, und gibt SQL_NULL_HANDLE zurück. Wenn die Oracle-Client Software nicht installiert ist, ordnet diese Funktion Arbeitsspeicher für ein Umgebungs Handle, *HENV*, zu und initialisiert die ODBC-Schnittstelle auf Aufrufebene für die Verwendung durch eine Anwendung.|  
+|**SQLAllocStmt**|Ordnet Speicher für ein Anweisungs Handle zu und ordnet das Anweisungs Handle der von hdbc angegebenen Verbindung zu. Der Treiber-Manager übergibt diesen Befehl an den Treiber, der den Arbeitsspeicher für die hstmt-Struktur zugeordnet.|  
+|**SQLBindCol**|Weist Speicherplatz für eine Ergebnisspalte zu und gibt den Typ des Ergebnisses an.|  
+|**SQLCancel**|Bricht die Verarbeitung für ein Anweisungs Handle (hstmt) ab. In einigen Fällen lässt Oracle den Abbruch einer laufenden Anweisung nicht zu. Dies bedeutet, dass eine laufende Anweisung fortgesetzt wird, bis Oracle den Prozess abschließt. zu diesem Zeitpunkt werden die Ergebnisse der Anweisungen vom ODBC-Treiber für Oracle abgebrochen.|  
+|**SQLColAttributes**|Gibt Deskriptorinformationen für eine Spalte in einem Resultset zurück. Deskriptorinformationen werden als Zeichenfolge, als 32-Bit-deskriptorabhängige Werte oder als ganzzahliger Wert zurückgegeben.|  
+|**SQLConnect**|Stellt eine Verbindung mit einer Datenquelle her. Um die Oracle-Betriebs System Authentifizierung zu verwenden, geben Sie "/" als *szuid* -Parameter und "" als *szauthstr* -Parameter an.|  
+|**SQLDescribeCol**|Gibt den Namen, den Typ, die Genauigkeit, die Dezimal Größe und die NULL-Zulässigkeit der angegebenen Ergebnisspalte zurück. **Hinweis: SQLDescribeCol** meldet berechnete Spalten als SQL_VARCHAR.|  
+|**SQLDisconnect**|Schließt eine Verbindung Wenn das Verbindungspooling für eine freigegebene Umgebung aktiviert ist und eine Anwendung **SQLDisconnect** für eine Verbindung in dieser Umgebung aufruft, wird die Verbindung an den Verbindungspool zurückgegeben und ist weiterhin für andere Komponenten verfügbar, die dieselbe freigegebene Umgebung verwenden.|  
+|**SQLError**|Gibt Fehler-oder Statusinformationen zum letzten Fehler zurück. Der Treiber verwaltet einen Stapel oder eine Liste von Fehlern, die für die Argumente *hstmt*, *hdbc*und *HENV* zurückgegeben werden können. Dies hängt davon ab, wie der **SQLError** -Befehl durchgeführt wird. Die Fehler Warteschlange wird nach jeder Anweisung geleert. Ruft in der Regel eine Oracle-Fehlermeldung ab, die andernfalls leer ist.|  
+|**SQLExecDirect**|Führt eine neue, nicht vorbereitete SQL-Anweisung aus. Der Treiber verwendet die aktuellen Werte der parametermarkervariablen, wenn in der Anweisung Parameter vorhanden sind. Wenn Ihre Tabellen-, Ansichts-oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen in die rückanführungs Zeichen ein. Wenn Ihre Datenbank z. b. eine Tabelle mit dem Namen " *My Table* " und das Feld " *My*" enthält, schließen Sie jedes Element des Bezeichners wie folgt ein:<br /><br /> Wählen \`Sie meine\`Tabelle aus. \`Meine field1\`,; \`Meine Tabelle\`. \`Meine field2\` aus \`meiner Tabelle\`|  
+|**SQLExecute**|Führt eine vorbereitete SQL-Anweisung aus (eine bereits von **SQLPrepare**vorbereitete-Anweisung). Der Treiber verwendet die aktuellen Werte der parametermarkervariablen, wenn in der Anweisung Parameter vorhanden sind.|  
+|**SQLFetch**|Ruft eine Zeile aus einem Resultset in die Speicherorte ab, die von den vorherigen Aufrufen von **SQLBindCol**angegeben wurden. Bereitet den Treiber für einen **SQLGetData** -aufrufswert für die ungebundenen Spalten vor.|  
+|**SQLFreeConnect**|Gibt ein Verbindungs Handle frei und gibt den für das Handle zugeordneten Arbeitsspeicher frei.|  
+|**SQLFreeEnv**|Schließt den ODBC-Treiber für Oracle und gibt den dem Treiber zugeordneten Arbeitsspeicher frei.|  
+|**'SQLFreeStmt'**|Beendet die Verarbeitung eines bestimmten hstmt, schließt alle geöffneten Cursor, die dem hstmt zugeordnet sind, verwirft ausstehende Ergebnisse und gibt optional alle dem Anweisungs Handle zugeordneten Ressourcen frei.|  
+|**SQLGetCursorName**|Gibt den Namen des Cursors zurück, der dem angegebenen hstmt zugeordnet ist.|  
+|**SQLNumResultCols**|Gibt die Anzahl der Spalten in einem resultsetcursor zurück.|  
+|**SQLPrepare**|Bereitet eine SQL-Anweisung vor, indem geplant wird, wie die-Anweisung optimiert und ausgeführt wird. Die SQL-Anweisung wird für die Ausführung von **SQLExecDirect**kompiliert.<br /><br /> Wenn Ihre Tabellen-, Ansichts-oder Feldnamen Leerzeichen enthalten, schließen Sie die Namen in die rückanführungs Zeichen ein. Wenn Ihre Datenbank z. b. eine Tabelle mit dem Namen " *My Table* " und das Feld " *My*" enthält, schließen Sie jedes Element des Bezeichners wie folgt ein:<br /><br /> Wählen \`Sie meine\`Tabelle aus. \`Mein Feld\` aus \`meiner Tabelle\`<br /><br /> Informationen zur Verwendung von Resultsets mit Arrays als formale Parameter finden Sie unter [zurückgeben von Array Parametern aus gespeicherten Prozeduren](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
+|**SQLRowCount**|Oracle bietet keine Möglichkeit, die Anzahl der Zeilen in einem Resultset zu ermitteln, bis Sie die letzte Zeile abgerufen haben. Daher wird-1 zurückgegeben.|  
+|**SQLSetCursorName**|Ordnet einem aktiven Anweisungs Handle ( *hstmt*) einen Cursor Namen zu.|  
 |**SQLSetParam**|Ersetzt durch SQLBindParameter in ODBC 2. *x*.|  
-|**SQLTransact**|Fordert einen Commit oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungshandles (Hstmts), der eine Verbindung zugeordnet oder für alle Verbindungen, die das Umgebungshandle zugeordnet *Henv*. Die Transaktion bleibt aktiv, wenn ein Commit im manuellen Modus fehlschlägt, Sie können auch ein Rollback der Transaktion oder wiederholen den Commitvorgang. Wenn ein Commitvorgang im Transaktionsmodus für automatische fehlschlägt, wird die Transaktion automatisch zurückgesetzt; die Transaktion darf nicht inaktiv sein.|
+|**SQLtransact**|Fordert einen Commit-oder Rollback-Vorgang für alle aktiven Vorgänge für alle Anweisungs Handles (hstmts) an, die einer Verbindung zugeordnet sind, oder für alle Verbindungen, die dem Umgebungs Handle, *HENV*, zugeordnet sind. Wenn ein Commit im manuellen Modus fehlschlägt, bleibt die Transaktion aktiv. Sie können für die Transaktion ein Rollback ausführen oder den Commit-Vorgang wiederholen. Wenn ein Commitvorgang im automatischen Transaktionsmodus fehlschlägt, wird für die Transaktion automatisch ein Rollback ausgeführt. die Transaktion kann nicht inaktiv sein.|

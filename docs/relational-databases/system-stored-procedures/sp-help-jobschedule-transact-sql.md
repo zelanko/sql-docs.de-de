@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobschedule (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_jobschedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,19 +18,19 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054912"
 ---
-# <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
+# <a name="sp_help_jobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zur Zeitplanung von Aufträgen zurück, mit denen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] automatisierte Aktivitäten ausführt.  
  
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,50 +43,50 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @job_id = ] job_id` ID des Auftrags. *Job_id*ist **Uniqueidentifier**, hat den Standardwert NULL.  
+`[ @job_id = ] job_id`Die Auftrags-ID. *job_id*ist vom Datentyp **uniqueidentifier**und hat den Standardwert NULL.  
   
-`[ @job_name = ] 'job_name'` Der Name des Auftrags. *Job_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @job_name = ] 'job_name'`Der Name des Auftrags. *job_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]
-> Entweder *Job_id* oder *Job_name* muss angegeben werden, aber beide Angaben sind nicht möglich.
+> Es muss entweder *job_id* oder *job_name* angegeben werden, beide Angaben können jedoch nicht angegeben werden.
 
-`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplanelements für den Auftrag. *Schedule_name*ist **Sysname**, hat den Standardwert NULL.  
+`[ @schedule_name = ] 'schedule_name'`Der Name des Zeit Plan Elements für den Auftrag. *schedule_name*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @schedule_id = ] schedule_id` Die ID des Zeitplanelements für den Auftrag. *Schedule_id*ist **Int**, hat den Standardwert NULL.  
+`[ @schedule_id = ] schedule_id`Die ID des Zeit Plan Elements für den Auftrag. *schedule_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @include_description = ] include_description` Gibt an, ob die Beschreibung des Zeitplans im Resultset eingeschlossen werden soll. *Include_description* ist **Bit**, hat den Standardwert **0**. Wenn *Include_description* ist **0**, die Beschreibung des Zeitplans ist nicht im Resultset enthalten. Wenn *Include_description* ist **1**, ist die Beschreibung des Zeitplans im Resultset enthalten.  
+`[ @include_description = ] include_description`Gibt an, ob die Beschreibung des Zeitplans in das Resultset eingeschlossen werden soll. *include_description* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *include_description* **0**ist, ist die Beschreibung des Zeitplans nicht im Resultset enthalten. Wenn *include_description* **1**ist, wird die Beschreibung des Zeitplans in das Resultset eingeschlossen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|ID des Zeitplans.|  
 |**schedule_name**|**sysname**|Name des Zeitplans.|  
-|**aktiviert**|**int**|Ob der Zeitplan aktiviert (**1**) oder nicht aktiviert ist (**0**).|  
-|**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zu den **Freq_interval**<br /><br /> **64** = ausgeführt werden, wenn **SQLServerAgent** -Dienst gestartet wird.|  
-|**freq_interval**|**int**|Tage, wenn der Auftrag ausgeführt wird. Der Wert hängt vom Wert der **Freq_type**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_type**|**int**|Einheiten für **Freq_subday_interval**. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_subday_interval**|**int**|Anzahl der **Freq_subday_type** -Perioden zwischen den Ausführungsinstanzen des Auftrags. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
-|**freq_relative_interval**|**int**|Auftreten des geplanten Auftrags von der **Freq_interval** in jedem Monat. Weitere Informationen finden Sie unter [Sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**wodurch**|**int**|Gibt an, ob der Zeitplan aktiviert (**1**) oder nicht aktiviert (**0**) ist.|  
+|**freq_type**|**int**|Der Wert, der angibt, wann der Auftrag ausgeführt werden soll.<br /><br /> **1** = einmal<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ zum **freq_interval**<br /><br /> **64** = ausführen, wenn der **SQLServerAgent** -Dienst gestartet wird.|  
+|**freq_interval**|**int**|Tage, an denen der Auftrag ausgeführt wird. Der Wert hängt vom Wert **freq_type**ab. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_type**|**int**|Einheiten für **freq_subday_interval**. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_subday_interval**|**int**|Anzahl der **freq_subday_type** Zeiträume zwischen den einzelnen Ausführungen des Auftrags. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
+|**freq_relative_interval**|**int**|Das Vorkommen des **freq_interval** eines geplanten Auftrags in jedem Monat. Weitere Informationen finden Sie unter [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_recurrence_factor**|**int**|Anzahl der Monate zwischen der geplanten Ausführung des Auftrags|  
 |**active_start_date**|**int**|Datum, an dem der Zeitplan aktiviert wird.|  
 |**active_end_date**|**int**|Enddatum für den Zeitplan.|  
 |**active_start_time**|**int**|Uhrzeit, zu der der Zeitplan gestartet wird.|  
 |**active_end_time**|**int**|Uhrzeit, zu der der Zeitplan beendet wird.|  
 |**date_created**|**datetime**|Datum, an dem der Zeitplan erstellt wird|  
-|**schedule_description**|**nvarchar(4000)**|Eine Beschreibung des Zeitplans, der Werte in abgeleitet wird **msdb.dbo.sysschedules**. Wenn *Include_description* ist **0**, enthält diese Spalte Text, der besagt, dass die Beschreibung nicht angefordert wurde.|  
+|**schedule_description**|**nvarchar(4000)**|Eine englische Beschreibung des Zeitplans, der von Werten in " **msdb. dbo. syszeitpläne**" abgeleitet wird. Wenn *include_description* **0**ist, enthält diese Spalte Text, der besagt, dass die Beschreibung nicht angefordert wurde.|  
 |**next_run_date**|**int**|Datum, an dem der Zeitplan die nächste Ausführung des Auftrags bewirken wird|  
 |**next_run_time**|**int**|Uhrzeit, zu der der Zeitplan die nächste Ausführung des Auftrags bewirken wird|  
 |**schedule_uid**|**uniqueidentifier**|Bezeichner für den Zeitplan.|  
 |**job_count**|**int**|Die Anzahl der zurückgegebenen Aufträge.|  
   
-> **Hinweis: Sp_help_jobschedule** gibt Werte aus der **dbo.sysjobschedules** und **dbo.sysschedules** -Systemtabellen in **Msdb**. **Sysjobschedules** wird alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
+> **Hinweis: sp_help_jobschedule** gibt Werte aus den Systemtabellen **dbo. sysjobzeitpläne** und **dbo. syszeitpläne** in **msdb**zurück. **sysjobzeitpläne** werden alle 20 Minuten aktualisiert. Dies kann Auswirkungen auf die Werte haben, die von dieser gespeicherten Prozedur zurückgegeben werden.  
   
-## <a name="remarks"></a>Hinweise  
- Die Parameter der **Sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *Schedule_id* angegeben ist, weder *Job_id* noch *Job_name* kann angegeben werden. Andernfalls die *Job_id* oder *Job_name* Parameter können verwendet werden, mit *Schedule_name*.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Parameter von **sp_help_jobschedule** können nur in bestimmten Kombinationen verwendet werden. Wenn *schedule_id* angegeben wird, können weder *job_id* noch *job_name* angegeben werden. Andernfalls können die Parameter *job_id* oder *job_name* mit *schedule_name*verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** . Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -99,7 +99,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder der **SQLAgentUserRole** können nur Eigenschaften von Auftragszeitplänen, deren Besitzer, anzeigen.  
+ Mitglieder von **SQLAgentUserRole** können nur Eigenschaften von Auftrags Zeitplänen anzeigen, deren Besitzer Sie sind.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -142,8 +142,8 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

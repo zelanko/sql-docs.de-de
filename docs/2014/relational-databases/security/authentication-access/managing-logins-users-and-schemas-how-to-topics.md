@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011500"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen
@@ -30,11 +30,11 @@ ms.locfileid: "63011500"
   
 -   [Erstellen eines Datenbankschemas](create-a-database-schema.md)  
   
--   [Verknüpfen einer Rolle](join-a-role.md)  
+-   [Einer Rolle beitreten](join-a-role.md)  
   
 -   [Erteilen einer Berechtigung für einen Prinzipal](grant-a-permission-to-a-principal.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Prinzipale &#40;Datenbank-Engine&#41;](principals-database-engine.md)   
  [Sichern von SQL Server](../securing-sql-server.md)  
   

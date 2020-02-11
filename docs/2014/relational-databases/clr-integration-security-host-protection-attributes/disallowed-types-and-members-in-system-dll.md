@@ -1,5 +1,5 @@
 ---
-title: Unzulässige Typen und Member in "System.dll" | Microsoft-Dokumentation
+title: Unzulässige Typen und Member in "System. dll" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1780f4236c70d8685c1ce2050a08bc305a3f0853
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919671"
 ---
 # <a name="disallowed-types-and-members-in-systemdll"></a>Unzulässige Typen und Elemente in "System.dll"
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programmierung der Common Language-Integration (CLR) lässt die Verwendung von einem Typ oder Member, die eine `HostProtectionAttribute` , der angibt eine `System.Security.Permissions.HostProtectionResource` Enumeration mit einem Wert von `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, oder `UI`. In der folgenden Tabelle sind die Elemente und Typen der System.dll-Assembly aufgeführt, deren Hostschutzattributwerte nicht zulässig sind.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die CLR- `HostProtectionAttribute` Programmierung (Common Language Integration) lässt die Verwendung eines Typs oder Members mit einem nicht zu, das `System.Security.Permissions.HostProtectionResource` eine-Enumeration mit dem `ExternalProcessMgmt`Wert `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`,, **SharedState**, `Synchronization`oder `UI`angibt. In der folgenden Tabelle sind die Elemente und Typen der System.dll-Assembly aufgeführt, deren Hostschutzattributwerte nicht zulässig sind.  
   
 > [!NOTE]  
->  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie unter [unterstützt .NET Framework-Bibliotheken](../clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Diese Liste wurde von den unterstützten Assemblys generiert. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../clr-integration/database-objects/supported-net-framework-libraries.md).  
   
 |Typ oder Element|Hostschutzattribut-Wert(e)|  
 |--------------------|--------------------|  
@@ -211,9 +211,9 @@ ms.locfileid: "62919671"
 |System.IO.Compression.GZipStream.BeginWrite()|ExternalThreading|  
 |System.IO.Ports.SerialStream.BeginRead()|ExternalThreading|  
 |System.IO.Ports.SerialStream.BeginWrite()|ExternalThreading|  
-|System.Media.SoundPlayer|UI|  
-|System.Media.SystemSound|UI|  
-|System.Media.SystemSounds|UI|  
+|System.Media.SoundPlayer|Benutzeroberfläche|  
+|System.Media.SystemSound|Benutzeroberfläche|  
+|System.Media.SystemSounds|Benutzeroberfläche|  
 |System.Net.ConnectStream.BeginRead()|ExternalThreading|  
 |System.Net.ConnectStream.BeginWrite()|ExternalThreading|  
 |System.Net.Dns.BeginGetHostAddresses()|ExternalThreading|  
@@ -280,11 +280,11 @@ ms.locfileid: "62919671"
 |WebClientWriteStream.BeginRead()|ExternalThreading|  
 |WebClientWriteStream.BeginWrite()|ExternalThreading|  
   
-## <a name="see-also"></a>Siehe auch  
- [Hostschutzattribute und Programmierung der CLR-Integration](host-protection-attributes-and-clr-integration-programming.md)   
- [Unzulässige Typen und Elemente in "Microsoft.VisualBasic.dll"](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
- [Unzulässige Typen und Elemente in "mscorlib.dll"](disallowed-types-and-members-in-mscorlib-dll.md)   
- [Unzulässige Typen und Elemente in "System.Data.dll"](disallowed-types-and-members-in-system-data-dll.md)   
- [Unzulässige Typen und Elemente in „System.Core.dll“](disallowed-types-and-members-in-system-core-dll.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Host Schutz Attribute und Programmierung der CLR-Integration](host-protection-attributes-and-clr-integration-programming.md)   
+ [Unzulässige Typen und Member in "Microsoft. VisualBasic. dll"](disallowed-types-and-members-in-microsoft-visualbasic-dll.md)   
+ [Unzulässige Typen und Member in "mscorlib. dll"](disallowed-types-and-members-in-mscorlib-dll.md)   
+ [Unzulässige Typen und Member in "System. Data. dll"](disallowed-types-and-members-in-system-data-dll.md)   
+ [Unzulässige Typen und Elemente in 'System.Core.dll'](disallowed-types-and-members-in-system-core-dll.md)  
   
   

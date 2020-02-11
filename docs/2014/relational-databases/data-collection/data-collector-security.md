@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62873618"
 ---
 # <a name="data-collector-security"></a>Datensammlersicherheit
@@ -48,13 +48,13 @@ ms.locfileid: "62873618"
   
  Diese Rollen werden in der msdb-Datenbank gespeichert. Standardmäßig ist kein Benutzer Mitglied dieser Datenbankrollen. Die Benutzermitgliedschaft in diesen Rollen muss explizit erteilt werden.  
   
- Benutzer, die Mitglieder von der `sysadmin` -Serverrolle haben vollen Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Objekte und Daten Sichten des Datensammlers. Sie müssen jedoch explizit Datensammlerrollen hinzugefügt worden sein.  
+ Benutzer, die Mitglieder der Server `sysadmin` Rolle Fixed sind, haben vollen Zugriff [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf-Agent-Objekte und-Datensammler Sichten. Sie müssen jedoch explizit Datensammlerrollen hinzugefügt worden sein.  
   
 > [!IMPORTANT]  
 >  Mitglieder der db_ssisadmin-Rolle und der dc_admin-Rolle können Ihre Berechtigungen möglicherweise auf sysadmin erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des sysadmin-Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden können. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit einschränkten Berechtigungen, oder fügen Sie der db_ssisadmin-Rolle und der dc_admin-Rolle nur sysadmin-Mitglieder hinzu.  
   
-### <a name="dcadmin-role"></a>dc_admin-Rolle  
- Benutzer mit der `dc_admin` Rolle haben vollen Administratorzugriff (Create, Read, Update und Delete) auf die datensammlerkonfiguration auf einer Serverinstanz. Mitglieder dieser Rolle können die folgenden Vorgänge ausführen:  
+### <a name="dc_admin-role"></a>dc_admin-Rolle  
+ Benutzer, die der `dc_admin` Rolle zugewiesen sind, haben vollen Administrator Zugriff (erstellen, lesen, aktualisieren und löschen) auf die Datensammler Konfiguration auf einer Serverinstanz. Mitglieder dieser Rolle können die folgenden Vorgänge ausführen:  
   
 -   Festlegen von Eigenschaften auf Sammlerebene.  
   
@@ -64,16 +64,16 @@ ms.locfileid: "62873618"
   
 -   Ausführen aller Vorgänge, die der **dc_operator** -Rolle erteilt wurden.  
   
- Die `dc_admin` -Rolle ist ein Element der folgenden Rollen:  
+ Die `dc_admin` Rolle ist ein Mitglied der folgenden Rollen:  
   
 -   **SQLAgentUserRole**. Diese Rolle ist zum Erstellen von Zeitplänen und zum Ausführen von Aufträgen erforderlich.  
   
     > [!NOTE]  
-    >  Erstellt für der Datensammler Zugriff zu gewähren, muss Proxys `dc_admin` Sie erstellt und deren Verwendung in Auftragsschritten, die ein Proxy erforderlich ist.  
+    >  Proxys, die für den Datensammler erstellt `dc_admin` wurden, müssen Zugriff auf erteilen, um Sie zu erstellen und in allen Auftrags Schritten zu verwenden, die einen Proxy erfordern.  
   
--   **dc_operator**. Mitglieder der `dc_admin` erben die Berechtigungen, gewährt **Dc_operator**.  
+-   **dc_operator**. Mitglieder von `dc_admin` erben die Berechtigungen, die **dc_operator**erteilt wurden.  
   
-### <a name="dcoperator-role"></a>dc_operator-Rolle  
+### <a name="dc_operator-role"></a>dc_operator-Rolle  
  Mitglieder der **dc_operator-Rolle** verfügen über Lese- und Aktualisierungszugriff. Diese Rolle unterstützt Vorgangstasks in Bezug auf das Ausführen und Konfigurieren von Sammlungssätzen. Mitglieder dieser Rolle können die folgenden Vorgänge ausführen:  
   
 -   Starten oder Beenden eines Sammlungssatzes.  
@@ -94,7 +94,7 @@ ms.locfileid: "62873618"
   
  Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](../../integration-services/security/integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).  
   
-### <a name="dcproxy-role"></a>dc_proxy-Rolle  
+### <a name="dc_proxy-role"></a>dc_proxy-Rolle  
  Mitglieder der **dc_proxy** -Rolle verfügen über Lesezugriff auf Sammlungssätze des Datensammlers und Eigenschaften auf Sammlerebene. Die Mitglieder dieser Rolle können auch Aufträge anzeigen und ausführen, deren Besitzer sie sind, und Auftragsschritte erstellen, die als bereits vorhandenes Proxykonto ausgeführt werden.  
   
  Mitglieder dieser Rolle können die folgenden Vorgänge ausführen:  
@@ -124,9 +124,9 @@ ms.locfileid: "62873618"
   
  Diese Rollen werden in der msdb-Datenbank gespeichert. Standardmäßig ist kein Benutzer Mitglied dieser Datenbankrollen. Die Benutzermitgliedschaft in diesen Rollen muss explizit erteilt werden.  
   
- Benutzer, die Mitglieder von der `sysadmin` -Serverrolle haben vollen Zugriff auf datensammlersichten. Sie müssen jedoch explizit Datenbankrollen hinzugefügt werden, um weitere Operationen durchführen zu können.  
+ Benutzer, die Mitglieder der Server `sysadmin` Rolle Fixed sind, haben vollen Zugriff auf die Datensammler Sichten. Sie müssen jedoch explizit Datenbankrollen hinzugefügt werden, um weitere Operationen durchführen zu können.  
   
-### <a name="mdwadmin-role"></a>mdw_admin-Rolle  
+### <a name="mdw_admin-role"></a>mdw_admin-Rolle  
  Mitglieder der **mdw_admin** -Rolle verfügen über Lese-, Schreib-, Aktualisierungs- und Löschzugriff auf das Verwaltungs-Data Warehouse.  
   
  Mitglieder dieser Rolle können die folgenden Vorgänge ausführen:  
@@ -134,17 +134,17 @@ ms.locfileid: "62873618"
 -   Ändern des Verwaltungs-Data Warehouse-Schemas, falls erforderlich (beispielsweise Hinzufügen einer neuen Tabelle, wenn ein neuer Sammlertyp installiert wird).  
   
     > [!NOTE]  
-    >  Bei eine schemaänderung wird der Benutzer zudem muss ein Mitglied der `dc_admin` Rolle um einen neuen sammlertyp installieren, da dadurch die Berechtigung zum Aktualisieren der datensammlerkonfiguration in Msdb erforderlich ist.  
+    >  Wenn eine Schema Änderung vorliegt, muss der Benutzer auch Mitglied der `dc_admin` Rolle sein, um einen neuen Sammlertyp installieren zu können, da für diese Aktion eine Berechtigung zum Aktualisieren der Datensammler Konfiguration in msdb erforderlich ist.  
   
 -   Ausführen von Wartungsaufträgen für das Verwaltungs-Data Warehouse, beispielsweise Archivierung oder Cleanup.  
   
-### <a name="mdwwriter-role"></a>mdw_writer-Rolle  
+### <a name="mdw_writer-role"></a>mdw_writer-Rolle  
  Mitglieder der **mdw_writer** -Rolle können Daten in das Verwaltungs-Data Warehouse hochladen und schreiben. Jeder Datensammler, der Daten in dem Verwaltungs-Data Warehouse speichert, muss ein Mitglied dieser Rolle sein.  
   
-### <a name="mdwreader-role"></a>mdw_reader-Rolle  
+### <a name="mdw_reader-role"></a>mdw_reader-Rolle  
  Mitglieder der **mdw_reader** -Rolle verfügen über Lesezugriff auf das Verwaltungs-Data Warehouse. Da diese Rolle zur Unterstützung bei der Problembehandlung dient, indem sie Zugriff auf Verlaufsdaten bietet, können Mitglieder dieser Rolle andere Elemente des Verwaltungs-Data Warehouse-Schemas nicht anzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren der SQL Server-Agent-Sicherheit](../../ssms/agent/implement-sql-server-agent-security.md)  
   
   

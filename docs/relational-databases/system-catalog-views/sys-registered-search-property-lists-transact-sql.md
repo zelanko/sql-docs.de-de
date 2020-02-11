@@ -1,5 +1,5 @@
 ---
-title: Sys. registered_search_property_lists (Transact-SQL) | Microsoft-Dokumentation
+title: sys. registered_search_property_lists (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,18 +22,18 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067854"
 ---
-# <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
+# <a name="sysregistered_search_property_lists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enthält eine Zeile für jede Sucheigenschaftenliste in der aktuellen Datenbank.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|Die ID der Eigenschaftenliste.|  
 |**name**|**sysname**|Der Name der Eigenschaftenliste.|  
@@ -41,7 +41,7 @@ ms.locfileid: "68067854"
 |**modify_date**|**datetime**|Datum, an dem die Eigenschaftenliste zuletzt mithilfe einer beliebigen ALTER-Anweisung geändert wurde.|  
 |**principal_id**|**int**|Der Besitzer der Eigenschaftenliste.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -60,7 +60,7 @@ SELECT property_list_id, name FROM sys.registered_search_property_lists;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)  
   

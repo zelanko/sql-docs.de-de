@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b83f5842ebb2bb97ebd58142ef69d3a3d153f51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62836492"
 ---
 # <a name="enabling-logging-programmatically"></a>Programmgesteuertes Aktivieren der Protokollierung
@@ -43,10 +43,10 @@ ms.locfileid: "62836492"
   
  In der folgenden Tabelle werden die verfügbaren Protokollanbieter, ihre Beschreibung und ihre <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider.ConfigString%2A>-Informationen aufgeführt.  
   
-|Anbieter|Beschreibung|ConfigString-Eigenschaft|  
+|Anbieter|BESCHREIBUNG|ConfigString-Eigenschaft|  
 |--------------|-----------------|---------------------------|  
 |SQL Server Profiler|Generiert SQL-Ablaufverfolgungen, die aufgezeichnet und im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Profiler angezeigt werden können. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist TRC.|Es ist keine Konfiguration erforderlich.|  
-|SQL Server|Schreibt in allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken Ereignisprotokolleinträge in die **sysssislog**-Tabelle.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter erfordert eine angegebene Verbindung zur Datenbank sowie den Namen der Zieldatenbank.|  
+|SQL Server|Schreibt in allen **-Datenbanken Ereignisprotokolleinträge in die** sysssislog[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anbieter erfordert eine angegebene Verbindung zur Datenbank sowie den Namen der Zieldatenbank.|  
 |Textdatei|Schreibt Ereignisprotokolleinträge im durch Trennzeichen getrennten CSV-Format in ASCII-Textdateien. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist LOG.|Der Name eines Dateiverbindungs-Managers.|  
 |Windows-Ereignisprotokoll|Schreibt Protokolle in das Anwendungsprotokoll im standardmäßigen Windows-Ereignisprotokoll auf dem lokalen Computer.|Es ist keine Konfiguration erforderlich.|  
 |XML-Datei|Schreibt Ereignisprotokolleinträge in Dateien im XML-Format. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist XML.|Der Name eines Dateiverbindungs-Managers.|  
@@ -114,9 +114,9 @@ Module Module1
 End Module  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md)  
   
   

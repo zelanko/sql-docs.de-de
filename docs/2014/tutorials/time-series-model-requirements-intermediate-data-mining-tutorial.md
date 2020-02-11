@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8e46d7fc8a0c214501841de448a94d1211b95fa1
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892961"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Grundlegendes zu den Anforderungen für ein Zeitreihenmodell (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -24,7 +24,8 @@ ms.locfileid: "68892961"
   
  Für dieses Lernprogramm werden täglich Umsatzdaten in der Transaktionsvertriebsdatenbank erfasst; für Data Mining werden die Daten jedoch mithilfe einer Sicht monatlich vorab aggregiert.  
   
- Zudem ist es für die Analyse vorteilhaft, wenn die Daten so wenige Lücken wie möglich aufweisen. Wenn Sie mehrere Datenreihen analysieren möchten, sollten alle Serien nach Möglichkeit einheitliche Start- und Enddaten haben. Wenn die Daten unvollständig sind, aber diese Lücken sich nicht am Anfang oder Ende der Serie befinden, kann die Serie mit dem Parameter MISSING_VALUE_SUBSTITUTION vervollständigt werden. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt zudem mehrere Optionen zum Vervollständigen unvollständiger Daten durch Mittelwerte oder Konstanten bereit.  
+ Zudem ist es für die Analyse vorteilhaft, wenn die Daten so wenige Lücken wie möglich aufweisen. Wenn Sie mehrere Datenreihen analysieren möchten, sollten alle Serien nach Möglichkeit einheitliche Start- und Enddaten haben. Wenn die Daten unvollständig sind, aber diese Lücken sich nicht am Anfang oder Ende der Serie befinden, kann die Serie mit dem Parameter MISSING_VALUE_SUBSTITUTION vervollständigt werden. 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt zudem mehrere Optionen zum Vervollständigen unvollständiger Daten durch Mittelwerte oder Konstanten bereit.  
   
 > [!WARNING]  
 >  Die Tools PivotChart und PivotTable, die in früheren Versionen des Datenquellensicht-Designers enthalten waren, sind nicht mehr enthalten. Es empfiehlt sich, Lücken in Zeitreihendaten im Voraus mit Tools wie dem in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthaltenen Daten-Profiler zu identifizieren.  
@@ -64,10 +65,10 @@ ms.locfileid: "68892961"
   
 -   Klicken Sie mit der rechten Maustaste auf die Registerkarte **vTimeSeries-Tabelle durchsuchen**, und wählen Sie **Schließen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen einer Planungsstruktur und eines &#40;Data Mining-Data Mining-Lernprogramms&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Erstellen einer Planungsstruktur und eines Modells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

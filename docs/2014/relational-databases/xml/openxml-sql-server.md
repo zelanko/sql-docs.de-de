@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195625"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -35,16 +35,16 @@ ms.locfileid: "68195625"
   
  OPENXML kann immer dann in SELECT- und SELECT INTO-Anweisungen verwendet werden, wenn Rowsetanbieter, eine Sicht oder OPENROWSET als Quelle verwendet werden können. Informationen zur Syntax von OPENXML finden Sie unter [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql).  
   
- Sie müssen zuerst aufrufen, um Abfragen für XML-Dokumente mithilfe von OPENXML zu schreiben, `sp_xml_preparedocument`. Dies analysiert das XML-Dokument und gibt ein Handle auf das analysierte Dokument zurück, das zur Verwendung bereit ist. Das analysierte Dokument ist eine strukturierte Dokumentobjektdarstellung (DOM - Document Object Model) der verschiedenen Knoten des XML-Dokuments. Das Dokumenthandle wird an OPENXML übergeben. OPENXML erstellt dann auf der Grundlage der übergebenen Parameter eine Rowsetsicht des Dokuments.  
+ Um Abfragen für ein XML-Dokument mithilfe von OPENXML zu schreiben, müssen Sie `sp_xml_preparedocument`zuerst den Befehl verwenden. Dies analysiert das XML-Dokument und gibt ein Handle auf das analysierte Dokument zurück, das zur Verwendung bereit ist. Das analysierte Dokument ist eine strukturierte Dokumentobjektdarstellung (DOM - Document Object Model) der verschiedenen Knoten des XML-Dokuments. Das Dokumenthandle wird an OPENXML übergeben. OPENXML erstellt dann auf der Grundlage der übergebenen Parameter eine Rowsetsicht des Dokuments.  
   
 > [!NOTE]  
->  `sp_xml_preparedocument` verwendet eine SQL-aktualisierte Version von der MSXML-Parsers (Msxmlsql.dll). Diese Version des MSXML-Parsers wurde für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entwickelt und ist abwärtskompatibel zu MSXML Version 2.6.  
+>  `sp_xml_preparedocument`verwendet eine SQL-aktualisierte Version des MSXML-Parsers (Msxmlsql. dll). Diese Version des MSXML-Parsers wurde für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entwickelt und ist abwärtskompatibel zu MSXML Version 2.6.  
   
  Die interne Darstellung eines XML-Dokuments muss durch einen Aufruf der gespeicherten Systemprozedur **sp_xml_removedocument** aus dem Arbeitsspeicher gelöscht werden, um den Arbeitsspeicher zu leeren.  
   
  Der Vorgang wird in der folgenden Abbildung veranschaulicht.  
   
- ![Analysieren von XML mit OPENXML](../../database-engine/media/xmlsp.gif "Parsing XML with OPENXML")  
+ ![Analysieren von XML mit OPENXML](../../database-engine/media/xmlsp.gif "Analysieren von XML mit OPENXML")  
   
  Um die Funktionsweise von OPENXML zu verstehen, benötigen Sie Kenntnisse über XPath-Abfragen und XML. Weitere Informationen zur XPath-Unterstützung in SQL Server finden Sie unter [Verwenden von XPath-Abfragen in SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md).  
   
@@ -54,7 +54,8 @@ ms.locfileid: "68195625"
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht die Verwendung von `OPENXML` in einer `INSERT` - und einer `SELECT` -Anweisung. Das XML-Beispieldokument setzt sich aus `<Customers>` - und `<Orders>` -Elementen zusammen.  
   
- Zuerst analysiert die gespeicherte Prozedur `sp_xml_preparedocument` das XML-Dokument. Das analysierte Dokument ist eine strukturierte Darstellung der Knoten im XML-Dokument (Elemente, Attribute, Text und Kommentare). `OPENXML` verweist dann auf dieses analysierte XML-Dokument und erstellt eine Rowsetansicht für das gesamte oder Teile des XML-Dokuments. Eine `INSERT` -Anweisung kann mithilfe von `OPENXML` Daten aus einem solchen Rowset in eine Datenbanktabelle einfügen. Es können mehrere `OPENXML` -Aufrufe verwendet werden, um eine Rowsetsicht verschiedener Teile des XML-Dokuments bereitzustellen und sie zu verarbeiten, indem sie z. B. in unterschiedliche Tabellen eingefügt werden. Dieses Verfahren wird auch als Aufteilen von XML-Daten in Tabellen bezeichnet.  
+ Zuerst analysiert die gespeicherte Prozedur `sp_xml_preparedocument` das XML-Dokument. Das analysierte Dokument ist eine strukturierte Darstellung der Knoten im XML-Dokument (Elemente, Attribute, Text und Kommentare). 
+  `OPENXML` verweist dann auf dieses analysierte XML-Dokument und erstellt eine Rowsetansicht für das gesamte oder Teile des XML-Dokuments. Eine `INSERT` -Anweisung kann mithilfe von `OPENXML` Daten aus einem solchen Rowset in eine Datenbanktabelle einfügen. Es können mehrere `OPENXML` -Aufrufe verwendet werden, um eine Rowsetsicht verschiedener Teile des XML-Dokuments bereitzustellen und sie zu verarbeiten, indem sie z. B. in unterschiedliche Tabellen eingefügt werden. Dieses Verfahren wird auch als Aufteilen von XML-Daten in Tabellen bezeichnet.  
   
  Im folgenden Beispiel wird ein XML-Dokument so aufgeteilt, dass mithilfe von zwei `<Customers>` -Anweisungen `Customers` -Elemente in der `<Orders>` -Tabelle und `Orders` -Elemente in der `INSERT` -Tabelle gespeichert werden. Das Beispiel enthält auch eine `SELECT` -Anweisung mit `OPENXML` , die `CustomerID` und `OrderDate` aus dem XML-Dokument abruft. Der letzte Schritt in diesem Verfahren besteht darin, `sp_xml_removedocument`erneut aufzurufen. Dadurch wird der der internen XML-Darstellung, die während der Analysephase erstellt wurde, zugewiesene Arbeitsspeicher freigegeben.  
   
@@ -96,7 +97,7 @@ EXEC sp_xml_removedocument @docHandle;
   
  Die folgende Abbildung zeigt die analysierte XML-Struktur des vorherigen XML-Dokuments, das mithilfe von sp_xml_preparedocument erstellt wurde.  
   
- ![Analysierte XML-Struktur](../../database-engine/media/xmlparsedtree.gif "Parsed XML tree")  
+ ![Analysierte XML-Struktur](../../database-engine/media/xmlparsedtree.gif "Analysierte XML-Struktur")  
   
 ## <a name="openxml-parameters"></a>OPENXML-Parameter  
  Zu den Parametern für OPENXML gehören:  
@@ -110,7 +111,7 @@ EXEC sp_xml_removedocument @docHandle;
 -   Die Zuordnung zwischen den Rowsetspalten und den XML-Knoten  
   
 ### <a name="xml-document-handle-idoc"></a>XML-Dokumenthandle (idoc)  
- Das Dokumenthandle wird zurückgegeben, durch die `sp_xml_preparedocument` gespeicherte Prozedur.  
+ Das Dokument Handle wird von der `sp_xml_preparedocument` gespeicherten Prozedur zurückgegeben.  
   
 ### <a name="xpath-expression-to-identify-the-nodes-to-be-processed-rowpattern"></a>XPath-Ausdruck zur Identifizierung der zu verarbeitenden Knoten (rowpattern)  
  Der als *rowpattern* angegebene XPath-Ausdruck bezeichnet einen Knotensatz im XML-Dokument. Jeder von *rowpattern* identifizierte Knoten entspricht in dem von OPENXML generierten Rowset einer einzelnen Zeile.  
@@ -137,16 +138,16 @@ EXEC sp_xml_removedocument @docHandle;
   
  In der folgenden Tabelle wird die Struktur der Rahmentabelle beschrieben.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
-|**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
-|**node type**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der Nummer des Knotentyps des XML-Objektmodells (DOM) entspricht.<br /><br /> In dieser Spalte können folgende Werte den Knotentyp angeben:<br /><br /> **1** = Elementknoten<br /><br /> **2** = Attributknoten<br /><br /> **3** = Textknoten<br /><br /> **4** = CDATA-Abschnittsknoten<br /><br /> **5** = Entitätsverweisknoten<br /><br /> **6** = Entitätsknoten<br /><br /> **7** = Verarbeitungsanweisungsknoten<br /><br /> **8** = Kommentarknoten<br /><br /> **9** = Dokumentknoten<br /><br /> **10** = Dokumenttypknoten<br /><br /> **11** = Dokumentfragmentknoten<br /><br /> **12** = Notationsknoten<br /><br /> Weitere Informationen finden Sie im Microsoft XML (MSXML) SDK im Abschnitt über die nodeType-Eigenschaft.|  
-|**localname**|**nvarchar(max)**|Gibt den lokalen Namen des Elements oder Attributs an. Ist NULL, wenn das DOM-Objekt keinen Namen hat.|  
-|**Präfix**|**nvarchar(max)**|Das Namespacepräfix des Knotennamens.|  
-|**namespaceuri**|**nvarchar(max)**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  
-|**datatype**|**nvarchar(max)**|Der eigentliche Datentyp der Element- oder Attributzeile, der anderenfalls NULL ist. Der Datentyp wird aus der Inline-DTD (Document Type Definition) oder aus dem Inlineschema abgeleitet.|  
-|**prev**|**bigint**|Die XML-ID des vorhergehenden gleichgeordneten Elements. Ist NULL, wenn kein direktes vorhergehendes gleichgeordnetes Element vorhanden ist.|  
+|**Name**|**BIGINT**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|  
+|**parentID**|**BIGINT**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|  
+|**Knotentyp**|**int**|Identifiziert den Knotentyp. Eine ganze Zahl, die der Nummer des Knotentyps des XML-Objektmodells (DOM) entspricht.<br /><br /> In dieser Spalte können folgende Werte den Knotentyp angeben:<br /><br /> **1** = Element Knoten<br /><br /> **2** = Attribut Knoten<br /><br /> **3** = Text Knoten<br /><br /> **4** = CDATA-Abschnitts Knoten<br /><br /> **5** = Entitäts Verweis Knoten<br /><br /> **6** = Entitäts Knoten<br /><br /> **7** = Verarbeitungs Anweisungs Knoten<br /><br /> **8** = Kommentar Knoten<br /><br /> **9** = Dokument Knoten<br /><br /> **10** = Dokumenttyp Knoten<br /><br /> **11** = Dokumentfragmentknoten<br /><br /> **12** = Notation-Knoten<br /><br /> Weitere Informationen finden Sie im Microsoft XML (MSXML) SDK im Abschnitt über die nodeType-Eigenschaft.|  
+|**localName**|**nvarchar(max)**|Gibt den lokalen Namen des Elements oder Attributs an. Ist NULL, wenn das DOM-Objekt keinen Namen hat.|  
+|**Vorsatz**|**nvarchar(max)**|Das Namespacepräfix des Knotennamens.|  
+|**NamespaceURI**|**nvarchar(max)**|Der Namespace-URI (Universal Resource Identifier) des Knotens. Ist der Wert NULL, ist kein Namespace vorhanden.|  
+|**Datentyp**|**nvarchar(max)**|Der eigentliche Datentyp der Element- oder Attributzeile, der anderenfalls NULL ist. Der Datentyp wird aus der Inline-DTD (Document Type Definition) oder aus dem Inlineschema abgeleitet.|  
+|**Prev**|**BIGINT**|Die XML-ID des vorhergehenden gleichgeordneten Elements. Ist NULL, wenn kein direktes vorhergehendes gleichgeordnetes Element vorhanden ist.|  
 |**text**|**ntext**|Enthält den Attributwert oder den Elementinhalt als Text. Oder ist NULL, wenn für den Rahmentabelleneintrag kein Wert benötigt wird.|  
   
 #### <a name="using-the-with-clause-to-specify-an-existing-table"></a>Verwenden der WITH-Klausel, um eine vorhandene Tabelle anzugeben  
@@ -172,9 +173,9 @@ EXEC sp_xml_removedocument @docHandle;
   
      *ColPattern*, ein XPath-Ausdruck, wird in der WITH-Klausel als Teil von *SchemaDeclaration* angegeben. Durch die in *ColPattern* angegebene Zuordnung wird die Zuordnung des *flags* -Parameters überschrieben.  
   
-     *ColPattern* kann zur Angabe des Zuordnungstyps – wie attributzentriert oder elementzentriert – verwendet werden, der die vom Parameter *flags*angegebene Standardzuordnung überschreibt oder erweitert.  
+     *ColPattern* kann verwendet werden, um den Typ der Zuordnung anzugeben, z. b. Attribut zentrierte oder Element zentrierte Zuordnung, die die von den *Flags*angegebene Standard Zuordnung überschreibt oder erweitert.  
   
-     *ColPattern* wird in folgenden Situationen angegeben:  
+     *ColPattern* wird in den folgenden Situationen angegeben:  
   
     -   Der Spaltenname im Rowset unterscheidet sich vom Element- oder Attributnamen, dem er zugeordnet ist. In diesem Fall wird *ColPattern* zur Identifizierung des XML-Element- und Attributnamens verwendet, dem die Rowsetspalte zugeordnet ist.  
   
@@ -196,9 +197,9 @@ EXEC sp_xml_removedocument @docHandle;
   
 -   Wenn mehrere Teilelemente denselben Namen besitzen, wird der erste Knoten zurückgeliefert.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_xml_preparedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
- [sp_xml_removedocument &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_xml_preparedocument &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql)   
+ [sp_xml_removedocument &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql)   
  [OPENXML &#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)   
  [XML-Daten &#40;SQL Server&#41;](../xml/xml-data-sql-server.md)  
   
