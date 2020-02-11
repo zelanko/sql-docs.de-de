@@ -1,5 +1,5 @@
 ---
-title: ADO-Ereignisbehandlung | Microsoft-Dokumentation
+title: Behandeln von ADO-Ereignissen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,29 +15,29 @@ ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925223"
 ---
 # <a name="handling-ado-events"></a>Behandeln von ADO-Ereignissen
-Das ADO-Ereignismodell unterstützt bestimmte synchrone und asynchrone ADO-Vorgänge, die ausstellen *Ereignisse*, oder Benachrichtigungen, bevor der Vorgang gestartet oder nachdem es abgeschlossen ist. Ein Ereignis ist tatsächlich ein Aufruf an eine Ereignishandler-Routine, die Sie in Ihrer Anwendung zu definieren.  
+Das ADO-Ereignis Modell unterstützt bestimmte synchrone und asynchrone ADO-Vorgänge, durch die *Ereignisse*oder Benachrichtigungen ausgegeben werden, bevor der Vorgang gestartet oder abgeschlossen wird. Ein Ereignis ist tatsächlich ein Aufrufen einer Ereignishandlerroutine, die Sie in der Anwendung definieren.  
   
- Wenn Sie für die Gruppe von Ereignissen Handlerfunktionen oder Prozeduren, die vor dem Starten der Operation auftreten angeben, können Sie untersuchen oder ändern Sie die Parameter, die für den Vorgang übergeben wurden. Da sie noch nicht ausgeführt wurde, können Sie den Vorgang abbrechen oder zuzulassen, dass sie zum Abschließen.  
+ Wenn Sie Handlerfunktionen oder-Prozeduren für die Gruppe von Ereignissen bereitstellen, die vor dem Starten des Vorgangs auftreten, können Sie die Parameter, die an den Vorgang übermittelt wurden, überprüfen oder ändern. Da es noch nicht ausgeführt wurde, können Sie entweder den Vorgang abbrechen oder zulassen, dass er abgeschlossen wird.  
   
- Die Ereignisse, die nach Abschluss eines Vorgangs auftreten, sind besonders wichtig, wenn Sie ADO, asynchron verwenden. Z. B. eine Anwendung, die einen asynchronen startet [Recordset.Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) Vorgang wird benachrichtigt, von einem vollständigen Ausführung-Ereignis, wenn die Operation abgeschlossen ist.  
+ Die Ereignisse, die nach dem Abschluss eines Vorgangs auftreten, sind besonders wichtig, wenn Sie ADO asynchron verwenden. Beispielsweise wird eine Anwendung, die einen asynchronen [Recordset. Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Vorgang startet, von einem Ereignis zum Abschluss der Ausführung benachrichtigt, wenn der Vorgang beendet wird.  
   
- Mit dem ADO-Ereignismodell zusätzlichen Aufwand für Ihre Anwendung hinzugefügt, jedoch bietet weit mehr Flexibilität als die anderen Methoden für den Umgang mit asynchronen Vorgängen, z. B. Überwachung der [Zustand](../../../ado/reference/ado-api/state-property-ado.md) Eigenschaft eines Objekts mit einer Schleife.  
+ Die Verwendung des ADO-Ereignis Modells erhöht den mehr Aufwand für Ihre Anwendung, bietet jedoch viel mehr Flexibilität als andere Methoden für den Umgang mit asynchronen Vorgängen, wie z. b. das Überwachen der [State](../../../ado/reference/ado-api/state-property-ado.md) -Eigenschaft eines Objekts mit einer-Schleife.  
   
 > [!NOTE]
->  Zum Verarbeiten von Ereignissen, ADO-Meldungsverteilschleife oder muss in einem Singlethread-Apartment (STA)-Modell verwendet werden. ADO-Ereignisse werden intern behandelt, durch ein ausgeblendetes Fenster erstellen. ADO sendet Nachrichten an dieses Fenster, wenn Ereignisse ausgelöst werden müssen. Dies geschieht, um sicherzustellen, dass Ereignisse an den Thread gesendet werden, die aufgerufen **IConnectionPoint:: Advise** auf dem Verbindungspunkt. Diese Architektur kann Probleme verursachen, wenn der Thread, der die Benachrichtigungen erhalten sollen nicht fenstermeldungen senden ist. Potenzielle Probleme enthalten ADO-Ereignisse, die nicht zugestellt werden, auf den Thread und das Fenster "global" Broadcasts Timeout und das gesamte System möglicherweise verlangsamt, da die ausgeblendete Fenster keine Nachrichten verarbeiten. STA-Threads verfügen in der Regel eine Meldungsverteilschleife, die ausgeführt werden, damit dieses Problem nicht selbst auf STA-Threads-manifest. MTA-Threads, jedoch haben nicht in der Regel ein Nachrichtensystem, damit das Problem selbst in der Regel auf MTA-Threads manifest.  
+>  Zum Behandeln von Ereignissen muss ADO über eine nachrichtenpump verfügen oder in einem STA-Modell (Single Thread-Apartment) verwendet werden. ADO-Ereignisse werden intern durch Erstellen eines ausgeblendeten Fensters behandelt. ADO sendet Meldungen an dieses Fenster, wenn Ereignisse ausgelöst werden müssen. Dies geschieht, um sicherzustellen, dass Ereignisse an den Thread gesendet werden, der **IConnectionPoint:: Rat** auf dem Verbindungspunkt aufgerufen hat. Diese Architektur kann Probleme verursachen, wenn der Thread, der die Benachrichtigungen empfangen soll, keine Fenster Meldungen pumpt. Mögliche Probleme sind, dass ADO-Ereignisse nicht an den Thread übermittelt werden und globale Fenster Übertragungen einen Timeout verursachen und möglicherweise das gesamte System verlangsamen, da die ausgeblendeten Fenster die Nachrichten nicht verarbeiten. Für STA-Threads wird normalerweise ein nachrichtenpump ausgeführt, sodass sich dieses Problem nicht selbst auf STA-Threads bezieht. MTA-Threads verfügen in der Regel jedoch nicht über ein nachrichtenpump, sodass sich das Problem in der Regel auf MTA-Threads manifestiert.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)  
+-   [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)  
   
--   [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)  
+-   [Ereignistypen](../../../ado/guide/data/types-of-events.md)  
   
 -   [Ereignisparameter](../../../ado/guide/data/event-parameters.md)  
   
@@ -45,9 +45,9 @@ Das ADO-Ereignismodell unterstützt bestimmte synchrone und asynchrone ADO-Vorg�
   
 -   [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
+ [ADO-Ereignis Instanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
  [ADO-Ereignisse](../../../ado/reference/ado-api/ado-events.md)   
- [Ereignisparameter](../../../ado/guide/data/event-parameters.md)   
- [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)
+ [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
+ [Ereignistypen](../../../ado/guide/data/types-of-events.md)

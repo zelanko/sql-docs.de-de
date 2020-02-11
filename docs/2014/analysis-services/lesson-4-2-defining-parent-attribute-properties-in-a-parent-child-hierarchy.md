@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494016"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definieren der Eigenschaften des übergeordneten Attributs in einer Über-/Unterordnungshierarchie
@@ -37,9 +37,9 @@ ms.locfileid: "69494016"
   
 3.  Wählen Sie das Element **Ken J. Sánchez** aus.  
   
-     Beachten Sie, dass der Ebenenname für dieses Element **Level 02** ist. (Der Ebenenname wird nach **Aktuelle Ebene** direkt über dem **All Employees**-Element angezeigt.) In der nächsten Aufgabe definieren Sie mehr beschreibende Namen für jede Ebene.  
+     Beachten Sie, dass der Ebenenname für dieses Element **Level 02**ist. (Der Ebenenname wird nach **Aktuelle Ebene** direkt über dem **All Employees** -Element angezeigt.) In der nächsten Aufgabe definieren Sie mehr beschreibende Namen für jede Ebene.  
   
-4.  Erweitern Sie **Ken J. Sánchez**, um die Namen der Angestellten anzuzeigen, die Berichte für diesen Manager verfassen, und wählen Sie anschließend **Brian S. Welcker** aus, um den Namen dieser Ebene anzuzeigen.  
+4.  Erweitern Sie **Ken J. Sánchez** , um die Namen der Angestellten anzuzeigen, die Berichte für diesen Manager verfassen, und wählen Sie anschließend **Brian S. Welcker** aus, um den Namen dieser Ebene anzuzeigen.  
   
      Beachten Sie, dass der Ebenenname für dieses Element **Level 03**ist.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "69494016"
   
      In der folgenden Abbildung wird die erweiterte Employees-Hierarchie angezeigt.  
   
-10. ![PivotTables mit der Mitarbeiter Hierarchie](../../2014/tutorials/media/l4-employee-1.gif "PivotTables mit der Mitarbeiter Hierarchie")  
+10. ![PivotTable mit der Employees-Hierarchie](../../2014/tutorials/media/l4-employee-1.gif "PivotTable mit der Employees-Hierarchie")  
   
      Beachten Sie, dass die von jedem Manager in Ebene 03 gemachten Verkäufe auch in Ebene 04 angezeigt werden. Das liegt daran, dass jeder Manager auch ein Mitarbeiter eines anderen Managers ist. In der nächsten Aufgabe blenden Sie diese Verkaufszahlen aus.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "69494016"
   
      Beachten Sie das eindeutige Symbol für dieses Attribut. Dieses Symbol gibt an, dass das Attribut der übergeordnete Schlüssel in einer Über-/Unterordnungshierarchie ist. Beachten Sie ebenso, dass im Eigenschaftenfenster die **Verwendung** -Eigenschaft für das Attribut als **Übergeordnet**definiert ist. Diese Eigenschaft wurde vom Dimensions-Assistenten festgelegt, als die Dimension entworfen wurde. Der Assistent hat die Über-/Unterordnungsbeziehung automatisch erkannt.  
   
-3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den drei Punkten ( **...** ) in der **NamingTemplate** -Eigenschaftenzelle.  
+3.  Klicken Sie im Eigenschaftenfenster auf die Schaltfläche mit den drei Punkten (**...**) in der **NamingTemplate** -Eigenschaftenzelle.  
   
      Im Dialogfeld **Vorlage zur Ebenenbenennung** definieren Sie die Vorlage zur Ebenenbenennung, durch die die Ebenennamen in der Über-/Unterordnungshierarchie bestimmt werden, die Benutzern beim Durchsuchen von Cubes angezeigt werden.  
   
-4.  Geben Sie in der zweiten Zeile, der **\*** -Zeile, **Employee Level \*** in der Spalte **Name** ein, und klicken Sie anschließend auf die dritte Zeile.  
+4.  Geben Sie in der zweiten Zeile **\*** in der Spalte Name den **Wert Employee Level \* ** in die Spalte **Name** ein, und klicken Sie dann auf die dritte Zeile.  
   
-     Beachten Sie unter **Ergebnis**, dass jede Ebene jetzt „Employee Level“ gefolgt von einer zunehmenden Nummer benannt wird.  
+     Beachten Sie unter **Ergebnis** , dass jede Ebene jetzt „Employee Level“ gefolgt von einer zunehmenden Nummer benannt wird.  
   
      Die folgende Abbildung zeigt die Änderungen im Dialogfeld **Vorlage zur Ebenenbenennung** .  
   
-     ![Vorlage für ebenenbenennungs Vorlage](../../2014/tutorials/media/l4-namingtemplate.gif "Vorlage für ebenenbenennungs Vorlage")  
+     ![Vorlage für ebenenbenennungs Vorlage](../../2014/tutorials/media/l4-namingtemplate.gif "Vorlage zur Ebenenbenennung (Dialogfeld)")  
   
 5.  Klicken Sie auf **OK**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "69494016"
   
 ## <a name="browsing-the-employee-dimension-with-the-modified-attributes"></a>Durchsuchen der Employee-Dimension mit den geänderten Attributen  
   
-1.  Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] auf **Analysis Services Tutorial bereitstellen**.  
+1.  Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.  
   
 2.  Wechseln Sie nach erfolgreichem Abschluss der Bereitstellung zum Cube-Designer für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, und klicken Sie auf der Symbolleiste der Registerkarte **Browser** auf **Verbindung wiederherstellen** .  
   
@@ -103,11 +103,11 @@ ms.locfileid: "69494016"
   
      ![Geänderte Employees-Hierarchie](../../2014/tutorials/media/l4-employee-2.png "Geänderte Employees-Hierarchie")  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Automatisches Gruppieren von Attributelementen](lesson-4-3-automatically-grouping-attribute-members.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Über-und untergeordnete Hierarchie](multidimensional-models/parent-child-dimension.md)   
- [Attribute in Über-/Unterordnungshierarchien](multidimensional-models/parent-child-dimension-attributes.md)  
+ [Attribute in über- und untergeordneten Hierarchien](multidimensional-models/parent-child-dimension-attributes.md)  
   
   

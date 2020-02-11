@@ -27,16 +27,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d9ca444c4e889c68f90abf4cf76c07d1c2d574a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887913"
 ---
 # <a name="cube-cells-analysis-services---multidimensional-data"></a>Cubezellen (Analysis Services – Mehrdimensionale Daten)
   Ein Cube besteht aus Zellen, die nach Measuregruppen und nach Dimensionen organisiert werden. Eine Zelle stellt den eindeutigen logischen Schnittpunkt in einem Cube eines Elements aus jeder Dimension des Cubes dar. Der im folgenden Diagramm beschriebene Cube enthält beispielsweise eine Measuregruppe mit zwei Measures, die nach den drei Dimensionen Source, Route und Time organisiert sind.  
   
- Cubediagramm, das ![eine einzelne Zelle identifiziert] Cubediagramm, das (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "eine einzelne Zelle identifiziert")  
+ ![Cubediagramm mit identifizierter einzelner Zelle](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro5.gif "Cubediagramm mit identifizierter einzelner Zelle")  
   
  Die schattierte Zelle in diesem Diagramm ist der Schnittpunkt der folgenden Elemente:  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68887913"
   
  Das 2nd half-Element der Time-Dimension ist ein Nichtblattelement. Daher müssen alle mit ihm verbundenen Elemente aggregierte Werte sein, wie im folgenden Diagramm dargestellt.  
   
- ![Zellen aus dem dritten und dem 4. Quartal für 2. halbmember](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "Zellen aus dem dritten und dem 4. Quartal für 2. halbmember")  
+ ![Zellen '3rd quarter' und '4th quarter' für '2nd half'-Element](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro6.gif "Zellen '3rd quarter' und '4th quarter' für '2nd half'-Element")  
   
  Wenn es sich beispielsweise bei den Aggregationen für das 3rd quarter- und 4th quarter-Element um Summen handelt, dann ist der Wert der angegebenen Zelle 400, die Summe aller Blattzellen, die im vorherigen Diagramm schattiert sind. Da der Wert der Zelle von der Aggregation anderer Zellen abgeleitet ist, wird die angegebene Zelle als eine *nicht Blatt Zelle*betrachtet.  
   
@@ -74,15 +74,15 @@ ms.locfileid: "68887913"
   
  Die in dem folgenden Diagramm abgebildete Cubestruktur ähnelt z. B. anderen Beispielen in diesem Thema. In diesem Beispiel sind jedoch keine Luftfrachtlieferungen nach Afrika im dritten Quartal oder nach Australien im vierten Quartal vorhanden. In der Faktentabelle sind keine Daten enthalten, die die Schnittpunkte dieser Dimensionen und Measures unterstützen können, sodass die Zellen an diesen Schnittpunkten leer sind.  
   
- Cubediagramm, das ![leere Zellen identifiziert] Cubediagramm, das (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "leere Zellen identifiziert")  
+ ![Cubediagramm mit identifizierten leeren Zellen](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-cubeintro7.gif "Cubediagramm mit identifizierten leeren Zellen")  
   
- In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich bei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]einer leeren Zelle um eine Zelle, die über besondere Qualitäten verfügt. Da leere Zellen die Ergebnisse von Crossjoins, Zählungen usw. verfälschen können, ermöglichen viele MDX-Funktionen das Ignorieren dieser leeren Zellen bei der Berechnung. Weitere Informationen finden Sie unter [MDX &#40;&#41; -Referenz für mehrdimensionale Ausdrücke](/sql/mdx/multidimensional-expressions-mdx-reference)und [wichtige Konzepte in &#40;MDX-Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
+ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]handelt es sich bei einer leeren Zelle um eine Zelle, die über besondere Qualitäten verfügt. Da leere Zellen die Ergebnisse von Crossjoins, Zählungen usw. verfälschen können, ermöglichen viele MDX-Funktionen das Ignorieren dieser leeren Zellen bei der Berechnung. Weitere Informationen finden Sie unter mehr [dimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)und [wichtige Konzepte in MDX &#40;Analysis Services&#41;](../multidimensional-models/key-concepts-in-mdx-analysis-services.md).  
   
 ## <a name="security"></a>Sicherheit  
- Der Zugriff auf Zellendaten wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf Rollenebene verwaltet und kann mithilfe von MDX-Ausdrücken genau gesteuert werden. Weitere Informationen finden Sie unter [Erteilen eines benutzerdefinierten Zugriffs auf &#40;Dimensions&#41;Daten Analysis Services](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)und [Erteilen von benutzerdefiniertem &#40;Zugriff&#41;auf Zellen Daten Analysis Services](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
+ Der Zugriff auf Zellendaten wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf Rollenebene verwaltet und kann mithilfe von MDX-Ausdrücken genau gesteuert werden. Weitere Informationen finden Sie unter [Erteilen eines benutzerdefinierten Zugriffs auf Dimensions Daten &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)und [Erteilen von benutzerdefiniertem Zugriff auf Zellen Daten &#40;Analysis Services&#41;](../multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Cube- &#40;Speicher Analysis Services-Mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
- [Aggregationen und Aggregationsentwürfe](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Cube-Speicher &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/cube-storage-analysis-services-multidimensional-data.md)   
+ [Aggregations and Aggregation Designs](../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

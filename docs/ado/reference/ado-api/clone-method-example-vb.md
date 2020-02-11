@@ -1,5 +1,5 @@
 ---
-title: Clone – Methodenbeispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für eine Klon Methode (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 05bd5c203b252909ad4707681aff49181bfde162
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920002"
 ---
 # <a name="clone-method-example-vb"></a>Clone-Methode – Beispiel (VB)
-Dieses Beispiel verwendet die [Klon](../../../ado/reference/ado-api/clone-method-ado.md) Methode zum Erstellen von Kopien einer [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und dann kann der Benutzer, die unabhängig voneinander positionieren Sie den Datensatzzeiger der einzelnen Kopien.  
+In diesem Beispiel wird die [Clone](../../../ado/reference/ado-api/clone-method-ado.md) -Methode verwendet, um Kopien eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) zu erstellen. Anschließend kann der Benutzer den Daten Satz Zeiger jeder Kopie unabhängig positionieren.  
   
 ```  
 'BeginCloneVB  
@@ -127,6 +127,6 @@ End Sub
 'EndCloneVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Clone-Methode (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

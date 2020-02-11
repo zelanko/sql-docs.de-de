@@ -17,14 +17,14 @@ ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967319"
 ---
 # <a name="append-method-adox-groups"></a>Append-Methode (ADOX-Gruppen)
-Fügt ein neues [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) -Objekt an die [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md) Auflistung.  
+Fügt der [Gruppen](../../../ado/reference/adox-api/groups-collection-adox.md) Auflistung ein neues [Gruppen](../../../ado/reference/adox-api/group-object-adox.md) Objekt hinzu.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,26 +34,26 @@ Groups.Append Group
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Gruppieren*  
- Die **Gruppe** anzufügende Objekt oder den Namen der Gruppe erstellen und anfügen.  
+ *Gruppe*  
+ Das anzufügende **Gruppen** Objekt oder der Name der Gruppe, die erstellt und angefügt werden soll.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Gruppen** Auflistung von einem [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md) aller Gruppenkonten des Katalogs darstellt. Die **Gruppen** Sammlung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe, zu denen der Benutzer gehört.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Groups** -Sammlung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md) stellt alle Gruppenkonten des Katalogs dar. Die **Groups** -Sammlung für einen [Benutzer](../../../ado/reference/adox-api/user-object-adox.md) stellt nur die Gruppe dar, zu der der Benutzer gehört.  
   
- Wenn der Anbieter das Erstellen von Gruppen nicht unterstützt wird, tritt ein Fehler auf.  
+ Wenn der Anbieter das Erstellen von Gruppen nicht unterstützt, tritt ein Fehler auf.  
   
 > [!NOTE]
->  Vor dem Anfügen einer **Gruppe** -Objekt die **Gruppen** Auflistung von einer **Benutzer** -Objekt, eine **Gruppe** Objekt mit demselben [ Namen](../../../ado/reference/adox-api/name-property-adox.md) wie diejenige, die angefügt werden im bereits vorhanden sind, muss die **Gruppen** Auflistung von der **Katalog**.  
+>  Vor dem Anhängen eines **Group** -Objekts an die **Groups** -Auflistung eines **User** -Objekts muss bereits ein **Gruppen** Objekt mit demselben [Namen](../../../ado/reference/adox-api/name-property-adox.md) wie das angefügte-Objekt in der **Groups** -Auflistung des **Katalogs**vorhanden sein.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups-Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Gruppen und Benutzer Append, ChangePassword Methods Example (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Anfügen von Gruppen und Benutzern, ChangePassword-Methoden (Beispiel) (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append-Methode (ADOX-Spalten)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append-Methode (ADOX Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+ [Append-Methode (ADOX-Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append-Methode (ADOX Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
+ [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append-Methode (ADOX-Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

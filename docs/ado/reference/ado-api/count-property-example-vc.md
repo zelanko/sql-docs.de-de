@@ -1,5 +1,5 @@
 ---
-title: Count-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: Beispiel für eine Count-Eigenschaft (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919335"
 ---
 # <a name="count-property-example-vc"></a>Count-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel zeigt die [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft mit dem zwei Auflistungen in der ***Mitarbeiter*** Datenbank. Die Eigenschaft ruft die Anzahl von Objekten in jeder Auflistung und wird der obere Grenzwert für Schleifen an, die diese dateiauflistungen aufzulisten.  
+In diesem Beispiel wird die [count](../../../ado/reference/ado-api/count-property-ado.md) -Eigenschaft mit zwei Auflistungen in der ***Employee*** -Datenbank veranschaulicht. Die-Eigenschaft ruft die Anzahl der-Objekte in jeder Auflistung ab und legt die Obergrenze für Schleifen fest, die diese Auflistungen auflisten.  
   
 ```  
 // BeginCountCpp.cpp  
@@ -130,5 +130,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)

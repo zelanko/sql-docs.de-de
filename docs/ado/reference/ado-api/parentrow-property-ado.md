@@ -1,5 +1,5 @@
 ---
-title: ParentRow-Eigenschaft (ADO) | Microsoft-Dokumentation
+title: Para Row-Eigenschaft (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,14 +18,14 @@ ms.assetid: 5ea8029b-eda4-490b-ae84-2ad036fb582f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a81eb6ee58d942547a159728b9c3edf9a30f1ece
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917671"
 ---
 # <a name="parentrow-property-ado"></a>ParentRow-Eigenschaft (ADO)
-Legt den Container eines OLE DB **Zeile** -Objekt ein **ADORecordConstruction** Objekt, sodass das übergeordnete Element der Zeile, in eine ADO aktiviert ist **Datensatz** Objekt.  
+Legt den Container eines OLE DB **Row** -Objekts für ein **adorecordconstruction** -Objekt fest, damit das übergeordnete Element der Zeile in ein ADO- **Daten Satz** Objekt umgewandelt wird.  
   
  Nur Schreibzugriff.  
   
@@ -36,11 +36,11 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *pParent*  
- Ein Container mit einer Zeile.  
+ *pparent*  
+ Ein Container einer Zeile.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Diese Eigenschaftsmethode gibt die standardmäßige HRESULT-Werte, einschließlich S_OK zurück, und E_FAIL zurück.  
+ Diese Eigenschaften Methode gibt die HRESULT-Standardwerte zurück, einschließlich S_OK und E_FAIL.  
   
 ## <a name="applies-to"></a>Gilt für  
  [ADORecordConstruction-Schnittstelle](../../../ado/reference/ado-api/adorecordconstruction-interface.md)

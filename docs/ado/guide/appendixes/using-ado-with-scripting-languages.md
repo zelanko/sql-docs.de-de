@@ -14,18 +14,18 @@ ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926482"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Verwenden von ADO mit Skriptsprachen
-Innerhalb einer skriptumgebung kann ADO Daten über die serverseitige Skripts verfügbar zu machen. In diesem Szenario ADO zugrunde liegenden OLE DB-Anbieter, die sie verwendet und alle anderen Komponenten erforderlich, um einen bestimmten Datenspeicher verweisen auf einem Server mit Internetinformationsdienste (Internet Information Services, IIS) installiert sind. ADO ist mit Active Server Pages (ASP) ist eine Komponente, die auf die verwiesen wird in einem Skript, die HTML-Code, z. B. generieren kann. Diese HTML-Inhalt kann über HTTP auf einen Webbrowser für den Client übergeben werden. Mithilfe von Skripts können die Webseite Aktionen senden, an die serverseitigen Skript, sodass Sie aktualisieren, durchlaufen oder bestimmte Daten anzeigen.  
+In einer Skript Umgebung können Sie mithilfe von ADO Daten mithilfe von serverseitiger Skripterstellung verfügbar machen. In diesem Szenario werden ADO, der zugrunde liegende OLE DB-Anbieter und alle anderen Komponenten, die für den Verweis auf einen bestimmten Datenspeicher erforderlich sind, auf einem Server installiert, auf dem Internetinformationsdienste (IIS) ausgeführt wird. Mithilfe von Active Server Pages (ASP) ist ADO eine Komponente, auf die in einem Skript verwiesen wird, das z. b. HTML generieren kann. Dieser HTML-Inhalt kann über HTTP an einen Client-Webbrowser übermittelt werden. Mithilfe der Skripterstellung kann die Webseite Aktionen an das serverseitige Skript zurücksenden, um bestimmte Daten zu aktualisieren, zu durchlaufen oder anzuzeigen.  
   
- Bevor Sie ein ActiveX-Objekt auf einer Webseite verwenden, ist es wichtig zu wissen, ob das Objekt für die Skripterstellung sicher ist. Wenn ein Objekt als "sicher für Skripting" eingestuft wird, bedeutet dies, dass das Steuerelement keine schädliche Aktionen auf dem Computer des Benutzers durchführen und daher ausgeführt werden, kann ohne die Zustimmung des Benutzers angefordert. Die folgende Tabelle listet die ADO-Objekte und gibt an, ob sie für die Skripterstellung sicher sind.  
+ Bevor Sie ein ActiveX-Objekt in einer Webseite verwenden, ist es wichtig zu wissen, ob das Objekt für die Skripterstellung sicher ist. Wenn ein Objekt als sicher für die Skripterstellung angesehen wird, bedeutet dies, dass das Steuerelement keine schädlichen Maßnahmen auf dem Computer des Benutzers durchführen kann und daher ausgeführt werden kann, ohne die Genehmigung des Benutzers anzufordern. In der folgenden Tabelle werden die ADO-Objekte aufgelistet und angegeben, ob Sie für die Skripterstellung sicher sind.  
   
-|Objekt|Für Scripting sicher sind?|  
+|Object|Sicher für Skripterstellung?|  
 |------------|-------------------------|  
 |ADO-Verbindung|Ja|  
 |ADO-Befehl|Nein|  
@@ -37,35 +37,35 @@ Innerhalb einer skriptumgebung kann ADO Daten über die serverseitige Skripts ve
 |ADOX-Katalog|Nein|  
 |ADOX-CellSet|Nein|  
 |RDS-DataControl|Ja|  
-|RDS-Datenspeicher|Ja|  
-|RDS Data Factory|Nein|  
+|RDS-DataSpace|Ja|  
+|RDS-DataFactory|Nein|  
   
- Die folgende Tabelle listet die mit Windows DAC/MDAC enthaltenen Anbieter, und gibt an, ob sie für die Skripterstellung sicher sind.  
+ In der folgenden Tabelle sind die in Windows DAC/MDAC enthaltenen Anbieter aufgelistet, und es wird angegeben, ob Sie für die Skripterstellung sicher sind.  
   
-|Anbieter|Für Scripting sicher sind?|  
+|Anbieter|Sicher für Skripterstellung?|  
 |--------------|-------------------------|  
 |Form|Ja|  
-|Beibehalten|Ja|  
+|Persist|Ja|  
 |Remote|Ja|  
-|OLE DB-Anbieter für SQLServer (SQLOLEDB)|Nein|  
-|OLE DB-Anbieter für ODBC (MSDASQL)|Nein|  
+|OLE DB Anbieter für SQL Server (SQLOLEDB)|Nein|  
+|OLE DB Anbieter für ODBC (MSDASQL)|Nein|  
   
 ## <a name="odbc-data-sources"></a>ODBC-Datenquellen  
- Ein deutlicher Unterschied zwischen Skript und nicht zur skriptprogrammierung ADO-Code ist der ODBC-Datenquelle verwendet. Für Anwendungen nicht zur skriptprogrammierung können Sie in der ODBC-Datenquellen-Administrator einen Benutzer-DSN erstellen. Für Skripts, die unter IIS ausgeführt werden, müssen Sie einen System-DSN erstellen; Andernfalls werden die Skripts die Datenquelle, die Sie erstellt haben, nicht erkannt. Dies gilt für alle Skripts ADO-Anwendung mithilfe von Microsoft OLE DB-Anbieter für ODBC über Microsoft IIS.  
+ Ein wichtiger Unterschied zwischen der Skripterstellung und dem nicht-Skript-ADO-Code ist die ODBC-Datenquelle (sofern verwendet). Für nicht-Skript Anwendungen können Sie im ODBC-Datenquellen-Administrator einen Benutzer-DSN erstellen. Bei Skripts, die unter IIS ausgeführt werden, müssen Sie einen System-DSN erstellen. Andernfalls erkennen Ihre Skripts die von Ihnen erstellte Datenquelle nicht. Dies gilt für jede ADO-Skript Anwendung, die den Microsoft OLE DB-Anbieter für ODBC über Microsoft IIS verwendet.  
   
-## <a name="referencing-the-ado-library"></a>Verweis auf die ADO-Bibliothek  
- Nicht zutreffend mit Skriptsprachen.  
+## <a name="referencing-the-ado-library"></a>Verweisen auf die ADO-Bibliothek  
+ Gilt nicht für Skriptsprachen.  
   
 ## <a name="handling-events"></a>Behandeln von Ereignissen  
- Nicht zutreffend mit Skriptsprachen.  
+ Gilt nicht für Skriptsprachen.  
   
- Die folgenden Themen enthalten spezifischere Informationen zum Verwenden von ADO mit Skriptsprachen an:  
+ Die folgenden Themen enthalten spezifischere Informationen zur Verwendung von ADO mit Skriptsprachen:  
   
 -   [VBScript-ADO-Programmierung](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
   
 -   [JScript-ADO-Programmierung](../../../ado/guide/appendixes/jscript-ado-programming.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
  [Verwenden von ADO mit Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
  [Verwenden von ADO mit Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   

@@ -13,14 +13,14 @@ ms.assetid: 189240e8-3ffa-4024-81a9-c6cb5d17eee0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a8a13ee7637c0cb16e33e626a218e28242dabf4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925777"
 ---
 # <a name="controlling-transactions-ado"></a>Steuern von Transaktionen (ADO)
-ADO unterstützt transaktionsverarbeitung in einer Verbindung mithilfe der **BeginTrans**, **CommitTrans**, und **RollbackTrans** Methoden für eine  **Verbindung** Objekt. Das allgemeine Konzept der Implementierung von transaktionsverarbeitung in ADO wird im folgenden einfachen Code-Ausschnitt veranschaulicht.  
+ADO unterstützt die Transaktionsverarbeitung innerhalb einer Verbindung mit der Methode **BeginTrans**, **CommitTrans**und **RollbackTrans** für ein **Verbindungs** Objekt. Die allgemeine Idee der Implementierung der Transaktionsverarbeitung in ADO ist im folgenden einfachen Code Ausschnitt dargestellt.  
   
 ```  
 Const DS = "MySqlServer"  
@@ -77,6 +77,6 @@ oRs.Close
 oConn.Close  
 ```  
   
- Hier wird die Verarbeitung von Transaktionen verwendet, um sicherzustellen, dass die beiden Datensätze werden als eine Einheit des Vorgangs aktualisiert, und entweder sind die zwei Produktnamen ausgetauscht oder überhaupt nicht geändert.  
+ Hier wird die Transaktionsverarbeitung verwendet, um sicherzustellen, dass die beiden Datensätze als eine Betriebseinheit aktualisiert werden und dass die beiden Produktnamen entweder geändert oder überhaupt nicht geändert werden.  
   
- Detaillierte erörterungen der Verarbeitung von Transaktionen finden Sie unter [wird aktualisiert und Beibehalten von Daten](../../../ado/guide/data/updating-and-persisting-data.md).
+ Ausführliche Informationen zur Transaktionsverarbeitung finden Sie unter [aktualisieren und](../../../ado/guide/data/updating-and-persisting-data.md)beibehalten von Daten.

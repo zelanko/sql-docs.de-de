@@ -1,5 +1,5 @@
 ---
-title: Project Settings (Migration) (AccessToSQL) | Microsoft-Dokumentation
+title: Projekteinstellungen (Migration) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,79 +13,79 @@ ms.assetid: 4caebc9c-8680-4b99-a8fa-89c43161c95d
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3e3d979b6f3c5943723fb5dd8f37831adfbc1305
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67929393"
 ---
-# <a name="project-settings-migration-accesstosql"></a>Project Settings (Migration) (AccessToSQL)
-Die projekteinstellungen für die Migration können Sie konfigurieren, wie Daten migriert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure.  
+# <a name="project-settings-migration-accesstosql"></a>Projekteinstellungen (Migration) (accesstosql)
+Mit den Migrationsprojekt Einstellungen können Sie konfigurieren, wie Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migriert werden.  
   
-Der Bereich für die Migration finden Sie in der **Projekteinstellungen** und **Projekt Standardeinstellungen** Dialogfelder.  
+Der Bereich Migration ist in den Dialogfeldern **Projekteinstellungen** und **Standard Projekteinstellungen** verfügbar.  
   
--   Verwenden der **Projekteinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für das aktuelle Projekt. Um auf den migrationseinstellungen der **Tools** , wählen Sie im Menü **Projekteinstellungen**, klicken Sie auf **allgemeine** am unteren Rand der linken Bereich ein, und klicken Sie dann auf  **Migration**.  
+-   Verwenden Sie das Dialogfeld **Projekteinstellungen** , um Konfigurationsoptionen für das aktuelle Projekt festzulegen. Um auf die Migrations Einstellungen zuzugreifen, wählen **Sie im Menü Extras** die Option **Projekteinstellungen**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Migration**.  
   
--   Verwenden der **Projekt Standardeinstellungen** Dialogfeld zum Festlegen von Konfigurationsoptionen für alle Projekte. Um auf den migrationseinstellungen der **Tools** , wählen Sie im Menü **Projekt Standardeinstellungen**, wählen den Projekttyp in **Migration Zielversion** im Kombinationsfeld, von denen Sie die Einstellungen zuzugreifen, klicken Sie auf **allgemeine** am unteren Rand der linken Bereich ein, und klicken Sie dann auf **Migration**.  
+-   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Migrations Einstellungen zuzugreifen, wählen **Sie im Menü Extras die Option** **Standard Projekteinstellungen**aus, wählen Sie im Kombinations Feld **Migrations Ziel Version** den Projekttyp aus, für den Sie auf die Einstellungen zugreifen möchten, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Migration**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Check-Einschränkungen**  
-Gibt an, ob SSMA Einschränkungen überprüft werden sollen, wenn sie Daten in Tabellen hinzufügt.  
+Gibt an, ob SSMA Einschränkungen beim Hinzufügen von Daten zu Tabellen überprüfen soll.  
   
--   **Im Modus Standard**: False  
+-   **Standardmodus**: false  
   
--   **Vollständige**: True  
+-   **Optimistischer Modus**: true  
   
--   **Vollständiger Modus**: False  
+-   **Vollständiger Modus**: false  
   
 **Trigger auslösen**  
-Gibt an, ob SSMA einfügen Trigger ausgelöst werden soll, wenn sie Daten hinzufügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen.  
+Gibt an, ob SSMA Einfügetrigger auslösen soll, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wenn Daten zu Tabellen hinzugefügt werden.  
   
--   **Im Modus Standard**: False  
+-   **Standardmodus**: false  
   
--   **Vollständige**: True  
+-   **Optimistischer Modus**: true  
   
--   **Vollständiger Modus**: False  
+-   **Vollständiger Modus**: false  
   
 **Identität beibehalten**  
-Gibt an, ob SSMA Zugriff, Identity-Werte beibehalten, wenn sie Daten hinzufügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn dieser Wert "False" [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Identitätswerte zuweist.  
+Gibt an, ob SSMA beim Hinzufügen von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zugriffs Identitäts Werte beibehält. Wenn dieser Wert false ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden Identitäts Werte zugewiesen.  
   
--   **Im Modus Standard**: True  
+-   **Standardmodus**: true  
   
--   **Vollständige**: True  
+-   **Optimistischer Modus**: true  
   
--   **Vollständiger Modus**: False  
+-   **Vollständiger Modus**: false  
   
-**NULL-Werte beibehalten**  
-Gibt an, ob SSMA behält null-Werte in den Quelldaten aus, wenn sie Daten hinzufügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], unabhängig davon, die im angegebenen Standardwerte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+**NULL-Werten beibehalten**  
+Gibt an, ob SSMA beim Hinzufügen von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]NULL-Werte in den Quelldaten beibehält, unabhängig von den in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angegebenen Standardwerten.  
   
--   **Im Modus Standard**: True  
+-   **Standardmodus**: true  
   
--   **Vollständige**: False  
+-   **Optimistischer Modus**: false  
   
--   **Vollständiger Modus**: True  
+-   **Vollständiger Modus**: true  
   
 **Tabellensperren**  
-Gibt an, ob es sich bei SSMA Tabellen sperrt, wenn sie Daten in Tabellen während der Datenmigration hinzufügt. Wenn der Wert "false" ist, wird in SSMA Zeilensperren verwendet.  
+Gibt an, ob SSMA Tabellen sperrt, wenn während der Datenmigration Daten zu Tabellen hinzugefügt werden. Wenn der Wert false ist, verwendet SSMA Zeilen sperren.  
   
--   **Im Modus Standard**: True  
+-   **Standardmodus**: true  
   
--   **Vollständige**: True  
+-   **Optimistischer Modus**: true  
   
--   **Vollständiger Modus**: True  
+-   **Vollständiger Modus**: true  
   
-**Ersetzen Sie dies nicht unterstützte Datumswerte**  
-Gibt an, ob SSMA Zugriffsdaten einwirken soll, die älter als Frühestes unterstütztes sind [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] "DateTime"-Datum (01 Januar 1753).  
+**Nicht unterstützte Datumsangaben ersetzen**  
+Gibt an, ob SSMA Zugriffsdaten korrigieren soll, die vor dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] frühestmöglichen Datum (01. Januar 1753) liegen.  
   
--   Um das aktuelle Datum zu erhalten, wählen Sie **nichts**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datumsangaben vor dem 01 Januar 1753 wird in eine Datetime-Spalte nicht akzeptiert werden. Wenn Sie ältere Daten verwenden, müssen Sie die Datums-/ Uhrzeitwerten in Zeichenwerten enthalten, die konvertieren.  
+-   Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.  
   
--   Wählen Sie zum Konvertieren von Datumsangaben vor dem 01 Januar 1753 auf NULL **durch NULL Ersetzen**.  
+-   Um Datumsangaben vor 01. Januar 1753 in NULL zu konvertieren, wählen Sie **durch Null Ersetzen**aus.  
   
--   Um Datumsangaben vor dem 01 Januar 1753 mit einem unterstützten Datum ersetzen möchten, wählen Sie **ersetzen Sie dies durch nächste unterstützte Datum**. Bei Auswahl dieses Werts in der Standardeinstellung, die nächste werden unterstützte Datum als 01 Januar 1753 ausgewählt werden.  
+-   Um Datumsangaben vor 01. Januar 1753 durch ein unterstütztes Datum zu ersetzen, wählen Sie **durch das nächste unterstützte Datum ersetzen**aus. Wenn Sie diesen Wert auswählen, wird standardmäßig das nächste unterstützte Datum als 01. Januar 1753 ausgewählt.  
   
-**Batchgröße**  
-Batchgröße, die während der Migration von Daten verwendet werden. Eine Transaktion wird nach jedem Batch protokolliert. Standardmäßig ist die Batchgröße für alle Schemas 10000.  
+**Batch Größe**  
+Batch Größe, die während der Datenmigration verwendet wird. Eine Transaktion wird nach jedem Batch protokolliert. Standardmäßig ist die Batch Größe für alle Schemas 10000.  
   
-## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>Weitere Informationen  
+[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

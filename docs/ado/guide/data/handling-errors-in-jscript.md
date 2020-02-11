@@ -16,14 +16,14 @@ ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925173"
 ---
 # <a name="handling-errors-in-jscript"></a>Behandeln von Fehlern in JScript
-Ihr Microsoft® JScript®-Code muss überprüfen, die **Anzahl** Eigenschaft der **Verbindung** des Objekts **Fehler** Auflistung. Wenn der Wert größer als 0 ist, der die Auflistung durchlaufen Sie, und drucken Sie die Werte wie in allen anderen Sprachen.  
+Der Code des Microsoft® JScript-® muss die **count** -Eigenschaft der **Fehler** Auflistung des **Verbindungs** Objekts überprüfen. Wenn der Wert größer als 0 ist, durchlaufen Sie die Auflistung, und Drucken Sie die Werte wie in jeder anderen Sprache.  
   
 ```  
 <!-- BeginErrorExampleJS -->  

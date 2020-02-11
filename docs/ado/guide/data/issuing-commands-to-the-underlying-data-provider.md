@@ -1,5 +1,5 @@
 ---
-title: Ausgeben von Befehlen an den zugrunde liegenden Datenanbieter | Microsoft-Dokumentation
+title: Ausgeben von Befehlen an die zugrunde liegende Datenanbieter | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,18 @@ ms.assetid: d6001863-7733-4c32-817f-081e48587fa1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 02a861daa78b798c1b19b5fc2607cfcaf0ce5968
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924945"
 ---
 # <a name="issuing-commands-to-the-underlying-data-provider"></a>Ausgeben von Befehlen an den zugrunde liegenden Datenanbieter
-Jeder Befehl, der nicht mit der Form beginnt wird an den Datenanbieter übergeben. Dies ist gleichbedeutend mit dem ein Shape-Befehl in der Form "Form {Anbieterbefehl}". Diese Befehle werden *nicht* erzeugen eine **Recordset**. Z. B. "ist die Form {DROP TABLE MyTable} eine absolut gültige Shape-Befehl, vorausgesetzt, dass der Datenanbieter unterstützt die DROP TABLE.  
+Alle Befehle, die nicht mit Shape beginnen, werden an den Datenanbieter übermittelt. Dies entspricht dem Ausgeben eines Shape-Befehls im Format "Shape {Provider Command}". Diese Befehle müssen *kein* **Recordset**enthalten. Beispielsweise ist "Shape {DROP TABLE MyTable}" ein vollständig gültiger SHAPE-Befehl, vorausgesetzt, der Datenanbieter unterstützt DROP TABLE.  
   
- Diese Funktion ermöglicht sowohl die normalen Anbieterbefehlen als auch die Shape-Befehlen auf derselben Verbindung und Transaktion.  
+ Diese Funktion ermöglicht es, dass sowohl normale Anbieter Befehle als auch Shape-Befehle dieselbe Verbindung und Transaktion gemeinsam verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Beispiel für die datenstrukturierung](../../../ado/guide/data/data-shaping-example.md)   
- [Formale Grammatik für Formen](../../../ado/guide/data/formal-shape-grammar.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Daten Strukturierung](../../../ado/guide/data/data-shaping-example.md)   
+ [Formale Form Grammatik](../../../ado/guide/data/formal-shape-grammar.md)   
  [Shape-Befehle im Allgemeinen](../../../ado/guide/data/shape-commands-in-general.md)

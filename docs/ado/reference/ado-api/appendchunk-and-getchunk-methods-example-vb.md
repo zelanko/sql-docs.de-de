@@ -1,5 +1,5 @@
 ---
-title: AppendChunk und GetChunk-Methoden – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für AppendChunk und GetChunk-Methoden (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: c07862b5-e466-46bd-910b-59ac96709cb9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7183dbc6b54e5560784e5de602a45da8e5a235a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920626"
 ---
-# <a name="appendchunk-and-getchunk-methods-example-vb"></a>AppendChunk und GetChunk-Methoden – Beispiel (VB)
-Dieses Beispiel verwendet die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) und [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) Methoden für ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  
+# <a name="appendchunk-and-getchunk-methods-example-vb"></a>Beispiel für AppendChunk und GetChunk-Methoden (VB)
+In diesem Beispiel werden die [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) -Methode und die [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) -Methode verwendet, um ein Bildfeld mit Daten aus einem anderen Datensatz zu füllen.  
   
 ```  
 'BeginAppendChunkVB  
@@ -147,7 +147,7 @@ End Sub
 'EndAppendChunkVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [AppendChunk-Methode (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
  [Field-Objekt](../../../ado/reference/ado-api/field-object.md)   
  [GetChunk-Methode (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   

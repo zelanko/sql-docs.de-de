@@ -1,5 +1,5 @@
 ---
-title: Grundlegendes zu ADO MD | Microsoft-Dokumentation
+title: ADO MD Grundlagen | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,22 +13,22 @@ ms.assetid: f6a20d9f-c1ab-474c-b9f3-82277e2a126d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 690c7b58c336596485b9ade77f0c02928853cd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923204"
 ---
 # <a name="ado-md-fundamentals"></a>Grundlegendes zu ADO MD
-Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) bietet einfachen Zugriff auf mehrdimensionale Daten in Sprachen wie z. B. Microsoft Visual Basic®, fest Microsoft Visual C++®. ADO MD erweitert Microsoft ActiveX® Data Objects (ADO), um die Objekte, die speziell für mehrdimensionale Daten, z. B. enthalten die [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) und [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) Objekte. Mit ADO MD können Sie mehrdimensionales Schema durchsuchen, Abfragen ein Cubes und die Ergebnisse abzurufen.  
+Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) bieten einfachen Zugriff auf mehrdimensionale Daten aus Sprachen wie Microsoft Visual Basic® Microsoft Visual C++®. ADO MD erweitert Microsoft ActiveX® Data Objects (ADO) um Objekte, die für mehrdimensionale Daten, z. b. die [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) -und [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) -Objekte, spezifisch sind. Mit ADO MD Sie das mehrdimensionale Schema durchsuchen, einen Cube Abfragen und die Ergebnisse abrufen können.  
   
- ADO MD verwendet wie ADO zugrunde liegenden OLE DB-Anbieter für den Zugriff auf Daten. Zum Arbeiten mit ADO MD muss der Anbieter einen Anbieter für mehrdimensionale Daten (MDP) sein, wie in der OLE DB für OLAP-Spezifikation definiert. Ein MDP zeigt Daten in multidimensionalen Ansichten anstelle von tabellarischen Ansichten ist wie ein tabellarischer Datenanbieter (TDP) Daten dargestellt. Lesen Sie die Dokumentation für den OLAP-OLE DB-Anbieter für Weitere Informationen zur spezifischen Syntax und Verhalten, die von Ihrem Anbieter unterstützt.  
+ Wie ADO verwendet ADO MD einen zugrunde liegenden OLE DB-Anbieter, um Zugriff auf Daten zu erhalten. Um mit ADO MD arbeiten zu können, muss der Anbieter ein mehrdimensionaler Datenanbieter (MDP) sein, wie in der OLE DB für OLAP-Spezifikation definiert. Ein MDP stellt Daten in mehrdimensionalen Sichten anstelle von Tabellen Sichten dar, d. h., wie ein tabellarischer Datenanbieter (TDP) Daten darstellt. Weitere Informationen zur spezifischen Syntax und dem von Ihrem Anbieter unterstützten Verhalten finden Sie in der Dokumentation für Ihren OLAP-OLE DB-Anbieter.  
   
- In diesem Dokument wird davon ausgegangen, die Programmiersprache Visual Basic-Kenntnisse und eine allgemeine Kenntnisse von ADO und OLAP. Weitere Informationen finden Sie unter den [ADO Programmer's Guide](../../../ado/guide/ado-programmer-s-guide.md) und [OLE DB für Online Analytical Processing (OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx).  
+ In diesem Dokument wird davon ausgegangen, dass Sie über die Visual Basic Programmiersprache und allgemeine Kenntnisse von ADO und OLAP verfügen. Weitere Informationen finden Sie im [ADO-Programmier Handbuch](../../../ado/guide/ado-programmer-s-guide.md) und [OLE DB für die analytische Online Verarbeitung (Online Analytical Processing, OLAP)](https://msdn.microsoft.com/library/windows/desktop/ms717005.aspx).  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)  
+-   [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)  
   
 -   [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)  
   
@@ -36,11 +36,11 @@ Microsoft® ActiveX® Data Objects (Multidimensional) (ADO MD) bietet einfachen 
   
 -   [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO MD-Objektmodell](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO Programmer's Guide](../../../ado/guide/ado-programmer-s-guide.md)   
- [ADO-Erweiterungen für Datendefinitionssprache und Sicherheit (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
- [Übersicht über multidimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
+ [ADO-Programmiererhandbuch](../../../ado/guide/ado-programmer-s-guide.md)   
+ [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)   
+ [Übersicht über mehrdimensionale Schemas und Daten](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
  [Programmieren mit ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
  [Verwenden von ADO mit ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)   
  [Arbeiten mit mehrdimensionalen Daten](../../../ado/guide/multidimensional/working-with-multidimensional-data.md)

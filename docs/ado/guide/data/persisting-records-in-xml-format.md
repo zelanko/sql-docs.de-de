@@ -17,19 +17,19 @@ ms.assetid: f3113ec4-ae31-428f-89c6-bc1024f128ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 263f83093c46f4265559fe0b1844112687d4fc67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924593"
 ---
 # <a name="persisting-records-in-xml-format"></a>Beibehalten von Datensätzen im XML-Format
-Wie beim ADTG **Recordset** Persistenz im XML-Format wird implementiert, mit der Microsoft OLE DB-Persistenz-Provider. Dieser Anbieter generiert einen Vorwärtscursor, schreibgeschützte Rowset aus einer gespeicherten XML-Datei oder einem Stream, der die Schemainformationen, die vom ADO enthält. Auf ähnliche Weise kann ein ADO dauern **Recordset**, Generieren von XML, und speichern Sie ihn in einer Datei oder ein Objekt, das die COM implementiert **IStream** Schnittstelle. (Eine Datei ist einfach ein weiteres Beispiel für ein Objekt, das unterstützt **IStream**.) ADO verwendet, Version 2.5 und höher, auf der Microsoft XML Parser (MSXML) beim Laden der XML-Daten in die **Recordset**; daher msxml.dll ist erforderlich.  
+Ebenso wie das ADTG-Format wird die **recordsetpersistenz** im XML-Format mit dem Microsoft OLE DB Dauerhaftigkeits Anbieter implementiert. Dieser Anbieter generiert ein Schreib geschütztes vorwärts-Rowset aus einer gespeicherten XML-Datei oder einem Datenstrom, der die von ADO generierten Schema Informationen enthält. Ebenso kann Sie ein ADO- **Recordset**verwenden, XML generieren und in einer Datei oder einem beliebigen Objekt speichern, das die com- **IStream** -Schnittstelle implementiert. (Tatsächlich ist eine Datei nur ein weiteres Beispiel für ein Objekt, das **IStream**unterstützt.) Bei Version 2,5 und höher stützt ADO den Microsoft XML-Parser (MSXML), um den XML-Code in das **Recordset**zu laden. Daher ist MSXML. dll erforderlich.  
   
 > [!NOTE]
->  Einige Einschränkungen gelten beim Speichern von hierarchischen **Recordsets** (Daten-Shapes) in XML-Format. Sie können nicht in XML gespeichert, wenn die hierarchische **Recordset** ausstehende Updates enthält und Sie können eine parametrisierte speichern hierarchische **Recordset**. Weitere Informationen finden Sie unter [beibehalten von gefilterten und hierarchischen Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
+>  Wenn hierarchische **Recordsets** (Daten Formen) im XML-Format gespeichert werden, gelten einige Einschränkungen. In XML kann nicht gespeichert werden, wenn das hierarchische **Recordset** ausstehende Updates enthält, und Sie können kein parametrisiertes hierarchisches **Recordset**speichern. Weitere Informationen finden Sie unter [persistente gefilterte und hierarchische Recordsets](../../../ado/guide/data/persisting-filtered-and-hierarchical-recordsets.md).  
   
- Die einfachste Möglichkeit zum Beibehalten von Daten in XML-Code, und Laden Sie sie wieder wieder über ADO ist mit der **speichern** und **öffnen** Methoden bzw. Im folgenden Beispiel der ADO-Code wird veranschaulicht, speichern die Daten in die **Titel** Tabelle in eine Datei mit dem Namen titles.sav.  
+ Die einfachste Möglichkeit zum Speichern von Daten in XML und zum erneuten Laden der Daten über ADO besteht darin, die Methoden zum Speichern und **Öffnen** zu **Speichern** . Im folgenden ADO-Codebeispiel wird veranschaulicht, wie die Daten in der **Titel** Tabelle in einer Datei mit dem Namen "Titeln. SAV" gespeichert werden.  
   
 ```  
 Dim rs as new Recordset  
@@ -59,33 +59,33 @@ rs.Open "titles.sav",,,,adCmdFile
 rs2.open s  
 ```  
   
- ADO speichert immer die gesamte **Recordset** Objekt. Wenn Sie eine Teilmenge von Zeilen beibehalten möchten die **Recordset** -Objekts die **Filter** Methode zum eingrenzen, der Zeilen, oder ändern Sie Ihre Auswahlklausel. Allerdings müssen Sie öffnen ein **Recordset** Objekt mit einem clientseitigen Cursor (**CursorLocation** = **AdUseClient**) verwenden die **Filtern** -Methode für eine Teilmenge von Zeilen gespeichert. Z. B. um Titel abzurufen, die mit dem Buchstaben "b" beginnen, Sie können einen Filter anwenden, ein offenes **Recordset** Objekt:  
+ ADO speichert immer das gesamte **Recordset** -Objekt. Wenn Sie eine Teilmenge der Zeilen des **Recordset** -Objekts beibehalten möchten, verwenden Sie die **Filter** -Methode, um die Zeilen einzugrenzen oder die Auswahl Klausel zu ändern. Sie müssen jedoch ein **Recordset** -Objekt mit einem Client seitigen Cursor (**CursorLocation** = **adUseClient**) öffnen, um die **Filter** Methode zum Speichern einer Teilmenge von Zeilen zu verwenden. Wenn Sie z. b. Titel abrufen möchten, die mit dem Buchstaben "b" beginnen, können Sie einen Filter auf ein offenes **Recordset** -Objekt anwenden:  
   
 ```  
 rs.Filter "title_id like 'B*'"  
 rs.Save "btitles.sav", adPersistXML  
 ```  
   
- ADO verwendet immer das Client-Cursor-Engine-Rowset einer bildlauffähigen erzeugt lesezeichenfähig **Recordset** Objekt für die Vorwärts-Daten, die generiert werden, indem Sie den Persistenz-Provider.  
+ ADO verwendet immer das Clientcursormodul-Rowset, um ein scrollbares, Lese **** markerbares Recordsetobjekt zusätzlich zu den vorwärts Daten zu erzeugen, die vom Persistenzanbieter generiert werden.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [XML Persistence Format (XML-Beibehaltungsformat)](../../../ado/guide/data/xml-persistence-format.md)  
+-   [XML-Beibehaltungsformat](../../../ado/guide/data/xml-persistence-format.md)  
   
 -   [Namespaces](../../../ado/guide/data/namespaces.md)  
   
--   [Schema-Abschnitt](../../../ado/guide/data/schema-section.md)  
+-   [Schemaabschnitt](../../../ado/guide/data/schema-section.md)  
   
 -   [Datenabschnitt](../../../ado/guide/data/data-section.md)  
   
 -   [Hierarchische Recordsets im XML-Format](../../../ado/guide/data/hierarchical-recordsets-in-xml.md)  
   
--   [Recordset Dynamic Properties in XML (Dynamische Recordset-Eigenschaften in XML)](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
+-   [Dynamische Recordseteigenschaften in XML](../../../ado/guide/data/recordset-dynamic-properties-in-xml.md)  
   
 -   [XSLT-Transformationen](../../../ado/guide/data/xslt-transformations.md)  
   
--   [Saving to the XML DOM Object (Speichern in das XML DOM-Objekts)](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
+-   [Speichern in das XML-DOM-Objekt](../../../ado/guide/data/saving-to-the-xml-dom-object.md)  
   
--   [XML-Sicherheitsüberlegungen](../../../ado/guide/data/xml-security-considerations.md)  
+-   [Überlegungen zur Sicherheit bei XML](../../../ado/guide/data/xml-security-considerations.md)  
   
--   [Speicherszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)
+-   [Beibehaltungsszenario für XML-Recordsets](../../../ado/guide/data/xml-recordset-persistence-scenario.md)

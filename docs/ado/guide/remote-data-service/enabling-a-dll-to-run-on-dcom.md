@@ -1,5 +1,5 @@
 ---
-title: Aktivieren einer DLL zur Ausführung unter DCOM | Microsoft-Dokumentation
+title: Aktivieren einer DLL-Datei für die DCOM-Aktivierung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,32 +15,32 @@ ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ea7ea83219780602f8d8d68e5c807178e775bc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67922703"
 ---
 # <a name="enabling-a-dll-to-run-on-dcom"></a>Aktivieren einer DLL zur Ausführung unter DCOM
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Die folgenden Schritte beschreiben, wie Sie eine Business-Objekt-DLL für die Verwendung DCOM und Microsoft Internet Informationen Services (HTTP) über Komponentendienste zu aktivieren.  
+ In den folgenden Schritten wird beschrieben, wie Sie eine Geschäftsobjekt-DLL für die Verwendung von DCOM und Microsoft Internetinformationsdienste (http) über Komponenten Dienste aktivieren.  
   
-1.  Erstellen Sie ein neues, leeres Paket, das Komponentendienste-MMC-Snap-in.  
+1.  Erstellen Sie im MMC-Snap-in "Komponenten Dienste" ein neues leeres Paket.  
   
-     Sie können das Komponentendienste-MMC-Snap-in zum Erstellen eines Pakets aus, und fügen die DLL in dieses Paket. Dadurch kann die DLL-Datei zugegriffen werden, über DCOM, sondern über IIS entfernt. (Wenn Sie in der Registrierung für die DLL-Datei, überprüfen Sie die **Inproc** Schlüssel jetzt leer ist; das Festlegen der Activation-Attribut, das erklärt weiter unten in diesem Thema Fügt einen Wert in der **Inproc** Schlüssel.)  
+     Verwenden Sie das MMC-Snap-in "Komponenten Dienste", um ein Paket zu erstellen und die dll zu diesem Paket hinzuzufügen. Dadurch kann die DLL-Datei über DCOM zugänglich gemacht werden. die Barrierefreiheit wird jedoch über IIS entfernt. (Wenn Sie die Registrierung für die DLL-Datei einchecken, ist der **INPROC** -Schlüssel nun leer. durch das Festlegen des Aktivierungs Attributs, das weiter unten in diesem Thema erläutert wird, wird ein Wert im **INPROC** -Schlüssel hinzugefügt.)  
   
-2.  Installieren Sie ein Geschäftsobjekt, in dem Paket.  
+2.  Installieren Sie ein Geschäftsobjekt im Paket.  
   
-     -oder-  
+     Oder  
   
-     Importieren der [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt in das Paket.  
+     Importieren Sie das [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt in das Paket.  
   
-3.  Legen Sie das Attribut "Aktivierung" das Paket **im Prozess des Erstellers** (Library-Anwendung).  
+3.  Legen Sie das Aktivierungs Attribut für das Paket **im Prozess des Erstellers** (Bibliotheks Anwendung) auf fest.  
   
-     Damit wird die DLL-Datei über DCOM und IIS auf dem gleichen Computer zugegriffen werden kann, müssen Sie die Komponentendienste-MMC-Snap-in-Aktivierung-Attribut der Komponente festlegen. Nachdem Sie das Attribut, um festgelegt **im Prozess des Erstellers**, werden Sie feststellen, dass ein **Inproc** , Ersatz-DLL der verweist auf eine Komponente Services Serverschlüssel in der Registrierung hinzugefügt wurde.  
+     Um die DLL-Datei über DCOM und IIS auf demselben Computer zugänglich zu machen, müssen Sie das Aktivierungs Attribut der Komponente im MMC-Snap-in "Komponenten Dienste" festlegen. Nachdem Sie **im Prozess des Erstellers das-** Attribut auf festgelegt haben, werden Sie feststellen, dass in der Registrierung ein **INPROC** -Server Schlüssel hinzugefügt wurde, der auf die Komponente "Ersatz. dll" für Komponenten Dienste verweist.  
   
- Weitere Informationen zu den Komponentendiensten (oder Microsoft Transaction-Dienst, bei Verwendung von Windows NT) und wie Sie diese Schritte ausführen, finden Sie auf der Website von Microsoft Transaction Server.
+ Weitere Informationen zu den Komponenten Diensten (oder zum Microsoft Transaction Service, wenn Sie Windows NT verwenden) und zum Ausführen dieser Schritte finden Sie auf der Microsoft Transaction Server-Website.
 
 

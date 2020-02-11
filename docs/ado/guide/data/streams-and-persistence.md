@@ -14,23 +14,23 @@ ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924029"
 ---
 # <a name="streams-and-persistence"></a>Datenströme und Persistenz
-Die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt [speichern](../../../ado/reference/ado-api/save-method.md) Methode speichern, oder *beibehalten*, **Recordset** in einer Datei, und die [Öffnen](../../../ado/reference/ado-api/open-method-ado-recordset.md)Methode stellt der **Recordset** aus dieser Datei.  
+Das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) - [Objekt speichert](../../../ado/reference/ado-api/save-method.md) Method speichert oder speichert ein **Recordset** in einer *Datei, und*die [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -Methode stellt das **Recordset** aus dieser Datei wieder her.  
   
- Mit ADO 2.7 oder höher die **speichern** und **öffnen** Methoden beizubehalten, können eine **Recordset** auf eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md) -Objekts. Dieses Feature ist besonders nützlich, beim Arbeiten mit Remote Data Service (RDS) und Active Server Pages (ASP).  
+ Mit ADO 2,7 oder höher können die Methoden " **Save** " und " **Open** " auch ein **Recordset** in einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) speichern. Diese Funktion ist besonders nützlich, wenn Sie mit Remote Data Service (RDS) und Active Server Seiten (ASP) arbeiten.  
   
- Weitere Informationen, wie die Persistenz von sich selbst in ASP-Seiten verwendet werden kann finden Sie unter der aktuellen ASP-Dokumentation.  
+ Weitere Informationen darüber, wie die Persistenz allein auf ASP-Seiten verwendet werden kann, finden Sie in der aktuellen ASP-Dokumentation.  
   
- Im folgenden sind einige Szenarien, die zeigen, wie **Stream** Objekte und Persistenz können verwendet werden.  
+ Im folgenden finden Sie einige Szenarien, die zeigen, wie **Streamobjekte** und Persistenz verwendet werden können.  
   
-## <a name="scenario-1"></a>Szenario 1  
- Dieses Szenario einfach speichert eine **Recordset** in eine Datei, und klicken Sie dann auf eine **Stream**. Klicken Sie dann die permanenten Datenstrom in ein anderes geöffnet **Recordset**.  
+## <a name="scenario-1"></a>Szenario 1  
+ In diesem Szenario wird einfach ein **Recordset** in einer Datei und dann in einem **Stream**gespeichert. Anschließend wird der persistente Stream in einem anderen **Recordset**geöffnet.  
   
 ```  
 Dim rs1 As ADODB.Recordset  
@@ -49,8 +49,8 @@ rs1.Save stm, adPersistXML
 rs2.Open stm  
 ```  
   
-## <a name="scenario-2"></a>Szenario 2  
- Dieses Szenario besteht weiterhin eine **Recordset** in einem **Stream** im XML-Format. Es liest die **Stream** in eine Zeichenfolge, die Sie überprüfen, bearbeiten oder anzeigen können.  
+## <a name="scenario-2"></a>Szenario 2:  
+ In diesem Szenario wird ein **Recordset** in einem **Stream** im XML-Format beibehalten. Anschließend wird der Daten **Strom** in eine Zeichenfolge gelesen, die Sie untersuchen, bearbeiten oder anzeigen können.  
   
 ```  
 Dim rs As ADODB.Recordset  
@@ -75,8 +75,8 @@ strRst = stm.ReadText(adReadAll)
 ...  
 ```  
   
-## <a name="scenario-3"></a>Szenario 3  
- Dieser Beispielcode wird gezeigt, ASP Code beibehalten einer **Recordset** als XML direkt in die **Antwort** Objekt:  
+## <a name="scenario-3"></a>Szenario 3  
+ Dieser Beispielcode zeigt ASP-Code, der ein **Recordset** als XML direkt an das **Response** -Objekt speichert:  
   
 ```  
 ...  
@@ -99,12 +99,12 @@ Set rs = nothing
 ...  
 ```  
   
-## <a name="scenario-4"></a>Szenario 4  
- In diesem Szenario ASP-Code schreibt den Inhalt der **Recordset** ADTG-Format an den Client. Die [Microsoft Cursor Service für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) können diese Daten zum Erstellen von einem nicht verbundenen **Recordset**.  
+## <a name="scenario-4"></a>Szenario 4  
+ In diesem Szenario schreibt der ASP-Code den Inhalt des **Recordsets** im ADTG-Format in den Client. Der [Microsoft-Cursor Dienst für OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) kann diese Daten verwenden, um ein nicht verbundenes **Recordset**zu erstellen.  
   
- Eine neue Eigenschaft in der RDS [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), verweist auf die ASP-Seite, die generiert die **Recordset**. Dies bedeutet, dass eine **Recordset** -Objekt abgerufen werden kann ohne RDS mit serverseitigen [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) Objekt oder der Benutzer ein Geschäftsobjekt schreiben. Dies vereinfacht erheblich das RDS-Programmiermodell.  
+ Eine neue Eigenschaft in der RDS- [DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md), [URL](../../../ado/reference/rds-api/url-property-rds.md), verweist auf die ASP-Seite, die das **Recordset**generiert. Dies bedeutet, dass ein **Recordset** -Objekt ohne RDS abgerufen werden kann, indem das serverseitige [DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt verwendet wird, oder der Benutzer, der ein Geschäftsobjekt schreibt. Dadurch wird das RDS-Programmiermodell erheblich vereinfacht.  
   
- Serverseitiger Code, mit dem Namen https://server/directory/recordset.asp:  
+ Server seitiger Code, benannthttps://server/directory/recordset.asp:  
   
 ```  
 <%  
@@ -118,7 +118,7 @@ rs.Save response, adPersistADTG
 %>  
 ```  
   
- Der clientseitige Code:  
+ Client seitiger Code:  
   
 ```  
 <HTML>  
@@ -147,7 +147,7 @@ rs.Save response, adPersistADTG
 </HTML>  
 ```  
   
- Entwickler haben auch die Möglichkeit der Verwendung einer **Recordset** Objekt auf dem Client:  
+ Entwickler haben auch die Möglichkeit, ein **Recordset** -Objekt auf dem Client zu verwenden:  
   
 ```  
 ...  
@@ -160,7 +160,7 @@ function GetRs()
 ...  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Open Sie-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
+ [Record-Objekt (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Save-Methode](../../../ado/reference/ado-api/save-method.md)

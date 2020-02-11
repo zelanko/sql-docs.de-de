@@ -15,24 +15,24 @@ ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926281"
 ---
-# <a name="adding-records-using-addnew-method"></a>Hinzufügen von Datensätzen mit der AddNew-Methode
-Dies ist die grundlegende Syntax von der **AddNew** Methode:
+# <a name="adding-records-using-addnew-method"></a>Hinzufügen von Datensätzen mithilfe der AddNew-Methode
+Dies ist die grundlegende Syntax der **AddNew** -Methode:
 
  *Recordset*. AddNew *FieldList*, *Werte*
 
- Die *FieldList* und *Werte* Argumente sind optional. *Feldliste* ist entweder ein einzelner Name oder ein Array von Namen oder die Ordnungspositionen der Felder im neuen Datensatz.
+ Die Argumente *FieldList* und *Values* sind optional. *FieldList* ist entweder ein einzelner Name oder ein Array von Namen oder Ordinalpositionen der Felder im neuen Datensatz.
 
- Die *Werte* Argument ist entweder einen einzelnen Wert oder ein Array von Werten für die Felder im neuen Datensatz.
+ Das *Values* -Argument ist entweder ein einzelner Wert oder ein Array von Werten für die Felder im neuen Datensatz.
 
- In der Regel, wenn Sie beabsichtigen, einen einzelnen Datensatz hinzuzufügen, rufen Sie die **AddNew** -Methode ohne Argumente. Rufen Sie insbesondere **AddNew**; Set der **Wert** jedes Feld im neuen Datensatz; und rufen dann **Update** oder **UpdateBatch**, oder beide. Sie können sicherstellen, dass Ihre **Recordset** unterstützt das Hinzufügen von neuen Datensätzen mithilfe der **unterstützt** Eigenschaft mit dem die **AdAddNew** Enumerationskonstante.
+ Wenn Sie einen einzelnen Datensatz hinzufügen möchten, wird in der Regel die **AddNew** -Methode ohne Argumente aufgerufen. Insbesondere wird **AddNew**; aufgerufen. Legen Sie den **Wert** jedes Felds im neuen Datensatz fest. und dann " **Update** " oder " **UpdateBatch**" oder beides aufrufen. Sie können sicherstellen, dass Ihr **Recordset** das Hinzufügen von neuen Datensätzen unterstützt, indem Sie die **unterstützte** Eigenschaft mit der **adAddNew** -Enumerationskonstante
 
- Der folgende Code verwendet diese Technik des Beispiels ein neues Versandunternehmen hinzuzufügende **Recordset**. Den Wert des Felds Firmen-Nr wird automatisch von SQL Server bereitgestellt. Aus diesem Grund versucht der Code nicht, einen Feldwert für die neuen Datensätze angeben.
+ Der folgende Code verwendet dieses Verfahren zum Hinzufügen eines neuen Shippers zum **Recordset**-Beispiel. SQL Server stellt den Wert für das ShipperID-Feld automatisch bereit. Aus diesem Grund versucht der Code nicht, einen Feldwert für die neuen Datensätze bereitzustellen.
 
 ```
 'BeginAddNew1.1
@@ -47,5 +47,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Hinweise
- Da dieser Code verwendet, das einem nicht verbundenen **Recordset** mit einem clientseitigen Cursor im Batchmodus, verbinden Sie die **Recordset** an die Datenquelle mit einem neuen **Verbindung** Objekt, bevor Sie aufrufen können, die **UpdateBatch** Methode, um Änderungen an der Datenbank veröffentlichen. Dies erfolgt einfach mithilfe der neuen Funktion **GetNewConnection**.
+## <a name="remarks"></a>Bemerkungen
+ Da in diesem Code ein nicht verbundenes **Recordset** mit einem Client seitigen Cursor im Batch Modus verwendet wird, müssen Sie das **Recordset** erneut mit der Datenquelle mit einem neuen **Verbindungs** Objekt verbinden, bevor Sie die **UpdateBatch** -Methode aufrufen können, um Änderungen an der Datenbank zu veröffentlichen. Dies kann problemlos mithilfe der neuen Funktion **getNewConnection**erreicht werden.

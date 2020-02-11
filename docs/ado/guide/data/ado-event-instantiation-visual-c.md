@@ -1,5 +1,5 @@
 ---
-title: 'ADO-Ereignisinstanziierung: Visual C++ | Microsoft-Dokumentation'
+title: 'ADO-Ereignis Instanziierung: Visual C++ | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,16 +13,16 @@ ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926057"
 ---
 # <a name="ado-event-instantiation-visual-c"></a>ADO-Ereignisinstanziierung: Visual C++
-Dies ist eine schematische Darstellung Beschreibung der ADO-Ereignisse in Microsoft® Visual C++® zu instanziieren. Finden Sie unter [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) für eine vollständige Beschreibung.  
+Dies ist eine Schema bezogene Beschreibung, wie ADO-Ereignisse in Microsoft® Visual C++® instanziiert werden. Eine umfassende Beschreibung finden Sie unter Beispiel für das [ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) .  
   
- Erstellen von abgeleitete Klassen der **ConnectionEventsVt** und **RecordsetEventsVt** Schnittstellen, die in der Datei adoint.h gefunden.  
+ Erstellen von Klassen, die von den Schnittstellen " **ConnectionEventsVt** " und " **recordmenteventsvt** " in der Datei "adoint. h" abgeleitet wurden  
   
 ```  
 // BeginEventExampleVC01  
@@ -49,7 +49,7 @@ class CRstEvent : public RecordsetEventsVt
 // EndEventExampleVC01  
 ```  
   
- Implementieren Sie der Ereignishandler-Methoden in beide Klassen. Es ist ausreichend, dass jede Methode lediglich ein S_OK HRESULT zurück. Wenn Sie jedoch, diese bekannten, dass Ihre Ereignishandler sind verfügbar, sie werden standardmäßig fortlaufend aufgerufen werden. Stattdessen empfiehlt keine weitere Benachrichtigung nach dem ersten Mal durch Festlegen von Anforderung **AdStatus** zu **AdStatusUnwantedEvent**.  
+ Implementieren Sie jede Ereignishandlermethode in beiden Klassen. Es genügt, dass jede Methode nur ein HRESULT von S_OK zurückgibt. Wenn Sie jedoch wissen, dass Ihre Ereignishandler verfügbar sind, werden Sie standardmäßig fortlaufend aufgerufen. Stattdessen möchten Sie möglicherweise nach dem ersten Mal keine weitere Benachrichtigung anfordern, indem Sie **adStatus** auf **adStatusUnwantedEvent**festlegen.  
   
 ```  
 // BeginEventExampleVC02  
@@ -65,11 +65,11 @@ STDMETHODIMP CConnEvent::ConnectComplete(
 // EndEventExampleVC02  
 ```  
   
- Die Ereignisklassen, die von erben **IUnknown**, sodass Sie, auch implementieren müssen die **QueryInterface**, **"AddRef"** , und **Version** Methoden. Implementieren Sie außerdem-Klasse, Konstruktoren und Destruktoren. Wählen Sie die Visual C++-Tools, die mit denen Sie zur Vereinfachung der dieser Teil der Aufgabe am besten vertraut sind.  
+ Die Ereignis Klassen erben von **IUnknown**, sodass Sie auch die Methoden **QueryInterface**, **adressf**und **Release** implementieren müssen. Implementieren Sie auch Klassenkonstruktoren und Dekonstruktoren. Wählen Sie die Visual C++ Tools, mit denen Sie diesen Teil der Aufgabe am bequemsten können.  
   
- Stellen sie mit, dass Ihre Ereignishandler stehen hierzu **QueryInterface** auf die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) von Objekten für die  **IConnectionPointContainer** und **IConnectionPoint** Schnittstellen. Geben Sie dann **IConnectionPoint:: Advise** für jede Klasse.  
+ Legen Sie fest, dass Ihre Ereignishandler verfügbar sind, indem **Sie QueryInterface** für das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) und [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekte für die Schnittstellen **IConnectionPointContainer** und **IConnectionPoint** ausgeben. Geben Sie dann **IConnectionPoint:: Rat** für jede Klasse aus.  
   
- Nehmen wir beispielsweise an, die Sie verwenden eine boolesche Funktion, die zurückgibt **"true"** Wenn wird, erfolgreich informiert ein **Recordset** Objekt, mit der Sie Ereignishandler verfügbar sind.  
+ Nehmen Sie beispielsweise an, dass Sie eine boolesche Funktion verwenden, die **true** zurückgibt, wenn Sie ein **Recordset** -Objekt erfolgreich informiert, dass Sie über Ereignishandler verfügen.  
   
 ```  
 // BeginEventExampleVC03  
@@ -98,9 +98,9 @@ return TRUE;
 // EndEventExampleVC03  
 ```  
   
- An diesem Punkt Ereignisse für die **RecordsetEvent** Familie aktiviert sind, und Ihre Methoden werden aufgerufen, als **Recordset** Ereignisse auftreten.  
+ An diesem Punkt sind Ereignisse für die **RecordsetEvent** -Familie aktiviert, und ihre Methoden werden aufgerufen, wenn **recordsetereignisse** auftreten.  
   
- Später, wenn Sie Ihre Ereignishandler nicht zur Verfügung stellen möchten, rufen Sie erneut den Verbindungspunkt und Ausstellen der **IConnectionPoint:: Unadvise** Methode.  
+ Wenn Sie die Ereignishandler später nicht mehr verfügbar machen möchten, können Sie den Verbindungspunkt wiederholen und die **IConnectionPoint:: unempfehlung** -Methode ausgeben.  
   
 ```  
 // BeginEventExampleVC04  
@@ -112,9 +112,9 @@ if (FAILED(hr)) return FALSE;
 // EndEventExampleVC04  
 ```  
   
- Sie müssen Schnittstellen freigeben und zerstören Klassenobjekte nach Bedarf.  
+ Sie müssen Schnittstellen freigeben und Klassen Objekte nach Bedarf zerstören.  
   
- Der folgende Code zeigt ein vollständiges Beispiel einer **Recordset** Ereignissenkenklasse.  
+ Der folgende Code zeigt ein umfassendes Beispiel für eine **Recordset** -Ereignis Senke-Klasse.  
   
 ```  
 // BeginEventExampleVC05.cpp  

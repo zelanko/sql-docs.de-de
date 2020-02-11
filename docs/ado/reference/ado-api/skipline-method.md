@@ -17,14 +17,14 @@ ms.assetid: 0abc00fe-ee09-4c8e-b1f2-48ee9c5f3329
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c8439f7d8fabc5675e43fca5bba006b22574b992
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931044"
 ---
 # <a name="skipline-method"></a>SkipLine-Methode
-Überspringt eine gesamte Zeile, beim Lesen einer Textdatei [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
+Überspringt beim Lesen eines [Textstreams](../../../ado/reference/ado-api/stream-object-ado.md)eine gesamte Zeile.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,10 +33,10 @@ ms.locfileid: "67931044"
 Stream.SkipLine  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Alle Zeichen bis zur und einschließlich der nächsten Linie wird als Trennzeichen werden übersprungen. In der Standardeinstellung die [LineSeparator](../../../ado/reference/ado-api/lineseparator-property-ado.md) ist **AdCRLF**. Wenn Sie versuchen, überspringen [EOS](../../../ado/reference/ado-api/eos-property.md), die aktuelle Position bleibt **EOS**.  
+## <a name="remarks"></a>Bemerkungen  
+ Alle Zeichen bis einschließlich des Trenn Zeichens für die nächste Zeile werden übersprungen. Standardmäßig ist der [lineseparser](../../../ado/reference/ado-api/lineseparator-property-ado.md) **adCRLF**. Wenn Sie versuchen, das Überschreiten von [EOS](../../../ado/reference/ado-api/eos-property.md)zu überspringen, bleibt die aktuelle Position bei **EOS**erhalten.  
   
- Die **SkipLine** Methode wird verwendet, mit dem Text-Streams ([Typ](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **AdTypeText**).  
+ Die **SkipLine** -Methode wird mit Textstreams verwendet ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) ist **adtypetext**).  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
