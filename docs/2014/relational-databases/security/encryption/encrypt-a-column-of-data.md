@@ -14,10 +14,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: bd0b5824abfc36923909ce37866b221c0bc830d5
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957203"
 ---
 # <a name="encrypt-a-column-of-data"></a>Verschlüsseln einer Datenspalte
@@ -25,17 +25,17 @@ ms.locfileid: "74957203"
   
  **In diesem Thema**  
   
--   **Bevor Sie beginnen:**  
+-   **Vorbereitungen:**  
   
-     [Sicherung](#Security)  
+     [Sicherheit](#Security)  
   
 -   [So verschlüsseln Sie eine Datenspalte mithilfe von Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Die folgenden Berechtigungen sind notwendig, um die Schritte unten auszuführen:  
   
 -   CONTROL-Berechtigung für die Datenbank.  
@@ -46,7 +46,7 @@ ms.locfileid: "74957203"
   
 -   Einige Berechtigungen für den Schlüssel und die VIEW DEFINITION-Berechtigung dürfen nicht verweigert worden sein.  
   
-##  <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-encrypt-a-column-of-data-using-a-simple-symmetric-encryption"></a>So verschlüsseln Sie eine Datenspalte mithilfe einer einfachen symmetrischen Verschlüsselung  
   
@@ -174,14 +174,14 @@ ms.locfileid: "74957203"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie unter  
   
--   [Erstellen eines Zertifikats &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
+-   [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)  
   
--   [Erstellen eines symmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
+-   [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)  
   
--   [ALTER TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
+-   [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)  
   
--   [Öffnen Sie den symmetrischen Schlüssel &#40;Transact-SQL-&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
+-   [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-symmetric-key-transact-sql)  
   
   

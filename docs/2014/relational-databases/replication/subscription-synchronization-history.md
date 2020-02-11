@@ -1,5 +1,5 @@
 ---
-title: Abonnement, Synchronisierungsverlauf (Mergeabonnement, SqlServer 2005 und höher) | Microsoft-Dokumentation
+title: Abonnement, Synchronisierungs Verlauf (Mergeabonnement, SQL Server 2005 und höher) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62629712"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Abonnement, Synchronisierungsverlauf (Mergeabonnement, SQL Server 2005 und höher)
   Die Registerkarte **Synchronisierungsverlauf** zeigt detaillierte Informationen zum Merge-Agent an, u. a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Wählen Sie im Menü **Sicht** aus, welche Sitzungen des Merge-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Merge-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **In der ausgewählten Sitzung verarbeitete Artikel**angezeigt.  
   
- **Sicht**  
+ **Ansicht**  
  Wählen Sie aus, welche Sitzungen des Merge-Agents angezeigt werden.  
   
  **Status**  
@@ -46,7 +46,7 @@ ms.locfileid: "62629712"
  **Beendigungszeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitspanne, für die der Merge-Agent in einer Sitzung ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Hochgeladene Befehle**  
@@ -74,7 +74,7 @@ ms.locfileid: "62629712"
  **% von Gesamt**  
  Der prozentuale Anteil, den die einzelnen Phasen in der ausgewählten Sitzung von der Gesamtverarbeitungszeit beanspruchen.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitdauer, die für die einzelnen Verarbeitungsphasen beansprucht wird. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Merge-Agents oder die Gesamtzeit des zuvor ausgeführten Merge-Agents an.  
   
  **Inserts**  
@@ -95,7 +95,7 @@ ms.locfileid: "62629712"
  **Letzte Meldung der ausgewählten Sitzung**  
  In diesem Textbereich wird die letzte Meldung in der ausgewählten Sitzung angezeigt. Wenn ein Fehler aufgetreten ist, werden detaillierte Informationen zu dem Fehler und der Befehl angezeigt, der zum Fehlerzeitpunkt auszuführen versucht wurde. Er enthält außerdem Links zu weiteren Informationen, die sich auf den Fehler beziehen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
  [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)   

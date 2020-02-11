@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a092a7228f5ec70247e38cf39073d946de0e56ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761639"
 ---
-# <a name="mssqlserver9955"></a>MSSQLSERVER_9955
+# <a name="mssqlserver_9955"></a>MSSQLSERVER_9955
     
 ## <a name="details"></a>Details  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62761639"
 ## <a name="user-action"></a>Benutzeraktion  
  Um diesen Fehler zu beheben, müssen Sie alle laufenden Prozesse des Volltextfilterdaemons beenden und ggf. das Hostkonto des Volltextfilterdaemons mit dem SQL Server-Konfigurations-Manager neu konfigurieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md)   
  [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon](../search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)   
  [Volltextsuche](../search/full-text-search.md)  

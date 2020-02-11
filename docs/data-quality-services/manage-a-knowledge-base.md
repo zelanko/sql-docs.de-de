@@ -10,10 +10,10 @@ ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 1fda81ac39233435dbcd0546e452878cc6767b33
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247151"
 ---
 # <a name="manage-a-knowledge-base"></a>Verwalten einer Wissensdatenbank
@@ -22,14 +22,14 @@ ms.locfileid: "75247151"
 
   In diesem Thema wird beschrieben, wie Verwaltungsfunktionen für eine Wissensdatenbank in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) ausgeführt werden. Sie können eine Wissensdatenbank löschen, entsperren, umbenennen, vorgenommene Anpassungen verwerfen und die Eigenschaften der Wissensdatenbank anzeigen.  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Um eine Wissensdatenbank zu verwalten, muss die Wissensdatenbank bereits erstellt und entweder veröffentlicht (wenn sie eine andere Person erstellt hat) oder geschlossen (wenn Sie sie erstellt haben) worden sein.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle "dqs_kb_editor" oder "dqs_administrator" in der DQS_MAIN-Datenbank verfügen, um eine Wissensdatenbank zu öffnen.  
   
 ##  <a name="Manage"></a>Verwalten einer Wissensdatenbank  
@@ -54,7 +54,7 @@ ms.locfileid: "75247151"
   
     6.  **Eigenschaften**: Klicken Sie hierauf, um die Eigenschaften für die Datenbank in einer schreibgeschützten Anzeige anzuzeigen.  
   
-        1.  **Quell-Wissensdatenbank**: die Wissensdatenbank, auf der diese Datenbank basiert. Dies ist optional.  
+        1.  **Quell-Wissensdatenbank**: die Wissensdatenbank, auf der diese Datenbank basiert. Diese Eingabe ist optional.  
   
         2.  **State**: gibt an, ob die Wissensdatenbank **in Arbeit** ist und ob Sie sich in einer bestimmten Wissens Verwaltungs Aktivität befindet, die beim letzten schließen festgelegt wurde. Die Wissensdatenbank kann den Status **In Arbeit**haben – in dem Fall ist sie in einer Wissensverwaltungssitzung, jedoch nicht in einer bestimmten Aktivität geöffnet -, oder sie kann sich im Status **In Arbeit** sowie in einer Wissensverwaltungsaktivität befinden. In dem Fall ist die Wissensdatenbank in einer Wissensverwaltungssitzung und in einer bestimmten Aktivität geöffnet.  
   

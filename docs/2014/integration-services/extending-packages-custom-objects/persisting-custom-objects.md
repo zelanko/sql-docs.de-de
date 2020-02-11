@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768526"
 ---
 # <a name="persisting-custom-objects"></a>Beibehalten von benutzerdefinierten Objekten
@@ -28,7 +28,7 @@ ms.locfileid: "62768526"
 >  Beim Implementieren von benutzerdefinierter Persistenz müssen Sie alle Eigenschaften des Objekts dauerhaft machen, einschließlich der beiden übernommenen Eigenschaften und der hinzugefügten benutzerdefinierten Eigenschaften.  
   
 ## <a name="example"></a>Beispiel  
- Obwohl das Sql Server Custom Connection Manager-Beispiel keine benutzerdefinierten Persistenz für die drei Eigenschaften des Typs erfordert `string`, der folgende Code zeigt ein Beispiel des benutzerdefinierten Codes, die erforderlich, um die Verbindung beibehalten Manager und die zugehörige Eigenschaften. Die Klasse, die diesen Code enthält, muss die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle implementieren.  
+ Obwohl das SQL Server Custom Connection Manager-Beispiel keine benutzerdefinierte Persistenz für die drei Eigenschaften des `string`Typs erfordert, zeigt der folgende Code ein Beispiel für den benutzerdefinierten Code, der erforderlich wäre, um den Verbindungs-Manager und dessen Eigenschaften beizubehalten. Die Klasse, die diesen Code enthält, muss die <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentPersist>-Schnittstelle implementieren.  
   
 ```vb  
 Private Const PERSIST_ELEMENT As String = "SqlConnectionManager"  
@@ -152,9 +152,9 @@ public void SaveToXML(System.Xml.XmlDocument doc,
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln benutzerdefinierter Objekte für Integration Services](developing-custom-objects-for-integration-services.md)   
  [Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten](building-deploying-and-debugging-custom-objects.md)  
   

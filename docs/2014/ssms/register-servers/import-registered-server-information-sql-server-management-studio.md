@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.openlocfilehash: 32ef669c238c52ec5e5e20804c896b4364c8bc85
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75241352"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importieren von Informationen zum registrierten Server (SQL Server Management Studio)
@@ -39,10 +39,10 @@ ms.locfileid: "75241352"
   
 3.  Wählen Sie im Dialogfeld **Registrierte Server importieren** die zu importierende Datei mit den registrierten Servern aus, und klicken Sie dann auf **OK**.  
   
-     **Importieren einer Datei**  
-     Geben Sie den Namen der Importdatei in das Textfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um eine Importdatei auf dem Clientcomputer auszuwählen. Wenn Sie eine vorhandene Datei auswählen, werden die Daten der registrierten Server an die Datei angehängt. Die Importdatei kann nur eine zuvor exportierte Datei mit registrierten Servern sein. Dateien mit registrierten Servern haben die Dateierweiterung .regsrvr.  
+     **Importdatei**  
+     Geben Sie den Namen der Importdatei in das Textfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um eine Importdatei auf dem Clientcomputer auszuwählen. Wenn Sie eine vorhandene Datei auswählen, werden die Daten der registrierten Server an die Datei angehängt. Die Importdatei kann nur eine zuvor exportierte Datei mit registrierten Servern sein. Dateien mit registrierten Servern haben die Dateierweiterung .regsrvr.  
   
-     **Wählen Sie die Server Gruppe für den Import aus.**  
+     **Wählen Sie die Servergruppe für den Import aus**  
      Wählen Sie einen Stammknoten oder eine bestimmte Servergruppe aus, in den/die die Einträge zu den registrierten Servern in der Datei importiert werden. Sie können alle registrierten Server, die registrierten Server in einer bestimmten Servergruppe oder einzelne registrierte Server in die Exportdatei importieren. Die Importfunktion ist rekursiv. Wenn z. B. Servergruppe A die Servergruppe B enthält und Servergruppe B die Servergruppen C und D enthält, werden beim Import von Servergruppe A alle Einträge in A, B, C und D exportiert.  
   
      In der Servergruppe werden nur die Servergruppen der Baumstruktur des aktuellen registrierten Servers angezeigt.  
@@ -53,6 +53,6 @@ ms.locfileid: "75241352"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ändern Sie die Registrierungs &#40;eines Servers SQL Server Management Studio&#41;](change-a-server-s-registration-sql-server-management-studio.md) die [Informationen zum registrierten Server &#40;SQL Server Management Studio exportieren&#41;](export-registered-server-information-sql-server-management-studio.md)   
- [Erstellen Sie einen neuen registrierten Server &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
+ [Erstellen eines neuen registrierten Servers &#40;SQL Server Management Studio&#41;](create-a-new-registered-server-sql-server-management-studio.md)  
   
   

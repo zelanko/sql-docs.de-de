@@ -1,5 +1,5 @@
 ---
-title: Abrufen von Blobdaten mithilfe von IRow | Microsoft-Dokumentation
+title: Abrufen von BLOB-Daten mithilfe von IRow | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06ca087cdb1e2009faa19ff8fb86f9ab4982fddd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62752967"
 ---
 # <a name="fetching-blob-data-using-irow"></a>Abrufen von BLOB-Daten mit IRow
-  Eine BLOB-Spalte in einem kann abgerufen werden, mithilfe von **von IRow:: GetColumns**, oder **IRow:: Open** und **ISequentialStream**.  
+  Eine BLOB-Spalte in einem Row-Objekt kann mit **IRow:: GetColumns**oder **IRow:: Open** und **ISequentialStream**abgerufen werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62752967"
   
 -   [Abrufen von BLOB-Daten mithilfe von 'IRow::Open' und 'ISequentialStream'](../../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abrufen einer einzelnen Zeile mit IRow](../../relational-databases/native-client-ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

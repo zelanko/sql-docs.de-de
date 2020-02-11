@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ccc7b96f4275b09b90b8120813b93f860ec07b9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871058"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Anzeigen oder Ändern des Kompatibilitätsgrads einer Datenbank
@@ -43,7 +43,7 @@ ms.locfileid: "62871058"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>So zeigen Sie den Kompatibilitätsgrad einer Datenbank an oder ändern ihn  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62871058"
   
      Der aktuelle Kompatibilitätsgrad wird im Listenfeld **Kompatibilitätsgrad** angezeigt.  
   
-5.  Um den Kompatibilitätsgrad zu ändern, wählen Sie eine andere Option aus der Liste aus. Zur Auswahl stehen **SQL Server 2008 (100)** , **SQL Server 2012 (110)** , oder **SQL Server 2014 (120)** .  
+5.  Um den Kompatibilitätsgrad zu ändern, wählen Sie eine andere Option aus der Liste aus. Zur Auswahl stehen **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, oder **SQL Server 2014 (120)**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
@@ -86,7 +86,7 @@ GO
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel ändert sich den Kompatibilitätsgrad der [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)].  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. In diesem Beispiel wird der Kompatibilitäts Grad [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)]von geändert.  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012  

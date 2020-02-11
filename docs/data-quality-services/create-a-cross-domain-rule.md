@@ -13,10 +13,10 @@ ms.assetid: 0f3f5ba4-cc47-4d66-866e-371a042d1f21
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 070ef5db87ac28b59f01e3927f876f9c757e6caa
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245473"
 ---
 # <a name="create-a-cross-domain-rule"></a>Erstellen einer domänenübergreifenden Regel
@@ -33,14 +33,14 @@ ms.locfileid: "75245473"
   
  Domänenübergreifende Regeln werden nach allen einfachen Regeln berücksichtigt, die sich auf nur eine einzelne Domäne auswirken. Nur wenn ein Wert einzelne Domänenregeln besteht (falls vorhanden), wird die domänenübergreifende Regel angewendet. Die Verbunddomäne und die einzelnen Domänen, für die eine Regel ausgeführt wird, müssen definiert werden, bevor die Regel ausgeführt werden kann.  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Um eine domänenübergreifende Regel zu erstellen, müssen Sie eine Verbunddomäne erstellt und geöffnet haben.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine domänenübergreifende Regel zu erstellen.  
   
 ##  <a name="Create"></a>Erstellen von Domänen übergreifenden Regeln  

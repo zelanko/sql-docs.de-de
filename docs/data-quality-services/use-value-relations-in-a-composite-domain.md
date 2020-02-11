@@ -12,10 +12,10 @@ ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 90937a98bb409c6f17bc542183cd024f408d71f2
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257762"
 ---
 # <a name="use-value-relations-in-a-composite-domain"></a>Verwenden von Wertbeziehungen in einer Verbunddomäne
@@ -24,14 +24,14 @@ ms.locfileid: "75257762"
 
   In diesem Thema wird beschrieben, wie Wertkombinationen angezeigt werden, die während des Wissensermittlungsprozesses in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) für die Verbunddomäne gefunden wurden. Auf dieser Seite wird angezeigt, wie oft die Wertkombinationen vorkommen. Die Wertverwaltung wird nicht für Verbunddomänen unterstützt. Deshalb können Sie für die Werte keine Vorgänge ausführen.  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Um Wertbeziehungen anzuzeigen, müssen Sie eine Verbunddomäne erstellt und geöffnet haben.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um Wertbeziehungen in einer Verbunddomäne anzuzeigen.  
   
 ##  <a name="Use"></a>Anzeigen von Wert Beziehungen  

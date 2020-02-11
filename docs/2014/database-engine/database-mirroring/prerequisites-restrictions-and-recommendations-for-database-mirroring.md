@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754601"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Voraussetzungen, Einschränkungen und Empfehlungen für die Datenbankspiegelung
@@ -37,21 +37,21 @@ ms.locfileid: "62754601"
   
 
   
-##  <a name="DbmSupport"></a> Unterstützung der Datenbankspiegelung  
+##  <a name="DbmSupport"></a>Unterstützung für Daten Bank Spiegelung  
  Informationen zur unterstützten Datenbankspiegelung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] finden Sie unter [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Beachten Sie, dass die Datenbankspiegelung mit jedem unterstützten Datenbank-Kompatibilitätsgrad funktioniert. Informationen zu den unterstützten Kompatibilitätsgraden finden Sie unter [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
   
 
   
-##  <a name="Prerequisites"></a> Erforderliche Komponenten  
+##  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Damit eine Spiegelungssitzung eingerichtet werden kann, müssen die Partner und ggf. der Zeuge unter derselben Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden.  
   
 -   Auf beiden Partnern, also Prinzipalserver und Spiegelserver, muss dieselbe Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Der Zeuge (falls vorhanden) kann auf einer beliebige Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, die die Datenbankspiegelung unterstützt.  
   
     > [!NOTE]  
-    >  Sie können Serverinstanzen, die Partner in einer Spiegelungssitzung sind, auf eine neuere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktualisieren. Weitere Informationen finden Sie unter [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+    >  Sie können Serverinstanzen, die Partner in einer Spiegelungssitzung sind, auf eine neuere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktualisieren. Weitere Informationen finden Sie unter [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
 -   Für die Datenbank muss das vollständige Wiederherstellungsmodell verwendet werden. Die Datenbankspiegelung wird vom einfachen und vom massenprotokollierten Wiederherstellungsmodell nicht unterstützt. Daher werden Massenvorgänge immer vollständig für eine gespiegelte Datenbank protokolliert. Weitere Informationen zu Wiederherstellungsmodellen finden Sie unter [Wiederherstellungsmodelle &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62754601"
   
 
   
-##  <a name="RecommendationsForPartners"></a> Empfehlungen für das Konfigurieren von Partnerservern  
+##  <a name="RecommendationsForPartners"></a>Empfehlungen zum Konfigurieren von Partner Servern  
   
 -   Die Partner sollten auf vergleichbaren Systemen ausgeführt werden, die identische Arbeitsauslastungen bewältigen können.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62754601"
   
 
   
-##  <a name="RecommendationsForDeploying"></a> Empfehlungen für das Bereitstellen der Datenbankspiegelung  
+##  <a name="RecommendationsForDeploying"></a>Empfehlungen für die Bereitstellung der Daten Bank  
  Eine optimale Leistung bei der Datenbankspiegelung wird über den asynchronen Betrieb erzielt. Bei einer Spiegelungssitzung, die im synchronen Betrieb ausgeführt wird, treten Leistungsverzögerungen auf, wenn große Mengen an Transaktionsprotokolldaten generiert werden.  
   
  In Testumgebungen ist es sinnvoll, alle Betriebsmodi zu überprüfen, um das Verhalten der Datenbankspiegelung beurteilen zu können. Bevor Sie jedoch die Spiegelung in einer Produktionsumgebung bereitstellen, müssen Sie sicherstellen, dass Sie wissen, wie das Netzwerk in der Realität funktioniert.  
@@ -123,10 +123,10 @@ ms.locfileid: "62754601"
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Transport Sicherheit für Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Problembehandlung für die Datenbankspiegelungskonfiguration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   

@@ -17,10 +17,10 @@ ms.author: genemi
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6fe05c49f44bc0e210687b63e0eb8878b479a07f
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257261"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram-Beispiele (SQLXML 4.0)
@@ -143,7 +143,7 @@ ms.locfileid: "75257261"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B: Einfügen eines Datensatzes mit einem DiffGram  
+## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. Einfügen eines Datensatzes mit einem DiffGram  
  In diesem Beispiel fügt das DiffGram einen Datensatz in die Tabellen Cust und Ord ein.  
   
 ```  
@@ -210,7 +210,7 @@ ms.locfileid: "75257261"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>c. Aktualisieren eines vorhandenen Datensatzes mit einem DiffGram  
+## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. Aktualisieren eines vorhandenen Datensatzes mit einem DiffGram  
  In diesem Beispiel aktualisiert das DiffGram Kundeninformationen (CompanyName und ContactName) für den Kunden ALFKI.  
   
 ```  
@@ -282,7 +282,7 @@ ms.locfileid: "75257261"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. Einfügen, Aktualisieren und Löschen von Datensätzen mit einem DiffGram  
+## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D: Einfügen, Aktualisieren und Löschen von Datensätzen mit einem DiffGram  
  In diesem Beispiel wird ein relativ komplexes DiffGram verwendet, um Einfüge-, Update- und Löschvorgänge durchzuführen.  
   
 ```  

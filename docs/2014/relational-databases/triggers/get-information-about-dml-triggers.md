@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62698747"
 ---
 # <a name="get-information-about-dml-triggers"></a>Abrufen von Informationen zu DML-Triggern
@@ -53,7 +53,7 @@ ms.locfileid: "62698747"
  **sys.sql_expression_dependencies**  
  Erfordert die Berechtigung VIEW DEFINITION für die Datenbank und die Berechtigung SELECT für **sys.sql_expression_dependencies** für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle **db_owner** gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>So zeigen Sie die Definition eines DML-Triggers an  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62698747"
   
 3.  Erweitern Sie **Trigger**, klicken Sie mit der rechten Maustaste auf den gewünschten Trigger, und klicken Sie anschließend auf **Abhängigkeiten anzeigen**.  
   
-4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, die von \<DML-Triggernamen> abhängig sind** im Fenster **Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
+4.  Wählen Sie zum Anzeigen der Objekte, die vom DML-Trigger abhängig sind, **Objekte, die von** DML-Triggernamen> abhängig sind **im Fenster \<Objektabhängigkeiten**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt.  
   
      Wählen Sie zum Anzeigen der Objekte, von denen die DML abhängt **Objekte, von denen der \< DML-Triggername> abhängt**. Die Objekte werden im Bereich **Abhängigkeiten** angezeigt. Erweitern Sie jeden Knoten, um alle Objekte anzuzeigen.  
   
@@ -202,7 +202,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-trigger-transact-sql)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/enable-trigger-transact-sql)   

@@ -13,40 +13,40 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 479cc0e650c598e0a253caca796b854dc4eb69cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892668"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
-  Verwenden der **auswählen von Quelltabellen und-Sichten** Seite Geben Sie an, die Tabellen und Sichten aus der Datenquelle an das Ziel kopiert werden.  
+  Verwenden Sie die Seite **Quell Tabellen und-Sichten auswählen** , um die Tabellen und Sichten anzugeben, die aus der Datenquelle in das Ziel kopiert werden sollen.  
   
 > [!NOTE]  
->  Sie müssen nicht alle Spalten in einer Tabelle kopieren, wenn Sie die Option zum Kopieren von Tabellen auswählen. Klicken Sie auf Bearbeiten Zuordnungen angezeigt, nach dem Auswählen einer Zieltabelle, die **Spaltenzuordnungen** Dialogfeld. Wählen Sie  **\<ignorieren >** in die **Ziel** Spalte die **Spaltenzuordnungen** im Dialogfeld für Spalten, die übersprungen werden sollen.  
+>  Sie müssen nicht alle Spalten in einer Tabelle kopieren, wenn Sie die Option zum Kopieren von Tabellen auswählen. Nachdem Sie eine Ziel Tabelle ausgewählt haben, klicken Sie auf Zuordnungen bearbeiten, um das Dialogfeld **Spalten** Zuordnungen anzuzeigen. Wählen Sie **** **** ** \<** für Spalten, die Sie überspringen möchten, in der Spalte Ziel des Dialog Felds Spalten Zuordnungen die Option>ignorieren aus.  
   
- Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
+ Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="tables-and-views-list"></a>Liste 'Tabellen und Sichten'  
- **Quelle**  
+ **`Source`**  
  Wählen Sie mithilfe der Kontrollkästchen aus der Liste der verfügbaren Tabellen und Sichten die in das Ziel zu kopierenden Elemente aus. Wenn Sie eine Quelltabelle oder -sicht auswählen und keine weitere Aktion ausführen, werden das Schema und die Daten aus der Quelle ohne Änderungen kopiert.  
   
  **Ziel**  
  Wählen Sie aus der Liste für jede Quelltabelle eine Zieltabelle aus.  
   
 > [!NOTE]  
->  Wenn Sie zu diesem Zeitpunkt den Assistenten anhalten, um eine Zieltabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder eines anderen Tools zu erstellen, ist die neue Tabelle in der Liste verfügbarer Zieltabellen nicht sofort sichtbar. Um die Liste der Zieltabellen zu aktualisieren, zwei Seiten zurück auf die **wählen Sie ein Ziel** Seite, wählen Sie die Zieldatenbank erneut aus, und dann wieder zur der **auswählen von Quelltabellen und-Sichten**.  
+>  Wenn Sie zu diesem Zeitpunkt den Assistenten anhalten, um eine Zieltabelle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder eines anderen Tools zu erstellen, ist die neue Tabelle in der Liste verfügbarer Zieltabellen nicht sofort sichtbar. Um die Liste der Ziel Tabellen zu aktualisieren, führen Sie zwei Seiten auf die Seite **Ziel auswählen** zurück, wählen Sie die Zieldatenbank erneut aus, und führen Sie dann erneut die Option **Quell Tabellen und-Sichten auswählen**aus.  
   
 ### <a name="other-options"></a>Weitere Optionen  
  **Zuordnungen bearbeiten**  
- Verwenden der **Spaltenzuordnungen** Dialogfeld Zielspalten zum Empfangen der Quelldaten angibt. Sie können nur eine Teilmenge der Spalten kopieren, indem Sie auswählen \<ignorieren > in der **Ziel** Spalte die **Spaltenzuordnungen** im Dialogfeld für Spalten, die übersprungen werden sollen.  
+ Im Dialogfeld **Spalten** Zuordnungen können Sie Ziel Spalten angeben, um die Quelldaten zu empfangen. Sie können nur eine Teilmenge von Spalten kopieren, indem \<Sie im Dialogfeld **Spalten** Zuordnungen für Spalten, die Sie überspringen möchten, die Option> ignorieren in der Spalte **Ziel** auswählen.  
   
  **Vorschau**  
- Vorschau von Quelldaten in die **Vorschaudaten** Dialogfeld bestätigen es vor dem Importieren oder exportieren. Die **Vorschaudaten** im Dialogfeld angezeigt, bis zu 200 Zeilen mit Daten.  
+ Stellen Sie im Dialogfeld **Vorschau Daten** eine Vorschau der Quelldaten zur Überprüfung vor dem Importieren oder exportieren vor. Im Dialogfeld **Vorschau Daten** werden bis zu 200 Daten Zeilen angezeigt.  
   
  Nach der Vorschau der Daten können Sie die Optionen ändern, die Sie für die Datenquelle und das Ziel ausgewählt haben. Um diese Änderungen vorzunehmen, klicken Sie auf der Seite **Quelltabellen und -sichten auswählen** auf **Zurück** , um zu vorherigen Seiten zurückzukehren, auf denen Sie Ihre Auswahlen ändern können.  
   

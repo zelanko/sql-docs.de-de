@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2db2ac49f1caa455c8c05529437a385d360ecaf6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243001"
 ---
 # <a name="transact-sql-syntax-supported-by-intellisense"></a>Von IntelliSense unterstützte Transact-SQL-Syntax
@@ -47,17 +47,17 @@ ms.locfileid: "75243001"
   
 |Transact-SQL-Anweisung|Unterstützte Syntax|  
 |-----------------------------|----------------------|  
-|[Setze](/sql/t-sql/statements/insert-transact-sql)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|  
-|[Alisierungs](/sql/t-sql/queries/update-transact-sql)|Gesamte Syntax.|  
-|[Lösch](/sql/t-sql/statements/delete-transact-sql)|Gesamte Syntax.|  
-|[Deklariert@local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Gesamte Syntax.|  
-|[Set@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Gesamte Syntax.|  
-|[Auszuführen](/sql/t-sql/language-elements/execute-transact-sql)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|  
+|[INSERT](/sql/t-sql/statements/insert-transact-sql)|Die gesamte Syntax, mit Ausnahme der *execute_statement* -Klausel.|  
+|[UPDATE](/sql/t-sql/queries/update-transact-sql)|Gesamte Syntax.|  
+|[DELETE](/sql/t-sql/statements/delete-transact-sql)|Gesamte Syntax.|  
+|[DECLARE @local_variable](/sql/t-sql/language-elements/declare-local-variable-transact-sql)|Gesamte Syntax.|  
+|[SET@local_variable](/sql/t-sql/language-elements/set-local-variable-transact-sql)|Gesamte Syntax.|  
+|[EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)|Ausführung von benutzerdefinierten gespeicherten Prozeduren, gespeicherten Systemprozeduren, benutzerdefinierten Funktionen und Systemfunktionen.|  
 |[CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)|Gesamte Syntax.|  
-|[Ansicht erstellen](/sql/t-sql/statements/create-view-transact-sql)|Gesamte Syntax.|  
-|[Prozedur erstellen](/sql/t-sql/statements/create-procedure-transact-sql)|Gesamte Syntax mit den folgenden Ausnahmen:<br /><br /> Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
+|[CREATE VIEW](/sql/t-sql/statements/create-view-transact-sql)|Gesamte Syntax.|  
+|[CREATE PROCEDURE](/sql/t-sql/statements/create-procedure-transact-sql)|Gesamte Syntax mit den folgenden Ausnahmen:<br /><br /> Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
 |[ALTER PROCEDURE](/sql/t-sql/statements/alter-procedure-transact-sql)|Gesamte Syntax mit den folgenden Ausnahmen:<br /><br /> Es gibt keine IntelliSense-Unterstützung für die EXTERNAL NAME-Klausel.<br /><br /> In der AS-Klausel unterstützt IntelliSense nur die Anweisungen und die Syntaxelemente, die in diesem Thema aufgeführt werden.|  
-|[Konsum](/sql/t-sql/language-elements/use-transact-sql)|Gesamte Syntax.|  
+|[USE](/sql/t-sql/language-elements/use-transact-sql)|Gesamte Syntax.|  
   
 ## <a name="intellisense-in-supported-statements"></a>IntelliSense in unterstützten Anweisungen  
  IntelliSense im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor unterstützt die folgenden Syntaxelemente, wenn sie in einer der unterstützten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden:  

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d480fe510b6d2e252faefaae13d7dd3776c8ec5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774884"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Überwachen des Protokollversands (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "62774884"
   
  Sie können diese Tabellen abfragen, um den Status einer Protokollversandsitzung zu überwachen. Um z. B. den Status des Protokollversands abzurufen, überprüfen Sie den Status und den Verlauf des Sicherungsauftrags, des Kopierauftrags und des Wiederherstellungsauftrags. Sie können spezifische Details zum Protokollversandverlauf und zu Fehlern anzeigen, indem Sie die folgenden Überwachungstabellen abfragen.  
   
-|Tabelle|Description|  
+|Tabelle|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[log_shipping_monitor_alert](/sql/relational-databases/system-tables/log-shipping-monitor-alert-transact-sql)|Speichert die Warnungsauftrags-ID.|  
 |[log_shipping_monitor_error_detail](/sql/relational-databases/system-tables/log-shipping-monitor-error-detail-transact-sql)|Speichert Fehlerdetails für Protokollversandaufträge. Sie können diese Tabelle abfragen, um die Fehler für eine Agentsitzung anzuzeigen. Optional können Sie die Fehler nach dem Datum und der Uhrzeit der Protokollierung sortieren. Jeder Fehler wird als Abfolge von Ausnahmen protokolliert, und mehrere Fehler (Sequenzen) können pro Agentsitzung protokolliert werden.|  
@@ -49,7 +49,7 @@ ms.locfileid: "62774884"
 ## <a name="stored-procedures-for-monitoring-log-shipping"></a>Gespeicherte Prozeduren für die Überwachung des Protokollversands  
  Überwachungs- und Verlaufsinformationen werden in Tabellen in der **msdb**-Datenbank gespeichert, auf die mithilfe gespeicherter Prozeduren für den Protokollversand zugegriffen werden kann. Führen Sie diese gespeicherten Prozeduren auf den in der folgenden Tabelle angegebenen Servern aus.  
   
-|Gespeicherte Prozedur|Beschreibung|Ausführen dieser Prozedur auf|  
+|Gespeicherte Prozedur|BESCHREIBUNG|Ausführen dieser Prozedur auf|  
 |----------------------|-----------------|---------------------------|  
 |[sp_help_log_shipping_monitor_primary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-primary-transact-sql)|Gibt Überwachungsdatensätze für die angegebene primäre Datenbank aus der **log_shipping_monitor_primary** -Tabelle zurück.|Überwachungsserver oder primärer Server|  
 |[sp_help_log_shipping_monitor_secondary](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-monitor-secondary-transact-sql)|Gibt Überwachungsdatensätze für die angegebene sekundäre Datenbank aus der **log_shipping_monitor_secondary** -Tabelle zurück.|Überwachungsserver oder sekundärer Server|  
@@ -59,7 +59,7 @@ ms.locfileid: "62774884"
 |[sp_help_log_shipping_secondary_database](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql)|Ruft Einstellungen der sekundären Datenbank aus den Tabellen **log_shipping_secondary**, **log_shipping_secondary_databases** und **log_shipping_monitor_secondary** ab.|Sekundärer Server|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql)|Diese gespeicherte Prozedur ruft die Einstellungen einer angegebenen primären Datenbank auf dem sekundären Server ab.|Sekundärer Server|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen des Protokollversandberichts &#40;SQL Server Management Studio&#41;](view-the-log-shipping-report-sql-server-management-studio.md)   
  [Gespeicherte Prozeduren und Tabellen für den Protokollversand](log-shipping-tables-and-stored-procedures.md)  
   

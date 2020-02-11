@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: c48db11ae347d1fb1c2a393e440aebb0c80def54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62912134"
 ---
 # <a name="sqlservice-class"></a>SqlService-Klasse
@@ -30,7 +30,7 @@ ms.locfileid: "62912134"
   
  Die [SqlService-Klasse](sqlservice-class.md) wird verwendet, um den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst programmgesteuert zu verwalten. Mit dem [SqlService-Klassenobjekt](sqlservice-class.md) können Sie folgende Aufgaben ausführen:  
   
--   Herstellen einer Verbindung mit dem Dienst.  
+-   Stellen Sie eine Verbindung mit dem Dienst her.  
   
 -   Ändern des Konto und Kennworts, das zum Herstellen einer Verbindung mit dem Dienst verwendet wird.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62912134"
   
 -   Überprüfen der Eigenschaften des Diensts.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
