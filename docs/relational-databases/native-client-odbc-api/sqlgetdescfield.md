@@ -15,38 +15,38 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 08d6a42d7b078fce5e50c16712dfb97897148e23
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73786529"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht nur Treiber spezifische Deskriptorfelder für den Implementierungs Zeilen Deskriptor (IRD) verfügbar. Im IRD wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf Deskriptorfelder durch Treiber spezifische Spalten Attribute verwiesen. Weitere Informationen über eine komplette Liste der verfügbaren treiberspezifischen Deskriptorfelder finden Sie unter [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   
  Deskriptorfelder, die Spaltenbezeichner-Zeichenfolgen enthalten, sind häufig Zeichenfolgen der Länge 0 (null). Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Deskriptorfeldwerte sind schreibgeschützt.  
   
  Wie bei Attributen, die mit SQLColAttribute abgerufen werden, werden Deskriptorfelder, die Attribute auf Zeilenebene melden (z. b. SQL_CA_SS_COMPUTE_ID), für alle Spalten im Resultset gemeldet.  
   
 ## <a name="sqlgetdescfield-and-table-valued-parameters"></a>SQLGetDescField und Tabellenwertparameter  
- SQLGetDescField kann verwendet werden, um Werte für erweiterte Attribute von Tabellenwert Parametern und Tabellenwert Parameter-Spalten zu erhalten. Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;(ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md)).  
+ SQLGetDescField kann verwendet werden, um Werte für erweiterte Attribute von Tabellenwert Parametern und Tabellenwert Parameter-Spalten zu erhalten. Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-enhanced-date-and-time-features"></a>SQLGetDescField-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Informationen zu den Deskriptorfeldern, die für die neuen Datums-/Uhrzeittypen verfügbar sind, finden Sie unter [Parameter und Ergebnis Metadaten](../../relational-databases/native-client-odbc-date-time/metadata-parameter-and-result.md).  
   
- Weitere Informationen finden Sie unter [Verbesserungen &#40;bei Datum und&#41;Uhrzeit (ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)).  
+ Weitere Informationen finden Sie unter [Verbesserungen bei Datum und Uhrzeit &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md).  
   
- Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]kann SQLGetDescField **SQL_C_SS_TIME2** (für **Zeit** Typen) oder **SQL_C_SS_TIMESTAMPOFFSET** (für **DateTimeOffset**) anstelle von **SQL_C_BINARY**zurückgeben, wenn die Anwendung ODBC 3,8 verwendet.  
+ [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Ab kann SQLGetDescField **SQL_C_SS_TIME2** (für **Zeit** Typen) oder **SQL_C_SS_TIMESTAMPOFFSET** (für **DateTimeOffset**) anstelle von **SQL_C_BINARY**zurückgeben, wenn die Anwendung ODBC 3,8 verwendet.  
   
 ## <a name="sqlgetdescfield-support-for-large-clr-udts"></a>SQLGetDescField-Unterstützung für große CLR-UDTs  
- **SQLGetDescField** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;(ODBC&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md)).  
+ **SQLGetDescField** unterstützt große benutzerdefinierte CLR-Typen (UDTs). Weitere Informationen finden Sie unter [große benutzerdefinierte CLR-Typen &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/large-clr-user-defined-types-odbc.md).  
   
 ## <a name="sqlgetdescfield-support-for-sparse-columns"></a>SQLGetDescField-Unterstützung für Spalten mit geringer Dichte  
  SQLGetDescField kann verwendet werden, um das neue IRD-Feld abzufragen SQL_CA_SS_IS_COLUMN_SET um zu ermitteln, ob eine Spalte eine **column_set** Spalte ist.  
   
- Weitere Informationen finden Sie [unter Unterstützung &#40;für sparsespalten in ODBC&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
+ Weitere Informationen finden Sie [unter Unterstützung für sparsespalten &#40;ODBC-&#41;](../../relational-databases/native-client/odbc/sparse-columns-support-odbc.md).  
   
 ## <a name="example"></a>Beispiel  
   
@@ -153,8 +153,8 @@ if (SQLMoreResults(g_hStmt) == SQL_SUCCESS)
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLGetDescField-Funktion](https://go.microsoft.com/fwlink/?LinkId=59351)   
- [ODBC-API-Implementierungsdetails](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   
