@@ -14,24 +14,24 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa5f333b050d817d68c8769d7e53a9455581a3ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768656"
 ---
 # <a name="developing-custom-objects-for-integration-services"></a>Entwickeln benutzerdefinierter Objekte für Integration Services
-  Wenn die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthaltene Ablaufsteuerung und die Datenflussobjekte nicht vollständig Ihren Anforderungen entsprechen, können Sie eine Vielzahl von Typen benutzerdefinierter Objekte selbst entwickeln, darunter:  
+  Wenn die Ablauf Steuerung und die Datenfluss Objekte, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthalten sind, Ihre Anforderungen nicht vollständig erfüllen, können Sie eine Vielzahl von benutzerdefinierten Objekten entwickeln, darunter:  
   
 -   **Benutzerdefinierte Tasks**.  
   
--   **Benutzerdefinierte Verbindungs-Manager**. Stellt eine Verbindung mit externen Datenquellen her, die derzeit nicht unterstützt werden.  
+-   **Benutzerdefinierte Verbindungs-Manager.** Stellt eine Verbindung mit externen Datenquellen her, die derzeit nicht unterstützt werden.  
   
--   **Benutzerdefinierte Protokollanbieter**. Protokollieren Paketereignisse in Formaten, die derzeit nicht unterstützt werden.  
+-   **Benutzerdefinierte Protokoll Anbieter.** Protokollieren Paketereignisse in Formaten, die derzeit nicht unterstützt werden.  
   
--   **Benutzerdefinierte Enumeratoren**. Unterstützen die Iteration durch eine Reihe von Objekt- oder Wertformaten, die derzeit nicht unterstützt werden.  
+-   **Benutzerdefinierte Enumeratoren.** Unterstützen die Iteration durch eine Reihe von Objekt- oder Wertformaten, die derzeit nicht unterstützt werden.  
   
--   **Benutzerdefinierte Datenflusskomponenten**. Können als Quellen, Transformationen oder Ziele konfiguriert werden.  
+-   **Benutzerdefinierte Datenfluss Komponenten.** Können als Quellen, Transformationen oder Ziele konfiguriert werden.  
   
  Diese benutzerdefinierte Entwicklung wird durch das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell mit Basisklassen vereinfacht, die ein konsistentes und zuverlässiges Framework für Ihre benutzerdefinierte Implementierung bieten.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62768656"
 ## <a name="base-classes-attributes-and-important-methods"></a>Basisklassen, Attribute und wichtige Methoden  
  Die nachfolgende Tabelle bietet eine einfache Übersicht über die meisten wichtigen Elemente im [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Objektmodell für die einzelnen Typen von benutzerdefinierten Objekten, die Sie entwickeln können.  
   
-|Benutzerdefiniertes Objekt|Basisklasse|Attribut|Wichtige Methoden|  
+|Benutzerdefiniertes Objekt|Basisklasse|attribute|Wichtige Methoden|  
 |-------------------|----------------|---------------|-----------------------|  
 |Aufgabe|<xref:Microsoft.SqlServer.Dts.Runtime.Task>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.Task.Execute%2A>|  
 |Ziel-Editor für Dimensionsverarbeitung|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>|<xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>|<xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.AcquireConnection%2A>, <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase.ReleaseConnection%2A>|  
@@ -110,9 +110,9 @@ ms.locfileid: "62768656"
   
 -   Blogeintrag; [Erstellungsprozess für Visual Studio-Projektmappen gibt eine Warnung über die indirekte Abhängigkeit von der .NET Framework-Assembly aufgrund von SSIS-Verweisen zurück](https://go.microsoft.com/fwlink/?LinkId=215662) (auf blogs.msdn.com).  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Beibehalten von benutzerdefinierten Objekten](persisting-custom-objects.md)   
  [Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten](building-deploying-and-debugging-custom-objects.md)  
   

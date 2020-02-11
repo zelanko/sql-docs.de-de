@@ -1,5 +1,5 @@
 ---
-title: Find Databases Wizard suchen (Option-Dateien) (AccessToSQL) | Microsoft-Dokumentation
+title: Assistent zum Suchen von Datenbanken (Dateien auswählen) (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,44 +12,44 @@ ms.assetid: 2f574a34-4bab-40a4-89a8-ad4907ffc3fd
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c084db939482fe57e150d4beb22eab4d5e6decb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68006545"
 ---
-# <a name="find-databases-wizard-select-files-accesstosql"></a>Find Databases Wizard suchen (Option-Dateien) (AccessToSQL)
-Die Seite "Dateien auswählen" des Assistenten für Datenbanken finden Sie listet die Dateien, die bei der Suche gefunden wurden. Wählen Sie die Zeile, die den Dateinamen enthält, zum Auswählen einer Datei, die SSMA hinzugefügt. Wenn Sie alle Dateien ausgewählt sind, klicken Sie auf **Weiter** zum Anzeigen der Seite Auswahl überprüfen.  
+# <a name="find-databases-wizard-select-files-accesstosql"></a>Assistent zum Suchen von Datenbanken (Dateien auswählen) (accesstosql)
+Auf der Seite Dateien auswählen des Assistenten zum Suchen von Datenbanken werden die Dateien aufgelistet, die während der Suche gefunden wurden. Wählen Sie die Zeile aus, die den Dateinamen enthält, um eine Datei auszuwählen, die Sie SSMA hinzufügen möchten. Wenn Sie mit der Auswahl von Dateien fertig sind, klicken Sie auf **weiter** , um die Seite Auswahl überprüfen anzuzeigen.  
   
-So öffnen Sie im Netzwerk überprüfen für Dateien-Assistenten, auf die **Datei** Menü klicken Sie auf **Datenbanken finden Sie**.  
+Klicken Sie im Menü **Datei** auf **Datenbanken**suchen, um den Assistenten für das Scannen von Netzwerkdateien zu öffnen.  
   
-Wählen Sie das Kontrollkästchen neben dem Dateinamen, zum Auswählen einer Datei, die SSMA hinzugefügt. Wenn Sie alle Dateien ausgewählt sind, klicken Sie auf **Weiter** auf der Seite "Abschluss" anzeigen.  
+Aktivieren Sie das Kontrollkästchen neben dem Dateinamen, um eine Datei zum Hinzufügen zu SSMA auszuwählen. Wenn Sie die Dateien ausgewählt haben, klicken Sie auf **weiter** , um die Seite Abschluss anzuzeigen.  
   
-## <a name="options"></a>Optionen  
-**Wählen Sie alle**  
-Wählen Sie dieses Kontrollkästchen, um alle Datenbanken in der Liste auswählen.  
+## <a name="options"></a>Tastatur  
+**Alle auswählen**  
+Aktivieren Sie dieses Kontrollkästchen, um alle Datenbanken in der Liste auszuwählen.  
   
-**Auswahl aufheben**  
-Aktivieren Sie dieses Kontrollkästchen deaktivieren Sie alle Datenbanken in der Liste aus.  
+**Auswahl für alle deaktivieren**  
+Aktivieren Sie dieses Kontrollkästchen, um die Auswahl aller Datenbanken in der Liste zu deaktivieren.  
   
 **Dateiname**  
-Zeigt den Namen der Access-Datenbankdatei SSMA hinzu.  
+Zeigt den Namen der Access-Datenbankdatei an, die SSMA hinzugefügt werden soll.  
   
 **Besitzer**  
-Zeigt den Besitzer der Datei.  
+Zeigt den Besitzer der Datei an.  
   
 **Dateipfad**  
-Zeigt den Pfad der Access-Datenbankdatei.  
+Zeigt den Pfad der Access-Datenbankdatei an.  
   
 **Größe**  
-Die Größe der Datenbank, in Bytes.  
+Die Größe der Datenbank (in Bytes).  
   
 **Erstellt**  
-Das Datum und Uhrzeit der Erstellung die Datenbank.  
+Das Datum und die Uhrzeit der Erstellung der Datenbank.  
   
-**Geändert**  
-Das Datum und Uhrzeit der letzten Aktualisierung die Datenbank.  
+**Modified**  
+Das Datum und die Uhrzeit, zu der die Datenbank zuletzt aktualisiert wurde.  
   
-## <a name="see-also"></a>Siehe auch  
-[Benutzer-Schnittstelle Reference(Access)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
+## <a name="see-also"></a>Weitere Informationen  
+[Referenz zur Benutzeroberfläche (Zugriff)](https://msdn.microsoft.com/af24c303-4a41-449b-9c86-d6558a97e839)  
   

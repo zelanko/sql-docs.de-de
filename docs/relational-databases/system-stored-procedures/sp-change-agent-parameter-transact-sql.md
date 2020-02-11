@@ -16,18 +16,18 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd737be5a1e71e46750f6c80fd68ad254cb6436f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68768942"
 ---
-# <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
+# <a name="sp_change_agent_parameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Ändert einen Parameter eines Replikations-Agentprofils, das in der [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) -Systemtabelle gespeichert ist. Diese gespeicherte Prozedur wird auf dem Verteiler, auf dem der Agent ausgeführt wird, für jede Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,7 +39,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ## <a name="arguments"></a>Argumente  
 `[ @profile_id = ] profile_id,`Die ID des Profils. *profile_id* ist vom Datentyp **int**und hat keinen Standardwert.  
   
-`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welcher Typ von Agent dieser *profile_id* repräsentiert, suchen Sie die *profile_id* -Spalte in der **MSagent_profiles** -Tabelle, und notieren Sie sich den *agent_type* -Wert.  
+`[ @parameter_name = ] 'parameter_name'`Der Name des Parameters. *parameter_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Bei Systemprofilen hängen die veränderbaren Parameter vom Typ der Momentaufnahme ab. Um herauszufinden, welcher Agenttyp diese *profile_id* darstellt, suchen Sie die Spalte *profile_id* in der Tabelle **MSagent_profiles** , und notieren Sie sich den Wert *agent_type* .  
   
 > [!NOTE]  
 >  Wenn ein Parameter für eine bestimmte *agent_type*unterstützt, aber nicht im Agentprofil definiert wurde, wird ein Fehler zurückgegeben. Wenn Sie einem Agentprofil einen Parameter hinzufügen möchten, müssen Sie [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausführen.  
@@ -54,11 +54,11 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **MaxBcpThreads**  
+-   **MaxBCPThreads**  
   
 -   **MaxNetworkOptimization**  
   
--   **Ausgabe**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -78,7 +78,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Ausgabe**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -90,7 +90,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ReadBatchSize**  
   
--   **ReadBatchThreshold**  
+-   **Read Batch Threshold**  
   
  Bei einer Verteilungs-Agent (*agent_type*=**3**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
@@ -104,17 +104,17 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **HistoryVerboseLevel**  
   
--   **KeepAliveMessageInterval**  
+-   **Keepalivemstinageinterval**  
   
 -   **LoginTimeout**  
   
--   **MaxBcpThreads**  
+-   **MaxBCPThreads**  
   
 -   **MaxDeliveredTransactions**  
   
 -   **MessageInterval**  
   
--   **Ausgabe**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -128,7 +128,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **SkipErrors**  
   
--   **TransactionsPerHistory**  
+-   **TransactionsPerHistory an**  
   
  Bei einer Merge-Agent (*agent_type*=**4**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
@@ -142,15 +142,15 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **DownloadGenerationsPerBatch**  
   
--   **DownloadReadChangesPerBatch**  
+-   **Downloadumchangesperbatch**  
   
--   **DownloadWriteChangesPerBatch**  
+-   **Downloadschreibchangesperbatch**  
   
 -   **DynamicSnapshotLocation**  
   
 -   **ExchangeType**  
   
--   **FastRowCount**  
+-   **Fastrowcount**  
   
 -   **FileTransferType**  
   
@@ -160,15 +160,15 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **InputMessageFile**  
   
--   **Interactiveresolution**  
+-   **InteractiveResolution**  
   
 -   **InterruptOnMessagePattern**  
   
--   **KeepAliveMessageInterval**  
+-   **Keepalivemstinageinterval**  
   
 -   **LoginTimeout**  
   
--   **MaxBcpThreads**  
+-   **MaxBCPThreads**  
   
 -   **MaxDownloadChanges**  
   
@@ -176,9 +176,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MetadataRetentionCleanup**  
   
--   **NumDeadlockRetries**  
+-   **Numdeadlockretries**  
   
--   **Ausgabe**  
+-   **Output**  
   
 -   **OutputMessageFile**  
   
@@ -206,13 +206,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **StartQueueTimeout**  
   
--   **Syncdealternate**  
+-   **SyncToAlternate**  
   
 -   **UploadGenerationsPerBatch**  
   
 -   **UploadReadChangesPerBatch**  
   
--   **UploadWriteChangesPerBatch**  
+-   **Uploadschreitechangesperbatch**  
   
 -   **UseInprocLoader**  
   
@@ -220,13 +220,13 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **ValidateInterval**  
   
- Bei einer Warteschlangenlese-Agent (*agent_type*=**9**), die im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
+ Bei einem Warteschlangenlese-Agent (*agent_type*=**9**), wenn es im Profil definiert ist, können die folgenden Eigenschaften geändert werden:  
   
 -   **HistoryVerboseLevel**  
   
 -   **LoginTimeout**  
   
--   **Ausgabe**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -234,33 +234,33 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **QueryTimeout**  
   
--   **Resolverstate**  
+-   **ResolverState**  
   
 -   **SQLQueueMode**  
   
- Wenn Sie sehen möchten, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **sp_help_agent_profile** aus, und notieren Sie sich die *profile_name* , die mit *profile_id*verknüpft ist. Führen Sie mit dem entsprechenden *profile_id*Next **sp_help_agent_parameters** using this *profile_id* aus, um die Parameter anzuzeigen, die dem Profil zugeordnet sind. Parameter können einem Profil hinzugefügt werden, indem [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausgeführt wird.  
+ Um zu sehen, welche Parameter für ein bestimmtes Profil definiert wurden, führen Sie **sp_help_agent_profile** aus, und notieren Sie sich die *profile_name* , die dem *profile_id*zugeordnet sind. Führen Sie mit dem entsprechenden *profile_id*als nächstes **sp_help_agent_parameters** mithilfe dieses *profile_id* aus, um die Parameter anzuzeigen, die dem Profil zugeordnet sind. Parameter können einem Profil hinzugefügt werden, indem [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)ausgeführt wird.  
   
 `[ @parameter_value = ] 'parameter_value'`Der neue Wert des-Parameters. *parameter_value* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **sp_change_agent_parameter** wird für alle Replikations Typen verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_change_agent_parameter** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_change_agent_parameter**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikations-Agent-Profile](../../relational-databases/replication/agents/replication-agent-profiles.md)   
- [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
- [Replikationsprotokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
- [Replikationsmerge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
- [Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
- [sp_add_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
- [sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
- [sp_help_agent_parameter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikationsagentprofile](../../relational-databases/replication/agents/replication-agent-profiles.md)   
+ [Replikations Verteilungs-Agent](../../relational-databases/replication/agents/replication-distribution-agent.md)   
+ [Replikations Protokolllese-Agent](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
+ [Replikations Merge-Agent](../../relational-databases/replication/agents/replication-merge-agent.md)   
+ [Replikations Warteschlangenlese-Agent](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
+ [Replikations Momentaufnahmen-Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)   
+ [sp_add_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md)   
+ [sp_drop_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md)   
+ [sp_help_agent_parameter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

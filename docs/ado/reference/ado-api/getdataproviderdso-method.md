@@ -1,5 +1,5 @@
 ---
-title: GetDataProviderDSO-Methode | Microsoft-Dokumentation
+title: Getdataproviderdso-Methode | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,14 +13,14 @@ ms.assetid: 5a4c6bd5-0c79-4f81-a977-0561392d8d50
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b2b5fbe59ab58b31cd0b796cbe46963683aa890b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932487"
 ---
 # <a name="getdataproviderdso-method"></a>GetDataProviderDSO-Methode
-Ruft das zugrunde liegende Objekt für den OLE DB-Datenquelle aus der Shape-Anbieter ab.  
+Ruft das zugrunde liegende OLE DB Datenquellen Objekt vom Shape-Anbieter ab.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -32,11 +32,11 @@ HRESULT GetDataProviderDSO(
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *ppDataProviderDSOIUnknown*  
- [out]  Ein Zeiger auf einen Zeiger, der die IUnknown-Äquivalent der das zugrunde liegende Objekt für den OLE DB-Datenquelle zurückgibt.  
+ *ppdataproviderdsoiunknown*  
+ vorgenommen  Ein Zeiger auf einen Zeiger, der die IUnknown des zugrunde liegenden OLE DB Datenquellen Objekts zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode ist nicht "AddRef" den Schnittstellenzeiger auf. Möchte, dass der Aufrufer den Zeiger zu halten, der Aufrufer müssen die erforderlichen Addref und release.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Methode ruft den Schnittstellen Zeiger nicht ab. Wenn der Aufrufer den-Zeiger enthalten soll, muss der Aufrufer das erforderliche Adressat und Release ausführen.  
   
-## <a name="applies-to"></a>Betrifft  
+## <a name="applies-to"></a>Anwendungsbereich  
  [IDSOShapeExtensions-Schnittstelle](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)

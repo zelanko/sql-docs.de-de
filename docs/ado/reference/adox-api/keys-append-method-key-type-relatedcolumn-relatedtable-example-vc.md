@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie ein neues Foreign Key Beispiel (VC++) | Microsoft-Dokumentation
+title: Erstellen eines neuen Fremdschlüssel Beispiels (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -19,15 +19,15 @@ helpviewer_keywords:
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 37fc296ecf520dc6ccc2964315a449bf508a2284
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c812f0503b8801e861364a04e5621cb975adb009
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67965839"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76918067"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vc"></a>Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VC++)
-Der folgende Code veranschaulicht, wie erstellen Sie einen neuen Fremdschlüssel. Es wird davon ausgegangen, dass zwei Tabellen ("Customers" und "Orders") vorhanden sind.  
+Der folgende Code veranschaulicht, wie ein neuer Fremdschlüssel erstellt wird. Es wird davon ausgegangen, dass zwei Tabellen (Kunden und Aufträge) vorhanden sind.  
   
 ```  
 // BeginCreateKeyCpp.cpp  
@@ -92,7 +92,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

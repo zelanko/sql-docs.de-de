@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21a66754a9259dadcb8788d6afef4947f9a69ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63140470"
 ---
 # <a name="fetching-rows"></a>Abrufen von Zeilen
@@ -51,7 +51,7 @@ ms.locfileid: "63140470"
   
  Um Zeilen aus der Datenbank abzurufen, ruft der Consumer eine Methode auf, z.B. **IRowset::GetNextRows** oder **IRowsetLocate::GetRowsAt**. Diese Abrufvorgänge platzieren Zeilendaten vom Server in den Zeilenpuffer des Anbieters. Der Consumer hat keinen Direktzugriff auf den Zeilenpuffer des Anbieters. Der Consumer verwendet **IRowset::GetData**, um die Daten vom Puffer des Anbieters in den Consumerpuffer zu kopieren, und kopiert dann mithilfe von **IRowsetChange::SetData** Änderungen an den Daten vom Consumerpuffer in den Anbieterpuffer zurück.  
   
- Der Consumer ruft die Methode **GetData** auf und übergibt das Handle für eine Zeile, das Handle für einen Accessor und einen Zeiger auf den vom Consumer zugeordneten Puffer. **GetData** konvertiert die Daten und gibt die Spalten zurück, wie in den zum Erstellen des Accessors verwendeten Bindungen angegeben. Der Consumer kann **GetData** mehrere Male für eine Zeile aufrufen und dabei verschiedene Accessoren und Puffer verwenden. Daher kann der Consumer mehrere Kopien derselben Daten erhalten.  
+ Der Consumer ruft die Methode **GetData** auf und übergibt das Handle für eine Zeile, das Handle für einen Accessor und einen Zeiger auf den vom Consumer zugeordneten Puffer. **GetData** konvertiert die Daten und gibt die Spalten zurück, die in den Bindungen zum Erstellen der Zugriffsmethode angegeben sind. Der Consumer kann **GetData** mehrere Male für eine Zeile aufrufen und dabei verschiedene Accessoren und Puffer verwenden. Daher kann der Consumer mehrere Kopien derselben Daten erhalten.  
   
  Daten aus Spalten variabler Länge können auf mehrere Arten behandelt werden. Zunächst können solche Spalten an einen endlichen Abschnitt der Struktur des Consumers gebunden werden. Dies verursacht das Abschneiden von Daten, wenn die Länge der Daten die Länge des Puffers überschreitet. Der Consumer kann ermitteln, dass Daten abgeschnitten wurden, indem er den Status DBSTATUS_S_TRUNCATED überprüft. Die zurückgegebene Länge ist immer die wirkliche Länge in Byte, sodass der Consumer auch bestimmen kann, wie viele Daten abgeschnitten wurden.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63140470"
   
 -   [Nächste Abrufposition](fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rowsets](rowsets.md)  
   
   

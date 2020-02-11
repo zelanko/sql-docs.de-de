@@ -1,5 +1,5 @@
 ---
-title: Filter und RecordCount – Beispiel (VC++) | Microsoft-Dokumentation
+title: Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932667"
 ---
-# <a name="filter-and-recordcount-properties-example-vc"></a>Filter und RecordCount – Beispiel (VC++)
-Dieses Beispiel verwendet die [Filter](../../../ado/reference/ado-api/filter-property.md) Eigenschaft zum Öffnen eines neuen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf einer angegebenen Bedingung, die auf einem vorhandenen angewendet **Recordset**. Er verwendet den [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft auf die Anzahl der Datensätze in den beiden **Recordsets**. Die FilterField-Funktion ist erforderlich, damit dieses Verfahren ausführen.  
+# <a name="filter-and-recordcount-properties-example-vc"></a>Filter-und RecordCount-Eigenschaften (Beispiel) (VC + +)
+In diesem Beispiel wird die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft zum Öffnen eines neuen [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf einer angegebenen Bedingung verwendet, die auf ein vorhandenes **Recordset**angewendet wird. Er verwendet die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft, um die Anzahl der Datensätze in den beiden **Recordsets**anzuzeigen. Die FilterField-Funktion ist erforderlich, damit diese Prozedur ausgeführt werden kann.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -302,7 +302,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Filter-Eigenschaft](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c751898aee25fa98bfeb6c2a7e1f1143bc61ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62931625"
 ---
 # <a name="choose-a-resolver"></a>Auswählen von Resolvern
@@ -41,9 +41,9 @@ ms.locfileid: "62931625"
 |Mehrere Änderungen an einem Wert in einem logischen Datensatz sollen als Konflikt markiert werden.|Verwenden Sie den Standardkonfliktlöser mit Nachverfolgung auf der Ebene des logischen Datensatzes (bei Verwendung logischer Datensätze werden weder benutzerdefinierte Konfliktlöser noch Geschäftslogikhandler unterstützt).|  
 |Die resultierenden Konfliktdaten müssen sich von den ursprünglichen Konfliktdaten unterscheiden.|Verwenden Sie einen Artikelkonfliktlöser, der neue Werte berechnet.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Ermitteln und Lösen von Konflikten in logischen Datensätzen](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](advanced-merge-replication-conflict-detection-and-resolution.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Detecting and Resolving Conflicts in Logical Records](advanced-merge-replication-conflict-resolving-in-logical-record.md)   
+ [Erweiterte Konflikterkennung und -lösung der Mergereplikation](advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Erneutes Veröffentlichen von Daten](../republish-data.md)  
   
   

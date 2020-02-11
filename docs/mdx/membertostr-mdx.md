@@ -1,5 +1,5 @@
 ---
-title: MemberToStr (MDX) | Microsoft-Dokumentation
+title: Mitgliedestr (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a33aede54557491dea50a557ed581929c5383e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68001465"
 ---
 # <a name="membertostr-mdx"></a>MemberToStr (MDX)
 
 
-  Gibt eine Multidimensional Expressions MDX-formatierte Zeichenfolge, die entspricht für einen angegebenen Member zurück.  
+  Gibt eine Zeichenfolge im MDX-Format (Multidimensional Expressions) zurück, die einem angegebenen Element entspricht.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,11 +31,11 @@ MemberToStr(Member_Expression)
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Funktion gibt eine Zeichenfolge zurück, die den eindeutigen Namen eines Elements enthält. Es wird normalerweise verwendet, eines Members Uniquename an eine externe Funktion zu übergeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Funktion gibt eine Zeichenfolge zurück, die den eindeutigen Namen eines Elements enthält. Sie wird normalerweise verwendet, um den UniqueName eines Elements an eine externe Funktion zu übergeben.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt die Zeichenfolge [Geography] zurück. [Geography]. [Country]. & [United States]:  
+ Im folgenden Beispiel wird die Zeichenfolge [Geography] zurückgegeben. [Geography]. [Land]. & [USA]:  
   
  `WITH MEMBER Measures.x AS MemberToStr`  
   
@@ -45,7 +45,7 @@ MemberToStr(Member_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

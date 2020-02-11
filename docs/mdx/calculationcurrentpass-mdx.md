@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 67950dbdf80dc18f798af798d53ab187facf86da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68016885"
 ---
 # <a name="calculationcurrentpass-mdx"></a>CalculationCurrentPass (MDX)
@@ -27,12 +27,12 @@ ms.locfileid: "68016885"
 CalculationCurrentPass()  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die **CalculationCurrentPass** Funktion gibt den nullbasierten Index des Berechnungsdurchlaufs für den aktuellen Abfragekontext zurück. Durch die automatische rekursionsauflösung hat diese Funktion kaum noch praktischen nutzen.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **CalculationCurrentPass** -Funktion gibt den NULL basierten Index des Berechnungs Durchlaufs für den aktuellen Abfrage Kontext zurück. Bei der automatischen Rekursions Auflösung hat diese Funktion wenig praktische Verwendung.  
   
-## <a name="see-also"></a>Siehe auch  
- [CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)   
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [CalculationPassValue-&#40;MDX-&#41;](../mdx/calculationpassvalue-mdx.md)   
+ [IIf-&#40;MDX-&#41;](../mdx/iif-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

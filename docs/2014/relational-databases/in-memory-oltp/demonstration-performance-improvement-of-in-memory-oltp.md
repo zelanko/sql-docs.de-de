@@ -1,5 +1,5 @@
 ---
-title: 'Demo: Leistungsverbesserungen von In-Memory-OLTP | Microsoft-Dokumentation'
+title: 'Demo: Leistungsverbesserungen von In-Memory OLTP | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,27 +11,27 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63071785"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
   Dieses Beispiel zeigt Leistungsverbesserungen bei Verwendung von In-Memory OLTP, indem die Unterschiede bei der Antwortzeit bei Ausführung einer identischen Transact-SQL-Abfrage für speicheroptimierte und herkömmliche datenträgerbasierte Tabellen verglichen werden. Darüber hinaus wird eine systemintern kompilierte gespeicherte Prozedur erstellt (basierend auf der gleichen Abfrage) und dann ausgeführt, um zu veranschaulichen, dass die besten Antwortzeiten in der Regel beim Abfragen einer speicheroptimierten Tabelle mit einer systemintern kompilierten gespeicherten Prozedur erzielt werden. Dieses Beispiel zeigt nur einen Aspekt der Leistungsverbesserungen beim Zugriff auf Daten in speicheroptimierten Tabellen; Effizienz beim Datenzugriff bei der Durchführung von Einfügungen. Dieses Beispiel verwendet nur einen einzelnen Thread und nutzt nicht die Parallelitätsvorteile von In-Memory OLTP. Eine Arbeitsauslastung, die Parallelität verwendet, bietet noch größere Leistungsvorteile.  
   
 > [!NOTE]  
->  Ein weiteres Beispiel zur Veranschaulichung speicheroptimierter Tabellen finden Sie unter [Beispiel zu SQL Server 2014 In-Memory OLTP](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
+>  Ein weiteres Beispiel zur Veranschaulichung Speicher optimierter Tabellen finden Sie unter [SQL Server 2014 in-Memory-OLTP-Beispiel](https://msftdbprodsamples.codeplex.com/releases/view/114491).  
   
  Für dieses Beispiel führen Sie die folgenden Schritte aus:  
   
-1.  Erstellen Sie eine Datenbank mit dem Namen **Imoltp** und ändern Sie die Dateidetails, um es festzulegen, für die Verwendung von In-Memory OLTP.  
+1.  Erstellen Sie eine Datenbank namens **imoltp** , und ändern Sie die Dateidetails, um Sie für die Verwendung von in-Memory OLTP einzurichten.  
   
 2.  Erstellen Sie die Datenbankobjekte für das Beispiel: drei Tabellen und eine systemintern kompilierte gespeicherte Prozedur.  
   
 3.  Führen Sie die verschiedenen Abfragen aus, und zeigen Sie die Antwortzeiten für jede Abfrage an.  
   
- Mit der Einrichtung der **Imoltp** in unserem Beispiel-Datenbank, erstellen Sie zunächst einen leeren Ordner: **c:\imoltp_data**, und führen Sie dann den folgenden Code:  
+ Um die **imoltp** -Datenbank für unser Beispiel einzurichten, erstellen Sie zunächst einen leeren Ordner: **c:\ imoltp_data**, und führen Sie dann den folgenden Code aus:  
   
 ```sql  
 USE master  
@@ -181,14 +181,14 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
   
  Die erwarteten Ergebnisse geben tatsächliche Antwortzeiten an, die zeigen, dass die Verwendung speicheroptimierter Tabellen und systemintern kompilierter gespeicherter Prozeduren in der Regel konsistent schnellere Antwortzeiten bietet als die Ausführung der gleichen Arbeitsauslastungen für herkömmliche datenträgerbasierte Tabellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory-OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
- [In-Memory-OLTP &#40;Arbeitsspeicheroptimierung&#41;](in-memory-oltp-in-memory-optimization.md)   
- [Speicheroptimierte Tabellen](memory-optimized-tables.md)   
- [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)   
- [Anforderungen für die Verwendung von speicheroptimierten Tabellen](requirements-for-using-memory-optimized-tables.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erweiterungen von AdventureWorks zur Veranschaulichung von in-Memory OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)   
+ [In-Memory-OLTP &#40;in-Memory-Optimierung&#41;](in-memory-oltp-in-memory-optimization.md)   
+ [Speicher optimierte Tabellen](memory-optimized-tables.md)   
+ [System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)   
+ [Anforderungen für die Verwendung Speicher optimierter Tabellen](requirements-for-using-memory-optimized-tables.md)   
+ [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
  [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
- [CREATE PROCEDURE und Speicheroptimierte Tabellen](/sql/t-sql/statements/create-procedure-transact-sql)  
+ [Erstellen von Prozeduren und Speicher optimierten Tabellen](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

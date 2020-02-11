@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7d04a071bd5d74ddff6c2dc682c0f6153a8f8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771586"
 ---
 # <a name="folder-properties-dialog-box"></a>Ordnereigenschaften (Dialogfeld)
-  Ein Ordner enthält Projekte und Umgebungen im `SSISDB`-Katalog. Jeder Ordner definiert Berechtigungen, die für den Inhalt des Ordners gelten. Weitere Informationen zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Berechtigungen finden Sie unter [catalog.grant_permission &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
+  Ein Ordner enthält Projekte und Umgebungen im `SSISDB`-Katalog. Jeder Ordner definiert Berechtigungen, die für den Inhalt des Ordners gelten. Weitere Informationen zu [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Berechtigungen finden Sie unter [catalog.grant_permission &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database).  
   
 ## <a name="to-set-folder-description-and-permissions"></a>So legen Sie die Ordnerbeschreibung und Berechtigungen fest  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62771586"
   
 5.  Klicken Sie auf **OK** , um die Änderungen zu akzeptieren, und schließen Sie das Dialogfeld für die **Eigenschaften der Ordner**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Server &#40;SSIS&#41;](integration-services-ssis-server-and-catalog.md)   
  [catalog.grant_permission &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database)  
   

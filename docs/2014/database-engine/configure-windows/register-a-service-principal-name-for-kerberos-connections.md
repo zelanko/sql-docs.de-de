@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781995"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrieren eines Dienstprinzipalnamens für Kerberos-Verbindungen
@@ -71,25 +71,25 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  **Benannte Instanz**  
   
--   *MSSQLSvc/FQDN*:[_port_ **|** _instancename_], wobei:  
+-   *MSSQLSvc/FQDN*: [_Port_**|**_instanceName_], wobei:  
   
     -   *MSSQLSvc* der Dienst ist, der registriert wird.  
   
-    -   *FQDN* der vollqualifizierte Domänenname des Servers ist.  
+    -   *FQDN* ist der voll qualifizierte Domänen Name des Servers.  
   
-    -   *port* die TCP-Portnummer ist.  
+    -   *Port* ist die TCP-Portnummer.  
   
-    -   *instancename* der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz ist.  
+    -   *instanceName* ist der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz.  
   
  **Standardinstanz**  
   
--   *MSSQLSvc/FQDN*:_port_ **|** _MSSQLSvc/FQDN_, wobei:  
+-   *MSSQLSvc/voll qualifizierter*Pfad:_Port_**|**_MSSQLSvc/_ vollständig verfügbar, wobei:  
   
     -   *MSSQLSvc* der Dienst ist, der registriert wird.  
   
-    -   *FQDN* der vollqualifizierte Domänenname des Servers ist.  
+    -   *FQDN* ist der voll qualifizierte Domänen Name des Servers.  
   
-    -   *port* die TCP-Portnummer ist.  
+    -   *Port* ist die TCP-Portnummer.  
   
  Beim neuen SPN-Format ist keine Portnummer erforderlich. Somit können Server mit mehreren Ports oder Protokolle ohne Portnummern Kerberos-Authentifizierung verwenden.  
   
@@ -98,14 +98,14 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 |||  
 |-|-|  
-|MSSQLSvc/*fqdn:port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. *port* ist eine TCP-Portnummer.|  
+|MSSQLSvc/voll*qualifizierter Name: Port*|Der vom Anbieter erstellte Standard-SPN, wenn TCP verwendet wird. *port* ist eine TCP-Portnummer.|  
 |MSSQLSvc/*fqdn*|Der vom Anbieter erstellte Standard-SPN für eine Standardinstanz, wenn ein anderes Protokoll als TCP verwendet wird. *fqdn* ist ein vollqualifizierter Domänenname.|  
-|MSSQLSvc/*fqdn:InstanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird. *InstanceName* ist der Name einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|MSSQLSvc/*FQDN: instanceName*|Der vom Anbieter erstellte Standard-SPN für eine benannte Instanz, wenn ein anderes Protokoll als TCP verwendet wird. *InstanceName* ist der Name einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   
 ##  <a name="Auto"></a> Automatische SPN-Registrierung  
  Beim Starten einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den SPN für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu registrieren. Wird die Instanz beendet, versucht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Registrierung des SPN wieder aufzuheben. Bei TCP/IP-Verbindungen wird der SPN im folgenden Format registriert: *MSSQLSvc/\<FQDN>* : *\<tcpport>* . Sowohl benannte Instanzen als auch die Standardinstanz werden als *MSSQLSvc* registriert, wobei der *\<tcpport>* -Wert zur Unterscheidung der Instanzen dient.  
   
- Bei anderen Verbindungen, die Kerberos unterstützen wird der SPN im folgenden Format registriert *MSSQLSvc /\<FQDN >* : *\<Instancename >* für eine benannte Instanz. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>* .  
+ Bei anderen Verbindungen, die Kerberos unterstützen, wird der SPN im Format *MSSQLSvc\</FQDN>*:*\<instanceName>* für eine benannte Instanz registriert. Die Standardinstanz wird im folgenden Format registriert: *MSSQLSvc/\<FQDN>* .  
   
  Die Registrierung bzw. die Aufhebung der Registrierung eines SPN muss möglicherweise manuell durchgeführt werden, wenn der Dienst nicht über die Berechtigungen für diese Aktionen verfügt.  
   
@@ -135,7 +135,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
 ##  <a name="Client"></a> Clientverbindungen  
  Clienttreiber unterstützen vom Benutzer angegebene SPN. Wenn jedoch kein SPN angegeben wurde, wird er auf der Grundlage des Clientverbindungstyps automatisch erstellt. Bei einer TCP-Verbindung wird ein SPN im Format *MSSQLSvc*/*FQDN*:[*port*] sowohl für benannte als auch für Standardinstanzen verwendet.  
   
- Bei Named-Pipes- und Shared-Memory-Verbindungen wird ein SPN im Format *MSSQLSvc*/*FQDN*:*Instanzname* für eine benannte Instanz und im Format *MSSQLSvc*/*FQDN* für die Standardinstanz verwendet.  
+ Für Named Pipes und Shared Memory-Verbindungen wird ein SPN im Format *MSSQLSvc*/*FQDN*:*instanceName* für eine benannte Instanz und *MSSQLSvc*/*FQDN* für die Standard Instanz verwendet.  
   
  **Verwenden eines Dienstkontos als SPN**  
   
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Szenario|Authentifizierungsmethode|  
 |--------------|---------------------------|  
-|Der SPN ist dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet. Beispiel: Lokales System oder NETWORK SERVICE.<br /><br /> Hinweis: Richtige bedeutet, dass das Konto, das dem registrierten SPN zugeordnet das Konto, unter dem SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
-|Der SPN entspricht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.<br /><br /> Hinweis: Richtige bedeutet, dass das Konto, das dem registrierten SPN zugeordnet das Konto, unter dem SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
+|Der SPN ist dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet. Beispiel: Lokales System oder NETWORK SERVICE.<br /><br /> Hinweis: richtig bedeutet, dass das Konto, das durch den registrierten SPN zugeordnet ist, das Konto ist, unter dem der SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
+|Der SPN entspricht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.<br /><br /> Hinweis: richtig bedeutet, dass das Konto, das durch den registrierten SPN zugeordnet ist, das Konto ist, unter dem der SQL Server-Dienst ausgeführt wird.|Lokale Verbindungen verwenden NTLM, Remoteverbindungen verwenden Kerberos.|  
 |Der SPN ist einem falschen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet.|Die Authentifizierung schlägt fehl.|  
 |Die SPN-Suche schlägt fehl, oder der SPN ist nicht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto zugeordnet bzw. entspricht nicht dem richtigen Domänenkonto, virtuellen Konto, MSA oder integrierten Konto.|Lokale Verbindungen und Remoteverbindungen verwenden NTLM.|  
   
@@ -170,7 +170,7 @@ WHERE session_id = @@SPID;
   
  Wenn die Aufhebung der SPN-Registrierung beim Herunterfahren fehlschlägt, wird dieser Fehler im Fehlerprotokoll von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgezeichnet, und das Herunterfahren wird fortgesetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützung von Dienstprinzipalnamen &#40;SPN&#41; in Clientverbindungen](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Dienstprinzipalnamen (SPN) in Clientverbindungen (ODBC)](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

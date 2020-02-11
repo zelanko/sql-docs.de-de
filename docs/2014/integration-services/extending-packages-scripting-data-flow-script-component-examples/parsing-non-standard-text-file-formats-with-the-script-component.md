@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769006"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analysieren von nicht standardmäßigen Textdateiformaten mit der Skriptkomponente
@@ -35,7 +35,7 @@ ms.locfileid: "62769006"
 ##  <a name="example1"></a> Beispiel 1: Analysieren von nach Zeilen getrennten Datensätzen  
  In diesem Beispiel wird gezeigt, wie eine Textdatei, in der sich jede Datenspalte auf einer separaten Zeile befindet, mithilfe der Skriptkomponente in eine Zieltabelle konvertiert werden kann.  
   
- Weitere Informationen zum Konfigurieren der Skriptkomponente für die Verwendung als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)und [erstellen einen asynchronen Die Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Weitere Informationen zum Konfigurieren der Skript Komponente für die Verwendung als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)und [Erstellen einer asynchronen Transformation mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62769006"
   
 11. Wählen Sie auf der Seite **Eingabespalten** des **Transformations-Editors für Skripterstellung** die einzelne verfügbare Eingabespalte.  
   
-12. Auf der **Eingaben und Ausgaben** auf der Seite die **Transformations-Editor**, wählen Sie die Ausgabe 0, und legen Sie dessen `SynchronousInputID` auf "None". Erstellen Sie 5 Ausgabespalten, die alle eine Typzeichenfolge [DT_STR] mit einer Länge von 32 aufweisen:  
+12. Wählen Sie auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung die Option Ausgabe `SynchronousInputID` 0 aus, und legen Sie auf keine fest. Erstellen Sie 5 Ausgabespalten, die alle eine Typzeichenfolge [DT_STR] mit einer Länge von 32 aufweisen:  
   
     -   FirstName  
   
@@ -102,11 +102,11 @@ ms.locfileid: "62769006"
   
     -   Titel  
   
-    -   Ort  
+    -   City  
   
     -   StateProvince  
   
-13. Auf der **Skript** auf der Seite die **Transformations-Editor**, klicken Sie auf **Bearbeitungsskript** , und geben Sie den Code in die `ScriptMain` -Klasse des Beispiels. Schließen Sie die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.  
+13. Klicken Sie im **Transformations-Editor für Skript**Erstellung auf der Seite **Skript** auf **Skript bearbeiten** , und geben Sie `ScriptMain` den Code ein, der in der-Klasse des Beispiels angezeigt wird. Schließen Sie die Skriptentwicklungsumgebung und den **Transformations-Editor für Skripterstellung**.  
   
 14. Fügen Sie zum Datenfluss ein SQL Server-Ziel hinzu. Konfigurieren Sie es, um den OLE DB-Verbindungs-Manager und die RowDelimitedData-Tabelle zu verwenden. Verbinden Sie die Ausgabe der Skriptkomponente mit diesem Ziel.  
   
@@ -193,7 +193,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
 > [!CAUTION]  
 >  Dieses Beispiel dient nur Demonstrationszwecken. Wenn Sie das Beispiel mehr als einmal ausführen, fügt es doppelte Schlüsselwerte in die Zieltabelle ein.  
   
- Weitere Informationen zum Konfigurieren der Skriptkomponente für die Verwendung als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)und [erstellen einen asynchronen Die Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
+ Weitere Informationen zum Konfigurieren der Skript Komponente für die Verwendung als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)und [Erstellen einer asynchronen Transformation mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>So konfigurieren Sie dieses Skriptkomponentenbeispiel  
   
@@ -253,13 +253,14 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
 11. Wählen Sie auf der Seite **Eingabespalten** des **Transformations-Editors für Skripterstellung** die einzelne verfügbare Eingabespalte.  
   
-12. Auf der **Eingaben und Ausgaben** auf der Seite die **Transformations-Editor**, wählen Sie die Ausgabe 0, benennen Sie ihn in parentrecords um und legen Sie dessen `SynchronousInputID` auf "None". Erstellen Sie 2 Ausgabespalten:  
+12. Wählen Sie auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung die Option Ausgabe 0 aus, benennen Sie Sie in " `SynchronousInputID` Datensätze" um, und legen Sie Sie auf keine fest. Erstellen Sie 2 Ausgabespalten:  
   
     -   ParentID (der Primärschlüssel) vom Typ 4-Byte-Ganzzahl mit Vorzeichen [DT_I4]  
   
     -   ParentRecord vom Typ String [DT_STR] mit einer Länge von 32.  
   
-13. Erstellen Sie eine zweite Ausgabe, und nennen Sie sie ChildRecords. `SynchronousInputID` der neuen Ausgabe ist bereits auf Keine festgelegt. Erstellen Sie 3 Ausgabespalten:  
+13. Erstellen Sie eine zweite Ausgabe, und nennen Sie sie ChildRecords. 
+  `SynchronousInputID` der neuen Ausgabe ist bereits auf Keine festgelegt. Erstellen Sie 3 Ausgabespalten:  
   
     -   ChildID (der Primärschlüssel) vom Typ 4-Byte-Ganzzahl mit Vorzeichen [DT_I4]  
   
@@ -346,9 +347,9 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer synchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)  
  [Erstellen einer asynchronen Transformation mit der Skriptkomponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md)  
   

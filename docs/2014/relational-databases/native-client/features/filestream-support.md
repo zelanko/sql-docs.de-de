@@ -14,35 +14,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33e447048f7058ee81b0b144f0aa94a370f6d670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046262"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
-  Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen über die verbesserte FILESTREAM-Unterstützung finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
+  Die FILESTREAM-Funktion bietet eine Möglichkeit, große binäre Werte zu speichern und entweder über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder durch direkten Zugriff auf das Windows-Dateisystem darauf zuzugreifen. Ein großer Binärwert ist ein Wert, der größer als 2 Gigabyte (GB) ist. Weitere Informationen zur verbesserten FILESTREAM-Unterstützung finden Sie unter [FileStream &#40;SQL Server&#41;](../../blob/filestream-sql-server.md).  
   
  Wenn eine Datenbankverbindung geöffnet wird, wird `@@TEXTSIZE` standardmäßig auf -1 ("unbegrenzt") festgelegt.  
   
  Es ist auch möglich, mit Windows-Dateisystem-APIs auf FILESTREAM-Spalten zuzugreifen und diese zu aktualisieren.  
   
- Weitere Informationen finden Sie unter den folgenden Themen:  
+ Weitere Informationen finden Sie in den folgenden Themen:  
   
--   [FILESTREAM-Unterstützung &#40;OLE-DB&#41;](../ole-db/filestream-support-ole-db.md)  
+-   [FILESTREAM-Unterstützung &#40;OLE DB&#41;](../ole-db/filestream-support-ole-db.md)  
   
--   [FILESTREAM-Unterstützung &#40;ODBC&#41;](../odbc/filestream-support-odbc.md)  
+-   [FILESTREAM-Unterstützung &#40;ODBC-&#41;](../odbc/filestream-support-odbc.md)  
   
 -   [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>Abfragen von FILESTREAM-Spalten  
  Schemarowsets in OLE DB geben nicht an, ob eine Spalte eine FILESTREAM-Spalte ist. ITableDefinition in OLE DB kann nicht verwendet werden, um eine FILESTREAM-Spalte zu erstellen.  
   
- Katalogfunktionen z. B. SQLColumns in ODBC meldet, ob eine Spalte eine FILESTREAM-Spalte ist nicht auf.  
+ Katalog Funktionen wie SQLColumns in ODBC melden nicht, ob eine Spalte eine FILESTREAM-Spalte ist.  
   
- Um FILESTREAM-Spalten erstellen oder ermitteln, welche der vorhandenen Spalten FILESTREAM-Spalten sind, können Sie die `is_filestream` Spalte die [sys.columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) -Katalogsicht angezeigt.  
+ Zum Erstellen von FILESTREAM-Spalten oder zum erkennen, welche vorhandenen Spalten FILESTREAM-Spalten sind, `is_filestream` können Sie die-Spalte der [sys. Columns](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql) -Katalog Sicht verwenden.  
   
- Es folgt ein Beispiel:  
+ Dies ist ein Beispiel:  
   
 ```  
 -- Create a table with a FILESTREAM column.  
@@ -56,13 +56,13 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
 ```  
   
 ## <a name="down-level-compatibility"></a>Kompabilität mit früheren Versionen  
- Wenn Ihr Client kompiliert wurde, mit der Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, die Teil von [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)], `varbinary(max)` Verhalten ist kompatibel mit sein [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben.  
+ Wenn der Client mit der Version von Native Client [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kompiliert wurde, die im [!INCLUDE[ssVersion2005](../../../includes/sscurrent-md.md)]Lieferumfang `varbinary(max)` von enthalten war, wird [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]das Verhalten mit kompatibel sein. Das heißt, die Maximalgröße der zurückgegebenen Daten ist auf 2 GB beschränkt. Ergebniswerte, die größer als 2 GB sind, werden abgeschnitten, und es wird die Warnung „Zeichenfolgendaten werden rechts abgeschnitten“ zurückgegeben.  
   
  Wenn Datentypkompatibilität auf 80 festgelegt wird, ist das Clientverhalten mit dem Verhalten von Clients früherer Versionen konsistent.  
   
- Für Clients, die SQLOLEDB oder andere Anbieter, die vor der Veröffentlichung wurden die [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client `varbinary(max)` wird zugeordnet zu Bild.  
+ Für Clients, die SQLOLEDB oder andere Anbieter verwenden, die vor dem [!INCLUDE[ssVersion2005](../../../includes/ssnoversion-md.md)] Native Client frei `varbinary(max)` gegeben wurden, wird Image zugeordnet.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](sql-server-native-client-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  
   
   

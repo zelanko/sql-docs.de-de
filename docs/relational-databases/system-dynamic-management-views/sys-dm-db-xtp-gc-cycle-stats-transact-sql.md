@@ -1,5 +1,5 @@
 ---
-title: Sys. dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -21,36 +21,36 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026850"
 ---
-# <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
+# <a name="sysdm_db_xtp_gc_cycle_stats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Gibt den aktuellen Status von Transaktionen aus, durch die mindestens eine Zeile gelöscht und für die ein Commit ausgeführt wurde. Der Garbage Collection-Leerlaufthread wird einmal pro Minute ausgeführt oder wenn die Anzahl der DML-Transaktionen, für die ein Commit ausgeführt wurde, seit dem letzten Zyklus der Garbage Collection einen internen Schwellenwert überschreitet. Im Zyklus der Garbage Collection werden die Transaktionen, für die ein Commit ausgeführt wurde, in eine oder mehrere Warteschlangen verschoben, die unterschiedlichen Generierungen zugeordnet sind. Transaktionen, durch die veraltete Versionen generiert wurden, werden in einer Einheit von 16 Transaktionen gruppiert, die sich wie folgt über 16 Generierungen verteilen:  
   
--   Generierung 0: Speichert alle Transaktionen, die vor der ältesten aktiven Transaktion ein Commit ausgeführt. Von diesen Transaktionen generierte Zeilenversionen stehen sofort für die Garbage Collection zur Verfügung.  
+-   Generierung 0: Speichert alle Transaktionen, für die vor der ältesten aktiven Transaktion ein Commit ausgeführt wurde. Von diesen Transaktionen generierte Zeilenversionen stehen sofort für die Garbage Collection zur Verfügung.  
   
--   Generierungen 1-14: Speichert Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion. Die Zeilenversionen können nicht von der Garbage Collection bereinigt werden. Jede Generierung kann bis zu 16 Transaktionen enthalten. In den Generierungen können insgesamt 224 (14 * 16) Transaktionen gespeichert werden.  
+-   Generierungen 1-14: Speichern Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Zeilenversionen können nicht von der Garbage Collection bereinigt werden. Jede Generierung kann bis zu 16 Transaktionen enthalten. In den Generierungen können insgesamt 224 (14 * 16) Transaktionen gespeichert werden.  
   
--   Generierung 15: Die übrigen Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion, wechseln Sie zur Generierung 15. Die Anzahl der Transaktionen in Generierung 15 ist genauso wie bei Generierung 0 unbegrenzt.  
+-   Generierung 15: Enthält die übrigen Transaktionen, deren Zeitstempel nach der ältesten aktiven Transaktion liegt. Die Anzahl der Transaktionen in Generierung 15 ist genauso wie bei Generierung 0 unbegrenzt.  
   
  Bei unzureichendem Arbeitsspeicher wird der Hinweis auf die älteste aktive Transaktion vom Garbage Collection-Thread aggressiv aktualisiert, wodurch eine Garbage Collection erzwungen wird.  
   
  Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Spaltenname|Typ|Beschreibung|  
+|Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
-|cycle_id|**bigint**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
-|ticks_at_cycle_start|**bigint**|Takte, bei denen der Zyklus gestartet wurde.|  
-|ticks_at_cycle_end|**bigint**|Takte, bei denen der Zyklus beendet wurde.|  
-|base_generation|**bigint**|Der aktuelle Basisgenerierungswert in der Datenbank. Dieser entspricht dem Zeitstempel der ältesten aktiven Transaktion, mit dessen Hilfe Transaktionen für die Garbage Collection identifiziert werden. Die ID der ältesten aktiven Transaktion wird in Schritten von 16 aktualisiert. Wenn Sie Transaktions-Ids 124, 125, 126 haben z. B.... 139 lauten, beträgt der Wert 124. Wenn Sie eine weitere Transaktion, z. B. 140, hinzufügen, ist der Wert 140.|  
-|xacts_copied_to_local|**bigint**|Die Anzahl der Transaktionen, die aus der Transaktionspipeline in das Generierungsarray der Datenbank kopiert wurden.|  
-|xacts_in_gen_0- xacts_in_gen_15|**bigint**|Die Anzahl der Transaktionen in jeder Generierung.|  
+|cycle_id|**BIGINT**|Ein eindeutiger Bezeichner für den Zyklus der Garbage Collection.|  
+|ticks_at_cycle_start|**BIGINT**|Takte, bei denen der Zyklus gestartet wurde.|  
+|ticks_at_cycle_end|**BIGINT**|Takte, bei denen der Zyklus beendet wurde.|  
+|base_generation|**BIGINT**|Der aktuelle Basisgenerierungswert in der Datenbank. Dieser entspricht dem Zeitstempel der ältesten aktiven Transaktion, mit dessen Hilfe Transaktionen für die Garbage Collection identifiziert werden. Die ID der ältesten aktiven Transaktion wird in Schritten von 16 aktualisiert. Wenn Sie z. b. die Transaktions-IDs 124, 125, 126... 139, der Wert ist 124. Wenn Sie eine weitere Transaktion, z. B. 140, hinzufügen, ist der Wert 140.|  
+|xacts_copied_to_local|**BIGINT**|Die Anzahl der Transaktionen, die aus der Transaktionspipeline in das Generierungsarray der Datenbank kopiert wurden.|  
+|xacts_in_gen_0- xacts_in_gen_15|**BIGINT**|Die Anzahl der Transaktionen in jeder Generierung.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
@@ -91,7 +91,7 @@ cycle_id   ticks_at_cycle_start ticks_at_cycle_end   base_generation  xacts_in_g
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Eine Speicheroptimierte Tabelle dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be88f92c6dbf2a2fc0f04c3f29c54816174aafa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033633"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
@@ -57,7 +57,7 @@ ms.locfileid: "63033633"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert, dass der Benutzer der Besitzer der Tabelle oder indizierten Sicht oder ein Mitglied einer der folgenden Rollen ist: feste Serverrolle **sysadmin** , feste Datenbankrolle **db_owner** oder feste Datenbankrolle **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-statistics"></a>So erstellen Sie Statistiken  
   
@@ -69,15 +69,15 @@ ms.locfileid: "63033633"
   
 4.  Klicken Sie mit der rechten Maustaste auf den Ordner **Statistik**, und wählen Sie dann **New Statistics...** (Neue Statistiken…).  
   
-     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **Neue Statistik für Tabelle**_table_name_ angezeigt.  
+     Die folgenden Eigenschaften werden auf der Seite **Allgemein** im Dialogfeld **neue Statistik für Tabelle**_table_name_ angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
   
-     **Statistikname**  
+     **Statistik Name**  
      Zeigt den Namen des Datenbankobjekts an, in dem die Statistiken gespeichert sind.  
   
-     **Statistikspalten**  
+     **Statistik Spalten**  
      Dieses Raster zeigt die von dieser Gruppe von Statistiken beschriebenen Spalten an. Alle Werte im Raster sind schreibgeschützt.  
   
      **Name**  
@@ -89,16 +89,16 @@ ms.locfileid: "63033633"
      **Größe**  
      Zeigt jeweils die Größe des Datentyps für die einzelnen Spalten an.  
   
-     **Identität**  
+     **Identity**  
      Gibt eine Identitätsspalte an, wenn diese Option aktiviert ist.  
   
      **NULL-Werte zulassen**  
      Gibt an, ob die Spalte NULL-Werte annimmt.  
   
-     **Hinzufügen**  
+     **Add (Hinzufügen)**  
      Fügt dem Statistikraster zusätzliche Spalten aus der Tabelle hinzu.  
   
-     **Entfernen**  
+     **Remove**  
      Entfernt die ausgewählte Spalte aus dem Statistikraster.  
   
      **Nach oben**  
@@ -113,12 +113,12 @@ ms.locfileid: "63033633"
      **Statistiken für diese Spalten aktualisieren**  
      Aktivieren Sie diese Option, wenn die Statistiken beim Schließen des Dialogfelds aktualisiert werden sollen.  
   
-     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle**_table_name_ angezeigt.  
+     Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **neue Statistik für Tabelle**_table_name_ angezeigt.  
   
-     **Filterausdruck**  
-     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispiel: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     **Filter Ausdruck**  
+     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Zum Beispiel, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
-5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_table_name_ auf der Seite **Allgemein** auf **Hinzufügen**.  
+5.  Klicken Sie im Dialogfeld **neue Statistik für Tabelle**_table_name_ auf der Seite **Allgemein** auf **Hinzufügen**.  
   
      Die folgenden Eigenschaften werden im Dialogfeld **Spalten auswählen** angezeigt. Diese Informationen sind schreibgeschützt.  
   
@@ -131,21 +131,21 @@ ms.locfileid: "63033633"
      **Größe**  
      Zeigt jeweils die Größe des Datentyps für die einzelnen Spalten an.  
   
-     **Identität**  
+     **Identity**  
      Gibt eine Identitätsspalte an, wenn diese Option aktiviert ist.  
   
-     **Allow NULLs**  
+     **NULL-Werten zulassen**  
      Gibt an, ob die Spalte NULL-Werte annimmt.  
   
 6.  Aktivieren Sie im Dialogfeld **Spalten auswählen** das oder die Kontrollkästchen der einzelnen Spalten, für die Sie eine Statistik erstellen möchten, und klicken Sie auf **OK**.  
   
-7.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_table_name_ auf **OK**.  
+7.  Klicken Sie im Dialogfeld **neue Statistik für Tabelle**_table_name_ auf **OK**.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-statistics"></a>So erstellen Sie Statistiken  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

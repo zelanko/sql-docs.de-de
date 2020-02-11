@@ -18,27 +18,27 @@ ms.assetid: 510e24cf-0292-47a9-b1d9-71a30fef030f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c930a5eeae8bfdb7d952610fadc0b7d779033435
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68026671"
 ---
-# <a name="mspeerresponse-transact-sql"></a>MSpeer_response (Transact-SQL)
+# <a name="mspeer_response-transact-sql"></a>MSpeer_response (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Die **MSpeer_response** Tabelle wird in der Peer-zu-Peer-Replikation verwendet, um die Antwort jedes Knotens auf eine Veröffentlichung zu speichern. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
+  Die **MSpeer_response** Tabelle wird in der Peer-zu-Peer-Replikation verwendet, um die Antwort jedes Knotens auf eine Veröffentlichungsstatus Anforderung zu speichern. Diese Tabelle wird in der Veröffentlichungsdatenbank gespeichert.  
   
 ## <a name="definition"></a>Definition  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**request_id**|**int**|Identifiziert einen statusanforderungseintrag in der [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) Tabelle.|  
-|**Peer**|**sysname**|Der Peer, der die Antwort generiert hat.|  
+|**request_id**|**int**|Identifiziert einen Status Anforderungs Eintrag in der [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md) Tabelle.|  
+|**chtern**|**sysname**|Der Peer, der die Antwort generiert hat.|  
 |**peer_db**|**sysname**|Die Abonnementdatenbank auf dem Peer, der die Antwort generiert hat.|  
 |**received_date**|**datetime**|Datum und Uhrzeit des Empfangs der Peeranforderung.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikationstabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

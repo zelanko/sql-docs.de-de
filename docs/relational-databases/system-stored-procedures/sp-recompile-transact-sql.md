@@ -1,5 +1,5 @@
 ---
-title: Sp_recompile (Transact-SQL) | Microsoft-Dokumentation
+title: sp_recompile (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002564"
 ---
-# <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
+# <a name="sp_recompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Bewirkt, dass gespeicherte Prozeduren, Trigger und benutzerdefinierte Funktionen beim nächsten Ausführen erneut kompiliert werden. Dazu wird der vorhandene Plan aus dem Prozedurcache gelöscht, sodass beim nächsten Ausführen der Prozedur oder des Triggers das Erstellen eines neuen Plans erzwungen wird. In einer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]-Auflistung wird das Ereignis SP:CacheInsert anstelle des Ereignisses SP:Recompile protokolliert.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,19 +40,20 @@ sp_recompile [ @objname = ] 'object'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @objname=] '*Objekt*"  
- Der qualifizierte oder nicht qualifizierte Name einer gespeicherten Prozedur, eines Triggers, einer Tabelle, einer Sicht oder einer benutzerdefinierten Funktion in der aktuellen Datenbank. *Objekt* ist **nvarchar(776)** , hat keinen Standardwert. Wenn *Objekt* ist der Name der eine gespeicherte Prozedur, Trigger oder eine benutzerdefinierte Funktion, die gespeicherte Prozedur, Trigger und Funktion werden neu kompiliert. das nächste Mal, die es ausgeführt wird. Wenn *Objekt* ist der Name der Tabelle oder Sicht, die alle gespeicherten Prozeduren, Trigger und benutzerdefinierte Funktionen, die auf die Tabelle oder Sicht verweisen werden neu kompiliert. das nächste Mal, die sie ausgeführt werden.  
+ [ @objname= ] '*Object*'  
+ Der qualifizierte oder nicht qualifizierte Name einer gespeicherten Prozedur, eines Triggers, einer Tabelle, einer Sicht oder einer benutzerdefinierten Funktion in der aktuellen Datenbank. Das *Objekt* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. Wenn *Object* der Name einer gespeicherten Prozedur, eines Auslösers oder einer benutzerdefinierten Funktion ist, wird die gespeicherte Prozedur, der-Triggertyp oder die-Funktion beim nächsten Ausführen erneut kompiliert. Wenn *Object* der Name einer Tabelle oder Sicht ist, werden alle gespeicherten Prozeduren, Trigger oder benutzerdefinierten Funktionen, die auf die Tabelle oder Sicht verweisen, beim nächsten Ausführen erneut kompiliert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Zahl ungleich Null (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_recompile sucht nur in der aktuellen Datenbank nach einem Objekt.  
   
  Die Abfragen, die von gespeicherten Prozeduren, Triggern oder benutzerdefinierten Funktionen durchgeführt werden, werden nur bei der Prozedur- oder Triggerkompilierung optimiert. Wenn Sie Indizes bearbeiten oder andere Änderungen an der Datenbank vornehmen, die sich auf Statistiken beziehen, kann dies die Effizienz von gespeicherten Prozeduren, Triggern und benutzerdefinierten Funktionen beeinträchtigen. Durch das erneute Kompilieren der gespeicherten Prozeduren und Trigger, die auf eine Tabelle zugreifen, können solche Abfragen wieder optimiert werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompiliert gespeicherte Prozeduren, Trigger und benutzerdefinierten Funktionen automatisch neu, wenn dies von Vorteil ist.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kompiliert gespeicherte Prozeduren, Trigger und benutzerdefinierten Funktionen automatisch neu, wenn dies von Vorteil ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für das angegebene Objekt.  
@@ -67,8 +68,8 @@ EXEC sp_recompile N'Sales.Customer';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [CREATE PROCEDURE &#40;Transact-SQL-&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

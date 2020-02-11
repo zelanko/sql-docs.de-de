@@ -19,16 +19,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035665"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
-  Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen auf einer Serverinstanz werden in der **Sys. server_principals** -Katalogsicht und die **sys.syslogins** -kompatibilitätssicht angezeigt.  
+  Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen auf einer Serverinstanz werden in der **sys. server_principals** -Katalog Sicht und in der **sys. syslogins** -Kompatibilitäts Sicht angezeigt.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verwenden für den Zugriff auf die einzelnen Datenbanken einen Datenbankbenutzer, der dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zugeordnet ist. Es gibt jedoch zwei Ausnahmen:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verwenden für den Zugriff auf die einzelnen Datenbanken einen Datenbankbenutzer, der dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zugeordnet ist. Es gibt jedoch zwei Ausnahmen:  
   
 -   Das Gastkonto.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "63035665"
  Ein Datenbankbenutzer, für den ein entsprechender [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename auf einer Serverinstanz nicht oder falsch definiert ist, kann sich bei der Instanz nicht anmelden. Diese Benutzer werden als *verwaiste Benutzer* der Datenbank dieser Serverinstanz bezeichnet. Ein Datenbankbenutzer kann zu einem verwaisten Benutzer werden, wenn der entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename gelöscht wird. Ein Datenbankbenutzer kann auch dann zu einem verwaisten Benutzer werden, wenn die Datenbank auf einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz wiederhergestellt oder an eine andere SQL Server-Instanz angefügt wird. Verwaisungen treten auf, wenn der Datenbankbenutzer einer SID zugeordnet wird, die auf der neuen Serverinstanz nicht vorhanden ist.  
   
 > [!NOTE]  
->  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldung kann nicht zugegriffen werden eine Datenbank, in dem es einen entsprechenden Datenbankbenutzer fehlt, es sei denn, **Gast** in dieser Datenbank aktiviert ist. Weitere Informationen zum Erstellen einer Datenbank-Benutzerkonto, finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
+>  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Name kann nicht auf eine Datenbank zugreifen, in der er keinen entsprechenden Datenbankbenutzer besitzt, es sei denn, der **Gast** ist in dieser Datenbank Weitere Informationen zum Erstellen eines Datenbank-Benutzerkontos finden Sie unter [Create User &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## <a name="to-detect-orphaned-users"></a>So ermitteln Sie verwaiste Benutzer  
  Zum Ermitteln von verwaisten Benutzern führen Sie die folgenden Transact-SQL-Anweisungen aus:  
@@ -55,15 +56,15 @@ sp_change_users_login @Action='Report';
 GO;  
 ```  
   
- Die Ausgabe führt alle Benutzer der aktuellen Datenbank auf, die mit keinem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft sind, sowie die entsprechenden SIDs (Sicherheits-IDs). Weitere Informationen finden Sie unter [Sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
+ Die Ausgabe führt alle Benutzer der aktuellen Datenbank auf, die mit keinem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verknüpft sind, sowie die entsprechenden SIDs (Sicherheits-IDs). Weitere Informationen finden Sie unter [sp_change_users_login &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
 > [!NOTE]  
->  **Sp_change_users_login** kann nicht verwendet werden, mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen, die von Windows erstellt werden.  
+>  **sp_change_users_login** kann nicht mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen verwendet werden, die aus Windows erstellt wurden.  
   
 ## <a name="to-resolve-an-orphaned-user"></a>So lösen Sie einen verwaisten Benutzer auf  
  Zum Auflösen eines verwaisten Benutzers führen Sie folgende Prozedur aus:  
   
-1.  Der folgende Befehl serveranmeldekonto der gemäß *< Login_name >* mit dem Datenbankbenutzer gemäß *< Database_user >*.  
+1.  Mit dem folgenden Befehl wird das von *<login_name>* angegebene Server Anmelde Konto erneut mit dem Datenbankbenutzer verknüpft, der durch *<database_user>* angegeben wurde.  
   
     ```  
     USE <database_name>;  
@@ -73,9 +74,9 @@ GO;
   
     ```  
   
-     Weitere Informationen finden Sie unter [Sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
+     Weitere Informationen finden Sie unter [sp_change_users_login &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql).  
   
-2.  Nachdem Sie den im letzten Schritt angegebenen Code ausgeführt haben, kann der Benutzer wieder auf die Datenbank zugreifen. Der Benutzer kann dann das Kennwort des Ändern der *< Login_name >* Anmeldekonto mit den **Sp_password** gespeicherte Prozedur wie folgt:  
+2.  Nachdem Sie den im letzten Schritt angegebenen Code ausgeführt haben, kann der Benutzer wieder auf die Datenbank zugreifen. Der Benutzer kann dann das Kennwort des *<login_name>* Anmelde Kontos mithilfe der gespeicherten Prozedur **sp_password** wie folgt ändern:  
   
     ```  
     USE master   
@@ -88,18 +89,18 @@ GO;
     >  Nur Anmeldenamen mit der Berechtigung ALTER ANY LOGIN können auch die Kennwörter von anderen Benutzernamen ändern. Allerdings können die Kennwörter von Mitgliedern der **sysadmin** -Rolle nur von Mitgliedern der **sysadmin** -Rolle geändert werden.  
   
     > [!NOTE]  
-    >  **Sp_password** kann nicht verwendet werden, für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konten. Benutzer, die über das Windows-Netzwerkkonto eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, werden durch Windows authentifiziert. Deshalb können ihre Kennwörter nur unter Windows geändert werden.  
+    >  **sp_password** können nicht für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konten verwendet werden. Benutzer, die über das Windows-Netzwerkkonto eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen, werden durch Windows authentifiziert. Deshalb können ihre Kennwörter nur unter Windows geändert werden.  
   
-     Weitere Informationen finden Sie unter [Sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
+     Weitere Informationen finden Sie unter [sp_password &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql).  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql)   
- [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)   
- [sp_change_users_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   
- [sp_addlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
- [sp_grantlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
- [sp_password &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
- [sys.sysusers &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
- [sys.syslogins &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines Benutzer &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-user-transact-sql)   
+ [Erstellen der Anmeldung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-login-transact-sql)   
+ [sp_change_users_login &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-change-users-login-transact-sql)   
+ [sp_addlogin &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogin-transact-sql)   
+ [sp_grantlogin &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-grantlogin-transact-sql)   
+ [sp_password &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-password-transact-sql)   
+ [sys. sysusers &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/sys-sysusers-transact-sql)   
+ [sys. syslogins &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/sys-syslogins-transact-sql)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038361"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX-Datendefinition – CREATE SESSION CUBE
@@ -82,7 +82,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 ```  
   
-## <a name="syntax-elements"></a>Syntaxelemente  
+## <a name="syntax-elements"></a>Syntax Elemente  
  session_cube_name  
  Der Name des Sitzungscubes.  
   
@@ -101,16 +101,16 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  Der Name der Dimension im Sitzungscube.  
   
- VON \<dim from-Klausel >  
+ From \<Dim from-Klausel>  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
  NOT_RELATED_TO_FACTS  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
- \<Typ der Ebene >  
+ \<> der Ebene  
  Nur für die abgeleitete Dimensionsdefinition gültige Angabe.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Im Gegensatz zu einem Servercube und einem lokalen Cube wird ein Sitzungscube nur für die Sitzung persistent gespeichert, in der der Sitzungscube erstellt wurde. Ein Sitzungscube wird anhand der Measures und Definitionen definiert, durch die er definiert wird. Es gibt zwei Typen von Dimensionen.  
   
 -   Quelldimensionen – Hierbei handelt es sich um Dimensionen, die Teil eines oder mehrerer Quellcubes waren.  
@@ -124,7 +124,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
   
 -   Im Sitzungscube vorhandene Dimensionen entfernen  
   
--   Fügen Sie hinzu oder entfernen Sie die Hierarchien einer Dimension.  
+-   Fügen Sie Hierarchien aus einer Dimension hinzu oder entfernen Sie Sie.  
   
 -   Measuregruppen oder bestimmte Measures entfernen  
   
@@ -198,8 +198,8 @@ CREATE SESSION CUBE [Adventure Works_XL_GROUPING1]
    )  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Datendefinitionsanweisungen &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
- [CREATE GLOBAL CUBE-Anweisung &#40;MDX&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Daten Definitions Anweisungen &#40;MDX-&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
+ [Create Global CUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-global-cube.md)  
   
   

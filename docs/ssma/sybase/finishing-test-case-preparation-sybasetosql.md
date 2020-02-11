@@ -1,5 +1,5 @@
 ---
-title: Abschluss der Vorbereitung für Testfälle (SybaseToSQL) | Microsoft-Dokumentation
+title: Fertigstellung der Test Fall Vorbereitung (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,53 +12,53 @@ ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c3085d17804866015a78e93556dd5373d3a1b8cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68029142"
 ---
 # <a name="finishing-test-case-preparation-sybasetosql"></a>Beenden der Vorbereitung für Testfälle (SybaseToSQL)
-Letzte Seite des Assistenten zeigt die testsituationsbeschreibung und Informationen zu Objekten, die am Test Beteiligter. Darüber hinaus können auf dieser Seite Sie den Test Ausführungsoptionen festlegen.  
+Auf der letzten Seite des Assistenten werden die Test Fallbeschreibung und Informationen zu den am Test beteiligten Objekten angezeigt. Außerdem können Sie auf dieser Seite die Test Ausführungs Optionen festlegen.  
   
-Die **Testfall Informationen** Abschnitt wird gezeigt, Testfall-Name und Beschreibung.  
+Der Abschnitt " **Test Fall Informationen** " zeigt den Namen und die Beschreibung des Testfalls an.  
   
-Die **Testobjekte** Abschnitt enthält eine benannte Liste getesteter Objekte, gruppiert nach Objekttyp.  
+Der Abschnitt " **Test Objekte** " enthält die benannte Liste getesteter Objekte, die nach Objekttyp gruppiert sind.  
   
-Die **betroffene Objekte zu analysierenden** Abschnitt zeigt die benannte Liste der Objekte, welche datenänderungen nach der Ausführung des getesteten Objekte verglichen werden soll.  
+Im Abschnitt **Betroffene Objekte, die analysiert werden** sollen, wird die benannte Liste der Objekte angezeigt, die nach der Ausführung getesteter Objekte mit Datenänderungen verglichen werden sollen.  
   
-## <a name="test-case-settings"></a>Testfall-Einstellungen  
-In der **Testfall Einstellungen** Abschnitt können Sie die Ausführung der folgenden Testoptionen festlegen:  
+## <a name="test-case-settings"></a>Test Fall Einstellungen  
+Im Abschnitt **Test Fall Einstellungen** können Sie die folgenden Ausführungs Test Optionen festlegen:  
   
-### <a name="stop-test-execution-after-first-failure"></a>Ausführung von Tests nach dem ersten Fehler beenden  
-Gibt an, um den Test zu unterbrechen, wenn ein Fehler, während der testausführung auftritt.  
+### <a name="stop-test-execution-after-first-failure"></a>Testausführung nach dem ersten Fehler beendet  
+Gibt an, dass der Test unterbricht, wenn während der Testausführung ein Fehler auftritt.  
   
--   Auf Wunsch **Ja**, testen Sie die Ausführung wird ein, wenn ein Fehler auftritt.  
+-   Wenn Sie **Ja**auswählen, wird die Testausführung unterbrochen, wenn ein Fehler auftritt.  
   
--   Auf Wunsch **keine**, testausführung wird nach einem Fehler fortgesetzt.  
+-   Wenn Sie **Nein**auswählen, wird die Testausführung nach einem Fehler fortgesetzt.  
   
-### <a name="perform-data-rollback"></a>Ausführen von Rollbacks für Daten  
-Aktivieren Sie automatische Rollback, nach der Ausführung des Tests.  
+### <a name="perform-data-rollback"></a>Ausführen eines Daten Rollbacks  
+Aktivieren des automatischen Daten Rollbacks nach der Testausführung.  
   
--   Auf Wunsch **Ja**, datenänderungen nach der Ausführung des Tests, verloren.  
+-   Wenn Sie **Ja**auswählen, gehen Datenänderungen nach der Ausführung des Tests verloren.  
   
--   Auf Wunsch **keine**, alle testausführung datenänderungen werden gespeichert.  
+-   Wenn Sie **Nein**auswählen, werden alle Änderungen an der Test Ausführungsdaten gespeichert.  
   
-### <a name="auxiliary-tables-saving-mode"></a>Erweiterungstabellen Modus speichern  
-Definiert den speichern für Hilfstabellen erstellt während der testausführung. Siehe die Beschreibung der Erweiterungstabellen in der [Ausführen von Testfällen &#40;SybaseToSQL&#41; ](../../ssma/sybase/running-test-cases-sybasetosql.md) Thema.  
+### <a name="auxiliary-tables-saving-mode"></a>Speicher Modus für Hilfstabellen  
+Definiert den Speicher Modus für die während der Testausführung erstellten Hilfstabellen. Weitere Informationen finden Sie in der Beschreibung der Erweiterungs Tabellen im Thema [Ausführen von Test Fällen &#40;sybaseto SQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md) .  
   
--   Bei Auswahl von **immer speichern**, Erweiterungstabellen Daten immer zur späteren Verwendung gespeichert werden.  
+-   Wenn Sie **immer speichern**auswählen, werden die Daten der zusätzlichen Tabelle immer zur späteren Verwendung gespeichert.  
   
--   Bei Auswahl von **speichern, wenn die Tabelle Vergleich fehlgeschlagen**, nur dann, wenn ein Fehler tritt auf, Erweiterungstabellen Daten gespeichert werden.  
+-   Wenn Sie speichern auswählen, **Wenn beim Tabellenvergleich**ein Fehler aufgetreten ist, werden die Daten der zusätzlichen Tabelle nur dann gespeichert, wenn ein Fehler auftritt.  
   
--   Bei Auswahl von **immer löschen**, Erweiterungstabellen immer gelöscht werden, nach der Ausführung des Tests.  
+-   Wenn Sie **immer löschen**auswählen, werden zusätzliche Tabellen nach der Ausführung des Tests immer gelöscht.  
   
--   Bei Auswahl von **Benutzer bitten, wenn Tabelle Vergleich fehlgeschlagen ist**, der Benutzer kann die erforderlichen Aktionen auswählen, wenn ein Fehler auftritt.  
+-   Wenn Sie bei **fehlgeschlagenen Tabellen vergleichen die Option Benutzer anfordern**auswählen, kann der Benutzer die erforderliche Aktion auswählen, wenn ein Fehler auftritt.  
   
-Klicken Sie auf die **Fertig stellen** Schaltfläche zum Speichern des vorbereiteten Testfalls in [mithilfe von Test Repositories &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md).  
+Klicken Sie auf die Schaltfläche **Fertig** stellen, um den vorbereiteten Testfall in [mithilfe von Test Depots &#40;Sybase&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
-[Using Test Repositories &#40;SybaseToSQL&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
-[Ausführen von Testfällen &#40;SybaseToSQL&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
-[Testen von migrierten Datenbankobjekten &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Verwenden von Test Depots &#40;Sybase&#41;](../../ssma/sybase/using-test-repositories-sybasetosql.md)  
+[Ausführen von Test Fällen &#40;sybaseto SQL-&#41;](../../ssma/sybase/running-test-cases-sybasetosql.md)  
+[Testen von migrierten Datenbankobjekten &#40;sybaseto SQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

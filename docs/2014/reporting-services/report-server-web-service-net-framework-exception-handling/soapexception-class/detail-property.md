@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27d9d7ab4cd29c6eb0ea7ae1c6bddbe8c1b7ef06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046006"
 ---
 # <a name="detail-property"></a>Detail-Eigenschaft
   Die **Detail**-Eigenschaft der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] **SoapException**-Klasse verfügt über folgende XML-Struktur:  
   
 ## <a name="elements"></a>Elemente  
- **Detail**  
+ **Einzelnen**  
  Das Element der obersten Ebene, das alle anderen Fehlerdetailelemente enthält.  
   
  **ErrorCode**  
@@ -33,45 +33,45 @@ ms.locfileid: "63046006"
  **HttpStatus**  
  Der HTTP-Statuscode.  
   
- **MessageBox**  
+ **Meldung**  
  Die Fehlermeldung und der Fehlercode, die vom Berichtsserver zugewiesen werden.  
   
  **HelpLink**  
  Die HelpLink-URL zu einer Website, unter der weitere Informationen zum Fehler zur Verfügung stehen. Weitere Informationen finden Sie unter [HelpLink-Element](helplink-element.md).  
   
- **LinkID**  
+ **LinkId**  
  Die dem Link zugewiesene ID.  
   
  **ProductName**  
  Der Name des Produkts. Der Standardwert ist **Microsoft SQL Server Reporting Services**.  
   
  **ProductVersion**  
- Die Version von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die maximale Länge beträgt 15 Zeichen. Das Format der Versionsnummer sollte folgendermaßen aussehen: 8.00.0xxx.00.  
+ Die Version von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Die maximale Länge beträgt 15 Zeichen. Das Format der Versionsnummer sollte folgendermaßen sein: 8.00.0xxx.00.  
   
- **ProductLocaleId**  
+ **Productlocaleid**  
  Die Gebietsschema- oder Sprach-ID der INTL DLL (z.B. 0x41A) der Anwendung.  
   
  **OperatingSystem**  
  Das Betriebssystem, auf dem [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] installiert ist. Gültige Werte sind: **0** für betriebssystemunabhängig, **1** für [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)] und **16** für Windows XP.  
   
- **CountryLocaleId**  
+ **Countrylocaleid**  
  Die Gebietsschema- oder Sprach-ID des Betriebssystems. Der Wert für die französische Version von Windows kann z. B. "0x040c" sein.  
   
  **MoreInformation**  
  Eine XML-Zeichenfolge, die geschachtelte Ausnahmen enthält, die während der Ausführung der Methode aufgetreten sind.  
   
- **Quelle**  
+ **`Source`**  
  Ein untergeordnetes Element von **MoreInformation**. Die Ursache des Fehlers.  
   
- **MessageBox**  
+ **Meldung**  
  Ein untergeordnetes Element von **MoreInformation**. Die Fehlermeldung einer verschachtelten Ausnahme. Dieses Element enthält XML-Attribute für **ErrorCode** und **HelpLink**.  
   
  **Warnungen**  
  Eine XML-Zeichenfolge, die die von der Berichtsverarbeitung zurückgegebenen Warnungen enthält.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Introducing Exception Handling in Reporting Services (Einführung in die Ausnahmebehandlung in Reporting Services)](../introducing-exception-handling-in-reporting-services.md)   
- [SoapException-Klasse von Reporting Services](reporting-services-soapexception-class.md)   
+ [Reporting Services SoapException-Klasse](reporting-services-soapexception-class.md)   
  [Using the Detail Property to Handle Specific Errors (Verwenden der Detail-Eigenschaft zur Handhabung bestimmter Fehler)](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

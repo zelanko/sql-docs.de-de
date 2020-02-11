@@ -1,5 +1,5 @@
 ---
-title: Data Migration Report (OracleToSQL) | Microsoft-Dokumentation
+title: Daten Migrationsbericht (oracledesql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -11,37 +11,37 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264252"
 ---
 # <a name="data-migration-report--oracletosql"></a>Bericht zur Datenmigration (OracleToSQL)
-Die **Data Migration Report** Dialogfeld wird angezeigt, nach dem Migrieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migriert haben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
 **Status**  
-Zeigt den Status der Datenmigration aus der Quelldatenbank in die Zieldatenbank.  
+Zeigt den Status der Datenmigration von der Quell-zur Zieldatenbank an.  
   
-**From**  
-Die Quelltabelle.  
+**Von**  
+Die Quell Tabelle.  
   
-**Aktion**  
-Die Zieltabelle.  
+**An**  
+Die Ziel Tabelle.  
   
 **Gesamtanzahl der Zeilen**  
-Die Anzahl von Zeilen mit Daten in der Quelltabelle.  
+Die Anzahl der Daten Zeilen in der Quell Tabelle.  
   
-**Anzahl der erfolgreich migrierte Zeilen**  
-Die Anzahl von Zeilen mit Daten wurden erfolgreich in die Zieltabelle migriert.  
+**Anzahl der erfolgreich migrierten Zeilen**  
+Die Anzahl der Daten Zeilen, die erfolgreich in die Ziel Tabelle migriert wurden.  
   
 **Verhältnis**  
-Der Prozentsatz der Zeilen wurden erfolgreich migriert.  
+Der Prozentsatz der erfolgreich migrierten Zeilen.  
   
 **Details**  
-Wenn Fehler bei der Datenmigration, klicken Sie auf, um Details zur Migration für die ausgewählte Zeile im Bericht angezeigt. SSMA wird die Ursache des Fehlers angezeigt.  
+Wenn eine Datenmigration fehlgeschlagen ist, klicken Sie auf diese Option, um die Migrations Details für die ausgewählte Zeile im Bericht anzuzeigen. SSMA zeigt den Grund für den Fehler an.  
   
 **Bericht speichern**  
-Speichert den Bericht ein. CSV (durch Trennzeichen getrennte Werte)-Datei, die Verwendung von Microsoft Excel untersucht werden kann.  
+Speichert den Bericht in einer. CSV-Datei (durch Trennzeichen getrennte Werte), die mithilfe von Microsoft Excel untersucht werden kann.  
   

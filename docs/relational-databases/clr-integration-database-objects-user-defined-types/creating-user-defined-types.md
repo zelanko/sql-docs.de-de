@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0feb8b08-4062-467b-8433-e88e4e302738
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 3f08067c55110b801cd989e0be1c9fbc6955cb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54aa7db3d2c2ea0d268874f0d59c3096b8e1a0ae
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028268"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76911084"
 ---
 # <a name="creating-user-defined-types"></a>Erstellen benutzerdefinierter Typen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Um einen benutzerdefinierten Typ (User-Defined Type, UDT) zu erstellen, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden kann, müssen Sie zuerst in einer der unterstützten .NET Framework-Programmiersprachen, z. B. Visual C# oder Visual Basic, eine Klasse definieren, die den Spezifikationen für die Erstellung von UDTs entspricht. Die Klasse kann dann in eine DLL (Dynamic Link Library) kompiliert werden, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden kann. Sie können UDTs auch mit Visual Studio erstellen und bereitstellen.  
   
- Die Funktion zum Ausführen von CLR-Code (Common Language Runtime) ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig deaktiviert. Die CLR kann aktiviert werden, mithilfe der **Sp_configure** gespeicherte Systemprozedur, wie im folgenden gezeigt [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen:  
+ Die Funktion zum Ausführen von CLR-Code (Common Language Runtime) ist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig deaktiviert. Die CLR kann mithilfe der gespeicherten System Prozedur **sp_configure** aktiviert werden, wie in den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen gezeigt:  
   
 ```  
 sp_configure 'clr enabled', 1  
@@ -40,9 +40,9 @@ Reconfigure
  Veranschaulicht Programmiertechniken, die bei der Erstellung benutzerdefinierter Typen relevant sind.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Codelisting definiert den UDT Point, das ausführlich beschrieben wird [Codieren benutzerdefinierter Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  
+ Das folgende Codelisting definiert den Point-UDT, der im Abschnitt " [Codieren von benutzerdefinierten Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)" ausführlich beschrieben wird.  
   
- Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anweisungen zum Installieren dieser Beispiele finden Sie [Beispiele für SQL Server-Datenbank-Engine](https://msftengprodsamples.codeplex.com/).  
+ Sie erhalten den vollständigen Code für die anderen in diesem Abschnitt beschriebenen Beispiele, wenn Sie die CLR-Beispiele installieren. Anweisungen zum Installieren dieser Beispiele finden Sie unter [SQL Server Datenbank-Engine Beispiele](https://msftengprodsamples.codeplex.com/).  
   
  C#  
   
@@ -84,7 +84,7 @@ public struct Point : INullable
     public override string ToString()  
     {  
         // Since InvokeIfReceiverIsNull defaults to 'true'  
-        // this test is unneccesary if Point is only being called  
+        // this test is unnecessary if Point is only being called  
         // from SQL.  
         if (this.IsNull)  
             return "NULL";  
@@ -233,7 +233,7 @@ Imports System.Text
     ' Use StringBuilder to provide string representation of UDT.  
     Public Overrides Function ToString() As String  
         ' Since InvokeIfReceiverIsNull defaults to 'true'  
-        ' this test is unneccesary if Point is only being called  
+        ' this test is unnecessary if Point is only being called  
         ' from SQL.  
         If Me.IsNull Then  
             Return "NULL"  
@@ -330,7 +330,7 @@ Imports System.Text
 End Structure  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Typen](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

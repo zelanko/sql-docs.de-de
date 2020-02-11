@@ -1,5 +1,5 @@
 ---
-title: DISTINCT (MDX) | Microsoft-Dokumentation
+title: Verschieden (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 283f1c10f4030ea2efc23ee237a61b402cefb396
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999900"
 ---
 # <a name="distinct-mdx"></a>Distinct (MDX)
@@ -31,8 +31,8 @@ Distinct(Set_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die **Distinct** Funktion findet doppelte Tupel in der angegebenen Menge, die Funktion speichert nur die erste Instanz des doppelten Tupels ohne Beeinträchtigung der Reihenfolge des Satzes.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn die unter **schiedliche** Funktion doppelte Tupel in der angegebenen Menge findet, behält die Funktion nur die erste Instanz des doppelten Tupels bei, wobei die Reihenfolge der Gruppe intakt bleibt.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Beispielabfrage zeigt die Verwendung der Distinct-Funktion mit einer benannten Menge, sowie mit der Count-Funktion, um die Anzahl verschiedener Tupel in einer Menge zu finden:  
@@ -59,7 +59,7 @@ Distinct(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,13 +17,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022202"
 ---
-# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
+# <a name="ibm-db2-subscribers"></a>IBM DB2-Abonnenten
+  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Pushabonnements für IBM DB2/AS 400, DB2/MVS und DB2/Universal Database über die OLE DB-Anbieter, die mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration-Server bereitgestellt werden.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Konfigurieren eines IBM DB2-Abonnenten  
@@ -62,7 +63,7 @@ ms.locfileid: "63022202"
   
      Skripts können aus verschiedenen Gründen geändert werden, der häufigste Grund ist jedoch das Ändern von Datentypzuordnungen. Weitere Informationen dazu finden Sie unter den Überlegungen zu Datentypänderungen in diesem Thema. Wenn Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript ändern, sollten sich Änderungen ausschließlich auf Datentypzuordnungen beziehen (und das Skript darf keine Kommentare enthalten). Wenn weit reichendere Änderungen erforderlich sind, erstellen Sie ein DB2-Skript.  
   
-     **So ändern Sie ein Artikelskript und stellen Sie es als benutzerdefiniertes Erstellungsskript bereit**  
+     **So ändern Sie ein Artikel Skript und stellen Sie es als benutzerdefiniertes Erstellungs Skript bereit**  
   
     1.  Nachdem die Momentaufnahme für die Veröffentlichung generiert wurde, wechseln Sie in den Momentaufnahmeordner für die Veröffentlichung.  
   
@@ -74,7 +75,7 @@ ms.locfileid: "63022202"
   
     5.  Führen Sie sp_changearticle aus, wobei Sie den Dateipfad und den Namen für die Eigenschaft *creation_script* angeben. Weitere Informationen finden Sie unter [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
-     **So erstellen Sie ein Artikelskript und stellen Sie es als benutzerdefiniertes Erstellungsskript bereit**  
+     **So erstellen Sie ein Artikel Skript und stellen Sie es als benutzerdefiniertes Erstellungs Skript bereit**  
   
     1.  Erstellen Sie mit dem DB2 SQL-Dialekt ein Artikelskript. Stellen Sie sicher, dass **bypass_translation**die erste Zeile in der Datei ist und nichts sonst in der Zeile steht.  
   
@@ -112,47 +113,47 @@ ms.locfileid: "63022202"
 |`datetimeoffset(0-7)`|VARCHAR(34)|  
 |`decimal(1-31, 0-31)`|DECIMAL(1-31, 0-31)|  
 |`decimal(32-38, 0-38)`|VARCHAR(41)|  
-|`float(53)`|DOUBLE|  
+|`float(53)`|Double|  
 |`float`|GLEITKOMMAZAHL|  
 |`geography`|IMAGE|  
 |`geometry`|IMAGE|  
 |`hierarchyid`|IMAGE|  
-|`image`|VARCHAR(0) FÜR BIT-DATEN<sup>1</sup>|  
+|`image`|Varchar (0) für Bit-Daten<sup>1</sup>|  
 |`into`|INT|  
 |`money`|DECIMAL(19,4)|  
 |`nchar(1-4000)`|VARCHAR(1-4000)|  
-|`ntext`|VARCHAR(0)<sup>1</sup>|  
+|`ntext`|Varchar (0)<sup>1</sup>|  
 |`numeric(1-31, 0-31)`|DECIMAL(1-31,0-31)|  
 |`numeric(32-38, 0-38)`|VARCHAR(41)|  
 |`nvarchar(1-4000)`|VARCHAR(1-4000)|  
-|`nvarchar(max)`|VARCHAR(0)<sup>1</sup>|  
+|`nvarchar(max)`|Varchar (0)<sup>1</sup>|  
 |`real`|real|  
 |`smalldatetime`|timestamp|  
 |`smallint`|SMALLINT|  
 |`smallmoney`|DECIMAL(10,4)|  
-|`sql_variant`|Nicht zutreffend|  
+|`sql_variant`|–|  
 |`sysname`|VARCHAR(128)|  
-|`text`|VARCHAR(0)<sup>1</sup>|  
+|`text`|Varchar (0)<sup>1</sup>|  
 |`time(0-7)`|VARCHAR(16)|  
 |`timestamp`|CHAR(8) FOR BIT DATA|  
 |`tinyint`|SMALLINT|  
 |`uniqueidentifier`|CHAR(38)|  
 |`varbinary(1-8000)`|VARCHAR(1-8000) FOR BIT DATA|  
 |`varchar(1-8000)`|VARCHAR(1-8000)|  
-|`varbinary(max)`|VARCHAR(0) FÜR BIT-DATEN<sup>1</sup>|  
-|`varchar(max)`|VARCHAR(0)<sup>1</sup>|  
-|`xml`|VARCHAR(0)<sup>1</sup>|  
+|`varbinary(max)`|Varchar (0) für Bit-Daten<sup>1</sup>|  
+|`varchar(max)`|Varchar (0)<sup>1</sup>|  
+|`xml`|Varchar (0)<sup>1</sup>|  
   
- <sup>1</sup> finden Sie im nächsten Abschnitt Weitere Informationen zu den Zuordnungen zu VARCHAR(0).  
+ <sup>1</sup> Weitere Informationen zu Zuordnungen zu varchar (0) finden Sie im nächsten Abschnitt.  
   
 ### <a name="data-type-mapping-considerations"></a>Überlegungen zur Datentypzuordnung  
  Berücksichtigen Sie die folgenden Überlegungen zur Datentypzuordnung beim Replizieren auf DB2-Abonnenten:  
   
--   Beim Zuordnen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen `char`, `varchar`, `binary` und `varbinary` zu den DB2-Datentypen CHAR, VARCHAR, CHAR FOR BIT DATA bzw. VARCHAR FOR BIT DATA wird bei der Replikation die Länge des DB2-Datentyps auf die Länge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Typs festgelegt.  
+-   Beim Mapping [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char`von `varchar`, `binary` und `varbinary` zu DB2 Char, varchar, char for Bit Data bzw. varchar for Bit Data wird von der Replikation die Länge des DB2-Datentyps auf den Wert des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Typs festgelegt.  
   
      Dadurch kann die Tabelle erfolgreich auf dem Abonnenten erstellt werden, sofern die Einschränkung der DB2-Seitengröße die maximale Größe der Zeile zulässt. Stellen Sie sicher, dass die für den Zugriff auf die DB2 verwendete Anmeldung über die Berechtigungen verfügt, um auf Tabellenbereiche von ausreichender Größe für die auf DB2 zu replizierenden Tabellen zugreifen zu können.  
   
--   DB2 unterstützt VARCHAR-Spalten bis zu 32 KB. Deshalb können einige LOB-Spalten (Large Object) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnungsgemäß VARCHAR-Spalten von DB2 zugeordnet werden. Der von der Replikation für DB2 verwendete OLE DB-Anbieter unterstützt jedoch keine Zuordnung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB zu DB2-LOB. Deshalb werden die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Spalten für die Datentypen `text`, `varchar(max)`, `ntext` und `nvarchar(max)` in den generierten Erstellungsskripts VARCHAR(0) zugeordnet. Der Längenwert 0 muss in einen ordnungsgemäßen Wert geändert werden, bevor das Skript auf den Abonnenten angewendet wird. Wird die Länge des Datentyps nicht geändert, löst DB2 Fehler 604 bei dem Versuch der Tabellenerstellung auf dem DB2-Abonnenten aus (Fehler 604 bedeutet, dass das Genauigkeits- oder Längenattribut des Datentyps ungültig ist).  
+-   DB2 unterstützt VARCHAR-Spalten bis zu 32 KB. Deshalb können einige LOB-Spalten (Large Object) von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordnungsgemäß VARCHAR-Spalten von DB2 zugeordnet werden. Der von der Replikation für DB2 verwendete OLE DB-Anbieter unterstützt jedoch keine Zuordnung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB zu DB2-LOB. Aus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `text`diesem Grund werden die `varchar(max)`Spalten `ntext`,, `nvarchar(max)` und in den generierten CREATE-Skripts varchar (0) zugeordnet. Der Längenwert 0 muss in einen ordnungsgemäßen Wert geändert werden, bevor das Skript auf den Abonnenten angewendet wird. Wird die Länge des Datentyps nicht geändert, löst DB2 Fehler 604 bei dem Versuch der Tabellenerstellung auf dem DB2-Abonnenten aus (Fehler 604 bedeutet, dass das Genauigkeits- oder Längenattribut des Datentyps ungültig ist).  
   
      Bestimmen Sie basierend auf Ihrer Kenntnis der von Ihnen replizierten Quelltabelle, ob es angemessen ist, einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -LOB einem DB2-Objekt variabler Länge zuzuordnen, und geben Sie eine angemessene maximale Länge in einem benutzerdefinierten Erstellungsskript an. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
@@ -161,12 +162,12 @@ ms.locfileid: "63022202"
   
      Wenn keine geeignete Zuordnung für eine LOB-Spalte vorhanden ist, verwenden Sie die Spaltenfilterung für die Artikel, sodass die Spalte nicht repliziert wird. Weitere Informationen finden Sie unter [Filtern von veröffentlichten Daten](../publish/filter-published-data.md).  
   
--   Bei der Replikation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` und `nvarchar` auf die DB2-Datentypen CHAR und VARCHAR Replikation verwendet die gleiche Länge-Bezeichner für den DB2-Typ wie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Typ. Die Datentyplänge ist jedoch möglicherweise zu gering für die generierte DB2-Tabelle  
+-   Beim Replizieren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `nchar` von `nvarchar` und auf DB2 char und varchar verwendet die Replikation denselben Längen Bezeichner für den DB2-Typ wie für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Typ. Die Datentyplänge ist jedoch möglicherweise zu gering für die generierte DB2-Tabelle  
   
-     In einigen DB2-Umgebungen ist ein [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` Datenelement ist nicht auf ein-Byte-Zeichen beschränkt; die Länge eines char- oder VARCHAR-Elements muss dies berücksichtigt. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit replizieren `nchar` und `nvarchar` Spalten müssen Sie möglicherweise eine größere maximale Länge für den Datentyp in einem benutzerdefinierten Erstellungsskript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
+     In einigen DB2-Umgebungen ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` ein Datenelement nicht auf Einzel Byte Zeichen beschränkt. bei der Länge eines Char-oder varchar-Elements muss dies berücksichtigt werden. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit `nchar` -und- `nvarchar` Spalten replizieren, müssen Sie möglicherweise eine größere maximale Länge für den Datentyp in einem benutzerdefinierten Erstellungs Skript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
-## <a name="see-also"></a>Siehe auch  
- [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Nicht-SQL Server-Abonnenten](non-sql-server-subscribers.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   
   

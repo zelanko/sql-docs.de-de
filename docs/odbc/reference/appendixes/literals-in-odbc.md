@@ -16,17 +16,17 @@ ms.assetid: e66e9ab8-6dcc-47e2-bcb6-efdb324a1d3b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a36c390d21cb51f024ce7bdfce1039372a4b57c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041592"
 ---
 # <a name="literals-in-odbc"></a>Literale in ODBC
-Die Syntax in den folgenden Abschnitten wird für das Intervall und numerische Literale in ODBC verwendet. Diese Syntax dient hier als Hilfe beim Treiber Writer bei Konvertierungen aus einen Zeichenfolgentyp in einen numerischen oder Intervall oder aus einem numerisch "oder" Intervall ", um einen Zeichenfolgentyp ausgeführt werden. Weitere Informationen finden Sie unter [Intervall-Literale](../../../odbc/reference/appendixes/interval-literals.md) und [numerische Literale](../../../odbc/reference/appendixes/numeric-literals.md) in Anhang D: Datentypen.  
+Die Syntax in den folgenden Abschnitten wird für Intervall-und numerische Literale in ODBC verwendet. Diese Syntax wird hier als Hilfe für treiberwriter bereitgestellt, wenn Konvertierungen von einem Zeichen Folgentyp in einen numerischen Typ oder einen Intervalltyp oder von einem numerischen oder Intervalltyp in einen Zeichen Folgentyp durchgeführt werden. Weitere Informationen finden Sie unter [intervallliterale](../../../odbc/reference/appendixes/interval-literals.md) und [numerische Literale](../../../odbc/reference/appendixes/numeric-literals.md) in Anhang D: Datentypen.  
   
- Dieser Anhang enthält die folgenden Themen.  
+ Dieser Anhang enthält die folgenden Themen:  
   
--   [Intervall Literal-Syntax](../../../odbc/reference/appendixes/interval-literal-syntax.md)  
+-   [Syntax von Intervallliteralen](../../../odbc/reference/appendixes/interval-literal-syntax.md)  
   
--   [Numerische Literale Syntax](../../../odbc/reference/appendixes/numeric-literal-syntax.md)
+-   [Syntax von numerischen Literalen](../../../odbc/reference/appendixes/numeric-literal-syntax.md)

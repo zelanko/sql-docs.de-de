@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f5fc8fdc9b522ad79e67a7769ba2571b7a80af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63023913"
 ---
-# <a name="mssqleng024070"></a>MSSQL_ENG024070
+# <a name="mssql_eng024070"></a>MSSQL_ENG024070
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -35,7 +35,7 @@ ms.locfileid: "63023913"
 ## <a name="explanation"></a>Erklärung  
  Es handelt sich um einen allgemeinen Fehler, der unabhängig von der Verwendung der Replikation ausgelöst werden kann. Auf einem Server in einer Replikationstopologie tritt der Fehler im Allgemeinen auf, weil das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Dienstkonto mithilfe des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Dienstkontroll-Managers anstelle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers geändert wurde. Wenn Sie versuchen, nach der Änderung des Dienstkontos einen Agentauftrag auszuführen, erzeugt dieser Auftrag möglicherweise einen Fehler, und es wird eine Fehlermeldung wie die folgende angezeigt:  
   
- "Ausgeführt als Benutzer: \<UserAccount >. Replikationsmomentaufnahme-Subsystem des Replikation-Replikation: Agent \<AgentName > Fehler. Ausgeführt als Benutzer: \<UserAccount >. Dem Client fehlt ein erforderliches Privileg. Fehler bei Schritt. `[SQLSTATE 42000] (Error 14151)`. installiert haben. Fehler bei Schritt."  
+ "Ausgeführt als Benutzer: \<Useraccount>. Replikations Momentaufnahme-Subsystem \<der Replikation: Fehler des agentagentnamens>. Ausgeführt als Benutzer: \<Useraccount>. Dem Client fehlt ein erforderliches Privileg. Fehler bei Schritt. `[SQLSTATE 42000] (Error 14151)`. Fehler bei Schritt."  
   
  Dieses Problem tritt auf, weil der Windows-Dienstkontroll-Manager dem neuen Dienstkonto nicht die erforderlichen Berechtigungen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zuweisen kann.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63023913"
   
  Als Mitglied dieser Sicherheitsgruppe verfügt das neue Konto über die erforderlichen Berechtigungen, um den Auftrag des Replikations-Agents auszuführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)   
  [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md)  

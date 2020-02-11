@@ -1,5 +1,5 @@
 ---
-title: Zuordnen der Informationstypen für Cursor Attributes1 | Microsoft-Dokumentation
+title: Mapping der Cursor Attributes1-Informationstypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: 9f112449-ca86-45ac-a865-e6174d67f91b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d95d3e67fdcd7159074e2f20ffa558f4c80bbcb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036359"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Zuordnen der Informationstypen „Cursor Attributes1“
-Wenn eine ODBC-3. *x* Anwendungsaufrufe **SQLGetInfo** in einer ODBC 2. *.x* Treiber mit dem Typ der SQL_XXXX_CURSOR_ATTRIBUTES1-Informationen (für dynamische, nur vorwärts gerichteten, keysetgesteuerte, oder statische Cursor), hängt die Einstellung der Bits, die vom Treiber-Manager zurückgegeben, auf welche die ODBC 2. *x* gibt der Treiber für die entsprechenden ODBC 2. *X* Informationstypen. Die Bits werden festgelegt, wie in der folgenden Tabelle gezeigt.  
+Bei ODBC 3. die *x* -Anwendung ruft **SQLGetInfo** in einem ODBC 2 *. x* -Treiber mit dem SQL_XXXX_CURSOR_ATTRIBUTES1 Informationstyp auf (bei dynamischen, vorwärts gerichteten, keysettreibern oder statischen Cursorn), ist die Einstellung der Bits, die vom Treiber-Manager zurückgegeben werden, davon abhängig, was ODBC 2 ist. der *x* -Treiber gibt für das entsprechende ODBC 2 zurück. *x* -Informationstypen. Die Bits werden wie in der folgenden Tabelle dargestellt festgelegt.  
   
-|Bit<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Cursortyp|ODBC-2. *x* Informationen<br /><br /> Typ|  
+|Bit in<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Cursortyp|ODBC 2. *x* -Informationen<br /><br /> type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
 |SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
-|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dynamische, keysetgesteuerte, statisch|SQL_FETCH_DIRECTION|  
-|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dynamische, keysetgesteuerte, statisch|SQL_LOCK_TYPES|  
+|SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dynamisch, keysettreiber, statisch|SQL_FETCH_DIRECTION|  
+|SQL_CA1_LOCK_NO_CHANGE SQL_CA1_LOCK_UNLOCK SQL_CA1_LOCK_EXCLUSIVE|Dynamisch, keysettreiber, statisch|SQL_LOCK_TYPES|  
 |SQL_CA1_POSITIONED_UPDATE SQL_CA1_POSITIONED_DELETE SQL_CA1_SELECT_FOR_UPDATE|All|SQL_POSITIONED_STATEMENTS|  
-|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dynamische, keysetgesteuerte, statisch|SQL_POS_OPERATIONS|
+|SQL_CA1_POS_POSITION SQL_CA1_POS_DELETE SQL_CA1_POS_REFRESH SQL_CA1_POS_BULK_ADD|Dynamisch, keysettreiber, statisch|SQL_POS_OPERATIONS|

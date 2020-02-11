@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 76362bedfd982fe0fb513873c6822fdcf56af6de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999940"
 ---
 # <a name="object-explorer-details-pane"></a>Detailbereich des Objekt-Explorers
@@ -38,15 +38,15 @@ ms.locfileid: "62999940"
   
  Details zum Objekt-Explorer verfügt über eine Symbolleiste, die die in der folgenden Tabelle beschriebenen Symbole enthält. Die Symbole sind nur verfügbar, wenn die entsprechenden Aktionen anwendbar sind.  
   
-|Symbol|Aktion|  
+|Symbol|Action|  
 |----------|------------|  
 |**Zurück**|Wechselt zu den vorherigen in Details zum Objekt-Explorer angezeigten Elementen. Wiederholt eine Suche, wenn die vorherige Anzeige das Ergebnis eines Suchvorgangs ist.|  
 |**Vorwärts**|Wechselt zum nächsten Bildschirm, nachdem eine **Zurück** -Aktion ausgewählt wurde.|  
-|**Nach oben**|Wechselt zum übergeordneten Objekt oder Ordner.|  
-|**Synchronisieren**|Legt den Fokus von Objekt-Explorer auf das in Details zum Objekt-Explorer ausgewählte Objekt fest.|  
+|**Up**|Wechselt zum übergeordneten Objekt oder Ordner.|  
+|**Synchronize**|Legt den Fokus von Objekt-Explorer auf das in Details zum Objekt-Explorer ausgewählte Objekt fest.|  
 |**Filter**|Zeigt, soweit verfügbar, eine konfigurierbare Teilmenge von Objekten an.|  
 |**Aktualisieren**|Aktualisiert die Anzeige in Details zum Objekt-Explorer.|  
-|**Suchen**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
+|**Suchen,**|Stellt einen Bereich bereit, um einen Suchbegriff für bestimmte Datenbankobjekte einzugeben.|  
   
 ### <a name="column-header-selections"></a>Spaltenheaderauswahl  
  Details zum Objekt-Explorer verfügt über auswählbare Spalten. Sie können in jedem Spaltenheader mit der rechten Maustaste klicken und die Elemente aktivieren, die Sie anzeigen möchten. Ihre Auswahl wird für alle Objekte, durch die Sie navigieren, beibehalten. Die Auswahl wird für jeden Benutzer individuell beibehalten, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]beendet und neu gestartet wird.  
@@ -87,7 +87,7 @@ ms.locfileid: "62999940"
 ## <a name="sql-server-object-search"></a>SQL Server-Objektsuche  
  Platzhalter  
   
--   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Suchen von Text mit Platzhaltern](../../relational-databases/scripting/search-text-with-wildcards.md).  
+-   Standardmäßige Platzhalterzeichen werden unterstützt. Beispielsweise gibt eine Suche nach **dm_os%counters** die beiden Ergebnisse „dm_os_memory_cache_counters“ und „dm_os_performance_counters“ zurück. Weitere Informationen finden Sie unter [Suchen von Text mit](../../relational-databases/scripting/search-text-with-wildcards.md)Platzhaltern.  
   
  Suchbereich  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62999940"
   
 -   Das Durchsuchen von großen Objektsätzen kann einige Zeit in Anspruch nehmen und die Serverleistung verringern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Objekt-Explorers](object-explorer.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69493794"
 ---
 # <a name="defining-and-browsing-kpis"></a>Definieren und Durchsuchen von KPIs
@@ -59,7 +59,7 @@ ms.locfileid: "69493794"
   
      In der folgenden Abbildung ist die Registerkarte **KPIs** des Cube-Designers dargestellt.  
   
-     ![Registerkarte "KPIs" im Cube-Designer](../../2014/tutorials/media/l7-kpi-1.gif "Registerkarte "KPIs" im Cube-Designer")  
+     ![KPIs (Registerkarte des Cube-Designers)](../../2014/tutorials/media/l7-kpi-1.gif "KPIs (Registerkarte des Cube-Designers)")  
   
 2.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Neuer KPI** .  
   
@@ -67,13 +67,13 @@ ms.locfileid: "69493794"
   
      ![Leere KPI-Vorlage im Anzeigebereich](../../2014/tutorials/media/l7-kpi-2.gif "Leere KPI-Vorlage im Anzeigebereich")  
   
-3.  Geben Sie im Feld **Name** `Reseller Revenue` ein, und wählen Sie dann **Reseller Sales** in der Liste zugeordnete **Measure-Gruppe** aus.  
+3.  Geben `Reseller Revenue`Sie im Feld **Name** ein, und wählen Sie dann **Reseller Sales** in der Liste zugeordnete **Measure-Gruppe** aus.  
   
 4.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Optionen **Measures**und **Reseller Sales**, und ziehen Sie anschließend das Measure **Reseller Sales-Sales Amount** in das Feld **Wertausdruck** .  
   
 5.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Optionen **Measures**und **Sales Quotas**, und ziehen Sie anschließend das Measure **Sales Amount Quota** in das Feld **Zielausdruck** .  
   
-6.  Überprüfen Sie, ob in der Liste **Statusindikator** **Maßstab** ausgewählt ist, und geben Sie anschließend den folgenden MDX-Ausdruck in das Feld **Statusausdruck** ein:  
+6.  Überprüfen Sie, ob in der Liste **Statusindikator****Maßstab** ausgewählt ist, und geben Sie anschließend den folgenden MDX-Ausdruck in das Feld **Statusausdruck** ein:  
   
     ```  
     Case  
@@ -152,7 +152,7 @@ ms.locfileid: "69493794"
   
 1.  Klicken Sie auf der Symbolleiste der Registerkarte **KPIs** auf **Formularansicht** und anschließend auf die Schaltfläche **Neuer KPI** .  
   
-2.  Geben Sie im Feld **Name** `Product Gross Profit Margin` ein, und überprüfen Sie dann, ob **\<All >** in der **zugeordneten Measure-Gruppen** Liste angezeigt wird.  
+2.  Geben `Product Gross Profit Margin`Sie im Feld **Name** ein, und überprüfen Sie dann, ob ** \<alle>** in der Liste zugeordnete **Measure-Gruppe** angezeigt werden.  
   
 3.  Ziehen Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** das **Total GPM** -Measure in das Feld **Wertausdruck** .  
   
@@ -261,7 +261,7 @@ ms.locfileid: "69493794"
   
 2.  Klicken Sie nach der erfolgreichen Bereitstellung auf der Symbolleiste der Registerkarte **KPIs** auf **Verbindung wiederherstellen** und anschließend auf **Browseransicht**.  
   
-     Der `Product Gross Profit Margin` KPI wird angezeigt und zeigt den KPI-Wert für **Q3 CY 2007** und das **Nordamerika** Sales Territory an.  
+     Der `Product Gross Profit Margin` KPI wird angezeigt und zeigt den KPI-Wert für **Q3 CY 2007** und den **Nordamerika** Sales Territory an.  
   
 3.  Wählen Sie im Bereich **Filter** in der Liste **Dimension** die Option **Product** , in der Liste **Hierarchy** die Option **Category** , in der Liste **Operator** die Option **Gleich** und in der Liste **Filterausdruck** die Option **Bikes** aus. Klicken Sie anschließend auf **OK**.  
   

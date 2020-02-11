@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 94edb9dad26037834ed54441b72480eb54cd9683
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762383"
 ---
-# <a name="mssqlserver7905"></a>MSSQLSERVER_7905
+# <a name="mssqlserver_7905"></a>MSSQLSERVER_7905
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762383"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_ROWSET_DIRECTORY|  
-|Meldungstext|Datenbankfehler: Das Verzeichnis 'DIRECTORY' ist kein gültiges Filestream-Verzeichnis.|  
+|Meldungstext|Datenbankfehler: Das Verzeichnis 'DIRECTORY' stellt kein gültiges Filestream-Verzeichnis dar.|  
   
 ## <a name="explanation"></a>Erklärung  
  Der Name eines Rowsetverzeichnisses ist die Partitions-ID der Partition. Dies gilt nicht für spezielle Rowsetverzeichnisnamen, z. B. "ghost". Wenn ein Rowsetverzeichnisname nicht in eine Partitions-ID konvertiert werden kann, handelt es sich bei dem Verzeichnis nicht um ein gültiges Rowsetverzeichnis.  
@@ -48,6 +48,6 @@ ms.locfileid: "62762383"
  Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
- Nicht verfügbar. Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Nicht zutreffend Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Aggregate (MDX) | Microsoft-Dokumentation
+title: Aggregat (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017172"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
@@ -31,17 +31,17 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Numeric_expression*  
+ *Numeric_Expression*  
  Ein gültiger numerischer Ausdruck, bei dem es sich in der Regel um einen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, die eine Zahl zurückgeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Menge von leeren Tupeln oder eine leere Menge angegeben wird, gibt die Funktion einen leeren Wert zurück.  
   
- In der folgende Tabelle wird beschrieben, wie die **aggregieren** Funktion verhält sich bei verschiedenen Aggregationsfunktionen.  
+ In der folgenden Tabelle wird beschrieben, wie sich die **Aggregat** Funktion mit unterschiedlichen Aggregations Funktionen verhält.  
   
-|Aggregationsoperator|Ergebnis|  
+|Aggregations Operator|Ergebnis|  
 |--------------------------|------------|  
-|Summe|Gibt die Summe der Werte über die Menge zurück.|  
+|SUM|Gibt die Summe der Werte über die Menge zurück.|  
 |Count|Gibt die Anzahl der Werte über die Menge zurück.|  
 |Max|Gibt den Maximalwert über die Menge zurück.|  
 |Min|Gibt den Minimalwert über die Menge zurück.|  
@@ -52,10 +52,10 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Unäre Operatoren|Nicht berücksichtigt. Die Werte werden durch Summieren aggregiert.|  
 |Berechnete Measures|Festgelegte Lösungsreihenfolge, um sicherzustellen, dass das berechnete Measure gilt.|  
 |Berechnete Elemente|Die üblichen Regeln gelten, d. h., die letzte Lösungsreihenfolge hat Vorrang.|  
-|Zuweisungen|Zuweisungen werden entsprechend der Aggregationsfunktion des Measures aggregieren. Ist die Aggregationsfunktion des Measures Distinct Count, werden die Zuweisungen summiert.|  
+|Arbeitsaufträge|Zuweisungen werden entsprechend der Aggregationsfunktion des Measures aggregieren. Ist die Aggregationsfunktion des Measures Distinct Count, werden die Zuweisungen summiert.|  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Summe der der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003, die in befinden die `Date` -Dimension, aus der **Adventure Works** Cube.  
+ Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8Months2003] AS  
@@ -93,7 +93,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der Aggregate-Funktion ausgewertet wurden. Die **Hierarchize** und **DrillDownLevel** Funktionen zum Zurückgeben von Werten für zurückgegangene Umsätze in Produktkategorien der Product-Dimension verwendet werden.  
+ Im folgenden Beispiel wird die Anzahl der Wiederverkäufer, deren Umsätze im vergangenen Zeitraum zurückgegangen sind, basierend auf vom Benutzer ausgewählten State-Province-Elementwerten zurückgegeben, die mit der Aggregate-Funktion ausgewertet wurden. Die **Hierarchize** -Funktion und die **DrilldownLevel** -Funktion werden verwendet, um Werte für abnehmende Umsätze für Produktkategorien in der Product-Dimension zurückzugeben.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS   
@@ -121,16 +121,16 @@ WHERE ([Geography].[State-Province].x,
     [Measures].[Declining Reseller Sales])  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [PeriodsToDate &#40;MDX&#41;](../mdx/periodstodate-mdx.md)   
- [Children &#40;MDX&#41;](../mdx/children-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [PeriodsToDate-&#40;MDX-&#41;](../mdx/periodstodate-mdx.md)   
+ [Untergeordnete &#40;MDX-&#41;](../mdx/children-mdx.md)   
+ [Hierarchize &#40;MDX-&#41;](../mdx/hierarchize-mdx.md)   
+ [Anzahl &#40;fest geleg&#41; &#40;MDX-&#41;](../mdx/count-set-mdx.md)   
+ [&#40;MDX-&#41;Filtern](../mdx/filter-mdx.md)   
+ [AddCalculatedMembers &#40;MDX-&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [DrilldownLevel-&#40;MDX-&#41;](../mdx/drilldownlevel-mdx.md)   
+ [Eigenschaften &#40;MDX-&#41;](../mdx/properties-mdx.md)   
+ [PrevMember &#40;MDX-&#41;](../mdx/prevmember-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_update_collector_type (Transact-SQL) | Microsoft-Dokumentation
+title: sp_syscollector_update_collector_type (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: 3c414dfd-d9ca-4320-81aa-949465b967bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 393b5622964ea3f240d31a2a90c555f7020c500d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010544"
 ---
-# <a name="spsyscollectorupdatecollectortype-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
+# <a name="sp_syscollector_update_collector_type-transact-sql"></a>sp_syscollector_update_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Aktualisiert einen Sammlertyp für ein Sammelelement. Aktualisiert anhand des Namens und der GUID eines Sammlertyps die Sammlertypkonfiguration, einschließlich des Sammlungs- und Uploadpakets, des Parameterschemas und des Parameterformatierungsschemas.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,21 +44,21 @@ sp_syscollector_update_collector_type [ @collector_type_uid = ] 'collector_type_
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @collector_type_uid = ] 'collector_type_uid'` Ist die GUID für den sammlertyp. *Collector_type_uid* ist **Uniqueidentifier**, und wenn es NULL ist, es wird automatisch erstellt und als Ausgabe zurückgegeben.  
+`[ @collector_type_uid = ] 'collector_type_uid'`Die GUID für den Sammlertyp. *collector_type_uid* ist vom Datentyp **uniqueidentifier**, und wenn er NULL ist, wird er automatisch erstellt und als Output zurückgegeben.  
   
-`[ @name = ] 'name'` Ist der Name des sammlertyps. *Namen* ist **Sysname** und muss angegeben werden.  
+`[ @name = ] 'name'`Der Name des Sammler Typs. *Name ist vom Datentyp* **vom Datentyp sysname** und muss angegeben werden.  
   
-`[ @parameter_schema = ] 'parameter_schema'` Ist das XML-Schema für diesen sammlertyp. *Parameter_schema* ist **Xml** und möglicherweise bestimmte sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
+`[ @parameter_schema = ] 'parameter_schema'`Ist das XML-Schema für diesen Sammlertyp. *parameter_schema* ist **XML** und kann für bestimmte Sammlertypen erforderlich sein. Wenn nicht erforderlich, kann dieses Argument NULL sein.  
   
-`[ @collection_package_id = ] collection_package_id` Ist ein eindeutiger lokaler Bezeichner, der auf zeigt die [!INCLUDE[ssIS](../../includes/ssis-md.md)] Auflistung, das vom Sammlungssatz verwendet. *collection_package_id* is **uniqueidentifer** and is required. Zum Abrufen des Werts für *Collection_package_id*, Fragen Sie die syscollector_collector_types-Systemsicht in der Msdb-Datenbank.  
+`[ @collection_package_id = ] collection_package_id`Ein eindeutiger lokaler Bezeichner, der auf [!INCLUDE[ssIS](../../includes/ssis-md.md)] das Sammlungs Paket verweist, das vom Sammlungs Satz verwendet wird. *collection_package_id* ist vom datnoch **uniqueidentifier** und ist erforderlich. Um den Wert für *collection_package_id*abzurufen, Fragen Sie die dbo. syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
   
-`[ @upload_package_id = ] upload_package_id` Ist ein eindeutiger lokaler Bezeichner, der auf zeigt die [!INCLUDE[ssIS](../../includes/ssis-md.md)] hochladen, das vom Sammlungssatz verwendet. *Upload_package_id* ist **Uniqueidentifier** und ist erforderlich. Zum Abrufen des Werts für *Upload_package_id*, Fragen Sie die syscollector_collector_types-Systemsicht in der Msdb-Datenbank.  
+`[ @upload_package_id = ] upload_package_id`Ein eindeutiger lokaler Bezeichner, der auf [!INCLUDE[ssIS](../../includes/ssis-md.md)] das Uploadpaket verweist, das vom Sammlungs Satz verwendet wird. *upload_package_id* ist vom Datentyp **uniqueidentifier** und ist erforderlich. Um den Wert für *upload_package_id*abzurufen, Fragen Sie die dbo. syscollector_collector_types-Systemsicht in der msdb-Datenbank ab.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Dc_admin** (mit EXECUTE-Berechtigung) festen Datenbankrolle.  
+ Erfordert die Mitgliedschaft in der Daten Bank Rolle " **dc_admin** (mit EXECUTE-Berechtigung)".  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird der generische T-SQL-Abfrage-Sammlertyp aktualisiert. (In dem Beispiel wird das Standardschema für den generischen T-SQL-Abfrage-Sammlertyp verwendet.)  
@@ -100,7 +100,7 @@ EXEC sp_syscollector_update_collector_type
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   

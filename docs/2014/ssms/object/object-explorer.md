@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2bd8009f3270c35f34c4cac87247263caac35854
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62999828"
 ---
 # <a name="object-explorer"></a>Objekt-Explorer
@@ -41,7 +41,7 @@ ms.locfileid: "62999828"
   
 ## <a name="object-explorer-tasks"></a>Objekt-Explorer-Tasks  
   
-|Description|Thema|  
+|BESCHREIBUNG|Thema|  
 |-----------------|-----------|  
 |Beschreibt, wie der Objekt-Explorer geöffnet wird und die Optionen konfiguriert werden, die das Verhalten des Explorers festlegen.|[Öffnen und Konfigurieren des Objekt-Explorers](open-and-configure-object-explorer.md)|  
 |Beschreibt, wie der Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]herstellt.|[Verbinden mit einer Instanz mit dem Objekt-Explorer](connect-to-an-instance-from-object-explorer.md)|  

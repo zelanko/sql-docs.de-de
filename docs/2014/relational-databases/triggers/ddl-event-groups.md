@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211729"
 ---
 # <a name="ddl-event-groups"></a>DDL-Ereignisgruppen
@@ -27,12 +27,12 @@ ms.locfileid: "68211729"
 > [!NOTE]  
 >  Bestimmte gespeicherte Systemprozeduren, die DDL-ähnliche Vorgänge ausführen, können ebenfalls DDL-Trigger oder Ereignisbenachrichtigungen auslösen. Testen Sie die DDL-Trigger oder Ereignisbenachrichtigungen, um ihre Reaktion auf gespeicherte Systemprozeduren, die ausgeführt werden, zu bestimmen. Die CREATE TYPE-Anweisung und die gespeicherte Prozedur **sp_addtype** lösen z.B. beide einen DDL-Trigger oder eine Ereignisbenachrichtigung aus, die für ein CREATE_TYPE-Ereignis erstellt wird.  
   
-## <a name="events"></a>Ereignisse  
+## <a name="events"></a>Events  
  Die unter DDL_DATABASE_LEVEL_EVENTS aufgeführten Ereignisse werden auf der Server- (Instanz) oder Datenbankebene ausgeführt. Die unter DDL_SERVER_LEVEL_EVENTS aufgeführten Ereignisse werden nur auf der Serverebene ausgeführt.  
   
 ||||  
 |-|-|-|  
-|parent_type|Typ|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ereignisbenachrichtigungen](../service-broker/event-notifications.md)   
  [DDL-Trigger](ddl-triggers.md)   
  [DDL-Ereignisse](ddl-events.md)  

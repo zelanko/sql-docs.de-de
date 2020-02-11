@@ -15,10 +15,10 @@ ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038994"
 ---
 # <a name="constructor-functions-xquery"></a>Konstruktorfunktionen (XQuery)
@@ -40,11 +40,11 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *$strval*  
  Zu konvertierende Zeichenfolge.  
   
- *TYP*  
+ *Kum*  
  Ein beliebiger integrierter XSD-Typ.  
   
-## <a name="remarks"></a>Hinweise  
- Konstruktoren werden von atomaren XSD-Basistypen sowie abgeleiteten Typen unterstützt. Allerdings die Untertypen von **xs: Duration**, wozu **xdt: yearmonthduration und xdt: dayTimeDuration**, und **xs: QName**, **xs: NMTOKEN**, und **xs: Notation** werden nicht unterstützt. Die benutzerdefinierten atomaren Typen, die in den damit verbundenen Schemaauflistungen verfügbar sind, stehen auch hier zur Verfügung, unter der Voraussetzung, dass sie direkt oder indirekt aus den folgenden Typen abgeleitet sind.  
+## <a name="remarks"></a>Bemerkungen  
+ Konstruktoren werden von atomaren XSD-Basistypen sowie abgeleiteten Typen unterstützt. Allerdings werden die Untertypen von **xs: Duration**, einschließlich **xdt: yearMonthDuration und xdt: dayTimeDuration**und **xs: QName**, **xs: NMTOKEN**und **xs: Notation** , nicht unterstützt. Die benutzerdefinierten atomaren Typen, die in den damit verbundenen Schemaauflistungen verfügbar sind, stehen auch hier zur Verfügung, unter der Voraussetzung, dass sie direkt oder indirekt aus den folgenden Typen abgeleitet sind.  
   
 #### <a name="supported-base-types"></a>Unterstützte Basistypen  
  Es folgen die unterstützten Basistypen:  
@@ -135,12 +135,12 @@ TYP($atomicvalue as xdt:anyAtomicType?
 -   Wenn das Argument ein Literal eines anderen Typs ist, wird der Ausdruck zur Kompilierzeit ausgewertet. Wenn der Wert die Typeinschränkungen nicht erfüllt, wird die leere Sequenz zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Abrufen älterer Produktbeschreibungen mit der dateTime()-Funktion von XQuery  
- In diesem Beispiel ist ein XML-Beispieldokument zunächst zugewiesen wird ein **Xml** Variablen vom Typ. Dieses Dokument enthält drei <`ProductDescription`> Elemente, die enthalten jeweils ein <`DateCreated`> untergeordnete Element.  
+ In diesem Beispiel wird ein XML-Beispiel Dokument zuerst einer Variablen vom Typ **XML** zugewiesen. Dieses Dokument enthält drei Beispiel <`ProductDescription`> Elemente, die jeweils ein <`DateCreated`> untergeordnetes Element enthalten.  
   
- Die Variable wird dann abgefragt, um nur diejenigen Produktbeschreibungen abzurufen, die vor einem bestimmten Datum erstellt worden sind. Für Vergleichszwecke verwendet die Abfrage die **xs:DateTime()** Konstruktorfunktion, um die Datumsangaben eingeben.  
+ Die Variable wird dann abgefragt, um nur diejenigen Produktbeschreibungen abzurufen, die vor einem bestimmten Datum erstellt worden sind. Für Vergleichszwecke verwendet die Abfrage die **xs: DateTime ()** -Konstruktorfunktion, um die Datumsangaben zu geben.  
   
 ```  
 declare @x xml  
@@ -173,9 +173,9 @@ select @x.query('
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die FOR... WHERE-Schleifenstruktur verwendet wird, zum Abrufen der \<ProductDescription >-Element in der WHERE-Klausel angegebene Bedingung erfüllt.  
+-   Der für... Die WHERE-Schleifen Struktur wird verwendet, \<um das ProductDescription-> Element abzurufen, das die in der WHERE-Klausel angegebene Bedingung erfüllt.  
   
--   Die **dateTime()** Konstruktorfunktion wird verwendet, um erstellen **"DateTime"** Geben Sie Werte aus, damit diese ordnungsgemäß verglichen werden können.  
+-   Die **DateTime ()** -Konstruktorfunktion wird verwendet, um **DateTime** -Typwerte zu erstellen, damit Sie entsprechend verglichen werden können.  
   
 -   Anschließend konstruiert die Abfrage die resultierende XML-Ausgabe: Nachdem dabei eine Reihe von Attributen konstruiert wird, werden in der XML-Konstruktion Kommas und Klammern verwendet.  
   
@@ -187,8 +187,8 @@ select @x.query('
    DateCreated="2000-01-01T00:00:00Z"/>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Konstruktion &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Konstruktion &#40;XQuery-&#41;](../xquery/xml-construction-xquery.md)   
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

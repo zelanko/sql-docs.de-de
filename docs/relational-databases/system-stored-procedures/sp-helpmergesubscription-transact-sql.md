@@ -1,5 +1,5 @@
 ---
-title: Sp_helpmergesubscription (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpmergesubscription (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: da564112-f769-4e67-9251-5699823e8c86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0e5f044482d3e46e4e20279a437b8d9459d1d3bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68002642"
 ---
-# <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
+# <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen über ein Abonnement (Push und Pull) für eine Mergeveröffentlichung zurück. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Wiederveröffentlichungsabonnenten für die Abonnementdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,67 +43,67 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** . Die Veröffentlichung muss bereits vorhanden ist und den Regeln für Bezeichner entsprechen. Wenn der Wert NULL oder **%** , Informationen zu allen mergeveröffentlichungen und Mergeabonnements in der aktuellen Datenbank zurückgegeben.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Die Veröffentlichung muss bereits vorhanden sein und den Regeln für Bezeichner entsprechen. Wenn der Wert **%** NULL oder ist, werden Informationen zu allen Mergeveröffentlichungen und Abonnements in der aktuellen Datenbank zurückgegeben.  
   
-`[ @subscriber = ] 'subscriber'` Ist der Name des Abonnenten. *Abonnenten* ist **Sysname**, hat den Standardwert **%** . Mit NULL oder % werden Informationen zu allen Abonnements einer bestimmten Veröffentlichung zurückgegeben.  
+`[ @subscriber = ] 'subscriber'`Der Name des Abonnenten. *Subscriber* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Mit NULL oder % werden Informationen zu allen Abonnements einer bestimmten Veröffentlichung zurückgegeben.  
   
-`[ @subscriber_db = ] 'subscriber_db'` Ist der Name der Abonnementdatenbank. *Subscriber_db*ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen Abonnementdatenbanken zurückgegeben.  
+`[ @subscriber_db = ] 'subscriber_db'`Der Name der Abonnement Datenbank. *subscriber_db*ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Abonnement Datenbanken zurückgegeben werden.  
   
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. Der Verleger muss ein gültiger Server sein. *Publisher*ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen Verlegern zurückgegeben.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. Der Verleger muss ein gültiger Server sein. *Publisher*ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Verlegern zurückgegeben werden.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db*ist **Sysname**, hat den Standardwert **%** , womit Informationen zu allen Verlegerdatenbanken zurückgegeben.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db*ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert, mit dem Informationen zu allen Verleger Datenbanken zurückgegeben werden.  
   
-`[ @subscription_type = ] 'subscription_type'` Ist der Typ des Abonnements. *Subscription_type*ist **nvarchar(15)** , und kann einen der folgenden Werte sein.  
+`[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Push** (Standard)|Pushabonnement|  
-|**Pull**|Pullabonnement|  
-|**both**|Sowohl ein Push- als auch ein Pullabonnement|  
+|**auszu**|Pull-Abonnement|  
+|**beide**|Sowohl ein Push- als auch ein Pullabonnement|  
   
-`[ @found = ] 'found'OUTPUT` Ist ein Flag zur Angabe zurückgegebener Zeilen. *finden Sie*ist **Int** und ein OUTPUT-Parameter hat den Standardwert NULL. **1** gibt an, die Veröffentlichung gefunden wurde. **0** gibt an, die Veröffentlichung wurde nicht gefunden.  
+`[ @found = ] 'found'OUTPUT`Ein Flag, das die Rückgabe von Zeilen angibt. " *found*" ist vom Datentyp **int** und ein Output-Parameter. der Standardwert ist NULL. **1** gibt an, dass die Veröffentlichung gefunden wurde. **0** gibt an, dass die Veröffentlichung nicht gefunden wurde.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|Name des Abonnements.|  
-|**publication**|**sysname**|Name der Veröffentlichung.|  
-|**publisher**|**sysname**|Name des Verlegers.|  
+|**ung**|**sysname**|Name der Veröffentlichung.|  
+|**Gebers**|**sysname**|Name des Verlegers.|  
 |**publisher_db**|**sysname**|Name der Verlegerdatenbank.|  
-|**subscriber**|**sysname**|Der Name des Abonnenten.|  
+|**Abonnenten**|**sysname**|Der Name des Abonnenten.|  
 |**subscriber_db**|**sysname**|Name der Abonnementdatenbank.|  
-|**status**|**int**|Status des Abonnements:<br /><br /> **0** = alle Aufträge werden für den start bereit.<br /><br /> **1** = ein oder mehrere Aufträge werden gestartet<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag wird ausgeführt<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf<br /><br /> **5** = mindestens ein Auftrag versucht, führen Sie nach einem vorherigen Fehler<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt|  
+|**Stands**|**int**|Status des Abonnements:<br /><br /> **0** = alle Aufträge warten auf den Start<br /><br /> **1** = mindestens ein Auftrag wird gestartet.<br /><br /> **2** = alle Aufträge wurden erfolgreich ausgeführt.<br /><br /> **3** = mindestens ein Auftrag wird ausgeführt<br /><br /> **4** = alle Aufträge sind geplant und im Leerlauf<br /><br /> **5** = mindestens ein Auftrag versucht, nach einem vorherigen Fehler auszuführen<br /><br /> **6** = mindestens ein Auftrag konnte nicht erfolgreich ausgeführt werden.|  
 |**subscriber_type**|**int**|Abonnententyp|  
-|**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pullabonnement<br /><br /> **2** = beide|  
-|**priority**|**float(8)**|Zahl zur Angabe der Priorität für das Abonnement.|  
+|**subscription_type**|**int**|Typ des Abonnements:<br /><br /> **0** = Push<br /><br /> **1** = Pull<br /><br /> **2** = beides|  
+|**haben**|**float (8)**|Zahl zur Angabe der Priorität für das Abonnement.|  
 |**sync_type**|**tinyint**|Synchronisierungsart des Abonnements.|  
-|**description**|**nvarchar(255)**|Kurze Beschreibung des Mergeabonnements.|  
-|**der Standard**|**binary(16)**|Auftrags-ID des Merge-Agents.|  
+|**Beschreibung**|**nvarchar(255)**|Kurze Beschreibung des Mergeabonnements.|  
+|**merge_jobid**|**Binary (16)**|Auftrags-ID des Merge-Agents.|  
 |**full_publication**|**tinyint**|Gibt an, ob das Abonnement für eine vollständige oder gefilterte Veröffentlichung besteht.|  
 |**offload_enabled**|**bit**|Gibt an, ob festgelegt wurde, dass die Auslagerungsausführung eines Replikations-Agents auf dem Abonnenten ausgeführt wird. Bei NULL erfolgt die Ausführung auf dem Verleger.|  
 |**offload_server**|**sysname**|Name des Servers, auf den der Agent verlagert wird.|  
-|**use_interactive_resolver**|**int**|Gibt zurück, ob der interaktive Konfliktlöser während der Konfliktlösung verwendet wird. Wenn **0**, der interaktive Konfliktlöser nicht verwendet wird.|  
-|**hostname**|**sysname**|Bereitgestellte Wert, wenn ein Abonnement durch den Wert gefiltert wird die [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion.|  
-|**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus auf dem Abonnenten, in denen **1** Windows-Authentifizierung und **0** bedeutet, dass [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung.|  
+|**use_interactive_resolver**|**int**|Gibt zurück, ob der interaktive Konfliktlöser während der Konfliktlösung verwendet wird. Wenn der Wert **0**ist, wird der interaktive Konflikt Löser nicht verwendet.|  
+|**Hostname**|**sysname**|Der Wert, der angegeben wird, wenn ein Abonnement nach dem Wert der [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) Funktion gefiltert wird.|  
+|**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus auf dem Abonnenten, wobei **1** die Windows-Authentifizierung und **0** die Authentifizierung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bedeutet.|  
 |**subscriber_login**|**sysname**|Der Anmeldename auf dem Abonnenten.|  
-|**subscriber_password**|**sysname**|Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis ist maskiert, indem eine " **\*\*\*\*\*\*** " Zeichenfolge.|  
+|**subscriber_password**|**sysname**|Das tatsächliche Abonnentenkennwort wird nie zurückgegeben. Das Ergebnis wird durch**\*\*\*\*\*** eine ""-Zeichenfolge maskiert.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_helpmergesubscription** bei der Mergereplikation verwendet, um Abonnementinformationen, die auf dem Verleger oder dem Wiederveröffentlichungsabonnenten gespeichert zurückzugeben.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_helpmergesubscription** wird bei der Mergereplikation verwendet, um auf dem Verleger oder dem wieder Veröffentlichungs Abonnenten gespeicherte Abonnement Informationen zurückzugeben.  
   
- Bei anonymen Abonnements weist die *Subscription_type*ist der Wert immer **1** (Pull). Sie müssen jedoch ausführen [Sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) für Informationen zu anonymen Abonnements auf dem Abonnenten.  
+ Bei anonymen Abonnements ist der *subscription_type*Wert immer **1** (Pull). Sie müssen jedoch [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) auf dem Abonnenten ausführen, um Informationen zu anonymen Abonnements zu erhalten.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der **Sysadmin** festen Serverrolle die **Db_owner** kann feste Datenbankrolle oder der veröffentlichungszugriffsliste für die Veröffentlichung, zu dem das Abonnement gehört, führen Sie **Sp_ Helpmergesubscription**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** oder der Veröffentlichungs Zugriffsliste für die Veröffentlichung, zu der das Abonnement gehört, können **sp_helpmergesubscription**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_addmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Fehler-Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Fehler Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,10 +13,10 @@ ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: def593c725f2faa004e13bbdb3e6ded3287f51ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67933016"
 ---
 # <a name="error-object-properties-methods-and-events"></a>Error-Objekt – Eigenschaften, Methoden und Ereignisse
@@ -25,7 +25,7 @@ ms.locfileid: "67933016"
   
  [HelpContext- und HelpFile-Eigenschaft](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md)  
   
- [NativeError-Eigenschaft](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
+ [NativeError (Eigenschaft)](../../../ado/reference/ado-api/nativeerror-property-ado.md)  
   
  [Number-Eigenschaft](../../../ado/reference/ado-api/number-property-ado.md)  
   
@@ -34,10 +34,10 @@ ms.locfileid: "67933016"
  [SQLState-Eigenschaft](../../../ado/reference/ado-api/sqlstate-property.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Error-Objekt](../../../ado/reference/ado-api/error-object.md)

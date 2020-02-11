@@ -17,16 +17,16 @@ ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945859"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect-Ereignis (ADO)
-Die **WillConnect** Ereignis wird immer dann aufgerufen, bevor eine Verbindung gestartet wird.  
+Das Ereignis " **WillConnect** " wird aufgerufen, bevor eine Verbindung gestartet wird.  
   
- **Gilt für:** [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ **Gilt für:** [Verbindungs Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,32 +37,32 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
   
 #### <a name="parameters"></a>Parameter  
  *ConnectionString*  
- Ein **Zeichenfolge** , die Verbindungsinformationen für die ausstehende Verbindung enthält.  
+ Eine **Zeichenfolge** , die Verbindungsinformationen für die ausstehende Verbindung enthält.  
   
  *UserID*  
- Ein **Zeichenfolge** , einen Benutzernamen für die ausstehende Verbindung enthält.  
+ Eine **Zeichen** Folge, die einen Benutzernamen für die ausstehende Verbindung enthält.  
   
  *Kennwort*  
- Ein **Zeichenfolge** , ein Kennwort für die ausstehende Verbindung enthält.  
+ Eine **Zeichenfolge** , die ein Kennwort für die ausstehende Verbindung enthält.  
   
- *Options*  
- Ein **lange** Wert, der angibt, wie der Anbieter auswerten soll die *"ConnectionString"* . Ihre einzige Option **AdAsyncOpen**.  
+ *Optionen*  
+ Ein **Long** -Wert, der angibt, wie der Anbieter *ConnectionString*auswerten soll. Ihre einzige Option ist **adasyncopen**.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
+ Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert.  
   
- Wenn dieses Ereignis aufgerufen wird, wird dieser Parameter festgelegt, um **AdStatusOK** standardmäßig. Es wird festgelegt, um **AdStatusCantDeny** Wenn das Ereignis auf Abbruch des ausstehenden Vorgangs anfordern kann.  
+ Wenn dieses Ereignis aufgerufen wird, wird dieser Parameter standardmäßig auf **adstatuusok** festgelegt. Sie wird auf **adStatus-kandeny** festgelegt, wenn das Ereignis keinen Abbruch des ausstehenden Vorgangs anfordern kann.  
   
- Bevor Sie dieses Ereignis zurückgegeben wird, legen Sie diesen Parameter auf **AdStatusUnwantedEvent** , nachfolgende Benachrichtigungen zu verhindern. Legen Sie diesen Parameter **AdStatusCancel** die Verbindungsoperation anfordern, die diese Benachrichtigung Abbruch verursacht hat.  
+ Bevor dieses Ereignis zurückkehrt, legen Sie diesen Parameter auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern. Legen Sie diesen Parameter auf **adStatus Cancel** fest, um den Verbindungsvorgang anzufordern, der den Abbruch dieser Benachrichtigung verursacht hat.  
   
- *pConnection*  
- Die [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt für die dieser ereignisbenachrichtigung angewendet wird. Änderungen an den Parametern des der **Verbindung** durch die **WillConnect** -Ereignishandler hat keine Auswirkungen auf die **Verbindung**.  
+ *pconnection*  
+ Das [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt, für das diese Ereignis Benachrichtigung gilt. Änderungen an den Parametern der **Verbindung** durch den **WillConnect** -Ereignishandler haben keine Auswirkung auf die **Verbindung**.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn **WillConnect** aufgerufen wird, die *"ConnectionString"* , *"UserID"* , *Kennwort*, und *Optionen* Parameter werden festgelegt, auf die Werte, die hergestellt, indem der Vorgang, der dieses Ereignis (die Verbindung steht aus), und kann geändert werden, bevor das Ereignis zurückgegeben. **WillConnect** möglicherweise zurück, eine Anforderung, dass die ausstehende verbindungsanforderung abgebrochen werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn " **WillConnect** " aufgerufen wird, werden die Parameter " *ConnectionString*", " *UserID*", " *Password*" und " *options* " auf die Werte festgelegt, die durch den Vorgang festgelegt wurden, der dieses Ereignis verursacht hat (ausstehende Verbindung) **WillConnect** gibt möglicherweise eine Anforderung zurück, dass die ausstehende Verbindung abgebrochen wurde.  
   
- Wenn dieses Ereignis abgebrochen wird, **ConnectComplete** wird mit aufgerufen werden, dessen *AdStatus* Parametersatz zu **AdStatusErrorsOccurred**.  
+ Wenn dieses Ereignis abgebrochen wird, wird **ConnectComplete** aufgerufen, wobei der *adStatus* -Parameter auf **adstatuserrorsoccurrred**festgelegt ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)

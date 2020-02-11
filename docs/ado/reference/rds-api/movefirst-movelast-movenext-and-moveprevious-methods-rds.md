@@ -1,5 +1,5 @@
 ---
-title: MoveFirst, MoveLast, MoveNext und MovePrevious-Methode (RDS) | Microsoft-Dokumentation
+title: "\"Muvefirst\", \"muvelast\", \"muvenext\" und \"muveprevious\" (RDS) | Microsoft-Dokumentation"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,17 +17,17 @@ ms.assetid: 45c80bb5-136f-4204-9df2-78740fa55574
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8e99ff17cad2bebcfaed509788ea3721ddfeb0ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67963885"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-rds"></a>MoveFirst-, MoveLast-, MoveNext- und MovePrevious-Methode (RDS)
-Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Objekt.  
+Wechselt zum ersten, letzten, nächsten oder vorherigen Datensatz in einem angegebenen [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt.  
   
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,17 +38,17 @@ DataControl.Recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}
   
 #### <a name="parameters"></a>Parameter  
  *DataControl*  
- Eine Objektvariable, steht ein [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) Objekt.  
+ Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
-## <a name="remarks"></a>Hinweise  
- Können Sie die **verschieben** Methoden mit dem **RDS. DataControl** Objekt, das durch die Datensätze in den datengebundenen Steuerelementen auf einer Webseite navigieren. Nehmen wir beispielsweise an, die Sie anzeigen, eine **Recordset** in einem Raster durch Bindung an eine **RDS. DataControl** Objekt. Sie können dann einschließen ersten, letzten, nächsten und zurück-Schaltflächen, die Benutzer, um die Umstellung auf das erste, letzte, Weiter klicken können, oder vorherigen Datensatz in die angezeigten **Recordset**. Rufen Sie dazu die **MoveFirst**, **MoveLast**, **MoveNext**, und **MovePrevious** Methoden der **RDS. DataControl** bzw. in den OnClick-Verfahren für die ersten, letzten, nächsten und zurück-Schaltflächen, Objekt. Die [Adressbuch Beispiel](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) veranschaulicht dies.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Move** -Methoden können mit RDS verwendet werden **. DataControl** -Objekt, um durch die Datensätze in den Daten gebundenen Steuerelementen auf einer Webseite zu navigieren. Nehmen Sie beispielsweise an, dass Sie ein **Recordset** in einem Raster durch Binden an einen **RDS anzeigen. DataControl** -Objekt. Sie können dann die Schaltflächen First, Last, Next und Previous einschließen, auf die Benutzer klicken können, um zum ersten, letzten, nächsten oder vorherigen Datensatz im angezeigten **Recordset**zu wechseln. Dies erreichen Sie, indem Sie die Methoden " **muvefirst**", " **muvelast**", " **muvenext**" und " **muveprevious** " des **RDS aufrufen. DataControl** -Objekt in den OnClick-Prozeduren für die Schaltflächen First, Last, Next und Previous. Das [Adressbuch Beispiel](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md) zeigt die Vorgehensweise.  
   
 ## <a name="applies-to"></a>Gilt für  
  [DataControl-Objekt (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Move-Methode (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [MoveFirst, MoveLast, MoveNext und MovePrevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
+ [Muvefirst-, muvelast-, muvenext-und muveprevious-Methode (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [MoveRecord-Methode (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
 
 

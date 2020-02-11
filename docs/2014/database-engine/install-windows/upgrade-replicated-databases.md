@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775319"
 ---
 # <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
@@ -63,13 +63,13 @@ ms.locfileid: "62775319"
   
  Die Agents werden in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], im Replikationsmonitor oder in der Befehlszeile ausgeführt. Weitere Informationen zum Ausführen des Momentaufnahme-Agents finden Sie unter den folgenden Themen:  
   
--   [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Erstellen und Anwenden der Anfangs Momentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Erstellen und Anwenden der Anfangs Momentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
--   [Ausführbare Konzepte für die Programmierung von Replikations-Agents](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
+-   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
  Weitere Informationen zum Ausführen des Merge-Agents finden Sie unter den folgenden Themen:  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62775319"
  Nach dem Upgrade von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer Topologie, in der die Mergereplikation verwendet wird, müssen Sie den Kompatibilitätsgrad aller Veröffentlichungen ändern, um neue Funktionen verwenden zu können.  
   
 ## <a name="upgrading-to-standard-workgroup-or-express-editions"></a>Aktualisieren auf die Standard Edition, Workgroup Edition oder Express Edition  
- Bevor eine Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf eine andere Edition aktualisiert wird, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird. Weitere Informationen finden Sie im Abschnitt zur Replikation im [von den SQL Server 2014-Editionen unterstützte Funktionen](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Bevor eine Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf eine andere Edition aktualisiert wird, sollten Sie überprüfen, ob die derzeit verwendete Funktionalität in der Edition, die Ziel des Upgrades ist, unterstützt wird. Weitere Informationen finden Sie im Abschnitt zur Replikation in [Funktionen, die von den Editionen von SQL Server 2014 unterstützt werden](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation  
  Bei der Websynchronisierung für die Mergereplikation ist es erforderlich, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (replisapi.dll) in das virtuelle Verzeichnis auf dem Server mit Internetinformationsdienste (Internet Information Services, IIS) kopiert wird, der für die Synchronisierung verwendet wird. Wenn Sie die Websynchronisierung konfigurieren, wird die Datei vom Assistenten zum Konfigurieren der Websynchronisierung in das virtuelle Verzeichnis kopiert. Wenn Sie die auf dem IIS-Server installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten aktualisieren, müssen Sie replisapi.dll manuell vom Verzeichnis COM in das virtuelle Verzeichnis auf dem IIS-Server kopieren. Weitere Informationen zur Konfiguration der Websynchronisierung finden Sie unter [Konfigurieren der Websynchronisierung](../../../2014/relational-databases/replication/configure-web-synchronization.md).  
@@ -88,10 +88,10 @@ ms.locfileid: "62775319"
 ## <a name="restoring-a-replicated-database-from-an-earlier-version"></a>Wiederherstellen einer replizierten Datenbank von einer früheren Version  
  Um sicherzustellen, dass die Replikationseinstellungen beibehalten werden, wenn die Sicherung einer replizierten Datenbank mithilfe einer früheren Version wiederhergestellt wird, stellen Sie die Sicherung auf einem Server und in einer Datenbank wieder her, deren Namen mit den Namen des Servers und der Datenbank übereinstimmen, von dem bzw. der die Sicherung erstellt wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Häufig gestellte Fragen für Replikationsadministratoren](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Abwärtskompatibilität von Replikationen](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
  [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Upgrade auf SQL Server 2014](upgrade-sql-server.md)  
+ [Aktualisieren auf SQL Server 2014](upgrade-sql-server.md)  
   
   

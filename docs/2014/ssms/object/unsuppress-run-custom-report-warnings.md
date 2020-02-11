@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62824393"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Aufheben der Unterdrückung von Warnungen für das Ausführen von benutzerdefinierten Berichten
@@ -24,29 +24,29 @@ ms.locfileid: "62824393"
   
  Standardmäßig wird das Dialogfeld **Benutzerdefinierten Bericht ausführen** vor dem Ausführen eines benutzerdefinierten Berichts angezeigt. Wenn Sie das Kontrollkästchen **Diese Meldung nicht mehr anzeigen** aktivieren, wird das Dialogfeld nicht mehr angezeigt. Standardmäßig wird das Dialogfeld **Benutzerdefinierten Bericht ausführen** auch dann angezeigt, wenn Sie einen benutzerdefinierten Bericht öffnen und dann auf einen Link klicken, um einen anderen benutzerdefinierten Bericht zu öffnen. In diesem Dialogfeld wird der vollständige Pfad zur benutzerdefinierten Drillthroughberichtsdatei angezeigt. Wenn Sie das Kontrollkästchen **Diese Meldung nicht mehr anzeigen** aktivieren, wird das Dialogfeld nicht mehr angezeigt.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-unsuppress-the-main-custom-report-warning-dialog-box"></a>So heben Sie die Unterdrückung des Warndialogfelds für den benutzerdefinierten Hauptbericht auf  
   
-1.  Herstellen einer Verbindung mit \< *Server*>\\<*Freigabe*>|\<*Laufwerk*> \ Dokumente und Einstellungen\\< UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Stellen Sie \<eine Verbindung mit dem *Server*>\\<*Freigabe*>|\<*Laufwerk* her\\> \Dokumente\>und Einstellungen<USERPROFILE \Anwendungsdaten\Microsoft\Microsoft SQL server\120\tools\shell\reports.Xml.  
   
-2.  Mit der rechten Maustaste `reports.xml`, und klicken Sie dann auf **bearbeiten**.  
+2.  Klicken Sie mit `reports.xml`der rechten Maustaste, und klicken Sie dann auf **Bearbeiten**.  
   
-3.  Änderung **\<SuppressWarning > true\</SuppressWarning > um \<SuppressWarning > false\</SuppressWarning >** .  
+3.  Ändern**\<Sie suppresswarning>\<true/SuppressWarning> \<auf suppresswarning>\<false/SuppressWarning>**.  
   
 4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] neu.  
   
 #### <a name="to-unsuppress-the-drill-through-custom-report-warning-dialog-box"></a>So heben Sie die Unterdrückung des Warndialogfelds für den benutzerdefinierten Drillthroughbericht auf  
   
-1.  Herstellen einer Verbindung mit \< *Server*>\\<*Freigabe*>|\<*Laufwerk*> \ Dokumente und Einstellungen\\< UserProfile\>\Application Data\Microsoft\Microsoft SQL Server\120\Tools\Shell\reports.xml.  
+1.  Stellen Sie \<eine Verbindung mit dem *Server*>\\<*Freigabe*>|\<*Laufwerk* her\\> \Dokumente\>und Einstellungen<USERPROFILE \Anwendungsdaten\Microsoft\Microsoft SQL server\120\tools\shell\reports.Xml.  
   
-2.  Mit der rechten Maustaste `reports.xml`, und klicken Sie auf **bearbeiten**.  
+2.  Klicken Sie mit `reports.xml`der rechten Maustaste, und klicken Sie auf **Bearbeiten**  
   
-3.  Änderung  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > um \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
+3.  Ändern ** \<Sie suppressdrilldurchlauf Warning>\<true/SuppressDrillthroughWarning>\<auf suppressdrilldurchlauf Warning>\<false/SuppressDrillthroughWarning>**.  
   
 4.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] neu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte Berichte in Management Studio](custom-reports-in-management-studio.md)   
  [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](add-a-custom-report-to-management-studio.md)   
  [Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten](use-custom-reports-with-object-explorer-node-properties.md)  

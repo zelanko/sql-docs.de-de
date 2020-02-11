@@ -14,27 +14,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bdd18641663003a1878fe0af0ac1d39a16eda1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63046023"
 ---
 # <a name="helplink-element"></a>HelpLink-Element
   Das **HelpLink** -Element der **Detail** -Eigenschaft ist eine URL-Zeichenfolge, die vom Berichtsserver generiert wird. Die URL steuert eine Webseite an, die von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Hilfe und Support verwaltet wird. Sie liefert zusätzliche Hilfestellungen und Artikel der Kowledge Base zu bestimmten Fehlern, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]auftreten. Die URL hat folgende Syntax:  
   
- **http://** www.microsoft.com **/** Produkte **/** Ee **/** transform.aspx **? EvtSrc**=_Wert_ **& EvtID**=_Wert_ **& %ProdName** = _Wert_ **& ProdVer**=_Wert_  
+ **http://** www.Microsoft.com**/** Products**/** EE**/** Transform. aspx **? Evzrc**=_Wert_ **&EvtID**=_-Wert_ **&ProdName**=_-Wert_ **&PRODVER**=_-Wert_  
   
  In der folgenden Tabelle sind die Argumente der **HelpLink** -URL aufgeführt.  
   
-|Argument|Wert|  
+|Argument|value|  
 |--------------|-----------|  
-|**EvtSrc**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
+|**Evwahrheits RC**|"Microsoft.ReportingServices.Diagnostics.ErrorStrings.resources.Strings"|  
 |**EvtID**|Der Fehlercode für den Berichtsserver, z. B. rsReservedItem.|  
 |**ProdName**|"Microsoft SQL%20Server%20Reporting%20Services". Der Wert des Produktnamens ist URL-codiert.|  
-|**ProdVer**|Die Versionsnummer von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Der Wert "8.00" zeigt [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] an.|  
+|**PRODVER**|Die Versionsnummer von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Der Wert "8,00" zeigt [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]an.|  
   
- Das folgende Beispiel veranschaulicht die **HelpLink** URL, die für den Fehlercode zurückgegeben wird `rsReservedItem`. Dieser Fehler tritt auf, wenn ein Benutzer versucht, ein reserviertes Element in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zu ändern oder zu löschen:  
+ Im folgenden Beispiel wird die **HelpLink** -URL veranschaulicht, die für den `rsReservedItem`Fehlercode zurückgegeben wird. Dieser Fehler tritt auf, wenn ein Benutzer versucht, ein reserviertes Element in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zu ändern oder zu löschen:  
   
 ```  
 https://www.microsoft.com/products/ee/transform.aspx?  
@@ -65,9 +65,9 @@ catch (SoapException e)
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Introducing Exception Handling in Reporting Services (Einführung in die Ausnahmebehandlung in Reporting Services)](../introducing-exception-handling-in-reporting-services.md)   
- [SoapException-Klasse von Reporting Services](reporting-services-soapexception-class.md)   
+ [Reporting Services SoapException-Klasse](reporting-services-soapexception-class.md)   
  [Using the Detail Property to Handle Specific Errors (Verwenden der Detail-Eigenschaft zur Handhabung bestimmter Fehler)](../best-practices/using-the-detail-property-to-handle-specific-errors.md)  
   
   

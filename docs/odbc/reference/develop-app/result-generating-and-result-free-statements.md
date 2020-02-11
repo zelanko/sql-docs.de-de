@@ -1,5 +1,5 @@
 ---
-title: Generiertem Ergebnis und ohne Ergebnis Anweisungen | Microsoft-Dokumentation
+title: Ergebnis-Generierungs-und Ergebnis freie Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,23 +17,23 @@ ms.assetid: 2f3475d1-3999-4dd8-aba2-a6e1299c95f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55b2ff4d428f02b59883b675fde95531366f0b4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020602"
 ---
 # <a name="result-generating-and-result-free-statements"></a>Anweisungen mit generiertem Ergebnis und ohne Ergebnis
-SQL-Anweisungen können lose in den folgenden fünf Kategorien unterteilt werden:  
+SQL-Anweisungen können lose in die folgenden fünf Kategorien unterteilt werden:  
   
--   **Führen Sie die Anweisungen Set generiert** Hierbei handelt es sich um SQL-Anweisungen, die ein Resultset generieren. Z. B. eine **wählen** Anweisung.  
+-   **Resultset-generierende Anweisungen** Dies sind SQL-Anweisungen, die ein Resultset generieren. Beispielsweise eine **Select** -Anweisung.  
   
--   **Row Count-generieren Anweisungen** Hierbei handelt es sich um SQL-Anweisungen, die Anzahl der betroffenen Zeilen zu generieren. Z. B. eine **UPDATE** oder **löschen** Anweisung.  
+-   **Zeilen Anzahl-generierende Anweisungen** Dabei handelt es sich um SQL-Anweisungen, die die Anzahl der betroffenen Zeilen generieren. Beispielsweise eine **Update** -oder **Delete** -Anweisung.  
   
--   **Anweisungen der Data Definition Language (DDL)** Hierbei handelt es sich um SQL-Anweisungen, die die Struktur der Datenbank zu ändern. Z. B. **CREATE TABLE** oder **DROP INDEX**.  
+-   **DDL-Anweisungen (Data Definition Language)** Dabei handelt es sich um SQL-Anweisungen, die die Struktur der Datenbank ändern. Beispielsweise **CREATE TABLE** oder **Drop Index**.  
   
--   **Ändern von Kontext Anweisungen** Hierbei handelt es sich um SQL-Anweisungen, die den Kontext einer Datenbank zu ändern. Z. B. die **verwenden** und **festgelegt** Anweisungen in SQL Server.  
+-   **Kontextwechsel Anweisungen** Dabei handelt es sich um SQL-Anweisungen, die den Kontext einer Datenbank ändern. Beispielsweise werden die **use** -Anweisung und die **set** -Anweisung in SQL Server.  
   
--   **Verwaltungsanweisungen** Hierbei handelt es sich um SQL-Anweisungen, die für administrative Zwecke in einer Datenbank verwendet. Z. B. **GRANT** und **widerrufen**.  
+-   **Administrative Anweisungen** Dabei handelt es sich um SQL-Anweisungen, die zu Verwaltungszwecken in einer Datenbank verwendet werden Beispielsweise **Grant** und **Widerruf**.  
   
- SQL-Anweisungen in den ersten beiden Kategorien werden zusammen als bezeichnet *Anweisungen mit generiertem*. SQL-Anweisungen in den letzten drei Kategorien werden zusammen als bezeichnet *Ergebnis kostenfreie Anweisungen*. ODBC definiert die Semantik des Batches, die nur aus dem Ergebnis generieren Anweisungen enthalten. Diese Semantik stark variieren und sind daher Daten datenquellenspezifische. Beispielsweise unterstützt der SQL Server-Treiber nicht, ein Objekt löschen und verweisen auf oder das gleiche Objekt im selben Batch neu zu erstellen. Daher der Begriff *Batch* als im bezieht sich dieses Handbuch nur für Batches von generiertem Anweisungen.
+ SQL-Anweisungen in den ersten beiden Kategorien werden zusammen als *Ergebnis generierende Anweisungen*bezeichnet. SQL-Anweisungen in den letzten drei Kategorien werden zusammen als *Ergebnis freie Anweisungen*bezeichnet. ODBC definiert die Semantik von Batches, die nur Ergebnis generierende Anweisungen enthalten. Diese Semantik variiert stark und ist daher Datenquellen spezifisch. Beispielsweise unterstützt der SQL Server Treiber das Löschen eines Objekts und das anschließende verweisen auf das gleiche Objekt im gleichen Batch nicht. Daher bezieht sich der Begriff *Batch* , wie er in diesem manuellen verwendet wird, nur auf Batches von Ergebnis Generierungs Anweisungen.

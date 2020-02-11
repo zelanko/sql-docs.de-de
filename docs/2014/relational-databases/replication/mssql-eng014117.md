@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811254"
 ---
 # <a name="mssql_eng014117"></a>MSSQL_ENG014117
@@ -46,13 +46,13 @@ ms.locfileid: "68811254"
 ## <a name="user-action"></a>Benutzeraktion  
  Überprüfen Sie, ob die Verteilerinstanz ordnungsgemäß registriert ist. Wenn der Netzwerkname des Computers und der Name der SQL Server-Instanz nicht identisch sind, gehen Sie wie folgt vor:  
   
--   Fügen Sie den SQL Server-Instanznamen als gültigen Netzwerknamen hinzu. Eine Möglichkeit, einen alternativen Netzwerknamen festzulegen, besteht darin, diesen Namen der lokalen Hostdatei hinzuzufügen. Die lokale Hostdatei befindet sich standardmäßig in WINDOWS\system32\drivers\etc oder WINNT\system32\drivers\etc. Weitere Informationen finden Sie in der Windows-Dokumentation.  
+-   Fügen Sie den SQL Server-Instanznamen als gültigen Netzwerknamen hinzu. Eine Möglichkeit, einen alternativen Netzwerknamen festzulegen, besteht darin, diesen Namen der lokalen Hostdatei hinzuzufügen. Die lokale Hostdatei befindet sich im Verzeichnis WINDOWS\system32\drivers\usw. oder WINNT\system32\drivers\usw. Weitere Informationen finden Sie in der Windows-Dokumentation.  
   
      Wenn der Computername z. B. comp1 ist und die IP-Adresse des Computers 10.193.17.129 lautet und wenn der Instanzname inst1/instname ist, ist der Hostdatei der folgende Eintrag hinzuzufügen:  
   
      10.193.17.129 inst1  
   
--   Deaktivieren Sie die Verteilung, registrieren Sie die Instanz, und stellen Sie dann die Verteilung wieder her. Wenn der Wert von @@SERVERNAME für eine nicht gruppierte Instanz nicht korrekt ist, führen Sie die folgenden Schritte aus:  
+-   Deaktivieren Sie die Verteilung, registrieren Sie die Instanz, und stellen Sie dann die Verteilung wieder her. Wenn der @@SERVERNAME-Wert für eine nicht in einem Cluster befindliche Instanz falsch ist, führen Sie die folgenden Schritte aus:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -71,7 +71,7 @@ ms.locfileid: "68811254"
   
 2.  Deaktivieren Sie die Verteilung, und aktivieren Sie sie dann erneut. Weitere Informationen finden Sie unter [Configure Distribution](configure-distribution.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)  
   
   

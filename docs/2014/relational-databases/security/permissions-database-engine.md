@@ -19,26 +19,26 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 746d547b680817868de33759983dc908e9806bb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63128767"
 ---
 # <a name="permissions-database-engine"></a>Berechtigungen (Datenbank-Engine)
   Jedes sicherungsfähige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element hat zugeordnete Berechtigungen, die einem Prinzipal erteilt werden können. Dieses Thema enthält die folgenden Informationen:  
   
--   [Benennungskonventionen für Berechtigungen](#_conventions)  
+-   [Benennungs Konventionen für Berechtigungen](#_conventions)  
   
 -   [Berechtigungen für bestimmte sicherungsfähige Elemente](#_securables)  
   
 -   [SQL Server-Berechtigungen](#_permissions)  
   
--   [Algorithmus zur berechtigungsprüfung](#_algorithm)  
+-   [Algorithmus zur Berechtigungsprüfung](#_algorithm)  
   
 -   [Beispiele](#_examples)  
   
-##  <a name="_conventions"></a> Benennungskonventionen für Berechtigungen  
+##  <a name="_conventions"></a>Benennungs Konventionen für Berechtigungen  
  Im Folgenden werden die allgemeinen Konventionen beschrieben, die beim Benennen von Berechtigungen befolgt werden:  
   
 -   CONTROL  
@@ -61,23 +61,23 @@ ms.locfileid: "63128767"
   
      Ermöglicht dem Empfänger, Besitzer des sicherungsfähigen Elements zu werden, für das die Berechtigung erteilt wird.  
   
--   IMPERSONATE \<*Anmeldung*>  
+-   \<Identität des *Anmelde* namens annehmen>  
   
      Ermöglicht dem Empfänger, die Identität des Anmeldenamens anzunehmen.  
   
--   IMPERSONATE \<*Benutzer*>  
+-   \<Identität des *Benutzers* annehmen>  
   
      Ermöglicht dem Empfänger, die Identität des Benutzers anzunehmen.  
   
--   CREATE \<*Server Securable*>  
+-   Sicherungs \< *fähiges Server* erstellen>  
   
      Überträgt dem Empfänger die Berechtigung zum Erstellen des *Server Securable*.  
   
--   CREATE \<*Database Securable*>  
+-   Sicherungs \< *fähiges Daten Bank* Element erstellen>  
   
      Überträgt dem Berechtigten die Berechtigung zum Erstellen des *Database Securable*.  
   
--   CREATE \<*Schema-contained Securable*>  
+-   \< *Schema enthaltenes Sicherungs fähiges* Element erstellen>  
   
      Überträgt die Berechtigung zum Erstellen des im Schema enthaltenen sicherungsfähigen Elements. Es wird jedoch die Berechtigung ALTER für das Schema benötigt, um das sicherungsfähige Element in einem bestimmten Schema zu erstellen.  
   
@@ -92,32 +92,33 @@ ms.locfileid: "63128767"
      Die REFERENCES-Berechtigung ist für ein Objekt erforderlich, um eine FUNCTION oder VIEW mit der `WITH SCHEMABINDING` -Klausel zu erstellen, die auf das betreffende Objekt verweist.  
   
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen  
- Navigieren Sie zu [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142), um ein Diagramm aller [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Berechtigungen im PDF-Format abzurufen.  
+ Ein Diagramm mit einem Diagramm mit allen [!INCLUDE[ssDE](../../includes/ssde-md.md)] Berechtigungen im PDF-Format finden [https://go.microsoft.com/fwlink/?LinkId=229142](https://go.microsoft.com/fwlink/?LinkId=229142)Sie unter.  
   
-##  <a name="_securables"></a> Berechtigungen anwendbar für bestimmte sicherungsfähige Elemente  
+##  <a name="_securables"></a>Berechtigungen für bestimmte Sicherungs fähige Elemente  
  Die folgende Tabelle enthält eine Liste der wichtigsten Berechtigungsklassen und der sicherungsfähigen Elemente, für die sie erteilt werden können.  
   
-|Berechtigung|Betrifft|  
+|Berechtigung|Anwendungsbereich|  
 |----------------|----------------|  
 |SELECT|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen, [!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR (Common Language Runtime) sowie Spalten<br /><br /> Sichten und Spalten|  
 |VIEW CHANGE TRACKING|Tabellen<br /><br /> Schemas|  
 |UPDATE|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
-|REFERENCES|Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) sowie Spalten<br /><br /> Typen<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
+|REFERENCES|Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]Warteschlangen<br /><br /> Tabellen und Spalten<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR) sowie Spalten<br /><br /> Typen<br /><br /> Sichten und Spalten<br /><br /> Sequenzobjekte|  
 |INSERT|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
-|DELETE|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
+|Delete|Synonyme<br /><br /> Tabellen und Spalten<br /><br /> Sichten und Spalten|  
 |Führen Sie|Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Synonyme<br /><br /> CLR-Typen|  
-|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen|  
-|VIEW DEFINITION|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten<br /><br /> Sequenzobjekte|  
-|ALTER|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sequenzobjekte<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten|  
-|TAKE OWNERSHIP|Verfügbarkeitsgruppen<br /><br /> Rollen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Serverrollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten<br /><br /> Sequenzobjekte|  
-|CONTROL|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Warteschlangen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Ansichten<br /><br /> Sequenzobjekte|  
+|RECEIVE|[!INCLUDE[ssSB](../../includes/sssb-md.md)]Warteschlangen|  
+|VIEW DEFINITION|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]Warteschlangen<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
+|ALTER|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sequenzobjekte<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]Warteschlangen<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten|  
+|TAKE OWNERSHIP|Verfügbarkeitsgruppen<br /><br /> Rollen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Serverrollen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
+|CONTROL|Verfügbarkeitsgruppen<br /><br /> Prozeduren ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Skalar- und Aggregatfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Anmeldungen, Benutzer und Rollen<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]Warteschlangen<br /><br /> Synonyme<br /><br /> Tabellen<br /><br /> Tabellenwertfunktionen ([!INCLUDE[tsql](../../includes/tsql-md.md)] und CLR)<br /><br /> Sichten<br /><br /> Sequenzobjekte|  
 |IMPERSONATE|Anmeldungen und Benutzer|  
   
 > [!CAUTION]  
 >  Die Standardberechtigungen, die Systemobjekten zum Zeitpunkt der Installation erteilt wurden, werden sorgfältig bezüglich möglicher Bedrohungen ausgewertet und müssen nicht im Rahmen der Härtung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation geändert werden. Alle Änderungen an den Berechtigungen für Systemobjekte können die Funktionalität einschränken oder unterbrechen und potenziell dazu führen, dass Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation einen nicht unterstützten Zustand aufweist.  
   
-##  <a name="_permissions"></a> SQLServer und SQL Database-Berechtigungen  
- Die folgende Tabelle enthält eine vollständige Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Berechtigungen sind nur für unterstützte sicherungsfähige Basiselemente verfügbar. Berechtigungen auf Serverebene können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht gewährt werden, in einigen Fällen sind jedoch stattdessen Datenbankberechtigungen verfügbar.  
+##  <a name="_permissions"></a>SQL Server-und SQL-Daten Bank Berechtigungen  
+ Die folgende Tabelle enthält eine vollständige Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berechtigungen. 
+  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Berechtigungen sind nur für unterstützte sicherungsfähige Basiselemente verfügbar. Berechtigungen auf Serverebene können in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]nicht gewährt werden, in einigen Fällen sind jedoch stattdessen Datenbankberechtigungen verfügbar.  
   
 |Sicherungsfähiges Basiselement|Spezifische Berechtigungen für sicherungsfähiges Basiselement|Berechtigungstypcode|Sicherungsfähiges Element, das sicherungsfähiges Basiselement enthält|Berechtigung für sicherungsfähiges Containerelement mit spezifischer Berechtigung für sicherungsfähiges Basiselement|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -157,7 +158,7 @@ ms.locfileid: "63128767"
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Hinweis: Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> Hinweis: gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|ALTER ANY EVENT SESSION|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
@@ -165,7 +166,7 @@ ms.locfileid: "63128767"
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Hinweis: Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> Hinweis: gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -201,10 +202,10 @@ ms.locfileid: "63128767"
 |DATABASE|CREATE TYPE|CRTY|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE VIEW|CRVW|SERVER|CONTROL SERVER|  
 |DATABASE|CREATE XML SCHEMA COLLECTION|CRXS|SERVER|CONTROL SERVER|  
-|DATABASE|DELETE|DL|SERVER|CONTROL SERVER|  
+|DATABASE|Delete|DL|SERVER|CONTROL SERVER|  
 |DATABASE|Führen Sie|EX|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Hinweis: Gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Verwenden Sie ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> Hinweis: gilt nur für [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Verwenden Sie ALTER ANY CONNECTION in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
@@ -228,10 +229,10 @@ ms.locfileid: "63128767"
 |FULLTEXT STOPLIST|REFERENCES|RF|DATABASE|REFERENCES|  
 |FULLTEXT STOPLIST|TAKE OWNERSHIP|TO|DATABASE|CONTROL|  
 |FULLTEXT STOPLIST|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
-|Anmeldung|ALTER|AL|SERVER|ALTER ANY LOGIN|  
-|Anmeldung|CONTROL|CL|SERVER|CONTROL SERVER|  
-|Anmeldung|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
-|Anmeldung|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
+|LOGIN|ALTER|AL|SERVER|ALTER ANY LOGIN|  
+|LOGIN|CONTROL|CL|SERVER|CONTROL SERVER|  
+|LOGIN|IMPERSONATE|IM|SERVER|CONTROL SERVER|  
+|LOGIN|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |MESSAGE TYPE|ALTER|AL|DATABASE|ALTER ANY MESSAGE TYPE|  
 |MESSAGE TYPE|CONTROL|CL|DATABASE|CONTROL|  
 |MESSAGE TYPE|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -239,7 +240,7 @@ ms.locfileid: "63128767"
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|DELETE|  
+|OBJECT|Delete|DL|SCHEMA|Delete|  
 |OBJECT|Führen Sie|EX|SCHEMA|Führen Sie|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -269,7 +270,7 @@ ms.locfileid: "63128767"
 |SCHEMA|ALTER|AL|DATABASE|ALTER ANY SCHEMA|  
 |SCHEMA|CONTROL|CL|DATABASE|CONTROL|  
 |SCHEMA|CREATE SEQUENCE|CRSO|DATABASE|CONTROL|  
-|SCHEMA|DELETE|DL|DATABASE|DELETE|  
+|SCHEMA|Delete|DL|DATABASE|Delete|  
 |SCHEMA|Führen Sie|EX|DATABASE|Führen Sie|  
 |SCHEMA|INSERT|IN|DATABASE|INSERT|  
 |SCHEMA|REFERENCES|RF|DATABASE|REFERENCES|  
@@ -331,10 +332,10 @@ ms.locfileid: "63128767"
 |TYPE|REFERENCES|RF|SCHEMA|REFERENCES|  
 |TYPE|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |TYPE|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
-|Benutzer|ALTER|AL|DATABASE|ALTER ANY USER|  
-|Benutzer|CONTROL|CL|DATABASE|CONTROL|  
-|Benutzer|IMPERSONATE|IM|DATABASE|CONTROL|  
-|Benutzer|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
+|USER|ALTER|AL|DATABASE|ALTER ANY USER|  
+|USER|CONTROL|CL|DATABASE|CONTROL|  
+|USER|IMPERSONATE|IM|DATABASE|CONTROL|  
+|USER|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |XML SCHEMA COLLECTION|ALTER|AL|SCHEMA|ALTER|  
 |XML SCHEMA COLLECTION|CONTROL|CL|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|Führen Sie|EX|SCHEMA|Führen Sie|  
@@ -342,8 +343,8 @@ ms.locfileid: "63128767"
 |XML SCHEMA COLLECTION|TAKE OWNERSHIP|TO|SCHEMA|CONTROL|  
 |XML SCHEMA COLLECTION|VIEW DEFINITION|VW|SCHEMA|VIEW DEFINITION|  
   
-##  <a name="_algorithm"></a> Zusammenfassung des Algorithmus zur Berechtigungsprüfung  
- Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderliche Berechtigung**.  
+##  <a name="_algorithm"></a>Zusammenfassung des Algorithmus zur Berechtigungsüberprüfung  
+ Die Prüfung von Berechtigungen kann sehr komplex sein. Der Algorithmus für die Berechtigungsprüfung umfasst überlappende Gruppenmitgliedschaften und Besitzverkettung, explizite und implizite Berechtigungen und kann von den Berechtigungen für sicherungsfähige Klassen, in denen die sicherungsfähige Entität enthalten ist, beeinflusst werden. Die allgemeine Vorgehensweise des Algorithmus besteht darin, alle relevanten Berechtigungen zu sammeln. Wenn keine blockierende DENY-Anweisung gefunden wird, sucht der Algorithmus nach einer GRANT-Anweisung mit ausreichenden Zugriffsberechtigungen. Der Algorithmus enthält drei wesentliche Elemente, den **Sicherheitskontext**, den **Berechtigungsbereich**und die **erforderlichen Berechtigung**.  
   
 > [!NOTE]  
 >  Berechtigungen können nicht für sa, dbo, den Entitätsbesitzer, information_schema, sys oder für den Benutzer selbst erteilt, verweigert oder aufgehoben werden.  
@@ -362,7 +363,7 @@ ms.locfileid: "63128767"
   
     -   Bei Verwendung der Modulsignierung sind dies ein beliebiger Anmeldename oder ein beliebiges Benutzerkonto für das Zertifikat, das zum Signieren des vom Benutzer derzeit ausgeführten Moduls verwendet wird, und die zugehörigen Rollenmitgliedschaften dieses Prinzipals.  
   
--   **Berechtigungsbereich**  
+-   **Berechtigungs Bereich**  
   
      Dies sind die sicherungsfähige Entität und alle sicherungsfähigen Klassen, in denen das sicherungsfähige Element enthalten ist. Eine Tabelle (eine sicherungsfähige Entität) ist z. B. in der sicherungsfähigen Klasse des Schemas und in der sicherungsfähigen Klasse der Datenbank enthalten. Berechtigungen auf Tabellen-, Schema-, Datenbank- und Serverebene können sich auf den Zugriff auswirken. Weitere Informationen finden Sie unter [Berechtigungshierarchie &#40;Datenbank-Engine&#41;](permissions-hierarchy-database-engine.md).  
   
@@ -383,20 +384,20 @@ ms.locfileid: "63128767"
   
 2.  Erteilen des Zugriffs, wenn die Besitzverkettung anwendbar ist und die Zugriffsprüfung für das Objekt an früherer Stelle in der Kette die Sicherheitsprüfung erfolgreich war.  
   
-3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts**zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
+3.  Aggregieren der Identitäten, die dem Aufrufer zum Erstellen des **Sicherheitskontexts** zugeordnet sind, auf Server- und Datenbankebene sowie auf Ebene des signierten Moduls.  
   
 4.  Sammeln aller Berechtigungen, die für diesen **Berechtigungsbereich**erteilt oder verweigert wurden, in diesem **Sicherheitskontext**. Die Berechtigung kann explizit als GRANT, GRANT WITH GRANT oder DENY angegeben werden; oder die Berechtigungen können als implizite oder abdeckende GRANT-Berechtigung oder DENY-Berechtigung angegeben werden. Die CONTROL-Berechtigung für ein Schema impliziert z. B. CONTROL für eine Tabelle. CONTROL für eine Tabelle impliziert SELECT. Wenn CONTROL für das Schema erteilt wurde, wird folglich SELECT für die Tabelle erteilt. Wenn CONTROL für die Tabelle verweigert wurde, wird SELECT für die Tabelle verweigert.  
   
     > [!NOTE]  
     >  Durch eine GRANT-Berechtigung auf Spaltenebene wird eine DENY-Berechtigung auf Objektebene überschrieben.  
   
-5.  Identifizieren Sie die **erforderliche Berechtigung**.  
+5.  Identifizieren Sie die **erforderlichen Berechtigung**.  
   
 6.  Die Berechtigungsprüfung ist nicht bestanden, wenn die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** der Objekte im **Berechtigungsbereich** direkt oder implizit verweigert werden.  
   
 7.  Die Berechtigungsprüfung ist bestanden, wenn die **erforderlichen Berechtigung** nicht verweigert wurde, und die **erforderlichen Berechtigung** für eine der Identitäten im **Sicherheitskontext** eines beliebigen Objekts im **Berechtigungsbereich**direkt oder implizit eine GRANT-Berechtigung oder GRANT WITH GRANT-Berechtigung enthält.  
   
-##  <a name="_examples"></a> Beispiele  
+##  <a name="_examples"></a>Beispiele  
  In den Beispielen dieses Abschnitts wird veranschaulicht, wie Berechtigungsinformationen abgerufen werden.  
   
 ### <a name="a-returning-the-complete-list-of-grantable-permissions"></a>A. Zurückgeben der vollständigen Liste erteilbarer Berechtigungen  
@@ -423,7 +424,7 @@ SELECT * FROM fn_my_permissions('Orders55', 'object');
 GO  
 ```  
   
-### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D. Zurückgeben von Berechtigungen, die auf ein angegebenes Objekt angewendet werden können  
+### <a name="d-returning-the-permissions-applicable-to-a-specified-object"></a>D: Zurückgeben von Berechtigungen, die auf ein angegebenes Objekt angewendet werden können  
  Im folgenden Beispiel werden Berechtigungen für ein Objekt namens `Yttrium`zurückgegeben. Beachten Sie, dass die integrierte `OBJECT_ID` -Funktion zum Abrufen der ID des `Yttrium`-Objekts verwendet wird.  
   
 ```  
@@ -432,8 +433,8 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Berechtigungshierarchie &#40;Datenbank-Engine &#41;](permissions-hierarchy-database-engine.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine der Berechtigungs Hierarchie &#40;&#41;](permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)  
   
   

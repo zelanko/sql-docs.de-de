@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 0197417dfef604f3cb90b5fa032dae892de272c7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68889049"
 ---
 # <a name="exists-dmx"></a>Exists (DMX)
@@ -29,12 +29,12 @@ EXISTS(<subquery>)
   
 ## <a name="arguments"></a>Argumente  
  *subquery*  
- Eine SELECT-Anweisung im Formular SELECT * FROM \<column name > [WHERE \<Prädikat List >].  
+ Eine SELECT-Anweisung im Formular SELECT * FROM \<Column Name> [WHERE \<Prädikat List>].  
   
 ## <a name="result-type"></a>Ergebnistyp  
  Gibt " **true** " zurück, wenn das von der Unterabfrage zurückgegebene Resultset mindestens eine Zeile enthält. Andernfalls wird **false**zurückgegeben.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie können das NOT-Schlüsselwort vor EXISTS verwenden, z. B. `WHERE NOT EXISTS (<subquery>)`.  
   
  Die Spaltenliste, die zum Unterabfrageargument EXISTS hinzugefügt wird, ist nicht relevant. Die Funktion überprüft lediglich, ob eine Zeile existiert, auf die die Bedingung zutrifft.  
@@ -53,10 +53,10 @@ WHERE [[Model] = 'Patch kit'
 )  
 ```  
   
- Eine weitere Möglichkeit zum Anzeigen der Daten, die von dieser Abfrage zurückgegeben werden, besteht darin, das Modell im Zuordnungs-Viewer zu öffnen, mit der rechten Maustaste auf das Itemset **Patch Kit = vorhandene**zu klicken, die Option Drillthrough auszuwählen und dann **nur Modell Fälle**auszuwählen.  
+ Eine weitere Möglichkeit zum Anzeigen der Daten, die von dieser Abfrage zurückgegeben werden, besteht darin, das Modell im Zuordnungs-Viewer zu öffnen, mit der rechten Maustaste auf das Itemset **Patch Kit = vorhandene**zu klicken, die Option **Drillthrough** auszuwählen und dann **nur Modell Fälle**auszuwählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
- [Modell Filter Syntax und Beispiele &#40;Analysis Services-Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Modell Filter Syntax und Beispiele &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining)  
   
   

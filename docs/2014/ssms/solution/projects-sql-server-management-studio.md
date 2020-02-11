@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 85bc34af971db386862528ac36ea04fef33f2daa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035675"
 ---
 # <a name="projects-sql-server-management-studio"></a>Projekte (SQL Server Management Studio)
@@ -46,7 +46,7 @@ ms.locfileid: "63035675"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie ein neues Projekt in einer Projektmappe erstellt wird.|[Erstellen eines Projekts](create-a-project.md)|  
+|Beschreibt, wie ein neues Projekt in einer Projektmappe erstellt wird.|[Create a Project (Erstellen eines Projekts)](create-a-project.md)|  
 |Beschreibt, wie einer Projektmappe ein vorhandenes Projekt hinzugefügt wird.|[Hinzufügen eines vorhandenen Projekts zu einer Projektmappe](add-an-existing-project-to-a-solution.md)|  
 |Beschreibt, wie der Standardspeicherort zum Speichern von Projektdateien geändert wird.|[Ändern des Standardspeicherorts für Projekte](change-the-default-location-for-projects.md)|  
 |Beschreibt, wie die aktuellen Eigenschaften eines Projekts angezeigt werden.|[Anzeigen der Projekteigenschaften](view-project-properties.md)|  
@@ -55,7 +55,7 @@ ms.locfileid: "63035675"
 |Beschreibt, wie die Verbindungsinformationen für eine Abfrage geändert werden.|[Ändern der mit einer Abfrage verknüpften Verbindung](change-the-connection-associated-with-a-query.md)|  
 |Beschreibt, wie Verbindungseigenschaften geändert werden.|[Anzeigen oder Ändern der Eigenschaften einer Verbindung in einem Projekt](view-or-change-the-properties-of-a-connection-in-a-project.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Projektmappen-Explorer](solution-explorer.md)   
  [Lösungen &#40;SQL Server Management Studio&#41;](solutions-sql-server-management-studio.md)   
  [Quellcodeverwaltung des Projektmappen-Explorers](../../database-engine/solution-explorer-source-control.md)  

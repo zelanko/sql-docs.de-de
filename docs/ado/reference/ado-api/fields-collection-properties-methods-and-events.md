@@ -1,5 +1,5 @@
 ---
-title: Fields-Auflistung – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Eigenschaften, Methoden und Ereignisse der Fields-Auflistung | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,13 @@ ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bd304bd86631ae143070f8bbf109fd9b9df8056
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932672"
 ---
-# <a name="fields-collection-properties-methods-and-events"></a>Felder Auflistung – Eigenschaften, Methoden und Ereignisse
+# <a name="fields-collection-properties-methods-and-events"></a>Eigenschaften, Methoden und Ereignisse der Fields-Auflistung
 ## <a name="properties"></a>Eigenschaften  
  [Count-Eigenschaft](../../../ado/reference/ado-api/count-property-ado.md)  
   
@@ -30,16 +30,16 @@ ms.locfileid: "67932672"
   
  [CancelUpdate-Methode](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
   
- [Delete-Methode (Fields-Collection – ADO)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [Delete-Methode (ADO-Fields-Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
   
- [Refresh-Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
  [Resync-Methode](../../../ado/reference/ado-api/resync-method.md)  
   
  [Update-Methode](../../../ado/reference/ado-api/update-method.md)  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fields-Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)

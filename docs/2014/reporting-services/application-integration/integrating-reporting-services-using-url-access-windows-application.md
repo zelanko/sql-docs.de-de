@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126238"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Verwenden des URL-Zugriffs in einer Windows-Anwendung
@@ -31,7 +31,7 @@ ms.locfileid: "63126238"
 -   Verwenden Sie das <xref:System.Windows.Forms.WebBrowser>-Steuerelement auf einer Windows Form, um einen Bericht anzuzeigen.  
   
 ## <a name="starting-internet-explorer-from-a-windows-form"></a>Starten von Internet Explorer von einer Windows Form  
- Sie können über die <xref:System.Diagnostics.Process>-Klasse auf einen Prozess zugreifen, der auf einem Computer ausgeführt wird. Die <xref:System.Diagnostics.Process>-Klasse ist ein nützliches [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Konstrukt zum Starten, Anhalten, Steuern und Überwachen von Anwendungen. Um einen bestimmten Bericht in der Berichtsserver-Datenbank anzuzeigen, können Sie den Prozess **IExplore** starten, indem Sie die URL an den Bericht übergeben. Folgendes Codebeispiel kann verwendet werden, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer zu starten und eine spezielle URL zu übergeben, wenn ein Benutzer auf eine Schaltfläche in einer Windows Form klickt.  
+ Sie können über die <xref:System.Diagnostics.Process>-Klasse auf einen Prozess zugreifen, der auf einem Computer ausgeführt wird. Die <xref:System.Diagnostics.Process> -Klasse ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] nützliches Konstrukt zum Starten, beenden, Steuern und Überwachen von Anwendungen. Um einen bestimmten Bericht in der Berichtsserver-Datenbank anzuzeigen, können Sie den Prozess **IExplore** starten, indem Sie die URL an den Bericht übergeben. Folgendes Codebeispiel kann verwendet werden, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer zu starten und eine spezielle URL zu übergeben, wenn ein Benutzer auf eine Schaltfläche in einer Windows Form klickt.  
   
 ```vb  
 Private Sub viewReportButton_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles viewReportButton.Click  
@@ -87,9 +87,9 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 ###### <a name="to-add-the-webbrowser-control-to-your-windows-form"></a>So fügen Sie der Windows Form das Webbrowser-Steuerelement hinzu  
   
-1.  Erstellen Sie entweder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] eine neue Windows-Anwendung.  
+1.  Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] Sie entweder in oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]in eine neue Windows-Anwendung.  
   
-2.  Suchen Sie im Dialogfeld **Toolbox** das <xref:System.Windows.Forms.WebBrowser>-Steuerelement.  
+2.  Suchen Sie im Dialogfeld <xref:System.Windows.Forms.WebBrowser>Toolbox** das **-Steuerelement.  
   
      Wenn **Toolbox** nicht sichtbar ist, können Sie darauf zugreifen, indem Sie im Menüelement **Ansicht** auf **Toolbox** klicken.  
   
@@ -113,11 +113,11 @@ string url = "http://localhost/reportserver?/" +
 webBrowser1.Navigate(url);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration von Reporting Services in Anwendungen](../application-integration/integrating-reporting-services-into-applications.md)   
- [Integrieren von Reporting Services mit URL-Zugriff](integrating-reporting-services-using-url-access.md)   
- [Integrieren von Reporting Services mit SOAP](integrating-reporting-services-using-soap.md)   
- [Integrieren von Reporting Services mithilfe von ReportViewer-Steuerelementen](integrating-reporting-services-using-reportviewer-controls.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Integrieren von Reporting Services in Anwendungen](../application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrieren von Reporting Services mithilfe des URL-Zugriffs](integrating-reporting-services-using-url-access.md)   
+ [Integrieren von Reporting Services mithilfe von SOAP](integrating-reporting-services-using-soap.md)   
+ [Integrieren von Reporting Services mithilfe der Report Viewer-Steuerelemente](integrating-reporting-services-using-reportviewer-controls.md)   
  [URL-Zugriff (SSRS)](../url-access-ssrs.md)  
   
   

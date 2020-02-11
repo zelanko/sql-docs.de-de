@@ -16,18 +16,18 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771534"
 ---
-# <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
+# <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  Zeigt an, ob die Datenbanken auf dem Verleger für die Replikation aktiviert sind. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt. *Wird für Oracle-Verleger nicht unterstützt.*  
+  Zeigt an, ob die Datenbanken auf dem Verleger für die Replikation aktiviert sind. Diese gespeicherte Prozedur wird auf dem Verleger für jede Datenbank ausgeführt. *Diese Option wird für Oracle-Verleger nicht unterstützt.*  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,23 +43,23 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**publish**|Transaktionsreplikation ist zulässig.|  
+|**veröffentlichen**|Transaktionsreplikation ist zulässig.|  
 |**Zusammenführen der Veröffentlichung**|Mergereplikation ist zulässig.|  
-|**Replikation zulässig** vorgegebene|Transaktionsreplikation und Mergereplikation sind zulässig.|  
+|**Replikation zulässig** (Standard)|Transaktionsreplikation und Mergereplikation sind zulässig.|  
   
 `[ @reserved = ] reserved`Gibt an, ob Informationen zu vorhandenen Veröffentlichungen und Abonnements zurückgegeben werden. *reserved* ist vom Typ **Bit**und hat den Standardwert 0. Wenn der Wert **1**ist, enthält das Resultset Informationen dazu, ob die angegebene Datenbank über vorhandene Veröffentlichungen oder Abonnements verfügt.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Datenbank.|  
-|**id**|**int**|Datenbankbezeichner.|  
+|**Name**|**int**|Datenbankbezeichner.|  
 |**transpublish**|**bit**|, Wenn die Datenbank für die Momentaufnahme-oder Transaktions Veröffentlichung aktiviert wurde. der Wert **1** bedeutet, dass die Momentaufnahme-oder Transaktions Veröffentlichung aktiviert ist.|  
 |**mergepublish**|**bit**|, Wenn die Datenbank für die Mergeveröffentlichung aktiviert wurde. der Wert **1** bedeutet, dass die Mergeveröffentlichung aktiviert ist.|  
-|**dbowner**|**bit**|, Wenn der Benutzer ein Mitglied der Daten Bank Rolle **db_owner** ist. mit dem Wert **1** wird angegeben, dass der Benutzer ein Mitglied dieser Rolle ist.|  
+|**dbowner**|**bit**|, Wenn der Benutzer ein Mitglied der **db_owner** Fixed-Daten Bank Rolle ist. mit dem Wert **1** wird angegeben, dass der Benutzer ein Mitglied dieser Rolle ist.|  
 |**dbreadonly**|**bit**|Gibt an, ob die Datenbank als schreibgeschützt gekennzeichnet ist. der Wert **1** bedeutet, dass die Datenbank schreibgeschützt ist.|  
 |**haspublications**|**bit**|Gibt an, ob die Datenbank über vorhandene Veröffentlichungen verfügt. der Wert **1** bedeutet, dass vorhandene Veröffentlichungen vorhanden sind.|  
 |**haspullsubscriptions**|**bit**|Ist, wenn die Datenbank über vorhandene Pullabonnements verfügt. der Wert **1** bedeutet, dass vorhandene Pullabonnements vorhanden sind.|  
@@ -67,14 +67,14 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_helpreplicationdboption** wird bei der Momentaufnahme-, Transaktions-und Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Mitglieder der festen Server Rolle **sysadmin** können **sp_helpreplicationdboption** für jede beliebige Datenbank ausführen. Mitglieder der Daten Bank Rolle **db_owner** können **sp_helpreplicationdboption** für diese Datenbank ausführen.  
+ Mitglieder der festen Server Rolle **sysadmin** können **sp_helpreplicationdboption** für beliebige Datenbanken ausführen. Mitglieder der **db_owner** Fixed-Daten Bank Rolle können **sp_helpreplicationdboption** für diese Datenbank ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_replicationdboption &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

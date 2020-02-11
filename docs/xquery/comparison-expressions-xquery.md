@@ -20,10 +20,10 @@ ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039031"
 ---
 # <a name="comparison-expressions-xquery"></a>Vergleichsausdrücke (XQuery)
@@ -33,18 +33,18 @@ ms.locfileid: "68039031"
   
 -   Allgemeine Vergleichsoperatoren  
   
--   Wertvergleichsoperatoren  
+-   Wert Vergleichs Operatoren  
   
 -   Knotenvergleichsoperatoren  
   
--   Knotenreihenfolge-Vergleichsoperatoren  
+-   Knoten Reihen folgen Vergleichs Operatoren  
   
-## <a name="general-comparison-operators"></a>Allgemeine Vergleichsoperatoren  
+## <a name="general-comparison-operators"></a>Allgemeine Vergleichs Operatoren  
  Allgemeine Vergleichsoperatoren können zum Vergleichen von atomaren Werten, Sequenzen oder einer beliebigen Kombination daraus verwendet werden.  
   
  Die allgemeinen Operatoren werden in der folgenden Tabelle definiert.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |=|Gleich|  
 |!=|Ungleich|  
@@ -79,7 +79,7 @@ set @x='<a>6</a>'
 select @x.query('/a[1] < "17"')  
 ```  
   
- Die folgende Abfrage gibt kleinformatige Bilder eines Produktmodells aus dem Produktkatalog zurück, der in der AdventureWorks-Beispieldatenbank bereitgestellt wird. Die Abfrage vergleicht eine Sequenz von atomic-Werten, die von `PD:ProductDescription/PD:Picture/PD:Size` zurückgegeben wird, mit einer Singletonsequenz "small". Wenn der Vergleich True ist, wird die < Bild\> Element.  
+ Die folgende Abfrage gibt kleinformatige Bilder eines Produktmodells aus dem Produktkatalog zurück, der in der AdventureWorks-Beispieldatenbank bereitgestellt wird. Die Abfrage vergleicht eine Sequenz von atomic-Werten, die von `PD:ProductDescription/PD:Picture/PD:Size` zurückgegeben wird, mit einer Singletonsequenz "small". Wenn der Vergleich true ist, wird das <Bild\> Element zurückgegeben.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS PD)  
@@ -90,7 +90,7 @@ FROM   Production.ProductModel
 WHERE  ProductModelID=19         
 ```  
   
- Die folgende Abfrage vergleicht eine Sequenz von Telefonnummern in < Anzahl\> Elementen, die der literalen Zeichenfolge "112-111-1111". Die Abfrage vergleicht die Sequenz der Rufnummerelemente in der AdditionalContactInfo-Spalte, um zu bestimmen, ob eine bestimmte Rufnummer für einen bestimmten Kunden im Dokument vorhanden ist.  
+ Mit der folgenden Abfrage wird eine Sequenz von Telefonnummern in <\> Number-Elementen mit dem Zeichenfolgenliterals "112-111-1111" verglichen. Die Abfrage vergleicht die Sequenz der Rufnummerelemente in der AdditionalContactInfo-Spalte, um zu bestimmen, ob eine bestimmte Rufnummer für einen bestimmten Kunden im Dokument vorhanden ist.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -103,7 +103,7 @@ FROM Person.Contact
 WHERE ContactID=1         
 ```  
   
- Diese Abfrage gibt True zurück. Dies zeigt an, dass die Rufnummer im Dokument vorhanden ist. Die folgende Abfrage ist eine geringfügig geänderte Version der vorherigen Abfrage. In dieser Abfrage werden die aus dem Dokument abgerufenen Rufnummerwerte mit einer Sequenz aus zwei Rufnummerwerten verglichen. Wenn der Vergleich true ist, wird die < Anzahl\> Element wird zurückgegeben.  
+ Diese Abfrage gibt True zurück. Dies zeigt an, dass die Rufnummer im Dokument vorhanden ist. Die folgende Abfrage ist eine geringfügig geänderte Version der vorherigen Abfrage. In dieser Abfrage werden die aus dem Dokument abgerufenen Rufnummerwerte mit einer Sequenz aus zwei Rufnummerwerten verglichen. Wenn der Vergleich true ist, wird das <\> Number-Element zurückgegeben.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -139,7 +139,7 @@ WHERE ContactID=1
   
  Die Wertvergleichsoperatoren werden in der folgenden Tabelle definiert.  
   
-|Operator|Beschreibung|  
+|Operator|BESCHREIBUNG|  
 |--------------|-----------------|  
 |eq|Gleich|  
 |ne|Ungleich|  
@@ -152,7 +152,7 @@ WHERE ContactID=1
   
  Diese Operatoren funktionieren nur für atomare Singletonwerte. Dies bedeutet, dass Sie eine Sequenz nicht als einen der Operanden angeben können.  
   
- Z. B. die folgende Abfrage ruft \<Bild >-Elemente für ein Produktmodell, in denen die Bildgröße "small:  
+ Die folgende Abfrage ruft z. b. \<Bild> Elemente für ein Produktmodell ab, bei dem die Bildgröße "Small" ist:  
   
 ```  
 SELECT CatalogDescription.query('         
@@ -167,11 +167,12 @@ WHERE ProductModelID=19
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   `declare namespace` definiert das Namespacepräfix, das anschließend in der Abfrage verwendet wird.  
+-   
+  `declare namespace` definiert das Namespacepräfix, das anschließend in der Abfrage verwendet wird.  
   
--   Die \<Größe >-Element den Wert mit dem angegebenen atomaren Wert, "small" verglichen.  
+-   Die \<Größe> Element Werts wird mit dem angegebenen atomaren Wert "Small" verglichen.  
   
--   Beachten Sie, dass die Operatoren Wert nur für atomare Werte arbeiten die **data()** Funktion wird implizit verwendet, um den Knotenwert abzurufen. Das heißt, `data($P/PD:Size) eq "small"` generiert das gleiche Ergebnis.  
+-   Beachten Sie, dass die **Data ()** -Funktion implizit zum Abrufen des Knoten Werts verwendet wird, da die Wert Operatoren nur für atomarische Werte verwendet werden. Das heißt, `data($P/PD:Size) eq "small"` generiert das gleiche Ergebnis.  
   
  Dies ist das Ergebnis:  
   
@@ -184,10 +185,11 @@ WHERE ProductModelID=19
 \</PD:Picture>  
 ```  
   
- Beachten Sie, dass die Typhöherstufungsregeln für Wertvergleiche mit den Regeln für allgemeine Vergleiche identisch sind. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet außerdem bei Wertvergleichen die gleichen Typumwandlungsregeln für nicht typisierte Werte wie bei allgemeinen Vergleichen. Im Gegensatz dazu wandeln die Regeln in der XQuery-Spezifikation bei Wertvergleichen immer den nicht typisierten Wert in xs:string um.  
+ Beachten Sie, dass die Typhöherstufungsregeln für Wertvergleiche mit den Regeln für allgemeine Vergleiche identisch sind. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet außerdem bei Wertvergleichen die gleichen Typumwandlungsregeln für nicht typisierte Werte wie bei allgemeinen Vergleichen. Im Gegensatz dazu wandeln die Regeln in der XQuery-Spezifikation bei Wertvergleichen immer den nicht typisierten Wert in xs:string um.  
   
 ## <a name="node-comparison-operator"></a>Knotenvergleichsoperator  
- Der knotenvergleichsoperator **ist**, gilt nur für Knotentypen aufgeführt sind. Das zurückgegebene Ergebnis zeigt an, ob zwei Knoten, die als Operanden übergeben werden, den gleichen Knoten im Quelldokument darstellen. Dieser Operator gibt True zurück, wenn die beiden Operanden den gleichen Knoten bezeichnen. Andernfalls wird False zurückgegeben.  
+ Der Knoten Vergleichs Operator **ist**, gilt nur für Knoten Typen. Das zurückgegebene Ergebnis zeigt an, ob zwei Knoten, die als Operanden übergeben werden, den gleichen Knoten im Quelldokument darstellen. Dieser Operator gibt True zurück, wenn die beiden Operanden den gleichen Knoten bezeichnen. Andernfalls wird false zurückgegeben.  
   
  Die folgende Abfrage überprüft, ob Arbeitsplatzstandort 10 der erste Arbeitsplatzstandort im Fertigungsvorgang eines bestimmten Produktmodells ist.  
   
@@ -220,11 +222,11 @@ ProductModelID       Result
   
  Diese Vergleiche werden auf der Grundlage der Dokumentreihenfolge erstellt:  
   
--   `<<` : Ist **Operand 1** vorausgehen **Operand 2** in der Dokumentreihenfolge.  
+-   `<<`: Führt **Operand 1** vor **Operand 2** in der Dokument Reihenfolge aus.  
   
--   `>>` : Ist **Operand 1** folgen **Operand 2** in der Dokumentreihenfolge.  
+-   `>>`: Der **Operand 1** folgt **Operand 2** in der Dokument Reihenfolge.  
   
- Die folgende Abfrage gibt True zurück, wenn der produktkatalogbeschreibung verfügt die \<Garantie >-Element angezeigt wird, bevor Sie die \<Wartung >-Element in der Dokumentreihenfolge für ein bestimmtes Produkt.  
+ Die folgende Abfrage gibt true zurück, wenn die Produktkatalog Beschreibung \<über die Garantie verfügt,> \<Element vor dem Wartungs> Element in der Dokument Reihenfolge für ein bestimmtes Produkt angezeigt wird.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -240,14 +242,14 @@ where ProductModelID=19
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **Value()-Methode** Methode der **Xml**-Datentyp in der Abfrage verwendet wird.  
+-   Die **value ()** -Methode des **XML**-Datentyps wird in der Abfrage verwendet.  
   
--   Das boolesche Ergebnis der Abfrage wird in konvertiert **nvarchar(10)** und zurückgegeben.  
+-   Das boolesche Ergebnis der Abfrage wird in **nvarchar (10)** konvertiert und zurückgegeben.  
   
 -   Diese Abfrage gibt True zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [Typsystem &#40;XQuery&#41;](../xquery/type-system-xquery.md)   
- [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Geben Sie System &#40;XQuery ein&#41;](../xquery/type-system-xquery.md)   
+ [XQuery-Ausdrücke](../xquery/xquery-expressions.md)  
   
   

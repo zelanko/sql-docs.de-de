@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62989085"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
@@ -61,7 +61,7 @@ ms.locfileid: "62989085"
 ## <a name="static-row-filters"></a>Statische Zeilenfilter  
  Die folgende Abbildung zeigt eine veröffentlichte Tabelle, die so gefiltert wird, dass nur die Zeilen 2, 3 und 6 in die Veröffentlichung aufgenommen werden.  
   
- ![Zeilenfilterung](../media/repl-16.gif "Row filtering")  
+ ![Zeilen Filterung](../media/repl-16.gif "Zeilenfilterung")  
   
  Bei einem statischen Zeilenfilter werden die zu veröffentlichenden Daten mit einer WHERE-Klausel ausgewählt. Dabei geben Sie den letzten Teil der WHERE-Klausel an. Sehen Sie sich die **Product** -Tabelle in der AdventureWorks-Beispieldatenbank an, in der die **ProductLine**-Spalte enthalten ist. Wenn Sie nur die Zeilen mit den Daten zu Produkten veröffentlichen möchten, die sich auf Mountainbikes beziehen, geben Sie `ProductLine = 'M'`an.  
   
@@ -72,18 +72,18 @@ ms.locfileid: "62989085"
     > [!NOTE]  
     >  Zeilenfilter in Transaktionsveröffentlichungen können den Verwaltungsaufwand erheblich vergrößern, da die Klausel zur Artikelfilterung für jede Protokollzeile ausgewertet wird, die für eine veröffentlichte Tabelle geschrieben wurde, um zu bestimmen, ob die Zeile repliziert werden soll. Vermeiden Sie Zeilenfilter in Transaktionsveröffentlichungen, wenn die einzelnen Replikationsknoten alle Daten vollständig laden können und die gesamte Datengruppe nicht allzu groß ist.  
   
--   Erstellen Sie bei der Mergereplikation nicht mehrere Veröffentlichungen mit statischen Zeilenfiltern, sondern verwenden Sie vielmehr parametrisierte Zeilenfilter. Weitere Informationen finden Sie unter [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
+-   Erstellen Sie bei der Mergereplikation nicht mehrere Veröffentlichungen mit statischen Zeilenfiltern, sondern verwenden Sie vielmehr parametrisierte Zeilenfilter. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md).  
   
  Informationen zum Definieren oder Ändern eines statischen Zeilenfilters finden Sie unter [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md).  
   
 ## <a name="column-filters"></a>Spaltenfilter  
  Die folgende Abbildung zeigt eine Veröffentlichung, bei der die C-Spalte herausgefiltert wird.  
   
- ![Spaltenfilterung](../media/repl-17.gif "Column filtering")  
+ ![Spaltenfilterung](../media/repl-17.gif "Spaltenfilterung")  
   
  Sie können auch Zeilen- und Spaltenfilter zusammen verwenden, wie hier dargestellt.  
   
- ![Zeilen- und Spaltenfilterung](../media/repl-18.gif "Row and column filtering")  
+ ![Zeilen- und Spaltenfilterung](../media/repl-18.gif "Zeilen- und Spaltenfilterung")  
   
  Nach dem Erstellen einer Veröffentlichung können Sie eine Spalte mithilfe der Spaltenfilterung aus einer vorhandenen Veröffentlichung löschen, die Spalte jedoch in der Tabelle auf dem Verleger belassen. Außerdem können Sie eine vorhandene Spalte in die Veröffentlichung aufnehmen. Verwenden Sie für weitere Änderungen die Schemaänderungsreplikation, z. B. für das Hinzufügen einer neuen Spalten zu einer Tabelle und das anschließende Hinzufügen zum veröffentlichten Artikel. Weitere Informationen finden Sie in den Abschnitten „Hinzufügen von Spalten“ und „Löschen von Spalten“ im Thema [Durchführen von Schemaänderungen in Veröffentlichungsdatenbanken](make-schema-changes-on-publication-databases.md).  
   
@@ -93,14 +93,14 @@ ms.locfileid: "62989085"
 |-----------------|-------------------------------------|  
 |Primärschlüsselspalte|Primärschlüsselspalten sind in Transaktionsveröffentlichungen für alle Tabellen erforderlich. Für Tabellen in Mergeveröffentlichungen sind keine Primärschlüssel erforderlich. Wenn jedoch eine Primärschlüsselspalte vorhanden ist, kann sie nicht gefiltert werden.|  
 |Fremdschlüsselspalte|Alle Veröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden. Sie können Fremdschlüsselspalten mithilfe gespeicherter Transact-SQL-Prozeduren filtern. Weitere Informationen finden Sie unter [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).|  
-|Die **rowguid** -Spalte|Für mergeveröffentlichungen<sup>1</sup>|  
+|Die **rowguid** -Spalte|Mergeveröffentlichungen<sup>1</sup>|  
 |Die **msrepl_tran_version** -Spalte|Momentaufnahme- oder Transaktionsveröffentlichungen, die aktualisierbare Abonnements zulassen|  
 |Spalten, die NULL nicht zulassen und keine Standardwerte aufweisen oder für die die IDENTITY-Eigenschaft nicht festgelegt ist.|Momentaufnahme- oder Transaktionsveröffentlichungen, die aktualisierbare Abonnements zulassen|  
 |Spalten mit UNIQUE-Einschränkungen oder -Indizes|Momentaufnahme- oder Transaktionsveröffentlichungen, die aktualisierbare Abonnements zulassen|  
 |Alle Spalten in einer Mergeveröffentlichung von SQL Server 7.0|Spalten können in Mergeveröffentlichungen von SQL Server 7.0 nicht gefiltert werden.|  
 |Timestamp|Momentaufnahme- oder Transaktionsveröffentlichungen von SQL Server 7.0, die aktualisierbare Abonnements zulassen|  
   
- <sup>1</sup> Wenn Sie eine Tabelle in einer Mergeveröffentlichung veröffentlichen und diese Tabelle bereits eine Spalte des Datentyps enthält `uniqueidentifier` mit der `ROWGUIDCOL` Eigenschaftensatz, Replikation können in dieser Spalte statt eine weitere Spalte namens **Rowguid**. In diesem Fall muss die vorhandene Spalte veröffentlicht werden.  
+ <sup>1</sup> Wenn Sie eine Tabelle in einer Mergeveröffentlichung veröffentlichen und diese Tabelle bereits eine Spalte mit dem-Datentyp `uniqueidentifier` enthält `ROWGUIDCOL` und die-Eigenschaft festgelegt ist, kann die Replikation diese Spalte verwenden, anstatt eine zusätzliche Spalte mit dem Namen **ROWGUID**zu erstellen. In diesem Fall muss die vorhandene Spalte veröffentlicht werden.  
   
  Informationen zum Definieren oder Ändern eines Spaltenfilters finden Sie unter [Define and Modify a Column Filter](define-and-modify-a-column-filter.md).  
   
@@ -129,9 +129,10 @@ ms.locfileid: "62989085"
   
 -   Bei der Transaktionsreplikation können Sie eine indizierte Sicht als Sicht oder als Tabelle replizieren. Wenn Sie die Sicht als Tabelle replizieren, können Sie keine Spalten aus der Tabelle filtern.  
   
- Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von `sp_replcmds` (für Filter) mit Absicht auf den Datenbankbesitzer (`dbo`). Der`dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung dieser Logik, damit ein böswilliger `dbo` missbräuchlich dieser Ausführungspfad kann nicht verwendet werden kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
+ Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von `sp_replcmds` (für Filter) mit Absicht auf den Datenbankbesitzer (`dbo`). Der`dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen schränkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ausführung dieser Logik ein, sodass ein böswilliger `dbo` dieser Ausführungs Pfad nicht von einem böswilligen nicht missbräuchlich kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: General XQuery-Anwendungsfälle | Microsoft-Dokumentation
+title: Allgemeine XQuery-Anwendungsfälle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004521"
 ---
 # <a name="general-xquery-use-cases"></a>Allgemeine Einsatzgebiete für XQuery
@@ -54,11 +54,11 @@ WHERE CatalogDescription is not null
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **Namespace** -Schlüsselwort im XQuery-Prolog definiert ein Namespacepräfix, das verwendet wird, im Hauptteil Abfrage.  
+-   Das **Namespace** -Schlüsselwort im XQuery-Prolog definiert ein Namespace Präfix, das im Abfragetext verwendet wird.  
   
 -   Der Body-Teil der Abfrage bewirkt die Konstruktion des erforderlichen XML-Codes.  
   
--   In der WHERE-Klausel der **exist()** Methode wird verwendet, um nur Zeilen zu suchen, die produktkatalogbeschreibungen enthalten. D. h. der XML-Code, der enthält der <`ProductDescription`> Element.  
+-   In der WHERE-Klausel wird die **exist ()** -Methode verwendet, um nur Zeilen zu suchen, die Produktkatalog Beschreibungen enthalten. Das heißt, der XML-Code, der `ProductDescription` die <>-Element enthält.  
   
  Dies ist das Ergebnis:  
   
@@ -71,7 +71,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- Die folgende Abfrage ruft die gleiche Informationen, aber nur für die Produktmodelle, deren katalogbeschreibung das Gewicht, enthält der <`Weight`>-Element in den Spezifikationen, die <`Specifications`> Element. In diesem Beispiel wird WITH XLMNAMESPACES zum Deklarieren des pd-Präfixes und seiner Namespacebindung verwendet. Auf diese Weise wird die Bindung nicht in beiden beschrieben die **query()** Methode und die **exist()** Methode.  
+ Die folgende Abfrage ruft die gleichen Informationen ab, aber nur für die Produktmodelle, deren Katalogbeschreibung das Gewicht, das <`Weight`>-Element, in den Spezifikationen, das `Specifications` <> Element enthält. In diesem Beispiel wird WITH XLMNAMESPACES zum Deklarieren des pd-Präfixes und seiner Namespacebindung verwendet. Auf diese Weise wird die Bindung nicht sowohl in der **Query ()** -Methode als auch in der **exist ()** -Methode beschrieben.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,10 +86,10 @@ FROM Production.ProductModel
 WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight ') = 1  
 ```  
   
- In der vorherigen Abfrage die **exist()** -Methode der der **Xml** -Datentyp in die WHERE-Klausel überprüft, um festzustellen, ob eine <`Weight`>-Element in der <`Specifications`> Element.  
+ In der vorherigen Abfrage prüft die **exist ()** -Methode des **XML** -Datentyps in der WHERE-Klausel, ob ein <`Weight`>-Element im <`Specifications`> Element vorhanden ist.  
   
 ### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Suchen von Produktmodell-IDs für Produktmodelle, deren Katalogbeschreibungen Bilder mit frontalem Blickwinkel und geringer Größe enthalten  
- Der XML der produktkatalogbeschreibung enthält produktabbildungen, die <`Picture`> Element. Jedes Bild besitzt mehrere Eigenschaften. Dazu gehören der bildwinkel, das <`Angle`>-Element, und die Größe der <`Size`> Element.  
+ Die XML-Produktkatalog Beschreibung enthält die Produktbilder, das `Picture` <>-Element. Jedes Bild besitzt mehrere Eigenschaften. Dazu zählen der Bildwinkel, das <`Angle`> Element und die Größe, das <`Size`> Element.  
   
  Für Produktmodelle, deren Katalogbeschreibungen Bilder mit frontalem Blickwinkel und geringer Größe enthalten, konstruiert die Abfrage XML-Code, der die folgende Form aufweist:  
   
@@ -117,11 +117,11 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   In der WHERE-Klausel der **exist()** Methode wird verwendet, um nur die Zeilen abgerufen, die produktkatalogbeschreibungen mit der <`Picture`> Element.  
+-   In der WHERE-Klausel wird die **exist ()** -Methode verwendet, um nur Zeilen abzurufen, die Produktkatalog Beschreibungen mit `Picture` dem <>-Element aufweisen.  
   
--   Der WHERE-Klausel der **Value()-Methode** Methode zwei Mal Vergleich der Werte von der <`Size`> und <`Angle`> Elemente.  
+-   Die WHERE-Klausel verwendet die **value ()** -Methode zweimal, um die Werte der <`Size`> und <`Angle`> Elemente zu vergleichen.  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 <p1:Product   
@@ -135,8 +135,8 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ...  
 ```  
   
-### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Erstellen Sie eine flache Liste des Produkts Model Name-Funktion-Paare, für jedes Paar eingeschlossen in die \<Features >-Element  
- In der Katalogbeschreibung des Produktmodells enthält der XML-Code mehrere Produktfunktionen. Alle diese Features sind enthalten, der <`Features`> Element. Die Abfrage verwendet [XML-Konstruktion (XQuery)](../xquery/xml-construction-xquery.md) der erforderlichen XML-Code erstellen. Der Ausdruck in den geschweiften Klammern wird durch das Ergebnis ersetzt.  
+### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Erstellen Sie eine flache Liste von Produktmodell Name und featurepaaren, wobei jedes Paar in das \<Features>-Element eingeschlossen ist.  
+ In der Katalogbeschreibung des Produktmodells enthält der XML-Code mehrere Produktfunktionen. Alle diese Features sind im <`Features`>-Element enthalten. Die Abfrage verwendet [XML-Konstruktion (XQuery)](../xquery/xml-construction-xquery.md) zum Erstellen des erforderlichen XML-Codes. Der Ausdruck in den geschweiften Klammern wird durch das Ergebnis ersetzt.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -155,13 +155,13 @@ WHERE ProductModelID=19
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   $pd / P1: Features / * gibt nur die untergeordneten Elemente des <`Features`>, aber $pd / P1:Features/Node() gibt alle Knoten zurück. Das schließt Elementknoten, Textknoten, Verarbeitungsanweisungen und Kommentare ein.  
+-   $PD/P1: Features/* gibt nur die untergeordneten Knoten des Elements `Features` <> zurück, aber $PD/P1: Features/Node () gibt alle Knoten zurück. Das schließt Elementknoten, Textknoten, Verarbeitungsanweisungen und Kommentare ein.  
   
 -   Die beiden FOR-Schleifen generieren ein kartesisches Produkt, aus dem der Produktname und die individuelle Funktion zurückgegeben werden.  
   
--   Die **ProductName** ist ein Attribut. Die XML-Konstruktion in dieser Abfrage gibt dieses als ein Element zurück.  
+-   **ProductName** ist ein Attribut. Die XML-Konstruktion in dieser Abfrage gibt dieses als ein Element zurück.  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 <Feature>  
@@ -186,8 +186,8 @@ WHERE ProductModelID=19
 ...      
 ```  
   
-### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D. Anhand der katalogbeschreibung eines Produktmodells, Liste der Product-Modell-Name, Modell-ID und Features gruppiert in einem \<Product >-Element  
- In der katalogbeschreibung des Produktmodells gespeicherte Informationen die folgende Abfrage listet produktmodellname, Modell-ID, und mit, Features gruppiert in einem \<Product >-Element.  
+### <a name="d-from-the-catalog-description-of-a-product-model-list-the-product-model-name-model-id-and-features-grouped-inside-a-product-element"></a>D: Listen Sie in der Katalogbeschreibung eines Produkt Modells den Produktmodell Namen, die Modell-ID und die Features auf, \<die in einem Product>-Element gruppiert sind.  
+ Mithilfe der Informationen, die in der Katalogbeschreibung des Produkt Modells gespeichert sind, listet die folgende Abfrage den Produktmodell Namen, die Modell-ID und die \<Features auf, die in einem Product>-Element gruppiert sind.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -206,7 +206,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 <Product>  
@@ -223,7 +223,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. Abrufen von Produktmodell-Funktionsbeschreibungen  
- Die folgende Abfrage erstellt XML mit einem <`Product`>-Element mit **ProducModelID**, **ProductModelName** Attribute und die ersten beiden Produktfunktionen enthält. Insbesondere werden die ersten beiden Produktfunktionen enthält die ersten beiden untergeordneten Elemente von der <`Features`> Element. Wenn mehrere Funktionen vorhanden sind, gibt es eine leere <`There-is-more/`> Element.  
+ Die folgende Abfrage konstruiert XML, das ein <`Product`>-Element enthält, das die Attribute **producmodelid**, **ProductModelName** und die ersten beiden Produktfunktionen enthält. Insbesondere die ersten beiden Produkt Features sind die ersten beiden untergeordneten Elemente des <`Features`>-Elements. Wenn weitere Funktionen vorhanden sind, wird ein leeres <`There-is-more/`>-Element zurückgegeben.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -249,10 +249,10 @@ WHERE CatalogDescription is not NULL
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die FOR... RETURN-Schleifenstruktur Ruft die ersten beiden Produktfunktionen ab. Die **position()** Funktion wird verwendet, um die Position der Elemente in der Sequenz zu finden.  
+-   Der für... Rückgabe Schleifen Struktur Ruft die ersten beiden Produktfunktionen ab. Die **Position ()** -Funktion wird verwendet, um die Position der Elemente in der Sequenz zu ermitteln.  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. Suchen von Elementnamen in der Produktkatalogbeschreibung, die mit "ons" enden  
- Die folgende Abfrage durchsucht die katalogbeschreibungen und gibt alle Elemente in der <`ProductDescription`> Element, dessen Name mit "Ons" endet.  
+ Die folgende Abfrage durchsucht die Katalogbeschreibungen und gibt alle Elemente im <`ProductDescription`> Element zurück, dessen Name mit "ons" endet.  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -267,7 +267,7 @@ FROM Production.ProductModel
 WHERE CatalogDescription is not NULL  
 ```  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 ProductModelID   Result  
@@ -295,15 +295,15 @@ WHERE CatalogDescription.value('
      contains( string( (/pd:ProductDescription/pd:Summary)[1] ),"Aerodynamic")','bit') = 1  
 ```  
   
- Beachten Sie, der angibt, die SELECT-Abfrage **query()** und **Value()-Methode** Methoden der **Xml** -Datentyp. Deshalb muss die Namespacedeklaration nicht zweimal in zwei verschiedenen Abfrageprologen wiederholt werden, sondern das Präfix pd wird in der Abfrage verwendet und nur einmal mit WITH XMLNAMESPACES definiert.  
+ Beachten Sie, dass die SELECT-Abfrage die **Query ()** -und **value ()** -Methoden des **XML** -Datentyps angibt. Deshalb muss die Namespacedeklaration nicht zweimal in zwei verschiedenen Abfrageprologen wiederholt werden, sondern das Präfix pd wird in der Abfrage verwendet und nur einmal mit WITH XMLNAMESPACES definiert.  
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die WHERE-Klausel verwendet wird, um nur die Zeilen abzurufen, in die katalogbeschreibung das Wort "Aerodynamic", in enthält, der <`Summary`> Element.  
+-   Die WHERE-Klausel wird verwendet, um nur die Zeilen abzurufen, in denen die Katalogbeschreibung das Wort "Aerodynamik" `Summary` im <>-Element enthält.  
   
--   Die **contains()** Funktion wird verwendet, um festzustellen, ob das Wort im Text enthalten ist.  
+-   Die **enthält ()** -Funktion wird verwendet, um festzustellen, ob das Wort im Text enthalten ist.  
   
--   Die **Value()-Methode** Methode der **Xml** -Datentyps vergleicht den Rückgabewert von **contains()** auf 1.  
+-   Die **value ()** -Methode des **XML** -Datentyps vergleicht den von " **enthält ()** " zurückgegebenen Wert mit "1".  
   
  Dies ist das Ergebnis:  
   
@@ -321,7 +321,7 @@ ProductModelID Result
 ```  
   
 ### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>H. Suchen nach Produktmodellen, deren Katalogbeschreibung keine Produktmodellbilder enthält.  
- Die folgende Abfrage ruft ProductModelIDs für Produkte, deren katalogbeschreibungen nicht Modelle umfassen eine <`Picture`> Element.  
+ Die folgende Abfrage ruft productmudelids für Produktmodelle ab, deren Katalogbeschreibungen keine <`Picture`>-Element enthalten.  
   
 ```  
 SELECT  ProductModelID  
@@ -334,16 +334,16 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Wenn die **exist()** -Methode in die WHERE-Klausel False (0) zurück, die Produktmodell-ID wird zurückgegeben. Ansonsten wird sie nicht zurückgegeben.  
+-   Wenn die **exist ()** -Methode in der WHERE-Klausel false (0) zurückgibt, wird die Produktmodell-ID zurückgegeben. Ansonsten wird sie nicht zurückgegeben.  
   
--   Da alle produktbeschreibungen enthalten ein <`Picture`>-Element, das Resultset leer ist in diesem Fall.  
+-   Da alle Produktbeschreibungen ein <`Picture`>-Element enthalten, ist das Resultset in diesem Fall leer.  
   
-## <a name="see-also"></a>Siehe auch  
- [XQueries Einbeziehung von Hierarchien](../xquery/xqueries-involving-hierarchy.md)   
- [XQueries Involving Order](../xquery/xqueries-involving-order.md)   
- [Behandlung relationaler Daten mit XQuery-Abfragen](../xquery/xqueries-handling-relational-data.md)   
- [Zeichenfolgensuche in XQuery](../xquery/string-search-in-xquery.md)   
- [Handhabung von Namespaces in XQuery](../xquery/handling-namespaces-in-xquery.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [XQueries mit Hierarchie](../xquery/xqueries-involving-hierarchy.md)   
+ [XQueries mit der Reihenfolge](../xquery/xqueries-involving-order.md)   
+ [XQueries-Verarbeitung von relationalen Daten](../xquery/xqueries-handling-relational-data.md)   
+ [Zeichen folgen Suche in XQuery](../xquery/string-search-in-xquery.md)   
+ [Verarbeiten von Namespaces in XQuery](../xquery/handling-namespaces-in-xquery.md)   
  [Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES](../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

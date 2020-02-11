@@ -13,25 +13,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63015792"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Indexspalten (Dialogfeld) (Visual Database Tools)
   Verwenden Sie dieses Dialogfeld, um die Spalten für einen Index auszuwählen und deren Sortierreihenfolge festzulegen. Für einen Index können eine oder mehrere Spalten verwendet werden, und jede Spalte kann entweder in aufsteigender oder absteigender Reihenfolge sortiert werden. Klicken Sie im Dialogfeld **Indizes/Schlüssel** im Abschnitt **Allgemein** auf die Schaltfläche mit den drei Punkten für die Zeile **Spalten** , um auf dieses Dialogfeld zugreifen zu können.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Spaltenname**  
- Wählen Sie die Spalten aus, die an diesem Index beteiligt sind. Wählen Sie  **\<None >** um diese Spalte aus dem Index entfernen...  
+ Wählen Sie die Spalten aus, die an diesem Index beteiligt sind. Wählen Sie ** \<keine>** aus, um diese Spalte aus dem Index zu entfernen.  
   
  **Sortierreihenfolge**  
  Wählen Sie eine Sortierreihenfolge für die angegebene Spalte aus. Die verfügbaren Optionen lauten **Aufsteigend** und **Absteigend**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
- [Indizes und Schlüssel im Dialogfeld &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Dialog Feld "Indizes und Schlüssel" &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

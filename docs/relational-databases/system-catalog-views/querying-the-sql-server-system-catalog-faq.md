@@ -1,5 +1,5 @@
 ---
-title: Abfragen des Systemkatalogs von SQL Server – häufig gestellte Fragen | Microsoft-Dokumentation
+title: Abfragen der SQL Server System Katalog-FAQ | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018365"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>FAQ: Abfragen des SQL Server-Systemkatalogs
@@ -30,7 +30,7 @@ ms.locfileid: "68018365"
 
   Dieses Thema enthält eine Liste häufig gestellter Fragen. Die Antworten auf diese Fragen sind Abfragen, die auf Katalogsichten basieren.  
   
-##  <a name="_TOP"></a> Häufig gestellte Fragen  
+##  <a name="_TOP"></a>Häufig gestellte Fragen  
  In den nachfolgenden Abschnitten werden häufig gestellte Fragen nach Kategorien aufgelistet.  
   
 ### <a name="data-types"></a>Datentypen  
@@ -39,27 +39,27 @@ ms.locfileid: "68018365"
   
 -   [Wie finde ich die LOB-Datentypen einer angegebenen Tabelle?](#_FAQ14)  
   
--   [Wie finde ich die Spalten, die für einen angegebenen Datentyp abhängig sind?](#_FAQ22)  
+-   [Wie finde ich die Spalten, die von einem bestimmten Datentyp abhängig sind?](#_FAQ22)  
   
--   [Wie finde ich die berechneten Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ23)  
+-   [Gewusst wie Suchen Sie die berechneten Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen?](#_FAQ23)  
   
--   [Wie finde ich die Parameter, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ24)  
+-   [Wie finde ich die Parameter, die von einem bestimmten CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ24)  
   
--   [Wie finde ich die CHECK-Einschränkungen, die für einen angegebenen CLR-benutzerdefinierten Typ abhängig sind?](#_FAQ25)  
+-   [Wie finde ich die CHECK-Einschränkungen, die von einem angegebenen CLR-benutzerdefinierten Typ abhängig sind?](#_FAQ25)  
   
--   [Wie finde ich die Sichten, Transact-SQL-Funktionen und gespeicherten Transact-SQL-Prozeduren, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?](#_FAQ26)  
+-   [Wie finde ich die Sichten, Transact-SQL-Funktionen und gespeicherten Prozeduren von Transact-SQL, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängig sind?](#_FAQ26)  
   
 ### <a name="tables-indexes-views-and-constraints"></a>Tabellen, Indizes, Sichten und Einschränkungen  
   
 -   [Wie finde ich alle benutzerdefinierten Tabellen in einer angegebenen Datenbank?](#_FAQ31)  
   
--   [Wie finde ich alle Tabellen, die nicht über einen gruppierten Index in einer angegebenen Datenbank verfügen?](#_FAQ1)  
+-   [Wie finde ich alle Tabellen, die keinen gruppierten Index aufweisen, in einer angegebenen Datenbank?](#_FAQ1)  
   
--   [Wie finde ich alle Tabellen, die nicht über einen Index verfügen?](#_FAQ4)  
+-   [Wie finde ich alle Tabellen, die keinen Index besitzen?](#_FAQ4)  
   
--   [Wie finde ich alle Tabellen, die nicht über einen Primärschlüssel verfügen?](#_FAQ3)  
+-   [Wie finde ich alle Tabellen, die keinen Primärschlüssel aufweisen?](#_FAQ3)  
   
--   [Wie finde ich alle Tabellen, die eine Identitätsspalte verfügen?](#_FAQ5)  
+-   [Wie finde ich alle Tabellen mit einer Identitätsspalte?](#_FAQ5)  
   
 -   [Wie finde ich alle Tabellen und Indizes, die partitioniert sind?](#_FAQ32)  
   
@@ -73,9 +73,9 @@ ms.locfileid: "68018365"
   
 -   [Wie finde ich die Spalten eines Fremdschlüssels für eine angegebene Tabelle?](#_FAQ17)  
   
--   [Wie bestimme ich, wenn eine Spalte in einem berechneten Spaltenausdruck verwendet wird?](#_FAQ20)  
+-   [Wie bestimme ich, ob eine Spalte in einem berechneten Spaltenausdruck verwendet wird?](#_FAQ20)  
   
--   [Wie finde ich alle Spalten, die verwendet werden, in einem berechneten Spaltenausdruck?](#_FAQ21)  
+-   [Wie finde ich alle Spalten, die in einem berechneten Spaltenausdruck verwendet werden?](#_FAQ21)  
   
 -   [Wie finde ich alle Einschränkungen für eine angegebene Tabelle?](#_FAQ27)  
   
@@ -105,11 +105,11 @@ ms.locfileid: "68018365"
   
 -   [Wie finde ich alle Besitzer von Entitäten, die in einem angegebenen Schema enthalten sind?](#_FAQ2)  
   
--   [Wie finde ich die Berechtigungen, die einem angegebenen Prinzipal erteilt oder verweigert?](#_FAQ18)  
+-   [Wie finde ich die Berechtigungen, die einem angegebenen Prinzipal erteilt bzw. verweigert wurden?](#_FAQ18)  
   
 ## <a name="answers"></a>Antworten  
   
-###  <a name="_FAQ1"></a> Wie finde ich alle Tabellen, die nicht über einen gruppierten Index in einer angegebenen Datenbank verfügen?  
+###  <a name="_FAQ1"></a>Gewusst wie alle Tabellen ermitteln, die in einer angegebenen Datenbank keinen gruppierten Index aufweisen?  
  Vor dem Ausführen der folgenden Abfragen ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -141,7 +141,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ2"></a> Wie finde ich alle Besitzer von Entitäten, die in einem angegebenen Schema enthalten sind?  
+###  <a name="_FAQ2"></a>Gewusst wie alle Besitzer von Entitäten suchen, die in einem angegebenen Schema enthalten sind?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name>` durch gültige Namen.  
   
 ```  
@@ -169,7 +169,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ3"></a> Wie finde ich alle Tabellen, die nicht über einen Primärschlüssel verfügen?  
+###  <a name="_FAQ3"></a>Gewusst wie alle Tabellen ermitteln, die keinen Primärschlüssel aufweisen?  
  Vor dem Ausführen der folgenden Abfragen ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -204,7 +204,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ4"></a> Wie finde ich alle Tabellen, die nicht über einen Index verfügen?  
+###  <a name="_FAQ4"></a>Gewusst wie alle Tabellen ermitteln, die keinen Index aufweisen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -221,7 +221,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ5"></a> Wie finde ich alle Tabellen, die eine Identitätsspalte verfügen?  
+###  <a name="_FAQ5"></a>Gewusst wie alle Tabellen mit Identitäts Spalten suchen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -256,7 +256,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ7"></a> Wie finde ich die Datentypen der Spalten einer angegebenen Tabelle?  
+###  <a name="_FAQ7"></a>Gewusst wie die Datentypen der Spalten einer angegebenen Tabelle zu suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.table_name>` durch gültige Namen.  
   
 ```  
@@ -281,7 +281,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ8"></a> Wie finde ich die Abhängigkeiten von einer angegebenen Funktion?  
+###  <a name="_FAQ8"></a>Gewusst wie die Abhängigkeiten für eine angegebene Funktion zu finden?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.function_name>` durch gültige Namen.  
   
 ```  
@@ -299,7 +299,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ9"></a> Wie finde ich alle gespeicherten Prozeduren in einer Datenbank?  
+###  <a name="_FAQ9"></a>Gewusst wie alle gespeicherten Prozeduren in einer Datenbank suchen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen.  
   
 ```  
@@ -318,7 +318,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ10"></a> Wie finde ich die Parameter für eine angegebene gespeicherte Prozedur oder Funktion?  
+###  <a name="_FAQ10"></a>Gewusst wie die Parameter für eine angegebene gespeicherte Prozedur oder Funktion zu suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.object_name>` durch gültige Namen.  
   
 ```  
@@ -344,7 +344,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ12"></a> Wie finde ich alle benutzerdefinierten Funktionen in einer Datenbank?  
+###  <a name="_FAQ12"></a>Gewusst wie alle benutzerdefinierten Funktionen in einer Datenbank suchen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -363,7 +363,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ13"></a> Wie finde ich alle Sichten in einer Datenbank?  
+###  <a name="_FAQ13"></a>Gewusst wie alle Sichten in einer Datenbank suchen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Datenbanknamen.  
   
 ```  
@@ -381,7 +381,7 @@ FROM sys.views;
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ6"></a> Wie finde ich alle Entitäten, die in den letzten N Tagen geändert wurden?  
+###  <a name="_FAQ6"></a>Gewusst wie alle Entitäten suchen, die in den letzten N Tagen geändert wurden?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` und `<n_days>` durch gültige Werte.  
   
 ```  
@@ -401,7 +401,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ14"></a> Wie finde ich die LOB-Datentypen einer angegebenen Tabelle?  
+###  <a name="_FAQ14"></a>Gewusst wie die LOB-Datentypen einer angegebenen Tabelle gefunden?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.table_name>` durch gültige Namen.  
   
 ```  
@@ -429,7 +429,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ15"></a> Wie zeige ich die Definition eines Moduls an?  
+###  <a name="_FAQ15"></a>Gewusst wie Anzeigen der Definition eines Moduls?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.object_name>` durch gültige Namen.  
   
 ```  
@@ -454,7 +454,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ19"></a> Wie zeige ich die Definition eines Triggers auf Serverebene an?  
+###  <a name="_FAQ19"></a>Gewusst wie Anzeigen der Definition eines triggerservers auf Serverebene?  
   
 ```  
 SELECT definition  
@@ -465,7 +465,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ16"></a> Wie finde ich die Spalten eines Primärschlüssels für eine angegebene Tabelle?  
+###  <a name="_FAQ16"></a>Gewusst wie die Spalten eines Primärschlüssels für eine angegebene Tabelle suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.table_name>` durch gültige Namen.  
   
 ```  
@@ -508,7 +508,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ17"></a> Wie finde ich die Spalten eines Fremdschlüssels für eine angegebene Tabelle?  
+###  <a name="_FAQ17"></a>Gewusst wie die Spalten eines fremd Schlüssels für eine angegebene Tabelle suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.table_name>` durch gültige Namen.  
   
 ```  
@@ -532,7 +532,7 @@ WHERE f.parent_object_id = OBJECT_ID('<schema_name.table_name>');
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ18"></a> Wie finde ich die Berechtigungen, die einem angegebenen Prinzipal erteilt oder verweigert?  
+###  <a name="_FAQ18"></a>Gewusst wie die Berechtigungen, die einem angegebenen Prinzipal erteilt oder verweigert wurden, zu finden?  
  Im folgenden Beispiel wird eine Funktion erstellt, die den Namen der Entität zurückgibt, deren Berechtigungen überprüft werden. Die Funktion wird in den nachfolgenden Abfragen aufgerufen. Die Funktion muss in jeder Datenbank erstellt werden, in der Sie die Berechtigungen überprüfen möchten.  
   
 ```  
@@ -615,8 +615,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ20"></a> Wie bestimme ich, wenn eine Spalte in einem berechneten Spaltenausdruck verwendet wird?  
- Bevor Sie die folgende Abfrage ausführen, ersetzen Sie dies `<database_name>`, `<schema_name.table_name>`, und `<column_name`> durch gültige Namen.  
+###  <a name="_FAQ20"></a>Gewusst wie bestimmen, ob eine Spalte in einem berechneten Spalten Ausdruck verwendet wird?  
+ Ersetzen `<database_name>`Sie vor dem Ausführen der folgenden Abfrage, `<schema_name.table_name>`, und `<column_name`> durch gültige Namen.  
   
 ```  
 USE <database_name>;  
@@ -637,7 +637,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ21"></a> Wie finde ich alle Spalten, die verwendet werden, in einem berechneten Spaltenausdruck?  
+###  <a name="_FAQ21"></a>Gewusst wie alle Spalten ermitteln, die in einem berechneten Spalten Ausdruck verwendet werden?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen.  
   
 ```  
@@ -659,8 +659,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ22"></a> Wie finde ich die Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?  
- Bevor Sie die folgende Abfrage ausführen, ersetzen Sie dies `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` mit einem gültigen, der im Schema qualifiziert CLR-benutzerdefinierten Typ oder schemaqualifizierte Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **Db_owner** Rolle oder die Berechtigungen zum Anzeigen aller abhängigen Spalten und berechneten Spalte Metadaten in der Datenbank.  
+###  <a name="_FAQ22"></a>Gewusst wie Suchen Sie die Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen?  
+ Vor dem Ausführen der folgenden Abfrage ersetzen `<database_name>` Sie durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der mit einem Schema qualifiziert ist, oder durch einen Schema qualifizierten Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **db_owner** Rolle oder die Berechtigungen, um alle abhängigen Spalten-und berechneten Spalten Metadaten in der Datenbank anzuzeigen.  
   
 ```  
 USE <database_name>;  
@@ -681,7 +681,7 @@ GO
   
 ```  
   
- Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht der Spalten, die einen CLR-benutzerdefinierten Typ oder einen Alias abhängig, aber das Ergebnis ist sichtbar, um die **öffentliche** Rolle. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
+ Die folgende Abfrage gibt eine eingeschränkte und schmale Sicht von Spalten zurück, die von einem CLR-benutzerdefinierten Typ oder Alias abhängig sind. das Resultset ist jedoch für die **Public** -Rolle sichtbar. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
   
 ```  
 USE <database_name>;  
@@ -697,7 +697,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ23"></a> Wie finde ich die berechneten Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?  
+###  <a name="_FAQ23"></a>Gewusst wie Suchen Sie die berechneten Spalten, die von einem angegebenen CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der im Schema qualifiziert ist oder einen Alias-Typnamen.  
   
 ```  
@@ -714,8 +714,8 @@ WHERE referenced_major_id = TYPE_ID('<schema_name.data_type_name>')
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ24"></a> Wie finde ich die Parameter, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?  
- Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der im Schema qualifiziert ist oder einen Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **Db_owner** Rolle oder die Berechtigungen zum Anzeigen aller abhängigen Spalten und berechneten Spalte Metadaten in der Datenbank.  
+###  <a name="_FAQ24"></a>Gewusst wie die Parameter zu finden, die von einem angegebenen CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen?  
+ Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der im Schema qualifiziert ist oder einen Alias-Typnamen. Die folgende Abfrage erfordert die Mitgliedschaft in der **db_owner** Rolle oder die Berechtigungen, um alle abhängigen Spalten-und berechneten Spalten Metadaten in der Datenbank anzuzeigen.  
   
 ```  
 USE <database_name>;  
@@ -740,7 +740,7 @@ GO
   
 ```  
   
- Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht von Parametern, die von einem CLR-benutzerdefinierten Typ oder Alias abhängen, aber das Ergebnis ist sichtbar, um die **öffentliche** Rolle. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
+ Die folgende Abfrage gibt eine eingeschränkte und schmale Ansicht von Parametern zurück, die von einem CLR-benutzerdefinierten Typ oder Alias abhängen. das Resultset ist jedoch für die **Public** -Rolle sichtbar. Sie können diese Abfrage verwenden, wenn Sie anderen Benutzern REFERENCE-Berechtigungen für den benutzerdefinierten Typ gewährt haben, oder wenn Sie keine Berechtigung zum Anzeigen der Metadaten für Objekte haben, die von anderen Benutzern, die diesen Typ verwenden, erstellt wurden.  
   
 ```  
 USE <database_name>;  
@@ -756,8 +756,8 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ25"></a> Wie finde ich die CHECK-Einschränkungen, die für einen angegebenen CLR-benutzerdefinierten Typ abhängig sind?  
- Bevor Sie die folgende Abfrage ausführen, ersetzen Sie dies `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` mit einem Namen ungültig, der im Schema qualifiziert CLR-benutzerdefinierten Typ.  
+###  <a name="_FAQ25"></a>Gewusst wie die Check-Einschränkungen, die von einem angegebenen CLR-benutzerdefinierten Typ abhängen, zu suchen?  
+ Vor dem Ausführen der folgenden Abfrage ersetzen `<database_name>` Sie durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typnamen, der im Schema qualifiziert ist.  
   
 ```  
 USE <database_name>;  
@@ -776,10 +776,10 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ26"></a> Wie finde ich die Sichten, Transact-SQL-Funktionen und gespeicherten Transact-SQL-Prozeduren, die von einem angegebenen CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen?  
+###  <a name="_FAQ26"></a>Gewusst wie Suchen Sie die Sichten, Transact-SQL-Funktionen und gespeicherten Transact-SQL-Prozeduren, die von einem angegebenen CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.data_type_name>` durch einen gültigen CLR-benutzerdefinierten Typ, der im Schema qualifiziert ist oder einen Alias-Typnamen.  
   
- Die Parameter, die in einer Funktion oder Prozedur definiert werden, sind implizit schemagebunden. Aus diesem Grund können Parameter, die von einem CLR-benutzerdefinierten Typ oder Aliasdatentyp abhängen angezeigt werden, mithilfe der [sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) -Katalogsicht angezeigt. Prozeduren und Trigger sind nicht schemagebunden. Dies bedeutet, dass Abhängigkeiten zwischen Ausdrücken, die im Text einer Prozedur oder eines Triggers definiert werden, und einem CLR-benutzerdefinierten Typ oder Aliasdatentyp nicht beibehalten werden. Schemagebundene Sichten und schemagebundene benutzerdefinierte Funktionen mit Ausdrücken, die von einem CLR-benutzerdefinierten Typ abhängig sind oder Aliastyp bleiben der **sql_dependencies** -Katalogsicht angezeigt. Abhängigkeiten zwischen Typen, CLR-Funktionen und CLR-Prozeduren werden nicht beibehalten.  
+ Die Parameter, die in einer Funktion oder Prozedur definiert werden, sind implizit schemagebunden. Daher können Parameter, die von einem CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen, mithilfe der [sys. sql_dependencies](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md) -Katalog Sicht angezeigt werden. Prozeduren und Trigger sind nicht schemagebunden. Dies bedeutet, dass Abhängigkeiten zwischen Ausdrücken, die im Text einer Prozedur oder eines Triggers definiert werden, und einem CLR-benutzerdefinierten Typ oder Aliasdatentyp nicht beibehalten werden. Schema gebundene Sichten und Schema gebundene benutzerdefinierte Funktionen, die Ausdrücke aufweisen, die von einem CLR-benutzerdefinierten Typ oder Alias Datentyp abhängen, werden in der **sys. sql_dependencies** -Katalog Sicht verwaltet. Abhängigkeiten zwischen Typen, CLR-Funktionen und CLR-Prozeduren werden nicht beibehalten.  
   
  Mit der folgenden Abfrage werden alle schemagebundenen Abhängigkeiten in Sichten, [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen und gespeicherten Prozeduren von [!INCLUDE[tsql](../../includes/tsql-md.md)] für einen angegebenen CLR-benutzerdefinierten Typ oder Aliastyp zurückgegeben.  
   
@@ -804,7 +804,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ27"></a> Wie finde ich alle Einschränkungen für eine angegebene Tabelle?  
+###  <a name="_FAQ27"></a>Gewusst wie alle Einschränkungen für eine angegebene Tabelle suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.table_name>` durch gültige Namen.  
   
 ```  
@@ -828,7 +828,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ28"></a> Wie finde ich alle Indizes für eine angegebene Tabelle?  
+###  <a name="_FAQ28"></a>Gewusst wie alle Indizes für eine angegebene Tabelle suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.table_name>` durch gültige Namen.  
   
 ```  
@@ -857,7 +857,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ30"></a> Wie finde ich alle Objekte, die einen angegebenen Spaltennamen aufweisen?  
+###  <a name="_FAQ30"></a>Gewusst wie alle Objekte mit einem angegebenen Spaltennamen suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<column_name>` durch gültige Namen.  
   
 ```  
@@ -887,7 +887,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ31"></a> Wie finde ich alle benutzerdefinierten Tabellen in einer angegebenen Datenbank?  
+###  <a name="_FAQ31"></a>Gewusst wie alle benutzerdefinierten Tabellen in einer angegebenen Datenbank suchen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen.  
   
 ```  
@@ -901,7 +901,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ32"></a> Wie finde ich alle Tabellen und Indizes, die partitioniert sind?  
+###  <a name="_FAQ32"></a>Gewusst wie alle Tabellen und Indizes ermitteln, die partitioniert sind?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen.  
   
 ```  
@@ -923,7 +923,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ33"></a> Wie finde ich alle Statistiken für ein angegebenes Objekt?  
+###  <a name="_FAQ33"></a>Gewusst wie alle Statistiken für ein angegebenes Objekt finden?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.object_name>` durch eine gültige Tabelle oder eine indizierte Sicht oder einen gültigen Namen der Tabellenwertfunktion.  
   
 ```  
@@ -942,7 +942,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ34"></a> Wie finde ich alle Statistiken und Statistikspalten für ein angegebenes Objekt?  
+###  <a name="_FAQ34"></a>Gewusst wie alle Statistiken und Statistik Spalten für ein angegebenes Objekt suchen?  
  Vor dem Ausführen der folgenden Abfrage ersetzen Sie `<database_name>` durch einen gültigen Namen und `<schema_name.object_name>` durch eine gültige Tabelle oder eine indizierte Sicht oder einen gültigen Namen der Tabellenwertfunktion.  
   
 ```  
@@ -963,7 +963,7 @@ GO
   
  [TOP](#_TOP)  
   
-###  <a name="_FAQ35"></a> Wie finde ich die Definition einer Sicht?  
+###  <a name="_FAQ35"></a>Gewusst wie die Definition einer Sicht suchen?  
  Ersetzen Sie vor dem Ausführen der folgenden Abfrage `<database_name>` und `<schema_name.object_name>` durch gültige Namen.  
   
 ```  
@@ -988,7 +988,7 @@ GO
   
  [TOP](#_TOP)  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

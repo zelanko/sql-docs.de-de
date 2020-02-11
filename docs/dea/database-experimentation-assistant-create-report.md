@@ -1,7 +1,7 @@
 ---
 title: Erstellen von Analyseberichten
 description: Erstellen von Analyseberichten in Assistent für Datenbankexperimente
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
-ms.openlocfilehash: 4d3f057ffcfb1030b473b69f96b7204b3a975613
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74307974"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831842"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Erstellen von Analyseberichten in Assistent für Datenbankexperimente (SQL Server)
 
@@ -25,29 +25,24 @@ Nachdem Sie die Quell Ablauf Verfolgung auf beiden Ziel Servern wiedergegeben ha
 
 ## <a name="create-an-analysis-report"></a>Erstellen eines Analyse Berichts
 
-Wählen Sie in der DEA das Menü Symbol aus. Wählen Sie im erweiterten Menü neben dem Prüfliste-Symbol die Option **Analyseberichte** aus.
+1. Wählen Sie in der ddea das Listen Symbol aus, geben Sie den Servernamen und den Authentifizierungstyp an, aktivieren bzw. deaktivieren Sie die Kontrollkästchen **Verbindung verschlüsseln** und **Serverzertifikat vertrauen** entsprechend ihren Szenarios, und wählen Sie dann **verbinden**aus.
 
-![Menü "Analyse"](./media/database-experimentation-assistant-create-report/dea-create-reports-menu.png)
+   ![Herstellen einer Verbindung mit dem Server mit Ablauf Verfolgungs Dateien](./media/database-experimentation-assistant-create-report/dea-connect-to-server-with-trace-files.png)
 
-Wählen Sie unter **Analyseberichte**die Option **neuer Analysebericht**aus.
+2. Wählen Sie auf dem Bildschirm **Analyseberichte** die Option **neuer Analysebericht**aus.
 
-![Menü "neuer Analysebericht"](./media/database-experimentation-assistant-create-report/dea-create-reports-new-report.png)
+   ![Neuen Analysebericht erstellen](./media/database-experimentation-assistant-create-report/dea-create-an-analysis-report.png)
 
-Geben Sie folgende Informationen ein, oder wählen Sie Sie aus:
+3. Geben Sie auf dem Bildschirm **neuer Analysebericht** einen Namen für den Bericht, den Speicherort und den Pfad zu den Ablauf Verfolgungs Dateien Ziel 1 und Ziel 2 an, und klicken Sie dann auf **starten**.
 
-- **Berichts Name**: Geben Sie einen Namen für den Bericht ein. Der Berichts Name wird sowohl für A-als auch für B-Datenbanken verwendet. Beispiel: der*eindeutige Bezeichner* *(oder B)* + des*Berichts namens* + .
-- **Servername**: Geben Sie den Namen des Server Computers ein, den Sie in den Datenbanken a, B und Analysis einschließen möchten.
-- **SQL Server Instanzname**: Geben Sie den Namen der SQL Server Instanz ein, die für den Bericht verwendet werden soll.
-- Ablauf **Verfolgung für Quell Server**: Geben Sie die erste (2008 R2) erste Ablauf Verfolgungs Datei (. trc) für SQL Server ein.
-- Ablauf **Verfolgung für Zielserver**: Geben Sie den Ziel SQL Server (2014) First. TRC-Datei ein.
+   ![Details zu neuen Analyseberichten angeben](./media/database-experimentation-assistant-create-report/dea-new-analysis-report-details.png)
 
-![Seite "neuer Analysebericht"](./media/database-experimentation-assistant-create-report/dea-create-reports-inputs.png)
+   Wenn die eingegebenen Informationen gültig sind, wird der Analysebericht erstellt.
 
-## <a name="generate-a-report"></a>Generieren eines Berichts
+   ![Neu erstellter Analysebericht](./media/database-experimentation-assistant-create-report/dea-newly-created-analysis-report.png)
 
-Nachdem Sie die erforderlichen Informationen auf der Seite **neuer Analysebericht** eingegeben oder ausgewählt haben, klicken Sie auf **starten** , um mit dem Erstellen des Berichts zu beginnen. Wenn die eingegebenen Informationen gültig sind, wird der Analysebericht erstellt. Andernfalls werden die Textfelder mit ungültigen Informationen rot hervorgehoben. Stellen Sie sicher, dass Sie die richtigen Werte eingeben, und klicken Sie dann auf **starten**.
-
-Es wird ein neuer Analysebericht generiert. Die Analysedatenbank folgt den*eindeutigen Bezeichner*Namensschema Analyse + *Benutzerdefinierte Berichts Name* + .
+      > [!NOTE]
+      > Wenn eine der eingegebenen Informationen ungültig ist, werden die Textfelder mit den falschen Informationen rot hervorgehoben. Nehmen Sie erforderliche Korrekturen vor, und wählen Sie dann neu **starten** aus.
 
 ## <a name="frequently-asked-questions-about-analysis-reports"></a>Häufig gestellte Fragen zu Analyseberichten
 
@@ -57,11 +52,7 @@ Von der DEA werden statistische Tests verwendet, um die Arbeitsauslastung zu ana
 
 **F: kann ich einen neuen Analysebericht erstellen, während ein anderer Bericht generiert wird?**
 
-Nein  Derzeit kann jeweils nur ein Bericht generiert werden, um Konflikte zu verhindern. Sie können jedoch mehr als eine Erfassung und Wiedergabe gleichzeitig ausführen.
-
-**F: Ich habe ein Upgrade von DEA auf Version 2,0 ausgeführt. Kann ich meine alten Berichte weiterhin anzeigen und verwenden?**
-
-Ja. Um zuvor generierte Berichte anzuzeigen, müssen Sie das Schema des Berichts aktualisieren. Weitere Informationen finden Sie unter " [DEA 2,0: Update Database Schema for Analysis Report in DEA](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-updating-db-schema-for-analysis-report-in-the-database-experimentation-assistant/)".
+Nein.  Derzeit kann jeweils nur ein Bericht generiert werden, um Konflikte zu verhindern. Sie können jedoch mehr als eine Erfassung und Wiedergabe gleichzeitig ausführen.
 
 **F: kann ich mithilfe der Eingabeaufforderung einen Analysebericht generieren?**
 
@@ -105,8 +96,8 @@ Wenn beim Erstellen des Berichts ein Fehler auftritt, wird auf der Seite Status 
 
 Wenn keine Daten vorhanden sind, wurden die Daten möglicherweise nicht ordnungsgemäß kopiert, oder die Datenbank ist möglicherweise beschädigt. Wenn nur einige Daten fehlen, haben die in der Erfassung oder Wiedergabe erstellten Ablauf Verfolgungs Dateien möglicherweise die Arbeitsauslastung nicht exakt aufgezeichnet. Wenn die Daten vorhanden sind, überprüfen Sie die Protokolldateien in%\\Temp% DEA, um festzustellen, ob Fehler protokolliert wurden. Versuchen Sie dann erneut, den Analysebericht zu generieren.
 
-Weitere Fragen oder Feedback? Übermitteln Sie Ihr Feedback über das Tool "DEA", indem Sie in der unteren linken Ecke das Smiley-Symbol auswählen. 
+Weitere Fragen oder Feedback? Übermitteln Sie Ihr Feedback über das Tool "DEA", indem Sie in der unteren linken Ecke das Smiley-Symbol auswählen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Weitere Informationen zum Anzeigen des Analyse Berichts finden Sie unter [Anzeigen von Berichten](database-experimentation-assistant-view-report.md).

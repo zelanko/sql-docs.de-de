@@ -1,5 +1,5 @@
 ---
-title: Sp_configure_peerconflictdetection (Transact-SQL) | Microsoft-Dokumentation
+title: sp_configure_peerconflictdetection (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68215945"
 ---
-# <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
+# <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Konfiguriert die Konflikterkennung für eine Veröffentlichung, die Teil einer Peer-zu-Peer-Transaktionsreplikationstopologie ist. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank ausgeführt.  
+  Konfiguriert die Konflikterkennung für eine Veröffentlichung, die Teil einer Peer-zu-Peer-Transaktionsreplikationstopologie ist. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md). Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,46 +44,46 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @publication=] '*publication*'  
- Der Name der Veröffentlichung, für die die Konflikterkennung konfiguriert werden soll. *Veröffentlichung* ist **Sysname**, hat keinen Standardwert.  
+ [ @publication=] "*Veröffentlichung*"  
+ Der Name der Veröffentlichung, für die die Konflikterkennung konfiguriert werden soll. *Publication* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
- [ @action=] '*Aktion*"  
- Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Aktion* ist **nvarchar(5)** , und kann einen der folgenden Werte.  
+ [ @action= ] "*Action*"  
+ Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Action* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**enable**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
-|**disable**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
+|**fähigen**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
+|**ier**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
 |NULL (Standard)||  
   
  [ @originator_id= ] *originator_id*  
- Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. *Originator_id* ist **Int**, hat den Standardwert NULL. Diese ID wird für die konflikterkennung verwendet, wenn *Aktion* nastaven NA hodnotu **aktivieren**. Geben Sie eine positive ID ungleich 0 an, die in der Topologie noch nicht verwendet wurde. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.  
+ Gibt eine ID für einen Knoten in einer Peer-zu-Peer-Topologie an. *originator_id* ist vom Datentyp **int**und hat den Standardwert NULL. Diese ID wird für die Konflikterkennung verwendet, wenn *Action* auf **enable**festgelegt ist. Geben Sie eine positive ID ungleich 0 an, die in der Topologie noch nicht verwendet wurde. Zum Anzeigen einer Liste der bereits verwendeten IDs fragen Sie die [Mspeer_originatorid_history](../../relational-databases/system-tables/mspeer-originatorid-history-transact-sql.md) -Systemtabelle ab.  
   
  [ @conflict_retention= ] *conflict_retention*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @continue_onconflict=] '*Continue_onconflict*']  
- Legt fest, ob der Verteilungs-Agent nach Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. *Continue_onconflict* ist **nvarchar(5)** hat den Standardwert "false".  
+ [ @continue_onconflict= ] '*continue_onconflict*']  
+ Legt fest, ob der Verteilungs-Agent nach Erkennung eines Konflikts die Verarbeitung von Änderungen fortsetzt. *continue_onconflict* ist vom Datentyp **nvarchar (5)** und hat den Standardwert false.  
   
 > [!CAUTION]  
 >  Es wird empfohlen, den Standardwert FALSE zu verwenden. Wenn diese Option auf TRUE festgelegt wird, versucht der Verteilungs-Agent, die Datenkonvergenz in der Topologie herbeizuführen, indem die konfliktverursachende Zeile von dem Knoten mit der höchsten Absender-ID angewendet wird. Bei dieser Methode ist keine Konvergenz garantiert. Sie sollten sicherstellen, dass die Topologie nach der Erkennung eines Konflikts konsistent ist. Weitere Informationen finden Sie im Abschnitt "Konfliktbehandlung" unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   
- [ @local= ] '*local*'  
+ [ @local= ] "*local*"  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @timeout= ] *timeout*  
+ [ @timeout= ] *Timeout*  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- sp_configure_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Um die Verwendung der konflikterkennung müssen auf allen Knoten ausgeführt werden [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder späteren Versionen verwendet werden und die Erkennung muss für alle Knoten aktiviert sein.  
+## <a name="remarks"></a>Bemerkungen  
+ sp_configure_peerconflictdetection wird in der Peer-zu-Peer-Transaktionsreplikation verwendet. Zur Verwendung der Konflikterkennung müssen auf allen Knoten oder [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] höhere Versionen ausgeführt werden. und die Erkennung muss für alle Knoten aktiviert sein.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle sysadmin oder in der festen Datenbankrolle db_owner.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konflikterkennung bei der Peer-zu-Peer-Replikation](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
