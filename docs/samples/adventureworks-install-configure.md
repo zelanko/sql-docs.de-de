@@ -10,10 +10,10 @@ author: MashaMSFT
 ms.author: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 6a4b56a31ede0d8e011c1a2244f5d014e185e7e5
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74318995"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Installation und Konfiguration von AdventureWorks
@@ -100,6 +100,6 @@ Wenn Sie noch keine SQL Server in Azure haben, navigieren Sie zum [Azure-Portal]
 1. Wählen Sie **Erstellen** aus, um die neue SQL-Datenbank zu erstellen. Dies ist die wiederhergestellte Kopie der AdventureWorksLT-Datenbank. 
 
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Lernprogramme für SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)   
 [Tutorials für SQL Server Datenbank-Engine](../relational-databases/database-engine-tutorials.md)

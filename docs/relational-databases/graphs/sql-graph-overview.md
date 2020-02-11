@@ -1,5 +1,5 @@
 ---
-title: Diagramm Verarbeitung
+title: Graph-Verarbeitung
 titleSuffix: SQL Server and Azure SQL Database
 ms.date: 06/26/2019
 ms.prod: sql
@@ -16,38 +16,38 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3ca26af4738de25937b71e0c97c6272414a0957a
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74096088"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet Graph-Datenbankfunktionen zum Modellieren von m:n-Beziehungen. Die Diagramm Beziehungen sind in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] integriert und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als grundlegendes Datenbankverwaltungssystem.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Graph-Datenbankfunktionen zum Modellieren von m:n-Beziehungen. Die Diagramm Beziehungen sind in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] integriert und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von als grundlegendes Datenbankverwaltungssystem.
 
 
-## <a name="what-is-a-graph-database"></a>Was ist eine Graphdatenbank?  
-Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten stellt eine Entität (z.B. eine Person oder Organisation) dar, und ein Edge repräsentiert eine Beziehung zwischen den beiden Knoten, die durch den Edge verbunden werden (z.B. Likes oder Freunde). Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet sein. Es folgen einige Features, mit denen eine Graph-Datenbank eindeutig gemacht wird:  
--   Kanten oder Beziehungen sind erstklassige Entitäten in einer Graph-Datenbank und können über Attribute oder Eigenschaften verfügen, die Ihnen zugeordnet sind. 
--   Mit einem einzelnen Edge können mehrere Knoten in einer Graph-Datenbank flexibel verbunden werden.
--   Sie können problemlos Muster Vergleiche und Multihop-Navigations Abfragen Ausdrücken.
--   Transitiv Closure und polymorphe Abfragen können problemlos ausgedrückt werden.
+## <a name="what-is-a-graph-database"></a>Was ist eine Graph-Datenbank?  
+Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten repräsentiert eine Entität (z.B. eine Person oder eine Organisation), und eine Kante repräsentiert eine Beziehung zwischen den beiden Knoten, die durch die Kante verbunden sind (z.B. „Gefällt mir“-Markierungen oder Freunde). Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet sein. Folgende Features machen eine Graphdatenbank einmalig:  
+-   Kanten oder Beziehungen sind Entitäten der ersten Klasse in einer Graphdatenbank, denen Attribute oder Eigenschaften zugeordnet sein können. 
+-   Eine einzelne Kante kann flexibel mehrere Knoten in einer Graphdatenbank verbinden.
+-   Musterabgleiche und Navigationsabfragen über mehrere Hops lassen sich ganz einfach ausdrücken.
+-   Transitive Abschlüsse und polymorphe Abfragen lassen sich ebenfalls sehr einfach ausdrücken.
 
-## <a name="when-to-use-a-graph-database"></a>Wann wird eine Graphdatenbank verwendet?
+## <a name="when-to-use-a-graph-database"></a>Verwendung einer Graph-Datenbank
 
-Es gibt nichts, was eine Graph-Datenbank erreichen kann, was nicht mithilfe einer relationalen Datenbank erreicht werden kann. Eine Graph-Datenbank kann es jedoch einfacher machen, bestimmte Arten von Abfragen auszudrücken. Mit bestimmten Optimierungen können auch bestimmte Abfragen besser funktionieren. Ihre Entscheidung, eine solche Entscheidung zu treffen, kann auf folgenden Faktoren basieren:  
+Eine Graphdatenbank kann keine Ergebnisse erzielen, die nicht auch mit einer relationalen Datenbank erreicht werden können. Eine Graph-Datenbank kann es jedoch einfacher machen, bestimmte Arten von Abfragen auszudrücken. Mit bestimmten Optimierungen können auch bestimmte Abfragen besser funktionieren. Bei der Entscheidung für die eine oder die andere Lösung spielen folgende Faktoren eine Rolle:  
 -   Ihre Anwendung verfügt über hierarchische Daten. Der hierarchyid-Datentyp kann verwendet werden, um Hierarchien zu implementieren. es gelten jedoch einige Einschränkungen. Beispielsweise ist es nicht möglich, mehrere übergeordnete Elemente für einen Knoten zu speichern.
 -   Ihre Anwendung verfügt über komplexe m:n-Beziehungen. Wenn die Anwendung weiterentwickelt wird, werden neue Beziehungen hinzugefügt.
 -   Sie müssen miteinander verbundene Daten und Beziehungen analysieren.
 
-## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>In [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] eingeführte Graph-Features 
+## <a name="graph-features-introduced-in-includesssqlv14includessssqlv14-mdmd"></a>In eingeführte Graph-Features[!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 Wir beginnen damit, SQL Server Graph-Erweiterungen hinzuzufügen, um das Speichern und Abfragen von Diagramm Daten zu vereinfachen. Die folgenden Funktionen werden in der ersten Version eingeführt. 
 
 
-### <a name="create-graph-objects"></a>Erstellen von Graph-Objekten
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)] Erweiterungen ermöglichen es Benutzern, Knoten-oder Edge-Tabellen zu erstellen. Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet werden. Da Knoten und Kanten als Tabellen gespeichert werden, werden alle Vorgänge, die für relationale Tabellen unterstützt werden, für die Knoten-oder Kanten Tabelle unterstützt. Beispiel:  
+### <a name="create-graph-objects"></a>Erstellen von Diagramm Objekten
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]Erweiterungen ermöglichen es Benutzern, Knoten-oder Edge-Tabellen zu erstellen. Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet werden. Da Knoten und Kanten als Tabellen gespeichert werden, werden alle Vorgänge, die für relationale Tabellen unterstützt werden, für die Knoten-oder Kanten Tabelle unterstützt. Beispiel:   
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;
@@ -58,7 +58,7 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 Knoten und Kanten werden als Tabellen gespeichert.  
 
 ### <a name="query-language-extensions"></a>Abfrage Spracherweiterungen  
-Neue `MATCH`-Klausel wird eingeführt, um Musterabgleich und Multihop-Navigation durch das Diagramm zu unterstützen. Die `MATCH`-Funktion verwendet die ASCII-Art-Format Syntax für den Musterabgleich. Zum Beispiel:  
+Die `MATCH` neue Klausel wird eingeführt, um Musterabgleich und Multihop-Navigation durch das Diagramm zu unterstützen. Die `MATCH` -Funktion verwendet die ASCII-Art-Format Syntax für den Musterabgleich. Beispiel:  
 
 ```   
 -- Find friends of John
@@ -68,12 +68,12 @@ WHERE MATCH(Person1-(Friends)->Person2)
 AND Person1.Name = 'John';
 ```   
  
-### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine integriert 
-Graph-Erweiterungen sind vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Engine integriert. Verwenden Sie die gleiche Speicher-Engine, Metadaten, den Abfrage Prozessor usw., um Diagramm Daten zu speichern und abzufragen. Abfragen über Diagramm-und relationale Daten in einer einzelnen Abfrage. Kombinieren von Diagramm Funktionen mit anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Technologien wie z. b. columnstore, ha, R Services usw. Die SQL Graph-Datenbank unterstützt auch alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Sicherheits-und Kompatibilitäts Features.
+### <a name="fully-integrated-in-includessnoversionincludesssnoversion-mdmd-engine"></a>Vollständig in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine integriert 
+Graph-Erweiterungen sind vollständig [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in die-Engine integriert. Verwenden Sie die gleiche Speicher-Engine, Metadaten, den Abfrage Prozessor usw., um Diagramm Daten zu speichern und abzufragen. Abfragen über Diagramm-und relationale Daten in einer einzelnen Abfrage. Kombinieren von Diagramm Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit anderen Technologien wie z. b. columnstore, ha, R Services usw. Die SQL Graph-Datenbank unterstützt auch alle in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbaren Sicherheits-und Kompatibilitäts Features.
  
 ### <a name="tooling-and-ecosystem"></a>Tools und Ökosystem
 
-Profitieren Sie von vorhandenen Tools und Ökosystem, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten. Tools wie sichern und wiederherstellen, importieren und exportieren, bcp funktionieren einfach sofort. Andere Tools oder Dienste wie SSIS, SSRS oder Power BI funktionieren mit Diagramm Tabellen, genau so, wie Sie mit relationalen Tabellen funktionieren.
+Profitieren Sie von vorhandenen Tools und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ökosystem, die von angeboten werden. Tools wie sichern und wiederherstellen, importieren und exportieren, bcp funktionieren einfach sofort. Andere Tools oder Dienste wie SSIS, SSRS oder Power BI funktionieren mit Diagramm Tabellen, genau so, wie Sie mit relationalen Tabellen funktionieren.
 
 ## <a name="edge-constraints"></a>Edgeeinschränkungen
 Eine Edge-Einschränkung wird für eine Diagramm Rahmen Tabelle definiert und ist ein paar von Knoten Tabellen, für die ein bestimmter Edge-Typ eine Verbindung herstellen kann. Dies ermöglicht Benutzern eine bessere Kontrolle über das Diagramm Schema. Mithilfe von Edge-Einschränkungen können Benutzer den Knotentyp einschränken, mit dem eine bestimmte Kante eine Verbindung herstellen darf. 

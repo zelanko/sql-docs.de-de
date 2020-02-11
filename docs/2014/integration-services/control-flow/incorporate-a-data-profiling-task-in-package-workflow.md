@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5d8096ee89a9c0b63c89849a02317dc23b2b130e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62831620"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
-  Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
+  Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße aussagekräftig oder übermäßig groß sind. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
   
  Nachdem Kriterien für die Datenqualität festgelegt wurden, möchten Sie jedoch möglicherweise eine regelmäßige Analyse und Bereinigung der Datenquelle automatisieren. Betrachten Sie folgende Szenarios:  
   
--   **Überprüfen der Datenqualität vor dem inkrementellen Laden** Berechnen Sie mit dem Datenprofilerstellungs-Task das Profil für das Spalten-NULL-Verhältnis neuer Daten, die für die CustomerName-Spalte in einer Customers-Tabelle bestimmt sind. Wenn der Prozentanteil von NULL-Werten größer als 20 % ist, senden Sie eine E-Mail-Nachricht mit der Profilausgabe an den Operator, und beenden Sie das Paket. Andernfalls setzen Sie das inkrementelle Laden fort.  
+-   Über **Prüfen der Datenqualität vor einem inkrementellen Laden** Berechnen Sie mit dem Datenprofilerstellungs-Task das Profil für das Spalten-NULL-Verhältnis neuer Daten, die für die CustomerName-Spalte in einer Customers-Tabelle bestimmt sind. Wenn der Prozentanteil von NULL-Werten größer als 20 % ist, senden Sie eine E-Mail-Nachricht mit der Profilausgabe an den Operator, und beenden Sie das Paket. Andernfalls setzen Sie das inkrementelle Laden fort.  
   
--   **Automatisieren des Cleanups, wenn die angegebenen Bedingungen erfüllt werden.** Berechnen Sie mit dem Datenprofilerstellungs-Task das Wertinklusionsprofil der State-Spalte anhand einer Suchtabelle für Status und der ZIP Code/Postal Code-Spalte anhand einer Suchtabelle für Postleitzahlen. Wenn die Einschlussstärke der Statuswerte kleiner als 80 % ist, die Einschlussstärke der Postleitzahlwerte hingegen größer als 99 %, weist dies auf zwei Dinge hin. Erstens sind die Statusdaten ungültig. Zweitens sind die Postleitzahldaten gültig. Starten Sie einen Datenflusstask, der die Statusdaten durch eine Suche des richtigen Werts aus dem aktuellen Postleitzahlwert bereinigt.  
+-   **Automatisieren der Bereinigung, wenn die angegebenen Bedingungen erfüllt sind**. Berechnen Sie mit dem Datenprofilerstellungs-Task das Wertinklusionsprofil der State-Spalte anhand einer Suchtabelle für Status und der ZIP Code/Postal Code-Spalte anhand einer Suchtabelle für Postleitzahlen. Wenn die Einschlussstärke der Statuswerte kleiner als 80 % ist, die Einschlussstärke der Postleitzahlwerte hingegen größer als 99 %, weist dies auf zwei Dinge hin. Erstens sind die Statusdaten ungültig. Zweitens sind die Postleitzahldaten gültig. Starten Sie einen Datenflusstask, der die Statusdaten durch eine Suche des richtigen Werts aus dem aktuellen Postleitzahlwert bereinigt.  
   
  Nachdem Sie einen Workflow vorliegen haben, in den Sie den Datenflusstask integrieren können, müssen Sie sich mit den Schritten, die zum Hinzufügen dieses Tasks erforderlich sind, vertraut machen. Im nächsten Abschnitt wird der allgemeine Prozess zur Integration des Datenflusstasks beschrieben. In den beiden letzten Abschnitten wird beschrieben, wie Sie den Datenflusstask entweder direkt mit einer Datenquelle oder mit transformierten Daten aus dem Datenfluss verbinden.  
   
@@ -45,12 +45,12 @@ ms.locfileid: "62831620"
   
  Beim Integrieren des Datenprofilerstellungs-Tasks in den Workflow eines Pakets berücksichtigen Sie die beiden folgenden Taskfunktionen:  
   
--   **Taskausgabe**. Der Datenprofilerstellungs-Task schreibt die Ausgabe in eine Datei oder eine Paketvariable im XML-Format, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Daher müssen Sie die XML-Ausgabe abfragen, wenn Sie die Profilergebnisse im bedingten Workflow eines Pakets verwenden möchten. Zur Abfrage dieser XML-Ausgabe verwenden Sie am besten die Xpath-Abfragesprache. Um sich die Struktur dieser XML-Ausgabe anzusehen, können Sie eine Beispielausgabedatei oder das Schema selbst öffnen. Zum Öffnen der Ausgabedatei oder des Schemas können Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], einen anderen XML-Editor oder einen Texteditor wie Notepad verwenden.  
+-   **Task Ausgabe**. Der Datenprofilerstellungs-Task schreibt die Ausgabe in eine Datei oder eine Paketvariable im XML-Format, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Daher müssen Sie die XML-Ausgabe abfragen, wenn Sie die Profilergebnisse im bedingten Workflow eines Pakets verwenden möchten. Zur Abfrage dieser XML-Ausgabe verwenden Sie am besten die Xpath-Abfragesprache. Um sich die Struktur dieser XML-Ausgabe anzusehen, können Sie eine Beispielausgabedatei oder das Schema selbst öffnen. Zum Öffnen der Ausgabedatei oder des-Schemas können [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]Sie, einen anderen XML-Editor oder einen Text-Editor (z. b. Notepad) verwenden.  
   
     > [!NOTE]  
     >  Einige der im Datenprofil-Viewer angezeigten Profilergebnisse sind berechnete Werte, die nicht direkt in der Ausgabe zu finden sind. Die Ausgabe des Profils für das Spalten-NULL-Verhältnis enthält beispielsweise die Gesamtzahl der Zeilen und die Anzahl der Zeilen mit NULL-Werten. Zur Berechnung des Spalten-NULL-Verhältnisses müssen Sie diese beiden Werte abfragen und anschließend den Prozentanteil der Zeilen mit NULL-Werten berechnen.  
   
--   **Taskeingabe**. Der Datenprofilerstellungs-Task liest seine Eingabe aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen. Daher müssen Sie die im Speicher befindlichen Daten in Stagingtabellen speichern, wenn Sie ein Profil für Daten erstellen möchten, die bereits geladen und in den Datenfluss transformiert wurden.  
+-   **Task Eingabe**. Der Datenprofilerstellungs-Task liest seine Eingabe aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen. Daher müssen Sie die im Speicher befindlichen Daten in Stagingtabellen speichern, wenn Sie ein Profil für Daten erstellen möchten, die bereits geladen und in den Datenfluss transformiert wurden.  
   
  In den folgenden Abschnitten wird beschrieben, wie dieser allgemeine Workflow auf Profildaten angewendet wird, die direkt aus einer externen Datenquelle oder transformiert aus dem Datenflusstask stammen. In diesen Abschnitten wird außerdem erklärt, wie die Eingabe- und Ausgabeanforderungen des Datenflusstasks behandelt werden.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62831620"
   
 1.  Erstellen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]ein neues [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket.  
   
-2.  Fügen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für die Verwendung des .NET-Datenanbieters für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) und für die Verbindung mit einer verfügbaren Instanz der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank.  
+2.  Fügen Sie den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Paket hinzu. Konfigurieren Sie diesen Verbindungs-Manager für die Verwendung des .NET-Datenanbieters für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) und für die Verbindung mit einer verfügbaren Instanz der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank.  
   
      Standardmäßig trägt der Verbindungs-Manager den folgenden Namen: \<Servername>.AdventureWorks1.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "62831620"
   
 -   Fügen Sie im Fenster **Variablen** die beiden folgenden Paketvariablen hinzu, und konfigurieren Sie sie:  
   
-    -   Geben Sie den Namen, `ProfileConnectionName`, für eine der Variablen, und legen Sie den Typ dieser Variablen auf **Zeichenfolge**.  
+    -   Geben Sie den Namen `ProfileConnectionName`für eine der Variablen ein, und legen Sie den Typ dieser Variablen auf **String**fest.  
   
-    -   Geben Sie den Namen, `AddressLine2NullRatio`, für die andere Variable, und legen den Typ dieser Variablen auf **doppelte**.  
+    -   Geben Sie den Namen `AddressLine2NullRatio`,, für die andere Variable ein, und legen Sie den Typ dieser Variablen auf **Double**fest.  
   
 ### <a name="configure-the-data-profiling-task"></a>Konfigurieren des Datenprofilerstellungs-Tasks  
  Der Datenprofilerstellungs-Task muss wie folgt konfiguriert werden:  
@@ -142,9 +142,9 @@ ms.locfileid: "62831620"
   
 4.  Wählen Sie auf der Seite **Skript** die bevorzugte Programmiersprache aus. Machen Sie die beiden Paketvariablen anschließend für das Skript verfügbar:  
   
-    1.  Für `ReadOnlyVariables`Option `ProfileConnectionName`.  
+    1.  Wählen `ReadOnlyVariables`Sie `ProfileConnectionName`für die Option aus.  
   
-    2.  Für **ReadWriteVariables**Option `AddressLine2NullRatio`.  
+    2.  Wählen **** Sie `AddressLine2NullRatio`für "Write Items Variables" aus.  
   
 5.  Wählen Sie **Skript bearbeiten** aus, um die Skriptentwicklungsumgebung zu öffnen.  
   
@@ -327,8 +327,8 @@ ms.locfileid: "62831620"
   
 7.  Verwenden Sie in den Rangfolgeneinschränkungen, mit denen der Skripttask mit Downstream-Verzweigungen verbunden wird, Ausdrücke, die den Workflow anhand der Werte der Variablen steuern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Einrichten von Datenprofilerstellungs-Tasks](data-profiling-task.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Einrichten des Datenprofilerstellungs-Tasks](data-profiling-task.md)   
  [Datenprofil-Viewer](data-profile-viewer.md)  
   
   

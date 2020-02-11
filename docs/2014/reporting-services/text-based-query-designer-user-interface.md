@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ceec7e4a58b98763f7a3215d29087eb948ec0b41
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891329"
 ---
 # <a name="text-based-query-designer-user-interface"></a>Benutzeroberfläche des textbasierten Abfrage-Designers
@@ -30,22 +30,22 @@ ms.locfileid: "68891329"
   
 -   **Abfrage** Zeigt den Abfragetext, den Tabellennamen oder den Namen der gespeicherten Prozedur an.  
   
--   **Ergebnis** Zeigt die Ergebnisse einer Ausführung der Abfrage zur Entwurfszeit an.  
+-   **Ergebnis** Zeigt die Ergebnisse der Ausführung der Abfrage zur Entwurfszeit an.  
   
 ## <a name="text-based-query-designer-toolbar"></a>Symbolleiste für den textbasierten Abfrage-Designer  
  Der textbasierte Abfrage-Designer stellt eine einzige Symbolleiste für alle Befehlstypen bereit. In der folgenden Tabelle werden jede Schaltfläche auf der Symbolleiste und ihre Funktion aufgelistet.  
   
-|Schaltfläche|Beschreibung|  
+|Schaltfläche|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht alle Datenquellentypen unterstützen grafische Abfrage-Designer.|  
-|**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
+|**Importieren**|Importieren einer vorhandenen Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|![Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
 |**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben. Beachten Sie Folgendes: Wenn eine gespeicherte Prozedur mehr als ein Resultset zurückgibt, wird nur das erste Resultset verwendet, um das DataSet aufzufüllen.<br /><br /> Unterstützung für den Befehlstyp ändert sich jeweils nach dem Datenquellentyp. Nur OLE DB und ODBC unterstützen z.B. **TableDirect**.|  
   
 ### <a name="command-type-text"></a>Befehlstyp "Text"  
  Wenn Sie ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dataset erstellen, wird vom Berichts-Designer standardmäßig der grafische Abfrage-Designer angezeigt. Wenn Sie zum textbasierten Abfrage-Designer wechseln möchten, klicken Sie auf der Symbolleiste auf die Umschaltfläche **Als Text bearbeiten** . Der textbasierte Abfrage-Designer hat zwei Bereiche: den Abfragebereich und den Ergebnisbereich. In der folgenden Abbildung werden die einzelnen Bereiche bezeichnet.  
   
- ![Generischer Abfrage-Designer für relationale Datenabfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generic query designer, for relational data query")  
+ ![Generischer Abfrage-Designer für relationale Datenabfragen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "Generischer Abfrage-Designer für relationale Datenabfragen")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "68891329"
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|  
   
 #### <a name="example"></a>Beispiel  
- Die folgende Abfrage gibt die Liste der Nachnamen aus der `Contact`-Tabelle der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Datenbank zurück.  
+ Die folgende Abfrage gibt die Liste der Nachnamen aus der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)]-Tabelle der `Contact`-Datenbank zurück.  
   
 ```  
 SELECT LastName FROM Person.Person;  
 ```  
   
- Sie können eine beliebige [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung als Befehlstyp Text verwenden, einschließlich `EXEC`-Anweisungen. Die folgende Abfrage ruft die gespeicherte Prozedur `uspGetEmployeeManagers` von [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] auf und gibt die Befehlskette für den Mitarbeiter mit der ID 1 zurück.  
+ Sie können eine beliebige [!INCLUDE[tsql](../includes/tsql-md.md)]-Anweisung als Befehlstyp Text verwenden, einschließlich `EXEC`-Anweisungen. Die folgende Abfrage ruft die gespeicherte Prozedur [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] von `uspGetEmployeeManagers` auf und gibt die Befehlskette für den Mitarbeiter mit der ID 1 zurück.  
   
 ```  
 EXEC uspGetEmployeeManagers 1;  
@@ -89,13 +89,13 @@ uspGetEmployeeManagers;
   
  Wenn Sie den Tabellennamen Sales. Customer eingeben, entspricht dies der Erstellung der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung. `SELECT * FROM Sales.Customer;`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](report-data/query-design-tools-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [SQL Server-Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
- [OLE DB-Verbindungstyp (SSRS)](report-data/ole-db-connection-type-ssrs.md)   
- [ODBC-Verbindungstyp &#40;SSRS&#41;](report-data/odbc-connection-type-ssrs.md)   
+ [SQL Server Verbindungstyp &#40;SSRS&#41;](report-data/sql-server-connection-type-ssrs.md)   
+ [OLE DB Verbindungstyp &#40;SSRS&#41;](report-data/ole-db-connection-type-ssrs.md)   
+ [ODBC-Verbindungstyp &#40;SSRS-&#41;](report-data/odbc-connection-type-ssrs.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [RSReportDesigner Configuration File (RSReportDesigner-Konfigurationsdatei)](report-server/rsreportdesigner-configuration-file.md)  
+ [RSReportDesigner-Konfigurationsdatei](report-server/rsreportdesigner-configuration-file.md)  
   
   

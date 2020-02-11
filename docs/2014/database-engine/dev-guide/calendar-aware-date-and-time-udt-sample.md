@@ -10,20 +10,22 @@ ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bf2f4fd41ab67a0631fe5169a7904b571c842cc
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.openlocfilehash: c2636d417bb9956ac56885686b3512cc3c119cd7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73637668"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76929500"
 ---
 # <a name="calendar-aware-date-and-time-udt-sample"></a>Beispiel für das Kalender-/Uhrzeit-UDT
   Das Speichern von Datumsangaben kann zu Verwirrung führen, da die Datumsangaben ohne Kenntnis des zugrunde liegenden Kalendersystems keinen Sinn ergeben. Das `CADatetime`-Beispiel definiert zwei benutzerdefinierte Datentypen, `CADatetime` und `CADate`, für eine dem lokalen Kalender entsprechende Behandlung von Datums- und Uhrzeitangaben.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  Zum Erstellen und Ausführen dieses Projekts muss die folgende Software installiert sein:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express erhalten Sie kostenlos auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Website[ mit der Dokumentation und den Beispielen für ](https://www.microsoft.com/sql-server/sql-server-editions-express) Express.  
   
 -   Die AdventureWorks-Datenbank, die auf der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer-[Website](https://go.microsoft.com/fwlink/?linkid=62796) zur Verfügung gestellt wird.  
   
@@ -64,7 +66,7 @@ ms.locfileid: "73637668"
   
 3.  Erstellen Sie in c:\MySample die Datei `CalendarAware.cs`, und kopieren Sie den C#-Beispielcode (unten) in die Datei.  
   
-4.  Erstellen Sie in c:\mysample die Datei `calendars.txt`, und kopieren Sie den Beispielcode in die Datei.  
+4.  Erstellen Sie in c:\mysample die Datei `calendars.txt` , und kopieren Sie den Beispielcode in die Datei.  
   
 5.  Erstellen Sie in c:\MySample die Datei `calendars.ar-SA.txt`, und kopieren Sie folgenden Code in die Datei.  
   
@@ -116,7 +118,7 @@ ms.locfileid: "73637668"
   
     -   `sqlcmd -E -I -i install.sql`  
   
-14. Kopieren Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] Test Befehls Skript in eine Datei, und speichern Sie Sie als `test.sql` im Beispiel Verzeichnis.  
+14. Kopieren [!INCLUDE[tsql](../../includes/tsql-md.md)] Sie das Test Befehls Skript in eine Datei, und `test.sql` speichern Sie Sie als im Beispiel Verzeichnis.  
   
 15. Führen Sie das Testskript mit dem folgenden Befehl aus:  
   
@@ -181,7 +183,7 @@ ms.locfileid: "73637668"
         private static readonly char[] allowedDoublePatternChars = new char[] { 'g', '\\' };  
   
         /// <summary>  
-        ///     Each tick is 100 nanoseconds.  This conversion factor when multipled by the number of  
+        ///     Each tick is 100 nanoseconds.  This conversion factor when multiplied by the number of  
         ///     days yields the number of ticks which make up that day.  Ticks are interesting as they  
         ///     can be used to construct DateTime instances in order to perform various date based computations.  
         /// </summary>  
@@ -1724,7 +1726,7 @@ DROP ASSEMBLY [CADateTime.resources.zh-CN];
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwendungs Szenarien und Beispiele für die CLR-&#41; Integration von Common Language Runtime &#40;](../../../2014/database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
   
   

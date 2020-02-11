@@ -1,5 +1,5 @@
 ---
-title: JScript-Codebeispiel zum Zurückgeben eines Recordsets | Microsoft-Dokumentation
+title: JScript-Code Beispiel zum Zurückgeben eines Recordsets | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924937"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>JScript-Codebeispiel zum Zurückgeben eines Recordsets
-## <a name="jscript-code-rsjs"></a>JScript-Code (rs.js)  
+## <a name="jscript-code-rsjs"></a>JScript-Code (Rs. js)  
   
 ```  
 main();  
@@ -81,8 +81,8 @@ function alert(str)
   
 #### <a name="try-it"></a>Versuch es!  
   
-1.  Speichern Sie den Code oben in eine Textdatei ein. Speichern Sie die Datei als rs.js.  
+1.  Speichern Sie den obigen Code in einer Textdatei. Speichern Sie die Datei unter Rs. js.  
   
-2.  Öffnen Sie eine Eingabeaufforderung und die cd in das Verzeichnis, in dem Sie die JScript-Datei (rs.js) gespeichert haben.  
+2.  Öffnen Sie eine Eingabeaufforderung, und wechseln Sie in das Verzeichnis, in dem Sie die JScript-Datei (Rs. js) gespeichert haben.  
   
-3.  Typ `CScript rs.js` von der Befehlszeile aus.
+3.  Geben `CScript rs.js` Sie an der Eingabeaufforderung ein.

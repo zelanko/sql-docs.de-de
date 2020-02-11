@@ -18,10 +18,10 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.custom: seo-dt-2019
 ms.openlocfilehash: eb274d4f022a182ac056c190a8626fa48e36511d
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73844398"
 ---
 # <a name="active-geo-replication---sp_wait_for_database_copy_sync"></a>Aktive georeplikation-sp_wait_for_database_copy_sync
@@ -41,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [@target_server =] "server_name"  
+ [ @target_server = ] 'server_name'  
  Der Name des SQL-Datenbankservers, der die aktive sekundäre Datenbank hostet. server_name ist vom Datentyp sysname und hat keinen Standardwert.  
   
- [@target_database =] "database_name"  
+ [ @target_database = ] 'database_name'  
  Der Name der aktiven sekundären Datenbank. database_name ist vom Datentyp sysname und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -56,12 +56,12 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   Die Verbindung zum angegebenen Servernamen oder der angegebenen Serverdatenbank kann nicht gefunden werden.  
   
--   Interlink-Konnektivität ist unterbrochen. **sp_wait_for_database_copy_sync** wird nach dem Verbindungstimeout zurückgegeben.  
+-   Interlink-Konnektivität ist unterbrochen. **sp_wait_for_database_copy_sync** wird nach dem Verbindungs Timeout zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Jeder Benutzer in der primären Datenbank kann diese gespeicherte Systemprozedur aufrufen. Die Anmeldung muss einem Benutzer der primären und aktiven sekundären Datenbank entsprechen.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Alle Transaktionen, für die vor einem Aufruf von **sp_wait_for_database_copy_sync** ein Commit ausgeführt wurde, werden an die aktive sekundäre Datenbank gesendet.  
   
 ## <a name="examples"></a>Beispiele  
@@ -74,8 +74,8 @@ EXEC sys.sp_wait_for_database_copy_sync @target_server = N'ubfyu5ssyt1', @target
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-   der [sys &#40;. dm_continuous_copy_status Azure&#41; SQL-Datenbank](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;für die georeplikation in Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. dm_continuous_copy_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
+ [Dynamische Verwaltungs Sichten und-Funktionen für die georeplikation &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
   
   

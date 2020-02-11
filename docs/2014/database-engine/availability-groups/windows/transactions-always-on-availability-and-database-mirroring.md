@@ -1,5 +1,5 @@
 ---
-title: Datenbankübergreifende Transaktionen nicht unterstützt für Datenbankspiegelungs- oder AlwaysOn-Verfügbarkeitsgruppen (SQLServer) | Microsoft-Dokumentation
+title: Datenbankübergreifende Transaktionen werden für die Daten Bank Spiegelung oder AlwaysOn-Verfügbarkeitsgruppen nicht unterstützt (SQL Server) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813655"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Datenbankübergreifende Transaktionen nicht unterstützt für Datenbankspiegelungs- oder AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
   Datenbankübergreifende Transaktionen und verteilte Transaktionen werden von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] oder der Datenbankspiegelung nicht unterstützt. Dies ist darauf zurückzuführen, dass die Unteilbarkeit/Vollständigkeit von Transaktionen aus folgenden Gründen nicht gewährleistet werden kann:  
   
--   Für datenbankübergreifende Transaktionen: Jede Datenbank führt einen unabhängigen Commit. Aus diesem Grund kann sogar für Datenbanken in einer einzelnen Verfügbarkeitsgruppe ein Failover auftreten, nachdem eine Datenbank für eine Transaktion einen Commit ausgeführt hat, jedoch bevor die andere Datenbank diesen Schritt ausgeführt hat. Bei der Datenbankspiegelung wird dieses Problem verstärkt, da die gespiegelte Datenbank sich nach einem Failover in der Regel auf einer anderen Serverinstanz der anderen Datenbank befindet. Auch wenn beide Datenbanken zwischen denselben beiden Partnern gespiegelt werden, ist nicht garantiert, dass das Failover für beide Datenbanken gleichzeitig ausgeführt wird.  
+-   Für datenbankübergreifende Transaktionen: Jede Datenbank führt einen unabhängigen Commit aus. Aus diesem Grund kann sogar für Datenbanken in einer einzelnen Verfügbarkeitsgruppe ein Failover auftreten, nachdem eine Datenbank für eine Transaktion einen Commit ausgeführt hat, jedoch bevor die andere Datenbank diesen Schritt ausgeführt hat. Bei der Datenbankspiegelung wird dieses Problem verstärkt, da die gespiegelte Datenbank sich nach einem Failover in der Regel auf einer anderen Serverinstanz der anderen Datenbank befindet. Auch wenn beide Datenbanken zwischen denselben beiden Partnern gespiegelt werden, ist nicht garantiert, dass das Failover für beide Datenbanken gleichzeitig ausgeführt wird.  
   
--   Für verteilte Transaktionen: Nach einem Failover wird der neue Prinzipalserver bzw. primären Replikat keine Verbindung mit dem verteilten Transaktionskoordinator auf dem vorherigen Prinzipalserver bzw. primären Replikat herstellen. Aus diesem Grund kann der neue Prinzipalserver bzw. das neue primäre Replikat den Transaktionsstatus nicht erlangen.  
+-   Für verteilte Transaktionen: Nach einem Failover kann vom neuen Prinzipalserver bzw. vom primären Replikat keine Verbindung mit dem verteilten Transaktionskoordinator auf dem vorherigen Prinzipalserver bzw. primären Replikat hergestellt werden. Aus diesem Grund kann der neue Prinzipalserver bzw. das neue primäre Replikat den Transaktionsstatus nicht erlangen.  
   
  Im folgenden Beispiel zur Datenbankspiegelung wird verdeutlicht, wie eine logische Inkonsistenz auftreten kann. In diesem Beispiel fügt eine Anwendung über eine datenbankübergreifende Transaktion zwei Datenzeilen ein: Eine Zeile wird in eine Tabelle in einer gespiegelten Datenbank (A) eingefügt, und die andere Zeile wird in eine Tabelle in einer anderen Datenbank (B) eingefügt. Datenbank A wird im Modus für hohe Sicherheit mit automatischem Failover gespiegelt. Während des Commits der Transaktion fällt Datenbank A aus. Die Spiegelungssitzung führt automatisch ein Failover zum Spiegel von Datenbank A aus.  
   

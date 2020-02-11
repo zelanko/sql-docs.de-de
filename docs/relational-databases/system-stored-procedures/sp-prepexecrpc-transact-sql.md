@@ -1,5 +1,5 @@
 ---
-title: Sp_prepexecrpc (Transact-SQL) | Microsoft-Dokumentation
+title: sp_prepexecrpc (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fea210183ae67179dcc6f686e25f939cd00713b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68056334"
 ---
-# <a name="spprepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
+# <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Bereitet einen Aufruf einer parametrisierten, mithilfe eines RPC-Bezeichners angegebenen gespeicherten Prozedur vor und führt sie aus. Sp_prepexecrpc wird aufgerufen, indem ID = 14 in einem tabular Data Stream (TDS)-Paket.  
+  Bereitet einen Aufruf einer parametrisierten, mithilfe eines RPC-Bezeichners angegebenen gespeicherten Prozedur vor und führt sie aus. sp_prepexecrpc wird von ID = 14 in einem Tabular Data Stream-Paket (TDS) aufgerufen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,16 +40,16 @@ sp_prepexecrpc handle OUTPUT, RPCCall
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Handle*  
+ *bewältigen*  
  Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]generierte, vorbereitete Handlebezeichner. *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
   
  *RPCCall*  
- Definiert den Aufruf für die gespeicherte Prozedur mit kanonischer ODBC-Syntax. *RPCCall* ist ein erforderlicher Parameter, der einen Eingabewert für eine **ntext** -Zeichenfolge erfordert.  
+ Definiert den Aufruf für die gespeicherte Prozedur mit kanonischer ODBC-Syntax. *Rpccall* ist ein erforderlicher Parameter, der einen **ntext** -Zeichen folgen Eingabe Wert aufruft.  
   
  *bound_param*  
- Gibt die optionale Verwendung zusätzlicher Parameter an. *bound_param* erfordert einen Eingabewert eines beliebigen Datentyps, um die zusätzlichen verwendeten Parameter festzulegen.  
+ Gibt die optionale Verwendung zusätzlicher Parameter an. *bound_param* einen Eingabe Wert eines beliebigen Datentyps aufrufen, um die zusätzlichen verwendeten Parameter festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c38e6823f0cd52e44da7782bccada780265978
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75229402"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
@@ -57,14 +57,14 @@ ms.locfileid: "75229402"
 |-----------------------------|--------------------|  
 |Cube|Modell|  
 |Cubedimension|Tabelle|  
-|Dimensionsattribute (Schlüssel, Name)|Spalte|  
+|Dimensionsattribute (Schlüssel, Name)|Column|  
 |Measuregruppe|Tabelle|  
 |"Measure"|"Measure"|  
 |Measure ohne Measuregruppe|In einer Tabelle mit dem Namen "Measures"|  
 |Beziehung zwischen Measuregruppe und Cubedimension|Beziehung|  
 |Perspektive|Perspektive|  
 |KPI|KPI|  
-|Benutzerhierarchien/Über-/Unterordnungshierarchien|Hierarchie|  
+|Benutzerhierarchien/Über-/Unterordnungshierarchien|Hierarchy|  
 |Anzeigeordner|Anzeigeordner|  
   
 ## <a name="measures-measure-groups-and-kpis"></a>Measures, Measuregruppen und KPIs  
@@ -217,7 +217,7 @@ ms.locfileid: "75229402"
   
  Die DISCOVER_CSDL_METADATA-Anforderung weist folgende Einschränkungen auf:  
   
-|Name|Erforderlich|Beschreibung|  
+|Name|Erforderlich|BESCHREIBUNG|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Ja|Der Katalog-/Datenbankname.|  
 |PERSPECTIVE_NAME|Ja, wenn der Cube mehr als eine Perspektive enthält. Optional, wenn nur ein Cube oder eine Standardperspektive vorhanden ist.|Der Cube- oder Perspektivenname in der mehrdimensionalen Datenbank.|  

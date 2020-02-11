@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb19f95d2dc5de8f461285d84776b80e3f9fb778
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101553"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Festlegen von Berechtigungen für Berichtsservervorgänge in einer SharePoint-Webanwendung
@@ -45,13 +45,13 @@ ms.locfileid: "66101553"
   
 -   Remoteschnittstellen verwenden  
   
--   Datei  
+-   Öffnen  
   
 -   Anwendungsseiten anzeigen  
   
  Wenn Sie vordefinierte Berechtigungsebenen verwenden, ist keine Aktion erforderlich, da die oben genannten Berechtigungen bereits in Full Control, Design, Contribute, Read und Limited Access enthalten sind. Wenn Sie jedoch benutzerdefinierte Berechtigungsebenen verwenden oder die einem bestimmten Benutzer oder einer Gruppe zugewiesenen Berechtigungen bearbeiten, müssen Sie die Berechtigung manuell hinzufügen.  
   
- Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet ist der Fehler: "Report Server ist einen SharePoint-Fehler aufgetreten. ---> System.UnauthorizedAccessException: Zugriff verweigert". Bei Veröffentlichungsvorgängen lautet der Fehler lautet: "Die Berechtigungen für Benutzer '\<Domäne >\\< Benutzer\>" zum Ausführen des Vorgangs unzureichend sind. "  
+ Die Berechtigung "Benutzerinformationen durchsuchen" ermöglicht dem Berichtsserver die Rückgabe von Informationen zum Ersteller des Elements und zum Benutzer, der das Element zuletzt geändert hat. Ohne diese Berechtigung gibt der Berichtsserver die folgenden Fehler zurück. Bei Suchvorgängen lautet der Fehler: „SharePoint-Fehler beim Berichtsserver. ---> System.UnauthorizedAccessException: Der Zugriff wird verweigert.“ Bei Veröffentlichungsvorgängen lautet der Fehler: „The permissions granted to user ‘\<domain>\\<user\>' are insufficient for performing this operation.“ (Die dem Benutzer '<Domain>\<Benutzer>' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.)  
   
 ##  <a name="permissionReports"></a> Berechtigungen zum Anzeigen und Verwalten von Berichten  
  Berechtigungen für Berichtsdefinitionen werden über Listenberechtigungen für die Bibliothek definiert, die den Bericht enthält. Sie können Berechtigungen jedoch für einzelne Berichte festlegen, wenn Sie den Zugriff einschränken möchten. Die folgende Tabelle enthält eine Liste von Aufgaben und der Berechtigungen, die diese jeweils unterstützen.  
@@ -81,7 +81,7 @@ ms.locfileid: "66101553"
   
 |Aufgabe|Berechtigung|  
 |----------|----------------|  
-|Starten des Berichts-Generators.|Es sind keine Berechtigungen vorhanden, die explizit zum Steuern des Zugriffs für die Verwendung des Berichts-Generators verwendet werden. Der Berichts-Generator ist verfügbar, wenn die Berichtsserverintegration konfiguriert ist und Sie die Berechtigung zum Hinzufügen von Elementen in einer Bibliothek besitzen. Zum Starten des Berichts-Generators über das Menü **Neu** in der Bibliothek müssen Sie den Berichts-Generator-Inhaltstyp registrieren. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Starten des Berichts-Generators.|Es sind keine Berechtigungen vorhanden, die explizit zum Steuern des Zugriffs für die Verwendung des Berichts-Generators verwendet werden. Der Berichts-Generator ist verfügbar, wenn die Berichtsserverintegration konfiguriert ist und Sie die Berechtigung zum Hinzufügen von Elementen in einer Bibliothek besitzen. Zum Starten des Berichts-Generators über das Menü **Neu** in der Bibliothek müssen Sie den Berichts-Generator-Inhaltstyp registrieren. Weitere Informationen finden Sie unter [Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Hochladen eines Modells oder einer freigegebenen Datenquelle.|**Elemente hinzufügen** für die Bibliothek, die die Dateien enthalten wird.|  
 |Anzeigen eines Modells oder einer abhängigen freigegebenen Datenquelle.|**Elemente lesen** für die Bibliothek, die die Dateien enthält.<br /><br /> Wenn das Modell Sicherheitseinstellungen für Modellelemente enthält, muss der Benutzer auch über die Berechtigung **Berechtigungen auflisten** für das Modell verfügen.|  
 |Generieren eines Modells aus einer freigegebenen Datenquelle.|**Elemente hinzufügen** für die Bibliothek, die die freigegebene Datenquellendatei (RSDS) enthält, aus der Sie das Modell generieren.|  
@@ -120,7 +120,7 @@ ms.locfileid: "66101553"
   
 |Aufgaben|Berechtigung|  
 |-----------|----------------|  
-|Erstellen einer freigegebenen Datenquelle.|**Elemente hinzufügen** für die Bibliothek, die die freigegebene Datenquelle enthält. Sie können neue freigegebene Datenquellen über das Menü Neu in einer Bibliothek erstellen. Dazu müssen Sie den Inhaltstyp Berichtsdatenquelle mit der Bibliothek registrieren. Weitere Informationen finden Sie unter [hinzufügen Berichtsserver-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
+|Erstellen einer freigegebenen Datenquelle.|**Elemente hinzufügen** für die Bibliothek, die die freigegebene Datenquelle enthält. Sie können neue freigegebene Datenquellen über das Menü Neu in einer Bibliothek erstellen. Dazu müssen Sie den Inhaltstyp Berichtsdatenquelle mit der Bibliothek registrieren. Weitere Informationen finden Sie unter [Hinzufügen von Berichts Server-Inhaltstypen zu einer Bibliothek &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Bearbeiten einer freigegebenen Datenquelle.|**Elemente bearbeiten** für die Bibliothek, die die freigegebene Datenquelle enthält, oder für die freigegebene Datenquelle selbst.|  
 |Löschen einer freigegebenen Datenquelle.|**Elemente löschen** für die Bibliothek, die die freigegebene Datenquelle enthält, oder für die freigegebene Datenquelle selbst.|  
 |Verwenden einer freigegebenen Datenquelle (RSDS) mit einem Bericht.|**Elemente bearbeiten** für den Bericht oder für die Bibliothek, die den Bericht enthält. Das Auswählen einer freigegebenen Datenquelle gehört zum Festlegen von Datenquelleneigenschaften für einen Bericht.|  
@@ -131,10 +131,10 @@ ms.locfileid: "66101553"
 > [!NOTE]  
 >  Es sind keine Berechtigungen zum Bearbeiten von Berichtsmodellen vorhanden. Sie können Berichtsmodelle zwar generieren oder löschen, jedoch nicht von einer SharePoint-Website aus bearbeiten. Für das Bearbeiten von Berichtsmodellen ist der Modell-Designer erforderlich, ein Clienterstellungstool, auf das Berechtigungen, die Sie in SharePoint festlegen, keine Auswirkungen haben.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
  [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
- [Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
+ [Use Built-in Security in Windows SharePoint Services for Report Server Items (Verwenden der integrierten Sicherheit in Windows SharePoint Services für Berichtsserverelemente)](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)  
   
   

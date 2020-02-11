@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren und Speichern von Daten | Microsoft-Dokumentation
+title: Aktualisieren und persistente Speicherung von Daten | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,24 +15,24 @@ ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923723"
 ---
 # <a name="updating-and-persisting-data"></a>Aktualisieren und Beibehalten von Daten
-Die vorherigen Kapitel wurde erläutert, wie ADO verwendet, um Daten in einer Datenquelle abzurufen, wie in den Daten navigieren und wie Sie die Daten bearbeiten. Wenn das Ziel Ihrer Anwendung ist, dass Benutzer Änderungen an den Daten vornehmen können, müssen Sie natürlich zu verstehen, wie diese Änderungen zu speichern. Sie können entweder beibehalten, die **Recordset** ändert sich in einer Datei mit der **speichern** -Methode, oder Sie können die Änderungen zurück an die Datenquelle für die Verwendung von Storage senden die **Update** oder  **UpdateBatch** Methoden.  
+In den obigen Kapiteln wurde erläutert, wie ADO verwendet wird, um Daten in einer Datenquelle zu erhalten, wie die Daten verschoben werden und wie die Daten bearbeitet werden können. Wenn das Ziel Ihrer Anwendung darin besteht, Benutzern Änderungen an den Daten zu ermöglichen, müssen Sie natürlich wissen, wie Sie diese Änderungen speichern können. Sie können entweder die Änderungen an den **Recordsets** in einer Datei **Speichern** , indem Sie die Save-Methode verwenden, oder Sie können die Änderungen mithilfe der **Update** -oder **UpdateBatch** -Methoden an die Datenquelle für den Speicher zurücksenden.  
   
- In den vorangegangenen Kapiteln, Sie geändert haben die Daten in mehrere Zeilen mit den **Recordset**. ADO unterstützt zwei grundlegende Konzepte im Zusammenhang mit der Hinzufügung, löschen und Ändern von Zeilen mit Daten.  
+ In den vorstehenden Kapiteln haben Sie die Daten in mehreren Zeilen des **Recordsets**geändert. ADO unterstützt zwei grundlegende Konzepte im Zusammenhang mit dem Hinzufügen, löschen und Ändern von Daten Zeilen.  
   
- Das erste Konzept ist, dass die Änderungen werden nicht sofort an die **Recordset**; stattdessen werden sie an einer internen vorgenommen *Kopierpuffer*. Wenn Sie sich, dass Sie nicht möchten, dass die Änderungen entscheiden, werden die Änderungen im Kopierpuffer verworfen. Wenn Sie die Änderungen beibehalten möchten, gelten die Änderungen in der Kopierpuffer für die **Recordset**.  
+ Der erste Gedanke ist, dass Änderungen nicht sofort am **Recordset**vorgenommen werden. Stattdessen werden Sie an einem internen *Kopier Puffer*erstellt. Wenn Sie sich entscheiden, dass Sie die Änderungen nicht wünschen, werden die Änderungen im Kopier Puffer verworfen. Wenn Sie die Änderungen beibehalten möchten, werden die Änderungen im Kopier Puffer auf das **Recordset**angewendet.  
   
- Das zweite Konzept ist, dass die Änderungen entweder an die Datenquelle weitergegeben werden, sobald Sie die Arbeit in einer Zeile vollständige deklarieren (d. h. *sofortige* Modus), oder alle Änderungen an einer Reihe von Zeilen werden gesammelt, bis Sie die Arbeit für den Satz deklarieren abgeschlossen (d. h. *Batch* Modus). Die **LockType** Eigenschaft bestimmt, wenn die Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. **AdLockOptimistic** oder **AdLockPessimistic** unmittelbarer Modus gibt an, während **AdLockBatchOptimistic** Modus "Batch" angibt. Die **CursorLocation** Eigenschaft kann beeinflussen, was **LockType** Einstellungen sind verfügbar. Z. B. die **AdLockPessimistic** Einstellung wird nicht unterstützt, wenn die **CursorLocation** -Eigenschaftensatz auf **AdUseClient**.  
+ Das zweite Konzept ist, dass Änderungen an die Datenquelle weitergegeben werden, sobald Sie die Arbeit für eine Zeile vollständig (also den *unmittelbaren* Modus) deklarieren oder alle Änderungen an einem Satz von Zeilen gesammelt werden, bis Sie die Arbeit für den vollständigen Satz deklarieren (also den *Batch* Modus). Die **LockType** -Eigenschaft bestimmt, wann die Änderungen an der zugrunde liegenden Datenquelle vorgenommen werden. **adlockoptimistisch** oder **adlockpessimigibt** den unmittelbaren Modus an, während **adlockbatchoptimiden** Batch Modus angibt. Die **Cursor Location** -Eigenschaft kann sich darauf auswirken, welche **LockType** -Einstellungen verfügbar sind. Beispielsweise wird die Einstellung **adlockpessiminicht** unterstützt, wenn die Eigenschaft **Cursor Location** auf **adUseClient**festgelegt ist.  
   
- Im unmittelbaren Modus, jeden Aufruf des der **Update** -Methode überträgt die Änderungen an der Datenquelle. Im Modus "Batch", jeden Aufruf des **Update** oder Bewegung des die aktuelle Zeilenposition speichert die Änderungen in den Kopierpuffer, jedoch nur die **UpdateBatch** -Methode überträgt die Änderungen an der Datenquelle.  
+ Im unmittelbaren Modus gibt jeder Aufruf der **Update** -Methode die Änderungen an die Datenquelle weiter. Im Batch Modus speichert jeder Aufruf von **Update** oder Bewegung der aktuellen Zeilen Position die Änderungen am Kopier Puffer, aber nur die **UpdateBatch** -Methode gibt die Änderungen an die Datenquelle weiter.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Aktualisieren von Daten](../../../ado/guide/data/updating-data.md)  
   

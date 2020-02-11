@@ -17,29 +17,29 @@ ms.assetid: 5463be22-ca50-43ea-9c92-468fc8eda280
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a8e6f6a7cb749ff2b22a1f7563b43ce07e060aab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67911555"
 ---
 # <a name="childcount-property-ado-md"></a>ChildCount-Eigenschaft (ADO MD)
-Gibt die Anzahl der Elemente für den aktuellen [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt ist das übergeordnete Element in einer Hierarchie.  
+Gibt die Anzahl der Elemente an, für die [das aktuelle Element](../../../ado/reference/ado-md-api/member-object-ado-md.md) Objekt das übergeordnete Element in einer Hierarchie ist.  
   
 ## <a name="return-values"></a>Rückgabewerte  
- Gibt eine **lange** ganze Zahl und ist schreibgeschützt.  
+ Gibt eine **lange** ganze Zahl zurück und ist schreibgeschützt.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **ChildCount** Eigenschaft, um eine Schätzung der wie viele untergeordnete Elemente zurückgeben einer **Member** hat. Die tatsächliche untergeordneten Elemente ein **Member** zurückgegeben werden kann, indem die [untergeordnete Elemente](../../../ado/reference/ado-md-api/children-property-ado-md.md) Eigenschaft.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **childCount** -Eigenschaft, um eine Schätzung der Anzahl der untergeordneten **Elemente eines Members** zurückzugeben. Die untergeordneten **Elemente eines Members können von** der [Children](../../../ado/reference/ado-md-api/children-property-ado-md.md) -Eigenschaft zurückgegeben werden.  
   
- Für **Member** Objekte aus einer [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt ist, wird die maximale Anzahl zurückgegeben wird, 65536. Wenn die tatsächliche Anzahl der untergeordneten Elemente 65536 überschreitet, wird der zurückgegebene Wert immer noch 65536 sein. Aus diesem Grund sollte die Anwendung interpretieren eine **ChildCount** von 65536 als oder gleich 65536 untergeordnete Elemente.  
+ Bei **Element Objekten aus** einem [Positions](../../../ado/reference/ado-md-api/position-object-ado-md.md) Objekt beträgt die maximale Anzahl, die zurückgegeben wird, 65536. Wenn die tatsächliche Anzahl der untergeordneten Elemente 65536 überschreitet, ist der zurückgegebene Wert weiterhin 65536. Daher sollte die Anwendung eine **childCount** von 65536 als gleich oder größer als 65536 untergeordnete Elemente interpretieren.  
   
- Für **Member** Objekte aus einer [Ebene](../../../ado/reference/ado-md-api/level-object-ado-md.md) Objekt, das die Auflistung von ADO verwenden, [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) Eigenschaft der **untergeordnete Elemente** Auflistung, um zu bestimmen, die genaue Anzahl der untergeordneten Elemente. Bestimmen die genaue Anzahl der untergeordneten Elemente ist möglicherweise langsam, wenn die Anzahl der untergeordneten Elemente in der Auflistung groß ist.  
+ Verwenden **Sie für Element** Objekte aus einem [Ebenenobjekt](../../../ado/reference/ado-md-api/level-object-ado-md.md) die Eigenschaft ADO-Sammlungs [Anzahl](../../../ado/reference/ado-api/count-property-ado.md) für die Auflistung **Children** , um die genaue Anzahl der untergeordneten Elemente zu ermitteln. Die genaue Anzahl von untergeordneten Elementen kann langsam sein, wenn die Anzahl der untergeordneten Elemente in der Auflistung groß ist.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Member-Objekt (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Children-Eigenschaft (ADO MD)](../../../ado/reference/ado-md-api/children-property-ado-md.md)   
  [Count-Eigenschaft (ADO)](../../../ado/reference/ado-api/count-property-ado.md)   
- [Members-Auflistung (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)
+ [Members-Collection (ADO MD)](../../../ado/reference/ado-md-api/members-collection-ado-md.md)

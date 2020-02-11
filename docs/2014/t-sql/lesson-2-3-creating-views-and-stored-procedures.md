@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211183"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Erstellen von Sichten und gespeicherten Prozeduren
-  Nachdem Mary nun auf die **TestData** -Datenbank zugreifen kann, möchten Sie möglicherweise einige Datenbankobjekte erstellen, wie z. B. eine Sicht und eine gespeicherte Prozedur, und Mary dann Zugriff auf diese Objekte erteilen. Bei einer Sicht handelt es sich um eine gespeicherte SELECT-Anweisung, und eine gespeicherte Prozedur setzt sich aus einer oder mehreren [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zusammen, die als Batch ausgeführt werden.  
+  Da Mary nun auf die **testdata** -Datenbank zugreifen kann, möchten Sie möglicherweise einige Datenbankobjekte erstellen, z. b. eine Sicht und eine gespeicherte Prozedur, und Mary dann Zugriff auf diese Datenbanken gewähren. Bei einer Sicht handelt es sich um eine gespeicherte SELECT-Anweisung, und eine gespeicherte Prozedur setzt sich aus einer oder mehreren [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen zusammen, die als Batch ausgeführt werden.  
   
  Sichten werden wie Tabellen abgefragt und nehmen keine Parameter an. Gespeicherte Prozeduren sind komplexer als Sichten. Gespeicherte Prozeduren können sowohl Eingabe- als auch Ausgabeparameter aufweisen und Anweisungen enthalten, die den Ablauf des Codes steuern, wie z. B. IF- und WHILE-Anweisungen. Als eine der Grundregeln guter Programmierung gilt die Verwendung gespeicherter Prozeduren für alle Aktionen, die sich in der Datenbank wiederholen.  
   
@@ -76,11 +76,11 @@ ms.locfileid: "68211183"
   
     ```  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Erteilen des Zugriffs auf ein Datenbankobjekt](lesson-2-4-granting-access-to-a-database-object.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [CREATE VIEW &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-view-transact-sql)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

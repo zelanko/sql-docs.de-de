@@ -1,5 +1,5 @@
 ---
-title: 'Ausschließen von Schemaelementen aus dem resultierenden XML-Dokument mit Sql: zugeordnet (SQLXML 4.0) | Microsoft-Dokumentation'
+title: 'Ausschließen von Schema Elementen aus dem resultierenden XML-Dokument mithilfe von SQL: zugeordnet (SQLXML 4,0) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 865a9af892f948e77aa593d3713766e7860349b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66013864"
 ---
 # <a name="excluding-schema-elements-from-the-resulting-xml-document-using-sqlmapped-sqlxml-40"></a>Ausschließen von Schemaelementen aus dem resultierenden XML-Dokument mithilfe von 'sql:mapped' (SQLXML 4.0)
@@ -37,14 +37,14 @@ ms.locfileid: "66013864"
  Die `sql:mapped`-Anmerkung akzeptiert einen booleschen Wert (0 = false und 1 = true). Zulässig sind die Werte 0, 1, true und false.  
   
 ## <a name="examples"></a>Beispiele  
- Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen für die Ausführung von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
+ Es müssen bestimmte Anforderungen erfüllt sein, damit aus den folgenden Beispielen funktionierende Beispiele erstellt werden können. Weitere Informationen finden Sie unter [Anforderungen zum Ausführen von SQLXML-Beispielen](../sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-the-sqlmapped-annotation"></a>A. Angeben der "sql:mapped"-Anmerkung  
- Angenommen, Sie haben ein XSD-Schema von einer anderen Quelle. Dieses XSD-Schema besteht aus einem  **\<Person.Contact >** -Element mit **ContactID**, **FirstName**, **"LastName"** , und **HomeAddress** Attribute.  
+ Angenommen, Sie haben ein XSD-Schema von einer anderen Quelle. Dieses XSD-Schema besteht aus einer ** \<Person. Contact>** -Element mit den Attributen **ContactID**, **FirstName**, **LastName**und **HomeAddress** .  
   
- Beim Zuordnen dieses XSD-Schema der Person.Contact-Tabelle in der AdventureWorks-Datenbank `sql:mapped` angegeben ist, auf die **HomeAddress** Attribut, da die Employees-Tabelle keine Privatadressen von Mitarbeitern gespeichert werden. Daher wird dieses Attribut nicht der Datenbank zugeordnet und nicht im resultierenden XML-Dokument zurückgegeben, wenn eine XPath-Abfrage mit dem Zuordnungsschema ausgeführt wird.  
+ Beim Zuordnen dieses XSD-Schemas zur Person. Contact-Tabelle in der AdventureWorks `sql:mapped` -Datenbank wird im **HomeAddress** -Attribut angegeben, da in der Employees-Tabelle nicht die Privatadressen von Mitarbeitern gespeichert werden. Daher wird dieses Attribut nicht der Datenbank zugeordnet und nicht im resultierenden XML-Dokument zurückgegeben, wenn eine XPath-Abfrage mit dem Zuordnungsschema ausgeführt wird.  
   
- Für den Rest des Schemas wird eine Standardzuordnung durchgeführt. Die  **\<Person.Contact >** Element wird der Person.Contact-Tabelle zugeordnet, und alle Attribute den Spalten mit demselben Namen in der Person.Contact-Tabelle zugeordnet.  
+ Für den Rest des Schemas wird eine Standardzuordnung durchgeführt. Das ** \<Person. Contact>** -Element wird der Person. Contact-Tabelle zugeordnet, und alle Attribute werden den gleichnamigen Spalten in der Person. Contact-Tabelle zugeordnet.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -61,7 +61,7 @@ ms.locfileid: "66013864"
 </xsd:schema>  
 ```  
   
-##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine Beispiel-XPath-Abfrage anhand des Schemas  
+##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>So testen Sie eine XPath-Beispiel Abfrage für das Schema  
   
 1.  Kopieren Sie den oben stehenden Schemacode, und fügen Sie ihn in eine Textdatei ein. Speichern Sie die Datei unter dem Dateinamen sql-mapped.xml.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66013864"
   
  ContactID, FirstName und LastName sind vorhanden, HomeAddress jedoch nicht, weil im Zuordnungsschema für das zugehörige `sql:mapped`-Attribut der Wert 0 (null) angegeben ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Standardzuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4.0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Standard Zuordnung von XSD-Elementen und-Attributen zu Tabellen und Spalten &#40;SQLXML 4,0&#41;](default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  
   
   

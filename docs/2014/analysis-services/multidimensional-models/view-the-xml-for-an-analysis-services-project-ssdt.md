@@ -1,5 +1,5 @@
 ---
-title: Anzeigen des XML für eine Analysis-Projekt (SSDT Services) | Microsoft-Dokumentation
+title: Anzeigen des XML-Codes für ein Analysis Services-Projekt (SSDT) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4826be0fd38118e94921f63e02882935132a4d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072480"
 ---
 # <a name="view-the-xml-for-an-analysis-services-project-ssdt"></a>Anzeigen des XML für ein Analysis Services-Projekt (SSDT)
   Wenn Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank im Projektmodus verwenden, wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine XML-Definition für jedes im Projektordner enthaltene Objekt erstellt. Sie können die Inhalte der XML-Datei für jedes Objekt innerhalb von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]anzeigen. Die XML-Datei kann auch direkt bearbeitet werden, jedoch wird in den meisten Situationen davon abgeraten, da Sie Änderungen vornehmen können, die die Unlesbarkeit der XML-Datei in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]bewirken.  
   
 > [!NOTE]  
->  Sie können den XML-Code nicht für ein Gesamtprojekt, sondern nur für die jeweiligen Objekte anzeigen, da für jedes Objekt eine eigene Datei vorhanden ist. Die einzige Möglichkeit zum Anzeigen des Codes für ein Gesamtprojekt besteht, das Projekt zu erstellen und anzeigen den ASSL-code in die \<Projektname > .asdatabase-Datei.  
+>  Sie können den XML-Code nicht für ein Gesamtprojekt, sondern nur für die jeweiligen Objekte anzeigen, da für jedes Objekt eine eigene Datei vorhanden ist. Die einzige Möglichkeit, den Code für ein gesamtes Projekt anzuzeigen, besteht darin, das Projekt zu erstellen und den ASSL- \<Code im Projektnamen>. asdatabase-Datei anzuzeigen.  
   
 ### <a name="to-view-the-xml-code-for-an-object"></a>So zeigen Sie den XML-Code für ein Objekt an  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66072480"
   
      Der XML-Code des Objekts wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Dialogfeld, Allgemein (Berichts-Generator) | Microsoft-Dokumentation
+title: Dialog Feld "Datenquellen Eigenschaften", "Allgemein" (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109472"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Datenquelleneigenschaften (Dialogfeld), Allgemein (Berichts-Generator)
@@ -24,7 +24,7 @@ ms.locfileid: "66109472"
   
  Der Typ von Anmeldeinformationen, der verwendet wurde, um eine Verbindung mit einer Datenquelle herzustellen, wird in den Datenquelleneigenschaften angegeben. Wenn Sie einen Bericht vom Berichtsserver öffnen, funktionieren die Laufzeitanmeldeinformationen, die in den Datenquelleneigenschaften angegeben sind, möglicherweise nicht für Entwurfszeittasks, wie z. B. das Erstellen von Abfragen und das Anzeigen von Berichten in der Vorschau. Die Datenquelle verwendet z. B. möglicherweise andere Windows-Anmeldeinformationen als Ihre oder einen Benutzernamen und ein Kennwort, der bzw. das Ihnen nicht bekannt ist.  
   
- In Berichts-Generator wird das Dialogfeld **Datenquellen-Anmeldeinformationen eingeben** angezeigt, wenn keine Verbindung zu der Datenquelle hergestellt werden kann, die die in den Datenquelleneigenschaften angegebenen Anmeldeinformationen verwendet. Dies geschieht normalerweise, wenn  
+ In Berichts-Generator wird das Dialogfeld **Datenquellen-Anmeldeinformationen eingeben** angezeigt, wenn keine Verbindung zu der Datenquelle hergestellt werden kann, die die in den Datenquelleneigenschaften angegebenen Anmeldeinformationen verwendet. Dies geschieht normalerweise in diesen Fällen:  
   
 -   die Datenquelle so konfiguriert ist, dass Anmeldeinformationen angefordert werden.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66109472"
   
  Wenn die angegebenen Anmeldeinformationen unvollständig sind (wenn z. B. ein Kennwort erforderlich ist), werden Sie in Berichts-Generator erneut zur Eingabe von Laufzeitanmeldeinformationen aufgefordert, wenn eine Verbindung mit der Datenquelle hergestellt werden muss. Die Entwurfszeitanmeldeinformationen werden gespeichert, und Sie werden nicht erneut aufgefordert.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie den Namen der Datenquelle ein. Der Datenquellenname muss innerhalb des Berichts eindeutig sein. Standardmäßig wird der Datenquelle ein allgemeiner Name, wie DataSource1 oder DataSource2, zugewiesen.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66109472"
   
  Nachdem Sie eine Datenquelle aus einem Berichtsserver gewählt haben, hält Berichts-Generator eine Verbindung mit diesem Berichtsserver aufrecht.  
   
- **Verwenden Sie in meinem Bericht eingebettete Verbindung**  
+ **In Bericht eingebettete Verbindung verwenden**  
  Wählen Sie diese Option, um eine Datenquelle zu erstellen, die nur von diesem Bericht verwendet wird.  
   
  **Typ**  
@@ -57,17 +57,17 @@ ms.locfileid: "66109472"
  **Verbindungszeichenfolge**  
  Geben Sie eine Verbindungszeichenfolge für die Datenquelle ein. Klicken Sie auf **Erstellen** , um die Verbindungszeichenfolge mithilfe des Dialogfelds **Verbindungseigenschaften** zu erstellen. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um den Ausdruck zu bearbeiten.  
   
- **Verwenden Sie eine einzelne Transaktion beim Verarbeiten der Abfragen**  
+ **Einzelne Transaktion bei der Verarbeitung der Abfragen verwenden**  
  Wählen Sie diese Option, um anzugeben, dass Datasets, die diese Datenquelle verwenden, in einer einzelnen Transaktion für die Datenbank ausgeführt werden. Um Transaktionen für Unterberichte aufzunehmen, die dieselbe Datenquelle verwenden, wählen Sie den Unterbericht und legen im Eigenschaftenbereich **MergeTransactions** auf **True**fest.  
   
  **Verbindung testen**  
  Klicken Sie auf diese Option, um zu überprüfen, dass die Datenquellenverbindung mit den angegebenen Anmeldeinformationen funktioniert. Wenn die Verbindung nicht hergestellt werden kann, müssen Sie die Anmeldeinformationen und die Serververfügbarkeit überprüfen. Sie können Datenquellenverbindungen für eingebettete und freigegebene Datenquellen testen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Hinzufügen und Prüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
- [Dialogfeld "Eigenschaften", "Anmeldeinformationen für Datenquellen &#40;Berichts-Generator&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Datenquellen Eigenschaften (Dialog Feld), Anmelde Informationen &#40;Berichts-Generator&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
+ [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

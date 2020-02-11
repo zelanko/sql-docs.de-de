@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a301857168f7da4040df0195bc25c0ab54861eb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460150"
 ---
 # <a name="add-table-dialog-box-database-designer-visual-database-tools"></a>Tabelle hinzufügen (Dialogfeld) (Database Designer) (Visual Database Tools)
@@ -30,16 +30,16 @@ ms.locfileid: "63460150"
  **Aktualisieren**  
  Aktualisiert die Liste der Tabellen, sodass sie mit dem aktuellen Stand der Datenbank übereinstimmt.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt die ausgewählten Tabellen hinzu.  
   
 > [!NOTE]  
 >  Wenn Sie dem Diagramm mehrere Tabellen hinzufügen möchten, können Sie alle auswählen und dann auf **Hinzufügen**klicken. Sie können auch auf jede hinzuzufügende Tabelle doppelklicken und anschließend auf **Schließen** klicken.  
   
- **Schließen**  
+ **Close**  
  Schließt das Dialogfeld, ohne dass weitere Tabellen hinzugefügt werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Tabellen zu Diagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

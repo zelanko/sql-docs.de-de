@@ -1,5 +1,5 @@
 ---
-title: Neuigkeiten
+title: Neues
 description: Sehen Sie sich die Neuerungen in Microsoft Analytics Platform System an, eine lokale Appliance für horizontales Skalieren, die MPP SQL Server parallel Data Warehouse hostet.
 author: mzaman1
 manager: craigg
@@ -11,10 +11,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3845470668e4cffeda7a48ed01c144eb53f671b9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399421"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Neues in Analytics Platform System, ein Data Warehouse für horizontales Skalieren
@@ -129,7 +129,7 @@ Durch die Verwendung von Katalog Objekten für Metadatenaufrufe anstelle von SMO
 ### <a name="bug-fixes"></a>Fehlerkorrekturen
 Wir haben ein Upgrade auf SQL Server 2016 SP2 Cu2 mit APS Cu 7.1 durchgeführt. Das Upgrade korrigiert einige Probleme, die unten beschrieben werden.
 
-| Titel | Beschreibung |
+| Titel | BESCHREIBUNG |
 |:---|:---|
 | **Möglicher Deadlock von tupelbewegsvorgang** |Das Upgrade korrigiert eine langfristige Möglichkeit eines Deadlocks in einer verteilten Transaktion und einem tupelverschiebungshintergrundthread. Nach der Installation von Cu 7.1 können Kunden, die TF634 verwendet haben, um den tupelverschiebungsvorgang als SQL Server Startparameter oder globales Ablaufverfolgungsflag zu unterbinden | 
 | **Bestimmte Verzögerung/führende Abfrage schlägt fehl** |Bestimmte Abfragen in CCI-Tabellen mit in der Fehlermeldung gedebuggten Funktionen mit verzögertem verzögertem Rückstand | 
@@ -220,7 +220,7 @@ Ein neues Gerät von HPE oder Dell enthält alle neuesten Updates und bietet fol
 - Aktualisieren auf DDR4 DIMMs
 - Verbesserter DIMM-Durchsatz
 
-**Tions**
+**Integration**
 
 - Der voll qualifizierte Domänen Name (Fully Qualified Domain Name, FQDN) ermöglicht das Einrichten einer Domänen Vertrauensstellung für das Gerät. 
 - Um FQDN verwenden zu können, müssen Sie während des Upgrades ein vollständiges Upgrade und ein Upgrade durchführen. 
@@ -251,7 +251,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [sp_spaceused ()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Breite Tabellen]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql
-[bcp-Hilfsprogramm]:/sql/tools/bcp-utility
+[bcp (Hilfsprogramm)]:/sql/tools/bcp-utility
 [UNIQUEIDENTIFIER]:/sql/t-sql/data-types/uniqueidentifier-transact-sql
 [Isch]:/sql/t-sql/data-types/decimal-and-numeric-transact-sql
 [Zeilen oder Bereich]:/sql/t-sql/queries/select-over-clause-transact-sql

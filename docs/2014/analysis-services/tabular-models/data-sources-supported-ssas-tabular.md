@@ -1,5 +1,5 @@
 ---
-title: Unterstützten Datenquellen (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Unterstützte Datenquellen (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067378"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
@@ -28,15 +28,15 @@ ms.locfileid: "66067378"
   
 -   [Tipps zum Auswählen von Datenquellen](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a> Unterstützte Datenquellen  
+##  <a name="bkmk_supported_ds"></a>Unterstützte Datenquellen  
  Sie können Daten aus den Datenquellen in der folgenden Tabelle importieren. Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden die für die einzelnen Datenquellen aufgelisteten Anbieter nicht von Setup installiert. Einige Anbieter wurden möglicherweise bereits mit anderen Anwendungen auf dem Computer installiert. In anderen Fällen müssen Sie den Anbieter herunterladen und installieren.  
   
 |||||  
 |-|-|-|-|  
-|Source|Versionen|Dateityp|Anbieter <sup>1</sup>|  
+|`Source`|Versionen|Dateityp|Anbieter <sup>1</sup>|  
 |Access-Datenbanken|Microsoft Access 2003, 2007, 2010.|.accdb oder .mdb|ACE 14 OLE DB-Anbieter|  
-|Relationale SQL Server-Datenbanken|Microsoft SQL Server 2005, 2008, 2008 R2; SQLServer 2012, Microsoft SQL Azure-Datenbank <sup>2</sup>|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 10.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
-|SQL Server Parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(–)|OLE DB-Anbieter für SQL Server PDW|  
+|Relationale SQL Server-Datenbanken|Microsoft SQL Server 2005, 2008, 2008 R2; SQL Server 2012, Microsoft SQL Azure Datenbank <sup>2</sup>|(–)|OLE DB-Anbieter für SQL Server<br /><br /> SQL Server Native Client OLE DB-Anbieter<br /><br /> OLE DB-Anbieter für SQL Server Native 10.0 Client<br /><br /> .NET Framework-Datenanbieter für SQL Client|  
+|SQL Server parallel Data Warehouse (PDW) <sup>3</sup>|2008 R2|(–)|OLE DB-Anbieter für SQL Server PDW|  
 |Relationale Oracle-Datenbanken|Oracle 9i, 10g, 11g|(–)|OLE DB-Anbieter für Oracle<br /><br /> .NET Framework-Datenanbieter für Oracle Client<br /><br /> .NET Framework-Datenanbieter für SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Relationale Teradata-Datenbanken|Teradata V2R6, V12|(–)|OLE DB-Anbieter für TDOLEDB<br /><br /> .NET-Datenanbieter für Teradata|  
 |Relationale Informix-Datenbanken||(–)|OLE DB-Anbieter für Informix|  
@@ -45,25 +45,25 @@ ms.locfileid: "66067378"
 |Andere relationale Datenbanken|(–)|(–)|OLE DB-Anbieter oder ODBC-Treiber|  
 |Textdateien|(–)|.txt, .tab, .csv|ACE 14 OLE DB-Anbieter für Microsoft Access|  
 |Microsoft Excel-Dateien|Excel 97-2003, 2007, 2010|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB-Anbieter|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe|Microsoft SQL Server 2008 R2 Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (wird nur für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwendet, die in SharePoint-Farmen veröffentlicht werden, in denen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert ist)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Arbeitsmappe|Microsoft SQL Server 2008 R2 Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (wird nur für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwendet, die in SharePoint-Farmen veröffentlicht werden, in denen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert ist)|  
 |Analysis Services-Cube|Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(–)|ASOLEDB 10|  
 |Datenfeeds<br /><br /> (wird verwendet, um Daten aus Reporting Services-Berichten, Atom-Dienstdokumenten, Microsoft Azure Marketplace DataMarket und einem einzelnen Datenfeed zu importieren)|Atom 1.0-Format<br /><br /> Sämtliche Datenbanken oder Dokumente, die als Windows Communication Foundation (WCF) Data Service (früher ADO.NET Data Services) verfügbar gemacht werden.|".atomsvc" für ein Dienstdokument, das einen oder mehrere Feeds definiert<br /><br /> ".atom" für ein Atom-Webfeeddokument|Microsoft-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
-|Office Database Connection-Dateien||ODC||  
+|Office Database Connection-Dateien||.odc||  
   
- <sup>1</sup> Sie können auch den OLE DB-Anbieter für ODBC verwenden.  
+ <sup>1</sup> Sie können auch den OLE DB Anbieter für ODBC verwenden.  
   
- <sup>2</sup> finden Sie weitere Informationen zu SQL Azure, die Website [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
+ <sup>2</sup> Weitere Informationen zu SQL Azure finden Sie auf der Website [SQL Azure](https://go.microsoft.com/fwlink/?LinkID=157856).  
   
- <sup>3</sup> Weitere Informationen zu SQL Server PDW finden Sie unter der Website [SQL Server 2008 R2 Parallel Data Warehouse](https://go.microsoft.com/fwlink/?LinkId=150895).  
+ <sup>3</sup> Weitere Informationen zu SQL Server PDW finden Sie unter [parallel Data Warehouse der Website SQL Server 2008 R2](https://go.microsoft.com/fwlink/?LinkId=150895).  
   
- <sup>4</sup> in einigen Fällen die Verwendung des MSDAORA-OLE DB-Anbieters kann zu Verbindungsfehlern, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
+ <sup>4</sup> in einigen Fällen kann die Verwendung des MSDAORA-OLE DB Anbieters zu Verbindungsfehlern führen, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
   
-##  <a name="bkmk_unsupported_ds"></a> Nicht unterstützte Quellen  
+##  <a name="bkmk_unsupported_ds"></a>Nicht unterstützte Quellen  
  Die folgende Datenquelle wird derzeit nicht unterstützt:  
   
 -   Serverdokumente, wie bereits in SharePoint veröffentlichte Access-Datenbanken, können nicht importiert werden.  
   
-##  <a name="bkmk_tips"></a> Tipps zum Auswählen von Datenquellen  
+##  <a name="bkmk_tips"></a>Tipps zum Auswählen von Datenquellen  
   
 1.  Durch das Importieren von Tabellen aus relationalen Datenbanken ersparen Sie sich Schritte, da beim Import *Fremdschlüssel* beziehungen verwendet werden, um Beziehungen zwischen den Tabellen im Modell-Designer zu erstellen.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "66067378"
   
 4.  OLE DB-Anbieter können in einigen Fällen bessere Leistung für große Datenmengen anbieten. Bei der Auswahl zwischen unterschiedlichen Anbietern für die gleiche Datenquelle sollten Sie zuerst den OLE DB-Anbieter wählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellen &#40;SSAS – tabellarisch&#41;](../data-sources-ssas-tabular.md)   
- [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../import-data-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen &#40;tabellarischen SSAS-&#41;](../data-sources-ssas-tabular.md)   
+ [Importieren von Daten &#40;tabellarischen SSAS-&#41;](../import-data-ssas-tabular.md)  
   
   

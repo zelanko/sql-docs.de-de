@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 160731a6749b3741a68dcccafedd3499db465349
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231762"
 ---
 # <a name="date-and-time-improvements"></a>Verbesserungen bei Datum und Uhrzeit
@@ -51,5 +51,5 @@ ms.locfileid: "75231762"
  Der ODBC-Standard beschreibt, wie Konvertierungen zwischen vorhandenen Datum-, Zeit- und Timestamp-Typen funktionieren. Diese wurden auf einheitliche Weise erweitert, um in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]eingeführte Konvertierungen zwischen allen Datums- und Zeittypen einzuschließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](sql-server-native-client-features.md)  
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  
   

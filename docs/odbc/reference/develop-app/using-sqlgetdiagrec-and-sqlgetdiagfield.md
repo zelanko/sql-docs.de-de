@@ -17,20 +17,20 @@ ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022149"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>Verwenden von SQLGetDiagRec und SQLGetDiagField
--Anwendungen rufen **SQLGetDiagRec** oder **SQLGetDiagField** zum Abrufen von Diagnoseinformationen zu erhalten. Diese Funktionen akzeptieren eine Umgebung, Verbindung, Anweisung oder -Deskriptor-Handle und Diagnose von der Funktion, die zuletzt verwendet von diesem Handle zurück. Die Diagnose in einem bestimmten Handle protokolliert werden verworfen, wenn eine neue Funktion mit diesem Handle aufgerufen wird. Wenn die Funktion mehrere DiagnoseDatensätze zurückgegeben wird, ruft die Anwendung dieser Funktionen mehrmals; Die Gesamtzahl der Statusdatensätze wird abgerufen, durch den Aufruf **SQLGetDiagField** für den Headerdatensatz (Datensatz 0), mit der Option SQL_DIAG_NUMBER.  
+Anwendungen rufen **SQLGetDiagRec** oder **SQLGetDiagField** auf, um Diagnoseinformationen abzurufen. Diese Funktionen akzeptieren eine Umgebung, eine Verbindung, eine Anweisung oder ein Deskriptorhandle und geben Diagnoseinformationen von der Funktion zurück, die das Handle zuletzt verwendet hat. Die an einem bestimmten handle protokollierte Diagnose wird verworfen, wenn eine neue Funktion mit diesem Handle aufgerufen wird. Wenn die Funktion mehrere Diagnosedaten Sätze zurückgibt, werden diese Funktionen von der Anwendung mehrmals aufgerufen. die Gesamtanzahl der Statusdaten Sätze wird durch Aufrufen von **SQLGetDiagField** für den Header Daten Satz (Datensatz 0) mit der Option SQL_DIAG_NUMBER abgerufen.  
   
- Anwendungen rufen Sie einzelne Diagnosefelder durch den Aufruf **SQLGetDiagField** und Angeben des abzurufenden Felds. Keine Bedeutung für bestimmte Arten von Handles keine bestimmten Feldern. Eine Liste von Feldern und ihre Bedeutungen, finden Sie unter den [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) funktionsbeschreibung.  
+ Anwendungen rufen einzelne Diagnose Felder ab, indem Sie **SQLGetDiagField** aufrufen und das abzurufende Feld angeben. Bestimmte Diagnose Felder haben für bestimmte Typen von Handles keine Bedeutung. Eine Liste der Diagnose Felder und ihrer Bedeutungen finden Sie in der Beschreibung der [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) -Funktion.  
   
- Der SQLSTATE, systemeigener Fehlercode und diagnosemeldung in einem einzigen Aufruf Anwendungen abzurufen, durch Aufrufen **SQLGetDiagRec**; **SQLGetDiagRec** nicht zum Abrufen von Informationen aus der Headerdatensatz verwendet werden.  
+ Anwendungen rufen SQLSTATE, systemeigenen Fehlercode und Diagnosemeldungen in einem einzigen Aufruf durch Aufrufen von **SQLGetDiagRec**ab. **SQLGetDiagRec** kann nicht zum Abrufen von Informationen aus dem Header Daten Satz verwendet werden.  
   
- Beispielsweise wird der folgende Code fordert den Benutzer zu einer SQL-Anweisung und ausgeführt. Wenn Sie sämtliche Diagnoseinformationen zurückgegeben wurde, ruft es **SQLGetDiagField** beim Abrufen der Anzahl der Statusdatensätze und **SQLGetDiagRec** abzurufenden die SQLSTATE, systemeigener Fehlercode und diagnosemeldung aus Datensätze.  
+ Im folgenden Code wird z. b. der Benutzer zur Eingabe einer SQL-Anweisung aufgefordert und ausgeführt. Wenn Diagnoseinformationen zurückgegeben wurden, wird **SQLGetDiagField** aufgerufen, um die Anzahl von Statusdaten Sätzen abzurufen, und **SQLGetDiagRec** , um SQLSTATE, systemeigenen Fehlercode und Diagnosemeldungen aus diesen Datensätzen abzurufen.  
   
 ```  
 SQLCHAR       SqlState[6], SQLStmt[100], Msg[SQL_MAX_MESSAGE_LENGTH];  

@@ -1,5 +1,5 @@
 ---
-title: Informationsquellen (SQLServer 2014) | Microsoft-Dokumentation
+title: Erhalten von Unterstützung (SQL Server 2014) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -12,10 +12,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62837690"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Informationsquellen (SQL Server 2014)
@@ -27,7 +27,7 @@ ms.locfileid: "62837690"
   
 -   Informationen zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf anderen [!INCLUDE[msCoName](../includes/msconame-md.md)]-Websites.  
   
- Wenn Sie die Informationen nicht finden können Sie suchen nach in diese Datenquellen können Sie Fragen können die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Community-Foren und Newsgroups, oder Sie können eine Supportanfrage mit [!INCLUDE[msCoName](../includes/msconame-md.md)] unterstützen.  
+ Wenn Sie die Informationen, die Sie in diesen Quellen suchen, nicht finden, können Sie in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Communityforen und-Newsgroups Fragen stellen, oder Sie können einen Supportfall mit [!INCLUDE[msCoName](../includes/msconame-md.md)] Support eröffnen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Informationsquellen für SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  
@@ -39,8 +39,8 @@ ms.locfileid: "62837690"
  [Senden von Feedback zu SQL Server 2014](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
  Beschreibt, wie Vorschläge zu den Produktfunktionen und zur Benutzeroberfläche sowie Fehlerberichte und Feedback zur Dokumentation gesendet werden können. Außerdem wird die Möglichkeit erläutert, Fehlerberichte und Verwendungsdaten automatisch zur Auswertung an [!INCLUDE[msCoName](../includes/msconame-md.md)] zu übermitteln.  
   
-## <a name="see-also"></a>Siehe auch  
- [Was ist neu in SQLServer 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Neues in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)   
  [Installation für SQLServer 2014](../database-engine/install-windows/installation-for-sql-server.md)  
   
   

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 83ed373fd4fdd38ae5ddd391678b74e3d2e168c9
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401117"
 ---
 # <a name="instant-file-initialization-configuration"></a>Konfiguration der sofortigen Datei Initialisierung
@@ -48,7 +48,7 @@ Der Sicherungs Vorgang erfordert Netzwerk Anmelde Informationen (Windows-Benutze
     > [!WARNING]  
     > Wenn Sie die sofortige Datei Initialisierung deaktivieren, kann die oben beschriebene Sicherheits Überlegung für das Feature weiterhin auf Dateien angewendet werden, die während der Aktivierung der sofortigen Datei Initialisierung gelöscht wurden.  
   
-4.  Klicken Sie auf **Übernehmen**. Die Änderung wird durch die SQL Server Instanzen auf SQL Server PDW weitergegeben, wenn die Geräte Dienste das nächste Mal neu gestartet werden. Informationen zum Neustarten der Geräte Dienste finden Sie unter [PDW-Dienst Status &#40;Analytics Platform System&#41;](pdw-services-status.md).  
+4.  Klicken Sie auf **Anwenden**. Die Änderung wird durch die SQL Server Instanzen auf SQL Server PDW weitergegeben, wenn die Geräte Dienste das nächste Mal neu gestartet werden. Informationen zum Neustarten der Geräte Dienste finden Sie unter [PDW-Dienst Status &#40;Analytics Platform System&#41;](pdw-services-status.md).  
   
 5.  Möglicherweise möchten Sie die oben beschriebenen Schritte als **Berechtigung hinzufügen für das Sicherungs Konto** wiederholen, um die Berechtigung zum **Ausführen von volumewartungstasks** zu entfernen.  
   

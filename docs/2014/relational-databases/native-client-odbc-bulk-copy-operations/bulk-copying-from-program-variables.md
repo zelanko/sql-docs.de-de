@@ -1,5 +1,5 @@
 ---
-title: Massenkopieren aus Programmvariablen | Microsoft-Dokumentation
+title: Massen kopieren aus Programmvariablen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,70 +19,70 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206838"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
-  Sie können Massenkopiervorgänge direkt aus Programmvariablen durchführen. Nach der Zuweisung von Variablen, um die Daten für eine Zeile und der Aufruf von aufzunehmen [Bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) rufen Sie zum Starten des Massenkopiervorgangs [Bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte an den Speicherort und Format der Programmvariablen zugeordnet werden soll mit der Spalte. Füllen Sie jede Variable mit Daten, und rufen dann [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) auf eine Zeile mit Daten an den Server gesendet. Wiederholen Sie den Vorgang Variablen füllen und Aufrufen von **Bcp_sendrow** bis alle Zeilen an den Server gesendet wurden, rufen Sie anschließend [Bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) um anzugeben, dass der Vorgang abgeschlossen ist.  
+  Sie können Massenkopiervorgänge direkt aus Programmvariablen durchführen. Nachdem Sie Variablen zugeordnet haben, die die Daten für eine Zeile enthalten, und [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) aufrufen, um das Massen kopieren zu starten, rufen Sie [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) für jede Spalte auf, um den Speicherort und das Format der Programmvariablen anzugeben, die der Spalte zugeordnet werden soll. Füllen Sie jede Variable mit Daten aus, und wenden Sie dann [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) an, um eine Daten Zeile an den Server zu senden. Wiederholen Sie den Vorgang zum Auffüllen der Variablen und zum Aufrufen von **bcp_sendrow** , bis alle Zeilen an den Server gesendet wurden. Rufen Sie dann [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) auf, um anzugeben, dass der Vorgang abgeschlossen ist.  
   
- Die **Bcp_bind**_pData_ Parameter enthält die Adresse der Variablen an die Spalte gebunden wird. Die Daten für die einzelnen Spalten können auf zweierlei Weise gespeichert werden:  
+ Der **bcp_bind**_pData_ -Parameter enthält die Adresse der Variablen, die an die Spalte gebunden wird. Die Daten für die einzelnen Spalten können auf zweierlei Weise gespeichert werden:  
   
 -   Zuordnen einer Variable für die Daten.  
   
 -   Zuordnen einer Indikatorvariable, unmittelbar gefolgt von der Datenvariable.  
   
- Die Indikatorvariable gibt die Datenlänge für Spalten mit variabler Länge an und zeigt gegebenenfalls an, dass NULL-Werte für die Spalte zulässig sind. Wenn nur eine Datenvariable verwendet wird, klicken Sie dann die Adresse dieser Variablen befindet sich in der **Bcp_bind**_pData_ Parameter. Wenn eine Indikatorvariable verwendet wird, befindet sich die Adresse dieser Indikatorvariablen in die **Bcp_bind**_pData_ Parameter. Die Massenkopierfunktionen berechnen den Speicherort der Datenvariablen durch Hinzufügen der **Bcp_bind**_CbIndicator_ und *pData* Parameter.  
+ Die Indikatorvariable gibt die Datenlänge für Spalten mit variabler Länge an und zeigt gegebenenfalls an, dass NULL-Werte für die Spalte zulässig sind. Wenn nur eine Daten Variable verwendet wird, wird die Adresse dieser Variablen im **bcp_bind**_pData_ -Parameter gespeichert. Wenn eine Indikator Variable verwendet wird, wird die Adresse der Indikator Variablen im **bcp_bind**_pData_ -Parameter gespeichert. Die Funktionen zum Massen kopieren berechnen den Speicherort der Daten Variablen, indem Sie die Parameter " **bcp_bind**_cbIndicator_ " und " *pData* " hinzufügen.  
   
- **Bcp_bind** unterstützt drei Methoden für den Umgang mit Daten variabler Länge:  
+ **bcp_bind** unterstützt drei Methoden für den Umgang mit Daten variabler Länge:  
   
--   Verwendung *CbData* mit nur einer Datenvariable. Platzieren Sie die Länge der Daten in *CbData*. Rufen Sie jedes Mal, die die Länge der Daten, die massenkopiert werden sollen, [Bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)zurücksetzen *CbData*. Wenn eine der anderen zwei Methoden verwendet wird, geben Sie SQL_VARLEN_DATA für *CbData*. Wenn alle Datenwerte für eine Spalte angegeben wird, NULL sind, geben Sie SQL_NULL_DATA für *CbData*.  
+-   Verwenden Sie *cbData* nur mit einer Daten Variablen. Legen Sie die Länge der Daten in *cbData*ab. Bei jeder Änderung der Länge der Daten, die Massen kopiert werden sollen, wird [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md)aufgerufen, um *cbData*zurückzusetzen. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie SQL_VARLEN_DATA für *cbData*an. Wenn alle Datenwerte, die für eine Spalte bereitgestellt werden, NULL sind, geben Sie SQL_NULL_DATA für *cbData*an.  
   
--   Verwenden von Indikatorvariablen. Speichern Sie beim Verschieben des jeweiligen neuen Datenwerts in die Datenvariable die Länge des Werts in der Indikatorvariable. Wenn eine der anderen zwei Methoden verwendet wird, geben Sie 0 für *CbIndicator*.  
+-   Verwenden von Indikatorvariablen. Speichern Sie beim Verschieben des jeweiligen neuen Datenwerts in die Datenvariable die Länge des Werts in der Indikatorvariable. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie 0 für *cbIndicator*an.  
   
--   Verwenden von Abschlusszeichenzeigern. Laden der **Bcp_bind**_pTerm_ Parameter mit der Adresse des Bitmusters, das die Daten beendet. Wenn eine der anderen zwei Methoden verwendet wird, geben Sie NULL für *pTerm*.  
+-   Verwenden von Abschlusszeichenzeigern. Laden Sie den **bcp_bind**_pterm_ -Parameter mit der Adresse des Bitmusters, von dem die Daten beendet werden. Wenn eine der beiden anderen Methoden verwendet wird, geben Sie für *pterm*den Wert NULL an.  
   
- Alle drei der folgenden Methoden können verwendet werden, auf dem gleichen **Bcp_bind** aufrufen, die in diesem Fall dient die Spezifikation, die die kleinste Menge der zu kopierenden Daten führt.  
+ Alle drei Methoden können für denselben **bcp_bind** -Befehl verwendet werden. in diesem Fall wird die Spezifikation verwendet, die dazu führt, dass die kleinste zu kopierende Datenmenge verwendet wird.  
   
- Die **Bcp_bind**_Typ_ Parameter verwendet DB-Library-Datentypbezeichner, nicht ODBC-Datentypbezeichner. DB-Library-Datentypbezeichner werden in SQLNCLI.h definiert, für die Verwendung mit der ODBC definiert **Bcp_bind** Funktion.  
+ Der **bcp_bind**_Type_ -Parameter verwendet DB-Library-Datentyp Bezeichner, nicht ODBC-Datentyp Bezeichner. DB-Library-Datentyp Bezeichner werden in sqlncli. h für die Verwendung mit der ODBC- **bcp_bind** Funktion definiert.  
   
- Funktionen zum Massenkopieren unterstützen nicht alle ODBC C-Datentypen. Die Funktionen zum Massenkopieren unterstützen z. B. nicht die ODBC SQL_C_TYPE_TIMESTAMP-Struktur, verwenden Sie daher [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) oder [SQLGetData](../native-client-odbc-api/sqlgetdata.md) um ODBC SQL_TYPE_TIMESTAMP-Daten in eine SQL_C_CHAR-Variable zu konvertieren. Wenn Sie dann verwenden **Bcp_bind** mit eine *Typ* von SQLCHARACTER die Variable zum Binden einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **"DateTime"** Spalte, die Funktionen zum Massenkopieren konvertieren die die timestampescapeklausel der Zeichenvariablen in das geeignete Datetime-Format.  
+ Funktionen zum Massenkopieren unterstützen nicht alle ODBC C-Datentypen. Beispielsweise unterstützen die Massen Kopierfunktionen die ODBC-SQL_C_TYPE_TIMESTAMP Struktur nicht. verwenden Sie daher [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) oder [SQLGetData](../native-client-odbc-api/sqlgetdata.md) , um ODBC-SQL_TYPE_TIMESTAMP Daten in eine SQL_C_CHAR Variable zu konvertieren. Wenn Sie dann **bcp_bind** mit einem *Typparameter* von SQLCHARACTER verwenden, um die Variable an eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** -Spalte zu binden, konvertieren die Massen Kopierfunktionen die Zeitstempel-Escapesequenz in der Zeichen Variablen in das richtige DateTime-Format.  
   
  In der folgenden Tabelle werden die Datentypen aufgeführt, die für Zuordnungen eines ODBC SQL-Datentyps zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyps empfohlen werden.  
   
-|ODBC SQL-Datentyp|ODBC C-Datentyp|Bcp_bind *Typ* Parameter|SQL Server-Datentyp|  
+|ODBC SQL-Datentyp|ODBC C-Datentyp|bcp_bind *Typparameter*|SQL Server-Datentyp|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **unterschiedliche Zeichen**<br /><br /> **char varying**<br /><br /> **sysname**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**Art**<br /><br /> **Char**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **Zeichen variiert**<br /><br /> **char-Variation**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **DEC**<br /><br /> **money**<br /><br /> **smallmoney**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **31.12.2012**<br /><br /> **money**<br /><br /> **SMALLMONEY**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**isch**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (mit Vorzeichen)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (ohne Vorzeichen)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (mit Vorzeichen)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_SMALL_INT (ohne Vorzeichen)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (mit Vorzeichen)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER (ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **DEC**|  
-|SQL_BIGINT (mit und ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
-|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
+|SQL_INTEGER (ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **31.12.2012**|  
+|SQL_BIGINT (mit und ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**BIGINT**|  
+|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**wirkliche**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
-|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **Binary varying**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
+|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**BINARY**<br /><br /> **timestamp**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binäre unterschiedlichen**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**Klang**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
-|SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
+|SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**Char**|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist nicht registriert haben **Tinyint**ohne Vorzeichen **Smallint**, oder ohne Vorzeichen **Int** -Datentypen. Um den Verlust von Datenwerten beim Migrieren dieser Datentypen zu verhindern, erstellen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]weist nicht signierte Datentypen " **tinyint**", "Ganzzahl ohne Vorzeichen **smallint**" oder "Ganzzahl ohne Vorzeichen **int** " auf. Um den Verlust von Datenwerten beim Migrieren dieser Datentypen zu verhindern, erstellen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
   
 ```  
 CREATE TABLE Sample_Ints(STinyIntCol   SMALLINT,  
@@ -102,15 +102,16 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Intervalldatentypen nicht direkt. Eine Anwendung kann Intervallescapesequenzen jedoch als Zeichenfolgen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichenspalte speichern. Die Anwendung kann sie zur späteren Verwendung lesen, sie können aber nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Intervalldatentypen nicht direkt. Eine Anwendung kann Intervallescapesequenzen jedoch als Zeichenfolgen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichenspalte speichern. Die Anwendung kann sie zur späteren Verwendung lesen, sie können aber nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden.  
   
- Mithilfe der Massenkopierfunktionen können aus einer ODBC-Datenquelle gelesene Daten schnell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden. Verwenden Sie [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) verwenden, um die Spalten eines Resultsets an Programmvariablen zu binden, klicken Sie dann **Bcp_bind** dieselben Programmvariablen an einen Massenkopiervorgang zu binden. Aufrufen von [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md) oder **SQLFetch** dann eine Zeile mit Daten aus der ODBC-Datenquelle abruft, in der Programmvariablen und Aufrufen von [Bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) Massenkopie der Daten aus den Programmvariablen nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Mithilfe der Massenkopierfunktionen können aus einer ODBC-Datenquelle gelesene Daten schnell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden. Verwenden Sie [SQLBindCol](../native-client-odbc-api/sqlbindcol.md) , um die Spalten eines Resultsets an Programmvariablen zu binden, und verwenden Sie dann **bcp_bind** , um die gleichen Programmvariablen an einen Massen Kopiervorgang zu binden. Durch den Aufruf von [SQLFetchScroll](../native-client-odbc-api/sqlfetchscroll.md) oder **SQLFetch** wird eine Daten Zeile aus der ODBC-Datenquelle in die Programmvariablen abgerufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . beim Aufrufen von [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) werden die Daten aus den Programmvariablen in Massen kopiert.  
   
- Eine Anwendung kann mithilfe der [Bcp_colptr](../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) Funktion jedes Mal, wenn die Adresse der ursprünglich in angegebenen Datenvariable ändern muss die **Bcp_bind** _pData_ Parameter. Eine Anwendung kann mithilfe der [Bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) Funktion jedes Mal, wenn die ursprünglich angegebene Datenlänge ändern muss die **Bcp_bind**_CbData_ Parameter.  
+ Eine Anwendung kann die [bcp_colptr](../native-client-odbc-extensions-bulk-copy-functions/bcp-colptr.md) -Funktion immer dann verwenden, wenn Sie die Adresse der Daten Variablen ändern muss, die ursprünglich im **bcp_bind** _pData_ -Parameter angegeben wurde. Eine Anwendung kann die [bcp_collen](../native-client-odbc-extensions-bulk-copy-functions/bcp-collen.md) -Funktion immer dann verwenden, wenn Sie die Daten Länge ändern muss, die ursprünglich im **bcp_bind**_cbData_ -Parameter angegeben wurde.  
   
  Sie können mit Massenkopiervorgängen keine Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in Programmvariablen einlesen. Eine "bcp_readrow"-Funktion oder Ähnliches gibt es nicht. Sie können nur Daten aus der Anwendung an den Server senden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Durchführen von Massenkopiervorgängen &#40;ODBC&#41;](performing-bulk-copy-operations-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Massen Kopier Vorgängen &#40;ODBC-&#41;](performing-bulk-copy-operations-odbc.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0d7554953c430ae58ead88aa77cb0865f74f7a12
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243321"
 ---
 # <a name="search-text-with-regular-expressions"></a>Suchen von Text mit regulären Ausdrücken
@@ -37,7 +37,7 @@ ms.locfileid: "75243321"
   
  Die folgende Tabelle enthält eine Beschreibung der regulären Ausdrücke, die in der **Verweisliste**verfügbar sind.  
   
-|Expression|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Beliebiges Zeichen|.|Entspricht jedem beliebigen einzelnen Zeichen außer einem Zeilenumbruch.|  
 |0 oder mehr|*|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt alle möglichen Übereinstimmungen vor.|  
@@ -56,11 +56,11 @@ ms.locfileid: "75243321"
 |C/C++-Bezeichner|:i|Entspricht dem Ausdruck ([a-zA-Z_$][a-zA-Z0-9_$]*).|  
 |Zeichenfolge in Anführungszeichen|:q|Entspricht dem Ausdruck (("[^"]*")&#124;('[^']\*')).|  
 |Leerzeichen oder Tabstopp|:b|Entspricht entweder Tabstopp- oder Leerzeichen.|  
-|Ganze Zahl |:z|Entspricht dem Ausdruck ([0-9]+).|  
+|Integer|:z|Entspricht dem Ausdruck ([0-9]+).|  
   
  Die Liste aller regulären Ausdrücke, die in **Suchen und Ersetzen** -Vorgängen zulässig sind, ist zu lang, um in der **Verweisliste**angezeigt werden zu können. Sie können auch einen der folgenden regulären Ausdrücke in eine **Suchen nach** -Zeichenfolge einfügen:  
   
-|Expression|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Minimal - zero or more|@|Entspricht 0 oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
 |Minimal - one or more|#|Entspricht einem oder mehr Vorkommen des vorherigen Ausdrucks, schlägt so wenig Zeichen wie möglich vor.|  
@@ -85,7 +85,7 @@ ms.locfileid: "75243321"
   
  In der folgenden Tabelle ist die Syntax für Übereinstimmungen in Bezug auf Standardeigenschaften von Unicode-Zeichen aufgelistet. Die aus zwei Buchstaben bestehende Abkürzung ist mit der in der Datenbank für Eigenschaften von Unicode-Zeichen identisch. Die Abkürzungen lassen sich als Teil eines Zeichensatzes angeben. So entspricht z. B. der Ausdruck [:Nd:Nl:No] einer beliebigen Ziffer.  
   
-|Expression|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Großbuchstabe|:Lu|Entspricht einem beliebigen Großbuchstaben. So entspricht :Luhe z. B. "The", aber nicht "the".|  
 |Kleinbuchstabe|:Ll|Entspricht einem beliebigen Kleinbuchstaben. So entspricht :Llhe z. B. "the", aber nicht "The".|  
@@ -120,7 +120,7 @@ ms.locfileid: "75243321"
   
  Neben den Standardeigenschaften von Unicode-Zeichen können auch die folgenden zusätzlichen Eigenschaften als Teil eines Zeichensatzes angegeben werden:  
   
-|Expression|Syntax|Beschreibung|  
+|Ausdruck|Syntax|BESCHREIBUNG|  
 |----------------|------------|-----------------|  
 |Alpha|:Al|Entspricht einem beliebigen einzelnen Zeichen. So entspricht :Alhe Wörtern wie "The", "then" und "reached".|  
 |Numeric|:Nu|Entspricht einer beliebigen Zahl oder Ziffer.|  
@@ -133,5 +133,5 @@ ms.locfileid: "75243321"
 |Ideografisch/Han/Kanji|:Id|Entspricht ideografischen Zeichen, z. B. Han und Kanji.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchen und ersetzen](search-and-replace.md)   
+ [Suchen und Ersetzen](search-and-replace.md)   
  [Suchen von Text mit Platzhaltern](search-text-with-wildcards.md)  

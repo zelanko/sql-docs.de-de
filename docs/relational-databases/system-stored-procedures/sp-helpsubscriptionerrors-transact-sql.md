@@ -16,18 +16,18 @@ ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fe01c857d8a9e27de56538d0e595f3ad89f4d96
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68771525"
 ---
-# <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
+# <a name="sp_helpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Gibt alle Transaktionsreplikationsfehler für ein bestimmtes Abonnement zurück. Diese gespeicherte Prozedur wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,14 +53,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
   
 ## <a name="result-set"></a>Resultset  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID des Fehlers.|  
+|**Name**|**int**|ID des Fehlers.|  
 |**time**|**datetime**|Zeitpunkt, zu dem der Fehler aufgetreten ist|  
 |**error_type_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**source_type_id**|**int**|Typ-ID der Fehlerquelle.|  
 |**source_name**|**nvarchar (100)**|Name der Fehlerquelle.|  
-|**error_code**|**sysname**|Fehlercode.|  
+|**error_code**|**sysname**|Fehlercode|  
 |**error_text**|**ntext**|Fehlermeldung.|  
 |**xact_seqno**|**varbinary(16)**|Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches. Wird nur von Verteilungs-Agents verwendet und ist die Transaktions-Protokollfolgenummer der ersten Transaktion des bei der Ausführung fehlerhaften Batches.|  
 |**command_id**|**int**|Befehls-ID des bei der Ausführung fehlerhaften Batches. Wird nur von Verteilungs-Agents verwendet und ist die Befehls-ID des ersten Befehls des Batches, der bei der Ausführung einen Fehler erzeugt hat.|  
@@ -69,14 +69,14 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **sp_helpsubscriptionerrors** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_helpsubscriptionerrors** wird mit der Momentaufnahme-und der Transaktions Replikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_helpsubscriptionerrors**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_helpsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

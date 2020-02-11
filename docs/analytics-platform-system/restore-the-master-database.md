@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6d122881f5283da86f66494ee2f049756d151551
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400451"
 ---
 # <a name="restore-the-master-database-in-analytics-platform-system-aps"></a>Wiederherstellen der Master-Datenbank in Analytics Platform System (APS)
 Auf der Seite **Wiederherstellen der Master** -Datenbank des SQL Server PDW Configuration Manager können Sie die Master-Datenbank aus einer Sicherung wiederherstellen.  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
   
 > [!IMPORTANT]  
 > Um die Wiederherstellung auszuführen, müssen SQL Server PDW die aktuelle Master-Datenbank löschen, die Benutzer Sicherheitsinformationen und den Daten Bank Katalog enthält. Es wird empfohlen, vor der Wiederherstellung eine Sicherung der aktuellen Master Datenbank durchzuführen.  
@@ -32,7 +32,7 @@ Auf der Seite **Wiederherstellen der Master** -Datenbank des SQL Server PDW Conf
   
 3.  Wählen Sie die wieder herzustellende Master Sicherung aus.  
   
-4.  Klicken Sie auf **Übernehmen**.  
+4.  Klicken Sie auf **Anwenden**.  
   
 5.  Zum Durchführen der Wiederherstellung werden SQL Server PDW alle Geräte Dienste heruntergefahren und die Verbindung mit allen Benutzern getrennt. Nachdem die Wiederherstellung abgeschlossen ist, werden die Geräte Dienste SQL Server PDW neu gestartet.  
   

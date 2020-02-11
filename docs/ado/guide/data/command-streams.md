@@ -1,5 +1,5 @@
 ---
-title: Befehl Streams | Microsoft-Dokumentation
+title: Befehlsdaten Ströme | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,23 +14,23 @@ ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925846"
 ---
 # <a name="command-streams"></a>Command-Datenströme
-ADO hat immer die Eingabe des Befehls unterstützt, im Zeichenfolgenformat angegeben werden, indem die **CommandText** Eigenschaft. Als Alternative mit ADO 2.7 oder höher, Sie können auch verwenden einen Datenstrom von Informationen für die Eingabe des Befehls durch Zuweisen des Streams, in der **' CommandStream '** Eigenschaft. Sie können ein ADO zuweisen **Stream** Objekt oder ein beliebiges Objekt, das die COM unterstützt **IStream** Schnittstelle.  
+ADO hat die Befehls Eingabe im von der **CommandText** -Eigenschaft angegebenen Zeichen folgen Format immer unterstützt. Als Alternative können Sie mit ADO 2,7 oder höher auch einen Informationsstrom für Befehlseingaben verwenden, indem Sie den Stream der **CommandStream** -Eigenschaft zuweisen. Sie können ein ADO- **Stream** -Objekt oder ein beliebiges Objekt zuweisen, das die com **IStream** -Schnittstelle unterstützt.  
   
- Der Inhalt der den befehlsdatenstrom ist einfach von ADO zum Anbieter übergeben, damit Ihr Anbieter die Eingabe des Befehls vom Datenstrom für diese Funktion ordnungsgemäß arbeitet unterstützen muss. SQL Server unterstützt z. B. Abfragen in Form von XML-Vorlagen oder OpenXML-Erweiterungen in Transact-SQL an.  
+ Der Inhalt des Befehlsdaten Stroms wird einfach von ADO an Ihren Anbieter übermittelt, sodass der Anbieter Befehlseingaben nach Stream unterstützen muss, damit dieses Feature funktioniert. Beispielsweise unterstützt SQL Server Abfragen in Form von XML-Vorlagen oder OPENXML-Erweiterungen an Transact-SQL.  
   
- Da die Details des Streams vom Anbieter interpretiert werden müssen, müssen Sie der Befehlsdialekt angeben, durch Festlegen der **Dialekt** Eigenschaft. Der Wert des **Dialekt** ist eine Zeichenfolge mit einer GUID, die von Ihrem Anbieter definiert ist. Informationen zu gültigen Werten für **Dialekt** von Ihrem Anbieter unterstützt werden, finden Sie in der Dokumentation Ihres Anbieters.  
+ Da die Details des Streams vom Anbieter interpretiert werden müssen, müssen Sie den Befehls Dialekt durch Festlegen der **Dialekt** -Eigenschaft angeben. Der Wert von **Dialekt** ist eine Zeichenfolge, die eine GUID enthält, die vom Anbieter definiert wird. Informationen zu gültigen Werten für den von Ihrem Anbieter unterstützten **Dialekt** finden Sie in der Dokumentation des Anbieters.  
   
-## <a name="xml-template-query-example"></a>XML-Abfrage-Vorlagenbeispiel  
- Im folgende Beispiel wird in VBScript in der Northwind-Datenbank geschrieben.  
+## <a name="xml-template-query-example"></a>Beispiel für eine XML-Vorlagen Abfrage  
+ Das folgende Beispiel wird in VBScript in die Northwind-Datenbank geschrieben.  
   
- Zunächst initialisiert werden, und öffnen Sie die **Stream** -Objekt, das verwendet wird, um den Stream für die Abfrage enthält:  
+ Initialisieren und öffnen Sie zunächst das **Stream** -Objekt, das zum enthalten des Abfrage Datenstroms verwendet wird:  
   
 ```  
 Dim adoStreamQuery  
@@ -38,9 +38,9 @@ Set adoStreamQuery = Server.CreateObject("ADODB.Stream")
 adoStreamQuery.Open  
 ```  
   
- Der Inhalt des Streams, der Abfrage wird eine XML-Vorlage Abfrage sein.  
+ Der Inhalt des Abfrage Datenstroms wird als XML-Vorlagen Abfrage verwendet.  
   
- Die Vorlage Abfrage erfordert einen Verweis auf den XML-Namespace identifiziert, die vom Sql: Präfix der \<SQL: Query > Tag. Eine SQL SELECT-Anweisung als Inhalt der XML-Vorlage enthalten ist, und um eine String-Variable wie folgt zugewiesen:  
+ Die Vorlagen Abfrage erfordert einen Verweis auf den XML-Namespace, der durch das Präfix \<"SQL: Query>" identifiziert wird. Eine SQL-SELECT-Anweisung wird als Inhalt der XML-Vorlage eingeschlossen und einer Zeichen folgen Variablen wie folgt zugewiesen:  
   
 ```  
 sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>  
@@ -48,14 +48,14 @@ sQuery = "<ROOT xmlns:sql='urn:schemas-microsoft-com:xml-sql'>
 </ROOT>"  
 ```  
   
- Als Nächstes wird schreiben Sie die Zeichenfolge in den Stream:  
+ Schreiben Sie anschließend die Zeichenfolge in den Stream:  
   
 ```  
 adoStreamQuery.WriteText sQuery, adWriteChar  
 adoStreamQuery.Position = 0  
 ```  
   
- AdoStreamQuery zum Zuweisen der **' CommandStream '** -Eigenschaft eines ADO **Befehl** Objekt:  
+ Weisen Sie adostreamquery der **CommandStream** -Eigenschaft eines ADO- **Befehls** Objekts zu:  
   
 ```  
 Dim adoCmd  
@@ -63,13 +63,13 @@ Set adoCmd  = Server.CreateObject("ADODB.Command"")
 adoCmd.CommandStream = adoStreamQuery  
 ```  
   
- Geben Sie die Befehlssprache **Dialekt**, das angibt, wie die SQL Server-OLE DB-Anbieter den befehlsdatenstrom interpretiert werden soll. Der Dialekt, der von einer anbieterspezifischen-GUID angegeben wird:  
+ Geben Sie den **Dialekt**der Befehlssprache an, der angibt, wie der SQL Server OLE DB Anbieters den Befehlsdaten Strom interpretieren soll. Der durch eine anbieterspezifische GUID angegebene Dialekt:  
   
 ```  
 adoCmd.Dialect = "{5D531CB2-E6Ed-11D2-B252-00C04F681B71}"  
 ```  
   
- Abschließend führen Sie die Abfrage und Zurückgeben der Ergebnisse in einem **Recordset** Objekt:  
+ Führen Sie abschließend die Abfrage aus, und geben Sie die Ergebnisse an ein **Recordset** -Objekt zurück:  
   
 ```  
 Set objRS = adoCmd.Execute  

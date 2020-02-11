@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f878c64620ab0cd3f0bc439164ef86b54ab3b78e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241230"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas
@@ -190,7 +190,7 @@ public class XmlSchemaIncludeNormalizer
 ## <a name="testing-the-preprocessor-tool"></a>Testen des Präprozessortools  
  Sie können die folgenden XSD-Schemas zum Testen des Präprozessortools verwenden.  
   
-### <a name="bookscommonxsd"></a>books_common.xsd  
+### <a name="books_commonxsd"></a>books_common.xsd  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -212,7 +212,7 @@ public class XmlSchemaIncludeNormalizer
 </xsd:schema>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Schemaauflistungen &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)  
   
   

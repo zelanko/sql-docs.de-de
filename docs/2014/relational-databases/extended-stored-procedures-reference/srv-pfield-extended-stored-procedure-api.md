@@ -21,16 +21,17 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ed4abfe8914c7f6b1dc3e22de7a321419b8d9cee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63127114"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield (API für erweiterte gespeicherte Prozeduren)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  
+  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Gibt Informationen zur Datenbankverbindung zurück.  
   
@@ -55,10 +56,10 @@ len
  *srvproc*  
  Zeiger, der eine Datenbankverbindung identifiziert  
   
- *field*  
+ *Flächen*  
  Gibt Daten über die Verbindung zur Rückgabe an.  
   
-|Wert|Rückgabewert|  
+|value|Rückgabe|  
 |-----------|-------------|  
 |SRV_APPLNAME|Der vom Client beim Herstellen der Verbindung bereitgestellte Anwendungsname.|  
 |SRV_BCPFLAG|Ein Flag, das TRUE ist, wenn sich der Client auf einen Massenkopiervorgang vorbereitet; andernfalls FALSE.|  
@@ -80,13 +81,13 @@ len
 |SRV_USER|Der Benutzername der Verbindung.|  
 |||  
   
- *len*  
+ *Nest*  
  Zeiger auf eine **int**-Variable, die die Länge des zurückgegebenen *field*-Werts enthält. Wenn *len* NULL ist, wird die Länge der Zeichenfolge nicht zurückgegeben.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  Zeiger auf eine auf NULL endende Zeichenfolge, die den aktuellen Wert für das in der SRV_PROC-Struktur angegebene Feld enthält. Wenn das Feld leer ist, wird ein gültiger Zeiger auf eine leere Zeichenfolge zurückgegeben, und *len* enthält den Wert 0. Wenn das Feld unbekannt ist, wird NULL zurückgegeben, und *len* enthält den Wert –1.  
   
 > [!IMPORTANT]  
->  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie im [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie im [Security Developer Center](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
   

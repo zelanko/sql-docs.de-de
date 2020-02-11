@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806692"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Schrittweise Wiederherstellung von Datenbanken mit speicheroptimierten Tabellen
@@ -40,7 +40,7 @@ ms.locfileid: "62806692"
   
     -   Mithilfe der Seitenreparatur können Sie eine Seitenbeschädigung beheben, indem Sie die jeweilige Seite wiederherstellen. Weitere Informationen finden Sie unter [Wiederherstellung von Seiten &#40;SQL Server&#41;](../backup-restore/restore-pages-sql-server.md).  
   
-## <a name="samples"></a>Proben  
+## <a name="samples"></a>Beispiele  
  In den Beispielen wird das folgende Schema verwendet:  
   
 ```  
@@ -62,7 +62,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### <a name="backup"></a>Sicherung  
+### <a name="backup"></a>Backup  
  Dieses Beispiel veranschaulicht, wie die primäre Dateigruppe und die speicheroptimierte Dateigruppe gesichert werden. Sie müssen die primäre und speicheroptimierte Dateigruppe zusammen angeben.  
   
 ```  
@@ -75,7 +75,7 @@ backup database imoltp filegroup='primary', filegroup='imoltp_mod' to disk='c:\d
 backup database imoltp filegroup='imoltp_secondary' to disk='c:\data\imoltp_secondary.dmp' with init  
 ```  
   
-### <a name="restore"></a>Wiederherstellung  
+### <a name="restore"></a>Restore  
  Im folgenden Beispiel wird gezeigt, wie die primäre Dateigruppe und speicheroptimierte Dateigruppe zusammen wiederhergestellt werden.  
   
 ```  
@@ -95,7 +95,7 @@ FROM  DISK = N'c:\data\imoltp_secondary.dmp' WITH  FILE = 1,  RECOVERY,  NOUNLOA
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen speicheroptimierter Tabellen](../../database-engine/backup-restore-and-recovery-of-memory-optimized-tables.md)  
   
   

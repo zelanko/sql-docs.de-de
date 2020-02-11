@@ -37,7 +37,7 @@
   items:
     - name: Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank
       href: view-or-change-the-recovery-model-of-a-database-sql-server.md
-- name: Übersicht zu Sicherungen
+- name: Übersicht über Azure Backup
   href: backup-overview-sql-server.md
 - name: Übersicht über Wiederherstellungsvorgänge
   href: restore-and-recovery-overview-sql-server.md
@@ -233,5 +233,5 @@
   items:
     - name: Wiederherstellen der master-Datenbank (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: 'Sichern und Wiederherstellen: Interoperabilität und Koexistenz'
+- name: 'Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung'
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

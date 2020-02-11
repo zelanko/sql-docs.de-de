@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 803e3de97115bea9c467044d59a1a5a305836fa3
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73790097"
 ---
 # <a name="enumerate-ole-db-data-sources-ole-db"></a>Auflisten von OLE DB-Datenquellen (OLE DB)
@@ -27,14 +27,14 @@ ms.locfileid: "73790097"
   
  Um die Datenquellen aufzulisten, die für den SQLOLEDB-Enumerator sichtbar sind, ruft der Consumer die [ISourcesRowset::GetSourcesRowset](https://go.microsoft.com/fwlink/?LinkId=120312) -Methode auf. Diese Methode gibt ein Rowset der Informationen zu den gerade sichtbaren Datenquellen zurück.  
   
- Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist dies die Liste von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen, die in der Bindery gefunden wird. Für Banyan VINES sind dies die auf dem lokalen Netzwerk gefundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
+ Je nach verwendeter Netzwerkbibliothek wird in der entsprechenden Domäne nach den Datenquellen gesucht. Für Named Pipes ist dies die Domäne, an der der Client angemeldet ist. Für AppleTalk ist dies die Standardzone. Für SPX/IPX ist dies die Liste von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen, die in der Bindery gefunden wird. Für Banyan VINES sind dies die auf dem lokalen Netzwerk gefundenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen. Multiprotokoll und TCP/IP-Sockets werden nicht unterstützt.  
   
  Wenn der Server ein- oder ausgeschaltet wird, kann es einige Minuten dauern, die Informationen in diesen Domänen zu aktualisieren.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-enumerate-ole-db-data-sources"></a>So listen Sie OLE DB-Datenquellen auf  
   

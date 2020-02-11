@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72305151"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
@@ -42,23 +42,23 @@ EXECUTE sys.sp_rda_test_connection
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @database_name = N '*db_name*'  
+ @database_name= N '*db_name*'  
  Der Name der SQL Server Datenbank, für die Stretch aktiviert ist. Dieser Parameter ist optional.  
   
- @server_address = N '*azure_server_fully_qualified_address*'  
+ @server_address= N '*azure_server_fully_qualified_address*'  
  Die voll qualifizierte Adresse des Azure-Servers.  
   
--   Wenn Sie einen Wert für **\@database_name**angeben, aber die angegebene Datenbank nicht Stretch-aktiviert ist, müssen Sie einen Wert für **\@server_address**angeben.  
+-   Wenn Sie einen Wert für ** \@database_name**bereitstellen, die angegebene Datenbank jedoch nicht Stretch-aktiviert ist, müssen Sie für ** \@server_address**einen Wert angeben.  
   
--   Wenn Sie einen Wert für **\@database_name**angeben und die angegebene Datenbank Stretch-aktiviert ist, müssen Sie keinen Wert für **\@server_address**angeben. Wenn Sie einen Wert für **\@server_address**angeben, wird er von der gespeicherten Prozedur ignoriert, und es wird ein vorhandener Azure-Server verwendet, der bereits der Stretch-aktivierten Datenbank zugeordnet ist  
+-   Wenn Sie einen Wert für ** \@database_name**bereitstellen und die angegebene Datenbank Stretch-aktiviert ist, müssen Sie keinen Wert für ** \@server_address**angeben. Wenn Sie einen Wert für ** \@server_address**bereitstellen, wird dieser von der gespeicherten Prozedur ignoriert, und es wird ein vorhandener Azure-Server verwendet, der der Datenbank mit aktiviertem Stretch-  
   
- @azure_username = N '*azure_username*  
+ @azure_username= N '*azure_username*  
  Der Benutzername für den Azure-Remote Server.  
   
- @azure_password = N '*azure_password*'  
+ @azure_password= N '*azure_password*'  
  Das Kennwort für den Azure-Remote Server.  
   
- @credential_name = N '*credential_name*'  
+ @credential_name= N '*credential_name*'  
  Anstatt einen Benutzernamen und ein Kennwort anzugeben, können Sie den Namen von Anmelde Informationen angeben, die in der Stretch-aktivierten Datenbank gespeichert sind.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -68,15 +68,15 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|link_state|INT|Einer der folgenden-Werte, die den Werten für **link_state_desc**entsprechen.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar (32)|Einer der folgenden-Werte, die den vorangehenden Werten für **LINK_STATE**entsprechen.<br /><br /> -FEHLERFREI<br />     Der zwischen SQL Server und der Azure-Remote Server sind fehlerfrei.<br />- ERROR_AZURE_FIREWALL<br />     Die Verbindung zwischen SQL Server und dem Azure-Remote Server wird von der Azure-Firewall verhindert.<br />- ERROR_NO_CONNECTION<br />     SQL Server kann keine Verbindung mit dem Azure-Remote Server herstellen.<br />- ERROR_AUTH_FAILURE<br />     Ein Authentifizierungsfehler verhindert die Verknüpfung zwischen SQL Server und dem Azure-Remote Server.<br />-FEHLER<br />     Ein Fehler, bei dem es sich nicht um ein Authentifizierungs Problem, ein Konnektivitätsproblem oder ein firewallproblem handelt, verhindert die Verknüpfung zwischen SQL Server und dem Azure-Remote Server.|  
-|error_number|ssNoversion|Die Nummer des Fehlers. Wenn kein Fehler vorliegt, ist dieses Feld NULL.|  
+|link_state|INT|Einer der folgenden-Werte, die den Werten für **link_state_desc**entsprechen.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
+|link_state_desc|varchar(32)|Einer der folgenden-Werte, die den vorangehenden Werten für **LINK_STATE**entsprechen.<br /><br /> -Fehlerfrei<br />     Der zwischen SQL Server und der Azure-Remote Server sind fehlerfrei.<br />-ERROR_AZURE_FIREWALL<br />     Die Verbindung zwischen SQL Server und dem Azure-Remote Server wird von der Azure-Firewall verhindert.<br />-ERROR_NO_CONNECTION<br />     SQL Server kann keine Verbindung mit dem Azure-Remote Server herstellen.<br />-ERROR_AUTH_FAILURE<br />     Ein Authentifizierungsfehler verhindert die Verknüpfung zwischen SQL Server und dem Azure-Remote Server.<br />-Fehler<br />     Ein Fehler, bei dem es sich nicht um ein Authentifizierungs Problem, ein Konnektivitätsproblem oder ein firewallproblem handelt, verhindert die Verknüpfung zwischen SQL Server und dem Azure-Remote Server.|  
+|error_number|INT|Die Nummer des Fehlers. Wenn kein Fehler vorliegt, ist dieses Feld NULL.|  
 |error_message|nvarchar(1024)|Die Fehlermeldung. Wenn kein Fehler vorliegt, ist dieses Feld NULL.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert db_owner-Berechtigungen.  
+ Erfordert db_owner Berechtigungen.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -92,7 +92,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|2|ERROR_NO_CONNECTION|*\<verbindungs bezogene Fehlernummer >*|*\<connection-bezogene Fehlermeldung >*|  
+|2|ERROR_NO_CONNECTION|*\<verbindungsbezogene Fehlernummer>*|*\<verbindungsbezogene Fehlermeldung>*|  
   
 ### <a name="check-the-azure-firewall"></a>Überprüfen der Azure-Firewall  
   
@@ -108,7 +108,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|1|ERROR_AZURE_FIREWALL|*\<Firewall-bezogene Fehlernummer >*|*\< Firewall-bezogene Fehlermeldung >*|  
+|1|ERROR_AZURE_FIREWALL|*\<firewallbezogene Fehlernummer>*|*\<>der firewallbezogenen Fehlermeldung*|  
   
 ### <a name="check-authentication-credentials"></a>Authentifizierungs Anmelde Informationen überprüfen  
   
@@ -124,7 +124,7 @@ GO
   
 |link_state|link_state_desc|error_number|error_message|  
 |-----------------|-----------------------|-------------------|--------------------|  
-|3|ERROR_AUTH_FAILURE|*\<authentication-bezogene Fehlernummer >*|*\<authentication-bezogene Fehlermeldung >*|  
+|3|ERROR_AUTH_FAILURE|*\<Authentifizierungs bezogene Fehlernummer>*|*\<Authentifizierungs bezogene Fehlermeldung>*|  
   
 ### <a name="check-the-status-of-the-remote-azure-server"></a>Überprüfen des Status des Azure-Remote Servers  
   

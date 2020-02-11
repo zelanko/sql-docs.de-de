@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892914"
 ---
 # <a name="datamember-mdx"></a>DataMember (MDX)
@@ -31,7 +31,7 @@ Member_Expression.DataMember
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Funktion wird für nicht Blatt Elemente in einer beliebigen Hierarchie verwendet und kann vom Befehl " [Update CUBE-Anweisung (MDX)](../mdx/mdx-data-manipulation-update-cube.md) " verwendet werden, um Daten direkt an ein nicht Blatt Element zurückzuschreiben, anstatt in die Nachfolger Elemente des Blatt Elements.  
   
 > [!NOTE]  
@@ -49,8 +49,8 @@ SELECT {[Measures].[Sales Amount Quota],[Measures].InvidualQuota} ON COLUMNS,
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

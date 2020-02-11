@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206043"
 ---
 # <a name="create-a-maintenance-plan"></a>Erstellen eines Wartungsplans
@@ -30,7 +30,7 @@ ms.locfileid: "68206043"
   
      [Sicherheit](#Security)  
   
--   **Erstellen eines Wartungsplans mit**  
+-   **So erstellen Sie einen Wartungsplan mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -44,9 +44,9 @@ ms.locfileid: "68206043"
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können.  
+ Sie müssen ein Mitglied der festen Server Rolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>So erstellen Sie einen Wartungsplan mithilfe des Wartungsplanungs-Assistenten  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68206043"
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne**, und wählen Sie **Neuer Wartungsplan** aus.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und klicken Sie anschließend auf **Neuer Wartungsplan**.  
   
 4.  Erstellen Sie einen Wartungsplan anhand der Schritte unter [Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68206043"
   
     ```  
   
- Weitere Informationen finden Sie in den folgenden Themen:  
+ Weitere Informationen finden Sie unter  
   
--   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

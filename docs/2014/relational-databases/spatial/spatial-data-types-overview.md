@@ -15,10 +15,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 9ae74640557f7906ed237341d147926eb3296614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014048"
 ---
 # <a name="spatial-data-types-overview"></a>Übersicht über räumliche Datentypen
@@ -29,14 +29,14 @@ ms.locfileid: "66014048"
 > [!IMPORTANT]  
 >  Laden Sie für eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Erweiterungen der räumlichen Datentypen) das folgende Whitepaper herunter: [New Spatial Features in SQL Server Code-Named „Denali“](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server Codename „Denali“).  
   
-##  <a name="objects"></a> Räumliche Datenobjekte  
- Der `geometry`-Datentyp und der `geography`-Datentyp unterstützen 16 räumliche Datenobjekte bzw. Instanztypen. Nur elf dieser Instanztypen sind jedoch *instanziierbar*. Sie können diese Instanzen erstellen und Sie in einer Datenbanken bearbeiten (oder instanziieren). Diese Instanzen leiten bestimmte Eigenschaften von ihren übergeordneten Datentypen, die sie als unterscheiden `Points`, **LineStrings, CircularStrings**, `CompoundCurves`, `Polygons`, `CurvePolygons` oder als mehrere `geometry`oder `geography` -Instanzen in einer `GeometryCollection`. Der `Geography`-Typ verfügt über einen zusätzlichen Instanztyp `FullGlobe`.  
+##  <a name="objects"></a>Räumliche Datenobjekte  
+ Der `geometry`-Datentyp und der `geography`-Datentyp unterstützen 16 räumliche Datenobjekte bzw. Instanztypen. Nur elf dieser Instanztypen sind jedoch *instanziierbar*. Sie können diese Instanzen erstellen und Sie in einer Datenbanken bearbeiten (oder instanziieren). Diese Instanzen leiten bestimmte Eigenschaften von ihren übergeordneten Datentypen ab, die `Points`Sie als, **LineString, circularstrings**, `CompoundCurves`, `Polygons` `CurvePolygons` oder als `geometry` mehrere `geography` -oder- `GeometryCollection`Instanzen in einer unterscheiden. Der `Geography`-Typ verfügt über einen zusätzlichen Instanztyp `FullGlobe`.  
   
- Die nachfolgende Abbildung stellt die `geometry`-Hierarchie dar, auf der der `geometry`-Datentyp und der `geography`-Datentyp basieren. Die instanziierbaren Typen von `geometry` und `geography` sind in blau angezeigt.  
+ Die nachfolgende Abbildung stellt die `geometry`-Hierarchie dar, auf der der `geometry`-Datentyp und der `geography`-Datentyp basieren. Die instanziier baren Typen `geometry` von `geography` und sind blau dargestellt.  
   
- ![Hierarchie des geometrietyps](../../database-engine/media/geom-hierarchy.gif "Hierarchie des geometrietyps")  
+ ![Hierarchie des Geometrietyps](../../database-engine/media/geom-hierarchy.gif "Hierarchie des Geometrietyps")  
   
- Wie in der Abbildung hervorgeht, die zehn instanziierbaren Typen von der `geometry` und `geography` Datentypen sind `Point`, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`, und `GeometryCollection`. Es gibt einen zusätzlichen instanziierbaren Typen für den geography-Datentyp: `FullGlobe`. Die `geometry` und `geography` Typen können eine spezifische Instanz erkennen, solange es eine wohlgeformte Instanz handelt, auch wenn die Instanz nicht explizit definiert ist. Angenommen, Sie definieren eine `Point` -Instanz explizit mit der stpointfromtext()-Methode `geometry` und `geography` die Instanz als ein `Point`, sofern die methodeneingabe wohlgeformt ist. Wenn Sie die gleiche Instanz mit der `STGeomFromText()`-Methode definieren, erkennen sowohl der `geometry`-Datentyp als auch der `geography`-Datentyp die Instanz als `Point`.  
+ Wie die Abbildung zeigt, sind `geometry` `geography` `Point`die zehn instanziier baren Typen der Datentypen und, `MultiPoint`, `LineString`, `CircularString`, `MultiLineString`, `CompoundCurve`, `Polygon`, `CurvePolygon`, `MultiPolygon`und. `GeometryCollection` Es gibt einen zusätzlichen instanziierbaren Typen für den geography-Datentyp: `FullGlobe`. Der `geometry` - `geography` Typ und der-Typ können eine bestimmte-Instanz erkennen, solange es sich um eine wohlgeformte Instanz handelt, auch wenn die-Instanz nicht explizit definiert ist. Wenn Sie z. b. eine `Point` `geometry` -Instanz explizit mit der STPointFromText ()-Methode `geography` definieren und die-Instanz `Point`als eine erkennen, sofern die Methoden Eingabe wohl geformt ist. Wenn Sie die gleiche Instanz mit der `STGeomFromText()`-Methode definieren, erkennen sowohl der `geometry`-Datentyp als auch der `geography`-Datentyp die Instanz als `Point`.  
   
  Die Untertypen für geometry- und geography-Typen sind in einfache Typen und Auflistungstypen unterteilt.  Einige Methoden wie `STNumCurves()` funktionieren nur mit einfachen Typen.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66014048"
 -   [GeometryCollection](../spatial/geometrycollection.md)  
   
   
-##  <a name="differences"></a> Unterschiede zwischen den geometry- und geography-Datentypen  
+##  <a name="differences"></a>Unterschiede zwischen den Geometry-und geography-Datentypen  
  Die beiden Typen von räumlichen Daten verhalten sich oft ganz ähnlich. Es gibt aber einige wichtige Unterschiede in Bezug darauf, wie Daten gespeichert und bearbeitet werden.  
   
 ### <a name="how-connecting-edges-are-defined"></a>Definieren von verbindenden Rändern  
@@ -84,18 +84,19 @@ ms.locfileid: "66014048"
   
  In einem ellipsenförmigen System hat ein Polygon ohne Ausrichtung keine Bedeutung bzw. ist mehrdeutig. Beschreibt beispielsweise ein Ring um den Äquator die nördliche oder die südliche Hemisphäre? Wenn wir den `geography`-Datentyp zum Speichern von räumlichen Daten verwenden, müssen wir die Ausrichtung des Rings angeben und die Position der Instanz genau beschreiben. Der Innere des Polygons in einem ellipsoidförmigen System wird von der linken Regel definiert.  
   
- Wenn der Kompatibilitätsgrad 100 oder niedriger in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] die `geography` Datentyp gelten folgende Einschränkungen:  
+ Wenn der Kompatibilitäts Grad 100 oder niedriger ist [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , weist `geography` der Datentyp die folgenden Einschränkungen auf:  
   
 -   Jede `geography`-Instanz muss in genau eine Hemisphäre passen. Es können keine räumlichen Objekte gespeichert werden, die größer als eine Hemisphäre sind.  
   
 -   Jede `geography`-Instanz aus einer Darstellung des Typs Open Geospatial Consortium (OGC) Well-Known Text (WKT) oder Well-Known Binary (WKB), die ein Objekt ergibt, das größer als eine Hemisphäre ist, löst eine Ausnahme des Typs `ArgumentException` aus.  
   
--   Die `geography` -Datentypmethoden, die die Eingaben von zwei erfordern `geography` -Instanzen wie STIntersection(), STUnion(), STDifference() und STSymDifference(), null zurück, wenn die Ergebnisse der Methoden nicht in eine einzige Hemisphäre passen. STBuffer() gibt ebenfalls NULL zurück, wenn die Ausgabe eine Hemisphäre überschreitet.  
+-   Die `geography` Datentyp Methoden, die die Eingabe von zwei `geography` -Instanzen erfordern, wie z. b. stschnitt(), STUnion (), STDifference () und STSymDifference (), geben NULL zurück, wenn die Ergebnisse der Methoden nicht in eine einzelne Hemisphäre passen. STBuffer() gibt ebenfalls NULL zurück, wenn die Ausgabe eine Hemisphäre überschreitet.  
   
- In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ist `FullGlobe` ein spezieller Polygontyp, der den gesamten Globus abdeckt. `FullGlobe` verfügt über einen Bereich, aber nicht über Rahmen oder Scheitelpunkte.  
+ In [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ist `FullGlobe` ein spezieller Polygontyp, der den gesamten Globus abdeckt. 
+  `FullGlobe` verfügt über einen Bereich, aber nicht über Rahmen oder Scheitelpunkte.  
   
 ### <a name="outer-and-inner-rings-not-important-in-geography-data-type"></a>Äußere und innere Ringe sind beim geography-Datentyp nicht von Bedeutung  
- Der OGC Simple Features for SQL-Spezifikation wird erläutert, äußere und innere Ringe jedoch diese Unterscheidung ist nicht sinnvoll, für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` -Datentyps; jeder Ring eines Polygons kann erstellt werden, die äußerer Ring interpretiert werden.  
+ In der OGC Simple Features for SQL-Spezifikation werden äußere und innere Ringe erörtert, diese Unterscheidung ist für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `geography` Datentyp jedoch wenig sinnvoll. jeder Ring eines Polygons kann als äußerer Ring verwendet werden.  
   
  Weitere Informationen zu den OGC-Spezifikationen finden Sie in den folgenden Themen:  
   
@@ -104,14 +105,14 @@ ms.locfileid: "66014048"
 -   [OGC Specifications, Simple Feature Access Part 2: SQL Options (OGC-Spezifikationen, Simple Feature Access, Teil 2: SQL-Optionen)](https://go.microsoft.com/fwlink/?LinkId=93628)  
   
   
-##  <a name="circular"></a> Kreisbogensegmente  
+##  <a name="circular"></a>Kreisbogen Segmente  
  Drei instanziierbare Typen können Kreisbogensegmente verwenden: `CircularString`, `CompoundCurve` und `CurvePolygon`.  Ein Kreisbogensegment wird von drei Punkten in einer zweidimensionalen Ebene definiert; der dritte Punkt darf nicht mit dem ersten Punkt identisch sein.  
   
  In Abbildung A und B sind typische Kreisbogensegmente dargestellt. Beachten Sie, dass jeder der drei Punkte auf dem Umkreis eines Kreises liegt.  
   
  In Abbildung C und D ist dargestellt, wie ein Liniensegment als Kreisbogensegment definiert werden kann.  Beachten Sie, dass auch hier, im Gegensatz zu einem regulären Liniensegment, das mit nur zwei Punkten definierten werden kann, drei Punkte erforderlich sind, um das Kreisbogensegment zu definieren.  
   
- Methoden, die für Kreisbogensegmenttypen ausgeführt werden, verwenden gerade Liniensegmente zur Annäherung an den Kreisbogen. Die Anzahl von Liniensegmenten, die zur Annäherung an den Bogen verwendet wird, ist von der Länge und der Krümmung des Bogens abhängig. Für jeden Kreisbogensegmenttyp können Z-Werte können gespeichert werden, diese werden jedoch von Methoden nicht in ihren Berechnungen verwendet.  
+ Methoden, die für Kreisbogen Segmenttypen ausgeführt werden, verwenden gerade Liniensegmente zur Annäherung an den Kreisbogen. Die Anzahl von Liniensegmenten, die zur Annäherung an den Bogen verwendet werden, hängt von der Länge und der Krümmung des Bogens ab. Z-Werte können für jeden der Kreisbogen Segmenttypen gespeichert werden. Allerdings verwenden-Methoden die Z-Werte nicht in ihren Berechnungen.  
   
 > [!NOTE]  
 >  Wenn Z-Werte für Kreisbogensegmente angegeben werden, müssen diese für alle Punkte in dem Kreisbogensegment gleich sein, damit sie als Eingabe akzeptiert werden. Beispielsweise ist `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` zulässig, `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` jedoch nicht.  
@@ -152,11 +153,13 @@ LS LengthCS Length
 5.65685...6.28318...  
 ```  
   
- Die folgende Abbildung zeigt, wie die einzelnen Typen gespeichert werden (rote Linie stellt `LineString``@g1`, die blaue Linie stellt `CircularString``@g2`):  
+ Die folgende Abbildung zeigt, wie die einzelnen Typen gespeichert werden (rote `LineString``@g1`Linien anzeigen, blaue `CircularString``@g2`Linien anzeigen):  
   
  ![](../../database-engine/media/e52157b5-5160-4a4b-8560-50cdcf905b76.png "e52157b5-5160-4a4b-8560-50cdcf905b76")  
   
- Wie die obige Abbildung zeigt, verwenden `CircularString`-Instanzen weniger Punkte, um Kurvenbegrenzungen mit größerer Genauigkeit zu speichern, als `LineString`-Instanzen. `CircularString`-Instanzen sind hilfreich für das Speichern von Kreisbegrenzungen, z. B. ein Suchradius von zwanzig Kilometern von einem bestimmten Punkt aus. `LineString`-Instanzen eignen sich für das Speichern von linearen Grenzen, z. B. ein Häuserblock.  
+ Wie die obige Abbildung zeigt, verwenden `CircularString`-Instanzen weniger Punkte, um Kurvenbegrenzungen mit größerer Genauigkeit zu speichern, als `LineString`-Instanzen. 
+  `CircularString`-Instanzen sind hilfreich für das Speichern von Kreisbegrenzungen, z. B. ein Suchradius von zwanzig Kilometern von einem bestimmten Punkt aus. 
+  `LineString`-Instanzen eignen sich für das Speichern von linearen Grenzen, z. B. ein Häuserblock.  
   
 ### <a name="linestring-and-compoundcurve-comparison"></a>Vergleich von LineString und CompoundCurve  
  In den folgenden Codebeispielen ist dargestellt, wie die gleiche Abbildung mit `LineString`- und `CompoundCurve`-Instanzen gespeichert wird:  
@@ -192,7 +195,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- `CompoundCurve` Instanzen können `LineString` und `CircularString` Komponenten, damit nur zwei Punkte der Liniensegmente des kreisslices bekannt sein müssen.  In diesem Codebeispiel wird gezeigt, wie ein `CompoundCurve` verwendet wird, um die gleiche Abbildung zu speichern:  
+ `CompoundCurve`-Instanzen ermöglichen `LineString` sowohl `CircularString` die-als auch die-Komponente, sodass nur zwei Punkte der Liniensegmente des Kreis Slice bekannt sein müssen.  In diesem Codebeispiel wird gezeigt, wie ein `CompoundCurve` verwendet wird, um die gleiche Abbildung zu speichern:  
   
 ```sql  
 DECLARE @g geometry;  
@@ -201,16 +204,18 @@ SELECT @g.ToString(), @g.STLength();
 ```  
   
 ### <a name="polygon-and-curvepolygon-comparison"></a>Vergleich von Polygon und CurvePolygon  
- `CurvePolygon`-Instanzen können beim Definieren ihrer äußeren und inneren Ringe `CircularString`- und `CompoundCurve`-Instanzen verwenden.  `Polygon`-Instanzen können keine Kreisbogensegmenttypen verwenden: `CircularString` und `CompoundCurve`.  
+ 
+  `CurvePolygon`-Instanzen können beim Definieren ihrer äußeren und inneren Ringe `CircularString`- und `CompoundCurve`-Instanzen verwenden.  
+  `Polygon`-Instanzen können keine Kreisbogensegmenttypen verwenden: `CircularString` und `CompoundCurve`.  
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Räumliche Daten &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
  [geometry-Datentyp-Methodenverweis](/sql/t-sql/spatial-geometry/spatial-types-geometry-transact-sql)   
  [geography-Datentyp-Methodenverweis](/sql/t-sql/spatial-geography/spatial-types-geography)   
  [STNumCurves &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stnumcurves-geometry-data-type)   
- [STNumCurves &#40;Geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stnumcurves-geography-data-type)   
- [STGeomFromText &#40;Geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type)   
+ [Stnumcurves &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stnumcurves-geography-data-type)   
+ [STGeomFromText &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stgeomfromtext-geometry-data-type)   
  [STGeomFromText &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/stgeomfromtext-geography-data-type)  
   
   

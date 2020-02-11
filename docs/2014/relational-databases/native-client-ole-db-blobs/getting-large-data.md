@@ -1,5 +1,5 @@
 ---
-title: Abrufen großer Datenmengen | Microsoft-Dokumentation
+title: Große Datenmengen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0c042b367cbd8a56d21ed57735f9334d24003d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195227"
 ---
 # <a name="getting-large-data"></a>Abrufen großer Datenmengen
-  Im Allgemeinen sollten Consumer Code, der erstellt Isolieren einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter-Speicherobjekt aus anderem Code, der Daten, die nicht verwiesen wird, über verarbeitet eine **ISequentialStream** Schnittstellenzeiger auf.  
+  Im Allgemeinen sollten Consumer Code isolieren, der ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Speicher Objekt des Anbieters aus anderem Code erstellt, der Daten verarbeitet, auf die nicht über einen **ISequentialStream** -Schnittstellen Zeiger verwiesen wird.  
   
  In diesem Thema wird die mit folgenden Funktionen verfügbare Funktionalität behandelt:  
   
@@ -33,9 +33,9 @@ ms.locfileid: "63195227"
   
 -   ICommand::Execute  
   
- Wenn die Eigenschaft DBPROP_ACCESSORDER (in der Rowset-Eigenschaftengruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Zeile von Daten in einem Aufruf von Abrufen der **GetNextRows**  Methode da BLOB-Daten nicht zwischengespeichert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
+ Wenn die DBPROP_ACCESSORDER-Eigenschaft (in der Rowset-Eigenschaften Gruppe) auf einen der Werte DBPROPVAL_AO_SEQUENTIAL oder DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS festgelegt ist, sollte der Consumer nur eine einzelne Daten Zeile in einem Aufrufen der **GetNextRows** -Methode abrufen, da die BLOB-Daten nicht gepuffert werden. Ist der Wert von DBPROP_ACCESSORDER auf DBPROPVAL_AO_RANDOM festgelegt, kann der Consumer mehrere Datenzeilen mit **GetNextRows** abrufen.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist nicht abgerufen werden große Datenmengen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bis vom Consumer dazu aufgefordert. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft große Daten von erst [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab, wenn er vom Consumer dazu aufgefordert wird. Der Consumer sollte alle kleinen Datenmengen in einem Accessor zusammenfassen und dann einen oder mehrere Accessoren zum Abrufen großer Datenwerte verwenden.  
   
 ## <a name="example"></a>Beispiel  
  In diesem Beispiel wird ein großer Datenwert aus einer einzelnen Spalte abgerufen:  
@@ -145,8 +145,8 @@ HRESULT GetUnboundData
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [BLOBs und OLE-Objekte](blobs-and-ole-objects.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [BLOB-und OLE-Objekte](blobs-and-ole-objects.md)   
  [Verwenden von Datentypen mit umfangreichen Werten](../native-client/features/using-large-value-types.md)  
   
   

@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 48f2a2d485f99b91b0f30a6a707a900ccbbeea96
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399909"
 ---
 # <a name="syspdw_nodes_pdw_physical_databases-transact-sql"></a>sys. pdw_nodes_pdw_physical_databases (Transact-SQL)
@@ -24,11 +24,11 @@ ms.locfileid: "74399909"
 
   Enthält eine Zeile für jede physische Datenbank auf einem Computeknoten. Aggregieren physischer Datenbankinformationen, um ausführliche Informationen zu Datenbanken zu erhalten. Um Informationen zu kombinieren, `sys.pdw_nodes_pdw_physical_databases` verknüpfen Sie `sys.pdw_database_mappings` den `sys.databases` mit den Tabellen und.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|database_id|**wartenden**|Die Objekt-ID für die Datenbank. Beachten Sie, dass dieser Wert nicht mit einem database_id in der [&#41;Sicht sys. Datenbanken &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) übereinstimmt.|  
+|database_id|**int**|Die Objekt-ID für die Datenbank. Beachten Sie, dass dieser Wert nicht mit einem database_id in der [&#41;Sicht sys. Datenbanken &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) übereinstimmt.|  
 |physical_name|**sysname**|Der physische Name der Datenbank auf der Shell/den Computeknoten. Dieser Wert ist identisch mit einem Wert in der Spalte physical_name in der [&#41;Ansicht sys. pdw_database_mappings &#40;Transact-SQL](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) .|  
-|pdw_node_id|**wartenden**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|  
+|pdw_node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
@@ -46,7 +46,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B: Sammeln von detaillierten Objektinformationen mithilfe von sys. pdw_nodes_pdw_physical_databases  
+### <a name="b-using-syspdw_nodes_pdw_physical_databases-to-gather-detailed-object-information"></a>B. Sammeln von detaillierten Objektinformationen mithilfe von sys. pdw_nodes_pdw_physical_databases  
  Die folgende Abfrage zeigt Informationen zu Indizes an und enthält nützliche Informationen über die Datenbank, zu denen die Objekte zu Objekten in der Datenbank gehören.  
   
 ```  
@@ -63,7 +63,7 @@ JOIN sys.dm_pdw_nodes_db_index_usage_stats AS IU
 ORDER BY D.database_id, IU.object_id, IU.index_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>c. Ermitteln des Verschlüsselungs Zustands mithilfe von sys. pdw_nodes_pdw_physical_databases  
+### <a name="c-using-syspdw_nodes_pdw_physical_databases-to-determine-the-encryption-state"></a>C. Ermitteln des Verschlüsselungs Zustands mithilfe von sys. pdw_nodes_pdw_physical_databases  
  Die folgende Abfrage stellt den Verschlüsselungs Status der AdventureWorksPDW2012-Datenbank bereit.  
   
 ```  
@@ -87,7 +87,7 @@ SELECT TOP 1 encryption_state
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.-Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys. pdw_database_mappings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   
   

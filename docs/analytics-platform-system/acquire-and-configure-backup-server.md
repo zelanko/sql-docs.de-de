@@ -1,5 +1,5 @@
 ---
-title: 'Abrufen #a0 Konfigurieren von Backup Server'
+title: Abrufen & Konfigurieren von Backup Server
 description: In diesem Artikel wird beschrieben, wie ein nicht-Appliance-Windows-System als Sicherungs Server für die Verwendung mit den Sicherungs-und Wiederherstellungs Funktionen in Analytics Platform System (APS) und parallel Data Warehouse (PDW) konfiguriert wird.
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e160c606b19933934ec844b477ffec08475307d8
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401497"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Erwerben und Konfigurieren eines Sicherungs Servers für parallele Data Warehouse
@@ -118,7 +118,7 @@ RESTORE DATABASE Invoices2013Full
 FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'  
 ```  
   
-Weitere Informationen finden Sie unter: 
+Weitere Informationen finden Sie unter 
   
 -   [BACKUP DATABASE](../t-sql/statements/backup-database-parallel-data-warehouse.md)   
   

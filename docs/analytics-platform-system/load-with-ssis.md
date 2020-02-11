@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401014"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in parallele Data Warehouse
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>Grundlagen  
+## <a name="Basics"></a>Kenntnisse  
 Integration Services ist die Komponente von SQL Server für das Extrahieren, Transformieren und Laden von Daten (ETL) mit hoher Leistung und wird häufig verwendet, um ein Data Warehouse aufzufüllen und zu aktualisieren.  
   
 Der PDW-Ziel Adapter ist eine Integration Services Komponente, mit der Sie Daten mithilfe Integration Services dzx-Paketen in PDW laden können. In einem Paket Workflow für SQL serverpdw können Sie Daten aus mehreren Quellen laden und Zusammenführen sowie Daten in mehrere Ziele laden. Die Ladevorgänge erfolgen parallel innerhalb eines Pakets und unter mehreren gleichzeitig ausgeführten Paketen, bis zu einem Maximum von 10 in der gleichen Anwendung parallel ausgeführten Ladevorgängen.  
@@ -78,13 +78,13 @@ Anschließend werden die Daten aus Integration Services SQL Server PDW-Datentype
 |DATETIME2|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
 |DATETIMEOFFSET|DT_WSTR|  
 |DECIMAL|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
-|FLOAT|DT_R4, DT_R8|  
+|GLEITKOMMAZAHL|DT_R4, DT_R8|  
 |INT|DT_I1, DTI2, DT_I4, DT_UI1, DT_UI2|  
 |MONEY|DT_CY|  
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|REAL|DT_R4|  
+|real|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -129,7 +129,7 @@ Zum Ausführen eines Integration Services Lade Pakets benötigen Sie Folgendes:
 ## <a name="GenRemarks"></a>Allgemeine Hinweise  
 Wenn für ein Integration Services Paket mehrere SQL Server PDW Ziele ausgeführt werden und eine Verbindung beendet wird, beendet Integration Services das Übertragen von Daten an alle SQL Server PDW Ziele.  
   
-## <a name="Limits"></a>Begrenzungen und Einschränkungen  
+## <a name="Limits"></a>Einschränkungen  
 Bei einem Integration Services Paket wird die Anzahl der SQL Server PDW Ziele für die gleiche Datenquelle durch die maximale Anzahl aktiver Ladevorgänge beschränkt. Das Maximum ist vorkonfiguriert und kann nicht durch den Benutzer konfiguriert werden. 
 
 <!-- MISSING LINKS
@@ -257,7 +257,7 @@ Führen Sie das Paket auf dem Computer Integration Services aus.
 [Beispiele für die Microsoft SQL Server Community: Integration Services](https://go.microsoft.com/fwlink/?LinkId=202415)  
 [Verbessern des inkrementellen Ladens mit Change Data Capture](../integration-services/change-data-capture/change-data-capture-ssis.md)  
 [Transformation für langsam veränderliche Dimensionen](../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)  
-[Massen Einfügungs Task](../integration-services/control-flow/bulk-insert-task.md)  
+[Masseneinfügungstask](../integration-services/control-flow/bulk-insert-task.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

@@ -1,5 +1,5 @@
 ---
-title: Workloadverwaltung
+title: Verwalten von Arbeitsauslastungen
 description: Workloadverwaltung in Analytics Platform System.
 author: mzaman1
 ms.prod: sql
@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399444"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Workloadverwaltung in Analytics Platform System
@@ -58,12 +58,12 @@ ALTER SERVER ROLE largerc ADD MEMBER Anna;
 ## <a name="RC"></a>Ressourcen Klassen Beschreibungen  
 In der folgenden Tabelle werden die Ressourcen Klassen und deren Systemressourcen Zuordnungen beschrieben.  
   
-|Ressourcenklasse|Wichtigkeit anfordern|Maximale Speicherauslastung *|Parallelitäts Slots (Maximum = 32)|Beschreibung|  
+|Ressourcenklasse|Wichtigkeit anfordern|Maximale Speicherauslastung *|Parallelitäts Slots (Maximum = 32)|BESCHREIBUNG|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |default|Mittel|400 MB|1|Standardmäßig ist für jede Anmeldung eine geringe Menge an Speicherplatz und Parallelitäts Ressourcen für Ihre Anforderungen zulässig.<br /><br />Wenn einer Ressourcen Klasse ein Anmelde Name hinzugefügt wird, hat die neue Klasse Vorrang. Wenn ein Anmelde Name aus allen Ressourcen Klassen gelöscht wird, wird die Standard Ressourcenzuweisung wieder hergestellt.|  
 |MediumRC|Mittel|1200 MB|3|Beispiele für Anforderungen, bei denen möglicherweise die mittlere Ressourcen Klasse erforderlich ist:<br /><br />CTAs-Vorgänge mit großen Hashjoins.<br /><br />Wählen Sie Vorgänge aus, die mehr Arbeitsspeicher benötigen, um das Zwischenspeichern auf Datenträgern<br /><br />Laden von Daten in gruppierte columnstore--Indizes.<br /><br />Erstellen, Neuerstellen und Neuorganisieren von gruppierten columnstore--Indizes für kleinere Tabellen mit 10-15-Spalten.|  
-|Largerc|Hoch|2,8 GB|7|Beispiele für Anforderungen, bei denen möglicherweise die große Ressourcen Klasse erforderlich ist:<br /><br />Sehr große CTAs-Vorgänge, die über riesige Hashjoins verfügen oder große Aggregationen wie z. b. große Order by-oder GROUP BY-Klauseln enthalten.<br /><br />Select-Vorgänge, bei denen sehr große Mengen an Arbeitsspeicher für Vorgänge wie Hashjoins oder Aggregationen wie Order by-oder GROUP BY-Klauseln erforderlich sind<br /><br />Laden von Daten in gruppierte columnstore--Indizes.<br /><br />Erstellen, Neuerstellen und Neuorganisieren von gruppierten columnstore--Indizes für kleinere Tabellen mit 10-15-Spalten.|  
-|xlargerc|Hoch|8,4 GB|22|Die Ressourcen Klasse "Extra Large" ist für Anforderungen vorgesehen, die zur Laufzeit einen extrem großen Ressourcenverbrauch erfordern könnten.|  
+|Largerc|High|2,8 GB|7|Beispiele für Anforderungen, bei denen möglicherweise die große Ressourcen Klasse erforderlich ist:<br /><br />Sehr große CTAs-Vorgänge, die über riesige Hashjoins verfügen oder große Aggregationen wie z. b. große Order by-oder GROUP BY-Klauseln enthalten.<br /><br />Select-Vorgänge, bei denen sehr große Mengen an Arbeitsspeicher für Vorgänge wie Hashjoins oder Aggregationen wie Order by-oder GROUP BY-Klauseln erforderlich sind<br /><br />Laden von Daten in gruppierte columnstore--Indizes.<br /><br />Erstellen, Neuerstellen und Neuorganisieren von gruppierten columnstore--Indizes für kleinere Tabellen mit 10-15-Spalten.|  
+|xlargerc|High|8,4 GB|22|Die Ressourcen Klasse "Extra Large" ist für Anforderungen vorgesehen, die zur Laufzeit einen extrem großen Ressourcenverbrauch erfordern könnten.|  
   
 <sup>*</sup>Die maximale Speicherauslastung ist ein Näherungswert.  
   
@@ -131,7 +131,7 @@ SQL-Anweisungen und-Vorgänge, die von Ressourcen Klassen gesteuert werden:
   
 -   UPDATE  
   
--   DELETE  
+-   Delete  
   
 -   Stellen Sie die Datenbank wieder her, wenn Sie eine Anwendung mit weiteren Computeknoten wiederherstellen.  
   
@@ -140,7 +140,7 @@ SQL-Anweisungen und-Vorgänge, die von Ressourcen Klassen gesteuert werden:
 ## <a name="Limits"></a>Einschränkungen  
 Die Ressourcen Klassen Steuern Speicher-und Parallelitäts Zuordnungen.  Sie Steuern keine Eingabe-/Ausgabevorgänge.  
   
-## <a name="Metadata"></a>Benötigten  
+## <a name="Metadata"></a>Metadaten  
 DMVs, die Informationen zu Ressourcen Klassen und Ressourcen Klassenmembern enthalten.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -149,9 +149,9 @@ DMVs, die Informationen zu Ressourcen Klassen und Ressourcen Klassenmembern enth
   
 DMVs, die Informationen über den Status von Anforderungen und die benötigten Ressourcen enthalten:  
   
--   [sys. dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
+-   [sys.dm_pdw_lock_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-lock-waits-transact-sql.md)  
   
--   [sys. dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
+-   [sys.dm_pdw_resource_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md)  
   
 Verwandte System Sichten, die von den SQL Server DMVs auf den Computeknoten verfügbar gemacht werden. Links zu diesen DMVs auf MSDN finden Sie unter [SQL Server dynamischen Verwaltungs Sichten](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) .  
   

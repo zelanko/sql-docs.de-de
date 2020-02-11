@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetVersions-Funktion | Microsoft-Dokumentation
+title: Localdbgetversions-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 431124cff2fcf293ccf1e8e8bcb74321245a661e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032284"
 ---
 # <a name="localdbgetversions-function"></a>LocalDBGetVersions-Funktion
   Gibt alle auf dem Computer verfügbaren SQL Server Express LocalDB-Versionen zurück.  
   
- **Headerdatei:** sqlncli.h  
+ **Header Datei:** sqlncli. h  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -36,13 +36,13 @@ ms.locfileid: "63032284"
   
 ## <a name="parameters"></a>Parameter  
  *pVersionNames*  
- [Ausgabe] Enthält die Namen der LocalDB-Versionen, die auf der Arbeitsstation des Benutzers verfügbar sind.  
+ Ausgeben Enthält die Namen der localdb-Versionen, die auf der Arbeitsstation des Benutzers verfügbar sind.  
   
- *lpdwNumberOfVersions*  
+ *lpdwnumofversions*  
  [Eingabe/Ausgabe] Enthält bei Eingabe die Anzahl der Slots für Versionen im *pVersionNames* -Puffer.   
 Enthält bei Ausgabe die Anzahl der vorhandenen LocalDB-Versionen.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -58,10 +58,10 @@ Enthält bei Ausgabe die Anzahl der vorhandenen LocalDB-Versionen.
  [LOCALDB_ERROR_INTERNAL_ERROR](../express-localdb-error-messages/localdb-error-internal-error.md)  
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Express LocalDB-Header und -Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Express LocalDB-Header und Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
   
   

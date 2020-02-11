@@ -1,5 +1,5 @@
 ---
-title: Erstellen den Server Connection Files (OracleToSQL) | Microsoft-Dokumentation
+title: Erstellen der Server Verbindungs Dateien (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,16 +14,16 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68266108"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>Erstellen der Serververbindungsdateien (OracleToSQL)
-Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei oder in eine separate Verbindung Serverdatei angegeben werden. Der Parameter über die Befehlszeile für die Server-Verbindungsdatei ist, `-c <serverconnectionfile>`. Wenn die gleiche Id in die Skriptdatei und die Server-Connection-Datei vorhanden ist, wird die Definition des Servers in der Skriptdatei als betrachtet.  
+Server Informationen können entweder im Abschnitt Server der Skriptdatei oder in einer separaten Server Verbindungs Datei angegeben werden. Der Befehlszeilenparameter für die Server Verbindungs Datei ist, `-c <serverconnectionfile>`. Wenn dieselbe Server-ID sowohl in der Skriptdatei als auch in der Server Verbindungs Datei vorhanden ist, wird die Server Definition in der Skriptdatei berücksichtigt.  
   
-**Beispiel 1:**  
+**Beispiel: 1**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -66,7 +66,7 @@ Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei 
   
 </sql-server>  
 ```  
-**Anpassen von mit VSTU 2**  
+**Beispiel: 2**  
   
 ```  
 <!--Sample of server connection file commands -->  
@@ -103,8 +103,8 @@ Informationen zum Server kann entweder in den Bereich "Server", der Skriptdatei 
 ```  
   
 ## <a name="next-step"></a>Nächster Schritt  
-Der nächste Schritt in der Konsole ausgeführt wird [Executing the SSMA Console ausführen &#40;OracleToSQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
+Der nächste Schritt beim Betrieb der Konsole ist [die Ausführung der SSMA-Konsole &#40;oracleto SQL&#41;](../../ssma/oracle/executing-the-ssma-console-oracletosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](executing-the-ssma-console-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ausführen der SSMA-Konsole](executing-the-ssma-console-oracletosql.md)  
   

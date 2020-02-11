@@ -16,29 +16,29 @@ ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9ef460a7d004227e34e0043223abdf3769c92520
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135662"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Kompilieren eines eingebetteten SQL-Programms
-Da ein eingebettetes SQL-Programms eine Mischung aus SQL- und Host-Anweisungen enthält, kann es direkt an einen Compiler für die Hostsprache übermittelt werden. Stattdessen wird er durch einen Prozess mit mehreren kompiliert. Obwohl dieser Prozess vom jeweiligen Produkt im Detail variiert, sind die Schritte ungefähr gleich für alle Produkte.  
+Da ein eingebettetes SQL-Programm eine Mischung aus SQL-und Host Sprachanweisungen enthält, kann es nicht direkt an einen Compiler für die Host Sprache übermittelt werden. Stattdessen wird Sie durch einen Prozess mit mehreren Schritten kompiliert. Obwohl sich dieser Prozess von Produkt zu Produkt unterscheidet, sind die Schritte für alle Produkte ungefähr identisch.  
   
- Die folgende Abbildung zeigt die Schritte zum Kompilieren eines eingebetteten SQL-Programms.  
+ Diese Abbildung zeigt die Schritte, die zum Kompilieren eines eingebetteten SQL-Programms erforderlich sind.  
   
  ![Schritte zum Kompilieren eines eingebetteten SQL-Programms](../../odbc/reference/media/pr02.gif "pr02")  
   
- Fünf Schritte sind erforderlich, beim Kompilieren eines eingebetteten SQL-Programms:  
+ Zum Kompilieren eines eingebetteten SQL-Programms sind fünf Schritte erforderlich:  
   
-1.  Die eingebetteten SQL-Programms wird an der SQL-Precompiler eine Programmiertool übermittelt. Die vorkompilierten vom Programm gescannt, sucht die eingebettete SQL-Anweisungen und verarbeitet sie. Eine andere vorkompilierten ist erforderlich für jede Programmiersprache, die vom DBMS unterstützt. DBMS-Produkte stellen in der Regel Precompilers für eine oder mehrere Sprachen, darunter C, Pascal, COBOL, Fortran, Ada, PL / ich und verschiedene Sprachen der Assembly.  
+1.  Das eingebettete SQL-Programm wird an den SQL-präcompiler, ein Programmier Tool, übermittelt. Der Vorcompiler scannt das Programm, sucht die eingebetteten SQL-Anweisungen und verarbeitet sie. Ein anderer vorkompilierten ist für jede vom DBMS unterstützte Programmiersprache erforderlich. DBMS-Produkte bieten in der Regel präcompiler für eine oder mehrere Sprachen, u.a. C, Pascal, COBOL, Fortran, Ada, PL/I und verschiedene Assemblysprachen.  
   
-2.  Die vorkompilierten erzeugt zwei Ausgabedateien an. Die erste Datei ist der Quelldatei, die eingebettete SQL-Anweisungen entfernt. An ihre Stelle ersetzt die vorkompilierten Aufrufe von proprietären DBMS-Routinen, die die Laufzeit-Verknüpfung zwischen dem Programm und das DBMS bereitstellen. Die Namen und die aufrufenden Sequenzen dieser Routinen sind in der Regel nur für den vorkompilierten und das DBMS bekannt; Sie sind sich nicht um eine öffentliche Schnittstelle für das DBMS. Die zweite Datei ist eine Kopie aller eingebettete SQL-Anweisungen in der Anwendung verwendet. Diese Datei ist ein Datenbank-Request-Modul oder DBRM bezeichnet.  
+2.  Der vorkompilierten erzeugt zwei Ausgabedateien. Die erste Datei ist die Quelldatei, die von den eingebetteten SQL-Anweisungen entfernt wurde. An dieser Stelle ersetzt der vorkompilierten Aufrufe an proprietäre DBMS-Routinen, die den Lauf Zeit Link zwischen dem Programm und dem DBMS bereitstellen. In der Regel sind die Namen und die Aufruf Sequenzen dieser Routinen nur dem vorkompilierten und dem DBMS bekannt. Sie sind keine öffentliche Schnittstelle für das DBMS. Die zweite Datei ist eine Kopie aller eingebetteten SQL-Anweisungen, die im Programm verwendet werden. Diese Datei wird manchmal als Daten Bank Anforderungs Modul oder DBRM bezeichnet.  
   
-3.  Die Quelle-Datei der vorkompilierten Ausgabe wird an den standard-Compiler für die Host-Programmiersprache (z. B. eine C- oder COBOL-Compiler) übermittelt. Der Compiler verarbeitet den Quellcode und Objektcode als Ausgabe erzeugt. Beachten Sie, dass dieser Schritt nichts mit dem DBMS oder mit SQL zu tun hat.  
+3.  Die Quelldatei Ausgabe des precompilers wird an den Standard Compiler für die Host Programmiersprache (z. b. einen C-oder COBOL-Compiler) übermittelt. Der Compiler verarbeitet den Quellcode und erzeugt den Objektcode als Ausgabe. Beachten Sie, dass dieser Schritt nichts mit dem DBMS oder mit SQL zu tun hat.  
   
-4.  Der Linker akzeptiert die Objektmodule, die vom Compiler generierte, verknüpft sie mit verschiedenen Bibliotheksroutinen und erzeugt ein ausführbares Programm. Die Bibliotheksroutinen verknüpft, in das ausführbare Programm enthalten die proprietären DBMS-Routinen, die in Schritt 2 beschrieben.  
+4.  Der Linker akzeptiert die vom Compiler generierten Objekt Module, verknüpft Sie mit verschiedenen Bibliotheks Routinen und erstellt ein ausführbares Programm. Die mit dem ausführbaren Programm verknüpften Bibliotheks Routinen enthalten die proprietären DBMS-Routinen, die in Schritt 2 beschrieben werden.  
   
-5.  Das Datenbank-Anforderung-Modul von der vorkompilierten generiert wird mit einem speziellen Bindung-Hilfsprogramm übermittelt. Dieses Dienstprogramm überprüft die SQL-Anweisungen, analysiert, überprüft hat, und optimiert sie und erzeugt dann einen Plan Access for each-Anweisung. Das Ergebnis ist eine kombinierte Zugriffsplan für das gesamte Programm, eine ausführbare Version von der SQL-Anweisung darstellt. Das Hilfsprogramm für die Bindung speichert den Plan in der Datenbank, in der Regel der Name des Anwendungsprogramms, die sie verwenden zuweisen. Gibt an, ob dieser Schritt zur Kompilier- oder Laufzeit stattfindet, hängt von der DBMS ab.  
+5.  Das vom vorkompilierten generierte Daten Bank Anforderungs Modul wird an ein spezielles Bindungs Dienstprogramm übermittelt. Dieses Hilfsprogramm untersucht die SQL-Anweisungen, analysiert, validiert und optimiert Sie und erstellt dann einen Zugriffs Plan für jede Anweisung. Das Ergebnis ist ein kombinierter Zugriffs Plan für das gesamte Programm, das eine ausführbare Version der eingebetteten SQL-Anweisungen darstellt. Das Bindungs Hilfsprogramm speichert den Plan in der Datenbank und weist in der Regel den Namen des Anwendungsprogramms zu, von dem es verwendet wird. Ob dieser Schritt zur Kompilierzeit oder zur Laufzeit stattfindet, hängt vom DBMS ab.  
   
- Beachten Sie, die die Schritte zum Kompilieren eines eingebetteten SQL-Programms sehr eng mit den weiter oben beschriebenen Schritten korrelieren [Verarbeiten einer SQL-Anweisung](../../odbc/reference/processing-a-sql-statement.md). Beachten Sie insbesondere, dass der vorkompilierten, die SQL-Anweisungen aus der Sprachcode für den Host trennt, und das Hilfsprogramm für die Bindung analysiert und überprüft die SQL-Anweisungen und die Access-Pläne erstellt. In DBMS, in dem Schritt 5 zum Zeitpunkt der Kompilierung stattfindet, erfolgen die ersten vier Schritte der Verarbeitung einer SQL-Anweisung zum Zeitpunkt der Kompilierung, während der letzte Schritt (Ausführung) zur Laufzeit ausgeführt wird. Dies hat es sich um die Auswirkungen bei der Ausführung der Abfrage in eine solche sehr schnelle DBMS.
+ Beachten Sie, dass die Schritte, die zum Kompilieren eines eingebetteten SQL-Programms verwendet werden, sehr eng mit den zuvor in [Verarbeiten einer SQL-Anweisung](../../odbc/reference/processing-a-sql-statement.md)beschriebenen Schritten korrelieren. Beachten Sie insbesondere, dass der vorkompilierten die SQL-Anweisungen vom Host Sprachcode trennt und das Bindungs Programm die SQL-Anweisungen analysiert und überprüft und die Zugriffs Pläne erstellt. In DBMSs, in dem Schritt 5 zur Kompilierzeit stattfindet, werden die ersten vier Schritte zum Verarbeiten einer SQL-Anweisung zur Kompilierzeit stattfinden, während der letzte Schritt (Ausführung) zur Laufzeit stattfindet. Dies hat den Effekt, dass die Abfrage Ausführung in derartigen DBMSs sehr schnell ist.

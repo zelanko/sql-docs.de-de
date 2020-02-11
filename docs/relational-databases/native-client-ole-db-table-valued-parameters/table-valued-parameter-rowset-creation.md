@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11acec127d354688aa81e8e50006c0b80c14347d
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73761647"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
@@ -42,16 +42,16 @@ ms.locfileid: "73761647"
   
  Zum Abrufen von Informationen über den NULL-, eindeutigen, berechneten und Update Status der einzelnen Spalten verwendet der Consumer IColumnsRowset:: GetColumnsRowset oder IColumnsInfo:: GetColumnInfo. Diese Methoden stellen ausführliche Informationen über jede Tabellenwertparameter-Rowsetspalte bereit.  
   
- Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer ruft ein Tabellenwert Parameter-Rowsetobjekt vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB Anbieter über den *ppRowset* -Ausgabeparameter ab.  
+ Der Consumer gibt den Typ jeder Spalte des Tabellenwertparameters an. Dies ähnelt der Angabe von Spalten, wenn in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Tabelle erstellt wird. Der Consumer erhält ein Tabellenwert Parameter-Rowsetobjekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Native Client OLE DB-Anbieter über den *ppRowset* -Ausgabeparameter.  
   
 ## <a name="dynamic-scenario"></a>Dynamisches Szenario  
  Wenn der Consumer keine Typinformationen hat, sollte er IOpenRowset:: OPENROWSET verwenden, um Tabellenwert Parameter-Rowsetobjekte zu instanziieren. Der Consumer muss dem Anbieter somit nur den Typnamen zur Verfügung stellen.  
   
  In diesem Szenario erhält der Anbieter im Namen des Consumers Typinformationen zu einem Tabellenwertparameter-Rowsetobjekt vom Server.  
   
- Die Parameter *pTableID* und *pUnkOuter* sollten wie im statischen Szenario festgelegt werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider ruft dann die Typinformationen (Spalten Informationen und Einschränkungen) vom Server ab und gibt ein Tabellenwert Parameter-Rowsetobjekt über den *ppRowset* -Parameter zurück. Für diesen Vorgang ist eine Kommunikation mit dem Server notwendig, sodass die Leistung nicht so gut ist wie beim statischen Szenario. Das dynamische Szenario funktioniert nur mit parametrisierten Prozeduraufrufen.  
+ Die Parameter *pTableID* und *pUnkOuter* sollten wie im statischen Szenario festgelegt werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft dann die Typinformationen (Spalten Informationen und Einschränkungen) vom Server ab und gibt ein Tabellenwert Parameter-Rowsetobjekt über den *ppRowset* -Parameter zurück. Für diesen Vorgang ist eine Kommunikation mit dem Server notwendig, sodass die Leistung nicht so gut ist wie beim statischen Szenario. Das dynamische Szenario funktioniert nur mit parametrisierten Prozeduraufrufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tabellenwertparameter &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

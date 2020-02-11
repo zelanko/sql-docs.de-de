@@ -1,5 +1,5 @@
 ---
-title: Filtern von Daten in einer Tabelle (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Filtern von Daten in einer Tabelle (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067128"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtern von Daten in einer Tabelle (SSAS – tabellarisch)
@@ -33,17 +33,17 @@ ms.locfileid: "66067128"
   
 2.  Führen Sie im Menü AutoFilter einen der folgenden Schritte aus:  
   
-    -   Wählen Sie in der Liste der Spaltenwerte mindestens einen Wert aus, nach dem gefiltert werden soll, bzw. heben Sie die Auswahl auf, und klicken Sie auf **OK**.  
+    -   Wählen Sie in der Liste der Spaltenwerte mindestens einen Wert aus, nach dem gefiltert werden soll, oder löschen Sie ihn, und klicken Sie dann auf **OK**.  
   
          Wenn die Anzahl der Werte sehr groß ist, kann es sein, dass einzelne Elemente nicht in der Liste angezeigt werden. Stattdessen wird eine Meldung angezeigt, dass zu viele Elemente zum Anzeigen vorhanden sind.  
   
-    -   Klicken Sie je nach Typ der Spalte auf **Zahlenfilter** oder **Textfilter** , und klicken Sie anschließend auf einen der Vergleichsoperatorbefehle (wie **Ist gleich**), oder klicken Sie auf **Benutzerdefinierter Filter**. Erstellen Sie im Dialogfeld **Benutzerdefinierter Filter** den Filter, und klicken Sie dann auf **OK**.  
+    -   Klicken Sie je nach Typ der Spalte auf **Zahlen Filter** oder **Text Filter** , und klicken Sie dann auf die Befehle des Vergleichs Operators (z. b. ist **gleich**), oder klicken Sie auf **benutzerdefinierter Filter**. Erstellen Sie im Dialogfeld **Benutzerdefinierter Filter** den Filter, und klicken Sie dann auf **OK**.  
   
 ### <a name="to-clear-a-filter-for-a-column"></a>So löschen Sie einen Filter für eine Spalte  
   
 1.  Klicken Sie auf den Pfeil in der Kopfzeile der Spalte, für die Sie den Filter löschen möchten.  
   
-2.  Klicken Sie auf **Filter löschen aus \<Spaltenname >** .  
+2.  Klicken Sie auf **Filter \<aus Spalten Name>löschen **.  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>So löschen Sie alle Filter für eine Tabelle  
   
@@ -51,9 +51,9 @@ ms.locfileid: "66067128"
   
 2.  Klicken Sie auf das Menü **Spalte** und dann auf **Alle Filter löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Filtern und Sortieren von Daten &#40;SSAS – tabellarisch&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)   
- [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Filtern und Sortieren von Daten &#40;tabellarischen SSAS-&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)   
+ [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)  
   
   

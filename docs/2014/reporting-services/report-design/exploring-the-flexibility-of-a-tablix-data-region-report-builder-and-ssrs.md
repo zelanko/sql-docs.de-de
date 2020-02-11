@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e2ed258caa8019b13ddd8600a5ada2956913977
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105951"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Untersuchen der Flexibilität eines Tablix-Datenbereichs (Berichts-Generator und SSRS)
@@ -44,11 +44,11 @@ ms.locfileid: "66105951"
 ## <a name="adding-an-adjacent-details-group"></a>Hinzufügen einer angrenzenden Detailgruppe  
  Standardmäßig ist die Detailgruppe die innerste untergeordnete Gruppe in einer Gruppenhierarchie. Unter der Detailgruppe können keine Gruppen geschachtelt werden. Sie können weitere, angrenzende Detailgruppen erstellen, um beispielsweise die besten 5 Produkte und die schlechtesten 5 Produkte in Bezug auf den Umsatz anzuzeigen. Da Sie den einzelnen Gruppen Filter- und Sortierungsausdrücke hinzufügen können, können Sie in einem Tablix-Datenbereich zwei Ansichten von Detaildaten eines Datasets anzeigen. Weitere Informationen finden Sie unter [Grundlegendes zu Gruppen (Berichts-Generator und SSRS)](understanding-groups-report-builder-and-ssrs.md), [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich (Berichts-Generator und SSRS)](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md) und [Hinzufügen eines Filters zu einem Dataset (Berichts-Generator und SSRS)](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Listen &#40;Berichts-Generator und SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
+ [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

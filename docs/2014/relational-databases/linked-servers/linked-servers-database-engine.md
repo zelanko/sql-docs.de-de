@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c2909eeebde268b52ecaeff5a20a982831e7569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743504"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
@@ -46,7 +46,7 @@ ms.locfileid: "62743504"
   
  Ein *OLE DB-Anbieter* ist eine DLL (Dynamic Link Library), die mit einer bestimmten Datenquelle interagiert und sie verwaltet. Eine *OLE DB-Datenquelle* identifiziert die spezielle Datenbank, auf die über OLE DB zugegriffen werden kann. Obwohl es sich bei Datenquellen, die über Verbindungsserverdefinitionen abgefragt werden, normalerweise um Datenbanken handelt, sind OLE DB-Anbieter für eine Vielzahl von Dateien und Dateiformaten verfügbar. Dazu gehören Textdateien, Kalkulationstabellendaten und die Ergebnisse aus Volltextsuchläufen.  
   
- Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Der OLE DB-Anbieter von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind jedoch so entworfen, dass sie mit jedem OLE DB-Anbieter zusammenarbeiten, der die erforderlichen OLE DB-Schnittstellen implementiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde jedoch nur für den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und bestimmte andere Anbieter getestet.  
@@ -54,7 +54,7 @@ ms.locfileid: "62743504"
 ## <a name="linked-server-details"></a>Einzelheiten zu Verbindungsservern  
  Die folgende Abbildung zeigt die Grundlagen einer Verbindungsserverkonfiguration.  
   
- ![Clientebene, Serverebene und Datenbankserverebene](../../database-engine/media/lsvr.gif "Clientebene, Serverebene und Datenbankserverebene")  
+ ![Client-, Server- und Datenbankserverebene](../../database-engine/media/lsvr.gif "Client-, Server- und Datenbankserverebene")  
   
  Verbindungsserver werden in der Regel für die Verarbeitung verteilter Abfragen verwendet. Führt eine Clientanwendung eine verteilte Abfrage über einen Verbindungsserver aus, analysiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den Befehl und sendet Anforderungen an OLE DB. Für eine Rowsetanforderung kann eine Abfrage für den Anbieter ausgeführt oder eine Basistabelle vom Anbieter geöffnet werden.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62743504"
   
  Sie können Verbindungsserver auch mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]definieren. Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf **Serverobjekte**, klicken Sie auf **Neu**, und klicken Sie dann auf **Verbindungsserver**. Sie können eine Verbindungsserverdefinition löschen, indem Sie mit der rechten Maustaste auf den Namen des Verbindungsservers und dann auf **Löschen**klicken.  
   
- Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name muss in der Form _linked_server_name.catalog_ **. _`schema`_ .** _Object_name_.  
+ Wenn Sie eine verteilte Abfrage auf einem Verbindungsserver ausführen, sollten Sie einen vollqualifizierten vierteiligen Tabellennamen für jede Datenquelle einschließen, die abgefragt werden soll. Dieser vierteilige Name sollte in der Form _linked_server_name. catalog_**._`schema`_** lauten. _object_name_.  
   
 > [!NOTE]  
 >  Verbindungsserver können so definiert werden, dass sie zurück auf den Server zeigen, auf dem sie definiert sind (zurücklaufen = loop back). Loopbackserver sind sehr nützlich, um eine Anwendung, von der verteilte Abfragen verwendet werden, in einem Netzwerk mit einem einzelnen Server zu testen. Loopbackverbindungsserver sind für Tests bestimmt und werden für viele Vorgänge, z. B. verteilte Transaktionen, nicht unterstützt.  

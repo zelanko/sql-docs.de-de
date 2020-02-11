@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68893853"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram (DMX)
@@ -33,11 +33,11 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 ## <a name="return-type"></a>Rückgabetyp  
  Tabelle  
   
-## <a name="remarks"></a>Hinweise  
- Ein Histogramm generiert Statistikspalten. Die Spalten Struktur des zurückgegebenen Histogramms hängt vom Typ des Spalten Verweises ab, der mit der Funktion "vorherd..." verwendet wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein Histogramm generiert Statistikspalten. Die Spalten Struktur des zurückgegebenen Histogramms hängt vom Typ des Spalten Verweises ab, der mit der Funktion " **vorherd** ..." verwendet wird.  
   
 ## <a name="scalar-columns"></a>Skalare Spalten  
- Bei einem \<Verweis > für eine skalare Spalte besteht das Histogramm, das die Funktion " **präthistogram** " zurückgibt, aus den folgenden Spalten:  
+ Bei einem \<Verweis> für eine skalare Spalte besteht das Histogramm, das die Funktion " **präthistogram** " zurückgibt, aus den folgenden Spalten:  
   
 -   Der Wert, der vorhergesagt wird.  
   
@@ -58,7 +58,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
      Die **$AdjustedProbability** Spalte ist eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Erweiterung der [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB für Data Mining-Spezifikation.  
   
 ## <a name="cluster-columns"></a>Clusterspalten  
- Das Histogramm, das die Funktion " **präthistogram** " \<für einen Cluster Spalten Verweis zurückgibt > besteht aus den folgenden Spalten:  
+ Das Histogramm, das die Funktion " **präthistogram** " \<für einen Cluster Spalten Verweis zurückgibt> besteht aus den folgenden Spalten:  
   
 -   **$Cluster** (stellt den Cluster Namen dar)  
   
@@ -83,17 +83,17 @@ NATURAL PREDICTION JOIN
   0 AS [Number Children At Home]) AS t  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Cluster &#40;-DMX&#41;](../dmx/cluster-dmx.md)   
- [Clusterwahrscheinlichkeits &#40;-DMX&#41;](../dmx/clusterprobability-dmx.md)   
- [PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)   
- [Präwahrscheinlichkeits &#40;-DMX&#41;](../dmx/predictprobability-dmx.md)   
- [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
- [Prätsupport &#40;-DMX&#41;](../dmx/predictsupport-dmx.md)   
- [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
- [DMX&#41; - &#40;Funktionsreferenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Functions &#40;-DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersage &#40;Funktionen (DMX)&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Cluster &#40;DMX-&#41;](../dmx/cluster-dmx.md)   
+ [Clusterwahrscheinlichkeit &#40;DMX-&#41;](../dmx/clusterprobability-dmx.md)   
+ [Der prätadjustedwahrscheinlichkeits-&#40;DMX-&#41;](../dmx/predictadjustedprobability-dmx.md)   
+ [Prätwahrscheinlichkeit &#40;DMX-&#41;](../dmx/predictprobability-dmx.md)   
+ [Prätstdev &#40;DMX-&#41;](../dmx/predictstdev-dmx.md)   
+ [Prätsupport &#40;DMX-&#41;](../dmx/predictsupport-dmx.md)   
+ [Prävarianz &#40;DMX-&#41;](../dmx/predictvariance-dmx.md)   
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

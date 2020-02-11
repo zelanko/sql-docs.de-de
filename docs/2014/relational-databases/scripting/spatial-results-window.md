@@ -11,23 +11,23 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8c554959fedba58f743f1dd37d3c97554d0f00d3
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243253"
 ---
 # <a name="spatial-results-window"></a>Fenster "Räumliche Ergebnisse"
-  Im Fenster **Räumliche Ergebnisse** werden visuelle Zustellungs Tools zum Anzeigen räumlicher Daten bereitstellt. Zum Anzeigen von Ergebnissen für räumliche Daten müssen die Abfrageergebnisse eine räumliche Spalte mit Geometrie- oder Geografiedaten enthalten.  
+  Im Fenster **Räumliche Ergebnisse** werden visuelle Zuordnungstools zum Anzeigen räumlicher Daten bereitgestellt. Zum Anzeigen von Ergebnissen für räumliche Daten müssen die Abfrageergebnisse eine räumliche Spalte mit Geometrie- oder Geografiedaten enthalten.  
   
 > [!NOTE]  
 >  Das Fenster **Räumliche Ergebnisse** ist nur verfügbar, wenn die Ergebnisse im Fenster **Ergebnisse** in ein Raster zurückgegeben werden. Wenn Sie angeben, dass die Ergebnisse als Text zurückgegeben werden, ist dieses Fenster nicht verfügbar.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Räumliche Spalte auswählen**  
  Geben Sie die räumliche Spalte an, die Sie in den Abfrageergebnissen in den räumlichen Spalten anzeigen möchten. Es kann nur jeweils eine Spalte ausgewählt werden.  
   
- **Bezeichnungs Spalte auswählen**  
+ **Bezeichnungsspalte auswählen**  
  Geben Sie die nicht räumliche Spalte in den Spalten an, die in den Abfrageergebnissen zurückgegeben wurden, um die räumlichen Daten zu beschriften. Es kann nur jeweils eine Spalte ausgewählt werden.  
   
  Diese Option ist nicht verfügbar, wenn in einer Abfrage nur Instanzen zurückgegeben werden.  
@@ -37,10 +37,10 @@ ms.locfileid: "75243253"
   
  Diese Option ist für Geometriedaten nicht verfügbar.  
   
- **Skala**  
+ **Zoom**  
  Stellen Sie die Zuordnungsanzeige auf einer exponentiellen Skala ein.  
   
- **Rasterlinien anzeigen**  
+ **Gitternetzlinien anzeigen**  
  Sie können Koordinatengitternetzlinien aktivieren oder deaktivieren.  
   
  Bei polygonen Formen wird die Bezeichnung nur angezeigt, wenn die Form groß genug ist, um den Bezeichnungstext aufzunehmen. Um Bezeichnungen für kleine Formen anzuzeigen, passen Sie den Zoom an.  
@@ -49,9 +49,9 @@ ms.locfileid: "75243253"
 >  Punktinstanzen können nicht bezeichnet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Räumliche Daten in Objekt-Explorer anzeigen](view-spatial-data-in-object-explorer.md)   
+ [Anzeigen räumlicher Daten im Objekt-Explorer](view-spatial-data-in-object-explorer.md)   
  [Räumliche Daten &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md)   
- [Datenbank-Engine Abfrage-Editor &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
- [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
+ [Abfrage-Editor der Datenbank-Engine &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)   
+ [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](query-and-text-editors-sql-server-management-studio.md)  
   
   

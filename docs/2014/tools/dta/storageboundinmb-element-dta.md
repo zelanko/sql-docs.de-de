@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33dbfad3c3774abe3de74d4dbf1d67575630b21e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460110"
 ---
 # <a name="storageboundinmb-element-dta"></a>StorageBoundInMB-Element (DTA)
@@ -36,9 +36,10 @@ ms.locfileid: "63460110"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Description|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|`unsignedInt`, unbegrenzte Länge.|  
+|**Datentyp und -länge**|
+  `unsignedInt`, unbegrenzte Länge.|  
 |**Standardwert**|Keine.|  
 |**Vorkommen**|Optional. Kann nur einmalig für das `TuningOptions`-Element verwendet werden.|  
   
@@ -47,9 +48,9 @@ ms.locfileid: "63460110"
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Untergeordnete Elemente**|None|  
+|**Untergeordnete Elemente**|Keine|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn mehrere Datenbanken optimiert werden, werden bei der Berechnung des Speicherplatzes Empfehlungen für alle Datenbanken berücksichtigt. Standardmäßig nimmt der Datenbankoptimierungsratgeber die kleinere der folgenden Speichergrößen an:  
   
 -   Das Dreifache der aktuellen Rohdatengröße, einschließlich der Gesamtgröße von Heaps und gruppierten Indizes für Tabellen.  
@@ -62,7 +63,7 @@ ms.locfileid: "63460110"
   
 ## <a name="example"></a>Beispiel  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Im folgenden Codebeispiel wird veranschaulicht, wie 1500 Megabytes als maximaler Speicherplatz festgelegt werden, der von einer Empfehlung zur Optimierung belegt werden kann:  
   
 ## <a name="code"></a>Code  
@@ -77,7 +78,7 @@ ms.locfileid: "63460110"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

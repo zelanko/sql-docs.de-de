@@ -1,5 +1,5 @@
 ---
-title: Erste Schritte mit Data Mining (Data Mining-Add-ins für Excel) | Microsoft-Dokumentation
+title: Getting Started with Data Mining (Data Mining-Add-Ins für Excel) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080938"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Erste Schritte mit dem Data Mining (Data Mining-Add-Ins für Excel)
   Data Mining ist ein Vorgang zum Ermitteln wichtiger Muster in Daten. Data Mining ergänzt auf natürliche Weise das Untersuchen und Auswerten Ihrer Daten durch herkömmliche Business Intelligence. Mit Computeralgorithmen können große Datenmengen verarbeitet und Muster und Trends entdeckt werden, die andernfalls verborgen bleiben würden.  
   
- Um Datamining zu tun, erfassen Sie Daten, die relevant für eine bestimmte Frage, wie z. B. "Wer"sind meine Kunden?" oder "welche Produkte wurden gekauft?" und wenden dann einen Algorithmus, um statistische Korrelationen in den Daten zu suchen. Die durch die Analyse ermittelten Muster und Trends werden als Miningmodell gespeichert. Anschließend können Sie das Miningmodell auf neue Daten anwenden, z. B. in Geschäftsszenarien wie den Folgenden:  
+ Zum Data Mining erfassen Sie Daten, die für eine bestimmte Frage relevant sind, z. b. "Wer sind meine Kunden?". oder "welche Produkte wurden gekauft?" und dann einen Algorithmus anwenden, um statistische Korrelationen in den Daten zu suchen. Die durch die Analyse ermittelten Muster und Trends werden als Miningmodell gespeichert. Anschließend können Sie das Miningmodell auf neue Daten anwenden, z. B. in Geschäftsszenarien wie den Folgenden:  
   
 -   Verwenden früherer Trends, um Umsätze für das nächste Quartal, den Bestandsbedarf oder die Kundenzufriedenheit zu prognostizieren.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66080938"
   
  Die gewählte Analysemethode hängt jeweils von Ihren Zielen ab. Die Data Mining-Add-Ins unterstützen diese Arten der Analyse:  
   
--   Überwachtes und unüberwachtes Lernen  
+-   Überwachtes und nicht überwachtes Lernen  
   
 -   Clustering (Segmentierung)  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66080938"
 ## <a name="define-your-goal"></a>Definieren Ihres Ziels  
  Nehmen Sie sich zunächst einen Moment Zeit, um sich über die Frage klar zu werden, auf die Sie eine Antwort suchen. Das Durchsuchen von Daten an sich ist aufschlussreich, wenn Sie jedoch Ihre Erkenntnisse auf neue Daten anwenden möchten, müssen Sie in der Lage sein, klar zu umreißen, welche Ergebnisse Sie vom Modell erwarten und wie Sie bewerten können, ob das Modell Ihren Zielen gerecht wird.  
   
- Klären Sie z. B. als Ziel "Gewinnen neuer Kunden", nicht Ihr Ziel etwas konkreter, z. B. "Bestimmen des demografischen Hintergrunds potenzieller Kunden, die wahrscheinlich unser Produkt mit einer Wahrscheinlichkeit von mindestens 65 % kaufen werden".  
+ Anstatt beispielsweise "neue Kunden zu finden", verdeutlichen Sie das Ziel von etwas konkreteren, wie z. b. "Ermitteln der demografischen Kunden, die Ihr Produkt wahrscheinlich kaufen, mit einer Wahrscheinlichkeit von mindestens 65%".  
   
--   Ihr Dataset sollte mindestens ein "Ergebnisattribut" enthalten, die Sie für Training und Vorhersage verwenden können. Ist kein solches Attribut vorhanden, können Sie Trainingsdaten manuell so kennzeichnen oder andere Spalten nutzen, um eine Proxy-Variable für das Ergebnis zu erhalten.  
+-   Das DataSet sollte mindestens ein "result"-Attribut enthalten, das Sie für das Training und die Vorhersage verwenden können. Ist kein solches Attribut vorhanden, können Sie Trainingsdaten manuell so kennzeichnen oder andere Spalten nutzen, um eine Proxy-Variable für das Ergebnis zu erhalten.  
   
-     Z. B. Wenn Sie "die besten potenziellen Kunden" vorhersagen möchten, sollten Sie einer Geschäftsregel zuvor vorhandene Kunden, anwenden, damit Sie Datamining von den Beispielen lernen kann, die Sie bereitstellen.  
+     Wenn Sie z. b. "die besten Chancen" vorhersagen möchten, sollten Sie eine bestimmte Geschäftsregel vorab anwenden, um vorhandene Kunden zu bezeichnen, damit Data Mining aus den von Ihnen bereitgestellten Beispielen lernen können.  
   
 -   Wenn Sie mit einem Wert arbeiten, der sich im Laufe der Zeit verändert und Sie ggf. zukünftige Trends vorhersagen möchten, denken Sie über die gewünschte Granularität der Ergebnisse nach. Möchten Sie Vorhersagen auf Grundlage eines Tages, Monats oder Jahres erstellen? Ihre Daten müssen mit den gleichen Einheiten analysiert werden, die Sie auch vorhersagen möchten.  
   
-     Bei zyklischen Mustern, wenn Sie keine aussagekräftigen Ergebnisse mit täglichen Daten erhalten, versuchen Sie es anderen zeitlichen Segmenten, oder versuchen Sie es mit der Wochentage, Monate oder sogar Feiertage.  
+     Wenn Sie bei zyklischen Mustern keine guten Ergebnisse mit täglichen Daten erhalten, probieren Sie verschiedene Zeit Scheiben aus, oder versuchen Sie, Wochentage, Monate oder sogar Feiertage zu verwenden.  
   
 -   Ehe Sie einen Assistenten starten, um neue Korrelationen in den Daten aufzudecken, nehmen Sie Ihre Daten eingehender unter die Lupe, und überlegen Sie, welche Art von bestehenden Beziehungen u. U. im Dataset vorhanden ist. Gibt es uneindeutige Variablen? Gibt es Duplikate oder Proxys?  
   
--   Was sind die Metriken, die mit denen der Erfolg des Modells ausgewertet werden soll? Wie wissen Sie, dass das Modell "gut genug"?  
+-   Wie lauten die Metriken, nach denen der Erfolg des Modells ausgewertet wird? Wie wissen Sie, dass das Modell "gut genug" ist?  
   
 -   Möchten Sie mit dem Data Mining-Modell Vorhersagen machen oder nur interessante Muster oder Zusammenhänge aufdecken?  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66080938"
   
  Nehmen Sie sich etwas Zeit, um die Verteilung der Werte zu überprüfen und potenzielle Probleme wie fehlende Werte oder Platzhalter zu bestimmen.  
   
- Wenn Sie zum Ausführen von Datamining für ein Dataset, das war zu groß oder komplex, dass Sie sie mit anderen Methoden analysieren konnte nicht planen, sollten Sie Sie Sampling oder eine Reduzierung der Datenmenge.  
+ Wenn Sie planen, Data Mining für ein DataSet auszuführen, das so groß oder komplex war, dass Sie es nicht mit anderen Methoden analysieren konnten, sollten Sie die Stichprobenentnahme oder die Daten Reduzierung in Erwägung ziehen.  
   
 -   Wie sind die Daten gestreut?  
   
@@ -86,12 +86,12 @@ ms.locfileid: "66080938"
   
  Nach dem Abschluss des Modells sollten Sie die Ergebnisse eingehend überprüfen und Möglichkeiten ermitteln, die Daten zu ergänzen oder bessere Ergebnisse zu erzielen. Es ist außerordentlich selten, dass das erste Modell bereits alle Antworten liefert. Das Data Mining ist normalerweise ein iterativer Prozess.  
   
- Wenn Sie versuchen, Ihre Daten anders zu klassifizieren, oder Hinzufügen neuer Spalten zu verwenden, denken Sie daran den **Dokumentmodell** Assistenten, um eine Momentaufnahme der Metadaten und die Ergebnisse jedes einzelnen Modells aufzuzeichnen. Auf der Grundlage lückenloser Aufzeichnungen können Sie den Fortschritt Ihrer Untersuchungen besser nachverfolgen.  
+ Wenn Sie versuchen, die Daten auf verschiedene Weise zu klassifiverwenden oder neue Spalten hinzuzufügen, denken Sie daran, mit dem **Dokument Modell** -Assistenten eine Momentaufnahme der Metadaten und Ergebnisse jedes Modells zu erfassen. Auf der Grundlage lückenloser Aufzeichnungen können Sie den Fortschritt Ihrer Untersuchungen besser nachverfolgen.  
   
  [Durchsuchen und Bereinigen von Daten](exploring-and-cleaning-data.md)  
   
 ## <a name="validate-your-model"></a>Überprüfen des Modells  
- Wenn Sie die einzelnen Assistenten und Tools ausführen, analysiert der Algorithmus die Inhalte der Daten und bestimmt, ob ein statistisch gültiges Muster vorliegt. Wenn der Algorithmus keine gültigen Muster finden kann, erhalten Sie eine Fehlermeldung angezeigt. Auch wenn ein Modell erfolgreich erstellt wurde, sollten Sie jedoch testen, um festzustellen, ob Ihre Annahmen bestätigt. Können Sie Tools wie z. B. die [Genauigkeitsdiagramm &#40;SQL Server Data Mining-Add-ins&#41; ](accuracy-chart-sql-server-data-mining-add-ins.md) oder [Kreuzvalidierung &#40;SQL Server Data Mining-Add-ins&#41; ](cross-validation-sql-server-data-mining-add-ins.md) um statistische zu erzeugen. Measures zur modellqualität.  
+ Wenn Sie die einzelnen Assistenten und Tools ausführen, analysiert der Algorithmus die Inhalte der Daten und bestimmt, ob ein statistisch gültiges Muster vorliegt. Wenn der Algorithmus keine gültigen Muster finden kann, erhalten Sie eine Fehlermeldung. Auch wenn ein Modell erfolgreich erstellt wurde, sollten Sie das Modell testen, um festzustellen, ob es Ihre Annahmen überprüft. Sie können Tools wie das [Genauigkeits Diagramm &#40;SQL Server Data Mining-Add-ins&#41;](accuracy-chart-sql-server-data-mining-add-ins.md) oder die [Kreuz Validierung &#40;SQL Server Data Mining-Add-ins](cross-validation-sql-server-data-mining-add-ins.md) verwenden, um statistische Measures der Modellqualität zu liefern.  
   
  Stellen Sie sich Fragen wie die Folgenden, während Sie die Ergebnisse des ersten Modells beurteilen:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "66080938"
   
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  
   
- [Datamining-Client für Excel &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
+ [Data Mining-Client für Excel &#40;SQL Server Data Mining-Add-ins&#41;](data-mining-client-for-excel-sql-server-data-mining-add-ins.md)  
   
  [Auswählen eines Modells](choosing-a-model.md)  
   
@@ -122,12 +122,12 @@ ms.locfileid: "66080938"
   
  Eine wichtige Aufgabe von Data Mining-Modellen besteht in der Erstellung von Vorhersagen und Empfehlungen. Die Data Mining-Add-Ins für Excel umfassen Tools, mit denen sich sogar komplexe Vorhersageabfragen auf einfache Weise erstellen lassen, um fundierte Einblicke in verwertbare Ergebnisse zu verwandeln. Alle Tools sind vollständig in Excel integriert.  
   
- [Anzeigen von Modellen &#40;Data Mining-Add-ins für Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
+ [Anzeigen von Modellen &#40;Data Mining-Add-Ins für Office&#41;](viewing-models-data-mining-add-ins-for-office.md)  
   
- [Validieren von Modellen und Verwenden von Modellen für Vorhersagen &#40;Data Mining-Add-ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
+ [Validieren von Modellen und Verwenden von Modellen für Vorhersage &#40;Data Mining-Add-Ins für Excel&#41;](validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Was ist in der Data Mining-Add-Ins für Office enthalten](what-s-included-in-the-data-mining-add-ins-for-office.md)   
- [Technische Referenz für den &#40;Data Mining-Add-ins für Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Was ist in den Data Mining-Add-Ins für Office enthalten?](what-s-included-in-the-data-mining-add-ins-for-office.md)   
+ [Technische Referenz &#40;Data Mining-Add-Ins für Excel&#41;](technical-reference-data-mining-add-ins-for-excel.md)  
   
   

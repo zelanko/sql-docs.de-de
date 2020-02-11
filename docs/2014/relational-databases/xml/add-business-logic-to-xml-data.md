@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211563"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Hinzufügen von Geschäftslogik zu XML-Daten
@@ -30,8 +30,8 @@ ms.locfileid: "68211563"
   
 -   Sie können gespeicherte Transact-SQL-Prozeduren und -Funktionen schreiben, mit denen das Verarbeiten der XML-Spalte für Ihre Unternehmensanforderungen gestartet wird.  
   
-## <a name="example-applying-xsl-transformation"></a>Beispiel: Anwenden von XSL-Transformationen  
- Angenommen, eine CLR-Funktion **TransformXml()** , akzeptiert eine `xml` Daten-Datentypinstanz und eine XSL-Transformation, die in einer Datei gespeichert, wendet die Transformation auf die XML-Daten und gibt dann den transformierten XML-Code im Ergebnis zurück. Es folgt eine Skeleton-Funktion, die in C# geschrieben ist:  
+## <a name="example-applying-xsl-transformation"></a>Beispiel: Anwenden der XSL-Transformation  
+ Angenommen, eine CLR-Funktion **TransformXML ()** nimmt `xml` eine-Datentyp Instanz und eine in einer Datei gespeicherte XSL-Transformation an, wendet die Transformation auf die XML-Daten an und gibt dann den transformierten XML-Code im Ergebnis zurück. Es folgt eine Skeleton-Funktion, die in C# geschrieben ist:  
   
 ```  
 public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {  

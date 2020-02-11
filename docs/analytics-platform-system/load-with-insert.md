@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bbcf1a8bd16d7446841bb6d7dd86bd1ad350280d
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401019"
 ---
 # <a name="load-data-with-insert-into-parallel-data-warehouse"></a>Laden von Daten mit INSERT INTO parallel Data Warehouse
@@ -158,7 +158,7 @@ In der folgenden Tabelle sind die zulässigen Formate und Regeln für das Einfü
 ## <a name="see-also"></a>Weitere Informationen  
  
 [Verteilte Daten](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
-[Setze](../t-sql/statements/insert-transact-sql.md)  
+[INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS
 [Grant permissions to load data](grant-permissions-to-load-data.md)  

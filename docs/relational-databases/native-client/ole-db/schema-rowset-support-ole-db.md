@@ -18,21 +18,21 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 316bfd740f909321798cc2203af9577c5ef6e404
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73759555"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Schemarowset-Unterstützung (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch das Zurückgeben von Schema Informationen von einem Verbindungs Server bei der Verarbeitung [!INCLUDE[tsql](../../../includes/tsql-md.md)] verteilter Abfragen.  
+  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt auch das Zurückgeben von Schema Informationen von [!INCLUDE[tsql](../../../includes/tsql-md.md)] einem Verbindungs Server bei der Verarbeitung verteilter Abfragen.  
   
 > [!NOTE]  
 >  Obwohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Synonyme unterstützt, werden Metadaten für Synonyme nicht von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zurückgegeben.  
   
- In der folgenden Tabelle sind die Schemarowsets und die Einschränkungs Spalten aufgelistet, die vom [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt werden  
+ In der folgenden Tabelle sind die Schemarowsets und die Einschränkungs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Spalten aufgelistet, die vom Native Client-OLE DB Anbieter unterstützt werden  
   
 |Schemarowset|Einschränkungsspalten|  
 |-------------------|-------------------------|  
@@ -57,8 +57,8 @@ ms.locfileid: "73759555"
   
  [LINKEDSERVERS-Rowset &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE DB&#41; ](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
  [Verwenden von benutzerdefinierten Typen](../../../relational-databases/native-client/features/using-user-defined-types.md)  
   
   

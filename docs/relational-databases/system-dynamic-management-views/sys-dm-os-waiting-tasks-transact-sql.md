@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72260382"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -33,34 +33,34 @@ ms.locfileid: "72260382"
   Gibt Informationen zur Warteschlange von Tasks zurück, die auf eine Ressource warten. Weitere Informationen zu Aufgaben finden Sie im [Handbuch zur Thread-und Task Architektur](../../relational-databases/thread-and-task-architecture-guide.md).
    
 > [!NOTE]  
->  Um dies aus [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] oder [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_waiting_tasks**.  
+>  Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_os_waiting_tasks**.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|Adresse des wartenden Tasks.|  
 |**session_id**|**smallint**|ID der Sitzung, die dem Task zugeordnet ist.|  
 |**exec_context_id**|**int**|ID des Ausführungskontexts, der dem Task zugeordnet ist.|  
-|**wait_duration_ms**|**bigint**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit ist **signal_wait_time**.|  
-|**wait_type**|**nvarchar(60)**|Name des Wartetyps.|  
+|**wait_duration_ms**|**BIGINT**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit ist **signal_wait_time**.|  
+|**wait_type**|**nvarchar (60)**|Der Name des Wartetyps.|  
 |**resource_address**|**varbinary(8)**|Adresse der Ressource, auf die der Task wartet.|  
 |**blocking_task_address**|**varbinary(8)**|Task, der derzeit diese Ressource verwendet.|  
 |**blocking_session_id**|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte aufgrund interner Latchstatusübergänge nicht bestimmt werden.|  
 |**blocking_exec_context_id**|**int**|ID des Ausführungskontexts des blockierenden Tasks.|  
-|**resource_description**|**nvarchar(3072)**|Beschreibung der verwendeten Ressource. Weitere Informationen finden Sie in der unten stehenden Liste.|  
-|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)][!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
+|**resource_description**|**nvarchar (3072)**|Beschreibung der verwendeten Ressource. Weitere Informationen finden Sie in der unten stehenden Liste.|  
+|**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="resource_description-column"></a>resource_description-Spalte  
- Die resource_description Spalte verfügt über die folgenden möglichen Werte.  
+ Für die resource_description-Spalte sind folgende Werte möglich.  
   
- **Besitzer der Thread Pool Ressource:**  
+ **Ressourcenbesitzer des Threadpools:**  
   
--   threadpool id=scheduler\<hex-address>  
+-   Thread Pool-ID = "\<Scheduler Hex-Address>"  
   
- **Besitzer der parallelen Abfrage Ressource:**  
+ **Ressourcenbesitzer der parallelen Abfrage:**  
   
--   exchangeevent-ID = {Port | Pipe}\<Hex-Address > waittype =\<Exchange-Wait-Type > NodeId =\<Exchange-Node-ID >  
+-   exchangeevent-ID = {Port | Pipe}\<Hex-Address> waittype =\<Exchange-Wait-Type> NodeId =\<Exchange-Node-ID>  
   
- **Exchange-Wait-Type:**  
+ **Exchange-wait-type:**  
   
 -   e_waitNone  
   
@@ -76,45 +76,45 @@ ms.locfileid: "72260382"
   
 -   e_waitRange  
   
- **Sperren des Ressourcen Besitzers:**  
+ **Besitzer der LOCK-Ressource:**  
   
--   \<type-specific-Description > ID = Lock\<Lock-Hex-Address > Mode =\<Mode > AssociatedObjectId =\<zugeordnete-obj-ID >  
+-   \<type-specific-Description> ID = Lock\<Lock-Hex-Address> Mode =\<Mode> AssociatedObjectId =\<zugeordnete-obj-ID>  
   
-     **\<type-specific-Description-> können wie folgt lauten:**  
+     **\<Typspezifischer Beschreibung> können folgende sein:**  
   
-    -   Für Datenbank: databaselock subresource =\<databaselock-subresource > DBID =\<DB-ID >  
+    -   Für Datenbank: databaselock subresource =\<databaselock-subresource> DBID =\<DB-ID>  
   
-    -   Für file: FILELOCK fileid =\<File-ID > subresource =\<FILELOCK-subresource > DBID =\<DB-ID >  
+    -   Für file: FILELOCK fileid =\<File-ID> subresource =\<FILELOCK-subresource> DBID =\<DB-ID>  
   
-    -   Für Object: objectlock lockpartition =\<Lock-Partition-ID > objID =\<obj-ID > subresource =\<objectlock-subresource > DBID =\<DB-ID >  
+    -   Für Objekt: objectlock lockpartition =\<Lock-Partition-ID> objID =\<obj-ID> subresource =\<objectlock-subresource> DBID =\<DB-ID>  
   
-    -   Für page: PAGELOCK fleid =\<Datei-ID > pageID =\<Page-ID > DBID =\<DB-ID > subresource =\<PAGELOCK-subresource >  
+    -   Für page: PAGELOCK fleid =\<File-ID> pageID =\<Page-ID> DBID =\<DB-ID> subresource =\<PAGELOCK-subresource>  
   
-    -   Für Key: Keylock Hobtid =\<HoBt-ID > DBID =\<DB-ID >  
+    -   Für Key: Keylock Hobtid =\<HoBt-ID> DBID =\<DB-ID>  
   
-    -   Für Block: extentlock-Datei-ID =\<Datei-ID > pageID =\<Page-ID > DBID =\<DB-ID >  
+    -   Für Block: extentlock fleid =\<File-ID> pageID =\<Page-ID> DBID =\<DB-ID>  
   
-    -   Für RID: ridlock fleid =\<Datei-ID > pageID =\<Page-ID > DBID =\<DB-ID >  
+    -   Für RID: ridlock fleid =\<File-ID> pageID =\<Page-ID> DBID =\<DB-ID>  
   
-    -   Für Application: applicationlock Hash =\<Hash > databaseprincipalid =\<Rollen-ID > DBID =\<DB-ID >  
+    -   Für Application: applicationlock Hash =\<Hash> databaseprincipalid =\<Role-ID> DBID =\<DB-ID>  
   
-    -   Für Metadaten: metadatalock subresource =\<Metadata-subresource > ClassID =\<metadatalock-Description > DBID =\<DB-ID >  
+    -   Für Metadaten: metadatalock subresource =\<Metadata-subresource> ClassID =\<metadatalock-Description> DBID =\<DB-ID>  
   
-    -   Für HoBT: hobtlock Hobtid =\<HoBt-ID > subresource =\<HoBT-subresource > DBID =\<DB-ID >  
+    -   Für HoBT: hobtlock Hobtid =\<HoBt-ID> subresource =\<HoBT-subresource> DBID =\<DB-ID>  
   
-    -   Für ALLOCATION_UNIT: Zuordnungseinheits-Sperr-ID =\<HoBt-ID > subresource =\<Zuordnungseinheits-unter Bericht > DBID =\<DB-ID >  
+    -   Für ALLOCATION_UNIT: Zuordnungseinheits Sperr-ID =\<HoBt-ID> subresource =\<Zuordnungseinheits-subresource> DBID =\<DB-ID>  
   
-     **\<Modus > kann sein:**  
+     **\<der Modus> kann sein:**  
   
      Sch-S, Sch-M, S, U, X, IS, IU, IX, SIU, SIX, UIX, BU, RangeS-S, RangeS-U, RangeI-N, RangeI-S, RangeI-U, RangeI-X, RangeX-, RangeX-U, RangeX-X  
   
- **Besitzer externer Ressourcen:**  
+ **Besitzer der externen Ressource:**  
   
--   Externer ExternalResource =\<-Wartetyp >  
+-   Externer ExternalResource =\<Wait-Type>  
   
- **Besitzer der generischen Ressource:**  
+ **Besitzer der allgemeinen Ressource:**  
   
--   Transaktionmutex transaktioninfo Workspace =\<Arbeitsbereichs-ID >  
+-   Transaktionmutex transaktioninfo Workspace =\<Workspace-ID>  
   
 -   Mutex  
   
@@ -126,29 +126,29 @@ ms.locfileid: "72260382"
   
 -   resourceWait  
   
- **Latchressourcenbesitzer:**  
+ **Besitzer der Latchressource:**  
   
--   \<db-id>:\<file-id>:\<page-in-file>  
+-   \<DB-ID->\<: Datei-ID-\<>: Seite-in-file->  
   
--   \<GUID>  
+-   \<GUID->  
   
--   \<Latchklasse > (\<Latch-Address >)  
+-   \<Latch-Class> (\<Latch-Address>)  
   
 ## <a name="permissions"></a>Berechtigungen
 
-Auf [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist `VIEW SERVER STATE` Berechtigung erforderlich.   
-Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE`-Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard-und Basic-Tarifen ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
+In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
+Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
  
 ## <a name="example"></a>Beispiel
-In diesem Beispiel werden blockierte Sitzungen identifiziert. Führen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] Abfrage in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]aus.
+In diesem Beispiel werden blockierte Sitzungen identifiziert. Führen Sie [!INCLUDE[tsql](../../includes/tsql-md.md)] die Abfrage [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in aus.
 
 ```sql
 SELECT * FROM sys.dm_os_waiting_tasks 
 WHERE blocking_session_id IS NOT NULL; 
 ``` 
   
-## <a name="see-also"></a>Siehe auch  
-[SQL Server mit dem Betriebs System verbundene dynamische &#40;Verwaltungs Sichten Transact&#41; -SQL](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
+## <a name="see-also"></a>Weitere Informationen  
+[SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)      
 [Handbuch zur Thread- und Taskarchitektur](../../relational-databases/thread-and-task-architecture-guide.md)     
    
  

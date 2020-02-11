@@ -1,5 +1,5 @@
 ---
-title: Verwenden Sie Sp_rename, benennen Sie die doppelten Indexnamen | Microsoft-Dokumentation
+title: Verwenden von sp_rename zum Umbenennen des Namens eines doppelten Indexes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ca4efb2a16f615af57e89fa56a4dcb8bdb3bf5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091360"
 ---
-# <a name="use-sprename-to-rename-duplicate-index-name"></a>Verwenden Sie bei doppelten Indexnamen 'sp_rename' zum Umbenennen
+# <a name="use-sp_rename-to-rename-duplicate-index-name"></a>Verwenden Sie bei doppelten Indexnamen 'sp_rename' zum Umbenennen
   Der Upgrade Advisor hat doppelte Tabellen- oder Sichtindexnamen erkannt. Vor dem Upgrade müssen Sie die Indizes umbenennen, um Duplikate zu entfernen.  
   
 ## <a name="component"></a>Komponente  
@@ -42,7 +42,7 @@ ms.locfileid: "66091360"
           AND i.name = o.name and i.indid < o.indid);  
     ```  
   
-2.  Verwendung **Sp_rename** ändern Sie einen der Indexnamen. Da die Indexnamen identisch sind, können Sie nicht bestimmen, welcher Index umbenannt wird. Durch diesen Schritt können Sie die Indizes unterscheiden.  
+2.  Verwenden Sie **sp_rename** , um einen der Indexnamen zu ändern. Da die Indexnamen identisch sind, können Sie nicht bestimmen, welcher Index umbenannt wird. Durch diesen Schritt können Sie die Indizes unterscheiden.  
   
     ```  
     EXEC sp_rename N'table_name.index_name', N'new_index_name', N'INDEX'  
@@ -58,10 +58,10 @@ ms.locfileid: "66091360"
     WHERE i.id = OBJECT_ID('table_or_view_name')  
     ```  
   
-4.  Verwenden Sie bei Bedarf **Sp_rename** erneut aus, um die Indexnamen zu korrigieren.  
+4.  Verwenden Sie ggf. **sp_rename** erneut, um die Indexnamen zu korrigieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

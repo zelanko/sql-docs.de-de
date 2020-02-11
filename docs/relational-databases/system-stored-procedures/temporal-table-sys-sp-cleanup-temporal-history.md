@@ -10,17 +10,17 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 302291ae42fa5fbb2f7dea94ccdb9f659379f5bc
-ms.sourcegitcommit: f018eb3caedabfcde553f9a5fc9c3e381c563f1a
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74165825"
 ---
 # <a name="syssp_cleanup_temporal_history-transact-sql"></a>sys. sp_cleanup_temporal_history (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 Entfernt alle Zeilen aus einer temporalen Verlaufs Tabelle, die mit konfiguriertem HISTORY_RETENTION Zeitraum innerhalb einer einzelnen Transaktion identisch sind.
 
@@ -44,7 +44,7 @@ Der Name des Schemas, zu dem die aktuelle Temporale Tabelle gehört.
 
 Der Output-Parameter, der die Anzahl der gelöschten Zeilen zurückgibt. Wenn in der Verlaufs Tabelle ein gruppierter columnstore--Index verwendet wird, gibt dieser Parameter immer 0 zurück.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Diese gespeicherte Prozedur kann nur für temporale Tabellen verwendet werden, für die eine begrenzte Beibehaltungs Dauer festgelegt wurde.
 Verwenden Sie diese gespeicherte Prozedur nur, wenn Sie alle veralteten Zeilen aus der Verlaufs Tabelle sofort bereinigen müssen. Sie sollten wissen, dass sich dies erheblich auf das Daten Bank Protokoll und das e/a-Subsystem auswirken kann, wenn alle berechtigten Zeilen innerhalb derselben Transaktion gelöscht werden.

@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 88fb0cda002694d87cad94dd8032811f6451f1cd
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245125"
 ---
 # <a name="find-results-windows"></a>Fenster Suchergebnisse
-  In den beiden Fenstern Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **in Dateien suchen** oder **in Dateien ersetzen** des Dialog Felds **Suchen und ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  
+  In den beiden Fenstern mit der Bezeichnung Suchergebnisse werden Übereinstimmungen angezeigt, die mithilfe der Registerkarten **In Dateien suchen** oder **In Dateien ersetzen** des Dialogfelds **Suchen und Ersetzen** gefunden wurden. Mit dem Befehl **Ergebnisoptionen** für **In Dateien suchen** und **In Dateien ersetzen** können Sie das Fenster Suchergebnisse auswählen, in dem gefundene Übereinstimmungen aufgeführt werden.  
   
  Wenn Übereinstimmungen gefunden werden, wird das ausgewählte Fenster Suchergebnisse immer automatisch geöffnet. Wenn Sie ein Fenster mit der Bezeichnung Suchergebnisse manuell öffnen möchten, klicken Sie im Menü **Ansicht** auf **Weitere Fenster** , und klicken Sie anschließend auf **Suchergebnisse 1** oder **Suchergebnisse 2**.  
   
@@ -34,13 +34,13 @@ ms.locfileid: "75245125"
  **Seitenflag + Pfeil nach oben**  
  Wechselt zur Zeile, in der die ausgewählte Übereinstimmung gefunden wurde.  
   
- **Seite und nach-links-Taste**  
+ **Seite + Pfeil nach links**  
  Wechselt zur Zeile mit der vorherigen Übereinstimmung.  
   
- **Seite + nach-rechts-Taste**  
+ **Seite + Pfeil nach rechts**  
  Wechselt zur Zeile mit der nächsten Übereinstimmung.  
   
- **Alle löschen**  
+ **Auswahl aufheben**  
  Entfernt alle Übereinstimmungen aus der Liste der **Ergebnisse** .  
   
 ## <a name="shortcut-keys"></a>Tastenkombinationen  

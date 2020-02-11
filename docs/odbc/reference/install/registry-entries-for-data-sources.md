@@ -17,10 +17,10 @@ ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70009356"
 ---
 # <a name="registry-entries-for-data-sources"></a>Registrierungseinträge für Datenquellen
@@ -37,7 +37,7 @@ ms.locfileid: "70009356"
  HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
  ```
 
- Welcher Schlüssel verwendet wird, hängt davon ab, ob es sich bei der Datenquelle um eine *Systemdaten Quelle handelt,* die für alle Benutzer verfügbar ist, oder um eine *Benutzerdaten Quelle,* die nur für den aktuellen Benutzer verfügbar ist. System Datenquellen werden in der HKEY_LOCAL_MACHINE-Struktur gespeichert, und Benutzerdaten Quellen werden in der HKEY_CURRENT_USER-Struktur gespeichert. In allen anderen Punkten sind Systemdaten Quellen und Benutzerdaten Quellen identisch.  
+ Welcher Schlüssel verwendet wird, hängt davon ab, ob es sich bei der Datenquelle um eine *Systemdaten Quelle handelt,* die für alle Benutzer verfügbar ist, oder um eine *Benutzerdaten Quelle,* die nur für den aktuellen Benutzer verfügbar ist. System Datenquellen werden in der HKEY_LOCAL_MACHINE Struktur gespeichert, und Benutzerdaten Quellen werden in der HKEY_CURRENT_USER Struktur gespeichert. In allen anderen Punkten sind Systemdaten Quellen und Benutzerdaten Quellen identisch.  
   
  Dieser Abschnitt enthält die folgenden Themen:  
   

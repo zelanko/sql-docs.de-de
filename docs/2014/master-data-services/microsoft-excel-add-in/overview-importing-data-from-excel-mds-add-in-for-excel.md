@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479030"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Veröffentlichen von Daten (MDS-Add-In für Excel)
@@ -35,7 +35,7 @@ ms.locfileid: "65479030"
   
 -   Sie können keine Löschungen kommentieren, obwohl Löschungen als Transaktionen gespeichert werden, die von einem Administrator umgekehrt werden können.  
   
--   Wenn Sie ändern die **Code** Wert für ein Mitglied ist es nicht als Transaktion aufgezeichnet, und alle vorherige Transaktionen für das Element nicht verfügbar sind.  
+-   Wenn Sie den **Codewert** für ein Element ändern, wird er nicht als Transaktion aufgezeichnet, und alle vorherigen Transaktionen für den Member sind nicht verfügbar.  
   
 -   Sie können Transaktionen anzeigen, die von anderen Benutzern an einem Element vorgenommen wurden. Sie können auch alle Transaktionen anzeigen, die Sie an einem Element vorgenommen haben, auch wenn Sie nicht mehr über die Berechtigung für bestimmte Attribute verfügen.  
   
@@ -51,12 +51,12 @@ ms.locfileid: "65479030"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Veröffentlichen Sie Daten vom aktiven Arbeitsblatt zurück zum MDS-Repository.|[Veröffentlichen von Daten aus Excel nach MDS &#40;MDS-Add-in für Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Löschen Sie eine Zeile aus dem MDS-Repository und vom Arbeitsblatt zur gleichen Zeit.|[Löschen einer Zeile &#40;MDS-Add-In für Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Veröffentlichen Sie Daten vom aktiven Arbeitsblatt zurück zum MDS-Repository.|[Daten aus Excel in MDS &#40;MDS-Add-in für Excel veröffentlichen&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
+|Löschen Sie eine Zeile aus dem MDS-Repository und vom Arbeitsblatt zur gleichen Zeit.|[Zeilen &#40;MDS-Add-in für Excel löschen&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Aktualisieren von Daten &#40;MDS-Add-In für Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [Aktualisieren von Daten &#40;MDS-Add-in für Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

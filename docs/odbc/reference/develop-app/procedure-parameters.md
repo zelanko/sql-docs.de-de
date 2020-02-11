@@ -1,5 +1,5 @@
 ---
-title: Prozedurparameter | Microsoft-Dokumentation
+title: Prozedur Parameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,43 +13,43 @@ ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67912301"
 ---
 # <a name="procedure-parameters"></a>Prozedurparameter
-In Prozeduraufrufen können eingegeben werden, Eingabe/Ausgabe- oder Ausgabeparameter enthalten. Dies unterscheidet sich von Parametern in allen anderen SQL-Anweisungen, die immer Eingabeparameter sind.  
+Parameter in Prozedur aufrufen können Eingabe-, Eingabe-/Ausgabe-oder Ausgabeparameter sein. Dies unterscheidet sich von den Parametern aller anderen SQL-Anweisungen, bei denen es sich immer um Eingabeparameter handelt.  
   
- Eingabeparameter werden verwendet, um Werte für die Prozedur zu senden. Nehmen wir beispielsweise an, dass die Parts-Tabelle die Spalten PartID, Beschreibung und Preis verfügt. Die Prozedur InsertPart möglicherweise einen Eingabeparameter für jede Spalte in der Tabelle. Zum Beispiel:  
+ Eingabeparameter werden verwendet, um Werte an die Prozedur zu senden. Angenommen, die parts-Tabelle enthält die Spalten partid, Description und Price. Die insertpart-Prozedur kann über einen Eingabeparameter für jede Spalte in der Tabelle verfügen. Beispiel:  
   
 ```  
 {call InsertPart(?, ?, ?)}  
 ```  
   
- Ein Treiber sollte nicht ändern Sie den Inhalt von einem Eingabepuffer bis **SQLExecDirect** oder **SQLExecute** SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_NO_DATA zurückgibt. Der Inhalt des Eingabepuffers sollte nicht geändert werden zwar **SQLExecDirect** oder **SQLExecute** gibt SQL_NEED_DATA oder SQL_STILL_EXECUTING zurück.  
+ Ein Treiber sollte den Inhalt eines Eingabe Puffers erst ändern, wenn **SQLExecDirect** oder **SQLExecute** SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_NO_DATA zurückgibt. Der Inhalt des Eingabe Puffers sollte nicht geändert werden, während **SQLExecDirect** oder **SQLExecute** SQL_NEED_DATA oder SQL_STILL_EXECUTING zurückgibt.  
   
- Eingabe/Ausgabe-Parameter werden verwendet, um Werte an Prozeduren senden und Abrufen von Werten aus Prozeduren. Mit dem gleichen Parameter wie sowohl Eingabe-als auch ein Output-Parameter ist verwirrend sein und sollte vermieden werden. Nehmen wir beispielsweise an eine Prozedur akzeptiert eine Auftrags-ID und gibt die ID des Kunden zurück. Dies kann mit einem einzelnen Eingabe/Ausgabe-Parameter definiert werden:  
+ Eingabe-/Ausgabeparameter werden verwendet, um Werte an Prozeduren zu senden und Werte aus Verfahren abzurufen. Die Verwendung desselben Parameters, der sowohl ein Eingabe-als auch ein Output-Parameter ist, ist tendenziell verwirrend und sollte vermieden werden. Nehmen wir beispielsweise an, eine Prozedur akzeptiert eine Bestell-ID und gibt die ID des Kunden zurück. Dies kann mit einem einzelnen Eingabe-/Ausgabeparameter definiert werden:  
   
 ```  
 {call GetCustID(?)}  
 ```  
   
- Möglicherweise ist es besser, verwenden Sie zwei Parameter: einen Eingabeparameter für die Bestell-ID und eines Ausgabe- oder Eingabe-/Ausgabeparameter für die Kunden-ID:  
+ Es ist möglicherweise besser, zwei Parameter zu verwenden: einen Eingabeparameter für die Auftrags-ID und einen Output-oder Input/Output-Parameter für die Kunden-ID:  
   
 ```  
 {call GetCustID(?, ?)}  
 ```  
   
- Output-Parameter den Prozedur zurückgegebene Wert abrufen und Abrufen von Werten aus Prozedurargumente verwendet; Prozeduren, die Werte zurückgeben, werden manchmal als bezeichnet *Funktionen*. Nehmen wir beispielsweise an die **GetCustID** erwähnte Verfahren gibt einen Wert, der angibt, ob die Reihenfolge gefunden werden konnte. In den folgenden Aufruf der erste Parameter ist ein Output-Parameter, die zum Abrufen des Prozedur zurückgegebene Wert, der zweite Parameter ist ein Eingabeparameter verwendet, um die Bestell-ID anzugeben, und der dritte Parameter ist ein Output-Parameter verwendet, um die Kunden-ID abzurufen:  
+ Ausgabeparameter werden zum Abrufen des Prozedur Rückgabewerts und zum Abrufen von Werten aus Prozedur Argumenten verwendet. Prozeduren, die Werte zurückgeben, werden mitunter als *Funktionen*bezeichnet. Angenommen, die **getcustid-** Prozedur, die soeben erwähnt wurde, gibt z. b. einen Wert zurück, der angibt, ob Sie die Bestellung finden konnte. Im folgenden-Befehl ist der erste Parameter ein Ausgabeparameter, der zum Abrufen des Prozedur Rückgabewerts verwendet wird. der zweite Parameter ist ein Eingabeparameter, der zum Angeben der Auftrags-ID verwendet wird, und der dritte Parameter ist ein Output-Parameter, der zum Abrufen der Kunden-ID verwendet wird:  
   
 ```  
 {? = call GetCustID(?, ?)}  
 ```  
   
- Treiber Behandeln von Werten für die Eingabe und e/a Parameter in Prozeduren nicht anders als Eingabeparameter in anderen SQL­Anweisungen. Wenn die Anweisung ausgeführt wird, rufen sie die Werte der Variablen für diese Parameter gebunden, und senden sie an der Datenquelle.  
+ Treiber behandeln Werte für Eingabe-und Eingabe-/Ausgabeparameter in Prozeduren, die nicht anders als Eingabeparameter in anderen SQL-Anweisungen Wenn die-Anweisung ausgeführt wird, rufen Sie die Werte der Variablen ab, die an diese Parameter gebunden sind, und senden Sie an die Datenquelle.  
   
- Nachdem die Anweisung ausgeführt wurde, speichern Treiber zurückgegebenen Werte der e/a und Output-Parameter in den Variablen, die an diesen Parameter gebunden. Diese zurückgegebenen Werte nicht garantiert, dass erst festgelegt werden, nachdem alle von der Prozedur zurückgegebene Ergebnisse abgerufen wurden und **SQLMoreResults** SQL_NO_DATA zurückgegeben hat. Wenn die Ausführung der Anweisung zu einem Fehler führt, sind die Inhalte der Eingabe-/Ausgabeparameter Puffer oder in der Ausgabepuffer für die Parameter nicht definiert.  
+ Nachdem die Anweisung ausgeführt wurde, speichern die Treiber die zurückgegebenen Werte der Eingabe-/Ausgabeparameter und Ausgabeparameter in den Variablen, die an diese Parameter gebunden sind. Diese zurückgegebenen Werte werden nicht garantiert festgelegt, bis alle von der Prozedur zurückgegebenen Ergebnisse abgerufen wurden und **SQLMoreResults** SQL_NO_DATA zurückgegeben hat. Wenn das Ausführen der Anweisung zu einem Fehler führt, ist der Inhalt des Eingabe-/ausgabeparameterpuffers oder des Ausgabeparameter Puffers nicht definiert.  
   
- Ruft die Anwendung **SQLProcedure** bestimmen, ob eine Prozedur einen Rückgabewert verfügt. Ruft **SQLProcedureColumns** zum Bestimmen des Typs (Rückgabewert, Eingabe-, Eingabe/Ausgabe- oder Ausgabeparameter) der einzelnen Prozedurparameter.
+ Eine Anwendung ruft **SqlProcedure** auf, um zu bestimmen, ob eine Prozedur über einen Rückgabewert verfügt. Er ruft **sqlprocedurecolrens** auf, um den Typ (Rückgabewert, Eingabe, Eingabe/Ausgabe oder Ausgabe) der einzelnen Prozedur Parameter zu bestimmen.

@@ -13,10 +13,10 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 934b1ed84aa7391ad8cf47e463dd38b37408ec00
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401664"
 ---
 # <a name="syspdw_materialized_view_column_distribution_properties-transact-sql"></a>sys. pdw_materialized_view_column_distribution_properties (Transact-SQL) 
@@ -25,17 +25,17 @@ ms.locfileid: "74401664"
 
 Zeigt Verteilungs Informationen für Spalten in einer materialisierten Sicht an.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|object_id|**wartenden**|ID des Objekts, zu dem die Spalte gehört. |  
-|column_id|**wartenden**|Die ID der Spalte.|  
+|object_id|**int**|ID des Objekts, zu dem die Spalte gehört. |  
+|column_id|**int**|Die ID der Spalte.|  
 |distribution_ordinal|**tinyint**|0 = keine Verteilungs Spalte.</br> 1 = SQL Data Warehouse verwendet diese Spalte, um die materialisierte Sicht zu verteilen.|
  
 ## <a name="permissions"></a>Berechtigungen 
 
 Erfordert die VIEW DATABASE STATE-Berechtigung.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Leistungsoptimierung mit materialisierter Sicht](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [Erstellen Sie eine materialisierte Sicht, und wählen Sie &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   

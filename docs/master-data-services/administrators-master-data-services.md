@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73729792"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "73729792"
   
  Jedes Modell kann mehrere Administratoren aufweisen. Ein Benutzer kann als Modelladministrator für ein Modell, mehrere oder alle Modelle in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Bereitstellung definiert sein.  
   
- Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Create a Model Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
+ Er wird entweder in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] oder programmgesteuert als Modelladministrator festgelegt. Weitere Informationen finden Sie unter [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md).  
   
 ## <a name="entity-administrators"></a>Entitätsadministratoren  
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]handelt es sich bei einem Entitäts Administrator um einen Benutzer mit Administrator Berechtigungen, der dem Entitäts Objekt auf der Registerkarte Modell Objekte zugewiesen ist. Wenn ein Benutzer über Administrator Berechtigungen für eine Entität verfügt, werden alle anderen Berechtigungen für die untergeordneten Objekte der Entität (sowohl Modell Objekt-als auch Element Berechtigungen) von den Administrator Berechtigungen abgelöst und ignoriert.  
@@ -64,18 +64,18 @@ ms.locfileid: "73729792"
   
 ## <a name="comparing-administrator-types"></a>Vergleichen von Administratortypen  
   
-|Administratortyp|und Beschreibung|  
+|Administratortyp|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Administrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Kann ein Administrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Berechtigungen für Funktionsbereiche.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Administrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Kann ein Administrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Berechtigungen für Funktionsbereiche.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.|  
 |Modelladministrator|Kann ein Modelladministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Adminberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in dem bestimmten Modell.|  
 |Entitätsadministrator|Kann ein Entitätsadministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Administratorberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in der bestimmten Entität.<br /><br /> Können die ausstehenden Changesets genehmigen, wenn die Entitätsänderungen genehmigt werden müssen.|  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Sicherheitsverbesserungen](https://go.microsoft.com/fwlink/p/?LinkId=615376), auf msdn.com.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
- [Erstellen einer Master Data Services-Datenbank](../master-data-services/install-windows/create-a-master-data-services-database.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie einen Modell Administrator &#40;Master Data Services&#41;](../master-data-services/create-a-model-administrator-master-data-services.md)   
+ [Erstellen einer Master Data Services Datenbank](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
   

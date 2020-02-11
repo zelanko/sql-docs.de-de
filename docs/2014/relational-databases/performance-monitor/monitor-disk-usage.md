@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 81f0169f8235d94ef2d12753c3164462fcbad44c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63032266"
 ---
 # <a name="monitor-disk-usage"></a>Überwachen der Datenträgerverwendung
@@ -39,6 +39,6 @@ ms.locfileid: "63032266"
   
 -   Isolieren der Datenträgeraktivitäten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- Weitere Informationen finden Sie unter [Überwachen der Datenträgernutzung](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx)  
+ Weitere Informationen finden Sie unter Überwachen der Datenträger [Verwendung](https://social.technet.microsoft.com/wiki/contents/articles/monitoring-disk-usage.aspx) .  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100342"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
@@ -34,16 +34,16 @@ ms.locfileid: "66100342"
   
 ### <a name="to-change-the-report-data-pane-from-a-docked-window-to-a-tabbed-window"></a>So ändern Sie den Berichtsdatenbereich von einem angedockten Fenster in ein Fenster im Registerkartenformat  
   
--   Mit der rechten Maustaste in die Titelleiste im berichtsdatenbereich, und klicken Sie dann auf **Dokument im Registerkartenformat**.  
+-   Klicken Sie mit der rechten Maustaste auf die Titelleiste des Berichtsdaten Bereichs, und klicken Sie dann auf **Dokument im Register**Format.  
   
 ### <a name="to-change-the-report-data-pane-from-a-tabbed-window-to-a-docked-window"></a>So ändern Sie den Berichtsdatenbereich von einem Fenster im Registerkartenformat in ein angedocktes Fenster  
   
--   Mit der rechten Maustaste in der Registerkarte "Berichtsdaten", und klicken Sie dann auf **Andockbar**.  
+-   Klicken Sie mit der rechten Maustaste auf die Registerkarte Berichtsdaten, und klicken Sie dann auf **Docking**  
   
      Um zwischen den letzten beiden Anzeigezuständen umzuschalten, doppelklicken Sie auf die Titelleiste des Berichtsdatenbereichs.  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichtsdatenbereich](../report-data/report-data-pane.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichtsdaten Bereich](../report-data/report-data-pane.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4b9dbae8d8f746bb2e6325f0081fe554c8aa1f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62718147"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Integrierte Kerberos-Authentifizierung (OLE DB)
@@ -23,7 +23,7 @@ ms.locfileid: "62718147"
  Weitere Informationen zu SPNs und Kerberos-Authentifizierung finden Sie unter [Service Principal Name &#40;SPN&#41; Support in Client Connections (Unterstützung von Dienstprinzipalnamen in Clientverbindungen)](../native-client/features/service-principal-name-spn-support-in-client-connections.md).  
   
 ## <a name="example"></a>Beispiel  
- Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei "MyServer" in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) befindet.  
+ Sie müssen einen Server angeben. Ändern Sie in der CPP-Datei „MyServer“ in den Namen eines Computers, auf dem sich eine Instanz von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) befindet.  
   
  Sie müssen auch einen vom Kunden bereitgestellten SPN angeben. Ändern Sie in der CPP-Datei "CPSPN" in einen vom Kunden bereitgestellten SPN.  
   

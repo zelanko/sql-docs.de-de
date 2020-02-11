@@ -22,20 +22,21 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73981778"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörter Trennungen für eine Sprache registriert sind, werden die anderen linguistischen Ressourcen Wort Stamm Erkennungen, Füll Wörter (Stoppwörter) und Thesaurusdateien für Volltextindizierungs-und-Abfrage Vorgänge verfügbar. Der Wert von **Name** oder **LCID** kann in den voll Text Abfragen und den [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen für Volltextindizes angegeben werden.  
+  Diese Katalogsicht enthält eine Zeile pro Sprache, deren Wörtertrennungen bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden. Jede Zeile zeigt die LCID und den Namen der Sprache an. Wenn Wörter Trennungen für eine Sprache registriert sind, werden die anderen linguistischen Ressourcen Wort Stamm Erkennungen, Füll Wörter (Stoppwörter) und Thesaurusdateien für Volltextindizierungs-und-Abfrage Vorgänge verfügbar. Der Wert von **Name** oder **LCID** kann in den voll Text Abfragen und Volltextindex [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen angegeben werden.  
    
-|Spalte|Datentyp|und Beschreibung|  
+|Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
-|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
+|**LCID**|**int**|
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
 |**name**|**sysname**|Ist entweder der Wert des Alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , der dem Wert von **LCID** entspricht, oder die Zeichen folgen Darstellung der numerischen LCID.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
@@ -78,35 +79,35 @@ ms.locfileid: "73981778"
 |**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Polnisch|1045|  
 |Portugiesisch (Brasilien)|1046|  
 |Portugiesisch (Portugal)|2070|  
-|Punjabi|1094|  
+|Pandschabi|1094|  
 |Rumänisch|1048|  
 |Russisch|1049|  
 |Serbisch (Kyrillisch)|3098|  
 |Serbisch (Lateinisch)|2074|  
 |Chinesisch (vereinfacht)|2052|  
-|Slowakisch|1051|  
+|Slowakisch|1.051|  
 |Slowenisch|1060|  
 |Spanisch|3082|  
-|Schwedisch|1053|  
-|Tamil|1097|  
-|Telugu|1098|  
-|Thai|1054|  
+|Schwedisch|1.053|  
+|Tamilisch|1097|  
+|Telugu|1.098|  
+|Thailändisch|1.054|  
 |Chinesisch (traditionell)|1028|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1055|  
+|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1.055|  
 |Ukrainisch|1058|  
 |Urdu|1056|  
 |Vietnamesisch|1066|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Um die Liste der bei der Volltextsuche registrierten Sprachen zu aktualisieren, verwenden Sie [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)"**update_languages**".  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_fulltext_load_thesaurus_file &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md) -   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_fulltext_load_thesaurus_file &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
  [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
- [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
+ [Konfigurieren und Verwalten von Wörter Trennungen und Wort Stamm Erkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Thesaurusdateien für die voll Text Suche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
  [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md)  
