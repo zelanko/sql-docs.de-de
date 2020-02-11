@@ -1,5 +1,5 @@
 ---
-title: LocalDBStartInstance-Funktion | Microsoft-Dokumentation
+title: Localdbstartinstance-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad86f5989fe9ff90132637d062b708423f23eef1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63131493"
 ---
 # <a name="localdbstartinstance-function"></a>LocalDBStartInstance-Funktion
   Startet die angegebene SQL Server Express LocalDB-Instanz.  
   
- **Headerdatei:** sqlncli.h  
+ **Header Datei:** sqlncli. h  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,7 +40,7 @@ HRESULT LocalDBStartInstance(
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *pInstanceName*  
+ *pinstancename*  
  [Eingabe] Der Name der LocalDB-Instanz, die gestartet werden soll.  
   
  *dwFlags*  
@@ -52,7 +52,7 @@ HRESULT LocalDBStartInstance(
  *lpcchSqlConnection*  
  [Eingabe/Ausgabe] Bei Eingabe enthält dieses Objekt die Größe des *wszSqlConnection* -Puffers in Zeichen, einschließlich sämtlicher nachfolgender Nullen. Wenn der angegebene Puffer zu klein ist, enthält dieses Objekt bei Ausgabe die erforderliche Puffergröße in Zeichen, einschließlich sämtlicher nachfolgender Nullen.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -107,16 +107,16 @@ HRESULT LocalDBStartInstance(
 ## <a name="details"></a>Details  
  Das Verbindungspufferargument (*wszSqlConnection*) und das Verbindungspuffergrößen-Argument (*lpcchSqlConnection*) sind optional. In der folgenden Tabelle werden Optionen zum Verwenden dieser Argumente und ihrer Ergebnisse angezeigt.  
   
-|Puffer|Puffergröße|Sinn|Aktion|  
+|Buffer|Puffergröße|Sinn|Action|  
 |------------|-----------------|---------------|------------|  
-|NULL|NULL|Benutzer möchte die Instanz starten und benötigt keinen Pipenamen Name.|Startet eine Instanz (keine Piperückgabe und keine erforderliche Puffergrößenrückgabe).|  
-|NULL|Vorhanden|Benutzer fragt nach der Ausgabepuffergröße. (Im nächsten Aufruf bittet der Benutzer wahrscheinlich um einen tatsächlichen Start.)|Gibt eine erforderliche Puffergröße (kein Start und keine Piperückgabe) zurück. Ergebnis ist S_OK.|  
-|Vorhanden|NULL|Nicht zulässig; falsche Eingabe.|Das zurückgegebene Ergebnis ist LOCALDB_ERROR_INVALID_PARAMETER.|  
-|Vorhanden|Vorhanden|Der Benutzer möchte die Instanz starten und benötigt den Pipenamen, zu dem nach dem Start eine Verbindung hergestellt wird.|Überprüft die Puffergröße, startet die Instanz und gibt den Pipenamen im Puffer zurück. <br />Das puffergrößenargument gibt die Länge zurück. die "Server =" Zeichenfolge nicht mit einer NULL-Werte zu beenden.|  
+|NULL|NULL|Der Benutzer möchte die Instanz starten und benötigt keinen Pipenamen.|Startet eine Instanz (keine Piperückgabe und keine erforderliche Puffergrößenrückgabe).|  
+|NULL|Anzahl|Benutzer fragt nach der Ausgabepuffergröße. (Im nächsten Aufruf bittet der Benutzer wahrscheinlich um einen tatsächlichen Start.)|Gibt eine erforderliche Puffergröße (kein Start und keine Piperückgabe) zurück. Ergebnis ist S_OK.|  
+|Anzahl|NULL|Nicht zulässig; falsche Eingabe.|Das zurückgegebene Ergebnis ist LOCALDB_ERROR_INVALID_PARAMETER.|  
+|Anzahl|Anzahl|Der Benutzer möchte die Instanz starten und benötigt den Pipenamen, zu dem nach dem Start eine Verbindung hergestellt wird.|Überprüft die Puffergröße, startet die Instanz und gibt den Pipenamen im Puffer zurück. <br />Das Puffergrößen Argument gibt die Länge der Zeichenfolge "Server =" zurück, ohne abschließende Nullen.|  
   
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Express LocalDB-Header und -Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Express LocalDB-Header und Versionsinformationen](sql-server-express-localdb-header-and-version-information.md)  
   
   

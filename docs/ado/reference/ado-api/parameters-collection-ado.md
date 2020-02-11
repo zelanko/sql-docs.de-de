@@ -1,5 +1,5 @@
 ---
-title: Parameters-Auflistung (ADO) | Microsoft-Dokumentation
+title: Parameter Auflistung (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,31 +18,31 @@ ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e062c67f0dedf55d63a076725b46d4405918741
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917704"
 ---
 # <a name="parameters-collection-ado"></a>Parameters-Collection (ADO)
-Enthält alle der [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekte von einem [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
+Enthält alle [Parameter](../../../ado/reference/ado-api/parameter-object.md) Objekte eines [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts.  
   
-## <a name="remarks"></a>Hinweise  
- Ein **Befehl** Objekt verfügt über eine **Parameter** -Auflistung, die von **Parameter** Objekte.  
+## <a name="remarks"></a>Bemerkungen  
+ Ein **Command** -Objekt verfügt über eine **Parameter** Auflistung aus **Parameter** Objekten.  
   
- Mithilfe der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode für eine **Befehl** des Objekts **Parameter** Auflistung abruft, Anbieter von Parameterinformationen für die gespeicherte Prozedur oder eine parametrisierte Abfrage Angabe in der **Befehl** Objekt. Einige Anbieter unterstützen kein Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen. Aufrufen der **aktualisieren** Methode für die **Parameter** Auflistung, die bei Verwendung eines solchen Anbieters einen Fehler zurück.  
+ Wenn Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die **Parameter** Auflistung eines **Befehls** Objekts verwenden, werden Anbieter Parameterinformationen für die gespeicherte Prozedur oder parametrisierte Abfrage abgerufen, die im **Command** -Objekt angegeben sind. Einige Anbieter unterstützen keine Aufrufe gespeicherter Prozeduren oder parametrisierte Abfragen. Wenn Sie die **Refresh** -Methode für die **Parameter** Auflistung aufrufen, wenn Sie einen solchen Anbieter verwenden, wird ein Fehler zurückgegeben.  
   
- Wenn Sie keine eigene definiert haben **Parameter** Zugriff auf Objekte, und Sie die **Parameter** Auflistung vor dem Aufruf der **aktualisieren** -Methode, ADO ruft automatisch die Methode, und füllen Sie die Sammlung für Sie.  
+ Wenn Sie keine eigenen **Parameter** Objekte definiert haben und auf die **Parameter** Auflistung zugreifen, bevor Sie die **Aktualisierungs** Methode aufrufen, ruft ADO die-Methode automatisch auf und füllt die-Auflistung für Sie auf.  
   
- Sie können Aufrufe an den Anbieter zur Verbesserung der Leistung, wenn Sie wissen, die Eigenschaften der Parameter der gespeicherten Prozedur zugeordnet oder einer parametrisierten Abfrage, dass Sie aufrufen möchten, minimieren. Verwenden Sie die [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) Methode zum Erstellen **Parameter** Objekte und die entsprechenden Einstellungen und die Verwendung der [Anfügen](../../../ado/reference/ado-api/append-method-ado.md) Methode zum Hinzufügen der  **Parameter** Auflistung. Dadurch können Sie festlegen und Zurückgeben von Werten ohne den Anbieter für die Parameterinformationen aufrufen. Wenn Sie an einen Anbieter schreiben, die keine Parameterinformationen enthält, müssen Sie manuell Auffüllen der **Parameter** Auflistung, die mit dieser Methode, um die Parameter verwenden zu können. Verwenden der [löschen](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) Methode, um entfernen **Parameter** Objekte aus der **Parameter** Auflistung bei Bedarf.  
+ Sie können die Aufrufe des Anbieters minimieren, um die Leistung zu verbessern, wenn Sie die Eigenschaften der Parameter kennen, die der gespeicherten Prozedur oder der parametrisierten Abfrage zugeordnet sind, die Sie aufrufen möchten. Verwenden Sie die Methode " [kreateparameter](../../../ado/reference/ado-api/createparameter-method-ado.md) ", um **Parameter** Objekte mit den entsprechenden Eigenschaften Einstellungen zu erstellen, und fügen Sie Sie mithilfe der [Append](../../../ado/reference/ado-api/append-method-ado.md) -Methode der **Parameter** Auflistung hinzu. Dies ermöglicht es Ihnen, Parameterwerte festzulegen und zurückzugeben, ohne den Anbieter für die Parameterinformationen aufrufen zu müssen. Wenn Sie in einen Anbieter schreiben, der keine Parameterinformationen bereitstellt, müssen Sie die **Parameter** Auflistung mithilfe dieser Methode manuell auffüllen, damit Sie Parameter verwenden können. Verwenden Sie die [Delete](../../../ado/reference/ado-api/delete-method-ado-parameters-collection.md) -Methode, um bei Bedarf **Parameter** Objekte aus der **Parameter** Auflistung zu entfernen.  
   
- Die Objekte in der **Parameter** Auflistung von einer **Recordset** außerhalb des gültigen Bereichs (somit nicht verfügbar) wechseln Sie bei der **Recordset** geschlossen wird.  
+ Die Objekte in der **Parameters** -Auflistung eines **Recordsets** gehen außerhalb des gültigen Bereichs (daher nicht verfügbar), wenn das **Recordset** geschlossen wird.  
   
- Beim Aufrufen einer gespeicherten Prozedur mit **Befehl**, der zurückgegeben Wert/Output-Parameter einer gespeicherten Prozedur wird wie folgt abgerufen:  
+ Beim Aufrufen einer gespeicherten Prozedur mit einem **Befehl**wird der Rückgabewert/Output-Parameter einer gespeicherten Prozedur wie folgt abgerufen:  
   
-1.  Beim Aufrufen einer gespeicherten Prozedur, die keine Parameter besitzt, die **aktualisieren** Methode für die **Parameter** Auflistung aufgerufen werden soll, bevor die **Execute** Methode für die **Befehl** Objekt.  
+1.  Wenn Sie eine gespeicherte Prozedur aufrufen, die über keine Parameter verfügt, sollte die **Aktualisierungs** Methode für die **Parameter** Auflistung aufgerufen werden, bevor die **Execute** -Methode für das **Command** -Objekt aufgerufen wird.  
   
-2.  Beim Aufrufen einer gespeicherten Prozedur mit Parametern und Anfügen von explizit Parameter für die **Parameter** Sammlung mit **Append**, die return-Wert/Output-Parameter angefügt werden muss, um die **Parameter** Auflistung. Der Rückgabewert muss zuerst angefügt werden, um die **Parameter** Auflistung. Verwendung **Anfügen** , fügen die anderen Parameter in der **Parameter** Auflistung in der Reihenfolge der Definition. Die gespeicherte Prozedur SPWithParam hat beispielsweise zwei Parameter. Der erste Parameter, *InParam*, ist ein Eingabeparameter als AdVarChar (20) definiert, und der zweite Parameter, *OutParam*, ist ein Ausgabeparameter, der als AdVarChar (20) definiert. Sie können die return-Wert/Output-Parameter mit dem folgenden Code abrufen.  
+2.  Beim Aufrufen einer gespeicherten Prozedur mit Parametern und dem expliziten Anfügen eines Parameters an die **Parameter** Auflistung mit **Append**sollte der Rückgabewert/Ausgabeparameter an die **Parameter** Auflistung angehängt werden. Der Rückgabewert muss zuerst an die **Parameter** Auflistung angehängt werden. Verwenden **Sie anfügen,** um die anderen Parameter der **Parameter** Auflistung in der Reihenfolge der Definition hinzuzufügen. Beispielsweise verfügt die gespeicherte Prozedur spwithparam über zwei Parameter. Der erste Parameter, *InParam*, ist ein als adVarChar (20) definierter Eingabeparameter, und der zweite Parameter, *outParam*, ist ein Output-Parameter, der als adVarChar (20) definiert ist. Sie können den Rückgabewert/Output-Parameter mit dem folgenden Code abrufen.  
   
     ```vb
     ' Open Connection Conn  
@@ -63,7 +63,7 @@ Enthält alle der [Parameter](../../../ado/reference/ado-api/parameter-object.md
   
     ```  
   
-3.  Beim Aufrufen einer gespeicherten Prozedur mit Parametern und konfigurieren die Parameter durch Aufrufen der **Element** Methode für die **Parameter** -Auflistung, der zurückgegeben Wert/Output-Parameter der gespeicherten Prozedur kann aus abgerufen werden, die **Parameter** Auflistung. Die gespeicherte Prozedur SPWithParam hat beispielsweise zwei Parameter. Der erste Parameter, *InParam*, ist ein Eingabeparameter als AdVarChar (20) definiert, und der zweite Parameter, *OutParam*, ist ein Ausgabeparameter, der als AdVarChar (20) definiert. Sie können die return-Wert/Output-Parameter mit dem folgenden Code abrufen.  
+3.  Wenn eine gespeicherte Prozedur mit Parametern aufgerufen und die Parameter durch Aufrufen der **Item** -Methode für die **Parameter** Auflistung konfiguriert werden, kann der Rückgabewert/Output-Parameter der gespeicherten Prozedur aus der **Parameter** Auflistung abgerufen werden. Beispielsweise verfügt die gespeicherte Prozedur spwithparam über zwei Parameter. Der erste Parameter, *InParam*, ist ein als adVarChar (20) definierter Eingabeparameter, und der zweite Parameter, *outParam*, ist ein Output-Parameter, der als adVarChar (20) definiert ist. Sie können den Rückgabewert/Output-Parameter mit dem folgenden Code abrufen.  
   
     ```vb
     ' Open Connection Conn  
@@ -82,9 +82,9 @@ Enthält alle der [Parameter](../../../ado/reference/ado-api/parameter-object.md
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Parameter-Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
+-   [Parameter Sammlungs Eigenschaften, Methoden und Ereignisse](../../../ado/reference/ado-api/parameters-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Append-Methode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
+ [Kreateparameter-Methode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameter-Objekt](../../../ado/reference/ado-api/parameter-object.md)

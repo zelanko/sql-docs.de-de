@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9f0884a37c443f863cf0c1001bae1242852db3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63135358"
 ---
 # <a name="create-an-alert-using-an-error-number"></a>Create an Alert Using an Error Number
-  In diesem Thema wird beschrieben, wie Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentwarnung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] erstellen, die bei einem Fehler mit einer bestimmten Nummer ausgegeben wird, wenn [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]verwendet wird.  
+  In diesem Thema wird beschrieben, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine-Agent- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Warnung in erstellt wird, die ausgelöst wird, wenn ein Fehler einer bestimmten [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Zahl [!INCLUDE[tsql](../../includes/tsql-md.md)]mithilfe von oder auftritt.  
   
  **In diesem Thema**  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63135358"
   
      [Sicherheit](#Security)  
   
--   **So erstellen Sie eine Warnung mithilfe einer Fehlernummer mit**  
+-   **So erstellen Sie eine Warnung mithilfe einer Fehlernummer mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -42,7 +42,8 @@ ms.locfileid: "63135358"
   
 ###  <a name="Restrictions"></a> Einschränkungen  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lässt sich das gesamte Warnungssystem auf einfache Weise mit einer grafischen Oberfläche verwalten. Dies ist die empfohlene Vorgehensweise, um eine Warnungsinfrastruktur zu konfigurieren.  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lässt sich das gesamte Warnungssystem auf einfache Weise mit einer grafischen Oberfläche verwalten. Dies ist die empfohlene Vorgehensweise, um eine Warnungsinfrastruktur zu konfigurieren.  
   
 -   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher wird von **xp_logevent** erst dann eine Warnung ausgegeben, wenn der **@database_name** -Wert für die Warnung den Wert **'master'** oder NULL hat.  
   
@@ -51,7 +52,7 @@ ms.locfileid: "63135358"
 ####  <a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert**ausführen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-alert-using-an-error-number"></a>So erstellen Sie eine Warnung mithilfe einer Fehlernummer  
   
@@ -71,7 +72,7 @@ ms.locfileid: "63135358"
   
 8.  Klicken Sie unter **Warnungen werden ausgelöst basierend auf**auf **Fehlernummer**, und geben Sie anschließend eine gültige Fehlernummer für diese Warnung ein. Klicken Sie alternativ auf **Schweregrad** , und wählen Sie anschließend den spezifischen Schweregrad, mit dem die Warnung ausgelöst wird.  
   
-9. Aktivieren Sie das Kontrollkästchen neben **Warnung auslösen, wenn eine Meldung Folgendes enthält** , um die Warnung auf eine bestimmte Zeichenfolge zu beschränken, und geben Sie dann ein Schlüsselwort oder Zeichenfolge für den **Meldungstext** ein. Es können maximal 100 Zeichen eingegeben werden.  
+9. Aktivieren Sie das Kontrollkästchen neben **Warnung auslösen, wenn eine Meldung Folgendes enthält** , um die Warnung auf eine bestimmte Zeichenfolge zu beschränken, und geben Sie dann ein Schlüsselwort oder Zeichenfolge für den **Meldungstext**ein. Es können maximal 100 Zeichen eingegeben werden.  
   
 10. Klicken Sie auf **OK**.  
   
@@ -100,6 +101,6 @@ ms.locfileid: "63135358"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_add_alert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
+ Weitere Informationen finden Sie unter [Sp_add_alert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-alert-transact-sql).  
   
   

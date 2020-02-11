@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63126007"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
@@ -29,7 +29,8 @@ ms.locfileid: "63126007"
   
  Bevor Sie den Umbenennungsvorgang beginnen, überprüfen Sie die nachfolgenden Elemente.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt nicht das Umbenennen von Servern, die an der Replikation beteiligt sind. Eine Ausnahme stellt die Verwendung von Protokollversand mit Replikation dar. Der sekundäre Server beim Protokollversand kann umbenannt werden, wenn der primäre Server dauerhaft verloren ist. Weitere Informationen finden Sie unter [Protokollversand und Replikation &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt nicht das Umbenennen von Servern, die an der Replikation beteiligt sind. Eine Ausnahme stellt die Verwendung von Protokollversand mit Replikation dar. Der sekundäre Server beim Protokollversand kann umbenannt werden, wenn der primäre Server dauerhaft verloren ist. Weitere Informationen finden Sie unter [Protokollversand und Replikation &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Wenn Sie einen virtuellen Server umbenennen, der für die Verwendung von Datenbankspiegelung konfiguriert ist, müssen Sie die Datenbankspiegelung vor dem Umbenennungsvorgang deaktivieren und die Datenbankspiegelung mit dem neuen Namen des virtuellen Servers anschließend neu einrichten. Die Metadaten für die Datenbankspiegelung werden nicht automatisch aktualisiert, um den neuen Namen des virtuellen Servers widerzuspiegeln.  
   
@@ -63,19 +64,19 @@ ms.locfileid: "63126007"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Weitere Überlegungen nach dem Umbenennungsvorgang  
  Nachdem der Netzwerkname des Failoverclusters geändert wurde, müssen die folgenden Anweisungen überprüft und ausgeführt werden, damit alle Szenarien in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funktionieren.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nach dem Ändern der Netzwerkname des eine [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Failover cluster-Instanz, die mit Windows-Clusterverwaltungstool umbenannt, Upgrade- oder Deinstallationsvorgang schlägt möglicherweise fehl. Um dieses Problem beheben, Aktualisieren der **ClusterName** -Registrierungseintrag entsprechend die Anweisungen im Abschnitt "Lösung" [dies](https://go.microsoft.com/fwlink/?LinkId=244002) (https://go.microsoft.com/fwlink/?LinkId=244002).  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nachdem Sie den Netzwerknamen einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Failoverclusterinstanz mit dem Windows-Cluster Verwaltungs Tool geändert haben, kann der spätere Aktualisierungs-oder Deinstallations Vorgang fehlschlagen. Um dieses Problem zu beheben, aktualisieren Sie den Registrierungs Eintrag " **Clustername** " gemäß den Anweisungen [](https://go.microsoft.com/fwlink/?LinkId=244002) im Abschnitthttps://go.microsoft.com/fwlink/?LinkId=244002)"Resolution" dieses (.  
   
- **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent-Dienst:** Stellen Sie sicher, und führen Sie die unten genannten zusätzlichen Aktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst:  
+ **-Agent-Dienst: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Überprüfen Sie die folgenden zusätzlichen Aktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Agent-Dienst:  
   
 -   Korrigieren Sie die Registrierungseinstellungen, wenn SQL Agent für die Ereignisweiterleitung konfiguriert ist. Weitere Informationen finden Sie unter [Bestimmen eines Ereignisweiterleitungsservers &#40;SQL Server Management Studio&#41;](../../../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md).  
   
--   Korrigieren Sie die Instanznamen von Masterserver (MSX) und Zielservern (TSX), wenn der Netzwerkname von Computern/Cluster umbenannt wird. Weitere Informationen finden Sie unter den folgenden Themen:  
+-   Korrigieren Sie die Instanznamen von Masterserver (MSX) und Zielservern (TSX), wenn der Netzwerkname von Computern/Cluster umbenannt wird. Weitere Informationen finden Sie in den folgenden Themen:  
   
-    -   [Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
+    -   [Defect Multiple Target Servers from a Master Server](../../../ssms/agent/defect-multiple-target-servers-from-a-master-server.md)  
   
     -   [Erstellen einer Multiserverumgebung](../../../ssms/agent/create-a-multiserver-environment.md)  
   
--   Konfigurieren Sie den Protokollversand neu, damit der aktualisierte Servername für die Sicherungs- und Wiederherstellungsprotokolle verwendet wird. Weitere Informationen finden Sie unter den folgenden Themen:  
+-   Konfigurieren Sie den Protokollversand neu, damit der aktualisierte Servername für die Sicherungs- und Wiederherstellungsprotokolle verwendet wird. Weitere Informationen finden Sie in den folgenden Themen:  
   
     -   [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
@@ -83,7 +84,7 @@ ms.locfileid: "63126007"
   
 -   Aktualisieren Sie die Auftragsschritte, die vom Servernamen abhängen. Weitere Informationen finden Sie unter [Manage Job Steps](../../../ssms/agent/manage-job-steps.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet](../../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)  
   
   

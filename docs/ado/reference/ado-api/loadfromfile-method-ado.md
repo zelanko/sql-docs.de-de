@@ -16,14 +16,14 @@ ms.assetid: b18d8d38-7354-4a94-b637-6ac035faa433
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ce90b13a677246fb64462fbe691eb9e3efaa3c7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67918269"
 ---
 # <a name="loadfromfile-method-ado"></a>LoadFromFile-Methode (ADO)
-Lädt den Inhalt einer vorhandenen Datei in eine [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
+Lädt den Inhalt einer vorhandenen Datei in einen [Stream](../../../ado/reference/ado-api/stream-object-ado.md).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -33,19 +33,19 @@ Stream.LoadFromFileFileName
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *FileName*  
- Ein **Zeichenfolge** -Wert, der den Namen einer Datei geladen werden enthält die **Stream**. *FileName* können alle gültigen Pfad und Namen im UNC-Format enthalten. Wenn die angegebene Datei nicht vorhanden ist, tritt ein Laufzeitfehler auf.  
+ *Einfügen*  
+ Ein **Zeichen** folgen Wert, der den Namen einer Datei enthält, die in den **Stream**geladen werden soll. *Filename* kann einen beliebigen gültigen Pfad und Namen im UNC-Format enthalten. Wenn die angegebene Datei nicht vorhanden ist, tritt ein Laufzeitfehler auf.  
   
-## <a name="remarks"></a>Hinweise  
- Diese Methode kann verwendet werden, beim Laden des Inhalts einer lokalen Datei in eine **Stream** Objekt. Dies kann verwendet werden, um den Inhalt einer lokalen Datei auf einen Server hochzuladen.  
+## <a name="remarks"></a>Bemerkungen  
+ Diese Methode kann verwendet werden, um den Inhalt einer lokalen Datei in ein Daten **Strom** Objekt zu laden. Dies kann verwendet werden, um den Inhalt einer lokalen Datei auf einen Server hochzuladen.  
   
- Die **Stream** Objekt muss bereits vor dem Aufruf geöffnet **LoadFromFile**. Diese Methode ändert sich nicht auf die Bindung des der **Stream** -Objekt wird immer noch auf das Objekt, das von der URL angegebenen gebunden werden oder **Datensatz** mit dem die **Stream** war ursprünglich geöffnet.  
+ Das **Stream** -Objekt muss vor dem Aufruf von **LoadFromFile**bereits geöffnet sein. Mit dieser Methode wird die Bindung des Daten **Strom** Objekts nicht geändert. Sie wird weiterhin an das Objekt gebunden, das von der URL oder dem **Datensatz** angegeben wird, mit dem der **Stream** ursprünglich geöffnet wurde.  
   
- **LoadFromFile** überschreibt den aktuellen Inhalt des der **Stream** Objekt mit Daten aus der Datei gelesen. Alle vorhandenen Bytes in den **Stream** werden durch den Inhalt der Datei überschrieben. Alle folgenden zuvor vorhandenen und verbleibenden Bytes der [EOS](../../../ado/reference/ado-api/eos-property.md) erstellt **LoadFromFile**, werden abgeschnitten.  
+ **LoadFromFile** überschreibt den aktuellen Inhalt des **Streamobjekts** mit aus der Datei gelesenen Daten. Alle vorhandenen Bytes im **Stream** werden durch den Inhalt der Datei überschrieben. Alle bereits vorhandenen und verbleibenden Bytes, die nach der von **LoadFromFile**erstellten [EOS](../../../ado/reference/ado-api/eos-property.md) liegen, werden abgeschnitten.  
   
- Nach einem Aufruf von **LoadFromFile**, die aktuelle Position festgelegt ist, an den Anfang der **Stream** ([Position](../../../ado/reference/ado-api/position-property-ado.md) ist 0).  
+ Nach dem Aufrufen von **LoadFromFile**wird die aktuelle Position auf den Anfang des **Streams** festgelegt ([Position](../../../ado/reference/ado-api/position-property-ado.md) ist 0).  
   
- Da 2 Bytes auf den Anfang des Datenstroms für die Codierung hinzugefügt werden kann, kann die Größe des Streams nicht genau der Größe der Datei übereinstimmen, aus der sie geladen wurde.  
+ Da dem Anfang des Streams für die Codierung 2 Bytes hinzugefügt werden können, entspricht die Größe des Streams möglicherweise nicht exakt der Größe der Datei, aus der Sie geladen wurde.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

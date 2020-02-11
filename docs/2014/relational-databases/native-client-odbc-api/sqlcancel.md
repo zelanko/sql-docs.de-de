@@ -13,17 +13,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8bad2cc35a30f5c6f5855292ff73635cef6072b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067837"
 ---
 # <a name="sqlcancel"></a>SQLCancel
-  Die [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) Thema angegeben, dass in ODBC 2.x, wenn eine Anwendung ruft `SQLCancel` Wenn in der Anweisung keine Verarbeitung erfolgt `SQLCancel` hat dieselbe Wirkung wie das `SQLFreeStmt` mit der `SQL_CLOSE` Option; dies das Verhalten wird nur der Vollständigkeit halber definiert, und Anwendungen sollten Aufrufen `SQLFreeStmt` oder `SQLCloseCursor` um Cursor zu schließen. Aber auch wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anwendung die ODBC API-Version auf 3.5.x oder höher festlegt, verwendet die `SQLCancel`-Funktion das ODBC 2.x-Verhalten.  
+  Das [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516) -Thema besagt, dass in ODBC 2. x, wenn eine `SQLCancel` Anwendung aufruft, wenn keine Verarbeitung für die-Anweisung `SQLCancel` ausgeführt wird, denselben Effekt `SQLFreeStmt` wie bei `SQL_CLOSE` der-Option hat. Dieses Verhalten wird nur aus Gründen der Vollständigkeit definiert, und `SQLFreeStmt` Anwendungen `SQLCloseCursor` sollten oder zum Schließen von Cursorn aufruft. Aber auch wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Anwendung die ODBC API-Version auf 3.5.x oder höher festlegt, verwendet die `SQLCancel`-Funktion das ODBC 2.x-Verhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQLCancel](https://go.microsoft.com/fwlink/?LinkId=203516)   
- [ODBC-API-Implementierungsdetails](odbc-api-implementation-details.md)  
+ [ODBC API Implementation Details](odbc-api-implementation-details.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQLSetDriverConnectInfo-Funktion | Microsoft-Dokumentation
+title: Sqlsetdriverconnectinfo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 54e37940062427008e9b90f6cda4cec825a721ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67915289"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>SQLSetDriverConnectInfo-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-3,81 Standardkompatibilität: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,81 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLSetDriverConnectInfo** dient zum Festlegen der Verbindungszeichenfolge in das Verbindungstoken für die Informationen für einer Anwendung **SQLDriverConnect** aufrufen.  
+ **Sqlsetdriverconnectinfo** wird verwendet, um die Verbindungs Zeichenfolge in das Verbindungs Informations Token für den **SQLDriverConnect** -Befehl einer Anwendung festzulegen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -37,31 +37,31 @@ SQLRETURN SQLSetDriverConnectInfo(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *TokenHandle*  
- [Eingabe] Tokenhandle.  
+ *Tokenhandle*  
+ Der Tokenhandle.  
   
  *InConnectionString*  
- [Eingabe] Eine vollständige Verbindungszeichenfolge (finden Sie in der Syntax "Kommentare" unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), ein Teil der Verbindungszeichenfolge oder eine leere Zeichenfolge.  
+ Der Eine vollständige Verbindungs Zeichenfolge (siehe die Syntax in "comments" in [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)), eine partielle Verbindungs Zeichenfolge oder eine leere Zeichenfolge.  
   
  *StringLength1*  
- [Eingabe] Länge der **InConnectionString*, in Zeichen, wenn die Zeichenfolge Unicode oder Bytes ist, wenn die Zeichenfolge ANSI oder DBCS ist.  
+ Der Länge von **InConnectionString*, in Zeichen, wenn die Zeichenfolge Unicode ist, oder bytes, wenn die Zeichenfolge ANSI oder DBCS ist.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Identisch mit [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) Bezug auf alle Fehler eingabeüberprüfung, mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und ein **behandeln** von *hDbcInfoToken*.  
+ Identisch mit [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) im Zusammenhang mit jedem Eingabevalidierungsfehler, mit dem Unterschied, dass der Treiber-Manager den SQL_HANDLE_DBC_INFO_TOKEN **und ein** **handle** von *hdbcinfotoken*verwendet.  
   
-## <a name="remarks"></a>Hinweise  
- Immer ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen aus *hDbcInfoToken*, und wird SQL_SUCCESS_WITH_INFO zurückgegeben. um die Anwendung im [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen von *hdbcinfotoken*und gibt SQL_SUCCESS_WITH_INFO in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)an die Anwendung zurück.  
   
- Anwendungen sollten diese Funktion nicht direkt aufrufen. Ein ODBC-Treiber, der treiberfähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
+ Anwendungen sollten diese Funktion nicht direkt aufzurufen. Ein ODBC-Treiber, der Treiber fähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
   
- Umfassen Sie sqlspi.h für die Entwicklung von ODBC-Treiber.  
+ Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
