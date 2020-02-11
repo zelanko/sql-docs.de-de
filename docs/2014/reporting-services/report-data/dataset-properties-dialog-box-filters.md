@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107340"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Dataseteigenschaften (Dialogfeld), Filter
   Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Filter** aus, um Filter für das Dataset zu erstellen.  
   
-## <a name="options"></a>Optionen  
- **Hinzufügen**  
+## <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
  Fügt eine neue Filterklausel zur Liste hinzu.  
   
  **Löschen**  
@@ -36,19 +36,19 @@ ms.locfileid: "66107340"
  **Pfeil nach unten**  
  Verschiebt den ausgewählten Filter in der Liste nach unten.  
   
- **expression**  
- Geben Sie den Ausdruck ein, auf den ein Filter angewendet werden soll, oder wählen Sie ihn aus. Klicken Sie auf die Schaltfläche „Ausdruck“ (**fx**), um den Ausdruck zu bearbeiten.  
+ **Ausdruck**  
+ Geben Sie den Ausdruck ein, auf den ein Filter angewendet werden soll, oder wählen Sie ihn aus. Klicken Sie auf die Ausdrucks Schaltfläche (**FX**), um den Ausdruck zu bearbeiten.  
   
- **Data type**  
+ **Datentyp**  
  Wählen Sie den Datentyp für **Wert**. Wählen Sie, sofern möglich, einen Datentyp aus, der dem Datentyp für **Ausdruck**entspricht. Weitere Informationen finden Sie unter [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-equation-examples-report-builder-and-ssrs.md).  
   
  **Operator**  
  Wählen Sie den Operator aus, der zum Vergleichen des Ausdrucks und des Werts verwendet werden soll.  
   
  **Wert**  
- Geben Sie den Ausdruck oder Wert ein, der beim Auswerten des im Feld **Ausdruck** angegebenen Ausdrucks verwendet werden soll. Klicken Sie auf die Schaltfläche „Ausdruck“ (**fx**), um den Ausdruck zu bearbeiten.  
+ Geben Sie den Ausdruck oder Wert ein, der beim Auswerten des im Feld **Ausdruck** angegebenen Ausdrucks verwendet werden soll. Klicken Sie auf die Ausdrucks Schaltfläche (**FX**), um den Ausdruck zu bearbeiten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
   

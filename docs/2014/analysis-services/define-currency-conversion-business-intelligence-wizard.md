@@ -1,5 +1,5 @@
 ---
-title: Definieren der Währungsumrechnung (Business Intelligence-Assistent) | Microsoft-Dokumentation
+title: Währungsumrechnung definieren (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463363e2e239c348c626cf1ef1d61e621877814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082150"
 ---
 # <a name="define-currency-conversion-business-intelligence-wizard"></a>Währungsumrechnung definieren (Business Intelligence-Assistent)
@@ -37,22 +37,22 @@ ms.locfileid: "66082150"
 >   
 >  Wenn Sie diese Kommentare ändern oder löschen, können durch den Business Intelligence-Assistenten keine zuvor definierten Währungsumrechnungen erkannt werden.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Neues Währungsumrechnungsskript**  
  Zeigt das von der aktuellen Sitzung des Business Intelligence-Assistenten erzeugte MDX-Skript an.  
   
  **Vorhandenes Währungsumrechnungsskript überschreiben**  
  Wählen Sie diese Option aus, um das unter **Vorhandenes Währungsumrechnungsskript** aufgelistete MDX-Skript mit dem im Feld **Neues Währungsumrechnungsskript**angezeigte MDX-Skript zu überschreiben.  
   
- **Fügen Sie nach**  
+ **Anfügen an**  
  Wählen Sie diese Option aus, um das unter **Neues Währungsumrechnungsskript** aufgelistete MDX-Skript an das im Feld **Vorhandenes Währungsumrechnungsskript**angezeigte MDX-Skript anzufügen. Das angefügte Skript wird in einem neuen Abschnitt angezeigt.  
   
  **Vorhandenes Währungsumrechnungsskript**  
  Wählen Sie den Abschnitt des vorhandenen MDX-Skripts mit der zuvor definierten Währungsumrechnungsfunktion aus, der jetzt überschrieben oder angefügt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
- [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Business Intelligence Wizard (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
+ [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Der Dimensions-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

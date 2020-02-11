@@ -13,39 +13,39 @@ ms.assetid: 10492c8f-3a18-4971-9db8-879e878083b9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6fd8f3be1213a91195cd74a8b723629e2c5833f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053890"
 ---
 # <a name="sqldriverconnect-visual-foxpro-odbc-driver"></a>SQLDriverConnect (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Vollständig  
+ Unterstützung: vollständig  
   
- ODBC-API-Übereinstimmung: Ebene 1  
+ ODBC-API-Konformität: Ebene 1  
   
- Eine Verbindung mit einer vorhandenen Datenquelle, die entweder als eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis von [kostenlose Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md). Die ODBC-Attribut Schlüsselwörter UID und PWD werden ignoriert. Die folgende Tabelle enthält die Schlüsselwörter unterstützt zusätzlich das Attribut.  
+ Stellt eine Verbindung mit einer vorhandenen Datenquelle her, bei der es sich entweder um eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder um ein Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)handeln kann. Die ODBC-Attribut Schlüsselwörter UID und PWD werden ignoriert. In der folgenden Tabelle sind die zusätzlichen unterstützten Attribut Schlüsselwörter aufgeführt.  
   
-|ODBC-Schlüsselwort|Attributwert|  
+|ODBC-Attribut Schlüsselwort|Attributwert|  
 |----------------------------|---------------------|  
 |DSN||  
-|UID|Der Visual FoxPro-ODBC-Treiber ignoriert, nicht jedoch einen Fehler.|  
-|PWD|Der Visual FoxPro-ODBC-Treiber ignoriert, nicht jedoch einen Fehler.|  
-|Treiber|Name und Speicherort der Visual FoxPro-ODBC-Treiber; implementiert die vom Treiber-Manager.|  
+|UID|Wird vom Visual FoxPro-ODBC-Treiber ignoriert, es wird jedoch kein Fehler generiert.|  
+|PWD|Wird vom Visual FoxPro-ODBC-Treiber ignoriert, es wird jedoch kein Fehler generiert.|  
+|Treiber|Der Name und Speicherort des Visual FoxPro-ODBC-Treibers. wird vom Treiber-Manager implementiert.|  
   
-|Visual FoxPro-ODBC-Treiber-Attribut-Schlüsselwort|Attributwert|  
+|Visual FoxPro-ODBC-Treiber Attribut-Schlüsselwort|Attributwert|  
 |-------------------------------------------------|---------------------|  
-|BackgroundFetch|"Yes" oder "No"|  
-|Sortieren|"Computer" oder andere Sortierreihenfolge. Eine Liste der unterstützten sortierenden Sequenzen, finden Sie unter [festgelegt COLLATE](../../odbc/microsoft/set-collate-command.md).|  
-|Beschreibung||  
-|Exclusive|"Yes" oder "No"|  
-|SourceDB|Ein vollqualifizierter Pfad zu einem Verzeichnis mit NULL oder mehr [kostenlose Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md), oder der absolute Pfad und Dateiname für eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md).|  
+|Backgroundfetch|"Yes" oder "No"|  
+|Sortieren|"Computer" oder eine andere Sortierreihenfolge. Eine Liste der unterstützten Sortierungs Sequenzen finden Sie unter [SET COLLATE](../../odbc/microsoft/set-collate-command.md).|  
+|BESCHREIBUNG||  
+|Exklusiv|"Yes" oder "No"|  
+|SourceDB|Ein voll qualifizierter Pfad zu einem Verzeichnis, das 0 (null) oder mehr [freie Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)enthält, oder der absolute Pfad und Dateiname für eine [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md).|  
 |SourceType|"DBC" oder "DBF"|  
 |Version||  
   
- Wenn der Name der Datenquelle nicht angegeben ist, wird der Treiber-Manager fordert den Benutzer für die Informationen (entsprechend der Einstellung von der *fDriverCompletion* Argument) und dann fortgesetzt wird. Wenn Sie weitere Informationen erforderlich ist, zeigt der Visual FoxPro-ODBC-Treiber eingabeaufforderungs-Dialogfeld.  
+ Wenn der Name der Datenquelle nicht angegeben wird, fordert der Treiber-Manager den Benutzer zur Eingabe der Informationen auf (abhängig von der Einstellung des Argument " *sdrivercompletion* ") und wird dann fortgesetzt. Wenn weitere Informationen erforderlich sind, zeigt der Visual FoxPro-ODBC-Treiber das Dialogfeld für die Eingabeaufforderung an.  
   
- Weitere Informationen finden Sie unter [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLDriverConnect](../../odbc/reference/syntax/sqldriverconnect-function.md) in der *ODBC Programmer es Reference*.

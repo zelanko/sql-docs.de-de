@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721205"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
@@ -58,7 +58,7 @@ ms.locfileid: "62721205"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Speicherort|  
+    |Assemblyverweis|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -99,10 +99,10 @@ ms.locfileid: "62721205"
   
 1.  Führen Sie auf dem Verleger [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) aus, um zu prüfen, ob die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
-2.  Führen Sie auf dem Verteiler [Sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql), dabei einen Anzeigenamen für den Geschäftslogikhandler für **@article_resolver** , einen Wert von `true`für **@is_dotnet_assembly** , den Namen der Assembly für **@dotnet_assembly_name** , und die den vollqualifizierten Namen der Klasse, die überschreibt <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> für  **@dotnet_class_name** .  
+2.  Führen Sie auf dem Verteiler [sp_registercustomresolver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql)aus, und geben Sie einen anzeigen Amen für den **@article_resolver**Geschäftslogik Handler für `true` , **@is_dotnet_assembly**den Wert für, den Namen der **@dotnet_assembly_name**Assembly für und den voll qualifizierten Namen der Klasse an, die für <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> **@dotnet_class_name**überschreibt.  
   
     > [!NOTE]  
-    >  Sie müssen den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name** . Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
+    >  Wenn die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei Merge-Agent bereitgestellt wird, im gleichen Verzeichnis wie die Anwendung, die die Merge-Agent synchron startet, oder im globalen Assemblycache (GAC), müssen Sie den vollständigen Pfad mit dem Assemblynamen für **@dotnet_assembly_name**angeben. Wenn Sie die Websynchronisierung verwenden, müssen Sie den Speicherort der Assembly auf dem Webserver angeben.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem neuen Tabellenartikel  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62721205"
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>So verwenden Sie einen Geschäftslogikhandler mit einem bestehenden Tabellenartikel  
   
-1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus. Geben Sie dabei **@publication** , **@article** , den Wert **article_resolver** für **@property** und den Anzeigenamen des Geschäftslogikhandlers für **@value** an.  
+1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)-&#41;**@publication**aus **@article**, und geben Sie,, **@property**den Wert **article_resolver** für und den anzeigen amen des Geschäftslogik **@value**Handlers für an.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Replikationsprogrammierung)  
  In diesem Beispiel wird ein Geschäftslogikhandler gezeigt, der ein Überwachungsprotokoll erstellt.  
@@ -131,7 +131,7 @@ ms.locfileid: "62721205"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Speicherort|  
+    |Assemblyverweis|Location|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -170,11 +170,11 @@ ms.locfileid: "62721205"
   
 1.  Erstellen Sie eine Verbindung mit dem Verteiler, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer> -Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.ReplicationServer>-Klasse. Übergeben Sie <xref:Microsoft.SqlServer.Management.Common.ServerConnection> von Schritt 1.  
   
 3.  Rufen Sie <xref:Microsoft.SqlServer.Replication.ReplicationServer.EnumBusinessLogicHandlers%2A> auf, und überprüfen Sie das zurückgegebene <xref:System.Collections.ArrayList> -Objekt, um sicherzustellen, dass die Assembly noch nicht als Geschäftslogikhandler registriert wurde.  
   
-4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler> -Klasse. Geben Sie die folgenden Eigenschaften an:  
+4.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler>-Klasse. Geben Sie die folgenden Eigenschaften an:  
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.DotNetAssemblyName%2A> &ndash; der Name der .NET-Assembly. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, falls die Assembly nicht im gleichen Verzeichnis wie die ausführbare Datei für den Merge-Agent, im gleichen Verzeichnis wie die Anwendung, mit der der Merge-Agent synchron gestartet wird, oder im GAC bereitgestellt wird. Sie müssen den vollständigen Pfad mit dem Assemblynamen angeben, wenn Sie einen Geschäftslogikhandler mit der Websynchronisierung verwenden.  
   
@@ -182,7 +182,8 @@ ms.locfileid: "62721205"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> &ndash; ein Anzeigename, den Sie beim Zugriff auf den Geschäftslogikhandler verwenden.  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert `true`.  
+    -   
+  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>So stellen Sie einen Geschäftslogikhandler bereit  
   
@@ -192,7 +193,7 @@ ms.locfileid: "62721205"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse. Legen Sie die folgenden Eigenschaften fest:  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse. Legen Sie die folgenden Eigenschaften fest:  
   
     -   Den Namen des Artikels für <xref:Microsoft.SqlServer.Replication.Article.Name%2A>  
   
@@ -208,7 +209,7 @@ ms.locfileid: "62721205"
   
 1.  Erstellen Sie eine Verbindung mit dem Verleger, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeArticle>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Article.Name%2A>, <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>und <xref:Microsoft.SqlServer.Replication.Article.DatabaseName%2A> fest.  
   
@@ -237,7 +238,7 @@ ms.locfileid: "62721205"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)](debug-a-business-logic-handler-replication-programming.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   

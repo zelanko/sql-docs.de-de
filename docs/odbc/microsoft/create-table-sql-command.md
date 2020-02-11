@@ -1,5 +1,5 @@
 ---
-title: Erstellen der Tabelle – SQL-Befehl | Microsoft-Dokumentation
+title: CREATE TABLE-SQL-Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68096601"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE (SQL-Befehl)
 Erstellt eine Tabelle mit den angegebenen Feldern.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt die systemeigene Visual FoxPro-Sprachsyntax für diesen Befehl. Treiberspezifische Informationen finden Sie **Treiber "Hinweise"** .  
+ Der Visual FoxPro-ODBC-Treiber unterstützt die native Visual FoxPro-Sprachsyntax für diesen Befehl. Treiber spezifische Informationen finden Sie unter **Treiber Hinweise**.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,127 +46,127 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Erstellen der Tabelle &#124; DBF *TableName1*  
- Gibt den Namen der Tabelle zu erstellen. Die Tabelle und die DBF-Optionen sind identisch.  
+ CREATE TABLE &#124; DBF- *TableName1*  
+ Gibt den Namen der zu erstellenden Tabelle an. Die Tabellen-und DBF-Optionen sind identisch.  
   
- Namen *LongTableName*  
- Gibt einen langen Namen für die Tabelle an. Ein lange Tabellennamen kann angegeben werden, nur, wenn eine Datenbank geöffnet ist, da lange Tabellennamen in Datenbanken gespeichert werden.  
+ Name *LongTableName*  
+ Gibt einen langen Namen für die Tabelle an. Ein Long-Tabellenname kann nur angegeben werden, wenn eine Datenbank geöffnet ist, da lange Tabellennamen in-Datenbanken gespeichert werden.  
   
  Lange Namen können bis zu 128 Zeichen enthalten und können anstelle von kurzen Dateinamen in der Datenbank verwendet werden.  
   
- FREE  
- Gibt an, dass die Tabelle wird eine geöffnete Datenbank nicht hinzugefügt werden. FREE ist nicht erforderlich, wenn eine Datenbank nicht geöffnet ist.  
+ FREI  
+ Gibt an, dass die Tabelle nicht zu einer geöffneten Datenbank hinzugefügt wird. "Free" ist nicht erforderlich, wenn eine Datenbank nicht geöffnet ist.  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
- Die Feldnamen, Feldtyp, Feldbreite und Feld-Genauigkeit (Anzahl von Dezimalstellen an), gibt bzw.  
+ *(FieldName1 FieldType* [( *nfieldwidth* [, *nprecision*])]  
+ Gibt den Feldnamen, den Feldtyp, die Feldbreite und die Feld Genauigkeit (Anzahl der Dezimalstellen) an.  
   
- *Feldtyp* ist ein einzelner Buchstabe verwendet, der angibt, in des Felds des [Datentyp](../../odbc/microsoft/visual-foxpro-field-data-types.md). Einige Felddatentypen erfordern die Angabe *nFieldWidth* oder *nPrecision* oder beides.  
+ *FieldType* ist ein einzelner Buchstabe, der den [Datentyp](../../odbc/microsoft/visual-foxpro-field-data-types.md)des Felds angibt. Einige Feld Datentypen erfordern, dass Sie *nfieldwidth* oder *nprecision* oder beides angeben.  
   
- *nFieldWidth* und *nPrecision* D, G, ich, L, M, P, T und Y werden ignoriert Typen. *nPrecision* standardmäßig auf 0 (null) (ohne Dezimalstellen), wenn *nPrecision* ist nicht für die B, F oder N-Typen enthalten.  
+ *nfieldwidth* und *nprecision* werden für die Typen D, G, I, L, M, P, T und Y ignoriert. *nprecision* ist standardmäßig auf 0 (keine Dezimalstellen) festgelegt, wenn *nprecision* für die Typen B, F oder N nicht eingeschlossen ist.  
   
  NULL  
- Ermöglicht null-Werte in das Feld an.  
+ Lässt NULL-Werte im-Feld zu.  
   
  NOT NULL  
- Verhindert, dass null-Werte in das Feld.  
+ Verhindert NULL-Werte im-Feld.  
   
- Wenn Sie NULL weglassen und NOT NULL, bestimmt die aktuelle Einstellung von SET NULL an, ob null-Werte, in das Feld zulässig sind. Wenn Sie NULL lassen und nicht NULL und die PRIMARY KEY- oder UNIQUE-Klausel, die aktuelle Einstellung von SET NULL wird ignoriert, und im Feld standardmäßig nicht NULL.  
+ Wenn Sie NULL und NOT NULL weglassen, bestimmt die aktuelle Einstellung von SET NULL, ob NULL-Werte im Feld zulässig sind. Wenn Sie jedoch NULL und NOT NULL weglassen und die PRIMARY KEY-oder Unique-Klausel einschließen, wird die aktuelle Einstellung von SET NULL ignoriert, und das Feld ist standardmäßig auf NOT NULL festgelegt.  
   
- Überprüfen Sie *lExpression1*  
- Gibt eine Überprüfungsregel für das Feld. *lExpression1* kann eine benutzerdefinierte Funktion sein. Wenn Sie ein leerer Datensatz angefügt wird, wird die Validierungsregel überprüft. Ein Fehler wird generiert, wenn die Überprüfungsregel für ein leeres Feld-Wert in eine angefügte Datensatz nicht zugelassen wird.  
+ *LExpression1* überprüfen  
+ Gibt eine Validierungs Regel für das Feld an. *lExpression1* kann eine benutzerdefinierte Funktion sein. Wenn ein leerer Datensatz angehängt wird, wird die Validierungs Regel überprüft. Ein Fehler wird generiert, wenn die Validierungs Regel keinen leeren Feldwert in einem angefügten Datensatz zulässt.  
   
  Fehler *cMessageText1*  
- Gibt die Fehlermeldung, die Visual FoxPro angezeigt, wenn die Feldregel Fehler generiert. Die Nachricht wird nur angezeigt, wenn Daten in einem Durchsuchen-Fenster oder eine Editor-Fenster geändert werden.  
+ Gibt die Fehlermeldung an, die Visual FoxPro anzeigt, wenn die Feldregel einen Fehler generiert. Die Meldung wird nur angezeigt, wenn Daten in einem Fenster zum Durchsuchen oder einem Bearbeitungsfenster geändert werden.  
   
  Standard *eExpression1*  
- Gibt einen Standardwert für das Feld an. Der Datentyp des *eExpression1* muss den Datentyp des Felds identisch sein.  
+ Gibt einen Standardwert für das Feld an. Der Datentyp von *eExpression1* muss mit dem Datentyp des Felds identisch sein.  
   
  PRIMARY KEY  
- Erstellt einen primären Index für das Feld an. Der Primärindex-Tag enthält den gleichen Namen wie das Feld an.  
+ Erstellt einen primären Index für das Feld. Das primäre Indextag hat denselben Namen wie das Feld.  
   
  UNIQUE  
- Erstellt einen Index Kandidat für das Feld. Der Indexname Candidate hat den gleichen Namen wie das Feld an.  
+ Erstellt einen Kandidaten Index für das Feld. Das Kandidaten Indextag hat denselben Namen wie das Feld.  
   
 > [!NOTE]  
->  Kandidat Indizes (erstellt durch Einschließen der EINDEUTIGEN Option in CREATE TABLE- oder ALTER TABLE - SQL) sind nicht identisch mit Indizes, die mit der EINDEUTIGEN Option in den INDEX-Befehl erstellt. Ein Index erstellt, mit der EINDEUTIGEN Option in den INDEX-Befehl können doppelte Indexschlüssel; Doppelte Indexschlüssel zulassen kandidatenindizes nicht. Finden Sie unter [INDEX](../../odbc/microsoft/index-command.md) für Weitere Informationen zu der Möglichkeit.  
+>  Kandidaten Indizes (erstellt durch einschließen der UNIQUE-Option in CREATE TABLE oder ALTER TABLE-SQL) sind nicht identisch mit Indizes, die mit der UNIQUE-Option im Index-Befehl erstellt wurden. Ein mit der UNIQUE-Option im Index-Befehl erstellter Index ermöglicht doppelte Index Schlüssel. Kandidaten Indizes lassen keine doppelten Index Schlüssel zu. Weitere Informationen zur eindeutigen Option finden Sie unter [Index](../../odbc/microsoft/index-command.md) .  
   
- NULL-Werte und doppelter Datensätze dürfen nicht in einem Feld für einen primären oder Kandidatenschlüssel Index verwendet. Allerdings generiert Visual FoxPro keinen Fehler, wenn Sie einen primären oder Kandidatenschlüssel Index für ein Feld erstellen, die null-Werte unterstützt. Visual FoxPro, wird ein Fehler generiert, wenn Sie versuchen, einen Nullwerte oder doppelten Wert in ein Feld verwendet, die für einen primären oder Kandidatenschlüssel Index eingeben.  
+ NULL-Werte und doppelte Datensätze sind in einem Feld, das für einen primären Index oder einen Kandidaten Index verwendet wird, nicht zulässig. Visual FoxPro generiert jedoch keinen Fehler, wenn Sie einen primären Index oder einen Kandidaten Index für ein Feld erstellen, das NULL-Werte unterstützt. Visual FoxPro generiert einen Fehler, wenn Sie versuchen, einen NULL-oder einen doppelten Wert in ein Feld einzugeben, das für einen primären oder einen Kandidaten Index verwendet wird.  
   
- Verweise *TableName2*[TAG *TagName1*]  
- Gibt die übergeordnete Tabelle mit der eine persistente Beziehung hergestellt wird. Wenn Sie Tags weglassen *TagName1*, wird die Beziehung hergestellt, über die Schlüssel des primären Indexes der übergeordneten Tabelle. Wenn die übergeordneten Tabelle nicht über einen primären Index verfügt, generiert Visual FoxPro einen Fehler aus.  
+ Verweise *TableName2*[Tag *TagName1*]  
+ Gibt die übergeordnete Tabelle an, mit der eine persistente Beziehung hergestellt wird. Wenn Sie Tag *TagName1*weglassen, wird die Beziehung mit dem primär Index Schlüssel der übergeordneten Tabelle hergestellt. Wenn die übergeordnete Tabelle keinen primären Index hat, generiert Visual FoxPro einen Fehler.  
   
- Include (TAG) *TagName1* zu, um eine Beziehung, die basierend auf einem vorhandenen Index enthalten, für die übergeordnete Tabelle herzustellen. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
+ TagTagName1 ** einschließen, um eine Beziehung basierend auf einem vorhandenen Indextag für die übergeordnete Tabelle herzustellen. Indextagnamen können bis zu 10 Zeichen enthalten.  
   
- Die übergeordneten Tabelle darf nicht mit einer kostenlosen Tabelle sein.  
+ Die übergeordnete Tabelle darf keine freie Tabelle sein.  
   
- NOCPTRANS  
- Verhindert die Übersetzung in eine andere Codepage für Zeichen und Memo Felder. Wenn die Tabelle in einer anderen Codepage konvertiert wird, werden die Felder für die NOCPTRANS angegeben wurde nicht übersetzt. NOCPTRANS können nur für Zeichen- und Memo Felder angegeben werden.  
+ Nocptrans  
+ Verhindert die Übersetzung in eine andere Codepage für Zeichen-und Memo Felder. Wenn die Tabelle in eine andere Codepage konvertiert wird, werden die Felder, für die "nocptrans" angegeben wurde, nicht übersetzt. "Nocptrans" kann nur für Zeichen-und Memo Felder angegeben werden.  
   
- Das folgende Beispiel erstellt eine Tabelle namens Mytable, die zwei Zeichenfelder und zwei Memofelder enthält. Das zweite Zeichenfeld char2 und das zweite Feld der Gutschrift, memo2, enthalten NOCPTRANS, um zu verhindern, dass bei der Übersetzung an.  
+ Im folgenden Beispiel wird eine Tabelle mit dem Namen MyTable erstellt, die zwei Zeichenfelder und zwei Memo Felder enthält. Das zweite Zeichenfeld, char2 und das zweite Memo Feld memo2, enthalten "nocptrans", um die Übersetzung zu verhindern.  
   
 ```  
 CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;  
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- PRIMÄRSCHLÜSSEL *eExpression2* TAG *TagName2*  
- Gibt an, einen primären Index zu erstellen. *eExpression2* gibt jede Feld oder eine Kombination der Felder in der Tabelle. TAG *TagName2* gibt den Namen für den primären Index-Tag, das erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
+ Primärschlüssel *eExpression2* Tag *TagName2*  
+ Gibt einen primär Index an, der erstellt werden soll. *eExpression2* gibt ein beliebiges Feld oder eine Kombination von Feldern in der Tabelle an. Tag *TagName2* gibt den Namen für das primäre Indextag an, das erstellt wird. Indextagnamen können bis zu 10 Zeichen enthalten.  
   
- Da eine Tabelle nur ein primären Index verfügen kann, können nicht Sie diese Klausel einschließen, wenn Sie bereits einen primären Index für ein Feld erstellt haben. Visual FoxPro generiert einen Fehler auf, wenn Sie mehr als eine PRIMARY KEY-Klausel im Artikel CREATE TABLE.  
+ Da eine Tabelle nur einen primären Index aufweisen kann, können Sie diese Klausel nicht einschließen, wenn Sie bereits einen primären Index für ein Feld erstellt haben. Visual FoxPro generiert einen Fehler, wenn Sie mehr als eine PRIMARY KEY-Klausel in CREATE TABLE einschließen.  
   
- EINDEUTIGE *eExpression3*TAG *TagName3*  
- Erstellt einen Index Kandidat. *eExpression3* gibt jede Feld oder eine Kombination der Felder in der Tabelle. Wenn Sie einen primären Index mit einem der PRIMARY KEY-Optionen erstellt haben, können nicht Sie allerdings das Feld enthalten, das für den primären Index angegeben wurde. TAG *TagName3* gibt einen Tagnamen für die Candidate-Indexname, der erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten.  
+ Eindeutiges *eExpression3*-Tag *TagName3*  
+ Erstellt einen Kandidaten Index. *eExpression3* gibt ein beliebiges Feld oder eine Kombination von Feldern in der Tabelle an. Wenn Sie jedoch einen primären Index mit einer der Primärschlüssel Optionen erstellt haben, können Sie nicht das Feld einschließen, das für den primären Index angegeben wurde. Tag *TagName3* gibt einen Tagnamen für das Kandidaten Indextag an, das erstellt wird. Indextagnamen können bis zu 10 Zeichen enthalten.  
   
- Eine Tabelle kann mehrere Kandidaten Indizes aufweisen.  
+ Eine Tabelle kann über mehrere Kandidaten Indizes verfügen.  
   
- FREMDSCHLÜSSEL *eExpression4*TAG *TagName4*[NODUP]  
- Erstellt einen Fremdschlüssel (nicht primäre) Index, und stellt eine Beziehung zu einer übergeordneten Tabelle her. *eExpression4* gibt an, die foreign Key Indexausdruck, und *TagName4* gibt den Namen der foreign Key Indexname, der erstellt wird. Tag-Namen des Index können bis zu 10 Zeichen enthalten. Umfassen Sie NODUP, um einen Fremdschlüssel Kandidaten-Index erstellen.  
+ Fremdschlüssel *eExpression4*Tag *TagName4*[nodup]  
+ Erstellt einen fremd Index (nonprimary) und richtet eine Beziehung zu einer übergeordneten Tabelle ein. *eExpression4* gibt den Fremdschlüssel Ausdruck des Indexes an, und *TagName4* gibt den Namen des zu erstellenden Fremdschlüssel Tags an. Indextagnamen können bis zu 10 Zeichen enthalten. Fügen Sie nodup ein, um einen Kandidaten fremden Index zu erstellen.  
   
- Sie können mehrere Fremdschlüssel Indizes für die Tabelle erstellen, aber die Fremdschlüssel Indexausdrücke müssen verschiedene Felder in der Tabelle angeben.  
+ Sie können mehrere fremd Indizes für die Tabelle erstellen, aber die Foreign Index-Ausdrücke müssen andere Felder in der Tabelle angeben.  
   
- Verweise *TableName3*[TAG *TagName5*]  
- Gibt die übergeordnete Tabelle mit der eine persistente Beziehung hergestellt wird. Include (TAG) *TagName5* zu, um eine Beziehung, die basierend auf einem Index enthalten, für die übergeordnete Tabelle herzustellen. Tag-Namen des Index können bis zu 10 Zeichen enthalten. Standardmäßig, wenn Sie, TAG weglassen *TagName5,* die Beziehung mit der übergeordneten Tabelle Primärindex Schlüssel eingerichtet.  
+ Verweise *TableName3*[Tag *TagName5*]  
+ Gibt die übergeordnete Tabelle an, mit der eine persistente Beziehung hergestellt wird. Include Tag *TagName5* , um eine Beziehung auf Grundlage eines Indextags für die übergeordnete Tabelle einzurichten. Indextagnamen können bis zu 10 Zeichen enthalten. Wenn Sie *tagTagName5* weglassen, wird die Beziehung standardmäßig mit dem primär Index Schlüssel der übergeordneten Tabelle hergestellt.  
   
- Überprüfen Sie *eExpression2*[Fehler *cMessageText2*]  
- Gibt die Validierungsregel für die Tabelle an. Fehler *cMessageText2* gibt die Fehlermeldung an, die Visual FoxPro angezeigt wird, wenn die Validierungsregel für die Tabelle ausgeführt wird. Die Nachricht wird nur angezeigt, wenn Daten in einem Durchsuchen-Fenster geändert werden oder Fenster "Bearbeiten".  
+ Überprüfen *eExpression2*[Error *cMessageText2*]  
+ Gibt die Tabellen Validierungs Regel an. Fehler *cMessageText2* gibt die Fehlermeldung an, die von Visual FoxPro beim Ausführen der Tabellen Validierungs Regel angezeigt wird. Die Meldung wird nur angezeigt, wenn Daten in einem durchsuchen-oder Bearbeitungsfenster geändert werden.  
   
- AUS ARRAY *ArrayName*  
- Gibt den Namen eines vorhandenen Arrays, dessen Inhalt den Namen, Datentyp, Genauigkeit und Dezimalstellen, für jedes Feld in der Tabelle ist. Der Inhalt des Arrays können definiert werden, mit der **AFIELDS**()-Funktion.  
+ Aus Array *Arrayname*  
+ Gibt den Namen eines vorhandenen Arrays an, dessen Inhalt der Name, der Typ, die Genauigkeit und die Skala für jedes Feld in der Tabelle ist. Der Inhalt des Arrays kann mit der Funktion " **aFields**()" definiert werden.  
   
-## <a name="remarks"></a>Hinweise  
- Die neue Tabelle in der niedrigsten verfügbaren Arbeitsbereich geöffnet, und über den Alias zugegriffen werden kann. Die neue Tabelle wird unabhängig von der aktuellen Einstellung des EXKLUSIVEN festgelegt ausschließlich geöffnet.  
+## <a name="remarks"></a>Bemerkungen  
+ Die neue Tabelle wird im niedrigsten verfügbaren Arbeitsbereich geöffnet, und der Zugriff darauf ist über den Alias möglich. Die neue Tabelle wird exklusiv geöffnet, unabhängig von der aktuellen Einstellung von Set Exclusive.  
   
- Wenn eine Datenbank geöffnet ist, und Sie die kostenlose-Klausel nicht einschließen, wird die neue Tabelle in der Datenbank hinzugefügt. Sie können nicht mit dem gleichen Namen wie eine Tabelle in der Datenbank eine neue Tabelle erstellen.  
+ Wenn eine Datenbank geöffnet ist und Sie die Free-Klausel nicht einschließen, wird die neue Tabelle der Datenbank hinzugefügt. Sie können keine neue Tabelle mit dem gleichen Namen wie eine Tabelle in der Datenbank erstellen.  
   
- Wenn eine Datenbank geöffnet ist, erfordert die CREATE TABLE - SQL exklusive Verwendung der Datenbank. Schließen Sie zum Öffnen einer Datenbank für die ausschließliche Verwendung exklusiver, in Datenbank öffnen.  
+ Wenn eine Datenbank geöffnet ist, ist für CREATE TABLE-SQL eine ausschließliche Verwendung der Datenbank erforderlich. Wenn Sie eine Datenbank für die exklusive Verwendung öffnen möchten, schließen Sie exklusive in Open Database ein.  
   
- Wenn eine Datenbank geöffnet ist, wenn Sie die neue Tabelle erstellen, generiert das einschließlich der Namen, CHECK, DEFAULT, FOREIGN KEY, PRIMARY KEY- oder Verweise Klauseln einen Fehler aus.  
+ Wenn eine Datenbank nicht geöffnet ist, wenn Sie die neue Tabelle erstellen, einschließlich der Klauseln Name, Check, Default, Foreign Key, PRIMARY KEY oder References, wird ein Fehler generiert.  
   
 > [!NOTE]  
->  CREATE TABLE-Syntax verwendet Kommas zum Trennen von bestimmte Optionen für die CREATE TABLE. Darüber hinaus müssen die NULL, nicht NULL, überprüfen, Default-, PRIMARY KEY- und UNIQUE-Klausel innerhalb der Klammern, enthält die Definitionen der platziert werden.  
+>  CREATE TABLE Syntax verwendet Kommas, um bestimmte CREATE TABLE Optionen voneinander zu trennen. Außerdem müssen die NULL-, not NULL-, Check-, Default-, Primary Key-und Unique-Klauseln in den Klammern abgelegt werden, die die Spaltendefinitionen enthalten.  
   
-## <a name="driver-remarks"></a>Treiber "Hinweise".  
- Wenn Ihre Anwendung die ODBC-SQL-Anweisung sendet übersetzt CREATE TABLE mit der Datenquelle, die der Visual FoxPro-ODBC-Treiber den Befehl in der Visual FoxProCREATE TABLE-Befehl mit der Syntax in der folgenden Tabelle gezeigt.  
+## <a name="driver-remarks"></a>Hinweise zu Treibern  
+ Wenn Ihre Anwendung die ODBC-SQL-Anweisung CREATE TABLE an die Datenquelle sendet, übersetzt der Visual FoxPro-ODBC-Treiber den Befehl mithilfe der in der folgenden Tabelle gezeigten Syntax in den Befehl "Visual foxprocreate Table".  
   
-|ODBC-syntax|Visual FoxPro-syntax|  
+|ODBC-Syntax|Syntax von Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *Basis-Table-Name*<br /><br /> (*Spaltenbezeichner Datentyp*<br /><br /> [NICHT-NULL]<br /><br /> [,*Spaltenbezeichner Datentyp*<br /><br /> [NOT NULL]...)|Erstellen der Tabelle *TableName1* [NAME *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NICHT NULL])|  
+|Create Table *Basistabellen Name*<br /><br /> (*Column-Identifier-Datentyp*<br /><br /> [nicht NULL]<br /><br /> [,*Column-Identifier-Datentyp*<br /><br /> [nicht NULL]...)|Create Table *TableName1* [Name *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nfieldwidth* [, *nprecision*])]<br /><br /> [nicht NULL])|  
   
- Wenn Sie eine Tabelle mit dem Treiber erstellen, schließt der Treiber in der Tabelle direkt nach dem Erstellen der Tabelle von anderen Benutzern erlauben. Dies unterscheidet sich von Visual FoxPro, die in der Tabelle ausschließlich bei der Erstellung offen. Allerdings liegt an der Datenquelle, die mit einer CREATE TABLE-Anweisung eine gespeicherte Prozedur ausgeführt wird, in der Tabelle geöffnet bleibt.  
+ Wenn Sie mithilfe des Treibers eine Tabelle erstellen, schließt der Treiber die Tabelle sofort nach der Erstellung, damit andere Benutzer den Zugriff auf die Tabelle zulassen. Dies unterscheidet sich von Visual FoxPro, wodurch die Tabelle bei der Erstellung exklusiv geöffnet bleibt. Wenn jedoch eine gespeicherte Prozedur in der Datenquelle, die eine CREATE TABLE-Anweisung enthält, ausgeführt wird, bleibt die Tabelle offen.  
   
- Wenn die Datenquelle einer Datenbank (DBC-Datei) ist, wird der Visual FoxPro-ODBC-Treiber erstellt eine Tabelle namens *LongTableName* mit dem gleichen Namen wie die *Basis-Tabellenname*.  
+ Wenn es sich bei der Datenquelle um eine Datenbank (DBC-Datei) handelt, erstellt der Visual FoxPro-ODBC-Treiber eine Tabelle mit dem Namen *LongTableName* mit demselben Namen wie der Name der *Basistabelle*.  
   
-### <a name="using-data-definition-language-ddl"></a>Mithilfe der Datendefinitionssprache (DDL)  
- DDL können nicht in den folgenden Orten einbezogen werden:  
+### <a name="using-data-definition-language-ddl"></a>Verwenden der Datendefinitionssprache (DDL)  
+ Sie können DDL an den folgenden Stellen nicht einschließen:  
   
--   In einem Batch-SQL-Anweisung erfordert, dass eine Transaktion  
+-   In einer Batch-SQL-Anweisung, die eine Transaktion erfordert  
   
--   Im Manualcommit-Modus nach einer Anweisung, die eine Transaktion erforderlich, es sei denn, Ihre Anwendung zuerst ruft **SQLTransact**.  
+-   Im manuellen Commitmodus, nach einer-Anweisung, die eine Transaktion erforderte, es sei denn, die Anwendung ruft **SQLTransact**zuerst auf.  
   
- Z. B. Wenn Sie eine temporäre Tabelle erstellen möchten, sollten Sie in der Tabelle erstellen, vor dem Beginn der Anweisung, die eine Transaktion erfordern. Wenn Sie die CREATE TABLE-Anweisung in einem Batch-SQL-Anweisung, die eine Transaktion erforderlich ist einschließen, gibt der Treiber eine Fehlermeldung zurück.  
+ Wenn Sie z. b. eine temporäre Tabelle erstellen möchten, sollten Sie die Tabelle erstellen, bevor Sie mit der Anweisung beginnen, die eine Transaktion erfordert. Wenn Sie die CREATE TABLE-Anweisung in eine Batch-SQL-Anweisung einschließen, die eine Transaktion erfordert, gibt der Treiber eine Fehlermeldung zurück.  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER TABLE - SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ALTER TABLE-SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
  [Unterstützte Datentypen (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/supported-data-types-visual-foxpro-odbc-driver.md)   
- [INSERT - SQL-Befehl](../../odbc/microsoft/insert-sql-command.md)   
+ [INSERT-SQL-Befehl](../../odbc/microsoft/insert-sql-command.md)   
  [SELECT (SQL-Befehl)](../../odbc/microsoft/select-sql-command.md)

@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69494032"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Erstellen eines Analysis Services-Projekts (Lernprogramm zu Data Mining-Grundlagen)
-  Für jedes Projekt von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden die Objekte in einer einzelnen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank definiert. Eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank kann viele verschiedene Objekttypen enthalten.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Jedes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt definiert die Objekte in einer einzelnen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank. Eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank kann viele verschiedene Objekttypen enthalten.  
   
 -   Mehrdimensionale Modelle (Cubes)  
   
@@ -30,7 +30,8 @@ ms.locfileid: "69494032"
   
  In diesem Lernprogramm verwenden Sie das relationale Data Warehouse [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]als Datenquelle. Sie stellen alle Ihre Data Mining-Objekte in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank mit dem Namen `BasicDataMining` bereit, die ausschließlich für Data Mining verwendet wird.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz oder einen anderen Server verwenden, müssen Sie zunächst das Projekt erstellen und öffnen und anschließend den Instanznamen ändern.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz oder einen anderen Server verwenden, müssen Sie zunächst das Projekt erstellen und öffnen und anschließend den Instanznamen ändern.  
   
  Weitere Informationen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekten finden Sie unter [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
@@ -42,9 +43,9 @@ ms.locfileid: "69494032"
   
 3.  Überprüfen Sie, ob **Business Intelligence-Projekte** im Bereich **Projekttypen** ausgewählt wurde.  
   
-4.  Wählen Sie im Bereich **Vorlagen** die Vorlage für mehrdimensionale Projekte bzw. **Data Mining-Projekte von Analysis Services** aus.  
+4.  Wählen Sie im Bereich **Vorlagen** die Vorlage für mehrdimensionale Projekte bzw. Data Mining-Projekte von Analysis Services **** aus.  
   
-5.  Benennen Sie das neue Projekt `BasicDataMining`in das Feld Name.  
+5.  Benennen Sie **** das neue Projekt `BasicDataMining`in das Feld Name.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -54,13 +55,13 @@ ms.locfileid: "69494032"
   
 2.  Klicken Sie auf der linken Seite des Bereichs **Eigenschaftenseiten** unter **Konfigurationseigenschaften**auf **Bereitstellung**.  
   
-3.  Überprüfen Sie, ob auf der rechten Seite des Bereichs **Eigenschaftenseiten** unter **Ziel**der **Servername** **localhost**angegeben ist. Wenn Sie eine andere Instanz verwenden, geben Sie den Namen der Instanz ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+3.  Überprüfen Sie, ob auf der rechten Seite des Bereichs **Eigenschaftenseiten** unter **Ziel**der **Servername****localhost**angegeben ist. Wenn Sie eine andere Instanz verwenden, geben Sie den Namen der Instanz ein. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen eines Lernprogramms &#40;zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Erstellen einer Datenquelle &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Erstellen eines Analysis Services Projekts &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Replikation "Verteiler" Dialogfeld | Microsoft-Dokumentation
+title: Dialogfeld ' Verteiler Informationen SQL Server-Replikation ' | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,20 +17,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721359"
 ---
-# <a name="distributor-information-dialog-box"></a>Verteiler (Dialogfeld) 
-Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld) 
+# <a name="distributor-information-dialog-box"></a>Verteiler Informationen (Dialog Feld) 
+Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ". 
 
 ## <a name="publications"></a>Veröffentlichungen
 
   Die Registerkarte **Veröffentlichungen** enthält Zusammenfassungsinformationen zu allen Veröffentlichungen auf dem Verteiler, die Sie im linken Bereich ausgewählt haben.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  Die Informationen, die bezüglich der vom Verteiler unterstützten Veröffentlichungen angezeigt werden, umfassen eine Spalte mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers. Ansonsten stimmten die Veröffentlichungsinformationen mit den Informationen überein, die beim Anzeigen von Veröffentlichungen in der Verlegeransicht des Replikationsmonitors bereitgestellt werden. Weitere Informationen zu den Spalten auf der Registerkarte **Veröffentlichungen** finden Sie unter [Publisher Information, Publications](publisher-information-publications.md).  
 
 ## <a name="subscription-watch-list"></a>Überwachungsliste für Abonnements
@@ -51,7 +51,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
   
  Weitere Informationen zu Momentaufnahme-, Protokollleser- und Warteschlangenlese-Agents sowie Wartungsaufträgen finden Sie unter [Publisher Information, Agents](publisher-information-agents.md). Beachten Sie, dass beim Anzeigen von Agent-Informationen für einen Verteiler auf der Registerkarte **Agents** Verlegerinformationen für den Momentaufnahme- und den Protokollleser-Agent vorhanden sind. Auf der Registerkarte **Agents** für einen Verteiler in der Verteileransicht können Sie auch jedoch **Verteiler-Agent** und **Merge-Agent**auswählen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  In den folgenden Abschnitten werden die Daten beschrieben, die auf dieser Registerkarte für den Verteiler-Agent und den Merge-Agent angezeigt werden.  
   
 ### <a name="distributor-agent"></a>Verteiler-Agent  
@@ -64,7 +64,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
 -   Wird nicht ausgeführt    
 -   Nie gestartet  
   
- **Verleger**  
+ **Herausgeber**  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers.  
   
  **Veröffentlichung**  
@@ -79,7 +79,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -88,7 +88,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
  **Übermittlungsrate**  
  Die Rate (in Befehlen pro Sekunde), mit der bei der letzten Ausführung des Agents für Initialisierungsbefehle ein Commit in der Verteilungsdatenbank ausgeführt wurde.  
   
- **Latenzzeit**  
+ **Latenz**  
  Die verstrichene Zeit in Sekunden zwischen dem Commit der letzten Änderung in der Veröffentlichungsdatenbank und dem Commit des zugehörigen Befehls in der Verteilungsdatenbank.  
   
  **#Trans**  
@@ -110,7 +110,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
 -   Wird nicht ausgeführt    
 -   Nie gestartet  
   
- **Verleger**  
+ **Herausgeber**  
  Der Name einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers.  
   
  **Veröffentlichung**  
@@ -125,7 +125,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
  **Letzte Startzeit**  
  Zeitpunkt, zu dem der Agent beim letzten Mal gestartet wurde.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitdauer, für die der Agent ausgeführt wurde. Dieser Wert gibt entweder die verstrichene Zeit eines zurzeit ausgeführten Agents oder die Gesamtzeit des zuvor ausgeführten Agents an.  
   
  **Letzte Aktion**  
@@ -159,7 +159,7 @@ Dieses Thema enthält Informationen zu den **Verteiler** (Dialogfeld)
  Die Anzahl der Konflikte beim Abonnenten, die im Rahmen des Mergevorgangs aufgetreten sind.  
   
  
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)  
   

@@ -13,19 +13,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6af26cafd4f8dd9bf874ae7860c4f796bef48ae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62892763"
 ---
 # <a name="save-ssis-package-sql-server-import-and-export-wizard"></a>SSIS-Paket speichern (SQL Server-Import/Export-Assistent)
-  Verwenden der **SSIS-Paket speichern** Seite zu benennen, beschreiben und speichern Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Integration Services ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) Paket die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` Datenbank oder in eine Datei mit der DTSX die Erweiterung.  
+  Verwenden Sie die Seite **SSIS-Paket speichern** , [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um ein Integration Services-Paket ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) zu benennen, zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `msdb` beschreiben und in der Datenbank oder in einer Datei mit der Erweiterung. DTX zu speichern.  
   
 > [!NOTE]  
->  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], die Möglichkeit, das vom Assistenten erstellte Paket speichern ist nicht verfügbar.  
+>  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
   
- Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Informationen zu den Optionen zum Starten des Assistenten sowie zu den Berechtigungen erforderlich, um den Assistenten erfolgreich ausführen, finden Sie unter [führen Sie die SQL Server-Import / Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
+ Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
@@ -36,10 +36,10 @@ ms.locfileid: "62892763"
  **Beschreibung**  
  Geben Sie eine Beschreibung für das Paket an. Die bewährte Methode ist hierbei, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
- **Target**  
+ **Spar**  
  Zeigen Sie das Ziel an ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Datei), das zuvor für die Zieldatei angegeben wurde.  
   
-## <a name="target-dynamic-options"></a>Dynamische Zieloptionen  
+## <a name="target-dynamic-options"></a>Dynamische Ziel Optionen  
   
 ### <a name="target--sql-server"></a>Ziel = SQL Server  
  **Servername**  
@@ -48,7 +48,7 @@ ms.locfileid: "62892763"
  **Windows-Authentifizierung verwenden**  
  Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt haben, gibt diese Option an, ob die Verbindung mit dem Server mithilfe der integrierten Windows-Authentifizierung hergestellt werden soll. Dies ist die bevorzugte Authentifizierungsmethode.  
   
- **SQL Server-Authentifizierung verwenden**  
+ **SQL Server Authentifizierung verwenden**  
  Wenn Sie ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ziel ausgewählt haben, gibt diese Option an, ob die Verbindung mit dem Server mithilfe der SQL Server-Authentifizierung hergestellt werden soll.  
   
  **Benutzername**  
@@ -59,12 +59,12 @@ ms.locfileid: "62892763"
   
 ### <a name="target--file-system"></a>Ziel = Dateisystem  
  **Dateiname**  
- Wenn Sie ein Dateiziel ausgewählt haben, geben Sie den Pfad zur Zieldatei, oder verwenden Sie die **Durchsuchen** Schaltfläche.  
+ Wenn Sie ein Dateiziel ausgewählt haben, geben Sie den Pfad für die Zieldatei ein, oder verwenden Sie die Schaltfläche **Durchsuchen** .  
   
  **Durchsuchen**  
- Wenn Sie ein Dateiziel ausgewählt haben, navigieren Sie zu der Zieldatei mithilfe der **-Paket speichern** Dialogfeld.  
+ Wenn Sie ein Dateiziel ausgewählt haben, navigieren Sie zur Zieldatei, indem Sie das Dialogfeld **Paket speichern** verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Speichern von Paketen](../save-packages.md)  
   
   

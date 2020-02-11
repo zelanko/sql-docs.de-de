@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2cc984e4e519d9db0c0532ec5b1f917e18b4ec6
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75247411"
 ---
 # <a name="sql-server-native-client-support-for-high-availability-disaster-recovery"></a>SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung
@@ -92,7 +92,7 @@ ms.locfileid: "75247411"
   
  Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-ODBC-Anwendung kann eine von drei Funktionen verwenden, um die Verbindung herzustellen:  
   
-|Funktion|Beschreibung|  
+|Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
 |[SQLBrowseConnect](../../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md)|Die Liste der Server, die von **SQLBrowseConnect** zurückgegeben wird, schließt keine VNNs ein. Sie sehen nur eine Liste von Servern ohne Angabe, ob es sich bei dem Server um einen eigenständigen Server oder einen primären oder sekundären Server in einem WSFC-Cluster (Windows Server-Failoverclustering) handelt. der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert wurden. Wenn Sie eine Verbindung mit einem Server herstellen, und es wird ein Fehler angezeigt, kann dies daran liegen, dass Sie eine Verbindung mit einem Server hergestellt haben und die Einstellung **ApplicationIntent** nicht mit der Serverkonfiguration kompatibel ist.<br /><br /> Da **SQLBrowseConnect** keine Server in einem WSFC-Cluster (Windows Server-Failoverclustering) erkennt, der zwei oder mehr [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanzen enthält, die für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert sind, ignoriert **SQLBrowseConnect** das **MultiSubnetFailover**Schlüsselwort für Verbindungszeichenfolgen.|  
 |[SQLConnect](../../../relational-databases/native-client-odbc-api/sqlconnect.md)|**SQLCONNECT** unterstützt sowohl **applicationintent** als auch **multisubnetfailover** über einen Datenquellen Namen (DSN) oder Verbindungs Eigenschaften.|  
@@ -105,7 +105,7 @@ ms.locfileid: "75247411"
   
  Zur Unterstützung von [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] wurde in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ein Schlüsselwort für OLE-Verbindungszeichenfolgen hinzugefügt:  
   
--   **Anwendungs Absicht**  
+-   **Application Intent**  
   
  Weitere Informationen zu Schlüsselwörtern für Verbindungszeichenfolgen in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client finden Sie unter [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
@@ -134,7 +134,7 @@ ms.locfileid: "75247411"
  Wenn implizite Verbindungen hergestellt werden, verwendet die implizite Verbindung die Einstellung der Anwendungsabsicht der übergeordneten Verbindung. Auf ähnliche Weise erben mehrere aus der gleichen Datenquelle erstellte Sitzungen die Einstellung für die Anwendungsabsicht der Datenquelle.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
- [Schlüsselwörter für Verbindungs Zeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)   
+ [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
   
   

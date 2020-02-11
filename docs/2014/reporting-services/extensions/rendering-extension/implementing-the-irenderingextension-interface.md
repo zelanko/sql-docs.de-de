@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62987150"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implementieren der IRenderingExtension-Schnittstelle
@@ -49,7 +49,7 @@ ms.locfileid: "62987150"
 -   *createAndRegisterStream* ist eine Delegatfunktion, die aufgerufen wird, damit ein Stream hineingerendert wird.  
   
 ### <a name="deviceinfo-parameter"></a>deviceInfo-Parameter  
- Der *deviceInfo*-Parameter enthält Renderingparameter, nicht Berichtsparameter. Diese Renderingparameter werden an die Renderingerweiterung übergeben. Die *deviceInfo*-Werte werden vom Berichtsserver zu einem <xref:System.Collections.Specialized.NameValueCollection>-Objekt konvertiert. Elemente im *deviceInfo*-Parameter werden als Werte behandelt, bei denen die Groß- und Kleinschreibung nicht beachtet wird. Wenn die Renderinganforderung als Ergebnis des URL-Zugriffs aufgetreten ist, werden die URL-Parameter in Form von `rc:key=value` zu Schlüssel/Wert-Paaren im *deviceInfo*-Wörterbuchobjekt umgewandelt. Der Code bietet auch die folgenden Elemente in der *ClientCapabilities* Wörterbuch: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Typ und AcceptLanguage. Jedes Name/Wert-Paar im *deviceInfo*-Parameter, das nicht von der Renderingerweiterung erkannt wird, wird ignoriert. Das folgende Codebeispiel zeigt eine <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>-Methode, die Symbole abruft:  
+ Der *deviceInfo*-Parameter enthält Renderingparameter, nicht Berichtsparameter. Diese Renderingparameter werden an die Renderingerweiterung übergeben. Die *deviceInfo*-Werte werden vom Berichtsserver zu einem <xref:System.Collections.Specialized.NameValueCollection>-Objekt konvertiert. Elemente im *deviceInfo*-Parameter werden als Werte behandelt, bei denen die Groß- und Kleinschreibung nicht beachtet wird. Wenn die Renderinganforderung als Ergebnis des URL-Zugriffs aufgetreten ist, werden die URL-Parameter in Form von `rc:key=value` zu Schlüssel/Wert-Paaren im *deviceInfo*-Wörterbuchobjekt umgewandelt. Der Code für die Browserabfrage enthält folgende Elemente im *clientCapabilities*-Wörterbuch: EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type und AcceptLanguage. Jedes Name/Wert-Paar im *deviceInfo*-Parameter, das nicht von der Renderingerweiterung erkannt wird, wird ignoriert. Das folgende Codebeispiel zeigt eine <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>-Methode, die Symbole abruft:  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  
@@ -74,7 +74,7 @@ public void GetRenderingResource (CreateStream createStreamCallback, NameValueCo
 ## <a name="getrenderingresource-method"></a>GetRenderingResource-Methode  
  Die <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>-Methode ruft die Informationen ab, ohne den kompletten Renderingvorgang für den Bericht auszuführen. Manchmal benötigt ein Bericht Informationen, die es nicht erfordern, dass der Bericht selbst gerendert wird. Wenn Sie beispielsweise das zur Renderingerweiterung gehörige Symbol benötigen, verwenden Sie den *deviceInfo*-Parameter, der das Einzeltag **\<Icon>** enthält. In diesen Fällen können Sie die <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A>-Methode verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementing a Rendering Extension (Implementieren von Renderingerweiterungen)](implementing-a-rendering-extension.md)   
  [Rendering Extensions Overview (Übersicht über Renderingerweiterungen)](rendering-extensions-overview.md)  
   
