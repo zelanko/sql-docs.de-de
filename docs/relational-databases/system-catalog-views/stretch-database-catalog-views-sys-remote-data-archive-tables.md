@@ -1,5 +1,5 @@
 ---
-title: Sys. remote_data_archive_tables (Transact-SQL) | Microsoft-Dokumentation
+title: sys. remote_data_archive_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,29 +19,29 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 65e42e6303b467abd38ddadb6be0c0d0fece46e5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018191"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivetables"></a>Stretch Database-Katalogsichten - Sys. remote_data_archive_tables
+# <a name="stretch-database-catalog-views---sysremote_data_archive_tables"></a>Stretch Database Katalog Sichten-sys. remote_data_archive_tables
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Remotetabelle, die Daten aus einer Stretch-aktivierten lokalen Tabelle speichert.  
+  Enthält eine Zeile für jede Remote Tabelle, in der Daten aus einer Stretch-aktivierten lokalen Tabelle gespeichert werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|Die Objekt-ID der lokalen Tabelle für Stretch aktiviert werden soll.|  
-|**remote_database_id**|**int**|Der automatisch generierten lokale Bezeichner der Remotedatenbank.|  
-|**remote_table_name**|**sysname**|Der Name der Tabelle in der Remotedatenbank an, die die Stretch-aktivierte lokale Tabelle entspricht.|  
-|**filter_predicate**|**nvarchar(max)**|Das Filterprädikat, sofern vorhanden, identifiziert, die Zeilen in der Tabelle migriert werden. Falls der Wert NULL ist, ist die gesamte Tabelle für die Migration geeignet.<br /><br /> Weitere Informationen finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) und [auswählen zu migrierender mit einem Filter-Prädikat Zeilen](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).|  
-|**migration_direction**|**tinyint**|Die Richtung, in der zurzeit Daten migriert werden. Die verfügbaren Werte sind die folgenden.<br/>1 (ausgehend)<br/>2 (eingehend)|  
-|**migration_direction_desc**|**nvarchar(60)**|Die Beschreibung der die Richtung, in der zurzeit Daten migriert werden. Die verfügbaren Werte sind die folgenden.<br/>ausgehend (1)<br/>eingehende (2)|  
-|**is_migration_paused**|**bit**|Gibt an, ob die Migration angehalten wird.|  
-|**is_reconciled**|**bit**| Gibt an, ob die Remotetabelle und SQL Server-Tabelle synchronisiert sind.<br/><br/>Wenn der Wert des **Is_reconciled** ist 1 (True), die Remotetabelle und SQL Server-Tabelle synchronisiert werden und Sie können Abfragen, die die Remotedaten enthalten ausführen.<br/><br/>Wenn der Wert des **Is_reconciled** ist 0 (False), die Remotetabelle und SQL Server-Tabelle sind nicht synchronisiert. Vor kurzem migrierte Zeilen erneut migriert werden müssen. Dies tritt auf, wenn Sie Azure-Remotedatenbank wiederherstellen oder wenn Sie Zeilen manuell aus der Remotetabelle löschen. Bis Sie die Tabellen abstimmen möchten, können nicht Sie Abfragen ausführen, die die remote-Daten enthalten. Wenn die Tabellen abstimmen möchten, führen Sie [sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md). |  
+|**object_id**|**int**|Die Objekt-ID der Stretch-aktivierten lokalen Tabelle.|  
+|**remote_database_id**|**int**|Der automatisch generierte lokale Bezeichner der Remote Datenbank.|  
+|**remote_table_name**|**sysname**|Der Name der Tabelle in der Remote Datenbank, die der Stretch-aktivierten lokalen Tabelle entspricht.|  
+|**filter_predicate**|**nvarchar(max)**|Das Filter Prädikat, falls vorhanden, das die zu migrierenden Zeilen in der zu migrierenden Tabelle identifiziert. Wenn der Wert null ist, ist die gesamte Tabelle für eine Migration berechtigt.<br /><br /> Weitere Informationen finden Sie unter [Aktivieren von Stretch Database für eine Tabelle](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md) und [auswählen zu migrierender Zeilen mithilfe eines Filter Prädikats](~/sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md).|  
+|**migration_direction**|**tinyint**|Die Richtung, in der Daten zurzeit migriert werden. Die folgenden Werte sind verfügbar:<br/>1 (ausgehend)<br/>2 (eingehend)|  
+|**migration_direction_desc**|**nvarchar (60)**|Die Beschreibung der Richtung, in der Daten gerade migriert werden. Die folgenden Werte sind verfügbar:<br/>Ausgehend (1)<br/>eingehend (2)|  
+|**is_migration_paused**|**bit**|Gibt an, ob die Migration zurzeit angehalten ist.|  
+|**is_reconciled**|**bit**| Gibt an, ob die Remote Tabelle und die SQL Server Tabelle synchronisiert sind.<br/><br/>Wenn **is_reconciled** den Wert 1 (true) hat, sind die Remote Tabelle und die SQL Server Tabelle synchron, und Sie können Abfragen ausführen, die die Remote Daten enthalten.<br/><br/>Wenn der Wert von **is_reconciled** 0 (false) ist, sind die Remote Tabelle und die SQL Server Tabelle nicht synchron. Vor kurzem migrierte Zeilen müssen erneut migriert werden. Dies tritt auf, wenn Sie die Azure-Remote Datenbank wiederherstellen oder wenn Sie Zeilen manuell aus der Remote Tabelle löschen. Bis Sie die Tabellen abgestimmt haben, können Sie keine Abfragen ausführen, die die Remote Daten enthalten. Führen Sie [sys. sp_rda_reconcile_batch](../../relational-databases/system-stored-procedures/sys-sp-rda-reconcile-batch-transact-sql.md)aus, um die Tabellen abzustimmen. |  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

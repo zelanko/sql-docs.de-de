@@ -1,5 +1,5 @@
 ---
-title: Verbindungshandles | Microsoft-Dokumentation
+title: Verbindungs Handles | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,25 +14,25 @@ ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036430"
 ---
 # <a name="connection-handles"></a>Verbindungshandles
-Ein *Verbindung* besteht aus einem Treiber und einer Datenquelle. Ein Verbindungshandle identifiziert jede Verbindung. Das Verbindungshandle definiert, nicht nur den zu verwendenden Treiber, sondern welche Datenquelle Sie mit diesen Treiber verwenden. In einem Segment des Codes, die ODBC (des Treiber-Managers oder eines Treibers) implementiert, identifiziert das Verbindungshandle für eine Struktur, die Verbindungsinformationen, z. B. Folgendes enthält:  
+Eine *Verbindung* besteht aus einem Treiber und einer Datenquelle. Mit einem Verbindungs Handle wird jede Verbindung identifiziert. Das Verbindungs Handle definiert nicht nur den zu verwendenden Treiber, sondern die Datenquelle, die mit diesem Treiber verwendet werden soll. Innerhalb eines Code Segments, das ODBC (Treiber-Manager oder Treiber) implementiert, identifiziert das Verbindungs Handle eine Struktur, die Verbindungsinformationen enthält, wie z. b. Folgendes:  
   
--   Der Status der Verbindung  
+-   Der Status der Verbindung.  
   
--   Die aktuellen Verbindungsebene-Diagnose  
+-   Die aktuelle Diagnose auf Verbindungs Ebene  
   
--   Die Ziehpunkte der Anweisungen und Deskriptoren für die Verbindung derzeit belegt.  
+-   Die Handles von Anweisungen und Deskriptoren, die derzeit für die Verbindung zugeordnet sind.  
   
--   Die aktuellen Einstellungen der einzelnen Attribute für die Verbindung  
+-   Die aktuellen Einstellungen der einzelnen Verbindungs Attribute  
   
- ODBC verhindert nicht mehrere gleichzeitige Verbindungen, wenn der Treiber unterstützt. Aus diesem Grund können in einer bestimmten ODBC-Umgebung mehrere Verbindungshandles eine Vielzahl von Treibern und Datenquellen, denselben Treiber und eine Vielzahl von Datenquellen oder sogar mehrere Verbindungen, die denselben Treiber und die Datenquellensicht zeigen. Einige Treiber beschränken die Anzahl der aktiven Verbindungen, die sie unterstützen. die SQL_MAX_DRIVER_CONNECTIONS option **SQLGetInfo** gibt an, wie viele aktive Verbindungen, die ein bestimmter Treiber unterstützt.  
+ ODBC verhindert nicht mehrere gleichzeitige Verbindungen, wenn Sie vom Treiber unterstützt werden. Daher können mehrere Verbindungs Handles in einer bestimmten ODBC-Umgebung auf eine Vielzahl von Treibern und Datenquellen, auf denselben Treiber und eine Vielzahl von Datenquellen oder sogar auf mehrere Verbindungen mit dem gleichen Treiber und der gleichen Datenquelle verweisen. Einige Treiber begrenzen die Anzahl der aktiven Verbindungen, die Sie unterstützen. die Option SQL_MAX_DRIVER_CONNECTIONS in **SQLGetInfo** gibt an, wie viele aktive Verbindungen von einem bestimmten Treiber unterstützt werden.  
   
- Verbindungshandles dienen in erster Linie beim Verbinden mit der Datenquelle (**SQLConnect**, **SQLDriverConnect**, oder **SQLBrowseConnect**), die aus den Daten trennen Quelle (**SQLDisconnect**), Abrufen von Informationen über die Treiber und die Datenquelle (**SQLGetInfo**), Abrufen von Diagnose (**SQLGetDiagField** und **SQLGetDiagRec**), und die Durchführung von Transaktionen (**SQLEndTran**). Sie werden auch verwendet, wenn festlegen und Abrufen von Verbindungsattributen (**SQLSetConnectAttr** und **SQLGetConnectAttr**) und beim Abrufen von im systemeigenen Format von einer SQL-Anweisung (**SQLNativeSql** ).  
+ Verbindungs Handles werden hauptsächlich verwendet, wenn eine Verbindung mit der Datenquelle hergestellt wird (**SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct**), Trennen der Verbindung mit der Datenquelle (**SQLDisconnect**), Abrufen von Informationen über den Treiber und die Datenquelle (**SQLGetInfo**), Abrufen der Diagnose (**SQLGetDiagField** und **SQLGetDiagRec**) und Durchführen von Transaktionen (**SQLEndTran**). Sie werden auch verwendet, wenn Verbindungs Attribute festgelegt und abgerufen werden (**SQLSetConnectAttr** und **SQLGetConnectAttr**) und wenn das systemeigene Format einer SQL-Anweisung (**SQLNativeSql**) abgerufen wird.  
   
- Verbindungshandles zugeordnet sind **SQLAllocHandle** und mit freigegebenen **SQLFreeHandle**.
+ Verbindungs Handles werden mit **sqlzuordchandle** zugeordnet und mit **SQLFreeHandle**freigegeben.

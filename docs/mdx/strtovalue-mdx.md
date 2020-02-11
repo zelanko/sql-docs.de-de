@@ -1,5 +1,5 @@
 ---
-title: StrToValue (MDX) | Microsoft-Dokumentation
+title: "\"Strauch Wert\" (MDX) | Microsoft-Dokumentation"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: cad8fec605a56a60cfcc7024739225e474fd42f8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036690"
 ---
 # <a name="strtovalue-mdx"></a>StrToValue (MDX)
 
 
-  Gibt zurück, den numerischen Wert, der durch eine Zeichenfolge Multidimensional Expressions MDX-Format angegeben.  
+  Gibt den numerischen Wert zurück, der durch eine Zeichenfolge im MDX-Format (Multidimensional Expressions) angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,10 +31,10 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
  *MDX_Expression*  
  Ein gültiger Zeichenfolgenausdruck, der direkt oder indirekt zu einer einzelnen Zelle aufgelöst wird.  
   
-## <a name="remarks"></a>Hinweise  
- Die **StrToValue** Funktion gibt den numerischen Wert, der durch den MDX-Ausdruck angegeben. Die **StrToValue** -Funktion wird in der Regel mit benutzerdefinierten Funktionen verwendet, um einen MDX-Ausdruck aus einer externen Funktion an ein MDX-Anweisung zurückzugeben, das in einer einzelnen Zelle aufgelöst werden kann.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Funktion "- **Wert** " gibt den numerischen Wert zurück, der durch den MDX-Ausdruck angegeben wird. Die Funktion " **Strauch Wert** " wird in der Regel mit benutzerdefinierten Funktionen verwendet, um einen MDX-Ausdruck aus einer externen Funktion an eine MDX-Anweisung zurückzugeben, die in eine einzelne Zelle aufgelöst werden kann.  
   
--   Wenn das CONSTRAINED-Flag verwendet wird, darf der MDX-Ausdruck nur einen Skalarwert enthalten. Das CONSTRAINED-Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu minimieren. Wenn ein MDX-Ausdruck bereitgestellt wird, die nicht direkt in einen skalaren Wert aufgelöst werden kann, wird der folgende Fehler angezeigt: "Die Einschränkungen durch das CONSTRAINED-Flag in der STRTOVALUE-Funktion wurden verletzt."  
+-   Wenn das CONSTRAINED-Flag verwendet wird, darf der MDX-Ausdruck nur einen Skalarwert enthalten. Das CONSTRAINED-Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu minimieren. Wenn ein MDX-Ausdruck bereitgestellt wird, der nicht direkt zu einem Skalarwert aufgelöst werden kann, wird eine Fehlermeldung angezeigt, die besagt, dass die durch das CONSTRAINED-Flag in der STRTOVALUE-Funktion vorgegebenen Einschränkungen verletzt wurden.  
   
 -   Wenn das CONSTRAINED-Flag nicht verwendet wird, kann der angegebene MDX-Ausdruck beliebig komplex sein, vorausgesetzt er wird zu einem gültigen MDX-Ausdruck (Multidimensional Expressions) aufgelöst, der eine einzelne Zelle zurückgibt.  
   
@@ -42,7 +42,7 @@ StrToValue(MDX_Expression [,CONSTRAINED] )
 >  Das Zurückgeben des Ergebnisses eines MDX-Ausdrucks als numerischen Wert kann sinnvoll sein, wenn der Wert als Text gespeichert ist und Sie arithmetische Operationen für die zurückgegebenen Werte ausführen möchten.  
   
 ## <a name="example"></a>Beispiel  
- Im folgenden Beispiel wird die **StrToValue** Funktion, um die Gewichtung jedes Fahrrades als Wert zurückgeben.  
+ Im folgenden Beispiel wird die Funktion "-Wert" mithilfe der Funktion "- **Wert** " als Wert zurückgegeben.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -56,7 +56,7 @@ FROM [Adventure Works]
 WHERE [Product].[Product Categories].[Bikes]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

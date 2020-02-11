@@ -18,10 +18,10 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72304833"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "72304833"
 
   Gibt Informationen zu den für einen Server definierten Warnungen zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,31 +43,31 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @alert_name = ] 'alert_name'` den Namen der Warnung. *alert_name* ist vom Datentyp **nvarchar (128)** . Wenn *alert_name* nicht angegeben wird, werden Informationen zu allen Warnungen zurückgegeben.  
+`[ @alert_name = ] 'alert_name'`Der Name der Warnung. *alert_name* ist vom Datentyp **nvarchar (128)**. Wenn *alert_name* nicht angegeben wird, werden Informationen zu allen Warnungen zurückgegeben.  
   
-`[ @order_by = ] 'order_by'` die Sortierreihenfolge, die zum Erzeugen der Ergebnisse verwendet werden soll. *ORDER_BY*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert N '*Name*'.  
+`[ @order_by = ] 'order_by'`Die Sortierreihenfolge, die zum Erzeugen der Ergebnisse verwendet werden soll. *ORDER_BY*ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert N '*Name*'.  
   
-`[ @alert_id = ] alert_id` die Identifikationsnummer der Warnung an, über die Informationen über berichtet werden. *alert_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @alert_id = ] alert_id`Die ID der Warnung, zu der Informationen gemeldet werden sollen. *alert_id*ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @category_name = ] 'category'` die Kategorie für die Warnung. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @category_name = ] 'category'`Die Kategorie für die Warnung. *Category* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @legacy_format = ] legacy_format` gibt an, ob ein Legacy Resultset erzeugt werden soll. *legacy_format* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *legacy_format* **1**ist, gibt **sp_help_alert** das Resultset zurück, das von **sp_help_alert** in Microsoft SQL Server 2000 zurückgegeben wurde.  
+`[ @legacy_format = ] legacy_format`Gibt an, ob ein Legacy-Resultset erzeugt werden soll. *legacy_format* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn *legacy_format* **1**ist, gibt **sp_help_alert** das Resultset zurück, das von **sp_help_alert** in Microsoft SQL Server 2000 zurückgegeben wurde.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn **\@legacy_format** **0**ist, erzeugt **sp_help_alert** das folgende Resultset.  
+ Wenn ** \@legacy_format** **0**ist, erstellt **sp_help_alert** das folgende Resultset.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
+|**Name**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
 |**name**|**sysname**|Der Name der Warnung (z. b. Demo: vollständiges **msdb** -Protokoll).|  
-|**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0|  
+|**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0.|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) Wenn der Schweregrad zum Definieren der Warnung verwendet wird, ist **message_id** **0** oder NULL.|  
-|**severity**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder **140**), der die Warnung definiert.|  
+|**zunehmen**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder **140**), der die Warnung definiert.|  
 |**wodurch**|**tinyint**|Status gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
@@ -84,24 +84,25 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|ID des Auftrags, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**job_name**|**sysname**|Name des Auftrags, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Der Wert ist einer oder mehrere der folgenden Werte (ORed):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pager-Benachrichtigung<br /><br /> **4**= hat eine **net send** -Benachrichtigung.|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**performance_condition**|**nvarchar(512)**|Wenn der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Andernfalls ist die Spalte NULL.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 immer '[Uncategorized]'.|  
-|**wmi_namespace**|**sysname**|Wenn der Typ **3**ist, wird in dieser Spalte der Namespace für das WMI-Ereignis angezeigt.|  
-|**wmi_query**|**nvarchar(512)**|Wenn der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt.|  
-|**Typ**|**int**|Typ des Ereignisses:<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
+|**fahren**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**performance_condition**|**nvarchar(512)**|Wenn **** der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Andernfalls ist die Spalte NULL.|  
+|**category_name**|**sysname**|
+  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 immer '[Uncategorized]'.|  
+|**wmi_namespace**|**sysname**|Wenn **** der Typ **3**ist, wird in dieser Spalte der Namespace für das WMI-Ereignis angezeigt.|  
+|**wmi_query**|**nvarchar(512)**|Wenn **** der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt.|  
+|**type**|**int**|Typ des Ereignisses:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
   
- Wenn **\@legacy_format** **1**ist, erzeugt **sp_help_alert** das folgende Resultset.  
+ Wenn ** \@legacy_format** **1**ist, erstellt **sp_help_alert** das folgende Resultset.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
+|**Name**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
 |**name**|**sysname**|Der Name der Warnung (z. b. Demo: vollständiges **msdb** -Protokoll).|  
-|**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0|  
+|**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0.|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) Wenn der Schweregrad zum Definieren der Warnung verwendet wird, ist **message_id** **0** oder NULL.|  
-|**severity**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder 1**40**), der die Warnung definiert.|  
+|**zunehmen**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder 1**40**), der die Warnung definiert.|  
 |**wodurch**|**tinyint**|Status gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
@@ -118,16 +119,16 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|Identifikationsnummer des Auftrags.|  
 |**job_name**|**sysname**|Ein bedarfsgesteuerter Auftrag, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Einer oder mehrere der folgenden Werte sind möglich (mit OR verknüpft):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pager-Benachrichtigung<br /><br /> **4**= hat eine **net send** -Benachrichtigung.|  
-|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]neuen skalierbaren Pakete und R-Funktionen verwenden.|  
-|**performance_condition**|**nvarchar(512)**|Wenn der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Wenn der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt. Andernfalls weist die Spalte den Wert NULL auf.|  
-|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 immer " **[nicht kategorisiert]** " lauten.|  
-|**Typ**|**int**|Warnungstyp:<br /><br /> **1** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **2** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
+|**fahren**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|**performance_condition**|**nvarchar(512)**|Wenn **** der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Wenn **** der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt. Andernfalls weist die Spalte den Wert NULL auf.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 immer "**[nicht kategorisiert]**".|  
+|**type**|**int**|Warnungstyp:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  **sp_help_alert** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
   
  Ausführliche Informationen zu **SQLAgentOperatorRole**finden Sie unter [SQL Server-Agent fester Daten bankrollen](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
@@ -142,9 +143,9 @@ EXEC sp_help_alert @alert_name = 'Demo: Sev. 25 Errors';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
- [sp_update_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
+ [sp_update_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

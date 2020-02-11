@@ -21,10 +21,10 @@ ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 142e4bfd81a60ec6f80294bce16bfb7a59d3211a
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72313707"
 ---
 # <a name="sysserver_event_sessions-transact-sql"></a>sys.server_event_sessions (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72313707"
 
   Listet alle Ereignissitzungsdefinitionen auf, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden sind.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|Die eindeutige ID der Ereignissitzung. Lässt keine NULL-Werte zu.|  
 |name|**sysname**|Der benutzerdefinierte Name zum Identifizieren der Ereignissitzung. der Name ist eindeutig. Lässt keine NULL-Werte zu.|  
@@ -49,7 +49,7 @@ ms.locfileid: "72313707"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung auf dem Server.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  

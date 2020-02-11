@@ -1,5 +1,5 @@
 ---
-title: leere Funktion (XQuery) | Microsoft-Dokumentation
+title: Empty-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68004671"
 ---
 # <a name="functions-on-sequences---empty"></a>Funktionen für Sequenzen – empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt "true" zurück, wenn der Wert des *$arg* eine leere Sequenz. Andernfalls gibt die Funktion False zurück.  
+  Gibt true zurück, wenn der Wert *$arg* eine leere Sequenz ist. Andernfalls gibt die Funktion False zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,14 +38,14 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  Eine Sequenz aus Elementen. Falls die Sequenz leer ist, gibt die Funktion True zurück. Andernfalls gibt die Funktion False zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Fn:Exists()** Funktion wird nicht unterstützt. Als Alternative die **"NOT()" "** Funktion kann verwendet werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **FN: vorhanden ()** -Funktion wird nicht unterstützt. Als Alternative kann die **Not ()** -Funktion verwendet werden.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Verwenden der empty() XQuery-Funktion zum Bestimmen, ob ein Attribut vorhanden ist  
- Im Herstellungsvorgang für Produktmodell 7, gibt diese Abfrage alle arbeitsplatzstandorte, die keine zurück, mit denen eine **MachineHours** Attribut.  
+ Beim Herstellungsprozess für das Produktmodell 7 gibt diese Abfrage alle Arbeitsplatz Standorte zurück, die kein **MachineHours** -Attribut aufweisen.  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -74,7 +74,7 @@ ProductModelID      Result
                <Location LocationID="60" LaborHrs="4"/>  
 ```  
   
- Die folgende, leicht geänderte Abfrage gibt "NotFound" zurück, wenn die **MachineHour** Attribut ist nicht vorhanden:  
+ Die folgende, etwas geänderte Abfrage gibt "NotFound" zurück, wenn das **MachineHour** -Attribut nicht vorhanden ist:  
   
 ```  
 SELECT ProductModelID, Instructions.query('  
@@ -110,8 +110,8 @@ ProductModelID Result
   <Location LocationID="60" LaborHrs="4" MachineHours="NotFound"/>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery-Funktionen für den Xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den XML-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)   
  [exist&#40; &#41;-Methode &#40;xml-Datentyp&#41;](../t-sql/xml/exist-method-xml-data-type.md)  
   
   

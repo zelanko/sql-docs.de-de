@@ -1,5 +1,5 @@
 ---
-title: remote_data_archive_databases (Transact-SQL) | Microsoft-Dokumentation
+title: sys. remote_data_archive_databases (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,24 +19,24 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018198"
 ---
-# <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>Stretch Database-Katalogsichten - remote_data_archive_databases
+# <a name="stretch-database-catalog-views---sysremote_data_archive_databases"></a>Stretch Database Katalog Sichten-sys. remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jede Remotedatenbank, die Daten aus einer lokalen Datenbank mit aktivierter Funktion Stretch-speichert.  
+  Enthält eine Zeile für jede Remote Datenbank, in der Daten aus einer Stretch-aktivierten lokalen Datenbank gespeichert werden.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**remote_database_id**|**int**|Der automatisch generierten lokale Bezeichner der Remotedatenbank.|  
-|**remote_database_name**|**sysname**|Der Name der Remotedatenbank.|  
-|**data_source_id**|**int**|Die Datenquelle, die zur Verbindung mit dem Remoteserver|  
+|**remote_database_id**|**int**|Der automatisch generierte lokale Bezeichner der Remote Datenbank.|  
+|**remote_database_name**|**sysname**|Der Name der Remote Datenbank.|  
+|**data_source_id**|**int**|Die Datenquelle, mit der eine Verbindung mit dem Remote Server hergestellt wird.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

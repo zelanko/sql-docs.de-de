@@ -1,5 +1,5 @@
 ---
-title: PredictSequence (DMX) | Microsoft-Dokumentation
+title: Prätsequence (DMX) | Microsoft-Dokumentation
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041919"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence (DMX)
@@ -30,14 +30,14 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ```  
   
 ## <a name="return-type"></a>Rückgabetyp  
- Ein \<Tabellenausdruck >.  
+ Ein \<Tabellen Ausdrucks>.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn die *n* -Parameter angegeben wird, gibt die folgenden Werte:  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der *n* -Parameter angegeben wird, werden die folgenden Werte zurückgegeben:  
   
--   Wenn *n* ist größer als 0 (null), die am wahrscheinlichsten Sequence-Werte in den nächsten *n* Schritte.  
+-   Wenn *n* größer als 0 (null) ist, handelt es sich um die wahrscheinlichsten Sequenzwerte in den nächsten *n* Schritten.  
   
--   Wenn beide *für die ersten n* und *n-Ende-* angegeben sind, die Sequenzwerte von *für die ersten n* zu *n-Ende-* .  
+-   Wenn sowohl *n-Start* als auch *n-End* angegeben sind, werden die Sequenzwerte von *n-Start* zu *n-End*angegeben.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird basierend auf dem Sequence Clustering-Miningmodell eine Sequenz der fünf Produkte in der [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]-Datenbank zurückgegeben, bei denen die Wahrscheinlichkeit am größten ist, dass sie von einem Kunden gekauft werden.  
@@ -49,9 +49,9 @@ From
   [Sequence Clustering]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datamining-Erweiterungen &#40;DMX&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Funktionen &#40;DMX&#41;](../dmx/functions-dmx.md)   
- [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
+ [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

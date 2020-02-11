@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020697"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
@@ -31,26 +31,26 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
- *Index*  
+ *Sin*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der parallelen Perioden angibt, die vor dem Element liegen sollen.  
   
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Zwar ähnlich wie die [Cousin](../mdx/cousin-mdx.md) -Funktion, die **ParallelPeriod** -Funktion enger mit Zeitreihen. Die **ParallelPeriod** Funktion nimmt den Vorgänger des angegebenen Elements auf der angegebenen Ebene, sucht nach den Vorgänger des gleichgeordnetes Element mit der angegebenen Verzögerung und gibt schließlich die parallele Periode des angegebenen Elements unter den die nachfolgenden Elemente des nebengeordneten Elements.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **ParallelPeriod** -Funktion ist zwar vergleichbar mit der [Cousin](../mdx/cousin-mdx.md) -Funktion, ist jedoch enger mit der Zeitreihe verknüpft. Die **ParallelPeriod** -Funktion nimmt den Vorgänger des angegebenen Elements auf der angegebenen Ebene, sucht das gleich geordnete Element mit dem angegebenen Rückstand und gibt schließlich den parallelen Zeitraum des angegebenen Elements unter den nachfolgenden Werten des gleich geordneten Elements zurück.  
   
- Die **ParallelPeriod** Funktion besitzt die folgenden Standardwerte:  
+ Die **ParallelPeriod** -Funktion hat die folgenden Standardwerte:  
   
--   Wenn weder ein Ebenenausdruck noch ein Elementausdruck angegeben ist, wird als standardelementwert das aktuelle Element der ersten Hierarchie auf der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
+-   Wenn weder ein Ebenenausdruck noch ein Element Ausdruck angegeben ist, ist der Standardelement Wert das aktuelle Element der ersten Hierarchie in der ersten Dimension mit einem *Zeit* Elementtyp in der Measure-Gruppe.  
   
--   Wenn ein Ebenenausdruck angegeben ist, aber ein Elementausdruck nicht angegeben ist, wird als standardelementwert *Level_Expression*. **Hierarchy.CurrentMember**.  
+-   Wenn ein Ebenenausdruck angegeben wird, aber kein Element Ausdruck angegeben ist, wird der Standardelement Wert *Level_Expression*. **Hierarchy. CurrentMember**.  
   
 -   Der Standardindexwert ist 1.  
   
 -   Die Standardebene ist die Ebene des dem angegebenen Element übergeordneten Elements.  
   
- Die **ParallelPeriod** -Funktion ist gleichbedeutend mit der folgenden MDX-Anweisung:  
+ Die **ParallelPeriod** -Funktion entspricht der folgenden MDX-Anweisung:  
   
  `Cousin(Member_Expression, Ancestor(Member_Expression, Level_Expression) .Lag(Numeric_Expression))`  
   
@@ -75,7 +75,7 @@ SELECT ParallelPeriod ([Date].[Calendar].[Calendar Semester]
    FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

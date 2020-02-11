@@ -1,5 +1,5 @@
 ---
-title: Wert der Argumente der Wertliste | Microsoft-Dokumentation
+title: Wertelisten Argumente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 863837be-603b-4c7a-8b96-b71014037ee5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 646d2724489140080a673f31e22429cc7ca39d4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022104"
 ---
 # <a name="value-list-arguments"></a>Argumente der Werteliste
-Eine Liste Wertargument besteht aus einer Liste von durch Trennzeichen getrennte Werte, die für den Abgleich verwendet werden. In der ODBC-Katalogfunktionen Listenargument nur ein Wert vorliegt: die *TableType* -Argument in **SQLTables**. Festlegen von *TableType* auf einen null-Zeiger ist identisch, als ob er auf SQL_ALL_TABLE_TYPES, festgelegt ist, der alle verfügbaren Elemente der Werteliste aufgeführt. Dieses Argument ist das SQL_ATTR_METADATA_ID-Anweisungsattribut nicht betroffen. Weitere Informationen finden Sie unter den [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) funktionsbeschreibung.
+Ein Wert Listen Argument besteht aus einer Liste mit durch Trennzeichen getrennten Werten, die für den Abgleich verwendet werden sollen. In den ODBC-Katalog Funktionen gibt es nur ein Wert Listen Argument: das *TABLETYPE* -Argument in **SQLTables**. Das Festlegen von *TABLETYPE* auf einen NULL-Zeiger ist das gleiche, als ob es auf SQL_ALL_TABLE_TYPES festgelegt ist, das alle möglichen Member der Wertliste auflistet. Dieses Argument wird vom SQL_ATTR_METADATA_ID Statement-Attribut nicht beeinflusst. Weitere Informationen finden Sie in der Beschreibung der [SQLTables](../../../odbc/reference/syntax/sqltables-function.md) -Funktion.

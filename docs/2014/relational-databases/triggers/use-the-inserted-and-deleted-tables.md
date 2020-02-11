@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 9ccc2399f159e3f51753424aa0273d81f428b876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524376"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen inserted und deleted
@@ -55,7 +55,7 @@ ms.locfileid: "62524376"
   
  Da sich CHECK-Einschränkungen nur auf Spalten beziehen können, für die die Einschränkung auf Spalten- oder Tabellenebene definiert wurde, müssen tabellenübergreifende Einschränkungen (in diesem Fall Geschäftsregeln) als Trigger definiert werden.  
   
- Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Create DML Triggers to Handle Multiple Rows of Data](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
+ Im folgenden Beispiel wird ein DML-Trigger erstellt. Der Trigger überprüft die Bonität eines Herstellers, wenn versucht wird, eine neue Bestellung in die `PurchaseOrderHeader` -Tabelle einzufügen. Zum Ermitteln der Bonität des Herstellers im Zusammenhang mit der gerade eingefügten Bestellung muss auf die `Vendor` -Tabelle verwiesen und diese mit der inserted-Tabelle verknüpft werden. Ist die Bonität zu niedrig, wird eine Meldung angezeigt, und die Bestellung wird nicht eingefügt. Bitte beachten Sie, dass in diesem Beispiel multirow-Datenänderungen nicht berücksichtigt werden. Weitere Informationen finden Sie unter [Erstellen von DML-Triggern für die Verarbeitung mehrerer Datenzeilen](../triggers/create-dml-triggers-to-handle-multiple-rows-of-data.md).  
   
  [!code-sql[TriggerDDL#CreateTrigger3](../../snippets/tsql/SQL14/tsql/triggerddl/transact-sql/snippet_create_alter_drop_trigger.sql#createtrigger3)]  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62524376"
   
  Wenn eine INSERT-, UPDATE- oder DELETE-Anweisung auf eine Sicht verweist, die einen INSTEAD OF-Trigger aufweist, ruft [!INCLUDE[ssDE](../../includes/ssde-md.md)] den Trigger auf, anstatt direkte Aktionen für Tabellen auszuführen. Der Trigger muss anhand der in den inserted- und deleted-Tabellen dargestellten Informationen Anweisungen erstellen, die zum Implementieren der angeforderten Aktion in den Basistabellen erforderlich sind, selbst wenn das Format der für die Sicht erstellten Informationen in den inserted- und deleted-Tabellen nicht mit dem Format der Daten in den Basistabellen identisch ist.  
   
- Das Format der inserted- und deleted-Tabellen, das an einen in einer Sicht definierten INSTEAD OF-Trigger übergeben wird, stimmt mit der Auswahlliste der SELECT-Anweisung überein, die für die Sicht definiert wurde. Zum Beispiel:  
+ Das Format der inserted- und deleted-Tabellen, das an einen in einer Sicht definierten INSTEAD OF-Trigger übergeben wird, stimmt mit der Auswahlliste der SELECT-Anweisung überein, die für die Sicht definiert wurde. Beispiel:  
   
 ```  
 USE AdventureWorks2012;  

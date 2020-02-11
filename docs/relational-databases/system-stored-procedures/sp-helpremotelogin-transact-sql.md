@@ -1,5 +1,5 @@
 ---
-title: Sp_helpremotelogin (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpremotelogin (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,13 @@ ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67997579"
 ---
-# <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
+# <a name="sp_helpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu Remoteanmeldenamen für einen bestimmten Remoteserver oder für alle Remoteserver zurück, die auf dem lokalen Server definiert sind.  
@@ -32,7 +32,7 @@ ms.locfileid: "67997579"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] Verwenden Sie stattdessen Verbindungsserver und gespeicherte Prozeduren, die über Verbindungsserver ausgeführt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,26 +43,26 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @remoteserver **=** ] **"***Remoteserver***"**  
- Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remoteserver* ist **Sysname**, hat den Standardwert NULL. Wenn *Remoteserver* ist nicht angegeben ist, werden Informationen zu allen Remoteservern, auf dem lokalen Server definierten zurückgegeben.  
+ [ @remoteserver **=** ] **'***Remote Server***'**  
+ Der Remoteserver, für den Informationen zu Remoteanmeldenamen zurückgegeben werden. *Remote Server* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Remote Server* nicht angegeben wird, werden Informationen zu allen Remote Servern zurückgegeben, die auf dem lokalen Server definiert sind.  
   
- [ @remotename **=** ] **"***Remote_name***"**  
- Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Remote_name* nicht angegeben ist, Informationen zu allen Remotebenutzern für definierten *Remoteserver* zurückgegeben wird.  
+ [ @remotename **=** ] **'***remote_name***'**  
+ Ein bestimmter Remoteanmeldename auf dem Remoteserver. *remote_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *remote_name* nicht angegeben wird, werden Informationen zu allen Remote Benutzern, die für *Remote Server* definiert sind, zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |server|**sysname**|Name des Remoteservers, der auf dem lokalen Server definiert ist.|  
 |local_user_name|**sysname**|Anmeldename auf dem lokalen Server, dem Remoteanmeldenamen vom Server zugeordnet werden.|  
-|remote_user_name|**sysname**|Melden Sie sich auf dem Remoteserver, der Local_user_name zugeordnet wird.|  
-|options|**sysname**|Vertrauenswürdig = Der Remoteanmeldename muss beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus kein Kennwort angeben.<br /><br /> Nicht vertrauenswürdig (oder leer) = Der Remoteanmeldename wird beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus zur Eingabe eines Kennworts aufgefordert.|  
+|remote_user_name|**sysname**|Anmeldename auf dem Remoteserver, der local_user_name zugeordnet wird.|  
+|Optionen|**sysname**|Vertrauenswürdig = Der Remoteanmeldename muss beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus kein Kennwort angeben.<br /><br /> Nicht vertrauenswürdig (oder leer) = Der Remoteanmeldename wird beim Herstellen der Verbindung zum lokalen Server vom Remoteserver aus zur Eingabe eines Kennworts aufgefordert.|  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie Sp_helpserver, um die Namen der auf dem lokalen Server definierten Remoteserver anzuzeigen.  
+## <a name="remarks"></a>Bemerkungen  
+ Mit sp_helpserver listen Sie die Namen der auf dem lokalen Server definierten Remoteserver auf.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Es werden keine Berechtigungen geprüft.  
@@ -83,11 +83,11 @@ EXEC sp_helpremotelogin 'Accounts';
 EXEC sp_helpremotelogin;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
- [sp_dropremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
- [sp_helpserver (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
- [Sp_remoteoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_addremotelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)   
+ [sp_dropremotelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropremotelogin-transact-sql.md)   
+ [sp_helpserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpserver-transact-sql.md)   
+ [sp_remoteoption &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-remoteoption-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

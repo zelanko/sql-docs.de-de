@@ -1,5 +1,5 @@
 ---
-title: sys. DM _exec_procedure_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_exec_procedure_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -21,64 +21,64 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ff5a1f816d0ade76ed6e39db3e8cfc3048ba632
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68742904"
 ---
-# <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
+# <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte gespeicherte Prozeduren zurück. Diese Sicht gibt eine Zeile für jeden Plan der zwischengespeicherten gespeicherten Prozedur zurück, und die Lebensdauer der Zeile entspricht der Verweildauer der gespeicherten Prozedur im Cache. Bei Entfernung einer gespeicherten Prozedur aus dem Cache wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats**entspricht.  
+  Gibt die zusammengefasste Leistungsstatistik für zwischengespeicherte gespeicherte Prozeduren zurück. Diese Sicht gibt eine Zeile für jeden Plan der zwischengespeicherten gespeicherten Prozedur zurück, und die Lebensdauer der Zeile entspricht der Verweildauer der gespeicherten Prozedur im Cache. Bei Entfernung einer gespeicherten Prozedur aus dem Cache wird die entsprechende Zeile aus dieser Sicht gelöscht. Zu diesem Zeitpunkt wird ein Leistungsstatistik-SQL-Ablaufverfolgungsereignis ausgelöst, das **sys.dm_exec_query_stats** entspricht.  
   
  In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]können dynamische Verwaltungssichten keine Informationen verfügbar machen, die sich auf die Datenbankkapselung auswirken würden oder die sich auf andere Datenbanken beziehen, auf die der Benutzer Zugriff hat. Um zu vermeiden, dass diese Informationen verfügbar gemacht werden, wird jede Zeile, die Daten enthält, die nicht zum verbundenen Mandanten gehören, herausgefiltert.  
   
 > [!NOTE]
-> Die Ergebnisse von **sys. DM _exec_procedure_stats** können sich bei jeder Ausführung unterscheiden, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind.
-> Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. DM _pdw_nodes_exec_procedure_stats**. 
+> Die Ergebnisse von **sys. dm_exec_procedure_stats** können sich bei jeder Ausführung unterscheiden, da die Daten nur abgeschlossene Abfragen widerspiegeln, und keine, die noch aktiv sind.
+> Um dies von oder [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]aus aufzurufen, verwenden Sie den Namen **sys. dm_pdw_nodes_exec_procedure_stats**. 
 
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------| 
 |**database_id**|**int**|ID der Datenbank, in der sich die gespeicherte Prozedur befindet.|  
 |**object_id**|**int**|Objekt-ID der gespeicherten Prozedur.|  
-|**type**|**char(2)**|Der Objekttyp:<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> X = Erweiterte gespeicherte Prozedur|  
-|**type_desc**|**nvarchar(60)**|Beschreibung des Objekttyps:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um eine Korrelation mit Abfragen in **sys. DM _exec_query_stats** , die in dieser gespeicherten Prozedur ausgeführt wurden, zu korrelieren.|  
-|**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
+|**type**|**char (2)**|Der Objekttyp:<br /><br /> P = Gespeicherte SQL-Prozedur<br /><br /> PC = Gespeicherte Assemblyprozedur (CLR)<br /><br /> X = Erweiterte gespeicherte Prozedur|  
+|**type_desc**|**nvarchar (60)**|Beschreibung des Objekttyps:<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
+|**sql_handle**|**varbinary (64)**|Dies kann verwendet werden, um mit Abfragen in **sys. dm_exec_query_stats** zu korrelieren, die in dieser gespeicherten Prozedur ausgeführt wurden.|  
+|**plan_handle**|**varbinary (64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine systemintern kompilierte gespeicherte Prozedur eine speicheroptimierte Tabelle abfragt.|  
 |**cached_time**|**datetime**|Der Zeitpunkt, zu dem die gespeicherte Prozedur dem Cache hinzugefügt wurde.|  
 |**last_execution_time**|**datetime**|Der Zeitpunkt, zu dem die gespeicherte Prozedur zuletzt ausgeführt wurde.|  
-|**execution_count**|**bigint**|Die Anzahl der Ausführungen der gespeicherten Prozedur seit der letzten Kompilierung.|  
-|**total_worker_time**|**bigint**|Die Gesamtmenge an CPU-Zeit (in Mikrosekunden), die von Ausführungen dieser gespeicherten Prozedur seit der Kompilierung verbraucht wurde.<br /><br /> Wenn zahlreiche Ausführungen weniger als 1 Millisekunde dauern, wird **total_worker_time** bei nativ kompilierten gespeicherten Prozeduren u.U. nicht exakt angegeben.|  
-|**last_worker_time**|**bigint**|Die CPU-Zeit (in Mikrosekunden) für die letzte Ausführung der gespeicherten Prozedur. <sup>1</sup>|  
-|**min_worker_time**|**bigint**|Die minimale CPU-Zeit (in Mikrosekunden), die diese gespeicherte Prozedur bei einer einzelnen Ausführung jemals verbraucht hat. <sup>1</sup>|  
-|**max_worker_time**|**bigint**|Die maximale CPU-Zeit (in Mikrosekunden), die diese gespeicherte Prozedur bei einer einzelnen Ausführung jemals verbraucht hat. <sup>1</sup>|  
-|**total_physical_reads**|**bigint**|Die Gesamtanzahl der physischen Lesevorgänge, die von Ausführungen dieser gespeicherten Prozedur seit der Kompilierung durchgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_physical_reads**|**bigint**|Die Anzahl der physischen Lesevorgänge, die bei der letzten Ausführung der gespeicherten Prozedur ausgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_physical_reads**|**bigint**|Die minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_physical_reads**|**bigint**|Die maximal zulässige Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_logical_writes**|**bigint**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieser gespeicherten Prozedur seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_logical_writes**|**bigint**|Die Anzahl der Pufferpool Seiten, die bei der letzten Ausführung des Plans dirgebunden wurden. Wenn eine Seite bereits modifiziert (geändert) wurde, werden keine Schreibvorgänge gezählt.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_logical_writes**|**bigint**|Die minimale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_logical_writes**|**bigint**|Die maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_logical_reads**|**bigint**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieser gespeicherten Prozedur seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_logical_reads**|**bigint**|Die Anzahl logischer Lesevorgänge bei der letzten Ausführung der gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_logical_reads**|**bigint**|Die Mindestanzahl logischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_logical_reads**|**bigint**|Die maximale Anzahl logischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_elapsed_time**|**bigint**|Die insgesamt verstrichene Zeit (in Mikrosekunden) für abgeschlossene Ausführungen dieser gespeicherten Prozedur.|  
-|**last_elapsed_time**|**bigint**|Die verstrichene Zeit (in Mikrosekunden) für die zuletzt abgeschlossene Ausführung dieser gespeicherten Prozedur.|  
-|**min_elapsed_time**|**bigint**|Die mindestens verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser gespeicherten Prozedur.|  
-|**max_elapsed_time**|**bigint**|Die maximal verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser gespeicherten Prozedur.|  
-|**total_spills**|**bigint**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieser gespeicherten Prozedur seit der Kompilierung übergegangen sind.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**last_spills**|**bigint**|Die Anzahl der Seiten, die bei der letzten Ausführung der gespeicherten Prozedur übergegangen sind.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**min_spills**|**bigint**|Die Mindestanzahl von Seiten, die diese gespeicherte Prozedur während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**max_spills**|**bigint**|Die maximale Anzahl von Seiten, die diese gespeicherte Prozedur während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: Beginnend mit [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**execution_count**|**BIGINT**|Die Anzahl der Ausführungen der gespeicherten Prozedur seit der letzten Kompilierung.|  
+|**total_worker_time**|**BIGINT**|Die Gesamtmenge an CPU-Zeit (in Mikrosekunden), die von Ausführungen dieser gespeicherten Prozedur seit der Kompilierung verbraucht wurde.<br /><br /> Wenn zahlreiche Ausführungen weniger als 1 Millisekunde dauern, wird **total_worker_time** bei nativ kompilierten gespeicherten Prozeduren u.U. nicht exakt angegeben.|  
+|**last_worker_time**|**BIGINT**|Die CPU-Zeit (in Mikrosekunden) für die letzte Ausführung der gespeicherten Prozedur. <sup>1</sup>|  
+|**min_worker_time**|**BIGINT**|Die minimale CPU-Zeit (in Mikrosekunden), die diese gespeicherte Prozedur bei einer einzelnen Ausführung jemals verbraucht hat. <sup>1</sup>|  
+|**max_worker_time**|**BIGINT**|Die maximale CPU-Zeit (in Mikrosekunden), die diese gespeicherte Prozedur bei einer einzelnen Ausführung jemals verbraucht hat. <sup>1</sup>|  
+|**total_physical_reads**|**BIGINT**|Die Gesamtanzahl der physischen Lesevorgänge, die von Ausführungen dieser gespeicherten Prozedur seit der Kompilierung durchgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_physical_reads**|**BIGINT**|Die Anzahl der physischen Lesevorgänge, die bei der letzten Ausführung der gespeicherten Prozedur ausgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_physical_reads**|**BIGINT**|Die minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_physical_reads**|**BIGINT**|Die maximal zulässige Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_logical_writes**|**BIGINT**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieser gespeicherten Prozedur seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_logical_writes**|**BIGINT**|Die Anzahl der Pufferpool Seiten, die bei der letzten Ausführung des Plans dirgebunden wurden. Wenn eine Seite bereits modifiziert (geändert) wurde, werden keine Schreibvorgänge gezählt.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_logical_writes**|**BIGINT**|Die minimale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_logical_writes**|**BIGINT**|Die maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_logical_reads**|**BIGINT**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieser gespeicherten Prozedur seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_logical_reads**|**BIGINT**|Die Anzahl logischer Lesevorgänge bei der letzten Ausführung der gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_logical_reads**|**BIGINT**|Die Mindestanzahl logischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_logical_reads**|**BIGINT**|Die maximale Anzahl logischer Lesevorgänge für eine einzelne Ausführung dieser gespeicherten Prozedur.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_elapsed_time**|**BIGINT**|Die insgesamt verstrichene Zeit (in Mikrosekunden) für abgeschlossene Ausführungen dieser gespeicherten Prozedur.|  
+|**last_elapsed_time**|**BIGINT**|Die verstrichene Zeit (in Mikrosekunden) für die zuletzt abgeschlossene Ausführung dieser gespeicherten Prozedur.|  
+|**min_elapsed_time**|**BIGINT**|Die mindestens verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser gespeicherten Prozedur.|  
+|**max_elapsed_time**|**BIGINT**|Die maximal verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser gespeicherten Prozedur.|  
+|**total_spills**|**BIGINT**|Die Gesamtanzahl der Seiten, die durch die Ausführung dieser gespeicherten Prozedur seit der Kompilierung übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**last_spills**|**BIGINT**|Die Anzahl der Seiten, die bei der letzten Ausführung der gespeicherten Prozedur übergegangen sind.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**min_spills**|**BIGINT**|Die Mindestanzahl von Seiten, die diese gespeicherte Prozedur während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**max_spills**|**BIGINT**|Die maximale Anzahl von Seiten, die diese gespeicherte Prozedur während einer einzelnen Ausführung jemals übergegangen ist.<br /><br /> **Gilt für**: ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.<br /><br />**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
-|**total_page_server_reads**|**bigint**|Die Gesamtanzahl von Seiten Server Lesevorgängen, die von Ausführungen dieser gespeicherten Prozedur seit der Kompilierung ausgeführt wurden.<br /><br /> **Gilt für**: Hyperskalierung von Azure SQL-Datenbank|  
-|**last_page_server_reads**|**bigint**|Die Anzahl von Seiten Lesevorgängen, die bei der letzten Ausführung der gespeicherten Prozedur ausgeführt wurden.<br /><br /> **Gilt für**: Hyperskalierung von Azure SQL-Datenbank|  
-|**min_page_server_reads**|**bigint**|Die Mindestanzahl von Seiten Server Lesevorgängen, die diese gespeicherte Prozedur jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: Hyperskalierung von Azure SQL-Datenbank|  
-|**max_page_server_reads**|**bigint**|Die maximale Anzahl von Seiten Server Lesevorgängen, die diese gespeicherte Prozedur jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: Hyperskalierung von Azure SQL-Datenbank|  
+|**total_page_server_reads**|**BIGINT**|Die Gesamtanzahl von Seiten Server Lesevorgängen, die von Ausführungen dieser gespeicherten Prozedur seit der Kompilierung ausgeführt wurden.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
+|**last_page_server_reads**|**BIGINT**|Die Anzahl von Seiten Lesevorgängen, die bei der letzten Ausführung der gespeicherten Prozedur ausgeführt wurden.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
+|**min_page_server_reads**|**BIGINT**|Die Mindestanzahl von Seiten Server Lesevorgängen, die diese gespeicherte Prozedur jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
+|**max_page_server_reads**|**BIGINT**|Die maximale Anzahl von Seiten Server Lesevorgängen, die diese gespeicherte Prozedur jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für**: hyperskalierung von Azure SQL-Datenbank|  
   
  <sup>1</sup> wenn die Statistik Sammlung für System intern kompilierte gespeicherte Prozeduren aktiviert ist, wird die workerzeit in Millisekunden erfasst. Wird die Abfrage in weniger als einer Millisekunde ausgeführt, lautet der Wert 0.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "68742904"
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
 Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VIEW DATABASE STATE` -Berechtigung in der Datenbank erforderlich. In [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] den Tarifen "Standard" und "Basic" ist der **Server Administrator** oder ein **Azure Active Directory Administrator** Konto erforderlich.   
    
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die Statistik in der Sicht wird aktualisiert, wenn die Ausführung einer gespeicherten Prozedur abgeschlossen ist.  
   
 ## <a name="examples"></a>Beispiele  
@@ -102,12 +102,12 @@ FROM sys.dm_exec_procedure_stats AS d
 ORDER BY [total_worker_time] DESC;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
-[Dynamische Verwaltungs Sichten und Funktionen &#40;in Bezug auf die Ausführung mit Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+## <a name="see-also"></a>Weitere Informationen  
+[Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys. dm_exec_query_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[sys. dm_exec_trigger_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   

@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efbd01499940490fd85dfaf1e0786d26b722749c
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72782737"
 ---
 # <a name="delete-a-data-tier-application"></a>Löschen einer Datenebenenanwendung
   Sie können eine Datenebenenanwendung entweder mit dem Assistenten zum Löschen von Datenebenenanwendungen oder mit einem Windows PowerShell-Skript löschen. Sie können angeben, ob die zugeordnete Datenbank beibehalten, getrennt oder gelöscht wird.  
   
--   **Vorbereitungen:**  [Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
+-   **Vorbereitungen:**  [Begrenzungen und Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)  
   
--   **So aktualisieren Sie eine DAC mit:**  [dem Assistenten zum Registrieren von Datenebenenanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **So aktualisieren Sie eine DAC:**  [dem Assistenten zum Registrieren von Datenschichtanwendungen](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
-## <a name="before-you-begin"></a>Vorbereitungsmaßnahmen  
+## <a name="before-you-begin"></a>Vorbereitungen  
  Wenn Sie eine Instanz einer Datenebenenanwendung (Data-Tier Application, DAC) löschen, legen Sie mit einer von drei Optionen fest, wie mit der der Datenebenenanwendung zugeordneten Datenbank verfahren werden soll. Durch alle drei Optionen werden die Metadaten der DAC-Definition gelöscht. Die Optionen unterscheiden sich in der Art, wie mit der Datenbank, die der Datenebenenanwendung zugeordnet ist, verfahren wird. Der Assistent löscht keine der Objekte auf Instanzebene, wie Anmeldenamen, die der DAC oder Datenbank zugeordnet sind.  
   
 |Option|Datenbankaktionen|  
@@ -88,47 +88,47 @@ ms.locfileid: "72782737"
   
  **Abbrechen** – Beendet den Assistenten, ohne eine Datenebenenanwendung oder Datenbank zu löschen.  
   
-##  <a name="Choose_method"></a> Seite "Methode auswählen"  
+##  <a name="Choose_method"></a>Seite "Methode auswählen"  
  Auf dieser Seite können Sie die Option zum Behandeln der der zu löschenden DAC zugeordneten Datenbank angeben.  
   
- **Registrierung löschen** – Entfernt die Metadaten, die die Datenebenenanwendung definieren, während die zugeordnete Datenbank intakt bleibt.  
+ **Delete Registration** : entfernt die Metadaten, die die Datenebenenanwendung definieren, behält aber die zugehörige Datenbank bei.  
   
- **Datenbank trennen** – Entfernt die Metadaten, die die Datenebenenanwendung definieren, und trennt die zugeordnete Datenbank.  
+ **Datenbank trennen** : entfernt die Metadaten, die die Datenebenenanwendung definieren, und trennt die zugeordnete Datenbank.  
   
  Von dieser [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz kann nicht mehr auf die Datenbank verwiesen werden, während die Daten und Protokolldateien jedoch intakt bleiben.  
   
- **Datenbank löschen** – Entfernt die Metadaten, die die DAC definieren, und löscht die zugeordnete Datenbank.  
+ **Datenbank löschen** : entfernt die Metadaten, die die DAC definieren, und löscht die zugeordnete Datenbank.  
   
  Die Daten und Protokolldateien für die Datenbank werden dauerhaft gelöscht.  
   
- **\< Zurück** – Kehrt zur Seite **Einführung** über.  
+ Previous: kehrt zur **Einführungs** Seite zurück. ** \< **  
   
- **Weiter >** – Geht zur Seite **Zusammenfassung** über.  
+ **Nächste >** : geht zur Seite **Zusammenfassung** über.  
   
- **Abbrechen** – Beendet den Assistenten, ohne die DAC oder Datenbank zu löschen.  
+ **Abbrechen** : beendet den Assistenten, ohne die DAC oder Datenbank zu löschen.  
   
 ##  <a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die Aktionen zu überprüfen, die der Assistent beim Löschen der DAC-Instanz ausführt.  
   
- **Überprüfen Sie Ihre Auswahl** – Überprüfen Sie die DAC, Datenbank und Löschmethode, die im Feld angezeigt werden. Wenn die Informationen richtig sind, wählen Sie entweder **Weiter** oder **Fertig stellen** aus, um die DAC zu löschen. Falls die DAC und die Datenbankinformationen nicht richtig sind, klicken Sie auf **Abbrechen** und wählen dann die richtige DAC aus. Wenn die Löschmethode nicht richtig ist, wählen Sie **Zurück** aus, um zur Seite **Methode auswählen** zurückzukehren, und wählen eine andere Methode aus.  
+ **Überprüfen Sie Ihre Auswahl Zusammenfassung** : Überprüfen Sie die im Feld angezeigte DAC, Datenbank und Löschmethode. Wenn die Informationen richtig sind, wählen Sie entweder **Weiter** oder **Fertig stellen** aus, um die DAC zu löschen. Falls die DAC und die Datenbankinformationen nicht richtig sind, klicken Sie auf **Abbrechen** und wählen dann die richtige DAC aus. Wenn die Löschmethode nicht richtig ist, wählen Sie **Zurück** aus, um zur Seite **Methode auswählen** zurückzukehren, und wählen eine andere Methode aus.  
   
- **\< Zurück** – Kehrt zur Seite **Methode auswählen** zurück, um eine andere Löschmethode auszuwählen.  
+ Previous: kehrt zur Seite **Methode auswählen** zurück, um eine andere Löschmethode auszuwählen. ** \< **  
   
- **Weiter >** – Löscht die DAC-Instanz unter Verwendung der auf der vorherigen Seite ausgewählten Methode und geht zur Seite **Datenebenenanwendung löschen** über.  
+ **Nächste >** : Löscht die DAC-Instanz mithilfe der Methode, die Sie auf der vorherigen Seite ausgewählt haben, und geht zur Seite **Datenebenenanwendung löschen** über.  
   
- **Abbrechen** – Beendet den Assistenten, ohne die DAC-Instanz zu löschen.  
+ **Abbrechen** : beendet den Assistenten, ohne die DAC-Instanz zu löschen.  
   
-##  <a name="Delete_datatier_application"></a> Seite "Datenebenenanwendung löschen"  
+##  <a name="Delete_datatier_application"></a>Seite "Datenebenenanwendung löschen"  
  Auf dieser Seite wird angegeben, ob der Löschvorgang erfolgreich war oder fehlgeschlagen ist.  
   
- **Die DAC wird gelöscht** – Gibt an, ob die Aktionen zum Löschen der DAC-Instanz erfolgreich waren oder fehlgeschlagen sind. Überprüfen Sie die Informationen, um zu bestimmen, ob die einzelnen Aktionen erfolgreich waren oder fehlgeschlagen sind. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
+ **DAC wird gelöscht** : gibt an, dass die einzelnen Aktionen zum Löschen der DAC-Instanz erfolgreich waren oder fehlgeschlagen sind. Überprüfen Sie die Informationen, um zu bestimmen, ob die einzelnen Aktionen erfolgreich waren oder fehlgeschlagen sind. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
- **Bericht speichern** – Klicken Sie auf diese Schaltfläche, um den Löschbericht in einer HTML-Datei zu speichern. In der Datei ist der Status der einzelnen Aktionen aufgeführt, einschließlich aller durch die Aktionen generierten Fehler. Der Standardordner entspricht dem Ordner "SQL Server Management Studio\DAC Packages" im Ordner "Dokumente" unter Ihrem Windows-Konto.  
+ **Bericht speichern** : Klicken Sie auf diese Schaltfläche, um den Lösch Bericht in einer HTML-Datei zu speichern. In der Datei ist der Status der einzelnen Aktionen aufgeführt, einschließlich aller durch die Aktionen generierten Fehler. Der Standardordner entspricht dem Ordner "SQL Server Management Studio\DAC Packages" im Ordner "Dokumente" unter Ihrem Windows-Konto.  
   
- **Fertig stellen** – Beendet den Assistenten.  
+ **Fertig** stellen: beendet den Assistenten.  
   
-##  <a name="DeleteDACPowerShell"></a> Löschen einer DAC mit PowerShell  
- **So löschen Sie eine DAC mit einem PowerShell-Skript**  
+##  <a name="DeleteDACPowerShell"></a>Löschen einer DAC mithilfe von PowerShell  
+ **So löschen Sie eine DAC mithilfe eines PowerShell-Skripts**  
   
 1.  Erstellen Sie ein SMO-Serverobjekt, und legen Sie es auf die Instanz fest, die die zu löschende DAC enthält.  
   
@@ -218,10 +218,10 @@ $dacName  = "MyApplication"
 ## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenebenenanwendungen](data-tier-applications.md)   
  [Datenebenenanwendungen](data-tier-applications.md)   
  [Bereitstellen einer Datenebenenanwendung](deploy-a-data-tier-application.md)   
- [Registrieren einer Datenbank als eine DAC](register-a-database-as-a-dac.md)   
+ [Registrieren einer Datenbank als DAC](register-a-database-as-a-dac.md)   
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md)  

@@ -16,10 +16,10 @@ ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038979"
 ---
 # <a name="context-functions---position-xquery"></a>Kontextfunktionen – position (XQuery)
@@ -34,14 +34,14 @@ ms.locfileid: "68038979"
 fn:position() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], **Fn:Position()** kann nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Die Funktion kann insbesondere nur innerhalb von eckigen Klammern ([ ]) verwendet werden. Das Vergleichen mit dieser Funktion verringert nicht die Kardinalität während des statischen Typrückschlusses.  
+## <a name="remarks"></a>Bemerkungen  
+ In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]kann **FN: Position ()** nur im Kontext eines kontextabhängigen Prädikats verwendet werden. Die Funktion kann insbesondere nur innerhalb von eckigen Klammern ([ ]) verwendet werden. Das Vergleichen mit dieser Funktion verringert nicht die Kardinalität während des statischen Typrückschlusses.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen, die in verschiedenen gespeichert sind **Xml** -Typspalten in der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Abrufen der ersten beiden Produktfunktionen mit der XQuery-Funktion position()  
- Die folgende Abfrage ruft die beiden ersten Funktionen, die ersten beiden untergeordneten Elemente von der <`Features`>-Element aus der Produktmodell-katalogbeschreibung. Wenn mehrere Funktionen vorhanden sind, fügt es eine <`there-is-more/`>-Element auf das Ergebnis.  
+ Die folgende Abfrage ruft die ersten beiden Features, die ersten beiden untergeordneten Elemente des <`Features`>-Element, aus der Produktmodell-Katalogbeschreibung ab. Wenn weitere Funktionen vorhanden sind, wird dem Ergebnis ein `there-is-more/` <>-Element hinzugefügt.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -67,17 +67,17 @@ WHERE CatalogDescription is not null
   
  Beachten Sie hinsichtlich der vorherigen Abfrage Folgendes:  
   
--   Die **Namespace** -Schlüsselwort in der [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespacepräfix, das verwendet wird, im Hauptteil Abfrage.  
+-   Das **Namespace** -Schlüsselwort im [XQuery-Prolog](../xquery/modules-and-prologs-xquery-prolog.md) definiert ein Namespace Präfix, das im Abfragetext verwendet wird.  
   
--   Der abfragehauptteil konstruiert XML, in dem eine \<Product >-Element mit **ProductModelID** und **ProductModelName** -Attribut enthält und dessen Produktfunktionen als untergeordnete Elemente zurückgegeben.  
+-   Der Abfragetext konstruiert XML-Code, \<der über ein Product>-Element mit den Attributen **ProductModelID** und **ProductModelName** verfügt und die Produktfunktionen als untergeordnete Elemente zurückgibt.  
   
--   Die **position()** Funktion wird im Prädikat verwendet, um zu bestimmen, der die Position des der \<Features > untergeordnetes Element im Kontext. Wenn es sich dabei um die erste oder zweite Funktion handelt, wird diese zurückgegeben.  
+-   Die **Position ()** -Funktion wird im Prädikat verwendet, um die Position der \<Funktionen> untergeordneten Elements im Kontext zu ermitteln. Wenn es sich dabei um die erste oder zweite Funktion handelt, wird diese zurückgegeben.  
   
--   Die IF-Anweisung fügt eine \<dort-is-More / >-Element auf das Ergebnis, wenn mehr als zwei Funktionen vorhanden, im Produktkatalog sind.  
+-   Die if-Anweisung fügt \<dem Ergebnis ein "There-More-More/>"-Element hinzu, wenn mehr als zwei Funktionen im Produktkatalog vorhanden sind.  
   
 -   Da nicht für alle Produktmodelle Katalogbeschreibungen in der Tabelle gespeichert sind, wird die WHERE-Klausel zum Verwerfen von Zeilen verwendet, in denen CatalogDescriptions den Wert NULL besitzt.  
   
- Dies ist ein Teilergebnis gezeigt:  
+ Dies ist ein Teilergebnis:  
   
 ```  
 <Product ProductModelID="19" ProductModelName="Mountain 100">  
@@ -95,7 +95,7 @@ WHERE CatalogDescription is not null
 ...  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

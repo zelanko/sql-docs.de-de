@@ -1,5 +1,5 @@
 ---
-title: 'Anhang B: ODBC-Übergang Statustabellen | Microsoft-Dokumentation'
+title: 'Anhang B: ODBC-Status Übergangs Tabellen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,86 +15,86 @@ ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996250"
 ---
-# <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
-Die Tabellen in diesem Anhang zeigen, wie Funktionen mit ODBC-Übergang von der Umgebung, Verbindung, -Anweisung und Deskriptor Status führen. Der Status der Umgebung, die Verbindung, die Anweisung oder die Sicherheitsbeschreibung schreibt in der Regel vor, wenn Funktionen, mit denen den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Descriptor) aufgerufen werden kann. Die Status-Umgebung, Verbindung, anweisungs- und Deskriptorstatuswerte überlappen ungefähr wie in den folgenden Abbildungen dargestellt. Z. B. die genaue Überlappung der Verbindung gibt C5 und C6 und Anweisung gibt an, dass S1 bis S12 ist datenquellenabhängig, da Transaktionen, die zu unterschiedlichen Zeiten in verschiedenen Datenquellen beginnt und Deskriptor Zustand D1i (implizit Deskriptor zugeordnet) abhängig ist. auf den Zustand der Anweisung, die der Deskriptor zugeordnet ist, ist beim Status D1e (explizit Deskriptor zugeordnet) zum unabhängig vom Status-Anweisungen. Eine Beschreibung der einzelnen Status, finden Sie unter [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindungsübergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md), und [Deskriptor Übergänge ](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
+# <a name="appendix-b-odbc-state-transition-tables"></a>Anhang B: ODBC-Statusübergangstabellen
+Die Tabellen in diesem Anhang veranschaulichen, wie ODBC-Funktionen Übergänge der Umgebungs-, Verbindungs-, Anweisungs-und deskriptorzustände verursachen. Der Zustand der Umgebung, der Verbindung, der Anweisung oder des Deskriptors gibt in der Regel an, wann Funktionen aufgerufen werden können, die den entsprechenden Typ des Handles (Umgebung, Verbindung, Anweisung oder Deskriptor) verwenden. Die Umgebungs-, Verbindungs-, Anweisungs-und deskriptorzustände überlappen sich ungefähr wie in den folgenden Abbildungen dargestellt. Beispielsweise ist die genaue Überlappung der Verbindungszustände C5 und C6 und der Anweisungs Status S1 bis S12 Datenquellen abhängig, da Transaktionen zu unterschiedlichen Zeiten in verschiedenen Datenquellen beginnen und der deskriptorstatus D1i (implizit zugeordneter Deskriptor) von abhängt. der Status der Anweisung, der der Deskriptor zugeordnet ist, während State D1e (explizit zugeordneter Deskriptor) unabhängig vom Status einer beliebigen Anweisung ist. Eine Beschreibung jedes Zustands finden Sie unter [Umgebungs Übergänge](../../../odbc/reference/appendixes/environment-transitions.md), [Verbindungs Übergänge](../../../odbc/reference/appendixes/connection-transitions.md), [Anweisungs Übergänge](../../../odbc/reference/appendixes/statement-transitions.md)und [deskriptorübergänge](../../../odbc/reference/appendixes/descriptor-transitions.md)weiter unten in diesem Anhang.  
   
- Die umgebungs- und verbindungsstatuswerte überlappen wie folgt aus:  
+ Die Umgebungs-und Verbindungszustände überlappen sich wie folgt:  
   
- ![Umgebungs- und verbindungsstatuswerte überlappen](../../../odbc/reference/appendixes/media/app01.gif "app01")  
+ ![Umgebungs- und Verbindungsstatuswerte überlappen](../../../odbc/reference/appendixes/media/app01.gif "app01")  
   
- Die Verbindungs- und -verbindungsstatuswerte überlappen wie folgt aus:  
+ Die Verbindungs-und Anweisungs Zustände überlappen sich wie folgt:  
   
  ![Verbindungs- und Anweisungsstatuswerte überlappen](../../../odbc/reference/appendixes/media/app02.gif "app02")  
   
- Die Zustände anweisungs- und Deskriptorstatuswerte überlappen wie folgt aus:  
+ Die Anweisungs-und deskriptorzustände überlappen sich wie folgt:  
   
- ![Gibt an anweisungs- und Deskriptorstatuswerte überlappen](../../../odbc/reference/appendixes/media/app03.gif "app03")  
+ ![Anweisungs- und Deskriptorstatuswerte überlappen](../../../odbc/reference/appendixes/media/app03.gif "app03")  
   
- Die Zustände Verbindungs- und Deskriptorstatuswerte überlappen wie folgt aus:  
+ Die Verbindungs-und deskriptorzustände überlappen sich wie folgt:  
   
- ![Gibt an Verbindungs- und Deskriptorstatuswerte überlappen](../../../odbc/reference/appendixes/media/app04.gif "app04")  
+ ![Verbindungs- und Deskriptorstatuswerte überlappen](../../../odbc/reference/appendixes/media/app04.gif "app04")  
   
- Jeder Eintrag in einer Tabelle der Zustandsübergänge ist einer der folgenden Werte möglich:  
+ Jeder Eintrag in einer Übergangs Tabelle kann einen der folgenden Werte aufweisen:  
   
--   **--** -Der Status bleibt unverändert, nach der Ausführung der Funktion.  
+-   **--**-Der Status ist nach dem Ausführen der Funktion unverändert.  
   
--   **E**  
+-   **Fresser**  
 
-     **_n_**  , **C_n_** , **S_n_** , oder **D_n_** – die Umgebung, Verbindung, Anweisung oder Deskriptor Zustand verschoben wird, auf den angegebenen Zustand.  
+     **_n_** , **C_n_**, **S_n_** oder **D_n_** -die Umgebung, die Verbindung, die Anweisung oder der deskriptorzustand werden in den angegebenen Zustand verschoben.  
  
--   **(BEI)**  -Ein ungültiges Handle an die Funktion übergeben wurde. Wenn das Handle ein null-Handle war oder ein gültiges Handle des falschen Typs – z. B. wurde ein Anweisungshandle war erforderlich – die Funktion gibt SQL_INVALID_HANDLE zurück ein Verbindungshandle bei übergeben; Andernfalls ist das Verhalten nicht definiert "und" wahrscheinlich schwerwiegend. Dieser Fehler wird angezeigt, nur, wenn es das einzig mögliche Ergebnis des Funktionsaufrufs im angegebenen Zustand ist. Dieser Fehler ändert sich nicht auf den Zustand und vom Treiber-Manager, wird immer erkannt werden, wie durch die Klammern angegeben.  
+-   **(IH)** : an die Funktion wurde ein ungültiges Handle übermittelt. Wenn das Handle ein NULL-Handle oder ein gültiges Handle des falschen Typs war, z. b. wurde ein Verbindungs Handle bei erforderlicher Angabe eines Anweisungs Handles übermittelt, gibt die Funktion SQL_INVALID_HANDLE zurück. Andernfalls ist das Verhalten nicht definiert und wahrscheinlich schwerwiegend. Dieser Fehler wird nur angezeigt, wenn dies das einzige mögliche Ergebnis des Aufruf der Funktion im angegebenen Zustand ist. Dieser Fehler ändert den Status nicht und wird vom Treiber-Manager immer erkannt, wie in Klammern angegeben.  
   
--   **NS** -nächsten Status. Der Anweisung Übergang ist identisch, als wäre die Anweisung die asynchronen Status nicht durchgearbeitet haben. Nehmen wir beispielsweise an eine Anweisung, die ein Resultset erstellt Status S11 vom Zustand S1 wechselt, da **SQLExecDirect** SQL_STILL_EXECUTING zurückgegeben. Die NS-Notation im Zustand S11 bedeutet, dass die Übergänge für die Anweisung sind identisch mit denen für eine Anweisung Zustand S1, die ein Resultset erstellt. Wenn **SQLExecDirect** einen Fehler zurückgibt, der Anweisung behält Ihre Zustand S1; Wenn dies gelingt, verschiebt der Anweisung in den Status des S5; Wenn sie Daten, verschiebt der Anweisung in den Status des S8; und wenn er noch ausgeführt wird, bleibt im Zustand S11.  
+-   **NS** -nächster Zustand. Der Anweisungs Übergang ist identisch mit dem, wenn die Anweisung die asynchronen Zustände nicht durchlaufen hat. Nehmen wir beispielsweise an, dass eine Anweisung, die ein Resultset erstellt, den Status "S11" aus dem Status "S1" erhält, weil **sqlexSQL_STILL_EXECUTING EC** Die NS-Notation im Zustand "S11" bedeutet, dass die Übergänge für die-Anweisung mit denen für eine Anweisung im Status S1 identisch sind, die ein Resultset erstellt. Wenn **SQLExecDirect** einen Fehler zurückgibt, verbleibt die Anweisung im Status S1. Wenn dies erfolgreich ist, wird die Anweisung in den Status "S5" verschoben. Wenn Daten benötigt werden, wird die Anweisung in den Status S8 verschoben; Wenn Sie noch ausgeführt wird, bleibt Sie im Zustand "S11".  
 
--   **_XXXXX_**  oder **(*XXXXX*)** – ein SQLSTATE, der auf die Tabelle der Zustandsübergänge; bezieht SQLSTATEs, die vom Treiber-Manager erkannt werden in Klammern eingeschlossen. Die Funktion zurückgegeben wird, SQL_ERROR zurück, und der angegebenen SQLSTATE, aber der Status ändert sich nicht. Z. B. wenn **SQLExecute** wird aufgerufen, bevor **SQLPrepare**, SQLSTATE HY010 zurückgegeben (Sequenzfehler funktionieren).  
+-   **_XXXXX_** oder **(*XXXXX*)** : ein SQLSTATE, der mit der Übergangs Tabelle verknüpft ist. Sqlstates, die vom Treiber-Manager erkannt werden, werden in Klammern eingeschlossen. Die Funktion hat SQL_ERROR und den angegebenen SQLSTATE zurückgegeben, aber der Zustand ändert sich nicht. Wenn z. b. **SQLExecute** vor **SQLPrepare**aufgerufen wird, wird SQLSTATE HY010 (Funktions Sequenz Fehler) zurückgegeben.  
 
 > [!NOTE]  
->  Die Tabellen nicht mehr anzeigen Fehler, die nicht mit den Übergang-Tabellen, die den Status nicht geändert werden. Z. B. wenn **SQLAllocHandle** in Zustand der Umgebung E1 aufgerufen wird, und gibt SQLSTATE HY001 (Fehler bei der speicherbelegung), die Umgebung bleibt im Zustand E1; Dies wird nicht angezeigt, in der Umgebung übergangstabelle für  **SQLAllocHandle**.  
+>  In den Tabellen werden keine Fehler angezeigt, die sich nicht auf die Übergangs Tabellen, die den Status nicht ändern, nicht ändern. Wenn **SQLAllocHandle** beispielsweise im Umgebungszustand E1 aufgerufen wird und SQLSTATE HY001 (Speicher Belegungs Fehler) zurückgibt, verbleibt die Umgebung im Zustand E1. Dies wird in der Umgebungs Übergangs Tabelle für **sqlzuweisung**nicht angezeigt.  
   
- Wenn die Umgebung, Verbindung, Anweisung oder -Deskriptor in mehr als ein Zustand verschoben werden kann, wird jedem möglicher Status wird angezeigt, und eine oder mehrere Fußnoten wird erläutert, die Bedingungen, unter denen jeder Übergang stattfindet. Die folgenden Fußnoten, möglicherweise in einer Tabelle angezeigt.  
+ Wenn die Umgebung, die Verbindung, die Anweisung oder der Deskriptor in mehr als einen Zustand wechseln kann, wird jeder mögliche Status angezeigt, und mindestens eine Fußnote erläutert die Bedingungen, unter denen die einzelnen Übergänge stattfinden. Die folgenden Fußnoten können in jeder Tabelle angezeigt werden.  
   
 |Fußnote|Bedeutung|  
 |--------------|-------------|  
-|b|Vor oder nach. Der Cursor wurde vor dem Start des Resultsets oder nach dem Ende des Resultsets positioniert.|  
+|b|Vor oder nach. Der Cursor befindet sich vor dem Anfang des Resultsets oder nach dem Ende des Resultsets.|  
 |c|Aktuelle Funktion. Die aktuelle Funktion wurde asynchron ausgeführt.|  
-|T|Benötigen Sie Daten an. Der Funktion zurückgegebene SQL_NEED_DATA zurück.|  
-|e|Error (Fehler). Der Funktion zurückgegebene SQL_ERROR zurück.|  
-|i|Ungültige Zeile. Der Cursor positioniert wurde in einer Zeile im Resultset Satz und die Zeile hatte wurde gelöscht oder in einem Vorgang in der Zeile ist ein Fehler aufgetreten. Wenn die zeilenstatusarray vorhanden war, wurde der Wert in der zeilenstatusarray für die Zeile SQL_ROW_DELETED oder SQL_ROW_ERROR. (Die zeilenstatusarray wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.)|  
-|Nf|Nicht gefunden. Der Funktion zurückgegebene SQL_NO_DATA zurückgibt. Dies gilt nicht beim **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** gibt SQL_NO_DATA nach der Ausführung einer gesuchten update oder delete-Anweisung.|  
+|d|Benötigen Sie Daten. Die Funktion, die SQL_NEED_DATA zurückgegeben.|  
+|e|Fehler. Die Funktion, die SQL_ERROR zurückgegeben.|  
+|i|Ungültige Zeile. Der Cursor wurde auf einer Zeile im Resultset positioniert, und entweder wurde die Zeile gelöscht, oder bei einem Vorgang für die Zeile ist ein Fehler aufgetreten. Wenn das Zeilen Status Array vorhanden war, war der Wert im Zeilen Status Array für die Zeile SQL_ROW_DELETED oder SQL_ROW_ERROR. (Auf das Zeilen Status Array wird durch das SQL_ATTR_ROW_STATUS_PTR Statement-Attribut verwiesen.)|  
+|NF|Nicht gefunden: Die Funktion, die SQL_NO_DATA zurückgegeben. Dies gilt nicht, wenn **SQLExecDirect**, **SQLExecute**oder **SQLParamData** SQL_NO_DATA nach dem Ausführen einer durchsuchten Update-oder DELETE-Anweisung zurückgibt.|  
 |np|Nicht vorbereitet. Die Anweisung wurde nicht vorbereitet.|  
-|Nr.|Keine Ergebnisse. Die Anweisung nicht der Fall ist, oder ein Resultset nicht erstellt wurde.|  
+|Nr.|Keine Ergebnisse. Die Anweisung erstellt kein Resultset oder hat kein Resultset erstellt.|  
 |o|Andere Funktion. Eine andere Funktion wurde asynchron ausgeführt.|  
-|p|Vorbereitet. Die Anweisung wurde vorbereitet.|  
-|r|Ergebnisse. Die Anweisung oder hat ein Resultset für die (möglicherweise leere) erstellt wird.|  
-|s|Erfolg. Die Funktion hat SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben.|  
-|v|Gültige Zeile. Der Cursor wurde in einer Zeile im Resultset positioniert und die Zeile mussten erfolgreich eingefügt wurde, wurde erfolgreich aktualisiert wurde, oder ein anderer Vorgang in der Zeile mussten erfolgreich ausgeführt wurden. Wenn die zeilenstatusarray vorhanden war, war der Wert in der zeilenstatusarray für die Zeile SQL_ROW_ADDED, SQL_ROW_SUCCESS oder SQL_ROW_UPDATED. (Die zeilenstatusarray wird durch das Anweisungsattribut SQL_ATTR_ROW_STATUS_PTR verwiesen.)|  
-|w|Wird ausgeführt. Der Funktion zurückgegebene SQL_STILL_EXECUTING.|  
+|p|Vorbereitete. Die Anweisung wurde vorbereitet.|  
+|r|Ergebnisse. Mit der-Anweisung wird ein (möglicherweise leeres) Resultset erstellt.|  
+|s|Erfolg. Die Funktion, die SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgegeben wurde.|  
+|v|Gültige Zeile. Der Cursor wurde in einer Zeile im Resultset positioniert, und die Zeile wurde erfolgreich eingefügt, erfolgreich aktualisiert, oder ein anderer Vorgang in der Zeile wurde erfolgreich abgeschlossen. Wenn das Zeilen Status Array vorhanden war, lautete der Wert im Zeilen Status Array für die Zeile SQL_ROW_ADDED, SQL_ROW_SUCCESS oder SQL_ROW_UPDATED. (Auf das Zeilen Status Array wird durch das SQL_ATTR_ROW_STATUS_PTR Statement-Attribut verwiesen.)|  
+|x|Ausführ. Die Funktion, die SQL_STILL_EXECUTING zurückgegeben.|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
- In diesem Beispiel wird die Zeile in der Umgebung Statusübergang für Tabelle **SQLFreeHandle** beim *HandleType* SQL_HANDLE_ENV ist wie folgt.  
+ In diesem Beispiel ist die Zeile in der Umgebungs Status Übergangs Tabelle für **SQLFreeHandle** , wenn der- *Typ* SQL_HANDLE_ENV lautet, wie folgt.  
   
-|E0<br /><br /> Nicht zugeordnet|E1<br /><br /> zugewiesen|E2<br /><br /> Verbindung|  
+|E0<br /><br /> Nicht zugeordnet|E1<br /><br /> Teilte|E2<br /><br /> Verbindung|  
 |------------------------|----------------------|-----------------------|  
-|(IH)|E0|(HY010)|  
+|IH|E0|HY010|  
   
- Wenn **SQLFreeHandle** wird aufgerufen, in dem Zustand der Umgebung E0 mit *HandleType* auf SQL_HANDLE_ENV auf festgelegt ist, gibt der Treiber-Manager SQL_INVALID_HANDLE. Wenn sie aufgerufen wird, im Zustand E1 mit *HandleType* auf SQL_HANDLE_ENV auf festgelegt ist, verschiebt die Umgebung E0 angeben, wenn die Funktion erfolgreich ist, und im Status E1, verbleibt Wenn die Funktion fehlschlägt. Wenn sie aufgerufen wird, im Zustand E2 mit *HandleType* auf SQL_HANDLE_ENV auf festgelegt ist, der Treiber-Manager immer gibt SQL_ERROR zurück, und SQLSTATE HY010 (Funktion Sequenzfehler) und die Umgebung im Zustand E2 bleibt.  
+ Wenn **SQLFreeHandle** im Umgebungs Status E0 aufgerufen *wird und auf SQL_HANDLE_ENV festgelegt* ist, gibt der Treiber-Manager SQL_INVALID_HANDLE zurück. Wenn Sie im Zustand E1 aufgerufen wird, wobei der *Typ* auf SQL_HANDLE_ENV festgelegt ist, wird die Umgebung in den Zustand E0 verschoben, wenn die Funktion erfolgreich ausgeführt wird, und bleibt im Zustand E1, wenn die Funktion fehlschlägt. Wenn Sie in State E2 aufgerufen wird, wobei der- *Typ* auf SQL_HANDLE_ENV festgelegt ist, gibt der Treiber-Manager immer SQL_ERROR und SQLSTATE HY010 (Funktions Sequenz Fehler) zurück, und die Umgebung verbleibt im Status E2.  
   
- Um den Übergang Statustabellen zu verstehen, ist es erforderlich, um zu verstehen, welches Element (Umgebung, Verbindung, Anweisung oder Descriptor) auf die sie verweisen. Nehmen wir an, dass eine Funktion das Handle für ein Element vom Typ X akzeptiert. X Tabelle der Zustandsübergänge für diese Funktion wird beschrieben, wie der Aufruf die Funktion, mit dem Handle eines Elements vom Typ X, dieses Element wirkt sich auf. Z. B. **SQLDisconnect** akzeptiert ein Verbindungshandle. Verbindung der Tabelle der Zustandsübergänge für **SQLDisconnect** wird beschrieben, wie **SQLDisconnect** wirkt sich auf den Zustand der Verbindung für das es aufgerufen wird.  
+ Um die Status Übergangs Tabellen zu verstehen, müssen Sie wissen, auf welches Element (Umgebung, Verbindung, Anweisung oder Deskriptor) Sie verweisen. Angenommen, eine Funktion akzeptiert das Handle eines Elements vom Typ X. Die X-Status Übergangs Tabelle für diese Funktion beschreibt, wie sich das Aufrufen der-Funktion mit dem Handle eines Elements vom Typ X auf dieses Element auswirkt. **SQLDisconnect** nimmt z. b. ein Verbindungs Handle an. Die Verbindungsstatus-Übergangs Tabelle für **SQLDisconnect** beschreibt, wie **SQLDisconnect** den Status der Verbindung beeinflusst, für die er aufgerufen wird.  
   
- Nehmen wir an, dass eine Funktion das Handle für ein Element vom Typ "Y" akzeptiert, wobei Y nicht gleich X ist. X Tabelle der Zustandsübergänge für diese Funktion wird beschrieben, wie der Aufruf die Funktion mit einem Handle vom Typ X, die das Element vom Typ "Y" zugeordnet ist das Element vom Typ Y wirkt sich auf. Z. B. die Anweisungstabelle der Zustandsübergänge für **SQLDisconnect** wird beschrieben, wie **SQLDisconnect** wirkt sich auf den Zustand einer Anweisung, die bei einem Aufruf mit das Handle für die Verbindung mit dem die Anweisung ist zugeordnet.  
+ Angenommen, eine Funktion akzeptiert das Handle eines Elements vom Typ y, wobei Y nicht gleich X ist. Die X-Status Übergangs Tabelle für diese Funktion beschreibt, wie das Aufrufen der-Funktion mit einem Handle vom Typ X, das mit dem Element vom Typ y verknüpft ist, sich auf das Element vom Typ y auswirkt. Beispielsweise beschreibt die Anweisungs Status-Übergangs Tabelle für **SQLDisconnect** , wie sich **SQLDisconnect** auf den Zustand einer-Anweisung auswirkt, wenn Sie mit dem Handle der Verbindung aufgerufen wird, der die-Anweisung zugeordnet ist.  
   
- Dieser Anhang enthält die folgenden Themen.  
+ Dieser Anhang enthält die folgenden Themen:  
   
 -   [Umgebungsübergänge](../../../odbc/reference/appendixes/environment-transitions.md)  
   
 -   [Verbindungsübergänge](../../../odbc/reference/appendixes/connection-transitions.md)  
   
--   [Statusübergänge](../../../odbc/reference/appendixes/statement-transitions.md)  
+-   [Anweisungsübergänge](../../../odbc/reference/appendixes/statement-transitions.md)  
   
--   [Descriptor Transitions (Deskriptorübergänge)](../../../odbc/reference/appendixes/descriptor-transitions.md)
+-   [Deskriptorübergänge](../../../odbc/reference/appendixes/descriptor-transitions.md)

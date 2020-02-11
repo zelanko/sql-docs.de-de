@@ -14,17 +14,17 @@ ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 15765d0aaf10c268a0aed864dc497c8a000eedc2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68082034"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Verbinden einer Visual FoxPro-Datenquelle
-Sie können mit einer Visual FoxPro-Datenquelle mithilfe der Microsoft Office-Anwendung oder der SQL-API eine Verbindung herstellen.  
+Sie können eine Verbindung mit einer Visual FoxPro-Datenquelle herstellen, indem Sie Ihre Microsoft Office Anwendung verwenden oder die SQL-API verwenden.  
   
-|Für die verbindungsherstellung aus|Finden Sie unter|  
+|Zum Herstellen einer Verbindung|Finden Sie unter|  
 |---------------------|---------|  
 |Microsoft Access, Microsoft Excel oder Microsoft Word|[Zugreifen auf Visual FoxPro-Daten aus Microsoft Office](../../odbc/microsoft/accessing-visual-foxpro-data-from-microsoft-office.md)|  
-|Ihre Anwendung in C oder C++|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
-|Visual Basic-Anwendung|[Mithilfe des Visual FoxPro-ODBC-Treibers mit Visual Basic-Anwendung](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|
+|Ihre C-oder C++-Anwendung|[SQLConnect](../../odbc/microsoft/sqlconnect-visual-foxpro-odbc-driver.md)<br /><br /> [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)|  
+|Ihre Visual Basic Anwendung|[Verwenden des Visual FoxPro-ODBC-Treibers mit Ihrer Visual Basic Anwendung](../../odbc/microsoft/using-the-vfp-foxpro-odbc-driver-with-your-visual-basic-application.md)|

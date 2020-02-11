@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 16c6f812d1d7cae5a81a8e64fb425f4d33f4cb5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017060"
 ---
 # <a name="ascendants-mdx"></a>Ascendants (MDX)
@@ -31,11 +31,11 @@ Ascendants(Member_Expression)
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Vorgänger** Funktion gibt alle Vorgänger eines Elements aus das Element selbst bis zum Anfang des Elements Hierarchie zurück; genauer gesagt wird einen Durchlauf der Hierarchie für das angegebene Element aus, und klicken Sie dann Gibt zurück, der alle vorausgehenden Elemente des Elements, einschließlich selbst, in einer Gruppe verknüpft. Dies ist im Gegensatz zu den [Vorgänger](../mdx/ancestor-mdx.md) -Funktion, die ein bestimmtes vorausgehendes Element oder Vorgänger, auf einer bestimmten Ebene zurückgibt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Vorgänger** Funktion gibt alle Vorgänger eines Members vom Element selbst bis zum Anfang der Hierarchie des Members zurück. genauer gesagt führt er eine nach der Bestellung ausgeführten Überquerung der Hierarchie für das angegebene Element aus und gibt dann alle aufsteigenden Member zurück, die mit dem Element verknüpft sind, einschließlich selbst in einer Menge. Dies steht im Gegensatz zur [Vorgänger](../mdx/ancestor-mdx.md) Funktion, die einen bestimmten aufsteigenden Member oder Vorgänger auf einer bestimmten Ebene zurückgibt.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die Anzahl der Bestellungen des Wiederverkäufers für das `[Sales Territory].[Northwest]` Element und alle vorausgehenden Elemente des Elements aus der **Adventure Works** Cube. Die **Vorgänger** Funktion erstellt die Menge der `[Sales Territory].[Northwest]` Element und seinen vorausgehenden Elementen für die ROWS-Achse.  
+ Im folgenden Beispiel wird die Anzahl der Bestellungen des wieder `[Sales Territory].[Northwest]` Verkäufers für das-Element und alle Vorgänger dieses Members aus dem **Adventure Works** -Cube zurückgegeben. Die **Vorgänger Funktion erstellt die Menge** , die den `[Sales Territory].[Northwest]` Member und seine Vorgänger für die ROWS-Achse einschließt.  
   
 ```  
 SELECT  
@@ -50,7 +50,7 @@ FROM
    [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

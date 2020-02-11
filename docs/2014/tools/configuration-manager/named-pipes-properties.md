@@ -16,19 +16,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5d8b542e709ed7104d851652e75be41ae4d6afec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62911473"
 ---
 # <a name="named-pipes-properties"></a>Named Pipes-Eigenschaften
   Verwenden Sie die Seite **Protokoll**im Dialogfeld **Named Pipes-Eigenschaften** , um die Named Pipe anzuzeigen oder zu ändern, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Verwenden des Named Pipes-Protokoll überwacht wird.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um das Protokoll zu aktivieren oder zu deaktivieren oder die Named Pipe zu ändern.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, um das Protokoll zu aktivieren oder zu deaktivieren oder die Named Pipe zu ändern.  
   
-## <a name="options"></a>Optionen  
- **Enabled**  
+## <a name="options"></a>Tastatur  
+ **Aktiviert**  
  Mögliche Werte sind **Yes** und **No**.  
   
  **Pipename**  
@@ -38,12 +39,12 @@ ms.locfileid: "62911473"
  Zum Ändern der Named Pipe geben Sie im Feld **Pipename** einen neuen Pipenamen ein. Beenden Sie anschließend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und führen Sie einen Neustart aus. Da **sql\query** bekannt ist als Named Pipe, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird, kann eine Änderung der Pipe das Risiko eines Angriffs durch böswillige Programme reduzieren.  
   
 ### <a name="example"></a>Beispiel  
- Geben Sie **\\\\.\pipe\unit\app** ein, um an der Pipe **unit\app** zu lauschen.  
+ ** \\Geben \\Sie .\pipe\unit\app ein** ein, um an der Pipe **Pipe unit\app** zu lauschen.  
   
- Geben Sie **\\\\.\pipe\acct** ein, um an der Pipe **acct** zu lauschen.  
+ ** \\Geben \\Sie Sie .\pipe\acct ein** ein, um an der **Acct** -Pipe zu lauschen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktivieren oder Deaktivieren eines Servernetzwerkprotokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktivieren oder Deaktivieren eines Server-Netzwerk Protokolls](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-named-pipes.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Visual C++-Erweiterungsheader | Microsoft-Dokumentation
+title: Visual C++-Erweiterungs Header | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,14 +16,14 @@ ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926389"
 ---
 # <a name="visual-c-extensions-header"></a>Visual C++-Erweiterungsheader
-Der folgende Header, **icrsint.h**, erläutert, die Schnittstelle, die Clients zum Abrufen von Feldern aus zu ermöglichen eine **Recordset** in Variablen, die in einer Klasse abgeleitet definiert **CADORecordBinding**. Sie müssen ein ADO-Bindung-Makro für jedes Feld angeben, die Sie zugreifen möchten.  
+Der folgende Header ( **icrsint. h**) beschreibt die Schnittstelle, mit der Clients Felder aus einem **Recordset** in Variablen abrufen können, die in einer Klasse definiert sind, die von **CADORecordBinding**abgeleitet wurde. Sie müssen für jedes Feld, auf das Sie zugreifen möchten, ein ADO-Bindungs Makro angeben.  
   
 ```cpp
 #ifndef _ICRSINT_H_  
@@ -207,6 +207,6 @@ public:
 #endif // !_ICRSINT_H_  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Visual C++-Erweiterungen – Beispiel](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für Visual C++ Erweiterungen](../../../ado/guide/appendixes/visual-c-extensions-example.md)   
  [Verwenden von Visual C++-Erweiterungen](../../../ado/guide/appendixes/using-visual-c-extensions.md)

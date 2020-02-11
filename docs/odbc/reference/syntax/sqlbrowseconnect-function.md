@@ -1,5 +1,5 @@
 ---
-title: SQLBrowseConnect-Funktion | Microsoft-Dokumentation
+title: Sqlbrowseconnetct-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036198"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC-1.0-Standards-Compliance: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLBrowseConnect** unterstützt eine iterative Methode zum Erkennen und auflisten, die Attribute und Attributwerte für die Verbindung mit einer Datenquelle erforderlich sind. Jeder Aufruf von **SQLBrowseConnect** aufeinander folgenden Steuerungsebenen Attribute und Attributwerte zurückgibt. Wenn alle Ebenen wurde aufgelistet, eine Verbindung mit der Datenquelle abgeschlossen ist und eine vollständige Verbindungszeichenfolge, indem zurückgegeben wird **SQLBrowseConnect**. Ein Rückgabecode von SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO gibt an, dass alle Verbindungsinformationen angegeben wurde und die Anwendung jetzt mit der Datenquelle verbunden ist.  
+ **Sqlbrowseconnetct** unterstützt eine iterative Methode zum Ermitteln und Auflisten der Attribute und Attributwerte, die zum Herstellen einer Verbindung mit einer Datenquelle erforderlich sind. Jeder-Befehl von **sqlbrowseconnetct** gibt aufeinanderfolgende Ebenen von Attributen und Attributwerten zurück. Wenn alle Ebenen aufgezählt wurden, wird eine Verbindung mit der Datenquelle hergestellt, und eine vollständige Verbindungs Zeichenfolge wird von **sqlbrowseconnetct**zurückgegeben. Der Rückgabecode SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO gibt an, dass alle Verbindungsinformationen angegeben wurden und die Anwendung jetzt mit der Datenquelle verbunden ist.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -52,175 +52,175 @@ SQLRETURN SQLBrowseConnect(
  [Eingabe] Verbindungshandle.  
   
  *InConnectionString*  
- [Eingabe] Durchsuchen Sie die Verbindungszeichenfolge für die Anforderung (finden Sie unter "*InConnectionString* Argument" in "Kommentare").  
+ Der Such Verbindungs Zeichenfolge durchsuchen (siehe "*InConnectionString* -Argument" in "comments").  
   
  *StringLength1*  
- [Eingabe] Länge der **InConnectionString* in Zeichen.  
+ Der Länge von **InConnectionString* in Zeichen.  
   
- *OutConnectionString*  
- [Ausgabe] Zeiger auf einen Puffer aus Zeichen in dem die Verbindungszeichenfolge der durchsuchen-Ergebnis zurückgegeben (finden Sie unter "*OutConnectionString* Argument" in "Kommentare").  
+ *Outconnectionstring*  
+ Ausgeben Zeiger auf einen Zeichen Puffer, in den die Verbindungs Zeichenfolge für das Durchsuchen zurückgegeben werden soll (siehe "*outconnectionstring* -Argument" in "comments").  
   
- Wenn *OutConnectionString* NULL ist, *StringLength2Ptr* gibt die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer zurückgegeben verweist *OutConnectionString*.  
+ Wenn *outconnectionstring* gleich NULL ist, gibt *StringLength2Ptr* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), die im Puffer zurückgegeben werden können, auf den von *outconnectionstring*verwiesen wird.  
   
- *BufferLength*  
- [Eingabe] Länge in Zeichen, der die **OutConnectionString* Puffer.  
+ *Pufferlänge*  
+ Der Länge (in Zeichen) des **outconnectionstring* -Puffers.  
   
  *StringLength2Ptr*  
- [Ausgabe] Die Gesamtzahl der Zeichen (Null-Terminierung) zur Verfügung, die in zurückgegeben \* *OutConnectionString*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *Pufferlänge*, die Verbindungszeichenfolge in \* *OutConnectionString* auf abgeschnitten  *BufferLength* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ Ausgeben Die Gesamtanzahl der Zeichen (mit Ausnahme der NULL-Beendigung), die \*in *outconnectionstring*zurückgegeben werden können. Wenn die Anzahl der zurück zugebende Zeichen größer als oder gleich *BufferLength*ist, wird die Verbindungs Zeichenfolge in \* *outconnectionstring* auf *BufferLength* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE, or SQL_STILL_EXECUTING.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_ERROR, SQL_INVALID_HANDLE oder SQL_STILL_EXECUTING.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLBrowseConnect** gibt SQL_ERROR, SQL_SUCCESS_WITH_INFO oder SQL_NEED_DATA zurückgegeben, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und ein *Handle des ConnectionHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLBrowseConnect** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **sqlbrowseconnetct** SQL_ERROR, SQL_SUCCESS_WITH_INFO oder SQL_NEED_DATA zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Handlertyp* SQL_HANDLE_STMT und einem *Handle von connectionHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **sqlbrowseconnetct** häufig zurückgegeben werden, und die einzelnen Werte werden im Kontext dieser Funktion erläutert. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *OutConnectionString* nicht groß genug war, um die Verbindungszeichenfolge für den gesamten durchsuchen Ergebnis und zurückzugeben, damit die Zeichenfolge abgeschnitten wurde. Der Puffer **StringLength2Ptr* enthält die Länge der Ergebniszeichenfolge Verbindung den ungekürzten durchsuchen. (Die Funktion wird SQL_NEED_DATA zurückgegeben.)|  
-|01S00|Ungültiges Attribut der Verbindungszeichenfolge|In der Verbindungszeichenfolge der durchsuchen-Anforderung wurde ein ungültiges Attribut-Schlüsselwort angegeben (*InConnectionString*). (Die Funktion wird SQL_NEED_DATA zurückgegeben.)<br /><br /> Ein Schlüsselwort wurde angegeben, in der Verbindungszeichenfolge der durchsuchen-Anforderung (*InConnectionString*), die gilt nicht für der aktuellen Verbindungsebene. (Die Funktion wird SQL_NEED_DATA zurückgegeben.)|  
-|01S02|Der Wert wurde geändert|Der Treiber nicht den angegebenen Wert, der die *ValuePtr* -Argument in **SQLSetConnectAttr** und einen ähnlichen Wert ersetzt. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|08001|Client kann keine Verbindung herstellen.|Der Treiber konnte nicht zum Herstellen einer Verbindung mit der Datenquelle.|  
-|08002|Name der Verbindung verwendet|(DM) hatte bereits die angegebene Verbindung zum Herstellen einer Verbindung mit einer Datenquelle verwendet, und die Verbindung geöffnet wurde.|  
-|08004|Der Server wies die Verbindung|Die Datenquelle die Herstellung der Verbindung festzulegenden Gründen zurückgewiesen Implementierung definiert.|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, zu der der Treiber versucht hat, die Verbindung, konnte nicht vor der Verarbeitung für die Funktion abgeschlossen.|  
-|28000|Ungültige Autorisierungsangabe|Fordern Sie die Benutzer-ID oder der autorisierungszeichenfolge oder beides, navigieren Sie im angegebenen Verbindungszeichenfolge (*InConnectionString*), von der Datenquelle definierte Einschränkungen verletzt.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber-Managers (DM) konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.<br /><br /> Der Treiber konnte nicht zur speicherbelegung, die zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY008|Der Vorgang wurde abgebrochen|Ein asynchroner Vorgang wurde abgebrochen, durch den Aufruf [SQLCancelHandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md). Klicken Sie dann die ursprüngliche Funktion wurde erneut aufgerufen auf die *ConnectionHandle*.<br /><br /> Ein Vorgang wurde abgebrochen, durch den Aufruf **SQLCancelHandle** auf die *ConnectionHandle* von einem anderen Thread in einer multithread-Anwendung.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) eine asynchron ausgeführte Funktion (nicht auf dieses hier) wurde aufgerufen, die *ConnectionHandle* und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM) für Argument angegebene Wert *StringLength1* kleiner als 0 und nicht wurde SQL_NTS gleich.<br /><br /> (DM) für Argument angegebene Wert *Pufferlänge* war kleiner als 0.|  
-|HY114|Verbindung auf asynchrone Ausführung der unterstützt Treiber nicht.|(DM) aktiviert die Anwendung den asynchronen Vorgang auf dem Verbindungshandle vor dem Herstellen der Verbindung. Allerdings unterstützt der Treiber nicht asynchronen Vorgang für Verbindungshandle.|  
-|HYT00|Timeout abgelaufen|Des anmeldungstimeouts ist abgelaufen, bevor Sie die Verbindung mit der Datenquelle abgeschlossen. Das Timeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT.|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber, die der angegebene Name der Datenquelle für die Funktion nicht unterstützt.|  
-|IM002|Datenquelle wurde nicht gefunden und kein Standardtreiber angegeben|(DM) der Name der Datenquelle angegeben, in der Verbindungszeichenfolge der durchsuchen-Anforderung (*InConnectionString*) wurde nicht gefunden, in den Systeminformationen, noch gab es eine Standard-Treiber-Spezifikation.<br /><br /> (DM) ODBC-Quelle und Standard-Treiber Dateninformationen wurde nicht gefunden werden, in den Systeminformationen.|  
-|IM003|Angegebene Treiber konnte nicht geladen werden|(DM) der Treiber aufgeführt, die in der Angabe der Datenquelle in den Systeminformationen oder gemäß der **Treiber** Schlüsselwort wurde nicht gefunden oder konnte nicht in einem anderen Grund geladen werden.|  
-|IM004|Der Treiber **SQLAllocHandle** auf SQL_HANDLE _ENV Fehler|(DM) während der **SQLBrowseConnect**, der Treiber-Manager Namens des Treibers **SQLAllocHandle** -Funktion mit einem *HandleType* SQL_HANDLE_ENV und der Treiber zurückgegeben ein Fehler.|  
-|IM005|Der Treiber **SQLAllocHandle** auf SQL_HANDLE_DBC auf Fehler|(DM) während der **SQLBrowseConnect**, der Treiber-Manager Namens des Treibers **SQLAllocHandle** -Funktion mit einem *HandleType* SQL_HANDLE_DBC auf, und der Treiber zurückgegeben ein Fehler.|  
-|IM006|Der Treiber **SQLSetConnectAttr** Fehler|(DM) während der **SQLBrowseConnect**, der Treiber-Manager Namens des Treibers **SQLSetConnectAttr** -Funktion und der Treiber hat einen Fehler zurückgegeben.|  
-|IM009|Kann nicht geladen werden Konvertierungs-DLL|Der Treiber konnte den Konvertierungs-DLL zu laden, die für die Datenquelle oder für die Verbindung angegeben wurde.|  
-|IM010|Der Datenquellenname ist zu lang.|(DM) war der Attributwert für das DSN-Schlüsselwort SQL_MAX_DSN_LENGTH Zeichen überschreitet.|  
-|IM011|Der Treibername ist zu lang.|(DM) war der Attributwert für das DRIVER-Schlüsselwort, die länger als 255 Zeichen lang sein.|  
-|IM012|Syntaxfehler für DRIVER-Schlüsselwort|(DM) das Schlüsselwort-Wert-Paar für das DRIVER-Schlüsselwort enthalten einen Syntaxfehler.|  
-|IM014|Der angegebene DSN enthält einen architekturkonflikt zwischen dem Treiber und der Anwendung|(DM)-32-Bit-Anwendung verwendet einen DSN Herstellen einer Verbindung mit einer 64-Bit-Treiber. oder umgekehrt.|  
-|IM017|Abruf ist im Modus für asynchrone Benachrichtigung deaktiviert|Wenn das Benachrichtigungsmodell verwendet wird, ist Abruf deaktiviert.|  
-|IM018|**SQLCompleteAsync** nicht zum Abschließen des vorherigen asynchronen Vorgangs auf diesem Handle aufgerufen wurde.|Wenn der vorherige Funktionsaufruf auf den Ziehpunkt SQL_STILL_EXECUTING zurückgibt und Notification-Modus aktiviert ist, **SQLCompleteAsync** muss aufgerufen werden, auf den Ziehpunkt, um nach der Verarbeitung und der Vorgang abgeschlossen werden.|  
-|S1118|Asynchrone Benachrichtigung unterstützt Treiber nicht.|Wenn der Treiber die asynchrone Benachrichtigung nicht unterstützt, können nicht Sie SQL_ATTR_ASYNC_DBC_EVENT oder SQL_ATTR_ASYNC_DBC_RETCODE_PTR festlegen.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *outconnectionstring* war nicht groß genug, um die gesamte Verbindungs Zeichenfolge zum Durchsuchen von Ergebnissen zurückzugeben, sodass die Zeichenfolge abgeschnitten wurde. Der Puffer **StringLength2Ptr* enthält die Länge der nicht abgeschnittene Suchergebnis-Verbindungs Zeichenfolge. (Die Funktion gibt SQL_NEED_DATA zurück.)|  
+|01S00|Ungültiges Verbindungs Zeichen folgen Attribut.|In der Verbindungs Zeichenfolge zum Durchsuchen von Anforderungen (*InConnectionString*) wurde ein ungültiges Attribut Schlüsselwort angegeben. (Die Funktion gibt SQL_NEED_DATA zurück.)<br /><br /> In der Verbindungs Zeichenfolge für die Such Anforderung (*InConnectionString*), die nicht auf die aktuelle Verbindungs Ebene angewendet wird, wurde ein Attribut Schlüsselwort angegeben. (Die Funktion gibt SQL_NEED_DATA zurück.)|  
+|01s02 entsprechen|Wert geändert|Der Treiber hat den angegebenen Wert des *ValuePtr* -Arguments in **SQLSetConnectAttr** nicht unterstützt und ersetzt einen ähnlichen Wert. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|08001|Der Client kann keine Verbindung herstellen.|Der Treiber konnte keine Verbindung mit der Datenquelle herstellen.|  
+|08002|Der Verbindungs Name wird verwendet.|(DM) die angegebene Verbindung wurde bereits verwendet, um eine Verbindung mit einer Datenquelle herzustellen, und die Verbindung wurde geöffnet.|  
+|08004|Der Server hat die Verbindung abgelehnt.|Die Datenquelle hat die Einrichtung der Verbindung aus Implementierungs Gründen abgelehnt.|  
+|08S01|Kommunikations Verbindungsfehler|Der Kommunikationslink zwischen dem Treiber und der Datenquelle, mit dem der Treiber eine Verbindung herstellen wollte, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|28000|Ungültige Autorisierungs Spezifikation|Entweder die Benutzer-ID oder die Autorisierungs Zeichenfolge oder beides, wie in der Verbindungs Zeichenfolge für das Durchsuchen von Anforderungen (*InConnectionString*) angegeben, verletzt die von der Datenquelle definierten Einschränkungen.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|(DM) der Treiber-Manager konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.<br /><br /> Der Treiber konnte keinen Arbeitsspeicher zuweisen, der zur Unterstützung der Ausführung oder Beendigung der Funktion erforderlich ist.|  
+|HY008|Vorgang abgebrochen|Ein asynchroner Vorgang wurde durch Aufrufen der [sqlcancelhandle-Funktion](../../../odbc/reference/syntax/sqlcancelhandle-function.md)abgebrochen. Anschließend wurde die ursprüngliche Funktion für *connectionHandle*erneut aufgerufen.<br /><br /> Ein Vorgang wurde abgebrochen, indem **sqlcancelhandle** für *connectionHandle* von einem anderen Thread in einer Multithreadanwendung aufgerufen wurde.|  
+|HY010|Funktions Sequenz Fehler|(DM) eine asynchron ausgeführte Funktion (nicht diese) wurde für *connectionHandle* aufgerufen und ausgeführt, als diese Funktion aufgerufen wurde.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) der für das Argument *StringLength1* angegebene Wert war kleiner als 0 (null) und war nicht gleich SQL_NTS.<br /><br /> (DM) der für das Argument *BufferLength* angegebene Wert war kleiner als 0 (null).|  
+|HY114|Der Treiber unterstützt keine asynchrone Funktions Ausführung auf Verbindungs Ebene.|(DM) die Anwendung hat den asynchronen Vorgang für das Verbindungs Handle aktiviert, bevor die Verbindung hergestellt wird. Der Treiber unterstützt jedoch keinen asynchronen Vorgang für das Verbindungs Handle.|  
+|HYT00|Timeout abgelaufen|Der Anmeldungs Timeout Zeitraum ist abgelaufen, bevor die Verbindung mit der Datenquelle abgeschlossen wurde. Der Timeout Zeitraum wird mithilfe von **SQLSetConnectAttr**, SQL_ATTR_LOGIN_TIMEOUT festgelegt.|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der Treiber, der dem angegebenen Datenquellen Namen entspricht, unterstützt die-Funktion nicht.|  
+|IM002|Die Datenquelle wurde nicht gefunden und es wurde kein Standardtreiber angegeben.|(DM) der in der Verbindungs Zeichenfolge für das Durchsuchen von Anforderungen (*InConnectionString*) angegebene Datenquellen Name wurde in den Systeminformationen nicht gefunden, und es gab keine Standardtreiber Spezifikation.<br /><br /> (DM) ODBC-Datenquelle und Standardtreiber Informationen konnten in den Systeminformationen nicht gefunden werden.|  
+|IM003|Der angegebene Treiber konnte nicht geladen werden.|(DM) der in der Datenquellen Spezifikation in den Systeminformationen oder durch das **Treiber** Schlüsselwort angegebene Treiber wurde nicht gefunden oder konnte aus einem anderen Grund nicht geladen werden.|  
+|IM004|Fehler des Treibers **sqlzugewiesene CHandle** auf SQL_HANDLE _ENV|(DM) während **sqlbrowseconnetct**hat der Treiber-Manager die **sqlzuweisung** -Funktion des Treibers mit dem *Handlertyp* SQL_HANDLE_ENV aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
+|IM005|Fehler beim Treiber " **sqlzugewiesene CHandle** " auf SQL_HANDLE_DBC|(DM) während **sqlbrowseconnetct**hat der Treiber-Manager die **sqlzuweisung** -Funktion des Treibers mit dem *Handlertyp* SQL_HANDLE_DBC aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
+|IM006|Fehler bei ' **SQLSetConnectAttr** ' des Treibers.|(DM) während **sqlbrowseconnetct**hat der Treiber-Manager die **SQLSetConnectAttr** -Funktion des Treibers aufgerufen, und der Treiber hat einen Fehler zurückgegeben.|  
+|IM009|Übersetzungs-DLL kann nicht geladen werden.|Der Treiber konnte die Übersetzungs-DLL, die für die Datenquelle oder die Verbindung angegeben wurde, nicht laden.|  
+|IM010|Der Datenquellen Name ist zu lang.|(DM) der Attribut Wert für das DSN-Schlüsselwort ist länger als SQL_MAX_DSN_LENGTH Zeichen.|  
+|IM011|Der Treiber Name ist zu lang.|(DM) der Attribut Wert für das Treiber Schlüsselwort ist länger als 255 Zeichen.|  
+|IM012|Syntax Fehler für Treiber Schlüsselwort|(DM) das Schlüsselwort-Wert-Paar für das Treiber Schlüsselwort enthielt einen Syntax Fehler.|  
+|IM014|Der angegebene DSN enthält einen Architektur Konflikt zwischen dem Treiber und der Anwendung.|(DM) 32-Bit-Anwendung verwendet einen DSN, der eine Verbindung mit einem 64-Bit-Treiber herstellt. oder umgekehrt.|  
+|IM017|Der Abruf ist im asynchronen Benachrichtigungs Modus deaktiviert.|Wenn das Benachrichtigungs Modell verwendet wird, ist das Abrufen deaktiviert.|  
+|IM018|**Sqlcompleteasync** wurde nicht aufgerufen, um den vorherigen asynchronen Vorgang für dieses Handle abzuschließen.|Wenn der vorherige Funktionsaufruf für das Handle SQL_STILL_EXECUTING zurückgibt und der Benachrichtigungs Modus aktiviert ist, muss **sqlcompleteasync** für das Handle aufgerufen werden, um die Nachbearbeitung auszuführen und den Vorgang abzuschließen.|  
+|S1118|Der Treiber unterstützt keine asynchrone Benachrichtigung.|Wenn der Treiber keine asynchrone Benachrichtigung unterstützt, können Sie SQL_ATTR_ASYNC_DBC_EVENT oder SQL_ATTR_ASYNC_DBC_RETCODE_PTR nicht festlegen.|  
   
 ## <a name="inconnectionstring-argument"></a>InConnectionString-Argument  
- Eine Verbindungszeichenfolge der durchsuchen-Anforderung hat die folgende Syntax:  
+ Eine Verbindungs Zeichenfolge zum Durchsuchen von Anforderungen hat die folgende Syntax:  
   
- *Verbindungszeichenfolge* :: = *Attribut*[`;`] &#124; *Attribut* `;` *Verbindungszeichenfolge*;<br>
- *Attribut* :: = *-Schlüsselwort*`=`*Attribut / Wert* &#124; `DRIVER=`[`{`]*Attribut / Wert-* [`}`]<br>
- *Attribut-Schlüsselwort* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *-Treiber-definierten-Attribut-Schlüsselwort*<br>
- *Attribut-Wert* :: = *-Zeichenfolge*<br>
- *Treiber-definierten-Attribut-Schlüsselwort* :: = *Bezeichner*<br>
+ *Connection-String* :: = *Attribute*[`;`] &#124; *Attribut* `;` *Connection-String*;<br>
+ *Attribute* :: = *Attribute-Schlüsselwort*`=`*Attribut-Wert* &#124; `DRIVER=`[`{`]*Attribut-Wert*[`}`]<br>
+ *Attribute-Keywords* :: = `DSN` &#124; `UID` &#124; `PWD` &#124; *Driver-defined-Attribute-Schlüsselwort*<br>
+ *Attribute-Value* :: = *Zeichenfolge*<br>
+ *Driver-defined-Attribute-Keywords* :: = *Identifier*<br>
   
- in denen *zechenfolgen* ist NULL oder mehr Zeichen *Bezeichner* verfügt über eine oder mehrere Zeichen *-Schlüsselwort* wird nicht beachtet; *Attribut / Wert* möglicherweise beachtet werden soll; und der Wert von der **DSN** Schlüsselwort besteht nicht ausschließlich aus Leerzeichen. Aufgrund Verbindung und Initialisierungsdateien Datei Grammatik, Schlüsselwörter und Attribut Werte, die die Zeichen enthalten **[]{}();? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in den Systeminformationen, Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen. Für eine ODBC-2. *x* Treiber, geschweifte Klammern sind erforderlich, um den Attributwert für das DRIVER-Schlüsselwort.  
+ , wenn die *Zeichenfolge* NULL oder mehr Zeichen enthält. der *Bezeichner* weist mindestens ein Zeichen auf. beim *Attribut Schlüsselwort* wird die Groß-/Kleinschreibung nicht beachtet. bei *Attribut Wert* kann die Groß-/Kleinschreibung beachtet werden. und der Wert des **DSN** -Schlüssel Worts besteht nicht ausschließlich aus Leerzeichen. Aufgrund der Verbindungs Zeichenfolge und der Initialisierungsdatei Grammatik, Schlüsselwörter und Attributwerte, die die Zeichen **[]{}(),;? = \*! @** sollte vermieden werden. Aufgrund der Grammatik in den Systeminformationen dürfen Schlüsselwörter und Datenquellen Namen keinen umgekehrten Schrägstrich (\\) enthalten. Für ODBC 2. *x* -Treiber, geschweifte Klammern sind um den Attribut Wert für das Treiber Schlüsselwort erforderlich.  
   
- Wenn keine Schlüsselwörter in der Verbindungszeichenfolge der durchsuchen-Anforderung wiederholt werden, verwendet der Treiber den Wert mit dem ersten Vorkommen des Schlüsselworts. Wenn die **DSN** und **Treiber** Schlüsselwörter in die gleiche Verbindungszeichenfolge für den Durchsuchen-Anforderung enthalten sind, die Treiber-Manager und Treiber verwenden, welches Schlüsselwort an erster Stelle steht.  
+ Wenn Schlüsselwörter in der Verbindungs Zeichenfolge für das Durchsuchen von Anforderungen wiederholt werden, verwendet der Treiber den Wert, der dem ersten Vorkommen des Schlüssel Worts zugeordnet ist. Wenn die **DSN** -und **Treiber** Schlüsselwörter in derselben Verbindungs Zeichenfolge für die Such Anforderung enthalten sind, verwenden der Treiber-Manager und der Treiber das Schlüsselwort First.  
   
- Weitere Informationen dazu, wie eine Anwendung eine Datenquelle oder Treiber auswählt, finden Sie unter [Auswählen einer Datenquelle oder Treiber](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
+ Informationen dazu, wie eine Anwendung eine Datenquelle oder einen Treiber auswählt, finden Sie unter [Auswählen einer Datenquelle oder eines Treibers](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md).  
   
-## <a name="outconnectionstring-argument"></a>OutConnectionString-Argument  
- Die Verbindungszeichenfolge der durchsuchen-Ergebnis ist eine Liste der Verbindungsattribute. Ein Verbindungsattribut besteht aus einem Attribut-Schlüsselwort und Wert eines entsprechenden. Die Verbindungszeichenfolge der durchsuchen-Ergebnis weist die folgende Syntax:  
+## <a name="outconnectionstring-argument"></a>Outconnectionstring-Argument  
+ Die Verbindungs Zeichenfolge zum Durchsuchen von Ergebnissen ist eine Liste von Verbindungs Attributen. Ein Verbindungs Attribut besteht aus einem Attribut Schlüsselwort und einem entsprechenden Attribut Wert. Die Verbindungs Zeichenfolge für das Durchsuchen hat die folgende Syntax:  
   
- *Verbindungszeichenfolge* :: = *Attribut*[`;`] &#124; *Attribut* `;` *Verbindungszeichenfolgen*<br>
- *Attribut* :: = [`*`] *-Schlüsselwort*`=`*Attribut / Wert*<br>
- *attribute-keyword* ::= *ODBC-attribute-keyword* &#124; *driver-defined-attribute-keyword*<br>
- *ODBC-Attribut-Schlüsselwort* = {`UID` &#124; `PWD`} [`:`*lokalisierter Bezeichner*] *-definierten-Attribut-Schlüsselwort Driver* :: = *Bezeichner*[`:`*lokalisierter Bezeichner*] *Attribut / Wert* :: = `{` *Attribut-Wert-Liste* `}` &#124; `?` (Die geschweiften Klammern sind literal; sie werden vom Treiber zurückgegebene.)<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *Connection-String* :: = *Attribute*[`;`] &#124; *Attribut* `;` *Verbindungs Zeichenfolge*<br>
+ *Attribute* :: = [`*`]*Attribut-Schlüsselwort*`=`*Attribut-Wert*<br>
+ *Attribute-Keywords* :: = *ODBC-Attribute-Schlüsselwort* &#124; *Driver-defined-Attribute-Keywords*<br>
+ *ODBC-Attribute-Keywords* = {`UID` &#124; `PWD`} [`:`*lokalisierter Bezeichner*] *Driver-defined-Attribute-Keywords* :: *= Identifier*[`:`*lokalisierter-Identifier*] *Attribut-Wert* : `{` : = *Attribute-Wert-List* `}` &#124; `?` (die geschweiften Klammern sind Literale; Sie werden vom Treiber zurückgegeben.)<br>
+ *Attribute-Value-List* :: = *Zeichen* Folge [`:`*lokalisierte Zeichenfolge*] &#124; *Zeichenfolge* [`:`*lokalisierte Zeichenfolge*] `,` *Attribut-Wert-List*<br>
   
- in denen *zechenfolgen* und *lokalisierte Zeichenfolgen* haben NULL oder mehr Zeichen *Bezeichner* und *lokalisierter Bezeichner* haben Sie eine oder mehrere Zeichen *-Schlüsselwort* wird nicht beachtet; und *Attribut / Wert* möglicherweise Groß-/Kleinschreibung beachtet. Aufgrund der Verbindung Zeichenfolge und die Initialisierung Datei Grammatik, Schlüsselwörter, lokalisierte Bezeichner und Attributwerte, die die Zeichen enthalten **[]{}();? \*=! @** sollte vermieden werden. Aufgrund der Grammatik in den Systeminformationen, Schlüsselwörter und Namen von Datenquellen können nicht den umgekehrten Schrägstrich enthalten (\\) Zeichen.  
+ , wenn *Zeichenfolge Zeichen* und *lokalisierte Zeichen* folgen NULL oder mehr Zeichen aufweisen. der *Bezeichner* und der *lokalisierte-Bezeichner* haben mindestens ein Zeichen. beim *Attribut Schlüsselwort* wird die Groß-/Kleinschreibung nicht beachtet. beim *Attribut-Wert* kann die Groß-/Kleinschreibung beachtet werden. Aufgrund von Verbindungs Zeichenfolgen-und Initialisierungsdatei Grammatik, Schlüsselwörtern, lokalisierten bezeichnerwerten und Attributwerten, die die Zeichen **[]{}(),;? = \*! @** sollte vermieden werden. Aufgrund der Grammatik in den Systeminformationen dürfen Schlüsselwörter und Datenquellen Namen keinen umgekehrten Schrägstrich (\\) enthalten.  
   
- Die Verbindungszeichenfolgensyntax zum Durchsuchen von Ergebnis, wird anhand der folgenden semantischen Regeln verwendet:  
+ Die Syntax zum Durchsuchen von Ergebnis Verbindungs Zeichenfolgen wird gemäß den folgenden semantischen Regeln verwendet:  
   
--   Wenn ein Sternchen (\*) vorangestellt ist ein *-Schlüsselwort*, *Attribut* ist optional und kann ausgelassen werden, in dem nächsten Aufruf von **SQLBrowseConnect**.  
+-   Wenn ein Sternchen (\*) einem *attributsschlüsselwort*vorangestellt ist, ist das *Attribut* optional und kann beim nächsten **sqlbrowseconnetct**-Befehl ausgelassen werden.  
   
--   Die Attribut-Schlüsselwörter **UID** und **PWD** haben dieselbe Bedeutung, gemäß **SQLDriverConnect**.  
+-   Die Attribut Schlüsselwörter **UID** und **pwd** haben dieselbe Bedeutung wie in **SQLDriverConnect**definiert.  
   
--   Ein *-definierten-Attribut-Schlüsselwort Driver* benennt die Art des Attributs für den Attributwert angegeben werden kann. Beispielsweise ist es möglicherweise **SERVER**, **Datenbank**, **HOST**, oder **DBMS**.  
+-   Ein *Treiber definiertes attributschlüsselwort* benennt den Attributtyp, für den ein Attribut Wert angegeben werden kann. Beispielsweise könnte Server, **Database**, **Host**oder **DBMS** **verwendet**werden.  
   
--   *ODBC-Attribut-Schlüsselwörter* und *-Treiber-definierte-Attribut-Schlüsselwörter* enthalten eine lokalisierte oder benutzerfreundliche Version des Schlüsselworts. Dies kann von Anwendungen als eine Bezeichnung in einem Dialogfeld verwendet werden. Allerdings **UID**, **PWD**, oder die *Bezeichner* allein muss verwendet werden, wenn eine Zeichenfolge der durchsuchen-Anforderung an den Treiber übergeben.  
+-   *ODBC-Attribute-Keywords* und *Driver-defined-Attribute-Keywords* enthalten eine lokalisierte oder benutzerfreundliche Version des Schlüssel Worts. Dies kann von Anwendungen als Bezeichnung in einem Dialogfeld verwendet werden. Allerdings muss **UID**, **pwd**oder der *Bezeichner* allein verwendet werden, wenn eine Such Anforderungs Zeichenfolge an den Treiber übergeben wird.  
   
--   Die {*Attribut-Wert-Liste*} ist eine Enumeration von tatsächlichen Werten für das entsprechende gültige *-Schlüsselwort*. Beachten Sie, dass die geschweiften Klammern ({}) eine Liste mit Auswahlmöglichkeiten geben nicht an; sie werden vom Treiber zurückgegeben. Beispielsweise kann es eine Liste der Namen der Server oder eine Liste der Datenbanknamen sein.  
+-   "{*Attribute-Value-List*}" ist eine Enumeration der tatsächlichen Werte, die für das entsprechende *Attribut Schlüsselwort*gültig sind. Beachten Sie, dass die{}geschweiften Klammern () keine Auswahlliste angeben. Sie werden vom Treiber zurückgegeben. Beispielsweise kann es sich um eine Liste von Servernamen oder eine Liste von Datenbanknamen handeln.  
   
--   Wenn die *Attribut / Wert* ist ein einzelnes Question Mark (?), ein einzelnen Wert entspricht der *-Schlüsselwort*. Z. B. UID = JohnS; PWD = Sesame.  
+-   Wenn der *Attribut Wert* ein einzelnes Fragezeichen (?) ist, entspricht ein einzelner Wert dem *Attribut Schlüsselwort*. Beispiel: UID = Johns; PWD = Sesam.  
   
--   Jeder Aufruf von **SQLBrowseConnect** gibt nur die Informationen, die erforderlich sind, um die nächste Ebene von den Verbindungsprozess zu erfüllen. Der Treiber ordnet dem Verbindungshandle Zustandsinformationen, damit der Kontext immer bei jedem Aufruf bestimmt werden kann.  
+-   Jeder **sqlbrowseconnetct** -Befehl gibt nur die Informationen zurück, die erforderlich sind, um die nächste Ebene des Verbindungs Vorgangs zu erfüllen. Der Treiber ordnet Zustandsinformationen dem Verbindungs Handle zu, sodass der Kontext immer bei jedem-Rückruf bestimmt werden kann.  
   
-## <a name="using-sqlbrowseconnect"></a>SQLBrowseConnect verwenden  
- **SQLBrowseConnect** erfordert eine zugeordnete Verbindung. Der Treiber-Manager lädt den Treiber, die angegeben wurde oder, der in der Verbindungszeichenfolge der anfänglichen durchsuchen-Anforderung angegebene Datenquellenname entspricht; Informationen, wenn dies geschieht, finden Sie im Abschnitt "Kommentare" im [SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md). Der Treiber kann während der der durchsuchen-Prozess eine Verbindung mit der Datenquelle herstellen. Wenn **SQLBrowseConnect** gibt SQL_ERROR zurück, ausstehende Verbindungen werden beendet und die Verbindung wird in einem nicht verbundenen Zustand zurückgegeben.  
+## <a name="using-sqlbrowseconnect"></a>Verwenden von sqlbrowseconnetct  
+ **Sqlbrowseconnetct** erfordert eine zugeordnete Verbindung. Der Treiber-Manager lädt den in oder angegebenen Treiber, der mit dem in der ursprünglichen Verbindungs Zeichenfolge für die Such Anforderung angegebenen Datenquellen Namen übereinstimmt. Weitere Informationen zu diesem Zeitpunkt finden Sie im Abschnitt "Kommentare" in der [SQLCONNECT-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md). Der Treiber kann während des Such Vorgangs eine Verbindung mit der Datenquelle herstellen. Wenn **sqlbrowseconnetct** SQL_ERROR zurückgibt, werden ausstehende Verbindungen beendet, und die Verbindung wird wieder hergestellt.  
   
 > [!NOTE]  
->  **SQLBrowseConnect** Verbindungspooling nicht unterstützt. Wenn **SQLBrowseConnect** wird aufgerufen, während das Verbindungspooling aktiviert ist, SQLSTATE HY000 (Allgemeine Fehler) zurückgegeben.  
+>  **Sqlbrowseconnetct** unterstützt kein Verbindungspooling. Wenn **sqlbrowseconnetct** aufgerufen wird, während das Verbindungspooling aktiviert ist, wird SQLSTATE HY000 (allgemeiner Fehler) zurückgegeben.  
   
- Wenn **SQLBrowseConnect** heißt zum ersten Mal bei einer Verbindung, die Verbindungszeichenfolge der durchsuchen-Anforderung enthalten muss die **DSN** Schlüsselwort oder **Treiber** Schlüsselwort. Wenn die Verbindungszeichenfolge der durchsuchen-Anforderung enthält die **DSN** Schlüsselwort, das der Treiber-Manager sucht nach der Angabe einer entsprechenden Datenquelle in den Systeminformationen:  
+ Wenn **sqlbrowseconnetct** zum ersten Mal für eine Verbindung aufgerufen wird, muss die Verbindungs Zeichenfolge zum Durchsuchen von Anforderungen das **DSN** -Schlüsselwort oder das **Treiber** Schlüsselwort enthalten. Wenn die Verbindungs Zeichenfolge zum Durchsuchen von Anforderungen das **DSN** -Schlüsselwort enthält, sucht der Treiber-Manager eine entsprechende Datenquellen Spezifikation in den Systeminformationen:  
   
--   Wenn der Treiber-Manager der Angabe der entsprechenden Datenquelle gefunden wird, lädt er die zugehörige Treiber-DLL; der Treiber kann Informationen über die Datenquelle aus der Systeminformationen abrufen.  
+-   Wenn der Treiber-Manager die entsprechende Datenquellen Spezifikation findet, lädt er die zugehörige Treiber-DLL. der Treiber kann Informationen über die Datenquelle aus den Systeminformationen abrufen.  
   
--   Wenn der Treiber-Manager der Angabe der zugehörigen Datenquelle nicht finden kann, sucht nach der Angabe der standardmäßigen Datenquelle und lädt die zugehörige Treiber-DLL; der Treiber kann Informationen über die Standarddatenquelle aus den Systeminformationen abrufen. "DEFAULT" werden für den DSN an den Treiber übergeben.  
+-   Wenn der Treiber-Manager die entsprechende Datenquellen Spezifikation nicht finden kann, sucht er die standardmäßige Datenquellen Spezifikation und lädt die zugehörige Treiber-DLL. der Treiber kann Informationen über die Standarddaten Quelle aus den Systeminformationen abrufen. "Default" wird an den Treiber für den DSN übermittelt.  
   
--   Wenn der Treiber-Manager wurde der Angabe der zugehörigen Datenquelle nicht gefunden, und es keine standardmäßige datenquellenspezifikation gibt, wird SQL_ERROR mit SQLSTATE IM002 (Datenquelle wurde nicht gefunden und kein Standardtreiber angegeben).  
+-   Wenn der Treiber-Manager die entsprechende Datenquellen Spezifikation nicht finden kann und keine standardmäßige Datenquellen Spezifikation vorhanden ist, wird SQL_ERROR mit SQLSTATE IM002 zurückgegeben (die Datenquelle wurde nicht gefunden, und es wurde kein Standardtreiber angegeben).  
   
- Wenn die Verbindungszeichenfolge der durchsuchen-Anforderung enthält die **Treiber** Schlüsselwort, das der Treiber-Manager lädt die angegebenen Treiber; er versucht nicht, eine Datenquelle in den Systeminformationen zu suchen. Da die **Treiber** Schlüsselwort keine Informationen aus der Systeminformationen verwendet, der Treiber muss genügend Schlüsselwörter definieren, sodass ein Treibers eine Verbindung mit einer Datenquelle, die nur die Informationen in den Verbindungszeichenfolgen der durchsuchen-Anforderung mit herstellen kann.  
+ Wenn die Verbindungs Zeichenfolge zum Durchsuchen von Anforderungen das **Treiber** Schlüsselwort enthält, lädt der Treiber-Manager den angegebenen Treiber. Es wird nicht versucht, eine Datenquelle in den Systeminformationen zu finden. Da das **Treiber** Schlüsselwort keine Informationen aus den Systeminformationen verwendet, muss der Treiber genügend Schlüsselwörter definieren, damit ein Treiber nur mithilfe der Informationen in den Verbindungs Zeichenfolgen für das Durchsuchen von Anforderungen eine Verbindung mit einer Datenquelle herstellen kann.  
   
- Bei jedem Aufruf **SQLBrowseConnect**, die Anwendung die Attributwerte für die Verbindung angibt, in der Verbindungszeichenfolge der durchsuchen-Anforderung. Der Treiber gibt aufeinander folgenden Steuerungsebenen Attribute und Attributwerte in der Verbindungszeichenfolge der durchsuchen-Ergebnis zurück. Es wird SQL_NEED_DATA zurückgegeben, solange es Verbindungsattribute, die noch nicht in der Verbindungszeichenfolge der durchsuchen-Anforderung aufgelistet wurden. Die Anwendung verwendet den Inhalt der Ergebniszeichenfolge Verbindung navigieren Sie zum Erstellen der Verbindungszeichenfolge des suchen-Anforderung für den nächsten Aufruf von **SQLBrowseConnect**. Alle erforderlichen Attribute (die nicht durch ein Sternchen in vorangestellt der *OutConnectionString* Argument) enthalten sein müssen, in dem nächsten Aufruf von **SQLBrowseConnect**. Beachten Sie, dass die Anwendung den Inhalt des vorherigen durchsuchen-Ergebnis-Verbindungszeichenfolgen verwenden kann, wenn die aktuelle Verbindungszeichenfolge für den Durchsuchen-Anforderung zu erstellen. Das heißt, kann nicht es unterschiedliche Werte für Attribute in der vorherigen Ebenen festgelegt angeben.  
+ Bei jedem Aufrufen von **sqlbrowseconnetct**gibt die Anwendung die Verbindungs Attributwerte in der Verbindungs Zeichenfolge für die Such Anforderung an. Der Treiber gibt aufeinanderfolgende Ebenen von Attributen und Attributwerten in der Verbindungs Zeichenfolge zum Durchsuchen von Ergebnissen zurück. Es wird SQL_NEED_DATA zurückgegeben, solange Verbindungs Attribute vorhanden sind, die noch nicht in der Verbindungs Zeichenfolge für die Such Anforderung aufgelistet wurden. Die Anwendung verwendet den Inhalt der Verbindungs Zeichenfolge zum Durchsuchen von Ergebnissen, um die Verbindungs Zeichenfolge für die Such Anforderung für den nächsten **sqlbrowseconnetct**-Befehl zu erstellen. Alle obligatorischen Attribute (die nicht mit einem Sternchen im *outconnectionstring* -Argument vorangestellt sind) müssen im nächsten **sqlbrowseconnetct**-Befehl enthalten sein. Beachten Sie, dass die Anwendung den Inhalt vorheriger Verbindungs Zeichenfolgen zum Durchsuchen von Ergebnissen beim Aufbau der aktuellen Verbindungs Zeichenfolge für Suchanforderungen nicht verwenden kann Das heißt, es können keine unterschiedlichen Werte für Attribute angegeben werden, die in vorherigen Ebenen festgelegt wurden.  
   
- Wenn alle Ebenen der Verbindung und die zugehörigen Attribute aufgelistet wurden, der Treiber gibt SQL_SUCCESS zurück, die Verbindung mit der Datenquelle abgeschlossen ist und eine vollständigen Verbindungszeichenfolge wird an die Anwendung zurückgegeben. Die Verbindungszeichenfolge ist die Verwendung in Verbindung mit **SQLDriverConnect**, mit der Option SQL_DRIVER_NOPROMPT zu, um eine andere Verbindung herzustellen. Die vollständige Verbindungszeichenfolge kann nicht verwendet werden, in einen anderen Aufruf **SQLBrowseConnect**, aber wenn **SQLBrowseConnect** erneut aufrufen würden, die gesamte Sequenz von Aufrufen musste wiederholt werden.  
+ Wenn alle Ebenen der Verbindung und ihre zugeordneten Attribute aufgezählt wurden, gibt der Treiber SQL_SUCCESS zurück, die Verbindung mit der Datenquelle ist abgeschlossen, und eine vollständige Verbindungs Zeichenfolge wird an die Anwendung zurückgegeben. Die Verbindungs Zeichenfolge eignet sich für die Verwendung von in Verbindung mit **SQLDriverConnect**mit der SQL_DRIVER_NOPROMPT-Option zum Herstellen einer anderen Verbindung. Die vollständige Verbindungs Zeichenfolge kann jedoch nicht in einem anderen Befehl von **sqlbrowseconnetct**verwendet werden. Wenn **sqlbrowseconnetct** erneut aufgerufen wurde, müsste die gesamte Sequenz von Aufrufen wiederholt werden.  
   
- **SQLBrowseConnect** auch wird SQL_NEED_DATA zurückgegeben, wenn während des Prozesses durchsuchen; z. B. einen ungültigen Kennwort- oder Schlüsselwort der von der Anwendung bereitgestellten wiederherstellbar,-Fehler vorliegen. Wenn SQL_NEED_DATA zurückgegeben und die Verbindungszeichenfolge der durchsuchen-Ergebnis bleibt unverändert und wird ein Fehler ist aufgetreten und die Anwendung aufrufen kann **SQLGetDiagRec** den SQLSTATE für Durchsuchen-Time-Fehler zurückgegeben. Dies ermöglicht die Anwendung so korrigieren Sie das Attribut und weiterhin die Schaltfläche zum Durchsuchen.  
+ **Sqlbrowseconnetct** gibt auch SQL_NEED_DATA zurück, wenn während des durch Suchvorgangs wiederherstellbare, nicht schwerwiegende Fehler auftreten. beispielsweise ein ungültiges Kennwort oder Attribut Schlüsselwort, das von der Anwendung angegeben wird. Wenn SQL_NEED_DATA zurückgegeben wird und die Verbindungs Zeichenfolge zum Durchsuchen von Ergebnissen unverändert ist, ist ein Fehler aufgetreten, und die Anwendung kann **SQLGetDiagRec** aufrufen, um SQLSTATE für Such Fehler zurückzugeben. Dadurch kann die Anwendung das Attribut korrigieren und das Durchsuchen fortsetzen.  
   
- Eine Anwendung kann den Durchsuchen-Prozess zu einem beliebigen Zeitpunkt beenden, durch den Aufruf **SQLDisconnect**. Der Treiber alle ausstehenden Verbindungen beendet und die Verbindung zu einem nicht verbundenen Zustand zurückgegeben.  
+ Eine Anwendung kann den browseinsprozess jederzeit durch Aufrufen von **SQLDisconnect**beenden. Der Treiber beendet alle ausstehenden Verbindungen und gibt die Verbindung mit dem Status "nicht verbunden" zurück.  
   
- Wenn asynchrone Vorgänge, auf dem Verbindungshandle aktiviert sind **SQLBrowseConnect** möglicherweise auch SQL_STILL_EXECUTING zurück. Wenn SQL_NEED_DATA zurückgegeben wird, muss eine Anwendung verwenden **SQLDisconnect** zum Abbrechen des Prozesses durchsuchen. Wenn **SQLBrowseConnect** gibt SQL_STILL_EXECUTING, eine Anwendung verwendet soll **SQLCancelHandle** , den aktuellen Vorgang abzubrechen. Aufrufen von **SQLCancelHandle** , nachdem die Funktion gibt SQL_NEED_DATA hat keine Auswirkungen.  
+ Wenn asynchrone Vorgänge für das Verbindungs Handle aktiviert sind, gibt **sqlbrowseconnetct** möglicherweise auch SQL_STILL_EXECUTING zurück. Wenn SQL_NEED_DATA zurückgegeben wird, muss die Anwendung **SQLDisconnect** verwenden, um den durchsuchenprozess abzubrechen. Wenn **sqlbrowseconnetct** SQL_STILL_EXECUTING zurückgibt, sollte eine Anwendung **sqlcancelhandle** verwenden, um den Vorgang abzubrechen, der ausgeführt wird. Wenn Sie **sqlcancelhandle** aufrufen, nachdem die Funktion zurückgegeben SQL_NEED_DATA hat keine Auswirkung.  
   
- Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit SQLBrowseConnect](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md).  
+ Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit sqlbrowseconnetct](../../../odbc/reference/develop-app/connecting-with-sqlbrowseconnect.md).  
   
- Wenn ein Treiber unterstützt **SQLBrowseConnect**, Abschnitt Schlüsselwort Treiber in den Systeminformationen für den Treiber darf die **ConnectFunctions** Schlüsselwort mit dem dritten Zeichen festgelegt wird, in "Y".  
+ Wenn ein Treiber **sqlbrowseconnetct**unterstützt, muss der Treiber Schlüsselwortbereich in den Systeminformationen für den Treiber das **connectfunctions** -Schlüsselwort enthalten, bei dem das dritte Zeichen auf "Y" festgelegt ist.  
   
 ## <a name="code-example"></a>Codebeispiel  
   
 > [!NOTE]  
->  Wenn Sie für einen Datenanbieter der Datenquelle, der Windows-Authentifizierung unterstützt herstellen, sollten Sie angeben `Trusted_Connection=yes` anstelle von Benutzer-ID und Kennwort-Informationen in der Verbindungszeichenfolge.  
+>  Wenn Sie eine Verbindung mit einem Datenquellen Anbieter herstellen, der die Windows-Authentifizierung unter `Trusted_Connection=yes` stützt, sollten Sie anstelle von Benutzer-ID-und Kenn Wort Informationen in der Verbindungs Zeichenfolge angeben.  
   
- Im folgenden Beispiel eine Anwendung ruft **SQLBrowseConnect** wiederholt. Jedes Mal **SQLBrowseConnect** wird SQL_NEED_DATA zurückgegeben, übergibt Back Informationen zu den Daten, es in muss \* *OutConnectionString*. Die Anwendung leitet *OutConnectionString* an die Routine **GetUserInput** (nicht dargestellt). **GetUserInput** die Informationen analysiert, erstellt und zeigt ein Dialogfeld an und gibt zurück, die vom Benutzer im eingegebenen Informationen \* *InConnectionString*. Die Anwendung übergibt die Informationen des Benutzers an den Treiber in den nächsten Aufruf von **SQLBrowseConnect**. Nachdem die Anwendung alle erforderlichen Informationen für den Treiber für die Verbindung mit der Datenquelle angegeben hat **SQLBrowseConnect** gibt SQL_SUCCESS zurück, und die Anwendung fortgesetzt wird.  
+ Im folgenden Beispiel ruft eine Anwendung **sqlbrowseconnetct** wiederholt auf. Jedes Mal, wenn **sqlbrowseconnetct** SQL_NEED_DATA zurückgibt, werden Informationen zu den Daten zurückgegeben \*, die in *outconnectionstring*benötigt werden. Die Anwendung übergibt *outconnectionstring* an die **GetUserInput** -Routine (nicht angezeigt). **GetUserInput** analysiert die Informationen, erstellt und zeigt ein Dialogfeld an und gibt die Informationen zurück, die vom Benutzer in \* *InConnectionString*eingegeben wurden. Die Anwendung übergibt die Informationen des Benutzers beim nächsten **sqlbrowseconnetct**-aufrufsbefehl an den Treiber. Nachdem die Anwendung alle erforderlichen Informationen für den Treiber bereitgestellt hat, um eine Verbindung mit der Datenquelle herzustellen, gibt **sqlbrowseconnetct** SQL_SUCCESS zurück, und die Anwendung wird fortgesetzt.  
   
- Ein ausführlicheres Beispiel zur verbindungsherstellung mit einer SQL Server-Treiber, durch den Aufruf **SQLBrowseConnect**, finden Sie unter [SQL Server-Suchbeispiel](../../../odbc/reference/develop-app/sql-server-browsing-example.md).  
+ Ein ausführlicheres Beispiel für das Herstellen einer Verbindung mit einem SQL Server-Treiber durch Aufrufen von **sqlbrowseconnetct**finden Sie unter [SQL Server Browsing-Beispiel](../../../odbc/reference/develop-app/sql-server-browsing-example.md).  
   
- Um auf die Daten zu Quelle Sales verbinden, können z. B. die folgenden Aktionen ausgeführt. Die Anwendung übergibt zuerst die folgende Zeichenfolge, die **SQLBrowseConnect**:  
+ Um z. b. eine Verbindung mit der Datenquellen Verkäufe herzustellen, können die folgenden Aktionen ausgeführt werden. Zuerst übergibt die Anwendung die folgende Zeichenfolge an **sqlbrowseconnetct**:  
   
 ```  
 "DSN=Sales"  
 ```  
   
- Der Treiber-Manager lädt den Treiber die Datenquelle Sales zugeordnet. Es ruft dann die vom Treibers **SQLBrowseConnect** -Funktion mit den gleichen Argumenten, die sie von der Anwendung empfangen. Gibt die folgende Zeichenfolge in der Treiber **OutConnectionString*:  
+ Der Treiber-Manager lädt den Treiber, der mit den Datenquellen Verkäufen verknüpft ist. Anschließend wird die **sqlbrowseconnetct** -Funktion des Treibers mit denselben Argumenten aufgerufen, die Sie von der Anwendung erhalten hat. Der Treiber gibt die folgende Zeichenfolge in **outconnectionstring*zurück:  
   
 ```  
 "HOST:Server={red,blue,green};UID:ID=?;PWD:Password=?"  
 ```  
   
- Die Anwendung übergibt diese Zeichenfolge der **GetUserInput** routinemäßig ausgeführt werden, die ein Dialogfeld, das erstellt fordert den Benutzer zum Auswählen des Servers Rot, Blau oder Grün und eine Benutzer-ID und ein Kennwort eingeben. Der routinemäßige übergibt die folgende benutzerdefinierten Informationen erneut \* *InConnectionString*, die an die Anwendung übergibt **SQLBrowseConnect**:  
+ Die Anwendung übergibt diese Zeichenfolge an die **GetUserInput** -Routine, die ein Dialogfeld erstellt, in dem der Benutzer aufgefordert wird, den roten, blauen oder grünen Server auszuwählen und eine Benutzer-ID und ein Kennwort einzugeben. Die Routine übergibt die folgenden benutzerdefinierten Informationen in \* *InConnectionString*zurück, die die Anwendung an **sqlbrowseconnetct**übergibt:  
   
 ```  
 "HOST=red;UID=Smith;PWD=Sesame"  
 ```  
   
- **SQLBrowseConnect** verwendet diese Informationen zum Verbinden mit dem roten Server als Smith mit dem Kennwort Sesame werden soll, und gibt anschließend die folgende Zeichenfolge **OutConnectionString*:  
+ **Sqlbrowseconnetct** verwendet diese Informationen zum Herstellen einer Verbindung mit dem roten Server als Smith mit dem Kennwort Sesam und gibt dann die folgende Zeichenfolge in **outconnectionstring*zurück:  
   
 ```  
 "*DATABASE:Database={SalesEmployees,SalesGoals,SalesOrders}"  
 ```  
   
- Die Anwendung übergibt diese Zeichenfolge der **GetUserInput** routinemäßig ausgeführt werden, die ein Dialogfeld, das erstellt fordert den Benutzer auf eine Datenbank auszuwählen. Der Benutzer wählt Empdata und die Anwendung ruft **SQLBrowseConnect** ein letztes Mal mit dieser Zeichenfolge:  
+ Die Anwendung übergibt diese Zeichenfolge an die **GetUserInput** -Routine, die ein Dialogfeld erstellt, in dem der Benutzer aufgefordert wird, eine Datenbank auszuwählen. Der Benutzer wählt EmpData aus, und die Anwendung ruft **sqlbrowseconnetct** mit der folgenden Zeichenfolge ab:  
   
 ```  
 "DATABASE=SalesOrders"  
 ```  
   
- Dies ist der letzte Teil der Informationen, die der Treiber, die eine Verbindung mit der Datenquelle herstellen muss. **SQLBrowseConnect** gibt SQL_SUCCESS zurück, und **OutConnectionString* vervollständigte Verbindungszeichenfolge enthält:  
+ Dies ist die letzte Information, die der Treiber zum Herstellen einer Verbindung mit der Datenquelle benötigt. **Sqlbrowseconnetct** gibt SQL_SUCCESS zurück, und **outconnectionstring* enthält die vollständige Verbindungs Zeichenfolge:  
   
 ```cpp  
 // SQLBrowseConnect_Function.cpp  
@@ -284,15 +284,15 @@ int main() {
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Zuordnen eines Verbindungshandles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Zuordnen eines Verbindungs Handles|[SQLAllocHandle-Funktion](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
 |Herstellen einer Verbindung mit einer Datenquelle|[SQLConnect-Funktion](../../../odbc/reference/syntax/sqlconnect-function.md)|  
-|Trennen von einer Datenquelle|[SQLDisconnect-Funktion](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|Herstellen einer Verbindung mit einer Datenquelle mit einer Zeichenfolge oder eines Dialogfelds Verbindungsdialogfeld|[SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
-|Zurückgeben von Beschreibungen der Treiber und Attribute|[SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)|  
-|Freigeben eines Verbindungshandles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
+|Trennen der Verbindung mit einer Datenquelle|[SQLDisconnect-Funktion](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
+|Herstellen einer Verbindung mit einer Datenquelle über eine Verbindungs Zeichenfolge oder ein Dialogfeld|[SQLDriveConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md)|  
+|Zurückgeben von Treiber Beschreibungen und-Attributen|[SQLDrivers-Funktion](../../../odbc/reference/syntax/sqldrivers-function.md)|  
+|Freigeben eines Verbindungs Handles|[SQLFreeHandle-Funktion](../../../odbc/reference/syntax/sqlfreehandle-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

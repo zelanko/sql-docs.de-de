@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Zeichenfolgenfunktionen | Microsoft-Dokumentation
+title: Verwenden von Zeichen folgen Funktionen | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037993"
 ---
 # <a name="using-string-functions"></a>Verwenden von Zeichenfolgenfunktionen
@@ -20,7 +20,7 @@ ms.locfileid: "68037993"
 
   Zeichenfolgenfunktionen können Sie für fast jedes Objekt in MDX (Multidimensional Expressions) verwenden. In gespeicherten Prozeduren werden Zeichenfolgenfunktionen hauptsächlich dazu verwendet, das jeweilige Objekt in eine Zeichenfolgendarstellung zu konvertieren. Zeichenfolgenfunktionen können auch dazu verwendet werden, einen Zeichenfolgenausdruck anhand eines Objekts auszuwerten, um einen Wert zurückzugeben.  
   
- Die am häufigsten verwendeten Zeichenfolgenfunktionen sind **Namen** und **Uniquename**. Diese Funktionen geben den Namen und den eindeutigen Namen eines Objekts zurück. Sie werden meistens zum Debuggen von Berechnungen verwendet, um zu ermitteln, welches Element eine Funktion zurückgibt.  
+ Die am häufigsten verwendeten Zeichen folgen Funktionen sind **Name** und **UniqueName**. Diese Funktionen geben den Namen und den eindeutigen Namen eines Objekts zurück. Sie werden meistens zum Debuggen von Berechnungen verwendet, um zu ermitteln, welches Element eine Funktion zurückgibt.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Beispielabfrage veranschaulicht die Verwendung dieser Funktionen:  
@@ -47,7 +47,7 @@ ms.locfileid: "68037993"
   
  `FROM [Adventure Works]`  
   
- Die **generieren** Funktion kann verwendet werden, um eine Zeichenfolgenfunktion auf jedes Element einer Menge und die Ergebnisse zu verketten. Dies ist nützlich beim Debuggen von Berechnungen, da es Ihnen ermöglicht, den Inhalt einer Menge sichtbar zu machen. Im folgenden Beispiel wird diese Art der Verwendung veranschaulicht:  
+ Die **Generate** -Funktion kann verwendet werden, um eine Zeichen folgen Funktion für jedes Element einer Menge auszuführen und die Ergebnisse zu verketten. Dies ist nützlich beim Debuggen von Berechnungen, da es Ihnen ermöglicht, den Inhalt einer Menge sichtbar zu machen. Im folgenden Beispiel wird diese Art der Verwendung veranschaulicht:  
   
  `WITH`  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68037993"
   
  `FROM [Adventure Works]`  
   
- Eine weitere Gruppe häufig verwendeter Zeichenfolgenfunktionen ermöglichen Ihnen eine Zeichenfolge umzuwandeln, die den eindeutigen Namen eines Objekts oder einen Ausdruck enthält, der sich in das Objekt auflöst. Die folgende Beispielabfrage veranschaulicht, wie die **StrToMember** und **StrToSet** Funktionen dazu:  
+ Eine weitere Gruppe häufig verwendeter Zeichenfolgenfunktionen ermöglichen Ihnen eine Zeichenfolge umzuwandeln, die den eindeutigen Namen eines Objekts oder einen Ausdruck enthält, der sich in das Objekt auflöst. Die folgende Beispiel Abfrage veranschaulicht, wie **die-Funktion** und die-Funktion von " **strautoset** " dies tun:  
   
  `SELECT`  
   
@@ -98,15 +98,15 @@ ms.locfileid: "68037993"
  `FROM [Adventure Works]`  
   
 > [!NOTE]  
->  Die **StrToMember** und **StrToSet** Funktionen sollten mit Vorsicht verwendet werden. Sie können zu schlechter Abfrageleistung führen, wenn sie innerhalb von Berechnungsdefinitionen verwendet werden.  
+>  Die Funktionen " **Strauch** " und " **strauchansatz** " sollten mit Bedacht verwendet werden. Sie können zu schlechter Abfrageleistung führen, wenn sie innerhalb von Berechnungsdefinitionen verwendet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Generieren von &#40;MDX&#41;](../mdx/generate-mdx.md)   
- [Namen &#40;MDX&#41;](../mdx/name-mdx.md)   
- [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [&#40;MDX generieren&#41;](../mdx/generate-mdx.md)   
+ [Name &#40;MDX-&#41;](../mdx/name-mdx.md)   
+ [UniqueName &#40;MDX-&#41;](../mdx/uniquename-mdx.md)   
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Verwenden von gespeicherten Prozeduren &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)   
- [StrToMember &#40;MDX&#41;](../mdx/strtomember-mdx.md)   
- [StrToSet &#40;MDX&#41;](../mdx/strtoset-mdx.md)  
+ [Verwenden von gespeicherten Prozeduren &#40;MDX-&#41;](../mdx/using-stored-procedures-mdx.md)   
+ [&#40;MDX-&#41;von "Strauch"](../mdx/strtomember-mdx.md)   
+ [&#40;MDX-&#41;](../mdx/strtoset-mdx.md)  
   
   

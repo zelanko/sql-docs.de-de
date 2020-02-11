@@ -1,5 +1,5 @@
 ---
-title: Datenbank-Mail-Sichten (Transact-SQL) | Microsoft-Dokumentation
+title: Datenbank-E-Mail Sichten (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -20,16 +20,16 @@ ms.assetid: ab8728e0-803f-4b6f-b66f-9880ec37a49e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e077668f870bf7b9de1c2203272aa48b07910f2f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68033118"
 ---
 # <a name="database-mail-views-transact-sql"></a>Datenbank-E-Mail-Sichten (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  Die Datenbank-E-Mail verfügt über die folgenden Sichten, um E-Mail-Inhalte, den Status von E-Mails und erhaltene Meldungen, z. B. von der Datenbank-E-Mail protokollierte Fehler, anzuzeigen. Diese Sichten sind in der **Msdb** Datenbank.  
+  Die Datenbank-E-Mail verfügt über die folgenden Sichten, um E-Mail-Inhalte, den Status von E-Mails und erhaltene Meldungen, z. B. von der Datenbank-E-Mail protokollierte Fehler, anzuzeigen. Diese Sichten sind in der **msdb** -Datenbank gespeichert.  
   
 |||  
 |-|-|  
@@ -37,9 +37,9 @@ ms.locfileid: "68033118"
 |[sysmail_event_log &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)|[sysmail_sentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)|  
 |[sysmail_faileditems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)|[sysmail_unsentitems &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

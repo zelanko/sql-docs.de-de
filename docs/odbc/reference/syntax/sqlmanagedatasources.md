@@ -1,5 +1,5 @@
 ---
-title: SQLManageDataSources | Microsoft-Dokumentation
+title: Sqlmanagedatasources | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68018963"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 2.0  
+**Konformitäts**  
+ Eingeführte Version: ODBC 2,0  
   
  **Zusammenfassung**  
- **SQLManageDataSources** zeigt ein Dialogfeld mit dem Benutzer können einrichten, hinzufügen und Löschen von Datenquellen in den Systeminformationen an.  
+ **Sqlmanagedatasources** zeigt ein Dialogfeld an, in dem Benutzerdaten Quellen in den Systeminformationen einrichten, hinzufügen und löschen können.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,40 +43,40 @@ BOOL SQLManageDataSources(
   
 ## <a name="arguments"></a>Argumente  
  *HWND*  
- [Eingabe] Handle des übergeordneten Fensters.  
+ Der Handle des übergeordneten Fensters.  
   
-## <a name="returns"></a>Rückgabewert  
- **SQLManageDataSources** gibt "false" zurück, wenn *Hwnd* ist es sich nicht um ein gültiges Fensterhandle. Andernfalls wird "true" zurückgegeben.  
+## <a name="returns"></a>Rückgabe  
+ **Sqlmanagedatasources** gibt false zurück, wenn *HWND* kein gültiges Fenster Handle ist. Andernfalls wird TRUE zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLManageDataSources** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **sqlmanagedatasources** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
-|ODBC_ERROR_REQUEST_FAILED|*Anforderung* Fehler|Der Aufruf von **ConfigDSN** ist fehlgeschlagen.|  
-|ODBC_ERROR_INVALID__HWND|Ungültiges Fenster-handle|Die *Hwnd* Argument war ungültig oder NULL.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund von unzureichendem Speicher nicht ausgeführt werden.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
+|ODBC_ERROR_REQUEST_FAILED|*Anforderung* fehlgeschlagen|Fehler beim **ConfigDSN** -Rückruf.|  
+|ODBC_ERROR_INVALID__HWND|Ungültiges Fenster handle.|Das *HWND* -Argument war ungültig oder NULL.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
   
 ## <a name="managing-data-sources"></a>Verwalten von Datenquellen  
- **SQLManageDataSources** zeigt zu Beginn der **ODBC-Datenquellenadministrator** Dialogfeld wie in der folgenden Abbildung dargestellt.  
+ **Sqlmanagedatasources** zeigt zunächst das Dialogfeld **ODBC-Datenquellen-Administrator** an, wie in der folgenden Abbildung dargestellt.  
   
- ![Dialogfeld für die ODBC-Datenquellenadministrator](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
+ ![Dialogfeld "ODBC-Datenquellen-Administrator"](../../../odbc/reference/syntax/media/ch23e.gif "CH23E")  
   
- Das Dialogfeld zeigt die Datenquellen aufgeführt, die in den Systeminformationen auf drei Registerkarten: **Benutzer-DSN**, **System-DSN**, und **Datei-DSN**. Wenn der Benutzer eine Datenquelle doppelklickt oder eine Datenquelle klickt und **konfigurieren**, **SQLManageDataSources** Aufrufe **ConfigDSN** im Setup-DLL-Datei mit den ODBC_CONFIG_ DSN-Option.  
+ Im Dialogfeld werden die Datenquellen angezeigt, die in den Systeminformationen unter drei Registerkarten aufgeführt sind: **Benutzer-DSN**, **System-DSN**und **Datei-DSN**. Wenn der Benutzer auf eine Datenquelle doppelklickt oder eine Datenquelle auswählt und auf **Konfigurieren**klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL mit der ODBC_CONFIG_DSN-Option auf.  
   
- Wenn der Benutzer klickt **hinzufügen**, **SQLManageDataSources** zeigt die **neue Datenquelle erstellen** Dialogfeld, in der folgenden Abbildung gezeigt.  
+ Wenn der Benutzer auf **Hinzufügen**klickt, zeigt **sqlmanagedatasources** das Dialogfeld **neue Datenquelle erstellen** an, wie in der folgenden Abbildung dargestellt.  
   
- ![Erstellen Sie im Dialogfeld Neue Datenquelle](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
+ ![Dialogfeld "Neue Datenquelle erstellen"](../../../odbc/reference/syntax/media/ch23f.gif "CH23F")  
   
- Das Dialogfeld zeigt einer Liste der installierten Treiber. Wenn der Benutzer einen Treiber doppelklickt oder ein Treibers klickt und **OK**, **SQLManageDataSources** Aufrufe **ConfigDSN** in der Setup-DLL und übergibt es die ODBC_ADD_DSN-Option.  
+ Im Dialogfeld wird eine Liste der installierten Treiber angezeigt. Wenn der Benutzer auf einen Treiber doppelklickt oder einen Treiber auswählt und auf **OK**klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL auf und übergibt ihm die Option ODBC_ADD_DSN.  
   
- Wenn der Benutzer eine Datenquelle wählt, und klickt auf **entfernen**, **SQLManageDataSources** gefragt, ob der Benutzer die Datenquelle löschen möchte. Wenn der Benutzer klickt **Ja**, **SQLManageDataSources** Aufrufe **ConfigDSN** in der Setup-DLL mit der Option ODBC_REMOVE_DSN.  
+ Wenn der Benutzer eine Datenquelle auswählt und auf **Entfernen**klickt, fragt **sqlmanagedatasources** , ob der Benutzer die Datenquelle löschen möchte. Wenn der Benutzer auf **Ja**klickt, ruft **sqlmanagedatasources** **ConfigDSN** in der Setup-DLL mit der ODBC_REMOVE_DSN-Option auf.  
   
- Die **neue Datenquelle erstellen** Dialogfeld wird zum Hinzufügen oder Löschen einer Datenquelle für den Benutzer, eine Systemdatenquelle oder eine Datei als Datenquelle verwendet.  
+ Das Dialogfeld **neue Datenquelle erstellen** wird verwendet, um eine Benutzerdaten Quelle, eine Systemdaten Quelle oder eine Datei Datenquelle hinzuzufügen oder zu löschen.  
   
 ## <a name="user-dsns"></a>Benutzer-DSNs  
- Werden aufgerufen für einzelne Benutzer erstellten DSNs Benutzer-DSNs, um sie von System-DSNs zu unterscheiden. Benutzer-DSNs werden in den Systeminformationen wie folgt registriert:  
+ DSNs, die für einzelne Benutzer erstellt werden, werden als Benutzer-DSNs bezeichnet, um Sie von System-DSNs zu unterscheiden. Benutzer-DSNs werden in den Systeminformationen wie folgt registriert:  
   
  `HKEY_CURRENT_USERS`  
   
@@ -87,42 +87,42 @@ BOOL SQLManageDataSources(
  `Odbc.ini`  
   
 ## <a name="system-dsns"></a>System-DSNs  
- Die **neue Datenquelle erstellen** Dialogfeld können Sie eine Systemdatenquelle auf Ihrem lokalen Computer oder löschen Sie einen hinzufügen oder die Konfiguration für eine Systemdatenquelle festzulegen.  
+ Im Dialogfeld **neue Datenquelle erstellen** können Sie dem lokalen Computer eine Systemdaten Quelle hinzufügen oder eine Systemdaten Quelle löschen oder die Konfiguration für eine Systemdaten Quelle festlegen.  
   
- Eine Datenquelle mit einer System-Datenquellennamen (DSN) einrichten kann durch mehrere Benutzer auf dem gleichen Computer verwendet werden. Sie können auch von einem Dienst systemweiten verwendet werden die klicken Sie dann die Datenquelle zugreifen können, auch wenn kein Benutzer mit dem Computer angemeldet ist.  
+ Eine mit einem System-Datenquellen Namen (DSN) aufgelegte Datenquelle kann von mehreren Benutzern auf demselben Computer verwendet werden. Sie kann auch von einem systemweiten Dienst verwendet werden, der Zugriff auf die Datenquelle erhält, auch wenn kein Benutzer am Computer angemeldet ist.  
   
- System-DSN wird in der HKEY_LOCAL_MACHINE-Eintrag in die Systeminformationen und nicht in der HKEY_CURRENT_USER-Eintrag registriert. Es ist nicht an ein Benutzer meldet sich mit seinem bestimmten Benutzernamen und Kennwort kann jedoch verwendet werden von jedem Benutzer des Computers oder von einem Dienst für automatische systemweiten gebunden. System-DSN ist, jedoch an einem Computer gebunden. Die Möglichkeit der Verwendung von remote-DSNs zwischen Computern wird nicht unterstützt. System-DSNs werden in den Systeminformationen wie folgt registriert:  
+ Ein System-DSN wird im HKEY_LOCAL_MACHINE Eintrag in den Systeminformationen anstelle des HKEY_CURRENT_USER Eintrags registriert. Er ist nicht an einen Benutzer gebunden, der sich mit seinem bestimmten Benutzernamen und Kennwort anmeldet, aber von jedem Benutzer dieses Computers oder durch einen automatischen systemweiten Dienst verwendet werden kann. Der System-DSN ist jedoch an einen Computer gebunden. Die Verwendung von Remote-DSNs zwischen Computern wird nicht unterstützt. System-DSNs werden in den Systeminformationen wie folgt registriert:  
   
- HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
+ HKEY_LOCAL_MACHINE Software ODBC ODBC. ini  
   
 ## <a name="file-dsns"></a>Datei-DSNs  
- Eine Datenquelle einen Datenquellennamen ein, keinen ist eine Datenquelle für den Computer, und nicht auf einen Benutzer oder Computer registriert ist. Die Verbindungsinformationen für diese Datenquelle ist in einer DSN-Datei enthalten, die auf einem beliebigen Computer kopiert werden können. Eine Dateidatenquelle möglich freigegeben ist, befindet sich in diesem Fall die DSN-Datei in einem Netzwerk, und gleichzeitig verwendet werden kann von mehreren Benutzern im Netzwerk als der Benutzer den entsprechenden Treiber installiert wurde. Eine Datenquelle kann auch Dateidatenquelle, werden in diesem Fall können sie nur auf einem einzelnen Computer verwendet werden.  
+ Eine Datei Datenquelle hat keinen Datenquellen Namen, wie eine Computer Datenquelle, und ist nicht für einen Benutzer oder Computer registriert. Die Verbindungsinformationen für diese Datenquelle sind in einer DSN-Datei enthalten, die auf einen beliebigen Computer kopiert werden kann. Eine Datei Datenquelle kann Share fähig sein. in diesem Fall befindet sich die DSN-Datei in einem Netzwerk und kann gleichzeitig von mehreren Benutzern im Netzwerk verwendet werden, solange der Benutzer den entsprechenden Treiber installiert hat. Eine Datei Datenquelle kann auch unshare fähig sein. in diesem Fall kann Sie nur auf einem einzelnen Computer verwendet werden.  
   
- Weitere Informationen zu Datei-Datenquellen, finden Sie unter [Herstellen einer Verbindung mithilfe von Dateidatenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md), oder finden Sie unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Weitere Informationen zu Datei Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../../odbc/reference/develop-app/connecting-using-file-data-sources.md)oder unter [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="managing-drivers"></a>Verwalten von Treibern  
- Klickt der Benutzer die **Treiber** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld **SQLManageDataSources** zeigt eine Liste der auf dem System installierten ODBC-Treiber sowie Informationen zu den Treiber. Das Datum angezeigt, ist das Erstellungsdatum des Treibers aus, wie in der folgenden Abbildung dargestellt.  
+ Wenn der Benutzer im Dialogfeld **ODBC-Datenquellen-Administrator** auf die Registerkarte **Treiber** klickt, zeigt **sqlmanagedatasources** eine Liste der auf dem System installierten ODBC-Treiber sowie Informationen zu den Treibern an. Das angezeigte Datum ist das Erstellungsdatum des Treibers, wie in der folgenden Abbildung dargestellt.  
   
- ![Registerkarte für ODBC-Datenquellenadministrator Treiber](../../../odbc/reference/syntax/media/ch23g.gif "ch23g")  
+ ![Dialogfeld "ODBC-Datenquellen-Administrator", Registerkarte "Treiber"](../../../odbc/reference/syntax/media/ch23g.gif "ch23g")  
   
 ## <a name="tracing-options"></a>Ablaufverfolgungsoptionen  
- Klickt der Benutzer die **Ablaufverfolgung** Registerkarte die **ODBC-Datenquellenadministrator** Dialogfeld **SQLManageDataSources** Ablaufverfolgungsoptionen, zeigt, wie im folgenden Beispiel Abbildung.  
+ Wenn der Benutzer im Dialogfeld **ODBC-Datenquellen-Administrator** auf die Registerkarte Ablauf **Verfolgung** klickt, zeigt **sqlmanagedatasources** Ablauf Verfolgungs Optionen an, wie in der folgenden Abbildung dargestellt.  
   
- ![ODBC-Datenquellenadministrator Registerkarte](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
+ ![Registerkarte "Nachverfolgung des ODBC-Datenquellen-Administrators"](../../../odbc/reference/syntax/media/ch23h.gif "Ch23h")  
   
- Wenn der Benutzer klickt **Ablaufverfolgung jetzt starten** und klickt dann auf **OK**, **SQLManageDataSources** aktiviert die Ablaufverfolgung manuell für alle Anwendungen, die derzeit auf dem Computer ausgeführt.  
+ Wenn der Benutzer jetzt auf Ablauf **Verfolgung starten** klickt und dann auf **OK**klickt, ermöglicht **sqlmanagedatasources** die manuelle Ablauf Verfolgung für alle Anwendungen, die aktuell auf dem Computer ausgeführt werden.  
   
- Wenn der Benutzer gibt an, den Namen einer Ablaufverfolgungsdatei in die **Protokolldatei Pfad** Textfeld und klickt dann auf **OK**, **SQLManageDataSources** legt die **TraceFile** Schlüsselwort im Abschnitt [ODBC] die Systeminformationen für den angegebenen Namen.  
+ Wenn der Benutzer den Namen einer Ablauf Verfolgungs Datei im Textfeld **Protokolldatei Pfad** angibt und dann auf **OK**klickt, legt **sqlmanagedatasources** das **Tracefile** -Schlüsselwort im [ODBC]-Abschnitt der Systeminformationen auf den angegebenen Namen fest.  
   
 > [!IMPORTANT]  
->  Unterstützung für Visual Studio Analyzer wurde ab Windows 8 (Visual Studio Analyzer wurde nur in früheren Versionen von Visual Studio enthalten.) entfernt. Verwenden Sie eine Alternative zur Problembehandlung Mechanismus BID-Verfolgung.  
+>  Die Unterstützung für Visual Studio Analyzer wurde ab Windows 8 entfernt (Visual Studio Analyzer war nur in früheren Versionen von Visual Studio enthalten.) Verwenden Sie für einen alternativen Mechanismus zur Problembehandlung die Auftrags Ablauf Verfolgung.  
   
- Wenn der Benutzer klickt **starten Sie Visual Studio Analyzer** und klickt dann auf **OK**, Visual Studio Analyzer aktiviert ist. Es bleibt aktiviert, bis **beenden Sie Visual Studio Analyzer** geklickt wird.  
+ Wenn der Benutzer auf **Start Visual Studio Analyzer** und dann auf **OK**klickt, ist Visual Studio Analyzer aktiviert. Sie bleibt aktiviert, bis die Option zum **Abbrechen Visual Studio Analyzer** geklickt wird.  
   
- Weitere Informationen über die Ablaufverfolgung finden Sie unter [Ablaufverfolgung](../../../odbc/reference/develop-app/tracing.md). Weitere Informationen zu den **Ablaufverfolgung** und **TraceFile** Schlüsselwörtern finden Sie unter [Unterschlüssel für ODBC](../../../odbc/reference/install/odbc-subkey.md).  
+ Weitere Informationen zur Ablauf Verfolgung finden Sie unter Ablauf [Verfolgung](../../../odbc/reference/develop-app/tracing.md). Weitere Informationen zu den Schlüsselwörtern **Trace** und **Tracefile** finden Sie unter [ODBC-Unterschlüssel](../../../odbc/reference/install/odbc-subkey.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Erstellen von Datenquellen|[SQLCreateDataSource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|
+|Erstellen von Datenquellen|[Sqlkreatedatasource](../../../odbc/reference/syntax/sqlcreatedatasource-function.md)|

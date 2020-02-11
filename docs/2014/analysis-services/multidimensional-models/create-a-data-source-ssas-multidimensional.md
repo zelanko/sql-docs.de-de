@@ -19,35 +19,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d78f2523e539d72f506d074d102507fca1d0a986
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175917"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Erstellen einer Datenquelle (SSAS – mehrdimensional)
   In einem mehrdimensionalen Modell von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt ein Datenquellenobjekt eine Verbindung zu der Datenquelle dar, von der Sie Daten verarbeiten (oder importieren). Ein mehrdimensionales Modell muss mindestens ein Datenquellenobjekt enthalten, Sie können jedoch weitere hinzufügen, um Daten aus mehreren Data Warehouses zu kombinieren. Erstellen Sie anhand der Anweisungen in diesem Thema ein Datenquellenobjekt für Ihr Modell. Weitere Informationen zum Festlegen von Eigenschaften für dieses Objekt finden Sie unter [Festlegen von Datenquelleneigenschaften &#40;SSAS – mehrdimensional&#41;](set-data-source-properties-ssas-multidimensional.md).  
   
- Dieses Thema enthält folgende Abschnitte:  
+ Dieses Thema enthält die folgenden Abschnitte:  
   
- [Auswählen eines Datenanbieters](#bkmk_provider)  
+ [Wählen Sie eine Datenanbieter](#bkmk_provider)  
   
- [Festlegen von Anmeldeinformationen und Identitätswechseloptionen](#bkmk_impersonation)  
+ [Festlegen von Anmelde Informationen und Identitätswechsel Optionen](#bkmk_impersonation)  
   
- [Anzeigen oder Bearbeiten von Verbindungseigenschaften](#bkmk_ConnectionString)  
+ [Anzeigen oder Bearbeiten von Verbindungs Eigenschaften](#bkmk_ConnectionString)  
   
- [Erstellen einer Datenquelle mit dem Datenquellen-Assistent](#bkmk_steps)  
+ [Erstellen einer Datenquelle mithilfe des Datenquellen-Assistenten](#bkmk_steps)  
   
  [Erstellen einer Datenquelle mit einer vorhandenen Verbindung](#bkmk_connection)  
   
  [Hinzufügen mehrerer Datenquellen zu einem Modell](#bkmk_multipleDS)  
   
-##  <a name="bkmk_provider"></a> Auswählen eines Datenanbieters  
+##  <a name="bkmk_provider"></a>Wählen Sie eine Datenanbieter  
  Die Verbindung können Sie mit einem verwaltetem [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework- oder einem systemeigenem OLE DB-Anbieter herstellen. Als Datenanbieter wird für SQL Server-Datenquellen SQL Server Native Client empfohlen, da dieser meist eine bessere Leistung bietet.  
   
  Bei Oracle- und anderen Datenquellen von Drittanbietern überprüfen Sie, ob der Drittanbieter einen systemeigenen OLE DB-Anbieter bereitstellt, mit dem Sie es als Erstes probieren. Bei Fehlern versuchen Sie es mit einem anderen .NET-Anbieter oder systemeigenen OLE DB-Anbieter, der im Verbindungs-Manager aufgeführt wird. Stellen Sie sicher, dass jeder von Ihnen verwendete Datenanbieter auf allen Computern installiert ist, die zum Entwickeln und Ausführen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Lösung verwendet werden.  
   
-##  <a name="bkmk_impersonation"></a> Festlegen von Anmeldeinformationen und Identitätswechseloptionen  
+##  <a name="bkmk_impersonation"></a>Festlegen von Anmelde Informationen und Identitätswechsel Optionen  
  Eine Datenquellenverbindung kann manchmal die Windows-Authentifizierung oder einen vom Datenbank-Managementsystem bereitgestellten Authentifizierungsdienst verwenden, z. B. die SQL Server-Authentifizierung beim Herstellen einer Verbindung mit SQL Azure-Datenbanken. Das angegebene Konto muss über Anmeldeinformationen für den Remotedatenbankserver und Leseberechtigungen für die externe Datenbank verfügen.  
   
 ### <a name="windows-authentication"></a>Windows-Authentifizierung  
@@ -63,12 +63,13 @@ ms.locfileid: "70175917"
  Wenn Sie das Datenquellenobjekt im Modell gespeichert haben, werden die Verbindungszeichenfolge und das Kennwort verschlüsselt.  Aus Sicherheitsgründen werden beim späteren Anzeigen in Tools, Skript oder Code alle sichtbaren Spuren des Kennworts aus der Verbindungszeichenfolge entfernt.  
   
 > [!NOTE]  
->  Standardmäßig werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Kennwörter nicht mit der Verbindungszeichenfolge gespeichert. Wenn das Kennwort nicht gespeichert wird, werden Sie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Eingabe des Kennworts aufgefordert, sobald es benötigt wird. Wenn Sie sich für die Speicherung des Kennworts entscheiden, wird es in verschlüsselter Form in der Datenverbindungszeichenfolge gespeichert. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Kennwortinformationen für Datenquellen mithilfe des Verschlüsselungsschlüssels der Datenbank, die die Datenquelle enthält. Werden verschlüsselte Verbindungsinformationen verwendet, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwenden, um das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto oder das zugehörige Kennwort zu ändern; andernfalls können die verschlüsselten Informationen nicht wiederhergestellt werden. Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
+>  Standardmäßig werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] Kennwörter nicht mit der Verbindungszeichenfolge gespeichert. Wenn das Kennwort nicht gespeichert wird, werden Sie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zur Eingabe des Kennworts aufgefordert, sobald es benötigt wird. Wenn Sie sich für die Speicherung des Kennworts entscheiden, wird es in verschlüsselter Form in der Datenverbindungszeichenfolge gespeichert. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verschlüsselt Kennwortinformationen für Datenquellen mithilfe des Verschlüsselungsschlüssels der Datenbank, die die Datenquelle enthält. Werden verschlüsselte Verbindungsinformationen verwendet, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwenden, um das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkonto oder das zugehörige Kennwort zu ändern; andernfalls können die verschlüsselten Informationen nicht wiederhergestellt werden. Weitere Informationen finden Sie unter [SQL Server Configuration Manager](../../relational-databases/sql-server-configuration-manager.md).  
   
 ### <a name="defining-impersonation-information-for-data-mining-objects"></a>Definieren von Identitätswechselinformationen für Data Mining-Objekte  
  Data Mining-Abfragen können im Kontext des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienstkontos ausgeführt werden. Es ist jedoch auch möglich, sie im Kontext des Benutzers, der die Abfrage gesendet hat, oder im Kontext eines angegebenen Benutzers auszuführen. Der Kontext, in dem eine Abfrage ausgeführt wird, kann sich auf das Ergebnis der Abfrage auswirken. Bei Data Mining-Vorgängen des Typs `OPENQUERY` kann es sich anbieten, die Data Mining-Abfrage nicht im Kontext des Dienstkontos, sondern im Kontext des aktuellen Benutzers oder im Kontext eines angegebenen Benutzers (unabhängig vom Benutzer, der die Abfrage ausführt) auszuführen. Hierdurch ist es möglich, die Abfrage mit eingeschränkten Sicherheitsanmeldeinformationen auszuführen. Wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Identität des aktuellen Benutzers oder eines angegebenen Benutzers annehmen soll, müssen Sie entweder die Option **Bestimmten Benutzernamen und bestimmtes Kennwort** oder **Anmeldeinformationen des aktuellen Benutzers** auswählen.  
   
-##  <a name="bkmk_steps"></a> Erstellen einer Datenquelle mit dem Datenquellen-Assistent  
+##  <a name="bkmk_steps"></a>Erstellen einer Datenquelle mithilfe des Datenquellen-Assistenten  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt, oder stellen Sie eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank her, in dem bzw. der Sie die Datenquelle definieren möchten.  
   
@@ -82,13 +83,13 @@ ms.locfileid: "70175917"
   
      Der Standardanbieter für eine neue Verbindung ist der Native OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client-Anbieter. Dieser Anbieter wird dazu verwendet, mit OLE DB eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank-Engine-Instanz herzustellen. Für Verbindungen zu einer relationalen SQL Server-Datenbank ist die Verwendung von Native OLE DB\SQL Server Native Client 11.0 oftmals schneller als die Verwendung von alternativen Anbietern.  
   
-     Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der Anbieter und relationalen Datenbanken, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützt werden, finden Sie unter von [Data Sources unterstützte &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md).  
+     Sie können einen anderen Anbieter auswählen, um auf andere Datenquellen zuzugreifen. Eine Liste der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützten Anbieter und relationalen Datenbanken finden Sie unter [Data Sources supported &#40;SSAS Multidimensional&#41;](supported-data-sources-ssas-multidimensional.md).  
   
 5.  Geben Sie die für den ausgewählten Anbieter angeforderten Informationen ein, um eine Verbindung mit der zugrunde liegenden Datenquelle herzustellen. Wenn Sie den Anbieter **Native OLE DB\SQL Server Native Client** ausgewählt haben, geben Sie die folgenden Informationen ein:  
   
-    1.  **Servername** ist der Netzwerkname der Datenbank-Engine-Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen (z. b. \<Computername >\\< instancename\>) einschließen.  
+    1.  Der **Server Name** ist der Netzwerkname der Datenbank-Engine Instanz. Er kann als IP-Adresse, NETBIOS-Name des Computers oder als vollqualifizierter Domänenname angegeben werden. Wenn der Server als benannte Instanz installiert ist, müssen Sie den Instanznamen (z. b. \<Computername>\\<instanceName\>) einschließen.  
   
-    2.  **Am Server anmelden** gibt an, wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. **Verwendung SQL Server Authentifizierung** gibt eine Datenbankbenutzer Anmeldung für eine Azure SQL-Datenbank oder eine SQL Server Instanz an, die die Authentifizierung im gemischten Modus unterstützt.  
+    2.  Beim **Server anmelden gibt an,** wie die Verbindung authentifiziert wird. **Windows-Authentifizierung verwenden** verwendet die Windows-Authentifizierung. **Verwendung SQL Server Authentifizierung** gibt eine Datenbankbenutzer Anmeldung für eine Azure SQL-Datenbank oder eine SQL Server Instanz an, die die Authentifizierung im gemischten Modus unterstützt.  
   
         > [!IMPORTANT]  
         >  Der Verbindungs-Manager umfasst das Kontrollkästchen **Kennwort speichern** für Verbindungen, die die SQL Server-Authentifizierung verwenden. Obwohl das Kontrollkästchen immer sichtbar ist, wird es nicht immer verwendet.  
@@ -97,7 +98,7 @@ ms.locfileid: "70175917"
         >   
         >  Dieses Verhalten gilt nur für Datenbanken, die a) auf einer Analysis Services-Serverinstanz vorhanden sind und b) die SQL Server-Authentifizierung verwenden, um relationale Daten zu aktualisieren oder zu verarbeiten. Es gilt nicht für Datenquellenverbindungen, die Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] einrichten und die nur für die Dauer einer Sitzung verwendet werden. Obwohl ein bereits gespeichertes Kennwort nicht entfernt werden kann, können Sie jedoch andere Anmeldeinformationen oder die Windows-Authentifizierung verwenden, um die Benutzerinformationen zu überschreiben, die derzeit in der Datenbank gespeichert sind.  
   
-    3.  **Datenbanknamen eingeben oder auswählen** oder **Datenbankdatei anfügen** wird verwendet, um die Datenbank anzugeben.  
+    3.  **Wählen Sie einen Datenbanknamen** aus **, oder** geben Sie einen Datenbanknamen an, um die Datenbank anzugeben.  
   
     4.  Klicken Sie auf der linken Seite des Dialogfelds auf **Alle** , um weitere Einstellungen für diese Verbindung, einschließlich aller Standardeinstellungen für diesen Anbieter, anzuzeigen.  
   
@@ -111,9 +112,9 @@ ms.locfileid: "70175917"
   
      Richtlinien zum Auswählen einer Identitätswechseloption ändern sich in Abhängigkeit davon, wie Sie die Datenquelle verwenden. Bei Verarbeitungstasks muss der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienst im Sicherheitskontext seines Dienstkontos oder eines angegebenen Benutzerkontos ausgeführt werden, wenn eine Verbindung mit einer Datenquelle hergestellt wird.  
   
-    -   Verwenden Sie**Bestimmter Windows-Benutzername und bestimmtes Kennwort** , um einen eindeutigen Satz von Anmeldeinformationen mit den niedrigsten Privilegien anzugeben.  
+    -   **Verwenden Sie einen bestimmten Windows-Benutzernamen und ein Kennwort** , um einen eindeutigen Satz von Anmelde Informationen für die geringsten Rechte anzugeben  
   
-    -   Verwenden Sie die Option**Dienstkonto verwenden** , um die Daten mit der Dienstidentität zu verarbeiten.  
+    -   **Verwenden Sie das Dienst Konto** , um die Daten mit der Dienst Identität zu verarbeiten.  
   
      Das angegebene Konto muss über Leseberechtigungen für die Datenquelle verfügen.  
   
@@ -121,7 +122,7 @@ ms.locfileid: "70175917"
   
 9. Klicken Sie auf **Fertig stellen**.  Die neue Datenquelle wird im Projektmappen-Explorer im Ordner **Datenquellen** angezeigt.  
   
-##  <a name="bkmk_connection"></a> Erstellen einer Datenquelle mit einer vorhandenen Verbindung  
+##  <a name="bkmk_connection"></a>Erstellen einer Datenquelle mit einer vorhandenen Verbindung  
  Wenn Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt verwenden, kann die Datenquelle basierend auf einer vorhandenen Datenquelle in der Projektmappe oder basierend auf einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt erstellt werden. Der Datenquellen-Assistent bietet mehrere Optionen zum Erstellen des Datenquellenobjekts, darunter die Verwendung einer vorhandenen Verbindung in demselben Projekt.  
   
 -   Das Erstellen einer  Datenquelle basierend auf einer vorhandenen Datenquelle in der Projektmappe ermöglicht es Ihnen, eine Datenquelle zu erstellen, die mit der bestehenden Datenquelle synchronisiert ist. Wenn ein Build des Projekts, das diese neue Datenquelle enthält, erstellt wird, werden die Datenquelleneinstellungen der zugrunde liegenden Datenquelle verwendet.  
@@ -130,10 +131,10 @@ ms.locfileid: "70175917"
   
  Wenn Sie auf ein Datenquellenobjekt verweisen, können Sie dieses Objekt nur in dem Objekt oder Projekt bearbeiten, auf das verwiesen wurde. Es ist nicht möglich, die Verbindungsinformationen in dem Datenquellenobjekt zu bearbeiten, das den Verweis enthält. Änderungen an den Verbindungsinformationen in dem Objekt oder Projekt, auf das verwiesen wird, werden in der neuen Datenquelle angezeigt, wenn sie erstellt wird. Die Informationen zur Verbindungszeichenfolge, die in der Datenquellendatei (.ds) des Projekts vorkommen, werden synchronisiert, sobald Sie das Projekt erstellen oder den Verweis im Datenquellen-Designer entfernen.  
   
-##  <a name="bkmk_ConnectionString"></a> Anzeigen oder Bearbeiten von Verbindungseigenschaften  
+##  <a name="bkmk_ConnectionString"></a>Anzeigen oder Bearbeiten von Verbindungs Eigenschaften  
  Die Verbindungszeichenfolge wird auf Grundlage der Eigenschaften formuliert, die Sie im Datenquellen-Designer oder im Datenquellen-Assistenten auswählen. Die Verbindungszeichenfolge und weitere Eigenschaften können Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]anzeigen.  
   
- **So bearbeiten Sie die Verbindungszeichenfolge**  
+ **So bearbeiten Sie die Verbindungs Zeichenfolge**  
   
 1.  Doppelklicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]im Projektmappen-Explorer auf ein Datenquellenobjekt.  
   
@@ -147,7 +148,7 @@ ms.locfileid: "70175917"
   
  Sie können den Verweis entfernen, indem Sie das Kontrollkästchen deaktivieren. Dadurch wird die Synchronisierung zwischen den Objekten beendet, und Sie können die Verbindungszeichenfolge in der Datenquelle ändern.  
   
-##  <a name="bkmk_multipleDS"></a> Hinzufügen mehrerer Datenquellen zu einem Modell  
+##  <a name="bkmk_multipleDS"></a>Hinzufügen mehrerer Datenquellen zu einem Modell  
  Sie können mehrere Datenquellenobjekte erstellen, um Verbindungen mit zusätzlichen Datenquellen zu unterstützen. Jede Datenquelle muss Spalten aufweisen, die zur Erstellung von Beziehungen verwendet werden können.  
   
 > [!NOTE]  
@@ -171,8 +172,8 @@ ms.locfileid: "70175917"
   
 5.  Suchen Sie die hinzugefügte Tabelle, und wählen Sie sie aus. Klicken Sie mit der rechten Maustaste auf die Tabelle, und wählen Sie **Neue Beziehung**aus. Wählen Sie die Quell- und Zielspalten aus, die übereinstimmende Daten enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellen, &#40;die mehrdimensionale&#41; SSAS-  unterstützt](supported-data-sources-ssas-multidimensional.md)  
- [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Unterstützte Datenquellen &#40;mehrdimensionalen SSAS-&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

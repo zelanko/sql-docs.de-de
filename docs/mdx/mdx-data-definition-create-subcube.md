@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: f137e8c377c94a60fdcfd8f1534069cef4b28f66
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68887437"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX-Datendefinition – CREATE SUBCUBE
@@ -35,9 +35,9 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
  *Select_Statement*  
  Ein gültiger SELECT-Ausdruck in MDX (Multidimensional Expressions), der keine WITH-, NON EMPTY- oder HAVING-Klausel enthält und keine Dimensions- oder Zelleigenschaften anfordert.  
   
- Eine ausführliche Syntax Erklärung zu SELECT-Anweisungen und der **Non-Visual** -Klausel finden Sie unter [Select- &#40;Anweisung MDX&#41; ](../mdx/mdx-data-manipulation-select.md) .  
+ Eine ausführliche Syntax Erklärung für SELECT-Anweisungen und die **Non-Visual** -Klausel finden Sie unter [SELECT-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md) .  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Standardelemente in der Definition eines Teilcubes ausgeschlossen werden, ändern sich die Koordinaten entsprechend. Für Attribute, die aggregiert werden können, wird [All] zum Standardelement erklärt. Für Attribute, die nicht aggregiert werden können, wird ein im Teilcube vorhandenes Element zum Standardelement. In der folgenden Tabelle sind Beispiele für Kombinationen aus Teilcubes und Standardelementen aufgeführt.  
   
 |Ursprüngliches Standardelement|Kann aggregiert werden|Untergeordneter SELECT-Ausdruck|Geändertes Standardelement|  
@@ -92,9 +92,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$2,031,079.39|$506,172.45|$1,524,906.93|  
-|Value Added Reseller|$767,388.52|$175,002.81|$592,385.71|  
-|Warehouse|$1,263,690.86|$331,169.64|$932,521.23|  
+|All Resellers|$2.031.079,39|$506,172.45|$1,524,906.93|  
+|Value Added Reseller|$767.388,52|$175,002.81|$592,385.71|  
+|Warehouse|$1.263.690,86|$331,169.64|$932,521.23|  
   
  Durch das Löschen und erneute Erstellen des Teilcubes mit der NON VISUAL-Klausel wird ein Teilcube erstellt, der die tatsächlichen Gesamtsummen für alle Elemente in Products.Category und Resellers.[Business Type] beibehält, unabhängig davon, ob sie im Teilcube sichtbar sind.  
   
@@ -127,10 +127,10 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Die Spalte [All Products] und die Zeile [All Resellers] enthalten die Gesamtsummen für alle Elemente, nicht nur die Gesamtsummen der sichtbaren Elemente.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
- [MDX für MDX-Skript Anweisungen &#40;&#41;](../mdx/mdx-scripting-statements-mdx.md)   
- [DROP SUBCUBE- &#40;Anweisung (MDX)&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
- [SELECT-Anweisung &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
+ [MDX-Skript Anweisungen &#40;MDX-&#41;](../mdx/mdx-scripting-statements-mdx.md)   
+ [DROP SUBCUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
+ [SELECT-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-manipulation-select.md)  
   
   

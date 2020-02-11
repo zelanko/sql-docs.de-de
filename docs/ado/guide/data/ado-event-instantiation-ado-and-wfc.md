@@ -11,10 +11,10 @@ ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dbbbf92c751093d2a7333b7ac1f76888d41d345
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70212339"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO-Ereignisinstanziierung: ADO und WFC
@@ -60,9 +60,9 @@ ADO für Windows Foundation Classes (ADO/WFC) baut auf dem ADO-Ereignis Modell a
   
 7.  Wenn die Verarbeitung abgeschlossen ist, entfernen Sie den Handler aus der Liste der ADO/WFC-Ereignishandler. Verwenden Sie die-Methode mit einem Namen wie **RemoveOn**_EventName_(*Handler*).  
   
-## <a name="see-also"></a>Siehe auch  
- [Zusammenfassungs  für ADO-Ereignis Handler](../../../ado/guide/data/ado-event-handler-summary.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Ereignis Handler-Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)   
  [ADO-WFC-Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
  [Ereignis Parameter](../../../ado/guide/data/event-parameters.md)   
  [Zusammenarbeiten von Ereignis Handlern](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Typen von Ereignissen](../../../ado/guide/data/types-of-events.md)
+ [Ereignistypen](../../../ado/guide/data/types-of-events.md)

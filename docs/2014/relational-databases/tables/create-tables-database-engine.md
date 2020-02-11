@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b909160a11dbcced44a0c81d92fd28ce02a50906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62761572"
 ---
 # <a name="create-tables-database-engine"></a>Erstellen von Tabellen (Datenbank-Engine)
@@ -31,7 +31,7 @@ ms.locfileid: "62761572"
   
      [Sicherheit](#Security)  
   
--   **Erstellen Sie eine Tabelle mit:**  
+-   **So erstellen Sie eine Tabelle mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62761572"
   
  Wenn einer Spalte in der CREATE TABLE-Anweisung eine XML-Schemaauflistung zugeordnet ist, ist entweder der Besitz der XML-Schemaauflistung oder die REFERENCES-Berechtigung für die Auflistung erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-table-with-table-designer"></a>So erstellen Sie eine Tabelle mit dem Tabellen-Designer  
   
@@ -64,7 +64,7 @@ ms.locfileid: "62761572"
   
 5.  Um weitere Eigenschaften für eine Spalte anzugeben, z. B. die Identität oder Werte für berechnete Spalten, klicken Sie auf die Spalte und wählen auf der Registerkarte mit den Spalteneigenschaften die geeigneten Eigenschaften aus. Weitere Informationen zu Spalteneigenschaften finden Sie unter [Tabellenspalteneigenschaften &#40;SQL Server Management Studio&#41;](table-column-properties-sql-server-management-studio.md).  
   
-6.  Um eine Spalte als Primärschlüssel festzulegen, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Primärschlüssel festlegen** aus. Weitere Informationen finden Sie unter [Create Primary Keys](../tables/create-primary-keys.md).  
+6.  Um eine Spalte als Primärschlüssel festzulegen, klicken Sie mit der rechten Maustaste darauf, und wählen Sie **Primärschlüssel festlegen**aus. Weitere Informationen finden Sie unter [Create Primary Keys](../tables/create-primary-keys.md).  
   
 7.  Um Fremdschlüsselbeziehungen, CHECK-Einschränkungen oder Indizes zu erstellen, klicken Sie mit der rechten Maustaste in den Bereich des Tabellen-Designers und wählen ein Objekt aus der Liste aus, wie in der folgenden Abbildung veranschaulicht.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62761572"
   
      Weitere Informationen zu Schemas finden Sie unter [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).  
   
-9. Wählen Sie im Menü **Datei** den Befehl **Speichern** *Speichern*aus.  
+9. Wählen Sie im Menü **Datei** den Befehl *Tabellennamen* **Speichern** aus.  
   
 10. Geben Sie im Dialogfeld **Namen auswählen** einen Namen für die Tabelle ein, und klicken Sie auf **OK**.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "62761572"
   
 #### <a name="to-create-a-table-in-the-query-editor"></a>So erstellen Sie eine Tabelle im Abfrage-Editor  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

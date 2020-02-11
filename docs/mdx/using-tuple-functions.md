@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 9a329c8786ce580469e4601709509ca8a2de73f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037979"
 ---
 # <a name="using-tuple-functions"></a>Verwenden von Tupelfunktionen
@@ -22,7 +22,7 @@ ms.locfileid: "68037979"
   
  Tupelfunktionen sind, wie Elementfunktionen und Mengenfunktionen, wesentlich für das Aushandeln mehrdimensionaler Strukturen, die in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zu finden sind.  
   
- Es gibt drei Tupelfunktionen in MDX [aktuelle &#40;MDX&#41;](../mdx/current-mdx.md), [Element &#40;Tupel&#41; &#40;MDX&#41; ](../mdx/item-tuple-mdx.md) und [StrToTuple &#40;MDX&#41;](../mdx/strtotuple-mdx.md). Die folgende Beispielabfrage veranschaulicht, wie sie verwendet werden:  
+ Es gibt drei Tupelfunktionen in MDX, [aktuelle &#40;MDX-&#41;](../mdx/current-mdx.md), [Element &#40;Tupel&#41; &#40;MDX-&#41;](../mdx/item-tuple-mdx.md) und-&#40;[MDX ](../mdx/strtotuple-mdx.md)-&#41;. Die folgende Beispielabfrage veranschaulicht, wie sie verwendet werden:  
   
  `WITH`  
   
@@ -46,9 +46,9 @@ ms.locfileid: "68037979"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;MDX-Syntax&#41;](../mdx/functions-mdx-syntax.md)   
- [Verwenden von Memberfunktionen](../mdx/using-member-functions.md)   
- [Using Set Functions (Verwenden von Mengenfunktionen)](../mdx/using-set-functions.md)  
+ [Verwenden von Element Funktionen](../mdx/using-member-functions.md)   
+ [Verwenden von Mengenfunktionen](../mdx/using-set-functions.md)  
   
   

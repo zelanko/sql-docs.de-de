@@ -1,5 +1,5 @@
 ---
-title: ODBC-Rückgabecodes | Microsoft-Dokumentation
+title: Rückgabe Codes ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ ms.assetid: e893b719-4392-476f-911a-5ed6da6f7e94
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e5f780f9abc47a367a1825d51b12159292ace5da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020419"
 ---
 # <a name="return-codes-odbc"></a>ODBC-Rückgabecodes
-Jede Funktion in der ODBC gibt einen Code, bekannt als die *Rückgabecode,* gibt den Erfolg oder Fehler bei der Funktion an. Die Programmlogik basiert im Allgemeinen auf Rückgabecodes.  
+Jede Funktion in ODBC gibt einen Code zurück, der als *Rückgabecode bezeichnet wird,* der den Gesamterfolg oder Misserfolg der Funktion angibt. Die Programmlogik basiert im Allgemeinen auf Rückgabecodes.  
   
- Beispielsweise der folgende code ruft **SQLFetch** zum Abrufen der Zeilen in einem Resultset. Er überprüft den Rückgabecode der Funktion, die bestimmen, ob das Ende des Resultsets (SQL_NO_DATA), erreicht wurde, wenn alle Warnungsinformationen (SQL_SUCCESS_WITH_INFO) zurückgegeben wurde, oder bei einem Fehler (SQL_ERROR).  
+ Der folgende Code ruft z. b. **SQLFetch** auf, um die Zeilen in einem Resultset abzurufen. Der Rückgabecode der Funktion wird überprüft, um zu bestimmen, ob das Ende des Resultsets erreicht wurde (SQL_NO_DATA), ob Warnungs Informationen zurückgegeben wurden (SQL_SUCCESS_WITH_INFO) oder ob ein Fehler aufgetreten ist (SQL_ERROR).  
   
 ```  
 SQLRETURN   rc;  
@@ -42,14 +42,14 @@ while ((rc=SQLFetch(hstmt)) != SQL_NO_DATA) {
   
  Der Rückgabecode SQL_INVALID_HANDLE gibt immer einen Programmierfehler an und sollte zur Laufzeit nie auftreten. Alle anderen Rückgabecodes stellen Laufzeitinformationen bereit, wenngleich SQL_ERROR einen Programmierfehler angeben kann.  
   
- Der folgenden Tabelle werden die Rückgabecodes.  
+ In der folgenden Tabelle sind die Rückgabecodes definiert.  
   
-|Rückgabecode|Beschreibung|  
+|Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|SQL_SUCCESS|Die Funktion wurde erfolgreich abgeschlossen. Ruft die Anwendung **SQLGetDiagField** um zusätzliche Informationen aus dem Headerdatensatz abzurufen.|  
-|SQL_SUCCESS_WITH_INFO|Die Funktion wurde erfolgreich abgeschlossen, möglicherweise mit einem nicht schwerwiegenden Fehler (Warnung). Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen.|  
-|SQL_ERROR|Fehler bei der Funktion. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen. Der Inhalt der Ausgabeargumente an die Funktion ist nicht definiert.|  
-|SQL_INVALID_HANDLE|Fehler bei der Funktion aufgrund eines ungültigen Handles für Umgebung "," Verbindung ","-Anweisung "oder"-Deskriptor. Dies weist einen Programmierungsfehler hin. Keine zusätzlichen Informationen steht in **SQLGetDiagRec** oder **SQLGetDiagField**. Dieser Code wird zurückgegeben, nur, wenn das Handle ein null-Zeiger ist oder den falschen Typ hat, z. B. wenn ein Anweisungshandle für ein Argument übergeben wird, die ein Verbindungshandle erforderlich sind.|  
-|SQL_NO_DATA|Es war keine weiteren Daten verfügbar. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen abzurufen. Einen oder mehrere treiberdefinierten Statusdatensätze in der Klasse 02xxx können zurückgegeben werden. **Hinweis**:  In ODBC 2. *x*, damit die Code hieß SQL_NO_DATA_FOUND zurückgegeben.|  
-|SQL_NEED_DATA|Mehr Daten erforderlich ist, z. B. wenn die Parameterdaten zum Zeitpunkt der Ausführung gesendet wird, oder zusätzliche Verbindungsinformationen ist erforderlich. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen, ggf. abzurufen.|  
-|SQL_STILL_EXECUTING|Eine Funktion, die asynchron gestartet wurde, wird weiterhin ausgeführt. Ruft die Anwendung **SQLGetDiagRec** oder **SQLGetDiagField** um zusätzliche Informationen, ggf. abzurufen.|
+|SQL_SUCCESS|Die Funktion wurde erfolgreich abgeschlossen. Die Anwendung ruft **SQLGetDiagField** auf, um zusätzliche Informationen aus dem Header Daten Satz abzurufen.|  
+|SQL_SUCCESS_WITH_INFO|Die Funktion wurde erfolgreich abgeschlossen, möglicherweise mit einem nicht schwerwiegenden Fehler (Warnung). Die Anwendung ruft **SQLGetDiagRec** oder **SQLGetDiagField** auf, um weitere Informationen abzurufen.|  
+|SQL_ERROR|Fehler bei der Funktion. Die Anwendung ruft **SQLGetDiagRec** oder **SQLGetDiagField** auf, um weitere Informationen abzurufen. Der Inhalt von Ausgabe Argumenten für die Funktion ist nicht definiert.|  
+|SQL_INVALID_HANDLE|Funktion konnte aufgrund einer ungültigen Umgebung, Verbindung, Anweisung oder eines Deskriptorhandles nicht ausgeführt werden. Dies weist auf einen Programmierfehler hin. In **SQLGetDiagRec** oder **SQLGetDiagField**sind keine weiteren Informationen verfügbar. Dieser Code wird nur zurückgegeben, wenn das Handle ein NULL-Zeiger ist oder den falschen Typ hat, z. b. Wenn ein Anweisungs Handle für ein Argument, das ein Verbindungs Handle erfordert, übermittelt wird.|  
+|SQL_NO_DATA|Es waren keine weiteren Daten verfügbar. Die Anwendung ruft **SQLGetDiagRec** oder **SQLGetDiagField** auf, um weitere Informationen abzurufen. Ein oder mehrere Treiber definierte Statusdaten Sätze in der Klasse 02xxx können zurückgegeben werden. **Hinweis:**  In ODBC 2. *x*, dieser Rückgabecode wurde SQL_NO_DATA_FOUND benannt.|  
+|SQL_NEED_DATA|Es werden weitere Daten benötigt, z. b. wenn Parameterdaten zur Ausführungszeit gesendet werden oder zusätzliche Verbindungsinformationen erforderlich sind. Die Anwendung ruft **SQLGetDiagRec** oder **SQLGetDiagField** auf, um ggf. Weitere Informationen abzurufen.|  
+|SQL_STILL_EXECUTING|Eine Funktion, die asynchron gestartet wurde, wird weiterhin ausgeführt. Die Anwendung ruft **SQLGetDiagRec** oder **SQLGetDiagField** auf, um ggf. Weitere Informationen abzurufen.|

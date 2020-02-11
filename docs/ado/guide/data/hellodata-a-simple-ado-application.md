@@ -1,5 +1,5 @@
 ---
-title: 'HelloData: Eine einfache ADO-Anwendung | Microsoft-Dokumentation'
+title: 'HelloData: eine einfache ADO-Anwendung | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,47 +14,47 @@ ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67925137"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: Eine einfache ADO-Anwendung
-Diese einfache Anwendung führt in jeder der vier wichtigsten ADO-Vorgänge: Abrufen, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden mit der Northwind-Beispieldatenbank, die in Microsoft® SQL Server enthalten. Im Beispiel für die Fehlerbehandlung ist minimal, die sich auf den Grundlagen von ADO und Übersichtlichkeit des Code zu verhindern.  
+Diese einfache Anwendung führt Sie durch jeden der vier wichtigsten ADO-Vorgänge: das erhalten, untersuchen, bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden für die Northwind-Beispieldatenbank ausgeführt, die in Microsoft® SQL Server enthalten ist. Um sich auf die Grundlagen von ADO zu konzentrieren und Code Übersichtlichkeit zu verhindern, ist die Fehlerbehandlung im Beispiel minimal.  
   
-### <a name="to-run-hellodata"></a>Ausführen von HelloData  
+### <a name="to-run-hellodata"></a>So führen Sie HelloData aus  
   
-1.  Erstellen Sie ein neues Standard-EXE-Datei Visual Basic-Projekt, das die ADO-Bibliothek verweist. Weitere Informationen finden Sie unter [verweisen auf die ADO-Bibliotheken](../../../ado/guide/referencing-the-ado-libraries.md).  
+1.  Erstellen Sie eine neue Standard-exe-Visual Basic Projekt, das auf die ADO-Bibliothek verweist. Weitere Informationen finden Sie unter [verweisen auf die ADO-Bibliotheken](../../../ado/guide/referencing-the-ado-libraries.md).  
   
-2.  Erstellen Sie vier Schaltflächen oben auf der das Formular, setzen die **Namen** und **Beschriftung** Eigenschaften mit den Werten in der Tabelle am Ende dieses Themas aufgeführt.  
+2.  Erstellen Sie im oberen Bereich des Formulars vier Befehls Schaltflächen, und legen Sie die Eigenschaften " **Name** " und " **Caption** " auf die Werte fest, die in der Tabelle am Ende dieses Themas angezeigt werden.  
   
-3.  Fügen Sie unterhalb der Schaltflächen, eine **Microsoft DataGrid Control** (Msdatgrd.ocx). Die Msdatgrd.ocx-Datei ist im Lieferumfang von Visual Basic und befindet sich in Ihrem Verzeichnis \windows\system32 oder \winnt\system32. Wählen Sie zum Hinzufügen des DataGrid-Steuerelements in Ihre Visual Basic-Toolbox-Bereich **Komponenten...**  aus der **Projekt** Menü. Aktivieren Sie das Kontrollkästchen neben "Microsoft DataGrid Control 6.0 (SP3) (OLEDB)", und klicken Sie dann auf **OK**. Zum Hinzufügen des Steuerelements auf das Projekt, ziehen Sie das DataGrid-Steuerelement aus der Toolbox auf das Visual Basic-Formular.  
+3.  Fügen Sie unter den Schaltflächen ein **Microsoft DataGrid-Steuer** Element (msdatgrd. ocx) hinzu. Die Datei msdatgrd. ocx ist in Visual Basic enthalten und befindet sich im Verzeichnis "\Windows\System32" oder "\winnt\system32". Wenn Sie das DataGrid-Steuerelement dem Bereich Visual Basic Toolbox hinzufügen möchten, wählen Sie im Menü **Projekt** die Option **Komponenten...** aus. Aktivieren Sie dann das Kontrollkästchen neben "Microsoft DataGrid Control 6,0 (SP3) (OleDb)", und klicken Sie dann auf **OK**. Um dem Projekt das Steuerelement hinzuzufügen, ziehen Sie das DataGrid-Steuerelement aus der Toolbox in das Visual Basic Formular.  
   
-4.  Erstellen Sie eine **Textfeld** auf dem Formular unter dem Raster und seine Eigenschaften festlegen, wie in der Tabelle dargestellt. Das Formular sollte in der folgende Abbildung ähneln, wenn Sie fertig sind.  
+4.  Erstellen Sie ein **Textfeld** im Formular unterhalb des Rasters, und legen Sie dessen Eigenschaften wie in der Tabelle gezeigt fest. Wenn Sie fertig sind, sollte das Formular der folgenden Abbildung ähneln.  
   
-5.  Schließlich kopieren Sie den Code in [HelloData-Code](../../../ado/guide/data/hellodata-code.md), und fügen Sie ihn in das Fenster des Code-Editor des Formulars. Drücken Sie **F5** um den Code auszuführen.  
+5.  Kopieren Sie schließlich den im [HelloData-Code](../../../ado/guide/data/hellodata-code.md)aufgelisteten Code, und fügen Sie ihn in das Fenster "Code-Editor" im Formular ein. Drücken Sie **F5** , um den Code auszuführen.  
   
 > [!NOTE]
->  Im folgenden Beispiel und in der Anleitung ist die Benutzer-Id "Meine-ID" mit dem Kennwort "123abc" verwendet, um die Authentifizierung auf dem Server. Sie sollten diese Werte mit gültigen Anmeldeinformationen für den Server ersetzen. Ersetzen Sie außerdem den Wert "MySQLServer" mit dem Namen Ihres Servers.  
+>  Im folgenden Beispiel und im gesamten Handbuch wird die Benutzer-ID "MyID" mit dem Kennwort "123aBc" verwendet, um sich beim Server zu authentifizieren. Sie sollten diese Werte durch gültige Anmelde Informationen für Ihren Server ersetzen. Ersetzen Sie außerdem den Wert "MySqlServer" durch den Namen Ihres Servers.  
   
- Eine detaillierte Beschreibung des Codes, finden Sie unter [Kommentare zur HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
+ Eine ausführliche Beschreibung des Codes finden Sie in den [Kommentaren zu HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
   
- ![Zeigt Form1 für die HelloData VB-Anwendung](../../../ado/guide/data/media/hellodata.gif "HelloData")  
+ ![Zeigt Form1 für die HelloData VB-Anwendung an](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|Steuerelementtyp|Eigenschaft|Wert|  
+|Steuerelement Typen|Eigenschaft|value|  
 |------------------|--------------|-----------|  
-|Formular|Name|Form1|  
+|Form|Name|Form1|  
 ||Höhe|6500|  
 ||Breite|6500|  
-|MS-DataGrid|Name|grdDisplay1|  
+|MS DataGrid|Name|grdDisplay1|  
 |TextBox|Name|txtDisplay1|  
-||Mehrzeilig|true|  
-|Schaltfläche "Befehl"|Name|cmdGetData|  
-||Beschriftung|Get Data|  
-|Schaltfläche "Befehl"|Name|cmdExamineData|  
-||Beschriftung|Untersuchen von Daten|  
-|Schaltfläche "Befehl"|Name|cmdEditData|  
-||Beschriftung|Bearbeiten von Daten|  
-|Schaltfläche "Befehl"|Name|cmdUpdateData|  
-||Beschriftung|Aktualisierungsdaten|
+||Multiline|true|  
+|Befehls Schaltfläche|Name|cmdgetdata|  
+||Caption|Abrufen von Daten|  
+|Befehls Schaltfläche|Name|cmdexaminedata|  
+||Caption|Daten überprüfen|  
+|Befehls Schaltfläche|Name|cmdeditdata|  
+||Caption|Daten bearbeiten|  
+|Befehls Schaltfläche|Name|cmdupdatedata|  
+||Caption|Aktualisierungsdaten|

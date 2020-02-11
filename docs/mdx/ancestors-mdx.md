@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68017102"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
 
-  Eine Funktion, die die Menge aller Vorgänger eines angegebenen Elements in einer angegebenen Ebene oder in einem angegebenen Abstand vom Element zurückgibt. Mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], die zurückgegebene Menge stets ein einzelnes Element – besteht aus [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt nicht mehrere übergeordnete Elemente für ein einzelnes Element.  
+  Eine Funktion, die die Menge aller Vorgänger eines angegebenen Elements in einer angegebenen Ebene oder in einem angegebenen Abstand vom Element zurückgibt. Bei [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]besteht der zurückgegebene Satz immer aus einem einzelnen Member [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . unterstützt nicht mehrere übergeordnete Elemente für einen einzelnen Member.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,24 +38,24 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
- *Entfernung*  
+ *Flüge*  
  Ein gültiger numerischer Ausdruck, der den Abstand vom angegebenen Element angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Mit der **Vorgänger** -Funktion, Sie stellen die Funktion einen MDX-Elementausdruck bereit und anschließend entweder einen MDX-Ausdruck einer Ebene, die sich um einen Vorgänger dieses Members oder ein numerischer Ausdruck, der die Anzahl der Ebenen darstellt oberhalb dieses Elements. Mit diesen Informationen die **Vorgänger** Funktion gibt die Menge der Elemente (die einen Satz von einem Element sein wird) auf dieser Ebene zurück.  
+## <a name="remarks"></a>Bemerkungen  
+ Mit der Vorgänger Funktion stellen Sie **der Funktion einen** MDX-Element Ausdruck bereit und stellen dann entweder einen MDX-Ausdruck einer Ebene bereit, die ein Vorgänger dieses Members ist, oder einen numerischen Ausdruck, der die Anzahl der Ebenen oberhalb dieses Elements darstellt. Mit diesen Informationen gibt die **Vorgänger Funktion die** Menge der Elemente (die eine Menge aus einem Element) auf dieser Ebene zurück.  
   
 > [!NOTE]  
->  Zur Rückgabe eines Vorgängerelements eine vorgängermenge, anstatt einen Satz Vorgänger der [Vorgänger](../mdx/ancestor-mdx.md) Funktion.  
+>  Verwenden Sie die [Vorgänger](../mdx/ancestor-mdx.md) Funktion, um einen Vorgänger Member anstelle eines Vorgänger Satzes zurückzugeben.  
   
- Wenn ein Ebenenausdruck angegeben wird, die **Vorgänger** -Funktion die Menge aller Vorgänger des angegebenen Elements auf der angegebenen Ebene zurück. Wenn das angegebene Element nicht innerhalb der gleichen Hierarchie wie die angegebene Ebene ist, gibt die Funktion einen Fehler auf.  
+ Wenn ein Ebenenausdruck angegeben wird, gibt die **Vorgänger Funktion die** Menge aller Vorgänger des angegebenen Elements auf der angegebenen Ebene zurück. Wenn sich der angegebene Member nicht in derselben Hierarchie wie die angegebene Ebene befindet, gibt die Funktion einen Fehler zurück.  
   
- Wenn ein Abstand angegeben wird, die **Vorgänger** Funktion gibt die Menge aller Elemente, die die Anzahl der Schritte, die sich in der Hierarchie, die anhand der im Elementausdruck angegeben sind. Ein Element kann als ein Element einer Attributhierarchie, einer benutzerdefinierten Hierarchie oder in einigen Fällen eine über-/ unterordnungshierarchie angegeben werden. 1 gibt die Menge der Elemente auf der übergeordneten Ebene und 2 die Menge der Elemente auf der dieser Ebene übergeordneten Ebene (sofern vorhanden) zurück. 0 gibt die Menge zurück, die nur das Element selbst enthält.  
+ Wenn ein Abstand angegeben wird, gibt die **Vorgänger Funktion die** Menge aller Elemente zurück, die die in der durch den Element Ausdruck angegebene Hierarchie angegebene Anzahl von Schritten bilden. Ein Member kann als Element einer Attribut Hierarchie, einer benutzerdefinierten Hierarchie oder in einigen Fällen eine über-/unterordnungshierarchie angegeben werden. 1 gibt die Menge der Elemente auf der übergeordneten Ebene und 2 die Menge der Elemente auf der dieser Ebene übergeordneten Ebene (sofern vorhanden) zurück. 0 gibt die Menge zurück, die nur das Element selbst enthält.  
   
 > [!NOTE]  
->  Verwenden Sie dieses Formular aus, der die **Vorgänger** -Funktion in Fällen, in dem die Ebene des übergeordneten Elements ist unbekannt oder nicht benannt werden.  
+>  Verwenden Sie diese **Form der Vorgänger Funktion in** Fällen, in denen die Ebene des übergeordneten Elements unbekannt ist oder nicht benannt werden kann.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die **Vorgänger** Funktion, um das Internet Sales Amount-Measure für ein Element, das übergeordnete Element und das diesem übergeordnete Element zurückzugeben. In diesem Beispiel werden Ebenenausdrücke zum Angeben der zurückzugebenden Ebene verwendet. Die Ebenen befinden sich in der gleichen Hierarchie wie das im Elementausdruck angegebene Element.  
+ Im folgenden Beispiel **wird die-Vorgänger Funktion verwendet** , um das Internet Sales Amount-Measure für ein Element, das übergeordnete Element und dessen übergeordnetes Element zurückzugeben. In diesem Beispiel werden Ebenenausdrücke zum Angeben der zurückzugebenden Ebene verwendet. Die Ebenen befinden sich in der gleichen Hierarchie wie das im Elementausdruck angegebene Element.  
   
 ```  
 SELECT {  
@@ -67,7 +67,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird die **Vorgänger** Funktion, um das Internet Sales Amount-Measure für ein Element, das übergeordnete Element und das diesem übergeordnete Element zurückzugeben. In diesem Beispiel werden numerische Ausdrücke zum Angeben der zurückzugebenden Ebene verwendet. Die Ebenen befinden sich in der gleichen Hierarchie wie das im Elementausdruck angegebene Element.  
+ Im folgenden Beispiel **wird die-Vorgänger Funktion verwendet** , um das Internet Sales Amount-Measure für ein Element, das übergeordnete Element und dessen übergeordnetes Element zurückzugeben. In diesem Beispiel werden numerische Ausdrücke zum Angeben der zurückzugebenden Ebene verwendet. Die Ebenen befinden sich in der gleichen Hierarchie wie das im Elementausdruck angegebene Element.  
   
 ```  
 SELECT {  
@@ -85,7 +85,7 @@ SELECT {
 FROM  [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird die **Vorgänger** Funktion, um das Internet Sales Amount-Measure für das übergeordnete Element eines Elements der Attributhierarchie zurückzugeben. In diesem Beispiel wird ein numerischer Ausdruck zum Angeben der zurückzugebenden Ebene verwendet. Da das Element im Elementausdruck ein Element einer Attributhierarchie darstellt, ist das ihm übergeordnete Element die [All]-Ebene.  
+ Im folgenden Beispiel **wird die-Vorgänger Funktion verwendet** , um das Internet Sales Amount-Measure für das übergeordnete Element einer Attribut Hierarchie zurückzugeben. In diesem Beispiel wird ein numerischer Ausdruck zum Angeben der zurückzugebenden Ebene verwendet. Da das Element im Elementausdruck ein Element einer Attributhierarchie darstellt, ist das ihm übergeordnete Element die [All]-Ebene.  
   
 ```  
 SELECT {  
@@ -97,7 +97,7 @@ SELECT {
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

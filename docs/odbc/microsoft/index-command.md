@@ -1,5 +1,5 @@
 ---
-title: INDEX-Befehl | Microsoft-Dokumentation
+title: Index Befehl | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 694e8cf5-2f69-4001-9c1e-b735a4da3aff
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61e55bec7a35009f0d83a43550a434e0966559b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019470"
 ---
 # <a name="index-command"></a>INDEX-Befehl
-Erstellt eine Indexdatei zum Anzeigen und Zugreifen auf Tabellendatensätze in einer logischen Reihenfolge.  
+Erstellt eine Indexdatei zum Anzeigen und Zugreifen auf Tabellendaten Sätze in einer logischen Reihenfolge.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -35,88 +35,88 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *eExpression*  
- Gibt einen Indexausdruck, der den Namen der ein Feld oder Felder aus der aktuellen Tabelle enthalten kann. Ein Indexschlüssel, die basierend auf der Indexausdruck wird in der Indexdatei für jeden Datensatz in der Tabelle erstellt. Visual FoxPro anhand dieser Schlüssel anzeigen und Zugreifen auf Datensätze in der Tabelle.  
+ *eexpression*  
+ Gibt einen Index Ausdruck an, der den Namen eines Felds oder der Felder aus der aktuellen Tabelle enthalten kann. Ein Index Schlüssel, der auf dem Index Ausdruck basiert, wird in der Indexdatei für jeden Datensatz in der Tabelle erstellt. Visual FoxPro verwendet diese Schlüssel, um Datensätze in der Tabelle anzuzeigen und darauf zuzugreifen.  
   
 > [!NOTE]  
->  Es wird jedoch nicht empfohlen, *eExpression* kann auch sein, eine Arbeitsspeicher-Variable, die ein Arrayelement oder ein Feld oder die Feldausdruck aus einer Tabelle in einem anderen Arbeitsbereich. Memo-Felder können nicht allein in Indexausdrücke-Datei verwendet werden. Sie müssen mit anderen Zeichenausdrücken kombiniert werden. Wenn Sie einen Index, der enthält eine Variable oder ein Feld, das nicht mehr vorhanden ist oder nicht gefunden werden kann zugreifen, generiert Visual FoxPro eine Fehlermeldung angezeigt.  
+>  Obwohl es nicht empfohlen wird, kann *eexpression* auch eine Speicher Variable, ein Array Element oder ein Feld-oder Feld Ausdruck aus einer Tabelle in einem anderen Arbeitsbereich sein. Memo Felder können nicht allein in Indexdatei Ausdrücken verwendet werden. Sie müssen mit anderen Zeichen Ausdrücken kombiniert werden. Wenn Sie auf einen Index zugreifen, der eine Variable oder ein Feld enthält, das nicht mehr vorhanden ist oder nicht gefunden werden kann, generiert Visual FoxPro eine Fehlermeldung.  
   
- Wenn Sie versuchen, einen Index mit einem Schlüssel zu erstellen, die Länge variiert, wird der Schlüssel mit Leerzeichen aufgefüllt werden. Indexschlüssel mit variabler Länge werden in der Visual FoxPro nicht unterstützt.  
+ Wenn Sie versuchen, einen Index mit einem Schlüssel zu erstellen, der die Länge unterscheidet, wird der Schlüssel mit Leerzeichen aufgefüllt. Index Schlüssel mit variabler Länge werden in Visual FoxPro nicht unterstützt.  
   
- Es ist möglich, einen Indexschlüssel zu erstellen, mit der Länge Null. Beispielsweise wird keine Länge Schlüssel eines Indexes erstellt, wenn es sich bei der Indexausdruck eine Teilzeichenfolge des eine leere Memofelds darstellt. 0 (null) Länge Schlüssel eines Indexes wird eine Fehlermeldung generiert. Wenn Sie Visual FoxPro einen Index erstellt wird, wird Feldern in den ersten Datensatz in der Tabelle ausgewertet. Wenn ein Feld leer ist, kann es erforderlich, geben Sie einige temporäre Daten in das Feld in den ersten Datensatz aus, um zu verhindern, dass ein 0-Länge Indexschlüssel enthalten sein.  
+ Es ist möglich, einen Index Schlüssel mit der Länge 0 (null) zu erstellen. Beispielsweise wird ein Index Schlüssel der Länge 0 (null) erstellt, wenn der Index Ausdruck eine Teil Zeichenfolge eines leeren Memo Felds ist. Ein Index Schlüssel mit der Länge Null generiert eine Fehlermeldung. Wenn Visual FoxPro einen Index erstellt, wertet er Felder im ersten Datensatz in der Tabelle aus. Wenn ein Feld leer ist, kann es erforderlich sein, einige temporäre Daten im Feld im ersten Datensatz einzugeben, um einen Index Schlüssel mit der Länge 0 (null) zu verhindern.  
   
- UM *IDXFileName*  
- Erstellt eine Index IDX-Datei. Die Indexdatei wird die standardmäßige Erweiterung IDX angegeben.  
+ An *idxfilename*  
+ Erstellt eine IDX-Indexdatei. Der Indexdatei wird die standardmäßige Erweiterung. idx zugewiesen.  
   
- TAG *TagName*[OF *CDXFileName*]  
- Erstellt eine Datei zusammengesetzten Index. Eine zusammengesetzten Index-Datei ist ein einzelner Index-Datei, die einer beliebigen Anzahl von separaten Tags (Indexeinträge) besteht. Jedes Tag wird anhand seines Tagnamens des eindeutig identifiziert. Tag-Namen müssen mit einem Buchstaben oder einem Unterstrich beginnen und können aus einer beliebigen Kombination von bis zu 10 Buchstaben, Ziffern oder Unterstrichen bestehen. Die Anzahl der Tags in einer zusammengesetzten Index-Datei wird nur durch den verfügbaren Arbeitsspeicher und Speicherplatz beschränkt.  
+ *Tagname*des Tags [von *cdxfilename*]  
+ Erstellt eine Verbund Indexdatei. Eine Verbund Indexdatei ist eine einzelne Indexdatei, die aus einer beliebigen Anzahl von separaten Tags (Indexeinträge) besteht. Jedes Tag wird anhand seines eindeutigen Tagnamens identifiziert. Tagnamen müssen mit einem Buchstaben oder einem Unterstrich beginnen und können aus einer beliebigen Kombination von bis zu 10 Buchstaben, Ziffern oder Unterstrichen bestehen. Die Anzahl der Tags in einer Verbund Indexdatei wird nur durch den verfügbaren Arbeitsspeicher und Speicherplatz beschränkt.  
   
- Unterschiedlichem zusammengesetzten Indexdateien sind stets compact. Es ist nicht erforderlich, COMPACT beim Erstellen einer zusammengesetzten Index-Datei eingeschlossen werden sollen. Namen von zusammengesetzten Indexdateien erhalten eine CDX-Erweiterung.  
+ Zusammengesetzte Indexdateien mit mehreren Eintrags sind immer kompakt. Beim Erstellen einer Verbund Indexdatei ist das Einschließen von Compact nicht erforderlich. Namen von Verbund Indexdateien erhalten die Erweiterung ". CDX".  
   
- Zwei Arten von Dateien von zusammengesetzten Index erstellt werden können: strukturelle und nonstructural.  
+ Es können zwei Typen von Verbund Indexdateien erstellt werden: strukturell und nicht strukturell.  
   
- **Strukturelle Index Verbunddateien** können Sie eine strukturelle zusammengesetzten Index-Datei erstellen, mit TAG *TagName* durch Ausschließen des optionalen OF *CDXFileName* Klausel. Eine Datei strukturelle zusammengesetzten Index immer hat den gleichen Basisnamen wie die Tabelle und wird automatisch geöffnet, wenn die Tabelle geöffnet wird.  
+ **Struktur zusammengesetzter Index Dateien** Sie können eine Struktur zusammengesetzte Indexdatei mit *Tagname Tagname* erstellen, indem Sie die optionale der *cdxfilename* -Klausel ausschließen. Eine Struktur zusammengesetzter Indexdatei hat immer denselben Basis Namen wie die Tabelle und wird automatisch geöffnet, wenn die Tabelle geöffnet wird.  
   
- **Nonstructural Index Verbunddateien** können Sie eine nonstructural zusammengesetzten Index-Datei erstellen, durch Einschließen der *CDXFileName* nach TAG *TagName*. Im Gegensatz zu einer Datei strukturelle zusammengesetzten Index muss eine Datei nonstructural zusammengesetzten Index explizit mit der INDEX-Klausel verwendet geöffnet werden.  
+ **Nicht strukturelle Verbund Index Dateien** Sie können eine nicht strukturelle Verbund Indexdatei erstellen, indem Sie *cdxfilename* nach *Tagname*des Tags einschließen. Anders als bei einer strukturellen Verbund Indexdatei muss eine nicht strukturell zusammengesetzte Indexdatei explizit mit der verwendeten Index Klausel geöffnet werden.  
   
- Wenn eine Datei zusammengesetzten Index bereits erstellt und geöffnet wurde, ausgeben INDEX mit TAG *TagName* der zusammengesetzten Index-Datei ein Tag hinzugefügt.  
+ Wenn bereits eine Verbund Indexdatei erstellt und geöffnet wurde, wird bei der Ausgabe von Index mit *Tagname* des Tags der Verbund Indexdatei ein Tag hinzugefügt.  
   
- FÜR *lExpression*  
- Gibt eine Bedingung, bei dem nur die Datensätze, die den Filterausdruck erfüllen *lExpression* stehen für Sie Anzeige- und Zugriff Indexschlüssel werden in der Indexdatei für nur die Datensätze, die mit dem Filterausdruck erstellt.  
+ Für *lExpression*  
+ Gibt eine Bedingung an, bei der nur Datensätze, die den Filter Ausdruck " *lExpression* " erfüllen, für Anzeige und Zugriff verfügbar sind. Index Schlüssel werden in der Indexdatei nur für die Datensätze erstellt, die mit dem Filter Ausdruck übereinstimmen.  
   
- Visual FoxPro-Rushmore Technologie optimiert einen INDEX... FÜR *lExpression* -Befehl, wenn *lExpression* ist ein optimierbarer Ausdruck. Verwenden Sie für eine optimale Leistung einen optimierbaren Ausdruck in der FOR-Klausel.  
+ Visual FoxPro-Rushmore-Technologie optimiert einen Index... Für den *lExpression* -Befehl, wenn *lExpression* ein optimierbarer Ausdruck ist. Verwenden Sie für eine optimale Leistung einen optimier baren Ausdruck in der for-Klausel.  
   
- KOMPRIMIEREN  
- Erstellt eine kompakte IDX-Datei.  
+ Theit  
+ Erstellt eine Compact. idx-Datei.  
   
- AUFSTEIGEND  
- Gibt einer aufsteigenden Reihenfolge für die CDX-Datei an. Standardmäßig werden CDX-Tags erstellt, in aufsteigender Reihenfolge. (Sie können als Erinnerung an die Indexdatei Reihenfolge AUFSTEIGEND einschließen.) Eine Tabelle kann in umgekehrter Reihenfolge durch Einschließen von ABSTEIGEND indiziert werden.  
+ Steigung  
+ Gibt eine aufsteigende Reihenfolge für die CDX-Datei an. Standardmäßig werden CDX-Tags in aufsteigender Reihenfolge erstellt. (Sie können aufsteigend als Erinnerung an die Reihenfolge der Indexdateien einschließen.) Eine Tabelle kann in umgekehrter Reihenfolge indiziert werden, indem Sie absteigend einschließt.  
   
- ABSTEIGEND  
- Gibt eine absteigende Reihenfolge für die CDX-Datei an. Wenn IDX Indexdateien erstellen, können Sie keine ABSTEIGEND einschließen.  
+ Steig  
+ Gibt eine absteigende Reihenfolge für die CDX-Datei an. Beim Erstellen von IDX-Indexdateien kann absteigend nicht eingeschlossen werden.  
   
  UNIQUE  
- Gibt an, dass nur der erste Datensatz mit einem bestimmten Indexschlüsselwert gefunden, die in einer IDX-Datei oder ein CDX-Tag enthalten ist. UNIQUE kann verwendet werden, um die Anzeige des oder der Zugriff auf doppelte Datensätze zu verhindern. Alle Datensätze mit Doppelte Indexschlüssel hinzugefügt werden, werden von der Indexdatei ausgeschlossen. Verwenden die Möglichkeit, EINDEUTIGEN INDEX ist identisch mit dem SET UNIQUE ON ausführen, bevor Sie die Index- oder REINDEX ausgeben.  
+ Gibt an, dass nur der erste Datensatz mit einem bestimmten Index Schlüsselwert in einer IDX-Datei oder einem CDX-Tag enthalten ist. Unique kann verwendet werden, um die Anzeige von oder den Zugriff auf doppelte Datensätze zu verhindern. Alle Datensätze, die mit doppelten Index Schlüsseln hinzugefügt wurden, werden aus der Indexdatei ausgeschlossen. Die Verwendung der UNIQUE-Option des Indexes ist identisch mit der Ausführung von Set Unique für vor der Ausgabe von Index oder REINDEX.  
   
- Wenn ein EINDEUTIGER Index oder Index Tag aktiv ist und in einer Weise, die seinen Indexschlüssel ändert ein doppelter Datensatz geändert wird, wird der Index oder Index-Tag aktualisiert. Allerdings kann nicht der nächsten doppelte Datensatz mit der ursprünglichen Indexschlüssel zugegriffen oder angezeigt, bis Sie die Datei mit REINDEX neu indizieren.  
+ Wenn ein eindeutiger Index oder Indextag aktiv ist und ein doppelter Datensatz auf eine Weise geändert wird, in der der Index Schlüssel geändert wird, wird der Index oder das Indextag aktualisiert. Der nächste doppelte Datensatz mit dem ursprünglichen Index Schlüssel kann jedoch erst aufgerufen oder angezeigt werden, wenn Sie die Datei mithilfe von REINDEX neu indizieren.  
   
- KANDIDATEN  
- Erstellt ein Kandidat strukturelle Index-Tag. Die CANDIDATE-Schlüsselwort kann enthalten sein, nur, wenn ein Tag strukturelle Index zu erstellen; Visual FoxPro generiert, andernfalls eine Fehlermeldung angezeigt.  
+ Anwärter  
+ Erstellt ein strukturelles Indextag. Das Candidate-Schlüsselwort kann nur beim Erstellen eines strukturellen Indextags eingeschlossen werden. Andernfalls generiert Visual FoxPro eine Fehlermeldung.  
   
- Ein Kandidat Index-Tag wird verhindert, dass doppelte Werte in das Feld oder eine Kombination von Feldern, angegeben in den Indexausdruck *eExpression*. Der Begriff *Candidate* bezieht sich auf den Typ des Indexes, da doppelte Werte von möglichen Indizes vermeiden, diese infrage kommt als "Kandidat" ein primärer Index.  
+ Ein Kandidaten Indextag verhindert doppelte Werte in dem Feld oder in der Kombination von Feldern, die im *eexpression*-Index Ausdruck angegeben sind. Der Begriff *Candidate* bezieht sich auf den Indextyp. Da Kandidaten Indizes doppelte Werte verhindern, qualifizieren Sie sich als "Kandidat" als primär Index.  
   
- Visual FoxPro generiert einen Fehler auf, wenn Sie erstellen ein Kandidat Index-Tag für ein Feld oder eine Kombination von Feldern, die bereits doppelte Werte enthält.  
+ Visual FoxPro generiert einen Fehler, wenn Sie ein Kandidaten Indextag für ein Feld oder eine Kombination von Feldern erstellen, die bereits doppelte Werte enthalten.  
   
- ADDITIVE  
- Behält alle zuvor geöffneten Indexdateien zu öffnen. Wenn Sie bei der Erstellung einer Index-Dateien für eine Tabelle mit dem INDEX die ADDITIVE-Klausel auslassen, werden alle zuvor geöffneten Indexdateien (mit Ausnahme der strukturellen zusammengesetzter Index) geschlossen.  
+ Herstellen  
+ Hält alle zuvor geöffneten Indexdateien offen. Wenn Sie die Additive-Klausel weglassen, wenn Sie eine Indexdatei oder Dateien für eine Tabelle mit Index erstellen, werden alle zuvor geöffneten Indexdateien (mit Ausnahme des Struktur Verbund Indexes) geschlossen.  
   
-## <a name="remarks"></a>Hinweise  
- Datensätze in einer Tabelle, der einen Index hat, werden angezeigt und in der Reihenfolge, die dem angegebenen Indexausdruck zugegriffen. Die physische Reihenfolge der Datensätze in der Tabelle ist nicht durch eine Indexdatei geändert.  
+## <a name="remarks"></a>Bemerkungen  
+ Datensätze in einer Tabelle mit einer Indexdatei werden angezeigt, und der Zugriff erfolgt in der vom Index Ausdruck angegebenen Reihenfolge. Die physische Reihenfolge der Datensätze in der Tabelle wird nicht durch eine Indexdatei geändert.  
   
-## <a name="index-types"></a>Typen von Indizes  
- Visual FoxPro können Sie zwei Arten von Indexdateien zu erstellen:  
+## <a name="index-types"></a>Index Typen  
+ Mit Visual FoxPro können Sie zwei Typen von Indexdateien erstellen:  
   
--   Zusammengesetzte CDX-Indexdateien, die mehrere Indexeinträge, sogenannten Tags enthält.  
+-   Zusammengesetzte CDX-Indexdateien, die mehrere Indexeinträge Namens Tags enthalten  
   
--   IDX-Indexdateien, enthält einen Indexeintrag  
+-   idx-Indexdateien, die einen Index Eintrag enthalten  
   
- Sie können auch eine Datei strukturelle zusammengesetzten Index erstellen, die automatisch, mit der Tabelle geöffnet wird.  
+ Sie können auch eine Struktur zusammengesetzter Indexdatei erstellen, die automatisch mit der-Tabelle geöffnet wird.  
   
 > [!NOTE]  
->  Da es sich bei strukturellen zusammengesetzten Indexdateien automatisch geöffnet werden, wenn die Tabelle geöffnet wird, sind sie der bevorzugte Indextyp an.  
+>  Da strukturelle Verbund Indexdateien beim Öffnen der Tabelle automatisch geöffnet werden, sind Sie der bevorzugte Indextyp.  
   
- Umfassen Sie COMPACT um compact IDX Indexdateien zu erstellen. Zusammengesetzter Indexdateien sind stets compact.  
+ Schließen Sie Compact ein, um Compact. idx-Indexdateien zu erstellen. Zusammengesetzte Indexdateien sind immer kompakt.  
   
-## <a name="index-order-and-updating"></a>Indexreihenfolge und aktualisieren  
- Nur ein Index (die Datei Masterindex) oder ein Tag (der master-Tag) steuert die Reihenfolge, in der in der Tabelle angezeigt werden oder auf die zugegriffen wird. Bestimmte Befehle (z. B. "SEEK") werden die Masterindex-Datei oder das Tag verwenden, um für Datensätze zu suchen. Allerdings alle IDX öffnen und CDX-Indexdateien werden aktualisiert, wenn Änderungen in der Tabelle vorgenommen werden.  
+## <a name="index-order-and-updating"></a>Index Reihenfolge und-Aktualisierung  
+ Nur eine Indexdatei (die Master Indexdatei) oder ein Tag (das mastertag) steuert die Reihenfolge, in der die Tabelle angezeigt oder aufgerufen wird. Bestimmte Befehle (z. b. suchen) verwenden die Master Indexdatei oder das Tag, um nach Datensätzen zu suchen. Alle geöffneten IDX-und CDX-Indexdateien werden jedoch aktualisiert, wenn Änderungen an der Tabelle vorgenommen werden.  
   
 ## <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen  
- Obwohl ein Indexausdruck eine benutzerdefinierte Funktion enthalten kann, sollten Sie benutzerdefinierte Funktionen nicht in einem Indexausdruck verwenden. Benutzerdefinierte Funktionen in einem Indexausdruck zu einem größeren Zeitaufwand, die zum Erstellen oder aktualisieren den Index benötigt. Darüber hinaus auftreten indexaktualisierungen nicht, wenn eine benutzerdefinierte Funktion für einen Indexausdruck verwendet wird.  
+ Obwohl ein Index Ausdruck eine benutzerdefinierte Funktion enthalten kann, sollten Sie keine benutzerdefinierten Funktionen in einem Index Ausdruck verwenden. Benutzerdefinierte Funktionen in einem Index Ausdruck erhöhen die Zeit, die benötigt wird, um den Index zu erstellen oder zu aktualisieren. Außerdem werden Index Aktualisierungen möglicherweise nicht ausgeführt, wenn eine benutzerdefinierte Funktion für einen Index Ausdruck verwendet wird.  
   
- Wenn Sie eine benutzerdefinierte Funktion in einem Indexausdruck verwenden, muss Visual FoxPro finden Sie die benutzerdefinierte Funktion sein. Wenn Visual FoxPro einen Index erstellt, der Indexausdruck wird in der Indexdatei gespeichert, aber nur ein Verweis auf die benutzerdefinierte Funktion im Indexausdruck enthalten.  
+ Wenn Sie eine benutzerdefinierte Funktion in einem Index Ausdruck verwenden, muss Visual FoxPro in der Lage sein, die benutzerdefinierte Funktion zu finden. Wenn Visual FoxPro einen Index erstellt, wird der Index Ausdruck in der Indexdatei gespeichert, aber nur ein Verweis auf die benutzerdefinierte Funktion ist im Index Ausdruck enthalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER TABLE - SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
- [Befehl DELETE TAG](../../odbc/microsoft/delete-tag-command.md)   
- [Befehl SET COLLATE](../../odbc/microsoft/set-collate-command.md)   
- [Befehl SET UNIQUE](../../odbc/microsoft/set-unique-command.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ALTER TABLE-SQL-Befehl](../../odbc/microsoft/alter-table-sql-command.md)   
+ [Befehl zum Löschen von Tags](../../odbc/microsoft/delete-tag-command.md)   
+ [Befehl "COLLATE festlegen"](../../odbc/microsoft/set-collate-command.md)   
+ [SET UNIQUE-Befehl](../../odbc/microsoft/set-unique-command.md)

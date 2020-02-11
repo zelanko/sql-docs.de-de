@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70911215"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
@@ -29,12 +29,13 @@ ms.locfileid: "70911215"
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   
- Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
+ Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. 
+  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.DataType>-Klasse wird verwendet, um den Datentyp anzugeben, der Spalten und Parametern zugeordnet wird. Verwenden Sie diesen Typ, um den benutzerdefinierten Tabellentyp als Parameter für benutzerdefinierte Funktionen und gespeicherte Prozeduren festzulegen.  
   
 ## <a name="examples"></a>Beispiele  
-Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
+Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual C-&#35; SMO-Projekts in Visual Studio .net](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
 
   
 ## <a name="creating-a-user-defined-table-in-visual-basic"></a>Erstellen einer benutzerdefinierten Tabelle in Visual Basic  
@@ -255,7 +256,7 @@ $udf.TextBody = "BEGIN RETURN (GETDATE());end"
 $udf.Create()           
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.SqlServer.Management.Smo.FileGroup>   
  [Datenbankdateien und Dateigruppen](../../../relational-databases/databases/database-files-and-filegroups.md)   
   

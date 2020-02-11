@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041009"
 ---
-# <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
+# <a name="syssp_xtp_bind_db_resource_pool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Bindet die angegebene [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Datenbank an den angegebenen Ressourcenpool. Vor der Ausführung von `sys.sp_xtp_bind_db_resource_pool` müssen die Datenbank und der Ressourcenpool vorhanden sein.  
@@ -36,7 +36,7 @@ ms.locfileid: "68041009"
   
  Wenn für eine bestimmte Datenbank bereits eine Bindung besteht, gibt die Prozedur einen Fehler zurück.  Eine Datenbank darf immer nur über eine aktive Bindung verfügen.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
   
 ## <a name="syntax"></a>Syntax  
@@ -55,45 +55,46 @@ sys.sp_xtp_bind_db_resource_pool 'database_name', 'resource_pool_name'
 ## <a name="messages"></a>Meldungen  
  Bei einem Fehler gibt `sp_xtp_bind_db_resource_pool` eine der folgenden Meldungen zurück.  
   
- **Datenbank ist nicht vorhanden.**  
+ **Die Datenbank ist nicht vorhanden.**  
  'Database_name' muss auf eine vorhandene Datenbank verweisen. Wenn keine Datenbank mit der angegebenen ID vorhanden ist, wird die folgende Meldung zurückgegeben:   
-*Datenbank-ID %d ist nicht vorhanden.  Verwenden Sie eine gültige Datenbank-ID für diese Bindung.*  
+*Die Datenbank mit der ID% d ist nicht vorhanden.  Verwenden Sie eine gültige Datenbank-ID für diese Bindung.*  
   
 ```  
 Msg 911, Level 16, State 18, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Database 'Hekaton_DB213' does not exist. Make sure that the name is entered correctly.  
 ```  
   
-**Datenbank ist eine Systemdatenbank**  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabellen können nicht in Systemdatenbanken erstellt werden.  Daher ist es nicht zulässig, [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Arbeitsspeicher für eine derartige Datenbank zu binden.  Der folgende Fehler wird zurückgegeben:  
-*Database_name ' %s verweist auf eine Systemdatenbank.  Ressourcenpools können nur mit einer Benutzerdatenbank gebunden werden.*  
+**Die Datenbank ist eine Systemdatenbank.**  
+ 
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Tabellen können nicht in Systemdatenbanken erstellt werden.  Daher ist es nicht zulässig, [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Arbeitsspeicher für eine derartige Datenbank zu binden.  Die folgende Fehlermeldung wird zurückgegeben:  
+*Database_name% s verweist auf eine Systemdatenbank.  Ressourcenpools können nur an eine Benutzerdatenbank gebunden werden.*  
   
 ```  
 Msg 41371, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Binding to a resource pool is not supported for system database 'master'. This operation can only be performed on a user database.  
 ```  
   
-**Ressourcenpool ist nicht vorhanden.**  
+**Der Ressourcenpool ist nicht vorhanden.**  
  Der durch resource_pool_name angegebene Ressourcenpool muss vorhanden sein, bevor `sp_xtp_bind_db_resource_pool` ausgeführt wird.  Wenn kein Pool mit der angegebenen ID vorhanden ist, wird folgender Fehler zurückgegeben:  
-*Ressourcenpool %s ist nicht vorhanden.  Geben Sie einen gültigen Ressourcenpoolnamen ein.*  
+*Der Ressourcen Pool '% s ' ist nicht vorhanden.  Geben Sie einen gültigen Namen für den Ressourcenpool ein.*  
   
 ```  
 Msg 41370, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Resource pool 'Pool_Hekaton' does not exist or resource governor has not been reconfigured.  
 ```  
   
-**' Pool_name ' verweist auf einen reservierten Systempool.**  
- Die Poolnamen "INTERNAL" und "Standard" sind für Systempools reserviert.  Es ist nicht zulässig, eine Datenbank explizit an einen der beiden zu binden.  Bei Eingabe eines Systempoolnamens wird der folgende Fehler zurückgegeben:  
-*Ressourcenpool %s ist ein systemressourcenpool.  Systemressourcenpools können nicht explizit mit einer Datenbank, die mit dieser Prozedur gebunden werden.*  
+**'Pool_name' verweist auf einen reservierten Systempool.**  
+ Die Poolnamen "Internal" und "Default" sind für System Pools reserviert.  Es ist nicht zulässig, eine Datenbank explizit an einen der beiden zu binden.  Bei Eingabe eines Systempoolnamens wird der folgende Fehler zurückgegeben:  
+*Der Ressourcenpool "% s" ist ein Systemressourcen Pool.  System Ressourcenpools können mithilfe dieses Verfahrens nicht explizit an eine Datenbank gebunden werden.*  
   
 ```  
 Msg 41373, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 51  
 Database 'Hekaton_DB' cannot be explicitly bound to the resource pool 'internal'. A database can only be bound only to a user resource pool.  
 ```  
   
-**Datenbank ist bereits an einen anderen Ressourcenpool gebunden.**  
- Eine Datenbank kann jeweils nur an einen Ressourcenpool gebunden werden. Datenbankbindungen an Ressourcenpools müssen explizit entfernt werden, bevor eine Bindung an einen anderen Pool erfolgen kann. Finden Sie unter [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
-*Datenbank %s ist bereits %s-Ressourcenpool gebunden.  Sie müssen die Bindung aufheben, bevor Sie eine neue Bindung erstellen können.*  
+**Die Datenbank ist bereits an einen anderen Ressourcenpool gebunden.**  
+ Eine Datenbank kann jeweils nur an einen Ressourcenpool gebunden werden. Datenbankbindungen an Ressourcenpools müssen explizit entfernt werden, bevor eine Bindung an einen anderen Pool erfolgen kann. Weitere Informationen finden Sie unter [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md).  
+*Die% s-Datenbank ist bereits an den Ressourcenpool '% s ' gebunden.  Sie müssen die Bindung aufheben, bevor Sie eine neue Bindung erstellen können.*  
   
 ```  
 Msg 41372, Level 16, State 1, Procedure sp_xtp_bind_db_resource_pool_internal, Line 54  
@@ -104,7 +105,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
   
 **Erfolgreiche Bindung**  
  Bei erfolgreicher Ausführung gibt die Funktion die folgende Erfolgsmeldung zurück, die in SQL ERRORLOG protokolliert wird.  
-*Eine Ressource Bindung wurde zwischen der Datenbank mit der ID %d und dem Ressourcenpool mit der ID %d erfolgreich erstellt.*  
+*Zwischen der Datenbank mit der ID %d und dem Ressourcenpool mit der ID %d wurde erfolgreich eine Ressourcenbindung erstellt.*  
   
 ## <a name="examples"></a>Beispiele  
 A.  Im folgenden Codebeispiel wird die Hekaton_DB-Datenbank an den Pool_Hekaton-Ressourcenpool gebunden.  
@@ -115,7 +116,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  Die Bindung wird wirksam, wenn die Datenbank das nächste Mal online geschaltet wird.  
  
- B. Erweiterte Beispiel oben stehenden Beispiel enthält einige einfache Überprüfungen.  Führen Sie den folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ B. Erweitertes Beispiel für das obige Beispiel, das einige grundlegende Überprüfungen enthält.  Führen Sie Folgendes [!INCLUDE[tsql](../../includes/tsql-md.md)] in aus.[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -145,14 +146,14 @@ ELSE BEGIN
 END 
 ``` 
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 -   Sowohl die durch `database_name` angegebene Datenbank als auch der durch `resource_pool_name` angegebene Ressourcenpool müssen vor dem Binden vorhanden sein.  
   
 -   Erfordert die CONTROL SERVER-Berechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys. sp_xtp_unbind_db_resource_pool &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

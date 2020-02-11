@@ -1,5 +1,5 @@
 ---
-title: Verbindungszeichenfolgen | Microsoft-Dokumentation
+title: Verbindungs Zeichenfolgen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: 724c7b86-300a-4fa9-ad96-4afa0fdcb3e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f68a87db729df2f4a27e2766a9de60e8c75a71a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036423"
 ---
 # <a name="connection-strings"></a>Verbindungszeichenfolgen
-Eine Verbindungszeichenfolge enthält Informationen, die zum Herstellen einer Verbindung verwendet. Eine vollständige Verbindungszeichenfolge enthält alle Informationen, die zum Herstellen einer Verbindung erforderlich sind. Die Verbindungszeichenfolge ist eine Reihe von Schlüsselwort-Wert-Paaren, die durch Semikolons getrennt ein. (Die vollständige Syntax der Verbindungszeichenfolge finden Sie unter den [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.) Die Verbindungszeichenfolge wird von verwendet:  
+Eine Verbindungs Zeichenfolge enthält Informationen, die zum Herstellen einer Verbindung verwendet werden. Eine vollständige Verbindungs Zeichenfolge enthält alle Informationen, die zum Herstellen einer Verbindung erforderlich sind. Die Verbindungs Zeichenfolge ist eine Reihe von Schlüsselwort-Wert-Paaren, die durch Semikolons getrennt sind. (Die gesamte Syntax einer Verbindungs Zeichenfolge finden Sie in der Beschreibung der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.) Die Verbindungs Zeichenfolge wird verwendet von:  
   
--   **SQLDriverConnect**, die die Verbindungszeichenfolge führt Sie durch Interaktion mit dem Benutzer.  
+-   **SQLDriverConnect**: schließt die Verbindungs Zeichenfolge durch Interaktion mit dem Benutzer ab.  
   
--   **SQLBrowseConnect**, die die Verbindungszeichenfolge iterativ mit der Datenquelle abgeschlossen.  
+-   **Sqlbrowseconnetct**, das die Verbindungs Zeichenfolge iterativ mit der Datenquelle vervollständigt.  
   
- **SQLConnect** verwendet eine Verbindungszeichenfolge nicht; verwenden von **SQLConnect** ist analog zum Herstellen einer Verbindung mit einer Verbindungszeichenfolge mit genau drei Schlüsselwort-Wert-Paaren (für ODBC-Datenquellenname und, optional, Benutzer-ID und Kennwort) .
+ **SQLCONNECT** verwendet keine Verbindungs Zeichenfolge. die Verwendung von **SQLCONNECT** entspricht der Verbindung mithilfe einer Verbindungs Zeichenfolge mit genau drei Schlüsselwort-Wert-Paaren (für den Datenquellen Namen und, optional, Benutzer-ID und Kennwort).

@@ -1,5 +1,5 @@
 ---
-title: Ändern der SQL Server-Dienst erweiterten Eigenschaften mithilfe von VBScript | Microsoft-Dokumentation
+title: Ändern der erweiterten Eigenschaften des SQL Server Dienstanbieter mithilfe von VBScript | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,14 +17,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: f3a380f80b4ecc7540e29605543722edd55e226d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62705066"
 ---
 # <a name="modify-sql-server-service-advanced-properties-using-vbscript"></a>Ändern der erweiterten Eigenschaften des SQL Server-Diensts mit VBScript
-  In diesem Abschnitt wird beschrieben, wie ein VBScript-Programm erstellen, die die Version der installierten Instanzen von auflistet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf einem Computer ausgeführt werden.  
+  In diesem Abschnitt wird beschrieben, wie Sie ein VBScript-Programm erstellen, das die Version [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der installierten Instanzen von auflistet, die auf einem Computer ausgeführt werden.  
   
  Mit dem Codebeispiel werden die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die auf dem Computer ausgeführt werden, und deren Version aufgeführt.  
   
@@ -38,9 +38,9 @@ ms.locfileid: "62705066"
   
 4.  Verwenden Sie die `ExecQuery`-Methode und eine WQL-Abfrage, um den Namen und die Version der installierten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abzurufen.  
   
-5.  Speichern Sie die Datei.  
+5.  Speichern Sie die Datei .  
   
-6.  Führen Sie das Skript durch Eingabe `cscript test.vbs` an der Eingabeaufforderung.  
+6.  Führen Sie das Skript aus `cscript test.vbs` , indem Sie an der Eingabeaufforderung eingeben.  
   
 ## <a name="example"></a>Beispiel  
   

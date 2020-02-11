@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1d3791cc5250442555dd9b090dda549fe2b9feec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62524386"
 ---
 # <a name="delete-an-operator"></a>Delete an Operator
-  In diesem Thema wird beschrieben, wie Sie einen Operator in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] entfernen, damit dieser keine weiteren Warnbenachrichtigungen vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent empfängt.  
+  In diesem Thema wird beschrieben, wie Sie einen Operator entfernen, damit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] er keine Agent- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Warn Benachrichtigungen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mehr [!INCLUDE[tsql](../../includes/tsql-md.md)]in mithilfe von oder empfängt.  
   
  **In diesem Thema**  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62524386"
   
      [Sicherheit](#Security)  
   
--   **So löschen Sie einen Operator mit**  
+-   **So löschen Sie einen Operator mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -52,11 +52,11 @@ ms.locfileid: "62524386"
 ####  <a name="Permissions"></a> Berechtigungen  
  Mitglieder der festen Serverrolle **sysadmin** können Operatoren löschen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-delete-an-operator"></a>So löschen Sie einen Operator  
   
-1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie löschen möchten.  
+1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, der den Operator enthält, den Sie löschen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "62524386"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [Sp_delete_operator &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_delete_operator &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-operator-transact-sql).  
   
   

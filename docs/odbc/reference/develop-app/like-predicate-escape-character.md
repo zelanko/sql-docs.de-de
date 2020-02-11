@@ -1,5 +1,5 @@
 ---
-title: WIE Prädikat Escapezeichen | Microsoft-Dokumentation
+title: LIKE-Prädikat Escapezeichen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68027230"
 ---
 # <a name="like-predicate-escape-character"></a>Escapezeichen des LIKE-Prädikats
-In einem **wie** Prädikat, das Prozentzeichen (%) entspricht null oder mehr beliebige Zeichen und den Unterstrich (_) entspricht einem einzelnen Zeichen. Eine tatsächliche Prozentzeichen übereinstimmen oder Unterstrich einem **wie** -Prädikats muss ein Escapezeichen vor dem Prozentzeichen oder Unterstrich stammen. Die Escape-Sequenz, die definiert die **wie** Prädikat Escape-Zeichen ist:  
+In einem **like** -Prädikat das Prozentzeichen (%) entspricht 0 (null) oder mehr beliebigen Zeichen, und der Unterstrich (_) entspricht einem beliebigen Zeichen. Um einem tatsächlichen Prozentzeichen oder Unterstrich in einem **like** -Prädikat zu entsprechen, muss ein Escapezeichen vor dem Prozentzeichen oder Unterstrich stehen. Die Escapesequenz, die das **like** -Prädikat Escapezeichen definiert, ist:  
   
- **{Escapezeichen '** *Escapezeichen* **'}**  
+ **{Escape '** *Escapezeichen* **'}**  
   
- wo *Escapezeichen* ist ein beliebiges Zeichen, die von der Datenquelle unterstützt.  
+ Where *Escapezeichen* ist ein beliebiges Zeichen, das von der Datenquelle unterstützt wird.  
   
- Weitere Informationen zu den LIKE escape-Sequenz, finden Sie unter [wie Escapesequenz](../../../odbc/reference/appendixes/like-escape-sequence.md) in Anhang C: SQL-Grammatik.  
+ Weitere Informationen zur like-Escapesequenz finden Sie unter [like-Escapesequenz](../../../odbc/reference/appendixes/like-escape-sequence.md) in Anhang C: SQL-Grammatik.  
   
- Z. B. erstellen folgenden SQL-Anweisungen Sie das gleiche Resultset des Kunden ab, die mit den Zeichen "% AAA" beginnen. Die erste Anweisung verwendet die Syntax der Escapesequenz. Die zweite Anweisung verwendet die systemeigene Syntax für Microsoft® Access und ist nicht interoperabel. Beachten Sie, die in jeder der zweiten Prozentzeichen **wie** Prädikat ist ein Platzhalterzeichen, das 0 (null) oder mehr beliebige Zeichen entspricht.  
+ Beispielsweise werden mit den folgenden SQL-Anweisungen die gleichen Resultsets von Kundennamen erstellt, die mit den Zeichen "% AAA" beginnen. In der ersten Anweisung wird die Escapesequenzsyntax verwendet. Die zweite Anweisung verwendet die native Syntax für Microsoft® Access und ist nicht interoperabel. Beachten Sie, dass das zweite Prozentzeichen in jedem **like** -Prädikat ein Platzhalter Zeichen ist, das NULL oder mehr von einem beliebigen Zeichen entspricht.  
   
 ```  
 SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}  
@@ -37,4 +37,4 @@ SELECT Name FROM Customers WHERE Name LIKE '\%AAA%' {escape '\'}
 SELECT Name FROM Customers WHERE Name LIKE '[%]AAA%'  
 ```  
   
- Um zu bestimmen, ob die **wie** Prädikat Escape-Zeichen, die von einer Datenquelle unterstützt wird, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_LIKE_ESCAPE_CLAUSE.
+ Um zu ermitteln, ob das **like** -Prädikat-Escapezeichen von einer Datenquelle unterstützt wird, ruft eine Anwendung **SQLGetInfo** mit der SQL_LIKE_ESCAPE_CLAUSE-Option auf.

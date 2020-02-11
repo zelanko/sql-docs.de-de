@@ -15,11 +15,11 @@ ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdc7728fe06df708efd973423f5c8c05333ce189
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041598"
 ---
 # <a name="loading-by-ordinal"></a>Laden nach Ordnungszahl
-In ODBC *2.x*, laden nach Ordnungszahl konnte zur Verbesserung der Leistung des Verbindungsprozesses ausgeführt werden. ODBC *2.x* Treiber exportiert eine dummy-Funktion mit der Ordnungszahl 199; Wenn der Treiber-Manager erkannt wird, löst er die Adressen der ODBC-Funktionen, anhand der Ordinalzahl, nicht anhand des Namens. Diese Funktion wird weiterhin für ODBC unterstützt *2.x* Treiber jedoch nicht für ODBC unterstützt *3.x* Treiber.
+In ODBC *2. x*kann das Laden nach Ordnungszahl durchgeführt werden, um die Leistung des Verbindungs Vorgangs zu verbessern. Ein ODBC *2. x* -Treiber exportiert eine Dummy-Funktion mit der Ordinalzahl 199; Wenn Sie vom Treiber-Manager erkannt wird, werden die Adressen der ODBC-Funktionen nach Ordinalzahl, nicht nach Name aufgelöst. Diese Funktion wird weiterhin für ODBC *2. x* -Treiber unterstützt, wird aber nicht für ODBC *3. x* -Treiber unterstützt.

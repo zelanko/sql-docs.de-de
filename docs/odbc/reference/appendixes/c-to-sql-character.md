@@ -1,5 +1,5 @@
 ---
-title: 'C in SQL: Zeichen | Microsoft-Dokumentation'
+title: 'C zu SQL: Zeichen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,52 +15,52 @@ ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037720"
 ---
-# <a name="c-to-sql-character"></a>C in SQL: Zeichen
-Der Bezeichner für das ODBC-C-Datentyp-Zeichen sind:  
+# <a name="c-to-sql-character"></a>C zu SQL: Zeichen
+Die Bezeichner für den ODBC-C-Datentyp der Zeichenfolge lauten:  
   
  SQL_C_CHAR  
   
  SQL_C_WCHAR  
   
- Die folgende Tabelle zeigt die ODBC-SQL-Datentypen, die in denen C-Zeichendaten konvertiert werden können. Eine Erläuterung der Spalten und Ausdrücke in der Tabelle, finden Sie unter [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
+ In der folgenden Tabelle werden die ODBC-SQL-Datentypen angezeigt, in die C-Zeichendaten konvertiert werden können. Eine Erläuterung der Spalten und Begriffe in der Tabelle finden [Sie unter Datentypen von C in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
 > [!NOTE]  
->  Wenn C-Zeichendaten in Unicode-SQL-Daten konvertiert werden, muss die Länge des Unicode-Daten eine gerade Zahl sein.  
+>  Wenn Zeichen-C-Daten in Unicode-SQL-Daten konvertiert werden, muss die Länge der Unicode-Daten eine gerade Zahl sein.  
   
-|SQL-Typ-ID|Test|SQLSTATE|  
+|SQL-Typbezeichner|Test|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Die Bytelänge der Daten < = Länge der Spalte.<br /><br /> Die Bytelänge der Daten > Länge der Spalte.|n/v<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Länge der Daten Zeichen < = Länge der Spalte.<br /><br /> Länge der Daten Zeichen > Länge der Spalte.|n/v<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Daten, die konvertiert werden, ohne Abschneiden<br /><br /> Daten, die mit dem Abschneiden der Dezimalstellen [e] konvertiert<br /><br /> Konvertierung von Daten führt zu Verlust insgesamt (im Gegensatz zu Bruch) Ziffern [e]<br /><br /> Keine *numerischen Literalen*|n/v<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Daten sind innerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Daten sind außerhalb des Bereichs des Datentyps, der die Anzahl konvertiert wird<br /><br /> Keine *numerischen Literalen*|n/v<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BIT|Daten sind 0 oder 1<br /><br /> Daten ist größer als 0 ist, kleiner als 2, und nicht gleich-1<br /><br /> Daten ist kleiner als 0 oder größer als oder gleich 2<br /><br /> Daten sind keine *numerischen Literalen*|n/v<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Bytelänge der Daten) / 2 < = Spalte-Byte-Länge<br /><br /> (Bytelänge der Daten) / 2 > Spalte-Byte-Länge<br /><br /> Datenwert ist es sich nicht um einen Hexadezimalwert|n/v<br /><br /> 22001<br /><br /> 22018|  
-|SQL_TYPE_DATE|Datenwert ist ein gültiger *ODBC-Datum-Literal*<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Uhrzeitanteil ist 0 (null)<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Uhrzeitanteil ist ungleich Null [a]<br /><br /> Wert ist kein gültiger *ODBC-Datum-Literal* oder *ODBC-Zeitstempel-Literal*|n/v<br /><br /> n/v<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIME|Datenwert ist ein gültiger *ODBC-Uhrzeit-Literal*<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil ist 0 (null) [b]<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil ist ungleich Null [b]<br /><br /> Wert ist kein gültiger *ODBC-Uhrzeit-Literal* oder *ODBC-Zeitstempel-Literal*|n/v<br /><br /> n/v<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Bruchteilen Sekundenteil nicht abgeschnitten<br /><br /> Datenwert ist ein gültiger *ODBC-Zeitstempel-Literal*; Sekundenbruchteile abgeschnitten Sekundenteil<br /><br /> Datenwert ist ein gültiger *ODBC-Datum-Literal*[c]<br /><br /> Datenwert ist ein gültiger *ODBC-Uhrzeit-Literal*[d]<br /><br /> Wert ist kein gültiger *ODBC-Datum-Literal*, *ODBC-Uhrzeit-Literal*, oder *ODBC-Zeitstempel-Literal*|n/v<br /><br /> 22008<br /><br /> n/v<br /><br /> n/v<br /><br /> 22018|  
-|Alle Typen von SQL-Zeitintervall|Datenwert ist ein gültiger *Intervallwert*; kein Abschneiden erfolgt<br /><br /> Datenwert ist ein gültiger *Intervallwert*; der Wert in einem der Felder wird abgeschnitten.<br /><br /> Der Wert ist kein gültiges Intervall literal.|n/v<br /><br /> 22015<br /><br /> 22018|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Byte Länge der Daten <= Spaltenlänge.<br /><br /> Byte Länge der Daten > Spaltenlänge.|–<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Zeichen Länge der Daten <= Spaltenlänge.<br /><br /> Die Zeichen Länge der Daten > Spaltenlänge.|–<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Daten wurden ohne Abschneiden konvertiert.<br /><br /> Mit Abschneiden von Bruch Ziffern konvertierte Daten [e]<br /><br /> Die Konvertierung von Daten würde zu einem Verlust ganzer (im Gegensatz zu Bruch Ziffern) Ziffern führen. [e]<br /><br /> Der Datenwert ist kein *numerisches Literalzeichen* .|–<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Die Daten befinden sich innerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird.<br /><br /> Die Daten liegen außerhalb des Bereichs des Datentyps, in den die Zahl konvertiert wird.<br /><br /> Der Datenwert ist kein *numerisches Literalzeichen* .|–<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BIT|Die Daten sind 0 oder 1.<br /><br /> Die Daten sind größer als 0 (null), kleiner als 2, nicht gleich 1.<br /><br /> Daten sind kleiner als 0 (null) oder größer oder gleich 2.<br /><br /> Daten sind kein *numerisches Literalzeichen* .|–<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Byte Länge der Daten)/2 <= Spalten Byte Länge<br /><br /> (Byte Länge der Daten)/2 > Spalten Byte Länge<br /><br /> Der Datenwert ist kein hexadezimaler Wert.|–<br /><br /> 22001<br /><br /> 22018|  
+|SQL_TYPE_DATE|Der Datenwert ist ein gültiges *ODBC-Date-Literal.*<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Der Uhrzeitteil ist NULL.<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Der Zeitanteil ist ungleich 0 (null) [a]<br /><br /> Der Datenwert ist kein gültiger *ODBC-Date-Literal* -oder *ODBC-Timestamp-Literalwert* .|–<br /><br /> –<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIME|Der Datenwert ist ein gültiges *ODBC-Time-Literale* .<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. der Teil der Sekundenbruchteile ist 0 (null) [b]<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. der Teil für die Sekundenbruchteile ist nicht NULL [b]<br /><br /> Der Datenwert ist kein gültiges *ODBC-Time-Literale* -oder *ODBC-Timestamp-Literalzeichen* .|–<br /><br /> –<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Teil der Sekundenbruchteile nicht abgeschnitten<br /><br /> Der Datenwert ist ein gültiger *ODBC-Timestamp-Literalwert*. Teil Bruchteile abgeschnitten<br /><br /> Der Datenwert ist ein gültiger *ODBC-Date-Literale*[c]<br /><br /> Der Datenwert ist ein gültiger *ODBC-Time-Literale*[d]<br /><br /> Der Datenwert ist keine gültige *ODBC-Date-Literale*, *ODBC-Time-Literale*oder *ODBC-Timestamp-Literale* .|–<br /><br /> 22008<br /><br /> –<br /><br /> –<br /><br /> 22018|  
+|Alle SQL-Intervall Typen|Der Datenwert ist ein gültiger *Intervall Wert*. keine Kürzung erfolgt<br /><br /> Der Datenwert ist ein gültiger *Intervall Wert*. der Wert in einem der Felder wird abgeschnitten.<br /><br /> Der Datenwert ist kein gültiges intervallliterale.|–<br /><br /> 22015<br /><br /> 22018|  
   
- [a] der Uhrzeitteil des Zeitstempels wird abgeschnitten.  
+ [a] der Uhrzeit Teil des Zeitstempels wird abgeschnitten.  
   
- [b] der Datumsteil des Zeitstempels wird ignoriert.  
+ [b] der Datums Teil des Zeitstempels wird ignoriert.  
   
- [c] der Uhrzeitteil des Zeitstempels ist auf 0 (null) festgelegt.  
+ [c] der Uhrzeit Teil des Zeitstempels wird auf 0 (null) festgelegt.  
   
- [d] der Datumsteil des Zeitstempels wird auf das aktuelle Datum festgelegt.  
+ [d] der Date-Teil des Zeitstempels wird auf das aktuelle Datum festgelegt.  
   
- [e]-Treibers /-Datenquelle effektiv wartet, bis die gesamte Zeichenfolge empfangen wurden (auch wenn die Zeichendaten in Teilen, durch Aufrufe von gesendet werden **SQLPutData**) bevor Sie versuchen, die die Konvertierung nicht ausgeführt.  
+ [e] der Treiber bzw. die Datenquelle wartet effektiv, bis die gesamte Zeichenfolge empfangen wurde (auch wenn die Zeichendaten in Teilen durch Aufrufe von **SQLPutData**gesendet werden), bevor versucht wird, die Konvertierung auszuführen.  
   
- Wenn Zeichendaten C in numerischer, konvertiert Datum, Uhrzeit oder Zeitstempel-SQL-Daten ist, werden führende und nachfolgende Leerzeichen ignoriert.  
+ Wenn Zeichen-C-Daten in numerische Daten, Datums-, Uhrzeit-oder Zeitstempel-SQL-Daten konvertiert werden, werden führende und nachfolgende Leerzeichen ignoriert.  
   
- Wenn auf binäre Daten, SQL C Zeichendaten konvertiert werden, werden jeweils zwei Byte von Zeichendaten in ein einzelnes Byte (8 Bits) von Binärdaten konvertiert. Eine Zahl im hexadezimalen Format darstellen, jeweils zwei Byte Zeichendaten. Z. B. "01" wird in eine binäre 00000001 konvertiert, und "FF" in eine binäre 11111111 konvertiert wird.  
+ Wenn Zeichen-C-Daten in binäre SQL-Daten konvertiert werden, werden alle zwei Bytes von Zeichendaten in ein einzelnes Byte (8 Bits) Binärdaten konvertiert. Alle zwei Bytes von Zeichendaten stellen eine Zahl in hexadezimaler Form dar. Beispielsweise wird "01" in ein binäres 00000001-Format konvertiert, und "FF" wird in eine binäre 11111111-Datei konvertiert.  
   
- Der Treiber immer-Paare von hexadezimalen Ziffern auf einzelnen Byte konvertiert und ignoriert das Byte Null-Terminierung vorliegt. Wenn die Länge der Zeichenfolge ungerade ist, ist, wird das letzte Byte der Zeichenfolge (ohne das Byte, das Null-Terminierung vorliegt, sofern vorhanden) aus diesem Grund nicht konvertiert.  
+ Der Treiber konvertiert Paare von hexadezimalen Ziffern immer in einzelne Bytes und ignoriert das NULL-Terminierungs Byte. Wenn die Länge der Zeichenfolge ungerade ist, wird das letzte Byte der Zeichenfolge (mit Ausnahme des NULL-Terminierungs Byte, sofern vorhanden) nicht konvertiert.  
   
 > [!NOTE]  
->  Anwendungsentwicklern werden davon abgeraten, aus dem Zeichen C-Daten in einen binären SQL-Datentyp binden. Diese Konvertierung ist in der Regel ineffizient und zeitaufwändig.
+>  Anwendungsentwickler werden davon abgeraten, Zeichen-C-Daten an einen binären SQL-Datentyp zu binden. Diese Konvertierung ist in der Regel ineffizient und langsam.

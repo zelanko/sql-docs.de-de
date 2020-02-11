@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4db539979cf6a9e06d93b38fbc2aa92c8cdbabfb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811069"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
@@ -70,14 +70,14 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Der geschätzte Ausführungsplan wird von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] wie folgt angezeigt  
   
- ![Abfrageplan für einen Join datenträgerbasierter Tabellen.](../../database-engine/media/hekaton-query-plan-1.gif "Query plan for join of disk-based tables.")  
+ ![Abfrageplan für einen Join datenträgerbasierter Tabellen.](../../database-engine/media/hekaton-query-plan-1.gif "Abfrageplan für einen Join datenträgerbasierter Tabellen.")  
 Abfrageplan für einen Join datenträgerbasierter Tabellen.  
   
  Informationen zu diesem Abfrageplan:  
   
 -   Die Zeilen der Customer-Tabelle werden aus dem gruppierten Index abgerufen, der die primäre Datenstruktur darstellt und die vollständigen Tabellendaten enthält.  
   
--   Daten aus der Order-Tabelle werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
+-   Daten aus der Tabelle „Order“ werden mithilfe des nicht gruppierten Indexes für die CustomerID-Spalte abgerufen. Dieser Index enthält die Spalte CustomerID, die für diesen Join verwendet wird, und die Primärschlüsselspalte OrderID, die an den Benutzer zurückgegeben wird. Das Zurückgeben zusätzlicher Spalten aus der Order-Tabelle würde Suchen im gruppierten Index für die Order-Tabelle erfordern.  
   
 -   Der logische Operator `Inner Join` wird vom physischen Operator `Merge Join` implementiert. Die anderen physischen Jointypen sind `Nested Loops` und `Hash Join`. Der `Merge Join`-Operator nutzt die Tatsache, dass beide Indizes nach der Joinspalte CustomerID sortiert werden.  
   
@@ -89,7 +89,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Der geschätzte Plan für diese Abfrage ist:  
   
- ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../database-engine/media/hekaton-query-plan-2.gif "Query plan for join of disk-based tables.")  
+ ![Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.](../../database-engine/media/hekaton-query-plan-2.gif "Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.")  
 Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.  
   
  In dieser Abfrage werden Zeilen aus der Order-Tabelle mithilfe des gruppierten Indexes abgerufen. Der physische Operator `Hash Match` wird jetzt für `Inner Join` verwendet. Der gruppierte Index für Order wird nicht nach CustomerID sortiert. Deshalb würde `Merge Join` einen Sortieroperator erfordern, der sich auf die Leistung auswirkt. Beachten Sie die relativen Kosten des `Hash Match`-Operators (75%) verglichen mit den Kosten des `Merge Join`-Operators im vorherigen Beispiel (46%). Der Optimierer hätte den `Hash Match`-Operator auch im vorherigen Beispiel in Betracht gezogen, hat aber festgestellt, dass der `Merge Join`-Operator eine bessere Leistung bietet.  
@@ -97,10 +97,10 @@ Abfrageplan für einen Hashjoin datenträgerbasierter Tabellen.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Abfrageverarbeitung für datenträgerbasierte Tabellen  
  Das folgende Diagramm zeigt den Abfrageverarbeitungsfluss in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für Ad-hoc-Abfragen:  
   
- ![Abfrageverarbeitungspipeline in SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "SQL Server query processing pipeline.")  
+ ![Abfrageverarbeitungspipeline in SQL Server.](../../database-engine/media/hekaton-query-plan-3.gif "Abfrageverarbeitungspipeline in SQL Server.")  
 Abfrageverarbeitungspipeline in SQL Server.  
   
- In diesem Szenario:  
+ Szenario:  
   
 1.  Der Benutzer gibt eine Abfrage aus.  
   
@@ -114,14 +114,14 @@ Abfrageverarbeitungspipeline in SQL Server.
   
 6.  Über Zugriffsmethoden werden die Zeilen aus den Index- und Datenseiten im Pufferpool abgerufen und Seiten nach Bedarf vom Datenträger in den Pufferpool geladen.  
   
- Für die erste Beispiel Abfrage fordert die Ausführungs-Engine Zeilen im gruppierten Index für Customer und den nicht gruppierten Index für die Reihenfolge von Zugriffsmethoden an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
+ Für die erste Beispielabfrage fordert die Ausführungs-Engine von Zugriffsmethoden Zeilen im gruppierten Index für Customer und im nicht gruppierten Index für Order an. Zugriffsmethoden durchläuft die B-Struktur-Indexstrukturen, um die angeforderten Zeilen abzurufen. In diesem Fall werden alle Zeilen abgerufen, da der Plan vollständige Indexscans fordert.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen  
  [!INCLUDE[tsql](../../../includes/tsql-md.md)] werden auch als interpretiertes [!INCLUDE[tsql](../../../includes/tsql-md.md)]. "Interpretiert" bezieht sich auf die Tatsache, dass der Abfrageplan von der Abfrageausführungs-Engine für jeden Operator im Abfrageplan interpretiert wird. Die Ausführungs-Engine liest den Operator und die Parameter und führt den Vorgang aus.  
   
  Interpretiertes [!INCLUDE[tsql](../../../includes/tsql-md.md)] kann verwendet werden, um auf speicheroptimierte und datenträgerbasierte Tabellen zuzugreifen. Die folgende Abbildung veranschaulicht die Abfrageverarbeitung für den interpretierten [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen:  
   
- ![Abfrageverarbeitungspipeline für interpretierte TSQL.](../../database-engine/media/hekaton-query-plan-4.gif "Query processing pipeline for interpreted tsql.")  
+ ![Abfrageverarbeitungspipeline für interpretierte Transact-SQL.](../../database-engine/media/hekaton-query-plan-4.gif "Abfrageverarbeitungspipeline für interpretierte Transact-SQL.")  
 Abfrageverarbeitungspipeline für interpretierten Transact-SQL-Zugriff auf speicheroptimierte Tabellen.  
   
  Wie in der Abbildung veranschaulicht, bleibt die Abfrageverarbeitungspipeline größtenteils unverändert:  
@@ -159,7 +159,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Der geschätzte Plan lautet wie folgt:  
   
- ![Abfrageplan für den Join arbeitsspeicheroptimierter Tabellen.](../../database-engine/media/hekaton-query-plan-5.gif "Query plan for join of memory optimized tables.")  
+ ![Abfrageplan für den Join speicheroptimierter Tabellen.](../../database-engine/media/hekaton-query-plan-5.gif "Abfrageplan für den Join arbeitsspeicheroptimierter Tabellen.")  
 Abfrageplan für den Join speicheroptimierter Tabellen.  
   
  Beachten Sie die folgenden Unterschiede beim Plan für die gleiche Abfrage mit datenträgerbasierten Tabellen (Abbildung 1):  
@@ -200,7 +200,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Kompilierung und Abfrageverarbeitung  
  Das folgende Diagramm veranschaulicht den Kompilierungsprozess systemintern kompilierte gespeicherte Prozeduren:  
   
- ![Native Kompilierung gespeicherter Prozeduren](../../database-engine/media/hekaton-query-plan-6.gif "Native compilation of stored procedures.")  
+ ![Native Kompilierung gespeicherter Prozeduren.](../../database-engine/media/hekaton-query-plan-6.gif "Systeminterne Kompilierung gespeicherter Prozeduren.")  
 Systeminterne Kompilierung gespeicherter Prozeduren.  
   
  Der Prozess lässt sich folgendermaßen beschreiben:  
@@ -217,12 +217,12 @@ Systeminterne Kompilierung gespeicherter Prozeduren.
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur wird in einen Funktionsaufruf in der DLL übersetzt.  
   
- ![Ausführung nativ kompilierter gespeicherter Prozeduren.](../../database-engine/media/hekaton-query-plan-7.gif "Execution of natively compiled stored procedures.")  
+ ![Ausführung nativ kompilierter gespeicherter Prozeduren.](../../database-engine/media/hekaton-query-plan-7.gif "Ausführung systemintern kompilierter gespeicherten Prozeduren.")  
 Ausführung systemintern kompilierter gespeicherten Prozeduren.  
   
  Der Aufruf einer systemintern kompilierten gespeicherten Prozedur lässt sich folgendermaßen beschreiben:  
   
-1.  Der Benutzer gibt eine `EXEC` *usp_myproc* -Anweisung aus.  
+1.  Der Benutzer gibt eine `EXEC` *usp_myproc* Anweisung aus.  
   
 2.  Der Parser extrahiert den Namen und die Parameter der gespeicherten Prozedur.  
   
@@ -232,14 +232,14 @@ Ausführung systemintern kompilierter gespeicherten Prozeduren.
   
 4.  Der Computercode in der DLL wird ausgeführt, und die Ergebnisse werden an den Client zurückgegeben.  
   
- **Parameterermittlung**  
+ **Parametersniffing**  
   
  Interpretierte gespeicherte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prozeduren werden im Gegensatz zu systemintern kompilierten gespeicherten Prozeduren, die zur Erstellungszeit kompiliert werden, bei der ersten Ausführung kompiliert. Wenn interpretierte gespeicherte Prozeduren beim Aufruf kompiliert werden, werden die Werte der Parameter, die für diesen Aufruf angegeben werden, bei der Erstellung des Ausführungsplans vom Abfrageoptimierer verwendet. Diese Verwendung von Parametern während der Kompilierung wird als Parameterermittlung bezeichnet.  
   
  Die Parameterermittlung wird nicht zum Kompilieren von systemintern kompilierten gespeicherten Prozeduren verwendet. Es wird angenommen, dass alle Parameter für die gespeicherte Prozedur UNBEKANNTE Werte haben. Systemintern kompilierte gespeicherte Prozeduren unterstützen genauso wie interpretierte gespeicherte Prozeduren den `OPTIMIZE FOR`-Hinweis. Weitere Informationen finden Sie unter [Abfragehinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-query).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Abrufen eines Abfrageausführungsplans für systemintern kompilierte gespeicherte Prozeduren  
- Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]abgerufen werden. Zum Beispiel:  
+ Der Abfrageausführungsplan für eine nativ kompilierte gespeicherte Prozedur kann mithilfe des **geschätzten Ausführungsplans** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]oder mithilfe der Option SHOWPLAN_XML in [!INCLUDE[tsql](../../../includes/tsql-md.md)]abgerufen werden. Beispiel:  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -260,10 +260,10 @@ GO
 |SELECT|`SELECT OrderID FROM dbo.[Order]`|  
 |INSERT|`INSERT dbo.Customer VALUES ('abc', 'def')`|  
 |UPDATE|`UPDATE dbo.Customer SET ContactName='ghi' WHERE CustomerID='abc'`|  
-|DELETE|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
+|Delete|`DELETE dbo.Customer WHERE CustomerID='abc'`|  
 |Compute Scalar|Dieser Operator wird für systeminterne Funktionen und Typkonvertierungen verwendet. Nicht alle Funktionen und Typkonvertierungen werden in systemintern kompilierten gespeicherten Prozeduren unterstützt.<br /><br /> `SELECT OrderID+1 FROM dbo.[Order]`|  
 |Join geschachtelter Schleifen|Der Operator für geschachtelte Schleifen ist der einzige Joinoperator, der in systemintern kompilierten gespeicherten Prozeduren unterstützt wird. Alle Pläne, die Joins enthalten, verwenden den Operator für geschachtelte Schleifen, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../../includes/tsql-md.md)] einen Hashjoin oder einen Zusammenführungsjoin enthält.<br /><br /> `SELECT o.OrderID, c.CustomerID`  <br /> `FROM dbo.[Order] o INNER JOIN dbo.[Customer] c`|  
-|Sort|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
+|Sortieren|`SELECT ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |TOP|`SELECT TOP 10 ContactName FROM dbo.Customer`|  
 |Top-sort|Der `TOP`-Ausdruck (die Anzahl der zurückzugebenden Zeilen) darf 8.000 Zeilen nicht überschreiten. Weniger, wenn die Abfrage auch Join- und Aggregationsoperatoren enthält. Joins und Aggregationen reduzieren normalerweise die Anzahl der zu sortierenden Zeilen im Vergleich zur Zeilenanzahl der Basistabellen.<br /><br /> `SELECT TOP 10 ContactName FROM dbo.Customer`  <br /> `ORDER BY ContactName`|  
 |Stream Aggregate|Beachten Sie, dass der Hash Match-Operator keine Aggregationen unterstützt. Daher verwenden alle Aggregationen in den systemintern kompilierten gespeicherten Prozeduren den Stream Aggregate-Operator, selbst wenn der Plan für die gleiche Abfrage in interpretiertem [!INCLUDE[tsql](../../../includes/tsql-md.md)] den Hash Match-Operator verwendet.<br /><br /> `SELECT count(CustomerID) FROM dbo.Customer`|  
@@ -291,7 +291,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Nachdem alle Zeilen bis auf eine in der Customer-Tabelle gelöscht wurden:  
   
- ![Spaltenstatistiken und Joins.](../../database-engine/media/hekaton-query-plan-9.gif "Column statistics and joins.")  
+ ![Spaltenstatistiken und Joins.](../../database-engine/media/hekaton-query-plan-9.gif "Spaltenstatistiken und Joins.")  
   
  Bei diesem Abfrageplan:  
   
@@ -300,9 +300,10 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiken und Kardinalität für speicheroptimierte Tabellen  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] behält Statistiken auf Spaltenebene für speicheroptimierte Tabellen bei. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] behält Statistiken auf Spaltenebene für speicheroptimierte Tabellen bei. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
   
   

@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c46f6bee67aa84bb805709e01ea911722902a3e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762170"
 ---
-# <a name="mssqlserver8974"></a>MSSQLSERVER_8974
+# <a name="mssqlserver_8974"></a>MSSQLSERVER_8974
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762170"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC3_OFF_ROW_DATA_NODE_HAS_TWO_PARENTS|  
-|Meldungstext|Tabellenfehler: Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, zuordnungseinheits-ID A_ID (Typ TYPE). Auf den Datenknoten außerhalb von Zeilen auf Seite P_ID1, Slot S_ID1, Text-ID TEXT_ID wird von Seite P_ID2, Slot S_ID2 und von Seite P_ID3, Slot S_ID3 verwiesen.|  
+|Meldungstext|Tabellenfehler: Objekt-ID O_ID, Index-ID I_ID, Partitions-ID PN_ID, Zuordnungseinheits-ID A_ID (TYPE-Typ). Auf den Datenknoten außerhalb von Zeilen auf Seite P_ID1, Slot S_ID1, Text-ID TEXT_ID wird von Seite P_ID2, Slot S_ID2 und von Seite P_ID3, Slot S_ID3 verwiesen.|  
   
 ## <a name="explanation"></a>Erklärung  
  Ein Datenknoten außerhalb von Zeilen besitzt zwei Daten- oder Indexdatensätze, in denen er als untergeordneter Knoten aufgeführt ist. Ein Knoten kann nur einen übergeordneten Knoten aufweisen.  

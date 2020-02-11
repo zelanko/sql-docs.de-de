@@ -1,5 +1,5 @@
 ---
-title: 'Anhang E: Skalare Funktionen | Microsoft-Dokumentation'
+title: 'Anhang E: skalare Funktionen | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bb5f16485312979e9fb2ad6b3a95dacb79b695d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996182"
 ---
 # <a name="appendix-e-scalar-functions"></a>Anhang E: Skalarfunktionen
-ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Informationen zu den einzelnen Funktionstypen in den entsprechenden Abschnitten in diesem Anhang bereitgestellt. Zugeordnete Syntax wird von die Beschreibungen der Funktionen einschließen.  
+ODBC gibt die folgenden Typen von skalaren Funktionen mit detaillierten Informationen zu jedem dieser Funktionstypen an, die in den entsprechenden Abschnitten dieses Anhangs bereitgestellt werden. Die Funktionsbeschreibungen enthalten zugeordnete Syntax.  
   
- Dieser Anhang enthält die folgenden Themen.  
+ Dieser Anhang enthält die folgenden Themen:  
   
 -   [Zeichenfolgenfunktionen](../../../odbc/reference/appendixes/string-functions.md)  
   
@@ -34,15 +34,15 @@ ODBC gibt die folgenden Typen von Skalarfunktionen mit detaillierten Information
   
 -   [Systemfunktionen](../../../odbc/reference/appendixes/system-functions.md)  
   
--   [Explicit Data Type Conversion Function (Explizite Datentyp-Konvertierungsfunktion)](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)  
+-   [Explizite Datentyp-Konvertierungsfunktion](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md)  
   
 -   [SQL-92 CAST-Funktion](../../../odbc/reference/appendixes/sql-92-cast-function.md)  
   
- ODBC ist keinen Datentyp für die Rückgabe von Werten aus skalaren Funktionen vorgeben, da die Funktionen häufig Daten datenquellenspezifische sind. Anwendungen sollten die CONVERT-Skalarfunktion nach Möglichkeit, um die datentypkonvertierung erzwingen verwenden.  
+ ODBC stellt keinen Datentyp für Rückgabewerte von skalaren Funktionen dar, da die Funktionen häufig Datenquellen spezifisch sind. Anwendungen sollten die Convert-Skalarfunktion verwenden, wenn dies möglich ist, um die Datentyp Konvertierung zu erzwingen.  
   
-## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC und SQL-92-Skalarfunktionen  
- Die Tabellen in diesem Anhang enthalten Funktionen, die ODBC 3.0 an einer Verbindung mit SQL-92 hinzugefügt wurden. Diese Funktionen, die für einen bestimmten Typ von skalaren Funktion hinzugefügt wird, wie definiert in ODBC werden in den einzelnen Abschnitten angegeben.  
+## <a name="odbc-and-sql-92-scalar-functions"></a>ODBC-und SQL-92-Skalarfunktionen  
+ Die Tabellen in diesem Anhang enthalten Funktionen, die in ODBC 3,0 hinzugefügt wurden, um Sie an SQL-92 auszurichten. Die Funktionen, die für einen bestimmten Typ von skalaren Funktionen wie in ODBC definiert hinzugefügt wurden, werden in jedem Abschnitt angezeigt.  
   
- ODBC und SQL-92 klassifizieren ihre skalaren Funktionen unterschiedlich. ODBC klassifiziert Skalarfunktionen von Argumenttyp; SQL-92 klassifiziert werden nach Wert zurückgibt. Beispielsweise ist die EXTRACT-Funktion als Funktion Timedate durch ODBC, klassifiziert, da das Extract-Feld-Argument ein Datetime-Schlüsselwort ist und das Extract-Source-Argument ein DateTime-Wert oder ein Intervall Ausdruck ist. SQL-92 klassifiziert EXTRAHIEREN auf der anderen Seite als numerische skalare Funktion, da der Rückgabewert ein numerischer ist.  
+ ODBC und SQL-92 klassifizieren ihre Skalarfunktionen anders. ODBC klassifiziert skalare Funktionen nach Argumenttyp. SQL-92 klassifiziert diese nach Rückgabewert. Beispielsweise wird die Extract-Funktion von ODBC als timedate-Funktion klassifiziert, da das Extract-Field-Argument ein DateTime-Schlüsselwort ist und das Extract-Source-Argument ein DateTime-oder Interval-Ausdruck ist. SQL-92 hingegen klassifiziert Extract als numerische Skalarfunktion, da der Rückgabewert numerisch ist.  
   
- Eine Anwendung kann bestimmen, welche skalaren Funktionen, die ein Treiber unterstützt werden, durch den Aufruf **SQLGetInfo**. Informationstypen sind sowohl für ODBC als auch für SQL-92-Klassifizierungen von skalaren Funktionen berücksichtigt. Da diese Klassifizierungen unterschiedlich sind, kann die Unterstützung für einige skalaren Funktionen in Informationstypen angegeben werden, die nicht auf ODBC und SQL-92 entsprechen. Unterstützung für EXTRACT in ODBC wird z. B. den Informationstyp SQL_TIMEDATE_FUNCTIONS angezeigt; Unterstützung für EXTRACT in SQL-92, wird durch den Typ der SQL_SQL92_NUMERIC_VALUE_FUNCTIONS Informationen auf der anderen Seite angegeben.
+ Eine Anwendung kann ermitteln, welche Skalarfunktionen ein Treiber durch Aufrufen von **SQLGetInfo**unterstützt. Informationstypen sind sowohl für ODBC als auch für SQL-92-Klassifizierungen von skalaren Funktionen enthalten. Da diese Klassifizierungen unterschiedlich sind, kann die Unterstützung für einige skalare Funktionen in Informationstypen angegeben werden, die nicht ODBC und SQL-92 entsprechen. Beispielsweise wird die Unterstützung für Extract in ODBC durch den SQL_TIMEDATE_FUNCTIONS Informationstyp angegeben. die Unterstützung für Extract in SQL-92 wird hingegen durch den SQL_SQL92_NUMERIC_VALUE_FUNCTIONS Informationstyp angegeben.

@@ -17,11 +17,11 @@ ms.assetid: 07a4144a-a548-4578-b2be-715c3cf73bf8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1f899e7a034e1ec5fc967d834caad3a4ccc4caa1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68041830"
 ---
-# <a name="sqlnodata"></a>SQL_NO_DATA
-Wenn eine ODBC-3. *x* Anwendungsaufrufe **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** in einer ODBC 2. *X* Treiber, führen Sie ein gesuchtes Update oder delete-Anweisung, die keine Zeilen in der Datenquelle, die der Treiber auswirkt, sollte SQL_SUCCESS, nicht SQL_NO_DATA zurückgegeben. Wenn eine ODBC-2. *x* oder ODBC-3. *X* Anwendung mit einer ODBC 3.. *X* Treiber ruft **SQLExecDirect**, **SQLExecute**, oder **SQLParamData** dasselbe Ergebnis erzielt, die ODBC 3. *X* Treiber sollte SQL_NO_DATA zurückgegeben werden.
+# <a name="sql_no_data"></a>SQL_NO_DATA
+Bei ODBC 3. die *x* -Anwendung ruft **SQLExecDirect**, **SQLExecute**oder **SQLParamData** in einem ODBC 2 auf. *x* -Treiber um eine gesuchte Update-oder DELETE-Anweisung auszuführen, die keine Zeilen in der Datenquelle beeinflusst, sollte der Treiber SQL_SUCCESS und nicht SQL_NO_DATA zurückgeben. Bei ODBC 2. *x* oder ODBC 3. *x* -Anwendung, die mit ODBC 3 arbeitet. der *x* -Treiber ruft **SQLExecDirect**, **SQLExecute**oder **SQLParamData** mit dem gleichen Ergebnis (ODBC 3) auf. der *x* -Treiber sollte SQL_NO_DATA zurückgeben.
