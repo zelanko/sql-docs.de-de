@@ -1,5 +1,5 @@
 ---
-title: Date, Time und Timestampliterale | Microsoft-Dokumentation
+title: Datums-, Uhrzeit-und Zeitstempel Literale | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,37 +13,37 @@ ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076980"
 ---
 # <a name="date-time-and-timestamp-literals"></a>Datums-, Zeit- und Zeitstempelliterale
-Die Escapesequenz für Datum, Uhrzeit und timestampliterale lautet  
+Die Escapesequenz für Datums-, Uhrzeit-und Zeitstempel-Literale ist  
   
- **{** _-Typ_ **"** _Wert_ **'}**  
+ **{**  _-Type_ **'** _value_ **'}**  
   
- wo *Literal-Typ* ist einer der Werte in der folgenden Tabelle aufgeführt.  
+ Dabei ist der *Literaltyp* einer der in der folgenden Tabelle aufgeführten Werte.  
   
-|*literal-type*|Bedeutung|Formatieren von *Wert*|  
+|*Literaltyp*|Bedeutung|Format des *Werts*|  
 |---------------------|-------------|-----------------------|  
-|**d**|date|*yyyy*-*mm*-*dd*|  
-|**t**|Uhrzeit *|*Hh*:*mm*:*ss*[1]|  
-|**Terminaldienste**|Timestamp|*Yyyy*-*mm*-*TT* *Hh*:*mm*:*ss*[.*f...* ] [1]|  
+|**d**|Date|*JJJJ*-*mm*-*DD*|  
+|**Bund**|Zeit|*HH*:*mm*:*SS*[1]|  
+|**TS**|Timestamp|*JJJJ*-*mm*-*DD* *HH*:*mm*:*SS*[.* f...*] 1|  
   
- [1] die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in einem Zeichenfolgenliteral mit einer Komponente für Sekunden Uhrzeit oder Zeitstempel Intervall ist abhängig von der Genauigkeit, wie in das Deskriptorfeld SQL_DESC_PRECISION enthalten. (Weitere Informationen finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+ [1] die Anzahl der Ziffern rechts vom Dezimaltrennzeichen in einem Zeit-oder Zeitstempel-intervallal, das eine Sekunden Komponente enthält, hängt von der Sekunden Genauigkeit ab, wie im Feld SQL_DESC_PRECISION Deskriptor enthalten. (Weitere Informationen finden Sie unter [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- Weitere Informationen zu dem Datum, Uhrzeit und Timestamp-Escapesequenzen finden Sie unter [Date, Time und Timestamp-Escapesequenzen](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) in Anhang C: SQL-Grammatik.  
+ Weitere Informationen zu Datums-, Uhrzeit-und Zeitstempel-Escapesequenzen finden Sie unter [Datums-, Uhrzeit-und Zeitstempel-](../../../odbc/reference/appendixes/date-time-and-timestamp-escape-sequences.md) Escapesequenzen in Anhang C: SQL-Grammatik.  
   
- Z. B. aktualisieren beide der folgenden SQL-Anweisungen das öffnende Datum der Bestellung 1023 in der Orders-Tabelle. Die erste Anweisung verwendet die Escape-Sequenz-Syntax. Die zweite Anweisung verwendet die systemeigene Oracle Rdb-Syntax für die DATE-Spalte, und es ist nicht interoperabel.  
+ Die beiden folgenden SQL-Anweisungen aktualisieren z. b. das Öffnungs Datum von Sales Order 1023 in der Orders-Tabelle. In der ersten Anweisung wird die Escapesequenzsyntax verwendet. Die zweite Anweisung verwendet die native Oracle RDB-Syntax für die Date-Spalte und ist nicht interoperabel.  
   
 ```  
 UPDATE Orders SET OpenDate={d '1995-01-15'} WHERE OrderID=1023  
 UPDATE Orders SET OpenDate='15-Jan-1995' WHERE OrderID=1023  
 ```  
   
- Die Escapesequenz für ein Datum, Uhrzeit oder Zeitstempel-literal kann auch in eine Zeichenvariable auf ein Datum, Uhrzeit oder Zeitstempelparameter gebunden platziert werden. Der folgende Code verwendet beispielsweise einen Date-Parameter, die an eine Zeichenvariable gebunden öffnende Datum das Bestellung 1023 in der Orders-Tabelle zu aktualisieren:  
+ Die Escapesequenz für ein Date-, Time-oder Zeitstempel-Literalzeichen kann auch in eine Zeichen Variable eingefügt werden, die an einen Date-, Time-oder Zeitstempel-Parameter gebunden ist. Im folgenden Code wird z. b. ein Datums Parameter verwendet, der an eine Zeichen Variable gebunden ist, um das Öffnungs Datum von Sales Order 1023 in der Orders-Tabelle zu aktualisieren:  
   
 ```  
 SQLCHAR      OpenDate[56]; // The size of a date literal is 55.  
@@ -63,7 +63,7 @@ strcpy_s( (char*) OpenDate, _countof(OpenDate), "{d '1995-01-15'}");
 SQLExecDirect(hstmt, "UPDATE Orders SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- Es ist jedoch in der Regel effizienter, den Parameter direkt auf eine Datumsstruktur binden:  
+ Es ist jedoch in der Regel effizienter, den Parameter direkt an eine Datums Struktur zu binden:  
   
 ```  
 SQL_DATE_STRUCT   OpenDate;  
@@ -82,10 +82,10 @@ OpenDate.day = 15;
 SQLExecDirect(hstmt, "UPDATE Employee SET OpenDate=? WHERE OrderID = 1023", SQL_NTS);  
 ```  
   
- Um zu bestimmen, ob ein Treiber die ODBC-Escapesequenzen für Datum, Uhrzeit oder zeitstempelliterale unterstützt, eine Anwendung ruft **SQLGetTypeInfo**. Wenn die Datenquelle einen Datentyp für Datum, Uhrzeit oder Zeitstempel unterstützt, muss es auch die entsprechende Escapesequenz unterstützen.  
+ Um zu ermitteln, ob ein Treiber die ODBC-Escapesequenzen für Datums-, Uhrzeit-oder Zeitstempel-Literale unterstützt, ruft eine Anwendung **sqlgettypeingefo**auf. Wenn die Datenquelle einen Datums-, Uhrzeit-oder Zeitstempel-Datentyp unterstützt, muss Sie auch die entsprechende Escapesequenz unterstützen.  
   
- Datenquellen können auch die Datetime-Literale, die in der ANSI SQL-92-Spezifikation definiert unterstützen, die sich von der ODBC-Escapesequenzen für Datum, Uhrzeit oder zeitstempelliterale sind. Um zu bestimmen, ob eine Datenquelle die ANSI-Literale unterstützt, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_ANSI_SQL_DATETIME_LITERALS.  
+ Datenquellen können auch die in der ANSI SQL-92-Spezifikation definierten datetime-Literale unterstützen, die sich von den ODBC-Escapesequenzen für Datums-, Uhrzeit-oder Zeitstempel-Literale unterscheiden. Um zu ermitteln, ob eine Datenquelle die ANSI-Literale unterstützt, ruft eine Anwendung **SQLGetInfo** mit der SQL_ANSI_SQL_DATETIME_LITERALS-Option auf.  
   
- Um zu bestimmen, ob ein Treiber die ODBC-Escapesequenzen für Intervall-Literale unterstützt, eine Anwendung ruft **SQLGetTypeInfo**. Wenn die Datenquelle einen Datetime-Intervall-Datentyp unterstützt, muss es auch die entsprechende Escapesequenz unterstützen.  
+ Um zu ermitteln, ob ein Treiber die ODBC-Escapesequenzen für intervallliterale unterstützt, ruft eine Anwendung **sqlgettypeingefo**auf. Wenn die Datenquelle einen DateTime-Intervall Datentyp unterstützt, muss Sie auch die entsprechende Escapesequenz unterstützen.  
   
- Datenquellen können auch die Datetime-Literale, die in der ANSI SQL-92-Spezifikation definiert unterstützen, die sich von den ODBC-Escapesequenzen für Datetime-Intervall-Literale sind. Um zu bestimmen, ob eine Datenquelle die ANSI-Literale unterstützt, eine Anwendung ruft **SQLGetInfo** mit der Option SQL_ANSI_SQL_DATETIME_LITERALS.
+ Datenquellen können auch die in der ANSI SQL-92-Spezifikation definierten datetime-Literale unterstützen, die sich von den ODBC-Escapesequenzen für DateTime Interval-Literale unterscheiden. Um zu ermitteln, ob eine Datenquelle die ANSI-Literale unterstützt, ruft eine Anwendung **SQLGetInfo** mit der SQL_ANSI_SQL_DATETIME_LITERALS-Option auf.

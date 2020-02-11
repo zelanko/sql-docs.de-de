@@ -1,5 +1,5 @@
 ---
-title: MaxRecords-Eigenschaft – Beispiel (VC++) | Microsoft-Dokumentation
+title: MaxRecords-Eigenschafts Beispiel (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932247"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel verwendet die [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) Eigenschaft öffnen Sie eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) , enthält der 10 teuersten Titel in der ***Titel*** Tabelle.  
+In diesem Beispiel wird die [maxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) -Eigenschaft verwendet, um ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) zu öffnen, das die zehn teuersten Titel in der ***Titel*** Tabelle enthält.  
   
 ## <a name="example"></a>Beispiel  
   
@@ -165,17 +165,17 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Top 10 Titel nach Preis:**  
-**Jedoch ist es Benutzer geeignet? ---22.95**  
-**Computer Phobic und nicht-Phobic Personen: Verhalten Variationen---21,59**  
-**Zwiebeln Leeks und ein Knoblauchbrot: Kochen Geheimnisse Mittelmeer---20.95**  
-**Geheime Schlüssel des Silicon Valley---20,00**  
-**Der Geschäftsführer des Datenbank-Handbuch---19,99**  
-**Gerade reden Computer---19,99**  
-**Silicon Valley Durchreisen behandelt---19,99**  
-**Längere Besserung: Vier Fallstudien---19,99**  
-**Sushi, jede Person? ---14,99**  
-**50 Jahre in Buckingham Palace Keller----11.95**   
-## <a name="see-also"></a>Siehe auch  
+ **Top-10-Titel nach Preis:**  
+**Aber ist es benutzerfreundlich? ---22,95**  
+**Computer-phobic und nicht-phobische Einzelpersonen: Verhaltens Abweichungen---21,59**  
+**Zwiebeln, leeks und Knoblauch: Kochen von Geheimnissen des Mittelmeers---20,95**  
+**Geheimnisse von Silicon Valley---20,00**  
+**Das Daten Bank Handbuch für ausgelastete Führungskräfte---19,99**  
+**Direkt Gespräch über Computer---19,99**  
+**Gastronomische---von Silicon Valley 19,99**  
+**Längere Daten Entbehrungen: vier Fallstudien---19,99**  
+**Sushi, jemand? ---14,99**  
+**50 Jahre in den Buckingham-Schlossküchen---11,95**   
+## <a name="see-also"></a>Weitere Informationen  
  [MaxRecords-Eigenschaft (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

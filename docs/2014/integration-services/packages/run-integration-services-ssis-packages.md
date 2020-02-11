@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a3ecbe615d60a703b66dff78cd77ddfde0a20d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767082"
 ---
 # <a name="execution-of-projects-and-packages"></a>Ausführung von Projekten und Paketen
@@ -30,22 +30,23 @@ ms.locfileid: "62767082"
   
  Zum Speichern eines Pakets auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server verwenden Sie das Projektbereitstellungsmodell, um das Projekt auf dem Server bereitzustellen. Weitere Informationen finden Sie unter [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md).  
   
- Zum Speichern eines Pakets im SSIS-Paketspeicher, in der MSDB-Datenbank oder im Dateisystem verwenden Sie das Paketbereitstellungsmodell. Weitere Informationen finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Zum Speichern eines Pakets im SSIS-Paketspeicher, in der MSDB-Datenbank oder im Dateisystem verwenden Sie das Paketbereitstellungsmodell. Weitere Informationen finden Sie unter [Paket Bereitstellung &#40;SSIS-&#41;](legacy-package-deployment-ssis.md).  
   
 |Tool|Pakete, die auf dem Integration Services-Server gespeichert werden|Im SSIS-Paketspeicher oder in der MSDB-Datenbank gespeicherte Pakete|Pakete, die im Dateisystem außerhalb des Speicherorts, der Teil des SSIS-Paketspeichers ist, gespeichert werden|  
 |----------|-----------------------------------------------------------------|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|  
 |**SQL Server Data Tools**|Nein|Nein<br /><br /> Sie können jedoch einem Projekt ein vorhandenes Paket aus dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher hinzufügen, der die msdb-Datenbank enthält. Wenn ein vorhandenes Paket auf diese Weise dem Projekt hinzugefügt wird, wird im Dateisystem eine lokale Kopie des Pakets erstellt.|Ja|  
-|**SQL Server Management Studio, wenn eine Verbindung mit einer Instanz der Datenbank-Engine besteht, die den Server Integration Services hostet**<br /><br /> Weitere Informationen finden Sie unter [Execute Package Dialog Box](../execute-package-dialog-box.md).|Ja|Nein<br /><br /> Pakete können jedoch von diesen Speicherorten auf den Server importiert werden.|Nein<br /><br /> Pakete können jedoch aus dem Dateisystem auf den Server importiert werden.|  
-|**SQL Server Management Studio, wenn eine Verbindung mit dem Integration Services-Dienst besteht, der den SSIS-Paketspeicher verwaltet**|Nein|Ja|Nein<br /><br /> Pakete können jedoch aus dem Dateisystem in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher importiert werden.|  
+|**SQL Server Management Studio, wenn eine Verbindung mit einer Instanz des Datenbank-Engine besteht, der den Integration Services Server hostet.**<br /><br /> Weitere Informationen finden Sie unter [Execute Package Dialog Box](../execute-package-dialog-box.md).|Ja|Nein<br /><br /> Pakete können jedoch von diesen Speicherorten auf den Server importiert werden.|Nein<br /><br /> Pakete können jedoch aus dem Dateisystem auf den Server importiert werden.|  
+|**SQL Server Management Studio, wenn eine Verbindung mit dem Integration Services Dienst besteht, der den SSIS-Paket Speicher verwaltet.**|Nein |Ja|Nein<br /><br /> Pakete können jedoch aus dem Dateisystem in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher importiert werden.|  
 |**dtexec**<br /><br /> Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).|Ja|Ja|Ja|  
-|**dtexecui**<br /><br /> Weitere Informationen finden Sie unter [Paketausführungshilfsprogramm &#40;DtExecUI&#41; – Referenz zur Benutzeroberfläche](execute-package-utility-dtexecui-ui-reference.md).|Nein|Ja|Ja|  
+|**dtexecui**<br /><br /> Weitere Informationen finden Sie unter [Paketausführungshilfsprogramm &#40;DtExecUI&#41; – Referenz zur Benutzeroberfläche](execute-package-utility-dtexecui-ui-reference.md).|Nein |Ja|Ja|  
 |**SQL Server-Agent**<br /><br /> Mit einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag können Sie ein Paket planen.<br /><br /> Weitere Informationen finden Sie unter [SQL Server Agent Jobs for Packages](sql-server-agent-jobs-for-packages.md).|Ja|Ja|Ja|  
 |**Integrierte gespeicherte Prozedur**<br /><br /> Weitere Informationen finden Sie unter [catalog.start_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).|Ja|Nein|Nein|  
-|**Verwaltete API, mit Typen und Elementen im** <xref:Microsoft.SqlServer.Management.IntegrationServices> -Namespace|Ja|Nein|Nein|  
-|**Verwaltete API, mit Typen und Elementen im** <xref:Microsoft.SqlServer.Dts.Runtime> -Namespace|Gegenwärtig nicht|Ja|Ja|  
+|**Verwaltete API, mithilfe von Typen und** <xref:Microsoft.SqlServer.Management.IntegrationServices> Membern im-Namespace|Ja|Nein|Nein|  
+|**Verwaltete API, mithilfe von Typen und** <xref:Microsoft.SqlServer.Dts.Runtime> Membern im-Namespace|Derzeit nicht|Ja|Ja|  
   
 ## <a name="execution-and-logging"></a>Ausführung und Protokollierung  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete können für die Protokollierung aktiviert werden, und Sie können die Laufzeitinformationen in Protokolldateien erfassen. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete können für die Protokollierung aktiviert werden, und Sie können die Laufzeitinformationen in Protokolldateien erfassen. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md).  
   
  Mit Vorgangsberichten können Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete überwachen, die auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitgestellt und ausgeführt werden. Die Berichte sind in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar. Weitere Informationen finden Sie unter [Berichte für den Integration Services-Server](../reports-for-the-integration-services-server.md).  
   
@@ -57,7 +58,7 @@ ms.locfileid: "62767082"
   
 -   [Ausführen eines Pakets auf dem SSIS-Server mit SQL Server Management Studio](../run-a-package-on-the-ssis-server-using-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [dtexec (Hilfsprogramm)](dtexec-utility.md)   
  [SQL Server-Import/Export-Assistent](../import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)  
   

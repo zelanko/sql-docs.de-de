@@ -1,5 +1,5 @@
 ---
-title: Für Schleifen-Editor | Microsoft-Dokumentation
+title: For-Schleifen-Editor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e450559355baf1242e5d822761256047f4790fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66058565"
 ---
 # <a name="for-loop-editor"></a>For-Schleifen-Editor
@@ -24,14 +24,14 @@ ms.locfileid: "66058565"
   
  Weitere Informationen zum For-Schleifencontainer und zu dessen Verwendung in Paketen finden Sie unter [For Loop Container](control-flow/for-loop-container.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **InitExpression**  
  Gibt optional einen Ausdruck zum Initialisieren von Werten an, die durch die Schleife verwendet werden.  
   
  **EvalExpression**  
  Geben Sie einen Ausdruck an, mit dem ausgewertet wird, ob die Schleife beendet oder fortgesetzt werden soll.  
   
- **AssignExpression**  
+ **Textfeld AssignExpression**  
  Geben Sie optional einen Ausdruck an, durch den bei jeder Wiederholung der Schleife eine Bedingung geändert wird.  
   
  **Name**  
@@ -43,7 +43,7 @@ ms.locfileid: "66058565"
  **Beschreibung**  
  Geben Sie eine Beschreibung des For-Schleifencontainers an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)   
  [Foreach Loop Container](control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  

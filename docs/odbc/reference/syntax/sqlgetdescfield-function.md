@@ -20,18 +20,18 @@ ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: cdf2990056c297d217248543812e347b61d3486d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68103812"
 ---
 # <a name="sqlgetdescfield-function"></a>SQLGetDescField-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0 Standardkompatibilität: ISO 92  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,0 Standards Compliance: ISO 92  
   
  **Zusammenfassung**  
- **SQLGetDescField** gibt die aktuelle Einstellung oder der Wert, der ein einzelnes Feld einem anwendungsparameterdeskriptor-Datensatz zurück.  
+ **SQLGetDescField** gibt die aktuelle Einstellung oder den Wert eines einzelnen Felds eines deskriptordaten Satzes zurück.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,85 +47,85 @@ SQLRETURN SQLGetDescField(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *DescriptorHandle*  
- [Eingabe] Deskriptorhandles.  
+ *Deskriptorhandle*  
+ Der Deskriptorhandle.  
   
  *RecNumber*  
- [Eingabe] Gibt an, die von dem die Anwendung Informationen sucht anwendungsparameterdeskriptor-Datensatz. Deskriptordatensätze sind von 0 (null) mit der Datensatznummer lesezeichendatensatzes wird 0 nummeriert. Wenn die *FieldIdentifier* Argument gibt an, ein Headerfeld *RecNumber* wird ignoriert. Wenn *RecNumber* ist kleiner als oder gleich SQL_DESC_COUNT die Zeile enthält jedoch keine Daten für eine Spalte oder Parameter, einen Aufruf von **SQLGetDescField** gibt die Standardwerte der Felder zurück. (Weitere Informationen finden Sie unter "Initialisierung der Deskriptorfelder" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+ Der Gibt den Deskriptordatensatz an, von dem die Anwendung Informationen sucht. Deskriptordatensätze werden von 0 nummeriert, wobei die Datensatznummer 0 der Lesezeichen-Datensatz ist. Wenn das *fieldidentifier* -Argument ein Header Feld angibt, wird " *RecNumber* " ignoriert. Wenn " *RecNumber* " kleiner oder gleich SQL_DESC_COUNT ist, die Zeile jedoch keine Daten für eine Spalte oder einen Parameter enthält, gibt ein **SQLGetDescField** -Befehl die Standardwerte der Felder zurück. (Weitere Informationen finden Sie unter "Initialisierung von Deskriptorfeldern" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
- *FieldIdentifier*  
- [Eingabe] Gibt das Feld des Deskriptors, deren Wert zurückgegeben werden. Weitere Informationen finden Sie unter der "*FieldIdentifier* Argument" im Abschnitt [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
+ *Fieldidentifier*  
+ Der Gibt das Feld des Deskriptors an, dessen Wert zurückgegeben werden soll. Weitere Informationen finden Sie im Abschnitt "*fieldidentifier* -Argument" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).  
   
  *ValuePtr*  
- [Ausgabe] Zeiger auf einen Puffer in das die Deskriptorinformationen zurückgegeben. Der Datentyp hängt vom Wert der *FieldIdentifier*.  
+ Ausgeben Zeiger auf einen Puffer, in den die Deskriptorinformationen zurückgegeben werden sollen. Der Datentyp hängt vom Wert von *fieldidentifier*ab.  
   
- Wenn *ValuePtr* Ganzzahltyp ist, sollten Anwendungen einen Puffer mit SQLULEN verwenden und initialisiert den Wert auf 0 vor dem Aufrufen dieser Funktion als einige Treiber kann nur die unteren 32-Bit- oder 16-Bit eines Puffers zu schreiben und lassen Bits höherer Ordnung unverändert.  
+ Wenn *ValuePtr* ein ganzzahliger Typ ist, sollten Anwendungen einen Puffer von SQLULEN verwenden und den Wert auf 0 initialisieren, bevor Sie diese Funktion aufrufen, da einige Treiber möglicherweise nur den unteren 32-Bit-oder 16-Bit-Wert eines Puffers schreiben und das Bit höherer Ordnung unverändert lassen.  
   
- Wenn *ValuePtr* NULL ist, *StringLengthPtr* gibt die Gesamtzahl der Bytes, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) noch verfügbar, die in den Puffer, der auf zurückgegeben *ValuePtr*.  
+ Wenn *ValuePtr* den Wert NULL hat, gibt *stringlengthptr* weiterhin die Gesamtzahl der Bytes (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten) zurück, die im Puffer zurückgegeben werden können, auf den *ValuePtr*zeigt.  
   
- *BufferLength*  
- [Eingabe] Wenn *FieldIdentifier* ist ein ODBC-definierten-Feld und *ValuePtr* zeigt auf eine Zeichenfolge oder ein binärer Puffer, in dieses Argument muss die Länge des \* *ValuePtr*. Wenn *FieldIdentifier* ist ein ODBC-definierten-Feld und \* *ValuePtr* ist eine ganze Zahl, *Pufferlänge* wird ignoriert. Wenn der Wert in  *\*ValuePtr* wird von einem Unicode-Datentyp (beim Aufrufen von **SQLGetDescFieldW**), wird die *Pufferlänge* Argument muss eine gerade Zahl sein.  
+ *Pufferlänge*  
+ Der Wenn *fieldidentifier* ein ODBC-definiertes Feld ist und *ValuePtr* auf eine Zeichenfolge oder einen binären Puffer verweist, sollte dieses Argument der Länge von \* *ValuePtr*entsprechen. Wenn *fieldidentifier* ein ODBC-definiertes Feld und \* *ValuePtr* eine ganze Zahl ist, wird *BufferLength* ignoriert. Wenn der Wert in * \*ValuePtr* von einem Unicode-Datentyp ist (beim Aufrufen von **sqlgetdescfieldw**), muss das *BufferLength* -Argument eine gerade Zahl sein.  
   
- Wenn *FieldIdentifier* ist ein Feld treiberdefinierten, die Anwendung zeigt die Art des Felds um den Treiber-Manager an, indem die *Pufferlänge* Argument. *BufferLength* können die folgenden Werte aufweisen:  
+ Wenn *fieldidentifier* ein Treiber definiertes Feld ist, gibt die Anwendung die Art des Felds für den Treiber-Manager an, indem das *BufferLength* -Argument festgelegt wird. *BufferLength* kann die folgenden Werte aufweisen:  
   
--   Wenn  *\*ValuePtr* ist ein Zeiger auf eine Zeichenfolge, *Pufferlänge* ist die Länge der Zeichenfolge oder SQL_NTS.  
+-   Wenn * \*ValuePtr* ein Zeiger auf eine Zeichenfolge ist, entspricht *BufferLength* der Länge der Zeichenfolge oder SQL_NTS.  
   
--   Wenn  *\*ValuePtr* ist ein Zeiger auf ein binärer Puffer, aus, und klicken Sie dann die Anwendung das Ergebnis der SQL_LEN_BINARY_ATTR platziert (*Länge*)-Makro in *Pufferlänge*. Dadurch wird einen negativen Wert im platziert *Pufferlänge*.  
+-   Wenn * \*ValuePtr* ein Zeiger auf einen binären Puffer ist, platziert die Anwendung das Ergebnis des Makros SQL_LEN_BINARY_ATTR (*length*) in *BufferLength*. Dadurch wird ein negativer Wert in *BufferLength*platziert.  
   
--   Wenn  *\*ValuePtr* ist ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder Binärzeichenfolge, *Pufferlänge* Wert SQL_IS_POINTER haben sollte.  
+-   Wenn * \*ValuePtr* ein Zeiger auf einen anderen Wert als eine Zeichenfolge oder eine binäre Zeichenfolge ist, sollte *BufferLength* den Wert SQL_IS_POINTER.  
   
--   Wenn  *\*ValuePtr* ist einen Datentyp fester Länge enthält *Pufferlänge* ist entweder SQL_IS_INTEGER SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT, nach Bedarf.  
+-   Wenn * \*ValuePtr* einen Datentyp mit fester Länge enthält, ist *BufferLength* entweder SQL_IS_INTEGER, SQL_IS_UINTEGER, SQL_IS_SMALLINT oder SQL_IS_USMALLINT.  
   
- *StringLengthPtr*  
- [Ausgabe] Zeiger auf den Puffer für die Rückgabe der Gesamtanzahl der Bytes, die (mit Ausnahme von der Anzahl der Bytes, die für die Null-Terminierungszeichen erforderlich) zur Verfügung, die in zurückgegeben **ValuePtr*.  
+ *Stringlengthptr*  
+ Ausgeben Ein Zeiger auf den Puffer, in dem die Gesamtzahl der Bytes (ausgenommen der Anzahl der Bytes, die für das NULL-Beendigungs Zeichen erforderlich sind) zurückgegeben werden soll, die in **ValuePtr*zurückgegeben werden können.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA zurückgibt oder SQL_INVALID_HANDLE.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_NO_DATA oder SQL_INVALID_HANDLE.  
   
- SQL_NO_DATA zurückgegeben wird, wenn *RecNumber* ist größer als die aktuelle Anzahl der deskriptordatensätze.  
+ SQL_NO_DATA wird zurückgegeben, wenn " *RecNumber* " größer als die aktuelle Anzahl der Deskriptordatensätze ist.  
   
- SQL_NO_DATA zurückgegeben wird, wenn *DescriptorHandle* ist ein IRD-Handle und die Anweisung befindet sich im Zustand vorbereitete oder ausgeführte. es wurde jedoch keine geöffneten Cursor zugeordnet.  
+ SQL_NO_DATA wird zurückgegeben, wenn *descriptorhandle* ein IRD-Handle ist und die Anweisung den Zustand "vorbereitet" oder "ausgeführt" aufweist, dem aber kein offener Cursor zugeordnet ist.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLGetDescField** gibt SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurück, die einen zugeordneten SQLSTATE-Wert abgerufen werden können, durch den Aufruf **SQLGetDiagRec** mit einem *HandleType* von SQL_HANDLE_STMT auf, und eine *behandeln* von *StatementHandle*. Die folgende Tabelle enthält die SQLSTATE-Werten, die häufig vom **SQLGetDescField** und erläutert, jeweils im Kontext dieser Funktion; die Notation "(DM)" vorangestellt ist, die Beschreibungen der SQLSTATEs, die vom Treiber-Manager zurückgegeben. Der Rückgabecode jeder SQLSTATE-Wert zugeordnet ist SQL_ERROR zurück, sofern nicht anders angegeben.  
+ Wenn **SQLGetDescField** SQL_ERROR oder SQL_SUCCESS_WITH_INFO zurückgibt, kann ein zugeordneter SQLSTATE-Wert durch Aufrufen von **SQLGetDiagRec** mit dem *Typ* SQL_HANDLE_STMT und einem *handle* von *StatementHandle*abgerufen werden. In der folgenden Tabelle sind die SQLSTATE-Werte aufgelistet, die von **SQLGetDescField** häufig zurückgegeben und im Kontext dieser Funktion erläutert werden. die Notation "(DM)" geht vor den Beschreibungen von Sqlstates vor, die vom Treiber-Manager zurückgegeben werden. Der Rückgabecode, der den einzelnen SQLSTATE-Werten zugeordnet ist, ist SQL_ERROR, sofern nichts anderes angegeben ist.  
   
-|SQLSTATE|Fehler|Beschreibung|  
+|SQLSTATE|Fehler|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|01000|Allgemeine Warnung|Treiber-spezifische Meldung dient zu Informationszwecken. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|01004|Zeichenfolgendaten, rechts abgeschnitten|Der Puffer \* *ValuePtr* war nicht groß genug, um die gesamte Deskriptorfeld zurückgeben, damit das Feld abgeschnitten wurde. Die Länge des Felds den ungekürzten Deskriptor wird zurückgegeben, **StringLengthPtr*. (Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
-|07009|Ungültiger Deskriptorindex|(DM) die *RecNumber* Argument war gleich 0, das Anweisungsattribut SQL_ATTR_USE_BOOKMARK SQL_UB_OFF, und die *DescriptorHandle* Argument war ein IRD-Handle. (Dieser Fehler kann für eine explizit zugewiesene Deskriptor zurückgegeben werden, nur dann, wenn der Deskriptor ein Anweisungshandle zugeordnet ist.)<br /><br /> Die *FieldIdentifier* Argument wurde ein Datensatzfeld, der *RecNumber* Argument wurde 0 (null) und die *DescriptorHandle* Argument war ein IPD-Handle.<br /><br /> Die *RecNumber* Argument war kleiner als 0.|  
-|08S01|Kommunikations-Verbindungsfehler|Die kommunikationsverbindung zwischen dem Treiber und der Datenquelle, die mit der der Treiber verbunden wurde, Fehler vor der Verarbeitung für die Funktion abgeschlossen.|  
-|HY000|Allgemeiner Fehler.|Für die keine spezifischen SQLSTATE ist und für die keine implementierungsabhängige SQLSTATE definiert wurde, ist ein Fehler aufgetreten. Die zurückgegebene Fehlermeldung **SQLGetDiagRec** in die  *\*MessageText* Puffer beschreibt den Fehler und seine Ursache.|  
-|HY001|Fehler bei der speicherbelegung|Der Treiber konnte nicht zum Belegen des Speichers zur Unterstützung der Ausführung oder den Abschluss der Funktion erforderlich sind.|  
-|HY007|Zugeordnete Anweisung ist nicht vorbereitet.|*DescriptorHandle* zugeordnet wurde eine *StatementHandle* als ein IRD aus, und die zugeordnete Anweisung Handle hatte nicht vorbereitet oder ausgeführt.|  
-|HY010|Fehler in der Funktionsreihenfolge|(DM) *DescriptorHandle* zugeordnet wurde eine *StatementHandle* für den eine asynchron ausgeführte Funktion (diese keiner) aufgerufen wurde, und wurde noch ausgeführt werden, wenn diese Funktion aufgerufen wurde.<br /><br /> (DM) *DescriptorHandle* zugeordnet wurde eine *StatementHandle* für die **SQLExecute**, **SQLExecDirect**,  **SQLBulkOperations**, oder **SQLSetPos** war aufgerufen und SQL_NEED_DATA zurückgegeben. Diese Funktion wurde aufgerufen, bevor die Daten für alle Data-at-Execution-Parameter oder Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde aufgerufen, der Verbindungshandles, die zugeordnet wird die *DescriptorHandle*. Dieser asynchrone Funktion war weiterhin ausgeführt, wenn die **SQLGetDescField** Funktion aufgerufen wurde.|  
-|HY013|Fehler bei arbeitsspeicherverwaltung|Der Funktionsaufruf kann nicht verarbeitet werden, da die zugrunde liegenden Speicherobjekte, möglicherweise aufgrund von unzureichendem Speicher konnte nicht zugegriffen werden.|  
-|HY021|Inkonsistente deskriptorinformation|Die Felder SQL_DESC_TYPE und SQL_DESC_DATETIME_INTERVAL_CODE bilden keine gültiger ODBC-SQL-Typ, eine gültige treiberspezifischen SQL-Typ (für Descriptor, IPD) oder einen gültigen Typ für den ODBC-C (für APDs oder ARDs).|  
-|HY090|Ungültige Zeichenfolgen- oder Pufferlänge.|(DM)  *\*ValuePtr* wurde eine Zeichenfolge, und *Pufferlänge* ist kleiner als 0 (null).|  
-|HY091|Ungültiger Deskriptorfeldbezeichner|*FieldIdentifier* kein ODBC-definierten-Feld und nicht wurde ein implementierungsdefinierte Wert.<br /><br /> *FieldIdentifier* wurde nicht definiert, für die *DescriptorHandle*.|  
-|HY117|Verbindung wird aufgrund eines unbekannten Transaktionsstatus angehalten. Trennen Sie nur aus, und nur-Lese Funktionen sind zulässig.|(DM) finden Sie weitere Informationen zum Zustand "angehalten" [SQLEndTran-Funktion](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Das Verbindungstimeout ist abgelaufen|Das Verbindungstimeout ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Das Verbindungstimeout festgelegt ist, über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Diese Funktion wird vom Treiber nicht unterstützt werden.|(DM) der Treiber zugeordnet der *DescriptorHandle* die Funktion nicht unterstützt.|  
+|01000|Allgemeine Warnung|Treiber spezifische Informations Meldung. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|01004|Zeichen folgen Daten, rechts abgeschnitten|Der Puffer \* *ValuePtr* war nicht groß genug, um das gesamte Deskriptorfeld zurückzugeben, sodass das Feld abgeschnitten wurde. Die Länge des nicht abgeschnittene deskriptorfelds wird in "**stringlengthptr*" zurückgegeben. (Die Funktion gibt SQL_SUCCESS_WITH_INFO zurück.)|  
+|07009|Ungültiger deskriptorindex.|(DM) das *RecNumber* -Argument war gleich 0, das SQL_ATTR_USE_BOOKMARK-Anweisungs Attribut war SQL_UB_OFF, und das *Deskriptorhandle* -Argument war ein IRD-handle. (Dieser Fehler kann nur für einen explizit zugewiesenen Deskriptor zurückgegeben werden, wenn der Deskriptor einem Anweisungs Handle zugeordnet ist.)<br /><br /> Das *fieldidentifier* -Argument war ein Daten Satz Feld, das " *RecNumber* "-Argument war "0", und das *Deskriptorhandle* -Argument war ein IPD-handle.<br /><br /> Das *RecNumber* -Argument war kleiner als 0 (null).|  
+|08S01|Kommunikations Verbindungsfehler|Die Kommunikationsverbindung zwischen dem Treiber und der Datenquelle, mit der der Treiber verbunden war, ist fehlgeschlagen, bevor die Funktion die Verarbeitung abgeschlossen hat.|  
+|HY000|Allgemeiner Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer SQLSTATE vorhanden war und für den kein Implementierungs spezifischer SQLSTATE definiert wurde. Die von **SQLGetDiagRec** im * \*MessageText* -Puffer zurückgegebene Fehlermeldung beschreibt den Fehler und die Ursache.|  
+|HY001|Fehler bei der Speicher Belegung|Der Treiber konnte den erforderlichen Arbeitsspeicher nicht zuordnen, um die Ausführung oder den Abschluss der Funktion zu unterstützen.|  
+|HY007|Die zugehörige Anweisung ist nicht vorbereitet.|*Descriptorhandle* wurde einem *StatementHandle* als IRD zugeordnet, und das zugehörige Anweisungs Handle wurde nicht vorbereitet oder ausgeführt.|  
+|HY010|Funktions Sequenz Fehler|(DM) *descriptorhandle* wurde einem *StatementHandle* zugeordnet, für das eine asynchron ausgeführte Funktion (nicht diese) aufgerufen wurde und noch ausgeführt wurde, als diese Funktion aufgerufen wurde.<br /><br /> (DM) *descriptorhandle* wurde einem *StatementHandle* zugeordnet, für das **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**oder **SQLSetPos** aufgerufen und SQL_NEED_DATA zurückgegeben wurde. Diese Funktion wurde aufgerufen, bevor Daten für alle Data-at-Execution-Parameter oder-Spalten gesendet wurden.<br /><br /> (DM) eine asynchron ausgeführte Funktion wurde für das Verbindungs Handle aufgerufen, das dem *Deskriptorhandle*zugeordnet ist. Diese asynchrone Funktion wurde noch ausgeführt, als die **SQLGetDescField** -Funktion aufgerufen wurde.|  
+|HY013|Speicher Verwaltungsfehler|Der Funktions Aufrufwert konnte nicht verarbeitet werden, da auf die zugrunde liegenden Speicher Objekte nicht zugegriffen werden konnte, möglicherweise aufgrund von wenig Arbeitsspeicher.|  
+|HY021|Inkonsistente Deskriptorinformationen|Die Felder "SQL_DESC_TYPE" und "SQL_DESC_DATETIME_INTERVAL_CODE" bilden keinen gültigen ODBC-SQL-Typ, einen gültigen treiberspezifischen SQL-Typ (für IPDS) oder einen gültigen ODBC-C-Typ (für APDS oder ARDs).|  
+|HY090|Ungültige Zeichen folgen-oder Pufferlänge|(DM) * \*ValuePtr* war eine Zeichenfolge, und *BufferLength* war kleiner als 0 (null).|  
+|HY091|Ungültiger Deskriptorfeldbezeichner.|*Fieldidentifier* war kein ODBC-definiertes Feld und kein von der Implementierung definierter Wert.<br /><br /> *Fieldidentifier* war für das *Deskriptorhandle*nicht definiert.|  
+|HY117|Die Verbindung wurde aufgrund eines unbekannten Transaktions Zustands angehalten. Nur Disconnect-und Read-Only-Funktionen sind zulässig.|(DM) Weitere Informationen zum angehaltenen Status finden Sie unter [SQLEndTran Function](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Verbindungs Timeout abgelaufen|Der Verbindungs Timeout Zeitraum ist abgelaufen, bevor die Datenquelle auf die Anforderung geantwortet hat. Der Timeout Zeitraum für die Verbindung wird über **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT festgelegt.|  
+|IM001|Der Treiber unterstützt diese Funktion nicht.|(DM) der dem *Deskriptorhandle* zugeordnete Treiber unterstützt die-Funktion nicht.|  
   
 ## <a name="comments"></a>Kommentare  
- Kann eine Anwendung aufrufen **SQLGetDescField** um den Wert eines einzelnen Felds eines Datensatzes Deskriptor zurückzugeben. Ein Aufruf von **SQLGetDescField** die Einstellung eines Felds in einen Deskriptortyp, wie z.B. Headerfelder Datensatzfelder und Lesezeichen Felder zurückgeben kann. Eine Anwendung kann die Einstellungen aus mehreren Feldern in die gleichen oder ein anderen-Deskriptoren in willkürlicher Reihenfolge abrufen, indem Sie wiederholte Aufrufe an **SQLGetDescField**. **SQLGetDescField** kann auch zum Zurückgeben von deskriptorfelder treiberdefinierten aufgerufen werden.  
+ Eine Anwendung kann **SQLGetDescField** aufrufen, um den Wert eines einzelnen Felds eines deskriptordaten Satzes zurückzugeben. Ein **SQLGetDescField** -Befehl kann die Einstellung eines beliebigen Felds in einem beliebigen Deskriptortyp, einschließlich Header Felder, Datensatz-Felder und Lesezeichen Felder, zurückgeben. Eine Anwendung kann die Einstellungen mehrerer Felder in der gleichen oder in anderen Deskriptoren in beliebiger Reihenfolge abrufen, indem wiederholte Aufrufe von **SQLGetDescField**durchführen werden. **SQLGetDescField** kann auch aufgerufen werden, um Treiber definierte Deskriptorfelder zurückzugeben.  
   
- Zur Verbesserung der Leistung, eine Anwendung nicht aufrufen sollten **SQLGetDescField** für eine IRD vor der Ausführung einer Anweisung.  
+ Aus Leistungsgründen sollte eine Anwendung **SQLGetDescField** nicht für einen IRD aufrufen, bevor eine-Anweisung ausgeführt wird.  
   
- Die Einstellungen aus mehreren Feldern, die den Namen, Datentyp und Speicherung von Daten für Spalte oder Parameter zu beschreiben, können auch in einem einzigen Aufruf abgerufen werden **SQLGetDescRec**. **SQLGetStmtAttr** aufgerufen werden, um die Einstellung von einem einzelnen Feld im Deskriptor-Header zurückgegeben, der auch ein Anweisungsattribut ist. **SQLColAttribute**, **SQLDescribeCol**, und **SQLDescribeParam** Datensatz oder ein Lesezeichen Felder zurück.  
+ Die Einstellungen mehrerer Felder, die den Namen, den Datentyp und die Speicherung von Spalten-oder Parameterdaten beschreiben, können auch in einem einzelnen **SQLGetDescRec**-Befehl abgerufen werden. **SQLGetStmtAttr** kann aufgerufen werden, um die Einstellung eines einzelnen Felds im deskriptorheader zurückzugeben, bei dem es sich auch um ein Anweisungs Attribut handelt. **SQLColAttribute**, **SQLDescribeCol**und **SQLDescribeParam** geben Daten Satz-oder Lesezeichen Felder zurück.  
   
- Wenn eine Anwendung ruft **SQLGetDescField** zum Abrufen des Werts eines Felds, das für einen bestimmten Deskriptortyp undefiniert ist die Funktion gibt SQL_SUCCESS zurück, aber der Wert zurückgegeben, für das Feld ist nicht definiert. Zum Beispiel der Aufruf **SQLGetDescField** für das Feld SQL_DESC_NAME oder SQL_DESC_NULLABLE eines APD oder ARD SQL_SUCCESS jedoch einen nicht definierten Wert für das Feld zurück.  
+ Wenn eine Anwendung **SQLGetDescField** aufruft, um den Wert eines Felds abzurufen, das für einen bestimmten Deskriptortyp nicht definiert ist, gibt die Funktion SQL_SUCCESS zurück, der für das Feld zurückgegebene Wert ist jedoch nicht definiert. Beispielsweise gibt das Aufrufen von **SQLGetDescField** für das SQL_DESC_NAME oder SQL_DESC_NULLABLE Feld eines APD oder einer ARD SQL_SUCCESS, aber einen nicht definierten Wert für das Feld zurück.  
   
- Wenn eine Anwendung ruft **SQLGetDescField** zum Abrufen des Werts eines Felds aus, für einen bestimmten Deskriptortyp definiert ist, aber hat keinen Standardwert und wurde noch nicht festgelegt, die Funktion gibt SQL_SUCCESS zurück, aber der Wert zurückgegeben. für das Feld nicht definiert ist. Weitere Informationen für die Initialisierung der deskriptorfelder und Beschreibungen der Felder finden Sie unter "Initialisierung der Deskriptorfelder" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Weitere Informationen zu den sicherheitsbeschreibungen, finden Sie unter [Deskriptoren](../../../odbc/reference/develop-app/descriptors.md).  
+ Wenn eine Anwendung **SQLGetDescField** aufruft, um den Wert eines Felds abzurufen, das für einen bestimmten Deskriptortyp definiert ist, aber keinen Standardwert hat und noch nicht festgelegt wurde, gibt die Funktion SQL_SUCCESS zurück, aber der für das Feld zurückgegebene Wert ist nicht definiert. Weitere Informationen zur Initialisierung von Deskriptorfeldern und Beschreibungen der Felder finden Sie unter "Initialisierung von Deskriptorfeldern" in [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). Weitere Informationen zu Deskriptoren finden Sie unter [Deskriptors](../../../odbc/reference/develop-app/descriptors.md).  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Abrufen von deskriptorfelder für mehrere|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Festlegen einer einzelnen Deskriptorfeld|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Festlegen von mehreren deskriptorfeldern|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Mehrere Deskriptorfelder werden abgerufen.|[SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Festlegen eines einzelnen deskriptorfelds|[SQLSetDescField-Funktion](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Festlegen mehrerer Deskriptorfelder|[SQLSetDescRec-Funktion](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [ODBC-Headerdateien](../../../odbc/reference/install/odbc-header-files.md)

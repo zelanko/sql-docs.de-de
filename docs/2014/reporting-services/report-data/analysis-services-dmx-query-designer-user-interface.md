@@ -18,13 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d43ce55186f9545c1eb237620960fb678a4f402
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891304"
 ---
 # <a name="analysis-services-dmx-query-designer-user-interface"></a>Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt grafische Abfrage-Designer zum Erstellen von DMX-Abfragen (Data Mining-Erweiterungen) und MDX-Abfragen (Multidimensional Expression) für eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenquelle bereit. Dieses Thema beschreibt den DMX-Abfrage-Designer. Weitere Informationen zum MDX-Abfrage-Designer finden Sie unter [Analysis Services MDX Query Designer User Interface](analysis-services-mdx-query-designer-user-interface.md).  
   
  Der grafische DMX-Abfrage-Designer verfügt über drei Modi: Entwurf, Abfrage und Ergebnis. Klicken Sie mit der rechten Maustaste in den Abfrageentwurfsbereich, um zwischen den Modi zu wechseln, und wählen Sie den gewünschten Modus aus. Jeder Modus bietet einen Metadatenbereich, aus dem Sie Elemente aus den ausgewählten Cubes ziehen können, um eine DMX-Abfrage zu erstellen. Die DMX-Abfrage ruft Daten für ein Dataset ab, wenn der Bericht verarbeitet wird.  
@@ -32,22 +33,22 @@ ms.locfileid: "68891304"
 ## <a name="graphical-dmx-query-designer-toolbar"></a>Symbolleiste für den grafischen DMX-Abfrage-Designer  
  Die Symbolleiste des Abfrage-Designers beinhaltet Schaltflächen, die Ihnen den Entwurf von DMX-Abfragen mithilfe der grafischen Oberfläche ermöglichen. In der folgenden Tabelle werden die Schaltflächen und ihre Funktionen beschrieben.  
   
-|Schaltfläche|Beschreibung|  
+|Schaltfläche|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Deaktiviert für diesen Datenquellentyp.|  
 |**Importieren**|Importieren einer vorhandenen Abfrage aus einer Berichtsdefinitionsdatei (.rdl) im Dateisystem. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
-|![Wechseln zur MDX-Abfrageansicht](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Change to MDX query view")|Wechseln zum Modus für den MDX-Abfrage-Designer.|  
-|![Wechseln zur DMX-Abfragesprachenansicht](../media/rsqdicon-commandtypedmx.gif "Change to DMX query language view")|Wechseln zum Modus für den DMX-Abfrage-Designer.|  
-|![Aktualisieren der Ergebnisdaten](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Refresh result data")|Aktualisieren von Metadaten aus der Datenquelle.|  
+|![Ändern der MDX-Abfragesicht](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-commandtypemdx.gif "Ändern der MDX-Abfragesicht")|Wechseln zum Modus für den MDX-Abfrage-Designer.|  
+|![Ändern der Anzeige der DMX-Abfragesprache](../media/rsqdicon-commandtypedmx.gif "Ändern der Anzeige der DMX-Abfragesprache")|Wechseln zum Modus für den DMX-Abfrage-Designer.|  
+|![Aktualisieren der Ergebnisdaten](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-refresh.gif "Aktualisieren der Ergebnisdaten")|Aktualisieren von Metadaten aus der Datenquelle.|  
 |![Löschen](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-delete.gif "Löschen")|Löschen der ausgewählten Spalte im Datenbereich aus der Abfrage.|  
-|![Symbol für das Dialogfeld „Abfrageparameter“](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Icon for the Query Parameters dialog box")|Anzeigen des Dialogfelds **Abfrageparameter** . Wenn Sie einer Variablen einen Standardwert zuweisen, wird ein entsprechender Berichtsparameter erstellt, wenn Sie im Berichts-Designer zur Layoutansicht wechseln.|  
-|![Führen Sie die Abfrage aus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Run the query")|Bereitet die Abfrage vor.|  
-|![In Entwurfsmodus wechseln](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Switch to Design mode")|Umschalten zwischen Entwurfsmodus und Abfragemodus. Klicken Sie mit der rechten Maustaste in den Entwurfsbereich, und wählen Sie **Ergebnis**aus, um zur Ergebnisansicht zu wechseln.|  
+|![Dialogfeld für Abfrageparameter (Symbol)](https://docs.microsoft.com/analysis-services/analysis-services/media/iconqueryparameter.gif "Dialogfeld für Abfrageparameter (Symbol)")|Anzeigen des Dialogfelds **Abfrageparameter** . Wenn Sie einer Variablen einen Standardwert zuweisen, wird ein entsprechender Berichtsparameter erstellt, wenn Sie im Berichts-Designer zur Layoutansicht wechseln.|  
+|![Ausführen der Abfrage](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "Abfrage ausführen")|Bereitet die Abfrage vor.|  
+|![Wechseln in den Entwurfs Modus](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "Wechselt in den Entwurfsmodus")|Umschalten zwischen Entwurfsmodus und Abfragemodus. Klicken Sie mit der rechten Maustaste in den Entwurfsbereich, und wählen Sie **Ergebnis**aus, um zur Ergebnisansicht zu wechseln.|  
   
 ## <a name="graphical-dmx-query-designer-in-design-mode"></a>Grafischer DMX-Abfrage-Designer im Entwurfsmodus  
  Wenn Sie ein Dataset bearbeiten, das eine [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Datenquelle ohne gültige Cubes verwendet, aber gültige Miningmodelle aufweist, wird der grafische Abfrage-Designer im Entwurfsmodus geöffnet. In der folgenden Abbildung werden die Bereiche für den Entwurfsmodus bezeichnet.  
   
- ![Analysis Services-DMX-Abfrage-Designer, Entwurfsansicht](../media/rsqd-dsawas-dmx-designmode.gif "Analysis Services DMX query designer, design view")  
+ ![DMX-Abfrage-Designer für Analysis Services, Entwurfsansicht](../media/rsqd-dsawas-dmx-designmode.gif "DMX-Abfrage-Designer für Analysis Services, Entwurfsansicht")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -63,7 +64,7 @@ ms.locfileid: "68891304"
   
  In der folgenden Abbildung sind die Bereiche für den Abfragemodus veranschaulicht.  
   
- ![Analysis Services-DMX-Abfrage-Designer, Abfrageansicht](../media/rsqd-dsawas-dmx-querymode.gif "Analysis Services DMX query designer, query view")  
+ ![DMX-Abfrage-Designer für Analysis Services, Abfrageansicht](../media/rsqd-dsawas-dmx-querymode.gif "DMX-Abfrage-Designer für Analysis Services, Abfrageansicht")  
   
  Die folgende Tabelle beschreibt die Funktion jedes Bereichs.  
   
@@ -79,17 +80,17 @@ ms.locfileid: "68891304"
   
  In der folgenden Abbildung ist der Abfrage-Designer im Ergebnismodus dargestellt.  
   
- ![Analysis Services-DMX-Abfrage-Designer, Ergebnisansicht](../media/rsqd-dsawas-dmx-resultmode.gif "Analysis Services DMX query designer, result view")  
+ ![DMX-Abfrage-Designer für Analysis Services, Ergebnisansicht](../media/rsqd-dsawas-dmx-resultmode.gif "DMX-Abfrage-Designer für Analysis Services, Ergebnisansicht")  
   
  Klicken Sie zum Zurückwechseln in den Entwurfsmodus oder Abfragemodus mit der rechten Maustaste in den Ergebnisbereich, und wählen Sie **Entwurf** oder **Abfrage**aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
- [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
- [Abrufen von Daten aus einem Data Mining-Modell &#40;DMX, SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
+ [Analysis Services Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)   
+ [Abrufen von Daten aus einem Data Mining-Modell &#40;DMX-&#41; &#40;SSRS&#41;](retrieve-data-from-a-data-mining-model-dmx-ssrs.md)   
  [RSReportDesigner-Konfigurationsdatei](../report-server/rsreportdesigner-configuration-file.md)   
- [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services Verbindungstyp für MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Analysis Services Verbindungstyp für DMX &#40;SSRS&#41;](analysis-services-connection-type-for-dmx-ssrs.md)  
   
   

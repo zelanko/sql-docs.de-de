@@ -1,5 +1,5 @@
 ---
-title: Datensätze und Datenströme | Microsoft-Dokumentation
+title: Datensätze und Streams | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,57 +15,57 @@ ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67924498"
 ---
 # <a name="records-and-streams"></a>Datensätze und Datenströme
-ADO bietet derzeit die [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als das primäre Mittel für den Zugriff auf Informationen in den Datenquellen, z. B. relationalen Datenbanken. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) und [Stream](../../../ado/reference/ado-api/stream-object-ado.md) Objekte als alternative oder Ergänzung-Objekte, die mit dem Daten von Anbietern bearbeitet werden können. Einzelheiten zur **Datensatz** Verhalten, finden Sie in der Dokumentation des Anbieters.  
+ADO stellt derzeit das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt als primäres Mittel für den Zugriff auf Informationen in Datenquellen, z. b. relationale Datenbanken, bereit. Einige Anbieter unterstützen jedoch die [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -und [Streamobjekte](../../../ado/reference/ado-api/stream-object-ado.md) als Alternative oder ergänzende Objekte, mit denen Daten von Anbietern bearbeitet werden können. Einzelheiten zum **Daten Satz** Verhalten finden Sie in der Dokumentation Ihres Anbieters.  
   
 ## <a name="records"></a>Datensätze  
- **Datensatz** Objekte funktionieren im Wesentlichen als einzeilige **Recordset**s. Allerdings **Datensätze** haben eingeschränkte Funktionalität, die im Vergleich zu **Recordsets** und verfügen über unterschiedliche Eigenschaften und Methoden. Die Quelle für die Daten in einem **Datensatz** -Objekt eines Befehls, der eine Zeile mit Daten vom Anbieter zurückgegeben werden kann. Mithilfe von **Datensatz** Objekte statt **Recordset** Objekte auf die Ergebnisse aus einer Abfrage, die eine Zeile mit Daten zurückgibt erübrigt den Aufwand der Instanziierung je komplexer **Recordset**  Objekt.  
+ **Daten Satz** Objekte funktionieren im Wesentlichen als einzeilige **Recordsets**. Allerdings weisen **Datensätze** im Vergleich zu **Recordsets** eingeschränkte Funktionalität auf, und Sie verfügen über unterschiedliche Eigenschaften und Methoden. Die Quelle für die Daten in einem **Datensatz** -Objekt kann ein Befehl sein, der eine Daten Zeile vom Anbieter zurückgibt. Wenn Sie Daten **Satz** Objekte anstelle von **Recordset** -Objekten verwenden, um die Ergebnisse einer Abfrage zu empfangen, die eine Daten Zeile zurückgibt, entfällt der Aufwand der Instanziierung des komplexeren **Recordsetobjekts** .  
   
- **Datensatz** Objekte können einen anderen Zweck dienen, insbesondere bei Anbietern für andere Datenquellen als herkömmlichen relationalen Datenbanken, z. B. die [Microsoft OLE DB-Anbieter für Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Ein Großteil der Informationen, die verarbeitet werden muss, vorhanden ist, nicht als Tabellen in Datenbanken, sondern als Nachrichten in e-Mail-Systeme und Dateien in modernen Dateisystemen. Die **Datensatz** und **Stream** Objekte erleichtern den Zugriff auf Informationen aus anderen Quellen als relationale Datenbanken.  
+ Daten **Satz** Objekte können einen anderen Zweck erfüllen, insbesondere bei Anbietern für andere Datenquellen als herkömmliche relationale Datenbanken, wie z. b. den [Microsoft OLE DB-Anbieter für die Internet Veröffentlichung](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Ein Großteil der Informationen, die verarbeitet werden müssen, ist nicht als Tabellen in Datenbanken, sondern als Nachrichten in elektronischen e-Mail-Systemen und Dateien in modernen Dateisystemen vorhanden. Der **Datensatz** und die **Streamobjekte** vereinfachen den Zugriff auf Informationen, die in anderen Quellen als relationalen Datenbanken gespeichert sind.  
   
- Die **Datensatz** Objekt darstellen und Verwalten von Daten, z. B. Verzeichnisse und Dateien in einem Dateisystem oder Ordner und Nachrichten in einem e-Mail-System kann. Für diese Zwecke, die Quelle für die **Datensatz** möglich, dass die aktuelle Zeile eines geöffneten **Recordset**, eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md) -Objekt.  
+ Das **Datensatz** -Objekt kann Daten, z. b. Verzeichnisse und Dateien in einem Dateisystem oder in Ordnern und Meldungen in einem e-Mail-System, darstellen und verwalten. Zu diesem Zweck kann die Quelle für den **Datensatz** die aktuelle Zeile eines geöffneten **Recordsets**, eine absolute URL oder eine relative URL in Verbindung mit einem geöffneten [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekt sein.  
   
- In der Regel eine **Recordset** können verwendet werden, um einen Container oder das übergeordnete Element in einer Hierarchie, z. B. einen Ordner oder Verzeichnis darstellen. Ein **Datensatz** können verwendet werden, um bestimmte Informationen zu einem Knoten im übergeordneten Container, z. B. eine Datei oder des Dokuments zurückgeben. Der Hauptgrund **Datensätze** werden verwendet, um diese Art von Informationen darstellen, dass diese Datenquellen heterogen sind. Dies bedeutet, dass jedes **Datensatz** möglicherweise einen anderen Satz und die Anzahl der Felder. Herkömmliche **Recordsets** enthaltenen Zeilen aus einer Datenbank sind homogen, was bedeutet, dass jede Zeile die gleiche Anzahl und Art der Felder enthält.  
+ In der Regel kann ein **Recordset** verwendet werden, um einen Container oder ein übergeordnetes Element in einer Hierarchie (z. b. Ordner oder Verzeichnis) darzustellen. Ein **Datensatz** kann verwendet werden, um bestimmte Informationen zu einem Knoten im übergeordneten Container zurückzugeben, z. b. eine Datei oder ein Dokument. Der Hauptgrund für Daten **Sätze** ist, diese Art von Informationen darzustellen, dass diese Datenquellen heterogen sind. Dies bedeutet, dass jeder **Datensatz** einen anderen Satz und eine andere Anzahl von Feldern aufweisen kann. Herkömmliche **Recordsets** , die Zeilen aus einer Datenbank enthalten, sind homogen, was bedeutet, dass jede Zeile dieselbe Anzahl und denselben Typ von Feldern hat.  
   
- Weitere Informationen zur Verwendung der **Datensatz** -Objekt für die Verarbeitung dieser heterogene Daten von Anbietern wie dem Internet-Publishing-Anbieter, finden Sie unter [mithilfe von ADO für Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
+ Weitere Informationen zur Verwendung des **Datensatz** -Objekts für die Verarbeitung dieser heterogenen Daten von Anbietern, wie z. b. dem Internet Publishing Provider, finden Sie unter [Verwenden von ADO für die Internetveröffentlichung](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
 ## <a name="streams"></a>Datenströme  
- Die **Stream** Objekt bietet die Möglichkeit, lesen, schreiben und verwalten einen Stream von Bytes. Dieser Bytedatenstrom kann Text oder binär sein und ist in ihrer Größe nur durch die verfügbaren Systemressourcen begrenzt. In der Regel ADO **Stream** Objekte werden für folgende Zwecke verwendet:  
+ Das **Stream** -Objekt bietet die Möglichkeit, einen Bytestream zu lesen, zu schreiben und zu verwalten. Dieser Bytestream kann Text oder binär sein und ist nur durch Systemressourcen beschränkt. In der Regel werden ADO- **Streamobjekte** für folgende Zwecke verwendet:  
   
--   Um die Daten von aufzunehmen eine **Recordset** im XML-Format gespeichert. Diese XML-Streams aus gespeicherten **Recordset**s kann als Quelle verwendet werden, wenn Sie ein neues öffnen **Recordset**. Weitere Informationen finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  
+-   , Wenn die Daten eines im XML-Format gespeicherten **Recordsets** enthalten sein sollen. Diese XML-Streams aus gespeicherten **Recordsets**können als Quelle beim Öffnen eines neuen **Recordsets**verwendet werden. Weitere Informationen finden Sie unter [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md).  
   
--   Enthält [CommandStreams](../../../ado/reference/ado-api/commandstream-property-ado.md) für den Anbieter ausgeführt werden, als Alternative zur [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md). Beispielsweise kann XML-UpdateGrams als Quelle für einen Befehl für den Microsoft OLE DB-Anbieter für SQL Server verwendet werden.  
+-   , Um [commandstreams](../../../ado/reference/ado-api/commandstream-property-ado.md) zu enthalten, die für den Anbieter als Alternative zu [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md)ausgeführt werden sollen. XML-Update grams können z. b. als Quelle für einen Befehl für den Microsoft OLE DB-Anbieter für SQL Server verwendet werden.  
   
--   Ergebnisse als vom Anbieter in einem Format erhält eine **Recordset**, z. B. XML-Ergebnisse aus der Microsoft OLE DB-Anbieter für SQL Server. Weitere Informationen finden Sie unter [Abrufen von Resultsets in Streams](../../../ado/guide/data/retrieving-resultsets-into-streams.md).  
+-   Zum Empfangen von Ergebnissen vom Anbieter in einem anderen Format als einem **Recordset**, z. b. XML-Ergebnisse des Microsoft OLE DB-Anbieters für SQL Server. Weitere Informationen finden Sie unter [Abrufen von Resultsets in Streams](../../../ado/guide/data/retrieving-resultsets-into-streams.md).  
   
--   Enthält den Text oder die Bytes, die eine Datei oder eine Nachricht, die in der Regel mit Anbietern wie Microsoft OLE DB-Anbieter für Internet Publishing verwendet besteht. Weitere Informationen zu dieser Verwendung von **Stream** Objekten finden Sie [mithilfe von ADO für Internet Publishing](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
+-   , Um den Text oder die Bytes zu enthalten, die eine Datei oder Nachricht enthalten, die in der Regel mit Anbietern wie dem Microsoft OLE DB-Anbieter für die Internet Veröffentlichung verwendet wird. Weitere Informationen zu dieser Verwendung von **Streamobjekten** finden Sie unter [Verwenden von ADO für die Internet Veröffentlichung](../../../ado/guide/data/using-ado-for-internet-publishing.md).  
   
- Ein **Stream** Objekt kann auf geöffnet werden:  
+ Ein **Stream** -Objekt kann geöffnet werden für:  
   
--   Eine einfache Datei, die mit einer URL angegeben.  
+-   Eine einfache Datei, die mit einer URL angegeben ist.  
   
--   Ein Feld einer **Datensatz** oder **Recordset** mit einem **Stream** Objekt.  
+-   Ein Feld eines **Datensatzes** oder eines **Recordsets** , das ein **Streamobjekt** enthält.  
   
--   Der standardmäßigen Datenstrom ein **Datensatz** oder **Recordset** Objekt, das ein Verzeichnis oder die Verbunddatei darstellt.  
+-   Der Standardstream eines **Datensatz** -oder **Recordset** -Objekts, das ein Verzeichnis oder eine Verbund Datei darstellt.  
   
--   Ein Feld für die Ressource, die eine einfache Datei-URL enthält.  
+-   Ein Ressourcen Feld, das die URL einer einfachen Datei enthält.  
   
--   Kein bestimmtes Quelle. In diesem Fall eine **Stream** Objekt im Arbeitsspeicher geöffnet ist. Daten können in Sie geschrieben wird und dann gespeichert, in einer anderen **Stream** oder Datei.  
+-   Überhaupt keine bestimmte Quelle. In diesem Fall wird ein **Stream** -Objekt im Arbeitsspeicher geöffnet. Daten können darauf geschrieben und dann in einem anderen **Stream** oder einer anderen Datei gespeichert werden.  
   
 -   Ein BLOB-Feld in einem **Recordset**.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Streams und Persistenz](../../../ado/guide/data/streams-and-persistence.md)  
+-   [Datenströme und Persistenz](../../../ado/guide/data/streams-and-persistence.md)  
   
--   [Command-Streams](../../../ado/guide/data/command-streams.md)  
+-   [Command-Datenströme](../../../ado/guide/data/command-streams.md)  
   
--   [Abrufen von Resultsets in Streams](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
+-   [Abrufen von Resultsets in Datenströme](../../../ado/guide/data/retrieving-resultsets-into-streams.md)  
   
--   [Using ADO for Internet Publishing (Verwenden von ADO für Internet-Publishing)](../../../ado/guide/data/using-ado-for-internet-publishing.md)
+-   [Verwenden von ADO für die Veröffentlichung im Internet](../../../ado/guide/data/using-ado-for-internet-publishing.md)

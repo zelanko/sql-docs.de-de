@@ -16,10 +16,10 @@ ms.assetid: 752ec96d-53d7-4160-8ed2-92e0324645f3
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 700878062dc302296dd827fb5e7db9b52c4286f3
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73727795"
 ---
 # <a name="versions-master-data-services"></a>Versionen (Master Data Services)
@@ -68,20 +68,20 @@ ms.locfileid: "73727795"
     > [!NOTE]  
     >  Eine Einstellung in [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] bestimmt, ob alle oder nur die durch ein Commit bestätigten Versionen kopiert werden können. Um gleichzeitige Versionen zu erstellen, müssen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] konfigurieren, um es Ihnen zu ermöglichen, alle Versionen zu kopieren. Diese Einstellung ist auch in der Tabelle Systemeinstellungen verfügbar. Weitere Informationen finden Sie unter [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versionsnamens &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
-|Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Sperren einer Version &#40;Master Data Services&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
+|Ändern Sie den Namen einer vorhandenen Version.|[Ändern eines Versions namens &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)|  
+|Sperren Sie eine Version, sodass nur Administratoren die Daten bearbeiten können.|[Eine Version &#40;Master Data Services Sperren&#41;](../master-data-services/lock-a-version-master-data-services.md)|  
 |Entsperren Sie eine Version, damit Benutzer die Daten bearbeiten können.|[Entsperren einer Version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)|  
-|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
-|Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
-|Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
+|Führen Sie für eine Version einen Commit aus, nachdem alle Daten überprüft wurden.|[Commit für eine Version &#40;Master Data Services durch&#41;](../master-data-services/commit-a-version-master-data-services.md)|  
+|Erstellen Sie ein neues Flag, um eine Version zu markieren.|[Erstellen Sie ein Versionsflag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)|  
+|Ändern Sie den Namen eines vorhandenen Versionsflags.|[Ändern Sie den Namen eines versionsflags &#40;Master Data Services&#41;](../master-data-services/change-a-version-flag-name-master-data-services.md)|  
 |Weisen Sie einer Version ein vorhandenes Flag zu.|[Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)|  
-|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
-|Löschen Sie eine vorhandene Version.|[Löschen einer Version &#40;Master Data Services&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
-|Löschen Sie vorläufig gelöschte Elemente aus einer Version.|[Endgültiges Löschen von Versionselementen &#40;Master Data Services&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
+|Erstellen Sie eine neue Kopie einer vorhandenen Version.|[Kopieren Sie eine Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)|  
+|Löschen Sie eine vorhandene Version.|[Hiermit wird eine Version &#40;Master Data Services gelöscht&#41;](../master-data-services/delete-a-version-master-data-services.md)|  
+|Löschen Sie vorläufig gelöschte Elemente aus einer Version.|[Versions Mitglieder &#40;Master Data Services löschen&#41;](../master-data-services/purge-version-members-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
@@ -89,6 +89,6 @@ ms.locfileid: "73727795"
   
 -   [Benachrichtigungen &#40;Master Data Services&#41;](../master-data-services/notifications-master-data-services.md)  
   
--   [Geschäftsregeln &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)  
+-   [Master Data Services von Geschäftsregeln &#40;&#41;](../master-data-services/business-rules-master-data-services.md)  
   
   

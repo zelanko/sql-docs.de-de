@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f10ba1f9ff6837d1ca308872ef166e04c417981c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63067513"
 ---
 # <a name="save-selected-tables-on-a-diagram-visual-database-tools"></a>Speichern ausgewählter Tabellen in einem Diagramm (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63067513"
   
 1.  Markieren Sie im Datenbankdiagramm die Tabellen, die gespeichert werden sollen.  
   
-2.  Wählen Sie im Menü **Datei** **Auswahl speichern**.  
+2.  Wählen Sie im Menü **Datei****Auswahl speichern**.  
   
 3.  Im Dialogfeld **Speichern** wird eine Liste der Tabellen angezeigt, die in der Datenbank aktualisiert werden, wenn Sie die Auswahl speichern.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63067513"
     > [!NOTE]  
     >  Die Tabellenliste kann mehr Tabellen enthalten, als Sie ausgewählt haben. Wenn Sie beispielsweise den Datentyp einer Spalte ändern, die eine Beziehung zu einer anderen Tabelle aufweist, werden beide Tabellen in die Liste aufgenommen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Datenbankdiagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

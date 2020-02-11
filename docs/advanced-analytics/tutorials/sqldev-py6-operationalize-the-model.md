@@ -8,13 +8,13 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6ac6abe2ea0f04ee0778b80b98bf28f3f12c2f6e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00e4ba99b23abff0147627239093328e6f483ffb
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73724718"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74901865"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>Ausführen von Vorhersagen mithilfe eines eingebetteten Python-Skripts in einer gespeicherten Prozedur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -348,7 +348,7 @@ Nachdem die gespeicherte Prozedur erstellt wurde, kann eine Bewertung anhand ein
 
 Die Ausgabe beider Prozeduren entspricht der Wahrscheinlichkeit, dass ein Trinkgeld für die Taxifahrt mit den angegebenen Parametern bzw. Eigenschaften gegeben wird.
 
-## <a name="conclusions"></a>Schlussfolgerungen
+## <a name="conclusions"></a>Zusammenfassung
 
 In diesem Tutorial haben Sie erfahren, wie Sie mit Python-Code arbeiten, der in gespeicherten Prozeduren eingebettet ist. Die Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)] macht es einfacher, Python-Modelle für Vorhersagen bereitzustellen und das erneute Training von Modellen im Rahmen eines Unternehmensdatenworkflows zu integrieren.
 
@@ -356,6 +356,6 @@ In diesem Tutorial haben Sie erfahren, wie Sie mit Python-Code arbeiten, der in 
 
 [Trainieren und Speichern eines Python-Modells](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 [Python-Erweiterung in SQL Server](../concepts/extension-python.md)

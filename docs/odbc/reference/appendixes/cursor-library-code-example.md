@@ -1,5 +1,5 @@
 ---
-title: Cursor-Bibliothek-Codebeispiel | Microsoft-Dokumentation
+title: Code Beispiel für Cursor Bibliothek | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,17 +14,17 @@ ms.assetid: 958a179c-97d9-4717-8d06-d33b715a9773
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d985786e4743b8bcc691cf6888c24153f5cb5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68019075"
 ---
 # <a name="cursor-library-code-example"></a>Codebeispiel für Cursorbibliothek
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Im folgenden Beispiel wird die Cursorbibliothek jedes Auftrags-ID, open Datums- und Status aus der ORDERS-Tabelle abrufen. Dann wird 20 Datenzeilen angezeigt. Wenn der Benutzer diese Daten aktualisiert wird, wird der Code aktualisiert die Rowset-Puffer und führt eine positioniertes Update-Anweisung. Schließlich fordert den Benutzer für die Richtung zu scrollen und wiederholt den Prozess.  
+ Im folgenden Beispiel wird die-Cursor Bibliothek verwendet, um die ID der Bestellung, das Öffnungs Datum und den Status aus der Orders-Tabelle abzurufen. Anschließend werden 20 Daten Zeilen angezeigt. Wenn der Benutzer diese Daten aktualisiert, aktualisiert der Code die rowsetpuffer und führt eine positionierte UPDATE-Anweisung aus. Schließlich wird der Benutzer zur Eingabe der Richtung aufgefordert, um den Prozess zu durchlaufen.  
   
 ```  
 #define ROWS 20  

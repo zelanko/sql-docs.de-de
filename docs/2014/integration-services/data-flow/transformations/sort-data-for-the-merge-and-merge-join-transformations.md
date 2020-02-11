@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 530cca00459ed1ae170272dfd20a54928f039b38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900319"
 ---
 # <a name="sort-data-for-the-merge-and-merge-join-transformations"></a>Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin
@@ -38,7 +38,7 @@ ms.locfileid: "62900319"
   
      Die Transformation zum Sortieren verwendet die Windows-Sortierung, um Zeichenfolgenwerte zu sortieren.  
   
-     -oder-  
+     Oder  
   
 -   Verwenden Sie den Transact-SQL-Umwandlungsoperator, um die `varchar`-Werte zuerst in `nvarchar`-Werte umzuwandeln, und sortieren Sie die Daten anschließend mit der ORDER BY-Klausel in Transact-SQL.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62900319"
   
 5.  Klicken Sie auf die Registerkarte **Eingabe- und Ausgabeeigenschaften** .  
   
-6.  Klicken Sie auf  **\<Komponentenname > Ausgabe**, und legen Sie die `IsSorted` Eigenschaft `True`.  
+6.  Klicken Sie auf ** \<Komponenten Name> Ausgabe**, und `IsSorted` legen Sie `True`die-Eigenschaft auf fest.  
   
     > [!NOTE]  
     >  Wenn Sie die `IsSorted`-Eigenschaft der Ausgabe manuell auf `True` festlegen und die Daten nicht sortiert sind, kann es beim Ausführen des Pakets in der Downstreamtransformation für Zusammenführung oder des Zusammenführungsjoins zu Vergleichsvorgängen mit fehlenden oder beschädigten Daten kommen.  
@@ -106,7 +106,7 @@ ms.locfileid: "62900319"
   
 11. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Zusammenführen](merge-transformation.md)   
  [Transformation für Zusammenführungsjoin](merge-join-transformation.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)   

@@ -19,10 +19,10 @@ ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 566445a3680dc54382a7e3e66bf77dbcbddca2e8
-ms.sourcegitcommit: 4933934fad9f3c3e16406952ed964fbd362ee086
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75548286"
 ---
 # <a name="dbosyssessions-transact-sql"></a>dbo.syssessions (Transact-SQL)
@@ -33,12 +33,12 @@ Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agen
   
  Diese Tabelle wird in der **msdb** -Datenbank gespeichert.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**wartenden**|ID einer Sitzung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents. Diese session_id ist nicht die SPID für die Sitzung, sondern vielmehr ein Identitäts Wert in dieser Systemtabelle.|  
-|**agent_start_date**|**DateTime**|Datum und Uhrzeit, zu der der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für diese Sitzung gestartet wurde.|  
+|**session_id**|**int**|ID einer Sitzung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents. Diese session_id ist nicht die SPID für die Sitzung, sondern vielmehr ein Identitäts Wert in dieser Systemtabelle.|  
+|**agent_start_date**|**datetime**|Datum und Uhrzeit, zu der der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst für diese Sitzung gestartet wurde.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können auf diese Tabelle zugreifen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

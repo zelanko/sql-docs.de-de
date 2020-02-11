@@ -1,5 +1,5 @@
 ---
-title: Beispiel für die Diagnose von DBMS-basierten Treibers | Microsoft-Dokumentation
+title: Beispiel für die Diagnose von DBMS-basierten Treibern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,16 +15,16 @@ ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076892"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Beispiel für die Diagnose des DBMS-basierten Treibers
-Ein DBMS-basierten Treiber sendet Anforderungen an ein DBMS und gibt Informationen an die Anwendung über den Treiber-Manager. Da der Treiber die Komponente, die mit dem Treiber-Manager-Schnittstellen ist, formatiert und gibt die Argumente für **SQLGetDiagRec**.  
+Ein DBMS-basierter Treiber sendet Anforderungen an ein DBMS und gibt über den Treiber-Manager Informationen an die Anwendung zurück. Da der Treiber die Komponente ist, die mit dem Treiber-Manager eine Schnittstelle besteht, werden Argumente für **SQLGetDiagRec**formatiert und zurückgegeben.  
   
- Z. B. wenn, SQL und-Dienste auf und ein Microsoft-Treiber für Oracle Rdb einen Ungültiger Cursorname gefunden, es kann die folgenden Werte zurückgeben von **SQLGetDiagRec**:  
+ Wenn beispielsweise bei Verwendung von SQL/Services ein Microsoft-Treiber für Oracle RDB einen ungültigen Cursor Namen feststellt, werden möglicherweise die folgenden Werte von **SQLGetDiagRec**zurückgegeben:  
   
 ```  
 SQLSTATE:         "34000"  
@@ -32,9 +32,9 @@ Native Error:      0
 Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver]Invalid cursor name: EMPLOYEE_CURSOR."  
 ```  
   
- Da der Fehler im Treiber hinzugefügt Präfixe der diagnosemeldung für den Anbieter ([Microsoft]) und der Treiber ([ODBC-Treiber Rdb]).  
+ Da der Fehler im Treiber aufgetreten ist, wurden der Diagnose Meldung für den Hersteller ([Microsoft]) und den Treiber ([ODBC RDB-Treiber]) Präfixe hinzugefügt.  
   
- Wenn das DBMS die EMPLOYEE-Tabelle nicht finden konnte, der Treiber formatieren und die folgenden Rückgabewerte von möglicherweise **SQLGetDiagRec**:  
+ Wenn das DBMS den Tabellen Mitarbeiter nicht finden konnte, kann der Treiber die folgenden Werte von **SQLGetDiagRec**formatieren und zurückgeben:  
   
 ```  
 SQLSTATE:         "42S02"  
@@ -43,4 +43,4 @@ Diagnostic Msg:   "[Microsoft][ODBC Rdb Driver][Rdb] %SQL-F-RELNOTDEF, Table EMP
                   "is not defined in schema."  
 ```  
   
- Da der Fehler in der Datenquelle, mit der Treiber die diagnosemeldung ein Präfix für die Datenquellen-ID (Rdb) hinzugefügt. Da der Treiber konnte von der Komponente, die mit der Datenquelle verbunden, werden die diagnosemeldung Präfixe für die Anbieter ([Microsoft]) und den Bezeichner ([ODBC-Treiber Rdb]) hinzugefügt.
+ Da der Fehler in der Datenquelle aufgetreten ist, hat der Treiber der Diagnose Nachricht ein Präfix für den Datenquellen Bezeichner ([RDB]) hinzugefügt. Da der Treiber die Komponente war, die mit der Datenquelle interstand, wurden der Diagnose Meldung Präfixe für den Hersteller ([Microsoft]) und den Bezeichner ([ODBC RDB-Treiber]) hinzugefügt.

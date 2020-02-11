@@ -14,24 +14,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188831"
 ---
 # <a name="sql-server-agent"></a>SQL Server-Agent
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt, die in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] als *Jobs* bezeichnet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent ist ein Microsoft Windows-Dienst, der geplante administrative Tasks ausführt ** , die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]in als Aufträge bezeichnet werden.  
   
  **In diesem Thema**  
   
--   [Vorteile des SQL Server-Agents](#Benefits)  
+-   [Vorteile von SQL Server-Agent](#Benefits)  
   
--   [Komponenten des SQL Server-Agents](#Components)  
+-   [Komponenten von SQL Server-Agent](#Components)  
   
--   [Sicherheit beim Verwalten des SQL Server-Agents](#Security)  
+-   [Sicherheit für die SQL Server-Agent Verwaltung](#Security)  
   
-##  <a name="Benefits"></a> Vorteile von SQL Server-Agent  
+##  <a name="Benefits"></a>Vorteile von SQL Server-Agent  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Auftragsinformationen. Aufträge enthalten mindestens einen Auftragsschritt. Jeder Schritt umfasst einen eigenen Task, z.B. das Sichern einer Datenbank.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent kann einen Auftrag anhand eines Zeitplans, als Reaktion auf ein bestimmtes Ereignis oder bei Bedarf ausführen. Wenn Sie z.B. am Ende jedes Arbeitstages alle Server des Unternehmens sichern möchten, können Sie diesen Task automatisieren. Planen Sie die Sicherung so, dass sie montags bis freitags nach 22:00 Uhr ausgeführt wird. Falls bei der Sicherung ein Problem auftritt, kann der SQL Server-Agent das Ereignis aufzeichnen und Sie benachrichtigen.  
@@ -39,11 +39,11 @@ ms.locfileid: "68188831"
 > [!NOTE]  
 >  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst ist standardmäßig deaktiviert, wenn [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert ist, sofern der Benutzer nicht explizit festgelegt hat, dass der Dienst automatisch gestartet werden soll.  
   
-##  <a name="Components"></a> SQL Server-Agent-Komponenten  
+##  <a name="Components"></a>SQL Server-Agent Komponenten  
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet die folgenden Komponenten, um die auszuführenden Aufgaben, den Zeitpunkt der Ausführung und die Meldung erfolgreicher bzw. fehlgeschlagener Aufgaben zu definieren.  
   
-### <a name="jobs"></a>Jobs  
- Ein *Auftrag* umfasst eine angegebene Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausführt. Durch die Verwendung von Aufträgen können Sie eine Verwaltungsaufgabe so definieren, dass diese ein- oder mehrmals ausgeführt und der erfolgreiche oder fehlerhafte Ausführung überwacht werden kann. Aufträge können auf einem lokalen oder mehreren Remoteservern ausgeführt werden.  
+### <a name="jobs"></a>Aufträge  
+ Ein *Auftrag* umfasst eine angegebene Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent ausführt. Verwenden Sie Aufträge, um eine Verwaltungsaufgabe zu definieren, die einmalig oder mehrmals ausgeführt und deren Erfolgsstatus überwacht werden kann. Ein Auftrag kann auf einem einzelnen lokalen Server oder auf mehreren Remoteservern ausgeführt werden.  
   
 > [!IMPORTANT]  
 >  Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die zum Zeitpunkt eines Failoverereignisses auf einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusterinstanz ausgeführt werden, werden nach dem Failover nicht auf einem anderen Failoverclusterknoten fortgesetzt. Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents, die ausgeführt werden, wenn ein Hyper-V-Knoten angehalten wird, werden nicht fortgesetzt, wenn die Pause ein Failover zu einem anderen Knoten verursacht. Aufträge, die begonnen, aber wegen eines Failoverereignisses nicht abgeschlossen werden, werden als gestartet protokolliert, jedoch werden keine weiteren Protokolleinträge für Abschluss oder Fehler erstellt. Unter diesen Umständen werden die betreffenden Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents scheinbar nie beendet.  
@@ -61,7 +61,7 @@ ms.locfileid: "68188831"
  Jeder Auftragsschritt wird in einem bestimmten Sicherheitskontext ausgeführt. Bei Auftragsschritten, die [!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, nutzen Sie zum Festlegen des Sicherheitskontexts für den Auftragsschritt die EXECUTE AS-Anweisung. Bei anderen Arten von Auftragsschritten verwenden Sie ein Proxykonto, um den Sicherheitskontext für den Auftragsschritt festzulegen.  
   
 ### <a name="schedules"></a>Zeitpläne  
- Durch einen *Zeitplan* wird angegeben, wann ein Auftrag ausgeführt wird. Im Rahmen eines Zeitplans können auch mehrere Aufträge ausgeführt werden, und für einen Auftrag können mehrere Zeitpläne gelten. Ein Zeitplan kann für den Ausführungszeitpunkt eines Auftrags folgende Bedingungen definieren:  
+ Ein *Zeitplan* gibt an, wann ein Auftrag ausgeführt wird. Mehrere Aufträge können auf dem gleichen Zeitplan basieren, und für einen Auftrag können mehrere Zeitpläne gelten. Ein Zeitplan kann folgende Bedingungen für die Ausführungszeit eines Auftrags definieren:  
   
 -   Ausführung beim Start des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents.  
   
@@ -69,18 +69,19 @@ ms.locfileid: "68188831"
   
 -   Einmalige Ausführung zu einem bestimmten Zeitpunkt.  
   
--   Regelmäßige Ausführung.  
+-   Auf der Grundlage einer Zeitplanserie.  
   
  Weitere Informationen finden Sie unter [Anlegen und Zuweisen von Zeitplänen zu Aufträgen](create-and-attach-schedules-to-jobs.md).  
   
-### <a name="alerts"></a>Benachrichtigungen  
+### <a name="alerts"></a>Alerts  
  Eine *Warnung* ist eine automatische Reaktion auf ein bestimmtes Ereignis. Bei einem Ereignis kann es sich z.B. um das Starten eines Auftrags oder das Erreichen eines bestimmten Schwellenwerts bei den Systemressourcen handeln. Sie definieren die Bedingungen, unter denen eine Warnung auftritt.  
   
  Eine Warnung kann als Reaktion auf eine der folgenden Bedingungen ausgegeben werden:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Fall  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsbedingungen  
+-   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsbedingungen  
   
 -   Ereignisse in der Microsoft Windows-Verwaltungsinstrumentation (WMI) auf dem Computer, auf dem der SQL Server-Agent ausgeführt wird  
   
@@ -93,15 +94,16 @@ ms.locfileid: "68188831"
  Weitere Informationen finden Sie unter [Warnungen](alerts.md).  
   
 ### <a name="operators"></a>Operatoren  
- Ein *Operator* definiert die Kontaktinformationen einer Person, die für die Verwaltung einer oder mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zuständig ist. In einigen Unternehmen werden die Aufgaben eines Operators einer einzelnen Person zugewiesen. In größeren Unternehmen mit mehreren Servern teilen sich mehrere Personen die Aufgaben des Operators. Der Operator enthält keine Sicherheitsinformationen und definiert auch keinen Sicherheitsprinzipal.  
+ Ein *Operator* definiert die Kontaktinformationen einer Person, die für die Verwaltung einer oder mehrerer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanzen zuständig ist. In einigen Unternehmen werden die Aufgaben eines Operators einer einzelnen Person zugewiesen. In größeren Unternehmen mit mehreren Servern teilen sich mehrere Personen die Aufgaben des Operators. Ein Bediener verfügt über keine Sicherheitsinformationen und definiert keinen Sicherheitsprinzipal.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Operatoren bei Warnungen folgendermaßen benachrichtigen:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann Operatoren bei Warnungen folgendermaßen benachrichtigen:  
   
 -   E-Mail  
   
 -   Pager (per E-Mail)  
   
--   **net send**  
+-   **NET SEND**  
   
 > [!NOTE]  
 >  Um Benachrichtigungen mit **net send** zu senden, muss der Windows Messenger-Dienst auf dem Computer mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent gestartet worden sein.  
@@ -113,30 +115,31 @@ ms.locfileid: "68188831"
   
  Ein Operator kann auch als Alias für eine Gruppe von Personen definiert werden. In diesem Fall werden alle Mitglieder dieses Alias zur selben Zeit benachrichtigt. Weitere Informationen finden Sie unter [Operatoren](operators.md).  
   
-##  <a name="Security"></a> Sicherheit für SQL Server-Agent-Verwaltung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet die **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** Datenbankrollen in der **Msdb** Datenbank zum Steuern des Zugriffs auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für Benutzer, die nicht Mitglied von der `sysadmin` -Serverrolle sein. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
+##  <a name="Security"></a>Sicherheit für die SQL Server-Agent Verwaltung  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der-Agent verwendet die festgelegten Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** in der **msdb** -Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um den Zugriff auf den-Agent für `sysadmin` Benutzer zu steuern, die keine Mitglieder der Server Rolle sind. Neben diesen festen Datenbankrollen können Datenbankadministratoren mithilfe von Subsystemen und Proxys sicherstellen, dass jeder Auftragsschritt mit den mindestens erforderlichen Berechtigungen ausgeführt wird.  
   
 ### <a name="roles"></a>Rollen  
- Mitglieder der **SQLAgentUserRole**, **SQLAgentReaderRole**, und **SQLAgentOperatorRole** Datenbankrollen in **Msdb**, und Mitglieder der `sysadmin` -Serverrolle haben Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Ein Benutzer, der keiner dieser Rollen angehört, kann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht verwenden. Weitere Informationen zu den Rollen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden, finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
+ Mitglieder der Fixed-Daten bankrollen **SQLAgentUserRole**, **SQLAgentReaderRole**und **SQLAgentOperatorRole** in **msdb**und Mitglieder der `sysadmin` Fixed-Server Rolle haben Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent. Ein Benutzer, der keiner dieser Rollen angehört, kann den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent nicht verwenden. Weitere Informationen zu den Rollen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden, finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Subsysteme  
  Ein Subsystem ist ein vordefiniertes Objekt, das die für einen Auftragsschritt verfügbare Funktionalität darstellt. Jeder Proxy hat Zugriff auf mindestens ein Subsystem. Subsysteme bieten Sicherheit, weil sie den Zugriff auf die für ein Proxykonto verfügbare Funktionalität begrenzen. Jeder Auftragsschritt wird im Kontext eines Proxys ausgeführt. Ausgenommen sind lediglich [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritte. Bei [!INCLUDE[tsql](../../includes/tsql-md.md)]-Auftragsschritten wird der Sicherheitskontext mithilfe des EXECUTE AS-Befehls festgelegt.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert die in der folgenden Tabelle aufgeführten Subsysteme:  
   
-|Name des Subsystems|Beschreibung|  
+|Name des Subsystems|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> **\*\* Wichtige \* \***  das ActiveX-skriptsubsystem wird aufgehoben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
-|Betriebssystem (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
+|Microsoft ActiveX-Skript|Ausführen eines ActiveX-Skriptauftragsschritts.<br /><br /> ** \* Wichtig \* \* ** Das ActiveX Scripting-Subsystem wird in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
+|Betriebs System (**CmdExec**)|Ausführen eines ausführbaren Programms.|  
 |PowerShell|Ausführen eines PowerShell-Skripterstellungs-Auftragsschritts.|  
 |Replikationsverteiler|Ausführen eines Auftragsschritts, der den Replikationsverteilungs-Agent aktiviert.|  
 |Replikationsmerge|Ausführen eines Auftragsschritts, der den Replikationsmerge-Agent aktiviert.|  
 |Replikation-Warteschlangenleser|Ausführen eines Auftragsschritts, der den Warteschlangenleser-Agent der Microsoft SQL Server-Replikation aktiviert.|  
 |Replikationsmomentaufnahme|Ausführen eines Auftragsschritts, der den Replikationsmomentaufnahme-Agent aktiviert.|  
 |Replikationstransaktionsprotokoll-Leser|Ausführen eines Auftragsschritts, der den Protokolllese-Agent aktiviert.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Befehl|Ausführen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Befehls.|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Abfrage|Ausführen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Abfrage.|  
-|[!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketausführung|Ausführen eines [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Pakets.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]S|Ausführen eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Befehls.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Such|Ausführen einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Abfrage.|  
+|[!INCLUDE[ssIS](../../includes/ssis-md.md)]Paket Ausführung|Ausführen eines [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Pakets.|  
   
 > [!NOTE]  
 >  Da [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte keine Proxys verwenden, gibt es kein Subsystem des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auftragsschritte.  
@@ -144,9 +147,9 @@ ms.locfileid: "68188831"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent erzwingt Subsystemeinschränkungen auch dann, wenn der Sicherheitsprinzipal für den Proxy normalerweise über die Berechtigung zum Ausführen des Tasks im Auftragsschritt verfügen würde. Beispielsweise kann ein Proxykonto für einen Benutzer, der Mitglied der festen Serverrolle „sysadmin“ ist, nur einen [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Auftragsschritt ausführen, wenn das Proxykonto Zugriff auf das [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Subsystem hat. Der Benutzer kann jedoch [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete ausführen.  
   
 ### <a name="proxies"></a>Proxys  
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet Proxys zum Verwalten von Sicherheitskontexten. Ein Proxy kann für mehrere Auftragsschritte verwendet werden. Mitglieder der `sysadmin` -Serverrolle kann Proxys erstellen.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet Proxys zum Verwalten von Sicherheitskontexten. Ein Proxy kann für mehrere Auftragsschritte verwendet werden. Mitglieder der Server `sysadmin` Rolle "Fixed" können Proxys erstellen.  
   
- Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Jeder Proxy kann einer Gruppe von Subsystemen und Anmeldenamen zugeordnet werden. Der Proxy kann nur für Auftragsschritte benutzt werden, die ein dem Proxy zugeordnetes Subsystem verwenden. Um einen Auftragsschritt zu erstellen, der einen bestimmten Proxy verwendet, muss der Auftragsbesitzer einen Anmeldenamen verwenden, der diesem Proxy zugeordnet ist, oder ein Mitglied einer Rolle mit unbeschränktem Zugriff auf Proxys sein. Mitglieder der `sysadmin` -Serverrolle haben uneingeschränkten Zugriff auf Proxys. Mitglieder von **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole** können nur Proxys verwenden, für die Ihnen der Zugriff erteilt wurde. Jedem Benutzer, der Mitglied einer dieser festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents ist, muss Zugriff auf bestimmte Proxys gewährt werden, damit er Auftragsschritte erstellen kann, bei denen diese Proxys verwendet werden.  
+ Jeder Proxy entspricht einem Satz Sicherheitsanmeldeinformationen. Jeder Proxy kann einer Gruppe von Subsystemen und Anmeldenamen zugeordnet werden. Der Proxy kann nur für Auftragsschritte benutzt werden, die ein dem Proxy zugeordnetes Subsystem verwenden. Um einen Auftragsschritt zu erstellen, der einen bestimmten Proxy verwendet, muss der Auftragsbesitzer einen Anmeldenamen verwenden, der diesem Proxy zugeordnet ist, oder ein Mitglied einer Rolle mit unbeschränktem Zugriff auf Proxys sein. Mitglieder der Server `sysadmin` Rolle Fixed haben uneingeschränkten Zugriff auf Proxys. Mitglieder von **SQLAgentUserRole**, **SQLAgentReaderRole** oder **SQLAgentOperatorRole** können nur Proxys verwenden, für die Ihnen der Zugriff erteilt wurde. Jedem Benutzer, der Mitglied einer dieser festen Datenbankrollen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents ist, muss Zugriff auf bestimmte Proxys gewährt werden, damit er Auftragsschritte erstellen kann, bei denen diese Proxys verwendet werden.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Konfigurieren Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent anhand der folgenden Schritte zur Automatisierung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltung:  
@@ -176,7 +179,7 @@ ms.locfileid: "68188831"
 |Beschreibt den Wartungsplanungs-Assistenten. Hierbei handelt es sich um ein Hilfsprogramm, mit dem Sie Aufträge, Warnungen und Operatoren erstellen können, um die Verwaltung einer SQL Server-Instanz zu automatisieren.|[Verwenden des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |Beschreibt, wie administrative Aufgaben mit dem SQL Server-Agent automatisiert werden.|[Automatisierte Administrationstasks &#40;SQL Server-Agent&#41;](automated-administration-tasks-sql-server-agent.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Oberflächenkonfiguration](../../relational-databases/security/surface-area-configuration.md)  
   
   

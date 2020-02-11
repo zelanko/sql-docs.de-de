@@ -1,5 +1,5 @@
 ---
-title: Berechnungen (Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Berechnungen (Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088287"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Berechnungen (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -35,7 +35,7 @@ ms.locfileid: "66088287"
   
 ## <a name="panes"></a>Bereiche  
  **Symbolleiste**  
- Mithilfe der Symbolleiste in der Formular- und der Skriptansicht können Sie allgemeine Vorgänge auf dieser Registerkarte ausführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte „Berechnungen“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
+ Mithilfe der Symbolleiste in der Formular-und der Skript Ansicht können Sie allgemeine Vorgänge auf dieser Registerkarte ausführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte "Berechnungen", Cube-Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Skriptplaner**  
  Mithilfe des Bereichs **Skriptplaner** in der Formularansicht können Sie den Inhalt des Cubeskripts in einem geordneten Format anzeigen. Weitere Informationen zu diesem Bereich finden Sie unter [Skriptplaner &#40;Registerkarte „Berechnungen“, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md).  
@@ -49,14 +49,14 @@ ms.locfileid: "66088287"
  **Formular-Editor für berechnete Elemente**  
  Im Bereich **Formular-Editor für berechnete Elemente** können Sie in der Formularansicht berechnete Elemente im Cubeskript bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Formular-Editor für berechnete Elemente &#40;Registerkarte „Berechnungen“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](calculated-member-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
- **Formular-Editor für benannte Menge**  
+ **Formular-Editor für benannte Mengen**  
  Verwenden Sie den Bereich **Formular-Editor für benannte Mengen** in der Formularansicht, um benannte Mengen im Cubeskript zu bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Formular-Editor für benannte Mengen &#40;Registerkarte „Berechnungen“, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](named-set-form-editor-cube-designer-analysis-services-multidimensional-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Cubeobjekte &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
- [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
- [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cubeobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)   
+ [Einbeziehen](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Grundlagen der MDX-Skripterstellung &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   
+ [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Erstellen von benannten Mengen](multidimensional-models/create-named-sets.md)  
   
   

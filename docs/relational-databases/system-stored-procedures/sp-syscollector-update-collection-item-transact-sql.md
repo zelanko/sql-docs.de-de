@@ -1,5 +1,5 @@
 ---
-title: Sp_syscollector_update_collection_item (Transact-SQL) | Microsoft-Dokumentation
+title: sp_syscollector_update_collection_item (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,19 +19,19 @@ ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68010566"
 ---
-# <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
+# <a name="sp_syscollector_update_collection_item-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Wird verwendet, um die Eigenschaften eines benutzerdefinierten Sammelelements zu ändern oder um ein benutzerdefiniertes Sammelelement umzubenennen.  
   
  
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -47,26 +47,26 @@ sp_syscollector_update_collection_item
   
 ## <a name="arguments"></a>Argumente  
  [ @collection_item_id = ] *collection_item_id*  
- Ist der eindeutige lokale Bezeichner, der das sammelelement identifiziert. *Collection_item_id* ist **Int** hat den Standardwert NULL. *Collection_item_id* muss einen Wert aufweisen, wenn *Namen* ist NULL.  
+ Ist der eindeutige Bezeichner, der das Sammel Element identifiziert. *collection_item_id* ist vom Datentyp **int** und hat den Standardwert NULL. *collection_item_id* muss einen Wert haben, wenn der *Name* NULL ist.  
   
- [ @name =] '*Namen*"  
- Der Name des Sammelelements. *Namen* ist **Sysname** hat den Standardwert NULL. *Namen* muss einen Wert aufweisen, wenn *Collection_item_id* ist NULL.  
+ [ @name = ] "*Name*"  
+ Der Name des Sammelelements. *Name ist vom Datentyp* **vom Datentyp sysname** und hat den Standardwert NULL. der *Name* muss einen Wert haben, wenn *collection_item_id* NULL ist.  
   
- [ @new_name =] '*New_name*"  
- Der neue Name für das Sammelelement. *New_name* ist **Sysname**, und wenn verwendet, darf keine leere Zeichenfolge sein.  
+ [ @new_name = ] "*new_name*"  
+ Der neue Name für das Sammelelement. *new_name* ist vom **Datentyp vom Datentyp sysname**und kann, wenn verwendet, keine leere Zeichenfolge sein.  
   
- *New_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
+ *new_name* muss eindeutig sein. Wenn Sie eine Liste der aktuellen Namen von Sammelelementen abrufen möchten, fragen Sie die syscollector_collection_items-Systemsicht ab.  
   
- [ @frequency =] *Häufigkeit*  
- Die Häufigkeit (in Sekunden), mit der Daten durch dieses Sammelelement aufgezeichnet werden. *Häufigkeit* ist **Int**, hat den Standardwert 5. Dies ist der minimale Wert, der angegeben werden können.  
+ [ @frequency = ] *Häufigkeit*  
+ Die Häufigkeit (in Sekunden), mit der Daten durch dieses Sammelelement aufgezeichnet werden. *Frequency* ist vom Datentyp **int**und hat den Standardwert 5. der Minimalwert, der angegeben werden kann.  
   
- [ @parameters =] '*Parameter*"  
- Die Eingabeparameter für das Sammelelement. *Parameter* ist **Xml** hat den Standardwert NULL. Die *Parameter* -Schema muss das Schema für die Parameter des sammlertyps entsprechen.  
+ [ @parameters = ] '*Parameter*'  
+ Die Eingabeparameter für das Sammelelement. *Parameter* ist vom Typ **XML** und hat den Standardwert NULL. Das *Parameter* Schema muss dem Parameter Schema des Sammler Typs entsprechen.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder 1 (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn der Sammlungssatz auf den Modus ohne Zwischenspeicherung festgelegt ist, werden Änderungen der Häufigkeit ignoriert, da dieser Modus bewirkt, dass sowohl die Datensammlung als auch der Datenupload dem Zeitplan entsprechend stattfinden, der für den Sammlungssatz angegeben wurde. Zum Anzeigen des Status des Sammlungssatzes führen Sie die folgende Abfrage aus. Ersetzen Sie `<collection_item_id>` durch die ID des zu aktualisierenden Sammelelements.  
   
 ```  
@@ -89,7 +89,7 @@ WHERE collection_item_id = <collection_item_id>;
 -   @parameters  
   
 ## <a name="examples"></a>Beispiele  
- Die folgenden Beispiele basieren auf das sammelelement erstellt, in dem Beispiel in [Sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md).  
+ Die folgenden Beispiele basieren auf dem Sammel Element, das in dem in [sp_syscollector_create_collection_item &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)definierten Beispiel erstellt wurde.  
   
 ### <a name="a-changing-the-collection-frequency"></a>A. Ändern der Sammlungshäufigkeit  
  Im folgenden Beispiel wird die Sammlungshäufigkeit für das angegebene Sammelelement geändert.  
@@ -137,10 +137,10 @@ EXEC sp_syscollector_update_collection_item
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
- [sp_syscollector_create_collection_item &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
- [syscollector_collection_items &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
+ [sp_syscollector_create_collection_item &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)   
+ [syscollector_collection_items &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/syscollector-collection-items-transact-sql.md)  
   
   

@@ -19,21 +19,21 @@ ms.assetid: 7f13894c-5697-436c-be3d-fe16e1a02325
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0a95e1798758aa044df5196f621c6afa14958c5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67996286"
 ---
 # <a name="odbc-test"></a>ODBC-Test
-Testen Sie Microsoft® ODBC ist eine ODBC-fähige Anwendung, die Sie zum Testen der ODBC-Treiber und der ODBC-Treiber-Manager verwenden können. ODBC 3.51 enthält ANSI- und Unicode-fähigen Versionen der ODBC-Test. Die entsprechenden Dateien lauten wie folgt aus:  
+Bei Microsoft® ODBC-Test handelt es sich um eine ODBC-fähige Anwendung, mit der Sie ODBC-Treiber und den ODBC-Treiber-Manager testen können. ODBC 3,51 umfasst sowohl ANSI-als auch Unicode-fähige Versionen von ODBC-Test. Die entsprechenden Dateien lauten wie folgt:  
   
--   Odbcte32.exe und Gtrtst32.dll, für die ANSI-Version.  
+-   "Odbcte32. exe" und "Gtrtst32. dll" für die ANSI-Version.  
   
--   Odbct32w.exe und Gtrts32w.dll, für die Unicode-Version.  
+-   Odbct32w. exe und Gtrts32w. dll für die Unicode-Version.  
   
- Um ODBC-Test zu verwenden, müssen Sie die ODBC-API, die Programmiersprache C und SQL verstehen. Weitere Informationen zu ODBC-API, finden Sie unter den [ODBC Programmer's Reference](../odbc/reference/odbc-programmer-s-reference.md).  
+ Um den ODBC-Test verwenden zu können, müssen Sie sich mit der ODBC-API, der Programmiersprache C und SQL vertraut machen. Weitere Informationen zur ODBC-API finden Sie in der [ODBC Programmer es Reference](../odbc/reference/odbc-programmer-s-reference.md).  
   
- Hilfethemen, die früher in diesem Abschnitt der Dokumentation enthalten waren, sind jetzt in das Testprogramm für ODBC-enthalten. Öffnen Sie Odbcte32.exe oder Odbct32w.exe, öffnen Sie die **Hilfe** , und klicken Sie dann auf **Hilfethemen**.  
+ Hilfe Themen, die zuvor in diesem Abschnitt der Dokumentation enthalten waren, sind jetzt im ODBC-Test Programm enthalten. Öffnen Sie Odbcte32. exe oder Odbct32w. exe, öffnen Sie das Menü **Hilfe** , und klicken Sie dann auf **Hilfe Themen**.  
   
- Beachten Sie, dass die 64-Bit-Versionen dieser Anwendungen vorgesehen, die für 64-Bit-Microsoft-Windows-Betriebssysteme, die denselben Namen wie die 32-Bit-Versionen, obwohl diese separaten Dateien sind. der Name für die Unicode-Version der 64-Bit-Version des ODBC-Test ist z. B. odbct32w.exe.
+ Beachten Sie, dass die 64-Bit-Versionen dieser Anwendungen, die für 64-Bit-Microsoft Windows-Betriebssysteme vorgesehen sind, dieselben Namen wie die 32-Bit-Versionen haben, auch wenn es sich um separate Dateien handelt. der Name der Unicode-Version der 64-Bit-Version von ODBC-Test lautet z. b. odbct32w. exe.

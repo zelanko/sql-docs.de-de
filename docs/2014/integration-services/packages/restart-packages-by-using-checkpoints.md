@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f41ed858bedd18ec68794d5e7d1c13100af5254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767032"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Neustarten von Paketen mit Prüfpunkten
@@ -53,27 +53,27 @@ ms.locfileid: "62767032"
   
  In der folgenden Tabelle sind die Paketeigenschaften aufgeführt, die Sie zum Implementieren von Prüfpunkten festlegen können.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |CheckpointFileName|Gibt den Namen der Prüfpunktdatei an.|  
 |CheckpointUsage|Gibt an, ob Prüfpunkte verwendet werden.|  
 |SaveCheckpoints|Gibt an, ob das Paket Prüfpunkte speichert. Diese Eigenschaft muss auf True festgelegt sein, damit ein Paket an dem Punkt neu gestartet wird, an dem ein Fehler aufgetreten ist.|  
   
- Darüber hinaus müssen Sie die FailPackageOnFailure-Eigenschaft festlegen, um `true` für alle Container im Paket, das Sie identifizieren möchten neu starten.  
+ Außerdem müssen Sie die FailPackageOnFailure-Eigenschaft auf `true` für alle Container im Paket festlegen, die als Neustart Punkte identifiziert werden sollen.  
   
  Mit der ForceExecutionResult-Eigenschaft können Sie die Verwendung der Prüfpunkte eines Pakets testen. Sie können einen Echtzeitfehler imitieren, indem Sie die ForceExecutionResult-Eigenschaft eines Tasks oder eines Containers auf Failure festlegen. Wenn Sie das Paket erneut ausführen, werden der fehlerhafte Task bzw. die fehlerhaften Container erneut ausgeführt.  
   
 ### <a name="checkpoint-usage"></a>Syntax von Prüfpunkten  
  Die CheckpointUsage-Eigenschaft kann auf die folgenden Werte festgelegt werden:  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |`Never`|Gibt an, dass die Prüfpunktdatei nicht verwendet wird und dass das Paket vom Beginn des Paketworkflows aus ausgeführt wird.|  
 |`Always`|Gibt an, dass die Prüfpunktdatei immer verwendet wird und dass das Paket von dem Punkt aus neu gestartet wird, an dem bei der letzten Ausführung ein Fehler aufgetreten ist. Wenn die Prüfpunktdatei nicht gefunden wird, schlägt das Paket fehl.|  
 |`IfExists`|Gibt an, dass die Prüfpunktdatei verwendet wird, falls sie vorhanden ist. Wenn die Prüfpunktdatei vorhanden ist, wird das Paket an dem Punkt neu gestartet, an dem bei der letzten Ausführung ein Fehler aufgetreten ist; anderenfalls wird das Paket vom Beginn des Paketworkflows aus ausgeführt.|  
   
 > [!NOTE]  
->  Die **/CheckPointing auf** Option von Dtexec entspricht dem Festlegen der `SaveCheckpoints` -Eigenschaft des Pakets zu `True`, und die `CheckpointUsage` Eigenschaft auf Always. Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).  
+>  Die **/CheckPointing on** -Option von dtexec entspricht dem Festlegen der `SaveCheckpoints` -Eigenschaft des Pakets auf `True`und der `CheckpointUsage` -Eigenschaft auf Always. Weitere Informationen finden Sie unter [dtexec Utility](dtexec-utility.md).  
   
 ## <a name="securing-checkpoint-files"></a>Sichern von Prüfpunktdateien  
  Der Schutz auf Paketebene schließt nicht den Schutz von Prüfpunktdateien ein. Daher müssen diese Dateien separat gesichert werden. Prüfpunktdaten können nur im Dateisystem gespeichert werden. Sie sollten daher eine Zugriffssteuerungsliste (ACL, Access Control List) des Betriebssystems verwenden, um den Speicherort der Datei bzw. den Ordner, in dem die Datei gespeichert wird, zu sichern. Prüfpunktdateien sollten unbedingt gesichert werden, da sie Informationen zum Paketstatus enthalten, einschließlich der aktuellen Variablenwerte. Beispielsweise kann eine Variable ein Recordset mit mehreren Zeilen privater Daten, wie z. B. Telefonnummern, enthalten. Weitere Informationen finden Sie unter [Zugriff auf Dateien, die von Paketen verwendet werden](../access-to-files-used-by-packages.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "62767032"
   
 -   Support-Artikel [SSIS-Prüfpunkte werden bei Elementen von For- und Foreach-Schleifencontainern nicht berücksichtigt](https://go.microsoft.com/fwlink/?LinkId=241633)auf support.microsoft.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services](../sql-server-integration-services.md)  
   
   

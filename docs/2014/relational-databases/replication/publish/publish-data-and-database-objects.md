@@ -42,10 +42,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70e31ec60f8f47dfbc0a4761357c99a42623c6eb
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479318"
 ---
 # <a name="publish-data-and-database-objects"></a>Veröffentlichen von Daten und Datenbankobjekten
@@ -56,10 +56,10 @@ ms.locfileid: "74479318"
 |Tabellen|X|X|  
 |Partitionierte Tabellen|X|X|  
 |Gespeicherte Prozeduren: Definition ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|X|  
-|Gespeicherte Prozeduren – Ausführung ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|no|  
-|Ansichten|X|X|  
+|Gespeicherte Prozeduren – Ausführung ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|nein|  
+|Sichten|X|X|  
 |Indizierte Sichten|X|X|  
-|Indizierte Sichten als Tabellen|X|no|  
+|Indizierte Sichten als Tabellen|X|nein|  
 |Benutzerdefinierte Typen (CLR)|X|X|  
 |Benutzerdefinierte Funktionen ([!INCLUDE[tsql](../../../includes/tsql-md.md)] und CLR)|X|X|  
 |Aliasdatentypen|X|X|  
@@ -93,7 +93,7 @@ ms.locfileid: "74479318"
   
 -   [Definieren eines Artikels](define-an-article.md)  
   
--   [Anzeigen und Ändern von Veröffentlichungs Eigenschaften](view-and-modify-publication-properties.md)  
+-   [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md)  
   
 -   [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md)  
   
@@ -109,11 +109,11 @@ ms.locfileid: "74479318"
   
 -   [Filtern von veröffentlichten Daten](filter-published-data.md)  
   
--   [Artikeloptionen für die Transaktions Replikation](../transactional/article-options-for-transactional-replication.md)  
+-   [Article Options for Transactional Replication](../transactional/article-options-for-transactional-replication.md)  
   
 -   [Artikeloptionen für die Mergereplikation](../merge/article-options-for-merge-replication.md)  
   
--   [Replizieren von Identitäts Spalten](replicate-identity-columns.md)  
+-   [Replizieren von Identitätsspalten](replicate-identity-columns.md)  
   
  Beim Veröffentlichen einer Tabelle für die Replikation können Sie angeben, welche Schemaobjekte auf den Abonnenten kopiert werden sollen, z. B. deklarierte referenzielle Integrität (PRIMARY KEY-Einschränkungen, Referenzeinschränkungen, eindeutige Einschränkungen), Indizes, Benutzer-DML-Trigger (DDL-Trigger können nicht repliziert werden), erweiterte Eigenschaften und Sortierungen. Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "74479318"
 ## <a name="publishing-views"></a>Veröffentlichen von Sichten  
  Das Replizieren von Sichten ist bei allen Replikationstypen möglich. Dabei kann die Sicht (und der zugehörige Index, sofern es sich um eine indizierte Sicht handelt) auf den Abonnenten kopiert werden, in jedem Fall muss aber auch die Basistabelle repliziert werden.  
   
- Bei indizierten Sichten ist es bei der Transaktionsreplikation auch möglich, die indizierte Sicht als Tabelle und nicht als Sicht zu replizieren. Dadurch entfällt die Notwendigkeit, die Basistabelle mit zu replizieren. Geben Sie hierzu eine der Optionen für die "indizierte Sicht logbased" für den * \@Typparameter* [sp_addarticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)an. Weitere Informationen zum Verwenden von **sp_addarticle** finden Sie unter [Define an Article](define-an-article.md).  
+ Bei indizierten Sichten ist es bei der Transaktionsreplikation auch möglich, die indizierte Sicht als Tabelle und nicht als Sicht zu replizieren. Dadurch entfällt die Notwendigkeit, die Basistabelle mit zu replizieren. Geben Sie dazu eine der "indexed view logbased"-Optionen für den *\@type*-Parameter von [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) an. Weitere Informationen zum Verwenden von **sp_addarticle** finden Sie unter [Define an Article](define-an-article.md).  
   
 ## <a name="publishing-user-defined-functions"></a>Veröffentlichen benutzerdefinierter Funktionen  
  Die CREATE FUNCTION-Anweisungen für CLR-Funktionen und [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Funktionen werden auf alle Abonnenten kopiert. Bei CLR-Funktionen wird auch die zugehörige Assembly kopiert. Änderungen an den Funktionen werden auf die Abonnenten repliziert, während Änderungen an den zugehörigen Assemblys nicht repliziert werden.  
@@ -168,7 +168,7 @@ ms.locfileid: "74479318"
 -   Wenn Sie ein Datenbankobjekt veröffentlichen, das von mindestens einem weiteren Datenbankobjekt abhängt, müssen Sie alle Objekte veröffentlichen, auf die verwiesen wird. Wenn Sie beispielsweise eine Sicht veröffentlichen, die von einer Tabelle abhängt, muss auch die Tabelle veröffentlicht werden.  
   
     > [!NOTE]  
-    >  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des ** \@processing_order** -Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)eine Verarbeitungsreihenfolge für beide Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **\@processing_order**-Parameter von **sp_addmergearticle**, und geben Sie einen Wert von **2** für den **\@processing_order**-Parameter von **sp_changemergearticle** an. Geben Sie dann den Tabellennamen für den **\@article**-Parameter an. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für jeden Artikel verwenden, solange die Nummer für die Funktion niedriger ist als die Nummer für die Tabelle.  
+    >  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **\@processing_order**-Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) eine Verarbeitungsreihenfolge für die beiden Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **\@processing_order**-Parameter von **sp_addmergearticle**, und geben Sie einen Wert von **2** für den **\@processing_order**-Parameter von **sp_changemergearticle** an. Geben Sie dann den Tabellennamen für den **\@article**-Parameter an. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für jeden Artikel verwenden, solange die Nummer für die Funktion niedriger ist als die Nummer für die Tabelle.  
   
 -   Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten: % * [ ] | : " ? \/ \< >.  
   
@@ -208,9 +208,9 @@ ms.locfileid: "74479318"
 ### <a name="publishing-tables-in-more-than-one-publication"></a>Veröffentlichen von Tabellen in mehreren Veröffentlichungen  
  Die Replikation unterstützt das Veröffentlichen von Artikeln in mehreren Veröffentlichungen (darunter auch das erneute Veröffentlichen von Daten), wobei die folgenden Einschränkungen gelten:  
   
--   Wenn ein Artikel in einer Transaktions Veröffentlichung und einer Mergeveröffentlichung veröffentlicht wird, stellen Sie sicher, dass die * \@published_in_tran_pub* -Eigenschaft für den Mergeartikel auf true festgelegt ist. Weitere Informationen über Einstellungseigenschaften finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md) und [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md).  
+-   Wenn ein Artikel in einer Transaktionsveröffentlichung und in einer Mergeveröffentlichung veröffentlicht wird, müssen Sie sicherstellen, dass für den Mergeartikel für die *\@published_in_tran_pub*-Eigenschaft TRUE festgelegt ist. Weitere Informationen über Einstellungseigenschaften finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md) und [Anzeigen und Ändern von Artikeleigenschaften](view-and-modify-article-properties.md).  
   
-     Sie sollten auch die * \@published_in_tran_pub* -Eigenschaft festlegen, wenn ein Artikel Bestandteil eines Transaktions Abonnements und in einer Mergeveröffentlichung enthalten ist. Beachten Sie in diesem Fall, dass bei der Transaktionsreplikation Tabellen auf dem Abonnenten standardmäßig als schreibgeschützt behandelt werden. Werden bei der Mergereplikation Datenänderungen an einer Tabelle in einem Transaktionsabonnement vorgenommen, kann es zu einer Nichtkonvergenz der Daten kommen. Um dies zu vermeiden, empfiehlt es sich, solche Tabellen in der Mergeveröffentlichung als "nur herunterladbar" zu kennzeichnen. Dadurch wird verhindert, dass ein Mergeabonnent Datenänderungen in die Tabelle hochlädt. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+     Sie sollten außerdem die *\@published_in_tran_pub*-Eigenschaft festlegen, wenn ein Artikel Bestandteil eines Transaktionsabonnements und in einer Mergeveröffentlichung enthalten ist. Beachten Sie in diesem Fall, dass bei der Transaktionsreplikation Tabellen auf dem Abonnenten standardmäßig als schreibgeschützt behandelt werden. Werden bei der Mergereplikation Datenänderungen an einer Tabelle in einem Transaktionsabonnement vorgenommen, kann es zu einer Nichtkonvergenz der Daten kommen. Um dies zu vermeiden, empfiehlt es sich, solche Tabellen in der Mergeveröffentlichung als "nur herunterladbar" zu kennzeichnen. Dadurch wird verhindert, dass ein Mergeabonnent Datenänderungen in die Tabelle hochlädt. Weitere Informationen finden Sie unter [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
   
 -   Ein Artikel kann nicht gleichzeitig in einer Mergeveröffentlichung und in einer Transaktionsveröffentlichung mit Abonnements mit verzögertem Update über eine Warteschlange veröffentlicht werden.  
   
@@ -220,10 +220,10 @@ ms.locfileid: "74479318"
   
     |Eigenschaft|Parameter in sp_addarticle|  
     |--------------|---------------------------------|  
-    |Identitätsbereichsverwaltung|auto_identity_range (veraltet) und ** \@** ** \@identityrangemangementoption**|  
+    |Identitätsbereichsverwaltung|**\@auto_identity_range** (als veraltet markiert) und **\@identityrangemangementoption**|  
     |Identitätsbereich des Verlegers|**\@pub_identity_range**|  
     |Identitätsbereich|**\@identity_range**|  
-    |Identitätsbereich-Schwellenwert|**\@Mindest**|  
+    |Identitätsbereich-Schwellenwert|**\@threshold**|  
   
      Weitere Informationen zu diesen Parametern finden Sie unter [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   
@@ -237,13 +237,13 @@ ms.locfileid: "74479318"
     |Abonnentenuploadoptionen|**\@subscriber_upload_options**|  
     |Bedingtes Nachverfolgen von Löschvorgängen|**\@delete_tracking**|  
     |Fehlerkompensierung|**\@compensate_for_errors**|  
-    |Identitätsbereichsverwaltung|auto_identity_range (veraltet) und ** \@** ** \@identityrangemangementoption**|  
+    |Identitätsbereichsverwaltung|**\@auto_identity_range** (als veraltet markiert) und **\@identityrangemangementoption**|  
     |Identitätsbereich des Verlegers|**\@pub_identity_range**|  
     |Identitätsbereich|**\@identity_range**|  
-    |Identitätsbereich-Schwellenwert|**\@Mindest**|  
+    |Identitätsbereich-Schwellenwert|**\@threshold**|  
     |Partitionsoptionen|**\@partition_options**|  
     |BLOB-Spaltenstreaming|**\@stream_blob_columns**|  
-    |Filtertyp|filter_type (Parameter in **sp_addmergefilter**) ** \@**|  
+    |Filtertyp|**\@filter_type** (Parameter in **sp_addmergefilter**)|  
   
      Weitere Informationen zu diesen Parametern finden Sie unter [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_addmergefilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql).  
   
@@ -252,8 +252,8 @@ ms.locfileid: "74479318"
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Verteilung konfigurieren](../configure-distribution.md)   
- [Initialisieren eines Abonnements](../initialize-a-subscription.md)   
- [Skript Replikation](../scripting-replication.md)   
+ [Initialize a Subscription](../initialize-a-subscription.md)   
+ [Skripterstellung für die Replikation](../scripting-replication.md)   
  [Sichern des Verlegers](../security/secure-the-publisher.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   

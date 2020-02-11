@@ -1,5 +1,5 @@
 ---
-title: Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung | Microsoft-Dokumentation
+title: Arbeiten mit dem WMI-Anbieter für die Konfigurations Verwaltung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195775"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung
@@ -32,7 +32,7 @@ ms.locfileid: "68195775"
 ## <a name="binding"></a>Bindung  
  Der WMI-Anbieter für die Konfigurationsverwaltung ist ein COM-Objektmodell und unterstützt frühes und spätes Binden. Mit spätem Binden können Sie Skriptsprachen wie VBScript verwenden, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste, Netzwerkeinstellungen und Aliasnamen programmgesteuert zu bearbeiten.  
   
- Weitere Informationen über das Programmieren von WMI-anbieterimplementierungen mit Skriptsprachen finden Sie unter den [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
+ Weitere Informationen zum Programmieren von WMI-Anbieter Implementierungen mithilfe von Skriptsprachen [!INCLUDE[msCoName](../../includes/msconame-md.md)] finden Sie auf der MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="specifying-a-connection-string"></a>Angeben einer Verbindungszeichenfolge  
  Anwendungen leiten den WMI-Anbieter für die Konfigurationsverwaltung an eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter, indem sie eine Verbindung zu einem vom Anbieter definierten WMI-Namespace herstellen. Der Windows-WMI-Dienst ordnet der Anbieter-DLL diesen Namespace zu und lädt sie in den Arbeitsspeicher. Alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden mit einem einzigen WMI-Namespace dargestellt. Der Namespace lautet standardmäßig  
@@ -41,9 +41,9 @@ ms.locfileid: "68195775"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- wobei `instance_name` in einer Standardinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig auf `MSSQLSERVER` festgelegt wird.  
+ wobei `instance_name` in einer Standardinstallation von `MSSQLSERVER` standardmäßig auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegt wird.  
   
- **Hinweis**: Wenn Sie über Windows-Firewall herstellen müssen Sie sicherstellen, dass Ihr Computer geeignet konfiguriert sind. Finden Sie im Artikel "Connecting Through Windows Firewall" in der Dokumentation zu Windows-Verwaltungsinstrumentation [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
+ **Hinweis:** Wenn Sie über die Windows-Firewall eine Verbindung herstellen, müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Weitere Informationen finden Sie im Artikel "Herstellen einer Verbindung über die Windows- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall" in der Windows-Verwaltungsinstrumentation Dokumentation auf der MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   
 ## <a name="permissions-and-server-authentication"></a>Berechtigungen und Serverauthentifizierung  
  Für den Zugriff auf den WMI-Anbieter für die Konfigurationsverwaltung muss das WMI-Verwaltungsskript des Clients im Kontext eines Administrators auf dem Zielcomputer ausgeführt werden. Sie müssen ein Mitglied der lokalen Windows-Administratorengruppe auf dem Computer sein, den Sie verwalten möchten.  
@@ -52,9 +52,9 @@ ms.locfileid: "68195775"
   
  Das WMI-Verwaltungsskript kann zum Aktualisieren des Kontos verwendet werden, unter dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste ausgeführt werden.  
   
- Sicherheitszertifikate werden vom WMI-Anbieter für die Konfigurationsverwaltung unterstützt. Weitere Informationen zu Zertifikaten finden Sie unter [Verschlüsselungshierarchie](../security/encryption/encryption-hierarchy.md).  
+ Sicherheitszertifikate werden vom WMI-Anbieter für die Konfigurationsverwaltung unterstützt. Weitere Informationen zu Zertifikaten finden Sie in der [Verschlüsselungs Hierarchie](../security/encryption/encryption-hierarchy.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Konfigurations-Manager](../sql-server-configuration-manager.md)  
   
   

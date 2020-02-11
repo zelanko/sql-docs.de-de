@@ -1,5 +1,5 @@
 ---
-title: 'ADO für Visual C++-Syntaxindex mit #import | Microsoft-Dokumentation'
+title: 'ADO für Visual C++ Syntax Index mit #Import | Microsoft-Dokumentation'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -18,20 +18,20 @@ ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67920962"
 ---
-# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++-Syntaxindex mit #import
-Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsoft Visual C++ und die **#import** Richtlinie.  
+# <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO für Visual C++ Syntax Index mit #Import
+Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz, die auf Microsoft Visual C++ und der **#Import** -Direktive basiert.  
   
- Durch das Kompilieren eines Programms mit diesem bestimmten Index abgeleitet wurde die **#import** die Richtlinie für die ADO-DLL-Datei, und klicken Sie dann neuformatierung der \*TLH-Datei, die generiert wurde. Es wurde nur Informationen zu Methoden, Eigenschaften und Ereignisse beibehalten. Die alternative Syntax deklariert werden, für jede Eigenschaft mit den entsprechenden aufgelistet ist "`__declspec(property...)`" Richtlinie.  
+ Dieser Index wurde von der Kompilierung eines Programms mit der **#Import** -Direktive für die ADO. dll abgeleitet und anschließend die \*generierte TLH-Datei neu formatiert. Es wurden nur Informationen zu Methoden, Eigenschaften und Ereignissen beibehalten. Die für jede Eigenschaft deklarierte alternative Syntax wird von der entsprechenden "`__declspec(property...)`"-Direktive aufgelistet.  
   
- Es wird dringend empfohlen, zum Lesen [Visual C++-ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md) für Weitere Informationen.  
+ Es wird dringend empfohlen, [Visual C++ ADO-Programmierung](../../../ado/guide/appendixes/visual-c-ado-programming.md) zu lesen, um weitere Informationen zu erhalten.  
   
- -Methode und Eigenschaft-Syntax in Visual C++ mit der **#import** Richtlinie wird aufgeführt, für die folgenden Elemente:  
+ Die Methoden-und Eigenschafts Syntax in Visual C++ mit der **#Import** -Direktive ist für die folgenden Elemente aufgeführt:  
   
 -   [ADO-Collections](../../../ado/reference/ado-api/collections-visual-c-syntax-index-with-sharpimport.md)  
   
@@ -47,15 +47,15 @@ Dieser Index ist ein Querverweis auf die ADO-Sprachreferenz basiert auf Microsof
   
 -   [Property-Objekt](../../../ado/reference/ado-api/property-visual-c-syntax-index-with-sharpimport.md)  
   
--   [-Objekt](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
+-   [Datensatz-Objekt](../../../ado/reference/ado-api/record-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Recordset-Objekt](../../../ado/reference/ado-api/recordset-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Stream-Objekt](../../../ado/reference/ado-api/stream-visual-c-syntax-index-with-sharpimport.md)  
   
--   [Verbindungsereignisse](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
+-   [Verbindungs Ereignisse](../../../ado/reference/ado-api/connectionevents-visual-c-syntax-index-with-sharpimport.md)  
   
 -   [Recordsetereignisse](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ADO für Visual C++ – Syntaxindex für COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

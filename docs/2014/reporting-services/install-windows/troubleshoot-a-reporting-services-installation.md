@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a9415e7258216c975dd066995bf347deca1d623
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253197"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Problembehandlung für eine Reporting Services-Installation
@@ -91,9 +91,9 @@ ms.locfileid: "75253197"
 ###  <a name="bkmk_no_ssrs_service"></a>Nachdem Sie SQL Server 2012 SSRS im SharePoint-Modus installiert haben, wird der SQL Server Reporting Services-Dienst in der SharePoint-zentral Administration nicht angezeigt.  
  **Beschreibung:** Wenn Sie nach der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erfolgreichen Installation von im SharePoint [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Modus und im-Add-in für SharePoint 2010 in den folgenden zwei Menüs nicht "SQL Server Reporting Services" sehen, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wurde der Dienst nicht registriert:  
   
--   SharePoint 2010-zentral Administration-#a0 "Anwendungs Verwaltung"-#a1 Seite "Dienste auf dem Server verwalten"  
+-   SharePoint 2010-zentral Administration-> "Anwendungs Verwaltung"-> Seite "Dienste auf dem Server verwalten"  
   
--   SharePoint 2010-zentral Administration-#a0 "Anwendungs Verwaltung"-#a1 "Dienst Anwendungen verwalten"-#a2 Menü "neu"  
+-   SharePoint 2010-zentral Administration-> "Anwendungs Verwaltung"-> "Dienst Anwendungen verwalten"-> Menü "neu"  
   
  Problem **Umgehung:** Um die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Dienste zu registrieren und zu starten, führen Sie die folgenden Schritte aus:  
   
@@ -113,7 +113,7 @@ ms.locfileid: "75253197"
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
-2.  Vergewissern Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sich, dass der Dienst den Status "**gestartet**" auf der Seite "SharePoint 2010-zentral Administration-#a0"**Anwendungs Verwaltung**"-#a1"**Dienste auf dem Server verwalten**"anzeigt.  
+2.  Vergewissern Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sich, dass der Dienst den Status "**gestartet**" auf der Seite "SharePoint 2010-zentral Administration->"**Anwendungs Verwaltung**"->"**Dienste auf dem Server verwalten**"anzeigt.  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a>Reporting Services PowerShell-Cmdlets sind nicht verfügbar, und Befehle werden nicht erkannt.  
  **Beschreibung:** Wenn Sie versuchen, ein [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell-Cmdlet auszuführen, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
@@ -128,7 +128,7 @@ ms.locfileid: "75253197"
   
  **Hinweis:** Wenn die **SharePoint 2013-Verwaltungsshell** geöffnet ist, wenn Sie eine der Problem Umgehungen abgeschlossen haben, schließen Sie die-Verwaltungsshell, und öffnen Sie Sie erneut.  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie unter  
   
 -   [Wo Sie das Reporting Services-Add-in für SharePoint-Produkte finden](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   

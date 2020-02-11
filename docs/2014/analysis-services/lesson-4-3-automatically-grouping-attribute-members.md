@@ -11,22 +11,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69890837"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
-  Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es allerdings sinnvoll, von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attributelementen erstellen zu lassen, die auf der Verteilung der Elemente innerhalb einer Attributhierarchie basieren. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.  
+  Beim Durchsuchen eines Cubes dimensionieren Sie in der Regel die Elemente einer Attributhierarchie nach den Elementen einer anderen Attributhierarchie. Sie können beispielsweise Kundenverkäufe nach der Stadt, dem erworbenen Produkt oder dem Geschlecht gruppieren. Bei bestimmten Attributtypen ist es jedoch hilfreich, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch Gruppierungen von Attribut Elementen basierend auf der Verteilung der Elemente in einer Attribut Hierarchie zu erstellen. Sie können beispielsweise von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppen der jährlichen Einkommenswerte für Kunden erstellen lassen. Es werden dann für Benutzer, die die Attributhierarchie durchsuchen, die Namen und Werte der Gruppen anstelle der Elemente selbst angezeigt. Dadurch wird die Anzahl der Ebenen beschränkt, die für Benutzer angezeigt werden, was für die Analyse sinnvoller sein kann.  
   
  Von der Eigenschaft **DiscretizationMethod** wird bestimmt, ob von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Gruppierungen erstellt werden, sowie der Typ der Gruppierung, die durchgeführt wird. Standardmäßig werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] keine Gruppierungen ausgeführt. Es ist beim Aktivieren der automatischen Gruppierungen möglich, von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch die beste Gruppierungsmethode basierend auf der Struktur des Attributs bestimmen zu lassen. Sie können auch einen der Gruppierungsalgorithmen in der folgenden Liste auswählen, um die Gruppierungsmethode anzugeben:  
   
  **EqualAreas**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppenbereiche, sodass alle Dimensionselemente gleichmäßig über die Gruppen verteilt werden.  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppenbereiche, sodass alle Dimensionselemente gleichmäßig über die Gruppen verteilt werden.  
   
- **Clusters**  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen durch eindimensionales Clustering auf den Eingabewerten mithilfe der K-Means-Clusteringmethode mit Gauß'schen Verteilungen. Diese Option ist nur für numerische Spalten gültig.  
+ **Super**  
+ 
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen durch eindimensionales Clustering auf den Eingabewerten mithilfe der K-Means-Clusteringmethode mit Gauß'schen Verteilungen. Diese Option ist nur für numerische Spalten gültig.  
   
  Nach dem Angeben einer Gruppierungsmethode müssen Sie die Anzahl von Gruppen angeben, indem Sie die **DiscretizationBucketCount** -Eigenschaft verwenden. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
@@ -44,11 +46,11 @@ ms.locfileid: "69890837"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Yearly Income**aus.  
   
-5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5`.  
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **automatisch** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
   
      Die folgende Abbildung zeigt die geänderten Eigenschaften für **Yearly Income**.  
   
-     ![Geänderte Eigenschaften für Jahreseinkommen](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Jahreseinkommen")  
+     ![Geänderte Eigenschaften für Yearly Income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Geänderte Eigenschaften für Yearly Income")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Gruppieren von Attributhierarchieelementen in der Employee-Dimension  
   
@@ -62,11 +64,11 @@ ms.locfileid: "69890837"
   
 4.  Wählen Sie im Bereich **Attribute** den Eintrag **Sick Leave Hours**aus.  
   
-5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5`.  
+5.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Cluster** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
   
 6.  Wählen Sie im Bereich **Attribute** den Eintrag **Vacation Hours**aus.  
   
-7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie den Wert für die **DiscretizationBucketCount** -Eigenschaft in `5`.  
+7.  Ändern Sie in der Eigenschaftenfenster den Wert für die **DiscretizationMethod** -Eigenschaft in **Equal Areas** , und ändern Sie `5`den Wert für die **DiscretizationBucketCount** -Eigenschaft in.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>Durchsuchen der geänderten Attributhierarchien  
   
@@ -94,7 +96,7 @@ ms.locfileid: "69890837"
   
      Die folgende Abbildung zeigt Verkäufe dimensioniert nach krankheitsbedingten Ausfallstunden der Angestellten.  
   
-     ![Umsätze durch Mitarbeiter krank](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Umsätze durch Mitarbeiter krank")  
+     ![Sales dimensioniert nach den Krankheitstagen des Angestellten](../../2014/tutorials/media/l4-discretizationmethod-2.gif "Sales dimensioniert nach den Krankheitstagen des Angestellten")  
   
 10. Entfernen Sie die **Sick Leave Hours** -Attributhierarchie aus dem Spaltenbereich des Bereichs **Daten** .  
   
@@ -125,7 +127,7 @@ ms.locfileid: "69890837"
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Ausblenden und Deaktivieren von Attributhierarchien](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
- [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Gruppieren von Attribut Elementen &#40;diskretisierungs&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

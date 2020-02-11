@@ -9,10 +9,10 @@ ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: c822f0b6a3a17ccba2afbaf8bf0a9e4a4e2f7b12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65579813"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections"></a>Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen
@@ -92,15 +92,15 @@ ms.locfileid: "65579813"
   
  Die Spaltenüberschrift für die Gebietsgruppe wurde zu Anzeigezwecken in zwei Zellen geteilt. Die erste Zelle zeigt den Gebietsnamen und die Gesamtbeträge an, die zweite Zelle verfügt über Platzhaltertext zur Berechnung des prozentualen Anteils jedes Gebiets an den Gesamtverkäufen.  
   
- ![rs_StandardTabelleSummeZelleBereich](../../reporting-services/report-design/media/rs-basictablesumcellscope.gif "rs_BasicTableSumCellScope")  
+ ![rs_BasicTableSumCellScope](../../reporting-services/report-design/media/rs-basictablesumcellscope.gif "rs_BasicTableSumCellScope")  
   
  Hier wird davon ausgegangen, dass das Dataset DataSet1 und die Tabelle Tablix1 genannt wird. In der folgenden Tabelle werden die Zellenbezeichnung, der Standardbereich und Beispiele dazu aufgeführt. Die Werte für den Platzhaltertext werden in Ausdruckssyntax dargestellt.  
   
-|Zelle|Standardbereich|Platzhalterbezeichnungen|Text- oder Platzhalterwerte|  
+|Cell (Zelle)|Standardbereich|Platzhalterbezeichnungen|Text- oder Platzhalterwerte|  
 |----------|-------------------|------------------------|--------------------------------|  
 |C01|Tablix1|[Sum(Qty)]|Aggregate und Bereich<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C02|Äußere Spaltengruppe "Year"|[Year]<br /><br /> ([YearQty])|`=Fields!Year.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
-|C03|Tablix1|[Sum(Qty)]|Totals<br /><br /> `=Sum(Fields!Qty.Value)`|  
+|C03|Tablix1|[Sum(Qty)]|Gesamtwerte<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C04|Peerspaltengruppe "Territory"|([Total])|Territory<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C05|Innere Gruppe "Qtr"|[Qtr]<br /><br /> ([QtrQty])|Q<br /><br /> `=Fields!Qtr.Value`<br /><br /> `=Sum(Fields!Qty.Value)`|  
 |C06|Peerspaltengruppe "Territory"|[Territory]<br /><br /> ([Tty])<br /><br /> [Pct]|`=Fields!Territory.Value`<br /><br /> `=Sum(Fields!Qty.Value)`<br /><br /> `=FormatPercent(Sum(Fields!Qty.Value,"Territory")/Sum(Fields!Qty.Value,"Tablix1"),0) & " of " & Sum(Fields!Qty.Value,"Tablix1")`|  

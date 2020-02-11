@@ -1,5 +1,5 @@
 ---
-title: Indizes Append-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Index Append-Methode (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 50f87e27-1bf9-427c-9b1d-704a672434d2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 5d164c650c67498a89b784cc49779384a198c669
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966052"
 ---
 # <a name="indexes-append-method-example-vb"></a>Append-Methode für Indizes – Beispiel (VB)
-Der folgende Code veranschaulicht, wie ein neuer Index erstellt wird. Der Index ist für zwei Spalten in der Tabelle.  
+Der folgende Code veranschaulicht, wie ein neuer Index erstellt wird. Der Index befindet sich in zwei Spalten in der Tabelle.  
   
 ```  
 Attribute VB_Name = "IndexesAppend"  
@@ -80,7 +80,7 @@ End Sub
 ' EndCreateIndexVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Append-Methode (ADOX Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Append-Methode (ADOX-Indizes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Indexes-Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

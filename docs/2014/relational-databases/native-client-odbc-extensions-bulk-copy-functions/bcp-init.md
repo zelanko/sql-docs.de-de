@@ -1,5 +1,5 @@
 ---
-title: Bcp_init | Microsoft-Dokumentation
+title: bcp_init | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689065"
 ---
-# <a name="bcpinit"></a>bcp_init
+# <a name="bcp_init"></a>bcp_init
   Initialisiert den Massenkopiervorgang.  
   
 ## <a name="syntax"></a>Syntax  
@@ -56,48 +56,48 @@ eDirection
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
  *szTable*  
- Name der Datenbanktabelle, in die bzw. aus der kopiert werden soll. Dieser Name kann auch den Namen der Datenbank oder den Namen des Besitzers enthalten. Z. B. **pubs.gracie.titles**, **Pubs... Titel**, **gracie.titles**, und **Titel** sind gültige Tabellennamen.  
+ Name der Datenbanktabelle, in die bzw. aus der kopiert werden soll. Dieser Name kann auch den Namen der Datenbank oder den Namen des Besitzers enthalten. Beispielsweise **Pubs. Gracie. Titeln**, **Pubs. Titel**, **Gracie. Titeln**und **Titel** sind alle gültigen Tabellennamen.  
   
- Wenn *eDirection* DB_OUT ist, *SzTable* kann auch der Name einer Datenbanksicht sein.  
+ Wenn *eDirection* DB_OUT ist, kann *szTable* auch der Name einer Daten Bank Sicht sein.  
   
- Wenn *eDirection* DB_OUT ist und mit eine SELECT-Anweisung angegeben werden [Bcp_control](bcp-control.md) vor [Bcp_exec](bcp-exec.md) aufgerufen wird, **Bcp_init** _SzTable_ muss auf NULL festgelegt werden.  
+ Wenn *eDirection* DB_OUT ist und mithilfe [bcp_control](bcp-control.md) eine SELECT-Anweisung angegeben wird, bevor [bcp_exec](bcp-exec.md) aufgerufen wird, muss **bcp_init**_szTable_ auf NULL festgelegt werden.  
   
  *szDataFile*  
- Name der Benutzerdatei, in die bzw. aus der kopiert werden soll. Wenn Sie Daten direkt aus Variablen mithilfe des Kopierens [Bcp_sendrow](bcp-sendrow.md)legen *SzDataFile* auf NULL.  
+ Name der Benutzerdatei, in die bzw. aus der kopiert werden soll. Wenn Daten mithilfe von [bcp_sendrow](bcp-sendrow.md)direkt aus Variablen kopiert werden, legen Sie *szDataFile* auf NULL fest.  
   
  *szErrorFile*  
- Der Name der Fehlerdatei, in die Statusmeldungen, Fehlermeldungen und Kopien von Zeilen geschrieben werden sollen, die aus einem bestimmten Grund nicht von einer Benutzerdatei in eine Tabelle kopiert werden konnten. Wenn NULL, als übergeben wird *SzErrorFile*, es wird keine Fehlerdatei verwendet.  
+ Der Name der Fehlerdatei, in die Statusmeldungen, Fehlermeldungen und Kopien von Zeilen geschrieben werden sollen, die aus einem bestimmten Grund nicht von einer Benutzerdatei in eine Tabelle kopiert werden konnten. Wenn NULL als *szErrorFile*übergeben wird, wird keine Fehler Datei verwendet.  
   
  *eDirection*  
  Die Richtung der Kopie, entweder DB_IN oder DB_OUT. DB_IN bedeutet eine Kopie aus Programmvariablen oder aus einer Benutzerdatei in eine Tabelle. DB_OUT bedeutet eine Kopie von einer Datenbanktabelle in eine Benutzerdatei an. Sie müssen einen Benutzerdateinamen mit DB_OUT angeben.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Hinweise  
- Rufen Sie **Bcp_init** vor dem Aufruf aller anderen bcp-Funktionen. **Bcp_init** führt die erforderlichen Initialisierungen für einen Massenkopiervorgang von Daten zwischen der Workstation und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+## <a name="remarks"></a>Bemerkungen  
+ Rufen Sie **bcp_init** auf, bevor Sie eine andere Massen Kopierfunktion aufrufen. **bcp_init** führt die erforderlichen Initialisierungen für einen Massen Kopiervorgang von Daten zwischen der Arbeitsstation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und aus.  
   
- Die **Bcp_init** Funktion muss aktiviert werden, für die Verwendung mit Funktionen zum Massenkopieren eine ODBC-Verbindungshandle bereitgestellt werden. Verwenden Sie zum Aktivieren des Handles [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) SQL_COPT_SS_BCP auf SQL_BCP_ON fest für ein zugeordnetes, aber nicht verbundenes Verbindungshandle festgelegt. Wenn Sie versuchen, das Attribut einem bereits verbundenen Verbindungshandle zuzuweisen, tritt ein Fehler auf.  
+ Die **bcp_init** -Funktion muss mit einem ODBC-Verbindungs Handle bereitgestellt werden, das für die Verwendung mit Massen Kopierfunktionen aktiviert ist. Um das Handle zu aktivieren, verwenden Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) , wobei SQL_COPT_SS_BCP auf einem zugeordneten, aber nicht verbundenen Verbindungs Handle auf SQL_BCP_ON festgelegt ist. Wenn Sie versuchen, das Attribut einem bereits verbundenen Verbindungshandle zuzuweisen, tritt ein Fehler auf.  
   
- Wenn eine Datendatei angegeben wird, **Bcp_init** untersucht die Struktur der Quell- oder Zieltabelle Datenbanktabelle, nicht jedoch die Datendatei. **Bcp_init** gibt an, für die Datendatei basierend auf jede Spalte in der Datenbanktabelle, Sicht oder SELECT-Resultset datenformatwerte. Diese Spezifikation enthält unter anderem den Datentyp jeder Spalte, das Vorhandensein bzw. Nichtvorhandensein eines Längen- oder NULL-Wertindikators und von Bytezeichenfolgen des Abschlusszeichens der Daten, sowie die Breite von Datentypen fester Länge. **Bcp_init** legt diese Werte wie folgt fest:  
+ Wenn eine Datendatei angegeben wird, untersucht **bcp_init** die Struktur der Datenbankquelle oder der Ziel Tabelle, nicht die Datendatei. **bcp_init** gibt Datenformat Werte für die Datendatei basierend auf den einzelnen Spalten in der Datenbanktabelle, der Sicht oder dem SELECT-Resultset an. Diese Spezifikation enthält unter anderem den Datentyp jeder Spalte, das Vorhandensein bzw. Nichtvorhandensein eines Längen- oder NULL-Wertindikators und von Bytezeichenfolgen des Abschlusszeichens der Daten, sowie die Breite von Datentypen fester Länge. **bcp_init** legt diese Werte wie folgt fest:  
   
--   Der angegebene Datentyp entspricht dem Datentyp der Spalte in der Datenbanktabelle, der Sicht oder dem SELECT-Resultset. Der Datentyp wird von den in der Datei sqlncli.h angegebenen systemeigenen Datentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgelistet. Die Daten selbst werden in computereigenem Format dargestellt, D. h. Daten aus einer Spalte mit **Ganzzahl** Datentyp wird dargestellt, durch eine vier-Byte-Sequenz, die Groß- oder little-Endian-basierend auf dem Computer, der die Datendatei erstellt.  
+-   Der angegebene Datentyp entspricht dem Datentyp der Spalte in der Datenbanktabelle, der Sicht oder dem SELECT-Resultset. Der Datentyp wird von den in der Datei sqlncli.h angegebenen systemeigenen Datentypen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgelistet. Die Daten selbst werden in computereigenem Format dargestellt, Das heißt, dass Daten aus einer Spalte vom Datentyp **Integer** durch eine 4-Byte-Sequenz dargestellt werden, die auf dem Computer, auf dem die Datendatei erstellt wurde, Big-oder Little-Endian ist.  
   
--   Wenn ein Datenbankdatentyp eine feste Länge hat, haben auch die Daten der Datendatei eine feste Länge. Massenkopieren-Funktionen, die Daten verarbeiten (z. B. [Bcp_exec](bcp-exec.md)) werden die Datenzeilen, die erwartet wird die Länge der Daten in der Datendatei identisch mit der Länge der Daten in die Datenbanktabelle, Sicht oder SELECT-Spaltenliste angegeben werden analysiert. Z. B. Daten für eine Datenbankspalte, die als definiert **char(13)** muss jede Zeile der Daten in der Datei 13 Zeichen dargestellt werden. Für Daten mit fester Länge kann ein NULL-Indikator verwendet werden, wenn die Datenbankspalte NULL-Werte zulässt.  
+-   Wenn ein Datenbankdatentyp eine feste Länge hat, haben auch die Daten der Datendatei eine feste Länge. Massen Kopierfunktionen, die Daten verarbeiten (z. b. [bcp_exec](bcp-exec.md)), analysieren Daten Zeilen, die erwarten, dass die Länge der Daten in der Datendatei mit der Länge der Daten identisch ist, die in der Datenbanktabelle, Sicht oder SELECT-Spaltenliste angegeben sind. Beispielsweise müssen Daten für eine als **char (13)** definierte Daten Bank Spalte für jede Daten Zeile in der Datei 13 Zeichen darstellen. Für Daten mit fester Länge kann ein NULL-Indikator verwendet werden, wenn die Datenbankspalte NULL-Werte zulässt.  
   
 -   Wenn eine Bytesequenz für Abschlusszeichen definiert ist, wird deren Länge auf 0 festgelegt.  
   
--   Zum Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Datendatei für jede Spalte der Datenbanktabelle Daten aufweisen. Beim Kopieren aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Daten aus allen Spalten in der Datenbanktabelle, Sicht oder SELECT-Resultset in die Datendatei kopiert werden.  
+-   Zum Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Datendatei für jede Spalte der Datenbanktabelle Daten aufweisen. Beim Kopieren aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]werden Daten aus allen Spalten in der Datenbanktabelle, Sicht oder SELECT-Resultset in die Datendatei kopiert.  
   
--   Beim Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Ordnungsposition einer Spalte in der Datendatei der Ordnungsposition einer Spalte in der Datenbanktabelle genau entsprechen. Beim Kopieren aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Bcp_exec** platziert Daten basierend auf der Ordnungsposition der Spalte in der Datenbanktabelle.  
+-   Beim Kopieren von Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss die Ordnungsposition einer Spalte in der Datendatei der Ordnungsposition einer Spalte in der Datenbanktabelle genau entsprechen. Beim Kopieren aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]platziert **bcp_exec** Daten auf der Grundlage der Ordnungsposition der Spalte in der Datenbanktabelle.  
   
--   Ist Datenbank-Datentypen variabler Länge (z. B. **varbinary(22)** ) oder wenn eine Datenbankspalte null-Werte enthalten kann, werden der Daten in der Datendatei ein Längen-/Null-Indikator vorangestellt. Die Breite des Indikators ändert sich auf der Grundlage des Datentyps und der Version der Massenkopierfunktion.  
+-   Wenn ein Daten Bank Datentyp eine Variable Länge aufweist (z. b. **varbinary (22)**) oder wenn eine Daten Bank Spalte NULL-Werte enthalten kann, wird den Daten in der Datendatei ein Längen-/NULL-Indikator vorangestellt. Die Breite des Indikators ändert sich auf der Grundlage des Datentyps und der Version der Massenkopierfunktion.  
   
- Um für eine Datendatei angegebenen datenformatwerte zu ändern, rufen [Bcp_columns](bcp-columns.md) und [Bcp_colfmt](bcp-colfmt.md).  
+ Um die für eine Datendatei angegebenen Datenformat Werte zu ändern, müssen [bcp_columns](bcp-columns.md) und [bcp_colfmt](bcp-colfmt.md)aufgerufen werden.  
   
- Massenkopiervorgänge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können für Tabellen, die keine Indizes enthalten, optimiert werden, indem das Datenbank-Wiederherstellungsmodul auf SIMPLE oder BULK_LOGGED festgelegt wird. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massenimport](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) und [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
+ Massenkopiervorgänge in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können für Tabellen, die keine Indizes enthalten, optimiert werden, indem das Datenbank-Wiederherstellungsmodul auf SIMPLE oder BULK_LOGGED festgelegt wird. Weitere Informationen finden Sie unter [Voraussetzungen für die minimale Protokollierung beim Massen Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md) und [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql).  
   
- Wenn keine Datendatei verwendet wird, müssen Sie aufrufen [Bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) um das Format und den Speicherort im Arbeitsspeicher, der die Daten Fsor jede Spalte anzugeben, klicken Sie dann Kopieren von Datenzeilen in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit [Bcp_sendrow](bcp-sendrow.md).  
+ Wenn keine Datendatei verwendet wird, müssen Sie [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) aufzurufen, um das Format und den Speicherort des Daten-fsors für jede Spalte anzugeben, und anschließend Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeilen mithilfe [bcp_sendrow](bcp-sendrow.md)in die kopieren.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie die ODBC-Funktion bcp_init mit einer Formatdatei verwendet wird.  
@@ -228,7 +228,7 @@ int main() {
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Massenkopierfunktionen](sql-server-driver-extensions-bulk-copy-functions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bulk Copy Functions](sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

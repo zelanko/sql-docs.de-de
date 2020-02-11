@@ -1,5 +1,5 @@
 ---
-title: ExecuteOptions und FetchOptions Eigenschaften – Beispiel (VBScript) | Microsoft-Dokumentation
+title: Eigenschaften von "ExecuteOptions" und "FetchOptions" (VBScript) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,17 +16,17 @@ ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 782b76ca40418cd7fb8313c2b22da3a6ddd3978a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67964193"
 ---
 # <a name="executeoptions-and-fetchoptions-properties-example-vbscript"></a>ExecuteOptions und FetchOptions Eigenschaften – Beispiel (VBScript)
 > [!IMPORTANT]
->  Ab Windows 8 und Windows Server 2012, sind nicht mehr RDS-Server-Komponenten in das Windows-Betriebssystem enthalten (finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) Einzelheiten). RDS-Client-Komponenten werden in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS zu migrieren sollten [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
+>  Ab Windows 8 und Windows Server 2012 sind RDS-Server Komponenten nicht mehr im Windows-Betriebssystem enthalten (weitere Details finden Sie unter Windows 8 und [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) ). RDS-Client Komponenten werden in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Anwendungen, die RDS verwenden, sollten zu [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565)migriert werden.  
   
- Der folgende Code zeigt, wie Sie festlegen der [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) und [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) Eigenschaften zur Entwurfszeit. Wenn dieser nicht festgelegt, bleibt **ExecuteOptions** standardmäßig **AdcExecSync**. Diese Einstellung gibt an, die bei der **RDS. Aktualisieren Sie** -Methode aufgerufen wird, auf dem aktuellen aufrufenden Thread ausgeführt wird – d. h., synchron. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **ExecuteOptionsDesignVBS.asp**.  
+ Der folgende Code zeigt, wie die Eigenschaften [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) und [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) zur Entwurfszeit festgelegt werden. Wenn die Einstellung nicht festgelegt ist, wird **ExecuteOptions** standardmäßig auf **adcExecSync**festgelegt. Diese Einstellung gibt an, dass beim **RDS. Die Aktualisierungs** Methode wird aufgerufen, Sie wird für den aktuellen aufrufenden Thread ausgeführt, der synchron ist. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **executeoptionsdesignvsb. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsDesignVBS -->  
@@ -94,7 +94,7 @@ body {
 <!-- EndExecuteOptionsDesignVBS -->  
 ```  
   
- Im folgende Beispiel veranschaulicht die legen Sie die **ExecuteOptions** und **FetchOptions** Eigenschaften zur Laufzeit in VBScript-Code. Finden Sie unter den [aktualisieren](../../../ado/reference/rds-api/refresh-method-rds.md) -Methode für ein praktisches Beispiel diese Eigenschaften. Ausschneiden und Einfügen des folgenden Codes in den Editor oder einem anderen Texteditor und speichern Sie ihn als **ExecuteOptionsRuntimeVBS.asp**.  
+ Im folgenden Beispiel wird gezeigt, wie die Eigenschaften **ExecuteOptions** und **FetchOptions** zur Laufzeit im VBScript-Code festgelegt werden. Ein funktionstüchtiges Beispiel für diese Eigenschaften finden Sie in der [Aktualisierungs](../../../ado/reference/rds-api/refresh-method-rds.md) Methode. Schneiden Sie den folgenden Code aus, und fügen Sie ihn in Editor oder einen anderen Text-Editor ein, und speichern Sie ihn als **executeoptionsruntimevsb. ASP**.  
   
 ```  
 <!-- BeginExecuteOptionsRuntimeVBS -->  
@@ -169,7 +169,7 @@ End Sub
 <!-- EndExecuteOptionsRuntimeVBS -->  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ExecuteOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
  [FetchOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)
 

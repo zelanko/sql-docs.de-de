@@ -1,5 +1,5 @@
 ---
-title: Refresh – Methodenbeispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für Aktualisierungs Methode (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 220703626f5cbe7aa1b7f8aa3d6ee24fee238827
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67917304"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh-Methode – Beispiel (VB)
-Dieses Beispiel veranschaulicht die Verwendung der [aktualisieren](../../../ado/reference/ado-api/refresh-method-ado.md) Methode zum Aktualisieren der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Sammlung für eine gespeicherte Prozedur [Befehl](../../../ado/reference/ado-api/command-object-ado.md) Objekt.  
+In diesem Beispiel wird die Verwendung der [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode zum Aktualisieren der [Parameter](../../../ado/reference/ado-api/parameters-collection-ado.md) Auflistung für ein [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekt einer gespeicherten Prozedur veranschaulicht.  
   
 ```vb
 'BeginRefreshVB  
@@ -120,7 +120,7 @@ End Sub
 'EndRefreshVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Command-Objekt (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Parameters-Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
+ [Parameter Auflistung (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Refresh-Methode (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)

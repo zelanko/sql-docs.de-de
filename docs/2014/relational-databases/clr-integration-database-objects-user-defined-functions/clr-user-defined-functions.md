@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f48a62e1dff2fbc1d226077c2271e8a8a71efb2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874490"
 ---
 # <a name="clr-user-defined-functions"></a>CLR-benutzerdefinierte Funktionen
@@ -39,7 +39,7 @@ ms.locfileid: "62874490"
  [Benutzerdefinierte CLR-Aggregate](clr-user-defined-aggregates.md)  
  Beschreibt die Implementierung und Verwendung von benutzerdefinierten Aggregaten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte Funktionen](../user-defined-functions/user-defined-functions.md)  
   
   

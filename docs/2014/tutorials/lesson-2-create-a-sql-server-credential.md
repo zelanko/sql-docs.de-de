@@ -11,21 +11,21 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154329"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>Lektion 2: Erstellen von SQL Server-Anmeldeinformationen
-  **Anmeldeinformationen:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind.  Hier werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von Sicherungs-und Wiederherstellungs Prozessen Anmelde Informationen für die Authentifizierung beim Azure BLOB Storage-Dienst verwendet. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen zum Anzeigen, Kopieren oder erneuten Generieren von **access keys**für Speicherkonten finden Sie unter [Zugriffsschlüssel für Speicherkonten](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
+  Anmelde Informationen **:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmelde Informationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die zum Herstellen einer Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind.  Hier werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von Sicherungs-und Wiederherstellungs Prozessen Anmelde Informationen für die Authentifizierung beim Azure BLOB Storage-Dienst verwendet. In den Anmeldeinformationen werden der Name des Speicherkontos und der **Zugriffsschlüssel** des Speicherkontos gespeichert. Sobald die Anmeldeinformationen erstellt wurden, müssen sie beim Ausgeben der BACKUP-/RESTORE-Anweisungen in der WITH CREDENTIAL-Option angegeben werden. Weitere Informationen zum Anzeigen, Kopieren oder erneuten Generieren von **access keys**für Speicherkonten finden Sie unter [Zugriffsschlüssel für Speicherkonten](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx).  
   
- Weitere allgemeine Informationen über Anmeldeinformationen finden Sie unter [Anmeldeinformationen](../relational-databases/security/authentication-access/credentials-database-engine.md).  
+ Allgemeine Informationen zu Anmelde Informationen finden Sie unter [Anmelde](../relational-databases/security/authentication-access/credentials-database-engine.md)Informationen.  
   
- Informationen mit weiteren Beispielen zur Verwendung von Anmeldeinformationen finden Sie unter [Erstellen eines Proxys für den SQL Server-Agent](../ssms/agent/create-a-sql-server-agent-proxy.md).  
+ Informationen zu anderen Beispielen, in denen Anmelde Informationen verwendet werden, finden Sie unter [Erstellen eines SQL Server-Agent Proxys](../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
 > [!IMPORTANT]  
->  Die Anforderungen für das Erstellen einer SQL Server Anmelde Informationen, die unten beschrieben werden, gelten speziell für SQL Server Sicherungs Prozesse ([SQL Server URL-Sicherung](../relational-databases/backup-restore/sql-server-backup-to-url.md)und [SQL Server verwaltete Sicherung in Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server verwendet beim Zugriff auf Azure-Speicher zum Schreiben oder Lesen von Sicherungen den Namen des Speicherkontos und Informationen zu den Zugriffsschlüsseln.  Weitere Informationen zum Erstellen von Anmelde Informationen zum Speichern von Datenbankdateien in Azure [Storage finden Sie unter Lektion 3: Erstellen eines SQL Server Anmelde Informationen](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
+>  Die Anforderungen für das Erstellen einer SQL Server Anmelde Informationen, die unten beschrieben werden, gelten speziell für SQL Server Sicherungs Prozesse ([SQL Server URL-Sicherung](../relational-databases/backup-restore/sql-server-backup-to-url.md)und [SQL Server verwaltete Sicherung in Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)). SQL Server verwendet beim Zugriff auf Azure-Speicher zum Schreiben oder Lesen von Sicherungen den Namen des Speicherkontos und Informationen zu den Zugriffsschlüsseln.  Weitere Informationen zum Erstellen von Anmeldeinformationen für das Speichern von Datenbankdateien in Azure-Speicher finden Sie unter [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
   
 ## <a name="create-a-sql-server-credential"></a>Erstellen von SQL Server-Anmeldeinformationen  
  Führen Sie die folgenden Schritte aus, um SQL Server-Anmeldeinformationen zu erstellen:  
@@ -34,7 +34,7 @@ ms.locfileid: "70154329"
   
 2.  Stellen Sie im Objekt-Explorer eine Verbindung mit der Instanz der Datenbank-Engine her, auf der die Datenbank AdventureWorks2012 installiert ist, oder verwenden Sie Ihre eigene Datenbank für dieses Lernprogramm.  
   
-3.  Klicken Sie auf der **Standardsymbolleiste** auf **Neue Abfrage**.  
+3.  Klicken Sie auf der **Standard** Symbolleiste auf **neue Abfrage**.  
   
 4.  Kopieren Sie das folgende Beispiel in das Abfragefenster, und ändern Sie es nach Bedarf.  
   
@@ -45,13 +45,13 @@ ms.locfileid: "70154329"
   
     ```  
   
-     ![Zuordnung von Speicherkonto zu SQL-Anmelde Informationen](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "Zuordnung von Speicherkonto zu SQL-Anmelde Informationen")  
+     ![Zuordnen des Speicherkontos zu SQL-Anmeldeinformationen](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "Zuordnen des Speicherkontos zu SQL-Anmeldeinformationen")  
   
-5.  Überprüfen Sie die T-SQL-Anweisung, und klicken Sie auf **Ausführen**.  
+5.  Prüfen Sie die T-SQL-Anweisung, und klicken Sie auf **Ausführen**.  
   
  Weitere Informationen zum Azure BLOB Storage-Dienst für Sicherungs Konzepte und-Anforderungen finden Sie unter [SQL Server sichern und Wiederherstellen mit Azure BLOB Storage Dienst](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md).  
   
 ### <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 3: Schreiben Sie eine vollständige Datenbanksicherung in](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)den Azure BLOB Storage-Dienst.  
+ [Lektion 3: Schreiben einer vollständigen Datenbanksicherung in den Azure BLOB Storage-Dienst](../../2014/tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md).  
   
   

@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 15a9ea69771699cf2b845d8018dfad1d1af511d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66014083"
 ---
 # <a name="polygon"></a>Polygon
@@ -29,7 +29,7 @@ ms.locfileid: "66014083"
   
  Die nachfolgende Abbildung enthält Beispiele für `Polygon`-Instanzen.  
   
- ![Beispiele für Polygon-Geometrieinstanzen](../../database-engine/media/polygon.gif "Examples of geometry Polygon instances")  
+ ![Beispiele für Polygon-geometry-Instanzen](../../database-engine/media/polygon.gif "Beispiele von Polygon-Geometrieinstanzen")  
   
  Folgendes wird dargestellt:  
   
@@ -64,7 +64,8 @@ DECLARE @g4 geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(3 0, 6 0, 6 3, 
 DECLARE @g5 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';  
 ```  
   
- Wie `@g4` und `@g5` zeigen, ist es möglich, dass eine akzeptierte `Polygon`-Instanz keine gültige `Polygon`-Instanz ist. `@g5` zeigt auch, dass eine Polygon-Instanz nur einen Ring mit vier beliebigen Punkten enthalten muss, um akzeptiert zu werden.  
+ Wie `@g4` und `@g5` zeigen, ist es möglich, dass eine akzeptierte `Polygon`-Instanz keine gültige `Polygon`-Instanz ist. 
+  `@g5` zeigt auch, dass eine Polygon-Instanz nur einen Ring mit vier beliebigen Punkten enthalten muss, um akzeptiert zu werden.  
   
  In den folgenden Beispielen wird eine `System.FormatException` ausgelöst, da die `Polygon`-Instanzen nicht akzeptiert werden.  
   
@@ -73,7 +74,9 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';  
 ```  
   
- `@g1` wird nicht akzeptiert, da die `LineString`-Instanz für den äußeren Ring nicht genug Punkte enthält. `@g2` wird nicht akzeptiert, da die `LineString`-Instanz des Ausgangspunkts des äußeren Rings nicht dem Endpunkt entspricht. Im folgenden Beispiel ist ein akzeptabler äußerer Ring enthalten, der innere Ring hingegen ist nicht akzeptabel. Dadurch wird auch eine `System.FormatException`ausgelöst.  
+ 
+  `@g1` wird nicht akzeptiert, da die `LineString`-Instanz für den äußeren Ring nicht genug Punkte enthält. 
+  `@g2` wird nicht akzeptiert, da die `LineString`-Instanz des Ausgangspunkts des äußeren Rings nicht dem Endpunkt entspricht. Im folgenden Beispiel ist ein akzeptabler äußerer Ring enthalten, der innere Ring hingegen ist nicht akzeptabel. Dadurch wird auch eine `System.FormatException`ausgelöst.  
   
 ```  
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';  
@@ -91,7 +94,8 @@ DECLARE @g3 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (10 0
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();  
 ```  
   
- `@g3` ist gültig, da die zwei inneren Ringe einen einzigen Punkt berühren und einander nicht schneiden. Im folgenden Beispiel werden `Polygon` -Instanzen veranschaulicht, die nicht gültig sind.  
+ 
+  `@g3` ist gültig, da die zwei inneren Ringe einen einzigen Punkt berühren und einander nicht schneiden. Im folgenden Beispiel werden `Polygon` -Instanzen veranschaulicht, die nicht gültig sind.  
   
 ```  
 DECLARE @g1 geometry = 'POLYGON((-20 -20, -20 20, 20 20, 20 -20, -20 -20), (20 0, 0 10, 0 -20, 20 0))';  
@@ -103,7 +107,13 @@ DECLARE @g6 geometry = 'POLYGON((1 1, 1 1, 1 1, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.STIsValid(), @g6.STIsValid();  
 ```  
   
- `@g1` ist ungültig, da der innere Ring den äußeren Ring an zwei Stellen berührt. `@g2` ist ungültig, da der zweite innere Ring im Inneren des ersten inneren Rings liegt. `@g3` ist ungültig, da sich die zwei inneren Ringe an mehreren aufeinander folgenden Punkten berühren. `@g4` ist ungültig, da sich das Innere der zwei inneren Ringe überlappt. `@g5` ist ungültig, da der äußere Ring nicht der erste Ring ist. `@g6` ist ungültig, da der Ring nicht mindestens drei unterschiedliche Punkte aufweist.  
+ 
+  `@g1` ist ungültig, da der innere Ring den äußeren Ring an zwei Stellen berührt. 
+  `@g2` ist ungültig, da der zweite innere Ring im Inneren des ersten inneren Rings liegt. 
+  `@g3` ist ungültig, da sich die zwei inneren Ringe an mehreren aufeinander folgenden Punkten berühren. 
+  `@g4` ist ungültig, da sich das Innere der zwei inneren Ringe überlappt. 
+  `@g5` ist ungültig, da der äußere Ring nicht der erste Ring ist. 
+  `@g6` ist ungültig, da der Ring nicht mindestens drei unterschiedliche Punkte aufweist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird eine einfache `geometry``Polygon` mit einem Loch und dem SRID 10 erstellt.  
@@ -142,9 +152,9 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
- Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()` `LINESTRING(1 3, 1 5)`zurück.  
+ Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()``LINESTRING(1 3, 1 5)`zurück.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [STArea &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type)   
  [STExteriorRing &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type)   
  [STNumInteriorRing &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type)   

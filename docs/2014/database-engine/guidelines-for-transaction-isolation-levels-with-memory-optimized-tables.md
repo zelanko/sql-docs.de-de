@@ -1,5 +1,5 @@
 ---
-title: Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen | Microsoft-Dokumentation
+title: Richtlinien für Transaktions Isolations Stufen mit Speicher optimierten Tabellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779155"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen
@@ -24,7 +24,7 @@ ms.locfileid: "62779155"
   
 -   TRANSAKTIONSISOLATIONSSTUFE ist eine erforderliche Option für den ATOMIC-Block, der den Inhalt einer systemintern kompilierten gespeicherten Prozedur enthält.  
   
--   Aufgrund von Einschränkungen bei der Isolationsstufenverwendung in containerübergreifenden Transaktionen, muss die Verwendung speicheroptimierter Tabellen in interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] häufig von einem Tabellenhinweis begleitet werden, der die Isolationsstufe für den Tabellenzugriff angibt. Weitere Informationen zu isolationsstufenhinweisen und containerübergreifenden Transaktionen, finden Sie unter [Isolationsstufen von Transaktionen](../../2014/database-engine/transaction-isolation-levels.md).  
+-   Aufgrund von Einschränkungen bei der Isolationsstufenverwendung in containerübergreifenden Transaktionen, muss die Verwendung speicheroptimierter Tabellen in interpretiertem [!INCLUDE[tsql](../includes/tsql-md.md)] häufig von einem Tabellenhinweis begleitet werden, der die Isolationsstufe für den Tabellenzugriff angibt. Weitere Informationen zu Isolations Stufen hinweisen und Container übergreifenden Transaktionen finden Sie unter [Transaktions Isolations Stufen](../../2014/database-engine/transaction-isolation-levels.md).  
   
 -   Die gewünschte Transaktionsisolationsstufe muss explizit deklariert werden. Es ist nicht möglich, Sperrhinweise zu verwenden (etwa XLOCK), um die Isolation bestimmter Zeilen oder Tabellen in der Transaktion sicherzustellen.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62779155"
   
  Die Garantie, welche die SNAPSHOT-Isolationsstufe (die unterste Ebene der Isolation, die für speicheroptimierte Tabellen unterstützt wird) bietet, umfasst die READ COMMITTED-Garantien. Jede Anweisung in der Transaktion liest die gleiche, konsistente Version der Datenbank. Er werden nicht nur alle von der Transaktion gelesenen Zeilen an die Datenbank übergeben, sondern bei allen Lesevorgängen wird auch der Satz von Änderungen angezeigt, die durch den gleichen Transaktionssatz ausgeführt wurden.  
   
- **Richtlinie**: Wenn nur die READ COMMITTED-isolationsgarantie erforderlich ist, interpretiert mit SNAPSHOT-Isolation mit systemintern kompilierten gespeicherten Prozeduren und für den Zugriff auf Speicheroptimierte Tabellen über [!INCLUDE[tsql](../includes/tsql-md.md)].  
+ **Richtlinie**: Wenn nur die schreibgeschützte Isolations Garantie für den Lesezugriff erforderlich ist, verwenden Sie die Momentaufnahme Isolation mit System intern kompilierten gespeicherten [!INCLUDE[tsql](../includes/tsql-md.md)]Prozeduren und für den Zugriff auf Speicher optimierte Tabellen  
   
  Bei speicheroptimierten Tabellen wird für Autocommittransaktionen die Isolationsstufe READ COMMITTED implizit SNAPSHOT zugeordnet. Wenn die Sitzungseinstellung TRANSACTION ISOLATION LEVEL auf READ COMMITTED festgelegt wird, ist es daher nicht notwendig, die Isolationsstufe durch einen Tabellenhinweis anzugeben, wenn Sie auf speicheroptimierte Tabellen zugreifen.  
   
@@ -91,13 +91,13 @@ COMMIT
   
      Einige Anwendungen setzen möglicherweise voraus, dass Reader immer warten, bis Writer einen Commit durchgeführt haben, insbesondere wenn auf der Anwendungsebene eine Synchronisierung zwischen den beiden Transaktionen vorliegt.  
   
-     **Richtlinie:** Anwendungen können nicht auf Blockierverhalten basieren. Wenn eine Anwendung die Synchronisierung zwischen gleichzeitigen Transaktionen erfordert, solche Logik kann implementiert werden auf der Anwendungsebene oder in der Datenbankschicht über [Sp_getapplock &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql).  
+     **Richtlinie:** Anwendungen können nicht auf Blockierverhalten basieren. Wenn eine Anwendung eine Synchronisierung zwischen gleichzeitigen Transaktionen benötigt, kann diese Logik in der Anwendungsebene oder auf der Datenbankebene durch [sp_getapplock &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql)implementiert werden.  
   
 -   In Transaktionen, die READ COMMITTED-Isolation verwenden, wird jeder Anweisung die neueste Version der Zeilen in der Datenbank angezeigt. Daher sind Änderungen des Datenbankstatus in nachfolgenden Anweisungen sichtbar.  
   
      Ein Tabellenabruf mithilfe einer WHILE-Schleife, bis eine neue Zeile gefunden wurde, ist ein Beispiel für ein Anwendungsmuster, das diese Annahme verwendet. Bei jeder Iteration der Schleife werden der Abfrage die neuesten Updates in der Datenbank angezeigt.  
   
-     **Richtlinie:** Wenn eine Anwendung eine Speicheroptimierte Tabelle zum Abrufen der letzten Zeilen in die Tabelle geschrieben wurden muss, verschieben Sie die Abrufschleife außerhalb des Bereichs der Transaktion aus.  
+     **Richtlinie:** Wenn eine Anwendung eine Speicher optimierte Tabelle abrufen muss, um die aktuellsten Zeilen abzurufen, die in die Tabelle geschrieben wurden, verschieben Sie die Abruf Schleife außerhalb des Bereichs der Transaktion.  
   
      Es folgt ein Beispiel für ein Anwendungsmuster, das die folgende Annahme verwendet: Abrufen einer Tabelle mithilfe einer WHILE-Schleife, bis eine neue Zeile gefunden wird. In jeder Schleifeniteration greift die Abfrage auf die neuesten Updates in der Datenbank zu.  
   
@@ -123,15 +123,15 @@ COMMIT
 ```  
   
 ## <a name="locking-table-hints"></a>Sperrhinweise für Tabellen  
- Sperrhinweise ([Tabellenhinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)) wie HOLDLOCK und XLOCK mit datenträgerbasierten Tabellen verwendet werden können, damit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mehr Sperren als für die angegebene Isolationsstufe erforderlich sind.  
+ Sperr Hinweise ([Tabellen Hinweise &#40;Transact-SQL-&#41;](/sql/t-sql/queries/hints-transact-sql-table)) wie HOLDLOCK und xlock können mit Datenträger basierten Tabellen verwendet werden, um [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mehr Sperren zu verwenden, als für die angegebene Isolationsstufe erforderlich sind.  
   
  Speicheroptimierte Tabellen verwenden keine Sperren. Höhere Isolationsstufen wie REPEATABLE READ und SERIALIZABLE können verwendet werden, um die gewünschten Garantien zu deklarieren.  
   
  Sperrhinweise werden nicht unterstützt. Deklarieren Sie stattdessen die erforderlichen Garantien über die Transaktionsisolationsstufen. (NOLOCK wird unterstützt, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keine Sperren für speicheroptimierten Tabellen verwendet. Beachten Sie, dass NOLOCK anders als bei datenträgerbasierten Tabellen kein READ UNCOMMITTED-Verhalten für speicheroptimierte Tabellen impliziert.)  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu Transaktionen in speicheroptimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Richtlinien zur Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zu Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Richtlinien für Wiederholungs Logik für Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)   
  [Transaktionsisolationsstufen](../../2014/database-engine/transaction-isolation-levels.md)  
   
   

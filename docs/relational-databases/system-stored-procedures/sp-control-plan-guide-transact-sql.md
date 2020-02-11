@@ -1,5 +1,5 @@
 ---
-title: Sp_control_plan_guide (Transact-SQL) | Microsoft-Dokumentation
+title: sp_control_plan_guide (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108760"
 ---
-# <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
+# <a name="sp_control_plan_guide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Löscht, aktiviert oder deaktiviert eine Planhinweisliste.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,36 +50,36 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **N'** _Plan_guide_name_ **"**  
- Gibt die Planhinweisliste an, die gelöscht, aktiviert oder deaktiviert wird. *Plan_guide_name* wird in der aktuellen Datenbank aufgelöst. Wenn nicht angegeben, *Plan_guide_name* der Standardwert ist NULL.  
+ **N '** _plan_guide_name_ **'**  
+ Gibt die Planhinweisliste an, die gelöscht, aktiviert oder deaktiviert wird. *plan_guide_name* in der aktuellen Datenbank aufgelöst wird. Wenn nicht angegeben, *plan_guide_name* standardmäßig NULL.  
   
  DROP  
- Löscht die Planhinweisliste, die anhand des *Plan_guide_name*. Nachdem eine Planhinweisliste gelöscht wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
+ Löscht die durch *plan_guide_name*angegebene Plan Hinweis Liste. Nachdem eine Planhinweisliste gelöscht wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
   
  DROP ALL  
- Löscht alle Planhinweislisten in der aktuellen Datenbank. **N'** _Plan_guide_name_ kann nicht angegeben werden, wenn DROP ALL angegeben wird.  
+ Löscht alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_ kann nicht angegeben werden, wenn Drop all angegeben wird.  
   
  DISABLE  
- Deaktiviert die Planhinweisliste, die anhand des *Plan_guide_name*. Nachdem eine Planhinweisliste deaktiviert wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
+ Deaktiviert die durch *plan_guide_name*angegebene Plan Hinweis Liste. Nachdem eine Planhinweisliste deaktiviert wurde, werden zukünftige Ausführungen einer Abfrage, die zuvor mit der Planhinweisliste übereingestimmt hat, nicht von dieser Liste beeinflusst.  
   
  DISABLE ALL  
- Deaktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'** _Plan_guide_name_ kann nicht angegeben werden, wenn DISABLE ALL angegeben wird.  
+ Deaktiviert alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_ kann nicht angegeben werden, wenn alles deaktivieren angegeben wird.  
   
  ENABLE  
- Ermöglicht die Planhinweisliste, die anhand des *Plan_guide_name*. Eine aktivierte Planhinweisliste kann mit einer geeigneten Abfrage abgeglichen werden. Planhinweislisten werden standardmäßig bei ihrer Erstellung aktiviert.  
+ Aktiviert die durch *plan_guide_name*angegebene Plan Hinweis Liste. Eine aktivierte Planhinweisliste kann mit einer geeigneten Abfrage abgeglichen werden. Planhinweislisten werden standardmäßig bei ihrer Erstellung aktiviert.  
   
  ENABLE ALL  
- Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N'** _Plan_guide_name_ **"** kann nicht angegeben werden, wenn ENABLE ALL angegeben wird.  
+ Aktiviert alle Planhinweislisten in der aktuellen Datenbank. **N '**_plan_guide_name_**'** kann nicht angegeben werden, wenn ' Enable all ' angegeben ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Das Löschen oder Ändern einer Funktion, einer gespeicherten Prozedur oder eines DML-Triggers, auf die bzw. den in einer Planhinweisliste verwiesen wird, verursacht einen Fehler.  
   
  Das Deaktivieren einer deaktivierten bzw. das Aktivieren einer aktivierten Planhinweisliste hat keine Auswirkung und kann ausgeführt werden, ohne einen Fehler zu verursachen.  
   
- Planhinweislisten sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Sie können jedoch ausführen **Sp_control_plan_guide** mit der Drop- oder DROP ALL-Option in keiner Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Plan Hinweis Listen sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Editionen und unterstütze Funktionen für den SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). Allerdings können Sie **sp_control_plan_guide** mit der Option Drop or Drop All in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausführen.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Auszuführende **Sp_control_plan_guide** auf eine Planhinweisliste des Typs "OBJECT" (erstellt durch angeben  **@type ='** Objekt **"** ) erfordert die ALTER-Berechtigung für das Objekt, das wird von der Planhinweisliste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
+ Zum Ausführen von **sp_control_plan_guide** in einer Plan Hinweis Liste des Typs Object (erstellt mit Angabe ** @type von = '** Object **'** ) ist die ALTER-Berechtigung für das Objekt erforderlich, auf das von der Plan Hinweis Liste verwiesen wird. Für alle anderen Planhinweislisten ist die ALTER DATABASE-Berechtigung erforderlich.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -133,11 +133,11 @@ GO
 EXEC sp_control_plan_guide N'DISABLE ALL';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
+ [sp_create_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
+ [sys. plan_guides &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [Planhinweislisten](../../relational-databases/performance/plan-guides.md)  
   
   

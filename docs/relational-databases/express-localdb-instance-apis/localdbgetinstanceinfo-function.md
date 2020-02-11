@@ -1,5 +1,5 @@
 ---
-title: LocalDBGetInstanceInfo-Funktion | Microsoft-Dokumentation
+title: Localdbgetinstanceingefo-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.assetid: 231706f5-26c6-42eb-ab47-315df6b8f824
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: c10fcf4f0a57eef5e2f4f33d699c4ed7d4d350e1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68022085"
 ---
 # <a name="localdbgetinstanceinfo-function"></a>LocalDBGetInstanceInfo-Funktion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Gibt Informationen für die angegebene SQL Server Express LocalDB-Instanz zurück (beispielsweise, ob sie vorhanden ist, die verwendete LocalDB-Version, ob sie ausgeführt wird usw.).  
   
- Die Informationen werden zurückgegeben, eine **Struktur** mit dem Namen **LocalDBInstanceInfo**, die über die folgende Definition verfügt.  
+ Die Informationen werden in einer **Struktur** namens " **localdbinstanceinfo**" zurückgegeben, die die folgende Definition hat.  
   
 ```  
 typedef struct _LocalDBInstanceInfo  
@@ -73,7 +73,7 @@ typedef struct _LocalDBInstanceInfo
   
 ```  
   
- **Headerdatei:** sqlncli.h  
+ **Header Datei:** sqlncli. h  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -86,16 +86,16 @@ HRESULT LocalDBGetInstanceInfo(
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *wszInstanceName*  
+ *wszinstancename*  
  [Eingabe] Der Name der Instanz.  
   
- *pInstanceInfo*  
+ *pinstanceingefo*  
  [Ausgabe] Der Puffer zum Speichern der Informationen zur LocalDB-Instanz.  
   
- *dwInstanceInfoSize*  
- [Eingabe] Nimmt die Größe der *InstanceInfo* Puffer.  
+ *dwinstanceinfosize*  
+ Der Enthält die Größe des *instanceinfo* -Puffers.  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  S_OK  
  Die Funktion wurde erfolgreich ausgeführt.  
   
@@ -127,11 +127,11 @@ HRESULT LocalDBGetInstanceInfo(
  Ein unerwarteter Fehler ist aufgetreten. Weitere Informationen finden Sie im Ereignisprotokoll.  
   
 ## <a name="details"></a>Details  
- Der Grund für die Einführung der **Struktur** -größenargument (*LpInstanceInfoSize*) besteht darin, aktivieren die API zum Zurückgeben von verschiedenen Versionen von der **LocalDBInstanceInfostruct**effektiv Aufwärts-und Abwärtskompatibilität aktivieren.  
+ Der Grund für die Einführung des **struct** Size-Arguments (*lpinstanceinfosize*) besteht darin, dass die API die Rückgabe verschiedener Versionen von **localdbinstanceinfostruct**ermöglicht und somit die vorwärts-und Abwärtskompatibilität effektiv ermöglicht.  
   
- Wenn die **Struktur** -größenargument (*LpInstanceInfoSize*) entspricht der Größe einer bekannten Version der **LocalDBInstanceInfostruct**, diese Version von der  **Struktur** zurückgegeben wird. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
+ Wenn das **struct** size-Argument (*lpinstanceinfosize*) mit der Größe einer bekannten Version von **localdbinstanceinfostruct**übereinstimmt, wird diese Version der **Struktur** zurückgegeben. Andernfalls wird LOCALDB_ERROR_INVALID_PARAMETER zurückgegeben.  
   
- Ein typisches Beispiel **LocalDBGetInstanceInfo** API-Verwendung sieht folgendermaßen aus:  
+ Ein typisches Beispiel für die Verwendung der **localdbgetinstanceingefo** -API sieht wie folgt aus:  
   
 ```  
 LocalDBInstanceInfo ii;  
@@ -141,7 +141,7 @@ LocalDBInstanceInfo(L"Test", &ii, sizeof(LocalDBInstanceInfo));
   
  Ein Codebeispiel, in dem die LocalDB-API verwendet wird, finden Sie unter [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Express LocalDB-Header und -Versionsinformationen](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Express LocalDB-Header und Versionsinformationen](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  
   
   

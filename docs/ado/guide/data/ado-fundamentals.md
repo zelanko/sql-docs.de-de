@@ -11,55 +11,55 @@ ms.assetid: d6a66928-e68f-4c38-b87a-838c5de50a28
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75f5030f8faa5aa5d8e8a0f6bcb6d72b186c8448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67926062"
 ---
 # <a name="ado-fundamentals"></a>ADO-Grundlagen
-ADO, bietet Entwicklern ein leistungsfähiges, logische Objektmodell zum programmgesteuerten Zugriff auf, bearbeiten und Aktualisieren von Daten aus einer Vielzahl von Datenquellen über OLE DB-Schnittstellen. Die häufigste Verwendung von ADO, werden Abfragen einer Tabelle oder Tabellen in einer relationalen Datenbank, abrufen und Anzeigen der Ergebnisse in einer Anwendung und vielleicht können Benutzer vornehmen und Speichern von Änderungen an den Daten ab. Andere Aufgaben umfassen Folgendes:  
+ADO bietet Entwicklern ein leistungsfähiges, logisches Objektmodell für den programmgesteuerten Zugriff auf, das Bearbeiten und Aktualisieren von Daten aus einer Vielzahl von Datenquellen über OLE DB Systemschnittstellen. Die häufigste Verwendung von ADO besteht darin, eine Tabelle oder Tabellen in einer relationalen Datenbank abzufragen, die Ergebnisse in einer Anwendung abzurufen und anzuzeigen und möglicherweise Benutzer Änderungen an den Daten vorzunehmen. Andere Aufgaben umfassen Folgendes:  
   
--   Abfragen einer Datenbank mithilfe von SQL und zum Anzeigen der Ergebnisse an.  
+-   Abfragen einer Datenbank mithilfe von SQL und Anzeigen der Ergebnisse.  
   
--   Zugreifen auf Informationen in einem Dateispeicher über das Internet ein.  
+-   Zugreifen auf Informationen in einem Dateispeicher über das Internet.  
   
--   Bearbeiten von Nachrichten und Ordnern in einem e-Mail-System ein.  
+-   Bearbeiten von Nachrichten und Ordnern in einem e-Mail-System.  
   
--   Speichern von Daten aus einer Datenbank in eine XML-Datei.  
+-   Speichern von Daten aus einer Datenbank in einer XML-Datei.  
   
--   Ausführen von Befehlen, die durch XML-Code beschrieben und das Abrufen eines XML-Streams.  
+-   Ausführen von mit XML beschriebenen Befehlen und Abrufen eines XML-Streams.  
   
--   Speichern von Daten in einem Binär- oder XML-Stream.  
+-   Speichern von Daten in einem binären oder XML-Stream.  
   
--   Da der Benutzer zu überprüfen und Ändern von Daten in Datenbanktabellen.  
+-   Ermöglicht einem Benutzer das überprüfen und Ändern von Daten in Datenbanktabellen.  
   
--   Erstellen und wiederverwenden parametrisierter Datenbankbefehle.  
+-   Erstellen und wieder verwenden von parametrisierten Daten Bank Befehlen.  
   
--   Ausführen von gespeicherten Prozeduren.  
+-   Ausführen gespeicherter Prozeduren.  
   
--   Erstellen dynamisch eine flexible Struktur, mit dem Namen einer **Recordset**, um zu von aufzunehmen, navigieren und Bearbeiten von Daten.  
+-   Dynamisches Erstellen einer flexiblen Struktur, die als **Recordset**bezeichnet wird, um Daten zu speichern, zu navigieren und zu bearbeiten.  
   
--   Ausführen von Vorgängen der Transaktionsdatenbank.  
+-   Ausführen von transaktionalen Daten Bank Vorgängen.  
   
--   Filtern und Sortieren lokale Kopien von Datenbankinformationen basierend auf Kriterien der Laufzeit.  
+-   Filtern und Sortieren von lokalen Kopien von Datenbankinformationen basierend auf Lauf Zeit Kriterien  
   
--   Erstellen und Bearbeiten von hierarchischen ergibt sich aus Datenbanken.  
+-   Erstellen und Bearbeiten von hierarchischen Ergebnissen aus Datenbanken.  
   
--   Binden Datenbankfelder an Daten unterstützenden Komponenten an.  
+-   Binden von Datenbankfeldern an Daten abhängige Komponenten.  
   
--   Erstellen von remote getrennt **Recordsets**.  
+-   Erstellen von Remote getrennten **Recordsets**.  
   
- ADO verfügbar macht, eine Vielzahl von Optionen und Einstellungen auf diese Flexibilität zu bieten. Aus diesem Grund ist es wichtig, einen methodischen Ansatz für die Informationen zum Verwenden von ADO in einer Anwendung, Ihre Ziele in überschaubare Teile unterteilen.  
+ ADO macht eine Vielzahl von Optionen und Einstellungen verfügbar, um eine solche Flexibilität bereitzustellen. Daher ist es wichtig, eine methodische Herangehensweise an die Verwendung von ADO in einer Anwendung zu treffen und die einzelnen Ziele in verwaltbare Teile aufzuteilen.  
   
- Vier primäre Vorgänge sind in den meisten Anwendungen, die ADO verwenden beteiligt: Abrufen von Daten, untersuchen von Daten, Daten bearbeiten und Aktualisieren von Daten. Diese Vorgänge werden im Detail weiter unten in diesem Abschnitt überprüft.  
+ Vier primäre Vorgänge sind an den meisten Anwendungen beteiligt, die ADO: das Überprüfen von Daten, das Untersuchen von Daten, das Bearbeiten und Aktualisieren von Daten verwenden. Diese Vorgänge werden im weiteren Verlauf dieses Abschnitts ausführlicher erläutert.  
   
- Aber bevor wir diese Details erläutern, zeigen wir eine Übersicht über die ADO-Objektmodell und eine einfache ADO-Anwendung, die in die Microsoft® Visual Basic geschrieben ist, und führt jeden der vier primäre ADO-Vorgänge:  
+ Bevor wir jedoch diese Details erörtern, werden wir uns eine Übersicht über das ADO-Objektmodell und eine einfache ADO-Anwendung vorstellen, die in Microsoft® Visual Basic® geschrieben wird und jeden der vier primären ADO-Vorgänge ausführt:  
   
--   [ADO-Objekte und Sammlungen](../../../ado/guide/data/ado-objects-and-collections.md)  
+-   [ADO-Objekte und -Collections](../../../ado/guide/data/ado-objects-and-collections.md)  
   
 -   [HelloData: Eine einfache ADO-Anwendung](../../../ado/guide/data/hellodata-a-simple-ado-application.md)  
   
--   [OLE DB-Anbieter](../../../ado/guide/data/ole-db-providers-ado.md)  
+-   [OLE DB Anbieter](../../../ado/guide/data/ole-db-providers-ado.md)  
   
--   [Fehler](../../../ado/guide/data/errors-ado.md)
+-   [Errors](../../../ado/guide/data/errors-ado.md)

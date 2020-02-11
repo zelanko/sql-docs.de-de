@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c4fc4e1b0f0340d579b1f6ee22db888417089352
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75242942"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>XML-Editor (SQL Server Management Studio)
@@ -34,12 +34,12 @@ ms.locfileid: "75242942"
   
  Für die Arbeit an XML-Dateien, XML-Schemas und Datasets stehen im Designer die folgenden drei Sichten (oder Modi) zur Verfügung:  
   
-|Sicht|Beschreibung|Unterstützte Dateitypen|  
+|Sicht|BESCHREIBUNG|Unterstützte Dateitypen|  
 |----------|-----------------|--------------------------|  
-|**Chaos**|Zum visuellen Erstellen und Ändern von XML-Schemas und ADO.NET-Datasets.|.xsd|  
+|**Schema**|Zum visuellen Erstellen und Ändern von XML-Schemas und ADO.NET-Datasets.|.xsd|  
 |**Daten**|Zum visuellen Ändern von XML-Datendateien in einem strukturierten Datenraster.|.xml|  
-|**Basi**|Zum Bearbeiten von XML. Der Quellen-Editor stellt Funktionen wie Farbcodierung und IntelliSense bereit, einschließlich Wort vervollständigen und Member auflisten.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
-|**ShowPlan**|Zeigt mithilfe der Option SET SHOWPLAN_XML ON erstellte XML-Abfragepläne an.|.showplan|  
+|**XML**|Zum Bearbeiten von XML. Der Quellen-Editor stellt Funktionen wie Farbcodierung und IntelliSense bereit, einschließlich Wort vervollständigen und Member auflisten.|.xml .xsd .xslt .wsdl.web.resx.tdl.wsf.hta.disco.vsdisco.config|  
+|**Showplan**|Zeigt mithilfe der Option SET SHOWPLAN_XML ON erstellte XML-Abfragepläne an.|.showplan|  
   
 ## <a name="schema-view"></a>Schemasicht  
  Die Schemasicht bietet eine visuelle Darstellung der Elemente, Attribute, Typen usw., aus denen XML-Schemas und ADO.NET-Datasets bestehen.  
@@ -98,13 +98,12 @@ ms.locfileid: "75242942"
  Die XML-Ansicht bietet einen Editor zum Bearbeiten von Roh-XML sowie darüber hinaus IntelliSense und Farbcodierung. Bei der Arbeit an XSD- und XML-Dateien mit zugehörigem Schema steht der Anweisungsabschluss zur Verfügung. Geben \< Sie ein, um ein Tag zu initiieren, und Ihnen wird eine Liste von Elementen angezeigt, die an diesem Speicherort gültig sind. Nachdem Sie den Elementnamen eingegeben und die LEERTASTE gedrückt haben, wird Ihnen eine Liste mit Attributen vorgeschlagen, die von dem Element unterstützt werden.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense stehen auf der Symbolleiste nicht zur Verfügung. Wenn Sie im XML-Editor auf die Optionen zugreifen möchten, klicken Sie im Menü **Bearbeiten** auf **IntelliSense**.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense stehen auf der Symbolleiste nicht zur Verfügung. Wenn Sie im XML-Editor auf die Optionen zugreifen möchten, klicken Sie im Menü **Bearbeiten** auf **IntelliSense**.  
   
 ## <a name="showplan-view"></a>SHOWPLAN-Sicht  
  Abfragepläne können im XML-Format gespeichert werden, wenn sie mithilfe der Option SET SHOWPLAN_XML ON erstellt wurden. Doppelklicken Sie auf eine Datei mit der Erweiterung .showplan, um den Abfrageplan zu öffnen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speichern eines Ausführungs Plans im XML-Format](../performance/save-an-execution-plan-in-xml-format.md)  
+ [Speichern eines Ausführungsplans im XML-Format](../performance/save-an-execution-plan-in-xml-format.md)  
   
   

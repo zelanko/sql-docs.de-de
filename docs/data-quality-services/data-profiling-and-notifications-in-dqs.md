@@ -10,10 +10,10 @@ ms.assetid: a778bb5b-8e35-4a7b-b04a-ae2b46dec21b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: bb763d2212bd8dcb09b6088467e97aa702d15012
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251750"
 ---
 # <a name="data-profiling-and-notifications-in-dqs"></a>Datenprofilerstellung und Benachrichtigungen in DQS
@@ -66,13 +66,13 @@ ms.locfileid: "75251750"
   
  Weitere Informationen zu den speziellen Profilerstellungsstatistiken, die sich auf eine Aktivität beziehen, finden Sie in den Abschnitten zur Profilerstellung in den folgenden Themen:  
   
--   [Durchführen der Wissens Ermittlung](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md)  
   
 -   [Bereinigen von Daten mit DQS-&#40;interner&#41; wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md)  
   
--   [Ausführen eines abgleichsprojekts](../data-quality-services/run-a-matching-project.md)  
+-   [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md)  
   
 ##  <a name="Monitoring"></a>Profil Erstellungs Daten bei der Aktivitäts Überwachung  
  Profilerstellungsinformationen für die Wissensermittlungs, Abgleichsrichtlinien-, Abgleichs- und Bereinigungsaktivitäten sind nicht nur auf den Aktivitätsseiten im Data Quality-Client verfügbar, sondern auch bei der Aktivitätsüberwachung. Die Aktivitätsüberwachung stellt Ihnen eine Übersicht über aktuelle und vergangene Aktivitäten bereit. Zusätzlich zu den Eigenschaften und verknüpften Berechnungsprozessen von Aktivitäten können Sie die für jede Aktivität an einem Speicherort generierten Profilerstellungsinformationen anzeigen. Sie wählen eine Aktivität in der Aktivitätstabelle aus, um Profilerstellungsergebnisse in einer Tabelle weiter unten anzuzeigen. Sie können die Profilerstellungsergebnisse auch exportieren. Weitere Informationen finden Sie unter [DQS Administration](../data-quality-services/dqs-administration.md).  
@@ -88,18 +88,18 @@ ms.locfileid: "75251750"
   
  Informationen zu bestimmten Bedingungen, die Benachrichtigungen für eine Aktivität zugeordnet sind, finden Sie hier:  
   
--   [Durchführen der Wissens Ermittlung](../data-quality-services/perform-knowledge-discovery.md)  
+-   [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md)  
   
 -   [Bereinigen von Daten mit DQS-&#40;interner&#41; wissen](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)  
   
 -   [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md)  
   
--   [Ausführen eines abgleichsprojekts](../data-quality-services/run-a-matching-project.md)  
+-   [Ausführen eines Abgleichsprojekts](../data-quality-services/run-a-matching-project.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie Benachrichtigungen in DQS aktiviert und deaktiviert werden.|[Aktivieren oder Deaktivieren von Profil Erstellungs Benachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Beschreibt, wie Benachrichtigungen in DQS aktiviert und deaktiviert werden.|[Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
   
   

@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4e18f635b7bbdd8fa96a565fef6aef5be5bde87f
-ms.sourcegitcommit: 0c40843c13f67ba7d975f4fedb9d20d70747f66d
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74097872"
 ---
-# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdm_exec_input_buffer-transact-sql"></a>sys. dm_exec_input_buffer (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
-Gibt Informationen zu-Anweisungen zurück, die an eine Instanz von gesendet wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Gibt Informationen zu Anweisungen zurück, die an eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanz von übermittelt werden.
 
 ## <a name="syntax"></a>Syntax
 
@@ -51,25 +51,25 @@ sys.dm_exec_input_buffer ( session_id , request_id )
 
 ## <a name="table-returned"></a>Zurückgegebene Tabelle
 
-|Spaltenname|Datentyp|und Beschreibung|
+|Spaltenname|Datentyp|BESCHREIBUNG|
 |-----------------|---------------|-----------------|
 |**event_type**|**nvarchar(256)**|Der Ereignistyp im Eingabepuffer für die angegebene SPID.|
-|**parameters**|**smallint**|Alle Parameter, die für die Anweisung bereitgestellt werden.|
+|**Metern**|**smallint**|Alle Parameter, die für die Anweisung bereitgestellt werden.|
 |**event_info**|**nvarchar(max)**|Der Text der Anweisung im Eingabepuffer für die angegebene SPID.|
 
 ## <a name="permissions"></a>Berechtigungen
 
-Wenn der Benutzer auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die View Server State-Berechtigung hat, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angezeigt; Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
+Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der Benutzer über die View Server State-Berechtigung verfügt, werden dem Benutzer alle ausgeführten Sitzungen in der Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
 
 > [!IMPORTANT]
 > Das Ausführen dieser DMV außerhalb SQL Server Management Studio gegen SQL Server ohne View Server State-Berechtigungen (z. b. in einem-Triggern, einer gespeicherten Prozedur oder Funktion) löst einen Berechtigungs Fehler für die Master-Datenbank aus.
 
-Wenn auf [!INCLUDE[ssSDS](../../includes/sssds-md.md)]der Benutzer der Datenbankbesitzer ist, werden dem Benutzer alle ausgeführten Sitzungen auf der [!INCLUDE[ssSDS](../../includes/sssds-md.md)]angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
+[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Wenn der Benutzer der Datenbankbesitzer ist, werden dem Benutzer alle ausgeführten Sitzungen auf dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]angezeigt. Andernfalls wird dem Benutzer nur die aktuelle Sitzung angezeigt.
 
 > [!IMPORTANT]
 > Das Ausführen dieser DMV außerhalb der SQL Server Management Studio für Azure SQL-Datenbank ohne Besitzer Berechtigungen (z. b. in einem-Triggern, einer gespeicherten Prozedur oder Funktion) löst einen Berechtigungs Fehler für die Master-Datenbank aus.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Diese dynamische Verwaltungsfunktion kann in Verbindung mit sys. dm_exec_sessions oder sys. dm_exec_requests verwendet werden, indem **CROSS APPLY**verwendet wird.
 
@@ -96,9 +96,9 @@ WHERE es.session_id > 50;
 GO
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
-- [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
+- [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
 - [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)
 - [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)
 - [DBCC INPUTBUFFER &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)

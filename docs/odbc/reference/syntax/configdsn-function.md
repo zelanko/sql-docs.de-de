@@ -20,15 +20,15 @@ ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 21a02107359b26c0dc30aa87acbf46c1ab1a172d
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892853"
 ---
 # <a name="configdsn-function"></a>ConfigDSN-Funktion
 **Konformitäts**  
- Eingeführte Version: ODBC 1.0  
+ Eingeführte Version: ODBC 1,0  
   
  **Zusammenfassung**  
  **ConfigDSN** fügt Datenquellen in den Systeminformationen hinzu, ändert oder löscht sie. Möglicherweise wird der Benutzer zur Eingabe von Verbindungsinformationen aufgefordert. Sie kann sich in der Treiber-DLL oder einer separaten Setup-DLL befinden.  
@@ -53,23 +53,23 @@ BOOL ConfigDSN(
   
  ODBC_ADD_DSN: Fügen Sie eine neue Datenquelle hinzu.  
   
- ODBC_CONFIG_DSN: Konfigurieren (ändern) Sie eine vorhandene Datenquelle.  
+ ODBC_CONFIG_DSN: eine vorhandene Datenquelle konfigurieren (ändern).  
   
  ODBC_REMOVE_DSN: Entfernen Sie eine vorhandene Datenquelle.  
   
  *lpszDriver*  
  Der Treiber Beschreibung (in der Regel der Name des zugeordneten DBMS), der Benutzern anstelle des Namens des physischen Treibers angezeigt wird.  
   
- *lpszAttributes*  
+ *lpszattribute*  
  Der Eine doppelt auf NULL endend beendete Liste von Attributen in Form von Schlüsselwort-Wert-Paaren. Weitere Informationen finden Sie unter "comments".  
   
-## <a name="returns"></a>Rückgabewert  
+## <a name="returns"></a>Rückgabe  
  Die Funktion gibt true zurück, wenn Sie erfolgreich ist, andernfalls false.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **ConfigDSN** false zurückgibt, wird ein  *\** zugeordneter Wert von "Pferd rorcode" durch einen Aufruf von " **sqlpostinstallererror** " an den Installer-Fehler Puffer gesendet und kann durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die  *\*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
+ Wenn **ConfigDSN** false zurückgibt, wird ein zugeordneter Wert von " * \*Pferd rorcode* " durch einen Aufruf von " **sqlpostinstallererror** " an den Installer-Fehler Puffer gesendet und kann durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_HWND|Ungültiges Fenster handle.|Das *hwndParent* -Argument war ungültig.|  
 |ODBC_ERROR_INVALID_KEYWORD_VALUE|Ungültige Schlüsselwort-Wert-Paare|Das *lpszattribute* -Argument enthielt einen Syntax Fehler.|  
@@ -81,9 +81,9 @@ BOOL ConfigDSN(
 ## <a name="comments"></a>Kommentare  
  **ConfigDSN** empfängt Verbindungsinformationen von der Installer-dll als Liste von Attributen in Form von Schlüsselwort-Wert-Paaren. Jedes Paar wird mit einem NULL-Byte beendet, und die gesamte Liste wird mit einem NULL-Byte beendet. (Das heißt, zwei NULL-Bytes markieren das Ende der Liste.) Leerzeichen sind um das Gleichheitszeichen im Schlüsselwort-Wert-Paar nicht zulässig. **ConfigDSN** kann Schlüsselwörter akzeptieren, bei denen es sich nicht um gültige Schlüsselwörter für **sqlbrowseconnetct** und **SQLDriverConnect**handelt. **ConfigDSN** unterstützt nicht notwendigerweise alle Schlüsselwörter, die gültige Schlüsselwörter für **sqlbrowseconnetct** und **SQLDriverConnect**sind. (**ConfigDSN** akzeptiert das **Driver** -Schlüsselwort nicht.) Die von der **ConfigDSN** -Funktion verwendeten Schlüsselwörter müssen alle Optionen unterstützen, die zum Neuerstellen der Datenquelle mithilfe der automatischen Setup Funktion des Installers erforderlich sind. Wenn die Verwendungen der **ConfigDSN** -Werte und der Verbindungs Zeichenfolgen-Werte identisch sind, sollten dieselben Schlüsselwörter verwendet werden.  
   
- Wie in **sqlbrowseconnetct** und **SQLDriverConnect**dürfen die Schlüsselwörter und ihre Werte nicht das **[]{}(),;? enthalten. =\*! @** -Zeichen, und der Wert des **DSN** -Schlüssel Worts darf nicht nur aus Leerzeichen bestehen. Aufgrund der Registrierungs Grammatik dürfen Schlüsselwörter und Datenquellen Namen keinen umgekehrten Schrägstrich (\\) enthalten.  
+ Wie in **sqlbrowseconnetct** und **SQLDriverConnect**dürfen die Schlüsselwörter und ihre Werte nicht das **[]{}(),;? enthalten. = \*! @** -Zeichen, und der Wert des **DSN** -Schlüssel Worts darf nicht nur aus Leerzeichen bestehen. Aufgrund der Registrierungs Grammatik dürfen Schlüsselwörter und Datenquellen Namen keinen umgekehrten Schrägstrich (\\) enthalten.  
   
- **ConfigDSN** sollte **sqlvaliddsn** aufzurufen, um die Länge des Datenquellen namens zu überprüfen und zu überprüfen, ob der Name ungültige Zeichen enthält. Wenn der Name der Datenquelle länger als SQL_MAX_DSN_LENGTH ist oder ungültige Zeichen enthält, gibt **sqlvaliddsn** einen Fehler zurück, und **ConfigDSN** gibt einen Fehler zurück. Die Länge des Datenquellen namens wird auch von **sqlschreitedsneinini**geprüft.  
+ **ConfigDSN** sollte **sqlvaliddsn** aufzurufen, um die Länge des Datenquellen namens zu überprüfen und zu überprüfen, ob der Name ungültige Zeichen enthält. Wenn der Name der Datenquelle länger ist als SQL_MAX_DSN_LENGTH oder ungültige Zeichen enthält, gibt **sqlvaliddsn** einen Fehler zurück, und **ConfigDSN** gibt einen Fehler zurück. Die Länge des Datenquellen namens wird auch von **sqlschreitedsneinini**geprüft.  
   
  Wenn Sie z. b. eine Datenquelle konfigurieren möchten, die eine Benutzer-ID, ein Kennwort und einen Datenbanknamen erfordert, kann eine Setup Anwendung die folgenden Schlüsselwort-Wert-Paare übergeben:  
   
@@ -121,11 +121,11 @@ DSN=Personnel Data\0UID=Smith\0PWD=Sesame\0DATABASE=Personnel\0\0
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
 |Erhalten eines Werts aus der Datei "ODBC. ini" oder der Registrierung|[SQLGetPrivateProfileString](../../../odbc/reference/syntax/sqlgetprivateprofilestring-function.md)|  
-|Entfernen der Standarddaten Quelle|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
-|Entfernen eines Datenquellen namens aus "ODBC. ini" (oder der Registrierung)|[SQLRemoveDSNFromIni](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
-|Hinzufügen eines Datenquellen namens zu "ODBC. ini" (oder zur Registrierung)|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
-|Schreiben eines Werts in die Datei "ODBC. ini" oder in die Registrierung|[SQLWritePrivateProfileString](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|
+|Entfernen der Standarddaten Quelle|[Sqlremovedefaultdatasource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
+|Entfernen eines Datenquellen namens aus "ODBC. ini" (oder der Registrierung)|[Sqlremovedsnfromini](../../../odbc/reference/syntax/sqlremovedsnfromini-function.md)|  
+|Hinzufügen eines Datenquellen namens zu "ODBC. ini" (oder zur Registrierung)|[Sqlschreitedsnder ini](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|  
+|Schreiben eines Werts in die Datei "ODBC. ini" oder in die Registrierung|[Sqlschreiteprivateprofilestring](../../../odbc/reference/syntax/sqlwriteprivateprofilestring-function.md)|

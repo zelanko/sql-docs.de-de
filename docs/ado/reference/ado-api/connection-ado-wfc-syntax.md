@@ -1,5 +1,5 @@
 ---
-title: Connection (ADO / WFC-Syntax) | Microsoft-Dokumentation
+title: Connection (ADO-WFC-Syntax) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,14 +14,14 @@ ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 64647d577170a79b1f600b7162a0338ea19c572e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67919538"
 ---
 # <a name="connection-ado---wfc-syntax"></a>Connection (ADO/WFC-Syntax)
-## <a name="package-commswfcdata"></a>Paket com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>Paket "com. ms. wfc. Data"  
   
 ### <a name="constructor"></a>Konstruktor  
   
@@ -44,7 +44,7 @@ public int executeUpdate(String commandText)
 public int executeUpdate(String commandText, int options)  
 ```  
   
- Die **ExecuteUpdate** Methode ist eine spezielle Case-Methode, die die zugrunde liegenden ADO aufruft **ausführen** Methode mit bestimmten Parametern. Die **ExecuteUpdate** Methode unterstützt nicht die Rückgabe von einer **Recordset** -Objekt, also die **ausführen** Methode *Optionen* -Parameter ist mit geändert **AdoEnums.ExecuteOptions.NORECORDS**. Nach der **ausführen** Methode ausgeführt wird, die aktualisierte *RecordsAffected* Parameter an die die **ExecuteUpdate** -Methode, die schließlich als ein zurückgegebenwird**Int**.  
+ Die **ExecuteUpdate** -Methode ist eine spezielle Case-Methode, die die zugrunde liegende ADO **Execute** -Methode mit bestimmten Parametern aufruft. Die **ExecuteUpdate** -Methode unterstützt die Rückgabe eines **Recordset** -Objekts nicht, sodass der *options* -Parameter der **Execute** -Methode mit **AdoEnums. ExecuteOptions. norecords**geändert wird. Nachdem die **Execute** -Methode abgeschlossen wurde, wird der aktualisierte *recordsafffiziert* -Parameter an die **ExecuteUpdate** -Methode zurückgegeben, die schließlich als **int**zurückgegeben wird.  
   
 ```  
 public void open()   
@@ -85,8 +85,8 @@ public AdoProperties getProperties()
 public com.ms.wfc.data.Errors getErrors()  
 ```  
   
-### <a name="events"></a>Ereignisse  
- Weitere Informationen zu ADO/WFC-Ereignissen finden Sie unter [ADO-Ereignisinstanziierung nach Sprache](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+### <a name="events"></a>Events  
+ Weitere Informationen zu ADO/WFC-Ereignissen finden Sie unter [ADO Event Instantiierung by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -109,5 +109,5 @@ public void addOnWillExecute(ConnectionEventHandler handler)
 public void removeOnWillExecute(ConnectionEventHandler handler)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Connection-Objekt (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

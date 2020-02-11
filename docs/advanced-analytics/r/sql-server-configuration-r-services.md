@@ -10,10 +10,10 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7d18661fadb12167fd0a443758cced1188401750
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "73727334"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
@@ -32,7 +32,7 @@ Die Optimierung des Servercomputers ist wichtig, um sicherzustellen, dass Sie ü
 - Der Fehler „Kontingent wurde überschritten“ bewirkt, dass das R-Skript ohne Abschluss beendet wird.
 - In den R-Speicher geladene Daten werden gekürzt, sodass Ergebnisse unvollständig sind.
 
-### <a name="memory"></a>Speicher
+### <a name="memory"></a>Arbeitsspeicher
 
 Der auf einem Computer verfügbare Arbeitsspeicher kann sich stark auf die Leistung komplexerer analytischer Algorithmen auswirken. Nicht ausreichender Arbeitsspeicher könnte den Grad an Parallelität beeinträchtigen, wenn Sie den SQL-Rechenkontext verwenden. Ebenso kann dadurch die verarbeitbare Segmentgröße (Zeilen pro Lesevorgang) beeinträchtigt werden sowie die Anzahl gleichzeitiger Sitzungen, die unterstützt werden kann.
 
@@ -48,7 +48,7 @@ Für das Modell zum Abgleich von Lebensläufen lag der Schwerpunkt auf der Verwe
 
 Sie sollten unter einem Windows-Betriebssystem die Option **Hohe Leistung** verwenden. Wenn Sie eine andere Leistungsoption verwenden, führt dies zu verminderter oder ungleichmäßiger Leistung beim Gebrauch von SQL Server.
 
-### <a name="disk-io"></a>Eingabe bzw. Ausgabe von Laufwerken
+### <a name="disk-io"></a>Datenträger-E/A
 
 Trainings- und Prognoseaufträge mit R Services sind grundsätzlich E/A-abhängig; sie hängen von der Geschwindigkeit des Laufwerks bzw. der Laufwerke ab, auf dem/denen die Datenbank gespeichert ist. Schnellere Laufwerke wie Solid State Drives (SSD) helfen möglicherweise.
 
@@ -86,7 +86,7 @@ Die E/A-Leistung kann oft verbessert werden, indem Sie die Komprimierung oder ei
 
 Ein Columnstore ist möglicherweise nicht besonders effizient, wenn zahlreiche Einfügungen in der Tabelle vorhanden sind; er ist aber gut geeignet für statische Daten oder Daten, die sich nur selten verändern. Wenn sich ein spaltenbasierter Speicher nicht eignet, können Sie die E/A verbessern, indem Sie die Komprimierung in einer überwiegend zeilenorientierten Tabelle aktivieren.
 
-Weitere Informationen finden Sie in folgenden Dokumenten:
+Weitere Informationen finden Sie in den folgenden Dokumenten:
 
 + [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md)
 

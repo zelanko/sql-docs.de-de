@@ -1,5 +1,5 @@
 ---
-title: DiffGram-Beispiele (SQLXML 4.0) | Microsoft-Dokumentation
+title: DiffGram-Beispiele (SQLXML 4,0) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 38bee43ed5b727bca552c1b44010dd692012d823
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66012971"
 ---
 # <a name="diffgram-examples-sqlxml-40"></a>DiffGram-Beispiele (SQLXML 4.0)
@@ -99,11 +99,11 @@ ms.locfileid: "66012971"
 </ROOT>  
 ```  
   
- In der  **\<vor >** blockieren, gibt es eine  **\<Reihenfolge >** Element (**diffgr: ID = "Order1"** ) und ein  **\< Kunde >** Element (**diffgr: ID = "Customer1"** ). Diese Elemente stellen vorhandene Datensätze in der Datenbank dar. Die  **\<DataInstance >** -Element verfügt nicht über die entsprechenden Datensätze (mit dem gleichen **diffgr: ID**). Dies gibt einen Löschvorgang an.  
+ Im ** \<before>** -Block gibt es ein ** \<Order>** -Element (**diffgr: ID = "order1"**) und ein ** \<Customer>** -Element (**diffgr: ID = "Customer1"**). Diese Elemente stellen vorhandene Datensätze in der Datenbank dar. Das ** \<DataInstance->** Element verfügt nicht über die entsprechenden Datensätze (mit derselben **diffgr: ID**). Dies gibt einen Löschvorgang an.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
-1.  Erstellen Sie diese Tabellen in der **Tempdb** Datenbank.  
+1.  Erstellen Sie diese Tabellen in der **tempdb** -Datenbank.  
   
     ```  
     CREATE TABLE Cust(  
@@ -139,7 +139,7 @@ ms.locfileid: "66012971"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das DiffGram auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="b-inserting-a-record-by-using-a-diffgram"></a>B. Einfügen eines Datensatzes mit einem DiffGram  
  In diesem Beispiel fügt das DiffGram einen Datensatz in die Tabellen Cust und Ord ein.  
@@ -166,11 +166,11 @@ ms.locfileid: "66012971"
 </ROOT>  
 ```  
   
- In diesem DiffGram der  **\<vor >** -Block nicht angegeben (keine vorhandenen Datenbank-Datensätze erkannt). Es gibt zwei Datensatzinstanzen (identifiziert durch die  **\<Kunden >** und  **\<Reihenfolge >** Elemente in der  **\<DataInstance >** Block), zuordnen zu Cust und Ord-Tabellen, bzw. Beide Elemente geben das **diffgr: HasChanges** Attribut (**HasChanges = "inserted"** ). Dies gibt einen Einfügevorgang an. In diesem DiffGram, bei Angabe von **HasChanges = "modified"** , werden Sie an, dass einen Datensatz, der nicht vorhanden ist, was zu einem Fehler führt, ändern möchten.  
+ In diesem DiffGram wird der ** \<before>** -Block nicht angegeben (es wurden keine vorhandenen Datenbank-Datensätze identifiziert). Es gibt zwei Daten Satz Instanzen (identifiziert durch die ** \<Kunden>** und ** \<Order>** Elemente im ** \<DataInstance** -Block>), die den cust-bzw. Ord-Tabellen zugeordnet werden. Beide Elemente geben das **diffgr: hasChanges** -Attribut an (**hasChanges = "eingefügt"**). Dies gibt einen Einfügevorgang an. Wenn Sie in diesem DiffGram **hasChanges = "modified"** angeben, geben Sie an, dass Sie einen nicht vorhandenen Datensatz ändern möchten. Dies führt zu einem Fehler.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
-1.  Erstellen Sie diese Tabellen in der **Tempdb** Datenbank.  
+1.  Erstellen Sie diese Tabellen in der **tempdb** -Datenbank.  
   
     ```  
     CREATE TABLE Cust(  
@@ -206,7 +206,7 @@ ms.locfileid: "66012971"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das DiffGram auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="c-updating-an-existing-record-by-using-a-diffgram"></a>C. Aktualisieren eines vorhandenen Datensatzes mit einem DiffGram  
  In diesem Beispiel aktualisiert das DiffGram Kundeninformationen (CompanyName und ContactName) für den Kunden ALFKI.  
@@ -238,11 +238,11 @@ ms.locfileid: "66012971"
 </ROOT>  
 ```  
   
- Die  **\<vor >** -Block enthält ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"** ). Die  **\<DataInstance >** -Block enthält das entsprechende  **\<Kunden >** -Element mit derselben **Id**. Die  **\<Kunden >** Element in der  **\<NewDataSet >** gibt auch an **diffgr: HasChanges = "modified"** . Dies gibt an, einen Update-Vorgang und der Kundendatensatz in der **Cust** -Tabelle wird entsprechend aktualisiert. Beachten Sie, dass bei der **diffgr: HasChanges** -Attribut nicht angegeben ist, die DiffGram-Verarbeitungslogik ignoriert dieses Elements und keine Updates ausgeführt werden.  
+ Der ** \<before>** -Block enthält ein ** \<Customer>** -Element (**diffgr: ID = "Customer1"**). Der ** \<DataInstance->** Block enthält das entsprechende ** \<Customer>** -Element mit derselben **ID**. Das ** \<Customer>** -Element in ** \<NewDataSet>** auch **diffgr: hasChanges = "modified"** angibt. Dies weist auf einen Aktualisierungs Vorgang hin, und der Kundendaten Satz in der **cust** -Tabelle wird entsprechend aktualisiert. Beachten Sie Folgendes: Wenn das **diffgr: hasChanges** -Attribut nicht angegeben ist, ignoriert die DiffGram-Verarbeitungslogik dieses Element, und es werden keine Updates durchgeführt.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
-1.  Erstellen Sie diese Tabellen in der **Tempdb** Datenbank.  
+1.  Erstellen Sie diese Tabellen in der **tempdb** -Datenbank.  
   
     ```  
     CREATE TABLE Cust(  
@@ -278,9 +278,9 @@ ms.locfileid: "66012971"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das DiffGram auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D. Einfügen, Aktualisieren und Löschen von Datensätzen mit einem DiffGram  
+## <a name="d-inserting-updating-and-deleting-records-by-using-a-diffgram"></a>D: Einfügen, Aktualisieren und Löschen von Datensätzen mit einem DiffGram  
  In diesem Beispiel wird ein relativ komplexes DiffGram verwendet, um Einfüge-, Update- und Löschvorgänge durchzuführen.  
   
 ```  
@@ -339,19 +339,19 @@ ms.locfileid: "66012971"
   
  Die DiffGram-Logik verarbeitet dieses DiffGram folgendermaßen:  
   
--   In Übereinstimmung mit der DiffGram-Verarbeitungslogik werden alle Elemente der obersten Ebene in der  **\<vor >** blockieren Sie den entsprechenden Tabellen zugeordnet, wie in der Mapping-Schema beschrieben.  
+-   In Übereinstimmung mit der DiffGram-Verarbeitungslogik werden alle Elemente der obersten Ebene im ** \<before->** Block den entsprechenden Tabellen zugeordnet, wie im Zuordnungs Schema beschrieben.  
   
--   Die  **\<vor >** -Block umfasst ein  **\<Reihenfolge >** Element (**Dffgr:id = "Order1"** ) und ein  **\<Kunden >** Element (**diffgr: ID = "Customer1"** ) für das es kein entsprechendes Element in der  **\<DataInstance >** -Block (mit der gleichen ID). Dies gibt einen Löschvorgang an, und die Datensätze werden aus den Cust- und Ord-Tabellen gelöscht.  
+-   Der ** \<before>** -Block verfügt über ein ** \<Order>** -Element (**dffgr: ID = "order1"**) und ein ** \<Customer>** -Element (**diffgr: ID = "Customer1"**), für das es kein entsprechendes Element im ** \<DataInstance->** Block (mit der gleichen ID) gibt. Dies gibt einen Löschvorgang an, und die Datensätze werden aus den Cust- und Ord-Tabellen gelöscht.  
   
--   Die  **\<vor >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer2"** ) für den es einen entsprechenden  **\<Kunden >** Element in der  **\<DataInstance >** -Block (mit der gleichen ID). Das Element in der  **\<DataInstance >** -Block gibt **diffgr: HasChanges = "modified"** . Dies ist ein Updatevorgang, bei dem für den Kunden ANATR, die Angaben und in die Cust-Tabelle mit Werten, die im angegebenen aktualisiert, die  **\<DataInstance >** Block.  
+-   Der ** \<before>** -Block verfügt über ein ** \<Customer>** -Element (**diffgr: ID = "Customer2"**), für das ein entsprechendes ** \<Customer>** -Element im ** \<DataInstance->** -Block (mit der gleichen ID) vorhanden ist. Das-Element im ** \<DataInstance->** -Block gibt **diffgr: hasChanges = "modified"** an. Dabei handelt es sich um einen Update Vorgang, bei dem für Customer ANATR die Informationen CompanyName und ContactName in der Cust-Tabelle mithilfe der Werte aktualisiert werden, die im ** \<DataInstance->** Block angegeben sind.  
   
--   Die  **\<DataInstance >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer3"** ) und ein  **\<Reihenfolge >** Element (**diffgr: ID = "Order3"** ). Keines dieser Elemente geben das **diffgr: HasChanges** Attribut. Daher ignoriert die DiffGram-Verarbeitungslogik diese Elemente.  
+-   Der ** \<DataInstance->** Block verfügt über ein ** \<Customer>** -Element (**diffgr: ID = "Customer3"**) und ein ** \<Order>** -Element (**diffgr: ID = "Order3"**). Keines dieser Elemente gibt das **diffgr: hasChanges** -Attribut an. Daher ignoriert die DiffGram-Verarbeitungslogik diese Elemente.  
   
--   Die  **\<DataInstance >** -Block umfasst ein  **\<Kunden >** Element (**diffgr: ID = "Customer4"** ) und ein  **\<Reihenfolge >** Element (**diffgr: ID = "Order4"** ) für das es keine entsprechenden Elemente in der \<vor > Block. Diese Elemente in der  **\<DataInstance >** -Block geben **diffgr: HasChanges = "inserted"** . Daher wird ein neuer Datensatz der Cust-Tabelle und der Ord-Tabelle hinzugefügt.  
+-   Der ** \<DataInstance->** Block verfügt über ein ** \<Customer>** -Element (**diffgr: ID = "Customer4"**) und ein ** \<Order>** -Element (**diffgr: ID = "Order4"**), für das es keine \<entsprechenden Elemente im before>-Block gibt. Diese Elemente im ** \<DataInstance->** Block geben **diffgr: hasChanges = "eingefügt"** an. Daher wird ein neuer Datensatz der Cust-Tabelle und der Ord-Tabelle hinzugefügt.  
   
 #### <a name="to-test-the-diffgram"></a>So testen Sie das DiffGram-Objekt  
   
-1.  Erstellen Sie die folgenden Tabellen in der **Tempdb** Datenbank.  
+1.  Erstellen Sie die folgenden Tabellen in der **tempdb** -Datenbank.  
   
     ```  
     CREATE TABLE Cust(  
@@ -387,10 +387,10 @@ ms.locfileid: "66012971"
   
 5.  Erstellen und verwenden Sie das SQLXML 4.0-Testskript (Sqlxml4test.vbs), um das DiffGram auszuführen.  
   
-     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4.0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
+     Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
 ## <a name="e-applying-updates-by-using-a-diffgram-with-the-diffgrparentid-annotation"></a>E. Übernehmen von Updates mit einem DiffGram mit der "diffgr:parentID"-Anmerkung  
- In diesem Beispiel wird veranschaulicht, wie die **ParentID** Anmerkung, die im angegebenen die  **\<vor >** Block des DiffGram-Objekts übernehmen der Updates verwendet wird.  
+ In diesem Beispiel wird veranschaulicht, wie die im ** \<>** -Block des DiffGram-Blocks angegebene " **Parser-** ID"-Anmerkung zum Anwenden der Updates verwendet wird.  
   
 ```  
 <NewDataSet />  
@@ -411,6 +411,6 @@ ms.locfileid: "66012971"
 </diffgr:diffgram>  
 ```  
   
- Dieses DiffGram gibt einen Löschvorgang an, da es nur eine  **\<vor >** Block. Im DiffGram-Objekt das **ParentID** -Anmerkung verwendet, um eine über-/ unterordnungsbeziehung zwischen den Bestellungen und Bestelldetails angeben. Wenn SQLXML die Datensätze löscht, werden auch die Datensätze aus der untergeordneten Tabelle, die durch diese Beziehung gekennzeichnet wird, gelöscht. Anschließend werden die Datensätze aus der entsprechenden übergeordneten Tabelle gelöscht.  
+ Dieses DiffGram gibt einen Löschvorgang an, da nur ein ** \<vor>** Block vorhanden ist. Im DiffGram wird die Element **-** ID-Anmerkung verwendet, um eine über-/Unterordnungsbeziehung zwischen den Bestellungen und Bestelldetails anzugeben. Wenn SQLXML die Datensätze löscht, werden auch die Datensätze aus der untergeordneten Tabelle, die durch diese Beziehung gekennzeichnet wird, gelöscht. Anschließend werden die Datensätze aus der entsprechenden übergeordneten Tabelle gelöscht.  
   
   

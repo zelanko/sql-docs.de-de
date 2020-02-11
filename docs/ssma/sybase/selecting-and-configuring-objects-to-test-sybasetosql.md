@@ -1,5 +1,5 @@
 ---
-title: Auswählen und Konfigurieren von Objekten mit Test (SybaseToSQL) | Microsoft-Dokumentation
+title: Auswählen und Konfigurieren von zu testenden Objekten (sybaseto SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,75 +13,75 @@ ms.assetid: 89c23aad-bfee-4917-bc16-175288390ac0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2951d4c3bf1eae73ffd066d796b0e3dda4d28cf6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020963"
 ---
 # <a name="selecting-and-configuring-objects-to-test-sybasetosql"></a>Auswählen und Konfigurieren von zu testenden Objekten (SybaseToSQL)
-In diesem Schritt wählen Sie die Objekte zu testen, und Konfigurieren von Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter, als auch die Rückgabewerte von Funktionen.  
+In diesem Schritt wählen Sie die zu testenden Objekte aus und konfigurieren die Einstellungen für den Vergleich der Ausgabeparameter der Prozeduren und Funktionen sowie die Rückgabewerte von Funktionen.  
   
-## <a name="selection-of-objects-to-test"></a>Auswahl von Objekten für Test  
-Überprüfen Sie in der Sybase-Objektstruktur befindet sich auf der linken Seite des Fensters die Objekte, die Sie während der Tests aufrufen möchten. Die vollständige Liste der getestet werden Objekte in der [migriert Datenbankobjekte testen &#40;SybaseToSQL&#41; ](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) Thema.  
+## <a name="selection-of-objects-to-test"></a>Auswahl der zu testenden Objekte  
+Überprüfen Sie in der Sybase-Objektstruktur, die sich auf der linken Seite des Fensters befindet, die Objekte, die Sie während des Testprozesses aufrufen möchten. Weitere Informationen finden Sie in der vollständigen Liste mit Test fähigen Objekten im Thema [Testen von migrierten Datenbankobjekten &#40;sybaseto SQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md) .  
   
-Wenn SSMA Tester die Objekte, die zu Testzwecken ausgewählt nicht unterstützt wird, sehen Sie den Link, mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Objektstruktur. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht getestet werden kann, und um die Auswahl der falschen Objekte zu löschen.  
+Wenn SSMA Tester keines der für den Test ausgewählten Objekte unterstützt, wird der Link mit der Bezeichnung **einige ausgewählte Objekte enthält** unter der Struktur Objekte Fehler angezeigt. Klicken Sie auf diesen Link, um die Gründe anzuzeigen, warum diese Objekte nicht getestet werden können, und um die Auswahl falscher Objekte zu löschen.  
   
-Klicken Sie auf der rechten Seite können Sie mehrere Seiten anzeigen der **SQL** Seite zeigt die Definition für das aktuelle Objekt. In der **Pre SQL** und **Post SQL** Seiten können Skripts, die vor und nach dem Aufruf der startet der Test-Objekt ausgeführt werden sollen. Dies ist möglicherweise nützlich sein, wenn das Objekt zusätzliches Objekt eine solche temporäre Tabellen oder Cursor erfordert. Die **Parameter** Seite listet die Parameter auf, wenn das Objekt eine gespeicherte Prozedur oder eine Funktion ist. Die **Eigenschaften** Seite zeigt zusätzliche Eigenschaften des Objekts. Siehe die Beschreibung der **Parameter Comparsions** und **rufen Werte** nachfolgenden Seiten.  
+Auf der rechten Seite können Sie mehrere Seiten anzeigen. die **SQL** -Seite zeigt die Definition des aktuellen Objekts an. In den Seiten **Pre SQL** und **Post SQL** können Skripts angegeben werden, die vor und nach dem Aufruf des Testobjekts ausgeführt werden. Dies kann hilfreich sein, wenn das Objekt zusätzliche Objekte wie temporäre Tabellen oder Cursor benötigt. Die Seite **Parameter** listet die Parameter auf, wenn es sich bei dem Objekt um eine gespeicherte Prozedur oder eine Funktion handelt. Auf der Seite **Eigenschaften** werden zusätzliche Eigenschaften des Objekts angezeigt. Weitere Informationen finden Sie unter Beschreibung der **Parameter Vergleiche** und **aufrufswerte** unten.  
   
-## <a name="parameter-comparison-settings"></a>Vergleich der Parametereinstellungen  
-Einrichten der Vergleichsregeln für Output-Parameter und Rückgabewerte in der **Parameter vergleichen** Seite. Sie können die folgenden Einstellungen vornehmen.  
+## <a name="parameter-comparison-settings"></a>Parameter Vergleichs Einstellungen  
+Legen Sie die Vergleichs Regeln für Ausgabeparameter und Rückgabewerte auf der Seite **Parameter Vergleich** fest. Sie können die folgenden Einstellungen vornehmen.  
   
-### <a name="use-during-comparisons"></a>Verwendung während der Vergleiche  
-Aktivieren Sie die von den ausgewählten Parameter in Vergleichsberichte für Ergebnisse.  
+### <a name="use-during-comparisons"></a>Verwendung bei Vergleichen  
+Aktiviert die Verwendung des ausgewählten Parameters im Vergleich mit Testergebnissen.  
   
--   Auf Wunsch **"true"** , SSMA wird nach dem Ausführen der Prozedur für Sybase mit den entsprechenden Wert auf den Ausgabewert dieses Parameters vergleichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+-   Wenn Sie **true**auswählen, vergleicht SSMA den Ausgabewert dieses Parameters nach dem Ausführen der Prozedur auf Sybase mit dem entsprechenden Wert für.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Auf Wunsch **"false"** , der Parameter aus Ergebnisse Überprüfung ausgeschlossen werden.  
+-   Wenn Sie**false**auswählen, wird der Parameter von der Ergebnis Überprüfung ausgeschlossen.  
   
-### <a name="use-custom-scale"></a>Verwenden Sie benutzerdefinierte Skalierung  
-Für die Parameter der ungefähren und feste Länge numerischen Datentyp aufweisen können Sie festlegen, dass eine benutzerdefinierte Skalierung für den Vergleich.  
+### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
+Für Parameter des numerischen Datentyps "ungefähre Länge" und "mit fester Länge" können Sie für den Vergleich eine benutzerdefinierte Skala festlegen.  
   
--   Auf Wunsch **"true"** , numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
+-   Wenn Sie **true**auswählen, werden numerische Werte entsprechend dem **Vergleichs Skalierungs** Wert gerundet, bevor Sie verglichen werden.  
   
--   Auf Wunsch **"false"** , exakten numerischen Vergleichs werden.  
+-   Wenn Sie**false**auswählen, ist der numerische Vergleich genau.  
   
-### <a name="comparing-scale"></a>Vergleichen von Skala  
-Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"** . Dies ist die Genauigkeit für einen numerischen Vergleich.  
+### <a name="comparing-scale"></a>Vergleichen der Skala  
+Nur verfügbar, wenn die Option **benutzerdefinierte Skalierung verwenden** auf **true**festgelegt ist. Dies ist die Genauigkeit für den numerischen Vergleich.  
   
-### <a name="date-time-comparing"></a>Datum Uhrzeit vergleichen  
-Definiert, wie die Datum/Uhrzeit-Werte verglichen.  
+### <a name="date-time-comparing"></a>Vergleichen von Datum und Uhrzeit  
+Definiert, wie Datums-/Uhrzeitwerte verglichen werden.  
   
--   Bei Auswahl von **gesamte Datum vergleichen**, vollständigen Vergleich von Werten aus beiden Plattformen ausgeführt werden.  
+-   Wenn Sie die Option **gesamtes Datum vergleichen**auswählen, wird ein vollständiger Vergleich der Werte beider Plattformen ausgeführt.  
   
--   Bei Auswahl von **nur Date vergleichen**, wird die Uhrzeit, die Teil ignoriert werden.  
+-   Wenn Sie **Datum nur vergleichen**auswählen, wird der Uhrzeit Teil ignoriert.  
   
--   Bei Auswahl von **vergleichen nur Zeit**, das Datum Teil ignoriert werden.  
+-   Wenn Sie **nur die Zeit vergleichen**auswählen, wird der Datums Teil ignoriert.  
   
--   Bei Auswahl von **ignorieren Millisekunden**, bis zu Sekunden werden die Ergebnisse verglichen werden.  
+-   Wenn Sie die Option **Millisekunden ignorieren**auswählen, werden die Ergebnisse bis zu Sekunden verglichen.  
   
--   Bei Auswahl von **ignorieren von Datum und die Millisekunden**, das Ergebnis wird im Vergleich nur vom Time-Teil und wird ignoriert. Bruchteile einer Sekunde sein.  
+-   Wenn Sie **Datum und Millisekunden ignorieren**auswählen, wird das Ergebnis nur nach Zeit Teil verglichen, und die Sekundenbruchteile werden ignoriert.  
   
-### <a name="ignore-strings-case"></a>Zeichenfolgen Groß-/Kleinschreibung ignorieren  
-Steuert den Vergleich die Groß-/Kleinschreibung beachtet.  
+### <a name="ignore-strings-case"></a>Zeichen folgen ignorieren  
+Steuert die Groß-/Kleinschreibung des Vergleichs.  
   
--   Auf Wunsch **"true"** , der Vergleich wird Groß-/Kleinschreibung sein.  
+-   Wenn Sie **true**auswählen, wird beim Vergleich die Groß-/Kleinschreibung nicht beachtet.  
   
--   Auf Wunsch **"false"** , der Vergleich wird Groß-/Kleinschreibung beachtet werden.  
+-   Wenn Sie **false**auswählen, wird beim Vergleich die Groß-/Kleinschreibung beachtet.  
   
 ### <a name="ignore-trailing-spaces"></a>Nachfolgende Leerzeichen ignorieren  
-Steuert, wie nachfolgende Leerzeichen werden während des Vergleichs behandelt.  
+Steuert, wie nachfolgende Leerzeichen während des Vergleichs behandelt werden.  
   
--   Auf Wunsch **"true"** , die verglichenen Zeichenfolgen werden vor dem Vergleich werden rechts abgeschnitten.  
+-   Wenn Sie **true**auswählen, werden die verglichenen Zeichen folgen vor dem Vergleich mit der rechten Seite abgeschnitten.  
   
--   Auf Wunsch **"false"** , behält die verglichenen Zeichenfolgen nachstehende Leerzeichen.  
+-   Wenn Sie **false**auswählen, werden nachfolgende Leerzeichen in den verglichenen Zeichen folgen beibehalten.  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Geben Sie die Eingabewerte für die Prozeduren und Funktionen (rufen Sie Werte)  
-Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seite. Die **Aufruf hinzufügen** Schaltfläche wird einen neuen Aufruf mit leeren Werten hinzugefügt. Die **entfernen aufrufen** Schaltfläche entfernt den aktuellen Aufruf.  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Angeben von Eingabe Werten für Prozeduren und Funktionen (aufrufwerte)  
+Sie können die Eingabeparameter Werte auf der Seite " **Werte aufrufen** " angeben. Mit der Schaltfläche " **aufrufen** " wird ein neuer-Befehl mit leeren Parameterwerten hinzugefügt. Mit der Schaltfläche " **Abrufen** " wird der aktuelle-Befehl entfernt.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Auswählen und Konfigurieren von betroffenen Objekten &#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
+[Auswählen und konfigurieren betroffener Objekte &#40;Sybase&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Testen von migrierten Datenbankobjekten &#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Testen von migrierten Datenbankobjekten &#40;sybaseto SQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  
   

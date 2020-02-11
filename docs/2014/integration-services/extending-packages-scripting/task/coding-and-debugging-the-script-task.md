@@ -22,17 +22,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 620b778069ef45deeeb5552296798736a1ebe5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768411"
 ---
 # <a name="coding-and-debugging-the-script-task"></a>Codieren und Debuggen des Skripttasks
   Nach dem Konfigurieren des Skripttasks im **Skripttask-Editor** schreiben Sie den benutzerdefinierten Code in der Skripttask-Entwicklungsumgebung.  
   
 ## <a name="script-task-development-environment"></a>Skripttask-Entwicklungsumgebung  
- Der Skripttask verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools für Anwendungen (VSTA) als Entwicklungsumgebung für das Skript selbst.  
+ Der Skript Task verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) als Entwicklungsumgebung für das Skript selbst.  
   
  Skriptcode wird in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben. Sie geben die Skriptsprache an, indem Sie die **ScriptLanguage**-Eigenschaft im **Skripttask-Editor** festlegen. Falls Sie lieber eine andere Programmiersprache verwenden möchten, können Sie in Ihrer bevorzugten Sprache eine benutzerdefinierte Assembly entwickeln und ihre Funktionen aus dem Code im Skripttask aufrufen.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62768411"
   
 -   Wenn der Skripttask für die Programmiersprache [!INCLUDE[vb_orcas_long](../../../includes/vb-orcas-long-md.md)] konfiguriert ist, enthält die `ScriptMain`-Klasse eine öffentliche Unterroutine namens `Main`. Die `ScriptMain.Main`-Unterroutine ist die Methode, die die Laufzeit beim Ausführen des Skripttasks aufruft.  
   
-     Standardmäßig enthält die `Main`-Unterroutine eines neuen Skripts als einzigen Code die Zeile `Dts.TaskResult = ScriptResults.Success`. Diese Zeile informiert die Laufzeit, dass der Task erfolgreich durchgeführt wurde. Die `Dts.TaskResult` Eigenschaft ausführlicher [Zurückgeben von Ergebnissen aus dem Skripttask](../../extending-packages-scripting/task/returning-results-from-the-script-task.md).  
+     Standardmäßig enthält die `Main`-Unterroutine eines neuen Skripts als einzigen Code die Zeile `Dts.TaskResult = ScriptResults.Success`. Diese Zeile informiert die Laufzeit, dass der Task erfolgreich durchgeführt wurde. Die `Dts.TaskResult` -Eigenschaft wird unter [zurückgeben von Ergebnissen aus dem Skript Task](../../extending-packages-scripting/task/returning-results-from-the-script-task.md)erläutert.  
   
 -   Wenn der Skripttask für die Programmiersprache Visual C# konfiguriert ist, enthält die `ScriptMain`-Klasse die öffentliche Methode `Main`. Die Methode wird aufgerufen, wenn der Skripttask ausgeführt wird.  
   
@@ -206,11 +206,11 @@ To open Help, press F1.
 >  Sie können Projektverweise in der VSTA-IDE in der **Klassenansicht** oder im **Projektexplorer** anzeigen. Diese Fenster öffnen Sie über das Menü **Ansicht**. Einen neuen Verweis können Sie über das Menü **Projekt**, den **Projektexplorer** oder die **Klassenansicht** hinzufügen.  
   
 ## <a name="interacting-with-the-package-in-the-script-task"></a>Interagieren mit Paketen im Skripttask  
- Ein Skripttask interagiert mit dem entsprechenden Paket und der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Laufzeit über das globale `Dts`-Objekt, eine Instanz der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse, und ihre Elemente.  
+ Ein Skripttask interagiert mit dem entsprechenden Paket und der `Dts`-Laufzeit über das globale <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Objekt, eine Instanz der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Klasse, und ihre Elemente.  
   
  Die folgende Tabelle enthält die wichtigsten öffentlichen Elemente der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse, die für den Skripttaskcode über das globale `Dts`-Objekt verfügbar gemacht wird. In den Themen in diesem Abschnitt wird die Verwendung dieser Elemente detaillierter erläutert.  
   
-|Member|Zweck|  
+|Mitglied|Zweck|  
 |------------|-------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Connections%2A>|Bietet Zugriff auf im Paket definierte Verbindungs-Manager.|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A>|Liefert eine Ereignisschnittstelle, damit der Skripttask Fehler, Warnungen und Informationsmeldungen auslösen kann.|  
@@ -222,7 +222,7 @@ To open Help, press F1.
   
  Die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse enthält auch einige öffentliche Elemente, die Sie wahrscheinlich nicht verwenden.  
   
-|Member|Beschreibung|  
+|Mitglied|BESCHREIBUNG|  
 |------------|-----------------|  
 |<xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A>|Die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft ermöglicht einen einfacheren Zugriff auf Variablen. Sie können zwar <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.VariableDispenser%2A> verwenden, müssen jedoch explizit Methoden aufrufen, um Variablen für das Lesen und Schreiben zu sperren und die Sperre wieder aufzuheben. Der Skripttask erledigt die Sperrsemantik für Sie, wenn Sie die <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft verwenden.|  
   
@@ -245,10 +245,10 @@ To open Help, press F1.
   
 -   Blogeintrag: [VSTA setup and configuration troubles for SSIS 2008 and R2 installations (Probleme mit der VSTA-Einrichtung und -Konfiguration bei SSIS 2008- und R2-Installationen)](https://go.microsoft.com/fwlink/?LinkId=215661) (auf blogs.msdn.com).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sowie ausgewählte Lösungen aus der Community finden Sie auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] sowie ausgewählte Lösungen aus der Community finden Sie auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Seite auf MSDN:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verweisen auf andere Assemblys in Skriptlösungen](../referencing-other-assemblies-in-scripting-solutions.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verweisen auf andere Assemblys in Skript Lösungen](../referencing-other-assemblies-in-scripting-solutions.md)   
  [Konfigurieren des Skripttasks im Skripttask-Editor](configuring-the-script-task-in-the-script-task-editor.md)  
   
   

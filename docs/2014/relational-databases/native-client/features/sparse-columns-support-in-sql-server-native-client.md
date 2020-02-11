@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 21b79a06acd838278073dee58026269f63b0da04
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75231709"
 ---
 # <a name="sparse-columns-support-in-sql-server-native-client"></a>Unterstützung für Spalten mit geringer Dichte in SQL Server Native Client
@@ -63,5 +63,5 @@ ms.locfileid: "75231709"
  Wenn jedoch `queryout` für das Exportieren verwendet wird und Sie über den Namen auf Sparsespalten verweisen, die Elemente des Sparsespaltensatzes sind, können Sie keinen direkten Import in eine Spalte mit gleicher Struktur durchführen. Dies liegt daran, dass bcp Metadaten verwendet, die mit einem **Select \* ** -Vorgang für den Import konsistent `column_set` sind, und Element Spalten mit diesen Metadaten nicht übereinstimmen kann. Um `column_set`-Elementspalten einzeln zu importieren, müssen Sie eine Sicht für die Tabelle definieren, die auf die gewünschten `column_set`-Spalten verweist. Und Sie müssen den Importvorgang mithilfe der Sicht ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Programmierung](../sql-server-native-client-programming.md)  
+ [Programmierung für SQL Server Native Client](../sql-server-native-client-programming.md)  
   

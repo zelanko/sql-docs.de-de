@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d0d61d50f7ff79da77dab15b654ec1720b1ee3b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244491"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Ausführen der gespeicherten Prozedur mit ODBC CALL und der Prozessausgabe
@@ -35,7 +35,7 @@ ms.locfileid: "75244491"
   
 2.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine für jede Parametermarkierung).  
   
-3.  Erstellen Sie einen Accessor für die definierten Parameter mithilfe der **IAccessor::CreateAccessor** -Methode. Der- **accateaccessor** erstellt einen Accessor aus einem Satz von Bindungen.  
+3.  Erstellen Sie einen Accessor für die definierten Parameter mithilfe der **IAccessor::CreateAccessor** -Methode. **CreateAccessor** erstellt einen Accessor aus einem Satz Bindungen.  
   
 4.  Geben Sie die DBPARAMS-Struktur ein.  
   
@@ -357,6 +357,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Themen zur Vorgehensweise bei der Verarbeitung von Ergebnissen &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
+ [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](../../../relational-databases/native-client-ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
   

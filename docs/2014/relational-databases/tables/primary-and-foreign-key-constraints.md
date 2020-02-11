@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 45d4cd390e0369d8289ed9e58de01b7a02f752c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68196750"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
@@ -29,18 +29,18 @@ ms.locfileid: "68196750"
   
  [PRIMARY KEY-Einschränkungen](../tables/primary-and-foreign-key-constraints.md#PKeys)  
   
- [Foreign Key Constraints](../tables/primary-and-foreign-key-constraints.md#FKeys)  
+ [Foreign Key-Einschränkungen](../tables/primary-and-foreign-key-constraints.md#FKeys)  
   
  [Verwandte Aufgaben](../tables/primary-and-foreign-key-constraints.md#Tasks)  
   
-##  <a name="PKeys"></a> PRIMARY KEY-Einschränkungen  
+##  <a name="PKeys"></a>PRIMARY KEY-Einschränkungen  
  Eine Tabelle verfügt normalerweise über eine Spalte oder eine Kombination aus Spalten, die Werte enthalten, die jede Zeile in der Tabelle eindeutig identifizieren. Diese Spalte oder Kombination aus Spalten wird als Primärschlüssel (PK, Primary Key) der Tabelle bezeichnet und erzwingt die Entitätsintegrität der Tabelle. Da PRIMARY KEY-Einschränkungen eindeutige Daten garantieren, werden sie häufig für eine Identitätsspalte definiert.  
   
  Wenn Sie eine PRIMARY KEY-Einschränkung für eine Tabelle angeben, erzwingt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Daten, indem automatisch ein eindeutiger Index für die Primärschlüsselspalten erstellt wird. Der Index ermöglicht darüber hinaus den schnellen Zugriff auf Daten, wenn der Primärschlüssel in Abfragen verwendet wird. Wenn eine PRIMARY KEY-Einschränkung für mehrere Spalten definiert wird, können Werte innerhalb einer Spalte dupliziert werden; jede Kombination aus den Werten aller Spalten, die in der Definition der PRIMARY KEY-Einschränkung enthalten sind, muss jedoch eindeutig sein.  
   
  Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor**-Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID** aufweist. Dies verhindert die Einfügung doppelter Zeilen.  
   
- ![Zusammengesetzte PRIMARY KEY-Einschränkung](../../database-engine/media/fund04.gif "Composite PRIMARY KEY constraint")  
+ ![Zusammengesetzte PRIMARY KEY-Einschränkung](../../database-engine/media/fund04.gif "Zusammengesetzte PRIMARY KEY-Einschränkung")  
   
 -   Eine Tabelle kann nur eine PRIMARY KEY-Einschränkung enthalten.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "68196750"
   
 -   Wenn ein Primärschlüssel für eine Spalte eines CLR-benutzerdefinierten Typs definiert wird, muss die Implementierung des Typs eine binäre Sortierreihenfolge unterstützen.  
   
-##  <a name="FKeys"></a> Foreign Key Constraints  
+##  <a name="FKeys"></a>Foreign Key-Einschränkungen  
  Ein Fremdschlüssel (FS) ist eine Spalte oder eine Kombination von Spalten, mit deren Hilfe eine Verknüpfung zwischen den Daten in zwei Tabellen eingerichtet und erzwungen wird, um die Daten zu steuern, die in der Fremdschlüsseltabelle gespeichert werden können. In einem Fremdschlüsselverweis wird zwischen zwei Tabellen ein Link erstellt, wenn eine Spalte bzw. mehrere Spalten einer Tabelle auf die Spalte bzw. Spalten mit dem Primärschlüsselwert einer anderen Tabelle verweisen. Diese Spalte wird zu einem Fremdschlüssel in der zweiten Tabelle.  
   
- Nehmen Sie beispielsweise an, die **Sales.SalesOrderHeader** -Tabelle weist eine Fremdschlüsselverknüpfung zur **Sales.SalesPerson** -Tabelle auf, da eine logische Beziehung zwischen „Sales Orders“ (Kaufaufträgen) und „Sales People“ (Vertriebsmitarbeiter) besteht. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle stimmt mit der Primärschlüsselspalte der **SalesPerson** -Tabelle überein. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle ist der Fremdschlüssel für die **SalesPerson** -Tabelle. Wenn Sie diese Fremdschlüsselbeziehung erstellen, kann ein Wert für **SalesPersonID** nicht in die **SalesOrderHeader**-Tabelle eingefügt werden, wenn er nicht bereits in der **SalesPerson**-Tabelle vorhanden ist.  
+ Nehmen Sie beispielsweise an, die **Sales.SalesOrderHeader** -Tabelle weist eine Fremdschlüsselverknüpfung zur **Sales.SalesPerson** -Tabelle auf, da eine logische Beziehung zwischen „Sales Orders“ (Kaufaufträgen) und „Sales People“ (Vertriebsmitarbeiter) besteht. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle stimmt mit der Primärschlüsselspalte der **SalesPerson** -Tabelle überein. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle ist der Fremdschlüssel für die **SalesPerson** -Tabelle. Wenn Sie diese Fremdschlüsselbeziehung erstellen, kann ein Wert für **SalesPersonID** nicht in die **SalesOrderHeader** -Tabelle eingefügt werden, wenn er nicht bereits in der **SalesPerson** -Tabelle vorhanden ist.  
   
 ### <a name="indexes-on-foreign-key-constraints"></a>Indizes für Fremdschlüsseleinschränkungen  
  Im Gegensatz zu PRIMARY KEY-Einschränkungen wird bei der Erstellung einer FOREIGN KEY-Einschränkung nicht automatisch ein entsprechender Index generiert. Das manuelle Erstellen eines Indexes für einen Fremdschlüssel empfiehlt sich jedoch aus folgenden Gründen:  
@@ -75,7 +75,8 @@ ms.locfileid: "68196750"
  Durch Verwendung von Einschränkungen der referenziellen Integrität können Sie die Aktionen definieren, die [!INCLUDE[ssDE](../../includes/ssde-md.md)] durchführt, wenn ein Benutzer versucht, einen Schlüssel zu löschen oder zu aktualisieren, auf den Fremdschlüssel zeigen. Die folgenden kaskadierenden Aktionen können definiert werden.  
   
  NO ACTION  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus, und für die Aktion zum Löschen oder Aktualisieren der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.  
+ 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] löst einen Fehler aus, und für die Aktion zum Löschen oder Aktualisieren der Zeile in der übergeordneten Tabelle wird ein Rollback ausgeführt.  
   
  CASCADE  
  Wenn diese Zeile in der übergeordneten Tabelle aktualisiert oder gelöscht wird, werden die entsprechenden Zeilen in der verweisenden Tabelle aktualisiert oder gelöscht. CASCADE kann nicht angegeben werden, wenn eine `timestamp`-Spalte Teil eines Fremdschlüssels oder des Schlüssels ist, auf den verwiesen wird. ON DELETE CASCADE kann nicht für eine Tabelle angegeben werden, die einen INSTEAD OF-Trigger aufweist. ON UPDATE CASCADE kann nicht für Tabellen angegeben werden, die INSTEAD OF UPDATE-Trigger aufweisen.  

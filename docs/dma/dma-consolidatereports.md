@@ -15,17 +15,17 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056647"
 ---
-# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren von Bewertungsberichten mit DMA
+# <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
 
 Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung der Datenmigrations-Assistent, um eine erfolgreiche skalierte Bewertung für das Upgrade von lokalen SQL Server oder SQL Server, die auf Azure-VMS ausgeführt werden, oder für die Migration zu Azure SQL-Datenbank auszuführen.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Legen Sie einen Tools-Computer in Ihrem Netzwerk fest, von dem DMA initiiert wird. Stellen Sie sicher, dass dieser Computer über eine Verbindung mit Ihren SQL Server Zielen verfügt.
 - Herunterladen und installieren:
@@ -71,7 +71,7 @@ Bevor Sie das PowerShell-Skript zur Bewertung Ihrer SQL Server-Computer ausführ
 Diese Inventur kann in einer von zwei Formen vorliegen:
 
 - Excel-CSV-Datei
-- SQL Server Tabelle
+- SQL Server-Tabelle
 
 ### <a name="if-using-a-csv-file"></a>Bei Verwendung einer CSV-Datei
 
@@ -92,7 +92,7 @@ Wenn Sie eine CSV-Datei verwenden, um die Daten zu importieren, stellen Sie sich
 
 Erstellen Sie eine Datenbank mit dem Namen **estatueingeventory** und eine Tabelle namens **databaseingeventory**. Die Tabelle, in der diese Inventur Daten enthalten sind, kann beliebig viele Spalten enthalten, solange die folgenden vier Spalten vorhanden sind:
 
-- ServerName
+- Servername
 - InstanceName
 - DatabaseName
 - Bewermentflag
@@ -113,12 +113,12 @@ Nachdem Sie die PowerShell-Module in das Verzeichnis "modules" geladen und eine 
 
 Die der dmadatacollector-Funktion zugeordneten Parameter werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |und Beschreibung |
+|Parameter  |BESCHREIBUNG |
 |---------|---------|
-|**getServerListFrom** | Ihre Inventur. Mögliche Werte sind **SQLServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellen eines Inventars von SQL-Servern](#create-inventory). |
-|**csvPath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf **CSV**festgelegt ist. |
-|**serverName** | Der SQL Server Instanzname des Inventars, wenn **SQLServer** im **getserverlistfrom** -Parameter verwendet wird. |
-|**databaseName** | Die Datenbank, in der die Inventur Tabelle gehostet wird. |
+|**getserverlistfrom** | Ihre Inventur. Mögliche Werte sind **SQLServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellen eines Inventars von SQL-Servern](#create-inventory). |
+|**csvpath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf **CSV**festgelegt ist. |
+|**Servername** | Der SQL Server Instanzname des Inventars, wenn **SQLServer** im **getserverlistfrom** -Parameter verwendet wird. |
+|**DatabaseName** | Die Datenbank, in der die Inventur Tabelle gehostet wird. |
 |**AssessmentName** | Der Name der DMA-Bewertung. |
 |**TargetPlatform** | Der Zieltyp der Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **azuresqldatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**und **managedsqlserver**. |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für das Herstellen einer Verbindung mit den SQL Server Zielen, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **windowsauth**. |
@@ -136,15 +136,15 @@ Nachdem Ihre Bewertung abgeschlossen ist, können Sie die Daten für die Analyse
 
 Die der dmaprocessor-Funktion zugeordneten Parameter werden in der folgenden Tabelle beschrieben.
 
-|Parameter  |und Beschreibung |
+|Parameter  |BESCHREIBUNG |
 |---------|---------|
-|**processTo** | Der Speicherort, an dem die JSON-Datei verarbeitet wird. Mögliche Werte sind **SQLServer** und **azuresqldatabase**. |
-|**serverName** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |
-|**CreateDMAReporting** | Die Stagingdatenbank, die für die Verarbeitung der JSON-Datei erstellt werden soll.  Wenn die angegebene Datenbank bereits vorhanden ist und Sie diesen Parameter auf einen Wert festlegen, werden die Objekte nicht erstellt.  Dieser Parameter ist hilfreich, um ein einzelnes Objekt neu zu erstellen, das gelöscht wurde. |
-|**CreateDataWarehouse** | Erstellt die Data Warehouse, die vom Power BI Bericht verwendet werden. |
-|**databaseName** | Der Name der dmareporting-Datenbank. |
-|**warehouseName** | Der Name der Data Warehouse Datenbank. |
-|**jsonDirectory** | Das Verzeichnis, das die JSON-Bewertungs Datei enthält.  Wenn mehrere JSON-Dateien im Verzeichnis vorhanden sind, werden Sie nacheinander verarbeitet. |
+|**processto** | Der Speicherort, an dem die JSON-Datei verarbeitet wird. Mögliche Werte sind **SQLServer** und **azuresqldatabase**. |
+|**Servername** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |
+|**"Kreatedmareporting"** | Die Stagingdatenbank, die für die Verarbeitung der JSON-Datei erstellt werden soll.  Wenn die angegebene Datenbank bereits vorhanden ist und Sie diesen Parameter auf einen Wert festlegen, werden die Objekte nicht erstellt.  Dieser Parameter ist hilfreich, um ein einzelnes Objekt neu zu erstellen, das gelöscht wurde. |
+|**"Kreatedatawarehouse"** | Erstellt die Data Warehouse, die vom Power BI Bericht verwendet werden. |
+|**DatabaseName** | Der Name der dmareporting-Datenbank. |
+|**Warehouse-Sender Name** | Der Name der Data Warehouse Datenbank. |
+|**jsondirectory** | Das Verzeichnis, das die JSON-Bewertungs Datei enthält.  Wenn mehrere JSON-Dateien im Verzeichnis vorhanden sind, werden Sie nacheinander verarbeitet. |
 
 Die dmaprocessor-Funktion sollte nur einige Sekunden in Anspruch nehmen, um eine einzelne Datei zu verarbeiten.
 
@@ -187,8 +187,8 @@ Sie können auch das loadwarehouse-Skript verwenden, um die grundlegenden TSQL-A
 Verwenden Sie zum Arbeiten mit DMA-Berichten Lesezeichen und Slicer, um nach folgenden Filtern zu filtern:
 
 - Bewertungs Typen (Azure SQL-Datenbank, Azure SQL-Mi, SQL lokal) 
-- Der Instanzname.
-- Database Name
+- Instanzname
+- Datenbankname
 - Teamname
 
 Um auf das Blatt Lesezeichen und Filter zuzugreifen, wählen Sie das Lesezeichen Filter auf der Hauptberichts Seite aus:
@@ -262,10 +262,10 @@ Dieses visuelle Element zeigt die Probleme, die derzeit im Auswahl Kontext auftr
 Dieser Abschnitt ist der primäre Teil des Berichts, der die Bereitschaft einer Instanz-Database anzeigt. Dieser Bericht enthält eine Drilldownhierarchie von:
 
 - InstanceDatabase
-- Changecategory
-- Title
-- ObjectType
-- ImpactedObjectName
+- ChangeCategory
+- Titel
+- ObjektType
+- Impactedobjectname
 
  ![Bericht zur DMA-Daten Bank Bereitschaft, Drilldown](../dma/media//dma-consolidatereports/dma-database-readiness-report-drilldown.png)
 

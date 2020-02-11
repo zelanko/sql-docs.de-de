@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754785"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)
@@ -29,11 +29,11 @@ ms.locfileid: "62754785"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Requirements"></a> Anforderungen  
+###  <a name="Requirements"></a>Bedingungen  
   
 -   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Obwohl der Spiegelserver eine höhere SQL Server-Version aufweisen darf, wird diese Konfiguration nur für einen sorgfältig geplanten Upgradeprozess empfohlen. In einer solchen Konfiguration laufen Sie Gefahr, ein automatisches Failover auszuführen, bei dem die Datenverschiebung automatisch angehalten wird, da Daten nicht zu einer niedrigeren SQL Server-Version verschoben werden können. Weitere Informationen finden Sie unter [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
--   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Informationen zur unterstützten Datenbankspiegelung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] finden Sie unter [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+-   Die Prinzipalserver- und Spiegelserverinstanz müssen unter derselben Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Informationen zur unterstützten Datenbankspiegelung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] finden Sie unter [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 -   Für die Datenbank muss das vollständige Wiederherstellungsmodell verwendet werden.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62754785"
   
 -   Die **master**-, **msdb**-, **temp**- oder **model** -Systemdatenbanken können nicht gespiegelt werden.  
   
--   Sie können nicht gespiegelt, eine Datenbank, gehört eine [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md).  
+-   Eine Datenbank, die zu einem [AlwaysOn-Verfügbarkeitsgruppen gehört (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md), kann nicht gespiegelt werden.  
   
 ###  <a name="Recommendations"></a> Empfehlungen  
   
@@ -76,15 +76,15 @@ ms.locfileid: "62754785"
 ####  <a name="Permissions"></a> Berechtigungen  
  Datenbankbesitzer oder Systemadministrator.  
   
-##  <a name="PrepareToRestartMirroring"></a> So bereiten Sie eine vorhandene Spiegeldatenbank auf das erneute Starten der Spiegelung vor  
+##  <a name="PrepareToRestartMirroring"></a>So bereiten Sie eine vorhandene Spiegel Datenbank für den Neustart der Spiegelung vor  
  Wenn die Spiegelung entfernt wurde und die Spiegeldatenbank sich weiterhin im RECOVERING-Status befindet, können Sie die Spiegelung erneut starten.  
   
-1.  Erstellen Sie mindestens eine Protokollsicherung auf der Prinzipaldatenbank. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)vorbereiten.  
+1.  Erstellen Sie mindestens eine Protokollsicherung auf der Prinzipaldatenbank. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)-Datenbank an einem neuen Speicherort wiederherstellen und sie optional umbenennen können.  
   
 2.  Verwenden Sie auf der Spiegeldatenbank RESTORE WITH NORECOVERY, um alle Protokollsicherungen wiederherzustellen, die seit dem Entfernen der Spiegelung auf der Prinzipaldatenbank erstellt wurden. Weitere Informationen finden Sie unter [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)vorbereiten.  
   
-##  <a name="CombinedProcedure"></a> So bereiten Sie eine neue Spiegeldatenbank vor  
- **So bereiten Sie eine Spiegeldatenbank vor**  
+##  <a name="CombinedProcedure"></a>So bereiten Sie eine neue Spiegel Datenbank vor  
+ **So bereiten Sie eine Spiegel Datenbank vor**  
   
 > [!NOTE]  
 >  Ein [!INCLUDE[tsql](../../includes/tsql-md.md)] -Beispiel für diese Prozedur finden Sie weiter unten in diesem Abschnitt unter [Beispiel (Transact-SQL)](#TsqlExample).  
@@ -95,7 +95,7 @@ ms.locfileid: "62754785"
   
     -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
-    -   [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md)  
+    -   [Erstellen Sie eine differenzielle Datenbanksicherung &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).  
   
 3.  In der Regel müssen Sie mindestens eine Protokollsicherung auf der Prinzipaldatenbank erstellen. Eine Protokollsicherung ist jedoch möglicherweise nicht erforderlich, wenn die Datenbank erst kürzlich erstellt wurde und bisher keine Protokollsicherung vorgenommen wurde oder wenn das Wiederherstellungsmodell soeben von SIMPLE in FULL geändert wurde.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62754785"
   
     -   [Wiederherstellen einer Datenbanksicherung &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) und [RESTORE-Argumente &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)vorbereiten.  
+    -   Stellen Sie &#40;Transact [-SQL-&#41;](/sql/t-sql/statements/restore-statements-transact-sql) und [RESTORE-Argumente &#40;Transact-SQL-&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql)wieder her.  
   
 7.  Wenden Sie unter Angabe von RESTORE WITH NORECOVERY alle ausstehenden Protokollsicherungen auf die Spiegeldatenbank an.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62754785"
   
 4.  Stellen Sie die vollständige Sicherung mit der Option RESTORE WITH NORECOVERY auf der Spiegelserverinstanz wieder her. Der Wiederherstellungsbefehl hängt davon ab, ob die Pfade der Prinzipal- und Spiegeldatenbanken identisch sind.  
   
-    -   **Wenn die Pfade identisch sind, führen Sie Folgendes aus:**  
+    -   **Wenn die Pfade identisch sind:**  
   
          Stellen Sie auf der Spiegelserverinstanz (auf `PARTNERHOST5`) folgendermaßen die vollständige Sicherung wieder her:  
   
@@ -162,7 +162,7 @@ ms.locfileid: "62754785"
         GO  
         ```  
   
-    -   **Wenn die Pfade unterschiedlich sind, führen Sie Folgendes aus:**  
+    -   **Wenn sich die Pfade unterscheiden:**  
   
          Wenn sich der Pfad der Spiegeldatenbank vom Pfad der Prinzipaldatenbank unterscheidet (z. B. wenn die Laufwerkbuchstaben unterschiedlich sind), ist es für das Erstellen der Spiegeldatenbank erforderlich, dass der Wiederherstellungsvorgang eine MOVE-Klausel einschließt.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "62754785"
   
  Ein vollständiges Beispiel für das Einrichten von Datenbankspiegelung, Anzeigen der Sicherheitseinrichtung, Vorbereiten der Spiegeldatenbank, Einrichten der Partner und Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)vorbereiten.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Vorbereiten einer Spiegeldatenbank  
+##  <a name="FollowUp"></a>Nachverfolgung: nach der Vorbereitung einer Spiegel Datenbank  
   
 1.  Wenn seit dem letzten RESTORE LOG-Vorgang Protokollsicherungen vorgenommen wurden, müssen Sie jede zusätzliche Protokollsicherung mit RESTORE WITH NORECOVERY manuell anwenden.  
   
@@ -236,18 +236,18 @@ ms.locfileid: "62754785"
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungs Sitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL-&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
 -   [Einrichten einer verschlüsselten Spiegeldatenbank](set-up-an-encrypted-mirror-database.md)  
   
--   [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](transport-security-database-mirroring-always-on-availability.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Transport Sicherheit für Daten Bank Spiegelung und AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../../relational-databases/indexes/indexes.md)   
- [Datenbankspiegelung und Volltextkataloge (SQL Server)](database-mirroring-and-full-text-catalogs-sql-server.md)   
+ [Sichern und Wiederherstellen von voll Text Katalogen und-Indizes](../../relational-databases/indexes/indexes.md)   
+ [Daten Bank Spiegelung und voll Text Kataloge &#40;SQL Server&#41;](database-mirroring-and-full-text-catalogs-sql-server.md)   
  [Datenbankspiegelung und Replikation (SQL Server)](database-mirroring-and-replication-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   

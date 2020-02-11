@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 32819a694769092c255c4b2ed918dd8fde99362e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482605"
 ---
 # <a name="apply-business-rules-mds-add-in-for-excel"></a>Anwenden von Geschäftsregeln (MDS-Add-In für Excel)
@@ -23,7 +23,7 @@ ms.locfileid: "65482605"
 > [!NOTE]  
 >  Die Datenüberprüfung findet automatisch statt, wenn Sie Daten veröffentlichen. Weitere Informationen finden Sie unter [Gespeicherte Überprüfungsprozedur &#40;Master Data Services&#41;](../validation-stored-procedure-master-data-services.md).  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -39,7 +39,7 @@ ms.locfileid: "65482605"
   
 2.  Die Daten werden anhand von Geschäftsregeln überprüft, und zwei Statusspalten werden angezeigt. Wenn diese Spalten nicht automatisch angezeigt werden, klicken Sie in der Gruppe **Veröffentlichen und Validieren** auf **Status anzeigen** , um sie anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten &#40;MDS-Add-in für Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

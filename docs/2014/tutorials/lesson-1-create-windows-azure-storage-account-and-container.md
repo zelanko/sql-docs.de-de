@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fbe773b8b8115cafc20bb60e962bfb42c9821636
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75253499"
 ---
-# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lektion 1: Erstellen Azure Storage Kontos und Containers
+# <a name="lesson-1-create-azure-storage-account-and-container"></a>Lektion 1: Erstellen eines Azure Storage-Kontos und -Containers
   Bevor Sie SQL Server Datendateien in Azure Storage speichern können, müssen Sie zunächst ein Azure Storage Konto, einen BlobContainer und eine Shared Access Signature erstellen. Lektion 1 führt Sie durch die Schritte zum Anmelden beim Azure-Verwaltungsportal, zum Erstellen eines Speicher Kontos, eines BLOB-Containers und einer Shared Access Signature.  
   
  Standardmäßig kann nur der Besitzer eines Speicherkontos auf Blobs, Tabellen und Warteschlangen in diesem Konto zugreifen. Um mithilfe dieser neuen SQL Server-Erweiterung ohne Freigabe des Speicherkonto-Zugriffsschlüssels auf diese Ressourcen zugreifen zu können, gehen Sie wie folgt vor:  

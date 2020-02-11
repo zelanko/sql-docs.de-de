@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce6cef69abe7c2461552229363c8334ca56555b4
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75245657"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware- und Softwareanforderungen für die Installation von SQL Server 2014
@@ -72,7 +72,7 @@ ms.locfileid: "75245657"
   
 -   Beim[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup werden die folgenden vom Produkt benötigten Softwarekomponenten installiert:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Unterstützungs Dateien für Setup  
   
@@ -206,7 +206,7 @@ ms.locfileid: "75245657"
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Enterprise 64-Bit<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Standard 64-Bit<br /><br /> 
   [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] SP2 Web 64-Bit|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Business Intelligence|[!INCLUDE[winserver2019_datacenter_md](../../includes/winserver2019-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2019_standard_md](../../includes/winserver2019-standard-md.md)]<br/><br/>[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter 64-Bit<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard 64-Bit<br /><br /> [!INCLUDE[win8srv](../../includes/win8srv-md.md)]R2 Essentials 64 Bit<br /><br /> 
   [!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation 64 Bit<br /><br /> 
@@ -448,7 +448,7 @@ ms.locfileid: "75245657"
   
  Die tatsächlichen Anforderungen für den Festplattenspeicherplatz basieren auf der Systemkonfiguration und den Funktionen, die Sie installieren möchten. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md). In der folgenden Tabelle sind die Speicherplatzanforderungen für die Komponenten von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] aufgeführt.  
   
-|**Befinden**|**Speicherplatzbedarf**|  
+|**Feature**|**Speicherplatzbedarf**|  
 |-----------------|--------------------------------|  
 |
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] und Datendateien, Replikation, Volltextsuche und Data Quality Services|811 MB|  
@@ -474,7 +474,7 @@ ms.locfileid: "75245657"
   
     > **Hinweis:**  Der SMB-Speicher wird für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datendateien für eigenständige Installationen oder für gruppierte Installationen nicht unterstützt. Verwenden Sie stattdessen den direkt angeschlossenen Speicher oder ein SAN (Storage Area Network).  
   
-    > **Wichtig!** Der SMB-Speicher kann von einem Windows File Server oder einem SMB-Speichergerät eines Drittanbieters gehostet werden. Bei Verwendung von Windows File Server sollte die Windows File Server-Version 2008 oder höher verwendet werden. Weitere Informationen zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SMB-Dateifreigabe als Speicheroption finden Sie unter [Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)aufgeführt.  
+    > **WICHTIG!** Der SMB-Speicher kann von einem Windows File Server oder einem SMB-Speichergerät eines Drittanbieters gehostet werden. Bei Verwendung von Windows File Server sollte die Windows File Server-Version 2008 oder höher verwendet werden. Weitere Informationen zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit SMB-Dateifreigabe als Speicheroption finden Sie unter [Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md)aufgeführt.  
   
     > **Warnung!!!!**  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallation wird nur der lokale Datenträger zum Installieren der tempdb-Dateien unterstützt. Stellen Sie sicher, dass der für die tempdb-Daten-und Protokolldateien angegebene Pfad auf **allen** Cluster Knoten gültig ist. Sind die tempdb-Verzeichnisse auf dem Failoverzielknoten während des Failovers nicht verfügbar, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource nicht online geschaltet.  
@@ -496,5 +496,5 @@ ms.locfileid: "75245657"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Planen einer SQL Server Installation](planning-a-sql-server-installation.md)   
- [Sicherheitsüberlegungen für eine SQL Server Installation](security-considerations-for-a-sql-server-installation.md)   
+ [Überlegungen zur Sicherheit bei SQL Server-Installationen](security-considerations-for-a-sql-server-installation.md)   
  [Produktspezifikationen für SQL Server 2014](../../getting-started/sql-server-2014-product-specifications.md)  

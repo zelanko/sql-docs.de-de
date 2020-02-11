@@ -1,5 +1,5 @@
 ---
-title: Generieren benannte Abfrage (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Benannte Abfrage generieren (Dialog Feld) (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 129e1df9463064baafa38fb860f415b9c01ab38b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080913"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Benannte Abfrage generieren' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Benannte Abfrage generieren** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] können Sie eine benannte Abfrage auf der Grundlage einer Diagrammreihe, eines Diagrammreihenwerts oder eines Diagrammfilters erstellen. Diese werden im Dialogfeld **Daten durchsuchen** aus dem auf der Registerkarte **PivotChart** angezeigten Diagramm ausgewählt. Sie können das Dialogfeld **Benannte Abfrage generieren** anzeigen, indem Sie im Dialogfeld **Daten durchsuchen** auf **Benannte Abfrage generieren** klicken.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie den Namen der benannten Abfrage ein.  
   
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der benannten Abfrage ein.  
   
- **Abfragedefinition**  
+ **Abfrage Definition**  
  Zeigt die Definition der benannten Abfrage an, die aus der unter **Ausgewähltes Diagrammobjekt**ausgewählten Diagrammreihe, dem Diagrammreihenwert oder dem Diagrammfilter generiert wurde.  
   
  **Ausgewähltes Diagrammobjekt**  

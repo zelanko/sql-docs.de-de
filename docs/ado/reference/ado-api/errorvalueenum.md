@@ -1,5 +1,5 @@
 ---
-title: ErrorValueEnum | Microsoft-Dokumentation
+title: Errorvalueerum | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,114 +16,114 @@ ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67932876"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
-Gibt den Typ des ADO-Laufzeitfehler.  
+Gibt den Typ des ADO-Lauf Zeit Fehlers an.  
   
- Die Fehlernummer in drei Formen werden aufgeführt:  
+ Drei Formen der Fehlernummer sind aufgeführt:  
   
--   Positive Decimal: die niedrigen zwei Bytes der vollständigen Zahl im Dezimalformat. Diese Zahl wird in der standardmäßigen Visual Basic-Nachricht Fehlerdialogfeld angezeigt. Beispiel: Laufzeitfehler "3707".  
+-   Positives Dezimaltrennzeichen: die unteren zwei Bytes der vollständigen Zahl im Dezimal Format. Diese Zahl wird im Dialogfeld Standard-Visual Basic Fehlermeldung angezeigt. Beispiel: Laufzeitfehler "3707".  
   
--   Negative dezimale Decimal: die Übersetzung der vollständigen Fehlernummer.  
+-   Negatives Dezimaltrennzeichen: die Dezimal Übersetzung der vollständigen Fehlernummer.  
   
--   Hexadezimal: die hexadezimale Darstellung des vollständigen Fehlernummer. Der Windows-Funktionscode ist die vierte Ziffer. Ist der Einrichtungscode für ADO-Fehlernummern *ein*. Zum Beispiel: 0 x 800***ein***0E7B.  
+-   Hexadezimal-die hexadezimale Darstellung der vollständigen Fehlernummer. Der Windows-Einrichtungs Code ist in der vierten Ziffer. Der Einrichtungs Code für ADO-Fehlernummern ist *ein*. Beispiel: 0x800***A***0e7b.  
   
 > [!NOTE]
->  OLE DB-Fehler können der ADO-Anwendung übergeben werden. Diese können in der Regel identifiziert werden, von einem Windows-Funktionscode von *4*. Z. B. 0 x 800***4***.  
+>  OLE DB Fehler können an Ihre ADO-Anwendung übermittelt werden. Diese können in der Regel durch einen Windows-Einrichtungs Code von *4*identifiziert werden. Beispiel: 0x800***4***.  
   
-|Konstante|Wert|Beschreibung|  
+|Dauerhaft|value|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|Kann nicht geändert werden die **ActiveConnection** Eigenschaft eine **Recordset** Objekt mit einem **Befehl** Objekt als Quelle.|  
-|**adErrCannotComplete**|3732 -2146824556 0x800A0E94|Server kann den Vorgang nicht abschließen.|  
-|**adErrCantChangeConnection**|3748 -2146824540 0x800A0EA4|Verbindung wurde verweigert. Neue Verbindung, die Sie angefordert hat, andere Merkmale als die bereits verwendet wird.|  
-|**adErrCantChangeProvider**|3220 -2146825068 0X800A0C94|Der angegebene Anbieter unterscheidet sich von der bereits verwendet wird.|  
-|**adErrCantConvertvalue**|3724 -2146824564 0x800A0E8C|Datenwert kann nicht für den Datenüberlauf stimmt nicht überein oder Daten konvertiert werden. Z. B. würden Konvertierung Daten abgeschnitten.|  
-|**adErrCantCreate**|3725 -2146824563 0x800A0E8D|Datenwert kann nicht festgelegt oder abgerufen werden, da der Datentyp des Felds unbekannt ist, oder der Anbieter nicht genügend Ressourcen zum Ausführen des Vorgangs musste.|  
-|**adErrCatalogNotSet**|3747 -2146824541 0x800A0EA3|Vorgang erfordert, dass ein gültiger **ParentCatalog**.|  
-|**adErrColumnNotOnThisRow**|3726 -2146824562 0x800A0E8E|Datensatz enthält dieses Feld nicht.|  
-|**adErrDataConversion**|3421 -2146824867 0x800A0D5D|Anwendung verwendet einen Wert des falschen Typs für den aktuellen Vorgang.|  
-|**adErrDataOverflow**|3721 -2146824567 0x800A0E89|Datenwert ist zu groß, um durch den Datentyp des Felds dargestellt werden.|  
-|**adErrDelResOutOfScope**|3738 -2146824550 0x800A0E9A|URL des Objekts gelöscht werden soll, ist außerhalb des Bereichs des aktuellen Datensatzes.|  
-|**adErrDenyNotSupported**|3750 -2146824538 0x800A0EA6|Anbieter unterstützt keine freigabebeschränkungen.|  
-|**adErrDenyTypeNotSupported**|3751 -2146824537 0x800A0EA7|Anbieter unterstützt nicht die angeforderte Art der Freigabe der Einschränkung.|  
-|**adErrFeatureNotAvailable**|3251 -2146825037 0x800A0CB3|Objekt oder der Anbieter kann nicht auf den angeforderten Vorgang auszuführen.|  
-|**adErrFieldsUpdateFailed**|3749 -2146824539 0x800A0EA5|Fehler beim Aktualisieren der Felder. Weitere Informationen zu untersuchen der **Status** -Eigenschaft der einzelnen Felds-Objekte.|  
-|**adErrIllegalOperation**|3219 -2146825069 0x800A0C93|Vorgang wird in diesem Kontext nicht zulässig.|  
-|**adErrIntegrityViolation**|3719 -2146824569 0x800A0E87|Datenwert verursacht einen Konflikt mit den Einschränkungen der Integrität des Felds.|  
-|**adErrInTransaction**|3246 -2146825042 0x800A0CAE|**Verbindung** Objekt kann nicht in einer Transaktion explizit geschlossen werden.|  
-|**adErrInvalidArgument**|3001 -2146825287 0x800A0BB9|Argumente des falschen Typs sind, sind außerhalb des zulässigen Bereichs, oder in Konflikt miteinander stehen.|  
-|**adErrInvalidConnection**|3709 -2146824579 0x800A0E7D|Die Verbindung kann nicht verwendet werden, um diesen Vorgang auszuführen. Es ist entweder geschlossen oder in diesem Kontext ungültig.|  
-|**adErrInvalidParamInfo**|3708 -2146824580 0x800A0E7C|**Parameter** Objekt falsch definiert ist. Inkonsistente oder unvollständige Informationen wurden bereitgestellt.|  
-|**adErrInvalidTransaction**|3714 -2146824574 0x800A0E82|Koordinieren die Transaktion ist ungültig oder wurde nicht gestartet.|  
-|**adErrInvalidURL**|3729 -2146824559 0x800A0E91|URL enthält ungültige Zeichen. Stellen Sie sicher, dass die URL richtig eingegeben wurde.|  
-|**adErrItemNotFound**|3265-2146825023 0x800A0CC1|Element kann nicht in der Auflistung gefunden werden, der der angeforderte Name oder Ordinalzahl entspricht.|  
-|**adErrNoCurrentRecord**|3021 -2146825267 0x800A0BCD|Entweder **BOF** oder **EOF** ist "true" oder der aktuelle Datensatz wurde gelöscht. Der angeforderte Vorgang erfordert einen aktuellen Datensatz.|  
-|**adErrNotExecuting**|3715 -2146824573 0x800A0E83|Vorgang kann nicht ausgeführt werden, während der Ausführung nicht.|  
-|**adErrNotReentrant**|3710 -2146824578 0x800A0E7E|Vorgang kann nicht beim Verarbeiten des Ereignisses ausgeführt werden.|  
-|**adErrObjectClosed**|3704 -2146824584 0x800A0E78|Vorgang ist nicht zulässig, wenn das Objekt geschlossen wird.|  
-|**adErrObjectInCollection**|3367 -2146824921 0x800A0D27|Objekt ist bereits in der Auflistung. Kann nicht angefügt werden.|  
-|**adErrObjectNotSet**|3420 -2146824868 0x800A0D5C|Objekt ist nicht mehr gültig.|  
-|**adErrObjectOpen**|3705 -2146824583 0x800A0E79|Vorgang ist nicht zulässig, wenn das Objekt geöffnet ist.|  
-|**adErrOpeningFile**|3002 -2146825286 0x800A0BBA|Datei konnte nicht geöffnet werden.|  
-|**adErrOperationCancelled**|3712 -2146824576 0x800A0E80|Vorgang wurde vom Benutzer abgebrochen.|  
-|**adErrOutOfSpace**|3734 -2146824554 0x800A0E96|Vorgang kann nicht ausgeführt werden. -Anbieter kann nicht genügend Speicherplatz verfügbar.|  
-|**adErrPermissionDenied**|3720 -2146824568 0x800A0E88|Unzureichende Berechtigungen wird verhindert, dass das Schreiben in das Feld.|  
-|**adErrProviderFailed**|3000 -2146825288 0x800A0BB8|Anbieter nicht den angeforderten Vorgang auszuführen.|  
-|**adErrProviderNotFound**|3706 -2146824582 0x800A0E7A|Anbieter wurde nicht gefunden. Es ist möglicherweise nicht ordnungsgemäß installiert.|  
-|**adErrReadFile**|3003 -2146825285 0x800A0BBB|Datei konnte nicht gelesen werden.|  
-|**adErrResourceExists**|3731 -2146824557 0x800A0E93|Copy-Vorgang kann nicht ausgeführt werden. Objekt mit dem Namen von Ziel-URL bereits vorhanden ist. Geben Sie **AdCopyOverwrite** auf das Objekt zu ersetzen.|  
-|**adErrResourceLocked**|3730 -2146824558 0x800A0E92|Objekt, das dargestellt durch die angegebene URL wird von einem oder mehreren Prozessen gesperrt. Warten Sie, bis der Vorgang abgeschlossen wurde, und versuchen Sie es noch mal.|  
-|**adErrResourceOutOfScope**|3735 -2146824553 0x800A0E97|Quelle oder Ziel-URL ist außerhalb des Bereichs des aktuellen Datensatzes.|  
-|**adErrSchemaViolation**|3722 -2146824566 0x800A0E8A|Datenwert verursacht einen Konflikt mit dem Datentyp oder die Einschränkungen des Felds.|  
-|**adErrSignMismatch**|3723 -2146824565 0x800A0E8B|Fehler bei der Konvertierung, da der Datenwert mit Vorzeichen handelte und der vom Anbieter verwendeten Datentyp des Felds kein Vorzeichen hatte.|  
-|**adErrStillConnecting**|3713 -2146824575 0x800A0E81|Vorgang kann nicht ausgeführt werden, während eine asynchrone Verbindung.|  
-|**adErrStillExecuting**|3711 -2146824577 0x800A0E7F|Vorgang kann nicht ausgeführt werden, während der asynchron ausgeführt wird.|  
-|**adErrTreePermissionDenied**|3728 -2146824560 0x800A0E90|Berechtigungen sind nicht ausreichend, um die Struktur oder Teilstruktur zugreifen.|  
-|**adErrUnavailable**|3736 -2146824552 0x800A0E98|Vorgang wurde nicht abgeschlossen, und der Status ist nicht verfügbar. Das Feld darf nicht mehr verfügbar sein, oder der Vorgang wurde nicht gestartet.|  
-|**adErrUnsafeOperation**|3716 -2146824572 0x800A0E84|Die Sicherheitseinstellungen auf diesem Computer verhindern den Zugriff auf eine Datenquelle in einer anderen Domäne.|  
-|**adErrURLDoesNotExist**|3727 -2146824561 0x800A0E8F|Entweder die Quell-URL oder das übergeordnete Element der Ziel-URL ist nicht vorhanden.|  
-|**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|Datensatz mit dem Namen der von dieser URL ist nicht vorhanden.|  
-|**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|Anbieter wurde nicht gefunden für das Speichergerät, das von der URL angegeben. Stellen Sie sicher, dass die URL richtig eingegeben wurde.|  
-|**adErrWriteFile**|3004 -2146825284 0x800A0BBC|Datei konnte nicht beschrieben.|  
-|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
-|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
+|**aderrboundto-Befehl**|3707-2146824581 0x800a0e7b|Die **ActiveConnection** -Eigenschaft eines **Recordset** -Objekts, das über ein **Command** -Objekt als Quelle verfügt, kann nicht geändert werden.|  
+|**aderrcannotcomplete**|3732-2146824556 0x800a0e94|Der Server kann den Vorgang nicht beenden.|  
+|**aderrcantchangeconnection**|3748-2146824540 0x800a0ea4|Die Verbindung wurde verweigert. Die von Ihnen angeforderte neue Verbindung weist andere Eigenschaften auf als die, die bereits verwendet werden.|  
+|**aderrcantchangeprovider**|3220-2146825068 0x800a0c94|Der angegebene Anbieter unterscheidet sich von dem bereits verwendeten Anbieter.|  
+|**aderrcantconvertvalue**|3724-2146824564 0x800a0e8c|Der Datenwert kann nicht konvertiert werden, wenn keine Vorzeichen übereinstimmen oder ein Datenüberlauf vorliegt. Beispielsweise würden bei der Konvertierung Daten abgeschnitten werden.|  
+|**aderrcantcreate**|3725-2146824563 0x800a0e8d|Der Datenwert kann nicht festgelegt oder abgerufen werden, weil der Feld Datentyp unbekannt war, oder der Anbieter verfügte nicht über genügend Ressourcen, um den Vorgang auszuführen.|  
+|**aderrcatalognotset**|3747-2146824541 0x800a0ea3|Für den Vorgang ist ein gültiger " **Parser Catalog**" erforderlich.|  
+|**aderrcolumnnotonthisrow**|3726-2146824562 0x800a0e8e|Der Datensatz enthält dieses Feld nicht.|  
+|**aderrdataconversion**|3421-2146824867 0x800a0d5d|Die Anwendung verwendet einen Wert des falschen Typs für den aktuellen Vorgang.|  
+|**aderrdataoverflow**|3721-2146824567 0x800a0e89|Der Datenwert ist zu groß, um durch den Feld Datentyp dargestellt zu werden.|  
+|**aderrdelta resouumsscope**|3738-2146824550 0x800a0e9a|Die URL des zu löschenden Objekts liegt außerhalb des Gültigkeits Bereichs des aktuellen Datensatzes.|  
+|**aderrdenynotsupported**|3750-2146824538 0x800a0ea6|Der Anbieter unterstützt keine Freigabe Einschränkungen.|  
+|**aderrdenytypotsupported**|3751-2146824537 0x800a0ea7|Der Anbieter unterstützt die angeforderte Art der Freigabe Einschränkung nicht.|  
+|**adErrFeatureNotAvailable**|3251-2146825037 0x800a0cb3|Das Objekt oder der Anbieter kann den angeforderten Vorgang nicht ausführen.|  
+|**aderrfieldsupdatefailed**|3749-2146824539 0x800a0ea5|Fehler beim Aktualisieren der Felder. Weitere Informationen finden Sie unter Überprüfen der **Status** -Eigenschaft einzelner Feld Objekte.|  
+|**aderrillegaloperation**|3219-2146825069 0x800a0c93|Der Vorgang ist in diesem Kontext nicht zulässig.|  
+|**aderrintegrityverstoß**|3719-2146824569 0x800a0e87|Der Datenwert steht in Konflikt mit den Integritäts Einschränkungen des Felds.|  
+|**aderrintransaction**|3246-2146825042 0x800a0cae|Das **Verbindungs** Objekt kann während einer Transaktion nicht explizit geschlossen werden.|  
+|**aderrinvalidargument**|3001-2146825287 0x800a0bb9|Argumente weisen den falschen Typ auf, sind außerhalb des zulässigen Bereichs oder stehen in Konflikt zueinander.|  
+|**aderrinvalidconnection**|3709-2146824579 0x800a0e7d|Die Verbindung kann nicht verwendet werden, um diesen Vorgang auszuführen. Er ist in diesem Kontext entweder geschlossen oder ungültig.|  
+|**aderrinvalidparaminfo**|3708-2146824580 0x800a0e7c|Das **Parameter** Objekt ist falsch definiert. Es wurden inkonsistente oder unvollständige Informationen bereitgestellt.|  
+|**aderrinvalidtransaction**|3714-2146824574 0x800a0e82|Die koordinierende Transaktion ist ungültig oder wurde nicht gestartet.|  
+|**aderrinvalidurl**|3729-2146824559 0x800a0e91|Die URL enthält ungültige Zeichen. Stellen Sie sicher, dass die URL ordnungsgemäß eingegeben wurde.|  
+|**aderritemnotfound**|3265-2146825023 0x800a0cc1|Das Element wurde in der Auflistung nicht gefunden, das dem angeforderten Namen oder der Ordinalzahl entspricht.|  
+|**aderrnocurrentrecord**|3021-2146825267 0x800a0bcd|**BOF** oder **EOF** ist true, oder der aktuelle Datensatz wurde gelöscht. Für den angeforderten Vorgang ist ein aktueller Datensatz erforderlich.|  
+|**aderrnotexecuting**|3715-2146824573 0x800a0e83|Der Vorgang kann nicht ausgeführt werden.|  
+|**aderrnotreentrant**|3710-2146824578 0x800a0e7e|Der Vorgang kann nicht während der Verarbeitung des Ereignisses ausgeführt werden.|  
+|**aderrobjectclosed**|3704-2146824584 0x800a0e78|Der Vorgang ist nicht zulässig, wenn das Objekt geschlossen wird.|  
+|**aderrobjectincollection**|3367-2146824921 0x800a0d27|Das Objekt ist bereits in der Sammlung vorhanden. Anfügen nicht möglich.|  
+|**aderrobjectnotset**|3420-2146824868 0x800a0d5c|Das Objekt ist nicht mehr gültig.|  
+|**aderrobjectopen**|3705-2146824583 0x800a0e79|Der Vorgang ist nicht zulässig, wenn das Objekt geöffnet ist.|  
+|**aderropingfile**|3002-2146825286 0x800a0bba|Die Datei konnte nicht geöffnet werden.|  
+|**aderroperationabgeb Rochen**|3712-2146824576 0x800a0e80|Der Vorgang wurde vom Benutzer abgebrochen.|  
+|**aderrouesleerraum**|3734-2146824554 0x800a0e96|Der Vorgang kann nicht ausgeführt werden. Der Anbieter kann nicht genügend Speicherplatz abrufen.|  
+|**aderrpermissiondenied**|3720-2146824568 0x800a0e88|Unzureichende Berechtigungen verhindern das Schreiben in das Feld.|  
+|**aderrproviderfailed**|3000-2146825288 0x800a0bb8|Der Anbieter hat den angeforderten Vorgang nicht durchgeführt.|  
+|**aderrprovidernotfound**|3706-2146824582 0x800a0e7a|Der Anbieter wurde nicht gefunden. Er ist möglicherweise nicht ordnungsgemäß installiert.|  
+|**aderrinfofile**|3003-2146825285 0x800a0bbb|Die Datei konnte nicht gelesen werden.|  
+|**aderrresourceist vorhanden.**|3731-2146824557 0x800a0e93|Der Kopiervorgang kann nicht ausgeführt werden. Das von der Ziel-URL benannte Objekt ist bereits vorhanden. Geben Sie **AdCopyOverwrite** an, um das Objekt zu ersetzen.|  
+|**aderrresourcelocked**|3730-2146824558 0x800a0e92|Das durch die angegebene URL dargestellte Objekt wird von mindestens einem Prozess gesperrt. Warten Sie, bis der Prozess abgeschlossen wurde, und wiederholen Sie dann den Vorgang.|  
+|**aderrresourceouumsscope**|3735-2146824553 0x800a0e97|Die Quell-oder Ziel-URL liegt außerhalb des Gültigkeits Bereichs des aktuellen Datensatzes.|  
+|**aderrschemaverletzung**|3722-2146824566 0x800a0e8a|Der Datenwert steht in Konflikt mit dem Datentyp oder den Einschränkungen des Felds.|  
+|**aderrsignmismatch**|3723-2146824565 0x800a0e8b|Fehler bei der Konvertierung, da der Datenwert signiert wurde und der vom Anbieter verwendete Feld Datentyp nicht signiert wurde.|  
+|**aderrstillverbindung**|3713-2146824575 0x800a0e81|Der Vorgang kann nicht ausgeführt werden, während die Verbindung asynchron hergestellt wird|  
+|**aderrstillexecuting**|3711-2146824577 0x800a0e7f|Der Vorgang kann nicht ausgeführt werden, wenn asynchron ausgeführt wird.|  
+|**aderrtreepermissiondenied**|3728-2146824560 0x800a0e90|Die Berechtigungen reichen nicht aus, um auf die Struktur oder Unterstruktur zuzugreifen.|  
+|**aderrunavailable**|3736-2146824552 0x800a0e98|Der Vorgang wurde nicht beendet, und der Status ist nicht verfügbar. Das Feld ist möglicherweise nicht verfügbar, oder der Vorgang wurde nicht versucht.|  
+|**aderrunsafeoperation**|3716-2146824572 0x800a0e84|Die Sicherheitseinstellungen auf diesem Computer verhindern den Zugriff auf eine Datenquelle in einer anderen Domäne.|  
+|**aderrurldoesnotexist**|3727-2146824561 0x800a0e8f|Entweder die Quell-URL oder das übergeordnete Element der Ziel-URL ist nicht vorhanden.|  
+|**aderrurlnamedrowdoesnotexist**|3737-2146824551 0x800a0e99|Der von dieser URL benannte Datensatz ist nicht vorhanden.|  
+|**aderrvolumumotfound**|3733-2146824555 0x800a0e95|Der Anbieter kann das durch die URL gekennzeichnete Speichergerät nicht finden. Stellen Sie sicher, dass die URL ordnungsgemäß eingegeben wurde.|  
+|**aderrschreitedatei**|3004-2146825284 0x800a0bbc|Fehler beim Schreiben in die Datei.|  
+|**adwrnsecuritydialog**|3717-2146824571 0x800a0e85|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
+|**adwrnsecuritydialogheader**|3718-2146824570 0x800a0e86|Nur zur internen Verwendung. Darf nicht verwendet werden.|  
   
-## <a name="adowfc-equivalent"></a>ADO/WFC-äquivalent  
- Package: **com.ms.wfc.data**  
+## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
+ Paket: **com. ms. wfc. Data**  
   
- Es werden nur die folgenden Untergruppen von ADO/WFC-Entsprechungen definiert.  
+ Es werden nur die folgenden Teilmengen von ADO/WFC-äquivalenten definiert.  
   
-|Konstante|  
+|Dauerhaft|  
 |--------------|  
-|AdoEnums.ErrorValue.BOUNDTOCOMMAND|  
-|AdoEnums.ErrorValue.DATACONVERSION|  
-|AdoEnums.ErrorValue.FEATURENOTAVAILABLE|  
-|AdoEnums.ErrorValue.ILLEGALOPERATION|  
-|AdoEnums.ErrorValue.INTRANSACTION|  
-|AdoEnums.ErrorValue.INVALIDARGUMENT|  
-|AdoEnums.ErrorValue.INVALIDCONNECTION|  
-|AdoEnums.ErrorValue.INVALIDPARAMINFO|  
-|AdoEnums.ErrorValue.ITEMNOTFOUND|  
-|AdoEnums.ErrorValue.NOCURRENTRECORD|  
-|AdoEnums.ErrorValue.NOTEXECUTING|  
-|AdoEnums.ErrorValue.NOTREENTRANT|  
-|AdoEnums.ErrorValue.OBJECTCLOSED|  
-|AdoEnums.ErrorValue.OBJECTINCOLLECTION|  
-|AdoEnums.ErrorValue.OBJECTNOTSET|  
-|AdoEnums.ErrorValue.OBJECTOPEN|  
-|AdoEnums.ErrorValue.OPERATIONCANCELLED|  
-|AdoEnums.ErrorValue.PROVIDERNOTFOUND|  
-|AdoEnums.ErrorValue.STILLCONNECTING|  
-|AdoEnums.ErrorValue.STILLEXECUTING|  
-|AdoEnums.ErrorValue.UNSAFEOPERATION|  
+|Adoenumerations. ERRORVALUE. boundto-Befehl|  
+|Adoerums. ERRORVALUE. dataconversion|  
+|Adoerums. ERRORVALUE. featurenotavailable|  
+|Adoerums. ERRORVALUE. illegaloperation|  
+|Adoerums. ERRORVALUE. InTransaction|  
+|Adoerums. ERRORVALUE. invalidargument|  
+|Adoerums. ERRORVALUE. invalidconnection|  
+|Adoerums. ERRORVALUE. invalidparaminfo|  
+|Adoerums. ERRORVALUE. ItemNotFound|  
+|Adoerums. ERRORVALUE. nocurrentrecord|  
+|Adoerums. ERRORVALUE. notexecuting|  
+|Adoerums. ERRORVALUE. notreentrant|  
+|AdoEnums. ERRORVALUE. objectclosed|  
+|Adoerums. ERRORVALUE. objectincollection|  
+|AdoEnums. ERRORVALUE. objectnotset|  
+|Adoerums. ERRORVALUE. objectopen|  
+|Adoerums. ERRORVALUE. operationabgeb Rochen|  
+|Adoerums. ERRORVALUE. providernotfound|  
+|Adoerums. ERRORVALUE. stillverbindung|  
+|Adoerums. ERRORVALUE. StillExecuting|  
+|Adoerums. ERRORVALUE. unsafeoperation|  
   
 ## <a name="applies-to"></a>Gilt für  
  [Number-Eigenschaft (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO Error Codes (ADO-Fehlercodes)](../../../ado/guide/appendixes/ado-error-codes.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [ADO-Fehlercodes](../../../ado/guide/appendixes/ado-error-codes.md)

@@ -1,5 +1,5 @@
 ---
-title: sp_cdc_scan (Transact-SQL) | Microsoft-Dokumentation
+title: sys. sp_cdc_scan (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a064b49df3f45d9cbc4b148b8d78c3661f9a2bcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68066727"
 ---
-# <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
+# <a name="syssp_cdc_scan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Führt den Protokollscan für Change Data Capture aus.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,27 +44,27 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @maxtrans = ] max_trans` Maximale Anzahl der in jedem Scanzyklus zu verarbeitenden Transaktionen. *Max_trans* ist **Int** hat den Standardwert von 500.  
+`[ @maxtrans = ] max_trans`Maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen. *max_trans* ist vom Datentyp **int** und hat den Standardwert 500.  
   
-`[ @maxscans = ] max_scans` Maximale Anzahl der scanzyklen, ausführen, um alle Zeilen aus dem Protokoll zu extrahieren. *Max_scans* ist **Int** hat den Standardwert 10.  
+`[ @maxscans = ] max_scans`Maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren. *max_scans* ist vom Datentyp **int** und hat den Standardwert 10.  
   
-`[ @continuous = ] continuous` Gibt an, ob die gespeicherte Prozedur sollte nach dem Ausführen eines einzelnen Scanzyklus (0) oder kontinuierlich, für die angegebene Zeit anhalten *Polling_interval* vor reexecuting der Überprüfungszyklus (1). *fortlaufende* ist **Tinyint** hat den Standardwert 0.  
+`[ @continuous = ] continuous`Gibt an, ob die gespeicherte Prozedur nach dem Ausführen eines einzelnen Überprüfungszyklen (0) beendet werden soll, oder ausgeführt wird, wenn die von *polling_interval* angegebene Zeit angehalten werden soll, bevor der Überprüfungszyklen erneut ausgeführt wird (1). *Continuous* ist vom Datentyp **tinyint** und hat den Standardwert 0.  
   
-`[ @pollinginterval = ] polling_interval` Anzahl von Sekunden zwischen den Scan des Replikationsprotokolls Prozessorzyklen. *Polling_interval* ist **Bigint** hat den Standardwert 0.  
+`[ @pollinginterval = ] polling_interval`Anzahl der Sekunden zwischen Protokoll Scan Zyklen. *polling_interval* ist vom Datentyp **bigint** und hat den Standardwert 0.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- sp_cdc_scan wird intern vom sys.sp_MScdc_capture_job aufgerufen, wenn die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-aufzeichnungsauftrag von Change Data Capture verwendet wird. Die Prozedur kann nicht explizit ausgeführt werden, wenn ein Protokollscan für Change Data Capture bereits aktiv ist oder wenn die Datenbank für die Transaktionsreplikation aktiviert ist. Diese gespeicherte Prozedur sollte von Administratoren verwendet werden, die das Verhalten für den aufzeichnungsauftrag, der automatisch konfiguriert ist, anpassen möchten.  
+## <a name="remarks"></a>Bemerkungen  
+ sys. sp_cdc_scan wird intern von sys. sp_MScdc_capture_job aufgerufen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der agenterfassungs Auftrag von Change Data Capture verwendet wird. Der Vorgang kann nicht explizit ausgeführt werden, wenn ein Protokollscan für Change Data Capture bereits aktiv ist oder wenn die Datenbank für die Transaktionsreplikation aktiviert ist. Diese gespeicherte Prozedur sollte von Administratoren verwendet werden, die das Verhalten des automatisch konfigurierten Aufzeichnungsauftrags anpassen möchten.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Datenbankrolle "db_owner".  
   
-## <a name="see-also"></a>Siehe auch  
- [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [dbo. cdc_jobs &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)  
   
   

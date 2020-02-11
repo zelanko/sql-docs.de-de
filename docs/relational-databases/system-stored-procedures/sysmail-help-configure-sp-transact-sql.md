@@ -18,10 +18,10 @@ ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3d07f77c468bb14b28cd003f599bebd636d6f862
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056160"
 ---
 # <a name="sysmail_help_configure_sp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74056160"
 
   Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,25 +39,25 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @parameter_name = ] 'parameter_name'` den Namen der abzurufenden Konfigurationseinstellung ab. Wenn angegeben, wird der Wert der Konfigurationseinstellung im **\@parameter_value** Output-Parameter zurückgegeben. Wenn keine **\@parameter_name** angegeben ist, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
+`[ @parameter_name = ] 'parameter_name'`Der Name der abzurufenden Konfigurationseinstellung. Wenn angegeben, wird der Wert der Konfigurationseinstellung im ** \@parameter_value** Output-Parameter zurückgegeben. Wenn keine ** \@parameter_name** angegeben wird, gibt diese gespeicherte Prozedur ein Resultset zurück, das alle Datenbank-E-Mail Konfigurationseinstellungen in der-Instanz enthält.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="result-sets"></a>Resultsets  
- Wenn keine **\@parameter_name** angegeben ist, gibt ein Resultset mit den folgenden Spalten zurück.  
+ Wenn keine ** \@parameter_name** angegeben wird, gibt ein Resultset mit den folgenden Spalten zurück.  
   
 ||||  
 |-|-|-|  
-|Spaltenname|Datentyp|und Beschreibung|  
-|**paramname**|**nvarchar(256)**|Der Name des Konfigurationsparameters.|  
-|**paramvalue**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
-|**description**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
+|**paramName**|**nvarchar(256)**|Der Name des Konfigurationsparameters.|  
+|**angegebene paramValue**|**nvarchar(256)**|Der Wert des Konfigurationsparameters.|  
+|**Beschreibung**|**nvarchar(256)**|Die Beschreibung des Konfigurationsparameters.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die gespeicherte Prozedur **sysmail_help_configure_sp** führt die aktuellen Konfigurationseinstellungen für Datenbank-E-Mail für die Instanz auf.  
   
- Wenn ein **\@parameter_name** angegeben wird, aber für **\@parameter_value**kein Ausgabeparameter bereitgestellt wird, wird von dieser gespeicherten Prozedur keine Ausgabe erzeugt.  
+ Wenn eine ** \@parameter_name** angegeben wird, für ** \@parameter_value**jedoch kein Ausgabeparameter bereitgestellt wird, erzeugt diese gespeicherte Prozedur keine Ausgabe.  
   
  Die gespeicherte Prozedur **sysmail_help_configure_sp** befindet sich in der **msdb** -Datenbank und im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen aufgerufen werden.  
   
@@ -86,8 +86,8 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Datenbank-E-Mail gespeicherter &#40;Prozeduren (Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

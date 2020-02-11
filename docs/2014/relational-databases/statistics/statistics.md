@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63033727"
 ---
 # <a name="statistics"></a>Statistik
@@ -68,7 +68,7 @@ ORDER BY s.name;
  Die AUTO_UPDATE_STATISTICS-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) -Anweisung generierte Statistiken erstellt wurden. Diese Option gilt auch für gefilterte Statistiken.  
   
  AUTO_UPDATE_STATISTICS_ASYNC  
- Mit der AUTO_UPDATE_STATISTICS_ASYNC-Option für die asynchrone Statistikaktualisierung wird festgelegt, ob der Abfrageoptimierer die synchrone oder asynchrone Statistikaktualisierung verwendet. Die Option für das asynchrone Statistikupdate ist standardmäßig deaktiviert, sodass der Abfrageoptimierer Statistiken synchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für Statistikobjekte, die für Indizes, einzelne Spalten in Abfrageprädikaten und mit der [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) -Anweisung generierte Statistiken erstellt wurden.  
+ Mit der AUTO_UPDATE_STATISTICS_ASYNC-Option für die asynchrone Statistikaktualisierung wird festgelegt, ob der Abfrageoptimierer die synchrone oder asynchrone Statistikaktualisierung verwendet. Die Option für das asynchrone Statistikupdate ist standardmäßig deaktiviert, sodass der Abfrageoptimierer Statistiken synchron aktualisiert. Die AUTO_UPDATE_STATISTICS_ASYNC-Option gilt für Statistik Objekte, die für Indizes, einzelne Spalten in Abfrage Prädikaten und mit der [CREATE STATISTICS](/sql/t-sql/statements/create-statistics-transact-sql) -Anweisung erstellte Statistiken erstellt wurden.  
   
  Statistikaktualisierungen können entweder synchron (Standard) oder asynchron sein. Bei synchronen Statistikupdates werden Abfragen immer anhand aktueller Statistiken kompiliert und ausgeführt. Wenn Statistiken veraltet sind, wartet der Abfrageoptimierer auf aktualisierte Statistiken, bevor er die Abfrage kompiliert und ausführt. Bei asynchronen Statistikupdates werden Abfragen anhand vorhandener Statistiken kompiliert, auch wenn diese veraltet sind. Der Abfrageoptimierer könnte einen suboptimalen Abfrageplan auswählen, wenn die Statistiken beim Kompilieren der Abfrage veraltet sind. Wenn Abfragen nach dem Ausführen asynchroner Updates kompiliert werden, hat dies den Vorteil, dass für die Abfragen aktualisierte Statistiken verwendet werden.  
   
@@ -105,7 +105,7 @@ ORDER BY s.name;
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-##  <a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
+##  <a name="CreateStatistics"></a>Zeitpunkt der Erstellung von Statistiken  
  Der Abfrageoptimierer erstellt automatisch folgende Statistiken:  
   
 1.  Bei der Indexerstellung berechnet der Abfrageoptimierer Statistiken für Indizes, die sich auf Tabellen oder Sichten beziehen. Diese Statistiken werden für die Schlüsselspalten des Indexes erstellt. Wenn es sich um einen gefilterten Index handelt, erstellt der Abfrageoptimierer gefilterte Statistiken für die gleiche Teilmenge von Zeilen, die für den gefilterten Index angegeben wurden. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../indexes/create-filtered-indexes.md) und [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
@@ -152,7 +152,7 @@ GO
 ### <a name="query-selects-from-a-subset-of-data"></a>Bei der Abfrageausführung wird aus einer Teilmenge von Daten ausgewählt  
  Wenn der Abfrageoptimierer Statistiken für einzelne Spalten und Indizes erstellt, berechnet er Statistiken für die Werte sämtlicher Zeilen. Wenn bei Abfragen aus einer Teilmenge von Zeilen ausgewählt wird und diese Teilmenge über eine eindeutige Datenverteilung verfügt, können Abfragepläne durch gefilterte Statistiken verbessert werden. Sie können gefilterte Statistiken erstellen, indem Sie die CREATE STATISTICS-Anweisung mit der WHERE-Klausel verwenden, um den Filterprädikatausdruck zu definieren.  
   
- Verwenden Sie beispielsweise [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], jedes Produkt in der Production.Product-Tabelle gehört zu einer der vier Kategorien in der Production.ProductCategory-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
+ Durch die Verwendung von [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]beispielsweise gehört jedes Produkt in der Production.Product-Tabelle zu einer von vier Kategorien in der Production.ProductCategory-Tabelle: Fahrräder, Bauteile, Bekleidung und Zubehör. Jede Kategorie verfügt über eine andere Datenverteilung für das Gewicht: Die Gewichte der Fahrräder reichen von 13,77 bis 30,0, die Gewichte der Bauteile reichen von 2,12 bis 1050,00 mit einigen NULL-Werten, die Gewichte der Bekleidung sind alle NULL, und die Gewichte des Zubehörs sind ebenfalls NULL.  
   
  Bei den Fahrrädern liefern gefilterte Statistiken dem Abfrageoptimierer zu allen Fahrradgewichten genauere Statistikdaten und können die Abfrageplanqualität im Vergleich zu Tabellenstatistiken oder nicht vorhandenen Statistiken für die Weight-Spalte verbessern. Die Spalte mit dem Fahrradgewicht eignet sich besonders für gefilterte Statistiken, jedoch weniger für einen gefilterten Index, wenn nur relativ wenige Suchen nach Gewichtsangaben ausgeführt werden. Die Leistungsvorteile, die gefilterte Indizes bei der Suche bieten, können die zusätzlichen Kosten für Wartung und Speicher, die mit der Implementierung eines gefilterten Indexes in der Datenbank verbunden sind, jedoch nicht aufwiegen.  
   
@@ -185,17 +185,17 @@ GO
   
 -   Erstellen Sie die fehlende Statistik mithilfe der CREATE STATISTICS-Anweisung.  
   
- Fehlen Statistiken über eine schreibgeschützte Datenbank oder Momentaufnahme oder sind diese veraltet, erstellt [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken in `tempdb` und behält diese bei. Wenn das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das _readonly_database_statistic-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das _readonly_database_statistic-Suffix ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von _readonly_database_statistic zu _readonly_database_statistic_scripted.  
+ Fehlen Statistiken über eine schreibgeschützte Datenbank oder Momentaufnahme oder sind diese veraltet, erstellt [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken in `tempdb` und behält diese bei. Wenn das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] temporäre Statistiken erstellt, wird dem Statistiknamen das _readonly_database_statistic-Suffix angefügt, um die temporären Statistiken von den dauerhaften Statistiken zu unterscheiden. Das Suffix „_readonly_database_statistic“ ist für von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]generierte Statistiken reserviert. Skripts für die temporären Statistiken können erstellt und auf einer Datenbank mit Lese-/Schreibzugriff reproduziert werden. Bei einer Skripterstellung ändert [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] das Suffix des Statistiknamens von _readonly_database_statistic zu _readonly_database_statistic_scripted.  
   
  Nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] kann temporäre Statistiken erstellen und aktualisieren. Sie können jedoch temporäre Statistiken löschen und Statistikeigenschaften mit den gleichen Tools überwachen, die Sie für dauerhafte Statistiken verwenden:  
   
 -   Löschen Sie temporäre Statistiken mit der Anweisung [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) -Anweisung generierte Statistiken erstellt wurden.  
   
--   Überwachen Sie Statistiken mit den Katalogsichten **sys.stats** und **sys.stats_columns** . **sys_stats** beinhaltet die Spalte **is_temporary** . Damit wird angegeben, welche Statistiken dauerhaft und welche temporär sind.  
+-   Überwachen Sie Statistiken mit den Katalogsichten **sys.stats** und **sys.stats_columns**. **sys_stats** enthält die **is_temporary** Spalte, um anzugeben, welche Statistiken permanent sind und welche temporär sind.  
   
  Da temporäre Statistiken in `tempdb` gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensts alle temporären Statistiken entfernt.  
   
-##  <a name="UpdateStatistics"></a>Zeitpunkt der Statistikaktualisierung  
+##  <a name="UpdateStatistics"></a>Zeitpunkt der Statistik Aktualisierung  
  Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, und aktualisiert sie, sobald sie für einen Abfrageplan benötigt werden. In einigen Fällen können Sie den Abfrageplan und damit die Abfrageleistung verbessern, indem Sie Statistiken häufiger aktualisieren, als dies bei Aktivierung von AUTO_UPDATE_STATISTICS der Fall ist. Sie können Statistiken mit der UPDATE STATISTICS-Anweisung oder der gespeicherten Prozedur sp_updatestats aktualisieren.  
   
  Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab.  
@@ -225,7 +225,7 @@ GO
   
  Vorgänge wie das Neuerstellen, Defragmentieren oder Neuorganisieren eines Indexes wirken sich nicht auf die Verteilung von Daten aus. Folglich müssen Sie keine Statistiken aktualisieren, nachdem Sie die Vorgänge ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG oder ALTER INDEX REORGANIZE ausgeführt haben. Der Abfrageoptimierer aktualisiert Statistiken, wenn mit ALTER INDEX REBUILD oder DBCC DBREINDEX ein Index für eine Tabelle oder Sicht erstellt wird. Dieses Statistikupdate tritt jedoch als Nebenprodukt der Indexneuerstellung auf. Der Abfrageoptimierer führt keine Statistikaktualisierung nach einem DBCC INDEXDEFRAG-Vorgang oder ALTER INDEX REORGANIZE-Vorgang aus.  
   
-##  <a name="DesignStatistics"></a> Abfragen mit effektiver Verwendung von Statistiken  
+##  <a name="DesignStatistics"></a>Abfragen, die Statistiken effektiv verwenden  
  Bestimmte Abfrageimplementierungen, z. B. lokale Variablen und komplexe Ausdrücke im Abfrageprädikat, können zu suboptimalen Abfrageplänen führen. Sie können dies verhindern, indem Sie Abfrageentwurfsrichtlinien für die effektive Verwendung von Statistiken befolgen. Weitere Informationen zu Abfrageprädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
   
  Zur Optimierung von Abfrageplänen können Sie Abfrageentwurfsrichtlinien anwenden, die Statistiken effektiv einsetzen, um *Kardinalitätsschätzungen* für Ausdrücke, Variablen und Funktionen in Abfrageprädikaten zu verbessern. Wenn der Abfrageoptimierer den Wert eines Ausdrucks, einer Variablen oder Funktion nicht kennt, weiß er nicht, welchen Wert er im Histogramm suchen soll. Folglich kann nicht die beste Kardinalitätsschätzung aus dem Histogramm abgerufen werden. Für alle als Stichprobe entnommenen Zeilen im Histogramm verwendet der Abfrageoptimierer stattdessen die durchschnittliche Anzahl von Zeilen pro eindeutigem Wert als Basis für die Kardinalitätsschätzung. Dies führt zu suboptimalen Kardinalitätsschätzungen und kann die Abfrageleistung beeinträchtigen.  
@@ -322,8 +322,8 @@ GO
 ### <a name="improving-cardinality-estimates-with-plan-guides"></a>Verbessern von Kardinalitätsschätzungen mit Planhinweislisten  
  Für einige Anwendungen sind die Abfrageentwurfsrichtlinien möglicherweise nicht geeignet, weil Sie die Abfrage nicht ändern können oder die Verwendung des RECOMPILE-Abfragehinweises zu viele Neukompilierungen verursacht. Sie können mithilfe der Planhinweislisten weitere Hinweise (z. B. USE PLAN) angeben, um das Abfrageverhalten zu steuern. Zur gleichen Zeit können Sie mit dem Hersteller klären, ob die Anwendung geändert wurde. Weitere Informationen zu Planhinweislisten finden Sie unter [Planhinweislisten](../performance/plan-guides.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen von Statistiken &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
  [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
  [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   

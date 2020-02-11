@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Problembehandlung bei Berichts teilen (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df37de909461ace62edbbf3cfe9e7b9dd8448b56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099392"
 ---
 # <a name="troubleshoot-report-parts-report-builder-and-ssrs"></a>Problembehandlung bei Berichtsteilen (Berichts-Generator und SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66099392"
  Fragen Sie Ihren Berichtsserveradministrator, wenn Sie nicht wissen, über welche Berechtigungen Sie und Ihr Kollege verfügen.  
   
 ## <a name="when-i-search-for-report-parts-that-i-uploaded-to-a-sharepoint-server-i-do-not-see-them-why-not"></a>Wenn ich nach Berichtsteilen suche, die ich auf einen SharePoint-Server hochgeladen habe, sehe ich sie nicht. Warum nicht?  
- Berichtsteile, die Sie manuell in eine SharePoint-Dokumentbibliothek hochgeladen haben, anstatt sie mit Berichts-Generator zu veröffentlichen, werden möglicherweise nicht im Berichtsteilkatalog angezeigt. Der Berichtsserver, der für die Katalogsuche verwendet wird, muss möglicherweise mit dem Inhalt der SharePoint-Dokumentbibliothek synchronisiert werden. Weitere Informationen finden Sie unter [Aktivieren der Synchronisierung Berichtsserverdateien in der SharePoint-Zentraladministration](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=154888) auf "MSDN.Microsoft.com".  
+ Berichtsteile, die Sie manuell in eine SharePoint-Dokumentbibliothek hochgeladen haben, anstatt sie mit Berichts-Generator zu veröffentlichen, werden möglicherweise nicht im Berichtsteilkatalog angezeigt. Der Berichtsserver, der für die Katalogsuche verwendet wird, muss möglicherweise mit dem Inhalt der SharePoint-Dokumentbibliothek synchronisiert werden. Weitere Informationen finden Sie unter [Aktivieren der Berichts Server Dateisynchronisierung-Funktion in der](../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md) -Online Dokumentation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in der [-Online](https://go.microsoft.com/fwlink/?LinkId=154888) Dokumentation auf MSDN.Microsoft.com.  
   
 ## <a name="why-cant-others-see-the-image-in-their-reports"></a>Warum können andere kein Bild in ihren Berichten sehen?  
  Wenn Sie einen Berichtsteil veröffentlichen, der ein Link zu einer Bilddatei ist, ist der Berichtsteil wirklich nur ein Link. Wenn andere das Bild auch dann nicht sehen können, wenn sie ihren Berichten das Bildberichtsteil hinzufügen, haben sie möglicherweise keine Berechtigungen für das verknüpfte Bild.  
@@ -42,7 +42,7 @@ ms.locfileid: "66099392"
 ## <a name="why-do-i-get-a-circular-reference-error-message-when-i-try-to-publish-my-report-part"></a>Warum erhalte ich eine "Zirkelverweis"-Fehlermeldung, wenn ich versuche, meinen Berichtsteil zu veröffentlichen?  
  Wenn Berichtselemente einen Zirkelverweis aufweisen, können Sie diese nicht als Berichtsteile veröffentlichen. Ein Berichtselement verweist beispielsweise auf ein Dataset, das wiederum auf einen Parameter verweist. Der Parameter verweist wiederum ebenfalls auf das Dataset. Sie müssen zuerst einen der Verweise löschen, bevor Sie den Berichtsteil veröffentlichen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.pdw_health_component_status_mappings (Transact-SQL) | Microsoft-Dokumentation
+title: sys. pdw_health_component_status_mappings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,25 +11,25 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: ec631e9008cc37a7b4f91ed3f530e5388bdf9c0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127501"
 ---
-# <a name="syspdwhealthcomponentstatusmappings-transact-sql"></a>sys.pdw_health_component_status_mappings (Transact-SQL)
+# <a name="syspdw_health_component_status_mappings-transact-sql"></a>sys. pdw_health_component_status_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
-  Definiert die Zuordnung zwischen der [!INCLUDE[ssDW](../../includes/ssdw-md.md)] Komponentenstatus und die Komponentennamen der Hersteller definierte.  
+  Definiert die Zuordnung zwischen den [!INCLUDE[ssDW](../../includes/ssdw-md.md)] Komponenten Status und den Hersteller definierten Komponentennamen.  
   
-|Spaltenname|Datentyp|Beschreibung|Bereich|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
 |-----------------|---------------|-----------------|-----------|  
-|property_id|**int**|Eindeutiger Bezeichner der Eigenschaft.<br /><br /> Property_id und Component_id Physical_name bilden den Schlüssel für diese Ansicht ein.|NOT NULL|  
-|component_id|**int**|Die ID der Komponente. Finden Sie unter [sys.pdw_health_components &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> Property_id und Component_id Physical_name bilden den Schlüssel für diese Ansicht ein.|NOT NULL|  
-|physical_name|**nvarchar(32)**|Der Name vom Hersteller definiert.<br /><br /> Property_id und Component_id Physical_name bilden den Schlüssel für diese Ansicht ein.|NOT NULL|  
-|logical_name|**nvarchar(255)**|Eigenschaftsnamen gemäß [!INCLUDE[ssDW](../../includes/ssdw-md.md)].|NOT NULL<br /><br /> 0 – die Geräteinstanz ist eindeutig.<br /><br /> 1 - Gerät-Instanz ist nicht eindeutig.|  
+|property_id|**int**|Eindeutiger Bezeichner der Eigenschaft.<br /><br /> property_id, component_id und physical_name bilden den Schlüssel für diese Ansicht.|NOT NULL|  
+|component_id|**int**|Die ID der Komponente. Weitere Informationen finden Sie unter [sys. pdw_health_components &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).<br /><br /> property_id, component_id und physical_name bilden den Schlüssel für diese Ansicht.|NOT NULL|  
+|physical_name|**nvarchar (32)**|Der Eigenschaftsname, wie er vom Hersteller definiert wurde.<br /><br /> property_id, component_id und physical_name bilden den Schlüssel für diese Ansicht.|NOT NULL|  
+|logical_name|**nvarchar(255)**|Eigenschaftsname, wie [!INCLUDE[ssDW](../../includes/ssdw-md.md)]durch definiert.|NOT NULL<br /><br /> 0-die Geräte Instanz ist eindeutig.<br /><br /> 1: die Geräte Instanz ist nicht eindeutig.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Datawarehouse und Parallel Datawarehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

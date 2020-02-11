@@ -1,5 +1,5 @@
 ---
-title: Datentypkonvertierungen | Microsoft-Dokumentation
+title: Datentyp Konvertierungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,19 +17,19 @@ ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077015"
 ---
 # <a name="data-type-conversions"></a>Datentypkonvertierungen
-Daten konvertiert werden können von einem Typ in einen anderen mindestens vier Wiederholungsversuche: beim Datenaustausch aus einer Anwendungsvariablen in eine andere (C, C), wenn Daten in eine Anwendungsvariable gesendet werden, auf einen Anweisungsparameter (C zu SQL), wenn Daten in einer Resultsetspalte zurückgegeben werden eine Anwendungsvariable (SQL zu C), und wenn Daten aus einer Spalte für die Datenquelle eine andere (SQL, SQL) übertragen werden.  
+Daten können zu vier Mal von einem Typ in einen anderen konvertiert werden: Wenn Daten in einer Anwendungsvariablen in eine andere übertragen werden (c zu c), wenn Daten in einer Anwendungsvariablen an einen Anweisungs Parameter (c an SQL) gesendet werden, wenn Daten in einer Resultsetspalte in zurückgegeben werden eine Anwendungs Variable (SQL zu C) und beim Übertragen von Daten aus einer Datenquellen Spalte in eine andere (SQL to SQL).  
   
- Jede Konvertierung, die auftritt, wenn Daten aus einer Anwendung-Variable auf einen anderen übertragen werden, liegt außerhalb des Bereichs dieses Dokuments.  
+ Alle Konvertierungen, die auftreten, wenn Daten von einer Anwendungsvariablen in eine andere übertragen werden, liegt außerhalb des Gültigkeits Bereichs dieses Dokuments.  
   
- Wenn eine Anwendung einen Parameter für das Set Ergebnis der Spalte "oder"-Anweisung eine Variable gebunden, gibt die Anwendung implizit eine datentypkonvertierung bei der Auswahl des Datentyps der Anwendungsvariablen. Nehmen wir beispielsweise an, dass eine Spalte ganzzahlige Daten enthält. Wenn die Anwendung eine ganzzahlige Variable an die Spalte gebunden wird, gibt es an, dass keine Konvertierung ausgeführt werden; Wenn die Anwendung eine Zeichenvariable auf die Spalte gebunden wird, gibt an, dass es sich bei die Daten aus Ganzzahl in Zeichen konvertiert werden.  
+ Wenn eine Anwendung eine Variable an eine Resultsetspalte oder einen Anweisungs Parameter bindet, gibt die Anwendung implizit eine Datentyp Konvertierung in der Wahl des Datentyps der Anwendungsvariablen an. Angenommen, eine Spalte enthält ganzzahlige Daten. Wenn die Anwendung eine ganzzahlige Variable an die Spalte bindet, gibt Sie an, dass keine Konvertierung durchgeführt werden soll. Wenn die Anwendung eine Zeichen Variable an die Spalte bindet, gibt Sie an, dass die Daten von einer Ganzzahl in ein Zeichen konvertiert werden sollen.  
   
- ODBC definiert, wie Daten zwischen jeder SQL- und C-Datentyp konvertiert werden. Im Grunde ODBC unterstützt alle angemessene Konvertierungen wie die Zeichen, ganze Zahl und die ganze Zahl, "float", und die Standardschaltfläche Konvertierungen wie "float", um das Datum wird nicht unterstützt. Treiber sind erforderlich, um alle Konvertierungen für die einzelnen SQL-Datentypen zu unterstützen, die sie unterstützen. Eine vollständige Liste von Konvertierungen zwischen SQL und C-Datentypen, finden Sie unter [Konvertieren von Daten aus SQL in C-Datentypen](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) und [Konvertieren von Daten von C-in SQL-Datentypen](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) in Anhang D: Datentypen.  
+ ODBC definiert, wie Daten zwischen den einzelnen SQL-und C-Datentypen konvertiert werden. ODBC unterstützt im Grunde alle angemessenen Konvertierungen, wie z. b. Zeichen in Integer und Integer in float, und unterstützt keine falsch definierten Konvertierungen, wie z. b. float-to-date. Treiber sind erforderlich, um alle Konvertierungen für jeden unterstützten SQL-Datentyp zu unterstützen. Eine umfassende Liste der Konvertierungen zwischen SQL-und c-Datentypen finden [Sie unter Konvertieren von Daten aus SQL-in c](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) -Datentypen und [Konvertieren von Daten aus C in SQL-Daten](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md) Typen in Anhang D: Datentypen.  
   
- ODBC definiert auch eine skalare Funktion zum Konvertieren von Daten von einem SQL-Datentyp in einen anderen. Die **konvertieren** Skalarfunktion vom Treiber auf die zugrunde liegenden skalaren Funktion oder Funktionen, die definiert, um das Durchführen von Konvertierungen in der Datenquelle zugeordnet ist. Da die DBMS-spezifische Funktionen dieser Funktion zugeordnet ist, werden keine ODBC definiert, wie diese Konvertierungen zu arbeiten oder welche Konvertierungen unterstützt werden müssen. Eine Anwendung ermittelt, welche Konvertierungen von einer bestimmten Treiber und die Datenquelle über die SQL_CONVERT-Optionen in Microsoft Intune **SQLGetInfo**. Weitere Informationen zu den **konvertieren** skalare Funktion ist, finden Sie unter [Escapesequenzen in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) und [Explicit Data Type Conversion Function](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).
+ ODBC definiert auch eine Skalarfunktion zum Umrechnen von Daten aus einem SQL-Datentyp in einen anderen. Die **Convert** -Skalarfunktion wird vom Treiber der zugrunde liegenden Skalarfunktion oder den Funktionen, die für die Durchführung von Konvertierungen in der Datenquelle definiert sind, zugeordnet. Da diese Funktion DBMS-spezifischen Funktionen zugeordnet ist, definiert ODBC nicht, wie diese Konvertierungen funktionieren oder welche Konvertierungen unterstützt werden müssen. Eine Anwendung ermittelt mithilfe der SQL_CONVERT Optionen in **SQLGetInfo**, welche Konvertierungen von einem bestimmten Treiber und einer Datenquelle unterstützt werden. Weitere Informationen zur **Convert** -Skalarfunktion finden Sie unter Escapesequenzen [in ODBC](../../../odbc/reference/develop-app/escape-sequences-in-odbc.md) und [explizite Datentyp Konvertierungs Funktion](../../../odbc/reference/appendixes/explicit-data-type-conversion-function.md).

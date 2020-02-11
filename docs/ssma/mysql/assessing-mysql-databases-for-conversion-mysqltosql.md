@@ -1,5 +1,5 @@
 ---
-title: Bewerten von MySQL-Datenbanken für die Konvertierung (MySQLToSQL)) | Microsoft-Dokumentation
+title: Bewerten der MySQL-Datenbanken für die Konvertierung (mysqltoisql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -12,75 +12,75 @@ ms.assetid: 2a56a003-3b0f-453a-963c-00c9e40933ec
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: ae9210444311267569d5f240d40252d4fe024877
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139208"
 ---
 # <a name="assessing-mysql-databases-for-conversion-mysqltosql"></a>Bewerten von MySQL-Datenbanken für die Konvertierung (MySqlToSql)
-Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure, sollten Sie bestimmen, wie komplex die Migration werden und wie viel Zeit die Migration dauert. SSMA kann ein Bewertungsbericht erstellen, die den Prozentsatz von Objekten, die erfolgreich konvertiert wird. SSMA können Sie außerdem die spezifischen Probleme anzeigen, die dazu führen, dass bei der Konvertierung auftreten.  
+Bevor Sie Objekte laden und Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure migrieren, sollten Sie bestimmen, wie komplex die Migration ist und wie viel Zeit die Migration dauern wird. SSMA kann einen Bewertungsbericht erstellen, in dem der Prozentsatz der Objekte angezeigt wird, die erfolgreich konvertiert werden. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursachen.  
   
-## <a name="creating-assessment-reports"></a>Erstellen Berichte zur Bewertung  
-Beim Erstellen dieser Bewertungsbericht konvertiert SSMA die ausgewählten MySQL-Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Syntax, und klicken Sie dann die Ergebnisse werden angezeigt.  
+## <a name="creating-assessment-reports"></a>Erstellen von Bewertungsberichten  
+Beim Erstellen dieses Bewertungsberichts konvertiert SSMA die ausgewählten MySQL-Datenbankobjekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure Syntax und zeigt dann die Ergebnisse an.  
   
-**So erstellen Sie einen Assessment-Bericht**  
+**So erstellen Sie einen Bewertungsbericht**  
   
-1.  Wählen Sie im MySQL-Metadaten-Explorer die Schemas aus, um zu bewerten.  
+1.  Wählen Sie im MySQL-metadatenexplorer die zu überwachenden Schemas aus.  
   
-2.  Um einzelne Objekte zu unterdrücken, deaktivieren Sie die Kontrollkästchen neben den.  
+2.  Deaktivieren Sie die Kontrollkästchen neben den Kontrollkästchen, um einzelne Objekte auszulassen.  
   
-3.  Mit der rechten Maustaste **Schemas**, und wählen Sie dann **Bericht erstellen**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Schemas**, und wählen Sie dann **Bericht erstellen**aus.  
   
-    Mit der rechten Maustaste in ein Objekt, um einzelne Objekte zu analysieren. Wählen Sie dann **Bericht erstellen**.  
+    Klicken Sie mit der rechten Maustaste auf ein Objekt, um einzelne Objekte zu analysieren Klicken Sie dann auf **Bericht erstellen**.  
   
-    SSMA-Fortschritt wird in der Statusleiste am unteren Rand des Fensters angezeigt. Wenn im Ausgabebereich angezeigt wird, werden auch Meldungen im Ausgabebereich angezeigt.  
+    SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden im Ausgabebereich auch Meldungen angezeigt.  
   
-    Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für MySQL Bewertungsbericht-Fenster wird angezeigt.  
+    Wenn die Bewertung fertiggestellt ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Fenster Migration Assistant für MySQL, Bewertungsbericht angezeigt.  
   
-## <a name="using-assessment-reports"></a>Verwenden von Assessment-Berichten  
-Das Fenster Bewertungsbericht enthält drei Bereiche:  
+## <a name="using-assessment-reports"></a>Verwenden von Bewertungsberichten  
+Das Fenster "Bewertungsbericht" enthält drei Bereiche:  
   
--   Der linke Bereich enthält die Hierarchie der Objekte, die in den Bewertungsbericht enthalten sind. Sie können die Hierarchie durchsuchen und Auswählen von Objekten und Kategorien von Objekten um Konvertierungsstatistiken und den Code anzuzeigen.  
+-   Der linke Bereich enthält die Hierarchie der Objekte, die im Bewertungsbericht enthalten sind. Sie können die Hierarchie durchsuchen und Objekte und Kategorien von Objekten auswählen, um Konvertierungsstatistiken und Code anzuzeigen.  
   
--   Der Inhalt im rechten Bereich abhängig ist, auf das Element, das im linken Bereich ausgewählt ist.  
+-   Der Inhalt des rechten Bereichs hängt von dem Element ab, das im linken Bereich ausgewählt ist.  
   
-    Wenn eine Gruppe von Objekten, z. B. Schema ausgewählt ist, enthält im rechte Bereich eine Konvertierung Statistiken Bereich und Objekte, durch den Bereich "Kategorien". Im Bereich Konvertierungsstatistiken zeigt die Konvertierungsstatistiken für die ausgewählten Objekte. Die Objekte nach Bereich "Kategorien" zeigt die Konvertierungsstatistiken für das Objekt oder die Kategorien von Objekten.  
+    Wenn eine Gruppe von Objekten ausgewählt ist, z. b. Schema, enthält der Rechte Bereich einen Bereich für die Konvertierungs Statistik und Objekte im Bereich Kategorien. Im Bereich Konvertierungs Statistik werden die Konvertierungsstatistiken für die ausgewählten Objekte angezeigt. Der Bereich Objekte nach Kategorien zeigt die Konvertierungsstatistiken für das Objekt oder die Kategorien von Objekten an.  
   
-    Wenn die Funktion, Prozedur, Tabelle oder Ansicht ausgewählt ist, enthält im rechte Bereich Statistiken, Quellcode und Code des ereignisdateiziels.  
+    Wenn eine Funktion, eine Prozedur, eine Tabelle oder eine Sicht ausgewählt ist, enthält der Rechte Bereich Statistiken, Quellcode und Zielcode.  
   
-    -   Im obere Bereich zeigt die Gesamtstatistik für das Objekt. Möglicherweise müssen Sie erweitern **Statistiken** zum Anzeigen dieser Informationen.  
+    -   Im oberen Bereich werden die Gesamt Statistiken für das Objekt angezeigt. Möglicherweise müssen Sie die **Statistik** erweitern, um diese Informationen anzuzeigen.  
   
-    -   Der Quellbereich zeigt den Quellcode des Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematisch Quellcode.  
+    -   Der Quellbereich zeigt den Quellcode des-Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematischen Quellcode.  
   
-    -   Der Zielbereich zeigt den konvertierten Code an. Roter Text zeigt die problematische Code und Fehlermeldungen.  
+    -   Der Zielbereich zeigt den konvertierten Code. Roter Text zeigt problematische Code und Fehlermeldungen an.  
   
--   Im unteren Bereich zeigt die Konvertierung Nachrichten, gruppiert nach der Meldungsnummer. Klicken Sie auf **Fehler**, **Warnungen**, oder **Informationen** zeigt Kategorien von Nachrichten, und erweitern dann eine Gruppe von Nachrichten. Klicken Sie auf eine einzelne Nachricht aus, wählen Sie im linken Bereich das Objekt und die Details im rechten Bereich angezeigt.  
+-   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Sie können auf **Fehler**, **Warnungen**oder **Informationen** klicken, um Kategorien von Nachrichten anzuzeigen und dann eine Gruppe von Nachrichten zu erweitern. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie die Details im rechten Bereich an.  
   
-## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analysieren der Probleme bei der Konvertierung mit den Bewertungsbericht  
-Im Bereich Konvertierungsstatistiken zeigt die Konvertierungsstatistiken. Wenn der Prozentsatz für eine beliebige Kategorie weniger als 100 Prozent liegt, sollten Sie ermitteln, warum die Konvertierung nicht erfolgreich war.  
+## <a name="analyzing-conversion-problems-by-using-the-assessment-report"></a>Analysieren von Konvertierungs Problemen mithilfe des Bewertungsberichts  
+Im Bereich Konvertierungs Statistik werden die Konvertierungsstatistiken angezeigt. Wenn der Prozentsatz für eine Kategorie weniger als 100 Prozent beträgt, sollten Sie bestimmen, warum die Konvertierung nicht erfolgreich war.  
   
-**Probleme bei der Konvertierung anzeigen**  
+**So zeigen Sie Konvertierungsprobleme an**  
   
-1.  Erstellen Sie den Bewertungsbericht, mithilfe der Anweisungen im vorherigen Verfahren.  
+1.  Erstellen Sie den Bewertungsbericht mithilfe der Anweisungen im vorherigen Verfahren.  
   
-2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehlersymbol aus. Erweitern Elemente aus, bis Sie ein einzelnes Element auswählen, die Fehler bei der Konvertierung fortgesetzt werden.  
+2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehler Symbol. Erweitern Sie Elemente, bis Sie ein einzelnes Element auswählen, für das die Konvertierung fehlgeschlagen ist.  
   
-3.  Klicken Sie am oberen Rand des Bereichs für die Quelle, die auf **nächsten Problem**.  
+3.  Klicken Sie oben im Bereich Quelle auf **nächstes Problem**.  
   
-    Der problematische Code ist hervorgehoben, wie der zugehörige Code im Ziel-Navigationsbereich ist.  
+    Der problematische Code wird hervorgehoben, ebenso wie der zugehörige Code im Ziel Navigationsbereich.  
   
-4.  Überprüfen Sie alle Fehlermeldungen, und klicken Sie dann zu bestimmen Sie, was Sie möchten mit dem Objekt, das die Ursache des Konvertierungsproblems.  
+4.  Überprüfen Sie alle Fehlermeldungen, und legen Sie dann fest, was Sie mit dem Objekt tun möchten, das das Konvertierungs Problem verursacht hat.  
   
--   Aktualisieren Sie die MySQL-Syntax in SSMA. Sie können die Syntax nur für Prozeduren und Funktionen aktualisieren. Um die Syntax zu aktualisieren, wählen Sie das Objekt im MySQL-Metadaten-Explorer, klicken Sie auf die **SQL** Registerkarte, und ändern Sie den SQL-Code. Wenn Sie vom Element weg navigieren, werden Sie aufgefordert, um die aktualisierte Syntax zu speichern. Sie können die gemeldeten Fehler für das Objekt anzeigen, auf die **Bericht** Registerkarte.  
+-   Aktualisieren Sie die MySQL-Syntax in SSMA. Die Syntax kann nur für Prozeduren und Funktionen aktualisiert werden. Um die Syntax zu aktualisieren, wählen Sie das Objekt im Bereich MySQL-metadatenexplorer aus, klicken Sie auf die Registerkarte **SQL** , und ändern Sie dann den SQL-Code. Wenn Sie vom Element Weg navigieren, werden Sie aufgefordert, die aktualisierte Syntax zu speichern. Sie können die gemeldeten Fehler für das Objekt auf der Registerkarte **Bericht** anzeigen.  
   
--   In MySQL können Sie das MySQL-Objekt zum Entfernen oder Überarbeiten problematischen Code ändern. Um den aktualisierten Code in SSMA laden zu können, müssen Sie die Metadaten zu aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
+-   In MySQL können Sie das MySQL-Objekt ändern, um problematischen Code zu entfernen oder zu überarbeiten. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit MySQL &#40;mysqlto SQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md).  
   
--   Sie können das Objekt von der Migration ausschließen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure-Metadaten-Explorer und MySQL-Metadaten-Explorer, deaktivieren Sie das Kontrollkästchen neben dem Element vor dem Laden der Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure und Daten aus MySQL migrieren.  
+-   Sie können das Objekt von der Migration ausschließen. Deaktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder SQL Azure Metadaten-Explorer und MySQL-metadatenexplorer das Kontrollkästchen neben dem Element, bevor Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte in laden oder SQL Azure und Daten aus MySQL migrieren.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Konvertieren von MySQL-Datenbanken &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
+[MySQL-Datenbanken &#40;mysqlto SQL-&#41;werden umgerechnet](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von MySQL-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von MySQL-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;mysqlto SQL&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

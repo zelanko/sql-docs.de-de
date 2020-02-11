@@ -1,5 +1,5 @@
 ---
-title: IMDEmbedded-Schnittstelle | Microsoft-Dokumentation
+title: Imdembedded-Schnittstelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757778"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded-Schnittstelle
@@ -30,16 +30,16 @@ ms.locfileid: "62757778"
   
 -   Bricht den aktuellen Einbettungsvorgang ab.  
   
--   Rufen Sie die geschätzte Größe (in Byte) des Datenstroms um das eingebettete Objekt zu speichern. Wird von `IPersistStream` geerbt.  
+-   Gibt die geschätzte Größe (in Bytes) des Datenstroms zum Speichern des eingebetteten Objekts an. Wird von `IPersistStream` geerbt.  
   
--   Überprüfen Sie, wenn die eingebettete Datenbank seit der letzten Speicherung geändert hat. Wird von `IPersistStream` geerbt.  
+-   Überprüfen Sie, ob die eingebettete Datenbank seit dem letzten Speichern geändert wurde. Wird von `IPersistStream` geerbt.  
   
--   Laden Sie die eingebettete Datenbank in die lokale oder prozessinterne Engine. Wird von `IPersistStream` geerbt.  
+-   Laden Sie die eingebettete Datenbank in die lokale oder Prozess interne Engine. Wird von `IPersistStream` geerbt.  
   
 -   Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Wird von `IPersistStream` geerbt.  
   
-## <a name="reference"></a>Referenz  
- Die folgenden verweisen auf Dokumente, die `IMDEmbedded` Schnittstelle wie in **msmd.h** Headerdatei.  
+## <a name="reference"></a>Verweis  
+ Der folgende Verweis dokumentiert die `IMDEmbedded` -Schnittstelle, wie in der **Msmd. h** -Header Datei dargestellt.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Quelldatei: PXOEmbeddedData.idl  
   
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>Beschreibung  
+#### <a name="description"></a>BESCHREIBUNG  
  Ruft den von der Hostanwendung verwendeten Bezeichner in den eingebetteten Datenstrom im Containerdokument ab.  
   
 #### <a name="parameters"></a>Parameter  
@@ -98,18 +98,18 @@ HRESULT GetStreamIdentifier (
  `E_FAIL`  
  Beim Zugriff auf den Datenstrombezeichner ist ein Fehler aufgetreten.  
   
-#### <a name="remarks"></a>Hinweise  
+#### <a name="remarks"></a>Bemerkungen  
  Um zu überprüfen, ob die aktuelle Verbindung eine eingebettete Datenbank enthält, sollte der Benutzer den Wert der DBPROP_MSMD_EMBEDDED_DATA-Eigenschaft in den OLE DB-Verbindungseigenschaften überprüfen.  
   
  Die möglichen Werte für DBPROP_MSMD_EMBEDDED_DATA lauten wie folgt:  
   
-|Name|Wert|Definition|  
+|Name|value|Definition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Es ist keine eingebettete Datenbank verfügbar.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  
-|DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer remote-Anwendung (z. B. SharePoint-Server) gehostet.|  
+|DBPROPVAL_EMBED_LINKED|0x02|Die eingebettete Datenbank wird in einer Remote Anwendung (d. h. SharePoint Server) gehostet.|  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(1), helpstring("Get identifier used to look up embedded stream in container document")]   
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>BESCHREIBUNG  
  Legt die URL für die Datei fest, die den eingebetteten Datenstrom enthält.  
   
 #### <a name="parameters"></a>Parameter  
@@ -139,7 +139,7 @@ HRESULT SetContainerURL (
  `E_FAIL`  
  Beim Festlegen der Container-URL ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(2), helpstring("Set the URL for the document containing the embedded stream")]   
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>BESCHREIBUNG  
  Legt ein Flag fest, das angibt, ob sich die Einbettungsanwendung in einer gehosteten Umgebung befindet.  
   
 #### <a name="parameters"></a>Parameter  
@@ -169,7 +169,7 @@ HRESULT SetHosted (
  `E_FAIL`  
  Beim Festlegen des Flags ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(5), helpstring("Set flag indicating if the application is in a hosted environment")]   
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>BESCHREIBUNG  
  Legt den Pfad zu den von der Einbettungsanwendung verwendeten temporären Dateien fest.  
   
 #### <a name="parameters"></a>Parameter  
@@ -199,7 +199,7 @@ HRESULT SetTempDirPath (
  `E_FAIL`  
  Beim Festlegen des Pfads ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(4), helpstring("Set the path used by the host application for temporary files")]   
@@ -213,7 +213,7 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>Beschreibung  
+#### <a name="description"></a>BESCHREIBUNG  
  Bricht den aktuellen Vorgang für die eingebettete Datenbank ab.  
   
 #### <a name="parameters"></a>Parameter  
@@ -229,7 +229,7 @@ HRESULT Cancel ( void )
  `E_FAIL`  
  Beim Abbrechen des eingebetteten Vorgangs ist ein Fehler aufgetreten.  
   
-#### <a name="source"></a>Source  
+#### <a name="source"></a>`Source`  
   
 ```  
 [id(5), helpstring("Cancel the current operation")]   
@@ -244,7 +244,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>BESCHREIBUNG  
  Ruft die geschätzte Größe des Datenstroms (in Byte) zum Speichern des eingebetteten Objekts ab. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
@@ -264,11 +264,11 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>Beschreibung  
+#### <a name="description"></a>BESCHREIBUNG  
  Überprüft, ob sich die eingebettete Datenbank seit der letzten Speicherung geändert hat. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
- none  
+ (Keine)  
   
 #### <a name="return-values"></a>Rückgabewert(e)  
  `S_OK`  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>Description  
+#### <a name="description"></a>BESCHREIBUNG  
  Lädt die eingebettete Datenbank in die lokale oder prozessinterne Engine. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
@@ -314,8 +314,8 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>Description  
- Speichert die lokale oder prozessinterne Datenbank in den eingebetteten Datenstrom im Containerdokument an. Wird von `IPersistStream` geerbt.  
+#### <a name="description"></a>BESCHREIBUNG  
+ Speichert die lokale oder in-Process-Datenbank im eingebetteten Datenstrom im Container Dokument. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
  *in_pStm*  

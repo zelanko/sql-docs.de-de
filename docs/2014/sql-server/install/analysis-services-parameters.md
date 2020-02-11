@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Parameter | Microsoft-Dokumentation
+title: Analysis Services Parameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c70a75b08a3e9fcda2ae9a31a27477070d09e6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096781"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services-Parameter
-  Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], geben Sie eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , und geben Sie Informationen zum Herstellen einer Verbindung mit dieser Instanz.  
+  Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]von müssen Sie eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] angeben und Informationen darüber bereitstellen, wie Sie eine Verbindung mit dieser Instanz herstellen.  
   
-## <a name="options"></a>Optionen  
- **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanzname**  
+## <a name="options"></a>Tastatur  
+ **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanzname**  
  Wählen Sie eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aus der Liste aus.  
   
- **Name des Computers**  
+ **Computer Name**  
  Der Computername, der der Instanz zugeordnet ist.  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Upgrade Advisor Referenz zur Benutzeroberfläche](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Benutzeroberflächenreferenz des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   
