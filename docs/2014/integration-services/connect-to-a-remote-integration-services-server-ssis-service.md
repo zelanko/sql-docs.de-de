@@ -1,5 +1,5 @@
 ---
-title: Verbinden mit einem Remote-Integration Services-Server (SSIS-Dienst) | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einem Remote Integration Services Server (SSIS-Dienst) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0e7e62510338b9dd47d59ce50626ecffebfcf85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66060414"
 ---
 # <a name="connect-to-a-remote-integration-services-server-ssis-service"></a>Herstellen einer Verbindung mit einem Integration Services-Remoteserver (SSIS-Dienst)
     
 > [!IMPORTANT] 
-> In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
+> In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
  Zum Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] auf einem Remoteserver über [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder eine andere Verwaltungsanwendung benötigt der Benutzer der Anwendung einen bestimmten Satz von Rechten auf dem Server.  
   
@@ -42,7 +43,7 @@ ms.locfileid: "66060414"
   
 3.  Wählen Sie in der Liste **Servertyp** den Eintrag **Integration Services** aus.  
   
-4.  Geben Sie in das Textfeld [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] den **Namen eines** -Servers ein.  
+4.  Geben Sie in das Textfeld [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] den Namen eines **** -Servers ein.  
   
     > [!NOTE]  
     >  Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst ist nicht instanzspezifisch. Sie melden sich beim Dienst mit dem Namen des Computers an, auf dem der Integration Services-Dienst ausgeführt wird.  
@@ -99,13 +100,13 @@ ms.locfileid: "66060414"
  Wenn Sie ein lokales Windows-Konto auf einem Clientcomputer verwenden, können Sie nur dann eine Verbindung mit dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst auf einem Remotecomputer herstellen, wenn auf dem Remotecomputer ein lokales Konto mit dem gleichen Namen und Kennwort sowie ausreichenden Rechten vorhanden ist.  
   
 ## <a name="by-default-the-ssis-service-does-not-support-delegation"></a>Standardmäßig wird die Delegierung vom SSIS-Dienst nicht unterstützt  
-Die Delegierung von Anmeldeinformationen, auch als Doppelhop bezeichnet, wird vom [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst standardmäßig nicht unterstützt. In diesem Szenario verwenden Sie einen Clientcomputer, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist auf einem zweiten Computer und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem dritten Computer installiert. Zunächst übergibt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Ihre Anmeldeinformationen erfolgreich vom Clientcomputer an den zweiten Computer, auf dem der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst ausgeführt wird. Anschließend kann der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst Ihre Anmeldeinformationen jedoch nicht vom zweiten Computer an den dritten Computer delegieren, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.
+Standardmäßig unter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stützt der Dienst nicht die Delegierung von Anmelde Informationen oder was manchmal als Double-Hop bezeichnet wird. In diesem Szenario verwenden Sie einen Clientcomputer, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist auf einem zweiten Computer und [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einem dritten Computer installiert. Zunächst übergibt [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Ihre Anmeldeinformationen erfolgreich vom Clientcomputer an den zweiten Computer, auf dem der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst ausgeführt wird. Anschließend kann der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst Ihre Anmeldeinformationen jedoch nicht vom zweiten Computer an den dritten Computer delegieren, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgeführt wird.
 
 Sie können die Delegierung von Anmeldeinformationen aktivieren, indem Sie dem SQL Server-Dienstkonto, das den Integration Services-Dienst als untergeordneten Prozess startet (ISServerExec.exe), die Berechtigung **Benutzer bei Delegierungen aller Dienste vertrauen (nur Kerberos)** erteilen. Beachten Sie, dass diese Berechtigung die Sicherheitsanforderungen Ihrer Organisation erfüllt, bevor Sie sie erteilen.
 
 Weitere Informationen finden Sie im Blogbeitrag [Getting Cross Domain Kerberos and Delegation working with SSIS Package](https://blogs.msdn.microsoft.com/psssql/2014/06/26/getting-cross-domain-kerberos-and-delegation-working-with-ssis-package/)(Erreichen, dass Kerberos (domänenübergreifend) und Delegierung in SSIS-Paketen funktionieren).
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren einer Windows-Firewall für den Zugriff auf den SSIS-Dienst](../../2014/integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)  
   
   

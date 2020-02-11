@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0b092c85ea678ce05c3b9c8bbff4f78d47589bdb
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75244962"
 ---
 # <a name="database-engine-scripting"></a>Datenbank-Engine-Skripterstellung
@@ -78,13 +78,13 @@ ms.locfileid: "75244962"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt, wie die Code- und Text-Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum interaktiven Entwickeln, Debuggen und Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts verwendet werden.|[Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
-|Beschreibt, wie das Hilfsprogramm `sqlcmd` zum Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts über die Eingabeaufforderung verwendet wird, einschließlich der Möglichkeit zum interaktiven Entwickeln von Skripts.|[Gewusst-wie-Themen zu sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
-|Beschreibt, wie die SQL Server-Komponenten in eine Windows PowerShell 2.0-Umgebung integriert und anschließend PowerShell-Skripts für die Verwaltung von SQL Server-Instanzen und -Objekten erstellt werden.|[SQL Server PowerShell](../../powershell/sql-server-powershell.md)|  
-|Beschreibt, wie mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts**[!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erstellt werden, mit denen Objekte aus einer Datenbank erneut erstellt werden.|[Skripts &#40;SQL Server Management Studio generieren&#41;](generate-scripts-sql-server-management-studio.md)|  
+|Beschreibt, wie die Code- und Text-Editoren in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum interaktiven Entwickeln, Debuggen und Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts verwendet werden.|[Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)|  
+|Beschreibt, wie das Hilfsprogramm `sqlcmd` zum Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts über die Eingabeaufforderung verwendet wird, einschließlich der Möglichkeit zum interaktiven Entwickeln von Skripts.|[Themen zur Vorgehensweise für sqlcmd](../../database-engine/sqlcmd-how-to-topics.md)|  
+|Beschreibt, wie die SQL Server-Komponenten in eine Windows PowerShell 2.0-Umgebung integriert und anschließend PowerShell-Skripts für die Verwaltung von SQL Server-Instanzen und -Objekten erstellt werden.|[SQL Server-PowerShell](../../powershell/sql-server-powershell.md)|  
+|Beschreibt, wie mit dem **Assistenten zum Generieren und Veröffentlichen von Skripts**[!INCLUDE[tsql](../../includes/tsql-md.md)] -Skripts erstellt werden, mit denen Objekte aus einer Datenbank erneut erstellt werden.|[Erstellen von Skripts &#40;SQL Server Management Studio&#41;](generate-scripts-sql-server-management-studio.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sqlcmd-Hilfsprogramm](../../tools/sqlcmd-utility.md)   
- [Tutorial: Schreiben von Transact-SQL-Anweisungen](../../t-sql/tutorial-writing-transact-sql-statements.md)  
+ [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   

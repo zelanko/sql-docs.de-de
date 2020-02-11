@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63022245"
 ---
 # <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten
@@ -40,7 +40,7 @@ ms.locfileid: "63022245"
 |Oracle|Alle von Oracle unterstützten Plattformen|Oracle OLE DB-Anbieter (von Oracle bereitgestellt)|  
 |IBM DB2|MVS, AS400, Unix, Linux, Windows ausgenommen Version 9.x|Microsoft Host Integration Server (HIS) OLE DB-Anbieter|  
   
- Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, finden Sie unter [Oracle Subscribers](oracle-subscribers.md) und [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
+ Weitere Informationen zum Erstellen von Abonnements für Oracle und IBM DB2, finden Sie unter [Oracle-Abonnenten](oracle-subscribers.md) und [IBM DB2 Subscribers](ibm-db2-subscribers.md).  
   
 ## <a name="considerations-for-non-sql-server-subscribers"></a>Überlegungen zu Nicht-SQL Server-Abonnenten  
  Beachten Sie beim Replizieren auf Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten Folgendes:  
@@ -49,11 +49,11 @@ ms.locfileid: "63022245"
   
 -   Die Replikation unterstützt veröffentlichende Tabellen und indizierte Sichten als Tabellen für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten (indizierte Sichten können nicht als indizierte Sichten repliziert werden).  
   
--   Wenn Sie eine Veröffentlichung im Assistenten für neue Veröffentlichung erstellen und dann im Dialogfeld Veröffentlichungseigenschaften für Nicht-SQL Server-Abonnenten aktivieren, wird bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten für keines der Objekte in der Abonnementdatenbank der Besitzer angegeben. Bei [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten hingegen wird der Besitzer des entsprechenden Objekts in der Veröffentlichungsdatenbank festgelegt.  
+-   Wenn Sie im Assistenten für neue Veröffentlichung eine Veröffentlichung erstellen und diese dann für nicht SQL Server Abonnenten mithilfe des Dialog Felds Veröffentlichungs Eigenschaften aktivieren, wird der Besitzer aller Objekte in der Abonnement Datenbank nicht für nicht--Abonnenten[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angegeben, während für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten der Besitzer des entsprechenden Objekts in der Veröffentlichungs Datenbank festgelegt ist.  
   
 -   Weist eine Veröffentlichung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten und Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten auf, muss sie für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten aktiviert werden, damit Abonnements für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erstellt werden können.  
   
--   Standardmäßig verwenden vom Momentaufnahme-Agent für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten generierte Skripts Bezeichner ohne Anführungszeichen in der CREATE TABLE-Syntax. Deshalb wird eine veröffentlichte Tabelle mit dem Namen 'test' als 'TEST' repliziert. Wenn die Groß- und Kleinschreibung der Schreibweise in der Veröffentlichungsdatenbank entsprechen soll, verwenden Sie den **-QuotedIdentifier** -Parameter für den Verteilungs-Agent. Der **-QuotedIdentifier** -Parameter muss auch verwendet werden, wenn veröffentlichte Objektnamen (wie Tabellen, Spalten und Einschränkungen) Leerzeichen und Wörter enthalten, bei denen es sich in der Version der Datenbank auf dem Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten um reservierte Wörter handelt. Weitere Informationen zu diesem Parameter finden Sie unter [Replication Distribution Agent](../agents/replication-distribution-agent.md).  
+-   Standardmäßig verwenden vom Momentaufnahme-Agent für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten generierte Skripts Bezeichner ohne Anführungszeichen in der CREATE TABLE-Syntax. Deshalb wird eine veröffentlichte Tabelle mit dem Namen 'test' als 'TEST' repliziert. Wenn die Groß- und Kleinschreibung der Schreibweise in der Veröffentlichungsdatenbank entsprechen soll, verwenden Sie den **-QuotedIdentifier** -Parameter für den Verteilungs-Agent. Der **-QuotedIdentifier** -Parameter muss auch verwendet werden, wenn veröffentlichte Objektnamen (wie Tabellen, Spalten und Einschränkungen) Leerzeichen und Wörter enthalten, bei denen es sich in der Version der Datenbank auf dem Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten um reservierte Wörter handelt. Weitere Informationen zu diesem Parameter finden Sie unter [Replikationsverteilungs-Agent](../agents/replication-distribution-agent.md).  
   
 -   Das Konto, unter dem der Verteilungs-Agent ausgeführt wird, muss über Lesezugriff für das Installationsverzeichnis des OLE DB-Anbieters verfügen.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "63022245"
   
 -   Wenn ein Artikel einer Veröffentlichung hinzugefügt oder aus einer Veröffentlichung gelöscht wird, müssen Abonnements für Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erneut initialisiert werden.  
   
--   Bei allen Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Abonnenten werden nur zwei Einschränkungen unterstützt: NULL und NOT NULL. PRIMARY KEY-Einschränkungen werden als eindeutige Indizes repliziert.  
+-   Bei allen Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten werden nur zwei Einschränkungen unterstützt: NULL und NOT NULL. PRIMARY KEY-Einschränkungen werden als eindeutige Indizes repliziert.  
   
 -   Der Wert NULL wird von den verschiedenen Datenbanken unterschiedlich behandelt. Das wirkt sich darauf aus, wie ein leerer Wert, eine leere Zeichenfolge oder NULL dargestellt werden. Dies wiederum wirkt sich auf das Verhalten von Werten aus, die in Spalten mit definierten UNIQUE-Einschränkungen eingefügt werden. Oracle lässt z. B. mehrere NULL-Werte in einer eindeutigen Spalte zu, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nur einen einzigen NULL-Wert in einer eindeutigen Spalte zulässt.  
   
-     Ein weiterer Faktor ist, wie NULL-Werte, leere Zeichenfolgen und leere Werte behandelt werden, wenn eine Spalte als NOT NULL definiert ist. Informationen zum Umgang mit Oracle-Abonnenten finden Sie unter [Oracle Subscribers](oracle-subscribers.md).  
+     Ein weiterer Faktor ist, wie NULL-Werte, leere Zeichenfolgen und leere Werte behandelt werden, wenn eine Spalte als NOT NULL definiert ist. Informationen zum Umgang mit Oracle-Abonnenten finden Sie unter [Oracle-Abonnenten](oracle-subscribers.md).  
   
 -   Replikationsbezogene Metadaten (Transaktionssequenztabelle) werden bei Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten nicht gelöscht, wenn das Abonnement entfernt wird.  
   
@@ -87,7 +87,8 @@ ms.locfileid: "63022245"
   
 ### <a name="replication-feature-support"></a>Unterstützte Funktionen der Replikation  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Arten von Abonnements bereit: Push und Pull. Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten müssen Pushabonnements verwenden, wobei der Verteilungs-Agent auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler ausgeführt wird.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Arten von Abonnements bereit: Push und Pull. Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten müssen Pushabonnements verwenden, wobei der Verteilungs-Agent auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler ausgeführt wird.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Momentaufnahmeformate bereit: systemeigener BCP-Modus und Zeichenmodus. Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erfordern Momentaufnahmen im Zeichenmodus.  
   
@@ -95,7 +96,7 @@ ms.locfileid: "63022245"
   
 -   Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können nicht automatisch von einer Sicherung initialisiert werden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Heterogene Datenbankreplikation](heterogeneous-database-replication.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   

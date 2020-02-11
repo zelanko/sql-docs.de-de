@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62871986"
 ---
 # <a name="database-properties-files-page"></a>Datenbankeigenschaften (Seite Dateien)
@@ -64,7 +64,7 @@ ms.locfileid: "62871986"
   
  Bei Dateien in speicheroptimierten Dateigruppen sollte dieses Feld **Unbegrenzt**lauten.  
   
- **Pfad**  
+ **Path**  
  Zeigt den Pfad der ausgewählten Datei an. Um einen Pfad für eine neue Datei anzugeben, klicken Sie auf die Bearbeitungsschaltfläche neben dem Pfad für die Datei, und navigieren Sie dann zum Zielordner. Den Pfad einer vorhandenen Datei können Sie nicht ändern.  
   
  Für FILESTREAM-Dateien ist der Pfad ein Ordner. Das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erstellt die zugrunde liegenden Dateien in diesem Ordner.  
@@ -74,15 +74,15 @@ ms.locfileid: "62871986"
   
  Dieses Feld ist für FILESTREAM-Dateien, einschließlich Dateien in speicheroptimierten Dateigruppen, nicht gültig.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt der Datenbank eine neue Datei hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Löscht die ausgewählte Datei aus der Datenbank. Eine Datei kann nur entfernt werden, wenn sie leer ist. Die primäre Datendatei und die Protokolldatei können nicht entfernt werden.  
   
  Weitere Informationen zu Dateien finden Sie unter [Database Files and Filegroups](database-files-and-filegroups.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)  
   

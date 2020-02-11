@@ -1,5 +1,5 @@
 ---
-title: PropertyStrVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
+title: Propertystrauval-Eigenschaft (ServerNetworkProtocolProperty-Klasse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 51174d44a8a2f8a536ff35525a27810185c13a4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62689791"
 ---
 # <a name="propertystrval-property-servernetworkprotocolproperty-class"></a>PropertyStrVal-Eigenschaft (ServerNetworkProtocolProperty-Klasse)
@@ -36,16 +36,16 @@ object
 .PropertyStrVal [= value]  
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
- Ein [ServerNetworkProtocolProperty-Klassenobjekt](servernetworkprotocolproperty-class.md) , das ein Attribut des Netzwerkprotokolls in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
+ A [ServerNetworkProtocolProperty-Klassenobjekt](servernetworkprotocolproperty-class.md) , das ein Attribut des Netzwerkprotokolls in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Wert der Eigenschaft angibt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  
   
   

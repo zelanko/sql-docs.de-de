@@ -1,5 +1,5 @@
 ---
-title: Debuggen von gespeicherten Prozeduren | Microsoft-Dokumentation
+title: Debugging gespeicherter Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90b72b0e60550b0b6bdf89e0ba39e6089c5d8de2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62727746"
 ---
 # <a name="debugging-stored-procedures"></a>Debuggen gespeicherter Prozeduren
@@ -31,28 +31,28 @@ ms.locfileid: "62727746"
   
 3.  Verwenden Sie Visual Studio, um einen Debugbuild einer DLL für gespeicherte Prozeduren zu erstellen.  
   
-4.  Stellen Sie die DLL auf dem Server bereit. Weitere Informationen zum Bereitstellen der DLL mit dem Server finden Sie unter [Erstellen gespeicherter Prozeduren](creating-stored-procedures.md).  
+4.  Stellen Sie die DLL auf dem Server bereit. Weitere Informationen zum Bereitstellen der dll auf dem Server finden Sie unter [Erstellen von gespeicherten Prozeduren](creating-stored-procedures.md).  
   
 5.  Sie benötigen eine Anwendung, um die zu testende gespeicherte Prozedur aufzurufen. Wenn Sie keine solche zur Verfügung haben, können Sie mit dem MDX-Abfrage-Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine MDX-Abfrage erstellen, um die zu testende gespeicherte Prozedur aufzurufen.  
   
 6.  Hängen Sie in Visual Studio den Debugger an den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Prozess (Msmdsrv.exe) an.  
   
-    1.  Von der **Debuggen** Menü wählen **Anhängen ToProcess**.  
+    1.  Wählen Sie im Menü **Debuggen** die Option **attatch toprocess**.  
   
-    2.  In der **Anhängen ToProcess** wählen Sie im Dialogfeld **Prozesse aller Benutzer anzeigen**.  
+    2.  Wählen Sie im Dialogfeld " **attatch toprocess** " die Option **Prozesse aller Benutzer anzeigen aus**.  
   
-    3.  In der **verfügbare Prozesse** aufzulisten, in der **Prozess** Spalte, klicken Sie auf **Msmdsrv.exe**. Werden auf dem Server mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt, müssen Sie den Prozess mithilfe der ID der Instanz, die Sie verwenden wollen, identifizieren.  
+    3.  Klicken Sie in der Liste **Verfügbare Prozesse** in der Spalte **verarbeiten** auf **msmdsrv. exe**. Werden auf dem Server mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ausgeführt, müssen Sie den Prozess mithilfe der ID der Instanz, die Sie verwenden wollen, identifizieren.  
   
-    4.  In der **Anfügen an** Text stellen Sie sicher, dass der entsprechende Programmtyp ausgewählt ist. Klicken Sie für eine CLR-DLL auf **wählen**, klicken Sie dann auf **diese Codetypen debuggen**, klicken Sie dann auf **verwaltete**, klicken Sie dann auf **OK**. Klicken Sie für eine COM-DLL auf **wählen**, klicken Sie dann auf **diese Codetypen debuggen**, klicken Sie dann auf **Native**, klicken Sie dann auf **OK**.  
+    4.  Stellen Sie sicher, dass im Textfeld **Anfügen an** der entsprechende Programmtyp ausgewählt ist. Klicken Sie für eine CLR-DLL auf **auswählen**, klicken Sie dann auf **Diese Codetypen debuggen**, klicken Sie auf **verwaltet**und dann auf **OK**. Klicken Sie für eine com-dll auf **auswählen**, klicken Sie dann auf **Diese Codetypen debuggen** **, klicken Sie auf System**eigen und dann auf **OK**.  
   
-    5.  Klicken Sie auf **Anfügen**.  
+    5.  Klicken Sie auf **Anhängen**.  
   
 7.  Rufen Sie in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Programm oder MDX-Skript zum Aufrufen der gespeicherten Prozedur auf. Der Debugger bricht um, wenn er eine Zeile mit einem Breakpoint erreicht. Sie können Variablen im Überwachungsfenster auswerten, Lokale anzeigen und den Code schrittweise durchlaufen.  
   
  Wenn Sie beim Debuggen einer Bibliothek Probleme haben, stellen Sie sicher, dass die entsprechende Programmdatenbankdatei (PDB-Datei) an den Bereitstellungsspeicherort auf dem Server kopiert wurde. Wurde diese Datei bei der Registrierung oder Bereitstellung nicht kopiert, müssen Sie sie manuell an denselben Speicherort wie die DLL kopieren. Bei systemeigenem Code (COM-DLL) ist die PDB-Datei im Unterverzeichnis \Debug gespeichert. Bei verwaltetem Code (CLR-DLL) ist sie im Unterverzeichnis \WINDEBUG gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwaltung von mehrdimensionalen Modellassemblys](../multidimensional-models/multidimensional-model-assemblies-management.md)   
- [Definieren gespeicherter Prozeduren](defining-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwaltung von mehrdimensionalen Modellen](../multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Definieren von gespeicherten Prozeduren](defining-stored-procedures.md)  
   
   

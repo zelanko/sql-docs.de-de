@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 17: Überprüfung des DQS-Bereinigung erstellt wurde vom SSIS-Paket | Microsoft-Dokumentation'
+title: 'Aufgabe 17: Überprüfen des vom SSIS-Paket erstellten DQS-Bereinigungs Projekts | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,50 +11,50 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 285eae7ea20d5919fa73bd0d514c755fe73d9de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65484712"
 ---
-# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Aufgabe 17: Überprüfung des vom SSIS-Paket erstellten DQS-Bereinigungsprojekts
+# <a name="task-17-reviewing-dqs-cleansing-project-created-by-the-ssis-package"></a>Aufgabe 17: Überprüfung des DQS-Bereinigungsprojekts, das vom SSIS-Paket erstellt wurde
   In dieser Aufgabe öffnen Sie das DQS-Projekt, das durch das SSIS-Paket in DQS-Client erstellt wurde, prüfen die Ergebnisse des Bereinigungsprozesses, führen optional eine interaktive Bereinigung aus und exportieren die Ergebnisse.  
   
 1.  Starten Sie **Data Quality-Client**.  
   
-2.  Klicken Sie auf **Aktivitätsüberwachung** in die **Verwaltung** Bereich.  
+2.  Klicken Sie im Bereich **Verwaltung** auf **Aktivitäts Überwachung** .  
   
-3.  Sortieren Sie die Liste basierend auf **Startzeit der Aktivität** auf den letzten Datensatz anzuzeigen.  
+3.  Sortieren Sie die Liste basierend auf der **Startzeit der Aktivität** , um den letzten Datensatz anzuzeigen.  
   
-4.  Beachten Sie, dass Sie einen Namen des Projekts im folgenden Format angezeigt: **CleanseAndCurate.Cleanse Supplier Data.GUID**.  
+4.  Beachten Sie, dass der Name des Projekts im folgenden Format angezeigt wird: **cleanabandcurr. bereinigen Lieferant Data. GUID**.  
   
-     ![SSIS-Paket erstellt DQS-Bereinigungsprojekts](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "DQS-Bereinigungsprojekts erstellt SSIS-Paket")  
+     ![Von SSIS-Paket erstelltes DQS-Bereinigungsprojekt](../../2014/tutorials/media/et-reviewingdqscpcreatedbythessispackage.jpg "Von SSIS-Paket erstelltes DQS-Bereinigungsprojekt")  
   
-5.  Beachten Sie, dass der Wert in der **ist aktiv** Feld **Active**.  
+5.  Beachten Sie, dass der Wert im Feld **ist aktiv** **ist.**  
   
-6.  Klicken Sie auf **Profiler** Registerkarte im unteren Bereich, um die profilerstatistiken für die bereinigungsaktivität finden Sie unter, der das SSIS-Paket ausgeführt.  
+6.  Klicken Sie im unteren Bereich auf die Registerkarte **Profiler** , um die Profiler-Statistik für die vom SSIS-Paket ausgeführte Bereinigungs Aktivität anzuzeigen.  
   
-7.  Klicken Sie auf **schließen** schließen die **Verwaltung** Bildschirm.  
+7.  Klicken Sie auf **Schließen** , um den **Verwaltungs** Bildschirm zu schließen.  
   
-8.  Auf der Hauptseite des **DQS-Client**, klicken Sie auf **Open Data Quality-Projekt** in die **Data Quality-Projekte** Bereich.  
+8.  Klicken Sie auf der Hauptseite von **DQS-Client**im Bereich **Data Quality-Projekte** auf **Data Quality-Projekt öffnen** .  
   
-9. Wählen Sie in der Liste der Projekte das Projekt aus, das von der SSIS-DQS-Bereinigungskomponente erstellt wird. Der Name des Projekts sollte im Format aufweisen:  **CleanseAndCurate.Cleanse Supplier Data.GUID (in Rot)** . Möglicherweise müssen Sie die Liste basierend auf sortieren **Erstellungsdatum** Spalte und suchen Sie nach der neueste Datensatz.  
+9. Wählen Sie in der Liste der Projekte das Projekt aus, das von der SSIS-DQS-Bereinigungskomponente erstellt wird. Der Name des Projekts sollte folgendes Format aufweisen: **cleanabandcurr. bereinigen Sie Supplier Data. GUID (in roter Farbe)**. Möglicherweise müssen Sie die Liste basierend auf der Spalte mit **dem Erstellungsdatum** sortieren und nach dem neuesten Datensatz suchen.  
   
 10. Klicken Sie auf **Weiter**.  
   
-11. Die **verwalten und Anzeigen der Ergebnisse** Seite sollten Sie von der interaktiven Bereinigung weiter oben in diesem Tutorial Sie haben damit vertraut sein.  
+11. Die Seite **Ergebnisse verwalten und anzeigen** sollte Ihnen aus der interaktiven Bereinigung vertraut sein, die Sie zuvor in diesem Lernprogramm durchgeführt haben.  
   
 12. Überprüfen Sie die Bereinigungsergebnisse. Sie können auf der nächsten Seite auch interaktive Bereinigungen ausführen und Ergebnisse in eine Excel-Datei oder eine Datenbank exportieren.  
   
-13. Klicken Sie auf **Weiter**. In diesem **exportieren** Seite können Sie Ergebnisse in eine Excel-Datei, CSV-Datei oder eine SQL-Datenbank exportieren.  
+13. Klicken Sie auf **Weiter**. Auf dieser Seite **exportieren** können Sie Ergebnisse in eine Excel-Datei, eine CSV-Datei oder eine SQL-Datenbank exportieren.  
   
-14. Klicken Sie auf **Fertig stellen** auf die Aktivität fertig zu stellen.  
+14. Klicken Sie auf **Fertig** stellen, um die Aktivität abzuschließen.  
   
-15. Auf der Hauptseite des **DQS-Client**, klicken Sie auf **Aktivitätsüberwachung** in die **Verwaltung** Bereich.  
+15. Klicken Sie im Bereich **Verwaltung** auf der **DQS-Client**-Hauptseite auf **Aktivitäts Überwachung** .  
   
-16. Beachten Sie, dass der Wert des **IsActive** Feld für das Projekt **beendet** jetzt.  
+16. Beachten Sie, dass der Wert des Felds **IsActive** für das Projekt jetzt **beendet** ist.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Fazit](../../2014/tutorials/conclusion.md)  
+ [Zusammenfassung](../../2014/tutorials/conclusion.md)  
   
   

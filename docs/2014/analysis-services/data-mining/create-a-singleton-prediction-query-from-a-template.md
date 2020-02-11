@@ -1,5 +1,5 @@
 ---
-title: Erstellen eine Singleton-Vorhersageabfrage aus einer Vorlage | Microsoft-Dokumentation
+title: Erstellen einer SINGLETON-Vorhersage Abfrage aus einer Vorlage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085488"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Erstellen einer SINGLETON-Vorhersageabfrage aus einer Vorlage
-  Eine Singleton-Abfrage ist nützlich, wenn Sie ein Modell, die Sie für die Vorhersage verwendet werden soll verfügen, aber nicht möchten, eine Zuordnung zu einem externen Eingabedataset oder zum treffen von massenvorhersagen. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
+  Eine SINGLETON-Abfrage ist nützlich, wenn Sie ein Modell verwenden, das Sie für Vorhersagen verwenden möchten, aber nicht einem externen Eingabe DataSet zuordnen oder Massen Vorhersagen treffen möchten. Mit einer SINGLETON-Abfrage können Sie einen Wert oder Werte für das Modell bereitstellen und sofort den vorhergesagten Wert anzeigen.  
   
  Zum Beispiel stellt die folgende DMX-Abfrage eine SINGLETON-Abfrage für das als Ziel verwendete Mailingmodell dar (TM_Decision_Tree).  
   
@@ -69,20 +69,20 @@ AS [t]
   
 5.  Geben Sie in der Zeile **Miningmodell** den Namen eines Miningmodells aus der Liste der Miningmodelle im **Objekt-Explorer**ein.  
   
-     Für den Beispielcode am Beginn dieses Themas die **Miningmodell** Zeile wurde festgelegt, an den Namen des `TM_Decision_Tree`.  
+     Für den Beispielcode, der am Anfang dieses Themas gezeigt wird, wurde die **Mining Modell** Zeile auf den Namen fest `TM_Decision_Tree`gelegt.  
   
 6.  Geben Sie in der Zeile **Wert** den neuen Datenwert ein, für den Sie eine Vorhersage machen möchten.  
   
-     Für den Beispielcode am Beginn dieses Themas die **Wert** Zeile wurde festgelegt, um `2` fahrradkaufverhalten basierend auf der Anzahl von zu Hause lebenden Kinder vorherzusagen.  
+     Für den Beispielcode am Anfang dieses Themas wurde die Zeile **Wert** auf `2` festgelegt, um das Fahrradkauf Verhalten basierend auf der Anzahl der zu Hause enden Kinder vorherzusagen.  
   
 7.  Geben Sie in der Zeile **Spalte** den Namen der Spalte im Miningmodell ein, der die neuen Daten zugeordnet werden sollen.  
   
-     Für den Beispielcode am Beginn dieses Themas die **Spalte** Zeile wurde festgelegt, um `Number Children at Home`.  
+     Für den Beispielcode am Anfang dieses Themas wurde die **Spalten** Zeile auf `Number Children at Home`festgelegt.  
   
     > [!NOTE]  
     >  Wenn Sie das Dialogfeld **Werte für Vorlagenparameter angeben** verwenden, müssen Sie den Spaltennamen nicht in eckige Klammern einzuschließen. Die Klammern werden automatisch hinzugefügt.  
   
-8.  Lassen Sie die **eingabealias** als `t`.  
+8.  Belassen Sie den **Eingabealias** als `t`.  
   
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -92,7 +92,7 @@ AS [t]
   
 11. Klicken Sie auf **Ausführen**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen von Vorhersagen &#40;grundlegenden Data&#41;Mining-Lernprogramm](../../tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
   

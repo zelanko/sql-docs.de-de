@@ -16,10 +16,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: 8b3f046017aa54f5db96878f8bfb6c435409d839
-ms.sourcegitcommit: 39ea690996a7390e3d13d6fb8f39d8641cd5f710
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74957231"
 ---
 # <a name="enable-tde-using-ekm"></a>Aktivieren von TDE mit EKM
@@ -29,17 +29,17 @@ ms.locfileid: "74957231"
   
  **In diesem Thema**  
   
--   **Bevor Sie beginnen:**  
+-   **Vorbereitungen:**  
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherung](#Security)  
+     [Sicherheit](#Security)  
   
 -   [So aktivieren Sie TDE unter Verwendung von EKM mit Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a>Einschränkungen  
+###  <a name="Restrictions"></a> Einschränkungen  
   
 -   Sie müssen ein Benutzer mit hohen Privilegien (z.&#160;B. ein Systemadministrator) sein, um einen Verschlüsselungsschlüssel für die Datenbank erstellen und eine Datenbank verschlüsseln zu können. Dieser Benutzer muss vom EKM-Modul authentifiziert werden können.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "74957231"
   
 -   Die für Ihren EKM-Anbieter erforderlichen Optionen und Parameter können sich von denen im unten angegebenen Codebeispiel unterscheiden. Weitere Informationen erhalten Sie vom Anbieter für erweiterbare Schlüsselverwaltung.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  In diesem Thema werden die folgenden Berechtigungen verwendet:  
   
 -   Zum Ändern einer Konfigurationsoption und Ausführen der RECONFIGURE-Anweisung muss Ihnen die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
@@ -64,7 +64,7 @@ ms.locfileid: "74957231"
   
 -   Erfordert die CONTROL-Berechtigung für die Datenbank, um die Datenbank zu verschlüsseln.  
   
-##  <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-enable-tde-using-ekm"></a>So aktivieren Sie TDE unter Verwendung von EKM  
   
@@ -73,8 +73,7 @@ ms.locfileid: "74957231"
 2.  Installieren Sie Zertifikate auf dem Computer, die ggf. vom Anbieter für erweiterbare Schlüsselverwaltung benötigt werden.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keinen Anbieter für erweiterbare Schlüsselverwaltung zur Verfügung. Jeder Anbieter für erweiterbare Schlüsselverwaltung kann über andere Prozeduren zum Installieren, Konfigurieren und Autorisieren von Benutzern verfügen.  Schlagen Sie in der Dokumentation Ihres Anbieters für erweiterbare Schlüsselverwaltung nach, um diesen Schritt auszuführen.  
+    >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt keinen Anbieter für erweiterbare Schlüsselverwaltung zur Verfügung. Jeder Anbieter für erweiterbare Schlüsselverwaltung kann über andere Prozeduren zum Installieren, Konfigurieren und Autorisieren von Benutzern verfügen.  Schlagen Sie in der Dokumentation Ihres Anbieters für erweiterbare Schlüsselverwaltung nach, um diesen Schritt auszuführen.  
   
 3.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
@@ -148,23 +147,23 @@ ms.locfileid: "74957231"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter den folgenden Links:  
+ Weitere Informationen finden Sie unter  
   
--   [sp_configure &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
+-   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
--   [Erstellen eines Kryptografieanbieters &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
+-   [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-cryptographic-provider-transact-sql)  
   
--   [Create Credential &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+-   [CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
--   [Erstellen eines asymmetrischen Schlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
+-   [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)  
   
--   [Erstellen der Anmeldung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-login-transact-sql)  
+-   [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql)  
   
--   [Erstellen eines Daten Bank Verschlüsselungsschlüssels &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
+-   [CREATE DATABASE ENCRYPTION KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-database-encryption-key-transact-sql)  
   
--   [Alter Login &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
+-   [ALTER LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-login-transact-sql)  
   
--   [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
+-   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)  
   
 -   [Erweiterbare Schlüsselverwaltung mit Azure Key Vault &#40;SQL Server&#41;](extensible-key-management-using-azure-key-vault-sql-server.md)  
   

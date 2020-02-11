@@ -1,5 +1,5 @@
 ---
-title: Daten, die von Katalogfunktionen zurückgegeben werden. | Microsoft-Dokumentation
+title: Von Katalog Funktionen zurückgegebene Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,27 +14,27 @@ ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077026"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Von Katalogfunktionen zurückgegebene Daten
-Jede Katalogfunktion gibt die Daten als Resultset zurück. Dieses Resultset unterscheidet sich nicht von anderen Resultsets. Es wird in der Regel generiert, durch eine vordefinierte, parametrisiert **wählen** -Anweisung, die in der Treiber hartcodiert oder in einer Prozedur in der Datenquelle gespeichert ist. Weitere Informationen zum Abrufen von Daten aus einem Resultset zu erhalten, finden Sie unter [wurde ein Ergebnis erstellt festlegen?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  
+Jede Katalog Funktion gibt Daten als Resultset zurück. Dieses Resultset unterscheidet sich nicht von anderen Resultsets. Sie wird normalerweise durch eine vordefinierte, parametrisierte **Select** -Anweisung generiert, die im Treiber hart codiert ist oder in einer Prozedur in der Datenquelle gespeichert ist. Informationen zum Abrufen von Daten aus einem Resultset finden Sie unter [Was ist ein Resultset erstellt?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  
   
- Das Resultset für jede Katalogfunktion wird in der Referenz-Eintrag für diese Funktion beschrieben. Zusätzlich zu den aufgelisteten Spalten kann das Resultset treiberspezifischen Spalten nach der letzten vordefinierte Spalte enthalten. Diese Spalten (sofern vorhanden) werden in der Dokumentation zu Driver beschrieben.  
+ Das Resultset für jede Katalog Funktion wird im Verweis Eintrag für diese Funktion beschrieben. Zusätzlich zu den aufgelisteten Spalten kann das Resultset Treiber spezifische Spalten nach der letzten vordefinierten Spalte enthalten. Diese Spalten (sofern vorhanden) werden in der Treiber Dokumentation beschrieben.  
   
- Anwendungen sollten treiberspezifischen Spalten relativ zum Ende des Resultsets binden. D. h. sie sollte berechnen Sie die Anzahl einer Spalte treiberspezifische als die Anzahl der letzten Spalte - mit abgerufen **SQLNumResultCols** – abzüglich der Anzahl der Spalten, die nach der erforderlichen Spalte auftreten. Dies spart müssen die Anwendung zu ändern, wenn neue Spalten, bis das Ergebnis hinzugefügt werden festgelegt in zukünftigen Versionen von ODBC oder dem Treiber. Für dieses Schema zu arbeiten müssen Treiber neue treiberspezifische Spalten vor der alten treiberspezifischen Spalten hinzufügen, sodass Spaltennummern relativ zum Ende des Resultsets nicht geändert werden.  
+ Anwendungen sollten Treiber spezifische Spalten in Relation zum Ende des Resultsets binden. Das heißt, Sie sollten die Nummer einer treiberspezifischen Spalte als die Nummer der letzten Spalte berechnen, die mit **SQLNumResultCols** abgerufen wird. die Anzahl der Spalten, die nach der erforderlichen Spalte aufgetreten sind, ist geringer. Dies spart, wenn die Anwendung geändert werden muss, wenn dem Resultset in zukünftigen Versionen von ODBC oder dem Treiber neue Spalten hinzugefügt werden. Damit dieses Schema funktioniert, müssen Treiber vor den alten treiberspezifischen Spalten neue Treiber spezifische Spalten hinzufügen, damit sich die Spalten Nummern relativ zum Ende des Resultsets nicht ändern.  
   
- Bezeichner, die im Resultset zurückgegeben werden sind nicht in Anführungszeichen eingeschlossen, selbst wenn sie Sonderzeichen enthalten. Nehmen wir beispielsweise an den Bezeichner Anführungszeichens (d. h. treiberspezifische und über zurückgegebenen **SQLGetInfo**) ist ein doppeltes Anführungszeichen ("), und der Tabelle" Accounts Payable "enthält eine Spalte namens" Customer Name ". In der Zeile, die vom **SQLColumns** für diese Spalte wird der Wert der Spalte TABLE_NAME Accounts Payable, nicht "Accounts Payable", und der Wert der COLUMN_NAME-Spalte Kundennamen, nicht "Kundenname". Um die Namen der Kunden in der Tabelle Accounts Payable abzurufen, würde die Anwendung diese Namen Zitat:  
+ Bezeichner, die im Resultset zurückgegeben werden, werden nicht in Anführungszeichen eingeschlossen, auch wenn Sie Sonderzeichen enthalten. Nehmen wir beispielsweise an, dass das bezeichneranführungs Zeichen (das Treiber spezifisch und durch **SQLGetInfo**zurückgegeben wird) ein doppeltes Anführungszeichen (") und die Tabelle mit den zu zahlenden Konten eine Spalte namens" Customer Name "enthält. In der Zeile, die von **SQLColumns** für diese Spalte zurückgegeben wurde, ist der Wert der Spalte "table_name" Konten, die nicht "Konten ist bezahlt", und der Wert der Spalte "column_name" ist "Customer Name" und nicht "Customer Name". Zum Abrufen der Namen von Kunden in der Tabelle mit den Konten, die Sie bezahlen müssen, würde die Anwendung diese Namen angeben:  
   
 ```  
 SELECT "Customer Name" FROM "Accounts Payable"  
 ```  
   
- Weitere Informationen finden Sie unter [Bezeichner in Anführungszeichen](../../../odbc/reference/develop-app/quoted-identifiers.md).  
+ Weitere Informationen finden Sie unter Bezeichner in Anführungs [Zeichen.](../../../odbc/reference/develop-app/quoted-identifiers.md)  
   
- Die Katalogfunktionen basiert auf einer SQL-ähnlichen Autorisierungsmodell in der eine Verbindung hergestellt, basierend auf einem Benutzernamen und das Kennwort ein, und nur Daten, die für die der Benutzer eine Berechtigung verfügt, werden zurückgegeben. Kennwortschutz von den einzelnen Dateien, die nicht in dieses Modell passt, wird die Treiber definiert.  
+ Die Katalog Funktionen basieren auf einem SQL-ähnlichen Autorisierungs Modell, in dem eine Verbindung basierend auf einem Benutzernamen und einem Kennwort hergestellt wird, und nur Daten, für die der Benutzer über eine Berechtigung verfügt, werden zurückgegeben. Der Kenn Wort Schutz einzelner Dateien, die nicht in dieses Modell passen, ist Treiber definiert.  
   
- Die durch die Katalogfunktionen zurückgegebenen Resultsets können fast nie aktualisiert werden, und Anwendungen sollten nicht erwarten, damit die Struktur der Datenbank zu ändern, indem Sie Daten in diesen Resultsets geändert werden kann.
+ Die von den Katalog Funktionen zurückgegebenen Resultsets sind fast nie aktualisierbar, und Anwendungen sollten nicht erwarten, dass die Struktur der Datenbank durch Ändern der Daten in diesen Resultsets geändert werden kann.

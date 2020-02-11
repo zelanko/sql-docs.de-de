@@ -17,23 +17,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 101badf320f72887d6eb9669224d24fff5b9a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663645"
 ---
 # <a name="clr-event-category"></a>CLR-Ereigniskategorie
-  Die **CLR**-Ereigniskategorie enthält Ereignisklassen, die durch Ausführen von CLR-Objekten (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt werden.  
+  Die **CLR** -Ereigniskategorie enthält Ereignisklassen, die durch Ausführen von CLR-Objekten (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Zeigt an, dass eine Anforderung zum Laden einer Assembly ausgeführt wurde.|  
 |[Assembly Load-Ereignisklasse](../../database-engine/assembly-load-event-class.md)|Tritt auf, wenn eine Anforderung zum Laden einer Assembly ausgeführt wird.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)  
   
   

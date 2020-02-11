@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37c3dc20ab537e7cb8bf69099dbd6d24ff384731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105599"
 ---
 # <a name="keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs"></a>Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht (Berichts-Generator und SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105599"
   
  Die folgende Abbildung zeigt eine Tabelle.  
   
- ![Tabelle](../media/table.png "Table")  
+ ![Table](../media/table.png "Tabelle")  
   
  Die folgende Abbildung zeigt eine Matrix.  
   
@@ -50,17 +50,17 @@ ms.locfileid: "66105599"
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf eine beliebige Stelle in der Tabelle, um statische Elemente sowie Gruppen im Gruppierungsbereich anzuzeigen.  
   
-     ![Gruppierungsbereich](../media/grouppane-updated.png "Grouping pane")  
+     ![Gruppierungs Bereich](../media/grouppane-updated.png "Gruppierungs Bereich")  
   
      In den Bereichen Zeilengruppen und Spaltengruppen werden die hierarchischen statischen und dynamischen Elemente für die Zeilengruppenhierarchie bzw. Spaltengruppenhierarchie angezeigt.  
   
-2.  Klicken Sie auf der rechten Seite des Gruppierungsbereichs auf den nach unten weisenden Pfeil und anschließend auf **Erweiterter Modus**.  
+2.  Klicken Sie auf der rechten Seite des Gruppierungs Bereichs auf den Pfeil nach unten, und klicken Sie dann auf erweiterter **Modus**.  
   
 3.  Klicken Sie auf das statische Element (Zeile oder Spalte), das bei einem Bildlauf sichtbar bleiben soll. Im Eigenschaftenbereich werden die Eigenschaften für das **Tablix-Element** angezeigt.  
   
-     ![Tablix-Elementeigenschaften](../media/grouppane-tablixmember-updated.png "Tablix Member properties")  
+     ![Tablix-Element (Eigenschaften)](../media/grouppane-tablixmember-updated.png "Tablix-Element (Eigenschaften)")  
   
-4.  Legen Sie im Bereich Eigenschaften **FixedData** zu `True`.  
+4.  Legen Sie im Eigenschaften Bereich **FixedData** auf `True`fest.  
   
 5.  Wiederholen Sie diesen Schritt für die angrenzenden Elemente, die bei einem Bildlauf sichtbar bleiben sollen.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "66105599"
   
  Während Sie durch den Bericht blättern, bleiben die statischen Tablix-Elemente sichtbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
- [Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS)](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
- [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
+ [Anzeigen von Kopf-und Fußzeilen mit einer Gruppe &#40;Berichts-Generator und SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)   
+ [Anzeigen von Zeilen-und Spaltenüberschriften auf mehreren Seiten &#40;Berichts-Generator und SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)   
  [Gruppierungsbereich (Berichts-Generator)](grouping-pane-report-builder.md)  
   
   

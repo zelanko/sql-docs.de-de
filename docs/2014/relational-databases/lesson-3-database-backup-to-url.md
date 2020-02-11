@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/30/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70175628"
 ---
-# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lektion 4: Erstellen einer Datenbank in Azure Storage
+# <a name="lesson-4-create-a-database-in-azure-storage"></a>Lektion 4: Erstellen einer Datenbank in Azure Storage
   In dieser Lektion erfahren Sie, wie Sie eine Datenbank mithilfe des Features SQL Server Datendateien in Azure erstellen. Vor dieser Lektion müssen Sie Lektion 1, 2 und 3 abschließen. Lektion 3 ist ein sehr wichtiger Schritt, da Sie die Informationen über Ihren Azure-Speicher Container und den zugehörigen Richtlinien Namen und SAS-Schlüssel vor Lektion 4 im SQL Server Anmelde Informationsspeicher speichern müssen.  
   
  Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen. Anschließend können Sie eine neue Datenbank in erstellen Azure Storage  
@@ -77,7 +77,7 @@ ms.locfileid: "70175628"
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-1.gif "SQL 14 CTP2")  
   
-    2.  Kopieren Sie die Werte für **Speicherkonto Name** und **primärer Zugriffsschlüssel** in das Dialogfeld **mit Azure Storage verbinden** in SSMS. Klicken Sie anschließend auf **Verbinden**. Die Informationen zu Speicherkontocontainern werden in SSMS angezeigt, wie im folgenden Bildschirmfoto veranschaulicht:  
+    2.  Kopieren Sie die Werte für **Speicherkonto Name** und **primärer Zugriffsschlüssel** in das Dialogfeld **mit Azure Storage verbinden** in SSMS. Klicken Sie dann auf **Verbinden**. Die Informationen zu Speicherkontocontainern werden in SSMS angezeigt, wie im folgenden Bildschirmfoto veranschaulicht:  
   
          ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2.gif "SQL 14 CTP2")  
   
@@ -85,7 +85,7 @@ ms.locfileid: "70175628"
   
  ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-2b.gif "SQL 14 CTP2")  
   
- **Hinweis**: Wenn aktive Verweise auf Datendateien in einem Container vorhanden sind, schlagen alle Versuche, die zugeordneten SQL Server Anmelde Informationen zu löschen, fehl. Wenn bereits eine Lease für eine bestimmte Datenbankdatei in einem BLOB vorhanden ist und Sie sie löschen möchten, müssen Sie die Lease auf dem BLOB unterbrechen. Um die Lease zu unterbrechen, können Sie [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)verwenden.  
+ **Hinweis:** Wenn aktive Verweise auf Datendateien in einem Container vorhanden sind, schlagen alle Versuche, die zugeordneten SQL Server Anmelde Informationen zu löschen, fehl. Wenn bereits eine Lease für eine bestimmte Datenbankdatei in einem BLOB vorhanden ist und Sie sie löschen möchten, müssen Sie die Lease auf dem BLOB unterbrechen. Um die Lease zu unterbrechen, können Sie [Lease Blob](https://msdn.microsoft.com/library/azure/ee691972.aspx)verwenden.  
   
  Mit dieser neuen Funktion können Sie SQL Server so konfigurieren, dass jede CREATE DATABASE-Anweisung standardmäßig eine Cloud-fähige Datenbank generiert. Anders ausgedrückt: Sie können Standarddaten und Protokoll Speicherorte in SQL Server Management Studio serverinstanzeigenschaften festlegen, sodass alle Datenbankdateien (MDF-, LDF-Dateien) in Azure Storage als seitenblobs erstellt werden, wenn Sie eine Datenbank erstellen.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70175628"
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-4-6-4.gif "SQL 14 CTP2")  
   
-     Weitere Informationen finden Sie unter [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](databases/add-data-or-log-files-to-a-database.md).  
+     Weitere Informationen finden Sie unter [Hinzufügen von Daten oder Protokolldateien mit einer Datenbank](databases/add-data-or-log-files-to-a-database.md).  
   
 5.  Behalten Sie alle anderen Standardwerte bei.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "70175628"
   
  **Nächste Lektion:**  
   
- [Lektion 5. &#40;Optionales&#41; Verschlüsseln der Datenbank mit TDE](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
+ [Lektion 5. &#40;optional,&#41; Ihre Datenbank mithilfe von TDE zu verschlüsseln.](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)  
   
   

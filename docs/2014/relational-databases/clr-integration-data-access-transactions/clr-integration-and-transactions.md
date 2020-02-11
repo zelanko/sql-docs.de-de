@@ -18,14 +18,15 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c6d1b302d6ed0f35ce6fcb60e0afb90415c21d1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62874821"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR-Integration und Transaktionen
-  Durch den `System.Transactions`-Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. `System.Transactions` und ADO.NET greifen ineinander, um die Verwendung lokaler und verteilter Transaktionen in verwalteten Anwendungen zu erweitern und zu vereinfachen.  
+  Durch den `System.Transactions`-Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. 
+  `System.Transactions` und ADO.NET greifen ineinander, um die Verwendung lokaler und verteilter Transaktionen in verwalteten Anwendungen zu erweitern und zu vereinfachen.  
   
 > [!NOTE]  
 >  Eine CLR-benutzerdefinierte Prozedur (UDP) kann keine Verbindung zu dem gleichen Server herstellen, auf dem sie ausgeführt wird (Loopbackverbindung), und sich in die gleiche Transaktion eintragen. Wird ein solcher Versuch unternommen, wird die Verbindung blockiert und die Kontrolle nicht wieder an die benutzerdefinierte Prozedur übergeben. Dies führt für die benutzerdefinierte Prozedur zu einem Timeoutfehler (Msg 1206).  
@@ -39,13 +40,13 @@ ms.locfileid: "62874821"
  [Zugriff auf die aktuelle Transaktion](accessing-the-current-transaction.md)  
  Beschreibt, wie auf eine Transaktion, die gerade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prozessintern ausgeführt wird, zugegriffen wird.  
   
- [Verwenden von „System.Transactions“](../native-client-ole-db-transactions/transactions.md)  
+ [Verwenden von 'System.Transactions'](../native-client-ole-db-transactions/transactions.md)  
  Beschreibt, wie die `System.Transactions`-Anwendungsprogrammierschnittstelle (API) in der verwalteten Anwendung verwendet wird.  
   
  [Lebensdauer von Transaktionen](transaction-lifetimes.md)  
  Beschreibt den Unterschied in der Lebensdauer von Transaktionen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-gespeicherten Prozeduren gestartet wurden, und Transaktionen, die in CLR-Anwendungen gestartet wurden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenzugriff von CLR-Datenbankobjekten aus](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Access from CLR Database Objects](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96d60ae8fc176fc1fc108d907f33f01877795955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151125"
 ---
 # <a name="xtp-transactions"></a>XTP-Transaktionen
   Das XTP-Leistungsobjekt für Transaktionen enthält Leistungsindikatoren für XTP-Engine-Transaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Diese Tabelle beschreibt die **XTP-Transaktionen** Leistungsindikatoren.  
+ In dieser Tabelle werden die Leistungsindikatoren für **XTP-Transaktionen** beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Abbruchweitergaben/s**|Die durchschnittliche Anzahl der Transaktionen, für die pro Sekunde aufgrund eines Commitabhängigkeits-Rollbacks ein Rollback durchgeführt wurde.|  
 |**Übernommene Commitabhängigkeiten/s**|Die durchschnittliche Anzahl der Commitabhängigkeiten, die pro Sekunde von Transaktionen übernommen werden.|  
@@ -35,7 +35,7 @@ ms.locfileid: "63151125"
 |**Abgebrochene Transaktionen/s**|Die durchschnittliche Anzahl der Transaktionen, die pro Sekunde vom Benutzer und vom System abgebrochen wurden.|  
 |**Erstellte Transaktionen/s**|Die durchschnittliche Anzahl der pro Sekunde im System erstellten Transaktionen.<br /><br /> XTP-Transaktionen werden anders als datenträgerbasierte Transaktionen gezählt (wie aus Datenbanken:Transaktionen/Sekunde ersichtlich). Beispielsweise zählt Erstellte Transaktionen/s schreibgeschützte Transaktionen, Datenbanken:Transaktionen/Sekunde hingegen nicht.|  
   
-## <a name="see-also"></a>Siehe auch  
- [XTP &#40;In-Memory-OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XTP-&#40;in-Memory-OLTP&#41; Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
   
   

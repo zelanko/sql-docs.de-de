@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3580f6365866ce752191e285b14f7d793be0cad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63204945"
 ---
 # <a name="specify-multiple-search-conditions-for-multiple-columns-visual-database-tools"></a>Angeben mehrerer Suchbedingungen für mehrere Spalten (Visual Database Tools)
@@ -75,9 +75,9 @@ ms.locfileid: "63204945"
   
 4.  Wiederholen Sie die Schritte 2 und 3 für jede weitere Bedingung, die hinzugefügt werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Kombinieren von Bedingungen, wenn AND Vorrang hat &#40;Visual Database Tools&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
- [Kombinieren von Bedingungen, wenn OR Vorrang hat &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Kombinieren von Bedingungen, wenn und Vorrang &#40;Visual Database Tools haben&#41;](combine-conditions-when-and-has-precedence-visual-database-tools.md)   
+ [Kombinieren von Bedingungen, wenn or Vorrang &#40;Visual Database Tools&#41;](combine-conditions-when-or-has-precedence-visual-database-tools.md)   
  [Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich &#40;Visual Database Tools&#41;](conventions-combine-search-conditions-in-criteria-pane-visual-db-tools.md)   
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   

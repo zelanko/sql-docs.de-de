@@ -13,25 +13,30 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a6c5cb8c8ca0492edf9798f972b458054ae5b58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66075736"
 ---
 # <a name="define-cube-attribute-properties"></a>Definieren von Cubeattributeigenschaften
   Durch Cubeattributeigenschaften können Sie eindeutige Einstellungen für Dimensionsattribute in Cubedimensionen angeben, die auf derselben Datenbankdimension basieren. In der folgenden Tabelle werden die Eigenschaften eines Cubeattributs beschrieben.  
   
-|Eigenschaft|Description|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
-|`AggregationUsage`|Gibt an, wie der Aggregationsentwurfs-Assistent Aggregationen für das Attribut entwirft. Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> `Default`: Standard. Der Aggregationsentwurfs-Assistent wendet eine Standardregel basierend auf dem Typ des Attributs an (Vollständig für Schlüssel, Uneingeschränkt für andere Attribute).<br /><br /> `None`: Keine Aggregation für den Cube darf dieses Attribut enthalten.<br /><br /> `Unrestricted`: Keine Einschränkungen sind für den Aggregationsentwurfs-Assistenten.<br /><br /> `Full`: Jede Aggregation für den Cube muss dieses Attribut enthalten.|  
+|`AggregationUsage`|Gibt an, wie der Aggregationsentwurfs-Assistent Aggregationen für das Attribut entwirft. Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> 
+  `Default`: Standard. Der Aggregationsentwurfs-Assistent wendet eine Standardregel basierend auf dem Typ des Attributs an (Vollständig für Schlüssel, Uneingeschränkt für andere Attribute).<br /><br /> 
+  `None`: Keine Aggregation für den Cube darf dieses Attribut enthalten.<br /><br /> `Unrestricted`: Für den Aggregations Entwurfs-Assistenten gelten keine Einschränkungen.<br /><br /> 
+  `Full`: Jede Aggregation für den Cube muss dieses Attribut enthalten.|  
 |`AttributeHierarchyEnabled`|Identifiziert, ob die Attributhierarchie für diese Cubedimension aktiviert ist. Hierdurch ist es möglich, Attributhierarchien für bestimmte Cubes oder Dimensionsrollen zu deaktivieren. Diese Einstellung hat keine Wirkung, wenn die zugrunde liegende Attributhierarchie deaktiviert ist. Der Standardwert ist `True`.|  
-|`OptimizedState`|Zeigt an, ob die Attributhierarchie für diese Cubedimension optimiert ist. Hierdurch ist es möglich, Attributhierarchien für bestimmte Cubes oder Dimensionsrollen zu optimieren. Diese Einstellung hat keine Wirkung, wenn die zugrunde liegende Attributhierarchie nicht optimiert ist. Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> `FullyOptimized`: Standard. Durch die Instanz werden Indizes zum Verbessern der Abfrageleistung für die Hierarchie erstellt. Dies ist der Standardwert.<br /><br /> `NotOptimized`: Durch die Instanz werden keine zusätzlichen Indizes erstellt.|  
-|`AttributeHierarchyVisible`|Zeigt an, ob die Attributhierarchie für diese Cubedimension sichtbar ist. Hierdurch ist es möglich, dass Attributhierarchien für bestimmte Cubes oder Dimensionsrollen sichtbar gemacht werden. Diese Einstellung hat keine Wirkung, wenn die zugrunde liegende Attributhierarchie nicht sichtbar ist. Der Standardwert ist `True`.|  
+|`OptimizedState`|Zeigt an, ob die Attributhierarchie für diese Cubedimension optimiert ist. Hierdurch ist es möglich, Attributhierarchien für bestimmte Cubes oder Dimensionsrollen zu optimieren. Diese Einstellung hat keine Wirkung, wenn die zugrunde liegende Attributhierarchie nicht optimiert ist. Diese Eigenschaft kann die folgenden Werte annehmen:<br /><br /> 
+  `FullyOptimized`: Standard. Durch die Instanz werden Indizes zum Verbessern der Abfrageleistung für die Hierarchie erstellt. Dies ist der Standardwert.<br /><br /> 
+  `NotOptimized`: Durch die Instanz werden keine zusätzlichen Indizes erstellt.|  
+|`AttributeHierarchyVisible`|Zeigt an, ob die Attributhierarchie für diese Cubedimension sichtbar ist. Hierdurch ist es möglich, dass Attributhierarchien für bestimmte Cubes oder Dimensionsrollen sichtbar gemacht werden. Diese Einstellung hat keine Wirkung, wenn die zugrunde liegende Attributhierarchie nicht sichtbar ist. Standardwert: `True`.|  
 |`AttributeID`|Enthält den eindeutigen Bezeichner (ID) des Attributs.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Definieren von Cubedimensionseigenschaften](define-cube-dimension-properties.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Cube-Dimensions Eigenschaften definieren](define-cube-dimension-properties.md)   
  [Definieren von Cubehierarchieeigenschaften](define-cube-hierarchy-properties.md)  
   
   

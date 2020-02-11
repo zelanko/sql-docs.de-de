@@ -1,5 +1,5 @@
 ---
-title: Datamining-Programmierung | Microsoft-Dokumentation
+title: Data Mining-Programmierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d18e97a60bf1c6108b3672f40747e8b612ad6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62732266"
 ---
 # <a name="data-mining-programming"></a>Data Mining-Programmierung
@@ -24,7 +24,8 @@ ms.locfileid: "62732266"
   
 -   **XMLA**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] unterstützt XML for Analysis (XMLA) als Protokoll für die Kommunikation mit Clientanwendungen an. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt zusätzliche Befehle, die die XML for Analysis-Spezifikation erweitern.  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] unterstützt XML for Analysis (XMLA) als Protokoll für die Kommunikation mit Client Anwendungen. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt zusätzliche Befehle, die die XML for Analysis-Spezifikation erweitern.  
   
      Weil in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datendefinition, Datenbearbeitung und Datenkontrolle XMLA verwendet, können Sie Miningstrukturen und Miningmodelle mithilfe der in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] bereitgestellten visuellen Tools erstellen und anschließend die erstellten Data Mining-Objekte mithilfe der Data Mining Extensions (DMX)- und Analysis Services Scripting Language (ASSL)-Skripts erweitern.  
   
@@ -32,7 +33,8 @@ ms.locfileid: "62732266"
   
 -   **Analysis Management Objects (AMO)**  
   
-     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt außerdem ein vollständiges Framework bereit, das Data Mining-Drittanbietern die Integration der Data Mining-Objekte in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ermöglicht.  
+     
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt außerdem ein vollständiges Framework bereit, das Data Mining-Drittanbietern die Integration der Data Mining-Objekte in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ermöglicht.  
   
      Sie können Miningstrukturen und Miningmodelle mithilfe von AMO erstellen. Siehe die folgenden Beispiele in CodePlex:  
   
@@ -61,11 +63,11 @@ ms.locfileid: "62732266"
  [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
  Stellt die AMO-Programmierbibliothek vor.  
   
- [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Entwickeln mit Analysis Services Skriptsprache &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
  Gibt eine Einführung in XML for Analysis (XMLA) und die zugehörigen Erweiterungen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwicklerhandbuch für &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Entwicklerhandbuch &#40;Analysis Services&#41;](../analysis-services-developer-documentation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

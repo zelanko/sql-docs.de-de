@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15ef01785355baa21dc2516168d13fbd886abe27
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73781353"
 ---
 # <a name="executing-queries-how-to-topics-odbc"></a>Themen zur Vorgehensweise zum Ausführen von Abfragen (ODBC)
@@ -27,15 +27,15 @@ ms.locfileid: "73781353"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [ODBC- &#40;Anweisung verwenden&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
+-   [Verwenden Sie eine Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/use-a-statement-odbc.md)  
   
--   [Festlegen von Cursor &#40;Optionen (ODBC)&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
+-   [Festlegen der Cursor Optionen &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/set-cursor-options-odbc.md)  
   
--   [Direktes Ausführen einer Anweisung &#40;(ODBC)&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
+-   [Direktes Ausführen einer Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/execute-a-statement-directly-odbc.md)  
   
--   [Vorbereiten und Ausführen einer ODBC-Anweisung &#40;&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
+-   [Vorbereiten und Ausführen einer Anweisung &#40;ODBC-&#41;](../../../relational-databases/native-client-odbc-how-to/execute-queries/prepare-and-execute-a-statement-odbc.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweisen zu ODBC](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [ODBC How-to Topics](../../../relational-databases/native-client-odbc-how-to/odbc-how-to-topics.md)  
   
   

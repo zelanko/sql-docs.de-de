@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b2d8a9218c5cb654f3343a7475d17630d7b49e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762247"
 ---
-# <a name="mssqlserver7908"></a>MSSQLSERVER_7908
+# <a name="mssqlserver_7908"></a>MSSQLSERVER_7908
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762247"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_COLUMN_LEVEL_FILE|  
-|Meldungstext|Tabellenfehler: Die Datei 'FILE' in Partitions-ID PN_ID ist keine gültige Filestream-Datei.|  
+|Meldungstext|Tabellenfehler: Die Datei 'FILE' in Partitions-ID PN_ID ist keine gültige FileStream-Datei.|  
   
 ## <a name="explanation"></a>Erklärung  
  Beim Namen einer FILESTREAM-Datei in einem Spaltenverzeichnis handelt es sich um eine ROWGUID. Wenn ein Dateiname in einem Spaltenverzeichnis nicht in eine ROWGUID konvertiert werden kann, ist die Datei keine gültige Datei.  
@@ -48,6 +48,6 @@ ms.locfileid: "62762247"
  Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
- Nicht verfügbar. Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Nicht zutreffend Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
   

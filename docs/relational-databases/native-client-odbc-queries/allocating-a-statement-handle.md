@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c176536675af707ec2e16fde80028beba8a019a
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73779993"
 ---
 # <a name="allocating-a-statement-handle"></a>Zuordnen eines Anweisungshandles
@@ -39,11 +39,11 @@ ms.locfileid: "73779993"
   
  Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_QUERY_TIMEOUT festgelegt ist, wird ein Abfrage Timeout Intervall festgelegt, um den Server und den Benutzer vor Abfragen mit langer Laufzeit zu schützen.  
   
- Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_MAX_LENGTH festgelegt ist, wird die Menge an **Text** -und **Bilddaten** , die eine einzelne Anweisung abrufen kann, eingeschränkt. Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_MAX_ROWS festgelegt ist, schränkt auch ein Rowset auf die ersten *n* Zeilen ein, wenn dies alles ist, was die Anwendung erfordert. Beachten Sie, dass das Festlegen von SQL_ATTR_MAX_ROWS bewirkt, dass der Treiber eine SET ROWCOUNT-Anweisung an den Server ausgibt. Dies wirkt sich auf alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anweisungen aus, einschließlich Triggern und Updates.  
+ Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_MAX_LENGTH festgelegt ist, wird die Menge an **Text** -und **Bilddaten** , die eine einzelne Anweisung abrufen kann, eingeschränkt. Wenn Sie **SQLSetStmtAttr** aufrufen, wobei *fOption* auf SQL_ATTR_MAX_ROWS festgelegt ist, schränkt auch ein Rowset auf die ersten *n* Zeilen ein, wenn dies alles ist, was die Anwendung erfordert. Beachten Sie, dass das Festlegen von SQL_ATTR_MAX_ROWS bewirkt, dass der Treiber eine SET ROWCOUNT-Anweisung an den Server ausgibt. Dies wirkt sich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf alle-Anweisungen aus, einschließlich Triggern und Updates.  
   
  Gehen Sie beim Festlegen dieser Optionen vorsichtig vor. Im Idealfall sollten alle Anweisungshandle eines Verbindungshandles die gleichen Einstellungen für SQL_ATTR_MAX_LENGTH und SQL_ATTR_MAX_ROWS aufweisen. Wenn der Treiber von einem Anweisungshandle zu einem anderen mit abweichenden Werten für diese Optionen wechselt, muss der Treiber die entsprechenden SET TEXTSIZE- und SET ROWCOUNT-Anweisungen generieren, um die Einstellungen zu ändern. Der Treiber kann diese Anweisungen nicht dem gleichen Batch zuordnen, in dem sich auch die SQL-Anweisung des Benutzers befindet, da die SQL-Anweisung des Benutzers eine Anweisung enthalten kann, die die erste Anweisung in einem Batch darstellen muss. Der Treiber muss die Anweisungen SET TEXTSIZE und SET ROWCOUNT in einem separaten Batch senden, der automatisch einen zusätzlichen Roundtrip zum Server generiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von &#40;Abfragen (ODBC)&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Abfragen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-queries/executing-queries-odbc.md)  
   
   

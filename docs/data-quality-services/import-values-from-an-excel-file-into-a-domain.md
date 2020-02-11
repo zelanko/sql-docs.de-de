@@ -14,10 +14,10 @@ ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 144a2b57fa671842f284445dee859e689e8adbe1
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75254819"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne
@@ -32,14 +32,14 @@ ms.locfileid: "75254819"
   
 -   Importieren Sie Werte in eine vorhandene, aufgefüllte Domäne. In diesem Fall werden nur neue Werte importiert. Alle Werte, die bereits existieren, werden nicht importiert.  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a>Voraussetzung  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Um Domänen aus einer Excel-Datei zu importieren, muss Excel auf dem Computer installiert sein, auf dem die [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Anwendung installiert ist, um Domänenwerte oder eine vollständige Domäne zu importieren; Sie müssen eine Excel-Datei mit Domänenwerten erstellt haben (siehe [How the import works](#How)) und Sie müssen eine Wissensdatenbank erstellt und geöffnet haben, um die Domäne zu importieren.  
   
-###  <a name="Security"></a>Sicherung  
+###  <a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a>Griff  
+####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um Domänenwerte aus einer Excel-Datei zu importieren.  
   
 ##  <a name="Import"></a>Importieren von Werten aus einer Excel-Datei in eine Domäne  

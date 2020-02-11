@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108521"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lektion 2: Angeben von Verbindungsinformationen (Reporting Services)
-  Nachdem Sie dem Tutorial-Projekt einen Bericht hinzugefügt haben, müssen Sie eine *Datenquelle*erstellen. Bei dieser handelt es sich um Verbindungsinformationen, mit denen der Bericht auf Daten aus einer relationalen Datenbank, einer mehrdimensionalen Datenbank oder einer sonstigen Ressource zugreift.  
+  Nachdem Sie dem Tutorial-Projekt einen Bericht hinzugefügt haben, müssen Sie eine *Datenquelle* erstellen. Bei dieser handelt es sich um Verbindungsinformationen, mit denen der Bericht auf Daten aus einer relationalen Datenbank, einer mehrdimensionalen Datenbank oder einer sonstigen Ressource zugreift.  
   
- In dieser Lektion verwenden Sie die Beispieldatenbank [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] als Datenquelle. In diesem Tutorial wird davon ausgegangen, dass diese Datenbank in der Standardinstanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] auf Ihrem lokalen Computer installiert ist.  
+ In dieser Lektion verwenden Sie die Beispieldatenbank [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] als Datenquelle. In diesem Tutorial wird davon ausgegangen, dass sich diese Datenbank in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] Standard Instanz von befindet, die auf dem lokalen Computer installiert ist.  
   
 ### <a name="to-set-up-a-connection"></a>So richten Sie eine Verbindung ein  
   
-1.  In der **Berichtsdaten** Bereich, klicken Sie auf **neu** , und klicken Sie dann auf **Datenquelle...** .  
+1.  Klicken Sie im **Berichtsdaten** Bereich auf **neu** , und klicken Sie dann auf **Datenquelle...**.  
   
     > [!NOTE]  
     >  Zum Anzeigen des **Berichtsdatenbereichs** klicken Sie im Menü **Ansicht** auf **Berichtsdaten**.  
@@ -48,16 +48,16 @@ ms.locfileid: "66108521"
     >   
     >  `Data source=localhost\SQLEXPRESS; initial catalog=AdventureWorks2012`  
     >   
-    >  Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) und [Daten Datenquelleneigenschaften, Dialogfeld, Allgemein](data-source-properties-dialog-box-general.md).  
+    >  Weitere Informationen zu Verbindungs Zeichenfolgen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](data-connections-data-sources-and-connection-strings-in-reporting-services.md) Zeichenfolgen in Reporting Services und [Dialog Feld "Datenquellen Eigenschaften", "Allgemein](data-source-properties-dialog-box-general.md)".  
   
-6.  Klicken Sie im linken Bereich auf **Anmeldeinformationen** , und klicken Sie auf **Windows-Authentifizierung verwenden (integrierte Sicherheit)** .  
+6.  Klicken Sie im linken Bereich auf **Anmeldeinformationen** , und klicken Sie auf **Windows-Authentifizierung verwenden (integrierte Sicherheit)**.  
   
-7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] Datenquelle [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] wird hinzugefügt, um die **Berichtsdaten** Bereich.  
+7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]die Daten [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] Quelle wird dem **Berichtsdaten** Bereich hinzugefügt.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
- Sie haben erfolgreich eine Verbindung mit der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Beispieldatenbank definiert. Als Nächstes erstellen Sie den Bericht. Siehe [Lektion 3: Definieren eines Datasets für den Tabellenbericht &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ Sie haben erfolgreich eine Verbindung mit der [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] -Beispieldatenbank definiert. Als Nächstes erstellen Sie den Bericht. Weitere Informationen finden Sie unter [Lektion 3: Definieren eines Datasets für den Tabellenbericht (Reporting Services)](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

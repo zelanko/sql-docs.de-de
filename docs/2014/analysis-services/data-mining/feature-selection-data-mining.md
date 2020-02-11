@@ -1,5 +1,5 @@
 ---
-title: Funktionsauswahl (Datamining) | Microsoft-Dokumentation
+title: Funktionsauswahl (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084414"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
-  *Funktionsauswahl* ist ein Begriff, die im Datamining häufig verwendet werden, um die Tools und Techniken zum Reduzieren der Eingaben in eine verwaltbare Größe zur Verarbeitung und Analyse zu beschreiben. Funktionsauswahl bewirkt nicht nur *Kardinalitätsreduzierung*, was bedeutet anwendet, die einer willkürlichen oder vordefinierten Grenzwert für die Anzahl der Attribute, die beim Erstellen eines Modells, sondern auch die Auswahl der Attribute, d. h. berücksichtigt werden können dass entweder der Analyst oder das Modellierungstool aktiv ausgewählt oder Attribute, die basierend auf deren Eignung für die Analyse verwirft Sie.  
+  Die *Featureauswahl* ist ein Begriff, der in Data Mining häufig verwendet wird, um die Tools und Techniken zu beschreiben, die für die Reduzierung von Eingaben auf eine verwaltbare Größe für die Verarbeitung Die Featureauswahl impliziert nicht nur die *kardinalitätsreduzierung*. Dies bedeutet, dass ein beliebiges oder vordefiniertes Umstellungs Verhalten für die Anzahl der Attribute, die bei der Erstellung eines Modells berücksichtigt werden können, auferlegt wird, aber auch die Auswahl der Attribute, d. h., dass der Analyst oder das Modellierungs Tool basierend auf der Nützlichkeit der Analyse aktiv Attribute auswählt  
   
  Die Möglichkeit, eine Funktionsauswahl anzuwenden, ist wichtig für eine effiziente Analyse, da Datasets häufig wesentlich mehr Informationen enthalten, als für die Modellerstellung erforderlich ist. Ein Dataset kann z. B. 500 Spalten mit Kundenmerkmalen enthalten. Wenn die Daten in einigen Spalten jedoch nur einen geringen Informationswert haben, würden diese Spalten, wenn sie dem Modell hinzugefügt würden, nur einen sehr geringen Nutzen bringen. Wenn Sie die nicht verwendeten Spalten beim Erstellen des Modells beibehalten, ist während des Trainingsprozesses mehr CPU und Arbeitsspeicher erforderlich, und das fertige Modell erfordert mehr Speicherplatz.  
   
@@ -44,7 +44,8 @@ ms.locfileid: "66084414"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Die Funktionsauswahl bei Analysis Services Data Mining  
  Normalerweise wird die Funktionsauswahl in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatisch ausgeführt. Jeder Algorithmus verfügt über eine Reihe von Standardtechniken für die intelligente Anwendung der Funktionsreduzierung. Die Funktionsauswahl wird stets durchgeführt, bevor das Modell trainiert wird, um automatisch die Attribute in einem Dataset auszuwählen, die im Modell am wahrscheinlichsten Verwendung finden. Sie können jedoch auch manuell Parameter festlegen, um das Verhalten der Funktionsauswahl zu beeinflussen.  
   
- Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Ergebnisse. Welche spezifische Methode auf das jeweilige Modell angewendet wird, hängt von folgenden Faktoren ab:  
+ Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Ergebnisse. Welche spezifische Methode auf das jeweilige Modell angewendet wird, hängt von folgenden Faktoren ab:  
   
 -   Im Modell verwendeter Algorithmus  
   
@@ -62,14 +63,14 @@ ms.locfileid: "66084414"
   
  Die Bewertung des *Interessantheitsgrads* wird zum Festlegen der Rangfolge und zum Sortieren von Attributen in Spalten verwendet, die nicht binäre, kontinuierliche, numerische Daten enthalten.  
   
- Für Spalten, die diskrete und diskretisierte Daten enthalten, sind die*Shannon-Entropie* und zwei *Bayes* -Werte verfügbar. Wenn das Modell jedoch kontinuierliche Spalten enthält, wird der Interessantheitsgrad zur Bewertung aller Eingabespalten herangezogen, um die Konsistenz sicherzustellen.  
+ Für Spalten, die diskrete und ** diskretisierte Daten enthalten, stehen *die Shannon-Entropie und zwei Bayes* -Werte zur Verfügung. Wenn das Modell jedoch kontinuierliche Spalten enthält, wird der Interessantheitsgrad zur Bewertung aller Eingabespalten herangezogen, um die Konsistenz sicherzustellen.  
   
  Im folgenden Abschnitt werden die Methoden der Funktionsauswahl einzeln beschrieben.  
   
 #### <a name="interestingness-score"></a>Interessantheitsgrad  
- Eine Funktion ist interessant, wenn sie eine nützliche Information offenbart. Da die Definition, was nützlich ist abhängig vom jeweiligen Szenario variiert, hat die Datamining-Branche verschiedene Methoden zum Messen entwickelt *interessantheitsgrads*. Z. B. *Neuheit* ausreißererkennung, aber die Fähigkeit, eng verwandte Elemente unterscheiden zu können, interessant sein könnte oder *diskriminante Gewicht*, interessanter für sein Klassifizierung.  
+ Eine Funktion ist interessant, wenn sie eine nützliche Information offenbart. Da die Definition der nützlichen variiert, hängt vom jeweiligen Szenario ab. die Data Mining Branche hat verschiedene Möglichkeiten zum Messen der *Interessantheit*entwickelt. Beispielsweise könnte die *Neuheit* bei der Ausreißererkennung interessant sein, aber die Möglichkeit zur Unterscheidung zwischen eng verknüpften Elementen oder der *Gewichtungs Gewichtung*kann für die Klassifizierung interessanter sein.  
   
- Ist das Maß der interessantheit, die in SQL Server Analysis Services dient *Entropie-basierte*, das bedeutet, dass Attribute mit einer zufälligen Verteilung haben höhere Entropie und geringeren informationsgewinn aus diesem Grund kleiner sind sinnvoll zu nutzen. Die Entropie eines bestimmten Attributs wird wie folgt mit der Entropie aller anderen Attribute verglichen:  
+ Das in SQL Server Analysis Services verwendete Maß für Interessantheit ist *Entropie basiert*, d. h., dass Attribute mit zufälligen Verteilungen eine höhere Entropie und einen geringeren Informationsgewinn aufweisen. Daher sind solche Attribute weniger interessant. Die Entropie eines bestimmten Attributs wird wie folgt mit der Entropie aller anderen Attribute verglichen:  
   
  Interessantheit(Attribut) = - (m - Entropie(Attribut)) * (m - Entropie(Attribut))  
   
@@ -111,24 +112,24 @@ ms.locfileid: "66084414"
 |Logistische Regression|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Obwohl der Microsoft Logistic Regression-Algorithmus auf dem Microsoft Neural Network-Algorithmus basiert, können Sie keine logistischen Regressionsmodelle anpassen, um das Funktionsauswahlverhalten zu steuern. Deshalb wird die Funktionsauswahl immer standardmäßig nach der Methode ausgeführt, die für das Attribut am besten geeignet ist.<br /><br /> Wenn alle Attribute diskret oder diskretisiert sind, wird als Standardmethode Bayes-Dirichlet mit uniformer A-priori-Verteilung eingesetzt.<br /><br /> Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Logistic Regression Algorithm Technical Reference](microsoft-logistic-regression-algorithm-technical-reference.md).|  
 |Clustering|Interessantheitsgrad|Der Microsoft Clustering-Algorithmus kann diskrete oder diskretisierte Daten verwenden. Da das Ergebnis jedes Attributs jedoch als Entfernung berechnet wird und als kontinuierliche Zahl dargestellt wird, muss der Interessantheitsgrad verwendet werden.<br /><br /> Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Clustering Algorithm Technical Reference](microsoft-clustering-algorithm-technical-reference.md).|  
 |Lineare Regression|Interessantheitsgrad|Der Microsoft Linear Regression-Algorithmus kann nur den Interessantheitsgrad verwenden, da dieser nur kontinuierliche Spalten unterstützt.<br /><br /> Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Linear Regression Algorithm Technical Reference](microsoft-linear-regression-algorithm-technical-reference.md).|  
-|Zuordnungsregeln<br /><br /> Sequenzclustering|Wird nicht verwendet|Die Funktionsauswahl wird nicht mit diesen Algorithmen aufgerufen.<br /><br /> Durch Festlegen der Parameter MINIMUM_SUPPORT und MINIMUM_PROBABILIITY lässt sich jedoch das Verhalten des Algorithmus steuern und die Größe der Eingabedaten falls notwendig reduzieren.<br /><br /> Weitere Informationen finden Sie unter [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) und [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
-|Zeitreihe|Wird nicht verwendet|Die Funktionsauswahl gilt nicht für Zeitreihenmodelle.<br /><br /> Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).|  
+|Zuordnungsregeln<br /><br /> Sequenzclustering|Nicht verwendet|Die Funktionsauswahl wird nicht mit diesen Algorithmen aufgerufen.<br /><br /> Durch Festlegen der Parameter MINIMUM_SUPPORT und MINIMUM_PROBABILIITY lässt sich jedoch das Verhalten des Algorithmus steuern und die Größe der Eingabedaten falls notwendig reduzieren.<br /><br /> Weitere Informationen finden Sie unter [Microsoft Association Algorithm Technical Reference](microsoft-association-algorithm-technical-reference.md) und [Microsoft Sequence Clustering Algorithm Technical Reference](microsoft-sequence-clustering-algorithm-technical-reference.md).|  
+|Zeitreihe|Nicht verwendet|Die Funktionsauswahl gilt nicht für Zeitreihenmodelle.<br /><br /> Weitere Informationen zu diesem Algorithmus finden Sie unter [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md).|  
   
 ## <a name="feature-selection-parameters"></a>Parameter für die Funktionsauswahl  
  In Algorithmen, die die Funktionsauswahl unterstützen, können Sie mithilfe der folgenden Parameter steuern, wann die Funktionsauswahl aktiviert wird. Jeder Algorithmus verfügt über einen Standardwert für die Anzahl zulässiger Eingaben, Sie können diesen Standardwert jedoch überschreiben und die Anzahl der Attribute angeben. In diesem Abschnitt sind die Parameter zur Verwaltung der Funktionsauswahl aufgeführt.  
   
-#### <a name="maximuminputattributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
+#### <a name="maximum_input_attributes"></a>MAXIMUM_INPUT_ATTRIBUTES  
  Falls ein Modell mehr Spalten enthält als durch die im *MAXIMUM_INPUT_ATTRIBUTES* -Parameter angegebene Zahl, ignoriert der Algorithmus alle Spalten, die er als irrelevant errechnet.  
   
-#### <a name="maximumoutputattributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
+#### <a name="maximum_output_attributes"></a>MAXIMUM_OUTPUT_ATTRIBUTES  
  Entsprechend gilt: Falls ein Modell mehr vorhersagbare Spalten enthält als durch die im *MAXIMUM_OUTPUT_ATTRIBUTES* -Parameter angegebene Zahl, ignoriert der Algorithmus gleichermaßen alle Spalten, die er als irrelevant errechnet.  
   
-#### <a name="maximumstates"></a>MAXIMUM_STATES  
+#### <a name="maximum_states"></a>MAXIMUM_STATES  
  Wenn ein Modell mehr Fälle enthält, als im *MAXIMUM_STATES* -Parameter angegeben sind, werden die am wenigsten verbreiteten Status in einer Gruppe zusammengefasst und als fehlend behandelt. Wird einer dieser Parameter auf 0 festgelegt, ist die Funktionsauswahl ausgeschaltet. Dies wirkt sich auf die Verarbeitungszeit und die Leistung aus.  
   
  Neben diesen Methoden für die Funktionsauswahl können Sie den Algorithmus bei der Identifizierung oder Heraufstufung aussagekräftiger Attribute unterstützen, indem Sie *Modellierungsflags* für das Modell oder *Verteilungsflags* für die Struktur festlegen. Weitere Informationen zu diesen Konzepten finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md) und [Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anpassen von Miningmodellen und -strukturen](customize-mining-models-and-structure.md)  
   
   

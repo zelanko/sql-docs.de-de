@@ -2,7 +2,7 @@
 title: Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 description: Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 ms.custom: seo-lt-2019
-ms.date: 11/22/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
@@ -12,12 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
-ms.openlocfilehash: f5a0f7441dd17aec2587c772a678a3681fd3b423
-ms.sourcegitcommit: 9e026cfd9f2300f106af929d88a9b43301f5edc2
+ms.openlocfilehash: 8055ae8b66c2f2b59f18b0ee40dcac8753c0eb7c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74317719"
+ms.lasthandoff: 02/08/2020
+ms.locfileid: "76831750"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
 
@@ -42,7 +42,7 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 
 3. Starten Sie auf dem Zielcomputer, auf dem SQL Server ausgeführt wird, eine Ablauf Verfolgungs Erfassung mit startreplaycapturetrace. SQL.
 
-    ein.  Öffnen Sie in SQL Server Management Studio (SSMS) <Dea_InstallPath\>\script\startreplaycapturetrace.SQL.
+    a.  Öffnen Sie in SQL Server Management Studio (SSMS) <Dea_InstallPath\>\script\startreplaycapturetrace.SQL.
 
     b.  Führen `Set @durationInMins=0` Sie aus, damit die Ablauf Verfolgungs Erfassung nach einem angegebenen Zeitpunkt nicht automatisch beendet wird.
 
@@ -56,7 +56,7 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
 
-    ein.  Führen `DReplay status -f 1`Sie an einer Eingabeaufforderung aus, um den Status zu überwachen.
+    a.  Führen `DReplay status -f 1`Sie an einer Eingabeaufforderung aus, um den Status zu überwachen.
 
     b.  Um die Wiedergabe anzuhalten, z. b. Wenn Sie sehen, dass der Durchlauf% niedriger als erwartet ist, führen `DReplay cancel`Sie an einer Eingabeaufforderung aus.
 
@@ -75,6 +75,6 @@ Führen Sie an einer Eingabeaufforderung den folgenden Befehl aus, um eine neue 
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - Weitere Informationen zur Verwendung von DEA finden Sie unter [Übersicht über Assistent für Datenbankexperimente](database-experimentation-assistant-overview.md).

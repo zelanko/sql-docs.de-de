@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f807060994c2225dc1e6605344bbb3bd5d2709e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106239"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Häufig verwendete Filter (Berichts-Generator und SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66106239"
 ## <a name="filter-examples"></a>Beispiele für Filter  
  In der folgenden Tabelle werden Beispiele für Filtergleichungen dargestellt, die andere Datentypen und andere Operatoren verwenden. Der Bereich für den Vergleich wird von dem Berichtselement bestimmt, für das ein Filter definiert wird. Beispiel: Bei einem für ein Dataset definierten Filter bezeichnet **Erste % 10** die ersten 10 Prozent der Werte im Dataset. Im Falle eines für eine Gruppe definierten Filters bedeutet **Erste % 10** die ersten 10 Prozent der Werte in der Gruppe.  
   
-|Einfacher Ausdruck|Datentyp|Operator|Wert|Description|  
+|Einfacher Ausdruck|Datentyp|Operator|value|BESCHREIBUNG|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Schließt Datenwerte ein, die größer als 7 sind.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Schließt die ersten 10 Datenwerte ein.|  
@@ -46,12 +46,12 @@ ms.locfileid: "66106239"
 ## <a name="examples-with-report-parameters"></a>Beispiele für Berichtsparameter  
  In der folgenden Tabelle werden Beispiele für Filterausdrücke bereitgestellt, die einen einwertigen oder mehrwertigen Parameterverweis einschließen.  
   
-|Parametertyp|(Filter-)Ausdruck|Operator|Wert|Datentyp|  
+|Parametertyp|(Filter-)Ausdruck|Operator|value|Datentyp|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |Einzelwert|`[EmployeeID]`|=|`[@EmployeeID]`|Integer|  
 |Mehrwertig|`[EmployeeID]`|IN|`[@EmployeeID]`|Integer|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   

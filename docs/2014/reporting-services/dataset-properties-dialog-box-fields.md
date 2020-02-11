@@ -1,5 +1,5 @@
 ---
-title: DataSet Properties Dialog Box, Felder | Microsoft-Dokumentation
+title: Dataseteigenschaften (Dialog Feld), Felder | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 133d905958f0613d9b7ecf2d28c439c15a59eedb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109395"
 ---
 # <a name="dataset-properties-dialog-box-fields"></a>Dataseteigenschaften (Dialogfeld), Felder
   Wählen Sie im Dialogfeld **Dataseteigenschaften** die Option **Felder** aus, um die Feldauflistung für das Berichtsdataset zu ändern. Die Felderliste wird automatisch aufgefüllt, Sie können jedoch mithilfe der Option **Felder** Abfragefelder und berechnete Felder hinzufügen, bearbeiten und löschen.  
   
-## <a name="options"></a>Optionen  
- **Hinzufügen**  
+## <a name="options"></a>Tastatur  
+ **Add (Hinzufügen)**  
  Fügt dem Dataset ein neues Abfragefeld oder berechnetes Feld hinzu.  
   
  **Löschen**  
  Löscht das ausgewählte Feld aus dem Dataset.  
   
- **Name des Felds**  
+ **Feldname**  
  Geben Sie einen Namen für das Feld ein. Der Name des Felds muss innerhalb des Datasets eindeutig sein. Für jedes vorhandene Feld in der Datasetabfrage ist der Name bereits eingetragen.  
   
  **Feldquelle**  
@@ -43,7 +43,7 @@ ms.locfileid: "66109395"
  **Ausdruck (fx)**  
  Fügen Sie einen Ausdruck für das berechnete Feld hinzu, oder ändern Sie diesen. Diese Schaltfläche wird nur angezeigt, wenn Sie auf **Hinzufügen** klicken und **Berechnetes Feld**auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)  

@@ -1,5 +1,5 @@
 ---
-title: AddNew-Methode – Beispiel (VB) | Microsoft-Dokumentation
+title: AddNew-Methode (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 043855dc4f2af915b7e1f61bffe99ae89956c3be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67921304"
 ---
 # <a name="addnew-method-example-vb"></a>AddNew-Methode – Beispiel (VB)
-Dieses Beispiel verwendet die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) Methode, um einen neuen Eintrag mit dem angegebenen Namen zu erstellen.  
+In diesem Beispiel wird die [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) -Methode verwendet, um einen neuen Datensatz mit dem angegebenen Namen zu erstellen.  
   
 ```  
 'BeginAddNewVB  
@@ -107,6 +107,6 @@ End Sub
 'EndAddNewVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [AddNew-Methode (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

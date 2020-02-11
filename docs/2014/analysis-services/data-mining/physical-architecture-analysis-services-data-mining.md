@@ -1,5 +1,5 @@
 ---
-title: Physische Architektur (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Physische Architektur (Analysis Services Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81c9ee3db0a05107913d3b75fba20ebe8607f941
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083196"
 ---
 # <a name="physical-architecture-analysis-services---data-mining"></a>Physische Architektur (Analysis Services &ndash; Data Mining)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet sowohl Server- als auch Clientkomponenten zum Bereitstellen von Data Mining-Funktionen für Business Intelligence-Anwendungen:  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet sowohl Server-als auch Client Komponenten, um Data Mining Funktionen für Business Intelligence Anwendungen bereitzustellen:  
   
 -   Die Serverkomponente wird als Microsoft Windows-Dienst implementiert. Sie können mehrere Instanzen auf dem gleichen Computer verwenden, wobei jede Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] als separate Instanzen des Windows-Diensts implementiert.  
   
@@ -41,16 +41,17 @@ ms.locfileid: "66083196"
 > [!WARNING]  
 >  DSO wurde als veraltet markiert. Sie sollten DSO daher nicht zum Entwickeln von Lösungen verwenden.  
   
- ![Analysis Services-System-Architekturdiagramm](../dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services-System-Architekturdiagramm")  
+ ![Analysis Services-Systemarchitektur (Diagramm)](../dev-guide/media/analysisservicessystemarchitecture.gif "Analysis Services-Systemarchitektur (Diagramm)")  
   
 ## <a name="server-configuration"></a>Serverkonfiguration  
  Eine Serverinstanz kann mehrere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken unterstützen, wobei jede über eine eigene Instanz des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Diensts verfügt, der Clientanforderungen beantwortet und Objekte verarbeitet.  
   
- Wenn Sie sowohl tabellarischen Modelle als auch Data Mining-Modelle und/oder mehrdimensionale Modelle verwenden möchten, müssen Sie separate Instanzen installieren. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die parallele Installation von Instanzen, die im tabellarischen Modus ausgeführt werden (der die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) verwendet), sowie Instanzen, die in einer der konventionellen OLAP-, MOLAP- oder ROLAP-Konfigurationen ausgeführt werden. Weitere Informationen finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+ Wenn Sie sowohl tabellarischen Modelle als auch Data Mining-Modelle und/oder mehrdimensionale Modelle verwenden möchten, müssen Sie separate Instanzen installieren. 
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die parallele Installation von Instanzen, die im tabellarischen Modus ausgeführt werden (der die xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) verwendet), sowie Instanzen, die in einer der konventionellen OLAP-, MOLAP- oder ROLAP-Konfigurationen ausgeführt werden. Weitere Informationen finden Sie unter [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Die gesamte Kommunikation zwischen einem Client und dem Analysis Services-Server verwendet XMLA. Hierbei handelt es sich um ein plattform- und sprachenunabhängiges Protokoll. Wenn eine Anforderung von einem Client eingeht, wird von Analysis Services bestimmt, ob die Anforderung sich auf OLAP oder Data Mining bezieht, und die Anforderung wird entsprechend weitergeleitet. Weitere Informationen finden Sie unter [OLAP-Engine-Serverkomponenten](../multidimensional-models/olap-physical/olap-engine-server-components.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Logische Architektur &#40;Analysis Services – Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Logische Architektur &#40;Analysis Services Data Mining-&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

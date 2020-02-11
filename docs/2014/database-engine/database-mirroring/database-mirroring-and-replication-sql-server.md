@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807459"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
@@ -71,9 +71,9 @@ ms.locfileid: "62807459"
   
 3.  Konfigurieren Sie die Verteilung für die Spiegeldatenbank. Geben Sie den Namen der Spiegeldatenbank als Verleger an, und geben Sie denselben Verteiler- und Momentaufnahmeordner an, den auch die Prinzipaldatenbank verwendet. Wenn Sie z. B. eine Replikation mit gespeicherten Prozeduren konfigurieren, führen Sie auf dem Verteiler [sp_adddistpublisher](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus. Führen Sie anschließend auf der Spiegeldatenbank [sp_adddistributor](/sql/relational-databases/system-stored-procedures/sp-adddistributor-transact-sql) aus. Für **sp_adddistpublisher**:  
   
-    -   Setzen Sie den Wert des **@publisher** -Parameters auf den Netzwerknamen der Spiegeldatenbank.  
+    -   Legen Sie den Wert des **@publisher** -Parameters auf den Netzwerknamen der Spiegel Datenbank fest.  
   
-    -   Setzen Sie den Wert des **@working_directory** -Parameters auf den Momentaufnahmeordner fest, der von dem Prinzipal verwendet wird.  
+    -   Legen Sie den Wert des **@working_directory** -Parameters auf den Momentaufnahme Ordner fest, der vom Prinzipal verwendet wird.  
   
 4.  Geben Sie den Spiegeldatenbanknamen für den Parameter **-PublisherFailoverPartner** des Agents an. Dieser Parameter ist für die folgenden Agents erforderlich, um die Spiegeldatenbank nach einem Failover zu identifizieren:  
   
@@ -85,15 +85,16 @@ ms.locfileid: "62807459"
   
     -   Merge-Agent (für Mergeabonnements)  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikationsüberwachung (replisapi.dll: für Mergeabonnements, die per Websynchronisierung synchronisiert werden)  
+    -   
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikationsüberwachung (replisapi.dll: für Mergeabonnements, die per Websynchronisierung synchronisiert werden)  
   
     -   SQL Merge-ActiveX-Steuerelement (für Mergeabonnements, die über dieses Steuerelement synchronisiert werden)  
   
      Der Verteilungs-Agent und das Verteilungs-ActiveX-Steuerelement weisen diesen Parameter nicht auf, weil sie keine Verbindung mit dem Verleger herstellen.  
   
-     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
-    -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
@@ -133,9 +134,9 @@ ms.locfileid: "62807459"
   
 -   Beim Verwenden gespeicherter Prozeduren oder Replikationsverwaltungsobjekte (RMO, Replication Management Objects) zum Verwalten der Replikation in der Spiegeldatenbank müssen Sie in Fällen, in denen Sie den Verlegernamen angeben, den Namen der Instanz angeben, auf der die Datenbank für die Replikation aktiviert wurde. Den entsprechenden Namen ermitteln Sie mithilfe der [publishingservername](/sql/t-sql/functions/replication-functions-publishingservername)-Funktion.  
   
-     Wenn eine Veröffentlichungsdatenbank gespiegelt wird, sind die in der gespiegelten Datenbank gespeicherten Replikationsmetadaten identisch mit den Metadaten, die in der Prinzipaldatenbank gespeichert sind. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der Prinzipaldatenbank zur Replikation aktiviert wurden, der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen der Prinzipaldatenbank und nicht dem Namen der Spiegeldatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur Spiegeldatenbank erfolgt. Wenn Sie z. B. nach einem Failover zur Spiegeldatenbank die Replikation mit gespeicherten Prozeduren konfigurieren und ein Pullabonnement für eine Veröffentlichungsdatenbank hinzufügen wollen, die in der Prinzipaldatenbank aktiviert wurde, müssen Sie für den **@publisher** -Parameter von **sp_addpullsubscription** oder **sp_addmergepullsubscription**.  
+     Wenn eine Veröffentlichungsdatenbank gespiegelt wird, sind die in der gespiegelten Datenbank gespeicherten Replikationsmetadaten identisch mit den Metadaten, die in der Prinzipaldatenbank gespeichert sind. Demzufolge entspricht für Veröffentlichungsdatenbanken, die in der Prinzipaldatenbank zur Replikation aktiviert wurden, der in den Systemtabellen gespeicherte Verlegerinstanzname dem Namen der Prinzipaldatenbank und nicht dem Namen der Spiegeldatenbank. Dies wirkt sich auf die Replikationskonfiguration und -wartung aus, wenn ein Failover der Veröffentlichungsdatenbank zur Spiegeldatenbank erfolgt. Wenn Sie z. b. nach einem Failover die Replikation mit gespeicherten Prozeduren auf der Spiegelung konfigurieren und ein Pullabonnement zu einer Veröffentlichungs Datenbank hinzufügen möchten, die auf dem Prinzipal aktiviert wurde, müssen Sie anstelle des Spiegelungs namens für den **@publisher** Parameter von **sp_addpullsubscription** oder **sp_addmergepullsubscription**den Prinzipal Namen angeben.  
   
-     Wenn Sie nach einem Failover zur Spiegeldatenbank eine Veröffentlichungsdatenbank in der Spiegeldatenbank aktivieren, entspricht der Verlegerinstanzname in den Systemtabellen dem Namen der Spiegeldatenbank. In diesem Fall würden Sie den Namen der Spiegeldatenbank für den **@publisher** -Parameter verwenden.  
+     Wenn Sie eine Veröffentlichungs Datenbank nach einem Failover auf die Spiegelung in der Spiegelung aktivieren, ist der in den Systemtabellen gespeicherte Verlegerinstanzname der Name der Spiegelung. in diesem Fall würden Sie den Namen der Spiegelung für den **@publisher** Parameter verwenden.  
   
     > [!NOTE]  
     >  In einigen Fällen, z. B. bei **sp_addpublication**, wird der **@publisher** -Parameter nur für Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger unterstützt. In diesen Fällen ist er nicht relevant für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankspiegelung.  
@@ -158,10 +159,10 @@ ms.locfileid: "62807459"
 |--------------------|------------------------------------------------------------|  
 |Modus für hohe Sicherheit mit automatischem Failover|Wenn die Spiegeldatenbank nicht verfügbar ist, gibt der Protokolllese-Agent die Befehle an die Verteilungsdatenbank weiter. Ein Failover der Prinzipaldatenbank zur Spiegeldatenbank ist solange nicht möglich, bis die Spiegeldatenbank wieder online ist und alle Transaktionen von der Prinzipaldatenbank erhalten hat.|  
 |Modus mit hoher Leistung|Wenn die Spiegeldatenbank nicht verfügbar ist, läuft sie ungeschützt (das heißt, sie wird nicht gespiegelt). Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn der Dienst erzwungen wird und der Spiegelserver die Rolle der Prinzipaldatenbank übernimmt, arbeitet der Protokolllese-Agent für die Spiegeldatenbank und beginnt mit dem Übernehmen der neuen Transaktionen.<br /><br /> Beachten Sie, dass die Replikationslatenzzeit steigt, wenn die Spiegeldatenbank hinter die Prinzipaldatenbank zurückfällt.|  
-|Der Modus mit hoher Sicherheit ohne automatisches Failover|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf dem Datenträger in der Spiegeldatenbank festgeschrieben werden. Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn die Spiegeldatenbank nicht verfügbar ist, deaktiviert die Prinzipaldatenbank jede weitere Aktivität in der Datenbank, weshalb der Protokolllese-Agent keine Transaktionen replizieren muss.|  
+|Modus für hohe Sicherheit ohne automatisches Failover|Für alle Transaktionen, für die ein Commit ausgeführt wird, wird sichergestellt, dass sie auf dem Datenträger in der Spiegeldatenbank festgeschrieben werden. Der Protokolllese-Agent repliziert jedoch nur solche Transaktionen, die in der Spiegeldatenbank festgeschrieben wurden. Wenn die Spiegeldatenbank nicht verfügbar ist, deaktiviert die Prinzipaldatenbank jede weitere Aktivität in der Datenbank, weshalb der Protokolllese-Agent keine Transaktionen replizieren muss.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
- [Protokollversand und Replikation &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [Protokoll Versand und Replikations &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

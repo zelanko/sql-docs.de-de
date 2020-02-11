@@ -11,16 +11,16 @@ ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2e3b6101111fea08c86bbf79bf431d91aaa24261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 01/31/2020
 ms.locfileid: "65580319"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)
   Durch Formatieren der Elemente in einem Bericht lässt sich das Aussehen und die Lesbarkeit des Berichts deutlich verbessern. Die Textfelder und individuellen Elemente in Textfeldern, Bilder, Ausdrücke und Daten können im Berichtsentwurfsmodus formatiert werden.  
   
- ![Rs_FormatierungvonBerichtselementen](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "Rs_FormattingReporttItems")  
+ ![rs_FormattingReporttItems](../../reporting-services/report-design/media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
  A. Textfeld mit einem doppellinigen Rahmen und unterschiedlichen Formatvorlagen, einschließlich eines Links  
   

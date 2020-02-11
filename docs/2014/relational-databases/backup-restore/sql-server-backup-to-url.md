@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04f8eaf855d33faf0d2eab8fde718c92f9a24906
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75232324"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server-Sicherung über URLs
@@ -23,7 +23,7 @@ ms.locfileid: "75232324"
 ## <a name="requirements-components-and-concepts"></a>Anforderungen, Komponenten und Konzepte  
  **In diesem Abschnitt:**  
   
--   [Sicherung](#security)  
+-   [Sicherheit](#security)  
   
 -   [Einführung in die wichtigsten Komponenten und Konzepte](#intorkeyconcepts)  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75232324"
   
 -   [SQL Server-Komponenten](#sqlserver)  
   
--   [Einschränken](#limitations)  
+-   [Einschränkungen](#limitations)  
   
 -   [Unterstützung für Backup/Restore-Anweisungen](#Support)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "75232324"
   
 -   [Wiederherstellen aus Azure Storage mithilfe von SQL Server Management Studio](sql-server-backup-to-url.md#RestoreSSMS)  
   
-###  <a name="security"></a>Sicherung  
+###  <a name="security"></a> Sicherheit  
  Im folgenden finden Sie Sicherheitsüberlegungen und-Anforderungen beim Sichern oder Wiederherstellen von Azure BLOB Storage-Diensten.  
   
 -   Beim Erstellen eines Containers für den Azure BLOB Storage-Dienst wird empfohlen, den Zugriff auf **Privat**festzulegen. Dadurch wird der Zugriff auf Benutzer oder Konten beschränkt, die über die erforderlichen Anmeldeinformationen zur Authentifizierung beim Azure-Konto verfügen.  
@@ -124,7 +124,7 @@ ms.locfileid: "75232324"
 |||||  
 |-|-|-|-|  
 |BACKUP-/RESTORE-Anweisung|Unterstützt|Ausnahmen|Kommentare|  
-|SICHERUNG|&#x2713;|BLOCKSIZE und MAXTRANSFERSIZE werden nicht unterstützt.|WITH CREDENTIAL muss angegeben werden.|  
+|BACKUP|&#x2713;|BLOCKSIZE und MAXTRANSFERSIZE werden nicht unterstützt.|WITH CREDENTIAL muss angegeben werden.|  
 |RESTORE|&#x2713;||WITH CREDENTIAL muss angegeben werden.|  
 |RESTORE FILELISTONLY|&#x2713;||WITH CREDENTIAL muss angegeben werden.|  
 |RESTORE HEADERONLY|&#x2713;||WITH CREDENTIAL muss angegeben werden.|  
@@ -239,7 +239,7 @@ ms.locfileid: "75232324"
   
  [Datenbank sichern &#40;Seite "Sicherungs Optionen"&#41;](back-up-database-backup-options-page.md)  
   
- [Anmelde Informationen erstellen-Authentifizieren bei Azure Storage](create-credential-authenticate-to-azure-storage.md)  
+ [Erstellen von Anmeldeinformationen – Authentifizieren beim Azure-Speicher](create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a>SQL Server URL-Sicherung mithilfe des Wartungsplanungs-Assistenten  
  Ähnlich wie beim zuvor beschriebenen Sicherungs Task wurde der Wartungsplanungs-Assistent in SQL Server Management Studio erweitert, um die **URL** als eine der Ziel Optionen und andere unterstützende Objekte einzuschließen, die für die Sicherung im Azure-Speicher wie die SQL-Anmelde Informationen erforderlich sind. Weitere Informationen finden Sie unter der **Definieren von Sicherungstasks** im Abschnitt [Using Maintenance Plan Wizard](../maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure).  
@@ -253,11 +253,11 @@ ms.locfileid: "75232324"
   
 3.  SQL Server dann mithilfe der angegebenen SQL-Anmelde Informationen eine Verbindung mit dem Azure-Speicher her und öffnet das Dialogfeld **Sicherungsdatei in Azure suchen** . Die Sicherungsdateien, die sich im Arbeitsspeicher befinden, werden auf dieser Seite angezeigt. Wählen Sie die Datei aus, die Sie zum Wiederherstellen verwenden möchten, und klicken Sie auf **OK**. Dadurch gelangen Sie zurück zum Dialogfeld **Sicherungsmedien auswählen** . Wenn Sie in diesem Dialogfeld auf **OK** klicken, wird das Haupt Dialogfeld wieder **herstellen** angezeigt, in dem Sie die Wiederherstellung durchführen können.  Weitere Informationen finden Sie in den folgenden Themen:  
   
-     [Seite "Datenbank &#40;allgemein Wiederherstellen"&#41;](restore-database-general-page.md)  
+     [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](restore-database-general-page.md)  
   
      [Seite "Daten Bank &#40;Dateien wiederherstellen"&#41;](restore-database-files-page.md)  
   
-     [Seite "Daten Bank &#40;Optionen wiederherstellen"&#41;](restore-database-options-page.md)  
+     [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](restore-database-options-page.md)  
   
 ##  <a name="Examples"></a>Code Beispiele  
  Dieser Abschnitt enthält die folgenden Beispiele.  
@@ -802,4 +802,4 @@ ms.locfileid: "75232324"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Bewährte Methoden und Problembehandlung bei der SQL Server Backup-URL](sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
- [Sichern und Wiederherstellen von System Datenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   
+ [Sichern und Wiederherstellen von Systemdatenbanken &#40;SQL Server&#41;](back-up-and-restore-of-system-databases-sql-server.md)   

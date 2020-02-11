@@ -1,5 +1,5 @@
 ---
-title: Installieren des Upgrade Advisors über die Eingabeaufforderung | Microsoft-Dokumentation
+title: Installieren von Upgrade Advisor von der Eingabeaufforderung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b694af5b760ae3c1ead1e4984c35ef61c0fa602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094335"
 ---
 # <a name="installing-upgrade-advisor-from-the-command-prompt"></a>Installieren des Upgrade Advisors von der Eingabeaufforderung aus
@@ -32,11 +32,11 @@ ms.locfileid: "66094335"
   
  In der folgenden Tabelle werden die gängigsten Optionen aufgelistet.  
   
-|Argument|Description|  
+|Argument|BESCHREIBUNG|  
 |--------------|-----------------|  
-|/q[n&#124;b&#124;r&#124;f]|Legt die Benutzeroberflächenebene fest:<br /><br /> n = keine Benutzeroberfläche<br /><br /> b = grundlegende Benutzeroberfläche (nur Status, keine Eingabeaufforderungen)<br /><br /> r = reduzierte Benutzeroberfläche (Dialogfeld am Ende der Installation)<br /><br /> f = Vollständige Benutzeroberfläche|  
-|/L|Gibt Protokolldateioptionen an. Um alle Meldungen in *Log_file_name*, verwenden Sie **-L\*v**_Log_file_name_. Um nur Fehlermeldungen zu protokollieren, verwenden `-Le` *Log_file_name*.|  
-|ADDLOCAL=ALL&#124; REMOVE=ALL&#124;REINSTALL=ALL|Gibt an, dass der Upgrade Advisor installiert (ADDLOCAL), entfernt (REMOVE) oder neu installiert (REINSTALL) wird.|  
+|/q [n&#124;b&#124;r&#124;f]|Legt die Benutzeroberflächenebene fest:<br /><br /> n = keine Benutzeroberfläche<br /><br /> b = grundlegende Benutzeroberfläche (nur Status, keine Eingabeaufforderungen)<br /><br /> r = reduzierte Benutzeroberfläche (Dialogfeld am Ende der Installation)<br /><br /> f = Vollständige Benutzeroberfläche|  
+|/L|Gibt Protokolldateioptionen an. Um alle Nachrichten in *log_file_name*zu protokollieren, verwenden Sie **-L\*v**_log_file_name_. Verwenden `-Le`Sie *log_file_name*, um nur Fehlermeldungen zu protokollieren.|  
+|ADDLOCAL = alle&#124; Remove = alle&#124;REINSTALL = ALL|Gibt an, dass der Upgrade Advisor installiert (ADDLOCAL), entfernt (REMOVE) oder neu installiert (REINSTALL) wird.|  
 |UAINSTALLDIR=path|Installiert den Upgrade Advisor am von "path" angegebenen Speicherort.|  
   
 ## <a name="installation-examples"></a>Installationsbeispiele  
@@ -67,8 +67,8 @@ SQLUA.msi /qn REMOVE=ALL
 Msiexec.exe /i C:\Downloads\SQLUA.msi /qn REMOVE=ALL  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Installieren des Upgrade Advisors](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Installieren von Upgrade Advisor](../../../2014/sql-server/install/installing-upgrade-advisor.md)   
  [Voraussetzungen für den Upgrade Advisor](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)  
   
   

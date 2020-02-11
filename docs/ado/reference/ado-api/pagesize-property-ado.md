@@ -16,28 +16,28 @@ ms.assetid: e57930a6-46c4-4a17-a3b6-f79e94d5c9c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1db01010fea79d2badaf81588296391d7e2149f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67931768"
 ---
 # <a name="pagesize-property-ado"></a>PageSize-Eigenschaft (ADO)
-Gibt an, wie viele Datensätze bilden eine Seite in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Gibt an, wie viele Datensätze eine Seite im [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)bilden.  
   
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
- Legt fest oder gibt einen **lange** Wert, der angibt, wie viele Datensätze auf einer Seite befinden. Der Standardwert ist **10**.  
+ Legt einen **Long** -Wert fest, der angibt, wie viele Datensätze auf einer Seite vorliegen, oder gibt ihn zurück Der Standardwert ist **10**.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden der **PageSize** Eigenschaft, um zu bestimmen, wie viele Datensätze eine logische Seite der Daten zu stellen. Eine Seitengröße festlegen, können Sie mit der [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) Eigenschaft, um zu den ersten Datensatz einer bestimmten Seite wechseln. Dies ist nützlich in Szenarien mit Web-Server, wenn Sie den Benutzer auf der Seite durch die Daten, zulassen, eine bestimmte Anzahl von Datensätzen zu einem Zeitpunkt anzuzeigen möchten.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie die **PageSize** -Eigenschaft, um zu bestimmen, wie viele Datensätze eine logische Datenseite bilden. Durch das Festlegen einer Seitengröße können Sie die [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) -Eigenschaft verwenden, um zum ersten Datensatz einer bestimmten Seite zu wechseln. Dies ist in Webserver Szenarios nützlich, wenn Sie es dem Benutzer ermöglichen möchten, Daten zu durchlaufen und jeweils eine bestimmte Anzahl von Datensätzen anzuzeigen.  
   
- Diese Eigenschaft kann zu einem beliebigen Zeitpunkt festgelegt werden, und der Wert für die Berechnung des Speicherort des ersten Datensatzes einer bestimmten Seite verwendet werden.  
+ Diese Eigenschaft kann jederzeit festgelegt werden, und ihr Wert wird zum Berechnen der Position des ersten Datensatzes einer bestimmten Seite verwendet.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [AbsolutePage, PageCount und PageSize Eigenschaften – Beispiel (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
- [AbsolutePage, PageCount und PageSize Eigenschaften – Beispiel (VC++)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für AbsolutePage, PageCount und pageSize-Eigenschaften (VB)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)   
+ [Beispiel für AbsolutePage, PageCount und pageSize-Eigenschaften (VC + +)](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)   
  [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
  [PageCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)

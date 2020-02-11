@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 128da8d5bb3b956b5b5661ce47ca6e4b741f0bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63282418"
 ---
 # <a name="security-considerations-for-extensions"></a>Überlegungen zur Sicherheit von Erweiterungen
@@ -46,7 +46,7 @@ ms.locfileid: "63282418"
 ## <a name="initialization-of-extension-assemblies"></a>Initialisierung von Erweiterungsassemblys  
  Wenn Erweiterungen zum ersten Mal vom Berichtsserver in den Speicher geladen werden, verwenden sie die Anmeldeinformationen für ein Dienstkonto. Denn einige Erweiterungsassemblys benötigen bestimmte Berechtigungen, um auf die Systemressourcen zugreifen, die Konfigurationsdateien lesen und andere abhängige Assemblys laden zu dürfen. Nachdem eine Assembly geladen und initialisiert wurde, verwenden alle nachfolgenden Aufrufe der Erweiterungsassemblys die Anmeldeinformationen vom Konto des Benutzers, der gerade angemeldet ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterungen für Reporting Services](reporting-services-extensions.md)   
  [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](reporting-services-extension-library.md)  
   

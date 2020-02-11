@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 94ad81913071a3bbd4aad33515c27c68b9e268e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482675"
 ---
 # <a name="model-object-permissions-master-data-services"></a>Berechtigungen für Modellobjekte (Master Data Services)
@@ -27,20 +27,20 @@ ms.locfileid: "65482675"
   
  Um die jedem Attributwert zugewiesene Sicherheit zu ermitteln, werden Modellobjektberechtigungen mit Hierarchieelementberechtigungen kombiniert, die die Elemente bestimmen, auf die ein Benutzer zugreifen kann.  
   
- Um einem Benutzerzugriff auf den Funktionsbereich außer geben **Explorer**, die Benutzer muss ein modelladministrator sein, der Objektmodellen auch Zuweisen von Berechtigungen für Modellobjekte. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+ Um einem Benutzer Zugriff auf einen anderen Funktionsbereich als **Explorer**zu geben, muss der Benutzer ein Modell Administrator sein, der auch das Zuweisen von Berechtigungen für Modell Objekte umfasst. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
- Berechtigungen für Modellobjekte werden in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Benutzeroberfläche im Funktionsbereich **Benutzer- und Gruppenberechtigungen** auf der Registerkarte **Modelle** zugewiesen. Auf dieser Registerkarte wird das Modell als Baumstruktur dargestellt. Wenn Sie einem Objekt in der Struktur eine Berechtigung zuweisen, wird diese Berechtigung von allen untergeordneten Objekten geerbt. Sie können die Vererbung überschreiben, indem Sie einzelnen Objekten eine Berechtigung zuweisen.  
+ Berechtigungen für Modell Objekte werden in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] Benutzeroberfläche (User Interface, UI) im Funktionsbereich **Benutzer-und Gruppenberechtigungen** auf der Registerkarte **Modelle** zugewiesen. Auf dieser Registerkarte wird das Modell als Baumstruktur dargestellt. Wenn Sie einem Objekt in der Struktur eine Berechtigung zuweisen, wird diese Berechtigung von allen untergeordneten Objekten geerbt. Sie können die Vererbung überschreiben, indem Sie einzelnen Objekten eine Berechtigung zuweisen.  
   
- Sie können zuweisen **schreibgeschützte**, **Update**, oder **Verweigern** Berechtigungen für Modellobjekte. Wenn Sie auf der Registerkarte **Modelle** keine Berechtigungen zuweisen, kann der Benutzer keine Modelle oder Daten in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]anzeigen.  
+ Sie können Modell Objekten die Berechtigung " **Lesen**", " **Aktualisieren**" oder " **verweigern** " zuweisen. Wenn Sie auf der Registerkarte **Modelle** keine Berechtigungen zuweisen, kann der Benutzer keine Modelle oder Daten in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]anzeigen.  
   
-## <a name="best-practice"></a>Bewährte Methoden  
- Im Allgemeinen sollten Sie zuweisen **Update** für das Modellobjekt verfügen, und klicken Sie dann Berechtigung explizit zuweisen untergeordneten Objekten. Wenn Sie untergeordneten Objekten keine Berechtigung zuweisen, werden die Berechtigungen geerbt, und der Benutzer ist Administrator.  
+## <a name="best-practice"></a>Bewährte Methode  
+ Im Allgemeinen sollten Sie dem Modell Objekt die Berechtigung **Aktualisieren** zuweisen und dann untergeordneten Objekten die Berechtigung explizit zuweisen. Wenn Sie untergeordneten Objekten keine Berechtigung zuweisen, werden die Berechtigungen geerbt, und der Benutzer ist Administrator.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
- [Modellberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-permissions-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)   
+ [Modell Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-permissions-master-data-services.md)   
  [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../../2014/master-data-services/functional-area-permissions-master-data-services.md)   
- [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Hierarchie Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -17,26 +17,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69724baa3790f2b7475369c8f947a4201bcd57f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108722"
 ---
 # <a name="provision-subscriptions-and-alerts-for-ssrs-service-applications"></a>Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen
+  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements und -Datenwarnungen setzt voraus, dass der SQL Server-Agent verwendet und SQL Server-Agentberechtigungen konfiguriert werden. Wenn Fehlermeldungen darauf hinweisen, dass der SQL Server-Agent erforderlich ist und Sie den SQL Server-Agent gestartet haben, können Sie die Berechtigungen aktualisieren oder überprüfen. Dieses Thema erstreckt sich auf [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus. Es werden drei Methoden beschrieben, wie Sie SQL Server-Agentberechtigungen bei Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Abonnements aktualisieren können. Die Anmeldeinformationen, die Sie in den Schritten dieses Themas verwenden, müssen ausreichende Berechtigungen aufweisen, um RSExecRole-Ausführungsberechtigungen für Objekte in der Dienstanwendung sowie in der msdb- und Masterdatenbank zu gewähren.  
   
 ||  
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2013 &#124; SharePoint 2010|  
   
- ![SQL Agent-Berechtigungen für Dienstanwendungs-Datenbanken](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "SQL Agent permissions to Service Application DBs")  
+ ![SQL Agent-Berechtigungen für Dienstanwendungs-Datenbanken](../../../2014/sql-server/install/media/rs-provisionsqlagent.gif "SQL Agent-Berechtigungen für Dienstanwendungs-Datenbanken")  
   
-||Beschreibung|  
+||BESCHREIBUNG|  
 |------|-----------------|  
 |**1**|Die Instanz der SQL Server-Datenbank-Engine, die die Reporting Services-Dienstanwendungsdatenbanken hostet.|  
 |**2**|Die Instanz des SQL Server-Agents für die Instanz der SQL-Datenbank-Engine|  
-|**3**|Die Reporting Services-Dienstanwendungsdatenbanken Die Namen basieren auf den Informationen, die zum Erstellen der Dienstanwendung verwendet wurden. Es werden beispielsweise folgende Datenbanknamen verwendet:<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0_Alerting<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0TempDB|  
+|**€**|Die Reporting Services-Dienstanwendungsdatenbanken Die Namen basieren auf den Informationen, die zum Erstellen der Dienstanwendung verwendet wurden. Es werden beispielsweise folgende Datenbanknamen verwendet:<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0_Alerting<br /><br /> ReportingService_2fbae157295d49df86d0b85760c704b0TempDB|  
 |**4**|Der Master und die MSDB-Datenbank der Instanz der SQL-Datenbank-Engine.|  
   
  Verwenden Sie einen der folgenden drei Methoden, um die Berechtigungen zu aktualisieren:  
@@ -57,9 +58,9 @@ ms.locfileid: "66108722"
   
 4.  Wenn der SharePoint-Administrator über ausreichende Berechtigungen für die Masterdatenbank und die Dienstanwendungsdatenbanken verfügt, geben Sie diese Anmeldeinformationen ein.  
   
-5.  Klicken Sie auf die Schaltfläche **OK** .  
+5.  Klicken Sie auf die Schaltfläche **OK**.  
   
-##  <a name="bkmk_download"></a> So laden Sie das Transact-SQL-Skript herunter  
+##  <a name="bkmk_download"></a>So laden Sie das Transact-SQL-Skript herunter  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen verwalten**.  
   
@@ -81,16 +82,16 @@ ms.locfileid: "66108722"
   
 4.  Aktualisieren Sie das folgende PowerShell-Cmdlet, indem Sie den Namen der Berichtsserver-Datenbank, das Anwendungspoolkonto und den Pfad der Anweisung ersetzen.  
   
-     **Syntax des Cmdlets:** `Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
+     **Syntax des Cmdlets:**`Get-SPRSDatabaseRightsScript -DatabaseName <ReportingServices database name> -UserName <app pool account> -IsWindowsUser | Out-File <path of statement>`  
   
-     **Beispiel-Cmdlet:** `Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
+     **Beispiel-Cmdlet:**`Get-SPRSDatabaseRightsScript -DatabaseName ReportingService_46fd00359f894b828907b254e3f6257c -UserName "NT AUTHORITY\NETWORK SERVICE" -IsWindowsUser | Out-File c:\SQLServerAgentrights.sql`  
   
 ## <a name="using-the-transact-sql-script"></a>Verwenden des Transact-SQL-Skripts  
  Die folgenden Verfahren können mit Skripts verwendet werden, die von der Bereitstellungsseite heruntergeladen oder mit PowerShell erstellt wurden.  
   
 #### <a name="to-load-the-transact-sql-script-in-sql-server-management-studio"></a>So laden Sie das Transact-SQL-Skript in SQL Server Management Studio  
   
-1.  SQL Server Management Studio zum Öffnen der **starten** Menü klicken Sie auf **Microsoft SQL Server 2012** , und klicken Sie auf **SQL Server Management Studio**.  
+1.  Um SQL Server Management Studio zu öffnen, klicken Sie im **Startmenü** auf **Microsoft SQL Server 2012** , und klicken Sie auf **SQL Server Management Studio**.  
   
 2.  Legen Sie im Dialogfeld **Verbindung mit Server herstellen** die folgenden Optionen fest:  
   

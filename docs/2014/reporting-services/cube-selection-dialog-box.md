@@ -1,5 +1,5 @@
 ---
-title: Cube-Spaltenauswahl (Dialogfeld) | Microsoft-Dokumentation
+title: Cubeauswahl (Dialog Feld) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa45de225ac1de636bc9e9b14cec9d1ab4512316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109565"
 ---
 # <a name="cube-selection-dialog-box"></a>Cubeauswahl (Dialogfeld)
   Mithilfe des Dialogfelds **Cubeauswahl** wählen Sie einen anderen Cube als Datenquelle für Ihren Bericht aus. Wenn Sie einen anderen Cube auswählen, ist die Abfrage möglicherweise nicht mehr gültig.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services MDX Query Designer User Interface](report-data/analysis-services-mdx-query-designer-user-interface.md)   
- [Analysis Services-Verbindungstyp für MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services MDX-Abfrage-Designer-Benutzeroberfläche](report-data/analysis-services-mdx-query-designer-user-interface.md)   
+ [Analysis Services Verbindungstyp für MDX &#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md)  
   
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f12b66fd895b7a7b90103fd1bed1eb51597c669a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65483169"
 ---
 # <a name="delete-a-model-master-data-services"></a>Löschen eines Modells (Master Data Services)
@@ -26,12 +26,12 @@ ms.locfileid: "65483169"
 > [!NOTE]  
 >  Nach Abschluss dieser Prozedur sind alle Objekte und alle Daten aus allen Versionen des Modells permanent gelöscht.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-model"></a>So löschen Sie ein Modell  
   
@@ -39,16 +39,16 @@ ms.locfileid: "65483169"
   
 2.  Zeigen Sie auf der Seite **Modellansicht** auf der Menüleiste auf **Verwalten** , und klicken Sie auf **Modelle**.  
   
-3.  Auf der **Modellverwaltung** Seite, wählen Sie die Zeile für das Modell, das Sie löschen möchten.  
+3.  Wählen Sie auf der Seite **Modell Wartung** die Zeile für das Modell aus, das Sie löschen möchten.  
   
-4.  Klicken Sie auf **ausgewähltes Modell löschen**.  
+4.  Klicken Sie auf **Ausgewähltes Modell löschen**.  
   
 5.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
 6.  Klicken Sie im zusätzlichen Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   
- [Erstellen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
+ [Erstellen Sie ein Modell &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)  
   
   

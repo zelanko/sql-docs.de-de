@@ -22,10 +22,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: d42f93735723c81baf837736bfabcda2b1707aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63011832"
 ---
 # <a name="credentials-database-engine"></a>Anmeldeinformationen (Datenbank-Engine)
@@ -35,10 +35,10 @@ ms.locfileid: "63011832"
   
  Systemanmeldeinformationen werden automatisch erstellt und mit bestimmten Endpunkten verbunden. Namen für Systemanmeldeinformationen beginnen mit zwei Nummernzeichen (##).  
   
- Weitere Informationen zu Anmeldeinformationen finden Sie unter den [sys.credentials](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) -Katalogsicht angezeigt.  
+ Weitere Informationen zu Anmelde Informationen finden Sie in der Katalog Sicht [sys. Anmelde](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) Informationen.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Erstellen von Anmeldeinformationen](../authentication-access/create-a-credential.md) [Erstellung von Anmeldeinformationen &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
+ [Create](../authentication-access/create-a-credential.md) [Credential CREATE CREDENTIAL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-credential-transact-sql)  
   
  [Sichern von SQL Server](../securing-sql-server.md)  
   

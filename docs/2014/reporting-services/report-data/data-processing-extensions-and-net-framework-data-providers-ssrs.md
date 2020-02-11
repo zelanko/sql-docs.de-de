@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e91dd470b4810fc13c95cbb335b1cf8d2b10430e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107383"
 ---
 # <a name="data-processing-extensions-and-net-framework-data-providers-ssrs"></a>Datenverarbeitungserweiterungen und .NET Framework-Datenanbieter (SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107383"
 > [!NOTE]  
 >  Ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter oder eine benutzerdefinierte Datenverarbeitungserweiterung muss installiert und registriert werden, bevor Sie damit auf Daten aus einer Datenquelle zugreifen können. Die Datenverarbeitungserweiterung muss zum Verfassen des Berichts auf dem Berichterstellungsclient installiert und registriert werden sowie auf dem Berichtsserver, um den veröffentlichten Bericht anzuzeigen. Nicht alle Datenanbieter funktionieren in einer Serverumgebung. Weitere Informationen finden Sie unter [Registrieren eines .NET Framework-Standarddatenproviders (SSRS)](register-a-standard-net-framework-data-provider-ssrs.md) und [Bereitstellen von Datenverarbeitungserweiterungen](../extensions/data-processing/deploying-a-data-processing-extension.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Datenverarbeitungserweiterungen](../extensions/data-processing/data-processing-extensions-overview.md)   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

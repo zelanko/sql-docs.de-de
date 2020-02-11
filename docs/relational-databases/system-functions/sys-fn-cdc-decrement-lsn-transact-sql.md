@@ -1,5 +1,5 @@
 ---
-title: fn_cdc_decrement_lsn (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_cdc_decrement_lsn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046513"
 ---
-# <a name="sysfncdcdecrementlsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
+# <a name="sysfn_cdc_decrement_lsn-transact-sql"></a>sys.fn_cdc_decrement_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die vorherige Protokollfolgenummer (Log Sequence Number, LSN) in der auf der angegebenen LSN basierenden Reihenfolge zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,16 +43,16 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argumente  
  *lsn_value*  
- LSN-Wert. *lsn_value* ist **binary(10)**  
+ LSN-Wert. *lsn_value* ist **Binär (10)**.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **binary(10)**  
+ **Binär (10)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die von der Funktion zurückgegebene LSN ist immer kleiner als der angegebene Wert. Zwischen den beiden Werten können sich keine LSN-Werte befinden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **public** -Datenbankrolle.  
+ Erfordert die Mitgliedschaft in der **Public** -Daten Bank Rolle.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird mithilfe von `sys.fn_cdc_decrement_lsn` die LSN-Obergrenze in einer Abfrage festgelegt, bei der Änderungsdatenzeilen mit LSN-Werten zurückgegeben werden, die unter dem größten LSN-Wert liegen.  
@@ -67,10 +67,10 @@ SELECT * FROM cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.fn_cdc_increment_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
- [sys.fn_cdc_get_min_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
- [sys.fn_cdc_get_max_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. fn_cdc_increment_lsn &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-increment-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_min_lsn &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-min-lsn-transact-sql.md)   
+ [sys. fn_cdc_get_max_lsn &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-max-lsn-transact-sql.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

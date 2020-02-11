@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400885"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallele Data Warehouse Firewall-Konfiguration in Analytics Platform System
@@ -38,7 +38,7 @@ Die folgenden Ports werden für Clientverbindungen geöffnet, die von außerhalb
 |Zweck|Port #|Nodes|  
 |-----------|-----------|---------|  
 |SQL-Client Zugriff für PDW (TDS)|17001|CTL|  
-|Loader-Client Zugriff (dwloader #a0 SSIS)|8001|CTL|  
+|Loader-Client Zugriff (dwloader & SSIS)|8001|CTL|  
 |Remotedesktopzugriff|3389|CTL, CMP|  
 |SSIS-binaryloaderdatachannel|16551|CTL|  
 |"dwloader binaryloaderdatachannel|16551|CMP|  

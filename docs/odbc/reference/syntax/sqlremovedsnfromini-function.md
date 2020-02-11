@@ -1,5 +1,5 @@
 ---
-title: SQLRemoveDSNFromIni-Funktion | Microsoft-Dokumentation
+title: Sqlremovedsnfromini-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68024530"
 ---
 # <a name="sqlremovedsnfromini-function"></a>SQLRemoveDSNFromIni-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 1.0  
+**Konformitäts**  
+ Eingeführte Version: ODBC 1,0  
   
  **Zusammenfassung**  
- **SQLRemoveDSNFromIni** entfernt eine Datenquelle aus der Systeminformationen.  
+ **Sqlremovedsnfromini** entfernt eine Datenquelle aus den Systeminformationen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,32 +42,32 @@ BOOL SQLRemoveDSNFromIni(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *lpszDSN*  
- [Eingabe] Der Name der Datenquelle zu entfernen.  
+ *lpszdsn*  
+ Der Der Name der zu entfernenden Datenquelle.  
   
-## <a name="returns"></a>Rückgabewert  
- Die Funktion gibt "true" zurück, wenn die Datenquelle entfernt oder die Datenquelle nicht in der Datei Odbc.ini wurde. Es gibt FALSE zurück, wenn ein Fehler auftritt, entfernen Sie die Datenquelle.  
+## <a name="returns"></a>Rückgabe  
+ Die Funktion gibt "true" zurück, wenn die Datenquelle entfernt wird oder die Datenquelle nicht in der Datei "ODBC. ini" war. Wenn die Datenquelle nicht entfernt werden kann, wird false zurückgegeben.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Wenn **SQLRemoveDSNFromIni** gibt "false", ein zugeordnetes  *\*PfErrorCode* Wert abgerufen werden kann, durch den Aufruf **SQLInstallerError**. Die folgende Tabelle enthält die  *\*PfErrorCode* Werte, die zurückgegeben werden können **SQLInstallerError** und jeweils im Kontext dieser Funktion erläutert.  
+ Wenn **sqlremovedsnfromini** false zurückgibt, kann ein zugeordneter " * \*pferrorcode* "-Wert durch Aufrufen von " **sqlinstallererror**" abgerufen werden. In der folgenden Tabelle sind die * \*"pferrorcode* "-Werte aufgelistet, die von " **sqlinstallererror** " zurückgegeben werden können. Diese werden im Kontext dieser Funktion erläutert.  
   
-|*\*pfErrorCode*|Fehler|Beschreibung|  
+|*\*pferrorcode*|Fehler|BESCHREIBUNG|  
 |---------------------|-----------|-----------------|  
-|ODBC_ERROR_GENERAL_ERR|Allgemeine Installer-Fehler|Fehler für die gab es keine bestimmte Installer-Fehlers.|  
-|ODBC_ERROR_INVALID_DSN|Ungültige DSN|Die *LpszDSN* Argument war ungültig.|  
-|ODBC_ERROR_REQUEST_FAILED|Fehler bei der Anforderung|Das Installationsprogramm konnte die DSN-Informationen aus der Registrierung nicht entfernt werden.|  
-|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund von unzureichendem Speicher nicht ausgeführt werden.|  
+|ODBC_ERROR_GENERAL_ERR|Allgemeiner Installer-Fehler|Es ist ein Fehler aufgetreten, bei dem kein spezifischer installerfehler aufgetreten ist.|  
+|ODBC_ERROR_INVALID_DSN|Ungültiger DSN|Das *lpszdsn* -Argument war ungültig.|  
+|ODBC_ERROR_REQUEST_FAILED|Anforderung fehlgeschlagen|Der Installer konnte die DSN-Informationen nicht aus der Registrierung entfernen.|  
+|ODBC_ERROR_OUT_OF_MEM|Nicht genügend Arbeitsspeicher.|Das Installationsprogramm konnte die Funktion aufgrund eines fehlenden Speichers nicht ausführen.|  
   
 ## <a name="comments"></a>Kommentare  
- **SQLRemoveDSNFromIni** der Name der Datenquelle aus dem Abschnitt [ODBC-Datenquellen] die Systeminformationen entfernt. Auch entfernt Abschnitt Spezifikation-Datenquelle aus der Systeminformationen.  
+ **Sqlremovedsnfromini** entfernt den Namen der Datenquelle aus dem Abschnitt [ODBC-Datenquellen] der Systeminformationen. Außerdem wird der Abschnitt Datenquellen Spezifikation aus den Systeminformationen entfernt.  
   
- Diese Funktion sollte nur aus der Treiberbibliothek Setup aufgerufen werden.  
+ Diese Funktion sollte nur von einer Treiber-Setup Bibliothek aufgerufen werden.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
-|Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
+|Hinzufügen, ändern oder Entfernen einer Datenquelle|[ConfigDSN ausgeführt werden](../../../odbc/reference/syntax/configdsn-function.md)|  
 |Hinzufügen, ändern oder Entfernen einer Datenquelle|[SQLConfigDataSource](../../../odbc/reference/syntax/sqlconfigdatasource-function.md)|  
-|Entfernen die Standarddatenquelle|[SQLRemoveDefaultDataSource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
-|Name der Datenquelle hinzufügen, um die Systeminformationen|[SQLWriteDSNToIni](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|
+|Entfernen der Standarddaten Quelle|[Sqlremovedefaultdatasource](../../../odbc/reference/syntax/sqlremovedefaultdatasource-function.md)|  
+|Hinzufügen eines Datenquellen namens zu den Systeminformationen|[Sqlschreitedsnder ini](../../../odbc/reference/syntax/sqlwritedsntoini-function.md)|

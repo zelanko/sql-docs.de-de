@@ -14,10 +14,10 @@ ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 065a8869eff0e88cee5bf0bb110a948f709743d7
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75251670"
 ---
 # <a name="dqs-administration"></a>DQS-Administration
@@ -73,18 +73,18 @@ ms.locfileid: "75251670"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Beschreibt das Überwachen von Aktivitäten in DQS.|[Überwachen von DQS-Aktivitäten](../data-quality-services/monitor-dqs-activities.md)|  
-|Beschreibt, wie Einstellungen für Verweisdaten in DQS konfiguriert werden.|[Konfigurieren von DQS zum Verwenden von Verweis Daten](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
+|Beschreibt das Überwachen von Aktivitäten in DQS.|[Überwachen der DQS-Aktivitäten](../data-quality-services/monitor-dqs-activities.md)|  
+|Beschreibt, wie Einstellungen für Verweisdaten in DQS konfiguriert werden.|[Konfigurieren von DQS zum Verwenden von Verweisdaten](../data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Beschreibt das Konfigurieren von Schwellenwerten für Bereinigungs- und Abgleichsaktivitäten.|[Konfigurieren der Schwellenwerte für Bereinigung und Abgleich](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md)|  
-|Beschreibt, wie Benachrichtigungen in DQS aktiviert und deaktiviert werden.|[Aktivieren oder Deaktivieren von Profil Erstellungs Benachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
+|Beschreibt, wie Benachrichtigungen in DQS aktiviert und deaktiviert werden.|[Aktivieren oder Deaktivieren von Profilerstellungsbenachrichtigungen in DQS](../data-quality-services/enable-or-disable-profiling-notifications-in-dqs.md)|  
 |Beschreibt das Konfigurieren der DQS-Protokollierung auf Grundlage des Schweregrads der Ereignisse.|[Konfigurieren von Schweregraden für DQS-Protokolldateien](../data-quality-services/configure-severity-levels-for-dqs-log-files.md)|  
-|Beschreibt das Konfigurieren erweiterter Einstellungen für die DQS-Protokollierung.|[Erweiterte Einstellungen für DQS-Protokolldateien konfigurieren](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
+|Beschreibt das Konfigurieren erweiterter Einstellungen für die DQS-Protokollierung.|[Konfigurieren der erweiterten Einstellungen für DQS-Protokolldateien](../data-quality-services/configure-advanced-settings-for-dqs-log-files.md)|  
 |Beschreibt das Sichern und Wiederherstellen von DQS-Datenbanken.|[Sichern und Wiederherstellen von DQS-Datenbanken](../data-quality-services/backing-up-and-restoring-dqs-databases.md)|  
 |Beschreibt das Trennen und Anfügen von DQS-Datenbanken.|[Trennen und Anfügen von DQS-Datenbanken](../data-quality-services/detaching-and-attaching-dqs-databases.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verweis Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Verwalten von DQS-Protokolldateien](../data-quality-services/manage-dqs-log-files.md)   
- [Verwalten von DQS-Datenbanken](../data-quality-services/manage-dqs-databases.md)  
+ [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md)  
   
   

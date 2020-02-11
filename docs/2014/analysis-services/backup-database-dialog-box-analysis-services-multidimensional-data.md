@@ -1,5 +1,5 @@
 ---
-title: Sichern der Datenbank (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Dialog Feld ' Datenbank sichern ' (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064383"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Sicherungsdatenbank (Analysis Services – Mehrdimensionale Daten)
-  Im Dialogfeld **Datenbank sichern** von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank in einer Sicherungsdatei im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Sicherungsdateiformat (*.abf) sichern.  
+  Im Dialogfeld **Datenbank sichern** von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank in einer Sicherungsdatei im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Sicherungsdateiformat (*.abf) sichern.  
   
 > [!IMPORTANT]  
 >  Für jede Sicherungsdatei muss der Benutzer, der den Sicherungsbefehl ausführt, über die Berechtigung zum Schreiben in den für jede Datei angegebenen Sicherungsspeicherort verfügen. Dem Benutzer muss zudem eine der folgenden Rollen zugewiesen worden sein: Mitglied einer Serverrolle für die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder Mitglied einer Datenbankrolle mit der Berechtigung „Vollzugriff“ (Administrator) für die wiederherzustellende Datenbank.  
   
- **Um das Dialogfeld Datenbank sichern anzuzeigen.**  
+ **So zeigen Sie das Dialogfeld Datenbank sichern an**  
   
 -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste entweder auf den Ordner **Datenbanken** einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder auf eine Datenbank im **Objekt-Explorer**, und klicken Sie dann auf **Sichern**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Skript**  
  Erstellt ein Sicherungsskript, das auf den im Dialogfeld aktivierten Optionen basiert. Das Wiederherstellungsskript wird in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptsprache (ASSL) geschrieben.  
   
@@ -87,15 +87,15 @@ ms.locfileid: "66064383"
  **Speicherort für Remotepartitionssicherungen**  
  Zeigt den Speicherort der Remotepartitionen an, die der ausgewählten Datenbank zugeordnet sind, sowie die Remotesicherungsdatei, in der die Daten und Metadaten der Remotepartitionen gesichert werden. Folgende Spalten sind verfügbar:  
   
-|Spalte|Description|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Server**|Zeigt die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] an, die die Remotepartitionen verwaltet.|  
 |**Datenbank**|Zeigt die Datenbank von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] an, zu der die Remotepartitionen gehören.|  
 |**Partitionsliste**|Zeigt die Liste der Remotepartitionen an, die zu der im Feld **Datenbank**angegebenen Datenbank gehören.|  
 |**Remotesicherungsdatei**|Geben Sie den vollständigen Pfad und Dateinamen der Remotesicherungsdatei ein, die verwendet werden soll. Wahlweise können Sie auch auf die Schaltfläche mit den Auslassungspunkten (**...**) klicken, um das Dialogfeld **Datei speichern unter** anzuzeigen und dort den Pfad und Dateinamen der betreffenden Remotesicherungsdatei auszuwählen. Weitere Informationen zum Dialogfeld **Speichern unter** finden Sie unter [Dialogfeld „Datei speichern unter“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Designer und-Dialogfelder &#40;mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   
   

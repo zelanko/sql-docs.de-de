@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 954a71c8ca2e96d905892d77ff12b7270deded5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68097261"
 ---
 # <a name="unorder-mdx"></a>Unorder (MDX)
@@ -31,10 +31,10 @@ Unorder(Set_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Unorder** -Funktion entfernt jede Sortierung, die auf den Tupeln in der Gruppe durch eine andere Funktion oder Anweisung, wie z. B. die [Reihenfolge](../mdx/order-mdx.md) Funktion. Die Reihenfolge der Tupel in der Gruppe, die zurückgegeben werden, indem die **Unorder** Funktion ist unbestimmt.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Unorder** -Funktion entfernt jede Sortierung, die für die Tupel in der Menge durch eine beliebige andere Funktion oder Anweisung, wie z. b. die [Order](../mdx/order-mdx.md) -Funktion, erzwungen wird. Die Reihenfolge der Tupel in der Menge, die von der Unorder-Funktion zurückgegeben wird, ist **unbestimmt** .  
   
- Die **Unorder** Funktion wird als Hinweis für für die abfrageoptimierung bei der mengenverarbeitung verwendet. Wenn die Reihenfolge der Tupel in einer Gruppe für eine Berechnung oder Abfrage unwichtig ist, verwenden die **Unorder** Funktion kann einen Leistungsvorteil in solchen Fällen bereitstellen. Z. B. die [NonEmpty (MDX)](../mdx/nonempty-mdx.md) Funktion möglicherweise bieten eine bessere Leistung bei der für diese Funktion bereitgestellte Satz ungeordnet ist, als If wird [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Reihenfolge beibehalten muss, obwohl mit [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)], der Abfrageprozessor versucht, ausführen Diese Funktion automatisch für viele Funktionen, z. B. **Summe** und **aggregieren**. Der Leistungsvorteil durch Verwendung von **Unorder** vermutlich nur bei sehr großen Mengen, die aus Millionen von Tupeln bestehen, bemerkbar sein.  
+ Die **Unorder** -Funktion wird als Hinweis für die Abfrageoptimierung für die festgelegte Verarbeitung verwendet. Wenn die Reihenfolge der Tupel in einer Menge für eine Berechnung oder Abfrage unwichtig ist, kann die Verwendung der **Unorder** -Funktion in solchen Fällen einen Leistungsvorteil bieten. Beispielsweise kann die [NonEmpty (MDX)](../mdx/nonempty-mdx.md) -Funktion besser funktionieren, wenn der für diese Funktion bereitgestellte Satz ungeordnet ist [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , als wenn die Reihenfolge beibehalten [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]muss, obwohl mit der Abfrage Prozessor versucht, diese Funktion für viele Funktionen, wie z. b. **Sum** und **Aggregate**, automatisch auszuführen. Der Leistungsvorteil der Verwendung von " **Unorder** " ist nur bei sehr großen Mengen, die aus Millionen von Tupeln bestehen, wahrscheinlich erkennbar.  
   
 ## <a name="example"></a>Beispiel  
  Der folgende Pseudocode veranschaulicht die Syntax für diese Funktion.  
@@ -43,7 +43,7 @@ Unorder(Set_Expression)
 NonEmpty (UnOrder (<set_expression>))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

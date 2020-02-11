@@ -1,5 +1,5 @@
 ---
-title: WideWorldImporters OLAP-Datenbank-Katalog – SQL | Microsoft-Dokumentation
+title: Wideworldimporters OLAP-Daten Bank Katalog-SQL | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,93 +11,93 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68104290"
 ---
-# <a name="wideworldimportersdw-database-catalog"></a>Datenbankkatalog "wideworldimportersdw"
+# <a name="wideworldimportersdw-database-catalog"></a>Wideworldimportersdw-Daten Bank Katalog
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
-Erklärungen zu den Schemas, Tabellen und gespeicherten Prozeduren in der Datenbank "wideworldimportersdw". 
+Erläuterungen zu den Schemas, Tabellen und gespeicherten Prozeduren in der wideworldimportersdw-Datenbank. 
 
-Die Datenbank "wideworldimportersdw" wird für Datawarehousing und analytische Verarbeitung verwendet. Die Transaktionsdaten zu und Verkäufe in der Datenbank "wideworldimporters" generiert und in die Datenbank mit "wideworldimportersdw" geladen ist eine **tägliche ETL-Prozess**.
+Die wideworldimportersdw-Datenbank wird für die Data Warehousing-und analytische Verarbeitung verwendet. Die Transaktionsdaten zu Verkäufen und Käufen werden in der wideworldimporters-Datenbank generiert und mithilfe eines **täglichen ETL-Prozesses**in die wideworldimportersdw-Datenbank geladen.
 
-Die Daten in "wideworldimportersdw" spiegelt daher die Daten in "wideworldimporters", aber die Tabellen sind unterschiedlich organisiert. "Wideworldimportersdw" wird verwendet, während "wideworldimporters" ein herkömmlichen, normalisiertes Schema verfügt, die [Sternschema](https://wikipedia.org/wiki/Star_schema) Ansatz für die Tabellen-Entwurf. Neben den Tabellen Fakten- und Dimensionstabellen enthält die Datenbank eine Anzahl von Stagingtabellen, die verwendet werden, in der ETL-Prozess.
+Die Daten in wideworldimportersdw spiegeln daher die Daten in wideworldimporters wider, die Tabellen sind jedoch unterschiedlich angeordnet. Obwohl wideworldimporters ein herkömmliches normalisiertes Schema aufweist, verwendet wideworldimportersdw den [Stern Schema](https://wikipedia.org/wiki/Star_schema) Ansatz für den Tabellen Entwurf. Neben den Fakten-und Dimensions Tabellen enthält die Datenbank eine Reihe von Stagingtabellen, die im ETL-Prozess verwendet werden.
 
 ## <a name="schemas"></a>Schemas
 
-Die verschiedenen Arten von Tabellen sind in drei Schemas organisiert.
+Die unterschiedlichen Tabellentypen werden in drei Schemas organisiert.
 
-|Schema|Beschreibung|
+|Schema|BESCHREIBUNG|
 |-----------------------------|---------------------|
-|Dimension|Dimensionstabellen.|
-|Fakt|Faktentabellen.|  
-|Integration|Staging-Tabellen und andere Objekte, die für ETL erforderlich sind.|  
+|Dimension|Dimensions Tabellen.|
+|Fakt|Fakten Tabellen.|  
+|Integration|Stagingtabellen und andere Objekte, die für ETL benötigt werden.|  
 
 ## <a name="tables"></a>Tabellen
 
-Die Tabellen Dimensions- und Faktentabellen sind unten aufgeführt. Die Tabellen im Schema Integration werden nur für die ETL-Prozesse verwendet und sind nicht aufgeführt.
+Die Dimensions-und Fakten Tabellen sind unten aufgeführt. Die Tabellen im Integrations Schema werden nur für den ETL-Prozess verwendet und sind nicht aufgeführt.
 
-### <a name="dimension-tables"></a>Dimensionstabellen
+### <a name="dimension-tables"></a>Dimensions Tabellen
 
-"Wideworldimportersdw" hat die folgenden Dimensionstabellen. Die Beschreibung enthält die Beziehung mit den Quelltabellen in der Datenbank "wideworldimporters".
+Wideworldimportersdw verfügt über die folgenden Dimensions Tabellen. Die Beschreibung enthält die Beziehung zu den Quell Tabellen in der wideworldimporters-Datenbank.
 
-|Tabelle|Quelltabellen|
+|Tabelle|Quell Tabellen|
 |-----------------------------|---------------------|
-|Ort|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
-|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|date|Neue Tabelle mit Informationen zu den Datumsangaben, einschließlich der Geschäftsjahr (basierend auf dem 1. November für Geschäftsjahr starten).|
-|Employee|`Application.People`. installiert haben.|
-|StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|Kunde|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
+|Date|Neue Tabelle mit Informationen zu Datumsangaben, einschließlich des Finanz Jahrs (basierend auf dem 1. November-Start für das Finanz Jahr).|
+|Mitarbeiter|`Application.People`.|
+|Stockitem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Lieferanten|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods`. installiert haben.|
-|TransactionType|`Application.TransactionTypes`. installiert haben.|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
-### <a name="fact-tables"></a>Faktentabellen
+### <a name="fact-tables"></a>Fakten Tabellen
 
-"Wideworldimportersdw" hat die folgenden Faktentabellen. Die Beschreibung enthält die Beziehung mit den Quelltabellen in die Datenbank "wideworldimporters" als auch die Klassen von Analytics/berichterstellung Abfragen, die einzelnen Faktentabellen in der Regel mit verwendet wird.
+Wideworldimportersdw verfügt über die folgenden Fakten Tabellen. Die Beschreibung enthält die Beziehung zu den Quell Tabellen in der wideworldimporters-Datenbank sowie die Klassen von Analytics/Berichterstattungs Abfragen, mit denen jede Fakten Tabelle normalerweise verwendet wird.
 
-|Tabelle|Quelltabellen|Beispiel-Analysen|
+|Tabelle|Quell Tabellen|Beispiel Analyse|
 |-----------------------------|---------------------|---------------------|
-|Order|`Sales.Orders` und `Sales.OrderLines`|Sales Personen "," Auswahl/Packer-Produktivität, und auf Zeit, um Aufträge auszuwählen. Darüber hinaus niedrige vordefinierte Situationen zu Bestellungen zurück.|
-|Ausverkauf|`Sales.Invoices` und `Sales.InvoiceLines`|Sales Datumsangaben, Lieferdaten, Rentabilität im Laufe der Zeit, Profitabilität nach Vertriebsmitarbeiter.|
-|Kauf|`Purchasing.PurchaseOrderLines`|Erwartete und tatsächliche Lieferzeiten|
-|Transaction|`Sales.CustomerTransactions` und `Purchasing.SupplierTransactions`|Messen der Problem Datumsangaben im Vergleich zur Finalisierung Datumsangaben und Mengen.|
-|Datenverschiebung|`Warehouse.StockTransactions`|Bewegungen, die im Laufe der Zeit.|
-|Aktien gehalten|`Warehouse.StockItemHoldings`|Verfügbare Lagerbestände und Wert.|
+|Order|`Sales.Orders` und `Sales.OrderLines`|Sales People, Picker-und Packer-Produktivität und Zeit für die Auswahl von Aufträgen. Außerdem sind niedrige Aktien Situationen, die zu Aufträgen führen.|
+|Sale|`Sales.Invoices` und `Sales.InvoiceLines`|Verkaufsdaten, Übermittlungs Daten, Rentabilität im Zeitverlauf, Rentabilität durch Vertriebsmitarbeiter.|
+|Purchase|`Purchasing.PurchaseOrderLines`|Vs tatsächliche Vorlaufzeiten erwartet|
+|Transaktion|`Sales.CustomerTransactions` und `Purchasing.SupplierTransactions`|Messen von Problem Daten im Vergleich zum Abschluss von Datumsangaben und Summen.|
+|Bewegung|`Warehouse.StockTransactions`|Bewegungen im Zeitverlauf.|
+|Aktien Aufbewahrung|`Warehouse.StockItemHoldings`|Auf der Hand.|
 
 ## <a name="stored-procedures"></a>Gespeicherte Prozeduren
 
-Die gespeicherten Prozeduren werden in erster Linie für die ETL-Prozesse und Konfigurationszwecken verwendet.
+Die gespeicherten Prozeduren werden hauptsächlich für den ETL-Prozess und für Konfigurations Zwecke verwendet.
 
-Alle Erweiterungen des Beispiels werden empfohlen, mit der `Reports` Schema für Reporting Services-Berichten und die `PowerBI` Schema für den Zugang zu Power BI.
+Alle Erweiterungen des Beispiels werden empfohlen, das `Reports` Schema für Reporting Services Berichte und das Schema für den `PowerBI` Power BI-Zugriff zu verwenden.
 
-### <a name="application-schema"></a>Anwendungsschema
+### <a name="application-schema"></a>Anwendungs Schema
 
-Diese Prozeduren werden verwendet, zum Konfigurieren des Beispiels. Sie werden verwendet, zum Anwenden von Funktionen der Enterprise Edition auf die standard Edition-Version des Beispiels, PolyBase hinzufügen und neue Ausgangswerte zuzuweisen und ETL.
+Diese Prozeduren werden verwendet, um das Beispiel zu konfigurieren. Sie dienen zum Anwenden von Enterprise Edition-Features auf die Standard Edition-Version des Beispiels, zum Hinzufügen von polybase und zum reseed-ETL.
 
-|Prozedur|Zweck|
+|Verfahren|Zweck|
 |-----------------------------|---------------------|
-|Configuration_ApplyPartitionedColumnstoreIndexing|Wendet die Partitionierung und columnstore-Indizes für Tabellen.|
-|Configuration_ConfigureForEnterpriseEdition|Wendet die Partitionierung, Columnstore-Indizierung und in-Memory.|
-|Configuration_EnableInMemory|Ersetzt die Stagingtabellen für die Integration mit einer speicheroptimierten SCHEMA_ONLY-Tabellen, um ETL-Leistung zu verbessern.|
-|Configuration_ApplyPolyBase|Konfiguriert eine externe Datenquelle, Dateiformat und Tabelle.|
-|Configuration_PopulateLargeSaleTable|Enterprise Edition-Änderungen werden übernommen, und dann eine größere Menge an Daten für das Kalenderjahr 2012, als weiterer Verlauf füllt.|
-|Configuration_ReseedETL|Vorhandene Daten entfernt, und die ETL-Seeds Neustart. Dadurch können für die OLAP-Datenbank für das streckungsschema an aktualisierten Zeilen in der OLTP-Datenbank übereinstimmen.|
+|Configuration_ApplyPartitionedColumnstoreIndexing|Wendet sowohl Partitionierungs-als auch columnstore--Indizes für Fakten Tabellen an.|
+|Configuration_ConfigureForEnterpriseEdition|Wendet die Partitionierung, columnstore--Indizierung und den Speicher internen Speicher an.|
+|Configuration_EnableInMemory|Ersetzt die Stagingtabellen für die Integration durch SCHEMA_ONLY Speicher optimierte Tabellen, um die ETL-Leistung zu verbessern.|
+|Configuration_ApplyPolyBase|Konfiguriert eine externe Datenquelle, ein Dateiformat und eine Tabelle.|
+|Configuration_PopulateLargeSaleTable|Wendet Änderungen an der Enterprise Edition an und füllt dann eine größere Datenmenge für das 2012-Kalenderjahr als zusätzlichen Verlauf auf.|
+|Configuration_ReseedETL|Entfernt vorhandene Daten und startet die ETL-Kerne neu. Dies ermöglicht das erneute Auffüllen der OLAP-Datenbank, um die aktualisierten Zeilen in der OLTP-Datenbank abzugleichen.|
 
-### <a name="integration-schema"></a>Integration von Schemas
+### <a name="integration-schema"></a>Integrations Schema
 
-In der ETL-Prozess verwendete Prozeduren werden in den folgenden Kategorien:
-- Hilfsprozeduren für das ETL-Paket – alle Get * Verfahren.
-- Prozeduren, die von der ETL-Pakets verwendet werden, für die Migration werden Daten in die Data Warehouse-Tabellen - alle migrieren * Prozeduren bereitgestellt.
-- `PopulateDateDimensionForYear` : Nimmt ein Jahr und stellt sicher, dass alle Datumsangaben für dieses Jahr in aufgefüllt werden die `Dimension.Date` Tabelle.
+Im ETL-Prozess verwendete Prozeduren fallen in die folgenden Kategorien:
+- Hilfsprozeduren für die ETL-Paket-alle Get *-Prozeduren.
+- Prozeduren, die vom ETL-Paket zum Migrieren von bereitgestellten Daten in die DW-Tabellen migriert werden.
+- `PopulateDateDimensionForYear`: Nimmt ein Jahr in Kraft und stellt sicher, dass alle Datumsangaben für dieses `Dimension.Date` Jahr in der Tabelle aufgefüllt werden.
 
-### <a name="sequences-schema"></a>Schema für Sequenzen
+### <a name="sequences-schema"></a>Sequenz Schema
 
-Vor, um die Sequenzen in der Datenbank zu konfigurieren.
+Prozeduren zum Konfigurieren der Sequenzen in der Datenbank.
 
-|Prozedur|Zweck|
+|Verfahren|Zweck|
 |-----------------------------|---------------------|
-|ReseedAllSequences|Ruft die Prozedur `ReseedSequenceBeyondTableValue` für alle folgen.|
-|ReseedSequenceBeyondTableValue|Wird verwendet, um den nächsten Sequenzwert über den Wert in einer beliebigen Tabelle neu zu positionieren, die dieselbe Tasksequenz verwendet. (Z. B. eine `DBCC CHECKIDENT` für Identität Spalten entspricht, für die Sequenzen, aber auf potenziell mehrere Tabellen.)|
+|Reseedallsequenzen|Ruft die Prozedur `ReseedSequenceBeyondTableValue` für alle Sequenzen auf.|
+|Reseedsequencebeyondtablevalue|Wird verwendet, um den nächsten Sequenzwert hinter dem Wert in einer Tabelle, die dieselbe Sequenz verwendet, neu zu positionieren. (Wie eine `DBCC CHECKIDENT` für Identitäts Spalten Äquivalent für Sequenzen, aber über potenziell mehrere Tabellen hinweg.)|

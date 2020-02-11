@@ -1,5 +1,5 @@
 ---
-title: Element
+title: Members
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 0fda32b9-677d-4ba2-bb28-f76f2383a30f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: d6e663ef23c472b2a78ec71c58086824adae185e
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728005"
 ---
 # <a name="members-master-data-services"></a>Elemente (Master Data Services)
@@ -35,7 +35,7 @@ ms.locfileid: "73728005"
   
  In diesem Beispiel stellt die Tabelle eine Entität, die Zeilen in der Tabelle die Elemente und die Spalten in der Tabelle die Attribute dar. Jede Zelle stellt einen Attributwert für ein bestimmtes Element dar.  
   
- ![Master Data Services als Tabelle dargestellte Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services als Tabelle dargestellte Entität")  
+ ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Als Tabelle dargestellte Master Data Services-Entität")  
   
 ## <a name="member-types"></a>Elementtypen  
  Es gibt drei Arten von Elementen: Blattelemente, konsolidierte Elemente und Sammlungselemente.  
@@ -53,27 +53,27 @@ ms.locfileid: "73728005"
 -   In expliziten Hierarchien können konsolidierte Elemente übergeordnete Elemente anderer Elemente innerhalb der Hierarchie sein, oder sie können untergeordnete Elemente sein.  
   
 ## <a name="use-hierarchies-and-collections-to-organize-members"></a>Organisieren von Elementen mithilfe von Hierarchien und Auflistungen  
- Hierarchien und Auflistungen können verwendet werden, um Elemente für die Berichterstellung oder Analyse zu gruppieren. Weitere Informationen finden Sie unter [Hierarchies &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) und [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
+ Hierarchien und Auflistungen können verwendet werden, um Elemente für die Berichterstellung oder Analyse zu gruppieren. Weitere Informationen finden Sie unter [Hierarchien &#40;Master Data Services&#41;](../master-data-services/hierarchies-master-data-services.md) und [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md).  
   
 ## <a name="member-example"></a>Beispiel für ein Element  
  Im folgenden Beispiel schließt jedes Element einen Attributwert Name, Code, Subcategory StandardCost, ListPrice und FilePhoto ein.  
   
- ![Tabelle der Bike-Produkt Entität](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabelle der Bike-Produkt Entität")  
+ ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Entitätstabelle für Fahrradprodukte")  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie ein Blattelement.|[Erstellen eines Blattelements &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
-|Erstellen Sie ein neues konsolidiertes Element.|[Erstellen eines konsolidierten Elements &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
+|Erstellen Sie ein Blattelement.|[Blatt Element &#40;Master Data Services erstellen&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)|  
+|Erstellen Sie ein neues konsolidiertes Element.|[Erstellen Sie ein konsolidiertes Element &#40;Master Data Services&#41;](../master-data-services/create-a-consolidated-member-master-data-services.md)|  
 |Löschen Sie ein vorhandenes Element oder eine Auflistung.|[Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)|  
-|Reaktivieren Sie ein gelöschtes Element oder eine Auflistung.|[Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
-|Aktualisieren Sie die Attributwerte eines Elements.|[Ändern des Attributtyps &#40;MDS-Add-In für Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
+|Reaktivieren Sie ein gelöschtes Element oder eine Auflistung.|[Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)|  
+|Aktualisieren Sie die Attributwerte eines Elements.|[Ändern Sie den Attributtyp &#40;MDS-Add-in für Excel&#41;](../master-data-services/microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|  
 
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Übersicht über Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
+-   [Master Data Services Übersicht &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md)  
   
 -   [Entitäten &#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)  
   
@@ -83,9 +83,9 @@ ms.locfileid: "73728005"
   
 -   [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [Blattberechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
+-   [Blatt Berechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)  
   
  
--   [Filteroperatoren &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
+-   [Filter Operatoren &#40;Master Data Services&#41;](../master-data-services/filter-operators-master-data-services.md)  
   
   

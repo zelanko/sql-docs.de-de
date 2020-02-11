@@ -1,5 +1,5 @@
 ---
-title: Andere Treiberarchitekturen | Microsoft-Dokumentation
+title: Weitere Treiber Architekturen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,36 +17,36 @@ ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68086014"
 ---
 # <a name="other-driver-architectures"></a>Andere Treiberarchitekturen
-Einige ODBC-Treiber entsprechen nicht unbedingt an der Architektur, die zuvor beschriebenen. Dies kann sein, da die Treiber durchführen, außer denen eines herkömmlichen ODBC-Treibers Aufgaben sind oder nicht Treiber normale insofern.  
+Einige ODBC-Treiber entsprechen nicht strikt der zuvor beschriebenen Architektur. Dies kann daran liegen, dass die Treiber andere Aufgaben als die eines herkömmlichen ODBC-Treibers ausführen oder keine Treiber im normalen Sinn sind.  
   
-## <a name="driver-as-a-middle-component"></a>Treiber als mittlere-Komponente  
- Der ODBC-Treiber kann zwischen der Treiber-Manager und eine oder mehrere andere ODBC-Treiber befinden. Wenn der Treiber in der Mitte mit mehreren Datenquellen funktionsfähig ist, fungiert er als Verteiler von ODBC-Aufrufe (oder entsprechend übersetzten) an andere Module, die tatsächlich die Datenquellen zugreifen. In dieser Architektur nimmt der Treiber in der Mitte auf einigen der Rolle des Treiber-Managers.  
+## <a name="driver-as-a-middle-component"></a>Treiber als mittlere Komponente  
+ Der ODBC-Treiber kann sich zwischen dem Treiber-Manager und einem oder mehreren anderen ODBC-Treibern befinden. Wenn der Treiber in der Mitte mit mehreren Datenquellen arbeiten kann, fungiert er als Verteiler von ODBC-aufrufen (oder entsprechend übersetzte Aufrufe) für andere Module, die tatsächlich auf die Datenquellen zugreifen. In dieser Architektur nimmt der Treiber in der Mitte einen Teil der Rolle eines Treiber-Managers an.  
   
- Ein weiteres Beispiel für diese Art der Treiber ist ein Spy-Programm für ODBC, der abfängt und kopiert ODBC-Funktionen, die zwischen der Treiber-Manager und den Treiber gesendet werden. Diese Ebene kann verwendet werden, um entweder einen Treiber oder eine Anwendung zu emulieren. Auf der Treiber-Manager, erscheint die Ebene der ODBC-Treiber. an den Treiber wird die Ebene der Treiber-Manager.  
+ Ein weiteres Beispiel für diese Art von Treibern ist ein Spy-Programm für ODBC, das ODBC-Funktionen abfängt und kopiert, die zwischen dem Treiber-Manager und dem Treiber gesendet werden. Diese Ebene kann zum Emulieren eines Treibers oder einer Anwendung verwendet werden. Für den Treiber-Manager scheint die Ebene der Treiber zu sein. für den Treiber scheint die Ebene der Treiber-Manager zu sein.  
   
-## <a name="heterogeneous-join-engines"></a>Heterogenen Join-Engines  
- Einige ODBC-Treiber baut auf eine Abfrage-Engine zum Ausführen von heterogenen Joins. In einer Architektur eines heterogenen joinmoduls (siehe die folgende Abbildung), der Treiber für die Anwendung angezeigt wird, wie ein Treiber jedoch zu einer anderen Instanz des Treiber-Managers als Anwendung angezeigt wird. Dieser Treiber verarbeitet einen heterogenen Join von der Anwendung durch Aufrufen von unterschiedlichen SQL-Anweisungen im Treiber für jede verknüpfte Datenbank.  
+## <a name="heterogeneous-join-engines"></a>Heterogene joinengines  
+ Einige ODBC-Treiber basieren auf einer Abfrage-Engine zum Ausführen heterogener Joins. In einer Architektur eines heterogenen joinmoduls (siehe folgende Abbildung) wird der Treiber für die Anwendung als Treiber angezeigt, wird jedoch in einer anderen Instanz des Treiber-Managers als Anwendung angezeigt. Dieser Treiber verarbeitet einen heterogenen Join aus der Anwendung, indem für jede verknüpfte Datenbank separate SQL-Anweisungen in Treibern aufgerufen werden.  
   
- ![Architektur eines heterogenen joinmoduls](../../odbc/reference/media/fig3-4.gif "fig3-4")  
+ ![Architektur einer heterogenen Join-Engine](../../odbc/reference/media/fig3-4.gif "Fig3-4")  
   
- Diese Architektur bietet eine allgemeine Schnittstelle für die Anwendung auf Daten aus verschiedenen Datenbanken zugreifen. Eine allgemeine Möglichkeit zum Abrufen von Metadaten, z. B. Informationen zur spezielle Spalten (Zeilen-IDs), kann verwendet werden, und können allgemeine Katalogfunktionen zum Abrufen von Informationen zu Wörterbuch aufrufen. Durch Aufrufen der ODBC-Funktion **SQLStatistics**, z. B. kann die Anwendung Informationen zu den Indizes in den Tabellen verknüpft werden, abrufen, selbst wenn die Tabellen auf zwei separate Datenbanken sind. Der Abfrageprozessor muss nicht kümmern, wie in die Datenbanken zum Speichern von Metadaten.  
+ Diese Architektur stellt eine allgemeine Schnittstelle für die Anwendung für den Zugriff auf Daten aus unterschiedlichen Datenbanken bereit. Es kann eine gängige Methode zum Abrufen von Metadaten verwenden, z. b. Informationen zu speziellen Spalten (Zeilen Bezeichner), und es kann allgemeine Katalog Funktionen aufrufen, um Daten Wörterbuch Informationen abzurufen. Durch Aufrufen der ODBC-Funktion **SQLStatistics**kann die Anwendung beispielsweise Informationen zu den Indizes in den Tabellen abrufen, die verknüpft werden sollen, selbst wenn sich die Tabellen in zwei separaten Datenbanken befinden. Der Abfrage Prozessor muss sich keine Gedanken darüber machen, wie die Datenbanken Metadaten speichern.  
   
- Die Anwendung verfügt außerdem über Zugriff auf die standard-Datentypen. ODBC definiert allgemeine SQL-Datentypen, denen die die DBMS-spezifische Datentypen zugeordnet sind. Kann eine Anwendung aufrufen **SQLGetTypeInfo** zum Abrufen von Informationen zu Datentypen in unterschiedlichen Datenbanken.  
+ Die Anwendung verfügt auch über Standard Zugriff auf Datentypen. ODBC definiert allgemeine SQL-Datentypen, denen DBMS-spezifische Datentypen zugeordnet sind. Eine Anwendung kann **SQLGetTypeInfo** aufrufen, um Informationen zu Datentypen in verschiedenen Datenbanken abzurufen.  
   
- Wenn die Anwendung eine heterogenen Join-Anweisung generiert, wird der Abfrageprozessor in dieser Architektur analysiert die SQL-Anweisung, und klicken Sie dann generiert separate SQL-Anweisungen für jede Datenbank verknüpft werden sollen. Mithilfe von Metadaten zu jedem Treiber kann der Abfrageprozessor den Join am effizientesten, intelligenten bestimmen. Z. B. wenn die Anweisung zwei Tabellen in einer Datenbank mit einer Tabelle auf eine andere Datenbank verknüpft werden, kann der Abfrageprozessor Verknüpfen der beiden Tabellen in einer Datenbank vor dem Verknüpfen des Ergebnis mit der Tabelle aus der anderen Datenbank.  
+ Wenn die Anwendung eine heterogene JOIN-Anweisung generiert, analysiert der Abfrage Prozessor in dieser Architektur die SQL-Anweisung und generiert dann separate SQL-Anweisungen für jede Datenbank, die verknüpft werden soll. Durch die Verwendung von Metadaten zu den einzelnen Treibern kann der Abfrage Prozessor den effizientesten, intelligenten Join ermitteln. Wenn die Anweisung z. b. zwei Tabellen in einer Datenbank mit einer Tabelle in einer anderen Datenbank verknüpft, kann der Abfrage Prozessor die beiden Tabellen in einer Datenbank verknüpfen, bevor das Ergebnis mit der Tabelle aus der anderen Datenbank verknüpft wird.  
   
 ## <a name="odbc-on-the-server"></a>ODBC auf dem Server  
- ODBC-Treiber können auf einem Server installiert werden, damit sie von Anwendungen auf einer Reihe von Clientcomputern verwendet werden können. In dieser Architektur (siehe die folgende Abbildung), einen Treiber-Manager und einen einzelnen ODBC-Treiber werden installiert, auf jedem Client und einem anderen Treiber-Manager und eine Reihe von ODBC-Treiber auf dem Server installiert sind. Dadurch wird jeder Clientzugriff auf eine Vielzahl von Treibern auf dem Server verwaltet und verwendet.  
+ ODBC-Treiber können auf einem Server installiert werden, damit Sie von Anwendungen auf einer beliebigen Reihe von Client Computern verwendet werden können. In dieser Architektur (siehe folgende Abbildung) werden ein Treiber-Manager und ein einzelner ODBC-Treiber auf jedem Client installiert, und es werden ein weiterer Treiber-Manager und eine Reihe von ODBC-Treibern auf dem Server installiert. Dies ermöglicht jedem Client den Zugriff auf eine Vielzahl von Treibern, die auf dem Server verwendet und gewartet werden.  
   
  ![Architektur der ODBC-Treiber auf einem Server](../../odbc/reference/media/fig3-5.gif "FIG3-5")  
   
- Ein Vorteil dieser Architektur ist effizient Softwarewartung und Konfiguration. Treiber müssen nur an einem Ort aktualisiert werden: auf dem Server. Mithilfe von System-Datenquellen können die Datenquellen auf dem Server für die Verwendung von allen Clients definiert werden. Die Datenquellen müssen nicht auf dem Client definiert werden. Verbindungspooling kann verwendet werden, um den Prozess zu optimieren, mit dem Clients eine Verbindung mit Datenquellen herstellen.  
+ Ein Vorteil dieser Architektur ist die effiziente Softwarewartung und-Konfiguration. Treiber müssen nur an einem Ort aktualisiert werden: auf dem Server. Mithilfe von Systemdaten Quellen können Datenquellen auf dem Server für die Verwendung durch alle Clients definiert werden. Die Datenquellen müssen nicht auf dem Client definiert werden. Das Verbindungspooling kann verwendet werden, um den Prozess zu optimieren, mit dem Clients eine Verbindung mit Datenquellen herstellen.  
   
- Der Treiber auf dem Client ist in der Regel eine sehr kleine Treiber, der der Treiber-Manager-Aufrufs an den Server zu übertragen. Der Platzbedarf kann erheblich kleiner als die voll funktionsfähige ODBC-Treiber auf dem Server sein. In dieser Architektur können Client-Ressourcen freigegeben werden, wenn der Server mehr rechenleistung verfügt. Darüber hinaus können der Effizienz und Sicherheit des gesamten Systems verbessert werden, von der backup-Server installieren und ausführen, den Lastenausgleich zum Optimieren der Serververwendung.
+ Der Treiber auf dem Client ist normalerweise ein sehr kleiner Treiber, der den Treiber-Manager-Rückruf an den Server überträgt. Der Speicherbedarf kann erheblich geringer sein als die voll funktionstüchtigen ODBC-Treiber auf dem Server. In dieser Architektur können Client Ressourcen freigegeben werden, wenn der Server über mehr Rechenleistung verfügt. Außerdem kann die Effizienz und Sicherheit des gesamten Systems verbessert werden, indem Sicherungs Server installiert und ein Lastenausgleich durchgeführt wird, um die Servernutzung zu optimieren.

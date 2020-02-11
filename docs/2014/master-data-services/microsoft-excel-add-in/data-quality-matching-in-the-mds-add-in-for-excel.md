@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478905"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Data Quality-Abgleich im MDS-Add-In für Excel
   Es ist möglich, dass Sie dem MDS-Repository im Laufe der Zeit weitere Daten hinzufügen möchten. Vor dem Hinzufügen von Daten kann es hilfreich sein, die neuen Daten mit den bereits in MDS verwalteten Daten zu vergleichen, um sicherzustellen, dass Sie keine doppelten oder ungenauen Daten hinzufügen.  
   
- Unter MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] wird das Data Quality Services-Feature (DQS) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um ähnliche Daten zu ermitteln. Wenn Sie im Add-In die Abgleichfunktion verwenden, werden ähnliche Datensätze gruppiert, und es wird ein Wert angezeigt, der die Genauigkeit des Ergebnisses angibt. Weitere Informationen zur Abgleichfunktion von DQS finden Sie unter [Datenabgleich](../../data-quality-services/data-matching.md).  
+ Unter MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] wird das Data Quality Services-Feature (DQS) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, um ähnliche Daten zu ermitteln. Wenn Sie im Add-In die Abgleichfunktion verwenden, werden ähnliche Datensätze gruppiert, und es wird ein Wert angezeigt, der die Genauigkeit des Ergebnisses angibt. Weitere Informationen zur Abgleichfunktion von DQS finden Sie unter [Data Matching](../../data-quality-services/data-matching.md).  
   
 ## <a name="workflow-for-data-quality-matching"></a>Workflow für Data Quality-Abgleich  
  Verwenden Sie beim Nutzen von DQS in Verbindung mit MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]den folgenden Workflow:  
@@ -35,21 +35,21 @@ ms.locfileid: "65478905"
   
 5.  Veröffentlichen Sie die neuen und/oder aktualisierten Daten im MDS-Repository.  
   
-## <a name="knowledge-bases"></a>Wissensdatenbanken  
+## <a name="knowledge-bases"></a>Knowledge Bases  
  Die im Add-In angegebenen Abgleichergebnisse basieren auf einer DQS-Wissensdatenbank.  
   
 -   Die Standardwissensdatenbank (DQS-Daten) wird bei der Installation von DQS erstellt. Wenn Sie die Standardwissensdatenbank verwenden (ohne eine Abgleichsrichtlinie zur Standardwissensdatenbank im Data Quality Client hinzuzufügen), müssen Sie Spalten im Arbeitsblatt Domänen in der Wissensdatenbank zuordnen und dann den ausgewählten Domänen einen Gewichtungswert zuweisen.  
   
--   Sie können mit dem Data Quality Client eine neue Wissensdatenbank mit einer Abgleichsrichtlinie erstellen oder der Standardwissensdatenbank eine Abgleichsrichtlinie hinzufügen. In diesem Fall werden die Gewichtungswerte von der Abgleichrichtlinie bestimmt, die Sie bereits erstellt haben, und Sie müssen lediglich die Spalten den Domänen zuordnen. Weitere Informationen finden Sie unter [Erstellen einer Abgleichsrichtlinie](../../data-quality-services/create-a-matching-policy.md).  
+-   Sie können mit dem Data Quality Client eine neue Wissensdatenbank mit einer Abgleichsrichtlinie erstellen oder der Standardwissensdatenbank eine Abgleichsrichtlinie hinzufügen. In diesem Fall werden die Gewichtungswerte von der Abgleichrichtlinie bestimmt, die Sie bereits erstellt haben, und Sie müssen lediglich die Spalten den Domänen zuordnen. Weitere Informationen finden Sie unter [Create a Matching Policy](../../data-quality-services/create-a-matching-policy.md).  
   
- Weitere Informationen zu Wissensdatenbanken finden Sie unter [DQS-Wissensdatenbanken und-Domänen](../../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ Weitere Informationen zu Wissensdatenbanken finden Sie unter [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Kombinieren Sie als Vorbereitung eines Vergleichs externe Daten mit von MDS verwalteten Daten.|[Kombinieren von Daten &#40;MDS-Add-In für Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|Verwenden Sie DQS-Erkenntnisse zum Ermitteln von ähnlichen Elementen in Ihren Daten.|[Abgleichen ähnlicher Daten &#40;MDS-Add-In für Excel&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Kombinieren Sie als Vorbereitung eines Vergleichs externe Daten mit von MDS verwalteten Daten.|[Kombinieren von Daten &#40;MDS-Add-in für Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|Verwenden Sie DQS-Erkenntnisse zum Ermitteln von ähnlichen Elementen in Ihren Daten.|[Ähnliche Daten &#40;MDS-Add-in für Excel vergleichen&#41;](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

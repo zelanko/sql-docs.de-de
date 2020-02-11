@@ -1,5 +1,5 @@
 ---
-title: 'Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQLServer) | Microsoft-Dokumentation'
+title: 'Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,13 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62922435"
 ---
-# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sichern und Wiederherstellen: Interoperabilität und Koexistenz (SQLServer)
+# <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server)
   In diesem Thema werden Überlegungen im Zusammenhang mit der Sicherung und Wiederherstellung für mehrere Funktionen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]beschrieben. Diese Funktionen sind: Dateiwiederherstellung und Datenbankstart, Onlinewiederherstellung und deaktivierte Indizes, Datenbankspiegelung sowie schrittweise Wiederherstellung und Volltextindizes.  
   
  **In diesem Thema:**  
@@ -48,7 +48,7 @@ ms.locfileid: "62922435"
   
  Falls beim Starten der Datenbank ein Problem auftritt, wird bei der Wiederherstellung ein Fehler gemeldet, und die Datenbank wird als SUSPECT gekennzeichnet. Wenn das Problem auf eine Datei oder mehrere Dateien isoliert werden kann, kann der Datenbankadministrator die Dateien offline schalten und versuchen, die Datenbank erneut zu starten. Sie können die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung verwenden, um eine Datei offline zu schalten:  
   
- ALTER DATABASE *Database_name* MODIFY FILE (NAME **=' *`filename`* "** , OFFLINE)  
+ ALTER DATABASE *database_name* Modify File (Name **= '*`filename`*'**, offline)  
   
  Wenn der Start erfolgreich ist, bleibt jede Dateigruppe, die eine Offlinedatei enthält, offline.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62922435"
  Dieser Abschnitt betrifft nur Datenbanken mit mehreren Dateigruppen, für die das vollständige Wiederherstellungsmodell verwendet wird.  
   
 > [!NOTE]  
->  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr bereitgestellt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] .  
+>  Die Datenbankspiegelungsfunktion wird in zukünftigen Versionen von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr bereitgestellt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
  Die Datenbankspiegelung ist eine Lösung zum Verbessern der Datenbankverfügbarkeit. Die Datenbankspiegelung wird auf Datenbankbasis implementiert und ist nur für Datenbanken mit dem vollständigen Wiederherstellungsmodell geeignet. Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62922435"
 >  Verwenden Sie zum Verteilen von Kopien einer Teilmenge der Dateigruppen in einer Datenbank die Replikation: Replizieren Sie nur die Objekte in den Dateigruppen, die auf andere Server kopiert werden sollen. Weitere Informationen über Replikation finden Sie unter [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md).  
   
 ### <a name="creating-the-mirror-database"></a>Erstellen der Spiegeldatenbank  
- Die Spiegeldatenbank wird durch Dateiwiederherstellung (ohne Datenbankwiederherstellung) von Sicherungen der Prinzipaldatenbank auf dem Spiegelserver erstellt. Bei der Wiederherstellung muss der Datenbankname beibehalten werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)beschrieben.  
+ Die Spiegeldatenbank wird durch Dateiwiederherstellung (ohne Datenbankwiederherstellung) von Sicherungen der Prinzipaldatenbank auf dem Spiegelserver erstellt. Bei der Wiederherstellung muss der Datenbankname beibehalten werden. Weitere Informationen finden Sie unter [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)verwendet.  
   
  Sie können die Spiegeldatenbank mithilfe einer schrittweisen Wiederherstellungssequenz erstellen, insofern dies unterstützt wird. Sie können die Spiegelung jedoch erst starten, wenn Sie alle Dateigruppen und ggf. Protokollsicherungen wiederhergestellt haben, sodass die gespiegelte Datenbank zeitlich nicht zu weit von der Prinzipaldatenbank entfernt ist. Weitere Informationen finden Sie unter [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](piecemeal-restores-sql-server.md).  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62922435"
   
 -   [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](back-up-and-restore-of-sql-server-databases.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  

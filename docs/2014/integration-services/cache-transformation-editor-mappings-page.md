@@ -1,5 +1,5 @@
 ---
-title: Cachetransformations-Editor (Seite Zuordnungen) | Microsoft-Dokumentation
+title: Cache Transformations-Editor (Seite ' Zuordnungen ') | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061174"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Cachetransformations-Editor (Seite 'Zuordnungen')
@@ -29,7 +29,7 @@ ms.locfileid: "66061174"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten den Zielspalten zuordnen.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66061174"
  **Zielspalte**  
  Zeigt jede verfügbare Zielspalte an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Cache Transformations-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

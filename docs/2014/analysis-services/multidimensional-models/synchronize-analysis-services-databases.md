@@ -16,13 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66072848"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
   
 -   Bereitstellen einer Datenbank von einem Stagingserver auf einem Produktionsserver  
@@ -42,19 +43,19 @@ ms.locfileid: "66072848"
 > [!NOTE]  
 >  Die folgenden Whitepapers beziehen sich zwar auf frühere Versionen von Analysis Services, gelten aber weiterhin für skalierbare mehrdimensionale Lösungen, die mit SQL Server 2012 erstellt wurden. Weitere Informationen finden Sie unter [Horizontale Skalierung bei Abfragen für Analysis Services](https://go.microsoft.com/fwlink/?LinkId=253136) und [Horizontale Skalierung bei Abfragen für Analysis Services mit schreibgeschützten Datenbanken](https://go.microsoft.com/fwlink/?LinkId=253137.)  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
- Auf dem Zielserver, auf dem die Datenbanksynchronisierung initiiert wird, müssen Sie Mitglied der Serveradministratorrolle von Analysis Services sein. Auf dem Quellserver muss das Windows-Benutzerkonto über Vollzugriff auf die Quelldatenbank verfügen. Wenn Sie die Datenbank interaktiv synchronisieren, sollten Sie beachten, dass die Synchronisierung im Sicherheitskontext der Windows-Benutzeridentität ausgeführt wird. Wenn dem Konto der Zugriff auf bestimmte Objekte verweigert wurde, werden diese Objekte aus dem Vorgang ausgeschlossen. Weitere Informationen zu serveradministratorrollen und Datenbankberechtigungen finden Sie unter [Erteilen von Serveradministratorberechtigungen &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Erteilen von Datenbankberechtigungen &#40; Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
+## <a name="prerequisites"></a>Voraussetzungen  
+ Auf dem Zielserver, auf dem die Datenbanksynchronisierung initiiert wird, müssen Sie Mitglied der Serveradministratorrolle von Analysis Services sein. Auf dem Quellserver muss das Windows-Benutzerkonto über Vollzugriff auf die Quelldatenbank verfügen. Wenn Sie die Datenbank interaktiv synchronisieren, sollten Sie beachten, dass die Synchronisierung im Sicherheitskontext der Windows-Benutzeridentität ausgeführt wird. Wenn dem Konto der Zugriff auf bestimmte Objekte verweigert wurde, werden diese Objekte aus dem Vorgang ausgeschlossen. Weitere Informationen zu Server Administrator Rollen und Daten Bank Berechtigungen finden Sie unter [Erteilen von Server Administrator Berechtigungen &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) und [Erteilen von Daten Bank Berechtigungen &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
  TCP-Port 2383 muss auf beiden Servern geöffnet sein, damit Remoteverbindungen zwischen den Standardinstanzen unterstützt werden. Weitere Informationen zum Erstellen einer Ausnahme in der Windows-Firewall finden Sie unter [Configure the Windows Firewall to Allow Analysis Services Access](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
- Sowohl die Quell-und Zielservern muss die gleiche Version und Servicepack. Da Metadaten des Modells auch synchronisiert wird, sollte zum Sicherstellen der Kompatibilität des Builds-Nummer für die beiden Servern identisch sein. Die Editionen der einzelnen Installationen müssen die Datenbanksynchronisierung unterstützen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Datenbanksynchronisierung in der Enterprise, Developer und Business Intelligence Edition unterstützt. Weitere Informationen zu Funktionen in den einzelnen Editionen finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Sowohl der Quell-als auch der Zielserver müssen dieselbe Version und Service Pack aufweisen. Da Modell Metadaten ebenfalls synchronisiert werden, sollte die Buildnummer für beide Server identisch sein, um die Kompatibilität zu gewährleisten. Die Editionen der einzelnen Installationen müssen die Datenbanksynchronisierung unterstützen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wird die Datenbanksynchronisierung in der Enterprise, Developer und Business Intelligence Edition unterstützt. Weitere Informationen zu den Funktionen in jeder Edition finden Sie [unter von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Der Serverbereitstellungsmodus muss auf beiden Servern identisch sein. Wenn die synchronisierte Datenbank mehrdimensional ist, müssen sowohl der Quell- als auch der Zielserver für den mehrdimensionalen Servermodus konfiguriert sein. Weitere Informationen zu Bereitstellungsmodi finden Sie unter [Determine the Server Mode of an Analysis Services Instance](../instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
   
  Deaktivieren Sie die verzögerte Aggregationsverarbeitung, falls sie auf dem Quellserver verwendet wird. Im Hintergrund verarbeitete Aggregationen können die Datenbanksynchronisierung beeinträchtigen. Weitere Informationen zum Festlegen dieser Servereigenschaft finden Sie unter [OLAP Properties](../server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  Die Datenbankgröße trägt maßgeblich zur Entscheidung bei, ob die Synchronisierung ein geeigneter Ansatz ist. Es gibt keine festen Anforderungen, aber wenn die Synchronisierung zu langsam verläuft, sollten Sie Synchronisierung mehrerer Server gleichzeitig, wie im technischen Artikel beschrieben: [Bewährte Methoden für die Synchronisierung von Analysis Services](https://go.microsoft.com/fwlink/?LinkID=253136).  
+>  Die Datenbankgröße trägt maßgeblich zur Entscheidung bei, ob die Synchronisierung ein geeigneter Ansatz ist. Es gibt keine festen Anforderungen, wenn die Synchronisierung jedoch zu langsam verläuft, sollten Sie die parallele Synchronisierung mehrerer Server in Betracht ziehen, die im technischen Artikel [Bewährte Methoden für die Synchronisierung in Analysis Services](https://go.microsoft.com/fwlink/?LinkID=253136)beschrieben wird.  
   
 ## <a name="synchronize-database-wizard"></a>Assistent zum Synchronisieren einer Datenbank  
  Verwenden Sie den Assistenten zum Synchronisieren einer Datenbank, um eine unidirektionale Synchronisierung von einer Quell- zu einer Zieldatenbank auszuführen oder um ein Skript zu generieren, in dem ein Datenbanksynchronisierungsvorgang angegeben ist. Während des Synchronisierungsvorgangs können Sie sowohl lokale als auch Remotepartitionen synchronisieren und auswählen, ob Rollen eingeschlossen werden sollen.  
@@ -81,7 +82,7 @@ ms.locfileid: "66072848"
   
 3.  Geben Sie den Quellserver und die Quelldatenbank an. Geben Sie auf der Seite Datenbank für die Synchronisierung auswählen unter **Quellserver** und **Quelldatenbank**den Namen des Quellservers und der Quelldatenbank ein. Wenn eine Bereitstellung beispielsweise von einer Testumgebung auf einem Produktionsserver erfolgt, entspricht die Quelle der Datenbank auf dem Stagingserver.  
   
-     Unter**Zielserver** wird der Name der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz angezeigt, mit der die Daten und Metadaten aus der in **Quelldatenbank** ausgewählten Datenbank synchronisiert werden.  
+     **Ziel Server** zeigt den Namen der- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz an, mit der die Daten und Metadaten aus der in **Quelldatenbank** ausgewählten Datenbank synchronisiert werden.  
   
      Die Synchronisierung wird für Quell- und Zieldatenbanken mit dem gleichen Namen ausgeführt. Wenn der Zielserver bereits über eine Datenbank mit dem gleichen Namen wie die Quelldatenbank verfügt, wird die Zieldatenbank mit den Metadaten und Daten der Quelldatenbank aktualisiert. Wenn die Datenbank nicht vorhanden ist, wird sie auf dem Zielserver erstellt.  
   
@@ -100,12 +101,12 @@ ms.locfileid: "66072848"
      **Zielordner**  
      Zeigt den Namen des Ordners an der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Zielinstanz an, in die die lokale Partition synchronisiert werden soll. Wenn die Spalte den Wert "(Standard)" enthält, muss der Standardspeicherort für die Zielinstanz die lokale Partition enthalten.  
   
-     Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten lokalen Partitionen synchronisiert werden sollen.  
+     Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten lokalen Partitionen synchronisiert werden sollen.  
   
     > [!NOTE]  
     >  Diese Spalte kann für lokale Partitionen, die am Standardspeicherort für die Quellinstanz gespeichert sind, nicht geändert werden.  
   
-     **Schriftgrad**  
+     **Größe**  
      Zeigt die geschätzte Größe der lokalen Partition an.  
   
      Unter der Option **Partitionen am ausgewählten Speicherort** wird ein Raster angezeigt, in dem die lokalen Partitionen beschrieben werden, die am Speicherort auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Quellinstanz gespeichert sind, die in der Spalte **Quellordner** der ausgewählten Zeile in **Speicherorte**angegeben ist.  
@@ -113,10 +114,10 @@ ms.locfileid: "66072848"
      **Cube**  
      Zeigt den Namen des Cubes an, der die Partition enthält.  
   
-     **Measuregruppe**  
+     **Measure-Gruppe**  
      Zeigt den Namen der Measuregruppe in dem Cube an, der die Partition enthält.  
   
-     **Partitionsname**  
+     **Partitions Name**  
      Zeigt den Namen der Partition an.  
   
      **Größe (MB)**  
@@ -129,27 +130,27 @@ ms.locfileid: "66072848"
   
      Unter der Option **Speicherorte** wird ein Raster mit Informationen zu Speicherorten angezeigt, an denen Remotepartitionen für die Quelldatenbank gespeichert sind. Dazu zählen Informationen zu Quelle und Ziel sowie die von den einzelnen Speicherorten verwendete Speichergröße, die in der ausgewählten Datenbank verfügbar ist. Das Raster enthält die folgenden Spalten:  
   
-     **Sync**  
+     **Synchronisierung**  
      Aktivieren Sie diese Option, um bei der Synchronisierung einen Speicherort hinzuzufügen, der Remotepartitionen enthält.  
   
     > [!NOTE]  
     >  Wenn diese Option nicht aktiviert ist, werden Remotepartitionen an diesem Speicherort nicht synchronisiert.  
   
-     **Quellserver**  
+     **Quell Server**  
      Zeigt den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, die Remotepartitionen enthält.  
   
      **Quellordner**  
      Zeigt den Ordnernamen auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, die Remotepartitionen enthält. Wenn die Spalte den Wert „(Standard)“ enthält, enthält der Standardspeicherort für die in **Quellserver** angezeigte Instanz Remotepartitionen.  
   
-     **Zielserver**  
+     **Ziel Server**  
      Zeigt den Namen der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, in die die Remotepartitionen synchronisiert werden sollen, die an dem in **Quellserver** und **Quellordner** angegebenen Speicherort gespeichert sind.  
   
-     Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Verbindungs-Manager** aufzurufen, und geben Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
+     Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Verbindungs-Manager** aufzurufen, und geben Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
   
      **Zielordner**  
      Zeigt den Namen des Ordners auf der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Zielinstanz an, in die die Remotepartition synchronisiert werden soll. Wenn die Spalte den Wert "(Standard)" enthält, muss der Standardspeicherort für die Zielinstanz die Remotepartition enthalten.  
   
-     Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
+     Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Nach Remoteordner suchen** aufzurufen, und geben Sie einen Ordner auf der Zielinstanz an, in die die am ausgewählten Speicherort gespeicherten Remotepartitionen synchronisiert werden sollen.  
   
      **Größe**  
      Zeigt die geschätzte Größe von den am Speicherort gespeicherten Remotepartitionen an.  
@@ -159,10 +160,10 @@ ms.locfileid: "66072848"
      **Cube**  
      Zeigt den Namen des Cubes an, der die Partition enthält.  
   
-     **Measuregruppe**  
+     **Measure-Gruppe**  
      Zeigt den Namen der Measuregruppe in dem Cube an, der die Partition enthält.  
   
-     **Partitionsname**  
+     **Partitions Name**  
      Zeigt den Namen der Partition an.  
   
      **Größe (MB)**  
@@ -173,7 +174,7 @@ ms.locfileid: "66072848"
      **Alle kopieren**  
      Wählen Sie diese Option aus, um während der Synchronisierung Sicherheitsdefinitionen und Informationen zur Mitgliedschaft hinzuzufügen.  
   
-     **Mitgliedschaft auslassen**  
+     **Mitgliedschaft überspringen**  
      Wählen Sie diese Option aus, um während der Synchronisierung Sicherheitsdefinitionen hinzuzufügen, Informationen zur Mitgliedschaft jedoch auszuschließen.  
   
      **Alle ignorieren**  
@@ -186,8 +187,8 @@ ms.locfileid: "66072848"
 ## <a name="next-steps"></a>Nächste Schritte  
  Wenn Sie keine Rollen oder Mitgliedschaften synchronisiert haben, achten Sie darauf, jetzt Zugriffsberechtigungen für Benutzer in der Zieldatenbank festzulegen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Synchronize-Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Element &#40;XMLA synchronisieren&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)   
  [Bereitstellen von Modelllösungen mit XMLA](deploy-model-solutions-using-xmla.md)   
  [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](deploy-model-solutions-using-the-deployment-wizard.md)  
   

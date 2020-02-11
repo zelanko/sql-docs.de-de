@@ -1,5 +1,5 @@
 ---
-title: Senden von E-Mail-Task-Editor (Seite "E-Mail") | Microsoft-Dokumentation
+title: Editor für den Task ' Mail senden ' (Seite e-Mail) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d80ca8e475bf9c2b56c11118a44e5282573f280d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66055832"
 ---
 # <a name="send-mail-task-editor-mail-page"></a>Editor für den Task 'Mail senden' (Seite E-Mail)
@@ -26,40 +26,40 @@ ms.locfileid: "66055832"
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Send Mail Task](control-flow/send-mail-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **SMTPConnection**  
- Wählen Sie in der Liste einen SMTP-Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung…>** , um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen SMTP-Verbindungs-Manager aus der Liste aus, oder klicken Sie ** \<auf neue Verbindung... #b0** , um einen neuen Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der SMTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Windows-Authentifizierung. Er unterstützt keine Standardauthentifizierung.  
   
  **Verwandte Themen:** [SMTP-Verbindungs-Manager](connection-manager/smtp-connection-manager.md)  
   
- **From**  
+ **Von**  
  Geben Sie die E-Mail-Adresse des Absenders an.  
   
- **Aktion**  
+ **An**  
  Stellen Sie die E-Mail-Adresse der Empfänger bereit. Verwenden Sie als Trennzeichen ein Semikolon.  
   
- **Cc**  
+ **125**  
  Geben Sie die E-Mail-Adressen der Personen an, die Kopien der Nachricht erhalten sollen. Verwenden Sie als Trennzeichen ein Semikolon.  
   
- **Bcc**  
+ **BCC**  
  Geben Sie die E-Mail-Adressen der Personen an, die Blindkopien der Nachricht erhalten sollen. Verwenden Sie als Trennzeichen ein Semikolon.  
   
- **Subject**  
+ **Betreff**  
  Geben Sie einen Betreff für die E-Mail-Nachricht an.  
   
  **MessageSourceType**  
  Wählen Sie den Quelltyp der Nachricht aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Direkteingabe**|Legen Sie für die Quelle den Nachrichtentext fest. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
+|**Direkte Eingabe**|Legen Sie für die Quelle den Nachrichtentext fest. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
 |**Dateiverbindung**|Legen Sie für die Quelle die Datei fest, die den Nachrichtentext enthält. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
 |**Variable**|Legen Sie für die Quelle eine Variable fest, die den Nachrichtentext enthält. Bei Auswahl dieses Wertes wird die dynamische Option **MessageSource**angezeigt.|  
   
- **Priority**  
+ **Haben**  
  Legen Sie die Priorität der Nachricht fest.  
   
  **Attachments**  
@@ -76,19 +76,19 @@ ms.locfileid: "66055832"
   
 ### <a name="messagesourcetype--file-connection"></a>MessageSourceType = File connection  
  **MessageSource**  
- Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...** >, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie in der Liste einen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="messagesourcetype--variable"></a>MessageSourceType = Variable  
  **MessageSource**  
- Wählen Sie in der Liste eine Variable aus, oder klicken Sie auf \<**Neue Variable…** >, um eine neue Variable zu erstellen.  
+ Wählen Sie eine Variable aus der Liste aus \<, oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
   
- **Verwandte Themen:** [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md), [Hinzufügen von Variablen](../../2014/integration-services/add-variable.md)  
+ **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Task „Mail senden“ &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)   
+ [Editor für den Task ' Mail senden ' &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   
   
