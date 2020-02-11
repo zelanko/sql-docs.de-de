@@ -1,5 +1,5 @@
 ---
-title: IndexNulls-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Beispiel für IndexNulls-Eigenschaft (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: 45204669-32c0-4690-aab9-ddf0fd71ae48
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c5976cf913a98e5fa7db313144463ca12373d6bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67965993"
 ---
 # <a name="indexnulls-property-example-vb"></a>IndexNulls-Eigenschaft – Beispiel (VB)
-Dieses Beispiel zeigt die [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) Eigenschaft eine [Index](../../../ado/reference/adox-api/index-object-adox.md). Der Code erstellt einen neuen Index und legt den Wert der **IndexNulls** auf Grundlage der Benutzereingabe (aus einem Listenfeld, die mit dem Namen List1). Anschließend wird die **Index** wird angefügt, um die **Mitarbeiter** [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) in die *Northwind* [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md). Die neue **Index** gilt für eine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf den **Mitarbeiter** Tabelle und die **Recordset** wird geöffnet. Ein neuer Datensatz hinzugefügt wird die **Mitarbeiter** Tabelle mit einer **Null** Wert des indizierten Felds. Gibt an, ob diese neue Datensatz angezeigt wird, hängt davon ab, der Einstellung von der **IndexNulls** Eigenschaft.  
+In diesem Beispiel wird die [IndexNulls](../../../ado/reference/adox-api/indexnulls-property-adox.md) -Eigenschaft eines [Indexes](../../../ado/reference/adox-api/index-object-adox.md)veranschaulicht. Der Code erstellt einen neuen Index und legt den Wert von **IndexNulls** basierend auf Benutzereingaben (aus einem Listenfeld mit dem Namen list1) fest. Anschließend wird der **Index** an die Employees- **** [Tabelle](../../../ado/reference/adox-api/table-object-adox.md) im *Northwind* - [Katalog](../../../ado/reference/adox-api/catalog-object-adox.md)angehängt. Der neue **Index** wird auf ein [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) angewendet, das auf der Tabelle **Employees** basiert, und das **Recordset** wird geöffnet. Ein neuer Datensatz wird der **Employees** -Tabelle mit einem **null** -Wert im indizierten Feld hinzugefügt. Ob dieser neue Datensatz angezeigt wird, hängt von der Einstellung der **IndexNulls** -Eigenschaft ab.  
   
 ```  
 ' BeginIndexNullsVB  
@@ -108,6 +108,6 @@ End Sub
 ' EndIndexNullsVB  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
  [IndexNulls-Eigenschaft (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)

@@ -1,5 +1,5 @@
 ---
-title: Überschreiben von führenden und Genauigkeit für die Interval-Datentypen | Microsoft-Dokumentation
+title: Überschreiben der führenden und Sekunden Genauigkeit für Intervall Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -18,27 +18,27 @@ ms.assetid: 3d65493f-dce7-4d29-9f59-c63a4e47918c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13adfb16b772acc5fac30cf3d10c6199f16f479d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68100624"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Überschreiben der Standardwerte für die Genauigkeit des führenden Intervallfelds und die Sekundengenauigkeit für Intervalldatentypen
-Wenn das SQL_DESC_TYPE-Feld, der eine ARD durch Aufrufen von entweder in einen datetime-Wert oder das Intervall C-Typ festgelegt ist **SQLBindCol** oder **SQLSetDescField**, Feld SQL_DESC_PRECISION (enthält das Intervall (Sekunden) Genauigkeit) wird auf die folgenden Standardwerte festgelegt:  
+Wenn das SQL_DESC_TYPE-Feld eines ARDS auf einen DateTime-oder Interval-C-Typ festgelegt wird, indem entweder **SQLBindCol** oder **SQLSetDescField**aufgerufen wird, wird das SQL_DESC_PRECISION Feld (das die Genauigkeit der Intervall Sekunden enthält) auf die folgenden Standardwerte festgelegt:  
   
--   6 für Zeitstempel und alle Interval-Datentypen mit einer zweiten Komponente.  
+-   6 für Zeitstempel-und alle interval-Datentypen mit einer zweiten Komponente.  
   
 -   0 für alle anderen Datentypen.  
   
- Für alle Arten von Intervall wird das Deskriptorfeld SQL_DESC_DATETIME_INTERVAL_PRECISION, das die Intervall-Genauigkeit der führenden Feld enthält, auf einen Standardwert von 2 festgelegt.  
+ Für alle interval-Datentypen wird das SQL_DESC_DATETIME_INTERVAL_PRECISION Deskriptorfeld, das die Genauigkeit des führenden Felds für das Intervall enthält, auf den Standardwert 2 festgelegt.  
   
- Wenn das SQL_DESC_TYPE-Feld in einer APD durch Aufrufen von entweder in einen datetime-Wert oder das Intervall C-Typ festgelegt ist **SQLBindParameter** oder **SQLSetDescField**, die SQL_DESC_PRECISION und SQL_DESC_DATETIME_INTERVAL_ Genauigkeit Felder im APD werden auf den Standardwert, der bereits erwähnten festgelegt. Dies gilt für Eingabeparameter, aber nicht für e/a oder Ausgabeparameter.  
+ Wenn das SQL_DESC_TYPE-Feld in einer APD auf einen DateTime-oder Interval-C-Typ festgelegt wird, indem entweder **SQLBindParameter** oder **SQLSetDescField**aufgerufen wird, werden die Felder SQL_DESC_PRECISION und SQL_DESC_DATETIME_INTERVAL_PRECISION in der APD auf den zuvor angegebenen Standardwert festgelegt. Dies gilt für Eingabeparameter, aber nicht für Eingabe-/Ausgabe-oder Ausgabeparameter.  
   
- Ein Aufruf von **SQLSetDescRec** legt die Genauigkeit auf den Standardwert für anführenden Intervallwert, setzt jedoch Genauigkeit das Intervall (in das Feld SQL_DESC_PRECISION) auf den Wert des der *Genauigkeit* Argument.  
+ Ein **SQLSetDescRec** -aufrufswert legt die angegebene Intervall Genauigkeit auf den Standardwert fest, legt jedoch die Genauigkeit der Sekunden Genauigkeit (im Feld "SQL_DESC_PRECISION") auf den Wert des *Genauigkeits* Arguments fest.  
   
- Wenn entweder die Standardwerte angegeben zuvor ist nicht zulässig, eine Anwendung, sollte die Anwendung durch Aufrufen von Feld SQL_DESC_PRECISION oder SQL_DESC_DATETIME_INTERVAL_PRECISION festgelegt **SQLSetDescField**.  
+ Wenn eine der zuvor angegebenen Standardwerte für eine Anwendung nicht akzeptabel ist, sollte die Anwendung die SQL_DESC_PRECISION oder SQL_DESC_DATETIME_INTERVAL_PRECISION Feld durch Aufrufen von **SQLSetDescField**festlegen.  
   
- Wenn die Anwendung ruft **SQLGetData** um Daten in eine datetime-Wert oder die Intervall-C-Typ zurückgegeben werden, die führende standardgenauigkeit für Intervall und Intervall Genauigkeit verwendet. Wenn entweder standardmäßig nicht zulässig ist, muss die Anwendung aufrufen **SQLSetDescField** entweder Deskriptorfeld festlegen oder **SQLSetDescRec** SQL_DESC_PRECISION festlegen. Der Aufruf von **SQLGetData** sollte eine *TargetType* von SQL_ARD_TYPE, um die Werte in die deskriptorfelder verwenden.  
+ Wenn die Anwendung **SQLGetData** aufruft, um Daten in einen DateTime-oder Interval-C-Typ zurückzugeben, werden die Genauigkeit des Standard Intervalls mit führender Genauigkeit und Intervall Sekunden verwendet. Wenn ein Standardwert nicht zulässig ist, muss die Anwendung **SQLSetDescField** aufrufen, um entweder das Deskriptorfeld festzulegen, oder **SQLSetDescRec** , um SQL_DESC_PRECISION festzulegen. Der **SQLGetData** -Befehl sollte über einen *TargetType* SQL_ARD_TYPE verfügen, um die Werte in den Deskriptorfeldern zu verwenden.  
   
- Wenn **SQLPutData** aufgerufen wird, wird die Genauigkeit "und" Interval Sekunden Genauigkeit werden aus den Feldern der Deskriptordatensatz entsprechen, die gelesen, in die Data-at-Execution-Parameter oder eine Spalte, die APD Felder für Aufrufe sind für anführenden Intervallwert um **SQLExecute** oder **SQLExecDirect**, oder ARD Felder für Aufrufe von **SQLBulkOperations** oder **SQLSetPos**.
+ Wenn **SQLPutData** aufgerufen wird, werden die Genauigkeit der Genauigkeit und der Intervall Genauigkeit von Intervallen aus den Feldern des deskriptordaten Satzes gelesen, die den Data-at-Execution-Parametern oder-Spalten entsprechen, bei denen es sich um APD-Felder für **Aufrufe von** **SQLExecute** oder **SQLExecDirect** **handelt.**

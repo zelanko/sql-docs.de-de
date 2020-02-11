@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 73e991f46f2cadb0fe7e7e9d10e6e616d2d634c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63270732"
 ---
 # <a name="sort-columns"></a>Spalten sortieren
@@ -26,8 +26,8 @@ ms.locfileid: "63270732"
   
 2.  Wählen Sie in der zweiten Zeile des Rasters in der Spalte **Spaltenname** den Eintrag **Verbindungstyp** und dann einen Wert in der Spalte **Sortierreihenfolge** aus.  
   
-## <a name="options"></a>Optionen  
- **Status**  
+## <a name="options"></a>Tastatur  
+ **Spaltenname**  
  Der Name der Spalte, nach Sie sortieren möchten. Sie können nach einer oder mehreren Spalten sortieren. Nach den Spalten **Aktuelle Durchschnittsleistung** oder **Die derzeit schlechteste Leistung** auf der Registerkarte **Veröffentlichungen** können Sie aufgrund der Art und Weise, in der die Werte in diesen Spalten berechnet werden, nicht sortieren.  
   
  **Sortierreihenfolge**  
@@ -36,7 +36,7 @@ ms.locfileid: "63270732"
  **Auswahl aufheben**  
  Hiermit entfernen Sie alle Zeilen aus dem Sortierungsraster. Wenn Sie eine einzelne Zeile entfernen möchten, wählen Sie die Zeile aus, und drücken Sie die ENTF-TASTE.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Replikation](monitoring-replication.md)  
   
   

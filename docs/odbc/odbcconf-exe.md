@@ -13,10 +13,10 @@ ms.assetid: 3bf2be83-61f9-4183-836b-85204ac7116a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b70622ea038b61883ce7a5307a558a5667139fb1
-ms.sourcegitcommit: a26cb217adfbbfb3636dff43fb19a46462e2e994
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/26/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74491965"
 ---
 # <a name="odbcconfexe"></a>Odbcconf. Speichert
@@ -31,17 +31,17 @@ Odbcconf. exe ist ein Befehlszeilen Tool, mit dem Sie ODBC-Treiber und Datenquel
 ODBCCONF [switches] action  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumente  
  *Mikro*  
  NULL oder mehr Switch-Optionen. Die Liste der verfügbaren Switches finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.  
   
  *Hinspiel*  
  Eine Aktion, die ausgeführt werden soll. Eine Liste der verfügbaren Optionen finden Sie im Abschnitt "Hinweise".  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die folgenden Schalter sind verfügbar:  
   
-|Schalter|Beschreibung|  
+|Schalter|BESCHREIBUNG|  
 |------------|-----------------|  
 |/A {*Action*}|Geben Sie eine Aktion an.<br /><br /> /A ist optional, wenn nur eine Aktion angegeben wird.|  
 |/?|Anzeigen der Verwendung für odbcconf. Speichert.|  
@@ -55,13 +55,13 @@ ODBCCONF [switches] action
   
  Die folgenden Aktionen sind verfügbar:  
   
-|Aktion|Beschreibung|  
+|Action|BESCHREIBUNG|  
 |------------|-----------------|  
 |ConfigDriver *-driver_name * * Treiber spezifische Konfigurations* Parameter|Lädt die entsprechende Treiber-Setup-DLL und ruft die **ConfigDriver** -Funktion auf.<br /><br /> Entspricht der [sqlconfigdriver-Funktion](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Beispiel:<br /><br /> /A {ConfigDriver "Treiber Name" "CPTimeout = 60"}<br /><br /> /A {ConfigDriver "Treiber Name" "driverodbcver = 03.80"}|  
-|ConfigDSN *driver_name* DSN =*Name* #a0 *Attribute*|Fügt eine Systemdaten Quelle hinzu oder ändert Sie.<br /><br /> Entspricht der [SQLConfigDataSource-Funktion](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Beispiel:<br /><br /> /A {ConfigDSN "SQL Server" "DSN = Name #a0 Server = SRV"}|  
-|Configsysdsn *driver_name* DSN =*Name* #a0 *Attribute*|Fügt eine Systemdaten Quelle hinzu oder ändert Sie.<br /><br /> Entspricht der [SQLConfigDataSource-Funktion](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Beispiel:<br /><br /> /A {configsysdsn "SQL Server" "DSN = Name #a0 Server = SRV"}|  
-|InstallDriver|Entspricht der [sqlinstalldriverex-Funktion](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Weitere Informationen zur Syntax der Schlüsselwort-Wert-Paare, die an InstallDriver übermittelt werden, finden Sie [unter Unterschlüssel der Treiber Spezifikation](../odbc/reference/install/driver-specification-subkeys.md)<br /><br /> Beispiel:<br /><br /> /A {InstallDriver "Your Driver #a0 Driver = c:\Your.dll #a1 Setup = c:\Your.dll #a2 apilevel = 2 #a3 connectfunctions = yyy &#124; driverodbcver = 03.50 #a5 fileusage = 0 &#124; sqllevel = 1"}|  
-|Konfiguration des installtranslator- *Konvertierers * * Treiber Pfad*|Fügt dem **HKEY_LOCAL_MACHINE \software\odbc\odbcinstdie Informationen zu einem Konvertierer hinzu. INI\ODBC** -Konvertierungs Registrierungsschlüssel.<br /><br /> Entspricht der [sqlinstalltranslatorex-Funktion](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Weitere Informationen zur Syntax der Schlüsselwort-Wert-Paare, die an InstallDriver übermittelt werden, finden Sie [unter Übersetzer-Spezifikations](../odbc/reference/install/translator-specification-subkeys.md)<br /><br /> Beispiel:<br /><br /> /A {installtranslator "mein Translator #a0 Translator = c:\My.dll #a1 Setup = c:\My.dll"}|  
+|ConfigDSN *driver_name* DSN =*Name* &#124; *Attribute*|Fügt eine Systemdaten Quelle hinzu oder ändert Sie.<br /><br /> Entspricht der [SQLConfigDataSource-Funktion](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Beispiel:<br /><br /> /A {ConfigDSN "SQL Server" "DSN = Name &#124; Server = SRV"}|  
+|Configsysdsn *driver_name* DSN =*Name* &#124; *Attribute*|Fügt eine Systemdaten Quelle hinzu oder ändert Sie.<br /><br /> Entspricht der [SQLConfigDataSource-Funktion](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Beispiel:<br /><br /> /A {configsysdsn "SQL Server" "DSN = Name &#124; Server = SRV"}|  
+|InstallDriver|Entspricht der [sqlinstalldriverex-Funktion](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Weitere Informationen zur Syntax der Schlüsselwort-Wert-Paare, die an InstallDriver übermittelt werden, finden Sie [unter Unterschlüssel der Treiber Spezifikation](../odbc/reference/install/driver-specification-subkeys.md)<br /><br /> Beispiel:<br /><br /> /A {InstallDriver "Your Driver &#124; Driver = c:\Your.dll &#124; Setup = c:\Your.dll &#124; apilevel = 2 &#124; connectfunctions = yyy &#124; driverodbcver = 03.50 #a5 fileusage = 0 &#124; sqllevel = 1"}|  
+|Konfiguration des installtranslator- *Konvertierers * * Treiber Pfad*|Fügt dem **HKEY_LOCAL_MACHINE \software\odbc\odbcinstdie Informationen zu einem Konvertierer hinzu. INI\ODBC** -Konvertierungs Registrierungsschlüssel.<br /><br /> Entspricht der [sqlinstalltranslatorex-Funktion](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Weitere Informationen zur Syntax der Schlüsselwort-Wert-Paare, die an InstallDriver übermittelt werden, finden Sie [unter Übersetzer-Spezifikations](../odbc/reference/install/translator-specification-subkeys.md)<br /><br /> Beispiel:<br /><br /> /A {installtranslator "mein Translator &#124; Translator = c:\My.dll &#124; Setup = c:\My.dll"}|  
 |REGSVR- *dll*|Registriert eine DLL.<br /><br /> Entspricht regsvr32. exe.<br /><br /> Beispiel:<br /><br /> /A {REGSVR c:\My.dll}|  
 |Setfiledsndir|Wenn HKEY_LOCAL_MACHINE \software\odbc\odbc. Die INI\ODBC-Datei ' dsn\defaultdsndir ' ist nicht vorhanden, die setfiledsndir-Aktion erstellt Sie und weist ihr den Wert auf HKEY_LOCAL_MACHINE \software\microsoft\windows\currentversion\commonfilesdir zu, angefügt mit \odbc\data sources.<br /><br /> Der Wert unter HKEY_LOCAL_MACHINE \software\odbc\odbc. INI\ODBC File dsn\defaultdsndir gibt den Standard Speicherort an, der vom ODBC-Datenquellen-Administrator beim Erstellen einer dateibasierten Datenquelle verwendet wird.<br /><br /> Beispiel:<br /><br /> /A {setfiledsndir}|  
   

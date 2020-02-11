@@ -1,5 +1,5 @@
 ---
-title: StrToTuple (MDX) | Microsoft-Dokumentation
+title: "\"Straume\" (MDX) | Microsoft-Dokumentation"
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68036713"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple (MDX)
 
 
-  Gibt das durch eine Zeichenfolge Multidimensional Expressions MDX-Format angegebene Tupel zurück.  
+  Gibt das Tupel zurück, das durch eine Zeichenfolge im MDX-Format (Multidimensional Expressions) angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,10 +31,10 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  Ein gültiger Zeichenfolgenausdruck, der direkt oder indirekt ein Tupel angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **StrToTuple** -Funktion die angegebene Menge zurück. Die **StrToTuple** Funktion wird in der Regel mit benutzerdefinierten Funktionen verwendet, um eine tupelspezifikation aus einer externen Funktion an ein MDX-Anweisung zurückzugeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Funktion " **strautupel** " gibt die angegebene Menge zurück. Die Funktion " **Strauch** " wird in der Regel mit benutzerdefinierten Funktionen verwendet, um eine Tupelspezifikation aus einer externen Funktion an eine MDX-Anweisung zurückzugeben.  
   
--   Wenn das CONSTRAINED-Flag verwendet wird, muss die Tupelspezifikation qualifizierte oder nicht qualifizierte Elementnamen enthalten. Dieses Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu verringern. Wenn eine Zeichenfolge, die bereitgestellt wird ist nicht direkt aufgelöst werden kann, um qualifizierte oder nicht qualifizierte Elementnamen, die folgende Fehlermeldung angezeigt: "Die Einschränkungen durch das CONSTRAINED-Flag in der STRTOTUPLE-Funktion wurden verletzt."  
+-   Wenn das CONSTRAINED-Flag verwendet wird, muss die Tupelspezifikation qualifizierte oder nicht qualifizierte Elementnamen enthalten. Dieses Flag wird verwendet, um das Risiko von Injection-Angriffen über die angegebene Zeichenfolge zu verringern. Wenn eine Zeichenfolge bereitgestellt wird, die nicht direkt zu qualifizierten oder nicht qualifizierten Elementnamen aufgelöst werden kann, wird eine Fehlermeldung angezeigt, die besagt, dass die durch das CONSTRAINED-Flag in der STRTOTUPLE-Funktion vorgegebenen Einschränkungen verletzt wurden.  
   
 -   Wenn das CONSTRAINED-Flag nicht verwendet wird, kann der angegebene Tupelausdruck zu einem gültigen MDX-Ausdruck (Multidimensional Expressions) aufgelöst werden, der ein Tupel zurückgibt.  
   
@@ -74,7 +74,7 @@ ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Funktionen dupliziert | Microsoft-Dokumentation
+title: Doppelte Features | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,38 +17,38 @@ ms.assetid: 641b16bc-f791-46d8-b093-31736473fe3d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ca73b5b9b41c99bd6db8e6181fa3582cae47c1d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046904"
 ---
 # <a name="duplicated-features"></a>Doppelte Funktionen
-Die folgenden ODBC *2.x* Funktionen wurden von ODBC verdoppelt *3.x* Funktionen. Als Ergebnis der ODBC *2.x* Funktionen sind veraltet, in ODBC *3.x*. Die ODBC *3.x* Funktionen werden als Ersatzfunktionen bezeichnet.  
+Die folgenden ODBC *2. x* -Funktionen wurden von ODBC *3. x* -Funktionen dupliziert. Folglich sind die ODBC *2. x* -Funktionen in ODBC *3. x*veraltet. Die ODBC *3. x* -Funktionen werden als Ersatz Funktionen bezeichnet.  
   
- Wenn eine Anwendung verwendet eine veraltete ODBC *2.x* -Funktion und der zugrunde liegenden Treiber ist ODBC *3.x* Treiber, der Treiber-Manager ordnet den Funktionsaufruf mit der entsprechenden Ersatz-Funktion. Die einzige Ausnahme dieser Regel wird **SQLExtendedFetch**. (Siehe die Fußnote am Ende der in der folgenden Tabelle.) Weitere Informationen zu diesen Zuordnungen finden Sie unter [veraltete Zuordnungsfunktionen](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten.  
+ Wenn eine Anwendung eine veraltete ODBC *2. x* -Funktion verwendet und der zugrunde liegende Treiber ein ODBC *3. x* -Treiber ist, ordnet der Treiber-Manager den Funktions Aufrufder entsprechenden Ersetzungs Funktion zu. Die einzige Ausnahme von dieser Regel ist **sqlextendecodfetch**. (Weitere Informationen finden Sie in der Fußnote am Ende der folgenden Tabelle.) Weitere Informationen zu diesen Zuordnungen finden Sie unter [Mapping Deprecated Functions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) in Anhang G: Driver Guidelines for abwärts Compatibility.  
   
- Wenn eine Anwendung verwendet eine Ersatz-Funktion und der zugrunde liegenden Treiber ist ODBC *2.x* -Treiber verwenden, wird der Treiber-Manager den Funktionsaufruf an die entsprechende als veraltet markierte Funktion zugeordnet.  
+ Wenn eine Anwendung eine Ersatzfunktion verwendet und der zugrunde liegende Treiber ein ODBC *2. x* -Treiber ist, ordnet der Treiber-Manager den Funktionsaufrufe der entsprechenden veralteten Funktion zu.  
   
-|ODBC *2.x* Funktion|ODBC *3.x* Funktion|  
+|ODBC *2. x* -Funktion|ODBC *3. x* -Funktion|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
 |**SQLError**|**SQLGetDiagRec**|  
-|**SQLExtendedFetch**[1]|**SQLFetchScroll**|  
+|**Sqlextendebug**[1]|**SQLFetchScroll**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLGetConnectOption**|**SQLGetConnectAttr**|  
-|**SQLGetStmtOption**|**SQLGetStmtAttr**|  
+|**SQLGetStmtOption**|**'SQLGetStmtAttr'**|  
 |**SQLParamOptions**|**SQLSetStmtAttr**, **SQLGetStmtAttr**|  
 |**SQLSetConnectOption**|**SQLSetConnectAttr**|  
 |**SQLSetParam**|**SQLBindParameter**|  
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
-|**SQLTransact**|**SQLEndTran**|  
+|**SQLtransact**|**SQLEndTran**|  
   
- [1] der Funktion **SQLExtendedFetch** sind doppelte Funktionen; **SQLFetchScroll** bietet dieselbe Funktionalität in ODBC *3.x*. Der Treiber-Manager ordnet jedoch nicht **SQLExtendedFetch** zu **SQLFetchScroll** Wenn für einen ODBC *3.x* Treiber. Weitere Informationen finden Sie unter [was der Treiber-Manager macht](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Anhang G: Treiber-Richtlinien für die Abwärtskompatibilität zu gewährleisten. Der Treiber-Manager zugeordnet **SQLFetchScroll** zu **SQLExtendedFetch** Wenn für einen ODBC *2.x* Treiber.  
+ [1] die **SQLExtendedFetch** -Funktion ist duplizierte Funktionen. **SQLFetchScroll** bietet die gleiche Funktionalität in ODBC *3. x*. Der Treiber-Manager ordnet **sqlextendecodfetch** jedoch nicht zu **SQLFetchScroll** zu, wenn ein ODBC *3. x* -Treiber verwendet wird. Weitere Informationen finden Sie unter [What the Driver Manager](../../../odbc/reference/appendixes/what-the-driver-manager-does.md) in Anhang G: Driver Guidelines for abwärts Compatibility. Der Treiber-Manager ordnet **SQLFetchScroll** zu **sqlextendecodfetch** zu, wenn ein ODBC *2. x* -Treiber durchlaufen wird.  
   
 > [!NOTE]
->  Die Funktion **SQLBindParam** ist ein besonderer Fall. **SQLBindParam** sind doppelte Funktionen. Dies ist kein ODBC *2.x* -Funktion, aber eine Funktion, die in den Open Group und ISO-Standards vorhanden ist. Die Funktionalität, die von dieser Funktion wird vollständig von der klassifiziert **SQLBindParameter**. Daher ordnet der Treiber-Manager einen Aufruf von **SQLBindParam** zu **SQLBindParameter** beim zugrunde liegenden Treiber ist ODBC *3.x* Treiber. Allerdings beim zugrunde liegenden Treiber ist ODBC *2.x* -Treiber verwenden, der Treiber-Manager führt keine diese Zuordnung.
+>  Die **SQLBindParam** -Funktion ist ein Sonderfall. **SQLBindParam** ist eine duplizierte Funktionalität. Dabei handelt es sich nicht um eine ODBC *2. x* -Funktion, sondern um eine Funktion, die in den Open Group-und ISO-Standards vorhanden ist. Die von dieser Funktion bereitgestellte Funktionalität wird von **SQLBindParameter**vollständig unterstützt. Folglich ordnet der Treiber-Manager **SQLBindParam** einen **SQLBindParameter** -Befehl zu, wenn es sich bei dem zugrunde liegenden Treiber um einen ODBC *3. x* -Treiber handelt. Wenn der zugrunde liegende Treiber jedoch ein ODBC *2. x* -Treiber ist, führt der Treiber-Manager diese Zuordnung nicht durch.

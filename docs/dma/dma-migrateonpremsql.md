@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056531"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Aktualisieren Sie SQL Server mithilfe des Datenmigrations-Assistent
@@ -33,7 +33,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen für das Upgrade von SQ
 
 2. Legen Sie den Quell-und den Ziel Servertyp auf **SQL Server** fest, wenn Sie ein lokales SQL Server auf eine spätere Version des lokalen SQL Server aktualisieren.
 
-3. Wählen Sie **Erstellen**aus.
+3. Klicken Sie auf **Erstellen**.
 
    ![Migrationsprojekt erstellen](../dma/media/NewCreate.png)
 
@@ -53,7 +53,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen für das Upgrade von SQ
 
    ![Quell-und Zielseite angeben](../dma/media/SourceTarget.png)
 
-## <a name="add-databases"></a>Datenbanken hinzufügen
+## <a name="add-databases"></a>Hinzufügen von Datenbanken
 
 1. Wählen Sie die gewünschten Datenbanken aus, die Sie migrieren möchten, indem Sie im linken Bereich der Seite **Datenbanken hinzufügen** nur diese Datenbanken auswählen.
 
@@ -78,11 +78,11 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen für das Upgrade von SQ
 
    ![Option zum Kopieren von Datenbanksicherungen an einen anderen Speicherort](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. Wählen Sie **Weiter**aus.
+5. Wählen Sie **Weiter** aus.
 
 Der Datenmigrations-Assistent führt Validierungen für die Sicherungsordner, die Daten und die Protokolldatei Speicherorte aus. Wenn bei der Validierung ein Fehler auftritt, beheben Sie die Optionen, und klicken Sie dann auf **weiter**.
 
-## <a name="select-logins"></a>Anmeldungen auswählen
+## <a name="select-logins"></a>Auswählen von Benutzernamen
 
 1. Wählen Sie bestimmte Anmeldungen für die Migration aus.
 
@@ -91,7 +91,7 @@ Der Datenmigrations-Assistent führt Validierungen für die Sicherungsordner, di
 
    Standardmäßig werden alle SQL Server-und Windows-Anmeldungen, die für die Migration qualifiziert sind, für die Migration ausgewählt.
 
-2. Wählen Sie **Migration starten**aus.
+2. Wählen Sie **Migration starten** aus.
 
    ![Auswählen von Anmeldungen und Starten der Migration](../dma/media/SelectLogins.png)
 
@@ -107,7 +107,7 @@ Sie können den Migrations Fortschritt auf der Seite **Ergebnisse anzeigen** üb
 
 2. Überprüfen Sie die gespeicherte Datei auf Details zur Anmelde Migration, und überprüfen Sie dann die Änderungen.
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
 - [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)

@@ -12,21 +12,21 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dbb7d307bfe1e57b0ad5a73580f12535bb7ffd92
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73789756"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von erweiterten Datums- und Uhrzeitfeatures (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Beispiel wird die Verwendung der in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]eingeführten Funktionen für Datum/Uhrzeit gezeigt. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
+  In diesem Beispiel wird die Verwendung der in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführten Features für Datum und Uhrzeit veranschaulicht. Dieses Beispiel verwendet die vier neuen Datums- und Uhrzeittypen (**date**, **time**, **datetime2**und **datetimeoffset**) zum Ausführen von Befehlen mit Parametern und zum Abrufen von Rowset-Ergebnissen.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ## <a name="example"></a>Beispiel  
  Das erste Codelisting ([!INCLUDE[tsql](../../includes/tsql-md.md)]) erstellt eine im Beispiel verwendete gespeicherte Prozedur.  

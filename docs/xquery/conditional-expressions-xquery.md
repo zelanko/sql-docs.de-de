@@ -20,16 +20,16 @@ ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039007"
 ---
 # <a name="conditional-expressions-xquery"></a>Bedingte Ausdrücke (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  XQuery unterstützt die folgende **If-Then-else** Anweisung:  
+  XQuery unterstützt die folgende bedingte **if-then-else-** Anweisung:  
   
 ```  
 if (<expression1>)  
@@ -39,7 +39,7 @@ else
   <expression3>  
 ```  
   
- Abhängig vom effektiven booleschen Wert von `expression1` wird entweder `expression2` oder `expression3` ausgewertet. Zum Beispiel:  
+ Abhängig vom effektiven booleschen Wert von `expression1` wird entweder `expression2` oder `expression3` ausgewertet. Beispiel:  
   
 -   Wenn der Testausdruck `expression1` eine leere Sequenz ergibt, ist das Ergebnis "False".  
   
@@ -49,13 +49,13 @@ else
   
 -   Anderenfalls wird ein statischer Fehler ausgegeben.  
   
- Beachten Sie dabei außerdem Folgendes:  
+ Beachten Sie darüber hinaus Folgendes:  
   
 -   Der Testausdruck muss in Klammern stehen.  
   
--   Die **else** -Ausdruck erforderlich ist. Falls Sie ihn nicht benötigen, können Sie " ( ) " zurückgeben, wie dies in den Beispielen der Fall ist.  
+-   Der **else** -Ausdruck ist erforderlich. Falls Sie ihn nicht benötigen, können Sie " ( ) " zurückgeben, wie dies in den Beispielen der Fall ist.  
   
- Die folgende Abfrage wird beispielsweise angegeben, für die **Xml** Variablen vom Typ. Die **Wenn** -Bedingung testet den Wert der SQL-Variablen (@v) innerhalb des XQuery-Ausdrucks mit der [SQL:Variable()-Funktion](../xquery/xquery-extension-functions-sql-variable.md) -Erweiterungsfunktion. Wenn der Wert der Variable "FirstName" ist, wird die <`FirstName`> Element. Andernfalls wird die <`LastName`> Element.  
+ Beispielsweise wird die folgende Abfrage für die Variable vom Typ **XML** angegeben. Die **if** -Bedingung testet den Wert der SQL-Variablen@v() innerhalb des XQuery-Ausdrucks mithilfe der [SQL: Variable ()-Funktions](../xquery/xquery-extension-functions-sql-variable.md) Erweiterungs Funktion. Wenn der Variablen Wert "FirstName" ist, wird der <`FirstName`>-Element zurückgegeben. Andernfalls wird das <`LastName`>-Element zurückgegeben.  
   
 ```  
 declare @x xml  
@@ -80,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- Die folgende Abfrage ruft die beiden ersten Funktionsbeschreibungen der Produktkatalogbeschreibung eines bestimmten Produktmodells ab. Wenn Sie weitere Features in das Dokument vorhanden sind, fügt es eine <`there-is-more`>-Element ohne Inhalt.  
+ Die folgende Abfrage ruft die beiden ersten Funktionsbeschreibungen der Produktkatalogbeschreibung eines bestimmten Produktmodells ab. Wenn im Dokument weitere Funktionen vorhanden sind, wird ein <`there-is-more`>-Element mit leerem Inhalt hinzugefügt.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -104,7 +104,7 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- In der vorherigen Abfrage, die die Bedingung in der **Wenn** Ausdruck überprüft, ob es mehr als zwei untergeordnete Elemente <`Features`>. Wenn dies der Fall ist, wird als Ergebnis ein `\<there-is-more/>`-Element zurückgegeben.  
+ In der vorherigen Abfrage überprüft die Bedingung im **if** -Ausdruck, ob in <`Features`> mehr als zwei untergeordnete Elemente vorhanden sind. Wenn dies der Fall ist, wird als Ergebnis ein `\<there-is-more/>`-Element zurückgegeben.  
   
  Dies ist das Ergebnis:  
   
@@ -122,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- In der folgenden Abfrage wird eine <`Location`>-Element mit einem LocationID-Attribut wird zurückgegeben, wenn arbeitsplatzstandort nicht setupzeiten angibt.  
+ In der folgenden Abfrage wird ein <`Location`> Element mit einem LocationID-Attribut zurückgegeben, wenn der Arbeitsplatz Standort die Setup Stunden nicht angibt.  
   
 ```  
 SELECT Instructions.query('  
@@ -149,7 +149,7 @@ where ProductModelID=7
 <WorkCenterLocation LocationID="60" />  
 ```  
   
- Diese Abfrage geschrieben werden kann, ohne die **Wenn** -Klausel, wie im folgenden Beispiel gezeigt:  
+ Diese Abfrage kann ohne die **if** -Klausel geschrieben werden, wie im folgenden Beispiel gezeigt:  
   
 ```  
 SELECT Instructions.query('  
@@ -164,7 +164,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Expressions (XQuery-Ausdrücke)](../xquery/xquery-expressions.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Ausdrücke](../xquery/xquery-expressions.md)  
   
   

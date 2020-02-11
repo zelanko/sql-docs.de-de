@@ -1,5 +1,5 @@
 ---
-title: Reservierte Schlüsselwörter (MDX Syntax) | Microsoft-Dokumentation
+title: Reservierte Schlüsselwörter (MDX-Syntax) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68037058"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>Reservierte Schlüsselwörter (MDX-Syntax)
 
 
-  Analysis Services reserviert bestimmte Schlüsselwörter ausschließlich zur eigenen Verwendung. Eine Liste der reservierten Schlüsselwörter finden Sie [MDX-reservierte Wörter](../mdx/mdx-reserved-words.md).  
+  Analysis Services reserviert bestimmte Schlüsselwörter für die ausschließliche Verwendung. Eine Liste der reservierten Schlüsselwörter finden Sie unter [reservierte MDX-Wörter](../mdx/mdx-reserved-words.md).  
   
  Für reservierte Schlüsselwörter gelten folgende Richtlinien:  
   
@@ -28,7 +28,7 @@ ms.locfileid: "68037058"
   
 -   Sie sollten eine Benennungskonvention verwenden, bei der die Verwendung reservierter Schlüsselwörter vermieden wird. Konsonanten oder Vokale können gelöscht werden, wenn ein Objektname wie ein reserviertes Schlüsselwort aussehen muss.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Syntax Elemente &#40;MDX-&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

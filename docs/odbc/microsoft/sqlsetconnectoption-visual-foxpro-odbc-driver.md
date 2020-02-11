@@ -13,31 +13,31 @@ ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 48a4c8666ab7aa7e210289564210d99c947e5631
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071710"
 ---
 # <a name="sqlsetconnectoption-visual-foxpro-odbc-driver"></a>SQLSetConnectOption (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Teilweise  
+ Unterstützung: partiell  
   
- ODBC-API-Übereinstimmung: Ebene 1  
+ ODBC-API-Konformität: Ebene 1  
   
- Legt Optionen fest, die Aspekte der Verbindungen steuern. Diese Funktion wird teilweise unterstützt: Der Treiber unterstützt alle Werte für die *fOption* Argument unterstützt jedoch nicht einige *vParam* Werte für die *fOption* SQL_TXN_ISOLATION-Argument.  
+ Legt Optionen fest, die die Aspekte von Verbindungen steuern. Diese Funktion wird teilweise unterstützt: der Treiber unterstützt alle Werte für das *fOption* -Argument, unterstützt jedoch einige der *vParam* -Werte für das *fOption* -Argument SQL_TXN_ISOLATION nicht.  
   
- Die folgende Tabelle beschreibt nur die Argumente mit der Visual FoxPro-ODBC-Treiber-Implementierung von Verhalten **SQLSetConnectOption**.  
+ In der folgenden Tabelle werden nur die Argumente beschrieben, deren Verhalten spezifisch für die Implementierung von **SQLSetConnectOption**des Visual FoxPro-ODBC-Treibers ist.  
   
-|*fOption*|Hinweise|  
+|*fOption*|Bemerkungen|  
 |---------------|-------------|  
-|SQL_AUTOCOMMIT|Wenn Sie auf SQL_AUTOCOMMIT_OFF auswählen, Ihre Anwendung muss explizit einen commit oder Rollback Transaktionen mit [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); des Visual FoxPro-ODBC-Treibers nicht automatisch nach Abschluss eine transactable-Anweisung fest. Der Treiber beginnt eine Transaktion, wenn die Anweisung transactable ist.|  
-|SQL_CURRENT_QUALIFIER|Kann eine vollqualifiziert sein [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) Namen oder den vollqualifizierten Pfad zu einem Verzeichnis mit NULL oder mehr [kostenlose Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md).|  
-|SQL_LOGINTIMEOUT|Gibt "Vom Treiber nicht unterstützt"-Fehler zurück.|  
-|SQL_CURSORS|Gibt "Vom Treiber nicht unterstützt"-Fehler zurück.|  
-|SQL_PACKET_SIZE|Gibt "Vom Treiber nicht unterstützt"-Fehler zurück.|  
-|SQL_TXN_ISOLATION|Der Treiber kann nur SQL_TXN_READ_COMMITTED.<br /><br /> Die folgenden *vParam*wird nicht unterstützt:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
+|SQL_AUTOCOMMIT|Wenn Sie SQL_AUTOCOMMIT_OFF auswählen, muss Ihre Anwendung mit [SQLTransact](../../odbc/microsoft/sqltransact-visual-foxpro-odbc-driver.md); einen expliziten Commit oder Rollback für Transaktionen ausführen. der Visual FoxPro-ODBC-Treiber führt einen Commit für eine fähige-Anweisung nach Abschluss nicht automatisch aus. Der Treiber startet eine Transaktion, wenn die Anweisung Transaktions basiert ist.|  
+|SQL_CURRENT_QUALIFIER|Kann ein voll qualifizierter [Datenbankname](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein voll qualifizierter Pfad zu einem Verzeichnis sein, das 0 (null) oder mehr [freie Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)enthält.|  
+|SQL_LOGINTIMEOUT|Gibt den Fehler "Treiber nicht fähig" zurück.|  
+|SQL_CURSORS|Gibt den Fehler "Treiber nicht fähig" zurück.|  
+|SQL_PACKET_SIZE|Gibt den Fehler "Treiber nicht fähig" zurück.|  
+|SQL_TXN_ISOLATION|Der Treiber lässt nur SQL_TXN_READ_COMMITTED zu.<br /><br /> Die folgenden *vParam*-s werden nicht unterstützt:<br /><br /> SQL_TXN_READ_UNCOMMITTED<br /><br /> SQL_TXN_REAPEATABLE_READ<br /><br /> SQL_TXN_SERIALIZABLE|  
   
- Weitere Informationen finden Sie unter [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLSetConnectOption](../../odbc/reference/syntax/sqlsetconnectoption-function.md) in der *ODBC Programmer es Reference*.

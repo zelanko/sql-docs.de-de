@@ -1,5 +1,5 @@
 ---
-title: CALL-Anweisung (MDX) | Microsoft-Dokumentation
+title: Callcenter-Anweisung (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68106300"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX-Datenbearbeitung – CALL
@@ -32,7 +32,7 @@ CALL SP_Name
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *"Sp_name"*  
+ *SP_Name*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen einer gespeicherten Prozedur bereitstellt.  
   
  *SP_Argument*  
@@ -41,16 +41,16 @@ CALL SP_Name
  *Cube_Expression*  
  Ein gültiger Zeichenfolgen-Cube-Ausdruck, der den Namen des Cubes bereitstellt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Aufrufen** -Anweisung führt eine angegebene registrierte gespeicherte Prozedur, optional einschließlich von ein oder mehrere Argumente für die angegebene gespeicherte Prozedur. Die **Aufrufen** -Anweisung ist nur mit gespeicherten Prozeduren, die ' void ' zurückgeben. Die Anweisung kann nicht mit anderen Funktionen oder Operatoren in einem MDX-Ausdruck kombiniert werden. Registrierte gespeicherte Prozeduren, die Werte zurückgeben, können direkt in MDX-Ausdrücken aufgerufen und mit anderen MDX-Funktionen und -Operatoren kombiniert werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **Statement-** Anweisung führt eine angegebene registrierte gespeicherte Prozedur aus, die optional ein oder mehrere Argumente für die angegebene gespeicherte Prozedur einschließt. Die **callanweisung** dient nur zur Verwendung mit gespeicherten Prozeduren, die Voids zurückgeben. Die Anweisung kann nicht mit anderen Funktionen oder Operatoren in einem MDX-Ausdruck kombiniert werden. Registrierte gespeicherte Prozeduren, die Werte zurückgeben, können direkt in MDX-Ausdrücken aufgerufen und mit anderen MDX-Funktionen und -Operatoren kombiniert werden.  
   
  Wenn kein Cube angegeben wird, führt die Anweisung die gespeicherte Prozedur mit dem aktuellen Cube als Argument aus.  
   
 > [!NOTE]  
->  Wenn die gespeicherte Prozedur nicht auf dem Client registriert ist die **Aufrufen** Anweisung versucht, auf die gespeicherte Prozedur von einer Instanz von Aufrufen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
+>  Wenn die gespeicherte Prozedur nicht auf dem Client registriert ist, versucht die **-Anweisung, die gespeicherte** Prozedur von einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]aufzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Datenbearbeitungsanweisungen &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
- [Verwenden von gespeicherten Prozeduren &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Verwenden von gespeicherten Prozeduren &#40;MDX-&#41;](../mdx/using-stored-procedures-mdx.md)  
   
   

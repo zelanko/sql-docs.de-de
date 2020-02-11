@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077250"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount (MDX)
@@ -31,8 +31,8 @@ DistinctCount(Set_Expression)
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **DistinctCount** -Funktion ist gleichbedeutend mit `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **DistinctCount** -Funktion entspricht `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage veranschaulicht die Verwendung der DistinctCount-Funktion:  
@@ -61,8 +61,8 @@ DistinctCount(Set_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [Count &#40;Set&#41; &#40;MDX&#41;](../mdx/count-set-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzahl &#40;fest geleg&#41; &#40;MDX-&#41;](../mdx/count-set-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

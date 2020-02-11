@@ -13,25 +13,25 @@ ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68003330"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (Visual FoxPro-ODBC-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält Visual FoxPro-ODBC-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Visual FoxPro-ODBC-Treiber spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Unterstützung: Vollständig  
+ Unterstützung: vollständig  
   
- ODBC-API-Übereinstimmung: Ebene 1  
+ ODBC-API-Konformität: Ebene 1  
   
- Gibt "true" für alle unterstützten Funktionen.  
+ Gibt true für alle unterstützten Funktionen zurück.  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt alle ODBC-API-Kern und Ebene 1 Funktionen. Die folgende Tabelle gibt an, ob die Treiber eine bestimmte Ebene-2-Funktion unterstützt.  
+ Der Visual FoxPro-ODBC-Treiber unterstützt alle ODBC-API-Kernfunktionen und Funktionen der Ebene 1. In der folgenden Tabelle wird angegeben, ob der Treiber eine bestimmte Ebene 2-Funktion unterstützt.  
   
-|*Funktion*|Supported|  
+|*Funktion*|Unterstützt|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|Nein|  
 |SQL_API_SQLCOLUMNPRIVELEGES|Nein|  
@@ -51,4 +51,4 @@ ms.locfileid: "68003330"
 |SQL_API_SQLSETSCROLLOPTIONS|Ja|  
 |SQL_API_SQLTABLEPRIVILEGES|Nein|  
   
- Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in die *ODBC Programmer's Reference*.
+ Weitere Informationen finden Sie unter [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) in der *ODBC Programmer es Reference*.

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076760"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
@@ -22,7 +22,7 @@ ms.locfileid: "66076760"
   
  Bevor Sie einen Cube durchsuchen, müssen Sie ihn verarbeiten und erneut eine Verbindung damit herstellen. Nach der Verarbeitung öffnen Sie im Cube-Designer die Registerkarte **Browser** . Klicken Sie auf der Symbolleiste auf die Schaltfläche Verbindung wiederherstellen, um die Verbindung zu aktualisieren.  
   
- Die **Browser** Registerkarte verfügt über drei Bereiche: Bereich Metadaten, der Bereich "Filter" und der Bereich "Daten". Verwenden Sie den Bereich Metadaten, um die Struktur des Cubes im Strukturformat zu untersuchen. Verwenden Sie den Bereich **Filter** oben auf der Registerkarte Browser, um einen beliebigen Teilcube zu definieren, den Sie durchsuchen möchten. Verwenden Sie den Bereich Daten, um das Resultset anzuzeigen und einen Drilldown durch Dimensionshierarchien auszuführen.  
+ Die Registerkarte **Browser** verfügt über drei Bereiche: den Metadatenbereich, den Filter Bereich und den Datenbereich. Verwenden Sie den Bereich Metadaten, um die Struktur des Cubes im Strukturformat zu untersuchen. Verwenden Sie den Bereich **Filter** oben auf der Registerkarte Browser, um einen beliebigen Teilcube zu definieren, den Sie durchsuchen möchten. Verwenden Sie den Bereich Daten, um das Resultset anzuzeigen und einen Drilldown durch Dimensionshierarchien auszuführen.  
   
 ## <a name="setting-up-the-browser"></a>Einrichten des Browsers  
  Um die Suche in einem Cube vorzubereiten, können Sie eine gewünschte Perspektive oder Übersetzung angeben. Fügen Sie dem Bereich Daten Measures und Dimensionen hinzu, und geben Sie im Bereich Filter Filter an.  
@@ -48,7 +48,7 @@ ms.locfileid: "66076760"
   
  Wenn Sie mehrere Dimensionen verwenden möchten, verwenden Sie In Excel analysieren. In Excel analysieren ist eine Verknüpfung, durch die Excel gestartet wird, wenn die Anwendung auf demselben Computer wie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]installiert ist. In Excel wird eine Arbeitsmappe geöffnet, die eine vorhandene Verbindung zur aktuellen Datenbank und eine PivotTable-Feldliste enthält, in die Measures und Dimensionen vorab geladen wurden. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](../analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).  
   
- Um eine Dimension zu entfernen, ziehen Sie sie entweder aus dem Datenbereich heraus, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann im Kontextmenü auf **Löschen**.  
+ Um eine Dimension zu entfernen, ziehen Sie sie entweder aus dem Datenbereich heraus, oder klicken Sie mit der rechten Maustaste darauf, und klicken Sie dann im Kontextmenü auf **Löschen** .  
   
 ##### <a name="adding-or-removing-filters"></a>Hinzufügen oder Entfernen von Filtern  
  Zum Hinzufügen eines Filters können Sie eine der beiden folgenden Methoden verwenden:  
@@ -57,16 +57,16 @@ ms.locfileid: "66076760"
   
      \- oder –  
   
--   In der **Dimension** Spalte die **Filter** Bereich, klicken Sie auf  **\<Dimension auswählen >** wählen Sie eine Dimension aus der Liste aus, und klicken Sie auf  **\<Hierarchie auswählen >** in die **Hierarchie** Spalte und wählen Sie eine Hierarchie aus der Liste.  
+-   Klicken **** Sie **** **** ** \<** in der Spalte Dimension des Filter Bereichs auf Dimensions>auswählen, wählen Sie eine Dimension aus der Liste aus, ** \<** und klicken Sie dann in der Spalte Hierarchie auf Hierarchie>auswählen, und wählen Sie eine Hierarchie aus der Liste aus.  
   
  Nachdem Sie die Hierarchie angegeben haben, geben Sie den Operator und den Filterausdruck an. In der folgenden Tabelle werden die Operatoren und die Filterausdrücke beschrieben.  
   
-|Operator|Filterausdruck|Description|  
+|Operator|Filterausdruck|BESCHREIBUNG|  
 |--------------|-----------------------|-----------------|  
 |Gleich|Ein oder mehrere Elemente|Werte müssen gleich einem angegebenen Element sein.<br /><br /> (Stellt für andere Attributhierarchien als Über-/Unterordnungshierarchien die Auswahl mehrerer Elemente und für sonstige Hierarchien die Auswahl einzelner Elemente bereit.)|  
 |Ungleich|Ein oder mehrere Elemente|Die Werte dürfen nicht gleich einem angegebenen Element sein.<br /><br /> (Stellt für andere Attributhierarchien als Über-/Unterordnungshierarchien die Auswahl mehrerer Elemente und für sonstige Hierarchien die Auswahl einzelner Elemente bereit.)|  
 |In|Eine oder mehrere benannte Mengen|Werte müssen in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
-|Nicht in|Eine oder mehrere benannte Mengen|Werte dürfen nicht in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
+|Not In|Eine oder mehrere benannte Mengen|Werte dürfen nicht in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
 |Bereich (inklusiv)|Eine oder zwei begrenzende Elemente eines Bereichs|Werte müssen gleich den begrenzenden Elementen sein oder dazwischen liegen. Wenn die begrenzenden Elemente gleich sind oder nur ein Element angegeben ist, wird kein Bereich erstellt, und alle Werte sind zulässig.<br /><br /> (Wird nur für Attributhierarchien unterstützt. Die Bereichswerte müssen sich auf einer Hierarchieebene befinden. Unbegrenzte Bereiche werden derzeit nicht unterstützt.)|  
 |Bereich (exklusiv)|Eine oder zwei begrenzende Elemente eines Bereichs|Werte müssen zwischen den begrenzenden Elementen liegen. Wenn die begrenzenden Elemente gleich sind oder nur ein Element angegeben ist, müssen die Werte größer oder kleiner als das begrenzende Element sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt. Die Bereichswerte müssen sich auf einer Hierarchieebene befinden. Unbegrenzte Bereiche werden derzeit nicht unterstützt.)|  
 |MDX|Ein MDX-Ausdruck, der eine Elementgruppe zurückgibt.|Werte müssen in der Gruppe berechneter Elemente liegen. Bei Auswahl dieser Option wird das Dialogfeld **Generator für berechnete Elemente** zum Erstellen von MDX-Ausdrücken angezeigt.|  

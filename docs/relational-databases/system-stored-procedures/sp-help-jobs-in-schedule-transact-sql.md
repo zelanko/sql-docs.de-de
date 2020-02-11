@@ -1,5 +1,5 @@
 ---
-title: Sp_help_jobs_in_schedule (Transact-SQL) | Microsoft-Dokumentation
+title: sp_help_jobs_in_schedule (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054900"
 ---
-# <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
+# <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den Aufträgen zurück, an die ein bestimmter Zeitplan angefügt ist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,9 +41,9 @@ sp_help_jobs_in_schedule
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @schedule_id = ] schedule_id` Der Bezeichner des Zeitplans für das Informationen aufgelistet. *Schedule_id* ist **Int**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
+`[ @schedule_id = ] schedule_id`Der Bezeichner des Zeitplans, für den Informationen aufgelistet werden sollen. *schedule_id* ist vom Datentyp **int**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
-`[ @schedule_name = ] 'schedule_name'` Der Name des Zeitplans für das Informationen aufgelistet. *Schedule_name* ist **Sysname**, hat keinen Standardwert. Entweder *Schedule_id* oder *Schedule_name* kann angegeben werden.  
+`[ @schedule_name = ] 'schedule_name'`Der Name des Zeitplans, für den Informationen aufgelistet werden sollen. *schedule_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es können entweder *schedule_id* oder *schedule_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -51,30 +51,30 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>Resultsets  
  Gibt das folgende Resultset zurück:  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**job_id**|**uniqueidentifier**|Die eindeutige ID des Auftrags.|  
-|**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
-|**name**|**sysname**|Name des Auftrags.|  
-|**aktiviert**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
-|**description**|**nvarchar(512)**|Beschreibung für den Auftrag.|  
+|**job_id**|**uniqueidentifier**|Eindeutige ID des Auftrags.|  
+|**originating_server**|**nvarchar (30)**|Name des Servers, von dem der Auftrag stammt|  
+|**name**|**sysname**|Der Name des Auftrags.|  
+|**wodurch**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
+|**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
-|**category**|**sysname**|Auftragskategorie|  
-|**Besitzer**|**sysname**|Auftragsbesitzer|  
-|**notify_level_eventlog**|**int**|Bitmaske, die anzeigt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Dabei kann es sich um einen der folgenden Werte sein:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Ausführung des Auftrags<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
-|**notify_level_email**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-E-Mail gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
-|**notify_level_netsend**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerkmeldung gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
-|**notify_level_page**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigung per Pager gesendet werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
+|**Kategorie**|**sysname**|Auftragskategorie|  
+|**Eigentor**|**sysname**|Auftragsbesitzer|  
+|**notify_level_eventlog**|**int**|Bitmaske, die anzeigt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Kann einen der folgenden Werte aufweisen:<br /><br /> **0** = nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = bei Fehlschlagen des Auftrags<br /><br /> **3** = immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Auftrags Ergebnis)|  
+|**notify_level_email**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-E-Mail gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
+|**notify_level_netsend**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerkmeldung gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
+|**notify_level_page**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigung per Pager gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|E-Mail-Name des Operators, der benachrichtigt werden soll.|  
 |**notify_netsend_operator**|**sysname**|Name des Computers oder Benutzers, der beim Senden von Netzwerkmeldungen verwendet wird|  
 |**notify_page_operator**|**sysname**|Name des Computers oder Benutzers, der beim Senden einer Pagerbenachrichtigung verwendet wird|  
-|**delete_level**|**int**|Bitmaske, die anzeigt, unter welchen Umständen der Auftrag bei Abschluss eines Auftrags gelöscht werden soll. Mögliche Werte sind dieselbe wie für **Notify_level_eventlog**.|  
+|**delete_level**|**int**|Bitmaske, die anzeigt, unter welchen Umständen der Auftrag bei Abschluss eines Auftrags gelöscht werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Datum, an dem der Auftrag erstellt wurde.|  
 |**date_modified**|**datetime**|Datum, an dem der Auftrag zuletzt geändert wurde.|  
-|**version_number**|**int**|Version des Auftrags (wird automatisch jedes Mal aktualisiert, wenn der Auftrag geändert wird)|  
+|**version_number**|**int**|Die Version des Auftrags (wird automatisch bei jeder Auftragsänderung aktualisiert).|  
 |**last_run_date**|**int**|Datum, an dem die Ausführung des Auftrags zuletzt gestartet wurde|  
 |**last_run_time**|**int**|Uhrzeit, zu der die Ausführung des Auftrags zuletzt gestartet wurde|  
-|**last_run_outcome**|**int**|Ergebnis des Auftrags die letzte Ausführung:<br /><br /> **0** = Fehler<br /><br /> **1** = war erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
+|**last_run_outcome**|**int**|Ergebnis des Auftrags beim letzten ausführen:<br /><br /> **0** = fehlgeschlagen<br /><br /> **1** = erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
 |**next_run_date**|**int**|Datum, für das die nächste Ausführung des Auftrags geplant ist|  
 |**next_run_time**|**int**|Uhrzeit, zu der die nächste Ausführung des Auftrags geplant ist|  
 |**next_run_schedule_id**|**int**|Zeitplan-ID für nächste Ausführung|  
@@ -84,13 +84,13 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Anzahl der Auftragsschritte des Auftrags|  
 |**has_schedule**|**int**|Anzahl der Auftragszeitpläne des Auftrags|  
 |**has_target**|**int**|Die Anzahl der Zielserver des Auftrags.|  
-|**type**|**int**|Der Typ des Auftrags:<br /><br /> **1** = Lokaler Auftrag.<br /><br /> **2** = Multiserverauftrag.<br /><br /> **0** = Auftrag hat keine Zielserver.|  
+|**type**|**int**|Typ des Auftrags:<br /><br /> **1** = lokaler Auftrag.<br /><br /> **2** = Multiserverauftrag.<br /><br /> **0** = Auftrag hat keine Zielserver.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In dieser Prozedur werden Informationen aufgelistet, die an den bestimmten Zeitplan angefügt sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
+ Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
   
 -   **SQLAgentUserRole**  
   
@@ -100,7 +100,7 @@ sp_help_jobs_in_schedule
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Mitglieder der **SQLAgentUserRole** können nur den Status von Aufträgen, deren Besitzer, anzeigen.  
+ Mitglieder von **SQLAgentUserRole** können nur den Status von Aufträgen anzeigen, deren Besitzer Sie sind.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel werden die dem Zeitplan `NightlyJobs` angefügten Aufträge aufgelistet.  
@@ -114,11 +114,11 @@ EXEC sp_help_jobs_in_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server-Agent-gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_detach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server-Agent gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_attach_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_detach_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-detach-schedule-transact-sql.md)  
   
   

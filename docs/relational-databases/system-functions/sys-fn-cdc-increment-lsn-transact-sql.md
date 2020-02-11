@@ -1,5 +1,5 @@
 ---
-title: fn_cdc_increment_lsn (Transact-SQL) | Microsoft-Dokumentation
+title: sys. fn_cdc_increment_lsn (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,18 +21,18 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046367"
 ---
-# <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
+# <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt die nächste Protokollfolgenummer (Log Sequence Number, LSN) in der auf der angegebenen LSN basierenden Reihenfolge zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,12 +43,12 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argumente  
  *lsn_value*  
- LSN-Wert. *lsn_value* ist **binary(10)**  
+ LSN-Wert. *lsn_value* ist **Binär (10)**.  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **binary(10)**  
+ **Binär (10)**  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der von der Funktion zurückgegebene LSN-Wert ist immer größer als der angegebene Wert. Zwischen den beiden Werten befinden sich keine LSN-Werte.  
   
  Wenn Sie einen Änderungsdatenstrom systematisch im Verlauf der Zeit abfragen möchten, können Sie den Abfragefunktionsaufruf immer dann periodisch wiederholen, wenn ein neues Abfrageintervall zum Begrenzen der Änderungen in der Abfrage zurückgegeben wird. Um sicherzustellen, dass keine Daten verloren gehen, wird häufig die obere Grenze der vorherigen Abfrage verwendet, um die untere Grenze der nachfolgenden Abfrage zu generieren. Da es sich beim Abfrageintervall um ein geschlossenes Intervall handelt, muss die neue untere Grenze höher als die vorherige obere Grenze liegen, während sie zugleich niedrig genug liegen muss, um sicherzustellen, dass keine Änderungen mit LSN-Werten zwischen diesem Wert und der alten oberen Grenze vorhanden sind. Es wird die Funktion sys.fn_cdc_increment_lsn verwendet, um diesen Wert zu erhalten.  
@@ -70,10 +70,10 @@ SELECT * from cdc.fn_cdc_get_all_changes_HumanResources_Employee( @from_lsn, @to
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.fn_cdc_decrement_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
- [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
- [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. fn_cdc_decrement_lsn &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-decrement-lsn-transact-sql.md)   
+ [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
+ [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)   
  [Über Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150864"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
@@ -65,7 +65,7 @@ ms.locfileid: "63150864"
   
 4.  Klicken Sie im Bereich **Ergebnisse** mit der rechten Maustaste auf den **Microsoft SQL Server XML Showplan** , der den Abfrageplan enthält, und klicken Sie dann auf **Ergebnisse speichern unter**.  
   
-5.  Klicken Sie im Dialogfeld \<Rasterergebnisse ****speichern** bzw.** Ergebnisse **speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)** .  
+5.  Klicken Sie im Dialogfeld **Rasterergebnisse** \<speichern** bzw. **Ergebnisse** speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)**.  
   
 6.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<Name **>.sqlplan** ein, und klicken Sie auf **Speichern**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "63150864"
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>So öffnen Sie einen gespeicherten XML-Abfrageplan in SQL Server Management Studio  
   
-1.  Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Menü **Datei** **Öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Wählen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Menü **Datei****Öffnen**, und klicken Sie dann auf **Datei**.  
   
 2.  Legen Sie im Dialogfeld **Datei öffnen** den **Dateityp** auf **Ausführungsplandateien (\*.sqlplan)** fest, um eine gefilterte Liste der gespeicherten XML-Abfrageplandateien zu erzeugen.  
   
@@ -91,8 +91,8 @@ ms.locfileid: "63150864"
   
      Alternativ können Sie im Windows-Explorer auf eine Datei mit der Erweiterung **.sqlplan**doppelklicken. Der Plan wird in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]geöffnet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [SET STATISTICS XML &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 523891f2f0005c7f6e6752e5d16d3680f680fdfa
-ms.sourcegitcommit: 619917a0f91c8f1d9112ae6ad9cdd7a46a74f717
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73882337"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen
@@ -33,11 +33,11 @@ ms.locfileid: "73882337"
  Hinzufügen eines Artikels beinhaltet Folgendes: Hinzufügen des Artikels zur Veröffentlichung; Erstellen einer neuen Momentaufnahme für die Veröffentlichung und Synchronisieren des Abonnements zum Zuweisen des Schemas und der Daten für den neuen Artikel.  
   
 > [!NOTE]
->  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des **\@processing_order**-Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) eine Verarbeitungsreihenfolge für die beiden Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **\@processing_order**-Parameter von **sp_addmergearticle**, und geben Sie einen Wert von **2** für den **\@processing_order**-Parameter von **sp_changemergearticle** an. Geben Sie dann den Tabellennamen für den **\@article**-Parameter an. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
+>  Wenn Sie einer Mergeveröffentlichung einen Artikel hinzufügen und ein vorhandener Artikel von diesem neuen Artikel abhängt, müssen Sie mithilfe des ** \@processing_order** -Parameters von [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) und [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)eine Verarbeitungsreihenfolge für beide Artikel angeben. Angenommen, Sie veröffentlichen eine Tabelle, aber Sie veröffentlichen keine Funktion, die auf die Tabelle verweist. Wenn Sie die Funktion nicht veröffentlichen, kann die Tabelle nicht auf dem Abonnenten erstellt werden. Wenn Sie die Funktion einer Veröffentlichung hinzufügen, geben Sie einen Wert von **1** für den **\@processing_order**-Parameter von **sp_addmergearticle**, und geben Sie einen Wert von **2** für den **\@processing_order**-Parameter von **sp_changemergearticle** an. Geben Sie dann den Tabellennamen für den **\@article**-Parameter an. Durch diese Verarbeitungsreihenfolge wird sichergestellt, dass Sie die Funktion auf dem Abonnenten vor der Tabelle erstellen, die davon abhängt. Sie können unterschiedliche Nummern für die einzelnen Artikel verwenden, dabei muss jedoch die Nummer für die Funktion kleiner als die Nummer der Tabelle sein.  
   
 1.  Zum Hinzufügen einzelner oder mehrerer Artikel stehen die folgenden Methoden zur Verfügung:  
   
-    -   [Hinzufügen von Artikeln zu einer Veröffentlichung und Löschen von Artikeln aus einer Veröffentlichung &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
+    -   [Hinzufügen und Löschen von Artikeln aus einer Veröffentlichung &#40;SQL Server Management Studio&#41;](add-articles-to-and-drop-articles-from-a-publication.md)  
   
     -   [Definieren eines Artikels](define-an-article.md)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73882337"
   
 -   Durch das Löschen eines Artikels aus einer Veröffentlichung wird weder das Objekt aus der Veröffentlichungsdatenbank noch das zugehörige Objekt aus der Abonnementdatenbank entfernt. Verwenden Sie DROP \<Objekt>, um diese Objekte ggf. zu entfernen. Wenn Sie einen Artikel löschen möchten, der über Fremdschlüsseleinschränkungen mit anderen veröffentlichten Artikeln verknüpft ist, sollten Sie die Tabelle auf dem Abonnenten manuell oder mithilfe einer bedarfsgesteuerten Skriptausführung löschen. Geben Sie ein Skript an, dass die entsprechenden DROP \<Objekt>-Anweisungen enthält. Weitere Informationen finden Sie unter [Ausführen von Skripts während der Synchronisierung &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../execute-scripts-during-synchronization-replication-transact-sql-programming.md).  
   
--   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von 90RTM oder höher können Artikel jederzeit gelöscht werden. Es ist jedoch eine neue Momentaufnahme erforderlich. Darüber hinaus gilt:  
+-   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von 90RTM oder höher können Artikel jederzeit gelöscht werden. Es ist jedoch eine neue Momentaufnahme erforderlich. Außerdem zu beachten:  
   
     -   Wenn der Artikel ein übergeordneter Artikel in einer Joinfilter- oder logischen Datensatzbeziehung ist, müssen zunächst die Beziehungen gelöscht werden, was eine erneute Initialisierung erforderlich macht.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73882337"
   
 -   Bei Mergeveröffentlichungen mit einem Kompatibilitätsgrad von unter 90RTM können Artikel ohne weiteres gelöscht werden, solange die Abonnements noch nicht zum ersten Mal synchronisiert wurden. Wird ein Artikel nach der Synchronisierung von Abonnements gelöscht, müssen die Abonnements gelöscht, neu erstellt und dann synchronisiert werden.  
   
--   Bei Momentaufnahme- oder Transaktionsveröffentlichungen können Artikel ohne weiteres gelöscht werden, solange noch keine Abonnements erstellt wurden. Wird ein Artikel nach der Erstellung von Abonnements gelöscht, müssen die Abonnements gelöscht, neu erstellt und dann synchronisiert werden. Weitere Informationen zum Löschen von Abonnements finden Sie unter [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md) und [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Mit**sp_dropsubscription** können Sie einen einzelnen Artikel aus dem Abonnement löschen, statt das gesamte Abonnement zu löschen.  
+-   Bei Momentaufnahme- oder Transaktionsveröffentlichungen können Artikel ohne weiteres gelöscht werden, solange noch keine Abonnements erstellt wurden. Wird ein Artikel nach der Erstellung von Abonnements gelöscht, müssen die Abonnements gelöscht, neu erstellt und dann synchronisiert werden. Weitere Informationen zum Löschen von Abonnements finden Sie unter [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md) und [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). **sp_dropsubscription** ermöglicht es Ihnen, einen einzelnen Artikel aus dem Abonnement anstelle des gesamten Abonnements zu löschen.  
   
 1.  Das Löschen eines Artikels aus einer Veröffentlichung umfasst das eigentliche Löschen des Artikels und das Erstellen einer neuen Momentaufnahme für die Veröffentlichung. Durch das Löschen eines Artikels wird die aktuelle Momentaufnahme ungültig, sodass eine neue Momentaufnahme erstellt werden muss.  
   
@@ -80,9 +80,9 @@ ms.locfileid: "73882337"
   
  Wie oben bereits erwähnt, müssen die Abonnements in einigen Fällen nach dem Löschen eines Artikels gelöscht und dann neu erstellt sowie synchronisiert werden. Weitere Informationen finden Sie unter [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md) und [Synchronisieren von Daten](../synchronize-data.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)   
- [Erneutes Initialisieren von Abonnements](../reinitialize-subscriptions.md)   
+ [Abonnements erneut initialisieren](../reinitialize-subscriptions.md)   
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](make-schema-changes-on-publication-databases.md)  
   
   

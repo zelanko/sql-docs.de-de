@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68047294"
 ---
 # <a name="count-set-mdx"></a>Count (Menge) (MDX)
@@ -35,13 +35,13 @@ Set_Expression.Count
  *Set_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Die **Count (Menge)** -Funktion ein- oder ausgeschlossen leere Zellen, abhängig von der verwendeten Syntax. Wenn die Standardsyntax verwendet wird, leere Zellen können aus- oder eingeschlossen werden mithilfe der **EXCLUDEEMPTY** oder **INCLUDEEMPTY** flags. Wird die alternative Syntax verwendet, schließt die Funktion leere Zellen immer ein.  
+## <a name="remarks"></a>Bemerkungen  
+ Die **count (Set)** -Funktion schließt leere Zellen ein oder aus, je nach verwendeter Syntax. Wenn die Standard Syntax verwendet wird, können leere Zellen mithilfe der **EXCLUDEEMPTY** -bzw. **INCLUDEEMPTY** -Flags ausgeschlossen oder eingeschlossen werden. Wird die alternative Syntax verwendet, schließt die Funktion leere Zellen immer ein.  
   
- Verwenden Sie zum Ausschließen von leerer Zellen in der Zählung einer Menge die Standardsyntax und das optionale **EXCLUDEEMPTY** Flag.  
+ Um leere Zellen in der Anzahl einer Menge auszuschließen, verwenden Sie die Standard Syntax und das optionale **EXCLUDEEMPTY** -Flag.  
   
 > [!NOTE]  
->  Die **Count (Menge)** -Funktion zählt die leere Zellen in der Standardeinstellung. Im Gegensatz dazu die **Anzahl** -Funktion in OLE DB, die eine Menge zählt werden leere Zellen standardmäßig ausgeschlossen.  
+>  Die **count (Set)** -Funktion zählt standardmäßig leere Zellen. Im Gegensatz dazu schließt die **count** -Funktion in OLE DB, die einen Satz zählt, standardmäßig leere Zellen aus.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird die Anzahl der Zellen in der Menge der Elemente bestimmt, die aus den untergeordneten Elementen der Model Name-Attributhierarchie in der Product-Dimension bestehen.  
@@ -53,14 +53,14 @@ SELECT Measures.X ON 0
 FROM [Adventure Works]  
 ```  
   
- Im folgenden Beispiel wird die Anzahl der Produkte in der Product-Dimension mithilfe der **DrilldownLevel** -Funktion in Verbindung mit der **Anzahl** Funktion.  
+ Im folgenden Beispiel wird die Anzahl der Produkte in der Product-Dimension mithilfe der **DrilldownLevel** -Funktion in Verbindung mit der **count** -Funktion gezählt.  
   
 ```  
 Count(DrilldownLevel (   
    [Product].[Product].[Product]))  
 ```  
   
- Das folgende Beispiel gibt die Wiederverkäufer mit zurückgegangene Umsätze in Vergleich zum vorherigen Kalenderquartal, mit der **Anzahl** -Funktion in Verbindung mit der **Filter** -Funktion und eine Reihe von anderen -Funktionen. Diese Abfrage verwendet die **aggregieren** Funktion, um die Auswahl mehrerer Geography-Elemente wie z. B. für die Auswahl aus einer Dropdown-Liste in einer Clientanwendung zu unterstützen.  
+ Im folgenden Beispiel werden die Wiederverkäufer mit abnehmenden Verkäufen im Vergleich zum vorherigen Kalenderquartal zurückgegeben, indem die **count** -Funktion in Verbindung mit der **Filter** -Funktion und einer Reihe weiterer Funktionen verwendet wird. Diese Abfrage verwendet die **Aggregat** Funktion, um die Auswahl mehrerer geography-Elemente zu unterstützen, z. b. für die Auswahl in einer Dropdown Liste in einer Client Anwendung.  
   
 ```  
 WITH MEMBER Measures.[Declining Reseller Sales] AS  
@@ -90,17 +90,17 @@ WHERE ([Geography].[State-Province].x,
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Anzahl &#40;Dimension&#41; &#40;MDX&#41;](../mdx/count-dimension-mdx.md)   
- [Anzahl &#40;Hierarchieebenen&#41; &#40;MDX&#41;](../mdx/count-hierarchy-levels-mdx.md)   
- [Anzahl &#40;Tupel&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
- [DrilldownLevel &#40;MDX&#41;](../mdx/drilldownlevel-mdx.md)   
- [AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)   
- [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
- [Properties &#40;MDX&#41;](../mdx/properties-mdx.md)   
- [Aggregate &#40;MDX&#41;](../mdx/aggregate-mdx.md)   
- [Filter &#40;MDX&#41;](../mdx/filter-mdx.md)   
- [PrevMember &#40;MDX&#41;](../mdx/prevmember-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzahl &#40;Dimensions&#41; &#40;MDX-&#41;](../mdx/count-dimension-mdx.md)   
+ [&#40;Hierarchieebenen&#41; &#40;MDX-&#41;zählen](../mdx/count-hierarchy-levels-mdx.md)   
+ [Count &#40;Tupel&#41; &#40;MDX&#41;](../mdx/count-tuple-mdx.md)   
+ [DrilldownLevel-&#40;MDX-&#41;](../mdx/drilldownlevel-mdx.md)   
+ [AddCalculatedMembers &#40;MDX-&#41;](../mdx/addcalculatedmembers-mdx.md)   
+ [Hierarchize &#40;MDX-&#41;](../mdx/hierarchize-mdx.md)   
+ [Eigenschaften &#40;MDX-&#41;](../mdx/properties-mdx.md)   
+ [&#40;MDX-&#41;aggregieren](../mdx/aggregate-mdx.md)   
+ [&#40;MDX-&#41;Filtern](../mdx/filter-mdx.md)   
+ [PrevMember &#40;MDX-&#41;](../mdx/prevmember-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

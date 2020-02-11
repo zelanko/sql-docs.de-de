@@ -1,5 +1,5 @@
 ---
-title: Befehl SET PATH | Microsoft-Dokumentation
+title: Befehl "Pfad festlegen" | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063640"
 ---
 # <a name="set-path-command"></a>SET PATH-Befehl
-Gibt einen Pfad für die Suche von Dateien. Treiberspezifische Informationen finden Sie in den Hinweisen.  
+Gibt einen Pfad für Datei suchen an. Treiber spezifische Informationen finden Sie in den hinweisen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,27 +30,27 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- AUF [ *Pfad*]  
- Gibt die Verzeichnisse, Visual FoxPro suchen soll. Verwenden Sie Kommas oder Semikolons, um die Verzeichnisse.  
+ In [ *Pfad*]  
+ Gibt die Verzeichnisse an, die von Visual FoxPro durchsucht werden sollen. Verwenden Sie Kommas oder Semikolons, um die Verzeichnisse voneinander zu trennen.  
   
-## <a name="remarks"></a>Hinweise  
- SET PATH können Sie für andere Programme Visual FoxPro-Suchpfade an, die innerhalb von gespeicherten Prozeduren aufgerufen werden kann. SET PATH ändert sich nicht auf den Pfad der Datenquelle aus, die Sie für die Verbindung angegeben haben.  
+## <a name="remarks"></a>Bemerkungen  
+ Mit Set Path können Sie Suchpfade für andere Visual FoxPro-Programme angeben, die innerhalb gespeicherter Prozeduren aufgerufen werden können. Durch Festlegen des Pfads wird der Pfad der Datenquelle, die Sie für die Verbindung angegeben haben, nicht geändert.  
   
- Geben Sie Pfad festlegen auf, ohne *Pfad* den Pfad zu dem Verzeichnis oder Ordner wiederherstellen.  
+ Problem legen Sie den Pfad auf ohne *Pfad* fest, um den Pfad zum Standardverzeichnis oder-Ordner wiederherzustellen.  
   
-## <a name="driver-remarks"></a>Treiber "Hinweise".  
- Wenn Sie in einer gespeicherten Prozedur SET PATH ausgeben, wird es durch die folgenden Funktionen und Befehle ignoriert:  
+## <a name="driver-remarks"></a>Hinweise zu Treibern  
+ Wenn Sie Set Path in einer gespeicherten Prozedur ausgeben, wird es von den folgenden Funktionen und Befehlen ignoriert:  
   
--   Katalogfunktionen z. B. [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) und [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ignoriert den neuen Pfad und den von der Datenquelle im angegebenen Pfad verweisen weiterhin auf [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) oder [ SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md).  
+-   Katalog Funktionen wie [SQLTables](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md) und [SQLColumns](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md) ignorieren den neuen Pfad und verweisen weiterhin auf den von der Datenquelle in [SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md) oder [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)angegebenen Pfad.  
   
--   Befehle wie z. B. SELECT, INSERT, UPDATE, DELETE und CREATE TABLE ignoriert den neuen Pfad und den von der Datenquelle im angegebenen Pfad verweisen weiterhin auf **SQLPrepare** oder **SQLExecDirect**.  
+-   Befehle wie SELECT, INSERT, Update, DELETE und CREATE TABLE ignorieren den neuen Pfad und verweisen weiterhin auf den von der Datenquelle in **SQLPrepare** oder **SQLExecDirect**angegebenen Pfad.  
   
- Wenn Sie SET PATH in einer gespeicherten Prozedur ausgeben und keine anschließend wieder in den ursprünglichen Zustand Sie den Pfad legen, verwendet andere Verbindungen mit der Datenbank (da es sich um eine SET PATH nicht auf datensitzungen begrenzt ist) den neuen Pfad.  
+ Wenn Sie Set Path in einer gespeicherten Prozedur ausgeben und den Pfad nicht wieder auf den ursprünglichen Zustand zurücksetzen, wird der neue Pfad von anderen Verbindungen mit der Datenbank verwendet (da Set Path nicht auf Daten Sitzungen beschränkt ist).  
   
- Wenn Sie ausgewählt, oder Aktualisieren von Tabellen in einem anderen Verzeichnis als die, die von der Datenquelle angegeben möchten, geben Sie den vollständigen Pfad der Datei mit dem Befehl.  
+ Wenn Sie Tabellen in einem anderen Verzeichnis als dem von der Datenquelle angegebenen Verzeichnis erstellen, auswählen oder aktualisieren möchten, geben Sie den vollständigen Pfad der Datei mit dem Befehl an.  
   
-## <a name="see-also"></a>Siehe auch  
- [ODBC-Visual FoxPro-einrichten (Dialogfeld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [ODBC Visual FoxPro-Setup (Dialog Feld)](../../odbc/microsoft/odbc-visual-foxpro-setup-dialog-box.md)   
  [SQLColumns (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/sqlcolumns-visual-foxpro-odbc-driver.md)   
  [SQLDriverConnect (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md)   
  [SQLTables (Visual FoxPro-ODBC-Treiber)](../../odbc/microsoft/sqltables-visual-foxpro-odbc-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: Sys.syscolumns (Transact-SQL) | Microsoft-Dokumentation
+title: sys. syscolumns (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68089241"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
@@ -36,41 +36,41 @@ ms.locfileid: "68089241"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name der Spalte oder des Prozedurparameters|  
-|**id**|**int**|Objekt-ID der Tabelle, zu der diese Spalte gehört, oder ID der gespeicherten Prozedur, der dieser Parameter zugeordnet ist|  
-|**xtype**|**tinyint**|Physischer Speichertyp aus **sys.types**|  
+|**Name**|**int**|Objekt-ID der Tabelle, zu der diese Spalte gehört, oder ID der gespeicherten Prozedur, der dieser Parameter zugeordnet ist|  
+|**xType**|**tinyint**|Physischer Speichertyp aus **sys.types**|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|ID des erweiterten benutzerdefinierten Datentyps. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  
-|**length**|**smallint**|Maximale physische Speicherlänge aus **sys**.**types**.|  
+|**Füll**|**smallint**|Maximale physische Speicherlänge aus **sys**.**types**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**colid**|**smallint**|Spalten- oder Parameter-ID|  
+|**XScale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**ColId**|**smallint**|Spalten- oder Parameter-ID|  
 |**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Reserviert**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**bleiben**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**cdefault**|**int**|ID des Standards für diese Spalte|  
-|**domain**|**int**|ID der Regel oder CHECK-Einschränkung für diese Spalte|  
-|**number**|**smallint**|Nummer der Unterprozedur, wenn die Prozedur gruppiert ist.<br /><br /> 0 = Einträge, die sich nicht auf eine Prozedur beziehen.|  
+|**cDefault**|**int**|ID des Standards für diese Spalte|  
+|**-**|**int**|ID der Regel oder CHECK-Einschränkung für diese Spalte|  
+|**Zahl**|**smallint**|Nummer der Unterprozedur, wenn die Prozedur gruppiert ist.<br /><br /> 0 = Einträge, die sich nicht auf eine Prozedur beziehen.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**offset**|**smallint**|Offset in die Zeile, in der diese Spalte enthalten ist|  
+|**autoval**|**varbinary (8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**kompensieren**|**smallint**|Offset in die Zeile, in der diese Spalte enthalten ist|  
 |**collationid**|**int**|ID der Sortierung der Spalte. NULL für nicht zeichenbasierte Spalten.|  
-|**status**|**tinyint**|Bitmuster, das zum Beschreiben einer Eigenschaft der Spalte oder des Parameters verwendet wird:<br /><br /> 0x08 = In der Spalte sind NULL-Werte zulässig.<br /><br /> 0x10 = ANSI-Auffüllung war aktiviert, als **varchar** oder **varbinary** -Spalten hinzugefügt wurden. Nachfolgende Leerzeichen werden bei **varchar** -Spalten beibehalten, nachfolgende Nullen werden bei **varbinary** -Spalten beibehalten.<br /><br /> 0x40 = Der Parameter ist ein OUTPUT-Parameter.<br /><br /> 0x80 = Die Spalte ist eine Identitätsspalte.|  
-|**type**|**tinyint**|Physischer Speichertyp aus **sys**.**types**.|  
+|**Stands**|**tinyint**|Bitmuster, das zum Beschreiben einer Eigenschaft der Spalte oder des Parameters verwendet wird:<br /><br /> 0x08 = In der Spalte sind NULL-Werte zulässig.<br /><br /> 0x10 = ANSI-Auffüllung war aktiviert, als **varchar** oder **varbinary** -Spalten hinzugefügt wurden. Nachfolgende Leerzeichen werden bei **varchar** -Spalten beibehalten, nachfolgende Nullen werden bei **varbinary** -Spalten beibehalten.<br /><br /> 0x40 = Der Parameter ist ein OUTPUT-Parameter.<br /><br /> 0x80 = Die Spalte ist eine Identitätsspalte.|  
+|**type**|**tinyint**|Physischer Speichertyp aus **sys**. **Typen**.|  
 |**usertype**|**smallint**|ID des benutzerdefinierten Datentyps aus **sys.types**. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  
-|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**printf MT**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Genauigkeitsgrad für diese Spalte.<br /><br /> -1 = **xml** oder ein Typ für hohe Werte.|  
 |**scale**|**int**|Dezimalstellen in dieser Spalte.<br /><br /> NULL = Datentyp nicht numerisch.|  
-|**iscomputed**|**int**|Flag, das anzeigt, ob die Spalte berechnet ist:<br /><br /> 0 = Nicht berechnet<br /><br /> 1 = Berechnet|  
+|**IsComputed**|**int**|Flag, das anzeigt, ob die Spalte berechnet ist:<br /><br /> 0 = Nicht berechnet<br /><br /> 1 = Berechnet|  
 |**isoutparam**|**int**|Gibt an, ob der Prozedurparameter ein Ausgabeparameter ist.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**IsNullable**|**int**|Gibt an, ob die Spalte NULL-Werte zulässt.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**Sortierung**|**sysname**|Name der Sortierung der Spalte. NULL, wenn es keine zeichenbasierte Spalte ist.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuordnen von Systemtabellen zu Systemsichten &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

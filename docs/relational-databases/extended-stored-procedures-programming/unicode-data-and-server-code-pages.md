@@ -1,5 +1,5 @@
 ---
-title: Unicode-Daten und Server Codepages | Microsoft-Dokumentation
+title: Unicode-Daten und Server-Codepages | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,34 +15,34 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064271"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode-Daten und Server-Codepages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen die CLR-Integration.  
   
  Die API für erweiterte gespeicherte Prozeduren ist für die Verarbeitung von Unicode-Daten aktiviert, jedoch nicht für Unicode-Metadaten. Die Unicode-Direktive #define hat keinerlei Wirkung auf die API für erweiterte gespeicherte Prozeduren.  
   
- Für alle Metadaten, die von der API für erweiterte gespeicherte Prozeduren zurückgegeben oder durch Ihre Anwendung mit erweiterten gespeicherten Prozeduren für die API bereitgestellt werden, wird angenommen, dass sie im Multibytecodepageformat des Servers vorliegen. Die Standardcodepage einer Serveranwendung Prozedur API für erweiterte gespeicherte ist die ANSI-Codepage des Computers auf dem die Anwendung ausgeführt wird, der durch den Aufruf abgerufen werden kann **Srv_pfield** mit dem Feld-Parameter, die auf SRV_ festgelegt SPROC_CODEPAGE.  
+ Für alle Metadaten, die von der API für erweiterte gespeicherte Prozeduren zurückgegeben oder durch Ihre Anwendung mit erweiterten gespeicherten Prozeduren für die API bereitgestellt werden, wird angenommen, dass sie im Multibytecodepageformat des Servers vorliegen. Die Standard Codepage einer API-Serveranwendung für erweiterte gespeicherte Prozeduren ist die ANSI-Codepage des Computers, auf dem die Anwendung ausgeführt wird. dieser kann durch Aufrufen von **srv_pfield** abgerufen werden, wobei der Feld Parameter auf SRV_SPROC_CODEPAGE festgelegt ist.  
   
  Wenn für Ihre mit der API für erweiterte gespeicherte Prozeduren erstellte Anwendung Unicode aktiviert ist, müssen Sie die Unicode-Metadaten für Spaltennamen, Fehlermeldungen usw. in Multibytedaten konvertieren, bevor Sie die Daten an die API für erweiterte gespeicherte Prozeduren übergeben.  
   
 ## <a name="example"></a>Beispiel  
  Die folgende erweiterte gespeicherte Prozedur stellt ein Beispiel für die beschriebenen Unicode-Konvertierungen bereit. Beachten Sie dabei Folgendes:  
   
--   Daten der Spalte werden als Unicode-Daten an übergeben **Srv_describe** da die Spalte beschrieben wird, srvnvarchar BESCHRIEBEN sind.  
+-   Spaltendaten werden als Unicode-Daten an **srv_describe** weitergegeben, da die Spalte als SRVNVARCHAR beschrieben wird.  
   
--   Metadaten für Spaltennamen übergeben wird, um **Srv_describe** als multibyte-Daten.  
+-   Metadaten des Spaltennamens werden als Multibytedaten an **srv_describe** übermittelt.  
   
-     Die erweiterte gespeicherte Prozedur ruft **Srv_pfield** mit dem auf SRV_SPROC_CODEPAGE festgelegten Feldparameter multibyte-Codepage des abzurufenden Felds-Parameter [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Die erweiterte gespeicherte Prozedur ruft **srv_pfield** auf, wobei der Feld Parameter auf SRV_SPROC_CODEPAGE festgelegt ist, um die Multibytezeichen-Codepage von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu erhalten.  
   
--   Fehlermeldungen werden an übergeben **Srv_sendmsg** als multibyte-Daten.  
+-   Fehlermeldungen werden als Multibytedaten an **srv_sendmsg** übermittelt.  
   
     ```  
     __declspec(dllexport) RETCODE proc1 (SRV_PROC *srvproc)  
@@ -150,7 +150,7 @@ ms.locfileid: "68064271"
   
     ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Srv_wsendmsg &#40;gespeicherte API für erweiterte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [srv_wsendmsg &#40;API für erweiterte gespeicherte Prozeduren&#41;](../../relational-databases/extended-stored-procedures-reference/srv-wsendmsg-extended-stored-procedure-api.md)  
   
   

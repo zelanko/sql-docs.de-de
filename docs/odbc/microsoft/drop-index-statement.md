@@ -14,15 +14,15 @@ ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 23823e53e516324832c79706e6171b48a9c5297c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68071861"
 ---
 # <a name="drop-index-statement"></a>DROP INDEX-Anweisung
-Wenn der Microsoft Access, Access und Paradox-Treiber verwendet wird, wird die Syntax der DROP INDEX-Anweisung "DROP INDEX a zu b", "a" ist der Name des Indexes und "b" ist der Name der Tabelle (nicht die DROP INDEX *Indexname*).  
+Wenn der Microsoft Access-, dBASE-oder Paradox-Treiber verwendet wird, lautet die Syntax der DROP INDEX-Anweisung "Drop Index a auf b", wobei "a" der Name des Indexes und "b" der Name der Tabelle (nicht Drop Index *Indexname*) ist.  
   
- Wenn die Paradox-Treiber verwendet wird, löscht der DROP INDEX-Anweisung Paradox sekundären Index-Dateien.  
+ Wenn der Paradox-Treiber verwendet wird, löscht die DROP INDEX-Anweisung den sekundären Paradox-Index.  
   
- Die DROP INDEX-Anweisung wird für die Microsoft Excel- oder Textdateien Treiber nicht unterstützt.
+ Die DROP INDEX-Anweisung wird für Microsoft Excel-oder Text-Treiber nicht unterstützt.

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3bbf6c9640882ffca2bbdbf82b2ef2667c394096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66090703"
 ---
 # <a name="subscribe-to-and-check-the-finance-name-policy"></a>Abonnieren und Überprüfen der Richtlinie 'Finanz_Name'
@@ -22,9 +22,9 @@ ms.locfileid: "66090703"
   
 ### <a name="to-subscribe-to-the-finance-policy-category"></a>So abonnieren Sie die Richtlinienkategorie 'Finanzen'  
   
-1.  Erweitern Sie im Objekt-Explorer **Datenbanken**, mit der rechten Maustaste `Finance`, zeigen Sie auf **Richtlinien**, und klicken Sie dann auf **Kategorien**.  
+1.  Erweitern Sie in Objekt-Explorer **Datenbanken**, klicken Sie `Finance`mit der rechten Maustaste, zeigen Sie auf **Richtlinien**, und klicken Sie dann auf **Kategorien**.  
   
-2.  Wählen Sie die **abonniert** Kontrollkästchen für die `Finance` Kategorie.  
+2.  Aktivieren Sie das Kontrollkästchen **abonniert** für die `Finance` Kategorie.  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -62,17 +62,18 @@ ms.locfileid: "66090703"
   
 2.  Suchen Sie im Dialogfeld **Richtlinienkategorien verwalten** nach der Kategorie „Finanzen“, und aktivieren Sie das Kontrollkästchen **Datenbankabonnements beauftragen** für die Kategorie „Finanzen“.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Nun gilt die Kategorie „Finanzen“ für alle Datenbanken, aber durch die von Ihnen erstellte Bedingung ist die Richtlinie „Finanz_Name“ nur auf die Datenbank „Finanzen“ beschränkt. Dieses Beispiel zeigt, wie Sie komplexe Kombinationen von Bedingungen verwenden können, um Richtlinien so zuzuweisen, dass sie für viele Server richtig übernommen werden.  
+3.  
+  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Nun gilt die Kategorie „Finanzen“ für alle Datenbanken, aber durch die von Ihnen erstellte Bedingung ist die Richtlinie „Finanz_Name“ nur auf die Datenbank „Finanzen“ beschränkt. Dieses Beispiel zeigt, wie Sie komplexe Kombinationen von Bedingungen verwenden können, um Richtlinien so zuzuweisen, dass sie für viele Server richtig übernommen werden.  
   
 ## <a name="summary"></a>Zusammenfassung  
  Dieses Lernprogramm hat gezeigt, wie Sie Bedingungen, Richtlinien und Richtliniengruppen der richtlinienbasierten Verwaltung erstellen und die Kompatibilität der Ziele der richtlinienbasierten Verwaltung überprüfen können.  
   
-## <a name="next"></a>Weiter  
- Dieses Lernprogramm ist beendet. Um zum Start zurückzukehren, klicken Sie auf [Lernprogramm: Verwalten von Servern mit richtlinienbasierten Verwaltung](tutorial-administering-servers-by-using-policy-based-management.md).  
+## <a name="next"></a>Next (Weiter)  
+ Dieses Lernprogramm ist beendet. Um zum Anfang des Tutorials zurückzukehren, klicken Sie auf [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](tutorial-administering-servers-by-using-policy-based-management.md).  
   
- Eine Liste der Tutorials finden Sie unter [Lernprogramme für SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
+ Eine Liste der Tutorials finden Sie unter [Tutorials für SQL Server 2014](../../tutorials/tutorials-for-sql-server-2014.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  
   
   

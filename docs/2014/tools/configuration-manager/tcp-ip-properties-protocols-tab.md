@@ -1,5 +1,5 @@
 ---
-title: TCP - IP-Eigenschaften (Registerkarte Protokoll) | Microsoft-Dokumentation
+title: TCP/IP-Eigenschaften (Registerkarte Protokolle) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b545fbe28e28739b5f66a7beca1ab7c0450ae08a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150455"
 ---
-# <a name="tcp---ip-properties-protocols-tab"></a>TCP - IP-Eigenschaften (Registerkarte Protokoll)
-  Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** zum Konfigurieren der Optionen für das TCP/IP-Protokoll. Klicken Sie im linken Bereich auf **TCP/IP**, um die einzelnen IP-Adresskonfigurationen im Detailbereich anzuzeigen.  
+# <a name="tcp---ip-properties-protocols-tab"></a>TCP/IP-Eigenschaften (Registerkarte Protokolle)
+  Verwenden Sie das Dialogfeld **TCP/IP-Eigenschaften** zum Konfigurieren der Optionen für das TCP/IP-Protokoll. Klicken Sie im linken Bereich auf **TCP/IP** , um die einzelnen IP-Adresskonfigurationen im Detailbereich anzuzeigen.  
   
  Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss neu gestartet werden, damit die Änderungen in Kraft treten.  
   
-## <a name="options"></a>Optionen  
- **Enabled**  
+## <a name="options"></a>Tastatur  
+ **Aktiviert**  
  Mögliche Werte sind **Yes** und **No**.  
   
  **Keep Alive**  
@@ -37,7 +37,7 @@ ms.locfileid: "63150455"
  **No Delay**  
  Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden keine Änderungen an dieser Eigenschaft implementiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)  
   

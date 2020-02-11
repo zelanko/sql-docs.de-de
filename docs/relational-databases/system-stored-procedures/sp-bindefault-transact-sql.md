@@ -1,5 +1,5 @@
 ---
-title: Sp_bindefault (Transact-SQL) | Microsoft-Dokumentation
+title: sp_bindefault (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/25/2015
 ms.prod: sql
@@ -19,21 +19,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046055"
 ---
-# <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
+# <a name="sp_bindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Bindet einen Standard an eine Spalte oder einen Aliasdatentyp.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Es wird empfohlen, dass Sie Default-Definitionen erstellen, mit dem DEFAULT-Schlüsselwort, der die [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) oder [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) Anweisungen stattdessen.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Es wird empfohlen, stattdessen Standarddefinitionen zu erstellen, indem Sie das Default-Schlüsselwort der [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) -Anweisung oder der [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) -Anweisung verwenden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,29 +45,29 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @defname = ] 'default'` Ist der Name des Standards, der von CREATE DEFAULT erstellt wird. *standardmäßige* ist **nvarchar(776)** , hat keinen Standardwert.  
+`[ @defname = ] 'default'`Der Name der Standardeinstellung, die von CREATE DEFAULT erstellt wird. der *Standard* Wert ist **nvarchar (776)** und hat keinen Standardwert.  
   
-`[ @objname = ] 'object_name'` Ist der Name der Tabelle und Spalte oder der Aliasdatentyp, ist der Standardwert gebunden werden soll. *Object_name* ist **nvarchar(776)** hat keinen Standardwert. *Object_name* kann nicht definiert werden, mit der **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , **Xml**, oder CLR Benutzerdefinierte Typen.  
+`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, an den der Standardwert gebunden werden soll. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. *object_name* kann nicht mit den benutzerdefinierten Typen " **varchar (max)**", " **nvarchar (max)**", " **varbinary (max)**", " **XML**" oder "CLR" definiert werden.  
   
- Wenn *Object_name* ist ein einteiliger Name, wird er als einen Aliasdatentyp aufgelöst. Wenn es sich um einen - oder dreiteiliger Namen handelt, wird es zunächst als Tabelle und Spalte aufgelöst wurde, andernfalls und wenn die Auflösung fehlschlägt, wird es als einen Aliasdatentyp aufgelöst. Vorhandene Spalten des aliasdatentyps erben standardmäßig *Standard*, es sei denn, Sie direkt auf die Spalte ein Standardwert gebunden wurde. Ein Standard kann nicht gebunden werden, um eine **Text**, **Ntext**, **Image**, **varchar(max)** , **nvarchar(max)** , **'varbinary(max)'** , **Xml**, **Zeitstempel**, oder CLR UDT-Spalte, eine Spalte mit der IDENTITY-Eigenschaft, eine berechnete Spalte oder eine Spalte, die besitzt bereits eine DEFAULT-Einschränkung.  
+ Wenn *object_name* ein einteilige Name ist, wird er als Alias Datentyp aufgelöst. Wenn es sich um einen zwei-oder dreiteiligen Namen handelt, wird er zuerst als Tabelle und Spalte aufgelöst. Wenn diese Auflösung fehlschlägt, wird Sie als Alias Datentyp aufgelöst. Standardmäßig erben vorhandene Spalten des Alias Datentyps *default*, es sei denn, ein Standardwert wurde direkt an die Spalte gebunden. Ein Standardwert kann nicht an eine Spalte vom Typ **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **Zeitstempel**oder CLR User-Defined Type, eine Spalte mit der Identity-Eigenschaft, eine berechnete Spalte oder eine Spalte mit einer DEFAULT-Einschränkung gebunden werden.  
   
 > [!NOTE]  
->  *Object_name* können Klammern enthalten **[]** als Begrenzungsbezeichner. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
+>  *object_name* können eckige Klammern **[]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Wird nur beim Binden eines Standards an einen Aliasdatentyp verwendet. *Futureonly_flag* ist **varchar(15)** hat den Standardwert NULL. Wenn dieser Parameter auf festgelegt ist **Futureonly**, vorhandene Spalten dieses Datentyps können nicht den neuen Standard nicht erben. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *Futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des aliasdatentyps, die aktuell keinen Standard aufweisen oder die den vorhandenen Standard des aliasdatentyps, gebunden.  
+`[ @futureonly = ] 'futureonly_flag'`Wird nur verwendet, wenn ein Standard an einen Alias Datentyp gebunden wird. *futureonly_flag* ist vom Datentyp **varchar (15)** und hat den Standardwert NULL. Wenn dieser Parameter auf **futureonly**festgelegt ist, können vorhandene Spalten dieses Datentyps nicht den neuen Standardwert erben. Dieser Parameter wird nie beim Binden eines Standards an eine Spalte verwendet. Wenn *futureonly_flag* NULL ist, wird der neue Standard an alle Spalten des Alias Datentyps gebunden, die aktuell keinen Standard aufweisen oder die den vorhandenen Standardwert des Alias Datentyps verwenden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- Sie können **Sp_bindefault** um einen neuen Standardwert zu einer Spalte binden, obwohl empfohlen wird, verwenden die DEFAULT-Einschränkung oder einen Aliasdatentyp, ohne die Bindung eines vorhandenen Standardwerts. Der alte Standard wird überschrieben. Sie können einen Standard nicht an einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp oder an einen CLR-benutzerdefinierten Typ binden. Ist der Standard nicht kompatibel mit der Spalte, an die er gebunden wurde, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Fehlermeldung zurück, wenn der Standardwert eingefügt werden soll (nicht beim Binden).  
+## <a name="remarks"></a>Bemerkungen  
+ Mit **sp_bindefault** können Sie einen neuen Standardwert an eine Spalte binden, obwohl die DEFAULT-Einschränkung bevorzugt wird, oder auf einen Alias Datentyp, ohne die Bindung eines vorhandenen standardmäßigen aufzuheben. Der alte Standard wird überschrieben. Sie können einen Standard nicht an einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatentyp oder an einen CLR-benutzerdefinierten Typ binden. Ist der Standard nicht kompatibel mit der Spalte, an die er gebunden wurde, gibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] eine Fehlermeldung zurück, wenn der Standardwert eingefügt werden soll (nicht beim Binden).  
   
- Vorhandene Spalten des aliasdatentyps erben den neuen Standard, es sei denn, ein Standard, direkt an diese gebunden ist oder *Futureonly_flag* angegeben ist, als **Futureonly**. Neue Spalten des Aliasdatentyps erben immer den Standard.  
+ Vorhandene Spalten des Alias Datentyps erben den neuen Standard, es sei denn, entweder ist ein Standard direkt an Sie gebunden, oder *futureonly_flag* als **futureonly**angegeben. Neue Spalten des Aliasdatentyps erben immer den Standard.  
   
- Wenn Sie den Standardwert an eine Spalte binden, zugehörige Informationen hinzugefügt die **sys.columns** -Katalogsicht angezeigt. Wenn Sie den Standardwert an einen Aliasdatentyp binden, zugehörige Informationen hinzugefügt die **sys.types** -Katalogsicht angezeigt.  
+ Wenn Sie einen Standardwert an eine Spalte binden, werden der **sys. Columns** -Katalog Sicht zugehörige Informationen hinzugefügt. Wenn Sie einen Standardwert an einen Alias Datentyp binden, werden der **sys. types** -Katalog Sicht zugehörige Informationen hinzugefügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Benutzer muss Besitzer der Tabelle oder ein Mitglied der **Sysadmin** festen Serverrolle oder die **Db_owner** und **Db_ddladmin** festen Datenbankrollen.  
+ Der Benutzer muss Besitzer der Tabelle sein oder ein Mitglied der festen Server Rolle **sysadmin** oder der festen Daten bankrollen **db_owner** und **db_ddladmin** sein.  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -81,7 +81,7 @@ EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';
 ```  
   
 ### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Binden eines Standards an einen Aliasdatentyp  
- Ein Standard namens `def_ssn` und ein Aliasdatentyp namens `ssn` sind bereits vorhanden. Im folgenden Beispiel wird der Standard `def_ssn` an den Typ `ssn` gebunden. Wenn eine Tabelle erstellt wird, wird der Standard von allen Spalten geerbt, denen der Aliasdatentyp `ssn` zugewiesen ist. Vorhandene Spalten des Typs **"ssn"** erben ebenfalls den Standard **Def_ssn**, es sei denn, **Futureonly** für angegeben *Futureonly_flag* Wert. oder, wenn die Spalte einen direkt gebundenen Standard besitzt. An Spalten gebundene Standards haben stets Vorrang vor den an Datentypen gebundenen Standards.  
+ Ein Standard namens `def_ssn` und ein Aliasdatentyp namens `ssn` sind bereits vorhanden. Im folgenden Beispiel wird der Standard `def_ssn` an den Typ `ssn` gebunden. Wenn eine Tabelle erstellt wird, wird der Standard von allen Spalten geerbt, denen der Aliasdatentyp `ssn` zugewiesen ist. Vorhandene Spalten vom Typ **SSN** Erben auch den Standard **def_ssn**, sofern nicht **futureonly** für *futureonly_flag* Wert angegeben ist, oder wenn für die Spalte kein Standardwert direkt an die Spalte gebunden ist. An Spalten gebundene Standards haben stets Vorrang vor den an Datentypen gebundenen Standards.  
   
 ```  
 USE master;  
@@ -89,8 +89,8 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn';  
 ```  
   
-### <a name="c-using-the-futureonlyflag"></a>C. Verwenden von futureonly_flag  
- Im folgenden Beispiel bindet der Standard `def_ssn` an den Aliasdatentyp `ssn`. Da **Futureonly** angegeben wird, ohne vorhandenen Spalten des Typs `ssn` betroffen sind.  
+### <a name="c-using-the-futureonly_flag"></a>C. Verwenden des futureonly_flag  
+ Im folgenden Beispiel bindet der Standard `def_ssn` an den Aliasdatentyp `ssn`. Da **futureonly** angegeben ist, sind keine vorhandenen Spalten vom `ssn` Typ betroffen.  
   
 ```  
 USE master;  
@@ -98,8 +98,8 @@ GO
 EXEC sp_bindefault 'def_ssn', 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D. Verwendung von begrenzungsbezeichnern  
- Das folgende Beispiel zeigt die Verwendung von begrenzungsbezeichnern, `[t.1]`im *Object_name*.  
+### <a name="d-using-delimited-identifiers"></a>D: Verwenden von Begrenzungs Bezeichnerzeichen  
+ Das folgende Beispiel zeigt die Verwendung von Begrenzungs bezeichnerbezeichern, `[t.1]`, in *object_name*.  
   
 ```  
 USE master;  
@@ -112,11 +112,11 @@ EXEC sp_bindefault 'default1', '[t.1].c1' ;
 -- and the second distinguishes the table name from the column name.  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [DROP DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
- [sp_unbindefault &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
+ [Drop default &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-default-transact-sql.md)   
+ [sp_unbindefault &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

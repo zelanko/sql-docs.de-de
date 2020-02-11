@@ -1,5 +1,5 @@
 ---
-title: Kontextverbindung | Microsoft-Dokumentation
+title: Kontext Verbindung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3b091f515af926fb17cea424b4f8875baf0fa83a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068421"
 ---
 # <a name="context-connection"></a>Kontextverbindung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Der interne Datenzugriff ist ein verbreitetes Problem. Es tritt auf, wenn Sie auf denselben Server zugreifen möchten, auf dem auch die CLR-gespeicherte Prozedur (Common Language Runtime, CLR) oder -Funktion ausgeführt wird. Eine Möglichkeit besteht darin, erstellen Sie eine Verbindung mit **System.Data.SqlClient.SqlConnection**, geben Sie eine Verbindungszeichenfolge, die auf dem lokalen Server verweist, und öffnen Sie die Verbindung. Dies erfordert die Angabe von Anmeldeinformationen für die Anmeldung. Die Verbindung befindet sich in einer anderen datenbanksitzung als die gespeicherte Prozedur oder Funktion, die möglicherweise andere **festgelegt** Optionen, die es in einer separaten Transaktion ist, nicht in die temporären Tabellen und so weiter. Wenn der Code Ihrer verwalteten gespeicherten Prozedur oder Funktion im SQL Serverprozess ausgeführt wird, liegt das daran, dass jemand eine Verbindung mit diesem Server hergestellt und eine SQL-Anweisung ausgeführt hat, um den Code aufzurufen. Empfiehlt sich die gespeicherte Prozedur oder Funktion, die im Rahmen dieser Verbindung sowie entsprechende Transaktion ausgeführt **festgelegt** Optionen und So weiter. Dies wird als Kontextverbindung bezeichnet.  
+  Der interne Datenzugriff ist ein verbreitetes Problem. Es tritt auf, wenn Sie auf denselben Server zugreifen möchten, auf dem auch die CLR-gespeicherte Prozedur (Common Language Runtime, CLR) oder -Funktion ausgeführt wird. Eine Möglichkeit besteht darin, mithilfe von **System. Data. SqlClient. SqlConnection**eine Verbindung herzustellen, eine Verbindungs Zeichenfolge anzugeben, die auf den lokalen Server zeigt, und die Verbindung zu öffnen. Dies erfordert die Angabe von Anmeldeinformationen für die Anmeldung. Die Verbindung befindet sich in einer anderen Daten banksitzung als die gespeicherte Prozedur oder Funktion, Sie kann über unterschiedliche **Set** -Optionen verfügen, Sie befindet sich in einer separaten Transaktion, ihre temporären Tabellen werden nicht angezeigt usw. Wenn der Code Ihrer verwalteten gespeicherten Prozedur oder Funktion im SQL Serverprozess ausgeführt wird, liegt das daran, dass jemand eine Verbindung mit diesem Server hergestellt und eine SQL-Anweisung ausgeführt hat, um den Code aufzurufen. Wahrscheinlich möchten Sie, dass die gespeicherte Prozedur oder Funktion im Kontext dieser Verbindung zusammen mit der zugehörigen Transaktion, den **Set** -Optionen usw. ausgeführt wird. Dies wird als Kontextverbindung bezeichnet.  
   
  Die Kontextverbindung ermöglicht, Transact-SQL-Anweisungen im selben Kontext auszuführen wie den Code, der anfänglich aufgerufen wurde. Um die Kontextverbindung herzustellen, müssen Sie "context connection", das Schlüsselwort für die Verbindungszeichenfolge der Kontextverbindung, verwenden, wie im nachstehenden Beispiel gezeigt:  
   
@@ -51,7 +51,7 @@ End Using
 ```  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Reguläre vs. Kontextverbindungen](../../../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md)  
+ [Reguläre im Vergleich zu Kontextverbindungen](../../../relational-databases/clr-integration/data-access/context-connections-vs-regular-connections.md)  
  Beschreibt die Unterschiede zwischen regulären Verbindungen und Kontextverbindungen.  
   
  [Einschränkungen hinsichtlich regulärer Verbindungen und Kontextverbindungen](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)  

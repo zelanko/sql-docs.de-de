@@ -1,5 +1,5 @@
 ---
-title: managed_backup.fn_backup_db_config (Transact-SQL) | Microsoft-Dokumentation
+title: managed_backup. fn_backup_db_config (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,20 +21,20 @@ ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067782"
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup. fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Gibt keine, eine oder mehrere Zeilen mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfigurationseinstellungen zurück. Gibt eine Zeile für die angegebene Datenbank oder die Informationen für alle Datenbanken zurück, die auf der Instanz mit [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfiguriert sind.  
   
  Verwenden Sie diese gespeicherte Prozedur, um die aktuellen [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Konfigurationseinstellungen für eine Datenbank oder alle Datenbanken in einer SQL Server-Instanz zu überprüfen oder zu ermitteln.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,13 +42,13 @@ ms.locfileid: "68067782"
 managed_backup.fn_backup_db_config ('database_name' | '' | NULL)  
 ```  
   
-##  <a name="Arguments"></a> Argumente  
+##  <a name="Arguments"></a>Argumente  
  @db_name  
- Der Name der Datenbank. Die @db_name Parameter **SYSNAME**. Wenn eine leere Zeichenfolge oder ein NULL-Wert an diesen Parameter übergeben wird, werden die Informationen über alle Datenbanken in der SQL Server-Instanz zurückgegeben.  
+ Der Name der Datenbank. Der @db_name Parameter ist vom **Datentyp sysname**. Wenn eine leere Zeichenfolge oder ein NULL-Wert an diesen Parameter übergeben wird, werden die Informationen über alle Datenbanken in der SQL Server-Instanz zurückgegeben.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |db_name|SYSNAME|Datenbankname.|  
 |db_guid|UNIQUEIDENTIFIER|Ein Bezeichner, der die Datenbank eindeutig identifiziert.|  
@@ -57,18 +57,18 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |credential_name|SYSNAME|Der Name der SQL-Anmeldeinformationen, der zur Authentifizierung beim Speicherkonto verwendet wird. Ein NULL-Wert gibt an, dass keine SQL-Anmeldeinformationen festgelegt sind.|  
 |retention_days|INT|Die aktuelle Beibehaltungsdauer in Tagen. Ein NULL-Wert gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] nie für diese Datenbank konfiguriert wurde.|  
 |is_managed_backup_enabled|INT|Gibt an, ob [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit für diese Datenbank aktiviert ist. Der Wert 1 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] derzeit aktiviert ist, der Wert 0 gibt an, dass [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für diese Datenbank deaktiviert ist.|  
-|storage_url|NVARCHAR(1024)|Die URL des Speicherkontos.|  
-|Encryption_algorithm|NCHAR(20)|Gibt den aktuellen Verschlüsselungsalgorithmus zurück, der beim Verschlüsseln der Sicherung verwendet werden soll.|  
-|Encryptor_type|NCHAR(15)|Gibt die verschlüsselungseinstellung zurück: Zertifikat oder asymmetrischer Schlüssel.|  
+|storage_url|Nvarchar (1024)|Die URL des Speicherkontos.|  
+|Encryption_algorithm|NCHAR (20)|Gibt den aktuellen Verschlüsselungsalgorithmus zurück, der beim Verschlüsseln der Sicherung verwendet werden soll.|  
+|Encryptor_type|NCHAR(15)|Gibt die Verschlüsselungseinstellung zurück: Zertifikat oder Asymmetrischer Schlüssel.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|Der Name des Zertifikats oder des asymmetrischen Schlüssels.|  
   
 ## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der **Db_backupoperator** Datenbankrolle mit **ALTER ANY CREDENTIAL** Berechtigungen. Der Benutzer sollte nicht verweigert werden **VIEW ANY DEFINITION** Berechtigungen.  
+ Erfordert die Mitgliedschaft in der **db_backupoperator** -Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen. Dem Benutzer sollte die **View any Definition** -Berechtigung nicht verweigert werden.  
   
 ## <a name="examples"></a>Beispiele  
- Das folgende Beispiel gibt die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration für "TestDB"  
+ Im folgenden Beispiel wird die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfiguration für "TestDB" zurückgegeben.  
   
  Wählen Sie für jeden Codeausschnitt "tsql" im Sprachattributfeld aus.  
   

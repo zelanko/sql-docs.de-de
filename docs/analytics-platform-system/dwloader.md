@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401177"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader-Befehlszeilen Lade Modul für parallele Data Warehouse
@@ -116,7 +116,7 @@ dwloader.exe
 }  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumente  
 **-h**  
 Zeigt einfache Hilfe Informationen zur Verwendung des Lade Moduls an. Hilfe wird nur angezeigt, wenn keine anderen Befehlszeilenparameter angegeben sind.  
   
@@ -209,7 +209,7 @@ Beispiele:
 Wenn Ladefehler auftreten, speichert **"dwloader** die Zeile, die nicht geladen werden konnte, und die Fehlerbeschreibung in einer Datei mit dem Namen *load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die vorhandene Datei von "dwloader überschrieben. *load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich geladen wurden, wird *load_failure_file_name* nicht erstellt.  
   
 **-FH** *number_header_rows*  
-Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Der Standardwert ist 0.  
+Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Die Standardeinstellung ist 0.  
   
 <variable_length_column_options>  
 Die Optionen für eine *source_data_file_name* , die über Zeichen getrennte Spalten mit variabler Länge verfügt. Standardmäßig enthält *source_data_file_name* ASCII-Zeichen in Spalten variabler Länge.  
@@ -555,13 +555,13 @@ Der Anfügen-Modus lädt Daten in zwei Phasen. In Phase 1 werden Daten gleichzei
 |Tabellentyp|Mehrere Transaktionen<br />Modus (-m)|Die Tabelle ist leer.|Unterstützte Parallelität|Protokollierung|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Heap|Ja|Ja|Ja|Wenig|  
-|Heap|Ja|Nein|Ja|Wenig|  
-|Heap|Nein|Ja|Nein|Wenig|  
+|Heap|Ja|Nein |Ja|Wenig|  
+|Heap|Nein |Ja|Nein|Wenig|  
 |Heap|Nein|Nein|Nein|Wenig|  
 |Schl|Ja|Ja|Nein|Wenig|  
-|Schl|Ja|Nein|Ja|Vollständig|  
-|Schl|Nein|Ja|Nein|Wenig|  
-|Schl|Nein|Nein|Ja|Vollständig|  
+|Schl|Ja|Nein |Ja|Vollständig|  
+|Schl|Nein |Ja|Nein|Wenig|  
+|Schl|Nein|Nein |Ja|Vollständig|  
   
 In der obigen Tabelle wird **"dwloader** mit dem Anfüge Modus in einen Heap oder einer CI-Tabelle (gruppierten Index) mit oder ohne das multitransaktionsflag und das Laden in eine leere Tabelle oder eine nicht leere Tabelle angezeigt. Das Sperr-und Protokollierungs Verhalten jeder solchen Kombination von Load wird in der Tabelle angezeigt. Wenn Sie zum Beispiel die Phase (2.) mit dem Anfügen-Modus in einen gruppierten Index ohne den multitransaktionalen Modus und in eine leere Tabelle laden, wird PDW eine exklusive Sperre für die Tabelle erstellen, und die Protokollierung ist minimal. Dies bedeutet, dass ein Kunde nicht in der Lage ist, (2.) Phase und Abfrage gleichzeitig in eine leere Tabelle zu laden. Wenn Sie jedoch mit der gleichen Konfiguration in eine nicht leere Tabelle laden, gibt PDW keine exklusive Sperre für die Tabelle aus, und Parallelität ist möglich. Leider erfolgt die vollständige Protokollierung, die den Prozess verlangsamt.  
   
@@ -597,7 +597,7 @@ Beispiel für das Verwenden von Argumenten für eine Quelldatei und eine Fehler 
 dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees.csv -T AdventureWorksPDW2012.dbo.DimEmployees -R C:\SQLData\LoadErrors  
 ```  
   
-### <a name="b-load-data-into-an-adventureworks-table"></a>B: Laden von Daten in eine AdventureWorks-Tabelle  
+### <a name="b-load-data-into-an-adventureworks-table"></a>B. Laden von Daten in eine AdventureWorks-Tabelle  
 Das folgende Beispiel ist Teil eines Batch Skripts, mit dem Daten in **AdventureWorksPDW2012**geladen werden.  Um das vollständige Skript anzuzeigen, öffnen Sie die Datei aw_create. bat, die im Lieferumfang des **AdventureWorksPDW2012** -Installationspakets enthalten ist. 
 
 <!-- Missing link
@@ -666,7 +666,7 @@ Im folgenden finden Sie ein Beispiel für die Datendatei "DimAccount. txt", die 
 13|3|1170|110|Deferred Taxes|Assets|+||Currency|  
 ```  
   
-### <a name="c-load-data-from-the-command-line"></a>c. Laden von Daten über die Befehlszeile  
+### <a name="c-load-data-from-the-command-line"></a>C. Laden von Daten über die Befehlszeile  
 Das Skript in Beispiel B kann ersetzt werden, indem Sie alle Parameter in der Befehlszeile eingeben, wie im folgenden Beispiel gezeigt.  
   
 ```  

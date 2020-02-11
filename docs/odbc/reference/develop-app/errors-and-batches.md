@@ -17,21 +17,21 @@ ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051130"
 ---
 # <a name="errors-and-batches"></a>Fehler und Batches
-Tritt ein Fehler während der Ausführung eines Batches von SQL-Anweisungen, eine der folgenden vier Vorgänge sind möglich. (Jedes mögliche Ergebnis ergibt Daten datenquellenspezifische und möglicherweise sogar richten sich nach den Anweisungen in den Batch aufgenommen.)  
+Wenn ein Fehler auftritt, während ein Batch von SQL-Anweisungen ausgeführt wird, kann eines der folgenden vier Ergebnisse auftreten. (Jedes mögliche Ergebnis ist Datenquellen spezifisch und kann sogar von den Anweisungen abhängen, die im Batch enthalten sind.)  
   
 -   Es werden keine Anweisungen im Batch ausgeführt.  
   
--   Keine Anweisungen im Batch werden ausgeführt, und die Transaktion ein Rollback aus.  
+-   Es werden keine Anweisungen im Batch ausgeführt, und für die Transaktion wird ein Rollback ausgeführt.  
   
--   Alle Anweisungen vor der Error-Anweisung ausgeführt werden.  
+-   Alle-Anweisungen vor der Fehler Anweisung werden ausgeführt.  
   
--   Alle Anweisungen mit Ausnahme der Error-Anweisung ausgeführt werden.  
+-   Alle-Anweisungen außer der Error-Anweisung werden ausgeführt.  
   
- In den ersten beiden Fällen **SQLExecute** und **SQLExecDirect** SQL_ERROR zurück. In den letzten beiden Fällen können sie SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurück, je nach Implementierung zurückgeben. In allen Fällen weitere Fehlerinformationen kann abgerufen werden mit **SQLGetDiagField**, **SQLGetDiagRec**, oder **SQLError**. Die Art und Tiefe der diese Informationen sind jedoch Daten datenquellenspezifische. Darüber hinaus sind diese Informationen wahrscheinlich nicht genau die Anweisung in Fehler zu identifizieren.
+ In den ersten beiden Fällen geben **SQLExecute** und **SQLExecDirect** SQL_ERROR zurück. In den letzten beiden Fällen können Sie abhängig von der Implementierung SQL_SUCCESS_WITH_INFO oder SQL_SUCCESS zurückgeben. In allen Fällen können weitere Fehlerinformationen mit **SQLGetDiagField**, **SQLGetDiagRec**oder **SQLError**abgerufen werden. Die Art und Tiefe dieser Informationen sind jedoch Datenquellen spezifisch. Darüber hinaus ist es unwahrscheinlich, dass diese Informationen die Anweisung fehlerhaft erkennen.

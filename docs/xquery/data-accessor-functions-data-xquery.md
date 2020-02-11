@@ -16,16 +16,16 @@ ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68038967"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Data Accessor-Funktionen – data (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Gibt den typisierten Wert für jedes Element anhand des *$arg*.  
+  Gibt den typisierten Wert für jedes Element zurück, das durch *$arg*angegeben wird.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  Sequenz der Items, deren typisierte Werte zurückgegeben werden.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Für typisierte Werte gilt Folgendes:  
   
 -   Der typisierte Wert eines atomaren Werts ist der atomare Wert.  
@@ -55,19 +55,19 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   Wenn ein Attributknoten mit einem XML-Schematyp typisiert wird, ist dessen typisierter Wert der entsprechende typisierte Wert.  
   
--   Wenn der Attributknoten nicht typisiert ist, entspricht dessen typisierte Wert seinem Zeichenfolgenwert, der als eine Instanz von zurückgegeben wird **xdt: UntypedAtomic**.  
+-   Wenn der Attribut Knoten nicht typisiert ist, ist der typisierte Wert gleich seinem Zeichen folgen Wert, der als Instanz von **xdt: untypedAtomic**zurückgegeben wird.  
   
--   Wenn der Elementknoten nicht typisiert wurde, entspricht dessen typisierte Wert seinem Zeichenfolgenwert, der als eine Instanz von zurückgegeben wird **xdt: UntypedAtomic**.  
+-   Wenn der Elementknoten nicht typisiert wurde, ist der typisierte Wert gleich seinem Zeichen folgen Wert, der als Instanz von **xdt: untypedAtomic**zurückgegeben wird.  
   
  Für typisierte Elementknoten gilt Folgendes:  
   
--   Wenn das Element einen einfachen Inhaltstyp hat **data()** gibt den typisierten Wert des Elements.  
+-   Wenn das-Element einen einfachen Inhaltstyp aufweist, gibt **Data ()** den typisierten Wert des-Elements zurück.  
   
--   Wenn der Knoten des komplexen Typs, einschließlich xs: anyType, **data()** einen statischen Fehler zurück.  
+-   Wenn der Knoten einen komplexen Typ hat, einschließlich xs: anyType, gibt **Data ()** einen statischen Fehler zurück.  
   
- Obwohl durch die Verwendung der **data()** Funktion ist häufig optional ist, wie gezeigt in den folgenden Beispielen wird die Angabe der **data()** Funktion einer expliziten Erhöhung der abfragelesbarkeit. Weitere Informationen finden Sie unter [XQuery-Grundlagen](../xquery/xquery-basics.md).  
+ Obwohl die Verwendung der **Data ()** -Funktion häufig optional ist, wie in den folgenden Beispielen gezeigt, erhöht die Angabe der **Data ()** -Funktion die Lesbarkeit der Abfrage explizit. Weitere Informationen finden Sie unter [Grundlagen zu XQuery](../xquery/xquery-basics.md).  
   
- Sie können keine angeben **data()** auf erstellt XML, wie im folgenden dargestellt:  
+ Sie können keine **Daten ()** auf konstruiertem XML-Code angeben, wie im folgenden dargestellt:  
   
 ```  
 declare @x xml  
@@ -76,10 +76,10 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ```  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Thema stellt XQuery-Beispiele für XML-Instanzen in verschiedenen gespeicherten **Xml** Spalten vom Typ, in der AdventureWorks-Datenbank.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die in verschiedenen Spalten vom Typ **XML** in der AdventureWorks-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. Verwenden der XQuery-Funktion data() XQuery zum Extrahieren des typisierten Werts eines Knotens.  
- Die folgende Abfrage veranschaulicht, wie die **data()** Funktion wird verwendet, um die Werte der ein Attribut, ein Element, und ein Textknoten abrufen:  
+ Die folgende Abfrage veranschaulicht, wie die **Data ()** -Funktion verwendet wird, um Werte eines Attributs, eines Elements und eines Text Knotens abzurufen:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -104,7 +104,7 @@ WHERE ProductModelID = 19
 <Root ProductID="19" Feature="parts and labor"/>  
 ```  
   
- Wie bereits erwähnt, die **data()** -Funktion ist optional, wenn Sie Attribute konstruieren. Wenn Sie keinen angeben der **data()** -Funktion, wird Sie implizit angenommen. Die folgende Abfrage führt zu denselben Ergebnissen wie die vorherige Abfrage:  
+ Wie bereits erwähnt, ist die **Data ()** -Funktion beim Konstruieren von Attributen optional. Wenn Sie die **Data ()** -Funktion nicht angeben, wird Sie implizit angenommen. Die folgende Abfrage führt zu denselben Ergebnissen wie die vorherige Abfrage:  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -123,9 +123,9 @@ FROM Production.ProductModel
 WHERE ProductModelID = 19  
 ```  
   
- Die folgenden Beispiele veranschaulichen Fälle, in denen die **data()** ist erforderlich.  
+ In den folgenden Beispielen werden-Instanzen veranschaulicht, in denen die **Data ()** -Funktion erforderlich ist.  
   
- In der folgenden Abfrage **$pd / P1: Specifications / Material** gibt die <`Material`> Element. Darüber hinaus **Data ($pd/P1: Specifications/Material)** Daten des Typs xdt: UntypedAtomic, gibt Zeichendaten zurück, da <`Material`> nicht typisiert ist. Wenn die Eingabe nicht typisiert ist, das Ergebnis des **data()** typisiert ist, als **xdt: UntypedAtomic**.  
+ In der folgenden Abfrage gibt **$pd/p1: Spezifikationen/Material** das <`Material`>-Element zurück. Außerdem gibt **Data ($PD/P1: Spezifikationen/Material)** Zeichendaten zurück, die als xdt: untypedAtomic typisiert `Material` sind, da <> nicht typisiert ist. Wenn die Eingabe nicht typisiert ist, wird das Ergebnis der **Daten ()** als **xdt: untypedAtomic**typisiert.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -149,7 +149,7 @@ WHERE ProductModelID = 19
 </Root>  
 ```  
   
- In der folgenden Abfrage **data($pd/p1:Features/wm:Warranty)** einen statischen Fehler zurück, da <`Warranty`> ist ein Element mit komplexem Typ.  
+ In der folgenden Abfrage gibt **Data ($PD/P1: Features/WM: Garantie)** einen statischen Fehler zurück, da <`Warranty`> ein komplexes Typelement ist.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -166,7 +166,7 @@ FROM  Production.ProductModel
 WHERE ProductModelID = 23  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

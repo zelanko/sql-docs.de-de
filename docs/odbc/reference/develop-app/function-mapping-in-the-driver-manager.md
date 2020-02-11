@@ -1,5 +1,5 @@
 ---
-title: Funktionszuordnung im Treiber-Manager | Microsoft-Dokumentation
+title: Funktions Zuordnung im Treiber-Manager | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,37 +15,37 @@ ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2bfa535d4175c109e96098dd1e40e93be9521de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069692"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Funktionszuordnung im Treiber-Manager
-Der Treiber-Manager unterstützt zwei Einstiegspunkte für Funktionen, die Zeichenfolgenargumente verwenden. Der nicht ergänzten-Funktion (**SQLDriverConnect**) ist die ANSI-Form der Funktion. Das Unicode-Formular mit ergänzt wird eine *W* (**SQLDriverConnectW**.)  
+Der Treiber-Manager unterstützt zwei Einstiegspunkte für Funktionen, die Zeichen folgen Argumente annehmen. Die nicht ergänzte Funktion (**SQLDriverConnect**) ist die ANSI-Form der Funktion. Das Unicode-Formular wird mit einem *W* (**sqldriverconnectw**) versehen.  
   
- Die ODBC-Header-Datei unterstützt auch Funktionen ergänzt, die mit einer *A* (**SQLDriverConnectA**) für die Vorteile von gemischten ANSI/Unicode-Anwendungen. Aufrufe an die **ein** Funktionen sind tatsächlich Aufrufe an den nicht ergänzten Einstiegspunkt (**SQLDriverConnect**.)  
+ Die ODBC-Header Datei unterstützt auch Funktionen, die mit einem (**sqldriverconnecta**) versehen *sind,* um die Verwendung gemischter ANSI/Unicode-Anwendungen zu erleichtern. Aufrufe an die **A** -Funktionen sind tatsächlich Aufrufe des nicht ergänzten Einstiegs Punkts (**SQLDriverConnect**).  
   
- Wenn die Anwendung, mit dem _UNICODE kompiliert wird **#define**, die ODBC-Header-Datei ordnet nicht ergänzte Funktionsaufrufe (**SQLDriverConnect**) auf die Unicode-Version (**SQLDriverConnectW** .)  
+ Wenn die Anwendung mit dem _UNICODE **#define**kompiliert wird, ordnet die ODBC-Header Datei nicht ergänzte Funktionsaufrufe (**SQLDriverConnect**) der Unicode-Version zu (**sqldriverconnectw**).  
   
- Der Treiber-Manager erkennt einen Treiber als Unicode-Treiber, wenn **SQLConnectW** wird vom Treiber unterstützt.  
+ Der Treiber-Manager erkennt einen Treiber als Unicode-Treiber, wenn **sqlconnectw** vom Treiber unterstützt wird.  
   
- Wenn der Treiber einen Unicode-Treiber ist, führt der Treiber-Manager Funktionsaufrufe wie folgt aus:  
+ Wenn es sich bei dem Treiber um einen Unicode-Treiber handelt, führt der Treiber-Manager Funktionsaufrufe wie folgt aus:  
   
--   Eine Funktion ohne Argumente oder Parameter können direkt über an den Treiber übergeben werden.  
+-   Übergibt eine Funktion ohne Zeichen folgen Argumente oder Parameter direkt an den Treiber.  
   
--   Übergeben von Unicode-Funktionen (mit der *W* Suffix) direkt über dem Treiber.  
+-   Übergibt Unicode-Funktionen (mit dem *W* -Suffix) direkt an den Treiber.  
   
--   Konvertiert eine ANSI-Funktion (mit der *ein* Suffix) an eine Unicode-Funktion (mit der *W* Suffix) durch die Zeichenfolgenargumente in Unicode konvertiert Zeichen aus, und übergibt Sie an den Treiber Unicode-Funktion.  
+-   Konvertiert eine ANSI-Funktion (mit *einem* Suffix) in eine Unicode-Funktion (mit dem *W* -Suffix), indem die Zeichen folgen Argumente in Unicode-Zeichen konvertiert werden und übergibt die Unicode-Funktion an den Treiber.  
   
- Wenn der Treiber eine ANSI-Treiber ist, führt der Treiber-Manager Funktionsaufrufe wie folgt aus:  
+ Wenn der Treiber ein ANSI-Treiber ist, führt der Treiber-Manager Funktionsaufrufe wie folgt aus:  
   
--   Funktionen ohne Argumente oder Parameter, die direkt über übergeben an den Treiber.  
+-   Übergibt Funktionen ohne Zeichen folgen Argumente oder Parameter direkt an den Treiber.  
   
--   Konvertiert Unicode-Funktionen (mit der *W* Suffix) in das ANSI-Funktionsaufruf aus, und übergibt sie an den Treiber.  
+-   Konvertiert Unicode-Funktionen (mit dem *W* -Suffix) in einen ANSI-Funktions aufrufund übergibt sie an den Treiber.  
   
--   Eine ANSI-Funktion übergeben direkt an den Treiber.  
+-   Übergibt eine ANSI-Funktion direkt an den Treiber.  
   
- Der Treiber-Manager ist Unicode-fähige intern. Daher wird die optimale Leistung von einer Unicode-Anwendung, die Arbeit mit einer Unicode-Treiber abgerufen werden, da der Treiber-Manager über die Unicode-Funktionen für den Treiber übergibt. Wenn eine ANSI-Anwendung mit einem ANSI-Treiber funktioniert, des Treiber-Managers müssen Zeichenfolgen von ANSI in Unicode konvertiert bei der Verarbeitung von einige Funktionen, z. B. **SQLDriverConnect**. Nach der Verarbeitung der Funktion, muss der Treiber-Manager klicken Sie dann die Unicode-Zeichenfolge wieder in ANSI konvertieren vor dem Senden der Funktion für den ANSI-Treiber.  
+ Der Treiber-Manager ist intern Unicode-aktiviert. Folglich wird die optimale Leistung durch eine Unicode-Anwendung erzielt, die mit einem Unicode-Treiber arbeitet, da der Treiber-Manager einfach Unicode-Funktionen an den Treiber übergibt. Wenn eine ANSI-Anwendung mit einem ANSI-Treiber arbeitet, muss der Treiber-Manager Zeichen folgen von ANSI in Unicode konvertieren, wenn einige Funktionen verarbeitet werden, z. b. **SQLDriverConnect**. Nachdem die Funktion verarbeitet wurde, muss der Treiber-Manager die Unicode-Zeichenfolge wieder in ANSI konvertieren, bevor die Funktion an den ANSI-Treiber gesendet wird.  
   
- Eine Anwendung sollte nicht ändern oder lesen die Puffern für gebundene Parameter aus, wenn der Treiber SQL_STILL_EXECUTING oder SQL_NEED_DATA zurückgibt. Der Treiber-Manager bewirkt, dass der Puffer in ANSI gebunden werden, bis der Treiber SQL_SUCCESS, SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgegeben. Eine Multithreadanwendung sollte nicht auf alle gebundenen Parameterwerte zugreifen, die ein anderer Thread auf eine SQL-Anweisung ausführt. Der Treiber-Manager konvertiert die Daten von Unicode in ANSI "Direktes", und der andere Thread möglicherweise ANSI-Daten in diesen Puffern angezeigt, während der Treiber noch die SQL-Anweisung verarbeitet wird. Anwendungen, die Unicode-Daten an eine ANSI-Treiber zu binden, müssen nicht zwei verschiedene Spalten an die gleiche Adresse binden.
+ Eine Anwendung sollte die gebundenen Parameter Puffer nicht ändern oder lesen, wenn der Treiber SQL_STILL_EXECUTING oder SQL_NEED_DATA zurückgibt. Der Treiber-Manager verlässt die Puffer an ANSI, bis der Treiber SQL_SUCCESS, SQL_SUCCESS_WITH_INFO oder SQL_ERROR zurückgibt. Eine Multithreadanwendung sollte keinen Zugriff auf gebundene Parameterwerte erhalten, für die ein anderer Thread eine SQL-Anweisung ausführt. Der Treiber-Manager konvertiert die Daten von Unicode in ANSI "an Ort und Stelle", während der andere Thread ANSI-Daten in diesen Puffern sehen kann, während der Treiber die SQL-Anweisung noch verarbeitet. Anwendungen, die Unicode-Daten an einen ANSI-Treiber binden, dürfen nicht zwei verschiedene Spalten an dieselbe Adresse binden.

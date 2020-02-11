@@ -14,23 +14,23 @@ ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68064473"
 ---
 # <a name="sqlerror-mapping"></a>SQLError-Zuordnung
-Wenn eine Anwendung ruft **SQLError** über einen ODBC *3.x* Treiber, den Aufruf von  
+Wenn eine Anwendung **SQLError** über einen ODBC *3. x* -Treiber aufruft, wird der Aufruf von  
   
 ```  
 SQLError(henv, hdbc, hstmt, szSqlState, pfNativeError, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)   
 ```  
   
- wird zugeordnet  
+ ist zugeordnet  
   
 ```  
 SQLGetDiagRec(HandleType, Handle, RecNumber, szSqlstate, pfNativeErrorPtr, szErrorMsg, cbErrorMsgMax, pcbErrorMsg)  
 ```  
   
- mit der *HandleType* -Argument auf den Wert nach Bedarf SQL_HANDLE_ENV auf SQL_HANDLE_DBC auf oder SQL_HANDLE_STMT auf, und die *behandeln* Argument festgelegt wird, mit dem Wert im *Henv*, *Hdbc*, oder *Befehls beschäftigt*je nach Bedarf. Die *RecNumber* -Argument wird vom Treiber-Manager bestimmt.
+ Wenn das " *Lenker Type* "-Argument auf den Wert SQL_HANDLE_ENV, SQL_HANDLE_DBC oder SQL_HANDLE_STMT festgelegt ist, und das *handle* -Argument entsprechend auf den Wert in " *HENV*", " *hdbc*" oder " *hstmt*" festgelegt ist. Das Argument " *RecNumber* " wird vom Treiber-Manager festgelegt.

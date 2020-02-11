@@ -1,5 +1,5 @@
 ---
-title: Sp_addextendedproperty (Transact-SQL) | Microsoft-Dokumentation
+title: sp_addextendedproperty (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/11/2017
 ms.prod: sql
@@ -19,18 +19,18 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68072692"
 ---
-# <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
+# <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Fügt eine neue erweiterte Eigenschaft zu einem Datenbankobjekt hinzu.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,39 +53,40 @@ sp_addextendedproperty
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @name ] = {'*Property_name*'}  
- Ist der Name der Eigenschaft, die hinzugefügt werden. *Property_name* ist **Sysname** und darf nicht NULL sein. Namen können auch leere oder nicht alphanumerische Zeichenfolgen sowie binäre Werte sein.  
+ [ @name ] = {'*property_name*'}  
+ Der Name der hinzu zufügenden Eigenschaft. *property_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein. Namen können auch leere oder nicht alphanumerische Zeichenfolgen sowie binäre Werte sein.  
   
- [ @value=] {'*Wert*'}  
- Der Wert, der der Eigenschaft zugeordnet werden soll. *Wert* ist **Sql_variant**, hat den Standardwert NULL. *value* kann nicht größer als 7.500 Bytes sein.  
+ [ @value= ] {'*value*'}  
+ Der Wert, der der Eigenschaft zugeordnet werden soll. der Wert ist **sql_variant**. der Standard *Wert* ist NULL. 
+  *value* kann nicht größer als 7.500 Bytes sein.  
   
- [ @level0type=] {'*level0_object_type*'}  
- Der Typ des Objekts der Ebene 0. *level0_object_type* ist **varchar(128)** , hat den Standardwert NULL.  
+ [ @level0type= ] {'*level0_object_type*'}  
+ Der Typ des Objekts der Ebene 0. *level0_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
   
  Gültige Eingabewerte sind ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE und NULL.  
   
 > [!IMPORTANT]  
 >  In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird es nicht mehr möglich sein, USER als Typ der Ebene 0 in einer erweiterten Eigenschaft eines Typobjekts der Ebene 1 anzugeben. Verwenden Sie stattdessen SCHEMA als Typ der Ebene 0. Beispiel: Wenn Sie eine erweiterte Eigenschaft für eine Tabelle definieren, geben Sie das Schema der Tabelle statt eines Benutzernamens an. In zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann TYPE nicht mehr als Typ der Ebene 0 angegeben werden. Verwenden Sie für TYPE als Typ der Ebene 0 SCHEMA und TYPE als Typ der Ebene 1.  
   
- [ @level0name=] {'*level0_object_name*'}  
- Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist **Sysname** hat den Standardwert NULL.  
+ [ @level0name= ] {'*level0_object_name*'}  
+ Der Name des angegebenen Objekttyps der Ebene 0. *level0_object_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
- [ @level1type=] {'*level1_object_type*'}  
- Der Typ des Objekts der Ebene 1. *level1_object_type* ist **varchar(128)** , hat den Standardwert NULL. Gültige Eingaben sind Aggregat, Standard, -Funktion, LOGICAL FILE NAME, Prozedur, QUEUE, Regel, SEQUENZ, SYNONYM, TABLE, TABLE_TYPE, Typ, Ansicht, XML SCHEMA COLLECTION und NULL.    
- [ @level1name=] {'*level1_object_name*'}  
- Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist **Sysname**, hat den Standardwert NULL.  
+ [ @level1type= ] {'*level1_object_type*'}  
+ Der Typ des Objekts der Ebene 1. *level1_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. Gültige Eingaben sind Aggregate, Default, Function, Logical File Name, PROCEDURE, Queue, Rule, Sequence, Synonym, Table, TABLE_TYPE, Type, View, XML Schema Collection und NULL.    
+ [ @level1name= ] {'*level1_object_name*'}  
+ Der Name des angegebenen Objekttyps der Ebene 1. *level1_object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
- [ @level2type=] {'*level2_object_type*'}  
- Der Typ des Objekts der Ebene 2. *level2_object_type* ist **varchar(128)** , hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
+ [ @level2type= ] {'*level2_object_type*'}  
+ Der Typ des Objekts der Ebene 2. *level2_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL. Gültige Eingabewerte sind COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER und NULL.  
   
- [ @level2name=] {'*level2_object_name*'}  
- Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist **Sysname**, hat den Standardwert NULL.  
+ [ @level2name= ] {'*level2_object_name*'}  
+ Der Name des angegebenen Objekttyps der Ebene 2. *level2_object_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Hinweise  
- Für das Angeben erweiterter Eigenschaften werden die Objekte in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Ebene 0 ist die höchste Ebene und als im Datenbankbereich enthaltene Objekte definiert. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden.  
+## <a name="remarks"></a>Bemerkungen  
+ Für das Angeben erweiterter Eigenschaften werden die Objekte in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Ebene 0 ist die höchste Ebene und als im Datenbankbereich enthaltene Objekte definiert. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden.  
   
  Verweise auf ein Objekt einer Ebene müssen mit den Namen der Objekte der höheren Ebene gekennzeichnet werden, die diese besitzen oder enthalten. Wenn Sie beispielsweise einer Tabellenspalte (Ebene 2) eine erweiterte Eigenschaft hinzufügen, müssen Sie auch den Tabellenamen (Ebene 1) angeben, der die Spalte und das Schema (Ebene 0) enthält, in dem die Tabelle enthalten ist.  
   
@@ -93,13 +94,13 @@ sp_addextendedproperty
   
  Erweiterte Eigenschaften sind für Systemobjekte, Objekte außerhalb des Bereichs einer benutzerdefinierten Datenbank oder Objekte, die nicht als gültige Eingaben unter den Argumenten aufgelistet sind, nicht zulässig.  
   
- Erweiterte Eigenschaften werden für Speicheroptimierte Tabellen nicht zulässig.  
+ Erweiterte Eigenschaften sind für Speicher optimierte Tabellen nicht zulässig.  
   
 ## <a name="replicating-extended-properties"></a>Replizieren erweiterter Eigenschaften  
- Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert. Weitere Informationen über das Replizieren von Datenbanken finden Sie unter [Veröffentlichen von Daten und Datenbankobjekte](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+ Erweiterte Eigenschaften werden nur in der ersten Synchronisierung zwischen dem Verleger und dem Abonnenten repliziert. Wenn Sie eine erweiterte Eigenschaft nach der ersten Synchronisierung hinzufügen oder ändern, wird die Änderung nicht repliziert. Weitere Informationen zum Replizieren von Datenbankobjekten finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
-## <a name="schema-vs-user"></a>Schema im Vergleich zu Benutzer  
- Es wird nicht empfohlen, USER als einen Typ der Ebene 0 anzugeben, wenn eine erweiterte Eigenschaft auf ein Datenbankobjekt angewendet wird, da dies zu Mehrdeutigkeiten bei der Namensauflösung führen kann. Angenommen, Benutzer Mary besitzt beispielsweise zwei Schemas (Mary und MySchema), und diese Schemas enthalten beide eine Tabelle namens MyTable. Wenn Mary MyTable-Tabelle eine erweiterte Eigenschaft hinzufügt und gibt an,  **@level0type = n '** ,  **@level0name = Mary**, es ist nicht klar, auf welche Tabelle die erweiterte Eigenschaft angewendet wird. Aus Gründen der Abwärtskompatibilität wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eigenschaft auf die Tabelle im Schema namens Mary an.  
+## <a name="schema-vs-user"></a>Schema oder Benutzer  
+ Es wird nicht empfohlen, USER als einen Typ der Ebene 0 anzugeben, wenn eine erweiterte Eigenschaft auf ein Datenbankobjekt angewendet wird, da dies zu Mehrdeutigkeiten bei der Namensauflösung führen kann. Angenommen, Benutzer Mary besitzt beispielsweise zwei Schemas (Mary und MySchema), und diese Schemas enthalten beide eine Tabelle namens MyTable. Fügt Mary der MyTable-Tabelle eine erweiterte Eigenschaft hinzu und gibt ** @level0type = n ' User '**, ** @level0name = Mary**an, ist nicht klar, auf welche Tabelle die erweiterte Eigenschaft angewendet werden soll. Aus Gründen der Abwärtskompatibilität wendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Eigenschaft auf die Tabelle im Schema namens Mary an.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Mitglieder der festen Datenbankrollen db_owner und db_ddladmin können beliebigen Objekten erweiterte Eigenschaften hinzufügen, wobei die folgende Ausnahme gilt: db_ddladmin kann weder der Datenbank noch Benutzern oder Rollen Eigenschaften hinzufügen.  
@@ -149,7 +150,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. Hinzufügen einer erweiterten Eigenschaft zu einer Dateigruppe  
+### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D: Hinzufügen einer erweiterten Eigenschaft zu einer Dateigruppe  
  Im folgenden Beispiel wird der `PRIMARY` -Dateigruppe eine erweiterte Eigenschaft hinzugefügt.  
   
 ```  
@@ -235,10 +236,10 @@ EXEC sys.sp_addextendedproperty
 @level0name = N'CustomApp';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine gespeicherten Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
- [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
+ [sys. fn_listextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_updateextendedproperty &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Systemanforderungen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
+title: System Anforderungen (Visual FoxPro-ODBC-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,39 +19,39 @@ ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67939808"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Systemanforderungen (Visual FoxPro-ODBC-Treiber)
-Die Systemanforderungen für die Installation Geben Sie die Mindestversion des Betriebssystems und der Speicherplatz erforderlich, um den Treiber erfolgreich installieren. Nachdem Sie den Treiber installiert haben, können Sie die Software bestimmte Anwendung auswählen, die Sie Zugriff auf Visual FoxPro-Daten verwenden möchten.  
+Die Systemanforderungen für die Installation geben das mindestens erforderliche Betriebssystem und den erforderlichen Speicherplatz für die erfolgreiche Installation des Treibers an. Nachdem Sie den Treiber installiert haben, können Sie die jeweilige Anwendungssoftware auswählen, die Sie für den Zugriff auf Visual FoxPro-Daten verwenden möchten.  
   
 ## <a name="installation-requirements"></a>Installationsanforderungen  
- Installationsanforderungen und Weitere Informationen finden Sie [der Visual FoxPro-ODBC-Treiber-Download-Site](https://go.microsoft.com/fwlink/?LinkId=121318).  
+ Informationen zu den Installationsanforderungen und anderen Informationen finden [Sie auf der Visual FoxPro-ODBC-Treiber-Download Website](https://go.microsoft.com/fwlink/?LinkId=121318).  
   
 ## <a name="accessing-visual-foxpro-data"></a>Zugreifen auf Visual FoxPro-Daten  
- Microsoft Visual FoxPro oder FoxPro-2 zu gelangen. *x* Daten benötigen Sie Folgendes:  
+ Für den Zugriff auf Microsoft Visual FoxPro oder FoxPro 2. *x* -Daten benötigen Sie Folgendes:  
   
--   ODBC-Client-Software (automatisch mit dem Treiber installiert)  
+-   ODBC-Client Software (wird automatisch mit dem Treiber installiert)  
   
 -   Microsoft Visual FoxPro-ODBC-Treiber  
   
--   Eine der folgenden Typen von Anwendungssoftware:  
+-   Beliebige der folgenden Typen von Anwendungssoftware:  
   
-    -   Microsoft Office-Anwendung, z. B. Microsoft Excel oder Microsoft Word  
+    -   Microsoft Office Anwendung wie Microsoft Excel oder Microsoft Word  
   
-    -   C- oder C++-Sprache ODBC-Anwendung  
+    -   ODBC-Anwendung der C-oder C++-Sprache  
   
-    -   Microsoft Visual Basic-ODBC-Anwendung  
+    -   Microsoft Visual Basic ODBC-Anwendung  
   
--   Eine der folgenden Typen von Daten:  
+-   Beliebige der folgenden Datentypen:  
   
-    -   Visual FoxPro [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis von [frei von Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   Visual FoxPro- [Datenbank](../../odbc/microsoft/visual-foxpro-terminology.md) oder ein Verzeichnis mit [freien Tabellen](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
-    -   FoxPro-2.0, 2.5, 2.6 [Tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
+    -   FoxPro 2,0, 2,5, 2,6, [Tabelle](../../odbc/microsoft/visual-foxpro-terminology.md)  
   
- Der Visual FoxPro-ODBC-Treiber unterstützt Doppelbyte-Zeichensätze (DBCS). Weitere Informationen finden Sie unter [internationale Unterstützung](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
+ Der Visual FoxPro-ODBC-Treiber unterstützt Doppelbyte-Zeichensätze (DBCS). Weitere Informationen finden Sie [unter internationaler Support](../../odbc/microsoft/international-support-visual-foxpro-odbc-driver.md).  
   
- Der Treiber unterstützt keine 16-Bit-Microsoft Windows 3.1-Anwendungen.
+ Der Treiber unterstützt keine 16-Bit-Anwendungen von Microsoft Windows 3,1.

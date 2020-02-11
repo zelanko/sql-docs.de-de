@@ -1,5 +1,5 @@
 ---
-title: Escapesequenz Skalarfunktion | Microsoft-Dokumentation
+title: Escapesequenz für Skalarfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,32 +15,32 @@ ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057073"
 ---
 # <a name="scalar-function-escape-sequence"></a>Skalarfunktion-Escapesequenz
-ODBC verwendet Escapesequenzen für Skalarfunktionen. Die Syntax dieser Escape-Sequenz lautet wie folgt aus:  
+ODBC verwendet Escapesequenzen für Skalarfunktionen. Die Syntax dieser Escapesequenz lautet wie folgt:  
   
 ```  
 {fn scalar-function}  
 ```  
   
-## <a name="remarks"></a>Hinweise  
- In BNF-Schreibweise lautet die Syntax:  
+## <a name="remarks"></a>Bemerkungen  
+ In der BNF-Notation lautet die Syntax wie folgt:  
   
- *ODBC-Skalar-Funktion-Escapesequenz* :: =  
+ *ODBC-Scalar-Function-Escape* :: =  
   
- *Initiator der ODBC-esc* fn *-Skalarfunktion ODBC-esc-Terminator*  
+ *ODBC-ESC-Initiator* FN *Scalar-Funktion ODBC-ESC-Terminator*  
   
- *-Skalarfunktion* :: = *Funktionsname-* (*Argumentliste*)  
+ *Skalarfunktion* :: = *Funktionsname* (*Argument-List*)  
   
- (Die Definitionen für die Nichtterminale *Funktionsname-* und *Funktionsname-* (*Argumentliste*) abgeleitet werden, aus der Liste von Skalarfunktionen in [ Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
+ (Die Definitionen für den nicht terminale *-Funktionsnamen* und den *Funktionsnamen* (*Argument-List*) werden aus der Liste der Skalarfunktionen in [Anhang E: skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md)abgeleitet.)  
   
- *Initiator der ODBC-esc* :: = {  
+ *ODBC-ESC-Initiator* :: = {  
   
- *ODBC-esc-Terminator* :: =}  
+ *ODBC-ESC-Terminator* :: =}  
   
- Um zu bestimmen, ob die Datenquelle, Verfahren unterstützt und der Treiber die Aufrufsyntax des ODBC-Prozedur unterstützt, eine Anwendung aufrufen kann **SQLGetInfo**. Weitere Informationen finden Sie unter [Anhang E: Skalare Funktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).
+ Um zu ermitteln, ob die Datenquelle Prozeduren unterstützt und der Treiber die ODBC-Prozedur Aufruf Syntax unterstützt, kann eine Anwendung **SQLGetInfo**aufrufen. Weitere Informationen finden Sie unter [Anhang E: Skalarfunktionen](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).

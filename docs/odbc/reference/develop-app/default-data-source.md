@@ -1,5 +1,5 @@
 ---
-title: Standard-Datenquelle | Microsoft-Dokumentation
+title: Standarddaten Quelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -22,17 +22,17 @@ ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68076849"
 ---
 # <a name="default-data-source"></a>Standarddatenquelle
-Der Treiber möglicherweise wählen Sie eine Datenquelle wird aufgerufen, die Standarddatenquelle in bestimmten Fällen, in dem die Anwendung nicht explizit einen angeben wird:  
+Der Treiber kann eine Datenquelle, die als Standarddaten Quelle bezeichnet wird, in bestimmten Fällen auswählen, in denen die Anwendung nicht explizit eine Datenquelle angibt:  
   
--   In einem Aufruf von **SQLConnect** , in denen die *ServerName* Argument ist eine Zeichenfolge der Länge 0 (null), ein null-Zeiger oder Standard.  
+-   Bei einem **SQLCONNECT** -Befehl, bei dem das *Servername* -Argument eine Zeichenfolge der Länge 0 (null), ein NULL-Zeiger oder ein Standardwert ist.  
   
--   In einem Aufruf von **SQLDriverConnect** , in denen *InConnectionString* gibt an, entweder **DSN**= DEFAULT oder gibt an, mit der **DSN** Schlüsselwort ein die Datenquelle, die nicht in den Systeminformationen enthalten ist.  
+-   Bei einem **SQLDriverConnect** -Befehl, bei dem *InConnectionString* entweder **DSN**= Default angibt oder mit dem **DSN** -Schlüsselwort eine Datenquelle angibt, die nicht in den Systeminformationen enthalten ist.  
   
- Es ist treiberdefinierten, wie die Standarddatenquelle angegeben wird. Dies kann zur Folge haben administrative Maßnahmen und hängt von dem Benutzer.
+ Es ist Treiber definiert, wie die Standarddaten Quelle angegeben wird. Dabei kann es sich um administrative Aktionen handeln, die ggf. vom Benutzer abhängig sind.

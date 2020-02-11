@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Herstellen einer Verbindung von der Datenquelle mit | Microsoft-Dokumentation'
+title: 'Schritt 1: Herstellen einer Verbindung mit der Datenquelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 84298664-4523-4149-b821-7b2e42c85281
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 80f2dfc05d9d27f60aca414ee0abd13e13b3ea65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68114274"
 ---
-# <a name="step-1-connect-to-the-data-source"></a>Schritt 1: Herstellen einer Verbindung mit einer Datenquelle
-Der erste Schritt bei jeder Anwendung ist für die Verbindung mit der Datenquelle. In dieser Phase, einschließlich der Funktionen, die es erforderlich ist, die wird in der folgenden Abbildung angezeigt.  
+# <a name="step-1-connect-to-the-data-source"></a>Schritt 1: Herstellen der Verbindung mit der Datenquelle
+Der erste Schritt in einer Anwendung besteht darin, eine Verbindung mit der Datenquelle herzustellen. Diese Phase, einschließlich der erforderlichen Funktionen, ist in der folgenden Abbildung dargestellt.  
   
- ![Herstellen einer Verbindung mit der Datenquelle in einer ODBC-Anwendung](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  
+ ![Verbinden mit einer Datenquelle in einer ODBC-Anwendung](../../../odbc/reference/develop-app/media/pr11.gif "pr11")  
   
- Der erste Schritt beim Herstellen einer Verbindung mit der Datenquelle wird zum Laden der Treiber-Manager und Zuordnen des Umgebungshandles mit **SQLAllocHandle**. Weitere Informationen finden Sie unter [zuordnen, die Umgebung behandeln](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+ Der erste Schritt beim Herstellen einer Verbindung mit der Datenquelle besteht darin, den Treiber-Manager zu laden und das Umgebungs Handle mit **SQLAllocHandle**zuzuordnen. Weitere Informationen finden Sie unter [Zuordnen des Umgebungs Handles](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
- Klicken Sie dann die Anwendung registriert, der sie durch den Aufruf entspricht, ODBC-Version **SQLSetEnvAttr** mit dem SQL_ATTR_APP_ODBC_VER Umgebung-Attribut. Weitere Informationen finden Sie unter [Deklarieren der ODBC-Version der Anwendung](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md) und [Abwärtskompatibilität und zur Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
+ Die Anwendung registriert dann die Version von ODBC, der Sie entspricht, indem Sie **SQLSetEnvAttr** mit dem SQL_ATTR_APP_ODBC_VER Environment-Attribut aufrufen. Weitere Informationen finden Sie unter [Deklarieren der ODBC-Version der Anwendung](../../../odbc/reference/develop-app/declaring-the-application-s-odbc-version.md) und abwärts [Kompatibilität und Einhaltung von Standards](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  
   
- Als Nächstes ordnet die Anwendung ein Verbindungshandle mit **SQLAllocHandle** und eine Verbindung mit der Datenquelle mit **SQLConnect**, **SQLDriverConnect**, oder **SQLBrowseConnect**. Weitere Informationen finden Sie unter [zuordnen, eine Verbindung behandeln](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md) und [Herstellen einer Verbindung](../../../odbc/reference/develop-app/establishing-a-connection.md).  
+ Als nächstes ordnet die Anwendung ein Verbindungs Handle mit **sqlzugechandle** zu und stellt mit **SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct**eine Verbindung mit der Datenquelle her. Weitere Informationen finden Sie unter [Zuordnen eines Verbindungs Handles](../../../odbc/reference/develop-app/allocating-a-connection-handle-odbc.md) und [Herstellen einer Verbindung](../../../odbc/reference/develop-app/establishing-a-connection.md).  
   
- Klicken Sie dann die Anwendung legt die Verbindungsattribute, z. B. ob manuellen commit der Transaktionen fest. Weitere Informationen finden Sie unter [Verbindungsattribute](../../../odbc/reference/develop-app/connection-attributes.md).
+ Anschließend werden von der Anwendung alle Verbindungs Attribute festgelegt, z. b. ob Transaktionen manuell committen werden. Weitere Informationen finden Sie unter [Verbindungs Attribute](../../../odbc/reference/develop-app/connection-attributes.md).

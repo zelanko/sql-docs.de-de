@@ -1,5 +1,5 @@
 ---
-title: Sp_describe_cursor_tables (Transact-SQL) | Microsoft-Dokumentation
+title: sp_describe_cursor_tables (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053088"
 ---
-# <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
+# <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Meldet die Objekte oder Basistabellen, auf die ein Servercursor verweist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -48,41 +48,41 @@ sp_describe_cursor_tables
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ @cursor_return=] *Output_cursor_variable*Ausgabe  
- Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *Output_cursor_variable* ist **Cursor**und hat keinen Standardwert und darf nicht keinem Cursor zugeordnet sein, die zum Zeitpunkt der Sp_describe_cursor_tables aufgerufen wird. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
+ [ @cursor_return= ] *output_cursor_variable* Ausgeben  
+ Der Name einer deklarierten Cursorvariablen zum Empfangen der Cursorausgabe. *output_cursor_variable* ist vom Typ **Cursor**und hat keinen Standardwert und darf zum Zeitpunkt, an dem sp_describe_cursor_tables aufgerufen wird, keinen Cursorn zugeordnet werden. Bei dem zurückgegebenen Cursor handelt es sich um einen scrollfähigen, dynamischen, schreibgeschützten Cursor.  
   
- [ @cursor_source=] {N'local "| N'global "| N'variable'}  
- Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist **nvarchar(30)** .  
+ [ @cursor_source= ] {N ' local ' | N ' Global ' | N '}  
+ Gibt an, ob der Cursor, für den der Bericht erstellt wird, mithilfe des Namens eines lokalen Cursors, eines globalen Cursors oder einer Cursorvariablen angegeben wird. Der Parameter ist vom Datentyp **nvarchar (30)**.  
   
- [ @cursor_identity=] N'*Local_cursor_name*"  
- Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *Local_cursor_name* ist **vom Datentyp nvarchar(128)** .  
+ [ @cursor_identity= ] N '*local_cursor_name*'  
+ Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das LOCAL-Schlüsselwort aufweist oder standardmäßig auf LOCAL festgelegt ist. *local_cursor_name* ist vom Datentyp **nvarchar (128)**.  
   
- [ @cursor_identity=] N'*Global_cursor_name*"  
- Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *Global_cursor_name* können auch der Name eines API-Servercursors, die von einer ODBC-Anwendung, die dann den Cursor durch Aufrufen von SQLSetCursorName geöffnet sein. *Global_cursor_name* ist **vom Datentyp nvarchar(128)** .  
+ [ @cursor_identity= ] N '*global_cursor_name*'  
+ Name eines mit einer DECLARE CURSOR-Anweisung erstellten Cursors, der entweder das GLOBAL-Schlüsselwort aufweist oder standardmäßig auf GLOBAL festgelegt ist. *global_cursor_name* kann auch der Name eines API-Server Cursors sein, der von einer ODBC-Anwendung geöffnet wurde, die den Cursor dann durch Aufrufen von SQLSetCursorName benannt hat. *global_cursor_name* ist vom Datentyp **nvarchar (128)**.  
   
- [ @cursor_identity=] N'*Input_cursor_variable*"  
- Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *Input_cursor_variable* ist **vom Datentyp nvarchar(128)** .  
+ [ @cursor_identity= ] N '*input_cursor_variable*'  
+ Der Name einer Cursorvariablen, die mit einem geöffneten Cursor verknüpft ist. *input_cursor_variable* ist vom Datentyp **nvarchar (128)**.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- None  
+ Keine  
   
 ## <a name="cursors-returned"></a>Zurückgegebene Cursor  
- Sp_describe_cursor_tables kapselt den Bericht als ein [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** output-Parameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet außerdem, dass es nicht möglich ist, die Prozedur direkt über API-Funktionen aufzurufen. Die **Cursor** -Ausgabeparameter muss an eine Programmvariable gebunden sein, aber die APIs unterstützen die Bindung nicht **Cursor** Parametern oder Variablen.  
+ sp_describe_cursor_tables kapselt den Bericht als [!INCLUDE[tsql](../../includes/tsql-md.md)] **Cursor** Ausgabeparameter. Dies ermöglicht, dass [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, gespeicherte Prozeduren und Trigger die Ausgabe zeilenweise verwenden können. Dies bedeutet außerdem, dass es nicht möglich ist, die Prozedur direkt über API-Funktionen aufzurufen. Der **Cursor** Ausgabeparameter muss an eine Programm Variable gebunden sein, aber die APIs unterstützen die Bindung von **Cursor** -Parametern oder-Variablen nicht.  
   
  In der folgenden Tabelle wird das Format des Cursors dargestellt, der von sp_describe_cursor_tables zurückgegeben wird.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |table owner|**sysname**|Die Benutzer-ID des Tabellenbesitzers.|  
 |Table_name|**sysname**|Name des Objekts oder der Basistabelle. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geben Servercursor immer das vom Benutzer angegebene Objekt und nicht die Basistabellen zurück.|  
 |Optimizer_hints|**smallint**|Bitmapmuster, das sich aus einer oder mehreren der folgenden Optionen zusammensetzt:<br /><br /> 1 = Sperre auf Zeilenebene (ROWLOCK)<br /><br /> 4 = Sperre auf Seitenebene (PAGELOCK)<br /><br /> 8 = Tabellensperre (TABLOCK)<br /><br /> 16 = Exklusive Tabellensperre (TABLOCKX)<br /><br /> 32 = Updatesperre (UPDLOCK)<br /><br /> 64 = Keine Sperre (NOLOCK)<br /><br /> 128 = Schnelle erste Zeilenoption (FASTFIRST)<br /><br /> 4096 = Wiederholbarer Lesevorgang bei Verwendung mit DECLARE CURSOR (HOLDLOCK)<br /><br /> Bei Angabe mehrerer Optionen wird vom System die restriktivste Option verwendet. sp_describe_cursor_tables zeigt jedoch die Flags an, die in der Abfrage angegeben sind.|  
-|lock_type|**smallint**|Explizit oder implizit für die diesem Cursor zugrunde liegenden Basistabellen angeforderter Scrollsperrentyp. Die folgenden Werte sind möglich:<br /><br /> 0 = Keine<br /><br /> 1 = Freigegeben<br /><br /> 3 = Update|  
-|server_name|**vom Datentyp Sysname und NULL-Werte zulässt**|Der Name des Verbindungsservers, auf dem sich die Tabelle befindet. NULL, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
+|lock_type|**smallint**|Explizit oder implizit für die diesem Cursor zugrunde liegenden Basistabellen angeforderter Scrollsperrentyp. Der Wert kann einer der folgenden sein:<br /><br /> 0 = Keine<br /><br /> 1 = Freigegeben<br /><br /> 3 = Update|  
+|server_name|**sysname, Werte zulässt**|Der Name des Verbindungsservers, auf dem sich die Tabelle befindet. NULL, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
 |Objectid|**int**|Objekt-ID der Tabelle. 0, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
 |dbid|**int**|ID der Datenbank, in der sich die Tabelle befindet. 0, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
-|dbname|**Sysname**, **NULL-Werte zulässt**|Name der Datenbank, in der sich die Tabelle befindet. NULL, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
+|dbname|**vom Datentyp sysname**, **Werte zulässt**|Name der Datenbank, in der sich die Tabelle befindet. NULL, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  sp_describe_cursor_tables beschreibt die Basistabellen, auf die ein Servercursor verweist. Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets an. Verwenden Sie sp_describe_cursor für eine Beschreibung der globalen Cursormerkmale, wie z. B. die Scrolloptionen und die Aktualisierbarkeit. Wenn Sie einen Bericht der in der Verbindung sichtbaren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor benötigen, verwenden Sie sp_cursor_list.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -129,13 +129,13 @@ DEALLOCATE abc;
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Cursor](../../relational-databases/cursors.md)   
- [CURSOR_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
+ [CURSOR_STATUS &#40;Transact-SQL-&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
  [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
- [Sp_cursor_list &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
- [Sp_describe_cursor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
- [Sp_describe_cursor_columns &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
+ [sp_cursor_list &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
+ [sp_describe_cursor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
+ [sp_describe_cursor_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

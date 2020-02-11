@@ -1,5 +1,5 @@
 ---
-title: Bewerten die SAP ASE für die Konvertierung (SybaseToSQL Datenbankobjekte) | Microsoft-Dokumentation
+title: Bewerten von SAP ASE-Datenbankobjekten für die Konvertierung (sybasetoisql) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/01/2017
 ms.prod: sql
@@ -10,72 +10,72 @@ ms.assetid: eb996b7c-1eef-4f73-b5e6-2fa6faf7336c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c65c19ee3b95303afb0e1ae0a950efe548c8f0af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68083533"
 ---
-# <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Bewerten von SAP ASE-Datenbankobjekten für die Konvertierung (SybaseToSQL)
-Bevor Sie Objekte laden und Migrieren von Daten zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL, Sie sollten bestimmen, wie die Komplexität der Migration und wie lange dauert. SSMA kann ein Bewertungsbericht enthält, die zeigt den Prozentsatz der Objekte und Prozeduren, die erfolgreich konvertiert werden, erstellen Sie [!INCLUDE[tsql](../../includes/tsql-md.md)]. SSMA können Sie außerdem die spezifischen Probleme anzeigen, die zu Konvertierungsfehlern führen können.  
+# <a name="assessing-sap-ase-database-objects-for-conversion-sybasetosql"></a>Bewerten von SAP ASE-Datenbankobjekten für die Konvertierung (sybasetoisql)
+Vor dem Laden von Objekten und der Migration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Daten zu oder Azure SQL sollten Sie bestimmen, wie komplex die Migration und wie viel Zeit Sie dauern sollte. SSMA kann einen Bewertungsbericht erstellen, der den Prozentsatz der Objekte und Prozeduren anzeigt, die [!INCLUDE[tsql](../../includes/tsql-md.md)]erfolgreich in konvertiert werden. Mit SSMA können Sie auch die spezifischen Probleme anzeigen, die Konvertierungs Fehler verursachen können.  
   
-## <a name="create-assessment-reports"></a>Erstellen Sie Berichte zur Bewertung  
-Beim Erstellen dieses Bewertungsberichts konvertiert SSMA der ausgewählten SAP Adaptive Server Enterprise (ASE) Datenbankobjekte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Syntax, und klicken Sie dann die Ergebnisse werden angezeigt.  
+## <a name="create-assessment-reports"></a>Bewertungsberichte erstellen  
+Beim Erstellen dieses Bewertungsberichts konvertiert SSMA die ausgewählten SAP Adaptive Server Enterprise (ASE)-Daten Bank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Objekte in die-oder Azure SQL-Syntax und zeigt dann die Ergebnisse an.  
   
-**So erstellen Sie einen Assessment-Bericht**  
+**So erstellen Sie einen Bewertungsbericht**  
   
-1.  Wählen Sie in der Sybase-Metadaten-Explorer Datenbanken, die Sie bewerten möchten.  
+1.  Wählen Sie im Sybase-metadatenexplorer die Datenbanken aus, die Sie bewerten möchten.  
   
-2.  Um einzelne Objekte zu unterdrücken, deaktivieren Sie die Kontrollkästchen neben den Objekten, die Sie nicht, um zu bewerten möchten.  
+2.  Wenn Sie einzelne Objekte weglassen möchten, deaktivieren Sie die Kontrollkästchen neben den Objekten, die nicht bewertet werden sollen.  
   
-3.  Mit der rechten Maustaste **Datenbanken**, und wählen Sie dann **Bericht erstellen**.  
+3.  Klicken Sie mit der rechten Maustaste auf **Datenbanken**und dann auf **Bericht erstellen**.  
   
-    Sie können auch einzelne Objekte analysieren, indem Sie mit der rechten Maustaste ein Objekt, und wählen Sie dann **Bericht erstellen**.  
+    Sie können einzelne Objekte auch analysieren, indem Sie mit der rechten Maustaste auf ein Objekt klicken und dann **Bericht erstellen**auswählen.  
   
-    SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters. Wenn im Ausgabebereich angezeigt wird, sehen Sie auch alle zugehörigen Nachrichten.  
+    SSMA zeigt den Fortschritt in der Statusleiste am unteren Rand des Fensters an. Wenn der Ausgabebereich sichtbar ist, werden auch zugehörige Meldungen angezeigt.  
   
-    Wenn die Bewertung abgeschlossen ist, wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Sybase: Fenster "Assessment" wird angezeigt.  
+    Wenn die Bewertung fertiggestellt ist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird das Fenster Migration Assistant für Sybase: Bewertungsbericht angezeigt.  
   
-## <a name="use-assessment-reports"></a>Verwenden Sie die Berichte zur Bewertung  
-Das Fenster Bewertungsbericht enthält drei Bereiche:  
+## <a name="use-assessment-reports"></a>Verwenden von Bewertungsberichten  
+Das Fenster "Bewertungsbericht" enthält drei Bereiche:  
   
--   Der linke Bereich enthält die Hierarchie der Objekte, die in den Bewertungsbericht enthalten sind. Sie können die Hierarchie durchsuchen und Auswählen von Objekten und Objektkategorien Konvertierungsstatistiken "und" Code anzeigen.  
+-   Der linke Bereich enthält die Hierarchie der Objekte, die im Bewertungsbericht enthalten sind. Sie können die Hierarchie durchsuchen und Objekte und Objektkategorien auswählen, um Konvertierungsstatistiken und Code anzuzeigen.  
   
--   Der Inhalt im rechten Bereich variiert basierend auf welches Element im linken Bereich ausgewählt wird.  
+-   Der Inhalt des rechten Bereichs variiert je nach ausgewähltem Element im linken Bereich.  
   
-    Wenn eine Gruppe von Objekten (z. B. ein Schema) oder eine Tabelle ausgewählt ist, werden zwei Bereiche von im rechte Bereich angezeigt. Die **Konvertierungsstatistiken** Bereich zeigt die Konvertierungsstatistiken für die ausgewählten Objekte. Die **Objekte nach Kategorien** Bereich zeigt die Konvertierungsstatistiken für das Objekt oder die Kategorien von Objekten.  
+    Wenn eine Gruppe von Objekten (z. b. ein Schema) oder eine Tabelle ausgewählt ist, werden im rechten Bereich zwei Bereiche angezeigt. Im Bereich **Konvertierungs Statistik** werden die Konvertierungsstatistiken für die ausgewählten Objekte angezeigt. Der Bereich **Objekte nach Kategorien** zeigt die Konvertierungsstatistiken für das Objekt oder die Kategorien von Objekten an.  
   
-    Wenn eine gespeicherte Prozedur, Sicht oder Trigger ausgewählt ist, enthält im rechte Bereich Statistiken, Quellcode und Code des ereignisdateiziels.  
+    Wenn eine gespeicherte Prozedur, eine Sicht oder ein Auslösung ausgewählt ist, enthält der Rechte Bereich Statistiken, Quellcode und Zielcode.  
   
-    -   Im obere Bereich zeigt die Gesamtstatistik für das Objekt. Möglicherweise müssen Sie erweitern **Statistiken** zum Anzeigen dieser Informationen. 
-    -   Der Quellbereich zeigt den Quellcode des Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematisch Quellcode.  
-    -   Der Zielbereich zeigt den konvertierten Code an. Roter Text zeigt die problematische Code und Fehlermeldungen.  
+    -   Im oberen Bereich werden die Gesamt Statistiken für das Objekt angezeigt. Möglicherweise müssen Sie die **Statistik** erweitern, um diese Informationen anzuzeigen. 
+    -   Der Quellbereich zeigt den Quellcode des-Objekts, das im linken Bereich ausgewählt ist. Die markierten Bereiche zeigen problematischen Quellcode.  
+    -   Der Zielbereich zeigt den konvertierten Code. Roter Text zeigt problematische Code und Fehlermeldungen an.  
   
--   Im unteren Bereich zeigt die Konvertierung Nachrichten, gruppiert nach der Meldungsnummer. Wählen Sie **Fehler**, **Warnungen**, oder **Informationen** zeigt Kategorien von Nachrichten, und erweitern dann eine Gruppe von Nachrichten. Klicken Sie auf eine einzelne Nachricht auf das Objekt im linken Bereich, und klicken Sie dann anzeigen auswählen die Details im rechten Bereich aus.  
+-   Der untere Bereich zeigt Konvertierungs Meldungen nach Nachrichtennummer gruppiert an. Wählen Sie **Fehler**, **Warnungen**oder **Informationen** aus, um Kategorien von Nachrichten anzuzeigen, und erweitern Sie dann eine Gruppe von Nachrichten. Klicken Sie auf eine einzelne Nachricht, um das Objekt im linken Bereich auszuwählen, und zeigen Sie dann die Details im rechten Bereich an.  
   
-## <a name="analyze-conversion-problems-by-using-the-assessment-report"></a>Analysieren Sie Probleme bei der Konvertierung mithilfe des Bewertungsberichts  
-Die **Konvertierungsstatistiken Bereiche** zeigen die Statistik für die Konvertierung. Wenn der Prozentsatz für eine beliebige Kategorie weniger als 100 Prozent liegt, sollten Sie ermitteln, warum die Konvertierung nicht erfolgreich war.  
+## <a name="analyze-conversion-problems-by-using-the-assessment-report"></a>Analysieren von Konvertierungs Problemen mithilfe des Bewertungsberichts  
+Im Bereich **Konvertierungs Statistik** werden die Konvertierungsstatistiken angezeigt. Wenn der Prozentsatz für eine Kategorie weniger als 100 Prozent beträgt, sollten Sie bestimmen, warum die Konvertierung nicht erfolgreich war.  
   
-**Probleme bei der Konvertierung anzeigen**  
+**So zeigen Sie Konvertierungsprobleme an**  
   
-1.  Erstellen Sie den Bewertungsbericht, mithilfe der Anweisungen im vorherigen Verfahren.  
+1.  Erstellen Sie den Bewertungsbericht mithilfe der Anweisungen im vorherigen Verfahren.  
   
-2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehlersymbol aus. Erweitern Elemente aus, bis Sie ein einzelnes Element auswählen, die Fehler bei der Konvertierung fortgesetzt werden.  
+2.  Erweitern Sie im linken Bereich Schemas oder Ordner mit einem roten Fehler Symbol. Erweitern Sie Elemente, bis Sie ein einzelnes Element auswählen, für das die Konvertierung fehlgeschlagen ist.  
   
-3.  Wählen Sie am oberen Rand des Bereichs für die Quelle, **nächsten Problem**.  
-    Der problematische Code markiert ist, wie der zugehörige in Code die **Ziel Navigation** Bereich.  
+3.  Wählen Sie oben im Bereich Quelle die Option **nächstes Problem**aus.  
+    Der problematische Code wird hervorgehoben, ebenso wie der zugehörige Code im **Ziel Navigations** Bereich.  
   
-4.  Überprüfen Sie alle Fehlermeldungen, und klicken Sie dann zu bestimmen Sie, was Sie möchten mit dem Objekt, das die Ursache des Konvertierungsproblems:  
+4.  Überprüfen Sie alle Fehlermeldungen, und legen Sie dann fest, was Sie mit dem Objekt tun möchten, das das Konvertierungs Problem verursacht hat:  
   
-    -   Aktualisieren Sie die ASE-Syntax in SSMA. Sie können die Syntax nur für gespeicherte Prozeduren und Trigger aktualisieren. Um die Syntax zu aktualisieren, wählen Sie das Objekt in der Sybase-Metadaten-Explorer-Bereich, klicken Sie auf die **SQL** Registerkarte, und klicken Sie dann den SQL-Code bearbeiten. Wenn Sie vom Element weg navigieren, werden Sie aufgefordert, um die aktualisierte Syntax zu speichern. Zeigen Sie die gemeldeten Fehler für das Objekt, auf die **Bericht** Registerkarte.  
+    -   Aktualisieren Sie die ASE-Syntax in SSMA. Sie können die Syntax nur für gespeicherte Prozeduren und Trigger aktualisieren. Um die Syntax zu aktualisieren, wählen Sie das Objekt im Sybase-metadatenexplorer-Bereich aus, klicken Sie auf die Registerkarte **SQL** , und bearbeiten Sie dann den SQL-Code. Wenn Sie vom Element Weg navigieren, werden Sie aufgefordert, die aktualisierte Syntax zu speichern. Zeigen Sie die gemeldeten Fehler für das Objekt auf der Registerkarte **Bericht** an.  
   
-    -   In App Service-Umgebung können Sie das ASE-Objekt zum Entfernen oder Überarbeiten problematischen Code ändern. Um den aktualisierten Code in SSMA laden zu können, müssen Sie die Metadaten zu aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
+    -   In ASE können Sie das ASE-Objekt ändern, um problematischen Code zu entfernen oder zu überarbeiten. Um den aktualisierten Code in SSMA zu laden, müssen Sie die Metadaten aktualisieren. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit der Sybase-ASE &#40;sybasedesql&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md).  
   
-    -   Sie können das Objekt von der Migration ausschließen. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL-Metadaten-Explorer und Sybase-Metadaten-Explorer, deaktivieren Sie das Kontrollkästchen neben dem Element vor dem Laden der Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL und Migrieren von Daten aus der ASE.
+    -   Sie können das Objekt von der Migration ausschließen. Deaktivieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie in oder im Azure SQL-metadatenexplorer und im Sybase-metadatenexplorer das Kontrollkästchen neben dem Element, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bevor Sie die Objekte in oder Azure SQL laden und Daten aus ASE migrieren.
   
 ## <a name="next-steps"></a>Nächste Schritte  
-[Konvertieren von SAP ASE-Datenbankobjekten &#40;SybaseToSQL&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
+[Umstellen von SAP ASE-Datenbankobjekten &#40;sybaseumsql&#41;](../../ssma/sybase/converting-sybase-ase-database-objects-sybasetosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Migrieren von SAP ASE-Datenbanken zu SQLServer – Azure SQL-Datenbank &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Migrieren von SAP ASE-Datenbanken zu SQL Server-Azure SQL-Datenbank &#40;Sybase&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

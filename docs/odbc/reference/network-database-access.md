@@ -1,5 +1,5 @@
 ---
-title: Netzwerk-Datenbankzugriff | Microsoft-Dokumentation
+title: Netzwerkdaten Bank Zugriff | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,25 +17,25 @@ ms.assetid: f31dd938-e992-436b-b613-145c23973064
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2f8eaebca02ef3987e3613b5dd896e0f7c130086
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67938033"
 ---
 # <a name="network-database-access"></a>Datenbankzugriff über ein Netzwerk
-Zugreifen auf eine Datenbank in einem Netzwerk erfordert eine Reihe von Komponenten, von die jedes ist unabhängig von, und befindet sich unterhalb der Programmierschnittstelle. Diese Komponenten werden in der folgenden Abbildung angezeigt.  
+Der Zugriff auf eine Datenbank über ein Netzwerk erfordert eine Reihe von Komponenten, von denen jede unabhängig von der Programmierschnittstelle ist und sich darunter befindet. Diese Komponenten sind in der folgenden Abbildung dargestellt.  
   
- ![Komponenten, die Zugriff auf eine Datenbank in einem Netzwerk](../../odbc/reference/media/pr04.gif "pr04")  
+ ![Komponenten für den Zugriff auf eine Datenbank über ein Netzwerk](../../odbc/reference/media/pr04.gif "pr04")  
   
  Es folgt eine weitere Beschreibung der einzelnen Komponenten:  
   
--   **Programmierschnittstelle** wie weiter oben in diesem Abschnitt beschrieben wird, enthält die Programmierschnittstelle der Aufrufe von der Anwendung. Diese Schnittstellen (embedded SQL, SQL-Module und Schnittstellen von Aufrufebene) beziehen sich in der Regel mit dem jeweiligen Datenbankverwaltungssystem, obwohl sie in der Regel ein ANSI oder ISO-Standard basieren.  
+-   **Programmierschnittstelle** Wie weiter oben in diesem Abschnitt beschrieben, enthält die Programmierschnittstelle die Aufrufe, die von der Anwendung durchgeführt werden. Diese Schnittstellen (eingebettete SQL-, SQL-Module und Schnittstellen auf Aufrufebene) sind in der Regel für jedes DBMS spezifisch, obwohl Sie in der Regel auf einem ANSI-oder ISO-Standard basieren.  
   
--   **Data Stream-Protokoll** Datenprotokoll Stream beschreibt den Datenstrom zwischen dem DBMS und dem Client übertragen. Das Protokoll kann z. B. das erste Byte zu beschreiben, was der Rest des Datenstroms enthält benötigen: eine SQL-Anweisung ausgeführt, einen Wert gab den Fehlercode oder hat Daten zurückgegeben werden soll. Das Format der Rest der Daten in den Stream dann hängt dieses Kennzeichen ab. Ein fehlerdatenstrom kann z. B. das Flag, einen Fehlercode 2-Byte-Ganzzahl, die Nachrichtenlänge für eine 2-Byte-Ganzzahl-Fehler und eine Fehlermeldung enthalten.  
+-   **Datenstrom Protokoll** Das Datenstrom Protokoll beschreibt den Datenstrom von Daten, die zwischen dem DBMS und dem Client übertragen werden. Beispielsweise kann das Protokoll das erste Byte erfordern, um zu beschreiben, was der restliche Stream enthält: eine auszuführende SQL-Anweisung, ein zurückgegebener Fehlerwert oder zurückgegebene Daten. Das Format der restlichen Daten im Stream hängt dann von diesem Flag ab. Ein Fehler Datenstrom kann z. b. das-Flag, einen ganzzahligen 2-Byte-Fehlercode, eine 2-Byte-ganz Zahl Fehlermeldungs Länge und eine Fehlermeldung enthalten.  
   
-     Das Data Stream-Protokoll ist ein logisches Protokoll, und ist unabhängig vom zugrunde liegenden Netzwerk verwendete Protokolle. Daher kann ein einzelnes Data Stream-Protokoll in der Regel auf einer Reihe von verschiedenen Netzwerken verwendet werden. Data Stream-Protokolle sind in der Regel proprietär und wurden optimiert, um für ein bestimmtes DBMS zu arbeiten.  
+     Das Datenstrom Protokoll ist ein logisches Protokoll und ist unabhängig von den Protokollen, die vom zugrunde liegenden Netzwerk verwendet werden. Folglich kann ein einzelnes Datenstrom Protokoll in der Regel für eine Reihe von verschiedenen Netzwerken verwendet werden. Datenstrom Protokolle sind in der Regel proprietäre und wurden für die Arbeit mit einem bestimmten DBMS optimiert.  
   
--   **Prozessübergreifende Kommunikationsmechanismus** der Mechanismus der prozessübergreifenden Kommunikation (IPC) ist der Prozess, der mit dem ein Prozess mit einem anderen kommuniziert. Beispiele für sind benannte Pipes, TCP/IP-Sockets und DECnet-Sockets. Die Auswahl der IPC-Mechanismus wird durch das Betriebssystem und Netzwerk verwendet wird, eingeschränkt.  
+-   **Prozessübergreifende Kommunikationsmechanismus** Der IPC-Mechanismus (prozessübergreifende Communication) ist der Prozess, mit dem ein Prozess mit einem anderen kommuniziert. Beispiele hierfür sind Named Pipes, TCP/IP-Sockets und DECnet-Sockets. Die Auswahl des IPC-Mechanismus wird durch das Betriebssystem und das verwendete Netzwerk eingeschränkt.  
   
--   **Netzwerkprotokoll** das Netzwerkprotokoll wird verwendet, um den Datenstrom über das Netzwerk übertragen. Sie können die Routinearbeiten betrachtet werden, unterstützt die IPC-Mechanismen verwendet, um die Daten zu implementieren stream-Protokoll als auch Standard-Vorgänge wie dateiübertragungen unterstützt und Druckerfreigabe. Netzwerkprotokolle sind NetBEUI, TCP/IP, DECnet und SPX/IPX und beziehen sich auf jedem Netzwerk.
+-   **Netzwerkprotokoll** Das Netzwerkprotokoll wird verwendet, um den Datenstrom über ein Netzwerk zu transportieren. Sie kann als die Grundlagen betrachtet werden, die die IPC-Mechanismen unterstützen, die zum Implementieren des Datenstrom Protokolls verwendet werden, sowie die Unterstützung grundlegender Netzwerk Vorgänge wie Dateiübertragungen und Druckfreigabe. Netzwerkprotokolle umfassen NetBEUI, TCP/IP, DECnet und SPX/IPX und sind für jedes Netzwerk spezifisch.

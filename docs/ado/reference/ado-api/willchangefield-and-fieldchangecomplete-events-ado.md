@@ -1,5 +1,5 @@
 ---
-title: WillChangeField- und FieldChangeComplete-Ereignis (ADO) | Microsoft-Dokumentation
+title: Ereignisse "WillChangeField" und "FieldChangeComplete" (ADO) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -20,14 +20,14 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67945881"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignis (ADO)
-Die **WillChangeField** Ereignis wird immer dann aufgerufen, bevor Sie ein ausstehender Vorgang ändert sich den Wert einer oder mehreren [Feld](../../../ado/reference/ado-api/field-object.md) Objekte in der [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Die **FieldChangeComplete** -Ereignis wird aufgerufen, nachdem sich der Wert von einem oder mehreren **Feld** -Quellobjekten geändert wurde.  
+Das Ereignis " **WillChangeField** " wird aufgerufen, bevor durch einen ausstehenden Vorgang der Wert von einem oder mehreren [Feld](../../../ado/reference/ado-api/field-object.md) Objekten im [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)geändert wird. Das Ereignis **FieldChangeComplete** wird aufgerufen, nachdem sich der Wert eines oder mehrerer **Feld** Objekte geändert hat.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,32 +38,32 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *cFields*  
- Ein **lange** , der angibt, dass der Anzahl der **Feld** Objekte im *Felder*.  
+ *cfields*  
+ Ein **Long** -Wert, der die Anzahl der **Feld** Objekte in *Feldern*angibt.  
   
- *Felder*  
- Für **WillChangeField**, *Felder* -Parameter ist ein Array von **Varianten** , enthält **Feld** Objekte mit den ursprünglichen Werten. Für **FieldChangeComplete**, *Felder* -Parameter ist ein Array von **Varianten** , enthält **Feld** Objekte mit den geänderten Werten .  
+ *Fields*  
+ Der *Fields* -Parameter für " **WillChangeField**" ist ein Array von **Varianten** , das **Feld** Objekte mit den ursprünglichen Werten enthält. Für **FieldChangeComplete**ist der *Fields* -Parameter ein Array von **Varianten** , das **Feld** Objekte mit den geänderten Werten enthält.  
   
  *pError*  
- Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird beschrieben, den aufgetretenen Wenn der Wert des *AdStatus* ist **AdStatusErrorsOccurred**; andernfalls ist es nicht festgelegt.  
+ Ein [Fehler](../../../ado/reference/ado-api/error-object.md) Objekt. Es wird der Fehler beschrieben, der aufgetreten ist, wenn der Wert von *adStatus* **adstatuserrorsoccurrred**ist. Andernfalls ist es nicht festgelegt.  
   
  *adStatus*  
- Ein [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) Statuswert.  
+ Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert.  
   
- Wenn **WillChangeField** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war. Es wird festgelegt, um **AdStatusCantDeny** Wenn dieses Ereignis auf Abbruch des ausstehenden Vorgangs anfordern kann.  
+ Wenn " **WillChangeField** " aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis ausgelöst hat, erfolgreich war. Sie wird auf **adStatus-kandeny** festgelegt, wenn dieses Ereignis keinen Abbruch des ausstehenden Vorgangs anfordern kann.  
   
- Wenn **FieldChangeComplete** wird aufgerufen, wird dieser Parameter auf festgelegt **AdStatusOK** , wenn der Vorgang, der das Ereignis ausgelöst wurde erfolgreich war, oder mit **AdStatusErrorsOccurred** Wenn der Vorgang ist fehlgeschlagen.  
+ Wenn **FieldChangeComplete** aufgerufen wird, wird dieser Parameter auf **adstatuusok** festgelegt, wenn der Vorgang, der das Ereignis verursacht hat, erfolgreich war, oder auf **adstatuuserrorsoccurrred** , wenn der Vorgang fehlgeschlagen ist.  
   
- Vor dem **WillChangeField** zurückgegeben wird, legen Sie diesen Parameter zu **AdStatusCancel** auf den Abbruch der Anforderung des ausstehenden Vorgangs.  
+ Legen Sie diesen Parameter vor der Rückgabe von " **WillChangeField** " auf " **adStatus Cancel** " fest, um den Abbruch des ausstehenden Vorgangs anzufordern.  
   
- Vor dem **FieldChangeComplete** zurückgegeben wird, legen Sie diesen Parameter zu **AdStatusUnwantedEvent** , nachfolgende Benachrichtigungen zu verhindern.  
+ Legen Sie diesen Parameter vor der Rückgabe von **FieldChangeComplete** auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern.  
   
- *pRecordset*  
- Ein **Recordset** Objekt. Die **Recordset** für die dieses Ereignis aufgetreten ist.  
+ *precordset*  
+ Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
- Ein **WillChangeField** oder **FieldChangeComplete** Ereignis kann eintreten, wenn die [Wert](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft ab, und rufen die [Update](../../../ado/reference/ado-api/update-method.md) Methode mit Arrayparametern Feld und dem Wert.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn Sie die [value](../../../ado/reference/ado-api/value-property-ado.md) -Eigenschaft festlegen und die [Update](../../../ado/reference/ado-api/update-method.md) -Methode mit Feld-und Wert Array Parametern aufrufen, kann ein Ereignis vom Typ " **WillChangeField** " oder " **FieldChangeComplete** " auftreten  
   
-## <a name="see-also"></a>Siehe auch  
- [ADO-Ereignismodell – Beispiel (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO-Ereignishandler – Zusammenfassung](../../../ado/guide/data/ado-event-handler-summary.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Beispiel für das ADO-Ereignis Modell (VC + +)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
+ [ADO-Ereignishandler – Übersicht](../../../ado/guide/data/ado-event-handler-summary.md)

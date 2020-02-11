@@ -1,5 +1,5 @@
 ---
-title: Sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
+title: sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044493"
 ---
-# <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
+# <a name="sysmail_help_profileaccount_sp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Listet die Konten auf, die einem oder mehreren Datenbank-E-Mail-Profilen zugeordnet sind.  
     
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,13 +43,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @profile_id = ] profile_id` Ist die Profil-ID des Profils, das aufgelistet. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_id = ] profile_id`Die Profil-ID des Profils, das aufgelistet werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'` Ist der Profilname des Profils, das aufgelistet. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'`Der Name des Profils, das aufgelistet werden soll. *profile_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es muss entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @account_id = ] account_id` Ist die Konto-ID zur Liste. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
+`[ @account_id = ] account_id`Die Konto-ID, die aufgelistet werden soll. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
   
-`[ @account_name = ] 'account_name'` Ist der Name des Kontos, das aufgelistet. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
+`[ @account_name = ] 'account_name'`Der Name des Kontos, das aufgelistet werden soll. *account_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *account_id* sowie *account_name* NULL sind, werden alle Konten im Profil aufgelistet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -59,14 +59,14 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |**profile_id**|**int**|Die Profil-ID des Profils.|  
 |**profile_name**|**sysname**|Der Name des Profils.|  
 |**account_id**|**int**|Die Konto-ID des Kontos.|  
 |**account_name**|**sysname**|Der Name des Kontos.|  
 |**sequence_number**|**int**|Die Sequenznummer des Kontos innerhalb des Profils.|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wird weder *profile_id* noch *profile_name* angegeben, gibt diese gespeicherte Prozedur Informationen für jedes Profil in der Instanz zurück.  
   
  Die gespeicherte Prozedur **sysmail_help_profileaccount_sp** wird in der **msdb** -Datenbank gespeichert und befindet sich im Besitz des **dbo** -Schemas. Handelt es sich bei der aktuellen Datenbank nicht um **msdb**, muss die Prozedur mit einem dreiteiligen Namen ausgeführt werden.  
@@ -129,10 +129,10 @@ profile_id  profile_name                 account_id  account_name         sequen
 106         AdventureWorks Operator      210         Operator-MainServer  1  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-E-Mail](../../relational-databases/database-mail/database-mail.md)   
- [Erstellen eines e-Mail-Datenbankkontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
- [Database Mail Configuration Objects](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
- [Datenbank-e-Mails gespeicherte Prozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
+ [Erstellen eines Datenbank-E-Mail Kontos](../../relational-databases/database-mail/create-a-database-mail-account.md)   
+ [Konfigurationsobjekte Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
+ [Datenbank-E-Mail gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   
   

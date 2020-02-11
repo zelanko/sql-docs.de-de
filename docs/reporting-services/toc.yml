@@ -15,15 +15,21 @@
     - name: Backward Compatibility
       href: ../reporting-services/reporting-services-backward-compatibility.md
       items:
-        - name: Veraltete Features
+        - name: In SQL Server 2019 als veraltet markierte Features
+          href: ../reporting-services/deprecated-features-sql-server-2019-reporting-services-ssrs.md
+        - name: In SQL Server 2017 als veraltet markierte Features
+          href: ../reporting-services/deprecated-features-sql-server-2017-reporting-services-ssrs.md
+        - name: In SQL Server 2016 als veraltet markierte Features
           href: ../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md
-        - name: In SSRS in SQL Server 2016 nicht mehr unterstützte Funktionen
+        - name: In SQL Server 2019 nicht mehr unterstützte Funktionen
+          href: ../reporting-services/discontinued-functionality-sql-server-reporting-services-2019.md
+        - name: In SQL Server 2016 nicht mehr unterstützte Funktionen
           href: ../reporting-services/discontinued-functionality-to-sql-server-reporting-services-in-sql-server.md
-        - name: Grundlegende Änderungen in SSRS in SQL Server 2016
+        - name: Breaking Changes in SQL Server 2016
           href: ../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md
-        - name: Verhaltensänderungen in SQL Server Reporting Services in SQL Server 2016
+        - name: Behavior Changes in SQL Server 2016
           href: ../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md
-- name: Lernprogramme
+- name: Tutorials
   items:
     - name: Tutorials für den Berichts-Designer
       items:
@@ -36,13 +42,13 @@
               href: ../reporting-services/lesson-1-creating-a-report-server-project-reporting-services.md
             - name: 'Lektion 2: Angeben von Verbindungsinformationen'
               href: ../reporting-services/lesson-2-specifying-connection-information-reporting-services.md
-            - name: 'Lektion 3: Lektion 3: Definieren eines Datasets für den Tabellenbericht'
+            - name: 'Lektion 3: Definieren eines Datasets für den Tabellenbericht'
               href: ../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md
-            - name: 'Lektion 4: Lektion 4: Hinzufügen einer Tabelle zum Bericht'
+            - name: 'Lektion 4: Hinzufügen einer Tabelle zum Bericht'
               href: ../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md
-            - name: 'Lektion 5: Lektion 5: Formatieren eines Berichts'
+            - name: 'Lektion 5: Formatieren eines Berichts'
               href: ../reporting-services/lesson-5-formatting-a-report-reporting-services.md
-            - name: 'Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten'
+            - name: 'Lesson 6: Adding Grouping and Totals'
               href: ../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md
         - name: Erstellen eines datengesteuerten Abonnements (SSRS-Lernprogramm)
           href: ../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md
@@ -51,12 +57,12 @@
               href: ../reporting-services/lesson-1-creating-a-sample-subscriber-database.md
             - name: 'Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle'
               href: ../reporting-services/lesson-2-modifying-the-report-data-source-properties.md
-            - name: 'Lektion 3: Definieren eines datengesteuerten Abonnements'
+            - name: 'Lesson 3: Defining a Data-Driven Subscription'
               href: ../reporting-services/lesson-3-defining-a-data-driven-subscription.md
         - name: Erstellen eines Drillthroughberichts (RDLC) mit Parametern mithilfe von ReportViewer (SSRS-Lernprogramm)
           href: ../reporting-services/create-drillthrough-rdlc-report-with-parameters-reportviewer.md
           items:
-            - name: 'Lektion 1: Erstellen Sie eine neue Website'
+            - name: 'Lektion 1: Erstellen einer neuen Website'
               href: ../reporting-services/lesson-1-create-a-new-web-site.md
             - name: 'Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht'
               href: ../reporting-services/lesson-2-define-a-data-connection-and-data-table-for-parent-report.md
@@ -72,12 +78,12 @@
               href: ../reporting-services/lesson-7-add-drillthrough-action-on-parent-report.md
             - name: 'Lektion 8: Erstellen eines Datenfilters'
               href: ../reporting-services/lesson-8-create-a-data-filter.md
-            - name: 'Lektion 9: Erstellen und Ausführen der Anwendung'
+            - name: 'Lesson 9: Build and Run the Application'
               href: ../reporting-services/lesson-9-build-and-run-the-application.md
     - name: Lernprogramme für den Berichts-Generator
       href: ../reporting-services/report-builder-tutorials.md
       items:
-        - name: 'Lernprogramm: Erstellen eines schnellen Diagrammberichts offline'
+        - name: 'Tutorial: Erstellen eines Quick-Diagrammberichts offline'
           href: ../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md
         - name: Voraussetzungen für Lernprogramme
           href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
@@ -93,13 +99,13 @@
           href: ../reporting-services/tutorial-format-text-report-builder.md
         - name: 'Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-pie-chart-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)'
+        - name: 'Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-bar-chart-to-your-report-report-builder.md
         - name: 'Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)'
           href: ../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md
-        - name: 'Lernprogramm: Hinzufügen einer KPI zu einem Bericht'
+        - name: 'Lernprogramm: Hinzufügen eines KPIs zu einem Bericht'
           href: ../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md
         - name: 'Lernprogramm: Kartenbericht'
           href: ../reporting-services/tutorial-map-report-report-builder.md
@@ -418,7 +424,7 @@
           href: ../reporting-services/report-server-sharepoint/customize-the-report-viewer-web-part.md
         - name: Einstellungen der SharePoint-Website für den Berichts-Viewer-Webpart
           href: ../reporting-services/report-server-sharepoint/report-viewer-web-part-sharepoint-site-settings.md
-    - name: Hohe Verfügbarkeit
+    - name: Hochverfügbarkeit
       href: ../reporting-services/report-server-sharepoint/high-availability-reporting-services.md
     - name: Aktivieren und Deaktivieren von RDL-Sandkasten
       href: ../reporting-services/report-server-sharepoint/enable-and-disable-rdl-sandboxing.md
@@ -1014,15 +1020,19 @@
       href: ../reporting-services/report-builder/print-a-report-reporting-services-in-sharepoint-mode.md
 - name: Berichtsdaten in SSRS
   items:
-    - name: Berichtsdaten in SSRS (Übersicht)
+    - name: Einführung in Berichtsdaten
       href: ../reporting-services/report-data/report-data-ssrs.md
-    - name: Von Reporting Services unterstützte Datenquellen
+    - name: Unterstützte Datenquellen
       href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
-    - name: 'Datenverbindungen, Datenquellen und Verbindungszeichenfolgen (Berichts-Generator und SSRS)'
+    - name: Erstellen von Verbindungszeichenfolgen
       href: ../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md
     - name: Hinzufügen und Prüfen einer Datenverbindung
       href: ../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md
-    - name: 'Erstellen, Ändern und Löschen von freigegebenen Datenquellen'
+    - name: Angeben von Anmelde- und Verbindungsinformationen
+      href: ../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md
+    - name: Vergleichen von freigegebenen und eingebetteten Datenquellen
+      href: ../reporting-services/report-data/compare-shared-embedded-data-sources-report-builder-ssrs.md
+    - name: Erstellen und Ändern von freigegebenen Datenquellen
       href: ../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md
     - name: Erstellen und Verwenden eingebetteter Datenquellen
       href: ../reporting-services/report-data/create-and-modify-embedded-data-sources.md
@@ -1185,7 +1195,7 @@
           href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
 - name: Sicherheit und Schutz für Reporting Services
   items:
-    - name: Security
+    - name: Sicherheit
       href: ../reporting-services/report-builder/security-report-builder.md
     - name: Reporting Services-Sicherheit und -Schutz (Übersicht)
       href: ../reporting-services/security/reporting-services-security-and-protection.md
@@ -1894,7 +1904,7 @@
       href: ../reporting-services/custom-report-items/custom-report-item-implementation-requirements.md
     - name: Custom Report Items
       href: ../reporting-services/custom-report-items/custom-report-items.md
-    - name: 'Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements'
+    - name: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements'
       href: ../reporting-services/custom-report-items/how-to-deploy-a-custom-report-item.md
     - name: Zugriff auf benutzerdefinierte Assemblys über Ausdrücke
       href: ../reporting-services/custom-assemblies/accessing-custom-assemblies-through-expressions.md
@@ -1902,7 +1912,7 @@
       href: ../reporting-services/custom-assemblies/asserting-permissions-in-custom-assemblies.md
     - name: Bereitstellen einer benutzerdefinierten Assembly
       href: ../reporting-services/custom-assemblies/deploying-a-custom-assembly.md
-    - name: 'Gewusst wie: Debuggen von benutzerdefinierten Assemblys'
+    - name: 'Vorgehensweise: Debuggen von benutzerdefinierten Assemblys'
       href: ../reporting-services/custom-assemblies/how-to-debug-custom-assemblies.md
     - name: Initialisieren von Objekten benutzerdefinierter Assemblys
       href: ../reporting-services/custom-assemblies/initializing-custom-assembly-objects.md

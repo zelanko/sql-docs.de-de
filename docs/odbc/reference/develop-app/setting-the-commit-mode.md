@@ -15,11 +15,11 @@ ms.assetid: b60d0d74-0655-4013-8d5a-bc1866eaa166
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a43a78ad9453f65d9b12595851bd622f720b409a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68094221"
 ---
 # <a name="setting-the-commit-mode"></a>Festlegen des Commitmodus
-Anwendungen Geben Sie den Transaktionsmodus mit das SQL_ATTR_AUTOCOMMIT-Verbindungsattribut. ODBC-Transaktionen werden standardmäßig im Autocommit Modus (es sei denn, **SQLSetConnectAttr** und **SQLSetConnectOption** werden nicht unterstützt, dies ist wahrscheinlich nicht). Der Wechsel von Manualcommit-Modus in den Autocommit-Modus automatisch führt einen Commit alle geöffneten Transaktionen für die Verbindung aus.
+Anwendungen geben den Transaktionsmodus mit dem SQL_ATTR_AUTOCOMMIT Verbindungs Attribut an. Standardmäßig befinden sich ODBC-Transaktionen im Autocommit-Modus (es sei denn, **SQLSetConnectAttr** und **SQLSetConnectOption** werden nicht unterstützt, was unwahrscheinlich ist). Wenn Sie vom manuellen Commitmodus in den Autocommit-Modus wechseln, wird für alle geöffneten Transaktionen der Verbindung automatisch ein Commit ausgeführt.

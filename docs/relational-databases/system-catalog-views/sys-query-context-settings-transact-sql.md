@@ -1,5 +1,5 @@
 ---
-title: Sys.query_context_settings (Transact-SQL) | Microsoft-Dokumentation
+title: sys. query_context_settings (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql
@@ -21,46 +21,46 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068064"
 ---
-# <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
+# <a name="sysquery_context_settings-transact-sql"></a>sys. query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  Enthält Informationen über die Auswirkungen auf das die kontexteinstellungen mit einer Abfrage verknüpften Semantik. Es stehen eine Reihe von kontexteinstellungen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Semantik der Abfrage (definieren das richtige Ergebnis der Abfrage) beeinflussen. Derselbe Abfragetext mit unterschiedlichen Einstellungen kompiliert möglicherweise zu unterschiedlichen Ergebnissen (abhängig von den zugrunde liegenden Daten) führen.  
+  Enthält Informationen über die Semantik, die die einer Abfrage zugeordneten Kontext Einstellungen beeinflusst. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stehen eine Reihe von Kontext Einstellungen zur Verfügung, die die Abfrage Semantik beeinflussen (das richtige Ergebnis der Abfrage wird definiert). Derselbe Abfragetext, der unter verschiedenen Einstellungen kompiliert wird, kann zu unterschiedlichen Ergebnissen führen (abhängig von den zugrunde liegenden Daten).  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**context_settings_id**|**bigint**|Der Primärschlüssel. Dieser Wert wird für Abfragen in Showplan XML verfügbar gemacht.|  
-|**set_options**|**varbinary(8)**|Die Bitmaske kritischem Zustand, der mehrere SET-Optionen. Weitere Informationen finden Sie unter [dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
-|**language_id**|**smallint**|Die Id der Sprache. Weitere Informationen finden Sie unter [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
-|**date_format**|**smallint**|Das Datum das Format. Weitere Informationen finden Sie unter [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
-|**date_first**|**tinyint**|Der erste Datumswert. Weitere Informationen finden Sie unter [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
-|**status**|**varbinary(2)**|Bitmaske-Feld, das gibt Typ der Abfrage oder einen Kontext, in dem Abfrage ausgeführt wurde. <br />Spaltenwert möglich Kombination mehrerer Flags (im Hexadezimalformat ausgedrückt):<br /><br /> 0 x 0 – reguläre Abfrage (keine bestimmten Flags)<br /><br /> 0 x 1 – Abfragen, die über eine der Cursor APIs, die gespeicherten Prozeduren ausgeführt wurde<br /><br /> 0 x 2 - Abfrage für die Benachrichtigung<br /><br /> 0 x 4 – interner<br /><br /> 0 x 8 – automatisch parametrisierten Abfrage ohne universelle Parametrisierung<br /><br /> 0 x 10 – Cursor-Fetch Abfrage aktualisieren<br /><br /> 0 x 20 - Abfrage, die in Anforderungen zum Aktualisieren von Cursor verwendet wird<br /><br /> 0 x 40 - erste Resultset wird zurückgegeben, wenn ein Cursor geöffnet wird (Cursor automatisch abrufen)<br /><br /> 0 x 80 – verschlüsselte Abfrage<br /><br /> 0 x 100 - Abfrage im Kontext der Sicherheit auf Zeilenebene Prädikat|  
+|**context_settings_id**|**BIGINT**|Primärschlüssel Dieser Wert wird in Showplan XML for queries verfügbar gemacht.|  
+|**set_options**|**varbinary(8)**|Bitmaske, die den Zustand mehrerer SET-Optionen reflektiert. Weitere Informationen finden Sie unter [sys. dm_exec_plan_attributes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
+|**language_id**|**smallint**|Die ID der Sprache. Weitere Informationen finden Sie unter [sys. syslanguages &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
+|**date_format**|**smallint**|Das Datumsformat. Weitere Informationen finden Sie unter [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
+|**date_first**|**tinyint**|Der erste Wert für Date. Weitere Informationen finden Sie unter [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
+|**Stands**|**varbinary (2)**|Bitmasken Feld, das den Typ der Abfrage oder des Kontexts angibt, in der die Abfrage ausgeführt wurde. <br />Der Spaltenwert kann eine Kombination mehrerer Flags sein (ausgedrückt als hexadezimal):<br /><br /> 0x0-reguläre Abfrage (keine spezifischen Flags)<br /><br /> 0x1-Abfrage, die über eine der gespeicherten Prozeduren der Cursor-APIs ausgeführt wurde<br /><br /> 0x2-Abfrage für Benachrichtigung<br /><br /> 0x4-interne Abfrage<br /><br /> 0x8-automatische parametrisierte Abfrage ohne universelle Parametrisierung<br /><br /> 0x10-Cursor Abfrage zum Abrufen der Aktualisierung<br /><br /> 0x20-Abfrage, die in Cursor Aktualisierungs Anforderungen verwendet wird<br /><br /> 0x40-ursprüngliches Resultset wird zurückgegeben, wenn ein Cursor geöffnet wird (Automatisches Abrufen von Cursor)<br /><br /> 0x80-verschlüsselte Abfrage<br /><br /> 0x100-Abfrage im Kontext des Sicherheits Prädikats auf Zeilenebene|  
 |**required_cursor_options**|**int**|Vom Benutzer angegebene Cursoroptionen, z. B. der Cursortyp.|  
 |**acceptable_cursor_options**|**int**|Cursoroptionen, in die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine implizite Konvertierung vorgenommen werden kann, um die Ausführung der Anweisung zu unterstützen.|  
-|**merge_action_type**|**smallint**|Der Typ des triggerausführungsplans, die als Ergebnis verwendet eine **MERGE** Anweisung.<br /><br /> 0 gibt an, eine nicht-triggerplan an, einen triggerplan, der nicht als Ergebnis ausgeführt wird ein **MERGE** -Anweisung oder einen triggerplan, der als Ergebnis ausgeführt wird ein **MERGE** -Anweisung, die nur eine an**Löschen** Aktion.<br /><br /> 1 gibt an ein **einfügen** -triggerplan an, der als das Ergebnis wird ein **MERGE** Anweisung.<br /><br /> 2 Gibt an ein **UPDATE** -triggerplan an, der als das Ergebnis wird ein **MERGE** Anweisung.<br /><br /> 3 gibt einen **löschen** -triggerplan an, die als Ergebnis ausgeführt wird ein **MERGE** -Anweisung mit einer entsprechenden **einfügen** oder **UPDATE** die Aktion.<br /><br /> <br /><br /> Für geschachtelte Trigger, die durch kaskadierende Aktionen ausgeführt werden, ist dieser Wert die Aktion der **MERGE** -Anweisung, die das Kaskadieren verursacht wurde.|  
-|**default_schema_id**|**int**|Die ID des Standardschemas, die verwendet wird, um Namen aufzulösen, die nicht vollqualifiziert sind.|  
-|**is_replication_specific**|**bit**|Für die Replikation verwendet.|  
-|**is_contained**|**varbinary(1)**|1 gibt an, eine eigenständige Datenbank.|  
+|**merge_action_type**|**smallint**|Der Typ des Triggerausführungsplans, der als Ergebnis einer **Merge** -Anweisung verwendet wird.<br /><br /> 0 gibt einen nicht-Triggerplan, einen Triggerplan an, der nicht als Ergebnis einer **Merge** -Anweisung ausgeführt wird, oder einen Triggerplan, der als Ergebnis einer **Merge** -Anweisung ausgeführt wird, die nur eine **Delete** -Aktion angibt.<br /><br /> 1 gibt einen **Insert** -Triggerplan an, der als Ergebnis einer **Merge** -Anweisung ausgeführt wird.<br /><br /> 2 gibt einen **Update** -Triggerplan an, der als Ergebnis einer **Merge** -Anweisung ausgeführt wird.<br /><br /> 3 gibt einen **Delete** -Triggerplan an, der als Ergebnis einer **Merge** -Anweisung ausgeführt wird, die eine entsprechende **Insert** -oder **Update** -Aktion enthält.<br /><br /> <br /><br /> Bei geschachtelte-Triggern, die von kaskadierenden Aktionen ausgeführt werden, ist dieser Wert die Aktion der **Merge** -Anweisung, die die Cascade ausgelöst hat.|  
+|**default_schema_id**|**int**|ID des Standard Schemas, das verwendet wird, um Namen aufzulösen, die nicht voll qualifiziert sind.|  
+|**is_replication_specific**|**bit**|Wird für die Replikation verwendet.|  
+|**is_contained**|**varbinary (1)**|1 gibt eine eigenständige Datenbank an.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die **VIEW DATABASE STATE** Berechtigung.  
+ Erfordert die **View Database State** -Berechtigung.  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
- [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
- [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
- [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
- [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
- [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
- [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. database_query_store_options &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)   
+ [sys. query_store_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)   
+ [sys. query_store_query &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)   
+ [sys. query_store_query_text &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)   
+ [sys. query_store_runtime_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)   
+ [sys. query_store_wait_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)   
+ [sys. query_store_runtime_stats_interval &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)   
  [Überwachen der Leistung mit dem Abfragespeicher](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
+ [sys. fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)  
   
   

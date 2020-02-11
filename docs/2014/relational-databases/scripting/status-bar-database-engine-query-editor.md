@@ -11,32 +11,32 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5fe864d5f4f622237c5c7b92e5a1e717c26692ec
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243151"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Statusleiste (Abfrage-Editor der Datenbank-Engine)
   Die Statusleiste des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fensters kann farblich codiert sein, um so anzuzeigen, mit welcher Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)] jedes Fenster verbunden ist.  
   
-1.  Vorbereitungen **:**[Status leisten Farben](#StatusBarColors)    
+1.  **Vorbereitungen:**  [Statusleistenfarben](#StatusBarColors)  
   
-2.  So **legen Sie eine Serverstatus Farbe in fest:**[Objekt-Explorer](#SetOEServerColor), [registrierter Server](#SetRegServerColor)    
+2.  **So legen Sie eine Serverstatusfarbe fest in:**  [Objekt-Explorer](#SetOEServerColor), [Registrierte Server](#SetRegServerColor)  
   
-3.  **Um eine Status Farbe zu verwenden:**  [Abfrage-Editor mithilfe einer Server Farbe öffnen](#OpenServerColor), [einen Abfrage-Editor mit einer Status Farbe öffnen](#OpenSpecColor)  
+3.  **So verwenden Sie eine Statusfarbe**  [Abfrage-Editor unter Verwendung einer Serverfarbe öffnen](#OpenServerColor), [Abfrage-Editor unter Angabe einer Statusfarbe öffnen](#OpenSpecColor)  
   
-##  <a name="StatusBarColors"></a>Farben der Status Leiste  
+##  <a name="StatusBarColors"></a> Statusleistenfarben  
  Sie können einem bestimmten Serverknoten in entweder **Objekt-Explorer** oder **Registrierte Server**eine Statusleistenfarbe zuordnen. Die Farben können nur für Serverknoten angegeben werden, die mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbunden sind, nicht aber für Serverknoten für andere SQL Server-Technologien. Ebenso können Sie eine benutzerdefinierte Statusleistenfarbe angeben, wann immer Sie ein neues [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Abfrage-Editor-Fenster mit einer Instanz des [!INCLUDE[ssDE](../../includes/ssde-md.md)]verbinden. Sie können dann entweder mit der für den Serverknoten definierten Statusfarbe ein Abfrage-Editor-Fenster öffnen oder eine eindeutige Farbe für dieses Editorfenster angeben.  
   
  Eine benutzerdefinierte Statusleistenfarbe für einen Serverknoten in Objekt-Explorer muss beim Herstellen der Verbindung festgelegt werden. Um die einem vorhandenen Serverknoten zugeordnete Farbe zu ändern, müssen Sie die Verbindung trennen und dann unter Angabe der neuen Farbe die Verbindung erneut herstellen.  
   
-##  <a name="SetOEServerColor"></a>Festlegen der Status Farbe für einen Server in Objekt-Explorer  
- **So legen Sie eine Serverstatus Farbe in Objekt-Explorer**  
+##  <a name="SetOEServerColor"></a> Festlegen der Statusfarbe für einen Server in Objekt-Explorer  
+ **So legen Sie eine Serverstatusfarbe in Objekt-Explorer fest**  
   
 1.  Wählen Sie im **Objekt-Explorer** die Schaltfläche **Verbinden** und dann **Datenbank-Engine...** aus.  
   
-2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>**.  
+2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>** .  
   
 3.  Aktivieren Sie das Kontrollkästchen **Benutzerdefinierte Farbe verwenden** .  
   
@@ -46,8 +46,8 @@ ms.locfileid: "75243151"
   
 6.  Geben Sie die restlichen Verbindungsinformationen ein und wählen Sie dann die Schaltfläche **Verbinden** aus.  
   
-##  <a name="SetRegServerColor"></a>Festlegen der Status Farbe für einen registrierten Server  
- **So legen Sie eine Server Farbe für einen registrierten Server fest**  
+##  <a name="SetRegServerColor"></a> Festlegen der Statusfarbe für einen Registrierter Server  
+ **So legen Sie eine Serverfarbe für einen Registrierten Server fest**  
   
 1.  Klicken Sie unter **Registrierte Server** mit der rechten Maustaste auf einen Serverknoten, und wählen Sie dann **Eigenschaften...** aus.  
   
@@ -61,8 +61,8 @@ ms.locfileid: "75243151"
   
 6.  Wählen Sie im Dialogfeld **Serverregistrierungseigenschaften bearbeiten** die Schaltfläche **Speichern** aus.  
   
-##  <a name="OpenServerColor"></a>Öffnen eines Editors mithilfe einer Server Farbe  
- **So öffnen Sie ein Editor Fenster mithilfe einer Server Farbe**  
+##  <a name="OpenServerColor"></a> Öffnen eines Editors mithilfe einer Serverfarbe  
+ **So öffnen Sie ein Editorfenster mithilfe einer Serverfarbe**  
   
 -   Klicken Sie mit der rechten Maustaste entweder in **Objekt-Explorer** oder **Registrierte Server**auf einen Serverknoten, und wählen Sie **Neue Abfrage**aus.  
   
@@ -70,12 +70,12 @@ ms.locfileid: "75243151"
   
 -   Die Statusleiste im Editorfenster verwendet die für den zugeordneten Server definierte Farbe.  
   
-##  <a name="OpenSpecColor"></a>Öffnen eines Editors unter Angabe einer Status Farbe  
- **So öffnen Sie ein Editor Fenster mit Angabe einer Status Farbe**  
+##  <a name="OpenSpecColor"></a> Öffnen eines Editors unter Angabe einer Statusfarbe  
+ **So öffnen Sie ein Editorfenster unter Angabe einer Statusfarbe**  
   
 -   Öffnen Sie das Menü **Datei**, wählen Sie **Neu** aus, und wählen Sie dann **Datenbank-Engine-Abfrage** aus.  
   
--   Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>**.  
+-   Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Option **Optionen >>** .  
   
 -   Aktivieren Sie das Kontrollkästchen **Benutzerdefinierte Farbe verwenden** .  
   
@@ -86,6 +86,6 @@ ms.locfileid: "75243151"
 -   Geben Sie die restlichen Verbindungsinformationen ein und wählen Sie dann die Schaltfläche **Verbinden** aus.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
+ [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../scripting/query-and-text-editors-sql-server-management-studio.md)  
   
   

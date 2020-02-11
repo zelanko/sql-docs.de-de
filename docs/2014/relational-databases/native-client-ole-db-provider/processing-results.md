@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Ergebnissen | Microsoft-Dokumentation
+title: Verarbeitungsergebnisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9fdc66899f7d863cbfb3ae04ad0796614717a734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63209664"
 ---
 # <a name="processing-results"></a>Ergebnisverarbeitung
@@ -41,8 +41,8 @@ ms.locfileid: "63209664"
   
  Nachdem die DBBINDING-Strukturen angegeben wurden, wird ein Accessor (**IAccessor::CreateAccessor**) erstellt. Ein Accessor ist eine Sammlung von Bindungen. Er dient zum Abrufen oder Einfügen von Daten in den Puffer des Consumers.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer SQL Server Native Client OLE DB-Anbieteranwendung](creating-a-sql-server-native-client-ole-db-provider-application.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer SQL Server Native Client OLE DB-Anbieter Anwendung](creating-a-sql-server-native-client-ole-db-provider-application.md)   
  [Vorgehensweisen für OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

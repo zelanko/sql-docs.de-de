@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: aa06adc7f81341c96b44bde6da3b32f2f6a477ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68074043"
 ---
 # <a name="-equal-to-dmx"></a>= (Ist gleich) (DMX)
@@ -34,9 +34,9 @@ DMX_Expression = DMX_Expression
 ## <a name="return-value"></a>Rückgabewert  
  Ein boolescher Wert, der TRUE enthält, wenn beide Parameter nicht NULL sind und der Wert des ersten Parameters gleich dem Wert des zweiten Parameters ist. Der boolesche Wert enthält FALSE, wenn beide Parameter nicht NULL sind und der Wert des ersten Parameters ungleich dem Wert des zweiten Parameters ist. Der boolesche Wert enthält einen NULL-Wert, wenn einer der Parameter oder beide Parameter ausgewertet einen NULL-Wert haben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vergleichsoperatoren &#40;DMX&#41;](../dmx/operators-comparison.md)   
- [Datamining-Erweiterungen &#40;DMX&#41; Operator (Referenz)](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operatoren &#40;DMX&#41;](../dmx/operators-dmx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Vergleichs Operatoren &#40;DMX-&#41;](../dmx/operators-comparison.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Operator Verweis](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [Operatoren &#40;DMX-&#41;](../dmx/operators-dmx.md)  
   
   

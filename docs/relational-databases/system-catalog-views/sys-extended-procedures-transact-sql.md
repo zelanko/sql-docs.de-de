@@ -1,5 +1,5 @@
 ---
-title: extended_procedures (Transact-SQL) | Microsoft-Dokumentation
+title: sys. extended_procedures (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,28 +20,28 @@ ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 350c8eeec6a88bf2fad3a3461675696ae75ab8e8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054329"
 ---
-# <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
+# <a name="sysextended_procedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Enthält eine Zeile für jedes Objekt, das eine erweiterte gespeicherte Prozedur mit **sys.objects.type** = X. Da erweiterte gespeicherte Prozeduren, in installiert sind der **master** -Datenbank, sie sind nur in diesem Datenbankkontext sichtbar. Auswählen der **extended_procedures** Ansicht in einem anderen Datenbankkontext wird ein leeres Resultset zurückgegeben.  
+  Enthält eine Zeile für jedes Objekt, bei dem es sich um eine erweiterte gespeicherte Prozedur handelt, mit **sys. Objects. Type** = X. Da erweiterte gespeicherte Prozeduren in der **Master** -Datenbank installiert werden, sind Sie nur in diesem Daten Bank Kontext sichtbar. Wenn Sie aus der **sys. extended_procedures** -Sicht in einem anderen Daten Bank Kontext auswählen, wird ein leeres Resultset zurückgegeben.  
 
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**\<Spalten, der von sys.objects geerbten >**||Eine Liste der Spalten, die in dieser Ansicht erbt, finden Sie unter [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**DLL-Name**|**nvarchar(260)**|Name (einschließlich des Pfades) der DLL für diese erweiterte gespeicherte Prozedur.|  
+|**\<Von sys. Objects geerbte Spalten>**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**dll_name**|**nvarchar(260)**|Name (einschließlich des Pfades) der DLL für diese erweiterte gespeicherte Prozedur.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

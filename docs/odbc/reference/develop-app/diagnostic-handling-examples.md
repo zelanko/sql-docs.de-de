@@ -1,5 +1,5 @@
 ---
-title: Behandeln Beispiele für die Diagnose | Microsoft-Dokumentation
+title: Beispiele für die Diagnose Behandlung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 57f88c22-e7fa-4270-a0bf-443a2684cf6e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 13c713da543883ac4a5c4aaa0aad0631ae47be30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039948"
 ---
 # <a name="diagnostic-handling-examples"></a>Beispiele für die Diagnosebehandlung
-Die folgenden Beispiele zeigen, wie verschiedene Komponenten in einer ODBC-Verbindung diagnosemeldungen generieren können, und wie die einzelnen Treiber Diagnose zurückgeben können, die sich an die Anwendung mit **SQLGetDiagRec**.  
+In den folgenden Beispielen wird veranschaulicht, wie verschiedene Komponenten in einer ODBC-Verbindung Diagnosemeldungen generieren und wie verschiedene Treiber mit **SQLGetDiagRec**Diagnoseinformationen an die Anwendung zurückgeben können.  
   
 -   [Beispiel für die Diagnose des dateibasierten Treibers](../../../odbc/reference/develop-app/file-based-driver-diagnostic-example.md)  
   
