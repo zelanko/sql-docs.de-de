@@ -1,5 +1,5 @@
 ---
-title: Einfügen (Dialogfeld) für die Funktion (SSAS) | Microsoft-Dokumentation
+title: Funktion einfügen (Dialog Feld) (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080411"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Funktion einfügen (Dialogfeld) (SSAS)
@@ -24,9 +24,9 @@ ms.locfileid: "66080411"
   
 |||  
 |-|-|  
-|Element|Description|  
-|**Wählen Sie eine Kategorie**|Wenn Sie eine ungefähre Vorstellung haben, welche Art Funktion Sie benötigen, wählen Sie eine Kategorie aus der Liste. Alternativ wählen Sie **Alle** aus, um eine alphabetische Funktionsliste anzuzeigen.|  
-|**Wählen Sie eine Funktion**|Zeigt eine Liste der Funktionen in der ausgewählten Kategorie an.|  
+|Element|BESCHREIBUNG|  
+|**Kategorie auswählen**|Wenn Sie eine ungefähre Vorstellung haben, welche Art Funktion Sie benötigen, wählen Sie eine Kategorie aus der Liste. Alternativ wählen Sie **Alle** aus, um eine alphabetische Funktionsliste anzuzeigen.|  
+|**Auswählen einer Funktion**|Zeigt eine Liste der Funktionen in der ausgewählten Kategorie an.|  
 |**Beschreibung**|Zeigt zusammen mit allen erforderlichen oder optionalen Argumenten, z. B. Spaltennamen und Ausdrücken, eine Beschreibung der Wirkungsweise der Funktion an.|  
   
 ## <a name="function-categories"></a>Funktionskategorien  
@@ -38,18 +38,18 @@ ms.locfileid: "66080411"
   
  Filtern  
   
- Logische Operatoren  
+ Logisch  
   
  Math. & Trigonom.  
   
  Statistisch  
   
- Textmodus  
+ Text  
   
 ## <a name="measures-and-formulas"></a>Measures und Formeln  
  Das Dialogfeld **Funktion einfügen** ist nur verfügbar, wenn Sie eine Formel erstellen. Sie können Berechnungen entweder in einer berechneten Spalte oder in einer PivotTable bzw. einem PivotChart erstellen. Formeln, die Sie ausdrücklich zur Verwendung in einer PivotTable erstellen, werden auch als *Measures*bezeichnet. Weitere Informationen finden Sie unter [Erstellen einer berechneten Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) und [Erstellen und Verwalten von Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Berechnungen &#40;SSAS – tabellarisch&#41;](tabular-models/calculations-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Berechnungen &#40;tabellarischen SSAS-&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Attribute
+title: Attributes
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 95ecb75f-c559-41c3-933c-40ae60a4c2fd
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 19cbf51a9ac022674e9dfec7b287a38d16af00cf
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728751"
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
@@ -33,9 +33,9 @@ ms.locfileid: "73728751"
 ## <a name="how-attributes-relate-to-other-model-objects"></a>Zusammenhang zwischen Attributen und anderen Modellobjekten  
  Sie können sich ein Attribut als Spalte in einer Entitätstabelle vorstellen. Ein Attributwert dient zur Beschreibung eines bestimmten Elements.  
   
- ![Master Data Services als Tabelle dargestellte Entität](../master-data-services/media/mds-conc-entity-table.gif "Master Data Services als Tabelle dargestellte Entität")  
+ ![Als Tabelle dargestellte Master Data Services-Entität](../master-data-services/media/mds-conc-entity-table.gif "Als Tabelle dargestellte Master Data Services-Entität")  
   
- Wenn Sie eine Entität erstellen, die viele Attribute enthält, können Sie die Attribute in Attributgruppen organisieren. Weitere Informationen finden Sie unter [Attribute Groups &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
+ Wenn Sie eine Entität erstellen, die viele Attribute enthält, können Sie die Attribute in Attributgruppen organisieren. Weitere Informationen finden Sie unter [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md).  
   
 ## <a name="required-attributes"></a>Erforderliche Attribute.  
  Wenn Sie eine Entität erstellen, werden die Attribute Name und Code automatisch erstellt. Code erfordert einen Wert und muss innerhalb der Entität eindeutig sein. Sie können das Name-Attribut und das Code-Attribut nicht entfernen.  
@@ -45,7 +45,7 @@ ms.locfileid: "73728751"
   
 -   Freiformattribute, die Freiformeingabe für Text, Zahlen, Datumsangaben oder Links ermöglichen.  
   
--   Domänenbasierte Attribute, die von Entitäten aufgefüllt werden. Weitere Informationen finden Sie unter [Domain-Based Attributes &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
+-   Domänenbasierte Attribute, die von Entitäten aufgefüllt werden. Weitere Informationen finden Sie unter [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md).  
   
 -   Dateiattribute, die zum Speichern von Dateien, Dokumenten oder Bildern verwendet werden. Dateiattribute tragen zur Konsistenz der Daten bei, indem bestimmte Erweiterungen für Dateien vorausgesetzt werden. Dateiattribute können jedoch nicht zuverlässig verhindern, dass ein böswilliger Benutzer eine Datei eines anderen Typs hochlädt.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73728751"
 ## <a name="attribute-examples"></a>Attributbeispiele  
  Im folgenden Beispiel verfügt die Entität über folgende Attribute: Name, Code, Subcategory, StandardCost, ListPrice und FilePhoto. Diese Attribute beschreiben die Elemente. Jedes Element wird durch eine einzelne Zeile mit Attributwerten dargestellt.  
   
- ![Tabelle der Bike-Produkt Entität](../master-data-services/media/mds-conc-entity-table-w-data.gif "Tabelle der Bike-Produkt Entität")  
+ ![Entitätstabelle für Fahrradprodukte](../master-data-services/media/mds-conc-entity-table-w-data.gif "Entitätstabelle für Fahrradprodukte")  
   
  Im folgenden Beispiel stellt die Entität Product Folgendes:  
   
@@ -75,30 +75,30 @@ ms.locfileid: "73728751"
   
  Die Entität Subcategory wird als domänenbasiertes Attribut der Entität Product verwendet. Die Entität Category wird als domänenbasiertes Attribut der Entität Subcategory verwendet. Die Entitäten Category und Subcategory enthalten genauso wie die Entität Product jeweils die Standardattribute Name und Code.  
   
- ![Product-Entitäts Baumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Product-Entitäts Baumstruktur")  
+ ![Produktentitätsbaumstruktur](../master-data-services/media/mds-conc-entity-ui.gif "Produktentitätsbaumstruktur")  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie ein neues Freiformtextattribut.|[Erstellen eines Textattributs &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)|  
-|Erstellen Sie ein neues numerisches Freiformattribut.|[Erstellen eines numerischen Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|Erstellen Sie ein neues Freiformlinkattribut.|[Erstellen eines Linkattributs &#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
-|Erstellen Sie ein neues Dateiattribut.|[Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues Freiformtextattribut.|[Erstellen Sie ein Text Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-text-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues numerisches Freiformattribut.|[Erstellen Sie ein numerisches Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues Freiformlinkattribut.|[Erstellen Sie ein Link Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-link-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues Dateiattribut.|[Erstellen Sie ein Datei Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Erstellen Sie ein neues domänenbasiertes Attribut.|[Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
-|Ändern Sie den Namen eines vorhandenen Attributs.|[Ändern eines Attributnamens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Fügen Sie einer Änderungsnachverfolgungsgruppe vorhandene Attribute hinzu.|[Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Ändern Sie den Namen eines vorhandenen Attributs.|[Ändern eines Attribut namens und Datentyps &#40;Master Data Services&#41;](../master-data-services/change-an-attribute-name-and-data-type-master-data-services.md)|  
+|Fügen Sie einer Änderungsnachverfolgungsgruppe vorhandene Attribute hinzu.|[Hinzufügen von Attributen zu einer Änderungsnachverfolgung Gruppe &#40;Master Data Services&#41;](../master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Löschen Sie ein vorhandenes Attribut.|[Löschen eines Attributs &#40;Master Data Services&#41;](../master-data-services/delete-an-attribute-master-data-services.md)|  
 |Ändern Sie die Reihenfolge der Attribute.|[Ändern der Reihenfolge von Attributen](../master-data-services/change-the-order-of-attributes.md)|  
-|Erstellen Sie ein Datenattribut|[Erstellen eines Datenattributs &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
+|Erstellen Sie ein Datenattribut|[Erstellen Sie ein Datums Attribut &#40;Master Data Services&#41;](../master-data-services/create-a-date-attribute-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Domänen basierte Attribute &#40;Master Data Services&#41;](../master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Attributgruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
+-   [Attribut Gruppen &#40;Master Data Services&#41;](../master-data-services/attribute-groups-master-data-services.md)  
   
--   [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+-   [Mitglieder &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
--   [Blattberechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
+-   [Blatt Berechtigungen &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md)
   

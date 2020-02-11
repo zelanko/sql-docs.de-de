@@ -18,10 +18,10 @@ ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: be1b7bc97a46282e0adae2fb5679cfff0cd11dd1
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74687322"
 ---
 # <a name="xp_cmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "74687322"
 
   Erzeugt eine Windows-Befehlsshell und übergibt eine Zeichenfolge für die Ausführung. Die Ausgabe wird ggf. in Textzeilen zurückgegeben.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ ms.locfileid: "74687322"
 xp_cmdshell { 'command_string' } [ , no_output ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumente  
  **"** *command_string* **"**  
  Die Zeichenfolge, die einen an das Betriebssystem zu übergebenden Befehl enthält. *command_string* ist vom Datentyp **varchar (8000)** oder **nvarchar (4000)** und hat keinen Standardwert. *command_string* darf nicht mehr als einen Satz von doppelten Anführungszeichen enthalten. Ein einzelnes Paar von Anführungszeichen ist erforderlich, wenn in den Dateipfaden oder Programmnamen, auf die in *command_string*verwiesen wird, Leerzeichen vorhanden sind. Wenn Probleme mit eingebetteten Leerzeichen auftreten, sollten Sie FAT 8.3-Dateinamen verwenden, um dieses Problem zu umgehen.  
   
@@ -62,7 +62,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der von **xp_cmdshell** erzeugte Windows-Prozess hat die gleichen Sicherheitsrechte wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Dienst Konto.  
   
  **xp_cmdshell** erfolgt synchron. Die Steuerung wird erst dann an den Aufrufer zurückgegeben, wenn der Befehl der Befehlsshell abgeschlossen wurde.  
@@ -127,7 +127,7 @@ REVERT ;
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>B: Unterdrücken der Ausgabe  
+### <a name="b-returning-no-output"></a>B. Unterdrücken der Ausgabe  
  Im folgenden Beispiel wird mit `xp_cmdshell` eine Befehlszeichenfolge ausgeführt, ohne dass die Ausgabe an den Client zurückgegeben wird.  
   
 ```  
@@ -138,7 +138,7 @@ EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck
 GO  
 ```  
   
-### <a name="c-using-return-status"></a>c. Verwenden des Rückgabestatus  
+### <a name="c-using-return-status"></a>C. Verwenden des Rückgabestatus  
  Im folgenden Beispiel wird von der `xp_cmdshell` erweiterten gespeicherten Prozedur auch der Rückgabestatus vorgeschlagen. Der Rückgabecodewert wird in der Variablen `@result` gespeichert.  
   
 ```  
@@ -150,7 +150,7 @@ ELSE
    PRINT 'Failure';  
 ```  
   
-### <a name="d-writing-variable-contents-to-a-file"></a>D. Schreiben des Inhalts von Variablen in eine Datei  
+### <a name="d-writing-variable-contents-to-a-file"></a>D: Schreiben des Inhalts von Variablen in eine Datei  
  Im folgenden Beispiel wird der Inhalt der `@var`-Variablen in die Datei `var_out.txt` im aktuellen Serververzeichnis geschrieben.  
   
 ```  

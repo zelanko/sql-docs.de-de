@@ -1,5 +1,5 @@
 ---
-title: Implizit zugeordnet Deskriptoren | Microsoft-Dokumentation
+title: Implizit zugeordnete Deskriptoren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ ms.assetid: 9f88c863-affc-4ab4-a558-63a3ef766f37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0eb34866b75802a32c63e62b41d384e5a1dea73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138948"
 ---
 # <a name="implicitly-allocated-descriptors"></a>Implizit zugewiesene Deskriptoren
-Wenn ein Anweisungshandle zugeordnet ist, weist die Anwendung implizit einen Satz von vier Deskriptoren. Die Anwendung kann die Handles dieser implizit als Attribute des Anweisungshandles zugeordnet Deskriptoren erhalten. Wenn die Anwendung das Anweisungshandle frei, gibt der Treiber alle implizit zugewiesene Deskriptoren für dieses Handle frei.
+Wenn ein Anweisungs Handle zugeordnet ist, ordnet die Anwendung implizit einen Satz von vier Deskriptoren zu. Die Anwendung kann die Handles dieser implizit zugeordneten Deskriptoren als Attribute des Anweisungs Handles abrufen. Wenn die Anwendung das Anweisungs Handle freigibt, gibt der Treiber alle implizit zugewiesenen Deskriptoren für dieses Handle frei.

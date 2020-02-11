@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63072374"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
-  Der transaktionsleistungssammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] hilft Ihnen zu bewerten, ob In-Memory OLTP die Leistung Ihrer datenbankanwendung verbessern kann. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
+  Der Transaktions Leistungs Sammler in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] unterstützt Sie bei der Auswertung, ob in-Memory-OLTP die Leistung Ihrer Datenbankanwendung verbessern wird. Der Transaktionsleistungsanalysebericht gibt außerdem an, wie viel Arbeit notwendig ist, um In-Memory OLTP in Ihrer Anwendung zu aktivieren. Nachdem Sie eine datenträgerbasierte Tabelle identifiziert haben, die Sie zur Verwendung von In-Memory-OLTP portieren, können Sie die Tabellenmigration mit dem [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md)vereinfachen. In ähnlicher Weise unterstützt Sie der [Ratgeber für native Kompilierung](native-compilation-advisor.md) bei der Portierung einer gespeicherten Prozedur in eine nativ kompilierte gespeicherte Prozedur.  
   
  In diesem Thema wird Folgendes erläutert:  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63072374"
     > [!IMPORTANT]  
     >  Die Leistung eines Datenbanksystems hängt von verschiedenen Faktoren ab, die jedoch nicht alle durch den Transaktionsleistungssammler beobachtet und gemessen werden können. Daher gewährleistet der Transaktionsleistungsanalysebericht nicht, dass die tatsächlichen Leistungssteigerungen den ggf. getroffenen Vorhersagen entsprechen.  
   
- Der transaktionsleistungssammler und die Möglichkeit, einen transaktionsleistungsanalysebericht zu generieren sind installiert, wenn Sie auswählen **Management Tools – Basic** oder **Verwaltungstools – erweitert** Bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ Der Transaktions Leistungs Sammler und die Möglichkeit, einen Transaktions Leistungsanalyse Bericht zu generieren, werden installiert, wenn Sie bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]von die Option **Verwaltungs Tools-einfach** oder **Verwaltungs Tools-erweitert** auswählen.  
   
 ## <a name="best-practices"></a>Bewährte Methoden  
  Der empfohlene Workflow wird im folgenden Flussdiagramm veranschaulicht. Die gelben Knoten stellen optionale Prozeduren dar:  
@@ -63,7 +63,7 @@ ms.locfileid: "63072374"
   
  Der Transaktionsleistungssammler zeichnet alle 15 Minuten Daten auf. Um aussagekräftige Ergebnisse zu erhalten, führen Sie den Transaktionsleistungssammler mindestens eine Stunde lang aus. Optimale Ergebnisse erhalten Sie, indem Sie den Transaktionsleistungssammler so lange ausführen, bis ausreichend Daten für Ihre primäre Szenarien erfasst wurden. Generieren Sie erst einen Transaktionsleistungsanalysebericht, nachdem Sie die Datensammlung abgeschlossen haben.  
   
- Konfigurieren Sie Transaktionsleistungssammler wie folgt: Das Tool sollte auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz in der Produktionsumgebung ausgeführt werden, und die Daten sollten auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz in der Entwicklungsumgebung (Testumgebung) gesammelt werden, um den Aufwand gering zu halten. Informationen zum Speichern von Daten in einer Verwaltungs-Data Warehouse-Datenbank auf einem Remotecomputer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz ist, finden Sie unter [Datensammlung konfigurieren, auf dem SQL Server-Remoteinstanz](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
+ Konfigurieren Sie Transaktionsleistungssammler wie folgt: Das Tool sollte auf der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz in der Produktionsumgebung ausgeführt werden, und die Daten sollten auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz in der Entwicklungsumgebung (Testumgebung) gesammelt werden, um den Aufwand gering zu halten. Informationen zum Speichern von Daten in einer Verwaltungs Data Warehouse-Datenbank auf einer-Remote [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz finden Sie unter [Konfigurieren der Datensammlung auf einer Remote SQL Server-Instanz](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md#xxx).  
   
 ## <a name="performance-impacts"></a>Auswirkungen auf die Leistung  
  Der Transaktionsleistungssammler besteht aus zwei Datensammlungssätzen:  
@@ -87,51 +87,51 @@ ms.locfileid: "63072374"
   
 1.  Erweitern Sie im Objekt-Explorer den Knoten **Verwaltung**.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Datensammlung** , und wählen Sie **Aufgaben** und dann **Verwaltungs-Datawarehouses**. Die **konfigurieren Assistenten Verwaltungs-Data Warehouse** beginnt.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datensammlung** , und wählen Sie **Tasks** und dann **Verwaltungs Data Warehouse konfigurieren** Der **Assistent zum Konfigurieren der Verwaltungs Data Warehouse** wird gestartet.  
   
-3.  Klicken Sie auf **Weiter** um die Datenbank auszuwählen, die als Verwaltungs-Data Warehouse fungiert.  
+3.  Klicken Sie auf **weiter** , um die Datenbank auszuwählen, die als Verwaltungs Data Warehouse fungieren soll.  
   
-4.  Klicken Sie auf **neu** zum Erstellen einer neuen Datenbank aus, um die Profildaten enthält. Nachdem Sie die Datenbank erstellt haben, klicken Sie auf **Weiter** im Assistenten.  
+4.  Klicken Sie auf **neu** , um eine neue Datenbank zum Speichern der Profildaten zu erstellen. Nachdem Sie die Erstellung der Datenbank abgeschlossen haben, klicken Sie im Assistenten auf **weiter** .  
   
-5.  Im nächsten Schritt des Assistenten können Sie Benutzer und Anmeldenamen hinzufügen. Sie können Anmeldenamen Rollenmitgliedschaften für die MDW-Instanz zuordnen. Dies ist nicht erforderlich, um Daten von der lokalen Instanz zu sammeln. Wenn Sie keine Daten von der lokalen Instanz sammeln, können Sie die die Mitgliedschaft in der Datenbankrolle `mdw_admin` dem Konto erteilen, das Transaktionen ausführt, die zur Profilerstellung verwendet werden. Wenn Sie fertig sind, klicken Sie auf **Weiter**.  
+5.  Im nächsten Schritt des Assistenten können Sie Benutzer und Anmeldenamen hinzufügen. Sie können Anmeldenamen Rollenmitgliedschaften für die MDW-Instanz zuordnen. Dies ist nicht erforderlich, um Daten von der lokalen Instanz zu sammeln. Wenn Sie keine Daten von der lokalen Instanz sammeln, können Sie die die Mitgliedschaft in der Datenbankrolle `mdw_admin` dem Konto erteilen, das Transaktionen ausführt, die zur Profilerstellung verwendet werden. Klicken Sie abschließend auf **weiter**.  
   
 6.  Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent ausgeführt wird.  
   
-7.  Klicken Sie auf dem nächsten Bildschirm auf **Fertig stellen** um den Assistenten zu beenden.  
+7.  Klicken Sie auf dem nächsten Bildschirm auf **Fertig** stellen, um den Assistenten zu beenden.  
   
 ### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Konfigurieren der Datensammlung auf einer lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz  
  Für die Datensammlung muss der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent gestartet werden. Sie müssen auf einem Server nur einen Datensammler konfigurieren.  
   
- Ein Datensammler kann konfiguriert werden, auf einem SQL Server 2012 oder höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]konfiguriert werden.  
   
  So konfigurieren Sie die Datensammlung für Uploads in eine als Verwaltungs-Data Warehouse konfigurierte Datenbank auf derselben Instanz  
   
-1.  In **Objekt-Explorer**, erweitern Sie **Management**.  
+1.  Erweitern Sie in **Objekt-Explorer**den Knoten **Verwaltung**.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Datensammlung**Option **Aufgaben**, und klicken Sie dann **Konfigurieren der Sammlung von**. Die **Assistent zum Konfigurieren von Auflistung** beginnt.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datensammlung**, wählen Sie **Tasks**und dann **Datensammlung konfigurieren**aus. Der **Assistent zum Konfigurieren der Datensammlung** wird gestartet.  
   
-3.  Klicken Sie auf **Weiter** um die Datenbank auszuwählen, die die Profildaten sammelt.  
+3.  Klicken Sie auf **weiter** , um die Datenbank auszuwählen, in der die Profildaten gesammelt werden sollen.  
   
 4.  Wählen Sie die aktuelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz und eine als Verwaltungs-Data Warehouse konfigurierte Datenbank auf dieser Instanz aus.  
   
-5.  Im Feld mit der Bezeichnung **wählen Sie die Sammlungssätze, die Sie aktivieren möchten**Option **Transaktionsleistungs-Sammlungssätze**. Klicken Sie auf **Weiter** Abschluss.  
+5.  Wählen Sie im Feld mit der Bezeichnung **Datensammler Sätze auswählen, die Sie aktivieren möchten**die Option **Transaktions Leistungsdaten-Sammlungs Sätze**aus. Klicken Sie, sobald Sie fertig sind, auf **Weiter**.  
   
-6.  Überprüfen Sie die Auswahl. Klicken Sie auf **wieder** zum Ändern der Einstellungen. Klicken Sie anschließend auf **Fertig stellen** .  
+6.  Überprüfen Sie die Auswahl. Klicken Sie auf **zurück** , um die Einstellungen zu ändern. Klicken Sie **abschließend auf Fertig** stellen.  
   
-###  <a name="xxx"></a> Konfigurieren der Datensammlung auf einem Remotecomputer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz  
+###  <a name="xxx"></a>Konfigurieren der Datensammlung auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Remote Instanz  
  Die Datensammlung erfordert, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent für die Instanz gestartet wird, die die Daten sammeln soll.  
   
- Ein Datensammler kann konfiguriert werden, auf einem SQL Server 2012 oder höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]konfiguriert werden.  
   
- Sie benötigen einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy, der mit den korrekten Anmeldeinformationen erstellt wurde, damit ein Datensammler Daten auf eine als Verwaltungs-Data Warehouse konfigurierte Datenbank einer Instanz hochladen kann, die sich von denjenigen unterscheidet, auf denen Profile für Transaktionen erstellt werden. Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy zu aktivieren, müssen Sie zuerst Anmeldeinformationen mit einem domänenaktivierten Anmeldenamen erstellen. Der domänenaktivierte Anmeldename muss Mitglied der Gruppe `mdw_admin` für die Datenbank des Verwaltungs-Data Warehouse sein. Unter [Vorgehensweise: Erstellen von Anmeldeinformationen (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) Informationen um Anmeldeinformationen zu erstellen.  
+ Sie benötigen einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy, der mit den korrekten Anmeldeinformationen erstellt wurde, damit ein Datensammler Daten auf eine als Verwaltungs-Data Warehouse konfigurierte Datenbank einer Instanz hochladen kann, die sich von denjenigen unterscheidet, auf denen Profile für Transaktionen erstellt werden. Um einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy zu aktivieren, müssen Sie zuerst Anmeldeinformationen mit einem domänenaktivierten Anmeldenamen erstellen. Der domänenaktivierte Anmeldename muss Mitglied der Gruppe `mdw_admin` für die Datenbank des Verwaltungs-Data Warehouse sein. Weitere Informationen zum Erstellen von Anmelde Informationen finden Sie unter Vorgehens [Weise: Erstellen von Anmelde Informationen (SQL Server Management Studio)](../security/authentication-access/create-a-credential.md) .  
   
  So konfigurieren Sie die Datensammlung für Uploads in eine als Verwaltungs-Data Warehouse konfigurierte Datenbank auf einer anderen Instanz  
   
-1.  Auf der Instanz, die die datenträgerbasierten Objekte enthält, die Sie zu In-Memory OLTP migrieren möchten, erweitern Sie die **Management** Knoten im Objekt-Explorer.  
+1.  Erweitern Sie auf der-Instanz, die die Datenträger basierten Objekte enthält, die Sie zu in-Memory OLTP migrieren möchten, den Knoten **Verwaltung** in Objekt-Explorer.  
   
-2.  Klicken Sie mit der rechten Maustaste auf **Datensammlung** , und wählen Sie **Aufgaben** und dann **Konfigurieren der Sammlung von**. Die **Assistent zum Konfigurieren von Auflistung** beginnt.  
+2.  Klicken Sie mit der rechten Maustaste auf **Datensammlung** , und wählen Sie **Tasks** und dann **Datensammlung konfigurieren** Der **Assistent zum Konfigurieren der Datensammlung** wird gestartet.  
   
-3.  Klicken Sie auf **Weiter** um die Datenbank auszuwählen, die die Profildaten sammelt.  
+3.  Klicken Sie auf **weiter** , um die Datenbank auszuwählen, in der die Profildaten gesammelt werden sollen.  
   
 4.  Stellen Sie sicher, dass eine als Verwaltungs-Data Warehouse konfigurierte Datenbank auf der anderen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz vorhanden ist.  
   
@@ -139,34 +139,34 @@ ms.locfileid: "63072374"
   
      Die Version der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz, auf der Sie Daten sammeln (das Profil erstellen), sollte die gleiche Version oder eine niedrigere Version aufweisen als der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], auf dem das Verwaltungs-Data Warehouse konfiguriert ist.  
   
-6.  Im Feld mit der Bezeichnung **wählen Sie die Sammlungssätze, die Sie aktivieren möchten**Option **Transaktionsleistungs-Sammlungssätze**.  
+6.  Wählen Sie im Feld mit der Bezeichnung **Datensammler Sätze auswählen, die Sie aktivieren möchten**die Option **Transaktions Leistungsdaten-Sammlungs Sätze**aus.  
   
-7.  Wählen Sie **verwenden eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Proxy für remoteuploads**.  
+7.  Wählen Sie ** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent-Proxy für Remote Uploads verwenden aus**.  
   
-8.  Klicken Sie auf **Weiter** Abschluss.  
+8.  Klicken Sie, sobald Sie fertig sind, auf **Weiter**.  
   
 9. Wählen Sie den Proxy aus.  
   
      Wenn Sie einen neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Proxy erstellen möchten:  
   
-    1.  Klicken Sie auf **neu** zum Anzeigen der **Neues Proxykonto** Dialogfeld.  
+    1.  Klicken Sie auf **neu** , um das Dialogfeld **Neues Proxy Konto** anzuzeigen.  
   
-    2.  In der **Neues Proxykonto** Dialogfeld, geben Sie den Namen des Proxys, wählen Sie die Anmeldeinformationen, und geben Sie optional eine Beschreibung. Klicken Sie auf **Prinzipale**.  
+    2.  Geben Sie im Dialogfeld **Neues Proxy Konto** den Namen des Proxys ein, wählen Sie die Anmelde Informationen aus, und geben Sie optional eine Beschreibung ein. Klicken Sie dann auf **Prinzipale**.  
   
-    3.  Klicken Sie auf **hinzufügen** , und wählen Sie **Msdb** Rolle.  
+    3.  Klicken Sie auf **Hinzufügen** , und wählen Sie **msdb** Role  
   
-    4.  Wählen Sie `dc_proxy` , und klicken Sie auf **OK**. Klicken Sie dann auf **OK** erneut aus.  
+    4.  Klicken `dc_proxy` Sie auf **OK**. Klicken Sie dann erneut auf **OK**.  
   
-     Nachdem Sie der richtige Proxy aktiviert ist, klicken Sie auf **Weiter**.  
+     Nachdem Sie den richtigen Proxy ausgewählt haben, klicken Sie auf **weiter**.  
   
-10. Um Systemsammlungssätze zu konfigurieren, überprüfen Sie **Systemsammlungssätze** , und klicken Sie auf **Weiter**.  
+10. Überprüfen Sie zum Konfigurieren von System Sammlungs Sätzen die **System Sammlungs Sätze** , und klicken Sie auf **weiter**.  
   
-11. Überprüfen Sie die Auswahl. Klicken Sie auf **wieder** zum Ändern der Einstellungen. Klicken Sie anschließend auf **Fertig stellen** Abschluss.  
+11. Überprüfen Sie die Auswahl. Klicken Sie auf **zurück** , um die Einstellungen zu ändern. Wenn Sie fertig sind, klicken Sie auf **Fertig** stellen.  
   
  Datensammlungssätze sollten jetzt konfiguriert sein und auf Ihrer Instanz ausgeführt werden.  
   
 ### <a name="generate-reports"></a>Generieren von Berichten  
- Sie können transaktionsleistungsanalyseberichte generieren, durch Rechtsklick auf die Datenbank des Verwaltungs-Data Warehouse und Auswahl **Berichte**, klicken Sie dann **Verwaltungs-Data Warehouse**, und klicken Sie dann **Übersicht der Transaktionsleistungsanalyse**.  
+ Sie können Berichte zur Transaktions Leistungsanalyse generieren, indem Sie mit der rechten Maustaste auf die Datenbank des Verwaltungs Data Warehouse klicken und **Berichte**, dann **Verwaltungs Data Warehouse**und anschließend **Übersicht über Transaktions Leistungsanalyse**auswählen.  
   
  Im Bericht werden Informationen über alle Benutzerdatenbanken auf dem Arbeitsauslastungsserver gesammelt. Wenn sich die MDW-Datenbank (Verwaltungs-Data Warehouse) auf dem lokalen Computer befindet, werden die MDW-Datenbank(en) im Bericht aufgeführt.  
   
@@ -186,19 +186,19 @@ ms.locfileid: "63072374"
   
 -   Abschnitt zur Konfliktstatistik  
   
-     Dieser Abschnitt enthält eine Tabelle mit den Konflikten für die Datenbanktabelle. Weitere Informationen zu datenbanklatches und-Sperren finden Sie unter [Sperrenarchitektur](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Es gibt folgende Spalten:  
+     Dieser Abschnitt enthält eine Tabelle mit den Konflikten für die Datenbanktabelle. Weitere Informationen zu datenbanklatches und-Sperren finden Sie unter [Sperr Architektur](https://msdn.microsoft.com/library/aa224738\(v=sql.80\).aspx). Es gibt folgende Spalten:  
   
     -   Prozent der Gesamtwartevorgänge. Der Prozentsatz der Latch- und Sperrenwartevorgänge für diese Datenbanktabelle im Verhältnis zur Aktivität für die Datenbank. Je höher der Prozentsatz, desto stärker wird die Tabelle im Vergleich zu anderen Tabellen in der Datenbank verwendet.  
   
     -   Latchstatistik. In diesen Spalten wird die Anzahl der Latchwartevorgänge bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Latches finden Sie unter [Latching](https://msdn.microsoft.com/library/aa224727\(v=SQL.80\).aspx). Je höher diese Zahl ist, desto mehr Latchkonflikte treten für die Tabelle auf.  
   
-    -   Sperrenstatistik. In dieser Gruppe von Spalten wird die Anzahl der Sperrenerhalt- und -wartevorgänge für Seiten bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Sperren finden Sie unter [Grundlegendes zu Sperren in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Je höher die Anzahl der Wartevorgänge ist, desto mehr Sperrenkonflikte treten für die Tabelle auf.  
+    -   Sperrenstatistik. In dieser Gruppe von Spalten wird die Anzahl der Sperrenerhalt- und -wartevorgänge für Seiten bei Abfragen, die diese Tabelle betreffen, aufgeführt. Weitere Informationen zu Sperren finden Sie Untergrund Legendes zu sperren [in SQL Server](https://msdn.microsoft.com/library/aa213039\(v=SQL.80\).aspx). Je höher die Anzahl der Wartevorgänge ist, desto mehr Sperrenkonflikte treten für die Tabelle auf.  
   
 -   Abschnitt zu Migrationsproblemen  
   
-     Dieser Abschnitt enthält eine Tabelle, die angibt, wie schwierig es ist, diese Datenbanktabelle in eine speicheroptimierte Tabelle zu konvertieren. Je höher die Schwierigkeitsbewertung, desto schwieriger ist die Konvertierung der Tabelle. Verwenden Sie ausführliche Informationen zum Konvertieren dieser Datenbanktabelle erhalten Sie die [Ratgeber für die Speicheroptimierung](memory-optimization-advisor.md).  
+     Dieser Abschnitt enthält eine Tabelle, die angibt, wie schwierig es ist, diese Datenbanktabelle in eine speicheroptimierte Tabelle zu konvertieren. Je höher die Schwierigkeitsbewertung, desto schwieriger ist die Konvertierung der Tabelle. Verwenden Sie den Ratgeber für die [Speicher Optimierung](memory-optimization-advisor.md), um Details zum Konvertieren dieser Datenbanktabelle anzuzeigen.  
   
- Scan- und Konfliktstatistiken Statistiken für den tabellendetailbericht gesammelt und aggregiert [Sys. dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql).  
+ Scan-und Konflikt Statistiken für den Tabellen Detail Bericht werden aus [sys. dm_db_index_operational_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)gesammelt und aggregiert.  
   
  Der Detailbericht für eine gespeicherte Prozedur umfasst zwei Abschnitte:  
   
@@ -220,11 +220,11 @@ ms.locfileid: "63072374"
   
      Dieser Abschnitt enthält eine Tabelle mit den Tabellen, auf die diese gespeicherte Prozedur verweist. Vor dem Konvertieren der gespeicherten Prozedur in eine systemintern kompilierte gespeicherte Prozedur müssen alle diese Tabellen in speicheroptimierte Tabellen konvertiert werden, und sie müssen auf demselben Server und in derselben Datenbank verbleiben.  
   
- Statistiken zur abfrageausführung für den Detailbericht zu gespeicherten Prozedur gesammelt und aggregiert [Sys. dm_exec_procedure_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql). Erhalten Sie die Verweise vom [Sys. sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql).  
+ Die Ausführungs Statistik für den Bericht "Details gespeicherter Prozeduren" wird von [sys. dm_exec_procedure_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql)gesammelt und aggregiert. Die Verweise werden aus [sys. sql_expression_dependencies &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)abgerufen.  
   
- Um ausführliche Informationen zum Konvertieren einer gespeicherten Prozedur in einer systemintern kompilierten gespeicherten Prozedur anzuzeigen, verwenden Sie die [Ratgeber für Native Kompilierung](native-compilation-advisor.md).  
+ Um Details zum Konvertieren einer gespeicherten Prozedur in eine System intern kompilierte gespeicherte Prozedur anzuzeigen, verwenden Sie den [Ratgeber für Native Kompilierung](native-compilation-advisor.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

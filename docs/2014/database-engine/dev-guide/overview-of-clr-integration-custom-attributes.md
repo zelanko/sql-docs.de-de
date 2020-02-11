@@ -1,5 +1,5 @@
 ---
-title: Übersicht über benutzerdefinierte Attribute für CLR-Integration | Microsoft-Dokumentation
+title: Übersicht über benutzerdefinierte Attribute der CLR-Integration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8df7881dd5f38935628cb6653d57763a8846e60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781105"
 ---
 # <a name="overview-of-clr-integration-custom-attributes"></a>Übersicht über benutzerdefinierte Attribute der CLR-Integration
   Die CLR-Komponente (Common Language Runtime) von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ermöglicht den Einsatz beschreibender Schlüsselwörter, so genannter Attribute. Diese Attribute stellen weitere Informationen für viele Elemente bereit, z. B. Methoden und Klassen. Die Attribute werden mit den Metadaten des Objekts in der Assembly gespeichert. Mit Attributen kann Code für andere Entwicklungstools beschrieben oder das Laufzeitverhalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beeinflusst werden.  
   
- Wenn Sie eine CLR-Routine bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrieren, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Satz von Eigenschaften zu der Routine ab. Diese Routineneigenschaften bestimmen die Fähigkeiten der Routine, darunter auch, ob die Routine indiziert werden kann. Durch Festlegen von `DataAccess` für die `DataAccessKind.Read`-Eigenschaft können Sie beispielsweise innerhalb einer CLR-Funktion auf Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzertabellen zugreifen. Das folgende Beispiel zeigt einen einfachen Fall, in dem die `DataAccess` -Eigenschaftensatz auf Daten aus einer Benutzertabelle zu erleichtern **table1**.  
+ Wenn Sie eine CLR-Routine bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registrieren, leitet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Satz von Eigenschaften zu der Routine ab. Diese Routineneigenschaften bestimmen die Fähigkeiten der Routine, darunter auch, ob die Routine indiziert werden kann. Durch Festlegen von `DataAccess` für die `DataAccessKind.Read`-Eigenschaft können Sie beispielsweise innerhalb einer CLR-Funktion auf Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzertabellen zugreifen. Das folgende Beispiel zeigt einen einfachen Fall, in dem `DataAccess` die-Eigenschaft festgelegt ist, um den Datenzugriff aus einer Benutzertabelle **Table1**zu vereinfachen.  
   
 ```csharp  
 using System;  
@@ -88,7 +88,7 @@ End Class
   
  Die für CLR-Routinen benötigten benutzerdefinierten Attribute, benutzerdefinierte Typen und Aggregate werden im `Microsoft.SqlServer.Server`-Namespace definiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte Attribute für CLR-Routinen](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)  
   
   

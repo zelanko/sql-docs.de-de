@@ -18,27 +18,27 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919589"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
-  Eine Skalarwertfunktion gibt einen einzelnen Wert wie eine Zeichenfolge, eine ganze Zahl oder einen Bitwert zurück. Außerdem können Sie mithilfe einer beliebigen .NET Framework-Programmiersprache benutzerdefinierte Skalarwertfunktionen in verwaltetem Code erstellen. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Weitere Informationen zu den Vorteilen von CLR-Integration "und" Auswählen zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)], finden Sie unter [Overview of CLR Integration](../clr-integration/clr-integration-overview.md).  
+  Eine Skalarwertfunktion gibt einen einzelnen Wert wie eine Zeichenfolge, eine ganze Zahl oder einen Bitwert zurück. Außerdem können Sie mithilfe einer beliebigen .NET Framework-Programmiersprache benutzerdefinierte Skalarwertfunktionen in verwaltetem Code erstellen. Auf diese Funktionen kann über [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen verwalteten Code zugegriffen werden. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem [!INCLUDE[tsql](../../includes/tsql-md.md)]Code und finden Sie unter [Übersicht über die CLR-Integration](../clr-integration/clr-integration-overview.md).  
   
 ## <a name="requirements-for-clr-scalar-valued-functions"></a>Anforderungen für CLR-Skalarwertfunktionen  
- .NET Framework-Skalarwertfunktionen werden als Methoden einer Klasse in einer .NET Framework-Assembly implementiert. Die Eingabeparameter und der Rückgabetyp einer Skalarwertfunktion können jeder der von unterstützten skalaren Datentypen sein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mit Ausnahme von `varchar`, `char`, `rowversion`, `text`, `ntext`, `image`, `timestamp`, `table`, oder `cursor`. Skalarwertfunktionen müssen sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp und der Rückgabedatentyp der Implementierungsmethode übereinstimmen. Weitere Informationen zu typkonvertierungen finden Sie unter [Zuordnen von CLR-Parameterdaten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
+ .NET Framework-Skalarwertfunktionen werden als Methoden einer Klasse in einer .NET Framework-Assembly implementiert. Die Eingabeparameter und der von einem SVF zurückgegebene Typ können einer der skalaren Datentypen sein, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von unter `varchar`stützt `char`werden `rowversion`, `text`außer `ntext`, `image`, `timestamp`, `table`,, `cursor`,, oder. Skalarwertfunktionen müssen sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp und der Rückgabedatentyp der Implementierungsmethode übereinstimmen. Weitere Informationen zu Typkonvertierungen finden Sie unter [Mapping von CLR-Parameter Daten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).  
   
  Zur Implementierung einer .NET Framework-Skalarwertfunktion in einer .NET Framework-Sprache kann das benutzerdefinierte `SqlFunction`-Attribut angegeben werden, um zusätzliche Informationen über die Funktion aufzunehmen. Das `SqlFunction`-Attribut gibt an, ob die Funktion auf Daten zugreift oder Daten verändert, ob sie deterministisch ist und ob die Funktion Gleitkommaberechnungen beinhaltet.  
   
  Benutzerdefinierte Skalarwertfunktionen können deterministisch oder nicht deterministisch sein. Eine deterministische Funktion gibt immer dieselben Ergebnisse zurück, wenn sie mit einem bestimmten Satz an Eingabeparametern aufgerufen wird. Eine nicht deterministische Funktion kann unterschiedliche Ergebnisse zurückgeben, wenn sie mit einem bestimmten Satz an Eingabeparametern aufgerufen wird.  
   
 > [!NOTE]  
->  Markieren Sie eine benutzerdefinierte Funktion nicht als deterministisch, wenn die Funktion bei denselben Eingabewerten und demselben Datenbankzustand nicht immer dieselben Ausgabewerte erzeugt. Markieren eine Funktion als deterministisch, kann Wenn die Funktion nicht wirklich deterministisch ist zu beschädigten indizierten Sichten und berechneten Spalten führen. Sie markieren eine Funktion als deterministisch, indem Sie die `IsDeterministic`-Eigenschaft auf true festlegen.  
+>  Markieren Sie eine benutzerdefinierte Funktion nicht als deterministisch, wenn die Funktion bei denselben Eingabewerten und demselben Datenbankzustand nicht immer dieselben Ausgabewerte erzeugt. Das Markieren einer Funktion als deterministisch, wenn die Funktion nicht wirklich deterministisch ist, kann zu beschädigten indizierten Sichten und berechneten Spalten führen. Sie markieren eine Funktion als deterministisch, indem Sie die `IsDeterministic`-Eigenschaft auf true festlegen.  
   
 ### <a name="table-valued-parameters"></a>Tabellenwertparameter  
- Tabellenwertparameter (Table Valued Parameters, TVPs), benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. TVPs verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten aber größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. TVPs helfen auch, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, z. B. mit einer Liste von skalaren Parametern, können Daten als TVP an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu TVPs finden Sie unter [Tabellenwertparametern &#40;Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
+ Tabellenwertparameter (Table Valued Parameters, TVPs), benutzerdefinierte Tabellentypen, die an eine Prozedur oder Funktion übergeben werden, bieten eine effiziente Methode zum Übergeben mehrerer Datenzeilen an den Server. TVPs verfügen über eine ähnliche Funktionalität wie Parameterarrays, bieten aber größere Flexibilität und engere Integration mit [!INCLUDE[tsql](../../includes/tsql-md.md)]. Außerdem verfügen sie auch über ein besseres Leistungspotenzial. TVPs helfen auch, die Anzahl von Roundtrips zum Server zu reduzieren. Anstatt mehrere Anforderungen an den Server zu senden, z. B. mit einer Liste von skalaren Parametern, können Daten als TVP an den Server gesendet werden. Ein benutzerdefinierter Tabellentyp kann nicht als Tabellenwertparameter an eine verwaltete gespeicherte Prozedur oder Funktion übergeben werden, die im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess ausgeführt wird, oder von einer solchen Prozedur oder Funktion zurückgegeben werden. Weitere Informationen zu TVPs finden Sie unter [Verwenden von Tabellenwert Parametern &#40;Datenbank-Engine&#41;](../tables/use-table-valued-parameters-database-engine.md).  
   
 ## <a name="example-of-a-clr-scalar-valued-function"></a>Beispiel für eine CLR-Skalarwertfunktion  
  Es folgt eine einfache Skalarwertfunktion, die auf Daten zugreift und einen ganzzahligen Wert zurückgibt:  
@@ -82,9 +82,11 @@ End Class
   
  Die erste Codezeile verweist auf `Microsoft.SqlServer.Server`, um auf Attribute zuzugreifen, und auf `System.Data.SqlClient`, um auf den ADO.NET-Namespace zuzugreifen. (Dieser Namespace enthält `SqlClient`, den .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- Danach empfängt die Funktion das benutzerdefinierte `SqlFunction`-Attribut, das im `Microsoft.SqlServer.Server`-Namespace enthalten ist. Das benutzerdefinierte Attribut gibt an, ob die benutzerdefinierte Funktion (UDF) den prozessinternen Anbieter verwendet, um Daten im Server zu lesen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt nicht zu, dass UDFs Daten aktualisieren, einfügen oder löschen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Ausführung einer UDF optimieren, die den prozessinternen Anbieter nicht verwendet. Dies wird angegeben, indem `DataAccessKind` auf `DataAccessKind.None` festgelegt wird. Die Zielmethode in der nächsten Zeile ist eine öffentliche statische Methode (shared in Visual Basic .NET).  
+ Danach empfängt die Funktion das benutzerdefinierte `SqlFunction`-Attribut, das im `Microsoft.SqlServer.Server`-Namespace enthalten ist. Das benutzerdefinierte Attribut gibt an, ob die benutzerdefinierte Funktion (UDF) den prozessinternen Anbieter verwendet, um Daten im Server zu lesen. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt nicht zu, dass UDFs Daten aktualisieren, einfügen oder löschen. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Ausführung einer UDF optimieren, die den prozessinternen Anbieter nicht verwendet. Dies wird angegeben, indem `DataAccessKind` auf `DataAccessKind.None` festgelegt wird. Die Zielmethode in der nächsten Zeile ist eine öffentliche statische Methode (shared in Visual Basic .NET).  
   
- Die `SqlContext`-Klasse, die im `Microsoft.SqlServer.Server`-Namespace enthalten ist, kann dann über die bereits eingerichtete Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf ein `SqlCommand`-Objekt zugreifen. Hier wird zwar kein Gebrauch davon gemacht, aber auch der aktuelle Transaktionskontext ist über die `System.Transactions`-Anwendungsprogrammierschnittstelle (API) verfügbar.  
+ Die `SqlContext`-Klasse, die im `Microsoft.SqlServer.Server`-Namespace enthalten ist, kann dann über die bereits eingerichtete Verbindung mit der `SqlCommand`-Instanz auf ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekt zugreifen. Hier wird zwar kein Gebrauch davon gemacht, aber auch der aktuelle Transaktionskontext ist über die `System.Transactions`-Anwendungsprogrammierschnittstelle (API) verfügbar.  
   
  Die meisten Codezeilen im Funktionsrumpf sollten Entwicklern bekannt vorkommen, die bereits Clientanwendungen mit Typen aus dem `System.Data.SqlClient`-Namespace geschrieben haben.  
   
@@ -128,7 +130,8 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  `/t:library` gibt an, dass eine Bibliothek und keine ausführbare Datei erzeugt werden soll. Ausführbare Dateien können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden.  
+>  
+  `/t:library` gibt an, dass eine Bibliothek und keine ausführbare Datei erzeugt werden soll. Ausführbare Dateien können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden.  
   
 > [!NOTE]  
 >  Visual C++-Datenbankobjekte, die mit `/clr:pure` kompiliert wurden, können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Zu solchen Datenbankobjekten gehören beispielsweise Skalarwertfunktionen.  
@@ -150,10 +153,10 @@ GO
   
  Beachten Sie, dass der Funktionsname, der in [!INCLUDE[tsql](../../includes/tsql-md.md)] angegeben wird, nicht mit dem Namen der öffentlichen statischen Zielmethode übereinstimmen muss.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuordnen von CLR-Parameterdaten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
- [Übersicht über benutzerdefinierte Attribute für CLR-Integration](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mapping von CLR-Parameter Daten](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)   
+ [Übersicht über benutzerdefinierte Attribute der CLR-Integration](../../database-engine/dev-guide/overview-of-clr-integration-custom-attributes.md)   
  [Benutzerdefinierte Funktionen](../user-defined-functions/user-defined-functions.md)   
- [Datenzugriff von CLR-Datenbankobjekten aus](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
+ [Data Access from CLR Database Objects](../clr-integration/data-access/data-access-from-clr-database-objects.md)  
   
   

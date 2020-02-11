@@ -1,5 +1,5 @@
 ---
-title: Identitätswechsel und Anmeldeinformationen für Verbindungen | Microsoft-Dokumentation
+title: Identitätswechsel und Anmelde Informationen für Verbindungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 293dce7d-1db2-4657-992f-8c583d6e9ebb
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: d83ee1d69e7083931a2f6e6befb89912abec43f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138682"
 ---
 # <a name="impersonation-and-credentials-for-connections"></a>Identitätswechsel und Anmeldeinformationen für Verbindungen
@@ -31,11 +31,11 @@ ms.locfileid: "68138682"
   
  Standardmäßig ist für einen SQL Server-Prozess, der eine ausgehende Verbindung mit Windows herstellt, der Sicherheitskontext des Windows-Dienstkontos für SQL Server erforderlich. Es ist jedoch möglich, einer Proxyidentität eine CLR-Funktion zuzuordnen, sodass ausgehende Verbindungen einen anderen Sicherheitskontext haben als die Verbindungen des Windows-Dienstkontos.  
   
- In einigen Fällen möchten Sie möglicherweise die Identität des Aufrufers mithilfe der **SqlContext.WindowsIdentity** Eigenschaft anstelle der Ausführung als Dienstkonto. Die **WindowsIdentity** -Instanz repräsentiert die Identität des Clients, der den Aufrufcode aufgerufen hat, und ist nur verfügbar, wenn der Client Windows-Authentifizierung verwendet. Nachdem Sie abgerufen haben die **WindowsIdentity** -Instanz, die Sie aufrufen können **Impersonate** das Sicherheitstoken des Threads zu ändern und anschließend ADO.NET-Verbindungen im Auftrag des Clients zu öffnen.  
+ In einigen Fällen möchten Sie möglicherweise die Identität des Aufrufers mithilfe der **SqlContext. Windows** Identity-Eigenschaft annehmen, anstatt Sie als Dienst Konto auszuführen. Die **Windows Identity-Instanz stellt** die Identität des Clients dar, der den aufrufenden Code aufgerufen hat, und ist nur verfügbar, wenn der Client die Windows-Authentifizierung verwendet hat. Nachdem Sie die **Windows** Identity-Instanz abgerufen haben, können Sie die Identität annehmen **, um** das Sicherheits Token des Threads zu ändern, und dann ADO.NET-Verbindungen für den Client öffnen.  
   
- Nach dem Aufruf von SQLContext.WindowsIdentity.Impersonate Sie nicht auf die lokale Daten zugreifen und Sie können nicht auf Systemdaten zugreifen. Um auf Daten zugreifen müssen Sie in diesem Fall WindowsImpersonationContext.Undo aufrufen.  
+ Nachdem Sie SqlContext. Windows Identity. Imitation aufgerufen haben, können Sie nicht mehr auf lokale Daten zugreifen, und Sie können nicht auf die Systemdaten zugreifen. Um erneut auf Daten zuzugreifen, müssen Sie WindowsImpersonationContext. Undo aufrufen.  
   
- Das folgende Beispiel zeigt, wie Sie die Identität des Aufrufers mithilfe der **SqlContext.WindowsIdentity** Eigenschaft.  
+ Im folgenden Beispiel wird gezeigt, wie die Identität des Aufrufers mithilfe der **SqlContext. Windows** Identity-Eigenschaft angenommen wird.  
   
  Visual C#  
   
@@ -71,11 +71,11 @@ catch
 ```  
   
 > [!NOTE]  
->  Weitere Informationen zu verhaltensänderungen beim Identitätswechsel, finden Sie unter [wichtige Änderungen an Funktionen der Datenbank-Engine in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
+>  Informationen zu Verhaltensänderungen beim Identitätswechsel finden Sie unter [Breaking Changes to Datenbank-Engine Features in SQL Server 2016](../../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md).  
   
- Wenn Sie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Identitätsinstanz erhalten haben, können Sie diese Instanz standardmäßig nicht an einen anderen Computer weitergeben. Die Windows-Sicherheitsinfrastruktur schränkt diese Möglichkeit standardmäßig ein. Es gibt jedoch einen Mechanismus, der als "Delegierung" bezeichnet wird. Dieser ermöglicht die Weitergabe von Windows-Identitäten über mehrere vertrauenswürdige Computer hinweg. Weitere Informationen finden Sie Informationen zu Delegierung in der TechNet-Artikel "[Kerberos-Protokollübergang und eingeschränkte Delegierung](https://go.microsoft.com/fwlink/?LinkId=50419)".  
+ Wenn Sie die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Identitätsinstanz erhalten haben, können Sie diese Instanz standardmäßig nicht an einen anderen Computer weitergeben. Die Windows-Sicherheitsinfrastruktur schränkt diese Möglichkeit standardmäßig ein. Es gibt jedoch einen Mechanismus, der als "Delegierung" bezeichnet wird. Dieser ermöglicht die Weitergabe von Windows-Identitäten über mehrere vertrauenswürdige Computer hinweg. Weitere Informationen zur Delegierung finden Sie im TechNet-Artikel "[Kerberos-Protokoll Übergang und eingeschränkte Delegierung](https://go.microsoft.com/fwlink/?LinkId=50419)".  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SqlContext-Objekt](../../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlcontext-object.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5067793ae0f5533a889973e18f7b300914df9092
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892117"
 ---
 # <a name="operators-mdx-syntax"></a>Operatoren (MDX-Syntax)
@@ -30,13 +30,13 @@ ms.locfileid: "68892117"
   
  MDX unterstützt die Operatoren, die in der folgenden Tabelle aufgelistet sind:  
   
-|Art der auszuführenden Operation|Mit|  
+|Art der auszuführenden Operation|Zweck|  
 |---------------------------------------|---------|  
-|Weist einer Variablen einen Wert zu oder ordnet eine Resultsetspalte einem Alias zu.|[Assignment Operators (Zuweisungsoperatoren)](../mdx/assignment-operators.md)|  
-|Addition, Subtraktion, Multiplikation, Division.|[Arithmetische Operatoren](../mdx/arithmetic-operators.md)|  
-|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitweise Operatoren](../mdx/bitwise-operators.md)|  
+|Weist einer Variablen einen Wert zu oder ordnet eine Resultsetspalte einem Alias zu.|[Zuweisungsoperatoren](../mdx/assignment-operators.md)|  
+|Addition, Subtraktion, Multiplikation, Division.|[Arithmetic Operators (Arithmetische Operatoren)](../mdx/arithmetic-operators.md)|  
+|Testen, ob eine Bedingung wahr ist (z. B. AND, OR, NOT oder XOR).|[Bitwise Operators (Bitweise Operatoren)](../mdx/bitwise-operators.md)|  
 |Vergleichen eines Werts mit einem anderen Wert oder einem Ausdruck.|[Comparison Operators (Vergleichsoperatoren)](../mdx/comparison-operators.md)|  
-|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Concatenation Operators (Verkettungsoperatoren)](../mdx/concatenation-operators.md)|  
+|Dauerhaftes oder temporäres Kombinieren von zwei Zeichenfolgen zu einer Zeichenfolge.|[Operator für Verkettungen](../mdx/concatenation-operators.md)|  
 |Dauerhaftes oder temporäres Kombinieren von zwei Mengenausdrücken zu einer Menge.|[Set Operators (Mengenoperatoren)](../mdx/set-operators.md)|  
 |Ausführen einer Operation für einen Operanden.|[Unary Operators (Unäre Operatoren)](../mdx/unary-operators.md)|  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68892117"
   
 -   oder  
   
- Weitere Informationen zu Operatoren in MDX finden Sie unter [MDX- &#40;Operator-&#41;Referenz MDX](../mdx/mdx-operator-reference-mdx.md).  
+ Weitere Informationen zu Operatoren in MDX finden Sie unter [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
 ### <a name="determining-results"></a>Bestimmen von Ergebnissen  
  Wenn Sie einfache Ausdrücke zu einem komplexen Ausdruck kombinieren, wird der Datentyp des sich ergebenden Werts bestimmt, indem die Regeln für die Operatoren mit den Regeln für die Rangfolge der Datentypen kombiniert werden.  
@@ -91,14 +91,14 @@ ms.locfileid: "68892117"
   
 |Ursprünglicher Typ|Benötigter Typ|Konvertierung|  
 |-------------------|-----------------|----------------|  
-|Ebene|Set|\<Level >. Members|  
-|Hierarchy|Member|\<Hierarchie >. DefaultMember|  
-|Member|Tupel|(\<Member >)|  
-|Tupel|Member|\<Tupel >. Item (0)|  
-|Tupel|Skalar|\<Tupel >. Wert|  
+|Ebene|Set|\<Level>. Members|  
+|Hierarchy|Mitglied|\<Hierarchie>. DefaultMember|  
+|Mitglied|Tupel|(\<Member>)|  
+|Tupel|Mitglied|\<Tupel>. Item (0)|  
+|Tupel|Skalar|\<Tupel>. Wert|  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Operator &#40;Verweis (MDX)&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [MDX-Syntax &#40;Elemente MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [MDX-Syntax Elemente &#40;MDX-&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0ad2d38c031f97e46ef36f33f5e7a0fc82bcb5e0
-ms.sourcegitcommit: 384e7eeb0020e17a018ef8087970038aabdd9bb7
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74412841"
 ---
 # <a name="sysdm_io_virtual_file_stats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
@@ -52,12 +52,12 @@ sys.dm_io_virtual_file_stats (
 sys.dm_pdw_nodes_io_virtual_file_stats
 ```
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumente  
 
 
  *database_id* | Normal
 
- **gilt für:** SQL Server (beginnend mit 2008), Azure SQL-Datenbank
+ **GILT FÜR:** SQL Server (ab 2008), Azure SQL-Datenbank
 
  Die ID der Datenbank. *database_id* ist vom Datentyp int und hat keinen Standardwert. Eine gültige Eingabe ist die ID einer Datenbank oder NULL. Wenn Sie NULL angeben, werden alle Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zurückgegeben.  
   
@@ -65,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *file_id* | Normal
 
-**gilt für:** SQL Server (beginnend mit 2008), Azure SQL-Datenbank
+**GILT FÜR:** SQL Server (ab 2008), Azure SQL-Datenbank
  
 Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Eine gültige Eingabe ist die ID einer Datei oder NULL. Wenn Sie NULL angeben, werden alle Dateien in der Datenbank zurückgegeben.  
   
@@ -73,26 +73,26 @@ Die ID der Datei. *file_id* ist vom Datentyp int und hat keinen Standardwert. Ei
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Datenbankname.</br></br>Bei SQL Data Warehouse handelt es sich hierbei um den Namen der Datenbank, die auf dem Knoten gespeichert ist, der durch pdw_node_id identifiziert wird. Jeder Knoten verfügt über eine tempdb-Datenbank, die über 13 Dateien verfügt. Jeder Knoten verfügt auch über eine Datenbank pro Verteilung, und jede Verteilungs Datenbank verfügt über fünf Dateien. Wenn z. b. jeder Knoten vier Verteilungen enthält, werden in den Ergebnissen 20 Verteilungsdaten Bank Dateien pro pdw_node_id angezeigt. 
 |**database_id**|**smallint**|ID der Datenbank.|  
 |**file_id**|**smallint**|ID der Datei.|  
-|**sample_ms**|**bigint**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp ist **** "int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] " für bis[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
-|**num_of_reads**|**bigint**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
-|**num_of_bytes_read**|**bigint**|Gesamtanzahl von Bytes, die aus dieser Datei gelesen wurden.|  
-|**io_stall_read_ms**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer auf Lesevorgänge gewartet haben, die für die Datei ausgegeben wurden.|  
-|**num_of_writes**|**bigint**|Anzahl von Schreibvorgängen, die für diese Datei ausgeführt wurden.|  
-|**num_of_bytes_written**|**bigint**|Gesamtanzahl von Bytes, die in die Datei geschrieben wurden.|  
-|**io_stall_write_ms**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass Schreibvorgänge für die Datei abgeschlossen werden.|  
-|**io_stall**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Vorgänge für die Datei abgeschlossen werden.|  
-|**size_on_disk_bytes**|**bigint**|Anzahl von Bytes, die auf dem Datenträger für diese Datei verwendet werden. Für Sparsedateien ist dies die tatsächliche Anzahl von Bytes auf dem Datenträger, die für Datenbankmomentaufnahmen verwendet werden.|  
+|**sample_ms**|**BIGINT**|Anzahl der Millisekunden seit dem Starten des Computers. Mit dieser Spalte können verschiedene Ausgaben dieser Funktion verglichen werden.</br></br>Der Datentyp ist **** "int [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] " für bis[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|**num_of_reads**|**BIGINT**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
+|**num_of_bytes_read**|**BIGINT**|Gesamtanzahl von Bytes, die aus dieser Datei gelesen wurden.|  
+|**io_stall_read_ms**|**BIGINT**|Gesamtzeit in Millisekunden, die die Benutzer auf Lesevorgänge gewartet haben, die für die Datei ausgegeben wurden.|  
+|**num_of_writes**|**BIGINT**|Anzahl von Schreibvorgängen, die für diese Datei ausgeführt wurden.|  
+|**num_of_bytes_written**|**BIGINT**|Gesamtanzahl von Bytes, die in die Datei geschrieben wurden.|  
+|**io_stall_write_ms**|**BIGINT**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass Schreibvorgänge für die Datei abgeschlossen werden.|  
+|**io_stall**|**BIGINT**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Vorgänge für die Datei abgeschlossen werden.|  
+|**size_on_disk_bytes**|**BIGINT**|Anzahl von Bytes, die auf dem Datenträger für diese Datei verwendet werden. Für Sparsedateien ist dies die tatsächliche Anzahl von Bytes auf dem Datenträger, die für Datenbankmomentaufnahmen verwendet werden.|  
 |**file_handle**|**varbinary**|Windows-Dateihandle für diese Datei.|  
-|**io_stall_queued_read_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
-|**pdw_node_id**|**wartenden**|**Gilt für:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
+|**io_stall_queued_read_ms**|**BIGINT**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Lesevorgänge eingeführt wird. Lässt keine NULL-Werte zu. Weitere Informationen finden Sie unter [sys. dm_resource_governor_resource_pools &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**BIGINT**|**Gilt nicht für:**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Die E/A-Gesamtlatenz, die durch die Ressourcenkontrolle für E/A-Schreibvorgänge eingeführt wird. Lässt keine NULL-Werte zu.|
+|**pdw_node_id**|**int**|**Gilt für:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Der Bezeichner des Knotens für die Verteilung.
  
-## <a name="remarks"></a>Hinweise
+## <a name="remarks"></a>Bemerkungen
 Die Indikatoren werden so initialisiert, dass Sie bei jedem Start des SQL Server-Dienstanbieter (MSSQLSERVER) leer sind.
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -111,7 +111,7 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>B: Statistik für Datei in tempdb zurückgeben
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Statistik für Datei in tempdb zurückgeben
 
 **Gilt für:** Azure SQL Data Warehouse
 
@@ -122,10 +122,10 @@ WHERE database_name = 'tempdb' AND file_id = 2;
 ```
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [In Beziehung stehende dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/i-o-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
- [sys. master_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
+ [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   
 

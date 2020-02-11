@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70154725"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-azure"></a>Einrichten SQL Server verwalteten Sicherung in Azure
+# <a name="setting-up-sql-server-managed-backup-to-azure"></a>Einrichten der verwalteten SQL Server-Sicherung in Azure
   Dieses Thema umfasst zwei Lernprogramme:  
   
  Einrichten von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf Datenbankebene, Aktivieren der E-Mail-Benachrichtigung und Überwachen der Sicherungsaktivität  
@@ -31,9 +31,9 @@ ms.locfileid: "70154725"
 ### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-a-database"></a>Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank  
  In diesem Lernprogramm werden die notwendigen Schritte zum Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für eine Datenbank (TestDB) beschrieben, gefolgt von den Schritten, mit denen die Überwachung des "[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]"-Integritätsstatus aktiviert wird.  
   
- **Berechtigungen:**  
+ **Griff**  
   
--   Erfordert die Mitgliedschaft in der Daten Bank Rolle **db_backupoperator** mit **ALTER ANY CREDENTIAL** - `EXECUTE` Berechtigungen und Berechtigungen für die gespeicherte Prozedur **sp_delete_backuphistory**.  
+-   Erfordert die Mitgliedschaft in **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen `EXECUTE` und Berechtigungen für **sp_delete_backuphistory**gespeicherte Prozedur.  
   
 -   Erfordert **Select** -Berechtigungen für die **smart_admin. fn_get_current_xevent_settings**-Funktion.  
   
@@ -43,16 +43,17 @@ ms.locfileid: "70154725"
 
 
 1.  **Erstellen Sie ein Microsoft Azure Speicherkonto:** Die Sicherungen werden im Microsoft Azure Speicher Dienstanbieter gespeichert. Sie müssen zunächst ein Microsoft Azure Speicherkonto erstellen, wenn Sie noch nicht über ein Konto verfügen.
-    - In SQL Server 2014 werden seitenblobs verwendet, die sich von Block-und anfügeblobs unterscheiden. Daher müssen Sie ein allgemeines Konto erstellen und kein BLOB-Konto. Weitere Informationen finden Sie unter Informationen [zu Azure Storage-Konten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - In SQL Server 2014 werden seitenblobs verwendet, die sich von Block-und anfügeblobs unterscheiden. Daher müssen Sie ein allgemeines Konto erstellen und kein BLOB-Konto. Weitere Informationen finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Notieren Sie den Speicherkontonamen und die Zugriffsschlüssel. Aus dem Speicherkontonamen und den Zugriffsschlüsseln werden SQL-Anmeldeinformationen erstellt. Die SQL-Anmeldeinformationen werden zur Authentifizierung beim Speicherkonto verwendet.  
  
-2.  **Erstellen Sie SQL-Anmelde Informationen:** Erstellen Sie SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos als Identität und den Speicherzugriffs Schlüssel als Kennwort verwenden.  
+2.  **Erstellen Sie SQL** -Anmelde Informationen: Erstellen Sie SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos als Identität und den Speicherzugriffs Schlüssel als Kennwort verwenden.  
   
-3.  **Sicherstellen, dass der SQL Server-Agent-Dienst ausgeführt wird:**  Starten Sie den SQL Server-Agent, wenn er nicht ausgeführt wird.  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den Starttyp des SQL Server-Agents auf "Automatisch" festlegen, um zu gewährleisten, dass regelmäßige Sicherungsvorgänge durchgeführt werden können.  
+3.  **Stellen Sie sicher SQL Server-Agent der Dienst gestartet wird und ausgeführt wird:**  Starten Sie SQL Server-Agent, wenn er derzeit nicht ausgeführt wird.  
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den Starttyp des SQL Server-Agents auf "Automatisch" festlegen, um zu gewährleisten, dass regelmäßige Sicherungsvorgänge durchgeführt werden können.  
   
-4.  **Bestimmen des Aufbewahrungszeitraums:** Bestimmen Sie die Beibehaltungsdauer für die Sicherungsdateien. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen.  
+4.  **Festlegen der Beibehaltungs Dauer:** Bestimmen Sie die Beibehaltungs Dauer für die Sicherungsdateien. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen.  
   
-5.  **Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** Starten SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz her, auf der die Datenbank installiert ist Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, SQL-Anmeldeinformationen, Beibehaltungsdauer und Verschlüsselungsoptionen Ihren Anforderungen entsprechend angepasst haben:  
+5.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Starten SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz her, auf der die Datenbank installiert ist Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, SQL-Anmeldeinformationen, Beibehaltungsdauer und Verschlüsselungsoptionen Ihren Anforderungen entsprechend angepasst haben:  
   
      Weitere Informationen zum Erstellen eines Zertifikats für die Verschlüsselung finden Sie im Schritt **Erstellen eines Sicherungs Zertifikats** unter [Erstellen einer verschlüsselten Sicherung](create-an-encrypted-backup.md).  
   
@@ -71,9 +72,10 @@ ms.locfileid: "70154725"
   
     ```  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ist damit für die angegebene Datenbank aktiviert. Es kann bis zu 15 Minuten dauern, bis die Sicherungsvorgänge für die Datenbank gestartet werden.  
+     
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ist damit für die angegebene Datenbank aktiviert. Es kann bis zu 15 Minuten dauern, bis die Sicherungsvorgänge für die Datenbank gestartet werden.  
   
-6.  **Überprüfen der Standardkonfiguration für erweiterte Ereignisse:** Überprüfen Sie die Einstellungen für erweiterte Ereignisse, indem Sie die folgende Transact-SQL-Anweisung ausführen.  
+6.  **Überprüfen Sie die Standardkonfiguration für erweiterte Ereignisse:** Überprüfen Sie die Einstellungen für erweiterte Ereignisse, indem Sie die folgende Transact-SQL-Anweisung ausführen.  
   
     ```  
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
@@ -81,13 +83,13 @@ ms.locfileid: "70154725"
   
      Stellen Sie sicher, dass Ereignisse der Kanäle Admin, Operational und Analytical standardmäßig aktiviert sind und nicht deaktiviert werden können. Dies sollte ausreichen, um alle Ereignisse zu überwachen, die ein manuelles Eingreifen erfordern.  Sie können die Debugereignisse ebenfalls aktivieren. Diese Kanäle enthalten jedoch auch Informations- und Debugereignisse, die [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] intern zur Erkennung und Behebung von Fehlern verwendet. Weitere Informationen finden Sie unter [überwachen SQL Server verwalteten Sicherung in Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-7.  **Aktivieren und Konfigurieren der Benachrichtigung für den Integritätsstatus:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verfügt über eine gespeicherte Prozedur, die einen Agent-Auftrag erstellt, um E-Mail-Benachrichtigungen mit Fehlern oder Warnungen zu senden, die möglicherweise ein Eingreifen erfordern. In den folgenden Schritten wird der Prozess zum Aktivieren und Konfigurieren der E-Mail-Benachrichtigungen beschrieben:  
+7.  **Aktivieren und Konfigurieren der Benachrichtigung für** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] den Integritäts Status: verfügt über eine gespeicherte Prozedur, die einen Agentauftrag erstellt, um e-Mail-Benachrichtigungen zu Fehlern oder Warnungen zu senden, die möglicherweise eingreifen müssen In den folgenden Schritten wird der Prozess zum Aktivieren und Konfigurieren der E-Mail-Benachrichtigungen beschrieben:  
   
     1.  Richten Sie Datenbank-E-Mail ein, falls diese Funktion auf der Instanz noch nicht aktiviert wurde. Weitere Informationen finden Sie unter [Configure Database Mail](../database-mail/configure-database-mail.md).  
   
-    2.  Konfigurieren Sie SQL Server-Agent-Benachrichtigungen für die Verwendung von Datenbank-E-Mail. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Konfigurieren Sie SQL Server-Agent-Benachrichtigungen für die Verwendung von Datenbank-E-Mail. Weitere Informationen finden Sie unter [configure SQL Server-Agent Mail to use Datenbank-E-Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Aktivieren der E-mail-Benachrichtigungen für den Empfang von Sicherungsfehlern und Warnungen:** Führen Sie im Abfragefenster die folgenden Transact-SQL-Anweisungen aus:  
+    3.  **Aktivieren von e-Mail-Benachrichtigungen zum Empfangen von Sicherungs Fehlern und Warnungen:** Führen Sie im Abfragefenster die folgenden Transact-SQL-Anweisungen aus:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -98,9 +100,9 @@ ms.locfileid: "70154725"
   
          Weitere Informationen und ein vollständiges Beispielskript finden [Sie unter Überwachen SQL Server verwaltete Sicherung in Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-8.  **Anzeigen von Sicherungsdateien im Microsoft Azure Storage-Konto:** Stellen Sie eine Verbindung mit dem Speicherkonto von SQL Server Management Studio oder dem Azure-Verwaltungsportal her. Es wird ein Container für die Instanz von SQL Server angezeigt, die die Datenbank hostet, die Sie für die Verwendung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfiguriert haben. Innerhalb der ersten 15 Minuten nach dem Aktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank können außerdem eine Datenbank- und eine Protokollsicherung angezeigt werden.  
+8.  **Anzeigen von Sicherungsdateien im Microsoft Azure Storage Konto:** Stellen Sie über SQL Server Management Studio oder den Azure-Verwaltungsportal eine Verbindung mit dem Speicherkonto her. Es wird ein Container für die Instanz von SQL Server angezeigt, die die Datenbank hostet, die Sie für die Verwendung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfiguriert haben. Innerhalb der ersten 15 Minuten nach dem Aktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank können außerdem eine Datenbank- und eine Protokollsicherung angezeigt werden.  
   
-9. **Überwachen des Integritätsstatus:**  Sie können die zuvor konfigurierten E-Mail-Benachrichtigungen verwenden oder die protokollierten Ereignisse manuell überwachen. Die folgenden Beispiele zeigen einige Transact-SQL-Anweisungen, mit denen die Ereignisse angezeigt werden können:  
+9. **Überwachen des Integritäts Status:**  Sie können die zuvor konfigurierten e-Mail-Benachrichtigungen überwachen oder die protokollierten Ereignisse aktiv überwachen. Die folgenden Beispiele zeigen einige Transact-SQL-Anweisungen, mit denen die Ereignisse angezeigt werden können:  
   
     ```  
     --  view all admin events  
@@ -147,14 +149,14 @@ ms.locfileid: "70154725"
   
     ```  
   
- Die in diesem Abschnitt beschriebenen Schritte sind speziell für die erste Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank vorgesehen. Sie können die vorhandenen Konfigurationen mithilfe derselben gespeicherten System Prozedur **smart_admin. sp_set_db_backup** ändern und die neuen Werte bereitstellen. Weitere Informationen finden Sie unter [SQL Server Managed Backup to Microsoft Azure Beibehaltungs-und Speichereinstellungen](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
+ Die in diesem Abschnitt beschriebenen Schritte sind speziell für die erste Konfiguration von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für die Datenbank vorgesehen. Sie können die vorhandenen Konfigurationen mithilfe derselben gespeicherten System Prozedur smart_admin ändern **. sp_set_db_backup** und die neuen Werte bereitstellen. Weitere Informationen finden Sie unter [SQL Server Managed Backup to Microsoft Azure Beibehaltungs-und Speichereinstellungen](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md).  
   
 ### <a name="enable-includess_smartbackupincludesss-smartbackup-mdmd-for-the-instance-with-default-settings"></a>Aktivieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] mit Standardeinstellungen für die Instanz  
- In diesem Tutorial werden die Schritte zum Aktivieren und [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfigurieren von für die Instanz "MyInstance\\" beschrieben. Es umfasst Schritte, um das Überwachen des [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Integritätsstatus zu aktivieren.  
+ In diesem Tutorial werden die Schritte zum Aktivieren und [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Konfigurieren von für die Instanz "MyInstance"\\beschrieben. Es umfasst Schritte, um das Überwachen des [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]-Integritätsstatus zu aktivieren.  
   
- **Berechtigungen:**  
+ **Griff**  
   
--   Erfordert die Mitgliedschaft in der Daten Bank Rolle **db_backupoperator** mit **ALTER ANY CREDENTIAL** - `EXECUTE` Berechtigungen und Berechtigungen für die gespeicherte Prozedur **sp_delete_backuphistory**.  
+-   Erfordert die Mitgliedschaft in **db_backupoperator** Daten Bank Rolle mit **ALTER ANY CREDENTIAL** -Berechtigungen `EXECUTE` und Berechtigungen für **sp_delete_backuphistory**gespeicherte Prozedur.  
   
 -   Erfordert **Select** -Berechtigungen für die **smart_admin. fn_get_current_xevent_settings**-Funktion.  
   
@@ -162,16 +164,17 @@ ms.locfileid: "70154725"
 
 
 1.  **Erstellen Sie ein Microsoft Azure Speicherkonto:** Die Sicherungen werden im Microsoft Azure Speicher Dienstanbieter gespeichert. Sie müssen zunächst ein Microsoft Azure Speicherkonto erstellen, wenn Sie noch nicht über ein Konto verfügen.
-    - In SQL Server 2014 werden seitenblobs verwendet, die sich von Block-und anfügeblobs unterscheiden. Daher müssen Sie ein allgemeines Konto erstellen und kein BLOB-Konto. Weitere Informationen finden Sie unter Informationen [zu Azure Storage-Konten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
+    - In SQL Server 2014 werden seitenblobs verwendet, die sich von Block-und anfügeblobs unterscheiden. Daher müssen Sie ein allgemeines Konto erstellen und kein BLOB-Konto. Weitere Informationen finden Sie unter [Informationen zu Azure-Speicherkonten](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).
     - Notieren Sie den Speicherkontonamen und die Zugriffsschlüssel. Aus dem Speicherkontonamen und den Zugriffsschlüsseln werden SQL-Anmeldeinformationen erstellt. Die SQL-Anmeldeinformationen werden zur Authentifizierung beim Speicherkonto verwendet.  
   
-2.  **Erstellen Sie SQL-Anmelde Informationen:** Erstellen Sie SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos als Identität und den Speicherzugriffs Schlüssel als Kennwort verwenden.  
+2.  **Erstellen Sie SQL** -Anmelde Informationen: Erstellen Sie SQL-Anmelde Informationen, indem Sie den Namen des Speicher Kontos als Identität und den Speicherzugriffs Schlüssel als Kennwort verwenden.  
   
-3.  **Sicherstellen, dass der SQL Server-Agent-Dienst ausgeführt wird:** Starten Sie den SQL Server-Agent, wenn er nicht ausgeführt wird. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den Starttyp des SQL Server-Agents auf "Automatisch" festlegen, um zu gewährleisten, dass regelmäßige Sicherungsvorgänge durchgeführt werden können.  
+3.  **Stellen Sie sicher SQL Server-Agent der Dienst gestartet wird und ausgeführt wird:** Starten Sie SQL Server-Agent, wenn er derzeit nicht ausgeführt wird. 
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] benötigt einen laufenden SQL Server-Agent auf der Instanz, um Sicherungsvorgänge durchführen zu können.  Sie können den Starttyp des SQL Server-Agents auf "Automatisch" festlegen, um zu gewährleisten, dass regelmäßige Sicherungsvorgänge durchgeführt werden können.  
   
-4.  **Bestimmen des Aufbewahrungszeitraums:** Bestimmen Sie die Beibehaltungsdauer für die Sicherungsdateien. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen. Sobald [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf Instanzebene mit Standardwerten aktiviert wurde, erben die neuen Datenbanken, die anschließend erstellt werden, die Einstellungen. Es werden nur Datenbanken unterstützt und automatisch konfiguriert, für die eine vollständige oder massenprotokollierte Wiederherstellung festgelegt wurde. Sie können [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] jederzeit für eine bestimmte Datenbank deaktivieren, wenn [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für diese Datenbank nicht verwendet werden soll. Außerdem können Sie die Konfiguration für eine bestimmte Datenbank ändern, indem Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf Datenbankebene konfigurieren.  
+4.  **Festlegen der Beibehaltungs Dauer:** Bestimmen Sie die Beibehaltungs Dauer für die Sicherungsdateien. Die Beibehaltungsdauer wird in Tagen angegeben und kann zwischen 1 und 30 Tagen liegen. Sobald [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf Instanzebene mit Standardwerten aktiviert wurde, erben die neuen Datenbanken, die anschließend erstellt werden, die Einstellungen. Es werden nur Datenbanken unterstützt und automatisch konfiguriert, für die eine vollständige oder massenprotokollierte Wiederherstellung festgelegt wurde. Sie können [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] jederzeit für eine bestimmte Datenbank deaktivieren, wenn [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] für diese Datenbank nicht verwendet werden soll. Außerdem können Sie die Konfiguration für eine bestimmte Datenbank ändern, indem Sie [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] auf Datenbankebene konfigurieren.  
   
-5.  **Aktivieren und Konfigurieren von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]:** Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz SQL Server her. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, SQL-Anmeldeinformationen, Beibehaltungsdauer und Verschlüsselungsoptionen Ihren Anforderungen entsprechend angepasst haben:  
+5.  **Aktivieren und konfigurieren [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] :** Starten Sie SQL Server Management Studio, und stellen Sie eine Verbindung mit der Instanz SQL Server her. Führen Sie im Abfragefenster folgende Anweisung aus, nachdem Sie die Werte für Datenbankname, SQL-Anmeldeinformationen, Beibehaltungsdauer und Verschlüsselungsoptionen Ihren Anforderungen entsprechend angepasst haben:  
   
      Weitere Informationen zum Erstellen eines Zertifikats für die Verschlüsselung finden Sie im Schritt **Erstellen eines Sicherungs Zertifikats** unter [Erstellen einer verschlüsselten Sicherung](create-an-encrypted-backup.md).  
   
@@ -189,7 +192,8 @@ ms.locfileid: "70154725"
   
     ```  
   
-     [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ist nun für diese Instanz aktiviert.  
+     
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] ist nun für diese Instanz aktiviert.  
   
 6.  Überprüfen Sie die Konfigurationseinstellungen, indem Sie folgende Transact-SQL-Anweisung ausführen:  
   
@@ -210,13 +214,13 @@ ms.locfileid: "70154725"
   
      Es kann bis zu 15 Minuten dauern, bis die Einstellungen angezeigt und die Sicherungsvorgänge für die Datenbank gestartet werden.  
   
-8.  **Aktivieren und Konfigurieren der Benachrichtigung für den Integritätsstatus:** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] verfügt über eine gespeicherte Prozedur, die einen Agent-Auftrag erstellt, um E-Mail-Benachrichtigungen mit Fehlern oder Warnungen zu senden, die möglicherweise ein Eingreifen erfordern.  Wenn Sie diese E-Mail-Benachrichtigungen erhalten möchten, müssen Sie das Ausführen der gespeicherten Prozedur aktivieren, durch die ein SQL Server-Agentauftrag erstellt wird. In den folgenden Schritten wird der Prozess zum Aktivieren und Konfigurieren der E-Mail-Benachrichtigungen beschrieben:  
+8.  **Aktivieren und Konfigurieren der Benachrichtigung für** [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] den Integritäts Status: verfügt über eine gespeicherte Prozedur, die einen Agentauftrag erstellt, um e-Mail-Benachrichtigungen zu Fehlern oder Warnungen zu senden, die möglicherweise eingreifen müssen  Wenn Sie diese E-Mail-Benachrichtigungen erhalten möchten, müssen Sie das Ausführen der gespeicherten Prozedur aktivieren, durch die ein SQL Server-Agentauftrag erstellt wird. In den folgenden Schritten wird der Prozess zum Aktivieren und Konfigurieren der E-Mail-Benachrichtigungen beschrieben:  
   
     1.  Richten Sie Datenbank-E-Mail ein, falls diese Funktion auf der Instanz noch nicht aktiviert wurde. Weitere Informationen finden Sie unter [Configure Database Mail](../database-mail/configure-database-mail.md).  
   
-    2.  Konfigurieren Sie SQL Server-Agent-Benachrichtigungen für die Verwendung von Datenbank-E-Mail. Weitere Informationen finden Sie unter [Konfigurieren von SQL Server-Agent-Mail zum Verwenden von Datenbank-E-Mails](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
+    2.  Konfigurieren Sie SQL Server-Agent-Benachrichtigungen für die Verwendung von Datenbank-E-Mail. Weitere Informationen finden Sie unter [configure SQL Server-Agent Mail to use Datenbank-E-Mail](../database-mail/configure-sql-server-agent-mail-to-use-database-mail.md).  
   
-    3.  **Aktivieren der E-mail-Benachrichtigungen für den Empfang von Sicherungsfehlern und Warnungen:** Führen Sie im Abfragefenster die folgenden Transact-SQL-Anweisungen aus:  
+    3.  **Aktivieren von e-Mail-Benachrichtigungen zum Empfangen von Sicherungs Fehlern und Warnungen:** Führen Sie im Abfragefenster die folgenden Transact-SQL-Anweisungen aus:  
   
         ```  
         EXEC msdb.smart_admin.sp_set_parameter  
@@ -227,9 +231,9 @@ ms.locfileid: "70154725"
   
          Weitere Informationen zum Überwachen und ein vollständiges Beispielskript finden [Sie unter Überwachen SQL Server verwalteten Sicherung in Microsoft Azure](sql-server-managed-backup-to-microsoft-azure.md).  
   
-9. **Anzeigen von Sicherungsdateien im Microsoft Azure Storage-Konto:** Stellen Sie eine Verbindung mit dem Speicherkonto von SQL Server Management Studio oder dem Azure-Verwaltungsportal her. Es wird ein Container für die Instanz von SQL Server angezeigt, die die Datenbank hostet, die Sie für die Verwendung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfiguriert haben. Innerhalb der ersten 15 Minuten nach dem Erstellen einer neuen Datenbank sollten außerdem eine Datenbank- und eine Protokollsicherung angezeigt werden.  
+9. **Anzeigen von Sicherungsdateien im Microsoft Azure Storage Konto:** Stellen Sie über SQL Server Management Studio oder den Azure-Verwaltungsportal eine Verbindung mit dem Speicherkonto her. Es wird ein Container für die Instanz von SQL Server angezeigt, die die Datenbank hostet, die Sie für die Verwendung von [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] konfiguriert haben. Innerhalb der ersten 15 Minuten nach dem Erstellen einer neuen Datenbank sollten außerdem eine Datenbank- und eine Protokollsicherung angezeigt werden.  
   
-10. **Überwachen des Integritätsstatus:**  Sie können die zuvor konfigurierten E-Mail-Benachrichtigungen verwenden oder die protokollierten Ereignisse manuell überwachen. Die folgenden Beispiele zeigen einige Transact-SQL-Anweisungen, mit denen die Ereignisse angezeigt werden können:  
+10. **Überwachen des Integritäts Status:**  Sie können die zuvor konfigurierten e-Mail-Benachrichtigungen überwachen oder die protokollierten Ereignisse aktiv überwachen. Die folgenden Beispiele zeigen einige Transact-SQL-Anweisungen, mit denen die Ereignisse angezeigt werden können:  
   
     ```  
     --  view all admin events  

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211494"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
@@ -26,7 +26,7 @@ ms.locfileid: "68211494"
   
 -   Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup aus, um eine höhere Version zu installieren bzw. darauf zu aktualisieren.  
   
--   Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramme, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu konfigurieren.  
+-   Verwenden Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramme, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu konfigurieren.  
   
  Unabhängig von der Installationsmethode ist es erforderlich, dass Sie den Softwarelizenzbedingungen als Einzelperson oder im Auftrag einer juristischen Person zustimmen, sofern die Verwendung der Software in keiner separaten Vereinbarung geregelt ist, z. B. einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Volumenlizenzvertrag oder einem Vertrag eines Drittanbieters mit einem ISV oder OEM.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68211494"
  [Installieren von SQL Server 2014-BI-Funktionen](install-sql-server-business-intelligence-features.md)  
  In diesem Abschnitt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupdokumentation wird erläutert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die Teil der Microsoft BI-Plattform sind, installiert werden.  
   
- [Upgrade auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Aktualisieren auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
  Der Abschnitt bietet eine Übersicht über das Aktualisieren von Instanzen früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Deinstallieren von SQL Server 2014](uninstall-sql-server.md)  
@@ -73,11 +73,11 @@ ms.locfileid: "68211494"
  [SQL Server-Failoverclusterinstallation](../failover-clusters/install/sql-server-failover-cluster-installation.md)  
  In diesem Abschnitt der Dokumentation zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup wird die Installation und Konfiguration von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclustern beschrieben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schnellstart-Installation von SQLServer 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
- [Installieren von SQLServer 2014 über die Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
- [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
- [Vor dem Installieren des Failoverclusterings](../failover-clusters/install/before-installing-failover-clustering.md)   
- [Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Schnell Start-Installation von SQL Server 2014](../../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)   
+ [Installieren von SQL Server 2014 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)   
+ [Hoch Verfügbarkeits Lösungen &#40;SQL Server&#41;](../failover-clusters/high-availability-solutions-sql-server.md)   
+ [Vor dem Installieren des Failoverclustering](../failover-clusters/install/before-installing-failover-clustering.md)   
+ [Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

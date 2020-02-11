@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: d6d329b97946d9d8042641653ed0167510a19b17
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/18/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72586736"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Ermitteln der richtigen Azure SQL-Datenbank/verwaltete Instanz-SKU für Ihre lokale Datenbank
@@ -27,8 +27,8 @@ Das Migrieren von Datenbanken in die Cloud kann kompliziert sein, insbesondere b
 
 Dieser Artikel konzentriert sich auf das Azure SQL-Datenbank-Empfehlungs Feature von DMA. Azure SQL-Datenbank verfügt über mehrere Bereitstellungs Optionen, einschließlich:
 
-- Einzel Datenbank
-- Elastische Pools
+- Einzeldatenbank
+- Pools für elastische Datenbanken
 - Verwaltete Instanz
 
 Mit dem Feature "SKU-Empfehlungen" können Sie sowohl die empfohlene Azure SQL-Datenbank-SKU für einzelne Datenbanken als auch eine verwaltete Instanz ermitteln, die auf Leistungsindikatoren basiert, die von den Computern gesammelt werden Die-Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, eine Massen Bereitstellung einzelner Datenbanken und verwalteter Instanzen in Azure für alle empfohlenen Datenbanken bereitzustellen.
@@ -38,7 +38,7 @@ Mit dem Feature "SKU-Empfehlungen" können Sie sowohl die empfohlene Azure SQL-D
 
 Im folgenden finden Sie Anweisungen zum Ermitteln der Azure SQL-Datenbank-SKU-Empfehlungen und zum Bereitstellen der entsprechenden Einzel Datenbanken oder verwalteten Instanzen in Azure mithilfe von DMA.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Voraussetzungen
 
 - Laden Sie die neueste Version von [DMA](https://aka.ms/get-dma)herunter, und installieren Sie Sie. Wenn Sie bereits über eine frühere Version des Tools verfügen, öffnen Sie Sie, und Sie werden aufgefordert, DMA zu aktualisieren.
 - Stellen Sie sicher, dass auf Ihrem Computer [PowerShell Version 5,1](https://www.microsoft.com/download/details.aspx?id=54616) oder höher angegeben ist, die zum Ausführen aller Skripts erforderlich ist. Informationen zu findoug, welche Version von PowerShell auf Ihrem Computer installiert ist, finden Sie im Artikel [herunterladen und Installieren von Windows PowerShell 5,1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
@@ -102,7 +102,7 @@ Wählen Sie außerdem eines der folgenden Argumente aus:
     - **/AzureAuthenticationTenantId**: der Authentifizierungs Mandant.
     - **/AzureAuthenticationClientId**: die Client-ID der Aad-APP, die für die Authentifizierung verwendet wird.
     - Eine der folgenden Authentifizierungs Optionen:
-      - Interaktiv
+      - Interactive
         - **Azureauthenticationinteractiveauthentication**: bei einem Popup Fenster für die Authentifizierung auf true festgelegt.
       - Zertifikat basiert
         - **Azureauthenticationcertifierestoreloation:** auf den Zertifikat Speicherort (z. b. "CurrentUser") festgelegt.
@@ -115,7 +115,7 @@ Wählen Sie außerdem eines der folgenden Argumente aus:
 
 Schließlich gibt es ein optionales Argument, das Sie verwenden können, um die Datenbanken anzugeben, für die Sie Empfehlungen wünschen: 
 
-- **/SkuRecommendationDatabasesToRecommend**: eine Liste der Datenbanken, für die Empfehlungen zu erstellen sind. Bei den Datenbanknamen muss die Groß-/Kleinschreibung beachtet werden, und (1) muss (1) in der Eingabe. CSV enthalten sein, (2) jede in doppelte Anführungszeichen eingeschlossen ist und (3) jeweils durch ein einzelnes Leerzeichen zwischen den Namen (z. b./SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") getrennt werden. . Wenn Sie diesen Parameter weglassen, stellen Sie sicher, dass die Empfehlungen für alle Benutzer Datenbanken bereitgestellt werden, die in der CSV-Eingabedatei  
+- **/SkuRecommendationDatabasesToRecommend**: eine Liste der Datenbanken, für die Empfehlungen zu erstellen sind. Bei den Datenbanknamen muss die Groß-/Kleinschreibung beachtet werden, und (1) muss (1) in der Eingabe. CSV enthalten sein, (2) jede in doppelte Anführungszeichen eingeschlossen ist und (3) jeweils durch ein einzelnes Leerzeichen zwischen den Namen (z. b./SkuRecommendationDatabasesToRecommend = "Database1" "Database2" "Database3") getrennt werden. Wenn Sie diesen Parameter weglassen, stellen Sie sicher, dass die Empfehlungen für alle Benutzer Datenbanken bereitgestellt werden, die in der CSV-Eingabedatei  
 
 Im folgenden finden Sie einige Beispiel Aufrufe:
 
@@ -184,7 +184,7 @@ Eine Beschreibung der einzelnen Spalten in der Ausgabedatei folgt.
 - **Exclusionreasons** : dieser Wert ist leer, wenn eine Ebene empfohlen wird. Für jede Ebene, die nicht empfohlen wird, geben wir die Gründe dafür an, warum Sie nicht ausgewählt wurden.
 - **Appliedrules** : eine kurze Schreibweise der angewendeten Regeln.
 
-Der letzte Empfohlene Tarif (d. h. **metrictype**) und der Wert (d. h. **metricvalue**), in dem die Spalte " **istierrecommended** " den Wert "true" aufweist, entsprechen der minimalen SKU, die für die Ausführung Ihrer Abfragen in Azure erforderlich ist, mit einer Erfolgsrate ähnlich der lokale Datenbanken Für eine verwaltete Instanz unterstützt DMA derzeit Empfehlungen für die am häufigsten verwendeten SKUs von 8vcore zu 40vcore. Wenn z. b. die empfohlene minimale SKU S4 für den Standard--Wert ist, führt die Auswahl von S3 oder unten dazu, dass für Abfragen ein Timeout auftritt oder die Ausführung fehlschlägt.
+Der letzte Empfohlene Tarif (d. h. **metrictype**) und der Wert (d. h. **metricvalue**), in dem die Spalte " **istierrecommended** " den Wert "true" aufweist, entsprechen der minimalen SKU, die für die Ausführung Ihrer Abfragen in Azure erforderlich ist, und mit einer Erfolgsrate vergleichbar mit Ihren lokalen Datenbanken. Für eine verwaltete Instanz unterstützt DMA derzeit Empfehlungen für die am häufigsten verwendeten SKUs von 8vcore zu 40vcore. Wenn z. b. die empfohlene minimale SKU S4 für den Standard--Wert ist, führt die Auswahl von S3 oder unten dazu, dass für Abfragen ein Timeout auftritt oder die Ausführung fehlschlägt.
 
 Diese Informationen sind in der HTML-Datei in einem grafischen Format enthalten. Es bietet eine benutzerfreundliche Möglichkeit, die abschließende Empfehlung anzuzeigen und den nächsten Teil des Prozesses bereitzustellen. Weitere Informationen zur HTML-Ausgabe finden Sie im folgenden Abschnitt.
 
@@ -206,7 +206,7 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
     - **Region** : die Region, in der Datenbanken bereitgestellt werden. Stellen Sie sicher, dass Ihr Abonnement die SELECT-Region unterstützt.
     - **Server Name** : der Azure SQL-Datenbankserver, auf dem die Datenbanken bereitgestellt werden sollen. Wenn Sie einen Servernamen eingeben, der nicht vorhanden ist, wird er erstellt.
     - **Administrator Benutzername** : der Benutzername des Server Administrators.
-    - **Administrator Kennwort** : das Server Administrator Kennwort. Das Kennwort muss mindestens acht Zeichen lang sein und darf nicht länger als 128 Zeichen sein. Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten – englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #,% usw.). Das Kennwort darf nicht ganz oder teilweise (3 + aufeinander folgende Buchstaben) aus dem Benutzernamen enthalten.
+    - **Administrator Kennwort** : das Server Administrator Kennwort. Das Kennwort muss mindestens acht Zeichen lang sein und darf nicht länger als 128 Zeichen sein. Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #, % usw.). Das Kennwort darf nicht ganz oder teilweise (3 + aufeinander folgende Buchstaben) aus dem Benutzernamen enthalten.
 
 2. Überprüfen Sie die Empfehlungen für jede Datenbank, und ändern Sie den Tarif, die computeebene und die maximale Datengröße nach Bedarf. Stellen Sie sicher, dass Sie alle Datenbanken deaktivieren, die Sie zurzeit nicht bereitstellen möchten.
 
@@ -224,7 +224,7 @@ Um Bereitstellungs Informationen einzugeben und Änderungen an den Empfehlungen 
     - **Region** : die Region, in der Datenbanken bereitgestellt werden. Stellen Sie sicher, dass Ihr Abonnement die SELECT-Region unterstützt.
     - **Instanzname** – die Instanz von Azure SQL verwaltete Instanz, zu der Sie die Datenbanken migrieren möchten. Der Instanzname darf nur Kleinbuchstaben, Ziffern und "-" enthalten. er darf jedoch nicht mit "-" beginnen oder enden oder mehr als 63 Zeichen enthalten.
     - **Instanzadministrator-Benutzername** – der Administrator Benutzername der Instanz. Stellen Sie sicher, dass Ihr Anmelde Name die folgenden Anforderungen erfüllt: Es handelt sich um einen SQL-Bezeichner und nicht um einen typischen Systemnamen (wie z. b. admin, Administrator, Sa, root, DBManager, loginmanager usw.) oder einen integrierten Datenbankbenutzer oder eine integrierte Rolle (z. b. dbo, Guest, Public usw.). Stellen Sie sicher, dass der Name keine Leerzeichen, Unicode-Zeichen oder nicht alphabetische Zeichen enthält und nicht mit Zahlen oder Symbolen beginnt. 
-    - **Instanzadministratorkennwort** : das Instanz-Administrator Kennwort. Ihr Kennwort muss mindestens 16 Zeichen lang sein und darf nicht länger als 128 Zeichen sein. Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten – englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #,% usw.). Das Kennwort darf nicht ganz oder teilweise (3 + aufeinander folgende Buchstaben) aus dem Benutzernamen enthalten.
+    - **Instanzadministratorkennwort** : das Instanz-Administrator Kennwort. Ihr Kennwort muss mindestens 16 Zeichen lang sein und darf nicht länger als 128 Zeichen sein. Ihr Kennwort muss Zeichen aus drei der folgenden Kategorien enthalten: englische Großbuchstaben, englische Kleinbuchstaben, Zahlen (0-9) und nicht alphanumerische Zeichen (!, $, #, % usw.). Das Kennwort darf nicht ganz oder teilweise (3 + aufeinander folgende Buchstaben) aus dem Benutzernamen enthalten.
     - **Vnet-Name** – der Name des vnets, unter dem die verwaltete Instanz bereitgestellt werden soll. Geben Sie einen vorhandenen vnet-Namen ein.
     - **Subnetzname** – der Name des Subnetzes, unter dem die verwaltete Instanz bereitgestellt werden soll. Geben Sie einen vorhandenen Subnetznamen ein.
 

@@ -13,22 +13,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fe8d52d898db35698155518646f074e7167687a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66110178"
 ---
 # <a name="viewing-tuning-recommendations"></a>Anzeigen von Empfehlungen für die Optimierung
-  In dieser Aufgabe wird die Optimierungssitzung verwendet, die Sie im Abschnitt [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md) angelegt haben. Wenn Sie die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank mit dem Skript MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] optimiert haben, werden die Ergebnisse des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers auf der Registerkarte **Empfehlungen** angezeigt. In der folgenden Aufgabe erhalten Sie eine Einführung zur Registerkarte **Empfehlungen** auf der grafischen Benutzeroberfläche (graphical user interface, GUI) des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers. Außerdem können Sie die Informationen prüfen, die als Ergebnisse der Optimierungssitzung zur Verfügung gestellt werden.  
+  Für diese Aufgabe wird die Optimierungs Sitzung verwendet, die Sie beim [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)erstellt haben. Nachdem Sie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] die Datenbank mit dem Skript MyScript. [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL optimiert haben, [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeigt der-Optimierungs Ratgeber die Ergebnisse auf der Registerkarte **Empfehlungen** an. Mit der folgenden Aufgabe wird **** die Registerkarte Empfehlungen [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf der grafischen Benutzeroberfläche (GUI) des-Optimierungs Ratgebers eingeführt, und Sie werden dazu geführt, welche Informationen über die Ergebnisse der Optimierungs Sitzung bereitgestellt werden.  
   
 ### <a name="view-tuning-recommendations"></a>Optimierungsempfehlungen anzeigen  
   
 1.  Starten Sie den [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber. Weitere Informationen finden Sie unter [Starten des Datenbankoptimierungsratgebers](../../relational-databases/performance/database-engine-tuning-advisor.md). Stellen Sie sicher, dass Sie eine Verbindung mit derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz herstellen, die Sie in der Übung [Optimieren einer Arbeitsauslastung](lesson-1-1-tuning-a-workload.md)verwendet haben.  
   
-2.  Doppelklicken Sie im Bereich **Sitzungsmonitor** auf **MySession** . [!INCLUDE[ssDE](../../includes/ssde-md.md)] Der Optimierungsratgeber lädt die Sitzungsinformationen aus Ihrer früheren Optimierungssitzung und zeigt die Registerkarte **Empfehlungen** an. Der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber gibt jedoch keine **Partitionsempfehlungen** , da Sie alle Standardeinstellungen für die Optimierung übernommen haben und auf der Registerkarte **Optimierungsoptionen** die Option **Keine Partitionierung** ausgewählt wurde.  
+2.  Doppelklicken Sie im Bereich **Sitzungsmonitor** auf **MySession** . [!INCLUDE[ssDE](../../includes/ssde-md.md)]Der-Optimierungs Ratgeber lädt die Sitzungsinformationen aus Ihrer vorherigen Optimierungs Sitzung und **** zeigt die Registerkarte Empfehlungen [!INCLUDE[ssDE](../../includes/ssde-md.md)] an. Beachten Sie, dass der-Optimierungs Ratgeber keine **Partitions Empfehlungen** gegeben hat, da Sie alle Standardeinstellungen für die Optimierungs Option akzeptiert haben und auf der Registerkarte Optimierungs **Optionen** **keine Partitionierung** ausgewählt  
   
-3.  Verwenden Sie auf der Registerkarte **Empfehlungen** die Bildlaufleiste unten auf der Seite im Registerformat, um alle Spalten zu **Indexempfehlungen** anzuzeigen. Jede Zeile steht für ein Datenbankobjekt (Indizes oder indizierte Sichten), für das der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber die Empfehlung abgibt, es zu löschen oder anzulegen. Führen Sie einen Bildlauf zur Spalte ganz rechts durch, und klicken Sie auf **Definition**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Der Optimierungsratgeber zeigt das Fenster **SQL-Skriptvorschau** an, in dem das [!INCLUDE[tsql](../../includes/tsql-md.md)] -Skript angezeigt werden kann, das das Datenbankobjekt in dieser Zeile anlegt oder löscht. Klicken Sie auf **Schließen** , um das Vorschaufenster zu schließen.  
+3.  Verwenden Sie auf der Registerkarte **Empfehlungen** die Bildlaufleiste unten auf der Seite im Registerformat, um alle Spalten zu **Indexempfehlungen** anzuzeigen. Jede Zeile steht für ein Datenbankobjekt (Indizes oder indizierte Sichten), für das der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber die Empfehlung abgibt, es zu löschen oder anzulegen. Führen Sie einen Bildlauf zur Spalte ganz rechts durch, und klicken Sie auf **Definition**. [!INCLUDE[ssDE](../../includes/ssde-md.md)]Der-Optimierungs Ratgeber zeigt ein **SQL-Skript-Vorschau** Fenster an [!INCLUDE[tsql](../../includes/tsql-md.md)] , in dem Sie das Skript anzeigen können, das das Datenbankobjekt in dieser Zeile erstellt oder löscht. Klicken Sie auf **Schließen** , um das Vorschaufenster zu schließen.  
   
      Wenn Sie Probleme haben, eine **Definition** zu finden, die einen Link enthält, klicken Sie am unteren Rand der Seite im Registerformat auf das Kontrollkästchen **Vorhandene Objekte anzeigen** , um es zu deaktivieren. Damit wird die Anzahl dargestellter Zeilen reduziert. Wenn Sie das Kontrollkästchen deaktivieren, zeigt der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber nur die Objekte an, für die eine Empfehlung generiert wurde. Aktivieren Sie das Kontrollkästchen **Vorhandene Objekte anzeigen** , um alle Datenbankobjekte anzuzeigen, die derzeit in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank vorhanden sind. Zum Anzeigen aller Objekte verwenden Sie die Bildlaufleiste rechts auf der Seite im Registerformat.  
   
@@ -42,18 +42,19 @@ ms.locfileid: "66110178"
   
 6.  Wenn auf der Registerkarte **Empfehlungen** mehrere Empfehlungen vorhanden sind, deaktivieren Sie einige der Zeilen, in denen Datenbankobjekte im Raster **Indexempfehlungen** aufgelistet sind.  
   
-7.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen bewerten**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Der Optimierungsratgeber erstellt eine neue Optimierungssitzung, in der Sie eine Untergruppe der ursprünglichen Empfehlungen aus MySession auswerten können.  
+7.  Klicken Sie im Menü **Aktionen** auf **Empfehlungen bewerten**. 
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Der Optimierungsratgeber erstellt eine neue Optimierungssitzung, in der Sie eine Untergruppe der ursprünglichen Empfehlungen aus MySession auswerten können.  
   
-8.  Typ `EvaluateMySession` für Ihre neue **Sitzungsname**, und klicken Sie auf die **Analyse starten** auf der Symbolleiste. Zum Anzeigen der Ergebnisse dieser neuen Optimierungssitzung können Sie die Schritte 2 und 3 wiederholen.  
+8.  Geben `EvaluateMySession` Sie für den neuen **Sitzungs Namen**ein, und klicken Sie auf der Symbolleiste auf die Schaltfläche **Analyse starten** . Zum Anzeigen der Ergebnisse dieser neuen Optimierungssitzung können Sie die Schritte 2 und 3 wiederholen.  
   
 ## <a name="summary"></a>Zusammenfassung  
  Sie haben den Inhalt der Registerkarte **Empfehlungen** für die Optimierungssitzung MySession angezeigt und eine Untergruppe der Empfehlungen in der neuen Optimierungssitzung EvaluateMySession ausgewertet.  
   
- Das Auswerten einer Untergruppe von Optimierungsempfehlungen kann erforderlich sein, wenn Sie feststellen, dass Sie nach dem Ausführen einer Sitzung die Optimierungsoptionen noch ändern müssen. Beispiel: Sie legen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber in den Optimierungsoptionen für eine Sitzung fest, dass indizierte Sichten berücksichtigt werden sollen. Nachdem die Empfehlung erstellt wurde, beschließen Sie jedoch, indizierte Sichten nicht zu berücksichtigen. Sie können anschließend im Menü **Aktionen** den **-Optimierungsratgeber mithilfe der Option** Empfehlungen bewerten [!INCLUDE[ssDE](../../includes/ssde-md.md)] anweisen, die Sitzung neu zu bewerten, ohne dabei indizierte Sichten zu berücksichtigen. Wenn Sie die Option **Empfehlungen auswerten** verwenden, werden für die zweite Optimierungssitzung die vorher generierten Empfehlungen hypothetisch auf den aktuellen physischen Entwurf angewendet, um den physischen Entwurf für die zweite Optimierungssitzung zu erstellen.  
+ Das Auswerten einer Untergruppe von Optimierungsempfehlungen kann erforderlich sein, wenn Sie feststellen, dass Sie nach dem Ausführen einer Sitzung die Optimierungsoptionen noch ändern müssen. Beispiel: Sie legen im [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber in den Optimierungsoptionen für eine Sitzung fest, dass indizierte Sichten berücksichtigt werden sollen. Nachdem die Empfehlung erstellt wurde, beschließen Sie jedoch, indizierte Sichten nicht zu berücksichtigen. Sie können dann im Menü **Aktionen** die Option **Empfehlungen auswerten** verwenden, damit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungs Ratgeber die Sitzung erneut evaluiert, ohne indizierte Sichten zu berücksichtigen. Wenn Sie die Option **Empfehlungen auswerten** verwenden, werden für die zweite Optimierungssitzung die vorher generierten Empfehlungen hypothetisch auf den aktuellen physischen Entwurf angewendet, um den physischen Entwurf für die zweite Optimierungssitzung zu erstellen.  
   
  Auf der Registerkarte **Berichte** können Sie weitere Ergebnisse der Optimierung anzeigen. Darauf wird in der nächsten Aufgabe dieser Lektion näher eingegangen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Anzeigen von Optimierungsberichten](lesson-1-3-viewing-tuning-reports.md)  
   
   

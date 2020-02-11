@@ -1,5 +1,5 @@
 ---
-title: Sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft-Dokumentation
+title: sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -16,18 +16,18 @@ ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68137751"
 ---
-# <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
+# <a name="sp_helpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu Datenzeilen zurück, die Löschkonflikte verloren haben. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungsdatenbank oder auf dem Abonnenten für die Abonnementdatenbank ausgeführt, wenn die Konfliktprotokollierung dezentralisiert erfolgt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,37 +40,37 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @publication = ] 'publication'` Ist der Name der Veröffentlichung. *Veröffentlichung* ist **Sysname**, hat den Standardwert **%** . Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben.  
+`[ @publication = ] 'publication'`Der Name der Veröffentlichung. *Publication* ist vom **Datentyp vom Datentyp sysname**. der **%** Standardwert ist. Wenn die Veröffentlichung angegeben wird, werden alle Konflikte dieser Veröffentlichung zurückgegeben.  
   
-`[ @source_object = ] 'source_object'` Ist der Name des Quellobjekts. *Source_object* ist **nvarchar(386)** , hat den Standardwert NULL.  
+`[ @source_object = ] 'source_object'`Der Name des Quell Objekts. *source_object* ist vom Datentyp **nvarchar (386)** und hat den Standardwert NULL.  
   
-`[ @publisher = ] 'publisher'` Ist der Name des Verlegers. *Verleger* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @publisher_db = ] 'publisher_db'` Ist der Name der Verlegerdatenbank. *Publisher_db* ist **Sysname**, hat den Standardwert NULL.  
+`[ @publisher_db = ] 'publisher_db'`Der Name der Verleger Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**source_object**|**nvarchar(386)**|Quellobjekt für den Löschkonflikt.|  
+|**source_object**|**nvarchar (386)**|Quellobjekt für den Löschkonflikt.|  
 |**rowguid**|**uniqueidentifier**|Zeilenbezeichner für den Löschkonflikt.|  
-|**conflict_type**|**int**|Code, der angibt, der Art des Konflikts:<br /><br /> **1** = UpdateConflict: Konflikt wird auf der Zeilenebene erkannt.<br /><br /> **2** = ColumnUpdateConflict: Konflikt auf Spaltenebene erkannt.<br /><br /> **3** = UpdateDeleteWinsConflict: Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = UpdateWinsDeleteConflict: Der gelöschte Zeilen-GUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = UploadInsertFailed: Einfügevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = DownloadInsertFailed: Einfügevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = UploadDeleteFailed: Löschvorgang des Abonnenten konnte nicht an den Verleger hochgeladen werden.<br /><br /> **8** = DownloadDeleteFailed: Löschvorgang des Verlegers konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = UploadUpdateFailed: Updatevorgang des Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = DownloadUpdateFailed: Updatevorgang des Verlegers konnte nicht auf dem Abonnenten angewendet werden.|  
-|**reason_code**|**Int**|Fehlercode, der kontextabhängig sein kann.|  
-|**reason_text**|**varchar(720)**|Fehlerbeschreibung, die kontextabhängig sein kann.|  
-|**origin_datasource**|**varchar(255)**|Ursprung des Konflikts.|  
+|**conflict_type**|**int**|Code, der den Typ des Konflikts angibt:<br /><br /> **1** = UpdateConflict: der Konflikt wurde auf Zeilenebene erkannt.<br /><br /> **2** = ColumnUpdateConflict: der Konflikt wurde auf Spaltenebene erkannt.<br /><br /> **3** = UpdateDeleteWinsConflict: der Löschvorgang gewinnt den Konflikt.<br /><br /> **4** = UpdateWinsDeleteConflict: die gelöschte ROWGUID, die den Konflikt verliert, wird in dieser Tabelle aufgezeichnet.<br /><br /> **5** = UploadInsertFailed: der Einfügevorgang vom Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **6** = DownloadInsertFailed: der Einfügevorgang vom Verleger konnte nicht auf dem Abonnenten angewendet werden.<br /><br /> **7** = UploadDeleteFailed: der Löschvorgang auf dem Abonnenten konnte nicht auf den Verleger hochgeladen werden.<br /><br /> **8** = DownloadDeleteFailed: der Löschvorgang auf dem Verleger konnte nicht auf den Abonnenten heruntergeladen werden.<br /><br /> **9** = UploadUpdateFailed: das Update auf dem Abonnenten konnte nicht auf dem Verleger angewendet werden.<br /><br /> **10** = DownloadUpdateFailed: das Update auf dem Verleger konnte nicht auf den Abonnenten angewendet werden.|  
+|**reason_code**|**Wartenden**|Fehlercode, der kontextabhängig sein kann.|  
+|**reason_text**|**varchar (720)**|Fehlerbeschreibung, die kontextabhängig sein kann.|  
+|**origin_datasource**|**varchar (255)**|Ursprung des Konflikts.|  
 |**pubid**|**uniqueidentifier**|Veröffentlichungsbezeichner.|  
 |**MSrepl_create_time**|**datetime**|Zeitpunkt, zu dem die Konfliktinformationen hinzugefügt wurden.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_helpmergedeleteconflictrows** wird bei der Mergereplikation verwendet.  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_helpmergedeleteconflictrows** wird bei der Mergereplikation verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Nur Mitglieder der der **Sysadmin** Serverrolle und die **Db_owner** feste Datenbankrolle können ausführen **Sp_helpmergedeleteconflictrows**.  
+ Nur Mitglieder der festen Server Rolle **sysadmin** und der festen Daten Bank Rolle **db_owner** können **sp_helpmergedeleteconflictrows**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

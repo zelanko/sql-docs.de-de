@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78c3ba452d3ba681823e5c9f473d7a86f55809a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62833781"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services-Verbindungen (SSIS)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Funktionen.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Pakete verwenden Verbindungen zum Ausführen verschiedener Tasks und zum Implementieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] von Features: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
 -   Herstellen einer Verbindung mit Quell- und Zieldatenspeichern, z. B. Text, XML, Excel-Arbeitsmappen und relationale Datenbanken, zum Extrahieren und Laden von Daten.  
   
@@ -51,11 +51,12 @@ ms.locfileid: "62833781"
  Um diese Verbindungen herzustellen, verwendet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Verbindungs-Manager. Dies wird im nächsten Abschnitt beschrieben.  
   
 ## <a name="connection-managers"></a>Verbindungs-Manager  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet den Verbindungs-Manager als logische Darstellung einer Verbindung. Zur Entwurfszeit legen Sie die Eigenschaften eines Verbindungs-Managers fest, um die physische Verbindung zu beschreiben, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] beim Ausführen des Pakets erstellt. Beispielsweise enthält ein Verbindungs-Manager die `ConnectionString`-Eigenschaft, die Sie zur Entwurfszeit festlegen. Zur Laufzeit wird mithilfe des Werts in der ConnectionString-Eigenschaft eine physische Verbindung erstellt.  
+ 
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verwendet den Verbindungs-Manager als logische Darstellung einer Verbindung. Zur Entwurfszeit legen Sie die Eigenschaften eines Verbindungs-Managers fest, um die physische Verbindung zu beschreiben, die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] beim Ausführen des Pakets erstellt. Beispielsweise enthält ein Verbindungs-Manager die `ConnectionString`-Eigenschaft, die Sie zur Entwurfszeit festlegen. Zur Laufzeit wird mithilfe des Werts in der ConnectionString-Eigenschaft eine physische Verbindung erstellt.  
   
  Ein Paket kann mehrere Instanzen eines Verbindungs-Manager-Typs verwenden, und Sie können die Eigenschaften für jede Instanz festlegen. Zur Laufzeit erstellt jede Instanz eines Verbindungs-Manager-Typs eine Verbindung mit verschiedenen Attributen.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt verschiedene Typen von Verbindungs-Managern bereit, mit denen Pakete eine Verbindung mit einer Reihe von Datenquellen und Servern herstellen können:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt verschiedene Typen von Verbindungs-Managern bereit, mit denen Pakete eine Verbindung mit einer Vielzahl von Datenquellen und Servern herstellen können:  
   
 -   Einige integrierte Verbindungs-Manager werden bei der Installation von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installiert.  
   
@@ -64,9 +65,9 @@ ms.locfileid: "62833781"
 -   Sie können einen eigenen benutzerdefinierten Verbindungs-Manager erstellen, wenn die vorhandenen Verbindungs-Manager Ihren Anforderungen nicht entsprechen.  
   
 ### <a name="built-in-connection-managers"></a>Integrierte Verbindungs-Manager  
- In der folgenden Tabelle werden die Verbindungs-Manager-Typen aufgeführt, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zur Verfügung gestellt werden.  
+ In der folgenden Tabelle sind die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Verbindungs-Manager-Typen aufgeführt.  
   
-|Typ|Description|Thema|  
+|type|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
 |ADO|Stellt eine Verbindung mit ADO-Objekten (ActiveX Data Objects) her.|[ADO-Verbindungs-Manager](ado-connection-manager.md)|  
 |ADO.NET|Stellt eine Verbindung mit einer Datenquelle mithilfe eines .NET-Anbieters her.|[ADO.NET-Verbindungs-Manager](ado-net-connection-manager.md)|  
@@ -78,7 +79,7 @@ ms.locfileid: "62833781"
 |FTP|Stellt eine Verbindung mit einem FTP-Server her.|[FTP-Verbindungs-Manager](ftp-connection-manager.md)|  
 |HTTP|Stellt eine Verbindung mit einem Webserver her.|[HTTP-Verbindungs-Manager](http-connection-manager.md)|  
 |MSMQ|Stellt eine Verbindung mit einer Nachrichtenwarteschlange her.|[MSMQ-Verbindungs-Manager](msmq-connection-manager.md)|  
-|MSOLAP100|Stellt eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt her.|[Analysis Services-Verbindungs-Manager](analysis-services-connection-manager.md)|  
+|MSOLAP100|Stellt eine Verbindung mit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder einem-Projekt her.|[Analysis Services-Verbindungs-Manager](analysis-services-connection-manager.md)|  
 |MULTIFILE|Stellt eine Verbindung mit mehreren Dateien und Ordnern her.|[Verbindungs-Manager für mehrere Dateien](multiple-files-connection-manager.md)|  
 |MULTIFLATFILE|Stellt eine Verbindung mit mehreren Datendateien und Ordnern her.|[Verbindungs-Manager für mehrere Flatfiles](multiple-flat-files-connection-manager.md)|  
 |OLEDB|Stellt eine Verbindung mit einer Datenquelle mithilfe eines OLE DB-Anbieters her.|[OLE DB-Verbindungs-Manager](ole-db-connection-manager.md)|  
@@ -94,11 +95,11 @@ ms.locfileid: "62833781"
 > [!IMPORTANT]  
 >  Die in der folgenden Tabelle aufgelisteten Verbindungs-Manager funktionieren nur mit [!INCLUDE[ssEnterpriseEd11](../../includes/ssenterpriseed11-md.md)] und [!INCLUDE[ssDeveloperEd11](../../includes/ssdevelopered11-md.md)].  
   
-|Typ|Description|Thema|  
+|type|BESCHREIBUNG|Thema|  
 |----------|-----------------|-----------|  
-|ORACLE|Stellt eine Verbindung her mit einer Oracle \<Versionsinfo > Server.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|ORACLE|Stellt eine Verbindung mit \<einer Oracle-Versions Info> Server her.|Der Oracle-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Oracle von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Oracle von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
 |SAPBI|Stellt eine Verbindung mit einem System mit SAP NetWeaver BI, Version 7 her.|Der SAP BI-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für SAP BI. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für SAP BI enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=262016).|  
-|TERADATA|Stellt eine Verbindung her mit einem Teradata \<Versionsinfo > Server.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
+|TERADATA|Stellt eine Verbindung mit einer Teradata \<-Versions Info> Server her.|Der Teradata-Verbindungs-Manager ist die Verbindungs-Manager-Komponente des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connectors für Teradata von Attunity. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Connector für Teradata von Attunity enthält auch eine Quelle und ein Ziel. Weitere Informationen finden Sie auf der Downloadseite [Microsoft Connectors für Oracle und Teradata von Attunity](https://go.microsoft.com/fwlink/?LinkId=251526).|  
   
 ### <a name="custom-connection-managers"></a>Benutzerdefinierte Verbindungs-Manager  
  Sie können auch benutzerdefinierte Verbindungs-Manager schreiben. Weitere Informationen finden Sie unter [Developing a Custom Connection Manager](../extending-packages-custom-objects/connection-manager/developing-a-custom-connection-manager.md).  

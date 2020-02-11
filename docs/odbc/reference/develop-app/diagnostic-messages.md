@@ -15,39 +15,39 @@ ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039892"
 ---
 # <a name="diagnostic-messages"></a>Diagnosemeldungen
-Eine diagnosemeldung wird mit jeder SQLSTATE zurückgegeben. Die gleiche SQLSTATE wird häufig mit einer Anzahl von unterschiedlichen Nachrichten zurückgegeben. SQLSTATE 42000 (Syntaxfehler oder zugriffsverletzung) wird z. B. für die meisten Fehler im SQL-Syntax zurückgegeben. Jede Syntaxfehler ist jedoch wahrscheinlich durch eine andere Meldung beschrieben werden.  
+Eine Diagnose Meldung wird mit jedem SQLSTATE zurückgegeben. Der gleiche SQLSTATE wird häufig mit einer Reihe von unterschiedlichen Meldungen zurückgegeben. Beispielsweise wird SQLSTATE 42000 (Syntax Fehler oder Zugriffsverletzung) für die meisten Fehler in der SQL-Syntax zurückgegeben. Allerdings wird jeder Syntax Fehler wahrscheinlich durch eine andere Nachricht beschrieben.  
   
- Beispiel-diagnosemeldungen werden in der Error-Spalte in der Tabelle der SQLSTATEs in Anhang A und in jeder Funktion aufgeführt. Obwohl Treiber diese Meldungen zurückgegeben werden können, sind sie eher zurückgeben, alle Nachrichten werden von der Datenquelle übergeben wird.  
+ Beispiel Diagnosemeldungen werden in der Spalte Fehler in der Tabelle SQLStates in Anhang A und in jeder Funktion aufgelistet. Obwohl Treiber diese Nachrichten zurückgeben können, werden Sie wahrscheinlich die von der Datenquelle an Sie weiter gegebene Nachricht zurückgeben.  
   
- Anwendungen anzeigen diagnosemeldungen in der Regel dem Benutzer zusammen mit den SQLSTATE und systemeigener Fehlercode. Dies hilft dem Benutzer und Support in Verbindung bestimmen, die Ursache von Problemen. Die Komponenteninformationen in der Meldung eingebetteten ist dies besonders hilfreich.  
+ Anwendungen zeigen in der Regel Diagnosemeldungen für den Benutzer an, zusammen mit dem SQLSTATE-Fehlercode und dem nativen Fehlercode. Dadurch können Benutzer und Supportmitarbeiter die Ursache von Problemen ermitteln. Die Komponenten Informationen, die in die Nachricht eingebettet sind, sind besonders hilfreich.  
   
- Diagnosemeldungen stammen aus Datenquellen und -Komponenten in eine ODBC-Verbindung wie Treiber, Gateways und der Treiber-Manager. Datenquellen unterstützen nicht in der Regel direkt ODBC. Wenn eine Komponente in eine ODBC-Verbindung eine Nachricht aus einer Datenquelle empfängt, müssen sie daher die Datenquelle als Quelle der Nachricht identifizieren. Sie müssen auch selbst als die Komponente kennzeichnen, die die Nachricht zu empfangen.  
+ Diagnosemeldungen stammen aus Datenquellen und Komponenten in einer ODBC-Verbindung, wie z. b. Treibern, Gateways und Treiber-Manager. Datenquellen unterstützen ODBC in der Regel nicht direkt. Wenn eine Komponente in einer ODBC-Verbindung folglich eine Nachricht von einer Datenquelle empfängt, muss Sie die Datenquelle als Quelle der Nachricht identifizieren. Er muss sich auch als die Komponente identifizieren, die die Nachricht empfangen hat.  
   
- Wenn die Quelle der Warnung oder ein Fehler einer Komponente selbst ist, muss die diagnosemeldung diese erläutern. Der Text der Nachrichten hat daher zwei verschiedene Formate. Für Fehler und Warnungen, die nicht in einer Datenquelle auftreten, muss die diagnosemeldung dieses Format verwenden:  
+ Wenn die Quelle eines Fehlers oder einer Warnung eine Komponente selbst ist, muss diese in der Diagnose Meldung erläutert werden. Daher weist der Text der Nachrichten zwei verschiedene Formate auf. Bei Fehlern und Warnungen, die nicht in einer Datenquelle auftreten, muss die Diagnose Meldung folgendes Format aufweisen:  
   
- **[** *Hersteller-ID* **] [** *ODBC-Komponenten-ID* **]** *Komponente bereitgestellten Text*  
+ **[** *Hersteller-* **ID] [** *ODBC-Component-Identifier* **]** von der *Komponente bereitgestellter Text*  
   
- Für Fehler und Warnungen, die in einer Datenquelle auftreten, muss die diagnosemeldung dieses Format verwenden:  
+ Für Fehler und Warnungen, die in einer Datenquelle auftreten, muss die Diagnose Meldung dieses Format verwenden:  
   
- **[** *Hersteller-ID* **] [** *ODBC-Komponenten-ID* **] [** *datenquellenbezeichner*  **]** *Data-Source-bereitgestellten-Text*  
+ **[** *Hersteller-ID* **] [** *ODBC-Component-Identifier* **] [** *Datenquellen-* ID **]** von der *Datenquelle bereitgestellter Text*  
   
  Die folgende Tabelle zeigt die Bedeutung der einzelnen Elemente.  
   
 |Element|Bedeutung|  
 |-------------|-------------|  
-|*vendor-identifier*|Gibt den Hersteller der Komponente in der der Fehler oder die Warnung aufgetreten ist, oder, der den Fehler oder Warnung direkt aus der Datenquelle empfangen.|  
-|*ODBC-Komponenten-ID*|Identifiziert die Komponente in der der Fehler oder die Warnung aufgetreten ist, oder, der den Fehler oder Warnung direkt aus der Datenquelle empfangen.|  
-|*data-source-identifier*|Identifiziert die Datenquelle an. Für dateibasierte Treiber, dies ist normalerweise ein Dateiformat, z. B. Xbase [1] für die DBMS-basierten Treibern, ist dies das DBMS-Produkt.|  
-|*component-supplied-text*|Von der ODBC-Komponente generiert.|  
-|*data-source-supplied-text*|Von der Datenquelle generiert.|  
+|*Hersteller-ID*|Identifiziert den Anbieter der Komponente, in der der Fehler oder die Warnung aufgetreten ist oder der den Fehler bzw. die Warnung direkt von der Datenquelle erhalten hat.|  
+|*ODBC-Component-Identifier*|Identifiziert die Komponente, in der der Fehler oder die Warnung aufgetreten ist oder die den Fehler bzw. die Warnung direkt von der Datenquelle empfangen hat.|  
+|*Datenquellen-Bezeichner*|Identifiziert die Datenquelle. Bei dateibasierten Treibern ist dies in der Regel ein Dateiformat (z. b. xbase [1] für DBMS-basierte Treiber). Dies ist das DBMS-Produkt.|  
+|*von der Komponente bereitgestellter Text*|Wird von der ODBC-Komponente generiert.|  
+|*von der Datenquelle bereitgestellter Text*|Wird von der Datenquelle generiert.|  
   
- [1] In diesem Fall wird der Treiber als sowohl der Treiber und der Datenquelle verwendet.  
+ [1] in diesem Fall fungiert der Treiber sowohl als Treiber als auch als Datenquelle.  
   
- Eckige Klammern ( **[]** ) in der Nachricht enthalten sein müssen, und zeigen optionale Elemente.
+ Eckige Klammern (**[]**) müssen in der Nachricht enthalten sein und dürfen keine optionalen Elemente angeben.

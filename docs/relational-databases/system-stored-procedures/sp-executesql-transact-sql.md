@@ -1,5 +1,5 @@
 ---
-title: Sp_executesql (Transact-SQL) | Microsoft-Dokumentation
+title: sp_executesql (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68290357"
 ---
-# <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
+# <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Führt eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder einen -Batch aus, die bzw. der mehrfach wiederverwendet werden kann oder dynamisch erstellt wurde. Die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung oder der -Batch können eingebettete Parameter enthalten.  
@@ -34,7 +34,7 @@ ms.locfileid: "68290357"
 > [!IMPORTANT]  
 >  Durch zur Laufzeit kompilierte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen können Anwendungen böswilligen Angriffen ausgesetzt werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,22 +49,22 @@ sp_executesql [ @stmt = ] statement
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ \@Stmt =] *Anweisung*  
- Ist eine Unicodezeichenfolge mit einem [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder einen Batch. \@Stmt muss es sich um eine Unicodekonstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss er mit Präfix ein **N**. Beispielsweise die Unicode-Konstante **N 'Sp_who'** gültig ist, die Zeichenkonstante **'Sp_who'** nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern, die Größe der Zeichenfolge beträgt 2 GB sind, die maximale Größe der **nvarchar(max)** .  
+ [ \@stmt =] *Anweisung*  
+ Eine Unicode-Zeichenfolge, die [!INCLUDE[tsql](../../includes/tsql-md.md)] eine-Anweisung oder einen-Batch enthält. \@stmt muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Komplexere Unicodeausdrücke, wie z. B. die Verkettung von zwei Zeichenfolgen mit dem +-Operator, sind nicht zulässig. Zeichenkonstanten sind nicht zulässig. Wenn eine Unicode-Konstante angegeben wird, muss Ihr ein **N**vorangestellt werden. Beispielsweise ist die Unicode-Konstante **N ' sp_who '** gültig, aber die Zeichen Konstante **' sp_who '** ist nicht. Die Länge der Zeichenfolge wird nur durch den verfügbaren Arbeitsspeicher des Datenbankservers begrenzt. Auf 64-Bit-Servern ist die Größe der Zeichenfolge auf 2 GB beschränkt, die maximale Größe von **nvarchar (max)**.  
   
 > [!NOTE]  
->  \@Stmt kann Parameter aufweisen, die die gleiche Form wie ein Variablenname aufweisen, z. B. enthalten: `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
+>  \@stmt kann Parameter enthalten, die dieselbe Form wie ein Variablenname aufweisen, z. b.:`N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
- Für jeden Parameter in \@Stmt ist ein entsprechender Eintrag muss in beiden die \@Definitionsliste für Params-Parameter und den Parameter Werteliste.  
+ Jeder in \@stmt enthaltene Parameter muss über einen entsprechenden Eintrag in der \@Parameter Definitionsliste params und in der Parameterwerte Liste verfügen.  
   
- [ \@Params =] N'\@*Parameter_name* *Data_type* [,... *n* ] "  
- Eine Zeichenfolge, die die Definitionen aller Parameter enthält, die eingebetteten \@Stmt. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameterdefinitionen. Jeder Parameter, die im angegebenen \@Stmt muss definiert werden, \@Params. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in \@Stmt enthält keine Parameter \@"Params" ist nicht erforderlich. Der Standardwert für diesen Parameter ist NULL.  
+ [ \@Parameter =] N '\@*parameter_name* *data_type* [,... *n* ] '  
+ Ist eine Zeichenfolge, die die Definitionen aller in \@stmt eingebetteten Parameter enthält. Die Zeichenfolge muss entweder eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. *n* ist ein Platzhalter, der zusätzliche Parameter Definitionen angibt. Jeder in \@stmt angegebene Parameter muss in \@params definiert werden. Wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung oder der Batch \@in stmt keine Parameter enthält, \@ist kein Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
- [ \@param1 =] '*value1*"  
- Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Es muss ein Parameterwert angegeben wird, für jeden Parameter in \@Stmt. Die Werte sind nicht erforderlich, wenn die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der Batch in \@Stmt hat keine Parameter.  
+ [ \@param1 =] "*value1*"  
+ Der Wert für den ersten Parameter, der in der Parameterzeichenfolge definiert ist. Bei diesem Wert kann es sich um eine Unicode-Konstante oder eine Unicode-Variable handeln. Für jeden Parameter, der in \@stmt enthalten ist, muss ein Parameterwert angegeben werden. Die Werte sind nicht erforderlich, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] die Anweisung oder der \@Batch in stmt keine Parameter enthält.  
   
  [ OUT | OUTPUT ]  
- Gibt an, dass es sich bei dem Parameter um einen Ausgabeparameter handelt. **Text**, **Ntext**, und **Image** Parameter können als OUTPUT-Parameter verwendet werden, es sei denn, der die Prozedur eine Prozedur der common Language Runtime (CLR) ist. Ein Ausgabeparameter, der das Schlüsselwort OUTPUT verwendet, kann ein Cursorplatzhalter sein, es sei denn, bei der Prozedur handelt es sich um eine CLR-Prozedur (Common Language Runtime).  
+ Gibt an, dass es sich bei dem Parameter um einen Ausgabeparameter handelt. die Parameter " **Text**", " **ntext**" und " **Image** " können als Ausgabeparameter verwendet werden, es sei denn, die Prozedur ist eine Common Language Runtime (CLR)-Prozedur Ein Ausgabeparameter, der das Schlüsselwort OUTPUT verwendet, kann ein Cursorplatzhalter sein, es sei denn, bei der Prozedur handelt es sich um eine CLR-Prozedur (Common Language Runtime).  
   
  *n*  
  Ein Platzhalter für die Werte zusätzlicher Parameter. Werte können nur Konstanten oder Variablen sein. Werte können keine komplexeren Ausdrücke sein, wie z. B. Funktionen oder Ausdrücke, die mithilfe von Operatoren erstellt werden.  
@@ -75,10 +75,10 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>Resultsets  
  Gibt die Resultsets von allen SQL-Anweisungen der SQL-Zeichenfolge zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Sp_executesql-Parameter müssen in der Reihenfolge eingegeben werden, wie im Abschnitt "Syntax" weiter oben in diesem Thema beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ sp_executesql Parameter müssen in der jeweiligen Reihenfolge eingegeben werden, wie im Abschnitt "Syntax" weiter oben in diesem Thema beschrieben. Wenn die Parameter nicht in der vorgegebenen Reihenfolge eingegeben werden, wird eine Fehlermeldung ausgegeben.  
   
- sp_executesql verhält sich hinsichtlich Batches, Namensbereichen und Datenbankkontext wie EXECUTE. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder einen Batch im Sp_executesql \@Stmt-Parameter wird nicht kompiliert werden, bis die Sp_executesql-Anweisung ausgeführt wird. Der Inhalt des \@Stmt wird dann kompiliert und ausgeführt wird, als einen Ausführungsplan, der getrennt von den Ausführungsplan des Batches, der Sp_executesql aufgerufen hat. Der sp_executesql-Batch kann nicht auf Variablen verweisen, die in dem Batch deklariert werden, der sp_executesql aufruft. Lokale Cursor oder Variablen im sp_executesql-Batch sind für den Batch, der sp_executesql aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der sp_executesql-Anweisung vorhanden.  
+ sp_executesql verhält sich hinsichtlich Batches, Namensbereichen und Datenbankkontext wie EXECUTE. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung oder der-Batch \@im sp_executesql stmt-Parameter wird erst kompiliert, wenn die sp_executesql-Anweisung ausgeführt wird. Der Inhalt von \@stmt wird dann kompiliert und als Ausführungsplan ausgeführt, der separat vom Ausführungsplan des Batches ist, der sp_executesql aufgerufen hat. Der sp_executesql-Batch kann nicht auf Variablen verweisen, die in dem Batch deklariert werden, der sp_executesql aufruft. Lokale Cursor oder Variablen im sp_executesql-Batch sind für den Batch, der sp_executesql aufruft, nicht sichtbar. Änderungen am Datenbankkontext sind nur bis zum Ende der sp_executesql-Anweisung vorhanden.  
   
  sp_executesql kann anstelle von gespeicherten Prozeduren verwendet werden, um eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mehrere Male auszuführen, wenn sich nur die Parameterwerte in der Anweisung ändern. Da die [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung selbst unverändert bleibt und nur die Parameterwerte geändert werden, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer wahrscheinlich den Ausführungsplan wiederverwenden, der für die erste Ausführung erstellt wird.  
   
@@ -205,7 +205,7 @@ GO
  Das Verwenden von sp_executesql in dieser Prozedur ist effizienter als das Verwenden von EXECUTE zum Ausführen einer Zeichenfolge. Beim Verwenden von sp_executesql werden nur 12 Versionen der INSERT-Zeichenfolge generiert, nämlich eine Version für jede Monatstabelle. Mit EXECUTE ist jede INSERT-Zeichenfolge eindeutig, weil die Parameterwerte unterschiedlich sind. Obwohl beide Methoden die gleiche Anzahl von Batches generieren, ist es wegen der Ähnlichkeit der von sp_executesql generierten INSERT-Zeichenfolgen wahrscheinlicher, dass der Abfrageoptimierer die Ausführungspläne wiederverwendet.  
   
 ### <a name="c-using-the-output-parameter"></a>C. Verwenden des OUTPUT-Parameters  
- Im folgenden Beispiel wird ein `OUTPUT` Parameter zum Speichern von generierten Resultset die `SELECT` -Anweisung in der `@SQLString` Parameter. Zwei `SELECT` Anweisungen werden dann ausgeführt, die den Wert von der `OUTPUT` Parameter.  
+ Im folgenden Beispiel wird ein `OUTPUT` -Parameter verwendet, um das von der `SELECT` -Anweisung im- `@SQLString` Parameter generierte Resultset zu speichern. Anschließend `SELECT` werden zwei-Anweisungen ausgeführt, die den Wert des `OUTPUT` -Parameters verwenden.  
   
 ```  
 USE AdventureWorks2012;  
@@ -234,9 +234,9 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-executing-a-simple-select-statement"></a>D. Ausführen einer einfachen SELECT-Anweisung  
+### <a name="d-executing-a-simple-select-statement"></a>D: Ausführen einer einfachen SELECT-Anweisung  
  In diesem Beispiel wird eine einfache `SELECT`-Anweisung erstellt und ausgeführt, die den eingebetteten Parameter `@level` enthält.  
   
 ```  
@@ -249,7 +249,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

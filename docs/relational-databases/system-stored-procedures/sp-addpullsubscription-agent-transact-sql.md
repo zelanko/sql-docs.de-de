@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69028956"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -27,7 +27,7 @@ ms.locfileid: "69028956"
  
   Fügt einer Transaktionsveröffentlichung einen neuen geplanten Agent-Auftrag hinzu, mit dem ein Pullabonnement synchronisiert wird. Diese gespeicherte Prozedur wird auf dem Abonnenten für die Abonnement Datenbank ausgeführt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -126,20 +126,20 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  Verwenden Sie kein leeres Kennwort. Verwenden Sie ein sicheres Kennwort. Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, muss die Datei an einem sicheren Ort gespeichert werden, um unberechtigten Zugriff zu vermeiden.  
   
-`[ @optional_command_line = ] 'optional_command_line'`Ist eine optionale Eingabeaufforderung, die für die Verteilungs-Agent bereitgestellt wird. Beispiel: **-DefinitionFile** c:\Distdef.txt oder **-CommitBatchSize** 10. *optional_command_line* ist vom Datentyp **nvarchar (4000)** . der Standardwert ist eine leere Zeichenfolge.  
+`[ @optional_command_line = ] 'optional_command_line'`Ist eine optionale Eingabeaufforderung, die für die Verteilungs-Agent bereitgestellt wird. Beispiel: **-DefinitionFile** c:\Distdef.txt oder **-CommitBatchSize** 10. *optional_command_line* ist vom Datentyp **nvarchar (4000)**. der Standardwert ist eine leere Zeichenfolge.  
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der die Verteilungs-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Description|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1**|Einmal|  
-|**2** (Standardwert)|Bedarfsgesteuert|  
+|**1**|Einmalig|  
+|**2** (Standard)|On-Demand-Streaming|  
 |**4**|Täglich|  
-|**8**|Wöchentlicher Zeitplan|  
-|**16**|Monatlicher Zeitplan|  
+|**88**|Wöchentlich|  
+|**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
-|**128**|Wiederholt|  
+|**128**|Serie|  
   
 > [!NOTE]  
 >  Das Angeben des Werts **64** bewirkt, dass die Verteilungs-Agent im kontinuierlichen Modus ausgeführt wird. Dies entspricht dem Festlegen des **-Continuous-** Parameters für den Agent. Weitere Informationen finden Sie unter [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
@@ -148,26 +148,26 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1** (Standard)|Erster|  
-|**2**|Zweimal|  
+|**1** (Standard)|First (Erster)|  
+|**2**|Sekunde|  
 |**4**|Dritter|  
-|**8**|Vierter|  
-|**16**|Letzter|  
+|**88**|Vierter|  
+|**Uhr**|Last (Letzter)|  
   
 `[ @frequency_recurrence_factor = ] frequency_recurrence_factor`Der von *frequency_type*verwendete Wiederholungs Faktor. *frequency_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1** (Standard)|Einmal|  
-|**2**|Zweimal|  
+|**1** (Standard)|Einmalig|  
+|**2**|Sekunde|  
 |**4**|Minute|  
-|**8**|Hour|  
+|**88**|Hour|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert **1**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`Das Intervall für die *frequency_subday*. *frequency_subday_interval* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
 `[ @active_start_time_of_day = ] active_start_time_of_day`Die Tageszeit, zu der die Verteilungs-Agent zum ersten Mal geplant ist. dabei wird das Format HHMMSS verwendet. *active_start_time_of_day* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
@@ -177,7 +177,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date`Das Datum, an dem der Verteilungs-Agent nicht mehr geplant ist, formatiert als YYYYMMDD. *active_end_date* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT`Die ID der Verteilungs-Agent für diesen Auftrag. *distribution_jobid* ist vom Typ **Binary (16)** und hat den Standardwert NULL, und es handelt sich um einen Output-Parameter.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT`Die ID der Verteilungs-Agent für diesen Auftrag. *distribution_jobid* ist **Binary (16)** und hat den Standardwert NULL, und es handelt sich um einen Output-Parameter.  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password`Das Festlegen von *encrypted_distributor_password* wird nicht mehr unterstützt. Der Versuch, diesen **Bit** -Parameter auf **1** festzulegen, führt zu einem Fehler.  
   
@@ -204,7 +204,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 `[ @dts_package_password = ] 'dts_package_password'`Gibt ggf. das Kennwort für das Paket an. *dts_package_password* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Dies bedeutet, dass kein Kennwort für das Paket gilt.  
   
 > [!NOTE]  
->  Sie müssen ein Kennwort angeben, wenn *dts_package_name* angegeben wird.  
+>  Wenn *dts_package_name* angegeben ist, müssen Sie ein Kennwort angeben.  
   
 `[ @dts_package_location = ] 'dts_package_location'`Gibt den Speicherort des Pakets an. *dts_package_location* ist vom Datentyp **nvarchar (12)** und hat den Standardwert **Subscriber**. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.  
   
@@ -216,7 +216,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
->  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Wenn *remote_agent_server_name* auf einen anderen Wert als NULL festgelegt wird, wird ein Fehler generiert.  
+>  Die Aktivierung des Remote-Agents wurde als veraltet markiert und wird nicht mehr unterstützt. Dieser Parameter wird nur zur Aufrechterhaltung der Abwärtskompatibilität von Skripts unterstützt. Wenn Sie *remote_agent_server_name* auf einen nicht-NULL-Wert festlegen, wird ein Fehler generiert.  
   
 `[ @job_name = ] 'job_name'`Der Name eines vorhandenen Agentauftrags. *job_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Dieser Parameter wird nur angegeben, wenn das Abonnement mithilfe eines vorhandenen Auftrags statt mit einem neu erstellten Auftrag (Standard) synchronisiert wird. Wenn Sie kein Mitglied der festen Server Rolle **sysadmin** sind, müssen Sie *job_login* und *job_password* angeben, wenn Sie *job_name*angeben.  
   
@@ -230,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_addpullsubscription_agent** wird bei der Momentaufnahme-und Transaktions Replikation verwendet.  
   
 ## <a name="example"></a>Beispiel  
@@ -239,13 +239,13 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpullsubscription_agent**ausführen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen eines Pullabonnements](../../relational-databases/replication/create-a-pull-subscription.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
- [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
- [sp_helppullsubscription &#40;(Transact-SQL)&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_addpullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_change_subscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

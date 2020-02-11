@@ -10,10 +10,10 @@ ms.assetid: d2e558b8-7208-44b4-82b3-4b411a34a8c9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2a99cc9b4eaa1ca45d1d72d3cf3fbab6e6b3571e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68141038"
 ---
 # <a name="legal-notice-db2tosql"></a>Rechtliche Hinweise (DB2toSQL)
@@ -34,7 +34,7 @@ SAP NetWeaver ist eine eingetragene Marke der SAP AG in Deutschland und/oder and
 Alle anderen Marken sind Eigentum ihrer jeweiligen Inhaber.  
   
 ## <a name="documentation-policy-for-sql-server-support-and-upgrade"></a>Dokumentationsrichtlinie für den Support von und das Upgrade auf SQL Server  
-In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem ausreichend Tests durchgeführt wurden. Produktdokumentation – SQL Server-Onlinedokumentation, Infodateien, Dokumenten zu bekannten Problemen und Knowledge Base-Artikel – enthält die Inhalte zu SQL Server-Features und Funktionen, die robust genug für die allgemeine Verwendung von allen Kunden sicher sein. Diese Richtlinie gilt für alle SQL Server-Dokumentationen, einschließlich der Infodateien zu Versionen und Service Packs. Eine Infodatei wird als Erweiterung der Onlinedokumentation betrachtet.  
+In der SQL Server-Dokumentation werden Inhalte erst veröffentlicht, nachdem ausreichend Tests durchgeführt wurden. Produktdokumentation-SQL Server-Onlinedokumentation, Info Dateien, Dokumente zu bekannten Problemen und Knowledge Base-Artikel: enthält Inhalte zu SQL Server Features und Funktionen, die robust genug sind, um für die allgemeine Verwendung durch alle Kunden sicher zu sein. Diese Richtlinie gilt für alle SQL Server-Dokumentationen, einschließlich der Infodateien zu Versionen und Service Packs. Eine Infodatei wird als Erweiterung der Onlinedokumentation betrachtet.  
   
 Es gibt Fälle, in denen bestimmte Funktionen von Kunden nicht direkt verwendet werden sollten, weshalb diese nicht dokumentiert sind. Sofern ein Feature nicht auch in der SQL Server-Dokumentation von Microsoft beschrieben wird, werden Inhalte in Dokumentationen oder auf Websites von Drittanbietern vom Microsoft-Kundendienst nicht unterstützt und sollte nicht in Produktionsdatenbanken oder Anwendungen verwendet werden.  
   

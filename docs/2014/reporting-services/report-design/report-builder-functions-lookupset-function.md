@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105229"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet-Funktion (Berichts-Generator und SSRS)
@@ -32,13 +32,13 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 #### <a name="parameters"></a>Parameter  
  *source_expression*  
- (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den zu suchenden Namen oder Schlüssel angibt. Beispiel: `=Fields!ID.Value`.  
   
  *destination_expression*  
- (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!CustomerID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!CustomerID.Value`.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!PhoneNumber.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in der *source_expression* = *destination_expression*, und der den abzurufenden Wert angibt. Beispiel: `=Fields!PhoneNumber.Value`.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "ContactInformation".  
@@ -46,7 +46,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
 ## <a name="return"></a>Rückgabewert  
  Gibt einen Wert vom Typ `VariantArray` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Rufen Sie für ein Name-Wert-Paar, für das eine 1:n-Beziehung vorhanden ist, einen Satz von Werten mithilfe von `LookupSet` aus dem angegebenen Dataset ab. Beispiel: Für einen Kundenbezeichner in einer Tabelle können Sie alle zugeordneten Telefonnummern dieses Kunden aus einem Dataset, das nicht an den Datenbereich gebunden ist, mithilfe von `LookupSet` abrufen.  
   
  Mit `LookupSet` wird Folgendes ausgeführt:  
@@ -59,11 +59,11 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Der Satz von Ergebnisausdruckswerten wird zurückgegeben.  
   
- Verwenden Sie die [Lookup-Funktion (Berichts-Generator und SSRS)](report-builder-functions-lookup-function.md), um einen einzelnen Wert aus einem Dataset mit Name-Wert-Paaren für einen angegebenen Namen abzurufen, wenn eine 1:1-Beziehung besteht. Aufzurufende `Lookup` verwenden Sie für einen Satz von Werten, [Multilookup-Funktion &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-multilookup-function.md).  
+ Verwenden Sie die [Lookup-Funktion (Berichts-Generator und SSRS)](report-builder-functions-lookup-function.md), um einen einzelnen Wert aus einem Dataset mit Name-Wert-Paaren für einen angegebenen Namen abzurufen, wenn eine 1:1-Beziehung besteht. Um einen `Lookup` Satz von Werten aufzurufen, verwenden Sie die [Multilookup-Funktion &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-multilookup-function.md).  
   
  Es gelten folgende Einschränkungen:  
   
--   `LookupSet` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
+-   `LookupSet`wird ausgewertet, nachdem alle Filter Ausdrücke angewendet wurden.  
   
 -   Nur eine Suchebene wird unterstützt. Ein Quell-, Ziel- oder Ergebnisausdruck kann keinen Verweis auf eine Suchfunktion einschließen.  
   
@@ -71,7 +71,8 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Quell-, Ziel- und Ergebnisausdrücke können keine Verweise auf Berichts- oder Gruppenvariablen einschließen.  
   
--   `LookupSet` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
+-   
+  `LookupSet` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
   
     -   Dynamische Verbindungszeichenfolgen für eine Datenquelle.  
   
@@ -101,7 +102,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
  Verwenden Sie die [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Funktion `Join`, um aus einem Satz von Objekten eine Zeichenfolge mit Trennzeichen zu erstellen. Verwenden Sie ein Komma als Trennzeichen, um die Objekte an einer einzelnen Zeile zu kombinieren. In einigen Renderern könnten Sie einen [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Zeilenvorschub (`vbCrLF`) als Trennzeichen verwenden, um jeden Wert auf einer neuen Zeile aufzulisten.  
   
- Verwendet der folgende Ausdruck ein, wenn sie für ein Textfeld als Value-Eigenschaft verwendet wird `Join` zum Erstellen einer Liste.  
+ Der folgende Ausdruck verwendet `Join` , wenn er als Value-Eigenschaft für ein Textfeld verwendet wird, um eine Liste zu erstellen.  
   
 ```  
 =Join(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"),",")  
@@ -146,7 +147,7 @@ End Function
 =Code.MakeList(LookupSet(Fields!TerritoryGroupID.Value, Fields!ID.Value, Fields!StoreName.Value, "Stores"))  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

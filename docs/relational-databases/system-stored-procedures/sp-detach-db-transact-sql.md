@@ -19,10 +19,10 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72278180"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "72278180"
 > [!IMPORTANT]  
 >  Eine replizierte Datenbank kann nur getrennt werden, wenn sie nicht veröffentlicht ist. Weitere Informationen finden Sie im Abschnitt "Hinweise" weiter unten in diesem Thema.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,30 +45,30 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'database_name'` ist der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
+`[ @dbname = ] 'database_name'`Der Name der Datenbank, die getrennt werden soll. *database_name* ist ein Wert vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL.  
   
-`[ @skipchecks = ] 'skipchecks'` gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
+`[ @skipchecks = ] 'skipchecks'`Gibt an, ob die Update Statistik übersprungen oder ausgeführt werden soll. *wobei skipchecks "* ist ein **nvarchar (10)** -Wert mit dem Standardwert NULL. Um die Update Statistik zu überspringen, geben Sie **true**an Um Update Statistics explizit auszuführen, geben Sie **false**an.  
   
  UPDATE STATISTICS wird standardmäßig ausgeführt, um Informationen zu den Daten in den Tabellen und Indizes zu aktualisieren. Das Ausführen von UPDATE STATISTICS ist nützlich für Datenbanken, die auf Nur-Lese-Medien verschoben werden sollen.  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`Gibt an, dass die Volltextindex Datei, die der zu trennende Datenbank zugeordnet ist, während des Trenn Vorgangs der Datenbank nicht gelöscht wird. *Keepfulltextindexfile* ist ein **nvarchar (10)** -Wert mit dem Standardwert **true**. Wenn *keepfulltextindexfile* den Wert **false**aufweist, werden alle der Datenbank zugeordneten Volltextindex Dateien und die Metadaten des voll Text Indexes gelöscht, es sei denn, die Datenbank ist schreibgeschützt. Wenn NULL oder **true**, werden voll Text bezogene Metadaten beibehalten.  
   
 > [!IMPORTANT]
->  Der **\@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
+>  Der ** \@keepfulltextindexfile** -Parameter wird in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Verwenden Sie diesen Parameter beim Entwickeln neuer Anwendungen nicht, und planen Sie so bald wie möglich das Ändern von Anwendungen, in denen er zurzeit verwendet wird.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Wenn eine Datenbank getrennt wird, werden alle Metadaten darin gelöscht. Wenn die Datenbank die Standarddatenbank aller Anmeldekonten war, wird **Master** zur Standarddatenbank.  
   
 > [!NOTE]  
->  Informationen dazu, wie Sie die Standarddatenbank aller Anmeldekonten anzeigen, finden Sie unter [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie die [Alter Login](../../t-sql/statements/alter-login-transact-sql.md) -Anweisung verwenden, um einer Anmeldung eine neue Standarddatenbank zuzuweisen.  
+>  Informationen dazu, wie Sie die Standarddatenbank aller Anmeldekonten anzeigen, finden Sie unter [sp_helplogins &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Wenn Sie über die erforderlichen Berechtigungen verfügen, können Sie die [Alter Login](../../t-sql/statements/alter-login-transact-sql.md) -Anweisung verwenden, um einer Anmeldung eine neue Standarddatenbank zuzuweisen.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Eine Datenbank kann nicht getrennt werden, wenn Folgendes zutrifft:  
   
 -   Die Datenbank ist zurzeit in Verwendung. Weitere Informationen finden Sie im Abschnitt "Erhalten exklusiven Zugriffs" weiter unten in diesem Thema.  
@@ -82,14 +82,14 @@ sp_detach_db [ @dbname= ] 'database_name'
   
 -   Eine Datenbankmomentaufnahme ist in der Datenbank vorhanden.  
   
-     Bevor Sie die Datenbank trennen können, müssen Sie alle Momentaufnahmen löschen. Weitere Informationen finden Sie unter [Drop a Database Snapshot &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
+     Bevor Sie die Datenbank trennen können, müssen Sie alle Momentaufnahmen löschen. Weitere Informationen finden Sie unter [Löschen einer Datenbank-Momentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)angefügt werden.  
   
     > [!NOTE]  
     >  Eine Datenbankmomentaufnahme kann nicht getrennt oder angefügt werden.  
   
 -   Die Datenbank ist gespiegelt.  
   
-     Die Datenbank kann nur getrennt werden, wenn die Datenbank-Spiegelungssitzung beendet wird. Weitere Informationen finden Sie unter [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
+     Die Datenbank kann nur getrennt werden, wenn die Datenbank-Spiegelungssitzung beendet wird. Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
   
 -   Die Datenbank ist fehlerverdächtig.  
   
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  Bevor Sie die Datenbank auf SINGLE_USER festlegen, müssen Sie überprüfen, ob die AUTO_UPDATE_STATISTICS_ASYNC-Option auf OFF festgelegt ist. Wenn diese Option auf ON festgelegt ist, stellt der Hintergrundthread, der zum Aktualisieren von Statistiken verwendet wird, eine Verbindung mit der Datenbank her, und Sie können im Einzelbenutzermodus nicht auf die Datenbank zugreifen. Weitere Informationen finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../databases/set-a-database-to-single-user-mode.md).
 
- Beispielsweise erhält die folgende `ALTER DATABASE`-Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der-Datenbank getrennt haben.  
+ Beispielsweise erhält die folgende `ALTER DATABASE` Anweisung exklusiven Zugriff auf die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank, nachdem alle aktuellen Benutzer die Verbindung mit der Datenbank getrennt haben.  
   
 ```  
 USE master;  
@@ -121,7 +121,7 @@ GO
  Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder die Mitgliedschaft in der **db_owner** Rolle der Datenbank.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
+ Im folgenden Beispiel wird die [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank getrennt, wobei *wobei skipchecks "* auf true festgelegt ist.  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
@@ -134,10 +134,10 @@ exec sp_detach_db @dbname='AdventureWorks2012'
     , @keepfulltextindexfile='true';  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Alter Database &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
- [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [Create Database &#40;SQL Server Transact-SQL-&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Trennen einer Datenbank](../../relational-databases/databases/detach-a-database.md)  
   
   

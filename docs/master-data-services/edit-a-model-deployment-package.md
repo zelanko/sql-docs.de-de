@@ -11,10 +11,10 @@ ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 12cacedc8f195a965b7632760976008ba4b422b0
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73728231"
 ---
 # <a name="edit-a-model-deployment-package"></a>Bearbeiten eines Modellbereitstellungspakets
@@ -27,7 +27,7 @@ ms.locfileid: "73728231"
   
  Sie wählen mithilfe des Modellpaketeditors Teile eines Modells in einer Paketdatei, die entweder vom Tool MDSModelDeploy (welches eine Paketdatei erstellt, die Objekte und Daten umfasst) oder dem Modellbereitstellungs-Assistenten (welcher eine Datei erstellt, die nur die Modellstruktur enthält) erstellt wurde, aus. Nachdem Sie das Modell im Paket bearbeitet haben, verwenden Sie das Tool MDSModelDeploy, um Objekte und Daten bereitzustellen, oder den Modellbereitstellungs-Assistent, um nur die Modellstruktur bereitzustellen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  

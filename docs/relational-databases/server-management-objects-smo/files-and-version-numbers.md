@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7a7d7e7dd9bf7e6d5ad6dfa5776d76892f96ad05
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70148665"
 ---
 # <a name="files-and-version-numbers"></a>Dateien und Versionsnummern
@@ -34,7 +34,7 @@ ms.locfileid: "70148665"
 > > 
 > > Aus diesem Grund sollten Sie diese Versionen der Assemblys **nicht** im globalen Assemblycache (GAC) installieren. Dies könnte dazu führen, dass andere Anwendungen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie z. b. Management Studio, unterbrechen. 
   
-|Datei|Beschreibung|  
+|Datei|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|Unterstützt das Herstellen von Verbindungen mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|Unterstützt die Programmierung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker. Dies ist nur in Programmen erforderlich, die auf Service Broker zugreifen.|  

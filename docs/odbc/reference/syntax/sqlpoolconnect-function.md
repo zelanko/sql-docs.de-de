@@ -1,5 +1,5 @@
 ---
-title: SQLPoolConnect-Funktion | Microsoft-Dokumentation
+title: Sqlpoolconnect-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68005802"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: Einhaltung von ODBC 3.8-Standards: ODBC  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,8 Standards Compliance: ODBC  
   
  **Zusammenfassung**  
- **SQLPoolConnect** wird verwendet, um eine neue Verbindung erstellen, wenn keine Verbindung im Pool wiederverwendet werden kann.  
+ **Sqlpoolconnect** wird verwendet, um eine neue Verbindung zu erstellen, wenn keine Verbindung im Pool wieder verwendet werden kann.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -39,45 +39,45 @@ SQLRETURN  SQLPoolConnect(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *hDbc*  
- [Eingabe] Der Verbindungs-Handle.  
+ *hdbc*  
+ Der Das Verbindungs Handle.  
   
- *hDbcInfoToken*  
- [Eingabe] Das Tokenhandle für die neue verbindungsanforderung für die Anwendung.  
+ *hdbcinfotoken*  
+ Der Das Tokenhandle für die neue Anwendungs Verbindungsanforderung.  
   
- *wszOutConnectString*  
- [Ausgabe] Zeiger auf einen Puffer für die vollständige Verbindungszeichenfolge. Bei erfolgreicher Verbindung auf die Datenquelle enthält dieser Puffer vervollständigte Verbindungszeichenfolge. Anwendungen sollten mindestens 1.024 Zeichen für diesen Puffer zuordnen.  
+ *wszoutconnectstring*  
+ Ausgeben Zeiger auf einen Puffer für die abgeschlossene Verbindungs Zeichenfolge. Bei erfolgreicher Verbindung mit der Ziel Datenquelle enthält dieser Puffer die abgeschlossene Verbindungs Zeichenfolge. Anwendungen sollten für diesen Puffer mindestens 1.024 Zeichen zuordnen.  
   
- Wenn *WszOutConnectString* NULL ist, *CchConnectStringLen* gibt immer noch die Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen für Zeichendaten) zur zurück in die Puffer verweist *WszOutConnectString*.  
+ Wenn *wszoutconnectstring* gleich NULL ist, gibt *cchconnectstringlen* weiterhin die Gesamtzahl der Zeichen zurück (ausgenommen des NULL-Beendigungs Zeichens für Zeichendaten), das im Puffer zurückgegeben werden kann, auf den von *wszoutconnectstring*gezeigt wird.  
   
- *cchConnectStringBuffer*  
- [Eingabe] Länge der **WszOutConnectString* Puffers in Zeichen.  
+ *cchconnectstringbuffer*  
+ Der Länge des **wszoutconnectstring* -Puffers in Zeichen.  
   
- *cchConnectStringLen*  
- [Ausgabe] Zeiger auf einen Puffer für die Rückgabe der Gesamtzahl der Zeichen, die (mit Ausnahme der Null-Terminierungszeichen) zur Verfügung, die in zurückgegeben \* *WszOutConnectString*. Wenn die Anzahl der zurückzugebenden verfügbaren Zeichen ist größer als oder gleich ist *CchConnectStringBuffer*, wird die Verbindungszeichenfolge zumeist im abgeschlossen \* *WszOutConnectString* auf abgeschnitten*CchConnectStringBuffer* abzüglich der Länge eines Zeichens Null-Terminierung vorliegt.  
+ *cchconnectstringlen*  
+ Ausgeben Ein Zeiger auf einen Puffer, in dem die Gesamtzahl der Zeichen (mit Ausnahme des NULL-Beendigungs Zeichens) zurückgegeben \*werden soll, die in *wszoutconnectstring*zurückgegeben werden soll. Wenn die Anzahl der zurück zugebende Zeichen größer oder gleich *cchconnectstringbuffer*ist, wird die abgeschlossene Verbindungs Zeichenfolge \*in *wszoutconnectstring* auf *cchconnectstringbuffer* abzüglich der Länge eines NULL-Beendigungs Zeichens gekürzt.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or, SQL_INVALID_HANDLE.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR oder SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnose  
- Ähnlich wie [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) für alle Überprüfungsfehler, Eingabe, mit dem Unterschied, dass der Treiber-Manager verwendet eine **HandleType** von SQL_HANDLE_DBC_INFO_TOKEN und ein **behandeln** von *hDbcInfoToken*.  
+ Vergleichbar mit [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) für jeden Eingabevalidierungsfehler, mit dem Unterschied, dass der Treiber-Manager den **Handlertyp** SQL_HANDLE_DBC_INFO_TOKEN und ein **handle** von *hdbcinfotoken*verwendet.  
   
-## <a name="remarks"></a>Hinweise  
- Der Treiber-Manager wird sichergestellt, dass das übergeordnete Element HENV Handles aus *hDbc* und *hDbcInfoToken* sind identisch.  
+## <a name="remarks"></a>Bemerkungen  
+ Der Treiber-Manager garantiert, dass das übergeordnete HENV-Handle von *hdbc* und *hdbcinfotoken* identisch sind.  
   
- Im Gegensatz zu [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md), gibt es keine *DriverCompletion* Argument, um Benutzer zur Eingabe von Verbindungsinformationen aufzufordern. Ein Dialogfeld aufgefordert wird, ist im Lightweightpooling-Szenario nicht zulässig.  
+ Anders als bei [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)gibt es kein *DriverCompletion* -Argument, um Benutzer zur Eingabe von Verbindungsinformationen aufzufordern. Ein Aufforderungs Dialogfeld ist im Pooling-Szenario nicht zulässig.  
   
- Anwendungen sollten diese Funktion nicht direkt aufrufen. Ein ODBC-Treiber, der treiberfähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
+ Anwendungen sollten diese Funktion nicht direkt aufzurufen. Ein ODBC-Treiber, der Treiber fähiges Verbindungspooling unterstützt, muss diese Funktion implementieren.  
   
- Immer ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
+ Wenn ein Treiber SQL_ERROR oder SQL_INVALID_HANDLE zurückgibt, gibt der Treiber-Manager den Fehler an die Anwendung zurück (in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) oder [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
- Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen aus *hDbcInfoToken*, und wird SQL_SUCCESS_WITH_INFO zurückgegeben. um die Anwendung im [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Wenn ein Treiber SQL_SUCCESS_WITH_INFO zurückgibt, erhält der Treiber-Manager die Diagnoseinformationen von *hdbcinfotoken*und gibt SQL_SUCCESS_WITH_INFO in [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md) und [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)an die Anwendung zurück.  
   
- Wenn eine Anwendung verwendet [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md), *WszOutConnectString* wird ein NULL-Puffer (die letzten drei Parameter werden alle NULL festgelegt werden, 0, NULL) sein. Andernfalls muss der Treiber die ausgegebene Verbindungszeichenfolge, die die Anwendung zurückgegeben wird, zurückgeben [SQLDriverConnect-Funktion](../../../odbc/reference/syntax/sqldriverconnect-function.md) aufrufen.  
+ Wenn eine Anwendung [SQLCONNECT](../../../odbc/reference/syntax/sqlconnect-function.md)verwendet, ist *wszoutconnectstring* ein NULL-Puffer (die letzten drei Parameter werden alle auf NULL, 0 und NULL festgelegt). Andernfalls muss der Treiber die Ausgabe Verbindungs Zeichenfolge zurückgeben, die an den [SQLDriverConnect-Funktions](../../../odbc/reference/syntax/sqldriverconnect-function.md) Aufrufder Anwendung zurückgegeben wird.  
   
- Umfassen Sie sqlspi.h für die Entwicklung von ODBC-Treiber.  
+ Fügen Sie sqlspi. h für die ODBC-Treiberentwicklung ein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Entwickeln einen ODBC-Treiber](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
- [Treiberfähiges Verbindungspooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
- [Developing Connection-Pool Awareness in an ODBC Driver (Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber)](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)
+## <a name="see-also"></a>Weitere Informationen  
+ [Entwickeln eines ODBC-Treibers](../../../odbc/reference/develop-driver/developing-an-odbc-driver.md)   
+ [Treiber fähiges Verbindungs Pooling](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   
+ [Entwickeln von Verbindungspool-Unterstützung in einem ODBC-Treiber](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)

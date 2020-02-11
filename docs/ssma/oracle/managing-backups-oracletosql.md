@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Sicherungen (OracleToSQL) | Microsoft-Dokumentation
+title: Verwalten von Sicherungen (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -14,86 +14,86 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68262971"
 ---
 # <a name="managing-backups-oracletosql"></a>Verwalten von Sicherungskopien (OracleToSQL)
-Oracle-Sicherungsverwaltung können Sie mit sichern und wiederherstellen, die vor oder nach dem Ausführen eines Tests Datentabellen. Sie können auch auf den Inhalt der Sicherungen verwalten Sicherungsinhalt Dialogfeld verwalten.  
+Mithilfe der Oracle-Sicherungs Verwaltung können Sie Tabellendaten vor oder nach dem Ausführen eines Tests sichern und wiederherstellen. Sie können auch den Sicherungs Inhalt mit dem Dialogfeld "Sicherungs Inhalte verwalten" verwalten.  
   
-## <a name="oracle-backup-management"></a>Oracle-Sicherungsverwaltung  
+## <a name="oracle-backup-management"></a>Verwaltung von Oracle-Sicherungen  
   
-### <a name="backup"></a>Sicherung  
-Klicken Sie dann auf Sicherung, um Sicherungsdialogfeld, mit der Sicherungsverwaltung für Oracle, zeigen Sie im Menü Tester öffnen... Im Dialogfeld "Sicherung" finden Sie die Metadaten für Oracle-Struktur, die alle Tabellen des geladenen Oracle Schemas anzeigen. Wählen Sie eine oder mehrere Tabellen zum Ausführen einer Sicherung.  
-  
-Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
-  
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
-  
--   Klicken Sie auf die **Sicherung** Schaltfläche, um die Tabelle zu sichern, die die Daten.  
-  
--   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
-  
-### <a name="restore"></a>Wiederherstellung  
-Um das Dialogfeld "Wiederherstellung" zu öffnen, auf das Menü "Tester" zeigen Sie auf der Oracle-Sicherungsverwaltung, und klicken Sie dann wiederherstellen... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung zur Verfügung. Wählen Sie eine oder mehrere Tabellen, die Daten wiederherzustellen.  
+### <a name="backup"></a>Backup  
+Um das Dialogfeld "Sicherung" zu öffnen, zeigen Sie im Menü Tester auf Oracle Backup Management, und klicken Sie dann auf Backup.... Im Sicherungs Dialogfeld finden Sie die Oracle-Metadatenstruktur, in der alle Tabellen des geladenen Oracle-Schemas angezeigt werden. Wählen Sie mindestens eine Tabelle aus, um eine Sicherung auszuführen.  
   
 Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
+-   Klicken Sie auf die Schaltfläche **Zustand prüfen** , um den Sicherungs Status der Tabelle zu überprüfen.  
   
--   Klicken Sie auf die **wiederherstellen** Schaltfläche zum Wiederherstellen der Sicherung von Daten in die Tabelle.  
+-   Klicken Sie auf die Schaltfläche **Sicherung** , um die Daten der Tabelle zu sichern.  
   
--   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie auf die Schaltfläche **Abbrechen** , um den Dialog zu schließen.  
   
-### <a name="managing-backup-contents"></a>Verwalten von Inhalt von Sicherungskopien  
-Zum Verwalten von Sicherung-Inhalte zu öffnen, klicken Sie auf das Menü "Tester" zeigen Sie auf der Sicherungsverwaltung für Oracle und dann auf Sicherung Inhalt... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
-  
-Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
-  
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
-  
--   Klicken Sie auf die **entfernen** Schaltfläche, um die Tabelle aus der Sicherung zu entfernen.  
-  
--   Klicken Sie auf die **schließen** Schaltfläche, um das Dialogfeld zu schließen.  
-  
-## <a name="sql-server-backup-management"></a>Verwaltung von SQL Server-Sicherung  
-Verwaltung von SQL Server-Sicherung können Sie mit sichern und wiederherstellen, die vor oder nach dem Ausführen eines Tests Datentabellen. Sie können auch auf den Inhalt der Sicherungen verwalten Sicherungsinhalt Dialogfeld verwalten.  
-  
-### <a name="backup"></a>Sicherung  
-Klicken Sie dann auf Sicherung, um Sicherungsdialogfeld, zeigen Sie im Testprogramm für SQL Server Backup-Verwaltung öffnen... Finden Sie im Dialogfeld für die Sicherung die SQL Server-Metadaten-Struktur, die alle Tabellen der geladenen SQL Server-Datenbanken anzeigen. Wählen Sie eine oder mehrere Tabellen zum Ausführen einer Sicherung.  
+### <a name="restore"></a>Restore  
+Um das Dialogfeld wiederherstellen zu öffnen, zeigen Sie im Menü Tester auf Oracle Backup Management, und klicken Sie dann auf Wiederherstellen.... Dort finden Sie eine Struktur mit den in der Sicherung verfügbaren Tabellen. Wählen Sie mindestens eine Tabelle aus, um die Daten wiederherzustellen.  
   
 Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
+-   Klicken Sie auf die Schaltfläche **Zustand prüfen** , um den Sicherungs Status der Tabelle zu überprüfen.  
   
--   Klicken Sie auf die **Sicherung** Schaltfläche, um die Daten der Tabelle zu sichern.  
+-   Klicken Sie auf die Schaltfläche **Wiederherstellen** , um Sicherungsdaten in der Tabelle wiederherzustellen.  
   
--   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie auf die Schaltfläche **Abbrechen** , um den Dialog zu schließen.  
   
-### <a name="restore"></a>Wiederherstellung  
-Um das Dialogfeld "Wiederherstellung" zu öffnen, das Menü "Tester" zeigen Sie auf SQL Server-Sicherung Management, klicken Sie auf wiederherstellen... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung zur Verfügung. Wählen Sie mindestens eine Tabelle, die Daten wiederherzustellen.  
-  
-Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
-  
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
-  
--   Klicken Sie auf die **wiederherstellen** Schaltfläche zum Wiederherstellen der Sicherung von Daten in die Tabelle.  
-  
--   Klicken Sie auf die **Abbrechen** Schaltfläche, um das Dialogfeld zu schließen.  
-  
-### <a name="managing-backup-contents"></a>Verwalten von Inhalt von Sicherungskopien  
-Zum Verwalten von Sicherung-Inhalte zu öffnen, auf das Menü "Tester" zeigen Sie auf die Verwaltung von SQL Server-Sicherung, und klicken Sie dann Backup Inhalt... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
+### <a name="managing-backup-contents"></a>Verwalten von Sicherungs Inhalten  
+Um das Verwalten von Sicherungs Inhalten zu öffnen, zeigen Sie im Menü Tester auf Oracle Backup Management, und klicken Sie dann auf Sicherungs Inhalt.... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
   
 Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
   
--   Klicken Sie auf die **Aktivierungszustand** Schaltfläche, um die Sicherung der tabellenspezifischen-Status zu überprüfen.  
+-   Klicken Sie auf die Schaltfläche **Zustand prüfen** , um den Sicherungs Status der Tabelle zu überprüfen.  
   
--   Klicken Sie auf die **entfernen** Schaltfläche, um die Tabelle aus der Sicherung zu entfernen.  
+-   Klicken Sie auf die Schaltfläche **Entfernen** , um die Tabelle aus der Sicherung zu entfernen.  
   
--   Klicken Sie auf die **schließen** Schaltfläche, um das Dialogfeld zu schließen.  
+-   Klicken Sie zum Schließen des Dialog Felds auf die Schaltfläche **Schließen** .  
   
-## <a name="see-also"></a>Siehe auch  
-[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="sql-server-backup-management"></a>Verwaltung von SQL Server Sicherungen  
+Mit SQL Server Backup Management können Sie Tabellendaten vor oder nach dem Ausführen eines Tests sichern und wiederherstellen. Sie können auch den Sicherungs Inhalt mit dem Dialogfeld "Sicherungs Inhalte verwalten" verwalten.  
+  
+### <a name="backup"></a>Backup  
+Zeigen Sie zum Öffnen des Dialog Felds "Sicherung" im Menü "Tester" auf SQL Server Backup Management, und klicken Sie dann auf Backup.... Im Dialogfeld "Sicherung" finden Sie die SQL Server Metadatenstruktur, in der alle Tabellen der geladenen SQL Server Datenbanken angezeigt werden. Wählen Sie mindestens eine Tabelle aus, um eine Sicherung auszuführen.  
+  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
+  
+-   Klicken Sie auf die Schaltfläche **Zustand prüfen** , um den Sicherungs Status der Tabelle zu überprüfen.  
+  
+-   Klicken Sie auf die Schaltfläche **Sicherung** , um die Daten der Tabelle zu sichern.  
+  
+-   Klicken Sie auf die Schaltfläche **Abbrechen** , um den Dialog zu schließen.  
+  
+### <a name="restore"></a>Restore  
+Um das Dialogfeld wiederherstellen zu öffnen, zeigen Sie im Menü Tester auf SQL Server Sicherungs Verwaltung, und klicken Sie auf Wiederherstellen.... Dort finden Sie eine Struktur mit den in der Sicherung verfügbaren Tabellen. Wählen Sie mindestens eine Tabelle aus, um die Daten wiederherzustellen.  
+  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
+  
+-   Klicken Sie auf die Schaltfläche **Zustand prüfen** , um den Sicherungs Status der Tabelle zu überprüfen.  
+  
+-   Klicken Sie auf die Schaltfläche **Wiederherstellen** , um Sicherungsdaten in der Tabelle wiederherzustellen.  
+  
+-   Klicken Sie auf die Schaltfläche **Abbrechen** , um den Dialog zu schließen.  
+  
+### <a name="managing-backup-contents"></a>Verwalten von Sicherungs Inhalten  
+Um das Verwalten von Sicherungs Inhalten zu öffnen, zeigen Sie im Menü Tester auf SQL Server Backup Management, und klicken Sie dann auf Sicherungs Inhalt.... Dort finden Sie eine Struktur mit den Tabellen in der Sicherung.  
+  
+Die folgenden Schaltflächen sind im Dialogfeld verfügbar:  
+  
+-   Klicken Sie auf die Schaltfläche **Zustand prüfen** , um den Sicherungs Status der Tabelle zu überprüfen.  
+  
+-   Klicken Sie auf die Schaltfläche **Entfernen** , um die Tabelle aus der Sicherung zu entfernen.  
+  
+-   Klicken Sie zum Schließen des Dialog Felds auf die Schaltfläche **Schließen** .  
+  
+## <a name="see-also"></a>Weitere Informationen  
+[Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee90d2c367fa289e8255a84e4eb6da19b37933e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68891202"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX-Datenbearbeitung – DRILLTHROUGH
@@ -41,7 +41,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  Eine Liste mit durch Trennzeichen getrennten Dimensionsattributen und Measures  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Drillthrough ist ein Vorgang, bei dem ein Endbenutzer eine einzelne Zelle in einem Cube auswählt und ein Resultset aus den Quelldaten dieser Zelle abruft, um detailliertere Informationen zu erhalten. Standardmäßig wird ein Drillthrough-Resultset aus den Tabellenzellen abgeleitet, die zur Berechnung des Werts der ausgewählten Cubezelle ausgewertet wurden. Endbenutzer können einen Drillthrough nur dann durchführen, wenn die Clientanwendung diese Funktion unterstützt. In [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]werden die Ergebnisse direkt aus dem MOLAP-Speicher abgerufen, es sei denn, ROLAP-Partitionen oder-Dimensionen werden abgefragt.  
   
 > [!IMPORTANT]  
@@ -49,7 +49,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
   
  Eine MDX-Anweisung gibt die betreffende Zelle an. Der durch das **MaxRows** -Argument angegebene Wert gibt die maximale Anzahl von Zeilen an, die vom resultierenden Rowset zurückgegeben werden sollen.  
   
- Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass Sie, wenn Sie **MaxRows** nicht angeben, mindestens 10.000 Zeilen erhalten. Wenn dieser Wert für Ihr Szenario zu niedrig ist, können Sie **MaxRows** auf eine höhere Zahl festlegen, z `MAXROWS 20000`. b. Wenn die Gesamtzahl zu niedrig ist, können Sie die Standardeinstellung erhöhen, indem Sie die Server Eigenschaft **olap\query\defaultdrillthrough MaxRows** ändern. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Server Eigenschaften in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
+ Standardmäßig werden maximal 10.000 Zeilen zurückgegeben. Dies bedeutet, dass Sie, wenn Sie **MaxRows** nicht angeben, mindestens 10.000 Zeilen erhalten. Wenn dieser Wert für Ihr Szenario zu niedrig ist, können Sie **MaxRows** auf eine höhere Zahl festlegen, z `MAXROWS 20000`. b.. Wenn die Gesamtzahl zu niedrig ist, können Sie die Standardeinstellung erhöhen, indem Sie die Server Eigenschaft **olap\query\defaultdrillthrough MaxRows** ändern. Weitere Informationen zum Ändern dieser Eigenschaft finden Sie unter [Server Eigenschaften in Analysis Services](https://docs.microsoft.com/analysis-services/server-properties/server-properties-in-analysis-services).  
   
  Sofern nicht anders angegeben, enthalten die zurückgegebenen Spalten alle Granularitätsattribute aller Dimensionen, die mit der Measuregruppe des angegebenen Measures verbunden sind und keine m:n-Dimensionen sind. Cubedimensionen ist zur Unterscheidung von Dimensionen und Measuregruppen ein $-Zeichen vorangestellt. Die **Return** -Klausel wird verwendet, um die Spalten anzugeben, die von der Drillthrough-Abfrage zurückgegeben werden. Die folgenden Funktionen können von der **Return** -Klausel auf ein einzelnes Attribut oder Measure angewendet werden.  
   
@@ -96,7 +96,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX für MDX &#40;-Daten Bearbeitungsanweisungen&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Daten Bearbeitungsanweisungen &#40;MDX-&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

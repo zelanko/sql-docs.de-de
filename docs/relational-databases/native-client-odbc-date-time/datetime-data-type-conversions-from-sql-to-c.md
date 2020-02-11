@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9795126f2cd7c39ebd23ed34fde73664388b235f
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73783845"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>datetime-Datentypkonvertierungen von SQL in C
@@ -67,7 +67,7 @@ ms.locfileid: "73783845"
   
  Die Tabelle in diesem Thema beschreibt die Konvertierung der Typen, die an den Client zurückgegeben werden, aus den in der Bindung verwendeten Typen. Wenn der in SQLBindParameter angegebene Servertyp für Ausgabeparameter nicht mit dem tatsächlichen Typ auf dem Server identisch ist, wird vom Server eine implizite Konvertierung durchgeführt, und der an den Client zurückgegebene Typ entspricht dem Typ, der durch SQLBindParameter angegeben wird. Dies kann zu unerwarteten Konvertierungs Ergebnissen führen, wenn sich die Konvertierungsregeln des Servers von denen unterscheiden, die in der obigen Tabelle aufgeführt sind. Wenn beispielsweise ein Standarddatum bereitgestellt werden muss, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1900-1-1 statt des aktuellen Datums.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verbesserungen &#40;bei Datum und Uhrzeit in ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datums-und Uhrzeit Verbesserungen &#40;ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

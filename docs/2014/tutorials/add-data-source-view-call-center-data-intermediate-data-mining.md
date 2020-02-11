@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68888684"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Hinzufügen einer Datenquellensicht für Callcenterdaten (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -22,7 +22,7 @@ ms.locfileid: "68888684"
   
  Sie verwenden den Datenquellensicht-Designer auch dazu, eine Spalte für den Wochentag hinzuzufügen. Dies ist hilfreich, da Sie aus Erfahrung wissen, dass sich Muster im Hinblick auf Anfrufaufkommen wie auch Dienstqualität wiederholen, die den Rhythmus von Werktagen und Wochenende wiederspiegeln, auch wenn die Quelldaten alle Callcenterdaten nach Datum verfolgen.  
   
-## <a name="procedures"></a>Vorgehensweisen  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-add-a-data-source-view"></a>So fügen Sie eine Datenquellensicht hinzu  
   
@@ -56,9 +56,9 @@ ms.locfileid: "68888684"
   
     |||  
     |-|-|  
-    |**Spaltenname**|DayOfWeek (TagderWoche)|  
+    |**Spaltenname**|DayOfWeek|  
     |**Beschreibung**|Abrufen des Wochentags aus der DimDate-Tabelle|  
-    |**expression**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
+    |**Ausdruck**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
      Um zu überprüfen, ob der Ausdruck die benötigten Daten erstellt, klicken Sie mit der rechten Maustaste auf die Tabelle **FactCallCenter**, und wählen Sie dann **Daten durchsuchen**aus.  
   
@@ -69,25 +69,25 @@ ms.locfileid: "68888684"
 |FactCallCenterID|Ein beim Importieren der Daten in das Data Warehouse erstellter willkürlicher Schlüssel.<br /><br /> Diese Spalte identifiziert eindeutige Datensätze und sollte als Fallschlüssel für das Data Mining-Modell verwendet werden.|  
 |DateKey|Das Datum des Callcentervorgangs, ausgedrückt als ganze Zahl. Ganzzahlige Datumsschlüssel werden oft in Data Warehouses verwendet. Möglicherweise möchten Sie diese Daten für die Gruppierung nach Datumswerten aber im Format Datum/Uhrzeit abrufen.<br /><br /> Beachten Sie, dass Datumsangaben nicht eindeutig sind, da der Hersteller einen separaten Bericht für jede einzelne Schicht eines Arbeitstages ausgibt.|  
 |WageType|Gibt an, ob der Tag ein Wochentag, ein Wochenende oder ein Feiertag ist.<br /><br /> Es ist möglich, dass es einen Unterschied in der Quality of Customer Service am Wochenende gegenüber Wochentagen gibt, sodass Sie diese Spalte als Eingabe verwenden.|  
-|Shift|Gibt die Schicht an, für die Anrufe aufgezeichnet werden. Dieser Callcenter teilt den Arbeitstag in vier Verschiebungen auf: AM, PM1, PM2 und Mitternacht.<br /><br /> Es ist möglich, dass die Schicht die Qualität des Kundendiensts beeinflusst. Daher verwenden Sie diese Spalte als Eingabe.|  
+|Shift|Gibt die Schicht an, für die Anrufe aufgezeichnet werden. Dieses Callcenter teilt den Arbeitstag in vier Schichten ein: Vormittag, Nachmittag 1, Nachmittag 2, und Nacht.<br /><br /> Es ist möglich, dass die Schicht die Qualität des Kundendiensts beeinflusst. Daher verwenden Sie diese Spalte als Eingabe.|  
 |LevelOneOperators|Gibt die Anzahl der Operatoren auf Ebene 1 an.<br /><br /> Callcenter-Mitarbeiter beginnen auf Ebene 1; diese Mitarbeiter sind also nicht sehr erfahren.|  
 |LevelTwoOperators|Gibt die Anzahl der arbeitenden Operatoren auf Ebene 2 an.<br /><br /> Ein Mitarbeiter muss eine bestimmte Anzahl von Arbeitsstunden protokollieren, um sich als Operator auf Ebene 2 zu qualifizieren.|  
 |TotalOperators|Die Gesamtzahl der arbeitenden Telefonisten während der Schicht.|  
 |Aufrufe|Anzahl der Anrufe, die während der Schicht empfangen werden.|  
 |AutomaticResponses|Die Anzahl der Anrufe, die vollständig über die automatisierte Anrufabwicklung (Interactive Voice Response, IVR) bearbeitet wurden.|  
-|Orders|Die Anzahl der Aufträge, die durch die Anrufe abgeschlossen wurden.|  
+|Aufträge|Die Anzahl der Aufträge, die durch die Anrufe abgeschlossen wurden.|  
 |IssuesRaised|Die Anzahl der Probleme, die aus Anrufen hervorgingen und einer Nachbearbeitung bedürfen.|  
 |AverageTimePerIssue|Die durchschnittliche Zeit, die erforderlich ist, um einen eingehenden Anruf zu bearbeiten.|  
 |ServiceGrade|Eine Metrik, die die allgemeine Quality of Service angibt, gemessen als Abbruch *Rate* für die gesamte Schicht. Je höher die Abbruchrate, desto wahrscheinlicher ist es, dass Kunden unzufrieden sind und potenzielle Aufträge verloren gehen.|  
   
  Beachten Sie, dass die Daten vier verschiedene Spalten enthalten, die auf einer einzelnen Datums Spalte `WageType`basieren:, **dayospweek** `Shift`, `DateKey`und. Gewöhnlich ist es beim Data Mining nicht empfehlenswert, mehrere von den gleichen Daten abgeleitete Spalten zu verwenden, da die Werte zu stark miteinander korrelieren und so andere Muster verdecken können.  
   
- Im Modell wird jedoch nicht verwendet `DateKey` , da es zu viele eindeutige Werte enthält. Es gibt keine direkte Beziehung zwischen `Shift` und **dayof** `WageType` Week, und und **dayof Week** sind nur teilweise verwandt. Wenn Ihnen die Kollinearität Sorgen bereitet, könnten Sie die Struktur mit allen verfügbaren Spalten erstellen und dann in jedem Modell andere Spalten ignorieren und die Auswirkungen überprüfen.  
+ Im Modell wird jedoch nicht verwendet `DateKey` , da es zu viele eindeutige Werte enthält. Es gibt keine direkte Beziehung zwischen `Shift` und **dayof Week**, und `WageType` und **dayof Week** sind nur teilweise verwandt. Wenn Ihnen die Kollinearität Sorgen bereitet, könnten Sie die Struktur mit allen verfügbaren Spalten erstellen und dann in jedem Modell andere Spalten ignorieren und die Auswirkungen überprüfen.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Erstellen einer neuronalen Netzwerkstruktur und &#40;eines Data Mining-Data Mining-Lernprogramms&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Erstellen einer neuronalen Netzwerkstruktur und eines Modells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellsichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellensichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

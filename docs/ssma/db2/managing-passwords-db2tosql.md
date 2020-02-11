@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Kennwörtern (DB2ToSQL) | Microsoft-Dokumentation
+title: Verwalten von Kenn Wörtern (DB2ToSQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,39 +10,39 @@ ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68141022"
 ---
-# <a name="managing-passwords-db2tosql"></a>Verwalten von Kennwörtern (DB2ToSQL)
-In diesem Abschnitt wird zum Schützen von Kennwörter für die Datenbanken und das Verfahren zum Importieren oder exportieren diese auf Servern:  
+# <a name="managing-passwords-db2tosql"></a>Verwalten von Kenn Wörtern (DB2ToSQL)
+In diesem Abschnitt geht es um das Sichern von Daten Bank Kennwörtern und das Verfahren zum Importieren oder Exportieren von Datenbankservern:  
   
-1.  Sichern das Kennwort  
+1.  Sichern des Kennworts  
   
-2.  Exportieren oder importieren das verschlüsselte Kennwort  
+2.  Exportieren oder importieren verschlüsselter Kenn Wörter  
   
-## <a name="securing-password"></a>Sichern das Kennwort  
-SSMA ermöglicht Ihnen, ein Kennwort, eine Datenbank zu sichern.  
+## <a name="securing-password"></a>Sichern des Kennworts  
+SSMA ermöglicht Ihnen das Sichern Ihres Kennworts für eine Datenbank.  
   
-Verwenden Sie wie folgt vor, um eine sichere Verbindung zu implementieren:  
+Verwenden Sie das folgende Verfahren, um eine sichere Verbindung zu implementieren:  
   
-Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:  
+Geben Sie ein gültiges Kennwort an, indem Sie eine der folgenden drei Methoden verwenden:  
   
-1.  **Löschen Sie Text ein:** Geben Sie das Datenbankkennwort, in der Value-Attribut des Knotens 'Password'. Es befindet sich unter dem Serverknoten für die Definition im Abschnitt "Server" des Server-Verbindungsdatei oder Skriptdatei.  
+1.  **Klartext löschen:** Geben Sie das Daten Bank Kennwort in das Attribut Wert des Knotens "Password" ein. Sie befindet sich unter dem Knoten Server Definition im Abschnitt Server der Skriptdatei oder der Server Verbindungs Datei.  
   
-    Kennwörter in Klartext sind nicht sicher. Aus diesem Grund wird die folgende Warnmeldung in der Konsolenausgabe auftreten: *"Server &lt;Server-Id&gt; dient das Kennwort in Klartext nicht sicheren Form-Anwendung SSMA-Konsole bietet eine Option zum Schützen Sie das Kennwort, Verschlüsselung, finden Sie unter Securepassword - Option in SSMA-Hilfedatei für Weitere die Informationen."*  
+    Kenn Wörter im Klartext sind nicht sicher. Aus diesem Grund wird in der Konsolenausgabe folgende Warnmeldung angezeigt: *"Server &lt;Server-ID&gt; Kennwort wird in unsicherem Klartext bereitgestellt. die SSMA-Konsolenanwendung bietet eine Option zum Schützen des Kennworts durch Verschlüsselung. Weitere Informationen finden Sie unter der Option"-SecurePassword "in der SSMA-Hilfedatei.*  
   
-    **Verschlüsselte Kennwörter:** Das angegebene Kennwort ist in diesem Fall in verschlüsselter Form auf dem lokalen Computer im ProtectedStorage.ssma gespeichert.  
+    **Verschlüsselte Kenn Wörter:** Das angegebene Kennwort wird in diesem Fall in verschlüsselter Form auf dem lokalen Computer in ProtectedStorage. SSMA gespeichert.  
   
-    -   **Schützen von Kennwörtern**  
+    -   **Sichern von Kenn Wörtern**  
   
-        -   Führen Sie die `SSMAforDB2Console.exe` mit der `-securepassword` und Schalter in die Befehlszeile übergeben den Server-Verbindung oder ein Skript-Datei, die mit dem kennwortknoten im Abschnitt Definition Server hinzufügen.  
+        -   Führen Sie `SSMAforDB2Console.exe` das mit `-securepassword` dem und den Switch-Schalter in der Befehlszeile aus, und übergeben Sie die Server Verbindung oder die Skriptdatei mit dem Kenn Wort Knoten im Abschnitt Server Definition.  
   
-        -   An der Eingabeaufforderung wird der Benutzer aufgefordert, um das Datenbankkennwort, und bestätigen Sie es.  
+        -   Bei der Eingabeaufforderung wird der Benutzer aufgefordert, das Daten Bank Kennwort einzugeben und zu bestätigen.  
   
-            Die Server-Definitions-Ids und die entsprechenden verschlüsselte Kennwörter werden in einer Datei auf dem lokalen Computer gespeichert.  
+            Die Server Definitions-IDs und die zugehörigen verschlüsselten Kenn Wörter werden in einer Datei auf dem lokalen Computer gespeichert.  
             
             Beispiel 1:
             
@@ -65,18 +65,18 @@ Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:
                 
                 Re-enter password for server_id 'target _1': xxxxxxx  
     
-    -   **Verschlüsselte Kennwörter entfernen**  
+    -   **Entfernen verschlüsselter Kenn Wörter**  
   
-        Führen Sie die `SSMAforDB2Console.exe` mit der`-securepassword` und `-remove` -Schalter an der Befehlszeile übergeben den Server-Ids, um die verschlüsselten Kennwörter aus der geschützten Speicherdatei vorhanden auf dem lokalen Computer zu entfernen.  
+        Führen Sie `SSMAforDB2Console.exe` das mit`-securepassword` dem `-remove` aus, und wechseln Sie in der Befehlszeile zum übergeben der Server-IDs, um die verschlüsselten Kenn Wörter aus der geschützten Speicherdatei auf dem lokalen Computer zu entfernen.  
   
         Beispiel:  
         
             C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
             C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
   
-    -   **Auflisten von Server-Ids, deren Kennwörter verschlüsselt sind**  
+    -   **Auflisten von Server-IDs, deren Kenn Wörter verschlüsselt sind**  
   
-        Führen Sie die `SSMAforDB2Console.exe` mit der `-securepassword` und `-list` -Schalter an der Befehlszeile aus, um alle Server-Ids auflisten, deren Kennwörter verschlüsselt wurden.  
+        Führen Sie `SSMAforDB2Console.exe` mit dem `-securepassword` aus `-list` , und wechseln Sie in der Befehlszeile, um alle Server-IDs aufzulisten, deren Kenn Wörter verschlüsselt wurden.  
   
         Beispiel:  
         
@@ -84,11 +84,11 @@ Geben Sie ein gültiges Kennwort ein, die mit einer der drei folgenden Methoden:
 
   
     > [!NOTE]  
-    > 1.  Das Kennwort als Klartext im Skript oder eine Server-Verbindungsdatei erwähnt haben Vorrang vor das verschlüsselte Kennwort in der gesicherten Datei.  
-    > 2.  Wenn kein Kennwort im Abschnitt "Server" die Server-Verbindungsdatei oder die Datei vorhanden ist, oder wenn sie nicht auf dem lokalen Computer gesichert wurden, werden Sie von die Konsole aufgefordert, das Kennwort eingeben.  
+    > 1.  Das Kennwort im Klartext, das in der Skript-oder Server Verbindungs Datei angegeben ist, hat Vorrang vor dem verschlüsselten Kennwort in der gesicherten Datei.  
+    > 2.  Wenn im Server Abschnitt der Server Verbindungs Datei oder der Skriptdatei kein Kennwort vorhanden ist oder wenn es nicht auf dem lokalen Computer gesichert wurde, werden Sie von der-Konsole aufgefordert, das Kennwort einzugeben.  
   
-## <a name="exporting-or-importing-encrypted-passwords"></a>Exportieren oder importieren verschlüsselte Kennwörter  
-Die SSMA-Console-Anwendung können Sie verschlüsselte Datenbankkennwörter in einer Datei auf dem lokalen Computer vorhanden, eine geschützte Datei und umgekehrt zu exportieren. Er hilft bei der Erstellung des Computers verschlüsselte Kennwörter unabhängig. Funktionen zum Exportieren der liest, der Id und Kennwort aus der lokalen geschützten Speicher ab und speichert die Informationen in einer verschlüsselten Datei. Der Benutzer wird aufgefordert, das Kennwort für die sichere Datei eingeben. Stellen Sie sicher, dass das eingegebene Kennwort mindestens 8 Zeichenlänge beträgt. Diese sichere Datei ist auf unterschiedlichen Computern übertragbar. Importfunktionalität, liest der Server-Id und Kennwort aus der gesicherten Datei. Der Benutzer wird aufgefordert, das Kennwort für die sichere Datei einzugeben und fügt die Informationen im lokalen geschützten Speicher hinzu.  
+## <a name="exporting-or-importing-encrypted-passwords"></a>Exportieren oder importieren verschlüsselter Kenn Wörter  
+Mit der SSMA-Konsolenanwendung können Sie verschlüsselte Daten Bank Kennwörter, die in einer Datei auf dem lokalen Computer vorhanden sind, in eine gesicherte Datei exportieren und umgekehrt. Dies hilft bei der unabhängigen Erstellung der verschlüsselten Kenn Wörter. Die Export Funktion liest die Server-ID und das Kennwort aus dem lokalen geschützten Speicher und speichert die Informationen in einer verschlüsselten Datei. Der Benutzer wird aufgefordert, das Kennwort für die gesicherte Datei einzugeben. Stellen Sie sicher, dass das eingegebene Kennwort mindestens 8 Zeichen lang ist. Diese gesicherte Datei ist auf verschiedenen Computern portabel. Die Import Funktion liest die Server-ID und die Kenn Wort Informationen aus der gesicherten Datei. Der Benutzer wird aufgefordert, das Kennwort für die gesicherte Datei einzugeben, und fügt die Informationen an den lokalen geschützten Speicher an.  
   
 Beispiel:  
 
@@ -127,6 +127,6 @@ Beispiel:
     Please confirm password: xxxxxxxx
 
   
-## <a name="see-also"></a>Siehe auch  
-[Executing the SSMA Console (Ausführen der SSMA-Konsole)](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
+## <a name="see-also"></a>Weitere Informationen  
+[Ausführen der SSMA-Konsole](https://msdn.microsoft.com/ce63f633-067d-4f04-b8e9-e1abd7ec740b)  
   

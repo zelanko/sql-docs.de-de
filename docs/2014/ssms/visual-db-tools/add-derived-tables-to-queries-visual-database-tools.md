@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f1898dce975655758c52068590dd4c0720c9f67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63311941"
 ---
 # <a name="add-derived-tables-to-queries-visual-database-tools"></a>Hinzufügen abgeleiteter Tabellen zu Abfragen (Visual Database Tools)
@@ -33,10 +33,10 @@ ms.locfileid: "63311941"
   
      Es wird eine neue Tabelle namens „derivedtbl_*N* “ hinzugefügt, und die SELECT-Anweisung der abgeleiteten Tabelle wird der FROM-Klausel der Abfrage hinzugefügt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Erstellen von Abfragen &#40;Visual Database Tools&#41;](create-queries-visual-database-tools.md)   
- [Öffnen von Abfragen &#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
+ [Öffnen Sie Abfragen &#40;Visual Database Tools&#41;](open-queries-visual-database-tools.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  
   
   

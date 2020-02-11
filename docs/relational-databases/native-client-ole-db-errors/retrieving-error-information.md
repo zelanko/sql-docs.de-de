@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8f6c93002a5182375725703d159565782d978268
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73769724"
 ---
 # <a name="retrieving-error-information"></a>Abrufen von Fehlerinformationen
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  In diesem Beispiel werden Informationen aus den verschiedenen Fehler Schnittstellen abgerufen, die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verfügbar gemacht werden.  
+  In diesem Beispiel werden Informationen aus den verschiedenen Fehler Schnittstellen abgerufen, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die vom Native Client-OLE DB Anbieter verfügbar gemacht werden.  
   
 ```  
 // DumpErrorInfo queries SQLOLEDB error interfaces, retrieving available  
@@ -219,7 +219,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Fehler](../../relational-databases/native-client-ole-db-errors/errors.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Errors](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

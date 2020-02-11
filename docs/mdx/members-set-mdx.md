@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d3e5bb14455d2d2ea67c4187e8e1a2a420031944
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68138255"
 ---
 # <a name="members-set-mdx"></a>Members (Menge) (MDX)
@@ -38,10 +38,10 @@ Level_Expression.Members
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein Hierarchieausdruck angegeben wird, die **Members (Menge)** -Funktion die Menge aller Elemente innerhalb der angegebenen Hierarchie, nicht einschließlich berechneter Elemente zurück. Die Menge aller Elemente, die berechnet, oder verwenden Sie andernfalls in einer Hierarchie die [AllMembers &#40;MDX&#41; ](../mdx/allmembers-mdx.md) Funktion  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn ein Hierarchie Ausdruck angegeben wird, gibt die **Members (Set)** -Funktion die Menge aller Elemente innerhalb der angegebenen Hierarchie zurück, ohne berechnete Elemente. Verwenden Sie zum Abrufen der Menge aller Elemente, die in einer Hierarchie berechnet werden, die [AllMembers-Funktion &#40;MDX-&#41;](../mdx/allmembers-mdx.md) .  
   
- Wenn ein Ebenenausdruck angegeben wird, die **Members (Menge)** -Funktion die Menge aller Elemente innerhalb der angegebenen Ebene zurück.  
+ Wenn ein Ebenenausdruck angegeben wird, gibt die **Members (Set)** -Funktion die Menge aller Elemente innerhalb der angegebenen Ebene zurück.  
   
 > [!IMPORTANT]  
 >  Wenn eine Dimension nur eine einzige sichtbare Hierarchie enthält, kann auf die Hierarchie entweder mit dem Dimensionsnamen oder mit dem Hierarchienamen verwiesen werden, weil der Dimensionsname in diesem Szenario in seine einzige sichtbare Hierarchie aufgelöst wird. Measures.Members ist z. B. ein gültiger MDX-Ausdruck, weil er in die einzige Hierarchie in der Measures-Dimension aufgelöst wird.  
@@ -57,7 +57,7 @@ FROM
   
 ```  
   
- Im folgenden Beispiel werden die Bestellmengen im Jahr 2003 für jedes Element in der `[Product].[Products].[Product Line]`-Ebene zurückgegeben. Die **Mitglieder** Funktionsergebnis ist eine Gruppe, die alle Elemente in der Ebene darstellt.  
+ Im folgenden Beispiel werden die Bestellmengen im Jahr 2003 für jedes Element in der `[Product].[Products].[Product Line]`-Ebene zurückgegeben. Die **Members** -Funktion gibt eine Menge zurück, die alle Elemente in der Ebene darstellt.  
   
 ```  
 SELECT   
@@ -69,8 +69,8 @@ WHERE
    {[Date].[Calendar Year].[Calendar Year].&[2003]}  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)   
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

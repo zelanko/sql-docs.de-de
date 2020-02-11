@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68188292"
 ---
 # <a name="custom-reports-in-management-studio"></a>Benutzerdefinierte Berichte in Management Studio
-  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
+  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]wird von vielen Objekt-Explorer-Knoten ein Satz von Standardberichten angezeigt, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)]erstellt werden. In diesen Berichten werden häufig angeforderte Serverinformationen zusammengefasst. Seit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 können in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte benutzerdefinierte Berichte von Administratoren ausgeführt werden.  
   
 ## <a name="implementation"></a>Implementierung  
  Benutzerdefinierte Berichte werden als RDL-Dateien gespeichert und mithilfe der Berichtsdefinitionssprache (Report Definition Language, RDL) erstellt. In der Berichtsdefinitionssprache sind Informationen zum Datenabruf und Datenlayout für einen Bericht in einem XML-Format enthalten. Die Berichtsdefinitionssprache ist ein offenes Schema. Entwickler können die Berichtsdefinitionssprache mit zusätzlichen Attributen und Elementen erweitern. Jede gültige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in einem Bericht kann von Berichten ausgeführt wird.  
@@ -72,9 +72,9 @@ ms.locfileid: "68188292"
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen eines benutzerdefinierten Berichts zu Management Studio](add-a-custom-report-to-management-studio.md)   
- [Unterdrückung Ausführen von benutzerdefinierten Berichten, Warnungen](unsuppress-run-custom-report-warnings.md)   
+ [Nicht unterdrücken von Warnungen für benutzerdefinierten Bericht ausführen](unsuppress-run-custom-report-warnings.md)   
  [Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten](use-custom-reports-with-object-explorer-node-properties.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0becc3627ee54158b8beed7c888698c9052ab1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106497"
 ---
 # <a name="adding-data-to-a-tablix-data-region-report-builder-and-ssrs"></a>Hinzufügen von Daten zu einem Tablix-Datenbereich (Berichts-Generator und SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "66106497"
 ## <a name="adding-an-existing-tablix-data-region-from-another-report"></a>Hinzufügen eines vorhandenen Tablix-Datenbereichs aus einem anderen Bericht  
  Sie können einen Datenbereich aus einem anderen Bericht kopieren und diesen in einen neuen oder einen vorhandenen Bericht einfügen. Nach dem Einfügen des Datenbereichs müssen Sie sicherstellen, dass das vom Datenbereich verwendete Dataset definiert ist und dass die Datasetfelder dieselben Namen und Datentypen wie im ursprünglichen Bericht aufweisen. Sie können Datasets nicht von einem Bericht zu einem anderen kopieren, Wenn die Berichte jedoch freigegebene Datenquellen verwenden, können Sie das Dataset schnell im anderen Bericht duplizieren. Außerdem können Sie den Abfragetext für die Abfragen importieren, die die Daten für das Dataset abrufen. So können Abfragen in Berichten problemlos dupliziert werden. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   

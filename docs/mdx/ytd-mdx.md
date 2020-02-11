@@ -1,5 +1,5 @@
 ---
-title: Seit Jahresbeginn (MDX) | Microsoft-Dokumentation
+title: YTD (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68125762"
 ---
 # <a name="ytd-mdx"></a>Ytd (MDX)
 
 
-  Gibt einen Satz von gleichgeordneten Elementen aus der gleichen Ebene wie ein angegebenes Element, mit dem ersten gleichgeordneten Element beginnend und endend mit dem angegebenen Element, entsprechend der Einschränkung durch die *Jahr* Ebene in der Time-Dimension.  
+  Gibt eine Menge von gleich geordneten Elementen von der gleichen Ebene wie ein angegebenes Element zurück, beginnend mit dem ersten gleich geordneten Element, das mit dem angegebenen Element endet, wie von der *year* -Ebene in der Time-Dimension eingeschränkt.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -31,13 +31,13 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn ein Elementausdruck nicht angegeben ist, wird der Standardwert ist das aktuelle Element der ersten Hierarchie mit einer Ebene des Typs *Jahre* in der ersten Dimension des Typs *Zeit* in der Measuregruppe.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn kein Element Ausdruck angegeben ist, wird standardmäßig der aktuelle Member der ersten Hierarchie mit einer Ebene des Typs " *years* " in der ersten Dimension des Typs " *time* " in der Measure-Gruppe angegeben.  
   
- Die **seit Jahresbeginn** -Funktion ist eine Verknüpfungsfunktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) Funktion, in denen die Typeigenschaft der Attributhierarchie, auf dem die Ebene basiert, auf ist *Jahre*. Somit ist `Ytd(Member_Expression)` äquivalent zu `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Beachten Sie, die diese Funktion nicht funktionieren, wenn die Type-Eigenschaft, um festgelegt ist *FiscalYears*.  
+ Die **YTD** -Funktion ist eine Verknüpfungs Funktion für die [PeriodsToDate](../mdx/periodstodate-mdx.md) -Funktion, bei der die Type-Eigenschaft der Attribut Hierarchie, auf der die Ebene basiert, auf *years*festgelegt ist. Somit ist `Ytd(Member_Expression)` äquivalent zu `PeriodsToDate(Year_Level_Expression,Member_Expression)`. Beachten Sie, dass diese Funktion nicht funktioniert, wenn die Type-Eigenschaft auf " *fscalyears*" festgelegt ist.  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel gibt die Summe der der `Measures.[Order Quantity]` Elements, aggregiert über die ersten acht Monate des Kalenderjahres 2003, die in befinden die `Date` -Dimension, aus der **Adventure Works** Cube.  
+ Im folgenden Beispiel wird die Summe des `Measures.[Order Quantity]` -Elements, aggregiert über die ersten acht Monate des Kalender Jahrs 2003, das in der `Date` Dimension enthalten ist, aus dem **Adventure Works** -Cube zurückgegeben.  
   
 ```  
 WITH MEMBER [Date].[Calendar].[First8MonthsCY2003] AS  
@@ -53,7 +53,7 @@ WHERE
     [Measures].[Order Quantity]  
 ```  
   
- **Seit Jahresbeginn** wird häufig in Kombination verwendet, ohne Parameter angegeben wird, was bedeutet, dass die [CurrentMember &#40;MDX&#41; ](../mdx/currentmember-mdx.md) Funktion wird eine kumulative Summe der Jahr-bis-heute in einem Bericht angezeigt, siehe die folgende Abfrage:  
+ **YTD** wird häufig in Kombination mit nicht angegebenen Parametern verwendet. Dies bedeutet, dass die [CurrentMember-&#40;MDX-&#41;](../mdx/currentmember-mdx.md) Funktion eine laufende kumulative Jahressumme in einem Bericht anzeigt, wie in der folgenden Abfrage dargestellt:  
   
  `WITH MEMBER MEASURES.YTDDEMO AS`  
   
@@ -65,7 +65,7 @@ WHERE
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

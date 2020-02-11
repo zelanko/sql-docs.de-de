@@ -1,5 +1,5 @@
 ---
-title: Ausführen einer gespeicherten Prozedur (mithilfe der ODBC CALL-Syntax) und Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB) | Microsoft-Dokumentation
+title: Ausführen einer gespeicherten Prozedur (mithilfe der ODBC-aufrufssyntax) und Verarbeiten von Rückgabe Codes und Ausgabeparametern (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206693"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ausführen einer gespeicherten Prozedur (mithilfe der ODBC CALL-Syntax) sowie Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB)
@@ -32,7 +32,8 @@ ms.locfileid: "68206693"
   
 2.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine für jede Parametermarkierung).  
   
-3.  Erstellen Sie einen Accessor für die definierten Parameter mithilfe der `IAccessor::CreateAccessor`-Methode. `CreateAccessor` erstellt einen Accessor aus einem Satz Bindungen.  
+3.  Erstellen Sie einen Accessor für die definierten Parameter mithilfe der `IAccessor::CreateAccessor`-Methode. 
+  `CreateAccessor` erstellt einen Accessor aus einem Satz Bindungen.  
   
 4.  Geben Sie die DBPARAMS-Struktur ein.  
   
@@ -49,7 +50,7 @@ ms.locfileid: "68206693"
   
  Führen Sie das erste Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu erstellen.  
   
- Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
+ Kompilieren Sie mit ole32.lib und oleaut32.lib, und führen Sie das zweite Codelisting (C++) aus. Diese Anwendung stellt eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Standardinstanz des Computers her. Bei einigen Windows-Betriebssystemen müssen Sie (localhost) oder (local) in den Namen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ändern. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Verbindungszeichenfolge von L"(local)" in L"(local)\\\name", wobei „name“ die benannte Instanz darstellt. Standardmäßig wird [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express in einer benannten Instanz installiert. Stellen Sie sicher, dass die INCLUDE-Umgebungsvariable das Verzeichnis einschließt, das sqlncli.h enthält.  
   
  Führen Sie das dritte Codelisting ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) aus, um die von der Anwendung verwendete gespeicherte Prozedur zu löschen.  
   
@@ -353,7 +354,7 @@ DROP PROCEDURE myProc
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweisen zum Verarbeiten von Ergebnissen &#40;OLE DB&#41;](processing-results-how-to-topics-ole-db.md)  
   
   

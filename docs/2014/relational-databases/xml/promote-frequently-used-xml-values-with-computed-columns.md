@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68195571"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Heraufstufen häufig verwendeter XML-Werte mit berechneten Spalten
@@ -26,9 +26,9 @@ ms.locfileid: "68195571"
  Die heraufgestufte Spalte kann entweder eine berechnete Spalte in derselben Tabelle oder eine getrennte, benutzerverwaltete Spalte in einer Tabelle sein. Dies ist ausreichend, wenn Singleton-Werte aus jeder XML-Instanz heraufgestuft werden. Allerdings müssen Sie für mehrwertige Eigenschaften eine getrennte Tabelle für die Eigenschaft erstellen, was im folgenden Abschnitt beschrieben wird.  
   
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Berechnete Spalte auf der Basis des xml-Datentyps  
- Eine berechnete Spalte kann erstellt werden, mithilfe einer benutzerdefinierten Funktion, die aufruft `xml` -Datentypmethoden. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
+ Eine berechnete Spalte kann mithilfe einer benutzerdefinierten Funktion erstellt werden, die- `xml` Datentyp Methoden aufruft. Der Typ der berechneten Spalte kann jeder SQL-Typ sein, einschließlich XML. Dies wird im folgenden Beispiel veranschaulicht.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalten basierend auf der XML-Datentypmethode  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Beispiel: Berechnete Spalte auf der Basis der xml-Datentypmethode  
  Erstellen Sie die benutzerdefinierte Funktion für die ISBN-Nummer eines Buchs:  
   
 ```  
@@ -50,7 +50,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  Die berechnete Spalte kann auf gewöhnliche Weise indiziert werden.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte basierend auf XML-Datentypmethoden  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Beispiel: Abfragen für eine berechnete Spalte auf der Basis der xml-Datentypmethoden  
  So erhalten Sie das <`book`>-Element, dessen ISBN 0-7356-1588-2 ist:  
   
 ```  
@@ -67,7 +67,7 @@ FROM   T
 WHERE  ISBN = '0-7356-1588-2'  
 ```  
   
- Sie können eine benutzerdefinierte Funktion zurückgibt erstellen die `xml` -Datentyp und eine berechnete Spalte mithilfe der benutzerdefinierten Funktion. Allerdings können Sie keinen XML-Index für die berechnete XML-Spalte erstellen.  
+ Sie können eine benutzerdefinierte Funktion erstellen, um den `xml` Datentyp und eine berechnete Spalte mithilfe der benutzerdefinierten Funktion zurückzugeben. Allerdings können Sie keinen XML-Index für die berechnete XML-Spalte erstellen.  
   
 ## <a name="creating-property-tables"></a>Erstellen von Eigenschaftentabellen  
  Wenn Sie einige der mehrwertigen Eigenschaften aus Ihren XML-Daten in eine oder mehrere Tabellen heraufstufen möchten, erstellen Sie Indizes für diese Tabellen und richten Sie Ihre Abfrage erneut so aus, dass sie diese Indizes verwenden. Ein typisches Szenario hierfür ist eine Situation, in der eine kleine Anzahl von Eigenschaften den Großteil Ihrer Abfragearbeitsauslastung abdeckt. Sie können folgendermaßen vorgehen:  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Erstellen Sie Trigger für die XML-Spalte, um die Eigenschaftentabellen zu verwalten. Führen Sie innerhalb der Trigger einen der folgenden Schritte aus:  
   
-    -   Verwendung `xml` -Datentypmethoden, z. B. **nodes()** und **Value()-Methode**, um Zeilen der Eigenschaftentabellen eingefügt und gelöscht.  
+    -   Verwenden `xml` Sie Datentyp Methoden, wie z. b. **Nodes ()** und **value ()**, um Zeilen der Eigenschaften Tabellen einzufügen und zu löschen.  
   
     -   Erstellen Sie Streaming-Tabellenwertfunktionen in CLR (Common Language Runtime), um Zeilen der Eigenschaftentabellen einzufügen oder zu löschen.  
   
@@ -155,7 +155,7 @@ end
 ```  
   
 ### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Beispiel: Suchen nach XML-Instanzen, deren Autoren denselben Vornamen haben  
- Die Abfrage kann für die XML-Spalte geformt werden. Alternativ kann sie die Eigenschaftentabelle nach dem Vornamen "David" durchsuchen und einen Rückwärtsjoins mit der Basistabelle ausführen, um die XML-Instanz zurückzugeben: Zum Beispiel:  
+ Die Abfrage kann für die XML-Spalte geformt werden. Alternativ kann sie die Eigenschaftentabelle nach dem Vornamen "David" durchsuchen und einen Rückwärtsjoins mit der Basistabelle ausführen, um die XML-Instanz zurückzugeben: Beispiel:  
   
 ```  
 SELECT xCol   
@@ -163,7 +163,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Lösung mit der Streaming-Tabellenwertfunktion in CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Beispiel: Projektmappe mit Verwendung der Streaming-Tabellenwertfunktion in CLR  
  Diese Projektmappe umfasst die folgenden Schritte:  
   
 1.  Definieren Sie eine CLR-Klasse (SqlReaderBase), die ISqlReader implementiert und eine Tabellenwert-Streaming-Ausgabe generiert, indem ein Pfadausdruck auf eine XML-Instanz angewendet wird.  
@@ -172,7 +172,7 @@ WHERE    tblPropAuthor.propAuthor = 'David'
   
 3.  Definieren Sie die insert-, update- und delete-Trigger, indem Sie die benutzerdefinierte Funktion zum Verwalten einer Eigenschaftentabelle verwenden.  
   
- Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Die `xml` -Datentyp wird als eine verwaltete SqlXml-Klasse in ADO.NET verfügbar gemacht und unterstützt die **CreateReader()** -Methode, die einen XmlReader zurückgibt.  
+ Dazu erstellen Sie zuerst die Streaming-CLR-Funktion. Der `xml` -Datentyp wird als verwaltete SQLXML-Klasse in ADO.net verfügbar gemacht und unterstützt die Methode "Methode" **, die einen** XmlReader zurückgibt.  
   
 > [!NOTE]  
 >  Der Beispielcode in diesem Abschnitt verwendet XPathDocument und XPathNavigator. Diese zwingen Sie, alle XML-Dokumente in den Arbeitsspeicher zu laden. Wenn Sie ähnlichen Code in Ihrer Anwendung verwenden, um mehrere große XML-Dokumente zu verarbeiten, ist dieser Code nicht skalierbar. Halten Sie stattdessen die Speicherbelegung gering, und verwenden Sie wenn möglich Streaming-Schnittstellen. Weitere Informationen zur Leistung finden Sie unter [Architektur der CLR-Integration](../../database-engine/dev-guide/architecture-of-clr-integration.md).  
@@ -253,7 +253,7 @@ as
   
  Der delete-Trigger ist identisch mit der Nicht-CLR-Version. Dagegen ist beim update-Trigger lediglich die Funktion udf_XML2Table() durch CLR_udf_XML2Table() ersetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von XML in berechneten Spalten](use-xml-in-computed-columns.md)  
   
   

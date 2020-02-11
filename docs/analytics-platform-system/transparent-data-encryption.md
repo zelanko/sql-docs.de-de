@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74399933"
 ---
-# <a name="transparent-data-encryption"></a>Transparent Data Encryption
-Sie können verschiedene Vorsichtsmaßnahmen zum Schützen der Datenbank treffen, z.B. Entwerfen eines sicheren Systems, Verschlüsseln vertraulicher Datenbestände und Erstellen einer Firewall für die Datenbankserver. In einem Szenario, in dem die physischen Medien (z. b. Laufwerke oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei jedoch die Datenbank einfach wiederherstellen oder Anfügen und die Daten durchsuchen. Eine Lösung besteht darin, die vertraulichen Daten in der Datenbank zu verschlüsseln und die Schlüssel zu schützen, die zum Verschlüsseln der Daten mit einem Zertifikat verwendet werden. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
+# <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
+Sie können verschiedene Vorsichtsmaßnahmen zum Schützen der Datenbank treffen, z.B. Entwerfen eines sicheren Systems, Verschlüsseln vertraulicher Datenbestände und Erstellen einer Firewall für die Datenbankserver. In einem Szenario, in dem die physischen Medien (z. b. Laufwerke oder Sicherungsbänder) gestohlen werden, kann eine böswillige Partei jedoch die Datenbank einfach wiederherstellen oder Anfügen und die Daten durchsuchen. Eine Lösung dieses Problems besteht darin, die sensiblen Daten in der Datenbank zu verschlüsseln, und den für die Verschlüsselung der Daten verwendeten Schlüssel mit einem Zertifikat zu schützen. Dadurch kann niemand die Daten verwenden, der nicht im Besitz der Schlüssel ist. Diese Art des Schutzes muss jedoch im Voraus geplant werden.  
   
-*Transparent Data Encryption* (TDE) führt die e/a-Verschlüsselung und-Entschlüsselung der Daten-und Transaktionsprotokoll Dateien und der speziellen PDW-Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der Master-Datenbank des SQL Server PDW gespeichertes Zertifikat gesichert wird. TDE schützt „ruhende Daten“, also die Daten und die Protokolldateien. Sie ermöglicht die Einhaltung von Gesetzen, Bestimmungen und Richtlinien, die in vielen Branchen etabliert sind. Mit dieser Funktion können Softwareentwickler Daten mithilfe von AES-und 3DES-Verschlüsselungsalgorithmen verschlüsseln, ohne vorhandene Anwendungen ändern zu müssen.  
+*Transparent Data Encryption* (TDE) führt die e/a-Verschlüsselung und-Entschlüsselung der Daten-und Transaktionsprotokoll Dateien und der speziellen PDW-Protokolldateien in Echtzeit durch. Die Verschlüsselung verwendet einen Datenbank-Verschlüsselungsschlüssel (DEK), der im Startdatensatz der Datenbank gespeichert wird und während der Wiederherstellung zur Verfügung steht. Der DEK ist ein symmetrischer Schlüssel, der durch ein in der Master-Datenbank des SQL Server PDW gespeichertes Zertifikat gesichert wird. TDE schützt die "ruhenden" Daten, also die Daten- und die Protokolldateien. Sie entspricht den in vielen Branchen etablierten Gesetzen, Bestimmungen und Richtlinien. Mit dieser Funktion können Softwareentwickler Daten mithilfe von AES-und 3DES-Verschlüsselungsalgorithmen verschlüsseln, ohne vorhandene Anwendungen ändern zu müssen.  
   
 > [!IMPORTANT]  
 > TDE stellt keine Verschlüsselung für Daten bereit, die zwischen dem Client und dem PDW übertragen werden. Weitere Informationen zum Verschlüsseln von Daten zwischen dem Client und SQL Server PDW finden Sie unter [Bereitstellen eines Zertifikats](provision-certificate.md).  
@@ -120,19 +120,19 @@ Die folgende Tabelle bietet Links und Erläuterungen zu den Befehlen und Funktio
   
 |Befehl oder Funktion|Zweck|  
 |-----------------------|-----------|  
-|[Verschlüsselungsschlüssel für Datenbank erstellen](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
+|[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
 |[Alter Database-Verschlüsselungsschlüssel](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
 |[Verschlüsselungsschlüssel für Datenbank löschen](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
-|[Alter Database](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erklärt die **ALTER DATABASE** -Option, mit der TDE aktiviert wird.|  
+|[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erklärt die **ALTER DATABASE** -Option, mit der TDE aktiviert wird.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Katalogsichten und dynamische Verwaltungssichten  
 In der folgenden Tabelle werden die Katalogsichten und die dynamischen Verwaltungssichten von TDE erläutert.  
   
 |Katalogsicht oder dynamische Verwaltungssicht|Zweck|  
 |-------------------------------------------|-----------|  
-|[sys.-Datenbanken](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Katalogsicht, die Datenbankinformationen anzeigt.|  
-|[sys. Zertifikate](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Katalogsicht, die die Zertifikate in einer Datenbank anzeigt.|  
-|[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Dynamische Verwaltungs Sicht, die Informationen für jeden Knoten, Informationen zu den in einer Datenbank verwendeten Verschlüsselungsschlüsseln und den Verschlüsselungs Status einer Datenbank bereitstellt.|  
+|[sys.databases](../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|Katalogsicht, die Datenbankinformationen anzeigt.|  
+|[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)|Katalogsicht, die die Zertifikate in einer Datenbank anzeigt.|  
+|[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)|Dynamische Verwaltungs Sicht, die Informationen für jeden Knoten, Informationen zu den in einer Datenbank verwendeten Verschlüsselungsschlüsseln und den Verschlüsselungs Status einer Datenbank bereitstellt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 Jede Funktion und jeder Befehl von TDE erfordert bestimmte Berechtigungen, die in den zuvor gezeigten Tabellen beschrieben wurden.  
@@ -144,7 +144,7 @@ Während eine erneute Verschlüsselungsprüfung für einen Datenbankverschlüsse
   
 Sie können den Status der Datenbankverschlüsselung mithilfe der dynamischen Verwaltungs Sicht **sys. dm_pdw_nodes_database_encryption_keys** ermitteln. Weitere Informationen finden Sie weiter oben in diesem Artikel im Abschnitt *Katalog Sichten und dynamische Verwaltungs Sichten* .  
   
-### <a name="restrictions"></a>Einschränkungen  
+### <a name="restrictions"></a>Beschränkungen  
 Die folgenden `CREATE DATABASE ENCRYPTION KEY`Vorgänge sind während der-, `ALTER DATABASE ENCRYPTION KEY` `DROP DATABASE ENCRYPTION KEY`-,-oder `ALTER DATABASE...SET ENCRYPTION` -Anweisungen nicht zulässig.  
   
 -   Löschen der Datenbank.  
@@ -270,21 +270,21 @@ Die Auswirkungen von TDE auf die Leistung variieren abhängig von der Art der Da
 ## <a name="related-content"></a>Verwandte Inhalte  
 Die folgenden Links enthalten allgemeine Informationen darüber, wie SQL Server die Verschlüsselung verwaltet. Diese Artikel helfen Ihnen, die SQL Server Verschlüsselung zu verstehen, aber diese Artikel enthalten keine Informationen, die für SQL Server PDW spezifisch sind, und Sie erörtern Features, die nicht in SQL Server PDW vorhanden sind.  
   
--   [SQL Server Verschlüsselung](../relational-databases/security/encryption/sql-server-encryption.md)  
+-   [SQL Server-Verschlüsselung](../relational-databases/security/encryption/sql-server-encryption.md)  
   
--   [Verschlüsselungs Hierarchie](../relational-databases/security/encryption/encryption-hierarchy.md)  
+-   [Verschlüsselungshierarchie](../relational-databases/security/encryption/encryption-hierarchy.md)  
   
 -   [Verschlüsselungsschlüssel für SQL Server und Datenbank](../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)  
 
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Alter Database](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
-[Hauptschlüssel erstellen](../t-sql/statements/create-master-key-transact-sql.md)  
-[Verschlüsselungsschlüssel für Datenbank erstellen](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
-[Sicherungs Zertifikat](../t-sql/statements/backup-certificate-transact-sql.md)  
+[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)  
+[CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md)  
+[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)  
+[BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)  
 [sp_pdw_database_encryption](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-sql-data-warehouse.md)  
 [sp_pdw_database_encryption_regenerate_system_keys](../relational-databases/system-stored-procedures/sp-pdw-database-encryption-regenerate-system-keys-sql-data-warehouse.md)  
 [sp_pdw_log_user_data_masking](../relational-databases/system-stored-procedures/sp-pdw-log-user-data-masking-sql-data-warehouse.md)  
-[sys. Zertifikate](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
-[sys. dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
+[sys.certificates](../relational-databases/system-catalog-views/sys-certificates-transact-sql.md)  
+[sys.dm_pdw_nodes_database_encryption_keys](../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-database-encryption-keys-transact-sql.md)  
   

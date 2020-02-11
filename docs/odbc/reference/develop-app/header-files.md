@@ -1,5 +1,5 @@
 ---
-title: Headerdateien | Microsoft-Dokumentation
+title: Header Dateien | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,22 +13,22 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68139027"
 ---
 # <a name="header-files"></a>Headerdateien
-Die Headerdatei Sql.h enthält Prototypen für die Funktionen und Funktionen in der Konformitätsgrad des Core-ODBC-Schnittstelle. Die Headerdatei Sqlext.h enthält Prototypen für die Funktionen und Funktionen in der Ebene 1 und Level 2-API-Konformitätsgrad. Die Headerdatei Sqltypes.h enthält Typdefinitionen und Indikatoren für die SQL-Datentypen.  
+Die Header Datei "SQL. h" enthält Prototypen für die Funktionen und Funktionen in der ODBC-Schnittstellen Übereinstimmungs Ebene "Core". Die Header Datei sqlext. h enthält Prototypen für die Funktionen und Features in den API-Konformitäts Ebenen der Ebene 1 und Ebene 2. Die Header Datei SqlTypes. h enthält Typdefinitionen und Indikatoren für die SQL-Datentypen.  
   
- Die Headerdateien enthalten eine **#define**, ODBCVER, die eine Anwendung oder ein Treiber festlegen können, für verschiedene Versionen von ODBC kompiliert werden.  
+ Die Header Dateien enthalten alle ein **#define**(ODBCVer), das von einer Anwendung oder einem Treiber für die Kompilierung für verschiedene Versionen von ODBC festgelegt werden kann.  
   
- Um mit dem ISO-CLI und Open Group CLI auszurichten, die Headerdateien enthalten Aliase für den Informationstypen, die in Aufrufen verwendet **SQLGetInfo**. In der folgenden Tabelle gibt die Spalte "ODBC-Name" an den ODBC-Namen für den Informationstyp im [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md). Die Spalte "Alias in der Headerdatei" gibt an, den Namen, der in der ISO-CLI und die Open Group-CLI verwendet wird. Der tatsächliche numerische Wert dieser manifest Namen ist in ODBC und die standard-CLIs identisch. Diese Aliase ermöglichen, dass ein Standards kompatible Anwendung oder Treiber, kompilieren Sie mit der ODBC *3.x* Headerdateien.  
+ Die Header Dateien enthalten Aliase für die Informationstypen, die in Aufrufen von **SQLGetInfo**verwendet werden, um die ISO CLI und die Open Group-CLI auszurichten. In der folgenden Tabelle gibt die Spalte "ODBC Name" den ODBC-Namen für den Informationstyp in der [ODBC-API-Referenz](../../../odbc/reference/syntax/odbc-api-reference.md)an. Die Spalte "Alias in Header Datei" gibt den Namen an, der in der ISO-CLI und in der Open-Group-CLI verwendet wird. Der tatsächliche numerische Wert dieser manifestressamen ist in ODBC und in den Standard-Clis identisch. Diese Aliase ermöglichen es einer Standard kompatiblen Anwendung oder einem Standardtreiber, mit den ODBC *3. x* -Header Dateien zu kompilieren.  
   
- Diese Aliase enthalten Erweiterungen der Abkürzungen in den ODBC-Namen, sodass die Namen der leichter verständlich sind. "MAX" wird zu "MAXIMUM", "LEN", "LENGTH", "MULT" auf "MULTIPLE", "ABl.", "OUTER_JOIN" und "Transaktionsvorgänge", "Transaction". erweitert  
+ Diese Aliase enthalten Erweiterungen von Abkürzungen in den ODBC-Namen, damit die Namen verständlicher werden. "Max" wird auf "Maximum", "len" bis "length", "mult" in "Multiple", "oj" auf "OUTER_JOIN" und "TXn" in "Transaction" erweitert.  
   
-|ODBC-name|Alias in der Headerdatei.|  
+|ODBC-Name|Alias in Header Datei|  
 |---------------|--------------------------|  
 |SQL_MAX_CATALOG_NAME_LEN|SQL_MAXIMUM_CATALOG_NAME_LENGTH|  
 |SQL_MAX_COLUMN_NAME_LEN|SQL_MAXIMUM_COLUMN_NAME_LENGTH|  

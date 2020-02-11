@@ -20,10 +20,10 @@ ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b5ac732926ae544dbad2cc22006c45533702c3
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73982603"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
@@ -31,12 +31,12 @@ ms.locfileid: "73982603"
 
   Enthält eine Zeile für jedes Objekt in der Datenbank, bei dem es sich um eine Dienstwarteschlange handelt, wobei **sys.objects.type** = SQ gilt.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**\<geerbte Spalten >**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys &#40;. Objects Transact&#41;-SQL](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
+|**\<geerbte Spalten>**||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**max_readers**|**smallint**|Die maximale Anzahl gleichzeitiger Leser, die in der Warteschlange zulässig sind.|  
-|**activation_procedure**|**nvarchar(776)**|Dreiteiliger Name der Aktivierungsprozedur.|  
-|**execute_as_principal_id**|**int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE AS Self EXECUTE AS \<Prinzipal >.<br /><br /> -2 = EXECUTE AS OWNER.|  
+|**activation_procedure**|**nvarchar (776)**|Dreiteiliger Name der Aktivierungsprozedur.|  
+|**execute_as_principal_id**|**int**|Die ID des Datenbankprinzipals EXECUTE AS.<br /><br /> NULL als Standardwert oder bei Verwendung von EXECUTE AS CALLER.<br /><br /> ID des angegebenen Prinzipals, wenn EXECUTE AS Self \<EXECUTE AS Principal>.<br /><br /> -2 = EXECUTE AS OWNER.|  
 |**is_activation_enabled**|**bit**|1 = Aktivierung ist aktiviert.|  
 |**is_receive_enabled**|**bit**|1 = Empfangen ist aktiviert.|  
 |**is_enqueue_enabled**|**bit**|1 = Einreihen in Warteschlange ist aktiviert.|  
@@ -46,8 +46,8 @@ ms.locfileid: "73982603"
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Katalogsichten für Objekte &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

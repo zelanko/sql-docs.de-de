@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0e64b60c027f7d6750a1afdb9988e1d6aac3ac1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770610"
 ---
 # <a name="configure-outputs-using-the-slowly-changing-dimension-wizard"></a>Konfiguration von Ausgaben mithilfe des Assistenten für langsam veränderliche Dimensionen
@@ -48,9 +48,9 @@ ms.locfileid: "62770610"
   
 4.  Wählen Sie den Änderungstyp für jede Spalte aus.  
   
-    -   **Veränderliches Attribut** überschreibt vorhandene Werte in Datensätzen.  
+    -   Das **veränderliche Attribut** überschreibt vorhandene Werte in Datensätzen.  
   
-    -   **Verlaufsattribut** erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren.  
+    -   Das Verlaufs **Attribut** erstellt neue Datensätze, statt vorhandene Datensätze zu aktualisieren.  
   
     -   **Festes Attribut** gibt an, dass der Spaltenwert nicht geändert werden darf.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62770610"
 ## <a name="updating-slowly-changing-dimension-outputs"></a>Aktualisieren von Ausgaben für die Transformation für langsam veränderliche Dimensionen  
  Die einfachste Methode, um die Konfiguration von Ausgaben für die Transformation für langsam veränderliche Dimensionen zu aktualisieren, ist die erneute Ausführung des Assistenten für langsam veränderliche Dimensionen und das Ändern der Eigenschaften auf den Seiten des Assistenten. Sie können die Transformation für langsam veränderliche Dimensionen auch im Dialogfeld **Erweiterter Editor** oder programmgesteuert aktualisieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Slowly Changing Dimension Transformation](slowly-changing-dimension-transformation.md)  
   
   

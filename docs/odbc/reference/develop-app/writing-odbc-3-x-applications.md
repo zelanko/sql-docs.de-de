@@ -1,5 +1,5 @@
 ---
-title: Schreiben von ODBC 3.x-Anwendungen | Microsoft-Dokumentation
+title: Schreiben von ODBC 3. x-Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,70 +19,70 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68081447"
 ---
 # <a name="writing-odbc-3x-applications"></a>Schreiben von ODBC-3.x-Anwendungen
-Wenn eine ODBC *2.x* Anwendung wird aktualisiert, um ODBC *3.x*, sollten sie geschrieben werden, so, dass sie sich mit den beiden ODBC funktioniert *2.x* und *3.x* Treiber . Die Anwendung soll bedingten Code zum Nutzen der ODBC-integrieren *3.x* Funktionen.  
+Wenn eine ODBC *2. x* -Anwendung auf ODBC *3. x*aktualisiert wird, sollte Sie so geschrieben werden, dass Sie sowohl mit ODBC *2. x* -als auch mit *3. x* -Treibern funktioniert. Die Anwendung sollte bedingten Code einschließen, um die ODBC *3. x* -Features in vollem Umfang nutzen zu können.  
   
- Umgebungsattributs SQL_ATTR_ODBC_VERSION sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass der Treiber wie einen ODBC verhält *2.x* Treiber in Bezug auf die Änderungen, die im Abschnitt beschriebenen [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ Das SQL_ATTR_ODBC_VERSION-Umgebungs Attribut sollte auf SQL_OV_ODBC2 festgelegt werden. Dadurch wird sichergestellt, dass sich der Treiber wie ein ODBC *2. x* -Treiber in Bezug auf die im Abschnitt " [Verhaltensänderungen](../../../odbc/reference/develop-app/behavioral-changes.md)" beschriebenen Änderungen verhält.  
   
- Wenn die Anwendung eines der Features, die im Abschnitt beschriebenen verwenden [neue Features](../../../odbc/reference/develop-app/new-features.md), bedingter Code sollte verwendet werden, um festzustellen, ob der Treiber ODBC ist *3.x* oder ODBC- *2.x* Treiber. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** zum Abrufen von ODBC *3.x* SQLSTATEs während der Durchführung der Fehler beim Verarbeiten dieser Fragmente bedingten Code. Die folgenden Punkte bezüglich der neuen Funktionalität sollte berücksichtigt werden:  
+ Wenn die Anwendung eine der im Abschnitt [neue Features](../../../odbc/reference/develop-app/new-features.md)beschriebenen Features verwendet, sollte bedingter Code verwendet werden, um zu bestimmen, ob der Treiber ein ODBC *3. x* -oder ODBC *2. x* -Treiber ist. Die Anwendung verwendet **SQLGetDiagField** und **SQLGetDiagRec** zum Abrufen von ODBC *3. x* Sqlstates bei der Fehler Verarbeitung in diesen bedingten Code Fragmenten. Die folgenden Punkte bezüglich der neuen Funktionalität sollten berücksichtigt werden:  
   
--   Eine Anwendung, die von der Änderung im Verhalten der Rowset-Größe betroffenen vorsichtig nicht aufzurufende **SQLFetch** Wenn die Arraygröße ist größer als 1. Ersetzen Sie diese Anwendungen sollten Aufrufe **SQLExtendedFetch** mit Aufrufen von **SQLSetStmtAttr** das SQL_ATTR_ARRAY_STATUS_PTR-Anweisungsattribut festgelegt und **SQLFetchScroll**, sodass sie gemeinsamen Code verfügen, die mit sowohl ODBC-als *3.x* und ODBC *2.x* Treiber. Da **SQLSetStmtAttr** mit SQL_ATTR_ROW_ARRAY_SIZE zugeordnet **SQLSetStmtAttr** mit SQL_ROWSET_SIZE setzen für ODBC *2.x* Treiber, Anwendungen können nur SQL festlegen _ATTR_ROW_ARRAY_SIZE für ihre Abrufvorgänge für die Einfügung mehrerer Zeilen.  
+-   Eine von der Änderung des rowsetgrößenverhaltens betroffene Anwendung sollte darauf achten, **SQLFetch** nicht aufzurufen, wenn die Array Größe größer als 1 ist. Diese Anwendungen sollten Aufrufe von **SQLExtendedFetch** durch Aufrufe von **SQLSetStmtAttr** ersetzen, um das SQL_ATTR_ARRAY_STATUS_PTR-Anweisungs Attribut und **SQLFetchScroll**festzulegen, sodass Sie gemeinsamen Code haben, der sowohl mit ODBC *3. x* -als auch mit ODBC *2. x* -Treibern funktioniert. Da **SQLSetStmtAttr** mit SQL_ATTR_ROW_ARRAY_SIZE **SQLSetStmtAttr** mit SQL_ROWSET_SIZE für ODBC *2. x* -Treiber zugeordnet wird, können Anwendungen einfach SQL_ATTR_ROW_ARRAY_SIZE für die mehrzeiligen Abruf Vorgänge festlegen.  
   
--   Die meisten Anwendungen, die gerade aktualisiert werden, sind nicht tatsächlich von Änderungen in SQLSTATE-Codes betroffen. Bei Anwendungen, die betroffen sind, können sie mechanischen suchen und Ersetzen Sie in den meisten Fällen mithilfe von Konvertierungstabelle für die Fehler im Abschnitt "SQLSTATE-Zuordnungen" Konvertieren von ODBC *3.x* ODBC-Fehlercodes *2.x* Codes. Seit der ODBC *3.x* führt-Treiber-Manager die Zuordnung von ODBC *2.x* SQLSTATEs zu ODBC *3.x* SQLSTATEs diese Anwendungsentwickler benötigen nur die Kontrollkästchen für den ODBC-  *3.x* SQLSTATEs und keine Sorgen, einschließlich ODBC *2.x* SQLSTATEs in bedingten Code.  
+-   Die meisten Anwendungen, für die ein Upgrade durchgeführt wird, werden von Änderungen in SQLSTATE Codes nicht beeinträchtigt. Bei Anwendungen, die betroffen sind, können Sie in den meisten Fällen eine mechanische Suche durchführen und in den meisten Fällen die Fehler Konvertierungstabelle im Abschnitt "SQLSTATE Mapping" verwenden, um ODBC *3. x* -Fehlercodes in ODBC *2. x* -Codes zu konvertieren. Da der ODBC *3. x* -Treiber-Manager die Zuordnung von ODBC *2. x* Sqlstates zu ODBC *3. x* Sqlstates durchführt, müssen diese Anwendungs Schreiber nur nach ODBC *3. x* Sqlstates suchen und sich keine Gedanken darüber machen, ODBC *2. x* SQLStates in bedingtem Code einzubeziehen.  
   
--   Wenn eine Anwendung gute Möglichkeit zur Verwendung von Date, Time und Timestamp-Datentypen, die Anwendung kann deklarieren, sich einen ODBC *2.x* -Anwendung und zur Verwendung vorhandener code anstelle der Klimaanlage Code.  
+-   Wenn eine Anwendung die Datentypen "Date", "Time" und "Zeitstempel" optimal verwendet, kann die Anwendung sich selbst als ODBC *2. x* -Anwendung deklarieren und Ihren vorhandenen Code anstelle der Verwendung von kondiingcode verwenden.  
   
  Das Upgrade sollte auch die folgenden Schritte umfassen:  
   
--   Rufen Sie **SQLSetEnvAttr** vor der Zuordnung von eine Verbindung zum SQL_OV_ODBC2 umgebungsattributs SQL_ATTR_ODBC_VERSION fest.  
+-   Nennen Sie **SQLSetEnvAttr** , bevor Sie eine Verbindung zuordnen, um das SQL_ATTR_ODBC_VERSION-Umgebungs Attribut auf SQL_OV_ODBC2 festzulegen.  
   
--   Ersetzen Sie alle Aufrufe **SQLAllocEnv**, **SQLAllocConnect**, oder **SQLAllocStmt** mit Aufrufen von **SQLAllocHandle** mit dem entsprechenden *HandleType* Argument SQL_HANDLE_ENV auf, SQL_HANDLE_DBC auf oder SQL_HANDLE_STMT auf.  
+-   Ersetzen Sie alle Aufrufe von **sqlzucenv**, **sqlzugcconnect**oder **sqlzugcstmt** durch Aufrufe von **sqlzuordchandle** durch Aufrufe von "SQL_HANDLE_ENV", "SQL_HANDLE_DBC" oder "SQL_HANDLE_STMT". **  
   
--   Ersetzen Sie alle Aufrufe **SQLFreeEnv** oder **SQLFreeConnect** mit Aufrufen von **SQLFreeHandle** mit dem entsprechenden *HandleType* Argument SQL_HANDLE_DBC auf oder SQL_HANDLE_STMT auf.  
+-   Ersetzen Sie alle Aufrufe von **sqlfreeerv** oder **sqlfreeconnect** durch Aufrufe von **SQLFreeHandle durch Aufrufe von SQLFreeHandle** durch *das entsprechende Handler* -Argument von SQL_HANDLE_DBC oder SQL_HANDLE_STMT.  
   
--   Ersetzen Sie alle Aufrufe **SQLSetConnectOption** mit Aufrufen von **SQLSetConnectAttr**. Wenn ein Attribut, dessen Wert festlegen. eine Zeichenfolge ist, legen Sie die *StringLength* Argument entsprechend. Änderung *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
+-   Ersetzen Sie alle Aufrufe von **SQLSetConnectOption** durch Aufrufe von **SQLSetConnectAttr**. Wenn Sie ein Attribut festlegen, dessen Wert eine Zeichenfolge ist, legen Sie das *StringLength* -Argument entsprechend fest. Ändern Sie das *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
   
--   Ersetzen Sie alle Aufrufe **SQLGetConnectOption** mit Aufrufen von **SQLGetConnectAttr**. Wenn eine Zeichenfolge oder ein binäres Attribut angezeigt werden soll, legen Sie *Pufferlänge* auf den entsprechenden Wert und übergeben Sie einen *StringLength* Argument. Änderung *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
+-   Ersetzen Sie alle Aufrufe von **SQLGetConnectOption** durch Aufrufe von **SQLGetConnectAttr**. Wenn Sie eine Zeichenfolge oder ein binäres Attribut erhalten, legen Sie *BufferLength* auf den entsprechenden Wert fest, und übergeben Sie ein *StringLength* -Argument. Ändern Sie das *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
   
--   Ersetzen Sie alle Aufrufe **SQLSetStmtOption** mit Aufrufen von **SQLSetStmtAttr**. Wenn ein Attribut, dessen Wert festlegen. eine Zeichenfolge ist, legen Sie die *StringLength* Argument entsprechend. Änderung *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
+-   Ersetzen Sie alle Aufrufe von **SQLSetStmtOption** durch Aufrufe von **SQLSetStmtAttr**. Wenn Sie ein Attribut festlegen, dessen Wert eine Zeichenfolge ist, legen Sie das *StringLength* -Argument entsprechend fest. Ändern Sie das *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
   
--   Ersetzen Sie alle Aufrufe **SQLGetStmtOption** mit Aufrufen von **SQLGetStmtAttr**. Wenn eine Zeichenfolge oder ein binäres Attribut angezeigt werden soll, legen Sie *Pufferlänge* auf den entsprechenden Wert und übergeben Sie einen *StringLength* Argument. Änderung *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
+-   Ersetzen Sie alle Aufrufe von **SQLGetStmtOption** durch Aufrufe von **SQLGetStmtAttr**. Wenn Sie eine Zeichenfolge oder ein binäres Attribut erhalten, legen Sie *BufferLength* auf den entsprechenden Wert fest, und übergeben Sie ein *StringLength* -Argument. Ändern Sie das *Attribut* Argument von SQL_XXXX in SQL_ATTR_XXXX.  
   
--   Ersetzen Sie alle Aufrufe **SQLTransact** mit Aufrufen von **SQLEndTran**. Wenn der äußersten rechten gültiges Handle in die **SQLTransact** Aufruf ist ein Umgebungshandle eine *HandleType* Argument SQL_HANDLE_ENV auf sollte verwendet werden, der **SQLEndTran** rufen Sie mit die entsprechende *behandeln* Argument. Wenn der äußersten rechten gültiges Handle in Ihre **SQLTransact** Aufruf ist ein Verbindungshandle ein *HandleType* Argument SQL_HANDLE_DBC auf, im verwendet werden soll die **SQLEndTran** mit aufrufen die entsprechende *behandeln* Argument.  
+-   Ersetzen Sie alle Aufrufe von **SQLTransact** durch Aufrufe von **SQLEndTran**. Wenn das äußteste Rechte Handle im **SQLTransact** -Befehl ein Umgebungs Handle ist, sollte im **SQLEndTran** -Befehl mit dem entsprechenden *handle* -Argument ein " *Lenker Type* "-SQL_HANDLE_ENV Argument verwendet werden. Wenn das äußteste äußteste Handle in Ihrem **SQLTransact** -Befehl ein Verbindungs Handle ist, sollte im **SQLEndTran** -Befehl mit dem entsprechenden *handle* -Argument ein " *Lenker Type* "-SQL_HANDLE_DBC Argument verwendet werden.  
   
--   Ersetzen Sie alle Aufrufe **SQLColAttributes** mit Aufrufen von **SQLColAttribute**. Wenn die *FieldIdentifier* Argument ist einem SQL_COLUMN_PRECISION SQL_COLUMN_SCALE oder SQL_COLUMN_LENGTH, verändern sich etwas anderes als den Namen der Funktion nicht. Ändern Sie die *FieldIdentifier* aus SQL_COLUMN_XXXX zu SQL_DESC_XXXX. Wenn *FieldIdentifier* SQL_DESC_CONCISE_TYPE und der Datentyp Datetime-Datentyp, wechseln Sie in der entsprechenden ODBC *3.x* -Datentyp.  
+-   Ersetzen Sie alle Aufrufe von **SQLColAttribute** durch Aufrufe von **SQLColAttribute**. Wenn das *fieldidentifier* -Argument entweder SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE oder SQL_COLUMN_LENGTH ist, ändern Sie nichts anderes als den Namen der Funktion. Wenn nicht, ändern Sie *fieldidentifier* von SQL_COLUMN_XXXX in SQL_DESC_XXXX. Wenn *fieldidentifier* SQL_DESC_CONCISE_TYPE und der Datentyp ein DateTime-Datentyp ist, wechseln Sie in den entsprechenden ODBC *3. x* -Datentyp.  
   
--   Wenn Sie Blockcursor, scrollfähige Cursor oder beides verwenden zu können, führt die Anwendung Folgendes aus:  
+-   Bei Verwendung von Blockcursorn, scrollfähigen Cursorn oder beidem führt die Anwendung Folgendes aus:  
   
-    -   Legt die Rowsetgröße Cursortyp und Cursor Concurrency mit **SQLSetStmtAttr**.  
+    -   Legt die Rowsetgröße, den Cursortyp und die Cursor Parallelität mithilfe von **SQLSetStmtAttr**fest.  
   
-    -   Aufrufe **SQLSetStmtAttr** SQL_ATTR_ROW_STATUS_PTR auf ein Array der Statusdatensätze festlegen.  
+    -   Ruft **SQLSetStmtAttr** auf, um SQL_ATTR_ROW_STATUS_PTR festzulegen, um auf ein Array von Status Datensätzen zu verweisen.  
   
-    -   Aufrufe **SQLSetStmtAttr** festzulegende SQL_ATTR_ROWS_FETCHED_PTR fest, um auf eine SQLINTEGER zu verweisen.  
+    -   Ruft **SQLSetStmtAttr** auf, um SQL_ATTR_ROWS_FETCHED_PTR festzulegen, dass auf einen SQLINTEGER-Wert verweist.  
   
-    -   Führt die erforderlichen Bindungen aus, und der SQL-Anweisung ausführt.  
+    -   Führt die erforderlichen Bindungen aus und führt die SQL-Anweisung aus.  
   
-    -   Aufrufe **SQLFetchScroll** in einer Schleife, um Zeilen abzurufen, und Navigieren in das Ergebnis festgelegt.  
+    -   Ruft **SQLFetchScroll** in einer Schleife auf, um Zeilen abzurufen und im Resultset zu verschieben.  
   
-    -   Wenn es durch Lesezeichen abrufen möchte, um die Anwendung ruft **SQLSetStmtAttr** SQL_ATTR_FETCH_BOOKMARK_PTR auf eine Variable festgelegt wird, die enthält das Lesezeichen für die Zeile, die abgerufen werden sollen, und ruft **SQLFetchScroll** mit einem *FetchOrientation* Argument von sql_fetch_bookmark auf.  
+    -   Wenn Sie ein Lesezeichen abrufen möchten, ruft die Anwendung **SQLSetStmtAttr** auf, um SQL_ATTR_FETCH_BOOKMARK_PTR auf eine Variable festzulegen, die das Lesezeichen für die abzurufende Zeile enthält, und ruft **SQLFetchScroll** mit einem *FetchOrientation* -Argument von SQL_FETCH_BOOKMARK auf.  
   
--   Wenn Sie Arrays von Parametern verwenden, führt die Anwendung Folgendes aus:  
+-   Wenn Parameter Arrays verwendet werden, führt die Anwendung die folgenden Schritte aus:  
   
-    -   Aufrufe **SQLSetStmtAttr** das Attribut verweist SQL_ATTR_PARAMSET_SIZE auf die Größe des Parameterarrays zu festgelegt.  
+    -   Ruft **SQLSetStmtAttr** auf, um das SQL_ATTR_PARAMSET_SIZE-Attribut auf die Größe des Parameter Arrays festzulegen.  
   
-    -   Aufrufe **SQLSetStmtAttr** SQL_ATTR_ROWS_PROCESSED_PTR auf eine interne UDWORD Variable festlegen.  
+    -   Ruft **SQLSetStmtAttr** auf, um SQL_ATTR_ROWS_PROCESSED_PTR festzulegen, um auf eine interne udword-Variable zu verweisen.  
   
-    -   Führt vorzubereiten, zu binden und Vorgänge nach Bedarf ausführen.  
+    -   Führt Vorbereitungs-, Bindungs-und Ausführungs Vorgänge nach Bedarf aus.  
   
-    -   Wenn aus irgendeinem Grund (z. B. SQL_NEED_DATA) Ausführung angehalten wird, können diese Parameter die "aktuelle" Zeile finden, durch den Speicherort verweist SQL_ATTR_ROWS_PROCESSED_PTR überprüfen.  
+    -   Wenn die Ausführung aus irgendeinem Grund angehalten wird (z. b. SQL_NEED_DATA), kann Sie die "aktuelle" Zeile der Parameter ermitteln, indem Sie den Speicherort überprüft, auf den SQL_ATTR_ROWS_PROCESSED_PTR verweist.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Zuordnen von Ersatzfunktionen für die Abwärtskompatibilität von Anwendungen](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md)  
   

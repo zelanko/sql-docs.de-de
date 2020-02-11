@@ -1,5 +1,5 @@
 ---
-title: Containerübergreifende Transaktionen | Microsoft-Dokumentation
+title: Container übergreifende Transaktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62807424"
 ---
 # <a name="cross-container-transactions"></a>Containerübergreifende Transaktionen
@@ -24,8 +24,8 @@ ms.locfileid: "62807424"
   
  Jede interpretierte Abfrage, die auf speicheroptimierte Tabellen verweist, wird als Teil einer containerübergreifenden Transaktion angesehen. Dies gilt unabhängig davon, ob die Abfrage über eine explizite oder implizite Transaktion oder im Autocommitmodus ausgeführt wurde.  
   
-##  <a name="isolation"></a> Isolierung einzelner Vorgänge  
- Jede [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Transaktion hat eine Isolationsstufe. Die Standardisolationsstufe ist Read Committed. Um eine andere Isolationsstufe zu verwenden, können Sie festlegen, die Isolationsstufe mit [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+##  <a name="isolation"></a>Isolierung einzelner Vorgänge  
+ Jede [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Transaktion hat eine Isolationsstufe. Die Standardisolationsstufe ist Read Committed. Wenn Sie eine andere Isolationsstufe verwenden möchten, können Sie die Isolationsstufe mithilfe von [Set Transaction Isolation Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)festlegen.  
   
  Häufig ist es notwendig, Vorgänge in speicheroptimierten Tabellen auf einer anderen Isolationsstufe als Vorgänge in datenträgerbasierten Tabellen auszuführen. In einer Transaktion ist es möglich, eine andere Isolationsstufe für eine Auflistung von Anweisungen oder für einen einzelnen Lesevorgang festzulegen.  
   
@@ -65,13 +65,13 @@ commit
 ### <a name="isolation-semantics-for-individual-operations"></a>Isolationssemantik für einzelne Vorgänge  
  Eine serialisierbare Transaktion T wird in vollständiger Isolation ausgeführt. Dabei wird angenommen, dass für alle anderen Transaktionen vor dem Start von T ein Commit ausgeführt wurde oder dass alle anderen Transaktionen erst gestartet werden, nachdem für T ein Commit ausgeführt wurde. Noch komplexer wird es, wenn verschiedene Vorgänge in einer Transaktion über unterschiedliche Isolationsstufen verfügen.  
   
- Die allgemeine Semantik der Transaktionsisolationsstufen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sowie die Auswirkungen zu sperren, wird in erläutert [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).  
+ Die allgemeine Semantik der Transaktions Isolations Stufen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sowie die Auswirkungen auf das Sperren wird unter [Set Transaction Isolation Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)erläutert.  
   
  Bei containerübergreifenden Transaktionen, in denen verschiedene Vorgänge über unterschiedliche Isolationsstufen verfügen können, sollten Sie sich die Semantik für die Isolation einzelner Lesevorgänge verdeutlichen. Schreibvorgänge sind immer isoliert. Schreibvorgänge in verschiedenen Transaktionen haben keine Auswirkungen aufeinander.  
   
  Ein Datenlesevorgang gibt mehrere Zeilen zurück, die eine Filterbedingung erfüllen.  
   
- Lesevorgänge werden ausgeführt, als Teil einer Transaktionsisolationsstufen "t" für Lesevorgänge unter folgenden Aspekten betrachtet werden kann,  
+ Lesevorgänge werden als Teil einer Transaktion T ausgeführt. die Isolations Stufen für Lesevorgänge können im Hinblick auf  
   
  Commitstatus  
  Der Commitstatus bezieht sich darauf, ob für den Datenlesevorgang garantiert ein Commit ausgeführt wird.  
@@ -80,9 +80,9 @@ commit
  Transaktionskonsistenz für einen Satz von Lesevorgängen bezieht sich auf die Frage, ob alle gelesenen Zeilenversionen garantiert Updates aus exakt demselben Transaktionssatz enthalten.  
   
  Stabilitätsgarantien, die das System der Transaktion T im Hinblick auf den Lesevorgang gewährt.  
- Stabilität bezieht sich auf gibt an, ob die Lesevorgänge der Transaktion wiederholbar sind. Würden die Lesevorgänge bei einer Wiederholung dieselben Zeilen und Zeilenversionen zurückgeben?  
+ Stabilität bezieht sich darauf, ob die Lesevorgänge der Transaktion wiederholbar sind. Würden die Lesevorgänge bei einer Wiederholung dieselben Zeilen und Zeilenversionen zurückgeben?  
   
- Bestimmte Garantien beziehen sich auf die logische Beendigungszeit der Transaktion. In der Regel ist die logische Beendigungszeit der Zeitpunkt, zu dem für die Transaktion ein Commit in der Datenbank ausgeführt wird. Wenn die Transaktion auf speicheroptimierte Tabellen zugreift, ist die logische Beendigungszeit technisch gesehen der Anfang der Überprüfungsphase. (Weitere Informationen finden Sie in der Erörterung zur transaktionslebensdauer unter [Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Bestimmte Garantien beziehen sich auf die logische Beendigungszeit der Transaktion. In der Regel ist die logische Beendigungszeit der Zeitpunkt, zu dem für die Transaktion ein Commit in der Datenbank ausgeführt wird. Wenn die Transaktion auf speicheroptimierte Tabellen zugreift, ist die logische Beendigungszeit technisch gesehen der Anfang der Überprüfungsphase. (Weitere Informationen finden Sie in der Erörterung der Transaktions Lebensdauer unter [Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
  Für eine Transaktion (t) sind eigene Updates unabhängig von der Isolationsstufe immer sichtbar:  
   
@@ -99,7 +99,7 @@ commit
  Für die gelesenen Daten wird garantiert ein Commit ausgeführt, und die Stabilität wird zur logischen Beendigungszeit der Transaktion erhöht.  
   
  SERIALIZABLE  
- Alle Garantien von REPEATABLE READ plus phantomvermeidung und Transaktionskonsistenz in Bezug auf alle serialisierbaren Lesevorgänge, die von t Phantom Avoidance bedeutet, dass der Scanvorgang nur zusätzliche Zeilen zurückgeben kann, die von T geschrieben wurden ausgeführt, aber keine Zeilen, die von anderen Transaktionen geschrieben wurden.  
+ Alle Garantien von Repeatable Read zuzüglich Phantom Vermeidung und Transaktions Konsistenz in Bezug auf alle serialisierbaren Lesevorgänge, die von t. Phantom Vermeidung durchgeführt werden, bedeutet, dass der Scanvorgang nur zusätzliche Zeilen zurückgeben kann, die von t geschrieben wurden, aber Nein Zeilen, die von anderen Transaktionen geschrieben wurden.  
   
  Beachten Sie die folgende Transaktion:  
   
@@ -131,11 +131,11 @@ commit
  Obwohl der Lesevorgang von t1 am Ende der Transaktion syntaktisch gesehen "Read Committed" entspricht, ist er eigentlich "Serializable", da derselbe Lesevorgang schon zu einem früheren Zeitpunkt in der Transaktion mit Serializable-Isolation ausgeführt wurde: Serialisierbarkeit garantiert, dass dieselben Zeilen zurückgegeben werden, wenn der Lesevorgang zu einem späteren Zeitpunkt in der Transaktion ausgeführt wird.  
   
 ## <a name="cross-container-transactions-and-isolation-levels"></a>Containerübergreifende Transaktionen und Isolationsstufen  
- Eine containerübergreifende Transaktion kann als die mit zwei Seiten betrachtet werden: eine datenträgerbasierte Seite (für Vorgänge in datenträgerbasierten Tabellen) und eine Speicheroptimierte Seite (für Vorgänge in speicheroptimierten Tabellen). Diese beiden Seiten können unterschiedliche Isolationsstufen aufweisen. Tatsächlich können einzelne Lesevorgänge auf jeder Seite unterschiedliche Isolationsstufen haben.  
+ Eine Container übergreifende Transaktion kann als zwei Seiten betrachtet werden: eine Datenträger basierte Seite (für Vorgänge in Datenträger basierten Tabellen) und eine Speicher optimierte Seite (für Vorgänge in Speicher optimierten Tabellen). Diese beiden Seiten können unterschiedliche Isolationsstufen aufweisen. Tatsächlich können einzelne Lesevorgänge auf jeder Seite unterschiedliche Isolationsstufen haben.  
   
  Die datenträgerbasierte Seite einer gegebenen Transaktion T erreicht eine bestimmte Isolationsstufe X, wenn eine der folgenden Bedingungen erfüllt wird:  
   
--   Sie beginnt in X. D. h. den sitzungsstandard wurde X, entweder weil Sie ausgeführt `SET TRANSACTION ISOLATION LEVEL`, oder es ist die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard.  
+-   Sie beginnt in X. Das heißt, der Standard der Sitzung war X, weil Sie entweder `SET TRANSACTION ISOLATION LEVEL`ausgeführt haben oder der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standardwert ist.  
   
 -   Während der Transaktion wird die Standardisolationsstufe mit `SET TRANSACTION ISOLATION LEVEL` in X geändert.  
   
@@ -172,7 +172,7 @@ commit
   
  Speicheroptimierte Tabellen unterstützen die Isolationsstufen SNAPSHOT, REPEATABLE READ und SERIALIZABLE. Bei Autocommittransaktionen unterstützen speicheroptimierte Tabellen die Isolationsstufe READ COMMITTED.  
   
- Die folgenden Szenarien werden unterstützt:  
+ Folgende Szenarios werden unterstützt:  
   
 -   Containerübergreifende READ UNCOMMITTED-, READ COMMITTED- und READ_COMMITTED_SNAPSHOT-Transaktionen können mit SNAPSHOT-, REPEATABLE READ- und SERIALIZABLE-Isolation auf speicheroptimierte Tabellen zugreifen. Die READ COMMITTED-Garantie bedeutet für die Transaktion, dass für alle Zeilen, die von der Transaktion gelesen wurden, ein Commit in der Datenbank ausgeführt wurde.  
   
@@ -183,11 +183,11 @@ commit
   
  Für containerübergreifende schreibgeschützte Transaktionen im Autocommitmodus wird einfach am Ende der Transaktion ein Rollback ausgeführt. Es wird keine Überprüfung ausgeführt.  
   
- Explizite oder implizite containerübergreifende schreibgeschützte Transaktionen führen die Überprüfung zur Commitzeit aus, wenn die Transaktion mit REPEATABLE READ- oder SERIALIZABLE-Isolation auf speicheroptimierte Tabellen zugreift. Ausführliche Informationen zur Überprüfung finden Sie im Abschnitt zu Konflikterkennung, Überprüfung und Commitabhängigkeitsüberprüfungen unter [Transaktionen in speicheroptimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
+ Explizite oder implizite containerübergreifende schreibgeschützte Transaktionen führen die Überprüfung zur Commitzeit aus, wenn die Transaktion mit REPEATABLE READ- oder SERIALIZABLE-Isolation auf speicheroptimierte Tabellen zugreift. Ausführliche Informationen zur Validierung finden Sie im Abschnitt zu Konflikterkennung, Validierung und Commit-Abhängigkeits Prüfungen in [Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlegendes zu Transaktionen in speicheroptimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
- [Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zu Transaktionen in Speicher optimierten Tabellen](../../2014/database-engine/understanding-transactions-on-memory-optimized-tables.md)   
+ [Richtlinien für Transaktions Isolations Stufen mit Speicher optimierten Tabellen](../../2014/database-engine/guidelines-for-transaction-isolation-levels-with-memory-optimized-tables.md)   
  [Richtlinien zur Wiederholungslogik für Transaktionen auf speicheroptimierten Tabellen](../../2014/database-engine/guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables.md)  
   
   

@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 42e52d92d993627129f79f215fa536001f44538d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63074062"
 ---
 # <a name="template-explorer"></a>Template Explorer
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Vielzahl von Vorlagen bereit. Vorlagen sind Dateien mit Codevorlagen, die SQL-Skripts enthalten, mit deren Hilfe Sie Objekte in einer Datenbank erstellen können. Beim ersten Öffnen des Vorlagen-Explorers wird eine Kopie der Vorlagen werden in den Ordner des Benutzers in C:\Users, unter AppData\Roaming\Microsoft\SQL Server Management Studio\120\Templates platziert.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt eine Vielzahl von Vorlagen bereit. Vorlagen sind Dateien mit Codevorlagen, die SQL-Skripts enthalten, mit deren Hilfe Sie Objekte in einer Datenbank erstellen können. Beim ersten Öffnen des Vorlagen-Explorers wird eine Kopie der Vorlagen im Benutzerordner unter "c:\Users" unter "appdata\roaming\microsoft\sql Server Management studio\120\templates" abgelegt.  
   
  Sie können die verfügbaren Vorlagen in Vorlagen-Explorer durchsuchen und dann eine Vorlage öffnen, um den Code in einem Fenster des Code-Editors zu integrieren. Sie können auch benutzerdefinierte Vorlagen erstellen.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63074062"
 ## <a name="related-tasks"></a>Related Tasks  
  Erste Schritte mit Vorlagen finden Sie in den folgenden Themen:  
   
-|**Description**|**Thema**|  
+|**Beschreibung**|**Thema**|  
 |---------------------|---------------|  
 |Beschreibt, wie der Code aus einer Vorlage in ein Code-Editorfenster integriert wird.|[Öffnen einer Vorlage](open-a-template.md)|  
 |Beschreibt, wie Vorlagenparameterwerte nach dem Öffnen einer Vorlage in einem Code-Editor ersetzt werden.|[Vorlagenparameter ersetzen](replace-template-parameters.md)|  

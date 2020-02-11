@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62808398"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
@@ -28,13 +28,13 @@ ms.locfileid: "62808398"
   
  Hinweis: Das Abfragetimeout für SQL Azure liegt bei 30 Minuten.  
   
-## <a name="authentication"></a>Authentifizierung  
- Zeigt die Authentifizierungseigenschaften für die aktuelle Verbindung an. Zu den Authentifizierungseigenschaften zählen der Anmeldename und die Authentifizierungsmethode, die beim Herstellen der Verbindung verwendet wurden. Zum Ändern der Authentifizierungseigenschaften trennen Sie die Verbindung zu [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und stellen Sie dann erneut eine Verbindung zwischen dem Objekt-Explorer und dem Server her, wobei Sie die gewünschten Verbindungsoptionen verwenden.  
+## <a name="authentication"></a>Authentication  
+ Zeigt die Authentifizierungseigenschaften für die aktuelle Verbindung an. Zu den Authentifizierungseigenschaften zählen der Anmeldename und die Authentifizierungsmethode, die beim Herstellen der Verbindung verwendet wurden. Zum Ändern der Authentifizierungs Eigenschaften trennen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Sie die Verbindung mit, und verbinden Sie Objekt-Explorer mit dem Server, indem Sie die gewünschten Verbindungsoptionen verwenden.  
   
  **Authentifizierungsmethode**  
  Für die aktuelle Verbindung verwendete Authentifizierungsmethode.  
   
- **Benutzername**  
+ **Benutzer Name**  
  Bei der Verbindungsauthentifizierung für die Anmeldung verwendeter Benutzername.  
   
 ## <a name="connection-category"></a>Verbindungskategorie  
@@ -49,31 +49,31 @@ ms.locfileid: "62808398"
  **Netzwerkprotokoll**  
  Das für die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Verbindung verwendete Netzwerkprotokoll. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
- **Netzwerkpaketgröße**  
+ **Netzwerk Paketgröße**  
  Bei der Kommunikation mit dem Server verwendete Netzwerkpaketgröße. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
  **Verbindungstimeout**  
  Die beim Herstellen einer Verbindung zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] abzuwartende Zeitdauer (in Sekunden), bevor ein Timeout eintritt und eine Fehlermeldung an den Benutzer ausgegeben wird. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
- **Ausführungstimeout**  
+ **Ausführungs Timeout**  
  Zeitdauer (in Sekunden), die auf den Abschluss eines Tasks auf dem Server gewartet werden soll. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
  **Verschlüsselt**  
  Gibt an, ob die aktuelle Verbindung verschlüsselt ist. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
-## <a name="product-category"></a>Product Category  
+## <a name="product-category"></a>Produktkategorie  
  Zeigt die Produkteigenschaften für die aktuelle Verbindung an. Diese Eigenschaften beschreiben das Produkt, die Version, den Instanznamen und die Sortierung des Servers. Die Eigenschaften werden während der Installation von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] festgelegt.  
   
  **Produktname**  
  Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Produktname.  
   
- **Produktversion**  
+ **Produkt Version**  
  Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Produktversion.  
   
- **Servername**  
+ **Server Name**  
  Der Name des Computers, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.  
   
- **Der Instanzname.**  
+ **Instanzname**  
  Der Instanzname des Servers. Die Standardinstanz ist leer.  
   
  **Sprache**  
@@ -85,10 +85,10 @@ ms.locfileid: "62808398"
 ## <a name="server-environment-category"></a>Serverumgebungskategorie  
  Zeigt die Serverumgebungseigenschaften für die aktuelle Verbindung in Bezug auf die Serverhardware und das Betriebssystem an. Diese Eigenschaften können mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht konfiguriert werden.  
   
- **Computername**  
+ **Computer Name**  
  Der Name des Servercomputers, auf dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ausgeführt wird.  
   
- **Platform**  
+ **Plattform**  
  Der Name und Hersteller des Betriebssystems sowie die CPU-Familie des Servers.  
   
  **Betriebssystem**  
@@ -97,11 +97,11 @@ ms.locfileid: "62808398"
  **Prozessoren**  
  Anzahl der Prozessoren auf dem Server.  
   
- **Arbeitsspeicher für das Betriebssystem**  
+ **Betriebs System Arbeitsspeicher**  
  Der gesamte auf dem Server vorhandene physische Arbeitsspeicher in Megabytes.  
   
-## <a name="see-also"></a>Siehe auch  
- [Eigenschaftenseiten in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Verbindung mit Server herstellen &#40;Seite Anmeldung in der Datenbank-Engine&#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Eigenschaften Seiten in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
+ [Verbindung mit Server herstellen &#40;Anmeldeseite&#41; Datenbank-Engine](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

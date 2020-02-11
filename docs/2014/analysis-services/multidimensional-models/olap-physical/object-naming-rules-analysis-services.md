@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "69530894"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
@@ -66,15 +66,15 @@ ms.locfileid: "69530894"
   
  In der folgenden Tabelle werden die ungültigen Zeichen für bestimmte Objekte aufgeführt.  
   
-|Objekt|Ungültige Zeichen|  
+|Object|Ungültige Zeichen|  
 |------------|------------------------|  
 |`Server`|Befolgen Sie beim Benennen von Serverobjekten die Benennungskonventionen für Windows-Server. Weitere Informationen finden Sie unter [Benennungs Konventionen (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level` oder `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension` oder `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level`noch`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension`noch`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Alle anderen Objekte|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
- **Ausnahmen Wenn reservierte Zeichen zulässig sind**  
+ **Ausnahmen: Wenn reservierte Zeichen zulässig sind**  
   
  Wie bereits erwähnt, können Datenbanken mit einem bestimmten Modalitäts- und Kompatibilitätsgrad Objektnamen enthalten, die reservierte Zeichen aufweisen. Dimensionsattribut-, Hierarchie-, Ebenen-, Measure- und KPI-Objektnamen für tabellarische Datenbanken (1103 oder höher) können reservierte Zeichen enthalten, wenn diese Datenbanken die Verwendung erweiterter Zeichen zulassen:  
   
@@ -87,9 +87,9 @@ ms.locfileid: "69530894"
   
  ModelType kann für Datenbanken auf default festgelegt sein. Da default mit multidimensional identisch ist, werden reservierte Zeichen in Spaltennamen folglich nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reservierte MDX-Wörter](/sql/mdx/mdx-reserved-words)   
- [Über &#40;setzungen Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XMLA für die XML for Analysis Konformität &#40;&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [Übersetzungen &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
+ [XML for Analysis Konformität &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a71ac4d6bcc887257ea5bfbc1523e327fc03b16
-ms.sourcegitcommit: ea6603e20c723553c89827a6b8731a9e7b560b9c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/25/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74479310"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Verwalten von Partitionen für eine Mergeveröffentlichung mit parametrisierten Filtern
@@ -26,7 +26,7 @@ ms.locfileid: "74479310"
   
  **In diesem Thema**  
   
--   **Bevor Sie beginnen:**  
+-   **Vorbereitungen:**  
   
      [Empfehlungen](#Recommendations)  
   
@@ -38,16 +38,16 @@ ms.locfileid: "74479310"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a>Bevor Sie beginnen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a>Empfehlungen  
+###  <a name="Recommendations"></a> Empfehlungen  
   
 -   Wenn Sie, wie empfohlen, ein Skript für eine Replikationstopologie erstellen, enthalten die Veröffentlichungsskripts die Aufrufe der gespeicherten Prozedur zum Erstellen von Datenpartitionen. Die Skripts stellen einen Verweis für die erstellten Partitionen bereit und ermöglichen das erneute Erstellen von Partitionen, falls dies erforderlich wird. Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
   
 -   Wenn eine Veröffentlichung parametrisierte Filter aufweist, die Abonnements mit nicht überlappenden Partitionen ergeben, und ein bestimmtes Abonnement verloren gegangen ist und neu erstellt werden muss, müssen Sie wie folgt vorgehen: Entfernen Sie die Partition, die abonniert wurde, erstellen Sie das Abonnement neu, und erstellen Sie dann die Partition neu. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md). Durch Replikation werden Erstellungsskripts für vorhandene Abonnentenpartitionen generiert, wenn ein Erstellungsskript für eine Veröffentlichung generiert wird. Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
   
-##  <a name="SSMSProcedure"></a>Verwenden von SQL Server Management Studio  
- Zum Verwalten von Partitionen steht Ihnen die Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md). Auf dieser Seite können Sie Partitionen erstellen und löschen, Abonnenten ermöglichen, die Momentaufnahmegenerierung und -bereitstellung zu initialisieren, Momentaufnahmen für eine oder mehrere Partitionen generieren und einen Cleanup von Momentaufnahmen ausführen.  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ Zum Verwalten von Partitionen steht Ihnen die Seite **Datenpartitionen** des Dialogfelds **Veröffentlichungseigenschaften – \<Veröffentlichung>** zur Verfügung. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md). Auf dieser Seite können Sie Partitionen erstellen und löschen, Abonnenten ermöglichen, die Momentaufnahmegenerierung und -bereitstellung zu initialisieren, Momentaufnahmen für eine oder mehrere Partitionen generieren und einen Cleanup von Momentaufnahmen ausführen.  
   
 #### <a name="to-create-a-partition"></a>So erstellen Sie eine Partition  
   
@@ -87,7 +87,7 @@ ms.locfileid: "74479310"
   
 2.  Klicken Sie auf **Cleanup der vorhandenen Momentaufnahmen ausführen**.  
   
-##  <a name="TsqlProcedure"></a>Verwenden von Transact-SQL  
+##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Sie können die vorhandenen Partitionen mithilfe gespeicherter Replikationsprozeduren programmgesteuert aufzählen, um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können. Zudem können Sie Partitionen erstellen und vorhandene Partitionen löschen. Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
   
 -   Filterung einer Partition (mit [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) oder [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql)).  
@@ -122,7 +122,7 @@ ms.locfileid: "74479310"
   
      Dadurch werden zudem der Momentaufnahmeauftrag und alle Momentaufnahmedateien für die Partition entfernt.  
   
-##  <a name="RMOProcedure"></a>Verwenden von Replikationsverwaltungsobjekte (RMO)  
+##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Um eine Veröffentlichung mit parametrisierten Filtern besser verwalten zu können, können Sie programmgesteuert neue Abonnentenpartitionen erstellen, die vorhandenen Abonnentenpartitionen aufzählen und Abonnentenpartitionen mithilfe von Replikationsverwaltungsobjekten (RMO) entfernen. Informationen zum Erstellen von Abonnentenpartitionen finden Sie unter [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md). Die folgenden Informationen zu vorhandenen Partitionen können abgerufen werden:  
   
 -   Der Wert und die Filterfunktion, auf dem bzw. der die Partition basiert.  
@@ -160,7 +160,7 @@ ms.locfileid: "74479310"
 7.  Wiederholen Sie Schritt 6 für jede zu löschende Partition.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Parametrisierte Zeilen Filter](../merge/parameterized-filters-parameterized-row-filters.md)   
+ [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)   
  [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

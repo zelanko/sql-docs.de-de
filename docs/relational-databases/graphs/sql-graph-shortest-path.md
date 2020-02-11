@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74056403"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "74056403"
 
   Gibt eine Such Bedingung für ein Diagramm an, das rekursiv oder wiederholt durchsucht wird. SHORTEST_PATH können in der SELECT-Anweisung innerhalb der Übereinstimmung mit Diagramm Knoten und Edge-Tabellen verwendet werden. 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="shortest-path"></a>Kürzeste Pfad
 Mit der SHORTEST_PATH-Funktion können Sie Folgendes finden:    
@@ -48,8 +48,8 @@ FOR PATH muss mit einem beliebigen Knoten-oder Kanten Tabellennamen in der from-
 ## <a name="arbitrary-length-pattern"></a>Beliebiges Längen Muster
 Dieses Muster umfasst die Knoten und Kanten, die wiederholt durchlaufen werden müssen, bis der gewünschte Knoten erreicht wird, oder bis die maximale Anzahl von Iterationen, die im Muster angegeben sind, erreicht wird. Jedes Mal, wenn die Abfrage ausgeführt wird, ist das Ergebnis der Ausführung dieses Musters eine geordnete Auflistung der Knoten und Kanten, die entlang des Pfads vom Startknoten zum Endknoten durchlaufen werden. Dabei handelt es sich um ein Stil Syntax Muster für reguläre Ausdrücke, und die folgenden beiden Muster quantifiziererer werden unterstützt:
 
-* **"+"** : Wiederholen Sie das Muster mindestens 1 mal. Beenden, sobald ein kürzester Pfad gefunden wird.
-* **{1, n}** : Wiederholen Sie das Muster 1 bis n. Beenden, sobald eine kürzeste gefunden wurde.
+* **"+"**: Wiederholen Sie das Muster mindestens 1 mal. Beenden, sobald der kürzeste Pfad gefunden wird.
+* **{1, n}**: Wiederholen Sie das Muster 1 bis n. Beenden, sobald eine kürzeste gefunden wurde.
 
 ## <a name="last_node"></a>LAST_NODE
 Die LAST_NODE ()-Funktion ermöglicht das Verketten von zwei beliebigen Längen Durchlauf Mustern. Sie kann in Szenarien verwendet werden, in denen Folgendes gilt:    
@@ -85,20 +85,20 @@ Die STRING_AGG-Funktion nimmt einen Ausdruck und ein Trennzeichen als Eingabe an
 ### <a name="last_value"></a>LAST_VALUE
 Um Attribute aus dem letzten Knoten des durchsuchten Pfades zu projizieren, kann LAST_VALUE Aggregatfunktion verwendet werden. Es ist ein Fehler, einen edgetabellenalias als Eingabe für diese Funktion bereitzustellen. es können nur Knoten Tabellennamen oder Aliase verwendet werden.
 
-**Letzter Knoten**: der letzte Knoten verweist auf den Knoten, der zuletzt im durchsuchten Pfad angezeigt wird, unabhängig von der Richtung des Pfeils im Übereinstimmungs Prädikat. Beispiel: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )` Hier ist der letzte Knoten im Pfad der zuletzt besuchte P-Knoten. 
+**Letzter Knoten**: der letzte Knoten verweist auf den Knoten, der zuletzt im durchsuchten Pfad angezeigt wird, unabhängig von der Richtung des Pfeils im Übereinstimmungs Prädikat. Beispiel: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. Hier ist der letzte Knoten im Pfad der zuletzt besuchte P-Knoten. 
 
-Der letzte Knoten ist hingegen der letzte n-te Knoten im Ausgabe Diagramm Pfad für dieses Muster: `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
+Der letzte Knoten ist hingegen der letzte n-te Knoten im Ausgabe Diagramm Pfad für dieses Muster:`MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
 ### <a name="sum"></a>SUM
 Diese Funktion gibt die Summe der angegebenen Knoten-/edgeattributwerte oder des Ausdrucks zurück, die im durchsuchten Pfad aufgetreten sind.
 
 ### <a name="count"></a>COUNT
-Diese Funktion gibt die Anzahl der Werte zurück, die nicht NULL sind. Die Count-Funktion unterstützt den '\*'-Operator mit einem Knoten-oder edgetabellenalias. Ohne den Knoten-oder edgetabellenalias ist die Verwendung von \* mehrdeutig und führt zu einem Fehler.
+Diese Funktion gibt die Anzahl der Werte zurück, die nicht NULL sind. Die Count-Funktion unterstützt\*den-Operator mit einem Knoten-oder edgetabellenalias. Ohne den Knoten-oder edgetabellenalias ist die \* Verwendung von mehrdeutig und führt zu einem Fehler.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 
 
-### <a name="avg"></a>AVG
+### <a name="avg"></a>DURCHSCHN.
 Gibt den Durchschnitt der angegebenen Knoten-/edgeattributwerte oder des Ausdrucks zurück, der im durchsuchten Pfad aufgetreten ist.
 
 ### <a name="min"></a>MIN
@@ -107,7 +107,7 @@ Gibt den minimalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem 
 ### <a name="max"></a>MAX
 Gibt den maximalen Wert aus den angegebenen Knoten-/edgeattributwerten oder dem Ausdruck zurück, der im durchsuchten Pfad aufgetreten ist.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 shortest_path Funktion kann nur innerhalb von Match verwendet werden.     
 LAST_NODE wird nur in shortest_path unterstützt.     
 Das Auffinden von gewichtetem kürzesten Pfad wird nicht unterstützt.         
@@ -173,7 +173,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D: Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
 Im folgenden Beispiel wird der kürzeste Pfad zwischen Jacob und allen Personen, mit denen er verbunden ist, im Graph 1-3-hophop gefunden. 
 
 ```
@@ -208,9 +208,9 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>Siehe auch  
- [Match (SQL Graph)](../../t-sql/queries/match-sql-graph.md) -    
- [CREATE TABLE &#40;SQL-Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
- [INSERT (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
+## <a name="see-also"></a>Weitere Informationen  
+ [Match (SQL-Graph)](../../t-sql/queries/match-sql-graph.md)    
+ [CREATE TABLE &#40;SQL Graph-&#41;](../../t-sql/statements/create-table-sql-graph.md)   
+ [Insert (SQL-Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Graph Processing with SQL Server 2017 (Graph-Verarbeitung mit SQL Server-2017)](../../relational-databases/graphs/sql-graph-overview.md)     
  

@@ -1,5 +1,5 @@
 ---
-title: Auswählen und Konfigurieren von Objekten mit Test (OracleToSQL) | Microsoft-Dokumentation
+title: Auswählen und Konfigurieren von zu testenden Objekten (oracleto SQL) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -13,75 +13,75 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68264643"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>Auswählen und Konfigurieren von zu testenden Objekten (OracleToSQL)
-In diesem Schritt wählen Sie die Objekte zu testen, und Konfigurieren von Einstellungen für den Vergleich von Prozeduren und Funktionen Output-Parameter, als auch die Rückgabewerte von Funktionen.  
+In diesem Schritt wählen Sie die zu testenden Objekte aus und konfigurieren die Einstellungen für den Vergleich der Ausgabeparameter der Prozeduren und Funktionen sowie die Rückgabewerte von Funktionen.  
   
-## <a name="selection-of-objects-to-test"></a>Auswahl von Objekten für Test  
-Überprüfen Sie in der Oracle-Objektstruktur befindet sich auf der linken Seite des Fensters die Objekte, die Sie während der Tests aufrufen möchten. Die vollständige Liste der getestet werden Objekte in der [migriert Datenbankobjekte testen &#40;OracleToSQL&#41; ](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) Thema.  
+## <a name="selection-of-objects-to-test"></a>Auswahl der zu testenden Objekte  
+Überprüfen Sie in der Oracle-Objektstruktur, die sich auf der linken Seite des Fensters befindet, die Objekte, die Sie während des Testprozesses aufrufen möchten. Weitere Informationen finden Sie in der vollständigen Liste mit Test fähigen Objekten im Thema [Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md) .  
   
-Wenn SSMA Tester die Objekte, die zu Testzwecken ausgewählt nicht unterstützt wird, sehen Sie den Link, mit der Bezeichnung **einige ausgewählte Objekte enthalten Fehler** unter der Objektstruktur. Klicken Sie auf diesen Link an die Gründe, warum diese Objekte nicht getestet werden kann, und um die Auswahl der falschen Objekte zu löschen.  
+Wenn SSMA Tester keines der für den Test ausgewählten Objekte unterstützt, wird der Link mit der Bezeichnung **einige ausgewählte Objekte enthält** unter der Struktur Objekte Fehler angezeigt. Klicken Sie auf diesen Link, um die Gründe anzuzeigen, warum diese Objekte nicht getestet werden können, und um die Auswahl falscher Objekte zu löschen.  
   
-Klicken Sie auf der rechten Seite können Sie mehrere Seiten anzeigen der **SQL** Seite zeigt die Definition für das aktuelle Objekt. Die **Parameter** Seite listet die Parameter auf, wenn das Objekt eine gespeicherte Prozedur oder eine Funktion ist. Die **Eigenschaften** Seite zeigt zusätzliche Eigenschaften des Objekts. Siehe die Beschreibung der **Parameter Vergleiche** und **rufen Werte** nachfolgenden Seiten.  
+Auf der rechten Seite können Sie mehrere Seiten anzeigen. die **SQL** -Seite zeigt die Definition des aktuellen Objekts an. Die Seite **Parameter** listet die Parameter auf, wenn es sich bei dem Objekt um eine gespeicherte Prozedur oder eine Funktion handelt. Auf der Seite **Eigenschaften** werden zusätzliche Eigenschaften des Objekts angezeigt. Weitere Informationen finden Sie in der Beschreibung der Seiten **Parameter Vergleiche** und **Aufrufen von Werten** .  
   
-## <a name="parameter-comparison-settings"></a>Vergleich der Parametereinstellungen  
-Einrichten der Vergleichsregeln für Output-Parameter und Rückgabewerte in der **Parameter Vergleiche** Seite. Sie können die folgenden Einstellungen vornehmen.  
+## <a name="parameter-comparison-settings"></a>Parameter Vergleichs Einstellungen  
+Legen Sie die Vergleichs Regeln für Ausgabeparameter und Rückgabewerte auf der Seite **Parameter Vergleiche** fest. Sie können die folgenden Einstellungen vornehmen.  
   
-### <a name="use-during-test-comparisons"></a>Verwendung während der Testvergleiche  
-Aktivieren Sie die von den ausgewählten Parameter in Vergleichsberichte für Ergebnisse.  
+### <a name="use-during-test-comparisons"></a>Verwendung während der Test Vergleiche  
+Aktiviert die Verwendung des ausgewählten Parameters im Vergleich mit Testergebnissen.  
   
--   Auf Wunsch **"true"** , SSMA wird den Ausgabewert dieses Parameters vergleichen, nach dem Ausführen der Prozedur für Oracle mit dem entsprechenden Wert in SQL Server.
+-   Wenn Sie **true**auswählen, vergleicht SSMA den Ausgabewert dieses Parameters nach dem Ausführen der Prozedur in Oracle mit dem entsprechenden Wert auf SQL Server.
   
--   Auf Wunsch **"false"** , der Parameter aus Ergebnisse Überprüfung ausgeschlossen werden.  
+-   Wenn Sie**false**auswählen, wird der Parameter von der Ergebnis Überprüfung ausgeschlossen.  
   
-### <a name="use-custom-scale"></a>Verwenden Sie benutzerdefinierte Skalierung  
-Für die Parameter des numerischen Datentyp aufweisen können Sie festlegen, dass eine benutzerdefinierte Skalierung für den Vergleich.  
+### <a name="use-custom-scale"></a>Benutzerdefinierte Skalierung verwenden  
+Für Parameter des numerischen Datentyps können Sie eine benutzerdefinierte Skala für den Vergleich festlegen.  
   
--   Auf Wunsch **"true"** , numerische Werte entsprechend aufgerundet der **vergleichen Skalierung** Wert, bevor sie verglichen werden.  
+-   Wenn Sie **true**auswählen, werden numerische Werte entsprechend dem **Vergleichs Skalierungs** Wert gerundet, bevor Sie verglichen werden.  
   
--   Auf Wunsch **"false"** , exakten numerischen Vergleichs werden.  
+-   Wenn Sie**false**auswählen, ist der numerische Vergleich genau.  
   
-### <a name="comparing-scale"></a>Vergleichen von Skala  
-Nur verfügbar, wenn die **Verwenden benutzerdefinierter Maßstab** Option wird festgelegt, um **"true"** . Dies ist die Genauigkeit für einen numerischen Vergleich.  
+### <a name="comparing-scale"></a>Vergleichen der Skala  
+Nur verfügbar, wenn die Option **benutzerdefinierte Skalierung verwenden** auf **true**festgelegt ist. Dies ist die Genauigkeit für den numerischen Vergleich.  
   
-### <a name="date-time-comparing"></a>Datum Uhrzeit vergleichen  
-Definiert, wie die Datum/Uhrzeit-Werte verglichen.  
+### <a name="date-time-comparing"></a>Vergleichen von Datum und Uhrzeit  
+Definiert, wie Datums-/Uhrzeitwerte verglichen werden.  
   
--   Bei Auswahl von **gesamte Datum vergleichen**, vollständigen Vergleich von Werten aus beiden Plattformen ausgeführt werden.  
+-   Wenn Sie die Option **gesamtes Datum vergleichen**auswählen, wird ein vollständiger Vergleich der Werte beider Plattformen ausgeführt.  
   
--   Bei Auswahl von **nur Date vergleichen**, wird die Uhrzeit, die Teil ignoriert werden.  
+-   Wenn Sie **Datum nur vergleichen**auswählen, wird der Uhrzeit Teil ignoriert.  
   
--   Bei Auswahl von **vergleichen nur Zeit**, das Datum Teil ignoriert werden.  
+-   Wenn Sie **nur die Zeit vergleichen**auswählen, wird der Datums Teil ignoriert.  
   
--   Bei Auswahl von **ignorieren Millisekunden**, bis zu Sekunden werden die Ergebnisse verglichen werden.  
+-   Wenn Sie die Option **Millisekunden ignorieren**auswählen, werden die Ergebnisse bis zu Sekunden verglichen.  
   
--   Bei Auswahl von **ignorieren von Datum und die Millisekunden**, das Ergebnis wird im Vergleich nur vom Time-Teil und wird ignoriert. Bruchteile einer Sekunde sein.  
+-   Wenn Sie **Datum und Millisekunden ignorieren**auswählen, wird das Ergebnis nur nach Zeit Teil verglichen, und die Sekundenbruchteile werden ignoriert.  
   
-### <a name="ignore-strings-case"></a>Zeichenfolgen Groß-/Kleinschreibung ignorieren  
-Steuert den Vergleich die Groß-/Kleinschreibung beachtet.  
+### <a name="ignore-strings-case"></a>Zeichen folgen ignorieren  
+Steuert die Groß-/Kleinschreibung des Vergleichs.  
   
--   Auf Wunsch **"true"** , der Vergleich wird Groß-/Kleinschreibung sein.  
+-   Wenn Sie **true**auswählen, wird beim Vergleich die Groß-/Kleinschreibung nicht beachtet.  
   
--   Auf Wunsch **"false"** , der Vergleich wird Groß-/Kleinschreibung beachtet werden.  
+-   Wenn Sie **false**auswählen, wird beim Vergleich die Groß-/Kleinschreibung beachtet.  
   
 ### <a name="ignore-trailing-spaces"></a>Nachfolgende Leerzeichen ignorieren  
-Steuert, wie nachfolgende Leerzeichen werden während des Vergleichs behandelt.  
+Steuert, wie nachfolgende Leerzeichen während des Vergleichs behandelt werden.  
   
--   Auf Wunsch **"true"** , die verglichenen Zeichenfolgen werden vor dem Vergleich werden rechts abgeschnitten.  
+-   Wenn Sie **true**auswählen, werden die verglichenen Zeichen folgen vor dem Vergleich mit der rechten Seite abgeschnitten.  
   
--   Auf Wunsch **"false"** , behält die verglichenen Zeichenfolgen nachstehende Leerzeichen.  
+-   Wenn Sie **false**auswählen, werden nachfolgende Leerzeichen in den verglichenen Zeichen folgen beibehalten.  
   
-## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Geben Sie die Eingabewerte für die Prozeduren und Funktionen (rufen Sie Werte)  
-Sie können die Werte der Eingabeparameter angeben, auf die **rufen Werte** Seite. Die **Aufruf hinzufügen** Schaltfläche wird einen neuen Aufruf mit leeren Werten hinzugefügt. Die **entfernen Aufrufe** Schaltfläche entfernt den aktuellen Aufruf.  
+## <a name="specify-input-values-for-procedures-and-functions-call-values"></a>Angeben von Eingabe Werten für Prozeduren und Funktionen (aufrufwerte)  
+Sie können die Eingabeparameter Werte auf der Seite " **Werte aufrufen** " angeben. Mit der Schaltfläche " **aufrufen** " wird ein neuer-Befehl mit leeren Parameterwerten hinzugefügt. Die Schaltfläche **Aufrufe entfernen** entfernt den aktuellen Aufruf.  
   
 ## <a name="next-step"></a>Nächster Schritt  
-[Auswählen und Konfigurieren von betroffenen Objekten &#40;OracleToSQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
+[Auswählen und konfigurieren betroffener Objekte &#40;oracleto SQL&#41;](../../ssma/oracle/selecting-and-configuring-affected-objects-oracletosql.md)  
   
-## <a name="see-also"></a>Siehe auch  
-[Testen von migrierten Datenbankobjekten &#40;OracleToSQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+[Testen von migrierten Datenbankobjekten &#40;oracleto SQL&#41;](../../ssma/oracle/testing-migrated-database-objects-oracletosql.md)  
   

@@ -13,62 +13,62 @@ ms.assetid: 596eb4b6-c22f-4cde-b23f-172dd66c3161
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7d903b2a5f971d0b6c7114a9e5229bff6133d743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67923457"
 ---
 # <a name="what-is-a-cursor"></a>Was ist ein Cursor?
-Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Die von einer SELECT-Anweisung zurückgegebene Gruppe von Zeilen besteht aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, insbesondere über diejenigen, die interaktiv und online ist, sind bearbeitet nicht immer effektiv das gesamte Resultset als eine Einheit. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
+Vorgänge in einer relationalen Datenbank beziehen sich immer auf eine vollständige Gruppe von Zeilen. Die von einer SELECT-Anweisung zurückgegebene Gruppe von Zeilen besteht aus allen Zeilen, die die Bedingungen der WHERE-Klausel der Anweisung erfüllen. Diese vollständige Gruppe von Zeilen, die von der Anweisung zurückgegeben wird, wird als Resultset bezeichnet. Anwendungen, vor allem interaktive und Online Anwendungen, können nicht immer effektiv mit dem gesamten Resultset als Einheit arbeiten. Diese Anwendungen benötigen einen Mechanismus, um jeweils eine Zeile oder einen kleinen Zeilenblock zu bearbeiten. Cursor sind eine Erweiterung zu Resultsets und stellen diesen Mechanismus bereit.  
   
- Ein Cursor wird durch einen Cursor-Bibliothek implementiert. Eine Cursor-Bibliothek ist Software, die häufig als Bestandteil eines Datenbanksystems oder eine Datenzugriffs-API implementiert, die verwendet wird, zur Verwaltung von Attributen der Daten aus einer Datenquelle (ein Resultset) zurückgegeben. Diese Attribute umfassen die parallelitätsverwaltung, position im Resultset, Anzahl der Zeilen zurückgegeben, und gibt an, ob vorwärts oder rückwärts verschoben werden können (oder beides) legen Sie über das Ergebnis (bildlauffähigkeit).  
+ Ein Cursor wird durch eine Cursor Bibliothek implementiert. Eine Cursor Bibliothek ist Software, die häufig als Teil eines Datenbanksystems oder einer Datenzugriffs-API implementiert wird und zum Verwalten von Attributen von Daten verwendet wird, die von einer Datenquelle (einem Resultset) zurückgegeben werden. Diese Attribute umfassen neben läufigkeits Verwaltung, Position im Resultset, Anzahl der zurückgegebenen Zeilen und ob vorwärts-oder rückwärts (oder beides) durch das Resultset (Scrollbarkeit) verschoben werden können.  
   
- Ein Cursor verfolgt des die Position im Resultset, und ermöglicht Ihnen, mehrere Vorgänge Zeile für Zeile mit einem Resultset mit oder ohne Rückgabe an die ursprüngliche Tabelle durchzuführen. Cursor zurück also im Prinzip ein Resultset basierend auf Tabellen in Datenbanken. Der Cursor ist so genannt, da wird von der aktuellen Position im Resultset, genau wie der Cursor auf einem Computerbildschirm aktuelle Position anzeigt.  
+ Ein Cursor verfolgt die Position im Resultset nach und ermöglicht es Ihnen, mehrere Vorgänge zeilenweise für ein Resultset mit oder auszuführen, ohne zur ursprünglichen Tabelle zurückzukehren. Das heißt, dass Cursor konzeptionell ein Resultset zurückgeben, das auf Tabellen in den Datenbanken basiert. Der Cursor ist so benannt, weil er die aktuelle Position im Resultset anzeigt, genauso wie der Cursor auf einem Computerbildschirm die aktuelle Position anzeigt.  
   
- Es ist wichtig, die mit dem Konzept von Cursorn vertraut wird, bevor Sie mit ihrer Verwendung in ADO die Einzelheiten erfahren Sie mehr.  
+ Es ist wichtig, sich mit dem Konzept der Cursor vertraut zu machen, bevor Sie fortfahren, um sich mit den Besonderheiten der Verwendung in ADO vertraut zu machen.  
   
- Verwenden von Cursorn, können Sie die folgenden Schritte ausführen:  
+ Mit Cursorn können Sie folgende Aktionen ausführen:  
   
--   Geben Sie die Positionierung an bestimmten Zeilen im Resultset.  
+-   Angeben der Positionierung an bestimmten Zeilen im Resultset.  
   
--   Abrufen einer Zeile oder einen Block von Zeilen auf Grundlage der aktuellen Position des Ergebnis-Satz.  
+-   Abrufen einer Zeile oder eines Zeilen Blocks basierend auf der aktuellen Position des Resultsets.  
   
--   Ändern von Daten in den Zeilen an der aktuellen Position im Resultset.  
+-   Ändern Sie die Daten in den Zeilen an der aktuellen Position im Resultset.  
   
--   Definieren Sie verschiedene Ebenen der Vertraulichkeit, auf die von anderen Benutzern vorgenommene datenänderungen.  
+-   Definieren Sie unterschiedliche Empfindlichkeitsstufen für Datenänderungen, die von anderen Benutzern vorgenommen wurden.  
   
- Betrachten Sie beispielsweise eine Anwendung, die eine Liste der verfügbaren Produkte für ein potenzieller Käufer anzeigt. Der Käufer scrollt durch die Liste, um Produktdetails und Kosten anzuzeigen, und schließlich wählt ein Produkt erworben. Zusätzliche Durchführen eines Bildlaufs und Auswahl tritt auf, für den Rest der Liste. Als Käufer betroffen ist, die Produkte angezeigt werden, einzeln nacheinander, aber die Anwendung einen bildlauffähigen Cursor verwendet, können Sie um das Resultset nach oben oder unten zu durchsuchen.  
+ Stellen Sie sich z. b. eine Anwendung vor, die eine Liste der verfügbaren Produkte für einen potenziellen Käufer anzeigt. Der Käufer führt einen Bildlauf durch die Liste durch, um Produktdetails und Kosten anzuzeigen, und wählt schließlich ein Produkt für den Kauf aus. Für den Rest der Liste ist ein zusätzlicher Bildlauf und eine Auswahl erfolgt. Wenn sich der Käufer beschäftigt, werden die Produkte nacheinander angezeigt, aber die Anwendung verwendet einen Bild lauffähigen Cursor, um das Resultset nach oben und unten zu durchsuchen.  
   
- Sie können den Cursor in einer Vielzahl von Möglichkeiten verwenden:  
+ Cursor können auf verschiedene Arten verwendet werden:  
   
--   Ohne Zeilen überhaupt.  
+-   Ohne Zeilen.  
   
 -   Mit einigen oder allen Zeilen in einer einzelnen Tabelle.  
   
--   Mit einigen oder allen Zeilen aus logisch verknüpfte Tabellen.  
+-   Mit einigen oder allen Zeilen aus logisch verbundenen Tabellen.  
   
--   Als schreibgeschützt oder aktualisierbar Ebene der Cursor oder ein Feld.  
+-   Schreibgeschützt oder aktualisierbar auf Cursor-oder Feldebene.  
   
--   Als Vorwärtscursor oder voll bildlauffähigen Cursor.  
+-   Als vorwärts oder vollständig ScrollBar.  
   
--   Mit das Keyset des Cursors befindet sich auf dem Server.  
+-   Mit dem Cursor-Keyset, das sich auf dem Server befindet.  
   
--   Anfällig für den zugrunde liegenden Tabelle ändern, die von anderen Anwendungen (z. B. Mitgliedschaft, sortieren, einfügungen, Updates und löschungen) verursacht werden.  
+-   Sensible Informationen zu zugrunde liegenden Tabellen Änderungen, die von anderen Anwendungen (z. b. Mitgliedschaft, Sortierung, Einfügungen, Updates und Löschungen) verursacht werden.  
   
--   Vorhandene auf dem Server oder Client.  
+-   Auf dem Server oder dem Client vorhanden.  
   
- Nur-Lese Cursor unterstützen von Benutzern über das Resultset navigieren und Lese-/Schreibzugriff, dass Cursor einzelne zeilenupdates implementieren können. Komplexe Cursor können mit Keysets definiert werden, die verweisen zurück auf die Tabellenzeilen basieren. Obwohl einige Cursor vorwärts, schreibgeschützt sind, können andere hin-und herwechseln und geben Sie eine dynamische Aktualisierung des Resultsets basierend auf Änderungen, die auf anderen Anwendungen in der Datenbank alle.  
+ Schreibgeschützte Cursor helfen Benutzern, das Resultset zu durchsuchen, und mit Lese-/schreibcursorn können einzelne Zeilen Aktualisierungen implementiert werden. Komplexe Cursor können mit Keysets definiert werden, die auf Basistabellen Zeilen zurückverweisen. Obwohl einige Cursor in Vorwärtsrichtung schreibgeschützt sind, können andere Benutzer hin und her wechseln und eine dynamische Aktualisierung des Resultsets auf der Grundlage von Änderungen bereitstellen, die andere Anwendungen an der Datenbank vornehmen.  
   
- Nicht alle Anwendungen müssen Cursor an, die Zugriff oder Aktualisieren von Daten verwenden. Einige Abfragen erfordern keine einfach das Umleiten der Zeile zu aktualisieren, durch Verwenden eines Cursors. Cursor muss eines der letzten Verfahren Sie zum Abrufen von Daten auswählen – und Sie sollten den geringsten Auswirkungen Cursor möglich auswählen. Wenn Sie ein Resultset mit einer gespeicherten Prozedur erstellen, ist das Resultset nicht aktualisierbare Cursor verwenden bearbeiten oder Methoden zu aktualisieren.  
+ Nicht alle Anwendungen müssen Cursor verwenden, um auf Daten zuzugreifen oder diese zu aktualisieren. Einige Abfragen erfordern einfach keine direkte Zeilen Aktualisierung mithilfe eines Cursors. Bei Cursorn sollte es sich um eine der letzten Verfahren handeln, die Sie zum Abrufen von Daten auswählen. Anschließend sollten Sie den möglichen Cursor mit der niedrigsten Auswirkung auswählen. Wenn Sie mithilfe einer gespeicherten Prozedur ein Resultset erstellen, kann das Resultset nicht mithilfe von Cursor Bearbeitungs-oder Update Methoden aktualisiert werden.  
   
 ## <a name="concurrency"></a>Parallelität  
- In einigen Anwendungen von mehreren Benutzern ist es sehr wichtig, für die Daten angezeigt, die für den Endbenutzer so aktuell wie möglich sein. Ein klassisches Beispiel eines solchen Systems ist ein Fluglinien-Reservierungssystem, in denen viele Benutzer Absicherung werden können, für den gleichen Platz für einen bestimmten Flug (und somit einen einzelnen Datensatz). In einem Fall wie folgt muss das Anwendungsdesign gleichzeitige Vorgänge auf einem einzelnen Datensatz behandeln.  
+ Bei einigen mehr Benutzer Anwendungen ist es sehr wichtig, dass die Daten, die dem Endbenutzer angezeigt werden, so aktuell wie möglich sind. Ein klassisches Beispiel für ein solches System ist ein Reservierungssystem für die Fluggesellschaft, bei dem viele Benutzer möglicherweise für denselben Arbeitsplatz auf einem bestimmten Flug (und somit einem einzelnen Datensatz) in Konflikt stehen. In einem solchen Fall muss der Anwendungs Entwurf gleichzeitige Vorgänge für einen einzelnen Datensatz verarbeiten.  
   
- In anderen Anwendungen ist die Parallelität nicht so wichtig. In solchen Fällen kann nicht behalten, die die aktuellen Daten zu jeder Zeit der Aufwand gerechtfertigt sein.  
+ In anderen Anwendungen ist Parallelität nicht so wichtig. In solchen Fällen können die Kosten für das aktuelle aufbewahren der Daten nicht gerechtfertigt werden.  
   
 ## <a name="position"></a>Position  
- Ein Cursor verfolgt des auch die aktuelle Position in einem Resultset. Stellen Sie sich die Cursorposition als Zeiger auf den aktuellen Datensatz, der ähnlich wie ein Array Index verweist auf den Wert an einer bestimmten Position im Array.  
+ Ein Cursor verfolgt auch die aktuelle Position in einem Resultset. Stellen Sie sich die Cursorposition als Zeiger auf den aktuellen Datensatz vor, ähnlich der Art, wie ein Array Index auf den Wert an dieser bestimmten Position im Array zeigt.  
   
 ## <a name="scrollability"></a>Bildlauffähigkeit  
- Der Typ des Cursors, die von der Anwendung verwendete wirkt sich auch die Möglichkeit, vorwärts und rückwärts durch die Zeilen in einem Resultset zu verschieben; Dies wird manchmal als scrolloptionen bezeichnet. Die Möglichkeit, die dann vorwärts bewegt, *und* rückwärts durch die ein Ergebnis Gruppe, die Komplexität des Cursors hinzugefügt, und ist daher teurer zu implementieren. Aus diesem Grund sollten Sie einen Cursor mit dieser Funktionalität, die nur bei Bedarf anfordern.
+ Der Cursor, der von der Anwendung verwendet wird, wirkt sich auch auf die Möglichkeit aus, die Zeilen in einem Resultset vorwärts und rückwärts zu bewegen. Dies wird manchmal als Scrollbarkeit bezeichnet. Die Möglichkeit, ein Resultset vorwärts *und* rückwärts zu bewegen, erhöht die Komplexität des Cursors und ist daher kostengünstiger zu implementieren. Aus diesem Grund sollten Sie nur bei Bedarf einen Cursor mit dieser Funktionalität anfordern.

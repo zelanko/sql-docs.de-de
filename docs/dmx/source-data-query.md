@@ -9,21 +9,21 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e523d33da502a971b950e33ec0bd935149ed26f7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892344"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;Quelldaten Abfrage&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Wenn Sie ein Data Mining Modell trainieren und Vorhersagen aus einem Mining Modell erstellen möchten, müssen Sie auf Daten zugreifen, die [!INCLUDE[msCoName](../includes/msconame-md.md)] sich außerhalb der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Datenbank befinden. Sie verwenden die \<Quelldaten Abfrage >-Klausel in Data Mining-Erweiterungen (DMX), um diese externen Daten zu definieren. Die [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [Select from &#60;Model&#62; Vorhersage Join &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md)und [Select from Natural Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Anweisungen verwenden **\<Quelldaten Abfrage >** .  
+  Wenn Sie ein Data Mining Modell trainieren und Vorhersagen aus einem Mining Modell erstellen möchten, müssen Sie auf Daten zugreifen, die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sich außerhalb der Datenbank befinden. Sie verwenden die \<Quelldaten Abfrage>-Klausel in Data Mining-Erweiterungen (DMX), um diese externen Daten zu definieren. Die [INSERT INTO &#40;DMX-&#41;](../dmx/insert-into-dmx.md), [Wählen Sie aus &#60;Modell&#62; Vorhersage Verknüpfung &#40;DMX-&#41;aus ](../dmx/select-from-model-prediction-join-dmx.md), und [Wählen Sie from Natural Vorhersage Join](../dmx/select-from-model-prediction-join-dmx.md) -Anweisungen aus, die alle ** \<Quelldaten Abfrage>** verwenden.  
   
 ## <a name="query-types"></a>Abfragetypen  
  Die drei häufigsten Arten zum Angeben von Quelldaten sind:  
   
- [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY-&#40;DMX-&#41;](../dmx/source-data-query-openquery.md)  
  Diese Anweisung fragt Daten ab, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe Daten sind. Dazu wird eine vorhandene Datenquelle verwendet.  
   
  Obwohl **OPENQUERY** in der Funktion zu **OPENROWSET**ähnlich ist, bietet **OPENQUERY** die folgenden Vorteile:  
@@ -32,10 +32,10 @@ ms.locfileid: "68892344"
   
 -   Der Administrator kann besser steuern, wie auf die Daten auf dem Server zugegriffen wird. Beispielsweise kann der Administrator festlegen, welche Anbieter in den Server geladen werden und auf welche externen Daten zugegriffen werden kann.  
   
- [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX-&#41;](../dmx/source-data-query-openrowset.md)  
  Diese Anweisung fragt Daten ab, die für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] externe Daten sind. Dazu wird eine vorhandene Datenquelle verwendet.  
   
- [FORM &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
+ [Form &#40;DMX-&#41;](../dmx/source-data-query-shape.md)  
  Diese Anweisung fragt mehrere Datenquellen ab, um eine geschachtelte Tabelle zu erstellen. Mithilfe von **Form**können Sie Daten aus mehreren Quellen in einer einzigen hierarchischen Tabelle kombinieren. Auf diese Weise können Sie die Möglichkeit von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nutzen, Tabellen zu schachteln, indem eine Tabelle in eine andere Tabelle eingebettet wird.  
   
  Zur Angabe der Quelldaten haben Sie folgende Möglichkeiten:  
@@ -50,9 +50,9 @@ ms.locfileid: "68892344"
   
 -   Ein Rowsetparameter  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [DMX&#41; - &#40;Anweisungs Referenz für Data Mining-Erweiterungen](../dmx/data-mining-extensions-dmx-statements.md)   
- [Analysis Services Data Mining &#40;-Tabellen&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)   
+ [&#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/nested-tables-analysis-services-data-mining)  
   
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62875673"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Wiederherstellen einer Transaktionsprotokollsicherung (SQL Server)
@@ -33,9 +33,9 @@ ms.locfileid: "62875673"
   
 -   **Vorbereitungen:**  
   
-     [Erforderliche Komponenten](#Prerequisites)  
+     [Voraussetzungen](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Wiederherstellen einer Transaktionsprotokollsicherung mit:**  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62875673"
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sicherungen müssen in der Reihenfolge wiederhergestellt werden, in der sie erstellt wurden. Bevor Sie eine bestimmte Transaktionsprotokollsicherung wiederherstellen können, müssen Sie zuerst die folgenden vorherigen Sicherungen wiederherstellen, ohne für Transaktionen ohne Commit ein Rollback auszuführen, also mit der Option WITH NORECOVERY:  
   
@@ -62,14 +62,14 @@ ms.locfileid: "62875673"
 ####  <a name="Permissions"></a> Berechtigungen  
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 > [!WARNING]  
 >  Beim üblichen Prozess der Wiederherstellung wählen Sie im Dialogfeld **Datenbank wiederherstellen** die Protokollsicherungen zusammen mit den Datensicherungen und den differenziellen Sicherungen aus.  
   
 #### <a name="to-restore-a-transaction-log-backup"></a>So stellen Sie eine Transaktionsprotokollsicherung wieder her  
   
-1.  Klicken Sie im Objekt-Explorer nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]auf den Servernamen, um die Serverstruktur zu erweitern.  
+1.  Klicken Sie nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] im Objekt-Explorer auf den Servernamen, um die Serverstruktur zu erweitern.  
   
 2.  Erweitern Sie **Datenbanken**, und wählen Sie je nach Datenbank eine Benutzerdatenbank aus, oder erweitern Sie **Systemdatenbanken** , und wählen Sie eine Systemdatenbank aus.  
   
@@ -96,16 +96,16 @@ ms.locfileid: "62875673"
   
      In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-    |Header|Wert|  
+    |Header|value|  
     |------------|-----------|  
-    |**Restore**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
+    |**Wiederherstellen**|Aktivierte Kontrollkästchen zeigen die wiederherzustellenden Sicherungssätze an.|  
     |**Name**|Name des Sicherungssatzes.|  
-    |**Komponente**|Gesicherte Komponente: **Datenbank**, **Datei**, oder \<leer > (bei Transaktionsprotokollen).|  
+    |**Komponente**|Gesicherte Komponente: **Datenbank**, **Datei** oder \<leer> (bei Transaktionsprotokollen).|  
     |**Datenbank**|Name der an dem Sicherungsvorgang beteiligten Datenbank.|  
     |**Startdatum**|Datum und Uhrzeit des Sicherungsbeginns, entsprechend den Ländereinstellungen des Clients.|  
     |**Beendigungsdatum**|Datum und Uhrzeit des Sicherungsabschlusses, entsprechend den Ländereinstellungen des Clients.|  
     |**Erste LSN**|Protokollsequenznummer der ersten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
-    |**Letzte LSN**|Protokollsequenznummer der letzten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
+    |**Erste LSN**|Protokollsequenznummer der letzten Transaktion im Sicherungssatz. Bei Dateisicherungen leer.|  
     |**Prüfpunkt-LSN**|Protokollsequenznummer des letzten Prüfpunkts zum Zeitpunkt der Erstellung der Sicherung.|  
     |**Vollständige LSN**|Protokollsequenznummer der neuesten vollständigen Datenbanksicherung.|  
     |**Server**|Name der Instanz der Datenbank-Engine, durch die der Sicherungsvorgang ausgeführt wurde.|  
@@ -114,7 +114,7 @@ ms.locfileid: "62875673"
     |**Position**|Position des Sicherungssatzes auf dem Volume.|  
     |**Ablauf**|Datum und Uhrzeit des Zeitpunkts, zu dem die Gültigkeit des Sicherungssatzes endet.|  
   
-7.  Wählen Sie eine der folgenden Optionen aus:  
+7.  Wählen Sie eines der folgenden Szenarien aus:  
   
     -   **Zeitpunkt**  
   
@@ -128,11 +128,11 @@ ms.locfileid: "62875673"
   
          In der folgenden Tabelle werden die Spaltenheader des Rasters aufgelistet und deren Werte beschrieben.  
   
-        |Header|Wert|  
+        |Header|value|  
         |------------|-----------|  
         |\<leer>|Zeigt ein Kontrollkästchen zur Auswahl der Markierung an.|  
         |**Transaktionsmarkierung**|Name der markierten Transaktion, der vom Benutzer zugewiesen wurde, als für die Transaktion der Commit ausgeführt wurde.|  
-        |**Datum**|Datum und Uhrzeit, zu der für die Transaktion der Commit ausgeführt wurde. Als Transaktionsdatum und -uhrzeit werden das Datum und die Uhrzeit angezeigt, die in der **msdbgmarkhistory** -Tabelle aufgezeichnet wurden, nicht das Datum und die Uhrzeit des Clientcomputers.|  
+        |**Date**|Datum und Uhrzeit, zu der für die Transaktion der Commit ausgeführt wurde. Als Transaktionsdatum und -uhrzeit werden das Datum und die Uhrzeit angezeigt, die in der **msdbgmarkhistory** -Tabelle aufgezeichnet wurden, nicht das Datum und die Uhrzeit des Clientcomputers.|  
         |**Beschreibung**|Die Beschreibung der markierten Transaktion, die der Benutzer angegeben hat, als für die Transaktion ein Commit ausgeführt wurde (sofern zutreffend).|  
         |**LSN**|Die Protokollfolgenummer (LSN, Log Sequence Number) der markierten Transaktion.|  
         |**Datenbank**|Der Name der Datenbank, in der für die markierte Transaktion ein Commit ausgeführt wird.|  
@@ -146,9 +146,9 @@ ms.locfileid: "62875673"
   
          Behält die Replikationseinstellungen bei, wenn eine veröffentlichte Datenbank auf einem Server wiederhergestellt wird, auf dem die Datenbank nicht erstellt wurde.  
   
-         Diese Option steht nur für die **die Datenbank betriebsbereit belassen, indem ein Rollback für Transaktionen ohne Commit...**  Option (weiter unten beschrieben), entspricht der Wiederherstellung einer Sicherungskopie mit der `RECOVERY` Option.  
+         Diese Option ist nur in Verbindung mit der Option **Datenbank betriebsbereit belassen, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird...** (wird weiter unten beschrieben) verfügbar. Dies entspricht der `RECOVERY` Wiederherstellung einer Sicherung mit der Option.  
   
-         Diese Option ist äquivalent zur Verwendung der `KEEP_REPLICATION` option eine [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` Anweisung.  
+         Das Überprüfen dieser Option entspricht der Verwendung `KEEP_REPLICATION` der-Option [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` in einer-Anweisung.  
   
     -   **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung**  
   
@@ -162,19 +162,19 @@ ms.locfileid: "62875673"
   
          Macht die wiederhergestellte Datenbank nur Mitgliedern von **db_owner**, **dbcreator** oder **sysadmin**verfügbar.  
   
-         Durch das Aktivieren dieser Option entspricht der `RESTRICTED_USER` option eine [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` Anweisung.  
+         Das Aktivieren dieser Option ist gleichbedeutend mit `RESTRICTED_USER` der Verwendung der [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` -Option in einer-Anweisung.  
   
 10. Geben Sie für die Optionen zum **Wiederherstellungsstatus** den Status der Datenbank nach dem Wiederherstellungsvorgang an.  
   
     -   **Belassen Sie die Datenbank betriebsbereit, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird. Zusätzliche Transaktionsprotokolle können nicht wiederhergestellt werden. (RESTORE WITH RECOVERY)**  
   
-         Stellt die Datenbank wieder her. Diese Option ist gleichbedeutend mit der `RECOVERY` option eine [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` Anweisung.  
+         Stellt die Datenbank wieder her. Diese Option entspricht der `RECOVERY` -Option in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` -Anweisung.  
   
          Wählen Sie diese Option nur dann aus, wenn Sie keine Protokolldateien besitzen, die Sie wiederherstellen möchten.  
   
     -   **Belassen Sie die Datenbank nicht betriebsbereit, und führen Sie kein Rollback für Transaktionen ohne Commit aus. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. (RESTORE WITH NORECOVERY)**  
   
-         Belässt die Datenbank im nicht wiederhergestellten Status `RESTORING`. Diese Option ist äquivalent zur Verwendung der `NORECOVERY` option eine [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` Anweisung.  
+         Belässt die Datenbank im nicht wiederhergestellten Status `RESTORING`. Diese Option entspricht der Verwendung der `NORECOVERY` -Option in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` -Anweisung.  
   
          Wenn Sie diese Option auswählen, ist die Option **Replikationseinstellungen beibehalten** nicht verfügbar.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "62875673"
   
     -   **Datenbank im schreibgeschützten Modus belassen. Transaktionen ohne Commit werden rückgängig gemacht, die Rückgängigaktionen werden jedoch in einer Datei gespeichert, sodass die Auswirkungen der Wiederherstellung umgekehrt werden können. (RESTORE WITH STANDBY)**  
   
-         Belässt die Datenbank in einem Standbystatus. Diese Option ist äquivalent zur Verwendung der `STANDBY` option eine [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` Anweisung.  
+         Belässt die Datenbank in einem Standbystatus. Diese Option entspricht der Verwendung der `STANDBY` -Option in einer [!INCLUDE[tsql](../../includes/tsql-md.md)] `RESTORE` -Anweisung.  
   
          Bei Auswahl dieser Option müssen Sie eine Standbydatei angeben.  
   
@@ -299,7 +299,7 @@ GO
   
 -   [Wiederherstellen einer Datenbank bis zu einer markierten Transaktion &#40;SQL Server Management Studio&#41;](restore-a-database-to-a-marked-transaction-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](apply-transaction-log-backups-sql-server.md)  
   

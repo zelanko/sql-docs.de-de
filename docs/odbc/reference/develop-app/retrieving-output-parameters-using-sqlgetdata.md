@@ -15,67 +15,67 @@ ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68020514"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Abrufen von Ausgabeparametern mithilfe von SQLGetData
-Bevor Sie ODBC 3.8 konnte eine Anwendung nur die Output-Parameter, der eine Abfrage mit einer gebundenen Ausgabepuffer abrufen. Allerdings ist es schwierig, die einen sehr großen Puffer zuzuweisen, wenn die Größe des Parameterwerts sehr groß ist (z. B. ein großes Bild). ODBC 3.8 bietet neue Möglichkeiten zum Abrufen von Ausgabeparametern in Teilen. Eine Anwendung kann jetzt Aufrufen **SQLGetData** mit einem kleinen Puffer mehrere Male auf, um einen großen Parameterwert abzurufen. Dies ist für das Abrufen von großen Spaltendaten vergleichbar.  
+Vor ODBC 3,8 konnte eine Anwendung nur die Ausgabeparameter einer Abfrage mit einem gebundenen Ausgabepuffer abrufen. Es ist jedoch schwierig, einen sehr großen Puffer zuzuordnen, wenn die Größe des Parameter Werts sehr groß ist (z. b. ein großes Bild). Mit ODBC 3,8 wird eine neue Methode eingeführt, um Ausgabeparameter in Teilen abzurufen. Eine Anwendung kann nun **SQLGetData** mit einem kleinen Puffer mehrmals aufrufen, um einen großen Parameterwert abzurufen. Dies ähnelt dem Abrufen großer Spaltendaten.  
   
- Rufen Sie zum Binden einer Output-Parameter oder Eingabe-/Ausgabeparameter in Teilen abgerufen werden sollen **SQLBindParameter** mit der *InputOutputType* Argument festgelegt wird, um SQL_PARAM_OUTPUT_STREAM oder SQL_PARAM_INPUT_OUTPUT an _STREAM. Eine Anwendung kann mit SQL_PARAM_INPUT_OUTPUT_STREAM, verwenden **SQLPutData** Daten an den Parameter eingeben, und klicken Sie dann verwenden **SQLGetData** zum Abrufen des Output-Parameters. Die Eingabedaten muss in der Data-at-Execution-(. DAE) bilden, mit **SQLPutData** statt an einen vorab zugeordneten Puffer.  
+ Um einen Ausgabeparameter oder einen Eingabe-/Ausgabeparameter zu binden, der in Teilen abgerufen werden soll, nennen Sie **SQLBindParameter** , wobei das Argument *inputoutputtype* auf SQL_PARAM_OUTPUT_STREAM oder SQL_PARAM_INPUT_OUTPUT_STREAM festgelegt ist. Mit SQL_PARAM_INPUT_OUTPUT_STREAM kann eine Anwendung **SQLPutData** verwenden, um Daten in den-Parameter einzugeben, und dann **SQLGetData** zum Abrufen des Output-Parameters verwenden. Die Eingabedaten müssen sich im Formular Data-at-Execution (DAE) befinden, wobei **SQLPutData** anstelle der Bindung an einen vorab zugeordneten Puffer verwendet wird.  
   
- Dieses Feature von ODBC 3.8-Anwendungen verwendet werden können oder erneut kompiliert ODBC 3.x und ODBC 2.x-Anwendungen und diese Anwendungen benötigen einen ODBC 3.8-Treiber, unterstützt beim Abrufen von Ausgabeparametern mit **SQLGetData** und ODBC 3.8-Treiber -Manager. Informationen dazu, wie Sie eine ältere Anwendung neue ODBC-Funktionen verwenden kann, finden Sie unter [Matrix der Sperrenkompatibilität](../../../odbc/reference/develop-app/compatibility-matrix.md).  
+ Diese Funktion kann von ODBC 3,8-Anwendungen oder neu kompilierten ODBC 3. x-und ODBC 2. x-Anwendungen verwendet werden. diese Anwendungen müssen über einen ODBC 3,8-Treiber verfügen, der das Abrufen von Ausgabeparametern mithilfe von **SQLGetData** und dem ODBC 3,8-Treiber-Manager unterstützt. Informationen dazu, wie Sie eine ältere Anwendung für die Verwendung neuer ODBC-Funktionen aktivieren, finden Sie unter [Kompatibilitäts Matrix](../../../odbc/reference/develop-app/compatibility-matrix.md).  
   
 ## <a name="usage-example"></a>Verwendungsbeispiel  
- Betrachten Sie z. B. das Ausführen einer gespeicherten Prozedur, **{AUFRUF sp_f(?,?)}** , wobei beide Parameter werden als SQL_PARAM_OUTPUT_STREAM gebunden, und die gespeicherte Prozedur kein Resultset zurückgegeben (weiter unten in diesem Thema finden Sie ein komplexeres Szenario):  
+ Nehmen Sie beispielsweise an, Sie können eine gespeicherte Prozedur ausführen, **{callsp_f (?,?)}**, wobei beide Parameter als SQL_PARAM_OUTPUT_STREAM gebunden sind und die gespeicherte Prozedur kein Resultset zurückgibt (später in diesem Thema finden Sie ein komplexeres Szenario):  
   
-1.  Rufen Sie für jeden Parameter **SQLBindParameter** mit *InputOutputType* SQL_PARAM_OUTPUT_STREAM festgelegt und *ParameterValuePtr* zu einem Token, z. B. ein Parameter mit der Nummer festlegen , ein Zeiger auf Daten oder ein Zeiger auf eine Struktur, die die Anwendung verwendet, um Parameter zu binden. In diesem Beispiel wird die Ordnungszahl des Parameters als das Token verwendet.  
+1.  Zum Aufrufen von **SQLBindParameter** mit *inputoutputtype* auf SQL_PARAM_OUTPUT_STREAM und *ParameterValuePtr* auf ein Token festgelegt, z. b. eine Parameter Nummer, einen Zeiger auf Daten oder einen Zeiger auf eine-Struktur, die die Anwendung verwendet, um Eingabeparameter zu binden. In diesem Beispiel wird die Ordinalzahl des Parameters als Token verwendet.  
   
-2.  Führen Sie die Abfrage mit **SQLExecDirect** oder **SQLExecute**. SQL_PARAM_DATA_AVAILABLE wird zurückgegeben, der angibt, dass gestreamte Output-Parameter verfügbar sind für den Abruf.  
+2.  Führen Sie die Abfrage mit **SQLExecDirect** oder **SQLExecute**aus. SQL_PARAM_DATA_AVAILABLE wird zurückgegeben und gibt an, dass Streaming-Ausgabeparameter für den Abruf verfügbar sind.  
   
-3.  Rufen Sie **SQLParamData** zum Abrufen des Parameters, der für den Abruf verfügbar ist. **SQLParamData** SQL_PARAM_DATA_AVAILABLE zurückgegeben wird, mit dem Token des ersten verfügbaren Parameters, der festgelegt wird, in **SQLBindParameter** (Schritt 1). Das Token wird im Puffer zurückgegeben, die die *ValuePtrPtr* verweist auf.  
+3.  Aufrufen von **SQLParamData** zum Abrufen des Parameters, der zum Abrufen verfügbar ist. **SQLParamData** gibt SQL_PARAM_DATA_AVAILABLE mit dem Token des ersten verfügbaren Parameters zurück, der in **SQLBindParameter** (Schritt 1) festgelegt ist. Das Token wird im Puffer zurückgegeben, auf den " *ValuePtrPtr* " verweist.  
   
-4.  Rufen Sie **SQLGetData** mit dem Argument *Col*_or\_*Param_Num* an den Parameter zum Abrufen der Daten von den ersten verfügbaren Parameter Ordnungszahl festgelegt. Wenn **SQLGetData** gibt SQL_SUCCESS_WITH_INFO und SQLState 01004 (Daten wurden abgeschnitten), und der Typ eine Variable Länge auf dem Client und Server ist, weitere Daten aus dem ersten verfügbaren Parameter abgerufen werden sollen. Sie können weiterhin aufrufen **SQLGetData** bis durch ein anderes SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgegeben **SQLState**.  
+4.  Rufen Sie **SQLGetData** mit dem Argument *Col*_or\_*Param_Num* auf die Ordnungszahl des Parameters festzulegen, um die Daten des ersten verfügbaren Parameters abzurufen. Gibt **SQLGetData** SQL_SUCCESS_WITH_INFO und SQLSTATE 01004 (Daten abgeschnitten) zurück, und der Typ ist eine Variable Länge sowohl auf dem Client als auch auf dem Server, gibt es weitere Daten, die aus dem ersten verfügbaren Parameter abgerufen werden müssen. Sie können **SQLGetData** weiterhin aufrufen, bis SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO mit einem anderen **SQLSTATE**-Wert zurückgegeben wird.  
   
-5.  Wiederholen Sie Schritt 3 und 4, um den aktuellen Parameter abzurufen.  
+5.  Wiederholen Sie Schritt 3 und Schritt 4, um den aktuellen Parameter abzurufen.  
   
-6.  Rufen Sie **SQLParamData** erneut aus. Wenn nichts außer SQL_PARAM_DATA_AVAILABLE zurückgegeben wird, es gibt keine weiteren gestreamte Parameterdaten abgerufen werden sollen, und der Rückgabecode werden den Rückgabecode, der die nächste Anweisung, die ausgeführt wird.  
+6.  **SQLParamData** erneut aufzurufen. Wenn Sie nur SQL_PARAM_DATA_AVAILABLE zurückgibt, gibt es keine weiteren streamingparameterdaten, die abgerufen werden können, und der Rückgabecode ist der Rückgabecode der nächsten Anweisung, die ausgeführt wird.  
   
-7.  Rufen Sie **SQLMoreResults** um den nächsten Satz von Parametern zu verarbeiten, bis SQL_NO_DATA zurückgegeben. **SQLMoreResults** gibt SQL_NO_DATA in diesem Beispiel zurück, wenn das Anweisungsattribut verweist SQL_ATTR_PARAMSET_SIZE auf 1 festgelegt wurde. Andernfalls **SQLMoreResults** gibt SQL_PARAM_DATA_AVAILABLE, um anzugeben, dass es gestreamte Output-Parameter für den nächsten Satz von Parametern zum Abrufen verfügbar sind.  
+7.  Ruft **SQLMoreResults** auf, um den nächsten Satz von Parametern zu verarbeiten, bis SQL_NO_DATA zurückgegeben wird. **SQLMoreResults** gibt SQL_NO_DATA in diesem Beispiel zurück, wenn das Anweisungs Attribut SQL_ATTR_PARAMSET_SIZE auf 1 festgelegt wurde. Andernfalls gibt **SQLMoreResults** SQL_PARAM_DATA_AVAILABLE zurück, um anzugeben, dass streamingausgabeparameter für die nächste Gruppe von Parametern verfügbar sind, die abgerufen werden sollen.  
   
- Ähnlich wie ein DAE-Eingabeparameter, das Token im Argument verwendeten *ParameterValuePtr* in **SQLBindParameter** (Schritt 1) kann ein Zeiger auf eine Anwendung Daten-Struktur, NULL enthält die Ordnungszahl des Parameters und weitere anwendungsspezifische Informationen bei Bedarf.  
+ Ähnlich wie bei einem DAE-Eingabeparameter kann das Token, das im Argument *ParameterValuePtr* in **SQLBindParameter** (Schritt 1) verwendet wird, ein Zeiger sein, der auf eine Anwendungsdaten Struktur zeigt, die die Ordinalzahl des Parameters und ggf. weitere anwendungsspezifische Informationen enthält.  
   
- Die Reihenfolge der zurückgegebenen gestreamte Ausgabe oder Eingabe-/Ausgabeparameter ist treiberspezifisch und u. u. nicht immer identisch mit der Reihenfolge, in der Abfrage angegeben.  
+ Die Reihenfolge der zurückgegebenen Stream-Ausgabe-oder Eingabe-/Ausgabeparameter ist Treiber spezifisch und nicht immer identisch mit der in der Abfrage angegebenen Reihenfolge.  
   
- Wenn die Anwendung nicht aufruft **SQLGetData** in Schritt 4 wird der Wert des Parameters wird verworfen. Auf ähnliche Weise, wenn die Anwendung ruft **SQLParamData** vor allen eines Parameters Wert gelesen wurde von **SQLGetData**, den Wert der Rest wird verworfen und die Anwendung das nächste verarbeiten kann der Parameter.  
+ Wenn die Anwendung **SQLGetData** in Schritt 4 nicht aufruft, wird der Parameterwert verworfen. Ebenso gilt: Wenn die Anwendung **SQLParamData** aufruft, bevor der gesamte Parameterwert von **SQLGetData**gelesen wurde, wird der Rest des Werts verworfen, und die Anwendung kann den nächsten Parameter verarbeiten.  
   
- Wenn die Anwendung ruft **SQLMoreResults** vor allen gestreamte Ausgabe Parameter verarbeitet werden (**SQLParamData** SQL_PARAM_DATA_AVAILABLE gibt immer noch zurück), alle verbleibenden Parameter werden verworfen. Auf ähnliche Weise, wenn die Anwendung aufruft, **SQLMoreResults** vor allen eines Parameters Wert gelesen wurde von **SQLGetData**, der Rest des Werts und alle verbleibenden Parameter werden verworfen, und die Anwendung kann weiterhin den nächsten Parametersatz zu verarbeiten.  
+ Wenn die Anwendung **SQLMoreResults** aufruft, bevor alle gestreuten Ausgabeparameter verarbeitet werden (**SQLParamData** gibt immer noch SQL_PARAM_DATA_AVAILABLE zurück), werden alle verbleibenden Parameter verworfen. Ebenso gilt: Wenn die Anwendung **SQLMoreResults** aufruft, bevor der gesamte Parameterwert von **SQLGetData**gelesen wurde, werden der restliche Wert und alle verbleibenden Parameter verworfen, und die Anwendung kann den nächsten Parametersatz weiterhin verarbeiten.  
   
- Beachten Sie, dass eine Anwendung die C-Datentyp in beiden angeben können **SQLBindParameter** und **SQLGetData**. Die C-Datentyp, der mit angegebenen **SQLGetData** überschreibt die C-Datentyp, der im angegebenen **SQLBindParameter**, es sei denn, in der C-Datentyp angegeben **SQLGetData** SQL_APD_TYPE ist.  
+ Beachten Sie, dass eine Anwendung den C-Datentyp sowohl in **SQLBindParameter** als auch in **SQLGetData**angeben kann. Der mit **SQLGetData** angegebene c-Datentyp überschreibt den in **SQLBindParameter**angegebenen c-Datentyp, es sei denn, der in **SQLGetData** angegebene c-Datentyp ist SQL_APD_TYPE.  
   
- Obwohl ein gestreamte Output-Parameter, wenn der Datentyp des Output-Parameters vom Typ BLOB ist noch nützlicher ist, kann diese Funktion auch eines beliebigen Datentyps verwendet werden. Die von gestreamte Ausgabeparameter unterstützten Datentypen werden in der Treiber angegeben.  
+ Obwohl ein Stream-Ausgabeparameter nützlicher ist, wenn der Datentyp des Output-Parameters vom Typ BLOB ist, kann diese Funktion auch mit jedem Datentyp verwendet werden. Die von gestreuten Ausgabeparametern unterstützten Datentypen werden im Treiber angegeben.  
   
- Wenn SQL_PARAM_INPUT_OUTPUT_STREAM-Parameter verarbeitet werden, sind **SQLExecute** oder **SQLExecDirect** SQL_NEED_DATA werden zuerst zurückgegeben. Kann eine Anwendung aufrufen **SQLParamData** und **SQLPutData** DAE Parameterdaten senden. Wenn alle DAE Eingabeparameter verarbeitet werden, **SQLParamData** gibt SQL_PARAM_DATA_AVAILABLE, um anzugeben, gestreamte Output-Parameter sind verfügbar.  
+ Wenn SQL_PARAM_INPUT_OUTPUT_STREAM zu verarbeitende Parameter vorhanden sind, werden **SQLExecute** oder **SQLExecDirect** zuerst SQL_NEED_DATA zurückgegeben. Eine Anwendung kann **SQLParamData** und **SQLPutData** aufrufen, um die DAE-Parameterdaten zu senden. Wenn alle DAE-Eingabeparameter verarbeitet werden, gibt **SQLParamData** SQL_PARAM_DATA_AVAILABLE zurück, um anzugeben, dass gestreamte Ausgabeparameter verfügbar sind.  
   
- Wenn es Output-Parameter und gebundene Output-Parameter verarbeitet werden gestreamt werden, bestimmt der Treiber die Reihenfolge für die Verarbeitung von Output-Parameter. Wenn Output-Parameter auf einen Puffer gebunden ist (die **SQLBindParameter** Parameter *InputOutputType* auf SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT festgelegt ist), der Puffer kann nicht aufgefüllt werden, bis  **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurück. Eine Anwendung sollte eine Grenze lesen erst nach Puffern **SQLParamData** gibt SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO, die schließlich die Output-Parameter gestreamt werden, werden verarbeitet.  
+ Wenn übertragene Ausgabeparameter und gebundene Ausgabeparameter verarbeitet werden, bestimmt der Treiber die Reihenfolge für die Verarbeitung von Ausgabeparametern. Wenn ein Ausgabeparameter an einen Puffer gebunden ist (der **SQLBindParameter** -Parameter *inputoutputtype* ist auf SQL_PARAM_INPUT_OUTPUT oder SQL_PARAM_OUTPUT festgelegt), wird der Puffer möglicherweise erst aufgefüllt, wenn **SQLParamData** SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgibt. Eine Anwendung sollte einen gebundenen Puffer nur lesen, nachdem **SQLParamData** SQL_SUCCESS oder SQL_SUCCESS_WITH_INFO zurückgegeben hat, nachdem alle gestreuten Ausgabeparameter verarbeitet wurden.  
   
- Eine Warnung und das Ergebnis außerdem in den Stream Ausgabeparameter festgelegt, kann die Datenquelle zurückgegeben. Im Allgemeinen Warnungen und Resultsets werden getrennt verarbeitet aus einem Stream befindlichen Output-Parameter durch den Aufruf **SQLMoreResults**. Verarbeiten von Warnungen und das Resultset, die vor der Verarbeitung des gestreamten Output-Parameters.  
+ Die Datenquelle kann zusätzlich zum gestreuten Ausgabeparameter eine Warnung und ein Resultset zurückgeben. Im Allgemeinen werden Warnungen und Resultsets getrennt von einem gestreamt-Ausgabeparameter durch Aufrufen von **SQLMoreResults**verarbeitet. Prozess Warnungen und das Resultset vor der Verarbeitung des gestreuten Ausgabe Parameters.  
   
- Die folgende Tabelle beschreibt die verschiedene Szenarien für einen einzelnen Befehl, der mit dem Server, und die Funktionsweise der Anwendungs gesendet.  
+ In der folgenden Tabelle werden die verschiedenen Szenarien eines einzelnen Befehls, der an den Server gesendet wird, und die Funktionsweise der Anwendung beschrieben.  
   
 |Szenario|Rückgabewert von SQLExecute oder SQLExecDirect|Nächste Schritte|  
 |--------------|---------------------------------------------------|---------------------|  
-|Daten nur enthalten gestreamte Output-Parameter.|SQL_PARAM_DATA_AVAILABLE|Verwendung **SQLParamData** und **SQLGetData** gestreamte Ausgabeparameter abrufen.|  
-|Enthält das Resultset und gestreamt Output-Parameter|SQL_SUCCESS|Rufen Sie das Resultset mit **SQLBindCol** und **SQLGetData**.<br /><br /> Rufen Sie **SQLMoreResults** , beginnt die Verarbeitung von gestreamte Output-Parameter. Sie sollte SQL_PARAM_DATA_AVAILABLE zurückgeben.<br /><br /> Verwendung **SQLParamData** und **SQLGetData** gestreamte Ausgabeparameter abrufen.|  
-|Enthält eine Warnmeldung und gestreamt Output-Parameter|SQL_SUCCESS_WITH_INFO|Verwendung **SQLGetDiagRec** und **SQLGetDiagField** zum Verarbeiten der Warnung Nachrichten.<br /><br /> Rufen Sie **SQLMoreResults** , beginnt die Verarbeitung von gestreamte Output-Parameter. Sie sollte SQL_PARAM_DATA_AVAILABLE zurückgeben.<br /><br /> Verwendung **SQLParamData** und **SQLGetData** gestreamte Ausgabeparameter abrufen.|  
-|Daten enthält, eine Warnmeldung, Resultsets und Ausgabeparameter gestreamt|SQL_SUCCESS_WITH_INFO|Verwendung **SQLGetDiagRec** und **SQLGetDiagField** zum Verarbeiten der Warnung Nachrichten. Rufen Sie anschließend **SQLMoreResults** , beginnt die Verarbeitung des Ergebnis festgelegt.<br /><br /> Rufen Sie ein Resultset mit **SQLBindCol** und **SQLGetData**.<br /><br /> Rufen Sie **SQLMoreResults** , beginnt die Verarbeitung von gestreamte Output-Parameter. **SQLMoreResults** SQL_PARAM_DATA_AVAILABLE sollte zurückgegeben werden.<br /><br /> Verwendung **SQLParamData** und **SQLGetData** gestreamte Ausgabeparameter abrufen.|  
-|Abfrageparameter mit Eingabeparametern für DAE, z. B. eine gestreamte Eingabe/Ausgabe (. DAE)|SQL-NEED_DATA|Rufen Sie **SQLParamData** und **SQLPutData** Geben Sie zum Senden von DAE Parameterdaten.<br /><br /> Nachdem alle DAE Eingabeparameter verarbeitet werden, **SQLParamData** können Zurückgeben einer-Rückgabecode zurück, die **SQLExecute** und **SQLExecDirect** zurückgeben können. Die Fälle, in dieser Tabelle können dann angewendet werden.<br /><br /> Wenn der Rückgabecode SQL_PARAM_DATA_AVAILABLE ist, stehen gestreamte Output-Parameter. Eine Anwendung aufrufen muss **SQLParamData** erneut aus, um das Token für die gestreamten Output-Parameter abrufen, wie in der ersten Zeile dieser Tabelle beschrieben.<br /><br /> Ist der Rückgabecode SQL_SUCCESS zurück, es gibt ein Resultset verarbeitet, oder die Verarbeitung abgeschlossen ist.<br /><br /> Ist der Rückgabecode auf SQL_SUCCESS_WITH_INFO, sollten Sie die Warnung Nachrichten zum Verarbeiten vorhanden sind.|  
+|Daten enthalten nur gestreamt Ausgabeparameter.|SQL_PARAM_DATA_AVAILABLE|Verwenden Sie **SQLParamData** und **SQLGetData** , um gestreute Ausgabeparameter abzurufen.|  
+|Daten enthalten ein Resultset und per Streaming übertragene Ausgabeparameter.|SQL_SUCCESS|Rufen Sie das Resultset mit **SQLBindCol** und **SQLGetData**ab.<br /><br /> Öffnen Sie **SQLMoreResults** , um die Verarbeitung von gestreuten Ausgabeparametern zu starten. SQL_PARAM_DATA_AVAILABLE sollte zurückgegeben werden.<br /><br /> Verwenden Sie **SQLParamData** und **SQLGetData** , um gestreute Ausgabeparameter abzurufen.|  
+|Die Daten enthalten eine Warnmeldung und per Streaming übertragene Ausgabeparameter.|SQL_SUCCESS_WITH_INFO|Verwenden Sie **SQLGetDiagRec** und **SQLGetDiagField** , um Warnmeldungen zu verarbeiten.<br /><br /> Öffnen Sie **SQLMoreResults** , um die Verarbeitung von gestreuten Ausgabeparametern zu starten. SQL_PARAM_DATA_AVAILABLE sollte zurückgegeben werden.<br /><br /> Verwenden Sie **SQLParamData** und **SQLGetData** , um gestreute Ausgabeparameter abzurufen.|  
+|Zu den Daten gehören eine Warnmeldung, ein Resultset und übertragene Ausgabeparameter.|SQL_SUCCESS_WITH_INFO|Verwenden Sie **SQLGetDiagRec** und **SQLGetDiagField** , um Warnmeldungen zu verarbeiten. Anschließend wird **SQLMoreResults** aufgerufen, um mit der Verarbeitung des Resultsets zu beginnen.<br /><br /> Rufen Sie ein Resultset mit **SQLBindCol** und **SQLGetData**ab.<br /><br /> Öffnen Sie **SQLMoreResults** , um die Verarbeitung von gestreuten Ausgabeparametern zu starten. **SQLMoreResults** sollte SQL_PARAM_DATA_AVAILABLE zurückgeben.<br /><br /> Verwenden Sie **SQLParamData** und **SQLGetData** , um gestreute Ausgabeparameter abzurufen.|  
+|Abfragen mit DAE-Eingabe Parametern, z. b. ein gestreamter Eingabe-/Ausgabeparameter (DAE)|SQL-NEED_DATA|Aufrufen von **SQLParamData** und **SQLPutData** zum Senden von DAE-Eingabeparameter Daten.<br /><br /> Nachdem alle DAE-Eingabeparameter verarbeitet wurden, können von **SQLParamData** alle Rückgabecodes zurückgegeben werden, die von **SQLExecute** und **SQLExecDirect** zurückgegeben werden können. Die Fälle in dieser Tabelle können dann angewendet werden.<br /><br /> Wenn der Rückgabecode SQL_PARAM_DATA_AVAILABLE ist, sind gestreamt-Ausgabeparameter verfügbar. Eine Anwendung muss **SQLParamData** erneut aufrufen, um das Token für den gestreuten Ausgabeparameter abzurufen, wie in der ersten Zeile dieser Tabelle beschrieben.<br /><br /> Wenn der Rückgabecode SQL_SUCCESS ist, muss entweder ein Resultset verarbeitet werden, oder die Verarbeitung ist fertiggestellt.<br /><br /> Wenn der Rückgabecode SQL_SUCCESS_WITH_INFO ist, werden Warnmeldungen verarbeitet.|  
   
- Nach dem **SQLExecute**, **SQLExecDirect**, oder **SQLMoreResults** gibt SQL_PARAM_DATA_AVAILABLE, ein Fehler bei Funktionssequenz führt, wenn eine Anwendung ruft eine eine Funktion, die nicht in der folgenden Liste ist:  
+ Nachdem **SQLExecute**, **SQLExecDirect**oder **SQLMoreResults** SQL_PARAM_DATA_AVAILABLE zurückgegeben hat, führt dies zu einem Funktions Sequenz Fehler, wenn eine Anwendung eine Funktion aufruft, die nicht in der folgenden Liste enthalten ist:  
   
--   **SQLAllocHandle** / **SQLAllocHandleStd**  
+-   **Sqlzugechandle** / **sqlfreichandlestd**  
   
 -   **SQLDataSources** / **SQLDrivers**  
   
@@ -97,22 +97,22 @@ Bevor Sie ODBC 3.8 konnte eine Anwendung nur die Output-Parameter, der eine Abfr
   
 -   **SQLCancel**  
   
--   **SQLCancelHandle** (mit Anweisungshandle)  
+-   **Sqlcancelhandle** (mit Anweisungs Handle)  
   
--   **SQLFreeStmt** (klicken Sie mit der Option = SQL_CLOSE, SQL_DROP oder SQL_UNBIND)  
+-   **SQLFreeStmt** (with Option = SQL_CLOSE, SQL_DROP oder SQL_UNBIND)  
   
 -   **SQLCloseCursor**  
   
 -   **SQLDisconnect**  
   
--   **SQLFreeHandle** (mit HandleType = SQL_HANDLE_STMT auf)  
+-   **SQLFreeHandle** (mit dem Typ "Lenker" = SQL_HANDLE_STMT)  
   
--   **SQLGetStmtAttr**  
+-   **'SQLGetStmtAttr'**  
   
- Anwendungen können weiterhin **SQLSetDescField** oder **SQLSetDescRec** Bindungsinformationen über die festgelegt. Feld Zuordnung wird nicht geändert werden. Felder innerhalb der Deskriptor können jedoch neue Werte zurückgeben. SQL_DESC_PARAMETER_TYPE könnte es sich beispielsweise um SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM zurückgeben.  
+ Anwendungen können weiterhin **SQLSetDescField** oder **SQLSetDescRec** verwenden, um die Bindungs Informationen festzulegen. Die Feld Zuordnung wird nicht geändert. Allerdings können Felder innerhalb des Deskriptors neue Werte zurückgeben. Beispielsweise können SQL_DESC_PARAMETER_TYPE SQL_PARAM_INPUT_OUTPUT_STREAM oder SQL_PARAM_OUTPUT_STREAM zurückgeben.  
   
-## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Beispielszenario für die Verwendung: Abrufen eines Bilds in Teilen aus einem Resultset  
- **SQLGetData** können verwendet werden, um das Abrufen von Daten in Teilen, wenn eine gespeicherte Prozedur gibt ein Resultset, das eine Zeile mit Metadaten zu einem Bild enthält, und das Bild wird in einem großen Output-Parameter zurückgegeben.  
+## <a name="usage-scenario-retrieve-an-image-in-parts-from-a-result-set"></a>Verwendungs Szenario: Abrufen eines Bilds in Teilen aus einem Resultset  
+ **SQLGetData** kann verwendet werden, um Daten in Teilen zu erhalten, wenn eine gespeicherte Prozedur ein Resultset zurückgibt, das eine Zeile mit Metadaten zu einem Bild enthält, und das Bild in einem großen Ausgabeparameter zurückgegeben wird.  
   
 ```  
 // CREATE PROCEDURE SP_TestOutputPara  
@@ -193,8 +193,8 @@ BOOL displayPicture(SQLUINTEGER idOfPicture, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Beispielszenario für die Verwendung: Senden und Empfangen von ein großes Objekt als eine gestreamte Eingabe-/Ausgabeparameter  
- **SQLGetData** abrufen und Senden von Daten in Teilen, wenn eine gespeicherte Prozedur ein großes Objekt bewegt wird als Eingabe/Ausgabe-Parameter, den Wert in und aus der Datenbank-streaming verwendet werden können. Sie müssen nicht alle Daten im Speicher gespeichert.  
+## <a name="usage-scenario-send-and-receive-a-large-object-as-a-streamed-inputoutput-parameter"></a>Verwendungs Szenario: senden und Empfangen einer Large Object als per Streaming übertragenes Eingabe-/Ausgabeparameter  
+ **SQLGetData** kann verwendet werden, um Daten in Teilen zu erhalten und zu senden, wenn eine gespeicherte Prozedur ein großes Objekt als Eingabe-/Ausgabeparameter übergibt und den Wert auf die und aus der Datenbank übergibt. Sie müssen nicht alle Daten im Arbeitsspeicher speichern.  
   
 ```  
 // CREATE PROCEDURE SP_TestInOut  
@@ -268,5 +268,5 @@ BOOL displaySimilarPicture(BYTE* image, ULONG lengthOfImage, SQLHSTMT hstmt) {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anweisungsparameter](../../../odbc/reference/develop-app/statement-parameters.md)

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31ba88f3bc49d78dc8c68ac77ba6bda90e63aad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028377"
 ---
 # <a name="objecttype-trace-event-column"></a>ObjectType (Spalte für Ablaufverfolgungsereignisse)
@@ -29,13 +29,13 @@ ms.locfileid: "63028377"
   
 ## <a name="object-type-column-values"></a>Werte der ObjectType-Spalte  
   
-|Wert|Definition|  
+|value|Definition|  
 |-----------|----------------|  
 |8259|CHECK-Einschränkung|  
 |8260|Standard (Einschränkung oder eigenständig)|  
 |8262|FOREIGN KEY-Einschränkung|  
 |8272|Gespeicherte Prozedur|  
-|8274|Rule|  
+|8274|Regel|  
 |8275|Systemtabelle|  
 |8276|Trigger für Server|  
 |8277|Tabelle (benutzerdefiniert)|  
@@ -43,7 +43,7 @@ ms.locfileid: "63028377"
 |8280|Erweiterte gespeicherte Prozeduren|  
 |16724|CLR-Trigger|  
 |16964|Datenbank|  
-|16975|Objekt|  
+|16975|Object|  
 |17222|Volltextkatalog|  
 |17232|CLR-gespeicherte Prozedur|  
 |17235|Schema|  
@@ -65,7 +65,7 @@ ms.locfileid: "63028377"
 |19283|ObfusKey|  
 |19521|Anmeldung mit asymmetrischem Schlüssel|  
 |19523|Anmeldung mit Zertifikat|  
-|19538|Rolle|  
+|19538|Role|  
 |19539|SQL-Anmeldung|  
 |19543|Windows-Anmeldung|  
 |20034|Remotedienstbindung|  
@@ -101,9 +101,9 @@ ms.locfileid: "63028377"
 |22601|Index|  
 |22604|Anmeldung mit Zertifikat|  
 |22611|XML-Schema|  
-|22868|Typ|  
+|22868|type|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

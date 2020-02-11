@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f273823825cf94da6269a58389f04207ad1c2707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190668"
 ---
 # <a name="remove-data-quality-server-objects"></a>Entfernen von Data Quality Server-Objekten
@@ -40,9 +40,9 @@ ms.locfileid: "68190668"
 > `dqsinstaller.exe -uninstall`  
   
 ## <a name="uninstall-sql-server-instance-containing-data-quality-server"></a>Deinstallieren der SQL Server-Instanz, die Data Quality Server enthält  
- Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz mit [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] vollständig deinstallieren, müssen Sie die Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA manuell vom Computer löschen, nachdem die Deinstallation abgeschlossen wurde. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstallation sind die Dateien der Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA unter C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA verfügbar.  
+ Wenn Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz mit [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]vollständig deinstallieren, müssen Sie die Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA manuell vom Computer löschen, nachdem die Deinstallation abgeschlossen wurde. Bei einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Standardinstallation sind die Dateien der Datenbanken DQS_MAIN, DQS_PROJECTS und DQS_STAGING_DATA unter C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweise: Deinstallieren einer vorhandenen SQL Server-Instanz &#40;Setup&#41;](../../../2014/sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)   
  [Deinstallieren von SQL Server 2014](uninstall-sql-server.md)  
   

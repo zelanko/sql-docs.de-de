@@ -1,5 +1,5 @@
 ---
-title: Volltext-Suchdienst hat sich geändert, seit SQL Server 2008 | Microsoft-Dokumentation
+title: Die voll Text Suche wurde seit SQL Server 2008 geändert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095148"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>Die Volltextsuche wurde seit SQL Server 2008 geändert.
@@ -23,7 +23,7 @@ ms.locfileid: "66095148"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Seit [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wurden verschiedene Funktionen, Einstellungen und Objekte der Volltextsuche geändert, und viele bestehende Einstellungen werden beim Upgrade nicht beibehalten.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
@@ -34,6 +34,6 @@ ms.locfileid: "66095148"
   
  [Upgrade der Volltextsuche](https://go.microsoft.com/fwlink/?LinkId=112291)  
   
- [Breaking Changes in der Volltextsuche](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
+ [Fehlerhafte Änderungen der Volltextsuche](../../../2014/database-engine/breaking-changes-to-full-text-search.md)  
   
   

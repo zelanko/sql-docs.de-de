@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 668d264d9be032c7886026e628921ead837d7879
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73758414"
 ---
 # <a name="stored-procedures"></a>Gespeicherte Prozeduren
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Eine gespeicherte Prozedur ([gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) ist ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt:  
+  Eine gespeicherte Prozedur ([gespeicherte Prozeduren &#40;Datenbank-Engine&#41;](../../../relational-databases/stored-procedures/stored-procedures-database-engine.md)) ist ein ausführbares Objekt, das in einer Datenbank gespeichert ist. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]stützten  
   
 -   Gespeicherte Prozeduren  
   
@@ -40,9 +40,9 @@ ms.locfileid: "73758414"
   
 -   [Ausführen gespeicherter Prozeduren &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-running.md)  
   
--   [Aufrufen einer gespeicherter Prozedur &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
+-   [Aufrufen einer gespeicherten Prozedur &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68198993"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Konflikterkennung bei der Peer-zu-Peer-Replikation
@@ -26,7 +26,7 @@ ms.locfileid: "68198993"
  Die Peer-zu-Peer-Replikation in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] und neueren Versionen bietet die Option, die Konflikterkennung für eine gesamte Peer-zu-Peer-Topologie zu aktivieren. Mithilfe dieser Option kann Problemen vorgebeugt werden, die durch nicht erkannte Konflikte, einschließlich inkonsistentem Verhalten von Anwendungen und verlorenen Updates, entstehen. Standardmäßig wird, wenn diese Option aktiviert ist, eine konfliktverursachende Änderung als ein schwerwiegender Fehler betrachtet, der zu einem Fehler des Verteilungs-Agents führt. Bei einem Konflikt verbleibt die Topologie so lange in einem inkonsistenten Zustand, bis der Konflikt gelöst und die Datenkonsistenz in der Topologie wiederhergestellt wurde.  
   
 > [!NOTE]  
->  Stellen Sie, um inkonsistente Daten zu vermeiden, in einer Peer-zu-Peer-Topologie sicher, dass keine Konflikte auftreten, auch wenn die Konflikterkennung aktiviert ist. Damit sichergestellt ist, dass Schreibvorgänge für eine bestimmte Zeile nur an einem Knoten durchgeführt werden, müssen Anwendungen, die auf Daten zugreifen und diese ändern, Einfügungen, Updates und Löschungen partitionieren. Diese Partitionierung gewährleistet, dass Änderungen an einer bestimmten Zeile, die von einem Knoten stammt, mit allen anderen Knoten in der Topologie synchronisiert werden, bevor die Zeile von einem anderen Knoten geändert wird. Wenn eine Anwendung ausgereifte Fähigkeiten zur Konflikterkennung und -lösung erfordert, verwenden Sie die Mergereplikation. Weitere Informationen finden Sie unter [Merge Replication](../merge/merge-replication.md) und [Resolve Merge Replication Conflicts](../merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+>  Stellen Sie, um inkonsistente Daten zu vermeiden, in einer Peer-zu-Peer-Topologie sicher, dass keine Konflikte auftreten, auch wenn die Konflikterkennung aktiviert ist. Damit sichergestellt ist, dass Schreibvorgänge für eine bestimmte Zeile nur an einem Knoten durchgeführt werden, müssen Anwendungen, die auf Daten zugreifen und diese ändern, Einfügungen, Updates und Löschungen partitionieren. Diese Partitionierung gewährleistet, dass Änderungen an einer bestimmten Zeile, die von einem Knoten stammt, mit allen anderen Knoten in der Topologie synchronisiert werden, bevor die Zeile von einem anderen Knoten geändert wird. Wenn eine Anwendung ausgereifte Fähigkeiten zur Konflikterkennung und -lösung erfordert, verwenden Sie die Mergereplikation. Weitere Informationen finden Sie unter [Mergereplikation](../merge/merge-replication.md) und [Erkennen und Beseitigen von Konflikten bei der Mergereplikation](../merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 ## <a name="understanding-conflicts-and-conflict-detection"></a>Grundlegendes zu Konflikten und der Konflikterkennung  
  In einer einzelnen Datenbank verursachen Änderungen, die von verschiedenen Anwendungen an derselben Zeile vorgenommen werden, keinen Konflikt. Der Grund dafür ist, dass Transaktionen serialisiert und gleichzeitige Änderungen mithilfe von Sperren behandelt werden. In einem asynchronen verteilten System wie der Peer-zu-Peer-Replikation agieren Transaktionen unabhängig voneinander auf jedem Knoten, und es gibt keinen Mechanismus dafür, Transaktionen über mehrere Knoten zu serialisieren. Ein Protokoll wie Zweiphasencommit könnte verwendet werden, aber dies hat deutliche Auswirkungen auf die Leistung.  
@@ -86,20 +86,20 @@ ms.locfileid: "68198993"
   
 -   Versuchen Sie, den Knoten wieder zu synchronisieren, indem Sie den Verteilungs-Agent aktivieren, damit dieser das Übernehmen von Änderungen fortsetzt:  
   
-    1.  Führen Sie [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie 'p2p_continue_onconflict' für die @property Parameter und `true` für die @value Parameter.  
+    1.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für @property den- `true` Parameter und @value den-Parameter an.  
   
     2.  Starten Sie den Verteilungs-Agent neu.  
   
     3.  Überprüfen Sie die erkannten Konflikte im Konflikt-Viewer, und bestimmen Sie die beteiligten Zeilen, den Konflikttyp und den Gewinner. Der Konflikt wird anhand des Werts der Absender-ID aufgelöst, den Sie während der Konfiguration angegeben haben: Die Zeile, die von dem Knoten mit der höchsten ID stammt, gewinnt den Konflikt. Weitere Informationen finden Sie unter [Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](../view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
   
-    4.  Führen Sie eine Überprüfung aus, um sicherzustellen, dass die miteinander in Konflikt stehenden Zeilen ordnungsgemäß konvergiert wurden. Weitere Informationen finden Sie unter [Validate Replicated Data](../validate-data-at-the-subscriber.md).  
+    4.  Führen Sie eine Überprüfung aus, um sicherzustellen, dass die miteinander in Konflikt stehenden Zeilen ordnungsgemäß konvergiert wurden. Weitere Informationen finden Sie unter [Überprüfen von replizierten Daten](../validate-data-at-the-subscriber.md).  
   
         > [!NOTE]  
         >  Wenn die Daten nach Ausführung dieses Schritts inkonsistent sind, müssen Sie die Zeilen auf dem Knoten mit der höchsten Priorität manuell aktualisieren und dann die Änderungen von diesem Knoten übertragen. Wenn die Topologie keine weiteren miteinander in Konflikt stehenden Änderungen aufweist, werden alle Knoten in einen konsistenten Status gebracht.  
   
-    5.  Führen Sie [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie 'p2p_continue_onconflict' für die @property Parameter und `false` für die @value Parameter.  
+    5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für @property den- `false` Parameter und @value den-Parameter an.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
   
   

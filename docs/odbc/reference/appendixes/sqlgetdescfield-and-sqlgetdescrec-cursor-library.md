@@ -1,5 +1,5 @@
 ---
-title: SQLGetDescField und SQLGetDescRec (Cursorbibliothek) | Microsoft-Dokumentation
+title: SQLGetDescField und SQLGetDescRec (Cursor Bibliothek) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,22 +14,22 @@ ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 853a364b61b63d58da93111c75db0d7d723ee49b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68073916"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField und SQLGetDescRec (Cursorbibliothek)
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Zu vermeiden Sie, verwenden Sie diese Funktion beim Entwickeln neuer Anwendungen und Änderung von Anwendungen, die derzeit auf dieses Feature verwenden möchten. Microsoft empfiehlt die Verwendung von Cursor-Funktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- In diesem Thema erläutert die Verwendung von der **SQLGetDescField** und **SQLGetDescRec** Funktionen in der Cursorbibliothek. Allgemeine Informationen zu diesen Funktionen finden Sie unter [SQLGetDescField-Funktion](../../../odbc/reference/syntax/sqlgetdescfield-function.md) und [SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
+ In diesem Thema wird die Verwendung der Funktionen **SQLGetDescField** und **SQLGetDescRec** in der Cursor Bibliothek erläutert. Allgemeine Informationen zu diesen Funktionen finden Sie unter [SQLGetDescField-Funktion](../../../odbc/reference/syntax/sqlgetdescfield-function.md) und [SQLGetDescRec-Funktion](../../../odbc/reference/syntax/sqlgetdescrec-function.md).  
   
- Führt die Cursorbibliothek **SQLGetDescRec** Lesezeichenspalten Metadaten zurückgegeben. Führt die Cursorbibliothek **SQLGetDescField** zurückzugebenden die gleichen Felder, die vom **SQLGetDescRec**, welche sind SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ Länge, SQL_DESC_PRECISION, SQL_DESC_SCALE und SQL_DESC_NULLABLE. Aus Gründen der Konsistenz **SQLGetDescField** sql_desc_unnamed darf auch zurück.  
+ Die Cursor Bibliothek führt **SQLGetDescRec** aus, um Metadaten für Lesezeichen Spalten zurückzugeben. Die Cursor Bibliothek führt **SQLGetDescField** aus, um dieselben von **SQLGetDescRec**zurückgegebenen Felder zurückzugeben, die SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_LENGTH, SQL_DESC_PRECISION, SQL_DESC_SCALE und SQL_DESC_NULLABLE sind. Aus Konsistenz Gründen gibt **SQLGetDescField** auch SQL_DESC_UNNAMED zurück.  
   
- Führt die Cursorbibliothek **SQLGetDescField** wenn er aufgerufen wird, zurückgeben, der Wert der folgenden Felder, die zum Binden von Lesezeichenspalten festgelegt sind: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_LENGTH.  
+ Die Cursor Bibliothek führt **SQLGetDescField** aus, wenn Sie aufgerufen wird, um den Wert der folgenden Felder zurückzugeben, die für die Bindung von Lesezeichen Spalten festgelegt sind: SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR und SQL_DESC_LENGTH.  
   
- Führt die Cursorbibliothek **SQLGetDescField** wenn er aufgerufen wird, um den Wert des Felds SQL_DESC_BIND_OFFSET_PTR SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE oder SQL_DESC_ROW_STATUS_PTR zurückzugeben. Diese Felder können für jede Zeile wird nicht nur die Lesezeichen-Zeile zurückgegeben werden.  
+ Die Cursor Bibliothek führt **SQLGetDescField** aus, wenn Sie aufgerufen wird, um den Wert des Felds "SQL_DESC_BIND_OFFSET_PTR", "SQL_DESC_BIND_TYPE", "SQL_DESC_ROW_ARRAY_SIZE" oder "SQL_DESC_ROW_STATUS_PTR" zurückzugeben. Diese Felder können für jede Zeile und nicht nur für die Lesezeichen Zeile zurückgegeben werden.  
   
- Wenn eine Anwendung ruft **SQLGetDescField** um den Wert eines Felds nicht erwähnten zurückzugeben, die Cursorbibliothek den Aufruf an den Treiber übergeben.
+ Wenn eine Anwendung **SQLGetDescField** aufruft, um den Wert eines anderen Felds als den zuvor erwähnten zurückzugeben, übergibt die Cursor Bibliothek den Aufruf an den Treiber.

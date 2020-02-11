@@ -13,10 +13,10 @@ ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4b07af028cd0f2385c447c99192ccc50b65c4925
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74096122"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop-Verbindungs-Manager
@@ -60,7 +60,7 @@ ms.locfileid: "74096122"
   
     5.  Wenn Sie als Authentifizierungsoption **Kerberos** wählen, geben Sie in die Felder **Password** und **Domain**das Kennwort und die Domäne des Benutzers ein.  
   
-5.  Klicken Sie auf **Verbindung testen**. (Nur die Verbindung, die Sie aktiviert, wird getestet.)  
+5.  Wählen Sie **Verbindung testen** aus. (Nur die Verbindung, die Sie aktiviert, wird getestet.)  
   
 6.  Wählen Sie **OK** aus, um das Dialogfeld zu schließen.  
 
@@ -90,7 +90,7 @@ Gehen Sie auf dem SSIS-Computer wie folgt vor:
 
     Nachdem Sie diese Befehle ausgeführt haben, starten Sie den Computer neu.
 
-2.  Überprüfen Sie die Konfiguration mit dem **Ksetup**-Befehl. Die Ausgabe sollte wie im folgenden Beispiel aussehen:
+2.  Überprüfen Sie die Konfiguration mit dem **Ksetup**-Befehl. Die Ausgabe sollte wie folgt aussehen:
 
     ```
     C:> Ksetup
@@ -206,7 +206,7 @@ Führen Sie die folgenden **Ksetup**-Befehle aus, um einen Bereichseintrag hinzu
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hadoop Hive-Task](../../integration-services/control-flow/hadoop-hive-task.md)   
  [Hadoop Pig-Task](../../integration-services/control-flow/hadoop-pig-task.md)   
  [Hadoop-Dateisystemtask](../../integration-services/control-flow/hadoop-file-system-task.md)  

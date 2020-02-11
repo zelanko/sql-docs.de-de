@@ -1,5 +1,5 @@
 ---
-title: Volltextkatalog-Eigenschaften (Seite Allgemein) | Microsoft-Dokumentation
+title: Voll Text Katalog-Eigenschaften (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779663"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
@@ -25,36 +25,36 @@ ms.locfileid: "62779663"
 > [!NOTE]  
 >  Im Zusammenhang mit [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenbanken ist ein Volltextkatalog ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
   
 ### <a name="properties"></a>Eigenschaften  
  **Standardkatalog**  
  Zeigt an, ob es sich bei dem Katalog um den Standardkatalog der Datenbank handelt.  
   
  **Auffüllungsstatus**  
- Zeigt den Status des Katalogs an. Dabei sind folgende Werte möglich:  
+ Zeigt den Status des Katalogs an. Die folgenden Werte sind möglich:  
   
--   **Im Leerlauf**  
+-   **Idle**  
   
 -   **Durchforstung wird ausgeführt**  
   
 -   **Angehalten**  
   
--   **Throttled**  
+-   **Gedrosselt**  
   
--   **Wiederherstellen von**  
+-   **Meer**  
   
--   **Herunterfahren**  
+-   **Abschlusses**  
   
 -   **Inkrementelles Auffüllen wird ausgeführt**  
   
 -   **Index wird erstellt**  
   
--   **Datenträger ist voll-angehalten**  
+-   **Der Datenträger ist vollständig angehalten.**  
   
--   **Change tracking**  
+-   **Änderungs Nachverfolgung**  
   
- **Elementanzahl**  
+ **Anzahl der Elemente**  
  Zeigt die Anzahl der Volltextelemente im Katalog an.  
   
  **Kataloggröße**  
@@ -63,14 +63,14 @@ ms.locfileid: "62779663"
  **Name**  
  Name des Volltextkatalogs.  
   
- **Unterscheidung nach Akzent**  
- Dient zum Anzeigen oder Ändern, ob bei dem Katalog eine Unterscheidung anhand von diakritischen Zeichen wie Tilde ( **~** ), Akut-Akzentzeichen (**´**) oder Umlaut (**¨**) erfolgt oder nicht. Gültige Werte sind:  
+ **Akzent**  
+ Anzeigen oder ändern, ob der Katalog von diakritischen Zeichen unterschieden wird, z. b.**~** eine Tilde (), ein akritisches Akzentzeichen (.**) oder Umlaut ("**.**").** Gültige Werte sind:  
   
 -   **Nein**  
   
--   **ja**  
+-   **Ja**  
   
--   Weitere Informationen zu diakritischen Zeichen, finden Sie unter [diakritischer](https://www.merriam-webster.com/dictionary/diacritic) im Nitsche-Webster Wörterbuch.  
+-   Informationen zu diakritischen Markierungen finden Sie unter [diakritische](https://www.merriam-webster.com/dictionary/diacritic) Zeichen im Merriam-Webster-Wörterbuch.  
   
  **Letzte Auffüllung am**  
  Zeigt das Datum an, an dem der Katalog zuletzt aufgefüllt wurde.  
@@ -90,7 +90,7 @@ ms.locfileid: "62779663"
 |**Katalog neu erstellen**|Löscht den Volltextkatalog und erstellt ihn neu. Dieser Vorgang muss bei der Änderung einer grundlegenden Katalogeigenschaft, z. B. der Akzentunterscheidung, ausgeführt werden.<br /><br /> Damit die Neuerstellung erfolgreich ist, muss die Dateigruppe, in der sich der Volltextkatalog befindet, online oder les- und beschreibbar sein. Nach der Neuerstellung wird der Volltextindex neu aufgefüllt.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REBUILD aus.|  
 |**Katalog neu auffüllen**|Aktualisiert den Katalog entsprechend den kürzlich vorgenommenen Datenänderungen. Diese Option hat keine Katalogausfallzeit zur Folge.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Auffüllen von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
   

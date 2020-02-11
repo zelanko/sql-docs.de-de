@@ -1,5 +1,5 @@
 ---
-title: Abhängige Elemente (MDX) | Microsoft-Dokumentation
+title: Descendants (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67999987"
 ---
 # <a name="descendants-mdx"></a>Descendants (MDX)
@@ -48,20 +48,20 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Level_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Ebene zurückgibt.  
   
- *Entfernung*  
+ *Flüge*  
  Ein gültiger numerischer Ausdruck, der den Abstand vom angegebenen Element angibt.  
   
  *Desc_Flag*  
  Ein gültiger Zeichenfolgenausdruck, der ein Beschreibungs-Flag zur Unterscheidung möglicher Mengen von nachfolgenden Werten angibt.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn eine Ebene angegeben ist, die **Nachfolger** Funktionsergebnis ist eine Menge mit den nachfolgenden Werten des angegebenen Elements oder die Mitglieder der angegebenen Menge auf einer angegebenen Ebene optional geändert durch ein Flag angegeben in  *Desc_Flag*.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn eine Ebene angegeben wird, gibt die **Descendants** -Funktion eine Menge zurück, die die nachfolgenden Elemente des angegebenen Elements oder die Elemente der angegebenen Menge auf einer angegebenen Ebene enthält, optional mit einem in *Desc_Flag*angegebenen Flag geändert werden.  
   
- Wenn *Abstand* angegeben wird, die **Nachfolger** Funktionsergebnis ist eine Gruppe, enthält die untergeordneten Elemente des angegebenen Elements oder die Elemente der angegebenen Menge, die die angegebene Anzahl von Ebenen entfernt werden. die Hierarchie des angegebenen Elements, optional geändert durch ein Flag angegeben in *Desc_Flag*. Das Distance-Argument dieser Funktion wird in der Regel bei unregelmäßigen Hierarchien verwendet. Wenn der angegebene Abstand null (0) ist, gibt die Funktion eine Menge zurück, die nur das angegebene Element oder die angegebene Menge enthält.  
+ Wenn *Distance* angegeben wird, gibt die **Descendants** -Funktion eine Menge zurück, die die nachfolgenden Elemente des angegebenen Elements oder die Elemente der angegebenen Menge enthält, die die angegebene Anzahl von Ebenen in der Hierarchie des angegebenen Elements enthalten, optional durch ein in *Desc_Flag*angegebenes Flag geändert werden. Das Distance-Argument dieser Funktion wird in der Regel bei unregelmäßigen Hierarchien verwendet. Wenn der angegebene Abstand null (0) ist, gibt die Funktion eine Menge zurück, die nur das angegebene Element oder die angegebene Menge enthält.  
   
- Wenn ein Mengenausdruck angegeben ist, die **Nachfolger** Funktion ist für jedes Element der Menge einzeln aufgelöst, und die Menge erneut erstellt. Das heißt, die Syntax für die **Nachfolger** Funktion ist funktionell gleichwertig mit der MDX-Abfrage [generieren](../mdx/generate-mdx.md) Funktion.  
+ Wenn ein Mengen Ausdruck angegeben ist, wird die **Descendants** -Funktion für jedes Element der Menge einzeln aufgelöst, und die Gruppe wird erneut erstellt. Anders ausgedrückt: die Syntax, die für die **Descendants** -Funktion verwendet wird, ist funktional äquivalent zur MDX-Funktion [Generate](../mdx/generate-mdx.md) .  
   
- Wenn keine Ebene oder Entfernung angegeben wird, wird durch Aufrufen der Standardwert für die von der Funktion verwendete Ebene bestimmt die [Ebene](../mdx/level-mdx.md) Funktion (<\<Member >>. Level) für den angegebenen Member (wenn ein Element angegeben ist) oder durch Aufrufen der **Ebene** Funktion für jedes Element der angegebenen Menge (Wenn eine Gruppe angegeben ist). Wenn kein Ebenenausdruck, Abstand oder Flag angegeben ist, wird die Funktion ausgeführt, als wenn die folgende Syntax verwendet würde:  
+ Wenn keine Ebene oder kein Abstand angegeben wird, wird der Standardwert für die von der Funktion verwendete Ebene durch Aufrufen der [Ebenenfunktion](../mdx/level-mdx.md) ( \<<Member>> bestimmt. Level) für das angegebene Element (wenn ein Element angegeben ist) oder durch Aufrufen der **Ebenenfunktion** für jedes Element der angegebenen Menge (sofern eine Menge angegeben ist). Wenn kein Ebenenausdruck, Abstand oder Flag angegeben ist, wird die Funktion ausgeführt, als wenn die folgende Syntax verwendet würde:  
   
  `Descendants`  
   
@@ -89,13 +89,13 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  `)`  
   
- Durch Ändern des Wertes des Beschreibungs-Flags können Sie nachfolgende Elemente in der angegebenen Ebene bzw. dem angegebenen Abstand, untergeordnete Elemente vor und nach der angegebenen Ebene bzw. dem angegebenen Abstand (bis zum Blattknoten) sowie die untergeordneten Blattelemente unabhängig von der angegebenen Ebene bzw. dem angegebenen Abstand ein- oder ausschließen. Die folgende Tabelle beschreibt die Flags, die innerhalb der *Desc_Flag* Argument.  
+ Durch Ändern des Wertes des Beschreibungs-Flags können Sie nachfolgende Elemente in der angegebenen Ebene bzw. dem angegebenen Abstand, untergeordnete Elemente vor und nach der angegebenen Ebene bzw. dem angegebenen Abstand (bis zum Blattknoten) sowie die untergeordneten Blattelemente unabhängig von der angegebenen Ebene bzw. dem angegebenen Abstand ein- oder ausschließen. In der folgenden Tabelle werden die im *Desc_Flag* -Argument zulässigen Flags beschrieben.  
   
-|Flag|Beschreibung|  
+|Flag|BESCHREIBUNG|  
 |----------|-----------------|  
 |SELF|Gibt nur nachfolgende Elemente auf der angegebenen Ebene oder in dem angegebenen Abstand zurück. Die Funktion schließt das angegebene Element ein, wenn es sich bei der angegebenen Ebene um die Ebene des angegebenen Elements handelt.|  
 |AFTER|Gibt nachfolgende Elemente aus allen Ebenen zurück, die der angegebenen Ebene oder dem angegebenen Abstand untergeordnet sind.|  
-|BEFORE|Gibt nachfolgende Elemente aus allen Ebenen zwischen dem angegebenen Element und der angegebenen Ebene oder im angegebenen Abstand zurück. Das angegebene Element enthält, sondern enthält keine Elemente aus der angegebenen Ebene oder Entfernung.|  
+|BEFORE|Gibt nachfolgende Elemente aus allen Ebenen zwischen dem angegebenen Element und der angegebenen Ebene oder im angegebenen Abstand zurück. Sie enthält den angegebenen Member, enthält jedoch keine Elemente aus der angegebenen Ebene oder Entfernung.|  
 |BEFORE_AND_AFTER|Gibt nachfolgende Elemente aus allen Ebenen zurück, die der Ebene des angegebenen Elements untergeordnet sind. Das angegebene Element wird eingeschlossen, jedoch nicht Elemente der angegebenen Ebene oder im angegebenen Abstand.|  
 |SELF_AND_AFTER|Gibt nachfolgende Elemente aus der angegebenen Ebene oder im angegebenen Abstand sowie alle Ebenen, die der angegebenen Ebene oder dem angegebenen Abstand untergeordnet sind, zurück.|  
 |SELF_AND_BEFORE|Gibt nachfolgende Elemente aus der angegebenen Ebene oder im angegebenen Abstand sowie aus allen Ebenen zwischen dem angegebenen Element und der angegebenen Ebene oder im angegebenen Abstand, einschließlich des angegebenen Elements, zurück.|  
@@ -123,7 +123,7 @@ SELECT Descendants
 FROM [Adventure Works]   
 ```  
   
- Das folgende Beispiel gibt den täglichen Durchschnitt von den `Measures.[Gross Profit Margin]` Measures, berechnet über die Tage jedes Monats im Geschäftsjahr 2003, aus der **Adventure Works** Cube. Die **Nachfolger** Funktionsergebnis ist eine Anzahl von Tagen, die über das aktuelle Element bestimmt die `[Date].[Fiscal]` Hierarchie.  
+ Im folgenden Beispiel wird der tägliche Durchschnitt des `Measures.[Gross Profit Margin]` Measures zurückgegeben, der über die Tage jedes Monats im 2003-Geschäftsjahr aus dem **Adventure Works** -Cube berechnet wird. Die **Descendants** -Funktion gibt eine Menge von Tagen zurück, die vom aktuellen Element `[Date].[Fiscal]` der Hierarchie bestimmt werden.  
   
 ```  
 WITH MEMBER Measures.[Avg Gross Profit Margin] AS Avg  
@@ -140,7 +140,7 @@ FROM [Adventure Works]
 WHERE ([Date].[Fiscal Year].&[2003])  
 ```  
   
- Im folgende Beispiel wird ein Ebenenausdruck verwendet und Internet Sales Amount für alle Bundesstaaten in Australien zurückgegeben, und gibt den Prozentsatz der gesamten Internet Sales Amount für Australien für jede State-Province zurück. Dieses Beispiel verwendet die Item-Funktion, um die erste (und einzigen) Tupels aus der Menge zu extrahieren, die von zurückgegeben wird das **Vorgänger** Funktion.  
+ Im folgenden Beispiel wird ein Ebenenausdruck verwendet und der Internet Sales Amount für alle Bundesstaaten in Australien zurückgegeben, und es wird der Prozentsatz des gesamten Internet Sales Amount für Australien für jede Bundesland-Provinz zurückgegeben. In diesem Beispiel wird die Item-Funktion verwendet, um das erste (und einzige) Tupel aus der von der Vorgänger **Funktion zurück** gegebenen Menge zu extrahieren.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -161,7 +161,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

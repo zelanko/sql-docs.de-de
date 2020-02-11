@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a653c4b5cd8d6e1bb9b5c826039169a7a5b80278
-ms.sourcegitcommit: 7183735e38dd94aa3b9bab2b73ccab54c916ff86
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/02/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74683600"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Barrierefreiheit für Benutzer mit Behinderungen
@@ -87,9 +87,9 @@ ms.locfileid: "74683600"
  Eine barrierefreie Dokumentation für Produkte finden [!INCLUDE[msCoName](../includes/msconame-md.md)] Sie auf der [Microsoft](https://go.microsoft.com/fwlink/?LinkID=67164)-Website für Barrierefreiheit.  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for the Blind & Dyslexic, Inc.  
- Sie können zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)] Veröffentlichungen von der Aufzeichnung für den Blind #a0 Dyslexic, Inc. abrufen. Diese Dokumente werden an registrierte, berechtigte Mitglieder des Verteilungs Dienstanbieter auf Audiokassetten oder Disketten verteilt. Der Bestand umfasst mehr als 80.000 Titel, einschließlich der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentation und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Um Informationen zur Lizenzierung und Verfügbarkeit von [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press zu erhalten, wenden Sie sich an:  
+ Sie können zusätzliche [!INCLUDE[msCoName](../includes/msconame-md.md)] Veröffentlichungen von der Aufzeichnung für den Blind & Dyslexic, Inc. abrufen. Diese Dokumente werden an registrierte, berechtigte Mitglieder des Verteilungs Dienstanbieter auf Audiokassetten oder Disketten verteilt. Der Bestand umfasst mehr als 80.000 Titel, einschließlich der [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentation und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Um Informationen zur Lizenzierung und Verfügbarkeit von [!INCLUDE[msCoName](../includes/msconame-md.md)]-Produktdokumentationen und Büchern von [!INCLUDE[msCoName](../includes/msconame-md.md)] Press zu erhalten, wenden Sie sich an:  
   
- Aufzeichnung für den Blind #a0 Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
+ Aufzeichnung für den Blind & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
   
  Telefonnummer innerhalb der USA: (800) 221-4792  
   

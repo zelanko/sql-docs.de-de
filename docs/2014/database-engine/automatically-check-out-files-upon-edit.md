@@ -1,5 +1,5 @@
 ---
-title: Automatisches Auschecken von Dateien beim Bearbeiten | Microsoft-Dokumentation
+title: Dateien beim Bearbeiten automatisch Auschecken | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62791740"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>Automatisches Auschecken von Dateien beim Bearbeiten
@@ -27,11 +27,11 @@ ms.locfileid: "62791740"
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   
-2.  Erweitern Sie die **Quellcodeverwaltung** Ordner, und klicken Sie dann auf **Umgebung**.  
+2.  Erweitern Sie den Ordner **Quell** Code Verwaltung, und klicken Sie dann auf **Umgebung**.  
   
-3.  In der **bearbeiten** Kontrollkästchen **automatisch Auschecken**, und klicken Sie dann auf **OK**.  
+3.  Wählen Sie im **Bearbeitungs** Feld **automatisch Auschecken aus**, und klicken Sie dann auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Auschecken von Dateien](../../2014/database-engine/check-out-files.md)   
  [Verwalten von Auscheckvorgängen](../../2014/database-engine/manage-checkouts.md)  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68811058"
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
@@ -83,8 +83,8 @@ ms.locfileid: "68811058"
   
  Wenn Sie allerdings die Datenquellen-Verbindungszeichenfolge auf eine andere Datenbank aus der vorherigen Generierung ändern, wird kein Fehler generiert. Es wird die neue Datenbank verwendet und keine Änderung an der vorherigen Datenbank vorgenommen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwalten von Änderungen an Datenquellensichten und Datenquellen](manage-changes-to-data-source-views-and-data-sources.md)   
- [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwalten von Änderungen an Datenquellen Sichten und Datenquellen](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Der Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Configuration-Instanz | Microsoft-Dokumentation
+title: Instanzkonfiguration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/04/2016
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68190968"
 ---
 # <a name="instance-configuration"></a>Instanzkonfiguration
@@ -32,11 +32,12 @@ ms.locfileid: "68190968"
  **Warnung!** Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep können Sie den Instanznamen angeben, wenn Sie auf der Seite **Instanzkonfiguration** eine vorbereitete Instanz abschließen. Sie können die vorbereitete Instanz, die Sie abschließen, als Standardinstanz konfigurieren, wenn sich auf dem Computer keine vorhandene Standardinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befindet.  
   
 ## <a name="multiple-instances"></a>Mehrere Instanzen  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem einzelnen Server oder Prozessor, es kann jedoch nur eine einzige Instanz als Standardinstanz fungieren. Alle anderen müssen benannte Instanzen sein. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gleichzeitig ausgeführt werden, und jede Instanz wird unabhängig von den anderen Instanzen ausgeführt.  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem einzelnen Server oder Prozessor, es kann jedoch nur eine einzige Instanz als Standardinstanz fungieren. Alle anderen müssen benannte Instanzen sein. Auf einem Computer können mehrere Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gleichzeitig ausgeführt werden, und jede Instanz wird unabhängig von den anderen Instanzen ausgeführt.  
   
- Weitere Informationen finden Sie unter [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Weitere Informationen finden Sie unter [Spezifikationen der maximalen Kapazität für SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Nur Failoverclusterinstanzen: Geben Sie den Netzwerknamen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Failoverclusters an. Anhand dieses Namens wird die Failoverclusterinstanz im Netzwerk identifiziert.  
   
  Standardinstanz oder benannte Instanz: Bei der Entscheidung der Frage, ob eine Standardinstanz oder eine benannte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert werden soll, müssen folgende Informationen beachtet werden:  
@@ -57,7 +58,7 @@ ms.locfileid: "68190968"
   
 -   Instanznamen dürfen nicht mit einem Unterstrich (_) beginnen oder enden.  
   
--   Instanznamen dürfen keine Begriffe wie "Standard" oder andere reservierte Schlüsselwörter enthalten. Wenn in einem Instanznamen ein reserviertes Schlüsselwort verwendet wird, tritt ein Setupfehler auf. Weitere Informationen finden Sie unter [Reservierte Schlüsselwörter &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
+-   Instanznamen dürfen keine Begriffe wie "Standard" oder andere reservierte Schlüsselwörter enthalten. Wenn in einem Instanznamen ein reserviertes Schlüsselwort verwendet wird, tritt ein Setupfehler auf. Weitere Informationen finden Sie unter [reservierte Schlüsselwörter &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql).  
   
 -   Wenn Sie MSSQLServer als Instanznamen angeben, wird eine Standardinstanz erstellt.  
   
@@ -71,12 +72,12 @@ ms.locfileid: "68190968"
   
 -   Eingebettete Leerzeichen und sonstige Sonderzeichen sind in Instanznamen nicht zugelassen. Umgekehrte Schrägstriche (\\), Kommas (,), Doppelpunkte (:), Strichpunkte (;), einfache Anführungszeichen ('), kaufmännische Und-Zeichen (&), Bindestriche (-) und das At-Zeichen (@) sind ebenfalls nicht zulässig.  
   
--   **Nur Zeichen, die in der aktuellen Windows-Codepage gültig sind, können verwendet werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen. Wenn ein nicht unterstütztes Unicodezeichen verwendet wird, wird ein Setupfehler auftreten.**  
+-   **In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen können nur Zeichen verwendet werden, die in der aktuellen Windows-Codepage gültig sind. Wenn ein nicht unterstütztes Unicode-Zeichen verwendet wird, tritt ein Setup Fehler auf.**  
   
  **Erkannte Instanzen und Funktionen**  
  Zeigt eine Liste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen und Komponenten an, die auf dem Computer installiert sind, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt wird.  
   
- **Instanz-ID** – Standardmäßig wird der Instanzname als Instanz-ID verwendet. Das Ziel ist dabei, Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Bei einer Standardinstanz lauten Instanzname und Instanz-ID MSSQLSERVER. Um eine nicht standardmäßige Instanz-ID zu verwenden, geben Sie sie im Feld **Instanz-ID** an.  
+ **Instanz-ID** : Standardmäßig wird der Instanzname als Instanz-ID verwendet. Das Ziel ist dabei, Installationsverzeichnisse und Registrierungsschlüssel für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu identifizieren. Dies ist der Fall für Standardinstanzen und benannte Instanzen. Bei einer Standardinstanz lauten Instanzname und Instanz-ID MSSQLSERVER. Wenn Sie eine nicht standardmäßige Instanz-ID verwenden möchten, geben Sie Sie im Feld **Instanz-ID** an.  
   
 > [!IMPORTANT]  
 >  Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep handelt es sich bei der auf dieser Seite angezeigten Instanz-ID um die Instanz-ID, die Sie während des Schritts Image vorbereiten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep-Prozesses angegeben haben. Sie sind nicht in der Lage, während des Schritts Image abschließen eine andere Instanz-ID anzugeben.  
@@ -84,7 +85,7 @@ ms.locfileid: "68190968"
 > [!NOTE]  
 >  Instanz-IDs, die mit einem Unterstrich (_) beginnen oder das Nummernzeichen (#) oder Dollarzeichen ($) enthalten, werden nicht unterstützt.  
   
- Weitere Informationen zu Verzeichnissen, Dateispeicherorten und Namen für Instanz-IDs finden Sie unter [Dateispeicherorte für Standard- und benannte Instanzen von SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
+ Weitere Informationen zu Verzeichnissen, Dateispeicher Orten und Namen der Instanz-ID finden Sie unter [Dateispeicher Orte für Standard Instanzen und benannte Instanzen von SQL Server](../../../2014/sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).  
   
  Alle Komponenten einer gegebenen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden als Einheit verwaltet. Alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Service Packs und Updates werden für jede Komponente einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übernommen.  
   
@@ -99,7 +100,8 @@ ms.locfileid: "68190968"
 -   **Gleicher gruppierter Status**  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist nicht clusterabhängig.  
+    >  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist nicht clusterabhängig.  
   
 -   **Gleiches Betriebssystem**  
   

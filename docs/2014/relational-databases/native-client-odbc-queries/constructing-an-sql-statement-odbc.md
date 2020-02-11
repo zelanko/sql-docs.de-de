@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer SQL­Anweisung (ODBC) | Microsoft-Dokumentation
+title: Erstellen einer SQL-Anweisung (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa955f31d26c87b39585ddead6bc5899a9e00679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206778"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>Erstellen einer SQL-Anweisung (ODBC)
@@ -32,7 +32,7 @@ ms.locfileid: "68206778"
   
      SQL-Anweisungen, die zur Laufzeit gebildet werden und es den Benutzern ermöglichen, die Anweisung mit gängigen Klauseln wie SELECT, WHERE und ORDER BY anzupassen. Hierzu gehören auch von den Benutzern eingegebene Ad-hoc-Abfragen.  
   
- Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client-ODBC-Treiber analysiert SQL-Anweisungen nur nach ODBC- und ISO-Syntax, die nicht direkt unterstützt werden, indem die [!INCLUDE[ssDE](../../includes/ssde-md.md)], die der Treiber wandelt [!INCLUDE[tsql](../../includes/tsql-md.md)]. Jede andere SQL-Syntax wird wie vorliegend an das [!INCLUDE[ssDE](../../includes/ssde-md.md)] weitergeleitet, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, ob sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zulässig ist. Dieser Ansatz hat zwei Vorteile:  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Client-ODBC-Treiber analysiert SQL-Anweisungen nur für ODBC-und ISO-Syntax [!INCLUDE[ssDE](../../includes/ssde-md.md)], die nicht direkt von unter [!INCLUDE[tsql](../../includes/tsql-md.md)]stützt werden, die der Treiber transformiert. Jede andere SQL-Syntax wird wie vorliegend an das [!INCLUDE[ssDE](../../includes/ssde-md.md)] weitergeleitet, und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überprüft, ob sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zulässig ist. Dieser Ansatz hat zwei Vorteile:  
   
 -   Geringerer Arbeitsaufwand  
   
@@ -40,11 +40,11 @@ ms.locfileid: "68206778"
   
 -   Flexibilität  
   
-     Programmierer können die Portabilität ihrer Anwendungen anpassen. Um die Portabilität für mehrere Datenbanken zu verbessern, verwenden Sie primär die ODBC- und ISO-Syntax. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Erweiterungen zu verwenden, verwenden Sie die entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber unterstützt die vollständige [!INCLUDE[tsql](../../includes/tsql-md.md)] Syntax, sodass auf ODBC basierende Anwendungen alle Features nutzen können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Programmierer können die Portabilität ihrer Anwendungen anpassen. Um die Portabilität für mehrere Datenbanken zu verbessern, verwenden Sie primär die ODBC- und ISO-Syntax. Um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Erweiterungen zu verwenden, verwenden Sie die entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unter [!INCLUDE[tsql](../../includes/tsql-md.md)] stützt die vollständige Syntax, damit ODBC-basierte Anwendungen alle Funktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nutzen können.  
   
  Die Spaltenliste der SELECT-Anweisung sollte nur die Spalten enthalten, die zur Ausführung der aktuellen Aufgabe erforderlich sind. Dadurch werden nicht nur weniger Daten über das Netzwerk gesendet, sondern Datenbankänderungen wirken sich in geringerem Umfang auf die Anwendung aus. Wenn eine Anwendung nicht auf eine Spalte einer Tabelle verweist, dann ist die Anwendung von keinerlei Änderungen betroffen, die an dieser Spalte vorgenommen werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Abfragen &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Abfragen &#40;ODBC-&#41;](executing-queries-odbc.md)  
   
   

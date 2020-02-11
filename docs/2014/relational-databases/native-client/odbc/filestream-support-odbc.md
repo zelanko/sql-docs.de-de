@@ -14,27 +14,27 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68206591"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM-Unterstützung (ODBC)
-  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die verbesserte FILESTREAM-Funktion. Weitere Informationen zu diesem Feature finden Sie unter [FILESTREAM-Unterstützung](../features/filestream-support.md). Ein Beispiel, das die ODB-Unterstützung für FILESTREAM veranschaulicht, finden Sie unter [senden und Empfangen von Daten inkrementell mit FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
+  ODBC in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die verbesserte FILESTREAM-Funktion. Weitere Informationen zu dieser Funktion finden Sie [unter FILESTREAM-Unterstützung](../features/filestream-support.md). Ein Beispiel zur Veranschaulichung der ODB-Unterstützung für FILESTREAM finden [Sie unter inkrementelles senden und empfangen von Daten mit FILESTREAM &#40;ODBC-&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
   
- Zum Senden und empfangen `varbinary(max)` Werte, die größer als 2 GB sind, eine Anwendung muss Parameter binden mit SQLBindParameter mit *ColumnSize* festgelegt `SQL_SS_LENGTH_UNLIMITED`, und legen Sie den Inhalt der *StrLen_or_IndPtr* zu `SQL_DATA_AT_EXEC` vor SQLExecDirect oder SQLExecute.  
+ Zum Senden und empfangen `varbinary(max)` von Werten, die größer als 2 GB sind, muss eine Anwendung Parameter mithilfe von SQLBindParameter mit auf `SQL_SS_LENGTH_UNLIMITED`festgelegter *ColumnSize-Klasse* binden `SQL_DATA_AT_EXEC` und den Inhalt von *StrLen_or_IndPtr* vor SQLExecDirect oder SQLExecute festlegen.  
   
- Wie werden die Daten alle Data-at-Execution-Parameter, mit der SQLParamData und SQLPutData angegeben werden.  
+ Wie bei allen Data-at-Execution-Parametern werden die Daten mit SQLParamData und SQLPutData bereitgestellt.  
   
- Sie können aufrufen SQLGetData zum Abrufen von Daten in Segmenten, die für eine FILESTREAM-Spalte, wenn die Spalte nicht mit SQLBindCol gebunden ist.  
+ Sie können SQLGetData aufrufen, um Daten in Blöcken für eine FILESTREAM-Spalte abzurufen, wenn die Spalte nicht an SQLBindCol gebunden ist.  
   
- Sie können FILESTREAM-Daten aktualisieren, wenn es mit SQLBindCol gebunden ist.  
+ Sie können FILESTREAM-Daten aktualisieren, wenn Sie an SQLBindCol gebunden sind.  
   
- Wenn Sie SQLFetch für eine gebundene Spalte aufrufen, erhalten Sie eine Warnung "die Daten abgeschnitten", wenn der Puffer nicht groß genug für den gesamten Wert ist. Ignorieren Sie diese Warnung, und aktualisieren Sie die Daten in dieser gebundenen Spalte mit der SQLParamData und SQLPutData-Aufrufe. Sie können FILESTREAM-Daten mit SQLSetPos, wenn es mit SQLBindCol gebunden ist, aktualisieren.  
+ Wenn Sie SQLFetch für eine gebundene Spalte aufzurufen, wird die Warnung "Daten abgeschnitten" angezeigt, wenn der Puffer nicht groß genug ist, um den gesamten Wert zu speichern. Ignorieren Sie diese Warnung, und aktualisieren Sie die Daten in dieser gebundenen Spalte mit SQLParamData-und SQLPutData-aufrufen. Sie können FILESTREAM-Daten mithilfe von SQLSetPos aktualisieren, wenn Sie mit SQLBindCol gebunden sind.  
   
 ## <a name="example"></a>Beispiel  
- FILESTREAM-Spalten verhalten sich genau wie `varbinary(max)`-Spalten, aber ohne eine Größenbeschränkung zu besitzen. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Z. B. SQL_LONGVARBINARY kann nicht als Output-Parameter verwendet werden.) Die folgenden Beispiele zeigen die direkte NTFS-Zugriff für FILESTREAM-Spalten. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
+ FILESTREAM-Spalten verhalten sich genau wie `varbinary(max)`-Spalten, aber ohne eine Größenbeschränkung zu besitzen. Sie werden als SQL_VARBINARY gebunden. (SQL_LONGVARBINARY wird mit Imagespalten verwendet, und es gelten Einschränkungen für diesen Typ. Beispielsweise SQL_LONGVARBINARY nicht als Output-Parameter verwendet werden.) In den folgenden Beispielen wird direkter NTFS-Zugriff für FILESTREAM-Spalten gezeigt. In diesen Beispielen wird davon ausgegangen, dass der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code in der Datenbank ausgeführt wurde:  
   
 ```  
 CREATE TABLE fileStreamDocs(  
@@ -43,7 +43,7 @@ author varchar(64),
 document VARBINARY(MAX) FILESTREAM NULL)  
 ```  
   
-### <a name="read"></a>Leseberechtigung  
+### <a name="read"></a>Lesen  
   
 ```  
 void selectFilestream (LPCWSTR dstFilePath) {  
@@ -99,7 +99,7 @@ ODBCError(henv, hdbc, hstmt, NULL, true); exit(-1);
 }  
 ```  
   
-### <a name="insert"></a>Insert  
+### <a name="insert"></a>Einfügen  
   
 ```  
 void insertFilestream(LPCWSTR srcFilePath) {  
@@ -264,7 +264,7 @@ return r;
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Programmierung für SQL Server Native Client](../sql-server-native-client-programming.md)  
   
   

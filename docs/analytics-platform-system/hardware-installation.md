@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401124"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Hardware Installation für das Analytics Platform System (APS)-Gerät
@@ -22,7 +22,7 @@ In diesem Artikel wird beschrieben, wie Sie die Hardware für Ihre SQL Server PD
 ## <a name="BeforeMoving"></a>Vor dem Verschieben von Komponenten aus dem Lade Dock  
 Führen Sie die folgenden Aufgaben aus, bevor Sie die Gerätekomponenten verschieben, entpacken oder Rack ausführen.  
   
-|Aufgabe|Beschreibung|  
+|Aufgabe|BESCHREIBUNG|  
 |--------|---------------|  
 |Überprüfen, ob alle Komponenten eingetroffen sind|Verwenden Sie die Bill of Materials (BOM), um zu überprüfen, ob alle Komponenten eingetroffen sind und sich auf Ihren Paletten am empfangenden Dock für Ihr Rechenzentrum befinden.|  
 |Vergewissern Sie sich, dass das Rechenzentrum alle Anforderungen für das Gerät erfüllt.|Starten Sie diese Aufgabe durch Überprüfen der Hardware Spezifikationen und der Verkabelung, die von ihrer IHV bereitgestellt werden. In den nächsten Schritten finden Sie Einzelheiten zum Regal-und konnektivitätsbedarf.|  
@@ -42,7 +42,7 @@ Verwenden Sie die folgende Prüfliste, um jedes Appliance Gestell von der Palett
 >   
 > Versuchen Sie niemals, einen Geräteknoten oder eine andere große Komponente ohne Unterstützung oder angemessene Ausrüstung zu entfernen oder zu verschieben. Wenden Sie sich an Ihren IHV, um Informationen zur Gewichtung der einzelnen Komponenten zu erhalten, damit Sie im voraus ermitteln können, welche Unterstützung, Ausrüstung und welche Tools Sie benötigen, um die einzelnen Komponenten sicher und ohne Beschädigung zu verarbeiten.  
   
-|Aufgabe|Beschreibung|  
+|Aufgabe|BESCHREIBUNG|  
 |--------|---------------|  
 |Überprüfen Sie, ob die Palette die Ebene hat|Bevor Sie beginnen, die Palette zu verschieben oder zu entpacken, stellen Sie sicher, dass Sie sich auf der Ebene befindet.|  
 |Entbolt eines Knotens aus der Palette|Wenn Sie am oberen Rand der Palette beginnen, Entschrauben Sie den obersten Knoten aus der Palette.|  
@@ -54,7 +54,7 @@ Verwenden Sie die folgende Prüfliste, um jedes Appliance Gestell von der Palett
 ## <a name="AfterMoving"></a>Installieren zusätzlicher Komponenten  
 Verwenden Sie die folgende Checkliste, um die zusätzlichen Komponenten zu installieren.  
   
-|Aufgabe|Beschreibung||  
+|Aufgabe|BESCHREIBUNG||  
 |--------|---------------|-|  
 |Entpacken und Gestell von Netzwerk Switches und PDUs|Verwenden Sie die Regal Diagramme, um die Netzwerk Switches und PDUs an der richtigen Stelle im Gestell zu platzieren.||  
 |Verbinden der InfiniBand-und Ethernet-Kabel gemäß den Kabel Bezeichnungen|Siehe das Verkabelung-Diagramm. Jedes Kabel hat eine Bezeichnung an jedem Ende, das angibt, an welcher Stelle eine Verbindung hergestellt werden muss.||  

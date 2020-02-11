@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 421265abcf3731ed48ff34a6b199ba5cd3c6af5c
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401055"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Starten Sie den Configuration Manager in Analytics Platform System.
 Dieses Thema enthält Anweisungen zum Starten des **Configuration Manager** für die Analytics Platform System Appliance.  
   
-## <a name="before-you-begin"></a>Voraussetzungen  
+## <a name="before-you-begin"></a>Vorbereitungen  
   
 ### <a name="prerequisites"></a>Voraussetzungen  
 Die**Configuration Manager** des Analytics-plattformsystems kann nur vom Anwendungs Domänen Administrator ausgeführt werden. Zum Ausführen dieses Tools benötigen Sie das Kennwort für den Anwendungs Domänen Administrator. Weitere Informationen zum Erstellen zusätzlicher APS-Administratoren finden Sie unter [Erstellen eines APS-Domänen Administrators &#40;APS&#41;](create-an-aps-domain-administrator-aps.md).  

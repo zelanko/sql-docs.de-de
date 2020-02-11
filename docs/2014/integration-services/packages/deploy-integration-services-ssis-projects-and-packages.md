@@ -11,18 +11,19 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a2212b44af9eb17625ef296deb9d6223deb313e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62890253"
 ---
 # <a name="deployment-of-projects-and-packages"></a>Bereitstellung von Projekten und Paketen
+  
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt zwei Bereitstellungsmodelle: das Projektbereitstellungsmodell und das Paketbereitstellungsmodell. Mithilfe des Projektbereitstellungsmodells können Sie Projekte auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen.  
   
  Weitere Informationen zum Bereitstellen eines Projekts auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server finden Sie unter [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md).  
   
- Weitere Informationen zu paketbereitstellungsmodellen finden Sie unter [Paketbereitstellung &#40;SSIS&#41;](legacy-package-deployment-ssis.md).  
+ Weitere Informationen zum Paket Bereitstellungs Modell finden Sie unter [Paket Bereitstellung &#40;SSIS-&#41;](legacy-package-deployment-ssis.md).  
   
 ## <a name="compare-project-deployment-and-package-deployment"></a>Vergleich von Projektbereitstellung und Paketbereitstellung  
  Der Typ von Bereitstellungsmodell, den Sie für ein Projekt auswählen, bestimmt, welche Entwicklungs- und Verwaltungsoptionen für dieses Projekt verfügbar sind. In der folgenden Tabelle werden Unterschiede und Ähnlichkeiten der Verwendung des Projektbereitstellungsmodells und des Paketbereitstellungsmodells dargestellt.  
@@ -44,7 +45,7 @@ ms.locfileid: "62890253"
 ## <a name="features-of-project-deployment-model"></a>Funktionen des Projektbereitstellungsmodells  
  In der folgenden Tabelle sind die Funktionen aufgeführt, die für Projekte, die nur für das Projektbereitstellungsmodell entwickelt wurden, verfügbar sind.  
   
-|Funktion|Description|  
+|Funktion|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Parameter|Ein Parameter gibt die Daten an, die von einem Paket verwendet werden. Sie können die Gültigkeit von Parametern Paketparametern und Projektparametern auf die Paketebene bzw. Projektebene beschränken. Parameter können in Ausdrücken oder Tasks verwendet werden. Wenn das Projekt im Katalog bereitgestellt wird, können Sie einen Literalwert für jeden Parameter zuweisen oder den Standardwert verwenden, der zur Entwurfszeit zugewiesen wurde. Statt eines Literalwerts kann auch auf eine Umgebungsvariable verwiesen werden. Umgebungsvariablenwerte werden zur Laufzeit der Paketausführung aufgelöst.|  
 |Umgebungen|Eine Umgebung ist ein Container für Variablen, auf die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekten verwiesen werden kann. Jedes Projekt kann über mehrere Umgebungsverweise verfügen, aber eine einzelne Instanz der Paketausführung kann nur auf Variablen von einer einzelnen Umgebung verweisen. Umgebungen ermöglichen es Ihnen, die Werte zu organisieren, die Sie einem Paket zuweisen. Sie könnten z. B. Umgebungen mit den Namen "Entwicklung", "Test" und "Produktion" definieren.|  
@@ -57,12 +58,12 @@ ms.locfileid: "62890253"
   
 ## <a name="required-tasks"></a>Erforderliche Tasks  
   
--   [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md)  
+-   [Deploy Projects to Integration Services Server](../deploy-projects-to-integration-services-server.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Blogeintrag zu [Überlegungen zu Verzweigungsstrategien für SSIS-Projekte](https://go.microsoft.com/fwlink/?LinkId=245739)auf mattmasson.com.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [dtexec (Hilfsprogramm)](dtexec-utility.md)  
   
   

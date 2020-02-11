@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827565"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
@@ -26,7 +26,7 @@ ms.locfileid: "62827565"
   
  Die folgende Tabelle enthält eine allgemeine Beschreibung der Komponenten von CDC-Statusvariablenwerten.  
   
-|Komponente|Beschreibung|  
+|Komponente|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`<state-name>`|Der Name des aktuellen CDC-Status.|  
 |`CS`|Kennzeichnet den aktuellen Startpunkt für den Verarbeitungsbereich (aktueller Start).|  
@@ -45,7 +45,7 @@ ms.locfileid: "62827565"
   
  In der folgenden Tabelle werden die möglichen CDC-Statuswerte beschrieben.  
   
-|Status|Description|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |(INITIAL)|Der ursprüngliche Status, bevor ein Paket für die aktuelle CDC-Gruppe ausgeführt wurde. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.|  
 |ILSTART (Initial Load Started)|Der Status beim Start des anfänglich geladenen Pakets, nachdem der CDC-Steuerungstask durch den `MarkInitialLoadStart`-Vorgang aufgerufen wurde.|  
@@ -84,7 +84,7 @@ ms.locfileid: "62827565"
   
  Wenn Sie den CDC-Steuerungstask nicht mit der Option Automatic State Persistence verwenden, müssen Sie den Variablenwert aus dem persistentem Speicher laden, in dem der Wert bei der letzten Ausführung des Pakets gespeichert wurde. In diesen persistenten Speicher wird der Wert auch zurückgeschrieben, nachdem die Verarbeitung des aktuellen Verarbeitungsbereichs abgeschlossen wurde.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CDC Control Task](../control-flow/cdc-control-task.md)   
  [CDC Control Task Editor](../cdc-control-task-editor.md)  
   

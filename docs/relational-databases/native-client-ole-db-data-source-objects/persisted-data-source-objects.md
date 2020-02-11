@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f1c553835cc0380082821dd49f53f69e767baacb
-ms.sourcegitcommit: 856e42f7d5125d094fa84390bc43048808276b57
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73771471"
 ---
 # <a name="persisted-data-source-objects"></a>Persistente Datenquellenobjekte
@@ -29,7 +29,7 @@ ms.locfileid: "73771471"
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt persistente Datenquellen Objekte mit der **IPersistFile** -Schnittstelle.  
   
 ## <a name="examples"></a>Beispiele  
- **A. persistente Initialisierung der Datenquelle:**  
+ **A. Persistentes Speichern der Datenquelleninitialisierung:**  
   
  Dieses Beispiel zeigt eine Funktion, die Eigenschaften zur Datenquelleninitialisierung, in denen ein Server, eine Datenbank und der Windows-Authentifizierungsmodus für die Verbindung definiert sind, persistent speichert. Der Server- und der Datenbankname werden in den Funktionsparametern *pLocation* und *pDatasource* empfangen.  
   
@@ -140,7 +140,7 @@ HRESULT SetAndSaveInitProps
     }  
 ```  
   
- **B. verwenden Sie die persistente Datenquellen Initialisierung:**  
+ **B. Verwenden der persistenten Datenquelleninitialisierung:**  
   
  Dieses Beispiel verwendet ein persistentes Datenquellenobjekt mit zusätzlichen Initialisierungseigenschaften für einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen und ein Kennwort.  
   
@@ -230,7 +230,7 @@ HRESULT InitFromPersistedDS
   
  Die **IPersistFile::Save**-Methode kann vor oder nach dem Aufruf von **IDBInitialize::Initialize** aufgerufen werden. Durch Aufruf der Methode nach einer erfolgreichen Rückgabe von **IDBInitialize::Initialize** wird sichergestellt, dass eine gültige Datenquellenspezifikation persistent gespeichert wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [OLE DB für Daten &#40;Quellen Objekte&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen Objekte &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

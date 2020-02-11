@@ -1,5 +1,5 @@
 ---
-title: Web-Assistent gespeicherte Prozeduren wurden entfernt | Microsoft-Dokumentation
+title: Die gespeicherten Prozeduren des Web-Assistenten wurden entfernt | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8bca81e9e02cf7f2bfed14b05a5842ca52a6d44d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091042"
 ---
 # <a name="web-assistant-stored-procedures-have-been-removed"></a>Gespeicherte Prozeduren des Web-Assistenten wurden entfernt
@@ -23,8 +23,8 @@ ms.locfileid: "66091042"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
- Gespeicherte Prozeduren des Web-Assistenten **Sp_makewebtask**, **Sp_dropwebtask**, **Sp_runwebtask**, und **Sp_enumcodepages** wurden entfernt.  
+## <a name="description"></a>BESCHREIBUNG  
+ Die gespeicherten Prozeduren des Web-Assistenten **sp_makewebtask**, **sp_dropwebtask**, **sp_runwebtask**und **sp_enumcodepages** wurden entfernt.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Stattdessen wird die Verwendung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] empfohlen.  

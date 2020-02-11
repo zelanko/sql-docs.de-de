@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68211713"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)
@@ -38,7 +38,7 @@ ms.locfileid: "68211713"
   
      [Erstellen einer Skalarfunktion](#Scalar)  
   
-     [Erstellen Sie eine Tabellenwert-Funktion](#TVF)  
+     [Erstellen einer Tabellenwertfunktion](#TVF)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68211713"
   
 -   Von benutzerdefinierten Funktionen können nicht mehrere Resultsets zurückgegeben werden. Falls mehrere Resultsets zurückgegeben werden müssen, verwenden Sie eine gespeicherte Prozedur.  
   
--   Die Fehlerbehandlung ist in einer benutzerdefinierten Funktion eingeschränkt. Versuchen Sie unterstützt eine benutzerdefinierte Funktion nicht... ABZUFANGEN, @ERROR oder RAISERROR.  
+-   Die Fehlerbehandlung ist in einer benutzerdefinierten Funktion eingeschränkt. Eine UDF unterstützt nicht Try... Catch @ERROR oder RAISERROR.  
   
 -   Von benutzerdefinierten Funktionen kann zwar keine gespeicherte Prozedur, aber eine erweiterte gespeicherte Prozedur aufgerufen werden.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211713"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Funktion erstellt wird. Wenn die Funktion einen benutzerdefinierten Typ angibt, wird die EXECUTE-Berechtigung für den Typ benötigt.  
   
-##  <a name="Scalar"></a> Skalarfunktionen  
+##  <a name="Scalar"></a>Skalarfunktionen  
  Im folgenden Beispiel wird eine Skalarfunktion mit mehreren Anweisungen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabewert ( `ProductID`) an und gibt einen einzelnen Datenwert zurück, der die aggregierte Menge des Lagerbestands für das angegebene Produkt darstellt.  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a> Tabellenwertfunktionen  
+##  <a name="TVF"></a>Tabellenwert Funktionen  
  Im folgenden Beispiel wird eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabeparameter (eine Kunden-ID (Geschäfts-ID)) an und gibt die Spalten `ProductID`, `Name`sowie das Aggregat der bisherigen Verkaufseinnahmen dieses Jahres als `YTD Total` für jedes Produkt zurück, das an das Geschäft verkauft wurde.  
   
 ```  
@@ -192,7 +192,7 @@ FROM dbo.ufn_FindReports(1);
   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte Funktionen](user-defined-functions.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)  
   

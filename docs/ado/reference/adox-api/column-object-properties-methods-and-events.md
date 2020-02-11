@@ -1,5 +1,5 @@
 ---
-title: Spalte Objekt – Eigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
+title: Spalten Objekteigenschaften, Methoden und Ereignisse | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,15 +13,15 @@ ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67966896"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Column-Objekt – Eigenschaften, Methoden und Ereignisse
 ## <a name="propertiescollections"></a>Eigenschaften/Sammlungen  
- [Attributes-Eigenschaft](../../../ado/reference/adox-api/attributes-property-adox.md)  
+ [Attribute (Eigenschaft)](../../../ado/reference/adox-api/attributes-property-adox.md)  
   
  [DefinedSize-Eigenschaft](../../../ado/reference/adox-api/definedsize-property-adox.md)  
   
@@ -29,23 +29,23 @@ ms.locfileid: "67966896"
   
  [NumericScale-Eigenschaft](../../../ado/reference/adox-api/numericscale-property-adox.md)  
   
- [ParentCatalog-Eigenschaft](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [Para Catalog-Eigenschaft](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
   
  [Precision-Eigenschaft](../../../ado/reference/adox-api/precision-property-adox.md)  
   
- [Properties-Auflistung](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ ['Properties'-Sammlung](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
- [RelatedColumn-Eigenschaft](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)  
+ [RelatedColumn (Eigenschaft)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)  
   
- [SortOrder-Eigenschaft](../../../ado/reference/adox-api/sortorder-property-adox.md)  
+ [Sortor der-Eigenschaft](../../../ado/reference/adox-api/sortorder-property-adox.md)  
   
  [Type-Eigenschaft (Spalte)](../../../ado/reference/adox-api/type-property-column-adox.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine  
+ Keine.  
   
-## <a name="events"></a>Ereignisse  
- Keine  
+## <a name="events"></a>Events  
+ Keine.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

@@ -14,10 +14,10 @@ ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 75c5d2f0f04cf0692f4a6c6ca3145210fee014b3
-ms.sourcegitcommit: aaa42f26c68abc2de10eb58444fe6b490c174eab
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/21/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74308061"
 ---
 # <a name="filestream-support"></a>FILESTREAM-Unterstützung
@@ -35,7 +35,7 @@ ms.locfileid: "74308061"
   
 -   [FILESTREAM-Unterstützung &#40;ODBC-&#41;](../../../relational-databases/native-client/odbc/filestream-support-odbc.md)  
   
--   [Zugreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
+-   [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   
 ## <a name="querying-for-filestream-columns"></a>Abfragen von FILESTREAM-Spalten  
  Schemarowsets in OLE DB geben nicht an, ob eine Spalte eine FILESTREAM-Spalte ist. ITableDefinition in OLE DB kann nicht verwendet werden, um eine FILESTREAM-Spalte zu erstellen.  
@@ -65,6 +65,6 @@ SELECT is_filestream FROM sys.columns WHERE name = 'varbinaryCol3' AND object_id
  Für Clients, die SQLOLEDB oder andere Anbieter verwenden, die vor der [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client freigegeben wurden, wird " **varbinary (max)** " Image zugeordnet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client Features](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
+ [SQL Server Native Client-Funktionen](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  
   
   

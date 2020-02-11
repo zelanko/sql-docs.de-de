@@ -11,21 +11,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62743216"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Ändern der Zielwiederherstellungszeit einer Datenbank (SQL Server)
-  In diesem Thema wird beschrieben, wie die Zielwiederherstellungszeit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] geändert wird. Standardmäßig ist die Zielwiederherstellungszeit 0, und die Datenbank verwendet *automatische Prüfpunkte* (die durch die Serveroption **Wiederherstellungsintervall** gesteuert werden). Das Festlegen der Zielwiederherstellungszeit auf größer 0 führt dazu, dass die Datenbank die *indirekten Prüfpunkte* verwendet und eine Obergrenze der Wiederherstellungszeit für diese Datenbank festlegt.  
+  In diesem Thema wird beschrieben, wie die Zielwiederherstellungszeit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]geändert wird. Standardmäßig ist die Zielwiederherstellungszeit 0, und die Datenbank verwendet *automatische Prüfpunkte* (die durch die Serveroption **Wiederherstellungsintervall** gesteuert werden). Das Festlegen der Zielwiederherstellungszeit auf größer 0 führt dazu, dass die Datenbank die *indirekten Prüfpunkte* verwendet und eine Obergrenze der Wiederherstellungszeit für diese Datenbank festlegt.  
   
 > [!NOTE]  
 >  Die Obergrenze, die für eine bestimmte Datenbank durch die Wiederherstellungszeiteinstellung für das Ziel angegeben wird, könnte überschritten werden, wenn eine Transaktion mit langer Laufzeit übermäßig lange UNDO-Zeiten verursacht.  
   
--   **Vorbereitungen:**  [Beschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   Vorbereitungen **:**[Einschränkungen](#Restrictions), [Sicherheit](#Security)    
   
--   **So ändern Sie die Zielwiederherstellungszeit mithilfe von:**  [SQL Server Management Studio](#SSMSProcedure) oder [Transact-SQL](#TsqlProcedure)  
+-   So **Ändern Sie die Ziel Wiederherstellungszeit mit:**[SQL Server Management Studio](#SSMSProcedure) oder [Transact-SQL](#TsqlProcedure)    
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -39,8 +39,8 @@ ms.locfileid: "62743216"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- **So ändern Sie die Zielwiederherstellungszeit**  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ **So ändern Sie die Ziel Wiederherstellungszeit**  
   
 1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie diese Instanz.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "62743216"
 4.  Geben Sie im Bereich **Wiederherstellung** im Feld **Zielwiederherstellungszeit (Sekunden)** die Anzahl von Sekunden als gewünschte Obergrenze der Wiederherstellungszeit für diese Datenbank an.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- **So ändern Sie die Zielwiederherstellungszeit**  
+ **So ändern Sie die Ziel Wiederherstellungszeit**  
   
 1.  Stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her, auf der sich die Datenbank befindet.  
   
 2.  Verwenden Sie die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-set-options)-Anweisung wie folgt:  
   
-     TARGET_RECOVERY_TIME **=** _Zielwiederherstellungszeit_ {SECONDS | MINUTES}  
+     TARGET_RECOVERY_TIME **=** _target_recovery_time_ {Sekunden | Minuten  
   
      *target_recovery_time*  
      Gibt bei einem Wert von größer 0 (Standardwert) die Obergrenze der Wiederherstellungszeit für die angegebene Datenbank im Fall eines Absturzes an.  
@@ -74,7 +74,7 @@ ms.locfileid: "62743216"
     ALTER DATABASE AdventureWorks2012 SET TARGET_RECOVERY_TIME = 60 SECONDS;  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankprüfpunkte &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)  
   

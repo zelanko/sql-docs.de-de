@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74400362"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Senden von telemetriefeedback an Microsoft for Analytics Platform System
@@ -42,7 +42,7 @@ Um den maximalen Datenschutz zu gewährleisten, wird APS ohne Aktivierung der Te
     > [!NOTE]  
     > Zum Importieren von müssen Sie zwei Zeiträume im-Befehl verwenden.  
   
-    **Beispiel**  
+    **Beispiel:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +92,7 @@ Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Info
     > [!NOTE]  
     > Zum Importieren von müssen Sie zwei Zeiträume im-Befehl verwenden.  
   
-    **Beispiel**  
+    **Beispiel:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +100,7 @@ Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Info
   
 4.  Rufen Sie `Disable-RemoteMonitoring` den Befehl ohne Parameter auf. Mit diesem Befehl wird das Senden von Feedback beendet. (Dies wirkt sich nicht auf die lokale Überwachung aus.) Der Befehl deaktiviert jedoch nicht die DNS-Weiterleitung und/oder deaktiviert jegliche Internet Konnektivität. Dies muss manuell nach der erfolgreichen Deaktivierung des Feedbacks erfolgen.  
   
-    **Beispiel**  
+    **Beispiel:**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  
@@ -111,7 +111,7 @@ Wenn Sie Fehler oder Informationen sehen, die Sie dazu führen, dass der Befehl 
 Es gibt keinen Schaden bei der mehrfach `Disable-RemoteMonitoring` Ausführung des Befehls.  
   
 ## <a name="next-steps"></a>Nächste Schritte
-Weitere Informationen finden Sie unter:
+Weitere Informationen finden Sie unter
 - [Überwachen Sie die Appliance mithilfe der Verwaltungskonsole &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [Überwachen der Appliance mithilfe von System Sichten &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  
 - [Überwachen Sie die Appliance mithilfe System Center Operations Manager &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-center-operations-manager.md)  

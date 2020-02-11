@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68892827"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Erstellt in einer Datenbank eine neue Miningstruktur und definiert optional Trainings- und Testpartitionen. Nachdem Sie die Mining Struktur erstellt haben, können Sie die [ALTER MINING STRUCTURE &#40;&#41; DMX](../dmx/alter-mining-structure-dmx.md) -Anweisung verwenden, um der Mining Strukturmodelle hinzuzufügen.  
+  Erstellt in einer Datenbank eine neue Miningstruktur und definiert optional Trainings- und Testpartitionen. Nachdem Sie die Mining Struktur erstellt haben, können Sie die [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) -Anweisung verwenden, um der Mining Strukturmodelle hinzuzufügen.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,10 +40,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *Spalten Definitionsliste*  
  Eine durch Trennzeichen getrennte Liste mit Spaltendefinitionen.  
   
- *holdout-maxpercent*  
+ *zurück gehaltene Daten (maxprozent)*  
  Eine ganze Zahl zwischen 1 und 100, die den Prozentsatz der für Tests vorgesehenen Daten angibt.  
   
- *holdout-maxcases*  
+ *zurück gehaltene Daten (MaxCases)*  
  Eine ganze Zahl, die die maximale Anzahl von Fällen angibt, die für Tests verwendet werden sollen.  
   
  Wenn der für die maximale Anzahl von Fällen angegebene Wert größer ist als die Anzahl der Eingabefälle, werden alle Eingabefälle für Tests verwendet, und eine Warnung wird ausgegeben.  
@@ -59,9 +59,9 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Sie sollten einen Ausgangswert angeben, wenn Sie sicherstellen müssen, dass eine Partition reproduziert werden kann.  
   
- Standard: WIEDERHOLBAR (0)  
+ Standardwert: REPEATABLE(0)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Sie definieren eine Miningstruktur, indem Sie eine Liste mit Spalten und optional hierarchische Beziehungen zwischen den Spalten angeben und dann wahlweise die Miningstruktur in Trainings- und Testdatasets partitionieren.  
   
  Das optionale SESSION-Schlüsselwort gibt an, dass die Struktur eine temporäre Struktur ist, die Sie nur für die Dauer der aktuellen Sitzung verwenden können. Wenn die Sitzung beendet wird, werden die Struktur und alle Modelle auf Grundlage der Struktur gelöscht. Um temporäre Mining Strukturen und-Modelle zu erstellen, müssen Sie zuerst die Daten Bank Eigenschaft AllowSessionMiningModels festlegen. Weitere Informationen finden Sie unter [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
@@ -95,20 +95,20 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Strukturspalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Datentypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Inhaltstypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Inhaltstypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Spaltenverteilungen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Spalten Verteilungen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Modellierungsflags &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
 ### <a name="column-relationships"></a>Spaltenbeziehungen  
- Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Spalten Beziehung >-Klausel.  
+ Sie können jeder Spaltendefinitionsanweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Spalten Beziehung>-Klausel.  
   
- **VERKNÜPFT MIT**  
+ **verknüpft mit**  
  Gibt eine Wertehierarchie an. Das Ziel einer RELATED TO-Spalte kann eine Schlüsselspalte einer geschachtelten Tabelle, eine Spalte mit diskreten Werten in der Fallzeile oder eine andere Spalte mit einer RELATED TO-Klausel sein, wodurch eine tiefere Hierarchie gekennzeichnet ist.  
   
 ## <a name="holdout-parameters"></a>Zurückhaltungsparameter  
@@ -136,7 +136,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird veranschaulicht, wie mithilfe von DMX eine Miningstruktur mit Zurückhaltung erstellt wird.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>Beispiel 1: Hinzufügen einer Struktur ohne Trainings Satz  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>Beispiel 1: Hinzufügen einer Struktur ohne Trainingssatz  
  Im folgenden Beispiel wird eine neue Miningstruktur namens `New Mailing` erstellt, ohne dass zugeordnete Miningmodelle erstellt werden und Zurückhaltung verwendet wird. Weitere Informationen zum Hinzufügen eines Mining Modells zur Struktur finden Sie unter [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
@@ -149,7 +149,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Beispiel 2: Angeben von Prozentsatz und Ausgangswert für zurück gehaltene Daten  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Beispiel 2: Angeben des Zurückhaltungsprozentsatzes und des Ausgangswerts  
  Die folgende Klausel kann nach der Spaltendefinitionsliste hinzugefügt werden, um ein Dataset zu definieren, das zum Testen aller der Miningstruktur zugeordneten Miningmodelle verwendet werden kann. Mithilfe der folgenden Klausel wird ein Testsatz erstellt, der 25 Prozent der gesamten Eingabefälle umfasst, ohne die maximale Anzahl der Fälle einzuschränken. Der Wert 5.000 wird als Ausgangswert zum Erstellen der Partition verwendet. Wenn Sie einen Ausgangswert angeben, werden für den Testsatz bei jeder Verarbeitung der Miningstruktur die gleichen Fälle ausgewählt, so lange die zugrunde liegenden Daten nicht geändert werden.  
   
 ```  
@@ -163,7 +163,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Beispiel 3: Angeben von zurückgehaltenen Prozentsätzen und maximalen Fällen  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Beispiel 3: Angeben des Zurückhaltungsprozentsatzes und der maximalen Anzahl der Fälle  
  Mit der folgenden Klausel wird ein Testsatz erstellt, der entweder 25 Prozent der gesamten Eingabefälle oder 2.000 Fälle umfasst, je nachdem, welche Zahl kleiner ist. Da 0 als Ausgangswert angegeben ist, wird anhand des Namens der Miningstruktur der Anfangswert erstellt, der für die Stichprobe von Eingabefällen verwendet wird.  
   
 ```  
@@ -177,9 +177,9 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
- [Data Mining- &#40;Erweiterungen DMX&#41; -Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern einer Ablaufverfolgungsvorlage (SQL Server Profiler) | Microsoft-Dokumentation
+title: Ändern einer Ablauf Verfolgungs Vorlage (SQL Server Profiler) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c13b9fed062b73de7ab35ef5048ae4b68e5618
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089996"
 ---
 # <a name="modify-a-trace-template-sql-server-profiler"></a>Ändern einer Ablaufverfolgungsvorlage (SQL Server Profiler)
@@ -30,7 +30,7 @@ ms.locfileid: "66089996"
   
 2.  Im Dialogfeld **Eigenschaften der Ablaufverfolgungsvorlage** können Sie auf der Registerkarte **Allgemein** den Servertyp und den Vorlagennamen ändern oder eine Standardvorlage für den Servertyp auswählen.  
   
-3.  Zeigen Sie im Menü **Ereignisauswahl**können Sie mit dem Rastersteuerelement Ereignisse und Datenspalten in der Ablaufverfolgungsdatei wie folgt hinzufügen oder entfernen.  
+3.  Verwenden Sie auf der Registerkarte **Ereignis Auswahl**das Raster Steuerelement, um Ereignisse und Datenspalten aus der Ablauf Verfolgungs Datei wie folgt hinzuzufügen oder zu entfernen.  
   
     -   Um ein Ereignis hinzuzufügen, erweitern Sie die entsprechende Ereigniskategorie in der **Ereignisse** -Spalte und wählen dann den Ereignisnamen aus.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "66089996"
   
 4.  Klicken Sie auf **Speichern**, oder klicken Sie auf **Speichern As**, um die Ablaufverfolgungsvorlage unter einem anderen Namen zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Angeben von Ereignissen und Datenspalten für eine Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Angeben von Ereignissen und Datenspalten für eine Ablauf Verfolgungs Datei &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Ableiten einer Vorlage von einer zurzeit ausgeführten Ablaufverfolgung &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [Ableiten einer Vorlage von einer Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/derive-a-template-from-a-trace-file-or-trace-table-sql-server-profiler.md)   
  [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

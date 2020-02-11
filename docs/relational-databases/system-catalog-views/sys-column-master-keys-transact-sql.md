@@ -26,10 +26,10 @@ author: jaszymas
 ms.author: jaszymas
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b7c219b2eb56fc299857a5a189ddd9db041f2f47
-ms.sourcegitcommit: 312b961cfe3a540d8f304962909cd93d0a9c330b
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/05/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "73594521"
 ---
 # <a name="syscolumn_master_keys-transact-sql"></a>sys.column_master_keys (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73594521"
 
   Gibt eine Zeile für jeden Datenbank-Hauptschlüssel zurück, der mit der [Create Master Key](../../t-sql/statements/create-column-master-key-transact-sql.md) -Anweisung hinzugefügt wurde. Jede Zeile stellt einen einzelnen Spalten Hauptschlüssel (Column Master Key, CMK) dar.  
     
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des CMK.|  
 |**column_master_key_id**|**int**|ID des Spalten Hauptschlüssels.|  
@@ -55,8 +55,8 @@ ms.locfileid: "73594521"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen eines Spalten Hauptschlüssels &#40;Transact-SQL-&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)  
  [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)   

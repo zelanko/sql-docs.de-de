@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62637760"
 ---
 # <a name="create-xml-indexes"></a>Erstellen von XML-Indizes
@@ -44,7 +44,7 @@ ms.locfileid: "62637760"
   
 -   Für die Namen primärer XML-Indizes gelten die gleichen Einschränkungen wie für Sichtnamen.  
   
- Sie können für ein XML-Index erstellen eine `xml` Geben Sie die Spalte in einer Sicht, auf eine **Tabelle** wertvariable mit `xml` Spalten vom Typ oder `xml` Variablen des Typs.  
+ Sie können keinen XML-Index für eine `xml` Spalte vom Typ in einer Sicht, für eine **Tabellen** Wert Variable `xml` mit Typspalten oder `xml` Typvariablen erstellen.  
   
 -   Wenn Sie eine Spalte vom Typ `xml` mithilfe der Option ALTER TABLE ALTER COLUMN aus nicht typisiertem in typisiertes XML oder umgekehrt ändern möchten, sollte kein XML-Index für die Spalte vorhanden sein. Wenn ein XML-Index vorhanden ist, muss dieser gelöscht werden, bevor der Änderungsversuch des Spaltentyps unternommen wird.  
   
@@ -199,7 +199,7 @@ DROP TABLE T;
 Go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Indizes &#40;SQL Server&#41;](xml-indexes-sql-server.md)   
  [XML-Daten &#40;SQL Server&#41;](xml-data-sql-server.md)  
   

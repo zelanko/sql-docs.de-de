@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: d587a141351e59782c31229bccaa0bff2e869580
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74401133"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Hardware Konfigurationen-Analytics Platform System
@@ -40,7 +40,7 @@ Die Mindestkonfiguration für eine HPE-Appliance umfasst zwei Computeknoten. Sie
 ![HPE First Rack-Konfigurationen für HPE](media/first-rack-configurations-hpe.png "HPE-erste Rack-Konfigurationen")  
   
 ## <a name="section2"></a>Konfigurationen mit mehreren Racks  
-Um PDW Kapazität hinzuzufügen, können Sie Daten Skalierungs Einheiten zusammen mit zusätzlichen Rack #a0 Netzwerkkomponenten hinzufügen, um die richtige Stromversorgung, Netzwerk-und Rack-Infrastruktur bereitzustellen. Für jedes zusätzliche Rack #a0 Netzwerk ist ein passiver Host erforderlich.  
+Um PDW Kapazität hinzuzufügen, können Sie Daten Skalierungs Einheiten zusammen mit zusätzlichen Rack & Netzwerkkomponenten hinzufügen, um die richtige Stromversorgung, Netzwerk-und Rack-Infrastruktur bereitzustellen. Für jedes zusätzliche Rack & Netzwerk ist ein passiver Host erforderlich.  
   
 Jeder Hardwarehersteller gibt die Anzahl der Daten Skalierungs Einheiten an, die Sie mit der Kapazität Ihres Geräts hinzufügen können. Es wird empfohlen, genügend Daten Skalierungs Einheiten hinzuzufügen, um mindestens eine Erhöhung der Leistung von 20 Prozent zu sehen. Beispielsweise kann das Hinzufügen einer Daten Skalierungs Einheit zu einem Gerät, das bereits 20 datenskalierungseinheiten aufweist, zu einem vernachlässigbaren Leistungsgewinn führen. Der Nettogewinn wäre nicht die Kosten und der Aufwand.  
   

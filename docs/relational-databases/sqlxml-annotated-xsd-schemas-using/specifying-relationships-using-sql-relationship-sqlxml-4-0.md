@@ -30,10 +30,10 @@ ms.reviewer: ''
 ms.custom: seo-lt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 02872a037e60fa3af58a70d3599b03c61d0cfb5e
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75257337"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Angeben von Beziehungen mit 'sql:relationship' (SQLXML 4.0)
@@ -52,10 +52,10 @@ ms.locfileid: "75257337"
   
  Um die Tabellennamen und die erforderlichen Joininformationen anzugeben, werden die folgenden Attribute in der **SQL: Relationship** -Anmerkung angegeben. Diese Attribute sind nur mit dem ** \<SQL: Relationship>** -Element gültig:  
   
- **Benennen**  
+ **Name**  
  Gibt den eindeutigen Namen der Beziehung an.  
   
- **Übergeordneten**  
+ **Parent**  
  Gibt die übergeordnete Beziehung (Tabelle) an. Dieses Attribut ist optional. Wird es nicht angegeben, wird der Name der übergeordneten Tabelle aus den Informationen in der untergeordneten Hierarchie des Dokuments abgerufen. Wenn das Schema zwei über-/unterordnungshierarchien angibt, die dieselbe ** \<SQL: Relationship->** , aber unterschiedliche übergeordnete Elemente verwenden, geben Sie das übergeordnete Attribut in ** \<SQL: Relationship>** nicht an. Diese Informationen werden aus der Hierarchie im Schema abgerufen.  
   
  **parent-key**  
@@ -186,7 +186,7 @@ ms.locfileid: "75257337"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>B: Angeben einer Beziehungskette  
+### <a name="b-specifying-a-relationship-chain"></a>B. Angeben einer Beziehungskette  
  Angenommen, Sie verwenden das folgende XML-Dokument zur Abfrage von Daten aus der AdventureWorks-Datenbank:  
   
 ```  
@@ -318,7 +318,7 @@ ms.locfileid: "75257337"
 </ROOT>  
 ```  
   
-### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>c. Angeben der "relationship"-Anmerkung für ein Attribut  
+### <a name="c-specifying-the-relationship-annotation-on-an-attribute"></a>C. Angeben der "relationship"-Anmerkung für ein Attribut  
  Das Schema in diesem Beispiel enthält ein \<Customer>-Element mit \<einem CustomerID-> untergeordneten-Element und einem OrderIDList-Attribut des IDREFS-Typs. Das \<Customer>-Element wird der Sales. Customer-Tabelle in der AdventureWorks-Datenbank zugeordnet. Standardmäßig gilt der Gültigkeitsbereich dieser Zuordnung für alle untergeordneten Elemente oder Attribute, es sei denn, **SQL: Relationship** ist für das untergeordnete Element oder Attribut angegeben. in diesem Fall muss die entsprechende Primärschlüssel-/Fremdschlüssel Beziehung mit \<der Beziehung> Element definiert werden. Und das untergeordnete Element oder Attribut, das die andere Tabelle mithilfe der **Beziehungs** Anmerkung angibt, muss auch die **Beziehungs** Anmerkung angeben.  
   
 ```  
@@ -383,7 +383,7 @@ ms.locfileid: "75257337"
 </ROOT>  
 ```  
   
-### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Angeben von "sql:relationship" für mehrere Elemente  
+### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D: Angeben von "sql:relationship" für mehrere Elemente  
  In diesem Beispiel enthält das mit Anmerkungen versehene XSD-Schema ** \< **die>Elemente Customer>, ** \<Order>** und ** \<Order Detail** .  
   
  Das ** \<Order>** -Element ist ein untergeordnetes Element des ** \<Customer>** -Elements. ** \<** **SQL: Relationship>ist für die Order>unter \<** geordnete Element angegeben; Daher werden Aufträge, die zu einem Kunden gehören, als untergeordnete Elemente der ** \<Customer->** angezeigt.  

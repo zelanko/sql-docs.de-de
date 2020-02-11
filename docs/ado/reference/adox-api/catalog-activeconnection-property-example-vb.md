@@ -1,5 +1,5 @@
 ---
-title: Katalog ActiveConnection-Eigenschaft – Beispiel (VB) | Microsoft-Dokumentation
+title: Katalog ActiveConnection-Eigenschaft (Beispiel) (VB) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67967117"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Catalog ActiveConnection-Eigenschaft – Beispiel (VB)
-Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) Eigenschaft, um eine gültige Verbindung öffnen "geöffnet" des Katalogs. Aus einem Katalog öffnen können Sie die in diesem Katalog enthaltenen Schemaobjekte zugreifen.  
+Beim Festlegen der [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) -Eigenschaft auf eine gültige, geöffnete Verbindung wird der Katalog geöffnet. Von einem geöffneten Katalog aus können Sie auf die in diesem Katalog enthaltenen Schema Objekte zugreifen.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -59,15 +59,15 @@ End Sub
 ' EndOpenConnectionVB  
 ```  
   
- Festlegen der **ActiveConnection** Eigenschaft, um eine gültige Verbindungszeichenfolge "öffnet auch" Katalog.  
+ Wenn die **ActiveConnection** -Eigenschaft auf eine gültige Verbindungs Zeichenfolge festgelegt wird, wird auch der Katalog geöffnet.  
   
 ```  
 Attribute VB_Name = "Catalog"  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ActiveConnection-Eigenschaft (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Katalogobjekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
+ [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Type-Eigenschaft (Tabelle) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

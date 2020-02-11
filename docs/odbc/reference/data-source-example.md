@@ -1,5 +1,5 @@
 ---
-title: Datenquellen-Beispiel | Microsoft-Dokumentation
+title: Datenquellen Beispiel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,16 +13,16 @@ ms.assetid: cbf15f32-0550-4c74-8088-8f7ac3855469
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec9eacef6f0bd63eb0aaeac36dc97938297d1f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68135640"
 ---
 # <a name="data-source-example"></a>Beispiel für Datenquellen
-Auf Computern unter Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional oder Microsoft Windows® 95/98, Computerdaten ist Quellinformationen in der Registrierung gespeichert. Je nach der Registrierung Schlüssel die Informationen in einem gespeichert ist, wird die Datenquelle als bezeichnet ein *Benutzerdatenquelle* oder *Systemdatenquelle*. Benutzer-Datenquellen werden unter dem Schlüssel HKEY_CURRENT_USER gespeichert und sind nur für den aktuellen Benutzer verfügbar. System-Datenquellen werden unter dem Schlüssel HKEY_LOCAL_MACHINE gespeichert und können von mehr als ein Benutzer auf einem Computer verwendet werden. Sie können auch von systemweiten Services verwendet die klicken Sie dann die Datenquelle zugreifen können, auch wenn kein Benutzer mit dem Computer angemeldet ist. Weitere Informationen zu Benutzer- und Systemdatenquellen finden Sie unter [SQLManageDataSources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
+Auf Computern, auf denen Microsoft® Windows NT® Server/Windows 2000 Server, Microsoft Windows NT Workstation/Windows 2000 Professional oder Microsoft Windows® 95/98 ausgeführt wird, werden Informationen zur Computer Datenquelle in der Registrierung gespeichert. Abhängig von dem Registrierungsschlüssel, unter dem die Informationen gespeichert werden, wird die Datenquelle als *Benutzerdaten Quelle* oder als *Systemdaten Quelle*bezeichnet. Benutzerdaten Quellen werden unter dem HKEY_CURRENT_USER Schlüssel gespeichert und sind nur für den aktuellen Benutzer verfügbar. System Datenquellen werden unter dem HKEY_LOCAL_MACHINE Schlüssel gespeichert und können von mehreren Benutzern auf einem Computer verwendet werden. Sie können auch von systemweiten Diensten verwendet werden, die dann Zugriff auf die Datenquelle erhalten können, auch wenn kein Benutzer am Computer angemeldet ist. Weitere Informationen zu Benutzer-und Systemdaten Quellen finden Sie unter [sqlmanagedatasources](../../odbc/reference/syntax/sqlmanagedatasources.md).  
   
- Nehmen wir an, dass ein Benutzer verfügt über drei Benutzerdatenquellen: Mitarbeiter und Inventar, die eine Oracle-DBMS zu verwenden; und Gehaltsabrechnungen, das eine Microsoft SQL Server-DBMS verwendet. Die Registrierungswerte für Datenquellen können Folgendes sein:  
+ Angenommen, ein Benutzer verfügt über drei Benutzerdaten Quellen: Personal und Inventory, die ein Oracle-DBMS verwenden. und Gehaltsabrechnung, bei dem ein Microsoft SQL Server DBMS verwendet wird. Die Registrierungs Werte für Datenquellen können wie folgt lauten:  
   
 ```  
 HKEY_CURRENT_USER  
@@ -35,7 +35,7 @@ SOFTWARE
                     Payroll : REG_SZ : SQL Server  
 ```  
   
- und die Registrierungswerte für die Datenquelle für Gehaltsabrechnungen möglicherweise:  
+ die Registrierungs Werte für die Datenquelle für die Abrechnung können wie folgt lauten:  
   
 ```  
 HKEY_CURRENT_USER  

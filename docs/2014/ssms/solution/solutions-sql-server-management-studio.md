@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1ef3c378b963168e3c4724033e390803812c5a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63064898"
 ---
 # <a name="solutions-sql-server-management-studio"></a>Projektmappen (SQL Server Management Studio)
@@ -52,7 +52,7 @@ ms.locfileid: "63064898"
 |Beschreibt, wie Elemente zwischen Projekten in einer Projektmappe verschoben werden.|[Verschieben von Elementen in einer Projektmappe](move-items-in-a-solution.md)|  
 |Beschreibt, wie eine Projektmappe oder die Elemente in der Projektmappe umbenannt werden.|[Umbenennen von Projektmappen und Projektelementen](rename-solutions-and-project-items.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Projektmappen-Explorer](solution-explorer.md)   
  [Projekte &#40;SQL Server Management Studio&#41;](projects-sql-server-management-studio.md)   
  [Quellcodeverwaltung des Projektmappen-Explorers](../../database-engine/solution-explorer-source-control.md)  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e9b8fb98082fb3509acf50e6546673e86962893c
-ms.sourcegitcommit: 381595e990f2294dbf324ef31071e2dd2318b8dd
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "74200416"
 ---
 # <a name="powerpivot-connection-type-ssrs"></a>PowerPivot-Verbindungstyp (SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "74200416"
 ## <a name="parameters"></a>Parameter  
  Aktivieren Sie im Bereich "Filter" die Option **Parameter** für einen Filter, um automatisch einen Berichtsparameter mit verfügbaren Werten zu erstellen, die der Filterauswahl entsprechen.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Wenn Sie den Berichts-Generator aus der PowerPivot-Arbeitsmappe in einem PowerPivot-Katalog öffnen, werden PivotTables, PivotCharts, Slicer und andere Layout- und analytische Funktionen aus der PowerPivot-Arbeitsmappe im Bericht nicht neu erstellt. Stattdessen enthält der leere Bericht eine vorkonfigurierte Datenquelle, die auf die Daten in der PowerPivot-Arbeitsmappe verweist. Berichte auf Grundlage einer PowerPivot-Arbeitsmappe zu entwerfen kann abhängig von der Anzahl von Slicern, Filtern und Tabellen oder Diagrammen, die Sie wieder im Bericht erstellen möchten, arbeitsintensiv und zeitaufwändig sein. Ein besserer Ansatz ist, die Präsentation der Daten zu planen, die Sie vom PowerPivot-Entwurf unabhängig in einem Bericht möchten.  
   
  Die Daten in einer PowerPivot-Arbeitsmappe sind stark komprimiert; aus der PowerPivot-Arbeitsmappe für einen Bericht abgerufene Daten sind nicht komprimiert. Geben Sie im Abfrage-Designer Filter und Parameter an, um die Daten auf die für den Bericht erforderliche Menge zu begrenzen.  
