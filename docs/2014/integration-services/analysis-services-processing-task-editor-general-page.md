@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Editor-Verarbeitungstask (Seite Allgemein) | Microsoft-Dokumentation
+title: Editor für den Analysis Services Verarbeitungs Task (Seite Allgemein) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 183862eadad3661353228bbcde132b6cd8241501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061451"
 ---
 # <a name="analysis-services-processing-task-editor-general-page"></a>Editor für den Analysis Services-Verarbeitungstask (Seite Allgemein)
@@ -26,7 +26,7 @@ ms.locfileid: "66061451"
   
  Informationen, um sich mit diesem Thema vertraut zu machen, finden Sie unter [Analysis Services Processing Task](control-flow/analysis-services-processing-task.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Analysis Services-Verarbeitungstask an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -36,9 +36,9 @@ ms.locfileid: "66061451"
  **Beschreibung**  
  Geben Sie eine Beschreibung des Analysis Services-Verarbeitungstasks ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Editor für den Analysis Services-Verarbeitungstask &#40;Seite „Analysis Services“&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
+ [Analysis Services Verarbeitungs Task-Editor &#40;Analysis Services Seite&#41;](../../2014/integration-services/analysis-services-processing-task-editor-analysis-services-page.md)   
  [DDL ausführen (Analysis Services-Task)](control-flow/analysis-services-execute-ddl-task.md)  
   
   

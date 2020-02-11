@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66061598"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des Datenflusses
-  Sie können die [execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` Datenbanksicht, um den Datenfluss von Paketen zu analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
+  Sie können die Daten Bank Sicht [catalog. execution_data_statistics](../relational-databases/statistics/statistics.md) `SSISDB` verwenden, um den Datenfluss von Paketen zu analysieren. In dieser Sicht wird immer dann eine Zeile angezeigt, wenn eine Datenflusskomponente Daten an eine Downstreamkomponente sendet. Anhand der Informationen können Sie ein tieferes Verständnis der Zeilen erhalten, die an jede Komponente gesendet werden.  
   
 > [!NOTE]  
 >  Der Protokollierungsgrad muss auf **Ausführlich** festgelegt werden, um Informationen mit der catalog.execution_data_statistics-Sicht aufzuzeichnen.  
@@ -36,13 +36,13 @@ order by source_component_name, destination_component_name
   
  Im folgenden Beispiel wird die Anzahl der Zeilen pro Millisekunde berechnet, die von jeder Komponente für eine bestimmte Ausführung gesendet wurden. Die berechneten Werte lauten wie folgt:  
   
--   **total_rows** : Die Summe aller von der Komponente gesendeten Zeilen  
+-   **total_rows** : die Summe aller von der Komponente gesendeten Zeilen.  
   
--   **wall_clock_time_ms:** Die insgesamt verstrichene Ausführungszeit, in Millisekunden, für jede Komponente  
+-   **wall_clock_time_ms** -die insgesamt verstrichene Ausführungszeit (in Millisekunden) für jede Komponente.  
   
--   **num_rows_per_millisecond:** Die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen  
+-   **num_rows_per_millisecond** : die Anzahl der pro Millisekunde von jeder Komponente gesendeten Zeilen.  
   
- Die `HAVING` Klausel wird verwendet, um Fehler aufgrund einer Division durch Null in den Berechnungen verhindert.  
+ Die `HAVING` -Klausel wird verwendet, um einen Fehler aufgrund einer Division durch 0 in den Berechnungen zu vermeiden.  
   
 ```  
 use SSISDB  
@@ -63,7 +63,7 @@ order by source_component_name desc
   
  [Behandlung von Problemen mit Paketausführungstools](troubleshooting/troubleshooting-tools-for-package-execution.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Daten in Datenflüssen](data-flow/data-in-data-flows.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Funktionen, die überwacht | Microsoft-Dokumentation
+title: Zu überwachende Funktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,18 +13,18 @@ ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68069884"
 ---
 # <a name="features-to-watch-for"></a>Zu überwachende Funktionen
-Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Entwickler häufig sehen. In der Tat wird diese Features in der Unterstützung und die Art und Weise der Unterstützung für DBMS variieren; Fehler beim Code dafür ist wahrscheinlich in interoperablen Anwendungen ausführen zu Problemen führen.  
+In diesem Abschnitt wird eine Reihe von Features beschrieben, die Anwendungsentwickler häufig zur Gewährung benötigen. Tatsächlich unterscheiden sich diese Features stark von der Unterstützung und der Unterstützung von DBMSs. ein Fehler bei der Codeausführung führt wahrscheinlich zu Problemen in interoperablen Anwendungen.  
   
- In diesem Abschnitt werden nicht alle Funktionen aufgelistet, die Anwendungsentwickler berücksichtigen müssen. Diese Informationen finden Sie unter den [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md), und [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) eine Beschreibung der Funktion [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), und in den Abschnitten dieses Handbuchs, in denen jede Funktion erläutert.  
+ In diesem Abschnitt werden nicht alle Funktionen aufgelistet, die Anwendungsentwickler in Erwägung gezogen werden müssen. Diese Informationen finden Sie in den Beschreibungen zu den Funktionen [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)und [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md) , [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)und in den Abschnitten dieses Handbuchs, in denen die einzelnen Features erläutert werden.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [Versionsnummer](../../../odbc/reference/develop-app/version-number.md)  
   
@@ -34,7 +34,7 @@ Dieser Abschnitt beschreibt eine Reihe von Funktionen, die Entwickler häufig se
   
 -   [Commit- und Rollbackverhalten](../../../odbc/reference/develop-app/commit-and-rollback-behavior.md)  
   
--   [NOT NULL in „CREATE TABLE“-Anweisungen](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
+-   [NOT NULL in CREATE TABLE-Anweisungen](../../../odbc/reference/develop-app/not-null-in-create-table-statements.md)  
   
 -   [Unterstützte Datentypen](../../../odbc/microsoft/supported-data-types-odbc-driver-for-oracle.md)  
   
