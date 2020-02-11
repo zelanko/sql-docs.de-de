@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f09255372478bdb9956b64283c8b94477598239
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62702046"
 ---
 # <a name="merging-partitions-xmla"></a>Zusammenführen von Partitionen (XMLA)
-  Wenn Partitionen, die dasselbe Aggregationsdesign und die Struktur verfügen, können Sie die Partition zusammenführen, mit der [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) -Befehl in XML for Analysis (XMLA) verwenden. Das Zusammenführen von Partitionen ist ein wichtiger Vorgang, wenn Sie Partitionen verwalten, insbesondere wenn es sich hierbei um Partitionen mit Vergangenheitsdaten handelt, die nach Datum partitioniert sind.  
+  Wenn Partitionen denselben Aggregations Entwurf und dieselbe Struktur aufweisen, können Sie die Partition zusammenführen, indem Sie den [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) -Befehl in XML for Analysis (XMLA) verwenden. Das Zusammenführen von Partitionen ist ein wichtiger Vorgang, wenn Sie Partitionen verwalten, insbesondere wenn es sich hierbei um Partitionen mit Vergangenheitsdaten handelt, die nach Datum partitioniert sind.  
   
  Beispielsweise verwendet ein finanzieller Cube möglicherweise zwei Partitionen:  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62702046"
  Beide Partitionen verwenden andere Speichereinstellungen, jedoch den gleichen Aggregationsentwurf. Anstatt den Cube am Ende des Jahres mit Vergangenheitsdaten zahlreicher Jahre zu verarbeiten, können Sie auch den `MergePartitions`-Befehl verwenden, um die Partition für das aktuelle Jahr mit der Partition für die vergangenen Jahre zusammenzuführen. Dadurch werden die Aggregationsdaten beibehalten, ohne dass eine möglicherweise zeitaufwendige vollständige Verarbeitung des Cubes erforderlich ist.  
   
 ## <a name="specifying-partitions-to-merge"></a>Angeben von Partitionen für die Zusammenführung  
- Wenn die `MergePartitions` Befehl ausgeführt wurde, der Aggregationsdaten in der Quellpartitionen, die im angegebenen der [Quelle](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) Eigenschaft im angegebenen Zielpartition hinzugefügt wird die [Ziel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) Eigenschaft.  
+ Wenn der `MergePartitions` Befehl ausgeführt wird, werden die Aggregations Daten, die in den in der [Source](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) -Eigenschaft angegebenen Quell Partitionen gespeichert sind, der in der [target](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) -Eigenschaft angegebenen Ziel Partition hinzugefügt.  
   
 > [!NOTE]  
 >  Die `Source`-Eigenschaft kann mehrere Partitionsobjektverweise enthalten. Für die `Target`-Eigenschaft gilt dies jedoch nicht.  
@@ -45,8 +45,8 @@ ms.locfileid: "62702046"
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="description"></a>Beschreibung  
- Im folgenden Beispiel werden alle Partitionen in der **Customer Counts** -Measuregruppe des der **Adventure Works** Cubes in der **Adventure Works DW** Beispiel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datenbank in der **Customers_2004** Partition.  
+### <a name="description"></a>BESCHREIBUNG  
+ Im folgenden Beispiel werden alle Partitionen in der Measure-Gruppe **Customer Counts** des **Adventure Works** -Cubes in der **Adventure Works DW** - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Beispieldatenbank in die **Customers_2004** Partition zusammengeführt.  
   
 ### <a name="code"></a>Code  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62702046"
 </MergePartitions>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Entwickeln mit XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

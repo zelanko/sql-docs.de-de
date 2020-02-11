@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107902"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
@@ -34,11 +34,11 @@ ms.locfileid: "66107902"
 |Textfeld|Wird als Attribut oder Element innerhalb des Containers gerendert.|  
 |Rechteck|Wird als Element innerhalb des Containers gerendert.|  
 |Matrixspaltengruppen|Werden als Elemente innerhalb von Zeilengruppen gerendert.|  
-|Zuordnung|Wird als Element innerhalb des Elements für den Container gerendert. Kartenebenen sind untergeordnete Elemente der Karte, und jede Kartenebene umfasst Elemente für die zugehörigen Kartenelemente und Kartenelementattribute.|  
+|Karte|Wird als Element innerhalb des Elements für den Container gerendert. Kartenebenen sind untergeordnete Elemente der Karte, und jede Kartenebene umfasst Elemente für die zugehörigen Kartenelemente und Kartenelementattribute.|  
 |Diagramm|Wird als Element innerhalb des Elements für den Container gerendert. Reihen sind untergeordnete Elemente des Diagramms, und Kategorien sind untergeordnete Elemente einer Reihe. Alle Diagrammbezeichnungen für jeden Diagrammwert werden gerendert. Bezeichnungen und Werte sind als Attribute eingeschlossen.|  
 |Datenbalken|Wird ähnlich einem Diagramm als Element innerhalb des Elements für den Container gerendert. Ein Datenbalken enthält normalerweise keine Hierarchien oder Bezeichnungen, sondern nur Werte.|  
 |Sparkline|Wird ähnlich einem Diagramm als Element innerhalb des Elements für den Container gerendert. Eine Sparkline enthält normalerweise keine Hierarchien oder Bezeichnungen, sondern nur Werte.|  
-|Messgerät|Wird als Element innerhalb des Elements für den Container gerendert. Es wird ein einzelnes Element mit dem Minimal- und Maximalwert der Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers als Attribute gerendert.|  
+|Maßstab|Wird als Element innerhalb des Elements für den Container gerendert. Es wird ein einzelnes Element mit dem Minimal- und Maximalwert der Skala, dem Start- und Endwert des Bereichs und dem Wert des Zeigers als Attribute gerendert.|  
 |Indikator|Wird ähnlich einem Messgerät als Element innerhalb des Elements für den Container gerendert. Wird als einzelnes Element mit dem Namen des aktiven Zustands, den verfügbaren Zuständen und dem Datenwert als Attribute gerendert.|  
   
  Für Berichte, die mit der XML-Renderingerweiterung gerendert werden, sind außerdem folgende Regeln zu beachten:  
@@ -51,7 +51,8 @@ ms.locfileid: "66107902"
   
 -   Ausgeblendete Elemente, die nicht durch Umschalten sichtbar gemacht werden können, werden nicht gerendert. Sichtbare Elemente und ausgeblendete Elemente, die durch Umschalten sichtbar gemacht werden können, werden gerendert.  
   
--   `Images, lines, and custom report items` werden ignoriert.  
+-   
+  `Images, lines, and custom report items` werden ignoriert.  
   
 ##  <a name="DataTypes"></a> Datentypen  
  Dem Textfeldelement oder -attribut wird basierend auf den im Textfeld angezeigten Werten ein XSD-Datentyp zugewiesen.  
@@ -59,16 +60,19 @@ ms.locfileid: "66107902"
 |Wert aller Textfeldelemente|Zugewiesener Datentyp|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|`Decimal` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:decimal**|  
-|`Float` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:float**|  
-|`Double` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**xsd:dateTime**|  
-|`Time`|**xsd:string**|  
-|`Boolean`|**xsd:boolean**|  
-|`String`, `Char`|**xsd:string**|  
-|Andere|**xsd:string**|  
+|
+  `Decimal` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:decimal**|  
+|
+  `Float` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:float**|  
+|
+  `Double` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**XSD: DateTime**|  
+|`Time`|**XSD: String**|  
+|`Boolean`|**XSD: Boolescher Wert**|  
+|`String`, `Char`|**XSD: String**|  
+|Andere|**XSD: String**|  
   
-##  <a name="XMLSpecificRenderingRules"></a> XML-spezifische Renderingregeln  
+##  <a name="XMLSpecificRenderingRules"></a>XML-spezifische Renderingerweiterungen  
  In den folgenden Abschnitten wird beschrieben, wie die XML-Renderingerweiterungen die Elemente innerhalb des Berichts interpretieren.  
   
 ### <a name="report-body"></a>Hauptteil des Berichts  
@@ -76,11 +80,11 @@ ms.locfileid: "66107902"
   
  XML-Namespacedefinitionen und Schemareferenzattribute sind ebenfalls im Berichtselement enthalten. Variablen werden fett formatiert:  
   
- \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ \<**Report** xmlns = "Schema Name" xmlns: xsi<http://www.w3.org/2001/XMLSchema-instance>= "" xsi:**schemaloation**= "**schemanamereporturl**&amp;RC% 3aschema = true" Name = "Report**Name" >**  
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|Wert|  
+|Name|value|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  
@@ -105,7 +109,7 @@ ms.locfileid: "66107902"
 ### <a name="custom-report-items"></a>Custom Report Items  
  CustomReportItems (CRI) sind für die Renderingerweiterung nicht sichtbar. Wenn ein benutzerdefiniertes Berichtselement im Bericht vorhanden ist, rendert die Renderingerweiterung dieses als konventionelles Berichtselement.  
   
-### <a name="images"></a>Bilder  
+### <a name="images"></a>Images  
  Bilder werden nicht gerendert.  
   
 ### <a name="lines"></a>Linien  
@@ -148,13 +152,13 @@ ms.locfileid: "66107902"
   
  Wenn der DataElementOutput-Eigenschaftswert „Output“ lautet, wird die Kopfzeile eines wiederholten Elements als untergeordnetes Element des Detailelements gerendert.  
   
-##  <a name="CustomFormatsXSLTransformations"></a> Benutzerdefinierte Formate und XSL-Transformationen  
+##  <a name="CustomFormatsXSLTransformations"></a>Benutzerdefinierte Formate und XSL-Transformationen  
  Von der XML-Renderingerweiterung erstellte XML-Dateien können mithilfe von XSL-Transformationen (XSLT) in beinahe jedes Format transformiert werden. Mit dieser Funktion können Daten in Formaten erstellt werden, die von den vorhandenen Renderingerweiterungen nicht unterstützt werden. Bevor Sie eine eigene Renderingerweiterung erstellen, sollten Sie die Verwendung der XML-Renderingerweiterung und von XSLT in Betracht ziehen.  
   
-##  <a name="DuplicateName"></a> Doppelte Namen  
+##  <a name="DuplicateName"></a>Doppelte Namen  
  Wenn doppelte Datenelementnamen innerhalb des gleichen Bereichs vorhanden sind, zeigt der Renderer eine Fehlermeldung an.  
   
-##  <a name="XSLTTransformations"></a> XSLT-Transformationen  
+##  <a name="XSLTTransformations"></a>XSLT-Transformationen  
  Der XML-Renderer kann eine serverseitige XSLT-Transformation für die ursprünglichen XML-Daten übernehmen. Wenn eine XSLT-Transformation übernommen wird, gibt der Renderer den transformierten Inhalt statt der ursprünglichen XML-Daten aus. Die Transformation tritt auf dem Server, nicht auf dem Client auf.  
   
  Die XSLT-Transformation, die für die Ausgabe übernommen werden soll, wird entweder in der Berichtsdefinitionsdatei mithilfe der DataTransform-Eigenschaft des Berichts oder mithilfe des *DeviceInfo* -XSLT-Parameters definiert. Wenn beide Werte festgelegt werden, tritt die Transformation bei jeder Verwendung des XML-Renderers auf. Wenn Abonnements verwendet werden, muss die XSLT-Transformation in der DataTransform-RDL-Eigenschaft definiert werden.  
@@ -180,9 +184,9 @@ ms.locfileid: "66107902"
   
  Weitere Informationen finden Sie unter [XML Device Information Settings](../xml-device-information-settings.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

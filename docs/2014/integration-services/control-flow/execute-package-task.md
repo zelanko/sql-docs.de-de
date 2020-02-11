@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67284952"
 ---
 # <a name="execute-package-task"></a>Paket ausführen (Task)
@@ -44,7 +44,7 @@ ms.locfileid: "67284952"
  Der Task "Paket ausführen" kann untergeordnete Pakete ausführen, die im gleichen Projekt enthalten sind, das auch das übergeordnete Paket enthält. Sie wählen ein untergeordnetes Paket vom Projekt aus, indem Sie die **ReferenceType** -Eigenschaft auf **Projektverweis**und dann die **PackageNameFromProjectReference** -Eigenschaft entsprechend festlegen.  
   
 > [!NOTE]  
->  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. Weitere Informationen über die Konvertierung finden Sie unter [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md).  
+>  Die Option **ReferenceType** ist schreibgeschützt und auf **Externer Verweis** festgelegt, wenn das Projekt, das das Paket enthält, nicht in das Projektbereitstellungsmodell konvertiert wurde. Weitere Informationen zur Konvertierung finden Sie unter [Bereitstellen von Projekten auf dem Integration Services-Server](../deploy-projects-to-integration-services-server.md).  
   
  Mit dem Task „Paket ausführen“ können Pakete ausgeführt werden, die in der msdb-Datenbank von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert sind, sowie im Dateisystem gespeicherte Pakete. Der Task stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder mit einem Dateiverbindungs-Manager her, um auf das Dateisystem zuzugreifen. Weitere Informationen finden Sie unter [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md) und [Flat File Connection Manager](../connection-manager/flat-file-connection-manager.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67284952"
   
  Alternativ kann es vorkommen, dass in bestimmten Situationen das übergeordnete und das untergeordnete Paket gemeinsam einen Fehler erzeugen sollen, oder Sie möchten den zusätzlichen Verarbeitungsaufwand eines anderen Prozesses übernehmen. Wenn z. B. bei einem untergeordneten Prozess ein Fehler auftritt und die nachfolgende Verarbeitung im übergeordneten Prozess des Pakets vom Erfolg des untergeordneten Prozesses abhängt, sollte das untergeordnete Paket im Prozess des übergeordneten Pakets ausgeführt werden.  
   
- In der Standardeinstellung die ExecuteOutOfProcess-Eigenschaft des Tasks Paket ausführen festgelegt ist, um `False`, und das untergeordnete Paket ausgeführt wird, im selben Prozess wie das übergeordnete Paket. Wenn Sie diese Eigenschaft auf `True` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn Sie die Eigenschaft auf `True` festlegen, ist das Debuggen des Pakets in einer Installation, die nur die Tools enthält, außerdem nicht möglich. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
+ Standardmäßig ist die executeouesfprocess-Eigenschaft des Tasks "Paket ausführen" auf `False`festgelegt, und das untergeordnete Paket wird im selben Prozess wie das übergeordnete Paket ausgeführt. Wenn Sie diese Eigenschaft auf `True` festlegen, wird das untergeordnete Paket in einem separaten Prozess ausgeführt. Dadurch kann sich der Start des untergeordneten Pakets verlangsamen. Wenn Sie die Eigenschaft auf `True` festlegen, ist das Debuggen des Pakets in einer Installation, die nur die Tools enthält, außerdem nicht möglich. Sie müssen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]installieren. Weitere Informationen finden Sie unter [Installieren von Integration Services](../install-windows/install-integration-services.md).  
   
 ## <a name="extending-transactions"></a>Erweitern von Transaktionen  
  Die vom übergeordneten Paket verwendete Transaktion kann auf das untergeordnete Paket erweitert werden. Deshalb kann für die von beiden Paketen ausgeführte Arbeit ein Commit oder Rollback ausgeführt werden. Beispielsweise kann für Datenbankeinfügungen, die vom übergeordneten Paket ausgeführt werden, ein Commit oder Rollback ausgeführt werden, und zwar in Abhängigkeit von den vom untergeordneten Paket ausgeführten Datenbankeinfügungen und umgekehrt. Weitere Informationen finden Sie unter [Inherited Transactions](../inherited-transactions.md).  
@@ -97,14 +97,14 @@ ms.locfileid: "67284952"
  Weitere Informationen finden Sie unter [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Zugriff auf Variablen für übergeordnete Pakete  
- Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie im **Skripttask-Editor** auf der Seite **Skript** den Namen der Variablen für das übergeordnete Paket eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht. Weitere Informationen zu den Skripttask auf Variablen für übergeordnete Pakete verwenden, finden Sie unter diesem Blogeintrag [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
+ Untergeordnete Pakete greifen über den Skripttask auf Variablen für übergeordnete Pakete zu. Wenn Sie im **Skripttask-Editor** auf der Seite **Skript** den Namen der Variablen für das übergeordnete Paket eingeben, lassen Sie **Benutzer:** im Variablennamen aus. Andernfalls wird die Variable beim Ausführen des übergeordneten Pakets vom untergeordneten Paket nicht gesucht. Weitere Informationen zur Verwendung des Skript Tasks für den Zugriff auf Variablen für übergeordnete Pakete finden Sie in diesem Blogeintrag [SSIS: Zugreifen auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Konfigurieren des Tasks Paket ausführen  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [Editor für den Task 'Paket ausführen'](../execute-package-task-editor.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -114,6 +114,6 @@ ms.locfileid: "67284952"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
 
-Blogeintrag, [SSIS: Zugriff auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), auf andyleonard.blog. 
+Blogeintrag zu [SSIS: Zugreifen auf Variablen in einem übergeordneten Paket](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/)auf "andyleonard. Blog". 
   
   

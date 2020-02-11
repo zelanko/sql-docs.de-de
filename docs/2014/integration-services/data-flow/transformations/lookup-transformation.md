@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62900238"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
@@ -74,7 +74,7 @@ ms.locfileid: "62900238"
 -   Ausgabe nicht übereinstimmender Einträge. Bei der Ausgabe nicht übereinstimmender Einträge in der Eingabe werden die Zeilen verarbeitet, die nicht mindestens einem Eintrag im Verweisdataset entsprechen. Wenn Sie die Transformation für Suche so konfigurieren, dass die Zeilen ohne übereinstimmende Einträge als Fehler behandelt werden, werden die Zeilen an die Fehlerausgabe weitergeleitet. Andernfalls würde die Transformation diese Zeilen an die Ausgabe nicht übereinstimmender Einträge weiterleiten.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche nur eine Ausgabe. Weitere Informationen dazu, wie Sie eine Transformation für Suche ausführen, die im erstellte [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], finden Sie unter [Suchtransformationen Upgrade](../../../sql-server/install/upgrade-lookup-transformations.md).  
+    >  In [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)] hatte die Transformation für Suche nur eine Ausgabe. Weitere Informationen zum Ausführen einer Transformation für Suche, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]erstellt wurde, finden Sie unter [Aktualisieren von Such Transformationen](../../../sql-server/install/upgrade-lookup-transformations.md).  
   
 -   Fehlerausgabe.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62900238"
   
  Im Folgenden finden Sie weitere Vorteile einer persistenten Speicherung des Caches in einer Datei:  
   
--   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter*** [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md) ***.***  
+-   ***Geben Sie die Cachedatei für mehrere Pakete frei. Weitere Informationen finden***[Sie unter Implementieren einer Transformation für Suche im voll Cache Modus mit dem](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)Cacheverbindungs-Manager ***.***      
   
--   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Die Daten können dann auf mehreren Computern verwendet werden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Anschließend können Sie die Daten auf mehreren Computern verwenden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Sie können die Rohdatendatei-Quelle zum Lesen der Daten aus der Cachedatei verwenden. Dann können Sie die Daten mithilfe anderer Datenflusskomponenten umwandeln oder verschieben. Weitere Informationen finden Sie unter [Raw File Source](../raw-file-source.md).  
   
@@ -114,7 +114,8 @@ ms.locfileid: "62900238"
   
      Diese Option für die Zwischenspeicherung ist kompatibel mit der Option für keine Zwischenspeicherung, die für die Transformation für Suche in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]verfügbar ist.  
   
- [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
+ 
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Einzelheiten finden Sie in den folgenden Hilfethemen:  
@@ -129,19 +130,19 @@ ms.locfileid: "62900238"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   Video, [Vorgehensweise: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) auf msdn.microsoft.com  
+-   Video [How to: Implement a Lookup Transformation in Full Cache Mode](https://go.microsoft.com/fwlink/?LinkId=131031)(Vorgehensweise: Implementieren einer Suchtransformation im Vollcachemodus) unter msdn.microsoft.com  
   
 -   Blog-Artikel [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bewährte Vorgehensweisen für die Verwendung des Cachemodus der Transformation für Suche) unter blogs.msdn.com  
   
--   Blogeintrag, [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782) auf blogs.msdn.com  
+-   Blogeintrag [Suchmuster: Keine Beachtung von Groß-/Kleinschreibung](https://go.microsoft.com/fwlink/?LinkId=157782)auf blogs.msdn.com.  
   
 -   Beispiel [Transformation für Suche](https://go.microsoft.com/fwlink/?LinkId=267528)auf msftisprodsamples.codeplex.com.  
   
      Informationen zum Installieren von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Produktbeispielen und Beispieldatenbanken finden Sie unter [SQL Server Integration Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=267527).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Fuzzysuche](fuzzy-lookup-transformation.md)   
- [Transformation für Ausdruckssuche](term-lookup-transformation.md)   
+ [Transformation für Begriffs Suche](term-lookup-transformation.md)   
  [Datenfluss](../data-flow.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   
