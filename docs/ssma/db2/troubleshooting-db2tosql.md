@@ -10,28 +10,28 @@ ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68059973"
 ---
 # <a name="troubleshooting-db2tosql"></a>Problembehandlung (DB2ToSQL)
-Es ist nicht ungewöhnlich, dass in der Migration Probleme in der Mitte ausführen, die Verwaltungskonsole Skripts oder Befehle ausgeführt.  
+Es ist nicht ungewöhnlich, dass Migrationsprobleme bei der Ausführung der Konsolen Skripts oder Befehle auftreten.  
   
-Die behebbaren Fehler betreffen können:  
+Die BEHEB baren Fehler können sich auf Folgendes beziehen:  
   
 1.  Funktion  
   
-2.  Prozedur  
+2.  Verfahren  
   
-3.  Ansicht  
+3.  Sicht  
   
 4.  Trigger  
   
 5.  Ändern des Datentyps  
   
-6.  Ändern die projekteinstellungen  
+6.  Ändern der Projekteinstellungen  
   
-Mit der SSMA-Benutzeroberfläche durch Öffnen der Projektdatei erstellt wird, über die Konsole können die Probleme behoben werden.  
+Die Probleme können mithilfe der SSMA-Benutzeroberfläche behoben werden, indem Sie die Projektdatei öffnen, die über die-Konsole erstellt wurde.  
   

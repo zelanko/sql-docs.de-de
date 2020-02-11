@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75322227"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "75322227"
 
   Ändert die Schwellenwertmetrik für die Überwachung einer Veröffentlichung. Diese gespeicherte Prozedur, die zur Überwachung der Replikation verwendet wird, wird auf dem Verteiler für die Verteilungsdatenbank ausgeführt.  
   
- ![Themen Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -45,7 +45,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
     [ , [ @mode = ] mode ]  
 ```  
   
-## <a name="arguments"></a>Arguments  
+## <a name="arguments"></a>Argumente  
 `[ @publisher = ] 'publisher'`Der Name des Verlegers. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
 `[ @publisher_db = ] 'publisher_db'`Der Name der veröffentlichten Datenbank. *publisher_db* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
@@ -54,21 +54,21 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|Wert|Beschreibung|  
+|value|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Transaktionsveröffentlichung.|  
 |**1**|Momentaufnahmeveröffentlichung.|  
-|**2,2**|Mergeveröffentlichung.|  
+|**2**|Mergeveröffentlichung.|  
 |NULL (Standard)|Replikationsversuche zum Bestimmen des Veröffentlichungstyps.|  
   
 `[ @metric_id = ] metric_id`Die ID der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. *metric_id* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|Wert|Metrikname|  
+|value|Metrikname|  
 |-----------|-----------------|  
 |**1**|**Ablauf** : überwacht den bevorstehenden Ablauf von Abonnements für Transaktions Veröffentlichungen.|  
-|**2,2**|**Latenz** : überwacht die Leistung von Abonnements für Transaktions Veröffentlichungen.|  
-|**0:**|**mergeablauf** : überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
-|**5**|**mergeslowrunduration** : überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
+|**2**|**Latenz** : überwacht die Leistung von Abonnements für Transaktions Veröffentlichungen.|  
+|**4**|**mergeablauf** : überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
+|**5@@**|**mergeslowrunduration** : überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
 |**6**|**mergefastrauunduration** : überwacht die Dauer von Mergesynchronisierungen über LAN-Verbindungen (Local Area Network) mit hoher Bandbreite.|  
 |**19.00**|**mergefastrauunspeed** : überwacht die Synchronisierungs Geschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
 |**88**|**mergeslowrunspeed** : überwacht die Synchronisierungs Geschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
@@ -86,13 +86,13 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  **sp_replmonitorchangepublicationthreshold** wird bei allen Replikations Typen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorchangepublicationthreshold**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

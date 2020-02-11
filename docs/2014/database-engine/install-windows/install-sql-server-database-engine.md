@@ -1,5 +1,5 @@
 ---
-title: Informationen zu den SQL Server-Datenbank-Engine | Microsoft-Dokumentation
+title: Informationen zum SQL Server Datenbank-Engine | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6373f67d40b9da97f652f3bcb05b3414deab5c8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62779361"
 ---
 # <a name="about-the-sql-server-database-engine"></a>Informationen zur SQL Server-Datenbank-Engine
   Bei der Komponente [!INCLUDE[ssDE](../../includes/ssde-md.md)] von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich um den zentralen Dienst zum Speichern, Verarbeiten und Sichern von Daten. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bietet gesteuerten Zugriff und eine zügige Transaktionsverarbeitung und erfüllt damit die Anforderungen selbst der anspruchsvollsten datenlastigen Anwendungen des Unternehmens.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu 50 Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem einzelnen Computer. Erstellen einer typischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation finden Sie unter [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu 50 Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] auf einem einzelnen Computer. Informationen zum Erstellen einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] typischen-Installation finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](install-sql-server-from-the-installation-wizard-setup.md).  
   
- **Wichtig** Bei einer lokalen Installation müssen Sie Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
+ **Wichtig** Bei lokalen Installationen müssen Sie das Setup als Administrator ausführen. Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von einer Remotefreigabe installieren, müssen Sie ein Domänenkonto verwenden, das Lese- und Ausführungsberechtigungen auf der Remotefreigabe hat.  
   
- Wenn Sie im Installations-Assistenten von **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf der Seite Zu installierende Komponenten die Option** -Datenbank-Engine[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen, werden folgenden Funktionen installiert:  
+ Die folgenden Funktionen werden installiert, wenn Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installations-Assistenten auf der Seite zu installierenden Komponenten ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank-Engine** auswählen:  
   
 -   [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -47,7 +48,7 @@ ms.locfileid: "62779361"
   
 -   Konnektivitätskomponenten  
   
--   Programmiermodelle  
+-   Programmmodelle  
   
 -   Verwaltungstools  
   
@@ -58,11 +59,11 @@ ms.locfileid: "62779361"
 > [!NOTE]  
 >  Standardmäßig werden Beispieldatenbanken und Beispielcode nicht als Teil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups installiert. Informationen zur Installation von Beispieldatenbanken und Beispielcode finden Sie auf der [CodePlex-Website](https://go.microsoft.com/fwlink/?LinkId=87843).  
   
-## <a name="see-also"></a>Siehe auch  
- [Von den Editionen von SQLServer 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
- [Editionen und Komponenten von SQLServer 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
- [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
- [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
- [Aktualisieren auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Von den-Editionen unterstützte Funktionen SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)   
+ [Editionen und Komponenten von SQL Server 2014](../../sql-server/editions-and-components-of-sql-server-2016.md)   
+ [Planen einer SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
+ [Hoch Verfügbarkeits Lösungen &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)   
+ [Upgrade auf SQL Server 2014 mithilfe des Installations-Assistenten &#40;Setup&#41;](upgrade-sql-server-using-the-installation-wizard-setup.md)  
   
   

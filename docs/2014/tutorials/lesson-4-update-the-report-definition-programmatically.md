@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Aktualisieren Sie die Berichtsdefinition programmgesteuert | Microsoft-Dokumentation'
+title: 'Lektion 4: Programm gesteuertes Aktualisieren der Berichts Definition | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 703643f2c51ec86090cb03ba7089080dfe416620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63137466"
 ---
 # <a name="lesson-4-update-the-report-definition-programmatically"></a>Lektion 4: Programmgesteuertes Update der Berichtsdefinition
@@ -22,7 +22,7 @@ ms.locfileid: "63137466"
   
 ### <a name="to-update-the-report-definition"></a>So aktualisieren Sie die Berichtsdefinition  
   
-1.  Ersetzen Sie den Code für die UpdateReportDefinition()-Methode in der Datei Program.cs (Module1.vb für [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) durch den folgenden Code:  
+1.  Ersetzen Sie den Code für die UpdateReportDefinition ()-Methode in der Program.cs-Datei (Module1 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]. vb für) durch den folgenden Code:  
   
     ```csharp  
     private void UpdateReportDefinition()  
@@ -88,9 +88,9 @@ ms.locfileid: "63137466"
     ```  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- In der nächsten Lektion speichern Sie die aktualisierte Berichtsdefinition wieder auf dem Berichtsserver. Siehe [Lektion 5: Veröffentlichen der Berichtsdefinition auf dem Berichtsserver](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
+ In der nächsten Lektion speichern Sie die aktualisierte Berichtsdefinition wieder auf dem Berichtsserver. Weitere Informationen finden [Sie unter Lektion 5: Veröffentlichen der Berichts Definition auf dem Berichts Server](../../2014/tutorials/lesson-5-publish-the-report-definition-to-the-report-server.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema &#40;SSRS-Tutorial generiert wurden&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen | Microsoft-Dokumentation
+title: Aufrufen von benutzerdefinierten CLR-Aggregatfunktionen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62919603"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Aufrufen von CLR-benutzerdefinierten Aggregatfunktionen
@@ -32,14 +32,14 @@ ms.locfileid: "62919603"
   
 -   Der aktuelle Benutzer muss über die `EXECUTE`-Berechtigung für das benutzerdefinierte Aggregat verfügen.  
   
--   Benutzerdefinierte Aggregate müssen aufgerufen werden, verwenden einen zweiteiligen Namen in Form von *udagg_name*.  
+-   Benutzerdefinierte Aggregate müssen mit einem zweiteiligen Namen in Form von *schema_name. udagg_name*aufgerufen werden.  
   
--   Der Argumenttyp des benutzerdefinierten Aggregats muss übereinstimmen oder implizit in den *Input_type* des Aggregats, gemäß der `CREATE AGGREGATE` Anweisung.  
+-   Der Argumenttyp des benutzerdefinierten Aggregats muss entsprechend der Definition in der- `CREATE AGGREGATE` Anweisung dem *INPUT_TYPE* des Aggregats entsprechen oder implizit konvertiert werden.  
   
--   Der Rückgabetyp des benutzerdefinierten Aggregats muss übereinstimmen. die *Return_type* in die `CREATE AGGREGATE` Anweisung.  
+-   Der Rückgabetyp des benutzerdefinierten Aggregats muss mit dem *return_type* in `CREATE AGGREGATE` der Anweisung identisch sein.  
   
 ## <a name="example-1"></a>Beispiel 1  
- Im folgenden finden ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die einen Satz von aus einer Spalte in einer Tabelle entnommenen Zeichenfolgenwerten verkettet:  
+ Im folgenden finden Sie ein Beispiel für eine benutzerdefinierte Aggregatfunktion, die eine Reihe von Zeichen folgen Werten verkettet, die aus einer Spalte in einer Tabelle entnommen werden:  
   
  [C#]  
   
@@ -196,7 +196,7 @@ Public Class Concatenate
 End Class  
 ```  
   
- Nachdem Sie den Code Kompilieren **MyAgg.dll**, können Sie das Aggregat in registrieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt:  
+ Nachdem Sie den Code in **MyAgg. dll**kompiliert haben, können Sie das Aggregat in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie folgt registrieren:  
   
 ```  
 CREATE ASSEMBLY MyAgg FROM 'C:\MyAgg.dll';  
@@ -441,7 +441,7 @@ SELECT dbo.WeightedAvg(ItemValue, ItemWeight) FROM @myTable;
 go  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Benutzerdefinierte CLR-Aggregate](clr-user-defined-aggregates.md)  
   
   

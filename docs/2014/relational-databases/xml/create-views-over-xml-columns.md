@@ -13,14 +13,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63301315"
 ---
 # <a name="create-views-over-xml-columns"></a>Erstellen von Sichten über XML-Spalten
-  Sie können eine Spalte vom Typ `xml` zum Erstellen von Sichten verwenden. Im folgenden Beispiel wird eine Sicht erstellt, in der mithilfe der `value()`-Methode des `xml`-Datentyps der Wert aus einer Spalte vom Typ `xml` abgerufen wird.  
+  Sie können eine Spalte vom Typ `xml` zum Erstellen von Sichten verwenden. Im folgenden Beispiel wird eine Sicht erstellt, in der mithilfe der `xml`-Methode des `value()`-Datentyps der Wert aus einer Spalte vom Typ `xml` abgerufen wird.  
   
 ```  
 -- Create the table.  

@@ -10,10 +10,10 @@ ms.assetid: c5ab71a3-0dac-45b1-be8e-93bf7e0e03ce
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 40482e599244f0e5102195cd0e34c3718a06d149
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75258443"
 ---
 # <a name="managing-a-domain"></a>Verwalten einer Domäne
@@ -48,18 +48,18 @@ ms.locfileid: "75258443"
 |-|-|  
 |Erstellen einer semantischen Darstellung für ein Datenfeld mit einem bestimmten Datentyp, Angeben, wie die Domäne aufgefüllt wird, und Formatieren der Ausgabe der Domäne|[Erstellen einer Domäne](../data-quality-services/create-a-domain.md)|  
 |Verknüpfen einer Domäne mit einer anderen Domäne und Aktivieren des gemeinsamen Nutzens der gleichen Einstellungen und die Werte|[Erstellen einer verknüpften Domäne](../data-quality-services/create-a-linked-domain.md)|  
-|Anfügen eines Verweisdatendiensts an eine Einzel- oder Verbunddomäne|[Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
-|Ändern und Erweitern der Werte in einer Wissensdatenbank|[Ändern von Domänen Werten](../data-quality-services/change-domain-values.md)|  
-|Verwenden von Überprüfungs- und Standardisierungsregeln|[Erstellen einer Domänen Regel](../data-quality-services/create-a-domain-rule.md)|  
-|Verwenden von Beziehungen zum Korrigieren eines Begriffs, der Teil eines Werts in einer Domäne ist|[Erstellen von Begriffs basierten Beziehungen](../data-quality-services/create-term-based-relations.md)|  
-|Abschließen, Schließen oder Abbrechen der Domänenverwaltungsaktivität|[Beenden der Domänen Verwaltungs Aktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
+|Anfügen eines Verweisdatendiensts an eine Einzel- oder Verbunddomäne|[Anfügen einer Domäne oder Verbunddomäne an Verweisdaten](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)|  
+|Ändern und Erweitern der Werte in einer Wissensdatenbank|[Ändern von Domänenwerten](../data-quality-services/change-domain-values.md)|  
+|Verwenden von Überprüfungs- und Standardisierungsregeln|[Erstellen einer Domänenregel](../data-quality-services/create-a-domain-rule.md)|  
+|Verwenden von Beziehungen zum Korrigieren eines Begriffs, der Teil eines Werts in einer Domäne ist|[Erstellen von begriffsbasierten Beziehungen](../data-quality-services/create-term-based-relations.md)|  
+|Abschließen, Schließen oder Abbrechen der Domänenverwaltungsaktivität|[Beenden der Domänenverwaltungsaktivität](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen einer Wissensdatenbank durch das Ausführen der Wissensermittlung und interaktives Verwalten von Wissen|[Aufbauen einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
+|Erstellen einer Wissensdatenbank durch das Ausführen der Wissensermittlung und interaktives Verwalten von Wissen|[Aufbau einer Wissensdatenbank](../data-quality-services/building-a-knowledge-base.md)|  
 |Importieren von Wissen in oder Exportieren von Wissen aus einer Wissensdatenbank.|[Importieren und Exportieren von Wissen](../data-quality-services/importing-and-exporting-knowledge.md)|  
-|Erstellen einer Verbunddomäne und Hinzufügen von Wissen zur Domäne.|[Verwalten einer Verbund Domäne](../data-quality-services/managing-a-composite-domain.md)|  
+|Erstellen einer Verbunddomäne und Hinzufügen von Wissen zur Domäne.|[Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md)|  
   
   

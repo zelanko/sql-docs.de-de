@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721942"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
@@ -48,7 +48,7 @@ ms.locfileid: "62721942"
   
 -   Verwenden Sie die Skriptgenerierungsfunktionen, die in den Replikations-Assistenten bereitgestellt werden.  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]. installiert haben. Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]). Weitere Informationen finden Sie unter [Scripting Replication](../scripting-replication.md).  
   
 -   Verwenden Sie Replikationsverwaltungsobjekte (RMO), um das Skript programmgesteuert zu generieren und ein RMO-Objekt zu erstellen.  
   
@@ -127,7 +127,7 @@ GO
  Sobald ein Replikationsskript erstellt wurde, kann es wie folgt ausgeführt werden:  
   
 ### <a name="creating-a-sql-query-file-in-sql-server-management-studio"></a>Erstellen einer SQL-Abfragedatei in SQL Server Management Studio  
- Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen über das Erstellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skripts mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], finden Sie unter [Abfrage- und Text-Editoren &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
+ Eine [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Replikationsskriptdatei kann als SQL-Abfragedatei in einem [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Projekt erstellt werden. Nachdem das Skript geschrieben wurde, kann für diese Abfragedatei eine Verbindung mit der Datenbank hergestellt und das Skript ausgeführt werden. Weitere Informationen zum Erstellen [!INCLUDE[tsql](../../../includes/tsql-md.md)] von Skripts mithilfe von finden [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]Sie unter [Abfrage-und Text-Editoren &#40;SQL Server Management Studio&#41;](../../scripting/query-and-text-editors-sql-server-management-studio.md)).  
   
  Um ein Skript zu verwenden, das Skriptvariablen enthält, muss [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] im **sqlcmd**-Modus ausgeführt werden. Im **sqlcmd**-Modus lässt der Abfrage-Editor zusätzliche **sqlcmd**-spezifische Syntax zu, wie `:setvar` zum Festlegen eines Werts für eine Variable. Weitere Informationen zum **sqlcmd**-Modus finden Sie unter [Bearbeiten von SQLCMD-Skripts mit dem Abfrage-Editor](../../scripting/edit-sqlcmd-scripts-with-query-editor.md). Im folgenden Skript wird `:setvar` verwendet, um einen Wert für die `$(DistPubServer)`-Variable bereitzustellen.  
   
@@ -159,7 +159,7 @@ SET @publisher = $(DistPubServer);
 sqlcmd.exe -E -S sqlserverinstance -i C:\instdistpub.sql -o C:\output.log -v DistPubServer="N'MyDistributorAndPublisher'"  
 ```  
   
- In diesem Beispiel gibt der `-E`-Schalter an, dass beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Windows-Authentifizierung verwendet wird. Bei Verwendung der Windows-Authentifizierung entfällt das Speichern des Benutzernamens und Kennworts in der Skriptdatei. Der Name und Pfad der Skriptdatei wird mit dem `-i`-Schalter und der Name der Ausgabedatei mit dem `-o`-Schalter angegeben (bei Verwendung dieses Schalters wird die Ausgabe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in diese Datei statt in die Konsole geschrieben). Mit dem `sqlcmd`-Hilfsprogramm können Sie Skriptvariablen mit dem `-v`-Schalter zur Laufzeit an das [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Skript übergeben. In diesem Beispiel ersetzt `sqlcmd` vor der Ausführung jede Instanz von `$(DistPubServer)` im Skript durch den `N'MyDistributorAndPublisher'`-Wert.  
+ In diesem Beispiel gibt der `-E`-Schalter an, dass beim Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Windows-Authentifizierung verwendet wird. Bei Verwendung der Windows-Authentifizierung entfällt das Speichern des Benutzernamens und Kennworts in der Skriptdatei. Der Name und Pfad der Skriptdatei wird mit dem `-i`-Schalter und der Name der Ausgabedatei mit dem `-o`-Schalter angegeben (bei Verwendung dieses Schalters wird die Ausgabe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in diese Datei statt in die Konsole geschrieben). Mit dem `sqlcmd`-Hilfsprogramm können Sie Skriptvariablen mit dem [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Schalter zur Laufzeit an das `-v`-Skript übergeben. In diesem Beispiel ersetzt `sqlcmd` vor der Ausführung jede Instanz von `$(DistPubServer)` im Skript durch den `N'MyDistributorAndPublisher'`-Wert.  
   
 > [!NOTE]  
 >  Der `-X`-Schalter deaktiviert Skriptvariablen.  
@@ -222,7 +222,7 @@ REM -- The following must be supplied on one line.
   
 -   Synchronisieren eines Pullabonnements  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konzepte für die Replikationsprogrammierung](replication-programming-concepts.md)   
  [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql)   
  [Erstellen von Skripts für die Replikation](../scripting-replication.md)  

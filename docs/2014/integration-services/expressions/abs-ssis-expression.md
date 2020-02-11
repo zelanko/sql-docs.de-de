@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7fafc0ba09a8345e0639016aadfdef185900589d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62769616"
 ---
 # <a name="abs-ssis-expression"></a>ABS (SSIS-Ausdruck)
@@ -37,7 +37,7 @@ ABS(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  Der Datentyp des numerischen Ausdrucks, der an die Funktion übergeben wird.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  ABS gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
 ## <a name="expression-examples"></a>Beispiele für Ausdrücke  
@@ -54,7 +54,7 @@ ABS(1.23)
 ABS(@HighTemperature - @LowTemperature)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  
   
   
