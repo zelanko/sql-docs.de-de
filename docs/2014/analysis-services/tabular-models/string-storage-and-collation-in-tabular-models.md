@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb30dbddac82db8fb0f6047985ce6fb743042cb
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "70874489"
 ---
 # <a name="string-storage-and-collation-in-tabular-models"></a>Zeichenfolgenspeicher und -sortierung in Tabellenmodellen
@@ -22,7 +22,7 @@ ms.locfileid: "70874489"
   
  In diesem Thema wird der Mechanismus für die Komprimierung und Speicherung von Zeichenfolgen beschrieben. Außerdem finden Sie Beispiele dazu, wie Sortierung und Sprache die Ergebnisse von Textformeln in Tabellenmodellen beeinflussen.  
   
-## <a name="storage"></a>Speicherung  
+## <a name="storage"></a>Storage  
  In Tabellenmodellen werden alle Daten stark komprimiert, um eine zu hohe Auslastung des Arbeitsspeichers zu vermeiden. Infolgedessen werden alle Zeichenfolgen, die als lexikalisch äquivalent eingestuft werden können, nur einmal gespeichert. Die erste Instanz der Zeichenfolge wird als kanonische Darstellung verwendet, und anschließend wird jede entsprechende Zeichenfolge im gleichen komprimierten Wert wie das erste Vorkommen indiziert.  
   
  Die Hauptfrage lautet folgendermaßen: Woraus besteht eine lexikalisch äquivalente Zeichenfolge? Zwei Zeichenfolgen werden als lexikalisch äquivalent eingestuft, wenn sie als das gleiche Wort gelten. Wenn Sie zum Beispiel in einem englischen Wörterbuch den Begriff **violin** (Geige) suchen, finden Sie möglicherweise den Eintrag **Violin** oder **violin**, abhängig von den redaktionellen Richtlinien, die für das Wörterbuch gelten, doch im Allgemeinen werden beide Begriffe als identisch bzw. äquivalent betrachtet, und die unterschiedliche Schreibweise mit kleinem bzw. großem Anfangsbuchstaben wird ignoriert. In einem Tabellenmodell ist der entscheidende Faktor, durch den bestimmt wird, ob zwei Zeichenfolgen lexikalisch äquivalent sind, nicht die redaktionelle Richtlinie oder die Benutzereinstellung, sondern das Gebietsschema und die Sortierreihenfolge, die der Spalte zugewiesen sind.  
@@ -37,11 +37,11 @@ ms.locfileid: "70874489"
 |PlAnT|  
 |trEE|  
 |PlAnT|  
+|Plant|  
+|Struktur|  
 |PlAnT|  
 |trEE|  
-|PlAnT|  
-|trEE|  
-|trEE|  
+|Struktur|  
 |PlAnT|  
 |trEE|  
   

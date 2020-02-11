@@ -1,5 +1,5 @@
 ---
-title: Sp_control_dbmasterkey_password (Transact-SQL) | Microsoft-Dokumentation
+title: sp_control_dbmasterkey_password (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 02/25/2016
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68108776"
 ---
-# <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
+# <a name="sp_control_dbmasterkey_password-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Wird zum Hinzufügen oder Löschen von Anmeldeinformationen verwendet, die das zum Öffnen des Datenbank-Hauptschlüssels benötigte Kennwort enthalten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -40,25 +40,26 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ```  
   
 ## <a name="arguments"></a>Argumente  
- @db_name= N'*Database_name*"  
- Gibt den Namen der Datenbank an, die diesen Anmeldeinformationen zugeordnet ist. Es darf sich nicht um eine Systemdatenbank handeln. *Database_name* ist **Nvarchar**.  
+ @db_name= N '*database_name*'  
+ Gibt den Namen der Datenbank an, die diesen Anmeldeinformationen zugeordnet ist. Es darf sich nicht um eine Systemdatenbank handeln. *database_name* ist vom Datentyp **nvarchar**.  
   
- @password= N'*Kennwort*"  
- Gibt das Kennwort des Hauptschlüssels an. *Kennwort* ist **Nvarchar**.  
+ @password= N '*Kennwort*'  
+ Gibt das Kennwort des Hauptschlüssels an. Das *Kennwort* ist " **nvarchar**".  
   
- @action= N'add "  
- Gibt an, dass dem Anmeldeinformationenspeicher Anmeldeinformationen für die angegebene Datenbank hinzugefügt werden. In den Anmeldeinformationen ist das Kennwort für den Datenbank-Hauptschlüssel enthalten. Der an übergebene Wert @action ist **Nvarchar**.  
+ @action= N ' Add '  
+ Gibt an, dass dem Anmeldeinformationenspeicher Anmeldeinformationen für die angegebene Datenbank hinzugefügt werden. In den Anmeldeinformationen ist das Kennwort für den Datenbank-Hauptschlüssel enthalten. Der an @action Übergabe Wert ist **nvarchar**.  
   
- @action= N'drop "  
- Gibt an, dass Anmeldeinformationen für die angegebene Datenbank aus dem Anmeldeinformationenspeicher gelöscht werden. Der an übergebene Wert @action ist **Nvarchar**.  
+ @action= N ' Drop '  
+ Gibt an, dass Anmeldeinformationen für die angegebene Datenbank aus dem Anmeldeinformationenspeicher gelöscht werden. Der an @action Übergabe Wert ist **nvarchar**.  
   
-## <a name="remarks"></a>Hinweise  
- Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datenbank-Hauptschlüssel zum Entschlüsseln oder Verschlüsseln eines Schlüssels benötigt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn die Entschlüsselung ein Fehler auftritt, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sucht der Anmeldeinformationsspeicher für Hauptschlüssel-Anmeldeinformationen, die denselben Familien-GUID wie die Datenbank verfügen, für die sie der Hauptschlüssel benötigt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Datenbank-Hauptschlüssel zum Entschlüsseln oder Verschlüsseln eines Schlüssels benötigt wird, wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, den Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel der Instanz zu entschlüsseln. Wenn bei der Entschlüsselung ein Fehler [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auftritt, wird im Anmelde Informationsspeicher nach Anmelde Informationen des Haupt Schlüssels durchsucht, die dieselbe Familien-GUID wie die Datenbank aufweisen, für die der Hauptschlüssel benötigt wird. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , den Datenbank-Hauptschlüssel mit allen übereinstimmenden Anmeldeinformationen zu entschlüsseln, bis die Entschlüsselung erfolgreich ausgeführt wurde oder keine Anmeldeinformationen mehr vorhanden sind.  
   
 > [!CAUTION]  
 >  Wenn von sa und anderen Serverprinzipalen mit hohen Privilegien nicht auf eine Datenbank zugegriffen werden soll, ist das Erstellen von Hauptschlüssel-Anmeldeinformationen nicht empfehlenswert. Sie können eine Datenbank so konfigurieren, dass ihre Schlüsselhierarchie nicht vom Diensthauptschlüssel entschlüsselt werden kann. Diese Option wird als sicherer Schutz für Datenbanken mit verschlüsselten Informationen unterstützt, auf die von sa oder anderen Serverprinzipalen mit hohen Privilegien nicht zugegriffen werden soll. Durch das Erstellen eines Hauptschlüssels für eine Datenbank dieser Art wird der sichere Schutz entfernt, sodass sa und andere Serverprinzipale mit hohen Privilegien die Datenbank entschlüsseln können.  
   
- Mit Sp_control_dbmasterkey_password erstellten Anmeldeinformationen werden in der [master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) -Katalogsicht angezeigt. Die Namen der für Datenbank-Hauptschlüssel erstellten Anmeldeinformationen besitzen das folgende Format: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. Das Kennwort wird als Anmeldeinformation-Kennwort gespeichert. Für jedes dem Anmeldeinformationenspeicher hinzugefügte Kennwort ist eine Zeile in sys.credentials vorhanden.  
+ Anmelde Informationen, die mit sp_control_dbmasterkey_password erstellt werden, sind in der [sys. master_key_passwords](../../relational-databases/system-catalog-views/sys-master-key-passwords-transact-sql.md) -Katalog Sicht sichtbar. Die Namen der für Datenbank-Hauptschlüssel erstellten Anmeldeinformationen besitzen das folgende Format: `##DBMKEY_<database_family_guid>_<random_password_guid>##`. Das Kennwort wird als Anmeldeinformation-Kennwort gespeichert. Für jedes dem Anmeldeinformationenspeicher hinzugefügte Kennwort ist eine Zeile in sys.credentials vorhanden.  
   
  sp_control_dbmasterkey_password kann nicht verwendet werden, um Anmeldeinformationen für die folgenden Systemdatenbanken zu erstellen: master, model, msdb oder tempdb.  
   
@@ -74,7 +75,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Wenn Sie zum Öffnen des Datenbank-Hauptschlüssels die Anmeldeinformationen verwenden, die mit sp_control_dbmasterkey_password hinzugefügt wurden, wird der Datenbank-Hauptschlüssel mit dem Diensthauptschlüssel neu verschlüsselt. Wenn sich die Datenbank im schreibgeschützten Modus befindet, schlägt die Neuverschlüsselung fehl, und der Datenbank-Hauptschlüssel bleibt unverschlüsselt. Für den anschließenden Zugriff auf den Datenbank-Hauptschlüssel müssen Sie die OPEN MASTER KEY-Anweisung und ein Kennwort verwenden. Sie können die Verwendung eines Kennworts vermeiden, wenn Sie die Anmeldeinformationen erstellen, bevor Sie die Datenbank in den schreibgeschützten Modus versetzen.  
   
- **Potenzielle Abwärtskompatibilitätsproblem:** Derzeit wird die gespeicherte Prozedur überprüft nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer zukünftigen Version, die der Hauptschlüssel vorhanden sein muss, und das Kennwort in der gespeicherten Prozedur **Sp_control_dbmasterkey_password** müssen dasselbe Kennwort wie eines der Kennwörter zum Verschlüsseln des Datenbank-Hauptschlüssels verwendet werden.  
+ **Potenzielles Problem** mit der Abwärtskompatibilität: Derzeit überprüft die gespeicherte Prozedur nicht, ob ein Hauptschlüssel vorhanden ist. Dies wird aus Gründen der Abwärtskompatibilität zugelassen, es wird jedoch eine Warnung angezeigt. Dieses Verhalten ist als veraltet markiert. In einer zukünftigen Version muss der Hauptschlüssel vorhanden sein, und das in der gespeicherten **sp_control_dbmasterkey_password** Prozedur verwendete Kennwort muss das gleiche Kennwort wie eines der Kenn Wörter sein, die zum Verschlüsseln des Datenbank-Haupt Schlüssels verwendet werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die CONTROL-Berechtigung für die Datenbank.  
@@ -82,7 +83,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Erstellen von Anmeldeinformationen für den AdventureWorks2012-Hauptschlüssel  
- Im folgenden Beispiel werden Anmeldeinformationen für den Hauptschlüssel der `AdventureWorks2012`-Datenbank erstellt, und das Kennwort für den Hauptschlüssel wird als geheimer Eintrag in den Anmeldeinformationen gespeichert. Da alle Parameter, die übergeben werden `sp_control_dbmasterkey_password` muss der Datentyp **Nvarchar**, die Textzeichenfolgen werden mit dem Umwandlungsoperator konvertiert `N`.  
+ Im folgenden Beispiel werden Anmeldeinformationen für den Hauptschlüssel der `AdventureWorks2012`-Datenbank erstellt, und das Kennwort für den Hauptschlüssel wird als geheimer Eintrag in den Anmeldeinformationen gespeichert. Da alle Parameter, die an `sp_control_dbmasterkey_password` übermittelt werden, vom Datentyp **nvarchar**sein müssen, werden die Text Zeichenfolgen `N`mit dem Umwandlungs Operator konvertiert.  
   
 ```  
 EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',   
@@ -99,9 +100,9 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Einrichten einer verschlüsselten Spiegeldatenbank](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)   
- [Security Stored Procedures &#40;Transact-SQL&#41; (Gespeicherte Sicherheitsprozeduren (Transact-SQL))](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
+ [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.credentials &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)   
  [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/credentials-database-engine.md)  

@@ -1,5 +1,5 @@
 ---
-title: Abhängige Namen | Microsoft-Dokumentation
+title: Korrelations Namen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 535c169123923cdb36c355e098f6e0c55ebb9d56
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68127306"
 ---
 # <a name="correlation-names"></a>Korrelationsnamen
-Abhängige Namen werden vollständig unterstützt, einschließlich der in der Tabellenliste. In der folgenden Zeichenfolge, für den E1 beispielsweise der abhängige Name für die Tabelle Emp ist:  
+Korrelations Namen werden vollständig unterstützt, einschließlich in der Tabellenliste. In der folgenden Zeichenfolge ist E1 z. b. der Korrelations Name für die Tabelle mit dem Namen EMP:  
   
 ```  
 SELECT * FROM Emp E1   
