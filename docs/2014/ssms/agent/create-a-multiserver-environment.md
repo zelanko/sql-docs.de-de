@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63192962"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
@@ -35,15 +35,15 @@ ms.locfileid: "63192962"
 ## <a name="considerations-for-multiserver-environments"></a>Überlegungen zu Multiserverumgebungen  
  Details zu den unterstützten MSX-/TSX-Konfigurationen finden Sie in der folgenden Tabelle.  
   
-||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
+||**TSX = 7.0**|**TX = 8,0 < SP3**|**TSX = 8.0 SP3 oder höher**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
 |**MSX = 7.0**|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
-|**MSX = 8.0 < SP3**|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
-|**MSX = 8.0 SP3 oder höher**|Nein|Nein|Ja|Ja|Ja|Ja|Ja|  
-|**MSX = 9.0**|Nein|Nein|Nein|Ja|Ja|Ja|Ja|  
-|**MSX = 10.0**|Nein|Nein|Nein|Nein|Ja|Ja|Ja|  
-|**MSX = 10.5**|Nein|Nein|Nein|Nein|Nein|Ja|Ja|  
-|**MSX = 11.0**|Nein|Nein|Nein|Nein|Nein|Nein|Ja|  
+|**MSX = 8,0 < SP3**|Ja|Ja|Nein|Nein|Nein|Nein|Nein|  
+|**MSX = 8.0 SP3 oder höher**|Nein|Nein |Ja|Ja|Ja|Ja|Ja|  
+|**MSX = 9.0**|Nein|Nein|Nein |Ja|Ja|Ja|Ja|  
+|**MSX = 10.0**|Nein|Nein|Nein|Nein |Ja|Ja|Ja|  
+|**MSX = 10.5**|Nein|Nein|Nein|Nein|Nein |Ja|Ja|  
+|**MSX = 11.0**|Nein|Nein|Nein|Nein|Nein|Nein |Ja|  
   
  Beachten Sie die folgenden Punkte, wenn Sie eine Multiserverumgebung erstellen:  
   
@@ -58,16 +58,16 @@ ms.locfileid: "63192962"
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen werden allgemeine Aufgaben zum Erstellen einer Multiserverumgebung beschrieben.  
   
-|Description|Thema|  
+|BESCHREIBUNG|Thema|  
 |-----------------|-----------|  
-|Beschreibt, wie ein Masterserver erstellt wird.|[Einrichten eines Masterservers](make-a-master-server.md)|  
+|Beschreibt, wie ein Masterserver erstellt wird.|[Make a Master Server](make-a-master-server.md)|  
 |Beschreibt, wie ein Zielserver erstellt wird.|[Erstellen eines Zielservers](make-a-target-server.md)|  
 |Beschreibt, wie ein Zielserver bei einem Masterserver eingetragen wird.|[Eintragen eines Zielservers bei einem Masterserver](enlist-a-target-server-to-a-master-server.md)|  
 |Beschreibt, wie der Austritt eines Zielservers aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts eines Zielservers aus einem Masterserver](defect-a-target-server-from-a-master-server.md)|  
-|Beschreibt, wie der Austritt mehrerer Zielserver aus einem Masterserver vollzogen wird.|[Vollziehen des Austritts mehrerer Zielserver aus einem Masterserver](defect-multiple-target-servers-from-a-master-server.md)|  
-|Beschreibt, wie der Status eines Zielservers überprüft wird.|[sp_help_targetserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
+|Beschreibt, wie der Austritt mehrerer Zielserver aus einem Masterserver vollzogen wird.|[Defect Multiple Target Servers from a Master Server](defect-multiple-target-servers-from-a-master-server.md)|  
+|Beschreibt, wie der Status eines Zielservers überprüft wird.|[sp_help_targetserver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql)<br /><br /> [sp_help_targetservergroup &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-help-targetservergroup-transact-sql)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Problembehandlung von proxybasierten Multiserveraufträgen](troubleshoot-multiserver-jobs-that-use-proxies.md)  
   
   

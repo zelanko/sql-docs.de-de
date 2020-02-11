@@ -1,5 +1,5 @@
 ---
-title: Übersetzungsdetails (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Übersetzungs Details (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66065860"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Übersetzungsdetails (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
-  Mithilfe des Bereichs für **Transaktionsdetails** auf der Registerkarte **Transaktionen** in Cube-Designer können Sie Transaktionen für den aktuell ausgewählten Cube definieren und verwalten.  
+  Mithilfe des Bereichs für Transaktionsdetails **** auf der Registerkarte **Transaktionen** in Cube-Designer können Sie Transaktionen für den aktuell ausgewählten Cube definieren und verwalten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Standardsprache**  
  Legt die Namen der Cube-Objekte in der Standardsprache fest.  
   
@@ -31,37 +31,39 @@ ms.locfileid: "66065860"
   
 -   Measuregruppe  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
--   Measure  
+-   "Measure"  
   
-     `Caption`- und `DisplayFolder`-Eigenschaften  
+     
+  `Caption`- und `DisplayFolder`-Eigenschaften  
   
 -   Dimension  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
 -   Perspektive  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
 -   Key Performance Indicator (KPI)  
   
-     `Caption`- `Description`-Eigenschaft und `DisplayFolder`-Eigenschaft  
+     
+  `Caption`- `Description`-Eigenschaft und `DisplayFolder`-Eigenschaft  
   
--   Aktion  
+-   Action  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
 -   Benannte Menge  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
 -   berechnetes Element  
   
-     `Caption`-Eigenschaft  
+     `Caption`Property  
   
- **\<Language>**  
+ **\<Sprach>**  
  Geben Sie den Wert der Eigenschaft für das Cube-Objekt in der ausgewählten Sprache ein.  
   
 ## <a name="context-menu"></a>Kontextmenü  
@@ -69,7 +71,7 @@ ms.locfileid: "66065860"
   
 |Begriff|Definition|  
 |----------|----------------|  
-|**Neue Übersetzung**|Wählen Sie diese Option aus, um das Dialogfeld **Sprache auswählen** anzuzeigen und um eine neue Übersetzung zu erstellen. Die Übersetzung wird im Raster der **Übersetzungsdetails** als neue Spalte angezeigt.|  
+|**Neue Übersetzung**|Wählen Sie diese Option aus, um das Dialogfeld **Sprache auswählen** anzuzeigen und um eine neue Übersetzung zu erstellen. Die Übersetzung wird im Raster der Übersetzungsdetails **** als neue Spalte angezeigt.|  
 |**Übersetzung löschen**|Wählen Sie diese Option aus, um die ausgewählte Übersetzung zu löschen.|  
   
   

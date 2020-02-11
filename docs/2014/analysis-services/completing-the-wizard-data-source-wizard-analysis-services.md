@@ -1,5 +1,5 @@
 ---
-title: Abschließen des Assistenten (Datenquellen-Assistent) (Analysis Services) | Microsoft-Dokumentation
+title: Assistenten abschließen (Datenquellen-Assistent) (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 489c0aaa7a25c10e024c63a11c2bf98fdf46917a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087671"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Assistenten abschließen (Datenquellen-Assistent) (Analysis Services)
   Auf der Seite **Assistenten abschließen** des Assistenten können Sie die Verbindungszeichenfolge überprüfen und einen Namen für die neue Datenquelle angeben.  
   
-## <a name="options"></a>Optionen  
- **Datenquellenname**  
+## <a name="options"></a>Tastatur  
+ **Datenquellen Name**  
  Geben Sie einen Namen ein, oder übernehmen Sie den für die Datenquelle bereitgestellten Standardnamen.  
   
  **Vorschau**  
  Zeigt die Verbindungszeichenfolge für die Datenquelle an. Klicken Sie auf **Zurück** , um Änderungen an den Einstellungen vorzunehmen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellen-Assistent F1-Hilfe &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen-Assistent (F1-Hilfe &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
  [Datenquellen in mehrdimensionalen Modellen](multidimensional-models/data-sources-in-multidimensional-models.md)   
- [Unterstützte Datenquellen &#40;SSAS – mehrdimensional&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Unterstützte Datenquellen &#40;mehrdimensionalen SSAS-&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

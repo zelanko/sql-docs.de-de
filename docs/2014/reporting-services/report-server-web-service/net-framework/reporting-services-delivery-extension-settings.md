@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d356bc1cb981479de8a4b1baa3bdaaf45b6145ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63260752"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Einstellungen der Reporting Services-Übermittlungserweiterungen
@@ -38,33 +38,33 @@ ms.locfileid: "63260752"
 ## <a name="e-mail-delivery-settings"></a>Einstellungen für die E-Mail-Übermittlung  
  In der folgenden Tabelle werden die Einstellungen der E-Mail-Übermittlung für Abonnements aufgeführt, die Berichtsserver-E-Mail verwenden.  
   
-|Einstellung|Wert|  
+|Einstellung|value|  
 |-------------|-----------|  
 |**TO**|Die E-Mail-Adresse, die in der `To`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Erforderlich.|  
 |**CC**|Die E-Mail-Adresse, die in der `Cc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
 |**BCC**|Die E-Mail-Adresse, die in der `Bcc`-Zeile der E-Mail-Nachricht angezeigt wird. Mehrere E-Mail-Adressen werden durch Semikolon getrennt. Optional.|  
 |**ReplyTo**|Die E-Mail-Adresse, die im `Reply-To`-Header der E-Mail-Nachricht angezeigt wird. Dieser Wert darf nur eine E-Mail-Adresse enthalten. Optional.|  
 |`IncludeReport`|Ein Wert, der angibt, ob der Bericht in der E-Mail-Übermittlung enthalten sein soll. Der Wert `true` gibt an, dass der Bericht im Textkörper der E-Mail-Nachricht übermittelt wird.|  
-|**Renderformat**|Der Name der Renderingerweiterung, die zum Generieren des gerenderten Berichts verwendet werden soll. Der Name muss einer der sichtbaren Renderingerweiterungen entsprechen, die auf dem Berichtsserver installiert sind. Dieser Wert ist erforderlich, wenn die Einstellung `IncludeReport` auf den Wert `true` festgelegt ist.|  
-|**Priority**|Die Priorität, mit der die E-Mail gesendet wird. Gültige Werte sind `LOW`, `NORMAL` und `HIGH`. Der Standardwert ist `NORMAL`.|  
+|**RenderFormat**|Der Name der Renderingerweiterung, die zum Generieren des gerenderten Berichts verwendet werden soll. Der Name muss einer der sichtbaren Renderingerweiterungen entsprechen, die auf dem Berichtsserver installiert sind. Dieser Wert ist erforderlich, wenn die Einstellung `IncludeReport` auf den Wert `true` festgelegt ist.|  
+|**Haben**|Die Priorität, mit der die E-Mail gesendet wird. Gültige Werte sind `LOW`, `NORMAL` und `HIGH`. Standardwert: `NORMAL`.|  
 |**Betreff**|Der Text in der Betreffzeile der E-Mail-Nachricht.|  
-|**Anmerkung**|Der im Textkörper der E-Mail-Nachricht enthaltene Text.|  
-|**IncludeLink**|Ein Wert, der angibt, ob ein Link zum Bericht im Textkörper der E-Mail enthalten sein soll.|  
+|**Comment**|Der im Textkörper der E-Mail-Nachricht enthaltene Text.|  
+|**Includelta Ink**|Ein Wert, der angibt, ob ein Link zum Bericht im Textkörper der E-Mail enthalten sein soll.|  
   
 ## <a name="file-share-delivery-settings"></a>Einstellungen der Dateifreigabeübermittlung  
  In der folgenden Tabelle werden die Einstellungen der Dateifreigabeübermittlung für Abonnements aufgelistet.  
   
-|Einstellung|Wert|  
+|Einstellung|value|  
 |-------------|-----------|  
-|**FILENAME**|Der Name der Datei, die auf dem Datenträger gespeichert wird.|  
-|**FILEEXTN**|Gibt an, ob eine Dateierweiterung für den gerenderten Bericht enthalten sein soll. Der Wert lautet entweder `true` oder `false`.|  
-|**PATH**|Der Ordnerpfad oder der UNC-Dateifreigabepfad, in dem der Bericht gespeichert werden soll.|  
+|**Einfügen**|Der Name der Datei, die auf dem Datenträger gespeichert wird.|  
+|**Fileextn**|Gibt an, ob eine Dateierweiterung für den gerenderten Bericht enthalten sein soll. Der Wert lautet entweder `true` oder `false`.|  
+|**ADS**|Der Ordnerpfad oder der UNC-Dateifreigabepfad, in dem der Bericht gespeichert werden soll.|  
 |**RENDER_FORMAT**|Das Format des Berichts, der auf dem Datenträger gespeichert wird.|  
-|**USERNAME**|Der Benutzername, der benötigt wird, um auf die Netzwerkressource oder den Datenträger zuzugreifen.|  
-|**PASSWORD**|Das Kennwort, das benötigt wird, um auf die Netzwerkressource oder den Datenträger zuzugreifen.|  
-|**WRITEMODE**|Der Schreibmodus, der zu verwenden ist, wenn Sie auf den Datenträger zugreifen. Gültige Werte sind `None`, `Overwrite` und `AutoIncrement`.|  
+|**User**|Der Benutzername, der benötigt wird, um auf die Netzwerkressource oder den Datenträger zuzugreifen.|  
+|**Anmelden**|Das Kennwort, das benötigt wird, um auf die Netzwerkressource oder den Datenträger zuzugreifen.|  
+|**' Writemode '**|Der Schreibmodus, der zu verwenden ist, wenn Sie auf den Datenträger zugreifen. Gültige Werte sind `None`, `Overwrite` und `AutoIncrement`.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Technische Referenz (SSRS)](../../technical-reference-ssrs.md)   
  [Building Applications Using the Web Service and the .NET Framework (Erstellen von Anwendungen mit dem Webdienst und .NET Framework)](building-applications-using-the-web-service-and-the-net-framework.md)  
   

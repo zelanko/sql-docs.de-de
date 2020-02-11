@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b591aa8e89200ca863b1e8196c383c506401fc3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151067"
 ---
 # <a name="xtp-cursors"></a>XTP-Cursor
   Das XTP-Leistungsobjekt für Cursor enthält Leistungsindikatoren für interne Cursor der XTP-Engine. Cursor sind die Bausteine auf unterer Ebene, die die XTP-Engine zur Verarbeitung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfragen verwendet. Daher können Sie diese in der Regel nicht direkt steuern.  
   
- Diese Tabelle beschreibt die **XTP-Cursor** Leistungsindikatoren.  
+ In dieser Tabelle werden die Leistungsindikatoren für **XTP-Cursor** beschrieben.  
   
-|Leistungsindikator|Beschreibung|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Cursorlöschvorgänge/s**|Die durchschnittliche Anzahl der pro Sekunde erfolgten Cursorlöschvorgänge.|  
 |**Cursoreinfügevorgänge/s**|Die durchschnittliche Anzahl der pro Sekunde erfolgten Cursoreinfügevorgänge.|  
@@ -37,7 +37,7 @@ ms.locfileid: "63151067"
 |**Berührte Zeilen/s**|Die durchschnittliche Anzahl von Zeilen, die pro Sekunde von Cursorn berührt werden.|  
 |**Berührte vorläufig gelöschte Zeilen/s**|Die durchschnittliche Anzahl ablaufender Zeilen, die pro Sekunde von Cursorn berührt werden. Eine Zeile läuft ab, wenn die Transaktion, durch die sie gelöscht wurde, immer noch aktiv ist (d. h., es wurde noch kein Commit ausgeführt bzw. sie wurde nicht abgebrochen).|  
   
-## <a name="see-also"></a>Siehe auch  
- [XTP &#40;In-Memory-OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XTP-&#40;in-Memory-OLTP&#41; Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
   
   

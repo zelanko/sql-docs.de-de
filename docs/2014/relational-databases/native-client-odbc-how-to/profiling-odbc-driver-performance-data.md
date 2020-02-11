@@ -1,5 +1,5 @@
 ---
-title: Profilerstellung für Treiberleistungsdaten (ODBC) | Microsoft-Dokumentation
+title: Leistungsdaten des Profil Treibers (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a7de38f3c91814dbd364caee84b34dacdfbdf475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200302"
 ---
 # <a name="profile-driver-performance-data-odbc"></a>Profilerstellung für Treiberleistungsdaten (ODBC)
-  In diesem Beispiel werden die für den ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spezifischen Optionen zum Aufzeichnen von Leistungsstatistiken dargestellt. Im Beispiel wird eine Datei erstellt: odbcperf.log. dieses Beispiel zeigt die Erstellung einer Leistungsdaten-Protokolldatei und das Anzeigen von Leistungsdaten direkt aus der SQLPERF-Datenstruktur (die SQLPERF-Struktur ist in Odbcss.h definiert). Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
+  In diesem Beispiel werden die für den ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spezifischen Optionen zum Aufzeichnen von Leistungsstatistiken dargestellt. Im Beispiel wird eine Datei erstellt: odbcperf.log. Dieses Beispiel zeigt die Erstellung einer Leistungsdaten-Protokolldatei und das Anzeigen von Leistungsdaten direkt aus der SQLPERF-Datenstruktur (die SQLPERF-Struktur ist in Odbcss.h definiert). Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  
   
 > [!IMPORTANT]  
->  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie die Anmeldeinformationen permanent speichern müssen, verschlüsseln Sie sie mit der [Win32 Crypto-API](https://go.microsoft.com/fwlink/?LinkId=64532).  
+>  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>So protokollieren Sie Treiberleistungsdaten mit dem ODBC-Administrator  
   
-1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)** . Alternativ können Sie odbcad32.exe aufrufen.  
+1.  Öffnen Sie in der **Systemsteuerung**die Option **Verwaltung** , und doppelklicken Sie dann auf **Datenquellen (ODBC)**. Alternativ können Sie odbcad32.exe aufrufen.  
   
 2.  Klicken Sie auf die Registerkarte **Benutzer-DSN**, **System-DSN**oder **Datei-DSN** .  
   
@@ -35,34 +35,34 @@ ms.locfileid: "63200302"
   
 4.  Klicken Sie auf **Konfigurieren**.  
   
-5.  Navigieren Sie im Microsoft SQL Server DSN-Assistenten, auf die Seite mit **Log-ODBC-Treiber-Statistik in der Protokolldatei**.  
+5.  Navigieren Sie im Microsoft SQL Server Assistenten zum Konfigurieren von DSN zur Seite mit den **ODBC-Treiber Statistiken für die Protokolldatei**.  
   
-6.  Wählen Sie **Log-ODBC-Treiber-Statistik in der Protokolldatei**. Platzieren Sie im Feld den Namen der Datei, in der die Statistik protokolliert werden soll. Klicken Sie optional auf **Durchsuchen** im Dateisystem nach der protokollierten Statistik zu durchsuchen.  
+6.  Wählen Sie **ODBC-Treiber Statistiken in der Protokolldatei protokollieren**aus. Platzieren Sie im Feld den Namen der Datei, in der die Statistik protokolliert werden soll. Klicken Sie optional auf **Durchsuchen** , um das Dateisystem nach dem Statistik Protokoll zu durchsuchen.  
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>So protokollieren Sie programmgesteuert Treiberleistungsdaten  
   
-1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA_LOG und dem vollständigen Pfad und Dateinamen der Leistungsdaten-Protokolldatei. Zum Beispiel:  
+1.  Aufrufen von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA_LOG und dem vollständigen Pfad und Dateinamen der Leistungsdaten-Protokolldatei. Beispiel:  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_START auf, um Protokollieren von Leistungsdaten zu starten.  
+2.  Aufrufen von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_START, um mit dem Protokollieren von Leistungsdaten zu beginnen.  
   
-3.  Rufen Sie optional [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_LOG_NOW und NULL, um eine durch Tabstopps getrennten Datensatz der Leistungsdaten in die Leistungsdaten-Protokolldatei zu schreiben. Dies kann mehrmals durchgeführt werden, wenn die Anwendung ausgeführt wird.  
+3.  Optional können Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_LOG_NOW und NULL aufrufen, um einen durch Tabstopps getrennten Datensatz mit Leistungsdaten in die Leistungsdaten-Protokolldatei zu schreiben. Dies kann mehrmals durchgeführt werden, wenn die Anwendung ausgeführt wird.  
   
-4.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_STOP auf, um Protokollieren von Leistungsdaten zu beenden.  
+4.  Aufrufen von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_STOP, um das Protokollieren von Leistungsdaten zu verhindern.  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>So ziehen Sie Treiberleistungsdaten in eine Anwendung  
   
-1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_START auf, zum Starten der profilerstellung von Leistungsdaten.  
+1.  Aufrufen von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_START, um mit der Profilerstellung der Leistungsdaten zu beginnen.  
   
-2.  Rufen Sie [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und die Adresse eines Zeigers auf eine SQLPERF-Struktur. Mit den ersten Aufrufen wird der Zeiger auf die Adresse einer gültigen SQLPERF-Struktur festgelegt, die aktuelle Leistungsdaten enthält. Der Treiber aktualisiert die Daten in der Leistungsstruktur nicht ständig. Die Anwendung muss den Aufruf wiederholt [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) jederzeit die Struktur mit neueren Leistungsdaten aktualisiert werden.  
+2.  Aufrufen von [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und der Adresse eines Zeigers auf eine SQLPERF-Struktur. Mit den ersten Aufrufen wird der Zeiger auf die Adresse einer gültigen SQLPERF-Struktur festgelegt, die aktuelle Leistungsdaten enthält. Der Treiber aktualisiert die Daten in der Leistungsstruktur nicht ständig. Die Anwendung muss den Aufruf von [SQLGetConnectAttr](../native-client-odbc-api/sqlgetconnectattr.md) jederzeit wiederholen, wenn die Struktur mit aktuellen Leistungsdaten aktualisiert werden muss.  
   
-3.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_STOP auf, um Protokollieren von Leistungsdaten zu beenden.  
+3.  Aufrufen von [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_DATA und SQL_PERF_STOP, um das Protokollieren von Leistungsdaten zu verhindern.  
   
 ## <a name="example"></a>Beispiel  
- Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treibername lautet "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
+ Sie benötigen eine ODBC-Datenquelle mit dem Namen AdventureWorks, deren Standarddatenbank die AdventureWorks-Beispieldatenbank ist. (Sie können die AdventureWorks-Beispieldatenbank von der Startseite [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen.) Diese Datenquelle muss auf dem ODBC-Treiber basieren, der vom Betriebssystem bereitgestellt wird (der Treiber Name ist "SQL Server"). Wenn Sie dieses Beispiel als 32-Bit-Anwendung entwickeln und unter einem 64-Bit-Betriebssystem ausführen, müssen Sie die ODBC-Datenquelle mit dem ODBC-Administrator in %windir%\SysWOW64\odbcad32.exe erstellen.  
   
  In diesem Beispiel wird eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standardinstanz des Computers hergestellt. Ändern Sie zum Herstellen einer Verbindung mit einer benannten Instanz die Definition der ODBC-Datenquelle, um die Instanz im folgenden Format anzugeben: Server\benannteInstanz. Standardmäßig wird [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] in einer benannten Instanz installiert.  
   
@@ -237,8 +237,8 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Profilerstellung von ODBC-Treiber Abfrageleistung: Themen &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Gewusst-wie-Themen zur Profilerstellung für ODBC-Treiber &#40;ODBC-&#41;](profiling-odbc-driver-performance-odbc.md)   
  [Leistungsprofilerstellung des ODBC-Treibers](../native-client/odbc/profiling-odbc-driver-performance.md)  
   
   

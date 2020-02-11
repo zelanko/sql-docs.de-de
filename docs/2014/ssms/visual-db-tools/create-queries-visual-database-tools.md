@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7140e3b4511417952246093e5ed82da9f2c099b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184304"
 ---
 # <a name="create-queries-visual-database-tools"></a>Erstellen von Abfragen (Visual Database Tools)
@@ -43,11 +43,11 @@ ms.locfileid: "63184304"
   
  Zur weiteren Verfeinerung der Abfrage können Sie den SQL-Code im **SQL-Bereich** ändern oder im **Kriterienbereich**Optionen wie die Sortierreihenfolge und Spaltenaliase auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Speichern von Abfragen &#40;Visual Database Tools&#41;](save-queries-visual-database-tools.md)   
  [Typen von Abfragen &#40;Visual Database Tools&#41;](types-of-queries-visual-database-tools.md)   
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)   
- [Zusammenfassen von Abfrageergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
+ [Zusammenfassen von Abfrage Ergebnissen &#40;Visual Database Tools&#41;](summarize-query-results-visual-database-tools.md)   
  [Ausführen grundlegender Vorgänge mit Abfragen &#40;Visual Database Tools&#41;](perform-basic-operations-with-queries-visual-database-tools.md)  
   
   

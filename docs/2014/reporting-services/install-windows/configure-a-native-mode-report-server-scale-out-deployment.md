@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren Sie eine im einheitlichen Modus Report Server-Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager) | Microsoft-Dokumentation
+title: Konfigurieren eines Berichts Servers im einheitlichen Modus für die Bereitstellung für horizontales Skalieren (SSRS-Configuration Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,19 +15,19 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0281a487de123adfeb3739066628694b1da17a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108899"
 ---
 # <a name="configure-a-native-mode-report-server-scale-out-deployment-ssrs-configuration-manager"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)
 
   Der einheitliche Modus von Reporting Services unterstützt ein Bereitstellungsmodell für horizontales Skalieren, das die Ausführung mehrerer Berichtsserverinstanzen ermöglicht, die eine einzelne Berichtsserver-Datenbank gemeinsam nutzen. Die Bereitstellung für horizontales Skalieren wird verwendet, um die Skalierbarkeit von Berichtsservern zu erhöhen, sodass diese mehr gleichzeitige Benutzer und größere Berichtsausführungslasten unterstützen. Darüber hinaus können damit bestimmte Server für die Verarbeitung von interaktiven oder geplanten Berichten reserviert werden.  
   
- Berichtsserver im SharePoint-Modus verwenden die SharePoint-Produktinfrastruktur für horizontales Skalieren. Der SharePoint-Modus für horizontales Skalieren wird durch das Hinzufügen weiterer Berichtsserver im SharePoint-Modus zur SharePoint-Farm ausgeführt. Informationen zur horizontalen Skalierung im SharePoint-Modus finden Sie unter [Add an Additional Report Server to a Farm (SSRS Scale-out) (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS))](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
+ Berichts Server im SharePoint-Modus verwenden die SharePoint-Produkt Infrastruktur für horizontales Skalieren. Das horizontale hochskalieren im SharePoint-Modus wird durch Hinzufügen von weiteren Berichts Servern im SharePoint-Modus zur SharePoint-Farm ausgeführt. Informationen zur horizontalen Skalierung im SharePoint-Modus finden Sie unter [Add an Additional Report Server to a Farm (SSRS Scale-out) (Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm (Horizontales Skalieren für SSRS))](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
- **Bereitstellungen für horizontales Skalieren bestehen aus folgenden Komponenten:**  
+ **Bereit Stellungen für horizontales Skalieren bestehen aus folgenden Elementen:**  
   
 -   Zwei oder mehr Berichtsserverinstanzen, die eine Berichtsserver-Datenbank gemeinsam nutzen  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66108899"
   
  Reporting Services ist nicht Teil von MSCS-Clustern (Microsoft Clusterdienste). Sie können die Berichtsserver-Datenbank jedoch auf einer Datenbank-Engine-Instanz erstellen, die Teil eines Failover-Clusters ist.  
   
- **Führen Sie folgende Schritte aus, um eine Bereitstellung für horizontales Skalieren zu planen, zu installieren und zu konfigurieren:**  
+ **Gehen Sie folgendermaßen vor, um eine Bereitstellung für horizontales Skalieren zu planen, zu installieren und zu konfigurieren:**  
   
--   Überprüfen Sie [Installieren von SQL Server 2014 vom Installations-Assistenten &#40;Setup&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Onlinedokumentation Anweisungen zum Installieren von Berichtsserverinstanzen.  
+-   Anweisungen zum Installieren von Berichts Server Instanzen finden Sie unter [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Online Dokumentation.  
   
 -   Wenn Sie vorhaben, die Bereitstellung für horizontales Skalieren auf einem NLB-Cluster (Network Load Balancing, Netzwerklastenausgleich) zu hosten, müssen Sie den NLB-Cluster zuerst konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers auf einem Netzwerklastenausgleich-Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
@@ -59,7 +59,8 @@ ms.locfileid: "66108899"
   
 1.  Installieren Sie eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz auf einem Computer, der als Host für die Berichtsserver-Datenbanken fungiert. Sie müssen mindestens [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installieren.  
   
-2.  Falls notwendig, aktivieren Sie Remoteverbindungen auf dem Berichtsserver. In einigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind Remoteverbindungen für TCP/IP und Named Pipes standardmäßig nicht aktiviert. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, und zeigen Sie die Einstellungen für die Netzwerkkonfiguration der Zielinstanz an, um festzustellen, ob Remoteverbindungen zugelassen werden. Wenn die Remoteinstanz zudem eine benannte Instanz ist, müssen Sie sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst auf dem Zielserver aktiviert ist und ausgeführt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser stellt die Portnummer bereit, mit der die Verbindung zur benannten Instanz hergestellt wird.  
+2.  Falls notwendig, aktivieren Sie Remoteverbindungen auf dem Berichtsserver. In einigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind Remoteverbindungen für TCP/IP und Named Pipes standardmäßig nicht aktiviert. Verwenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager, und zeigen Sie die Einstellungen für die Netzwerkkonfiguration der Zielinstanz an, um festzustellen, ob Remoteverbindungen zugelassen werden. Wenn die Remoteinstanz zudem eine benannte Instanz ist, müssen Sie sicherstellen, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser-Dienst auf dem Zielserver aktiviert ist und ausgeführt wird. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser stellt die Portnummer bereit, mit der die Verbindung zur benannten Instanz hergestellt wird.  
   
 ### <a name="to-install-the-first-report-server-instance"></a>So installieren Sie die erste Berichtsserverinstanz  
   
@@ -83,7 +84,7 @@ ms.locfileid: "66108899"
   
     2.  Klicken Sie auf **Datenbank ändern**.  
   
-    3.  Sie können auch auf **Vorhandene Berichtsserver-Datenbank auswählen**klicken.  
+    3.  Sie können auch auf **Wählen Sie eine vorhandene Berichtsserver-Datenbank aus**klicken.  
   
     4.  Geben Sie den Servernamen für die Instanz der SQL Server-Datenbank-Engine an, auf der die gewünschte Berichtsserver-Datenbank gehostet wird. Dies muss derselbe Server sein, zu dem Sie in den vorherigen Schritten eine Verbindung hergestellt haben.  
   
@@ -105,25 +106,25 @@ ms.locfileid: "66108899"
   
 2.  Klicken Sie auf **Bereitstellung für horizontales Skalieren** , um die Seite „Bereitstellung für horizontales Skalieren“ zu öffnen. Hier sollten zwei Einträge angezeigt werden, einer für jede Berichtsserverinstanz, die mit der Berichtsserver-Datenbank verbunden ist. Für die erste Berichtsserverinstanz sollte bereits eine Verbindung bestehen. Der zweite Berichtsserver sollte auf den Join warten. Wenn Sie keine ähnlichen Einträge für die Skalieranwendung sehen, sollten Sie sich vergewissern, dass Sie mit dem ersten Berichtsserver verbunden sind, der bereits für die Verwendung der Berichtsserver-Datenbank konfiguriert und initialisiert wurde.  
   
-     ![Screenshot von einem Ausschnitt der Seite „Bereitstellung für die horizontale Skalierung“](../../../2014/sql-server/install/media/scaloutscreen.gif "Partial screenshot of Scale-out Deployment page")  
+     ![Bildschirmteilfoto der Seite „Bereitstellung für dezentrales Skalieren“](../../../2014/sql-server/install/media/scaloutscreen.gif "Bildschirmteilfoto der Seite „Bereitstellung für dezentrales Skalieren“")  
   
-3.  Wählen Sie auf der Seite Bereitstellung für horizontales Skalieren der Berichtsserverinstanz her, die darauf warten, fügen Sie die Bereitstellung, und klicken Sie auf **-Server hinzufügen**.  
+3.  Wählen Sie auf der Seite Bereitstellung für horizontales Skalieren die Berichts Serverinstanz aus, die auf den Beitritt zur Bereitstellung wartet, und klicken Sie auf **Server hinzufügen**.  
   
     > [!NOTE]  
-    >  **Problem:** Wenn Sie versuchen, eine Reporting Services-Berichtsserverinstanz mit der Bereitstellung für horizontales Skalieren zu verknüpfen, können Fehler vom Typ "Zugriff verweigert" auftreten.  
+    >  **Problem:** Wenn Sie versuchen, eine Reporting Services-Berichts Serverinstanz mit der Bereitstellung für horizontales Skalieren zu verknüpfen, treten möglicherweise Fehlermeldungen wie "Zugriff verweigert" auf.  
     >   
-    >  **Problemumgehung:** Sichern Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel aus der ersten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz und den Schlüssel wiederherstellen, mit dem zweiten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver. Versuchen Sie dann, den zweiten Server mit der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung für horizontales Skalieren zu verknüpfen.  
+    >  Problem **Umgehung:** Sichern Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel von der ersten [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz, und stellen Sie den Schlüssel [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf dem zweiten Berichts Server wieder her. Versuchen Sie dann, den zweiten Server mit der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Bereitstellung für horizontales Skalieren zu verknüpfen.  
   
 4.  Sie sollten jetzt feststellen können, dass beide Berichtsserverinstanzen funktionstüchtig sind. Zur Überprüfung der zweiten Instanz können Sie über das Konfigurationstool für Reporting Services eine Verbindung zum Berichtsserver herstellen und auf die URL des Report Server-Webdienstes oder des Berichts-Managers klicken.  
   
  Wenn Sie die Berichtsserver in einem Servercluster mit Lastenausgleich ausführen möchten, sind zusätzliche Konfigurationsschritte erforderlich. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers auf einem Netzwerklastenausgleich-Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
- [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
+ [Erstellen einer Berichts Server-Datenbank im einheitlichen Modus &#40;SSRS-Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank &#40;SSRS-Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   
  [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](../report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

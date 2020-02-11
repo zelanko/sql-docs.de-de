@@ -13,32 +13,34 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66a7b7cd9328f70e5b5ca374a04ad5e9dd6e079a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245782"
 ---
 # <a name="sql-server-agent-properties-general-page"></a>SQL Server-Agent-Eigenschaften (Seite Allgemein)
-  Mithilfe dieser Seite können Sie die allgemeinen Eigenschaften des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes anzeigen und ändern.  
+  Verwenden Sie diese Seite, um die allgemeinen Eigenschaften des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstanbieter anzuzeigen und zu ändern.  
   
-## <a name="options"></a>Optionen  
- **Dienststatus**  
+## <a name="options"></a>Tastatur  
+ **Dienstzustand**  
  Zeigt den aktuellen Status des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstes an.  
   
- **SQL Server nach unerwartetem Beenden automatisch neu starten**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unerwartet beendet wird.  
+ **SQL Server bei unerwartetem Beenden automatisch neu starten**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unerwartet beendet wird.  
   
- **SQL Server-Agent nach unerwartetem Beenden automatisch neu starten**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent neu, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent unerwartet beendet wird.  
+ **SQL Server-Agent bei unerwartetem Beenden automatisch neu starten**  
+ 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent neu, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent unerwartet beendet wird.  
   
- **Filename**  
+ **Einfügen**  
  Geben Sie den Dateinamen für das Fehlerprotokoll an.  
   
  **...**  
  Mit dieser Schaltfläche können Sie nach der Fehlerprotokolldatei suchen.  
   
- **Meldungen zur Ablaufverfolgung einschließen**  
+ **Meldungen zur Ablauf Verfolgung einschließen**  
  Meldungen zur Ablaufverfolgung werden in das Fehlerprotokoll eingeschlossen. Meldungen zur Ablaufverfolgung stellen detaillierte Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Vorgängen bereit. Deshalb benötigt die Protokolldatei mehr Datenträgerspeicherplatz, wenn diese Option ausgewählt ist. Diese Option sollte nur bei der Behandlung eines Problems ausgewählt werden, bei dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent eine Rolle spielt.  
   
  **OEM-Datei schreiben**  
@@ -47,8 +49,8 @@ ms.locfileid: "63245782"
  **NET SEND-Empfänger**  
  Geben Sie den Namen eines Operators ein, der NET SEND-Benachrichtigungen von Meldungen empfängt, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent in die Protokolldatei schreibt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Operatoren](operators.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Veranstalter](operators.md)   
  [SQL Server-Agent-Fehlerprotokoll](sql-server-agent-error-log.md)  
   
   

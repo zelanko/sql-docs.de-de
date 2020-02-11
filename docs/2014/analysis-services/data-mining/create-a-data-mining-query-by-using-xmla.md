@@ -1,5 +1,5 @@
 ---
-title: Erstellen Sie mithilfe von XMLA Datamining-Abfragen | Microsoft-Dokumentation
+title: Erstellen einer Data Mining-Abfrage mit XMLA | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec69c7225d4c509d93787e667612269c4de91e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085548"
 ---
 # <a name="create-a-data-mining-query-by-using-xmla"></a>Erstellen einer Data Mining-Abfrage mit XMLA
@@ -44,9 +44,9 @@ ms.locfileid: "66085548"
   
      Eine Liste der Schemarowsets wird im Fenster **Ergebnisse** zurückgegeben. Diese Liste enthält die Rowsetnamen und Rowsetspalten für alle in der aktuellen Instanz verfügbaren Rowsets.  
   
-2.  In der **Abfrage** Bereich, platzieren Sie den Cursor nach  **\<Restriction List >** , und drücken Sie EINGABETASTE, um eine neue Zeile hinzuzufügen.  
+2.  Platzieren Sie im **Abfrage** Bereich den Cursor nach ** \<der Einschränkungs Liste>** und drücken Sie die EINGABETASTE, um eine neue Zeile hinzuzufügen.  
   
-3.  Platzieren Sie den Cursor auf die leere Zeile, und geben  **\<SchemaName > DMSCHEMA_MINING_MODEL_CONTENT\</SchemaName >**  
+3.  Platzieren Sie den Cursor in die leere Zeile, und geben ** \<Sie Schema Name\<>DMSCHEMA_MINING_MODEL_CONTENT/Schemaname ein>**  
   
      Der vollständige Abschnitt für Einschränkungen sollte wie folgt angezeigt werden:  
   
@@ -98,8 +98,8 @@ ms.locfileid: "66085548"
   
      Im Ergebnisbereich wird die Schemadefinition zusammen mit den Werten für das angegebene Modell angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Modell Inhalt &#40;Analysis Services Data Mining-&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets) 
   
   

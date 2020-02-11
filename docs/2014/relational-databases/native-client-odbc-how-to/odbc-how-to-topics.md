@@ -1,5 +1,5 @@
 ---
-title: Vorgehensweisen zu ODBC | Microsoft-Dokumentation
+title: ODBC-Themen zur Vorgehensweise | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 359419f0da19151172689090272e0c42e18cc906
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200375"
 ---
 # <a name="odbc-how-to-topics"></a>ODBC How-to Topics
@@ -24,27 +24,27 @@ ms.locfileid: "63200375"
   
 -   [Themen zur Vorgehensweise: Konfigurieren des SQL Server-ODBC-Treibers](../../database-engine/dev-guide/configuring-the-sql-server-odbc-driver-how-to-topics.md)  
   
--   [Zuordnen von Handles und Verbinden mit SQLServer &#40;ODBC&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
+-   [Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server &#40;ODBC-&#41;](allocate-handles-and-connect-to-sql-server-odbc.md)  
   
--   [Ausführen von Abfragen: Themen zur Vorgehensweise &#40;ODBC&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
+-   [Gewusst-wie-Themen zum Ausführen von Abfragen &#40;ODBC-&#41;](execute-queries/executing-queries-how-to-topics-odbc.md)  
   
--   [Verarbeiten von Ergebnissen: Themen zur Vorgehensweise &#40;ODBC&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
+-   [Themen zur Vorgehensweise bei der Verarbeitung von Ergebnissen &#40;ODBC-&#41;](../../database-engine/dev-guide/processing-results-how-to-topics-odbc.md)  
   
--   [Verwenden von Cursorn Gewusst-wie-Themen &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
+-   [Gewusst-wie-Themen zur Verwendung von Cursorn &#40;ODBC&#41;](cursors/using-cursors-how-to-topics-odbc.md)  
   
 -   [Verwenden Sie Microsoft Distributed Transaction Coordinator &#40;ODBC&#41;](use-microsoft-distributed-transaction-coordinator-odbc.md)  
   
--   [Ausführen von gespeicherten Prozeduren: Themen zur Vorgehensweise &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
+-   [Gewusst-wie-Themen zur Ausführung gespeicherter Prozeduren &#40;ODBC&#41;](../../database-engine/dev-guide/running-stored-procedures-how-to-topics-odbc.md)  
   
--   [Verwalten von Text- und Image-Spalten Gewusst-wie-Themen &#40;ODBC&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
+-   [Gewusst-wie-Themen zum Verwalten von Text-und image-Spalten &#40;ODBC-&#41;](../../database-engine/dev-guide/managing-text-and-image-columns-how-to-topics-odbc.md)  
   
--   [Profilerstellung von ODBC-Treiber Abfrageleistung: Themen &#40;ODBC&#41;](profiling-odbc-driver-performance-odbc.md)  
+-   [Gewusst-wie-Themen zur Profilerstellung für ODBC-Treiber &#40;ODBC-&#41;](profiling-odbc-driver-performance-odbc.md)  
   
--   [Verarbeiten von ODBC-Fehlern &#40;ODBC&#41;](process-odbc-errors-odbc.md)  
+-   [Verarbeiten von ODBC-Fehlern &#40;ODBC-&#41;](process-odbc-errors-odbc.md)  
   
--   [Massenkopieren mit dem SQL Server-ODBC-Treiber – Themen &#40;ODBC&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
+-   [Massen kopieren mit dem SQL Server ODBC-Treiber &#40;ODBC-&#41;](bulk-copy/bulk-copying-with-the-sql-server-odbc-driver-how-to-topics-odbc.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

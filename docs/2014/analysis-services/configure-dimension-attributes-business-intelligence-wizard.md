@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Dimensionsattributen (Business Intelligence-Assistent) | Microsoft-Dokumentation
+title: Dimensions Attribute konfigurieren (Business Intelligence-Assistent) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,26 +13,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66087448"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Dimensionsattribute konfigurieren (Business Intelligence-Assistent)
   Mithilfe der Seite **Dimensionsattribute konfigurieren** können Sie die Dimensionsattribute den Typen von Attributen zuordnen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet werden, um Attribute für Kontodimensionen zu identifizieren.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Dimensionstyp**  
  Zeigt den ausgewählten Dimensionstyp an.  
   
 > [!NOTE]  
->  Diese Option nicht verfügbar ist. da die `Type` Eigenschaft der Dimension kann nicht auf einen Wert nicht geändert werden *Konto* für kontodimensionen.  
+>  Diese Option ist nicht verfügbar, da `Type` die-Eigenschaft der Dimension für Konto Dimensionen nicht in einen anderen Wert als *Account* geändert werden kann.  
   
  **Dimensionsattribute**  
  Zeigt die gültigen Typen von Attributen an, die vorhandenen Dimensionsattributen in der Dimension zugeordnet werden können.  
   
- **einschließen**  
+ **Darunter**  
  Aktivieren Sie ein Kontrollkästchen, um den entsprechenden Attributtyp in der Dimension einzuschließen.  
   
  **Attributtyp**  
@@ -41,15 +41,15 @@ ms.locfileid: "66087448"
  **Dimensionsattribut**  
  Wählen Sie das Dimensionsattribut aus, das dem entsprechenden Attributtyp zugeordnet werden soll.  
   
- **Satz von Measures semiadditiv anhand des Kontotyps**  
+ **Measures anhand des Kontotyps als semiadditiv festlegen**  
  Wählen Sie diese Option, um alle dieser Dimension zugeordneten Measures zu ändern, die nach Kontotyp aggregiert werden sollen.  
   
 > [!NOTE]  
 >  Diese Option wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde.  
   
-## <a name="see-also"></a>Siehe auch  
- [Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
- [Cube-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensions-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Business Intelligence Wizard (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   
+ [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)   
+ [Der Dimensions-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   
   

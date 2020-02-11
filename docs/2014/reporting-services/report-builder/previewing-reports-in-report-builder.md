@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107788"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anzeigen einer Berichtsvorschau in Berichts-Generator
@@ -75,7 +75,7 @@ ms.locfileid: "66107788"
   
  Wenn ein vom Bericht verwendeter Unterbericht nach der Erstellung der Bearbeitungssitzung geändert wird, wird der Bericht nicht in der Vorschau gerendert. Um den Bericht erfolgreich in der Vorschau anzuzeigen, müssen Sie den Bericht speichern oder auf **Aktualisieren** klicken, um neue Daten abzurufen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

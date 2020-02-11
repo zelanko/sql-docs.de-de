@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c726ca33df6b0cd9f79e336c7b056062a578236d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63233670"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>Verwenden geschachtelter FOR XML-Abfragen in ASP.NET
@@ -90,9 +90,9 @@ using(System.Data.SqlClient.SqlCommand cmd = c.CreateCommand())
   
 2.  Speichern Sie die ASPX-Anwendung in c:\inetpub\wwwroot-Verzeichnis (GetSalesOrderInfo.aspx).  
   
-3.  Führen Sie die Anwendung (http://server/GetSalesOrderInfo.aspx).  
+3.  Führen Sie die Anwendunghttp://server/GetSalesOrderInfo.aspx)aus (.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von geschachtelten FOR XML-Abfragen](use-nested-for-xml-queries.md)  
   
   

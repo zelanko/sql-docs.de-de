@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Designer und-Dialogfelder (tabellarisch) | Microsoft-Dokumentation
+title: Analysis Services Designer und Dialog Felder (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f049e8a91b072bc49c3c555101fdf9fb1398944c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66062571"
 ---
 # <a name="analysis-services-designers-and-dialog-boxes-tabular"></a>Analysis Services-Designer und -Dialogfelder (tabellarisch)
@@ -22,14 +22,14 @@ ms.locfileid: "66062571"
   
  Themen in diesem Abschnitt:  
   
- [Referenz für Dialogfelder &#40;SSAS&#41;](dialog-boxes-reference-ssas.md)  
+ [Dialog Felder verweisen &#40;SSAS-&#41;](dialog-boxes-reference-ssas.md)  
   
- [Import-Assistenten Tabellenreferenz &#40;SSAS&#41;](table-import-wizard-reference-ssas.md)  
+ [Tabellen Import-Assistent, Referenz &#40;SSAS&#41;](table-import-wizard-reference-ssas.md)  
   
- [Im Dialogfeld Verbindungseigenschaften &#40;SSAS – tabellarisch&#41;](connection-properties-dialog-box-ssas-tabular.md)  
+ [Dialog Feld "Verbindungs Eigenschaften" &#40;SSAS-tabellarischer&#41;](connection-properties-dialog-box-ssas-tabular.md)  
   
- [Datenbank im Dialogfeld Eigenschaften von &#40;SSAS – tabellarisch&#41;](database-properties-dialog-box-ssas-tabular.md)  
+ [Dialog Feld "Daten Bank Eigenschaften" &#40;SSAS-tabellarischer&#41;](database-properties-dialog-box-ssas-tabular.md)  
   
- [Im Dialogfeld Eigenschaften von Tabelle &#40;SSAS – tabellarisch&#41;](table-properties-dialog-box-ssas-tabular.md)  
+ [Tabellen Eigenschaften (Dialog Feld) &#40;SSAS-tabellarischer&#41;](table-properties-dialog-box-ssas-tabular.md)  
   
   

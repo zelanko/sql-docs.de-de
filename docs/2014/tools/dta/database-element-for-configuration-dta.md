@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fbca62a5d32ed6b7ec30eb5d6dba6a82a2b80c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63298352"
 ---
 # <a name="database-element-for-configuration-dta"></a>Database-Element für Konfiguration (DTA)
@@ -35,7 +35,7 @@ ms.locfileid: "63298352"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|Beschreibung|  
+|Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|Keine.|  
 |**Standardwert**|Keine.|  
@@ -48,13 +48,13 @@ ms.locfileid: "63298352"
 |**Übergeordnetes Element**|[Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md)|  
 |**Untergeordnete Elemente**|[Name-Element für Datenbank &#40;DTA&#41;](name-element-for-database-dta.md)<br /><br /> [Schema-Element für Datenbank &#40;DTA&#41;](schema-element-for-database-dta.md)<br /><br /> [Recommendation-Element &#40;DTA&#41;](recommendation-element-dta.md)|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Dieses Element hat den Namen **DatabaseTypecomplexType** im XML-Schema des Datenbankoptimierungsratgebers. Dieses `Database`-Element ist nicht mit dem Element identisch, dessen übergeordnetes Stammelement das `Server`-Element ist. Dieses Element wird oben in der XML-Eingabedatei angezeigt. Weitere Informationen finden Sie unter [Database-Element für Server &#40;DTA&#41;](database-element-for-server-dta.md).  
   
 ## <a name="example"></a>Beispiel  
- Ein Verwendungsbeispiel dieser `Database` Element finden Sie unter den [XML-Eingabe-Beispieldatei mit benutzerdefinierter Konfiguration &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
+ Ein Beispiel für die Verwendung dieses `Database` Elements finden Sie unter Beispiel für eine [XML-Eingabedatei mit benutzerdefinierten Konfigurations &#40;DTA&#41;](xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [XML-Eingabedateireferenz &amp;#40;Datenbankoptimierungsratgeber&amp;#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

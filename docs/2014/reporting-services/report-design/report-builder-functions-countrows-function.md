@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3414498d0ce399607ab0faa1a438dad88efc35c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105282"
 ---
 # <a name="countrows-function-report-builder-and-ssrs"></a>CountRows-Funktion (Berichts-Generator und SSRS)
@@ -31,17 +31,19 @@ CountRows(scope, recursive)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Bereich*  
+ *scope*  
  (`String`) Der Name eines Datasets, eines Datenbereichs oder einer Gruppe mit den zu zählenden Berichtselementen.  
   
- *Rekursiv*  
- (**Enumerationstyp**) Optional. `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ *recursive*  
+ (**Enumerationstyp**) Optional. 
+  `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt einen Wert vom Typ `Integer` zurück.  
   
-## <a name="remarks"></a>Hinweise  
- `CountRows` zählt alle Zeilen im angegebenen Bereich, einschließlich der Zeilen mit NULL-Werten.  
+## <a name="remarks"></a>Bemerkungen  
+ 
+  `CountRows` zählt alle Zeilen im angegebenen Bereich, einschließlich der Zeilen mit NULL-Werten.  
   
  Der Wert *scope* darf kein Ausdruck sein und muss auf den aktuellen Bereich oder einen enthaltenen Bereich verweisen.  
   
@@ -56,7 +58,7 @@ CountRows(scope, recursive)
 ="Number of rows: " & CountRows("GroupbyCategory")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

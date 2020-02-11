@@ -1,5 +1,5 @@
 ---
-title: Von Analysis Services Unterstützte Authentifizierungsmethoden | Microsoft-Dokumentation
+title: Von Analysis Services unterstützte Authentifizierungsmethoden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080341"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
@@ -34,7 +34,7 @@ ms.locfileid: "66080341"
   
  Weitere Informationen zu BI- und Analysis Services-Authentifizierungsabläufen finden Sie unter [Microsoft BI-Authentifizierung und Identitätsdelegierung](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a> Grundlegendes zu alternativen Authentifizierungsformen  
+##  <a name="bkmk_auth"></a>Verständnis der Authentifizierungs Alternativen  
  Verbindungen mit einer Analysis Services-Datenbank erfordern eine Windows-Benutzeridentität bzw. die Mitgliedschaft in einer Windows-Gruppe sowie die zugehörigen Berechtigungen. Die Identität kann allgemeingültig sein, wenn sich ein Benutzer z. B. anmeldet, um einen Bericht anzuzeigen. Das wahrscheinlichere Szenario ist jedoch, die den einzelnen Benutzern zugewiesenen Identitäten zu verwenden.  
   
  Ein tabellarisches oder mehrdimensionales Modell verfügt häufig über verschiedene Datenzugriffsebenen. Abhängig von der Person, die die Authentifizierungsanforderung sendet, sind diese nach Objekt oder innerhalb der Daten festgelegt. NTLM, Kerberos, EffectiveUserName oder die Standardauthentifizierung stehen zur Verfügung, um die Vorgaben zu erfüllen. Bei allen diesen Verfahren kann für jede Verbindung eine andere Benutzeridentität übergeben werden. Meistens setzen diese Optionen jedoch Single-Hop-Verbindungen voraus. Nur die Kerberos-Authentifizierung mit Delegierung macht es möglich, die ursprüngliche Benutzeridentität über mehrere Computerverbindungen hinweg bis zu einem Back-End-Datenspeicher auf einem Remoteserver beizubehalten.  
@@ -64,7 +64,7 @@ ms.locfileid: "66080341"
   
  Weitere Informationen zur Verwendung von EffectiveUserName in SharePoint finden Sie unter [Verwenden von "EffectiveUserName" der Analysis Services in SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
- **Standardauthentifizierung und anonyme Authentifizierung**  
+ **Standard Authentifizierung und anonymer Benutzer**  
   
  Die Standardauthentifizierung bietet eine vierte Alternative, mit der ein bestimmter Benutzer eine Verbindung mit einem Back-End-Server herstellen kann. Bei der Standardauthentifizierung werden Windows-Benutzername und Kennwort in der Verbindungszeichenfolge übergeben. Das erfordert jedoch zusätzliche Verschlüsselungsmethoden während der Übertragung, damit vertrauliche Informationen geschützt bleiben. Ein zentraler Vorteil der Standardauthentifizierung besteht darin, dass die Authentifizierungsanforderung domänenübergreifend übertragen werden kann.  
   
@@ -72,17 +72,17 @@ ms.locfileid: "66080341"
   
  Die Standardauthentifizierung und die anonyme Authentifizierung sind nur verfügbar, wenn Sie Analysis Services für den HTTP-Zugriff konfigurieren, d. h. die Verbindung mit IIS und msmdpump.dll herstellen. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Stored Credentials**  
+ **Gespeicherte Anmeldeinformationen**  
   
  Die meisten Anwendungsdienste der mittleren Ebene umfassen Funktionen zum Speichern von Benutzernamen und Kennwörtern, die anschließend verwendet werden, um Daten aus einem untergeordneten Datenspeicher wie Analysis Services oder der relationalen SQL Server-Engine abzurufen. So gesehen bieten gespeicherte Anmeldeinformationen eine fünfte Alternative zum Abrufen von Daten. Die Beschränkungen dieser Vorgehensweise liegen im erhöhten Wartungsaufwand, der mit der Aktualisierung von Benutzernamen und Kennwörtern verbunden ist, und der Verwendung einer einzelnen Identität für die Verbindung. Wenn Ihre Lösung die Identität des ursprünglichen Aufrufers erfordert, sind gespeicherte Anmeldeinformationen keine geeignete Alternative.  
   
  Weitere Informationen zu gespeicherten Anmeldeinformationen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md) und [Verwenden von Excel Services mit Secure Store Service in SharePoint Server 2013](https://go.microsoft.com/fwlink/?LinkID=309869).  
   
-## <a name="see-also"></a>Siehe auch  
- [Verwenden des Identitätswechsels mit Transportsicherheit](https://go.microsoft.com/fwlink/?LinkId=311727)   
- [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwenden des Identitäts Wechsels mit Transport Sicherheit](https://go.microsoft.com/fwlink/?LinkId=311727)   
+ [Konfigurieren von HTTP-Zugriff auf Analysis Services auf Internetinformationsdienste &#40;IIS&#41; 8,0](configure-http-access-to-analysis-services-on-iis-8-0.md)   
  [Konfigurieren von Analysis Services für die eingeschränkte Kerberos-Delegierung](configure-analysis-services-for-kerberos-constrained-delegation.md)   
- [SPN-Registrierung für eine Analysis Services-Instanz](spn-registration-for-an-analysis-services-instance.md)   
+ [SPN-Registrierung für eine Analysis Services Instanz](spn-registration-for-an-analysis-services-instance.md)   
  [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)  
   
   

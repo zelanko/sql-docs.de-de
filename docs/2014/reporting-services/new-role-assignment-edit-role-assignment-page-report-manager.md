@@ -1,5 +1,5 @@
 ---
-title: 'Neue Rollenzuweisung: Bearbeiten Sie die Rolle ", Seite" Zuweisung "(Berichts-Manager) | Microsoft-Dokumentation'
+title: 'Neue Rollenzuweisung: Seite "Rollenzuweisung bearbeiten" (Berichts-Manager) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108158"
 ---
-# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Neue Rollenzuweisung: Bearbeiten Sie die Rolle ", Seite" Zuweisung "(Berichts-Manager)
+# <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“ (Berichts-Manager)
   Verwenden Sie die Seite Neue Rollenzuweisung oder Rollenzuweisung bearbeiten, um Elementen und Vorgängen des Berichtsservers Berechtigungen zu erteilen. Jeder Benutzer, der auf den Berichtsserver zugreifen möchte, muss über eine Rollenzuweisung verfügen, die die Zugriffsebene definiert. Sie können Rollenzuweisungen im Stammknoten oder in einem bestimmten Bericht, Modell, Ordner, einer bestimmten Ressource oder freigegebenen Datenquelle erstellen. Die Sicherheit in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wird durch Rollenzuweisungen erzwungen, die Sie auf Elemente anwenden. Eine Rollenzuweisung ordnet eine Gruppe oder einen Benutzer einer Rollendefinition zu, wobei jede Rollendefinition die Aufgaben identifiziert, die Gruppen oder Benutzer in Bezug auf ein spezifisches Element ausführen können.  
   
- Rollenzuweisungen auf Elementebene können weit reichende Auswirkungen haben. Obwohl sie in der Regel mit einem einzelnen Bericht oder Ordner verbunden sind, können sie auch auf einer höheren Ebene in der Ordnerhierarchie definiert werden und von Ordnern und Elementen weiter unten in der Struktur geerbt werden. Weitere Informationen finden Sie unter [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](security/grant-user-access-to-a-report-server.md)sollten nur sehr wenige Benutzer zugewiesen werden.  
+ Rollenzuweisungen auf Elementebene können weit reichende Auswirkungen haben. Obwohl sie in der Regel mit einem einzelnen Bericht oder Ordner verbunden sind, können sie auch auf einer höheren Ebene in der Ordnerhierarchie definiert werden und von Ordnern und Elementen weiter unten in der Struktur geerbt werden. Weitere Informationen finden Sie unter [Gewähren von Benutzer Zugriff auf einen Berichts Server &#40;Berichts-Manager&#41;](security/grant-user-access-to-a-report-server.md).  
   
 ## <a name="navigation"></a>Navigation  
  Verwenden Sie folgendes Verfahren, um zu dieser Position in der Benutzeroberfläche zu navigieren.  
@@ -38,15 +38,15 @@ ms.locfileid: "66108158"
     > [!NOTE]  
     >  Falls ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, klicken Sie auf der Symbolleiste auf **Elementsicherheit bearbeiten** , um die Sicherheitseinstellungen zu ändern.  
   
-## <a name="options"></a>Optionen  
- **Gruppen- oder Benutzernamen ein**  
- Geben Sie den Namen eines Gruppen- oder Benutzerkontos ein, für das die Rollenzuweisung erstellt wird. Der Gruppen- oder Benutzername muss ein gültiges Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format: \<Domäne >\\< Konto\>.  
+## <a name="options"></a>Tastatur  
+ **Gruppen- oder Benutzername**  
+ Geben Sie den Namen eines Gruppen- oder Benutzerkontos ein, für das die Rollenzuweisung erstellt wird. Der Gruppen- oder Benutzername muss ein gültiges Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format \<ein: \\ Domäne>\><Konto.  
   
 > [!NOTE]  
 >  Dieses Feld ist nur auf der Seite Neue Rollenzuweisung verfügbar.  
   
- **Rolle**  
- Zeigt alle auf dem Berichtsserver definierten Rollen an, die zum Definieren der Sicherheit für Elemente verwendet werden können. Wenn Sie die Rollenzuweisung für einen Bericht oder Ordner erstellen oder bearbeiten, wählen Sie eine oder mehrere Rollen aus, bis die kombinierten Aufgaben die Aktionen beschreiben, die der Benutzer ausführen darf. Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], um die Gruppe der von einer Rolle unterstützten Aufgaben anzuzeigen. Sie können im Berichts-Manager keine Rollen anzeigen, erstellen, ändern oder löschen. Anweisungen hierzu finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ **Spielen**  
+ Zeigt alle auf dem Berichtsserver definierten Rollen an, die zum Definieren der Sicherheit für Elemente verwendet werden können. Wenn Sie die Rollenzuweisung für einen Bericht oder Ordner erstellen oder bearbeiten, wählen Sie eine oder mehrere Rollen aus, bis die kombinierten Aufgaben die Aktionen beschreiben, die der Benutzer ausführen darf. Verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Sie, um den von jeder Rolle unterstützten Satz von Aufgaben anzuzeigen. Sie können im Berichts-Manager keine Rollen anzeigen, erstellen, ändern oder löschen. Anweisungen hierzu finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  **Beschreibung**  
  Zeigt zusätzliche Informationen zur Rolle an. Bei vordefinierten Rollen wie z. B. **Browser** oder **Inhalts-Manager**werden in der Beschreibung die Aufgaben zusammengefasst, die von einer Rolle unterstützt werden.  
@@ -57,11 +57,11 @@ ms.locfileid: "66108158"
 > [!NOTE]  
 >  Diese Schaltfläche ist nur auf der Seite Rollenzuweisung bearbeiten verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Rollenzuweisungen](security/role-assignments.md)   
  [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](security/grant-user-access-to-a-report-server.md)  
   

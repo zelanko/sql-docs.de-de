@@ -1,5 +1,5 @@
 ---
-title: -XTP Garbagecollection | Microsoft-Dokumentation
+title: XTP-Garbage Collection | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5796cc1184e862b4e8afe42b4fa5f5babe8358dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151033"
 ---
 # <a name="xtp-garbage-collection"></a>XTP Garbage Collection
   Das XTP-Leistungsobjekt für die Garbage Collection enthält Leistungsindikatoren für die Garbage Collection der XTP-Engine.  
   
- Diese Tabelle beschreibt die **XTP-Garbage Collection** Leistungsindikatoren.  
+ In dieser Tabelle werden die Leistungsindikatoren der **XTP-Garbage Collection** beschrieben.  
   
-|Leistungsindikator|Description|  
+|Leistungsindikator|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Dusty-Corner-Scanwiederholungen/s (durch GC ausgegeben)**|Die durchschnittliche Anzahl von Scanwiederholungen aufgrund von Schreibkonflikten während Dusty-Corner-Sweep-Vorgängen, die pro Sekunde durch die Garbage Collection ausgegeben werden. Dieser Leistungsindikator befindet sich auf einer sehr niedrigen Ebene und dient nicht der Verwendung durch Kunden.|  
 |**Arbeitselemente des GC-Hauptthreads/s**|Die Anzahl an Arbeitselementen, die vom GC-Hauptthread verarbeitet werden.|  
@@ -38,7 +38,7 @@ ms.locfileid: "63151033"
 |**Berührte Sweepzeilen/s**|Die durchschnittliche Anzahl der Zeilen, die pro Sekunde bei Dusty-Corner-Sweep-Vorgängen berührt werden.|  
 |**Gestartete Sweep-Scans/s**|Die durchschnittliche Anzahl der pro Sekunde gestarteten Dusty-Corner-Sweep-Scans.|  
   
-## <a name="see-also"></a>Siehe auch  
- [XTP &#40;In-Memory-OLTP&#41; -Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XTP-&#40;in-Memory-OLTP&#41; Leistungsindikatoren](../../integration-services/performance/performance-counters.md)  
   
   

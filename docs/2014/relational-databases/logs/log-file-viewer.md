@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f72f8e40374198a5230e32b8ec5b3974fdb6b971
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144647"
 ---
 # <a name="log-file-viewer"></a>Protokolldatei-Viewer
@@ -51,7 +51,7 @@ ms.locfileid: "63144647"
 |Beschreibt, wie Offlineprotokolldateien über registrierte Server angezeigt werden und wie WMI-Berechtigungen überprüft werden.|[Anzeigen von Offlineprotokolldateien](view-offline-log-files.md)|  
 |Öffnet die F1-Hilfe für den Protokolldatei-Viewer.|[Protokolldatei-Viewer (F1-Hilfe)](log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Audit &#40;Datenbank-Engine&#41;](../security/auditing/sql-server-audit-database-engine.md)   
  [SQL Server-Agent-Fehlerprotokoll](../../ssms/agent/sql-server-agent-error-log.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Überprüfen Sie die automatische Vergrößerung ist für alle Daten und Protokolldateien auf aktiviert, während des Upgradevorgangs | Microsoft-Dokumentation
+title: Überprüfen, ob die automatische Vergrößerung für alle Daten-und Protokolldateien während des Upgradevorgangs aktiviert ist | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,21 +16,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091218"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Überprüfen, ob für alle Daten- und Protokolldateien die automatische Vergrößerung während des Upgradeprozesses aktiviert ist
-  Upgrade Advisor hat Daten- oder Protokolldateien erkannt, für die die automatische Vergrößerung nicht festgelegt ist. Neue und verbesserte Funktionen erfordern zusätzlichen freien Speicherplatz für Benutzerdatenbanken und die **Tempdb** -Systemdatenbank. Um sicherzustellen, dass Ressourcen können Sie größenerweiterungen beim Upgrade und bei nachfolgenden Produktionsvorgängen, die durch die automatische Vergrößerung für alle Benutzer Daten und Protokolldateien auf empfohlen und **Tempdb** Daten- und Protokolldateien Dateien vor dem Upgrade.  
+  Upgrade Advisor hat Daten- oder Protokolldateien erkannt, für die die automatische Vergrößerung nicht festgelegt ist. Neue und erweiterte Features erfordern zusätzlichen Speicherplatz für Benutzer Datenbanken und die **tempdb** -Systemdatenbank. Um sicherzustellen, dass Ressourcen während des Upgrades und bei nachfolgenden Produktions Vorgängen Größen Steigerungen berücksichtigen können, empfiehlt es sich, für alle Benutzerdaten-und-Protokolldateien und die **tempdb** -Daten-und-Protokolldateien vor dem Upgrade die automatische Vergrößerung  
   
- Nachdem Sie Ihre Arbeitsauslastungen aktualisiert und getestet haben, können Sie die automatische Vergrößerung auf OFF festlegen oder das FILEGROWTH-Inkrement für Benutzerdaten- und Protokolldateien entsprechend anpassen. Es wird empfohlen, die automatische Vergrößerung auf für die **Tempdb** -Systemdatenbank. Weitere Informationen finden Sie unter "Kapazitätsplanung für tempdb" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
+ Nachdem Sie Ihre Arbeitsauslastungen aktualisiert und getestet haben, können Sie die automatische Vergrößerung auf OFF festlegen oder das FILEGROWTH-Inkrement für Benutzerdaten- und Protokolldateien entsprechend anpassen. Es wird empfohlen, die automatische Vergrößerung für die **tempdb** -Systemdatenbank auf on festhalten. Weitere Informationen finden Sie unter "Kapazitätsplanung für tempdb" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  **Datendateien**  
   
  In der folgenden Tabelle sind Änderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen aufgelistet, die zusätzlichen Speicherplatz für benutzerdefinierte Datendateien erforderlich machen.  
@@ -38,8 +38,9 @@ ms.locfileid: "66091218"
 |Funktion|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
 |-------------|-----------------------------------------------------|  
 |Volltext|Die Zuordnung der Dokument-ID (DOCID) wird in der Datendatei statt im Volltextkatalog gespeichert.|  
-|`text`-, `ntext`- und `image`-Spalten|LOB-Spalten (Large Object), die als Datentypen `text`, `ntext` oder `image` definiert sind, erfordern 40 Byte zusätzlichen Speicherplatz pro Spalte. Diese einmalige Speicherplatzerweiterung erfolgt beim ersten Update der jeweiligen LOB-Spalte.|  
-|Metadaten|Für Datenbankobjekte und Benutzerberechtigungen werden zusätzliche Systemmetadaten in der PRIMARY-Dateigruppe der einzelnen Benutzerdatenbanken erstellt und verwaltet. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Berechtigungen, die mit einem Berechtigenden (GRANTOR) oder einer Empfängerliste verknüpft sind, in einer einzigen Zeile als Bitmap gespeichert. Die Bitmap wird auf mehrere Zeilen ausgedehnt.<br /><br /> Während des Updateprozesses muss ausreichend Speicherplatz zur Verfügung stehen, um sowohl die alten als auch die neuen Metadaten zu speichern. Die alten Metadaten werden nach dem Upgrade gelöscht.|  
+|
+  `text`-, `ntext`- und `image`-Spalten|LOB-Spalten (Large Object), die als Datentypen `text`, `ntext` oder `image` definiert sind, erfordern 40 Byte zusätzlichen Speicherplatz pro Spalte. Diese einmalige Speicherplatzerweiterung erfolgt beim ersten Update der jeweiligen LOB-Spalte.|  
+|metadata|Für Datenbankobjekte und Benutzerberechtigungen werden zusätzliche Systemmetadaten in der PRIMARY-Dateigruppe der einzelnen Benutzerdatenbanken erstellt und verwaltet. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Berechtigungen, die mit einem Berechtigenden (GRANTOR) oder einer Empfängerliste verknüpft sind, in einer einzigen Zeile als Bitmap gespeichert. Die Bitmap wird auf mehrere Zeilen ausgedehnt.<br /><br /> Während des Updateprozesses muss ausreichend Speicherplatz zur Verfügung stehen, um sowohl die alten als auch die neuen Metadaten zu speichern. Die alten Metadaten werden nach dem Upgrade gelöscht.|  
   
  **Transaktionsprotokolldateien**  
   
@@ -49,9 +50,9 @@ ms.locfileid: "66091218"
 |-------------|-----------------------------------------------------|  
 |Wiederherstellung|Während der Rollbackphase einer Wiederherstellung nach einem Systemabsturz ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es Benutzern, auf die Datenbank zuzugreifen. Dies ist möglich, weil die Transaktionen, für die zum Zeitpunkt des Systemabsturzes noch kein Commit durchgeführt wurde, alle Sperren erneut abrufen, die sie vor dem Crash aufrechterhalten haben. Während für diese Transaktionen ein Rollback durchgeführt wird, schützen ihre Sperren sie vor Eingriffen seitens der Benutzer. Diese zusätzlichen Sperrinformationen müssen im Transaktionsprotokoll verwaltet werden.|  
   
- **Daten- und Tempdb-Dateien**  
+ **tempdb-Daten- und Protokolldateien**  
   
- In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **Tempdb** Datenbank dient zum Speichern der folgenden Objekte:  
+ In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die **tempdb** -Datenbank zum Speichern der folgenden Objekte verwendet:  
   
 -   Temporäre Objekte, die explizit erstellt werden, z. B. Tabellen, gespeicherte Prozeduren, Tabellenvariablen oder Cursor  
   
@@ -59,16 +60,16 @@ ms.locfileid: "66091218"
   
 -   Ergebnisse temporärer Sortierungen, wenn Sie Indizes erstellen oder neu erstellen, sofern SORT_IN_TEMPDB angegeben ist  
   
- Verwenden auch zusätzliche Objekte die **Tempdb** Datenbank. Die folgende Tabelle enthält Änderungen und Ergänzungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Features, die zusätzlichen Speicherplatz für **Tempdb** Daten-und Protokolldateien.  
+ Zusätzliche Objekte verwenden auch die **tempdb** -Datenbank. In der folgenden Tabelle sind Änderungen oder Erweiterungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Features aufgeführt, die zu zusätzlichen Speicherplatzanforderungen für **tempdb** -Daten-und-Protokolldateien führen.  
   
 |Funktion|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
 |-------------|-----------------------------------------------------|  
-|Zeilenversionsverwaltung|Die Zeilenversionsverwaltung ist ein allgemeines Framework in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es wird für folgende Aufgaben verwendet:<br /><br /> Unterstützung von Triggern: Erstellen Sie die inserted- und deleted-Tabellen in Triggern. Für alle durch den Trigger geänderten Zeilen wird die Versionsverwaltung verwendet. Das schließt die Zeilen ein, die durch die Anweisung geändert wurden, mit der der Start des Triggers erfolgte, sowie alle vom Trigger bewirkten Datenänderungen. AFTER-Trigger den Versionsspeicher von **Tempdb** zum Speichern der vor der Images, der vom Trigger geänderten Zeilen. Beim Massenladen von Daten mit aktivierten Triggern wird dem Versionsspeicher eine Kopie jeder Zeile hinzugefügt.<br /><br /> Unterstützen von Multiple Active Result Sets (MARS). Wenn eine MARS-Sitzung eine Datenänderungsanweisung (z. B. INSERT, UPDATE oder DELETE) ausgibt, während es ein aktives Resultset gibt, wird für die von der Änderungsanweisung betroffenen Zeilen die Versionsverwaltung verwendet.<br /><br /> Unterstützen von Indexvorgängen, die die ONLINE-Option angeben. Onlineindexvorgänge verwenden die Zeilenversionsverwaltung, um den Indexvorgang von den Auswirkungen der Änderungen zu isolieren, die von anderen Transaktionen vorgenommen wurden. Auf diese Weise ist es nicht erforderlich, freigegebene Sperren für Zeilen anzufordern, die gelesen wurden. Darüber hinaus die gleichzeitige Update- und Löschvorgänge während Onlineindexvorgänge erfordern Speicherplatz für Versionsdatensätze in **Tempdb**.<br /><br /> Unterstützen von auf der Zeilenversionsverwaltung basierenden Transaktionsisolationsstufen: Eine neue Implementierung der Read Committed-Isolationsstufe, die die Zeilenversionsverwaltung verwendet, um die Lesekonsistenz auf Anweisungsebene zu gewährleisten. Eine neue Isolationsstufe – Momentaufnahme, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten.<br /><br /> <br /><br /> Zeilenversionen werden der **Tempdb** -Versionsspeicher lange genug aufbewahrt, um die Anforderungen von Transaktionen, die unter zeilenversionsbasierten Isolationsstufen erfüllen.<br /><br /> Weitere Informationen über die Zeilenversionsverwaltung und den Versionsspeicher finden Sie im Thema "Grundlegendes zu zeilenversionsbasierten Isolationsstufen" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.|  
-|Zwischenspeichern von Metadaten temporärer Tabellen und temporärer Variablen|Für alle Metadaten temporärer Tabellen und temporärer Variablen, die im Metadatencache von zwischengespeicherten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], werden zwei extraseiten für zugeordnet **Tempdb**.<br /><br /> Wenn eine gespeicherte Prozedur oder ein Trigger eine temporäre Tabelle oder eine temporäre Variable erstellt, wird das temporäre Objekt nach Ausführung der Prozedur bzw. des Triggers nicht gelöscht. Stattdessen wird das temporäre Objekt auf eine Seite gekürzt und wiederverwendet, wenn die Prozedur oder der Trigger das nächste Mal ausgeführt wird.|  
-|Indizes für partitionierte Tabellen|Wenn die [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sortiervorgänge zum Erstellen von partitionierten Indizes, ausreichend Speicherplatz für die Zwischensortierläufe jeder Partition ist erforderlich, durchführt **Tempdb** , wenn die SORT_IN_TEMPDB-Indexoption angegeben ist.|  
-|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] explizit verwendet **Tempdb** bei vorhandenen dialogkontexts, der im Arbeitsspeicher (ca. 1 KB pro Dialogfeld) verbleiben kann.<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] verwendet implizit **Tempdb** durch das Zwischenspeichern von Objekten im Kontext der abfrageausführung. Zum Beispiel Arbeitstabellen, die für Zeitgeberereignisse und im Hintergrund übermittelte Konversationen verwendet werden.<br /><br /> Die Funktionen DBMail, Ereignisbenachrichtigungen und Abfragebenachrichtigungen verwenden implizit [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
-|LOB-Datentyp (Large Object)<br /><br /> LOB-Variablen und -Parameter|Die Datentypen `varchar(max)`, `nvarchar(max)`, **Varbinary (Max) Text**, `ntext`, `image,` und `xml` LOB-Typen sind.<br /><br /> Wenn eine Transaktion auf zeilenversionsverwaltung basierende Isolationsstufe für die Datenbank aktiviert ist, und Änderungen von großen Objekten vorgenommen werden, wird das geänderte Fragment des LOB-OBJEKTS in den Versionsspeicher in kopiert **Tempdb**.<br /><br /> Als LOB-Datentyp definierte Parameter befinden sich im **Tempdb**.|  
-|Allgemeine Tabellenausdrücke|Temporäre Arbeitstabellen für spoolvorgänge werden in erstellt **Tempdb** wenn allgemeine tabellenausdrucksabfragen ausgeführt werden.|  
+|Zeilenversionsverwaltung|Die Zeilenversionsverwaltung ist ein allgemeines Framework in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es wird für folgende Aufgaben verwendet:<br /><br /> Unterstützungs Trigger: Erstellen Sie die eingefügten und gelöschten Tabellen in Triggern. Für alle durch den Trigger geänderten Zeilen wird die Versionsverwaltung verwendet. Das schließt die Zeilen ein, die durch die Anweisung geändert wurden, mit der der Start des Triggers erfolgte, sowie alle vom Trigger bewirkten Datenänderungen. AFTER-Trigger verwenden den Versionsspeicher von **tempdb** , um die before-Bilder der vom Trigger geänderten Zeilen zu speichern. Beim Massenladen von Daten mit aktivierten Triggern wird dem Versionsspeicher eine Kopie jeder Zeile hinzugefügt.<br /><br /> Unterstützen von Multiple Active Result Sets (MARS). Wenn eine MARS-Sitzung eine Datenänderungsanweisung (z. B. INSERT, UPDATE oder DELETE) ausgibt, während es ein aktives Resultset gibt, wird für die von der Änderungsanweisung betroffenen Zeilen die Versionsverwaltung verwendet.<br /><br /> Unterstützen von Indexvorgängen, die die ONLINE-Option angeben. Onlineindexvorgänge verwenden die Zeilenversionsverwaltung, um den Indexvorgang von den Auswirkungen der Änderungen zu isolieren, die von anderen Transaktionen vorgenommen wurden. Auf diese Weise ist es nicht erforderlich, freigegebene Sperren für Zeilen anzufordern, die gelesen wurden. Außerdem erfordern gleichzeitige benutzeraktualisierungs-und Löschvorgänge während Online Index Vorgängen Speicherplatz für Versionsdaten Sätze in **tempdb**.<br /><br /> Unterstützung von auf Zeilen Versionsverwaltung basierenden Transaktions Isolations Stufen: eine neue Implementierung der Isolationsstufe "Read Commit", die die Zeilen Versionsverwaltung verwendet, um Lese Konsistenz auf Anweisungs Ebene bereitzustellen Eine neue Isolationsstufe – Momentaufnahme, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten.<br /><br /> <br /><br /> Zeilen Versionen werden im **tempdb** -Versionsspeicher lange genug aufbewahrt, um den Anforderungen von Transaktionen gerecht zu werden, die unter auf Zeilen Versionsverwaltung basierenden Isolations Stufen ausgeführt werden.<br /><br /> Weitere Informationen über die Zeilenversionsverwaltung und den Versionsspeicher finden Sie im Thema "Grundlegendes zu zeilenversionsbasierten Isolationsstufen" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.|  
+|Zwischenspeichern von Metadaten temporärer Tabellen und temporärer Variablen|Für alle Metadaten temporärer Tabellen und temporärer Variablen, die im Metadatencache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zwischengespeichert werden, werden zwei zusätzliche Seiten für **tempdb**zugeordnet.<br /><br /> Wenn eine gespeicherte Prozedur oder ein Trigger eine temporäre Tabelle oder eine temporäre Variable erstellt, wird das temporäre Objekt nach Ausführung der Prozedur bzw. des Triggers nicht gelöscht. Stattdessen wird das temporäre Objekt auf eine Seite gekürzt und wiederverwendet, wenn die Prozedur oder der Trigger das nächste Mal ausgeführt wird.|  
+|Indizes für partitionierte Tabellen|Wenn das [!INCLUDE[ssDE](../../includes/ssde-md.md)] sortieren zum Erstellen partitionierter Indizes durchführt, ist ausreichend Speicherplatz für die zwischen Sortier Läufe jeder Partition in **tempdb** erforderlich, wenn die SORT_IN_TEMPDB Index-Option angegeben wird.|  
+|[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)]verwendet **tempdb** explizit, wenn vorhandener Dialog Kontext beibehalten wird, der nicht im Speicher verbraucht werden kann (ungefähr 1 KB pro Dialogfeld).<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)]verwendet **tempdb** implizit durch das Zwischenspeichern von Objekten im Kontext der Abfrage Ausführung. Zum Beispiel Arbeitstabellen, die für Zeitgeberereignisse und im Hintergrund übermittelte Konversationen verwendet werden.<br /><br /> Die Funktionen DBMail, Ereignisbenachrichtigungen und Abfragebenachrichtigungen verwenden implizit [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
+|LOB-Datentyp (Large Object)<br /><br /> LOB-Variablen und -Parameter|Die Datentypen `varchar(max)`, `nvarchar(max)`, **varbinary (max) Text**, `ntext` `image,` und `xml` sind große Objekttypen.<br /><br /> Wenn eine auf der Zeilen Versionsverwaltung basierende Transaktions Isolationsstufe in der Datenbank aktiviert ist und Änderungen an großen Objekten vorgenommen werden, wird das geänderte Fragment des LOB-Objekts in den Versionsspeicher in **tempdb**kopiert.<br /><br /> Als LOB-Datentyp definierte Parameter werden in **tempdb**gespeichert.|  
+|Allgemeine Tabellenausdrücke|Temporäre Arbeits Tabellen für Spoolvorgänge werden in **tempdb** erstellt, wenn allgemeine Tabellen Ausdrucksabfragen ausgeführt werden.|  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Um die automatische Vergrößerung für eine Daten- oder Protokolldatei festzulegen, ändern Sie die folgenden Anweisungen, um die Daten und das Protokoll für Ihre Datenbank anzugeben. Sie sollten das FILEGROWTH-Inkrement auf einen Wert einstellen, der für Ihr System geeignet ist.  
@@ -91,10 +92,10 @@ MODIFY FILE
 |---------------|--------------------------|  
 |0 - 50 MB|10 MB|  
 |100 - 200 MB|20 MB|  
-|500 MB oder mehr|10%|  
+|500 MB oder mehr|10 %|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Mining-Struktur-Dialogfeld "Eigenschaften" (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Mining Struktur Eigenschaften (Dialog Feld) (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077663"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Allgemein (Dialogfeld "Miningstruktureigenschaften") (Analysis Services &ndash; Data Mining)
@@ -28,12 +28,12 @@ ms.locfileid: "66077663"
   
 ## <a name="pages"></a>Seiten  
   
-|Seite|Description|  
+|Seite|BESCHREIBUNG|  
 |----------|-----------------|  
 |**Allgemein**|Mithilfe der Seite **Allgemein** können Sie die allgemeinen Eigenschaften der Miningstruktur anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Allgemein &#40;Dialogfeld „Miningstruktur“&#41; &#40;Analysis Services – Data Mining&#41;](general-mining-structure-dialog-box-analysis-services-data-mining.md).|  
 |**Fehlerkonfiguration**|Mithilfe der Seite **Fehlerkonfiguration** können Sie die Fehlerkonfigurationseinstellungen für die Miningstruktur anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Fehlerkonfiguration &#40;Dialogfeld „Miningstruktur“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

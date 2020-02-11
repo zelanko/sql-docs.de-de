@@ -1,5 +1,5 @@
 ---
-title: Technische Referenz zu Microsoft Logistic Regression-Algorithmus | Microsoft-Dokumentation
+title: Technische Referenz für den Microsoft Logistic Regression-Algorithmus | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9d3dd4e9da0445f966e9e46013f0b7cd4998190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083938"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Logistic Regression-Algorithmus
@@ -32,39 +32,39 @@ ms.locfileid: "66083938"
 ## <a name="implementation-of-the-microsoft-logistic-regression-algorithm"></a>Implementierung des Microsoft Logistic Regression-Algorithmus  
  Angenommen, die vorhersagbare Spalte enthält nur zwei Status, und Sie möchten dennoch eine Regressionsanalyse durchführen, indem Sie Eingabespalten mit der Wahrscheinlichkeit, dass die vorhersagbare Spalte einen bestimmten Status haben wird, in Beziehung setzen. Im folgenden Diagramm werden die resultierenden Ergebnisse dargestellt, wenn Sie die Werte 1 und 0 den Status der vorhersagbaren Spalte zuweisen, die Wahrscheinlichkeit berechnen, dass die Spalte einen bestimmten Status haben wird, und eine lineare Regression für eine Eingabevariable durchführen.  
   
- ![Schlecht modellierte Daten mit linearer Regression](../media/logistic-linear-regression.gif "schlecht modellierte Daten mit linearer Regression")  
+ ![Schlecht modellierte Daten mit linearer Regression](../media/logistic-linear-regression.gif "Schlecht modellierte Daten mit linearer Regression")  
   
  Die X-Achse enthält die Werte einer Eingabespalte. Die Y-Achse enthält die Wahrscheinlichkeiten, dass die vorhersagbare Spalte den einen oder anderen Status haben wird. Das Problem dabei ist, dass die lineare Regression die Spalte nicht auf einen Wert zwischen 0 und 1 einschränkt, obwohl dies die maximalen und minimalen Werte der Spalte sind. Um dieses Problem zu lösen, kann die logistische Regression ausgeführt werden. Anstatt eine gerade Linie zu erstellen, erstellt die logistische Regressionsanalyse eine Kurve in Form eines "S", die die maximalen und minimalen Einschränkungen enthält. Das folgende Diagramm stellt z. B. die resultierenden Ergebnisse dar, wenn Sie eine logistische Regression für die im vorigen Beispiel verwendeten Daten durchführen.  
   
- ![Daten mithilfe der logistischen Regression modellierte](../media/logistic-regression.gif "Daten modelliert werden, mithilfe der logistischen Regression")  
+ ![Mithilfe der logistischen Regression modellierte Daten](../media/logistic-regression.gif "Mithilfe der logistischen Regression modellierte Daten")  
   
  Beachten Sie, dass die Kurve nicht über den Wert 1 bzw. nicht unter den Wert 0 geht. Sie können die logistische Regression verwenden, um zu beschreiben, welche Eingabespalten zur Statusbestimmung der vorhersagbaren Spalte wichtig sind.  
   
-### <a name="feature-selection"></a>Funktionsauswahl  
+### <a name="feature-selection"></a>Featureauswahl  
  Die Funktionsauswahl wird automatisch von allen Analysis Services Data Mining-Algorithmen zur Verbesserung der Analyse und zur Reduzierung der Verarbeitungslast verwendet. Die für die Funktionsauswahl in logistischen Regressionsmodellen verwendete Methode hängt vom Datentyp des Attributs ab. Da die logistische Regression auf dem Microsoft Neural Network-Algorithmus basiert, verwendet sie eine Teilmenge der Funktionsauswahlmethoden, die für neuronale Netzwerke gelten. Weitere Informationen finden Sie unter [Funktionsauswahl &#40;Data Mining&#41;](feature-selection-data-mining.md).  
   
 ### <a name="scoring-inputs"></a>Bewerten von Eingaben  
- *Bewertung* bezeichnet im Kontext eines neuronalen Netzwerkmodells oder eines logistischen Regressionsmodells den Prozess der Konvertierung der in den Daten vorhandenen Werte in einen Satz von Werten, die die gleiche Skala verwenden und daher miteinander verglichen werden können. Angenommen, die Eingaben für Income bewegen sich zwischen 0 und 100.000, während die Eingaben für [Number of Children] zwischen 0 und 5 liegen. Mit diesem Konvertierungsprozess können Sie die Wichtigkeit der einzelnen Eingaben unabhängig von der Unterschiedlichkeit der Werte *bewerten*oder vergleichen.  
+ Die *Bewertung* im Kontext eines neuronalen Netzwerk Modells oder eines logistischen Regressionsmodells bedeutet, dass die in den Daten vorhandenen Werte in einen Satz von Werten umgewandelt werden, die dieselbe Skala verwenden und daher miteinander verglichen werden können. Angenommen, die Eingaben für Income bewegen sich zwischen 0 und 100.000, während die Eingaben für [Number of Children] zwischen 0 und 5 liegen. Mit diesem Konvertierungsprozess können Sie die Wichtigkeit der einzelnen Eingaben unabhängig von der Unterschiedlichkeit der Werte *bewerten*oder vergleichen.  
   
- Für jeden Status, der im Trainingssatz angezeigt wird, generiert das Modell eine Eingabe. Für diskrete oder diskretisierte Eingaben wird eine zusätzliche Eingabe erstellt, um den Status Missing darzustellen, wenn der Status Missing mindestens einmal im Trainingssatz erscheint. Für kontinuierliche Eingaben werden höchstens zwei Eingabeknoten erstellt: ein Knoten für fehlende Werte, sofern in den Trainingsdaten vorhanden, und ein Knoten für alle vorhandenen Werte oder Werte ungleich NULL. Jede Eingabe wird zu einem numerischen Format mit der Z-Ergebnis-normalisierungsmethode, (x - μ) skaliert / StdDev.  
+ Für jeden Status, der im Trainingssatz angezeigt wird, generiert das Modell eine Eingabe. Für diskrete oder diskretisierte Eingaben wird eine zusätzliche Eingabe erstellt, um den Status Missing darzustellen, wenn der Status Missing mindestens einmal im Trainingssatz erscheint. Für kontinuierliche Eingaben werden höchstens zwei Eingabeknoten erstellt: ein Knoten für fehlende Werte, sofern in den Trainingsdaten vorhanden, und ein Knoten für alle vorhandenen Werte oder Werte ungleich NULL. Jede Eingabe wird mit der z-Score-normalisierungs Methode (x-x)/StdDev. auf ein numerisches Format skaliert.  
   
  Während der z-Ergebnis-Normalisierung werden die mittlere (µ) und die Standardabweichung über den gesamten Trainingssatz abgerufen.  
   
  **Kontinuierliche Werte**  
   
- Wert ist vorhanden:   (X-μ) σ / / / X ist der tatsächlich codierte Wert)  
+ Wert ist vorhanden: (X-°)/zug\/X ist der tatsächliche Wert, der codiert wird.)  
   
- Wert fehlt: – μ σ / / / negatives Mu geteilt durch Sigma)  
+ Der Wert ist nicht vorhanden:-"/" "/" negatives mu "dividiert durch Sigma)  
   
  **Diskrete Werte**  
   
- Μ = p - (die vorherige Wahrscheinlichkeit eines Status)  
+ ° = p-(die vorherige Wahrscheinlichkeit eines Zustands)  
   
- StdDev  = sqrt(p(1-p))  
+ STDDEV = sqrt (p (1-p))  
   
- Wert ist vorhanden:     (1-μ)/σ / / (eins minus Mu) geteilt durch Sigma)  
+ Wert ist vorhanden: (1-°)/-//(ein minus MU) dividiert durch Sigma)  
   
- Wert ist abwesend: (-μ) / σ / / negatives Mu geteilt durch Sigma)  
+ Der Wert ist nicht vorhanden: (--)/-///negative mu dividiert durch Sigma)  
   
 ### <a name="understanding-logistic-regression-coefficients"></a>Grundlegendes zu logistischen Regressionskoeffizienten  
  In der statistischen Literatur sind verschiedene Methoden zur Durchführung einer logistischen Regression vorhanden. Ein wichtiger Bestandteil aller Methoden besteht darin, die Güte des Modells zu bewerten. Eine Vielzahl von statistischen Daten zur Prüfung der Modellgüte sind vorgeschlagen worden, darunter Quotenverhältnisse (Odds Ratios) und Kovariaten-Muster. Eine Beschreibung, wie die Güte eines Modells gemessen wird, würde den Rahmen dieses Themas sprengen. Sie können jedoch den Wert der Koeffizienten im Modell abrufen und sie zur Entwicklung eigener Gütekennzahlen verwenden.  
@@ -82,9 +82,9 @@ FROM <model name>.CONTENT
 WHERE NODE_TYPE = 23  
 ```  
   
- Für jeden Ausgabewert gibt diese Abfrage die Koeffizienten und eine ID zurück, die zurück auf den verknüpften Eingabeknoten verweisen. Die Abfrage gibt außerdem eine Zeile zurück, die den Wert der Ausgabe und das konstante Glied enthält. Jede Eingabe X hat einen eigenen Koeffizienten (Ci), aber die geschachtelte Tabelle enthält auch einen "freien" Koeffizienten (Co), die gemäß der folgenden Formel berechnet:  
+ Für jeden Ausgabewert gibt diese Abfrage die Koeffizienten und eine ID zurück, die zurück auf den verknüpften Eingabeknoten verweisen. Die Abfrage gibt außerdem eine Zeile zurück, die den Wert der Ausgabe und das konstante Glied enthält. Jede Eingabe X hat einen eigenen Koeffizienten (CI). die in der Tabelle enthaltene Tabelle enthält jedoch auch einen "freien" Koeffizienten (CO), der gemäß der folgenden Formel berechnet wird:  
   
- F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
+ F (X) = x1 * C1 + x2\*C2 +... + XN\*CN + X0  
   
  Aktivierung: exp(F(X)) / (1 + exp(F(X)) )  
   
@@ -109,12 +109,12 @@ WHERE NODE_TYPE = 23
  MAXIMUM_INPUT_ATTRIBUTES  
  Definiert die Anzahl von Eingabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.  
   
- Der Standardwert lautet 255.  
+ Der Standardwert ist 255.  
   
  MAXIMUM_OUTPUT_ATTRIBUTES  
  Definiert die Anzahl von Ausgabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.  
   
- Der Standardwert lautet 255.  
+ Der Standardwert ist 255.  
   
  MAXIMUM_STATES  
  Gibt die maximale Anzahl der vom Algorithmus unterstützten Attributstatus an. Wenn die Anzahl der Status eines Attributs größer als die maximale Anzahl der Status ist, verwendet der Algorithmus die gebräuchlichsten Status und ignoriert die restlichen Status.  
@@ -126,7 +126,7 @@ WHERE NODE_TYPE = 23
   
  Wenn also HOLDOUT_PERCENTAGE auf 30 festgelegt ist, verwendet der Algorithmus entweder den Wert dieses Parameters oder einen Wert, der 70 % der Gesamtanzahl der Fälle entspricht, je nachdem, welcher Wert kleiner ist.  
   
- Der Standardwert ist 10.000.  
+ Standard: 10000  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Die folgenden Modellierungsflags werden zur Verwendung mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus unterstützt.  
@@ -141,21 +141,21 @@ WHERE NODE_TYPE = 23
   
  Gilt für die Miningmodellspalte.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Ein logistisches Regressionsmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression-Algorithmus unterstützt bestimmte Inhaltstypen für Eingabespalten und für vorhersagbare Spalten sowie Modellierungsflags, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zur Bedeutung der Inhaltstypen in einem Miningmodell finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-|Spalte|Inhaltstypen|  
+|Column|Inhaltstypen|  
 |------------|-------------------|  
 |Eingabeattribut|Continuous, Discrete, Discretized, Key, Table|  
 |Vorhersagbares Attribut|Continuous, Discrete, Discretized|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
- [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)   
- [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)  
+ [Beispiele für lineare Regressionsmodell Abfragen](linear-regression-model-query-examples.md)   
+ [Mining Modell Inhalt von logistischen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Spaltenaliase in ORDER BY-Klausel können nicht vom Tabellenalias als Präfix | Microsoft-Dokumentation
+title: Spalten Aliasen in der ORDER BY-Klausel können keinen Tabellenalias als Präfix aufweisen. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096318"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Spaltenaliase in ORDER BY-Klauseln können nicht vom Tabellenalias als Präfix verwendet werden
@@ -25,7 +25,7 @@ ms.locfileid: "66096318"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Die folgende Abfrage wird z. B. in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ausgeführt, gibt in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jedoch einen Fehler zurück  
   
 ```  
@@ -36,9 +36,10 @@ FROM Person.Contact p
 ORDER BY p.l  
 ```  
   
- [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] ordnet `p.l` in der `ORDER BY`-Klausel keiner gültigen Spalte in der Tabelle zu.  
+ 
+  [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] ordnet `p.l` in der `ORDER BY`-Klausel keiner gültigen Spalte in der Tabelle zu.  
   
-### <a name="exception"></a>Exception  
+### <a name="exception"></a>Ausnahme  
  Wenn der in der ORDER BY-Klausel vorangestellte Spaltenalias ein gültiger Spaltenname in der angegebenen Tabelle ist, wird die Abfrage ohne Fehler ausgeführt. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann die Semantik der Anweisung unterschiedlich sein. So ist der Spaltenalias (`id`) in der folgenden Anweisung beispielsweise ein gültiger Spaltenname in der `sysobjects`-Tabelle. In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] wird der `CAST`-Vorgang beim Ausführen der Anweisung durchgeführt, nachdem das Resultset sortiert wurde. Dies bedeutet, dass die `name`-Spalte im Sortiervorgang verwendet wird. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird der `CAST`-Vorgang vor dem Sortiervorgang ausgeführt. Dies bedeutet, dass die `id`-Spalte der Tabelle im Sortiervorgang verwendet wird und das Resultset in einer unerwarteten Reihenfolge zurückgegeben wird.  
   
 ```  
@@ -70,8 +71,8 @@ FROM Person.Contact p
 ORDER BY p.LastName  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

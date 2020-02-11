@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer relationalen Miningstruktur | Microsoft-Dokumentation
+title: Erstellen einer relationalen Mining Struktur | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5dbf64a128cb21c7ac0e3d956a3dbdc6b320317
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085381"
 ---
 # <a name="create-a-relational-mining-structure"></a>Erstellen einer relationalen Miningstruktur
@@ -30,7 +30,7 @@ ms.locfileid: "66085381"
   
  Dieses Thema bietet eine Übersicht darüber, wie der Data Mining-Assistent verwendet wird, um eine relationale Miningstruktur zu erstellen.  
   
- [Anforderungen](#BKMK_Relational_Structure)  
+ [Requirements (Anforderungen)](#BKMK_Relational_Structure)  
   
  [Prozess zum Erstellen einer relationalen Miningstruktur](#BKMK_Relational_Structure)  
   
@@ -42,63 +42,63 @@ ms.locfileid: "66085381"
   
  [Warum und wie wird Drillthrough aktiviert?](#BKMK_DrillThru)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Zunächst müssen Sie über eine vorhandene Datenquelle verfügen. Sie können mithilfe des Datenquellen-Designers eine Datenquelle einrichten, wenn diese nicht bereits vorhanden ist. Weitere Informationen finden Sie unter [Erstellen einer Datenquelle &#40;SSAS – mehrdimensional&#41;](../multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
   
  Verwenden Sie danach den Datenquellensicht-Assistenten, um die erforderlichen Daten in einer einzelnen Datenquellensicht zusammenzustellen. Weitere Informationen darüber, wie Sie Daten mit Datenquellensichten auswählen, transformieren, filtern oder verwalten können, finden Sie unter [Datenquellsichten in mehrdimensionalen Modellen](../multidimensional-models/data-source-views-in-multidimensional-models.md).  
   
-##  <a name="BKMK_Relational_Structure"></a> Übersicht über den Prozess  
+##  <a name="BKMK_Relational_Structure"></a>Übersicht über den Prozess  
  Starten Sie den Data Mining-Assistenten, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und dann **Neue Miningstruktur hinzufügen**auswählen. Der Assistent führt Sie beim Erstellen der Struktur eines neuen relationalen Miningmodells durch folgende Schritte:  
   
-1.  **Definitionsmethode auswählen**: Hier wählen Sie einen Datenquellentyp aus, und wählen Sie **aus relationaler Datenbank oder Data Warehouse**.  
+1.  **Definitions Methode auswählen**: Hier wählen Sie einen Daten Quellentyp aus und wählen **aus relationaler Datenbank oder Data Warehouse**.  
   
-2.  **Erstellen von Datamining-Struktur**: Bestimmen Sie, ob Sie nur eine Struktur erstellen oder eine Struktur mit einem Miningmodell.  
+2.  **Data Mining-Struktur erstellen**: bestimmen Sie, ob Sie nur eine Struktur oder eine Struktur mit einem Mining Modell erstellen.  
   
      Sie wählen auch einen entsprechenden Algorithmus für das ursprüngliche Modell aus. Hilfestellung bei der Auswahl des besten Algorithmus für bestimmte Tasks finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
-3.  **Wählen Sie die Datenquellensicht**: Wählen Sie eine Datenquellenansicht, die beim training des Modells verwenden. Die Datenquellensicht kann auch für Tests verwendete Daten oder nicht verknüpfte Daten enthalten. Sie wählen aus, welche Daten tatsächlich in der Struktur und im Modell verwendet werden. Sie können zu einem späteren Zeitpunkt auch Filter für die Daten anwenden.  
+3.  **Datenquellen Sicht auswählen**: Wählen Sie eine Datenquellen Sicht aus, die beim Trainieren des Modells verwendet werden soll. Die Datenquellensicht kann auch für Tests verwendete Daten oder nicht verknüpfte Daten enthalten. Sie wählen aus, welche Daten tatsächlich in der Struktur und im Modell verwendet werden. Sie können zu einem späteren Zeitpunkt auch Filter für die Daten anwenden.  
   
-4.  **Tabellentypen angeben**: Wählen Sie die Tabelle, die für die Analyse verwendeten Fälle enthält. Besonders bei den Datasets, die zur Erstellung von Market Basket-Modellen verwendet werden, können Sie auch eine verknüpfte Tabelle einbinden, um diese als geschachtelte Tabelle zu verwenden.  
+4.  **Tabellentypen angeben**: Wählen Sie die Tabelle aus, die die für die Analyse verwendeten Fälle enthält. Besonders bei den Datasets, die zur Erstellung von Market Basket-Modellen verwendet werden, können Sie auch eine verknüpfte Tabelle einbinden, um diese als geschachtelte Tabelle zu verwenden.  
   
      Für jede Tabelle müssen Sie den entsprechenden Schlüssel angeben, damit der Algorithmus weiß, wie ein eindeutiger Datensatz identifiziert wird. Außerdem müssen Sie die verknüpften Datensätze angeben, wenn Sie eine geschachtelte Tabelle hinzugefügt haben.  
   
      Weitere Informationen finden Sie unter [Mining Structure Columns](mining-structure-columns.md).  
   
-5.  **Geben Sie die Trainingsdaten**: Auf dieser Seite Wählen Sie die *Falltabelle*, d.h. die Tabelle, die die wichtigsten Daten für die Analyse enthält.  
+5.  **Trainingsdaten angeben**: auf dieser Seite Wählen Sie die *Fall Tabelle*aus, die die Tabelle enthält, die die wichtigsten Daten für die Analyse enthält.  
   
      Besonders bei jenen Datasets, die zur Erstellung von Market Basket-Modellen verwendet werden, können Sie auch eine verknüpfte Tabelle einbinden. Die Werte in dieser geschachtelten Tabelle werden als mehrfache Werte betrachtet, die sich alle auf eine einzelne Zeile (oder auf einen einzelnen Fall) in der Haupttabelle beziehen.  
   
-6.  **Geben Sie Inhalte von Spalten und Datentypen**: Für jede Spalte, die Sie in der Struktur verwenden, müssen Sie auswählen, sowohl eine *Datentyp* und *Inhaltstyp*.  
+6.  **Inhalt und Datentypen für Spalten angeben**: für jede Spalte, die Sie in der Struktur verwenden, müssen Sie sowohl einen *Datentyp* als auch einen *Inhaltstyp*auswählen.  
   
-     Der Assistent erkennt automatisch mögliche Datentypen, aber Sie müssen nicht den vom Assistenten empfohlenen Datentyp verwenden. Selbst wenn die Daten z. B. Zahlen enthalten, können diese für Kategoriedaten eventuell repräsentativ sein. Die von Ihnen als Schlüssel angegebenen Spalten werden automatisch dem richtigen Datentyp für den entsprechenden Modelltyp zugewiesen. Weitere Informationen finden Sie unter [Miningmodellspalten](mining-model-columns.md) und [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md).  
+     Der Assistent erkennt automatisch mögliche Datentypen, aber Sie müssen den vom Assistenten empfohlenen Datentyp nicht verwenden. Selbst wenn die Daten z. B. Zahlen enthalten, können diese für Kategoriedaten eventuell repräsentativ sein. Die von Ihnen als Schlüssel angegebenen Spalten werden automatisch dem richtigen Datentyp für den entsprechenden Modelltyp zugewiesen. Weitere Informationen finden Sie unter [Miningmodellspalten](mining-model-columns.md) und [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md).  
   
      Der *Inhaltstyp* , den Sie für jede im Modell verwendete Spalte auswählen, teilt den Algorithmus mit, wie die Daten verarbeitet werden sollen.  
   
      Sie können sich z. B. dafür entscheiden, Zahlen zu diskretisieren anstatt sie als kontinuierliche Werte zu verwenden. Sie können auch beim Algorithmus anfragen, dass dieser den besten Inhaltstyp für die Spalte automatisch erkennt. Weitere Informationen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-7.  **Erstellen eines Testsatzes**: Auf dieser Seite können Sie den Assistenten mitteilen, wie viele Daten zum Testen des Modells reserviert werden soll. Wenn die Daten mehrere Modelle unterstützen, empfiehlt es sich, ein zurückgehaltenes Dataset zu erstellen, sodass alle Modelle basierend auf den gleichen Daten getestet werden können.  
+7.  **Testsatz erstellen**: auf dieser Seite können Sie dem Assistenten mitteilen, wie viele Daten für die Verwendung beim Testen des Modells reserviert werden sollen. Wenn die Daten mehrere Modelle unterstützen, empfiehlt es sich, ein zurückgehaltenes Dataset zu erstellen, sodass alle Modelle basierend auf den gleichen Daten getestet werden können.  
   
      Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
-8.  **Der Assistent**: Auf dieser Seite geben einen Namen, um die neue Miningstruktur und das zugeordnete Miningmodell, und speichern die Struktur und Modell.  
+8.  **Assistenten abschließen**: auf dieser Seite übergeben Sie einen Namen für die neue Mining Struktur und das zugehörige Mining Modell und speichern die Struktur und das Modell.  
   
      Sie können außerdem einige wichtige Optionen je nach Modelltyp festlegen. Sie können z. B. Drillthrough für die Struktur aktivieren.  
   
      Zu diesem Zeitpunkt sind die Miningstruktur und das zugeordnete Modell nur Metadaten. Sie müssen beide verarbeiten, um Ergebnisse zu erhalten.  
   
-##  <a name="BKMK_ChooseRelData"></a> So werden relationale Daten ausgewählt  
+##  <a name="BKMK_ChooseRelData"></a>Auswählen von relationalen Daten  
  Relationale Miningstrukturen können auf Daten basieren, die durch eine OLE DB-Datenquelle zur Verfügung gestellt werden. Wenn die Quelldaten in mehreren Tabellen enthalten sind, können Sie eine Datenquellensicht verwenden, um die von Ihnen benötigten Tabellen und Spalten an einem Ort zusammenzuführen.  
   
- Wenn die Tabellen 1: n Beziehungen enthält-haben z. B. mehrere Kaufdatensätze für jeden Kunden, die Sie analysieren möchten – Sie können sowohl Tabellen hinzufügen, und dann eine Tabelle als Falltabelle, Verknüpfen von Daten für die zahlreichen Seiten der Beziehung wie einen geschachtelte Tabelle.  
+ Wenn die Tabellen 1: n-Beziehungen enthalten, z. b. mehrere Kauf Datensätze für jeden Kunden, den Sie analysieren möchten, können Sie beide Tabellen hinzufügen und dann eine Tabelle als Fall Tabelle verwenden, indem Sie Daten auf der n-Seite der Beziehung als eine Tabelle.  
   
  Die Daten in einer Miningstruktur werden von sämtlichen Komponenten abgeleitet, die in einer vorhandenen Datenquellensicht enthalten sind. Sie können Daten innerhalb der Datenquellensicht nach Bedarf ändern. Dabei können Sie Beziehungen oder abgeleitete Spalten hinzufügen, die in den zugrunde liegenden relationalen Daten unter Umständen nicht vorhanden sind. Sie können auch benannte Berechnungen oder Aggregationen innerhalb der Datenquellensicht erstellen. Diese Funktionen sind äußerst praktisch, wenn Sie keinen Einfluss auf die Anordnung der Daten in der Datenquelle haben oder wenn Sie mit unterschiedlichen Aggregationen der Daten für die Data Mining-Modelle experimentieren möchten.  
   
  Sie müssen nicht alle verfügbaren Daten verwenden. Sie können auswählen, welche Spalten Sie in die Miningstruktur einbinden möchten. Alle Modelle, die auf dieser Struktur basieren, können dann jene Spalten verwenden. Alternativ können Sie bestimmte Spalten für ein bestimmtes Modell als `Ignore` kennzeichnen. Sie können es den Benutzern eines Data Mining-Modells ermöglichen, ein Drilldown für die Ergebnisse des Miningmodells auszuführen, um die zusätzlichen Spalten der Miningstruktur anzuzeigen, die selbst nicht im Miningmodell enthalten sind.  
   
-##  <a name="bkmk_ContentDataType"></a> So geben Sie Inhaltstyp und Datentyp an  
+##  <a name="bkmk_ContentDataType"></a>Angeben von Inhaltstyp und Datentyp  
  Der Datentyp entspricht in großem Umfang den Datentypen, die Sie in SQL Server oder anderen Anwendungsschnittstellen spezifizieren: Datumsangaben und Uhrzeiten, Zahlen zu verschiedenen Größen, boolesche Werte, Text und andere diskrete Daten.  
   
- Inhaltstypen sind jedoch wichtig für Data Mining und wirken sich auf das Ergebnis der Analyse aus. Der Inhaltstyp teilt dem Algorithmus mit, was dieser mit den Daten tun soll: Sollen Zahlen in einer kontinuierlichen Skala verarbeitet oder klassifiziert werden? Wie viele potenziellen Werte sind vorhanden? Ist jeder Wert eindeutig? Wenn der Wert ist ein Schlüssel, welche Art von Schlüssel – gibt es einen Datum/Uhrzeit-Wert, eine Sequenz oder eine andere Art von Schlüssel?  
+ Inhaltstypen sind jedoch wichtig für Data Mining und wirken sich auf das Ergebnis der Analyse aus. Der Inhaltstyp teilt dem Algorithmus mit, was dieser mit den Daten tun soll: Sollen Zahlen in einer kontinuierlichen Skala verarbeitet oder klassifiziert werden? Wie viele potenziellen Werte sind vorhanden? Ist jeder Wert eindeutig? Wenn der Wert ein Schlüssel ist, welcher Schlüsseltyp ist er, gibt er einen Datums-/Uhrzeitwert, eine Sequenz oder eine andere Art von Schlüssel an?  
   
  Beachten Sie, dass die Auswahl des Datentyps die Auswahl der Inhaltstypen einschränken kann. Sie können z. B. keine Werte diskretisieren, die nicht numerisch sind. Wenn Sie den von Ihnen gewünschten Inhaltstyp nicht sehen können, so können Sie auf **Zurück** klicken, um zur Datentypseite zurückzukehren und es mit einem anderen Datentyp zu versuchen.  
   
@@ -106,29 +106,29 @@ ms.locfileid: "66085381"
   
  Wenn die Daten z. B. eine Einkommensspalte enthalten, können Sie beim Verwenden des Microsoft Decision Trees-Algorithmus zwei verschiedene Modelle erstellen und die Spalte abwechselnd entweder mit fortlaufenden Nummern oder als diskrete Bereiche konfigurieren. Wenn Sie jedoch mit dem Microsoft Naive Bayes-Algorithmus ein Modell hinzufügen, sind Sie gezwungen, die Spalte ausschließlich in diskretisierte Werte zu ändern, da dieser Algorithmus keine fortlaufenden Nummern unterstützt.  
   
-##  <a name="bkmk_Holdout"></a> Warum und wie werden Daten in Trainings- und Testsätze aufgeteilt?  
+##  <a name="bkmk_Holdout"></a>Warum und wie werden Daten in Trainings-und Testsätze aufgeteilt?  
  Gegen Ende der Assistentenunterstützung müssen Sie sich entscheiden, ob die Daten in Trainings- oder Testsätze partitioniert werden. Die Möglichkeit, einen willkürlich entnommenen Anteil der Daten für den Test bereitzustellen, ist sehr vorteilhaft. Dadurch wird sichergestellt, dass für die Verwendung aller mit der neuen Miningstruktur verknüpften Miningmodelle ein konsistenter Satz an Testdaten zur Verfügung steht.  
   
 > [!WARNING]  
->  Beachten Sie, dass diese Option nicht für alle Modelltypen verfügbar ist. Z. B. Wenn Sie ein forecasting-Modell erstellen, wird nicht Sie Zurückgehaltene Daten verwenden können, da Time Series-Algorithmus erfordert, dass keine Lücken in den Daten werden. Eine Liste der Modelltypen, die Datasets für zurückgehaltene Daten unterstützen, finden Sie unter [Trainings- und Testdatasets](training-and-testing-data-sets.md).  
+>  Beachten Sie, dass diese Option nicht für alle Modelltypen verfügbar ist. Wenn Sie z. b. ein Planungsmodell erstellen, können Sie keine zurückgehaltenen Daten verwenden, da der Time Series-Algorithmus erfordert, dass keine Lücken in den Daten vorhanden sind. Eine Liste der Modelltypen, die Datasets für zurückgehaltene Daten unterstützen, finden Sie unter [Trainings- und Testdatasets](training-and-testing-data-sets.md).  
   
  Um ein Dataset für zurückgehaltene Daten zu erstellen, geben Sie den Prozentsatz der Daten an, den Sie für Tests verwenden möchten. Alle verbleibenden Daten werden zu Trainingszwecken verwendet. Optional können Sie die maximale Anzahl von Fällen festlegen, die für Tests verwendet werden soll. Oder Sie legen einen Ausgangswert fest, der beim Starten des zufälligen Auswahlprozesses verwendet werden soll.  
   
  Die Definition des Testsatzes für zurückgehaltene Daten wird zusammen mit der Miningstruktur gespeichert. Dadurch steht, wenn Sie basierend auf der Struktur ein neues Modell erstellen, das Testdataset für die Bewertung der Genauigkeit des Modells immer zur Verfügung. Wenn Sie den Cache der Miningstruktur löschen, werden die Informationen darüber, welche Fälle für Trainings- und welche für Testzwecke verwendet werden, ebenfalls gelöscht.  
   
-##  <a name="BKMK_DrillThru"></a> Warum und wie wird Drillthrough aktiviert?  
- Fast am Ende der Assistentenunterstützung haben Sie die Möglichkeit, *Drillthrough*zu aktivieren. Es ist einfach, verpassen Sie diese Option, aber es ist sehr wichtig. Mithilfe von Drillthrough können Sie Quelldaten in der Miningstruktur anzeigen, indem Sie das Miningmodell abfragen.  
+##  <a name="BKMK_DrillThru"></a>Warum und wie wird Drillthrough aktiviert?  
+ Fast am Ende der Assistentenunterstützung haben Sie die Möglichkeit, *Drillthrough*zu aktivieren. Diese Option ist einfach zu übersehen, aber Sie ist ein wichtiger Aspekt. Mithilfe von Drillthrough können Sie Quelldaten in der Miningstruktur anzeigen, indem Sie das Miningmodell abfragen.  
   
  Warum ist dies nützlich? Es sei gegeben, dass Sie die Ergebnisse eines Clusteringmodells anzeigen und die Kunden ansehen möchten, die in einen bestimmten Cluster eingefügt werden. Mit Drillthrough können Sie Details wie etwa Kontaktinformationen anzeigen.  
   
 > [!WARNING]  
 >  Damit Sie Drillthrough verwenden können, müssen Sie es aktivieren, wenn Sie die Miningstruktur erstellen. Sie können zu einem späteren Zeitpunkt Drillthrough für Modelle aktivieren, indem Sie eine Eigenschaft für das Modell festlegen. Die Miningstrukturen machen es jedoch erforderlich, dass diese Option am Anfang festgelegt wird. Weitere Informationen finden Sie unter [Drillthroughabfragen &#40;Data Mining&#41;](drillthrough-queries-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Designer](data-mining-designer.md)   
- [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining-wizard-analysis-services-data-mining.md)   
- [Miningmodelleigenschaften](mining-model-properties.md)   
- [Eigenschaften für Miningstrukturen und Strukturspalten](properties-for-mining-structure-and-structure-columns.md)   
+ [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining-wizard-analysis-services-data-mining.md)   
+ [Mining Modell Eigenschaften](mining-model-properties.md)   
+ [Eigenschaften für Mining Struktur-und Struktur Spalten](properties-for-mining-structure-and-structure-columns.md)   
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078840"
 ---
 # <a name="modifying-the-product-dimension"></a>Ändern der Product-Dimension
@@ -29,7 +29,7 @@ ms.locfileid: "66078840"
   
 2.  Klicken Sie unten im Diagrammbereich mit der rechten Maustaste auf die Tabellenüberschrift **Product** . Klicken Sie anschließend auf **Neue benannte Berechnung**.  
   
-3.  In der **benannte Berechnung erstellen** (Dialogfeld), Typ `ProductLineName` in die **Spaltenname** Feld.  
+3.  Geben `ProductLineName` Sie im Dialogfeld **benannte Berechnung erstellen** im Feld **Spaltenname** ein.  
   
 4.  Geben Sie in das Feld **Ausdruck** die folgende **CASE** -Anweisung ein (Sie können sie auch kopieren und einfügen):  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078840"
   
      Diese **CASE** -Anweisung erstellt benutzerfreundliche Namen für jede Produktlinie im Cube.  
   
-5.  Klicken Sie auf **OK** zum Erstellen der `ProductLineName` benannte Berechnung. Sie müssen möglicherweise einen Moment warten.  
+5.  Klicken Sie auf **OK** , `ProductLineName` um die benannte Berechnung zu erstellen. Sie müssen möglicherweise einen Moment warten.  
   
 6.  Klicken Sie im Menü **Datei** auf **Alle speichern**.  
   
@@ -57,21 +57,21 @@ ms.locfileid: "66078840"
   
 2.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Line**aus.  
   
-3.  Klicken Sie im Eigenschaftenfenster auf der rechten Seite des Bildschirms auf die **NameColumn** Eigenschaftenfeld am unteren Rand des Fensters, und klicken Sie dann auf die Schaltfläche zum Durchsuchen ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
+3.  Klicken Sie im Eigenschaftenfenster auf der rechten Seite des Bildschirms unten im Fenster auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**..**.), um das Dialogfeld **Namensspalte** zu öffnen. (Sie müssen ggf. auf die Registerkarte **Eigenschaften** auf der rechten Seite vom Bildschirm klicken, um das Eigenschaftenfenster zu öffnen).  
   
-4.  Wählen Sie `ProductLineName` am unteren Rand der **Quellspalte** aus, und klicken Sie dann auf **OK**.  
+4.  Wählen `ProductLineName` Sie unten in der Liste **Quell Spalte** die Option aus, und klicken Sie dann auf **OK**.  
   
-     Das Feld „NameColumn“ enthält jetzt den Text **Product.ProductLineName (WChar)** . Die Elemente der Attributhierarchie **Product Line** zeigen nun den vollständigen Namen der Produktlinie anstelle eines abgekürzten Produktliniennamens an.  
+     Das Feld „NameColumn“ enthält jetzt den Text **Product.ProductLineName (WChar)**. Die Elemente der Attributhierarchie **Product Line** zeigen nun den vollständigen Namen der Produktlinie anstelle eines abgekürzten Produktliniennamens an.  
   
 5.  Wählen Sie im Bereich **Attribute** der Registerkarte **Dimensionsstruktur** die Option **Product Key**aus.  
   
-6.  Klicken Sie im Eigenschaftenfenster auf die **NameColumn** Eigenschaft ein, und klicken Sie dann auf den Auslassungspunkten ( **...** ) die Schaltfläche, um die **Spalte "Name"** Dialogfeld.  
+6.  Klicken Sie im Eigenschaftenfenster auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten (**...**), um das Dialogfeld **Namensspalte** zu öffnen.  
   
 7.  Wählen Sie **EnglishProductName** in der Liste **Quellspalte** aus, und klicken Sie auf **OK**.  
   
-     Das Feld "NameColumn" enthält jetzt den Text **Product.EnglishProductName (WChar)** .  
+     Das Feld "NameColumn" enthält jetzt den Text **Product.EnglishProductName (WChar)**.  
   
-8.  Klicken Sie im Eigenschaftenfenster einen Bildlauf nach oben, klicken Sie auf die **Namen** Eigenschaftenfeld, und geben Sie dann `Product Name`.  
+8.  Scrollen Sie im Eigenschaftenfenster nach oben, klicken Sie auf das Eigenschafts Feld **Name** , `Product Name`und geben Sie dann ein.  
   
 ## <a name="creating-a-hierarchy"></a>Erstellen einer Hierarchie  
   
@@ -79,11 +79,11 @@ ms.locfileid: "66078840"
   
 1.  Ziehen Sie das **Product Line** -Attribut vom Bereich **Attribute** in den Bereich **Hierarchien** .  
   
-2.  Ziehen Sie die **Modellname** -Attribut aus der **Attribute** -Bereich in die  **\<ungeahnte >** Zelle der **Hierarchien** unterhalb der **Product Line** Ebene.  
+2.  Ziehen Sie das **Model Name** -Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle im Bereich **Hierarchien** unterhalb der **Product Line** -Ebene.  
   
-3.  Ziehen Sie die `Product Name` -Attribut aus der **Attribute** -Bereich in die  **\<neue Ebene >** Zelle die **Hierarchien** Bereich unterhalb der  **Modellname** Ebene. (Sie haben im vorherigen Abschnitt Product Key in Product Name umbenannt.)  
+3.  Ziehen Sie `Product Name` das-Attribut aus dem Bereich **Attribute** in die ** \<neue Ebene>** Zelle des Bereichs **Hierarchien** unterhalb der **Model Name** -Ebene. (Sie haben im vorherigen Abschnitt Product Key in Product Name umbenannt.)  
   
-4.  In der **Hierarchien** im Bereich der **Dimensionsstruktur** Registerkarte der rechten Maustaste auf der Titelleiste des Fensters der **Hierarchie** Hierarchie, klicken Sie auf **umbenennen** , und geben Sie dann `Product Model Lines`.  
+4.  Klicken Sie im Bereich **Hierarchien** der Registerkarte **Dimensions Struktur** mit der rechten Maustaste auf die Titelleiste der **Hierarchie** Hierarchie, klicken Sie auf `Product Model Lines` **Umbenennen**, und geben Sie dann ein.  
   
      Der Name der Hierarchie lautet jetzt `Product Model Lines`.  
   
@@ -95,55 +95,55 @@ ms.locfileid: "66078840"
   
 1.  Wählen Sie im Bereich **Attribute** die folgenden Attribute, indem Sie beim Klicken die STRG-Taste gedrückt halten:  
   
-    -   **Klasse**  
+    -   **Klassi**  
   
-    -   **Farbe**  
+    -   **Color**  
   
-    -   **Days To Manufacture**  
+    -   **Zu Produktionstage**  
   
-    -   **Reorder Point**  
+    -   **Punkt neu anordnen**  
   
-    -   **Safety Stock Level**  
+    -   **Sicherheitsebene**  
   
     -   **Größe**  
   
-    -   **Size Range**  
+    -   **Größenbereich**  
   
-    -   **Stil**  
+    -   **style**  
   
-    -   **Weight**  
+    -   **Gewicht**  
   
-2.  In der **AttributeHierarchyDisplayFolder** Eigenschaftenfeld im Fenster Eigenschaften den Typ `Stocking`.  
+2.  Geben `Stocking`Sie im Eigenschaftenfenster **AttributeHierarchyDisplayFolder** -Eigenschafts Feld ein.  
   
      Sie haben diese Attribute jetzt in einen einzigen Anzeigeordner gruppiert.  
   
 3.  Wählen Sie im Bereich **Attribute** die folgenden Attribute aus:  
   
-    -   **Dealer Price**  
+    -   **Händler Preis**  
   
-    -   **List Price**  
+    -   **Listenpreis**  
   
-    -   **Standard Cost**  
+    -   **Standard Kosten**  
   
-4.  In der **AttributeHierarchyDisplayFolder** eigenschaftenzelle im Fenster Eigenschaften den Typ `Financial`.  
+4.  Geben `Financial`Sie in der **AttributeHierarchyDisplayFolder** -Eigenschafts Zelle im Eigenschaftenfenster ein.  
   
      Sie haben diese Attribute jetzt in einen zweiten Anzeigeordner gruppiert.  
   
 5.  Wählen Sie im Bereich **Attribute** die folgenden Attribute aus:  
   
-    -   **End Date**  
+    -   **Enddatum**  
   
-    -   **Startdatum**  
+    -   **Start Datum**  
   
     -   **Status**  
   
-6.  In der **AttributeHierarchyDisplayFolder** eigenschaftenzelle im Fenster Eigenschaften den Typ `History`.  
+6.  Geben `History`Sie in der **AttributeHierarchyDisplayFolder** -Eigenschafts Zelle im Eigenschaftenfenster ein.  
   
      Sie haben diese Attribute jetzt in einen dritten Anzeigeordner gruppiert.  
   
-7.  Wählen Sie die `Product Model Lines` Hierarchie in der **Hierarchien** Bereich, und ändern Sie dann die **AllMemberName** Eigenschaft im Eigenschaftenfenster zu `All Products`.  
+7.  Wählen Sie `Product Model Lines` die Hierarchie im Bereich **Hierarchien** aus, und ändern Sie dann die **allmembership Name** -Eigenschaft `All Products`in der Eigenschaftenfenster auf.  
   
-8.  Klicken Sie auf einen offenen Bereich, der die **Hierarchien** Bereich, und ändern Sie dann die **AttributeAllMemberName** Eigenschaft am oberen Rand des Fensters "Eigenschaften" auf `All Products`.  
+8.  Klicken Sie im Bereich **Hierarchien** auf einen geöffneten Bereich, und ändern Sie dann die **attributeallmembership Name** -Eigenschaft am oberen Rand des `All Products`Eigenschaftenfenster in.  
   
      Durch das Anklicken eines offenen Bereichs können Sie Eigenschaften der Produktdimension selbst ändern. Sie können auch auf **Product** am oberen Rand der Attributliste im Bereich **Attribute** klicken.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66078840"
   
 2.  Klicken Sie im Diagramm mit der rechten Maustaste auf das **Model Name** -Attribut und anschließend auf **Neue Attributbeziehung**.  
   
-3.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut** **Model Name**. Legen Sie für **Verknüpftes Attribut** die Einstellung **Produktgruppe**fest.  
+3.  Im Dialogfeld **Attributbeziehung erstellen** lautet das **Quellattribut****Model Name**. Legen Sie für **Verknüpftes Attribut** die Einstellung **Produktgruppe**fest.  
   
      Belassen Sie in der Liste **Beziehungstyp** den Beziehungstyp auf **Flexibel** , da sich Beziehungen zwischen den Elementen im Laufe der Zeit ändern können. So könnte ein Produktmodell beispielsweise in eine andere Produktlinie verschoben werden.  
   
@@ -174,16 +174,16 @@ ms.locfileid: "66078840"
   
 2.  Nachdem die Meldung **Bereitstellung erfolgreich abgeschlossen** angezeigt wird, klicken Sie auf die Registerkarte **Browser** im **Dimensions-Designer** für die **Product** -Dimension und anschließend auf der Symbolleiste auf die Schaltfläche zum Wiederherstellen der Verbindung.  
   
-3.  Überprüfen Sie, ob `Product Model Lines` ausgewählt ist, der **Hierarchie** aus, und erweitern Sie dann `All Products`.  
+3.  Vergewissern Sie `Product Model Lines` sich, dass in der Liste **Hierarchie** ausgewählt ist `All Products`, und erweitern Sie dann.  
   
-     Beachten Sie, dass der Name des der **alle** Element angezeigt wird, als `All Products`. Dies ist, da Sie geändert haben die **AllMemberName** -Eigenschaft für die Hierarchie `All Products` weiter oben in der Lektion. Auch verfügen die Elemente der **Product Line** -Ebene jetzt über benutzerfreundliche Namen anstelle von Abkürzungen aus einem Buchstaben.  
+     Beachten Sie, dass der Name des Elements **alle** als `All Products`angezeigt wird. Dies liegt daran, `All Products` dass Sie die **allmembership Name** -Eigenschaft für die Hierarchie in eine frühere Version der Lektion geändert haben. Auch verfügen die Elemente der **Product Line** -Ebene jetzt über benutzerfreundliche Namen anstelle von Abkürzungen aus einem Buchstaben.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Ändern der Date-Dimension](lesson-3-4-modifying-the-date-dimension.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Definieren Sie benannte Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Erstellen von benutzerdefinierten Hierarchien](multidimensional-models/user-defined-hierarchies-create.md)   
- [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Konfigurieren des &#40;alle&#41; Ebene für Attribut Hierarchien](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

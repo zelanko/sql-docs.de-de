@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 6: Führen Sie die RDL-Schema-Anwendung (VB -C#) | Microsoft-Dokumentation'
+title: 'Lektion 6: Ausführen der RDL-Schema Anwendung (VB-C #) | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 1f2f1c579e4f4eccad8015b1ed5448bd0b6e376a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254507"
 ---
-# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lektion 6: Führen Sie die RDL-Schema-Anwendung (VB -C#)
+# <a name="lesson-6-run-the-rdl-schema-application-vb-c"></a>Lektion 6: Ausführen der RDL-Schema Anwendung (VB-C #)
   In [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] sind zwei Methoden zum Erstellen und Ausführen einer Konsolenanwendung von der integrierten Entwicklungsumgebung (IDE, Integrated Development Environment) aus verfügbar:  
   
 -   Starten (mit Debuggen)  
@@ -26,7 +26,7 @@ ms.locfileid: "63254507"
   
 ### <a name="to-build-and-run-the-samplerdlschema-application"></a>So erstellen Sie die SampleRDLSchema-Anwendung und führen diese aus  
   
-1.  Von der **Debuggen** Menü klicken Sie auf **Starten ohne Debugging**. Dadurch wird sichergestellt, dass das Konsolenfenster geöffnet bleibt, nachdem die Ausführung beendet wurde.  
+1.  Klicken Sie im Menü **Debuggen** auf **Starten ohne Debuggen**. Dadurch wird sichergestellt, dass das Konsolenfenster geöffnet bleibt, nachdem die Ausführung beendet wurde.  
   
      Die Anwendung erzeugt die folgende Ausgabe auf der Konsole:  
   
@@ -45,8 +45,8 @@ ms.locfileid: "63254507"
   
 3.  Wenn die Ausführung der Beispielanwendung abgeschlossen ist, wird eine aktualisierte Kopie des Berichts auf dem Berichtsserver gespeichert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert &#40;SSRS-Tutorial&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema &#40;SSRS-Tutorial generiert wurden&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   
  [Berichtsdefinitionssprache (SSRS)](../reporting-services/reports/report-definition-language-ssrs.md)  
   
   

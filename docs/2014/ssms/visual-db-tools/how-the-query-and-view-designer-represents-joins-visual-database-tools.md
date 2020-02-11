@@ -1,5 +1,5 @@
 ---
-title: Wie der Abfrage- und Sicht-Designer-stellt Joins (Visual Database Tools) | Microsoft-Dokumentation
+title: Darstellung von Joins im Abfrage-und Sicht-Designer (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: abd8dd7c3c23a13b1cdff7a2d6f76fb99375a641
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63155254"
 ---
 # <a name="how-the-query-and-view-designer-represents-joins-visual-database-tools"></a>Darstellungsweise von Joins im Abfrage- und Sicht-Designer (Visual Database Tools)
@@ -27,11 +27,11 @@ ms.locfileid: "63155254"
 ## <a name="diagram-pane"></a>Diagrammbereich  
  Im Diagrammbereich wird im Abfrage- und Sicht-Designer eine Joinlinie zwischen den verknüpften Datenspalten an. Der Abfrage- und Sicht-Designer zeigt eine Joinlinie für jede Joinbedingung an. Die folgende Abbildung zeigt eine Joinlinie zwischen zwei verknüpften Tabellen:  
   
- ![Joinline zeigt Beziehung zwischen zwei Tabellen](../../database-engine/media//dv3wbig.gif "Join line shows relationship between two tables")  
+ ![Joinlinie zeigt Beziehung zwischen zwei Tabellen](../../database-engine/media//dv3wbig.gif "Joinlinie zeigt Beziehung zwischen zwei Tabellen")  
   
  Wenn Tabellen durch mehrere Joinbedingungen miteinander verknüpft sind, zeigt der Abfrage- und Sicht-Designer wie im folgenden Beispiel mehrere Joinlinien an:  
   
- ![Mit mehr als einer Joinbedingung verknüpfte Tabellen](../../database-engine/media//dv3w9n1.gif "Tables joined using more than one join condition")  
+ ![Mit mehr als einer Joinbedingung verknüpfte Tabellen](../../database-engine/media//dv3w9n1.gif "Mit mehr als einer Joinbedingung verknüpfte Tabellen")  
   
  Wenn die verknüpften Datenspalten nicht angezeigt werden (z. B., weil das die Tabelle oder das Objekt mit Tabellenstruktur darstellende Rechteck minimiert ist oder der Join einen Ausdruck beinhaltet), setzt der Abfrage- und Sicht-Designer die Joinlinie in die Titelleiste des Rechtecks, das die Tabelle oder das Objekt mit Tabellenstruktur darstellt.  
   
@@ -39,26 +39,26 @@ ms.locfileid: "63155254"
   
 |**Joinliniensymbol**|**Beschreibung**|  
 |------------------------|---------------------|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbih.gif "Visual Database Tools icon")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbii.gif "Visual Database Tools icon")|Innerer Join mit dem Operator "größer als".|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbij.gif "Visual Database Tools icon")|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbik.gif "Visual Database Tools icon")|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbil.gif "Visual Database Tools icon")|Ein vollständiger äußerer Join, bei der alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbih.gif "Visual Database Tools (Symbol)")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbii.gif "Visual Database Tools (Symbol)")|Innerer Join mit dem Operator "größer als".|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbij.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbik.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbil.gif "Visual Database Tools (Symbol)")|Ein vollständiger äußerer Join, bei der alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
   
  Die Symbole an den Enden der Joinlinie zeigen den Jointyp an. In der folgenden Tabelle werden die Jointypen und die an den Enden der Joinslinien verwendeten Symbole aufgelistet.  
   
 |**Symbole an den Enden der Joinlinien**|**Jointyp**|  
 |-----------------------------------|----------------------|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbim.gif "Visual Database Tools icon")|1:1-Join|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbin.gif "Visual Database Tools icon")|1:n-Join|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbio.gif "Visual Database Tools icon")|Der Abfrage- und Sicht-Designer konnte den Joinstyp nicht ermitteln. Dies tritt häufig auf, wenn Sie einen Join manuell erstellt haben.|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbim.gif "Visual Database Tools (Symbol)")|1:1-Join|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbin.gif "Visual Database Tools (Symbol)")|1:n-Join|  
+|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbio.gif "Visual Database Tools (Symbol)")|Der Abfrage- und Sicht-Designer konnte den Joinstyp nicht ermitteln. Dies tritt häufig auf, wenn Sie einen Join manuell erstellt haben.|  
   
 ## <a name="sql-pane"></a>SQL-Bereich  
  Ein Join kann in einer SQL-Anweisung auf unterschiedliche Weise ausgedrückt werden. Die genaue Syntax ergibt sich aus der verwendeten Datenbank und daraus, wie Sie den Join definiert haben.  
   
  Folgende Syntaxoptionen werden beim Verknüpfen von Tabellen angewendet:  
   
--   **JOIN-Qualifizierer in der FROM-Klausel**.   Die Schlüsselwörter INNER und OUTER geben den Jointyp an. Diese Syntax entspricht dem Standard bei ANSI 92 SQL.  
+-   **Joinqualifizierer für die from-Klausel**.   Die Schlüsselwörter INNER und OUTER geben den Jointyp an. Diese Syntax entspricht dem Standard bei ANSI 92 SQL.  
   
      Wenn Sie z. B. die Tabellen `publishers` und `pub_info` über die Spalte `pub_id` der beiden Tabellen verknüpfen, kann dies mit folgender SQL-Anweisung ausgedrückt werden:  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63155254"
   
      Wenn Sie einen äußeren Join erstellen, wird LEFT OUTER oder RIGHT OUTER statt INNER verwendet.  
   
--   **WHERE-Klausel zum Vergleich der Spalten in beiden Tabellen**.   Eine WHERE-Klausel wird angezeigt, wenn die Datenbank die JOIN-Syntax nicht unterstützt (oder wenn Sie sie selbst eingegeben haben). Wenn der Join über die WHERE-Klausel erstellt wird, werden beide Tabellennamen in der FROM-Klausel angegeben.  
+-   Die **WHERE-Klausel vergleicht Spalten in beiden Tabellen**.   Eine WHERE-Klausel wird angezeigt, wenn die Datenbank die JOIN-Syntax nicht unterstützt (oder wenn Sie sie selbst eingegeben haben). Wenn der Join über die WHERE-Klausel erstellt wird, werden beide Tabellennamen in der FROM-Klausel angegeben.  
   
      Die folgende Anweisung verknüpft z. B. die Tabellen `publishers` und `pub_info` .  
   
@@ -80,7 +80,7 @@ ms.locfileid: "63155254"
     WHERE publishers.pub_id = pub_info.pub_id  
     ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfragen mit Joins &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Verknüpfen (Dialogfeld) &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   

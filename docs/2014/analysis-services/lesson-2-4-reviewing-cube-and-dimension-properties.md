@@ -1,5 +1,5 @@
 ---
-title: Überprüfen von Cube- und Dimensionseigenschaften | Microsoft-Dokumentation
+title: Überprüfen von Cube-und Dimensions Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c95d241d136f290110ac8a2b72540011a3922e24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66079001"
 ---
 # <a name="reviewing-cube-and-dimension-properties"></a>Überprüfen von Cube- und Dimensionseigenschaften
@@ -34,7 +34,7 @@ ms.locfileid: "66079001"
   
 4.  Erweitern Sie im **Dimensionen** -Bereich der Registerkarte **Cubestruktur** die **Customer**-Dimension, und klicken Sie dann auf **Customer bearbeiten** , um die Dimension im Dimensions-Designer zu öffnen.  
   
-     Dimensions-Designer enthält folgende Registerkarten: **Dimensionsstruktur**, **Attributbeziehungen**, **Übersetzungen**, und **Browser**. Beachten Sie, dass die **Dimensionsstruktur** Registerkarte enthält drei Bereiche: **Attribute**, **Hierarchien**, und **Datenquellensicht**. Die Attribute, die die Dimension enthält, werden im Bereich **Attribute** angezeigt. Weitere Informationen finden Sie unter [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md), [benutzerdefinierter Hierarchien](multidimensional-models/user-defined-hierarchies-create.md).  
+     Der Dimensions-Designer enthält folgende Registerkarten: **Dimensionsstruktur**, **Attributbeziehungen**, **Übersetzungen**und **Browser**. Die Registerkarte **Dimensionsstruktur** enthält drei Bereiche: **Attribute**, **Hierarchien**und **Datenquellensicht**. Die Attribute, die die Dimension enthält, werden im Bereich **Attribute** angezeigt. Weitere Informationen finden Sie unter [Dimensions Attribut Eigenschaften-Referenz](multidimensional-models/dimension-attribute-properties-reference.md), [Erstellen von benutzerdefinierten Hierarchien](multidimensional-models/user-defined-hierarchies-create.md).  
   
 5.  Um zum Cube-Designer zu wechseln, klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf den **Analysis Services Tutorial** -Cube im **Cubes** -Knoten, und klicken Sie anschließend auf **Designer anzeigen**.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66079001"
   
 7.  Klicken Sie auf die Registerkarte **Partitionen** .  
   
-     Vom Cube-Assistenten wird eine einzelne Partition für den Cube definiert. Dabei wird der MOLAP-Speichermodus (Multidimensional Online Analytical Processing) ohne Aggregationen verwendet. Mit MOLAP werden alle Daten der Blattebene und alle Aggregationen innerhalb des Cubes gespeichert. Dies optimiert die Leistung. Aggregationen sind im Voraus berechnete Zusammenfassungen von Daten, mit denen die Abfrageantwortzeit verbessert werden kann, da die Antworten schon vorhanden sind, wenn Fragen gestellt werden. Auf der Registerkarte **Partitionen** können Sie zusätzliche Partitionen, Speichereinstellungen und Rückschreibeeinstellungen definieren. Weitere Informationen zu Partitionen finden Sie unter [Partitionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md) und [Aggregationen und Aggregationsentwürfe](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+     Vom Cube-Assistenten wird eine einzelne Partition für den Cube definiert. Dabei wird der MOLAP-Speichermodus (Multidimensional Online Analytical Processing) ohne Aggregationen verwendet. Mit MOLAP werden alle Daten der Blattebene und alle Aggregationen innerhalb des Cubes gespeichert. Dies optimiert die Leistung. Aggregationen sind im Voraus berechnete Zusammenfassungen von Daten, mit denen die Abfrageantwortzeit verbessert werden kann, da die Antworten schon vorhanden sind, wenn Fragen gestellt werden. Auf der Registerkarte **Partitionen** können Sie zusätzliche Partitionen, Speichereinstellungen und Rück schreibe Einstellungen definieren. Weitere Informationen finden Sie unter [Partitionen &#40;Analysis Services-Multidimensional Data&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md), [Aggregationen und Aggregations Entwürfe](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 8.  Klicken Sie auf die Registerkarte **Browser** .  
   
@@ -52,14 +52,14 @@ ms.locfileid: "66079001"
   
 9. Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **Analysis Services Tutorial** im **Cubes** -Knoten und anschließend auf **Code anzeigen**. Sie müssen möglicherweise einen Moment warten.  
   
-     Der XML-Code für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube wird auf der Registerkarte **[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial.cube [XML]** angezeigt. Es handelt sich um den tatsächlichen Code, mit dem der Cube bei der Bereitstellung in einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt wird. Weitere Informationen finden Sie unter [Anzeigen des XML für ein Analysis Services-Projekt &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
+     Der XML-Code für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] den Tutorial-Cube wird auf der ** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Registerkarte Tutorial. Cube [XML]** angezeigt. Dies ist der tatsächliche Code, der verwendet wird, um den Cube während der bereit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Stellung in einer Instanz von zu erstellen. Weitere Informationen finden Sie unter [Anzeigen des XML für ein Analysis Services-Projekt &#40;SSDT&#41;](multidimensional-models/view-the-xml-for-an-analysis-services-project-ssdt.md).  
   
 10. Schließen Sie die Registerkarte mit dem XML-Code.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Bereitstellen eines Analysis Services-Projekts](lesson-2-5-deploying-an-analysis-services-project.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Durchsuchen von Dimensionsdaten im Dimensions-Designer](multidimensional-models/database-dimensions-browse-dimension-data-in-dimension-designer.md)  
   
   

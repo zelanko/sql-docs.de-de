@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63245523"
 ---
 # <a name="view-or-modify-jobs"></a>Anzeigen oder Ändern von Aufträgen
@@ -51,7 +51,7 @@ ms.locfileid: "63245523"
 EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'  
 ```  
   
- Weitere Informationen finden Sie unter [Sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_purge_jobhistory &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql).  
   
  Mitglieder der festen Serverrolle **sysadmin** können die Definition oder den Verlauf jedes Auftrags anzeigen und können jeden Auftrag ändern.  
   
@@ -60,13 +60,13 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
 |||  
 |-|-|  
 |**Beschreibung**|**Thema**|  
-|Beschreibt, wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Aufträge angezeigt werden.|[Anzeigen eines Auftrags](view-a-job.md)|  
-|Beschreibt, wie das Auftragsverlaufsprotokoll des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents angezeigt wird.|[Anzeigen des Auftragsverlaufs](view-the-job-history.md)|  
-|Beschreibt, wie der Inhalt des Auftragsverlaufsprotokolls des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Löschen des Auftragsverlaufsprotokolls](clear-the-job-history-log.md)|  
+|Beschreibt, wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Aufträge angezeigt werden.|[View a Job](view-a-job.md)|  
+|Beschreibt, wie das Auftragsverlaufsprotokoll des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents angezeigt wird.|[View the Job History](view-the-job-history.md)|  
+|Beschreibt, wie der Inhalt des Auftragsverlaufsprotokolls des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Clear the Job History Log](clear-the-job-history-log.md)|  
 |Beschreibt, wie Größenbeschränkungen für Auftragsverlaufsprotokolle des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents festgelegt werden.|[Resize the Job History Log](resize-the-job-history-log.md)|  
 |Beschreibt, wie die Eigenschaften von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Aufträgen geändert werden.|[Ändern eines Auftrags](modify-a-job.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [dbo.sysjobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
+## <a name="see-also"></a>Weitere Informationen  
+ [dbo. sysjobhistory &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysjobhistory-transact-sql)  
   
   

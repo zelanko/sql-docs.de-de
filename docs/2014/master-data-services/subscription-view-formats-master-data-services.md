@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478871"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Abonnementsichtformate (Master Data Services)
@@ -22,19 +22,19 @@ ms.locfileid: "65478871"
   
 ## <a name="subscription-view-formats"></a>Abonnementsichtformate  
   
-|Name|Description|  
+|Name|BESCHREIBUNG|  
 |----------|-----------------|  
-|**Blattelemente**|Enthält Blattelemente und ihre zugeordneten Attributwerte.|  
+|**Blatt Elemente**|Enthält Blattelemente und ihre zugeordneten Attributwerte.|  
 |**Konsolidierte Elemente**|Enthält konsolidierte Elemente und ihre zugeordneten Attributwerte.|  
-|**Zugehörigkeit zu Sammlungen**|Enthält eine Liste von Auflistungen und ihre zugeordneten Attributwerte.|  
+|**Sammlungs Mitgliedschaften**|Enthält eine Liste von Auflistungen und ihre zugeordneten Attributwerte.|  
 |**Auflistungen**|Enthält eine Liste von Auflistungen und die zugehörigen Elemente sowie Gewichtungswerte und Sortierreihenfolge.|  
-|**Explizite Strukturen über- und untergeordneter Elemente**|Enthält Strukturen expliziter Hierarchien für eine Entität im Format über- und untergeordneter Elemente.|  
+|**Explizit übergeordnetes Element**|Enthält Strukturen expliziter Hierarchien für eine Entität im Format über- und untergeordneter Elemente.|  
 |**Explizite Ebenen**|Enthält Strukturen expliziter Hierarchien für eine Entität im Ebenenformat.|  
-|**Abgeleitete Hierarchie über- und untergeordneter Elemente (Sicht der abgeleiteten Hierarchie)**|Enthält die Struktur einer abgeleiteten Hierarchie im Format über- und untergeordneter Elemente.|  
+|**Abgeleitetes übergeordnetes Element (abgeleitete Hierarchie Ansicht**|Enthält die Struktur einer abgeleiteten Hierarchie im Format über- und untergeordneter Elemente.|  
 |**Abgeleitete Ebenen (Sicht der abgeleiteten Hierarchie)**|Enthält die Struktur einer abgeleiteten Hierarchie im Ebenenformat.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Exportieren von Daten &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)   
- [Erstellen einer Abonnementsicht &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten &#40;Master Data Services werden exportiert&#41;](overview-exporting-data-master-data-services.md)   
+ [Erstellen Sie eine Abonnement Sicht &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)  
   
   

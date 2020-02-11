@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479407"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Berechtigungen für Funktionsbereiche (Master Data Services)
@@ -28,22 +28,22 @@ ms.locfileid: "65479407"
   
 -   **Versionsverwaltung**  
   
--   **Integrationsmanagement**  
+-   **Integrations Management**  
   
--   **Systemverwaltung**  
+-   **System Verwaltung**  
   
--   **Benutzer- und Gruppenberechtigungen**  
+-   **Benutzer-und Gruppenberechtigungen**  
   
  Wenn Sie einem Funktionsbereich Berechtigungen zuweisen, wird ein bestimmter Bereich der Benutzeroberfläche für den Benutzer oder die Gruppe sichtbar.  
   
- Innerhalb des Funktionsbereichs **Explorer** legen zusätzliche Berechtigungen, die Modellobjekten und Hierarchieelemente zugewiesen sind, fest, auf welche Daten ein Benutzer zugreifen kann. Innerhalb aller anderen Funktionsbereiche muss ein Benutzer Modelladministrator sein, um ein Modell anzuzeigen und Aktionen auszuführen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+ Innerhalb des Funktionsbereichs **Explorer** legen zusätzliche Berechtigungen, die Modellobjekten und Hierarchieelemente zugewiesen sind, fest, auf welche Daten ein Benutzer zugreifen kann. Innerhalb aller anderen Funktionsbereiche muss ein Benutzer Modelladministrator sein, um ein Modell anzuzeigen und Aktionen auszuführen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
  Ein Benutzer oder eine Gruppe muss auf der Registerkarte **Modelle** über Berechtigungen für mindestens einen Funktionsbereich verfügen, damit auf [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]zugegriffen werden kann.  
   
-## <a name="see-also"></a>Siehe auch  
- [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
- [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
- [Berechtigungen für Hierarchieelemente &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [&#40;Master Data Services Berechtigungen für Funktionsbereiche zuweisen&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
+ [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
+ [Hierarchie Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
+ [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

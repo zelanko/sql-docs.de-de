@@ -1,5 +1,5 @@
 ---
-title: 'Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung | Microsoft-Dokumentation'
+title: 'Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28e0e9f808820acc1959ccc11266174e5610600c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287240"
 ---
-# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Beispiel: Angeben der ELEMENT-Anweisung und Entitätscodierung
+# <a name="example-specifying-the-element-directive-and-entity-encoding"></a>Beispiel: Angeben der ELEMENT-Direktive und Entitätscodierung
   Dieses Beispiel veranschaulicht den Unterschied zwischen der **ELEMENT** - und der **XML** -Direktive. Bei der **ELEMENT** -Direktive werden die Daten in Entitäten geändert, während dies bei der **XML** -Direktive nicht der Fall ist. Dem Summary>\<-Element wird in der Abfrage XML zugewiesen: `<Summary>This is summary description</Summary>`.  
   
  Angenommen, die folgende Abfrage wird ausgeführt:  
@@ -92,7 +92,7 @@ ORDER BY [ProductModel!1!ProdModelID],Tag
 FOR XML EXPLICIT  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des EXPLICIT-Modus mit FOR XML](use-explicit-mode-with-for-xml.md)  
   
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144341"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Erstellen eines Wartungsplans (Entwurfsoberfläche für Wartungspläne)
@@ -30,7 +30,7 @@ ms.locfileid: "63144341"
   
      [Sicherheit](#Security)  
   
--   [Erstellen eines Wartungsplans mithilfe der Entwurfsoberfläche für Wartungspläne](#SSMSProcedure)  
+-   [Erstellen eines Wartungsplans mit dem Wartungsplan Designoberfläche](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -38,14 +38,14 @@ ms.locfileid: "63144341"
   
 -   Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
   
--   Mitglieder der **db_ssisadmin** -Rolle und **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
+-   Mitglieder der **db_ssisadmin** -Rolle und **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Um diese Rechte Erweiterung beim Ausführen von Wartungsplänen, Daten Sammlungs Sätzen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und anderen Paketen zu schützen, konfigurieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie Agentaufträge, die Pakete ausführen, für die Verwendung eines Proxy Kontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -und **dc_admin** Rollen nur **sysadmin** -Mitglieder hinzu.  
   
 ###  <a name="Security"></a> Sicherheit  
   
 ####  <a name="Permissions"></a> Berechtigungen  
  Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können. Im Objekt-Explorer wird der **Wartungspläne** -Knoten nur für Benutzer angezeigt, die Mitglied der festen Serverrolle **sysadmin** sind.  
   
-##  <a name="SSMSProcedure"></a> Verwendung der Entwurfsoberfläche für Wartungspläne  
+##  <a name="SSMSProcedure"></a>Verwenden von Wartungs Plan Designoberfläche  
   
 #### <a name="to-create-a-maintenance-plan"></a>So erstellen Sie einen Wartungsplan  
   
@@ -68,13 +68,13 @@ ms.locfileid: "63144341"
      **Ausgewählten Unterplan löschen**  
      Hiermit löschen Sie den ausgewählten Unterplan.  
   
-     **Zeitplan des Unterplans**  
+     **Zeitplan des unter Plans**  
      Zeigt das Dialogfeld **Neuer Auftragszeitplan** für den ausgewählten Unterplan an.  
   
      **Zeitplan entfernen**  
      Mit dieser Option entfernen Sie einen Zeitplan aus dem ausgewählten Unterplan.  
   
-     **Verbindungen verwalten**  
+     **Verwalten von Verbindungen**  
      Hiermit zeigen Sie das Dialogfeld **Verbindungen verwalten** an. Es wird verwendet, um dem Wartungsplan zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzverbindungen hinzuzufügen. Weitere Informationen zu diesem Dialogfeld finden Sie unten.  
   
      **Berichterstellung und Protokollierung**  
@@ -89,7 +89,7 @@ ms.locfileid: "63144341"
      **Beschreibung**  
      Hier können Sie eine Beschreibung für den Wartungsplan anzeigen oder festlegen. Die maximale Länge für eine Beschreibung beträgt 512 Zeichen.  
   
-     **Designeroberfläche**  
+     **Designer Oberfläche**  
      Hiermit können Sie Wartungspläne entwerfen und verwalten. Verwenden Sie die Designeroberfläche, um einem Plan Wartungspläne hinzuzufügen, Tasks aus einem Plan zu entfernen, Rangfolgenlinks zwischen den Tasks anzugeben oder Taskverzweigungen und -parallelausführungen anzuzeigen.  
   
      Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Weitere Informationen finden Sie unter Schritt **8** .  
@@ -107,7 +107,7 @@ ms.locfileid: "63144341"
      **Zeitplan**  
      Gibt an, nach welchem Zeitplan der Unterplan ausgeführt wird. Klicken Sie auf **Zeitplan des Unterplans** , um das Dialogfeld **Neuer Auftragszeitplan** zu öffnen. Klicken Sie auf **Zeitplan entfernen** , um den Zeitplan aus dem Unterplan zu löschen.  
   
-     Liste**Ausführen als**  
+     Liste **Ausführen als**  
      Wählen Sie das Konto aus, das zum Ausführen dieser Unteraufgabe verwendet werden soll.  
   
 6.  Klicken Sie auf **Zeitplan des Unterplans** , um die Details zum Zeitplan in das Dialogfeld **Neuer Auftragszeitplan** einzugeben.  
@@ -116,7 +116,7 @@ ms.locfileid: "63144341"
   
      Die folgenden Wartungsplantasks sind in der **Toolbox**verfügbar:  
   
-    -   **Datenbank sichern (Task)**  
+    -   **Task ' Datenbank sichern '**  
   
     -   **Datenbankintegrität überprüfen (Task)**  
   
@@ -156,22 +156,22 @@ ms.locfileid: "63144341"
   
          Die folgenden Optionen sind im Dialogfeld **Rangfolgeneinschränkungs-Editor** verfügbar.  
   
-         **Einschränkungsoption**  
+         **Einschränkungs Option**  
          Definiert, wie eine Einschränkung zwischen zwei Tasks angewendet wird.  
   
-         Liste**Auswertungsvorgang**  
-         Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Folgende Vorgänge sind möglich: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
+         Liste der **Auswertungs** Vorgänge  
+         Geben Sie den Auswertungsvorgang an, den die Rangfolgeneinschränkung verwendet. Dazu zählen die folgenden Vorgänge: **Einschränkung**, **Ausdruck**, **Ausdruck und Einschränkung**und **Ausdruck oder Einschränkung**.  
   
-         Liste**Wert**  
+         **Werte** Liste  
          Geben Sie den Einschränkungswert an: **Erfolg**, **Fehler**oder **Beendigung**. **Erfolg** ist die Standardeinstellung.  
   
         > [!NOTE]  
         >  Die Rangfolgeneinschränkungszeile wird für **Erfolg**grün, für **Fehler**rot und für **Beendigung**blau angezeigt.  
   
-         **expression**  
+         **Ausdruck**  
          Geben Sie, wenn Sie die Vorgänge **Ausdruck**, **Ausdruck und Einschränkung**oder **Ausdruck oder Einschränkung**verwenden, einen Ausdruck ein. Der Ausdruck muss zu einem booleschen Wert ausgewertet werden.  
   
-         **Testen**  
+         **Test**  
          Überprüfen Sie den Ausdruck.  
   
          **Mehrere Einschränkungen**  
@@ -199,7 +199,7 @@ ms.locfileid: "63144341"
   
     3.  Geben Sie im Dialogfeld **Verbindungseigenschaften** im Feld **Verbindungsname** den Namen der Verbindung ein, die Sie erstellen.  
   
-    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)** , und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
+    4.  Geben Sie unter **Geben Sie Folgendes für die Verbindung mit SQL Server-Daten an** im Feld **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein** entweder den Namen des SQL-Servers ein, den Sie verwenden möchten, oder klicken Sie auf die Auslassungspunkte **(…)**, und wählen Sie im Dialogfeld **SQL Server** einen Server aus. Wenn Sie im Dialogfeld **SQL Server** einen Server auswählen, klicken Sie auf **OK**.  
   
     5.  Wählen Sie unter **Geben Sie Informationen zum Anmelden am Server ein**die Option **Integrierte Sicherheit von Windows NT verwenden** oder **SQL Server-Authentifizierung verwenden**aus. Wenn Sie sich für die Verwendung der SQL Server-Authentifizierung entscheiden, geben Sie die entsprechenden Informationen in die Felder **Benutzername** und **Kennwort** ein.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "63144341"
   
         1.  Wenn Sie **Textdateibericht generieren**auswählen, können Sie entweder **Neue Datei erstellen** oder **An Datei anfügen**auswählen.  
   
-        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Klicken Sie alternativ auf die Auslassungspunkte auf **(...)**  und wählen Sie den Pfad zum Ordner oder Datei von der **Ordner suchen –** _Server_name_ oder **Datenbankdateien suchen –** _Servername_  Dialogfelder.  
+        2.  Geben Sie je nach Ihrer Auswahl den Namen und vollständigen Pfad der neuen Datei oder der anzufügenden Datei ein, indem Sie die Informationen im Feld **Ordner** bzw. **Dateiname** angeben. Klicken Sie alternativ auf die Auslassungs Punkte **(...)** , und wählen Sie den Pfad zum Ordner oder Dateinamen aus den Dialogfeldern **Ordner suchen-**_server_name_ oder **Datenbankdateien suchen**_server_name_ aus.  
   
         3.  Wenn Sie in der Liste **Agentoperator**die Option **Bericht an einen E-Mail-Empfänger senden** auswählen, können Sie den Empfänger des per E-Mail gesendeten Berichts angeben.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144341"
   
 12. Wenn Sie die Ergebnisse im Protokolldatei-Viewer anzeigen möchten, klicken Sie im **Objekt-Explorer**mit der rechten Maustaste entweder auf den Ordner **Wartungspläne** oder auf einen bestimmten Wartungsplan, und klicken Sie dann auf **Verlauf anzeigen**.  
   
-     Die folgenden Optionen befinden sich die **Protokolldatei-Viewer -** _Server_name_ Dialogfeld.  
+     Die folgenden Optionen sind im Dialogfeld **Protokolldatei-Viewer-**_server_name_ verfügbar.  
   
      **Protokoll laden**  
      Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  
@@ -244,34 +244,34 @@ ms.locfileid: "63144341"
      **Filter**  
      Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum**oder **Allgemein** .  
   
-     **Suchen**  
+     **Suchen,**  
      Durchsuchen Sie die Protokolldatei nach bestimmtem Text. Das Suchen mit Platzhalterzeichen wird nicht unterstützt.  
   
      **Beenden**  
      Beendet das Laden der Protokolldateieinträge. Diese Option können Sie z. B. verwenden, wenn das Laden einer Remote- oder Offline-Protokolldatei eine lange Zeit in Anspruch nimmt und Sie nur die zuletzt erstellten Einträge anzeigen möchten.  
   
-     **Protokolldateizusammenfassung**  
+     **Protokolldatei Zusammenfassung**  
      In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Nach Anwendung eines Filters auf das Protokoll wird folgender Text angezeigt: **Protokolleinträge auf diesen Fall filtern:** \<Filterkriterien>.  
   
-     **Datum**  
+     **Date**  
      Zeigt das Datum des Ereignisses an.  
   
-     **Quelle**  
+     **`Source`**  
      Zeigt die Ausgangsfunktion an, mit dem das Ereignis erstellt wurde, z. B. den Namen des Diensts (z. B. MSSQLSERVER). Dies wird nicht für alle Protokolltypen angezeigt.  
   
-     **MessageBox**  
+     **Meldung**  
      Zeigt die Meldungen an, die dem Ereignis zugeordnet sind.  
   
      **Protokolltyp**  
      Zeigt den Typ des Protokolls an, zu dem das Ereignis gehört. Alle ausgewählten Protokolle werden im Fenster für die Protokolldateizusammenfassung angezeigt.  
   
-     **Protokollquelle**  
+     **Protokoll Quelle**  
      Zeigt eine Beschreibung des Quellprotokolls an, in dem das Ereignis aufgezeichnet wird.  
   
-     **Details für die ausgewählte Zeile**  
+     **Details der ausgewählten Zeile**  
      Wählen Sie eine Zahl aus, um am unteren Rand der Seite zusätzliche Details zu der ausgewählten Ereigniszeile anzuzeigen. Die Spalten können durch Ziehen an neue Positionen im Raster neu angeordnet werden. Die Breite der Spalten kann durch Ziehen der Spaltentrennbalken in der Kopfzeile des Rasters nach links oder rechts geändert werden. Wenn Sie auf die Spaltentrennbalken in der Kopfzeile des Rasters doppelklicken, wird die Breite der Spalte automatisch an die Breite des Inhalts angepasst.  
   
      **Instanz**  
-     Der Name der Instanz, bei der das Ereignis aufgetreten ist. Dieser wird im Format *Computername*\\*Instanzname*.  
+     Der Name der Instanz, bei der das Ereignis aufgetreten ist. Dies wird als *Computername*\\*Instanzname*angezeigt.  
   
   

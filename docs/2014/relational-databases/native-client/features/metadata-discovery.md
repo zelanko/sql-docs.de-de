@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e808f1fc82dfe0a9fd6fa96999e6e2c5320ee452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162010"
 ---
 # <a name="metadata-discovery"></a>Metadatenermittlung
@@ -24,7 +24,7 @@ ms.locfileid: "63162010"
   
  Wenn Sie eine Anwendung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] entwickeln, jedoch eine Verbindung mit einer früheren Serverversion als [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]herstellen, entspricht die Funktionalität der Metadatenermittlung der Version des Servers.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die folgenden bcp-Funktionen wurden in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verbessert, um verbesserte Metadatenermittlung bereitzustellen:  
   
 -   [bcp_columns](../../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)  
@@ -39,7 +39,7 @@ ms.locfileid: "63162010"
   
  Das Angeben des Metadatenformats mit [bcp_setbulkmode](../../native-client-odbc-extensions-bulk-copy-functions/bcp-setbulkmode.md)führt ebenfalls zu einer Leistungsverbesserung.  
   
- [Bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) verfügt über ein neues *eOption* zur Steuerung des Verhaltens von Bcp_readfmt: `BCPDELAYREADFMT`.  
+ [bcp_control](../../native-client-odbc-extensions-bulk-copy-functions/bcp-control.md) verfügt über eine neue *eOption* zum Steuern des Verhaltens von bcp_readfmt `BCPDELAYREADFMT`:.  
   
  Die folgenden ODBC-Funktionen wurden in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verbessert, um verbesserte Metadatenermittlung bereitzustellen:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63162010"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   ICommandWithParameters:: GetParameterInfo (finden Sie unter [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) Informationen)  
+-   ICommandWithParameters:: GetParameterInfo (Weitere Informationen finden Sie unter [ICommandWithParameters](../../native-client-ole-db-interfaces/icommandwithparameters.md) )  
   
  Das Angeben des Metadatenformats mit IBCPSession::BCPSetBulkMode führt ebenfalls zu einer Leistungsverbesserung.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63162010"
   
 -   sp_describe_undeclared_parameters  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](sql-server-native-client-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  
   
   

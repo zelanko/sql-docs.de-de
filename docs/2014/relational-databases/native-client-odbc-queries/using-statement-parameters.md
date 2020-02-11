@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Anweisungsparametern | Microsoft-Dokumentation
+title: Verwenden von Anweisungs Parametern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a16f070623503dcb17788bc75bd5695bc1584d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200245"
 ---
 # <a name="using-statement-parameters"></a>Verwenden von Anweisungsparametern
@@ -32,9 +32,9 @@ ms.locfileid: "63200245"
   
 -   Benutzerinteraktion beim Aufstellen von Abfragekriterien verbessern  
   
--   Verwalten von **Text**, **Ntext**, und **Image** Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen C-Datentypen.  
+-   Verwalten von **Text**-, **ntext**-und **Image** -Daten und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen C-Datentypen.  
   
- Z. B. eine **Teile** -Tabelle enthält Spalten, die mit dem Namen **PartID**, **Beschreibung**, und **Preis**. Um ein Teil ohne Parameter hinzuzufügen, ist eine SQL-Anweisung erforderlich. Beispiel:  
+ Beispielsweise enthält eine **Teile** Tabelle Spalten mit dem Namen " **partid**", " **Description**" und " **Price**". Um ein Teil ohne Parameter hinzuzufügen, ist eine SQL-Anweisung erforderlich. Beispiel:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (2100, 'Drive shaft', 50.00)  
@@ -54,7 +54,7 @@ INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)
   
 -   [Binden von Parametern](using-statement-parameters-binding-parameters.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Abfragen &#40;ODBC&#41;](executing-queries-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen von Abfragen &#40;ODBC-&#41;](executing-queries-odbc.md)  
   
   

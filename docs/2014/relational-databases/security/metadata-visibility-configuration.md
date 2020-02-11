@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187931"
 ---
 # <a name="metadata-visibility-configuration"></a>Konfigurieren der Sichtbarkeit von Metadaten
@@ -43,7 +43,7 @@ GO
   
 |||  
 |-|-|  
-|Katalogsichten|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** -Prozeduren|  
+|Katalogansichten|[!INCLUDE[ssDE](../../includes/ssde-md.md)]gespeicherte Prozeduren **sp_help**|  
 |Metadaten ausgebende integrierte Funktionen|Informationsschemasichten|  
 |Kompatibilitätssichten|Erweiterte Eigenschaften|  
   
@@ -51,7 +51,7 @@ GO
   
 |||  
 |-|-|  
-|Protokollversandsystemtabellen|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents|  
+|Protokollversandsystemtabellen|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Agentsystemtabellen|  
 |Systemtabellen für Datenbank-Wartungspläne|Sicherungssystemtabellen|  
 |Replikationssystemtabellen|Gespeicherte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sp_help **-Prozeduren für Replikations- und** -Agents|  
   
@@ -63,7 +63,7 @@ GO
   
 -   Metadaten ausgebende integrierte Funktionen, wie z. B. OBJECTPROPERTYEX, können NULL zurückgeben.  
   
--   Die gespeicherten [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** geben möglicherweise nur eine Teilmenge von Zeilen oder NULL zurück.  
+-   Die gespeicherten [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures might return only a subset of rows, or NULL.  
   
  SQL-Module, wie z. B. gespeicherte Prozeduren und Trigger, werden im Sicherheitskontext des Aufrufers ausgeführt und haben deshalb einen eingeschränkten Metadatenzugriff. Wenn z. B. im folgenden Code die gespeicherte Prozedur versucht, auf Metadaten aus der Tabelle `myTable` zuzugreifen, für die der Aufrufer keine Berechtigung hat, wird ein leeres Resultset zurückgegeben. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird eine Zeile zurückgegeben.  
   
@@ -77,7 +77,7 @@ END;
 GO  
 ```  
   
- Um Aufrufern das Anzeigen von Metadaten zu ermöglichen, können Sie ihnen die VIEW DEFINITION-Berechtigung für einen geeigneten Gültigkeitsbereich erteilen: für die Objektebene, für die Datenbankebene oder für die Serverebene. Wenn der Aufrufer im vorigen Beispiel über die VIEW DEFINITION-Berechtigung für `myTable` verfügt, gibt die gespeicherte Prozedur eine Zeile zurück. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) und [GRANT (Datenbankberechtigungen)&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
+ Um Aufrufern das Anzeigen von Metadaten zu ermöglichen, können Sie ihnen die VIEW DEFINITION-Berechtigung für einen geeigneten Gültigkeitsbereich erteilen: für die Objektebene, für die Datenbankebene oder für die Serverebene. Wenn der Aufrufer im vorigen Beispiel über die VIEW DEFINITION-Berechtigung für `myTable`verfügt, gibt die gespeicherte Prozedur eine Zeile zurück. Weitere Informationen finden Sie unter [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) und [GRANT (Datenbankberechtigungen)&#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-database-permissions-transact-sql).  
   
  Sie können die gespeicherte Prozedur auch so ändern, dass sie unter den Anmeldeinformationen des Besitzers ausgeführt wird. Wenn der Besitzer der Prozedur und der Besitzer der Tabelle identisch sind, gilt die Besitzverkettung, und der Sicherheitskontext des Prozedurbesitzers ermöglicht den Zugriff auf die Metadaten von `myTable`. In diesem Szenario gibt der folgende Code eine Zeile aus Metadaten an den Aufrufer zurück.  
   
@@ -182,17 +182,17 @@ GO
 |**sys.partition_schemes**|**sys.data_spaces**|  
 |**sys.filegroups**|**sys.destination_data_spaces**|  
 |**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
+|**sys.partitions**|**sys. Messages**|  
 |**sys.schemas**|**sys.configurations**|  
 |**sys.sql_dependencies**|**sys.type_assembly_usages**|  
 |**sys.parameter_type_usages**|**sys.column_type_usages**|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
- [EXECUTE AS-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
+ [EXECUTE AS-Klausel &#40;Transact-SQL-&#41;](/sql/t-sql/statements/execute-as-clause-transact-sql)   
  [Katalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/catalog-views-transact-sql)   
- [Kompatibilitätssichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
+ [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](/sql/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql)  
   
   

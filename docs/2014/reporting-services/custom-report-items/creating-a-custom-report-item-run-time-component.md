@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 719e7a24efa2b0c68d4984d8b16f957a268fdafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265859"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement
-  Die Laufzeitkomponente für ein benutzerdefiniertes Berichtselement ist in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Komponente mithilfe einer beliebigen CLS-kompatiblen Sprache implementiert und wird während der Laufzeit vom Prozessor aufgerufen. Sie definieren die Eigenschaften für die Laufzeitkomponente in der Entwurfsumgebung, indem Sie die entsprechende Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ändern.  
+  Die Laufzeitkomponente für ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] benutzerdefiniertes Berichts Element wird als-Komponente mithilfe einer beliebigen CLS-kompatiblen Sprache implementiert und vom Berichts Prozessor zur Laufzeit aufgerufen. Sie definieren die Eigenschaften für die Laufzeitkomponente in der Entwurfsumgebung, indem Sie die entsprechende Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement ändern.  
 
 <!--
 Replacing the following multiValue.....
@@ -146,10 +146,10 @@ namespace Microsoft.Samples.ReportingServices
 }  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Custom Report Item Architecture (Architektur des benutzerdefinierten Berichtselements)](custom-report-item-architecture.md)   
- [Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-design-time-component.md)   
- [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Architektur des benutzerdefinierten Berichts Elements](custom-report-item-architecture.md)   
+ [Erstellen einer Entwurfszeit Komponente für ein benutzerdefiniertes Berichts Element](creating-a-custom-report-item-design-time-component.md)   
+ [Klassenbibliotheken für benutzerdefinierte Berichts Elemente](custom-report-item-class-libraries.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
   
   

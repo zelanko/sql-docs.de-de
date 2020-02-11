@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: deaa7ca2225d6de503ceb3d5d901a5a51d11aa68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479366"
 ---
 # <a name="initiate-actions-based-on-attribute-value-changes-master-data-services"></a>Initiieren von Aktionen auf der Grundlage von Attributwertänderungen (Master Data Services)
   Erstellen Sie in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Geschäftsregel, um Aktionen auf der Grundlage von Änderungen an Attributwerten zu initiieren. Wenn beispielsweise ein bestimmter Attributwert geändert wird, können Sie einen Wert ändern, eine Benachrichtigung, senden oder einen externen Workflow starten.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 -   Die Attribute müssen in einer Änderungsnachverfolgungsgruppe sein. Weitere Informationen finden Sie unter [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md) .  
   
@@ -52,9 +52,9 @@ ms.locfileid: "65479366"
   
 9. Erweitern Sie im Bereich **Komponenten** den Knoten **Bedingungen** .  
   
-10. Ziehen Sie unter dem Knoten **Wertvergleich** **Wurde geändert in** zur Bezeichnung **Bedingungen** des Bereichs **IF** .  
+10. Ziehen Sie unter dem Knoten **Wertvergleich****Wurde geändert in** zur Bezeichnung **Bedingungen** des Bereichs **IF** .  
   
-11. In der **Attribute** Bereich, klicken Sie auf ein Attribut, und ziehen Sie dann auf die **Bedingung bearbeiten** des Bereichs **Attribut auswählen** Bezeichnung. Dieses Attribut hat keine Auswirkungen auf die Regel; wählen Sie deshalb jedes verfügbares Attribut aus.  
+11. Klicken Sie im Bereich **Attribute** auf ein Attribut, und ziehen Sie es im Bereich **Bedingung bearbeiten** auf die Bezeichnung **Attribut auswählen** . Dieses Attribut hat keine Auswirkungen auf die Regel; wählen Sie deshalb jedes verfügbares Attribut aus.  
   
 12. Geben Sie im Bereich **Bedingung bearbeiten** im Feld **Änderungsnachverfolgungsgruppe** die Nummer der Änderungsnachverfolgungsgruppe ein, die Sie als Teil der erforderlichen Komponenten zugewiesen haben.  
   
@@ -85,12 +85,12 @@ ms.locfileid: "65479366"
   
 -   Führen Sie zum Anwenden von Geschäftsregeln auf Daten eine der folgenden Prozeduren aus:  
   
-    -   [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Überprüfen bestimmter Mitglieder anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
     -   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
- [Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Hinzufügen von Attributen zu einer Änderungsnachverfolgung Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)   
+ [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

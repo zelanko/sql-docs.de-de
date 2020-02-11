@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 09cccd43b4d20b5be2306c0922ff3bf40ff1b033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151523"
 ---
 # <a name="lesson-1-basic-navigation-in-sql-server-management-studio"></a>Lektion 1: Grundlegendes zur Navigation in SQL Server Management Studio
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist ein leistungsstarkes und flexibles Tool. Benutzer, für die Microsoft Visual Studio noch neu ist, haben jedoch manchmal Probleme, den schnellsten Weg für den Zugriff auf die gewünschten Funktionen zu finden. In dieser Lektion werden die Fenster der Entwurfsoberfläche erläutert, mit der Ihre Arbeit erleichtert wird. Am Ende dieser Lektion wissen Sie, wie Sie nicht benötigte Fenster entfernen, wie Sie schnell auf Fenster mit den benötigten Informationen zugreifen können und wie Sie die Standardoberfläche für die von Ihnen am häufigsten ausgeführten Arbeiten konfigurieren können.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist ein leistungsfähiges und flexibles Tool. Benutzer, für die Microsoft Visual Studio noch neu ist, haben jedoch manchmal Probleme, den schnellsten Weg für den Zugriff auf die gewünschten Funktionen zu finden. In dieser Lektion werden die Fenster der Entwurfsoberfläche erläutert, mit der Ihre Arbeit erleichtert wird. Am Ende dieser Lektion wissen Sie, wie Sie nicht benötigte Fenster entfernen, wie Sie schnell auf Fenster mit den benötigten Informationen zugreifen können und wie Sie die Standardoberfläche für die von Ihnen am häufigsten ausgeführten Arbeiten konfigurieren können.  
   
  Diese Lektion enthält die folgenden Themen:  
   
@@ -40,7 +40,7 @@ ms.locfileid: "63151523"
   
 -   Zusammenfassung  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Starten von SQL Server Management Studio](../sql-server-management-studio-ssms.md)  
   
   

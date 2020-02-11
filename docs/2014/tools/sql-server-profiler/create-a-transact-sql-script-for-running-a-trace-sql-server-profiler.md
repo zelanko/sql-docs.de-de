@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 948ef7eb5fdfeabdbb2ba3829e172f7c9f4028da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255806"
 ---
 # <a name="create-a-transact-sql-script-for-running-a-trace-sql-server-profiler"></a>Erstellen eines Transact-SQL-Skripts zum Ausführen einer Ablaufverfolgung (SQL Server Profiler)
@@ -25,13 +25,13 @@ ms.locfileid: "63255806"
   
 ### <a name="to-create-a-transact-sql-script-to-run-a-trace"></a>So erstellen Sie ein Transact-SQL-Skript für die Ausführung einer Ablaufverfolgung  
   
-1.  Öffnen Sie eine Ablaufverfolgungsdatei oder -tabelle. Weitere Informationen finden Sie unter [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) oder unter [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md).  
+1.  Öffnen Sie eine Ablaufverfolgungsdatei oder -tabelle. Weitere Informationen finden Sie unter [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](open-a-trace-file-sql-server-profiler.md) oder den Optimierungsratgeber von [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](open-a-trace-table-sql-server-profiler.md)die richtigen Ereignisse und Spalten aufgezeichnet werden.  
   
 2.  Zeigen Sie im Menü**Datei**auf **Exportieren**und auf **Skript für Ablaufverfolgungsdefinition erstellen**, und klicken Sie dann auf die Version, die dem für die Ablaufverfolgung vorgesehenen Server entspricht.  
   
 3.  Geben Sie im Dialogfeld **Speichern unter** einen Namen für die Skriptdatei ein, und klicken Sie dann auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorlagen und Berechtigungen in SQL Server Profiler](sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](sql-server-profiler.md)  
   

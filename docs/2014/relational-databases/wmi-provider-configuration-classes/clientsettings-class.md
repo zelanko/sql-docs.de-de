@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e1dae21a1a02ea92e6f75a2471a1180e2634b2d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242879"
 ---
 # <a name="clientsettings-class"></a>ClientSettings-Klasse
@@ -30,7 +30,7 @@ ms.locfileid: "63242879"
   
  Diese Klasse ermöglicht die programmgesteuerte Verwaltung des Clients.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Anpassen und Verarbeiten des Forecasting-Modells (mittleres Datamining Tutorial) | Microsoft-Dokumentation
+title: Anpassen und Verarbeiten des Vorhersagemodells (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63249403"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Anpassen und Verarbeiten des Forecasting-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -22,9 +22,9 @@ ms.locfileid: "63249403"
   
  Führen Sie für diesen Task im Lernprogramm die folgenden Tasks aus, das Modell zu ändern:  
   
-1.  Sie werden anpassen, wie das Modell Zeiträume behandelt, durch Hinzufügen eines neuen Werts für die *PERIODICITY_HINT* Parameter.  
+1.  Sie passen die Art und Weise an, in der das Modell Zeiträume behandelt, indem Sie einen neuen Wert für den *PERIODICITY_HINT* -Parameter hinzufügen.  
   
-2.  Lernen Sie zwei weitere wichtige Parameter für den Microsoft Time Series-Algorithmus ein: FORECAST_METHOD, mit dem Sie die zur prognoseerstellung verwendete Methode steuern können, und PREDICTION_SMOOTHING, mit dem Sie können anpassen, dem die Mischung der langfristigen und kurzfristigen Vorhersagen.  
+2.  Sie erfahren über zwei andere wichtige Parameter für den Microsoft Time Series-Algorithmus: FORECAST_METHOD, mit dem Sie die zur Prognoseerstellung verwendete Methode festlegen, und PREDICTION_SMOOTHING, mit dem Sie den Übergang von langfristigen und kurzfristigen Vorhersagen anpassen können.  
   
 3.  Optional geben Sie dem Algorithmus an, wie fehlende Werte zugeschrieben werden sollen.  
   
@@ -33,31 +33,31 @@ ms.locfileid: "63249403"
 ## <a name="setting-time-series-parameters"></a>Festlegen von Zeitreihenparametern  
  **Periodizitätshinweise**  
   
- Die *PERIODICITY_HINT* Parameter liefert den Algorithmus Informationen zu zusätzlichen Zeiträumen, die Sie erwarten, um die Daten anzuzeigen. Standardmäßig versuchen Zeitreihenmodelle, automatisch ein Muster in den Daten zu erkennen. Wenn Sie jedoch bereits den erwarteten Zeitzyklus kennen, kann ein Periodizitätshinweis die Genauigkeit des Modells eventuell verbessern. Wenn Sie jedoch den falschen Periodizitätshinweis geben, kann dies die Genauigkeit verringern; wenn Sie also nicht sicher sind, welcher Wert verwendet werden soll, ist es am besten, beim Standard zu bleiben.  
+ Der *PERIODICITY_HINT* -Parameter stellt dem Algorithmus Informationen zu zusätzlichen Zeiträumen bereit, die in den Daten erwartet werden. Standardmäßig versuchen Zeitreihenmodelle, automatisch ein Muster in den Daten zu erkennen. Wenn Sie jedoch bereits den erwarteten Zeitzyklus kennen, kann ein Periodizitätshinweis die Genauigkeit des Modells eventuell verbessern. Wenn Sie jedoch den falschen Periodizitätshinweis geben, kann dies die Genauigkeit verringern; wenn Sie also nicht sicher sind, welcher Wert verwendet werden soll, ist es am besten, beim Standard zu bleiben.  
   
- Die Sicht beispielsweise, die für dieses Modell verwendet wird, aggregiert monatlich Umsatzdaten von [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Daher steht jede vom Modell verwendete Zeitscheibe einen Monat dar, und alle Vorhersagen werden in Bezug auf Monate getroffen. Da 12 Monate in einem Jahr vorhanden sind, und Sie erwarten, dass sich verkaufsmuster mehr oder weniger wiederholen jährlich, setzen Sie die *PERIODICITY_HINT* Parameter `12`, um anzugeben, dass 12 Zeitscheiben (Monate) bilden eine vollständigen Verkaufszyklus.  
+ Die Sicht beispielsweise, die für dieses Modell verwendet wird, aggregiert monatlich Umsatzdaten von [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Daher steht jede vom Modell verwendete Zeitscheibe einen Monat dar, und alle Vorhersagen werden in Bezug auf Monate getroffen. Da es 12 Monate in einem Jahr gibt, und Sie erwarten, dass sich die Verkaufs Muster mehrmals oder seltener wiederholen, legen Sie den *PERIODICITY_HINT* -Parameter `12`auf fest, um anzugeben, dass 12 Zeit Scheiben (Monate) einen kompletten Verkaufs Zeitraum darstellen.  
   
  **Prognosemethode**  
   
- Die *FORECAST_METHOD* Parameter steuert, ob der Zeitreihenalgorithmus für kurz- oder langfristige Vorhersagen optimiert ist. In der Standardeinstellung die *FORECAST_METHOD* Parameter ist auf MIXED festgelegt, was bedeutet, dass zwei verschiedene Algorithmen sind Mittelweg aus Kurzzeit- und um gute Ergebnisse für die kurz- und langfristigen Vorhersagen bereitzustellen.  
+ Der *FORECAST_METHOD* -Parameter steuert, ob der Time Series-Algorithmus für kurzfristige oder langfristige Vorhersagen optimiert ist. Standardmäßig ist der *FORECAST_METHOD* -Parameter auf Mixed festgelegt. Dies bedeutet, dass zwei verschiedene Algorithmen gemischt und ausgeglichen werden, um gute Ergebnisse für die kurzfristige und langfristige Vorhersage bereitzustellen.  
   
- Wenn Sie wissen, dass Sie einen bestimmten Algorithmus verwenden möchten, können Sie den Wert jedoch auf ARTXP oder ARIMA ändern.  
+ Wenn Sie jedoch wissen, dass Sie einen bestimmten Algorithmus verwenden möchten, können Sie den Wert entweder in ARIMA oder ARTxp ändern.  
   
- **Langfristiges Gewichten und. Kurzfristige Vorhersagen**  
+ **Gewichtung langfristiger und kurzfristiger Vorhersagen**  
   
  Mit dem PREDICTION_SMOOTHING-Parameter können Sie auch die Methode anpassen, mit der langfristige und kurzfristige Vorhersagen kombiniert werden. Der Parameter ist standardmäßig auf 0,5 festgelegt; dies stellt den besten Kompromiss für die Gesamtgenauigkeit dar.  
   
 #### <a name="to-change-the-algorithm-parameters"></a>So ändern Sie die Algorithmusparameter  
   
-1.  Auf der **Miningmodelle** Registerkarte der rechten Maustaste auf **Forecasting**, und wählen Sie **Algorithmusparameter festlegen**.  
+1.  Klicken Sie auf der Registerkarte **Mining Modelle** mit der rechten Maustaste auf **Prognose**, und wählen Sie **Algorithmusparameter festlegen**  
   
-2.  In der `PERIODICITY_HINT` Zeile die **Algorithmusparameter** Dialogfeld klicken Sie auf der **Wert** Spalte Geben Sie dann `{12}`, einschließlich der geschweiften Klammern.  
+2.  Klicken Sie `PERIODICITY_HINT` in der Zeile des Dialog Felds **Algorithmusparameter** auf die Spalte **Wert** , und geben `{12}`Sie dann ein, einschließlich der geschweiften Klammern.  
   
      Standardmäßig fügt der Algorithmus auch den Wert {1} hinzu.  
   
-3.  In der `FORECAST_METHOD` Zeile, überprüfen Sie, ob die **Wert** Textfeld ist entweder leer oder festgelegt, `MIXED`. Wenn ein anderer Wert eingegeben wurde, geben Sie `MIXED` so ändern Sie den Parameter wieder auf den Standardwert.  
+3.  Überprüfen `FORECAST_METHOD` Sie in der Zeile, ob das Textfeld **Wert** entweder leer ist oder `MIXED`auf festgelegt ist. Wenn ein anderer Wert eingegeben wurde, geben `MIXED` Sie ein, um den Parameter wieder in den Standardwert zu ändern.  
   
-4.  In der **PREDICTION_SMOOTHING** Zeile, überprüfen Sie, ob die **Wert** Textfeld ist entweder leer oder den Wert auf 0,5. Wenn ein anderer Wert eingegeben wurde, klicken Sie auf **Wert** und `0.5` so ändern Sie den Parameter wieder auf den Standardwert.  
+4.  Überprüfen Sie in der **PREDICTION_SMOOTHING** Zeile, ob das Textfeld **Wert** entweder leer ist oder auf 0,5 festgelegt ist. Wenn ein anderer Wert eingegeben wurde, klicken Sie auf **Wert** , `0.5` und geben Sie ein, um den Parameter wieder in den Standardwert zu ändern.  
   
     > [!NOTE]  
     >  Der PREDICTION_SMOOTHING-Parameter ist nur in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise verfügbar. Sie können den Wert des PREDICTION_SMOOTHING-Parameters daher in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard nicht ändern. Das Standardverhalten sieht jedoch die Verwendung beider Algorithmen mit gleicher Gewichtung vor.  
@@ -67,7 +67,7 @@ ms.locfileid: "63249403"
 ## <a name="handling-missing-data-optional"></a>Behandeln von unvollständigen Daten (optional)  
  Es kann häufig vorkommen, dass Verkaufsdaten unvollständig und mit NULL-Werten angegeben sind; auch kann es sein, dass die entsprechenden Daten nicht rechtzeitig von der Niederlassung gemeldet wurden und das Ende der Reihe eine leere Zelle aufweist. In derartigen Szenarien wird der folgende Fehler von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert, und das Modell wird nicht verarbeitet.  
   
- "Fehler (Datamining): Nicht synchronisierte Timestamps mit Reihen \<Reihenname >, des Miningmodells, \<Modellname >. Alle Zeitreihen müssen an der gleichen Zeitmarkierung enden und dürfen keine beliebig fehlenden Datenpunkte aufweisen. Wenn Sie den MISSING_VALUE_SUBSTITUTION-Parameter auf "Previous" oder auf eine numerische Konstante festlegen, werden nach Möglichkeit automatisch fehlende Datenpunkte ergänzt."  
+ "Fehler (Data Mining): nicht synchronisierte Zeitstempel, beginnend \<mit Reihen Reihen Name>, des Mining Modells \<, Modellname>. Alle Zeitreihen müssen an der gleichen Zeitmarkierung enden und dürfen keine beliebig fehlenden Datenpunkte aufweisen. Wenn Sie den MISSING_VALUE_SUBSTITUTION-Parameter auf "Previous" oder auf eine numerische Konstante festlegen, werden nach Möglichkeit automatisch fehlende Datenpunkte ergänzt."  
   
  Sie können diese Fehlermeldung umgehen, indem Sie angeben, dass fehlende Werte von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] automatisch mit einer der folgenden Methoden bereitgestellt werden:  
   
@@ -79,33 +79,33 @@ ms.locfileid: "63249403"
   
 #### <a name="to-specify-that-gaps-be-filled-by-averaging-values"></a>So füllen Sie Lücken mit Durchschnittswerten  
   
-1.  Auf der **Miningmodelle** Registerkarte der rechten Maustaste auf die **Forecasting** Spalte, und wählen **Algorithmusparameter festlegen**.  
+1.  Klicken Sie auf der Registerkarte **Mining Modelle** mit der rechten Maustaste auf die Spalte **Prognose** , und wählen Sie **Algorithmusparameter festlegen**.  
   
-2.  In der **Algorithmusparameter** Dialogfeld die **MISSING_VALUE_SUBSTITUTION** auf die **Wert** Spalte, und geben Sie `Mean`.  
+2.  Klicken Sie im Dialogfeld **Algorithmusparameter** in der Zeile **MISSING_VALUE_SUBSTITUTION** auf die Spalte **Wert** , `Mean`und geben Sie ein.  
   
 ## <a name="build-the-model"></a>Erstellen des Modells  
  Um das Modell zu verwenden, müssen Sie es auf einem Server bereitstellen und dann verarbeiten, indem Sie die Trainingsdaten durch den Algorithmus verarbeiten lassen.  
   
 #### <a name="to-process-the-forecasting-model"></a>So verarbeiten Sie das Prognosemodell  
   
-1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
+1.  Wählen Sie im Menü **Mining Modell** von die Option [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] **Mining Struktur und alle Modelle verarbeiten**aus.  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
-3.  In der **Miningstruktur verarbeiten - Forecasting** Dialogfeld klicken Sie auf **ausführen**.  
+3.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten-vorher** sagen auf **Ausführen**.  
   
      Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt Informationen zur Verarbeitung des Modells an. Die Verarbeitung des Modells kann einige Zeit in Anspruch nehmen.  
   
 4.  Nachdem die Verarbeitung abgeschlossen ist, klicken Sie auf **Schließen** , um das Dialogfeld **Verarbeitungsstatus** zu schließen.  
   
-5.  Klicken Sie auf **schließen** wieder zu schließen die **Miningstruktur verarbeiten - Forecasting** Dialogfeld.  
+5.  Klicken Sie erneut auf schließen, um das Dialogfeld **Mining Struktur verarbeiten-vorher** sagen zu **Schließen** .  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Untersuchen des Planungserstellungsmodells &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Untersuchen des Planungs Modells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ebe4126d0fb64cceea5bc0c9dbfd5be83f9fc165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63187080"
 ---
 # <a name="enhance-general-replication-performance"></a>Verbessern der allgemeinen Replikationsleistung
@@ -33,7 +33,7 @@ ms.locfileid: "63187080"
   
 ## <a name="server-and-network"></a>Server und Netzwerk  
   
--   Legen Sie das Minimum und das Maximum für den Arbeitsspeicher fest, der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]zugeordnet ist.  
+-   Legen Sie die minimale und maximale Menge an Arbeitsspeicher [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]fest, die zugeordnet ist.  
   
      Standardmäßig ändert [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Arbeitsspeicheranforderungen auf der Grundlage der verfügbaren Systemressourcen dynamisch. Wenn verhindert werden soll, dass während Replikationsaktivitäten nur wenig Arbeitsspeicher zur Verfügung steht, verwenden Sie die Option **Min. Serverarbeitsspeicher** zum Festlegen des Minimums an Arbeitsspeicher. Um zu verhindern, dass das Betriebssystem Speicher auslagern muss, können Sie auch ein Maximum an Arbeitsspeicher mit der Option **Max. Serverarbeitsspeicher** festlegen. Weitere Informationen finden Sie unter [Konfigurationsoptionen für den Serverarbeitsspeicher](../../../database-engine/configure-windows/server-memory-server-configuration-options.md).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63187080"
   
      Die Geschäftslogik in benutzerdefinierten Triggern auf dem Abonnenten kann die Replikation von Änderungen an den Abonnenten verlangsamen.  
   
-    -   Für die Transaktionsreplikation kann es effizienter sein, diese Logik in benutzerdefinierte gespeicherte Prozeduren aufzunehmen, die für die Ausführung der replizierten Befehle verwendet werden. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../transactional/transactional-articles-specify-how-changes-are-propagated.md)  
+    -   Für die Transaktionsreplikation kann es effizienter sein, diese Logik in benutzerdefinierte gespeicherte Prozeduren aufzunehmen, die für die Ausführung der replizierten Befehle verwendet werden. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
     -   Für die Mergereplikation kann es effizienter sein, Geschäftslogikhandler zu verwenden. Weitere Informationen finden Sie unter [Ausführen von Geschäftslogik während der Mergesynchronisierung](../merge/execute-business-logic-during-merge-synchronization.md).  
   
@@ -158,12 +158,12 @@ ms.locfileid: "63187080"
   
 -   Verwenden Sie den Parameter **-UseInprocLoader** des Verteilungs-Agents und des Merge-Agents (dieser Parameter kann nicht verwendet werden, wenn veröffentlichte Tabellen XML-Spalten enthalten). Durch diesen Parameter verwendet der Agent beim Anwenden der Momentaufnahme den BULK INSERT-Befehl.  
   
- Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+ Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
 -   [Arbeiten mit Replikations-Agent-Profilen](../agents/work-with-replication-agent-profiles.md)  
   
--   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+-   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
--   [Replication Agent Executables Concepts](../concepts/replication-agent-executables-concepts.md)zugeordnet ist.  
+-   [Ausführbare Konzepte für den Replikations-Agent](../concepts/replication-agent-executables-concepts.md).  
   
   

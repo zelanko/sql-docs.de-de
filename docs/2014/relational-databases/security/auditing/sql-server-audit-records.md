@@ -13,29 +13,29 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3cc249ebfce796d7932e68d993ac98ede867845f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63238386"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit-Datensätze
-  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. installiert haben.  
+  Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht es, Ereignisgruppen und Ereignisse auf Serverebene und auf Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md). [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
  Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen, die in einem *Überwachungsziel*aufgezeichnet werden. Beim Überwachungsziel kann es sich um eine Binärdatei, das Windows-Sicherheitsereignisprotokoll oder das Windows-Anwendungsereignisprotokoll handeln. Die an das Ziel gesendeten Datensätze können die in der folgenden Tabelle beschriebenen Elemente enthalten.  
   
-|Spaltenname|Description|Typ|Immer verfügbar|  
+|Spaltenname|BESCHREIBUNG|type|Immer verfügbar|  
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|Datum und Uhrzeit der Auslösung des überwachbaren Vorgangs.|`datetime2`|Ja|  
 |**sequence_no**|Hält die Reihenfolge der Datensätze innerhalb eines einzelnen Überwachungsdatensatzes fest, der zu groß für den Schreibpuffer für Überwachungen ist.|`int`|Ja|  
-|**action_id**|ID der Aktion<br /><br /> Tipp: Verwendung von **Action_id** als ein Prädikat, er von einer Zeichenfolge in einen numerischen Wert konvertiert werden muss. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Ja|  
-|**succeeded**|Gibt an, ob die Aktion, die das Ereignis ausgelöst hat, erfolgreich war.|`bit` – 1 = Erfolg, 0 = Fehler|Ja|  
-|**permission_bitmask**|Zeigt, sofern anwendbar, die Berechtigungen an, die gewährt, verweigert oder widerrufen wurden.|`bigint`|Nein|  
-|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|`bit` – 1 = "true", 0 = False|Nein|  
+|**action_id**|ID der Aktion<br /><br /> Tipp: Damit **action_id** als Prädikat verwendet werden kann, muss eine Konvertierung von einer Zeichenfolge in einen numerischen Wert durchgeführt werden. Weitere Informationen finden Sie unter [Filtern von SQL Server Audit nach dem action_id-Prädikat oder class_type-Prädikat](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx).|`varchar(4)`|Ja|  
+|**succeeded**|Gibt an, ob die Aktion, die das Ereignis ausgelöst hat, erfolgreich war.|`bit`-1 = Erfolg, 0 = Fehler|Ja|  
+|**permission_bitmask**|Zeigt die gewährten, verweigerten oder widerrufenen Berechtigungen an (falls verfügbar)|`bigint`|Nein|  
+|**is_column_permission**|Flag, das eine Berechtigung auf Spaltenebene angibt.|`bit`-1 = true, 0 = false|Nein|  
 |**session_id**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|`int`|Ja|  
 |**server_principal_id**|ID des Anmeldekontexts, in dem die Aktion ausgeführt wird.|`int`|Ja|  
 |**database_principal_id**|ID des Datenbankbenutzerkontexts, in dem die Aktion ausgeführt wird.|`int`|Nein|  
-|**object_id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Dies schließt Folgendes ein:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|`int`|Nein|  
+|**object_ id**|Die primäre ID der Entität, bei der die Überwachung aufgetreten ist. Dies umfasst:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte|`int`|Nein|  
 |**target_server_principal_id**|Serverprinzipal, für den die überwachbare Aktion gilt.|`int`|Ja|  
 |**target_database_principal_id**|Datenbankprinzipal, für den die überwachbare Aktion gilt.|`int`|Nein|  
 |**class_type**|Typ der überwachbaren Entität, bei der die Überwachung auftritt.|`varchar(2)`|Ja|  
@@ -48,19 +48,21 @@ ms.locfileid: "63238386"
 |**target_database_principal_name**|Zielbenutzer der Aktion.|`sysname`|Nein|  
 |**server_instance_name**|Der Name der Serverinstanz, in der die Überwachung aufgetreten ist. Verwendet das standardmäßige machine\instance-Format.|`nvarchar(120)`|Ja|  
 |**database_name**|Der Datenbankkontext, in dem die Aktion aufgetreten ist.|`sysname`|Nein|  
-|**schema_name**|Der Schemakontext, in dem die Aktion aufgetreten ist.|`sysname`|Nein|  
-|**object_name**|Der Name der Entität, bei der die Überwachung aufgetreten ist. Dies schließt Folgendes ein:<br /><br /> Serverobjekte<br /><br /> Datenbanken<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|`sysname`|Nein|  
-|**statement**|TSQL-Anweisung (falls vorhanden)|`nvarchar(4000)`|Nein|  
+|**schema_name**|Schemakontext, in dem die Aktion durchgeführt wurde|`sysname`|Nein|  
+|**object_name**|Name der Entität, für die die Überwachung durchgeführt wurde Dies umfasst:<br /><br /> Serverobjekte<br /><br /> databases<br /><br /> Datenbankobjekte<br /><br /> Schemaobjekte<br /><br /> TSQL-Anweisung (falls vorhanden)|`sysname`|Nein|  
+|**an**|TSQL-Anweisung (falls vorhanden)|`nvarchar(4000)`|Nein|  
 |**additional_information**|Zusätzliche Informationen über das als XML gespeicherte Ereignis.|`nvarchar(4000)`|Nein|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Einige Aktionen geben nicht den Wert einer Spalte ein, da er auf die Aktion nicht anwendbar sein könnte.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit speichert 4000 Datenzeichen für Zeichenfelder in einem Überwachungsdatensatz. Wenn die Werte **additional_information** und **statement** , die von einer überwachbaren Aktion zurückgegeben wurden, mehr als 4000 Zeichen zurückgeben, wird die Spalte **sequence_no** dazu verwendet, mehrere Datensätze in einen Überwachungsbericht für eine einzelne Überwachungsaktion zu schreiben, um diese Daten aufzuzeichnen. Der Prozess sieht folgendermaßen aus:  
+ 
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit speichert 4000 Datenzeichen für Zeichenfelder in einem Überwachungsdatensatz. Wenn die Werte **additional_information** und **statement** , die von einer überwachbaren Aktion zurückgegeben wurden, mehr als 4000 Zeichen zurückgeben, wird die Spalte **sequence_no** dazu verwendet, mehrere Datensätze in einen Überwachungsbericht für eine einzelne Überwachungsaktion zu schreiben, um diese Daten aufzuzeichnen. Dieser Prozess verläuft wie folgt:  
   
 -   Die Spalte **statement** wird in 4000 Zeichen geteilt.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit schreibt als erste Zeile für den Überwachungsdatensatz die partiellen Daten. Alle anderen Felder werden in jeder Zeile dupliziert.  
+-   
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit schreibt als erste Zeile für den Überwachungsdatensatz die partiellen Daten. Alle anderen Felder werden in jeder Zeile dupliziert.  
   
 -   Der **sequence_no** -Wert wird inkrementiert.  
   
@@ -71,9 +73,9 @@ ms.locfileid: "63238386"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   

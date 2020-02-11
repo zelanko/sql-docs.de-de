@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen eines Analysis Services-Projekt | Microsoft-Dokumentation
+title: Bereitstellen eines Analysis Services Projekts | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078987"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Bereitstellen eines Analysis Services-Projekts
-  Zum Anzeigen von Cube- und Dimensionsdaten für die Objekte im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt müssen Sie das Projekt auf einer bestimmten Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitstellen und dann den Cube und seine Dimensionen verarbeiten. Durch das *Bereitstellen* eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekts werden die definierten Objekte in einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt. Durch das*Verarbeiten* der Objekte in einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden Daten von den zugrunde liegenden Datenquellen in die Cubeobjekte kopiert. Weitere Informationen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) und [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+  Zum Anzeigen von Cube- und Dimensionsdaten für die Objekte im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt müssen Sie das Projekt auf einer bestimmten Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitstellen und dann den Cube und seine Dimensionen verarbeiten. Beim bereit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] *Stellen eines-* Projekts werden die definierten Objekte in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]einer Instanz von erstellt. Durch das *verarbeiten* der Objekte in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz von werden die Daten aus den zugrunde liegenden Datenquellen in die Cubeobjekte kopiert. Weitere Informationen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) und [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
   
  An diesem Punkt des Entwicklungsprozesses stellen Sie den Cube im Allgemeinen für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf einem Entwicklungsserver bereit. Sobald Sie die Entwicklung Ihres Business Intelligence-Projekts abgeschlossen haben, verwenden Sie im Allgemeinen den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , um Ihr Projekt statt auf dem Entwicklungsserver auf einem Produktionsserver bereitzustellen. Weitere Informationen finden Sie unter [Mehrdimensionale Modelllösungsbereitstellung](multidimensional-models/multidimensional-model-solution-deployment.md) und [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -32,10 +32,10 @@ ms.locfileid: "66078987"
   
 2.  Klicken Sie im Knoten **Konfigurationseigenschaften** im linken Bereich auf **Bereitstellung**.  
   
-     Überprüfen Sie die Bereitstellungseigenschaften für das Projekt. Standardmäßig wird von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projektvorlage ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt so konfiguriert, dass alle Projekte inkrementell für die Standardinstanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie das Projekt zu erstellen und die Objekte nach der Bereitstellung zu verarbeiten, indem die Standardverarbeitungsoption verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
+     Überprüfen Sie die Bereitstellungseigenschaften für das Projekt. Standardmäßig wird von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projektvorlage ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt so konfiguriert, dass alle Projekte inkrementell für die Standardinstanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie das Projekt zu erstellen und die Objekte nach der Bereitstellung zu verarbeiten, indem die Standardverarbeitungsoption verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    >  Wenn Sie das Projekt für eine benannte Instanz von bereitstellen möchten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf dem lokalen Computer oder für eine Instanz auf einem Remoteserver, Ändern der **Server** Eigenschaft mit der entsprechenden Instanz umbenennen, z. B. \<  *ServerName **>\\<** InstanceName ** >* .  
+    >  Wenn Sie das Projekt für eine benannte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz von auf dem lokalen Computer oder für eine Instanz auf einem Remote Server bereitstellen möchten, ändern Sie die **Server** -Eigenschaft in den entsprechenden Instanznamen, \<z. b. Server *Name**>\\**instanceName * * >*.  
   
 3.  Klicken Sie auf **OK**.  
   
@@ -44,11 +44,12 @@ ms.locfileid: "66078987"
     > [!NOTE]  
     >  Wenn während der Bereitstellung Fehler auftreten, überprüfen Sie die Datenbankberechtigungen mithilfe von SQL Server Management Studio. Das Konto, das Sie für die Datenquellenverbindung angegeben haben, muss über einen Anmeldenamen in der SQL Server-Instanz verfügen. Doppelklicken Sie auf den Anmeldenamen, um Eigenschaften für die Benutzerzuordnung anzuzeigen. Dieses Konto muss in der **AdventureWorksDW2012** -Datenbank über db_datareader-Berechtigungen verfügen.  
   
-     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt nun das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt erstellt und mit einem Bereitstellungsskript für die angegebene Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereit. Der Status der Bereitstellung wird in zwei Fenstern angezeigt: die **Ausgabe** Fenster und die **Bereitstellungsstatus – Analysis Services Tutorial** Fenster.  
+     
+  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt nun das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt erstellt und mit einem Bereitstellungsskript für die angegebene Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereit. Der Fortschritt der Bereitstellung wird in zwei Fenstern angezeigt: dem Fenster **Ausgabe** und dem Fenster **Bereitstellungs Fortschritt-Analysis Services Tutorial** .  
   
-     Öffnen Sie gegebenenfalls das Ausgabefenster, indem Sie im Menü **Ansicht** auf **Ausgabe** klicken. Im Fenster **Ausgabe** wird der allgemeine Bereitstellungsstatus angezeigt. Die **Bereitstellungsstatus – Analysis Services Tutorial** Fenster werden Details zu den einzelnen Bereitstellungsschritten angezeigt. Weitere Informationen finden Sie unter [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) und [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
+     Öffnen Sie gegebenenfalls das Ausgabefenster, indem Sie im Menü **Ansicht** auf **Ausgabe** klicken. Im Fenster **Ausgabe** wird der allgemeine Bereitstellungsstatus angezeigt. Im Fenster **Bereitstellungs Fortschritt-Analysis Services Tutorial** werden die Details zu jedem Schritt angezeigt, der während der Bereitstellung ausgeführt wird. Weitere Informationen finden Sie unter [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) und [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
-5.  Überprüfen Sie den Inhalt von der **Ausgabe** Fenster und die **Bereitstellungsstatus – Analysis Services Tutorial** , stellen Sie sicher, dass der Cube erstellt wurde, bereitgestellt und ohne Fehler verarbeitet.  
+5.  Überprüfen Sie den Inhalt des Fensters **Ausgabe** und das Fenster **Bereitstellungs Status Analysis Services** Lernprogramm, um zu überprüfen, ob der Cube fehlerfrei erstellt, bereitgestellt und verarbeitet wurde.  
   
 6.  Um das Fenster **Bereitstellungsstatus – Analysis Services Tutorial** auszublenden, klicken Sie auf das Pushpin-ähnliche Symbol **Automatisch im Hintergrund** in der Symbolleiste des Fensters.  
   
@@ -56,11 +57,11 @@ ms.locfileid: "66078987"
   
  Sie haben erfolgreich den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube für Ihre lokale Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]bereitgestellt und dann den bereitgestellten Cube verarbeitet.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Durchsuchen des Cubes](lesson-2-6-browsing-the-cube.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
+ [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

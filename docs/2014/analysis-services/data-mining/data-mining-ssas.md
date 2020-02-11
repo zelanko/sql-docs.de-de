@@ -1,5 +1,5 @@
 ---
-title: Datamining (SSAS) | Microsoft-Dokumentation
+title: Data Mining (SSAS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084815"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine integrierte Plattform für Lösungen bereit, die Data Mining integrieren. Sie können entweder relationale oder Cubedaten verwenden, um Business Intelligence-Lösungen mit Vorhersageanalysen zu erstellen.  
   
 ## <a name="benefits-of-data-mining"></a>Vorteile des Data Minings  
@@ -30,34 +31,34 @@ ms.locfileid: "66084815"
 ## <a name="key-data-mining-features"></a>Wichtige Data Mining-Funktionen  
  SQL Server stellt die folgenden Funktionen zur Unterstützung integrierter Data Mining-Lösungen bereit:  
   
--   Mehrere Datenquellen: Sie müssen keinen erstellen Sie ein Datawarehouse oder OLAP-Cube Datamining zu tun. Sie können Tabellendaten externer Anbieter, aus Arbeitsblättern und sogar aus Textdateien verwenden. Darüber hinaus können Sie leicht für OLAP-Cubes, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurden, Data Mining durchführen. Sie können jedoch keine Daten aus einer speicherinternen Datenbank verwenden.  
+-   Mehrere Datenquellen: Sie müssen kein Data Warehouse oder einen OLAP-Cube erstellen, um Data Mining-Funktionen zu nutzen. Sie können Tabellendaten externer Anbieter, aus Arbeitsblättern und sogar aus Textdateien verwenden. Darüber hinaus können Sie leicht für OLAP-Cubes, die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurden, Data Mining durchführen. Sie können jedoch keine Daten aus einer speicherinternen Datenbank verwenden.  
   
--   Integrierte DatenBereinigung, datenverwaltung und ETL: Data Quality Services bietet erweiterte Tools zur profilerstellung und zum Bereinigen von Daten. Integration Services können zum Erstellen von ETL-Prozessen zum Bereinigen von Daten sowie zum Erstellen, Verarbeiten, Trainieren und Aktualisieren von Modellen verwendet werden.  
+-   Integrierte Datenbereinigung, Datenverwaltung und ETL: Data Quality Services stellen erweiterte Tools zur Profilerstellung und zum Bereinigen von Daten bereit. Integration Services können zum Erstellen von ETL-Prozessen zum Bereinigen von Daten sowie zum Erstellen, Verarbeiten, Trainieren und Aktualisieren von Modellen verwendet werden.  
   
--   Mehrere anpassbare Algorithmen: Neben Algorithmen, wie z. B. clustering, neuronale Netzwerke und Entscheidungsstrukturen, unterstützt die Plattform die Entwicklung eigener benutzerdefinierter Plug-in-Algorithmen.  
+-   Mehrere anpassbare Algorithmen: Neben Algorithmen, beispielsweise für das Clustering, neuronale Netzwerke und Entscheidungsstrukturen, unterstützt die Plattform die Entwicklung eigener benutzerdefinierter Plug-In-Algorithmen.  
   
--   Infrastruktur zum Testen von Modell: Testen Sie die Modelle und Datasets, die unter Verwendung wichtiger Statistiktools, wie kreuzvalidierung, Klassifikationsmatrizen, prognosegütediagramme und Punktdiagramme. Erstellen und verwalten Sie einfach Test- und Trainingssätze.  
+-   Infrastruktur zum Testen von Modellen: Testen Sie die Modelle und Datasets unter Verwendung wichtiger Statistiktools, wie Kreuzvalidierung, Klassifikationsmatrizen, Prognosegütediagramme und Punktdiagramme. Erstellen und verwalten Sie einfach Test- und Trainingssätze.  
   
--   Abfragen und Drillthrough: Erstellen Sie Vorhersageabfragen, rufen Sie modellmuster und Statistiken und Drillthrough zu Falldaten.  
+-   Abfragen und Drillthrough: Erstellen Sie Vorhersageabfragen, rufen Sie Modellmuster und Statistiken ab, und führen Sie einen Drillthrough zu Falldaten aus.  
   
--   Clienttools: Neben den Entwicklungs- und Entwurfsoberflächen von SQL Server können Sie die Data Mining-Add-ins für Excel verwenden, erstellen, Abfragen und Durchsuchen von Modellen. Alternativ können Sie benutzerdefinierte Clients, einschließlich Webdienste, erstellen.  
+-   Clienttools: Neben den Entwicklungs- und Entwurfsoberflächen von SQL Server können Sie mithilfe der Data Mining-Add-Ins für Excel Modelle erstellen, abfragen und durchsuchen. Alternativ können Sie benutzerdefinierte Clients, einschließlich Webdienste, erstellen.  
   
--   Unterstützung für Skriptsprachen und verwaltete API: Alle Datamining-Objekte sind vollständig programmierbar. Skripts können mithilfe von MDX, XMLA oder der PowerShell-Erweiterungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt werden. Verwenden Sie die DMX-Sprache (Data Mining Extensions, Data Mining-Erweiterungen) für die schnelle Abfrageausführung und Skripterstellung.  
+-   Unterstützung von Skriptsprachen und verwaltete API: Alle Data Mining-Objekte sind vollständig programmierbar. Skripts können mithilfe von MDX, XMLA oder der PowerShell-Erweiterungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt werden. Verwenden Sie die DMX-Sprache (Data Mining Extensions, Data Mining-Erweiterungen) für die schnelle Abfrageausführung und Skripterstellung.  
   
--   Sicherheit und Bereitstellung: Bietet rollenbasierte Sicherheit durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich separater Berechtigungen für Drillthroughs zu Modell-und Strukturdaten. Einfache Bereitstellung von Modellen auf anderen Servern, damit Benutzer auf die Muster zugreifen oder Vorhersagen ausführen können  
+-   Sicherheit und Bereitstellung: Bietet rollenbasierte Sicherheit durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], einschließlich separater Berechtigungen für Drillthroughs zu Modell- und Strukturdaten. Einfache Bereitstellung von Modellen auf anderen Servern, damit Benutzer auf die Muster zugreifen oder Vorhersagen ausführen können  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In den Themen in diesem Abschnitt werden die Hauptfunktionen von SQL Server Data Mining sowie verwandte Tasks eingeführt.  
   
 -   [Data Mining-Konzepte](data-mining-concepts.md)  
   
--   [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
+-   [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
   
 -   [Data Mining-Abfragen](data-mining-queries.md)  
   
@@ -67,6 +68,6 @@ ms.locfileid: "66084815"
   
 -   [Data Mining-Architektur](data-mining-architecture.md)  
   
--   [Sicherheitsübersicht &#40;Data Mining&#41;](security-overview-data-mining.md)  
+-   [Sicherheitsübersicht &#40;Data Mining-&#41;](security-overview-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Entscheidung zwischen URL-Zugriff und SOAP | Microsoft-Dokumentation
+title: Auswählen zwischen URL-Zugriff und SOAP | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,19 +16,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 070d37a1e6ca210694d16ab593e9de40882611f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193000"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Entscheidung zwischen URL-Zugriff und SOAP
-  Die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in benutzerdefinierte Anwendungen ist manchmal nicht ganz einfach. Die Herausforderung liegt jedoch nicht in der Komplexität des Programmiermodells oder in den APIs, sondern in den vielen Möglichkeiten der Integration. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wurde von Grund auf als Entwicklerplattform konzipiert, daher stand die Flexibilität bei der Programmierung immer im Vordergrund. Die hohe Flexibilität fordert jedoch häufige Entscheidungen, wenn die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigations- und Verwaltungsfunktionen in die vorhandenen Geschäftsanwendungen integriert werden.  
+  Die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in benutzerdefinierte Anwendungen ist manchmal nicht ganz einfach. Die Herausforderung liegt jedoch nicht in der Komplexität des Programmiermodells oder in den APIs, sondern in den vielen Möglichkeiten der Integration. 
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wurde von Grund auf als Entwicklerplattform konzipiert, daher stand die Flexibilität bei der Programmierung immer im Vordergrund. Die hohe Flexibilität fordert jedoch häufige Entscheidungen, wenn die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigations- und Verwaltungsfunktionen in die vorhandenen Geschäftsanwendungen integriert werden.  
   
  ![Reporting Services-Programmierungsszenarien](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services-Programmierungsszenarien")  
 Die Programmierung der Reporting Services unterstützt eine Vielzahl von Szenarien.  
   
- Es gibt zwei Möglichkeiten für die Integration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in benutzerdefinierte Anwendungen: URL-Zugriff und die Reporting Services SOAP-API. Welche der beiden Arten verwendet werden soll, hängt von mehreren Faktoren ab. In einigen Fällen müssen für die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in die benutzerdefinierten Anwendungen sowohl URL-Zugriff als auch SOAP verwendet werden. Sie sollten sich folgende Fragen stellen:  
+ Sie können [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf zwei verschiedene Arten in benutzerdefinierte Anwendungen integrieren: über den URL-Zugriff und die Reporting Services-SOAP-API. Welche der beiden Arten verwendet werden soll, hängt von mehreren Faktoren ab. In einigen Fällen müssen für die Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in die benutzerdefinierten Anwendungen sowohl URL-Zugriff als auch SOAP verwendet werden. Sie sollten sich folgende Fragen stellen:  
   
 -   Welche Art Berichtsfunktionen benötigen Sie oder die Endbenutzer? Brauchen Sie einfache Start- und Navigationsfunktionen für die Berichte, oder benötigen Sie ausgereifte Berichtsserver-Verwaltungsfunktionen aus Ihrer benutzerdefinierten Geschäftsanwendung?  
   
@@ -51,10 +52,10 @@ Die Programmierung der Reporting Services unterstützt eine Vielzahl von Szenari
   
  Ein Beispiel für die Kombination des URL-Zugriffs mit dem Webdienst, um eine integrierte Berichterstellung bereitzustellen, finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
-## <a name="see-also"></a>Siehe auch  
- [Integration von Reporting Services in Anwendungen](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
- [Integrieren von Reporting Services mit SOAP](../application-integration/integrating-reporting-services-using-soap.md)   
- [Integrieren von Reporting Services mit URL-Zugriff](../application-integration/integrating-reporting-services-using-url-access.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Integrieren von Reporting Services in Anwendungen](../../../2014/reporting-services/application-integration/integrating-reporting-services-into-applications.md)   
+ [Integrieren von Reporting Services mithilfe von SOAP](../application-integration/integrating-reporting-services-using-soap.md)   
+ [Integrieren von Reporting Services mithilfe des URL-Zugriffs](../application-integration/integrating-reporting-services-using-url-access.md)   
  [Technische Referenz (SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

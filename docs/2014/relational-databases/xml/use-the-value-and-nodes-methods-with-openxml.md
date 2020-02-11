@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 377f9ecfd0f3d94388929d78a048bc65e5020a3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63193231"
 ---
 # <a name="use-the-value-and-nodes-methods-with-openxml"></a>Verwenden der value()-Methode und der nodes()-Methode mit OPENXML
-  Können Sie mehrere **Value()-Methode** Methoden `xml` -Datentyp in einen **wählen** -Klausel generieren Sie ein Rowset aus extrahierten Werten zu. Die **nodes()** -Methode ergibt einen internen Verweis für jeden ausgewählten Knoten, der für zusätzliche Abfragen verwendet werden kann. Die Kombination der Methoden **nodes()** und **value()** kann beim Generieren des Rowsets effizienter sein, wenn es über mehrere Spalten verfügt und möglicherweise auch, wenn die zu seiner Generierung verwendeten Pfadausdrücke komplex sind.  
+  Sie können mehrere **value ()** -Methoden für `xml` den-Datentyp in einer **Select** -Klausel verwenden, um ein Rowset von extrahierten Werten zu generieren. Die **nodes()** -Methode ergibt einen internen Verweis für jeden ausgewählten Knoten, der für zusätzliche Abfragen verwendet werden kann. Die Kombination der Methoden **nodes()** und **value()** kann beim Generieren des Rowsets effizienter sein, wenn es über mehrere Spalten verfügt und möglicherweise auch, wenn die zu seiner Generierung verwendeten Pfadausdrücke komplex sind.  
   
- Die **nodes()** -Methode ergibt Instanzen eines speziellen `xml` -Datentyps, wobei bei jedem der Kontext auf einen unterschiedlichen ausgewählten Knoten festgelegt. Diese Art der XML-Instanz unterstützt **query()** -, **value()** -, **nodes()** - und **exist()** -Methoden und kann in **count(\*)** -Aggregationen verwendet werden. Alle anderen Verwendungen verursachen einen Fehler.  
+ Die **Nodes ()** -Methode ergibt Instanzen eines besonderen `xml` Datentyps, von denen jeder den Kontext auf einen anderen ausgewählten Knoten festgelegt hat. Diese Art der XML-Instanz unterstützt **query()** -, **value()** -, **nodes()** - und **exist()** -Methoden und kann in **count(\*)** -Aggregationen verwendet werden. Alle anderen Verwendungen verursachen einen Fehler.  
   
 ## <a name="example-using-nodes"></a>Beispiel: Verwenden von nodes()  
  Angenommen, Sie wollen die Vornamen und Nachnamen von Autoren extrahieren, und der Vorname soll nicht "David" sein. Außerdem wollen Sie diese Informationen als ein Rowset extrahieren, das die beiden Spalten FirstName und LastName enthält. Durch Verwenden der Methoden **nodes()** und **value()** können Sie dieses Ziel erreichen, wie im folgenden Beispiel gezeigt:  
@@ -40,7 +40,7 @@ WHERE  nref.exist('first-name[. != "David"]') = 1
   
  SQL Server 2000 bietet die Möglichkeit zum Generieren eines Rowsets aus einer XML-Instanz durch Verwenden von **OpenXml()** . Sie können das relationale Schema für das Rowset angeben sowie, wie die Werte in der XML-Instanz den Spalten im Rowset zugeordnet sind.  
   
-## <a name="example-using-openxml-on-the-xml-data-type"></a>Beispiel: Verwenden von OpenXml() für den XML-Datentyp  
+## <a name="example-using-openxml-on-the-xml-data-type"></a>Beispiel: Verwenden von OpenXml() für den xml-Datentyp  
  Die Abfrage aus dem vorherigen Beispiel kann mithilfe von **OpenXml()** umgeschrieben werden, wie im folgenden Beispiel gezeigt. Dies geschieht durch Erstellen eines Cursors, der jede XML-Instanz in eine XML-Variable einliest und dann für OpenXML auf sie anwendet:  
   
 ```  
@@ -73,7 +73,7 @@ DEALLOCATE name_cursor
   
  Die Kombination aus den **nodes()** - und **value()** -Funktionen sorgt für eine effektive XML-Indizierung. Im Ergebnis kann diese Kombination eine größere Skalierbarkeit als **OpenXml**aufweisen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [OPENXML &#40;SQL Server&#41;](openxml-sql-server.md)  
   
   

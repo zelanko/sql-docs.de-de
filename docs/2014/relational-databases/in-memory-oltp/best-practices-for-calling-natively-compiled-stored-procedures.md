@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1dbc3dd467aab0cf60cdb255165767fc12a0f518
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156771"
 ---
 # <a name="best-practices-for-calling-natively-compiled-stored-procedures"></a>Bewährte Vorgehensweisen für den Aufruf von systemintern kompilierten gespeicherten Prozeduren
@@ -28,7 +28,7 @@ ms.locfileid: "63156771"
   
  Der Leistungsvorteil bei Verwendung einer systemintern kompilierten gespeicherten Prozedur nimmt mit der Anzahl der Zeilen und dem Umfang der Logik zu, die von der Prozedur verarbeitet werden. Beispielsweise lässt sich die Leistung einer systemintern kompilierten gespeicherten Prozedur durch eine oder mehrere der folgenden Maßnahmen verbessern:  
   
--   Aggregation.  
+-   Aggregation:  
   
 -   Joins geschachtelter Schleifen.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "63156771"
   
  Auf ähnliche Weise können Sie die Verwendung von nicht übereinstimmenden Typen über dasselbe XEvent `hekaton_slow_parameter_passing`, mit `reason=parameter_conversion`, erkennen.  
   
- Da Sie bei der Verwendung speicheroptimierter Tabellen (in vielen Fällen) Wiederholungslogik implementieren und bestimmte Funktionseinschränkungen umgehen müssen, können Sie eine von einem Wrapper interpretierte gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur erstellen. Ein Beispiel finden Sie unter [Richtlinien zur Wiederholungslogik für Transaktionen in speicheroptimierten Tabellen](memory-optimized-tables.md).  
+ Da Sie bei der Verwendung speicheroptimierter Tabellen (in vielen Fällen) Wiederholungslogik implementieren und bestimmte Funktionseinschränkungen umgehen müssen, können Sie eine von einem Wrapper interpretierte gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozedur erstellen. Ein Beispiel finden Sie unter [Richtlinien für Wiederholungs Logik für Transaktionen in Speicher optimierten Tabellen](memory-optimized-tables.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Systemintern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

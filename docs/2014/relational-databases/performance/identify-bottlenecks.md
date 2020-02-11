@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be8b05a3dc706d23f0e1328f4e8bdd38ed368ede
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150900"
 ---
 # <a name="identify-bottlenecks"></a>Identifizieren von Engpässen
@@ -44,7 +44,7 @@ ms.locfileid: "63150900"
 ## <a name="analyzing-bottlenecks"></a>Analysieren von Engpässen  
  Sehr lange Ausführungszeiten für verschiedene Ereignisse sind Anzeichen von Engpässen, die optimiert werden können.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 -   Eine andere Komponente verhindert, dass die Arbeitsauslastung diese Komponente erreicht, wodurch die erforderliche Zeit zum Verarbeiten der Arbeitsauslastung zunimmt.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "63150900"
 |Benutzerverbindungen|Möglicherweise greifen zu viele Benutzer gleichzeitig auf den Server zu, wodurch die Leistung beeinträchtigt wird.|  
 |Blockierende Sperren|Fehlerhaft entworfene Anwendungen können zu Sperren führen und behindern die Parallelität, wodurch sich längere Antwortzeiten und niedrigere Durchsatzraten für Transaktionen ergeben.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der CPU-Auslastung](../performance-monitor/monitor-cpu-usage.md)   
  [Überwachen der Datenträgerverwendung](../performance-monitor/monitor-disk-usage.md)   
  [Überwachen der Speicherauslastung](../performance-monitor/monitor-memory-usage.md)   

@@ -1,5 +1,5 @@
 ---
-title: Mingingmodellinhalt von neuronalen Netzwerkmodellen (Analysis Services – Datamining) | Microsoft-Dokumentation
+title: Mining Modell Inhalt von neuronalen Netzwerkmodellen (Analysis Services-Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,14 +21,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e19dfcdc284f048cffbb3a95e076b6e3a57294d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66083588"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Miningmodellinhalt von neuronalen Netzwerkmodellen (Analysis Services - Data Mining)
-  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Neural Network-Algorithmus verwenden. Eine Erklärung dazu, wie Statistiken und Strukturen, die allen Modelltypen eigen sind, interpretiert werden, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  In diesem Thema wird der Miningmodellinhalt beschrieben, der Modellen eigen ist, die den Microsoft Neural Network-Algorithmus verwenden. Eine Erklärung zur Interpretation von Statistiken und Strukturen, die allen Modelltypen gemein sind, und die allgemeinen Definitionen von Begriffen in Bezug auf den Miningmodellinhalt finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-neural-network-model"></a>Grundlegendes zur Struktur von neuronalen Netzwerkmodellen  
  Jedes neuronale Netzwerkmodell verfügt sowohl über einen einzelnen, übergeordneten Knoten, der das Modell und seine Metadaten darstellt, als auch über einen Knoten für Randstatistik (NODE_TYPE = 24), der beschreibende Statistiken über die Eingabeattribute bietet. Der Knoten für Randstatistik ist hilfreich, da er Informationen über Eingaben zusammenfasst, sodass Sie keine Daten von den einzelnen Knoten abfragen müssen.  
@@ -88,7 +88,7 @@ ms.locfileid: "66083588"
  NODE_TYPE  
  Ein neuronales Netzwerkmodell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|Description|  
+|Knotentyp-ID|BESCHREIBUNG|  
 |------------------|-----------------|  
 |1|Modell.|  
 |17|Planerknoten für das Subnetzwerk.|  
@@ -188,10 +188,10 @@ ms.locfileid: "66083588"
  MSOLAP_NODE_SHORT_CAPTION  
  Für neuronale Netzwerkmodelle immer leer.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Zweck des Trainings eines neuronalen Netzwerkmodells ist die Bestimmung der Gewichtungen, die jedem Übergang von einer Eingabe zu einem Mittelpunkt und von einem Mittelpunkt zu einem Endpunkt zugeordnet sind. Daher existiert die Eingabeebene des Modells prinzipiell, um die Istwerte zu speichern, die verwendet wurden, um das Modell zu erstellen. Die verborgene Ebene speichert die Gewichtungen, die berechnet wurden, und stellt Zeiger bereit, die auf die Eingabeattribute zurückverweisen. Die Ausgabeebene speichert die vorhersagbaren Werte und stellt Zeiger bereit, die auf die Mittelpunkte in der verborgenen Eben zurückverweisen.  
   
-##  <a name="bkmk_NodeIDs"></a> Verwenden von Knotennamen und IDs  
+##  <a name="bkmk_NodeIDs"></a>Verwenden von Knoten Namen und IDs  
  Die Benennung der Knoten in einem neuronalen Netzwerkmodell bietet zusätzliche Informationen über den Knotentyp, um die Beziehung zwischen der verborgenen Ebene und der Eingabeebene und zwischen der Ausgabeebene und der verborgenen Ebene leichter bestimmen zu können. In der folgenden Tabelle wird die Konvention für die IDs dargestellt, die den Knoten in jeder Ebene zugewiesen wird.  
   
 |Knotentyp|Konvention für Knoten-ID|  
@@ -210,17 +210,17 @@ ms.locfileid: "66083588"
   
  Auf ähnliche Weise können Sie bestimmen, welche verborgenen Ebenen mit einem Ausgabeattribut in Beziehung stehen, indem Sie die Tabelle NODE_DISTRIBUTION im Ausgabeknoten (NODE_TYPE = 23) einsehen. Jede Zeile der Tabelle NODE_DISTRIBUTION enthält die ID eines Knotens der verborgenen Ebene mit dem verknüpften Koeffizienten.  
   
-##  <a name="bkmk_NodeDistTable"></a> Interpretieren der Informationen in der NODE_DISTRIBUTION-Tabelle  
+##  <a name="bkmk_NodeDistTable"></a>Interpretieren der Informationen in der NODE_DISTRIBUTION Tabelle  
  Die NODE_DISTRIBUTION-Tabelle kann in einigen Knoten leer sein. Allerdings speichert die NODE_DISTRIBUTION-Tabelle für Eingabeknoten, Knoten der verborgenen Ebene und Ausgabeknoten wichtige und interessante Informationen über das Modell. Um Sie bei der Interpretation dieser Informationen zu unterstützen, enthält die NODE_DISTRIBUTION-Tabelle eine Spalte VALUETYPE für jede Zeile, die darüber Aufschluss gibt, ob der Wert in der Spalte ATTRIBUTE_VALUE diskret (4), diskretisiert (5) oder kontinuierlich (3) ist.  
   
 ### <a name="input-nodes"></a>Eingabeknoten  
  Die Eingabeebene enthält einen Knoten für jeden im Modell verwendeten Wert des Attributs.  
   
- **Diskretes Attribut:** Der Eingabeknoten speichert nur den Namen des Attributs und dessen Wert in den Spalten ATTRIBUTE_NAME und ATTRIBUTE_VALUE. Ist zum Beispiel [Work Shift] die Spalte, wird ein separater Knoten für jeden im Modell verwendeten Wert der Spalte erstellt, zum Beispiel AM und PM. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
+ **Diskretes Attribut:** Der Eingabe Knoten speichert nur den Namen des Attributs und seinen Wert in den Spalten ATTRIBUTE_NAME und ATTRIBUTE_VALUE. Ist zum Beispiel [Work Shift] die Spalte, wird ein separater Knoten für jeden im Modell verwendeten Wert der Spalte erstellt, zum Beispiel AM und PM. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
   
- **Diskretisiertes numerisches Attribut:** Der Eingabeknoten speichert den Namen des Attributs, und den Wert, der einen Bereich sein kann oder einen bestimmten Wert. Alle Werte werden durch Ausdrücke dargestellt. Beispiel: '77.4 - 87.4' oder ' < 64.0' für den Wert von [Time Per Issue]. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
+ **Diskretisiertes numerisches Attribut:** Der Eingabe Knoten speichert den Namen des Attributs und den Wert, bei dem es sich um einen Bereich oder einen bestimmten Wert handeln kann. Alle Werte werden durch Ausdrücke dargestellt. Beispiel: '77.4 - 87.4' oder ' < 64.0' für den Wert von [Time Per Issue]. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
   
- **Kontinuierliches Attribut:** Der Eingabeknoten speichert den Mittelwert des Attributs. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
+ **Kontinuierliches Attribut:** Der Eingabe Knoten speichert den Mittelwert des Attributs. Die NODE_DISTRIBUTION-Tabelle für jeden Knoten listet nur den aktuellen Wert des Attributs auf.  
   
 ### <a name="hidden-layer-nodes"></a>Knoten der verborgenen Ebene  
  Die verborgene Ebene enthält eine variable Anzahl von Knoten. In jedem Knoten enthält die NODE_DISTRIBUTION-Tabelle Zuordnungen von der verborgenen Ebene zu den Knoten in der Eingabeeben. Die Spalte ATTRIBUTE_NAME enthält eine Knoten-ID, die einem Knoten in der Eingabeebene entspricht. Die Spalte ATTRIBUTE_VALUE enthält die Gewichtung, die dieser Kombination aus Eingabeknoten und Knoten verborgener Ebene zugewiesen ist. Die letzte Zeile in der Tabelle enthält einen Koeffizienten, der die Gewichtung dieses verborgenen Knotens in der verborgenen Ebene darstellt.  
@@ -230,14 +230,14 @@ ms.locfileid: "66083588"
   
  Die NODE_DISTRIBUTION-Tabelle weist die folgenden weiteren Informationen auf, abhängig vom Typ des Attributs:  
   
- **Diskretes Attribut:** Die letzten beiden Zeilen der NODE_DISTRIBUTION-Tabelle enthalten einen Koeffizienten für den Knoten als Ganzes und den aktuellen Wert des Attributs.  
+ **Diskretes Attribut:** Die letzten zwei Zeilen der NODE_DISTRIBUTION Tabelle enthalten einen Koeffizienten für den Knoten als Ganzes und den aktuellen Wert des Attributs.  
   
- **Diskretisiertes numerisches Attribut:** Mit diskreten Attributen identisch, außer dass der Wert des Attributs auf einen Bereich von Werten ist.  
+ **Diskretisiertes numerisches Attribut:** Identisch mit diskreten Attributen, mit dem Unterschied, dass der Wert des-Attributs ein Wertebereich ist.  
   
- **Kontinuierliches Attribut:** Die letzten beiden Zeilen der NODE_DISTRIBUTION-Tabelle enthalten den Mittelwert des Attributs, den Koeffizienten für den Knoten als Ganzes und die Varianz des Koeffizienten.  
+ **Kontinuierliches Attribut:** Die letzten zwei Zeilen der NODE_DISTRIBUTION Tabelle enthalten den Mittelwert des Attributs, den Koeffizienten für den Knoten als Ganzes und die Varianz des Koeffizienten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm.md)   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)   
  [Neuronale Beispiele für Netzwerkmodellabfragen](neural-network-model-query-examples.md)  
   

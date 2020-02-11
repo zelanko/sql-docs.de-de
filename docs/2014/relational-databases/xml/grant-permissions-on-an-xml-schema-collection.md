@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63288758"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Erteilen von Berechtigungen für eine XML-Schemaauflistung
@@ -312,7 +312,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D. Erteilen der TAKE OWNERSHIP-Berechtigung für eine XML-Schemaauflistung  
+### <a name="d-granting-take-ownership-permission-on-an-xml-schema-collection"></a>D: Erteilen der TAKE OWNERSHIP-Berechtigung für eine XML-Schemaauflistung  
  Im folgenden Beispiel wird veranschaulicht, wie der Besitz des XML-Schemas von einem Benutzer an einen anderen übertragen werden kann. Damit das Beispiel interessanter wird, arbeiten die Benutzer in diesem Beispiel in verschiedenen relationalen Standardschemas.  
   
  In diesem Beispiel werden die folgenden Aufgaben ausgeführt:  
@@ -502,7 +502,7 @@ SELECT XML_SCHEMA_NAMESPACE(N'dbo',N'MySC')
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](xml-data-sql-server.md)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](compare-typed-xml-to-untyped-xml.md)   
  [XML-Schemaauflistungen &#40;SQL Server&#41;](xml-schema-collections-sql-server.md)   

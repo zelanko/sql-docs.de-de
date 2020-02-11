@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158001"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
-  Das Berichtstool für Transaktionsleistung (siehe [Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche Tabellen in der Datenbank von einer Portierung zu In-Memory OLTP profitieren. Nachdem Sie eine Tabelle identifiziert haben, die Sie zur Verwendung In-Memory OLTP portieren möchten, können Sie den Ratgeber für die Speicheroptimierung verwenden, der Sie bei der Migration der datenträgerbasierten Datenbanktabelle zu In-Memory OLTP unterstützt.  
+  Das Berichtstool für Transaktionsleistung (siehe [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informiert Sie darüber, welche Tabellen in der Datenbank von einer Portierung zu In-Memory OLTP profitieren. Nachdem Sie eine Tabelle identifiziert haben, die Sie zur Verwendung In-Memory OLTP portieren möchten, können Sie den Ratgeber für die Speicheroptimierung verwenden, der Sie bei der Migration der datenträgerbasierten Datenbanktabelle zu In-Memory OLTP unterstützt.  
   
  Stellen Sie zunächst eine Verbindung mit der Instanz her, die die datenträgerbasierte Datenbanktabelle enthält. Die Verbindung kann mit einer Instanz von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hergestellt werden. Wenn Sie jedoch einen Migrationsvorgang mit dem Ratgeber ausführen möchten, müssen Sie eine Verbindung mit einer [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Instanz herstellen, für die In-Memory OLTP aktiviert ist. Weitere Informationen zu den Anforderungen für In-Memory OLTP finden Sie unter [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63158001"
   
  Warnungen, die eine Aktion erfordern, sind in der linken Spalte mit einem gelben Dreieck gekennzeichnet. Wenn solche Warnungen vorliegen, sollten Sie die Migration beenden, die Ursache der Warnungen beseitigen und den Vorgang neu starten. Wenn die Warnungen nicht aufgelöst werden, kann die migrierte Tabelle einen Fehler verursachen.  
   
- Klicken Sie auf **Bericht generieren** , um einen HTML-Bericht dieser Warnungen zu generieren. Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+ Klicken Sie auf **Bericht generieren** , um einen HTML-Bericht dieser Warnungen zu generieren. Klicken Sie zum Fortfahren auf **Weiter** .  
   
 ### <a name="review-optimization-options"></a>Optimierungsoptionen überprüfen  
  Auf dem folgenden Bildschirm können Sie Optionen für die Migration zu In-Memory OLTP ändern:  
@@ -84,7 +84,7 @@ ms.locfileid: "63158001"
 > [!WARNING]  
 >  Wählen Sie diese Option nur aus, wenn Sie das mit nicht dauerhaften Tabellen verbundene Datenverlustrisiko in Kauf nehmen.  
   
- Klicken Sie auf **Weiter** , um den Vorgang fortzusetzen.  
+ Klicken Sie auf zum Fortfahren auf **Weiter**.  
   
 ### <a name="review-primary-key-conversion"></a>Konvertierung des primären Schlüssels überprüfen  
  Der nächste Bildschirm lautet **Konvertierung des primären Schlüssels überprüfen**. Der Ratgeber für die Speicheroptimierung stellt fest, ob die Tabelle einen oder mehrere primäre Schlüssel enthält und füllt die Spaltenliste anhand von Primärschlüssel-Metadaten auf. Wenn Sie eine Migration zu einer dauerhaften speicheroptimierten Tabelle ausführen möchten, müssen Sie einen Primärschlüssel erstellen.  
@@ -121,7 +121,7 @@ ms.locfileid: "63158001"
   
  Aktualisieren Sie nach Ende des Prozesses den **Objekt-Explorer** , um die neue speicheroptimierte Tabelle und die alte datenträgerbasierte Tabelle anzuzeigen. Sie können die alte Tabelle beibehalten oder löschen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

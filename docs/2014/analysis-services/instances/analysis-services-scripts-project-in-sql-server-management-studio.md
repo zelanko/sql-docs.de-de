@@ -1,5 +1,5 @@
 ---
-title: Analysis Services-Skriptprojekt in SQL Server Management Studio | Microsoft-Dokumentation
+title: Analysis Services Skripts Projekt in SQL Server Management Studio | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66080358"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Analysis Services-Skriptprojekt in SQL Server Management Studio
@@ -29,7 +29,7 @@ ms.locfileid: "66080358"
   
  Zum Erstellen eines Skriptprojekts von Analysis-Server in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]gehen Sie die folgenden grundlegenden Schritte durch:  
   
-1.  Zeigen Sie im Menü **Datei**auf **Neu**, und klicken Sie dann auf Projekt.  
+1.  Zeigen Sie im Menü Datei auf **Neu**, und klicken Sie dann auf **Projekt**.  
   
      Wählen Sie die Vorlage **Analysis Server-Skriptprojekt** aus, und geben Sie dann einen Namen und einen Speicherort für das neue Projekt an.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66080358"
   
  Der Projektordner für ein Skriptprojekt von Analysis-Server kann die in der folgenden Tabelle aufgeführten Dateitypen enthalten:  
   
-|Dateityp|Beschreibung|  
+|Dateityp|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Definitionsdatei für Skriptprojekte von Analysis-Server (.ssmsasproj)|Enthält Metadaten zu den im Projektmappen-Explorer angezeigten Ordnern sowie Informationen, aus denen hervorgeht, in welchen Ordnern dem Projekt zugehörige Dateien angezeigt werden sollten.<br /><br /> Die Projektdefinitionsdatei enthält darüber hinaus Metadaten für die im Projekt enthaltenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen sowie Metadaten, die Zuordnungen von Verbindungen mit Skriptdateien im Projekt herstellen.|  
 |DMX-Skriptdatei (.dmx)|Enthält ein in das Projekt aufgenommenes DMX-Skript.|  
@@ -54,13 +54,13 @@ ms.locfileid: "66080358"
 |XMLA-Skriptdatei (.xmla)|Enthält ein in das Projekt aufgenommenes XMLA-Skript.|  
   
 ## <a name="analysis-services-templates"></a>Vorlagen von Analysis Services  
- Wenn Sie einem Skriptprojekt von Analysis-Server neue MDX-, DMX- oder XMLA-Skripts hinzufügen, haben Sie die Möglichkeit, mithilfe des Vorlagen-Explorers [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Vorlagen zu suchen. Diese Vorlagen stellen eine Auflistung vordefinierter Skripts oder Anweisungen dar, in denen das Ausführen einer angegebenen Aktion gezeigt wird. Der Vorlagen-Explorer ist im Menü **Ansicht** verfügbar und enthält Vorlagen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Weitere Informationen finden Sie unter [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
+ Wenn Sie einem Skriptprojekt von Analysis-Server neue MDX-, DMX- oder XMLA-Skripts hinzufügen, haben Sie die Möglichkeit, mithilfe des Vorlagen-Explorers [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Vorlagen zu suchen. Diese Vorlagen stellen eine Auflistung vordefinierter Skripts oder Anweisungen dar, in denen das Ausführen einer angegebenen Aktion gezeigt wird. Der Vorlagen-Explorer ist im Menü **Ansicht** verfügbar und enthält Vorlagen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], und [!INCLUDE[ssEW](../../includes/ssew-md.md)]. Weitere Informationen finden Sie unter [Use Analysis Services Templates in SQL Server Management Studio](use-analysis-services-templates-in-sql-server-management-studio.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen mehrdimensionaler Modelle mit SQL Server-Datentools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)   
- [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Verweis](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen mehrdimensionaler Modelle mithilfe von SQL Server Data Tools &#40;SSDT&#41;](../multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
   
   

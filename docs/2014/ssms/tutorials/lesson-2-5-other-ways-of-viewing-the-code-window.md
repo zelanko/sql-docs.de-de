@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 537d7e48440e3c68639438068d7b3ff8bd7e9634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63252679"
 ---
 # <a name="other-ways-of-viewing-the-code-window"></a>Weitere Möglichkeiten zum Anzeigen des Codefensters
@@ -37,7 +37,7 @@ ms.locfileid: "63252679"
 > [!NOTE]  
 >  Wenn Sie den Abfrage-Editor im Vollbildmodus anzeigen möchten, klicken Sie auf eine beliebige Stelle im Abfrage-Editorfenster, und drücken Sie dann UMSCHALT+ALT+EINGABE.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Erstellen eines Skriptes für eine Tabelle](lesson-2-6-script-a-table.md)  
   
   

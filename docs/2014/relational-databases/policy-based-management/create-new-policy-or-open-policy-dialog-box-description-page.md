@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255224"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Beschreibung'
   Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsrichtlinie eine Beschreibung und zusätzliche Informationen hinzufügen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kategorie**  
  Wenn Sie eine neue Richtlinie erstellen, wählen Sie eine Richtlinienkategorie aus.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63255224"
  **Zusätzlicher Hilfelink: Adresse**  
  Geben Sie den Link einer Webseite ein, die geöffnet werden soll, wenn Benutzer auf den Linktext klicken, der auf der Seite **Ergebnisse, Detailansicht** angezeigt wird.  
   
- **Zusätzlicher Hilfelink: Link "testen"**  
+ **Zusätzlicher Hilfelink: Testlink**  
  Klicken Sie, um den Link zu öffnen und die Gültigkeit des Links zu testen.  
   
  **Erstellt am**  
@@ -48,7 +48,7 @@ ms.locfileid: "63255224"
  **Geändert von**  
  Der Anmeldename, der die letzte Änderung an der Richtlinie vorgenommen hat.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  
   
   

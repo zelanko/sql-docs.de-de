@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d289b3d4c4177ed885a3153bb758d0052286bec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164333"
 ---
 # <a name="debugging-delivery-extension-code"></a>Debuggen von Übermittlungserweiterungscode
-  Das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] stellt mehrere hilfreiche Tools zum Debuggen zur Verfügung, die Sie bei der Analyse des Codes für Übermittlungserweiterungen und bei der Fehlersuche darin unterstützen. Welches Tool dafür am besten geeignet ist, hängt von Ihrer Zielsetzung ab. In diesem Beispiel wird [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)]verwendet.  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bietet mehrere Debugtools, mit denen Sie den Code der Übermittlungs Erweiterung analysieren und Fehler darin finden [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] können. Welches Tool dafür am besten geeignet ist, hängt von Ihrer Zielsetzung ab. In diesem Beispiel wird [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)] verwendet.  
   
 #### <a name="to-debug-your-delivery-extension-code"></a>So debuggen Sie Code für Übermittlungserweiterungen  
   
@@ -42,9 +42,9 @@ ms.locfileid: "63164333"
   
 7.  Definieren Sie mithilfe der Übermittlungserweiterung ein neues Abonnement. Höchstwahrscheinlich verwenden Sie den Berichts-Manager oder die SOAP-API. Dadurch sollte der Debugger aufgerufen und Code den Breakpoints gemäß ausgeführt werden.  
   
-8.  Gehen Sie den Code schrittweise mit der Taste **F11** durch. Weitere Informationen zum Debuggen mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] finden Sie in der Dokumentation zu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
+8.  Schrittweises Durchlaufen des Codes mithilfe der **F11** -Taste. Weitere Informationen zum Debuggen mit [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] finden Sie in der Dokumentation zu [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Übermittlungserweiterungen](implementing-a-delivery-extension.md)   
  [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../reporting-services-extension-library.md)  
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ce71d591dc8f72e6826f7bcd96628fb1898fd7bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63242952"
 ---
 # <a name="setdefaults-method-clientsettings-class"></a>SetDefaults-Methode (ClientSettings-Klasse)
@@ -39,18 +39,19 @@ OverwriteAll
   
 ```  
   
-## <a name="parts"></a>Teile  
- *object*  
+## <a name="parts"></a>Bestandteile  
+ *Objekt*  
  Ein `ClientSettings`-Objekt, das eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientinstanz darstellt.  
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|Beschreibung|  
+|Parameter|BESCHREIBUNG|  
 |---------------|-----------------|  
-|*OverwriteAll*|Ein boolescher Wert, der angibt, ob vorhandene Werte für die Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients überschrieben werden sollen. `true`, um vorhandene Daten zu überschreiben, `false`, wenn vorhandene Daten nicht überschrieben werden sollen.|  
+|*Overschreiteall*|Ein boolescher Wert, der angibt, ob vorhandene Werte für die Instanz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients überschrieben werden sollen. 
+  `true`, um vorhandene Daten zu überschreiben, `false`, wenn vorhandene Daten nicht überschrieben werden sollen.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   

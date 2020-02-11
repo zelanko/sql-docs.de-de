@@ -1,5 +1,5 @@
 ---
-title: Inhaltstypen [Datamining] | Microsoft-Dokumentation
+title: Inhaltstypen (Data Mining) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -27,14 +27,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085662"
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
-  In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie den physischen Datentyp für eine Spalte in einer Miningstruktur sowie einen logischen Inhaltstyp für die Spalte bei Verwendung in einem Modell definieren.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]können Sie sowohl den physischen Datentyp für eine Spalte in einer Mining Struktur als auch einen logischen Inhaltstyp für die Spalte definieren, wenn Sie in einem Modell verwendet werden.  
   
  Der *Datentyp* bestimmt, wie Algorithmen die Daten beim Erstellen von Miningmodellen in diesen Spalten verarbeiten. Durch Definieren des Datentyps einer Spalte erhält der Algorithmus Informationen über die Art und Verarbeitung der Daten in den Spalten. Jeder Datentyp in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt einen oder mehrere Inhaltstypen für Data Mining.  
   
@@ -45,21 +45,21 @@ ms.locfileid: "66085662"
  In der folgenden Liste werden die Inhaltstypen beschrieben, die Sie beim Data Mining verwenden. Außerdem erfahren Sie hier, von welchen Datentypen die einzelnen Inhaltstypen unterstützt werden.  
   
 ## <a name="discrete"></a>Discrete  
- *Discrete* (Diskret) bedeutet, dass die Spalte eine endliche Anzahl von Werten enthält, wobei sich die Werte nicht durch eine kontinuierliche Größe unterscheiden. Eine Spalte mit der Angabe des Geschlechts ist ein Beispiel für eine typische diskrete Attributspalte, da die Daten eine bestimmte Anzahl von Kategorien darstellen.  
+ *Diskret* bedeutet, dass die Spalte eine endliche Anzahl von Werten ohne Kontinuum zwischen Werten enthält. Eine Spalte mit der Angabe des Geschlechts ist ein Beispiel für eine typische diskrete Attributspalte, da die Daten eine bestimmte Anzahl von Kategorien darstellen.  
   
  Selbst wenn die Werte einer diskreten Attributspalte numerisch sind, können sie keine Reihenfolge beinhalten. Auch wenn für die diskrete Spalte numerische Werte verwendet werden, können keine Bruchzahlen berechnet werden. Ortskennzahlen sind ein anschauliches Beispiel für numerische diskrete Daten.  
   
  Der Inhaltstyp `Discrete` wird von allen Data Mining-Typen unterstützt.  
   
-## <a name="continuous"></a>Continuous  
- *Continuous* (Kontinuierlich) bedeutet, dass die Spalte Werte enthält, die numerische Daten auf einer Skala darstellen, die Zwischenwerte zulässt. Im Gegensatz zu diskreten Spalten, die endliche, zählbare Daten darstellen, stellt eine kontinuierliche Spalte skalierbare Messdaten dar. Diese Spalten können unendliche viele Bruchzahlen enthalten. Eine Temperaturspalte stellt ein Beispiel für eine kontinuierliche Attributspalte dar.  
+## <a name="continuous"></a>Fortlaufend  
+ *Continuous* bedeutet, dass die Spalte Werte enthält, die numerische Daten auf einer Skala darstellen, die Zwischenwerte zulässt. Im Gegensatz zu diskreten Spalten, die endliche, zählbare Daten darstellen, stellt eine kontinuierliche Spalte skalierbare Messdaten dar. Diese Spalten können unendliche viele Bruchzahlen enthalten. Eine Temperaturspalte stellt ein Beispiel für eine kontinuierliche Attributspalte dar.  
   
  Wenn eine Spalte kontinuierliche numerische Daten enthält und Sie wissen, wie die Daten verteilt werden sollen, können Sie die Genauigkeit der Analyse möglicherweise erhöhen, indem Sie die erwartete Verteilung der Werte angeben. Die Spaltenverteilung wird auf Ebene der Miningstruktur festgelegt. Daher bezieht sich die Einstellung auf alle Modelle, die auf der Struktur basieren. Weitere Informationen finden Sie unter [Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md).  
   
  Der Inhaltstyp `Continuous` wird von den folgenden Datentypen unterstützt: `Date`, `Double` und `Long`.  
   
 ## <a name="discretized"></a>Discretized  
- Unter*Diskretisierung* wird der Prozess verstanden, Werte eines kontinuierlichen Satzes an Daten in Buckets zu platzieren, sodass sich eine begrenzte Anzahl an möglichen Werten ergibt. Nur numerische Daten können diskretisiert werden.  
+ *Diskretisierung* ist der Prozess, bei dem Werte eines kontinuierlichen Satzes von Daten in Bucket-Werte versetzt werden, sodass eine begrenzte Anzahl möglicher Werte vorhanden ist. Nur numerische Daten können diskretisiert werden.  
   
  Der Inhaltstyp *Discretized* gibt an, dass die Spalte Werte enthält, die Gruppen bzw. Buckets von Werten darstellen, die von einer kontinuierlichen Spalte abgeleitet sind. Die Buckets werden als sortierte und diskrete Werte behandelt.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66085662"
   
  Dieser Inhaltstyp wird von allen Data Mining-Datentypen in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]unterstützt. Die meisten Algorithmen behandeln zyklische Werte jedoch als diskrete Werte und führen keine spezielle Verarbeitung durch.  
   
-## <a name="ordered"></a>Ordered  
+## <a name="ordered"></a>Bestellt  
  Der Inhaltstyp *Ordered* (Sortiert) gibt ebenfalls an, dass die betreffende Spalte Werte enthält, die eine Sequenz oder Reihenfolge definieren. Bei diesem Inhaltstyp implizieren die zum Sortieren verwendeten Werte jedoch keine Abstands- oder Größenbeziehung zwischen den Werten der Menge. Wenn eine sortierte Attributspalte z. B. Informationen zu Kenntnisstufen in der Reihenfolge von eins bis fünf enthält, hat der Abstand zwischen den Kenntnisstufen keine Aussage. Eine Kenntnisstufe von fünf ist nicht notwendigerweise fünf Mal besser, als eine Kenntnisstufe von eins.  
   
  Sortierte Attributspalten werden hinsichtlich des Inhaltstyps auch als diskrete Spalten betrachtet.  
@@ -111,11 +111,11 @@ ms.locfileid: "66085662"
 ## <a name="classified"></a>Classified  
  Neben den oben aufgeführten Inhaltstypen, die für alle Modelle verwendet werden, können Sie klassifizierte Spalten verwenden, um Inhaltstypen für einige Datentypen zu definieren. Weitere Informationen zu klassifizierten Spalten finden Sie unter [Klassifizierte Spalten &#40;Data Mining&#41;](classified-columns-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
- [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)   
- [Datentypen &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
- [Ändern der Eigenschaften einer Miningstruktur](change-the-properties-of-a-mining-structure.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Inhaltstypen &#40;DMX-&#41;](/sql/dmx/content-types-dmx)   
+ [Datentypen &#40;Data Mining-&#41;](data-types-data-mining.md)   
+ [Datentypen &#40;DMX-&#41;](/sql/dmx/data-types-dmx)   
+ [Ändern der Eigenschaften einer Mining Struktur](change-the-properties-of-a-mining-structure.md)   
  [Miningstrukturspalten](mining-structure-columns.md)  
   
   

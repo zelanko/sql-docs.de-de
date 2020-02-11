@@ -31,10 +31,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 67edebf9b4adcf40c12190446997dbd7c4b6e57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151175"
 ---
 # <a name="use-sql-server-objects"></a>Verwenden von SQL Server-Objekten
@@ -47,87 +47,88 @@ ms.locfileid: "63151175"
  Sie können den Systemmonitor so konfigurieren, dass Statistiken von jedem beliebigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikator angezeigt werden. Darüber hinaus können Sie einen Schwellenwert für jeden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikator festlegen und anschließend eine Warnung generieren, wenn ein Leistungsindikator einen Schwellenwert überschreitet. Weitere Informationen zum Einrichten von Warnungen finden Sie unter [Erstellen einer SQL Server-Datenbankwarnung](create-a-sql-server-database-alert.md).  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Statistiken werden nur angezeigt, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anhalten und neu starten, wird die Anzeige der Statistiken unterbrochen und anschließend automatisch fortgesetzt. Beachten Sie außerdem, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikatoren im Systemmonitor-Snap-In angezeigt werden, selbst wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht ausgeführt wird. Bei einer gruppierten Instanz sind Leistungsindikatoren nur auf dem Knoten funktionsfähig, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Statistiken werden nur angezeigt, wenn eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. Wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anhalten und neu starten, wird die Anzeige der Statistiken unterbrochen und anschließend automatisch fortgesetzt. Beachten Sie außerdem, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Leistungsindikatoren im Systemmonitor-Snap-In angezeigt werden, selbst wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht ausgeführt wird. Bei einer gruppierten Instanz sind Leistungsindikatoren nur auf dem Knoten funktionsfähig, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.  
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Leistungsobjekte für den SQL Server-Agent](#SQLServerAgentPOs)  
+-   [SQL Server-Agent von Leistungs Objekten](#SQLServerAgentPOs)  
   
--   [Service Broker-Leistungsobjekte](#ServiceBrokerPOs)  
+-   [Service Broker von Leistungs Objekten](#ServiceBrokerPOs)  
   
--   [SQL Server-Leistungsobjekte](#SQLServerPOs)  
+-   [SQL Server von Leistungs Objekten](#SQLServerPOs)  
   
--   [Leistungsobjekte für die SQL Server-Replikation](#SQLServerReplicationPOs)  
+-   [SQL Server-Replikation von Leistungs Objekten](#SQLServerReplicationPOs)  
   
--   [SSIS-Pipelineleistungsindikatoren](#SsisPipelineCounters)  
+-   [SSIS-Pipeline-Leistungsindikatoren](#SsisPipelineCounters)  
   
 -   [Erforderliche Berechtigungen](#RequiredPermissions)  
   
-##  <a name="SQLServerAgentPOs"></a> Leistungsobjekte für den SQL Server-Agent  
+##  <a name="SQLServerAgentPOs"></a>SQL Server-Agent von Leistungs Objekten  
  In der folgenden Tabelle sind die Leistungsobjekte für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent aufgeführt:  
   
-|Leistungsobjekt|Beschreibung|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|[SQLAgent:Warnungen](sql-server-agent-alerts-object.md)|Stellt Informationen zu Warnungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
-|[SQLAgent:Aufträge](sql-server-agent-jobs-object.md)|Stellt Informationen zu Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
-|[SQLAgent:Auftragsschritte](sql-server-agent-jobsteps-object.md)|Stellt Informationen zu Auftragsschritten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
-|[SQLAgent:Statistik](sql-server-agent-statistics-object.md)|Stellt allgemeine Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereit.|  
+|[SQLAgent: Warnungen](sql-server-agent-alerts-object.md)|Stellt Informationen zu Warnungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
+|[SQLAgent: Aufträge](sql-server-agent-jobs-object.md)|Stellt Informationen zu Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
+|[SQLAgent: Jobsteps](sql-server-agent-jobsteps-object.md)|Stellt Informationen zu Auftragsschritten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents bereit.|  
+|[SQLAgent: Statistik](sql-server-agent-statistics-object.md)|Stellt allgemeine Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereit.|  
   
-##  <a name="ServiceBrokerPOs"></a> Service Broker-Leistungsobjekte  
+##  <a name="ServiceBrokerPOs"></a>Service Broker von Leistungs Objekten  
  In der folgenden Tabelle sind die Leistungsobjekte für [!INCLUDE[ssSB](../../includes/sssb-md.md)]aufgeführt.  
   
-|Leistungsobjekt|Beschreibung|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|[SQLServer:Broker-Aktivierung](sql-server-broker-activation-object.md)|Stellt Informationen zu aktivierten [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Tasks bereit.|  
-|[SQLServer:Broker-Statistik](sql-server-broker-statistics-object.md)|Stellt allgemeine Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] bereit.|  
-|[SQLServer:Broker-Transport](sql-server-broker-dbm-transport-object.md)|Stellt Informationen zum [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Netzwerk bereit.|  
+|[SQLServer: Broker-Aktivierung](sql-server-broker-activation-object.md)|Stellt Informationen zu aktivierten [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Tasks bereit.|  
+|[SQLServer: Broker-Statistik](sql-server-broker-statistics-object.md)|Stellt allgemeine Informationen zu [!INCLUDE[ssSB](../../includes/sssb-md.md)] bereit.|  
+|[SQLServer: Broker-Transport](sql-server-broker-dbm-transport-object.md)|Stellt Informationen zum [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Netzwerk bereit.|  
   
-##  <a name="SQLServerPOs"></a> SQL Server-Leistungsobjekte  
+##  <a name="SQLServerPOs"></a>SQL Server von Leistungs Objekten  
  In der folgenden Tabelle werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte beschrieben.  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|[SQLServer:Zugriffsmethoden](sql-server-access-methods-object.md)|Durchsucht und misst die Anzahl der Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten (z.B. die Anzahl von Indexsuchläufen oder die Anzahl von Seiten, die Indizes und Daten zugeordnet sind).|  
-|[SQLServer:Sicherungsmedium](sql-server-backup-device-object.md)|Stellt Informationen über Sicherungsmedien bereit, die von Sicherungs- und Wiederherstellungsvorgängen verwendet werden, z. B. über den Durchsatz des Sicherungsmediums.|  
-|[SQLServer:Puffer-Manager](sql-server-buffer-manager-object.md)|Stellt Informationen über die Speicherpuffer bereit, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden, z.B. **freier Arbeitsspeicher** und **Puffercache-Trefferquote**.|  
+|[SQLServer: Zugriffsmethoden](sql-server-access-methods-object.md)|Durchsucht und misst die Anzahl der Zuordnungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten (z.B. die Anzahl von Indexsuchläufen oder die Anzahl von Seiten, die Indizes und Daten zugeordnet sind).|  
+|[SQLServer: Sicherungsmedium](sql-server-backup-device-object.md)|Stellt Informationen über Sicherungsmedien bereit, die von Sicherungs- und Wiederherstellungsvorgängen verwendet werden, z. B. über den Durchsatz des Sicherungsmediums.|  
+|[SQLServer: Puffer-Manager](sql-server-buffer-manager-object.md)|Stellt Informationen über die Speicherpuffer bereit, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden, z.B. **freier Arbeitsspeicher** und **Puffercache-Trefferquote**.|  
 |[SQLServer: Buffer Node](sql-server-buffer-node.md)|Stellt Informationen dazu bereit, wie oft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] freie Seiten anfordert und auf diese zugreift.|  
-|[SQLServer:CLR](sql-server-clr-object.md)|Stellt Informationen über die Common Language Runtime (CLR) bereit.|  
-|[SQLServer:Cursor-Manager nach Typ](sql-server-cursor-manager-by-type-object.md)|Stellt Informationen zu Cursorn bereit.|  
-|[SQLServer:Cursor-Manager gesamt](sql-server-cursor-manager-total-object.md)|Stellt Informationen zu Cursorn bereit.|  
-|[SQLServer:Datenbankspiegelung](sql-server-database-mirroring-object.md)|Stellt Informationen zur Datenbankspiegelung bereit.|  
-|[SQLServer:Datenbanken](sql-server-databases-object.md)|Stellt Informationen zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank bereit, z.B. zum Umfang des freien Protokollspeichers oder zur Anzahl aktiver Transaktionen in der Datenbank. Es kann mehrere Instanzen dieses Objekts geben.|  
-|[SQL Server:Als veraltet markierte Funktionen](sql-server-deprecated-features-object.md)|Zählt, wie oft veraltete Funktionen verwendet werden.|  
-|[SQLServer:Ausführungsstatistik](sql-server-execstatistics-object.md)|Stellt Informationen zur Ausführungsstatistik bereit.|  
-|[SQLServer, Allgemeine Statistik](sql-server-general-statistics-object.md)|Stellt Informationen zur allgemeinen serverweiten Aktivität bereit, z. B. die Anzahl von Benutzern, die mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verbunden sind.|  
-|[SQL Server:HADR-Verfügbarkeitsreplikat](sql-server-availability-replica.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Verfügbarkeitsreplikaten bereit.|  
-|[SQL Server:HADR-Datenbankreplikat](sql-server-database-replica.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Datenbankreplikaten bereit.|  
-|[SQLServer:Latches](sql-server-latches-object.md)|Stellt Informationen zu Latches auf internen Ressourcen (z. B. Datenbankseiten) bereit, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden.|  
-|[SQLServer:Sperren](sql-server-locks-object.md)|Stellt Informationen zu einzelnen Sperranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit, z.B. Timeouts für Sperren und Deadlocks. Es kann mehrere Instanzen dieses Objekts geben.|  
-|[SQLServer:Speicher-Manager](sql-server-memory-manager-object.md)|Stellt Informationen zur Speicherauslastung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereit, z.B. die Gesamtanzahl der aktuell zugewiesenen Sperrstrukturen.|  
-|[SQLServer:Plancache](sql-server-plan-cache-object.md)|Stellt Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cache bereit, der zum Speichern von Objekten wie gespeicherten Prozeduren, Triggern und Abfrageplänen verwendet wird.|  
-|[SQLServer: Ressourcenpool-ID](sql-server-resource-pool-stats-object.md)|Stellt Informationen über Statistiken für Ressourcenpools in der Ressourcenkontrolle bereit.|  
-|[SQLServer:SQL-Fehler](sql-server-sql-errors-object.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlern bereit.|  
-|[SQLServer:SQL-Statistik](sql-server-sql-statistics-object.md)|Stellt Informationen zu Aspekten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen bereit, z.B. die Anzahl von Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]empfangen hat.|  
-|[SQLServer:Transaktionen](sql-server-transactions-object.md)|Stellt Informationen zu den aktiven Transaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit, z.B. die Gesamtanzahl von Transaktionen und die Anzahl von Momentaufnahmetransaktionen.|  
-|[SQLServer:Benutzerdefinierbar](sql-server-user-settable-object.md)|Führt eine benutzerdefinierte Überwachung aus. Jeder Leistungsindikator kann eine benutzerdefinierte gespeicherte Prozedur oder eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung sein, die einen Wert zurückgibt, der überwacht werden soll.|  
-|[SQLServer: Wartestatistik](sql-server-wait-statistics-object.md)|Stellt Informationen zu Wartezeiten bereit.|  
-|[SQLServer: Statistiken für Arbeitsauslastungsgruppen](sql-server-workload-group-stats-object.md)|Stellt Informationen zur Ressourcenkontrollen-Arbeitsauslastungsgruppenstatistik bereit.|  
+|[SQLServer: CLR](sql-server-clr-object.md)|Stellt Informationen über die Common Language Runtime (CLR) bereit.|  
+|[SQLServer: Cursor-Manager nach Typ](sql-server-cursor-manager-by-type-object.md)|Stellt Informationen zu Cursorn bereit.|  
+|[SQLServer: Cursor-Manager gesamt](sql-server-cursor-manager-total-object.md)|Stellt Informationen zu Cursorn bereit.|  
+|[SQLServer: Daten Bank Spiegelung](sql-server-database-mirroring-object.md)|Stellt Informationen zur Datenbankspiegelung bereit.|  
+|[SQLServer: Datenbanken](sql-server-databases-object.md)|Stellt Informationen zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank bereit, z.B. zum Umfang des freien Protokollspeichers oder zur Anzahl aktiver Transaktionen in der Datenbank. Es kann mehrere Instanzen dieses Objekts geben.|  
+|[SQL Server: als veraltet markierte Funktionen](sql-server-deprecated-features-object.md)|Zählt, wie oft veraltete Funktionen verwendet werden.|  
+|[SQLServer: exec-Statistik](sql-server-execstatistics-object.md)|Stellt Informationen zur Ausführungsstatistik bereit.|  
+|[SQLServer: Allgemeine Statistik](sql-server-general-statistics-object.md)|Stellt Informationen zur allgemeinen serverweiten Aktivität bereit, z. B. die Anzahl von Benutzern, die mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verbunden sind.|  
+|[SQL Server: HADR-Verfügbarkeits Replikat](sql-server-availability-replica.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Verfügbarkeitsreplikaten bereit.|  
+|[SQL Server: HADR-Datenbankreplikat](sql-server-database-replica.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssHADR](../../includes/sshadr-md.md)] -Datenbankreplikaten bereit.|  
+|[SQLServer: Latches](sql-server-latches-object.md)|Stellt Informationen zu Latches auf internen Ressourcen (z. B. Datenbankseiten) bereit, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden.|  
+|[SQLServer: Sperren](sql-server-locks-object.md)|Stellt Informationen zu einzelnen Sperranforderungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit, z.B. Timeouts für Sperren und Deadlocks. Es kann mehrere Instanzen dieses Objekts geben.|  
+|[SQLServer: Speicher-Manager](sql-server-memory-manager-object.md)|Stellt Informationen zur Speicherauslastung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereit, z.B. die Gesamtanzahl der aktuell zugewiesenen Sperrstrukturen.|  
+|[SQLServer: Plancache](sql-server-plan-cache-object.md)|Stellt Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Cache bereit, der zum Speichern von Objekten wie gespeicherten Prozeduren, Triggern und Abfrageplänen verwendet wird.|  
+|[SQLServer: Statistiken für Ressourcenpools](sql-server-resource-pool-stats-object.md)|Stellt Informationen über Statistiken für Ressourcenpools in der Ressourcenkontrolle bereit.|  
+|[SQLServer: SQL-Fehler](sql-server-sql-errors-object.md)|Stellt Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlern bereit.|  
+|[SQLServer: SQL-Statistik](sql-server-sql-statistics-object.md)|Stellt Informationen zu Aspekten von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen bereit, z.B. die Anzahl von Batches von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]empfangen hat.|  
+|[SQLServer: Transaktionen](sql-server-transactions-object.md)|Stellt Informationen zu den aktiven Transaktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereit, z.B. die Gesamtanzahl von Transaktionen und die Anzahl von Momentaufnahmetransaktionen.|  
+|[SQLServer: Benutzerdefinierbar](sql-server-user-settable-object.md)|Führt eine benutzerdefinierte Überwachung aus. Jeder Leistungsindikator kann eine benutzerdefinierte gespeicherte Prozedur oder eine beliebige [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung sein, die einen Wert zurückgibt, der überwacht werden soll.|  
+|[SQLServer: warte Statistik](sql-server-wait-statistics-object.md)|Stellt Informationen zu Wartezeiten bereit.|  
+|[SQLServer: Statistiken für Arbeits Auslastungs Gruppen](sql-server-workload-group-stats-object.md)|Stellt Informationen zur Ressourcenkontrollen-Arbeitsauslastungsgruppenstatistik bereit.|  
   
-##  <a name="SQLServerReplicationPOs"></a> Leistungsobjekte für die SQL Server-Replikation  
+##  <a name="SQLServerReplicationPOs"></a>SQL Server-Replikation von Leistungs Objekten  
  In der folgenden Tabelle sind die Leistungsobjekte für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation aufgeführt:  
   
-|Leistungsobjekt|Description|  
+|Leistungsobjekt|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|**SQLServer:Replikations-Agents**<br /><br /> **SQLServer:Replikationsmomentaufnahme**<br /><br /> **SQLServer:Replikationsprotokollleser**<br /><br /> **SQLServer:Replikationsverteilung**<br /><br /> **SQLServer:Replikationsmerge**<br /><br /> Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Stellt Informationen zur Aktivität des Replikations-Agents bereit.|  
+|**SQLServer: Replikations-Agents**<br /><br /> **SQLServer: Replikations Momentaufnahme**<br /><br /> **SQLServer: Replikations Protokoll Leser**<br /><br /> **SQLServer: Replikations Verteiler.**<br /><br /> **SQLServer: Replikationsmerge**<br /><br /> Weitere Informationen finden Sie unter [Monitoring Replication with System Monitor](../replication/monitor/monitoring-replication-with-system-monitor.md).|Stellt Informationen zur Aktivität des Replikations-Agents bereit.|  
   
-##  <a name="SsisPipelineCounters"></a> SSIS-Pipelineleistungsindikatoren  
+##  <a name="SsisPipelineCounters"></a>SSIS-Pipeline-Leistungsindikatoren  
  Informationen zum **SSIS-Pipeline** -Leistungsindikator finden Sie unter [Leistungsindikatoren](../../integration-services/performance/performance-counters.md).  
   
-##  <a name="RequiredPermissions"></a> Erforderliche Berechtigungen  
+##  <a name="RequiredPermissions"></a>Erforderliche Berechtigungen  
  Die Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekten hängt von Windows-Berechtigungen ab, außer für **SQLAgent:Warnungen**. Die Benutzer müssen Mitglied der festen Serverrolle **sysadmin** sein, um **SQLAgent:Warnungen**zu verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
- [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
+ [sys. dm_os_performance_counters &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql)  
   
   

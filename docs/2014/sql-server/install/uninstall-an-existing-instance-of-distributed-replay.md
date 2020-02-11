@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 45fddb470ce7bee4dd84cbcc3c656e33d30e3166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091764"
 ---
 # <a name="uninstall-an-existing-instance-of-distributed-replay"></a>Deinstallieren einer vorhandenen Distributed Replay-Instanz
@@ -28,11 +28,11 @@ ms.locfileid: "66091764"
   
 ### <a name="to-uninstall-an-instance-of-distributed-replay"></a>So deinstallieren Sie eine Distributed Replay-Instanz  
   
-1.  Von der **starten** Menü klicken Sie auf **Systemsteuerung**, und doppelklicken Sie dann auf **Software**.  
+1.  Klicken Sie im **Startmenü** auf **Systemsteuerung**, und doppelklicken Sie dann auf **Software.**  
   
-     Wählen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in die **deinstallieren oder Ändern eines Programms** Fenster, und klicken Sie dann in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] im Dialogfeld klicken Sie auf **entfernen**.  
+     Wählen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Sie im Fenster **Programm deinstallieren oder ändern** aus, und klicken Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] dann im Dialogfeld auf **Entfernen**.  
   
-2.  Führen Sie die Schritte in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Assistenten, und klicken Sie auf die **Features auswählen** Seite, wählen Sie die Distributed Replay-Komponenten, die Sie verwenden möchten, entfernen Sie aus, und klicken Sie dann auf **weiter.** .  
+2.  Führen Sie die Schritte im [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Assistenten aus, und wählen Sie auf der Seite **Features auswählen** die Distributed Replay Komponenten aus, die Sie entfernen möchten, und klicken Sie dann auf **Weiter.**  
   
 3.  Schließen Sie den [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Installations-Assistenten ab, um die ausgewählten Distributed Replay-Funktionen zu deinstallieren.  
   

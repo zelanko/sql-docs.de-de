@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16c5a556159caa1227268bc3488a19d25fa9e296
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086148"
 ---
 # <a name="apply-filters-to-model-testing-data"></a>Anwenden von Filtern zum Modellieren von Testdaten
   Wenn Sie eine externe Datenquelle angeben, die beim Testen eines verwendet werden soll, können Sie optional einen Filter anwenden, um die Eingabedaten einzuschränken. Sie möchten das Modell zum Beispiel speziell für Vorhersagen zu Kunden in einem bestimmten Einkommensbereich testen.  
   
- Beispielsweise können Sie in der targeted mailing-Szenario von AdventureWorks, erstellen einen Filterausdruck wie den folgenden Ausdruck für ProspectiveBuyer, das in der Tabelle, die Testdaten enthält, und Testfälle nach Einkommensbereich einschränken:  
+ Beispielsweise können Sie im Szenario "AdventureWorks-Ziel Mailing" einen Filter Ausdruck wie den folgenden für "ProspectiveBuyer" erstellen, bei dem es sich um die Tabelle handelt, die die Testdaten enthält, und die Testfälle nach Einkommensbereich einschränken:  
   
  `[YearlyIncome] = '50000'`  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66086148"
   
 3.  Wählen Sie auf der Registerkarte **Eingabeauswahl** unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**.  
   
-4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**  ein Dialogfeld geöffnet, und wählen das externe DataSet.  
+4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um ein Dialogfeld zu öffnen und das externe Dataset auszuwählen.  
   
 5.  Wählen Sie die Falltabelle aus, und fügen Sie ggf. eine geschachtelte Tabelle hinzu. Ordnen Sie Spalten im Modell nach Bedarf Spalten im externen Dataset zu. Schließen Sie das Dialogfeld **Spaltenzuordnung angeben** , um die Quelltabellendefinition zu speichern.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "66086148"
   
 8.  Verwenden Sie die Spalten **Operator**und **Wert** , um zu definieren, wie die Spalte gefiltert wird.  
   
-     **Hinweis** Geben Sie die Werte ohne Anführungszeichen ein.  
+     **Hinweis** Geben Sie Werte ohne Anführungszeichen ein.  
   
 9. Klicken Sie auf das Textfeld **Und/Oder** , und wählen Sie einen logischen Operator aus, um zu definieren, wie mehrere Bedingungen kombiniert werden.  
   
-10. Klicken Sie optional auf die Schaltfläche zum Durchsuchen **(...)**  am rechten Rand der **Wert** Textfeld zum Öffnen der **Filter** Dialogfeld und legen Sie Bedingungen für die geschachtelte Tabelle oder für die einzelnen Tabellenspalten für Groß-/Kleinschreibung.  
+10. Klicken Sie optional auf die Schaltfläche zum Durchsuchen **(...)** rechts neben dem Textfeld **Wert** , um das Dialogfeld **Filter** zu öffnen und Bedingungen für die schallete Tabelle oder die einzelnen Spalten der Fall Tabelle festzulegen.  
   
 11. Überprüfen Sie, dass die fertig gestellten Filterbedingungen richtig sind, indem Sie den Text im Bereich **Ausdruck** anzeigen.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "66086148"
   
      Die Filterbedingung wird auf die Datenquelle angewendet, wenn Sie das Genauigkeitsdiagramm erstellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Auswählen und Zuordnen von Modelltestdaten](choose-and-map-model-testing-data.md)   
- [Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Auswählen und Zuordnen von Modell Test Daten](choose-and-map-model-testing-data.md)   
+ [Verwenden von Daten in einer Datentabelle als Eingabe für ein Genauigkeits Diagramm](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)   
  [Auswählen eines Genauigkeitsdiagrammtyps Festlegen von Diagrammoptionen](choose-an-accuracy-chart-type-and-set-chart-options.md)  
   
   

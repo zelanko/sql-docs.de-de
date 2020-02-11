@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 15a48d24af5b8781f1ffe8af9a8cca434699f76a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106720"
 ---
 # <a name="add-and-modify-a-line-report-builder-and-ssrs"></a>Hinzufügen und Ändern einer Linie (Berichts-Generator und SSRS)
@@ -34,9 +34,9 @@ ms.locfileid: "66106720"
 3.  Zum Ändern der Linieneigenschaften wählen Sie die Linie auf der Entwurfsoberfläche aus und bearbeiten dann die Eigenschaften im Abschnitt **Rahmen** der Registerkarte **Home** .  
   
     > [!NOTE]  
-    >  Wenn Sie die Linienart auf **doppelte** und die Linienstärke 1 1/2 pt oder geringer ist, die Linie möglicherweise nicht doppelt angezeigt bei Ausführung des Berichts in Berichts-Generator, Berichts-Designer oder Berichts-Manager. Sie wird doppelt angezeigt, wenn Sie den Bericht in andere Formate wie Microsoft Word oder Acrobat PDF exportieren.  
+    >  Wenn Sie die Linienart auf **Double** festlegen und die Linienstärke 1 1/2 pt oder schmaler ist, wird die Linie möglicherweise nicht doppelt angezeigt, wenn Sie den Bericht in Berichts-Generator, Berichts-Designer oder Berichts-Manager ausführen. Sie wird doppelt angezeigt, wenn Sie den Bericht in andere Formate wie Microsoft Word oder Acrobat PDF exportieren.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

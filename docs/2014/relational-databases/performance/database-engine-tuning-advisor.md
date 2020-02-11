@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63151199"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
@@ -63,10 +63,10 @@ ms.locfileid: "63151199"
  Grafische Benutzeroberfläche des Datenbankoptimierungsratgebers  
  Eine benutzerfreundliche Schnittstelle, über die Sie die Arbeitsauslastung angeben und verschiedene Optimierungsoptionen aktivieren können.  
   
- **dta** -Hilfsprogramm  
+ **DTA** Gebrauchs  
  Die Befehlszeilenversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
   
- Arbeitsauslastung  
+ workload  
  Eine Transact-SQL-Skriptdatei, Ablaufverfolgungsdatei oder Ablaufverfolgungstabelle, die eine repräsentative Arbeitsauslastung für die zu optimierenden Datenbanken enthält. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie den Plancache als Arbeitsauslastung angeben.  
   
  XML-Eingabedatei  
@@ -106,7 +106,7 @@ ms.locfileid: "63151199"
   
 -   Geben Sie nur die Strukturen für den physischen Datenbankentwurf an, die der Datenbankoptimierungsratgeber analysieren soll. Der Datenbankoptimierungsratgeber stellt zahlreiche Optionen zur Verfügung, gibt jedoch nur die wirklich erforderlichen an.  
   
-## <a name="dependency-on-xpmsver-extended-stored-procedure"></a>Abhängigkeit von der erweiterten gespeicherten Prozedur xp_msver  
+## <a name="dependency-on-xp_msver-extended-stored-procedure"></a>Abhängigkeit von der erweiterten gespeicherten Prozedur xp_msver  
  Der Datenbankoptimierungsratgeber ist von der erweiterten gespeicherten Prozedur **xp_msver** abhängig, um vollständige Funktionalität bereitzustellen. Diese erweiterte gespeicherte Prozedur wird standardmäßig aktiviert. Der Datenbankoptimierungsratgeber verwendet diese erweiterte gespeicherte Prozedur, um die Anzahl der Prozessoren und den verfügbaren Speicher auf dem Computer abzurufen, auf dem sich die zu optimierende Datenbank befindet. Wenn **xp_msver** nicht verfügbar ist, übernimmt der Datenbankoptimierungsratgeber die Hardwaremerkmale des Computers, auf dem er ausgeführt wird. Wenn die Hardwaremerkmale des Computers, auf dem der Datenbankoptimierungsratgeber ausgeführt wird, nicht zur Verfügung stehen, geht der Ratgeber von einem Prozessor und 1024 MB (Megabyte) Speicher aus.  
   
  Diese Abhängigkeit hat Auswirkungen auf die Partitionierungsempfehlungen, da die Anzahl der empfohlenen Partitionen von diesen beiden Werten (Anzahl der Prozessoren und verfügbarer Speicher) abhängt. Diese Abhängigkeit hat auch Auswirkungen auf die Optimierungsergebnisse, wenn Sie einen Testserver verwenden, um Ihren Produktionsserver zu optimieren. In diesem Szenario verwendet der Datenbankoptimierungsratgeber **xp_msver** , um Hardwareeigenschaften vom Produktionsserver abzurufen. Nach dem Optimieren der Arbeitsauslastung auf dem Testserver verwendet der Datenbankoptimierungsratgeber diese Hardwareeigenschaften dazu, eine Empfehlung zu generieren. Weitere Informationen finden Sie unter [xp_msver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/xp-msver-transact-sql).  

@@ -1,5 +1,5 @@
 ---
-title: Datenquellensicht (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Datenquellen Sicht (Registerkarte Cubestruktur, Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66082529"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die dem ausgewählten Cube zugeordnet ist. In diesem Bereich können Sie Measuregruppen und Measures erstellen, indem Sie Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Measures** ziehen.  
   
-## <a name="options"></a>Optionen  
- **Datenquellensicht**  
+## <a name="options"></a>Tastatur  
+ **Datenquellen Sicht**  
  Zeigt die dem ausgewählten Cube zugeordnete Datenquellensicht an.  
   
- **(Verschieben Sie Viewpoint)**  
+ **(Viewpoint verschieben)**  
  Klicken Sie auf die rechte untere Ecke des Bereichs zwischen die Bildlaufleisten, um einen Teil des Bereichs **Datenquellensicht** auszuwählen.  
   
 ## <a name="diagram-context-menu"></a>Diagramm (Kontextmenü)  
@@ -41,41 +41,41 @@ ms.locfileid: "66082529"
  **Nur verwendete Tabellen anzeigen**  
  Zeigt in dem Bereich nur die Tabellen aus der zugeordneten Datenquellensicht an, die vom Cube verwendet werden.  
   
- **Anzeigenamen anzeigen**  
+ **Anzeigen Amen anzeigen**  
  Wählen Sie diese Option aus, um für die Objekte im Bereich die Anzeigenamen anzuzeigen.  
   
- **Alles auswählen**  
+ **Alles markieren**  
  Wählt alle Objekte im Bereich aus.  
   
  **Tabelle suchen**  
  Zeigt das Dialogfeld **Tabelle suchen** an. Weitere Informationen zum Dialogfeld **Tabelle suchen** finden Sie unter [Dialogfeld „Tabelle suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](find-table-dialog-box-analysis-services-multidimensional-data.md).  
   
- **Anordnen von Tabellen**  
+ **Tabellen anordnen**  
  Ordnet die Objekte im Bereich in dem Layout an, das durch das Auswählen von **Zu diagonalem Layout wechseln** oder **Zu rechteckigem Layout wechseln**angegeben wurde.  
   
  **Zu diagonalem Layout wechseln**  
  Mit dieser Option werden die Objekte diagonal angeordnet.  
   
 > [!NOTE]  
->  Diese Option wird nur angezeigt, wenn **Zu rechteckigem Layout wechseln** ausgewählt ist.  
+>  Diese Option wird nur angezeigt **, wenn zu rechteckigem Layout wechseln** ausgewählt ist.  
   
  **Zu rechteckigem Layout wechseln**  
  Mit dieser Option werden die Objekte in einem Rechteckmuster angeordnet.  
   
 > [!NOTE]  
->  Diese Option wird nur angezeigt, wenn **Zu diagonalem Layout wechseln** ausgewählt ist.  
+>  Diese Option wird nur angezeigt **, wenn zu diagonalem Layout wechseln** ausgewählt ist.  
   
  **Datenquellensicht bearbeiten**  
- Zeigt den Datenquellensicht-Designer für die dem Objekt zugeordnete Datenquellensicht an. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Zeigt den Datenquellensicht-Designer für die dem Objekt zugeordnete Datenquellensicht an. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
- **Zeigen Sie Datenquellensicht In an**  
+ **Datenquellensicht anzeigen in**  
  Wählen Sie eine der folgenden Optionen aus, um zwischen den folgenden Anzeigemodi für den Bereich **Datenquellensicht** zu wechseln:  
   
 -   Diagramm  
   
      Zeigt ein Diagramm mit Tabellen und Spalten an, die dem aktuellen Cube zugeordnet sind.  
   
--   trEE  
+-   Struktur  
   
      Zeigt eine Strukturansicht mit Tabellen und Spalten an, die dem aktuellen Cube zugeordnet sind.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66082529"
  Zeigen Sie das Dialogfeld **Daten durchsuchen** für die ausgewählte Tabelle an.  
   
  **Datenquellensicht bearbeiten**  
- Zeigt den Datenquellensicht-Designer für die Datenquellensicht an, die die ausgewählte Tabelle enthält. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Zeigt den Datenquellensicht-Designer für die Datenquellensicht an, die die ausgewählte Tabelle enthält. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Neue Measuregruppe aus Tabelle**  
  Definiert auf Grundlage der ausgewählten Tabelle eine neue Measuregruppe im Bereich **Measures** .  
@@ -122,7 +122,7 @@ ms.locfileid: "66082529"
  Zeigt das Dialogfeld **Daten durchsuchen** für die Tabelle mit der ausgewählten Spalte an.  
   
  **Datenquellensicht bearbeiten**  
- Zeigt den Datenquellensicht-Designer für die Datenquellensicht an, die die ausgewählte Spalte enthält. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Zeigt den Datenquellensicht-Designer für die Datenquellensicht an, die die ausgewählte Spalte enthält. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Eigenschaften**  
  Zeigt in **das Fenster** Eigenschaften [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Spalte an.  
@@ -131,15 +131,15 @@ ms.locfileid: "66082529"
  Die folgenden Optionen sind im Kontextmenü verfügbar, das angezeigt wird, wenn Sie im Bereich **Datenquellensicht** mit der rechten Maustaste auf eine Beziehung klicken:  
   
  **Datenquellensicht bearbeiten**  
- Zeigt den Datenquellensicht-Designer für die Datenquellensicht an, die die ausgewählte Beziehung enthält. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
+ Zeigt den Datenquellensicht-Designer für die Datenquellensicht an, die die ausgewählte Beziehung enthält. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  
   
  **Eigenschaften**  
  Zeigt in **das Fenster** Eigenschaften [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Beziehung an.  
   
-## <a name="see-also"></a>Siehe auch  
- [Symbolleiste &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Measures &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Dimensionen &#40;Registerkarte Cubestruktur, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
- [Cubestruktur &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Symbolleiste &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Measures &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](measures-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Dimensionen &#40;Registerkarte "Cubestruktur", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](dimensions-cube-structure-cube-designer-analysis-services-multidimensional-data.md)   
+ [Cubestruktur &#40;Cube-Designer-&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md)  
   
   

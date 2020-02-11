@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144596"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
@@ -28,7 +28,7 @@ ms.locfileid: "63144596"
 > [!NOTE]  
 >  Mit diesen Methoden können Sie auch eine Verbindung mit einer Onlineinstanz herstellen, aber aus einem bestimmten Grund nicht über eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verbindung.  
   
-## <a name="before-you-begin"></a>Vorbereitungen  
+## <a name="before-you-begin"></a>Voraussetzungen  
  Zum Herstellen einer Verbindung mit Offlineprotokolldateien muss eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem Computer installiert sein, den Sie zum Anzeigen der Offlineprotokolldateien verwenden möchten, und außerdem auf dem Computer, auf dem sich die Protokolldateien befinden, die Sie anzeigen möchten. Wenn auf beiden Computern eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist, können Sie Offlinedateien für Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sowie für Instanzen anzeigen, von denen frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem der Computer ausgeführt werden.  
   
  Wenn Sie Registrierte Server verwenden, muss die Instanz, mit der Sie eine Verbindung herstellen möchten, unter **Lokale Servergruppen** oder **Zentrale Verwaltungsserver**registriert sein. (Die Instanz kann eigenständig oder als Mitglied einer Servergruppe registriert werden.) Weitere Informationen zum Hinzufügen einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Registrierte Server finden Sie in den folgenden Themen:  
@@ -52,7 +52,7 @@ ms.locfileid: "63144596"
   
 -   Leseberechtigung für den Ordner mit den Fehlerprotokolldateien. Standardmäßig befinden sich die Fehlerprotokolldateien unter dem folgenden Pfad (wobei <\<*Laufwerk>* das Laufwerk darstellt, auf dem Sie installiert haben[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und\< *<Instanzname* den Namen der Instanz von[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] darstellt):  
   
-     **\<Laufwerk >: \Programme\Microsoft SQL Server\MSSQL12. \<Instanzname > \MSSQL\Log**  
+     **\<Laufwerk>: \Programme\Microsoft SQL server\mssql12. \<InstanceName> \MSSQL\LOG**  
   
  Zum Überprüfen der Sicherheitseinstellungen für den WMI-Namespace können Sie das Snap-In WMI-Kontrolle verwenden.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "63144596"
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken Sie auf **starten**, Typ `wmimgmt.msc` in die **Suche starten** Feld, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken **** Sie auf Start `wmimgmt.msc` , geben Sie im Feld **Suche starten** ein, und drücken Sie dann die EINGABETASTE.  
   
-    -   Klicken Sie auf **starten**, klicken Sie auf **ausführen**, Typ `wmimgmt.msc`, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken Sie im **Startmenü**auf **Ausführen**, geben `wmimgmt.msc`Sie ein, und drücken Sie die EINGABETASTE.  
   
 2.  Standardmäßig wird mit dem Snap-In WMI-Kontrolle der lokale Computer verwaltet.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144596"
   
     3.  Geben Sie den Namen des Remotecomputers ein, und klicken Sie dann auf **OK**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** oder **WMI-Steuerung (***Remotecomputername***)** , und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (lokal)** oder **WMI-Steuerung (***Remote Computername***)**, und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Klicken Sie im Dialogfeld **Eigenschaften von WMI-Kontrolle** auf die Registerkarte **Sicherheit** .  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63144596"
     > [!NOTE]  
     >  Wenn das Laden der Protokolldateien zu lange dauert, können Sie auf der Symbolleiste des Protokolldatei-Viewers auf **Beenden** klicken.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Protokolldatei-Viewer](log-file-viewer.md)  
   
   

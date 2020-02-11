@@ -20,24 +20,24 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f0b3fcf58f3f2767fbdc653327bec334545bdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63213530"
 ---
 # <a name="tables-and-indexes"></a>Tabellen und Indizes
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter stellt die **IIndexDefinition** und **ITableDefinition** Schnittstellen ermöglicht es Consumern zu erstellen, ändern und Löschen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabellen und Indizes. Gültige Tabellen- und Indexdefinitionen hängen von der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht die **IIndexDefinition** -und **ITableDefinition** -Schnittstellen verfügbar und ermöglicht es Consumern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Tabellen und Indizes zu erstellen, zu ändern und zu löschen. Gültige Tabellen- und Indexdefinitionen hängen von der Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab.  
   
  Die Möglichkeit, Tabellen und Indizes zu erstellen oder zu löschen, hängt von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Zugriffsrechten des Benutzers der Consumeranwendung ab. Das Löschen einer Tabelle kann durch das Vorhandensein von Beschränkungen der deklarativen referenziellen Integrität oder anderer Faktoren weiter eingeschränkt sein.  
   
- Die meisten Anwendungen, die für die Zielplattform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden Sie SQL-DMO statt dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-anbieterschnittstellen. SQL-DMO steht für eine Auflistung von OLE-Automatisierungsobjekten, die alle administrativen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen. Anwendungen, die auf mehrere OLE DB-Anbieter ausgerichtet sind, verwenden diese generischen OLE DB-Schnittstellen, die von den verschiedenen OLE DB-Anbietern unterstützt werden.  
+ Die meisten Anwendungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die auf abzielen, verwenden SQL- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DMO anstelle dieser Native Client-OLE DB Anbieter Schnittstellen. SQL-DMO steht für eine Auflistung von OLE-Automatisierungsobjekten, die alle administrativen Funktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützen. Anwendungen, die auf mehrere OLE DB-Anbieter ausgerichtet sind, verwenden diese generischen OLE DB-Schnittstellen, die von den verschiedenen OLE DB-Anbietern unterstützt werden.  
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERCOLUMN definiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die folgende Eigenschaft.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|SSPROP_COL_COLLATIONNAME|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Standard: NULL<br /><br /> Beschreibung: Diese Eigenschaft wird nur in verwendet **ITableDefinition**. Die in dieser Eigenschaft angegebene Zeichenfolge wird beim Erstellen einer [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)-Anweisung verwendet.<br /><br /> verwendet.|  
+|SSPROP_COL_COLLATIONNAME|Typ: VT_BSTR<br /><br /> R/W: Schreiben<br /><br /> Default: NULL<br /><br /> Beschreibung: Diese Eigenschaft wird nur in **ITableDefinition** verwendet. Die in dieser Eigenschaft angegebene Zeichenfolge wird beim Erstellen einer [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql)-Anweisung verwendet.<br /><br /> verwendet.|  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -53,9 +53,9 @@ ms.locfileid: "63213530"
   
 -   [Löschen eines SQL Server-Index](../../relational-databases/native-client-ole-db-tables-indexes/dropping-a-sql-server-index.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;OLE-DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/sql-server-native-client-ole-db.md)   
+ [DROP TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   

@@ -1,5 +1,5 @@
 ---
-title: Registerkarte "Clusterdiagramm" (Miningmodell-Viewer)-Cluster | Microsoft-Dokumentation
+title: Registerkarte "Cluster Diagramm" (Mining Modell-Viewer) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 127ff0c386a1f93c00178624b54499e33cf9042a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66088005"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Registerkarte "Clusterdiagramm" (Miningmodell-Viewer)
   Die Registerkarte **Clusterdiagramm** bietet eine grafische Sicht aller im Clustering-Modell enthaltenen Cluster.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein Miningmodell aus der aktuellen Miningstruktur aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
@@ -55,7 +55,7 @@ ms.locfileid: "66088005"
  **Layout verbessern**  
  Ordnet die im Diagramm enthaltenen Cluster neu an, um das Layout zu verbessern.  
   
- **Density**  
+ **Gas**  
  Mit dieser Option können Sie ändern, welche Attribut/Wert-Paare im Clusterdiagramm angezeigt werden. Wählen Sie mit der Option **Schattierungsvariable** ein Attribut aus, und wählen Sie mit **Status** einen Wert aus. Die Schattierung im Diagramm gibt die Dichte dieses Attribut/Wert-Paars innerhalb des Clusters an.  
   
  Wenn **Auffüllung** ausgewählt wurde, wird im Diagramm der Grad an Unterstützung für jeden Cluster angezeigt, d. h. die Anzahl der Fälle, da kein Attribut ausgewählt wurde.  
@@ -63,15 +63,15 @@ ms.locfileid: "66088005"
  **Schattierungsvariable**  
  Wählen Sie ein Attribut aus, das im Clusterdiagramm dargestellt werden soll.  
   
- **Zustand**  
+ **State**  
  Wählen Sie einen Status von **Schattierungsvariable** aus, der im Clusterdiagramm verwendet werden soll.  
   
  **Links**  
  Passen Sie an, wie viele Links zwischen Clustern angezeigt werden, indem Sie den Schieberegler nach oben oder unten verschieben. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Zuordnungen zwischen Clustern angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

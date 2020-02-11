@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 79f3f41d4224baacd485c7d2151db0f3f2059f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150627"
 ---
 # <a name="save-showplan-xml-statistics-profile-events-separately-sql-server-profiler"></a>Separates Speichern eines Showplan XML Statistics Profile-Ereignisses (SQL Server Profiler)
@@ -45,9 +45,9 @@ ms.locfileid: "63150627"
   
     -   Klicken Sie auf**In Tabelle speichern** , um die Ablaufverfolgung in einer Datenbanktabelle zu erfassen.  
   
-         Klicken Sie optional auf **Maximale Zeilenzahl festlegen**, und geben Sie einen Wert an.  
+         Klicken Sie optional auf **Maximale Zeilen Anzahl festlegen**, und geben Sie einen Wert an.  
   
-5.  Aktivieren Sie optional das Kontrollkästchen **Beendigungszeit für Ablaufverfolgung aktivieren** , um das Datum und die Uhrzeit zum Beenden der Ablaufverfolgung anzugeben.  
+5.  Aktivieren Sie optional das Kontrollkästchen Ablauf **Verfolgungszeit aktivieren** , und geben Sie ein Enddatum und eine Uhrzeit an.  
   
 6.  Klicken Sie auf die Registerkarte **Ereignisauswahl**.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63150627"
   
 11. Zum Anzeigen der **Showplan XML Statistics Profile** -Ereignisdatei in SQL Server Management Studio zeigen Sie im Menü **Datei** auf **Öffnen**, und klicken Sie auf **Datei**. Navigieren Sie zu dem Verzeichnis, in Sie die **Showplan XML Statistics Profile** -Ereignisdatei(en) gespeichert haben, um eine Ereignisdatei auszuwählen und zu öffnen. **Showplan XML Statistics Profile** -Ereignisdateien haben eine SQLPlan-Dateinamenerweiterung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysieren von Abfragen mit SHOWPLAN-Ergebnissen in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysieren von Abfragen mit Showplan-Ergebnissen in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)  
   
   

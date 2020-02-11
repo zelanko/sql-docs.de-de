@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1707de1934ff6265268e40a3ab2a805629134e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482944"
 ---
 # <a name="create-a-master-data-services-database"></a>Erstellen einer Master Data Services-Datenbank
   Erstellen Sie eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank, wenn Sie zur Unterstützung der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung und des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webdiensts eine neuen Datenbank benötigen.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
   
 -   Weitere Informationen zu den Anforderungen für den Computer, auf dem die Datenbank gehostet wird, finden Sie unter [Datenbankanforderungen &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65482944"
   
 -   Konfigurieren Sie einen Wartungsplan, um die Datenbank und Transaktionsprotokolle zu sichern. Weitere Informationen finden Sie unter [Datenbankanforderungen &#40;Master Data Services&#41;](database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](install-master-data-services.md)  
   
   

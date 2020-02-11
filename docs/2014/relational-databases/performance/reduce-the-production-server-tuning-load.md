@@ -19,19 +19,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f59763b63f4e73687620482a2c1e739fe21fb6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150728"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzieren der Optimierungsauslastung des Produktionsservers
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber nutzt den Abfrageoptimierer, um die Arbeitsauslastung zu analysieren und Optimierungsempfehlungen zu geben. Wenn diese Analyse auf dem Produktionsserver ausgeführt wird, erhöht sich die Serverlast. Dies kann zu Einbußen bei der Serverleistung während der Optimierungssitzung führen. Sie reduzieren die Serverlast während einer Optimierungssitzung, indem Sie zusätzlich zum Produktionsserver einen Testserver verwenden.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)]Der-Optimierungs Ratgeber basiert auf dem Abfrageoptimierer, um eine Arbeitsauslastung zu analysieren und Optimierungsempfehlungen zu erstellen. Wenn diese Analyse auf dem Produktionsserver ausgeführt wird, erhöht sich die Serverlast. Dies kann zu Einbußen bei der Serverleistung während der Optimierungssitzung führen. Sie reduzieren die Serverlast während einer Optimierungssitzung, indem Sie zusätzlich zum Produktionsserver einen Testserver verwenden.  
   
 ## <a name="how-database-engine-tuning-advisor-uses-a-test-server"></a>Verwendung eines Testservers durch den Datenbankoptimierungsratgeber  
  Die traditionelle Verwendungsweise eines Testservers besteht im Kopieren aller Daten vom Produktionsserver auf den Testserver, Optimieren des Testservers und anschließenden Implementieren der Empfehlung auf dem Produktionsserver. Dadurch wird zwar die Leistungsbeeinträchtigung auf dem Produktionsserver beseitigt, aber dies entspricht nicht der optimalen Lösung. Beispielsweise kann das Kopieren großer Datenbankmengen vom Produktionsserver auf den Testserver viel Zeit und viele Ressourcen beanspruchen. Darüber hinaus ist die Testserverhardware selten so leistungsfähig wie die Hardware, die für Produktionsserver bereitgestellt wird. Der Optimierungsprozess basiert auf dem Abfrageoptimierer, und die von diesem generierten Empfehlungen hängen teilweise von der zugrunde liegenden Hardware ab. Falls die Test- und die Produktionsserverhardware nicht identisch sind, wird dadurch die Qualität der Empfehlungen des [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgebers reduziert.  
   
- Um diese Probleme zu vermeiden, optimiert der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber eine Datenbank auf einem Produktionsserver durch Auslagern des größten Teils der Optimierungslast auf einen Testserver. Dies geschieht durch Verwenden der Hardwarekonfigurationsinformationen des Produktionsservers und ohne die Daten tatsächlich vom Produktionsserver auf den Testserver zu kopieren. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber kopiert keine tatsächlichen Daten vom Produktionsserver auf den Testserver. Er kopiert nur die Metadaten und notwendigen Statistiken.  
+ Um diese Probleme zu vermeiden, optimiert der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber eine Datenbank auf einem Produktionsserver durch Auslagern des größten Teils der Optimierungslast auf einen Testserver. Dies geschieht durch Verwenden der Hardwarekonfigurationsinformationen des Produktionsservers und ohne die Daten tatsächlich vom Produktionsserver auf den Testserver zu kopieren. 
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber kopiert keine tatsächlichen Daten vom Produktionsserver auf den Testserver. Er kopiert nur die Metadaten und notwendigen Statistiken.  
   
  Die folgenden Schritte beschreiben den Prozess zum Optimieren einer Produktionsdatenbank auf einem Testserver:  
   
@@ -45,11 +46,14 @@ ms.locfileid: "63150728"
   
      Während des Optimierungsprozesses erstellt der Datenbankoptimierungsratgeber eine Shelldatenbank auf dem Testserver. Um diese Shelldatenbank zu erstellen und zu optimieren, führt der Datenbankoptimierungsratgeber folgende Aufrufe beim Produktionsserver aus:  
   
-    1.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber importiert Metadaten aus der Produktionsdatenbank in die Testserver-Shelldatenbank. Zu diesen Metadaten zählen leere Tabellen, Indizes, Sichten, gespeicherte Prozeduren, Trigger usw. Auf diese Weise können die Arbeitsauslastungsabfragen für die Testserver-Shelldatenbank ausgeführt werden.  
+    1.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber importiert Metadaten aus der Produktionsdatenbank in die Testserver-Shelldatenbank. Zu diesen Metadaten zählen leere Tabellen, Indizes, Sichten, gespeicherte Prozeduren, Trigger usw. Auf diese Weise können die Arbeitsauslastungsabfragen für die Testserver-Shelldatenbank ausgeführt werden.  
   
-    2.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber importiert Statistiken vom Produktionsserver, damit der Abfrageoptimierer Abfragen auf dem Testserver präzise optimieren kann.  
+    2.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber importiert Statistiken vom Produktionsserver, damit der Abfrageoptimierer Abfragen auf dem Testserver präzise optimieren kann.  
   
-    3.  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber importiert Hardwareparameter, die die Anzahl von Prozessoren und den verfügbaren Arbeitsspeicher angeben, vom Produktionsserver, um dem Abfrageoptimierer die erforderlichen Informationen zum Generieren eines Abfrageplans bereitzustellen.  
+    3.  
+  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber importiert Hardwareparameter, die die Anzahl von Prozessoren und den verfügbaren Arbeitsspeicher angeben, vom Produktionsserver, um dem Abfrageoptimierer die erforderlichen Informationen zum Generieren eines Abfrageplans bereitzustellen.  
   
 3.  Nachdem der [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgeber die Testserver-Shelldatenbank optimiert hat, wird eine Optimierungsempfehlung generiert.  
   
@@ -57,7 +61,7 @@ ms.locfileid: "63150728"
   
  Die folgende Abbildung veranschaulicht das Szenario mit dem Testserver und dem Produktionsserver:  
   
- ![Datenbankoptimierungsratgeber: Testserververwendung](../../database-engine/media/testsvr.gif "Database Engine Tuning Advisor test server usage")  
+ ![Datenbankoptimierungsratgeber: Testserververwendung](../../database-engine/media/testsvr.gif "Datenbankoptimierungsratgeber: Testserververwendung")  
   
 > [!NOTE]  
 >  Die Funktion der Optimierung mit einem Testserver wird auf der grafischen Benutzeroberfläche (Graphical User Interface, GUI) des [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Optimierungsratgebers nicht unterstützt.  
@@ -92,8 +96,8 @@ ms.locfileid: "63150728"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Gesichtspunkte bei der Verwendung von Testservern](considerations-for-using-test-servers.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Überlegungen zur Verwendung von Test Servern](considerations-for-using-test-servers.md)   
  [XML-Eingabedateireferenz &#40;Datenbankoptimierungsratgeber&#41;](database-engine-tuning-advisor.md)  
   
   

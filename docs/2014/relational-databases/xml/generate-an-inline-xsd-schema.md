@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b6c8233b95f3f95235bb4f618358d4680d3088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287483"
 ---
 # <a name="generate-an-inline-xsd-schema"></a>Generieren eines XSD-Inlineschemas
@@ -36,7 +36,7 @@ ms.locfileid: "63287483"
   
  Wenn Sie XMLSCHEMA in einer FOR XML-Abfrage angeben, erhalten Sie sowohl ein Schema als auch XML-Daten als Abfrageergebnis. Jedes Datenelement der obersten Ebene verweist mithilfe einer Standard-Namespacedeklaration auf das vorherige Schema, das seinerseits auf den Zielnamespace des Inlineschemas verweist.  
   
- Zum Beispiel:  
+ Beispiel:  
   
 ```  
 <xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
@@ -273,7 +273,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  Beachten Sie Folgendes bezüglich des XSD-Inlineschemas:  
   
--   ListPrice und DealerPrice sind vom gleichen Datentyp (`money`), und beide Angaben können in der Tabelle den Wert NULL aufweisen. Da sie im sich ergebenden XML nicht zurückgegeben werden können, ist nur ein untergeordnetes <`Price`>-Element in der komplexen Typdeklaration des <`row`>-Elements vorhanden, das die Werte "minOccurs=0" und "maxOccurs=2" aufweist.  
+-   ListPrice und DealerPrice sind vom gleichen Datentyp ( `money`), und beide Angaben können in der Tabelle den Wert NULL aufweisen. Da sie im sich ergebenden XML nicht zurückgegeben werden können, ist nur ein untergeordnetes <`Price`>-Element in der komplexen Typdeklaration des <`row`>-Elements vorhanden, das die Werte "minOccurs=0" und "maxOccurs=2" aufweist.  
   
 -   Da der Wert `DealerPrice` in der Tabelle NULL ist, wird nur `ListPrice` als <`Price`>-Element zurückgegeben. Wenn Sie der ELEMENTS-Direktive den `XSINIL`-Parameter hinzufügen, erhalten Sie beide Elemente, deren Wert `xsi:nil`für das <`Price`>-Element auf TRUE festgelegt wurde, das DealerPrice entspricht. Außerdem erhalten Sie zwei untergeordnete <`Price`>-Elemente in der komplexen Typdefinition <`row`> im XSD-Inlineschema, wobei das `nillable`-Attribut für beide auf TRUE festgelegt wurde. Dieses Fragment ist ein Teilergebnis:  
   
@@ -464,7 +464,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
 -   Da sowohl Col2 als auch Col3 NULL sein dürfen, gibt die Deklaration des <`Col`>-Elements minOccurs als 0 und maxOccurs als 2 an.  
   
--   Da beide <`Col`>-Elemente gleichgeordnete Elemente sind, ist im Schema eine Elementdeklaration vorhanden. Da die Elemente unterschiedlichen Typen angehören, obwohl beide Elemente simple-Typen sind, ist der Typ des Elements im Schema `xsd:anySimpleType`. Im Ergebnis wird jeder Instanztyp durch das `xsi:type`-Attribut identifiziert.  
+-   Da beide <`Col`>-Elemente gleichgeordnete Elemente sind, ist im Schema eine Elementdeklaration vorhanden. Da die Elemente unterschiedlichen Typen angehören, obwohl beide Elemente simple-Typen sind, ist der Typ des Elements im Schema `xsd:anySimpleType`. Im Ergebnis wird jeder Instanztyp durch das `xsi:type` -Attribut identifiziert.  
   
 -   Im Ergebnis verweist jede Instanz des <`Col`>-Elements mithilfe des `xsi:type`-Attributs auf ihren Instanztyp.  
   

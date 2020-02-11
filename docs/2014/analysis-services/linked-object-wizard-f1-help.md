@@ -1,5 +1,5 @@
 ---
-title: Verknüpfte Objekt Assistent F1-Hilfe | Microsoft-Dokumentation
+title: Assistent für verknüpfte Objekte (F1-Hilfe) Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1ac7ca54d8db398cf93e83e93c8f7d87c81f9d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078068"
 ---
 # <a name="linked-object-wizard-f1-help"></a>Assistent für verknüpfte Objekte (F1-Hilfe)
-  Mithilfe des Assistenten für verknüpfte Objekte können Objekte aus anderen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbanken entweder aus derselben [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder einer anderen Instanz in das aktuelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]importiert oder eigene Objekte mit ihnen verknüpft werden. Verknüpfte Objekte übernehmen weiterhin die Änderungen in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Quelldatenbank, während importierte Objekte von den Änderungen in ihrer Quelldatenbank nicht beeinflusst werden. Dimensionen und Measuregruppen können (einschließlich der ihnen zugeordneten Measures) verknüpft werden. Aktionen, KPIs (Key Performance Indicators) und Berechnungen können importiert werden.  
+  Mit dem Assistenten für verknüpfte Objekte können Sie [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekte in anderen Datenbanken entweder von derselben Instanz oder von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] einer anderen Instanz in das aktuelle [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]verknüpfen oder aus diesen importieren. Verknüpfte Objekte übernehmen weiterhin die Änderungen in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Quelldatenbank, während importierte Objekte von den Änderungen in ihrer Quelldatenbank nicht beeinflusst werden. Dimensionen und Measuregruppen können (einschließlich der ihnen zugeordneten Measures) verknüpft werden. Aktionen, KPIs (Key Performance Indicators) und Berechnungen können importiert werden.  
   
  Mit dem Assistenten für verknüpfte Objekte werden Sie durch die folgenden Schritte geführt:  
   

@@ -1,5 +1,5 @@
 ---
-title: Measuregruppen (Registerkarte ' Partitionen ', Cube-Designer) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Measure-Gruppen (Registerkarte ' Partitionen ', Cube-Designer) (Analysis Services-Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,34 +13,34 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077910"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Measuregruppen (Registerkarte 'Partitionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Measuregruppen** der Registerkarte **Partitionen** des Cube-Designers können Sie die Partitionen verwalten, die mit den einzelnen Measuregruppen verknüpft sind.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Partitionen**  
  Zeigt ein Raster mit einer Liste von Partitionen an, von denen die ausgewählte Measuregruppe unterstützt wird. Das Raster enthält die folgenden Spalten:  
   
- **(Ordinal)**  
+ **Ordnungszahl**  
  Zeigt die Ordnungsposition der Partition innerhalb der Measuregruppe an.  
   
  Wählen Sie durch Klicken die gesamte Zeile für die Partition aus.  
   
- **Partitionsname**  
+ **Partitions Name**  
  Geben Sie den Namen der ausgewählten Partition ein.  
   
- **Quelle**  
+ **`Source`**  
  Geben Sie den Namen der Tabelle (für Tabellenbindungen) bzw. Abfrage (für Abfragebindungen) ein, in der die Faktentabellendaten für die ausgewählte Partition bereitgestellt werden.  
   
- Klicken Sie auf die Schaltfläche mit den drei **Punkten** , um das Dialogfeld **Partitionsquelle** anzuzeigen und die Quelle für die ausgewählte Partition zu definieren.  
+ Klicken Sie auf die Schaltfläche mit den drei Punkten **** , um das Dialogfeld **Partitionsquelle** anzuzeigen und die Quelle für die ausgewählte Partition zu definieren.  
   
- **Aggregation**  
- Zeigt den Aggregationsmodus und den Speichermodus der Partition an. Der Speichermodus wird zuerst angezeigt: ROLAP (Relational Online Analytical Processing), MOLAP (Multidimensional Online Analytical Processing) oder HOLAP (Hybrid Online Analytical Processing). Der Aggregationsmodus wird als Prozentwert der angeforderten Optimierung, als Measure des angeforderten bzw. verwendeten Leerzeichens oder als Anzahl der erstellten Aggregationen angezeigt. Klicken Sie auf die Schaltfläche mit den drei **Punkten** , um das Dialogfeld **Aggregationsentwurfs-Assistent** anzuzeigen und den Aggregationsentwurf für die angegebene Partition zu definieren.  
+ **Stellung**  
+ Zeigt den Aggregationsmodus und den Speichermodus der Partition an. Der Speichermodus wird zuerst angezeigt: ROLAP (Relational Online Analytical Processing), MOLAP (Multidimensional Online Analytical Processing) oder HOLAP (Hybrid Online Analytical Processing). Der Aggregationsmodus wird als Prozentwert der angeforderten Optimierung, als Measure des angeforderten bzw. verwendeten Leerzeichens oder als Anzahl der erstellten Aggregationen angezeigt. Klicken Sie auf die Schaltfläche mit den drei Punkten **** , um das Dialogfeld **Aggregationsentwurfs-Assistent** anzuzeigen und den Aggregationsentwurf für die angegebene Partition zu definieren.  
   
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der Partition ein.  
@@ -66,12 +66,12 @@ ms.locfileid: "66077910"
 |**Neue Partition**|Klicken Sie auf diese Option, um den **Partitions-Assistent** anzuzeigen und in der ausgewählten Measuregruppe eine neue Partition zu erstellen.|  
 |**Partition umbenennen**|Wählen Sie diese Option aus, um die ausgewählte Partition umzubenennen.|  
 |**Löschen**|Klicken Sie auf diese Option, um das Dialogfeld **Objekte löschen** anzuzeigen und die ausgewählte Aktion zu löschen.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn eine Rückschreibepartition ausgewählt wurde.|  
-|**Entwerfen von Aggregationen**|Klicken Sie auf diese Option, um das Dialogfeld **Aggregationsentwurfs-Assistent** anzuzeigen und einen Aggregationsentwurf für die ausgewählte Partition zu erstellen.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn eine Rückschreibepartition ausgewählt wurde.|  
+|**Aggregationen entwerfen**|Klicken Sie auf diese Option, um das Dialogfeld **Aggregationsentwurfs-Assistent** anzuzeigen und einen Aggregationsentwurf für die ausgewählte Partition zu erstellen.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn eine Rückschreibepartition ausgewählt wurde.|  
 |**Speichereinstellungen**|Klicken Sie auf diese Option, um das Dialogfeld **Speichereinstellungen** anzuzeigen, in dem Sie einen Speichermodus, das proaktive Zwischenspeichern und Benachrichtigungseigenschaften für die ausgewählte Partition angeben können.|  
-|**Rückschreibeeinstellungen**|Klicken Sie auf diese Option, um das Dialogfeld **Rückschreiben aktivieren/deaktivieren** anzuzeigen und Rückschreibeeinstellungen für die Measuregruppe anzugeben, in der die ausgewählte Partition enthalten ist.|  
+|**Rück schreibe Einstellungen**|Klicken Sie auf diese Option, um das Dialogfeld **Rückschreiben aktivieren/deaktivieren** anzuzeigen und Rückschreibeeinstellungen für die Measuregruppe anzugeben, in der die ausgewählte Partition enthalten ist.|  
 |**Verwendungsbasierte Optimierung**|Klicken Sie auf diese Option, um das Dialogfeld **Assistent für verwendungsbasierte Optimierung** anzuzeigen und einen Aggregationsentwurf zu erstellen, der auf vorhandenen Verwendungsmustern für die ausgewählte Partition basiert.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn eine Rückschreibepartition ausgewählt wurde.|  
-|**Verarbeiten**|Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und die ausgewählte Partition zu verarbeiten.|  
-|**Kopieren**|Diese Option ist deaktiviert.|  
+|**Prozess**|Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und die ausgewählte Partition zu verarbeiten.|  
+|**Copy**|Diese Option ist deaktiviert.|  
 |**Einfügen**|Diese Option ist deaktiviert.|  
 |**Eigenschaften**|Wählen Sie diese Option aus, um für die ausgewählte Partition das Fenster **Eigenschaften** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzuzeigen.|  
   

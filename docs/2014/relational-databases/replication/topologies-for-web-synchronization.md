@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63273558"
 ---
-# <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
-  Sie können aus unterschiedlichen Websynchronisierungs-Replikationstopologien von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen. Hier einige der gängigen Konfigurationsmethoden für die Websynchronisierung:  
+# <a name="topologies-for-web-synchronization"></a>Topologien für die Websynchronisierung
+  Sie können aus einer Vielzahl von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Websynchronisierungs-Replikationstopologien auswählen. Hier einige der gängigen Konfigurationsmethoden für die Websynchronisierung:  
   
--   Einzelner Server  
+-   Einzelserver  
   
 -   Zwei Server  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63273558"
 > [!NOTE]  
 >  Diese Konfiguration wird nur für Intranetszenarien empfohlen. Bei anderen Szenarien sollten sich der IIS-Server und der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/-Verteiler auf separaten Computern befinden.  
   
- ![Websynchronisierung mit einem einzelnen Server](media/web-sync02.gif "Web synchronization with a single server")  
+ ![Websynchronisierung mit einem einzelnen Server](media/web-sync02.gif "Websynchronisierung mit einem einzelnen Server")  
   
 ## <a name="two-servers"></a>Zwei Server  
  Sie können IIS auf dem einen Server installieren und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger/-Verteiler auf dem anderen Server konfigurieren. Der Server, auf dem IIS ausgeführt wird, kann durch eine Firewall vom Internet isoliert werden. Die Abonnenten führen den Synchronisierungsvorgang aus, indem sie mit IIS auf dem Verleger eine Verbindung herstellen.  
@@ -54,10 +54,10 @@ ms.locfileid: "63273558"
 > [!NOTE]  
 >  Abonnenten können nur mit einem bestimmten Verleger synchronisiert werden. Beispielsweise kann ein Abonnent von Neuverleger A nicht mit Neuverleger B synchronisiert werden, wenn A nicht verfügbar ist.  
   
- ![Websynchronisierung mit Wiederveröffentlichung](media/web-sync05.gif "Web synchronization with republishing")  
+ ![Websynchronisierung mit Wiederveröffentlichung](media/web-sync05.gif "Websynchronisierung mit Wiederveröffentlichung")  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Websynchronisierung](configure-web-synchronization.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Websynchronisierung konfigurieren](configure-web-synchronization.md)   
  [Websynchronisierung für die Mergereplikation](web-synchronization-for-merge-replication.md)  
   
   

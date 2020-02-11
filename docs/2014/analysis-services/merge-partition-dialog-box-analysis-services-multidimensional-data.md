@@ -1,5 +1,5 @@
 ---
-title: Zusammenführen von Partitionen (Dialogfeld) (Analysis Services – mehrdimensionale Daten) | Microsoft-Dokumentation
+title: Mergepartition (Dialog Feld) (Analysis Services Mehrdimensionale Daten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26751f2cc00330716f160c115d0e839cc6d9527a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077828"
 ---
 # <a name="merge-partition-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Mergepartition' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Dialogfelds **Mergepartition** in **SQL Server Management Studio** können Sie Partitionen für eine Measuregruppe in einem Cube zusammenführen. Sie können das Dialogfeld **Mergepartition** anzeigen, indem Sie mit der rechten Maustaste auf den Ordner „Partitionen“ oder eine Partition im **Objekt-Explorer** klicken und aus dem Kontextmenü die Option **Partitionen zusammenführen** auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Server**  
  Wählen Sie den Namen der Analysis Services-Instanz aus, die die Zielpartition enthält.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66077828"
   
  Das Raster enthält die folgenden Spalten:  
   
-|Spalte|Description|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
-|**Merge**|Wählen Sie diese Option aus, um die Quellpartitionen in der Zielpartition zusammenzuführen.|  
-|**Partitionsname**|Zeigt den Namen der Quellpartition an.|  
+|**Merge** (Zusammenführen)|Wählen Sie diese Option aus, um die Quellpartitionen in der Zielpartition zusammenzuführen.|  
+|**Partitions Name**|Zeigt den Namen der Quellpartition an.|  
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit der letzten Verarbeitung der Quellpartition an.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Zusammenführen von Partitionen in Analysis Services &#40;SSAS-Multidimensional&#41;](multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

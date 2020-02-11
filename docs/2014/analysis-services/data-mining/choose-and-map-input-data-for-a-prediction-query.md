@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie aus, und ordnen Sie Eingabedaten für eine Vorhersageabfrage | Microsoft-Dokumentation
+title: Auswählen und Zuordnen von Eingabedaten für eine Vorhersage Abfrage | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66085848"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage
@@ -28,7 +28,7 @@ ms.locfileid: "66085848"
 > [!WARNING]  
 >  Sie können keine neuen Spalten hinzufügen oder zuordnen, die sich in einer anderen Datenquellensicht befinden. Die ausgewählte Datenquellensicht muss alle Spalten enthalten, die Sie für die Vorhersageabfrage benötigen.  
   
- Nachdem Sie die Tabellen ermittelt haben, die die Daten für die Prognose enthalten, müssen Sie die Spalten in den externen Daten den Spalten im Miningmodell zuordnen. Wenn im Modell zum Beispiel eine Prognose des Kaufverhaltens von Kunden auf Grundlage demografischer Daten und Umfrageantworten dargestellt wird, sollten die Eingabedaten Informationen enthalten, die im Allgemeinen dem Inhalt des Modells entsprechen. Sie benötigen nicht für jede einzelne Spalte übereinstimmende Daten, doch eine möglichst große Zahl von Spalten mit übereinstimmenden Daten ist von Vorteil. Wenn Sie Spalten zuordnen möchten, die andere Datentypen enthalten, erhalten Sie möglicherweise einen Fehler. In diesem Fall können Sie eine benannte Berechnung in der Datenquellensicht definieren, um die neuen Spaltendaten in den Datentyp umzuwandeln bzw. zu konvertieren, der für das Modell erforderlich ist. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
+ Nachdem Sie die Tabellen ermittelt haben, die die Daten für die Prognose enthalten, müssen Sie die Spalten in den externen Daten den Spalten im Miningmodell zuordnen. Wenn im Modell zum Beispiel eine Prognose des Kaufverhaltens von Kunden auf Grundlage demografischer Daten und Umfrageantworten dargestellt wird, sollten die Eingabedaten Informationen enthalten, die im Allgemeinen dem Inhalt des Modells entsprechen. Sie benötigen nicht für jede einzelne Spalte übereinstimmende Daten, doch eine möglichst große Zahl von Spalten mit übereinstimmenden Daten ist von Vorteil. Wenn Sie Spalten zuordnen möchten, die andere Datentypen enthalten, erhalten Sie möglicherweise einen Fehler. In diesem Fall können Sie eine benannte Berechnung in der Datenquellensicht definieren, um die neuen Spaltendaten in den Datentyp umzuwandeln bzw. zu konvertieren, der für das Modell erforderlich ist. Weitere Informationen finden Sie unter [Definieren von benannten Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](../multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
  Wenn Sie die Daten auswählen, die Sie für die Prognose verwenden möchten, werden einige Spalten in der ausgewählten Datenquelle möglicherweise automatisch den Miningmodellspalten zugeordnet. Dies geschieht auf Grundlage der Namensähnlichkeit und der übereinstimmenden Datentypen. Sie können im Dialogfeld **Zuordnung ändern** in der **Miningmodellvorhersage** die zugeordneten Spalten ändern, fehlerhafte Zuordnungen löschen oder neue Zuordnungen für vorhandene Spalten erstellen. Die Entwurfsoberfläche **Miningmodellvorhersage** unterstützt auch die Drag &amp; Drop-Bearbeitung von Verbindungen.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66085848"
   
      Falls bereits eine Beziehung besteht, werden die Spalten des Miningmodells automatisch den gleichnamigen Spalten der Eingabetabelle zugeordnet. Die Beziehung zwischen der geschachtelten Tabelle und der Falltabelle können Sie ändern, indem Sie auf **Join ändern**klicken und damit das Dialogfeld **Beziehung erstellen** öffnen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorhersageabfragen &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorhersage Abfragen &#40;Data Mining-&#41;](prediction-queries-data-mining.md)  
   
   

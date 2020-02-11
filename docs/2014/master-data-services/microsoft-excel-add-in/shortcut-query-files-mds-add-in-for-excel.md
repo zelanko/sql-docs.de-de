@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 11e875d5b171194c3ac8ba4ad33fad51cacacffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482662"
 ---
 # <a name="shortcut-query-files-mds-add-in-for-excel"></a>Shortcutabfragedateien (MDS-Add-In für Excel)
@@ -37,7 +37,7 @@ ms.locfileid: "65482662"
   
  Wenn Sie eine Shortcutabfragedatei mit dieser Anwendung öffnen, werden Sie aufgefordert, die Verbindung mit einer „sicheren“ Verbindung herzustellen. Dies bedeutet, dass Sie Inhalt von diesem Speicherort vertrauen. Jedes Mal, wenn Sie eine Verbindung als sicher markieren, wird sie einer Liste hinzugefügt. Wenn Sie diese Liste löschen möchten, öffnen Sie das Dialogfeld **Einstellungen** und klicken im Abschnitt **Zur sicheren Liste hinzugefügte Server** auf **Auswahl aufheben**.  
   
- Der Standardspeicherort für die Anwendung ist *Laufwerk*: \Programme\Microsoft SQL Server\120\Master Daten Services\Excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
+ Der Standard Speicherort für die Anwendung ist *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\excel Add-In\Microsoft.MasterDataServices.QueryOpener.exe.  
   
  Es gibt zwei Möglichkeiten, Shortcutabfragedateien zu öffnen: Sie können sie importieren, oder Sie können auf sie doppelklicken und sie werden automatisch geöffnet.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "65482662"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Speichern des Inhalts des aktiven Arbeitsblatts als Shortcutabfragedatei.|[Speichern einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
-|Senden Sie eine Shortcutabfragedatei, die den Inhalt des aktiven Arbeitsblatts darstellt.|[Senden einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Speichern des Inhalts des aktiven Arbeitsblatts als Shortcutabfragedatei.|[Speichert eine shortcutabfragedatei &#40;MDS-Add-in für Excel&#41;](save-a-shortcut-query-file-mds-add-in-for-excel.md)|  
+|Senden Sie eine Shortcutabfragedatei, die den Inhalt des aktiven Arbeitsblatts darstellt.|[Senden einer shortcutabfragedatei &#40;MDS-Add-in für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Verbindungen &#40;MDS-Add-In für Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Verbindungen &#40;MDS-Add-in für Excel&#41;](connections-mds-add-in-for-excel.md)  
   
 -   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Sicherheit &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [Sicherheits &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

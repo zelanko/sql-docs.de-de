@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Datenbankdiagrammen aus älteren Versionen (Visual Database Tools) | Microsoft-Dokumentation
+title: Aktualisieren von Daten Bank Diagrammen aus früheren Editionen (Visual Database Tools) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,14 +19,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205704"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aktualisieren von Datenbankdiagrammen aus älteren Versionen (Visual Database Tools)
-  Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eingerichtet ist. Weitere Schritte zum Einrichten der diagrammerstellung finden Sie unter [einrichten Diagramm des Designers &#40;Visual Database Tools&#41;](visual-database-tools.md).  
+  Datenbankdiagramme, die für frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken erstellt wurden, werden automatisch aktualisiert, wenn die Erstellung von Datenbankdiagrammen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eingerichtet ist. Weitere Schritte zum Einrichten des [Diagramms finden Sie unter Einrichten des Daten Bank Diagramm-Designers &#40;Visual Database Tools&#41;](visual-database-tools.md).  
   
 ### <a name="to-upgrade-legacy-database-diagrams"></a>So aktualisieren Sie Datenbankdiagramme aus früheren Versionen  
   
@@ -38,8 +38,8 @@ ms.locfileid: "63205704"
   
      Daraufhin werden alle in der Datenbank gespeicherten Diagramme aktualisiert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verstehen des Besitzes von Datenbankdiagrammen &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [Einrichten im Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlegendes zum Besitz des Daten Bank Diagramms &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
+ [Einrichten des Daten Bank Diagramm-Designers &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

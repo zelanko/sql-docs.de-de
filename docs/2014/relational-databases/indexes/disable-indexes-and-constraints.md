@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 047fffdc729b276979720e9d245862a692a86be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162402"
 ---
 # <a name="disable-indexes-and-constraints"></a>Deaktivieren von Indizes und Einschränkungen
@@ -90,7 +90,7 @@ ms.locfileid: "63162402"
 ####  <a name="Permissions"></a> Berechtigungen  
  Zum Ausführen von ALTER INDEX benötigen Sie mindestens die ALTER-Berechtigung auf der Tabelle bzw. Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
@@ -127,7 +127,7 @@ ms.locfileid: "63162402"
  Zeigt den Namen der Tabelle oder Sicht an, für die der Index erstellt wurde.  
   
  **Indextyp**  
- Zeigt den Typ des Indexes: **Gruppierte**, **nicht gruppierten**, **räumliche**, oder **XML**.  
+ Zeigt den Typ des Indexes an: **Gruppiert**, **Nicht gruppiert**, **Räumlich**oder **XML**.  
   
  **Status**  
  Zeigt den Status des Deaktivierungsvorgangs an. Mögliche Werte nach der Ausführung:  
@@ -140,7 +140,7 @@ ms.locfileid: "63162402"
   
      Die Deaktivierung der Indizes wurde gestartet, ist aber noch nicht abgeschlossen.  
   
--   **Success**  
+-   **Erfolgreich**  
   
      Der Deaktivierungsvorgang ist erfolgreich abgeschlossen.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "63162402"
   
      Die Deaktivierung des Indexes wurde nicht erfolgreich abgeschlossen, weil der Benutzer den Vorgang gestoppt hat.  
   
- **MessageBox**  
+ **Meldung**  
  Stellt den Text der Fehlermeldungen während des Deaktivierungsvorgangs bereit. Während der Ausführung werden die Fehler als Links angezeigt. Der Text der Links beschreibt den Hauptteil des Fehlers. Die Spalte **Meldung** ist meist nicht breit genug, um den vollständigen Meldungstext lesen zu können. Der vollständige Text kann auf zwei Arten abgerufen werden:  
   
 -   Bewegen Sie den Mauszeiger über die Meldungszelle, um eine QuickInfo mit dem Fehlertext anzuzeigen.  
@@ -163,7 +163,7 @@ ms.locfileid: "63162402"
   
 #### <a name="to-disable-an-index"></a>So deaktivieren Sie einen Index  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "63162402"
   
 #### <a name="to-disable-all-indexes-on-a-table"></a>So deaktivieren Sie alle Indizes in einer Tabelle  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478885"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Überlappende Benutzer- und Gruppenberechtigungen (Master Data Services)
@@ -30,11 +30,11 @@ ms.locfileid: "65478885"
   
  Wenn ein Benutzer mehreren Gruppen angehört und diese Gruppen Zugriff auf Master Data Manager haben, gelten die folgenden Regeln:  
   
--   Mit**Verweigern** werden alle anderen Berechtigungen überschrieben.  
+-   **Deny** überschreibt alle anderen Berechtigungen.  
   
--   **Update** überschreibt **schreibgeschützte**.  
+-   Das **Update** über **schreibt schreibgeschützt.**  
   
- Diese Regeln gelten sowohl für die Registerkarte **Modelle** als auch für die Registerkarte **Hierarchieelemente** . Berechtigungen werden für jede Registerkarte aufgelöst und dann kombiniert. Weitere Informationen finden Sie unter [How Permissions Are Determined &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
+ Diese Regeln gelten sowohl für die Registerkarte **Modelle** als auch für die Registerkarte **Hierarchieelemente** . Berechtigungen werden für jede Registerkarte aufgelöst und dann kombiniert. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md).  
   
 > [!NOTE]  
 >  Sie können die Auflösung überlappender Benutzer- und Gruppenberechtigungen in der Benutzeroberfläche anzeigen. Sowohl die Registerkarte **Modelle** als auch die Registerkarte **Hierarchieelemente** verfügt über eine Dropdownliste, aus der Sie **Effektiv** auswählen können, um effektive Berechtigungen anzuzeigen.  
@@ -44,26 +44,26 @@ ms.locfileid: "65478885"
   
  Der Benutzer gehört der Gruppe 1 und der Gruppe 2 an.  
   
- Der Benutzer hat **schreibgeschützte** Berechtigung für die Product-Entität.  
+ Der **Benutzer verfügt für** die Product-Entität über die Berechtigung schreibgeschützt.  
   
  Gruppe 1 verfügt für die Entität „Product“ über die Berechtigung **Aktualisieren** .  
   
- Gruppe 2 verfügt **schreibgeschützte** Berechtigung für die Product-Entität.  
+ Gruppe **2 verfügt für** die Product-Entität über die Berechtigung schreibgeschützt.  
   
- Ergebnis: Die geltende Berechtigung des Benutzers für die Entität „Product“ lautet **Aktualisieren**.  
+ Ergebnis: Die effektive Berechtigung des Benutzers für die Entität „Product“ lautet **Aktualisieren** .  
   
 ## <a name="example-2"></a>Beispiel 2  
  ![mds_conc_user_group_ex_2](../../2014/master-data-services/media/mds-conc-user-group-ex-2.gif "mds_conc_user_group_ex_2")  
   
  Der Benutzer gehört der Gruppe 1 und der Gruppe 2 an.  
   
- Der Benutzer hat **schreibgeschützte** Berechtigung für die Product-Entität.  
+ Der **Benutzer verfügt für** die Product-Entität über die Berechtigung schreibgeschützt.  
   
  Gruppe 1 verfügt für die Entität „Product“ über die Berechtigung **Aktualisieren** .  
   
  Gruppe 2 verfügt für die Entität „Product“ über die Berechtigung **Verweigern** .  
   
- Ergebnis: Die geltende Berechtigung des Benutzers für die Entität „Product“ lautet **Verweigern**.  
+ Ergebnis: Die effektive Berechtigung des Benutzers für die Entität „Product“ lautet **Verweigern** .  
   
 ## <a name="example-3"></a>Beispiel 3  
  ![mds_conc_user_group_ex_3](../../2014/master-data-services/media/mds-conc-user-group-ex-3.gif "mds_conc_user_group_ex_3")  
@@ -72,14 +72,14 @@ ms.locfileid: "65478885"
   
  Der Benutzer verfügt für eine Gruppe von Elementen unter einem Hierarchieknoten über die Berechtigung **Aktualisieren** .  
   
- Gruppe 1 verfügt **schreibgeschützte** Berechtigung für eine Gruppe von Elementen unter einem Hierarchieknoten.  
+ Gruppe **1 verfügt für** eine Gruppe von Elementen in einem Hierarchie Knoten über die Berechtigung schreibgeschützt.  
   
- Gruppe 2 verfügt **schreibgeschützte** Berechtigung für eine Gruppe von Elementen unter einem Hierarchieknoten.  
+ Gruppe **2 verfügt für** eine Gruppe von Elementen in einem Hierarchie Knoten über die Berechtigung schreibgeschützt.  
   
- Ergebnis: Die geltende Berechtigung des Benutzers für die Elemente lautet **Aktualisieren**.  
+ Ergebnis: Die effektive Berechtigung des Benutzers für die Elemente lautet **Aktualisieren** .  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)   
- [Überlappende Modell- und Elementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](how-permissions-are-determined-master-data-services.md)   
+ [Überlappende Modell-und Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

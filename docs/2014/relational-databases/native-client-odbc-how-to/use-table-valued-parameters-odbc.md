@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Tabellenwertparametern (ODBC) | Microsoft-Dokumentation
+title: Verwenden von Tabellenwert Parametern (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ec4d66af36ff74b5b0a9160529990c9fc52fc961
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200280"
 ---
 # <a name="use-table-valued-parameters-odbc"></a>Verwenden von Tabellenwertparametern (ODBC)
   In diesem Beispiel wird veranschaulicht, wie mit Tabellenwertparametern mehrere Zeilen mit mehreren Spalten und einem Aufruf des Servers eingefügt werden.  
   
- Weitere Informationen zu Tabellenwertparametern finden Sie unter [Table-Valued Parameters &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
+ Weitere Informationen zu Tabellenwert Parametern finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md). Weitere Beispiele mit Tabellenwertparametern finden Sie unter [ODBC Table-Valued Parameter Programming Examples](../../database-engine/dev-guide/odbc-table-valued-parameter-programming-examples.md).  
   
 ## <a name="example"></a>Beispiel  
  Sie benötigen eine ODBC-Datenquelle mit dem Namen TVPDemo. Die Standarddatenbank für TVPDemo kann jede Testdatenbank auf dem Computer sein. Diese Datenquelle muss auf dem ODBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Native Client basieren.  

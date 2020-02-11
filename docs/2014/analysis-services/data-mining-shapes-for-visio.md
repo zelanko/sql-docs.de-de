@@ -1,5 +1,5 @@
 ---
-title: Datamining-Shapes für Visio | Microsoft-Dokumentation
+title: Data Mining-Shapes für Visio | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -16,33 +16,33 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66086396"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Data Mining-Shapes für Visio
   Die Data Mining-Shapes für Visio stellen Vorlagen bereit, die für die Darstellung von Data Mining-Modellen angepasst wurden. Mithilfe dieser Vorlagen können Sie eine Verbindung mit einem erstellten Modell herstellen und interaktive Präsentationen erstellen, um die Ergebnisse des Data Minings zu veranschaulichen.  
   
- Die Vorlagen bieten zahlreiche Vorteile gegenüber statischen Diagrammen und Bildschirmaufnahmen – sie interagieren mit der zugrunde liegenden Datamining-Modelle, die auf einer Instanz von Analysis Services gespeichert sind, und lassen Sie die Darstellung anpassen, dass die Muster im Miningmodell angezeigt werden. Sie können ein Strukturmodell reduzieren oder erweitern, nach Datenknoten oder Attributen filtern und die Modelstatistiken, z. B. Wahrscheinlichkeiten und Koeffizienten, anzeigen.  
+ Die Vorlagen bieten viele Vorteile gegenüber statischen Diagrammen und Bildschirmaufzeichnungen. Sie interagieren mit den zugrunde liegenden Data Mining Modellen, die auf einer Instanz von Analysis Services gespeichert sind, und ermöglichen es Ihnen, die Art und Weise anzupassen, in der die Muster im Mining Modell angezeigt werden. Sie können ein Strukturmodell reduzieren oder erweitern, nach Datenknoten oder Attributen filtern und die Modelstatistiken, z. B. Wahrscheinlichkeiten und Koeffizienten, anzeigen.  
   
  ![DM](media/dm-stencil.gif "DM")  
   
  Die Visio-Vorlagen umfassen folgende Assistenten:  
   
--   **Abhängigkeitsnetzwerk-Diagramm:** Verwenden Sie diesen Assistenten, um Diagramme für Entscheidungsstrukturen und neuronale Netzwerke zu erstellen.  
+-   **Abhängigkeits Netzwerkdiagramm:** Verwenden Sie diesen Assistenten, um Diagramme für Entscheidungsstrukturen und neuronale Netzwerke zu erstellen.  
   
--   **Entscheidungsstrukturdiagramm:** Verwenden Sie diesen Assistenten zum Erstellen von Diagrammen, die zeigen, die Entscheidungspunkte und Formeln, die entscheidungsstrukturmodellen zugeordnet. Dieses Diagramm kann auch für Regressionsmodelle verwendet werden.  
+-   **Entscheidungsstruktur Diagramm:** Verwenden Sie diesen Assistenten, um Diagramme zu erstellen, in denen die Entscheidungspunkte und Formeln angezeigt werden, die Entscheidungsstruktur Modellen zugeordnet sind. Dieses Diagramm kann auch für Regressionsmodelle verwendet werden.  
   
--   **Clusterdiagramm:** Verwenden Sie diesen Assistenten, um farbige Diagramme für Segmentierungsmodelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
+-   **Cluster Diagramm:** Verwenden Sie diesen Assistenten, um Farbige Diagramme für Segmentierungs Modelle zu erstellen. Sie können zwischen Sichten, wie Attributunterscheidung, Clusterprofilen und Abhängigkeiten, wechseln und die Darstellung von Clustern anpassen.  
   
 ## <a name="installation"></a>Installation  
- Bei der Installation von Data Mining-Vorlagen für Visio werden standardmäßig die folgenden Dateien werden installiert \<Laufwerk > \Programme\Microsoft SQL Server 2012 DM-Add-Ins (oder \<Laufwerk > \ oder Programme (x86) \Microsoft SQL Server 2012 DM Add-Ins):  
+ Wenn Sie die Data Mining-Vorlagen für Visio installieren, werden standardmäßig die folgenden Dateien installiert \<, um> \Programme\Microsoft SQL Server 2012 DM-Add-Ins ( \<oder Laufwerk> \ oder Programmdateien (x86) \Microsoft SQL Server 2012 DM-Add-Ins) zu steuern:  
   
--   **Microsoft Data Mining.vst** diese Vorlage enthält vordefinierte Formatierungen, Layout und -Assistenten können Sie die Arbeit mit Datamining-Shapes.  
+-   **Microsoft Data Mining. VST** Diese Vorlage enthält vorgefertigte Formatierung, Layout und Assistenten, die Sie beim Arbeiten mit den Data Mining Formen unterstützen.  
   
--   **Microsoft Data Mining Shape Studio.vss** Diese Schablonendatei enthält Formen, die der Vorlage zugeordnet.  
+-   **Microsoft Data Mining Shape Studio. VSS** Diese Schablonen Datei enthält Formen, die der Vorlage zugeordnet sind.  
   
 ## <a name="how-to-use-the-templates"></a>So verwenden Sie die Vorlagen  
  Zum Öffnen der Vorlagen können Sie auf diese Shape-Datei doppelklicken, oder Sie können Visio starten und anschließend die Shape-Vorlage öffnen.  
@@ -55,17 +55,17 @@ ms.locfileid: "66086396"
   
 4.  Legen Sie Optionen für die Anzeige und Formatierung der Daten fest.  
   
-5.  Nach Abschluss der **Data Mining-Shape-Assistenten**, Sie haben ein Diagramm, das Sie ändern und verbessern können, mithilfe der Funktionen von Visio.  
+5.  Nachdem Sie den Assistenten für **Data Mining**-Shapes abgeschlossen haben, verfügen Sie über ein Diagramm, das Sie mithilfe der Features von Visio ändern und verbessern können.  
   
- Weitere Informationen über das Arbeiten mit und Verbessern von Modelldiagrammen in Visio finden Sie unter [Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
+ Weitere Informationen zum Arbeiten mit und verbessern von Visio-Modell Diagrammen finden [Sie unter Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
   
 -   Zum Verwenden der Vorlagen müssen Sie zuerst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen.  
   
      Vom Assistenten werden Sie aufgefordert, einen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server auszuwählen und die Datenbank anzugeben, in der das Miningmodell enthalten ist.  
   
-     Informationen dazu, wie Sie eine Verbindung zu erstellen, finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
+     Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 -   Bei Verwendung der Tabellenanalysetools sollen Sie sicherstellen, dass Sie die Modelle auf dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server speichern und keine temporären Modelle verwenden.  
   

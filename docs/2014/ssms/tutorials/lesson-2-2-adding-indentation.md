@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 009f61563548e0c060350a75e9627804e18a7c54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63222948"
 ---
 # <a name="adding-indentation"></a>Hinzufügen von Einzügen
@@ -24,7 +24,7 @@ ms.locfileid: "63222948"
   
 #### <a name="to-indent-multiple-lines-of-code"></a>So legen Sie einen Einzug für mehrere Codezeilen fest  
   
-1.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
+1.  Klicken Sie in der Symbolleiste auf **Neue Abfrage**.  
   
 2.  Erstellen Sie eine zweite Abfrage, über die die Spalten **BusinessEntityID**, FirstName, **MiddleName**und **LastName** aus der Tabelle **Person** der Schemas **Person** ausgewählt werden. Platzieren Sie jede Spalte in eine separate Zeile, sodass der Code wie folgt aussieht:  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63222948"
   
 2.  Erweitern Sie **Text-Editor**, erweitern Sie **Alle Sprachen**, und klicken Sie dann auf **Tabstopps** , um die gewünschten Werte für die Einzüge festzulegen. Beachten Sie, dass Sie die Größe des Einzugs und der Tabstopps festlegen können und angeben können, ob Tabstopps in Leerzeichen umgewandelt werden sollen.  
   
-     ![Erscheinen des Dialogfelds „Registerkarten“](media/tabsdialog.gif "Appearance of the Tabs dialog box")  
+     ![Darstellung des Dialogfelds 'Registerkarten'](media/tabsdialog.gif "Darstellung des Dialogfelds 'Registerkarten'")  
   
 3.  Klicken Sie auf **OK**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Maximieren des Abfrage-Editors](lesson-2-3-maximizing-query-editor.md)  
   
   

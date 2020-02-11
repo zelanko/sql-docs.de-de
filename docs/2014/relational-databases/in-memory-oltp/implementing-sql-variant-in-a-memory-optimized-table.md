@@ -11,13 +11,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: add4bbb072a91ad05d58d57f43821c441595afef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63157946"
 ---
-# <a name="implementing-sqlvariant-in-a-memory-optimized-table"></a>Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle
+# <a name="implementing-sql_variant-in-a-memory-optimized-table"></a>Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle
   Hier sehen Sie ein Beispiel für eine Tabelle mit einer `SQL_VARIANT`-Spalte:  
   
 ```sql  
@@ -120,7 +120,7 @@ case [Key_enum] when 1 then convert(sql_variant, [Key_bi])
                        end  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

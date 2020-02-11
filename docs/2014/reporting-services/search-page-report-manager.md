@@ -1,5 +1,5 @@
 ---
-title: Suchen (Seite) (Berichts-Manager) | Microsoft-Dokumentation
+title: Suchseite (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102263"
 ---
 # <a name="search-page-report-manager"></a>Suchen (Seite) (Berichts-Manager)
@@ -33,20 +33,20 @@ ms.locfileid: "66102263"
   
 2.  Geben Sie oben auf der Seite im Feld **Suchen** die Suchkriterien ein. Drücken Sie dann die EINGABETASTE, oder klicken Sie auf den Suchpfeil.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um ein Element aus einer Berichtsserver-Datenbank zu löschen.  
   
 > [!NOTE]  
 >  Diese Schaltfläche ist nur in der **Detailansicht**verfügbar. Sie können jedoch auf ein Element zeigen und über das Menü auf die Löschfunktion in der **Detailansicht** oder der **Listenansicht**zugreifen.  
   
- **Verschieben**  
+ **Move**  
  Klicken Sie auf diese Schaltfläche, um ein Element zu verschieben. Dadurch wird die Seite Elemente verschieben geöffnet, auf der Sie einen anderen Speicherort auswählen können.  
   
 > [!NOTE]  
 >  Diese Schaltfläche ist nur in der **Detailansicht**verfügbar. Sie können jedoch auf ein Element zeigen und über das Menü auf die Funktion zum Verschieben in der **Detailansicht** oder der **Listenansicht**zugreifen.  
   
- Feld 'Suchen'  
+ Suchfeld  
  Geben Sie den Namen eines Elements, nach dem Sie suchen möchten, vollständig oder teilweise ein, und klicken Sie anschließend zum Starten des Suchvorgangs auf **Ausführen** . Die Länge der Zeichenfolge ist auf maximal 128 Zeichen begrenzt.  
   
  Elementnamen oder Beschreibungen, die die gesamte Suchzeichenfolge an einer beliebigen Position im Textwert enthalten, sind in den Suchergebnissen enthalten.  
@@ -63,7 +63,7 @@ ms.locfileid: "66102263"
   
  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil, um das Dropdownmenü zu öffnen, über das Sie Eigenschaften des ausgewählten Elements aufrufen und konfigurieren können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

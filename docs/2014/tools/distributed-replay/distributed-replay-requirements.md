@@ -1,5 +1,5 @@
 ---
-title: 'Distributed Replay: Anforderungen | Microsoft-Dokumentation'
+title: Distributed Replay Anforderungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e7a87ad14dbe1b12abb4ca4fe0af6b0a439c57b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149774"
 ---
 # <a name="distributed-replay-requirements"></a>Distributed Replay Requirements
@@ -93,7 +93,7 @@ ms.locfileid: "63149774"
   
 -   TextData  
   
--   ApplicationName  
+-   Anwendungsname  
   
 -   LoginName  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63149774"
   
 -   HostName  
   
--   Binärdaten  
+-   Binary Data  
   
 -   SPID  
   
@@ -125,7 +125,7 @@ ms.locfileid: "63149774"
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
   
 ## <a name="operating-system-requirements"></a>Betriebssystemanforderungen  
- Zum Ausführen des Verwaltungstools und der Controller- und Clientdienste werden dieselben Betriebssysteme wie für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz unterstützt. Weitere Informationen zu den unterstützten Betriebssystemen für Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz ist, finden Sie unter [Hardware- und Softwareanforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
+ Zum Ausführen des Verwaltungstools und der Controller- und Clientdienste werden dieselben Betriebssysteme wie für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz unterstützt. Weitere Informationen dazu, welche Betriebssysteme für Ihre-Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, finden Sie unter [Hardware-und Software Anforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
  Distributed Replay-Funktionen werden unter x86-basierten und x64-basierten Betriebssystemen unterstützt. Bei x64-basierten Betriebssystemen wird nur der WOW-Modus (Windows on Windows) unterstützt.  
   
@@ -134,8 +134,10 @@ ms.locfileid: "63149774"
   
 |Distributed Replay-Funktion|Maximale Installationen pro Wiedergabeumgebung|  
 |--------------------------------|--------------------------------------------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller-Dienst|1|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client-Dienst|16 (physische oder virtuelle Computer)|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller-Dienst|1|  
+|
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client-Dienst|16 (physische oder virtuelle Computer)|  
 |Verwaltungstool|Unbegrenzt|  
   
 > [!NOTE]  
@@ -157,9 +159,9 @@ ms.locfileid: "63149774"
   
  Beim Wiedergeben von Ereignissen, die fehlende oder fehlerhafte Benutzernamen aufweisen, können Wiedergabefehler auftreten, die Wiedergabe wird jedoch fortgesetzt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay-Sicherheit](distributed-replay-security.md)   
+ [Distributed Replay Sicherheit](distributed-replay-security.md)   
  [Installieren von Distributed Replay](install-distributed-replay-overview.md)  
   
   

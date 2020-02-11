@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da26fc9274e68cd5233766af7e7c15550412db38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63254464"
 ---
 # <a name="open-database-diagrams-visual-database-tools"></a>Öffnen von Datenbankdiagrammen (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63254464"
   
 2.  Doppelklicken Sie auf den Namen des gewünschten Datenbankdiagramms.  
   
-     -oder-  
+     Oder  
   
      Klicken Sie mit der rechten Maustaste auf den Namen des gewünschten Datenbankdiagramms, und wählen Sie dann **Datenbankdiagramm erstellen**.  
   
@@ -39,8 +39,8 @@ ms.locfileid: "63254464"
 > [!NOTE]  
 >  Das Diagramm kann nur von seinem Besitzer oder einem Mitglied der db_owner-Rolle der Datenbank geöffnet werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit Datenbankdiagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit Daten Bank Diagrammen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Grundlagen des Besitzes von Datenbankdiagrammen &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)  
   
   

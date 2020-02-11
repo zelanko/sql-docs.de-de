@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb3365195e3a64353fb0cbd45e832cd0206f678e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63241290"
 ---
 # <a name="load-xml-data"></a>Laden von XML-Daten
-  XML-Daten können auf unterschiedliche Weise in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] übertragen werden. Zum Beispiel:  
+  XML-Daten können auf unterschiedliche Weise in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] übertragen werden. Beispiel:  
   
 -   Wenn sich die Daten in einer [n]text- oder image-Spalte einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank befinden, können Sie die Tabelle mithilfe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]importieren. Ändern Sie den Spaltentyp mithilfe der ALTER TABLE-Anweisung zu XML.  
   
@@ -44,7 +44,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>Textcodierung  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert XML-Daten im Unicode (UTF-16)-Format. Die vom Server abgerufenen XML-Daten liegen UTF-16-codiert vor. Wenn Sie eine andere Codierung wünschen, müssen Sie die erforderliche Konvertierung für die abgerufenen Daten ausführen. Manchmal können die XML-Daten in einer abweichenden Codierung vorliegen. Wenn das der Fall ist, müssen Sie beim Laden der Daten mit großer Sorgfalt vorgehen. Zum Beispiel:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert XML-Daten im Unicode (UTF-16)-Format. Die vom Server abgerufenen XML-Daten liegen UTF-16-codiert vor. Wenn Sie eine andere Codierung wünschen, müssen Sie die erforderliche Konvertierung für die abgerufenen Daten ausführen. Manchmal können die XML-Daten in einer abweichenden Codierung vorliegen. Wenn das der Fall ist, müssen Sie beim Laden der Daten mit großer Sorgfalt vorgehen. Beispiel:  
   
 -   Wenn Ihre Text-XML-Daten in Unicode (UCS-2, UTF-16) vorliegen, können Sie sie problemlos einer XML-Spalte, einer XML-Variablen oder einem XML-Parameter zuweisen.  
   
@@ -62,14 +62,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Inkompatibilitäten bei der Zeichenfolgencodierung  
- Wenn Sie XML als Zeichenfolgenliteral kopieren und in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Abfrage-Editor einfügen, stellen Sie ggf. Inkompatibilitäten bei [N]VARCHAR-Zeichenfolgencodierungen fest. Dies hängt von der Codierung Ihrer XML-Instanz ab. In vielen Fällen möchten Sie die XML-Deklaration möglicherweise entfernen. Zum Beispiel:  
+ Wenn Sie XML als Zeichenfolgenliteral kopieren und in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Abfrage-Editor einfügen, stellen Sie ggf. Inkompatibilitäten bei [N]VARCHAR-Zeichenfolgencodierungen fest. Dies hängt von der Codierung Ihrer XML-Instanz ab. In vielen Fällen möchten Sie die XML-Deklaration möglicherweise entfernen. Beispiel:  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- Dann sollten Sie ein N einfügen, um aus der XML-Instanz eine Unicodeinstanz zu machen. Zum Beispiel:  
+ Dann sollten Sie ein N einfügen, um aus der XML-Instanz eine Unicodeinstanz zu machen. Beispiel:  
   
 ```  
 -- Assign XML instance to a variable.  
@@ -81,7 +81,7 @@ INSERT INTO T VALUES (N'...')
 CREATE XML SCHEMA COLLECTION XMLCOLL1 AS N'<xsd:schema ... '  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](xml-data-sql-server.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Definieren eines Standardelements | Microsoft-Dokumentation
+title: Definieren eines Standardmembers | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66077420"
 ---
 # <a name="define-a-default-member"></a>Definieren eines Standardelements
@@ -33,17 +33,17 @@ ms.locfileid: "66077420"
  Wird für eine Attributhierarchie kein Standardelement angegeben, und kann die Attributhierarchie aggregiert werden (die `IsAggregatable`-Eigenschaft des Attributs ist auf `True` festgelegt), ist das (Alle)-Element das Standardelement. Wird kein Standardelement angegeben, und kann die Attributhierarchie nicht aggregiert werden (die `IsAggregatable`-Eigenschaft des Attributs ist auf `False` festgelegt), wird ein Standardelement aus der obersten Ebene der Attributhierarchie ausgewählt.  
   
 ## <a name="specifying-the-default-member"></a>Festlegen des Standardelements  
- Jedes Attribut in einer Dimension [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] besitzt ein Standardelement, die Sie angeben können, mit der `DefaultMember` -Eigenschaft für ein Attribut. Diese Einstellung wird zum Auswerten von Ausdrücken verwendet, wenn ein Attribut nicht in einer Abfrage enthalten ist. Legt eine Abfrage eine Hierarchie in einer Dimension fest, werden die Standardelemente für die Attribute in der Hierarchie ignoriert. Wenn eine Abfrage keine Hierarchie in einer Dimension fest, wird die `DefaultMember` -Einstellungen für Dimensionsattribute werden wirksam.  
+ Jedes Attribut in einer Dimension in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügt über ein Standardmember, das Sie mithilfe der `DefaultMember` -Eigenschaft für ein Attribut angeben können. Diese Einstellung wird zum Auswerten von Ausdrücken verwendet, wenn ein Attribut nicht in einer Abfrage enthalten ist. Legt eine Abfrage eine Hierarchie in einer Dimension fest, werden die Standardelemente für die Attribute in der Hierarchie ignoriert. Wenn eine Abfrage keine Hierarchie in einer Dimension angibt, treten die `DefaultMember` Einstellungen für Dimensions Attribute in Kraft.  
   
- Wenn die `DefaultMember` -Einstellung für ein Attribut leer und die zugehörige `IsAggregatable` -Eigenschaftensatz auf `True`, gilt das alle-Element als Standardelement. Wenn die `IsAggregatable` -Eigenschaftensatz auf `False`, das Standardelement ist das erste Element der ersten sichtbaren Ebene.  
+ Wenn die `DefaultMember` Einstellung für ein Attribut leer ist und die `IsAggregatable` -Eigenschaft auf `True`festgelegt ist, ist das Standardelement das alle-Element. Wenn die `IsAggregatable` -Eigenschaft auf `False`festgelegt ist, ist das Standardelement das erste Element der ersten sichtbaren Ebene.  
   
- Die `DefaultMember` -Einstellung für ein Attribut für jede Hierarchie gilt in der das Attribut beteiligt ist. Sie können für verschiedene Hierarchien in einer Dimension keine unterschiedlichen Einstellungen verwenden. Wenn beispielsweise das Element [1998] das Standardelement für ein [Year]-Attribut ist, gilt diese Einstellung für jede Hierarchie in der Dimension. Die `DefaultMember` Einstellung in diesem Fall nicht [1998] in einer Hierarchie und [1997] in einer anderen Hierarchie.  
+ Die `DefaultMember` -Einstellung für ein Attribut gilt für jede Hierarchie, an der das Attribut beteiligt ist. Sie können für verschiedene Hierarchien in einer Dimension keine unterschiedlichen Einstellungen verwenden. Wenn beispielsweise das Element [1998] das Standardelement für ein [Year]-Attribut ist, gilt diese Einstellung für jede Hierarchie in der Dimension. Die `DefaultMember` Einstellung in diesem Fall darf nicht [1998] in einer Hierarchie und [1997] in einer anderen Hierarchie sein.  
   
- Wenn Sie ein Standardelement für eine bestimmte Ebene in einer Hierarchie definieren, das nicht auf natürliche Weise aggregiert, müssen Sie in allen Ebenen über dieser Ebene in der Hierarchie Standardelemente definieren. In der Hierarchie All-Ländern-Klima, können nicht Sie beispielsweise ein Standardelement für Climate definieren, wenn Sie ein Standardelement für Countries definieren. Tun Sie dies nicht, führt dies zu Abfragezeitfehlern.  
+ Wenn Sie ein Standardelement für eine bestimmte Ebene in einer Hierarchie definieren, das nicht auf natürliche Weise aggregiert, müssen Sie in allen Ebenen über dieser Ebene in der Hierarchie Standardelemente definieren. Beispielsweise können Sie in der Hierarchie "All-Länder-Climate" kein Standardelement für "Klima" definieren, es sei denn, Sie definieren ein Standardelement für Länder. Tun Sie dies nicht, führt dies zu Abfragezeitfehlern.  
   
- Wenn Ebenen in einer Hierarchie natürlich aggregieren, können Sie ein Standardelement für ein beliebiges Attribut in der Hierarchie definieren, ohne andere Attribute in der Hierarchie berücksichtigen zu müssen. In der Hierarchie Country-Province-City können Sie beispielsweise ein Standardelement für City wie [City] definieren. [Montreal] ohne die Definition des Standardelements für State oder für das Land.  
+ Wenn Ebenen in einer Hierarchie natürlich aggregieren, können Sie ein Standardelement für ein beliebiges Attribut in der Hierarchie definieren, ohne andere Attribute in der Hierarchie berücksichtigen zu müssen. In der Hierarchie Country-Province-City können Sie z. b. ein Standardelement für City wie [City] definieren. [Montreal], ohne das Standardelement für State oder für Country zu definieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren des &#40;alle&#41; Ebene für Attribut Hierarchien](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

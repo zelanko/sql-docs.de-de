@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7b330b5aedaeff4cf73ad6dca3e88860dde0f90b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106059"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Anzeigen von Kopf- und Fußzeilen einer Gruppe (Berichts-Generator und SSRS)
@@ -68,9 +68,9 @@ ms.locfileid: "66106059"
   
 5.  (Optional) Zeigen Sie eine Vorschau des Berichts an. Wo es möglich ist, wird dieses Element vom Berichtsrenderer mit den angegebenen Spaltengruppenelementen beibehalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Tablix-Zellen, Zeilen und Spalten &#40;Berichts-Generator&#41; und SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
- [Tablix-Datenbereichen &#40;Berichts-Generator und SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Zellen, Zeilen und Spalten des Tablix-Datenbereichs &#40;Berichts-Generator&#41; und SSRS](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md)   
+ [Bereiche des Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](tablix-data-region-areas-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
  [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5aa2bd118d99afea6a1ee6ea8f41c646146c32f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63162451"
 ---
 # <a name="indexes-on-computed-columns"></a>Indizes in berechneten Spalten
@@ -36,11 +36,11 @@ ms.locfileid: "63162451"
   
 -   Anforderungen hinsichtlich der SET-Option  
   
- **Ownership Requirements**  
+ **Besitz Anforderungen**  
   
  Alle Funktionsverweise in der berechneten Spalte müssen denselben Besitzer wie die Tabelle aufweisen.  
   
- **Determinism Requirements**  
+ **Anforderungen an den Determinismus**  
   
 > [!IMPORTANT]  
 >  Ausdrücke gelten als deterministisch, wenn sie für eine bestimmte Gruppen von Eingaben stets dasselbe Ergebnis zurückgeben. Die **IsDeterministic** -Eigenschaft der [COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql) -Funktion teilt mit, ob der Ausdruck einer berechneten Spalte ( *computed_column_expression* ) deterministisch ist.  
@@ -58,13 +58,13 @@ ms.locfileid: "63162451"
  Jede berechnete Spalte, die einen CLR-Ausdruck (Common Language Runtime) enthält, muss deterministisch und als PERSISTED markiert sein, bevor die Spalte indiziert werden kann. Ausdrücke des CLR-benutzerdefinierten Typs sind in den Definitionen berechneter Spalten zulässig. Berechnete Spalten, deren Typ ein CLR-benutzerdefinierter Typ ist, können indiziert werden, sofern der Typ vergleichbar ist. Weitere Informationen finden Sie unter [Benutzerdefinierte CLR-Typen](../clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
 > [!NOTE]  
->  Wenn Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf Zeichenfolgenliterale des Date-Datentyps in indizierten berechneten Spalten verweisen, ist es ratsam, das Literal explizit in den gewünschten Datentyp zu konvertieren, indem Sie ein deterministisches Datenformat verwenden. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke für die implizierte Konvertierung von Zeichenfolgen in date-Datentypen werden als nicht deterministisch bezeichnet, es sei denn, der Kompatibilitätsgrad der Datenbank ist auf 80 oder niedriger festgelegt. Ursache hierfür ist, dass die Ergebnisse von den [LANGUAGE](/sql/t-sql/statements/set-language-transact-sql) - und [DATEFORMAT](/sql/t-sql/statements/set-dateformat-transact-sql) -Einstellungen der Serversitzung abhängig sind. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`30 listopad 1996`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
+>  Wenn Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auf Zeichenfolgenliterale des Date-Datentyps in indizierten berechneten Spalten verweisen, ist es ratsam, das Literal explizit in den gewünschten Datentyp zu konvertieren, indem Sie ein deterministisches Datenformat verwenden. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke für die implizierte Konvertierung von Zeichenfolgen in date-Datentypen werden als nicht deterministisch bezeichnet, es sei denn, der Kompatibilitätsgrad der Datenbank ist auf 80 oder niedriger festgelegt. Dies liegt daran, dass die Ergebnisse von den [Language](/sql/t-sql/statements/set-language-transact-sql) -und [DateFormat](/sql/t-sql/statements/set-dateformat-transact-sql) -Einstellungen der Server Sitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`30 listopad 1996`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssDE](../../../includes/ssde-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
 >   
 >  Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch erachtet, wenn der Kompatibilitätsgrad nicht auf 80 oder niedriger festgelegt ist.  
 >   
 >  Beträgt die Einstellung des Kompatibilitätsgrades der Datenbank 90, können Sie keine Indizes für berechnete Spalten erstellen, die diese Ausdrücke enthalten. Vorhandene berechnete Spalten, die diese Ausdrücke aus einer aktualisierten Datenbank enthalten, sind jedoch verwaltbar. Bei Verwendung indizierter berechneter Spalten, die implizite Konvertierungen von Zeichenfolgen in Datumsangaben enthalten, sollten Sie sicherstellen, dass die LANGUAGE- und DATEFORMAT-Einstellungen in der Datenbank und den Anwendungen konsistent sind, um mögliche Beschädigungen der Indizes zu vermeiden.  
   
- **Precision Requirements**  
+ **Genauigkeits Anforderungen**  
   
  Der *computed_column_expression* muss präzise sein. Ein *computed_column_expression* ist präzise, wenn mindestens eine der folgenden Bedingungen zutrifft:  
   
@@ -86,15 +86,15 @@ ms.locfileid: "63162451"
   
  Die **IsPrecise** -Eigenschaft der COLUMNPROPERTY-Funktion teilt mit, ob der Ausdruck einer berechneten Spalte ( *computed_column_expression* ) präzise ist.  
   
- **Data Type Requirements**  
+ **Datentyp Anforderungen**  
   
--   Die *Computed_column_expression* definiert, für die berechnete Spalte werden, um ausgewertet kann die `text`, `ntext`, oder `image` -Datentypen.  
+-   Der *computed_column_expression* , der für die berechnete Spalte definiert ist `text`, `ntext`kann nicht `image` zu den Datentypen, oder ausgewertet werden.  
   
 -   Berechnete Spalten, die aus den Datentypen `image`, `ntext`, `text`, `varchar(max)`, `nvarchar(max)`, `varbinary(max)` und `xml` abgeleitet wurden, können indiziert werden, solange der Datentyp der berechneten Spalte als Indexschlüsselspalte zulässig ist.  
   
 -   Berechnete Spalten, die aus `image`-, `ntext`- und `text`-Datentypen abgeleitet sind, können Nichtschlüsselspalten (eingeschlossene Spalten) in einem nicht gruppierten Index sein, so lange der Datentyp der berechneten Spalte für Nichtschlüsseldatenspalten zulässig ist.  
   
- **SET Option Requirements**  
+ **Anforderungen für SET-Optionen**  
   
 -   Die ANSI_NULLS-Option auf Verbindungsebene muss auf ON festgelegt sein, wenn die CREATE TABLE- oder ALTER TABLE-Anweisung, die die berechnete Spalte definiert, ausgeführt wird. Die [OBJECTPROPERTY](/sql/t-sql/functions/objectpropertyex-transact-sql) -Funktion meldet mithilfe der **IsAnsiNullsOn** -Eigenschaft, ob die Option auf ON festgelegt ist.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "63162451"
      Durch Festlegen von ANSI_WARNINGS auf ON wird implizit ARITHABORT auf ON festgelegt, wenn der Kompatibilitätsgrad der Datenbank auf 90 oder höher festgelegt ist.  
   
 ##  <a name="BKMK_persisted"></a> Erstellen von Indizes für persistente berechnete Spalten  
- Sie können einen Index für eine berechnete Spalte erstellen, die mit einem deterministischen, jedoch unpräzisen Ausdruck definiert wird, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED markiert wurde. Dies bedeutet, dass die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] verwendet diese persistenten Werte, wenn ein Index für die Spalte erstellt wird und der Index in einer Abfrage verwiesen wird. Diese Option ermöglicht Ihnen die Erstellung ein Indexes für eine berechnete Spalte beim [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)], ist deterministisch und präzise.  
+ Sie können einen Index für eine berechnete Spalte erstellen, die mit einem deterministischen, jedoch unpräzisen Ausdruck definiert wird, wenn die Spalte in der CREATE TABLE- oder ALTER TABLE-Anweisung als PERSISTED markiert wurde. Dies bedeutet, dass [!INCLUDE[ssDE](../../../includes/ssde-md.md)] diese beibehaltenen Werte verwendet, wenn ein Index für die Spalte erstellt wird und wenn in einer Abfrage auf den Index verwiesen wird. Diese Option ermöglicht es Ihnen, einen Index für eine berechnete Spalte [!INCLUDE[ssDE](../../../includes/dnprdnshort-md.md)]zu erstellen, wenn, sowohl deterministisch als auch präzise ist.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [COLUMNPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/columnproperty-transact-sql)  

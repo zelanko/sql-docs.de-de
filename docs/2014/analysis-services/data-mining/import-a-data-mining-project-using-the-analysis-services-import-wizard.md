@@ -1,5 +1,5 @@
 ---
-title: Importieren Sie ein Data Mining-Projekte mithilfe des Analysis Services-Import-Assistenten | Microsoft-Dokumentation
+title: Importieren eines Data Mining-Projekts mithilfe des Assistenten zum Importieren von Analysis Services | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66084368"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
   In diesem Thema wird beschrieben, wie ein neues Data Mining-Projekt erstellt wird, indem die Metadaten aus einem vorhandenen Data Mining-Projekt auf einen anderen Server mithilfe der Vorlage **Import from Server (Multidimensional and Data Mining) Project**(Vom Server importieren (mehrdimensionales und Data Mining-Projekt)) in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importiert werden.  
   
 ## <a name="import-data-sources-mining-structures-and-mining-models-from-an-existing-data-mining-project"></a>Importieren von Datenquellen, Miningstrukturen und Miningmodellen aus einem vorhandenen Data Mining-Projekt  
- Wenn Sie die Vorlage **Import from Server (Multidimensional and Data Mining) Project**verwenden, erstellt [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein neues Data Mining-Projekt und kopiert die Metadaten anschließend aus dem angegebenen Data Mining-Projekt. Das neue Projekt enthält die gleichen Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle wie die ssASnoversion-Datenbank, aus der der Import erfolgt ist. Das Projekt kann jedoch erst verwendet werden, wenn Sie bestimmte Eigenschaften aktualisiert und die Objekte wie beschrieben verarbeitet haben:  
+ Wenn Sie die Vorlage " **aus Server importieren (mehrdimensional und Data Mining)**" verwenden [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] , erstellt ein neues Data Mining Projekt und kopiert dann die Metadaten aus dem angegebenen Data Mining Projekt. Das neue Projekt enthält die gleichen Datenquellen, Datenquellensichten, Miningstrukturen und Miningmodelle wie die ssASnoversion-Datenbank, aus der der Import erfolgt ist. Das Projekt kann jedoch erst verwendet werden, wenn Sie bestimmte Eigenschaften aktualisiert und die Objekte wie beschrieben verarbeitet haben:  
   
--   Die Daten selbst werden nicht vom Quellserver kopiert, für die neue Datamining-Projekt nur die Definitionen der Datenquellen und Datenquellensichten importiert werden. Nachdem der Importvorgang abgeschlossen ist und die Objekte erstellt wurden, müssen Sie die Objekte mit Daten auffüllen, indem Sie die Miningstrukturen und abhängigen Modelle trainieren. Sie können den Befehl **Alles verarbeiten** im Data Mining-Designer verwenden, um die Modelle und Strukturen zu trainieren.  
+-   Die Daten selbst werden nicht vom Quell Server in das neue Data Mining Projekt kopiert. es werden nur die Definitionen der Datenquellen und Datenquellen Sichten importiert. Nachdem der Importvorgang abgeschlossen ist und die Objekte erstellt wurden, müssen Sie die Objekte mit Daten auffüllen, indem Sie die Miningstrukturen und abhängigen Modelle trainieren. Sie können den Befehl **Alles verarbeiten** im Data Mining-Designer verwenden, um die Modelle und Strukturen zu trainieren.  
   
 -   Wenn Sie ein Projekt importieren, das in einer früheren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurde, könnte die Datenquelle Anbieter verwenden, die nicht auf dem Server installiert sind, auf den Sie das Projekt importieren. Wenn beim Verarbeiten der importierten Miningstrukturen Fehler auftreten, klicken Sie mit der rechten Maustaste auf jede Datenquelle, und wählen Sie **Designer öffnen** aus, um die Verbindungszeichenfolge zu bearbeiten und die Anbietereigenschaften zu überprüfen.  
   
      Zu diesem Zeitpunkt müssen Sie ggf. auch überprüfen, ob das Konto, das Sie zum Verarbeiten der Data Mining-Objekte oder Abfragen von Data Mining-Modellen verwenden, über die notwendigen Berechtigungen für die Datenquelle verfügt.  
   
--   Wenn Sie ein Projekt importieren, wird standardmäßig die Arbeitsbereichsdatenbank auf "localhost" oder auf die als **Standardzielserver** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]konfigurierte Standardinstanz festgelegt. Um diese Eigenschaft festzulegen, wählen Sie im Menü **Optionen** **Business Intelligence-Designer**aus und anschließend **Analysis Services**, und wählen Sie dann **Allgemein**aus.  
+-   Wenn Sie ein Projekt importieren, wird standardmäßig die Arbeitsbereichsdatenbank auf "localhost" oder auf die als **Standardzielserver** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]konfigurierte Standardinstanz festgelegt. Um diese Eigenschaft festzulegen, wählen Sie im Menü **Optionen****Business Intelligence-Designer**aus und anschließend **Analysis Services**, und wählen Sie dann **Allgemein**aus.  
   
      Beachten Sie, dass in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]eine weitere separate Option vorhanden ist, die Sie festlegen können, um den Standardbereitstellungsserver für tabellarische [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Modellprojekte zu konfigurieren. Die Einstellung **Standard-Deployment Server**bestimmt die Standardarbeitsbereichsdatenbank für tabellarische Modellprojekte. Sie können keine Instanzen verwenden, die tabellarische Modelle für Data Mining-Projekte unterstützen.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66084368"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Datei** , auf **Neu**und dann auf **Projekt**.  
   
-2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **Installierte Vorlagen**auf **Business Intelligence**und anschließend auf **Analysis Services**&gt; **Import from Server (Multidimensional/Data Mining)** (Von Server importieren (Multidimensional/Data Mining)).  
+2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **Installierte Vorlagen**auf **Business Intelligence**und anschließend auf **Analysis Services**&gt; **Import from Server (Multidimensional/Data Mining)**(Von Server importieren (Multidimensional/Data Mining)).  
   
 3.  Geben Sie unter **Name**einen Namen für das Projekt ein. Geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie auf **OK**.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "66084368"
   
      Klicken Sie auf **Weiter**.  
   
-5.  Die Seite **Assistenten abschließen**zeigt den Fortschritt beim Import an. Sie können den Vorgang nicht abbrechen oder die Objekte ändern, die importiert werden. Klicken Sie anschließend auf **Fertig stellen** .  
+5.  Die Seite **Assistenten abschließen**zeigt den Fortschritt beim Import an. Sie können den Vorgang nicht abbrechen oder die Objekte ändern, die importiert werden. Klicken Sie **abschließend auf Fertig** stellen.  
   
      Das neue Projekt wird automatisch mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geöffnet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](../tabular-models/properties-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Projekteigenschaften &#40;tabellarischen SSAS-&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

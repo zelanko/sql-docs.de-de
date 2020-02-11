@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149468"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option Wiedergabe (Verwaltungstool Distributed Replay)
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Verwaltungstool, `DReplay.exe`, ist ein Befehlszeilentool, das Sie für die Kommunikation mit distributed Replay Controller verwenden können. In diesem Thema werden die **replay** -Befehlszeilenoption und die entsprechende Syntax beschrieben.  
+  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Verwaltungs Tool, `DReplay.exe`, ist ein Befehlszeilen Tool, das Sie für die Kommunikation mit dem verteilten Replay-Controller verwenden können. In diesem Thema werden die **replay** -Befehlszeilenoption und die entsprechende Syntax beschrieben.  
   
  Die **replay** -Option initiiert die Ereigniswiedergabephase, in der der Controller Wiedergabedaten an die angegebenen Clients weiterleitet, die verteilte Wiedergabe startet und die Clients synchronisiert. Optional kann jeder Client, der an der Wiedergabe teilnimmt, die Wiedergabeaktivität aufzeichnen und eine Ergebnisdatei der Ablaufverfolgung lokal speichern.  
   
- ![Artikellinksymbol](../../database-engine/media/topic-link.gif "Topic link icon") Weitere Informationen zu den Syntaxkonventionen für das Verwaltungstool finden Sie unter [Transact-SQL-Syntaxkonventionen &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
+ ![Link Symbol "Thema](../../database-engine/media/topic-link.gif "Symbol für Themenlink") " Weitere Informationen zu den Syntax Konventionen, die mit der Syntax des Verwaltungs Tools verwendet werden, finden Sie unter [Transact-SQL-Syntax Konventionen &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/transact-sql-syntax-conventions-transact-sql).  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63149468"
 ```  
   
 #### <a name="parameters"></a>Parameter  
- **-m** *Controller*  
+ **-m-** *Controller*  
  Gibt den Computernamen des Controllers an. Sie können mit "`localhost`" oder "`.`" auf den lokalen Computer verweisen.  
   
  Wenn der **-m** -Parameter nicht angegeben ist, wird der lokale Computer verwendet.  
@@ -58,7 +58,7 @@ ms.locfileid: "63149468"
  Wenn der **-o** -Parameter nicht angegeben wird, wird die Ergebnisdatei der Ablaufverfolgung nicht generiert. Die Konsolenausgabe gibt am Ende der Wiedergabe Zusammenfassungsinformationen zurück, es sind jedoch keine weiteren Wiedergabestatistiken verfügbar.  
   
  **-s** *target_server*  
- Gibt die Zielinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, für die die verteilte Arbeitsauslastung wiedergegeben werden soll. Sie müssen diesen Parameter im folgenden Format angeben: **server_name[\instance name]** .  
+ Gibt die Zielinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, für die die verteilte Arbeitsauslastung wiedergegeben werden soll. Sie müssen diesen Parameter im folgenden Format angeben: **server_name[\instance name]**.  
   
  Sie können den Zielserver nicht mit "`localhost`" oder "`.`" angeben.  
   
@@ -66,13 +66,13 @@ ms.locfileid: "63149468"
   
  Wenn der **-s** -Parameter verwendet wird, wird das `<Server>` -Element im `<ReplayOptions>` -Abschnitt der Wiedergabekonfigurationsdatei ignoriert.  
   
- **-w** *clients*  
+ **-w** *Clients*  
  Dieser erforderliche Parameter ist eine durch Trennzeichen getrennte Liste (ohne Leerzeichen), die die Computernamen von Clients angibt, die an der verteilten Wiedergabe teilnehmen sollten. IP-Adressen sind nicht zulässig. Beachten Sie, dass die Clients bereits beim Controller registriert sein müssen.  
   
 > [!NOTE]  
 >  Jeder Client wird beim Starten des Clientdiensts bei dem Controller registriert, der in der Clientkonfigurationsdatei angegeben ist.  
   
- **-c** *config_file*  
+ **-c** *Config_file*  
  Der vollständige Pfad der Wiedergabekonfigurationsdatei. Mit ihm wird der Speicherort angegeben, wenn die Datei an einem anderen Speicherort gespeichert wird.  
   
  Der **-c** -Parameter ist nicht erforderlich, wenn Sie die Standardwerte der Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`verwenden möchten.  
@@ -89,7 +89,7 @@ ms.locfileid: "63149468"
   
 -   Der **-d** -Parameter gibt den Speicherort der Zwischendatei auf dem Controller im Verzeichnis an ( `c:\WorkingDir`).  
   
--   Der **-o** -Parameter legt fest, dass jeder angegebene Client die Wiedergabeaktivität aufzeichnet und in einer Ergebnisdatei der Ablaufverfolgung speichert. Hinweis: Mit dem `<ResultTrace>`-Element in der Konfigurationsdatei kann angegeben werden, ob Zeilenanzahl und Resultset aufgezeichnet werden.  
+-   Der **-o** -Parameter legt fest, dass jeder angegebene Client die Wiedergabeaktivität aufzeichnet und in einer Ergebnisdatei der Ablaufverfolgung speichert. Hinweis: Mit dem `<ResultTrace>` -Element in der Konfigurationsdatei kann angegeben werden, ob Zeilenanzahl und Resultset aufgezeichnet werden.  
   
 -   Der **-w** -Parameter gibt an, dass die Computer `client1` bis `client4` als Clients an der verteilten Wiedergabe teilnehmen.  
   
@@ -154,13 +154,13 @@ dreplay replay -m controller1 -d c:\WorkingDir -o -w client1,client2,client3,cli
   
  Weitere Informationen finden Sie unter [Distributed Replay Security](distributed-replay-security.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Wiedergeben von Ablaufverfolgungsdaten](replay-trace-data.md)   
- [Überprüfen der Wiedergabeergebnisse](review-the-replay-results.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Ablauf Verfolgungs Daten wiedergeben](replay-trace-data.md)   
+ [Überprüfen der Wiedergabe Ergebnisse](review-the-replay-results.md)   
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
  [Konfigurieren von Distributed Replay](configure-distributed-replay.md)   
  [SQL Server Distributed Replay Forum](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server: Teil 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
- [Verwenden von Distributed Replay für den Auslastungstest von SQL Server – Teil 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
+ [Verwenden von Distributed Replay zum Auslastungs Test Ihrer SQL Server-Teil 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
+ [Verwenden von Distributed Replay zum Auslastungs Test Ihrer SQL Server-Teil 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Importieren von Daten (Master Data Services) | Microsoft-Dokumentation
+title: Daten Import (Master Data Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f5f5e7d6c4706dee09c90237c2363f6cbf46b02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479015"
 ---
 # <a name="data-import-master-data-services"></a>Datenimport (Master Data Services)
   Nach der Erstellung eines Modells für Ihre Daten in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie beginnen, Daten hinzufügen und Änderungen an Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank vorzunehmen.   Sie verwenden [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Stagingtabellen, gespeicherte Prozeduren und Master Data Manager.  
   
- Sie können auch die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)], zum Hinzufügen von Daten im MDS-Repository ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Datenbank). Weitere Informationen finden Sie unter [Veröffentlichungsdaten &#40;MDS-Add-in für Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
+ Sie können [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]auch das verwenden, um dem MDS-Repository ([!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank) Daten hinzuzufügen. Weitere Informationen finden Sie unter [Veröffentlichen von Daten &#40;MDS-Add-in für Excel&#41;](microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md).  
   
  Beim Hinzufügen und Aktualisieren von Daten können Sie Folgendes tun.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "65479015"
  Löschen bedeutet, das Element dauerhaft vom System zu entfernen. Alle Transaktionen für das Element, alle Beziehungen und alle Attribute werden dauerhaft gelöscht.  
   
 > [!NOTE]  
->  Per Staging können Sie keine Elemente erneut aktivieren. Diesen Vorgang müssen Sie manuell in Master Data Manager ausführen. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](reactivate-a-member-or-collection-master-data-services.md).  
+>  Per Staging können Sie keine Elemente erneut aktivieren. Diesen Vorgang müssen Sie manuell in Master Data Manager ausführen. Weitere Informationen finden Sie unter [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41](reactivate-a-member-or-collection-master-data-services.md).  
 >   
 >  Per Staging können Sie keine Auflistungen löschen oder deaktivieren. Weitere Informationen zum manuellen Deaktivieren von Sammlungen finden Sie unter [Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md).  
   
@@ -69,19 +69,20 @@ ms.locfileid: "65479015"
 ## <a name="staging-tables-and-stored-procedures"></a>Stagingtabellen und gespeicherte Prozeduren  
  Die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank enthält die folgenden Typen von Stagingtabellen, die Sie mit Ihren Daten auffüllen können.  
   
--   [Stagingtabelle für Blattelemente &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
+-   [&#40;Master Data Services der Stagingtabelle für Blatt Elemente&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)  
   
--   [Konsolidierte Elementstagingtabelle &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
+-   [Konsolidierte Element-Stagingtabelle &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)  
   
 -   [Stagingtabelle für Beziehungen &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)  
   
  Für jede Entität im Modell gibt es eine Stagingtabelle. Der Tabellenname gibt die entsprechende Entität und den Entitätstyp an, wie etwa ein Blattelement. In der folgenden Abbildung sind die Stagingtabellen für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Stagingtabellen in der MDS-Datenbank](../../2014/master-data-services/media/mds-stagingtables.png "Staging Tables in MDS database")  
+ ![Stagingtabellen in der MDS-Datenbank](../../2014/master-data-services/media/mds-stagingtables.png "Stagingtabellen in der MDS-Datenbank")  
   
  Der Name der Tabelle wird beim Erstellen einer Entität angegeben und kann nicht geändert werden. Wenn der Stagingtabellenname eine _1 oder eine andere Zahl enthält, war eine andere Tabelle dieses Namens bereits vorhanden, als die Entität erstellt wurde.  
   
- [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beinhaltet die folgenden Typen von gespeicherten Stagingprozeduren.  
+ 
+  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beinhaltet die folgenden Typen von gespeicherten Stagingprozeduren.  
   
 -   stg.udp_\<name>_Leaf  
   
@@ -91,7 +92,7 @@ ms.locfileid: "65479015"
   
  Für jede Entität im Modell gibt es drei gespeicherte Prozeduren, die dem Blattelement, dem konsolidierten Element und der Stagingtabelle für Beziehungen entsprechen.  In der folgenden Abbildung sind die gespeicherten Stagingprozeduren für die Entitäten „Währung“, „Kunde“ und „Produkt“ dargestellt.  
   
- ![Staging Stored Procedures in MDS-Datenbank](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Staging Stored Procedures in MDS-Datenbank")  
+ ![Gespeicherte Stagingprozeduren in der MDS-Datenbank](../../2014/master-data-services/media/mds-stagingstoredprocedures.png "Gespeicherte Stagingprozeduren in der MDS-Datenbank")  
   
  Weitere Informationen zu den gespeicherten Prozeduren finden Sie unter [Gespeicherte Stagingprozedur &#40;Master Data Services&#41;](../../2014/master-data-services/staging-stored-procedure-master-data-services.md).  
   
@@ -102,8 +103,8 @@ ms.locfileid: "65479015"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Überprüfung &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+-   [Master Data Services der Überprüfung &#40;&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
--   [Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+-   [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
   

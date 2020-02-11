@@ -10,14 +10,14 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
 ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "64568265"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Anpassen von Stylesheets für den HTML-Viewer und Berichts-Manager
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Stellt Standard cascading Style Sheets (CSS)-Dateien, die Stile für definieren die **Bericht** Symbolleiste im HTML-Viewer und Berichts-Manager. Wenn Sie ein Webentwickler sind oder Erfahrung im Erstellen von Cascading Stylesheets haben, können Sie auf eigenes Risiko die Standardstile ändern, um Farben, Schriftarten und Layout der Symbolleiste oder des Berichts-Managers zu ändern. In dieser Version sind weder die Standardstylesheets noch Anweisungen zum Ändern der Stylesheets dokumentiert.  
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]stellt standardmäßige Cascading Stylesheets-Dateien (CSS-Dateien) bereit, die Stile für die **Berichts** Symbolleiste im HTML-Viewer und für Berichts-Manager definieren. Wenn Sie ein Webentwickler sind oder Erfahrung im Erstellen von Cascading Stylesheets haben, können Sie auf eigenes Risiko die Standardstile ändern, um Farben, Schriftarten und Layout der Symbolleiste oder des Berichts-Managers zu ändern. In dieser Version sind weder die Standardstylesheets noch Anweisungen zum Ändern der Stylesheets dokumentiert.  
   
  Werden die Stylesheets unsachgemäß geändert, kann es beim Öffnen von Berichten zu Fehlern kommen. Wenn Sie nicht wissen, wie Sie zum Ändern von Stylesheets vorgehen müssen, sollten Sie die Standardstylesheets verwenden. Wenn Sie die Stylesheets anpassen möchten, sollten Sie von allen CSS-Standarddateien eine Sicherungskopie erstellen, bevor Sie Änderungen vornehmen.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "64568265"
 ## <a name="reporting-services-style-sheets"></a>Reporting Services-Stylesheets  
  In der folgenden Tabelle sind die in einer [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Installation verwendeten Stylesheetdateien (CSS) beschrieben.  
   
-|Stylesheet|Description|  
+|Stylesheet|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |Htmlviewer.css|Enthält ein Beispielstylesheet, das Sie als Vorlage zum Erstellen von benutzerdefinierten Stilen für die **Berichtssymbolleiste** im HTML-Viewer verwenden können.<br /><br /> Die vom HTML Viewer verwendeten Standardstile werden im Berichtsserver kompiliert. Die Datei Htmlviewer.css enthält ein Beispiel der vom Viewer verwendeten Stile.|  
 |ReportingServices.css|Definiert Stile für den Berichts-Manager.|  
@@ -39,12 +39,12 @@ ms.locfileid: "64568265"
   
  Möchten Sie für den HTML-Viewer zur Laufzeit ein benutzerdefiniertes Stylesheet verwenden, wählen Sie eine der folgenden Vorgehensweisen aus:  
   
--   Hinzufügen der <`HTMLViewerStyleSheet`> zum Festlegen der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Konfigurationsdatei.  
+-   Fügen Sie der `HTMLViewerStyleSheet` [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Konfigurationsdatei die Einstellung für den <> hinzu.  
   
 -   Geben Sie das Stylesheet in einer Berichts-URL an.  
   
 ### <a name="modifying-the-rsreportserverconfig-file"></a>Ändern der Datei RSReportServer.config  
- Sie können die Datei RSReportServer.config ändern, um ein benutzerdefiniertes Stylesheet für den HTML-Viewer anzugeben. Die <`HTMLViewerStyleSheet`> Einstellung ist standardmäßig nicht in der Datei enthalten. Geben Sie ihn in der <`Configuration`> Auswahl der RSReportServer.config-Datei, und geben Sie dann auf das Stylesheet, das Sie verwenden möchten. Geben Sie den Namen des Stylesheets ohne die Dateierweiterung CSS ein.  
+ Sie können die Datei RSReportServer.config ändern, um ein benutzerdefiniertes Stylesheet für den HTML-Viewer anzugeben. Die <`HTMLViewerStyleSheet`> Einstellung ist nicht standardmäßig in der Datei enthalten. Sie müssen Sie in die <`Configuration`> Auswahl der Datei RSReportServer. config eingeben und dann das gewünschte Stylesheet angeben. Geben Sie den Namen des Stylesheets ohne die Dateierweiterung CSS ein.  
   
  Das folgende Beispiel zeigt, wie ein Stylesheet angegeben wird:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "64568265"
 ```  
   
 ### <a name="specifying-a-style-sheet-on-a-report-url"></a>Angeben eines Stylesheets in einer Berichts-URL  
- Zum Angeben eines benutzerdefinierten Stylesheets in einer Berichts-URL können Sie den URL-Zugriffsparameter `rc:StyleSheet` verwenden. Weitere Informationen zur Vorgehensweise beim Angeben von URL-Zugriffsparameter finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
+ Zum Angeben eines benutzerdefinierten Stylesheets in einer Berichts-URL können Sie den URL-Zugriffsparameter `rc:StyleSheet` verwenden. Weitere Informationen zum Angeben von URL-Zugriffs Parametern finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
  Das folgende Beispiel zeigt, wie benutzerdefinierte Stile hinzugefügt werden:  
   
@@ -65,9 +65,9 @@ ms.locfileid: "64568265"
 http://localhost/reportserver?/AdventureWorksSampleReports/Product+Line+Sales&rs:Command=Render&rc:Stylesheet=MyStyleSheet  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [HTML-Viewer und die Berichtssymbolleiste](html-viewer-and-the-report-toolbar.md)   
- [RSReportServer-Konfigurationsdatei](report-server/rsreportserver-config-configuration-file.md)  
+ [HTML-Viewer und die Berichts Symbolleiste](html-viewer-and-the-report-toolbar.md)   
+ [RSReportServer Configuration File](report-server/rsreportserver-config-configuration-file.md)  
   
   

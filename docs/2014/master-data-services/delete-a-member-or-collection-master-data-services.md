@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f3164bca23e709fd434c6ba7850ec21179a076ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479717"
 ---
 # <a name="delete-a-member-or-collection-master-data-services"></a>Löschen eines Elements oder einer Auflistung (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "65479717"
 > [!NOTE]  
 >  Sie können kein Element löschen, das als domänenbasierter Attributwert für ein anderes Element verwendet wird.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
   
--   Für Mitglieder, benötigen Sie mindestens **Update** Berechtigung für das blattmodellobjekt, löschen Sie ein Element aus.  
+-   Für Mitglieder müssen Sie mindestens über die Berechtigung **Aktualisieren** für das Blatt Modell Objekt verfügen, aus dem Sie ein Element löschen.  
   
 -   Bei Auflistungen müssen Sie für das zu löschende Blattauflistungsobjekt mindestens über die Berechtigung **Aktualisieren** verfügen.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "65479717"
   
 7.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
- [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)   
+ [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
   

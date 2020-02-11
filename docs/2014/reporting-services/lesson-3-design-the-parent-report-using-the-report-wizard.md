@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66108478"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lektion 3: Entwerfen des übergeordneten Berichts mithilfe des Berichts-Assistenten
@@ -30,7 +30,7 @@ ms.locfileid: "66108478"
   
      Daraufhin wird der Berichts-Assistent gestartet.  
   
-4.  Auf der **Dataseteigenschaften** auf der Seite die **Datenquelle** wählen Sie im der **"DataSet1"** Sie erstellt haben, im [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md).  
+4.  Wählen Sie auf der Seite **Dataseteigenschaften** im Feld **Datenquelle** das **DataSet1** aus, das Sie in [Lektion 2: Definieren einer Datenverbindung und einer Datentabelle für den übergeordneten Bericht](lesson-2-define-a-data-connection-and-data-table-for-parent-report.md)erstellt haben.  
     Das Feld **Verfügbare Datasets** wird automatisch anhand der oben erstellten **DataTable** aktualisiert.  
   
 5.  Klicken Sie auf **Weiter**.  
@@ -39,7 +39,7 @@ ms.locfileid: "66108478"
   
     1.  Ziehen Sie **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**und **ReorderLevel** vom Feld **Verfügbare Felder** auf das Feld **Werte** .  
   
-    2.  Klicken Sie auf den Pfeil neben **Sum(ProductID)** , **Sum(SafetyStockLevel)** , **Sum(ReorderLevel)** und deaktivieren Sie die **Summe** Auswahl.  
+    2.  Klicken Sie auf den Pfeil neben **Sum (ProductID)**, **Sum (SafetyStockLevel)**, **Sum (ReorderLevel)** , und löschen Sie die **Sum** -Auswahl.  
   
 7.  Klicken Sie zweimal auf **Weiter** , und klicken Sie auf **Fertig stellen** , um den **Berichts-Assistenten**zu schließen.  
   

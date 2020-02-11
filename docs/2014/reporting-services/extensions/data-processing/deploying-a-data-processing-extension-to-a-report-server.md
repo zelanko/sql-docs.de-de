@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Bereitstellen eine Datenverarbeitungserweiterung auf einem Berichtsserver | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,23 +14,23 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0f593b2488d9bb7226edad1f8d98a244f4df191
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164069"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Gewusst wie: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver
+# <a name="how-to-deploy-a-data-processing-extension-to-a-report-server"></a>Vorgehensweise: Bereitstellen einer Datenverarbeitungserweiterung für einen Berichtsserver
   Berichtsserver verwenden Datenverarbeitungserweiterungen zum Abrufen und Verarbeiten von Daten in gerenderten Berichten. Sie sollten Ihre Assembly für Datenverarbeitungserweiterungen auf dem Berichtsserver als private Assembly bereitstellen. Sie müssen auch einen Eintrag in der Konfigurationsdatei des Berichtsservers RSReportServer.config vornehmen.  
   
-## <a name="procedures"></a>Vorgehensweisen  
+## <a name="procedures"></a>Prozeduren  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>So stellen Sie eine Assembly für Datenverarbeitungserweiterungen bereit  
   
 1.  Kopieren Sie die Assembly aus dem Bereitstellungsverzeichnis in das BIN-Verzeichnis des Berichtsservers, auf dem Sie die Datenverarbeitungserweiterung verwenden möchten. Das Standardverzeichnis für das BIN-Verzeichnis des Berichtsservers lautet %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<*Instanzname*>\Reporting Services\ReportServer\bin.  
   
     > [!NOTE]  
-    >  Dieser Schritt verhindert ein Upgrade auf eine neuere Instanz von SQL Server. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
+    >  Dieser Schritt verhindert ein Upgrade auf eine neuere Instanz von SQL Server. Weitere Informationen finden Sie unter [Upgrade and Migration Reporting Services](../../install-windows/upgrade-and-migrate-reporting-services.md).  
   
 2.  Nachdem die Assemblydatei kopiert wurde, öffnen Sie die Datei RSReportServer.config. Die Datei RSReportServer.config befindet sich im Verzeichnis "ReportServer". Sie müssen einen Eintrag in der Konfigurationsdatei für die Datei Ihrer Datenverarbeitungserweiterungsassembly vornehmen. Sie können die Konfigurationsdatei mit Visual Studio oder mit einem einfachen Text-Editor wie dem Microsoft-Editor öffnen.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63164069"
     </Extensions>  
     ```  
   
-4.  Fügen Sie einen Eintrag für die Datenverarbeitungserweiterung hinzu. Der Eintrag sollte enthalten eine `Extension` -Element mit den Werten `Name` und `Type` und kann wie folgt aussehen:  
+4.  Fügen Sie einen Eintrag für die Datenverarbeitungserweiterung hinzu. Der Eintrag sollte ein `Extension` Element mit Werten für `Name` und `Type` enthalten und könnte wie folgt aussehen:  
   
     ```  
     <Extension Name="ExtensionName" Type="CompanyName.ExtensionName.MyConnectionClass, MyExtensionAssembly" />  
@@ -72,7 +72,7 @@ ms.locfileid: "63164069"
 ## <a name="verifying-the-deployment"></a>Überprüfen der Bereitstellung  
  Sie können prüfen, ob Ihre Datenverarbeitungserweiterung erfolgreich auf dem Berichtsserver bereitgestellt wurde, indem Sie die Webdienstmethode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> verwenden. Sie können auch den Berichts-Manager öffnen und prüfen, ob die Erweiterung in der Liste der verfügbaren Datenquellen enthalten ist. Weitere Informationen zu Berichts-Manager und Datenquellen finden Sie unter [Erstellen, Ändern und Löschen von freigegebenen Datenquellen (SSRS)](../../report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen von Datenverarbeitungserweiterungen](deploying-a-data-processing-extension.md)   
  [Erweiterungen für Reporting Services](../reporting-services-extensions.md)   
  [Implementieren von Datenverarbeitungserweiterungen](implementing-a-data-processing-extension.md)   

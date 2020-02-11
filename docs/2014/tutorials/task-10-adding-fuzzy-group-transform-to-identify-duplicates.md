@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung um Duplikate zu identifizieren | Microsoft-Dokumentation'
+title: 'Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung zum Erkennen von Duplikaten | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,50 +11,50 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65481251"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung zur Identifizierung von Duplikaten
-  In dieser Aufgabe fügen Sie eine Transformation für Fuzzygruppierung zum Datenfluss hinzu. Mit der Transformation für Fuzzygruppierung können Duplikate in den Quelldaten identifiziert werden. Finden Sie unter [Transformation für Fuzzygruppierung](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) Weitere Details.  
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren
+  In dieser Aufgabe fügen Sie eine Transformation für Fuzzygruppierung zum Datenfluss hinzu. Mit der Transformation für Fuzzygruppierung können Duplikate in den Quelldaten identifiziert werden. Weitere Informationen finden Sie unter [Transformation für Fuzzygruppierung](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) .  
   
-1.  Drag & Drop **Fuzzygruppierung** Transformation **Weitere Transformationen** auf die **SSIS-Toolbox** auf die **Datenfluss** Registerkarte  **Kombinieren Sie die richtige und korrigierte Datensätze**.  
+1.  Ziehen Sie die Transformation für **Fuzzygruppierung** in **andere Transformationen** der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** unter **richtige und korrigierte Datensätze kombinieren**.  
   
-2.  Mit der rechten Maustaste **Fuzzygruppierung** transformiert die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Gruppenlieferanten mit übereinstimmenden IDs** , und drücken Sie **EINGABETASTE**.  
+2.  Klicken Sie in der Registerkarte Datenfluss mit der rechten Maustaste auf Transformation für **Fuzzygruppierung** , **und klicken Sie** **** Geben Sie **Group Suppliers with Matching IDs** ein, und drücken **Sie die Eingabe**Taste  
   
-3.  Herstellen einer mit **Combine Correct and Corrected Records** zu **Gruppenlieferanten mit übereinstimmenden IDs** mithilfe des blauen Konnektors.  
+3.  Verbinden Sie **korrekte und korrigierte Datensätze** **mit Gruppen Lieferanten mit übereinstimmenden IDs** , die den blauen Connector verwenden.  
   
-     ![Gruppenlieferanten mit übereinstimmenden IDs](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "Gruppenlieferanten mit übereinstimmenden IDs")  
+     ![Verbinden mit Gruppenlieferanten mit übereinstimmenden IDs](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-01.jpg "Verbinden mit Gruppenlieferanten mit übereinstimmenden IDs")  
   
-4.  Doppelklicken Sie auf **Gruppenlieferanten mit übereinstimmenden IDs**.  
+4.  Doppelklicken Sie auf **Gruppen Lieferanten mit übereinstimmenden IDs**.  
   
-5.  In der **Transformations-Editor für Fuzzysuche Gruppe**, klicken Sie auf **neu** neben **OLE DB-Verbindungs-Manager-Dropdownliste** starten **Konfigurieren von OLE DB-Verbindung Manager** Dialogfeld.  
+5.  Klicken Sie im **Transformations-Editor für fuzzygruppen**neben **OLE DB Dropdown Liste Verbindungs-Manager** auf **neu** , um das Dialogfeld **OLE DB Verbindungs** -Manager konfigurieren zu starten.  
   
-6.  Klicken Sie im Dialogfeld auf **neu** starten **Verbindungs-Manager** Dialogfeld.  
+6.  Klicken Sie im Dialogfeld auf **neu** , um das Dialogfeld **Verbindungs-Manager** zu starten.  
   
-7.  Typ **(local)** oder **Zeitraum** (.) für den Namen des Servers.  
+7.  Geben Sie **(local)** oder **Period** (.) als Server Namen ein.  
   
-8.  Wählen Sie **MDS** für **auswählen oder Eingeben eines Datenbanknamens** Feld. Verwenden Sie die MDS-Datenbank als temporären Speicher für die **Transformation für Fuzzygruppierung**. Die **Fuzzygruppierung** Transformation erfordert eine Verbindung mit einer Instanz von SQL Server, um die temporären SQL Server-Tabellen zu erstellen, die der Transformationsalgorithmus benötigt werden. Sie können eine Datenbank erstellen oder eine andere vorhandene Datenbank zu diesem Zweck verwenden.  
+8.  Wählen Sie **MDS** aus, **oder geben Sie ein Feld Datenbankname ein** . Die MDS-Datenbank wird als temporärer Speicher für die **Transformation für fuzzygruppen**verwendet. Die Transformation für **Fuzzygruppierung** erfordert eine Verbindung mit einer Instanz von SQL Server um die temporären SQL Server Tabellen zu erstellen, die der Transformations Algorithmus für seine Arbeit benötigt. Sie können eine Datenbank erstellen oder eine andere vorhandene Datenbank zu diesem Zweck verwenden.  
   
-9. Klicken Sie auf **Verbindung testen** testen Sie die Verbindung, und klicken Sie auf **OK** im Meldungsfeld auf.  
+9. Klicken Sie auf **Verbindung testen** , um die Verbindung zu testen, und klicken Sie im Meldungs Feld auf **OK** .  
   
-10. In der **Verbindungs-Manager** Dialogfeld klicken Sie auf **OK**.  
+10. Klicken Sie im Dialogfeld **Verbindungs-Manager** auf **OK**.  
   
-11. Wählen Sie **(lokal). MDS** (oder **"localhost". MDS**) aus der **Liste der Datenverbindungen** , und klicken Sie auf **OK**.  
+11. Wählen Sie **(lokal) aus. MDS** (oder **localhost. MDS**) aus der **Liste der Datenverbindungen** , und klicken Sie auf **OK**.  
   
-12. In der **Transformation Editor für Fuzzygruppierung**, überprüfen Sie, ob **(lokal). MDS** oder **"localhost". MDS** ausgewählt ist, für die **OLE DB-Verbindungs-Manager**.  
+12. Bestätigen Sie im **Transformations-Editor für Fuzzygruppierung**, dass **(local) lautet. MDS** oder **localhost. MDS** ist für den **OLE DB-Verbindungs-Manager**ausgewählt.  
   
-13. Wechseln Sie zu der **Spalten** Registerkarte.  
+13. Wechseln Sie zur Registerkarte **Spalten** .  
   
-14. Aktivieren (Kontrollkästchen) **SupplierID_Output** aus der Liste der **verfügbare Eingabespalten**. Um die Transformation zu konfigurieren, wählen Sie die Eingabespalten für die Identifizierung von Duplikaten aus. Verwenden Sie in diesem Schritt zur Vereinfachung nur die SupplierID.  
+14. Aktivieren Sie das Kontrollkästchen (Kontrollkästchen) **SupplierID_Output** aus der Liste der **verfügbaren Eingabe Spalten**. Um die Transformation zu konfigurieren, wählen Sie die Eingabespalten für die Identifizierung von Duplikaten aus. Verwenden Sie in diesem Schritt zur Vereinfachung nur die SupplierID.  
   
-     ![Editor für Fuzzygruppierung Transformation](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "Transformation Editor für Fuzzygruppierung")  
+     ![Transformations-Editor für Fuzzygruppierung](../../2014/tutorials/media/et-addingfgttoidentifyduplicates-02.jpg "Transformations-Editor für Fuzzygruppierung")  
   
-15. Klicken Sie auf **OK** schließen die **Transformations-Editor für Fuzzysuche Gruppe**.  
+15. Klicken Sie auf **OK** , um den **Transformations-Editor für fuzzygruppen**  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 11: Hinzufügen der Transformation für bedingtes Teilen zu filtern, um Duplikate](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [Aufgabe 11: Hinzufügen der Transformation 'Bedingtes Teilen', um Duplikate zu filtern](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

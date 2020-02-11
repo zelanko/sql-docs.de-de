@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3fbb7cbdda657ef59491cfbb2c1651b969d04428
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63287722"
 ---
 # <a name="add-namespaces-to-queries-with-with-xmlnamespaces"></a>Hinzufügen von Namespaces zu Abfragen mit WITH XMLNAMESPACES
@@ -218,7 +218,7 @@ WHERE CatalogDescription.exist('
     ) = 1  
 ```  
   
- In der vorherigen Abfrage deklarieren die **query()** - und die **exist()** -Methode in ihrem Prolog denselben Namespace. Zum Beispiel:  
+ In der vorherigen Abfrage deklarieren die **query()** - und die **exist()** -Methode in ihrem Prolog denselben Namespace. Beispiel:  
   
 ```  
 declare namespace pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription";  
@@ -242,7 +242,7 @@ Go
   
  Eine explizite Deklaration im XQuery-Prolog überschreibt das in der WITH-Klausel definierte Namespacepräfix und den Standardelementnamespace.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Datentypmethoden](/sql/t-sql/xml/xml-data-type-methods)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](/sql/xquery/xquery-language-reference-sql-server)   
  [WITH XMLNAMESPACES &#40;Transact-SQL&#41;](/sql/t-sql/xml/with-xmlnamespaces)   

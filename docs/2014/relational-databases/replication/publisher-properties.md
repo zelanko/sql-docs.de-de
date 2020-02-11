@@ -1,5 +1,5 @@
 ---
-title: SQL Server-Replikation Verlegereigenschaften | Microsoft-Dokumentation
+title: SQL Server-Replikation Verleger Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63261975"
 ---
-# <a name="sql-server-replication-publisher-properties"></a>SQL Server-Replikation Publisher-Eigenschaften
-  Dieser Abschnitt enthält Informationen zu den Verlegereigenschaften, die auf dem Verteiler und Verleger verfügbar sind. 
+# <a name="sql-server-replication-publisher-properties"></a>SQL Server-Replikation Herausgeber Eigenschaften
+  Dieser Abschnitt enthält Informationen zu den Verleger Eigenschaften, die auf dem Verteiler und dem Verleger verfügbar sind. 
 
 ## <a name="general"></a>Allgemein  
   Die Seite **Allgemein** des Dialogfelds **Verlegereigenschaften** zeigt schreibgeschützte Informationen zu dem Verteiler und der Verteilungsdatenbank an, die vom Verleger verwendet werden. So ändern Sie den Verteiler oder die Verteilungsdatenbank für einen Verleger:  
@@ -34,7 +34,7 @@ ms.locfileid: "63261975"
 ## <a name="distributor"></a>Verteiler
   Mithilfe des Dialogfelds **Verlegereigenschaften** können Sie mit der Beziehung zwischen dem Verleger und dem Verteiler verknüpfte Eigenschaften anzeigen und ändern.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Agentverbindung mit dem Verleger**  
  Geben Sie den Kontext an, in dem die folgenden Agenten Verbindungen vom Verteiler zum Verleger herstellen können:  
   
@@ -50,32 +50,32 @@ ms.locfileid: "63261975"
   
 -   Im Dialogfeld **Veröffentlichungseigenschaften** für den Momentaufnahme-Agent und den Protokolllese-Agent.  
   
- **Sonstiges**  
+ **Verschiedenes**  
  Die Eigenschaften **Verlegertyp** und **Name der Verteilungsdatenbank** sind schreibgeschützt. Die Eigenschaft **Standardmomentaufnahmeordner** kann geändert werden. Weitere Informationen zum Momentaufnahmeordner finden Sie unter [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
 
 ## <a name="publication-databases"></a>Veröffentlichungsdatenbanken
   Mithilfe der Seite **Veröffentlichungsdatenbanken** des Dialogfelds **Verlegereigenschaften** können Benutzer mit der festen Serverrolle **sysadmin** Datenbanken für die Replikation aktivieren. Das Aktivieren der Datenbank führt nicht zur Veröffentlichung dieser Datenbank. Vielmehr ermöglicht dies allen Benutzern mit der festen Datenbankrolle **db_owner** für diese Datenbank eine oder mehrere Veröffentlichungen auf dieser Datenbank zu erstellen.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Transaktion**  
  Aktivieren Sie dieses Kontrollkästchen, um es Benutzern mit der festen Datenbankrolle **db_owner** zu ermöglichen, Momentaufnahme- oder Transaktionsveröffentlichungen in der Datenbank zu erstellen. 
   
- **Merge**  
+ **Merge** (Zusammenführen)  
  Aktivieren Sie dieses Kontrollkästchen, um es Benutzern mit der festen Datenbankrolle **db_owner** zu ermöglichen, Mergeveröffentlichungen in der Datenbank zu erstellen.  
 
 ## <a name="subscribers"></a>Abonnenten
 
-  Die Seite **Abonnenten** des Dialogfelds **Verlegereigenschaften** wird für Verleger verwendet, auf denen Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt werden. Mithilfe dieser Seite können Sie es Abonnenten ermöglichen, Daten von Veröffentlichungen auf diesem Verleger zu empfangen. Wenn Sie einem Abonnenten ermöglichen, Daten von diesem Verleger zu empfangen, werden dadurch keine Abonnements für Veröffentlichungen auf diesem Verleger erstellt. Zum Erstellen eines Abonnements müssen Sie den Assistenten für neue Abonnements verwenden.  
+  Die Seite **Abonnenten** des Dialogfelds **Verlegereigenschaften** wird für Verleger verwendet, die Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ausführen. Mithilfe dieser Seite können Sie es Abonnenten ermöglichen, Daten von Veröffentlichungen auf diesem Verleger zu empfangen. Wenn Sie einem Abonnenten ermöglichen, Daten von diesem Verleger zu empfangen, werden dadurch keine Abonnements für Veröffentlichungen auf diesem Verleger erstellt. Zum Erstellen eines Abonnements müssen Sie den Assistenten für neue Abonnements verwenden.  
   
-### <a name="options"></a>Optionen  
+### <a name="options"></a>Tastatur  
  **Abonnenten**  
  Das Eigenschaftenraster **Abonnenten** zeigt Abonnenten an, die zum Empfangen von Daten von Veröffentlichungen auf diesem Verleger aktiviert sind. Klicken Sie neben einem Abonnenten auf die Eigenschaftenschaltfläche (die Schaltfläche mit den **drei Punkten**), um zusätzliche Eigenschaften anzuzeigen und festzulegen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Klicken Sie auf **Hinzufügen** , um einen Abonnenten hinzuzufügen, und dann auf **SQL Server-Abonnenten hinzufügen** oder **Nicht-SQL Server-Abonnenten hinzufügen**.  
 
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md)   
 
   

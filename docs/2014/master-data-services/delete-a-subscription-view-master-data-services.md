@@ -14,21 +14,21 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3ae447196ebef455406202615ce4aff50d3749c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65479471"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Löschen einer Abonnementsicht (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie eine Abonnementsicht löschen, die Sie nicht mehr benötigen. Wenn Sie eine Abonnementsicht in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] löschen, wird die Sicht aus der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank entfernt.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die entsprechende Berechtigung für den Zugriff auf den Funktionsbereich **Integrationsmanagement** verfügen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-delete-a-subscription-view"></a>So löschen Sie eine Abonnementsicht  
   
@@ -38,12 +38,12 @@ ms.locfileid: "65479471"
   
 3.  Wählen Sie auf der Seite **Abonnementsichten** die Zeile mit der Sicht aus, die Sie löschen möchten.  
   
-4.  Klicken Sie auf **Abonnementsicht löschen**.  
+4.  Klicken Sie auf **Abonnement Sicht löschen**.  
   
 5.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen einer Abonnementsicht &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
- [Exportieren von Daten &#40;Master Data Services&#41;](overview-exporting-data-master-data-services.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen Sie eine Abonnement Sicht &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)   
+ [Daten &#40;Master Data Services werden exportiert&#41;](overview-exporting-data-master-data-services.md)  
   
   

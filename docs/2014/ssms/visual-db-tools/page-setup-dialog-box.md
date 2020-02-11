@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf05de13f0aada12da055f2e9c1e5a3a0db1d1df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63195018"
 ---
 # <a name="page-setup-dialog-box"></a>Seite einrichten (Dialogfeld)
   Mithilfe der Optionen im Dialogfeld **Seite einrichten** können Sie den Entwurf der Seite anpassen. Die Verfügbarkeit einiger Optionen hängt von den Sprachen ab, die installiert und für die Bearbeitung aktiviert sind.  
   
-## <a name="paper"></a>Papier  
+## <a name="paper"></a>Dokument  
  **Größe**  
  Wählen Sie in der Liste eine Größe aus.  
   

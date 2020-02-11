@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482540"
 ---
 # <a name="models-master-data-services"></a>Modelle (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "65482540"
   
  Dieses Bild zeigt die Beziehung zwischen den Objekten in einem Modell an.  
   
- ![Objekte in einem Master Data Services-Modell](../../2014/master-data-services/media/mds-conc-model-circles.gif "Objects in a Master Data Services Model")  
+ ![Objekte in einem Master Data Services-Modell](../../2014/master-data-services/media/mds-conc-model-circles.gif "Objekte in einem Master Data Services-Modell")  
   
 > [!NOTE]  
 >  Abgeleitete Hierarchien sind ebenfalls Modellobjekte, sie werden jedoch nicht im Bild angezeigt. Abgeleitete Hierarchien werden von den domänenbasierten Attributbeziehungen abgeleitet, die zwischen Entitäten vorhanden sind. Weitere Informationen finden Sie unter [Abgeleitete Hierarchien &#40;Master Data Services&#41;](derived-hierarchies-master-data-services.md).  
@@ -56,7 +56,7 @@ ms.locfileid: "65482540"
 ## <a name="model-example"></a>Modellbeispiel  
  Im folgenden Beispiel gruppieren die Objekte im Produktmodell logisch produktbezogene Daten.  
   
- ![Beispiel für Produktmodellmasterdaten](../../2014/master-data-services/media/mds-conc-model.gif "Product Model Master Data Example")  
+ ![Beispiel für Produktmodellmasterdaten](../../2014/master-data-services/media/mds-conc-model.gif "Beispiel für Produktmodellmasterdaten")  
   
  Weitere allgemeine Modelle:  
   
@@ -70,9 +70,9 @@ ms.locfileid: "65482540"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie ein Modell, um die Masterdaten zu organisieren.|[Erstellen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
-|Ändern Sie den Namen eines vorhandenen Modells.|[Ändern eines Modellnamens &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
-|Löschen Sie ein vorhandenes Modell.|[Löschen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
+|Erstellen Sie ein Modell, um die Masterdaten zu organisieren.|[Erstellen Sie ein Modell &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Ändern Sie den Namen eines vorhandenen Modells.|[Ändern eines Modell namens &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
+|Löschen Sie ein vorhandenes Modell.|[&#40;Master Data Services eines Modells löschen&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
@@ -84,6 +84,6 @@ ms.locfileid: "65482540"
   
 -   [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

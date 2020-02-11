@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ea11c177533a6101bb0654ca0450e85ea855d9a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150817"
 ---
 # <a name="plan-guides"></a>Planhinweislisten
@@ -125,7 +125,7 @@ sp_create_plan_guide
   
  Bei SQL- und TEMPLATE-basierten Planhinweislisten vergleicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Werte der Argumente @module_or_batch und @params mit einer Abfrage, indem die beiden Werte Zeichen für Zeichen verglichen werden. Das bedeutet, dass Sie den Text genau so bereitstellen müssen, wie er von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im tatsächlichen Batch empfangen wird.  
   
- Wenn @type = 'SQL' und @module_or_batch auf NULL gesetzt wird, wird der Wert von @module_or_batch auf den Wert von @stmt festgelegt. Dies bedeutet, dass der Wert für *statement_text* Zeichen für Zeichen in exakt dem gleichen Format bereitgestellt werden muss, in dem er an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]übermittelt wird. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
+ Wenn @type = ' SQL ' und @module_or_batch auf NULL festgelegt ist, wird der @module_or_batch Wert von auf den Wert von @stmtfestgelegt. Dies bedeutet, dass der Wert für *statement_text* im gleichen Format, Zeichen für Zeichen, bereitgestellt werden muss, wie er an über [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mittelt wird. Es findet keine interne Konvertierung zur Vereinfachung dieses Abgleichs statt.  
   
  Wenn für eine Anweisung sowohl eine reguläre Planhinweisliste (SQL oder OBJECT) als auch eine TEMPLATE-Planhinweisliste gelten können, wird nur die reguläre Planhinweisliste verwendet.  
   
@@ -145,14 +145,14 @@ sp_create_plan_guide
 |Beschreibt, wie ein fester Abfrageplan in eine Planhinweisliste eingeschlossen wird.|[Anwenden eines festen Abfrageplans auf eine Planhinweisliste](apply-a-fixed-query-plan-to-a-plan-guide.md)|  
 |Beschreibt, wie Abfragehinweise in einer Planhinweisliste angegeben werden.|[Anfügen von Abfragehinweisen an eine Planhinweisliste](attach-query-hints-to-a-plan-guide.md)|  
 |Beschreibt, wie Planhinweislisten-Eigenschaften angezeigt werden.|[Anzeigen der Eigenschaften der Planhinweisliste](view-plan-guide-properties.md)|  
-|Beschreibt, wie SQL Server Profiler zum Erstellen und Testen von Testplanhinweislisten verwendet wird.|[Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten](plan-guides.md)|  
+|Beschreibt, wie SQL Server Profiler zum Erstellen und Testen von Testplanhinweislisten verwendet wird.|[Verwenden von SQL Server Profiler zum Erstellen und Testen von Plan Hinweis Listen](plan-guides.md)|  
 |Beschreibt, wie Planhinweislisten überprüft werden.|[Überprüfen von Planhinweislisten nach einem Upgrade](validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a>Siehe auch  
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
- [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
- [sp_control_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
- [sys.plan_guides &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
- [sys.fn_validate_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
+## <a name="see-also"></a>Weitere Informationen  
+ [sp_create_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+ [sp_create_plan_guide_from_handle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)   
+ [sp_control_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql)   
+ [sys. plan_guides &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-plan-guides-transact-sql)   
+ [sys. fn_validate_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/sys-fn-validate-plan-guide-transact-sql)  
   
   

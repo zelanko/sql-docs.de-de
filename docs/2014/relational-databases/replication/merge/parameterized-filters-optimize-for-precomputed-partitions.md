@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250550"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen
@@ -26,11 +26,11 @@ ms.locfileid: "63250550"
   
  Wenn ein Abonnement eine Synchronisierung mit einem Verleger ausführt, muss der Verleger die Filter des Abonnenten auswerten. Dabei werden die Zeilen ermittelt, die zu dieser Abonnentenpartition oder zum Dataset gehören. Dieses Ermitteln der Partitionsmitgliedschaft von Änderungen auf dem Verleger für jeden Abonnenten, der ein gefiltertes Dataset erhält, wird *Partitionsauswertung*genannt. Ohne vorausberechnete Partitionen muss die Partitionsauswertung für jede Änderung an einer gefilterten Spalte ausgeführt werden, die auf dem Verleger vorgenommen wurde, seit der Merge-Agent zuletzt für einen bestimmten Abonnenten ausgeführt wurde. Außerdem muss dieser Vorgang dann für jeden Abonnenten wiederholt werden, der eine Synchronisierung mit dem Verleger ausführt.  
   
- Wenn der Verleger und der Abonnent jedoch mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt werden und vorausberechnete Partitionen verwenden, wird die Partitionsmitgliedschaft für alle Änderungen auf dem Verleger im Voraus berechnet und persistent gespeichert, während die Änderungen vorgenommen werden. Als Folge kann ein Abonnent beim Synchronisieren mit dem Verleger sofort mit dem Download von Änderungen beginnen, die seine Partition betreffen, ohne die Partitionsauswertung durchlaufen zu müssen. Das kann zu einer erheblichen Verbesserung der Leistung führen, wenn eine Veröffentlichung eine große Zahl von Änderungen, Abonnenten oder Artikeln aufweist.  
+ Wenn der Verleger und der Abonnent jedoch unter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder einer höheren Version ausgeführt werden und Sie Voraus berechnete Partitionen verwenden, wird die Partitions Mitgliedschaft für alle Änderungen auf dem Verleger voraus berechnet und zum Zeitpunkt der Änderungen beibehalten. Als Folge kann ein Abonnent beim Synchronisieren mit dem Verleger sofort mit dem Download von Änderungen beginnen, die seine Partition betreffen, ohne die Partitionsauswertung durchlaufen zu müssen. Das kann zu einer erheblichen Verbesserung der Leistung führen, wenn eine Veröffentlichung eine große Zahl von Änderungen, Abonnenten oder Artikeln aufweist.  
   
  Neben dem Verwenden von vordefinierten Partitionen generieren Sie vorab Momentaufnahmen und/oder ermöglichen Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim ersten Synchronisieren. Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
- **So verwenden Sie vorausberechnete Partitionen**  
+ **So verwenden Sie Voraus berechnete Partitionen**  
   
  Vorausberechnete Partitionen werden standardmäßig für alle neuen und vorhandenen Veröffentlichungen aktiviert, die den oben beschriebenen Richtlinien folgen. Die Einstellung kann mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder programmgesteuert geändert werden. Weitere Informationen finden Sie unter [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250550"
   
 ### <a name="database-collation"></a>Datenbanksortierung  
   
--   Wenn vorausberechnete Partitionen verwendet werden, wird stets die Sortierung der Datenbank zu Vergleichen herangezogen und nicht die Sortierung der Tabelle oder Spalte. Nehmen Sie das folgende Szenario als Beispiel:  
+-   Wenn vorausberechnete Partitionen verwendet werden, wird stets die Sortierung der Datenbank zu Vergleichen herangezogen und nicht die Sortierung der Tabelle oder Spalte. Stellen Sie sich folgendes Szenario vor:  
   
     -   Eine Datenbank mit einer Sortierung, die Groß- und Kleinschreibung unterscheidet, enthält eine Tabelle mit einer Sortierung ohne Unterscheidung der Groß- und Kleinschreibung.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63250550"
 ## <a name="performance-of-precomputed-partitions"></a>Leistung vorausberechneter Partitionen  
  Bei vorausberechneten Partitionen besteht ein geringfügiger Leistungsabfall, wenn Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Großteil der Zeit bei der Mergeverarbeitung wird jedoch für die Auswertung von Partitionen und den Download von Änderungen vom Verleger zum Abonnenten aufgewendet. Deshalb kann der Reingewinn noch immer erheblich sein. Der Leistungsvorteil variiert je nach Anzahl der Abonnenten, die gleichzeitig eine Synchronisierung ausführen, und der Anzahl von Updates pro Synchronisierung, bei denen Zeilen zwischen Partitionen verschoben werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Parametrisierte Zeilenfilter](parameterized-filters-parameterized-row-filters.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Parametrisierte Zeilen Filter](parameterized-filters-parameterized-row-filters.md)  
   
   

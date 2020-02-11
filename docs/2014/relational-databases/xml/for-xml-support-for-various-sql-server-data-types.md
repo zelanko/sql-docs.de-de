@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 478c7e49fcdef335a65e0574eeaa80843f5b1c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205064"
 ---
 # <a name="for-xml-support-for-various-sql-server-data-types"></a>FOR XML-Unterstützung für verschiedene SQL Server-Datentypen
@@ -25,7 +25,7 @@ ms.locfileid: "63205064"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[FOR XML-Unterstützung für den xml-Datentyp](for-xml-support-for-the-xml-data-type.md)|Beschreibt, wie FOR XML in Verbindung mit dem **XML** -Datentyp funktioniert.|  
 |[FOR XML-Unterstützung für Zeichenfolgen-Datentypen](for-xml-support-for-string-data-types.md)|Beschreibt, wie FOR XML in Verbindung mit String-Datentypen wie beispielsweise **varchar** und **nvarchar**funktioniert.|  

@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbe1188773d0770ff345cd54ea47e03a3c05555f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65482712"
 ---
 # <a name="load-data-from-mds-into-excel"></a>Laden von Daten aus MDS in Excel
-  In der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], müssen Sie Daten aus dem MDS-Repository laden, um damit zu arbeiten.  
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]In müssen Sie Daten aus dem MDS-Repository laden, um damit zu [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]arbeiten.  
   
- Wenn Sie das Dataset vor dem Laden filtern möchten, finden Sie unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41; ](filter-data-before-exporting-mds-add-in-for-excel.md) stattdessen.  
+ Wenn Sie das Dataset vor dem Laden filtern möchten, finden Sie weitere Informationen unter [Filtern von Daten vor dem Laden &#40;MDS-Add-in für Excel&#41;](filter-data-before-exporting-mds-add-in-for-excel.md) .  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen.  
@@ -41,17 +41,17 @@ ms.locfileid: "65482712"
   
     > [!NOTE]  
     >  -   Nur die erste eine Million von Elementen wird in Excel geladen. Klicken Sie zum Filtern der Liste vor dem Laden im Menüband in der Gruppe **Verbinden und Laden** auf **Filtern**.  
-    > -   In Spalten, die beschränkte Listen (domänenbasierte Attribute) sind, werden nur die ersten 25.000 Werte geladen. Sie können diese Zahl in der Eigenschaft "MaximumDbaEntitySize" der Datei "excelusersettings.config" ändern, die sich auf dem Computer befindet, auf dem Excel installiert ist. Diese Datei befindet sich im C:\Users\\< Benutzer\>\AppData\Local\Microsoft\Microsoft SQL Server\120\MasterDataServices\\.  
+    > -   In Spalten, die beschränkte Listen (domänenbasierte Attribute) sind, werden nur die ersten 25.000 Werte geladen. Sie können diese Zahl in der Eigenschaft "MaximumDbaEntitySize" der Datei "excelusersettings.config" ändern, die sich auf dem Computer befindet, auf dem Excel installiert ist. Diese Datei befindet sich im Ordner c:\Users\\<\>User \appdata\local\microsoft\microsoft SQL server\120\masterdataservices\\.  
   
     > [!NOTE]  
     >  Es wird ein Fehler über unzureichenden Arbeitsspeicher angezeigt, wenn Sie textgetrennte Daten mithilfe des Add-Ins für Microsoft Excel in einer 32-Bit-Version von Excel laden und die Eigenschaften **Cell Count to Load** und **Cell Count to Publish** auf das Maximum von „1000“ festlegen. Sie müssen die 64-Bit-Version von Excel verwenden, um die Maximaleinstellungen für **Cell Count to Load** und **Cell Count to Publish**verwenden zu können.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Veröffentlichen von Daten aus Excel nach MDS &#40;MDS-Add-in für Excel&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
+ [Daten aus Excel in MDS &#40;MDS-Add-in für Excel veröffentlichen&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Laden von Daten &#40;MDS-Add-in für Excel&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Filtern &#40;Dialogfeld, MDS-Add-In für Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten &#40;MDS-Add-in für Excel werden geladen&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Dialog Feld "Filter" &#40;MDS-Add-in für Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
  [Veröffentlichen von Daten &#40;MDS-Add-in für Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

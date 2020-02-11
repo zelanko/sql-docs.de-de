@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9c0534bf3a12aa81a9fc84d0e2c4f82a189748a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150752"
 ---
 # <a name="monitor-sql-server-components"></a>Überwachen von SQL Server-Komponenten
@@ -82,9 +82,10 @@ ms.locfileid: "63150752"
   
 -   Distributed Replay Utility  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Aktivitätsmonitor  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Aktivitäts Monitor  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Grafischer Showplan  
+-   
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Grafischer Showplan  
   
 -   Gespeicherte Prozeduren  
   
@@ -120,11 +121,13 @@ ms.locfileid: "63150752"
   
 3.  Speichern aufgezeichneter Ereignisdaten.  
   
-     Durch das Speichern aufgezeichneter Daten können diese später analysiert oder sogar mit dem Distributed Replay Utility oder [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]wiedergegeben werden. Aufgezeichnete Ereignisdaten werden in einer Datei gespeichert, die von dem Tool, das die Datei ursprünglich erstellt hat, zur späteren Analyse erneut geladen werden kann. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ermöglicht das Speichern von Ereignisdaten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle. Das Speichern aufgezeichneter Ereignisdaten ist wichtig, wenn Sie eine Leistungsbasislinie erstellen. Die Daten der Leistungsbasislinie werden gespeichert und für den Vergleich mit aktuell aufgezeichneten Ereignisdaten verwendet, um zu ermitteln, ob die Leistung optimal ist. Weitere Informationen finden Sie unter [Vorlagen und Berechtigungen in SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
+     Durch das Speichern aufgezeichneter Daten können diese später analysiert oder sogar mit dem Distributed Replay Utility oder [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]wiedergegeben werden. Aufgezeichnete Ereignisdaten werden in einer Datei gespeichert, die von dem Tool, das die Datei ursprünglich erstellt hat, zur späteren Analyse erneut geladen werden kann. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ermöglicht das Speichern von Ereignisdaten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle. Das Speichern aufgezeichneter Ereignisdaten ist wichtig, wenn Sie eine Leistungsbasislinie erstellen. Die Daten der Leistungsbasislinie werden gespeichert und für den Vergleich mit aktuell aufgezeichneten Ereignisdaten verwendet, um zu ermitteln, ob die Leistung optimal ist. Weitere Informationen finden Sie unter [Vorlagen und Berechtigungen in SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md).  
   
 4.  Erstellen von Ablaufverfolgungsvorlagen, die die zum Aufzeichnen der Ereignisse angegebenen Einstellungen enthalten.  
   
-     Ablaufverfolgungsvorlagen enthalten Spezifikationen zu den Ereignissen selbst, Ereignisdaten sowie Filter, die zum Aufzeichnen von Daten verwendet werden. Diese Vorlagen können zur späteren Überwachung einer bestimmten Gruppe von Ereignissen verwendet werden, ohne die Ereignisse, Ereignisdaten und Filter erneut zu definieren. Wenn Sie z. B. die Anzahl der Deadlocks und die Benutzer, die an diesen Deadlocks beteiligt sind, häufig überwachen möchten, können Sie eine Vorlage erstellen, die diese Ereignisse, Ereignisdaten und Ereignisfilter definiert. Speichern Sie die Vorlage, und wenden Sie den Filter erneut an, wenn Sie die Deadlocks das nächste Mal überwachen möchten. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verwendet für diesen Zweck Ablaufverfolgungsvorlagen. Weitere Informationen finden Sie unter [Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) und [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
+     Ablaufverfolgungsvorlagen enthalten Spezifikationen zu den Ereignissen selbst, Ereignisdaten sowie Filter, die zum Aufzeichnen von Daten verwendet werden. Diese Vorlagen können zur späteren Überwachung einer bestimmten Gruppe von Ereignissen verwendet werden, ohne die Ereignisse, Ereignisdaten und Filter erneut zu definieren. Wenn Sie z. B. die Anzahl der Deadlocks und die Benutzer, die an diesen Deadlocks beteiligt sind, häufig überwachen möchten, können Sie eine Vorlage erstellen, die diese Ereignisse, Ereignisdaten und Ereignisfilter definiert. Speichern Sie die Vorlage, und wenden Sie den Filter erneut an, wenn Sie die Deadlocks das nächste Mal überwachen möchten. 
+  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] verwendet für diesen Zweck Ablaufverfolgungsvorlagen. Weitere Informationen finden Sie unter [Festlegen der Standardeinstellungen für Ablaufverfolgungsdefinitionen &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/set-trace-definition-defaults-sql-server-profiler.md) und [Erstellen einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md).  
   
 5.  Analysieren aufgezeichneter Ereignisdaten.  
   

@@ -16,22 +16,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd51a3e4c139c52d6510140324ae042c653377b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250317"
 ---
 # <a name="identity-and-access-control-replication"></a>Identität und Zugriffssteuerung (Replikation)
-  Als Authentifizierung wird der Vorgang bezeichnet, bei dem eine Entität (in diesem Kontext normalerweise ein Computer) überprüft, dass eine andere Entität, die auch als *Prinzipal*bezeichnet wird (normalerweise ein anderer Computer oder Benutzer), tatsächlich das ist, was sie vorgibt. Als Autorisierung wird der Vorgang bezeichnet, bei dem einem authentifizierten Prinzipal Zugriff auf Ressourcen gewährt wird, beispielsweise auf eine Datei in einem Dateisystem oder eine Tabelle in einer Datenbank.  
+  Die Authentifizierung ist der Prozess, bei dem eine Entität (normalerweise ein Computer in diesem Kontext) überprüft, ob eine andere Entität, die auch als *Prinzipal*bezeichnet wird (normalerweise ein anderer Computer oder Benutzer), die bzw. die Sie vorgibt. Als Autorisierung wird der Vorgang bezeichnet, bei dem einem authentifizierten Prinzipal Zugriff auf Ressourcen gewährt wird, beispielsweise auf eine Datei in einem Dateisystem oder eine Tabelle in einer Datenbank.  
   
  Für die Replikationssicherheit wird mithilfe von Authentifizierung und Autorisierung der Zugriff auf replizierte Datenbankobjekte sowie auf die Computer und Agents gesteuert, die in die Replikationsverarbeitung involviert sind. Hierzu werden drei Mechanismen herangezogen:  
   
--   Agentsicherheit:  Das Sicherheitsmodell des Replikations-Agents ermöglicht die präzise Steuerung der Konten, unter denen Replikations-Agents ausgeführt werden und Verbindungen herstellen. Ausführliche Informationen zum agentbezogenen Sicherheitsmodell finden Sie unter [Replication Agent Security Model](replication-agent-security-model.md). Informationen zum Festlegen von Anmeldungen und Kennwörtern für Agents finden Sie unter [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
+-   Agentsicherheit: das Sicherheitsmodell des Replikations-Agents ermöglicht die präzise Steuerung der Konten, unter denen Replikations-Agents ausgeführt werden und Verbindungen herstellen. Ausführliche Informationen zum agentbezogenen Sicherheitsmodell finden Sie unter [Replication Agent Security Model](replication-agent-security-model.md). Informationen zum Festlegen von Anmeldungen und Kennwörtern für Agents finden Sie unter [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  
   
--   Administratorrollen:  Stellen Sie sicher, dass für Replikationsinstallation, -wartung und -verarbeitung die richtigen Server- und Datenbankrollen verwendet werden. Weitere Informationen finden Sie unter [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
+-   Verwaltungs Rollen: Stellen Sie sicher, dass die richtigen Server-und Daten bankrollen für die Replikations Einrichtung, Wartung und Verarbeitung verwendet werden. Weitere Informationen finden Sie unter [Security Role Requirements for Replication](security-role-requirements-for-replication.md).  
   
--   Der veröffentlichungszugriffsliste (PAL): Gewähren Sie den Zugriff auf Veröffentlichungen über die PAL. Die PAL funktioniert ähnlich wie eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Zugriffssteuerungsliste. Wenn ein Abonnent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, werden die vom Agent übermittelten Authentifizierungsinformationen anhand der PAL überprüft. Weitere Informationen und bewährte Methoden hinsichtlich der PAL finden Sie unter [Sichern des Verlegers](secure-the-publisher.md).  
+-   Die Veröffentlichungs Zugriffsliste (Publication Access List, PAL): erteilen Sie den Zugriff auf Veröffentlichungen über die PAL. Die PAL funktioniert ähnlich wie eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Zugriffssteuerungsliste. Wenn ein Abonnent eine Verbindung mit dem Verleger oder Verteiler herstellt und den Zugriff auf eine Veröffentlichung anfordert, werden die vom Agent übermittelten Authentifizierungsinformationen anhand der PAL überprüft. Weitere Informationen und bewährte Methoden hinsichtlich der PAL finden Sie unter [Sichern des Verlegers](secure-the-publisher.md).  
   
 ## <a name="filtering-published-data"></a>Filtern von veröffentlichten Daten  
  Neben der Verwendung von Authentifizierung und Autorisierung zur Steuerung des Zugriffs auf replizierte Daten und Objekte bietet die Replikation zwei Optionen, mit denen gesteuert werden kann, welche Daten auf einem Abonnenten zur Verfügung stehen: die Filterung von Spalten und die Filterung von Zeilen. Weitere Informationen zur Filterung finden Sie unter [Filtern von veröffentlichten Daten](../publish/filter-published-data.md).  
@@ -41,13 +41,13 @@ ms.locfileid: "63250317"
  Durch das Filtern von veröffentlichten Daten können Sie den Zugriff auf Daten einschränken und die Daten angeben, die auf dem Abonnenten zur Verfügung stehen. Sie können beispielsweise die **Customer** -Tabelle so filtern, dass Geschäftspartner nur die Informationen zu den Kunden erhalten, deren **ShareInfo** -Spalte den Wert "yes" aufweist. Im Fall von Mergereplikationen gelten besondere Sicherheitsüberlegungen, wenn Sie einen parametrisierten Filter verwenden, der HOST_NAME() einschließt. Weitere Informationen finden Sie im Abschnitt über das Filtern mit HOST_NAME() unter [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
 
 ## <a name="manage-logins-and-passwords-in-replication"></a>Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation
-  Geben Sie bei der Replikationskonfiguration Anmeldeinformationen und Kennwörter für Replikations-Agents an. Nach der Replikationskonfiguration können Sie die Anmeldenamen und -kennwörter ändern. Weitere Informationen finden Sie unter [View and Modify Replication Security Settings](view-and-modify-replication-security-settings.md). Wenn Sie das Kennwort für ein von einem Replikations-Agent verwendetes Konto ändern, führen Sie [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql) aus.  
+  Geben Sie bei der Replikationskonfiguration Anmeldeinformationen und Kennwörter für Replikations-Agents an. Nach der Replikationskonfiguration können Sie die Anmeldenamen und -kennwörter ändern. Weitere Informationen finden Sie unter [anzeigen und Ändern von Replikations Sicherheitseinstellungen](view-and-modify-replication-security-settings.md). Wenn Sie das Kennwort für ein von einem Replikations-Agent verwendetes Konto ändern, führen Sie [sp_changereplicationserverpasswords &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql) aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Sicherheitsmodell des Replikations-Agents](replication-agent-security-model.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Replikations-agentsicherheitsmodell](replication-agent-security-model.md)   
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicherheit von SQL Server-Replikation](view-and-modify-replication-security-settings.md)   
- [Replikation Bedrohungen und Sicherheitsrisiken](threat-and-vulnerability-mitigation-replication.md)   
+ [SQL Server-Replikation Sicherheit](view-and-modify-replication-security-settings.md)   
+ [Entschärfung von Bedrohungen und Sicherheitsrisiken](threat-and-vulnerability-mitigation-replication.md)   
 
   
   

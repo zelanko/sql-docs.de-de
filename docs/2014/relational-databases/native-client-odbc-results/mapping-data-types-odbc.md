@@ -1,5 +1,5 @@
 ---
-title: Zuordnen von Datentypen (ODBC) | Microsoft-Dokumentation
+title: Mapping-Datentypen (ODBC) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,35 +20,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bcca4bc6161526d1bd78e55bc9452f2d7d9d69d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63200001"
 ---
 # <a name="mapping-data-types-odbc"></a>Zuordnen von Datentypen (ODBC)
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber ordnet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL-Datentypen in ODBC-SQL-Datentypen. In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SQL-Datentypen sowie die ODBC-SQL-Datentypen, denen sie zugeordnet werden, erläutert. Außerdem werden die ODBC-SQL-Datentypen und die zugehörigen ODBC-C-Datentypen sowie die unterstützten und standardmäßigen Konvertierungen erklärt.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Treiber ordnet SQL-Datentypen ODBC-SQL-Datentypen zu. In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SQL-Datentypen sowie die ODBC-SQL-Datentypen, denen sie zugeordnet werden, erläutert. Außerdem werden die ODBC-SQL-Datentypen und die zugehörigen ODBC-C-Datentypen sowie die unterstützten und standardmäßigen Konvertierungen erklärt.  
   
 > [!NOTE]  
->  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zeitstempel** -Datentyp wird dem SQL_BINARY- oder SQL_VARBINARY ODBC-Datentyp zugeordnet, da die Werte in **Zeitstempel** Spalten sind nicht **"DateTime"** Werte aber **binary(8)** oder **varbinary(8)** Werte, die die Sequenz der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Aktivität in der Zeile. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber einen SQL_C_WCHAR-Wert (Unicode) erkennt, der eine ungerade Anzahl von Bytes enthält, wird das letzte ungerade Byte abgeschnitten.  
+>  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zeitstempel** -Datentyp wird dem SQL_BINARY oder SQL_VARBINARY ODBC-Datentyp zugeordnet, da die Werte in **Zeitstempel** -Spalten keine **DateTime** -Werte sind, sondern **binäre (8)** oder **varbinary (8)** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Werte, die die Sequenz der Aktivität in der Zeile angeben. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber einen SQL_C_WCHAR-Wert (Unicode) erkennt, der eine ungerade Anzahl von Bytes enthält, wird das letzte ungerade Byte abgeschnitten.  
   
-## <a name="dealing-with-sqlvariant-data-type-in-odbc"></a>Arbeiten mit dem 'sql_variant'-Datentyp in ODBC  
- Die **Sql_variant** -Datentypspalte darf keines der Datentypen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] außer großer Objekte (LOBs), z. B. **Text**, **Ntext**, und  **Image**. Beispielsweise kann die Spalte enthalten **Smallint** Werte für einige Zeilen **"float"** Werte für die anderen Zeilen hat und **Char/Nchar** Werte im weiteren Verlauf.  
+## <a name="dealing-with-sql_variant-data-type-in-odbc"></a>Arbeiten mit dem 'sql_variant'-Datentyp in ODBC  
+ Die **sql_variant** -Datentyp Spalte kann beliebige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datentypen in mit Ausnahme von großen Objekten (LOB) enthalten, z. b. **Text**, **ntext**und **Image**. Beispielsweise könnte die Spalte **smallint** -Werte für einige Zeilen, **float** -Werte für andere Zeilen und **char/nchar-** Werte im Rest enthalten.  
   
- Die **Sql_variant** Datentyp ähnelt der **Variant** -Datentyp in Microsoft Visual Basic??.  
+ Der **sql_variant** -Datentyp ähnelt dem **Variant** -Datentyp in Microsoft Visual Basic??.  
   
 ### <a name="retrieving-data-from-the-server"></a>Abrufen von Daten vom Server  
- ODBC verfügt nicht über ein Konzept von variant-Typen, beschränken die Verwendung der **Sql_variant** -Datentyp mit einer ODBC-Treiber in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wenn die Bindung angegeben wird, die **Sql_variant** Datentyp muss an eines der dokumentierten ODBC-Datentypen gebunden werden. **SQL_CA_SS_VARIANT_TYPE**, ein neues Attribut für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber gibt den Datentyp einer Instanz zurück. die **Sql_variant** Spalte für den Benutzer.  
+ ODBC weist kein Konzept von Variant-Typen auf, was die Verwendung des **sql_variant** -Datentyps mit einem ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Treiber in einschränkt. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in eine Bindung angegeben ist, muss der **sql_variant** Datentyp an einen der dokumentierten ODBC-Datentypen gebunden werden. **SQL_CA_SS_VARIANT_TYPE**, ein für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber spezifisches Attribut, gibt den Datentyp einer Instanz in der **sql_variant** Spalte an den Benutzer zurück.  
   
- Wenn kein binden festgelegt ist, die [SQLGetData](../native-client-odbc-api/sqlgetdata.md) Funktion kann verwendet werden, um zu bestimmen, den Datentyp einer Instanz in der **Sql_variant** Spalte.  
+ Wenn keine Bindung angegeben wird, kann die [SQLGetData](../native-client-odbc-api/sqlgetdata.md) -Funktion verwendet werden, um den Datentyp einer Instanz in der **sql_variant** Spalte zu bestimmen.  
   
- Zum Abrufen **Sql_variant** Daten gehen Sie folgendermaßen vor.  
+ Führen Sie die folgenden Schritte aus, um **sql_variant** Daten abzurufen.  
   
-1.  Rufen Sie **SQLFetch** zum Positionieren auf die Zeile abgerufen.  
+1.  Rufen Sie **SQLFetch** auf, um zu der abgerufenen Zeile zu positionieren.  
   
-2.  Rufen Sie **SQLGetData**, und legen Sie SQL_C_BINARY für den Typ und für die Data 0. Dies zwingt den Treiber zum Lesen der **Sql_variant** Header. Der Header enthält den Datentyp dieser Instanz in der **Sql_variant** Spalte. **SQLGetData** gibt die Größe (in Byte) des Werts zurück.  
+2.  Aufrufen von **SQLGetData**, angeben von SQL_C_BINARY für den-Typ und 0 für die Daten Länge. Dadurch wird der Treiber gezwungen, den **sql_variant** -Header zu lesen. Der-Header gibt den Datentyp dieser Instanz in der **sql_variant** Spalte an. **SQLGetData** gibt die Größe (in Bytes) des Werts zurück.  
   
-3.  Rufen Sie [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) durch Angabe **SQL_CA_SS_VARIANT_TYPE** als Attributwert. Diese Funktion gibt die C-Datentyp der Instanz in der **Sql_variant** Spalte an den Client.  
+3.  Führen Sie [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md) aus, indem Sie **SQL_CA_SS_VARIANT_TYPE** als Attribut Wert angeben. Diese Funktion gibt den C-Datentyp der Instanz in der **sql_variant** Spalte an den Client zurück.  
   
  Im folgenden Codesegment werden die vorhergehenden Schritte gezeigt.  
   
@@ -83,12 +83,12 @@ while ((retcode = SQLFetch (hstmt))==SQL_SUCCESS)
 }  
 ```  
   
- Wenn der Benutzer die Bindung mit erstellt [SQLBindCol](../native-client-odbc-api/sqlbindcol.md), liest der Treiber die Metadaten und Daten. Der Treiber konvertiert die Daten dann in den entsprechenden in der Bindung angegebenen ODBC-Typ.  
+ Wenn der Benutzer die Bindung mithilfe von [SQLBindCol](../native-client-odbc-api/sqlbindcol.md)erstellt, liest der Treiber die Metadaten und die Daten. Der Treiber konvertiert die Daten dann in den entsprechenden in der Bindung angegebenen ODBC-Typ.  
   
 ### <a name="sending-data-to-the-server"></a>Senden von Daten an den Server  
- **SQL_SS_VARIANT**, einen neuen Datentyp für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber wird für Datenübertragungen an verwendet eine **Sql_variant** Spalte. Beim Senden von Daten an den Server mit Parametern (z. B. INSERT INTO TableName VALUES (?,?)), [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) wird verwendet, um die Parameterinformationen, einschließlich der C-Typ und dem entsprechenden geben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Typ. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber konvertiert den C-Datentyp in einen entsprechenden **Sql_variant** Untertypen.  
+ **SQL_SS_VARIANT**ein neuer Datentyp speziell für den Native [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client-ODBC-Treiber verwendet wird, wird für Daten verwendet, die an eine **sql_variant** Spalte gesendet werden. Beim Senden von Daten an den Server mit Parametern (z. b. Insert Into TableName Values (?,?)) wird [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) verwendet, um die Parameterinformationen anzugeben, einschließlich des C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Typs und des entsprechenden Typs. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber konvertiert den C-Datentyp in einen der entsprechenden **sql_variant** Untertypen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Verarbeiten von Ergebnissen &#40;ODBC&#41;](processing-results-odbc.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verarbeitungsergebnisse &#40;ODBC-&#41;](processing-results-odbc.md)  
   
   

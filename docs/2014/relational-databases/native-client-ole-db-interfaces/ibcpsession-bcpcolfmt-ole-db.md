@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: BCPColFmt (OLE DB) | Microsoft-Dokumentation'
+title: IBCPSession::BCPColFmt (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63240264"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -40,7 +40,7 @@ intcbUserDataTerm,
 DBORDINALidxServerCol);  
 ```  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Die **BCPColFmt**-Methode wird verwendet, um eine Bindung zwischen BCP-Datendateifeldern und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalten zu erstellen. Sie nimmt Länge, Typ, Abschlusszeichen und Präfixlänge einer Spalte als Parameter auf und legt jede dieser Eigenschaften für einzelne Felder fest.  
   
  Wenn der Benutzer die interaktive Methode wählt, wird diese Methode zweimal aufgerufen: einmal zum Festlegen des Spaltenformats den Standardwerten entsprechend (die sich nach dem Typ der Serverspalte richten) und einmal, um das Format für jede Spalte dem Spaltentyp der Wahl des Clients entsprechend festzulegen, der im interaktiven Modus ausgewählt wurde.  
@@ -64,18 +64,18 @@ DBORDINALidxServerCol);
  Jeder Aufruf von **BCPColFmt** gibt das Format für ein Benutzerdateifeld an. Um die Standardeinstellungen für drei Felder in einer aus fünf Feldern bestehenden Benutzerdatendatei zu ändern, rufen Sie zuerst `BCPColumns(5)`auf und anschließend fünf Mal **BCPColFmt** , wobei mit drei dieser Aufrufe Ihr bentuzerdefiniertes Format festgelegt wird. Legen Sie für die restlichen zwei Aufrufe *eUserDataType* auf BCP_TYPE_DEFAULT und *cbIndicator*, *cbUserData*und *cbUserDataTerm* auf 0, BCP_VARIABLE_LENGTH bzw. 0 fest. Mit diesem Verfahren werden alle fünf Spalten kopiert, drei mit dem benutzerdefinierten Format und zwei mit dem Standardformat.  
   
 > [!NOTE]  
->  Die [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) -Methode muss vor einem Aufruf von **BCPColFmt**aufgerufen werden. Sie müssen **BCPColFmt** einmal für jede Spalte in der Benutzerdatei aufrufen. Wird **BCPColFmt** mehr als einmal für eine Benutzerdateispalte aufgerufen, tritt ein Fehler auf.  
+>  Die [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md)-Methode muss vor einem Aufruf von **BCPColFmt** aufgerufen werden. Sie müssen **BCPColFmt** einmal für jede Spalte in der Benutzerdatei aufrufen. Wird **BCPColFmt** mehr als einmal für eine Benutzerdateispalte aufgerufen, tritt ein Fehler auf.  
   
  Sie müssen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem Sie den idxServerCol-Parameter auf 0 festlegen. Um ein Feld zu überspringen, sind dennoch alle Informationen erforderlich, damit die Methode ordnungsgemäß funktioniert.  
   
- **Hinweis** Mit der [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md) -Funktion kann die über **BCPColFmt**zur Verfügung gestellte Formatspezifikation persistent gespeichert werden.  
+ **Hinweis** Die [IBCPSession:: bcpschreitefmt](ibcpsession-bcpwritefmt-ole-db.md) -Funktion kann verwendet werden, um die über **BCPColFmt**bereitgestellte Format Spezifikation beizubehalten.  
   
 ## <a name="arguments"></a>Argumente  
- *idxUserDataCol*[in]  
+ *idxuserdatacol*[in]  
  Der Feldindex in der Datendatei des Benutzers  
   
  *eUserDataType*[in]  
- Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen werden in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Headerdatei (sqlncli.h) im Format BCP_TYPE_XXX aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Für Massenkopiervorgänge aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datei bei der `eUserDataType` Argument ist BCP_TYPE_SQLDECIMAL oder bcp_type_sqlnumeric lautet, gilt:  
+ Der Felddatentyp in der Datendatei des Benutzers. Die verfügbaren Datentypen werden in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-Headerdatei (sqlncli.h) im Format BCP_TYPE_XXX aufgeführt, z. B. BCP_TYPE_SQLINT4. Ist der BCP_TYPE_DEFAULT-Wert festgelegt, versucht der Anbieter den gleichen Typ zu verwenden wie der Tabellen- oder Sichtspaltentyp. Für Massen Kopiervorgänge aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und in eine Datei, wenn das `eUserDataType` Argument BCP_TYPE_SQLDECIMAL oder BCP_TYPE_SQLNUMERIC ist:  
   
 -   Wenn die Quellspalte nicht dezimal oder numerisch ist, werden die Standardgenauigkeit und die Standardanzahl von Dezimalstellen verwendet.  
   
@@ -87,15 +87,15 @@ DBORDINALidxServerCol);
  *cbUserData*[in]  
  Die maximale Länge (in Byte) der Daten in diesem Feld der Benutzerdatei, ohne die Länge eines Längenindikators oder Abschlusszeichens  
   
- Festlegen von `cbUserData` auf bcp_length_null wird angegeben, dass alle Werte in den Datendateifeldern sind oder auf NULL festgelegt sein. Festlegen von `cbUserData` BCP_LENGTH_VARIABLE zeigt an, dass das System die Länge der Daten für jedes Feld bestimmen soll. Für einige Felder könnte dies bedeuten, dass ein Längen-/NULL-Indikator generiert wird, der den Daten in einer Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorangestellt wird, oder dass der Indikator in Daten erwartet wird, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden.  
+ Das `cbUserData` Festlegen von auf BCP_LENGTH_NULL gibt an, dass alle Werte in den Datendatei Feldern sind oder auf NULL festgelegt werden sollen. Das `cbUserData` festlegen auf BCP_LENGTH_VARIABLE gibt an, dass das System die Länge der Daten für jedes Feld bestimmen soll. Für einige Felder könnte dies bedeuten, dass ein Längen-/NULL-Indikator generiert wird, der den Daten in einer Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorangestellt wird, oder dass der Indikator in Daten erwartet wird, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kopiert werden.  
   
- Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen und Binärdatentypen `cbUserData` BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 oder ein positiver Wert sein kann. Wenn `cbUserData` auf bcp_length_variable festgelegt, verwendet das System entweder den Längenindikator, sofern vorhanden, oder eine abschlusszeichensequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Wenn `cbUserData` auf bcp_length_variable festgelegt, der Typ ist ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichen oder Binärtyp, und wenn weder ein Längenindikator noch eine abschlusszeichensequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
+ Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen-und Binär Datentypen `cbUserData` kann BCP_LENGTH_VARIABLE, BCP_LENGTH_NULL, 0 oder ein positiver Wert sein. Wenn `cbUserData` BCP_LENGTH_VARIABLE ist, verwendet das System entweder den Längen Indikator, falls vorhanden, oder eine Abschluss Zeichen Sequenz, um die Länge der Daten zu bestimmen. Wenn sowohl ein Längenindikator als auch eine Abschlusszeichensequenz angegeben sind, wird beim Massenkopieren der Wert verwendet, der zu der kleineren zu kopierenden Datenmenge führt. Wenn `cbUserData` BCP_LENGTH_VARIABLE ist, ist der Datentyp ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Zeichen-oder Binärtyp, und wenn weder ein Längen Indikator noch eine Abschluss Zeichen Sequenz angegeben ist, gibt das System eine Fehlermeldung zurück.  
   
- Wenn `cbUserData` 0 oder ein positiver Wert sein, das System verwendet `cbUserData` als maximale Datenlänge. Allerdings If, zusätzlich zu einem positiven `cbUserData`, ein Länge Längenindikator oder eine abschlusszeichensequenz angegeben ist, bestimmt das System die Datenlänge mithilfe der Methode, die sich ergibt die geringste Menge an Daten, die kopiert wird.  
+ Wenn `cbUserData` 0 oder ein positiver Wert ist, verwendet `cbUserData` das System die maximale Daten Länge. Wenn jedoch zusätzlich zu einem positiven `cbUserData`ein Längen Indikator oder eine Abschluss Zeichen Sequenz angegeben ist, bestimmt das System die Daten Länge mithilfe der Methode, die zu der geringsten zu kopierenden Datenmenge führt.  
   
- Die `cbUserData` Wert stellt die Anzahl der Datenbytes dar. Wenn Zeichendaten durch Unicode-Zeichen, und klicken Sie dann auf ein positives Ergebnis dargestellt werden `cbUserData` Parameterwert darstellt, die Anzahl der Zeichen multipliziert mit der Größe der einzelnen Zeichen in Bytes.  
+ Der `cbUserData` Wert stellt die Anzahl der Daten Bytes dar. Wenn Zeichendaten durch Unicode-breit Zeichen dargestellt werden, stellt ein `cbUserData` positiver Parameterwert die Anzahl der Zeichen multipliziert mit der Größe (in Bytes) der einzelnen Zeichen dar.  
   
- *pbUserDataTerm*[size_is] [in]  
+ *pbuserdataterm*[size_is] [in]  
  Die Abschlusszeichensequenz, die für das Feld verwendet werden soll. Dieser Parameter ist in erster Linie für Zeichendatentypen nützlich, da alle anderen Typen eine feste Länge besitzen oder, im Falle von Binärdaten, einen Indikator für die Länge erfordern, um die Anzahl der vorhandenen Bytes präzise zu erfassen.  
   
  Legen Sie diesen Parameter auf NULL fest, um zu vermeiden, dass extrahierte Daten terminiert werden, oder um anzugeben, dass Daten in einer Benutzerdatei nicht terminiert werden.  
@@ -115,7 +115,7 @@ DBORDINALidxServerCol);
  Die Methode wurde erfolgreich ausgeführt.  
   
  E_FAIL  
- Ein anwenderspezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Schnittstelle.  
+ Ein Anbieter spezifischer Fehler ist aufgetreten. Ausführliche Informationen erhalten Sie über die [ISQLServerErrorInfo](../../database-engine/dev-guide/isqlservererrorinfo-ole-db.md) -Schnittstelle.  
   
  E_UNEXPECTED  
  Die Methode wurde unerwartet aufgerufen. Die [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md)-Methode wurde beispielsweise erst nach dem Aufruf dieser Methode aufgerufen.  
@@ -126,7 +126,7 @@ DBORDINALidxServerCol);
  E_OUTOFMEMORY  
  Fehler aufgrund von nicht genügend Arbeitsspeicher.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [IBCPSession &#40;OLE DB&#41;](ibcpsession-ole-db.md)   
  [Durchführen von Massenkopiervorgängen](../native-client/features/performing-bulk-copy-operations.md)  
   

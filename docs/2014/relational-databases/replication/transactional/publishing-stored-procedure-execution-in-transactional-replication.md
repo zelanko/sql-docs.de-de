@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63272813"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
@@ -52,7 +52,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio: [Veröffentlichen der Ausführung einer gespeicherten Prozedur in einer Transaktionsveröffentlichung &#40;SQL Server Management Studio&#41;](../publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   Replikationsprogrammierung mit Transact-SQL: Führen Sie [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) aus, und geben Sie anschließend für den **@type** -Parameter den Wert 'serializable proc exec' (empfohlen) oder 'proc exec' an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../publish/define-an-article.md).  
+-   Replikations Programmierung mit Transact-SQL: führen Sie [sp_addarticle &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql) aus, und geben Sie für den-Parameter **@type**den Wert ' serialisierbar proc exec ' (empfohlen) oder ' proc exec ' an. Weitere Informationen zum Definieren von Artikeln finden Sie unter [Definieren eines Artikels](../publish/define-an-article.md).  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>Ändern der Prozedur auf dem Abonnenten  
  Standardmäßig wird die Definition der gespeicherten Prozedur auf dem Verleger an jeden Abonnenten weitergegeben. Sie können aber auch die gespeicherte Prozedur auf dem Abonnenten ändern. Dies ist dann sinnvoll, wenn auf dem Verleger und dem Abonnenten eine unterschiedliche Logik ausgeführt werden soll. Gehen wir als Beispiel von **sp_big_delete**aus, einer gespeicherten Prozedur auf dem Verleger mit zwei Funktionen: Zum einen löscht die Prozedur 1.000.000 Zeilen aus der replizierten **big_table1** -Tabelle, zum anderen aktualisiert sie die nicht replizierte **big_table2**-Tabelle. Um den Bedarf an Netzwerkressourcen zu reduzieren, sollten Sie das Löschen der 1 Million Zeilen als gespeicherte Prozedur weitergeben, indem Sie **sp_big_delete**veröffentlichen. Auf dem Abonnenten können Sie **sp_big_delete** so ändern, dass nur die 1 Million Zeilen gelöscht werden, ohne ein nachfolgendes Update von **big_table2**auszuführen.  
@@ -88,12 +88,12 @@ COMMIT TRANSACTION T2
   
  Sperren werden länger aufrecht erhalten, wenn Sie die Prozedur in einer serialisierbaren Transaktion ausführen, und können zu reduzierter Parallelität führen.  
   
-## <a name="the-xactabort-setting"></a>Die XACT_ABORT-Einstellung  
+## <a name="the-xact_abort-setting"></a>Die XACT_ABORT-Einstellung  
  Beim Replizieren der Ausführung einer gespeicherten Prozedur sollte die Einstellung XACT_ABORT für die Sitzung, die die gespeicherte Prozedur ausführt, ON angeben. Wenn für XACT_ABORT die Einstellung OFF festgelegt ist und während der Ausführung der Prozedur auf dem Verleger ein Fehler auftritt, kommt es auch auf dem Abonnenten zum selben Fehler, was wiederum zum Ausfall des Verteilungs-Agents führt. Durch Angeben von ON für XACT_ABORT wird sichergestellt, dass alle Fehler, zu denen es bei der Ausführung auf dem Verleger kommt, ein Rollback der gesamten Ausführung auslösen, sodass der Ausfall des Verteilungs-Agents vermieden wird. Weitere Informationen zum Festlegen von XACT_ABORT finden Sie unter [SET XACT_ABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-xact-abort-transact-sql).  
   
  Wenn für XACT_ABORT OFF angegeben werden muss, geben Sie den **-SkipErrors** -Parameter für den Verteilungs-Agent an. Auf diese Weise kann der Agent auch dann die Änderungen auf den Abonnenten anwenden, wenn es zu einem Fehler kommt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
   
   

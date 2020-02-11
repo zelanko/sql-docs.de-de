@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc4e2ecd81b6bf0a6c24aff8e89dc31c95e04625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191440"
 ---
-# <a name="mssqleng014150"></a>MSSQL_ENG014150
+# <a name="mssql_eng014150"></a>MSSQL_ENG014150
     
 ## <a name="message-details"></a>Meldungsdetails  
   
@@ -30,7 +30,7 @@ ms.locfileid: "63191440"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Symbolischer Name||  
-|Meldungstext|Replikations-%1!: %2! (Agent) erfolgreich. %s|  
+|Meldungstext|Replikations-%1!: %2! (Agent) erfolgreich. %3!|  
   
 ## <a name="explanation"></a>Erklärung  
  Mit dieser Meldung wird angegeben, dass ein Replikations-Agent erfolgreich zu Ende ausgeführt wurde. Für die Replikation werden die folgenden Agents verwendet:  
@@ -50,13 +50,13 @@ ms.locfileid: "63191440"
 ## <a name="user-action"></a>Benutzeraktion  
  Der Protokolllese-Agent, der Warteschlangenlese-Agent und der Verteilungs-Agent werden normalerweise kontinuierlich ausgeführt. Die anderen Agents werden hingegen bei Bedarf oder nach einem Zeitplan ausgeführt. Wenn Sie nicht erwarten, dass ein Agent zu Ende ausgeführt wurde, überprüfen Sie den Status des Agents. Weitere Informationen finden Sie unter [Monitor Replication Agents](agents/replication-agents-overview.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Replikations-Agentverwaltung](agents/replication-agent-administration.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Verwaltung des Replikations-Agents](agents/replication-agent-administration.md)   
  [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)   
- [Replikationsverteilungs Agent](agents/replication-distribution-agent.md)   
- [Replikationsprotokolllese-Agent](agents/replication-log-reader-agent.md)   
- [Replikationsmerge-Agent](agents/replication-merge-agent.md)   
- [Warteschlangenlese-Agent](agents/replication-queue-reader-agent.md)   
- [Replikationsmomentaufnahme-Agent](agents/replication-snapshot-agent.md)  
+ [Replication Distribution Agent](agents/replication-distribution-agent.md)   
+ [Replication Log Reader Agent](agents/replication-log-reader-agent.md)   
+ [Replication Merge Agent](agents/replication-merge-agent.md)   
+ [Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](agents/replication-queue-reader-agent.md)   
+ [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
   
   

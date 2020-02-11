@@ -1,5 +1,5 @@
 ---
-title: Wiedergeben von Ablaufverfolgungsdaten | Microsoft-Dokumentation
+title: Wiedergeben von Ablauf Verfolgungs Daten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: efb54bb64481dc29c50976cb58df813bad411f9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63149895"
 ---
 # <a name="replay-trace-data"></a>Wiedergeben von Ablaufverfolgungsdaten
-  Wenn Sie die Eingabedaten der Ablaufverfolgung vorbereitet haben, können Sie eine verteilte Wiedergabe mit der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Funktion starten. Weitere Informationen finden Sie unter [Vorbereiten der Eingabedaten für die Ablaufverfolgung](prepare-the-input-trace-data.md).  
+  Nachdem Sie die Eingabedaten der Ablauf Verfolgung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vorbereitet haben, können Sie eine verteilte Wiedergabe mit der Distributed Replay-Funktion starten. Weitere Informationen finden Sie unter [Vorbereiten der Eingabedaten für die Ablaufverfolgung](prepare-the-input-trace-data.md).  
   
  Mit der Option **Wiedergabe** des Verwaltungstools können Sie die Ereigniswiedergabephase der verteilten Wiedergabe initiieren. Diese Phase besteht aus zwei Teilen: der Verteilung der Ablaufverfolgungsdaten und dem Start und der Synchronisierung der verteilten Wiedergabe.  
   
- ![Verteilt die Wiedergabe von Ereignissen](../../database-engine/media/eventreplay.gif "verteilt die Wiedergabe von Ereignissen")  
+ ![Distributed Event Replay](../../database-engine/media/eventreplay.gif "Distributed Event Replay")  
   
  Sie können Ablaufverfolgungsdaten in einem von zwei Sequenzierungsmodi wiedergeben: dem Belastungsmodus und dem Synchronisierungsmodus. Im Standardverhalten werden die Ablaufverfolgungsdaten im Belastungsmodus wiedergegeben. Weitere Informationen zur Ereigniswiedergabephase und den Sequenzierungsmodi finden Sie unter [SQL Server Distributed Replay](sql-server-distributed-replay.md).  
   
@@ -31,7 +31,7 @@ ms.locfileid: "63149895"
   
 ### <a name="to-replay-the-trace"></a>So geben Sie die Ablaufverfolgung wieder  
   
-1.  **(Optional) Ändern der Konfigurationseinstellungen für die Wiedergabe**: Ggf. so ändern Sie die Replay-Konfigurationseinstellungen, z. B. den sequenzierungsmodus und verschiedene Skalierungswerte, müssen Sie ändern die `<ReplayOptions>` Element des XML-basierten wiedergabekonfigurationsdatei `DReplay.exe.replay.config`. Sie können auch das `<OutputOptions>` -Element ändern, um die Ausgabeeinstellungen anzugeben, z. B. ob die Zeilenanzahl aufgezeichnet werden soll. Wenn Sie die Wiedergabekonfigurationsdatei ändern, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
+1.  **(Optional) Ändern Sie die Konfigurationseinstellungen für die Wiedergabe:** Wenn Sie die Konfigurationseinstellungen für die Wiedergabe ändern möchten, z.B. den Sequenzierungsmodus und verschiedene Skalierungswerte, müssen Sie das `<ReplayOptions>` -Element der XML-basierten Wiedergabekonfigurationsdatei `DReplay.exe.replay.config`ändern. Sie können auch das `<OutputOptions>` -Element ändern, um die Ausgabeeinstellungen anzugeben, z. B. ob die Zeilenanzahl aufgezeichnet werden soll. Wenn Sie die Wiedergabekonfigurationsdatei ändern, empfiehlt es sich, statt des Originals eine Kopie zu ändern. Zum Ändern der Einstellungen führen Sie folgende Schritte aus:  
   
     1.  Erstellen Sie eine Kopie der Standardkonfigurationsdatei für die Wiedergabe, `DReplay.exe.replay.config`, und benennen Sie die neue Datei um. Die Standardkonfigurationsdatei für die Wiedergabe befindet sich im Installationsordner des Verwaltungstools.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "63149895"
   
      Weitere Informationen zur Konfigurationsdatei für die Wiedergabe finden Sie unter [Konfigurieren von Distributed Replay](configure-distributed-replay.md).  
   
-2.  **Initiieren der ereigniswiedergabephase**: Zum Starten der verteilten Wiedergabe müssen Sie das Verwaltungstool mit Ausführen der **wiedergeben** Option. Weitere Informationen finden Sie unter [Option Wiedergabe &#40;Verwaltungstool Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
+2.  **Initiieren Sie die Ereigniswiedergabephase:** Zum Starten der verteilten Wiedergabe müssen Sie das Verwaltungstool mit der Option **Wiedergabe** ausführen. Weitere Informationen finden Sie unter [Option Wiedergabe &#40;Verwaltungstool Distributed Replay&#41;](replay-option-distributed-replay-administration-tool.md).  
   
     1.  Öffnen Sie das Windows-Befehlszeilenprogramm (`CMD.exe`), und navigieren Sie zum Installationspfad des Verwaltungstools "Distributed Replay" (`DReplay.exe`).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63149895"
   
 3.  Wenn die verteilte Wiedergabe beendet wurde, werden vom Verwaltungstool Zusammenfassungsinformationen zurückgegeben. Wenn Sie die Option **-o** angegeben haben, wurde die Wiedergabeaktivität auf jedem Client in Ergebnisdateien der Ablaufverfolgung gespeichert. Weitere Informationen zu den Ergebnisdateien der Ablaufverfolgung finden Sie unter [Überprüfen der Wiedergabeergebnisse](review-the-replay-results.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Distributed Replay: Anforderungen](distributed-replay-requirements.md)   
  [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](configure-distributed-replay.md)  

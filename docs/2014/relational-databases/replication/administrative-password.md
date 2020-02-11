@@ -13,23 +13,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 628e9cb70e17271f34ce9b2c7573e918bd9009bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63186952"
 ---
 # <a name="administrative-password"></a>Administratorkennwort
   Wenn Sie auf der Seite **Verteiler** dieses Assistenten einen Remoteverteiler für diesen Verleger ausgewählt haben, müssen Sie ein Kennwort für die Verbindung eingeben, die die Replikation mithilfe des Anmeldenamens **distributor_admin** zwischen dem Verleger und dem Verteiler herstellt. Das Kennwort muss dem Kennwort entsprechen, das auf der Seite **Verteilerkennwort** des Verteilungskonfigurations-Assistenten oder auf der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** angegeben wurde.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Kennwort**  
  Geben Sie das Kennwort für die Verbindung zwischen dem Verleger und dem Remoteverteiler ein.  
   
  **Kennwort bestätigen**  
  Geben Sie das Kennwort zur Bestätigung der fehlerfreien Eingabe erneut ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](publish/publish-data-and-database-objects.md)   
  [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md)   
  [Create a Publication](publish/create-a-publication.md)   

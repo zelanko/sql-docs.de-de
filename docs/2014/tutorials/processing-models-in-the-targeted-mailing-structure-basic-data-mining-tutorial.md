@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von Modellen in der Targeted Mailing-Struktur (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
+title: Verarbeiten von Modellen in der Ziel-Mailing Struktur (Lernprogramm zu Data Mining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,66 +11,66 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188226"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Verarbeiten von Modellen in der Targeted Mailing-Struktur (Lernprogramm zu Data Mining-Grundlagen)
   Bevor Sie die erstellten Miningmodelle durchsuchen und verwenden können, müssen Sie das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Projekt bereitstellen und die Miningstruktur und die Miningmodelle verarbeiten.  
   
--   *Bereitstellen von* sendet das Projekt an einen Server und alle Objekte in diesem Projekt auf dem Server erstellt.  
+-   Bei der Bereitstellung wird das Projekt an einen *Server gesendet,* und es werden alle Objekte in diesem Projekt auf dem Server erstellt.  
   
--   *Verarbeiten von* füllt [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Objekte mit Daten aus relationalen Datenquellen.  
+-   ** Bei der Verarbeitung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden-Objekte mit Daten aus relationalen Datenquellen aufgefüllt.  
   
  Modelle können erst dann verwendet werden, wenn sie bereitgestellt und verarbeitet wurden. Wenn Sie Änderungen am Modell vornehmen, z. B. neue Daten hinzufügen, müssen Sie die Modelle darüber hinaus erneut bereitstellen und verarbeiten.  
   
 ## <a name="ensuring-consistency-with-holdoutseed"></a>Sicherstellen von Konsistenz mit HoldoutSeed  
- Wenn Sie ein Projekt bereitstellen und die Struktur sowie die Modelle verarbeiten, werden die einzelnen Zeilen in der Datenstruktur auf Grundlage eines numerischen Ausgangswerts entweder dem Trainings- oder Testsatz zugewiesen. Der numerische Ausgangswert wird in der Regel auf der Basis von Attributen der Datenstruktur berechnet. Bei einer Änderung der Modellaspekte würde sich der Ausgangswert jedoch ändern und zu leicht abweichenden Ergebnissen führen. Aus diesem Grund, um sicherzustellen, dass Ihre Ergebnisse den hier beschriebenen entsprechen, nach dem Zufallsprinzip zugewiesen eine feste *Ausgangswert zurückgehaltener Daten* von `12`. Mit dem Ausgangswert zurückgehaltener Daten wird der Stichprobenalgorithmus initialisiert, und es wird sichergestellt, dass die Daten für alle Miningstrukturen und deren Modelle weitestgehend auf die gleiche Weise partitioniert werden.  
+ Wenn Sie ein Projekt bereitstellen und die Struktur sowie die Modelle verarbeiten, werden die einzelnen Zeilen in der Datenstruktur auf Grundlage eines numerischen Ausgangswerts entweder dem Trainings- oder Testsatz zugewiesen. Der numerische Ausgangswert wird in der Regel auf der Basis von Attributen der Datenstruktur berechnet. Bei einer Änderung der Modellaspekte würde sich der Ausgangswert jedoch ändern und zu leicht abweichenden Ergebnissen führen. Um sicherzustellen, dass Ihre Ergebnisse den hier beschriebenen entsprechen, weisen wir daher willkürlich *einen festgehaltenen* Ausgangswert von `12`zurück. Mit dem Ausgangswert zurückgehaltener Daten wird der Stichprobenalgorithmus initialisiert, und es wird sichergestellt, dass die Daten für alle Miningstrukturen und deren Modelle weitestgehend auf die gleiche Weise partitioniert werden.  
   
  Dieser Wert hat keinen Einfluss auf die Anzahl der Fälle im Trainingssatz, sondern stellt lediglich sicher, dass bei jeder Modellerstellung dieselbe Partitionierungsmethode verwendet wird.  
   
- Weitere Informationen über zurückhaltungsausgangswerte finden Sie unter [Trainings- und Testdatasets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
+ Weitere Informationen zum Ausgangswert für zurück gehaltene Daten finden Sie unter [Trainings-und Test Datasets](../../2014/analysis-services/data-mining/training-and-testing-data-sets.md).  
   
 #### <a name="to-set-the-holdout-seed"></a>So legen Sie den Ausgangswert zurückgehaltener Daten fest  
   
-1.  Klicken Sie auf die **Miningstruktur** Registerkarte oder die **Miningmodelle** Registerkarte im Data Mining-Designer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Klicken Sie im Data Mining-Designer von auf die Registerkarte **Mining Struktur** oder auf [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]die Registerkarte **Mining Modelle** .  
   
-     **Targeted Mailing-Miningstruktur** zeigt in der **Eigenschaften** Bereich.  
+     Die **Ziel-Mailing-Mining Struktur** wird im **Eigenschaften** Bereich angezeigt.  
   
-2.  Sicherstellen, dass die **Eigenschaften** Bereich geöffnet ist, durch Drücken von **F4**.  
+2.  Stellen Sie sicher, dass der Bereich **Eigenschaften** durch Drücken von **F4**geöffnet ist.  
   
-3.  Sicherstellen, dass **CacheMode** nastaven NA hodnotu **KeepTrainingCases**.  
+3.  Stellen Sie sicher, dass **CacheMode** auf **KeepTrainingCases**festgelegt ist.  
   
-4.  Geben Sie `12` für **HoldoutSeed**.  
+4.  Geben `12` Sie für **HoldoutSeed**ein.  
   
 ## <a name="deploying-and-processing-the-models"></a>Bereitstellen und Verarbeiten der Modelle  
- Im Data Mining-Designer können Sie entscheiden, welche Objekte, abhängig vom Umfang der Änderungen zu verarbeiten, die Sie Ihr Modell oder die zugrunde liegenden Daten vorgenommen haben:  
+ Im Data Mining-Designer können Sie entscheiden, welche Objekte verarbeitet werden sollen, abhängig vom Umfang der Änderungen, die Sie am Modell oder den zugrunde liegenden Daten vorgenommen haben:  
   
  Bei dieser Aufgabe verarbeiten Sie die Struktur und alle Modelle gleichzeitig, weil die Daten und Modelle neu sind.  
   
 #### <a name="to-deploy-the-project-and-process-all-the-mining-models"></a>So stellen Sie das Projekt bereit und verarbeiten alle Miningmodelle  
   
-1.  In der **Miningmodell** , wählen Sie im Menü **Miningstruktur verarbeiten und alle Modelle**.  
+1.  Wählen Sie im Menü **Mining Modell** die Option **Mining Struktur und alle Modelle verarbeiten**aus.  
   
      Falls Sie Änderungen an der Miningstruktur vorgenommen haben, werden Sie aufgefordert, das Projekt zu erstellen und bereitzustellen, bevor Sie die Modelle verarbeiten. Klicken Sie auf **Ja**.  
   
-2.  Klicken Sie auf **ausführen** in die **Miningstruktur verarbeiten - Targeted Mailing** Dialogfeld.  
+2.  Klicken Sie im Dialogfeld **Verarbeitungs Mining Struktur-Ziel** senden auf **Ausführen** .  
   
-     Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt detaillierte Informationen zur Verarbeitung des Modells an. Verarbeitung des Modells dauert einige Zeit, abhängig von Ihrem Computer.  
+     Das Dialogfeld **Verarbeitungsstatus** wird geöffnet und zeigt detaillierte Informationen zur Verarbeitung des Modells an. Die Modell Verarbeitung kann je nach Computer einige Zeit in Anspruch nehmen.  
   
 3.  Klicken Sie nach Abschluss der Modellverarbeitung im Dialogfeld **Verarbeitungsstatus** auf **Schließen** .  
   
-4.  Klicken Sie auf **schließen** in die **Miningstruktur verarbeiten - \<Struktur >** Dialogfeld.  
+4.  Klicken Sie im Dialogfeld **Mining Struktur verarbeiten \<-Struktur>** auf **Schließen** .  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Hinzufügen neuer Modelle zur Targeted Mailing-Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Hinzufügen neuer Modelle zur Ziel-Mailing-Struktur &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/adding-new-models-to-the-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 4: Untersuchen der Targeted Mailing-Modelle &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [Lektion 4: Untersuchen der Ziel-Mailing-Modelle &#40;grundlegenden Data Mining-Lernprogramm&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

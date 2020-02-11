@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12050c8d2e5d440ef8f4d7f6584f6c08c210f4f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63250587"
 ---
 # <a name="replication-snapshot-agent"></a>Replikationsmomentaufnahme-Agent
@@ -78,41 +78,41 @@ ms.locfileid: "63250587"
  **-?**  
  Druckt alle verfügbaren Parameter.  
   
- **-Publisher** _server_name_[ **\\** _instance_name_]  
- Der Name des Verlegers. Geben Sie server_name für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Verleger** _server_name_[**\\**_instance_name_]  
+ Der Name des Verlegers. Geben Sie server_name für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von auf diesem Server an.  
   
- **-Publication** _publication_  
+ **-Veröffentlichungs** _Veröffentlichung_  
  Der Name der Veröffentlichung. Dieser Parameter ist nur gültig, wenn die Veröffentlichung so festgelegt ist, dass sie immer eine Momentaufnahme für neue oder neu initialisierte Abonnements zur Verfügung hat.  
   
- **-70Subscribers**  
+ **-70abonnenten**  
  Muss verwendet werden, wenn Abonnenten vorhanden sind, auf denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , Version 7.0, ausgeführt wird.  
   
- **-BcpBatchSize** _bcp_\_ *batch*\_ *size*  
+ **-BcpBatchSize** ( _bcp_ \_ - *Batch* \_ *Größe* )  
  Die Anzahl von Zeilen, die in einem Massenkopiervorgang gesendet werden sollen. Bei Ausführung eines **bcp in** -Vorgangs entspricht die Batchgröße der Anzahl von Zeilen, die als eine Transaktion an den Server gesendet werden sollen, und ebenso der Anzahl von Zeilen, die gesendet werden müssen, bevor der Verteilungs-Agent eine **bcp** -Statusmeldung protokolliert. Bei Ausführung eines **bcp out** -Vorgangs wird eine feste Batchgröße von 1000 verwendet. Durch den Wert 0 wird angezeigt, dass keine Meldungsprotokollierung ausgeführt wird.  
   
  **-DefinitionFile** _def_path_and_file_name_  
  Der Pfad der Agentdefinitionsdatei. Eine Agentdefinitionsdatei enthält Befehlszeilenargumente für den Agent. Der Inhalt der Datei wird als ausführbare Datei analysiert. Verwenden Sie doppelte Anführungszeichen ("), um Argumentwerte anzugeben, die beliebige Zeichen enthalten.  
   
- **-Distributor** _server_name_[ **\\** _instance_name_]  
- Der Name des Verteilers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ **-Verteiler** _server_name_[**\\**_instance_name_]  
+ Der Name des Verteilers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_**\\**_instance_name_ für eine benannte Instanz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von auf diesem Server an.  
   
- **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
+ **-Distributor deadlockpriority** [**-1**|**0**|**1**]  
  Die Priorität der Momentaufnahme-Agent-Verbindung mit dem Verteiler, wenn ein Deadlock auftritt. Dieser Parameter wird angegeben, um Deadlocks zu beheben, die möglicherweise während der Momentaufnahmegenerierung zwischen dem Momentaufnahme-Agent und Benutzeranwendungen auftreten.  
   
-|Wert von DistributorDeadlockPriority|Beschreibung|  
+|Wert von DistributorDeadlockPriority|BESCHREIBUNG|  
 |---------------------------------------|-----------------|  
 |**-1**|Bei Auftreten eines Deadlocks auf dem Verteiler haben andere Anwendungen als der Momentaufnahme-Agent Priorität.|  
 |**0** (Standard)|Es wird keine Priorität zugewiesen.|  
 |**1**|Bei Auftreten eines Deadlocks auf dem Verteiler hat der Momentaufnahme-Agent Priorität.|  
   
- **-DistributorLogin** _distributor_login_  
+ **-Distributor Login** _distributor_login_  
  Der Anmeldename, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Verteiler herzustellen.  
   
- **-DistributorPassword** _distributor_password_  
+ **-Distributor Password** _distributor_password_  
  Das Kennwort, das verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Verteiler herzustellen. .  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
- Gibt den Sicherheitsmodus des Verteilers an. Der Wert **0** steht für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierungsmodus (Standard), der Wert **1** für den Windows-Authentifizierungsmodus.  
+ **-Distributor SecurityMode** [ **0**| **1**]  
+ Gibt den Sicherheitsmodus des Verteilers an. Der Wert **0** steht für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Authentifizierungsmodus (Standard). der Wert **1** gibt den Windows-Authentifizierungsmodus an.  
   
  **-DynamicFilterHostName** _dynamic_filter_host_name_  
  Wird verwendet, um einen Wert für [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) bei der Filterung festzulegen, wenn eine dynamische Momentaufnahme erstellt wird. Wenn z. B. für einen Artikel die Teilmengenfilterklausel `rep_id = HOST_NAME()` angegeben wird und Sie die **DynamicFilterHostName** -Eigenschaft auf "FBJones" festlegen, bevor Sie den Merge-Agent aufrufen, werden nur Zeilen repliziert, in denen in der Spalte **rep_id** der Wert "FBJones" enthalten ist.  
@@ -123,10 +123,10 @@ ms.locfileid: "63250587"
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
  Der Speicherort, an dem die dynamische Momentaufnahme generiert werden soll.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
+ **-Verschlüsselungsebene** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Momentaufnahme-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|Beschreibung|  
+|Wert von EncryptionLevel|BESCHREIBUNG|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -135,7 +135,7 @@ ms.locfileid: "63250587"
  > [!NOTE]  
  >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
   
- Weitere Informationen finden Sie unter [SQL Server-Replikationssicherheit](../security/view-and-modify-replication-security-settings.md).  
+ Weitere Informationen finden Sie unter [SQL Server-Replikation-Sicherheit](../security/view-and-modify-replication-security-settings.md).  
   
  **-FieldDelimiter** _field_delimiter_  
  Das Zeichen oder die Zeichenfolge, das bzw. die das Ende eines Felds in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datendatei für das Massenkopieren markiert. Der Standardwert ist \n\<x$3>\n.  
@@ -143,12 +143,12 @@ ms.locfileid: "63250587"
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
  Gibt den Umfang des Verlaufs an, der während eines Momentaufnahmevorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Description|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
 |**0**|Statusmeldungen werden entweder an der Konsole ausgegeben oder in eine Ausgabedatei geschrieben. Verlaufsdatensätze werden nicht in der Verteilungsdatenbank protokolliert.|  
 |**1**|Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
-|**2** (Standardwert)|Fügen Sie neue Verlaufsdatensätze ein, es sei denn, der Datensatz bezieht sich z. B. auf Leerlaufmeldungen oder Meldungen zu Aufträgen mit langer Ausführungszeit. In diesen Fällen aktualisieren Sie die vorherigen Datensätze.|  
-|**3**|Fügen Sie immer neue Datensätze ein, es sei denn, ein Datensatz bezieht sich auf Leerlaufmeldungen.|  
+|**2** (Standard)|Fügen Sie neue Verlaufsdatensätze ein, es sei denn, der Datensatz bezieht sich z. B. auf Leerlaufmeldungen oder Meldungen zu Aufträgen mit langer Ausführungszeit. In diesen Fällen aktualisieren Sie die vorherigen Datensätze.|  
+|**€**|Fügen Sie immer neue Datensätze ein, es sei denn, ein Datensatz bezieht sich auf Leerlaufmeldungen.|  
   
  **-HRBcpBlocks** _number_of_blocks_  
  Die Anzahl von **bcp** -Datenblöcken, die zwischen dem Lese- und dem Schreibthread in die Warteschlange gestellt werden. Der Standardwert lautet "50". **HRBcpBlocks** wird nur mit Oracle-Veröffentlichungen verwendet.  
@@ -156,49 +156,49 @@ ms.locfileid: "63250587"
 > [!NOTE]  
 >  Dieser Parameter wird zur Leistungsoptimierung für **bcp** von einem Oracle-Verleger verwendet.  
   
- -**HRBcpBlockSize**_block_size_  
+ -**Hrbcpblocksize**-_block_size_  
  Die Größe jedes einzelnen **bcp** -Datenblocks in Kilobytes (KB). Der Standardwert ist 64 KB. **HRBcpBlocks** wird nur mit Oracle-Veröffentlichungen verwendet.  
   
 > [!NOTE]  
 >  Dieser Parameter wird zur Leistungsoptimierung für **bcp** von einem Oracle-Verleger verwendet.  
   
- **-HRBcpDynamicBlocks**  
+ **-Hrbcpdynamicblocks**  
  Gibt an, ob die Größe jedes einzelnen **bcp** -Datenblocks dynamisch zunehmen kann. **HRBcpBlocks** wird nur mit Oracle-Veröffentlichungen verwendet.  
   
 > [!NOTE]  
 >  Dieser Parameter wird zur Leistungsoptimierung für **bcp** von einem Oracle-Verleger verwendet.  
   
- **-KeepAliveMessageInterval** _keep_alive_interval_  
+ **-Keepalivemstinageinterval** _keep_alive_interval_  
  Gibt an, wie viele Sekunden der Momentaufnahme-Agent wartet, bevor die Meldung, dass auf eine Back-End-Nachricht gewartet wird, in der [MSsnapshot_history](/sql/relational-databases/system-tables/mssnapshot-history-transact-sql) -Tabelle protokolliert wird. Der Standardwert beträgt 300 Sekunden.  
   
- **-LoginTimeOut** _login_time_out_seconds_  
- Die Anzahl von Sekunden, nach denen ein Timeout bei der Anmeldung eintritt. Der Standardwert ist **15** Sekunden.  
+ **-LoginTimeout** _login_time_out_seconds_  
+ Die Anzahl der Sekunden, nach denen ein Timeout für die Anmeldung eintritt. Der Standardwert ist **15** Sekunden.  
   
- **-MaxBcpThreads** _number_of_threads_  
- Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Verteilungsdatenbank in der Synchronisierungstransaktion enthalten sind. Dabei gilt der jeweils kleinere Wert. Der Wert von**MaxBcpThreads** muss größer als **0** sein. Es ist keine hartcodierte Obergrenze vorhanden. Der Standardwert lautet **1**.  
+ **-MaxBCPThreads** _number_of_threads_  
+ Gibt die Anzahl von Massenkopiervorgängen an, die parallel ausgeführt werden können. Die maximale Anzahl von Threads und gleichzeitig vorhandenen ODBC-Verbindungen entspricht entweder **MaxBcpThreads** oder der Anzahl von Massenkopieranforderungen, die in der Verteilungsdatenbank in der Synchronisierungstransaktion enthalten sind. Dabei gilt der jeweils kleinere Wert. **MaxBCPThreads** muss über einen Wert größer als **0** verfügen, und es ist keine hart codierte Obergrenze vorhanden. Der Standardwert ist **1**.  
   
- \- **MaxNetworkOptimization** [ **0**| **1**]  
+ \-**MaxNetworkOptimization** [ **0**| **1**]  
  Wird verwendet, wenn irrelevante Löschvorgänge an den Abonnenten gesendet werden. Bei irrelevanten Löschvorgängen handelt es sich um DELETE-Befehle, die für Zeilen, die nicht zur Partition des Abonnenten gehören, an den Abonnenten gesendet werden. Irrelevante Löschvorgänge beeinträchtigen weder die Datenintegrität noch die Konvergenz, allerdings können sie zu unnötigem Netzwerkverkehr führen. Der Standardwert von **MaxNetworkOptimization** lautet **0**. Wenn Sie **MaxNetworkOptimization** auf **1** festlegen, minimieren Sie dadurch das Risiko irrelevanter Löschvorgänge, wodurch der Netzwerkverkehr verringert und eine Netzwerkoptimierung erzielt wird. Gleichzeitig werden bei Festlegung dieses Parameters auf **1** u. U. mehr Metadaten gespeichert, und auf dem Verleger kann es zu Leistungseinbußen kommen, wenn mehrere Ebenen von Joinfiltern und komplexe Teilmengenfilter vorhanden sind. Daher sollten Sie die Replikationstopologie sorgfältig bewerten und **MaxNetworkOptimization** nur dann auf **1** festlegen, wenn durch irrelevante Löschvorgänge mehr Netzwerkverkehr entsteht, als akzeptabel ist.  
   
 > [!NOTE]
->  Die Festlegung dieses Parameters auf **1** ist nur dann nützlich, wenn die Synchronisierungsoptimierungsoption der Mergeveröffentlichung auf **true** festgelegt ist (der **@keep_partition_changes** -Parameter von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
+>  Das Festlegen dieses Parameters auf **1** ist nur nützlich, wenn die Synchronisierungs Optimierungs Option der Mergeveröffentlichung auf **true** festgelegt ist (der **@keep_partition_changes** -Parameter von [sp_addmergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)).  
   
- **-Output** _output_path_and_file_name_  
+ **-Ausgabe** _output_path_and_file_name_  
  Der Pfad der Agentausgabedatei. Wenn kein Dateiname angegeben ist, wird die Ausgabe an die Konsole gesendet. Wenn eine Datei mit dem angegebenen Namen vorhanden ist, wird die Ausgabe an diese Datei angefügt.  
   
  **-OutputVerboseLevel** [ **0**| **1**| **2**]  
  Gibt an, ob die Ausgabe ausführlich sein soll.  
   
-|Wert von OutputVerboseLevel|Beschreibung|  
+|Wert von OutputVerboseLevel|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |**0**|Nur Fehlermeldungen werden gedruckt.|  
 |**1** (Standard)|Alle Statusberichtsmeldungen werden gedruckt (Standard).|  
 |**2**|Alle Fehlermeldungen und Statusberichtsmeldungen werden gedruckt, was zum Debuggen nützlich ist.|  
 
- **-PrefetchTables** [ **0**| **1**]  
+ **-Prefetchtables** [ **0**| **1**]  
  Optionaler Parameter, der angibt, ob die Tabellenobjekte vorab abgerufen und zwischengespeichert werden.  Standardmäßig werden bestimmte Tabelleneigenschaften mithilfe der SMO-Komponente basierend auf einer internen Berechnung vorab abgerufen.  Dieser Parameter kann in Szenarios hilfreich sein, in denen die Ausführung des SMO-Vorabrufvorgangs erheblich länger dauert. Wenn dieser Parameter nicht verwendet wird, wird diese Entscheidung zur Laufzeit basierend auf dem Prozentsatz der Tabellen getroffen, die der Veröffentlichung als Artikel hinzugefügt werden.  
   
-|Wert von OutputVerboseLevel|Description|  
+|Wert von OutputVerboseLevel|BESCHREIBUNG|  
 |------------------------------|-----------------|  
 |**0**|Der Aufruf der Prefetch-Methode der SMO-Komponente ist deaktiviert.|  
 |**1**|Der Momentaufnahmen-Agent ruft die Prefetch-Methode auf, um einige Tabelleneigenschaften mithilfe von SMO zwischenzuspeichern.|  
@@ -209,22 +209,22 @@ ms.locfileid: "63250587"
 > [!NOTE]  
 >  Sie sollten die Paketgröße nur dann ändern, wenn Sie sicher sind, dass die Leistung dadurch verbessert werden kann. Für die meisten Anwendungen empfiehlt sich die Standardpaketgröße.  
   
- **-ProfileName** _profile_name_  
- Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replication Agent Profiles](replication-agent-profiles.md).  
+ **-** Profile Name _profile_name_  
+ Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replikations-Agent-Profile](replication-agent-profiles.md).  
   
  **-PublisherDB** _publisher_database_  
- Der Name der Veröffentlichungsdatenbank. *Der Parameter wird von Oracle-Verlegern nicht unterstützt.*  
+ Der Name der Veröffentlichungsdatenbank. *Dieser Parameter wird für Oracle-Verleger nicht unterstützt*.  
   
- **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
+ **-PublisherDeadlockPriority** [**-1**|**0**|**1**]  
  Die Priorität der Momentaufnahme-Agent-Verbindung mit dem Verleger, wenn ein Deadlock auftritt. Dieser Parameter wird angegeben, um Deadlocks zu beheben, die möglicherweise während der Momentaufnahmegenerierung zwischen dem Momentaufnahme-Agent und Benutzeranwendungen auftreten.  
   
-|Wert von PublisherDeadlockPriority|Description|  
+|Wert von PublisherDeadlockPriority|BESCHREIBUNG|  
 |-------------------------------------|-----------------|  
 |**-1**|Bei Auftreten eines Deadlocks auf dem Verleger haben andere Anwendungen als der Momentaufnahme-Agent Priorität.|  
 |**0** (Standard)|Es wird keine Priorität zugewiesen.|  
 |**1**|Bei Auftreten eines Deadlocks auf dem Verleger hat der Momentaufnahme-Agent Priorität.|  
   
- **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
  Gibt die Failoverpartnerinstanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, die an einer Datenbank-Spiegelungssitzung mit der Veröffentlichungsdatenbank teilnimmt. Weitere Informationen finden Sie unter [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md).  
   
  **-PublisherLogin** _publisher_login_  
@@ -236,29 +236,29 @@ ms.locfileid: "63250587"
  **-PublisherSecurityMode** [ **0**| **1**]  
  Gibt den Sicherheitsmodus des Verlegers an. Der Wert **0** steht für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung (Standard), der Wert **1** für den Windows-Authentifizierungsmodus.  
   
- **-QueryTimeOut** _query_time_out_seconds_  
- Die Anzahl von Sekunden, nach denen ein Timeout bei der Abfrage eintritt. Die Standardeinstellung ist 1800 Sekunden.  
+ **-QueryTimeout** _query_time_out_seconds_  
+ Die Anzahl von Sekunden bis zum Timeout der Abfrage. Der Standardwert ist 1800 Sekunden.  
   
  **-ReplicationType** [ **1**| **2**]  
  Gibt den Typ der Replikation an. Der Wert **1** steht für die Transaktionsreplikation, der Wert **2** für die Mergereplikation.  
   
- **-RowDelimiter** _row_delimiter_  
+ **-RowDelimiter-** _row_delimiter_  
  Das Zeichen oder die Zeichenfolge, das bzw. die das Ende einer Zeile in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datendatei für das Massenkopieren markiert. Der Standardwert ist \n\<,@g>\n.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Die maximale Anzahl von Sekunden, die der Momentaufnahme-Agent wartet, wenn die Anzahl gleichzeitig ausgeführter dynamischer Momentaufnahmeprozesse den Grenzwert erreicht, der mit der **@max_concurrent_dynamic_snapshots** -Eigenschaft von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) festgelegt wurde. Wenn der Momentaufnahme-Agent nach Verstreichen der maximalen Anzahl von Sekunden immer noch wartet, wird der Agent beendet. Der Wert 0 bedeutet, dass der Agent unbegrenzt wartet, der Vorgang jedoch abgebrochen werden kann.  
+ Die maximale Anzahl von Sekunden, die der Momentaufnahmen-Agent wartet, wenn die Anzahl der gleichzeitig ausgeführten dynamischen Momentaufnahme Prozesse den Grenzwert erreicht **@max_concurrent_dynamic_snapshots** , der durch die-Eigenschaft [sp_addmergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)festgelegt wird. Wenn der Momentaufnahme-Agent nach Verstreichen der maximalen Anzahl von Sekunden immer noch wartet, wird der Agent beendet. Der Wert 0 bedeutet, dass der Agent unbegrenzt wartet, der Vorgang jedoch abgebrochen werden kann.  
   
- \- **UsePerArticleContentsView** _use_per_article_contents_view_  
+ \-**Useperarticlecontentsview** - _use_per_article_contents_view_  
  Dieser Parameter wurde als veraltet markiert und wird lediglich aus Gründen der Abwärtskompatibilität unterstützt.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
   
 > [!IMPORTANT]  
 >  Wenn Sie den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent so installiert haben, dass er unter einem lokalen Systemkonto und nicht unter einem Domänenbenutzerkonto (Standard) ausgeführt wird, kann der Dienst nur auf den lokalen Computer zugreifen. Wenn der Momentaufnahme-Agent, der unter dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent ausgeführt wird, so konfiguriert ist, dass beim Anmelden bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]der Windows-Authentifizierungsmodus verwendet wird, schlägt der Momentaufnahme-Agent fehl. Die Standardeinstellung ist die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung.  
   
  Führen Sie zum Starten des Momentaufnahme-Agents von der Eingabeaufforderung **snapshot.exe** aus. Informationen hierzu finden Sie im [Abschnitt zu den ausführbaren Dateien von Replikations-Agents](../concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replikations-Agent-Verwaltung](replication-agent-administration.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e016b8fb3986b4fa9431a1d223335affa72d3d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63188558"
 ---
 # <a name="monitor-instances-of-sql-server-in-the-sql-server-utility"></a>Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm
@@ -27,7 +27,7 @@ ms.locfileid: "63188558"
 |[Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](view-resource-health-policy-results-sql-server-utility.md)|Erläutert, wie das Dashboard des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms und die Listenansicht im SSMS-Hilfsprogramm-Explorer angezeigt werden.|  
 |[Ändern der Definition von Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](modify-a-resource-health-policy-definition-sql-server-utility.md)|Erläutert, wie Definitionen von Ressourcenintegritätsrichtlinien des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms angezeigt oder geändert werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md)  
   
   

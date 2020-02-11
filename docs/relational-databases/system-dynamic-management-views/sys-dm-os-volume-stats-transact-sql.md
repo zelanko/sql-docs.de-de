@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_volume_stats (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_os_volume_stats (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/06/2019
 ms.prod: sql
@@ -19,18 +19,18 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67899720"
 ---
-# <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
+# <a name="sysdm_os_volume_stats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zum Betriebssystemvolume (Verzeichnis) zurück, in dem die angegebenen Datenbanken und Dateien in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert sind. Verwenden Sie diese dynamische Verwaltungsfunktion, um die Attribute des physischen Datenträgers zu überprüfen oder um Informationen zum verfügbaren freien Speicherplatz für das Verzeichnis zurückzugeben.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -38,7 +38,7 @@ ms.locfileid: "67899720"
 sys.dm_os_volume_stats (database_id, file_id)  
 ```  
   
-##  <a name="Arguments"></a> Argumente  
+##  <a name="Arguments"></a>Argumente  
  *database_id*  
  Die ID der Datenbank. *database_id* ist vom Datentyp **int**und hat keinen Standardwert. Lässt keine NULL-Werte zu.  
   
@@ -49,20 +49,20 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Spalte**|**Data type**|**Beschreibung**|  
-|**database_id**|**int**|Die ID der Datenbank. Lässt keine NULL-Werte zu.|  
-|**file_id**|**int**|Die ID der Datei. Lässt keine NULL-Werte zu.|  
+|**Spalte**|**Datentyp**|**Beschreibung**|  
+|**database_id**|**int**|Die ID der Datenbank. Darf nicht NULL sein.|  
+|**file_id**|**int**|Die ID der Datei. Darf nicht NULL sein.|  
 |**volume_mount_point**|**nvarchar(512)**|Der Einbindungspunkt, der das Stammverzeichnis des Volumes darstellt. Kann eine leere Zeichenfolge zurückgeben.|  
 |**volume_id**|**nvarchar(512)**|Die ID des Betriebssystemvolumes. Kann eine leere Zeichenfolge zurückgeben.|  
 |**logical_volume_name**|**nvarchar(512)**|Der Name des logischen Volumes. Kann eine leere Zeichenfolge zurückgeben.|  
 |**file_system_type**|**nvarchar(512)**|Der Typ des Dateisystemvolumes (z. B. NTFS, FAT, RAW). Kann eine leere Zeichenfolge zurückgeben.|  
-|**total_bytes**|**bigint**|Die Gesamtgröße des Volumes in Bytes. Lässt keine NULL-Werte zu.|  
-|**available_bytes**|**bigint**|Der verfügbare freie Speicherplatz auf dem Volume. Lässt keine NULL-Werte zu.|  
-|**supports_compression**|**bit**|Gibt an, ob das Volume eine Komprimierung durch das Betriebssystem unterstützt. Lässt keine NULL-Werte zu.|  
-|**supports_alternate_streams**|**bit**|Gibt an, ob das Volume alternative Datenströme unterstützt. Lässt keine NULL-Werte zu.|  
-|**supports_sparse_files**|**bit**|Gibt an, ob das Volume Sparsedateien unterstützt.  Lässt keine NULL-Werte zu.|  
-|**is_read_only**|**bit**|Gibt an, ob das Volume derzeit als schreibgeschützt gekennzeichnet ist. Lässt keine NULL-Werte zu.|  
-|**is_compressed**|**bit**|Gibt an, ob dieses Volume derzeit komprimiert ist. Lässt keine NULL-Werte zu.|  
+|**total_bytes**|**BIGINT**|Die Gesamtgröße des Volumes in Bytes. Darf nicht NULL sein.|  
+|**available_bytes**|**BIGINT**|Der verfügbare freie Speicherplatz auf dem Volume. Darf nicht NULL sein.|  
+|**supports_compression**|**bit**|Gibt an, ob das Volume eine Komprimierung durch das Betriebssystem unterstützt. Darf nicht NULL sein.|  
+|**supports_alternate_streams**|**bit**|Gibt an, ob das Volume alternative Datenströme unterstützt. Darf nicht NULL sein.|  
+|**supports_sparse_files**|**bit**|Gibt an, ob das Volume Sparsedateien unterstützt.  Darf nicht NULL sein.|  
+|**is_read_only**|**bit**|Gibt an, ob das Volume derzeit als schreibgeschützt gekennzeichnet ist. Darf nicht NULL sein.|  
+|**is_compressed**|**bit**|Gibt an, ob dieses Volume derzeit komprimiert ist. Darf nicht NULL sein.|  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -89,8 +89,8 @@ FROM sys.database_files AS f
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [sys. master_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)  
   
   

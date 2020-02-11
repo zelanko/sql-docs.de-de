@@ -1,5 +1,5 @@
 ---
-title: Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen (SQL Server Management Studio) | Microsoft-Dokumentation
+title: Anzeigen und Auflösen von Daten Konflikten für Mergeveröffentlichungen (SQL Server Management Studio) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63255429"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen (SQL Server Management Studio)
@@ -26,9 +26,9 @@ ms.locfileid: "63255429"
   
  Die Konfliktdaten sind im Replikationskonflikt-Viewer für den Zeitraum verfügbar, der als Beibehaltungsdauer der Konflikte (bei einer Standardeinstellung von 14 Tagen) angegeben wurde. Zum Festlegen der Beibehaltungsdauer der Konflikte haben Sie folgende Möglichkeiten:  
   
--   Geben Sie einen Beibehaltungswert für den Parameter **@conflict_retention** von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql).  
+-   Geben Sie einen Beibehaltungs Wert **@conflict_retention** für den Parameter [sp_addmergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)an.  
   
--   Geben Sie den Wert **conflict_retention** für den **@property** -Parameter und einen Beibehaltungswert für den **@value** -Parameter von [sp_changemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) an.  
+-   Geben Sie den Wert **conflict_retention** für den **@property** -Parameter und einen Beibehaltungs Wert **@value** für den-Parameter [sp_changemergepublication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)an.  
   
  Standardmäßig werden Konfliktinformationen an den folgenden Orten gespeichert:  
   
@@ -44,14 +44,14 @@ ms.locfileid: "63255429"
   
 ### <a name="to-view-and-resolve-conflicts-for-merge-publications"></a>So zeigen Sie Konflikte von Mergeveröffentlichungen an und lösen Sie die Konflikte  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger (oder gegebenenfalls Abonnenten) her, und erweitern Sie dann den Serverknoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger (oder ggf. dem Abonnenten) her, und erweitern Sie dann den Server Knoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
   
 3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, für die Sie die Konflikte anzeigen möchten, und klicken Sie dann auf **Konflikte anzeigen**.  
   
     > [!NOTE]  
-    >  Wenn für die **conflict_logging** -Eigenschaft der Wert **'subscriber'** angegeben wurde, ist die Menüoption **Konflikte anzeigen** nicht verfügbar. Starten Sie zum Anzeigen von Konflikten ConflictViewer.exe von der Eingabeaufforderung aus. ConflictViewer.exe wird standardmäßig im folgenden Verzeichnis gespeichert: Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Eine Liste der gültigen Startparameter erhalten Sie, wenn Sie ConflictViewer.exe -? ausführen.  
+    >  Wenn für die **conflict_logging** -Eigenschaft der Wert **'subscriber'** angegeben wurde, ist die Menüoption **Konflikte anzeigen** nicht verfügbar. Starten Sie zum Anzeigen von Konflikten ConflictViewer.exe von der Eingabeaufforderung aus. ConflictViewer.exe befindet sich standardmäßig im folgenden Verzeichnis: Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE. Eine Liste der gültigen Startparameter erhalten Sie, wenn Sie ConflictViewer.exe -? ausführen.  
   
 4.  Wählen Sie im Dialogfeld **Konflikttabelle auswählen** eine Datenbank, eine Veröffentlichung und eine Tabelle aus, für die Sie die Konflikte anzeigen möchten.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "63255429"
   
     -   Wählen Sie eine oder mehrere Zeilen im oberen Raster aus, und klicken Sie auf **Entfernen**, was dem Klicken auf die Schaltfläche **Gewinner absenden** entspricht (ohne Änderungen an den Daten vorzunehmen).  
   
-    -   Klicken Sie auf die Eigenschaftenschaltfläche ( **…** ), um weitere Informationen zu einer am Konflikt beteiligten Zeile anzuzeigen.  
+    -   Klicken Sie auf die Schaltfläche mit den Eigenschaften (**...**), um weitere Informationen zu einer in einem Konflikt beteiligten Spalte anzuzeigen.  
   
     -   Bearbeiten Sie Daten in den Spalten **Konfliktgewinner** oder **Konfliktverlierer** , bevor Sie die Daten absenden (bei einer grauen Spalte sind die Daten schreibgeschützt).  
   
@@ -71,12 +71,12 @@ ms.locfileid: "63255429"
   
     -   Klicken Sie auf **Verlierer absenden** , um die Konfliktlösung zu überschreiben und den als Verlierer des Konflikts ausgewiesenen Wert an alle Knoten der Topologie zu senden.  
   
-    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten ( **...** ), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
+    -   Aktivieren Sie **Details dieses Konflikts protokollieren** , um Konfliktdaten in einer Datei zu protokollieren. Um einen Speicherort für die Datei anzugeben, zeigen Sie auf das Menü **Ansicht** , und klicken Sie dann auf **Optionen**. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche mit den drei Punkten (**...**), und wechseln Sie in das entsprechende Verzeichnis. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
   
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Angeben eines Mergeartikelkonfliktlösers](publish/specify-a-merge-article-resolver.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erweiterte Konflikterkennung und-Lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Angeben eines mergeartikelresolvers](publish/specify-a-merge-article-resolver.md)  
   
   

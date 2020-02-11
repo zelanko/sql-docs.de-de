@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66107920"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
@@ -65,7 +65,8 @@ ms.locfileid: "66107920"
 |`Title`|Das `Name`-Attribut des `Report`-RDL-Elements|  
 |`Author`|Das `Author`-RDL-Element|  
 |`Subject`|Das `Description`-RDL-Element|  
-|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Produktname und -Version|  
+|`Creator`|
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Produktname und -Version|  
 |`Producer`|Name und Version der Renderingerweiterung|  
 |`CreationDate`|Berichtsausführungszeit im `datetime`-PDF-Format|  
   
@@ -80,7 +81,7 @@ ms.locfileid: "66107920"
 ### <a name="document-map"></a>Dokumentstruktur  
  Wenn im Bericht Dokumentstrukturbezeichnungen vorhanden sind, wird der PDF-Datei eine Dokumentgliederung hinzugefügt. Jede Dokumentstrukturbezeichnung wird als Eintrag in der Dokumentgliederung und somit auch im Bericht angezeigt. In Acrobat wird der Dokumentgliederung nur dann ein Ziellesezeichen hinzugefügt, wenn die Seite, auf der sie sich befindet, gerendert wird.  
   
- Wenn nur eine einzelne Seite gerendert wird, wird keine Dokumentgliederung hinzugefügt. Die Dokumentstruktur wird entsprechend der Schachtelungsebene im Bericht hierarchisch angelegt. Auf die Dokumentgliederung kann in Acrobat unter der Registerkarte "Lesezeichen" zugegriffen werden. Wenn Sie auf einen Eintrag innerhalb der Dokumentgliederung klicken, wechselt das Dokument zum mit Lesezeichen versehenen Speicherort.  
+ Wenn nur eine einzelne Seite gerendert wird, wird keine Dokumentgliederung hinzugefügt. Die Dokumentstruktur wird entsprechend der Schachtelungsebene im Bericht hierarchisch angelegt. Auf die Dokument Gliederung kann in Acrobat auf der Registerkarte "Lesezeichen" zugegriffen werden. Wenn Sie auf einen Eintrag innerhalb der Dokument Gliederung klicken, wechselt das Dokument zum Lesezeichen.  
   
 ### <a name="bookmarks"></a>Lesezeichen  
  Lesezeichen werden beim PDF-Rendering nicht unterstützt.  
@@ -88,12 +89,12 @@ ms.locfileid: "66107920"
 ### <a name="drillthrough-links"></a>Drillthroughlinks  
  Drillthroughlinks werden beim PDF-Rendering nicht unterstützt. Die Drillthroughlinks werden nicht als klickbare Links gerendert, und Drillthroughberichte können keine Verbindung mit dem Ziel des Drillthroughs herstellen.  
   
-### <a name="hyperlinks"></a>Hyperlinks  
+### <a name="hyperlinks"></a>Links  
  Links in Berichten werden als durch Klicken aktivierbare Links in der PDF-Datei gerendert. Beim Klicken auf den Link öffnet Acrobat den Standardbrowser des Clients und navigiert zur Link-URL.  
   
   
   
-##  <a name="Compression"></a> Komprimierung  
+##  <a name="Compression"></a>Komprimi  
  Die Bildkomprimierung basiert auf dem ursprünglichen Dateityp des Bilds. Die PDF-Renderingerweiterung komprimiert PDF-Dateien standardmäßig.  
   
  Damit die Bildkomprimierung in der PDF-Datei möglichst erhalten bleibt, werden JPEG-Bilder im JPEG- und alle anderen Bildtypen im BMP-Format gespeichert.  
@@ -108,9 +109,9 @@ ms.locfileid: "66107920"
   
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

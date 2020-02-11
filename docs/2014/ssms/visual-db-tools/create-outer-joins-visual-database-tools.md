@@ -14,22 +14,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cd5c9a9cb2e40c7b0a235ff848c1f9a0025773a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63184305"
 ---
 # <a name="create-outer-joins-visual-database-tools"></a>Erstellen von äußeren Joins (Visual Database Tools)
   In der Standardeinstellung wird vom [Abfrage- und Sicht-Designer](visual-database-tools.md) ein innerer Join zwischen Tabellen erstellt. Innere Joins entfernen die Zeilen, die nicht mit einer Zeile aus der anderen Tabelle übereinstimmen. Äußere Joins dagegen geben alle Zeilen aus mindestens einer der in der FROM-Klausel genannten Tabellen oder Sichten zurück, sofern diese Zeilen ggf. die WHERE- oder HAVING-Suchbedingungen erfüllen. Wenn Sie Datenzeilen in das Resultset einschließen möchten, die keine Übereinstimmung in der verknüpften Tabelle aufweisen, können Sie einen äußeren Join erstellen.  
   
- Beim Erstellen eines äußeren Join ist die Reihenfolge relevant, in der Tabellen in der SQL-Anweisung angezeigt werden (wie im SQL-Bereich widergespiegelt). Die zuerst hinzugefügte Tabelle wird als "linke" Tabelle und die zweite hinzugefügte Tabelle als "rechte" Tabelle betrachtet. (Die tatsächliche Reihenfolge, in der die Tabellen im [Diagrammbereich](diagram-pane-visual-database-tools.md) angezeigt werden, spielt keine Rolle.) Durch das Angeben eines linken oder rechten äußeren Joins verweisen Sie auf die Reihenfolge, in der Tabellen zur Abfrage hinzugefügt wurden, sowie auf die Reihenfolge, in der sie in der SQL-Anweisung im [SQL-Bereich](sql-pane-visual-database-tools.md) angezeigt werden.  
+ Beim Erstellen eines äußeren Join ist die Reihenfolge relevant, in der Tabellen in der SQL-Anweisung angezeigt werden (wie im SQL-Bereich widergespiegelt). Die zuerst hinzugefügte Tabelle wird als "linke" Tabelle und die zweite hinzugefügte Tabelle als "rechte" Tabelle betrachtet. (Die tatsächliche Reihenfolge, in der die Tabellen im [Diagrammbereich](diagram-pane-visual-database-tools.md) angezeigt werden, spielt keine Rolle.) Durch das Angeben eines linken oder rechten äußeren Joins verweisen Sie auf die Reihenfolge, in der Tabellen zur Abfrage hinzugefügt wurden, sowie auf die Reihenfolge, in der sie in der SQL-Anweisung im [SQL-Bereich](sql-pane-visual-database-tools.md)angezeigt werden.  
   
 ### <a name="to-create-an-outer-join"></a>So erstellen Sie einen äußeren Joins  
   
 1.  Erstellen Sie den Joins automatisch oder manuell. Weitere Informationen finden Sie unter [Automatisches Verknüpfen von Tabellen &#40;Visual Database Tools&#41;](join-tables-automatically-visual-database-tools.md) oder [Manuelles Verknüpfen von Tabellen &#40;Visual Database Tools&#41;](join-tables-manually-visual-database-tools.md).  
   
-2.  Wählen Sie die Joinlinie im Diagrammbereich und dann aus der **Abfrage-Designer** Menü wählen **wählen alle Zeilen aus \<Tablename >** , wählen Sie den Befehl, der die Tabelle enthält, deren zusätzliche Zeilen, die Sie einschließen möchten.  
+2.  Wählen Sie im Diagrammbereich die Joinlinie aus, und wählen Sie dann im Menü **Abfrage-Designer** die Option **alle \<Zeilen aus TableName>auswählen **aus, und wählen Sie den Befehl aus, der die Tabelle enthält, deren zusätzliche Zeilen Sie einschließen möchten.  
   
     -   Wählen Sie die erste Tabelle aus, um eine linken äußeren Joins zu erstellen.  
   
@@ -57,7 +57,7 @@ FROM employee LEFT OUTER JOIN jobs
 WHERE (jobs.job_id IS NULL)  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abfragen mit Joins &#40;Visual Database Tools&#41;](query-with-joins-visual-database-tools.md)   
  [Verknüpfen (Dialogfeld) &#40;Visual Database Tools&#41;](join-dialog-box-visual-database-tools.md)  
   

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: da60ceee93802b14b7d09392740a1f6b471e4ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63150609"
 ---
 # <a name="specify-query-parameterization-behavior-by-using-plan-guides"></a>Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten
@@ -53,7 +53,7 @@ GROUP BY pi.ProductID, pi.Quantity HAVING SUM(pi.Quantity) > 50;
 2.  Erstellen Sie die Planhinweisliste für die parametrisierte Form der Abfrage, indem Sie den PARAMETERIZATION FORCED-Abfragehinweis angeben.  
   
     > [!IMPORTANT]  
-    >  Im Rahmen der Parametrisierung einer Abfrage weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Parametern, die die Literalwerte ersetzen, abhängig von Wert und Größe der Literalwerte, einen Datentyp zu. Dasselbe Verfahren wird auf den Wert der an den **@stmt** -Ausgabeparameter von **sp_get_query_template**den PARAMETERIZATION SIMPLE-Abfragehinweis an. Da der im **@params** -Argument von **sp_create_plan_guide** angegebene Datentyp mit dem der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]parametrisierten Abfrage übereinstimmen muss, müssen Sie möglicherweise mehrere Planhinweislisten erstellen, um die gesamte Palette der möglichen Parameterwerte abzudecken.  
+    >  Im Rahmen der Parametrisierung einer Abfrage weist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den Parametern, die die Literalwerte ersetzen, abhängig von Wert und Größe der Literalwerte, einen Datentyp zu. Der gleiche Vorgang erfolgt beim Wert der konstanten Literale, die an den **@stmt** Output-Parameter von **sp_get_query_template**übergeben werden. Da der Datentyp, der im **@params** -Argument **sp_create_plan_guide** angegeben ist, mit dem der Abfrage identisch sein muss, wenn er [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von parametrisiert wird, müssen Sie möglicherweise mehr als eine Plan Hinweis Liste erstellen, um den gesamten Bereich möglicher Parameterwerte für die Abfrage abzudecken.  
   
  Verwenden Sie das folgende Skript, um die parametrisierte Abfrage und anschließend eine Planhinweisliste dafür zu erstellen:  
   

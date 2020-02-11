@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c912d6ac343bbcb3f908596a8ea804ad8f21dd82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63164037"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Verwenden eines externen Datasets mit Reporting Services
@@ -162,7 +162,7 @@ public int GetOrdinal(string name)
   
  Sobald Sie Ihr Dataset erstellt oder abgerufen haben, können Sie das **DataSet**-Objekt in Ihrer Implementierung der Elemente **Read**, **GetValue**, **GetName**, **GetOrdinal**, **GetFieldType** und **FieldCount** der Klasse **DataReader** verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterungen für Reporting Services](../reporting-services-extensions.md)   
  [Implementieren von Datenverarbeitungserweiterungen](implementing-a-data-processing-extension.md)   
  [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../reporting-services-extension-library.md)  

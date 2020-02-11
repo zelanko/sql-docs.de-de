@@ -10,11 +10,11 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 39bf7c9bb07fc048e2bf40a0e6ac93b02e9dfe64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63161813"
 ---
 # <a name="columnstore-indexes"></a>Columnstore-Indizes 
-Finden Sie unter [verwenden nicht gruppierter columnstore-Indizes](../../database-engine/using-nonclustered-columnstore-indexes.md) und [mit gruppierten columnstore-Indizes](../../database-engine/using-clustered-columnstore-indexes.md).
+Weitere Informationen finden [Sie unter verwenden nicht gruppierter columnstore-Indizes](../../database-engine/using-nonclustered-columnstore-indexes.md) und [Verwenden von gruppierten columnstore-Indizes](../../database-engine/using-clustered-columnstore-indexes.md).

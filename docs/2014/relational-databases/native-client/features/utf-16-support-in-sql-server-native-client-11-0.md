@@ -1,5 +1,5 @@
 ---
-title: Unterstützung für UTF-16 in SQL Server Native Client 11.0 | Microsoft-Dokumentation
+title: UTF-16-Unterstützung in SQL Server Native Client 11,0 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 415cb2fe8a3295770cfc8bd2d5c6e56750adb6d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63205114"
 ---
 # <a name="utf-16-support-in-sql-server-native-client-110"></a>Unterstützung für UTF-16 in SQL Server Native Client 11.0
-  Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], wenn Sie beim Binden eines Spaltenergebnisses oder Ausgabeparameters einen Puffer fester Länge angeben, und wenn die `wchar` Zeichen, die in den Puffer geschrieben wird, vor das abschließende Zeichen ein hoher Ersatzzeichencodepunkt eines Ersatzzeichenpaars und wenn die nächste `wchar` Zeichen ist ein niedriger Ersatzzeichencodepunkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den hohe Ersatzzeichen-Codepunkt in den Puffer wird nicht hinzugefügt werden.  
+  [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Wenn Sie ab einen Puffer fester Länge beim Binden eines Spalten Ergebnisses oder Ausgabe Parameters angeben und das `wchar` Zeichen, das vor dem abschließenden Zeichen in den Puffer geschrieben wurde, ein hoher Ersatz Zeichencode Punkt eines Ersatz Zeichen Paars ist, und wenn das `wchar` nächste Zeichen ein niedriger Ersatz Zeichencode Punkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ist, fügt Native Client dem Puffer keinen hohen Ersatz Zeichencode Punkt hinzu.  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client-Features](sql-server-native-client-features.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Aufgabe 13: Hinzufügen von OLE DB-Ziels zum Schreiben von Daten in MDS-Stagingtabelle | Microsoft-Dokumentation'
+title: 'Aufgabe 13: Hinzufügen OLE DB Ziels zum Schreiben von Daten in die MDS-Stagingtabelle | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,42 +11,42 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65476988"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Zielen zum Schreiben von Daten in die MDS-Stagingtabelle
-  Nun, da Sie hinzugefügt haben, **ImportType** und **BatchTag** Werte für alle Datensätze, Sie sind bereit, um sie an MDS für das Staging senden. In dieser Aufgabe verwenden Sie das OLE DB-Ziel zum Schreiben der Daten in **supplier_leaf** Stagingtabelle.  
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Ziels, um Daten in die MDS-Stagingtabelle zu schreiben
+  Nachdem Sie die Werte für " **importtype** " und " **batchtag** " allen Datensätzen hinzugefügt haben, können Sie Sie für das Staging an MDS senden. In dieser Aufgabe verwenden Sie das OLE DB Ziel, um die Daten in die **Stagingtabelle "STG. supplier_Leaf** " zu schreiben.  
   
-1.  Ziehen Sie **OLE DB-Ziel** aus **andere Ziele** im Abschnitt der **SSIS-Toolbox** auf die **Datenfluss** Registerkarte, und legen Sie es unter  **Hinzufügen von MDS erforderliche Spalten**.  
+1.  Ziehen Sie **OLE DB Ziel** aus dem Abschnitt **andere Ziele** in der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** , und legen Sie Sie unter für **MDS erforderliche Spalten hinzufügen**fest.  
   
-2.  Mit der rechten Maustaste **OLE DB-Ziel** in die **Datenfluss** Registerkarte, und klicken Sie auf **umbenennen**. Typ **Write Supplier Data to MDS Staging Table** , und drücken Sie **EINGABETASTE**.  
+2.  Klicken Sie mit der rechten Maustaste auf **OLE DB Ziel** auf der Registerkarte **Datenfluss** , und klicken Sie auf **Umbenennen** Geben Sie **Daten in MDS-Stagingtabelle schreiben ein,** und drücken **Sie die Eingabe**Taste  
   
-3.  Verbinden der **Add Columns Required by MDS** zu **Write Supplier Data to MDS Staging Table** mithilfe des blauen Konnektors.  
+3.  Verbinden Sie die **von MDS benötigten Add-Spalten** , um Lieferantendaten mit dem blauen Connector **in die MDS-Stagingtabelle zu schreiben** .  
   
-4.  Doppelklicken Sie auf **Write Supplier Data to MDS Staging Table** in die **Datenfluss** Registerkarte.  
+4.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf **Lieferantendaten in MDS-Stagingtabelle schreiben** .  
   
-5.  In der **Ziel-Editor für OLE DB** Dialogfeld Feld, stellen Sie sicher, dass **(lokal). MDS** (oder **"localhost". MDS**) ausgewählt ist, für die **OLE DB-Verbindungs-Manager** Feld.  
+5.  Stellen Sie im Dialog Feld **Ziel-Editor für OLE DB** sicher, dass **(local). MDS** (oder **localhost. MDS**) für das Feld **OLE DB Verbindungs-Manager** ausgewählt.  
   
-6.  Wählen Sie **stg. Supplier_Leaf** Tabelle aus der Liste der **Name, der in der Tabelle oder Sicht**.  
+6.  Wählen Sie **STG aus. Supplier_Leaf** Tabelle aus der Liste der **Namen der Tabelle oder Sicht**.  
   
-     ![Ziel-Editor für OLE DB](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "OLE DB-Ziel-Editor")  
+     ![Ziel-Editor für OLE DB](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-01.jpg "Ziel-Editor für OLE DB")  
   
-7.  Wechseln Sie zu der **Zuordnungen** Seite, indem Sie auf **Zuordnung** im Menü auf der linken Seite.  
+7.  Wechseln Sie zur Seite Zuordnungen, indem Sie im Menü **auf der linken** Seite auf **Zuordnung** klicken.  
   
-8.  Zuordnung **Eingabe** und **Ziel** Spalten wie in der folgenden Tabelle gezeigt.  
+8.  Ordnen Sie die **Eingabe** -und **Ziel** Spalten zu, wie in der folgenden Tabelle gezeigt.  
   
-     ![OLE DB-Ziel-Editor - Zuordnungen](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "OLE DB-Ziel-Editor - Zuordnungen")  
+     ![Ziel-Editor für OLE DB – Zuordnungen](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-02.jpg "Ziel-Editor für OLE DB – Zuordnungen")  
   
-9. Vergewissern Sie sich die Verwendung von **_ausgabe** -Spalten für Eingabespalten, nicht die **_Status** oder **_quelle** Spalten. **_Ausgabe** Spalten enthalten die Ausgabewerte der DQS-Bereinigung.  
+9. Vergewissern Sie sich, dass Sie **_Output** Spalten für Eingabe Spalten verwenden, nicht die **_Status** -oder **_Source** Spalten. **_Output** Spalten enthalten die Ausgabewerte der DQS-Bereinigung.  
   
-10. Klicken Sie auf **OK** schließen die **Ziel-Editor für OLE DB** Dialogfeld.  
+10. Klicken Sie auf **OK** , um das Dialogfeld **Ziel-Editor OLE DB** zu schließen.  
   
 11. Der Datenfluss sollte wie in folgendem Bild aussehen.  
   
-     ![Abgeschlossen-Datenfluss](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Datenfluss abgeschlossen")  
+     ![Abgeschlossener Datenfluss](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Abgeschlossener Datenfluss")  
   
 ## <a name="next-step"></a>Nächster Schritt  
  [Aufgabe 14: Hinzufügen von Execute SQL Task zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  

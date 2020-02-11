@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265141"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
@@ -86,7 +86,7 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>Ändern von Komponenteneigenschaften  
- Sie können `CustomData`-Eigenschaften auf verschiedene Arten in der Entwurfsumgebung ändern. Mit dem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Eigenschaftenbrowser können Sie jede Eigenschaft ändern, die von der Entwurfszeitkomponente verfügbar gemacht wurde und die mit dem <xref:System.ComponentModel.BrowsableAttribute>-Attribut gekennzeichnet sind. Außerdem können Sie Eigenschaften ändern, indem Sie Elemente auf die Entwurfsoberfläche des benutzerdefinierten Berichtselements ziehen oder mit der rechten Maustaste auf die Steuerung in der Entwurfsumgebung klicken und im Kontextmenü **Eigenschaften** auswählen, um ein benutzerdefiniertes Eigenschaftenfenster aufzurufen.  
+ Sie können `CustomData`-Eigenschaften auf verschiedene Arten in der Entwurfsumgebung ändern. Mit dem <xref:System.ComponentModel.BrowsableAttribute>-Eigenschaftenbrowser können Sie jede Eigenschaft ändern, die von der Entwurfszeitkomponente verfügbar gemacht wurde und die mit dem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Attribut gekennzeichnet sind. Außerdem können Sie Eigenschaften ändern, indem Sie Elemente auf die Entwurfsoberfläche des benutzerdefinierten Berichtselements ziehen oder mit der rechten Maustaste auf die Steuerung in der Entwurfsumgebung klicken und im Kontextmenü **Eigenschaften** auswählen, um ein benutzerdefiniertes Eigenschaftenfenster aufzurufen.  
   
  Im folgenden Codebeispiel wird eine `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData`-Eigenschaft gezeigt, auf die das <xref:System.ComponentModel.BrowsableAttribute>-Attribut angewendet wird:  
   
@@ -184,7 +184,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
 ```  
   
 ### <a name="using-adornments"></a>Verwenden von Randsteuerelementen  
- Klassen für ein benutzerdefiniertes Berichtselement können auch eine `Microsoft.ReportDesigner.Design.Adornment`-Klasse implementieren. Ein Randsteuerelement ermöglicht es der Steuerung für ein benutzerdefiniertes Berichtselement, Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge. Die `Adornment` -Klasse, die in definiert ist die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` -Namespace ist eine Pass-Through-Implementierung der <xref:System.Windows.Forms.Design.Behavior.Adorner> Klasse finden Sie in Windows Forms. Vollständige Dokumentation für die `Adorner` Klasse, finden Sie unter [Verhaltensdienst – Übersicht](https://go.microsoft.com/fwlink/?LinkId=116673) in der MSDN Library. Beispielcode, der implementiert eine `Microsoft.ReportDesigner.Design.Adornment` Klasse, finden Sie unter [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
+ Klassen für ein benutzerdefiniertes Berichtselement können auch eine `Microsoft.ReportDesigner.Design.Adornment`-Klasse implementieren. Ein Randsteuerelement ermöglicht es der Steuerung für ein benutzerdefiniertes Berichtselement, Bereiche außerhalb des Hauptrechtecks der Entwurfsoberfläche bereitzustellen. Diese Bereiche behandeln Benutzeroberflächenereignisse wie Mausklicks und Drag und Drop-Vorgänge. Bei `Adornment` der im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] `Microsoft.ReportDesigner` -Namespace definierten-Klasse handelt es sich um eine Pass-Through <xref:System.Windows.Forms.Design.Behavior.Adorner> -Implementierung der-Klasse, die in Windows Forms gefunden wurde. Eine vollständige Dokumentation zur `Adorner` -Klasse finden Sie unter Übersicht über den [Verhaltens Dienst](https://go.microsoft.com/fwlink/?LinkId=116673) in der MSDN Library. Beispielcode, der eine `Microsoft.ReportDesigner.Design.Adornment` -Klasse implementiert, finden Sie unter [SQL Server Reporting Services Product Samples](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
  Weitere Informationen zum Programmieren und Verwenden von Windows Forms in [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] finden Sie in diesen Themen in der MSDN Library:  
   
@@ -194,10 +194,10 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 -   Exemplarische Vorgehensweise: Erstellen eines Windows Forms-Steuerelements, das Visual Studio-Entwurfszeitfunktionen nutzt  
   
-## <a name="see-also"></a>Siehe auch  
- [Custom Report Item Architecture (Architektur des benutzerdefinierten Berichtselements)](custom-report-item-architecture.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Architektur des benutzerdefinierten Berichts Elements](custom-report-item-architecture.md)   
  [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
- [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)   
+ [Klassenbibliotheken für benutzerdefinierte Berichts Elemente](custom-report-item-class-libraries.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Filtern und Sortieren von Daten (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Filtern und Sortieren von Daten (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: faa6198bc9fa42b55be63ec57ff49ed6703ef260
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66081263"
 ---
 # <a name="filter-and-sort-data-ssas-tabular"></a>Filtern und Sortieren von Daten (SSAS – tabellarisch)
@@ -24,9 +24,9 @@ ms.locfileid: "66081263"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Sortieren von Daten in einer Tabelle &#40;SSAS – tabellarisch&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md)Sortieren von Daten in einer Tabelle|In den Tasks in diesem Thema wird beschrieben, wie Sie Daten in einer Tabelle nach Buchstaben oder Zahlen sortieren.|  
-|[Filtern von Daten in einer Tabelle &#40;SSAS – tabellarisch&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|In den Tasks in diesem Thema wird beschrieben, wie Sie benutzerdefinierte Filter anwenden, um die Anzeige der Zeilen zu steuern.|  
+|[Sortieren von Daten in einer Tabelle &#40;tabellarischen SSAS-&#41;](tabular-models/sort-data-in-a-table-ssas-tabular.md) Sortieren von Daten in einer Tabelle|In den Tasks in diesem Thema wird beschrieben, wie Sie Daten in einer Tabelle nach Buchstaben oder Zahlen sortieren.|  
+|[Filtern von Daten in einer Tabelle &#40;tabellarischen SSAS-&#41;](tabular-models/filter-data-in-a-table-ssas-tabular.md)|In den Tasks in diesem Thema wird beschrieben, wie Sie benutzerdefinierte Filter anwenden, um die Anzeige der Zeilen zu steuern.|  
   
   

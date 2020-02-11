@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d0d309103880a369a88952e19b252fc15693fdd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63191921"
 ---
 # <a name="handling-smo-events"></a>Behandeln von SMO-Ereignissen
@@ -35,9 +35,9 @@ ms.locfileid: "63191921"
 ## <a name="event-subscription"></a>Ereignisabonnement  
  Sie behandeln Ereignisse, indem Sie eine Ereignishandlerklasse schreiben, eine Instanz dieser Klasse erstellen, den Ereignishandler dem übergeordneten Objekt zuordnen und dann das Ereignis abonnieren.  
   
- Eine Ereignishandlerklasse muss geschrieben werden, um Ereignisse zu behandeln. Die Ereignishandlerklasse kann mehr als eine Ereignishandlerfunktion enthalten und muss für die zu behandelnden Ereignisse installiert sein. Die Ereignishandlerfunktionen erhalten Informationen über das Ereignis aus der *ServerEventNotificatificationArgs* Parameter, der verwendet werden kann, um Informationen über das Ereignis zu melden.  
+ Eine Ereignishandlerklasse muss geschrieben werden, um Ereignisse zu behandeln. Die Ereignishandlerklasse kann mehr als eine Ereignishandlerfunktion enthalten und muss für die zu behandelnden Ereignisse installiert sein. Die Ereignishandlerfunktionen empfangen Informationen über das Ereignis vom *ServerEventNotificatificationArgs* -Parameter, der zum Melden von Informationen über das Ereignis verwendet werden kann.  
   
- Die Typen von Datenbank- und Serverereignisse, die verarbeitet werden können finden Sie in der <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> Klasse und die <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse.  
+ Die Typen von Datenbank-und Server Ereignissen, die behandelt werden können, sind <xref:Microsoft.SqlServer.Management.Smo.DatabaseEventSet> in der- <xref:Microsoft.SqlServer.Management.Smo.ServerEventSet>Klasse und der-Klasse aufgeführt.  
   
 ## <a name="example"></a>Beispiel  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  

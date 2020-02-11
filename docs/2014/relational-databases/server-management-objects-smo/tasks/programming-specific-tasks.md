@@ -1,5 +1,5 @@
 ---
-title: Programmieren von bestimmten Tasks | Microsoft-Dokumentation
+title: Programmieren spezifischer Aufgaben | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e69a3ecab06b800ef1295c8c638b574135bf7b41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63158718"
 ---
 # <a name="programming-specific-tasks"></a>Programming Specific Tasks
   Das Programmieren spezifischer Tasks mithilfe von SMO-Objekten umfasst komplexe Themen, die nur für Programme mit spezifischen Funktionen (wie Sichern, Überwachen von Statistiken, Replikation, Verwalten von Instanzobjekten und Festlegen von Konfigurationsoptionen) erforderlich sind.  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Verwenden von Verbindungsservern in SMO](using-linked-servers-in-smo.md)|Beschreibt, wie SMO das <xref:Microsoft.SqlServer.Management.Smo.LinkedServer>-Objekt verwendet, um OLE-DB-Server zu verknüpfen.|  
 |[Konfigurieren von SQL Server in SMO](configuring-sql-server-in-smo.md)|Beschreibt, wie Konfigurationseinstellungen für die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in SMO angezeigt und bearbeitet werden.|  

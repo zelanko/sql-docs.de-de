@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca8d20555a2221842a6962081a0880c1a820745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63280581"
 ---
 # <a name="perform-basic-operations-with-queries-visual-database-tools"></a>Ausführen grundlegender Vorgänge mit Abfragen (Visual Database Tools)
@@ -87,7 +87,7 @@ ms.locfileid: "63280581"
  [Verwenden des Abfrage- und Sicht-Designers bei internationalen Daten &#40;Visual Database Tools&#41;](use-the-query-and-view-designer-with-international-data-visual-database-tools.md)  
  Beschreibt die Funktionen im Abfrage- und Sicht-Designer, die das Arbeiten mit internationalen Daten erleichtern.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  [Tools im Abfrage- und Sicht-Designer &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  
  Beschreibt die Funktionen und die Fähigkeiten des Abfrage- und Sicht-Designers.  
   

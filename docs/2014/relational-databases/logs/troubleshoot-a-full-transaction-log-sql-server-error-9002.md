@@ -19,20 +19,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c0dc1566693ad8d8c86d7efe47403248788b076
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63144729"
 ---
 # <a name="troubleshoot-a-full-transaction-log-sql-server-error-9002"></a>Problembehandlung bei vollen Transaktionsprotokollen (SQL Server-Fehler 9002)
-  In diesem Thema werden mögliche Lösungen für volle Transaktionsprotokolle erörtert und Vermeidungsstrategien vorgeschlagen. Wenn das Transaktionsprotokoll voll ist, wird von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der Fehler 9002 ausgegeben. Das Protokoll kann sich füllen, wenn die Datenbank online ist oder wiederhergestellt wird. Wenn das Protokoll gefüllt wird, während die Datenbank online ist, bleibt die Datenbank online, sie kann aber nur gelesen und nicht aktualisiert werden. Wird das Protokoll während einer Wiederherstellung gefüllt, wird die Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als RESOURCE PENDING (ausstehende Ressource) markiert. In beiden Fällen ist eine Aktion seitens des Benutzers erforderlich, um Speicherplatz im Protokoll verfügbar zu machen.  
+  In diesem Thema werden mögliche Lösungen für volle Transaktionsprotokolle erörtert und Vermeidungsstrategien vorgeschlagen. Wenn das Transaktionsprotokoll voll ist, wird von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] der Fehler 9002 ausgegeben. Das Protokoll kann sich füllen, wenn die Datenbank online ist oder wiederhergestellt wird. Falls das Protokoll während des Onlinezustands der Datenbank voll ist, bleibt die Datenbank online, aber sie kann nur gelesen und nicht aktualisiert werden. Wird das Protokoll während einer Wiederherstellung gefüllt, wird die Datenbank von [!INCLUDE[ssDE](../../includes/ssde-md.md)] als RESOURCE PENDING (ausstehende Ressource) markiert. In beiden Fällen ist eine Aktion seitens des Benutzers erforderlich, um Speicherplatz im Protokoll verfügbar zu machen.  
   
 ## <a name="responding-to-a-full-transaction-log"></a>Mögliche Vorgehensweisen bei einem vollen Transaktionsprotokoll  
  Die richtige Reaktion auf ein volles Transaktionsprotokoll hängt zum Teil davon ab, aufgrund welcher Bedingungen das Protokoll gefüllt wurde. Mithilfe der Spalten **log_reuse_wait** und **log_reuse_wait_desc** der **sys.database**-Katalogsicht können Sie feststellen, wodurch eine Protokollkürzung verhindert wurde. Weitere Informationen finden Sie unter [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql). Eine Beschreibung von Faktoren, die eine Protokollkürzung verzögern können, finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](the-transaction-log-sql-server.md).  
   
 > [!IMPORTANT]  
->  Wenn die Datenbank im Wiederherstellungsmodus befand, als der Fehler 9002 auftrat, nach der Behebung des Problems, Wiederherstellen der Datenbank mithilfe von ALTER DATABASE *Database_name* SET ONLINE.  
+>  Wenn sich die Datenbank zu dem Zeitpunkt, als der Fehler 9002 auftrat, gerade im Wiederherstellungsmodus befand, müssen Sie nach Behebung des Problems die Datenbank mithilfe von ALTER DATABASE *database_name* SET ONLINE wiederherstellen.  
   
  Alternativ sind als Reaktion auf ein volles Transaktionsprotokoll auch folgende Aktionen möglich:  
   
@@ -71,14 +71,14 @@ ms.locfileid: "63144729"
 > [!IMPORTANT]  
 >  Protokolldateien sollten unter keinen Umständen in komprimierten Dateisystemen gespeichert werden.  
   
- **Verschieben eine Protokolldatei**  
+ **So verschieben Sie eine Protokolldatei**  
   
 -   [Verschieben von Datenbankdateien](../databases/move-database-files.md)  
   
 ### <a name="increasing-the-size-of-a-log-file"></a>Vergrößern einer Protokolldatei  
  Wenn auf dem Protokolldatenträger Speicherplatz vorhanden ist, können Sie die Protokolldatei vergrößern. Die maximale Größe für Protokolldateien beträgt zwei Terabyte (TB) pro Protokolldatei.  
   
- **Um die Dateigröße zu erhöhen.**  
+ **So erhöhen Sie die Dateigröße**  
   
  Wenn die automatische Vergrößerung deaktiviert ist, die Datenbank online ist und auf dem Datenträger ausreichend Speicherplatz verfügbar ist, führen Sie einen der folgenden Schritte aus:  
   
@@ -92,14 +92,14 @@ ms.locfileid: "63144729"
 ### <a name="adding-a-log-file-on-a-different-disk"></a>Hinzufügen einer Protokolldatei auf einem anderen Datenträger  
  Fügen Sie der Datenbank mithilfe von ALTER DATABASE <database_name> ADD LOG FILE eine neue Protokolldatei auf einem anderen Datenträger hinzu, auf dem ausreichend Speicherplatz vorhanden ist.  
   
- **Hinzufügen eine Protokolldatei**  
+ **So fügen Sie eine Protokolldatei hinzu**  
   
 -   [Hinzufügen von Daten- oder Protokolldateien zu einer Datenbank](../databases/add-data-or-log-files-to-a-database.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Verwalten der Größe der Transaktionsprotokolldatei](manage-the-size-of-the-transaction-log-file.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Verwalten der Größe der Transaktionsprotokoll Datei](manage-the-size-of-the-transaction-log-file.md)   
  [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
+ [sp_add_log_file_recover_suspect_db &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql)  
   
   

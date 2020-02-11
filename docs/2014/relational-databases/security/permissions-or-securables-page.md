@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c83d92da6708c8c63e1ba4c2cea60b1497a54883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63284544"
 ---
 # <a name="permissions-or-securables-page"></a>Seite 'Berechtigungen' oder 'Sicherungsfähige Elemente'
@@ -55,7 +55,7 @@ ms.locfileid: "63284544"
  **Mit Erteilung**  
  Zeigt den Status der WITH GRANT-Option für die angezeigte Berechtigung an. Dieses Feld ist schreibgeschützt. Verwenden Sie die [GRANT](/sql/t-sql/statements/grant-transact-sql) -Anweisung, um diese Berechtigung anzuwenden.  
   
- **Verweigern**  
+ **Deny**  
  Aktivieren Sie diese Option, um der Anmeldung diese Berechtigung zu verweigern. Deaktivieren Sie diese Option, um diese Berechtigung aufzuheben.  
   
  **Spaltenberechtigungen**  
@@ -70,7 +70,7 @@ ms.locfileid: "63284544"
  **Spalte**  
  Die Namen der Spalten, auf die sich die Berechtigung auswirkt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Rollen auf Datenbankebene](authentication-access/database-level-roles.md)   
  [Sicherheitscenter für SQL Server-Datenbank-Engine und Azure SQL-Datenbank](security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   

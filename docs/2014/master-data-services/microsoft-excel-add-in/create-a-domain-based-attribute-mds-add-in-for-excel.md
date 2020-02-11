@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 296ace8d97269d80179d437b1033b92196d6adc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "65478982"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>Erstellen eines domänenbasierten Attributs (MDS-Add-In für Excel)
@@ -25,12 +25,12 @@ ms.locfileid: "65478982"
 > [!NOTE]  
 >  Wenn Benutzer einen Wert in die eingeschränkte Spalte eingeben, anstatt diesen in der Liste auszuwählen, werden Fehler nach der Veröffentlichung in der Spalte **$InputStatus$** angezeigt.  
   
-## <a name="prerequisites"></a>Erforderliche Komponenten  
+## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
 -   Sie müssen über die Berechtigung verfügen, auf die Funktionsbereiche **Systemverwaltung** und **Explorer** zuzugreifen.  
   
--   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md)zuzugreifen.  
+-   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../administrators-master-data-services.md).  
   
 -   Das Modell und die Entität müssen bereits vorhanden sein.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "65478982"
   
 3.  Klicken Sie in der Gruppe **Modell erstellen** auf **Attributeigenschaften**.  
   
-4.  Wählen Sie im Dialogfeld **Attributeigenschaften** in der Liste **Attributtyp** die Option **Eingeschränkte Liste (domänenbasiert)** .  
+4.  Wählen Sie im Dialogfeld **Attributeigenschaften** in der Liste **Attributtyp** die Option **Eingeschränkte Liste (domänenbasiert)**.  
   
 5.  In der Liste **Attribut mit Werten auffüllen aus** :  
   
@@ -58,9 +58,9 @@ ms.locfileid: "65478982"
   
 -   Um Werte der eingeschränkten Liste hinzuzufügen und daraus zu löschen, laden Sie die Entität, auf der das Attribut basiert. Weitere Informationen zum Laden von Entitäten finden Sie unter [Laden von Daten aus MDS in Excel](export-data-to-excel-from-master-data-services.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Domänenbasierte Attribute &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
- [Erstellen einer Entität &#40;MDS-Add-In für Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
- [Erstellen eines Modells &#40;MDS-Add-In für Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Domänen basierte Attribute &#40;Master Data Services&#41;](../domain-based-attributes-master-data-services.md)   
+ [Erstellen Sie eine Entität &#40;MDS-Add-in für Excel&#41;](create-an-entity-mds-add-in-for-excel.md)   
+ [Ein Modell &#40;MDS-Add-in für Excel wird&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   
