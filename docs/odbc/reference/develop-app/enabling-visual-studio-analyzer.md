@@ -13,29 +13,29 @@ ms.assetid: 423950e9-a5c0-4da9-b9b2-49c38b3bb0b8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 333ae13b9959337c6adb5142e253a16ba890aa61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046780"
 ---
 # <a name="enabling-visual-studio-analyzer"></a>Aktivieren von Visual Studio Analyzer
 > [!IMPORTANT]  
->  Unterstützung für Visual Studio Analyzer wurde ab Windows 8 (Visual Studio Analyzer wurde nur in früheren Versionen von Visual Studio enthalten.) entfernt. Verwenden Sie eine Alternative zur Problembehandlung Mechanismus BID-Verfolgung.  
+>  Die Unterstützung für Visual Studio Analyzer wurde ab Windows 8 entfernt (Visual Studio Analyzer war nur in früheren Versionen von Visual Studio enthalten.) Verwenden Sie für einen alternativen Mechanismus zur Problembehandlung die Auftrags Ablauf Verfolgung.  
   
- Microsoft Visual Studio Analyzer ist ein Anwendungsanalyse Tool um einen allgemeinen Überblick über die Leistung einer Anwendung über alle Ebenen und Systeme hinweg bereitzustellen. Er konzentriert sich auf die Interaktion zwischen Komponenten. Visual Studio Analyzer können starten und zu beenden, auf dem ODBC-Administrator-Registerkarte "Ablaufverfolgung".  
+ Microsoft Visual Studio Analyzer ist ein Tool zur Anwendungs Analyse, das einen Überblick über die Leistung einer Anwendung für alle Ebenen und Systeme bietet. Er konzentriert sich auf die Interaktion zwischen Komponenten. Visual Studio Analyzer können auf der Registerkarte Ablauf Verfolgung des ODBC-Administrators gestartet und beendet werden.  
   
- Gehen Sie folgendermaßen vor, um eines der Ereignisse anzuzeigen, die von ODBC generiert:  
+ Führen Sie die folgenden Schritte aus, um die Ereignisse anzuzeigen, die von ODBC generiert werden:  
   
-1.  Zugriff auf die ODBC-Datenquellen-Administrator.  
+1.  Zugreifen auf den ODBC-Datenquellen-Administrator.  
   
-2.  Klicken Sie auf die **Ablaufverfolgung** Registerkarte.  
+2.  Klicken auf die Registerkarte Ablauf **Verfolgung** .  
   
-3.  Klicken Sie auf **Visual Studio Analyzer-Ablaufverfolgung starten**.  
+3.  Klicken Sie auf **Start Visual Studio Analyzer Ablauf Verfolgung**.  
   
 4.  Klicken Sie auf **OK**.  
   
- Visual Studio Analyzer-ereignisgenerierung wird fortgesetzt, bis **beenden Sie Visual Studio Analyzer Ablaufverfolgung** ausgewählt ist.  
+ Visual Studio Analyzer Ereignis Generierung wird fortgesetzt, bis **Visual Studio Analyzer Ablauf Verfolgung** ausgewählt ist.  
   
  Dieser Abschnitt enthält das folgende Thema.  
   

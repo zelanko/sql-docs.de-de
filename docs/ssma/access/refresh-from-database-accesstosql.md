@@ -1,5 +1,5 @@
 ---
-title: Refresh from Database (AccessToSQL) aktualisieren | Microsoft-Dokumentation
+title: Aktualisieren aus der Datenbank (Access Token) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 01/19/2017
@@ -10,24 +10,24 @@ ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051534"
 ---
-# <a name="refresh-from-database-accesstosql"></a>Refresh from Database (AccessToSQL) aktualisieren
-Die **Refresh from Database aktualisieren** Dialogfeld können Sie auswählen, welche Objekte aus der Access-Datenbank zu aktualisieren. Zeilen in das Dialogfeld sind farbcodiert, abhängig vom Status der Metadaten:  
+# <a name="refresh-from-database-accesstosql"></a>Aktualisieren aus der Datenbank (Access Token-SQL)
+Im Dialogfeld **aus Datenbank aktualisieren** können Sie auswählen, welche Objekte aus der Access-Datenbank aktualisiert werden sollen. Zeilen im Dialogfeld sind basierend auf dem Status der Metadaten farblich codiert:  
   
--   Wenn die Metadaten des Objekts lokal und in der Access-Datenbank geändert hat, ist die Zeile blau.  
+-   Wenn die Objekt Metadaten lokal und in der Access-Datenbank geändert wurden, ist die Zeile blau.  
   
--   Wenn die Metadaten des Objekts in der Access-Datenbank aber nicht in SSMA geändert hat, ist die Zeile gelb.  
+-   Wenn sich die Objekt Metadaten in der Access-Datenbank, aber nicht in SSMA geändert haben, wird die Zeile gelb angezeigt.  
   
--   Wenn die Metadaten des Objekts wurde lokal geändert, aber nicht in der Access-Datenbank, die Zeile grün ist.  
+-   Wenn sich die Objekt Metadaten lokal geändert haben, aber nicht in der Access-Datenbank, ist die Zeile grün.  
   
--   Wenn das Objekt in der Access-Datenbank neu ist, ist die Zeile rosa.  
+-   Wenn das Objekt in der Access-Datenbank neu ist, ist die Zeile Rosa.  
   
-Sie können angeben, Einstellungen für die Aktualisierung von Standard-Objekt in der **Projekteinstellungen** Dialogfeld. Weitere Informationen finden Sie unter [Projekteinstellungen &#40;Objekte laden&#41; &#40;AccessToSQL&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
+Sie können im Dialogfeld **Projekteinstellungen** die Standardeinstellungen für die Objekt Aktualisierung angeben. Weitere Informationen finden Sie unter [Project Settings &#40;Load Objects&#41; &#40;accesstosql&#41;](../../ssma/access/project-settings-loading-objects-accesstosql.md)  
   
-Für den Zugriff auf die **Refresh from Database aktualisieren** Dialogfeld der rechten Maustaste auf eine **Datenbank** Knoten in der Access-Metadaten-Explorer, und klicken Sie auf **Refresh from Database aktualisieren**.  
+Um auf das Dialogfeld **aus Datenbank aktualisieren** zuzugreifen, klicken Sie mit der rechten Maustaste auf einen **Daten Bank** Knoten in Access Metadata Explorer, und klicken Sie auf **aus Datenbank aktualisieren**.  
   

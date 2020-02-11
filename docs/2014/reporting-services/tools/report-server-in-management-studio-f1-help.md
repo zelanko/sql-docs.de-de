@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e45e1e7f3c117609bd4e33611733c364b724b6a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100075"
 ---
 # <a name="report-server-in-management-studio-f1-help"></a>Berichtsserver im Management Studio (F1-Hilfe)
@@ -24,13 +24,13 @@ ms.locfileid: "66100075"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Berichtsserveraufträge abbrechen](cancel-report-server-jobs-management-studio.md)  
+-   [Cancel Report Server Jobs (Berichtsserveraufträge abbrechen)](cancel-report-server-jobs-management-studio.md)  
   
--   [Katalogelemente löschen](delete-catalog-items-management-studio.md)  
+-   [Delete Catalog Items (Katalogelemente löschen)](delete-catalog-items-management-studio.md)  
   
 -   [Seite Auftragseigenschaften](job-properties-management-studio.md)  
   
--   [Neuer freigegebener Zeitplan](new-shared-schedule-management-studio.md)  
+-   [New Shared Schedule (Neuer freigegebener Zeitplan)](new-shared-schedule-management-studio.md)  
   
 -   [New System Role (Neue Systemrolle)](new-system-role-management-studio.md)  
   
@@ -54,9 +54,9 @@ ms.locfileid: "66100075"
   
 -   [System Role Properties (Systemrolleneigenschaften)](system-role-properties-management-studio.md)  
   
--   [Benutzerrolleneigenschaften](user-role-properties-management-studio.md)  
+-   [User Role Properties (Benutzerrolleneigenschaften)](user-role-properties-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionsreferenz (Reporting Services)](../feature-reference-reporting-services.md)   
  [Einführung in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   

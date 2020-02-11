@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105211"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup-Funktion (Berichts-Generator und SSRS)
@@ -35,10 +35,10 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) Ein Ausdruck, der im aktuellen Bereich ausgewertet wird und der den Satz der zu suchenden Namen oder Schlüssel angibt. Beispiel für einen mehrwertigen Parameter: `=Parameters!IDs.value`.  
   
  *destination_expression*  
- (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ID.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der für jede Zeile in einem Dataset ausgewertet wird und der den Namen oder den Schlüssel für die Übereinstimmung angibt. Beispiel: `=Fields!ID.Value`.  
   
  *result_expression*  
- (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in denen *Source_expression* = *Destination_expression*, und den abzurufenden Wert angibt. Beispiel: `=Fields!Name.Value`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ (`Variant`) Ein Ausdruck, der für die Zeile im Dataset ausgewertet wird, in der *source_expression* = *destination_expression*, und der den abzurufenden Wert angibt. Beispiel: `=Fields!Name.Value`.  
   
  *Dataset (dataset)*  
  Eine Konstante, die den Namen eines Datasets im Bericht angibt. Beispiel: "Colors".  
@@ -46,8 +46,9 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="return"></a>Rückgabewert  
  Gibt einen Wert vom Typ `VariantArray` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
-## <a name="remarks"></a>Hinweise  
- Verwenden Sie `Multilookup`, um eine Wertemenge aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1:1-Beziehung verfügt. `MultiLookup` ist mit dem Aufrufen von `Lookup` für eine Menge von Namen oder Schlüsseln vergleichbar. Beispiel: Für einen mehrwertigen Parameter, der auf Primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle verwenden, um zugeordnete Werte aus einem Dataset abzurufen, das nicht an den Parameter oder die Tabelle gebunden ist.  
+## <a name="remarks"></a>Bemerkungen  
+ Verwenden Sie `Multilookup`, um eine Wertemenge aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1:1-Beziehung verfügt. 
+  `MultiLookup` ist mit dem Aufrufen von `Lookup` für eine Menge von Namen oder Schlüsseln vergleichbar. Beispiel: Für einen mehrwertigen Parameter, der auf Primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle verwenden, um zugeordnete Werte aus einem Dataset abzurufen, das nicht an den Parameter oder die Tabelle gebunden ist.  
   
  Mit `Multilookup` wird Folgendes ausgeführt:  
   
@@ -61,7 +62,8 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Es gelten folgende Einschränkungen:  
   
--   `Multilookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
+-   
+  `Multilookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
   
 -   Nur eine Suchebene wird unterstützt. Ein Quell-, Ziel- oder Ergebnisausdruck kann keinen Verweis auf eine Suchfunktion einschließen.  
   
@@ -69,7 +71,8 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Quell-, Ziel- und Ergebnisausdrücke können keine Verweise auf Berichts- oder Gruppenvariablen einschließen.  
   
--   `Multilookup` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
+-   
+  `Multilookup` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
   
     -   Dynamische Verbindungszeichenfolgen für eine Datenquelle.  
   
@@ -90,7 +93,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Das Dataset "CategoryNames" enthält den Kategoriebezeichner und den Kategorienamen, wie in der folgenden Tabelle gezeigt.  
   
-|ID|Name|  
+|id|Name|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  
@@ -110,11 +113,11 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 ## <a name="example"></a>Beispiel  
  Angenommen, ein Dataset "ProductColors" enthält ein Farbbezeichnerfeld "ColorID" und ein Farbwertfeld "Color", wie in der folgenden Tabelle gezeigt.  
   
-|ColorID|Farbe|  
+|ColorID|Color|  
 |-------------|-----------|  
 |1|Red|  
-|2|Blue|  
-|3|Green|  
+|2|Blau|  
+|3|Grün|  
   
  Angenommen, der mehrwertige Parameter *MyColors* ist nicht an ein Dataset für seine verfügbaren Werte gebunden. Die Standardwerte für den Parameter sind auf 2 und 3 festgelegt. Wenn der folgende Ausdruck in einem Textfeld in einer Tabelle platziert wird, werden die ausgewählten Werte für den Parameter zu einer durch Trennzeichen getrennten Liste verkettet, und es wird "Blue, Green" angezeigt.  
   
@@ -122,7 +125,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
 =Join(MultiLookup(Parameters!MyColors.Value,Fields!ColorID.Value,Fields!Color.Value,"ProductColors"),", ")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

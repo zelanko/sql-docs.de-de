@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102183"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Sicherheit (Seite) (Siteeinstellungen, Berichts-Manager)
@@ -33,26 +33,26 @@ ms.locfileid: "66102183"
   
 2.  Klicken Sie oben auf der Seite auf **Siteeinstellungen**. Dadurch wird die Seite Allgemeine Eigenschaften der Website geöffnet.  
   
-3.  Wählen Sie die Registerkarte **Sicherheit** .  
+3.  Wählen Sie die Registerkarte **Sicherheit** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um eine vorhandene Rollenzuweisung zu löschen. Ehe Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben dem zu entfernenden Gruppen- oder Benutzernamen. Sie können keine Rollenzuweisung löschen, wenn sie die letzte und einzige Zuweisung ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   
  **Neue Rollenzuweisung**  
- Klicken Sie auf diese Schaltfläche, um die Seite Neue Systemrollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Systemrollenzuweisungen für die Berichtsserversite erstellen. Weitere Informationen finden Sie unter [neue Systemrollenzuweisung: Bearbeiten System Role Assignments Page &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um die Seite Neue Systemrollenzuweisung zu öffnen. Auf dieser Seite können Sie weitere Systemrollenzuweisungen für die Berichtsserversite erstellen. Weitere Informationen finden Sie unter [neue System Rollenzuweisungen: Seite "System Rollenzuweisungen bearbeiten" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
  **Bearbeiten**  
- Klicken Sie auf diese Schaltfläche, um die Seite Systemrollenzuweisungen bearbeiten zu öffnen. Auf dieser Seite können Sie einzelne Systemrollenzuweisungen für die Berichtsserversite bearbeiten. Weitere Informationen finden Sie unter [neue Systemrollenzuweisung: Bearbeiten System Role Assignments Page &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
+ Klicken Sie auf diese Schaltfläche, um die Seite Systemrollenzuweisungen bearbeiten zu öffnen. Auf dieser Seite können Sie einzelne Systemrollenzuweisungen für die Berichtsserversite bearbeiten. Weitere Informationen finden Sie unter [neue System Rollenzuweisungen: Seite "System Rollenzuweisungen bearbeiten" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-system-role-assignments-edit-system-role-assignments-page-report-manager.md).  
   
- **Gruppen- oder Benutzernamen**  
+ **Gruppe oder Benutzer**  
  Führt die Gruppen und Benutzer auf, die Teil einer vorhandenen Rollenzuweisung sind. Vorhandene Rollenzuweisungen für den aktuellen Ordner werden für Gruppen und Benutzer definiert, die in dieser Spalte angezeigt werden. Klicken Sie auf **Bearbeiten** neben einem Gruppen- oder Benutzernamen, um Einzelheiten zu Rollenzuweisungen anzuzeigen oder zu bearbeiten.  
   
- **Roles**  
- Führt eine oder mehrere Rollendefinitionen auf, die Teil einer vorhandenen Rollenzuweisung sind. Falls einem Gruppen- oder Benutzerkonto mehrere Rollen zugewiesen sind, kann diese Gruppe bzw. dieser Benutzer alle in diesen Rollen enthaltenen Tasks ausführen. Verwenden Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)], um die Gruppe der von einer Rolle unterstützten Aufgaben anzuzeigen. Sie können im Berichts-Manager keine Rollen anzeigen, erstellen, ändern oder löschen. Anweisungen hierzu finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ **Rollen**  
+ Führt eine oder mehrere Rollendefinitionen auf, die Teil einer vorhandenen Rollenzuweisung sind. Falls einem Gruppen- oder Benutzerkonto mehrere Rollen zugewiesen sind, kann diese Gruppe bzw. dieser Benutzer alle in diesen Rollen enthaltenen Tasks ausführen. Verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Sie, um den von jeder Rolle unterstützten Satz von Aufgaben anzuzeigen. Sie können im Berichts-Manager keine Rollen anzeigen, erstellen, ändern oder löschen. Anweisungen hierzu finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](security/granting-permissions-on-a-native-mode-report-server.md)  
   
   

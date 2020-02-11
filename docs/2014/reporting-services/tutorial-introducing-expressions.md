@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098849"
 ---
-# <a name="tutorial-introducing-expressions"></a>Tutorial: Einführung in Ausdrücke
-  Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie die **Ausdruck** Ausdrücke schreiben, die Namen von Werten in einem separaten Dataset zu, suchen verketten im Dialogfeld angezeigt, verschiedene Bilder anhand von Feldwerten und So weiter.  
+# <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
+  Mit Ausdrücken können Sie leistungsfähige und flexible Berichte erstellen. In diesem Lernprogramm erfahren Sie, wie Sie Ausdrücke mit allgemeinen Funktionen und Operatoren erstellen und implementieren. Verwenden Sie das Dialogfeld **Ausdruck** , um Ausdrücke zu schreiben, die namens Werte verketten, Werte in einem separaten Dataset suchen, verschiedene Bilder auf der Grundlage von Feldwerten anzeigen usw.  
   
  Der Bericht ist ein Balkenbericht mit abwechselnden Zeilenfarben (Weiß und eine beliebige andere Farbe). Der Bericht enthält einen Parameter zur Auswahl der Farbe für alle Zeilen, die nicht weiß dargestellt werden sollen.  
   
@@ -26,58 +26,58 @@ ms.locfileid: "66098849"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a> Lernziele  
+##  <a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#Setup)  
   
-2.  [Aktualisieren der Standardnamen der Daten Datenquellen- und Datasetinformationen](#UpdateNames)  
+2.  [Aktualisieren der Standardnamen der Datenquelle und des Datensets](#UpdateNames)  
   
-3.  [Anzeigename, Vorname, Vornamens und Nachname des](#Concatenate)  
+3.  [Anzeigen des Vornamens, des Anfangsbuchstabens des zweiten Vornamens und des Nachnamens](#Concatenate)  
   
-4.  [Verwenden Sie Bilder, um die Anzeige des Geschlechts](#Gender)  
+4.  [Verwenden von Bildern für die Anzeige des Geschlechts](#Gender)  
   
-5.  [Suchen des CountryRegion-namens](#Lookup)  
+5.  [Suchen des CountryRegion-Namens](#Lookup)  
   
 6.  [Ermitteln der vergangenen Tage seit dem letzten Kauf](#Count)  
   
 7.  [Verwenden eines Indikators zur Anzeige des Umsatzvergleichs](#Indicator)  
   
-8.  [Stellen Sie den Bericht aus, den eine "Grün-weißen Balken gemeldet.](#GreenBar)  
+8.  [Erstellen des Berichts als "grüner Balken Bericht"](#GreenBar)  
   
 ### <a name="other-optional-steps"></a>Weitere optionale Schritte  
   
 -   [Formatieren der Datumsspalte](#DateFormat)  
   
--   [Hinzufügen eines Berichtstitels](#Title)  
+-   [Hinzufügen eines Berichts Titels](#Title)  
   
 -   [Speichern des Berichts](#Save)  
   
- Ungefähre Dauer dieses Lernprogramms: 30 Minuten.  
+ Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten  
+##  <a name="Setup"></a>1. Erstellen eines Tabellen Berichts und eines Datasets mit dem Tabellen-oder Matrix-Assistenten  
  Erstellen Sie einen Tabellenbericht, eine Datenquelle und ein Dataset. Für den Entwurf der Tabelle werden nur einige wenige Felder verwendet. Nach Fertigstellung des Assistenten werden Sie manuell Spalten hinzufügen. Mit dem Assistenten können Sie die Tabelle einfach gestalten und formatieren.  
   
 > [!NOTE]  
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>So erstellen Sie einen neuen Tabellenbericht  
   
-1.  Klicken Sie auf **starten**, zeigen Sie auf **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
+1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, klicken Sie auf [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Das Dialogfeld **Erste Schritte** wird angezeigt.  
-  
-    > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
+     Das Dialogfeld " **Getting Started** " wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn Sie die ClickOnce-Version von Berichts-Generator lieber, Berichts-Manager öffnen, und klicken Sie auf **Berichts-Generator**, oder wechseln Sie zu einer SharePoint-Website, die Inhaltstypen für die Reporting Services wie z. B. Berichte aktiviert sind, und klicken Sie auf  **Berichts-Generator-Bericht** auf die **neues Dokument** Menü auf der **Dokumente** Registerkarte eine freigegebene Dokumentbibliothek.  
+    >  Wenn das Dialogfeld " **Getting Started** " nicht angezeigt wird, klicken Sie auf der Schaltfläche " **Berichts-Generator** " auf **neu**.  
+  
+    > [!NOTE]  
+    >  Wenn Sie die ClickOnce-Version von Berichts-Generator bevorzugen, öffnen Sie Berichts-Manager, und klicken Sie auf **Berichts-Generator**, oder wechseln Sie zu einer SharePoint-Website, auf der Reporting Services Inhaltstypen wie Berichte aktiviert sind, und klicken Sie im Menü **Neues Dokument** auf der Registerkarte **Dokumente** einer freigegebenen Dokumentbibliothek auf **Berichts-Generator Bericht** .  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -87,11 +87,11 @@ ms.locfileid: "66098849"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server** aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
+6.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine Datenquelle vom Typ **SQL Server**aus. Wählen Sie in der Liste eine Datenquelle aus, oder navigieren Sie zum Berichtsserver, um eine Datenquelle auszuwählen.  
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
+8.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
   
 9. Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66098849"
   
      Die Abfrage spezifiziert Spaltennamen mit Geburtsname, Vorname, Nachname, Bundesland oder Kanton, Bezeichner für Land bzw. Region, Geschlecht sowie Käufe des laufenden Jahrs.  
   
-10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** ( **!** ). Das Resultset enthält 20 Datenzeilen und enthält die folgenden Spalten: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
+10. Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Ausführen** (**!**). Das Resultset umfasst 20 Zeilen mit Daten und umfasst folgenden Spalten: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase und LastPurchase.  
   
 11. Klicken Sie auf **Weiter**.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66098849"
     > [!NOTE]  
     >  Die Felder FirstName und LastName werden nicht eingeschlossen. Sie werden in einem späteren Schritt hinzugefügt.  
   
-13. In der **Werte** auflisten, mit der rechten Maustaste `CountryRegionID` , und klicken Sie auf die **Summe** Option.  
+13. Klicken Sie in der Liste **Werte** mit der `CountryRegionID` rechten Maustaste, und klicken Sie auf die Option **Sum** .  
   
      Sum wird nicht länger auf CountryRegionID angewendet.  
   
@@ -154,9 +154,9 @@ ms.locfileid: "66098849"
   
 16. Klicken Sie auf der Seite **Layout auswählen** auf **Weiter**.  
   
-17. Auf der **Auswählen eines Formats** auf **Slate**, und klicken Sie dann auf **Fertig stellen**.  
+17. Klicken Sie auf der Seite Format **auswählen** auf **Slate**, und klicken Sie dann auf **Fertig**stellen.  
   
-##  <a name="UpdateNames"></a> 2. Aktualisieren der Standardnamen der Datenquelle und des Datensets  
+##  <a name="UpdateNames"></a>2. Aktualisieren der Standardnamen der Datenquelle und des Datasets  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>So aktualisieren Sie den Standardnamen der Datenquelle  
   
@@ -178,12 +178,12 @@ ms.locfileid: "66098849"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a> 3. Anzeigen des Vornamens, des Anfangsbuchstabens des zweiten Vornamens und des Nachnamens  
- Verwenden Sie die **Left**-Funktion und den **Concatenate (Verketten)** ( **&** )-Operator in einem Ausdruck, um einen Namen mit den Anfangsbuchstaben des zweiten Vornamens und dem Nachnamen zu erhalten. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.  
+##  <a name="Concatenate"></a>3. Anzeigen von Vorname, ursprünglicher Name und Nachname  
+ Verwenden Sie die **Left**-Funktion und den **Concatenate (Verketten)** (**&**)-Operator in einem Ausdruck, um einen Namen mit den Anfangsbuchstaben des zweiten Vornamens und dem Nachnamen zu erhalten. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.  
   
 #### <a name="to-add-the-name-column"></a>So fügen Sie die Spalte "Name" hinzu  
   
-1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince**, zeigen Sie auf **Spalte einfügen** und klicken Sie auf **Links**.  
+1.  Klicken Sie mit der rechten Maustaste auf die Spalte **StateProvince** , zeigen Sie auf **Spalte einfügen**und klicken Sie auf **Links**.  
   
      Links von der Spalte **StateProvince** wird eine neue Spalte hinzugefügt.  
   
@@ -197,15 +197,15 @@ ms.locfileid: "66098849"
   
      Die Funktion **Left** wird dem Ausdruck hinzugefügt.  
   
-6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 7.  Doppelklicken Sie in der Liste **Werte** auf **FirstName**.  
   
 8.  Geben Sie **, 1)** ein  
   
-     Der Ausdruck extrahiert ein Zeichen aus dem Wert **FirstName**, beginnend von links.  
+     Der Ausdruck extrahiert ein Zeichen aus dem Wert **FirstName** , beginnend von links.  
   
-9. Geben Sie **&" "&** ein  
+9. Geben Sie **& "" ein &**  
   
 10. Doppelklicken Sie in der Liste **Werte** auf **LastName**.  
   
@@ -215,7 +215,7 @@ ms.locfileid: "66098849"
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Gender"></a> 4. Verwenden von Bildern für die Anzeige des Geschlechts  
+##  <a name="Gender"></a>4. Verwenden von Bildern zum Anzeigen von Geschlecht  
  Verwenden Sie Bilder, um das Geschlecht einer Person anzuzeigen, und weisen Sie für den Fall unbekannter Werte ein drittes Bild zu. Sie fügen dem Bericht drei versteckte Bilder und eine neue Spalte für die Bildanzeige hinzu. Sie legen dann fest, welches Bild auf Grundlage des Werts im Feld "Geschlecht" in der Spalte angezeigt wird.  
   
  Um eine Farbe auf die Tabellenzelle anzuwenden, die das Bild enthält, wenn Sie aus dem Bericht einen Balkenbericht machen, fügen Sie zuerst ein Rechteck hinzu und dann das Bild in das Rechteck ein. Sie benötigen das Rechteck, da Sie einem Rechteck eine Hintergrundfarbe zuordnen können, nicht aber einem Bild.  
@@ -274,7 +274,7 @@ ms.locfileid: "66098849"
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Switch**.  
   
-5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 6.  Doppelklicken Sie in der Liste **Werte** auf **Geschlecht**.  
   
@@ -296,16 +296,16 @@ ms.locfileid: "66098849"
   
 14. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Lookup"></a> 5. Suchen des CountryRegion-Namens  
+##  <a name="Lookup"></a>5. Suchen Sie den CountryRegion-Namen.  
  Erstellen Sie das CountryRegion-Dataset, und verwenden Sie die **Lookup**-Funktion, um den Namen des Lands/der Region anstelle des Bezeichners des Lands/der Region anzuzeigen.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>So erstellen Sie das CountryRegion-Dataset  
   
 1.  Klicken Sie auf **Entwurf** , um zur Entwurfsansicht zurückzukehren.  
   
-2.  Klicken Sie im Berichtsdatenbereich auf **Neu** und anschließend auf **Dataset**.  
+2.  Klicken Sie im Berichtsdaten Bereich auf **neu** , und klicken Sie dann auf **DataSet**.  
   
-3.  Klicken Sie auf **Verwenden Sie ein in den eigenen Bericht eingebettetes Dataset**.  
+3.  Klicken Sie auf **Ein in den eigenen Bericht eingebettetes Dataset verwenden**.  
   
 4.  Wählen Sie in der Liste **Datenquelle** die Option „Datenquelle_für_Ausdrücke“.  
   
@@ -332,17 +332,17 @@ ms.locfileid: "66098849"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Klicken Sie auf **Ausführen** ( **!** ), um die Abfrage auszuführen.  
+9. Klicken Sie auf **Ausführen** (**!**), um die Abfrage auszuführen.  
   
      Abfrage-Ergebnisse sind die Land/Region-Bezeichner und -Namen.  
   
 10. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-11. Klicken Sie auf **OK**, um das Dialogfeld **Dataseteigenschaften** zu schließen.  
+11. Klicken Sie auf **OK** , um das Dialogfeld **Dataseteigenschaften** zu schließen.  
   
 #### <a name="to-look-up-values-in-the-countryregion-dataset"></a>So schlagen Sie Werte im CountryRegion-Dataset nach  
   
-1.  Klicken Sie auf die **Country Region ID** Spaltentitel und löschen Sie den Text: ID.  
+1.  Klicken Sie auf den Spaltentitel **Country Region ID** und löschen Sie den Text „ID“.  
   
 2.  Klicken Sie mit der rechten Maustaste in die Datenzelle der Spalte **Country Region** und klicken Sie auf **Ausdruck**.  
   
@@ -354,9 +354,9 @@ ms.locfileid: "66098849"
   
 5.  Doppelklicken Sie in der Liste **Element** auf **Lookup**.  
   
-6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
-7.  In der **Werte** auflisten, doppelklicken Sie auf `CountryRegionID`.  
+7.  Doppelklicken **** Sie `CountryRegionID`in der Liste Werte auf.  
   
 8.  Wenn der Cursor nicht bereits unmittelbar nach `CountryRegionID.Value` platziert ist, korrigieren Sie das.  
   
@@ -370,8 +370,8 @@ ms.locfileid: "66098849"
   
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Count"></a> 6. Ermitteln der vergangenen Tage seit dem letzten Kauf  
- Fügen Sie eine Spalte aus, und verwenden Sie dann die **jetzt** Funktion oder die `ExecutionTime` integrierte globale Variable, um die Anzahl der Tage ab heute zu berechnen, da eine Person dem letzten erwirbt.  
+##  <a name="Count"></a>6. Anzahl der Tage seit dem letzten Kauf  
+ Fügen Sie eine Spalte hinzu, und **** verwenden Sie anschließend die `ExecutionTime` Now-Funktion oder die integrierte globale Variable, um die Anzahl der Tage seit dem letzten Einkauf einer Person zu berechnen.  
   
 #### <a name="to-add-the-days-ago-column"></a>So fügen Sie die Spalte "Vor (n) Tagen)" hinzu  
   
@@ -393,20 +393,20 @@ ms.locfileid: "66098849"
   
 8.  Geben Sie **„d“,** ein.  
   
-9. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+9. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 10. Doppelklicken Sie in der Liste **Werte** auf **LastPurchase**.  
   
 11. Wenn der Cursor nicht bereits unmittelbar nach `Fields!LastPurchase.Value` platziert ist, korrigieren Sie das.  
   
-12. Geben Sie **,** ein  
+12. Geben Sie ein **,**  
   
 13. Klicken Sie in der Liste **Kategorie** erneut auf **Datum & Uhrzeit**.  
   
 14. Doppelklicken Sie in der Liste **Element** auf **Now**.  
   
     > [!WARNING]  
-    >  In Produktionsberichten dürfen Sie nicht die **Now**-Funktion in Ausdrücken verwenden, die beim Rendern des Berichts mehrmals ausgewertet werden (z.B. in den Detailzeilen eines Berichts). Der Wert von **Now** ändert sich von Zeile zu Zeile, und die verschiedenen Werte wirken sich auf die Auswertungsergebnisse der Ausdrücke aus, was zu inkonsistenten Resultaten führt. Sie müssen stattdessen die globale Variable `ExecutionTime` verwenden, die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bereitgestellt wird.  
+    >  In Produktionsberichten dürfen Sie nicht die **Now** -Funktion in Ausdrücken verwenden, die beim Rendern des Berichts mehrmals ausgewertet werden (z.B. in den Detailzeilen eines Berichts). Der Wert von **Now** ändert sich von Zeile zu Zeile, und die verschiedenen Werte wirken sich auf die Auswertungsergebnisse der Ausdrücke aus, was zu inkonsistenten Resultaten führt. Sie müssen stattdessen die globale Variable `ExecutionTime` verwenden, die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bereitgestellt wird.  
   
 15. Wenn der Cursor nicht bereits unmittelbar nach `Now(` platziert ist, korrigieren Sie das.  
   
@@ -416,10 +416,10 @@ ms.locfileid: "66098849"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a> 7. Verwenden eines Indikators zur Anzeige des Umsatzvergleichs  
- Fügen Sie eine neue Spalte hinzu, und verwenden Sie einen Indikator, um anzuzeigen, ob eine Person Jahr-bis-heute (seit Jahresbeginn) Käufe oberhalb oder unterhalb des Durchschnitts, die seit Jahresbeginn. Die Funktion **Round** entfernt die Dezimalstellen aus den Werten.  
+##  <a name="Indicator"></a>7. Verwenden eines Indikators zur Anzeige des Umsatz Vergleichs  
+ Fügen Sie eine neue Spalte hinzu, und verwenden Sie einen Indikator, um anzuzeigen, ob die Käufe im laufenden Jahr oberhalb oder unterhalb des durchschnittlichen YTD-Einkäufen liegen. Die Funktion **Round** entfernt die Dezimalstellen aus den Werten.  
   
- Für die Konfiguration des Indikators und seiner Zustände sind mehrere Schritte erforderlich. Wenn Sie im Verfahren "So konfigurieren den Indikator" wollen können Sie fortfahren und kopieren und Einfügen die fertigen Ausdrücke aus diesem Lernprogramm in der **Ausdruck** Dialogfeld.  
+ Für die Konfiguration des Indikators und seiner Zustände sind mehrere Schritte erforderlich. Wenn Sie möchten, können Sie im Verfahren "so konfigurieren Sie den Indikator" fortfahren und die fertigen Ausdrücke aus diesem Tutorial in das Dialogfeld **Ausdruck** kopieren bzw. einfügen.  
   
 #### <a name="to-add-the--or---avg-sales-column"></a>So fügen Sie die Spalte "+/- durchschnittl. Käufe" hinzu  
   
@@ -449,19 +449,19 @@ ms.locfileid: "66098849"
   
 4.  Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
-5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+5.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 6.  Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
 7.  Wenn der Cursor nicht bereits unmittelbar nach `Fields!YTDPurchase.Value` platziert ist, korrigieren Sie das.  
   
-8.  Typ **-**  
+8.  Sorte**-**  
   
 9. Erweitern Sie die **Allgemeinen Funktionen** erneut und klicken Sie auf **Aggregat**.  
   
 10. Doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
-11. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+11. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 12. Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -473,27 +473,27 @@ ms.locfileid: "66098849"
   
 15. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-16. Wählen Sie als **Maßeinheit für Status** **Numerisch**aus.  
+16. Wählen Sie als **Maßeinheit für Status****Numerisch**aus.  
   
-17. Klicken Sie in der Reihe mit dem Pfeil nach unten auf die Schaltfläche **fx** rechts neben dem Textfeld für den **Start**-Wert.  
+17. Klicken Sie in der Reihe mit dem Pfeil nach unten auf die Schaltfläche **fx** rechts neben dem Textfeld für den **Start** -Wert.  
   
 18. Erweitern Sie im Dialogfeld **Ausdruck** die Option **Allgemeine Funktionen**, und klicken Sie anschließend auf **Mathematisch**.  
   
 19. Doppelklicken Sie in der Liste **Element** auf **Round**.  
   
-20. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+20. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 21. Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
 22. Wenn der Cursor nicht bereits unmittelbar nach `Fields!YTDPurchase.Value` platziert ist, korrigieren Sie das.  
   
-23. Typ **-**  
+23. Sorte**-**  
   
 24. Erweitern Sie die **Allgemeinen Funktionen** erneut und klicken Sie auf **Aggregat**.  
   
 25. Doppelklicken Sie in der Liste **Element** auf **Avg**.  
   
-26. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+26. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 27. Doppelklicken Sie in der Liste **Werte** auf **YTDPurchase**.  
   
@@ -509,11 +509,11 @@ ms.locfileid: "66098849"
   
 32. Klicken Sie auf die Zeile mit dem horizontalen Pfeil, und klicken Sie auf **Löschen**.  
   
-33. Geben Sie in der Zeile mit dem nach oben zeigenden Pfeil im Feld **Start** den Wert **0** ein  
+33. Geben Sie in der Zeile mit dem nach oben zeigenden Pfeil im Feld **Start** den Wert **0**ein  
   
 34. Klicken Sie auf die Schaltfläche **fx** rechts neben dem Textfeld für den **Ende** -Wert.  
   
-35. In der **Ausdruck** Dialogfeld erstellen den Ausdruck: `=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
+35. Erstellen Sie im Dialogfeld **Ausdruck** den Ausdruck:`=Round(Fields!YTDPurchase.Value - Avg(Fields!YTDPurchase.Value, "Expressions")) >0`  
   
 36. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -521,7 +521,7 @@ ms.locfileid: "66098849"
   
 38. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="GreenBar"></a> 8. Stellen Sie den Bericht aus, den eine "Grün-weißen Balken gemeldet.  
+##  <a name="GreenBar"></a>8. machen Sie den Bericht zu einem "grünen Balken Bericht".  
  Verwenden Sie einen Parameter, um die Farbe zu bestimmen, die abwechselnd auf die Zeilen im Bericht angewendet wird, um einen Balkenbericht zu erstellen.  
   
 #### <a name="to-add-a-parameter"></a>So fügen Sie einen Parameter hinzu  
@@ -532,9 +532,9 @@ ms.locfileid: "66098849"
   
      Das Dialogfeld **Berichtsparametereigenschaften** wird geöffnet.  
   
-3.  Geben Sie in die **Eingabeaufforderung** **Farbe auswählen**ein  
+3.  Geben Sie in die **Eingabeaufforderung****Farbe auswählen**ein  
   
-4.  Geben Sie in **Name** **Spaltenfarbe** ein  
+4.  Geben Sie in **Name****Spaltenfarbe**ein  
   
 5.  Klicken Sie im linken Bereich auf **Verfügbare Werte**.  
   
@@ -542,7 +542,7 @@ ms.locfileid: "66098849"
   
 7.  Klicken Sie auf **Hinzufügen**.  
   
-8.  In der **Bezeichnung** geben: **Gelb**  
+8.  Geben Sie im Feld **Bezeichnung** Folgendes ein: **Gelb** .  
   
 9. Geben Sie im Feld **Wert** Folgendes ein: **Gelb**  
   
@@ -588,7 +588,7 @@ ms.locfileid: "66098849"
   
 9. Doppelklicken Sie in der Liste **Element** auf **RunningValue**.  
   
-10. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)** .  
+10. Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
 11. Doppelklicken Sie in der Liste **Werte** auf **FirstName**.  
   
@@ -600,7 +600,7 @@ ms.locfileid: "66098849"
   
 15. Wenn der Cursor nicht bereits unmittelbar nach `Count(` platziert ist, korrigieren Sie das.  
   
-16. Löschen Sie die linke Klammer, und geben Sie dann **, "Expressions")**  
+16. Löschen Sie die linke Klammer, und geben Sie **, "Ausdrücke")** ein.  
   
     > [!NOTE]  
     >  "Ausdrücke" ist der Name des Datasets, das zum Zählen der Datenzeilen verwendet wird.  
@@ -620,7 +620,7 @@ ms.locfileid: "66098849"
   
 22. Wenn der Cursor nicht bereits unmittelbar nach `Parameters!RowColor.Value` platziert ist, korrigieren Sie das.  
   
-23. Geben Sie **, "White")**  
+23. Geben Sie **, "White")** ein.  
   
      Der vollständige Ausdruck lautet wie folgt: `=IIf(RunningValue(Fields!FirstName.Value,Count, "Expressions") Mod 2 =0, Parameters!RowColor.Value, "White")`  
   
@@ -638,7 +638,7 @@ ms.locfileid: "66098849"
   
      Der Bericht wird gerendert und die abwechselnden Zeilen weisen den gewünschten Hintergrund auf.  
   
-##  <a name="DateFormat"></a> (optional) Formatieren der Datumsspalte  
+##  <a name="DateFormat"></a>optionale Formatieren der Datums Spalte  
  Formatieren Sie die Spalte **Last Purchase**, die Datumsangaben enthält.  
   
 #### <a name="to-format-date-column"></a>So formatieren Sie die Datumsspalte  
@@ -651,7 +651,7 @@ ms.locfileid: "66098849"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a> (optional) Hinzufügen eines Berichtstitels  
+##  <a name="Title"></a>optionale Hinzufügen eines Berichts Titels  
  Hinzufügen eines Titels zu einem Bericht  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
@@ -664,7 +664,7 @@ ms.locfileid: "66098849"
   
 4.  Klicken Sie im Dialogfeld **Textfeldeigenschaften** auf **Schriftart**.  
   
-5.  Wählen Sie in der Liste **Schriftgrad** den Eintrag **18pt** aus.  
+5.  Wählen Sie in der Liste **Schriftgrad** den Eintrag **18pt**aus.  
   
 6.  Wählen Sie in der Liste **Farbe** die Option **Grau** aus.  
   
@@ -672,14 +672,14 @@ ms.locfileid: "66098849"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a> (optional) Speichern des Berichts  
+##  <a name="Save"></a>optionale Speichern des Berichts  
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern. Weitere Informationen finden Sie unter [Speichern von Berichten &#40;Berichts-Generator&#41;](report-builder/saving-reports-report-builder.md).  
   
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
+1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
   
 2.  Klicken Sie auf **Letzte Sites und Server**.  
   
@@ -695,7 +695,7 @@ ms.locfileid: "66098849"
   
 #### <a name="to-save-the-report-to-your-computer"></a>So speichern Sie den Bericht auf Ihrem Computer  
   
-1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
+1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
   
 2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
@@ -703,7 +703,7 @@ ms.locfileid: "66098849"
   
 4.  Klicken Sie auf **Speichern**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   

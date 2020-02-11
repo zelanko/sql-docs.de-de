@@ -1,5 +1,5 @@
 ---
-title: Ungültige named Pipe-Name kann Upgrade blockieren | Microsoft-Dokumentation
+title: Ungültiger Named Pipe Name kann das Upgrade blockieren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dddd5da66f09226579a6366baa1a16a6ab00d6bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094193"
 ---
 # <a name="invalid-named-pipe-name-can-block-upgrade"></a>Ungültiger Named Pipe-Name kann Upgrade blockieren
@@ -26,14 +26,14 @@ ms.locfileid: "66094193"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
- Während des Upgrades, startet das Setupprogramm die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz mit Unterstützung von freigegebenem Arbeitsspeicher, einer named Pipe, die nur lokale Verbindungen akzeptiert. Wenn die auf dem Server angegebene Named Pipe nicht leer ist, muss die beginnen mit der Zeichenfolge "\\\\. \pipe\\" gültig ist. Wenn der Named Pipe-Name nicht gültig ist, startet [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht, und das Setup schlägt fehl.  
+## <a name="description"></a>BESCHREIBUNG  
+ Während des Upgrades startet das Setup Programm die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] Instanz mit Shared Memory-Unterstützung, einer Named Pipe, die nur lokale Verbindungen akzeptiert. Wenn der auf dem Server angegebene Pipename nicht leer ist, muss er mit der Zeichenfolge\\\\".\pipe\\" beginnen, um gültig zu sein. Wenn der Named Pipe-Name nicht gültig ist, startet [!INCLUDE[ssDE](../../includes/ssde-md.md)] nicht, und das Setup schlägt fehl.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
- Verwenden der  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfiguration** auf einen gültigen Pipenamen anzugeben, und führen Sie Setup.  
+ Verwenden Sie das ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerk Hilfsprogramm** , um einen gültigen Pipenamen anzugeben, und führen Sie dann das Setup aus.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

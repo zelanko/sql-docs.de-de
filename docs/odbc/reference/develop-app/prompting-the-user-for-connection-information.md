@@ -1,5 +1,5 @@
 ---
-title: Den Benutzer aufgefordert, Verbindungsinformationen | Microsoft-Dokumentation
+title: Benutzer werden zur Eingabe von Verbindungsinformationen aufgefordert | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,31 +21,31 @@ ms.assetid: da98e9b9-a4ac-4a9d-bae6-e9252b1fe1e5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7dfc63aaa6f162d382d6d8b3c627ff078c76825c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68079064"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Aufforderung an Benutzer zur Eingabe von Verbindungsinformationen
-Wenn die Anwendung verwendet **SQLConnect** und fordert den Benutzer für alle Verbindungsinformationen, z. B. einen Benutzernamen und ein Kennwort, sie müssen dazu selbst. Die Anwendung das "Erscheinungsbild" steuern können, kann die Anwendung, Treiber-spezifischen Code enthalten erzwingen. Dies tritt auf, wenn die Anwendung benötigt, um den Benutzer für treiberspezifische Verbindungsinformationen aufzufordern. Dies stellt eine unmögliche Situation für allgemeine Anwendungen, die konzipiert werden alle Treiber, wie Treiber, die nicht vorhanden sind, wenn die Anwendung geschrieben wird.  
+Wenn die Anwendung **SQLCONNECT** verwendet und den Benutzer zur Eingabe von Verbindungsinformationen auffordern muss, wie z. b. Benutzername und Kennwort, muss dies selbst durchführen. Dies ermöglicht es der Anwendung, das "Aussehen und fühlen" zu steuern, es kann jedoch dazu gezwungen werden, dass die Anwendung treiberspezifischen Code enthält. Dieser Fehler tritt auf, wenn die Anwendung den Benutzer zur Eingabe von treiberspezifischen Verbindungsinformationen auffordern muss. Dies stellt eine unmögliche Situation für generische Anwendungen dar, die für die Arbeit mit allen Treibern entwickelt wurden, einschließlich Treiber, die beim Schreiben der Anwendung nicht vorhanden sind.  
   
- **SQLDriverConnect** kann den Benutzer zur Verbindung auffordern. Das benutzerdefinierte Programm zuvor erwähnten könnten z. B. die folgende Verbindungszeichenfolge zu übergeben **SQLDriverConnect**:  
+ **SQLDriverConnect** kann den Benutzer zur Eingabe von Verbindungsinformationen auffordern. Beispielsweise könnte das zuvor erwähnte benutzerdefinierte Programm die folgende Verbindungs Zeichenfolge an **SQLDriverConnect**übergeben:  
   
 ```  
 DSN=XYZ Corp;  
 ```  
   
- Der Treiber kann dann ein Dialogfeld angezeigt, die Benutzer-IDs und Kennwörtern, ähnlich der folgenden Abbildung abfragt.  
+ Der Treiber zeigt möglicherweise ein Dialogfeld an, in dem Benutzer-IDs und Kenn Wörter wie in der folgenden Abbildung angezeigt werden.  
   
- ![Dialogfeld, das für die Benutzer-IDs und Kennwörter fordert](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
+ ![Dialogfeld, das die Eingabe von Benutzer-IDs und Kennwörtern erfordert](../../../odbc/reference/develop-app/media/pr18.gif "pr18")  
   
- Der Treiber für Verbindungsinformationen auffordern kann ist besonders nützlich, um generisch und vertikale Anwendungen. Diese Anwendungen sollten keine treiberspezifische Informationen und müssen die Treiber-Eingabeaufforderung für die benötigten Informationen hält diese Informationen aus der Anwendung. Dies wird von den beiden vorherigen Beispielen gezeigt. Wenn die Anwendung nur der Name der Datenquelle an den Treiber übergeben, wird die Anwendung keine treiberspezifische Informationen enthalten und wurde daher nicht an einen bestimmten Treiber gebunden. Wenn die Anwendung eine vollständige Verbindungszeichenfolge für den Treiber übergeben, war es an den Treiber gebunden, die die Zeichenfolge interpretieren kann.  
+ Der Treiber kann zur Eingabe von Verbindungsinformationen für generische und vertikale Anwendungen besonders nützlich sein. Diese Anwendungen sollten keine treiberspezifischen Informationen enthalten, und bei der Eingabeaufforderung des Treibers für die benötigten Informationen werden diese Informationen von der Anwendung beibehalten. Dies wird in den beiden vorherigen Beispielen gezeigt. Wenn die Anwendung nur den Datenquellen Namen an den Treiber übermittelt hat, enthielt die Anwendung keine treiberspezifischen Informationen und wurde daher nicht an einen bestimmten Treiber gebunden. Wenn die Anwendung eine komplette Verbindungs Zeichenfolge an den Treiber übermittelt hat, wurde sie an den Treiber gebunden, der diese Zeichenfolge interpretieren konnte.  
   
- Eine generische Anwendung möglicherweise einen Schritt weitergehen und nicht einmal eine Datenquelle angeben. Wenn **SQLDriverConnect** empfängt einer leere Verbindungszeichenfolge, die Treiber-Manager zeigt das folgende Dialogfeld.  
+ Eine generische Anwendung kann dies einen Schritt weiter gehen und nicht einmal eine Datenquelle angeben. Wenn **SQLDriverConnect** eine leere Verbindungs Zeichenfolge empfängt, zeigt der Treiber-Manager das folgende Dialogfeld an.  
   
- ![Wählen Sie im Dialogfeld der Datenquelle](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
+ ![Dialogfeld "Datenquelle auswählen"](../../../odbc/reference/develop-app/media/ch06a.gif "CH06A")  
   
- Nachdem der Benutzer eine Datenquelle ausgewählt hat, wird der Treiber-Manager eine Verbindungszeichenfolge angeben, die Datenquelle erstellt und übergibt es an den Treiber. Der Treiber kann dann den Benutzer für zusätzliche Informationen auffordern, benötigten.  
+ Nachdem der Benutzer eine Datenquelle ausgewählt hat, erstellt der Treiber-Manager eine Verbindungs Zeichenfolge, die diese Datenquelle angibt und übergibt sie an den Treiber. Der Treiber kann dann den Benutzer zur Eingabe zusätzlicher Informationen auffordern, die er benötigt.  
   
- Die Bedingungen, unter dem der Treiber den Benutzer fordert, gesteuert werden, indem die *DriverCompletion* kennzeichnen; es gibt Möglichkeiten, auffordern, fordert bei Bedarf oder nie Fragen. Eine vollständige Beschreibung dieses Kennzeichens, finden Sie unter den [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) funktionsbeschreibung.
+ Die Bedingungen, unter denen der Treiber den Benutzer anfordert, werden durch das *DriverCompletion* -Flag gesteuert. Es gibt Optionen, die immer zur Eingabeaufforderung, bei Bedarf auffordern oder nie aufgefordert werden. Eine umfassende Beschreibung dieses Flags finden Sie in der Beschreibung der [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) -Funktion.

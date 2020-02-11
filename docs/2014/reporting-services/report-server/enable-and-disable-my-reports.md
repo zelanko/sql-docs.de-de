@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eba2db61acb691732f81dcd0fa98b0ba48cf921e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103850"
 ---
 # <a name="enable-and-disable-my-reports"></a>Aktivieren und Deaktivieren von "Meine Berichte"
@@ -50,7 +50,7 @@ ms.locfileid: "66103850"
   
  Beachten Sie, dass beim Aktivieren von Meine Berichte der Berichtsserver einen Ordner Meine Berichte für jeden Benutzer mit einem Domänenkonto erstellt, der auf den Link Meine Berichte klickt, selbst wenn der Benutzer keinen solchen Ordner wünscht oder benötigt. Es gibt keine systematische Methode, um zu ermitteln, welche Ordner verwendet werden. Sie müssen manuell prüfen, ob die Ordner einen Inhalt aufweisen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sichern von Meine Berichte](../security/secure-my-reports.md)   
  [Berichtsserver Content Management (einheitlicher SSRS-Modus)](report-server-content-management-ssrs-native-mode.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Verwaltungsprogramm | Microsoft-Dokumentation
+title: Verwaltungs Programm | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: a6c8248a-7a01-42e7-aaed-99dc94d50028
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9cb78dae32bb17598ee0e86c26e621be1b6362c6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68068552"
 ---
 # <a name="administration-program"></a>Verwaltungsprogramm
 > [!NOTE]  
->  Ab Windows XP und Windows Server 2003, ist ODBC in das Windows-Betriebssystem enthalten. Sie sollten nur explizit ODBC in früheren Versionen von Windows installieren.  
+>  Ab Windows XP und Windows Server 2003 ist ODBC im Windows-Betriebssystem enthalten. Sie sollten ODBC nur in früheren Versionen von Windows explizit installieren.  
   
- Ein Verwaltungsprogramm, die ODBC-Administrator ist im Windows SDK/MDAC SDK enthalten. Dieses Programm und können von Benutzern des SDK weiterverteilt werden. Darüber hinaus können Entwickler ihre eigenen Verwaltungsprogrammen schreiben. Im Allgemeinen schreiben Entwickler ihre eigenen Verwaltungsprogrammen nur, wenn sie vollständige Kontrolle über das Konfigurieren von Datenquellen beibehalten möchten oder wenn sie Datenquellen direkt von einer Anwendung konfigurieren, die als ein Verwaltungsprogramm fungiert. Ein Tabellenkalkulationsprogramm kann z. B. Benutzer hinzufügen, und klicken Sie dann die Datenquellen zur Laufzeit verwenden können.  
+ Ein Verwaltungs Programm, der ODBC-Administrator, ist im Windows SDK/MDAC SDK enthalten. Dieses Programm kann von Benutzern des SDK neu verteilt werden. Außerdem können Entwickler ihre eigenen Verwaltungsprogramme schreiben. Im allgemeinen schreiben Entwickler ihre eigenen Verwaltungsprogramme nur dann, wenn Sie die komplette Kontrolle über die Datenquellen Konfiguration behalten möchten, oder wenn Sie Datenquellen direkt von einer Anwendung konfigurieren, die als Verwaltungs Programm fungiert. Beispielsweise kann es vorkommen, dass Benutzer mit einem Tabellen Programm zur Laufzeit Datenquellen hinzufügen und anschließend verwenden können.  
   
- Das Verwaltungsprogramm lädt zunächst das Installationsprogramm-DLL. Es ruft dann die Funktionen im Installationsprogramm-DLL für die folgenden Aufgaben ausführen:  
+ Das Verwaltungs Programm lädt zuerst die Installationsprogramm-dll. Anschließend werden Funktionen in der Installationsprogramm-dll aufgerufen, um die folgenden Aufgaben auszuführen:  
   
--   **Hinzufügen, ändern oder Löschen von Datenquellen interaktiv.** Rufen Sie das Verwaltungsprogramm kann **SQLManageDataSources**, **SQLCreateDataSource**, oder **SQLConfigDataSource**.  
+-   **Sie können Datenquellen interaktiv hinzufügen, ändern oder löschen.** Das Verwaltungs Programm kann **sqlmanagedatasources**, **sqlkreatedatasource**oder **SQLConfigDataSource**aufrufen.  
   
-     **SQLManageDataSources** zeigt ein Dialogfeld, mit denen der Benutzer kann hinzufügen, ändern oder Löschen von Datenquellen und Ablaufverfolgungsoptionen angeben; diese Funktion wird aufgerufen, wenn das Installationsprogramm-DLL, direkt in der Systemsteuerung aufgerufen wird. **SQLCreateDataSource** zeigt ein Dialogfeld, mit denen der Benutzer nur von Datenquellen hinzufügen kann, an. **SQLConfigDataSource** übergibt den Aufruf direkt an den Setup-DLL für Treiber.  
+     **Sqlmanagedatasources** zeigt ein Dialogfeld an, mit dem der Benutzerdaten Quellen hinzufügen, ändern oder löschen und Ablauf Verfolgungs Optionen angeben kann. Diese Funktion wird aufgerufen, wenn die Installationsprogramm-dll direkt in der Systemsteuerung aufgerufen wird. **Sqlkreatedatasource** zeigt ein Dialogfeld an, mit dem der Benutzer nur Datenquellen hinzufügen kann. **SQLConfigDataSource** übergibt den-Befehl direkt an die Treiber-Setup-DLL.  
   
-     In allen Fällen aufruft, das Installationsprogramm-DLL **ConfigDSN** in der Setup-DLL Treiber tatsächlich hinzufügen, ändern oder löschen Sie die Datenquelle. Der Setup-DLL für Treiber möglicherweise zusätzliche Informationen vom Benutzer aufgefordert werden.  
+     In allen Fällen ruft die Installer-DLL **ConfigDSN** in der Treiber-Setup-DLL auf, um die Datenquelle tatsächlich hinzuzufügen, zu ändern oder zu löschen. Die Treiber-Setup-DLL könnte den Benutzer zur Eingabe zusätzlicher Informationen auffordern.  
   
--   **Hinzufügen, ändern oder Löschen von Datenquellen im Hintergrund.** Die Verwaltung Programmaufrufe **SQLConfigDataSource** im Installationsprogramm-DLL und übergibt es ein null-Fenster zu behandeln, den Namen einer Datenquelle hinzufügen, ändern oder löschen und eine Liste der Werte für die Registrierung. Die Installer-DLL-Aufrufe **ConfigDSN** in der Setup-DLL Treiber tatsächlich hinzufügen, ändern oder löschen Sie die Datenquelle.  
+-   **Datenquellen können im Hintergrund hinzugefügt, geändert oder gelöscht werden.** Das Verwaltungs Programm ruft **SQLConfigDataSource** in der Installer-dll auf und übergibt ihm ein null-Fenster Handle, den Namen einer Datenquelle, die hinzugefügt, geändert oder gelöscht werden soll, und eine Liste mit Werten für die Registrierung. Die Installationsprogramm-dll ruft **ConfigDSN** in der Treiber-Setup-DLL auf, um die Datenquelle tatsächlich hinzuzufügen, zu ändern oder zu löschen.  
   
--   **Hinzufügen, ändern oder Löschen einer Standard-Datenquelle.** Die Standarddatenquelle ist eine beliebige andere Datenquelle identisch, außer dass der Standardwert ist der Anzeigename. Es wird hinzugefügt, geändert oder gelöscht werden, auf dieselbe Weise wie jede andere Datenquelle.
+-   **Hiermit wird eine Standarddaten Quelle hinzugefügt, geändert oder gelöscht.** Die Standarddaten Quelle ist mit jeder anderen Datenquelle identisch, mit dem Unterschied, dass der Name default lautet. Es wird auf die gleiche Weise wie jede andere Datenquelle hinzugefügt, geändert oder gelöscht.

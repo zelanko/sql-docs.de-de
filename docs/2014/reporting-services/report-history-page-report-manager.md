@@ -1,5 +1,5 @@
 ---
-title: Melden Sie die Seite "Verlauf" (Berichts-Manager) | Microsoft-Dokumentation
+title: Berichts Verlauf (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.prod: sql-server-2014
 ms.technology: reporting-services-native
 ms.topic: conceptual
@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 0b0841e031ee1a98f4f678406f790996a709e90f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104481"
 ---
 # <a name="report-history-page-report-manager"></a>Berichtsverlauf (Seite, Berichts-Manager)
@@ -41,7 +41,7 @@ Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Di
   
 3.  Klicken Sie im Dropdownmenü auf **Berichtsverlauf anzeigen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um eine oder mehrere Momentaufnahmen zu löschen. Bevor Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben den zu löschenden Momentaufnahmen.  
   
@@ -54,9 +54,9 @@ Klicken Sie auf eine Momentaufnahme zum Berichtsverlauf, um diese anzuzeigen. Di
  **Größe**  
  Zeigt die Größe der Berichtsdefinition und der Daten im Bericht an. Dieser Wert gibt an, wie viel Speicherplatz in der Berichtsserver-Datenbank durch die Berichtsdefinition und Daten verwendet wird. Die Größe des dargestellten Berichts einschließlich der Formatierung ist tatsächlich höher. Die in Klammern angegebene Gesamtgröße enthält die Summe der Größe aller Momentaufnahmen im Berichtsverlauf des aktuellen Berichts.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anzeigen oder Löschen des Berichtsverlaufs &#40;Berichts-Manager&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts Verlauf &#40;Berichts-Manager anzeigen oder löschen&#41;](../../2014/reporting-services/view-or-delete-report-history-report-manager.md)   
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Momentaufnahmeoptionen Eigenschaftenseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)
+ [Allgemeine Eigenschaften (Seite), Berichte &#40;Berichts-Manager&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Die Eigenschaften Seite "Momentaufnahme Optionen" &#40;Berichts-Manager&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

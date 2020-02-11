@@ -1,5 +1,5 @@
 ---
-title: Problembehandlung in Berichtsgenerator | Microsoft-Dokumentation
+title: Problembehandlung Berichts-Generator | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099335"
 ---
 # <a name="troubleshoot-report-builder"></a>Problembehandlung in Berichts-Generator
@@ -25,20 +25,20 @@ ms.locfileid: "66099335"
  Die folgenden Themen helfen Ihnen bei der Behandlung von Problemen mit Berichten. Die Themen sind nach dem Benutzertyp (Autor eines Berichts oder Berichtsserveradministrator) gegliedert.  
   
 ## <a name="report-authors"></a>Berichtsautoren  
- [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
- [Problembehandlung bei Berichtsteilen &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichts teilen &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   
  [Problembehandlung bei Diagrammen &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)  
   
 ## <a name="administrators"></a>Administratoren  
  [Installation, Deinstallation und Unterstützung des Berichts-Generators](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
- Siehe auch die folgenden Themen in der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Dokumentation in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?linkid=121312):  
+ Weitere Informationen finden Sie auch in den folgenden [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Themen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der-Dokumentation in der [-Online](https://go.microsoft.com/fwlink/?linkid=121312)Dokumentation:  
   
 -   [Planen der Unterstützung für Kartenberichte](../../2014/reporting-services/plan-for-map-report-support.md)  
   
--   [Planen von Berichtsentwurf und-Bereitstellung &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
+-   [Planen Sie den Berichtsentwurf und die Berichts Bereitstellung &#40;Reporting Services 2014&#41;](plan-for-report-design-and-report-deployment-reporting-services.md)  
   
 ## <a name="how-do-i-get-community-assistance"></a>Unterstützung durch die Community  
  Sie können sich das Wissen anderer Berichts-Generator-Benutzern zunutze machen, indem Sie Fragen in Diskussionsforen veröffentlichen, Blogs zum Berichts-Generator lesen oder eine der anderen verfügbaren Communityressourcen nutzen, die in diesem Artikel erwähnt werden.  
@@ -47,9 +47,9 @@ ms.locfileid: "66099335"
   
  Lesen Sie im [Teamblog](https://go.microsoft.com/fwlink/?LinkId=118788), was die Mitglieder des Reporting Services-Teams zu sagen haben.
   
- Wenn Sie noch keine Antwort gefunden haben [senden Sie Feedback](https://go.microsoft.com/fwlink/?LinkId=118791).  
+ Wenn Sie noch keine Antwort gefunden haben, [Senden Sie Feedback](https://go.microsoft.com/fwlink/?LinkId=118791).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installation, Deinstallation und Unterstützung des Berichts-Generators](../../2014/reporting-services/install-uninstall-and-report-builder-support.md)  
   
   

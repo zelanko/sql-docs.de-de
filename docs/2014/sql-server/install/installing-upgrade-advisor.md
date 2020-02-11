@@ -1,5 +1,5 @@
 ---
-title: Installieren des Upgrade Advisors | Microsoft-Dokumentation
+title: Installieren von Upgrade Advisor | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,24 +15,24 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7f70d1cbb879f8fc91e48478fb820b71b51bfd2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094317"
 ---
 # <a name="installing-upgrade-advisor"></a>Installieren des Upgrade Advisors
-  Der Speicherort für das Installieren des Upgrade Advisors für SQL Server 2014 ist abhängig davon, was analysiert werden soll. Der Upgrade Advisor unterstützt die Remoteanalyse aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von Scannen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], Sie können Upgrade Advisor installieren, auf jedem Computer, die eine Verbindung herstellen kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], und die erfüllt die [Voraussetzungen für ein Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md). Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
+  Der Speicherort für das Installieren des Upgrade Advisors für SQL Server 2014 ist abhängig davon, was analysiert werden soll. Der Upgrade Advisor unterstützt die Remoteanalyse aller [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten mit Ausnahme von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie keine Instanzen von Scannen, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie den Upgrade Advisor auf einem beliebigen Computer installieren, der eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verbindung mit herstellen kann und die die [Voraussetzungen des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-prerequisites.md)erfüllt. Wenn Sie Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] scannen, müssen Sie den Upgrade Advisor auf dem Berichtsserver installieren.  
   
- Führen Sie die **SQLUA.msi** Datei zum Upgrade Advisor zu installieren. Sie können über die Eingabeaufforderung für unbeaufsichtigte und automatisierte Installationen installieren. Finden Sie unter [Installation von Upgrade Advisor über die Eingabeaufforderung](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) zur Syntax und Beispiele.  
+ Führen Sie die Datei **SQLUA. msi** aus, um den Upgrade Advisor zu installieren. Sie können über die Eingabeaufforderung für unbeaufsichtigte und automatisierte Installationen installieren. Syntax und Beispiele finden Sie [unter Installieren von Upgrade Advisor von der Eingabeaufforderung aus](../../../2014/sql-server/install/installing-upgrade-advisor-from-the-command-prompt.md) .  
   
  Rufen Sie die SQLUA.msi auf:  
   
--   In der **Redist** Ordner die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produktmedien.  
+-   Im Ordner **Redist** des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Produkt Mediums.  
   
--   Als Teil der [SQL 2014 Feature Pack-Download](https://www.microsoft.com/download/details.aspx?id=42295).  
+-   Als Teil des [SQL 2014 Feature Pack-Downloads](https://www.microsoft.com/download/details.aspx?id=42295).  
   
 ## <a name="uninstalling-upgrade-advisor"></a>Deinstallieren des Upgrade Advisors  
- Sie können Upgrade Advisor deinstallieren, indem Sie mithilfe von **Software**. Die Syntax der Eingabeaufforderung unterstützt auch das Entfernen/Deinstallieren.  
+ Sie können den Upgrade **Advisor mithilfe der**Option Software deinstallieren. Die Syntax der Eingabeaufforderung unterstützt auch das Entfernen/Deinstallieren.  
   
   

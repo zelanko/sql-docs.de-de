@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102528"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Veröffentlichen eines Berichts in einer SharePoint-Bibliothek
@@ -36,19 +36,19 @@ ms.locfileid: "66102528"
   
 4.  Wenn Sie die freigegebenen Datenquellen in Ihrem Projekt veröffentlichen und bereits veröffentlichte freigegebene Datenquellen überschreiben möchten, legen Sie **OverwriteDataSources** auf **True**fest.  
   
-5.  (Optional) Für **TargetDataSourceFolder**, geben Sie eine URL zu einer SharePoint-Bibliothek oder einem Bibliotheksordner (z. B. *http://TestServer/TestSite/Documents/DataSources)* .  
+5.  Optionale Geben Sie für **TargetDataSourceFolder**eine URL zu einer SharePoint-Bibliothek oder einem Bibliotheks Ordner ein ( *http://TestServer/TestSite/Documents/DataSources)* z. b..  
   
      Wenn Sie keinen Wert angeben, wird der Wert **TargetReportFolder** verwendet.  
   
-6.  Für **TargetReportFolder**, geben Sie eine URL zu einer Bibliothek oder den Ordner "Library" (z. B. *http://TestServer/TestSite/Documents/Reports)* .  
+6.  Geben Sie für **TargetReportFolder**eine URL zu einer Bibliothek oder einem Bibliotheks Ordner ein (z *http://TestServer/TestSite/Documents/Reports)*. b..  
   
-7.  Geben Sie für **TargetServerURL**eine URL zu einer SharePoint-Website auf oberster Ebene oder zu einer Unterwebsite ein. Wenn Sie keine Website angeben, wird die standardmäßige Stammwebsite verwendet (z. B. *http://servername* , *http://servername/site* , oder *http://servername/site/subsite* ).  
+7.  Geben Sie für **TargetServerURL**eine URL zu einer SharePoint-Website auf oberster Ebene oder zu einer Unterwebsite ein. Wenn Sie keine Website angeben, wird die Standard Website der obersten Ebene verwendet (z *http://servername* *http://servername/site*. b., oder *http://servername/site/subsite*).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 9. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Bericht, den Sie veröffentlichen möchten, und klicken Sie auf **Bereitstellen**. Der Bericht wird an dem in **TargetReportFolder**angegebenen Speicherort veröffentlicht. Im Ausgabefenster werden Bereitstellungsfehler angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Eigenschaftsseiten für Projekt (Dialogfeld)](../tools/project-property-pages-dialog-box.md)   
  [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
  [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md)   

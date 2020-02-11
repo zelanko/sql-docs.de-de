@@ -1,5 +1,5 @@
 ---
-title: Distributed Replay Client-Konfiguration | Microsoft-Dokumentation
+title: Distributed Replay Client Konfiguration | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3eb00922b4f6e21dd4cfc8a46d8c0c27ed9a5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095478"
 ---
 # <a name="distributed-replay-client-configuration"></a>Distributed Replay Client-Konfiguration
@@ -22,9 +22,9 @@ ms.locfileid: "66095478"
   
  Benutzer, die über Administratorberechtigungen verfügen, besitzen unbeschränkten Zugriff auf den Distributed Replay Client-Dienst.  
   
-## <a name="options"></a>Optionen  
- **Name des Domänencontrollers**  
- Dies ist ein optionaler Parameter, und der Standardwert ist \< *leere*>.  
+## <a name="options"></a>Tastatur  
+ **Controllername**  
+ Dies ist ein optionaler Parameter, und der Standardwert \<ist *leer*>.  
   
  Geben Sie den Namen des Controllers ein, mit dem der Clientcomputer für den Distributed Replay Client-Dienst kommuniziert. Beachten Sie Folgendes:  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66095478"
  **Arbeitsverzeichnis**  
  Geben Sie das Arbeitsverzeichnis für den Distributed Replay Client-Dienst an.  
   
- Das Standardarbeitsverzeichnis ist \<*Laufwerkbuchstabe*>:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\WorkingDir\\.  
+ Das Standard Arbeitsverzeichnis ist \< *Laufwerk Buchstabe*>: \Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\workingdir\\.  
   
  **Ergebnisverzeichnis**  
  Geben Sie das Ergebnisverzeichnis für den Distributed Replay Client-Dienst an.  
   
- Das Standardergebnisverzeichnis ist \<*Laufwerkbuchstabe*>:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\DReplayClient\ResultDir\\.  
+ Das Standard Ergebnis Verzeichnis ist \< *Laufwerk Buchstabe*>: \Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\dreplayclient\resultdir\\.  
   
   

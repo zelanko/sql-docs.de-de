@@ -1,5 +1,5 @@
 ---
-title: 'GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation'
+title: GenerateDatabaseCreationScript-Methode (WMI-MSReportServer_ConfigurationSetting) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,13 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf33e467e54fda5c29d81e3437730f0ce9547cad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098511"
 ---
-# <a name="generatedatabasecreationscript-method-wmi-msreportserverconfigurationsetting"></a>GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting)
+# <a name="generatedatabasecreationscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseCreationScript-Methode (WMI: MSReportServer_ConfigurationSetting)
   Generiert ein SQL-Skript, mit dem eine Berichtsserver-Datenbank erstellt werden kann  
   
 ## <a name="syntax"></a>Syntax  
@@ -42,17 +42,17 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *Databasename*  
+ *DatabaseName*  
  Eine Zeichenfolge, die den Namen der zu erstellenden Berichtsserver-Datenbank enthält  
   
- *Lcid*  
+ *LCID*  
  Zur Lokalisierung von Rollennamen verwendeter Wert.  
   
- *IsSharePointMode*  
+ *Issharepointmode*  
  Gibt an, ob die Datenbank im einheitlichen Modus oder im SharePoint-Modus erstellt werden soll.  
   
 > [!IMPORTANT]  
->  Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], *IsSharePointMode* = `True` wird nicht unterstützt werden, da im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist eine SharePoint shared Service und nicht vom WMI-Anbieter kontrolliert wird. Es wird empfohlen, diesen Parameter immer auf `False` festzulegen.  
+>  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]Ab wird *issharepointmode* = `True` nicht unterstützt, da im SharePoint-Modus [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ein gemeinsamer SharePoint-Dienst ist und nicht vom WMI-Anbieter gesteuert wird. Es wird empfohlen, diesen Parameter immer auf `False` festzulegen.  
   
  *Skript*  
  [out] Eine Zeichenfolge, die das generierte SQL-Skript enthält  
@@ -63,7 +63,7 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
 ## <a name="return-value"></a>Rückgabewert  
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Diese Methode generiert ein SQL-Skript, mit dem Berichtsserver-Datenbanken für die Version des Berichtsservers erstellt werden, zu dem derzeit eine Verbindung besteht.  
   
  Der im Parameter *DatabaseName* angegebene Wert muss den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Benennungskonventionen für Datenbanken entsprechen.  
@@ -74,10 +74,10 @@ public void GenerateDatabaseCreationScript(string DatabaseName, Int32 Lcid,
   
  Das generierte Skript unterstützt [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
-## <a name="requirements"></a>Anforderungen  
- **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+## <a name="requirements"></a>Requirements (Anforderungen)  
+ **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
- [MSReportServer_ConfigurationSetting-Member](msreportserver-configurationsetting-members.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  
   
   

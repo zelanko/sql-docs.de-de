@@ -1,5 +1,5 @@
 ---
-title: SQL-92 CAST-Funktion | Microsoft-Dokumentation
+title: SQL-92-CAST Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,24 +15,24 @@ ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c6682ae98f2da64f6936049bee96fe2fff2a84db
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057058"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST-Funktion
-Die **Umwandlung** in SQL-92 definierten Funktion entspricht der **konvertieren** in ODBC definierte Funktion. Die Syntax der entsprechenden Funktionen lautet wie folgt aus:  
+Die in SQL-92 definierte **Cast** -Funktion entspricht der in ODBC definierten **Convert** -Funktion. Die Syntax der äquivalenten Funktionen lautet wie folgt:  
   
 ```  
 { fn CONVERT (value-exp, data-type) } /* ODBC  
 CAST (value-exp AS data-type) /* SQL92  
 ```  
   
- Die SQL-92 **Umwandlung** Funktion ist es erforderlich, welche Datentypen in die andere Datentypen konvertiert werden können. (Weitere Informationen finden Sie in der SQL-92-Spezifikation.) Die **Umwandlung** -Funktion wird auf der FIPS-Transitional Ebene unterstützt.  
+ Die SQL-92- **Cast** Funktion gibt an, welche Datentypen in welche anderen Datentypen konvertiert werden können. (Weitere Informationen finden Sie in der SQL-92-Spezifikation.) Die **Cast** -Funktion wird auf der Übergangs Ebene "fps" unterstützt.  
   
- Eine Anwendung kann die Unterstützung für bestimmen die **Umwandlung** -Funktion wie folgt:  
+ Eine Anwendung kann die Unterstützung für die **Cast** -Funktion wie folgt bestimmen:  
   
-1.  Rufen Sie **SQLGetInfo** mit dem Typ der SQL_SQL_CONFORMANCE-Informationen. Wenn der Rückgabewert für den Informationstyp SQL_SC_FIPS127_2_TRANSITIONAL SQL_SC_SQL92_INTERMEDIATE oder SQL_SC_SQL92_FULL, ist die **Umwandlung** -Funktion wird unterstützt.  
+1.  Aufrufen von **SQLGetInfo** mit dem SQL_SQL_CONFORMANCE Informationstyp. Wenn der Rückgabewert für den Informationstyp SQL_SC_FIPS127_2_TRANSITIONAL, SQL_SC_SQL92_INTERMEDIATE oder SQL_SC_SQL92_FULL ist, wird die **Cast** -Funktion unterstützt.  
   
-2.  Wenn der Rückgabewert des Typs Informationen SQL_SQL_CONFORMANCE SQL_SC_ENTRY_LEVEL oder 0 ist, rufen Sie **SQLGetInfo** mit dem Typ der SQL_SQL92_VALUE_EXPRESSIONS-Informationen. Wenn das SQL_SVE_CAST Bit festgelegt ist, die **Umwandlung** -Funktion wird unterstützt.
+2.  Wenn der Rückgabewert des SQL_SQL_CONFORMANCE-Informations Typs SQL_SC_ENTRY_LEVEL oder 0 ist, nennen Sie **SQLGetInfo** mit dem SQL_SQL92_VALUE_EXPRESSIONS Informationstyp. Wenn das SQL_SVE_CAST Bit festgelegt ist, wird die **Cast** -Funktion unterstützt.

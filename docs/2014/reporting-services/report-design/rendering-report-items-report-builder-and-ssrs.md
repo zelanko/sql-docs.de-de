@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ecd7088b9fe76b955cc40dd495d508878b9d0d96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105350"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendern von Berichtselementen (Berichts-Generator und SSRS)
@@ -79,11 +79,11 @@ ms.locfileid: "66105350"
   
      Kopfzeilen haben Vorrang gegenüber Fußzeilen. Innere wiederholte Gruppen haben Priorität über äußere Gruppen. Elemente mit der Eigenschaft `RepeatWith`, die näher am Zieldatenbereich liegen, haben Priorität über Elemente, die weiter vom Datenbereich entfernt liegen.  
   
--   Kleine Berichtselemente, z. B. Textfelder oder Rechtecke, mit einer expliziten KeepTogether-Eigenschaft auf festgelegt `true`.  
+-   Kleine Berichts Elemente, z. b. Textfelder oder Rechtecke, mit einer expliziten keepzusammeneigenschaft, die auf `true`festgelegt ist.  
   
--   Große Berichtselemente, z. B. Unterberichte oder nicht ganz innen liegende Tablix-Elemente, mit einer expliziten KeepTogether-Eigenschaft auf festgelegt `true`.  
+-   Große Berichts Elemente, wie z. b. unter Berichte oder ein nicht Inneres Tablix--Element, bei dem eine explizite keepzusammeneigenschaft auf `true`festgelegt ist.  
   
--   Legen Sie Tablix-Datenbereiche mit einer expliziten KeepTogether-Eigenschaft auf `true`.  
+-   Tablix-Datenbereiche mit einer expliziten keepzusammeneigenschaft `true`, die auf festgelegt ist.  
   
 ### <a name="subreports"></a>Unterberichte  
  Ein Unterbericht wird als Rechteck mit einem anderen Bericht gerendert, der in einer separaten Berichts-RDL-Datei definiert ist. Eine Unterberichtsdatei muss auf einem Berichtsserver veröffentlicht werden, bevor der übergeordnete Bericht darauf zugreifen kann.  
@@ -104,9 +104,9 @@ ms.locfileid: "66105350"
   
  Weitere Informationen zu Unterberichten finden Sie unter [Unterberichte (Berichts-Generator und SSRS)](subreports-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhalten (Berichts-Generator und SSRS)](rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   

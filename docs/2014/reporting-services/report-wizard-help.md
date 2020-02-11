@@ -1,5 +1,5 @@
 ---
-title: Berichts-Assistent-Hilfe | Microsoft-Dokumentation
+title: Hilfe zum Berichts-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d21fb2c577e6419668a619466dd0d2c94b4a3da2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102987"
 ---
 # <a name="report-wizard-help"></a>Hilfe des Berichts-Assistenten
@@ -35,11 +35,11 @@ ms.locfileid: "66102987"
   
 -   [Entwerfen der Abfrage](../../2014/reporting-services/design-the-query.md)  
   
--   [Abfrage-Generator &#40;Berichts-Assistent&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
+-   [Abfrage-Generator &#40;Berichts-Assistenten&#41;](../../2014/reporting-services/query-builder-report-wizard.md)  
   
 -   [Auswählen des Berichtstyps](../../2014/reporting-services/select-the-report-type.md)  
   
--   [Entwerfen der Tabelle &#40;Berichts-Assistent&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
+-   [Entwerfen Sie den Berichts-Assistenten für Tabellen &#40;&#41;](../../2014/reporting-services/design-the-table-report-wizard.md)  
   
 -   [Auswählen des Tabellenlayouts](../../2014/reporting-services/choose-the-table-layout.md)  
   

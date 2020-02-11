@@ -16,35 +16,35 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cb44a7b635e24c0c2e3266c1cca98a9c4f6a347c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093987"
 ---
 # <a name="migrate-scripts-to-vsta"></a>Migrieren von Skripts zu VSTA
-  Wenn Sie ein upgrade [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Pakete [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] migriert die Skripts in allen Skripttasks und Skriptkomponenten zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA). VSTA ist die von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendete Skriptumgebung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], die skriptumgebung für [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] für Applikationen (VSA).  
+  Wenn Sie Pakete [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] werden die Skripts in allen Skript Tasks oder Skript Komponenten zu [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications (VSTA) migriert. VSTA ist die von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] verwendete Skriptumgebung. In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] handelt es sich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] bei der Skript Umgebung für um Anwendungen (VSA).  
   
- Wenn die Skripts in den Skripttasks oder Skriptkomponenten auf Schnittstellen verweisen, müssen Sie diese Verweise ggf. ändern, bevor Sie das Paket aktualisieren. Andernfalls tritt beim Aktualisieren des Pakets oder beim Überprüfen der Skripts je nach verwendeter Upgrademethode ein Fehler auf. Um diese Verweise zu ändern, ersetzen Sie Verweise auf IDTS*Xxx*90-Schnittstellen durch Verweise auf die entsprechenden IDTS*Xxx*100-Schnittstellen.  
+ Wenn die Skripts in den Skripttasks oder Skriptkomponenten auf Schnittstellen verweisen, müssen Sie diese Verweise ggf. ändern, bevor Sie das Paket aktualisieren. Andernfalls tritt beim Aktualisieren des Pakets oder beim Überprüfen der Skripts je nach verwendeter Upgrademethode ein Fehler auf. Um diese Verweise zu ändern, ersetzen Sie die Verweise auf IDTs*xxx*90-Schnittstellen durch Verweise auf die entsprechenden IDTs*xxx*100-Schnittstellen.  
   
- Weitere Informationen zum Migrieren von Skripts und Pakete aktualisieren, finden Sie unter [Aktualisieren von Integration Services-Paketen](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
+ Weitere Informationen zum Migrieren von Skripts und Upgradepaketen finden Sie unter [Aktualisieren von Integration Services Paketen](../../integration-services/install-windows/upgrade-integration-services-packages.md).  
   
 ## <a name="understanding-migration-failures"></a>Grundlegendes zu Migrationsfehlern  
  Beim Migrieren der Skripts kann aus einem der folgenden Gründe ein Fehler auftreten:  
   
 -   Der Einstiegspunkt für das VSA-Skript wurde umbenannt.  
   
-     Mit dem Einstiegspunkt wird die Methode in der `ScriptMain`-Klasse im VSTA-Projekt angegeben, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die `ScriptMain` Klasse ist die Standardklasse, die von die Skriptvorlagen generiert.  
+     Mit dem Einstiegspunkt wird die Methode in der `ScriptMain`-Klasse im VSTA-Projekt angegeben, die die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Laufzeit als Einstiegspunkt in den Code des Skripttasks aufruft. Die `ScriptMain` -Klasse ist die Standardklasse, die von den Skript Vorlagen generiert wird.  
   
 -   Das VSA-Skript weist keinen Einstiegspunkt oder mehrere Einstiegspunkte auf.  
   
 -   Es konnten keine Assemblyverweise hinzugefügt werden.  
   
--   Die `ScriptMain`-Klasse wurde so geändert, dass sie neben der `ScriptObjectModelSSIS`-Klasse von anderen Klassen erbt. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] unterstützt keine mehrfachvererbung.  
+-   Die `ScriptMain`-Klasse wurde so geändert, dass sie neben der `ScriptObjectModelSSIS`-Klasse von anderen Klassen erbt. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] unterstützt keine mehrfache Vererbung.  
   
- Sie können nicht konvertiert werden ein VSA-Skript, das verwendet [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] in ein VSTA-Skript, die verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]. Allerdings können Sie erstellen ein neues VSTA-Skript, das verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]. Weitere Informationen finden Sie unter [Coding and Debugging the Script Task](../../integration-services/control-flow/script-task.md) (Codieren und Debuggen des Skripttasks) und [Coding and Debugging the Script Component](../../integration-services/data-flow/transformations/script-component.md) (Codieren und Debuggen der Skriptkomponente).  
+ Ein VSA-Skript, das verwendet [!INCLUDE[vbprvblong](../../includes/vbprvblong-md.md)] , kann nicht in ein VSTA- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]Skript konvertiert werden, das verwendet. Sie können jedoch ein neues VSTA-Skript erstellen, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csharp_orcas_long](../../includes/csharp-orcas-long-md.md)]verwendet. Weitere Informationen finden Sie unter [Coding and Debugging the Script Task](../../integration-services/control-flow/script-task.md) (Codieren und Debuggen des Skripttasks) und [Coding and Debugging the Script Component](../../integration-services/data-flow/transformations/script-component.md) (Codieren und Debuggen der Skriptkomponente).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweitern von Paketen mit Skripts](../../relational-databases/server-management-objects-smo/tasks/scripting.md)  
   
   

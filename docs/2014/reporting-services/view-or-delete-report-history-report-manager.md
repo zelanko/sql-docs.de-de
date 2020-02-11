@@ -1,5 +1,5 @@
 ---
-title: Anzeigen oder Löschen des Berichtsverlaufs (Berichts-Manager) | Microsoft-Dokumentation
+title: Anzeigen oder Löschen des Berichts Verlaufs (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,10 +26,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a05c9dccabcf9b937ebd67fb264022761b1ca249
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098709"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Anzeigen oder Löschen des Berichtsverlaufs (Berichts-Manager)
@@ -41,7 +41,7 @@ ms.locfileid: "66098709"
   
 2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie Verlaufsmomentaufnahmen erstellen oder anzeigen möchten, und klicken Sie zum Öffnen auf den Bericht.  
   
-3.  Klicken Sie auf die Registerkarte **Verlauf** . Die Berichtsverlaufs-Momentaufnahmen werden angezeigt, der **Ausführungszeitpunkt** Spalte.  
+3.  Klicken Sie auf die Registerkarte **Verlauf** . Die Verlaufs Momentaufnahmen werden in der Spalte **Wenn ausführen** angezeigt.  
   
 4.  Klicken Sie auf die Momentaufnahme, um die Verlaufsmomentaufnahme anzuzeigen.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "66098709"
   
 1.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie Verlaufsmomentaufnahmen löschen möchten, und klicken Sie zum Öffnen auf den Bericht.  
   
-2.  Klicken Sie auf die Registerkarte **Verlauf** . Die Berichtsverlaufs-Momentaufnahmen werden angezeigt, der **Ausführungszeitpunkt** Spalte.  
+2.  Klicken Sie auf die Registerkarte **Verlauf** . Die Verlaufs Momentaufnahmen werden in der Spalte **Wenn ausführen** angezeigt.  
   
-3.  Wählen Sie das Kontrollkästchen neben der verlaufsmomentaufnahme, die Sie löschen möchten, und klicken Sie dann auf **löschen**.  
+3.  Aktivieren Sie das Kontrollkästchen neben der Verlaufs Momentaufnahme, die Sie löschen möchten, und klicken Sie dann auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Melden Sie die Seite "Verlauf" &#40;Berichts-Manager&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
+ [Die Seite "Berichts Verlauf" &#40;Berichts-Manager&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](report-server/set-report-processing-properties.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Create, Modify, and Delete Snapshots in Report History (Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf)](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
+ [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

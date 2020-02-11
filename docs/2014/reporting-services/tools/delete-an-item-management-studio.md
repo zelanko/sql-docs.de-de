@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a2dd1ecf333c452e2f1e2710a7ad16782a1a3628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100419"
 ---
 # <a name="delete-an-item-management-studio"></a>Löschen eines Elements (Management Studio)
-  Bei der Herstellung einer Verbindung mit einer Berichtsserverinstanz in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]können Sie Rollendefinitionen und freigegebene Zeitpläne löschen. Sie können keine Berichte, Modelle oder andere Elemente auf einem Berichtsserver löschen. Verwenden Sie zum Löschen von Berichtsserverinhalt stattdessen den Berichts-Manager. Verwenden Sie alternativ bei Konfiguration des Berichtsservers für den integrierten SharePoint-Modus die Elementverwaltungsfunktionen in der SharePoint-Bibliothek, die Ihren Inhalt enthält.  
+  Wenn Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung mit einer Berichts Serverinstanz hergestellt haben, können Sie Rollen Definitionen und freigegebene Zeitpläne löschen. Sie können keine Berichte, Modelle oder andere Elemente auf einem Berichtsserver löschen. Verwenden Sie zum Löschen von Berichtsserverinhalt stattdessen den Berichts-Manager. Verwenden Sie alternativ bei Konfiguration des Berichtsservers für den integrierten SharePoint-Modus die Elementverwaltungsfunktionen in der SharePoint-Bibliothek, die Ihren Inhalt enthält.  
   
 ### <a name="to-delete-an-item-in-the-report-server-folder-namespace"></a>So löschen Sie ein Element aus dem Ordnernamespace eines Berichtsservers  
   
@@ -34,9 +34,9 @@ ms.locfileid: "66100419"
   
 4.  Wenn Sie dazu aufgefordert werden, [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](connect-to-a-report-server-in-management-studio.md)   
- [Katalogelemente löschen &#40;Management Studio&#41;](delete-catalog-items-management-studio.md)   
+ [Katalog Elemente &#40;Management Studio löschen&#41;](delete-catalog-items-management-studio.md)   
  [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

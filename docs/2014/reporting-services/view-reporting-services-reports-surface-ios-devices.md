@@ -1,5 +1,5 @@
 ---
-title: Anzeigen von Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple iOS-Geräten | Microsoft-Dokumentation
+title: Anzeigen von Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple IOS-Geräten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a3937f227d025da054a28f73fffde4a57dc365c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098663"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Anzeigen von Reporting Services-Berichten auf Microsoft Surface-Geräten und Apple iOS-Geräten
@@ -38,26 +38,26 @@ Schauen Sie sich eine Demo der Berichtsanzeige auf einem iPad an.
   
 -   Berichtsserver im einheitlichen Modus: Installieren Sie [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] oder höher.  
   
-     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] steht für den Download der [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35575).  
+     [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)]steht im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=35575)zum Download zur Verfügung.  
   
 -   Berichtsserver im SharePoint-Modus: Installieren Sie [!INCLUDE[ssSQL11SP1long](../includes/sssql11sp1long-md.md)] oder höher aus dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Add-In für SharePoint-Produkte.  
   
- **Zum Anzeigen und interagieren mit einem Bericht auf einem iPad oder Microsoft Surface-Gerät**  
+ **So können Sie einen Bericht auf einem iPad oder Microsoft Surface-Gerät anzeigen und damit interagieren**  
   
 1.  Stellen Sie sicher, dass Sie mit dem Berichtsserver oder der SharePoint-Website, auf dem bzw. der sich der Bericht befindet, eine Verbindung herstellen können.  
   
 2.  Öffnen Sie den Bericht, indem Sie einen der folgenden Schritte ausführen.  
   
-    -   **Starten von E-mail:** In einer E-mail, die erstellt wird eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Abonnement, tippen Sie auf die URL des Berichts. Der Bericht wird im Browser geöffnet.  
+    -   **Starten von e-Mail:** Tippen Sie in einer e-Mail, die von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] einem Abonnement erstellt wurde, auf die URL des Berichts. Der Bericht wird im Browser geöffnet.  
   
-    -   **Starten Sie vom Berichtsserver:** Durchsuchen Sie das Verzeichnis auf dem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichtsserver, und tippen Sie dann auf den Berichtsnamen, um den Bericht zu öffnen.  
+    -   **Starten vom Berichts Server:** Durchsuchen Sie das Verzeichnis [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] auf dem Berichts Server, und tippen Sie dann auf den Berichts Namen, um den Bericht zu öffnen.  
   
-    -   **Starten Sie von einer SharePoint-Dokumentbibliothek:** Navigieren Sie zu einer SharePoint-Dokumentbibliothek, die enthält [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] meldet, und tippen Sie dann auf den Namen des Berichts. Sie können den Bericht anzeigen und damit interagieren.  
+    -   **Starten von einer SharePoint-Dokumentbibliothek:** Navigieren Sie zu einer SharePoint-Dokumentbibliothek [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , die Berichte enthält, und tippen Sie dann auf den Namen des Berichts. Sie können den Bericht anzeigen und damit interagieren.  
   
         > [!IMPORTANT]  
-        >  Achten Sie bei einem iPad darauf, dass die Eigenschaft **Privates Surfen** für Safari deaktiviert ist.  
+        >  Stellen Sie für das iPad sicher, dass die **private browsereigenschaft** für Safari deaktiviert ist.  
   
-    -   **SharePoint-Webpart:** Wenn das Webpart zu einer SharePoint-Seite hinzugefügt wurde, können Sie anzeigen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Berichte.  
+    -   **SharePoint-Webpart:** Wenn das Webpart einer SharePoint-Seite hinzugefügt wurde, können Sie Berichte [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] anzeigen.  
   
 3.  Auf Ihrem Microsoft Surface-Gerät können Sie den Bericht auch mithilfe des Berichts-Managers öffnen. Durchsuchen Sie das Verzeichnis im [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichts-Manager, und tippen Sie auf den Berichtsnamen, um den Bericht zu öffnen.  
   
@@ -88,7 +88,7 @@ Schauen Sie sich eine Demo der Berichtsanzeige auf einem iPad an.
   
     -   Exportieren Sie den Bericht, indem Sie auf das Symbol für das **Dropdownmenü "Exportieren"** und dann auf ein Dateiformat tippen.  
   
-        -   Wenn Sie den Bericht auf einem Microsoft Surface-Gerät anzeigen, können Sie den Bericht auf einen der folgenden Formate exportieren.  
+        -   Wenn Sie den Bericht auf einem Microsoft Surface-Gerät anzeigen, können Sie den Bericht in eines der folgenden Formate exportieren.  
   
             -   XML-Datei mit Berichtsdaten  
   
@@ -104,9 +104,9 @@ Schauen Sie sich eine Demo der Berichtsanzeige auf einem iPad an.
   
             -   Wort  
   
-        -   Wenn Sie den Bericht auf einem iPad anzeigen, können Sie den Bericht als TIFF- oder PDF-Datei exportieren.  
+        -   Wenn Sie den Bericht auf einem iPad anzeigen, können Sie den Bericht als TIFF-oder PDF-Datei exportieren.  
   
-## <a name="authentication"></a>Authentifizierung  
+## <a name="authentication"></a>Authentication  
  Die RSWindowsNTLM-Authentifizierung und die RSWindowsBasic-Authentifizierung können mit [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] im einheitlichen Modus auf dem iPad verwendet werden.  
   
  Im Allgemeinen wird davon abgeraten, RSWindowsBasic in Nicht-HTTPS-Umgebungen zu verwenden, da dieser Authentifizierungstyp keine Vertrauenswürdigkeit für übermittelte Anmeldeinformationen bietet.  
@@ -123,21 +123,21 @@ Schauen Sie sich eine Demo der Berichtsanzeige auf einem iPad an.
   
 -   Hochladen einer Berichtsdefinitionsdatei in die Berichtsserver-Datenbank, indem Sie den Berichts-Manager öffnen und auf **Datei hochladen**tippen.  
   
-## <a name="additional-information"></a>Weitere Informationen  
+## <a name="additional-information"></a>Zusätzliche Informationen  
  Weitere Informationen zu [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und unterstützten Browsern finden Sie unter:  
   
--   [Browserunterstützung für Reporting Services und Power View-Browserunterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
+-   [Planen der Reporting Services-und Power View Browser Unterstützung &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)  
   
  Weitere Informationen zu Microsoft Business Intelligence und mobilen Geräten finden Sie unter:  
   
 -   [Übersicht über mobile Geräte und SharePoint 2013](https://technet.microsoft.com/library/fp161351\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161351(v=office.15).aspx).  
   
--   [In SharePoint 2013 unterstützte Browser für mobile Geräte](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
+-   [Unterstützte Browser für mobile Geräte in SharePoint 2013](https://technet.microsoft.com/library/fp161353\(v=office.15\).aspx) (https://technet.microsoft.com/library/fp161353(v=office.15).aspx).  
   
--   [Anzeigen von Berichten und Scorecards auf Apple iPads (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
+-   [Anzeigen von Berichten und Scorecards auf Apple iPad-Geräten (SharePoint Server 2010)](https://technet.microsoft.com/library/hh697482.aspx) (https://technet.microsoft.com/library/hh697482.aspx).  
   
--   [Anzeigen von Reporting Services-Berichten auf einem iPad (Video)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
+-   [Anzeigen Reporting Services Berichte auf einem iPad (Video)](https://technet.microsoft.com/sqlserver/jj873792.aspx) (https://technet.microsoft.com/sqlserver/jj873792.aspx).  
   
--   [Anzeigen von Reporting Services-Berichten auf einem Microsoft Surface RT-Gerät (video)](https://technet.microsoft.com/sqlserver/dn146017)  
+-   [Anzeigen von Reporting Services-Berichten auf einem Microsoft Surface RT-Gerät (Video)](https://technet.microsoft.com/sqlserver/dn146017)  
   
   

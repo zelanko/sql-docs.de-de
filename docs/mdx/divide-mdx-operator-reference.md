@@ -1,5 +1,5 @@
 ---
-title: (Division) (MDX) | Microsoft-Dokumentation
+title: Glie (MDX) | Microsoft-Dokumentation
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,13 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 8dd20a0b60e105ac48a54d533055717e3f07a006
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68049325"
 ---
-# <a name="divide---mdx-operator-reference"></a>Divide - MDX-Operatorreferenz
+# <a name="divide---mdx-operator-reference"></a>Divide-MDX-Operator Referenz
 
 
   Führt eine arithmetische Operation aus, die eine Zahl durch eine andere dividiert.  
@@ -37,10 +37,10 @@ Dividend / Divisor
 ## <a name="return-value"></a>Rückgabewert  
  Ein Wert vom Datentyp des Parameters, der in der Rangfolge höher eingestuft ist.  
   
-## <a name="remarks"></a>Hinweise  
- Den eigentlichen Rückgabewert, der von der **/ (Division)** Operator entspricht dem Quotienten aus dem ersten Ausdruck geteilt durch den zweiten Ausdruck.  
+## <a name="remarks"></a>Bemerkungen  
+ Der tatsächliche Wert, der vom **/(Division)-** Operator zurückgegeben wird, stellt den Quotienten des ersten Ausdrucks dividiert durch den zweiten Ausdruck dar.  
   
- Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn *Divisor* einen null-Wert, löst der Operator einen Fehler ergibt. Wenn beide *Divisor* und *Dividend* ausgewertet, ein null-Wert, der Operator gibt einen null-Wert zurück.  
+ Beide Ausdrücke müssen denselben Datentyp haben, oder es muss möglich sein, einen Ausdruck implizit in den Datentyp des anderen Ausdrucks zu konvertieren. Wenn der *Divisor* einen NULL-Wert ergibt, löst der Operator einen Fehler aus. Wenn sowohl *Divisor* als auch *Dividende* als NULL-Wert ausgewertet wird, gibt der Operator einen NULL-Wert zurück.  
   
 ## <a name="examples"></a>Beispiele  
  Das folgende Beispiel zeigt die Verwendung dieses Operators.  
@@ -98,8 +98,8 @@ WHERE
   
  `WHERE([Date].[Calendar].[Calendar Year].&[2001])`  
   
-## <a name="see-also"></a>Siehe auch  
- [IIf &#40;MDX&#41;](../mdx/iif-mdx.md)   
- [MDX-Operatorreferenz &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [IIf-&#40;MDX-&#41;](../mdx/iif-mdx.md)   
+ [MDX-Operator Verweis &#40;MDX-&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

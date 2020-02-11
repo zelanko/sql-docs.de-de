@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 14d0a9f95ea3abccd2d50f469fe068459baa9364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101959"
 ---
 # <a name="modify-or-delete-a-role-assignment-report-manager"></a>Ändern oder Löschen einer Rollenzuweisung (Berichts-Manager)
@@ -62,10 +62,10 @@ ms.locfileid: "66101959"
   
 6.  Aktivieren Sie zum Löschen einer Rollenzuweisung das Kontrollkästchen neben dem Gruppen- oder Benutzernamen, und klicken Sie dann auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
- (create-and-manage-role-assignments.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ (Create-and-manage-role-assignments.MD)   
  [Rollenzuweisungen](role-assignments.md)   
- [Site Settings Page (Report Manager) (Seite „Siteeinstellungen“ (Berichts-Manager))](../site-settings-page-report-manager.md)   
- [Neue Systemrollenzuweisung: Bearbeiten System Role Assignments Page &#40;Berichts-Manager&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
+ [Die Seite "Site Einstellungen" &#40;Berichts-Manager&#41;](../site-settings-page-report-manager.md)   
+ [Neue System Rollenzuweisungen: Seite "System Rollenzuweisungen bearbeiten" &#40;Berichts-Manager&#41;](../new-system-role-assignments-edit-system-role-assignments-page-report-manager.md)  
   
   

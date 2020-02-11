@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie Verweise auf veraltete gespeicherte Systemprozeduren | Microsoft-Dokumentation
+title: Entfernen von Verweisen auf veraltete gespeicherte System Prozeduren | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2e841956adf08f9ac14a3f1360839e9132bf9cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093105"
 ---
 # <a name="remove-references-to-deprecated-system-stored-procedures"></a>Entfernen von Verweisen auf veraltete gespeicherte Systemprozeduren
@@ -26,7 +26,7 @@ ms.locfileid: "66093105"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
   
 ### <a name="documented-system-stored-procedures"></a>Dokumentierte gespeicherte Systemprozeduren  
  Die folgenden dokumentierten gespeicherten Systemprozeduren wurden entfernt:  
@@ -98,11 +98,11 @@ ms.locfileid: "66093105"
 |sp_addalias|Ersetzen Sie Aliase durch eine Kombination von Benutzerkonten und Datenbankrollen. Weitere Informationen hierzu finden Sie in den Themen "CREATE USER (Transact-SQL)" und "CREATE ROLE (Transact-SQL)" in der SQL Server-Onlinedokumentation. Entfernen Sie Aliase in aktualisierten Datenbanken mithilfe von sp_dropalias.|  
 |sp_addgroupsp_changegroup<br /><br /> sp_dropgroup<br /><br /> sp_helpgroup|Verwenden Sie Rollen. Weitere Informationen finden Sie in den Themen "Rollen auf Serverebene" und "Rollen auf Datenbankebene" in der SQL Server-Onlinedokumentation.|  
   
-### <a name="undocmented-system-stored-procedures"></a>Undocmented gespeicherte Systemprozeduren  
+### <a name="undocmented-system-stored-procedures"></a>Nicht docmentierte gespeicherte System Prozeduren  
  Sie können gespeicherte CLR-Prozeduren mit entsprechender Funktionalität erstellen, um die nicht dokumentierten gespeicherten Systemprozeduren zu ersetzen. Weitere Informationen finden Sie im Thema "CLR-gespeicherte Prozeduren" in der SQL Server-Onlinedokumentation.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

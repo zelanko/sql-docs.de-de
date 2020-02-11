@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7602ce0ef0e75c3c2eb1ee5a5a47e3fe56b87f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102135"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Konfiguration der benutzerdefinierten oder Formularauthentifizierung auf dem Berichtsserver
@@ -34,7 +34,7 @@ ms.locfileid: "66102135"
   
 1.  Öffnen Sie RSReportServer.config in einem Text-Editor.  
   
-2.  Finden Sie <`Authentication`>.  
+2.  Suchen Sie `Authentication` nach <>.  
   
 3.  Kopieren Sie die folgende XML-Struktur:  
   
@@ -47,15 +47,15 @@ ms.locfileid: "66102135"
     </Authentication>  
     ```  
   
-4.  Fügen Sie ihn über die vorhandenen Einträge für <`Authentication`>.  
+4.  Fügen Sie Sie über die vorhandenen Einträge für `Authentication` <> ein.  
   
      Beachten Sie, dass Sie `Custom` nicht mit anderen Authentifizierungstypen verwenden können.  
   
-5.  Speichern Sie die Datei.  
+5.  Speichern Sie die Datei .  
   
 6.  Öffnen Sie die Datei Web.config für den Berichtsserver. Standardmäßig befindet sich diese Datei unter "Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportServer".  
   
-7.  Suchen `authentication mode` und legen Sie ihn `Forms`.  
+7.  Suchen `authentication mode` und festlegen `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -69,7 +69,7 @@ ms.locfileid: "66102135"
   
 9. Öffnen Sie die Datei Web.config für den Berichts-Manager. Standardmäßig befindet sich diese Datei unter \Programme\Microsoft SQL Server\MSRS10_50.MSSQLSERVER\ReportManager.  
   
-10. Suchen `authentication mode` und legen Sie ihn `Forms`.  
+10. Suchen `authentication mode` und festlegen `Forms`.  
   
     ```  
     <authentication mode = "Forms" />  
@@ -83,17 +83,17 @@ ms.locfileid: "66102135"
   
 12. Fügen Sie der Konfigurationsdatei die Elementstruktur `PassThroughCookies` hinzu. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Managers für die Übergabe von benutzerdefinierten Authentifizierungscookies](configure-the-web-portal-to-pass-custom-authentication-cookies.md).  
   
-13. Speichern Sie die Datei.  
+13. Speichern Sie die Datei .  
   
 14. Wenn Sie eine horizontal skalierte Bereitstellung konfiguriert haben, wiederholen Sie alle vorherigen Schritte für andere in der Bereitstellung vorhandene Berichtsserver.  
   
 15. Starten Sie den Berichtsserver neu, um alle momentan geöffneten Sitzungen zu beenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Implementing a Security Extension](../extensions/security-extension/implementing-a-security-extension.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Implementieren einer Sicherheits Erweiterung](../extensions/security-extension/implementing-a-security-extension.md)   
  [Authentifizierung mit dem Berichtsserver](authentication-with-the-report-server.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
- [Konfigurieren der Standardauthentifizierung auf dem Berichtsserver](configure-basic-authentication-on-the-report-server.md)   
+ [Konfigurieren der Standard Authentifizierung auf dem Berichts Server](configure-basic-authentication-on-the-report-server.md)   
  [Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver](configure-windows-authentication-on-the-report-server.md)  
   
   

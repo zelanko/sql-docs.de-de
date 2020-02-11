@@ -1,5 +1,5 @@
 ---
-title: Ändern Sie Anwendungen so Bigint-Werte von sysperfinfo.cntr_value erwartet | Microsoft-Dokumentation
+title: Ändern Sie die Anwendungen so, dass bigint-Werte von sysperfinfo. cntr_value erwartet werden. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ced1e07b5423dcdc7c13d24e8528a2b6ac240aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093963"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>Ändern von Anwendungen, damit bigint-Werte von 'sysperfinfo.cntr_value' erwartet werden
-  Gibt Sysperfinfo einen `bigint` Wert für die Cntr_value-Spalte.  
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>Ändern von Anwendungen, damit bigint-Werte von 'sysperfinfo.cntr_value' erwartet werden
+  sysperfinfo gibt einen `bigint` Wert für die cntr_value Spalte zurück.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -30,10 +30,10 @@ ms.locfileid: "66093963"
  Durch Ändern der Anwendungen, die sysperfinfo verwenden, können Sie sicherstellen, dass sie die `bigint`-Werte der cntr_value-Spalte verarbeiten können.  
   
 > [!NOTE]  
->  Sysperfinfo ist eine kompatibilitätssicht. Sie sollten stattdessen die dynamische Verwaltungssicht sys.dm_os_performance_counter verwenden.  
+>  sysperfinfo ist eine Kompatibilitäts Ansicht. Sie sollten stattdessen die dynamische Verwaltungssicht sys.dm_os_performance_counter verwenden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

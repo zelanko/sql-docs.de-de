@@ -1,5 +1,5 @@
 ---
-title: Sysmail_help_status_sp (Transact-SQL) | Microsoft-Dokumentation
+title: sysmail_help_status_sp (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: b44277c6-81e8-4b4d-85b3-a2f04d602e7a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 764b6154885dbd361f7d7d4a09d8e340b4a62ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68044459"
 ---
-# <a name="sysmailhelpstatussp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
+# <a name="sysmail_help_status_sp-transact-sql"></a>sysmail_help_status_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Zeigt den Status der Datenbank-E-Mail-Warteschlangen an. Verwenden Sie **sysmail_start_sp** , um die Datenbank-E-Mail-Warteschlangen zu starten, und **sysmail_stop_sp** , um sie anzuhalten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,9 +43,9 @@ sysmail_help_status_sp
   
 ## <a name="result-set"></a>Resultset  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Status**|**nvarchar(7)**|Der Status der Datenbank-E-Mail. Mögliche Werte sind **STARTED** und **STOPPED**.|  
+|**Status**|**nvarchar (7)**|Der Status der Datenbank-E-Mail. Mögliche Werte sind **STARTED** und **STOPPED**.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** auf diese Prozedur zugreifen.  
@@ -66,9 +66,9 @@ Status
 STARTED  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Database Mail External Program](../../relational-databases/database-mail/database-mail-external-program.md)   
- [sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
- [sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Externes Programm Datenbank-E-Mail](../../relational-databases/database-mail/database-mail-external-program.md)   
+ [sysmail_start_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)   
+ [sysmail_stop_sp &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)  
   
   

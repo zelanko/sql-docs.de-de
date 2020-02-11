@@ -1,5 +1,5 @@
 ---
-title: Treiber-Manager&#39;s-Rolle in der Verbindungsprozess | Microsoft-Dokumentation
+title: Treiber-Manager-&#39;s-Rolle im Verbindungsprozess | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,27 +16,27 @@ ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046942"
 ---
-# <a name="driver-manager39s-role-in-the-connection-process"></a>Treiber-Manager&#39;s-Rolle in der Verbindungsprozess
-Denken Sie daran, dass Anwendungen Treiberfunktionen nicht direkt aufrufen. Stattdessen rufen Sie diese Treiber-Manager-Funktionen, mit dem gleichen Namen und der Treiber-Manager ruft der Treiberfunktionen. Dies geschieht normalerweise fast unmittelbar. Die Anwendung beispielsweise Aufrufe **SQLExecute** im Treiber-Manager und nach ein paar Überprüfungen auf Fehler aus, ruft der Treiber-Manager **SQLExecute** im Treiber.  
+# <a name="driver-manager39s-role-in-the-connection-process"></a>Treiber-Manager-&#39;s-Rolle im Verbindungsprozess
+Beachten Sie, dass Anwendungen Treiberfunktionen nicht direkt aufzurufen. Stattdessen rufen Sie Treiber-Manager-Funktionen mit demselben Namen auf, und der Treiber-Manager ruft die Treiberfunktionen auf. Dies geschieht normalerweise fast sofort. Beispielsweise ruft die Anwendung **SQLExecute** im Treiber-Manager auf, und nach einigen Fehlerprüfungen ruft der Treiber-Manager **SQLExecute** im Treiber auf.  
   
- Der Verbindungsprozess unterscheidet. Wenn die Anwendung ruft **SQLAllocHandle** mit den SQL_HANDLE_ENV und SQL_HANDLE_DBC auf, weist der Funktion behandelt nur im Treiber-Manager. Der Treiber-Manager ruft diese Funktion im Treiber nicht auf, da er nicht, welcher Treiber weiß für das aufrufen. Auf ähnliche Weise, wenn die Anwendung das Handle einer nicht verbundenen Verbindung mit übergibt **SQLSetConnectAttr** oder **SQLGetConnectAttr**, nur die Treiber-Manager die Funktion ausgeführt wird. Sie speichert, oder ruft den Wert des Attributs aus der Verbindung behandelt, und gibt Sie SQLSTATE 08003 (Verbindung nicht geöffnet) zurück, beim Abrufen eines Werts für ein Attribut, das nicht festgelegt wurde und für welche ODBC definiert keinen Standardwert.  
+ Der Verbindungsvorgang ist unterschiedlich. Wenn die Anwendung **sqlzugewiesene CHandle** mit den Optionen SQL_HANDLE_ENV und SQL_HANDLE_DBC aufruft, ordnet die Funktion Handles nur im Treiber-Manager zu. Der Treiber-Manager ruft diese Funktion nicht im Treiber auf, weil er nicht weiß, welcher Treiber aufgerufen werden soll. Wenn die Anwendung das Handle einer nicht verbundenen Verbindung an **SQLSetConnectAttr** oder **SQLGetConnectAttr**übergibt, wird die Funktion nur vom Treiber-Manager ausgeführt. Beim Abrufen eines Werts für ein Attribut, das nicht festgelegt wurde und für das ODBC keinen Standardwert definiert, wird SQLSTATE 08003 (Verbindung nicht geöffnet) zurückgegeben.  
   
- Wenn die Anwendung ruft **SQLConnect**, **SQLDriverConnect**, oder **SQLBrowseConnect**, bestimmt der Treiber-Manager zuerst, den zu verwendenden Treiber. Es wird dann überprüft, um zu bestimmen, ob ein Treiber für die Verbindung derzeit geladen wird:  
+ Wenn von der Anwendung **SQLCONNECT**, **SQLDriverConnect**oder **sqlbrowseconnetct**aufgerufen wird, bestimmt der Treiber-Manager zunächst, welcher Treiber verwendet werden soll. Anschließend wird überprüft, ob ein Treiber zurzeit auf der Verbindung geladen ist:  
   
--   Wenn für die Verbindung keine Treiber geladen wurde, überprüft der Treiber-Manager an, ob der angegebene Treiber auf eine andere Verbindung in der gleichen Umgebung geladen wird. Wenn nicht der Fall, der Treiber-Manager für den Treiber auf die Verbindung und ruft lädt **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_ENV auf.  
+-   Wenn kein Treiber für die Verbindung geladen wird, überprüft der Treiber-Manager, ob der angegebene Treiber auf eine andere Verbindung in derselben Umgebung geladen wird. Wenn dies nicht der Wert ist, lädt der Treiber-Manager den Treiber für die Verbindung und ruft **sqlzuweisung** im Treiber mit der SQL_HANDLE_ENV-Option auf.  
   
-     Der Treiber-Manager ruft dann **SQLAllocHandle** im Treiber mit der Option SQL_HANDLE_DBC auf, und zwar unabhängig davon, ob es gerade geladen wurde. Wenn die Anwendung Verbindungsattribute festgelegt wird, ruft der Treiber-Manager **SQLSetConnectAttr** im Treiber; Wenn ein Fehler auftritt, der Treiber-Manager-Verbindungsfunktion gibt SQLSTATE IM006 (des Treibers  **SQLSetConnectAttr** Fehler). Schließlich ruft der Treiber-Manager die Verbindungsfunktion im Treiber.  
+     Der Treiber-Manager ruft dann **sqlzugewiesene CHandle** im Treiber mit der SQL_HANDLE_DBC-Option auf, unabhängig davon, ob er soeben geladen wurde. Wenn die Anwendung Verbindungs Attribute festlegen, ruft der Treiber-Manager **SQLSetConnectAttr** im Treiber auf. Wenn ein Fehler auftritt, gibt die Verbindungsfunktion des Treiber-Managers SQLSTATE IM006 ( **SQLSetConnectAttr** des Treibers) zurück. Schließlich ruft der Treiber-Manager die Verbindungsfunktion im Treiber auf.  
   
--   Wenn der angegebene Treiber für die Verbindung geladen wird, ruft der Treiber-Manager nur die Verbindungsfunktion im Treiber. In diesem Fall muss der Treiber sicherstellen, alle Verbindungsattribute für die Verbindung ihre aktuellen Einstellungen zu verwalten.  
+-   Wenn der angegebene Treiber für die Verbindung geladen wird, ruft der Treiber-Manager nur die Verbindungsfunktion im Treiber auf. In diesem Fall muss der Treiber sicherstellen, dass alle Verbindungs Attribute der Verbindung die aktuellen Einstellungen beibehalten.  
   
--   Wenn für die Verbindung ein anderen Treiber geladen wird, ruft der Treiber-Manager **SQLFreeHandle** im Treiber, die Verbindung freizugeben. Wenn es keine anderen Verbindungen sind, die Treiber verwenden, ruft der Treiber-Manager **SQLFreeHandle** im Treiber auf die Umgebung kostenlos und entlädt den Treiber. Der Treiber-Manager führt dann die gleichen Vorgänge wie wenn ein Treiber für die Verbindung nicht geladen wird.  
+-   Wenn ein anderer Treiber für die Verbindung geladen wird, ruft der Treiber-Manager **SQLFreeHandle** im Treiber auf, um die Verbindung freizugeben. Wenn keine anderen Verbindungen vorhanden sind, die den Treiber verwenden, ruft der Treiber-Manager **SQLFreeHandle** im Treiber auf, um die Umgebung freizugeben und den Treiber zu entladen. Der Treiber-Manager führt dann dieselben Vorgänge aus, als wenn ein Treiber nicht für die Verbindung geladen wird.  
   
- Der Treiber-Manager wird das Umgebungshandle gesperrt (*Henv*) vor dem Aufrufen des Treibers **SQLAllocHandle** und **SQLFreeHandle** beim *HandleType* nastaven NA hodnotu **SQL_HANDLE_DBC auf**.  
+ Der Treiber-Manager sperrt das Umgebungs Handle (Don*v*) vor dem Aufrufen von **sqlzuzugschandle** und **SQLFreeHandle** eines Treibers, wenn der- *Typ* auf **SQL_HANDLE_DBC**festgelegt ist.  
   
- Wenn die Anwendung ruft **SQLDisconnect**, die Treiber-Manager ruft **SQLDisconnect** im Treiber. Allerdings bleibt den Treiber geladen wird, für den Fall, dass die Anwendung an den Treiber erneut eine Verbindung herstellt. Wenn die Anwendung ruft **SQLFreeHandle** mit der Option SQL_HANDLE_DBC auf, ruft der Treiber-Manager **SQLFreeHandle** im Treiber. Wenn der Treiber nicht durch alle anderen Verbindungen verwendet wird, ruft der Treiber-Manager klicken Sie dann **SQLFreeHandle** -option in den Treiber mit der SQL_HANDLE_ENV und entlädt den Treiber.
+ Wenn die Anwendung **SQLDisconnect**aufruft, ruft der Treiber-Manager **SQLDisconnect** im Treiber auf. Der Treiber wird jedoch weiterhin geladen, wenn die Anwendung erneut eine Verbindung mit dem Treiber herstellt. Wenn die Anwendung **SQLFreeHandle** mit der SQL_HANDLE_DBC-Option aufruft, ruft der Treiber-Manager **SQLFreeHandle** im Treiber auf. Wenn der Treiber nicht von anderen Verbindungen verwendet wird, ruft der Treiber-Manager dann **SQLFreeHandle** im Treiber mit der SQL_HANDLE_ENV-Option auf und entlädt den Treiber.

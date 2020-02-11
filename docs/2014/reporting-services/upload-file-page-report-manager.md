@@ -1,5 +1,5 @@
 ---
-title: Hochladen der Datei-Seite (Berichts-Manager) | Microsoft-Dokumentation
+title: Datei hochladen (Seite) (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1100baa3cd72a04d208b2076d91ca4efed7d38e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098864"
 ---
 # <a name="upload-file-page-report-manager"></a>Datei hochladen (Seite) (Berichts-Manager)
@@ -22,7 +22,7 @@ ms.locfileid: "66098864"
   
 -   Hochgeladene RDL-Dateien werden als Berichte auf einem Berichtsserver veröffentlicht.  
   
--   Hochgeladene SMDL-Dateien werden als Berichtsmodelle veröffentlicht, wenn sie Informationen zur Datenquellensicht enthalten. Wenn ein Verweis auf eine Datenquellensicht fehlt, tritt beim Hochladen ein Fehler auf. Informationen über Datenquellensichten könnten fehlen, wenn Sie eine SMDL-Datei aus einem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Berichtsmodell hochladen. In Berichtsmodellprojekten werden die Informationen zu Datenquellensichten in einer separaten Datei gespeichert und nicht in der SMDL-Datei selbst.  
+-   Hochgeladene SMDL-Dateien werden als Berichtsmodelle veröffentlicht, wenn sie Informationen zur Datenquellensicht enthalten. Wenn ein Verweis auf eine Datenquellensicht fehlt, tritt beim Hochladen ein Fehler auf. Datenquellen Sicht-Informationen fehlen möglicherweise, wenn Sie eine SMDL-Datei aus [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] einem Berichts Modellprojekt hochladen. In Berichtsmodellprojekten werden die Informationen zu Datenquellensichten in einer separaten Datei gespeichert und nicht in der SMDL-Datei selbst.  
   
      Modelldateien, die Informationen zu Datenquellensichten enthalten (und daher erfolgreich hochgeladen werden können), sind jene, die zuvor auf einen Berichtsserver veröffentlicht und dann vom Server in eine Datei im Dateisystem gespeichert wurden. Wenn Sie die Seite mit den allgemeinen Eigenschaften eines Modells öffnen und auf **Bearbeiten** klicken, um das Modell zu öffnen, können Sie es in einer Datei speichern und dann als neues Modell auf den Berichtsserver hochladen. Die SMDL-Datei, die Sie hochladen, enthält alle Informationen, die zum Veröffentlichen des Modell notwendig sind.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66098864"
   
 2.  Klicken Sie auf der Symbolleiste auf **Datei hochladen**.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Hochzuladende Datei**  
  Zeigt den vollqualifizierten Pfad der Datei an, die Sie aus dem Dateisystem kopieren.  
   
@@ -50,15 +50,15 @@ ms.locfileid: "66098864"
  Klicken Sie auf diese Schaltfläche, um eine Datei aus dem Dateisystem auszuwählen.  
   
  **Name**  
- Geben Sie den Namen der Datei ein, der im Namespace des Berichtsservers angezeigt wird. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< > | "oder / wenn Sie einen Elementnamen angeben.  
+ Geben Sie den Namen der Datei ein, der im Namespace des Berichtsservers angezeigt wird. Der Name muss mindestens ein alphanumerisches Zeichen enthalten. Er kann auch Leerzeichen und bestimmte Sonderzeichen enthalten. Folgende Zeichen können nicht beim Angeben eines Namens verwendet werden: ; ? : \@ & = +, $ * \< > | "oder/, wenn ein Elementname angegeben wird.  
   
- **Vorhandenes Element überschreiben Sie, falls vorhanden**  
+ **Vorhandenes Element überschreiben**  
  Aktivieren Sie dieses Kontrollkästchen, wenn Sie ein vorhandenes Element durch eine neuere Version ersetzen möchten. Um eine vorhandene Version zu überschreiben, muss der Name des neuen Elements genau mit dem Namen des vorhandenen Elements übereinstimmen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Hochladen von Dateien in einen Ordner](report-server/upload-files-to-a-folder.md)  
   
   

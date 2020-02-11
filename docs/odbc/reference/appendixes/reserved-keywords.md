@@ -14,19 +14,19 @@ ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68057211"
 ---
 # <a name="reserved-keywords"></a>Reservierte Schlüsselwörter
-Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken nicht die minimale SQL-Grammatik ein; um die Kompatibilität mit Treibern sichergestellt ist, die Core-SQL-Grammatik unterstützen, sollten Anwendungen jedoch nicht mit einem dieser Schlüsselwörter. Die Anzahl**definieren** Wert SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
+Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reserviert. Diese Wörter schränken die minimale SQL-Grammatik nicht ein. Um jedoch die Kompatibilität mit Treibern sicherzustellen, die die Kern-SQL-Grammatik unterstützen, sollten Anwendungen die Verwendung dieser Schlüsselwörter vermeiden. Der Wert "#**define** " SQL_ODBC_KEYWORDS enthält eine durch Trennzeichen getrennte Liste dieser Schlüsselwörter.  
   
 |||  
 |-|-|  
 |ABSOLUTE|IS|  
-|ACTION|ISOLATION|  
+|AKTION|ISOLATION|  
 |ADA|JOIN|  
 |ADD|KEY|  
 |ALL|LANGUAGE|  
@@ -40,7 +40,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |ASSERTION|MATCH|  
 |AT|MAX|  
 |AUTHORIZATION|MIN|  
-|AVG|MINUTE|  
+|DURCHSCHN.|MINUTE|  
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
 |BIT|NAMES|  
@@ -48,7 +48,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |BOTH|NATURAL|  
 |BY|NCHAR|  
 |CASCADE|NEXT|  
-|CASCADED|Nein|  
+|CASCADED|NO|  
 |CASE|Keine|  
 |CAST|NICHT|  
 |CATALOG|NULL|  
@@ -56,7 +56,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |CHAR_LENGTH|NUMERIC|  
 |CHARACTER|OCTET_LENGTH|  
 |CHARACTER_LENGTH|OF|  
-|CHECK|ON|  
+|CHECK|EIN|  
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
@@ -64,11 +64,11 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
-|CONNECTION|ÜBERLAPPT|  
+|CONNECTION|Lappen|  
 |CONSTRAINT|PAD|  
-|CONSTRAINTS|PARTIAL|  
-|CONTINUE|PASCAL-SCHREIBWEISE|  
-|CONVERT|POSITION|  
+|EINSCHRÄNKUNGEN|PARTIAL|  
+|CONTINUE|PASCAL|  
+|CONVERT|Gebracht|  
 |CORRESPONDING|PRECISION|  
 |COUNT|PREPARE|  
 |CREATE|PRESERVE|  
@@ -83,25 +83,25 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
 |DEC|REVOKE|  
-|DEZIMAL|RIGHT|  
+|DECIMAL|RIGHT|  
 |DECLARE|ROLLBACK|  
 |DEFAULT|ROWS|  
 |DEFERRABLE|SCHEMA|  
 |DEFERRED|SCROLL|  
-|DELETE|SECOND|  
+|Delete|SECOND|  
 |DESC|SECTION|  
 |DESCRIBE|SELECT|  
 |DESCRIPTOR|SESSION|  
 |DIAGNOSTICS|SESSION_USER|  
 |DISCONNECT|SET|  
-|DISTINCT|SIZE|  
+|DISTINCT|GRÖSSE|  
 |DOMAIN|SMALLINT|  
-|DOUBLE|SOME|  
+|Double|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  
 |END-EXEC|SQLCODE|  
-|ESCAPE|SQLERROR|  
+|ESCAPE|SQLError|  
 |EXCEPT|SQLSTATE|  
 |EXCEPTION|SQLWARNING|  
 |EXEC|SUBSTRING|  
@@ -125,11 +125,11 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |GOTO|UNIQUE|  
 |GRANT|UNKNOWN|  
 |GROUP|UPDATE|  
-|HAVING|GROSSBUCHSTABEN|  
+|HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|Benutzer|  
+|IDENTITÄT|USER|  
 |IMMEDIATE|USING|  
-|IN|Value|  
+|IN|VALUE|  
 |INCLUDE|VALUES|  
 |INDEX|VARCHAR|  
 |INDICATOR|VARYING|  
@@ -137,7 +137,7 @@ Die folgenden Wörter sind für die Verwendung in ODBC-Funktionsaufrufen reservi
 |INNER|WHEN|  
 |INPUT|WHENEVER|  
 |INSENSITIVE|WHERE|  
-|INSERT|mit|  
+|INSERT|WITH|  
 |INT|WORK|  
 |INTEGER|WRITE|  
 |INTERSECT|YEAR|  

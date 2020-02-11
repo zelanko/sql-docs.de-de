@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b167aaadfbef817608a2b0dc14954ad7f29f9b97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101007"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus
@@ -30,11 +30,11 @@ ms.locfileid: "66101007"
   
  Beim Erstellen eines Abonnements gibt es drei Möglichkeiten zum Angeben der Übermittlung:  
   
--   **Dokumentbibliothek**: Sie können ein Abonnement erstellen, die ein auf dem ursprünglichen Bericht an eine Bibliothek innerhalb derselben SharePoint-Website als dem ursprünglichen Bericht basierendes Dokument bereitstellt. Sie können das Dokument nicht an eine Bibliothek auf einem anderen Server oder einer anderen Website in der gleichen Websiteauflistung übermitteln. Wenn Sie das Dokument übermitteln möchten, müssen Sie für die Bibliothek, an die der Bericht übermittelt wird, über die Berechtigung zum Hinzufügen von Elementen verfügen.  
+-   **Dokumentbibliothek**: Sie können ein Abonnement erstellen, das ein auf dem ursprünglichen Bericht basierendes Dokument an eine Bibliothek übermittelt, die sich auf derselben SharePoint-Website wie der ursprüngliche Bericht befindet. Sie können das Dokument nicht an eine Bibliothek auf einem anderen Server oder einer anderen Website in der gleichen Websiteauflistung übermitteln. Wenn Sie das Dokument übermitteln möchten, müssen Sie für die Bibliothek, an die der Bericht übermittelt wird, über die Berechtigung zum Hinzufügen von Elementen verfügen.  
   
--   **Dateiordner:** Sie können ein Dokument basierend auf dem ursprünglichen Bericht an einen freigegebenen Ordner im Dateisystem übermitteln. Sie müssen einen vorhandenen Ordner auswählen, auf den über eine Netzwerkverbindung zugegriffen werden kann.  
+-   **Dateiordner** : Sie können ein auf dem ursprünglichen Bericht basierendes Dokument an einen freigegebenen Ordner im Dateisystem übermitteln. Sie müssen einen vorhandenen Ordner auswählen, auf den über eine Netzwerkverbindung zugegriffen werden kann.  
   
--   **E-Mail-Adresse:** Wenn der Berichtsserver konfiguriert ist, um den Report Server-e-Mail-übermittlungserweiterung verwenden, können Sie ein Abonnement erstellen, die einen Bericht oder eine exportierte Berichtsdatei (in einem Ausgabeformat gespeichert) an Ihren Posteingang sendet. Wenn Sie nur die Benachrichtigung, aber keinen Bericht oder keine Berichts-URL erhalten möchten, deaktivieren Sie die Kontrollkästchen **Einen Link zum Bericht einschließen** und **Bericht in Nachricht anzeigen** .  
+-   **E-Mail:** Wenn der Berichtsserver für die Verwendung der E-Mail-Übermittlungserweiterung konfiguriert ist, können Sie ein Abonnement erstellen, das einen Bericht oder eine exportierte Berichtsdatei (die in einem Ausgabeformat gespeichert ist) an Ihren Posteingang sendet. Wenn Sie nur die Benachrichtigung, aber keinen Bericht oder keine Berichts-URL erhalten möchten, deaktivieren Sie die Kontrollkästchen **Einen Link zum Bericht einschließen** und **Bericht in Nachricht anzeigen** .  
   
  **In diesem Thema:**  
   
@@ -134,7 +134,7 @@ ms.locfileid: "66101007"
   
 8.  Geben Sie unter **Berichtsinhalt**an, ob Sie den tatsächlichen Bericht in den Text der Nachricht einbetten möchten.  
   
-     Durch das Renderingformat und den Browser wird festgelegt ob der Bericht eingebettet oder angefügt wird. Falls Ihr Browser HTML 4.0 und MHTML unterstützt und Sie das Webarchiv-Renderingformat auswählen, wird der Bericht in die Nachricht eingebettet. Bei allen anderen Renderingformaten (CSV, PDF usw.) werden Berichte als Anlagen übermittelt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] führt keine Überprüfung der Größe der Anlage oder Nachricht vor dem Senden des Berichts durch. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie für große Berichte eine der anderen Übermittlungsoptionen (z. B. URL oder Benachrichtigung) aus.  
+     Durch das Renderingformat und den Browser wird festgelegt, ob der Bericht eingebettet oder angefügt wird. Falls Ihr Browser HTML 4.0 und MHTML unterstützt und Sie das Webarchiv-Renderingformat auswählen, wird der Bericht in die Nachricht eingebettet. Bei allen anderen Renderingformaten (CSV, PDF usw.) werden Berichte als Anlagen übermittelt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] führt keine Überprüfung der Größe der Anlage oder Nachricht vor dem Senden des Berichts durch. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie für große Berichte eine der anderen Übermittlungsoptionen (z. B. URL oder Benachrichtigung) aus.  
   
 9. Geben Sie unter **Übermittlungsereignis**einen Zeitplan oder ein Ereignis an, mit dem das Abonnement ausgeführt wird. Sie können einen benutzerdefinierten Zeitplan erstellen, einen freigegebenen Zeitplan auswählen (sofern ein solcher verfügbar ist) oder das Abonnement ausführen, sobald die Daten für einen Bericht, der mit Momentaufnahmedaten ausgeführt wird, aktualisiert werden. Weitere Informationen zu Zeitplänen und Datenverarbeitung finden Sie unter [Festlegen von Verarbeitungsoptionen (Reporting Services im integrierten SharePoint-Modus)](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -156,11 +156,11 @@ ms.locfileid: "66101007"
   
 3.  Aktivieren Sie das Kontrollkästchen neben dem Abonnement, und klicken Sie auf **Löschen**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [E-Mail Delivery in Reporting Services (E-Mail-Übermittlung in Reporting Services)](e-mail-delivery-in-reporting-services.md)   
  [Dateifreigabeübermittlung in Reporting Services](file-share-delivery-in-reporting-services.md)   
  [SharePoint-Bibliotheksübermittlung in Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   
- [Konfigurieren eines Berichtsservers für die e-Mail-Übermittlung &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
+ [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
   
   

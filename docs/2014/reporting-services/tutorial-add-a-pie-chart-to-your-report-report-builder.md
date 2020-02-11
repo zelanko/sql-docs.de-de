@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099049"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
-  Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Kreisdiagramme werden häufig verwendet, um Vergleiche zwischen Gruppen zu erstellen. Kreis- und Ringdiagramme Diagramme, zusammen mit Pyramiden-und Trichterdiagrammen, bilden eine Gruppe von Diagrammen als Formdiagrammen bezeichnet. Formdiagramme haben keine Achsen. Wenn ein numerisches Feld auf einem Formdiagramm abgelegt wird, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
+  Kreis- und Ringdiagramme zeigen Daten als Teile des Ganzen an. Kreisdiagramme werden häufig verwendet, um Vergleiche zwischen Gruppen zu erstellen. Kreis-und Ring Diagramme bilden zusammen mit Pyramiden-und Trichter Diagrammen eine Gruppe von Diagrammen, die als Form Diagramme bezeichnet werden. Formdiagramme haben keine Achsen. Wenn ein numerisches Feld auf einem Formdiagramm abgelegt wird, berechnet das Diagramm den prozentualen Anteil jedes einzelnen Werts der Gesamtsumme.  
   
  Wenn in einem Kreisdiagramm zu viele Datenpunkte vorhanden sind, können die Datenpunktbezeichnungen zu überfüllt sein, um sie zu lesen. In diesem Fall sollten Sie die Verwendung eines Liniendiagramms erwägen. Verwenden Sie Kreisdiagramme möglichst nur, nachdem Sie die Daten bereits zu einer kleineren Anzahl von Datenpunkten aggregiert haben.  
   
@@ -26,12 +26,12 @@ ms.locfileid: "66099049"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a> Lernziele  
+##  <a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Tutorial lernen Sie Folgendes:  
   
 1.  [Erstellen eines Kreisdiagramms im Diagramm-Assistenten](#Chart)  
   
-2.  [Auswählen des Diagrammtyps](#ChartType)  
+2.  [Diagrammtyp auswählen](#ChartType)  
   
 3.  [Anzeigen von Prozentsätzen in jedem Slice](#Percentages)  
   
@@ -39,19 +39,19 @@ ms.locfileid: "66099049"
   
 5.  [Anpassen des Zeichnungseffekts](#DrawingEffect)  
   
-6.  [Hinzufügen eines Berichtstitels](#Title)  
+6.  [Hinzufügen eines Berichts Titels](#Title)  
   
 7.  [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Lernprogramm dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in zwei Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, Hinzufügen einer Datenquelle und Hinzufügen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a> 1. Erstellen eines Kreisdiagramms im Diagramm-Assistenten  
+##  <a name="Chart"></a>1. Erstellen eines Kreis Diagramms im Diagramm-Assistenten  
  Erstellen Sie im Dialogfeld Erste Schritte mithilfe des Diagramm-Assistenten ein eingebettetes Dataset, wählen Sie eine freigegebene Datenquelle aus, und erstellen Sie ein Kreisdiagramm.  
   
 > [!NOTE]  
@@ -64,7 +64,7 @@ ms.locfileid: "66099049"
      Das Dialogfeld Erste Schritte wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn das Dialogfeld "Erste Schritte" nicht, über die Schaltfläche Berichts-Generator angezeigt wird Klicken Sie auf **neu**.  
+    >  Wenn das Dialogfeld "Getting Started" nicht angezeigt wird, klicken Sie auf der Schaltfläche "Berichts-Generator" auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -96,12 +96,12 @@ ms.locfileid: "66099049"
   
 9. Klicken Sie auf **Weiter**.  
   
-##  <a name="ChartType"></a> 2. Auswählen des Diagrammtyps  
+##  <a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
  Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
   
 #### <a name="to-add-a-pie-chart"></a>So fügen Sie ein Kreisdiagramm hinzu  
   
-1.  Auf der **Auswählen eines Diagrammtyps** auf **Kreis**, und klicken Sie dann auf **Weiter**. Die Seite **Diagrammfelder anordnen** wird geöffnet.  
+1.  Klicken Sie auf der Seite **Diagrammtyp auswählen** **auf Kreis, und**klicken Sie dann auf **weiter**. Die Seite **Diagrammfelder anordnen** wird geöffnet.  
   
      Ziehen Sie auf der Seite **Diagrammfelder anordnen** das Feld „Product“ in den Bereich **Kategorien** . Kategorien definieren die Anzahl von Slices im Kreisdiagramm. In diesem Beispiel werden acht Slices verwendet, eines für jedes Produkt.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66099049"
   
 3.  Klicken Sie auf **Weiter**.  
   
-4.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", eine Art.  
+4.  Wählen Sie auf der Seite Format **auswählen** im Bereich Stile einen Stil aus.  
   
      Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart. Wenn Sie ein Format auswählen, wird im Vorschaubereich ein Beispiel für das Diagramm mit diesem Format angezeigt.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66099049"
   
  Im Bericht wird das Kreisdiagramm mit acht Slices angezeigt, eines für jedes Produkt. Die Größe der Slices stellt den Umsatz für das jeweilige Produkt dar. Drei der Slices sind relativ dünn.  
   
-##  <a name="Percentages"></a> 3. Anzeigen von Prozentsätzen in jedem Slice  
+##  <a name="Percentages"></a>3. Anzeigen von Prozentsätzen in jedem Slice  
  Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Vergleich zum gesamten Kreis anzeigen.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>So zeigen Sie Prozentwerte in den einzelnen Segmenten eines Kreisdiagramms an  
@@ -132,13 +132,13 @@ ms.locfileid: "66099049"
   
 2.  Klicken Sie mit der rechten Maustaste auf das Kreisdiagramm, und klicken Sie anschließend auf **Datenbezeichnungen anzeigen**. Die Datenbezeichnungen werden im Diagramm angezeigt.  
   
-3.  Mit der rechten Maustaste einer Bezeichnung, und klicken Sie dann auf **Reihenbezeichnungseigenschaften**.  
+3.  Klicken Sie mit der rechten Maustaste auf eine Bezeichnung, und klicken Sie dann auf **Reihen Bezeichnung Eigenschaften**.  
   
-4.  Wählen Sie in bezeichnungsdaten, aus dem Dropdown-Feld **#PERCENT**.  
+4.  Wählen Sie unter Bezeichnungs Daten im Dropdown Feld die Option **#percent**aus.  
   
      Die UseValueAsLabel-Eigenschaft muss zum Anzeigen von Werten als Prozentsätze auf "False" festgelegt werden. Klicken Sie auf **Ja** , wenn Sie im Dialogfeld **Aktion bestätigen**zum Festlegen dieses Werts aufgefordert werden.  
   
-5.  (Optional) Um anzugeben, wie viele Dezimalstellen die Bezeichnung zeigt, und geben `#PERCENT{Pn}` , in denen *n* ist die Anzahl der anzuzeigenden Dezimalstellen. Um keine Dezimalstellen anzuzeigen, geben Sie z. B. `#PERCENT{P0}`.  
+5.  Optionale Um anzugeben, wie viele Dezimalstellen in der Bezeichnung angezeigt `#PERCENT{Pn}` werden, geben Sie ein, wobei *n* die Anzahl der anzuzeigenden Dezimalstellen ist. Wenn Sie z. b. keine Dezimalstellen anzeigen `#PERCENT{P0}`möchten, geben Sie ein.  
   
     > [!NOTE]  
     >  Die Option**Zahlenformat** im Dialogfeld **Reihenbezeichnungseigenschaften** hat beim Formatieren von Prozentwerten keinen Einfluss auf das Format. Hierdurch werden die Bezeichnungen als Prozentwerte formatiert, die eigentlichen Prozentwerte der einzelnen Slices eines Kreisdiagramms werden jedoch nicht berechnet.  
@@ -149,14 +149,14 @@ ms.locfileid: "66099049"
   
  Im Bericht wird der Prozentsatz am gesamten Kreis für jeden Kreisslice angezeigt.  
   
-##  <a name="CombineSlices"></a> 4. Kombinieren von kleinen Slices zu einem Slice  
+##  <a name="CombineSlices"></a>4. Kombinieren von kleinen Slices zu einem Slice  
  Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices zu einem größeren Slice kombinieren, durch das alle Slices dargestellt werden.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>So kombinieren Sie alle Slices des Kreisdiagramms unter fünf Prozent zu einem Slice  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Auf der **Ansicht** Registerkarte die **ein-/ausblenden** Gruppe **Eigenschaften**.  
+2.  Wählen Sie auf der Registerkarte **Ansicht** in der Gruppe **anzeigen/ausblenden** die Option **Eigenschaften**aus.  
   
 3.  Klicken Sie auf der Entwurfsoberfläche auf ein Segment des Kreisdiagramms. Die Eigenschaften für die Reihe werden im Bereich "Eigenschaften" angezeigt.  
   
@@ -168,27 +168,27 @@ ms.locfileid: "66099049"
   
 7.  Vergewissern Sie sich, dass die **CollectedThresholdUsePercent** -Eigenschaft auf **TRUE**festgelegt ist.  
   
-8.  Auf dem Menüband auf die **Startseite** auf **ausführen** auf die Vorschau des Berichts anzuzeigen.  
+8.  Klicken Sie im Menüband auf der Registerkarte **Start** auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
  In der Legende ist die Kategorie "Other" jetzt vorhanden. Im neuen Kreisslice werden alle Slices, die kleiner als 5 % waren, zu einem Slice kombiniert, das 6 % des gesamten Kreises darstellt.  
   
-##  <a name="DrawingEffect"></a> 5. Anpassen des Zeichnungseffekts  
+##  <a name="DrawingEffect"></a>5. Anpassen des Zeichnungs Effekts  
  Das Standardformat für Kreisdiagramme im Diagramm-Assistenten ist "Ozean", ein Format mit einem konkaven Zeichnungseffekt. Sie können das Format nach dem Ausführen des Assistenten ändern.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>So fügen Sie dem Kreisdiagramm einen Zeichnungseffekt hinzu  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Wenn der Bereich "Eigenschaften" nicht bereits auf geöffnet, ist die **Ansicht** Registerkarte **Eigenschaften**.  
+2.  Wenn der Bereich Eigenschaften nicht bereits geöffnet ist, wählen Sie auf der Registerkarte **Ansicht** die Option **Eigenschaften**aus.  
   
-3.  Doppelklicken Sie auf das Kreisdiagramm selbst. Die Reiheneigenschaften für das Kreisdiagramm werden im Bereich Eigenschaften angezeigt.  
+3.  Doppelklicken Sie auf das Kreis Diagramm. Die Reiheneigenschaften für das Kreisdiagramm werden im Bereich Eigenschaften angezeigt.  
   
 4.  Erweitern Sie im Bereich Eigenschaften den Knoten **CustomAttributes** .  
   
-5.  Legen Sie die **PieDrawingStyle** zu **SoftEdge**.  
+5.  Legen Sie " **PieDrawingStyle** " auf " **SoftEdge**" fest.  
   
     > [!NOTE]  
-    >  Zeichnungseffekte und 3D-Effekte sind exklusive Optionen. Wenn ein Diagramm dreidimensionale Effekte angewendet wird, ist **PieDrawingStyle** ist auf den Bereich "Eigenschaften" nicht verfügbar.  
+    >  Zeichnungs Effekte und dreidimensionale Effekte sind exklusive Optionen. Wenn für ein Diagramm dreidimensionale Effekte angewendet werden, ist **PieDrawingStyle** nicht im Bereich Eigenschaften verfügbar.  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66099049"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a> 6. Hinzufügen eines Berichtstitels  
+##  <a name="Title"></a>6. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -208,9 +208,9 @@ ms.locfileid: "66099049"
   
      **Als Prozentsatz des Gesamtumsatzes**  
   
-3.  Wählen Sie **Kamera- und Camcorderumsatz**, und klicken Sie auf die **fett** Schaltfläche der **Schriftart** Teil der **Startseite** Registerkarte des Menübands.  
+3.  Wählen Sie **Kamera-und camcorderumsatz**aus, und klicken Sie im Abschnitt **Schriftart** der Registerkarte **Home** des Menübands auf die Schaltfläche **Fett** .  
   
-4.  Wählen Sie **als Prozentsatz des Gesamtumsatzes**, und klicken Sie in der **Schriftart** im Abschnitt der **Startseite** Registerkarte, legen Sie den Schriftgrad auf **10**.  
+4.  Wählen Sie **als Prozentsatz des Gesamtumsatzes aus**, und legen Sie auf der Registerkarte **Home** im Abschnitt **Schriftart** den Schrift Grad auf **10**fest.  
   
 5.  (Optional) Das Textfeld "Titel" muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "66099049"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Save"></a> 7. Speichern des Berichts  
+##  <a name="Save"></a>7. Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
@@ -235,7 +235,7 @@ ms.locfileid: "66099049"
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben das Lernprogramm "Hinzufügen eines Kreisdiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

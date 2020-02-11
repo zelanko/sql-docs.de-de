@@ -1,5 +1,5 @@
 ---
-title: Sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
+title: sp_add_log_shipping_secondary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68046211"
 ---
-# <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
+# <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Legt fest, um eine sekundäre Datenbanken für den Protokollversand.  
+  Richtet eine sekundäre Datenbank für den Protokoll Versand ein.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -53,62 +53,62 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @secondary_database = ] 'secondary_database'` Ist der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @secondary_database = ] 'secondary_database'`Der Name der sekundären Datenbank. *secondary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @primary_server = ] 'primary_server'` Der Name der primären Instanz von der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokollversandkonfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
+`[ @primary_server = ] 'primary_server'`Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration. *primary_server* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
   
-`[ @primary_database = ] 'primary_database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @restore_delay = ] 'restore_delay'` Die Zeitspanne in Minuten, die der sekundäre Server vor dem Wiederherstellen einer bestimmten Sicherungsdatei wartet. *Restore_delay* ist **Int** und darf nicht NULL sein. Der Standardwert ist 0.  
+`[ @restore_delay = ] 'restore_delay'`Die Zeitspanne in Minuten, die der sekundäre Server wartet, bevor er eine bestimmte Sicherungsdatei wiederherstellt. *restore_delay* ist vom Datentyp **int** und kann nicht NULL sein. Der Standardwert ist 0.  
   
-`[ @restore_all = ] 'restore_all'` Wenn der Wert gleich 1, der sekundäre Server alle verfügbaren Sicherungen des Transaktionsprotokolls wiederhergestellt, wenn der Wiederherstellungsauftrag ausgeführt wird. Andernfalls wird der Vorgang nach der Wiederherstellung einer Datei beendet. *Restore_all* ist **Bit** und darf nicht NULL sein.  
+`[ @restore_all = ] 'restore_all'`Wenn der Wert auf 1 festgelegt ist, stellt der sekundäre Server bei Ausführung des Wiederherstellungs Auftrags alle verfügbaren Transaktionsprotokoll Sicherungen wieder her. Andernfalls wird der Vorgang nach der Wiederherstellung einer Datei beendet. *restore_all* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @restore_mode = ] 'restore_mode'` Der Wiederherstellungsmodus für die sekundäre Datenbank.  
+`[ @restore_mode = ] 'restore_mode'`Der Wiederherstellungs Modus für die sekundäre Datenbank.  
   
  0 = Das Protokoll wird mit NORECOVERY wiederhergestellt.  
   
- 1 = das Protokoll mit STANDBY wiederhergestellt.  
+ 1 = RESTORE LOG with Standby.  
   
- *Wiederherstellen* ist **Bit** und darf nicht NULL sein.  
+ *Restore* ist ein **Bit** und kann nicht NULL sein.  
   
-`[ @disconnect_users = ] 'disconnect_users'` Wenn auf 1 festgelegt, Benutzer von der sekundären Datenbank getrennt werden, wenn ein Wiederherstellungsvorgang ausgeführt wird. Standard = 0. *Trennen Sie* Benutzer **Bit** und darf nicht NULL sein.  
+`[ @disconnect_users = ] 'disconnect_users'`Wenn der Wert auf 1 festgelegt ist, werden die Benutzer von der sekundären Datenbank getrennt, wenn ein Wiederherstellungs Vorgang ausgeführt wird. Standardwert = 0. die *Trennung* von Benutzern ist **Bit** und darf nicht NULL sein.  
   
-`[ @block_size = ] 'block_size'` Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *Block_size* ist **Int** hat den Standardwert 1.  
+`[ @block_size = ] 'block_size'`Die Größe in Bytes, die als Blockgröße für das Sicherungsmedium verwendet wird. *block_size* ist vom Datentyp **int** und hat den Standardwert-1.  
   
-`[ @buffer_count = ] 'buffer_count'` Die Gesamtanzahl von Puffern, die von des Backup- oder Restore-Vorgangs verwendet werden soll. *Buffer_count* ist **Int** hat den Standardwert 1.  
+`[ @buffer_count = ] 'buffer_count'`Die Gesamtanzahl der Puffer, die vom Sicherungs-oder Wiederherstellungs Vorgang verwendet werden. *buffer_count* ist vom Datentyp **int** und hat den Standardwert-1.  
   
-`[ @max_transfer_size = ] 'max_transfer_size'` Die Größe in Bytes, der maximalen Eingabe- oder ausgabeanforderung ausgestellt hat [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf das Sicherungsmedium. *Max_transfersize* ist **Int** und kann NULL sein.  
+`[ @max_transfer_size = ] 'max_transfer_size'`Die Größe der maximalen Eingabe-oder Ausgabeanforderung in Bytes, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an das Sicherungsmedium ausgegeben wird. *max_transfersize* ist vom Datentyp **int** und kann NULL sein.  
   
-`[ @restore_threshold = ] 'restore_threshold'` Die Anzahl der Minuten zwischen Wiederherstellungsvorgängen verstreichen darf, bevor eine Warnung generiert wird, Wiederherstellungsvorgänge an. *Restore_threshold* ist **Int** und darf nicht NULL sein.  
+`[ @restore_threshold = ] 'restore_threshold'`Die zulässige Anzahl von Minuten zwischen Wiederherstellungs Vorgängen, bevor eine Warnung generiert wird. *restore_threshold* ist vom Datentyp **int** und kann nicht NULL sein.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Ist die Warnung, die bei Überschreitung des sicherungsschwellenwerts ausgelöst werden. *Threshold_alert* ist **Int**, hat den Standardwert 14,420.  
+`[ @threshold_alert = ] 'threshold_alert'`Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int**und hat den Standardwert 14.420.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung ausgelöst wird, wenn *Backup_threshold* überschritten wird. Der Standardwert 1 bedeutet, dass die Warnung ausgelöst wird. *Threshold_alert_enabled* ist **Bit**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird. Der Standardwert 1 bedeutet, dass die Warnung ausgelöst wird. *threshold_alert_enabled* ist **Bit**.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Ist die Zeitdauer in Minuten, die in denen der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
+`[ @history_retention_period = ] 'history_retention_period'`Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**und hat den Standardwert NULL. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_add_log_shipping_secondary_database** muss ausgeführt werden, aus der **master** Datenbank auf dem sekundären Server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_add_log_shipping_secondary_database** muss von der **Master** -Datenbank auf dem sekundären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
-1.  **Sp_add_log_shipping_secondary_primary** aufgerufen werden soll, bevor Sie diese gespeicherte Prozedur, um die primären Protokollversand-Datenbankinformationen auf dem sekundären Server zu initialisieren.  
+1.  **sp_add_log_shipping_secondary_primary** sollte vor dieser gespeicherten Prozedur aufgerufen werden, um die Informationen zu den primären Protokoll Versand Datenbanken auf dem sekundären Server zu initialisieren.  
   
-2.  Fügt einen Eintrag für die sekundäre Datenbank in **Log_shipping_secondary_databases** unter Verwendung der angegebenen Argumente.  
+2.  Fügt einen Eintrag für die sekundäre Datenbank in **log_shipping_secondary_databases** mit den bereitgestellten Argumenten hinzu.  
   
-3.  Hinzufügen eines lokalen Überwachungsdatensatzes in **Log_shipping_monitor_secondary** auf dem sekundären Server mithilfe bereitgestellter Argumente.  
+3.  Fügt einen lokalen Überwachungsdaten Satz in **log_shipping_monitor_secondary** auf dem sekundären Server mithilfe der angegebenen Argumente hinzu.  
   
-4.  Falls der Überwachungsserver vom sekundären Server übereinstimmt, fügt ein Überwachungsdatensatzes **Log_shipping_monitor_secondary** auf dem Überwachungsserver mithilfe angegebener Parameter.  
+4.  Wenn der Überwachungs Server nicht mit dem sekundären Server identisch ist, wird in **log_shipping_monitor_secondary** auf dem Überwachungs Server ein Überwachungsdaten Satz mithilfe der angegebenen Argumente hinzugefügt.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel wird die Verwendung der **Sp_add_log_shipping_secondary_database** gespeicherte Prozedur zum Hinzufügen der Datenbank **LogShipAdventureWorks** als sekundäre Datenbank in einer Protokollversandkonfiguration mit der primären Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] auf dem primären Server tribeca befindet.  
+ Dieses Beispiel veranschaulicht die Verwendung der gespeicherten Prozedur **sp_add_log_shipping_secondary_database** , um die Datenbank **LogShipAdventureWorks** als sekundäre Datenbank in einer Protokoll Versand Konfiguration hinzuzufügen, wobei [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] sich die primäre Datenbank auf dem primären Server befindet.  
   
 ```  
 EXEC master.dbo.sp_add_log_shipping_secondary_database   
@@ -124,8 +124,8 @@ EXEC master.dbo.sp_add_log_shipping_secondary_database
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

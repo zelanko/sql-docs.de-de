@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7ae056d72d3966a9787ac2d52f89689ae9f6a799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106298"
 ---
 # <a name="3d-bevel-and-other-effects-in-a-chart-report-builder-and-ssrs"></a>3D, Abschrägungen und andere Effekte in einem Diagramm (Berichts-Generator und SSRS)
@@ -59,9 +59,9 @@ ms.locfileid: "66106298"
 ## <a name="highlighting-3d-effects"></a>Hervorheben von 3D-Effekten  
  Sie können einem dreidimensionalen Diagramm über die **Schattierung** -Eigenschaft Hervorhebungen hinzufügen. Die Eigenschaft wird bei Auswahl einer Diagrammfläche im Fenster Eigenschaften unter Area3DStyle angezeigt. Mit einer einfachen Hervorhebung wird der gleiche Farbton für die Diagrammflächenelemente übernommen. Mit einer realistischen Hervorhebung werden die Farbtöne der Diagrammflächenelemente abhängig von einem angegebenen Beleuchtungswinkel geändert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Hinzufügen von 3D-Effekten zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-3d-effects-report-builder.md)  
+ [Hinzufügen von 3D-Effekten zu einem Diagramm (Berichts-Generator und SSRS)](chart-effects-add-3d-effects-report-builder.md)  
   
   

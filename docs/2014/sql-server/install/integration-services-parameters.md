@@ -1,5 +1,5 @@
 ---
-title: Integration Services-Parameter | Microsoft-Dokumentation
+title: Integration Services Parameter | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,27 +13,27 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094234"
 ---
 # <a name="integration-services-parameters"></a>Integration Services-Parameter
-  Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], können Sie entscheiden, Analysieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete auf dem Computer oder [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paketdateien im Dateisystem. Wenn Sie sich dafür entscheiden, Dateien im Dateisystem zu analysieren, müssen Sie einen Pfad zum Ordner angeben, der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete enthält.  
+  Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie sich entscheiden, Pakete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf dem Computer zu analysieren, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder Paketdateien im Dateisystem. Wenn Sie sich dafür entscheiden, Dateien im Dateisystem zu analysieren, müssen Sie einen Pfad zum Ordner angeben, der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete enthält.  
   
-## <a name="options"></a>Optionen  
- **SSIS-Pakete auf Server analysieren**  
- Wählen Sie diese Option zum Analysieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete auf dem Computer. Standardmäßig ist diese Option ausgewählt.  
+## <a name="options"></a>Tastatur  
+ **SSIS-Pakete auf dem Computer analysieren**  
+ Wählen Sie diese Option aus [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um Pakete auf dem Computer zu analysieren. Standardmäßig ist diese Option ausgewählt.  
   
  **SSIS-Paketdateien analysieren**  
  Wählen Sie diese Option aus, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete im Dateisystem zu analysieren.  
   
  **Pfad zu SSIS-Paketen**  
- Geben Sie einen UNC-Namen oder lokalen Pfad ein, unter dem sich die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete befinden. Sie müssen keine Dateinamen angeben. Wenn der eingegebene Pfad nicht zugegriffen werden kann, Sie können nicht klicken **Weiter**. Standardmäßig ist der Pfad leer. Dieses Feld ist nur aktiviert, wenn Sie auswählen, **Analysieren von SSIS-Paketdateien**.  
+ Geben Sie einen UNC-Namen oder lokalen Pfad ein, unter dem sich die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete befinden. Sie müssen keine Dateinamen angeben. Wenn nicht auf den eingegebenen Pfad zugegriffen werden kann, können Sie nicht auf **weiter**klicken. Standardmäßig ist der Pfad leer. Dieses Feld ist nur aktiviert, wenn Sie **SSIS-Paketdateien analysieren**auswählen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
- [Upgrade Advisor Referenz zur Benutzeroberfläche](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Arbeiten mit Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [Benutzeroberflächenreferenz des Upgrade Advisors](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

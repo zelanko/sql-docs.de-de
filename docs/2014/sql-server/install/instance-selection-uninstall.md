@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6de0fbb9f2e6a5ee621c24c4832a13b900919048
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094227"
 ---
 # <a name="instance-selection-uninstall"></a>Instanzauswahl (Deinstallieren)
-  Deinstallieren Sie auf der Instanzauswahl - Seite, verwenden Sie im Dropdown-Menü, um die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstallieren.  
+  Verwenden Sie auf der Seite Instanzauswahl-deinstallieren das Dropdown Feld, um die zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstallierende Instanz von anzugeben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Sie können eine vollständige Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]angeben, Sie können aber auch angeben, dass nur die freigegebenen Funktionen und Verwaltungstools deinstalliert werden.  
   
   

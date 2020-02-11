@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3d042530f69d34fde377ffc7c6e0a9200b9cc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100910"
 ---
 # <a name="file-share-delivery-in-reporting-services"></a>Dateifreigabeübermittlung in Reporting Services
@@ -27,22 +27,22 @@ ms.locfileid: "66100910"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus|  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
--   [Merkmale eines Berichts, die an einen freigegebenen Ordner übermittelt wird](#bkmk_Characteristics)  
+-   [Merkmale eines Berichts, der an einen freigegebenen Ordner übermittelt wird](#bkmk_Characteristics)  
   
 -   [Zielordner](#bkmk_target_folders)  
   
 -   [Dateiformate](#bkmk_file_formats)  
   
--   [Dateioptionen](#bkmk_file_options)  
+-   [Datei Optionen](#bkmk_file_options)  
   
-##  <a name="bkmk_Characteristics"></a> Merkmale eines Berichts, die an einen freigegebenen Ordner übermittelt wird  
+##  <a name="bkmk_Characteristics"></a>Merkmale eines Berichts, der an einen freigegebenen Ordner übermittelt wird  
  Im Gegensatz zu Berichten, die von einem Berichtsserver gehostet und verwaltet werden, handelt es sich bei Berichten, die an einen freigegebenen Ordner übermittelt werden, um statische Dateien. Interaktive Funktionen, die für den Bericht definiert sind, können bei Berichten, die als Dateien im Dateisystem gespeichert sind, nicht verwendet werden. Interaktive Funktionen werden als statische Elemente dargestellt. Wenn Sie z. B. einen Matrixbericht übermitteln, zeigt die resultierende Datei die oberste Ebene des Berichts an. Es ist nicht möglich, Zeilen und Spalten zu erweitern, um die unterstützenden Daten anzuzeigen. Enthält der Bericht Diagramme, wird die Standardpräsentation verwendet. Wenn der Bericht einen Link zu einem anderen Bericht enthält, wird der Link als statischer Text gerendert. Wenn Sie die interaktiven Funktionen bei einem übermittelten Bericht erhalten möchten, müssen Sie die E-Mail-Übermittlung verwenden. Weitere Informationen finden Sie unter [E-Mail-Übermittlung in Reporting Services](e-mail-delivery-in-reporting-services.md).  
   
-##  <a name="bkmk_target_folders"></a> Zielordner  
+##  <a name="bkmk_target_folders"></a>Zielordner  
  Wenn Sie ein Abonnement definieren, das die Dateifreigabeübermittlung verwendet, müssen Sie einen vorhandenen Ordner als Zielordner angeben. Der Berichtsserver erstellt keine Ordner im Dateisystem. Auf den angegebenen Ordner muss über eine Netzwerkverbindung zugegriffen werden können.  
   
  Überprüfen Sie, ob Benutzer, die die Berichte im freigegebenen Order anzeigen, über Leseberechtigungen verfügen.  
@@ -55,21 +55,21 @@ ms.locfileid: "66100910"
   
  Beachten Sie beim Erstellen des Ordners die erforderlichen Verbindungslimits. Für den Berichtsserver sind zwei Verbindungen erforderlich. Sie müssen jedoch genügend Verbindungen einfügen, um weitere Benutzer aufnehmen zu können, die Berichte im freigegebenen Ordner öffnen möchten.  
   
-##  <a name="bkmk_file_formats"></a> Dateiformate  
+##  <a name="bkmk_file_formats"></a>Dateiformate  
  Berichte können in einer Vielzahl von Dateiformaten gerendert werden, z. B. in HTML oder Excel. Um einen Bericht in einem bestimmten Dateiformat zu speichern, wählen Sie das entsprechende Renderingformat aus, wenn Sie Ihr Abonnement erstellen. Beispielsweise wird durch Auswählen von **Excel** der Bericht als [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Datei gespeichert. Sie können zwar ein beliebiges unterstütztes Renderingformat auswählen, manche Formate eignen sich jedoch besser zum Rendern einer Datei.  
   
  Wenn Sie die Dateifreigabeübermittlung verwenden, wählen Sie ein Format aus, das den Bericht in einer einzigen Datei übermittelt, bei dem alle Bilder und der zugehörige Inhalt im Bericht enthalten sind. Passende Formate sind Webarchiv, PDF, TIFF und Excel. Verwenden Sie wenn möglich nicht HTML 4.0. Wenn Ihr Bericht Bilder enthält, werden sie beim HTML 4.0-Format nicht in die Datei eingefügt.  
   
-##  <a name="bkmk_file_options"></a> Dateioptionen  
+##  <a name="bkmk_file_options"></a>Datei Optionen  
  Beim Erstellen eines Abonnements können Sie Optionen auswählen, die bestimmen, wie der Dateiname erstellt wird und ob er im Laufe der Zeit durch einen neuen ersetzt werden soll. Ein vollqualifizierter Dateiname besteht aus drei Teilen: einem Namen, einer Erweiterung sowie Text oder einer Zahl, der bzw. die an den Namen angefügt wird, um einen eindeutigen Dateinamen zu erzeugen. Mit Überschreibungsoptionen legen Sie fest, ob dem Dateinamen Text oder eine Zahl hinzugefügt wird.  
   
  Der Dateiname basiert auf dem Berichtsnamen, Sie können jedoch im Abonnement einen benutzerdefinierten Namen bereitstellen. Die Erweiterung ist optional, aber wenn Sie sie angeben, erstellt der Berichtsserver eine dem Renderingformat entsprechende Erweiterung.  
   
  Sie können Optionen zum Überschreiben angeben, um den Dateinamen bei jeder Berichtsübermittlung oder Erstellung einer neuen Datei wiederzuverwenden. Zum Überschreiben der Datei müssen Sie den gleichen Dateinamen und die gleiche Erweiterung verwenden.  
   
- Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Fügen Sie zu diesem Zweck die `@timestamp` -Variable dem Dateinamen (z. B. *CompanySales@timestamp* ). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
+ Ein andere Möglichkeit, eindeutige Dateinamen für jede Übermittlung zu erstellen, ist das Einschließen eines Timestamps in den Dateinamen. Dazu fügen Sie die `@timestamp` -Variable dem Dateinamen hinzu (z.B. *CompanySales@timestamp*). Auf diese Weise ist der Dateiname per definitionem eindeutig und wird daher niemals überschrieben.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen, ändern und Löschen von Standardabonnements &#40;Reporting Services im einheitlichen Modus&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Standard Abonnements &#40;Reporting Services im einheitlichen Modus erstellen, ändern und löschen&#41;](create-and-manage-subscriptions-for-native-mode-report-servers.md)  
   
   

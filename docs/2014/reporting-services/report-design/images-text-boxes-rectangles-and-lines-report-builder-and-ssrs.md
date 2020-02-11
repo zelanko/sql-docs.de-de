@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4bb06da4582b5b93f027ac49c8b761705ad4b22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105688"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Bilder, Textfelder, Rechtecke und Linien (Berichts-Generator und SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "66105688"
  [Bilder &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
  Bilder zeigen binäre Bilddaten in einem Bericht an. Sie stellen die Quelle für das Bild bereit. Bei der Quelle kann es sich um einen URL-Verweis auf ein auf einem Webserver gespeichertes Bild, einen Verweis auf eingebettete Bilddaten oder einen Verweis auf binäre Bilddaten in einer Datenbank handeln. Berichts-Generator und Berichts-Designer unterstützen BMP-, JPEG-, GIF- und PNG-Dateien.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Berichtselementen &#40;Berichts-Generator und SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  
   
   

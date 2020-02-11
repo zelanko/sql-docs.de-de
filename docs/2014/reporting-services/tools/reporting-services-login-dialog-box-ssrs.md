@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 232ee51614a668b07263c3e3a4182f23652135bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099872"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services-Anmeldung (Dialogfeld) (SSRS)
   Verwenden Sie das Dialogfeld **Reporting Services-Anmeldung** , um die Anmeldeinformationen zum Veröffentlichen von Berichten auf dem Berichtsserver bereitzustellen.  
   
--   **Beachten Sie** Wenn dies das erste Mal ist, Sie einen Bericht auf einem Berichtsserver, seit festlegen veröffentlicht haben, legen Sie die Bereitstellungseigenschaft **TargetServerURL** für ein Projekt, stellen Sie sicher, dass der angegebene Servername ähnelt `http://localhost/reportserver`, und nicht `http://localhost/reports`. Durch Angeben des `reports` -Verzeichnisses auf dem lokalen Server anstelle des `reportserver` -Verzeichnisses wird indirekt bewirkt, dass dieses Dialogfeld geöffnet wird. Weitere Informationen zum Festlegen von **TargetServerURL** finden Sie unter [Festlegen von Bereitstellungseigenschaften (Reporting Services)](set-deployment-properties-reporting-services.md).  
+-   **Hinweis** Wenn Sie zum ersten Mal einen Bericht auf einem Berichts Server veröffentlicht haben, nachdem Sie die Bereitstellungs Eigenschaft **TargetServerURL** für ein Projekt festgelegt haben, überprüfen Sie, ob der angegebene Servername `http://localhost/reportserver`dem Wert entspricht `http://localhost/reports`und nicht. Durch Angeben des `reports` -Verzeichnisses auf dem lokalen Server anstelle des `reportserver` -Verzeichnisses wird indirekt bewirkt, dass dieses Dialogfeld geöffnet wird. Weitere Informationen zum Festlegen von **TargetServerURL** finden Sie unter [Festlegen von Bereitstellungseigenschaften (Reporting Services)](set-deployment-properties-reporting-services.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Server**  
- Zeigt den Namen des Berichtsservers an. Beispiel: `http://localhost/reportserver`. Für Berichtsserver, die einen anderen Port verwenden als Standardport 80, schließen Sie die Portnummer ein. Beispiel: `http://localhost:81/reportserver`Hyper-V-Hosts oder Hyper-V-Hostcluster in einem separaten Namespace als verwaltete Hyper-V-Hosts hinzuzufügen.  
+ Zeigt den Namen des Berichtsservers an. Beispiel: `http://localhost/reportserver`. Für Berichtsserver, die einen anderen Port verwenden als Standardport 80, schließen Sie die Portnummer ein. Beispiel: `http://localhost:81/reportserver`.  
   
  **Benutzername**  
  Geben Sie den Benutzernamen ein, der beim Anmelden am Webdienst verwendet werden soll.  
@@ -34,8 +34,8 @@ ms.locfileid: "66099872"
  **Kennwort**  
  Geben Sie das Kennwort ein, das beim Anmelden am Webdienst verwendet werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen-Verbindungen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [melden Designer F1-Hilfe](report-designer-f1-help.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
+ [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Berichts-Designer F1-Hilfe](report-designer-f1-help.md)  
   
   

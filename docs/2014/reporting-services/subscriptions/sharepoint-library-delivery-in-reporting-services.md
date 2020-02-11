@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100699"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
   Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, enthält er eine Übermittlungserweiterung, mit der Sie einen Bericht an eine SharePoint-Bibliothek senden können.  
   
- Zum Verwenden der SharePoint-Übermittlungserweiterung müssen Sie ein Abonnement von einer Anwendungsseite auf einer SharePoint-Website aus erstellen und dann **SharePoint-Dokumentbibliothek** als Übermittlungstyp auswählen. Die SharePoint-Übermittlungserweiterung kann nicht für Abonnements verwendet werden, die Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder im Berichts-Manager erstellen.  
+ Zum Verwenden der SharePoint-Übermittlungserweiterung müssen Sie ein Abonnement von einer Anwendungsseite auf einer SharePoint-Website aus erstellen und dann **SharePoint-Dokumentbibliothek** als Übermittlungstyp auswählen. Die SharePoint-Übermittlungs Erweiterung kann nicht für Abonnements verwendet werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die Sie in oder Berichts-Manager erstellen.  
   
 > [!NOTE]  
 >  Die Übermittlung von Berichten an eine SharePoint-Website wird von der Übermittlungserweiterung nicht unterstützt, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird. Wenn Sie versuchen, die Übermittlungserweiterung für einen Berichtsserver im einheitlichen Modus programmgesteuert aufzurufen, wird vom Server der `rsDeliveryExtensionNotFound`-Fehler zurückgegeben und der `rsOperationNotSupportedSharePointMode`-Fehler in den Berichtsserver-Protokolldateien protokolliert.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Zum Übermitteln gerenderter Berichte an eine Bibliothek müssen folgende Anforderungen erfüllt werden:  
   
 -   Der Berichtsserver muss für die SharePoint-Integration konfiguriert sein.  
@@ -73,8 +73,8 @@ ms.locfileid: "66100699"
  Titel  
  Gibt eine optionale `Title`-Eigenschaft für den Bericht in der Zielbibliothek an. Dies ist eine Standardeigenschaft für alle in einer Bibliothek gespeicherten Elemente. Benutzer können angeben, ob diese Eigenschaft beim Anzeigen des Inhalts der Bibliothek auf einer SharePoint-Website angezeigt oder ausgeblendet werden soll.  
   
- Pfad  
- Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Zum Beispiel: <http://mySharePointWeb/MySite/MyDocLib>, wobei "<http://mySharePointWeb>" gibt an, die Webanwendung, "MySite" die SharePoint-Website und "MyDocLib" der SharePoint-Bibliothek, in dem der Bericht übermittelt werden.  
+ `Path`  
+ Gibt eine vollqualifizierte URL zur SharePoint-Bibliothek an, einschließlich der SharePoint-Webanwendung und -Website. Beispiel: <http://mySharePointWeb/MySite/MyDocLib>; Dabei gibt<http://mySharePointWeb>"" an, dass die Webanwendung "mysite" die SharePoint-Website ist, und "MyDocLib" ist die SharePoint-Bibliothek, in der der Bericht übermittelt wird.  
   
  Sie können keine Seite, Website oder Liste angeben. Der Zielcontainer muss eine Bibliothek auf derselben Website oder Webfarm sein.  
   
@@ -82,10 +82,10 @@ ms.locfileid: "66100699"
  Gibt an, ob eine Datei mit demselben Namen und derselben Erweiterung beim Verarbeiten des Abonnements durch eine neuere Version ersetzt wird. Wählen Sie **Überschreiben** aus, wenn eine vorhandene Datei durch eine neuere Version ersetzt werden soll. Wählen Sie **Keine** aus, wenn das Abonnement keine Datei ersetzen soll. In diesem Fall wird keine Übermittlung ausgeführt, wenn bereits eine Datei mit demselben Zielnamen und derselben Zielerweiterung vorhanden ist. Wählen Sie **Automatisch inkrementieren** aus, wenn Folgeversionen derselben Datei durch Anfügen einer Nummer an das Ende des Dateinamens hinzugefügt werden sollen.  
   
  Automatisches Kopieren  
- Wenn Sie die Funktion zum automatischen Kopieren verwenden, um die neueste Version einer Datei an mehrere Speicherorte zu kopieren, wird die Datei kopiert, sofern **Überschreiben** aktiviert ist. Bei Verwendung **Autoincrement** oder **keine**, die Bereitstellung schlägt fehl, und die `rsDeliveryError` tritt Fehler auf.  
+ Wenn Sie die Funktion zum automatischen Kopieren verwenden, um die neueste Version einer Datei an mehrere Speicherorte zu kopieren, wird die Datei kopiert, sofern **Überschreiben** aktiviert ist. Wenn Sie **AutoIncrement** oder **None**verwendet haben, tritt bei der Übermittlung ein `rsDeliveryError` Fehler auf, und der Fehler tritt auf.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen und Verwalten von Abonnements für Berichts Server im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -18,24 +18,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105064"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Berichtsparameter (Berichts-Generator und Berichts-Designer)
   In diesem Thema werden die allgemeinen Verwendungen von SSRS-Berichtsparametern und die einstellbaren Eigenschaften beschrieben. Zudem erhalten Sie viele weitere Informationen zu Parametern. Mithilfe von Berichtsparametern können Sie Berichtsdaten steuern, eine Verbindung zwischen verwandten Berichten herstellen und die Berichtspräsentation anpassen.  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] SharePoint-Modus und einheitlichen Modus
+[!INCLUDE[applies](../../includes/applies-md.md)]SharePoint-Modus und einheitlicher Modus
   
- Eine Demonstration über das Hinzufügen eines Parameters zu einem Bericht finden Sie unter [Lernprogramm: Hinzufügen von Parametern zu einem Bericht (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
+ Eine Demonstration über das Hinzufügen von Parametern zu einem Bericht finden Sie unter [Lernprogramm: Hinzufügen von Parametern zu einem Bericht (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
   
-##  <a name="bkmk_Common_Uses_for_Parameters"></a> Allgemeine Verwendungsmöglichkeiten für Parameter  
+##  <a name="bkmk_Common_Uses_for_Parameters"></a>Allgemeine Verwendungsmöglichkeiten für Parameter  
  Im Folgenden sind einige der häufigsten Verwendungsmöglichkeiten für Parameter aufgeführt.  
   
- **Steuern der Berichtsdaten**  
+ **Berichtsdaten steuern**  
   
 -   Filtern Sie Berichtsdaten in der Datenquelle, indem Sie Datasetabfragen schreiben, die Abfragevariablen enthalten.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66105064"
   
 -   Ermöglichen der Angabe von Werten durch Benutzer, um die Daten in einem Bericht anzupassen. Beispiel: Angabe von zwei Parametern (Start- und Enddatum) für Umsatzdaten.  
   
- **Eine Verbindung zwischen verwandten Berichten herstellen**  
+ **Verbundene Berichte verbinden**  
   
 -   Verwenden Sie Parameter, um Hauptberichte mit Drillthroughberichten, Unterberichten sowie verknüpften Berichten zu verbinden. Beim Entwurf von Berichtssätzen können Sie jeden Bericht so entwerfen, dass er Antworten auf ganz bestimmte Fragen liefert. Jeder Bericht kann eine andere Sicht oder Detailebene zu verwandten Informationen bereitstellen. Zum Bereitstellen eines Satzes untereinander verbundener Berichte erstellen Sie Parameter für die verbundenen Daten in den Zielberichten.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66105064"
   
 -   Anpassen von Parametersätzen für mehrere Benutzer. Erstellen Sie auf der Grundlage eines Verkaufsberichts auf dem Berichtsserver zwei verknüpfte Berichte. In einem der verknüpften Berichte werden vordefinierte Parameterwerte für Vertriebsmitarbeiter, im anderen vordefinierte Parameterwerte für Verkaufsmanager verwendet. Für beide Berichte wird die gleiche Berichtsdefinition verwendet.  
   
- **Berichtspräsentation anpassen**  
+ **Variieren der Berichts Präsentation**  
   
 -   Senden Sie einem Berichtsserver über eine URL-Anforderung Befehle, um das Rendering eines Berichts anzupassen. Weitere Informationen finden Sie unter [URL-Zugriff (SSRS)](../url-access-ssrs.md) und [Übergeben von Berichtsparametern innerhalb einer URL](../pass-a-report-parameter-within-a-url.md).  
   
@@ -59,37 +59,37 @@ ms.locfileid: "66105064"
   
 -   Ermöglichen Sie Benutzern das Anpassen von Berichtsdaten und der Darstellung von Berichten, indem Sie Parameter in einen Ausdruck einschließen.  
   
-     Weitere Informationen finden Sie unter [Verweise auf Parametersammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
+     Weitere Informationen finden Sie unter [Verweise auf Parameters-Sammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
-##  <a name="UserInterface"></a> Bereich "Parameter"  
- Wenn Sie einen Bericht anzeigen, werden auf der Berichts-Viewer-Symbolleiste alle Parameter angezeigt, sodass ein Benutzer interaktiv Werte angeben kann. Die folgende Abbildung zeigt den Parameterbereich für einen Bericht mit Parametern @StartDate, @EndDate, @Subcategory, und @ShowAllRows.  
+##  <a name="UserInterface"></a>Parameter Bereich  
+ Wenn Sie einen Bericht anzeigen, werden auf der Berichts-Viewer-Symbolleiste alle Parameter angezeigt, sodass ein Benutzer interaktiv Werte angeben kann. Die folgende Abbildung zeigt den Parameter Bereich für einen Bericht mit den para @StartDateMetern @EndDate @Subcategory,, und @ShowAllRows.  
   
  ![rs_ParameterStory](../media/rs-parameterstory.gif "rs_ParameterStory")  
   
-1.  **Parameterbereich** Auf der Berichts-Viewer-Symbolleiste werden für jeden Parameter eine Eingabeaufforderung und ein Standardwert angezeigt. Das Parameterlayout auf der Symbolleiste wird automatisch formatiert. Die Reihenfolge richtet sich nach der Reihenfolge, in der die Parameter im Berichtsdatenbereich angezeigt werden.  
+1.  **Parameter** Bereich Auf der Berichts-Viewer-Symbolleiste werden eine Aufforderung und ein Standardwert für jeden Parameter angezeigt. Das Parameterlayout auf der Symbolleiste wird automatisch formatiert. Die Reihenfolge richtet sich nach der Reihenfolge, in der die Parameter im Berichtsdatenbereich angezeigt werden.  
   
-2.  **@StartDate und @EndDate Parameter** Parameters @StartDate Datentyp `DateTime`. Neben dem Textfeld wird die Eingabeaufforderung "Startdatum" angezeigt. Geben Sie zum Ändern des Datums ein neues Datum in das Textfeld ein, oder verwenden Sie das Kalendersteuerelement.  
+2.  **@StartDate- @EndDate und-Parameter der-** Parameter `DateTime` @StartDate ist vom Datentyp. Neben dem Textfeld wird die Eingabeaufforderung "Startdatum" angezeigt. Geben Sie zum Ändern des Datums ein neues Datum in das Textfeld ein, oder verwenden Sie das Kalendersteuerelement.  
   
-     Der Parameter @EndDate wird neben @StartDate.  
+     Der- @EndDate Parameter wird neben @StartDateangezeigt.  
   
-3.  **@Subcategory Parameter** Parameters @Subcategory Datentyp `Text`. Da @Subcategory verfügt über eine Liste der verfügbaren Werte, gültige Werte, die in einer Dropdown-Liste angezeigt werden. Werte müssen aus dieser Liste ausgewählt werden. Da @Subcategory mehrwertig ist, wird eine **Alles markieren** Option wird angezeigt, mit der Sie auf die Auswahl aller Werte in der Liste.  
+3.  ** @Subcategory Parameter** Der- @Subcategory Parameter ist vom `Text`Datentyp. Da @Subcategory über eine Liste der verfügbaren Werte verfügt, werden in einer Dropdown Liste gültige Werte angezeigt. Werte müssen aus dieser Liste ausgewählt werden. Da @Subcategory mehr wertig ist, wird die Option **Alles auswählen** angezeigt, mit der Sie alle Werte löschen und alle Werte in der Liste auswählen können.  
   
-4.  **@ShowAllRows Parameter** Parameters @ShowAllRows Datentyp `Boolean`. Geben Sie mithilfe der Optionsfelder entweder `True` oder `False` an.  
+4.  ** @ShowAllRows Parameter** Der- @ShowAllRows Parameter ist vom `Boolean`Datentyp. Geben Sie mithilfe der Optionsfelder entweder `True` oder `False` an.  
   
-5.  **Handle "Parameterbereich ein-/ausblenden"** Klicken Sie auf der Berichts-Viewer-Symbolleiste auf diesen Pfeil, um den Parameterbereich anzuzeigen oder auszublenden.  
+5.  **Parameter Bereichs Handle ein-oder ausblenden** Klicken Sie auf der Berichts-Viewer-Symbolleiste auf diesen Pfeil, um den Parameter Bereich anzuzeigen oder auszublenden.  
   
-6.  **Schaltfläche "Parameter"** Klicken Sie in der Berichts-Generator-Vorschau im Menüband auf die Schaltfläche **Parameter** , um den Parameterbereich anzuzeigen oder auszublenden.  
+6.  **Parameter Schaltfläche** Klicken Sie in Berichts-Generator Vorschau auf dem Menüband auf die Schaltfläche **Parameter** , um den Parameter Bereich anzuzeigen oder auszublenden.  
   
-7.  **Schaltfläche "Bericht anzeigen"** Klicken Sie auf der Berichts-Viewer-Symbolleiste auf **Bericht anzeigen** , um nach der Eingabe von Parameterwerten den Bericht auszuführen. Wurden für alle Parameter Standardwerte festgelegt, wird der Bericht beim erstmaligen Anzeigen automatisch ausgeführt.  
+7.  **Berichts Schaltfläche anzeigen** Klicken Sie auf der Berichts-Viewer-Symbolleiste auf **Bericht anzeigen** , um den Bericht nach der Eingabe von Parameterwerten auszuführen. Wurden für alle Parameter Standardwerte festgelegt, wird der Bericht beim erstmaligen Anzeigen automatisch ausgeführt.  
   
-##  <a name="bkmk_Create_Parameters"></a> Erstellen von Parametern  
+##  <a name="bkmk_Create_Parameters"></a>Erstellen von Parametern  
  Es gibt folgende Möglichkeiten, um Berichtsparameter zu erstellen:  
   
 -   Fügen Sie eine Datasetabfrage mit Variablen oder eine gespeicherte Prozedur für ein Dataset mit Eingabeparametern hinzu. Für jede Variable oder jeden Eingabeparameter wird ein Datasetparameter erstellt und für jeden Datasetparameter wird ein Berichtsparameter erstellt.  
   
      Das folgende Bild aus dem Berichts-Generator zeigt eine Datasetabfrage mit einer Variablen (1) und dem entsprechenden Datasetparameter (2) und Berichtsparameter (3).  
   
-     ![DataSet Properties Dialog Box und Berichtfenster](../media/datasetquery-parameters.png "Dataset Properties Dialog Box und Berichtfenster")  
+     ![Dataseteigenschaften-Dialogfeld und Berichtfenster](../media/datasetquery-parameters.png "Dataseteigenschaften-Dialogfeld und Berichtfenster")  
   
     > **HINWEIS!** Nicht alle Datenquellen unterstützen Parameter.  
   
@@ -123,39 +123,39 @@ ms.locfileid: "66105064"
   
 -   Führen Sie den Bericht aus, ohne zuvor einen Parameterwert auswählen zu müssen, da ein Standardwert für den Parameter erstellt wurde.  
   
-##  <a name="bkmk_Report_Parameters"></a> Berichtsparametereigenschaften  
+##  <a name="bkmk_Report_Parameters"></a>Berichts Parameter Eigenschaften  
  Sie können die Berichtsparametereigenschaften über das Dialogfeld Berichtseigenschaften ändern. Die folgende Tabelle enthält die Eigenschaften, die für die einzelnen Parameter festgelegt werden können:  
   
-|Eigenschaft|Beschreibung|  
+|Eigenschaft|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Name|Geben Sie einen Namen für den Parameter ein. (Beachten Sie dabei die Groß- und Kleinschreibung.) Der Name muss mit einem Buchstaben beginnen und Buchstaben, Zahlen und einen Unterstrich (_) umfassen. Er darf keine Leerzeichen enthalten. Bei automatisch generierten Parametern stimmt der Name mit dem Parameter in der Datasetabfrage überein. Manuell erstellte Parameter ähneln standardmäßig der Zeichenfolge "ReportParameter1".|  
-|Eingabeaufforderung|Der Text, der auf der Berichts-Viewer-Symbolleiste neben dem Parameter angezeigt wird.|  
-|Datentyp|Wenn verfügbare Werte für einen Parameter definiert sind, wählt der Benutzer Werte aus einer Dropdown-Liste, auch wenn der Datentyp ist `DateTime`. Bei einem Berichtsparameter muss es sich um einen der folgenden Datentypen handeln:<br /><br /> `Boolean`. installiert haben. Der Benutzer wählt True oder False über ein Optionsfeld aus.<br /><br /> `DateTime`. installiert haben. Der Benutzer wählt ein Datum aus einem Kalendersteuerelement aus.<br /><br /> **Integer**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> **Float**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> `Text`. installiert haben. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> Weitere Informationen zu Berichtsdatentypen finden Sie unter [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Auffordern|Der Text, der auf der Berichts-Viewer-Symbolleiste neben dem Parameter angezeigt wird.|  
+|Datentyp|Wenn verfügbare Werte für einen Parameter definiert sind, wählt der Benutzer Werte aus einer Dropdown Liste aus, auch wenn der Datentyp `DateTime`ist. Bei einem Berichtsparameter muss es sich um einen der folgenden Datentypen handeln:<br /><br /> `Boolean`. Der Benutzer wählt True oder False über ein Optionsfeld aus.<br /><br /> `DateTime`. Der Benutzer wählt ein Datum aus einem Kalendersteuerelement aus.<br /><br /> **Ganzzahl**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> **Float**. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> `Text`. Der Benutzer gibt Werte in ein Textfeld ein.<br /><br /> Weitere Informationen zu Berichtsdatentypen finden Sie unter [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Leeren Wert zulassen|Aktivieren Sie diese Option, wenn als Wert für den Parameter eine leere Zeichenfolge zulässig sein soll.<br /><br /> Wenn Sie für einen Parameter gültige Werte angeben und möchten, dass ein leerer Wert zu den gültigen Werten zählt, muss der Wert zusammen mit den anderen Werten angegeben werden. Durch Aktivieren dieser Option wird den verfügbaren Werten nicht automatisch ein leerer Wert hinzugefügt.|  
 |NULL-Wert zulassen|Aktivieren Sie diese Option, wenn für den Parameter ein NULL-Wert zulässig sein soll.<br /><br /> Wenn Sie für einen Parameter gültige Werte angeben und möchten, dass NULL zu den gültigen Werten zählt, muss der Wert zusammen mit den anderen Werten angegeben werden. Durch Aktivieren dieser Option wird den verfügbaren Werten nicht automatisch ein NULL-Wert hinzugefügt.|  
 |Mehrere Werte zulassen|Geben Sie verfügbare Werte an, um eine Dropdownliste zu erstellen, aus der die Benutzer auswählen können. Damit können Sie sicherstellen, dass in der Datasetabfrage nur gültige Werte übermittelt werden.<br /><br /> Aktivieren Sie diese Option, wenn für den Parameter mehrere Werte aus einer Dropdownliste zulässig sein können. NULL-Werte sind nicht zulässig. Wenn diese Option ausgewählt ist, werden der Liste der verfügbaren Werte in einer Parameter-Dropdownliste Kontrollkästchen hinzugefügt. Am Anfang der Liste befindet sich ein Kontrollkästchen für die Option **Alles auswählen**. Von den Benutzern können die gewünschten Werte ausgewählt werden.<br /><br /> Wenn sich die Daten, auf denen die Werte basieren, häufig ändern, ist die Liste, die dem Benutzer angezeigt wird, möglicherweise nicht auf dem neuesten Stand.|  
-|Sichtbar|Aktivieren Sie diese Option, damit der Berichtsparameter bei Ausführung des Berichts oben im Bericht angezeigt wird. Diese Option ermöglicht es Benutzern, Parameterwerte zur Laufzeit auszuwählen.|  
+|Visible|Aktivieren Sie diese Option, damit der Berichtsparameter bei Ausführung des Berichts oben im Bericht angezeigt wird. Diese Option ermöglicht es Benutzern, Parameterwerte zur Laufzeit auszuwählen.|  
 |Ausgeblendet|Aktivieren Sie diese Option, um den Berichtsparameter im veröffentlichten Bericht auszublenden. Die Berichtsparameterwerte können weiterhin auf eine Berichts-URL, in einer Abonnementdefinition oder auf dem Berichtsserver festgelegt werden.|  
 |Intern|Aktivieren Sie diese Option, um den Berichtsparameter auszublenden. Im veröffentlichten Bericht kann der Berichtsparameter nur in der Berichtsdefinition angezeigt werden.|  
-|Verfügbare Werte|Wenn Sie für einen Parameter verfügbare Werte angegeben haben, werden die gültigen Werte immer als Dropdownliste angezeigt. Wenn Sie also beispielsweise verfügbare Werte für einen `DateTime`-Parameter angeben, wird im Parameterbereich anstelle eines Kalendersteuerelements eine Dropdownliste mit Datumsangaben angezeigt. Zur Gewährleistung der Konsistenz einer Liste mit Werten zwischen dem Bericht und den Unterberichten können Sie eine Option für die Datenquelle festlegen, sodass für alle Abfragen in den Datasets, die dieser Datenquelle zugeordnet sind, eine einzelne Transaktion verwendet wird.<br /><br /> **\*\* Sicherheitshinweis \* \* ** In einem Bericht, der einen Parameter vom Datentyp enthält `Text`, achten Sie darauf, dass Sie eine Liste der verfügbaren Werte (auch als Liste der gültigen Werte bezeichnet) verwenden, und stellen Sie sicher, dass jeder Benutzer, die Ausführung des Berichts nur der Berechtigungen zum Anzeigen der Daten im Bericht. Weitere Informationen finden Sie unter [Sicherheit &#40;Berichts-Generator&#41;](../report-builder/security-report-builder.md)erstellen.|  
+|Verfügbare Werte|Wenn Sie für einen Parameter verfügbare Werte angegeben haben, werden die gültigen Werte immer als Dropdownliste angezeigt. Wenn Sie also beispielsweise verfügbare Werte für einen `DateTime`-Parameter angeben, wird im Parameterbereich anstelle eines Kalendersteuerelements eine Dropdownliste mit Datumsangaben angezeigt. Zur Gewährleistung der Konsistenz einer Liste mit Werten zwischen dem Bericht und den Unterberichten können Sie eine Option für die Datenquelle festlegen, sodass für alle Abfragen in den Datasets, die dieser Datenquelle zugeordnet sind, eine einzelne Transaktion verwendet wird.<br /><br /> ** \* \* Sicherheits \* Hinweis** Verwenden Sie in einem Bericht, der einen Parameter vom `Text`Datentyp enthält, eine Liste der verfügbaren Werte (auch als Liste gültiger Werte bezeichnet), und stellen Sie sicher, dass alle Benutzer, die den Bericht ausführen, nur über die erforderlichen Berechtigungen zum Anzeigen der Daten im Bericht verfügen. Weitere Informationen finden Sie unter [Sicherheit &#40;Berichts-Generator&#41;](../report-builder/security-report-builder.md)erstellen.|  
 |Standardwerte|Legen Sie Standardwerte aus einer Abfrage oder aus einer statischen Liste fest.<br /><br /> Besitzt jeder Parameter einen Standardwert, wird der Bericht beim erstmaligen Anzeigen automatisch ausgeführt.|  
-|Erweitert:|Legen Sie das Berichtsdefinitionsattribut `UsedInQuery` fest. Dies ist ein Wert, mit dem angegeben wird, ob sich dieser Parameter direkt oder indirekt auf die Daten in einem Bericht auswirkt.<br /><br /> **Aktualisierungszeitpunkt automatisch bestimmen**<br /> Wählen Sie diese Option aus, wenn der Wert vom Berichtsprozessor festgelegt werden soll. Der Wert ist `True`, wenn der Berichtsprozessor eine Datasetabfrage mit einem direkten oder indirekten Verweis auf diesen Parameter findet oder wenn der Bericht Unterberichte enthält.<br /><br /> **Immer aktualisieren**<br /> Wählen Sie diese Option aus, wenn der Berichtsparameter direkt oder indirekt in einer Datasetabfrage oder einem Parameterausdruck verwendet wird. Diese Option legt `UsedInQuery` auf True fest.<br /><br /> **Nie aktualisieren**<br /> Wählen Sie diese Option aus, wenn der Berichtsparameter nicht direkt oder indirekt in einer Datasetabfrage oder einem Parameterausdruck verwendet wird. Diese Option legt `UsedInQuery` auf False fest.<br /><br /> **\*\* Vorsicht \*\*** Verwenden Sie **Nie aktualisieren** mit Vorsicht. Auf dem Berichtsserver wird `UsedInQuery` verwendet, um Cacheoptionen für Berichtsdaten und gerenderte Berichte sowie Parameteroptionen für Momentaufnahmeberichte steuern zu können. Wenn Sie **Nie aktualisieren** falsch festgelegt haben, können falsche Berichtsdaten oder Berichte zwischengespeichert werden oder inkonsistente Daten in Momentaufnahmeberichten entstehen. Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md).|  
+|Erweitert|Legen Sie das Berichtsdefinitionsattribut `UsedInQuery` fest. Dies ist ein Wert, mit dem angegeben wird, ob sich dieser Parameter direkt oder indirekt auf die Daten in einem Bericht auswirkt.<br /><br /> **Aktualisierungs Zeitpunkt automatisch bestimmen**<br /> Wählen Sie diese Option aus, wenn der Wert vom Berichtsprozessor festgelegt werden soll. Der Wert ist `True`, wenn der Berichtsprozessor eine Datasetabfrage mit einem direkten oder indirekten Verweis auf diesen Parameter findet oder wenn der Bericht Unterberichte enthält.<br /><br /> **Immer aktualisieren**<br /> Wählen Sie diese Option aus, wenn der Berichtsparameter direkt oder indirekt in einer Datasetabfrage oder einem Parameterausdruck verwendet wird. Diese Option legt `UsedInQuery` auf True fest.<br /><br /> **Nie aktualisieren**<br /> Wählen Sie diese Option aus, wenn der Berichtsparameter nicht direkt oder indirekt in einer Datasetabfrage oder einem Parameterausdruck verwendet wird. Diese Option legt `UsedInQuery` auf False fest.<br /><br /> ** \* Vorsicht \* \* ** Verwenden Sie **nie aktualisieren** mit Vorsicht. Auf dem Berichtsserver wird `UsedInQuery` verwendet, um Cacheoptionen für Berichtsdaten und gerenderte Berichte sowie Parameteroptionen für Momentaufnahmeberichte steuern zu können. Wenn Sie **Nie aktualisieren** falsch festgelegt haben, können falsche Berichtsdaten oder Berichte zwischengespeichert werden oder inkonsistente Daten in Momentaufnahmeberichten entstehen. Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md).|  
   
-##  <a name="bkmk_Dataset_Parameters"></a> Datasetabfrage  
+##  <a name="bkmk_Dataset_Parameters"></a>Datasetabfrage  
  Um Daten in der Datasetabfrage zu filtern, können Sie eine Einschränkungsklausel einschließen, mit der die abgerufenen Daten begrenzt werden. Geben Sie dazu die Werte ein, die im Resultset eingeschlossen oder daraus ausgeschlossen werden sollen.  
   
  Verwenden Sie den Abfrage-Designer für die Datenquelle, um eine parametrisierte Abfrage zu erstellen.  
   
--   Im Falle von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen unterstützen verschiedene Datenquellen eine unterschiedliche Parametersyntax. Unterstützt werden Parameter, die in der Abfrage anhand der Position oder des Namens identifiziert werden. Weitere Informationen finden Sie Themen zu spezifischen externen Datenquellentypen unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md). Im relationalen Abfrage-Designer müssen Sie die Parameteroption für einen Filter auswählen, um eine parametrisierte Abfrage zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../report-data/relational-query-designer-user-interface-report-builder.md).  
+-   Im Falle von [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen unterstützen verschiedene Datenquellen eine unterschiedliche Parametersyntax. Unterstützt werden Parameter, die in der Abfrage anhand der Position oder des Namens identifiziert werden. Weitere Informationen finden Sie in den Themen zu bestimmten externen Datenquellen Typen unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md). Im relationalen Abfrage-Designer müssen Sie die Parameteroption für einen Filter auswählen, um eine parametrisierte Abfrage zu erstellen. Weitere Informationen finden Sie unter [Benutzeroberfläche des relationalen Abfrage-Designers (Berichts-Generator)](../report-data/relational-query-designer-user-interface-report-builder.md).  
   
 -   Für Abfragen, die auf einer mehrdimensionalen Datenquelle wie Microsoft SQL Server Analysis Services, SAP NetWeaver BI oder Hyperion Essbase basieren, können Sie angeben, ob ein Parameter auf Basis eines Filters erstellt werden soll, den Sie im Abfrage-Designer angeben. Weitere Informationen finden Sie unter [Abfrage-Designer &#40;Berichts-Generator&#41;](../query-designers-report-builder.md) im Thema über den entsprechenden Abfrage-Designer für die Datenerweiterung.  
   
-##  <a name="bkmk_Manage_Parameters"></a> Parameterverwaltung für einen veröffentlichten Bericht  
+##  <a name="bkmk_Manage_Parameters"></a>Parameter Verwaltung für einen veröffentlichten Bericht  
  Wenn Sie einen Bericht entwerfen, werden Berichtsparameter in der Berichtsdefinition gespeichert. Wenn Sie einen Bericht veröffentlichen, werden Berichtsparameter getrennt von der Berichtsdefinition gespeichert und verwaltet.  
   
  Für einen veröffentlichten Bericht können Sie Folgendes verwenden:  
   
--   **Berichtsparametereigenschaften.** Ändern Sie Berichtsparameterwerte direkt auf dem Berichtsserver, unabhängig von der Berichtsdefinition.  
+-   **Berichts Parameter Eigenschaften.** Ändern Sie Berichtsparameterwerte direkt auf dem Berichtsserver, unabhängig von der Berichtsdefinition.  
   
 -   **Zwischengespeicherte Berichte.** Zum Erstellen eines Cacheplans für einen Bericht muss jeder Parameter über einen Standardwert verfügen. Weitere Informationen finden Sie unter [Zwischenspeichern von Berichten &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)bestand darin die einzige Möglichkeit, den Cache vorab zu laden.  
   
@@ -163,9 +163,9 @@ ms.locfileid: "66105064"
   
 -   **Verknüpfte Berichte.** Sie können verknüpfte Berichte mit voreingestellten Parameterwerten erstellen, um Daten für verschiedene Zielgruppen zu filtern. Weitere Informationen finden Sie unter [Erstellen eines verknüpften Berichts](../reports/create-a-linked-report.md).  
   
--   **Berichtsabonnements.** Sie können Parameterwerte angeben, um Daten unter Verwendung von Abonnements zu filtern und Berichte unter Verwendung von Abonnements zu übermitteln. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
+-   **Berichts Abonnements.** Sie können Parameterwerte angeben, um Daten unter Verwendung von Abonnements zu filtern und Berichte unter Verwendung von Abonnements zu übermitteln. Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
--   **URL-Zugriff** Sie können Parameterwerte in einer URL zu einem Bericht angeben. Sie können auch Berichte ausführen und Parameterwerte mit URL-Zugriff angeben. Weitere Informationen finden Sie unter [URL-Zugriff (SSRS)](../url-access-ssrs.md).  
+-   **URL-Zugriff.** Sie können Parameterwerte in einer URL zu einem Bericht angeben. Sie können auch Berichte ausführen und Parameterwerte mit URL-Zugriff angeben. Weitere Informationen finden Sie unter [URL-Zugriff (SSRS)](../url-access-ssrs.md).  
   
  Parametereigenschaften für einen veröffentlichten Bericht bleiben im Allgemeinen erhalten, wenn Sie die Berichtsdefinition erneut veröffentlichen. Falls die Berichtsdefinition als derselbe Bericht erneut veröffentlicht wird und die Parameternamen und Datentypen unverändert sind, bleiben die Eigenschaftseinstellungen erhalten. Wenn Sie Parameter in der Berichtsdefinition hinzufügen bzw. löschen oder den Datentyp oder den Namen eines vorhandenen Parameters ändern, müssen Sie möglicherweise die Parametereigenschaften in dem veröffentlichten Bericht ändern.  
   
@@ -173,12 +173,12 @@ ms.locfileid: "66105064"
   
  Die Optionen für die Berichtsausführung können die Verarbeitung von Parametern beeinflussen. Für einen Bericht, der als Momentaufnahme ausgeführt wird, sind keine Parameter zulässig, die von einer Abfrage abgeleitet sind, außer die Abfrage enthält Standardwerte für die Parameter.  
   
-##  <a name="bkmk_Parameters_Subscription"></a> Parameter für ein Abonnement  
+##  <a name="bkmk_Parameters_Subscription"></a>Parameter für ein Abonnement  
  Sie können ein Abonnement bedarfsgesteuert oder für eine Momentaufnahme definieren und Parameterwerte angeben, die während der Abonnementverarbeitung verwendet werden sollen.  
   
--   **Bedarfsgesteuerter Bericht.**  Für einen bedarfsgesteuerten Bericht können Sie einen Parameterwert angeben, der sich von dem veröffentlichten Wert unterscheidet, der für den Bericht aufgeführt ist. Angenommen, ein Telefonservicebericht verwendet den Parameter *Time Period* , um Kundendienstanforderungen für den aktuellen Tag, die aktuelle Woche oder den aktuellen Monat zurückzugeben. Wenn der Standardparameterwert für den Bericht auf **today**festgelegt ist, kann Ihr Abonnement mithilfe eines anderen Parameterwertes (z.B. **week** oder **month**) einen Bericht mit wöchentlichen oder monatlichen Zahlen erstellen.  
+-   **Bedarfs gesteuerter Bericht.**  Für einen bedarfsgesteuerten Bericht können Sie einen Parameterwert angeben, der sich von dem veröffentlichten Wert unterscheidet, der für den Bericht aufgeführt ist. Angenommen, ein Telefonservicebericht verwendet den Parameter *Time Period* , um Kundendienstanforderungen für den aktuellen Tag, die aktuelle Woche oder den aktuellen Monat zurückzugeben. Wenn der Standardparameterwert für den Bericht auf **today**festgelegt ist, kann Ihr Abonnement mithilfe eines anderen Parameterwertes (z.B. **week** oder **month**) einen Bericht mit wöchentlichen oder monatlichen Zahlen erstellen.  
   
--   **Momentaufnahme.**  Für eine Momentaufnahme muss das Abonnement die für die Momentaufnahme definierten Parameterwerte verwenden. Das Abonnement kann einen Parameterwert, der für eine Momentaufnahme definiert ist, nicht überschreiben. Angenommen, Sie abonnieren einen Umsatzbericht für die Westregion, der als Berichtsmomentaufnahme ausgeführt wird, und die Momentaufnahme gibt **Western** als regionalen Parameterwert an. Wenn Sie in diesem Fall ein Abonnement für diesen Bericht erstellen, müssen Sie den Parameterwert **Western** im Abonnement verwenden. Als optischer Hinweis, dass der Parameter ignoriert wird, werden die Parameterfelder auf der Abonnementseite als schreibgeschützte Felder festgelegt.  
+-   **Überblick.**  Für eine Momentaufnahme muss das Abonnement die für die Momentaufnahme definierten Parameterwerte verwenden. Das Abonnement kann einen Parameterwert, der für eine Momentaufnahme definiert ist, nicht überschreiben. Angenommen, Sie abonnieren einen Umsatzbericht für die Westregion, der als Berichtsmomentaufnahme ausgeführt wird, und die Momentaufnahme gibt **Western** als regionalen Parameterwert an. Wenn Sie in diesem Fall ein Abonnement für diesen Bericht erstellen, müssen Sie den Parameterwert **Western** im Abonnement verwenden. Als optischer Hinweis, dass der Parameter ignoriert wird, werden die Parameterfelder auf der Abonnementseite als schreibgeschützte Felder festgelegt.  
   
      Die Optionen für die Berichtsausführung können die Verarbeitung von Parametern beeinflussen. Parametrisierte Berichte, die als Berichtsmomentaufnahmen ausgeführt werden, verwenden die für die Berichtsmomentaufnahme definierten Parameterwerte. Parameterwerte werden auf der Seite für die Parametereigenschaften des Berichts definiert. Für einen Bericht, der als Momentaufnahme ausgeführt wird, sind keine Parameter zulässig, die von einer Abfrage abgeleitet sind, außer die Abfrage enthält Standardwerte für die Parameter.  
   
@@ -189,7 +189,7 @@ ms.locfileid: "66105064"
   
  Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-##  <a name="bkmk_Parameters_Security"></a> Parameter und das Sichern von Daten  
+##  <a name="bkmk_Parameters_Security"></a>Parameter und Sichern von Daten  
  Gehen Sie beim Verteilen von parametrisierten Berichten, die vertrauliche Informationen enthalten, mit Vorsicht vor. Ein Benutzer kann auf einfache Weise einen Berichtsparameter durch einen anderen Wert ersetzen. Dies führt dazu, dass unbeabsichtigt Informationen veröffentlicht werden.  
   
  Eine sichere Alternative zum Verwenden von Parametern für Mitarbeiterdaten oder persönliche Daten besteht darin, Daten basierend auf Ausdrücken auszuwählen, die das **UserID** -Feld aus der Users-Auflistung enthalten. Die Users-Auflistung stellt eine Methode bereit, um die Identität des Benutzers, der den Bericht ausführt, abzurufen und diese Identität zum Abrufen von benutzerspezifischen Daten zu verwenden.  
@@ -199,7 +199,7 @@ ms.locfileid: "66105064"
 >   
 >  Wenn ein Berichtsparameter nicht an einen Datasetparameter gebunden ist und die Parameterwerte im Bericht enthalten sind, können die Benutzer des Berichts Ausdruckssyntax oder eine URL in den Parameterwert eingeben und den Bericht für Excel oder HTML rendern. Wenn anschließend ein anderer Benutzer den Bericht anzeigt und auf die gerenderten Parameterinhalte klickt, führt der Benutzer möglicherweise unbeabsichtigt das bösartige Skript bzw. den bösartigen Link aus.  
 >   
->  Um das Risiko der versehentlichen Ausführung schädlicher Skripts zu minimieren, sollten gerenderte Berichte nur aus vertrauenswürdigen Quellen geöffnet werden. Weitere Informationen zum Sichern von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../security/secure-reports-and-resources.md).  
+>  Um das Risiko der versehentlichen Ausführung schädlicher Skripts zu minimieren, sollten gerenderte Berichte nur aus vertrauenswürdigen Quellen geöffnet werden. Weitere Informationen zum Schützen von Berichten finden Sie unter [Sichere Berichte und Ressourcen](../security/secure-reports-and-resources.md).  
   
 ##  <a name="bkmk_How_To_Topics"></a> Themen zur Vorgehensweise  
  In diesem Abschnitt finden Sie Prozeduren, in denen Schritt für Schritt das Arbeiten mit Parametern und Filtern erläutert wird.  
@@ -208,29 +208,29 @@ ms.locfileid: "66105064"
   
 -   [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)  
   
--   [Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)  
+-   [Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter (Berichts-Generator und SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)  
   
 -   [Ändern der Reihenfolge von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)  
   
 -   [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)  
   
--   [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+-   [Hinzufügen eines Filters zu einem DataSet &#40;Berichts-Generator und SSRS&#41;](../report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
--   [Hinzufügen eines Unterberichts und Hinzufügen von Parametern &#40;Berichts-Generator und SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
+-   [Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [SSRS-Bericht für parametrisierte gespeicherte Prozedur](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
+-   [SSRS-Bericht für parametrisierte gespeicherte Prozeduren](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
-## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir hören Ihnen zu  
- Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir hören Ihnen, Ihr Feedback zur Verbesserung des Inhalts. Bitte senden Sie Ihre Kommentare an [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
+## <a name="did-this-article-help-you-were-listening"></a>Fanden Sie diesen Artikel nützlich? Wir lauschen  
+ Welche Informationen suchen Sie, und haben Sie sie gefunden? Wir freuen uns über Ihr Feedback, um die Inhalte zu verbessern. Senden Sie Ihre Kommentare an.[sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Verwandte Inhalte  
- [Konfigurieren von SSRS-Berichtsparametern (Quiz)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
+ [Konfigurieren von SSRS-Berichts Parametern (Quiz)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
- [Tutorial: Add a Parameter to Your Report &#40;Report Builder&#41; (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../tutorial-add-a-parameter-to-your-report-report-builder.md).  
+ [Tutorial: Hinzufügen eines Parameters zum Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Erweiterung der Geheimnisse invalidreportparameterexception im Berichterstellungsdienst](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [Was Sie schon immer über InvalidReportParameterException im Berichterstellungsdienst wissen wollten](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
- [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
+ [Berichts Beispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)  
   
@@ -238,7 +238,7 @@ ms.locfileid: "66105064"
   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
- [Sicherheit &#40;Berichts-Generator&#41;](../report-builder/security-report-builder.md)  
+ [Sicherheit (Berichts-Generator)](../report-builder/security-report-builder.md)  
   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   

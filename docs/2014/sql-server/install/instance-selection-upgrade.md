@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 922e528fc530064d90e748cc71baba614df59d4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094218"
 ---
 # <a name="instance-selection-upgrade"></a>Instanzauswahl (Upgrade)
   Auf der Seite Instanzauswahl (Upgrade) können Sie die zu aktualisierende Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Alle Komponenten einer Instanz müssen gleichzeitig aktualisiert werden. Während des Upgrades können keine Funktionen hinzugefügt oder entfernt werden.  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Anhalten der Berichts- und Abonnementverarbeitung | Microsoft-Dokumentation
+title: Anhalten der Berichts-und Abonnement Verarbeitung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100923"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Anhalten der Berichts- und Abonnementverarbeitung
@@ -39,16 +39,16 @@ ms.locfileid: "66100923"
  Öffnen Sie die Eigenschaftenseite Sicherheit des Berichts im Berichts-Manager, um die Rollenzuweisung zu entfernen. Falls der Bericht die Sicherheit von einem übergeordneten Bericht erbt, können Sie auf **Elementsicherheit bearbeiten** klicken, um eine restriktive Sicherheitsrichtlinie zu erstellen, die Rollenzuweisungen für den Zugriff auf breiter Basis ausklammert (entfernen Sie z.B. eine Rollenzuweisung, die jedem Benutzer den Zugriff ermöglicht, und behalten Sie die Rollenzuweisung, die einer kleinen Benutzergruppe den Zugriff ermöglicht, wie z.B. Administratoren).  
   
 ## <a name="disable-a-shared-data-source"></a>Deaktivieren einer freigegebenen Datenquelle  
- Ein Vorteil des Verwendens freigegebener Datenquellen ist, dass Sie diese deaktivieren können, um die Ausführung eines Berichts oder eines datengesteuerten Abonnements zu verhindern. Durch das Deaktivieren einer freigegebenen Datenquelle wird die Verbindung des Berichts mit der externen Quelle getrennt. Die deaktivierte Datenquelle steht für keine Berichte und Abonnements zur Verfügung. Um eine freigegebene Datenquelle deaktivieren, öffnen Sie die Datenquelle im Berichts-Manager, und Deaktivieren der **diese Datenquelle aktivieren** Kontrollkästchen.  
+ Ein Vorteil des Verwendens freigegebener Datenquellen ist, dass Sie diese deaktivieren können, um die Ausführung eines Berichts oder eines datengesteuerten Abonnements zu verhindern. Durch das Deaktivieren einer freigegebenen Datenquelle wird die Verbindung des Berichts mit der externen Quelle getrennt. Die deaktivierte Datenquelle steht für keine Berichte und Abonnements zur Verfügung. Zum Deaktivieren einer freigegebenen Datenquelle öffnen Sie in Berichts-Manager die Datenquelle, und deaktivieren Sie das Kontrollkästchen **diese Datenquelle aktivieren** .  
   
  Beachten Sie, dass der Bericht weiterhin geladen wird, selbst wenn die Datenquelle nicht verfügbar ist. Der Bericht enthält keine Daten, aber Benutzer mit entsprechenden Berechtigungen haben Zugriff auf die Eigenschaftenseiten, Sicherheitseinstellungen, den Berichtsverlauf und die Abonnementinformationen für den Bericht.  
   
 ## <a name="pause-a-shared-schedule"></a>Anhalten eines freigegebenen Zeitplans  
- Wenn ein Bericht oder ein Abonnement mit einem freigegebenen Zeitplan ausgeführt wird, können Sie den Zeitplan anhalten, um die Verarbeitung zu verhindern. Alle Berichts- und Abonnementverarbeitungen, die mit dem Zeitplan gesteuert werden, werden zurückgestellt, bis der Zeitplan fortgesetzt wird. Weitere Informationen finden Sie unter [anhalten und Fortsetzen von freigegebenen Zeitplänen](schedules.md).  
+ Wenn ein Bericht oder ein Abonnement mit einem freigegebenen Zeitplan ausgeführt wird, können Sie den Zeitplan anhalten, um die Verarbeitung zu verhindern. Alle Berichts- und Abonnementverarbeitungen, die mit dem Zeitplan gesteuert werden, werden zurückgestellt, bis der Zeitplan fortgesetzt wird. Weitere Informationen finden Sie unter Anhalten und Fortsetzen von frei [gegebenen Zeitplänen](schedules.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
- [Sicherheit (Eigenschaftenseite) &#40;Elemente, Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)  
+ [Sicherheit (Eigenschaften Seite), Elemente &#40;Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)  
   
   

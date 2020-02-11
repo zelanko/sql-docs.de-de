@@ -1,5 +1,5 @@
 ---
-title: FOR XML AUTO-Abfragen, abgeleitete Tabellenverweise im Kompatibilitätsmodus 90 oder höher zurück | Microsoft-Dokumentation
+title: FOR XML Auto-Abfragen geben Verweise auf abgeleitete Tabellen im Kompatibilitätsmodus 90 oder höher zurück. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b42d8fd7694aaa3962d049cb0e9663479778958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095191"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>FOR XML AUTO-Abfragen geben abgeleitete Tabellenverweise im Kompatibilitätsmodus 90 oder höher zurück
@@ -25,7 +25,7 @@ ms.locfileid: "66095191"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Sehen Sie sich z. B. die folgende Tabelle an:  
   
 ```  
@@ -59,8 +59,8 @@ FOR XML AUTO;
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die Anwendung nach Bedarf, um den Änderungen bei den Ergebnissen von FOR XML AUTO-Abfragen, die abgeleitete Tabellen umfassen und mit dem Kompatibilitätsgrad 90 oder höher ausgeführt werden, Rechnung zu tragen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -11,24 +11,24 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea5016aa51a25bd296d2e77516b30b84a7a28cec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103932"
 ---
 # <a name="enable-and-disable-client-side-printing-for-reporting-services"></a>Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services
-  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Steuerelement, **RSClientPrint**, bietet eine clientseitige Druckfunktion für Berichte in einem Browser angezeigt. Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die Funktionen enthält, die in Druckdialogfeldern üblicherweise vorkommen. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Clientseitiges Drucken ist standardmäßig aktiviert, Sie können diese Funktion jedoch auf Wunsch deaktivieren.  
+  Das [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX-Steuerelement **RSClientPrint**bietet Client seitiges Drucken für Berichte, die in einem Browser angezeigt werden. Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die Funktionen enthält, die in Druckdialogfeldern üblicherweise vorkommen. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Clientseitiges Drucken ist standardmäßig aktiviert, Sie können diese Funktion jedoch auf Wunsch deaktivieren.  
   
 > [!NOTE]  
 >  Zum Herunterladen von ActiveX-Steuerelementen sind Administratorberechtigungen erforderlich.  
   
 ## <a name="downloading-the-activex-control"></a>Herunterladen des ActiveX-Steuerelements  
- Benutzer, die die Druckfunktion verwenden möchten, müssen das ActiveX-Steuerelement, von dem die Clientdruckfunktionalität bereitgestellt wird, herunterladen und installieren. Zum ersten Mal ein Benutzer klickt der **Drucker** Symbol auf der Berichtssymbolleiste, die Microsoft ActiveX Control wird auf den Computer heruntergeladen. Nachdem das Steuerelement heruntergeladen wurde, die **Drucken** im Dialogfeld angezeigt, wenn der Benutzer klickt auf die **Drucker** Symbol.  
+ Benutzer, die die Druckfunktion verwenden möchten, müssen das ActiveX-Steuerelement, von dem die Clientdruckfunktionalität bereitgestellt wird, herunterladen und installieren. Wenn ein Benutzer zum ersten Mal auf der Berichts Symbolleiste auf das **Drucker** Symbol klickt, wird das Microsoft-ActiveX-Steuerelement auf den Computer heruntergeladen. Nachdem das Steuerelement heruntergeladen wurde, wird das Dialogfeld **Drucken** angezeigt, wenn der Benutzer auf das **Drucker** Symbol klickt.  
   
  Abhängig von den Browsereinstellungen bestehen folgende Möglichkeiten: Der Benutzer wird zur Installation des Steuerelements aufgefordert, die Installation des Steuerelements wird verhindert, oder das Steuerelement wird unbeaufsichtigt im Hintergrund installiert.  
   
- Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer, Einstellungen, die ActiveX-Steuerelement herunterladen installieren und werden angegeben, über die **-ActiveX-Steuerelemente und Plug-Ins** Knoten in der **Sicherheitseinstellungen** Seite die Webinhaltszone. Von folgenden Einstellungen wird bestimmt, ob Benutzer das Druckensteuerelement herunterladen und ausführen können. Das Verhalten basiert auf Einstellungen der Webzonensicherheit:  
+ Für [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer werden Einstellungen für das herunterladen und die Installation von ActiveX-Steuerelementen über den Knoten **ActiveX-Steuerelemente und Plug-ins** auf der Seite **Sicherheitseinstellungen** für die Webinhalts Zone angegeben. Von folgenden Einstellungen wird bestimmt, ob Benutzer das Druckensteuerelement herunterladen und ausführen können. Das Verhalten basiert auf Einstellungen der Webzonensicherheit:  
   
 -   Download von signierten ActiveX-Steuerelementen.  
   
@@ -36,16 +36,16 @@ ms.locfileid: "66103932"
   
 -   ActiveX-Steuerelemente und Plug-Ins ausführen.  
   
- Benutzer, die zu verwendende **RSClientPrint** des clientseitigen Druckens ausführen müssen, aktivieren die folgenden:  
+ Benutzer, die **RSClientPrint** zum Ausführen von Client seitigem Drucken verwenden möchten, müssen Folgendes aktivieren:  
   
--   **Download von signierten ActiveX-Steuerelementen** und **Skript ActiveX-Steuerelement sicher für Skripting markiert** zu Installationszwecken.  
+-   **Herunterladen von signierten ActiveX** -Steuerelementen und **Skript-ActiveX-Steuer** Element, das für die Installation als sicher  
   
--   **Ausführen von ActiveX-Steuerelemente und Plug-Ins** für fortlaufende Druckvorgänge.  
+-   **Führen Sie ActiveX-Steuerelemente und Plug-ins** für fortlaufende Druckvorgänge aus.  
   
- Die **RSClientPrint** ActiveX-Steuerelement ist signiert, d. h., er enthält ein gültiges digitales Zertifikat vom [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Das **RSClientPrint** -ActiveX-Steuerelement wird signiert, d. h., [!INCLUDE[msCoName](../../includes/msconame-md.md)]es enthält ein gültiges digitales Zertifikat aus.  
   
 ## <a name="enabling-and-disabling-client-side-printing"></a>Aktivieren und Deaktivieren des clientseitigen Druckens  
- Berichtsserveradministratoren können die Druckfunktion deaktivieren, indem Sie die Berichtsserver-Systemeigenschaft festlegen **EnableClientPrinting** zu `false`. Dadurch wird das clientseitige Drucken für alle von diesem Server verwalteten Berichte deaktiviert. In der Standardeinstellung **EnableClientPrinting** nastaven NA hodnotu `true`. Sie können das clientseitige Drucken folgendermaßen deaktivieren:  
+ Berichts Server Administratoren können die Druckfunktion deaktivieren, indem Sie die Berichts Server-System Eigenschaft **EnableClientPrinting** auf `false`festlegen. Dadurch wird das clientseitige Drucken für alle von diesem Server verwalteten Berichte deaktiviert. Standardmäßig ist **EnableClientPrinting** auf `true`festgelegt. Sie können das clientseitige Drucken folgendermaßen deaktivieren:  
   
 -   Für einen **Berichtsserver im einheitlichen Modus**:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66103932"
   
     3.  Klicken Sie mit der rechten Maustaste auf den Berichtsserverknoten, und klicken Sie anschließend auf **Eigenschaften**. Wenn die Option **Eigenschaften** deaktiviert ist, überprüfen Sie, ob [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit Administratorrechten gestartet wurde.  
   
-    4.  Wählen Sie **aktivieren-Download für das ActiveX-Client-Drucksteuerelement**.  
+    4.  Wählen Sie **Download aktivieren für das ActiveX-Client-Druck Steuerelement aus**.  
   
     5.  Klicken Sie auf **OK**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "66103932"
   
     2.  Klicken Sie auf **Dienstanwendungen verwalten**.  
   
-    3.  Klicken Sie auf den Namen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung und anschließend im SharePoint-Menüband auf **Verwalten** .  
+    3.  Klicken Sie auf den Namen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] der Dienst Anwendung, und klicken Sie dann im SharePoint-Menüband auf **Verwalten** .  
   
     4.  Klicken Sie auf **Systemeinstellungen**.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66103932"
   
     6.  Klicken Sie auf **OK**.  
   
--   Schreiben eines Skripts oder Codeabschnitts zum Festlegen der Berichtsserver-Systemeigenschaft **EnableClientPrinting** auf `false.`  
+-   Schreiben Sie ein Skript oder einen Code, um die Berichts Server-System Eigenschaft **EnableClientPrinting** auf festzulegen.`false.`  
   
  Im folgenden Beispielskript wird eine Methode zum Deaktivieren des clientseitigen Druckens erläutert. Kompilieren Sie den folgenden [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] -Code, und führen Sie ihn anschließend aus, um die **EnableClientPrinting** -Eigenschaft auf **FALSE**festzulegen. Führen Sie nach der Ausführung des Codes einen Neustart von IIS aus.  
   

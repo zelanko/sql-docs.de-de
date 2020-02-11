@@ -1,5 +1,5 @@
 ---
-title: Anzeigen, Berichte (Berichts-Manager) | Microsoft-Dokumentation
+title: Anzeigen (Seite), Berichte (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098738"
 ---
 # <a name="view-page-reports-report-manager"></a>Anzeigen (Seite, Berichte) (Berichts-Manager)
   Mithilfe der Seite Anzeigen für Berichte können Sie einen Bericht anzeigen. Wenn Sie einen Bericht erstmalig im Berichts-Manager öffnen, wird er in HTML formatiert. HTML-Berichte enthalten eine Berichtssymbolleiste, die oben im Bericht angezeigt wird, sodass Sie durch die Berichtsseiten navigieren, innerhalb eines Berichts suchen oder den Bericht in ein anderes Format exportieren können. Die folgende Abbildung zeigt die Berichtssymbolleiste.  
   
- ![Berichtssymbolleiste](media/htmlviewer-toolbar.gif "Report toolbar")  
+ ![Berichts Symbolleiste](media/htmlviewer-toolbar.gif "Berichtssymbolleiste")  
 Berichtssymbolleiste  
   
  Berichte können in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert werden, dass sie bei Bedarf oder aus einer Berichtsausführungs-Momentaufnahme ausgeführt werden. Wenn ein Bericht bei Bedarf ausgeführt wird, tritt die gesamte Daten- und Berichtsverarbeitung jedes Mal auf, wenn Sie den Bericht öffnen. Wenn Sie einen Bericht anzeigen, der zur Ausführung als Berichtsausführungs-Momentaufnahme konfiguriert ist, trat die Datenverarbeitung auf, als die Momentaufnahme erstellt wurde.  
@@ -37,7 +37,7 @@ Berichtssymbolleiste
 > [!NOTE]  
 >  In einigen Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]sind Berichtsausführungs-Momentaufnahmen und einige Exportformate nicht verfügbar. Weitere Informationen finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

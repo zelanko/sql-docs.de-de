@@ -1,5 +1,5 @@
 ---
-title: Variieren der Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Variieren der Polygon-, Linien-und Punkt Anzeige nach Regeln und analytischen Daten (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104620"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten (Berichts-Generator und SSRS)
@@ -100,11 +100,11 @@ ms.locfileid: "66104620"
 ##  <a name="Distribution"></a> Grundlegendes zu Verteilungsoptionen  
  Um eine Verteilung von Werten zu erstellen, können Sie die Daten in Bereiche unterteilen. Sie geben den Verteilungstyp, die Anzahl der Unterbereiche sowie den minimalen und den maximalen Bereichswert an.  
   
- In der folgenden Liste wird davon ausgegangen Sie, dass Sie drei kartenelement und sechs verwandte analytische Werte, die zwischen 1 und 9999, die mit den folgenden Werten: 1, 10, 200, 2000, 4777, 8999.  
+ Nehmen Sie in der folgenden Liste an, dass Sie über drei Kartenelement und sechs verwandte analytische Werte verfügen, die zwischen 1 und 9999 liegen, und zwar: 1, 10, 200, 2000, 4777, 8999.  
   
 -   **EqualInterval – Gleiches Intervall.** Erstellt Bereiche, die die Daten in gleiche Bereichsintervalle unterteilen. Im Beispiel sind die drei Bereiche 0-2999, 3000-5999, 6000-8999. Unterbereich 1: 1, 10, 200, 500. Unterbereich 2: 4777. Unterbereich 3: 8999. Diese Methode berücksichtigt nicht, wie die Daten verteilt sind. Sehr große Werte oder sehr kleine Werte können die Verteilungsergebnisse verzerren.  
   
--   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Unterbereich 1: 1, 10. Unterbereich 2: 200, 500. Unterbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
+-   **EqualDistribution - Gleichmäßige Verteilung.** Erstellt Bereiche, die diese Daten so aufteilen, dass jeder Bereich eine gleiche Anzahl von Elementen enthält. In den Beispieldaten sind die drei Bereiche 0-10, 11-500, 501-8999. Unterbereich 1: 1. 10. Unterbereich 2: 200, 500. Unterbereich 3: 4777, 8999. Diese Methode kann die Verteilung verzerren, indem sie Unterteilungen erstellt, die sehr große oder sehr kleine Bereiche umfassen.  
   
 -   **Optimal** . Erstellt Bereiche, die automatisch die Verteilung so anpassen, dass ausgewogene Unterbereiche erstellt werden. Die Anzahl der Unterbereiche wird vom Algorithmus bestimmt.  
   
@@ -121,14 +121,14 @@ ms.locfileid: "66104620"
   
  Die folgenden Tabellen zeigen Beispiele für unterschiedliche Formate an, die Sie verwenden können.  
   
-|Schlüsselwort und Format|Description|Beispiel für den in der Legende angezeigten Text|  
+|Schlüsselwort und Format|BESCHREIBUNG|Beispiel für den in der Legende angezeigten Text|  
 |------------------------|-----------------|---------------------------------------------------|  
 |`#FROMVALUE {C0}`|Zeigt die Währung des Gesamtwerts ohne Dezimalstellen an.|$400|  
 |`#FROMVALUE {C2}`|Zeigt die Währung des Gesamtwerts mit zwei Dezimalstellen an.|$400.55|  
 |`#TOVALUE`|Zeigt den tatsächlichen numerischen Wert des Datenfelds an.|10000|  
 |`#FROMVALUE{N0} - #TOVALUE{N0}`|Zeigt die tatsächlichen numerischen Werte des Anfangs und des Endes des Bereichs an.|10 - 790|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  

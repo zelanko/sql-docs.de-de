@@ -1,5 +1,5 @@
 ---
-title: Seite "Siteeinstellungen" (Berichts-Manager) | Microsoft-Dokumentation
+title: Seite "Site Einstellungen" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101120"
 ---
 # <a name="site-settings-page-report-manager"></a>Siteeinstellungen (Seite) (Berichts-Manager)
@@ -32,13 +32,13 @@ ms.locfileid: "66101120"
   
 2.  Klicken Sie oben auf der Seite auf **Siteeinstellungen**. Dadurch wird die Seite Allgemeine Eigenschaften der Website geöffnet.  
   
-     **Hinweis**: Wenn Sie nicht sehen die **Standorteinstellungen** Option im Menü Sie nicht die erforderlichen Berechtigungen, Weitere Informationen finden Sie im Abschnitt "websiteeinstellungen" [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+     **Hinweis:** Wenn die Option **Site Einstellungen** nicht im Menü angezeigt wird, verfügen Sie nicht über die erforderlichen Berechtigungen. Weitere Informationen finden Sie im Abschnitt "Site Einstellungen" unter [Konfigurieren eines Berichts Servers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
- Geben Sie den Titel an, der für diese Instanz des Berichts-Managers von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden soll. Der Titel ist standardmäßig "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
+ Geben Sie den Titel an, der für diese Instanz des Berichts-Managers von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden soll. Standardmäßig lautet der Titel "[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]".  
   
- **Wählen Sie Standardeinstellungen für den Berichtsverlauf**  
+ **Wählen Sie Standardeinstellungen für den Berichtsverlauf aus**  
  Wählen Sie einen Standardwert für die Anzahl von Kopien aus, die im Berichtsverlauf gespeichert werden. Mithilfe eines Standardwertes werden Anfangseinstellungen bei den Grenzwerten für den Berichtsverlauf eingerichtet. Diese Einstellungen können auf Berichtsebene geändert werden. Weitere Informationen finden Sie unter [Momentaufnahmeoptionen (Eigenschaftenseite) (Berichts-Manager)](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md).  
   
  Wenn Sie den Berichtsverlauf zu einem späteren Zeitpunkt einschränken und der vorhandene Berichtsverlauf den angegebenen Grenzwert übersteigt, verringert der Berichtsserver den vorhandenen Berichtsverlauf auf den neuen Grenzwert. Die ältesten Berichtsmomentaufnahmen werden zuerst gelöscht. Falls der Berichtsverlauf leer ist oder unter dem Grenzwert liegt, werden neue Berichtsmomentaufnahmen hinzugefügt. Ist der Grenzwert erreicht, wird die älteste Momentaufnahme gelöscht, sobald eine neue Berichtsmomentaufnahme hinzugefügt wird.  
@@ -51,11 +51,11 @@ ms.locfileid: "66101120"
  Der Zeitgeber für die Berichtsverarbeitung läuft ab dem Zeitpunkt der Auswahl des Berichts und wird mit dem Öffnen des Berichts beendet. Stellen Sie beim Festlegen dieses Werts genügend Zeit für die Daten- und die Berichtsverarbeitung zur Verfügung.  
   
  **Start-URL für benutzerdefinierten Berichts-Generator**  
- Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Dies ist eine optionale Einstellung. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, durch die der Berichts-Generator als ClickOnce-Anwendung gestartet wird. Die Standard-URL entspricht einem der folgenden Werte:  
+ Geben Sie eine benutzerdefinierte URL an, wenn der Berichtsserver nicht die Standard-URL des Berichts-Generators verwendet. Diese Einstellung ist optional. Wenn Sie keinen Wert angeben, wird die Standard-URL verwendet, durch die der Berichts-Generator als ClickOnce-Anwendung gestartet wird. Die Standard-URL entspricht einem der folgenden Werte:  
   
- **Berichtsserver im einheitlichen Modus:** Bei einer Installation im einheitlichen Modus dauert die Standard-URL das Format http://\<*Computername*> / reportserver/ReportBuilder/ReportBuilder_3_0_0_0.application.  
+ **Berichts Server im einheitlichen Modus:** Bei einer Installation im einheitlichen Modus hat die Standard-URL das Format http://\<*Computername*>/ReportServer/ReportBuilder/ReportBuilder_3_0_0_0. Application.  
   
- Integrierten SharePoint-Modus: Die Standard-URL dauert das Format http://\<*SharePoint_site*> / _vti_bin/ReportBuilder/ReportBuilder_3_0_0_0.application. "  
+ Integrierter SharePoint-Modus: die Standard-URL hat das Format http://\<*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0. Application. "  
   
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen auf dem Berichtsserver zu speichern.  
@@ -66,7 +66,7 @@ ms.locfileid: "66101120"
  **Zeitpläne**  
  Klicken Sie auf diesen Link, um die Seite Freigegebene Zeitpläne zu öffnen. Auf dieser Seite können Sie Zeitpläne vordefinieren, die Benutzer für ihre Berichte und Abonnements auswählen können.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Vordefinierte Rollen](security/role-definitions-predefined-roles.md)   

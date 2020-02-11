@@ -20,41 +20,41 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f25545a48a95082636fc3efa951e5eab42c94be7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105893"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)
   In einem Bericht werden Ausdrücke zum Steuern, Organisieren und Sortieren von Berichtsdaten verwendet. Beim Erstellen von Datasets und Entwerfen des Berichtslayouts werden die Eigenschaften von Berichtselementen standardmäßig automatisch auf Ausdrücke festgelegt. Diese Einstellungen basieren auf den Datasetfeldern, Parametern und anderen Elementen, die im Berichtsdatenbereich angezeigt werden. Sie können einer Tabellen- oder Matrixzelle auch eine interaktive Sortierschaltfläche hinzufügen, um dem Benutzer das interaktive Ändern der Zeilensortierreihenfolge für Gruppen oder Zeilen innerhalb von Gruppen zu ermöglichen.  
   
--   **Filterausdrücke:** Ein Filterausdruck testet Daten auf Grundlage eines von Ihnen angegebenen Vergleichs und bestimmt so, ob sie ein- oder ausgeschlossen werden. Filter werden auf Daten in einem Bericht angewendet, nachdem die Daten über eine Datenverbindung abgerufen wurden. Den folgenden Elementen kann eine beliebige Kombination von Filtern hinzugefügt werden: einer Definition eines freigegebenen Datasets auf dem Berichtsserver, einer freigegebenen Datasetinstanz oder einem eingebetteten Dataset in einen Bericht, einem Datenbereich (z. B. eine Tabelle oder ein Diagramm) oder einer Datenbereichsgruppe (z. B. eine Zeilengruppe in einer Tabelle oder eine Kategoriegruppe in einem Diagramm).  
+-   **Filter Ausdrücke** Ein Filter Ausdruck testet Daten auf Grundlage eines von Ihnen angegebenen Vergleichs, um Sie einzuschließen oder auszuschließen. Filter werden auf Daten in einem Bericht angewendet, nachdem die Daten über eine Datenverbindung abgerufen wurden. Den folgenden Elementen kann eine beliebige Kombination von Filtern hinzugefügt werden: einer Definition eines freigegebenen Datasets auf dem Berichtsserver, einer freigegebenen Datasetinstanz oder einem eingebetteten Dataset in einen Bericht, einem Datenbereich (z. B. eine Tabelle oder ein Diagramm) oder einer Datenbereichsgruppe (z. B. eine Zeilengruppe in einer Tabelle oder eine Kategoriegruppe in einem Diagramm).  
   
--   **Gruppierungsausdrücke:** Ein Gruppierungsausdruck organisiert Daten basierend auf einem Datasetfeld oder einem anderen Wert. Gruppierungsausdrücke werden automatisch erstellt, wenn Sie das Berichtslayout erstellen. Der Berichtsprozessor wertet Gruppierungsausdrücke nach dem Anwenden der Filter aus, wenn Berichtsdaten und Datenbereiche kombiniert werden. Sie können einen Gruppierungsausdruck nach seiner Erstellung weiter anpassen.  
+-   Gruppierungs **Ausdrücke** Ein Gruppierungs Ausdruck organisiert Daten basierend auf einem Datasetfeld oder einem anderen Wert. Gruppierungsausdrücke werden automatisch erstellt, wenn Sie das Berichtslayout erstellen. Der Berichtsprozessor wertet Gruppierungsausdrücke nach dem Anwenden der Filter aus, wenn Berichtsdaten und Datenbereiche kombiniert werden. Sie können einen Gruppierungsausdruck nach seiner Erstellung weiter anpassen.  
   
--   **Sortierungsausdrücke:** Ein Sortierungsausdruck steuert die Reihenfolge, in der Daten in einem Datenbereich angezeigt werden. Sortierungsausdrücke werden automatisch erstellt, wenn Sie das Berichtslayout erstellen. Ein Sortierungsausdruck für eine Gruppe wird standardmäßig auf die gleichen Werte festgelegt wie der Gruppierungsausdruck. Sie können einen Sortierungsausdruck nach seiner Erstellung weiter anpassen.  
+-   **Sortier Ausdrücke** Ein Sortierungs Ausdruck steuert die Reihenfolge, in der Daten in einem Datenbereich angezeigt werden. Sortierungsausdrücke werden automatisch erstellt, wenn Sie das Berichtslayout erstellen. Ein Sortierungsausdruck für eine Gruppe wird standardmäßig auf die gleichen Werte festgelegt wie der Gruppierungsausdruck. Sie können einen Sortierungsausdruck nach seiner Erstellung weiter anpassen.  
   
--   **Interaktive Sortierung:** Wenn Sie es dem Benutzer ermöglichen möchten, die Sortierreihenfolge einer Spalte zu festzulegen oder umzukehren, können Sie einem Spaltenheader oder einer Gruppenkopfzelle in einer Tabelle oder Matrix eine interaktive Sortierschaltfläche hinzufügen.  
+-   **Interaktive Sortierung** Um es Benutzern zu ermöglichen, die Sortierreihenfolge einer Spalte zu sortieren oder umzukehren, können Sie eine interaktive Sortier Schaltfläche zu einer Spalten Kopfzeile oder Gruppen Header Zelle in einer Tabelle oder Matrix hinzufügen.  
   
  Sie können einen Ausdruck ändern, indem Sie einen Verweis auf einen Berichtsparameter hinzufügen, um den Benutzern das Anpassen von Filter-, Gruppierungs- oder Sortierungsausdrücke zu erleichtern. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)" basiert.  
   
  Weitere Informationen und Beispiele finden Sie in den folgenden Themen:  
   
--   [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
--   [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+-   [Beispiele für Filter Gleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
 -   [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)  
   
 -   [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   
--   [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
+-   [Berichts Beispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Filtering"></a> Filtern von Daten im Bericht  
+##  <a name="Filtering"></a>Filtern von Daten im Bericht  
  Filter sind Teile eines Berichts, mit denen Berichtsdaten gesteuert werden können, nachdem sie über die Datenverbindung abgerufen wurden. Verwenden Sie Filter, wenn Sie eine Datasetabfrage nicht ändern können, um Daten vor dem Abrufen aus einer externen Datenquelle zu filtern.  
   
  Erstellen Sie möglichst Datasetabfragen, die nur die Daten zurückgeben, die Sie im Bericht anzeigen möchten. Wenn Sie die Menge abzurufender und zu verarbeitender Daten reduzieren, verbessern Sie die Berichtsleistung. Weitere Informationen finden Sie unter [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -63,11 +63,11 @@ ms.locfileid: "66105893"
   
  Für jeden Filter geben Sie eine *Filtergleichung*an. Eine Filtergleichung enthält ein Datasetfeld oder einen Ausdruck, das bzw. der die zu filternden Daten, einen Operator und einen Vergleichswert definiert. Nur die mit der Filterbedingung übereinstimmenden Datenwerte werden bei der Verarbeitung des Elements berücksichtigt.  
   
- Sie können Parameter in Filterausdrücke einschließen, um Benutzern das Steuern der Daten in einem Bericht zu ermöglichen. Weitere Informationen finden Sie unter [Verweise auf Parametersammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
+ Sie können Parameter in Filterausdrücke einschließen, um Benutzern das Steuern der Daten in einem Bericht zu ermöglichen. Weitere Informationen finden Sie unter [Verweise auf Parameters-Sammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
  Sie können einen Verweis auf das integrierte "UserID"-Feld in einen Filter einschließen, um eine Sicht für jeden Benutzer anzupassen. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).
 
-##  <a name="Grouping"></a> Gruppieren von Daten im Bericht  
+##  <a name="Grouping"></a>Gruppieren von Daten im Bericht  
  Durch Gruppen werden Daten in einem Bericht für die Anzeige oder zum Berechnen von Aggregatwerten organisiert. Kenntnisse im Definieren von Gruppen und Verwenden von Gruppenfunktionen sind für das Entwerfen präziserer Berichte hilfreich.  
   
  Gruppierungsausdrücke werden bei den folgenden Aktionen automatisch erstellt:  
@@ -86,7 +86,7 @@ ms.locfileid: "66105893"
   
  Der Gruppenname gibt einen Ausdrucksbereich an. Sie können den Namen einer Gruppe als Bereich angeben, in dem Aggregate berechnet werden sollen, um Daten hierarchisch zu organisieren und die Anzeige von untergeordneten Knoten in übergeordneten Knoten in einem Drilldownbericht umzuschalten, andere Sichten derselben Daten für mehrere Datenbereiche anzuzeigen und Zusammenfassungsdaten in einer Tabelle, einer Matrix, einem Diagramm, einem Messgerät oder einer Karte visuell darzustellen. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
   
- Fügen Sie dem Satz von Gruppierungsausdrücken die einzelnen Felder hinzu, um eine Gruppierung für mehrere Datasetfelder vorzunehmen. Sie können auch eigene Gruppierungsausdrücke in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]erstellen. Sie können z. B. eine Gruppierung anhand eines Bereichs von Werten oder mit einem Berichtsparameter durchführen, um Benutzern verschiedene Möglichkeiten zur Gruppierung von Daten in einem Datenbereich zu bieten. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
+ Fügen Sie dem Satz von Gruppierungsausdrücken die einzelnen Felder hinzu, um eine Gruppierung für mehrere Datasetfelder vorzunehmen. Sie können auch eigene Gruppen Ausdrücke in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]schreiben. Sie können z. B. eine Gruppierung anhand eines Bereichs von Werten oder mit einem Berichtsparameter durchführen, um Benutzern verschiedene Möglichkeiten zur Gruppierung von Daten in einem Datenbereich zu bieten. Weitere Informationen finden Sie unter [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
  Für jede Berichtsdarstellung können Sie beim Erstellen von Gruppen vor und nach jeder Gruppe oder jeder Instanz einer Gruppe Seitenumbrüche hinzufügen. So kann die Datenmenge auf jeder Seite reduziert und die Leistung beim Rendern der Berichte besser verwaltet werden. Weitere Informationen finden Sie unter [Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS)](add-a-page-break-report-builder-and-ssrs.md).  
   
@@ -98,21 +98,21 @@ ms.locfileid: "66105893"
  Weitere Informationen finden Sie unter [Verweise auf Berichts- und Gruppenvariablensammlungen &#40;Berichts-Generator und SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md) und [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="groups-and-scope-in-data-regions"></a>Gruppen und Bereiche in Datenbereichen  
- Geben Sie für jeden Datenbereich die gleichen Gruppierungsausdrücke an, um mehrere Sichten der Daten aus einem Dataset bereitzustellen. Sie können kategorisierte Daten z. B. zur Anzeige aller Detaildaten in einer Tabelle und zur Anzeige von Aggregaten in einem Kreisdiagramm anzeigen, um jede Kategorie in Bezug zum gesamten Dataset zu visualisieren. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Geben Sie für jeden Datenbereich die gleichen Gruppierungsausdrücke an, um mehrere Sichten der Daten aus einem Dataset bereitzustellen. Sie können kategorisierte Daten z. B. zur Anzeige aller Detaildaten in einer Tabelle und zur Anzeige von Aggregaten in einem Kreisdiagramm anzeigen, um jede Kategorie in Bezug zum gesamten Dataset zu visualisieren. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit dem gleichen Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
- Wenn Sie einen Datenbereich in einer Zelle in einer Tabelle, Matrix oder Liste schachteln, legen Sie die Daten automatisch auf die innersten Gruppenmitgliedschaften der Zelle aus. Angenommen, Sie fügen einer Zelle, die sich in einer Zeilengruppe und in einer Spaltengruppe befindet, ein Diagramm hinzu. Die für dieses Diagramm verfügbaren Daten werden zur Laufzeit dem Bereich der innersten Zeilengruppeninstanz und innersten Spaltengruppeninstanz zugeordnet. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+ Wenn Sie einen Datenbereich in einer Zelle in einer Tabelle, Matrix oder Liste schachteln, legen Sie die Daten automatisch auf die innersten Gruppenmitgliedschaften der Zelle aus. Angenommen, Sie fügen einer Zelle, die sich in einer Zeilengruppe und in einer Spaltengruppe befindet, ein Diagramm hinzu. Die für dieses Diagramm verfügbaren Daten werden zur Laufzeit dem Bereich der innersten Zeilengruppeninstanz und innersten Spaltengruppeninstanz zugeordnet. Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)-Ausdruck dar.  
 
-##  <a name="Sorting"></a> Sortieren von Daten im Bericht  
+##  <a name="Sorting"></a>Sortieren von Daten im Bericht  
  Wenn Sie die Sortierreihenfolge für Daten in einem Bericht steuern möchten, können Sie Daten in einer Datasetabfrage sortieren oder einen Sortierungsausdruck für einen Datenbereich oder eine Datengruppe definieren. Außerdem können Sie Tabellen und Matrizen interaktive Sortierschaltflächen hinzufügen, um es Benutzern zu ermöglichen, die Sortierreihenfolge für Zeilen zu ändern.  
   
  Alle drei Typen von Sortierungen können im gleichen Bericht kombiniert werden. Standardmäßig wird die Sortierreihenfolge durch die Reihenfolge bestimmt, in der Daten von der Datasetabfrage zurückgegeben werden. Sortierungsausdrücke werden im Datenbereich und in der Datenbereichsgruppe angewendet. Interaktive Sortierungen werden nach Sortierungsausdrücken angewendet.  
   
- Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: First, Last und Previous. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Bei Ausdrücken, die Aggregatfunktionen enthalten, sind die meisten Ergebnisse nicht von der Sortierreihenfolge betroffen. Rückgabewerte für die folgenden Aggregatfunktionen sind von der Sortierreihenfolge betroffen: „First“, „Last“ und „Previous“. Weitere Informationen finden Sie unter [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Sortieren von Daten in einer Datasetabfrage  
  Schließen Sie Sortierreihenfolge in der Datasetabfrage ein, um diese vorzusortieren, bevor sie für einen Bericht abgerufen werden. Beim Sortieren von Daten in der Abfrage wird die Sortierung selbst von der Datenquelle und nicht vom Berichtsprozessor ausgeführt.  
   
- Beim Datenquellentyp [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie der Datenbankabfrage eine ORDER BY-Klausel hinzufügen. Beispielsweise sortiert die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage die Spalten Sales und Region by Sales in absteigender Reihenfolge von der Tabelle SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Weitere Informationen finden Sie in "Sortieren von Zeilen mit ORDER BY" in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
+ Für einen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten Quellentyp können Sie der Datasetabfrage eine ORDER BY-Klausel hinzufügen. Beispielsweise sortiert die folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage die Spalten Sales und Region by Sales in absteigender Reihenfolge von der Tabelle SalesOrders: `SELECT Sales, Region FROM SalesOrders ORDER BY Sales DESC`. Weitere Informationen finden Sie in "Sortieren von Zeilen mit ORDER BY" in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
   
 > [!NOTE]  
 >  Nicht alle Datenquellen unterstützen die Möglichkeit, in der Abfrage die Sortierreihenfolge anzugeben.  
@@ -128,7 +128,7 @@ ms.locfileid: "66105893"
   
 -   **Diagrammdatenbereich.** Legen Sie einen Sortierungsausdruck für die Kategorie- und Reihengruppen fest, um die Sortierreihenfolge für Datenpunkte zu steuern. Standardmäßig ist die Reihenfolge der Datenpunkte mit der Reihenfolge der Farben in der Diagrammlegende identisch. Weitere Informationen finden Sie unter [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md).  
   
--   **Kartenberichtselement.** Normalerweise müssen die Daten für einen Kartendatenbereich nicht sortiert werden, da die Karte für Kartenelemente anzuzeigende Daten gruppiert.  
+-   **Karten Berichts Element.** Normalerweise müssen die Daten für einen Kartendatenbereich nicht sortiert werden, da die Karte für Kartenelemente anzuzeigende Daten gruppiert.  
   
 -   **Messgerätdatenbereich.** Normalerweise müssen die Daten für einen Messgerätdatenbereich nicht sortiert werden, da auf dem Messgerät ein einzelner Wert in Bezug auf einen Bereich angezeigt wird. Wenn Sie die Daten eines Messgeräts dennoch sortieren müssen, definieren Sie zunächst eine Gruppe, und legen Sie dann einen Sortierungsausdruck für die Gruppe fest.  
   
@@ -159,7 +159,7 @@ FROM Production.Product
   
  Weitere Informationen finden Sie unter [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md) und [Lookup-Funktion &#40;Berichts-Generator und SSRS&#41;](report-builder-functions-lookup-function.md).  
   
-###  <a name="Interactive"></a> Hinzufügen einer interaktiven Sortierung für den Benutzer  
+###  <a name="Interactive"></a>Hinzufügen einer interaktiven Sortierung für den Benutzer  
  Wenn Sie es dem Benutzer ermöglichen möchten, die Sortierreihenfolge der Berichtsdaten in einer Tabelle oder Matrix zu ändern, können Sie Spaltenheadern oder Gruppenköpfen interaktive Sortierschaltflächen hinzufügen. Benutzer können auf die Schaltfläche klicken, um die Sortierreihenfolge umzuschalten. Die interaktive Sortierung wird in Renderingformaten unterstützt, die Benutzeraktionen zulassen, z. B. HTML.  
   
  Sie fügen einem Textfeld in einer Tablix-Datenbereichszelle interaktive Sortierschaltflächen hinzu. Standardmäßig enthält jede Zelle ein Textfeld. In den Eigenschaften des Textfelds geben Sie den zu sortierenden Teil eines Tabellen- oder Matrixdatenbereichs an (die Werte der übergeordneten Gruppe, die Werte der untergeordneten Gruppe oder die Detailzeilen), außerdem das Element, nach dem die Sortierung erfolgen soll, und ob der Sortierungsausdruck auf weitere Berichtselemente angewendet werden soll, mit denen eine Peerbeziehung besteht. Wenn beispielsweise eine Tabelle und ein Diagramm, die Sichten desselben Datasets bereitstellen, in einem Rechteck eingeschlossen sind, handelt es sich bei diesen um Peerdatenbereiche. Wenn ein Benutzer die Sortierreihenfolge der Tabelle umschaltet, wird die Sortierreihenfolge des Diagramms ebenfalls umgeschaltet. Weitere Informationen finden Sie unter [Interaktive Sortierung &#40;Berichts-Generator und SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
@@ -171,9 +171,9 @@ FROM Production.Product
   
  [Hinzufügen einer interaktiven Sortierung zu einer Tabelle oder Matrix &#40;Berichts-Generator und SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md)  
   
- [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Legen Sie eine Meldung ohne Daten für einen Datenbereich &#40;Berichts-Generator und SSRS fest&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Erstellen einer rekursiven Hierarchiegruppe &#40;Berichts-Generator und SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+ [Erstellen einer rekursiven Hierarchie Gruppe &#40;Berichts-Generator und SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
  [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
@@ -184,13 +184,13 @@ FROM Production.Product
  [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
 ##  <a name="Section"></a> In diesem Abschnitt  
- [Beispiele für Gruppierungsausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
+ [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](expression-examples-report-builder-and-ssrs.md)  
   
- [Beispiele für Filtergleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
+ [Beispiele für Filter Gleichungen &#40;Berichts-Generator und SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)  
   
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)  
   
-##  <a name="Related"></a> Verwandte Abschnitte  
+##  <a name="Related"></a>Verwandte Abschnitte  
  [Grundlegendes zu Gruppen &#40;Berichts-Generator und SSRS&#41;](understanding-groups-report-builder-and-ssrs.md)  
   
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
@@ -203,11 +203,11 @@ FROM Production.Product
   
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Sparklines und Datenbalken (Berichts-Generator und SSRS)](sparklines-and-data-bars-report-builder-and-ssrs.md)   
+ [Sparklines und Daten Balken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](indicators-report-builder-and-ssrs.md)  

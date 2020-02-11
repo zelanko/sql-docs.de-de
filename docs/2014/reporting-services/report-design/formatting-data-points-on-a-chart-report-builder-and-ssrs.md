@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d9c0b0a2c6ca3c12ca020dcc79b5aa4cad46c825
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105821"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Formatieren von Datenpunkten in einem Diagramm (Berichts-Generator und SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66105821"
 ## <a name="positioning-data-point-labels-on-a-chart"></a>Positionieren von Datenpunktbezeichnungen in einem Diagramm  
  In allen Diagrammtypen können Sie Datenpunktbezeichnungen anzeigen, indem Sie mit der rechten Maustaste auf das Diagramm klicken und die Option **Datenbezeichnungen anzeigen**auswählen. Die Position der Datenpunktbezeichnungen wird entsprechend dem Diagrammtyp angegeben:  
   
--   In einem Balkendiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **BarLabelStyle** -Attributs neu positionieren. Es gibt vier mögliche Positionen: außen, links, Mitte und rechts. Wenn Sie die Balkenbezeichnungsart auf Außen festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Wenn die Bezeichnung nicht außerhalb des Balkens und im Diagrammbereich positioniert werden kann, wird sie im Balken positioniert.  
+-   In einem Balkendiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **BarLabelStyle** -Attributs neu positionieren. Es gibt vier mögliche Positionen: Außen, Links, Zentriert und Rechts. Wenn Sie die Balkenbezeichnungsart auf Außen festlegen, werden die Bezeichnungen außerhalb des Balkens platziert, sofern sie in den Diagrammbereich passen. Wenn die Bezeichnung nicht außerhalb des Balkens und im Diagrammbereich positioniert werden kann, wird sie im Balken positioniert.  
   
 -   In einem Kreisdiagramm können Sie die Datenpunktbezeichnung mithilfe des benutzerdefinierten **PieLabelStyle** -Attributs neu positionieren. Beim Positionieren von Datenpunktbezeichnungen um ein Kreisdiagramm sind viele Aspekte zu berücksichtigen, u. a. die Größe des Kreisdiagramms, der verfügbare Platz zwischen dem Kreisdiagramm und der entsprechenden Legende sowie die Größe der Bezeichnungen. Weitere Informationen finden Sie unter [Anzeigen von Datenpunktbezeichnungen außerhalb eines Kreisdiagramms &#40;Berichts-Generator und SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md).  
   
@@ -58,21 +58,21 @@ ms.locfileid: "66105821"
 ## <a name="adding-keywords-for-data-point-labels-tooltips-and-legend-text"></a>Hinzufügen von Schlüsselwörtern für Datenpunktbezeichnungen, QuickInfos und Legendentext  
  Sie können ein vorhandenes Element im Diagramm mithilfe von diagrammspezifischen Schlüsselwörtern darstellen, bei denen die Groß- und Kleinschreibung berücksichtigt wird. Diese Schlüsselwörter können nur auf Eigenschaften von QuickInfos, benutzerdefiniertem Legendentext und Datenpunktbezeichnungen angewendet werden. In vielen Fällen ist für ein Diagrammschlüsselwort ein entsprechender einfacher Ausdruck verfügbar, das Schlüsselwort kann jedoch schneller und einfacher eingegeben werden. Im Folgenden finden Sie eine Liste von Diagrammschlüsselwörtern.  
   
-|Diagrammschlüsselwort|Description|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
+|Diagrammschlüsselwort|BESCHREIBUNG|Anwendbar auf Diagrammtyp|Beispiel für einen entsprechenden einfachen Ausdruck|  
 |-------------------|-----------------|------------------------------|------------------------------------------------|  
 |#VALY|Y-Wert des Datenpunkts|All|`=Fields!MyDataField.Value`|  
-|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|None|  
-|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|None|  
-|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|None|  
-|#SERIESNAME|Reihenname|All|None|  
-|#LABEL|Datenpunktbezeichnung|All|None|  
+|#VALY2|Y-Wert Nr. 2 des Datenpunkts|Bereich, Blase|Keine|  
+|#VALY3|Y-Wert Nr. 3 des Datenpunkts|Kurs, Kerze|Keine|  
+|#VALY4|Y-Wert Nr. 4 des Datenpunkts|Kurs, Kerze|Keine|  
+|#SERIESNAME|Reihenname|All|Keine|  
+|#LABEL|Datenpunktbezeichnung|All|Keine|  
 |#AXISLABEL|Achsenbezeichnung für Datenpunkt|Form|`=Fields!MyDataField.Value`|  
-|#INDEX|Datenpunktindex|All|None|  
+|#INDEX|Datenpunktindex|All|Keine|  
 |#PERCENT|Prozentsatz für den Y-Wert des Datenpunkts|All|`=FormatPercent(Fields!MyDataField.Value/Sum(Fields!MyDataField.Value, "MyDataSet"),2)`|  
 |#TOTAL|Summe aller Y-Werte in der Reihe|All|`=Sum(Fields!MyDataField.Value)`|  
-|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|None|  
+|#LEGENDTEXT|Der Text, der dem Text des Legendenelements entspricht.|All|Keine|  
 |#AVG|Durchschnitt aller Y-Werte in der Reihe|All|`=Avg(Fields!MyDataField.Value)`|  
-|#MIN|Minimum aller Y-Werte in der Reihe|Alle|`=Min(Fields!MyDataField.Value)`|  
+|#MIN|Minimum aller Y-Werte in der Reihe|All|`=Min(Fields!MyDataField.Value)`|  
 |#MAX|Maximum aller Y-Werte in der Reihe|All|`=Max(Fields!MyDataField.Value)`|  
 |#FIRST|Der Erste aller Y-Werte in der Reihe|All|`=First(Fields!MyDataField.Value)`|  
   
@@ -95,12 +95,12 @@ ms.locfileid: "66105821"
   
  [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   

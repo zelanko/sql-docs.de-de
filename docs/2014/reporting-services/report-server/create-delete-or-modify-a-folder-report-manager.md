@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103917"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Erstellen, Löschen oder Ändern eines Ordners (Berichts-Manager)
@@ -35,7 +35,7 @@ ms.locfileid: "66103917"
   
      Die Seite **Neuer Ordner** wird geöffnet.  
   
-3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : \@ & = + , $ / * \< > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
+3.  Geben Sie einen Ordnernamen ein. Ein Ordnername kann Leerzeichen enthalten, jedoch keine reservierten Zeichen, die für die URL-Codierung verwendet werden: ; ? : \@ & = +, $/* \< > |. Sie können keine Reihe von Ordnernamen eingeben, um mehrere Ordner gleichzeitig zu erstellen.  
   
 4.  Geben Sie optional eine Beschreibung ein.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "66103917"
   
 6.  Sie können den Ordner und seinen Inhalt auch entfernen, indem Sie auf **Löschen**klicken.  
   
-7.  Klicken Sie auf **Anwenden** , um die Änderungen zu speichern.  
+7.  Klicken Sie auf **Apply** (Übernehmen), um die Änderungen zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
- [Neuer Ordner &#40;Seite, Berichts-Manager&#41;](../new-folder-page-report-manager.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../contents-page-report-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Die Seite "neuer Ordner" &#40;Berichts-Manager&#41;](../new-folder-page-report-manager.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

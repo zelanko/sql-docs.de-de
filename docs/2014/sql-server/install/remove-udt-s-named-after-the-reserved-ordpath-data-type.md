@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie UDTS,&#39;s mit dem Namen nach dem reservierten ORDPATH-Datentyp | Microsoft-Dokumentation
+title: Entfernen Sie UDT-&#39;s, die nach dem reservierten ordpath-Datentyp benannt sind. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ee155c70a8b10d4437d6b2f374c8b9497bf3faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092923"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Entfernen Sie UDTS,&#39;s, die nach dem reservierten ORDPATH-Datentyp benannt sind
+# <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>UDT-&#39;s entfernen, die nach dem reservierten ordpath-Datentyp benannt sind
   Upgrade Advisor hat einen benutzerdefinierten Typ (UDT, User-Defined Type) erkannt, der nach einem Ausdruck benannt ist, der für den `ORDPATH`-Datentyp reserviert ist.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Die Ausdrücke, die für integrierte Datentypen verwendet werden, sollten nicht als Namen für die Common Language Runtime (CLR) oder Alias-UDTs genutzt werden.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  

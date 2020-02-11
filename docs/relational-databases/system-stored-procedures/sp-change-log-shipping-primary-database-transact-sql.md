@@ -1,5 +1,5 @@
 ---
-title: Sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft-Dokumentation
+title: sp_change_log_shipping_primary_database (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 8c9dce6b-d2a3-4ca7-a832-8f59a5adb214
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 244811989bd5ab58a3ab1f6ffdfcf82649af1916
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68045821"
 ---
-# <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
+# <a name="sp_change_log_shipping_primary_database-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Ändert die Einstellungen primärer Datenbanken.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -50,68 +50,68 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @database = ] 'database'` Ist der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
+`[ @database = ] 'database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
   
-`[ @backup_directory = ] 'backup_directory'` Ist der Pfad zum Sicherungsordner auf dem primären Server. *Backup_directory* ist **nvarchar(500)** , hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_directory = ] 'backup_directory'`Der Pfad zum Sicherungsordner auf dem primären Server. *backup_directory* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_share = ] 'backup_share'` Ist Sie der Netzwerkpfad zum Sicherungsverzeichnis auf dem primären Server. *Backup_share* ist **nvarchar(500)** , hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_share = ] 'backup_share'`Der Netzwerkpfad zum Sicherungs Verzeichnis auf dem primären Server. *backup_share* ist vom Datentyp **nvarchar (500)** und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @backup_retention_period = ] 'backup_retention_period'` Ist die Zeitdauer in Minuten, die Protokollsicherungsdatei im Sicherungsverzeichnis auf dem primären Server beibehalten werden sollen. *Backup_retention_period* ist **Int**, hat keinen Standardwert und darf nicht NULL sein.  
+`[ @backup_retention_period = ] 'backup_retention_period'`Der Zeitraum (in Minuten), in dem die Protokoll Sicherungsdatei im Sicherungs Verzeichnis auf dem primären Server beibehalten werden soll. *backup_retention_period* ist vom Datentyp **int**und hat keinen Standardwert und darf nicht NULL sein.  
   
-`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Der Sicherheitsmodus, der für die Verbindung mit dem Überwachungsserver verwendet wird.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'`Der Sicherheitsmodus, der zum Herstellen der Verbindung mit dem Überwachungs Server verwendet wird.  
   
  1 = Windows-Authentifizierung  
   
  0 = SQL Server-Authentifizierung  
   
- *monitor_server_security_mode* ist vom Datentyp **bit** und darf nicht NULL sein.  
+ *monitor_server_security_mode* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @monitor_server_login = ] 'monitor_server_login'` Ist der Benutzername des Kontos, auf dem Überwachungsserver verwendet.  
+`[ @monitor_server_login = ] 'monitor_server_login'`Der Benutzername des Kontos, das für den Zugriff auf den Überwachungs Server verwendet wird.  
   
-`[ @monitor_server_password = ] 'monitor_server_password'` Ist das Kennwort des Kontos, auf dem Überwachungsserver verwendet.  
+`[ @monitor_server_password = ] 'monitor_server_password'`Das Kennwort des Kontos, das für den Zugriff auf den Überwachungs Server verwendet wird.  
   
-`[ @backup_threshold = ] 'backup_threshold'` Die Länge der Zeit in Minuten, nach der letzten Sicherung, bevor eine *Threshold_alert* Fehler ausgelöst. *Backup_threshold* ist **Int**, hat den Standardwert von 60 Minuten.  
+`[ @backup_threshold = ] 'backup_threshold'`Die Zeitspanne (in Minuten) nach der letzten Sicherung, bevor ein *threshold_alert* Fehler ausgelöst wird. *backup_threshold* ist vom Datentyp **int**, der Standardwert ist 60 Minuten.  
   
-`[ @threshold_alert = ] 'threshold_alert'` Warnung, die bei Überschreitung des sicherungsschwellenwerts ausgelöst werden. *Threshold_alert* ist **Int** und darf nicht NULL sein.  
+`[ @threshold_alert = ] 'threshold_alert'`Die Warnung, die ausgelöst werden soll, wenn der Sicherungs Schwellenwert überschritten wird. *threshold_alert* ist vom Datentyp **int** und kann nicht NULL sein.  
   
-`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Gibt an, ob eine Warnung ausgelöst wird, wenn *Backup_threshold* überschritten wird.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird.  
   
  1 = aktiviert.  
   
  0 = deaktiviert.  
   
- *Threshold_alert_enabled* ist **Bit** und darf nicht NULL sein.  
+ *threshold_alert_enabled* ist vom **Bit** und kann nicht NULL sein.  
   
-`[ @history_retention_period = ] 'history_retention_period'` Ist die Zeitdauer in Minuten, die in denen der Verlauf beibehalten wird. *History_retention_period* ist **Int**. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
+`[ @history_retention_period = ] 'history_retention_period'`Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Wert 14420 wird verwendet, wenn kein Wert angegeben wird.  
   
-`[ @backup_compression = ] backup_compression_option` Gibt an, ob eine Protokollversandkonfiguration verwendet [sicherungskomprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md). Dieser Parameter wird nur in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder einer höheren Version) unterstützt.  
+`[ @backup_compression = ] backup_compression_option`Gibt an, ob eine Protokoll Versand Konfiguration die [Sicherungs Komprimierung](../../relational-databases/backup-restore/backup-compression-sql-server.md)verwendet. Dieser Parameter wird nur in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder einer höheren Version) unterstützt.  
   
  0 = Deaktiviert. Protokollsicherungen nie komprimieren.  
   
  1 = Aktiviert. Protokollsicherungen immer komprimieren.  
   
- 2 = Einstellung der der [anzeigen oder Konfigurieren der backup Compression Default Server Configuration Option](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Dies ist der Standardwert.  
+ 2 = verwenden Sie die Einstellung der [Server Konfigurations Option "Standardeinstellung für die Sicherungs Komprimierung anzeigen oder konfigurieren](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)". Dies ist der Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- 0 (Erfolg) oder 1 (Fehler)  
+ „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- None  
+ Keine  
   
-## <a name="remarks"></a>Hinweise  
- **Sp_change_log_shipping_primary_database** muss ausgeführt werden, aus der **master** Datenbank auf dem primären Server. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
+## <a name="remarks"></a>Bemerkungen  
+ **sp_change_log_shipping_primary_database** muss von der **Master** -Datenbank auf dem primären Server ausgeführt werden. Diese gespeicherte Prozedur führt folgende Aktionen aus:  
   
-1.  Ändert die Einstellungen in der **Log_shipping_primary_database** aufzuzeichnen, falls erforderlich.  
+1.  Ändert die Einstellungen im **log_shipping_primary_database** Datensatz, falls erforderlich.  
   
-2.  Ändert den lokalen Datensatz in **Log_shipping_monitor_primary** auf dem primären Server mithilfe bereitgestellter Argumente, falls erforderlich.  
+2.  Ändert den lokalen Datensatz in **log_shipping_monitor_primary** auf dem primären Server mithilfe der angegebenen Argumente, falls erforderlich.  
   
-3.  Wenn der Überwachungsserver vom primären Server übereinstimmt, notieren Sie Änderungen in **Log_shipping_monitor_primary** auf dem Überwachungsserver mithilfe angegebener Parameter, falls erforderlich.  
+3.  Wenn der Überwachungs Server nicht mit dem primären Server identisch ist, wird der Änderungs Daten Satz in **log_shipping_monitor_primary** auf dem Überwachungs Server mithilfe der angegebenen Argumente angezeigt, falls erforderlich.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Beispiel veranschaulicht die Verwendung von **Sp_change_log_shipping_primary_database** aktualisieren Sie die Einstellungen im Zusammenhang mit der primären Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Dieses Beispiel veranschaulicht die Verwendung von **sp_change_log_shipping_primary_database** , um die Einstellungen zu aktualisieren, die der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]primären Datenbank zugeordnet sind.  
   
 ```  
 EXEC master.dbo.sp_change_log_shipping_primary_database   
@@ -127,9 +127,9 @@ EXEC master.dbo.sp_change_log_shipping_primary_database
 ,@backup_compression = 1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
- [Über den Protokollversand &#40;SQLServer&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [log_shipping_primary_databases &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
+ [log_shipping_primary_databases &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)  
   
   

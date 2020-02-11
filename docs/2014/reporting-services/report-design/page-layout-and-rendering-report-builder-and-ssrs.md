@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105512"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66105512"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a> Seitenlayout und Berichtselemente  
+##  <a name="PageLayout"></a>Seiten Layout und Berichts Elemente  
  Berichtselemente sind Layoutelemente, die verschiedenen Typen von Berichtsdaten zugeordnet werden. Tabelle, Matrix, Liste, Diagramm und Messgerät sind Datenbereichsberichtselemente, die jeweils mit einem Berichtsdataset verknüpft sind. Wenn der Bericht verarbeitet wird, wird der Datenbereich auf der Berichtsseite zur Seite und nach unten erweitert, um Daten anzuzeigen. Andere Berichtselemente sind mit einem einzelnen Element verknüpft und zeigen dieses an. Ein **Bildberichtselement** ist mit einem Bild verknüpft. Ein **Textfeld** -Berichtselement enthält entweder einfachen Text wie einen Titel oder einen Ausdruck, der Verweise auf integrierte Felder, Berichtsparameter oder Datasetfelder enthalten kann. Die Berichtselemente **Zeile** und **Rechteck** stellen einfache grafische Elemente auf der Berichtsseite bereit. Das **Rechteck** kann auch als Container für andere Berichtselemente verwendet werden. Ein Bericht kann Unterberichte enthalten.  
   
  Mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtselemente an einer beliebigen Stelle auf der Entwurfsoberfläche platzieren. Sie können die ursprüngliche Form des Berichtselements mithilfe von Ausrichtungslinien und Ziehpunkten zum Ändern der Größe interaktiv positionieren, erweitern und verkleinern. Sie können Datenbereiche mit unterschiedlichen Datasets oder den gleichen Daten in unterschiedlichen Formaten nebeneinander platzieren. Wenn Sie ein Berichtselement auf der Entwicklungsoberfläche platzieren, weist es eine Standardgröße und -form sowie eine ursprüngliche Beziehung mit allen anderen Berichtselementen auf. Sie können viele Berichtselemente nebeneinander platzieren, um komplexere Berichtsentwürfe zu erstellen. Zum Beispiel Diagramme oder Bilder in Tabellenzellen, Tabellen in Tabellenzellen und mehrere Bilder in einem Rechteck. Neben der gewünschten Organisation und Gestaltung des Berichts ermöglicht das Platzieren von Berichtselementen in Formen wie Rechtecken die Anzeige von Berichtselementen auf der Berichtsseite zu steuern.  
@@ -48,14 +48,14 @@ ms.locfileid: "66105512"
 ##  <a name="RenderingExtensions"></a> Renderer  
  Reporting Services schließt einen Satz von Renderern ein, die auch als Renderingerweiterungen bezeichnet werden, mit denen Sie Berichte in andere Formate exportieren können. Es stehen drei Arten von Renderern zur Verfügung:  
   
--   **Datenrenderer** : Datenrenderer entfernen alle Formatierungs- und Layoutinformationen aus dem Bericht und zeigen nur die Daten an. Die mithilfe dieser Option erstellte Datei kann zum Importieren der Rohberichtsdaten in einen anderen Dateityp verwendet werden, z. B. Excel, eine andere Datenbank, eine XML-Datennachricht oder eine benutzerdefinierte Anwendung. Die verfügbaren datenrenderer sind: CSV und XML.  
+-   **Datenrenderer** : Datenrenderer entfernen alle Formatierungs- und Layoutinformationen aus dem Bericht und zeigen nur die Daten an. Die mithilfe dieser Option erstellte Datei kann zum Importieren der Rohberichtsdaten in einen anderen Dateityp verwendet werden, z. B. Excel, eine andere Datenbank, eine XML-Datennachricht oder eine benutzerdefinierte Anwendung. Die verfügbaren Datenrenderer sind: CSV und XML.  
   
     > [!NOTE]  
     >  Obwohl es keinen direkten Export für ein anderes Format bereitstellt, generiert Atom-Rendering Datendateien aus Berichten.  
   
--   **Renderer mit weichem Seitenumbruch:** Renderer mit weichem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, beispielsweise auf einer Webseite. Die verfügbaren vorläufig Renderer mit weichem Seitenumbruch sind: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, Webarchiv (MHTML) und HTML.  
+-   **Renderer mit weichem Seitenumbruch:** Renderer mit weichem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für die Bildschirmanzeige und -bereitstellung optimiert, beispielsweise auf einer Webseite. Die folgenden Renderer mit weichem Seitenumbruch sind verfügbar: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, Webarchiv (MHTML) und HTML.  
   
--   **Renderer mit hartem Seitenumbruch:** Renderer mit hartem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert. Die verfügbaren schwer Renderer mit weichem Seitenumbruch werden unterstützt: TIFF und PDF.  
+-   **Renderer mit hartem Seitenumbruch:** Renderer mit hartem Seitenumbruch behalten das Berichtslayout und die Formatierung bei. Die mithilfe dieser Option erstellte Datei wird für einen konsistenten Druck oder für die Onlineanzeige in einem Buchformat optimiert. Die folgenden Renderer mit festem Seitenumbruch sind verfügbar: TIFF und PDF.  
   
  Wenn Sie einen Bericht im Berichts-Generator oder Berichts-Manager in der Vorschau anzeigen oder einen Bericht in Berichts-Manager ausführen, wird der Bericht immer zuerst in HTML gerendert. Nachdem Sie den Bericht ausgeführt haben, können Sie ihn in andere Dateiformate exportieren. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
@@ -100,7 +100,7 @@ ms.locfileid: "66105512"
   
 -   [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile &#40;Berichts-Generator und SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
--   [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
+-   [Sichtbarhalten von Kopfzeilen beim Durchführen eines Bildlaufs durch einen Bericht &#40;Berichts-Generator und SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
 -   [Anzeigen von Seitenzahlen oder anderen Berichtseigenschaften &#40;Berichts-Generator und SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
@@ -119,7 +119,7 @@ ms.locfileid: "66105512"
   
   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   

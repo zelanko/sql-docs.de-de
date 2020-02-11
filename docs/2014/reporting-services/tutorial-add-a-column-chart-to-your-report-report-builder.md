@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099127"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
   Ein Säulendiagramm zeigt eine Reihe als Satz vertikaler Balken an, die nach Kategorie gruppiert sind. Ein Säulendiagramm kann für folgende Zwecke verwendet werden:  
   
 -   Anzeigen von Datenänderungen über einen bestimmten Zeitraum  
@@ -30,12 +30,12 @@ ms.locfileid: "66099127"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a> Lernziele  
+##  <a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Diagramms mithilfe des Diagramm-Assistenten](#Chart)  
   
-2.  [Auswählen des Diagrammtyps](#ChartType)  
+2.  [Diagrammtyp auswählen](#ChartType)  
   
 3.  [Formatieren und Beschriften der horizontalen Achse](#Horizontal)  
   
@@ -47,20 +47,20 @@ ms.locfileid: "66099127"
   
 7.  [Hinzufügen eines gleitenden Durchschnitts](#Average)  
   
-8.  [Hinzufügen eines Berichtstitels](#Title)  
+8.  [Hinzufügen eines Berichts Titels](#Title)  
   
 9. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Im ersten Tutorial dieser Reihe erhalten Sie detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Auswählen einer Datenquelle sowie zum Erstellen eines Datasets: [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
+ Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a> 1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
- Von der **Einstieg** Dialogfeld verwenden des Diagramm-Assistenten erstellen Sie ein eingebettetes Dataset, wählen Sie eine freigegebene Datenquelle und erstellen Sie ein Säulendiagramm.  
+##  <a name="Chart"></a>1. Erstellen eines Diagramm Berichts mithilfe des Diagramm-Assistenten  
+ Verwenden Sie im Dialogfeld " **Getting Started** " den Diagramm-Assistenten, um ein eingebettetes DataSet zu erstellen, eine freigegebene Datenquelle auszuwählen und ein Säulendiagramm zu erstellen.  
   
 > [!NOTE]  
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
@@ -69,23 +69,23 @@ ms.locfileid: "66099127"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft SQL Server 2012 Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Das Dialogfeld **Erste Schritte** wird angezeigt.  
+     Das Dialogfeld " **Getting Started** " wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt wird, aus der **Berichts-Generator** , zeigen Sie auf **neu**.  
+    >  Wenn das Dialogfeld " **Getting Started** " nicht angezeigt wird, klicken Sie auf der Schaltfläche " **Berichts-Generator** " auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
 3.  Klicken Sie im rechten Bereich auf **Diagramm-Assistent**.  
   
-4.  Klicken Sie auf der Seite **Dataset auswählen**auf **Dataset erstellen**und anschließend auf **Weiter**.  
+4.  Klicken Sie auf der **Seite Dataset auswählen**auf **DataSet erstellen**, und klicken Sie dann auf **weiter**.  
   
 5.  Wählen Sie auf der Seite **Verbindung mit einer Datenquelle auswählen** eine vorhandene Datenquelle aus, oder navigieren Sie zum Berichtsserver, und wählen Sie eine Datenquelle aus. Klicken Sie anschließend auf **Weiter**. Möglicherweise müssen Benutzername und Kennwort eingegeben werden.  
   
     > [!NOTE]  
     >  Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
+6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
   
 7.  Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66099127"
   
 9. Klicken Sie auf **Weiter**.  
   
-##  <a name="ChartType"></a> 2. Auswählen des Diagrammtyps  
+##  <a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
  Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
   
 #### <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
@@ -125,7 +125,7 @@ ms.locfileid: "66099127"
   
 4.  Klicken Sie auf **Weiter**.  
   
-5.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Feld "Stile", eine Art.  
+5.  Wählen Sie auf der Seite Format **auswählen** im Feld Stile einen Stil aus.  
   
      Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart. Wenn Sie ein Format auswählen, wird im Vorschaubereich ein Beispiel für das Diagramm mit diesem Format angezeigt.  
   
@@ -137,24 +137,24 @@ ms.locfileid: "66099127"
   
 8.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Horizontal"></a> 3. Formatieren und Beschriften der horizontalen Achse  
+##  <a name="Horizontal"></a>3. Formatieren und beschriften der horizontalen Achse  
  Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>So formatieren Sie ein Datum auf der horizontalen Achse  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Mit der rechten Maustaste in der horizontalen Achse, und klicken Sie dann auf **Eigenschaften für horizontale Achsen**.  
+2.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse, und klicken Sie auf **Eigenschaften für horizontale Achsen**.  
   
-3.  Klicken Sie auf **Anzahl**.  
+3.  Klicken Sie auf **Number**.  
   
-4.  In **Kategorie**Option **Datum**.  
+4.  Wählen Sie unter **Kategorie**die Option **Datum**aus.  
   
 5.  Wählen Sie im Feld **Typ** die Option **31. Jan. 2000**aus.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Klicken Sie auf der Registerkarte „Stamm“ auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
+7.  Klicken Sie auf der Registerkarte Stamm auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
  Das Datum wird im ausgewählten Datumsformat angezeigt. Beachten Sie, dass im Diagramm nicht jede Kategorie auf der horizontalen Achse beschriftet ist. Standardmäßig werden nur Bezeichnungen aufgenommen, die neben die Achse passen.  
   
@@ -164,15 +164,15 @@ ms.locfileid: "66099127"
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Mit der rechten Maustaste in den Titel der horizontalen Achse, und klicken Sie dann auf **Achsentitel anzeigen** auf den Titel zu entfernen. Da auf der horizontalen Achse Datumsangaben angezeigt werden, wird der Titel nicht benötigt.  
+2.  Klicken Sie mit der rechten Maustaste auf den horizontalen Achsentitel, und klicken Sie dann auf **Achsentitel anzeigen** , um den Titel zu entfernen. Da auf der horizontalen Achse Datumsangaben angezeigt werden, wird der Titel nicht benötigt.  
   
-3.  Mit der rechten Maustaste in der horizontalen Achse, und klicken Sie dann auf **Eigenschaften für horizontale Achsen**.  
+3.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse und dann auf **Eigenschaften für horizontale Achsen**.  
   
-4.  In der **Achsenoptionen** Seite **Achsenbereich und-Intervall**, Typ **3** für **Intervall**. Im Diagramm wird jedes dritte Datum angezeigt.  
+4.  Geben Sie auf der Seite **Achsen Optionen** unter **Achsen Bereich und-Intervall**den Namen **3** für **Intervall**ein. Im Diagramm wird jedes dritte Datum angezeigt.  
   
 5.  Klicken Sie auf **Bezeichnungen**.  
   
-6.  In **Optionen für automatische Anpassung von achsenbezeichnungen ändern**Option **automatische Anpassung deaktivieren**.  
+6.  Wählen Sie unter **Optionen für automatische Anpassung der Achsen Bezeichnung ändern die Option** **Automatische Anpassung deaktivieren**aus.  
   
 7.  Wählen Sie in **Drehwinkel für Bezeichnungen**den Wert **-90**aus.  
   
@@ -184,36 +184,36 @@ ms.locfileid: "66099127"
   
  Im Diagramm werden die Bezeichnungen gedreht, und die Bezeichnung für jedes dritte Datum wird angezeigt.  
   
-##  <a name="Legend"></a> 4. Verschieben der Legende  
+##  <a name="Legend"></a>4. Verschieben der Legende  
  Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>So verschieben Sie die Legende unter den Diagrammbereich eines Säulendiagramms  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Mit der rechten Maustaste in der Legende des Diagramms, und klicken Sie dann auf **Legendeneigenschaften**.  
+2.  Klicken Sie mit der rechten Maustaste auf die Legende im Diagramm, und klicken Sie dann auf **Legenden Eigenschaften**.  
   
-3.  Für **Layout und Position**, wählen Sie eine andere Position. Legen Sie z. B. eine Position unten in der Mitte fest.  
+3.  Wählen Sie unter **Layout und Position**eine andere Position aus. Legen Sie z. B. eine Position unten in der Mitte fest.  
   
      Wenn Sie die Legende über oder unter einem Diagramm platzieren, ändert sich das Layout der Legende von vertikal zu horizontal. In der Dropdownliste **Layout** können Sie ein anderes Layout auswählen.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  (Optional) Da es nur eine Kategorie in diesem Lernprogramm gibt, wird die Legende nicht benötigt. Um die Legende zu entfernen, mit der rechten Maustaste in der Legende, und klicken Sie dann auf **Legende löschen**.  
+5.  (Optional) Da es nur eine Kategorie in diesem Lernprogramm gibt, wird die Legende nicht benötigt. Klicken Sie zum Entfernen der Legende mit der rechten Maustaste auf die Legende, und klicken Sie dann auf **Legende löschen**.  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="ChartTitle"></a> 5. Benennen des Diagramms  
+##  <a name="ChartTitle"></a>5. Titel des Diagramms  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>So ändern Sie den Diagrammtitel über dem Diagrammbereich  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Wählen Sie die Wörter **Diagrammtitel** am oberen Rand des Diagramms, und geben Sie dann den folgenden Text: **Store Sales Order Totals**.  
+2.  Markieren Sie am oberen Rand des Diagramms den Text **Diagramm Titel** , und geben Sie dann den folgenden Text ein: **Store Sales Order Total**.  
   
 3.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Vertical"></a> 6. Formatieren und Beschriften der vertikalen Achse  
+##  <a name="Vertical"></a>6. Formatieren und beschriften der vertikalen Achse  
  Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>So formatieren Sie die Zahlen auf der vertikalen Achse als Währung  
@@ -222,27 +222,27 @@ ms.locfileid: "66099127"
   
 2.  Doppelklicken Sie neben dem Diagramm auf die Bezeichnungen der vertikalen Achse, um sie auszuwählen.  
   
-3.  Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
+3.  Klicken Sie im Menüband auf der Registerkarte **Startseite** in der Gruppe **Zahl** auf die Schaltfläche **Währung** . Die Achsenbezeichnungen werden nun im Währungsformat dargestellt.  
   
-4.  Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Dezimalstelle löschen** Schaltfläche zweimal, damit die Zahl, die vollständigen Dollarbetrag gerundet wird.  
+4.  Klicken Sie im Menüband auf der Registerkarte **Startseite** in der Gruppe **Zahl** zweimal auf die Schaltfläche **Dezimalstellen verringern** , um die auf den nächstgelegenen Dollar gerundete Zahl anzuzeigen.  
   
-5.  Mit der rechten Maustaste in der vertikalen Achse, und klicken Sie auf **Eigenschaften für vertikale Achsen**.  
+5.  Klicken Sie mit der rechten Maustaste auf die vertikale Achse, und klicken Sie auf **Eigenschaften für vertikale**  
   
-6.  Klicken Sie auf **Anzahl**. Beachten Sie, dass **Währung** bereits ausgewählt ist, der **Kategorie** Feld und **Dezimalstellen** bereits **0** (null).  
+6.  Klicken Sie auf **Number**. Beachten Sie, dass im Feld **Kategorie** bereits die Option **Währung** ausgewählt und **Dezimalstellen** bereits **0** (null) ist.  
   
-7.  In der **Werte anzeigen in** auf **Tausende**.  
+7.  Klicken Sie im Feld **Werte anzeigen in** auf **tausende**.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Mit der rechten Maustaste in den Titel der vertikalen Achse auf der Seite des Diagramms, und klicken Sie auf **Achsentiteleigenschaften**.  
+9. Klicken Sie mit der rechten Maustaste auf den Titel der vertikalen Achse entlang der Seite des Diagramms, und klicken Sie auf **Achsentitel Eigenschaften**.  
   
-10. Ersetzen Sie den Text in die **Titeltext** Feld mit dem folgenden Text: **Gesamtumsatz (in Tausend)** . Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
+10. Ersetzen Sie den Text im **Textfeld Titel** durch den folgenden Text: **Sales Total (in Tausender)**. Darüber hinaus können Sie das gewünschte Format für den Titel festlegen.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Average"></a> 7. Hinzufügen eines gleitenden Durchschnitts  
+##  <a name="Average"></a>7. Hinzufügen eines gleitenden Durchschnitts  
   
 #### <a name="to-add-a-moving-average"></a>So fügen Sie einen gleitenden Durchschnitt hinzu  
   
@@ -250,15 +250,15 @@ ms.locfileid: "66099127"
   
 2.  Doppelklicken Sie auf das Diagramm, um den Bereich **Diagrammdaten** anzuzeigen.  
   
-3.  Mit der rechten Maustaste die **[SUM(Sales)"angezeigt]** Feld, das in der **Werte** Bereich, und klicken Sie dann auf **berechnete Reihe hinzufügen**.  
+3.  Klicken Sie mit der rechten Maustaste auf das Feld **[Sum (Sales)]** , das sich im Bereich **Werte** befindet, und klicken Sie dann auf **berechnete Reihe hinzufügen**.  
   
 4.  Überprüfen Sie in **Formel**, ob **Gleitender Durchschnitt** ausgewählt ist.  
   
 5.  Wählen Sie in **Formelparameter festlegen**für **Zeitraum**den Wert **4**aus.  
   
-6.  Klicken Sie auf **Rahmen**.  
+6.  Klicken Sie auf **Border**.  
   
-7.  In **Linienstärke**Option **3 pt**.  
+7.  Wählen Sie unter **Linienbreite**den Eintrag **3 pt liegen**aus.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099127"
   
  Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den Gesamtumsatz nach Datum darstellt – gemittelt über jeweils vier Datumsangaben.  
   
-##  <a name="Title"></a> 8. Hinzufügen eines Berichtstitels  
+##  <a name="Title"></a>8. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -274,23 +274,23 @@ ms.locfileid: "66099127"
   
 2.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-3.  Typ **Umsatzdiagramm**, drücken Sie die EINGABETASTE, und geben dann **Januar bis Dezember 2009**, sodass sie wie folgt aussieht:  
+3.  Geben Sie **Umsatz Diagramm**ein, drücken Sie die EINGABETASTE, und geben Sie dann **Januar bis Dezember 2009**ein, sodass Sie wie folgt aussieht:  
   
-     **Umsatzdiagramm**  
+     **Umsatz Diagramm**  
   
      **Januar bis Dezember 2009**  
   
-4.  Wählen Sie **Umsatzdiagramm**, und klicken Sie auf die **fett** Schaltfläche der **Schriftart** im Abschnitt der **Startseite** Registerkarte des Menübands.  
+4.  Wählen Sie **Umsatz Diagramm**aus, und klicken Sie im Abschnitt **Schriftart** auf der Registerkarte **Home** des Menübands auf die Schaltfläche **Fett** .  
   
-5.  Wählen Sie **Januar bis Dezember 2009**, und klicken Sie in der **Schriftart** im Abschnitt der **Startseite** Registerkarte, legen Sie den Schriftgrad auf **10**.  
+5.  Wählen Sie **Januar bis Dezember 2009**aus, und legen Sie auf der Registerkarte **Home** im Abschnitt **Schriftart** den Schrift Grad auf **10**fest.  
   
-6.  (Optional) Möglicherweise müssen Sie die **Titel** Textfeld vergrößern, um die beiden Textzeilen eingehen, indem Sie auf die Pfeile mit zwei Spitzen nach unten ziehen, wenn Sie in der Mitte am unteren Rand klicken.  
+6.  Optionale Möglicherweise müssen Sie das Textfeld **Titel** vergrößern, um die zwei Textzeilen aufnehmen zu können, indem Sie die Pfeile mit zwei Spitzen nach unten ziehen, wenn Sie in die Mitte des unteren Rands klicken.  
   
      Dieser Titel wird am Anfang des Berichts angezeigt. Ist keine Kopfzeile definiert, erfüllen die Elemente über dem Berichtshauptteil die Funktion einer Berichtskopfzeile.  
   
 7.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Save"></a> 9. Speichern des Berichts  
+##  <a name="Save"></a>9. Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
@@ -305,7 +305,7 @@ ms.locfileid: "66099127"
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben das Lernprogramm "Hinzufügen eines Säulendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

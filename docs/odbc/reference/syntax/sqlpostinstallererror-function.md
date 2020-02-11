@@ -1,5 +1,5 @@
 ---
-title: SQLPostInstallerError-Funktion | Microsoft-Dokumentation
+title: Sqlpostinstallererror-Funktion | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,18 +20,18 @@ ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68053670"
 ---
 # <a name="sqlpostinstallererror-function"></a>SQLPostInstallerError-Funktion
-**Übereinstimmung mit Standards**  
- Eingeführt in Version: ODBC 3.0  
+**Konformitäts**  
+ Eingeführte Version: ODBC 3,0  
   
  **Zusammenfassung**  
- **SQLPostInstallerError** bietet einen Mechanismus für eine Treiber oder das Konvertierungsprogramm Setup-Bibliothek, um Fehler in der **ConfigDriver**, **ConfigDSN**, und **ConfigTranslator**  Funktionen in die Fehlerwarteschlange Installer. Anwendungen verwenden diese API nicht. Sie verwenden **SQLInstallerError** um den Fehler abzurufen.  
+ **Sqlpostinstallererror** bietet einen Mechanismus für eine Treiber-oder Konvertierungs-Setup Bibliothek zum Melden von Fehlern für die Funktionen " **ConfigDriver**", " **ConfigDSN**" und " **ConfigTranslator** " in der Fehler Warteschlange des Installers. Diese API wird von Anwendungen nicht verwendet. Sie verwenden **sqlinstallererror** zum Abrufen des Fehlers.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,22 +43,22 @@ RETCODE SQLPostInstallerError(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *fErrorCode*  
- [Eingabe] Installer-Fehlercode.  
+ *"ferrorcode"*  
+ Der Installationsprogramm Fehlercode.  
   
  *szErrorMsg*  
- [Eingabe] Text der Fehlermeldung.  
+ Der Fehlermeldungs Text.  
   
-## <a name="returns"></a>Rückgabewert  
- SQL_SUCCESS oder SQL_ERROR zurück.  
+## <a name="returns"></a>Rückgabe  
+ SQL_SUCCESS oder SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnose  
- **SQLPostInstallerError** veröffentlichen Fehlerwerte nicht für sich selbst. Wenn der Fehler in die Fehlerwarteschlange Installer wurde erfolgreich gesendet wurde (abrufbar mithilfe **SQLInstallerError**), wird SQL_SUCCESS zurückgegeben. Wird SQL_ERROR zurückgegeben, wenn der Wert in der *DwErrorCode* Argument ist nicht der angegebene Installationsprogramm-Fehlercodes.  
+ **Sqlpostinstallererror** sendet keine Fehler Werte für sich selbst. Wenn der Fehler erfolgreich an die Fehler Warteschlange des Installers gesendet wurde (abgerufen mit **sqlinstallererror**), wird SQL_SUCCESS zurückgegeben. SQL_ERROR wird zurückgegeben, wenn der Wert im *dwErrorCode* -Argument keinem der angegebenen Installationsfehler Codes entspricht.  
   
 ## <a name="related-functions"></a>Verwandte Funktionen  
   
-|Informationen zu|Finden Sie unter|  
+|Informationen über|Finden Sie unter|  
 |---------------------------|---------|  
 |Hinzufügen, ändern oder Entfernen eines Treibers|[ConfigDriver](../../../odbc/reference/syntax/configdriver-function.md)|  
-|Hinzufügen, ändern oder Entfernen von Datenquellen|[ConfigDSN](../../../odbc/reference/syntax/configdsn-function.md)|  
-|Festlegen einer Übersetzungsoption|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|
+|Hinzufügen, ändern oder Entfernen von Datenquellen|[ConfigDSN ausgeführt werden](../../../odbc/reference/syntax/configdsn-function.md)|  
+|Festlegen einer Übersetzungs Option|[ConfigTranslator](../../../odbc/reference/syntax/configtranslator-function.md)|

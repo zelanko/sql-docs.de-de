@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66102592"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
@@ -32,7 +32,7 @@ ms.locfileid: "66102592"
   
 3.  Klicken Sie auf einen Berichtsnamen oder ein Symbol, um einen Bericht anzuzeigen. Das folgende Symbol zeigt einen Bericht an:  
   
-     ![Berichtsymbol](../media/hlp-16doc.gif "Report icon")  
+     ![Berichts Symbol](../media/hlp-16doc.gif "Bericht (Symbol)")  
   
      Für einige Berichte ist es erforderlich, dass Sie einen Benutzernamen und ein Kennwort oder einen Parameterwert angeben.  
   
@@ -40,9 +40,9 @@ ms.locfileid: "66102592"
   
      Das Schließen eines Berichts entfernt diesen nicht aus dem Browsercache. Sie müssen den Browser schließen, um die Verbindung zum Bericht zu trennen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../contents-page-report-manager.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

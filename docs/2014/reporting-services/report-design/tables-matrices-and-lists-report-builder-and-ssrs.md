@@ -36,10 +36,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff294adb9108156e08c1d0053d301c0f4cafb0fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104753"
 ---
 # <a name="tables-matrices-and-lists-report-builder-and-ssrs"></a>Tabellen, Matrizen und Listen (Berichts-Generator und SSRS)
@@ -53,9 +53,9 @@ ms.locfileid: "66104753"
   
  In den folgenden Bildern werden einfache Berichte mit einer Tabelle, Matrix oder Liste angezeigt.  
   
- ![RS_TabelleMatrixListe](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
+ ![RS_TableMatrixList](../media/rs-tablematrixlist.gif "RS_TableMatrixList")  
   
- Informationen zum schnellen Einstieg in die Arbeit mit Tabellen, Matrizen und Listen finden Sie unter [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-matrix-report-report-builder.md) und [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
+ Die folgenden Tutorials ermöglichen Ihnen einen schnellen Einstieg: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-basic-table-report-report-builder.md), [Tutorial: Erstellen eines Matrixberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-matrix-report-report-builder.md) und [Tutorial: Erstellen eines Freiformberichts &#40;Berichts-Generator&#41;](../tutorial-creating-a-free-form-report-report-builder.md).  
   
 > [!NOTE]  
 >  Sie können Tabellen, Matrizen und Listen getrennt von einem Bericht als Berichtsteile veröffentlichen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -63,10 +63,10 @@ ms.locfileid: "66104753"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Table"></a> Tabelle  
+##  <a name="Table"></a>Glaub  
  Mithilfe einer Tabelle können Sie Detaildaten anzeigen und/oder Daten in Zeilengruppen anordnen. Die Tabellenvorlage enthält drei Spalten mit einer Tabellenkopfzeile und einer Detailzeile für Daten. Die folgende Abbildung zeigt die ursprüngliche Tabellenvorlage für die Auswahl auf der Entwurfsoberfläche:  
   
- ![Markierte Tabellenvorlage auf Entwurfsoberfläche](../media/rs-tabletemplatenewselected.gif "Table template on design surface, selected")  
+ ![Tabellenvorlage auf Entwurfsoberfläche, markiert](../media/rs-tabletemplatenewselected.gif "Tabellenvorlage auf Entwurfsoberfläche, markiert")  
   
  Sie können Daten nach einzelnen Feldern, mehreren Feldern oder unter Verwendung eigener Ausdrücke gruppieren. Sie können geschachtelte Gruppen oder unabhängige, angrenzende Gruppen erstellen und aggregierte Werte für gruppierte Daten anzeigen oder Gruppen Gesamtergebnisse hinzufügen. Wenn die Tabelle beispielsweise eine Zeilengruppe mit dem Namen [Kategorie] enthält, können Sie ein Teilergebnis für jede Gruppe sowie ein Gesamtergebnis für den Bericht hinzufügen. Um die Darstellung der Tabelle zu verbessern und Daten hervorzuheben, die Sie herausstellen möchten, können Sie Zellen miteinander verbinden und Daten und Tabellenüberschriften formatieren.  
   
@@ -76,31 +76,31 @@ ms.locfileid: "66104753"
   
 
   
-##  <a name="Matrix"></a> Matrix  
+##  <a name="Matrix"></a>Ko  
  Mithilfe einer Matrix können Sie analog zu einer PivotTable oder einer Kreuztabelle Zusammenfassungen von aggregierten Daten in Zeilen- und Spaltengruppen anzeigen. Die Anzahl der Zeilen und Spalten für Gruppen wird von der Anzahl der eindeutigen Werte für die einzelnen Zeilen- und Spaltengruppen bestimmt. Die folgende Abbildung zeigt die ursprüngliche Matrixvorlage für die Auswahl auf der Entwurfsoberfläche:  
   
- ![Neue Matrix aus Toolbox hinzugefügt, markiert](../media/rs-matrixtemplatenewselected.gif "New Matrix added from Toolbox, selected")  
+ ![Neue Matrix aus Toolbox hinzugefügt, markiert](../media/rs-matrixtemplatenewselected.gif "Neue Matrix aus Toolbox hinzugefügt, markiert")  
   
- Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zelle sind die beiden Schnittmengen: „Kategorie und Gebiet“ und „Gebiet und Jahr“. Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
+ Sie können Daten nach mehreren Feldern oder Ausdrücken in Zeilen- und Spaltengruppen gruppieren. Wenn die Berichtsdaten und die Datenbereiche zur Laufzeit kombiniert werden, wächst eine Matrix horizontal und vertikal in dem Maß, in dem auf der Seite Spalten für Spaltengruppen und Zeilen für Zeilengruppen hinzugefügt werden. Die Matrixzellen zeigen aggregierte Werte für die Schnittmenge der Zeilen- und Spaltengruppen, zu denen die Zelle gehört. Wenn die Matrix beispielsweise eine Zeilengruppe (Kategorie) und zwei Spaltengruppen (Gebiet und Jahr) hat, aus denen die Summe der Verkäufe hervorgeht, zeigt der Bericht zwei Zellen mit den Summen der Verkäufe für jeden Wert in der Kategoriegruppe an. Der Bereich der Zellen der zwei Schnittmengen sind: Kategorie und Gebiet sowie Kategorie und Jahr. Die Matrix kann geschachtelte und angrenzende Gruppen enthalten. Geschachtelte Gruppen verfügen über eine Über-/Unterordnungsbeziehung, während angrenzende Gruppen gleichgestellt sind. Sie können Teilergebnisse für einzelne und alle Ebenen von geschachtelten Zeilen- und Spaltengruppen innerhalb der Matrix hinzufügen.  
   
  Um die Matrixdaten besser lesbar zu machen und die Daten hervorzuheben, die Sie herausstellen möchten, können Sie Zellen miteinander verbinden oder horizontal und vertikal teilen und Daten- und Gruppenüberschriften formatieren.  
   
  Sie können auch Drilldownschalter einfügen, mit denen die Detaildaten anfänglich ausgeblendet werden. Benutzer können dann auf die Schalter klicken, um nach Bedarf ausführlichere bzw. weniger Details anzuzeigen.  
   
- Weitere Informationen finden Sie unter [Matrizen &#40;Berichts-Generator und SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Matrices &#40;Berichts-Generator und SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="List"></a> Liste  
+##  <a name="List"></a>List  
  Erstellen Sie mithilfe einer Liste ein Freiformatlayout. Sie sind nicht auf ein Gitternetzlayout beschränkt, sondern können Felder in der Liste frei platzieren. Mit einer Liste können Sie ein Formular zum Anzeigen einer Vielzahl von Datasetfeldern entwerfen, oder Sie können die Liste als Container zum Anzeigen mehrerer Datenbereiche nebeneinander für gruppierte Daten verwenden. Beispielsweise können Sie eine Gruppe für eine Liste definieren, eine Tabelle, ein Diagramm oder ein Bild hinzufügen, oder Sie können Gruppenwerte in Tabellenform oder als Grafiken anzeigen, wie bei Angestellten- oder Patientendatensätzen.  
   
- ![Neue markierte Liste, die aus der Toolbox hinzugefügt wurde](../media/rs-listtemplatenewselected.gif "New List added from Toolbox, selected")  
+ ![Neue Liste aus Toolbox hinzugefügt, markiert](../media/rs-listtemplatenewselected.gif "Neue Liste aus Toolbox hinzugefügt, markiert")  
   
- Weitere Informationen finden Sie unter [listet &#40;Berichts-Generator und SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Listen &#40;Berichts-Generator und SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="PreparingData"></a> Vorbereiten der Daten  
+##  <a name="PreparingData"></a>Vorbereiten von Daten  
  In einem Tabellen-, Matrix- und Listendatenbereich werden Daten aus einem Dataset angezeigt. Sie können die Daten in der Abfrage vorbereiten, aus der die Daten für das Dataset abgerufen werden, oder indem Sie die Eigenschaften in der Tabelle, Matrix oder Liste festlegen.  
   
  Mit den Abfragesprachen wie z. B. [!INCLUDE[tsql](../../includes/tsql-md.md)], mit denen Sie die Daten für die Berichtsdatasets abrufen, können Sie die Daten vorbereiten. Wenden Sie dazu Filter an, um nur eine Teilmenge der Daten aufzunehmen, ersetzen Sie NULL-Werte oder Leerzeichen durch Konstanten, damit der Bericht lesbarer wird, und sortieren und gruppieren Sie die Daten.  
@@ -111,14 +111,14 @@ ms.locfileid: "66104753"
   
 
   
-##  <a name="BuildingConfiguringTableMatrixList"></a> Erstellen und Konfigurieren einer Tabelle, Matrix oder Liste  
+##  <a name="BuildingConfiguringTableMatrixList"></a>Aufbauen und Konfigurieren einer Tabelle, Matrix oder Liste  
  Wenn Sie dem Bericht Tabellen oder Matrizen hinzufügen, können Sie den Tabellen- und Matrix-Assistenten verwenden oder die Tabellen bzw. Matrizen aus den Vorlagen, die Berichts-Generator und Berichts-Designer bereitstellen, manuell erstellen. Listen werden manuell aus der Listenvorlage erstellt.  
   
  Der Assistent führt Sie durch die Schritte, damit Sie schnell eine Tabelle oder Matrix erstellen und konfigurieren können. Nachdem Sie den Assistenten abgeschlossen oder die Tablix-Datenbereiche von Grund auf neu erstellt haben, können Sie diese weiter konfigurieren und verfeinern. Mit den Dialogfeldern, die über die Kontextmenüs der Datenbereiche geöffnet werden können, können die am häufigsten verwendeten Eigenschaften für Seitenumbrüche, Wiederholbarkeit und Sichtbarkeit von Kopf- und Fußzeilen, Anzeigeoptionen, Filter und Sortierung einfach festgelegt werden. Der Tablix-Datenbereich verfügt jedoch außerdem über viele zusätzliche Eigenschaften, Sie nur im Eigenschaftenbereich des Berichts-Generators festlegen können. Wenn Sie z.B. eine Meldung anzeigen möchten, wenn das Dataset einer Tabelle, Matrix oder Liste leer ist, geben Sie den Meldungstext im Bereich „Eigenschaften“ der NoRowsMessage-Tablix-Eigenschaft an.  
   
 
   
-##  <a name="ChangingBetweenTablixTemplates"></a> Wechseln zwischen Tablix-Vorlagen  
+##  <a name="ChangingBetweenTablixTemplates"></a>Wechseln zwischen Tablix-Vorlagen  
  Sie sind nicht auf die anfänglich ausgewählte Tablix-Vorlage beschränkt. Sie können Ihren Tablix-Entwurf beim Hinzufügen von Gruppen, Gesamtwerten und Bezeichnungen ändern. Beispielsweise können Sie mit einer Tabelle beginnen und dann die Detailzeile löschen und Spaltengruppen hinzufügen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
  Sie können eine Tabelle, Matrix oder Liste weiterentwickeln, indem Sie eine beliebige Tablix-Funktion hinzufügen. Zu den Tablix-Funktionen gehört das Anzeigen von Detaildaten oder Aggregaten für gruppierte Daten in Zeilen und Spalten. Sie können geschachtelte Gruppen, unabhängige angrenzende Gruppen oder rekursive Gruppen erstellen. Gruppierte Daten können gefiltert und sortiert werden, und Sie können Gruppen mithilfe mehrerer Gruppenausdrücke in einer Gruppendefinition einfach kombinieren.  
@@ -130,7 +130,7 @@ ms.locfileid: "66104753"
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  In diesem Abschnitt werden Vorgehensweisen aufgeführt, die Ihnen Schritt für Schritt zeigen, wie Sie mit Tabellen, Matrizen und Listen in ihren Berichten arbeiten, wie Sie Daten in Zeilen und Spalten anzeigen, Spalten hinzuzufügen und löschen, Zellen zusammenführen und Teilergebnisse für Zeilen- und Spaltengruppen aufnehmen.  
   
--   [Hinzufügen einer Detailgruppe &#40;Berichts-Generator und SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
+-   [Hinzufügen einer Detail Gruppe &#40;Berichts-Generator und SSRS&#41;](add-a-details-group-report-builder-and-ssrs.md)  
   
 -   [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)  
   
@@ -144,15 +144,15 @@ ms.locfileid: "66104753"
   
 -   [Zusammenführen von Zellen in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](merge-cells-in-a-data-region-report-builder-and-ssrs.md)  
   
--   [Erstellen einer rekursiven Hierarchiegruppe &#40;Berichts-Generator und SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
+-   [Erstellen einer rekursiven Hierarchie Gruppe &#40;Berichts-Generator und SSRS&#41;](create-a-recursive-hierarchy-group-report-builder-and-ssrs.md)  
   
 -   [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)  
   
 -   [Anzeigen von Kopf- und Fußzeilen einer Gruppe &#40;Berichts-Generator und SSRS&#41;](display-headers-and-footers-with-a-group-report-builder-and-ssrs.md)  
   
--   [Erstellen von abgestuften Berichten &#40;Berichts-Generator und SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
+-   [Erstellen Sie einen abgestuften Bericht &#40;Berichts-Generator und SSRS&#41;](create-a-stepped-report-report-builder-and-ssrs.md)  
   
--   [Hinzufügen, Verschieben oder Löschen einer Tabelle, Matrix oder Liste &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
+-   [Hinzufügen, verschieben oder Löschen einer Tabelle, Matrix oder Liste &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs.md)  
   
 
   
@@ -165,10 +165,10 @@ ms.locfileid: "66104753"
  [Hinzufügen von Daten zu einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](adding-data-to-a-tablix-data-region-report-builder-and-ssrs.md)  
  Stellt ausführliche Informationen zum Hinzufügen von Detail- und Gruppendaten, zu Teilergebnissen und Gesamtbeträgen und zu den Bezeichnungen eines Tablix-Datenbereichs dar.  
   
- [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md)  
+ [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS)](controlling-the-tablix-data-region-display-on-a-report-page.md)  
  Beschreibt die Eigenschaften für einen Tablix-Datenbereich, die Sie modifizieren können, um die Darstellung eines Tablix-Datenbereichs bei der Anzeige des Datenbereichs in einem Bericht zu ändern.  
   
- [Steuern von Zeilen- und Spaltenüberschriften &#40;Berichts-Generator und SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
+ [Steuern von Zeilen-und Spaltenüberschriften &#40;Berichts-Generator und SSRS&#41;](controlling-row-and-column-headings-report-builder-and-ssrs.md)  
  Beschreibt, wie Sie die Zeilen- und Spaltenüberschriften steuern können, wenn eine Tabelle, eine Matrix oder ein Listendatenbereich horizontal oder vertikal mehrere Seiten umfasst.  
   
  [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md)  
@@ -179,7 +179,7 @@ ms.locfileid: "66104753"
   
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   

@@ -1,5 +1,5 @@
 ---
-title: dm_qn_subscriptions (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_qn_subscriptions (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,46 +19,46 @@ ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68061920"
 ---
-# <a name="query-notifications---sysdmqnsubscriptions"></a>Abfragebenachrichtigungen - dm_qn_subscriptions
+# <a name="query-notifications---sysdm_qn_subscriptions"></a>Abfrage Benachrichtigungen-sys. dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen zu den aktiven Abfragebenachrichtigungsabonnements auf dem Server zurück. Diese Sicht können Sie verwenden, um in der Serverdatenbank oder in einer angegebenen Datenbank eine Überprüfung auf aktive Abonnements vorzunehmen oder um auf eine Überprüfung auf einen angegebenen Serverprinzipal vorzunehmen.  
   
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|ID eines Abonnements.|  
+|**Name**|**int**|ID eines Abonnements.|  
 |**database_id**|**int**|ID der Datenbank, für die die Abfragebenachrichtigung ausgeführt wurde. In dieser Datenbank sind die mit diesem Abonnement verbundenen Informationen gespeichert.|  
 |**sid**|**varbinary(85)**|Sicherheits-ID des Serverprinzipals, der dieses Abonnement erstellt hat und besitzt.|  
 |**object_id**|**int**|ID der internen Tabelle, in der die Informationen zu Abonnementparametern gespeichert sind.|  
-|**created**|**datetime**|Datum und Uhrzeit des Zeitpunktes, an dem das Abonnement erstellt wurde.|  
-|**timeout**|**int**|Timeout für das Abonnement in Sekunden. Die Benachrichtigung wird ausgelöst, nachdem diese Zeit verstrichen ist.<br /><br /> Hinweis: Die tatsächliche Zeit der Auslösung kann größer als das angegebene Timeout sein. Wenn jedoch eine Änderung, die erklärt das Abonnement tritt nach dem angegebenen Timeout, aber bevor das Abonnement ausgelöst wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird sichergestellt, dass das Auslösen zu dem Zeitpunkt erfolgt, die die Änderung vorgenommen wurde.|  
-|**status**|**int**|Gibt den Status des Abonnements. Die Liste der Codes finden Sie in der Tabelle unter den Hinweisen.|  
+|**Schaff**|**datetime**|Datum und Uhrzeit des Zeitpunktes, an dem das Abonnement erstellt wurde.|  
+|**Zeit**|**int**|Timeout für das Abonnement in Sekunden. Die Benachrichtigung wird ausgelöst, nachdem diese Zeit verstrichen ist.<br /><br /> Hinweis: die tatsächliche Auslösezeit ist möglicherweise größer als das angegebene Timeout. Wenn jedoch eine Änderung, die das Abonnement für ungültig erklärt, nach dem angegebenen Timeout erfolgt, aber bevor das Abonnement ausgelöst wird, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt sicher, dass das auslösen zu dem Zeitpunkt erfolgt, an dem die Änderung vorgenommen wurde.|  
+|**Stands**|**int**|Gibt den Status des Abonnements an. Die Liste der Codes finden Sie in der Tabelle unter den Hinweisen.|  
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|Beschreibung|On|Typ|  
+|Von|To|Andererseits|type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|n:1|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|n:1|  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Der Statuscode 0 gibt einen nicht definierten Status an.  
   
  Die folgenden Statuscodes geben an, dass ein Abonnement aufgrund einer Änderung ausgelöst wurde:  
   
-|Code|Untergeordneter Status|Info|  
+|Code|Untergeordneter Status|Information|  
 |----------|------------------|----------|  
 |65798|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Abonnement wurde durch eine Einfügung ausgelöst.|  
 |65799|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Löschen|  
-|65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Update|  
+|65800|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Aktualisieren|  
 |65801|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Merge|  
-|65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle kürzen|  
+|65802|Abonnement wurde ausgelöst, da sich Daten geändert haben.|Tabelle abschneiden.|  
 |66048|Abonnement wurde ausgelöst, da das Timeout abgelaufen ist.|Nicht definierter Infomodus|  
 |66315|Abonnement wurde ausgelöst, da sich ein Objekt geändert hat.|Objekt oder Benutzer wurde gelöscht.|  
 |66316|Abonnement wurde ausgelöst, da sich ein Objekt geändert hat.|Objekt wurde geändert.|  
@@ -69,7 +69,7 @@ ms.locfileid: "68061920"
   
  Die folgenden Statuscodes geben an, dass ein Abonnement nicht erstellt wurde:  
   
-|Code|Untergeordneter Status|Info|  
+|Code|Untergeordneter Status|Information|  
 |----------|------------------|----------|  
 |132609|Abonnement konnte nicht erstellt werden, weil die Anweisung nicht unterstützt wird.|Abfrage ist zu komplex.|  
 |132610|Abonnement konnte nicht erstellt werden, weil die Anweisung nicht unterstützt wird.|Ungültige Anweisung für Abonnement.|  
@@ -80,7 +80,7 @@ ms.locfileid: "68061920"
   
  Die folgenden Statuscodes werden intern verwendet und als Check Kill- und Init-Modi klassifiziert:  
   
-|Code|Untergeordneter Status|Info|  
+|Code|Untergeordneter Status|Information|  
 |----------|------------------|----------|  
 |198656|Intern verwendet: Check Kill- und Init-Modus|Nicht definierter Infomodus|  
 |198928|Abonnement wurde zerstört.|Abonnement wurde ausgelöst, da eine Datenbank angefügt wurde.|  
@@ -130,9 +130,9 @@ WHERE it.internal_type_desc = 'QUERY_NOTIFICATION';
 GO  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Abfragen von Abfragebenachrichtigungen verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
+ [Abfrage Benachrichtigungen mit dynamischen Verwaltungs Sichten &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/92eb22d8-33f3-4c17-b32e-e23acdfbd8f4)   
  [KILL QUERY NOTIFICATION SUBSCRIPTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-query-notification-subscription-transact-sql.md)  
   
   

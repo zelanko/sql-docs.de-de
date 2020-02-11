@@ -1,5 +1,5 @@
 ---
-title: Upgradeoptionen für Volltextsuche | Microsoft-Dokumentation
+title: Upgradeoptionen für die voll Text Suche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,18 +14,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66095089"
 ---
 # <a name="full-text-search-upgrade-options"></a>Upgradeoptionen für die Volltextsuche
-  Verwenden Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten die Seite mit den Upgradeoptionen für die Volltextsuche, um die Upgradeoption für die Volltextsuche auszuwählen, die Sie für die zu aktualisierenden Datenbanken verwenden möchten.  
+  Verwenden Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten die Seite mit den Upgradeoptionen für die Volltextsuche, um die Upgradeoption für die Volltextsuche auszuwählen, die Sie für die zu aktualisierenden Datenbanken verwenden möchten.  
   
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. Jetzt ist ein Volltextkatalog ein logisches Konzept – ein virtuelles Objekt –, die auf eine Gruppe von Volltextindizes verweist. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe als Basistabelle &ndash; bzw. bei einer partitionierten Tabelle in der primären Dateigruppe &ndash; beibehalten.  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. Nun ist ein voll Text Katalog ein logisches Konzept, ein virtuelles Objekt, das auf eine Gruppe von Volltextindizes verweist. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe als Basistabelle &ndash; bzw. bei einer partitionierten Tabelle in der primären Dateigruppe &ndash; beibehalten.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Wenn Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, wählen Sie eine der folgenden Upgradeoptionen für die Volltextsuche aus.  
   
  **Importieren**  
@@ -38,7 +38,7 @@ ms.locfileid: "66095089"
   
  Informationen zu den Auswirkungen eines Imports von Volltextindizes finden Sie unter "Überlegungen beim Auswählen einer Volltextupgrade-Option" weiter unten in diesem Thema.  
   
- **Neu erstellen**  
+ **Umgebaut**  
  Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann sehr lange dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.  
   
  **Zurücksetzen**  
@@ -68,5 +68,5 @@ ms.locfileid: "66095089"
   
      Das Importieren bzw. das Neuerstellen während eines Upgrades belegt viele CPU-Ressourcen. Dies führt zu Verzögerungen beim Aktualisieren und Herstellen der Onlineverfügbarkeit des Rests der Serverinstanz. Wenn die schnellstmögliche Onlineverfügbarkeit der Serverinstanz wichtig und das manuelle Auffüllen nach dem Upgrade akzeptabel ist, eignet sich die Option **Zurücksetzen** .  
   
-## <a name="additional-resources"></a>Zusätzliche Ressourcen  
+## <a name="additional-resources"></a>Weitere Ressourcen  
   

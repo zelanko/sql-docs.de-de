@@ -1,5 +1,5 @@
 ---
-title: Ändern von gespeicherten Prozeduren nicht mehr unterstützte Volltextsuche-Eigenschaften verwenden | Microsoft-Dokumentation
+title: Ändern gespeicherter Prozeduren, die nicht mehr unterstützte Eigenschaften der voll Text Suche verwenden Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5204b27fb4745f8005a328dc62503f7db418387d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66093851"
 ---
 # <a name="modify-stored-procedures-that-use-discontinued-full-text-search-properties"></a>Ändern gespeicherter Prozeduren, die nicht mehr unterstützte Volltextsuche-Eigenschaften verwenden
@@ -26,12 +26,12 @@ ms.locfileid: "66093851"
 ## <a name="component"></a>Komponente  
  Volltextsuche  
   
-## <a name="description"></a>Beschreibung  
+## <a name="description"></a>BESCHREIBUNG  
  Die folgenden Eigenschaften und Einstellungen der Volltextsuche wurden entfernt.  
   
 -   **DataTimeout**  
   
--   **connecttimeout**  
+-   **ConnectTimeout**  
   
 -   **Clean_up**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66093851"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die gespeicherten Prozeduren, um diese Eigenschaften zu entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

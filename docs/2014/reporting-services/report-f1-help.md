@@ -1,5 +1,5 @@
 ---
-title: Melden Sie die F1-Hilfe | Microsoft-Dokumentation
+title: F1-Hilfe melden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e1da03094a3c01d3d0c3c7aab3a277be8ae83a6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104594"
 ---
 # <a name="report-f1-help"></a>Hilfe (F1) zu Berichten
@@ -25,7 +25,7 @@ ms.locfileid: "66104594"
   
  Um innerhalb des Dialogfelds **Berichtseigenschaften** auf diese Themen zuzugreifen, klicken Sie auf **Hilfe**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Berichte &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)  
   
   

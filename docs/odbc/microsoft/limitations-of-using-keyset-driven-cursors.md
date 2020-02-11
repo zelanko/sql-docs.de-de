@@ -1,5 +1,5 @@
 ---
-title: Einschränkungen bei der Verwendung keysetgesteuerter Cursor | Microsoft-Dokumentation
+title: Einschränkungen bei der Verwendung von keysetgesteuerten Cursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,19 +14,19 @@ ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0c35f900faf1a30788b3642af3fdd65d672951d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054121"
 ---
 # <a name="limitations-of-using-keyset-driven-cursors"></a>Einschränkungen der Verwendung keysetgesteuerter Cursor
 > [!IMPORTANT]  
->  Dieses Feature wird in einer zukünftigen Version von Windows entfernt werden. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den ODBC-Treiber, die von Oracle bereitgestellt.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden. Verwenden Sie stattdessen den von Oracle bereitgestellten ODBC-Treiber.  
   
- Sie müssen eine einzelne ROWID-Spalte, für der abgefragten Tabelle abrufen können. Ein keysetgesteuerter Cursor kann nicht verwendet werden, auf die Verknüpfungen, Abfragen oder Anweisungen mit DISTINCT, GROUP BY, UNION, INTERSECT oder MINUS-Klauseln.  
+ Sie müssen in der Lage sein, eine einzelne ROWID-Spalte für die abgefragte Tabelle abzurufen. Ein keysetgesteuerte Cursor kann nicht für Joins, Abfragen oder Anweisungen verwendet werden, die unterschiedliche Klauseln, Group by-, Union-, INTERSECT-oder minus-Klauseln enthalten.  
   
- Auch wenn Ihre Anwendung Tabellenaliase verwendet, funktioniert keysetgesteuerte Cursor nicht. vorwärts gerichtete oder statische Cursortypen sind erforderlich. Verwenden das Keyset Cursortyp mit Tabellenaliasnamen führt dazu, dass den folgenden Fehler: "[Microsoft] [ODBC-Treiber für Oracle] können keine keysetgesteuerten Cursors auf die Verknüpfung mit Union, intersect oder minus oder einem schreibgeschützten Resultset."  
+ Außerdem funktionieren keysetgesteuerte Cursor nicht, wenn die Anwendung Tabellen Aliase verwendet. vorwärts-oder statische Cursor Typen sind erforderlich. Die Verwendung des Keyset-Cursor Typs mit Tabellenaliasen führt zum folgenden Fehler: "[Microsoft] [ODBC Driver for Oracle] der keysetgesteuerte Cursor kann nicht bei Join, mit Union, INTERSECT oder minus oder im schreibgeschützten Resultset verwendet werden."  
   
 > [!NOTE]  
->  Aufgrund der Art und Weise, die der Treiber die SQL-Anweisung führt, die mit dem Oracle-Server gesendet wird, gibt der Oracle intern die folgende Fehlermeldung zurück: "ORA-00964: Tabelle Name nicht in der Liste."
+>  Aufgrund der Art und Weise, wie der Treiber die SQL-Anweisung verarbeitet, die an den Oracle-Server gesendet wird, gibt Oracle intern die folgende Fehlermeldung zurück: "Ora-00964: Tabellenname nicht in der Liste."

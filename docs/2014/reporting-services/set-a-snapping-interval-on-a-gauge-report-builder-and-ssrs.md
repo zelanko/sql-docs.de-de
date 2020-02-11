@@ -1,5 +1,5 @@
 ---
-title: Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft-Dokumentation
+title: Festlegen eines Richtungs Intervalls auf einem Messgerät (Berichts-Generator und SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e2a35e4d6fefb6830774ffd7b2c3bc13a5e097c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101364"
 ---
 # <a name="set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs"></a>Festlegen eines Ausrichtungsintervalls auf einem Messgerät (Berichts-Generator und SSRS)
@@ -30,15 +30,15 @@ ms.locfileid: "66101364"
 2.  Öffnen Sie den Bereich Eigenschaften.  
   
     > [!NOTE]  
-    >  Wenn Sie den Bereich "Eigenschaften" nicht angezeigt werden, klicken Sie auf die **Ansicht** Registerkarte, und wählen Sie dann die **Eigenschaften** Kontrollkästchen.  
+    >  Wenn der Bereich Eigenschaften nicht angezeigt wird, klicken Sie auf die Registerkarte **Ansicht** , und aktivieren Sie dann das Kontrollkästchen **Eigenschaften** .  
   
-3.  In der **Zeiger** -Eigenschaft, klicken Sie auf die Schaltfläche (…). Der Zeigerauflistungs-Editor wird geöffnet.  
+3.  Klicken Sie in der Eigenschaft **Zeiger** auf die Schaltfläche (...). Der Zeigerauflistungs-Editor wird geöffnet.  
   
-4.  Legen Sie die **SnappingEnabled** Eigenschaft `True`.  
+4.  Legen Sie die Eigenschaft **SnappingEnabled** auf `True`fest.  
   
-5.  Legen Sie die **SnappingInterval** auf einen Wert, der das ausrichtungsintervall fest. Der Zeiger wird am nächsten Rundungsvielfachen des angegebenen Werts ausgerichtet.  
+5.  Legen Sie das **SnappingInterval** auf einen Wert fest, der das Richtungs Intervall darstellt. Der Zeiger wird am nächsten Rundungsvielfachen des angegebenen Werts ausgerichtet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  

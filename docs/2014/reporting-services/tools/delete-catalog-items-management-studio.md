@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bacb9387a4026fbf6a41f0b5d9cdd0b77594da97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100387"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Katalogelemente löschen (Management Studio)
@@ -28,7 +28,7 @@ ms.locfileid: "66100387"
   
  Einen Löschvorgang können Sie nicht rückgängig machen. Wenn Sie ein bereits gelöschtes Element wiederherstellen möchten, müssen Sie dieses entweder erneut erstellen oder eine Sicherungskopie der Berichtsserver-Datenbank wiederherstellen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Name**  
  Gibt den Namen des Elements an, das Sie gerade löschen.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66100387"
  **Fehler**  
  Zeigt einen Fehlercode an, wenn beim Löschen eines Elements ein Fehler auftritt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Löschen eines Elements &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Berichtsserver im Management Studio (F1-Hilfe)](report-server-in-management-studio-f1-help.md)   
- [Erstellen, Ändern oder Löschen von Zeitplänen](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Create, Modify, and Delete Schedules (Erstellen, Ändern oder Löschen von Zeitplänen)](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

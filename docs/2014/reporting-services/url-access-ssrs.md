@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0cc753f16ca9b70523fe6cb858fd167ef044087b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66098730"
 ---
 # <a name="url-access-ssrs"></a>URL-Zugriff (SSRS)
@@ -58,14 +58,14 @@ reportpath
   
 ### <a name="syntax-description"></a>Syntaxbeschreibung  
  *rswebserviceurl*  
- Die Webdienst-URL des Berichtsservers. Im einheitlichen Modus ist dies die Webdienst-URL der in Konfigurations-Manager für Reporting Services konfigurierten Berichtsserverinstanz. Weitere Informationen finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Zum Beispiel:  
+ Die Webdienst-URL des Berichtsservers. Im einheitlichen Modus ist dies die Webdienst-URL der in Konfigurations-Manager für Reporting Services konfigurierten Berichtsserverinstanz. Weitere Informationen finden Sie unter [Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)](install-windows/configure-report-server-urls-ssrs-configuration-manager.md). Beispiel:  
   
 ```  
 http://myrshost/reportserver  
 https://machine.adventure-works.com/reportserver_MYNAMEDINSTANCE  
 ```  
   
- Im integrierten SharePoint-Modus entspricht sie der URL des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Proxys auf einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website. Zum Beispiel:  
+ Im integrierten SharePoint-Modus entspricht sie der URL des [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Proxys auf einer in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]integrierten SharePoint-Website. Beispiel:  
   
 ```  
 http://myspsite/subsite/_vti_bin/reportserver  
@@ -77,13 +77,13 @@ http://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Der relative Pfadname des Elements in der Berichtsserver-Datenbank im einheitlichen Modus oder die vollqualifizierte URL des Elements in einem SharePoint-Katalog.  
   
- Der Pfad des Katalogelements. Im einheitlichen Modus ist dies der relative Pfad des Elements in der Berichtsserver-Datenbank, der mit einem Schrägstrich (`/`) beginnt. Zum Beispiel:  
+ Der Pfad des Katalogelements. Im einheitlichen Modus ist dies der relative Pfad des Elements in der Berichtsserver-Datenbank, der mit einem Schrägstrich (`/`) beginnt. Beispiel:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  
 ```  
   
- Im integrierten SharePoint-Modus ist dies die vollqualifizierte URL des Elements in der SharePoint-Bibliothek, einschließlich der Elementerweiterung. Zum Beispiel:  
+ Im integrierten SharePoint-Modus ist dies die vollqualifizierte URL des Elements in der SharePoint-Bibliothek, einschließlich der Elementerweiterung. Beispiel:  
   
 ```  
 http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl  
@@ -104,23 +104,23 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
  *value*  
  URL-Text, der dem Wert des Parameters entspricht, der verwendet wird.  
   
- **Hinweis**: Eine Liste der verfügbaren URL-Zugriffsparameter, finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md). Beispiele für die Übergabe von Berichtsparametern mit der URL finden Sie unter [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
+ **Hinweis:** Eine Liste der verfügbaren URL-Zugriffsparameter finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md). Beispiele für die Übergabe von Berichtsparametern mit der URL finden Sie unter [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibungen|Links|  
 |-----------------------|-----------|  
-|Zugreifen auf Berichtserverelemente, z. B. Berichte, freigegebene Datenquellen und Ressourcen|[Zugreifen auf Berichtsserverelemente über den URL-Zugriff](access-report-server-items-using-url-access.md)|  
-|Übergeben von Berichtsparametern an einen Bericht|[Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)|  
-|Festlegen des Gebietsschemas der Berichtsparameter in der URL-Zugriffszeichenfolge, durch die die gebietsschemaspezifische Interpretation von Datumsangaben, Währungen usw. festgelegt wird|[Festlegen der Sprache für Berichtsparameter in einer URL](set-the-language-for-report-parameters-in-a-url.md)|  
-|Senden spezifischer Einstellungen für Renderingerweiterungen, durch die das Rendern des Berichts angepasst wird|[Angeben von Geräteinformationseinstellungen in einer URL](specify-device-information-settings-in-a-url.md)|  
-|Direktes Exportieren eines Berichts in ein Dateiformat, ohne ihn im Browser anzuzeigen|[Exportieren von Berichten über URL-Zugriff](export-a-report-using-url-access.md)|  
-|Öffnen eines Berichts und direktes Navigieren zur Position einer Zeichenfolge|[Suchen eines Berichts mithilfe von URL-Zugriff](search-a-report-using-url-access.md)|  
-|Rendern einer bestimmten Berichtsverlaufs-Momentaufnahme|[Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff](render-a-report-history-snapshot-using-url-access.md)|  
+|Zugreifen auf Berichtserverelemente, z. B. Berichte, freigegebene Datenquellen und Ressourcen|[Access Report Server Items Using URL Access (Zugreifen auf Berichtsserverelemente über den URL-Zugriff)](access-report-server-items-using-url-access.md)|  
+|Übergeben von Berichtsparametern an einen Bericht|[Pass a Report Parameter Within a URL (Übergeben von Berichtsparametern innerhalb einer URL)](pass-a-report-parameter-within-a-url.md)|  
+|Festlegen des Gebietsschemas der Berichtsparameter in der URL-Zugriffszeichenfolge, durch die die gebietsschemaspezifische Interpretation von Datumsangaben, Währungen usw. festgelegt wird|[Set the Language for Report Parameters in a URL (Festlegen der Sprache für Berichtsparameter in einer URL)](set-the-language-for-report-parameters-in-a-url.md)|  
+|Senden spezifischer Einstellungen für Renderingerweiterungen, durch die das Rendern des Berichts angepasst wird|[Specify Device Information Settings in a URL (Angeben von Geräteinformationseinstellungen in einer URL)](specify-device-information-settings-in-a-url.md)|  
+|Direktes Exportieren eines Berichts in ein Dateiformat, ohne ihn im Browser anzuzeigen|[Export a Report Using URL Access (Exportieren von Berichten über URL-Zugriff)](export-a-report-using-url-access.md)|  
+|Öffnen eines Berichts und direktes Navigieren zur Position einer Zeichenfolge|[Search a Report Using URL Access (Suchen eines Berichts mithilfe von URL-Zugriff)](search-a-report-using-url-access.md)|  
+|Rendern einer bestimmten Berichtsverlaufs-Momentaufnahme|[Render a Report History Snapshot Using URL Access (Rendern von Berichtsverlaufs-Momentaufnahmen mit URL-Zugriff)](render-a-report-history-snapshot-using-url-access.md)|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   
- [URL-Zugriffsparameterreferenz](url-access-parameter-reference.md)   
+ [URL-Zugriffsparameterverweis](url-access-parameter-reference.md)   
  [Integrieren von Reporting Services mit URL-Zugriff](application-integration/integrating-reporting-services-using-url-access.md)   
  [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   

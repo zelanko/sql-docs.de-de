@@ -1,5 +1,5 @@
 ---
-title: lower-case-Funktion (XQuery) | Microsoft-Dokumentation
+title: Lower-case-Funktion (XQuery) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -16,16 +16,16 @@ ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a80d869afe67317476a1d68c28afa5456a4a7366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68077659"
 ---
 # <a name="functions-on-string-values---lower-case"></a>Funktionen für Zeichenfolgenwerte – lower-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Die lower-case-Funktion konvertiert jedes Zeichen in *$arg* auf entsprechende kleingeschriebene Variante. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Kleinbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard zum Zuordnen von Codepunkten.  
+  Die Kleinbuchstaben-Funktion konvertiert jedes Zeichen in *$arg* in den entsprechenden Kleinbuchstaben. Die binäre Konvertierung der Groß-/Kleinschreibung für Unicode-Codepunkte von Microsoft Windows gibt an, wie Zeichen in Kleinbuchstaben konvertiert werden. Dieser Standard unterscheidet sich vom Unicode-Standard zum Zuordnen von Codepunkten.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,13 +41,13 @@ fn:lower-case($arg as xs:string?) as xs:string
 |Begriff|Definition|  
 |*$arg*|Der Zeichenfolgenwert, der in Kleinbuchstaben konvertiert werden soll.|  
   
-## <a name="remarks"></a>Hinweise  
- Wenn der Wert des *$arg* ist leer, wird eine leere Zeichenfolge zurückgegeben.  
+## <a name="remarks"></a>Bemerkungen  
+ Wenn der Wert *$arg* leer ist, wird eine Zeichenfolge der Länge 0 (null) zurückgegeben.  
   
 ## <a name="examples"></a>Beispiele  
   
 ### <a name="a-changing-a-string-to-upper-case"></a>A. Ändern einer Zeichenfolge in Großbuchstaben  
- Im folgenden Beispiel wird die Eingabezeichenfolge ' AbcDEF! @4"in Kleinbuchstaben.  
+ Im folgenden Beispiel wird die Eingabe Zeichenfolge ' abcdef! @4"in Kleinschreibung.  
   
 ```  
 DECLARE @x xml = N'abcDEF!@4';  
@@ -58,7 +58,7 @@ SELECT @x.value('fn:lower-case(/text()[1])', 'nvarchar(10)');
   
  `abcdef!@4`  
   
-### <a name="b-search-for-a-specific-character-string"></a>B. Suchen Sie nach einer bestimmten Zeichenfolge  
+### <a name="b-search-for-a-specific-character-string"></a>B. Suchen nach einer bestimmten Zeichenfolge  
  In diesem Beispiel wird gezeigt, wie die lower-case-Funktion in einer Suche verwendet werden kann, bei der nicht zwischen Groß- und Kleinschreibung unterschieden werden soll.  
   
 ```  
@@ -122,7 +122,7 @@ where CatalogDescription.exist('
   
  `</Prod>`  
   
-## <a name="see-also"></a>Siehe auch  
- [XQuery Functions against the xml Data Type (XQuery-Funktionen für den xml-Datentyp)](../xquery/xquery-functions-against-the-xml-data-type.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [XQuery-Funktionen für den xml-Datentyp](../xquery/xquery-functions-against-the-xml-data-type.md)  
   
   

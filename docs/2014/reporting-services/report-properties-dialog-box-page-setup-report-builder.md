@@ -1,5 +1,5 @@
 ---
-title: Dialogfeld "Eigenschaften", "Seite einrichten (Berichts-Generator) melden | Microsoft-Dokumentation
+title: Dialog Feld "Berichts Eigenschaften", "Seite einrichten" (Berichts-Generator) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66104366"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Berichtseigenschaften (Dialogfeld), Seite einrichten (Berichts-Generator)
-  Wählen Sie **Seiteneinrichtung** auf die **Berichtseigenschaften**, im Dialogfeld, um Seitenoptionen für den gesamten Bericht festzulegen.  
+  Wählen Sie im Dialogfeld **Berichts Eigenschaften**die Option **Seite einrichten** , um Seiten Optionen für den gesamten Bericht festzulegen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Zoll**  
  Gibt das Seitenformat in Zoll an. Standardmäßig wird durch die Gebietsschemaeinstellungen bestimmt, welche Seiteneinheit ausgewählt ist.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66104366"
  **Hochformat**  
  Gibt die Seitenausrichtung des Berichts an. Im Hochformat ist die vertikale Kante der Seite länger als die horizontale Kante.  
   
- **Querformat**  
+ **Landschaf**  
  Gibt die Seitenausrichtung des Berichts an. Im Querformat ist die horizontale Kante der Seite länger als die vertikale Kante.  
   
  **Papierformat**  
@@ -44,22 +44,22 @@ ms.locfileid: "66104366"
  **Height**  
  Zeigt die Höhe des in der Liste **Papiertyp** ausgewählten Papierformats an.  
   
- **Top**  
+ **Nach oben**  
  Legt den Abstand zwischen dem oberen Rand des Berichts und dem oberen Rand der ersten Zeile des Berichts fest.  
   
- **Bottom**  
+ **Unten**  
  Legt den Abstand zwischen dem unteren Rand des Berichts und dem unteren Rand der letzten Zeile des Berichts fest.  
   
- **Links**  
+ **Linken**  
  Legt den Abstand zwischen dem linken Rand des Berichts und dem linken Rand der Berichtszeilen fest.  
   
  **Richting**  
  Legt den Abstand zwischen dem rechten Rand des Berichts und dem rechten Rand der Berichtszeilen fest.  
   
-## <a name="see-also"></a>Siehe auch  
- [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Melden Sie im Dialogfeld Eigenschaften von Code &#40;Berichts-Generator&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
- [Im Dialogfeld Eigenschaften von Berichtseigenschaften Verweise &#40;Berichts-Generator&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
+ [Berichts Eigenschaften (Dialog Feld), Code &#40;Berichts-Generator&#41;](../../2014/reporting-services/report-properties-dialog-box-code-report-builder.md)   
+ [Berichts Eigenschaften (Dialog Feld), Verweise &#40;Berichts-Generator&#41;](../../2014/reporting-services/report-properties-dialog-box-references-report-builder.md)  
   
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103141"
 ---
 # <a name="verifying-a-report-run"></a>Überprüfen einer Berichtsausführung
@@ -40,11 +40,11 @@ ms.locfileid: "66103141"
   
 |Berichtstyp|Datum und Uhrzeit ist hier zu finden|Vorgehensweise zum Anzeigen der Informationen|  
 |-----------------------------|-----------------------------------------------|-----------------------------------------------|  
-|Ein Bericht, der als Berichtsmomentaufnahme ausgeführt wird.|Auf der Seite Inhalt. Weitere Informationen finden Sie unter [Inhalt (Seite) (Berichts-Manager)](../contents-page-report-manager.md).|1) Suchen Sie den Ordner, in dem der Bericht gespeichert ist.<br />2) Wählen Sie für den Ordner die Sicht „Details“ aus.<br />(3) 3) Notieren Sie sich das Datum und die Uhrzeit in der **Ausführungszeitpunkt** Spalte.|  
+|Ein Bericht, der als Berichtsmomentaufnahme ausgeführt wird.|Auf der Seite Inhalt. Weitere Informationen finden Sie unter [Inhalt (Seite) (Berichts-Manager)](../contents-page-report-manager.md).|1) Suchen Sie den Ordner, in dem der Bericht gespeichert ist.<br />2) Wählen Sie für den Ordner die Sicht „Details“ aus.<br />3) 3) notieren Sie sich das Datum und die Uhrzeit in der Spalte **beim Ausführen** .|  
 |Eine Momentaufnahme im Berichtsverlauf.|Auf der Eigenschaftenseite Verlauf. Weitere Informationen finden Sie unter [Momentaufnahmeoptionen (Eigenschaftenseite) (Berichts-Manager)](../snapshot-options-properties-page-report-manager.md).|1) Öffnen Sie den Bericht.<br />2) Klicken Sie auf die Seite **Eigenschaften** .<br />3) Klicken Sie auf die Registerkarte **Verlauf** .<br />4) Notieren Sie sich das Datum und die Uhrzeit in der Spalte **Wann ausgeführt** .|  
 |Ein zwischengespeicherter Bericht.|Im Zeitplan, der zum Erstellen und Aktualisieren des zwischengespeicherten Berichts verwendet wird.|1) Öffnen Sie den Bericht.<br />2) Klicken Sie auf die Seite **Eigenschaften** .<br />3) Klicken Sie auf die Registerkarte **Ausführung** .<br />4) Öffnen Sie den Zeitplan.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
  [Berichts-Manager (einheitlicher SSRS-Modus)](../report-manager-ssrs-native-mode.md)  

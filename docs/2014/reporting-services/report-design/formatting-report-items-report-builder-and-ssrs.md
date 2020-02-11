@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105790"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)
   Durch Formatieren der Elemente in einem Bericht lässt sich das Aussehen und die Lesbarkeit des Berichts deutlich verbessern. Die Textfelder und individuellen Elemente in Textfeldern, Bilder, Ausdrücke und Daten können im Berichtsentwurfsmodus formatiert werden.  
   
- ![Rs_FormatierungvonBerichtselementen](../media/rs-formattingreporttitems.gif "Rs_FormattingReporttItems")  
+ ![rs_FormattingReporttItems](../media/rs-formattingreporttitems.gif "rs_FormattingReporttItems")  
   
  A. Textfeld mit einem doppellinigen Rahmen und unterschiedlichen Formatvorlagen, einschließlich eines Links  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66105790"
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Beschreibt die Verwendung der standardmäßigen und benutzerdefinierten Formatierungszeichenfolgen, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt werden.  
   
- [Formatieren von Linien, Farben und Bildern &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
+ [Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)](images-report-builder-and-ssrs.md)  
  Beschreibt, wie Sie innerhalb von Berichtselementen und Datenbereichen Zeilen, Gitternetzlinien, Farben und Bilder formatieren.  
   
- [Festlegen des Gebietsschemas für einen Bericht oder ein Textfeld &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Festlegen des Gebiets Schemas für einen Bericht oder ein Textfeld &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Beschreibt, wie die Einstellung für Datenanzeigeformate geändert wird, die sich durch Sprache und Bereich unterscheiden, z. B. Datum, Währungs- und Zahlenwerte.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
   
   

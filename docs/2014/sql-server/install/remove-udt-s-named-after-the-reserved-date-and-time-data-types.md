@@ -1,5 +1,5 @@
 ---
-title: Entfernen Sie UDTS,&#39;s mit dem Namen nach den reservierten Datentypen für Datum und Uhrzeit | Microsoft-Dokumentation
+title: Entfernen Sie UDT-&#39;s, die nach den reservierten Datums-und Uhrzeit Datentypen benannt sind. Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9692bcc5b3c7685e247730b0f203d273f585f1de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092991"
 ---
-# <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>Entfernen Sie UDTS,&#39;s, die nach den reservierten Datum und Uhrzeit-Datentypen benannt sind
+# <a name="remove-udt39s-named-after-the-reserved-date-and-time-data-types"></a>UDT-&#39;s entfernen, die nach den reservierten Datums-und Uhrzeit Datentypen benannt sind
   Der Upgrade Advisor hat einen benutzerdefinierten Typ (UDT, User-Defined Type) erkannt, der nach einem Ausdruck benannt ist, der entweder für den `date`-Datentyp oder den `time`-Datentyp reserviert ist.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>BESCHREIBUNG  
  Die Ausdrücke, die für Datentypen verwendet werden, sollten nicht als Namen für die Common Language Runtime (CLR) oder Alias-UDTs genutzt werden.  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  

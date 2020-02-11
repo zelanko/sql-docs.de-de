@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc3cd0e7213426568a415e8b5f1b28475f0177e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105761"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Formatieren von Text und Platzhaltern (Berichts-Generator und SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66105761"
   
  Schriftart, Größe, Farbe und Effekte tragen jeweils zur Lesbarkeit eines Berichts bei. Auf Text in einem Textfeld oder in einem Datenbereich können Formate wie Schrift, Schriftart, Schriftgrad und Effekte wie Unterstreichung angewendet werden. Standardmäßig wird die Schriftart Arial mit dem Schriftgrad 10 Punkte in schwarz als Berichtsschriftart verwendet. In den Dialogfeldern **Textfeldeigenschaften** und **Texteigenschaften** können Sie angeben, wie der Text beim Rendern des Berichts dargestellt werden soll.  
   
- ![rs_GemischtesFormatText](../media/rs-mixedformattext.gif "rs_MixedFormatText")  
+ ![rs_MixedFormatText](../media/rs-mixedformattext.gif "rs_MixedFormatText")  
   
  In dieser Abbildung verfügt das Textfeld selbst über einen Rahmen, und der gesamte Text befindet sich im gleichen Textfeld, weist aber unterschiedliche Formatierungen auf.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66105761"
 ## <a name="formatting-placeholders-and-static-text-in-a-text-box"></a>Formatieren von Platzhaltern und statischem Text in einem Textfeld  
  Platzhalter können mithilfe des Dialogfelds **Platzhaltereigenschaften** formatiert werden. Platzhalter können nur als Ganzes formatiert werden. Wenn Sie den zugrunde liegenden Ausdruck anzeigen möchten, können Sie den Mauszeiger über den Platzhalter bewegen. Sie können den zugrunde liegenden Ausdruck ändern, indem Sie auf den Platzhalter doppelklicken oder mit der rechten Maustaste auf den Platzhalter und anschließend auf **Platzhaltereigenschaften**klicken. Im Dialogfeld **Platzhaltereigenschaften** können Sie mit der Eigenschaft **Bezeichnung** unter **Allgemein** auch eine Bezeichnung für die Benutzeroberfläche angeben. Dieser Text wird zur Entwurfszeit für den Platzhalter angezeigt.  
   
- ![rs_GemischterTextuPlatzhalter](../media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
+ ![rs_MixedTextnPlaceholder](../media/rs-mixedtextnplaceholder.gif "rs_MixedTextnPlaceholder")  
   
  In dieser Abbildung enthält ein Textfeld in einer Liste eine Bezeichnung mit Fettformatierung und einen Platzhalter ohne Formatierung.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "66105761"
 ## <a name="aligning-horizontal-text-using-general"></a>Horizontales Ausrichten von Text  
  Im Dialogfeld **Textfeldeigenschaften** können Sie auf der Registerkarte **Ausrichtung** angeben, wie der Text horizontal ausgerichtet werden soll. Wenn Sie keinen Wert für die Ausrichtung angeben, wird der Standardwert **Standard**verwendet. Dies bedeutet, dass der Text auf Grundlage den Feldtyp für den Platzhalterwert ausgerichtet wird. Wenn Sie einen Ausdruck angeben, der nicht zu einem Zeichenfolgenwert ausgewertet wird (d. h. keine Zahl), wird der Text rechtsbündig ausgerichtet. Wird der Ausdruck zu einem Zeichenfolgenwert ausgewertet (z. B. eine Zahl), wird der Text linksbündig ausgerichtet.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Skalen auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   
- [Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
- [Exporting to Microsoft Excel &#40;Report Builder and SSRS&#41; (Exportieren nach Microsoft Excel (Berichts-Generator und SSRS))](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
+ [Platzhalter Eigenschaften (Dialog Feld), allgemein &#40;Berichts-Generator und SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Exportieren nach Microsoft Excel &#40;Berichts-Generator und SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md)   
  [Textfelder &#40;Berichts-Generator und SSRS&#41;](text-boxes-report-builder-and-ssrs.md)  
   
   

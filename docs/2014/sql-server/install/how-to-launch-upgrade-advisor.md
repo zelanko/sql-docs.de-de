@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Starten des Upgrade Advisors | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Starten des Upgrade Advisors | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,22 +16,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094908"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Gewusst wie: Starten des Upgrade Advisors
+# <a name="how-to-launch-upgrade-advisor"></a>Vorgehensweise: Starten des Upgrade Advisors
   Upgrade Advisor stellt eine zentrale Konsole bereit, von der aus Sie den Analyse-Assistenten von Upgrade Advisor und den Berichts-Viewer von Upgrade Advisor starten können. In diesem Thema wird beschrieben, wie der Upgrade Advisor gestartet wird.  
   
 ### <a name="to-launch-upgrade-advisor"></a>So starten Sie den Upgrade Advisor  
   
--   Klicken Sie zum Starten des Upgrade Advisor auf **starten**, klicken Sie auf **Programme**, klicken Sie auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , und klicken Sie dann auf **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
+-   Um den Upgrade Advisor zu starten, klicken Sie auf **Start**, klicken **[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** Sie auf **Alle Programme**, und klicken Sie dann auf ** [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Ausführen von Upgrade Advisor &#40;-Benutzeroberfläche&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
- [Upgrade Advisor: Themen zur Vorgehensweise](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Ausführen des Upgrade Advisors &#40;Benutzeroberfläche&#41;](../../../2014/sql-server/install/running-upgrade-advisor-user-interface.md)   
+ [Gewusst-wie-Themen zum Upgrade Advisor](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)   
  [Arbeiten mit dem Upgrade Advisor](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Beispiele URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS) | Microsoft-Dokumentation
+title: URL-Beispiele für veröffentlichte Berichts Elemente auf einem Berichts Server im SharePoint-Modus (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099450"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)
@@ -31,9 +31,9 @@ ms.locfileid: "66099450"
   
  Die folgenden Elemente der Webhierarchie können zum Zugreifen auf und Sichern von Berichtsserverinhalten verwendet werden. Andere Objekte wie Listen und Seiten werden für den Zugriff auf Berichtsserverinhalte nicht verwendet und daher in der folgenden Tabelle nicht beschrieben.  
   
-|Objekt|Description|  
+|Object|BESCHREIBUNG|  
 |------------|-----------------|  
-|SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. http: */Servername*) und kann mehrere Websites enthalten.|  
+|SharePoint-Webanwendung|Eine SharePoint-Webanwendung kann als eigenständiger Server oder als Teil einer Farm installiert werden, die eine Auflistung von virtuellen Servern enthält. Eine Webanwendung besitzt eine URL (z.B. http:*/Servername*) und kann mehrere Websites enthalten.|  
 |Website|Bei einer Website handelt es sich entweder um eine übergeordnete Website für eine Webanwendung oder um eine Unterwebsite.|  
 |SharePoint-Bibliothek|Eine Bibliothek enthält Dokumente oder Ordner. Eine Bibliothek bzw. ein Ordner in einer Bibliothek stellt das einzige Websiteobjekt dar, in dem Berichte, Berichtsmodelle, freigegebene Datenquellen und externe Bilder gespeichert werden können.|  
 |Element|Berichtsserverelemente, auf die Sie in einer URL verweisen können, enthalten eine Berichtsdefinition für einen Bericht oder Unterbericht, ein Berichtsmodell, eine freigegebene Datenquelle oder ein externes Bild.|  
@@ -44,14 +44,14 @@ ms.locfileid: "66099450"
 ### <a name="url-for-a-sharepoint-server"></a>URL für einen SharePoint-Server  
  Wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ein Berichtsserver- oder Berichtsmodellprojekt für den Berichtsserver bereitstellen, müssen Sie eine URL für den SharePoint-Server verwenden.  
   
- Öffnen Sie zum Suchen des zu verwendenden Servernamens einen Browser, und suchen Sie die SharePoint-Bibliothek, in der Sie einen Bericht veröffentlichen möchten. Der Servername wird unmittelbar nach dem Protokollpräfix angezeigt, z.B. http: *//Servername*.  
+ Öffnen Sie zum Suchen des zu verwendenden Servernamens einen Browser, und suchen Sie die SharePoint-Bibliothek, in der Sie einen Bericht veröffentlichen möchten. Der Servername wird unmittelbar nach dem Protokollpräfix angezeigt, z.B. http:*//Servername*.  
   
- Die Verwendung des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Proxyendpunkts wird nicht unterstützt. Ein Proxyendpunkt enthält eine Portnummer, z.B. http: *//Servername:8080/reportserver*.  
+ Die Verwendung des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL-Proxyendpunkts wird nicht unterstützt. Ein Proxyendpunkt enthält eine Portnummer, z.B. http:*//Servername:8080/reportserver*.  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL für eine SharePoint-Serverwebsite oder -Unterwebsite  
  Wenn Sie einen Bericht oder eine Berichtsdatenquelle bereitstellen, müssen Sie eine URL zu einer SharePoint-Website und ggf. -Unterwebsite verwenden. In der URL wird der Name der Website unmittelbar nach dem Servernamen angezeigt, z.B. http://*Servername/Website* oder http://*Servername/Website/Unterwebsite*.  
   
- In einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Webanwendung entsprechen die Website und die Unterwebsite häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
+ Bei einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] oder-Webanwendung entsprechen die Website und die unter Website häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL für eine SharePoint-Bibliothek  
  Wenn Sie einen Bericht oder ein verknüpftes Element in einer SharePoint-Bibliothek bereitstellen, müssen Sie eine URL zur SharePoint-Bibliothek verwenden. Die URL für eine Bibliothek unterscheidet sich je nach verwendeter SharePoint-Version.  
@@ -102,7 +102,7 @@ ms.locfileid: "66099450"
 |Der Beispielbericht „Company Sales“ im Ordner **Documents/Doc** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Der Beispielbericht "Company Sales" im Ordner **Report Center** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a> Veröffentlichen in einer SharePoint-Bibliothek über ein Erstellungstool  
+##  <a name="publishingToDocLib"></a>Veröffentlichen von einem Authoring Tool in einer SharePoint-Bibliothek  
  Wenn Sie ein Berichterstellungstool zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66099450"
 ### <a name="file-names"></a>Dateinamen  
  Dateinamen in einer URL für Berichtselemente müssen eine Dateinamenerweiterung aufweisen. Durch die Dateinamenerweiterung wird der Dateityp bestimmt. Wenn Sie Berichtselemente über ein Berichterstellungstool veröffentlichen, wird die Dateinamenerweiterung automatisch eingeschlossen. Wenn Sie ein Berichtselement in eine SharePoint-Bibliothek hochladen, müssen Sie eine Dateinamenerweiterung einschließen.  
   
- Wenn Sie für Elemente, die Sie auf eine SharePoint-Website hochladen, keine Dateinamenerweiterung angeben, tritt der `rsInvalidDataSourceReference`-Fehler auf. Dateinamen dürfen keine Zeichen enthalten, die von SharePoint-Anwendungen nicht als gültige Dateinamenzeichen erkannt werden. Fügen Sie keine die folgenden Zeichen enthalten: # % & *: \< >? / { | }.  
+ Wenn Sie für Elemente, die Sie auf eine SharePoint-Website hochladen, keine Dateinamenerweiterung angeben, tritt der `rsInvalidDataSourceReference`-Fehler auf. Dateinamen dürfen keine Zeichen enthalten, die von SharePoint-Anwendungen nicht als gültige Dateinamenzeichen erkannt werden. Folgende Zeichen nicht enthalten: #% & *: \< >? / { | }.  
   
 ## <a name="differences-between-uploading-and-publishing"></a>Unterschiede zwischen Hochladen und Veröffentlichen  
  Wenn Sie den Berichts-Designer oder den Berichts-Generator zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  
@@ -134,9 +134,9 @@ ms.locfileid: "66099450"
   
  Wenn ein Berichtsserver im integrierten SharePoint-Modus ausgeführt wird, gilt für das Konzept einer Ressource eine engere Definition. Für den Berichtsserver wird das Konzept einer Ressource zum Speichern von Berichten beibehalten, die auf ein externes Bild verweisen. Dies gilt, wenn der Bericht eine Momentaufnahme oder eine Kopie darstellt, der bzw. die für die interne Verwendung beibehalten wird.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Eigenschaftsseiten für Projekt (Dialogfeld)](project-property-pages-dialog-box.md)  
+ [Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Project Property Pages Dialog Box (Projekt (Eigenschaftenseiten, Dialogfeld))](project-property-pages-dialog-box.md)  
   
   

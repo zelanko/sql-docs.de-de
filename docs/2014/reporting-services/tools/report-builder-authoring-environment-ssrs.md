@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66100114"
 ---
 # <a name="report-builder-ssrs"></a>Berichts-Generator (SSRS)
@@ -43,9 +43,9 @@ ms.locfileid: "66100114"
   
  Der Berichts-Generator und der Berichts-Designer haben viele gemeinsame Funktionen. Weitere Informationen zum Berichts-Generator finden Sie in der [Dokumentation zum Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494) unter msdn.microsoft.com.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren des Berichts-Generator-Zugriffs](../report-server/configure-report-builder-access.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren des Berichts-Generator Zugriffs](../report-server/configure-report-builder-access.md)   
  [Reporting Services-Tools](reporting-services-tools.md)   
- [Entwerfen von Berichten mithilfe des Berichts-Designers &#40;SSRS&#41;](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
+ [Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)](design-reporting-services-paginated-reports-with-report-designer-ssrs.md)  
   
   

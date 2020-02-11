@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099135"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError – Reporting Services-Fehler
@@ -53,9 +53,9 @@ ms.locfileid: "66099135"
   
 -   Eine benutzerdefinierte Assembly oder eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Assembly, die falsch bereitgestellt wurde, konnte nicht geladen werden.  
   
--   Ein Parameter, der die Nullable-Eigenschaft auf festgelegt hat `False` hat einen null-Wert im Parameter erkannt.  
+-   Ein Parameter, bei dem die auf NULL festleg `False` Bare Eigenschaft auf festgelegt ist, hat einen NULL-Wert im Parameter erkannt.  
   
--   Ein Ausdruck für die Hidden-Eigenschaft, eines Datenbereichs enthält einen Fehler an: Objektverweis nicht auf eine Instanz eines Objekts.  
+-   Ein Ausdruck für die Hidden-Eigenschaft eines Datenbereichs enthält einen Fehler: Der Objektverweis ist nicht auf eine Objektinstanz festgelegt.  
   
 -   Ein Ausdruck hat einen ungültigen Funktionsaufruf oder einen Syntaxfehler enthalten.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66099135"
  Ein mehrwertiger Parameter darf nicht NULL sein. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
 ### <a name="main-report-with-subreport-could-not-be-processed"></a>Hauptbericht mit Unterbericht konnte nicht verarbeitet werden  
- Ein Bericht mit Unterberichten muss von der gleichen Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessors verarbeitet werden. Beim Aktualisieren von Berichten auf die aktuelle Version des Berichtsdefinitionsschemas werden der Hauptbericht und die Unterberichte möglicherweise nicht gleichzeitig aktualisiert. Wenn die Version nicht zwischen einem Bericht und dessen Unterberichten kompatibel ist, wird die folgende Meldung angezeigt: "Der Unterbericht konnte nicht verarbeitet werden."  
+ Ein Bericht mit Unterberichten muss von der gleichen Version des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessors verarbeitet werden. Beim Aktualisieren von Berichten auf die aktuelle Version des Berichtsdefinitionsschemas werden der Hauptbericht und die Unterberichte möglicherweise nicht gleichzeitig aktualisiert. Wenn die Version zwischen einem Bericht und dessen Unterberichten nicht kompatibel ist, wird die folgende Meldung angezeigt: "Der Unterbericht 'x' konnte nicht verarbeitet werden."  
   
  Sie müssen den Hauptbericht oder die Unterberichte ändern, sodass alle Berichte von der gleichen Version des Berichtsprozessors verarbeitet werden. Informationen zu Fehlern beim Upgrade eines Berichts finden Sie unter [Aktualisieren von Berichten](../install-windows/upgrade-reports.md).  
   
@@ -117,21 +117,21 @@ ms.locfileid: "66099135"
   
  Für Aggregatfunktionen, die laufende Summen berechnen (`Previous`, `RunningValue` oder `RowNumber`), können Sie einen Bereichsparameter angeben, bei dem es sich entweder um einen Zeilengruppennamen oder einen Spaltengruppennamen handelt. Beides ist nicht möglich. Dies gilt für die folgende Fehlermeldung:  
   
--   `Previous`, `RunningValue` oder `RowNumber` Aggregatfunktionen, die in den Datenzellen des verwendet die  *\<Berichtselementtyp >* " *\<Berichtselementname >* ' verweisen auf Gruppierungsbereiche in den Spalten und Zeilen mit den  *\<Berichtselementtyp >* . Die Bereichsparameter aller `Previous`, `RunningValue` und `RowNumber` -Aggregatfunktionen in einem  *\<Berichtselementtyp >* kann auf Zeilen- oder datenspaltengruppierungen, aber nicht beide Gruppierungen verweisen.  
+-   `Previous`oder `RunningValue` `RowNumber` Aggregatfunktionen, die in den Daten Zellen des * \<Berichts Elementtyps* verwendet werden>"*\<Name des Berichts Elements>*", verweisen auf Gruppierungs Bereiche in den Spalten und Zeilen des * \<Berichts Elementtyps>*. `Previous`Die Bereichs Parameter aller `RunningValue` und `RowNumber` Aggregatfunktionen innerhalb eines * \<Berichts Elementtyps>* können auf Zeilen Gruppierungen oder Datenspalten Gruppierungen verweisen, jedoch nicht auf beide.  
   
  Weitere Informationen finden Sie unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Sammlungen &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
 ### <a name="default-dataset-scope-for-a-top-level-text-box"></a>Standardmäßiger Datasetbereich für ein Textfeld der obersten Ebene  
  Verwenden Sie keinen Standardbereich für ein Textfeld, das der Berichtsentwurfsoberfläche hinzugefügt wurde, wenn der Bericht über mehr als ein Dataset verfügt. Verwenden Sie einen Ausdruck, der den Namen des Datasets als Bereich enthält, und eine Aggregatfunktion. Beispiel: `=First(Fields!FieldName.Value, "DataSet2")`.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
  [Aggregatfunktionsreferenz &#40;Berichts-Generator und SSRS&#41;](../report-design/report-builder-functions-aggregate-functions-reference.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expression-examples-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Häufig verwendete Filter (Berichts-Generator und SSRS)](../report-design/commonly-used-filters-report-builder-and-ssrs.md)   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
+ [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](../report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
+ [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer (SSRS)](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)   
  [Verweise auf Parameters-Sammlungen &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-parameters-collection-references-report-builder.md)  
   
   

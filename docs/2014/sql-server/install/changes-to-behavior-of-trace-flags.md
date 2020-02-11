@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 447e6d4d35fa77f71f1a7a1b90a5a782e0ccebcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66096621"
 ---
 # <a name="changes-to-behavior-of-trace-flags"></a>Änderungen am Verhalten von Ablaufverfolgungsflags
@@ -25,15 +25,16 @@ ms.locfileid: "66096621"
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
-## <a name="description"></a>Description  
- Es empfiehlt sich, alle Ablaufverfolgungsflags zu deaktivieren, bevor Sie ein Upgrade durchführen. Ablaufverfolgungsflags, die die Datenbank datenbankverfügbarkeit oder wiederherstellungsmodi ändern, können verhindern, dass die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] erfolgreich aktualisiert die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sie können die Ablaufverfolgungsflags aktivieren, nachdem Sie überprüft haben, ob die Ablaufverfolgungsflags erforderlich und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] immer noch gültig sind. Falls Sie die Ablaufverfolgungsflags erneut aktivieren müssen, sollten Sie zusätzliche Tests für Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchführen.  
+## <a name="description"></a>BESCHREIBUNG  
+ Es empfiehlt sich, alle Ablaufverfolgungsflags zu deaktivieren, bevor Sie ein Upgrade durchführen. Ablaufverfolgungsflags, die die Daten Bank Verfügbarkeit oder Wiederherstellungsmodi ändern, können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dass Ihre Instanz von erfolgreich aktualisiert. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Sie können die Ablaufverfolgungsflags aktivieren, nachdem Sie überprüft haben, ob die Ablaufverfolgungsflags erforderlich und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] immer noch gültig sind. Falls Sie die Ablaufverfolgungsflags erneut aktivieren müssen, sollten Sie zusätzliche Tests für Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchführen.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt globale Ablaufverfolgungsflags und Ablaufverfolgungsflags auf Sitzungsebene. Ablaufverfolgungsflags können in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] als lokal oder global festgelegt werden, indem Sie ein zusätzliches Argument (-1) im DBCC TRACEON-Befehl verwenden. Wenn Sie dieses Argument nicht angeben, ist der Standardwert lokal.  
+ 
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt globale Ablaufverfolgungsflags und Ablaufverfolgungsflags auf Sitzungsebene. Ablaufverfolgungsflags können in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] als lokal oder global festgelegt werden, indem Sie ein zusätzliches Argument (-1) im DBCC TRACEON-Befehl verwenden. Wenn Sie dieses Argument nicht angeben, ist der Standardwert lokal.  
   
- Darüber hinaus in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], in Sitzung A festgelegtes Ablaufverfolgungsflag wird nicht automatisch wirksam in einer bereits vorhandenen Sitzung B. Stattdessen tritt dieses Ablaufverfolgungsflag Auswirkungen erst nach der erstmaligen ein Ablaufverfolgungsflag in Sitzung b festgelegt wird Dieses Verhalten ist nicht deterministisch in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] und deterministisch, in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen, in denen globale Ablaufverfolgungsflags, die in Sitzung A festgelegtes sofort in anderen gleichzeitigen Sitzungen festgelegt werden.  
+ [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]Außerdem wird ein in Sitzung a fest gelegenes Ablaufverfolgungsflag in einer bereits vorhandenen Sitzung B nicht automatisch wirksam. Stattdessen tritt dieses Ablaufverfolgungsflag erst dann in Kraft, wenn in Sitzung B das erste Ablaufverfolgungsflag festgelegt ist. Dieses Verhalten ist in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] nicht deterministisch und in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen deterministisch, wobei globale Ablaufverfolgungsflags, die in Sitzung A festgelegt werden, sofort in anderen gleichzeitigen Sitzungen festgelegt werden.  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbank-Engine-Upgrade-Probleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenbank-Engine Upgradeprobleme](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

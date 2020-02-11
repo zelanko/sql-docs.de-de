@@ -1,5 +1,5 @@
 ---
-title: Installationsvoraussetzungen | Microsoft-Dokumentation
+title: Installations Voraussetzungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,25 +16,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66094350"
 ---
-# <a name="installation-prerequisites"></a>Installationsvoraussetzungen
+# <a name="installation-prerequisites"></a>Voraussetzungen für die Installation
   Damit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfolgreich installiert werden kann, sind auf dem Installationscomputer folgende Softwarekomponenten erforderlich. Die Komponenten werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup installiert:  
   
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 4.0 für alle Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+-   
+  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Version 4.0 für alle Editionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setuphilfsdateien  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Unterstützungs Dateien für Setup  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
 > [!NOTE]  
 >  Diese Komponenten werden bei einem Fehler oder Abbruch der Installation nicht entfernt. Mithilfe der Option **Software** in der Systemsteuerung können Sie die betreffenden Komponenten entfernen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Um die erforderlichen Dateien zu installieren, klicken Sie auf **Installieren**. Um die Installation abzubrechen, klicken Sie auf **Abbrechen**.  
   
   

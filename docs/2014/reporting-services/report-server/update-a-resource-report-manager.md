@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be4fd9dc72a32c65465e3d226850eb18a494e783
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103058"
 ---
 # <a name="update-a-resource-report-manager"></a>Aktualisieren einer Ressource (Berichts-Manager)
@@ -43,9 +43,9 @@ ms.locfileid: "66103058"
   
  Wenn die Ressource, die Sie aktualisieren, ein Bild enthält, das in einem Bericht verwendet wird, müssen Sie den Bericht aktualisieren, um das aktualisierte Bild anzuzeigen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../contents-page-report-manager.md)   
- [Datei hochladen &#40;Seite, Berichts-Manager&#41;](../upload-file-page-report-manager.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
+ [Seite "Datei hochladen" &#40;Berichts-Manager&#41;](../upload-file-page-report-manager.md)   
  [Hochladen von Dateien in einen Ordner](upload-files-to-a-folder.md)   
  [Berichts-Manager (F1-Hilfe)](../report-manager-f1-help.md)  
   

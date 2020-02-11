@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66099198"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
@@ -30,14 +30,14 @@ ms.locfileid: "66099198"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a> Lernziele  
+##  <a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Diagramms mithilfe des Diagramm-Assistenten](#Chart)  
   
-2.  [Auswählen des Diagrammtyps](#ChartType)  
+2.  [Diagrammtyp auswählen](#ChartType)  
   
-3.  [Zeigen Sie aller Kategoriewerte auf der Vertikalachse an](#AllValues)  
+3.  [Anzeigen aller Kategoriewerte auf der vertikalen Achse](#AllValues)  
   
 4.  [Ändern der Darstellung von Namen auf der vertikalen Achse](#Sort)  
   
@@ -49,20 +49,20 @@ ms.locfileid: "66099198"
   
 8.  [Hinzufügen eines Filters zum Anzeigen der fünf besten Werte](#Filter)  
   
-9. [Hinzufügen eines Berichtstitels](#Title)  
+9. [Hinzufügen eines Berichts Titels](#Title)  
   
 10. [Speichern des Berichts](#Save)  
   
 > [!NOTE]  
->  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Das erste Tutorial dieser Reihe enthält Schrittanleitungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle: [Tutorial: Erstellen eines einfachen Tabellenberichts &#40;Berichts-Generator&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  In diesem Lernprogramm werden die Schritte für den Assistenten in einem Verfahren zusammengefasst. Detaillierte Anweisungen zum Navigieren zu einem Berichtsserver, zum Erstellen eines Datasets und zum Auswählen einer Datenquelle finden Sie im ersten Tutorial dieser Reihe unter [Tutorial: Erstellen eines einfachen Tabellenberichts (Berichts-Generator)](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Ungefähre Dauer dieses Lernprogramms: 15 Minuten  
+ Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
-## <a name="requirements"></a>Anforderungen  
+## <a name="requirements"></a>Requirements (Anforderungen)  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a> 1. Erstellen eines Diagrammberichts mithilfe des Diagramm-Assistenten  
- Von der **Einstieg** im Dialogfeld ein eingebettetes Dataset erstellen, wählen Sie eine freigegebene Datenquelle, und erstellen Sie mithilfe des Diagramm-Assistenten ein Balkendiagramm.  
+##  <a name="Chart"></a>1. Erstellen eines Diagramm Berichts mithilfe des Diagramm-Assistenten  
+ Erstellen Sie im Dialogfeld " **Getting Started** " ein eingebettetes DataSet, wählen Sie eine freigegebene Datenquelle aus, und erstellen Sie mithilfe des Diagramm-Assistenten ein Balkendiagramm.  
   
 > [!NOTE]  
 >  In diesem Tutorial sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle benötigt wird. Die Abfrage ist daher relativ lang. In einer Geschäftsumgebung wären die Daten nicht in der Abfrage enthalten. Dieses Szenario dient nur zu Lernzwecken.  
@@ -71,10 +71,10 @@ ms.locfileid: "66099198"
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft SQL Server 2012 Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Das Dialogfeld **Erste Schritte** wird angezeigt.  
+     Das Dialogfeld " **Getting Started** " wird angezeigt.  
   
     > [!NOTE]  
-    >  Wenn die **Einstieg** Dialogfeld nicht angezeigt werden, klicken Sie auf die Schaltfläche "Berichts-Generator", und klicken Sie dann auf **neu**.  
+    >  Wenn das Dialogfeld " **Getting Started** " nicht angezeigt wird, klicken Sie auf die Schaltfläche Berichts-Generator, und klicken Sie dann auf **neu**.  
   
 2.  Vergewissern Sie sich, dass im linken Bereich **Neuer Bericht** ausgewählt ist.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66099198"
     > [!NOTE]  
     >  Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
+6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
   
 7.  Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66099198"
   
 9. Klicken Sie auf **Weiter**.  
   
-##  <a name="ChartType"></a> 2. Auswählen des Diagrammtyps  
+##  <a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
  Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
   
 #### <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
@@ -121,7 +121,7 @@ ms.locfileid: "66099198"
   
 2.  Klicken Sie auf **Balken**und anschließend auf **Weiter**.  
   
-     Auf der Seite **Diagrammfelder anordnen** stehen im Bereich **Verfügbare Felder** vier Felder zur Verfügung: FirstName, LastName, "salesyear2009" und "salesyear2008".  
+     Auf der Seite **Diagramm Felder anordnen** befinden sich vier Felder im **Bereich Verfügbare Felder** : FirstName, LastName, "salesyear2009" und "salesyear2008".  
   
 3.  Ziehen Sie "LastName" in den Bereich "Kategorien".  
   
@@ -131,7 +131,7 @@ ms.locfileid: "66099198"
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Auf der **Auswählen eines Formats** Seite Wählen Sie im Bereich "Formate", eine Art.  
+7.  Wählen Sie auf der Seite Format **auswählen** im Bereich Stile einen Stil aus.  
   
      Ein Format dient zum Angeben eines Schriftschnitts, einer Farbpalette und einer Rahmenart. Wenn Sie ein Format auswählen, wird im Vorschaubereich ein Beispiel für das Diagramm mit diesem Format angezeigt.  
   
@@ -145,27 +145,27 @@ ms.locfileid: "66099198"
   
  Im Bericht wird das Balkendiagramm für die Umsätze der einzelnen Vertriebsmitarbeiter in den Jahren 2008 und 2009 angezeigt. Die Balkenlänge entspricht dem jeweiligen Gesamtumsatz.  
   
-##  <a name="AllValues"></a> 3. Ändern der Darstellung von Namen auf der vertikalen Achse  
+##  <a name="AllValues"></a>3. Ändern der Anzeige von Namen auf der vertikalen Achse  
  Standardmäßig werden auf der vertikalen Achse nur einige der Werte angezeigt. Sie können das Diagramm so ändern, dass alle Kategorien angezeigt werden.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>So zeigen Sie auf der Kategorieachse eines Balkendiagramms alle Vertriebsmitarbeiter an  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Mit der rechten Maustaste in der vertikalen Achse, und klicken Sie dann auf **Eigenschaften für vertikale Achsen**.  
+2.  Klicken Sie mit der rechten Maustaste auf die vertikale Achse, und klicken Sie auf **Eigenschaften für vertikale Achsen**.  
   
 3.  Geben Sie unter **Achsenbereich und -intervall**im Feld **Intervall** den Wert **1**ein.  
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-5.  Mit der rechten Maustaste in der vertikales **Achsentitel** und deaktivieren Sie die **Achsentitel anzeigen** Kontrollkästchen.  
+5.  Klicken Sie mit der rechten Maustaste auf den Titel der vertikalen **Achse** , und deaktivieren Sie das Kontrollkästchen **Achsentitel anzeigen** .  
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
 > [!NOTE]  
 >  Wenn Sie die Namen der Vertriebsmitarbeiter auf der vertikalen Achse nicht lesen können, können Sie das Diagramm vergrößern oder die Formatierungsoptionen für die Achsenbezeichnungen ändern.  
   
-###  <a name="CategoryExpression"></a> Anzeigen der Nachnamen und Vornamen auf der vertikalen Achse  
+###  <a name="CategoryExpression"></a>Nachname und Vorname auf vertikaler Achse anzeigen  
  Sie können den Kategorieausdruck so ändern, dass die Nach- und Vornamen der einzelnen Vertriebsmitarbeiter angezeigt werden.  
   
 ##### <a name="to-change-the-category-expression"></a>So ändern Sie den Kategorieausdruck  
@@ -193,7 +193,7 @@ ms.locfileid: "66099198"
 > [!NOTE]  
 >  Wenn Sie die Namen der Vertriebsmitarbeiter auf der vertikalen Achse nicht lesen können, können Sie das Diagramm vergrößern oder die Formatierungsoptionen für die Achsenbezeichnungen ändern.  
   
-##  <a name="Sort"></a> 4. Ändern der Sortierreihenfolge für Namen auf der vertikalen Achse  
+##  <a name="Sort"></a>4. Ändern der Sortierreihenfolge für Namen auf der vertikalen Achse  
  Beim Sortieren der Daten eines Diagramms wird die Reihenfolge der Werte auf der Kategorieachse geändert.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>So sortieren Sie die Namen im Balkendiagramm in alphabetischer Reihenfolge  
@@ -206,21 +206,21 @@ ms.locfileid: "66099198"
   
 4.  Klicken Sie auf **Sortierung**. Auf der Seite **Ändern Sie die Sortieroptionen** wird eine Liste mit Sortierausdrücken angezeigt. Standardmäßig enthält diese Liste einen einzelnen Sortierungsausdruck, der dem ursprünglichen Kategoriegruppenausdruck entspricht.  
   
-5.  Sortieren nach Klicken Sie auf die Ausdrucksschaltfläche (**Fx**) Schaltfläche.  
+5.  Klicken Sie unter Sortieren nach auf die Ausdrucks Schaltfläche (**FX**).  
   
 6.  Geben Sie den folgenden Ausdruck ein: `=Fields!LastName.Value & ", " & Fields!FirstName.Value`  
   
 7.  Klicken Sie auf **OK**.  
   
-8.  Auf der **Kategoriegruppeneigenschaften** auf der Seite die **Reihenfolge** Dropdown-Liste **Z bis A**. Dadurch werden die umgekehrten alphabetischen Reihenfolge ausgewählt, so, dass die Namen in der Reihenfolge von oben nach unten angezeigt werden.  
+8.  Wählen Sie auf der Seite **Kategoriegruppeneigenschaften** in der Dropdown Liste **Reihenfolge** die Option **Z bis A**aus. Dadurch wird die umgekehrte alphabetische Reihenfolge ausgewählt, sodass die Namen in der Reihenfolge von oben nach unten angezeigt werden.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 10. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
- Die Namen auf der horizontalen Achse werden in umgekehrter Reihenfolge sortiert, mit **Alerca** am Anfang und **Zeng** am unteren Rand.  
+ Die Namen auf der horizontalen Achse werden in umgekehrter Reihenfolge sortiert, wobei **alerca** oben und **Zeng** unten angezeigt wird.  
   
-##  <a name="Legend"></a> 5. Verschieben der Legende  
+##  <a name="Legend"></a>5. Verschieben der Legende  
  Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls die Diagrammlegende verschieben. So können Sie zum Beispiel in einem Balkendiagramm mit einer horizontalen Anordnung der Balken die Legende oberhalb oder unterhalb des Diagrammbereichs platzieren. Dann bleibt horizontal mehr Platz für die Balken.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>So zeigen Sie die Legende unterhalb des Diagrammbereichs eines Balkendiagramms an  
@@ -239,19 +239,19 @@ ms.locfileid: "66099198"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="ChartTitle"></a> 6. Benennen des Diagramms  
+##  <a name="ChartTitle"></a>6. Titel des Diagramms  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>So ändern Sie den Diagrammtitel über dem Diagrammbereich eines Balkendiagramms  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Wählen Sie die Wörter **Diagrammtitel** am oberen Rand des Diagramms, und geben Sie dann den folgenden Text: **Sales for 2008 and 2009**.  
+2.  Markieren Sie am oberen Rand des Diagramms den Text **Diagramm Titel** , und geben Sie dann den folgenden Text ein: **Sales für 2008 und 2009**.  
   
 3.  Klicken Sie auf eine Stelle außerhalb des Texts.  
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Horizontal"></a> 7. Formatieren und Beschriften der horizontalen Achse  
+##  <a name="Horizontal"></a>7. Formatieren und beschriften der horizontalen Achse  
  Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>So formatieren Sie die Zahlen auf der horizontalen Achse  
@@ -260,25 +260,25 @@ ms.locfileid: "66099198"
   
 2.  Klicken Sie unten im Diagramm auf die horizontale Achse, um sie auszuwählen.  
   
-     Auf dem Menüband auf die **Startseite** Registerkarte die **Anzahl** gruppieren, klicken Sie auf die **Währung** Schaltfläche. Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
+     Klicken Sie im Menüband auf der Registerkarte **Startseite** in der Gruppe **Zahl** auf die Schaltfläche **Währung** . Die horizontalen Achsenbezeichnungen werden zu Währungsbezeichnungen geändert.  
   
 3.  (Optional) Entfernen Sie die Dezimalstellen. Klicken Sie in der Nähe der Schaltfläche **Währung** zweimal auf die Schaltfläche **Dezimalstelle löschen** .  
   
 4.  Klicken Sie mit der rechten Maustaste auf die horizontale Achse, und klicken Sie anschließend auf **Eigenschaften für horizontale Achsen**.  
   
-5.  Auf der **Anzahl** Registerkarte **Werte in Schritten von Tausend anzeigen.**  
+5.  Wählen Sie auf der Registerkarte **Zahl** die Option **Werte in Tausenden anzeigen aus.**  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Mit der rechten Maustaste **Achsentitel** , und klicken Sie auf **Achsentiteleigenschaften**.  
+7.  Klicken Sie mit der rechten Maustaste auf **Achsentitel** und dann auf **Achsentitel Eigenschaften**.  
   
-8.  In der **Titeltext** geben **Sales in Schritten von Tausend** , und klicken Sie auf **OK**.  
+8.  Geben Sie im **Textfeld Titel** **Sales in Tausende** ein, und klicken Sie auf **OK**.  
   
 9. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
  Auf der horizontalen Achse des Berichts werden die Umsätze als Währung in Tausendern ohne Dezimalstellen angezeigt.  
   
-##  <a name="Filter"></a> 8. Hinzufügen eines Filters zum Anzeigen der fünf besten Werte  
+##  <a name="Filter"></a>8. Hinzufügen eines Filters zum Anzeigen der fünf besten Werte  
  Sie können dem Diagramm einen Filter hinzufügen, um anzugeben, welche Daten des Datasets ein- oder ausgeschlossen werden sollen.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>So können Sie einen Filtern hinzufügen und die fünf besten Werte anzeigen  
@@ -293,7 +293,7 @@ ms.locfileid: "66099198"
   
 5.  Klicken Sie auf **Hinzufügen**. Ein neuer leerer Filter wird angezeigt.  
   
-6.  In **Ausdruck**, Typ **[Sum(SalesYear2009)]** . Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2009.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
+6.  Geben **** Sie in Ausdruck **[Sum ("salesyear2009")]** ein. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2009.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
   
 7.  Überprüfen Sie, ob der Datentyp gleich **Text**ist.  
   
@@ -309,21 +309,21 @@ ms.locfileid: "66099198"
   
  Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den Umsatzdaten des Jahres 2009 angezeigt.  
   
-##  <a name="Title"></a> 9. Hinzufügen eines Berichtstitels  
+##  <a name="Title"></a>9. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
 1.  Klicken Sie auf der Entwurfsoberfläche auf **Zum Hinzufügen eines Titels klicken**.  
   
-2.  Typ **Umsatz-Balkendiagramm**, drücken Sie die EINGABETASTE, und geben dann **Top Five-Verkaufsschlager 2009**, sodass sie wie folgt aussieht:  
+2.  Geben Sie **Umsatz-Balkendiagramm**ein, drücken Sie die EINGABETASTE, und geben Sie dann **Top Five-Verkäufer für 2009**ein, sodass es wie folgt aussieht:  
   
-     **Umsatz-Balkendiagramm**  
+     **Umsatz Balkendiagramm**  
   
      **Top Five-Verkaufsschlager 2009**  
   
 3.  Markieren Sie **Umsatz-Balkendiagramm**, und klicken Sie auf die Schaltfläche **Fett** .  
   
-4.  Wählen Sie **Top Five-Verkaufsschlager 2009**, und klicken Sie in der **Schriftart** im Abschnitt der **Startseite** Registerkarte, legen Sie den Schriftgrad auf **10**.  
+4.  Wählen Sie **Top Five Verkäufers for 2009 aus**, und legen Sie auf der Registerkarte **Home** im Abschnitt **Schriftart** den Schrift Grad auf **10**fest.  
   
 5.  (Optional) Das Textfeld "Titel" muss ggf. vergrößert werden, damit die beiden Textzeilen hineinpassen.  
   
@@ -331,13 +331,13 @@ ms.locfileid: "66099198"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Save"></a> 10. Speichern des Berichts  
+##  <a name="Save"></a>10. Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
+2.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
   
 3.  Geben Sie im Feld **Name**die Zeichenfolge **Umsatz-Balkendiagramm**ein.  
   
@@ -348,7 +348,7 @@ ms.locfileid: "66099198"
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben das Lernprogramm "Hinzufügen eines Balkendiagramms zu einem Bericht" erfolgreich abgeschlossen. Weitere Informationen zu Diagrammen finden Sie unter [Diagramme (Berichts-Generator und SSRS)](report-design/charts-report-builder-and-ssrs.md) und [Sparklines und Datenbalken (Berichts-Generator und SSRS)](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 84f9b681ee632e922f5ab349bf1a72fbea63f911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105251"
 ---
 # <a name="inscope-function-report-builder-and-ssrs"></a>InScope-Funktion (Berichts-Generator und SSRS)
@@ -30,14 +30,14 @@ InScope(scope)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Bereich*  
+ *scope*  
  (`String`) Der Name eines Datasets, eines Datenbereichs oder einer Gruppe, die einen Bereich angibt.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt einen `Boolean` zurück.  
   
-## <a name="remarks"></a>Hinweise  
- Die `InScope` Funktion testet den Bereich für die Mitgliedschaft der aktuellen Instanz eines Berichtselements im Bereich gemäß der *Bereich*Parameter.  
+## <a name="remarks"></a>Bemerkungen  
+ Die `InScope` -Funktion testet den Bereich der aktuellen Instanz eines Berichts Elements auf die Mitgliedschaft in dem durch den *Scope*-Parameter angegebenen Bereich.  
   
  *Scope* darf kein Ausdruck sein.  
   
@@ -64,7 +64,7 @@ InScope(scope)
 =InScope("Product")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

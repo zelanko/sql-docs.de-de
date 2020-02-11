@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ba5cdb309d277e751c2de7fcfbce5dfc02174366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105101"
 ---
 # <a name="report-design-tips-report-builder-and-ssrs"></a>Berichtsentwurfstipps (Berichts-Generator und SSRS)
@@ -157,8 +157,8 @@ ms.locfileid: "66105101"
   
  Die Kombination dieses Verhaltens, die Breiten- und Höheneigenschaften von Berichtselementen, die Größe des Hauptteils des Berichts, die Seitenhöhe und die Seitenbreitendefinition, die Seitenrandeinstellungen des übergeordneten Berichts und die rendererspezifische Unterstützung für Auslagerungen bestimmen gemeinsam, welche Berichtselemente sich auf einer gerenderten Seite zusammenfügen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichts-Generator in SQLServer 2014](../report-builder/report-builder-in-sql-server-2016.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichts-Generator in SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
  [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)   
  [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Freigegebene Datasets Auswahl (Seite) (Berichts-Manager) | Microsoft-Dokumentation
+title: Seite "Auswahl frei gegebener Datasets" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101273"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Auswahl freigegebener Datasets (Seite), (Berichts-Manager)
@@ -35,7 +35,7 @@ ms.locfileid: "66101273"
   
 4.  Wählen Sie die Registerkarte **Freigegebene Datasets** aus.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Durchsuchen**  
  Für jeden Namen eines freigegebenen Datasets in einem Bericht können Sie den aktuellen Ordnerpfad und den Namen des freigegebenen Zieldatasets überprüfen.  
   
@@ -48,11 +48,11 @@ ms.locfileid: "66101273"
  **Anwenden**  
  Speichern Sie die Änderungen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Inhalt &#40;Seite, Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md)   
- [Berichts-Manager-F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
+ [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Berichtsteile und Datasets in Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   

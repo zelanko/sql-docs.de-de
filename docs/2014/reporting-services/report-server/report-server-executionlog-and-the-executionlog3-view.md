@@ -1,5 +1,5 @@
 ---
-title: Berichtsserver-Ausführungsprotokoll und die ExecutionLog3-Ansicht | Microsoft-Dokumentation
+title: Berichts Server-Ausführungs Protokoll und die ExecutionLog3-Ansicht | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66103468"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht
@@ -30,7 +30,7 @@ ms.locfileid: "66103468"
   
  Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten „2“ und „3“ wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
   
- In diesem Thema:  
+ Inhalte dieses Themas:  
   
 -   [Konfigurationseinstellungen für einen Berichtsserver im SharePoint-Modus](#bkmk_sharepoint)  
   
@@ -108,22 +108,22 @@ select * from ExecutionLog3 order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|Description|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat. Wenn die Umgebung mehr als einen Berichtsserver hat, können Sie die zu überwachende InstanceName-Verteilung analysieren und bestimmen, ob der Netzwerklastenausgleich Anforderungen auf der anderen Seite von Berichtsservern wie erwartet verteilt.|  
 |ItemPath|Pfad, in dem ein Bericht oder Berichtselement gespeichert wird.|  
 |UserName|Benutzer-ID.|  
 |ExecutionID|Der interne einer Anforderung zugeordnete Bezeichner. Anforderungen für die selben Benutzersitzungen besitzen dieselbe Ausführungs-ID.|  
-|RequestType|Mögliche Werte:<br />**Interaktive**<br />**Abonnement**<br /><br /> <br /><br /> Das Analysieren von nach RequestType=Subscription gefilterten und nach TimeStart sortierten Protokolldaten enthüllt möglicherweise Zeiträume starker Abonnementnutzung und Sie möchten vielleicht einige der Berichtsabonnements in eine andere Zeit ändern.|  
+|RequestType|Mögliche Werte:<br />**Interactive**<br />**Abonnement**<br /><br /> <br /><br /> Das Analysieren von nach RequestType=Subscription gefilterten und nach TimeStart sortierten Protokolldaten enthüllt möglicherweise Zeiträume starker Abonnementnutzung und Sie möchten vielleicht einige der Berichtsabonnements in eine andere Zeit ändern.|  
 |Format|Renderingformat.|  
 |Parameter|Parameterwerte, die für die Berichtsausführung verwendet werden.|  
-|ItemAction|Mögliche Werte:<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Ausführen**<br /><br /> **RenderEdit**|  
+|ItemAction|Mögliche Werte:<br /><br /> **Rendern**<br /><br /> **Sortieren**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Auszuführen**<br /><br /> **RenderEdit**|  
 |TimeStart|Anfangs- und Beendigungszeit für die Verarbeitung eines Berichts.|  
 |TimeEnd||  
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|Source|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: Gibt eine zwischengespeicherte Ausführung, z. B. Dataset, das nicht live ausgeführt werden.<br /><br /> **Momentaufnahme**<br /><br /> **Verlauf**<br /><br /> **AdHoc** : Gibt an, entweder einem dynamisch erstellten Berichtsmodell basierendes Modell Drillthroughbericht oder einen Berichts-Generator-Bericht, der in der Vorschau angezeigt wird, auf einem Client mithilfe des Berichtsservers zum Verarbeiten und rendern.<br /><br /> **Sitzung**: Gibt eine anschlussanforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**:  Gibt eine Report Definition Customization Extension an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|`Source`|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: gibt eine zwischengespeicherte Ausführung an, z. b. werden Datasetabfragen nicht Live ausgeführt.<br /><br /> **Überblick**<br /><br /> **History**<br /><br /> **Adhoc** : gibt entweder einen dynamisch generierten Berichts modellbasierten Drillthrough-Bericht oder einen Berichts-Generator Bericht an, der auf einem Client in der Vorschau angezeigt wird, der den Berichts Server für die Verarbeitung und das Rendering verwendet.<br /><br /> **Session**: gibt eine nach Verfolgungs Anforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**: gibt eine Anpassungs Erweiterung für die Berichts Definition an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -222,13 +222,13 @@ select * from ExecutionLog3 order by TimeStart DESC
   
 ```  
   
- Im folgenden werden einige der Eigenschaften, die Sie im AdditionalInfo-Feld sehen beschrieben:  
+ Im folgenden werden einige der Eigenschaften beschrieben, die im Feld AdditionalInfo angezeigt werden:  
   
--   **ProcessingEngine**: 1=SQL Server 2005, 2=Die neue bedarfsgesteuerte Verarbeitungs-Engine. Wenn eine Mehrzahl der Berichte immer noch den Wert 1 anzeigt, können Sie prüfen, wie sie umgestaltet werden sollen, damit sie die neuere und effizientere bedarfsgesteuerte Verarbeitungs-Engine verwenden.  
+-   **Processingengine**: 1 = SQL Server 2005, 2 = die neue Bedarfs gesteuerte Verarbeitungs-Engine. Wenn eine Mehrzahl der Berichte immer noch den Wert 1 anzeigt, können Sie prüfen, wie sie umgestaltet werden sollen, damit sie die neuere und effizientere bedarfsgesteuerte Verarbeitungs-Engine verwenden.  
   
      `<ProcessingEngine>2</ProcessingEngine>`  
   
--   **ScalabilityTime**: Die Anzahl der Millisekunden, die für skalierungsrelevante Operationen in der Verarbeitungs-Engine benötigt werden. Der Wert 0 gibt an, dass keine zusätzliche Zeit für Skalierungsoperationen aufgebracht wurde. Ein Wert 0 gibt auch an, dass die Anforderung nicht unter unzureichendem Arbeitsspeicher erfolgte.  
+-   **Scalabilitytime**: die Anzahl von Millisekunden für die Durchführung von Skalierungs bezogenen Vorgängen in der Verarbeitungs-Engine. Der Wert 0 gibt an, dass keine zusätzliche Zeit für Skalierungsoperationen aufgebracht wurde. Ein Wert 0 gibt auch an, dass die Anforderung nicht unter unzureichendem Arbeitsspeicher erfolgte.  
   
     ```  
     <ScalabilityTime>  
@@ -236,7 +236,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ScalabilityTime>  
     ```  
   
--   **EstimatedMemoryUsageKB**: Eine Schätzung des Höhepunktarbeitsspeichers, in Kilobyte, verbraucht von jeder Komponente während einer bestimmten Anforderung.  
+-   **Estimatedmemoryusagekb**: eine Schätzung der Höchstmenge an Arbeitsspeicher in Kilobyte, die von jeder Komponente während einer bestimmten Anforderung beansprucht wird.  
   
     ```  
     <EstimatedMemoryUsageKB>  
@@ -244,7 +244,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </EstimatedMemoryUsageKB>  
     ```  
   
--   **DataExtension**: Die Typen von Datenerweiterungen oder Datenquellen, die im Bericht verwendet werden. Die Zahl ist eine Anzahl von Vorkommen der speziellen Datenquelle.  
+-   **Dataextension**: die Typen von Daten Erweiterungen oder Datenquellen, die im Bericht verwendet werden. Die Zahl ist eine Anzahl von Vorkommen der speziellen Datenquelle.  
   
     ```  
     <DataExtension>  
@@ -252,7 +252,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </DataExtension>  
     ```  
   
--   **ExternalImages**der Wert wird in Millisekunden angegeben. Diese Daten können bei der Diagnose von Leistungsproblemen verwendet werden. Die zum Abrufen von Bildern von einem externen Webserver benötigte Zeit verlangsamt möglicherweise die gesamte Berichtsausführung. Hinzugefügt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Externalimages** Der Wert ist in Millisekunden angegeben. Diese Daten können bei der Diagnose von Leistungsproblemen verwendet werden. Die zum Abrufen von Bildern von einem externen Webserver benötigte Zeit verlangsamt möglicherweise die gesamte Berichtsausführung. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]hinzugefügt.  
   
     ```  
     <ExternalImages>  
@@ -262,7 +262,7 @@ select * from ExecutionLog3 order by TimeStart DESC
     </ExternalImages>  
     ```  
   
--   **Verbindungen**: Eine Struktur mit mehreren Ebenen. Hinzugefügt in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+-   **Verbindungen**: eine Struktur mit mehreren Ebenen. In [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]hinzugefügt.  
   
     ```  
     <Connections>  
@@ -307,7 +307,7 @@ select * from ExecutionLog2 order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|Description|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
 |ReportPath|Die Pfadstruktur zum Bericht.  Zum Beispiel würde ein Bericht mit dem Namen „Test“, der der Stammordner im Berichts-Manager ist, den ReportPath „/test“ aufweisen.<br /><br /> Ein Bericht mit dem Namen „Test“, der im Ordner „Samples“ im Berichts-Manager gespeichert ist, würde den ReportPath „/Samples/test/“ aufweisen.|  
@@ -322,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Quelle der Berichtsausführung (1=Live, 2=Cache, 3=Snapshot 4=History).|  
+|`Source`|Quelle der Berichtsausführung (1=Live, 2=Cache, 3=Snapshot 4=History).|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
@@ -339,7 +339,7 @@ select * from ExecutionLog order by TimeStart DESC
   
  In der folgenden Tabelle werden die Daten beschrieben, die im Berichtsausführungsprotokoll aufgezeichnet werden  
   
-|Spalte|Description|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |InstanceName|Name der Berichtsserverinstanz, die die Anforderung verarbeitet hat.|  
 |ReportID|Berichts-ID.|  
@@ -352,12 +352,12 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Zeitaufwand (in Millisekunden) für das Abfragen der Daten, das Verarbeiten des Berichts und das Rendern des Berichts.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Quelle der Berichtsausführung. Mögliche Werte: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
+|`Source`|Quelle der Berichtsausführung. Mögliche Werte: (1=Live, 2=Cache, 3=Snapshot, 4=History, 5=Adhoc, 6=Session, 7=RDCE).|  
 |Status|Mögliche Werte: rsSuccess, rsProcessingAborted oder ein Fehlercode. Wenn mehrere Fehler auftreten, wird nur der erste Fehler aufgezeichnet.|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  

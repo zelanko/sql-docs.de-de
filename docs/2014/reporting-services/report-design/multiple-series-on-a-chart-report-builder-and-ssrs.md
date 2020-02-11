@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105563"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66105563"
 ## <a name="using-chart-areas"></a>Verwenden von Diagrammflächen  
  Das Diagramm stellt den Container der obersten Ebene dar, der den äußeren Rahmen, den Diagrammtitel und die Legende enthält. Standardmäßig wird im Diagramm eine Diagrammfläche angezeigt. Die Diagrammfläche ist auf der Diagrammoberfläche nicht sichtbar. Sie können sich diese jedoch als Container vorstellen, in dem lediglich die Achsenbezeichnungen, der Achsentitel und der Zeichnungsbereich einer oder mehrerer Reihen enthalten sind. In der folgenden Abbildung wird das Konzept der Diagrammflächen in einem einzelnen Diagramm veranschaulicht.  
   
- ![Ein Diagramm einer Diagrammfläche](../media/chartareasdiagram.gif "Shows a diagram of a chart area")  
+ ![Zeigt ein Diagramm einer Diagrammfläche](../media/chartareasdiagram.gif "Zeigt ein Diagramm einer Diagrammfläche")  
   
  Im Dialogfeld **Diagrammflächeneigenschaften** können Sie die 2D- und 3D-Ausrichtung aller auf der Diagrammfläche enthaltenen Reihen angeben, mehrere Diagrammflächen in einem Diagramm ausrichten und die Farben des Zeichnungsbereichs formatieren. Wenn eine neue Diagrammfläche in einem Diagramm definiert wird, das nur eine Standarddiagrammfläche enthält, wird der für eine Diagrammfläche verfügbare Platz horizontal durch 2 dividiert, und die neue Diagrammfläche wird unterhalb der ersten Diagrammfläche platziert.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "66105563"
 ## <a name="using-range-charts"></a>Verwenden von Bereichsdiagrammen  
  Bereichsdiagramme weisen zwei Werte pro Datenpunkt auf. Wenn das Diagramm zwei Reihen aufweist, die dieselbe Kategorieachse (X) verwenden, können Sie mithilfe eines Bereichsdiagramms die Differenz zwischen den beiden Reihen anzeigen. Bereichsdiagramme eignen sich optimal für die Anzeige von Hoch-Tief-Daten und Öffnungs-Schluss-Daten. Wenn die erste Reihe beispielsweise den Höchstumsatz für jeden Tag im Januar enthält, während die zweite Reihe den geringsten Umsatz für jeden Tag im Januar enthält, können Sie mithilfe eines Bereichsdiagramms die Differenz zwischen dem Höchstumsatz und dem geringsten Umsatz für jeden Tag veranschaulichen. Weitere Informationen finden Sie unter [Bereichsdiagramme (Berichts-Generator und SSRS)](range-charts-report-builder-and-ssrs.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Anzeigen einer Reihe mit mehreren Daten Bereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

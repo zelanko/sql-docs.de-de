@@ -1,5 +1,5 @@
 ---
-title: Momentaufnahmeoptionen Eigenschaftenseite (Berichts-Manager) | Microsoft-Dokumentation
+title: Eigenschaften Seite "Momentaufnahme Optionen" (Berichts-Manager) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,17 +11,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101161"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Momentaufnahmeoptionen (Eigenschaftenseite) (Berichts-Manager)
   Mithilfe der Eigenschaftenseite Momentaufnahmeoptionen können Sie das Hinzufügen von Berichtsmomentaufnahmen zum Berichtsverlauf planen und die Anzahl von Berichtsmomentaufnahmen begrenzen, die im Berichtsverlauf gespeichert werden.  
   
 > [!NOTE]  
->  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der von den Editionen unterstützte Funktionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], finden Sie unter [zusätzliche Datenbankdienste](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
+>  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die von den-Editionen unterstützt werden, finden Sie unter [zusätzliche Datenbankdienste](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md#Add_DBServices).  
   
 ## <a name="navigation"></a>Navigation  
  Verwenden Sie folgendes Verfahren, um zu dieser Position in der Benutzeroberfläche zu navigieren.  
@@ -36,17 +36,17 @@ ms.locfileid: "66101161"
   
 4.  Wählen Sie die Registerkarte **Momentaufnahmeoptionen** aus.  
   
-## <a name="options"></a>Optionen  
- **Berichtsverlauf kann manuell erstellt werden**  
+## <a name="options"></a>Tastatur  
+ **"Berichtsverlauf" kann manuell erstellt werden**  
  Aktivieren Sie dieses Kontrollkästchen, um nach Bedarf dem Berichtsverlauf Momentaufnahmen hinzuzufügen. Wenn Sie dieses Kontrollkästchen aktivieren, wird die Schaltfläche **Neue Momentaufnahme** auf der Seite Verlauf angezeigt.  
   
- **Alle berichtsausführungs-Momentaufnahmen im Berichtsverlauf Store**  
+ **Alle Momentaufnahmen zur Berichtsausführung im Verlauf speichern**  
  Aktivieren Sie dieses Kontrollkästchen, um eine Berichtsmomentaufnahme, die auf der Grundlage von Berichtsausführungseigenschaften generiert wird, in den Berichtsverlauf zu kopieren. Sie können Berichtsausführungseigenschaften festlegen, um einen Bericht aus einer generierten Momentaufnahme auszuführen. Wenn Sie diese Eigenschaft für den Berichtsverlauf festlegen, können Sie einen Datensatz mit allen im Laufe der Zeit generierten Berichtsmomentaufnahmen speichern, indem Sie die Kopien der Berichtsmomentaufnahmen im Berichtsverlauf platzieren.  
   
- **Verwenden Sie folgenden Zeitplan, um Momentaufnahmen dem Berichtsverlauf hinzuzufügen**  
+ **Folgenden Zeitplan verwenden, um Momentaufnahmen dem Berichtsverlauf hinzuzufügen**  
  Aktivieren Sie dieses Kontrollkästchen, um dem Berichtsverlauf Momentaufnahmen auf der Basis eines Zeitplans hinzuzufügen. Sie können einen nur für diesen Zweck verwendeten Zeitplan erstellen oder einen vordefinierten freigegebenen Zeitplan auswählen, falls ein Zeitplan mit den gewünschten Informationen verfügbar ist.  
   
- **Wählen Sie die Anzahl von Momentaufnahmen im Verlauf**  
+ **Maximale Anzahl von Momentaufnahmen im Verlauf**  
  Wählen Sie eine der folgenden Optionen aus, um die Anzahl von Berichten zu steuern, die im Berichtsverlauf gespeichert werden. In jedem Bericht können andere Einstellungen für den Berichtsverlauf festgelegt sein.  
   
 -   Wählen Sie die Option **Die Standardeinstellung verwenden** aus, um die Standardeinstellung zu übernehmen. Der Berichtsserveradministrator steuert eine Mastereinstellung für die Speicherung des Berichtsverlaufs. Bei Auswahl dieser Option wird die Anzahl von gespeicherten Momentaufnahmen durch diese Mastereinstellung ermittelt.  
@@ -60,7 +60,7 @@ ms.locfileid: "66101161"
  **Anwenden**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](report-server/create-modify-and-delete-snapshots-in-report-history.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d4a06a24525b3d9d0c4e4a5f3f0b749a7db70261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105171"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>RowNumber-Funktion (Berichts-Generator und SSRS)
@@ -31,11 +31,11 @@ RowNumber(scope)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Bereich*  
+ *scope*  
  (`String`) Der Name eines Datasets, eines Datenbereichs oder einer Gruppe oder NULL (`Nothing` in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), der den Kontext angibt, in dem die Zeilenanzahl ausgewertet wird. Durch `Nothing` wird der äußerste Kontext angegeben, normalerweise das Berichtsdataset.  
   
-## <a name="remarks"></a>Hinweise  
- `RowNumber` Gibt einen wirksamer Wert der Anzahl der Zeilen im angegebenen Bereich, ebenso wie [RunningValue](report-builder-functions-runningvalue-function.md) der wirksame Wert einer Aggregatfunktion zurückgegeben. Wenn Sie einen Bereich angeben, geben Sie an, wann die Zeilenanzahl auf 1 zurückzusetzen ist.  
+## <a name="remarks"></a>Bemerkungen  
+ `RowNumber`Gibt einen Wert zurück, der die Anzahl der Zeilen innerhalb des angegebenen Bereichs zurückgibt, ebenso wie [RunningValue](report-builder-functions-runningvalue-function.md) den laufenden Wert einer Aggregatfunktion zurückgibt. Wenn Sie einen Bereich angeben, geben Sie an, wann die Zeilenanzahl auf 1 zurückzusetzen ist.  
   
  *scope* darf kein Ausdruck sein. *scope* muss ein Gültigkeitsbereich sein. Typische Bereiche, von der äußersten bis zur innersten Einkapselung, sind Berichtsdataset, Datenbereich, Zeilengruppen oder Spaltengruppen.  
   
@@ -53,7 +53,7 @@ RowNumber(scope)
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   

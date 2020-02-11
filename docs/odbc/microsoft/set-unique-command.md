@@ -1,5 +1,5 @@
 ---
-title: Befehl SET UNIQUE | Microsoft-Dokumentation
+title: Eindeutigen Befehl festlegen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 1f69e31e-4599-47cc-ac89-b86fba8703c5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 29598ed97cba8be04a0c08727cffc40e663becba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68063612"
 ---
 # <a name="set-unique-command"></a>SET UNIQUE-Befehl
-Gibt an, ob Datensätze mit doppelten Indexschlüsselwerten in eine Indexdatei beibehalten werden.  
+Gibt an, ob Datensätze mit doppelten Index Schlüsselwerten in einer Indexdatei verwaltet werden.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -30,11 +30,11 @@ SET UNIQUE ON | OFF
 ```  
   
 ## <a name="arguments"></a>Argumente  
- ON  
- Gibt an, dass alle Datensätze mit einem doppelten Indexschlüsselwerten-Schlüsselwert in der Indexdatei nicht enthalten sein. Nur der erste Datensatz mit dem ursprünglichen Wert des Index befindet sich in der Indexdatei.  
+ EIN  
+ Gibt an, dass alle Datensätze mit einem doppelten Index Schlüsselwert nicht in der Indexdatei enthalten sein sollen. Nur der erste Datensatz mit dem ursprünglichen Index Schlüsselwert ist in der Indexdatei enthalten.  
   
  OFF  
- (Standard). Gibt an, dass die Indexdatei Datensätze mit doppelten Indexschlüsselwerten berücksichtigt werden.  
+ (Standard) Gibt an, dass Datensätze mit doppelten Index Schlüsselwerten in der Indexdatei enthalten sein sollen.  
   
-## <a name="remarks"></a>Hinweise  
- Eine Indexdatei behält seine eindeutige festgelegt Einstellung an, beim REINDEX ausgeben. Weitere Informationen finden Sie unter [INDEX](../../odbc/microsoft/index-command.md).
+## <a name="remarks"></a>Bemerkungen  
+ Bei der Ausgabe von REINDEX wird eine Indexdatei beibehalten. Weitere Informationen finden Sie unter [Index](../../odbc/microsoft/index-command.md).

@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (dBASE-Treiber) | Microsoft-Dokumentation
+title: SQLConfigDataSource (dBase-Treiber) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,28 @@ ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68054101"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE-Treiber)
 > [!NOTE]  
->  Dieses Thema enthält die dBASE-Treiber-spezifische Informationen. Allgemeine Informationen zu dieser Funktion finden Sie unter den entsprechenden Themen unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
+>  Dieses Thema enthält Informationen zu dBASE-Treibern. Allgemeine Informationen zu dieser Funktion finden Sie im entsprechenden Thema unter [ODBC-API-Referenz](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Die **SQLConfigDataSource** -Funktion, die verwendet wird, zum Hinzufügen, ändern oder Löschen einer Datenquelle verwendet die folgenden Schlüsselwörter.  
+ Die **SQLConfigDataSource** -Funktion, die verwendet wird, um eine Datenquelle hinzuzufügen, zu ändern oder zu löschen, verwendet dynamisch die folgenden Schlüsselwörter.  
   
-|Schlüsselwort|Beschreibung|  
+|Schlüsselwort|BESCHREIBUNG|  
 |-------------|-----------------|  
-|COLLATINGSEQUENCE|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz sind möglich: ASCII (Standard) und internationale.<br /><br /> Hiermit wird die gleiche Option als **Sortierreihenfolge Sequenz** im Dialogfeld "Setup".|  
-|WERT|Die Pfadangabe in das Verzeichnis.|  
-|DELETED|DBASE-Treiber gibt an, ob Zeilen, die als gelöscht markiert wurden abgerufen oder auf positioniert werden können. Wenn es sich bei Festlegung auf 1, gelöschte Zeilen nicht angezeigt werden; Wenn es sich bei Festlegung auf 0, gelöschte Zeilen werden als nicht gelöschter Zeilen behandelt.<br /><br /> Hiermit wird die gleiche Option als **anzeigen gelöschter Zeilen** im Dialogfeld "Setup".|  
-|DESCRIPTION|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Hiermit wird die gleiche Option als **Beschreibung** im Dialogfeld "Setup".|  
-|DRIVER|Die Pfadangabe für den Treiber-DLL.|  
-|DRIVERID|Eine ganzzahlige ID für den Treiber.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5.0)|  
-|FIL|Datei geben dBase III, dBase IV oder dBase 5|  
-|' PAGETIMEOUT '|Gibt den Zeitraum, in Zehntelsekunden, die eine Seite (sofern nicht verwendet wird) im Puffer bleibt, bevor Sie entfernt werden. Der Standardwert ist 600 Zehntelsekunden (60 Sekunden). Beachten Sie, dass diese Option auf alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Hiermit wird die gleiche Option als **Page Timeout** im Dialogfeld "Setup".|  
-|READONLY|True, um die Datei schreibgeschützt zu machen. "False", um die Datei nicht schreibgeschützt machen.<br /><br /> Hiermit wird die gleiche Option als **Read Only** im Dialogfeld "Setup".|  
-|STATISTICS|DBASE-Treiber bestimmt, ob die Größe von Tabellenstatistiken angeglichen werden. Beachten Sie, dass diese Option auf alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Hiermit wird die gleiche Option als **Ungefähre Zeilenanzahl** im Dialogfeld "Setup".|  
-|THREADS|Die Anzahl von Hintergrundthreads für das Modul zu verwenden. Dieser Wert ist 3 und kann nicht geändert werden.<br /><br /> Hiermit wird die gleiche Option als **Threads** im Dialogfeld "Setup".|
+|CollatingSequence|Die Reihenfolge, in der die Felder sortiert werden.<br /><br /> Die Sequenz kann wie folgt lauten: ASCII (Standard) oder International.<br /><br /> Dadurch wird die gleiche Option wie die **Sortierreihenfolge** im Setup Dialogfeld festgelegt.|  
+|DefaultDir|Die Pfadspezifikation für das Verzeichnis.|  
+|DELETED|Gibt für den dBase-Treiber an, ob Zeilen, die als gelöscht markiert wurden, abgerufen oder positioniert werden können. Wenn der Wert auf 1 festgelegt ist, werden gelöschte Zeilen nicht angezeigt. Wenn der Wert auf 0 festgelegt ist, werden gelöschte Zeilen wie nicht gelöschte Zeilen behandelt.<br /><br /> Dadurch wird die gleiche Option wie das **Anzeigen gelöschter Zeilen** im Setup Dialogfeld festgelegt.|  
+|Beschreibung|Eine Beschreibung der Daten in der Datenquelle.<br /><br /> Dadurch wird die gleiche Option wie die **Beschreibung** im Setup Dialogfeld festgelegt.|  
+|DRIVER|Die Pfadspezifikation für die Treiber-DLL.|  
+|DriverID|Eine ganzzahlige ID für den Treiber.<br /><br /> 21 (dBASE III)<br /><br /> 277 (dBASE IV)<br /><br /> 533 (dBASE 5,0)|  
+|RA|Dateityp dBASE III, dBASE IV oder dBASE 5|  
+|PageTimeout|Gibt den Zeitraum in Sekunden an, in dem eine Seite (falls nicht verwendet) im Puffer verbleibt, bevor Sie entfernt wird. Der Standardwert ist 600 Zehntelsekunden (60 Sekunden). Beachten Sie, dass diese Option für alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Dadurch wird die gleiche Option wie das **Seiten Timeout** im Setup Dialogfeld festgelegt.|  
+|READONLY|TRUE, wenn die Datei schreibgeschützt werden soll. FALSE, wenn die Datei nicht schreibgeschützt sein soll.<br /><br /> Dadurch wird die gleiche **Option wie im** Setup Dialogfeld schreibgeschützt festgelegt.|  
+|STATISTICS|Bestimmt für den dBase-Treiber, ob die Statistiken der Tabellengröße angleichen. Beachten Sie, dass diese Option für alle Datenquellen gilt, die den ODBC-Treiber verwenden.<br /><br /> Dadurch wird die gleiche Option wie die **ungefähre Zeilen Anzahl** im Setup Dialogfeld festgelegt.|  
+|Threads|Die Anzahl der Hintergrundthreads, die von der Engine verwendet werden sollen. Dieser Wert ist 3 und kann nicht geändert werden.<br /><br /> Dadurch wird die gleiche Option wie **Threads** im Setup Dialogfeld festgelegt.|

@@ -28,16 +28,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66106287"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatieren der Legende in einem Diagramm (Berichts-Generator und SSRS)
   Die Diagrammlegende enthält Beschreibungen für jede Kategorie in einem Diagramm. Eine Legende umfasst immer ein oder mehrere Legendenelemente. Jedes Legendenelement besteht aus einem farbigen Kästchen, das für die Reihe steht, und einer Textzeichenfolge, die die Reihe beschreibt. Dies ist in der folgenden Abbildung dargestellt.  
   
- ![Diagramm einer Diagrammlegende](../media/rs-legenddiagram.gif "Diagram of a chart legend")  
+ ![Diagrammlegende](../media/rs-legenddiagram.gif "Diagrammlegende")  
   
  Ein Legendenelement ist im Diagramm mit einer einzelnen Reihe verknüpft, mit Ausnahme von Formdiagrammen, bei denen die Legende mit einzelnen Datenpunkten verknüpft ist. Das Diagramm fügt Elemente basierend auf den Reihen, die von den Daten generiert werden, automatisch der Legende hinzu.  
   
@@ -76,15 +76,15 @@ ms.locfileid: "66106287"
 ## <a name="formatting-the-legend-text"></a>Formatieren des Legendentexts  
  Sie können die Schriftart, den Stil und die Farbe des Legendentexts im Dialogfeld **Legendeneigenschaften** auf der Seite **Schriftart** ändern.  
   
- Standardmäßig wird der Legendentext nicht optimiert, damit er dem Legendenbereich entspricht. Um den Legendentext automatisch an den zugewiesenen Platz anzupassen, legen Sie die "AutoFitTextDisabled"-Eigenschaft auf `False` und legen Sie einen minimalen Schriftgrad für die "minfontsize"-Eigenschaft die niedrigste Größe, die Sie denken akzeptabel ist und eine Legende weiterhin ermöglichen die Optimierung.  
+ Standardmäßig wird der Legendentext nicht optimiert, damit er dem Legendenbereich entspricht. Legen Sie die autofittextdeaktivierte Eigenschaft auf `False` fest, und legen Sie für die MinFontSize-Eigenschaft einen minimalen Schrift Grad fest, damit der Legenden Text automatisch an den zugeordneten Bereich angepasst wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Legendeneigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
- [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Dialog Feld "Legenden Eigenschaften", "allgemeine &#40;Berichts-Generator und SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](chart-legend-change-item-text-report-builder.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Ausblenden von Legendenelementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md)   
+ [Ausblenden von Legenden Elementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

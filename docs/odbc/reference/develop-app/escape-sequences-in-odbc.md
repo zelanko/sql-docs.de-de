@@ -15,26 +15,26 @@ ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68051119"
 ---
 # <a name="escape-sequences-in-odbc"></a>Escapesequenzen in ODBC
-Eine Anzahl von Sprachfeatures wie äußere Joins und Aufrufe von Skalarfunktionen werden häufig von DBMS implementiert. Allerdings sind tendenziell die Syntax für diese Funktionen DBMS-spezifische, selbst wenn der standard-Syntax durch die verschiedene Standardorganisationen definiert werden. Aus diesem Grund werden in ODBC-Escapesequenzen, die standard-Syntax für die folgenden Sprachfunktionen enthalten definiert:  
+Eine Reihe von sprach Features, wie z. b. äußere Joins und skalarfunktionsaufrufe, werden häufig von DBMSs implementiert. Die Syntaxen für diese Features sind jedoch tendenziell DBMS-spezifisch, auch wenn standardmäßige Syntaxen durch die verschiedenen Standardtexte definiert werden. Aus diesem Grund definiert ODBC Escapesequenzen, die Standard Syntaxen für die folgenden sprach Features enthalten:  
   
--   Datum "," Time "," Timestamp "und" Datetime-Intervall-Literale  
+-   Datums-, Uhrzeit-, timestamp-und DateTime-Intervall Literale  
   
--   Skalare Funktionen wie z. B. numerische Zeichenfolge und Funktionen für die typkonvertierung Daten  
+-   Skalarfunktionen wie z. b. numerische, Zeichen folgen-und Datentyp-Konvertierungs Funktionen  
   
--   WIE Prädikat Escape-Zeichen  
+-   LIKE-Prädikat-Escapezeichen  
   
 -   Äußere Joins  
   
--   Prozeduraufrufe  
+-   Prozedur Aufrufe  
   
- Die Escapesequenz für ODBC verwendeten lautet wie folgt aus:  
+ Die von ODBC verwendete Escapesequenz lautet wie folgt:  
   
 ```  
   
@@ -42,28 +42,28 @@ Eine Anzahl von Sprachfeatures wie äußere Joins und Aufrufe von Skalarfunktion
   
 ```  
   
-## <a name="remarks"></a>Hinweise  
- Die Escape-Sequenz erkannt und analysiert von Treibern, die die Escapesequenzen mit speziellen DBMS-Grammatik zu ersetzen. Weitere Informationen zu escapesequenzsyntax, finden Sie unter [Escapesequenzen für ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) in Anhang C: SQL-Grammatik.  
+## <a name="remarks"></a>Bemerkungen  
+ Die Escapesequenz wird von Treibern erkannt und analysiert, die die Escapesequenzen durch DBMS-spezifische Grammatik ersetzen. Weitere Informationen zur Escapesequenzsyntax finden Sie unter [ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) -Escapesequenzen in Anhang C: SQL-Grammatik.  
   
 > [!NOTE]  
->  In ODBC 2. *x*, dies war die Standardsyntax der Escapesequenz: **--(\*Hersteller (** _Herstellername_ **), Product (** _Produktnamens_ **)** _Erweiterung_  **\*):**  
+>  In ODBC 2. *x*, dies war die Standard Syntax der Escapesequenz: **--\*(Hersteller**_Name_**), Produkt**_Erweiterung_ __**** ** \*** (Produktname))--  
 >   
->  Zusätzlich zu dieser Syntax eine Kurzsyntax des Formulars definiert wurde: **{** _Erweiterung_ **}**  
+>  Zusätzlich zu dieser Syntax wurde eine Kurzform-Syntax im folgenden Format definiert: **{**_Extension_**}**  
 >   
->  In ODBC 3. *x*die Langform der Escapesequenz ist veraltet und wird ausschließlich die Kurzform verwendet.  
+>  In ODBC 3. *x*, die lange Form der Escapesequenz ist veraltet, und die Kurzform wird exklusiv verwendet.  
   
- Da die Escapesequenzen, die vom Treiber auf die Syntax der DBMS-spezifische Eigenschaften zugeordnet sind, kann eine Anwendung, entweder die Escape-Sequenz oder die DBMS-spezifische Syntax verwenden. Anwendungen, die die DBMS-spezifische Syntax verwenden, werden jedoch nicht interoperabel sein. Wenn Sie die Escape-Sequenz zu verwenden, sollten Anwendungen sicherstellen, dass es sich bei der SQL_ATTR_NOSCAN-Anweisungsattribut deaktiviert ist, wird es standardmäßig. Andernfalls wird die Escape-Sequenz direkt an die Datenquelle gesendet werden, in denen sie in der Regel einen Syntaxfehler führt.  
+ Da die Escapesequenzen vom Treiber der DBMS-spezifischen Syntax zugeordnet werden, kann eine Anwendung entweder die Escapesequenz oder DBMS-spezifische Syntax verwenden. Anwendungen, die die DBMS-spezifische Syntax verwenden, sind jedoch nicht interoperabel. Bei Verwendung der Escapesequenz sollten Anwendungen sicherstellen, dass das Attribut der SQL_ATTR_NOSCAN Anweisung deaktiviert ist, was standardmäßig ist. Andernfalls wird die Escapesequenz direkt an die Datenquelle gesendet, wo Sie in der Regel einen Syntax Fehler verursacht.  
   
- Treiber unterstützen nur die Escape-Sequenzen, die sie zum zugrunde liegenden Sprachfeatures zuordnen können. Z. B. wenn die Datenquelle keine äußeren Joins unterstützt, weder wird des Treibers. Um zu bestimmen, welche Escapesequenzen unterstützt werden, eine Anwendung ruft **SQLGetTypeInfo** und **SQLGetInfo**. Weitere Informationen finden Sie im nächsten Abschnitt [Date, Time und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ Treiber unterstützen nur die Escapesequenzen, die den zugrunde liegenden Sprachfunktionen zugeordnet werden können. Wenn die Datenquelle z. b. keine äußeren Joins unterstützt, ist keiner der Treiber. Um zu ermitteln, welche Escapesequenzen unterstützt werden, ruft eine Anwendung **sqlgettypeingefo** und **SQLGetInfo**auf. Weitere Informationen finden Sie im nächsten Abschnitt, [Datums-, Uhrzeit-und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
--   [Datums-, Zeit- und Timestampliterale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
+-   [Datums-, Zeit- und Zeitstempelliterale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md)  
   
 -   [Aufrufe von Skalarfunktionen](../../../odbc/reference/develop-app/scalar-function-calls.md)  
   
 -   [Escapezeichen des LIKE-Prädikats](../../../odbc/reference/develop-app/like-predicate-escape-character.md)  
   
--   [Äußere Joins](../../../odbc/reference/develop-app/outer-joins.md)  
+-   [Äußere Verknüpfungen](../../../odbc/reference/develop-app/outer-joins.md)  
   
 -   [Prozeduraufrufe](../../../odbc/reference/develop-app/procedure-calls.md)

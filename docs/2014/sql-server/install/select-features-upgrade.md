@@ -1,5 +1,5 @@
 ---
-title: Funktionen auswählen (Upgrade) | Microsoft-Dokumentation
+title: Features auswählen (Upgrade) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d6265fd9d86b96c75fce63a265848f769253024
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092359"
 ---
 # <a name="select-features-upgrade"></a>Funktionen auswählen (Upgrade)
@@ -24,7 +24,7 @@ ms.locfileid: "66092359"
   
  Es ist nicht möglich, die Funktionen zu ändern, die in dieser Version aktualisiert werden sollen. Um dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Funktionen hinzuzufügen, schließen Sie den Upgradevorgang ab, starten Sie Setup neu, und klicken Sie im Installationscenter auf **Neuinstallation oder Hinzufügen von Funktionen zu einer vorhandenen Installation** .  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Verwenden von Upgrade Advisor zur Vorbereitung auf Upgrades](../../../2014/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md)   
  [Verwenden mehrerer Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  

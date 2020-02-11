@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66105670"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)
   Sie können ein Textfeld verwenden, um aus einem Feld im Dataset abgerufenen HTML-Text in den Bericht einzufügen. Der Text kann aus einem einfachen oder komplexen Ausdruck stammen, der zum ordnungsgemäß formatierten HTML evaluiert wird. Formatierter Text kann in allen unterstützten Ausgabeformaten einschließlich PDF gerendert werden.  
   
- ![Rs_HTMLFormatierung](../media/rs-htmlformatting.gif "Rs_HTMLFormatting")  
+ ![rs_HTMLFormatting](../media/rs-htmlformatting.gif "rs_HTMLFormatting")  
   
  Diese Abbildung zeigt Text mit HTML-Formatierung in der Berichtsentwurfsansicht und den gleichen Text wie er beim Ausführen des Berichts gerendert wird.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66105670"
 ## <a name="supported-html-tags"></a>Unterstützte HTML-Tags  
  Nachfolgend finden Sie eine vollständige Liste der Tags, die bei einer Definition als Platzhaltertext als HTML gerendert werden:  
   
--   Header-, Stil- und Blockelemente Elemente: \<H{n}>, \<DIV>, \<SPAN>,\<P>, \<LI>  
+-   Header-, Stil-und Block \<Elemente: H {n} \<>, div \<>, span\<>, P \<>, Li>  
   
  Alle anderen HTML-Markuptags werden bei der Berichtsverarbeitung ignoriert. Wenn der Ausdruck im Platzhaltertext kein wohlgeformtes HTML aufweist, wird der Platzhalter als Text ohne Formatierung gerendert. Bei allen HTML-Tags wird nicht zwischen Groß- und Kleinschreibung unterschieden.  
   
@@ -70,11 +70,11 @@ ms.locfileid: "66105670"
   
 -   CSS-Werte mit ungültigem Format werden ebenso ignoriert wie fehlerhaftes HTML.  
   
--   Wenn ein Tag sowohl Attribute als auch CSS-Formatattribute enthält, kommt der CSS-Eigenschaft eine höhere Priorität zu. Lautet der Text z.B. **\<p style="text-align: right" align="left">** , wird nur das text-align-Attribut angewendet, und der Text wird rechtsbündig ausgerichtet.  
+-   Wenn ein Tag sowohl Attribute als auch CSS-Formatattribute enthält, kommt der CSS-Eigenschaft eine höhere Priorität zu. Wenn Ihr Text z. b. ** \<p Style = "Text-align: Right" align = "Left" #b0 **ist, wird nur das Text-align-Attribut angewendet, und der Text wird rechtsbündig ausgerichtet.  
   
--   Wenn eine Eigenschaft bei Attributen oder CSS-Formaten mehrfach angegeben wurde, wird nur die letzte Instanz der Eigenschaft verwendet. Lautet der Text z.B. **\<p align="left" align="right">** , wird der Text rechtsbündig ausgerichtet.  
+-   Wenn eine Eigenschaft bei Attributen oder CSS-Formaten mehrfach angegeben wurde, wird nur die letzte Instanz der Eigenschaft verwendet. Wenn Ihr Text z. b. ** \<p align = "Left" align = "Right" #b0 **ist, wird der Text rechtsbündig ausgerichtet.  
   
-## <a name="see-also"></a>Siehe auch  
- [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Rendern in HTML (Berichts-Generator und SSRS)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

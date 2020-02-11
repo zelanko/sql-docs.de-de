@@ -1,5 +1,5 @@
 ---
-title: Funktionen auswählen | Microsoft-Dokumentation
+title: Features auswählen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66092367"
 ---
-# <a name="select-features"></a>Funktionen auswählen
-  Verwenden Sie die Seite Funktionsauswahl, um zu aktualisierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten und -Funktionen auszuwählen.  
+# <a name="select-features"></a>Auswählen von Features
+  Verwenden Sie die Seite Funktionsauswahl, um zu aktualisierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten und -Funktionen auszuwählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Klicken Sie auf einen Funktionsnamen im linken Bereich, und zeigen Sie so die Sprache, das Betriebssystem, die Edition und die Statusdetails an.  
   
  Aktivieren Sie zum Aktualisieren einer Komponente oder einer Funktion das Kontrollkästchen neben dem Funktionsnamen. Deaktivieren Sie zum Ausschließen einer Komponente oder einer Funktion von diesem Update das Kontrollkästchen neben dem Funktionsnamen.  

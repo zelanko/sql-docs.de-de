@@ -1,5 +1,5 @@
 ---
-title: dm_repl_traninfo (Transact-SQL) | Microsoft-Dokumentation
+title: sys. dm_repl_traninfo (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,43 +19,43 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68067834"
 ---
-# <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
+# <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Gibt Informationen über jede replizierte Transaktion bzw. jede Change Data Capture-Transaktion zurück.  
 
-|Spaltenname|Datentyp|Beschreibung|  
+|Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Gibt an, ob sich die Transaktion in einer Datenbank befindet, die mithilfe der Peer-zu-Peer-Transaktionsreplikation veröffentlicht wurde. Wenn True, ist der Wert gleich 1; andernfalls ist der Wert 0.|  
 |**db_ver**|**int**|Die Datenbankversion.|  
 |**comp_range_address**|**varbinary(8)**|Definiert einen Bereich für teilweises Rollback, der übersprungen werden muss.|  
 |**textinfo_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Textinformationsstruktur.|  
 |**fsinfo_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten FILESTREAM-Informationsstruktur.|  
-|**begin_lsn**|**Nvarchar(64)**|Protokollsequenznummer (Log Sequence Number, LSN) des Protokolleintrags für den Beginn der Transaktion.|  
-|**commit_lsn**|**Nvarchar(64)**|LSN des Protokolldatensatz für den Commit der Transaktion.|  
-|**dbid**|**smallint**|Datenbank-ID|  
+|**begin_lsn**|**nvarchar (64)**|Protokollsequenznummer (Log Sequence Number, LSN) des Protokolleintrags für den Beginn der Transaktion.|  
+|**commit_lsn**|**nvarchar (64)**|LSN des Protokolldatensatz für den Commit der Transaktion.|  
+|**DBID**|**smallint**|Datenbank-ID|  
 |**rows**|**int**|ID des replizierten Befehls in der Transaktion.|  
-|**xdesid**|**Nvarchar(64)**|Transaktions-ID|  
+|**xdesid für**|**nvarchar (64)**|Transaktions-ID|  
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikeltabellenstruktur, die zuletzt für diese Transaktion verwendet wurde.|  
-|**server**|**nvarchar(514)**|Servername.|  
+|**Servers**|**nvarchar (514)**|Servername.|  
 |**server_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes).|  
-|**database**|**nvarchar(514)**|Datenbankname.|  
+|**Verbindung**|**nvarchar (514)**|Datenbankname.|  
 |**db_len_in_bytes**|**smallint**|Zeichenlänge des Datenbanknamens (in Bytes).|  
-|**originator**|**nvarchar(514)**|Name des Servers, von dem die Transaktion stammt.|  
+|**originator**|**nvarchar (514)**|Name des Servers, von dem die Transaktion stammt.|  
 |**originator_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes), von dem die Transaktion stammt.|  
-|**orig_db**|**nvarchar(514)**|Name der Datenbank, von der die Transaktion stammt.|  
+|**orig_db**|**nvarchar (514)**|Name der Datenbank, von der die Transaktion stammt.|  
 |**orig_db_len_in_bytes**|**smallint**|Zeichenlänge der Datenbank (in Bytes), von der die Transaktion stammt.|  
 |**cmds_in_tran**|**int**|Anzahl der replizierten Befehle in der aktuellen Transaktion, die zum Bestimmen des Zeitpunktes verwendet werden, an dem ein Commit für eine logische Transaktion ausgeführt werden sollte.|  
 |**is_boundedupdate_singleton**|**tinyint**|Gibt an, ob ein eindeutiges Spaltenupdate nur eine einzelne Zeile betrifft.|  
-|**begin_update_lsn**|**Nvarchar(64)**|Die in einem eindeutigen Spaltenupdate verwendete LSN.|  
-|**delete_lsn**|**Nvarchar(64)**|Die als Teil eines Updates zu löschende LSN.|  
-|**last_end_lsn**|**Nvarchar(64)**|Letzte LSN in einer logischen Transaktion.|  
+|**begin_update_lsn**|**nvarchar (64)**|Die in einem eindeutigen Spaltenupdate verwendete LSN.|  
+|**delete_lsn**|**nvarchar (64)**|Die als Teil eines Updates zu löschende LSN.|  
+|**last_end_lsn**|**nvarchar (64)**|Letzte LSN in einer logischen Transaktion.|  
 |**fcomplete**|**tinyint**|Gibt an, ob es sich bei dem Befehl um ein teilweises Update handelt.|  
 |**fcompensated**|**tinyint**|Gibt an, ob die Transaktion in ein teilweises Rollback einbezogen ist.|  
 |**fprocessingtext**|**tinyint**|Gibt an, ob die Transaktion eine Spalte vom BLOB-Datentyp enthält.|  
@@ -70,12 +70,12 @@ ms.locfileid: "68067834"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung in der Veröffentlichungsdatenbank oder in der für Change Data Capture aktivierten Datenbank.  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  Informationen werden nur für replizierte Datenbankobjekte oder für für Change Data Capture aktivierte Tabellen zurückgegeben, die zurzeit in den Artikelcache geladen sind.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Replikation verbundene dynamische Verwaltungssichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
+ [Dynamische Verwaltungs Sichten im Zusammenhang mit der Replikation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   
   

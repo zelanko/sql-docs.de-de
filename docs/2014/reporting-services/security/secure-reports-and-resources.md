@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff0bd8ce8d5024d0d6e2e624c03bcc675af8fbb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66101670"
 ---
 # <a name="secure-reports-and-resources"></a>Sichere Berichte und Ressourcen
@@ -61,7 +61,7 @@ ms.locfileid: "66101670"
  Um das Risiko des Einschließen von Links in einem Bericht, der versehentlich bösartige Skripts ausführt, zu verringern, binden Sie Links nur an Daten von vertrauenswürdigen Quellen. Stellen Sie sicher, dass Daten von den Abfrageergebnissen und den Ausdrücken, die Daten an Links binden, keine Links erstellen, die missbraucht werden können. Verwenden Sie z. B. keinen Link als Grundlage für einen Ausdruck, der Daten aus mehreren Datasetfeldern verkettet. Wechseln Sie ggf. zum Bericht, und suchen Sie nach verdächtigen Skripts und URLs mithilfe von "Quelle anzeigen".  
   
 ## <a name="mitigating-sql-injection-attacks-in-a-parameterized-report"></a>Verhindern von SQL-Injection-Angriffen in einem parametrisierten Bericht  
- In einem Bericht, der einen Parameter vom Typ enthält `String`, achten Sie darauf, dass Sie eine Liste der verfügbaren Werte (auch als Liste der gültigen Werte bezeichnet) verwenden, und stellen Sie sicher, dass Benutzer den Bericht ausführen, nur die erforderlichen Berechtigungen zum Anzeigen der Daten im Bericht hat. Wenn Sie einen Parameter vom Typ `String` definieren, wird für den Benutzer ein Textfeld bereitgestellt, das jeden beliebigen Wert annehmen kann. Mit einer Liste der verfügbaren Werte werden die Werte eingeschränkt, die eingegeben werden können. Wenn der Berichtsparameter an einen Abfrageparameter gebunden ist und Sie keine Liste mit verfügbaren Werten verwenden, kann ein Benutzer des Berichts SQL-Syntax in das Textfeld eingeben. Damit öffnet er den Bericht und Ihren Server potenziell für einen SQL-Injection-Angriff. Wenn der Benutzer über Berechtigungen zum Ausführen der neuen SQL-Anweisung verfügt, können daraus unerwünschte Ergebnisse auf dem Server resultieren.  
+ Verwenden Sie in einem Bericht, der einen Parameter `String`vom Typ enthält, eine Liste der verfügbaren Werte (auch als Liste gültiger Werte bezeichnet), und stellen Sie sicher, dass alle Benutzer, die den Bericht ausführen, nur über die erforderlichen Berechtigungen zum Anzeigen der Daten im Bericht verfügen. Wenn Sie einen Parameter vom Typ `String` definieren, wird für den Benutzer ein Textfeld bereitgestellt, das jeden beliebigen Wert annehmen kann. Mit einer Liste der verfügbaren Werte werden die Werte eingeschränkt, die eingegeben werden können. Wenn der Berichtsparameter an einen Abfrageparameter gebunden ist und Sie keine Liste mit verfügbaren Werten verwenden, kann ein Benutzer des Berichts SQL-Syntax in das Textfeld eingeben. Damit öffnet er den Bericht und Ihren Server potenziell für einen SQL-Injection-Angriff. Wenn der Benutzer über Berechtigungen zum Ausführen der neuen SQL-Anweisung verfügt, können daraus unerwünschte Ergebnisse auf dem Server resultieren.  
   
  Wenn ein Berichtsparameter nicht an einen Abfrageparameter gebunden ist und die Parameterwerte im Bericht enthalten sind, können die Benutzer des Berichts Ausdruckssyntax oder eine URL in den Parameterwert eingeben und den Bericht für Excel oder HTML rendern. Wenn anschließend ein anderer Benutzer den Bericht anzeigt und auf die gerenderten Parameterinhalte klickt, führt der Benutzer möglicherweise unbeabsichtigt das bösartige Skript bzw. den bösartigen Link aus.  
   
@@ -73,9 +73,9 @@ ms.locfileid: "66101670"
 ## <a name="securing-confidential-reports"></a>Sichern vertraulicher Berichte  
  Berichte mit vertraulichen Informationen sollten auf der Datenzugriffsebene geschützt werden. Benutzer müssen in diesem Fall Anmeldeinformationen angeben, um auf die vertraulichen Daten zugreifen zu können. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md). Darüber hinaus können Sie einen Ordner für unbefugte Benutzer sperren. Weitere Informationen finden Sie unter [Sichere Ordner](secure-folders.md).  
   
-## <a name="see-also"></a>Siehe auch  
- (create-and-manage-role-assignments.md)   
- [Konfigurieren des Berichts-Generator-Zugriffs](../report-server/configure-report-builder-access.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ (Create-and-manage-role-assignments.MD)   
+ [Konfigurieren des Berichts-Generator Zugriffs](../report-server/configure-report-builder-access.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](granting-permissions-on-a-native-mode-report-server.md)   
  [Sichern freigegebener Datenquellenelemente](secure-shared-data-source-items.md)   
  [Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](../report-data/store-credentials-in-a-reporting-services-data-source.md)  
