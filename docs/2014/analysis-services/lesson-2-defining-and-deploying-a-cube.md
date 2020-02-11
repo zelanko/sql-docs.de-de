@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 2: Definieren und Bereitstellen eines Cubes | Microsoft-Dokumentation'
+title: 'Lektion 2: definieren und Bereitstellen eines Cubes | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,19 +11,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66078937"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lektion 2: Definieren und Bereitstellen eines Cubes
-  Nach dem Definieren einer Datenquellensicht in Ihrem [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt können Sie einen ersten [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Cube definieren.  
+  Nachdem Sie eine Datenquellen Sicht im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt definiert haben, können Sie einen anfänglichen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Cube definieren.  
   
  Sie können einen Cube und seine Dimensionen in einem Durchgang definieren, indem Sie den Cube-Assistenten verwenden. Alternativ können Sie eine oder mehrere Dimensionen definieren und dann mit dem Cube-Assistenten einen Cube definieren, der diese Dimensionen verwendet. Wenn Sie eine komplexe Projektmappe entwerfen, definieren Sie im Allgemeinen zuerst die Dimensionen. Weitere Informationen finden Sie unter [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md) oder [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
@@ -48,13 +48,13 @@ ms.locfileid: "66078937"
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 3: Ändern von Maßen, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Analysis Services-Lernprogrammszenario](analysis-services-tutorial-scenario.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   
  [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md)   
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
+ [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

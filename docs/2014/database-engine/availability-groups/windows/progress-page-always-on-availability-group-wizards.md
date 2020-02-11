@@ -1,5 +1,5 @@
 ---
-title: Status der Seite (AlwaysOn-Verfügbarkeitsgruppen-Assistenten) | Microsoft-Dokumentation
+title: Fortschritts Seite (AlwaysOn-Verfügbarkeits Gruppen-Assistenten) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62789110"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Seite 'Status' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   Mithilfe dieses Dialogfelds können Sie den Status eines [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Assistenten anzuzeigen, den Sie in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausführen. Die Statusanzeige gibt den relativen Status der Schritte an, die der Assistent ausführt.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Weitere Informationen**  
+ **Weitere Details**  
  Klicken Sie auf den Pfeil nach unten, um ein Statusraster anzuzeigen, in der alle ausgeführten Schritte in der entsprechenden Reihenfolge aufgeführt sind, gefolgt vom derzeit laufenden Vorgang. Das Raster enthält die folgenden Spalten:  
   
  **Name**  
@@ -39,11 +39,11 @@ ms.locfileid: "62789110"
  **Status**  
  Gibt das Ergebnis ausgeführter Schritte und den Prozentsatz des Abschlusses des aktuellen Schritts wie folgt an:  
   
-|Ergebnis|Beschreibung|  
+|Ergebnis|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass beim Vorgang für diesen Schritt ein Fehler aufgetreten ist. Klicken Sie auf den Link, um ein Meldungsdialogfeld anzuzeigen, das den Fehler beschreibt.|  
-|**In Bearbeitung (** *Prozent abgeschlossen* **)**|Gibt an, dass der Vorgang jetzt auftritt, und schätzt den Prozentsatz dieses Schritts, der abgeschlossen wurde.|  
-|**Success**|Gibt an, dass der Vorgang für diesen Schritt erfolgreich abgeschlossen wurde.|  
+|**In Bearbeitung (** *Prozentsatz abgeschlossen* **)**|Gibt an, dass der Vorgang jetzt auftritt, und schätzt den Prozentsatz dieses Schritts, der abgeschlossen wurde.|  
+|**Erfolgreich**|Gibt an, dass der Vorgang für diesen Schritt erfolgreich abgeschlossen wurde.|  
   
  **Weniger Details**  
  Klicken Sie, um das Statusraster auszublenden.  
@@ -61,7 +61,7 @@ ms.locfileid: "62789110"
   
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
   
   

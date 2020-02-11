@@ -1,5 +1,5 @@
 ---
-title: Verhaltensänderungen der Volltextsuche | Microsoft-Dokumentation
+title: Verhaltensänderungen der voll Text Suche | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62813193"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Verhaltensänderungen der Volltextsuche
@@ -31,13 +31,14 @@ ms.locfileid: "62813193"
  Von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wird eine neue Version der Wörtertrennungen und der Wortstammerkennungen für amerikanisches Englisch (LCID 1033) und britisches Englisch (LCID 2057) installiert. Sie können jedoch zur früheren Version dieser Komponenten wechseln, wenn Sie das vorherige Verhalten beibehalten möchten. Weitere Informationen finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Neue Wörtertrennungen und Wortstammerkennungen wurden installiert  
- [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle Wörtertrennungen und Wortstammerkennungen, die von der Volltextsuche und der semantischen Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
+ 
+  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle Wörtertrennungen und Wortstammerkennungen, die von der Volltextsuche und der semantischen Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
   
-1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Ändern der für Englisch (USA) und Englisch (Großbritannien) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
+1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
-2.  Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../includes/msconame-md.md)]-Komponenten ersetzt. Die neuen Komponenten werden standardmäßig aktiviert.  
+2.  Die Wörtertrennungen von Drittanbietern für Dänisch, Polnisch und Türkisch, die in vorherigen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] enthalten waren, wurden durch [!INCLUDE[msCoName](../includes/msconame-md.md)] -Komponenten ersetzt. Die neuen Komponenten werden standardmäßig aktiviert.  
   
-3.  Es gibt neue Wörtertrennungen für Tschechisch und Griechisch. Vorherige Versionen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Volltextsuche unterstützten diese zwei Sprachen nicht.  
+3.  Es gibt neue Wörtertrennungen für Tschechisch und Griechisch. Vorherige Versionen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Volltextsuche unterstützten diese zwei Sprachen nicht.  
   
 ### <a name="behavior-changes-of-new-word-breakers-and-stemmers"></a>Verhaltensänderungen der neuen Wörtertrennungen und Wortstammerkennungen  
  Die neuen Komponenten geben möglicherweise andere Ergebnisse zurück als die älteren Komponenten, wenn Sie Volltextindizes auffüllen und abfragen. Die folgenden Tabellen veranschaulichen einige Unterschiede, die in englischen Ergebnissen zu erwarten sind.  
@@ -50,7 +51,7 @@ ms.locfileid: "62813193"
   
  In einigen Fällen geben die neuen Komponenten *mehr* Ergebnisse zurück:  
   
-|**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
+|**Begriff**|**Ergebnisse aus vorheriger Wörtertrennung und Wortstammerkennung**|**Ergebnisse aus neuer Wörtertrennung und Wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |Katze-Hund|cat<br /><br /> Hund|cat<br /><br /> Katze-Hund<br /><br /> Hund|  
 |cat@dog.com|cat<br /><br /> de<br /><br /> Hund|cat<br /><br /> cat@dog.com<br /><br /> de<br /><br /> Hund|  
@@ -58,18 +59,18 @@ ms.locfileid: "62813193"
   
  In einigen Fällen geben die neuen Komponenten *ebenso viele* Ergebnisse zurück:  
   
-|**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
+|**Begriff**|**Ergebnisse aus vorheriger Wörtertrennung und Wortstammerkennung**|**Ergebnisse aus neuer Wörtertrennung und Wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
 |100$|100$<br /><br /> nn100$|100$<br /><br /> nn100usd|  
 |022|022<br /><br /> nn022|022<br /><br /> nn22|  
-|10:49AM<br /><br /> *(wenn der Begriff eine Uhrzeit ist)*|10:49am<br /><br /> tt1049|10:49AM<br /><br /> tt24104900|  
+|10:49AM<br /><br /> *(wenn der Begriff eine Uhrzeit ist)*|10:49am<br /><br /> tt1049|10:49am<br /><br /> tt24104900|  
   
  In einigen Fällen geben die neuen Komponenten *weniger* Ergebnisse oder Ergebnisse zurück, die möglicherweise nicht von den Anwendungen erwartet werden:  
   
-|**Begriff**|**Ergebnisse mit der vorherigen wörtertrennung und wortstammerkennung**|**Ergebnisse mit neuen wörtertrennung und wortstammerkennung**|  
+|**Begriff**|**Ergebnisse aus vorheriger Wörtertrennung und Wortstammerkennung**|**Ergebnisse aus neuer Wörtertrennung und Wortstammerkennung**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(wobei die Begriffe keine gültigen englischen Zeichen sind)*|"Jěˊÿqℭžl"|je yq zl|  
-|Tabelle|Tabelle<br /><br /> -Tabelle|Tabelle|  
+|jě ˊ ÿqcžl<br /><br /> *(wenn die Begriffe keine gültigen englischen Zeichen sind)*|"jě ˊ ÿqcžl"|je yq zl|  
+|Tabelle|Tabelle<br /><br /> table|Tabelle|  
 |Katze-|cat<br /><br /> Katze-|cat|  
 |v-z *(wobei v und z Füllwörter sind)*|*(keine Ergebnisse)*|v-z|  
 |$100 000 USD|$100<br /><br /> 000<br /><br /> nn000<br /><br /> nn100$<br /><br /> usd|$100 000 USD<br /><br /> nn100000usd|  
@@ -79,33 +80,34 @@ ms.locfileid: "62813193"
 ## <a name="behavior-changes-in-full-text-search-in-sql-server-2008"></a>Verhaltensänderungen in der Volltextsuche in SQL Server 2008  
  In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und späteren Versionen ist die Volltext-Engine als Datenbankdienst in die relationale Datenbank integriert. Sie ist darin als Teil der Infrastruktur der Engine für Serverabfragen und Speicherung vorhanden. Die neue Architektur der Volltextsuche erfüllt folgende Zwecke:  
   
--   Integrierte Speicher- und Management-Volltextsuche ist jetzt direkt in die inhärenten Speicher- und Verwaltungsfunktionen von integriert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und der MSFTESQL-Dienst nicht mehr vorhanden.  
+-   Integrierter Speicher und Verwaltung: die Volltextsuche ist jetzt direkt in die inhärenten Speicher-und Verwaltungsfunktionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]von integriert, und der MSFTESQL-Dienst ist nicht mehr vorhanden.  
   
     -   Volltextindizes werden in den Datenbankdateigruppen gespeichert, anstatt im Dateisystem. Administratorvorgänge in einer Datenbank, z. B. das Erstellen einer Sicherung, wirken sich automatisch auf die entsprechenden Volltextindizes aus.  
   
     -   Ein Volltextkatalog ist jetzt ein virtuelles Objekt, das keiner Dateigruppe angehört. Es ist ein logisches Konzept, das für eine Gruppe von Volltextindizes steht. Aus diesem Grund sind viele Katalogverwaltungsfunktionen als veraltet markiert worden, was bei einigen Funktionen zu größeren Änderungen geführt hat. Weitere Informationen finden Sie unter [Als veraltet markierte Funktionen der Datenbank-Engine in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md) und [Fehlerhafte Änderungen der Volltextsuche](breaking-changes-to-full-text-search.md).  
   
         > [!NOTE]  
-        >  DDL-Anweisungen für [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[tsql](../includes/tsql-md.md)], die angeben, dass die Volltextkataloge ordnungsgemäß funktionieren.  
+        >  [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)][!INCLUDE[tsql](../includes/tsql-md.md)] DDL-Anweisungen, die voll Text Kataloge angeben, funktionieren ordnungsgemäß.  
   
--   Sprachintegrierte Abfrage Verarbeitung der neuen Volltext-Suchdienst Abfrageprozessor ist Teil der Datenbank-Engine und ist vollständig in der SQL Server-Abfrageprozessor integriert. Dies bedeutet, dass der Abfrageoptimierer die Prädikate der Volltextabfrage erkennt und automatisch so effizient wie möglich ausführt.  
+-   Integrierte Abfrage Verarbeitung: der neue Abfrage Prozessor für die Volltextsuche ist Teil des Datenbank-Engine und ist vollständig in den SQL Server-Abfrage Prozessor integriert. Dies bedeutet, dass der Abfrageoptimierer die Prädikate der Volltextabfrage erkennt und automatisch so effizient wie möglich ausführt.  
   
--   Verbesserte Verwaltung und Problembehandlung für integrierte Volltextsuche verfügt über Tools zur Analyse von Search-Datenstrukturen, z. B. den Volltextindex, der die Ausgabe einer gegebenen wörtertrennung, die stoppwortkonfiguration usw. zu vereinfachen.  
+-   Verbesserte Verwaltung und Problembehandlung: in der integrierten Volltextsuche finden Sie Tools, mit denen Sie Such Strukturen analysieren können, wie z. b. den Volltextindex, die Ausgabe einer bestimmten Wörter Trennung, die Stopp Wort Konfiguration usw.  
   
 -   Füllwörter und Füllwortdateien sind durch Stoppwörter und Stoplisten ersetzt worden. Eine Stoppliste ist ein Datenbankobjekt, das für Stoppwörter Verwaltbarkeitstasks bereitstellt und die Integrität zwischen verschiedenen Serverinstanzen und -umgebungen verbessert. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und höhere Versionen enthalten für viele in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] vorhandene Sprachen neue Wörtertrennungen. Nur die Wörtertrennungen für Englisch, Koreanisch, Thailändisch und Chinesisch (alle Formen) bleiben gleich. Wenn für andere Sprachen beim Upgrade einer [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]-Datenbank auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ein Volltextkatalog importiert wurde, ist mindestens eine Sprache, die von den Volltextindizes im Volltextkatalog verwendet wird, jetzt ggf. neuen Wörtertrennungen zugeordnet. Diese Wörtertrennungen verhalten sich ggf. etwas anders als die importierten Wörtertrennungen. Weitere Informationen zur Gewährleistung der Konsistenz zwischen Abfragen und dem Inhalt des Volltextindexes finden Sie unter [Upgrade der Volltextsuche](../relational-databases/search/upgrade-full-text-search.md).  
+-   
+  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und höhere Versionen enthalten für viele in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] vorhandene Sprachen neue Wörtertrennungen. Nur die Wörtertrennungen für Englisch, Koreanisch, Thailändisch und Chinesisch (alle Formen) bleiben gleich. Wenn für andere Sprachen beim Upgrade einer [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]-Datenbank auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ein Volltextkatalog importiert wurde, ist mindestens eine Sprache, die von den Volltextindizes im Volltextkatalog verwendet wird, jetzt ggf. neuen Wörtertrennungen zugeordnet. Diese Wörtertrennungen verhalten sich ggf. etwas anders als die importierten Wörtertrennungen. Weitere Informationen zur Gewährleistung der Konsistenz zwischen Abfragen und dem Inhalt des Volltextindexes finden Sie unter [Upgrade der Volltextsuche](../relational-databases/search/upgrade-full-text-search.md).  
   
 -   Es wurde ein neuer FDHOST-Startprogrammdienst (MSSQLFDLauncher) hinzugefügt. Weitere Informationen finden Sie unter [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md).  
   
--   Volltextindizierung funktioniert mit einer [FILESTREAM](../relational-databases/blob/filestream-sql-server.md) Spalte auf die gleiche Weise, die mit einem `varbinary(max)` Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
+-   Die Volltextindizierung funktioniert mit einer [FileStream](../relational-databases/blob/filestream-sql-server.md) -Spalte genauso wie mit einer `varbinary(max)` -Spalte. Die FILESTREAM-Tabelle muss eine Spalte aufweisen, die die Dateinamenerweiterung für jeden FILESTREAM BLOB enthält. Weitere Informationen finden Sie unter [Abfragen mit Volltextsuche](../relational-databases/search/query-with-full-text-search.md),[Konfigurieren und Verwalten von Filtern für die Suche](../relational-databases/search/configure-and-manage-filters-for-search.md) und [sys.fulltext_document_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql).  
   
      Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   
-## <a name="see-also"></a>Siehe auch  
- [Volltextsuche](../relational-databases/search/full-text-search.md)   
- [Abwärtskompatibilität der Volltextsuche](../../2014/database-engine/full-text-search-backward-compatibility.md)   
- [Upgrade der Volltextsuche](../relational-databases/search/upgrade-full-text-search.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Voll Text Suche](../relational-databases/search/full-text-search.md)   
+ [Abwärtskompatibilität der voll Text Suche](../../2014/database-engine/full-text-search-backward-compatibility.md)   
+ [Upgrade der voll Text Suche](../relational-databases/search/upgrade-full-text-search.md)   
  [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md)  
   
   

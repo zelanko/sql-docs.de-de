@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62829600"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
@@ -25,14 +25,14 @@ ms.locfileid: "62829600"
   
  Die folgende Abbildung zeigt den **XML-Task-Editor** eingestellt für die XML-Validierung mit umfassender Fehlerausgabe.  
   
- ![XML-Taskeigenschaften im XML-Task-Editor](../media/xmltaskproperties.jpg "XML-Taskeigenschaften im XML-Task-Editor")  
+ ![XML-Task Eigenschaften im Editor für den XML-Task](../media/xmltaskproperties.jpg "XML-Task Eigenschaften im Editor für den XML-Task")  
   
  Bevor die Eigenschaft `ValidationDetails` verfügbar war, gab die XML-Validierung durch den XML-Task nur „true“ oder „false“ als Ergebnis zurück, ohne Informationen zu Fehlern oder wo diese auftraten. Wenn Sie jetzt die Eigenschaft `ValidationDetails` auf „true“ festlegen, enthält die Ausgabedatei ausführliche Informationen zu jedem Fehler, einschließlich der Zeilennummer und der Position. Sie können diese Informationen verwenden, um Fehler in XML-Dokumenten zu verstehen, zu finden und zu beheben.  
   
  Die XML-Validierungsfunktion lässt sich problemlos auch für große XML-Dokumente und eine große Anzahl von Fehlern skalieren. Da die Ausgabedatei selbst im XML-Format ist, können Sie die Ausgabe abfragen und analysieren. Enthält die Ausgabe beispielsweise sehr viele Fehler, so können Sie diese, wie in diesem Thema beschrieben, mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage gruppieren.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) eingeführt, die `ValidationDetails` -Eigenschaft in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 2. Die Eigenschaft ist auch verfügbar im [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und in SQL Server 2016.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) hat die `ValidationDetails` -Eigenschaft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] in Service Pack 2 eingeführt. Die-Eigenschaft ist auch in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und in SQL Server 2016 verfügbar.  
   
 ## <a name="sample-output-for-xml-thats-valid"></a>Beispielausgabe für eine XML-Datei ohne Fehler  
  Hier ist eine Beispiel-Ausgabedatei mit Validierungsergebnissen für eine gültige XML-Datei.  
@@ -118,8 +118,8 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  ![Abfrage zum Gruppieren von XML-Fehlern in Management Studio](../media/queryforxmlerrors.jpg "Abfrage zum Gruppieren von XML-Fehlern in Management Studio")  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [XML-Task](xml-task.md)   
- [Editor für den XML-Task &#40;Seite Allgemein&#41;](../xml-task-editor-general-page.md)  
+ [Editor für den XML-Task &#40;Seite "Allgemein"&#41;](../xml-task-editor-general-page.md)  
   
   

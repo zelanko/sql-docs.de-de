@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 66393f8b48c9075c3200b1c56b8447410e143c57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62921054"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt (vollständiges Wiederherstellungsmodell)
@@ -33,7 +33,7 @@ ms.locfileid: "62921054"
   
      [Sicherheit](#Security)  
   
--   **Wiederherstellen einer SQL Server-Datenbank zu einem bestimmten Zeitpunkt mit:**  
+-   **So stellen Sie eine SQL Server Datenbank zu einem bestimmten Zeitpunkt wieder her mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -54,8 +54,8 @@ ms.locfileid: "62921054"
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
- **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ **So stellen Sie eine Datenbank bis zu einem bestimmten Zeitpunkt wieder her**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit der entsprechenden Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie die Serverstruktur.  
   
@@ -72,15 +72,15 @@ ms.locfileid: "62921054"
     > [!NOTE]  
     >  Wenn die Sicherung von einem anderen Server abgerufen wird, verfügt der Zielserver über keine Sicherungsverlaufsinformationen für die angegebene Datenbank. Wählen Sie in diesem Fall **Sicherungsmedium** aus, um die wiederherzustellende Datei oder das Medium manuell anzugeben.  
   
-    -   **Sicherungsmedium**  
+    -   **Schutz**  
   
-         Klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Sicherungsmedien auswählen** zu öffnen. Wählen Sie im Feld **Sicherungsmedientyp** einen der aufgeführten Medientypen aus. Wenn Sie ein oder mehrere Medien für das Feld **Sicherungsmedien** auswählen möchten, klicken Sie auf **Hinzufügen**.  
   
          Klicken Sie nach dem Hinzufügen der gewünschten Medien zum Listenfeld **Sicherungsmedien** auf **OK** , um zur Seite **Allgemein** zurückzukehren.  
   
          Wählen Sie im Listenfeld **Quelle: Sicherungsmedium: Datenbank** den Namen der Datenbank aus, die wiederhergestellt werden soll.  
   
-         **Hinweis** Diese Liste ist nur verfügbar, wenn **Sicherungsmedium** ausgewählt wird. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
+         **Hinweis** Diese Liste ist nur verfügbar, wenn **Gerät** ausgewählt ist. Nur Datenbanken mit Sicherungen auf dem ausgewählten Medium stehen zur Verfügung.  
   
 5.  Im Abschnitt **Ziel** wird das Feld **Datenbank** automatisch mit dem Namen der Datenbank aufgefüllt, die wiederhergestellt werden soll. Geben Sie zum Ändern des Datenbanknamens den neuen Namen ins Feld **Datenbank** ein.  
   
@@ -95,50 +95,50 @@ ms.locfileid: "62921054"
   
 9. Nachdem Sie den gewünschten Zeitpunkt für die Wiederherstellung angegeben haben, stellt der Datenbankwiederherstellungsberater sicher, dass die Spalte **Wiederherstellen** des Rasters **Wiederherzustellende Sicherungssätze** nur die Sicherungen angezeigt, die für die Wiederherstellung bis zu diesem Zeitpunkt benötigt werden. Die ausgewählten Sicherungen machen den empfohlenen Wiederherstellungsplan für Ihre Zeitpunktwiederherstellung aus. Verwenden Sie nach Möglichkeit nur die für diesen Wiederherstellungsvorgang ausgewählten Sicherungen.  
   
-     Weitere Informationen zu den Spalten des Rasters **Wiederherzustellende Sicherungssätze** finden Sie unter [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)bezeichnet) gesichert werden. Informationen zum Datenbankwiederherstellungsberater finden Sie unter [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
+     Weitere Informationen zu den Spalten des Rasters **Wiederherzustellende Sicherungssätze** finden Sie unter [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](../../integration-services/general-page-of-integration-services-designers-options.md). Informationen zum Datenbankwiederherstellungsberater finden Sie unter [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md).  
   
 10. Auf der Seite **Optionen** im Bereich **Wiederherstellungsoptionen** können Sie entsprechend Ihren Anforderungen die folgenden Optionen auswählen:  
   
-    -   **Vorhandene Datenbank überschreiben (WITH REPLACE)**  
+    -   **Vorhandene Datenbank überschreiben (with Replace)**  
   
-    -   **Replikationseinstellungen beibehalten (WITH KEEP_REPLICATION)**  
+    -   **Replikationseinstellungen beibehalten (mit KEEP_REPLICATION)**  
   
-    -   **Zugriff auf die wiederhergestellte Datenbank einschränken (WITH RESTRICTED_USER)**  
+    -   **Beschränken Sie den Zugriff auf die wiederhergestellte Datenbank (mit RESTRICTED_USER).**  
   
      Weitere Informationen zu diesen Optionen finden Sie unter [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](restore-database-options-page.md).  
   
 11. Aktivieren Sie eine Option für das Feld **Wiederherstellungsstatus** . In diesem Feld wird der Status der Datenbank nach dem Wiederherstellungsvorgang bestimmt.  
   
-    -   **RESTORE WITH RECOVERY** ist das Standardverhalten, das die Datenbank betriebsbereit belässt, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird. Zusätzliche Transaktionsprotokolle können nicht wiederhergestellt werden. Wählen Sie diese Option nur aus, wenn Sie alle benötigten Sicherungen jetzt wiederherstellen möchten.  
+    -   **Restore with Recovery** ist das Standardverhalten, bei dem die Datenbank zur Verwendung bereit bleibt, indem für Transaktionen ohne Commit ein Rollback ausgeführt wird. Zusätzliche Transaktionsprotokolle können nicht wiederhergestellt werden. Wählen Sie diese Option nur aus, wenn Sie alle benötigten Sicherungen jetzt wiederherstellen möchten.  
   
-    -   **RESTORE WITH NORECOVERY** belässt die Datenbank nicht betriebsbereit und führt kein Rollback für Transaktionen ohne Commit aus. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. Die Datenbank kann erst verwendet werden, wenn sie wiederhergestellt wurde.  
+    -   **Restore with NORECOVERY** , wodurch die Datenbank nicht betriebsbereit bleibt, und führt kein Rollback für Transaktionen ohne Commit aus. Zusätzliche Transaktionsprotokolle können wiederhergestellt werden. Die Datenbank kann erst verwendet werden, wenn sie wiederhergestellt wurde.  
   
-    -   **RESTORE WITH STANDBY** belässt die Datenbank im schreibgeschützten Modus. Diese Option macht Transaktionen rückgängig, für die noch kein Commit ausgeführt wurde, speichert die Umkehraktionen aber in einer Standbydatei, damit die Auswirkungen der Wiederherstellung rückgängig gemacht werden können.  
+    -   Stellen Sie eine **Wiederherstellung mit Standby her** , wodurch die Datenbank im schreibgeschützten Modus belassen wird. Diese Option macht Transaktionen rückgängig, für die noch kein Commit ausgeführt wurde, speichert die Umkehraktionen aber in einer Standbydatei, damit die Auswirkungen der Wiederherstellung rückgängig gemacht werden können.  
   
      Beschreibungen der Optionen für den Bereich finden Sie unter [Datenbank wiederherstellen &#40;Seite Optionen&#41;](restore-database-options-page.md).  
   
-12. **Erstellen der Sicherung des Protokollfragments vor dem Wiederherstellen** wird ausgewählt, wenn es für den ausgewählten Zeitpunkt erforderlich ist. Sie müssen diese Einstellung nicht ändern, können das Protokollfragment jedoch sichern, auch wenn es nicht erforderlich ist.  
+12. Erstellen Sie die Sicherung des Protokoll Fragments, **bevor die Wiederherstellung** ausgewählt wird, wenn dies für den ausgewählten Zeitpunkt erforderlich ist. Sie müssen diese Einstellung nicht ändern, können das Protokollfragment jedoch sichern, auch wenn es nicht erforderlich ist.  
   
 13. Bei Wiederherstellungsvorgängen treten möglicherweise Fehler auf, wenn aktive Verbindungen zur Datenbank bestehen. Aktivieren Sie die Option **Bestehende Verbindungen schließen** , um sicherzustellen, dass alle aktiven Verbindungen zwischen [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] und der Datenbank geschlossen werden. Durch die Aktivierung dieses Kontrollkästchens wechselt die Datenbank in einen Einzelbenutzermodus, bevor Wiederherstellungsvorgänge ausgeführt werden. Außerdem wird dadurch die Datenbank auf einen Multibenutzermodus festgelegt, wenn der Vorgang abgeschlossen ist.  
   
 14. Wählen Sie **Bestätigung vor Wiederherstellen jeder einzelnen Sicherung** aus, wenn Sie zwischen jedem Wiederherstellungsvorgang zur Bestätigung aufgefordert werden möchten. Dies ist in der Regel nur bei großen Datenbanken und bei der gewünschten Überwachung des Status des Wiederherstellungsvorgangs erforderlich.  
   
 ##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- **Before you begin**  
+ **Bevor Sie beginnen**  
   
  Die Wiederherstellung zu einem bestimmten Zeitpunkt erfolgt immer aus einer Protokollsicherung. In jeder RESTORE LOG-Anweisung der Wiederherstellungssequenz müssen Sie den Zielzeitpunkt oder die Transaktion in einer identischen STOPAT-Klausel angeben. Als Voraussetzung für eine Zeitpunktwiederherstellung müssen Sie zuerst eine vollständige Datenbanksicherung wiederherstellen, deren Endpunkt vor dem Zielwiederherstellungszeitpunkt liegt. Diese vollständige Datenbanksicherung kann älter als die letzte vollständige Datenbanksicherung sein, solange Sie dann jede nachfolgende Protokollsicherung wiederherstellen, bis zu und einschließlich der Protokollsicherung, die den Zielzeitpunkt enthält.  
   
  Damit Sie besser ermitteln können, welche Datenbanksicherung wiederhergestellt werden soll, können Sie in der RESTORE DATABASE-Anweisung die WITH STOPAT-Klausel angeben, um einen Fehler auszulösen, wenn eine Datensicherung für den angegebenen Zielzeitpunkt zu aktuell ist. Die vollständige Datensicherung wird immer wiederhergestellt, auch wenn sie den Zielzeitpunkt enthält.  
   
- **Grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax**  
+ **Grund [!INCLUDE[tsql](../../includes/tsql-md.md)] Legende Syntax**  
   
- RESTORE LOG *Database_name* FROM < Sicherungsmedium > WITH STOPAT  **= *`time`* ,** Wiederherstellung...  
+ Protokoll *database_name* aus <wiederherstellen backup_device> mit STOPAT ** = *`time`*,** Wiederherstellung...  
   
- Der Wiederherstellungszeitpunkt ist der Transaktionscommit, die am oder vor dem aufgetreten sind die `datetime` -Wert, der angegebenen *Zeit*.  
+ Der Wiederherstellungspunkt ist der letzte Transaktionscommit, der am `datetime` oder vor dem Wert aufgetreten ist, der von *time*angegeben wird.  
   
- Wenn Sie nur die Änderungen vor dem angegebenen Zeitpunkt wiederherstellen möchten, geben Sie für die einzelnen Sicherungen, die Sie wiederherstellen, WITH STOPAT **=** *time* an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
+ Wenn Sie nur die vor einem bestimmten Zeitpunkt vorgenommenen Änderungen wiederherstellen möchten, geben Sie für jede **=** wiederhergestellte Sicherung with STOPAT *time* an. Damit stellen Sie sicher, dass der Zielzeitpunkt nicht überschritten wird.  
   
- **So stellen Sie eine Datenbank bis zu einem Zeitpunkt wieder her**  
+ **So stellen Sie eine Datenbank bis zu einem bestimmten Zeitpunkt wieder her**  
   
 > [!NOTE]  
 >  Ein Beispiel für diese Prozedur finden Sie weiter unten in diesem Abschnitt unter [Beispiel (Transact-SQL)](#TsqlExample).  
@@ -148,11 +148,11 @@ ms.locfileid: "62921054"
 2.  Führen Sie die RESTORE DATABASE-Anweisung mithilfe der Option NORECOVERY aus.  
   
     > [!NOTE]  
-    >  Wenn in einer Teilwiederherstellungssequenz eine [FILESTREAM](../blob/filestream-sql-server.md) -Dateigruppe ausgeschlossen wird, wird die Wiederherstellung bis zu einem bestimmten Zeitpunkt nicht unterstützt. Sie können das Fortsetzen der Wiederherstellungssequenz erzwingen. Die FILESTREAM-Dateigruppen, die nicht in die RESTORE-Anweisung eingeschlossen werden, können jedoch zu keinem Zeitpunkt wiederhergestellt werden. Wenn Sie eine Wiederherstellung bis zu einem bestimmten Zeitpunkt erzwingen möchten, geben Sie die CONTINUE_AFTER_ERROR-Option zusammen mit der Option STOPAT, STOPATMARK oder STOPBEFOREMARK an. Diese müssen Sie auch in den folgenden RESTORE LOG-Anweisungen angeben. Wenn Sie CONTINUE_AFTER_ERROR angeben, ist die Teilwiederherstellungssequenz erfolgreich, und die FILESTREAM-Dateigruppe wird nicht mehr wiederherstellbar.  
+    >  Wenn eine Teil Wiederherstellungs Sequenz eine [FileStream](../blob/filestream-sql-server.md) -Datei Gruppe ausschließt, wird die Point-in-Time-Wiederherstellung nicht unterstützt. Sie können das Fortsetzen der Wiederherstellungssequenz erzwingen. Die FILESTREAM-Dateigruppen, die nicht in die RESTORE-Anweisung eingeschlossen werden, können jedoch zu keinem Zeitpunkt wiederhergestellt werden. Wenn Sie eine Wiederherstellung bis zu einem bestimmten Zeitpunkt erzwingen möchten, geben Sie die CONTINUE_AFTER_ERROR-Option zusammen mit der Option STOPAT, STOPATMARK oder STOPBEFOREMARK an. Diese müssen Sie auch in den folgenden RESTORE LOG-Anweisungen angeben. Wenn Sie CONTINUE_AFTER_ERROR angeben, ist die Teilwiederherstellungssequenz erfolgreich, und die FILESTREAM-Dateigruppe wird nicht mehr wiederherstellbar.  
   
 3.  Stellen Sie die letzte differenzielle Datenbanksicherung wieder her und – sofern vorhanden –  ohne dabei die Datenbank wiederherzustellen (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Wenden Sie jede einzelne transaktionsprotokollsicherung in derselben Reihenfolge an, in dem sie, und erstellt wurde, Sie dabei den Zeitpunkt, an die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *Database_name* FROM < Sicherungsgerät > WITH STOPAT **= *`time`* ,** RECOVERY).  
+4.  Wenden Sie jede Transaktionsprotokoll Sicherung in derselben Reihenfolge an, in der Sie erstellt wurden, und geben Sie dabei den Zeitpunkt an, zu dem die Wiederherstellung des Protokolls beendet werden soll (RESTORE DATABASE *database_name* from <backup_device> with STOPAT**=*`time`*,** Recovery).  
   
     > [!NOTE]  
     >  Die Optionen RECOVERY und STOPAT. Wenn die Transaktionsprotokollsicherung den geforderten Zeitpunkt nicht enthält (z. B. wenn der angegebene Zeitpunkt hinter dem Zeitpunkt liegt, bis zu dem das Transaktionsprotokoll reicht), wird eine Warnung erzeugt, und die Datenbank wird nicht wiederhergestellt.  
@@ -192,7 +192,7 @@ GO
   
 -   [Wiederherstellen zu einer Protokollfolgenummer &#40;SQL Server&#41;](recover-to-a-log-sequence-number-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [RESTORE HEADERONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-headeronly-transact-sql)  

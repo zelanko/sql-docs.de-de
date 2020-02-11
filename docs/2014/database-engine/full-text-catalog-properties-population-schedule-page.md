@@ -1,5 +1,5 @@
 ---
-title: Volltextkatalog-Eigenschaften (Seite Auffüllungszeitplan) | Microsoft-Dokumentation
+title: Voll Text Katalog-Eigenschaften (Seite auffüllungs Zeitplan) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778822"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Volltextkatalog-Eigenschaften (Seite Auffüllungszeitplan)
@@ -31,7 +31,7 @@ ms.locfileid: "62778822"
  **Auffüllungstyp**  
  Zeigen Sie den Auffüllungsvorgang an oder ändern Sie ihn: vollständig, inkrementell oder ein Optimierungsvorgang.  
   
- **Enabled**  
+ **Aktiviert**  
  Aktivieren oder deaktivieren Sie dieses Kontrollkästchen, um den geplanten Vorgang zu aktivieren bzw. deaktivieren.  
   
  **Beschreibung**  
@@ -46,7 +46,7 @@ ms.locfileid: "62778822"
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Auffüllungszeitplan zu entfernen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  
   
   

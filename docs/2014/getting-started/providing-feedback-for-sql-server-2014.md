@@ -1,5 +1,5 @@
 ---
-title: Bereitstellen von Feedback für SQLServer 2014 | Microsoft-Dokumentation
+title: Bereitstellen von Feedback für SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62772277"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Senden von Feedback zu SQL Server 2014
+  
   [!INCLUDE[msCoName](../includes/msconame-md.md)] möchte Ihnen dafür danken, dass Sie sich die Zeit nehmen, uns beim Verbessern unserer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Produkte und der zugehörigen Dokumentation zu helfen. Sie können Vorschläge zu den Produktfunktionen und zur Benutzeroberfläche sowie Fehlerberichte weitergeben, Feedback zur Dokumentation geben und sich dazu entschließen, Fehlerberichte und Verwendungsdaten automatisch an [!INCLUDE[msCoName](../includes/msconame-md.md)] zu senden. Jede dieser drei Feedbackoptionen wird hier beschrieben.  
   
 ## <a name="submitting-feedback-about-the-product"></a>Senden von Feedback zum Produkt  
@@ -49,13 +50,15 @@ ms.locfileid: "62772277"
   
 -   Greifen Sie vom Hilfsprogramm aus auf die Hilfe zu.  
   
--   Wählen Sie die **Hilfe** auf das Kontrollkästchen der **Symbolleisten** Registerkarte die **Extras/Anpassen…...**  Befehl.  
+-   Aktivieren Sie das Kontrollkästchen **Hilfe** auf der Registerkarte **Symbolleisten** des Befehls Extras **/anpassen...** .  
   
 ## <a name="automatic-error-and-usage-reporting"></a>Automatische Fehler- und Verwendungsberichte  
- Sie können festlegen, dass automatisch Fehlerberichte und Daten über Ihre Nutzung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Software und -Dienste an Microsoft gesendet werden. [!INCLUDE[msCoName](../includes/msconame-md.md)] verwendet diese Informationen, um die Funktionalität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu verbessern. Alle Daten werden vertraulich behandelt.  
+ Sie können festlegen, dass automatisch Fehlerberichte und Daten über Ihre Nutzung der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Software und -Dienste an Microsoft gesendet werden. 
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] verwendet diese Informationen, um die Funktionalität von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu verbessern. Alle Daten werden vertraulich behandelt.  
   
 ### <a name="managing-automatic-usage-reporting"></a>Verwalten der automatischen Fehlerberichterstellung  
- Dank der automatischen Verwendungsberichterstattung können Sie entscheiden, ob Sie Daten sammeln und an [!INCLUDE[msCoName](../includes/msconame-md.md)] senden möchten. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet zwei Pipelines zum Übertragen der Verwendungsdaten. Diese beiden Pipelines übertragen ähnliche Daten, aber für verschiedene Programme, und sie können unabhängig voneinander aktiviert oder deaktiviert werden. Durch das Aktivieren oder Deaktivieren einer Pipeline durch eines der Programme, wird gleichzeitig die Datensammlung für andere Programme, die ebenfalls diese Pipeline verwenden, aktiviert bzw. deaktiviert.  
+ Dank der automatischen Verwendungsberichterstattung können Sie entscheiden, ob Sie Daten sammeln und an [!INCLUDE[msCoName](../includes/msconame-md.md)] senden möchten. 
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet zwei Pipelines zum Übertragen der Verwendungsdaten. Diese beiden Pipelines übertragen ähnliche Daten, aber für verschiedene Programme, und sie können unabhängig voneinander aktiviert oder deaktiviert werden. Durch das Aktivieren oder Deaktivieren einer Pipeline durch eines der Programme, wird gleichzeitig die Datensammlung für andere Programme, die ebenfalls diese Pipeline verwenden, aktiviert bzw. deaktiviert.  
   
 -   Eine Pipeline wird zur Übertragung von Verwendungsdaten für alle Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Eine Ausnahme bilden lediglich die Daten zur Onlinedokumentation und die Daten zu einigen Elementen der [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio-basierten Benutzerschnittstelle in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Tools. Nach dem Setup können Sie diese Pipeline wieder deaktivieren bzw. aktivieren. Öffnen Sie dazu in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-basiertes Projekt. Wählen Sie anschließend im Menü **Hilfe** die Option **Kunden-Feedbackoptionen** aus. Dieser Befehl wird nach dem Öffnen eines [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-basierten Projekts angezeigt.  
   

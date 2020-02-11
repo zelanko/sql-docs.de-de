@@ -1,5 +1,5 @@
 ---
-title: Volltextindex-Eigenschaften (Seite Allgemein) | Microsoft-Dokumentation
+title: Voll Text Index-Eigenschaften (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778941"
 ---
 # <a name="full-text-index-properties-general-page"></a>Volltextindex-Eigenschaften (Seite 'Allgemein')
-  **Zum Anzeigen oder ändern die veränderbaren Eigenschaften einen Volltextindex**  
+  **So zeigen Sie die veränderbaren Eigenschaften eines Volltextindexes an oder ändern Sie diese**  
   
 -   [Verwalten von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Volltextkatalog**  
+ **Voll Text Katalog**  
  Zeigt den Namen des Volltextkatalogs an, dem dieser Volltextindex zugeordnet wird.  
   
  **Datenbank**  
@@ -34,10 +34,10 @@ ms.locfileid: "62778941"
  **Table**  
  Zeigt den Namen der Tabelle an, für die der Volltextindex definiert wurde.  
   
- **Volltextindex-Schlüssel**  
+ **Volltext-Indexschlüssel**  
  Zeigt den Namen des Volltext-Indexschlüssels an, der einen eindeutigen Index für eine einzelne Spalte der Tabelle darstellt.  
   
- **Tabelle-Volltext-Auffüllstatus-**  
+ **Volltext-Auffüllstatus-Tabelle**  
  Zeigt den Auffüllungsstatus der volltextindizierten Tabelle an.  
   
  Die folgenden Werte sind möglich:  
@@ -54,7 +54,7 @@ ms.locfileid: "62778941"
   
  5 = Volltextindizierung wurde gedrosselt oder angehalten.  
   
- **Aktiven Volltextindex**  
+ **Aktiver Volltextindex**  
  Gibt an, ob die Tabelle über einen aktiven Volltextindex verfügt.  
   
  1 = True  
@@ -65,7 +65,7 @@ ms.locfileid: "62778941"
  Die Dateigruppe, zu der der Volltextindex gehört.  
   
  **Volltextindex-Stoppliste**  
- Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste von [Stoppwörtern](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stoppliste aus dem Index entfernen, indem Sie auswählen  **\<OFF >** aus der Liste aus, oder Sie können eine andere Stoppliste; auswählen  **\<SYSTEM >** gibt die Systemstoppliste.  
+ Die Stoppliste, die gegenwärtig dem Volltextindex zugeordnet ist. Eine Stoppliste ist eine Liste von [Stoppwörtern](../relational-databases/search/full-text-search.md). Die ggf. einem Volltextindex zugeordnete Stoppliste wird auf Volltextabfragen für diesen Index angewendet. Sie können die Stopp Liste aus dem Index entfernen, indem Sie ** \<>** aus der Liste auswählen, oder Sie können eine andere Stopp Liste auswählen. System>gibt die System Stopp Liste an. ** \<**  
   
  **So erstellen Sie eine Stoppliste**  
   
@@ -74,21 +74,21 @@ ms.locfileid: "62778941"
  **Sucheigenschaftenliste**  
  Die Sucheigenschaftenliste, die ggf. derzeit dem Volltextindex zugeordnet ist. Eine Sucheigenschaftenliste gibt einen Satz von Dokumenteigenschaften an, die im zugeordneten Volltextindex enthalten sind, wenn dieser aufgefüllt ist. Weitere Informationen finden Sie unter [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
- **\<Aus >** gibt an, dass derzeit keine sucheigenschaftenliste dem Index zugeordnet. Sie können die aktuelle sucheigenschaftenliste aus dem Index entfernen, indem Sie die Auswahl  **\<aus >** aus der Liste aus, oder Sie können eine andere sucheigenschaftenliste auswählen, aus der Liste. An dieser Stelle werden nur Sucheigenschaftenlisten in der aktuellen Datenbank aufgeführt.  
+ Off>gibt an, dass dem Index derzeit keine Such Eigenschaften Liste zugeordnet ist. ** \<** Sie können die aktuelle Such Eigenschaften Liste aus dem Index entfernen, indem Sie ** \<>** aus der Liste auswählen, oder Sie können in der Liste eine andere Such Eigenschaften Liste auswählen. An dieser Stelle werden nur Sucheigenschaftenlisten in der aktuellen Datenbank aufgeführt.  
   
 > [!NOTE]  
 >  Sie können eine Sucheigenschaftenliste mehr als einem Volltextindex in der gleichen Datenbank zuordnen.  
   
- **Um einer sucheigenschaftenliste eine Eigenschaft zu erstellen.**  
+ **So erstellen Sie eine Sucheigenschaftenliste**  
   
 -   [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
  **Volltext-Elementanzahl-Tabelle**  
  Gibt die Anzahl der Zeilen an, die erfolgreich volltextindiziert wurden.  
   
- Diese Eigenschaft entspricht der von der OBJECTPROPERTYEX-Funktion von [!INCLUDE[tsql](../includes/tsql-md.md)] zurückgegebenen `TableFulltextItemCount`-Eigenschaft.  
+ Diese Eigenschaft entspricht der von der OBJECTPROPERTYEX-Funktion von `TableFulltextItemCount` zurückgegebenen [!INCLUDE[tsql](../includes/tsql-md.md)]-Eigenschaft.  
   
- **Tabelle Volltextdokumente verarbeitet**  
+ **Tabelle für verarbeitete Volltextdokumente**  
  Zeigt die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen an. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet. Gelöschte Zeilen werden nicht gezählt.  
   
 |||  
@@ -96,7 +96,7 @@ ms.locfileid: "62778941"
 |0|Gibt an, dass die Volltextindizierung abgeschlossen ist und keine aktive Auffüllung ausgeführt wird.|  
 |> 0|Gibt bei einer aktiven Auffüllung die Anzahl der Dokumente an, die seit einer der folgenden Aktionen mithilfe von Einfüge- und Updatevorgängen verarbeitet wurden: Auffüllung, Aktivieren der Änderungsnachverfolgung mit Indexupdate im Hintergrund (z. B. automatische Änderungsnachverfolgung), Änderung des Schemas für den Volltextindex, Neuerstellung des Volltextkatalogs, Neustart de Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], usw.|  
   
- **Tabelle Volltext-ausstehende Änderungen**  
+ **Tabelle für ausstehende Volltextänderungen**  
  Anzahl der zu verarbeitenden ausstehenden Änderungsnachverfolgungseinträge.  
   
  0 = Änderungsnachverfolgung ist nicht aktiviert.  
@@ -119,8 +119,8 @@ ms.locfileid: "62778941"
   
 |||  
 |-|-|  
-|**Wahr**|Aktiviert|  
-|**False**|Disabled|  
+|**Fall**|Enabled|  
+|**Alarm**|Disabled|  
   
  **Änderungsnachverfolgung**  
  Gibt an, ob die Volltext-Änderungsnachverfolgung für die Tabelle aktiviert ist, und wenn dies der Fall ist, deren Typ. Bei der Volltext-Änderungsnachverfolgung werden die Zeilen aufgezeichnet, die in einer Tabelle oder indizierten Sicht geändert wurden, die für die Volltextindizierung eingerichtet wurde. Diese Änderungen können an den Volltextindex weitergegeben werden.  
@@ -129,20 +129,20 @@ ms.locfileid: "62778941"
   
 |||  
 |-|-|  
-|**Off**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
+|**Abgeschrieben**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
 |**Manuell**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten nicht automatisch aktualisiert. Änderungen an den zugrunde liegenden Daten werden jedoch beibehalten, und Sie können sie an den Volltextindex weitergeben, entweder nach einem Zeitplan unter Verwendung des SQL-Server-Agents oder manuell.|  
-|**Automatic**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten in der Basistabelle automatisch aktualisiert.|  
+|**Automatisch**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten in der Basistabelle automatisch aktualisiert.|  
   
  **Index neu auffüllen**  
  Klicken Sie, um beim Beenden des Dialogfelds die Auffüllung des Volltextindexes zu starten. Wählen Sie einen der folgenden Auffüllungstypen aus:  
   
 |||  
 |-|-|  
-|**Full**|Während einer vollständigen Auffüllung einer Tabelle werden Indexeinträge für alle Zeilen erstellt.|  
+|**Vollständig**|Während einer vollständigen Auffüllung einer Tabelle werden Indexeinträge für alle Zeilen erstellt.|  
 |**Inkrementelle**|Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Für eine inkrementelle Auffüllung muss die Basistabelle eine Spalte des Datentyps `timestamp` enthalten.|  
-|**Update**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
+|**Alisierungs**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md)  
   
   

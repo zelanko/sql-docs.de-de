@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b073e6025bc1483db2482a03d525b758d39efea4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917444"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Erstellen eines benutzerdefinierten Datentypalias
@@ -50,7 +50,7 @@ ms.locfileid: "62917444"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE TYPE-Berechtigung für die aktuelle Datenbank und die ALTER-Berechtigung für *schema_name*. Wenn *schema_name* nicht angegeben wird, gelten die Standardregeln für die Namensauflösung, um das Schema für den aktuellen Benutzer zu bestimmen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>So erstellen Sie einen benutzerdefinierten Datentyp  
   
@@ -59,10 +59,10 @@ ms.locfileid: "62917444"
      **NULL-Werte zulassen**  
      Geben Sie an, ob der benutzerdefinierte Datentyp NULL-Werte akzeptieren kann. Die NULL-Zulässigkeit eines vorhandenen benutzerdefinierten Datentyps ist nicht bearbeitbar.  
   
-     **Data type**  
+     **Datentyp**  
      Wählen Sie den Basisdatentyp aus dem Listenfeld aus. Im Listenfeld werden alle Datentypen mit Ausnahme der Datentypen `geography`, `geometry`, `hierarchyid`, `sysname`, `timestamp` und `xml` angezeigt. Der Datentyp eines vorhandenen benutzerdefinierten Datentyps ist nicht bearbeitbar.  
   
-     **Standardwert**  
+     **Standard**  
      Wählen Sie optional eine Regel oder einen Standardwert zum Binden an den benutzerdefinierten Datentypalias aus.  
   
      **Länge/Genauigkeit**  
@@ -71,28 +71,28 @@ ms.locfileid: "62917444"
      Für die Datentypen `nvarchar(max)`, `varchar(max)` oder `varbinary(max)` wird keine Länge angezeigt.  
   
      **Name**  
-     Wenn Sie einen neuen benutzerdefinierten Datentypalias erstellen, geben Sie einen eindeutigen Namen ein, der in der gesamten Datenbank verwendet werden soll, um den benutzerdefinierten Datentyp darzustellen. Die maximale Anzahl von Zeichen, muss das System entsprechen `sysname` -Datentyp. Der Name eines vorhandenen benutzerdefinierten Datentypalias ist nicht bearbeitbar.  
+     Wenn Sie einen neuen benutzerdefinierten Datentypalias erstellen, geben Sie einen eindeutigen Namen ein, der in der gesamten Datenbank verwendet werden soll, um den benutzerdefinierten Datentyp darzustellen. Die maximale Anzahl von Zeichen muss dem System `sysname` Datentyp entsprechen. Der Name eines vorhandenen benutzerdefinierten Datentypalias ist nicht bearbeitbar.  
   
-     **Rule**  
+     **Regel**  
      Wählen Sie optional eine Regel zum Binden an den benutzerdefinierten Datentypalias aus.  
   
-     **Dezimalstellen**  
+     **Skalieren**  
      Gibt an, wie viele Dezimalstellen (Ziffern nach dem Dezimalzeichen) maximal gespeichert werden können.  
   
      **Schema**  
      Wählen Sie ein Schema aus einer Liste mit allen für den aktuellen Benutzer verfügbaren Schemas aus. Die Standardauswahl ist das Standardschema für den aktuellen Benutzer.  
   
-     **Speicherung**  
+     **Storage**  
      Zeigt die maximale Speichergröße für den benutzerdefinierten Datentypalias an. Die maximalen Speicherplatzgrößen variieren in Abhängigkeit von der Genauigkeit.  
   
     |||  
     |-|-|  
-    |1 - 9|5|  
+    |1 – 9|5|  
     |10 – 19|9|  
     |20 – 28|13|  
     |29 – 38|17|  
   
-     Für `nchar` und `nvarchar` -Datentypen, die Speicherwert ist immer doppelt so groß wie der Wert in **Länge**.  
+     Bei `nchar` den `nvarchar` Datentypen und ist der Speicher Wert immer das Zweifache des Werts in **Länge**.  
   
      Für die Datentypen `nvarchar(max)`, `varchar(max)` oder `varbinary(max)` wird kein Speicher angezeigt.  
   
@@ -123,7 +123,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Datenbankbezeichner](database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-type-transact-sql)  
   

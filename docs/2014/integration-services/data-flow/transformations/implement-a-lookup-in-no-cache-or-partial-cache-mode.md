@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97da627058fa6da67e8ef623b267d0f7cbaa6c7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770719"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>Implementieren einer Suche im Modus "Kein Cache" oder "Teilcache"
@@ -60,11 +60,11 @@ ms.locfileid: "62770719"
   
     -   Klicken Sie auf **Ergebnisse einer SQL-Abfrage verwenden**, und erstellen Sie dann eine Abfrage im Fenster **SQL-Befehl** .  
   
-         -oder-  
+         Oder  
   
          Klicken Sie auf **Abfrage erstellen** , um mit den vom **Abfrage-Generator** bereitgestellten grafischen Tools eine Abfrage zu erstellen.  
   
-         -oder-  
+         Oder  
   
          Klicken Sie auf **Durchsuchen** , um eine SQL-Anweisung aus einer Datei zu importieren.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62770719"
   
 14. Klicken Sie auf **OK** , um die Änderungen an der Suchtransformation zu speichern, und führen Sie dann das Paket aus.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   
   

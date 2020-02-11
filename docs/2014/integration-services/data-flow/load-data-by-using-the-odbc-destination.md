@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eb0d8dc1c8a60a3546c24e6d7bcd0faa600769bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62771066"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Laden von Daten mithilfe des ODBC-Ziels
@@ -34,9 +34,9 @@ ms.locfileid: "62771066"
   
 6.  Wählen Sie die Datenzugriffsmethode aus.  
   
-    -   **Tabellenname – Batch**: Wählen Sie diese Option aus, um das ODBC-Ziel im Batchmodus zu konfigurieren. Wenn Sie diese Option aktivieren, können Sie die **Batchgröße**festlegen.  
+    -   **Tabellenname – Batch**: Wählen Sie diese Option, um das ODBC-Ziel im Batchmodus zu konfigurieren. Wenn Sie diese Option aktivieren, können Sie die **Batchgröße**festlegen.  
   
-    -   **Tabellenname – Zeile für Zeile**: Wählen Sie diese Option aus, um das ODBC-Ziel so zu konfigurieren, dass jede Zeile einzeln in die Zieltabelle eingefügt wird. Wenn Sie diese Option aktivieren, werden die Daten zeilenweise in die Tabelle geladen.  
+    -   **Tabellenname – Zeile für Zeile**: Wählen Sie diese Option, um das ODBC-Ziel so zu konfigurieren, dass jede Zeile einzeln in die Zieltabelle eingefügt wird. Wenn Sie diese Option aktivieren, werden die Daten zeilenweise in die Tabelle geladen.  
   
 7.  Wählen Sie in der Liste im Feld **Name der Tabelle oder Sicht** eine verfügbare Tabelle oder Sicht aus der Datenbank aus, oder geben Sie einen regulären Ausdruck zum Identifizieren der Tabelle ein. Diese Liste enthält nur die ersten 1000 Tabellen. Wenn die Datenbank mehr als 1000 Tabellen enthält, können Sie den Anfang eines Tabellennamens eingeben oder das Platzhalterzeichen (*) verwenden, um einen beliebigen Teil des Namens einzugeben und die gewünschten Tabellen anzuzeigen.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "62771066"
   
 12. Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ziel-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../odbc-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für ODBC &#40;Seite Zuordnungen&#41;](../odbc-destination-editor-mappings-page.md)   
- [Quellen-Editor für ODBC &#40;Seite Fehlerausgabe&#41;](../odbc-source-editor-error-output-page.md)  
+ [Ziel-Editor für ODBC &#40;Seite „Zuordnungen“&#41;](../odbc-destination-editor-mappings-page.md)   
+ [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../odbc-source-editor-error-output-page.md)  
   
   

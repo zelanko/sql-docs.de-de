@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 998d42d262e3f980b4b35ed82b26904399d6b33c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809381"
 ---
 # <a name="server-properties-advanced-page"></a>Servereigenschaften (Seite Erweitert)
@@ -76,7 +76,7 @@ ms.locfileid: "62809381"
   
  Wenn ein Volltextkatalog nicht verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt. Diese Option ist nur für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbanken verfügbar.  
   
- **Neu erstellen**  
+ **Neuerstellen**  
  Volltextkataloge werden mithilfe der neuen und verbesserten Worttrennmodule neu erstellt. Das Neuerstellen von Indizes kann einige Zeit dauern, und nach dem Upgrade ist ggf. eine beträchtliche Menge an CPU-Leistung und Arbeitsspeicherkapazität erforderlich.  
   
  **Zurücksetzen**  
@@ -127,7 +127,7 @@ ms.locfileid: "62809381"
  **Abfragewartezeit**  
  Gibt die Zeit in Sekunden an (von 0 bis 2147483647), die eine Abfrage auf Ressourcen wartet, bevor der Vorgang timeoutbedingt abgebrochen wird. Bei Verwendung des Standardwertes von –1 wird das Timeout als das 25-fache der geschätzten Abfragekosten berechnet. Weitere Informationen finden Sie unter [Konfigurieren der Serverkonfigurationsoption Abfragewartezeit.](configure-the-query-wait-server-configuration-option.md)  
   
-## <a name="see-also"></a>Weitere Informationen finden Sie unter  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

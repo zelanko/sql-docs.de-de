@@ -11,16 +11,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1bab4c78cdb4aee364cc8f41aff70578b8a6df0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63028823"
 ---
 # <a name="sql-server-properties-advanced-tab"></a>SQL Server-Eigenschaften (Registerkarte Erweitert)
   Die folgenden Eigenschaften werden standardmäßig auf der Registerkarte **Erweitert** angezeigt. Wenn Eigenschaften vom Benutzer definiert wurden, werden sie mit den entsprechenden Werten auch auf dieser Registerkarte angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Gruppiert**  
  Zeigt an, ob dieser Dienst als Ressource eines gruppierten Servers installiert ist.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63028823"
  Zeigt den Speicherort für Speicherauszüge für Fehler an.  
   
  **Fehlerberichterstellung**  
- Mit der Einstellung **Ja** werden vom Programm Dr. Watson Informationen an [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder den Fehlerberichtsserver weitergeleitet, wenn ein schwerwiegender Fehler auftritt. Weitere Informationen zur Fehlerberichterstellung finden Sie in der Onlinedokumentation unter "Einstellungen für Fehler- und Verwendungsberichte". Klicken Sie zum Ändern dieses Werts im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Objekt-Explorer mit der rechten Maustaste auf Ihren Server, klicken Sie auf **Eigenschaften**, und klicken Sie anschließend auf die Seite **Sonstige Servereinstellungen**. Die Optionen werden im Bereich für die **Informationsberichterstellung** angezeigt.  
+ Mit der Einstellung **Ja**werden vom Programm Dr. Watson Informationen an [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder den Fehlerberichtsserver weitergeleitet, wenn ein schwerwiegender Fehler auftritt. Weitere Informationen zur Fehlerberichterstellung finden Sie in der Onlinedokumentation unter "Einstellungen für Fehler- und Verwendungsberichte". Klicken Sie zum Ändern dieses Werts im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Objekt-Explorer mit der rechten Maustaste auf Ihren Server, klicken Sie auf **Eigenschaften**, und klicken Sie anschließend auf die Seite **Sonstige Servereinstellungen** . Die Optionen werden im Bereich für die **Informationsberichterstellung** angezeigt.  
   
  **Dateiversion**  
  Zeigt die Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  

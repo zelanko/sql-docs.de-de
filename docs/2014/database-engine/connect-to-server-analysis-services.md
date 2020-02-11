@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755596"
 ---
 # <a name="connect-to-server-analysis-services"></a>Verbindung mit Server herstellen (Analysis Services)
-  Verwenden Sie dieses Dialogfeld, um Optionen für Verbindungen mit Computern mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]anzuzeigen oder anzugeben.  
+  Verwenden Sie dieses Dialogfeld, um Optionen für die Verbindung [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mit anzuzeigen oder anzugeben.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Servertyp**  
  Wenn Sie einen Server über den Objekt-Explorer registrieren, wählen Sie den Typ des Servers aus, mit dem eine Verbindung hergestellt wird: [!INCLUDE[ssDE](../includes/ssde-md.md)], Analysis Services, Reporting Services oder Integration Services. Im verbleibenden Bereich des Dialogfelds werden nur die Optionen angezeigt, die auf den ausgewählten Servertyp zutreffen. Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem in der Komponente „Registrierte Server“ angezeigten Servertyp übereinstimmt. Zum Registrieren eines anderen Servertyps wählen Sie auf der Symbolleiste "Registrierte Server" die Option [!INCLUDE[ssDE](../includes/ssde-md.md)], "Analysis Services", "Reporting Services" oder "Integration Services" aus. Anschließend können Sie mit der Registrierung eines neuen Servers beginnen.  
   
@@ -30,10 +30,10 @@ ms.locfileid: "62755596"
  Wählen Sie die Serverinstanz aus, mit der eine Verbindung hergestellt werden soll. Standardmäßig wird die Serverinstanz angezeigt, mit der zuletzt eine Verbindung bestanden hat.  
   
  **Authentifizierung**  
- Herstellen der Verbindung mit einer Instanz von Analysis Services, werden die folgenden Authentifizierungsmodi unterstützt: [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung.  
+ Beim Herstellen einer Verbindung mit einer Instanz von Analysis Services werden die folgenden Authentifizierungsmodi unterstützt: [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows-Authentifizierung.  
   
  **Windows-Authentifizierungsmodus (Windows-Authentifizierung)**  
- Mit dem Modus**Windows-Authentifizierung** können Benutzer die Verbindung über ein Windows-Benutzerkonto herstellen.  
+ Der **Windows-Authentifizierungs** Modus ermöglicht Benutzern das Herstellen einer Verbindung über ein Windows-Benutzerkonto.  
   
  **Benutzername**  
  Diese Option steht in dieser Version nicht zur Verfügung. Geben Sie den Benutzernamen für die Verbindung ein. Diese Option ist nur verfügbar, wenn Sie die **Windows-Authentifizierung**für die Verbindungsherstellung ausgewählt haben.  
@@ -41,10 +41,10 @@ ms.locfileid: "62755596"
  **Kennwort**  
  Diese Option steht in dieser Version nicht zur Verfügung. Geben Sie das Kennwort für die Anmeldung ein. Sie können diese Option nur bearbeiten, wenn Sie zum Verbinden die Authentifizierung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ausgewählt haben.  
   
- **Verbinden**  
+ **Herstellen einer Verbindung**  
  Klicken Sie hier, um eine Verbindung mit dem oben ausgewählten Server herzustellen.  
   
- **Options**  
+ **Optionen**  
  Klicken Sie auf diese Schaltfläche, um zusätzliche Optionen für die Serververbindung anzuzeigen, z. B. zum Registrieren eines Servers oder zum Speichern des Kennworts.  
   
   

@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9db5352c80cfc45fd6856339e2aaf680b631a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805884"
 ---
 # <a name="enhance-merge-replication-performance"></a>Verbessern der Leistung der Mergereplikation
@@ -33,7 +33,7 @@ ms.locfileid: "62805884"
   
 -   Indizieren Sie Spalten, die in Zeilenfiltern und Joinfiltern verwendet werden.  
   
-     Erstellen Sie beim Verwenden eines Zeilenfilters für einen veröffentlichten Artikel einen Index für jede Spalte, die in der WHERE-Klausel des Filters verwendet wird. Ohne einen solchen Index muss [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jede einzelne Zeile in der Tabelle lesen, um zu bestimmen, ob die Zeile in die Partition aufgenommen werden soll oder nicht. Mit einem Index kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hingegen schnell ermitteln, welche Zeilen aufzunehmen sind. Am schnellsten geht die Verarbeitung, wenn die Replikation die WHERE-Klausel des Filters vollständig allein aus dem Index auflösen kann.  
+     Erstellen Sie beim Verwenden eines Zeilenfilters für einen veröffentlichten Artikel einen Index für jede Spalte, die in der WHERE-Klausel des Filters verwendet wird. Ohne einen Index muss [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jede Zeile in der Tabelle lesen, um zu bestimmen, ob die Zeile in die Partition aufgenommen werden soll. Mit einem Index kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hingegen schnell ermitteln, welche Zeilen aufzunehmen sind. Am schnellsten geht die Verarbeitung, wenn die Replikation die WHERE-Klausel des Filters vollständig allein aus dem Index auflösen kann.  
   
      Außerdem sollten auch alle Spalten indiziert werden, die in Joinfiltern verwendet werden. Bei jeder Ausführung des Merge-Agents durchsucht dieser die Basistabelle, um festzustellen, welche Zeilen in einer übergeordneten Tabelle und welche Zeilen in verknüpften Tabellen in eine Partition aufzunehmen sind. Durch Erstellen eines Indexes für die verknüpften Spalten wird verhindert, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] jede Zeile in der Tabelle bei jeder Ausführung des Merge-Agents lesen muss.  
   
@@ -102,11 +102,11 @@ ms.locfileid: "62805884"
   
 -   Wenn ein Abonnement über eine schnelle Verbindung synchronisiert wird sowie Änderungen vom Verleger und vom Abonnenten gesendet werden, verwenden Sie für den Merge-Agent den Parameter **-ParallelUploadDownload**.  
   
-     Mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein neuer Parameter für den Merge-Agent eingeführt: **-ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie in den folgenden Themen:  
+     [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein neuer Merge-Agent Parameter eingeführt: **-ParallelUploadDownload**. Wenn Sie diesen Parameter verwenden, kann der Merge-Agent gleichzeitig sowohl die Änderungen, die auf den Verleger hochgeladen werden, als auch die Änderungen verarbeiten, die auf den Abonnenten heruntergeladen werden. Dieses Verhalten erweist sich in Umgebungen mit hohem Volumen als nützlich, die eine hohe Netzwerkbandbreite besitzen. Agentparameter können in den Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
   
     -   [Arbeiten mit Replikations-Agent-Profilen](../agents/replication-agent-profiles.md)  
   
-    -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](../agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../concepts/replication-agent-executables-concepts.md)  
   
@@ -140,10 +140,10 @@ ms.locfileid: "62805884"
   
 -   Indizieren Sie die Systemtabellen für die Mergereplikation von Zeit zu Zeit neu.  
   
-     Als Teil der Wartung für die Mergereplikation überprüfen Sie gelegentlich die Vergrößerung der Systemtabellen, die mit der Mergereplikation verbunden sind: **MSmerge_contents**, **MSmerge_genhistory**, and **MSmerge_tombstone**, **MSmerge_current_partition_mappings** und **MSmerge_past_partition_mappings**. Führen Sie eine regelmäßige Neuindizierung dieser Tabellen durch. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../indexes/reorganize-and-rebuild-indexes.md).  
+     Als Teil der Wartung für die Mergereplikation überprüfen Sie gelegentlich die Vergrößerung der Systemtabellen, die mit der Mergereplikation verbunden sind: **MSmerge_contents**, **MSmerge_genhistory**, **MSmerge_tombstone**, **MSmerge_current_partition_mappings**und **MSmerge_past_partition_mappings**. Führen Sie eine regelmäßige Neuindizierung dieser Tabellen durch. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](../../indexes/reorganize-and-rebuild-indexes.md).  
   
 -   Überwachen Sie mithilfe der Registerkarte **Synchronisierungsverlauf** im Replikationsmonitor die Synchronisierungsleistung.  
   
-     Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierten Statistiken finden Sie unter [View Information and Perform Tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     Bei Mergereplikationen zeigt der Replikationsmonitor auf der Registerkarte **Synchronisierungsverlauf** detaillierte Statistiken für alle Artikel an, die während einer Synchronisierung verarbeitet werden. So lässt sich diesen Statistiken z. B. die Länge der einzelnen Verarbeitungsphasen (Hochladen von Änderungen, Herunterladen von Änderungen usw.) entnehmen. Auf diese Weise können Sie besser die Tabellen identifizieren, die zu einer Verlangsamung führen, und Sie können hier auch hervorragend Leistungsprobleme im Zusammenhang mit Mergeabonnements diagnostizieren. Weitere Informationen zum Anzeigen detaillierter Statistiken finden Sie unter [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations Monitors](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
   

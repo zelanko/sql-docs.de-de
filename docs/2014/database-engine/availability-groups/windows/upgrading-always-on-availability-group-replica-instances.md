@@ -1,5 +1,5 @@
 ---
-title: Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust | Microsoft-Dokumentation
+title: Upgrade und Update von Verfügbarkeits Gruppen Servern mit minimalen Ausfallzeiten und Datenverlusten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e9be78ff13d39b4cdcaf60516ac20b9a85648d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812936"
 ---
 # <a name="upgrade-and-update-of-availability-group-servers-with-minimal-downtime-and-data-loss"></a>Upgrade und Update von Verfügbarkeitsgruppenservern bei minimaler Downtime und minimalem Datenverlust
   Wenn Sie für SQL Server 2012-Serverinstanzen ein Update oder Upgrade auf ein Service Pack oder eine neuere Version ausführen, können Sie die Downtime einer Verfügbarkeitsgruppe auf nur einen manuellen Failover begrenzen, indem Sie ein sequenzielles Update oder Upgrade ausführen. Beim Upgrade von SQL Server-Versionen wird dieser Vorgang als paralleles Upgrade und beim Update aktueller SQL Server-Versionen anhand von Hotfixes oder Service Packs als paralleles Update bezeichnet.  
   
- Dieses Thema beschränkt sich auf Upgrades/Updates von SQL Server. Betriebssystembezogene Upgrades/Updates, die hoch verfügbare SQL Server-Instanzen ausgeführt werden, finden Sie unter [clusterübergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystemupgrade](https://msdn.microsoft.com/library/jj873730.aspx)  
+ Dieses Thema beschränkt sich auf Upgrades/Updates von SQL Server. Informationen zu Betriebssystem bezogenen Upgrades/Aktualisierungen, unter denen die SQL Server Instanzen mit hoher Verfügbarkeit ausgeführt werden, finden Sie unter [Cluster übergreifende Migration von AlwaysOn-Verfügbarkeitsgruppen für Betriebssystem Upgrades](https://msdn.microsoft.com/library/jj873730.aspx) .  
   
 ## <a name="rolling-upgradeupdate-best-practices-for-alwayson-availability-groups"></a>Bewährte Verfahren für parallele Upgrades/Updates von AlwaysOn-Verfügbarkeitsgruppen  
  Beachten Sie beim Ausführen von Serverupgrades/-updates die folgenden bewährten Verfahren, um die Downtime und Datenverluste für Verfügbarkeitsgruppen zu minimieren:  
@@ -50,7 +50,7 @@ ms.locfileid: "62812936"
 ## <a name="rolling-upgradeupdate-process"></a>Schritte zur Ausführung des parallelen Upgrades/Updates  
  Die genauen Schritte hängen von Faktoren wie der Bereitstellungstopologie der Verfügbarkeitsgruppen und dem Commitmodus der einzelnen Replikate ab. Im einfachsten Szenario ist ein paralleles Upgrade/Update jedoch ein mehrstufiger Prozess, der aus den folgenden Phasen besteht:  
   
- ![Szenario für ein Upgrade von Verfügbarkeitsgruppen in HADR](../../media/alwaysonupgrade-ag-hadr.gif "Availability Group Upgrade in HADR Scenario")  
+ ![Szenario 'Upgrade von Verfügbarkeitsgruppen in HADR'](../../media/alwaysonupgrade-ag-hadr.gif "Szenario 'Upgrade von Verfügbarkeitsgruppen in HADR'")  
   
 1.  Deaktivieren des automatischen Failovers für alle Replikate mit synchronem Commit  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62812936"
 ## <a name="availability-group-with-one-remote-secondary-replica"></a>Verfügbarkeitsgruppe mit einem sekundären Remotereplikat  
  Wenn Sie eine Verfügbarkeitsgruppe ausschließlich zur Notfallwiederherstellung bereitgestellt haben, müssen Sie für die Verfügbarkeitsgruppe u. U. ein Failover auf ein sekundäres Replikat mit asynchronem Commit ausführen. Diese Konfiguration wird in der folgenden Abbildung dargestellt:  
   
- ![Szenario für ein Upgrade von Verfügbarkeitsgruppen in DR](../../media/agupgrade-ag-dr.gif "Availability Group Upgrade in HADR Scenario")  
+ ![Szenario 'Upgrade von Verfügbarkeitsgruppen in DR'](../../media/agupgrade-ag-dr.gif "Szenario 'Upgrade von Verfügbarkeitsgruppen in DR'")  
   
  In diesem Fall müssen Sie für die Verfügbarkeitsgruppe während des parallelen Upgrades/Updates ein Failover auf das sekundäre Replikat mit asynchronem Commit ausführen. Zur Vermeidung von Datenverlusten ändern Sie den Commitmodus in den synchronen Commitmodus und warten mit dem Failover der Verfügbarkeitsgruppe, bis das sekundäre Replikat synchronisiert ist. Das parallele Upgrade/Update kann somit folgende Schritte umfassen:  
   
@@ -96,7 +96,7 @@ ms.locfileid: "62812936"
 ## <a name="availability-group-with-failover-cluster-instance-nodes"></a>Verfügbarkeitsgruppe mit Failoverclusterinstanz-Knoten  
  Wenn eine Verfügbarkeitsgruppe Failoverclusterinstanz-Knoten (Failover Cluster Instance, FCI) enthält, sollten Sie ein Upgrade/Update zunächst für die inaktiven und dann erst für die aktiven Knoten ausführen. In der folgenden Abbildung ist ein gängiges Verfügbarkeitsgruppenszenario mit FCIs dargestellt. Es basiert auf FCIs, die auf lokale Hochverfügbarkeit und asynchrone Commits zur Remote-Notfallwiederherstellung ausgelegt sind, und veranschaulicht die Schritte zum Ausführen des Upgrades.  
   
- ![Szenario für ein Upgrade von Verfügbarkeitsgruppen mit FCIs](../../media/agupgrade-ag-fci-dr.gif "Availability Group Upgrade in HADR Scenario")  
+ ![Upgrade von Verfügbarkeitsgruppen mit FCIs](../../media/agupgrade-ag-fci-dr.gif "Upgrade von Verfügbarkeitsgruppen mit FCIs")  
   
 1.  Upgrade/Update von REMOTE2  
   

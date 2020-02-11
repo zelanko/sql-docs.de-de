@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754678"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Entfernen der Datenbankspiegelung (SQL Server)
@@ -32,7 +32,7 @@ ms.locfileid: "62754678"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>So entfernen Sie die Datenbankspiegelung  
   
@@ -69,16 +69,16 @@ ms.locfileid: "62754678"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Entfernen der Datenbankspiegelung  
+##  <a name="FollowUp"></a>Nachverfolgung: Entfernen der Daten Bank Spiegelung  
   
 > [!NOTE]  
 >  Weitere Informationen zu den Auswirkungen des Entfernens der Datenbankspiegelung finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
--   **Wenn Sie die Datenbankspiegelung erneut starten möchten**  
+-   **Wenn Sie beabsichtigen, die Spiegelung für die Datenbank neu zu starten**  
   
      Vor dem erneuten Starten der Spiegelung müssen alle Protokollsicherungen, die nach dem Entfernen der Spiegelung für die Prinzipaldatenbank erstellt wurden, auf die Spiegeldatenbank angewendet werden.  
   
--   **Wenn Sie die Datenbankspiegelung nicht erneut starten möchten**  
+-   **Wenn Sie die Spiegelung nicht erneut starten möchten**  
   
      Sie haben auch die Möglichkeit, die frühere Spiegeldatenbank wiederherzustellen. Auf der Serverinstanz, die den Spiegelserver darstellte, können Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausführen:  
   
@@ -91,19 +91,19 @@ ms.locfileid: "62754678"
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
+-   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
 -   [Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 -   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungs Sitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL-&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Beispiel: Einrichten der Daten Bank Spiegelung mithilfe von Zertifikaten &#40;Transact-SQL-&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
- [AlwaysOn-Verfügbarkeitsgruppen (SQLServer)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
+ [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

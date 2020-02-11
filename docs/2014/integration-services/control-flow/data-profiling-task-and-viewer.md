@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1c411a3eec25fb0a5d25d2be67b08f4a77376c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62832576"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Datenprofilerstellungs-Task und -Viewer
@@ -66,7 +66,7 @@ ms.locfileid: "62832576"
  **Weitere Informationen:** [Datenprofil-Viewer](data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Hinzufügen von Bedingungslogik zum Datenprofilerstellungs-Workflow  
- Der Datenprofilerstellungs-Task verfügt über keine integrierten Funktionen, die eine Verwendung von Bedingungslogik ermöglichen, um diesen Task auf der Grundlage der Profilausgabe mit Downstream-Tasks zu verbinden. Mit minimalem Programmieraufwand können Sie diese Logik jedoch problemlos einem Skripttask hinzufügen. Der Skripttask könnte beispielsweise eine XPath-Abfrage für die Ausgabedatei des Datenprofilerstellungs-Tasks ausführen. Durch die Abfrage könnte bestimmt werden, ob der Prozentwert von NULL-Werten in einer bestimmten Spalte einen bestimmten Schwellenwert überschreitet. Wenn der Prozentwert den Schwellenwert überschreitet, könnten Sie das Paket unterbrechen und das Problem in den Quelldaten vor dem Fortsetzen beheben. Weitere Informationen finden Sie unter [Einschließen eines Datenprofilerstellungs-Tasks in den Paketworkflow](incorporate-a-data-profiling-task-in-package-workflow.md).  
+ Der Datenprofilerstellungs-Task verfügt über keine integrierten Funktionen, die eine Verwendung von Bedingungslogik ermöglichen, um diesen Task auf der Grundlage der Profilausgabe mit Downstream-Tasks zu verbinden. Mit minimalem Programmieraufwand können Sie diese Logik jedoch problemlos einem Skripttask hinzufügen. Der Skripttask könnte beispielsweise eine XPath-Abfrage für die Ausgabedatei des Datenprofilerstellungs-Tasks ausführen. Durch die Abfrage könnte bestimmt werden, ob der Prozentwert von NULL-Werten in einer bestimmten Spalte einen bestimmten Schwellenwert überschreitet. Wenn der Prozentwert den Schwellenwert überschreitet, könnten Sie das Paket unterbrechen und das Problem in den Quelldaten vor dem Fortsetzen beheben. Weitere Informationen finden Sie unter [Einschließen einer Datenprofilerstellungs-Task in den Paketworkflow](incorporate-a-data-profiling-task-in-package-workflow.md).  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Datenprofiler-Schema](https://go.microsoft.com/fwlink/?LinkId=251524)  

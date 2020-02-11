@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63035722"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Task 'Wartungscleanup' (Wartungsplan)
@@ -27,8 +27,8 @@ ms.locfileid: "63035722"
 > [!NOTE]  
 >  Dateien in den Unterordnern des angegebenen Verzeichnisses werden vom Task Wartungscleanup nicht automatisch gelöscht. Diese Funktion reduziert die Möglichkeit eines bösartigen Angriffs, der den Task Wartungscleanup zum Löschen von Dateien verwendet. Wenn Sie Dateien in Unterordnern auf oberster Ebene löschen möchten, müssen Sie **Unterordner auf oberster Ebene einschließen**auswählen.  
   
-## <a name="options"></a>Optionen  
- **Verbindung**  
+## <a name="options"></a>Tastatur  
+ **Connection**  
  Zeigt die aktuelle Verbindung an.  
   
  **Neu**  
@@ -55,13 +55,13 @@ ms.locfileid: "63035722"
  **Dateierweiterung**  
  Geben Sie die Dateierweiterung der zu löschenden Dateien an.  
   
- **Unterordner auf oberster Ebene einschließen**  
+ **Unterordner der ersten Ebene einschließen**  
  Löscht Dateien mit der für **Dateierweiterung** angegebenen Erweiterung aus den Unterordnern der obersten Ebene unter **Ordner**.  
   
- **Dateien anhand ihres Alters zur Tasklaufzeit löschen**  
+ **Dateien basierend auf dem Alter der Datei zur Task Laufzeit löschen**  
  Geben Sie das Mindestalter der zu löschenden Dateien an, indem Sie im Feld **Dateien löschen, die älter sind als** eine Zahl und eine Zeiteinheit festlegen.  
   
- **Dateien löschen, die älter sind als**  
+ **Dateien löschen, die älter sind als die folgenden**  
  Geben Sie das Mindestalter der zu löschenden Dateien an, in dem Sie eine Nummer und eine Zeiteinheit (Tag, Woche, Monat oder Jahr) festlegen. Dateien, die älter sind als der angegebene Zeitrahmen, werden gelöscht.  
   
  **T-SQL anzeigen**  
@@ -71,22 +71,22 @@ ms.locfileid: "63035722"
 >  Wenn die Anzahl der betroffenen Objekte groß ist, kann die Anzeige erhebliche Zeit in Anspruch nehmen.  
   
 ## <a name="new-connection-dialog-box"></a>Neue Verbindung (Dialogfeld)  
- **Verbindungsname**  
+ **Verbindungs Name**  
  Geben Sie einen Namen für die neue Verbindung ein.  
   
- **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
+ **Servernamen auswählen oder eingeben**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
  **...**  
  Wählen Sie diese Option aus, um die Liste der verfügbaren Server anzuzeigen.  
   
- **Geben Sie Informationen zum Anmelden am Server ein**  
+ **Geben Sie Informationen ein, um sich beim Server anzumelden.**  
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
- **Integrierte Sicherheit von Windows NT verwenden**  
+ **Integrierte Sicherheit von Windows verwenden**  
  Stellt mithilfe der Microsoft Windows-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her.  
   
- **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
+ **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  
  Stellt mithilfe der SQL Server-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her. Diese Option ist nicht verfügbar.  
   
  **Benutzername**  
@@ -95,7 +95,7 @@ ms.locfileid: "63035722"
  **Kennwort**  
  Stellt ein Kennwort für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Wartungspläne](maintenance-plans.md)  
   
   

@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b38734544ac3accb3ddfdbcae8ae92f67b252e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805854"
 ---
 # <a name="error-messages"></a>Fehlermeldungen
-  Der Text, der von zurückgegebenen Meldungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber befindet sich der *MessageText* Parameter **SQLGetDiagRec**. Die Quelle eines Fehlers wird im Header der Meldung angegeben:  
+  Der Text der Nachrichten, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vom Native Client-ODBC-Treiber zurückgegeben werden, wird im *MessageText* -Parameter von **SQLGetDiagRec**abgelegt. Die Quelle eines Fehlers wird im Header der Meldung angegeben:  
   
  [Microsoft][ODBC-Treiber-Manager]  
  Diese Fehler werden vom ODBC-Treiber-Manager ausgelöst.  
@@ -32,15 +32,15 @@ ms.locfileid: "62805854"
  Diese Fehler werden von der ODBC-Cursorbibliothek ausgelöst.  
   
  [Microsoft][SQL Server Native Client]  
- Diese Fehler werden erstellt, indem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC-Treiber. Wenn keine anderen Knoten entweder mit den Namen einer Netzwerkbibliothek oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden sind, trat der Fehler im Treiber auf.  
+ Diese Fehler werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ausgelöst. Wenn keine anderen Knoten entweder mit den Namen einer Netzwerkbibliothek oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden sind, trat der Fehler im Treiber auf.  
   
- [Microsoft] [SQL Server Native Client] [*Net-Transportname*]  
- Diese Fehler werden erstellt, indem die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkbibliothek, in denen *Net-Transportname* ist der Anzeigename des eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client-Netzwerktransports (z. B. Named Pipes, Shared Memory, TCP/IP-Sockets oder VIA). Die restliche Fehlermeldung enthält die aufgerufene Netzwerkbibliotheksfunktion und die von der TDS-Funktion in der zugrunde liegenden Netzwerk-API aufgerufene Funktion. Die *PfNative* mit diesen Fehlern zurückgegebene Fehlercode ist, den Fehlercode aus der zugrunde liegenden Netzwerkprotokollstapel.  
+ Microsoft [SQL Server Native Client] [*Net-TransportName*]  
+ Diese Fehler werden von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Netzwerk Bibliothek ausgelöst, wobei *net-TransportName* der Anzeige Name eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client Netzwerk Transports (z. b. Named Pipes, Shared Memory, TCP/IP Sockets oder via) ist. Die restliche Fehlermeldung enthält die aufgerufene Netzwerkbibliotheksfunktion und die von der TDS-Funktion in der zugrunde liegenden Netzwerk-API aufgerufene Funktion. Der mit diesen Fehlern zurückgegebene *pfNative* -Fehlercode ist der Fehlercode aus dem zugrunde liegenden Netzwerkprotokoll Stapel.  
   
  [Microsoft][SQL Server Native Client][[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]]  
- Diese Fehler werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgelöst. Die übrige Fehlermeldung entspricht dem Text der Fehlermeldung aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die *PfNative* Code, die mit diesen Fehlern zurückgegebene ist die Fehlernummer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Weitere Informationen über eine Liste mit Fehlermeldungen (und ihren Nummern), die zurückgegeben werden kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], finden Sie unter der Beschreibung und den Fehlerspalten Spalten von der **Sysmessages** -Systemtabelle in der **master** Datenbank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Diese Fehler werden von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgelöst. Die übrige Fehlermeldung entspricht dem Text der Fehlermeldung aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Der mit diesen Fehlern zurückgegebene *pfNative* Code ist die Fehlernummer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von. Weitere Informationen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu einer Liste von Fehlermeldungen (und deren Zahlen), die von zurückgegeben werden können, finden Sie in den Spalten "Description" und "Error" der **sysmmeages** -Systemtabelle in der **Master** -Datenbank in. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Behandlung von Fehlern und Meldungen](handling-errors-and-messages.md)  
   
   

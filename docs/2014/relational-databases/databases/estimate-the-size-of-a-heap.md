@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 80ba5505204f592ef04c939b3e84b6f3ca3c7c89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916744"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Schätzen der Größe eines Heaps
@@ -54,10 +54,10 @@ ms.locfileid: "62916744"
   
      ***Variable_Data_Size***  = 2 + (***Num_Variable_Cols*** x 2) + ***Max_Var_Size***  
   
-     Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung jeder einzelnen Spalte mit variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
+     Die zu ***Max_Var_Size*** hinzugefügten Bytes dienen der Nachverfolgung der einzelnen Spalten mit variabler Länge. Bei dieser Formel wird angenommen, dass alle Spalten variabler Länge zu 100 % gefüllt sind. Wenn sich abzeichnet, dass ein niedrigerer Prozentsatz des Speicherplatzes für Spalten variabler Länge verwendet wird, können Sie den ***Max_Var_Size*** -Wert mithilfe dieses Prozentsatzes anpassen, um einen genaueren Schätzwert für die Gesamtgröße der Tabelle zu erhalten.  
   
     > [!NOTE]  
-    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder einzelnen Spalte weiterhin der Beschränkung von 8.000 Byte für liegen muss eine `varchar`, `nvarchar,``varbinary`, oder `sql_variant` Spalte. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
+    >  Sie können `varchar`-, `nvarchar`-, `varbinary`- oder `sql_variant`-Spalten kombinieren, mit dem Ergebnis, dass die definierte Tabellengesamtbreite größer als 8.060 Byte ist. Die Länge jeder dieser Spalten muss für eine `varchar`-, `nvarchar,``varbinary`-oder `sql_variant` -Spalte weiterhin den Grenzwert von 8.000 Bytes überschreiten. Die kombinierte Breite kann jedoch den Grenzwert von 8.060 Byte in einer Tabelle überschreiten.  
   
      Wenn keine Spalten variabler Länge vorhanden sind, legen Sie ***Variable_Data_Size*** auf 0 fest.  
   
@@ -75,13 +75,13 @@ ms.locfileid: "62916744"
   
 7.  Berechnen Sie die Anzahl der Seiten, die zum Speichern aller Zeilen benötigt werden:  
   
-     ***Num_Pages***  = ***Num_Rows*** / ***Rows_Per_Page***  
+     ***Num_Pages***    = ***Num_Rows ***  / ***Rows_Per_Page***  
   
      Die geschätzte Seitenanzahl muss auf die nächste ganze Seite aufgerundet werden.  
   
 8.  Berechnen Sie den Umfang des Speicherplatzes, der zum Speichern der Daten im Heap erforderlich ist (insgesamt 8.192 Byte pro Seite):  
   
-     Heapgröße (Bytes) = 8192 x ***Num_Pages***  
+     Heapgröße (Bytes) = 8.192 × ***Num_Pages***  
   
  In dieser Berechnung wird Folgendes nicht berücksichtigt:  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62916744"
   
 -   LOB-Werte (Large Object)  
   
-     Der Algorithmus, um zu bestimmen, genau wie viel Speicherplatz zum Speichern der LOB-Datentypen verwendet wird `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, **Ntextxml**, und `image` Werte ist komplex. Es reicht aus, lediglich die Durchschnittsgröße der erwarteten LOB-Werte zu addieren und diesen Wert zur Heapgesamtgröße zu addieren.  
+     Der Algorithmus, um genau zu bestimmen, wie viel Speicherplatz zum Speichern der Lob- `varchar(max)`Daten `varbinary(max)`Typen `nvarchar(max)`, `text`,,, **ntextxml**und `image` Werte verwendet wird. Es reicht aus, lediglich die Durchschnittsgröße der erwarteten LOB-Werte zu addieren und diesen Wert zur Heapgesamtgröße zu addieren.  
   
 -   Komprimierung  
   
@@ -105,7 +105,7 @@ ms.locfileid: "62916744"
   
      Informationen zu den Speicherplatzanforderungen von Sparsespalten finden Sie unter [Use Sparse Columns](../tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Heaps &#40;Tabellen ohne gruppierte Indizes&#41;](../indexes/heaps-tables-without-clustered-indexes.md)   
  [Beschreibung von gruppierten und nicht gruppierten Indizes](../indexes/clustered-and-nonclustered-indexes-described.md)   
  [Erstellen gruppierter Indizes](../indexes/create-clustered-indexes.md)   

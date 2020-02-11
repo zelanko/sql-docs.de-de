@@ -1,5 +1,5 @@
 ---
-title: Command Line Options in SSMA Console (AccessToSQL) | Microsoft-Dokumentation
+title: Befehlszeilenoptionen in der SSMA-Konsole (accesstosql) | Microsoft-Dokumentation
 ms.prod: sql
 ms.custom: ''
 ms.date: 08/19/2017
@@ -11,49 +11,49 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68265526"
 ---
-# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (AccessToSQL)
-Microsoft bietet Ihnen einen stabilen Satz von Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. Die folgenden Abschnitte enthalten zusätzliche Details.  
+# <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Befehlszeilenoptionen in der SSMA-Konsole (accesstosql)
+Microsoft bietet Ihnen einen robusten Satz von Befehlszeilenoptionen zum Ausführen und Steuern von SSMA-Aktivitäten. In den folgenden Abschnitten finden Sie weitere Details.  
   
 ## <a name="command-line-options-in-the-ssma-console"></a>Befehlszeilenoptionen in der SSMA-Konsole  
-Hierin beschriebenen sind die Konsole die Befehlsoptionen an.  
+Hier werden die Konsolen Befehlsoptionen beschrieben.  
   
-In diesem Abschnitt wird der Begriff "Option" auch als "Switch" bezeichnet.  
+Für den Zweck dieses Abschnitts wird der Begriff "Option" auch als "Switch" bezeichnet.  
   
-Optionen sind nicht in der Groß-/Kleinschreibung beachtet und integritätsdienststatus mit der " **-** 'oder' **/** " Zeichen.  
+Bei den Optionen wird die Groß-/Kleinschreibung nicht beachtet,**-** und Sie kann**/** entweder mit dem Zeichen ' ' oder ' ' beginnen.  
   
-Wenn Optionen angegeben werden, ist es zwingend erforderlich, dass Sie die entsprechende Optionsparameter angeben.  
+Wenn Optionen angegeben werden, ist es obligatorisch, die entsprechenden Optionsparameter anzugeben.  
   
-Optionsparameter müssen vom Option Zeichen durch ein Leerzeichen getrennt werden.  
+Optionsparameter müssen von dem Options Zeichen durch Leerzeichen getrennt werden.  
   
-**Beispiele für die Abfrageausdruckssyntax:**  
+**Syntax Beispiele:**  
   
 `C:\> SSMAforAccessConsole.EXE -s scriptfile`  
   
 `C:\> SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\VariableValueFileSample.xml" -c "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml"`  
   
-Ordner oder Datei-Namen mit Leerzeichen müssen in doppelte Anführungszeichen angegeben werden.  
+Ordner-oder Dateinamen, die Leerzeichen enthalten, müssen in doppelten Anführungszeichen angegeben werden.  
   
-Die Ausgabe des Befehlszeilen-Einträge und Fehlermeldungen ist in "stdout" oder in einer angegebenen Datei gespeichert.  
+Die Ausgabe der Befehlszeilen Einträge und der Fehlermeldungen wird in stdout oder in einer angegebenen Datei gespeichert.  
   
-### <a name="script-file-option--sscript"></a>Skripterstellung für File-Option:-s bzw. das Skript  
-Ein erforderlicher Parameter, gibt der Skript-Datei als Pfad/Name Skripts mit dem Befehlssequenzen SSMA ausgeführt werden soll.  
+### <a name="script-file-option--sscript"></a>Skriptdatei Option:-s/Skript  
+Ein obligatorischer Switch: der Pfad/Name der Skriptdatei gibt das Skript der Befehlssequenzen an, die von SSMA ausgeführt werden.  
   
-**Beispiele für die Abfrageausdruckssyntax:**  
+**Syntax Beispiele:**  
   
 `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="variable-value-file-option--vvariable"></a>Variablenwert-File-Option:-v/Variable  
-Die Wert der Variablen-Datei umfasst, Variablen, die in der Skriptdatei verwendet wird. Der Schalter ist optional. Wenn Variablen nicht in der Datei deklariert und in der Skriptdatei verwendet, wird die Anwendung generiert einen Fehler und beendet die Ausführung der Verwaltungskonsole.  
+### <a name="variable-value-file-option--vvariable"></a>Variable value file-Option:-v/Variable  
+Die Variablen Wert Datei umfasst Variablen, die in der Skriptdatei verwendet werden. Der Schalter ist optional. Wenn Variablen nicht in der Variablen Datei deklariert und in der Skriptdatei verwendet werden, generiert die Anwendung einen Fehler und beendet die Konsolen Ausführung.  
   
-**Beispiele für die Abfrageausdruckssyntax:**  
+**Syntax Beispiele:**  
   
--   Variablen, die definiert, die in mehreren Variablenwert-Dateien, z. B. eine mit einem Standardwert und eine mit einem instanzspezifischen-Wert, falls zutreffend. Die letzte Variable-Datei, die in die Befehlszeilenargumente angegeben hat die Einstellung, im Fall eine Duplizierung von Variablen:  
+-   In mehreren Variablen Wert Dateien definierte Variablen, eventuell eine mit einem Standardwert und eine andere mit einem instanzspezifischen Wert, falls zutreffend. Die letzte in den Befehlszeilen Argumenten angegebene Variablen Datei hat die bevorzugte Einstellung, wenn eine Duplizierung der Variablen vorliegt:  
   
     `C:\>SSMAforAccessConsole.EXE -s`  
   
@@ -61,14 +61,14 @@ Die Wert der Variablen-Datei umfasst, Variablen, die in der Skriptdatei verwende
   
     `projects\global_variablevaluefile.xml -v "c:\migrationprojects\instance_variablevaluefile.xml"`  
   
-### <a name="server-connection-file-option--cserverconnection"></a>Server-Verbindung-Dateioption: - C/Serverconnection  
-Diese Datei enthält die Serververbindungsinformationen für jeden Server. Die Definition jedes Servers wird durch eine eindeutige Server-ID identifiziert. Die Server-IDs werden in der Skriptdatei für die Verbindung-bezogenen Befehlen auf die verwiesen wird.  
+### <a name="server-connection-file-option--cserverconnection"></a>Server Verbindungs Datei (Option):-c/Server Connection  
+Diese Datei enthält Server Verbindungsinformationen für jeden Server. Jede Server Definition wird durch eine eindeutige Server-ID identifiziert. Auf die Server-IDs wird in der Skriptdatei für verbindungsbezogene Befehle verwiesen.  
   
-Server-Definition des Server-Connection-Datei bzw. Skriptdatei angehören. Server-Id in der Skriptdatei hat Vorrang vor den Server-Verbindungsdatei, für den Fall, dass eine Duplizierung der Server-Id vorhanden ist.  
+Die Server Definition kann ein Teil der Server Verbindungs Datei und/oder der Skriptdatei sein. Die Server-ID in der Skriptdatei hat Vorrang vor der Server Verbindungs Datei, wenn eine Duplizierung der Server-ID vorliegt.  
   
-**Beispiele für die Abfrageausdruckssyntax:**  
+**Syntax Beispiele:**  
   
--   Server-IDs werden in der Skriptdatei verwendet. Sie werden in einer separaten Server Connection-Datei definiert. Diese Datei verwendet Variablen, die in den Wert der Variablen-Datei definiert sind:  
+-   Server-IDs werden in der Skriptdatei verwendet. Sie werden in einer separaten Server Verbindungs Datei definiert. Diese Datei verwendet Variablen, die in der Variablen Wert Datei definiert sind:  
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -v`  
   
@@ -76,16 +76,16 @@ Server-Definition des Server-Connection-Datei bzw. Skriptdatei angehören. Serve
   
     `c:\SsmaProjects\myserverconnectionsfile1.xml`  
   
--   Server-Definition wird in der Skriptdatei eingebettet:  
+-   Die Server Definition ist in die Skriptdatei eingebettet:  
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML-Ausgabe-Option: - X / Xmloutput [Xmloutputfile]  
-Mit diesem Befehl wird für die Ausgabe der Ausgabenachrichten der Befehl in einem XML-Format, entweder auf Konsole oder in eine XML-Datei verwendet.  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML-Ausgabe Option:-x/xmloutput [xmloutputfile]  
+Dieser Befehl wird verwendet, um die Befehlsausgabe Nachrichten in einem XML-Format entweder an die Konsole oder an eine XML-Datei auszugeben.  
   
-Es stehen zwei Optionen für Xmloutput, nämlich:  
+Für xmloutput stehen zwei Optionen zur Verfügung:  
   
--   Wenn nach dem Wechsel Xmloutput der "FilePath" angegeben wird, wird die Ausgabe an die Datei umgeleitet.  
+-   Wenn der filePath nach dem xmloutput-Schalter bereitgestellt wird, wird die Ausgabe an die Datei umgeleitet.  
   
     **Syntaxbeispiel:**  
   
@@ -93,14 +93,14 @@ Es stehen zwei Optionen für Xmloutput, nämlich:
   
     `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -x d:\xmloutput\project1output.xml`  
   
--   Wenn nach dem Wechsel Xmloutput keine "FilePath" angegeben wird, wird die Xmlout in der Konsole selbst angezeigt.  
+-   Wenn nach dem xmloutput-Schalter kein filePath bereitgestellt wird, wird das xmlout in der Konsole angezeigt.  
   
     **Syntaxbeispiel:**  
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -xmloutput`  
   
-### <a name="log-file-option--llog"></a>Melden Sie sich File-Option:-l/Log  
-Alle SSMA-Vorgänge in der Konsolenanwendung in einer Protokolldatei aufgezeichnet werden, und der Schalter ist optional. Wenn eine Protokolldatei und den Pfad in der Befehlszeile angegeben werden, wird das Protokoll in der angegebenen Position generiert. Andernfalls wird er an seinem Standardspeicherort generiert.  
+### <a name="log-file-option--llog"></a>Protokolldatei Option:-l/Log  
+Alle SSMA-Vorgänge in der Konsolenanwendung werden in einer Protokolldatei aufgezeichnet, und der Schalter ist optional. Wenn eine Protokolldatei und ihr Pfad in der Befehlszeile angegeben werden, wird das Protokoll am angegebenen Speicherort generiert. Andernfalls wird Sie an Ihrem Standard Speicherort generiert.  
   
 **Syntaxbeispiel:**  
   
@@ -108,8 +108,8 @@ Alle SSMA-Vorgänge in der Konsolenanwendung in einer Protokolldatei aufgezeichn
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -l c:\SsmaProjects\migration1.log`  
   
-### <a name="project-environment-folder-option--eprojectenvironment"></a>Projekt Umgebung Ordneroption:-e/Projectenvironment  
-Dieser optionale Schalter gibt an, der Projektordner für die Einstellungen von Umgebung für das aktuelle SSMA-Projekt.  
+### <a name="project-environment-folder-option--eprojectenvironment"></a>Projekt Umgebungs Ordner Option:-e/projectenvironment  
+Dieser optionale Schalter gibt den Ordner für die Projekt Umgebungseinstellungen für das aktuelle SSMA-Projekt an.  
   
 **Syntaxbeispiel:**  
   
@@ -121,57 +121,57 @@ Dieser optionale Schalter gibt an, der Projektordner für die Einstellungen von 
 |-|  
 ||  
   
-### <a name="secure-password-option--psecurepassword"></a>Secure Password-Option:-p/Securepassword  
-Diese Option gibt an, das verschlüsselte Kennwort für Server-Verbindungen. Es unterscheidet sich von allen anderen Optionen ausführen ein Skripts oder nicht bei jeder Migrationsaktivitäten helfen, jedoch bei der Verwaltung hilft kennwortverschlüsselung für das Server-Verbindungen im Migrationsprojekt verwendet.  
+### <a name="secure-password-option--psecurepassword"></a>Sichere Kenn Wort Option:-p/SecurePassword  
+Diese Option gibt das verschlüsselte Kennwort für Serververbindungen an. Dies unterscheidet sich von allen anderen Optionen dahin, dass kein Skript oder Hilfe in migrationsbezogenen Aktivitäten ausgeführt wird, sondern die Kenn Wort Verschlüsselung für die Serververbindungen, die im Migrationsprojekt verwendet werden, unterstützt wird.  
   
-Sie können keiner anderen Option oder das Kennwort als den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie unter den [Verwalten von Kennwörtern](managing-passwords-accesstosql.md) Abschnitt.  
+Sie können keine andere Option oder kein anderes Kennwort für den Befehlszeilenparameter eingeben. Andernfalls führt dies zu einem Fehler. Weitere Informationen finden Sie im Abschnitt [Verwalten](managing-passwords-accesstosql.md) von Kenn Wörtern.  
   
-Unterstützt die folgenden Unteroptionen `-p/securepassword`:  
+Die folgenden unter Optionen werden für `-p/securepassword`unterstützt:  
   
--   So fügen ein Kennwort, oder aktualisieren ein vorhandenes Kennwort ein, auf geschützten Speicher für eine angegebene ID für den Server oder für alle Server-IDs, die in der Server-Connection-Datei definiert:  
+-   Zum Hinzufügen eines Kennworts oder zum Aktualisieren eines vorhandenen Kennworts auf geschützten Speicher für eine angegebene Server-ID oder für alle Server-IDs, die in der Server Verbindungs Datei definiert sind:  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-c|-serverconnection <server-connection-file> [-v|variable <variable-value-file>]``[-o|overwrite]`  
   
     `-p|-securepassword -a|add    {"<server_id>[, .n]"|all}``-s|-script <server-connection-file> [-v|variable <variable-value-file>] [-o|overwrite]`  
   
--   So entfernen Sie das verschlüsselte Kennwort aus dem geschützten Speicher, der die angegebene ID oder für alle Server-IDs:  
+-   So entfernen Sie das verschlüsselte Kennwort aus dem geschützten Speicher der angegebenen Server-ID oder für alle Server-IDs:  
   
     `-p/securepassword -r/remove {<server_id> [, ...n] | all}`  
   
--   Um eine Liste der Server-IDs anzuzeigen, für die das Kennwort verschlüsselt wird:  
+-   So zeigen Sie eine Liste der Server-IDs an, für die das Kennwort verschlüsselt ist:  
   
     `-p/securepassword -l/list`  
   
--   So exportieren Sie die Kennwörter in geschütztem Speicher auf einer verschlüsselten Datei gespeichert. Diese Datei ist mit benutzerdefinierten-Passphrase verschlüsselt.  
+-   , Um die im geschützten Speicher gespeicherten Kenn Wörter in eine verschlüsselte Datei zu exportieren. Diese Datei wird mit dem vom Benutzer angegebenen Passphrase verschlüsselt.  
   
     `-p/securepassword -e/export {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
--   Die verschlüsselte Datei, die zuvor exportierte wird in den lokalen geschützten Speicher, die mit der Passphrase benutzerdefinierten importiert. Nachdem die Datei entschlüsselt wurde, werden sie in einer neuen Datei, gespeichert, der wiederum auf dem lokalen Computer verschlüsselt wird.  
+-   Die verschlüsselte Datei, die zuvor exportiert wurde, wird mit dem vom Benutzer angegebenen Pass-Phrase in den lokalen geschützten Speicher importiert. Nachdem die Datei entschlüsselt wurde, wird Sie in einer neuen Datei gespeichert, die wiederum auf dem lokalen Computer verschlüsselt ist.  
   
     `-p/securepassword -i/import {<server-id> [, ...n] | all} <encrypted-password -file>`  
   
-    Mehrere Server-IDs können mithilfe von Kommas – als Trennzeichen angegeben werden.  
+    Mehrere Server-IDs können mithilfe von Komma Trennzeichen angegeben werden.  
   
-### <a name="help-option--help"></a>Hilfe-Option::? / Help  
-Zeigt eine syntaxzusammenfassung der Optionen der SSMA-Konsole:  
+### <a name="help-option--help"></a>Hilfe Option:-?/Help  
+Zeigt die Syntax Zusammenfassung der Optionen der SSMA-Konsole an:  
   
 `C:\>SSMAforAccessConsole.EXE -?`  
   
-Eine tabellarische Anzeige der SSMA-Konsole Befehlszeilenoptionen, finden Sie unter [Anhang – 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md).  
+Eine tabellarische Anzeige der Befehlszeilenoptionen der SSMA-Konsole finden Sie in [Anhang-1 &#40;accesstosql&#41;](../../ssma/access/appendix-1-accesstosql.md).  
   
-### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword Hilfeoption: - Securepassword-? / Help  
-Zeigt eine syntaxzusammenfassung der Optionen der SSMA-Konsole:  
+### <a name="securepassword-help-option--securepassword--help"></a>SecurePassword-Hilfe Option:-SecurePassword-?/Help  
+Zeigt die Syntax Zusammenfassung der Optionen der SSMA-Konsole an:  
   
 `C:\>SSMAforAccessConsole.EXE -securepassword -?`  
   
-Eine tabellarische Anzeige der SSMA-Konsole Befehlszeilenoptionen, finden Sie unter [Anhang – 1 &#40;AccessToSQL&#41;](../../ssma/access/appendix-1-accesstosql.md)  
+Eine tabellarische Anzeige der Befehlszeilenoptionen der SSMA-Konsole finden Sie in [Anhang-1 &#40;accesstosql&#41;](../../ssma/access/appendix-1-accesstosql.md)  
   
 ### <a name="next-steps"></a>Nächste Schritte  
-Der nächste Schritt hängt davon ab, auf die Anforderungen Ihres Projekts:  
+Der nächste Schritt hängt von Ihren Projektanforderungen ab:  
   
-1.  Für die Angabe eines Kennworts oder das Exportieren / Importieren von Kennwörtern, finden Sie unter [Verwalten von Kennwörtern &#40;AccessToSQL&#41;](../../ssma/access/managing-passwords-accesstosql.md).  
+1.  Informationen zum Angeben eines Kennworts oder zum Exportieren/Importieren von Kenn Wörtern finden Sie unter Verwalten von Kenn [Wörtern &#40;accesstosql&#41;](../../ssma/access/managing-passwords-accesstosql.md).  
   
-2.  Generieren von Berichten finden Sie unter [Generieren von Berichten &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md).  
+2.  Informationen zum Erstellen von Berichten finden Sie unter [Erstellen von Berichten &#40;Access Token&#41;](../../ssma/access/generating-reports-accesstosql.md).  
   
-3.  Behandlung von Problemen in der Konsole, finden Sie unter [Problembehandlung &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md).  
+3.  Informationen zur Behebung von Problemen in der-Konsole finden Sie unter [Problembehandlung &#40;Access Token&#41;](../../ssma/access/troubleshooting-accesstosql.md).  
   

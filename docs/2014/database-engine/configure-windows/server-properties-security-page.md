@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3a42d496a59f489238d270fcb6bb17f3e1ff6421
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62809004"
 ---
 # <a name="server-properties-security-page"></a>Servereigenschaften (Seite Sicherheit)
@@ -36,7 +36,7 @@ ms.locfileid: "62809004"
 >  Das Ändern der Sicherheitskonfiguration erfordert einen Neustart des Diensts. Beim Ändern des SQL Server- und Windows-Authentifizierungsmodus wird das SA-Konto nicht automatisch aktiviert. Zum Verwenden des SA-Kontos führen Sie [ALTER LOGIN](/sql/t-sql/statements/alter-login-transact-sql) mit der Option ENABLE aus.  
   
 ## <a name="login-auditing"></a>Anmeldungsüberwachung  
- **Keine**  
+ **None**  
  Schaltet die Anmeldungsüberwachung ab.  
   
  **Nur fehlgeschlagene Anmeldungen**  
@@ -64,14 +64,14 @@ ms.locfileid: "62809004"
  **Kennwort**  
  Geben Sie das Kennwort für das Proxykonto ein.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **C2-Überwachungs-Ablaufverfolgung aktivieren**  
  Überwacht alle Zugriffsversuche auf Anweisungen und Objekte und zeichnet diese in einer Datei im Verzeichnis \MSSQL\Data (bei Standardinstanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) bzw. \MSSQL$*Instanzname*\Data (bei benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) auf. Weitere Informationen finden Sie unter [C2-Überwachungsmodus (Serverkonfigurationsoption)](c2-audit-mode-server-configuration-option.md).  
   
  **Datenbankübergreifende Besitzverkettung**  
  Wählen Sie diese Option aus, um es der Datenbank zu ermöglichen, Quelle oder Ziel einer datenbankübergreifenden Besitzverkettung zu sein. Weitere Informationen finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](cross-db-ownership-chaining-server-configuration-option.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)  
   
   

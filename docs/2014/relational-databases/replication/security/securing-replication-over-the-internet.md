@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78dfc544d7fd01f6641df6c0968d4a59a668cdd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62960034"
 ---
 # <a name="securing-replication-over-the-internet"></a>Securing Replication Over the Internet
@@ -37,8 +37,8 @@ ms.locfileid: "62960034"
 ## <a name="web-synchronization-through-iis"></a>Websynchronisierung über IIS  
  Mit der Websynchronisierung für die Mergereplikation ist es möglich, Daten mit dem HTTPS-Protokoll zu replizieren; so können auch Daten durch eine Firewall repliziert werden. Weitere Informationen finden Sie unter [Konfigurieren der Websynchronisierung](../configure-web-synchronization.md) und [Sicherheitsarchitektur für die Websynchronisierung](security-architecture-for-web-synchronization.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Replication Security Best Practices](replication-security-best-practices.md)   
- [Sicherheit von SQL Server-Replikation](view-and-modify-replication-security-settings.md)  
+ [SQL Server-Replikation Sicherheit](view-and-modify-replication-security-settings.md)  
   
   

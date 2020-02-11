@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917043"
 ---
 # <a name="master-database"></a>master-Datenbank
@@ -38,24 +38,24 @@ ms.locfileid: "62917043"
   
 |Datenbankoption|Standardwert|Kann geändert werden.|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|Nein|  
+|ALLOW_SNAPSHOT_ISOLATION|EIN|Nein|  
 |ANSI_NULL_DEFAULT|OFF|Ja|  
 |ANSI_NULLS|OFF|Ja|  
 |ANSI_PADDING|OFF|Ja|  
 |ANSI_WARNINGS|OFF|Ja|  
 |ARITHABORT|OFF|Ja|  
 |AUTO_CLOSE|OFF|Nein|  
-|AUTO_CREATE_STATISTICS|ON|Ja|  
+|AUTO_CREATE_STATISTICS|EIN|Ja|  
 |AUTO_SHRINK|OFF|Nein|  
-|AUTO_UPDATE_STATISTICS|ON|Ja|  
+|AUTO_UPDATE_STATISTICS|EIN|Ja|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Ja|  
 |CHANGE_TRACKING|OFF|Nein|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
 |CURSOR_DEFAULT|GLOBAL|Ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein<br /><br /> Nein|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein <br /><br /> Nein <br /><br /> Nein|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
-|DB_CHAINING|ON|Nein|  
+|DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
 |NUMERIC_ROUNDABORT|OFF|Ja|  
 |PAGE_VERIFY|CHECKSUM|Ja|  
@@ -69,14 +69,14 @@ ms.locfileid: "62917043"
   
  Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Die folgenden Operationen können an der **master** -Datenbank nicht ausgeführt werden:  
   
 -   Hinzufügen von Dateien oder Dateigruppen.  
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
   
--   Ändern des Datenbankbesitzers Der Besitzer von**master** ist **sa**.  
+-   Ändern des Datenbankbesitzers der Besitzer von **Master** ist **sa**.  
   
 -   Erstellen eines Volltextkatalogs oder Volltextindex.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62917043"
   
 -   Löschen der Datenbank.  
   
--   Löschen des **guest** -Benutzers aus der Datenbank.  
+-   Der **Gast** Benutzer wird aus der Datenbank gelöscht.  
   
 -   Aktivieren von Change Data Capture  
   

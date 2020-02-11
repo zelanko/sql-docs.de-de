@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1c23f91f24f2da173280e54a544b00a1b4a6fd09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62806155"
 ---
 # <a name="connect-to-a-sql-server-utility"></a>Verbinden mit einem SQL Server-Hilfsprogramm
@@ -30,7 +30,7 @@ ms.locfileid: "62806155"
   
 3.  Klicken Sie auf **Ansicht** und dann auf **Hilfsprogramm-Explorer**.  
   
-4.  Klicken Sie im Navigationsbereich des Hilfsprogramm-Explorers auf ![](../../database-engine/media/connect-to-utility.gif "Mit_Hilfsprogramm_verbinden")**Mit Hilfsprogramm verbinden**.  
+4.  Klicken Sie im Navigationsbereich des Hilfsprogramm-Explorers auf ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden**.  
   
 5.  Geben Sie im Dialogfeld **Verbindung mit Server herstellen** den Namen der UCP-Instanz an, und klicken Sie dann auf **Verbinden**.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62806155"
   
  Beim Erstellen eines neuen UCPs werden Sie ebenfalls mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm verbunden. Weitere Informationen finden Sie unter [Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](create-a-sql-server-utility-control-point-sql-server-utility.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md)   
  [Anzeigen der Ergebnisse zu Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](view-resource-health-policy-results-sql-server-utility.md)  
   

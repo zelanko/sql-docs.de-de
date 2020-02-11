@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d00f864d5e7209bc0865bfbb52bd1231a2c12a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770418"
 ---
 # <a name="character-map-transformation"></a>Transformation zum Zuordnen der Zeichen
@@ -36,7 +36,7 @@ ms.locfileid: "62770418"
 ## <a name="mapping-operations"></a>Zuordnungsvorgänge  
  In der folgenden Tabelle sind die Zuordnungsvorgänge beschrieben, die von der Transformation zum Zuordnen der Zeichen unterstützt werden.  
   
-|Vorgang|Description|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Byteumkehrung|Kehrt die Bytereihenfolge um.|  
 |Normale Breite|Ordnet Zeichen halber Breite Zeichen normaler Breite zu.|  
@@ -44,22 +44,22 @@ ms.locfileid: "62770418"
 |Hiragana|Ordnet Katakanazeichen Hiraganazeichen zu.|  
 |Katakana|Ordnet Hiraganazeichen Katakanazeichen zu.|  
 |Linguistische Schreibweise|Wendet die linguistische Schreibweise anstelle der Systemregeln an. Die linguistische Schreibweise bezieht sich auf die Funktionalität der Win32 API für die einfache Unicode-Schreibweisenzuordnung von Türkisch und anderen Gebietsschemas.|  
-|Kleinschreibung|Konvertiert Zeichen in Kleinbuchstaben.|  
+|Kleinbuchstaben|Konvertiert Zeichen in Kleinbuchstaben.|  
 |Chinesisch (vereinfacht)|Ordnet Zeichen in traditionellem Chinesisch Zeichen in vereinfachtem Chinesisch zu.|  
 |Chinesisch (traditionell)|Ordnet Zeichen in vereinfachtem Chinesisch Zeichen in traditionellem Chinesisch zu.|  
-|Großschreibung|Konvertiert Zeichen in Großbuchstaben.|  
+|Großbuchstaben|Konvertiert Zeichen in Großbuchstaben.|  
   
 ## <a name="mutually-exclusive-mapping-operations"></a>Zuordnungsvorgänge, die sich gegenseitig ausschließen  
  In einer Transformation können mehrere Vorgänge ausgeführt werden. Manche Zuordnungsvorgänge schließen sich jedoch gegenseitig aus. In der folgenden Tabelle sind die Einschränkungen aufgeführt, die bei der Verwendung mehrerer Vorgänge in derselben Spalte gelten. Vorgänge in den Spalten Vorgang A und Vorgang B schließen sich gegenseitig aus.  
   
 |Vorgang A|Vorgang B|  
 |-----------------|-----------------|  
-|Kleinschreibung|Großschreibung|  
+|Kleinbuchstaben|Großbuchstaben|  
 |Hiragana|Katakana|  
 |Halbe Breite|Normale Breite|  
 |Chinesisch (traditionell)|Chinesisch (vereinfacht)|  
-|Kleinschreibung|Hiragana, Katakana, halbe Breite, normale Breite|  
-|Großschreibung|Hiragana, Katakana, halbe Breite, normale Breite|  
+|Kleinbuchstaben|Hiragana, Katakana, halbe Breite, normale Breite|  
+|Großbuchstaben|Hiragana, Katakana, halbe Breite, normale Breite|  
   
 ## <a name="configuration-of-the-character-map-transformation"></a>Konfiguration der Transformation zum Zuordnen der Zeichen  
  Es gibt folgende Möglichkeiten, um die Transformation zum Zuordnen der Zeichen zu konfigurieren:  
@@ -74,7 +74,7 @@ ms.locfileid: "62770418"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Allgemeine Eigenschaften](../../common-properties.md)  
+-   [Common Properties](../../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
   

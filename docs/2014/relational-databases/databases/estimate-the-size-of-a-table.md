@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 403e0af44fc1db7efaf674d02ed0e3b94e81a5b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916874"
 ---
 # <a name="estimate-the-size-of-a-table"></a>Schätzen der Größe einer Tabelle
@@ -41,7 +41,7 @@ ms.locfileid: "62916874"
   
 3.  Fügen Sie die in den Schritten 1 und 2 berechneten Werte hinzu.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Schätzen der Größe einer Datenbank](estimate-the-size-of-a-database.md)   
  [Schätzen der Größe eines Heaps](estimate-the-size-of-a-heap.md)   
  [Schätzen der Größe eines gruppierten Indexes](estimate-the-size-of-a-clustered-index.md)   

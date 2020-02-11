@@ -1,5 +1,5 @@
 ---
-title: Vorbereiten der Verwendung von SMO von | Microsoft-Dokumentation
+title: Vorbereiten der Verwendung von SMO | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62780831"
 ---
 # <a name="preparing-to-use-smo"></a>Vorbereiten der Verwendung von SMO
@@ -25,6 +25,6 @@ ms.locfileid: "62780831"
   
 |||  
 |-|-|  
-|**Vorbereiten der Verwendung von SMO**<br /><br /> -   [Syntaxkonventionen](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) in diesem Abschnitt verwendeten Syntaxkonventionen beschrieben.<br />-   [Systemanforderungen](../../../2014/database-engine/dev-guide/system-requirements.md) werden die Systemanforderungen zum Installieren und Verwenden von SMO.<br />-   [Dateien und Versionsnummern](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) werden die SMO-Komponenten und zugehörigen Versionsnummern aufgeführt.|-   [Installieren von SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) enthält Anweisungen zum Installieren von SMO.|  
+|**Vorbereiten der Verwendung von SMO**<br /><br /> -   In den [Syntax Konventionen](../../relational-databases/server-management-objects-smo/smo-syntax-conventions.md) werden die in diesem Abschnitt verwendeten Syntax Konventionen beschrieben.<br />-   [Systemanforderungen](../../../2014/database-engine/dev-guide/system-requirements.md) gibt die Systemanforderungen für die Installation und Verwendung von SMO an.<br />-   [Dateien und Versionsnummern](../../relational-databases/server-management-objects-smo/files-and-version-numbers.md) listet die SMO-Komponenten und die zugehörigen Versionsnummern auf.|-   Die [Installation von SMO](../../relational-databases/server-management-objects-smo/installing-smo.md) enthält Anweisungen zum Installieren von SMO.|  
   
   

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62805579"
 ---
 # <a name="create-custom-templates"></a>Erstellen von benutzerdefinierten Vorlagen
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführten Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]enthält Vorlagen für viele gängige Aufgaben, aber die tatsächliche Leistungsfähigkeit von Vorlagen liegt darin, dass Sie eine benutzerdefinierte Vorlage für ein komplexes Skript erstellen können, das Sie häufig erstellen müssen. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
   
 ## <a name="using-custom-templates"></a>Verwenden benutzerdefinierter Vorlagen  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62805579"
   
 10. Geben Sie im Abfrage-Editor **EXECUTE dbo.WorkOrdersForBlade**ein, und drücken Sie anschließend F5, um die Abfrage auszuführen. Überprüfen Sie, ob im Bereich **Ergebnisse** eine Liste mit Bestellungen für Klingen zurückgegeben wird.  
   
-11. Bearbeiten Sie das Vorlagenskript (das Skript in Schritt 7), und Ersetzen Sie dabei den Produktnamen "Blade" mit dem Parameter <strong> *<* Product_name</strong>, `nvarchar(50)`, <strong>Namen *>* </strong>, an vier Stellen.  
+11. Bearbeiten Sie das Vorlagen Skript (das Skript in Schritt 7), und ersetzen Sie das Blatt "Produktname" `nvarchar(50)`durch den Parameter <strong> *<* product_name</strong>, " <strong>Name*>*</strong>" an vier Stellen.  
   
     > [!NOTE]  
     >  Für Parameter sind drei Elemente erforderlich: der Name des zu ersetzenden Parameters, der Datentyp des Parameters und ein Standardwert für den Parameter.  
@@ -103,7 +103,7 @@ ms.locfileid: "62805579"
   
 3.  Klicken Sie im Menü **Abfrage** auf **Werte für Vorlagenparameter angeben**.  
   
-4.  In der **Vorlagenparameter** im Dialogfeld für die `product_name` -Wert, geben Sie **FreeWheel** (überschreiben dabei den Standardinhalt), und klicken Sie dann auf **OK** zu schließen die **Vorlagenparameter** Dialogfeld ein, und ändern Sie das Skript im Abfrage-Editor.  
+4.  Geben Sie im Dialogfeld **Vorlagen Parameter ersetzen** für den `product_name` Wert den Wert " **frewheel** " (Überschreiben des Standard Inhalts) ein, und klicken Sie dann auf **OK** , um das Dialogfeld **Vorlagen Parameter ersetzen** zu schließen und das Skript im Abfrage-Editor zu ändern.  
   
 5.  Drücken Sie F5, um das Skript auszuführen. Damit wird die Prozedur erstellt.  
   

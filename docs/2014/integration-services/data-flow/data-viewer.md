@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b5696b55252a6053b7501eee08dfbe4365678a26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62827647"
 ---
 # <a name="data-viewer"></a>Daten-Viewer
   Wenn ein Pfad zu einem Daten-Viewer konfiguriert ist, zeigt dieser Daten-Viewer die Daten pufferweise an, während sie zwischen zwei Datenflusskomponenten fließen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Grüner Pfeil**  
  Klicken Sie auf den Pfeil, um die Daten des nächsten Puffers anzuzeigen. Wenn die Daten in einem einzigen Puffer verschoben werden können, ist diese Option nicht verfügbar.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62827647"
  **Daten kopieren**  
  Kopiert die Daten des aktuellen Puffers in die Zwischenablage.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Debuggen des Datenflusses](../troubleshooting/debugging-data-flow.md)  
   
   

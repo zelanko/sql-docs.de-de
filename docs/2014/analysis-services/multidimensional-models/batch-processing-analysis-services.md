@@ -1,5 +1,5 @@
 ---
-title: Batchverarbeitung (Analysis Services) | Microsoft-Dokumentation
+title: Batch Verarbeitung (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076939"
 ---
 # <a name="batch-processing-analysis-services"></a>Batchverarbeitung (Analysis Services)
@@ -26,13 +26,13 @@ ms.locfileid: "66076939"
   
  Die Verfahren in diesem Thema zeigen die Schritte, die zur vollständigen Verarbeitung von Dimensionen und Partitionen erforderlich sind. Für die Batchverarbeitung sind auch andere Verarbeitungsoptionen verfügbar, wie z. B. die inkrementelle Verarbeitung. Damit diese Verfahren ordnungsgemäß ausgeführt werden können, sollten Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank verwenden, die mindestens zwei Dimensionen und eine Partition enthält.  
   
- Dieses Thema enthält folgende Abschnitte:  
+ Dieses Thema enthält die folgenden Abschnitte:  
   
- [Batchverarbeitung in SQL Server Data Tools](#bkmk_ssdt)  
+ [Batch Verarbeitung in SQL Server Data Tools](#bkmk_ssdt)  
   
- [Batchverarbeitung mithilfe von XMLA in Management Studio](#bkmk_xmla)  
+ [Batch Verarbeitung mithilfe von XMLA in Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a> Batchverarbeitung in SQL Server Data Tools  
+##  <a name="bkmk_ssdt"></a>Batch Verarbeitung in SQL Server Data Tools  
  Bevor Objekte in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verarbeitet werden können, muss das Projekt, in dem sie enthalten sind, bereitgestellt werden. Weitere Informationen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Öffnen Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,13 +53,13 @@ ms.locfileid: "66076939"
   
 9. Wählen Sie unter **Verarbeitungsoptionen**die folgenden Einstellungen aus:  
   
-    -   Legen Sie für**Verarbeitungsreihenfolge** die Option **Sequenziell**und für **Transaktionsmodus** die Option **Eine Transaktion**fest.  
+    -   Die **Verarbeitungsreihenfolge** ist auf " **sequenziell**" und der **Transaktionsmodus** auf **eine Transaktion**festgelegt.  
   
-    -   Legen Sie für**Rückschreibetabellenoption** die Option **Vorhandene verwenden**fest.  
+    -   Die Option für die **Rück schreibe Tabelle** ist auf **vorhandene verwenden**festgelegt.  
   
     -   Aktivieren Sie unter **Betroffene Objekte**das Kontrollkästchen **Betroffene Objekte verarbeiten** .  
   
-10. Klicken Sie auf die Registerkarte **Dimensionsschlüsselfehler** . Überprüfen Sie, ob **Standardfehlerkonfiguration verwenden** ausgewählt ist.  
+10. Klicken Sie auf die Registerkarte **Dimensions Schlüsselfehler** . Überprüfen Sie, ob **Standardfehler Konfiguration verwenden** ausgewählt ist.  
   
 11. Klicken Sie auf **OK** , um das Fenster **Einstellungen ändern** zu schließen.  
   
@@ -69,12 +69,12 @@ ms.locfileid: "66076939"
   
 14. Klicken Sie im Fenster **Objekte verarbeiten** auf **Schließen** .  
   
-##  <a name="bkmk_xmla"></a> Batchverarbeitung mithilfe von XMLA in Management Studio  
+##  <a name="bkmk_xmla"></a>Batch Verarbeitung mithilfe von XMLA in Management Studio  
  Sie können ein XMLA-Skript erstellen, das Batchverarbeitung ausführt. Starten Sie, indem Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für jedes Objekt ein XMLA-Skript generieren, und kombinieren Sie sie dann in eine einzelne XMLA-Abfrage, die Sie interaktiv oder in einem geplanten Task ausführen.  
   
  Schrittanleitungen finden Sie unter **Beispiel 2** in [Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Ändern von Quellcodeverwaltungsverbindungen | Microsoft-Dokumentation
+title: Quell Code Verwaltungs Verbindungen ändern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62812789"
 ---
 # <a name="change-source-control-connections"></a>Ändern von Quellcodeverwaltungsverbindungen
@@ -31,11 +31,11 @@ ms.locfileid: "62812789"
   
 #### <a name="to-open-the-source-control-user-interface-from-the-studio-environment"></a>So öffnen Sie die Benutzeroberfläche der Quellcodeverwaltung aus der SQL Server Management Studio-Umgebung  
   
-1.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **starten Sie Microsoft Visual SourceSafe**.  
+1.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **Microsoft Visual SourceSafe starten**.  
   
-## <a name="see-also"></a>Siehe auch  
- [Grundlagen der Versionskontrolle](../../2014/database-engine/source-control-basics.md)   
- [Festlegen von Quellcodeverwaltungsoptionen](../../2014/database-engine/set-source-control-options.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Grundlagen der Quellen Verwaltung](../../2014/database-engine/source-control-basics.md)   
+ [Optionen für die Quell Code Verwaltung festlegen](../../2014/database-engine/set-source-control-options.md)   
  [Ausschließen von Dateien aus der Quellcodeverwaltung](../../2014/database-engine/exclude-files-from-source-control.md)  
   
   

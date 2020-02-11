@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Eincheckvorgängen | Microsoft-Dokumentation
+title: Check-Ins verwalten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,26 +15,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774292"
 ---
 # <a name="manage-checkins"></a>Verwalten von Eincheckvorgängen
   Um Änderungen an einer quellcodeverwalteten Datei anderen Benutzern zur Verfügung zu stellen, müssen Sie die Datei einchecken. Wenn Sie eine Datei einchecken, wird die von Ihnen erstellte Version in den Quellcodeverwaltungsanbieter kopiert und als letzte Dateiversion festgelegt. Sie ist allgemein für Benutzer verfügbar, die die entsprechenden Berechtigungen haben.  
   
- Verwendung [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie Dateien einchecken. Wenn Sie den Speicher der Quellcodeverwaltung regelmäßig aktualisieren müssen, aber auch die Kontrolle über eine Gruppe von Dateien behalten müssen, können Sie festlegen, dass Dateien, die Sie einchecken, weiterhin für Sie ausgecheckt bleiben.  
+ Verwenden [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Sie, um Dateien einzuchecken. Wenn Sie den Speicher der Quellcodeverwaltung regelmäßig aktualisieren müssen, aber auch die Kontrolle über eine Gruppe von Dateien behalten müssen, können Sie festlegen, dass Dateien, die Sie einchecken, weiterhin für Sie ausgecheckt bleiben.  
   
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Einchecken von Dateien](../../2014/database-engine/check-in-files.md)|Enthält Anweisungen zum Einchecken einer Datei, die Sie geändert haben.|  
 |[Anzeigen einer Liste geänderter Dateien](../../2014/database-engine/view-a-list-of-modified-files.md)|Erläutert, wie Sie eine Liste der geänderten Dateien anzeigen, die Sie nach dem Arbeiten zusammen einchecken können.|  
 |[Bearbeiten eingecheckter Dateien](../../2014/database-engine/edit-checked-in-files.md)|Erläutert die Konfiguration der [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]-Umgebung für das Ändern von Dateien, die nicht ausgecheckt sind.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Auscheckvorgängen](../../2014/database-engine/manage-checkouts.md)  
   
   

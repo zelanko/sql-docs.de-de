@@ -18,17 +18,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62917090"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
   In diesem Thema wird beschrieben, wie eine getrennte Datenbank an einen anderen Speicherort verschoben und in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]an die gleiche oder eine andere Serverinstanz angefügt wird. Es wird jedoch empfohlen, Datenbanken mit der ALTER DATABASE-Prozedur für geplante Verschiebungen zu verschieben, anstatt die Optionen zum Trennen und Anfügen zu verwenden. Weitere Informationen finden Sie unter [Move User Databases](move-user-databases.md).  
   
 > [!IMPORTANT]  
->  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z. B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
+>  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z.B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
   
 ## <a name="procedure"></a>Verfahren  
   
@@ -46,12 +46,12 @@ ms.locfileid: "62917090"
     > [!NOTE]  
     >  Wenn Sie versuchen, die Datenbank ohne Angabe der Protokolldatei anzufügen, wird die Protokolldatei an ihrem ursprünglichen Speicherort gesucht. Falls noch eine Kopie der Protokolldatei im ursprünglichen Speicherort vorhanden ist, wird diese Kopie angefügt. Wenn Sie die Verwendung der ursprünglichen Protokolldatei verhindern möchten, geben Sie entweder den Pfad der neuen Protokolldatei an, oder entfernen Sie die ursprüngliche Kopie der Protokolldatei (nachdem Sie sie an einen neuen Speicherort kopiert haben).  
   
-3.  Fügen Sie die kopierten Dateien an. Weitere Informationen finden Sie unter [Attach a Database](attach-a-database.md).  
+3.  Fügen Sie die kopierten Dateien an. Weitere Informationen finden Sie unter [Anfügen einer Datenbank](attach-a-database.md).  
   
 ## <a name="example"></a>Beispiel  
- Das folgende Beispiel erstellt eine Kopie der [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] -Anweisungen werden ausgeführt, in einem Abfrage-Editor-Fenster, die mit verbunden ist die Server-Instanz, der angefügt ist.  
+ Das folgende Beispiel erstellt eine Kopie der- [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen, die in einem Abfrage-Editor-Fenster ausgeführt werden, das mit der Serverinstanz verbunden ist, an die angefügt ist.  
   
-1.  Trennen Sie die [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen:  
+1.  Trennen Sie die [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] -Anweisungen:  
   
     ```  
     USE master;  
@@ -60,7 +60,7 @@ ms.locfileid: "62917090"
     GO  
     ```  
   
-2.  Kopieren Sie die Datenbankdateien („AdventureWorks208R2_Data.mdf“ und „AdventureWorks208R2_log“) an die folgenden Speicherorte: C:\MySQLServer\AdventureWorks208R2_Data.mdf und C:\MySQLServer\AdventureWorks208R2_Log.ldf.  
+2.  Verwenden Sie die gewünschte Methode, und kopieren Sie die Datenbankdateien (AdventureWorks208R2_Data.mdf und AdventureWorks208R2_log) nach C:\MySQLServer\AdventureWorks208R2_Data.mdf bzw. C:\MySQLServer\AdventureWorks208R2_Log.ldf.  
   
     > [!IMPORTANT]  
     >  Platzieren Sie Datenbank und Transaktionsprotokoll bei einer Produktionsdatenbank auf separaten Datenträgern.  
@@ -81,7 +81,7 @@ ms.locfileid: "62917090"
   
      In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ist eine neu angefügte Datenbank nicht sofort im Objekt-Explorer sichtbar. Um die Datenbank anzuzeigen, klicken Sie im Objekt-Explorer im Menü **Ansicht** auf **Aktualisieren**. Wenn der **Datenbanken** -Knoten im Objekt-Explorer erweitert wird, wird nun die neu angefügte Datenbank in der Liste der Datenbanken angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](database-detach-and-attach-sql-server.md)  
   
   

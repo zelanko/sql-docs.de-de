@@ -19,14 +19,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6c174fe5cdf1ebe1dbc9b0350a01fb6e8027effa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768966"
 ---
 # <a name="developing-a-custom-data-flow-component"></a>Entwickeln einer benutzerdefinierten Datenflusskomponente
-  Die Datenflusstask besteht aus Komponenten, die eine Verbindung zu einer Reihe von Datenquellen herstellen und die Daten dann mit Hochgeschwindigkeit transformieren und routen. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt ein erweiterbares Objektmodell bereit, mit dem Entwickler benutzerdefinierte Quellen, Transformationen und Ziele erstellen können, die in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] und in bereitgestellten Paketen Verwendung finden. Dieser Abschnitt enthält Themen, die Sie durch die Entwicklung benutzerdefinierter Datenflusskomponenten führen.  
+  Die Datenflusstask besteht aus Komponenten, die eine Verbindung zu einer Reihe von Datenquellen herstellen und die Daten dann mit Hochgeschwindigkeit transformieren und routen. [!INCLUDE[msCoName](../../../includes/msconame-md.md)]stellt ein erweiterbares Objektmodell bereit, mit dem Entwickler benutzerdefinierte Quellen, Transformationen und Ziele erstellen können, die [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] in und in bereitgestellten Paketen verwendet werden können. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Dieser Abschnitt enthält Themen, die Sie durch die Entwicklung benutzerdefinierter Datenflusskomponenten führen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Erstellen einer benutzerdefinierten Datenflusskomponente](creating-a-custom-data-flow-component.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "62768966"
  [Entwickeln bestimmter Arten von Datenflusskomponenten](../../extending-packages-custom-objects-data-flow-types/developing-specific-types-of-data-flow-components.md)  
  Enthält Informationen zum Entwickeln der drei Arten von Datenflusskomponenten: Quellen, Transformationen und Ziele.  
   
-## <a name="reference"></a>Referenz  
+## <a name="reference"></a>Verweis  
  <xref:Microsoft.SqlServer.Dts.Pipeline>  
  Enthält die Klassen und Schnittstellen zur Erstellung benutzerdefinierter Datenflusskomponenten.  
   
@@ -110,10 +110,10 @@ ms.locfileid: "62768966"
  [Entwickeln eines benutzerdefinierten ForEach-Enumerators](../../extending-packages-custom-objects/foreach-enumerator/developing-a-custom-foreach-enumerator.md)  
  Erläutert die Programmierung benutzerdefinierter Enumeratoren.  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erweitern des Datenflusses mit der Skriptkomponente] (.. /.. /Extending-Packages-Scripting/Data-Flow-Script-Component/Extending-the-Data-Flow-with-the-Script-Component.MD   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erweitern des Datenflusses mit der Skript Komponente] (.. /.. /extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md   
  [Vergleichen von Skriptlösungen und benutzerdefinierten Objekten](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

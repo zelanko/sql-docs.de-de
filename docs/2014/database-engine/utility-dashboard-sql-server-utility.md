@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773812"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Dashboard des Hilfsprogramms (SQL Server-Hilfsprogramm)
@@ -102,9 +102,9 @@ ms.locfileid: "62773812"
  Auslastung des Hilfsprogrammspeichers  
  Im Kreisdiagramm zur Speicherplatzauslastung unten rechts im Dashboard wird das Verhältnis von belegtem Speicherplatz zu freiem Speicherplatz auf Volumes angezeigt, die sich auf Computern mit verwalteten Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]befinden. Die Daten in dieser Anzeige werden alle 15 Minuten aktualisiert.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden des Hilfsprogramm-Explorers zum Verwalten des SQL Server-Hilfsprogramms](../relational-databases/manage/use-utility-explorer-to-manage-the-sql-server-utility.md)   
- [Registrieren einer Instanz von SQLServer &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
+ [Registrieren Sie eine Instanz von SQL Server &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md)   
  [Ändern der Definition von Ressourcenintegritätsrichtlinien &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/modify-a-resource-health-policy-definition-sql-server-utility.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Neue Sucheigenschaftenliste | Microsoft-Dokumentation
+title: Neue Such Eigenschaften Liste | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774500"
 ---
 # <a name="new-search-property-list"></a>Neue Sucheigenschaftenliste
   In diesem Dialogfeld können Sie eine Sucheigenschaftenliste erstellen.  
   
-## <a name="options"></a>Optionen  
- **Name der sucheigenschaftenliste**  
+## <a name="options"></a>Tastatur  
+ **Name der Sucheigenschaftenliste**  
  Geben Sie den Namen der Sucheigenschaftenliste ein.  
   
  **Besitzer**  
@@ -41,16 +41,16 @@ ms.locfileid: "62774500"
  **Quelldatenbank**  
  Geben Sie den Namen der Datenbank an, zu der die vorhandene Sucheigenschaftenliste gehört. Standardmäßig ist die aktuelle Datenbank ausgewählt. Wenn die aktuelle Verbindung einer Benutzer-ID in dieser Datenbank zugeordnet ist, können Sie im Listenfeld optional eine andere Datenbank auswählen.  
   
- **Quelle der sucheigenschaftenliste**  
+ **Quelle für Sucheigenschaftenliste**  
  Wählen Sie in den zur ausgewählten Datenbank gehörenden Listen den Namen einer vorhandenen Sucheigenschaftenliste aus.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Finden Sie unter [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
+ Weitere Informationen finden Sie unter [Create Search Property List &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>So verwalten Sie Sucheigenschaftenlisten in SQL Server Management Studio  
  Informationen zum Erstellen, Anzeigen, Ändern oder Löschen einer Sucheigenschaftenliste und zum Konfigurieren eines Volltextindexes für die Eigenschaftensuche finden Sie unter [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
  [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  

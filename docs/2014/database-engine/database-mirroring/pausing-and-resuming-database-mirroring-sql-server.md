@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62754524"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Anhalten und Fortsetzen der Datenbankspiegelung (SQL Server)
@@ -35,13 +35,13 @@ ms.locfileid: "62754524"
   
  **In diesem Thema:**  
   
--   [Auswirkung des Anhaltens und Fortsetzens auf die Protokollkürzung](#EffectOnLogTrunc)  
+-   [Auswirkungen des Anhaltens und fort Setzens auf die Protokoll Verkürzung](#EffectOnLogTrunc)  
   
--   [Vermeiden eines vollen Transaktionsprotokolls](#AvoidFullLog)  
+-   [Vermeiden eines vollständigen Transaktions Protokolls](#AvoidFullLog)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="EffectOnLogTrunc"></a> Auswirkung des Anhaltens und Fortsetzens auf die Protokollkürzung  
+##  <a name="EffectOnLogTrunc"></a>Auswirkungen des Anhaltens und fort Setzens auf die Protokoll Verkürzung  
  Wenn ein automatischer Prüfpunkt für eine Datenbank ausgeführt wird, wird normalerweise das zugehörige Transaktionsprotokoll nach der nächsten Protokollsicherung auf diesen Prüfpunkt gekürzt. Während eine Datenbank-Spiegelungssitzung angehalten ist, bleiben alle aktuellen Protokolldatensätze aktiv, weil der Prinzipalserver darauf wartet, sie an den Spiegelserver zu senden. Die ungesendeten Protokolldatensätze sammeln sich im Transaktionsprotokoll der Prinzipaldatenbank an, bis die Sitzung fortgesetzt wird und der Prinzipalserver die Protokolldatensätze an den Spiegelserver gesendet hat.  
   
  Wenn die Sitzung fortgesetzt wird, beginnt der Prinzipalserver sofort damit, die akkumulierten Protokolldatensätze an den Spiegelserver zu senden. Nachdem der Spiegelserver bestätigt hat, dass der dem ältesten automatischen Prüfpunkt entsprechende Protokolldatensatz in die Warteschlange gestellt wurde, kürzt der Prinzipalserver das Protokoll der Prinzipaldatenbank auf diesen Prüfpunkt. Der Spiegelserver kürzt die Wiederholungswarteschlange auf denselben Protokolldatensatz. Da dieser Prozess für jeden sukzessiven Prüfpunkt wiederholt wird, wird das Protokoll schrittweise, von Prüfpunkt zu Prüfpunkt, gekürzt.  
@@ -49,7 +49,7 @@ ms.locfileid: "62754524"
 > [!NOTE]  
 >  Weitere Informationen zu Prüfpunkten und der Protokollkürzung finden Sie unter [Datenbankprüfpunkte &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
-##  <a name="AvoidFullLog"></a> Vermeiden eines vollen Transaktionsprotokolls  
+##  <a name="AvoidFullLog"></a>Vermeiden eines vollständigen Transaktions Protokolls  
  Wenn das Protokoll voll ist (weil die maximale Größe erreicht wurde oder weil für die Serverinstanz der Speicherplatz nicht ausreicht), kann die Datenbank keine Updates mehr ausführen. Es gibt zwei Möglichkeiten, um dieses Problem zu vermeiden:  
   
 -   Setzen Sie die Datenbank-Spiegelungssitzung fort, bevor das Protokoll voll ist, oder fügen Sie mehr Protokollspeicher hinzu. Durch das Fortsetzen der Datenbankspiegelung kann der Prinzipalserver das angesammelte aktive Protokoll an den Spiegelserver senden, und die Spiegeldatenbank erhält den Status SYNCHRONIZING. Der Spiegelserver kann dann das Protokoll auf den Datenträger schreiben und damit beginnen, es zu wiederholen.  
@@ -59,17 +59,17 @@ ms.locfileid: "62754524"
      Im Gegensatz zum Anhalten einer Sitzung werden beim Entfernen der Spiegelung alle Informationen zur Spiegelungssitzung gelöscht. Jede Partnerserverinstanz behält eine eigene Kopie der Datenbank. Wenn die frühere Spiegelkopie wiederhergestellt wird, weicht sie von der früheren Prinzipalkopie ab und liegt um die Zeitspanne zurück, die seit dem Anhalten der Sitzung vergangen ist. Weitere Informationen finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So halten Sie eine Datenbankspiegelung an bzw. setzen sie fort**  
+ **Anhalten oder Fortsetzen der Daten Bank Spiegelung**  
   
--   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](pause-or-resume-a-database-mirroring-session-sql-server.md)  
+-   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
- **So beenden Sie die Datenbankspiegelung**  
+ **So verhindern Sie das Abbrechen**  
   
--   [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](remove-database-mirroring-sql-server.md)  
+-   [Entfernen der Datenbankspiegelung (SQL Server)](remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
   
   

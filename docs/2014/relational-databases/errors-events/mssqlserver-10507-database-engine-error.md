@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c32441ebcf8804f712fad3061bbd380864db3426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62916299"
 ---
-# <a name="mssqlserver10507"></a>MSSQLSERVER_10507
+# <a name="mssqlserver_10507"></a>MSSQLSERVER_10507
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62916299"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|PG_STMT_DOES_NOT_MATCH|  
-|Meldungstext|Die Planhinweisliste kann nicht erstellt werden kann ' %. \*ls, da die Anweisung vom angegebenen `@stmt` und `@module_or_batch`, oder durch `@plan_handle` und `@statement_start_offset`, stimmt nicht mit einer beliebigen Anweisung in das angegebene Modul oder batch. Ändern Sie die Werte, um eine Übereinstimmung mit einer Anweisung im Modul oder Batch herzustellen.|  
+|Meldungstext|Die Planhinweisliste „%.\*ls“ kann nicht erstellt werden, weil die mit `@stmt` und `@module_or_batch` oder mit `@plan_handle` und `@statement_start_offset` angegebene Anweisung keiner Anweisung im festgelegten Modul oder Batch entspricht. Ändern Sie die Werte, um eine Übereinstimmung mit einer Anweisung im Modul oder Batch herzustellen.|  
   
 ## <a name="explanation"></a>Erklärung  
  Eine Anweisung im festgelegten Modul oder Batch konnte nicht der angegebenen Anweisung bzw. dem Offsetwert der Anweisung zugeordnet werden.  
@@ -38,9 +38,9 @@ ms.locfileid: "62916299"
 ## <a name="user-action"></a>Benutzeraktion  
  Ändern Sie die angegebenen Parameterwerte, um eine Übereinstimmung mit einer Anweisung im Modul oder Batch herzustellen.  
   
-## <a name="see-also"></a>Siehe auch  
- [Planhinweislisten](../performance/plan-guides.md)   
- [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Plan Hinweis Listen](../performance/plan-guides.md)   
+ [sp_create_plan_guide &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql)  
   
   

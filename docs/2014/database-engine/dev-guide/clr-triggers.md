@@ -26,17 +26,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755257"
 ---
 # <a name="clr-triggers"></a>CLR-Trigger
-  Aufgrund der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Integration mit der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) können Sie jede beliebige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Sprache verwenden, um CLR-Trigger zu erstellen. Dieser Abschnitt enthält spezifische Informationen zu Triggern, die mit CLR-Integration implementiert werden. Eine vollständige Erläuterung zu Triggern finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md).  
+  Aufgrund der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Integration mit der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) können Sie jede beliebige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Sprache verwenden, um CLR-Trigger zu erstellen. Dieser Abschnitt enthält spezifische Informationen zu Triggern, die mit CLR-Integration implementiert werden. Eine ausführliche Erläuterung der Trigger finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Was sind Trigger?  
- Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die automatisch ausgeführt wird, wenn ein Sprachereignis ausgeführt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält zwei allgemeine Typen von Triggern: DML-Trigger (Data Manipulation Language, Datenbearbeitungssprache) und DDL-Trigger (Data Definition Language, Datendefinitionssprache). DML-Trigger können verwendet werden, wenn die Anweisungen `INSERT`, `UPDATE` oder `DELETE` Daten in einer angegebenen Tabelle oder Sicht ändern. DDL-Trigger lösen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Anweisungen aus. Dies sind in erster Linie Anweisungen, die mit `CREATE`, `ALTER` und `DROP` beginnen. DDL-Trigger können für Verwaltungsaufgaben verwendet werden, z. B. zum Überwachen und Steuern von Datenbankvorgängen.  
+ Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die automatisch ausgeführt wird, wenn ein Sprachereignis ausgeführt wird. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält zwei allgemeine Typen von Triggern: DML-Trigger (Data Manipulation Language, Datenbearbeitungssprache) und DDL-Trigger (Data Definition Language, Datendefinitionssprache). DML-Trigger können verwendet werden, wenn die Anweisungen `INSERT`, `UPDATE` oder `DELETE` Daten in einer angegebenen Tabelle oder Sicht ändern. DDL-Trigger lösen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Anweisungen aus. Dies sind in erster Linie Anweisungen, die mit `CREATE`, `ALTER` und `DROP` beginnen. DDL-Trigger können für Verwaltungsaufgaben verwendet werden, z. B. zum Überwachen und Steuern von Datenbankvorgängen.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Spezifische Funktionen von CLR-Triggern  
  In [!INCLUDE[tsql](../../includes/tsql-md.md)] geschriebene Trigger können feststellen, welche Spalten der auslösenden Sicht oder Tabelle mit den Funktionen `UPDATE(column)` und `COLUMNS_UPDATED()` aktualisiert wurden.  
@@ -49,14 +50,14 @@ ms.locfileid: "62755257"
   
 -   Zugreifen auf Informationen über Datenbankobjekte, die von der Ausführung von DDL-Anweisungen beeinflusst werden  
   
- Diese Funktionen werden grundsätzlich in der Abfragesprache oder durch die `SqlTriggerContext`-Klasse zur Verfügung gestellt. Weitere Informationen zu den Vorteilen von CLR-Integration "und" Auswählen zwischen verwaltetem Code und [!INCLUDE[tsql](../../includes/tsql-md.md)], finden Sie unter [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
+ Diese Funktionen werden grundsätzlich in der Abfragesprache oder durch die `SqlTriggerContext`-Klasse zur Verfügung gestellt. Informationen zu den Vorteilen der CLR-Integration und zur Auswahl zwischen verwaltetem [!INCLUDE[tsql](../../includes/tsql-md.md)]Code und finden Sie unter [Übersicht über die CLR-Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## <a name="using-the-sqltriggercontext-class"></a>Verwenden der SqlTriggerContext-Klasse  
  Die `SqlTriggerContext`-Klasse kann nicht öffentlich erstellt werden und kann nur durch Zugreifen auf die `SqlContext.TriggerContext`-Eigenschaft innerhalb des Texts eines CLR-Triggers abgerufen werden. Die `SqlTriggerContext`-Klasse kann vom aktiven `SqlContext` durch Aufrufen der `SqlContext.TriggerContext`-Eigenschaft abgerufen werden:  
   
  `SqlTriggerContext myTriggerContext = SqlContext.TriggerContext;`  
   
- Die `SqlTriggerContext`-Klasse stellt Kontextinformationen über den Trigger zur Verfügung. Diese Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst hat, welche Spalten geändert wurden, in einer UPDATE-Vorgang, und im Falle eines DDL-Triggers, einer XML- `EventData` Struktur, die den auslösenden Vorgang beschreibt. Weitere Informationen finden Sie unter [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Die `SqlTriggerContext`-Klasse stellt Kontextinformationen über den Trigger zur Verfügung. Diese Kontextinformationen umfassen den Typ der Aktion, die den Trigger ausgelöst hat, die Spalten, die bei einem Aktualisierungs Vorgang geändert wurden, und im Fall eines DDL-Auslösers `EventData` eine XML-Struktur, die den auslösenden Vorgang beschreibt. Weitere Informationen finden Sie unter [EventData &#40;Transact-SQL-&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="determining-the-trigger-action"></a>Bestimmen der Triggeraktion  
  Sobald Sie eine `SqlTriggerContext`-Klasse erhalten haben, können Sie damit den Typ der Aktion bestimmen, mit der der Trigger ausgelöst wurde. Diese Informationen stehen über die `TriggerAction`-Eigenschaft der `SqlTriggerContext`-Klasse zur Verfügung.  
@@ -72,9 +73,10 @@ ms.locfileid: "62755257"
 -   Für DDL-Trigger ist die Liste möglicher TriggerAction-Werte beachtlich länger. Weitere Informationen hierzu finden Sie im Abschnitt "TriggerAction Enumeration" in der .NET Framework-SDK-Dokumentation.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen 'inserted' und 'deleted'  
- Zwei besondere Tabellen werden in DML-triggeranweisungen verwendet: die **eingefügt** Tabelle und die **gelöscht** Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Die Daten in den Tabellen können Sie jedoch nicht direkt ändern.  
+ In DML-Triggeranweisungen werden zwei spezielle Tabellen verwendet: die **eingefügte** Tabelle und die **Gelöschte** Tabelle. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Die Daten in den Tabellen können Sie jedoch nicht direkt ändern.  
   
- CLR-Trigger können Zugriff auf die **eingefügt** und **gelöscht** Tabellen durch der CLR-in-Process-Anbieter. Dazu wird ein `SqlCommand`-Objekt vom SqlContext-Objekt abgerufen. Zum Beispiel:  
+ CLR-Trigger können über den Prozess internen CLR-Anbieter auf die **eingefügten** und **gelöschten** Tabellen zugreifen. Dazu wird ein `SqlCommand`-Objekt vom SqlContext-Objekt abgerufen. Beispiel:  
   
  C#  
   
@@ -133,9 +135,9 @@ reader.Close()
 ```  
   
 ### <a name="accessing-eventdata-for-clr-ddl-triggers"></a>Zugreifen auf EventData für CLR DDL-Trigger  
- Wie normale Trigger lösen auch DDL-Trigger gespeicherte Prozeduren als Antwort auf Ereignisse aus. Aber im Gegensatz zu DML-Trigger, werden sie nicht als Reaktion auf aktualisieren, INSERT oder DELETE-Anweisungen für eine Tabelle oder Sicht ausgelöst. DDL-Trigger lösen stattdessen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Anweisungen aus. Dies sind in erster Linie Anweisungen, die mit CREATE, ALTER und DROP beginnen. DDL-Trigger können für Verwaltungsaufgaben verwendet werden, z. B. zum Überwachen von Datenbankvorgängen und Schemaänderungen.  
+ Wie normale Trigger lösen auch DDL-Trigger gespeicherte Prozeduren als Antwort auf Ereignisse aus. Im Gegensatz zu DML-Triggern werden Sie jedoch nicht als Antwort auf Update-, INSERT-oder DELETE-Anweisungen für eine Tabelle oder Sicht ausgelöst. DDL-Trigger lösen stattdessen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Anweisungen aus. Dies sind in erster Linie Anweisungen, die mit CREATE, ALTER und DROP beginnen. DDL-Trigger können für Verwaltungsaufgaben verwendet werden, z. B. zum Überwachen von Datenbankvorgängen und Schemaänderungen.  
   
- Informationen über ein Ereignis, das einen DDL-Trigger auslöst, sind in der `EventData`-Eigenschaft der `SqlTriggerContext`-Klasse verfügbar. Diese Eigenschaft enthält einen `xml`-Wert. Das XML-Schema enthält folgende Informationen:  
+ Informationen über ein Ereignis, das einen DDL-Trigger auslöst, sind in der `EventData`-Eigenschaft der `SqlTriggerContext`-Klasse verfügbar. Diese Eigenschaft enthält einen `xml`-Wert. Das XML-Schema enthält Informationen zu:  
   
 -   Zeitpunkt des Ereignisses.  
   
@@ -230,7 +232,7 @@ End Class
  In diesem Beispiel wird das folgende Szenario veranschaulicht: Benutzer können eine beliebige ID auswählen. Sie möchten nun erfahren, welche Benutzer eine E-Mail-Adresse als ID eingegeben haben. Der folgende Trigger erkennt diese Informationen und protokolliert sie in einer Überwachungstabelle.  
   
 > [!NOTE]  
->  Das Senden von Ereignissen und Meldungen über das `SqlPipe`-Objekt wird hier nur zur Veranschaulichung gezeigt. Es wird jedoch für den Produktionscode nicht empfohlen. Zusätzliche zurückgegebene Daten möglicherweise unerwartet und führen zu Anwendungsfehlern  
+>  Das Senden von Ereignissen und Meldungen über das `SqlPipe`-Objekt wird hier nur zur Veranschaulichung gezeigt. Es wird jedoch für den Produktionscode nicht empfohlen. Zusätzliche zurückgegebene Daten sind möglicherweise unerwartet und können zu Anwendungsfehlern führen.  
   
 ```csharp  
 using System;  
@@ -480,7 +482,7 @@ GO CREATE TABLE UserNameAudit
 )  
 ```  
   
- Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung, den Trigger in erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lautet wie folgt aus, und geht davon aus Assembly **SQLCLRTest** ist bereits in der aktuellen registriert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank.  
+ Die [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisung, mit der der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parameter in erstellt wird, lautet wie folgt, und die Assembly **SQLCLRTest** ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereits in der aktuellen Datenbank registriert.  
   
 ```  
 CREATE TRIGGER EmailAudit  
@@ -493,7 +495,7 @@ EXTERNAL NAME SQLCLRTest.CLRTriggers.EmailAudit
 ## <a name="validating-and-canceling-invalid-transactions"></a>Überprüfen und Abbrechen von ungültigen Transaktionen  
  Trigger werden üblicherweise zur Überprüfung und zum Abbrechen von ungültigen INSERT-, UPDATE- oder DELETE-Transaktionen oder zum Verhindern von Änderungen in Ihrem Datenbankschema verwendet. Dies lässt sich erreichen, indem Validierungslogik in den Trigger integriert wird und anschließend ein Rollback zur aktuellen Transaktion durchgeführt wird, wenn die Aktion nicht den Validierungskriterien entspricht.  
   
- Beim Aufruf innerhalb eines Triggers löst die `Transaction.Rollback`-Methode oder ein SqlCommand-Befehl mit dem Befehlstext "TRANSACTION ROLLBACK" eine Ausnahme mit einer nicht eindeutigen Fehlermeldung aus und muss in einen try/catch-Block eingebunden werden. Die Fehlermeldung, die Sie sehen, ist ähnlich der folgenden:  
+ Beim Aufruf innerhalb eines Triggers löst die `Transaction.Rollback`-Methode oder ein SqlCommand-Befehl mit dem Befehlstext "TRANSACTION ROLLBACK" eine Ausnahme mit einer nicht eindeutigen Fehlermeldung aus und muss in einen try/catch-Block eingebunden werden. Die Fehlermeldung, die angezeigt wird, ähnelt der folgenden:  
   
 ```  
 Msg 6549, Level 16, State 1, Procedure trig_InsertValidator, Line 0  
@@ -655,12 +657,12 @@ DROP ASSEMBLY ValidationTriggers;
 DROP TABLE Table1;  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
- [Erstellen von Datenbankobjekten mit Common Language Runtime &#40;CLR&#41; Integration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
+ [Aufbauen von Datenbankobjekten mit CLR-&#41; Integration (Common Language Runtime) &#40;](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   
   

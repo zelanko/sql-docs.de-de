@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86932da9ccec6e973a2a35fc0ccbb5f54af63f05
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/11/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67826548"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Karten (Berichts-Generator und SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "67826548"
   
  ![rs_MapElements](../media/rs-mapelements.gif "rs_MapElements")  
   
- Informationen dazu, wie Sie sofort mit der Verwendung einer Karte beginnen, finden Sie unter [Tutorial: Kartenbericht &#40;Berichts-Generator&#41; ](../tutorial-map-report-report-builder.md) oder [Beispielberichte (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Informationen dazu, wie Sie sofort mit der Verwendung einer Karte beginnen, finden Sie unter [Tutorial: Kartenbericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md) oder [Berichtsbeispiele (Berichts-Generator und SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 > [!NOTE]  
 >  Karten können getrennt von einem Bericht als Berichtsteile gespeichert werden.  [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "67826548"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Process"></a> Hinzufügen einer Karte zum Bericht  
+##  <a name="Process"></a>Hinzufügen einer Karte zum Bericht  
  Führen Sie die folgenden allgemeinen Schritte aus, um dem Bericht eine Karte hinzuzufügen:  
   
 -   Bestimmen Sie, welche analytischen Daten angezeigt werden sollen und welche Arten von räumlichen Daten Sie benötigen. Um beispielsweise in einer Blasendiagrammkarte den relativen Jahresumsatz pro Laden anzuzeigen, benötigen Sie als analytische Daten den Namen und den Umsatz jedes Ladens sowie als räumliche Daten den Namen und den Standort des Ladens zur Ermittlung des Breiten- und Längengrads.  
@@ -56,7 +56,7 @@ ms.locfileid: "67826548"
   
 
   
-##  <a name="AddingData"></a> Hinzufügen von Daten zu einer Karte  
+##  <a name="AddingData"></a>Hinzufügen von Daten zu einer Karte  
  Eine Karte enthält zwei Arten von Daten: räumliche Daten und analytische Daten. Räumliche Daten definieren die Darstellung der Karte, während analytische Daten die Werte enthalten, die der Karte zugeordnet sind. Räumliche Daten definieren beispielsweise die Positionen von Städten in einem Bereich, während analytische Daten die Einwohnerzahl jeder Stadt bereitstellen.  
   
  Eine Karte muss räumliche Daten aufweisen; analytische Daten sind optional. Sie können beispielsweise eine Karte hinzufügen, die nur die Standorte von Läden in einer Stadt anzeigt.  
@@ -68,27 +68,27 @@ ms.locfileid: "67826548"
   
  Räumliche Daten basieren auf einem der folgenden Koordinatensysteme:  
   
--   **Geografisch** Gibt geodätische Koordinaten auf einer sphärischen Oberfläche mithilfe des Längen- und Breitengrads an. Für geografisch dargestellte räumliche Daten muss eine Projektion angegeben werden. Eine Projektion ist ein Satz von Regeln, der angibt, wie Objekte, für die sphärische Koordinaten vorhanden sind, auf einer planaren Oberfläche gezeichnet werden sollen. Nur geografische Daten mit derselben Projektion können verglichen oder kombiniert werden.  
+-   **Geografisch** Gibt geodäsche Koordinaten auf einer kugelförmigen Oberfläche an, indem Längen-und Breitengrad verwendet werden. Für geografisch dargestellte räumliche Daten muss eine Projektion angegeben werden. Eine Projektion ist ein Satz von Regeln, der angibt, wie Objekte, für die sphärische Koordinaten vorhanden sind, auf einer planaren Oberfläche gezeichnet werden sollen. Nur geografische Daten mit derselben Projektion können verglichen oder kombiniert werden.  
   
--   **Planar** Gibt geometrische Koordinaten auf einer planaren Oberfläche als X und Y an.  
+-   **Planar** Gibt Geometrische Koordinaten auf einer planaren Oberfläche an, indem X und Y verwendet werden.  
   
  Jede Kartenebene zeigt eine Art räumlicher Daten an: Polygone, Linien oder Punkte. Um mehrere Arten räumlicher Daten anzuzeigen, fügen Sie der Karte mehrere Ebenen hinzu. Sie können auch eine Ebene von Microsoft Bing-Kartenkacheln hinzufügen. Die Kachelebene hängt nicht von räumlichen Daten ab. Die Kachelebene zeigt Bildkacheln an, die den Koordinaten des Kartenviewports entsprechen.  
   
 #### <a name="sources-of-spatial-data"></a>Quellen von räumlichen Daten  
  Die folgenden Quellen räumlicher Daten werden unterstützt:  
   
--   **Kartenkatalogberichte.** Räumliche Daten werden in Berichte eingebettet, die sich im Kartenkatalog befinden. Standardmäßig wird der Kartenkatalog unter „ *\<Laufwerk >* :\Programme\Microsoft SQL Server\Report Builder\MapGallery“ installiert.  
+-   **Kartenkatalog Berichte.** Räumliche Daten werden in Berichte eingebettet, die sich im Kartenkatalog befinden. Standardmäßig wird der Kartenkatalog unter * \<Laufwerk>*: \Programme\Microsoft SQL server\report Builder \mapgalleryinstalliert.  
   
     > [!NOTE]  
-    >  Für diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Kartenfunktion werden Daten aus TIGER/Line-Shape-Dateien verwendet, die vom U.S. Census Bureau ([http://www.census.gov/](http://www.census.gov/)). TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro (U.S. Census Bureau) verfügbar. Um weitere Informationen zu den TIGER/Line-Shape-Dateien zu erhalten, navigieren Sie zu [TIGER/Line-Shape-Dateien und der technischen Dokumentation zu TIGER/Line-Dateien](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
+    >  Diese [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Mapping-Funktion verwendet Daten aus Tiger/Line-Shape-Dateien, die vom U.S. Census Bureau[http://www.census.gov/](http://www.census.gov/)() bereitgestellt werden. TIGER/Line-Shape-Dateien sind ein Auszug aus ausgewählten geografischen und kartographischen Informationen aus der Census MAF/TIGER-Datenbank. TIGER/Line-Shape-Dateien sind kostenfrei vom amerikanischen Volkszählungsbüro verfügbar. Um weitere Informationen zu den TIGER/Line-Shape-Dateien zu erhalten, navigieren Sie zu [TIGER/Line-Shape-Dateien und der technischen Dokumentation zu TIGER/Line-Dateien](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Die Informationen zu geografischen Grenzen in den TIGER/Line-Shape-Dateien dienen nur der Sammlung statistischer Daten und der Tabellierung. Ihre Darstellung und Verwendung zu statistischen Zwecken bedeutet keine Aussage einer Rechtsprechungsbehörde, begründet keine Eigentumsrechte oder Rechtsansprüche und stellt keine rechtsverbindlichen Landbeschreibungen dar. Census TIGER und TIGER/Line sind eingetragene Marken des U.S. Bureau of the Census.  
   
--   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) Räumliche Daten entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
+-   **ESRI-Shape-Dateien.** ESRI-Shape-Dateien enthalten Daten, die dem Format für räumliche Daten in Shape-Dateien des Environmental Systems Research Institute, Inc. (ESRI) entsprechen. ESRI-Shape-Dateien verweisen auf einen Satz von Dateien. Daten in der SHP-Datei geben die geografischen oder geometrischen Formen an. Daten in der DBF-Datei stellen Attribute für die Formen bereit. Damit Sie eine Karte in der Entwurfsansicht anzeigen oder vom Berichtsserver ausführen können, müssen sich beide Dateien im gleichen Ordner befinden. Wenn Sie räumliche Daten aus einer SHP-Datei zum lokalen Dateisystem hinzufügen, werden sie in den Bericht eingebettet. Um zur Laufzeit räumliche Daten dynamisch abzurufen, laden Sie die Shape-Dateien auf den Berichtsserver, und geben Sie diese dann als die Quelle räumlicher Daten an. Weitere Informationen finden Sie unter [Finding ESRI Shapefiles for a Map](https://go.microsoft.com/fwlink/?linkid=178814).  
   
--   **In einer Datenbank gespeicherte räumliche SQL Server-Daten.** Sie können eine Abfrage verwenden, die Daten vom Typ `SQLGeometry` oder `SQLGeography` aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank angibt. Weitere Informationen finden Sie in der [Übersicht über Typen räumlicher Daten](../../relational-databases/spatial/spatial-data-types-overview.md) in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
+-   **SQL Server räumliche Daten, die in einer Datenbank gespeichert sind.** Sie können eine Abfrage verwenden, die Daten vom Typ `SQLGeometry` oder `SQLGeography` aus einer relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank angibt. Weitere Informationen finden Sie in der [Übersicht über Typen räumlicher Daten](../../relational-databases/spatial/spatial-data-types-overview.md) in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=98335).  
   
      Im Resultset, das im Abfrage-Designer angezeigt wird, wird jede Zeile räumlicher Daten als Einheit behandelt und in einem einzelnen Kartenelement gespeichert. Wenn beispielsweise in einer Zeile im Resultset mehrere Punkte definiert werden, gelten Anzeigeeigenschaften für alle Punkte in diesem Kartenelement.  
   
--   **Benutzerdefinierte Orte, die Sie erstellen.** Sie können Orte manuell einer Punktebene als eingebettete Punkte hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
+-   **Benutzerdefinierte Speicherorte, die Sie erstellen.** Sie können Orte manuell einer Punktebene als eingebettete Punkte hinzufügen. Weitere Informationen finden Sie unter [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md).  
   
 #### <a name="spatial-data-in-design-view"></a>Räumliche Daten in der Entwurfsansicht  
  In der Entwurfsansicht des Berichtsprozessors werden räumliche Beispieldaten angezeigt, um den Entwurf der Kartenebene zu erleichtern. Die angezeigten Daten hängen von der Verfügbarkeit der räumlichen Daten ab:  
@@ -97,7 +97,7 @@ ms.locfileid: "67826548"
   
 -   **Link zu ESRI-Shape-Datei.** Wenn die ESRI-Shape-Datei (.shp) und die Unterstützungsdatei (.dbf) verfügbar sind, werden die Beispieldaten aus der Shape-Datei geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar**an.  
   
--   **Räumliche Daten von SQL Server.** Wenn die Datenquelle verfügbar ist und die Anmeldeinformationen gültig sind, werden die Beispieldaten aus den räumlichen Daten in der Datenbank geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar**an.  
+-   **SQL Server räumliche Daten.** Wenn die Datenquelle verfügbar ist und die Anmeldeinformationen gültig sind, werden die Beispieldaten aus den räumlichen Daten in der Datenbank geladen. Andernfalls generiert der Berichtsprozessor Beispieldaten und zeigt die Meldung **Es sind keine räumlichen Daten verfügbar**an.  
   
 #### <a name="embedding-spatial-data-in-the-report-definition"></a>Einbetten räumlicher Daten in die Berichtsdefinition  
  Im Gegensatz zu analytischen Daten können räumliche Daten für eine Kartenebene in die Berichtsdefinition eingebettet werden. Wenn Sie räumliche Daten einbetten, betten Sie Kartenelemente ein, die in der Kartenebene verwendet werden.  
@@ -116,7 +116,7 @@ ms.locfileid: "67826548"
   
 -   **Datasetfeld.** Ein Feld aus einem Dataset im Berichtsdatenbereich.  
   
--   **Räumliches Datenquellenfeld.** Ein Feld aus der räumlichen Datenquelle, die in die räumlichen Daten eingeschlossen ist. Beispielsweise schließt eine ESRI-Shape-Datei häufig sowohl räumliche als auch analytische Daten ein. Feldnamen aus der räumlichen Datenquelle beginnen mit # und werden in der Dropdownliste von Feldern angezeigt, wenn Sie das Datenfeld für Regeln für eine Ebene angeben.  
+-   **Räumliches Datenquellen Feld.** Ein Feld aus der räumlichen Datenquelle, die in die räumlichen Daten eingeschlossen ist. Beispielsweise schließt eine ESRI-Shape-Datei häufig sowohl räumliche als auch analytische Daten ein. Feldnamen aus der räumlichen Datenquelle beginnen mit # und werden in der Dropdownliste von Feldern angezeigt, wenn Sie das Datenfeld für Regeln für eine Ebene angeben.  
   
 -   **Eingebettete Daten für ein Kartenelement.** Nachdem Sie Polygone, Linien oder Punkte in einen Bericht eingebettet haben, können Sie die Datenfelder für einzelne Kartenelemente überschreiben und benutzerdefinierte Werte festlegen.  
   
@@ -129,41 +129,41 @@ ms.locfileid: "67826548"
   
 -   Aus der räumlichen Datenquelle:  
   
-    -   **SpatialData.** Ein Feld mit räumlichen Daten, die Breiten- und Längengrad der Stadt angeben.  
+    -   **Spatialdata.** Ein Feld mit räumlichen Daten, die Breiten- und Längengrad der Stadt angeben.  
   
-    -   **Name.** Ein Feld, das den Namen der Stadt enthält.  
+    -   **Benennen.** Ein Feld, das den Namen der Stadt enthält.  
   
-    -   **Area.** Ein Feld, das den Namen der Region enthält.  
+    -   **Feld.** Ein Feld, das den Namen der Region enthält.  
   
 -   Aus der analytischen Datenquelle:  
   
-    -   **Population.** Ein Feld, das die Einwohnerzahl jeder Stadt enthält.  
+    -   **Bevölkerungs.** Ein Feld, das die Einwohnerzahl jeder Stadt enthält.  
   
-    -   **City.** Ein Feld, das den Namen der Stadt enthält.  
+    -   **Stadt.** Ein Feld, das den Namen der Stadt enthält.  
   
-    -   **Area.** Ein Feld, das den Namen des Gebiets, des Bundesstaats oder der Region enthält.  
+    -   **Feld.** Ein Feld, das den Namen des Gebiets, des Bundesstaats oder der Region enthält.  
   
  In diesem Beispiel reicht der Städtename allein nicht aus, um die Auffüllung eindeutig zu identifizieren. Beispielsweise gibt es in den USA viele Städte mit dem Namen Albany. Um eine bestimmte Stadt anzugeben, müssen Sie zusätzlich zum Namen der Stadt den Wert für "Area" angeben.  
   
 
   
-##  <a name="Viewport"></a> Grundlegendes zum Kartenviewport  
+##  <a name="Viewport"></a>Grundlegendes zum Kartenviewport  
  Nachdem Sie Kartendaten für einen Bericht angegeben haben, können Sie den Anzeigebereich der Karte einschränken, indem Sie einen *Kartenviewport*angeben. Standardmäßig ist der Viewport der gleiche Bereich wie die gesamte Karte. Um die Karte zuzuschneiden, können Sie den Mittelpunkt, die Zoomstufe sowie maximale und minimale Koordinaten angeben, die den Bereich definieren, den Sie in den Bericht einschließen möchten. Um die Anzeige der Karte im Bericht zu verbessern, können Sie die Legenden, Entfernungsskala und Farbskala außerhalb des Viewports verschieben. Die folgende Abbildung zeigt einen Viewport:  
   
- ![rs_Kartenviewport](../media/rs-mapviewport.gif "rs_MapViewport")  
+ ![rs_MapViewport](../media/rs-mapviewport.gif "rs_MapViewport")  
   
   
   
-##  <a name="TileLayer"></a> Hinzufügen einer Ebene mit Bing-Kartenkacheln  
+##  <a name="TileLayer"></a>Hinzufügen einer Ebene mit der Ebene "dumap  
  Sie können eine Ebene für Bing-Kartenkacheln hinzufügen, die einen geografischen Hintergrund für die aktuelle vom Viewport definierte Kartenansicht bereitstellen. Um eine Kachelebene hinzuzufügen, müssen Sie als Koordinatensystem **Geografisch** und als Projektion **Mercator**eingeben. Kacheln, die mit dem Viewportmittelpunkt und der Zoomstufe übereinstimmen, die Sie auswählen, werden automatisch aus Bing Maps Web Services abgerufen.  
   
  Sie können die Ebene anpassen, indem Sie die folgenden Optionen angeben:  
   
 -   Kacheltyp. Die folgenden Stile werden unterstützt:  
   
-    -   **Straße.** Zeigt Daten in einem Straßenkartenformat an, das einen weißen Hintergrund, Straßen und Bezeichnungstext enthält.  
+    -   **Renn.** Zeigt Daten in einem Straßenkartenformat an, das einen weißen Hintergrund, Straßen und Bezeichnungstext enthält.  
   
-    -   **Luftbild.** Zeigt Daten in einem Luftbildformat ohne Text an.  
+    -   **Raketen.** Zeigt Daten in einem Luftbildformat ohne Text an.  
   
     -   **Hybrid.** Zeigt eine Kombination der Formate **Straße** und **Luftbild** an.  
   
@@ -177,14 +177,14 @@ ms.locfileid: "67826548"
   
  
   
-##  <a name="MapLayers"></a> Grundlegendes zu Kartenebenen und Kartenelementen  
+##  <a name="MapLayers"></a>Grundlegendes zu Karten Ebenen und Karten Elementen  
  Eine Karte kann mehrere Ebenen enthalten. Es stehen drei Arten von Ebenen zur Verfügung. Auf jeder Ebene wird ein Typ räumlicher Daten angezeigt:  
   
--   **Polygonebene.** Zeigt Umrisse von Bereichen oder Marker für den Polygonmittelpunkt an, der automatisch für jedes Polygon berechnet wird.  
+-   **Polygon Ebene.** Zeigt Umrisse von Bereichen oder Marker für den Polygonmittelpunkt an, der automatisch für jedes Polygon berechnet wird.  
   
--   **Linienebene.** Zeigt Linien für Pfade oder Routen an.  
+-   **Zeilenebene.** Zeigt Linien für Pfade oder Routen an.  
   
--   **Punktebene.** Zeigt Marker für Punktpositionen an.  
+-   **Punkt Ebene.** Zeigt Marker für Punktpositionen an.  
   
  Wenn Sie die Quelle räumlicher Daten für eine Ebene angeben, überprüft der Assistent das Feld für räumliche Daten und legt den Ebenentyp auf Grundlage seines Typs fest. Für jeden Wert aus der Datenquelle wird ein Kartenelement zur Ebene hinzugefügt.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "67826548"
   
  Um mit Ebenen zu arbeiten, wählen Sie auf der Berichtsentwurfsoberfläche eine Karte zum Anzeigen des Kartenbereichs aus. Der Kartenbereich zeigt die Liste der Ebenen an, die für die Karte definiert sind. Wählen Sie mithilfe dieses Bereichs eine Ebene aus, um die Optionen zu ändern, die Zeichnungsreihenfolge von Ebenen zu ändern, eine Ebene hinzuzufügen oder den Kartenebenen-Assistenten auszuführen, eine Ebene auszublenden oder anzuzeigen sowie den Ansichtsmittelpunkt und die Zoomstufe für den Kartenviewport zu ändern. Die folgende Abbildung zeigt einen Viewport:  
   
- ![RS_Kartenebenenbereich](../media/rsmaplayerzone.gif "rsMapLayerZone")  
+ ![rsMapLayerZone](../media/rsmaplayerzone.gif "rsMapLayerZone")  
   
  Weitere Informationen zu Kartenebenen finden Sie unter [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -205,11 +205,11 @@ ms.locfileid: "67826548"
   
 1.  **Ebeneneigenschaften.** Eigenschaften, die für die gesamte Ebene gelten. Verwenden Sie Ebeneneigenschaften beispielsweise, um die Quelle von analytischen Daten oder die Sichtbarkeit für die gesamte Ebene festzulegen.  
   
-2.  **Eigenschaften von Polygonen, Linien und Punkten sowie Eigenschaften von eingebetteten Polygonen, Linien und Punkten.** Eigenschaften, die für alle Kartenelemente auf einer Ebene gelten, unabhängig davon, ob die Elemente aus dynamischen oder eingebetteten räumlichen Daten stammen. Verwenden Sie beispielsweise Polygonmittelpunkt-Eigenschaften, um die Füllfarbe für Blasen auf einen Farbverlauf festzulegen, sodass Blasenbereiche von Dunkelblau nach Hellblau und von oben nach unten gefüllt werden.  
+2.  **Polygon-, Linien-, Punkt-und Eigenschaften für eingebettete Polygon-, Linien-und Punkt Eigenschaften.** Eigenschaften, die für alle Kartenelemente auf einer Ebene gelten, unabhängig davon, ob die Elemente aus dynamischen oder eingebetteten räumlichen Daten stammen. Verwenden Sie beispielsweise Polygonmittelpunkt-Eigenschaften, um die Füllfarbe für Blasen auf einen Farbverlauf festzulegen, sodass Blasenbereiche von Dunkelblau nach Hellblau und von oben nach unten gefüllt werden.  
   
-3.  **Farbregeln, Größenregeln, Breitenregeln, Markertypregeln.** Mit Regeln werden Eigenschaften auf eine Ebene angewendet, wenn die Ebene Kartenelemente enthält, die eine Beziehung zu analytischen Daten aufweisen. Der Regeltyp hängt vom Ebenentyp ab. Verwenden Sie beispielsweise Schriftgradregeln, um die Blasengröße auf Grundlage der Einwohnerzahl zu verändern.  
+3.  **Farb Regeln, Größen Regeln, breiten Regeln, Markertypregeln.** Mit Regeln werden Eigenschaften auf eine Ebene angewendet, wenn die Ebene Kartenelemente enthält, die eine Beziehung zu analytischen Daten aufweisen. Der Regeltyp hängt vom Ebenentyp ab. Verwenden Sie beispielsweise Schriftgradregeln, um die Blasengröße auf Grundlage der Einwohnerzahl zu verändern.  
   
-4.  **Überschreiben von Eigenschaften für eingebettete Polygone, Linien oder Punkte**. Für eingebettete Kartenelemente können Sie die Überschreibungsoption aktivieren und eine beliebige Eigenschaft oder einen Datenwert ändern. Alle Änderungen, die Sie vornehmen, um Regeln für einzelne Elemente zu überschreiben, sind unwiderruflich. Sie können beispielsweise mit einer Ortsmarke als Marker einen bestimmten Laden hervorheben.  
+4.  **Überschreiben für eingebettete Polygon-, Linien-oder Punkt Eigenschaften**. Für eingebettete Kartenelemente können Sie die Überschreibungsoption aktivieren und eine beliebige Eigenschaft oder einen Datenwert ändern. Alle Änderungen, die Sie vornehmen, um Regeln für einzelne Elemente zu überschreiben, sind unwiderruflich. Sie können beispielsweise mit einer Ortsmarke als Marker einen bestimmten Laden hervorheben.  
   
  Weitere Informationen finden Sie unter [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
@@ -225,20 +225,20 @@ ms.locfileid: "67826548"
   
 
   
-##  <a name="Legends"></a> Grundlegendes zu Kartenlegenden, Farbskala und Entfernungsskala  
+##  <a name="Legends"></a>Grundlegendes zu Karten Legenden, Farbskala und Entfernungs Skala  
  Sie können dem Bericht unterschiedliche Legenden hinzufügen, um Benutzern die Interpretation einer Karte zu erleichtern. Karten können die folgenden Elemente einschließen:  
   
--   **Legenden.** Sie können mehrere Legenden erstellen. Elemente, die in einer Legende aufgeführt sind, werden automatisch anhand der Regeln generiert, die Sie für Kartenelemente auf jeder Ebene angeben. Für jede Regel geben Sie die Legende an, die verwendet werden soll, um die zugehörigen Elemente anzuzeigen. Auf diese Weise können Sie Elemente aus mehreren Ebenen derselben Legende oder unterschiedlichen Legenden zuweisen.  
+-   **Myth.** Sie können mehrere Legenden erstellen. Elemente, die in einer Legende aufgeführt sind, werden automatisch anhand der Regeln generiert, die Sie für Kartenelemente auf jeder Ebene angeben. Für jede Regel geben Sie die Legende an, die verwendet werden soll, um die zugehörigen Elemente anzuzeigen. Auf diese Weise können Sie Elemente aus mehreren Ebenen derselben Legende oder unterschiedlichen Legenden zuweisen.  
   
 -   **Farbskala.** Sie können eine einzelne Farbskala erstellen. Als Alternative zum Bereitstellen einer Legende für eine Farbregel können Sie Elemente für eine Farbregel in der Farbskala anzeigen. Mehrere Farbregeln können auf die Farbskala angewendet werden.  
   
--   **Entfernungsskala.** Sie können eine einzelne Entfernungsskala anzeigen. Die Entfernungsskala zeigt eine Skala für die aktuelle Kartenansicht in Kilometern und in Meilen an.  
+-   **Entfernungs Skala.** Sie können eine einzelne Entfernungsskala anzeigen. Die Entfernungsskala zeigt eine Skala für die aktuelle Kartenansicht in Kilometern und in Meilen an.  
   
  Sie können die Legenden, Farbskala und Entfernungsskala an diskreten Orten innerhalb oder außerhalb des Viewports positionieren. Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
   
   
-##  <a name="Troubleshooting"></a> Problembehandlung für Karten  
+##  <a name="Troubleshooting"></a>Problembehandlung bei Maps  
  Kartenberichte verwenden räumliche und analytische Daten aus unterschiedlichen Datenquellen. Für die Daten jeder Kartenebene können andere Quellen verwendet werden. Für die Anzeigeeigenschaften für jede Ebene gilt eine bestimmte Rangfolge auf der Grundlage von Ebeneneigenschaften, Regeln und Kartenelementeigenschaften.  
   
  Wenn ein Kartenbericht nicht wie gewünscht angezeigt wird, sind zahlreiche Probleme als Ursache möglich. Damit Sie jedes Problem leichter isolieren und verstehen können, sollten Sie jeweils nur mit einer Ebene arbeiten. Verwenden Sie den Kartenbereich, um eine Ebene auszuwählen und ihre Sichtbarkeit mühelos umzuschalten.  
@@ -250,16 +250,16 @@ ms.locfileid: "67826548"
 ##  <a name="HowTo"></a> Themen zur Vorgehensweise  
  Dieser Abschnitt enthält Verfahren, die schrittweise zeigen, wie Sie mit Karten und Kartenebenen in Berichten arbeiten.  
   
--   [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+-   [Hinzufügen, ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
 -   [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
--   [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+-   [Hinzufügen von benutzerdefinierten Speicherorten zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
  
   
 ##  <a name="Section"></a> In diesem Abschnitt  
- [Planen eines Kartenberichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
+ [Planen eines Karten Berichts &#40;Berichts-Generator und SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)  
   
  [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)  
   
@@ -267,12 +267,12 @@ ms.locfileid: "67826548"
   
  [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
- [Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
+ [Hinzufügen, ändern oder Löschen einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md)  
   
  [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md)  
   
- [Hinzufügen benutzerdefinierter Orte zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
+ [Hinzufügen von benutzerdefinierten Speicherorten zu einer Karte &#40;Berichts-Generator und SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

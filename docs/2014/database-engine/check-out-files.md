@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786745"
 ---
 # <a name="check-out-files"></a>Auschecken von Dateien
@@ -26,18 +26,18 @@ ms.locfileid: "62786745"
   
  Sie können Dateien entweder exklusiv oder im Modus für gemeinsame Nutzung auschecken. Wenn Sie eine Datei exklusiv auschecken, kann sie von einem anderen Benutzer erst dann ausgecheckt werden, nachdem Sie sie wieder eingecheckt haben. Wenn Sie eine Datei im Modus für gemeinsame Nutzung auschecken, können andere Benutzer die Datei auschecken und ändern. Wenn Sie die Datei einchecken, müssen Sie die von Ihnen ausgecheckte Version möglicherweise mit den Versionen zusammenführen, die von anderen Benutzern erstellt wurden.  
   
- Verwenden der **Auschecken** Befehl zum Auschecken der quellcodeverwaltung unterliegende Projekte und Dateien. Wenn Sie diesen Befehl verwenden, um eine Projektmappe oder ein Projekt auschecken, werden auch alle Dateien in der Projektmappe oder das Projekt ausgecheckt. Allerdings führt beim Auschecken einer einzelnen Quellcodedatei nicht zu Auschecken eines Projekts oder der Projektmappe, die zu der er gehört.  
+ Verwenden Sie den Befehl **Auschecken** , um Projekte und Dateien der Quell Code Verwaltung auszuchecken. Wenn Sie mit diesem Befehl eine Projekt Mappe oder ein Projekt Auschecken, werden auch alle Dateien in der Projekt Mappe oder im Projekt ausgecheckt. Das Auschecken einer einzelnen Quell Code Datei führt jedoch nicht dazu, dass das Projekt oder die Projekt Mappe, zu der es gehört, ausgecheckt wird.  
   
 > [!NOTE]  
->  Wenn die [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Datenbank für das Projekt ist so konfiguriert, dass Mehrfaches Auschecken ermöglicht, und Sie eine Datei exklusiv auschecken, müssen Sie löschen möchten die **Mehrfaches Auschecken zulassen** option die  **Erweiterte Optionen für das Auschecken** (Dialogfeld), bevor Sie die Datei auschecken. Damit diese Einstellung wirksam wird, müssen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] neu starten.  
+>  Wenn die [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Datenbank für Ihr Projekt so konfiguriert ist, dass mehrere Auscheck Vorgänge zulässig sind, und Sie eine Datei exklusiv auschecken möchten, müssen Sie im Dialogfeld **Erweiterte auscheckungs Optionen** die Option **mehrere Auschecken zulassen** deaktivieren, bevor Sie die Datei Auschecken. Damit diese Einstellung wirksam wird, müssen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] neu starten.  
   
 ### <a name="to-check-out-a-file"></a>So checken Sie eine Datei aus  
   
 1.  Wählen Sie das Projekt oder die Datei im Projektmappen-Explorer aus.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie dann auf **Auschecken zum Bearbeiten**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **Auschecken zum Bearbeiten**.  
   
-3.  Wenn die **Auschecken zum Bearbeiten** Dialogfeld angezeigt wird, wählen Sie die Elemente, die Sie möchten, und klicken Sie auf **Auschecken**. Wenn Sie konfiguriert haben die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung nicht zum Anzeigen der **Auschecken** Dialogfeld, in der Projektmappen-Explorer und alle untergeordneten Elemente haben möglicherweise ausgewählten Elemente sofort ausgecheckt.  
+3.  Wenn das Dialogfeld **Auschecken zum Bearbeiten** angezeigt wird, wählen Sie die gewünschten Elemente aus, und klicken Sie auf **Auschecken**. Wenn Sie die [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] Umgebung so konfiguriert haben, dass das Dialogfeld " **Auschecken** " nicht angezeigt wird, werden die Elemente, die in Projektmappen-Explorer ausgewählt wurden, sowie alle untergeordneten Elemente sofort ausgecheckt.  
   
      **Abreise**  
      Die ausgewählten Elemente werden ausgecheckt.  
@@ -45,34 +45,34 @@ ms.locfileid: "62786745"
      **Spalten**  
      Bestimmt die anzuzeigenden Spalten und die Reihenfolge, in der sie angezeigt werden.  
   
-     **Kommentare**  
+     **Iny**  
      Hier können Sie einen Kommentar für den Auscheckvorgang eingeben.  
   
-     **Nicht auschecken anzeigen (Dialogfeld), wenn das Auschecken von Elementen**  
+     **Dialogfeld "Auschecken" beim Auschecken von Elementen nicht anzeigen**  
      Unterdrückt die Anzeige des Dialogfelds während Auscheckvorgängen.  
   
      **Flache Ansicht**  
      Zeigt die Elemente, die ausgecheckt werden, als flache Listen unter der entsprechenden Verbindung mit der Quellcodeverwaltung an.  
   
      **Bearbeiten**  
-     Ändern Sie ein Element ohne vorheriges Auschecken. Die **bearbeiten** Schaltfläche nur angezeigt, wenn man [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] so konfiguriert, dass das Bearbeiten von eingecheckten Dateien unterstützt.  
+     Ändern Sie ein Element, ohne es auszuchecken. Die Schaltfläche **Bearbeiten** wird nur angezeigt, [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] Wenn Sie für die Unterstützung der Bearbeitung von eingecheckten Dateien konfiguriert haben.  
   
      **Name**  
      Zeigt die Namen der Elemente an, die für das Auschecken verfügbar sind. Die ausgewählten Elemente werden mit einem Kontrollkästchen neben dem Namen angezeigt. Wenn ein Element nicht ausgecheckt werden soll, deaktivieren Sie das entsprechende Kontrollkästchen.  
   
-     **Options**  
+     **Optionen**  
      Zeigt die für das Quellcodeverwaltungs-Plug-In spezifischen Optionen zum Auschecken an, wenn Sie auf den Pfeil rechts neben der Schaltfläche klicken.  
   
-     **Sort**  
+     **Sortieren**  
      Sortiert die Reihenfolge der angezeigten Spalten.  
   
      **Strukturansicht**  
      Zeigt die Ordner- und Dateihierarchie für das Element an, das ausgecheckt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [Bearbeiten von eingecheckten Dateien](../../2014/database-engine/edit-checked-in-files.md)   
- [Automatisches Auschecken von Dateien beim Bearbeiten](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
- [Rückgängigmachen von Auscheckvorgängen](../../2014/database-engine/undo-checkouts.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Eingecheckte Dateien bearbeiten](../../2014/database-engine/edit-checked-in-files.md)   
+ [Dateien beim Bearbeiten automatisch Auschecken](../../2014/database-engine/automatically-check-out-files-upon-edit.md)   
+ [Rückgängigmachen](../../2014/database-engine/undo-checkouts.md)   
  [Verwalten von Auscheckvorgängen](../../2014/database-engine/manage-checkouts.md)  
   
   

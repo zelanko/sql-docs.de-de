@@ -1,5 +1,5 @@
 ---
-title: Systemanforderungen für | Microsoft-Dokumentation
+title: System Anforderungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,20 +16,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92668088ce0f30f680d4198ad0c3348a21fbff6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781949"
 ---
 # <a name="system-requirements"></a>Systemanforderungen
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) verwendet die [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` objekttreiber, um Verbindungen und die Kommunikation mit Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) verwendet den [!INCLUDE[msCoName](../../includes/msconame-md.md)] `System.Data.SqlClient` Objekt Treiber, um eine Verbindung mit Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herzustellen und mit Ihnen zu kommunizieren.  
   
  SMO-Clients benötigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und dem [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 enthalten ist.  
   
- Um Anwendungen mit SMO zu entwickeln, müssen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 2008 installiert haben.  
+ Um Anwendungen mit SMO zu entwickeln, muss 2008 installiert [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] sein.  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über SQL Server-Installation](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über die Installation von SQL Server](https://technet.microsoft.com/library/bb500438\(v=SQL.105\).aspx)  
   
   

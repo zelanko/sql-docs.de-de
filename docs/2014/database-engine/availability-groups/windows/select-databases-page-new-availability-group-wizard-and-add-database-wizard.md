@@ -1,5 +1,5 @@
 ---
-title: Wählen Sie die Seite "Datenbanken" (neue Verfügbarkeitsgruppe-Assistent-Add-Datenbank-Assistent) | Microsoft-Dokumentation
+title: Seite Datenbanken auswählen (Assistent für neue Verfügbarkeits Gruppen-Assistent zum Hinzufügen einer Datenbank) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2c6cdeb27dfd1768c9a494497f5b2b1e0b7350a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788489"
 ---
-# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Wählen Sie die Seite "Datenbanken" (neue Verfügbarkeitsgruppe-Assistent-Add-Datenbank-Assistent)
+# <a name="select-databases-page-new-availability-group-wizard-add-database-wizard"></a>Seite Datenbanken auswählen (Assistent für neue Verfügbarkeits Gruppen-Assistent zum Hinzufügen einer Datenbank)
   In diesem Hilfethema werden die Optionen der Seite für das **Angeben von Datenbanken** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] und den [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
-##  <a name="PageOptions"></a> Optionen für "Datenbanken auswählen"  
+##  <a name="PageOptions"></a>Optionen für Datenbanken auswählen  
  Im Raster **Benutzerdatenbanken auf dieser SQL Server-Instanz** wird jede lokale Benutzerdatenbank aufgelistet. Es gibt folgende Spalten:  
   
  **Name**  
@@ -46,8 +46,8 @@ ms.locfileid: "62788489"
   
 -   [Verwenden des Assistenten zum Hinzufügen von Datenbanken zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQLServer&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

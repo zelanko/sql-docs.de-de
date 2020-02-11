@@ -10,10 +10,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62788799"
 ---
 # <a name="backup-checksum-default"></a>Standardeinstellung der Sicherungsprüfsumme
@@ -25,11 +25,11 @@ ms.locfileid: "62788799"
 |-|-|  
 |**Wert**|**Bedeutung**|  
 |0|Deaktiviert. Dies ist die Standardeinstellung.|  
-|1|Aktiviert|  
+|1|Enabled|  
   
  Diese Einstellung wird sofort wirksam.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Aktivieren oder deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung &#40;SQL Server&#41;](../relational-databases/backup-restore/enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  
   
   

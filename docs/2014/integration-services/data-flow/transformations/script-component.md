@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9a601a710531aa6905f35a2fe5ca7f02a9177f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62770666"
 ---
 # <a name="script-component"></a>Skriptkomponente
@@ -56,7 +56,7 @@ ms.locfileid: "62770666"
  Im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer weist die Skriptkomponente zwei Modi auf: Metadatenentwurfsmodus und Codeentwurfsmodus. Im Metadatenentwurfsmodus können Sie Eingaben und Ausgaben der Skriptkomponente hinzufügen und ändern, aber Sie können keinen Code erstellen. Nachdem Sie alle Eingaben und Ausgaben konfiguriert haben, wechseln Sie zum Codeentwurfsmodus, um das Skript zu erstellen. Die Skriptkomponente generiert von den Metadaten der Eingaben und Ausgaben automatisch Basiscode. Wenn Sie die Metadaten ändern, nachdem die Skriptkomponente den Basiscode generiert hat, kann es sein, dass der Code nicht mehr kompiliert wird, weil der aktualisierte Basiscode mit Ihrem Code inkompatibel ist.  
   
 ## <a name="writing-the-script-that-the-component-uses"></a>Erstellen des von der Komponente verwendeten Skripts  
- Die Skriptkomponente verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] -Tools für Anwendungen (VSTA) als Umgebung zum Erstellen der Skripts. Sie greifen auf VSTA im **Transformations-Editor für Skripterstellung**zu. Weitere Informationen finden Sie unter [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../script-transformation-editor-script-page.md).  
+ Die Skript Komponente verwendet [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) als Umgebung, in der Sie die Skripts schreiben. Sie greifen auf VSTA im **Transformations-Editor für Skripterstellung**zu. Weitere Informationen finden Sie unter [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../script-transformation-editor-script-page.md).  
   
  Die Skriptkomponente stellt ein VSTA-Projekt bereit, das eine automatisch generierte Klasse namens ScriptMain generiert, die die Komponentenmetadaten darstellt. Wenn z. B. die Skriptkomponente als Transformation mit drei Ausgaben verwendet wird, enthält ScriptMain eine Methode für jede Ausgabe. ScriptMain ist der Einstiegspunkt in das Skript.  
   
@@ -90,13 +90,13 @@ ms.locfileid: "62770666"
 ### <a name="configuring-the-script-component-in-the-designer"></a>Konfigurieren der Skriptkomponente im Designer  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Skripterstellung** festlegen können:  
   
--   [Transformations-Editor für Skripterstellung &#40;Seite Eingabespalten&#41;](../../script-transformation-editor-input-columns-page.md)  
+-   [Transformations-Editor für Skripterstellung &#40;Seite Eingabe Spalten&#41;](../../script-transformation-editor-input-columns-page.md)  
   
--   [Transformations-Editor für Skripterstellung &#40;Seiten Eingaben und Ausgaben&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
+-   [Transformations-Editor für Skripterstellung &#40;Seite "Eingaben und Ausgaben"&#41;](../../script-transformation-editor-inputs-and-outputs-page.md)  
   
--   [Transformations-Editor für Skripterstellung &#40;Seite Skript&#41;](../../script-transformation-editor-script-page.md)  
+-   [Transformations-Editor für Skripterstellung &#40;Skript Seite&#41;](../../script-transformation-editor-script-page.md)  
   
--   [Transformations-Editor für Skripterstellung &#40;Seite Verbindungs-Manager&#41;](../../script-transformation-editor-connection-managers-page.md)  
+-   [Skript Transformations-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../script-transformation-editor-connection-managers-page.md)  
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zum Festlegen dieser Eigenschaften im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer zu erhalten:  
   

@@ -1,5 +1,5 @@
 ---
-title: Sp_procoption (Transact-SQL) | Microsoft-Dokumentation
+title: sp_procoption (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,18 +18,18 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "67896593"
 ---
-# <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
+# <a name="sp_procoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Legt die automatische Ausführung einer gespeicherten Prozedur fest oder löscht diese. Eine gespeicherte Prozedur, die auf automatische Ausführung führt jedes Mal eine Instanz der festgelegt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gestartet wird.  
+  Legt die automatische Ausführung einer gespeicherten Prozedur fest oder löscht diese. Eine gespeicherte Prozedur, die auf die automatische Ausführung festgelegt ist, wird jedes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Mal ausgeführt, wenn eine Instanz von gestartet wird.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions (Transact-SQL-Syntaxkonventionen)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -41,17 +41,17 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @ProcName = ] 'procedure'` Ist der Name der Prozedur für die eine Option festgelegt. *Prozedur* ist **nvarchar(776)** , hat keinen Standardwert.  
+`[ @ProcName = ] 'procedure'`Der Name der Prozedur, für die eine Option festgelegt werden soll. die *Prozedur* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert.  
   
-`[ @OptionName = ] 'option'` Ist der Name der festzulegenden Option. Der einzige Wert für *Option* ist **Start**.  
+`[ @OptionName = ] 'option'`Der Name der festzulegenden Option. Der einzige Wert für *Option* ist " **Start**".  
   
-`[ @OptionValue = ] 'value'` Gibt an, ob die Option auf ( **"true"** oder **auf**) oder off ( **"false"** oder **aus**). *Wert* ist **varchar(12)** , hat keinen Standardwert.  
+`[ @OptionValue = ] 'value'`Gibt an, ob die Option aktiviert (**true** oder **on**) oder Off (**false** oder **Off**) festgelegt werden soll. der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* .  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder eine Fehlernummer (Fehler)  
   
-## <a name="remarks"></a>Hinweise  
- Startprozeduren müssen werden die **master** Datenbank und darf keine Eingabe-oder Ausgabe enthalten. Die Ausführung der gespeicherten Prozeduren beginnt, wenn alle Datenbanken wiederhergestellt sind und beim Start die Meldung "Die Wiederherstellung ist abgeschlossen" protokolliert wird.  
+## <a name="remarks"></a>Bemerkungen  
+ Start Prozeduren müssen in der **Master** -Datenbank enthalten sein und dürfen keine Eingabe-oder Ausgabeparameter enthalten. Die Ausführung der gespeicherten Prozeduren beginnt, wenn alle Datenbanken wiederhergestellt sind und beim Start die Meldung "Die Wiederherstellung ist abgeschlossen" protokolliert wird.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
@@ -73,7 +73,7 @@ EXEC sp_procoption @ProcName = N'<procedure name>'
     , @OptionValue = 'off';   
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ausführen einer gespeicherten Prozedur](../../relational-databases/stored-procedures/execute-a-stored-procedure.md)  
   
   

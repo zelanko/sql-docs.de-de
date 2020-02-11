@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 138e5743e18ba6e39aa55aaec6931413dd21175b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62781744"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Zuordnen von TCP/IP-Ports zu NUMA-Knoten (SQL Server)
@@ -48,13 +48,13 @@ ms.locfileid: "62781744"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>So ordnen Sie einen TCP/IP-Port einem NUMA-Knoten zu  
   
-1.  Erweitern Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurationsmanager den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für** *\<Instanzname>* .  
+1.  Erweitern Sie im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurationsmanager den Eintrag **SQL Server-Netzwerkkonfiguration**, und klicken Sie dann auf **Protokolle für** *\<Instanzname>*.  
   
 2.  Doppelklicken Sie im Detailbereich auf **TCP/IP**.  
   
 3.  Fügen Sie auf der Registerkarte **IP-Adressen** in dem der zu konfigurierenden IP-Adresse entsprechenden Abschnitt im Feld **TCP-Port** nach der Portnummer die NUMA-Knoten-ID in Klammern hinzu. Verwenden Sie z. B. für den TCP-Port 1500 und die Knoten 0, 2 und 5 den Eintrag `1500[37]` oder `1500[0x25]`.  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von SQLServer zur Verwendung von Soft-NUMA &#40;SQLServer&#41;](soft-numa-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren Sie SQL Server für die Verwendung von Soft-NUMA-&#40;SQL Server&#41;](soft-numa-sql-server.md)  
   
   

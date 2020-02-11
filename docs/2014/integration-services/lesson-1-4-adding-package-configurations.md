@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62767642"
 ---
 # <a name="step-4-adding-package-configurations"></a>Schritt 4: Hinzufügen von Paketkonfigurationen
@@ -42,7 +42,7 @@ ms.locfileid: "62767642"
   
 5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite Konfigurationstyp auswählen **XML-Konfigurationsdatei** in die **Konfigurationstyp** wählen Sie die **Konfigurationsspeicherort ist in einer Umgebungsvariablengespeichert.** Option, und geben `DataTransfer,` oder wählen Sie die **DataTransfer** Umgebungsvariable in der Liste.  
+6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, wählen Sie die Option **Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert** aus, und geben `DataTransfer,` Sie in der Liste die Umgebungsvariable **DataTransfer** ein.  
   
     > [!NOTE]  
     >  Sie müssen möglicherweise Ihren Computer nach Hinzufügen der Variablen neu starten, um die Umgebungsvariable in der Liste verfügbar zu machen. Wenn Sie den Computer nicht neu starten möchten, können Sie den Namen der Umgebungsvariablen eingeben.  
@@ -93,7 +93,7 @@ ms.locfileid: "62767642"
   
 5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite Konfigurationstyp auswählen **XML-Konfigurationsdatei** in die **Konfigurationstyp** wählen Sie die **Konfigurationsspeicherort ist in einer Umgebungsvariablengespeichert.** aus, geben Sie `LoadXMLData` oder wählen Sie die `LoadXMLData` Umgebungsvariable in der Liste.  
+6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, wählen Sie die Option **Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert** aus, `LoadXMLData` oder wählen Sie die `LoadXMLData` Umgebungsvariable in der Liste aus.  
   
     > [!NOTE]  
     >  Sie müssen möglicherweise Ihren Computer nach Hinzufügen der Variablen neu starten, um die Umgebungsvariable in der Liste verfügbar zu machen.  
@@ -128,14 +128,14 @@ ms.locfileid: "62767642"
   
 12. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob „LoadXMLData EV Configuration“ als Erstes und „LoadXMLData Configuration“ als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 5: Testen der aktualisierten Pakete](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
-![Integration Services (kleines Symbol)](media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Paketkonfigurationen](../../2014/integration-services/package-configurations.md)   
- [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Paket Konfigurationen](../../2014/integration-services/package-configurations.md)   
+ [Erstellen von Paket Konfigurationen](../../2014/integration-services/create-package-configurations.md)   
  [Zugriff auf Dateien, die von Paketen verwendet werden](../../2014/integration-services/access-to-files-used-by-packages.md)  
   
   

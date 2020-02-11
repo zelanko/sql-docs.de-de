@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62774302"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Protokollversand und Replikation (SQL Server)
@@ -54,7 +54,7 @@ ms.locfileid: "62774302"
   
 1.  Wenn die "sync with backup"-Option nicht für die Veröffentlichungsdatenbank festgelegt ist, führen Sie `sp_replicationdboption '<publicationdatabasename>', 'sync with backup', 'true'`aus. Weitere Informationen finden Sie unter [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql).  
   
-2.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
+2.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)eingeführt.  
   
 3.  Bei einem Ausfall des Verlegers stellen Sie das letzte Protokoll der Datenbank mithilfe der Option KEEP_REPLICATION von RESTORE LOG auf dem Sekundärserver wieder her. Damit werden alle Replikationseinstellungen für die Datenbank beibehalten. Weitere Informationen finden Sie unter [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md) und [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "62774302"
   
  **Konfigurieren der Transaktionsreplikation und des Protokollversands ohne die "sync with backup"-Option**  
   
-1.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](configure-log-shipping-sql-server.md).  
+1.  Konfigurieren Sie den Protokollversand für die Veröffentlichungsdatenbank. Weitere Informationen finden Sie unter [Konfigurieren des Protokollversands &#40;SQL Server&#41;](configure-log-shipping-sql-server.md)eingeführt.  
   
 2.  Bei einem Ausfall des Verlegers stellen Sie das letzte Protokoll der Datenbank mithilfe der Option KEEP_REPLICATION von RESTORE LOG auf dem Sekundärserver wieder her. Damit werden alle Replikationseinstellungen für die Datenbank beibehalten. Weitere Informationen finden Sie unter [Failover zu einer sekundären Datenbank für den Protokollversand &#40;SQL Server&#41;](fail-over-to-a-log-shipping-secondary-sql-server.md) und [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  
   
@@ -109,13 +109,13 @@ ms.locfileid: "62774302"
   
     -   Wird die Veröffentlichung gar nicht gefiltert, sollten Sie die Veröffentlichungsdatenbank durch Synchronisieren mit einem aktuellen Abonnenten auf den neuesten Stand bringen.  
   
-    -   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Angenommen, eine Tabelle ist so partitioniert, dass jedes Abonnement nur die Kundendaten für eine der folgenden Regionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden. In diesem sollten Sie alle Abonnements initialisieren, sodass die Daten auf dem Verleger und den Abonnenten zusammengeführt werden. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Wenn die Veröffentlichung gefiltert ist, können Sie möglicherweise die Veröffentlichungsdatenbank nicht auf den aktuellen Stand bringen. Nehmen wir einmal an, es gibt eine Tabelle, die so partitioniert ist, dass jedes Abonnement nur die Kundendaten für eine der folgenden Verkaufsregionen erhält: Nord, Ost, Süd und West. Wenn für jede Datenpartition mindestens ein Abonnent vorhanden ist, würde es reichen, die Veröffentlichungsdatenbank mit einem Abonnenten für jede Partition zu synchronisieren, um sie auf den neuesten Stand zu bringen. Wenn aber beispielsweise die Daten in der Partition West auf keinen Abonnenten repliziert wurden, können diese Daten auf dem Verleger nicht auf den aktuellen Stand gebracht werden. In diesem sollten Sie alle Abonnements initialisieren, sodass die Daten auf dem Verleger und den Abonnenten zusammengeführt werden. Weitere Informationen finden Sie unter [Erneutes Initialisieren von Abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
      Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet). Weitere Informationen finden Sie unter [Synchronisieren von Daten](../../relational-databases/replication/synchronize-data.md).   
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
- [Über den Protokollversand &#40;SQLServer&#41;](about-log-shipping-sql-server.md)   
+ [Informationen zum Protokollversand &#40;SQL Server&#41;](about-log-shipping-sql-server.md)   
  [Datenbankspiegelung und Replikation &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
   

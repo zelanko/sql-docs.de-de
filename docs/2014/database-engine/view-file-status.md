@@ -1,5 +1,5 @@
 ---
-title: Anzeigen des Dateistatus | Microsoft-Dokumentation
+title: Datei Status anzeigen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3034ec95573d2f3c43ab28f2ad31e5ba41661cfc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773366"
 ---
 # <a name="view-file-status"></a>Anzeigen des Dateistatus
@@ -40,12 +40,12 @@ ms.locfileid: "62773366"
   
 1.  Wählen Sie im Projektmappen-Explorer ein Element aus.  
   
-2.  Auf der **Datei** Startmenü **Quellcodeverwaltung**, und klicken Sie auf **SourceSafe-Eigenschaften**.  
+2.  Zeigen Sie im Menü **Datei** auf **Quell**Code Verwaltung, und klicken Sie dann auf **SourceSafe-Eigenschaften**.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Festlegen und Abrufen von Versionsinformationen](../../2014/database-engine/set-and-retrieve-version-information.md)   
- [Anzeigen der Projektversionsgeschichte](../../2014/database-engine/view-project-history.md)   
- [Abrufen von Dateien](../../2014/database-engine/retrieve-files.md)   
+ [Anzeigen des Projektverlaufs](../../2014/database-engine/view-project-history.md)   
+ [Dateien abrufen](../../2014/database-engine/retrieve-files.md)   
  [Vergleichen von Dateien](../../2014/database-engine/compare-files.md)  
   
   

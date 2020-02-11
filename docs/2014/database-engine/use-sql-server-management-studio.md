@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62773886"
 ---
 # <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) ist eine integrierte Umgebung für den Zugriff auf Konfiguration, Verwaltung, Verwaltung und Entwicklung aller Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS kombiniert eine Vielzahl grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu ermöglichen.  
+  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) ist eine integrierte Umgebung für den Zugriff, die Konfiguration, Verwaltung und Entwicklung aller Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS kombiniert eine Vielzahl grafischer Tools mit einer Reihe umfassender Skript-Editoren, um Entwicklern und Administratoren mit verschiedenem Kenntnisstand den Zugriff auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu ermöglichen.  
   
  SSMS kombiniert die Funktionen von Enterprise Manager, Query Analyzer und dem Analysis-Manager aus den vorherigen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]in einer einzigen Umgebung. Darüber hinaus kann SSMS mit allen Komponenten von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet werden, z. B. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] und [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Diese Umgebung ist Entwicklern vertraut und stellt für Administratoren ein einziges Hilfsprogramm mit einfachen grafischen Tools und umfangreichen Skripterstellungsfunktionen zum Ausführen ihrer Aufgaben bereit.  
   
- Herunterladen und installieren Sie SSMS aus dem [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx).  
+ Laden Sie SSMS aus dem [Microsoft Developer Network](https://msdn.microsoft.com/library/dn434042.aspx)herunter, und installieren Sie es.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Funktionen in SQL Server Management Studio](features-in-sql-server-management-studio.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "62773886"
  [Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
  Beschreibt, wie eine Verbindung mit Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hergestellt wird und bestimmte Aufgaben ohne bestehende Verbindung ausgeführt werden.  
   
- [Objekt-Explorer](../ssms/object/object-explorer.md)  
+ [Objekt-Explorers](../ssms/object/object-explorer.md)  
  Beschreibt die Funktionen des Objekt-Explorers.  
   
  [Benutzerunterstützung in SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)  
@@ -77,7 +77,7 @@ ms.locfileid: "62773886"
  [Designer in Visual Database Tools](../ssms/visual-db-tools/visual-database-tool-designers.md)  
  Beschreibt die Visual Database Tools, die Sie zum Erstellen von Abfragen, zum Entwerfen oder Ändern einer Datenbankstruktur oder zum Aktualisieren von Daten verwenden können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Anzeigen oder Ändern von Server Eigenschaften &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   
