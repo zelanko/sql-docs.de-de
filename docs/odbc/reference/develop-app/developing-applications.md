@@ -15,16 +15,16 @@ ms.assetid: 0dd1a3b6-69dc-462f-9290-12ebee2b4a2a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: a9cdf20fa57da4b6085fc0e2fab61a23f3fed83e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68039914"
 ---
 # <a name="developing-applications"></a>Entwickeln von Anwendungen
-Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle und Treiber, die ihn implementieren.  
+Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle verwenden, und Treiber, die Sie implementieren.  
   
- Dieser Abschnitt enthält die folgenden Themen.  
+ Dieser Abschnitt enthält die folgenden Themen:  
   
 -   [ODBC-Grundlagen](../../../odbc/reference/develop-app/odbc-fundamentals.md)  
   
@@ -54,5 +54,5 @@ Dieser Abschnitt enthält Informationen zum Entwickeln von Anwendungen, die die 
   
 -   [Überlegungen zur Programmierung](../../../odbc/reference/develop-app/programming-considerations.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ODBC-Programmierreferenz](../../../odbc/reference/odbc-programmer-s-reference.md)

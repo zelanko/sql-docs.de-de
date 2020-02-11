@@ -1,5 +1,5 @@
 ---
-title: 'Lektion 4: Erstellen von Zeitreihenvorhersagen mit DMX | Microsoft-Dokumentation'
+title: 'Lektion 4: Erstellen von Zeitreihen Vorhersagen mit DMX | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 772e5f5f71ca82dd18fec48730522c80e907414f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63312090"
 ---
 # <a name="lesson-4-creating-time-series-predictions-using-dmx"></a>Lektion 4: Erstellen von Zeitreihenvorhersagen mit DMX
-  In dieser Lektion und der folgenden Lektion, verwenden Sie Data Mining Extensions (DMX) erstellen Sie verschiedene Arten von Vorhersagen auf Grundlage der zeitreihenmodelle, die Sie in erstellt [Lektion 1: Erstellen ein Zeitreihenmodell Miningmodell und Miningstruktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) und [Lektion 2: Hinzufügen von Miningmodellen zur der Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
+  In dieser Lektion und in der folgenden Lektion verwenden Sie Data Mining-Erweiterungen (DMX), um unterschiedliche Typen von Vorhersagen basierend auf den Zeitreihen Modellen zu erstellen, die Sie in [Lektion 1: Erstellen eines Zeitreihen-Mining Modells und einer Mining Struktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md) erstellt haben, und [Lektion 2: Hinzufügen von Mining Modellen zur Zeitreihen-Mining Struktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md).  
   
  Ein Zeitreihenmodell bietet zahlreiche Optionen im Hinblick auf Vorhersagen:  
   
@@ -31,19 +31,19 @@ ms.locfileid: "63312090"
  Nachfolgend finden Sie eine Zusammenfassung der Syntax für diese Vorhersagetypen:  
   
  Zeitreihenvorhersage (Standard)  
- Verwendung [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) die angegebene Anzahl von Vorhersagen aus dem trainierten Miningmodell zurückgeben.  
+ Verwenden Sie die [prättimeseries-&#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx) , um die angegebene Anzahl von Vorhersagen aus dem trainierten Mining Modell zurückzugeben.  
   
- Beispielsweise finden Sie unter [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) oder [Time Series Model Query Examples](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
+ Informationen hierzu finden Sie beispielsweise unter " [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx) oder [Zeitreihen Modell-Abfrage Beispiele](../../2014/analysis-services/data-mining/time-series-model-query-examples.md).  
   
  EXTEND_MODEL_CASES  
- Verwendung [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) mit dem EXTEND_MODEL_CASES-Argument, um neue Daten hinzufügen, die Reihe erweitern und Vorhersagen auf Grundlage des aktualisierten Miningmodells erstellen.  
+ Verwenden Sie die [&#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx) mit dem EXTEND_MODEL_CASES-Argument, um neue Daten hinzuzufügen, die Reihe zu erweitern und Vorhersagen basierend auf dem aktualisierten Mining Modell zu erstellen.  
   
  Dieses Lernprogramm enthält ein Beispiel zur Verwendung des EXTEND_MODEL_CASES-Arguments.  
   
  REPLACE_MODEL_CASES  
- Verwendung [PredictTimeSeries &#40;DMX&#41; ](/sql/dmx/predicttimeseries-dmx) mit dem REPLACE_MODEL_CASES-Argument, um die ursprünglichen Daten durch eine neue Datenreihe ersetzen, und erstellen Sie vorhersagen auf Grundlage der Muster im Miningmodell auf neuen Daten anzuwenden Reihe.  
+ Verwenden Sie " [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx) mit dem REPLACE_MODEL_CASES-Argument, um die ursprünglichen Daten durch eine neue Datenreihe zu ersetzen, und erstellen Sie dann Vorhersagen basierend auf dem Anwenden der Muster im Mining Modell auf die neue Datenreihe.  
   
- Ein Beispiel für die wie REPLACE_MODEL_CASES verwendet, finden Sie unter [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Ein Beispiel für die Verwendung von REPLACE_MODEL_CASES finden Sie unter [Lektion 2: Erstellung eines Planungs Szenarios &#40;Data Mining ](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)-Lernprogramm für fortgeschrittene&#41;.  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
@@ -65,11 +65,11 @@ FROM [<mining model name>]
 WHERE [<criteria>]  
 ```  
   
- Die Auswahlliste kann Spalten aus dem Modell enthalten, z. B. der Namen des Produkts Zeile, die Sie erstellen die Vorhersagen für, oder spezifische Vorhersagefunktionen, z. B. [Lag &#40;DMX&#41; ](/sql/dmx/lag-dmx) oder [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx), insbesondere für Zeitreihen-Miningmodelle sind.  
+ Die Auswahlliste kann Spalten aus dem Modell enthalten, wie z. b. den Namen der Produktlinie, für die Sie die Vorhersagen erstellen, oder Vorhersagefunktionen, wie z. b. [lag &#40;DMX-&#41;](/sql/dmx/lag-dmx) oder [prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx), die speziell für Zeitreihen-Mining Modelle gelten.  
   
 #### <a name="to-create-a-simple-time-series-prediction-query"></a>So erstellen Sie eine einfache Vorhersageabfrage für Zeitreihen  
   
-1.  In **Objekt-Explorer**, mit der rechten Maustaste in der Instanzstatus von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
+1.  Klicken Sie in **Objekt-Explorer**mit der rechten Maustaste auf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]die Instanz von, zeigen Sie auf **neue Abfrage**, und klicken Sie dann auf **DMX**.  
   
      Der Abfrage-Editor wird mit einer neuen leeren Abfrage geöffnet.  
   
@@ -133,23 +133,23 @@ WHERE [<criteria>]
     [ModelRegion] = 'M200 Pacific'  
     ```  
   
-6.  Auf der **Datei** Menü klicken Sie auf **Dmxquery1.DMX speichern**.  
+6.  Klicken Sie im Menü **Datei** auf **DMXQuery1. DMX speichern**unter.  
   
-7.  In der **speichern** Dialogfeld, navigieren Sie zu den entsprechenden Ordner, und nennen Sie die Datei `SimpleTimeSeriesPrediction.dmx`.  
+7.  Navigieren Sie im Dialogfeld **Speichern** unter in den entsprechenden Ordner, und benennen Sie die Datei `SimpleTimeSeriesPrediction.dmx`.  
   
-8.  Klicken Sie auf der Symbolleiste auf die **Execute** Schaltfläche.  
+8.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ausführen** .  
   
      Nach Ausführung der Abfrage werden 6 Vorhersagen für jede der zwei Kombinationen aus Produkt und Region in der `WHERE`-Klausel zurückgegeben.  
   
  In der nächsten Lektion erstellen Sie eine Abfrage, mit der neue Daten für das Modell bereitgestellt werden. Außerdem vergleichen Sie die Ergebnisse dieser Vorhersage mit der Vorhersage, die Sie gerade erstellt haben.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Lesson 5: Erweitern die Zeitreihe zu modellieren.](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Lektion 5: Erweitern des Zeitreihenmodells](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)   
- [Lag &#40;DMX&#41;](/sql/dmx/lag-dmx)   
- [Abfragebeispiel Zeitreihenmodell](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Lektion 2: Erstellen eines Planungserstellungsszenarios &#40;Datamining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx)   
+ [Verzögerung &#40;DMX-&#41;](/sql/dmx/lag-dmx)   
+ [Abfrage Beispiele für Zeitreihen Modelle](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Lektion 2: Erstellung eines Vorhersage Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
   

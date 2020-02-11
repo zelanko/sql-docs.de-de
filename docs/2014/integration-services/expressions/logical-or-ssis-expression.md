@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4be7f70d568fd705847d3529fadd28181a71352
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62897596"
 ---
 # <a name="-logical-or-ssis-expression"></a>|| (Logisches OR) (SSIS-Ausdruck)
@@ -38,10 +38,10 @@ boolean_expression1 || boolean_expression2
 ## <a name="result-types"></a>Ergebnistypen  
  DT_BOOL  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  In der folgenden Tabelle wird das Ergebnis des ||-Operators dargestellt.  
   
-|Ergebnis|expression|expression|  
+|Ergebnis|Ausdruck|Ausdruck|  
 |------------|----------------|----------------|  
 |TRUE|TRUE|TRUE|  
 |TRUE|TRUE|FALSE|  
@@ -63,7 +63,7 @@ StandardCost < 300 || ListPrice > 500
 StandardCost < @SPrice || ListPrice > @LPrice  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [&#124; &#40;Bitweises inklusives OR&#41; &#40;SSIS-Ausdruck&#41;](bitwise-inclusive-or-ssis-expression.md)   
  [^ &#40;Bitweises exklusives OR&#41; &#40;SSIS-Ausdruck&#41;](bitwise-exclusive-or-ssis-expression.md)   
  [Operatorenrangfolge und -assoziativität](operator-precedence-and-associativity.md)   

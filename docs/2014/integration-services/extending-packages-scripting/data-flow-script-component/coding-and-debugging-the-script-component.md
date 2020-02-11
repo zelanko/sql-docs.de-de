@@ -22,10 +22,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fd4153aaaf0fdffe32ce48db872a43cb5dbb84c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62894794"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codieren und Debuggen der Skriptkomponente
@@ -59,9 +59,9 @@ ms.locfileid: "62894794"
   
     -   Eine `Connections`-Auflistungsklasse mit Verweisen zu den im Transformations-Editor für Skripterstellung auf der Seite Verbindungs-Manager ausgewählten Verbindungen.  
   
-    -   Ein `Variables` -Auflistungsklasse mit Verweisen zu den Variablen, die in eingegebenen der `ReadOnlyVariable` und `ReadWriteVariables` Eigenschaften für die **Skript** auf der Seite die **Transformations-Editor**.  
+    -   Eine `Variables` Auflistungs Klasse, die Verweise auf die Variablen enthält `ReadOnlyVariable` , `ReadWriteVariables` die auf der Seite **Skript** des Transformations- **Editors für Skript**Erstellung in den Eigenschaften und eingegeben wurden.  
   
--   Die `BufferWrapper` Projektelement enthält eine Klasse, die von erbt <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jede konfigurierte Eingabe und Ausgabe auf die **Eingaben und Ausgaben** auf der Seite die **Transformations-Editor**. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.  
+-   Das `BufferWrapper` -Projekt Element enthält eine Klasse, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptBuffer> für jede auf der Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skript**Erstellung konfigurierte Eingabe und Ausgabe erbt. Jede dieser Klassen enthält typisierte Accessoreigenschaften, die mit den konfigurierten Eingabe- und Ausgabespalten übereinstimmen, sowie die Datenflusspuffer, in denen sich diese Spalten befinden.  
   
  Weitere Informationen zur Verwendung dieser Objekte, Methoden und Eigenschaften finden Sie unter [Understanding the Script Component Object Model (Grundlegendes zum Objektmodell der Skriptkomponente)](understanding-the-script-component-object-model.md). Informationen darüber, wie die Methoden und Eigenschaften dieser Klassen in einem bestimmten Skriptkomponententyp zu verwenden sind, finden Sie unter [Additional Script Component Examples (Zusätzliche Skriptkomponentenbeispiele)](../../extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md). Die Beispielthemen enthalten auch vollständige Codebeispiele.  
   
@@ -168,9 +168,9 @@ public class ScriptMain : UserComponent
   
 |Funktion des Pakets|Zugriffsmethode|  
 |---------------------|-------------------|  
-|Variablen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der `Variables`-Auflistungsklasse im `ComponentWrapper`-Projektelement, die über die `Variables`-Eigenschaft der `ScriptMain`-Klasse bereitgestellt werden.<br /><br /> Die `PreExecute`-Methode kann nur auf schreibgeschützte Variablen zugreifen. Die `PostExecute`-Methode kann sowohl auf schreibgeschützte als auch auf Lese-/Schreibvariablen zugreifen.|  
+|Variables|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der `Variables`-Auflistungsklasse im `ComponentWrapper`-Projektelement, die über die `Variables`-Eigenschaft der `ScriptMain`-Klasse bereitgestellt werden.<br /><br /> Die `PreExecute`-Methode kann nur auf schreibgeschützte Variablen zugreifen. Die `PostExecute`-Methode kann sowohl auf schreibgeschützte als auch auf Lese-/Schreibvariablen zugreifen.|  
 |Verbindungen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der `Connections`-Auflistungsklasse im `ComponentWrapper`-Projektelement, die über die `Connections`-Eigenschaft der `ScriptMain`-Klasse bereitgestellt werden.|  
-|Ereignisse|Lösen Ereignisse mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> Eigenschaft der `ScriptMain` Klasse und die **Fire\<X >** Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> Schnittstelle.|  
+|Events|Lösen Sie Ereignisse mithilfe der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A> -Eigenschaft der `ScriptMain` -Klasse und **der\<Fire X>** -Methoden <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100> der-Schnittstelle aus.|  
 |Protokollierung|Protokollierungen werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode der `ScriptMain`-Klasse ausgeführt.|  
   
 ## <a name="debugging-the-script-component"></a>Debuggen der Skriptkomponente  
@@ -184,7 +184,7 @@ public class ScriptMain : UserComponent
   
  Sie können die Ausführung der Skriptkomponente auch mit den folgenden Methoden überwachen:  
   
--   Unterbrechen Sie die Ausführung und eine modale Meldung anzeigen, indem Sie mit der `MessageBox.Show` -Methode in der die **"System.Windows.Forms"** Namespace. (Entfernen Sie diesen Code, nachdem der Debugprozess abgeschlossen wurde.)  
+-   Unterbrechen Sie die Ausführung, und zeigen Sie mithilfe `MessageBox.Show` der-Methode im **System. Windows. Forms** -Namespace eine modale Meldung an. (Entfernen Sie diesen Code, nachdem der Debugprozess abgeschlossen wurde.)  
   
 -   Lösen Sie Ereignisse für Informationsmeldungen, Warnungen und Fehler aus. Die Methoden FireInformation, FireWarning und FireError zeigen die Ereignisbeschreibung im Fenster **Ausgabe** von Visual Studio an. Die Methoden FireProgress, Console.Write und Console.WriteLine zeigen hingegen keine Informationen im Fenster **Ausgabe** an. Meldungen des FireProgress-Ereignisses werden auf der Registerkarte **Status** des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers angezeigt. Weitere Informationen finden Sie unter [Raising Events in the Script Component (Auslösen von Ereignissen in der Skriptkomponente)](../../data-flow/transformations/script-component.md).  
   
@@ -208,9 +208,9 @@ public class ScriptMain : UserComponent
   
 -   Blogeintrag: [VSTA setup and configuration troubles for SSIS 2008 and R2 installations (Probleme mit der VSTA-Einrichtung und -Konfiguration bei SSIS 2008- und R2-Installationen)](https://go.microsoft.com/fwlink/?LinkId=215661) (auf blogs.msdn.com).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor](configuring-the-script-component-in-the-script-component-editor.md)  
   
   

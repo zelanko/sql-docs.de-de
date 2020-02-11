@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bb14d7809eba496ede8c8e0aa6e7133c2ad9c524
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "75243183"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Verwenden des Hilfsprogramms sqlcmd
@@ -254,7 +254,7 @@ ms.locfileid: "75243183"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B: Verwenden von "sqlcmd" mit einer dedizierten Verwaltungsverbindung  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. Verwenden von "sqlcmd" mit einer dedizierten Verwaltungsverbindung  
  Im folgenden Beispiel wird mithilfe von `sqlcmd` eine Verbindung mit einem Server hergestellt, der Blockierungsprobleme aufweist. Dies erfolgt mithilfe einer dedizierten Administratorverbindung (Dedicated Administrator Connection, DAC).  
   
  `C:\>sqlcmd -S ServerName -A`  
@@ -279,7 +279,7 @@ ms.locfileid: "75243183"
   
  `2> GO`  
   
-### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>c. Verwenden von "sqlcmd" zum Ausführen einer gespeicherten Prozedur  
+### <a name="c-using-sqlcmd-to-execute-a-stored-procedure"></a>C. Verwenden von "sqlcmd" zum Ausführen einer gespeicherten Prozedur  
  Im folgenden Beispiel wird veranschaulicht, wie eine gespeicherte Prozedur mithilfe von `sqlcmd`ausgeführt wird. Erstellen Sie die folgende gespeicherte Prozedur.  
   
  `USE AdventureWorks2012;`  
@@ -332,7 +332,7 @@ ms.locfileid: "75243183"
   
  `gustavo0@adventure-works.com`  
   
-### <a name="d-using-sqlcmd-for-database-maintenance"></a>D. Verwenden von "sqlcmd" für die Datenbankwartung  
+### <a name="d-using-sqlcmd-for-database-maintenance"></a>D: Verwenden von "sqlcmd" für die Datenbankwartung  
  Im folgenden Beispiel wird veranschaulicht, wie mithilfe von `sqlcmd` Datenbankwartungstasks ausgeführt werden können. Erstellen Sie `C:\BackupTemplate.sql` mit dem folgenden Code.  
   
  `USE master;`  
@@ -570,6 +570,6 @@ SQLCMD -E -N -C
  [Verwenden von sqlcmd mit Skript Variablen](sqlcmd-use-with-scripting-variables.md)   
  [Bearbeiten von sqlcmd-Skripts mit dem Abfrage-Editor](edit-sqlcmd-scripts-with-query-editor.md)   
  [Verwalten von Auftrags Schritten](../../ssms/agent/manage-job-steps.md)   
- [Erstellen eines CmdExec-Auftrags Schritts](../../ssms/agent/create-a-cmdexec-job-step.md)  
+ [Create a CmdExec Job Step](../../ssms/agent/create-a-cmdexec-job-step.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 'Gewusst wie: Debuggen von benutzerdefinierten Assemblys | Microsoft-Dokumentation'
+title: 'Vorgehensweise: Debuggen von benutzerdefinierten Assemblys | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63265060"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Gewusst wie: Debuggen von benutzerdefinierten Assemblys
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt mehrere hilfreiche Tools zum Debuggen zur Verfügung, die Sie bei der Analyse des Codes in benutzerdefinierten Assemblys und bei der Fehlersuche im Code unterstützen. Welches Tool dafür am besten geeignet ist, hängt von Ihrer Zielsetzung ab. In diesem Beispiel wird [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]verwendet.  
+# <a name="how-to-debug-custom-assemblies"></a>Vorgehensweise: Debuggen von benutzerdefinierten Assemblys
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bietet mehrere Debuggingtools, mit denen Sie den benutzerdefinierten Assemblycode analysieren und Fehler darin suchen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können. Welches Tool dafür am besten geeignet ist, hängt von Ihrer Zielsetzung ab. In diesem Beispiel wird [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] verwendet.  
   
  Am besten können Sie benutzerdefinierte Assemblys für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entwerfen, entwickeln und testen, wenn Sie eine Projektmappe erstellen, die sowohl Ihre Testberichte als auch Ihre benutzerdefinierte Assembly enthält.  
   
@@ -50,9 +50,9 @@ ms.locfileid: "63265060"
   
      Das Dialogfeld der **Eigenschaftenseite des Projekts** wird geöffnet.  
   
-9. Klicken Sie in einem C#-Projekt auf die Registerkarte **Erstellen** und in einem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt auf die Registerkarte **Kompilieren**.  
+9. Klicken Sie in einem C#-Projekt auf die Registerkarte **Erstellen** und in einem **-Projekt auf die Registerkarte **Kompilieren[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-10. Geben Sie auf der Seite **Erstellen**/**Kompilieren** den Pfad zum Ordner des Berichts-Designers ein. Standardmäßig ist dies C:\Programme\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) im Textfeld **Ausgabepfad**. Damit wird eine aktualisierte Version der benutzerdefinierten Assembly erstellt und direkt im Berichts-Designer bereitgestellt, bevor der Bericht ausgeführt wird.  
+10. Geben Sie auf der Seite **Build**/**Compile (buildkompilierung** ) den Pfad zum Berichts-Designer Ordner ein. Standardmäßig ist dies C:\Programme\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) im Textfeld **Ausgabepfad**. Damit wird eine aktualisierte Version der benutzerdefinierten Assembly erstellt und direkt im Berichts-Designer bereitgestellt, bevor der Bericht ausgeführt wird.  
   
 11. Wenn Sie den Bericht entworfen und die benutzerdefinierte Assembly entwickelt haben, legen Sie die Breakpoints im Code der benutzerdefinierten Assembly fest.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "63265060"
   
 9. Gehen Sie den Code schrittweise mit der F11-Taste durch. Weitere Informationen zum Debuggen mithilfe von [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] finden Sie in der Dokumentation zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)].  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden benutzerdefinierter Assemblys mit Berichten](using-custom-assemblies-with-reports.md)  
   
   

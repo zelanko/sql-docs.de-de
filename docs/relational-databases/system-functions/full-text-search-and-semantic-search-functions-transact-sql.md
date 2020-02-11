@@ -1,5 +1,5 @@
 ---
-title: Volltextsuche und semantische Suche Funktionen (Transact-SQL) | Microsoft-Dokumentation
+title: Funktionen für die voll Text Suche und die semantische Suche (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: a61a3694-7604-4583-962e-fc30f771c6fa
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 58bf5650a5ab06783ad0c889bc3286184a7d73ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68042751"
 ---
 # <a name="full-text-search-and-semantic-search-functions-transact-sql"></a>Funktionen für Volltextsuche und semantische Suche (Transact-SQL)
@@ -31,14 +31,14 @@ ms.locfileid: "68042751"
  Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für jene Spalten zurück, die präzise oder weniger präzise (fuzzy) Übereinstimmungen mit einzelnen Wörtern bzw. Ausdrücken aufweisen, die den Abstand von Wörtern oder gewichtete Treffer enthalten.  
   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)  
- Gibt eine Tabelle mit 0 (null), einer oder mehreren Zeilen für alle Spalten mit Werten, die die Bedeutung und nicht nur dem genauen Wortlaut des Texts in der angegebenen entsprechen *Freetext_string*.  
+ Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, die Werte enthalten, die mit der Bedeutung und nicht nur mit dem genauen Wortlaut des Texts in der angegebenen *freetext_string*identisch sind.  
   
 ## <a name="semantic-search-functions"></a>Funktionen für die semantische Suche  
  [semantickeyphrasetable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md)  
  Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Schlüsselausdrücke zurück, die in der angegebenen Tabelle Spalten zugeordnet sind.  
   
  [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md)  
- Gibt eine Tabelle mit 0 (null), einer oder mehreren Zeilen von Schlüsselausdrücken allgemeinen in zwei Dokumenten (einem Quelldokument und einem verglichenen Dokument), deren Inhalt semantisch ähnlich ist.  
+ Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen von Schlüssel Ausdrücken zurück, die in zwei Dokumenten (einem Quelldokument und einem übereinstimmenden Dokument) vorkommen, deren Inhalt semantisch ähnlich ist.  
   
  [semanticsimilaritytable &#40;Transact-SQL&#41;](../../relational-databases/system-functions/semanticsimilaritytable-transact-sql.md)  
  Gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Spalten zurück, deren Inhalt einem angegebenen Dokument semantisch ähnlich ist.  

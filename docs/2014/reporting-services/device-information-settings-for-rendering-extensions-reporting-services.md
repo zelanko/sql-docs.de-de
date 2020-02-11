@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8866b6b8193ec61e08d20868ed88a21211fa2a32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66109258"
 ---
 # <a name="device-information-settings-for-rendering-extensions-reporting-services"></a>Geräteinformationseinstellungen für Renderingerweiterungen (Reporting Services)
@@ -22,20 +22,20 @@ ms.locfileid: "66109258"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[ATOM-Geräteinformationseinstellungen](../../2014/reporting-services/atom-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Atom-kompatiblen Renderingausgabe zugeordnet sind.|  
-|[CSV-Geräteinformationseinstellungen](csv-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der CSV-Renderingausgabe zugeordnet sind.|  
-|[Geräteinformationseinstellungen für Excel](excel-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Excel-Renderingausgabe zugeordnet sind.|  
-|[Geräteinformationseinstellungen für Word](word-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Word-Renderingausgabe zugeordnet sind.|  
+|[ATOM Device Information Settings (ATOM-Geräteinformationseinstellungen)](../../2014/reporting-services/atom-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Atom-kompatiblen Renderingausgabe zugeordnet sind.|  
+|[CSV Device Information Settings (CSV-Geräteinformationseinstellungen)](csv-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der CSV-Renderingausgabe zugeordnet sind.|  
+|[Excel Device Information Settings (Geräteinformationseinstellungen für Excel)](excel-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Excel-Renderingausgabe zugeordnet sind.|  
+|[Word Device Information Settings (Geräteinformationseinstellungen für Word)](word-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der Word-Renderingausgabe zugeordnet sind.|  
 |[HTML-Geräteinformationseinstellungen](html-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der HTML-Renderingausgabe zugeordnet sind.|  
 |[Geräteinformationseinstellungen für Bilder](image-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der IMAGE-Renderingausgabe zugeordnet sind.|  
 |[Geräteinformationseinstellungen für MHTML](mhtml-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der MHTML-Renderingausgabe zugeordnet sind.|  
-|[PDF-Geräteinformationseinstellungen](pdf-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der PDF-Renderingausgabe zugeordnet sind.|  
-|[XML-Geräteinformationseinstellungen](xml-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der XML-Renderingausgabe zugeordnet sind.|  
-|[RGDI-Geräteinformationseinstellungen](rgdi-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der RGDI-Renderingausgabe zugeordnet sind.|  
+|[PDF Device Information Settings (PDF-Geräteinformationseinstellungen)](pdf-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der PDF-Renderingausgabe zugeordnet sind.|  
+|[XML Device Information Settings (XML-Geräteinformationseinstellungen)](xml-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der XML-Renderingausgabe zugeordnet sind.|  
+|[RGDI Device Information Settings (RGDI-Geräteinformationseinstellungen)](rgdi-device-information-settings.md)|Beschreibt die Geräteinformationseinstellungen, die der RGDI-Renderingausgabe zugeordnet sind.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
   

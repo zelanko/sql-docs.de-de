@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8afa4b2dfb2b140d67644289e93aa2d96eb1697c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63460019"
 ---
 # <a name="delete-rows-in-the-results-pane-visual-database-tools"></a>Löschen von Zeilen im Ergebnisbereich (Visual Database Tools)
@@ -42,8 +42,8 @@ ms.locfileid: "63460019"
 > [!NOTE]  
 >  Falls eine der ausgewählten Zeilen nicht aus der Datenbank gelöscht werden kann, wird keine dieser Zeilen gelöscht und eine Meldung ausgegeben, aus der hervorgeht, welche Zeilen nicht gelöscht werden können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Löschabfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen von Lösch Abfragen &#40;Visual Database Tools&#41;](visual-database-tools.md)   
  [Angeben von Suchkriterien &#40;Visual Database Tools&#41;](specify-search-criteria-visual-database-tools.md)  
   
   

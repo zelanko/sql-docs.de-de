@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c0c6449082f1c5ca016cfdb0a0f18430cf74731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "63156810"
 ---
 # <a name="create-indexes-with-included-columns"></a>Erstellen von Indizes mit eingeschlossenen Spalten
@@ -43,13 +43,13 @@ ms.locfileid: "63156810"
   
 -   **Vorbereitungen:**  
   
-     [Entwurfsempfehlungen](#DesignRecs)  
+     [Entwurfs Empfehlungen](#DesignRecs)  
   
      [Einschränkungen](#Restrictions)  
   
      [Sicherheit](#Security)  
   
--   **So erstellen Sie einen Index mit Nichtschlüsselspalten mit:**  
+-   **So erstellen Sie einen Index mit nicht Schlüssel Spalten mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63156810"
 ####  <a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>So erstellen Sie einen Index mit Nichtschlüsselspalten  
   
@@ -102,13 +102,13 @@ ms.locfileid: "63156810"
   
 6.  Klicken Sie in der Registerkarte **Indexschlüsselspalten** auf **Hinzufügen…** .  
   
-7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
+7.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das Kontrollkästchen bzw. die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index hinzugefügt werden sollen.  
   
 8.  Klicken Sie auf **OK**.  
   
 9. Klicken Sie auf der Registerkarte **Eingeschlossene Spalten** auf **Hinzufügen...** .  
   
-10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das oder die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem Index als Nichtschlüsselspalten hinzugefügt werden sollen.  
+10. Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das Kontrollkästchen oder die Kontrollkästchen der Tabellen Spalten, die dem Index als nicht Schlüssel Spalten hinzugefügt werden sollen.  
   
 11. Klicken Sie auf **OK**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63156810"
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>So erstellen Sie einen Index mit Nichtschlüsselspalten  
   
-1.  Stellen Sie im **Objekt-Explorer**eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz her.  
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
