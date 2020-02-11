@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2d59a42fa7b77e6800218f1eeca4986320c1dcef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62766777"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>Zugriffssteuerung für vertrauliche Daten in Paketen
@@ -52,7 +52,7 @@ ms.locfileid: "62766777"
 ## <a name="protection-levels"></a>Schutzebenen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] verfügbaren Schutzebenen beschrieben. Die in Klammern stehenden Werte stammen aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel> -Enumeration. Diese Werte werden im Eigenschaftenfenster angezeigt, das Sie zum Konfigurieren der Eigenschaften des Pakets verwenden, wenn Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]mit Paketen arbeiten.  
   
-|Schutzebene|Description|  
+|Schutzebene|BESCHREIBUNG|  
 |----------------------|-----------------|  
 |Sensible Daten nicht speichern (`DontSaveSensitive`)|Unterdrückt die Werte vertraulicher Eigenschaften im Paket, wenn das Paket gespeichert wird. Diese Schutzebene verschlüsselt nicht, sondern verhindert stattdessen, dass als sensibel markierte Eigenschaften mit dem Paket gespeichert werden. Deshalb stehen die sensiblen Daten anderen Benutzern nicht zur Verfügung. Wenn das Paket von einem anderen Benutzer geöffnet wird, werden die sensiblen Daten durch Leerzeichen ersetzt und der Benutzer muss die sensiblen Daten angeben.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm (dtutil.exe) entspricht diese Schutzebene dem Wert 0.|  
 |Alle Daten mit einem Kennwort verschlüsseln (`EncryptAllWithPassword`)|Verwendet ein Kennwort zum Verschlüsseln des gesamten Pakets. Das Paket wird mit einem Kennwort verschlüsselt, das beim Erstellen oder Exportieren des Pakets vom Benutzer bereitgestellt wird. Um das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer zu öffnen oder mit dem **dtexec** -Eingabeaufforderungs-Hilfsprogramm auszuführen, muss der Benutzer das Paketkennwort angeben. Ohne Kennwort kann der Benutzer das Paket weder öffnen noch ausführen.<br /><br /> Bei der Verwendung mit dem **dtutil** -Hilfsprogramm entspricht diese Schutzebene dem Wert 3.|  
@@ -64,10 +64,10 @@ ms.locfileid: "62766777"
 ## <a name="protection-level-setting-and-the-ssisdb-catalog"></a>Einstellung der Schutzebene und SSISDB-Katalog  
  Der SSISDB-Katalog verwendet die Schutzebene `ServerStorage`. Wenn Sie ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server bereitstellen, werden die Paketdaten und sensible Werte automatisch vom Katalog verschlüsselt. Die Daten werden vom Katalog auch automatisch entschlüsselt, wenn Sie sie abrufen.  
   
- Wenn Sie das Projekt (ISPAC-Datei) vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server in das Dateisystem exportieren, ändert das System die Schutzebene automatisch in `EncryptSensitiveWithUserKey`. Wenn Sie das Projekt mithilfe der **Integration Services Import-Assistent** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], **ProtectionLevel** -Eigenschaft in der **Eigenschaften** Fenster Zeigt den Wert `EncryptSensitiveWithUserKey`.  
+ Wenn Sie das Projekt (ISPAC-Datei) vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Server in das Dateisystem exportieren, ändert das System die Schutzebene automatisch in `EncryptSensitiveWithUserKey`. Wenn Sie das Projekt mithilfe des Assistenten zum **Importieren von Projekt Integration Services** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]importieren, zeigt die **Schutzlevel** -Eigenschaft im Fenster **Eigenschaften** den Wert `EncryptSensitiveWithUserKey`an.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>Festlegen der Schutzebene auf Grundlage des Paketlebenszyklus  
- Die Schutzebene eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakets wird bei dessen Entwicklung in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]festgelegt. Wenn das Paket dann zu einem späteren Zeitpunkt bereitgestellt, von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert oder daraus exportiert wird oder von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher oder in das Dateisystem kopiert wird, können Sie die Paketschutzebene aktualisieren. Wenn Sie z. B. Pakete auf Ihrem Computer mit einer Benutzerschlüssel-Schutzebenenoption erstellen und speichern, möchten Sie eventuell die Schutzebene ändern, wenn Sie das Paket anderen Benutzern übergeben; anderenfalls können diese Benutzer das Paket nicht öffnen.  
+ Sie legen die Schutz Ebene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eines Pakets fest, wenn Sie es erstmalig in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]entwickeln. Wenn das Paket dann zu einem späteren Zeitpunkt bereitgestellt, von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]importiert oder daraus exportiert wird oder von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nach [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], in den [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher oder in das Dateisystem kopiert wird, können Sie die Paketschutzebene aktualisieren. Wenn Sie z. B. Pakete auf Ihrem Computer mit einer Benutzerschlüssel-Schutzebenenoption erstellen und speichern, möchten Sie eventuell die Schutzebene ändern, wenn Sie das Paket anderen Benutzern übergeben; anderenfalls können diese Benutzer das Paket nicht öffnen.  
   
  Normalerweise wird die Schutzebene wie in den folgenden Schritten beschrieben geändert:  
   
@@ -81,8 +81,8 @@ ms.locfileid: "62766777"
   
 -   [Festlegen oder Ändern der Schutzebene von Paketen](../set-or-change-the-protection-level-of-packages.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Import und Export von Paketen &#40;SSIS-Dienst&#41;](../import-and-export-packages-ssis-service.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../import-and-export-packages-ssis-service.md)   
  [Integration Services-Pakete &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
  [Sicherheitsübersicht &#40;Integration Services&#41;](security-overview-integration-services.md)  
   

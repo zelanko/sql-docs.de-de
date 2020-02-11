@@ -22,14 +22,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dad3a2c5f7073ea63608ba5234061a3ffa2102c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62666940"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Anzeigen des Veröffentlichungs- und Abonnementstatus im Replikationsmonitor
-  Im Replikationsmonitor von[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Im Replikations Monitor werden Statusinformationen für Veröffentlichungen und Abonnements angezeigt:  
   
 -   Der Status einer Veröffentlichung wird durch den Status mit höchster Priorität der zugehörigen Abonnements bestimmt. Wenn beispielsweise ein Abonnement einer Veröffentlichung einen Fehler aufweist und bei einem anderen Abonnement ein leistungsbezogenes Problem vorliegt, wird für die Veröffentlichung ein Statusfehler gemeldet.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "62666940"
   
  Zusätzlich zum Veröffentlichungs- und Abonnementstatus stellt die Mergereplikation Statistiken auf Artikelebene bereit, wodurch Sie z. B. wesentlich ausführlichere Informationen zu folgenden wichtigen Fragen erhalten: Wie lange dauert es bis zum Abschluss einer Mergephase? Wie viel Zeit wurde für die Verarbeitung eines bestimmten Artikels aufgewendet? Welchen Verbindungstyp verwendet ein Abonnent? Die Statistiken werden im Replikationsmonitor im Fenster des Merge-Agents angezeigt. Bei der Momentaufnahme- und Transaktionsreplikation werden ausführliche Informationen zur Verteilungs-Agent-Verarbeitung bereitgestellt.  
   
- **So zeigen Sie den Veröffentlichungs- und Abonnementstatus an**  
+ **So zeigen Sie den Veröffentlichungs-und Abonnement Status an**  
   
--   Replikationsmonitor: [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](view-information-and-perform-tasks-replication-monitor.md)
+-   Replikations Monitor: [Anzeigen von Informationen und Ausführen von Tasks mithilfe des Replikations Monitors](view-information-and-perform-tasks-replication-monitor.md)
   
   
 ## <a name="publication-status-values"></a>Veröffentlichungsstatuswerte  
@@ -61,10 +61,10 @@ ms.locfileid: "62666940"
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI icon: error")|  
-|Leistung ist kritisch|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|OK|none|  
+|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI-Symbol: Fehler")|  
+|Leistung ist kritisch|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholungsversuch des Replikations-Agents](../media/repl-icon-retry.gif "UI-Symbol: Wiederholungsversuch des Replikations-Agents")|  
+|OK|(Keine)|  
   
 ## <a name="subscription-status-values"></a>Abonnementstatuswerte  
  In den nachfolgenden Tabellen werden Abonnementstatuswerte und ihre entsprechenden Symbole nach Priorität geordnet aufgeführt. Ein Abonnement kann zwei Statusangaben gleichzeitig aufweisen, beispielsweise **Läuft demnächst ab/Abgelaufen** und **fehlerhafter Befehl wird wiederholt**. Der Status mit der höchsten Priorität wird angezeigt.  
@@ -75,39 +75,39 @@ ms.locfileid: "62666940"
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI icon: error")|  
-|Leistung ist kritisch|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
-|Wird ausgeführt|![UI-Symbol: Replikations-Agent Ausführung](../media/repl-icon-running.gif "UI icon: replication agent running")|  
+|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|  
+|Leistung ist kritisch|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholungsversuch des Replikations-Agents](../media/repl-icon-retry.gif "UI-Symbol: Wiederholungsversuch des Replikations-Agents")|  
+|Wird nicht ausgeführt|![UI-Symbol: Replikations-Agent wird beendet](../media/repl-icon-stopped.gif "UI-Symbol: Replikations-Agent wird beendet")|  
+|Wird ausgeführt|![UI-Symbol: Replikations-Agent wird ausgeführt](../media/repl-icon-running.gif "UI-Symbol: Replikations-Agent wird ausgeführt")|  
   
 ### <a name="merge-subscriptions"></a>Mergeabonnements  
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI icon: error")|  
-|Leistung ist kritisch|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|Langer Mergevorgang|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Wird synchronisiert|![UI-Symbol: Replikations-Agent Ausführung](../media/repl-icon-running.gif "UI icon: replication agent running")|  
-|Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI-Symbol: Fehler")|  
+|Leistung ist kritisch|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|Langer Mergevorgang|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholungsversuch des Replikations-Agents](../media/repl-icon-retry.gif "UI-Symbol: Wiederholungsversuch des Replikations-Agents")|  
+|Wird synchronisiert|![UI-Symbol: Replikations-Agent wird ausgeführt](../media/repl-icon-running.gif "UI-Symbol: Replikations-Agent wird ausgeführt")|  
+|Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent wird beendet](../media/repl-icon-stopped.gif "UI-Symbol: Replikations-Agent wird beendet")|  
   
 ### <a name="snapshot-subscriptions"></a>Momentaufnahmeabonnements  
   
 |Status|Symbol|  
 |------------|----------|  
-|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI icon: error")|  
-|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI icon: warning")|  
-|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholung Replikations-Agent](../media/repl-icon-retry.gif "UI icon: replication agent retry")|  
-|Wird synchronisiert|![UI-Symbol: Replikations-Agent Ausführung](../media/repl-icon-running.gif "UI icon: replication agent running")|  
-|Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent beendet](../media/repl-icon-stopped.gif "UI icon: replication agent stopped")|  
+|Fehler|![UI-Symbol: Fehler](../media/repl-icon-error.gif "UI-Symbol: Fehler")|  
+|Läuft demnächst ab/Abgelaufen|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|Nicht initialisiertes Abonnement|![UI-Symbol: Warnung](../media/repl-icon-warn.gif "UI-Symbol: Warnung")|  
+|fehlerhafter Befehl wird wiederholt|![UI-Symbol: Wiederholungsversuch des Replikations-Agents](../media/repl-icon-retry.gif "UI-Symbol: Wiederholungsversuch des Replikations-Agents")|  
+|Wird synchronisiert|![UI-Symbol: Replikations-Agent wird ausgeführt](../media/repl-icon-running.gif "UI-Symbol: Replikations-Agent wird ausgeführt")|  
+|Synchronisierung wird nicht ausgeführt|![UI-Symbol: Replikations-Agent wird beendet](../media/repl-icon-stopped.gif "UI-Symbol: Replikations-Agent wird beendet")|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Replikation](../monitoring-replication.md)  
   
   

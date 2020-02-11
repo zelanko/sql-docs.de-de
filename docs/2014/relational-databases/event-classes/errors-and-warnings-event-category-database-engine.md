@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b86b68b0e7273a275c8dd1bd00fe99a7c462a27d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62662626"
 ---
 # <a name="errors-and-warnings-event-category-database-engine"></a>Fehler und Warnungen-Ereigniskategorie (Datenbank-Engine)
@@ -28,14 +28,14 @@ ms.locfileid: "62662626"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Attention-Ereignisklasse](attention-event-class.md)|Zeigt an, dass ein **Attention** -Ereignis aufgetreten ist.|  
 |[Background Job Error-Ereignisklasse](background-job-error-event-class.md)|Zeigt an, dass ein Hintergrundauftrag fehlerbedingt beendet wurde.|  
 |[Bitmap Warning-Ereignisklasse](bitmap-warning-event-class.md)|Zeigt an, dass das Filtern von Bitmaps in einer Abfrage deaktiviert wurde.|  
 |[Blocked Process Report-Ereignisklasse](blocked-process-report-event-class.md)|Zeigt an, dass ein Task länger als die angegebene Zeitspanne blockiert wurde.|  
 |[CPU Threshold Exceeded (Ereignisklasse)](cpu-threshold-exceeded-event-class.md)|Zeigt an, dass die Ressourcenkontrolle eine Abfrage erkennt, die den angegebenen CPU-Schwellenwert überschreitet.|  
-|[ErrorLog (Ereignisklasse)](errorlog-event-class.md)|Zeigt an, dass Fehlerereignisse im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll protokolliert wurden.|  
+|[ErrorLog-Ereignisklasse](errorlog-event-class.md)|Zeigt an, dass Fehlerereignisse im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Fehlerprotokoll protokolliert wurden.|  
 |[EventLog-Ereignisklasse](eventlog-event-class.md)|Zeigt an, dass Ereignisse im Windows-Ereignisprotokoll protokolliert wurden.|  
 |[Exception-Ereignisklasse](exception-event-class.md)|Zeigt an, dass in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Ausnahme aufgetreten ist.|  
 |[Exchange Spill (Ereignisklasse)](exchange-spill-event-class.md)|Zeigt an, dass Kommunikationspuffer in einem parallelen Abfrageplan in die tempdb-Datenbank geschrieben wurden.|  
@@ -46,7 +46,7 @@ ms.locfileid: "62662626"
 |[Sort Warnings (Ereignisklasse)](sort-warnings-event-class.md)|Zeigt an, dass der Arbeitsspeicher für Sortiervorgänge nicht ausreicht.|  
 |[User Error Message-Ereignisklasse](user-error-message-event-class.md)|Zeigt die dem Benutzer angezeigten Fehlermeldungen an.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)  
   
   

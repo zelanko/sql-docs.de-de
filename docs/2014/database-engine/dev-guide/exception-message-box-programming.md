@@ -1,5 +1,5 @@
 ---
-title: Ausnahmemeldung Programmierung | Microsoft-Dokumentation
+title: Programmierung von Ausnahme Meldungs Feldern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,14 +18,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 205638b82e8d0d71a3d674bd970e4bf8d2e3ea5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62753373"
 ---
 # <a name="exception-message-box-programming"></a>Programmierung eines Ausnahmemeldungsfelds
-  Das Ausnahmemeldungsfeld ist eine programmgesteuerte Schnittstelle, die mit installiert wird, und verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] grafische Komponenten. Das Ausnahmemeldungsfeld ist eine unterstützte verwaltete Assembly, die Sie in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen bedeutend zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen. Weil das Ausnahmemeldungsfeld von allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)] installiert wird, können Sie es ohne zusätzliche Konfiguration auf jedem Computer verwenden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientkomponenten installiert wurden.  
+  Das Ausnahme Meldungs Feld ist eine programmgesteuerte Schnittstelle, die mit grafischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten von installiert und verwendet wird. Das Ausnahmemeldungsfeld ist eine unterstützte verwaltete Assembly, die Sie in Ihren Anwendungen verwenden können, um die Steuerungsmöglichkeiten für Meldungen bedeutend zu erweitern, Benutzern die Möglichkeit zum Speichern von Fehlermeldungen zur späteren Bezugnahme zu geben und Hilfe zu Meldungen abzurufen. Weil das Ausnahmemeldungsfeld von allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit Ausnahme von [!INCLUDE[ssEW](../../includes/ssew-md.md)] installiert wird, können Sie es ohne zusätzliche Konfiguration auf jedem Computer verwenden, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clientkomponenten installiert wurden.  
   
  Die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox>-Klasse im <xref:Microsoft.SqlServer.MessageBox>-Namespace verfügt über die gesamte Funktionalität der <xref:System.Windows.Forms.MessageBox>-Klasse und mehr. Die <xref:System.Windows.Forms.MessageBox>-Klasse wurde für die Handhabung von Ausnahmen in verwaltetem Code konzipiert und ist somit ideal für alle Aufgaben, für die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> verwendet werden kann. Durch das Ausnahmemeldungsfeld werden folgende Aktionen ermöglicht:  
   
@@ -33,12 +33,12 @@ ms.locfileid: "62753373"
   
 -   Ermöglichen, dass Benutzer den Meldungstitel, den Meldungstext, Schaltflächentexte und Links mit Hilfethemen (sofern vorhanden) in die Zwischenablage kopieren oder diese Informationen in einer E-Mail-Nachricht senden  
   
--   Alle zugrunde liegenden Ausnahmen und Fehlern in einer hierarchischen Beziehungsstruktur angezeigt wird, wenn der Benutzer klicken auf **Zusatzinformationen**.  
+-   Zeigen Sie alle zugrunde liegenden Ausnahmen und Fehler in einer hierarchischen Beziehungsstruktur an, wenn Benutzer auf **zusätzliche Informationen**klicken.  
   
 -   Ermöglichen, dass die Benutzer entscheiden können, ob die Meldung angezeigt werden soll, wenn die gleiche Ausnahme erneut auftritt.  
   
 -   Zugriff auf ein Onlinehilfesystem über einen der Ausnahme zugeordneten Hilfelink  
   
- Weitere Informationen finden Sie unter [Programm Ausnahmemeldungsfeld](../../../2014/database-engine/dev-guide/program-exception-message-box.md).  
+ Weitere Informationen finden Sie unter [Programm Exception Message Box](../../../2014/database-engine/dev-guide/program-exception-message-box.md).  
   
   

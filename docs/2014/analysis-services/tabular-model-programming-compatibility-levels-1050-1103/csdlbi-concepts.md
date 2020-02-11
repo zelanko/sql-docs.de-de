@@ -1,5 +1,5 @@
 ---
-title: CSDLBI-Konzepte | Microsoft-Dokumentation
+title: Csdlbi-Konzepte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757947"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
@@ -22,7 +22,7 @@ ms.locfileid: "62757947"
   
  In diesem Abschnitt wird erläutert, wie die CSDLBI-Darstellung (tabellarischen und mehrdimensionalen) [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenmodellen zugeordnet wird, und es werden Beispiele für die einzelnen Modelltypen bereitgestellt.  
   
- Die Beispiele zur Veranschaulichung dieser Konzepte wurden aus der Beispieldatenbank AdventureWorks, verfügbar auf CodePlex, entnommen. Weitere Informationen zu den Beispielen finden Sie unter [Adventure Works-Beispiele für SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
+ Die Beispiele zur Veranschaulichung dieser Konzepte wurden aus der Beispieldatenbank AdventureWorks, verfügbar auf CodePlex, entnommen. Weitere Informationen zu den Beispielen finden Sie unter [Adventure Works Samples for SQL Server](https://go.microsoft.com/fwlink/?linkID=220093).  
   
 ## <a name="structure-of-a-tabular-model-in-csdlbi"></a>Struktur eines tabellarischen Modells in CSDLBI  
  Ein CSDLBI-Dokument, in dem ein Berichtsmodell und seine Daten beschrieben werden, beginnt mit der xsd-Anweisung, gefolgt von der Definition eines Modells.  
@@ -58,7 +58,8 @@ ms.locfileid: "62757947"
   
 ```  
   
- `EntitySet` enthält keine Informationen zu Spalten oder Daten in der Tabelle. Die ausführliche Beschreibung der Spalten und ihrer Eigenschaften wird im EntityType-Element bereitgestellt.  
+ 
+  `EntitySet` enthält keine Informationen zu Spalten oder Daten in der Tabelle. Die ausführliche Beschreibung der Spalten und ihrer Eigenschaften wird im EntityType-Element bereitgestellt.  
   
  Das `EntitySet`-Element für jede Entität (Tabelle) umfasst eine Auflistung von Eigenschaften, die die Schlüsselspalte, den Datentyp und die Länge der Spalte, die NULL-Zulässigkeit, das Sortierverhalten usw. definieren. Im folgenden CSDL-Auszug werden z. B. drei Spalten in der Customer-Tabelle beschrieben. Die erste Spalte ist eine spezielle ausgeblendete Spalte, die intern vom Modell verwendet wird.  
   
@@ -83,11 +84,11 @@ ms.locfileid: "62757947"
  Um die Größe des generierten CSDLBI-Dokuments einzuschränken, werden Eigenschaften, die mehr als einmal in einer Entität vorkommen, durch einen Verweis auf eine vorhandene Eigenschaft angegeben, damit die Eigenschaft für `EntityType` nur einmal aufgeführt werden muss. Die Clientanwendung kann den Wert der Eigenschaft abrufen, indem sie den `EntityType` sucht, der dem `OriginEntityType` entspricht.  
   
 ### <a name="relationships"></a>Beziehungen  
- Beziehungen werden im Entity Data Framework, wie definiert *Zuordnungen* zwischen Entitäten.  
+ Im Entity Data Framework werden Beziehungen als *Zuordnungen* zwischen Entitäten definiert.  
   
- Zuordnungen haben immer genau zwei Enden, die jeweils auf ein Feld oder eine Spalte in einer Tabelle zeigen. Daher sind mehrere Beziehungen zwischen zwei Tabellen möglich, wenn die Beziehungen verschiedene Endpunkte haben. Den Endpunkten der Zuordnung wird ein Rollenname zugewiesen, der angibt, wie die Zuordnung im Kontext des Datenmodells verwendet wird. Ein Beispiel für einen Rollennamen ein möglicherweise **"ShipTo"** , wenn auf eine Kunden-ID angewendet wird, die die Kunden-ID in der Tabelle Orders zugeordnet ist.  
+ Zuordnungen haben immer genau zwei Enden, die jeweils auf ein Feld oder eine Spalte in einer Tabelle zeigen. Daher sind mehrere Beziehungen zwischen zwei Tabellen möglich, wenn die Beziehungen verschiedene Endpunkte haben. Den Endpunkten der Zuordnung wird ein Rollenname zugewiesen, der angibt, wie die Zuordnung im Kontext des Datenmodells verwendet wird. Ein Beispiel für einen Rollennamen kann " **ShipTo**" lauten, wenn er auf eine Kunden-ID angewendet wird, die sich auf die Kunden-ID in einer Orders-Tabelle bezieht.  
   
- Die CSDLBI-Darstellung des Modells enthält auch Attribute in der Zuordnung, die bestimmen, wie die Entitäten einander in Hinsicht zugeordnet werden die *Multiplizität* der Zuordnung. Multiplizität gibt an, ob das Attribut oder die Spalte am Endpunkt einer Beziehung zwischen Tabellen auf der 1-Seite oder auf der n-Seite einer 1:n-Beziehung ist. Es gibt keinen separaten Wert für 1:1-Beziehungen. CSDLBI-Anmerkungen unterstützen eine Multiplizität von 0 (das bedeutet, dass die Entität nicht zugeordnet ist) oder 0..1, was entweder eine 1:1-Beziehung oder eine 1:n-Beziehung bedeutet.  
+ Die csdlbi-Darstellung des Modells enthält auch Attribute der Zuordnung, die bestimmen, wie die Entitäten einander in Bezug *auf die* Multiplizität der Zuordnung zugeordnet werden. Multiplizität gibt an, ob das Attribut oder die Spalte am Endpunkt einer Beziehung zwischen Tabellen auf der 1-Seite oder auf der n-Seite einer 1:n-Beziehung ist. Es gibt keinen separaten Wert für 1:1-Beziehungen. CSDLBI-Anmerkungen unterstützen eine Multiplizität von 0 (das bedeutet, dass die Entität nicht zugeordnet ist) oder 0..1, was entweder eine 1:1-Beziehung oder eine 1:n-Beziehung bedeutet.  
   
  Im folgenden Beispiel wird die CSDLBI-Ausgabe für eine Beziehung zwischen den Tabellen "Date" und "ProductInventory" dargestellt, wobei die zwei Tabellen über die DateAlternateKey-Spalte verknüpft sind. Standardmäßig ist der Name von `AssociationSet` der vollqualifizierte Name der Spalten, die an der Beziehung beteiligt sind. Sie können dieses Verhalten jedoch ändern, wenn Sie das Modell erstellen, und ein anderes Namensformat verwenden.  
   
@@ -100,7 +101,7 @@ ms.locfileid: "62757947"
   
 ```  
   
-### <a name="visualization-and-navigation-properties"></a>Visualisierungs- und Navigationseigenschaften  
+### <a name="visualization-and-navigation-properties"></a>Visualisierungs-und Navigations Eigenschaften  
  Ein wichtiger Teil der CSDLBI-Anmerkungen sind die Eigenschaften zum Definieren der Darstellung auf der Berichtsebene sowie zum Navigieren in den Beziehungen zwischen Entitäten. Wenn Sie ein Datenmodell erstellen, sehen Sie es in der Regel nicht als wichtig an, die Sortierung oder Gruppierung der Daten zu steuern oder einen Standardwert anzugeben, in der Annahme, dass die Clientanwendung die Reihenfolge und andere Details der Darstellung angibt. Tabellarische [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Modelle werden jedoch für die Integration in den [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Berichtserstellungsclient entworfen und schließen Eigenschaften ein, die die Darstellung der Entitäten aus dem Datenmodell auf der Berichtsentwurfsoberfläche unterstützen.  
   
  Erweiterungen für Visualisierung umfassen Attribute zum Angeben der Standardaggregation, die mit numerischen Daten verwendet werden soll, zum Angeben, dass ein Textfeld auf eine URL eines Bilds zeigt, oder zum Angeben des Felds, das verwendet wurde, um das aktuelle Feld zu sortieren.  
@@ -112,7 +113,7 @@ ms.locfileid: "62757947"
   
  Wenn Sie mit den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Tools ein Modell generieren, folgen die Namen, die für Objekte erstellt werden, den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Konventionen für Objektbenennung und Namenseindeutigkeit. Da jedoch CSDLBI auf dem Entity Data Framework (EDF) basiert, welches erfordert, dass Namen die Konventionen für C#-Bezeichner einhalten, nimmt der Server, wenn er die CSDLBI-Ausgabe für ein Modell erstellt, die innerhalb des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Schemas verwendeten Namen und erstellt automatisch neue Objektnamen, die den EDF-Anforderungen entsprechen. In der folgenden Tabelle werden die Vorgänge, durch die die neuen Namen generiert werden, beschrieben.  
   
-|Rule|Aktion|  
+|Regel|Action|  
 |----------|------------|  
 |Keine unzulässigen Zeichen|Unzulässige Zeichen werden durch Unterstriche ersetzt.|  
 |Namen müssen eindeutig sein|Wenn zwei Zeichenfolgen gleich sind, wird an eine ein Unterstrich plus eine Zahl angefügt, um sie eindeutig zu machen|  
@@ -123,29 +124,29 @@ ms.locfileid: "62757947"
 ## <a name="additions-to-support-multidimensional-models"></a>Ergänzungen zur Unterstützung mehrdimensionaler Modelle  
  In Version 1.0 der CSDLBI-Anmerkungen wurden nur tabellarische Modelle unterstützt. Version 1.1. wurde durch die Unterstützung mehrdimensionaler Modelle (OLAP-Cubes) erweitert, die mithilfe herkömmlicher BI-Entwicklungstools erstellt wurden. Daher können nun zur Berichterstellung XML-Anforderungen für ein mehrdimensionales Modell ausgeben werden und eine CSDLBI-Definition des Modells kann empfangen werden.  
   
- **Cubes:** Eine SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabellarische Datenbank kann nur einen Modus umfassen. Im Gegensatz dazu kann jede mehrdimensionale Datenbank mehrere Cubes enthalten, wobei jede Datenbank einem Standardcube zugeordnet ist. Wenn Sie eine XML-Anforderung für einen mehrdimensionalen Server ausgeben, muss daher der Cube angegeben werden; andernfalls wird das XML für den Standardcube zurückgegeben.  
+ **Cubes:** Eine SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabellarische Datenbank kann nur einen Modus enthalten. Im Gegensatz dazu kann jede mehrdimensionale Datenbank mehrere Cubes enthalten, wobei jede Datenbank einem Standardcube zugeordnet ist. Wenn Sie eine XML-Anforderung für einen mehrdimensionalen Server ausgeben, muss daher der Cube angegeben werden; andernfalls wird das XML für den Standardcube zurückgegeben.  
   
  Die Darstellung eines Cubes ähnelt ansonsten sehr stark der einer tabellarischen Modelldatenbank. Der Cubename und der Cube entsprechen dem Namen und dem Bezeichner der tabellarischen Datenbank.  
   
- **Dimensionen:** Eine Dimension wird in CSDLBI als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass eine Dimension im Modell, auch wenn sie nicht in einer Perspektive enthalten ist, in der CSDL-Ausgabe zwar dargestellt wird, jedoch als `Hidden` gekennzeichnet ist.  
+ **Dimensionen:** Eine Dimension wird in csdlbi als Entität (Tabelle) mit Spalten und Eigenschaften dargestellt. Beachten Sie, dass eine Dimension im Modell, auch wenn sie nicht in einer Perspektive enthalten ist, in der CSDL-Ausgabe zwar dargestellt wird, jedoch als `Hidden` gekennzeichnet ist.  
   
- **Perspektiven:** Ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspektiven:** Ein Client kann CSDL für einzelne Perspektiven anfordern. Weitere Informationen finden Sie unter [DISCOVER_CSDL_METADATA-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hierarchien:** Hierarchien werden unterstützt und wird in CSDLBI als Satz von Ebenen dargestellt.  
+ **Hierarchien:** Hierarchien werden unterstützt und in csdlbi als Satz von Ebenen dargestellt.  
   
- **Mitglieder:** Unterstützung für das Standardelement wurde hinzugefügt, und Standardwerten werden die CSDLBI-Ausgabe automatisch hinzugefügt.  
+ **Mitglieder:** Es wurde Unterstützung für das Standardelement hinzugefügt, und Standardwerte werden der csdlbi-Ausgabe automatisch hinzugefügt.  
   
- **Berechnete Elemente:** Mehrdimensionale Modelle unterstützen berechnete Elemente für untergeordnetes Element des **alle** mit einem einzelnen realen Element.  
+ **Berechnete Elemente:** Mehrdimensionale Modelle unterstützen berechnete Elemente für das untergeordnete Element **all** mit einem einzelnen reellen Member.  
   
- **Dimensionsattribute:** Dimensionsattribute werden in CSDLBI-Ausgabe unterstützt und automatisch als nicht aggregierbar gekennzeichnet.  
+ **Dimensions Attribute:** In der csdlbi-Ausgabe werden Dimensions Attribute unterstützt und automatisch als nicht aggregierbar markiert.  
   
- **KPIs:** KPIs wurden in CSDLBI, Version 1.1 unterstützt, aber die Darstellung geändert hat. Bisher war ein KPI eine Eigenschaft eines Measures. In Version 1.1 kann das KPI-Element einem Measure hinzugefügt werden.  
+ **KPIs:** KPIs wurden in csdlbi, Version 1,1, unterstützt, aber die Darstellung wurde geändert. Bisher war ein KPI eine Eigenschaft eines Measures. In Version 1.1 kann das KPI-Element einem Measure hinzugefügt werden.  
   
- **Neue Eigenschaften:** Zusätzliche Attribute wurden hinzugefügt, um DirectQuery-Modelle zu unterstützen.  
+ **Neue Eigenschaften:** Zusätzliche Attribute wurden zur Unterstützung von directquery-Modellen hinzugefügt.  
   
- **Einschränkungen:** Zellensicherheit wird nicht unterstützt.  
+ **Einschränkungen:** Die Zellen Sicherheit wird nicht unterstützt.  
   
-## <a name="see-also"></a>Siehe auch  
- [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+## <a name="see-also"></a>Weitere Informationen  
+ [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

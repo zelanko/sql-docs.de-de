@@ -15,20 +15,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 20bd8904f8dfabd81f3f16ef7bed4c6bf1084c0d
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798231"
 ---
 # <a name="give-others-ownership-of-a-job"></a>Give Others Ownership of a Job
-  In diesem Thema wird beschrieben, wie Sie den Besitz eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrags einem anderen Benutzer neu zuweisen können.  
+  In diesem Thema wird beschrieben, wie der Besitz [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von-Agent-Aufträgen einem anderen Benutzer neu zugewiesen wird.  
   
--   **Vorbereitungen:**  [Einschränkungen](#Restrictions), [Sicherheit](#Security)  
+-   Vorbereitungen **:**[Einschränkungen](#Restrictions), [Sicherheit](#Security)    
   
--   **So ändern Sie den Besitz eines Auftrags mit:**  
+-   **So übertragen Sie den Besitz eines Auftrags mit:**  
   
-     [SQL Server Management Studio](#SSMSProc2)  
+     [SQL Server Management Studio](#SSMSProc2)  
   
      [Transact-SQL](#TsqlProc2)  
   
@@ -43,17 +43,17 @@ ms.locfileid: "72798231"
   
  Wenn Sie einen Auftrag einem anderen Anmeldenamen zuweisen, ist nicht sichergestellt, dass die Berechtigungen des neuen Besitzers zum erfolgreichen Ausführen des Auftrags ausreichen.  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Aus Sicherheitsgründen kann nur der Auftragsbesitzer bzw. ein Mitglied der **sysadmin** -Rolle die Definition des Auftrags ändern. Nur Mitglieder der festen Serverrolle **sysadmin** können anderen Benutzern den Auftragsbesitz zuweisen. Zudem können sie unabhängig vom Auftragsbesitzer alle Aufträge ausführen.  
   
 > [!NOTE]  
 >  Wenn Sie den Auftragsbesitz einem Benutzer zuweisen, der kein Mitglied der festen Serverrolle **sysadmin** ist, und wenn in dem Auftrag Schritte ausgeführt werden, für die Proxykonten erforderlich sind (beispielsweise die [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketausführung), müssen Sie sicherstellen, dass der Benutzer auf dieses Proxykonto zugreifen kann. Andernfalls schlägt der Auftrag fehl.  
   
 ####  <a name="Permissions"></a> Berechtigungen  
- Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md).  
+ Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMSProc2"></a> Verwendung von SQL Server Management Studio  
- **So ändern Sie den Besitz eines Auftrags**  
+##  <a name="SSMSProc2"></a> Verwenden von SQL Server Management Studio  
+ **So übertragen Sie den Besitz eines Auftrags**  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "72798231"
      Wenn Sie einen Auftrag einem anderen Anmeldenamen zuweisen, ist nicht sichergestellt, dass die Berechtigungen des neuen Besitzers zum erfolgreichen Ausführen des Auftrags ausreichen.  
   
 ##  <a name="TsqlProc2"></a> Verwenden von Transact-SQL  
- **So ändern Sie den Besitz eines Auftrags**  
+ **So übertragen Sie den Besitz eines Auftrags**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von Database Engine (Datenbankmodul) her, und erweitern Sie dann diese Instanz.  
   
-2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
+2.  Klicken Sie in der Symbolleiste auf **Neue Abfrage**.  
   
-3.  Geben Sie im Abfragefenster die folgenden Anweisungen ein, die die gespeicherte System Prozedur [sp_manage_jobs_by_login &#40;Transact-SQL&#41; ](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) verwenden. Im folgenden Beispiel erfolgt eine Neuzuweisung aller Aufträge von `danw` an `fran??oisa`.  
+3.  Geben Sie im Abfragefenster die folgenden Anweisungen ein, die die [sp_manage_jobs_by_login &#40;gespeicherte Transact-SQL&#41;-](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) System Prozedur verwenden. Im folgenden Beispiel erfolgt eine Neuzuweisung aller Aufträge von `danw` an `fran??oisa`.  
   
     ```sql
     USE msdb ;  
@@ -89,6 +89,6 @@ ms.locfileid: "72798231"
   
 1.  Rufen Sie die `Job`-Klasse in einer Programmiersprache Ihrer Wahl auf, z. B. Visual Basic, Visual C# oder PowerShell. Beispielcode hierzu finden Sie unter [Planen von automatischen, administrativen Tasks im SQL Server-Agent](sql-server-agent.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Aufträgen](implement-jobs.md)   
  [Erstellen von Aufträgen](create-jobs.md)  

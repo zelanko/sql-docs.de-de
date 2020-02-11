@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721153"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialisieren eines Transaktionsabonnements ohne Momentaufnahme
@@ -73,7 +73,7 @@ ms.locfileid: "62721153"
   
  Informationen zum Initialisieren eines Abonnements mit einer alternativen Methode finden Sie unter [Initialize a Subscription Manually](initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Initialisieren eines Abonnements](initialize-a-subscription.md)  
   
   

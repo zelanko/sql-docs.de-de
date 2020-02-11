@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2066eeb7d9b86228ed86aed290e69f2a0e981b95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62736240"
 ---
 # <a name="synonyms-database-engine"></a>Synonyme (Datenbank-Engine)
@@ -43,7 +43,7 @@ ms.locfileid: "62736240"
 |SQL-Inline-Tabellenwertfunktion|Gespeicherte SQL-Prozedur|  
 |Sicht|Tabelle<sup>1</sup> (Benutzerdefiniert)|  
   
- <sup>1</sup> enthält lokale und globale temporäre Tabellen  
+ <sup>1</sup> enthält lokale und globale temporäre Tabellen.  
   
 > [!NOTE]  
 >  Vierteilige Namen für Funktionsbasisobjekte werden nicht unterstützt.  
@@ -64,7 +64,7 @@ ms.locfileid: "62736240"
   
 |||  
 |-|-|  
-|CONTROL|DELETE|  
+|CONTROL|Delete|  
 |Führen Sie|INSERT|  
 |SELECT|TAKE OWNERSHIP|  
 |UPDATE|VIEW DEFINITION|  
@@ -75,7 +75,7 @@ ms.locfileid: "62736240"
 |||  
 |-|-|  
 |SELECT|INSERT|  
-|UPDATE|DELETE|  
+|UPDATE|Delete|  
 |Führen Sie|Untergeordnete SELECT-Anweisungen|  
   
  Wenn Sie Synonyme in den vorher beschriebenen Kontexten verwenden, ist das Basisobjekt davon betroffen. Angenommen, ein Synonym verweist auf ein Basisobjekt, das eine Tabelle darstellt, und Sie fügen eine Zeile in das Synonym ein. In Wirklichkeit fügen Sie dann eine Zeile in die Tabelle ein, auf die verwiesen wird.  
@@ -98,7 +98,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
   
 |||  
 |-|-|  
-|GRANT|DENY|  
+|GRANT|VERWEIGERN|  
 |REVOKE||  
   
  Synonyme sind nicht schemagebunden. Deshalb kann von den folgenden schemagebundenen Ausdruckskontexten nicht auf Synonyme verwiesen werden:  
@@ -112,7 +112,7 @@ EXEC ('ALTER TABLE dbo.MyProduct
  Weitere Informationen zu schemagebundenen Funktionen finden Sie unter [Erstellen von benutzerdefinierten Funktionen &#40;Datenbank-Engine&#41;](../user-defined-functions/create-user-defined-functions-database-engine.md).  
   
 ## <a name="getting-information-about-synonyms"></a>Abrufen von Informationen zu Synonymen  
- Die sys.synonyms-Katalogsicht enthält einen Eintrag für jedes Synonym in einer bestimmten Datenbank. Diese Katalogsicht macht Synonymmetadaten verfügbar, wie z. B. den Namen des Synonyms und den Namen des Basisobjekts. Weitere Informationen zu den `sys.synonyms` -Katalogsicht, finden Sie unter [sys.synonyms &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
+ Die sys.synonyms-Katalogsicht enthält einen Eintrag für jedes Synonym in einer bestimmten Datenbank. Diese Katalogsicht macht Synonymmetadaten verfügbar, wie z. B. den Namen des Synonyms und den Namen des Basisobjekts. Weitere Informationen zur- `sys.synonyms` Katalog Sicht finden Sie unter [sys. Synonyme &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-synonyms-transact-sql).  
   
  Mithilfe erweiterter Eigenschaften können Sie Beschreibungs- oder Anweisungstext, Eingabeformate und Formatierungsregeln als Eigenschaften eines Synonyms hinzufügen. Da die Eigenschaft in der Datenbank gespeichert wird, können alle Anwendungen, die die Eigenschaft lesen, das Objekt auf die gleiche Weise auswerten. Weitere Informationen finden Sie unter [sp_addextendedproperty &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql).  
   

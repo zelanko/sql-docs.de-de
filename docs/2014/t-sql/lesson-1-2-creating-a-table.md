@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2d4b110446ae27335f65e83958a1a153350ccbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62704561"
 ---
 # <a name="creating-a-table-tutorial"></a>Erstellen einer Tabelle (Lernprogramm)
@@ -57,7 +57,7 @@ ms.locfileid: "62704561"
     GO  
     ```  
   
-### <a name="to-create-a-table"></a>So erstellen Sie eine Tabelle  
+### <a name="to-create-a-table"></a>Erstellen einer Tabelle  
   
 -   Geben Sie in einem Abfrage-Editorfenster den folgenden Code ein, und führen Sie ihn aus, um eine einfache Tabelle namens `Products`zu erstellen. Die Spalten in der Tabelle heißen `ProductID`, `ProductName`, `Price`und `ProductDescription`. Die `ProductID` -Spalte ist der Primärschlüssel der Tabelle. `int`, `varchar(25)`, `money`und `text` sind Datentypen. Nur die Spalten `Price` und `ProductionDescription` dürfen keine Daten enthalten, wenn eine Zeile eingefügt oder geändert wird. Diese Anweisung enthält ein optionales Element (`dbo.`), das als Schema bezeichnet wird. Das Schema ist das Datenbankobjekt, das die Tabelle besitzt. Wenn Sie Administrator sind, ist `dbo` das Standardschema. `dbo` steht für Datenbankbesitzer (database owner, dbo).  
   
@@ -70,10 +70,10 @@ ms.locfileid: "62704561"
     GO  
     ```  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Einfügen und Aktualisieren von Daten in einer Tabelle &#40;Tutorial&#41;](../t-sql/lesson-1-3-inserting-and-updating-data-in-a-table.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)  
   
   

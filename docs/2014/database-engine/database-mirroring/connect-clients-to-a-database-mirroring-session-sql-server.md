@@ -16,16 +16,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62755354"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)
-  Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
+  Zum Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung kann ein Client entweder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client oder .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwenden. Wenn sie für eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbank konfiguriert sind, unterstützen beide Datenzugriffsanbieter die Datenbankspiegelung. Informationen zu Programmierüberlegungen in Bezug auf das Verwenden einer gespiegelten Datenbank finden Sie unter [Verwenden der Datenbankspiegelung](../../relational-databases/native-client/features/using-database-mirroring.md). Zusätzlich muss die aktuelle Prinzipalserverinstanz verfügbar sein, und der Anmeldename des Clients muss auf der Serverinstanz erstellt worden sein. Weitere Informationen finden Sie unter [Problembehandlung bei verwaisten Benutzern &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)aus. Sofern eine Zeugenserverinstanz vorhanden ist, werden Clientverbindungen mit einer Datenbank-Spiegelungssitzung ohne Beteiligung dieser Instanz hergestellt.  
   
- ##  <a name="InitialConnection"></a> Herstellen der Anfangsverbindung mit einer Datenbank-Spiegelungssitzung  
+ ##  <a name="InitialConnection"></a>Herstellen der anfänglichen Verbindung mit einer Datenbank-Spiegelungs Sitzung  
  Für die Anfangsverbindung mit einer gespiegelten Datenbank muss ein Client eine Verbindungszeichenfolge bereitstellen, die zumindest den Namen einer Serverinstanz nennt. Dieser erforderliche Servername sollte die aktuelle Prinzipalserverinstanz identifizieren und wird auch als *erster Partnername*bezeichnet.  
   
  Optional kann in der Verbindungszeichenfolge auch der Name einer anderen Serverinstanz bereitgestellt werden, um die aktuelle Spiegelserverinstanz zu identifizieren, die dann verwendet wird, wenn der erste Partner während des ersten Verbindungsversuchs nicht verfügbar ist. Der zweite Name wird auch als *Failoverpartnername*bezeichnet.  
@@ -45,7 +45,7 @@ ms.locfileid: "62755354"
   
  In der folgenden Abbildung wird eine Clientverbindung mit dem ersten Partner, **Partner_A**, für eine gespiegelte Datenbank namens **Db_1**dargestellt. Die Abbildung stellt einen Fall dar, in dem der vom Client bereitgestellte Name des ersten Partners den aktuellen Prinzipalserver, **Partner_A**, korrekt identifiziert. Der Anfangsverbindungsversuch ist erfolgreich, und der Datenzugriffsanbieter speichert den Namen des Spiegelservers (derzeit **Partner_B**) als Failoverpartnername im lokalen Cache. Schließlicht stellt der Client die Verbindung mit der Prinzipalkopie der **Db_1** -Datenbank her.  
   
- ![Clientverbindung wenn Anfangspartner Prinzipal ist](../media/dbm-initial-connection.gif "Client connection if initial partner is principal")  
+ ![Clientverbindung, wenn der Anfangspartner Prinzipal ist](../media/dbm-initial-connection.gif "Clientverbindung, wenn der Anfangspartner Prinzipal ist")  
   
  Der Anfangsverbindungsversuch kann beispielsweise aufgrund eines Netzwerkfehlers oder einer inaktiven Serverinstanz fehlschlagen. Da der erste Partner nicht verfügbar ist, muss für den Client ein Failoverpartnername in der Verbindungszeichenfolge angegeben sein, damit der Datenzugriffsanbieter versucht, die Verbindung mit dem Failoverpartner herzustellen.  
   
@@ -85,7 +85,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Server-Attribut  
  Die Verbindungszeichenfolge muss ein `Server`-Attribut enthalten, das den Namen des ersten Partners bereitstellt, der die aktuelle Prinzipalserverinstanz identifizieren sollte.  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, ihren Namen (*<Servername>*[**\\**_<SQL_Server_Instanzname>_]) anzugeben. Beispiel:  
+ Die einfachste Art, die Serverinstanz zu identifizieren, besteht darin, Ihren Namen *<server_name>*[**\\** _<SQL_Server_instance_name>_] anzugeben. Beispiel:  
   
  `Server=Partner_A;`  
   
@@ -98,7 +98,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Eine SQL Server-Browser-Abfrage ist erforderlich, wenn in der Verbindungszeichenfolge der benannte Instanzname und nicht der Port angegeben ist.  
   
- Zum Angeben der IP-Adresse und Port der `Server` -Attribut nimmt die Form `Server=` *< Ip_address >*`,`*\<Port >*, z.B.:  
+ Zum Angeben der IP-Adresse und des Ports `Server` hat das-Attribut die folgende `Server=` Form, *<ip_address>* `,` * \<Port>*, z. b.:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -118,7 +118,7 @@ Server=123.34.45.56,4724;
 >  Die Authentifizierungsinformationen fehlen in dieser Zeichenfolge.  
   
 > [!IMPORTANT]  
->  Bündelung des Protokollpräfix mit dem `Server` Attribut (`Server=tcp:`*\<Servername >*) ist inkompatibel mit der **Netzwerk** Attribut, und die Angabe des Protokolls in beiden Stellen führt wahrscheinlich zu einem Fehler. Daher wird empfohlen, dass eine Verbindungszeichenfolge das Protokoll mithilfe der **Netzwerk** -Attributs angibt und nur der Servername in der `Server` Attribut (`"Network=dbmssocn; Server=`*\<Servername >*`"`).  
+>  Die Bündelung des Protokoll Präfix `Server` mit dem`Server=tcp:`-Attribut (*\<Servername>*) ist nicht mit dem **Network** -Attribut kompatibel, und die Angabe des Protokolls an beiden Stellen führt wahrscheinlich zu einem Fehler. Daher wird empfohlen, dass eine Verbindungs Zeichenfolge das Protokoll mithilfe des **Network** -Attributs angibt und nur der Server `Server` Name im`"Network=dbmssocn; Server=`-Attribut (*\< *Servername>`"`) angegeben wird.  
   
 #### <a name="failover-partner-attribute"></a>Failover Partner-Attribut  
  Neben dem Namen des ersten Partners kann der Client auch den Namen des Failoverpartners angeben, der die aktuelle Spiegelserverinstanz identifizieren sollte. Der Failoverpartner wird durch eines der Schlüsselwörter des Failover Partner-Attributs angegeben. Das Schlüsselwort für dieses Attribut hängt von der verwendeten API ab. In der folgenden Tabelle werden diese Schlüsselwörter aufgeführt:  
@@ -129,7 +129,7 @@ Server=123.34.45.56,4724;
 |ODBC-Treiber|`Failover_Partner`|  
 |ActiveX-Datenobjekte (ADO)|`Failover Partner`|  
   
- Die einfachste Art, die Serverinstanz zu identifizieren, ist über ihren Systemnamen, *<Servername>*[**\\**_<SQL_Server_Instanzname>_].  
+ Die einfachste Art, die Serverinstanz zu identifizieren, ist Ihr Systemname, *<server_name>*[**\\** _<SQL_Server_instance_name>_].  
   
  Alternativ können die IP-Adresse und die Portnummer im `Failover Partner`-Attribut bereitgestellt werden. Wenn der Anfangsverbindungsversuch während der ersten Verbindung mit der Datenbank fehlschlägt, wird beim Versuch, eine Verbindung mit dem Failoverpartner herzustellen, auf das Zurückgreifen auf DNS und SQL Server-Browser verzichtet. Wenn eine Verbindung hergestellt wurde, wird der Failoverpartnername durch den Failoverpartnernamen überschrieben; bei einem Failover benötigen die umgeleiteten Verbindung somit DNS- und SQL Server-Browser.  
   
@@ -152,13 +152,13 @@ Server=123.34.45.56,4724;
 "Server=250.65.43.21,4734; Failover_Partner=Partner_B; Database=AdventureWorks; Network=dbmssocn"  
 ```  
   
-##  <a name="RetryAlgorithm"></a> Algorithmus für zu wiederholende Verbindungsversuche (für TCP/IP-Verbindungen)  
+##  <a name="RetryAlgorithm"></a>Algorithmus für die Verbindungs Wiederholung (für TCP/IP-Verbindungen)  
  Wenn beide Partnernamen im Cache vorhanden sind, hält der Datenzugriffsanbieter für eine TCP/IP-Verbindung an einem Verbindungswiederholungsalgorithmus fest. Dies gilt sowohl beim Herstellen der ersten Verbindung mit der Sitzung als auch beim erneuten Herstellen der Verbindung, nachdem eine bereits hergestellte Verbindung verloren ging. Sobald eine Verbindung geöffnet wurde, wird zum Ausführen der vor der Anmeldung und während der Anmeldung erforderlichen Schritte zusätzliche Zeit benötigt.  
   
 > [!NOTE]  
 >  Der zum Öffnen einer Verbindung erforderliche Zeitaufwand kann aufgrund von externen Faktoren, wie z. B. langsame DNS-Lookups, langsamer Domänencontroller oder langsames Kerberos-Schlüsselverteilungscenter (KDC), Zeitaufwand für die Kontaktherstellung mit dem SQL Server-Browser, Netzwerküberlastung usw., höher als die Wiederholungszeit sein. Solche externen Faktoren können verhindern, dass ein Client eine Verbindung mit einer gespiegelten Datenbank herstellen kann. Aufgrund externer Faktoren kann es auch vorkommen, dass eine Verbindung nicht innerhalb der zugeteilten Wiederholungszeit geöffnet werden kann. Informationen zum Umgehen des DNS- und SQL Server-Browsers bei Verbindungsversuchen mit dem ersten Partner finden Sie unter [Herstellen der Anfangsverbindung mit einer Datenbank-Spiegelungssitzung](#InitialConnection)weiter oben in diesem Thema.  
   
- Wenn ein Verbindungsversuch fehlschlägt oder die Wiederholungszeit abläuft, bevor eine Verbindung hergestellt werden kann, versucht der Datenzugriffsanbieter, eine Verbindung zu dem anderen Partner herzustellen. Wenn bis zu diesem Punkt noch keine Verbindung geöffnet wurde, versucht der Anbieter abwechselnd mit den Namen des ersten Partners und dem Namen des Failoverpartners eine Verbindung herzustellen, solange bis dies gelingt oder bis ein Anmeldungstimeout auftritt. Der Standardtimeoutwert für den Anmeldungszeitraum beträgt 15 Sekunden. Es wird empfohlen, den Anmeldungstimeout auf mindestens fünf Sekunden festzulegen. Bei einem kürzeren Timeoutwert können Verbindungen u. U. nicht mehr erfolgreich hergestellt werden.  
+ Wenn ein Verbindungsversuch fehlschlägt oder die Wiederholungszeit abläuft, bevor eine Verbindung hergestellt werden kann, versucht der Datenzugriffsanbieter, eine Verbindung zu dem anderen Partner herzustellen. Wenn eine Verbindung zu diesem Zeitpunkt nicht geöffnet wird, versucht der Anbieter abwechselnd, den Namen des ersten und des Failoverpartners zu öffnen, bis eine Verbindung geöffnet ist oder der Anmeldungs Zeitraum abgelaufen ist. Der Standardwert für das Timeout für den Anmeldungs Zeitraum beträgt 15 Sekunden. Es wird empfohlen, den Anmeldungstimeout auf mindestens fünf Sekunden festzulegen. Bei einem kürzeren Timeoutwert können Verbindungen u. U. nicht mehr erfolgreich hergestellt werden.  
   
  Die Wiederholungszeit ist ein Prozentsatz des Anmeldungszeitraums. Die Wiederholungszeit für einen Verbindungsversuch verlängert sich mit jeder Folgerunde. In der ersten Runde beträgt die Wiederholungszeit für jeden der zwei Versuche acht Prozent des gesamten Anmeldungszeitraums. In jeder Folgerunde erhöht der Wiederholungsalgorithmus die maximale Wiederholungszeit um denselben Faktor. Die Wiederholungszeiten für die ersten acht Verbindungsversuche bemessen sich daher wie folgt:  
   
@@ -166,13 +166,13 @@ Server=123.34.45.56,4724;
   
  Die Wiederholungszeit wird mit der folgenden Formel berechnet:  
   
- _Wiederholungszeit_ **=** _Vorhergehende Wiederholungszeit_ **+(** 0,08 **&#42;**_Anmeldungstimeout_**)**  
+ _Retrytime_ **=** _previousretrytime_ **+ (** 0,08 **&#42;** _LoginTimeout_**)**  
   
  Hierbei gilt für *Vorhergehende Wiederholungszeit* ein Anfangswert von 0.  
   
  Bei Verwendung des Standardwerts für den Anmeldungstimeout von 15 Sekunden gilt *Anmeldungstimeout* *= 15*. In diesem Fall berechnen sich die Wiederholungszeiten in den ersten drei Runden wie folgt:  
   
-|Round|Berechnung der*Wiederholungszeit* |Wiederholungszeit pro Versuch|  
+|Round|*Retrytime* -Berechnung|Wiederholungszeit pro Versuch|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 Sekunden|  
 |2|1.2 **+(** 0,08 **&#42;** 15 **)**|2,4 Sekunden|  
@@ -181,9 +181,9 @@ Server=123.34.45.56,4724;
   
  In der folgenden Abbildung werden diese Wiederholungszeiten für aufeinander folgende Wiederholungsversuche, für die jeweils ein Timeout erfolgt, veranschaulicht.  
   
- ![Maximale Wiederholungsverzögerungen für ein 15-sekündiges Anmeldetimeout](../media/dbm-retry-algorithm.gif "Maximum retry delays for 15 second login timeout")  
+ ![Maximale Wiederholungsverzögerungen für ein 15 sekündiges Anmeldungstimeout](../media/dbm-retry-algorithm.gif "Maximale Wiederholungsverzögerungen für ein 15 sekündiges Anmeldungstimeout")  
   
- Bei Verwendung des Standardtimeoutwerts für den Anmeldungszeitraum werden für die ersten drei Runden von Verbindungsversuchen maximal 14,4 Sekunden zugeteilt. Würde bei jedem Versuch die gesamte dafür zugeteilte Zeit aufgebraucht, wären nur noch 0,6 Sekunden übrig, bevor der Anmeldungszeitraum abläuft. In diesem Fall würde die vierte Runde zeitlich beschnitten, sodass für die Verbindungsherstellung unter Verwendung des ersten Partnernamens nur noch ein letzter, kurzer Versuch möglich wäre. Ein Verbindungsversuch kann aber, besonders in nachfolgenden Runden, auch schon vor Ablauf der jeweils zugeteilten Wiederholungszeit fehlschlagen. So würde z. B. bei einem Netzwerkfehler ein Versuch schon vorzeitig, also vor Ablauf der Wiederholungszeit, beendet werden. Wenn frühere Versuche aufgrund eines Netzwerkfehlers fehlschlagen, dann wäre für die vierte Runde und möglicherweise auch noch für weitere Runden zusätzlich Zeit vorhanden.  
+ Bei Verwendung des Standardtimeoutwerts für den Anmeldungszeitraum werden für die ersten drei Runden von Verbindungsversuchen maximal 14,4 Sekunden zugeteilt. Bei jedem Versuch, die gesamte zugeordnete Zeit zu verwenden, verbleiben nur 0,6 Sekunden, bevor der Anmeldungs Zeitraum abgelaufen ist. In diesem Fall würde die vierte Runde gekürzt und ermöglicht nur einen abschließenden schnellen Versuch, eine Verbindung unter Verwendung des ersten Partner namens herzustellen. Ein Verbindungsversuch kann aber, besonders in nachfolgenden Runden, auch schon vor Ablauf der jeweils zugeteilten Wiederholungszeit fehlschlagen. So würde z. B. bei einem Netzwerkfehler ein Versuch schon vorzeitig, also vor Ablauf der Wiederholungszeit, beendet werden. Wenn frühere Versuche aufgrund eines Netzwerkfehlers fehlschlagen, dann wäre für die vierte Runde und möglicherweise auch noch für weitere Runden zusätzlich Zeit vorhanden.  
   
  Eine weitere Ursache für einen fehlgeschlagenen Versuch ist eine nicht aktive Serverinstanz. Dies ist z. B. der Fall, wenn für die Datenbank einer Serverinstanz gerade ein Failover ausgeführt wird. In diesem Fall tritt eine Wiederholungsverzögerung ein, um zu verhindern, dass Clients die Partner mit einer raschen Folge von Verbindungsversuchen überlasten.  
   
@@ -192,22 +192,23 @@ Server=123.34.45.56,4724;
 )  
   
 ### <a name="retry-delays-during-failover"></a>Wiederholungsverzögerungen während eines Failovers  
- Versucht ein Client, eine Verbindung mit einem Partner herzustellen, für den gerade ein Failover ausgeführt wird, antwortet der Partner sofort, dass er nicht aktiv ist. In diesem Fall ist jede Runde von Verbindungsversuchen viel kürzer als die dafür zugeteilte Wiederholungszeit. Dies bedeutet, dass viele Verbindungsversuchsrunden stattfinden können, bevor ein Timeout des Anmeldungszeitraums eintritt. Damit die Partner während eines Failovers nicht durch eine Serie von schnell aufeinander folgenden Verbindungsversuchen überlastet werden, fügt der Datenzugriffsanbieter nach jedem Wiederholungszyklus eine kurze Wiederholungsverzögerung hinzu. Die Länge dieser Wiederholungsverzögerung wird vom Wiederholungsverzögerungsalgorithmus bestimmt. Nach der ersten Runde beträgt die Verzögerung 100 Millisekunden. Nach jeder der nächsten drei Runden verdoppelt sich die Wiederholungsverzögerung – auf 200, 400 und 800. Für alle späteren Runden beträgt die Wiederholungsverzögerung 1 Sekunde, bis der Verbindungsversuch erfolgreich ist oder das Timeout erreicht wird.  
+ Versucht ein Client, eine Verbindung mit einem Partner herzustellen, für den gerade ein Failover ausgeführt wird, antwortet der Partner sofort, dass er nicht aktiv ist. In diesem Fall ist jede Runde von Verbindungsversuchen viel kürzer als die dafür zugeteilte Wiederholungszeit. Dies bedeutet, dass viele Runden der Verbindungsversuche stattfinden können, bevor das Timeout für den Anmeldungs Zeitraum abgelaufen ist. Um zu vermeiden, dass die Partner während eines Failovers mit einer schnellen Reihe von Verbindungs versuchen überlastet werden, fügt der Datenzugriffs Anbieter nach jedem Wiederholungsversuch eine kurze Wiederholungs Verzögerung hinzu. Die Länge dieser Wiederholungsverzögerung wird vom Wiederholungsverzögerungsalgorithmus bestimmt. Nach der ersten Runde beträgt die Verzögerung 100 Millisekunden. Nach jeder der nächsten drei Runden verdoppelt sich die Wiederholungsverzögerung – auf 200, 400 und 800. Für alle späteren Runden beträgt die Wiederholungsverzögerung 1 Sekunde, bis der Verbindungsversuch erfolgreich ist oder das Timeout erreicht wird.  
   
 > [!NOTE]  
 >  Wenn die Serverinstanz beendet wird, wird die Verbindungsanforderung sofort abgebrochen.  
   
  Die folgende Abbildung veranschaulicht, wie sich die Verbindungsverzögerung während eines manuellen Failovers, in dem die Partner ihre Rollen tauschen, auf Verbindungsversuche auswirkt. Der Timeoutwert für den Anmeldungszeitraum beträgt 15 Sekunden.  
   
- ![Wiederholungsverzögerungsalgorithmus](../media/dbm-retry-delay-algorithm.gif "Retry-delay algorithm")  
+ ![Wiederholungsverzögerungsalgorithmus](../media/dbm-retry-delay-algorithm.gif "Wiederholungsverzögerungsalgorithmus")  
   
-##  <a name="Reconnecting"></a> Erneutes Herstellen einer Verbindung mit einer Datenbank-Spiegelungssitzung  
+##  <a name="Reconnecting"></a>Erneutes Herstellen einer Verbindung mit einer Datenbank-Spiegelungs Sitzung  
  Wenn eine bereits bestehende Verbindung mit einer Datenbank-Spiegelungssitzung aus irgendeinem Grund ausfällt, z. B. wegen eines Datenbank-Spiegelungsfailovers, und die Anwendung versucht, erneut eine Verbindung mit dem ersten Server herzustellen, kann der Datenzugriffsanbieter versuchen, die Verbindung mit dem im Clientcache enthaltenen Namen des Failoverpartners herzustellen. Die Verbindung wird jedoch nicht automatisch wiederhergestellt. Die Anwendung muss über den Fehler informiert werden. Anschließend muss die Anwendung die fehlgeschlagene Verbindung schließen und eine neue Verbindung mit den gleichen Attributen für die Verbindungszeichenfolge öffnen. An diesem Punkt leitet der Datenzugriffsanbieter die Verbindung an den Failoverpartner um. Wenn die durch diesen Namen identifizierte Serverinstanz aktuell als Prinzipalserver fungiert, ist der Verbindungsversuch im Allgemeinen erfolgreich. Wenn unklar ist, ob für eine Transaktion ein Commit oder ein Rollback ausgeführt wurde, muss die Anwendung wie bei einer erneuten Verbindung zu einer eigenständigen Serverinstanz den Status der Transaktion überprüfen.  
   
  Das erneute Herstellen einer Verbindung ähnelt der ursprünglichen Verbindung, für die in der Verbindungszeichenfolge der Name eines Failoverpartners angegeben wurde. Wenn der erste Verbindungsversuch nicht gelingt, werden abwechselnd mit dem Namen des ersten Partners und mit dem Namen des Failoverpartners weitere Verbindungsversuche unternommen, bis der Client entweder eine Verbindung mit dem Prinzipalserver herstellt oder beim Datenzugriffsanbieter ein Timeout auftritt.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client überprüft zwar, ob die Verbindung zu einer Prinzipalserverinstanz hergestellt wird, aber nicht, ob diese Instanz der Partner der Serverinstanz ist, die im ersten Partnernamen der Verbindungszeichenfolge angegeben war.  
+>  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client überprüft zwar, ob die Verbindung zu einer Prinzipalserverinstanz hergestellt wird, aber nicht, ob diese Instanz der Partner der Serverinstanz ist, die im ersten Partnernamen der Verbindungszeichenfolge angegeben war.  
   
  Wenn die Verbindungen TCP/IP verwenden, wird durch den Algorithmus für zu wiederholende Verbindungsversuche bestimmt, wie viel Zeit für die Verbindungsversuche in jeder Runde zur Verfügung steht.  
   
@@ -220,7 +221,7 @@ Server=123.34.45.56,4724;
   
  Nach der Umleitung an den Failoverpartner erhält ein Client möglicherweise unerwartete Ergebnisse, wenn er mithilfe einer [!INCLUDE[tsql](../../includes/tsql-md.md)] USE-Anweisung eine andere Datenbank verwendet. Dies kann der Fall sein, wenn die aktuelle Prinzipalserverinstanz (der Failoverpartner) über einen anderen Satz Datenbanken verfügt als der ursprüngliche Prinzipalserver (der erste Partner).  
   
-##  <a name="StalePartnerName"></a> Auswirkungen eines veralteten Failoverpartnernamens  
+##  <a name="StalePartnerName"></a>Auswirkungen eines veralteten Failoverpartnernamens  
  Der Failoverpartner kann vom Datenbankadministrator jederzeit geändert werden. Deshalb kann es vorkommen, dass ein vom Client bereitgestellter Failoverpartnername nicht mehr auf dem neuesten Stand ist oder als *veraltet*betrachtet werden kann. Angenommen, ein Failoverpartner namens Partner_B wird durch eine andere Serverinstanz, Partner_C, ersetzt. Stellt nun ein Client Partner_B als Failoverpartnernamen bereit, gilt dieser Name als veraltet. Bei Bereitstellung eines veralteten Failoverpartnernamens durch den Client verhält sich der Datenzugriffsanbieter genau so, als wäre durch den Client überhaupt kein Failoverpartnername bereitgestellt worden.  
   
  Im folgenden Beispiel verwendet ein Client eine Verbindungszeichenfolge für vier aufeinander folgende Verbindungsversuche. Dabei wird in der Verbindungszeichenfolge als erster Partnername Partner_A und als Failoverpartnername Partner_B angegeben:  
@@ -237,12 +238,12 @@ Server=123.34.45.56,4724;
 |Konfiguration|Prinzipalserver|Spiegelserver|Verhalten beim Versuch, eine Verbindung unter Angabe von Partner_A und Partner_B herzustellen|  
 |-------------------|----------------------|-------------------|------------------------------------------------------------------------------|  
 |Ursprüngliche Spiegelungskonfiguration.|Partner_A|Partner_B|Partner_A wird im Cache als erster Partnername zwischengespeichert. Der Client hat damit erfolgreich eine Verbindung mit Partner_A hergestellt. Der Name des Spiegelservers Partner_B wird vom Client heruntergeladen und zwischengespeichert, d. h. der vom Client bereitgestellte Failoverpartnername wird ignoriert.|  
-|Bei Partner_A kommt es aufgrund eines Hardwarefehlers zu einem Failover (Clientverbindungen werden getrennt).|Partner_B|none|Partner_A ist weiterhin als erster Partnername zwischengespeichert. Da vom Client jedoch Partner_B als Failoverpartnername bereitgestellt wird, kann der Client die Verbindung zum aktuellen Prinzipalserver herstellen.|  
+|Bei Partner_A kommt es aufgrund eines Hardwarefehlers zu einem Failover (Clientverbindungen werden getrennt).|Partner_B|(Keine)|Partner_A ist weiterhin als erster Partnername zwischengespeichert. Da vom Client jedoch Partner_B als Failoverpartnername bereitgestellt wird, kann der Client die Verbindung zum aktuellen Prinzipalserver herstellen.|  
 |Der Datenbankadministrator beendet die Spiegelung (Trennen der Clientverbindungen), ersetzt Partner_A durch Partner_C und startet die Spiegelung dann erneut.|Partner_B|Partner_C|Der Versuch des Clients, eine Verbindung mit Partner_A herzustellen, schlägt fehl. Der daraufhin unternommene Verbindungsversuch des Clients mit Partner_B (dem aktuellen Prinzipalserver) verläuft jedoch erfolgreich. Der Name des aktuellen Spiegelservers, Partner_C, wird vom Datenzugriffsanbieter heruntergeladen und als aktueller Failoverpartnername zwischengespeichert.|  
 |Für den Dienst wird ein manuelles Failover zu Partner_C ausgeführt (Trennung der Clientverbindungen).|Partner_C|Partner_B|Client versucht, anfänglich eine Verbindung mit Partner_A herzustellen und dann mit Partner_B. Beide Namen schlagen fehl, und schließlich wird das Timeout der Verbindungsanforderung erreicht, und die Anforderung schlägt fehl.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Mögliche Fehler während der Datenbankspiegelung](possible-failures-during-database-mirroring.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Possible Failures During Database Mirroring](possible-failures-during-database-mirroring.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Optionen (Abfrageergebnisse – SQL Server-Abfrageergebnisse Rasterseite) | Microsoft-Dokumentation
+title: Optionen (Abfrageergebnisse-SQL Server-auf Raster Seite Ergebnisse) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b67926706674abb116b4f3075089853e6fbb665e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66089308"
 ---
-# <a name="options-query-results-sql-server-results-to-grid-page"></a>Optionen (Abfrageergebnisse – SQL Server-Abfrageergebnisse auf der Seite)
-  Mithilfe dieser Seite können Sie die Anzeigeoptionen für Abfrageresultsets angeben, die im Rasterformat ausgegeben werden. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Wenn Sie diese Optionen für die aktuellen Abfragen ändern möchten, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in das Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie **Abfrageoptionen**. Klicken Sie im linken Bereich des Dialogfelds **Abfrageoptionen** unter **Ergebnisse**auf **Raster**.  
+# <a name="options-query-results-sql-server-results-to-grid-page"></a>Optionen (Abfrageergebnisse-SQL Server-auf Raster Seite Ergebnisse)
+  Mithilfe dieser Seite können Sie die Anzeigeoptionen für Abfrageresultsets angeben, die im Rasterformat ausgegeben werden. Änderungen an diesen Optionen werden nur auf neue [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen angewendet. Wenn Sie diese Optionen für die aktuellen Abfragen ändern möchten, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in das Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie **Abfrageoptionen**. Klicken Sie im linken Bereich des Dialogfelds **Abfrageoptionen** unter **Ergebnisse**auf **Raster**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Abfrage in das Resultset einschließen**  
  Gibt den Text der Abfrage als Teil der Abfrageausgabe zurück.  
   
- **Spaltenheader beim Kopieren oder Speichern der Ergebnisse einschließen**  
+ **Einschließen von Spalten Headern beim Kopieren oder Speichern der Ergebnisse**  
  Aktivieren Sie dieses Kontrollkästchen, um Spaltenheader beim Kopieren von Ergebnissen in die Zwischenablage oder beim Speichern in einer Datei einzuschließen. Deaktivieren Sie dieses Kontrollkästchen, wenn Sie nur die Ergebnisdaten und nicht die Spaltenheader speichern oder kopieren möchten.  
   
  **Ergebnisse nach der Ausführung verwerfen**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089308"
  **Ergebnisse auf separater Registerkarte anzeigen**  
  Aktivieren Sie dieses Kontrollkästchen, wenn das Resultset nicht im unteren Bereich des Dokumentfensters der Abfrage, sondern in einer neuen Registerkarte angezeigt werden soll.  
   
- **Nach Ausführung der Abfrage zur Ergebnisregisterkarte wechseln**  
+ **Nach Ausführung der Abfrage zur Ergebnisregister Karte wechseln**  
  Wählen Sie diese Option, um nach der Ausführung einer Abfrage mit der Anzeige automatisch zum Ergebnisbereich zu wechseln.  
   
- **Maximale Anzahl von abgerufenen Zeichen**  
+ **Maximal abgerufene Zeichen**  
  **Nicht-XML-Daten**:  
   
  Geben Sie eine Zahl zwischen 1 und 65.535 ein, um die maximale Anzahl der in einer Zelle angezeigten Zeichen anzugeben.  
@@ -50,7 +50,7 @@ ms.locfileid: "66089308"
   
  Wählen Sie **1 MB**, **2 MB**oder **5 MB**aus. Wählen Sie **Unbegrenzt** aus, um alle Zeichen abzurufen.  
   
- **Standard wiederherstellen**  
+ **Auf Standard zurücksetzen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

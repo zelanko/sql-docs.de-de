@@ -1,5 +1,5 @@
 ---
-title: Datamining-Eigenschaften | Microsoft-Dokumentation
+title: Data Mining-Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -58,16 +58,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 96106fc8bc50a2a1b19c54a6970eeeb72952d82d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069060"
 ---
 # <a name="data-mining-properties"></a>Data Mining-Eigenschaften
+  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] werden die in den folgenden Tabellen aufgeführten Data Mining-Eigenschaften unterstützt. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **Gilt für:** Nur mehrdimensionaler Servermodus  
+ **Gilt für:** Nur mehrdimensionaler Server Modus  
   
 ## <a name="non-specific-category"></a>Nicht spezifische Kategorie  
  `AllowSessionMiningModels`  
@@ -117,9 +118,9 @@ ms.locfileid: "66069060"
 > [!NOTE]  
 >  Zusätzlich zu den Data Mining-Diensten, die auf dem Server verfügbar sind, sind Data Mining-Eigenschaften vorhanden, die das Verhalten bestimmter Algorithmen definieren. Sie konfigurieren diese Eigenschaften, wenn Sie ein einzelnes Data Mining-Modell erstellen, nicht auf Serverebene. Weitere Informationen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Physische Architektur &#40;Analysis Services – Data Mining&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
- [Konfigurieren von Servereigenschaften in Analysis Services](server-properties-in-analysis-services.md)   
- [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Physische Architektur &#40;Analysis Services Data Mining-&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
+ [Konfigurieren von Server Eigenschaften in Analysis Services](server-properties-in-analysis-services.md)   
+ [Bestimmen des Server Modus einer Analysis Services Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

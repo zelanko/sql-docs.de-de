@@ -1,5 +1,5 @@
 ---
-title: Ablaufverfolgung und Wiedergabe von Ereignissen | Microsoft-Dokumentation
+title: Ablauf Verfolgung und Wiedergabe von Ereignissen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62724790"
 ---
 # <a name="tracing-and-replaying-events"></a>Verfolgen und Wiedergeben von Ereignissen
@@ -51,7 +51,7 @@ ms.locfileid: "62724790"
   
 -   Wiedergeben von Ablaufverfolgungsdateien oder Ablaufverfolgungstabellen.  
   
- Die Ablaufverfolgungsdaten aus der `Trace` und `Replay` Objekte können von der SMO-Anwendung verwendet werden, oder es untersucht werden kann, manuell mithilfe von [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md). Die Ablaufverfolgungsdaten sind auch kompatibel mit der [SQL-Ablaufverfolgung](../../sql-trace/sql-trace.md) gespeicherte Prozeduren, die auch eine Ablaufverfolgung ermöglichen.  
+ Die Ablauf Verfolgungs Daten aus `Trace` dem `Replay` -Objekt und dem-Objekt können von der SMO-Anwendung verwendet werden, oder Sie können mithilfe [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md)manuell untersucht werden. Die Ablauf Verfolgungs Daten sind auch mit den gespeicherten Prozeduren der [SQL](../../sql-trace/sql-trace.md) -Ablauf Verfolgung kompatibel, die ebenfalls Ablauf Verfolgungs Funktionen bieten  
   
  Die SMO-Ablaufverfolgungsobjekte befinden sich im <xref:Microsoft.SqlServer.Management.Trace>-Namespace, für den ein Verweis auf die Datei Microsoft.SQLServer.ConnectionInfo.dll erforderlich ist.  
   

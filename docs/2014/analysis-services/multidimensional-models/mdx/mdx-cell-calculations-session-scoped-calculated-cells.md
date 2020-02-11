@@ -1,5 +1,5 @@
 ---
-title: Erstellen im Bereich einer Sitzung berechnete Zellen | Microsoft-Dokumentation
+title: Erstellen berechneter Zellen im Bereich einer Sitzung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074429"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Erstellen berechneter Zellen im Bereich einer Sitzung
@@ -75,14 +75,14 @@ FOR String_Expression AS 'MDX_Expression'
   
  Der `String_Expression` -Wert enthält eine Liste der orthogonalen, eindimensionalen MDX-Mengenausdrücke, von denen jeder aufgelöst zu einer der Mengenkategorien gehören muss, die in der folgenden Tabelle aufgelistet sind.  
   
-|Kategorie|Description|  
+|Category|BESCHREIBUNG|  
 |--------------|-----------------|  
 |Leere Menge|Ein MDX-Mengenausdruck, der zu einer leeren Menge aufgelöst wird. In diesem Fall ist der Gültigkeitsbereich der berechneten Zelle gleich dem gesamten Cube.|  
 |Menge mit einem einzelnen Element|Ein MDX-Mengenausdruck, der zu einem einzelnen Element aufgelöst wird.|  
-|Menge von Ebenenelementen|Ein MDX-Mengenausdruck, der zu den Elementen einer einzelnen Ebene aufgelöst wird. Ein Beispiel hierfür ist die *Level_Expression*.`Members` MDX-Funktion. Um berechnete Elemente einzuschließen, verwenden die *Level_Expression*.`AllMembers` MDX-Funktion.<br /><br /> Weitere Informationen finden Sie unter [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
-|Menge nachfolgender Werte|Ein MDX-Mengenausdruck, der zu den nachfolgenden Werten eines angegebenen Elements aufgelöst wird. Ein Beispiel hierfür ist die `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*)-Funktion von MDX.<br /><br /> Weitere Informationen finden Sie unter [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
+|Menge von Ebenenelementen|Ein MDX-Mengenausdruck, der zu den Elementen einer einzelnen Ebene aufgelöst wird. Ein Beispiel hierfür ist die *Level_Expression*.`Members` MDX-Funktion. Um berechnete Elemente einzuschließen, verwenden Sie die *Level_Expression*.`AllMembers` MDX-Funktion.<br /><br /> Weitere Informationen finden Sie unter [AllMembers &#40;MDX&#41;](/sql/mdx/allmembers-mdx).|  
+|Menge nachfolgender Werte|Ein MDX-Mengenausdruck, der zu den nachfolgenden Werten eines angegebenen Elements aufgelöst wird. Ein Beispiel hierfür ist `Descendants`die MDX-Funktion (*Member_Expression*, *Level_Expression* *Desc_Flag*).<br /><br /> Weitere Informationen finden Sie unter [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen von Zellenberechnungen in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Das aufbauen von Zell Berechnungen in MDX-&#40;MDX-&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

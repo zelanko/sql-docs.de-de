@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75e5953d8f7ef9af1134db56f7061261eee2c0fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721433"
 ---
 # <a name="delete-a-push-subscription"></a>Löschen eines Pushabonnements
@@ -35,7 +35,7 @@ ms.locfileid: "62721433"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Ein Pushabonnement wird beim Verleger (im Ordner **Lokale Veröffentlichungen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) oder beim Abonnenten (im Ordner **Lokale Abonnements** ) gelöscht. Beim Löschen eines Abonnements werden keine Objekte oder Daten aus dem Abonnement entfernt, diese müssen manuell entfernt werden.  
   
 #### <a name="to-delete-a-push-subscription-at-the-publisher"></a>So löschen Sie ein Pushabonnement beim Verleger  
@@ -65,15 +65,15 @@ ms.locfileid: "62721433"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So löschen Sie ein Pushabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
   
-1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql) aus. Geben Sie **@publication** und **@subscriber** eine Momentaufnahme über FTP bereitgestellt wird. Geben Sie für **@article** den Wert **@article** . (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql) aus. Geben **@publication** Sie **@subscriber**und an. Geben Sie für **@article** den Wert **@article**. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
 2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_subscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql) aus, um Replikationsmetadaten aus der Abonnementdatenbank zu entfernen.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>So löschen Sie ein Pushabonnement für eine Mergeveröffentlichung  
   
-1.  Führen Sie auf dem Verleger [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql) aus, und geben Sie **@publication** , **@subscriber** und **@subscriber_db** an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
+1.  Führen Sie auf dem Verleger [sp_dropmergesubscription &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql) **@publication** **@subscriber** -&#41;aus, und **@subscriber_db**geben Sie dabei und an. (Optional) Wenn auf den Verteiler nicht zugegriffen werden kann, geben Sie den Wert **1** den Wert **@ignore_distributor** an, um das Abonnement ohne die damit verbundenen Objekte auf dem Verteiler zu löschen.  
   
-2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) aus. Geben Sie **@publisher** , **@publisher_db** und **@publication** verfügbar ist. Damit werden Mergemetadaten aus der Abonnementdatenbank gelöscht.  
+2.  Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) aus. Geben **@publisher**Sie **@publisher_db**, und **@publication**an. Damit werden Mergemetadaten aus der Abonnementdatenbank gelöscht.  
   
 ###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein neues Pushabonnement für eine Transaktionsveröffentlichung gelöscht.  
@@ -91,7 +91,7 @@ ms.locfileid: "62721433"
   
 1.  Erstellen Sie eine Verbindung mit dem Abonnenten, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransSubscription> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransSubscription>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>und <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> fest.  
   
@@ -99,13 +99,13 @@ ms.locfileid: "62721433"
   
 5.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob das Abonnement vorhanden ist. Wenn der Wert dieser Eigenschaft `false` ist, wurden entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A>-Methode auf.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> -Methode auf.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>So löschen Sie ein Pushabonnement für eine Mergeveröffentlichung  
   
 1.  Erstellen Sie eine Verbindung mit dem Abonnenten, indem Sie die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> -Klasse verwenden.  
   
-2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeSubscription> -Klasse.  
+2.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergeSubscription>-Klasse.  
   
 3.  Legen Sie die Eigenschaften <xref:Microsoft.SqlServer.Replication.Subscription.PublicationName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriptionDBName%2A>, <xref:Microsoft.SqlServer.Replication.Subscription.SubscriberName%2A>und <xref:Microsoft.SqlServer.Replication.Subscription.DatabaseName%2A> fest.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62721433"
   
 5.  Überprüfen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.IsExistingObject%2A> -Eigenschaft, um festzustellen, ob das Abonnement vorhanden ist. Wenn der Wert dieser Eigenschaft `false` ist, wurden entweder die Abonnementeigenschaften in Schritt 2 falsch definiert, oder das Abonnement ist nicht vorhanden.  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A>-Methode auf.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Subscription.Remove%2A> -Methode auf.  
   
 ###  <a name="PShellExample"></a> Beispiele (RMO)  
  Sie können Pushabonnements mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert löschen.  
@@ -122,7 +122,7 @@ ms.locfileid: "62721433"
   
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   

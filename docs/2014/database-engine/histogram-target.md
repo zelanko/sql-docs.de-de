@@ -1,5 +1,5 @@
 ---
-title: Histogram-Ziel | Microsoft-Dokumentation
+title: Histogrammziel | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a584311061a24d674eed114f37d9cbbbda43909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66064701"
 ---
 # <a name="histogram-target"></a>Histogrammziel
@@ -26,12 +26,12 @@ ms.locfileid: "66064701"
   
  In der folgenden Tabelle werden die verfügbaren Optionen zum Konfigurieren des Histogrammziels beschrieben.  
   
-|Option|Zulässige Werte|Description|  
+|Option|Zulässige Werte|BESCHREIBUNG|  
 |------------|--------------------|-----------------|  
 |slots|Ein ganzzahliger Wert. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, der die maximale Anzahl von Gruppierungen angibt, die beizubehalten sind. Wenn dieser Wert erreicht wird, werden neue Ereignisse, die nicht zu vorhandenen Gruppen gehören, ignoriert.<br /><br /> Beachten Sie, dass die Slotnummer zur Leistungsverbesserung auf die nächste Potenz von 2 aufgerundet wird.|  
-|filtering_event_name|Ein beliebiges Ereignis in der Sitzung für erweiterte Ereignisse. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, mit dem eine Klasse von Ereignissen identifiziert wird. Nur Instanzen des angegebenen Ereignisses werden Buckets zugeordnet. Alle anderen Ereignisse werden ignoriert.<br /><br /> Wenn Sie diesen Wert angeben, müssen Sie folgendes Format verwenden: *Paketname*.*Ereignisname*. Beispiel: `'sqlserver.checkpoint_end'`. Sie können den Paketnamen mit der folgenden Abfrage ermitteln:<br /><br /> SELECT p.name, se.event_name<br />VON dm_xe_session_events se<br />Verknüpfen von dm_xe_packages p<br />ON se_event_package_guid = p.guid<br />ORDER BY p.name, se.event_name<br /><br /> <br /><br /> Wenn Sie den Wert filtering_event_name nicht angeben, muss source_type auf 1 (den Standardwert) festgelegt werden.|  
+|filtering_event_name|Ein beliebiges Ereignis in der Sitzung für erweiterte Ereignisse. Dieser Wert ist optional.|Ein vom Benutzer angegebener Wert, mit dem eine Klasse von Ereignissen identifiziert wird. Nur Instanzen des angegebenen Ereignisses werden Buckets zugeordnet. Alle anderen Ereignisse werden ignoriert.<br /><br /> Wenn Sie diesen Wert angeben, müssen Sie folgendes Format verwenden: *Paketname*.*Ereignisname*. Beispiel: `'sqlserver.checkpoint_end'`. Sie können den Paketnamen mit der folgenden Abfrage ermitteln:<br /><br /> Wählen Sie p.Name, SE. event_name<br />Aus sys. dm_xe_session_events SE<br />Beitreten zum sys. dm_xe_packages p<br />ON se_event_package_guid = p. GUID<br />Order by p.Name, SE. event_name<br /><br /> <br /><br /> Wenn Sie den Wert filtering_event_name nicht angeben, muss source_type auf 1 (den Standardwert) festgelegt werden.|  
 |source_type|Der Typ des Objekts, auf dem der Bucket basiert. Dieser Wert ist optional. Wenn er nicht angegeben wird, wird 1 als Standardwert verwendet.|Kann einen der folgenden Werte aufweisen:<br /><br /> 0 für ein Ereignis<br /><br /> 1 für eine Aktion|  
-|Quelle|Ereignisspalte oder Aktionsname.|Die Ereignisspalte oder der Aktionsname, die bzw. der als Datenquelle verwendet wird.<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie eine Spalte aus dem Ereignis angeben, das für den Wert filtering_event_name verwendet wird. Sie können mögliche Spalten mithilfe der folgenden Abfrage identifizieren:<br /><br /> SELECT Name FROM dm_xe_object_columns<br />WHERE object_name = '\<eventname>'<br />UND Column_type! = "Readonly"<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie den Paketnamen nicht im Wert source angeben.<br /><br /> Wenn Sie für source einen Aktionsnamen angeben, müssen Sie eine der konfigurierten Aktionen verwenden, die für die Auflistung in der Ereignissitzung konfiguriert ist, für die dieses Ziel verwendet wird. Mögliche Werte für den Aktionsnamen können Sie ermitteln, indem Sie die action_name-Spalte der sys.dm_xe_sesssion_event_actions-Sicht abfragen.<br /><br /> Wenn Sie einen Aktionsnamen als Datenquelle verwenden, müssen Sie den source-Wert im Format *Paketname*.*Aktionsname*angeben.|  
+|source|Ereignisspalte oder Aktionsname.|Die Ereignisspalte oder der Aktionsname, die bzw. der als Datenquelle verwendet wird.<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie eine Spalte aus dem Ereignis angeben, das für den Wert filtering_event_name verwendet wird. Sie können mögliche Spalten mithilfe der folgenden Abfrage identifizieren:<br /><br /> Name aus sys. dm_xe_object_columns auswählen<br />Where object_name = '\<EventName> '<br />Und column_type! = ' schreibgeschützt '<br /><br /> Wenn Sie für source eine Ereignisspalte angeben, müssen Sie den Paketnamen nicht im Wert source angeben.<br /><br /> Wenn Sie für source einen Aktionsnamen angeben, müssen Sie eine der konfigurierten Aktionen verwenden, die für die Auflistung in der Ereignissitzung konfiguriert ist, für die dieses Ziel verwendet wird. Mögliche Werte für den Aktionsnamen können Sie ermitteln, indem Sie die action_name-Spalte der sys.dm_xe_sesssion_event_actions-Sicht abfragen.<br /><br /> Wenn Sie einen Aktionsnamen als Datenquelle verwenden, müssen Sie den source-Wert im Format *Paketname*.*Aktionsname*angeben.|  
   
  Im folgenden Beispiel wird das Erfassen von Daten mit dem Histogrammziel auf abstrakter Ebene veranschaulicht. In diesem Beispiel soll das Histogrammziel zum Zählen der Anzahl der eingetretenen Wartevorgänge je Wartevorgangstyp verwendet werden. Geben Sie dazu beim Definieren des Histogrammziels die folgenden Optionen an:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66064701"
   
  Die wait_type-Werte werden in drei Slots mit den folgenden Werten und der jeweiligen Slotanzahl kategorisiert:  
   
-|Wert|Slotanzahl|  
+|value|Slotanzahl|  
 |-----------|----------------|  
 |file_io|2|  
 |Netzwerk|2|  
@@ -101,7 +101,7 @@ WHERE xe.name = 'session_name'
 </Slots>  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   

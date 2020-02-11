@@ -1,5 +1,5 @@
 ---
-title: Angeben von den Daten- und Inhaltstyp (Lernprogramm zu Datamining-Grundlagen) | Microsoft-Dokumentation
+title: Angeben von Datentyp und Inhaltstyp (Lernprogramm zu Data Mining-Grundlagen) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62720054"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Angeben des Datentyps und des Inhaltstyps (Lernprogramm zu Data Mining-Grundlagen)
@@ -28,40 +28,40 @@ ms.locfileid: "62720054"
   
      Der Assistent erkennt normalerweise Zahlen und weist einen entsprechenden numerischen Datentyp zu. In vielen Szenarien bietet es sich jedoch an, eine Zahl stattdessen als Text zu behandeln. Beispielsweise sollte **GeographyKey** als Text behandelt werden, da mathematische Operationen sich für diese ID nicht eignen.  
   
-    |Spalte|Inhaltstyp|Datentyp|  
+    |Column|Inhaltstyp|Datentyp|  
     |------------|------------------|---------------|  
-    |**– Adresszeile 1**|**Diskrete**|**Text**|  
-    |**Zeile 2**|**Diskrete**|**Text**|  
-    |**ALTER**|**fortlaufende**|**Long**|  
-    |**Bike Buyer**|**Diskrete**|**Long**|  
-    |**Commute Distance**|**Diskrete**|**Text**|  
-    |**CustomerKey**|**Key**|**Long**|  
-    |**DateLastPurchase**|**fortlaufende**|**Datum**|  
-    |**Email Address**|**Diskrete**|**Text**|  
-    |**Englisheducation**|**Diskrete**|**Text**|  
-    |**English Occupation**|**Diskrete**|**Text**|  
-    |**Vorname**|**Diskrete**|**Text**|  
-    |**Geschlecht**|**Diskrete**|**Text**|  
-    |**Geografieschlüssel**|**Diskrete**|**Text**|  
-    |**House Owner Flag**|**Diskrete**|**Text**|  
-    |**Last Name**|**Diskrete**|**Text**|  
-    |**Marital Status**|**Diskrete**|**Text**|  
-    |**Number Cars Owned**|**Diskrete**|**Long**|  
-    |**Number Children At Home**|**Diskrete**|**Long**|  
-    |**Region**|**Diskrete**|**Text**|  
-    |**Total Children**|**Diskrete**|**Long**|  
-    |**Yearly Income**|**fortlaufende**|**Double**|  
+    |**Address Line1**|**Discrete**|**Text**|  
+    |**Address Line2**|**Discrete**|**Text**|  
+    |**Eder**|**Fortlaufend**|**Long**|  
+    |**Bike Buyer**|**Discrete**|**Long**|  
+    |**Entfernung der Entfernung**|**Discrete**|**Text**|  
+    |**CustomerKey**|**Schlüssel**|**Long**|  
+    |**DateLastPurchase**|**Fortlaufend**|**Date**|  
+    |**E-Mail Adresse**|**Discrete**|**Text**|  
+    |**EnglishEducation**|**Discrete**|**Text**|  
+    |**English Occupation**|**Discrete**|**Text**|  
+    |**FirstName**|**Discrete**|**Text**|  
+    |**Geschlechter**|**Discrete**|**Text**|  
+    |**Geography Key**|**Discrete**|**Text**|  
+    |**Hausbesitzerflag**|**Discrete**|**Text**|  
+    |**Nachname**|**Discrete**|**Text**|  
+    |**Marital Status**|**Discrete**|**Text**|  
+    |**Anzahl der Autos im Besitz**|**Discrete**|**Long**|  
+    |**Anzahl der Kinder zu Hause**|**Discrete**|**Long**|  
+    |**Region**|**Discrete**|**Text**|  
+    |**Total Children**|**Discrete**|**Long**|  
+    |**Yearly Income**|**Fortlaufend**|**Maß**|  
   
 3.  Klicken Sie auf **Weiter**.  
   
-## <a name="next-task-in-lesson"></a>Nächste Aufgabe in dieser Lektion  
- [Angeben eines Testdatasets für die Struktur &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
+## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
+ [Angeben eines Test Datasets für die Struktur &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Erstellen der Miningmodellstruktur Targeted Mailing &#40;Lernprogramm zu Datamining-Grundlagen&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
+ [Erstellen einer zielgerichteten Mailing-Mining Modellstruktur &#40;grundlegenden Data Mining-Lernprogramm&#41;](../../2014/tutorials/creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [Inhaltstypen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Datentypen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Inhaltstypen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
+ [Datentypen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

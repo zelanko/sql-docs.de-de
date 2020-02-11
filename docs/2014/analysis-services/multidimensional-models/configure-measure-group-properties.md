@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Measuregruppeneigenschaften | Microsoft-Dokumentation
+title: Konfigurieren von Measure-Gruppen Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7571457847d8ffb0388608b7d634cc19261a609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076671"
 ---
 # <a name="configure-measure-group-properties"></a>Konfigurieren von Measuregruppeneigenschaften
@@ -34,7 +34,7 @@ ms.locfileid: "66076671"
 |`EstimatedRows`|Gibt die geschätzte Anzahl von Zeilen in der Faktentabelle an.|  
 |`EstimatedSize`|Gibt die geschätzte Größe (in Byte) der Measuregruppe an.|  
 |`ID`|Gibt den Bezeichner des Objekts an.|  
-|`IgnoreUnrelatedDimensions`|Bestimmt, ob nicht verknüpfte Dimensionen auf ihre höchste Ebene gezwungen werden, wenn Elemente von Dimensionen, die nicht mit der Measuregruppe verknüpft sind, in eine Abfrage eingeschlossen werden. Standardeinstellung ist `True`.|  
+|`IgnoreUnrelatedDimensions`|Bestimmt, ob nicht verknüpfte Dimensionen auf ihre höchste Ebene gezwungen werden, wenn Elemente von Dimensionen, die nicht mit der Measuregruppe verknüpft sind, in eine Abfrage eingeschlossen werden. Die Standardeinstellung `True`ist.|  
 |`Name`|Name des Measures. Diese Eigenschaft ist schreibgeschützt.|  
 |`ProactiveCaching`|Konfigurierbare Fehlerbehandlungseinstellungen für die Bearbeitung doppelter Schlüssel, unbekannter Schlüssel, für Fehlergrenzen, Aktionen bei Erkennung von Fehlern, Fehlerprotokolldateien und die Bearbeitung von NULL-Schlüsseln.|  
 |`ProcessingMode`|Gibt an, ob während oder nach der Verarbeitung indiziert und aggregiert werden soll. Die verfügbaren Optionen sind Regular und LazyAggregations. LazyAggregations kann verwendet werden, um die Aggregation als Hintergrundaufgabe auszuführen.|  

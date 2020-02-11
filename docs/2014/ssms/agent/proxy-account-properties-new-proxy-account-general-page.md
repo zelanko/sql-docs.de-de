@@ -1,5 +1,5 @@
 ---
-title: Eigenschaften von Proxykonto und Neues Proxykonto (Seite Allgemein) | Microsoft-Dokumentation
+title: Proxy Konto Eigenschaften und neues Proxy Konto (Seite "Allgemein") | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62650201"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proxykontoeigenschaften und neues Proxykonto (Seite „Allgemein“)
-  Mithilfe dieser Seite können Sie die Eigenschaften für ein Proxykonto für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent anzeigen und ändern.  
+  Verwenden Sie diese Seite, um die Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy Kontos anzuzeigen oder zu ändern.  
   
-## <a name="options"></a>Optionen  
- **Proxyname**  
+## <a name="options"></a>Tastatur  
+ **Proxy Name**  
  Geben Sie den Namen des Proxys ein.  
   
- **Anmeldeinformationsname**  
+ **Name der Anmelde Informationen**  
  Geben Sie den Namen der Anmeldeinformationen für den Proxy ein.  
   
 > [!NOTE]  
->  Der eingegebene Anmeldeinformationsname muss der Name von vorhandenen Anmeldeinformationen sein. Informationen zum Erstellen von Anmeldeinformationen finden Sie unter [Erstellen von Anmeldeinformationen](../../relational-databases/security/authentication-access/create-a-credential.md)  
+>  Der eingegebene Anmeldeinformationsname muss der Name von vorhandenen Anmeldeinformationen sein. Informationen zum Erstellen von Anmelde Informationen finden Sie unter [Create a Credential](../../relational-databases/security/authentication-access/create-a-credential.md) .  
   
  **...**  
  Öffnet das Dialogfeld **Anmeldeinformationen auswählen** .  
@@ -38,13 +38,13 @@ ms.locfileid: "62650201"
  **Beschreibung**  
  Geben Sie die Beschreibung für den Proxy ein.  
   
- **Folgenden Subsystemen gegenüber aktiv**  
+ **Aktiv in den folgenden Subsystemen**  
  Wählen Sie die Subsysteme aus, auf die das Proxykonto zugreifen kann.  
   
- **Auftragsschritte erneut zuweisen an**  
+ **Neuzuweisen von Auftrags Schritten**  
  Wählen Sie den Proxy aus, dem die Auftragsschritte neu zugewiesen werden sollen. Die Liste ist aktiviert, wenn Sie den Zugriff auf ein Subsystem aufheben, auf das der Proxy vorher zugreifen konnte.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines Proxys für den SQL Server-Agent](create-a-sql-server-agent-proxy.md)  
   
   

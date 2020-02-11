@@ -1,5 +1,5 @@
 ---
-title: Autoexists | Microsoft-Dokumentation
+title: Autoist vorhanden | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 07/17/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc9aa519d37b040026414ab826373357a1ddd92f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074732"
 ---
 # <a name="autoexists"></a>Autoexists
@@ -62,7 +62,7 @@ WHERE Measures.[Internet Sales Amount]
 > [!NOTE]  
 >  Beachten Sie, dass 0 hier für die Spaltenachse steht (als Kurzform für axis(0)).  
   
- Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch geschrieben werden mithilfe der neuen *-Variante der der [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) Funktion.  
+ Die vorherige Abfrage gibt nur Zellen für Elemente der Attributhierarchien in der Abfrage zurück, die gemeinsam vorhanden sind. Die vorherige Abfrage kann auch mithilfe der neuen *-Variante der [Crossjoin (MDX)](/sql/mdx/crossjoin-mdx) -Funktion geschrieben werden.  
   
 ```  
 SELECT   
@@ -85,10 +85,12 @@ WHERE (Measures.[Internet Sales Amount],
   
  Die zurückgegebenen Zellenwerte sind identisch, die Metadaten im Resultset sind jedoch verschieden. Beispielsweise wurde in der vorherigen Abfrage die Country-Hierarchie auf die Slicerachse verschoben (in die WHERE-Klausel), sodass sie nicht explizit im Resultset angezeigt wird.  
   
- Alle drei vorherigen Abfragen veranschaulichen die Auswirkung des auto-exist-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+ Jede dieser drei vorherigen Abfragen veranschaulicht die Auswirkung des Auto-es-Verhaltens in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ## <a name="deep-and-shallow-autoexists"></a>Tiefe und flache Autoexists  
- Autoexists können tief oder flach auf Ausdrücke angewendet werden. `Deep Autoexists` bedeutet, dass alle Ausdrücke ausgewertet werden, um nach Anwendung der Slicerausdrücke, untergeordneten SELECT-Ausdrücke usw. einen möglichst tiefen Raum abzudecken. `Shallow Autoexists` bedeutet, dass externe Ausdrücke vor dem aktuellen Ausdruck ausgewertet werden und dass diese Ergebnisse an den aktuellen Ausdruck übergeben werden. Die Standardeinstellung sind tiefe Autoexists.  
+ Autoexists können tief oder flach auf Ausdrücke angewendet werden. 
+  `Deep Autoexists` bedeutet, dass alle Ausdrücke ausgewertet werden, um nach Anwendung der Slicerausdrücke, untergeordneten SELECT-Ausdrücke usw. einen möglichst tiefen Raum abzudecken. 
+  `Shallow Autoexists` bedeutet, dass externe Ausdrücke vor dem aktuellen Ausdruck ausgewertet werden und dass diese Ergebnisse an den aktuellen Ausdruck übergeben werden. Die Standardeinstellung sind tiefe Autoexists.  
   
  Das folgende Szenario und die Beispiele veranschaulichen die verschiedenen Typen von Autoexists. In den folgenden Beispielen werden zwei Gruppen erstellt: eine als berechneteter Ausdruck und die andere als konstanter Ausdruck.  
   
@@ -132,17 +134,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
-|**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47 %**|  
-|**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05 %**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
-|**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
-|**Road-150**|**2.363.805,16 €**|**0,00 €**|**0,00 %**|  
-|**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89 %**|  
+||**Reseller Sales Amount**|**Rabatt Betrag**|**PCT-Rabatt**|  
+|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13 %**|  
+|**Straße-250**|**$9.377.457,68**|**$4.032,47**|**0,04%**|  
+|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
+|**Straße-650**|**$7.442.141,81**|**$39.698,30**|**0,53%**|  
+|**Touring-1000**|**$6.723.794,29**|**$166.144,17**|**2,47%**|  
+|**Straße-550-W**|**$3.668.383,88**|**$1.901,97**|**0,05%**|  
+|**Straße-350-W**|**$3.665.932,31**|**$20.946,50**|**0,57%**|  
+|**HL-Mountain-Frame**|**$3.365.069,27**|**$174,11**|**0,01%**|  
+|**Straße-150**|**$2.363.805,16**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**$2.046.508,26**|**$79.582,15**|**3,89%**|  
   
  Die erhaltene Produktgruppe ist offenbar die gleiche wie Preferred10Products. Die Gruppe Preferred10Products wird deshalb überprüft:  
   
@@ -184,17 +186,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Road-250**|**9.377.457,68 €**|**4.032,47 €**|**0,04 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**Road-650**|**7.442.141,81 €**|**39.698,30 €**|**0,53 %**|  
-|**Touring-1000**|**6.723.794,29 €**|**166.144,17 €**|**2,47 %**|  
-|**Road-550-W**|**3.668.383,88 €**|**1.901,97 €**|**0,05 %**|  
-|**Road-350-W**|**3.665.932,31 €**|**20.946,50 €**|**0,57 %**|  
-|**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
-|**Road-150**|**2.363.805,16 €**|**0,00 €**|**0,00 %**|  
-|**Touring-3000**|**2.046.508,26 €**|**79.582,15 €**|**3,89 %**|  
+||**Reseller Sales Amount**|**Rabatt Betrag**|**PCT-Rabatt**|  
+|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13 %**|  
+|**Straße-250**|**$9.377.457,68**|**$4.032,47**|**0,04%**|  
+|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
+|**Straße-650**|**$7.442.141,81**|**$39.698,30**|**0,53%**|  
+|**Touring-1000**|**$6.723.794,29**|**$166.144,17**|**2,47%**|  
+|**Straße-550-W**|**$3.668.383,88**|**$1.901,97**|**0,05%**|  
+|**Straße-350-W**|**$3.665.932,31**|**$20.946,50**|**0,57%**|  
+|**HL-Mountain-Frame**|**$3.365.069,27**|**$174,11**|**0,01%**|  
+|**Straße-150**|**$2.363.805,16**|**$0,00**|**0,00%**|  
+|**Touring-3000**|**$2.046.508,26**|**$79.582,15**|**3,89%**|  
   
  Im folgenden Beispiel wird der Begriff "tiefes Autoexists" veranschaulicht. Im Beispiel filtern wir Top10SellingProducts mit dem [Product].[Product Line]-Attribut nach den in der [Mountain]-Gruppe enthaltenen Produkten. Beachten Sie, dass beide Attribute (Slicer und Achse) zur gleichen Dimension [Produkt] gehören.  
   
@@ -216,17 +218,17 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
-|**Mountain-300**|**1.907.249,38 €**|**876,95 €**|**0,05 %**|  
-|**Mountain-500**|**1.067.327,31 €**|**17.266,09 €**|**1,62 %**|  
-|**Mountain-400-W**|**592.450,05 €**|**303,49 €**|**0,05 %**|  
-|**LL Mountain Frame**|**521.864,42 €**|**252,41 €**|**0,05 %**|  
-|**ML Mountain Frame-W**|**482.953,16 €**|**206,95 €**|**0,04 %**|  
-|**ML Mountain Frame**|**343.785,29 €**|**161,82 €**|**0,05 %**|  
-|**Women's Mountain Shorts**|**260.304,09 €**|**6.675,56 €**|**2,56 %**|  
+||**Reseller Sales Amount**|**Rabatt Betrag**|**PCT-Rabatt**|  
+|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13 %**|  
+|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
+|**HL-Mountain-Frame**|**$3.365.069,27**|**$174,11**|**0,01%**|  
+|**Mountain-300**|**$1.907.249,38**|**$876,95**|**0,05%**|  
+|**Mountain-500**|**$1.067.327,31**|**$17.266,09**|**1,62%**|  
+|**Mountain-400-W**|**$592.450,05**|**$303,49**|**0,05%**|  
+|**LL-Mountain-Frame**|**$521.864,42**|**$252,41**|**0,05%**|  
+|**ML-Mountain-Frame-W**|**$482.953,16**|**$206,95**|**0,04%**|  
+|**ML-Mountain-Frame**|**$343.785,29**|**$161,82**|**0,05%**|  
+|**Women's Mountain Shorts**|**$260.304,09**|**$6.675,56**|**2,56%**|  
   
  Das obige Resultset enthält sieben Neueinträge für die Liste mit den Top10SellingProducts und Mountain-200, Mountain-100 sowie HL Mountain Frame wurden an den Anfang der Liste verschoben. Im vorherigen Resultset befanden sich diese drei Werte an verschiedenen Stellen.  
   
@@ -274,10 +276,10 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
+||**Reseller Sales Amount**|**Rabatt Betrag**|**PCT-Rabatt**|  
+|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13 %**|  
+|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
+|**HL-Mountain-Frame**|**$3.365.069,27**|**$174,11**|**0,01%**|  
   
  Nach den oben aufgeführten Ergebnissen führt das Slicing zu einem Ergebnis, das nur die Produkte von Preferred10Products enthält, die Teil der Gruppe [Mountain] in [Product].[Product Line] sind. Dies entspricht den Erwartungen, da Preferred10Products ein konstanter Ausdruck ist.  
   
@@ -303,20 +305,20 @@ WHERE (Measures.[Internet Sales Amount],
   
 |||||  
 |-|-|-|-|  
-||**Reseller Sales Amount**|**Discount Amount**|**PCT Discount**|  
-|**Mountain-200**|**14.356.699,36 €**|**19.012,71 €**|**0,13 %**|  
-|**Mountain-100**|**8.568.958,27 €**|**139.393,27 €**|**1,63 %**|  
-|**HL Mountain Frame**|**3.365.069,27 €**|**174,11 €**|**0,01 %**|  
+||**Reseller Sales Amount**|**Rabatt Betrag**|**PCT-Rabatt**|  
+|**Mountain-200**|**$14.356.699,36**|**$19.012,71**|**0,13 %**|  
+|**Mountain-100**|**$8.568.958,27**|**$139.393,27**|**1,63%**|  
+|**HL-Mountain-Frame**|**$3.365.069,27**|**$174,11**|**0,01%**|  
   
- Autoexists-Verhalten kann geändert werden, mit den AUTOEXISTS = [1 | 2 | 3]-Parameter in der Verbindungszeichenfolge; finden Sie unter [unterstützte XMLA-Eigenschaften &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> für die Verwendung des Parameters.  
+ Das autoes-Verhalten kann mithilfe des Parameters autoist = [1 | 2 | 3] in der Verbindungs Zeichenfolge geändert werden. Weitere Informationen finden Sie [unter Unterstützte XMLA-Eigenschaften &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/propertylist-element-supported-xmla-properties) und <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A> zur Parameter Verwendung.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [Cuberaum](cube-space.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Cube-Bereich](cube-space.md)   
  [Tupel](tuples.md)   
- [Verwenden von Elementen, Tupeln und Mengen &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte](visual-totals-and-non-visual-totals.md)   
- [MDX-Sprachreferenz &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Mehrdimensionale Ausdrücke &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Visuelle Gesamtsummen und nicht visuelle Gesamtwerte](visual-totals-and-non-visual-totals.md)   
+ [MDX-Sprachreferenz &#40;MDX-&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

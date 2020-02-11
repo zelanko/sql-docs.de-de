@@ -1,5 +1,5 @@
 ---
-title: Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle | Microsoft-Dokumentation
+title: Implementieren von LOB-Spalten in einer Speicher optimierten Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62778921"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implementieren von LOB-Spalten in einer speicheroptimierten Tabelle
-  Speicheroptimierte Tabellen keine außerhalb von Zeilen große Objekte (LOB)-Speicher (diese Einschränkung wurde entfernt wurde, in SQL Server 2016 und höher – Siehe [unterstützte Datentypen für In-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), und die maximale Zeilengröße ist auf 8060 Bytes. Das Speichern von Zeichenfolgenwerten oder großen binären Werten kann auf zwei Arten durchgeführt werden:  
+  Speicher optimierte Tabellen weisen keinen außerhalb von Zeilen liegenden oder LOB-Speicher (Large Object) auf (diese Einschränkung wurde in SQL Server 2016 und höher entfernt. siehe [unterstützte Datentypen für in-Memory OLTP](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), und die Zeilen Größenbeschränkung beträgt 8060 Bytes. Das Speichern von Zeichenfolgenwerten oder großen binären Werten kann auf zwei Arten durchgeführt werden:  
   
 -   Teilen Sie die LOB-Werte auf mehrere Zeilen auf.  
   
@@ -100,7 +100,7 @@ COMMIT
 END  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

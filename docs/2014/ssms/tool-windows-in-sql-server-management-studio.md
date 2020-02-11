@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 398a808ab90ab3ea8b97304d4e22865b40cc0ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661852"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Toolfenster in SQL Server Management Studio
@@ -28,16 +28,16 @@ ms.locfileid: "62661852"
 |**Tool**|**Zweck**|  
 |[Objekt-Explorers](object/object-explorer.md)|Durchsucht Server, erstellt und sucht Objekte, verwaltet Datenquellen, und zeigt Protokolle an. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
 |[Projektmappen-Explorer](solution/solution-explorer.md)|Speichert und organisiert Skripts und zugehörige Verbindungsinformationen in Projekten, die als [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Skripts bezeichnet werden. Sie können mehrere [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Skripts als Projektmappen speichern und mit der Quellcodeverwaltung Skripts verwalten, die sich im Laufe der Zeit ändern. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
-|[Vorlagen-Explorer](template/template-explorer.md)|Erstellt Abfragen auf Grundlage von vorhandenen Vorlagen. Sie können auch eigene benutzerdefinierte Abfragen erstellen oder die vorhandenen Vorlagen so ändern, dass sie für Ihre Szenarien geeignet sind. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
+|[Template Explorer](template/template-explorer.md)|Erstellt Abfragen auf Grundlage von vorhandenen Vorlagen. Sie können auch eigene benutzerdefinierte Abfragen erstellen oder die vorhandenen Vorlagen so ändern, dass sie für Ihre Szenarien geeignet sind. Auf dieses Tool kann über das Menü **Ansicht** zugegriffen werden.|  
 |[Dynamische Hilfe](sql-server-management-studio-ssms.md)|Zeigt eine Liste der zugehörigen Hilfethemen an, wenn Sie auf eine Komponente klicken oder Code eingeben.|  
   
- Die Tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] arbeiten zusammen. So können Sie z. B. Folgendes tun:  
+ Die Tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] arbeiten zusammen. Beispielsweise können Sie folgende Aktionen ausführen:  
   
 -   Registrieren eines Servers mit dem Objekt-Explorer.  
   
 -   Öffnen eines SQL-Editor-Fensters aus dem Objekt-Explorer, das mit einer bestimmten Datenbank verbunden ist.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwenden von SQL Server Management Studio](../database-engine/use-sql-server-management-studio.md)  
   
   

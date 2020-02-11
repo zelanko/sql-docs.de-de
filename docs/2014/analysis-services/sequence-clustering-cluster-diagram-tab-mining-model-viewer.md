@@ -1,5 +1,5 @@
 ---
-title: Sequence Clustering-Registerkarte Clusterdiagramm (Miningmodell-Viewer | Microsoft-Dokumentation
+title: Registerkarte "Sequenz Cluster/Cluster Diagramm" (Mining Modell-Viewer | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8cff96e3ed2d36db93abb3583a08b5c9d8153d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66069113"
 ---
 # <a name="sequence-clustering-cluster-diagram-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterdiagramm" (Miningmodell-Viewer)
@@ -24,13 +24,13 @@ ms.locfileid: "66069113"
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie einen Drillthrough von jedem Cluster zu den unterstützenden Fällen ausführen, wenn Drillthrough aktiviert wurde. Sie können den Clustern auch aussagekräftige Namen zuweisen und die Schattierungsvariable ändern, um die Verteilung der Werte auf einen Blick bewerten zu können.  
   
- **Weitere Informationen finden Sie unter** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen finden Sie unter:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
- **Miningmodell**  
+ **Mining Modell**  
  Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird im dazugehörigen Viewer geöffnet.  
   
  **Viewer**  
@@ -59,7 +59,7 @@ ms.locfileid: "66069113"
  **Layout verbessern**  
  Ordnet die im Diagramm enthaltenen Cluster neu an, um das Layout zu verbessern.  
   
- **Density**  
+ **Gas**  
  Die Darstellung des Dichtebalkendiagramms und die Werte darin sind abhängig von dem Attribut, das Sie unter **Schattierungsvariable**auswählen.  
   
 -   Wenn kein Attributstatus als Schattierungsvariable ausgewählt wurde, stellt standardmäßig die für jeden Cluster angewendete Dichteschattierung die Unterstützung für den Cluster dar, verglichen mit der Gesamtmenge der Fälle.  
@@ -69,15 +69,15 @@ ms.locfileid: "66069113"
  **Schattierungsvariable**  
  Wählen Sie ein Attribut aus dem Miningmodell aus, das beim Schattieren des Clusterdiagramms verwendet werden soll.  
   
- **Zustand**  
+ **State**  
  Wählen Sie einen Status aus, der dem Wert für **Schattierungsvariable**entspricht. Wenn Sie z.B. die Sequenzen anzeigen möchten, die ein bestimmtes Produkt enthalten, wählen Sie die Spalte [Product] als Attribut für **Schattierungsvariable**und den bestimmten Produktnamen als Wert für **Status** aus.  
   
  **Links**  
  Die Linien im Diagramm geben Zuordnungen zwischen Sequenzclustern an. Sie können die Anzahl der im Viewer angezeigten Links anpassen, indem Sie den Schieberegler rechts neben den Clustern schieben. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Links angezeigt.  
   
-## <a name="see-also"></a>Siehe auch  
- [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Miningmodell-Viewer &#40;Data Mining-Modelldesigner&#41;](mining-model-viewers-data-mining-model-designer.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md)  
   
   

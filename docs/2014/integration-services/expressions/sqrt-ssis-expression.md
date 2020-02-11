@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 308a74501b0b4bf7b071feae2088c1ab1b7f030c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768766"
 ---
 # <a name="sqrt-ssis-expression"></a>SQRT (SSIS-Ausdruck)
@@ -37,7 +37,7 @@ SQRT(numeric_expression)
 ## <a name="result-types"></a>Ergebnistypen  
  DT_R8  
   
-## <a name="remarks"></a>Hinweise  
+## <a name="remarks"></a>Bemerkungen  
  SQRT gibt ein NULL-Ergebnis zurück, wenn das Argument NULL ist.  
   
  SQRT schlägt fehl, wenn das Argument einen negativen Wert aufweist.  
@@ -66,7 +66,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  In Ausdrücken schließen Variablennamen immer das \@-Präfix ein.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen &#40;SSIS-Ausdruck&#41;](functions-ssis-expression.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erstellen und verwalten eine lokale Partition (Analysis Services) | Microsoft-Dokumentation
+title: Erstellen und Verwalten einer lokalen Partition (Analysis Services) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44b27801af70756913b293afd5e7613f3e026d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076295"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Erstellen und Verwalten einer lokalen Partition (Analysis Services)
@@ -26,8 +26,8 @@ ms.locfileid: "66076295"
   
  Partitionen können in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] während des Modellentwurfs oder nach der Bereitstellung der Projektmappe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder XMLA erstellt werden. Es empfiehlt sich, nur einen von beiden Ansätzen zu nutzen. Wenn Sie zwischen den Tools wechseln, kann es vorkommen, dass die an einer bereitgestellten Datenbank in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vorgenommenen Änderungen überschrieben werden, wenn die Projektmappe anschließend mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]erneut bereitgestellt wird.  
   
-## <a name="before-you-start"></a>Vorbereitungen  
- Überprüfen Sie, ob Sie die Business Intelligence Edition oder Enterprise Edition verwenden. Die Standard Edition bietet keine Unterstützung für mehrere Partitionen. Um die Edition festzustellen, klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mit der rechten Maustaste auf den Serverknoten, und wählen Sie **Berichte** | **Allgemein**aus. Weitere Informationen zu den verfügbaren Funktionen finden Sie unter [von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+## <a name="before-you-start"></a>Vorbereitung  
+ Überprüfen Sie, ob Sie die Business Intelligence Edition oder Enterprise Edition verwenden. Die Standard Edition bietet keine Unterstützung für mehrere Partitionen. Zum Überprüfen der Edition klicken Sie in mit der rechten Maustaste [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] auf den Server Knoten, und wählen Sie **Berichte** | **Allgemein**aus. Weitere Informationen zur Verfügbarkeit von Features finden Sie [unter von den Editionen von SQL Server 2014 unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
  Zu Beginn sollten Sie wissen, dass Partitionen denselben Aggregationsentwurf aufweisen müssen, falls Sie sie später zusammenführen möchten. Partitionen können nur zusammengeführt werden, wenn sie über denselben Aggregationsentwurf und Speichermodus verfügen.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66076295"
   
  Zum Verteilen der Faktendaten auf mehrere Partitionen können beide Verfahren eingesetzt werden. Folgende Verfahren können zum Segmentieren der Daten verwendet werden.  
   
-|Verfahren|Empfehlungen|  
+|Technik|Empfehlungen|  
 |---------------|---------------------|  
 |Segmentieren von Faktendaten mithilfe von SQL-Abfragen|Partitionen können mithilfe von SQL-Abfragen definiert werden. Während der Verarbeitung werden die Daten mit der SQL-Abfrage abgerufen. In der WHERE-Klausel der Abfrage ist der Filter angegeben, durch den die Daten für die einzelnen Partitionen segmentiert werden. Die Abfrage wird von Analysis Services generiert, sodass Sie nur noch die WHERE-Klausel definieren müssen, um die Daten ordnungsgemäß zu segmentieren.<br /><br /> Der Hauptvorteil dieses Ansatzes besteht in der Leichtigkeit, mit der Daten aus einer einzelnen Quelltabelle partitioniert werden können. Wenn sämtliche Quelldaten aus einer umfangreichen Faktentabelle stammen, können Sie Filterabfragen erstellen, durch die die Daten in diskrete Partitionen aufgeteilt werden, ohne zusätzliche Datenstrukturen in der Datenquellensicht erzeugen zu müssen.<br /><br /> Ein Nachteil besteht darin, dass durch die Verwendung von Abfragen die Bindung zwischen Partition und DSV verloren geht. Wenn Sie die DSV später im Analysis Services-Projekt aktualisieren, indem Sie der Faktentabelle z. B. Spalten hinzufügen, müssen Sie die Abfragen für jede Partition manuell bearbeiten, damit die neue Spalte berücksichtigt wird. Für den zweiten Ansatz, der im Folgenden erläutert wird, gilt dieser Nachteil nicht.|  
 |Segmentieren von Faktendaten mithilfe von Tabellen in der DSV|Sie können eine Partition an eine Tabelle, benannte Abfrage oder Sicht in der DSV binden. Als Ausgangsbasis für eine Partition sind die drei Ansätze funktionell gleichwertig. Die gesamte Tabelle, benannte Abfrage oder Sicht stellt sämtliche Daten für eine einzelne Partition bereit.<br /><br /> Bei Verwendung einer Tabelle, Sicht oder benannten Abfrage ist die gesamte Logik zur Datenauswahl in der DSV enthalten, die längerfristig einfacher zu verwalten und zu pflegen ist. Ein wichtiger Vorteil dieses Ansatzes besteht darin, dass die Tabellenbindungen erhalten bleiben. Wenn Sie die Quelltabelle später aktualisieren, müssen die Partitionen, die auf der Tabelle basieren, nicht geändert werden. Da alle Tabellen, benannten Abfragen und Sichten außerdem in einem gemeinsamen Arbeitsbereich enthalten sind, lassen sie sich wesentlich einfacher aktualisieren als Partitionsabfragen, die einzeln geöffnet und bearbeitet werden müssen.|  
@@ -55,7 +55,7 @@ ms.locfileid: "66076295"
   
 3.  Klicken Sie in der Quellspalte auf die Schaltfläche zum Durchsuchen (. .), um das Dialogfeld Partitionsquelle zu öffnen.  
   
-     ![Quellspalte im Bereich "Partition"](../media/ssas-partitionsource.png "Quellspalte im Bereich \"Partition\"")  
+     ![Quellspalte im Bereich "Partition"](../media/ssas-partitionsource.png "Quellspalte im Bereich "Partition"")  
   
 4.  Wählen Sie unter Bindungstyp die Option **Abfragebindung**aus. Die SQL-Abfrage zur Auswahl der Daten wird automatisch eingeblendet.  
   
@@ -121,9 +121,9 @@ ms.locfileid: "66076295"
   
  Im letzten Schritt sollte die Standardpartition, die auf der Tabelle selbst basiert war, normalerweise entfernt werden (falls sie noch vorhanden ist). Andernfalls überschneiden sich Abfragen, die auf den Partitionen basieren, mit Abfragen, die auf der gesamten Tabelle basieren.  
   
-## <a name="see-also"></a>Siehe auch  
- [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Remotepartitionen](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Remote Partitionen](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
+ [Zusammenführen von Partitionen in Analysis Services &#40;SSAS-Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

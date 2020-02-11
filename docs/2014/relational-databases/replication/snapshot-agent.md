@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62676546"
 ---
 # <a name="snapshot-agent"></a>Momentaufnahme-Agent
   Im Dialogfeld **Momentaufnahme-Agent** werden detaillierte Informationen zum Momentaufnahme-Agent, wie Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen, angezeigt.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Wählen Sie im Menü **Sicht** aus, welche Sitzungen des Momentaufnahme-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Momentaufnahme-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **Aktionen in der ausgewählten Sitzung**angezeigt. Wenn die ausgewählte Sitzung mit einem Fehler beendet wurde, wird auch der Textbereich mit der Bezeichnung **Fehlerdetails oder Meldung der ausgewählten Sitzung** angezeigt.  
   
  **Ansicht**  
@@ -47,7 +47,7 @@ ms.locfileid: "62676546"
  **Beendigungszeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
- **Dauer**  
+ **Duration**  
  Die Zeitspanne, für die der Momentaufnahme-Agent in dieser Sitzung ausgeführt wurde. Dieser Wert stellt die bisher abgelaufene Zeit dar, wenn der Agent immer noch ausgeführt wird, und die Gesamtzeit, wenn die Agentsitzung beendet ist.  
   
  **Fehlermeldung**  
@@ -62,7 +62,7 @@ ms.locfileid: "62676546"
  **Fehlerdetails oder Meldung der ausgewählten Sitzung**  
  Wird nur angezeigt, wenn in der ausgewählten Sitzung in der **Status** -Spalte der Wert **Fehler** angezeigt wird. Dieser Textbereich zeigt detaillierte Fehlerinformationen sowie den Befehl an, der zum Zeitpunkt des Fehlers auszuführen versucht wurde. Er enthält außerdem Links zu weiteren Informationen, die sich auf den Fehler beziehen.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
  [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)   

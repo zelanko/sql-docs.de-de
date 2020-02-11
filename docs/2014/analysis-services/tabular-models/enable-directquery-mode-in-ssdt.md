@@ -1,5 +1,5 @@
 ---
-title: Aktivieren des DirectQuery-Entwurfsmodus (SSAS – tabellarisch) | Microsoft-Dokumentation
+title: Directquery-Entwurfs Modus aktivieren (SSAS-tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965a3a7c1bfa9549793690e92760ce39f147e0d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66067195"
 ---
 # <a name="enable-directquery-design-mode-ssas-tabular"></a>Aktivieren des DirectQuery-Entwurfsmodus (SSAS – tabellarisch)
@@ -36,11 +36,11 @@ ms.locfileid: "66067195"
   
 2.  Doppelklicken Sie in Objekt-Explorer auf die Datei "Model.bim".  
   
-3.  In der **Eigenschaften** Bereich ändern Sie die Eigenschaft, **DirectQueryMode**zu **auf**.  
+3.  Ändern Sie im **Bereich** **Eigenschaften** die Eigenschaft **directquerymode**in ein.  
   
-4.  Wenn Fehler, in Visual Studio vorliegen, öffnen Sie die **Fehlerliste** und beheben Sie alle Probleme, die das Modell für die in den DirectQuery-Modus wechselt verhindern würden.  
+4.  Wenn Fehler vorhanden sind, öffnen Sie in Visual Studio die **Fehlerliste** , und beheben Sie alle Probleme, die verhindern würden, dass das Modell in den directquery-Modus gewechselt wird.  
   
-## <a name="see-also"></a>Siehe auch  
- [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](directquery-mode-ssas-tabular.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Directquery-Modus &#40;tabellarischen SSAS-&#41;](directquery-mode-ssas-tabular.md)  
   
   

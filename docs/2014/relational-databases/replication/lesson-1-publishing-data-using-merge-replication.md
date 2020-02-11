@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62721177"
 ---
 # <a name="lesson-1-publishing-data-using-merge-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Mergereplikation
-  In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Mergeveröffentlichung, um eine Teilmenge der Tabellen **Employee**, **SalesOrderHeader**und **SalesOrderDetail** in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank zu veröffentlichen. Diese Tabellen werden mit parametrisierten Zeilenfiltern gefiltert, sodass in den einzelnen Abonnements jeweils eine eindeutige Teilmenge der Daten enthalten ist. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Merge-Agent verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hinzu. Für dieses Lernprogramm ist es erforderlich, dass Sie das vorherige Lernprogramm ( [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
+  In dieser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Lektion erstellen Sie mithilfe von eine Mergeveröffentlichung, um eine Teilmenge der Tabellen **Employee**, **SalesOrderHeader**und **SalesOrderDetail** in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank zu veröffentlichen. Diese Tabellen werden mit parametrisierten Zeilenfiltern gefiltert, sodass in den einzelnen Abonnements jeweils eine eindeutige Teilmenge der Daten enthalten ist. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Merge-Agent verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung hinzu. Für dieses Lernprogramm ist es erforderlich, dass Sie das vorherige Lernprogramm ( [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62721177"
   
 9. Klicken Sie auf **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**und anschließend auf **OK**.  
   
-10. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)** , klicken Sie auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
+10. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **Employee (Human Resources)**, klicken Sie auf **Hinzufügen** und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
 11. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** die Tabelle **Sales.SalesOrderHeader**aus, klicken Sie auf **Joinanweisung manuell schreiben**und vervollständigen Sie die Joinanweisung wie folgt:  
   
@@ -77,13 +77,13 @@ ms.locfileid: "62721177"
   
 18. Wählen Sie unter **Geben Sie Joinoptionen an**die Option **Eindeutiger Schlüssel**aus und klicken Sie anschließend auf **OK**.  
   
-19. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **SalesOrderHeader (Sales)** , klicken Sie auf **Hinzufügen**und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
+19. Klicken Sie auf der Seite **Tabellenzeilen filtern** auf **SalesOrderHeader (Sales)**, klicken Sie auf **Hinzufügen**und anschließend auf **Join hinzufügen, um den ausgewählten Filter zu erweitern**.  
   
 20. Wählen Sie im Dialogfeld **Join hinzufügen** unter **Verknüpfte Tabelle** die Tabelle **Sales.SalesOrderDetail**aus, klicken Sie auf **OK**und klicken Sie anschließend auf **Weiter**.  
   
 21. Wählen Sie **Momentaufnahme sofort erstellen**aus, deaktivieren Sie **Ausführung des Momentaufnahme-Agents zu folgenden Zeitpunkten planen**und klicken Sie auf **Weiter**.  
   
-22. Klicken Sie auf der Seite „Agentsicherheit“ auf **Sicherheitseinstellungen**, geben Sie im Feld **Prozesskonto** das Konto \<_Machine_Name>_ **\repl_snapshot** und das Kennwort für das Konto ein und klicken Sie anschließend auf **OK**. Klicken Sie auf **Fertig stellen**.  
+22. Klicken Sie auf der Seite Agentsicherheit **auf Sicherheitseinstellungen**, \<geben Sie im Feld **Prozess Konto** _Machine_Name>_ **\ repl_snapshot** ein, geben Sie das Kennwort für dieses Konto an, und klicken Sie dann auf **OK**. Klicken Sie auf **Fertig stellen**.  
   
 23. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Veröffentlichungsname** den Namen **AdvWorksSalesOrdersMerge** ein und klicken Sie auf **Fertig stellen**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62721177"
   
 ### <a name="to-view-the-status-of-snapshot-generation"></a>So zeigen Sie den Status der Momentaufnahmegenerierung an  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten und den Ordner **Replikation** .  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, erweitern Sie den Server Knoten, und erweitern Sie dann den Ordner **Replikation** .  
   
 2.  Klicken Sie im Ordner Lokale Veröffentlichungen mit der rechten Maustaste auf **AdvWorksSalesOrdersMerge**und anschließend auf **Status des Momentaufnahme-Agents anzeigen**.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "62721177"
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>So fügen Sie der PAL die Anmeldung des Merge-Agents hinzu  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten und den Ordner **Replikation** .  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, erweitern Sie den Server Knoten, und erweitern Sie dann den Ordner **Replikation** .  
   
 2.  Klicken Sie im Ordner Lokale Veröffentlichungen mit der rechten Maustaste auf **AdvWorksSalesOrdersMerge**und anschließend auf **Eigenschaften**.  
   
@@ -107,12 +107,12 @@ ms.locfileid: "62721177"
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Wählen Sie im Dialogfeld „Veröffentlichungszugriff hinzufügen“ Folgendes aus: _<Computername>_ **\repl_merge**. Klicken Sie anschließend auf **OK**. Klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld Veröffentlichungs Zugriff hinzufügen _<Machine_Name>_ **\ repl_merge** aus, und klicken Sie dann auf **OK**. Klicken Sie auf **OK**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben die Mergeveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Filtern von veröffentlichten Daten](publish/filter-published-data.md)   
  [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md)   
  [Definieren eines Artikels](publish/define-an-article.md)  

@@ -1,5 +1,5 @@
 ---
-title: Datenquelleneigenschaften Informationen | Microsoft-Dokumentation
+title: Eigenschaften von Datenquellen Informationen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -17,28 +17,28 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 946c6d39bd02bbccd898262da6642813fbb3c94f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62679788"
 ---
 # <a name="data-source-information-properties"></a>Eigenschaften für Datenquelleninformationen
   Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERDATASOURCEINFO definiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter die folgenden Eigenschaften für Datenquelleninformationen.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|SSPROP_COLUMNLEVELCOLLATION|Typ: VT_BOOL<br /><br /> R/W: Leseberechtigung<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: Verwendet, um zu bestimmen, ob spaltensortierung unterstützt wird.<br /><br /> VARIANT_TRUE: Sortierung auf Spaltenebene wird unterstützt.<br /><br /> VARIANT_FALSE: Sortierung auf Spaltenebene wird nicht unterstützt.|  
-|SSPROP_UNICODELCID|Typ: VT_I4 R/W: Leseberechtigung<br /><br /> Beschreibung: Unicode-Gebietsschema-ID.<br /><br /> Dabei handelt es sich um das für die Unicode-Datensortierung verwendete Gebietsschema.|  
-|SSPROP_UNICODECOMPARISONSTYLE|Typ: VT_I4 R/W: Leseberechtigung<br /><br /> Beschreibung: Unicode-Vergleichsart<br /><br /> Dabei handelt es sich um die für die Unicode-Datensortierung verwendeten Sortieroptionen.|  
+|SSPROP_COLUMNLEVELCOLLATION|Typ: VT_BOOL<br /><br /> R/W: Lesen<br /><br /> Standard: VARIANT_TRUE<br /><br /> Beschreibung: Wird verwendet, um zu ermitteln, ob Spaltensortierung unterstützt wird.<br /><br /> VARIANT_TRUE: Spaltenebenensortierung wird unterstützt.<br /><br /> VARIANT_FALSE: Spaltenebenensortierung wird nicht unterstützt.|  
+|SSPROP_UNICODELCID|Typ: VT_I4 R/W: Lesen<br /><br /> Beschreibung: Unicode-Gebietsschema-ID<br /><br /> Dabei handelt es sich um das für die Unicode-Datensortierung verwendete Gebietsschema.|  
+|SSPROP_UNICODECOMPARISONSTYLE|Typ: VT_I4 R/W: Lesen<br /><br /> Beschreibung: Unicode-Vergleichsart<br /><br /> Dabei handelt es sich um die für die Unicode-Datensortierung verwendeten Sortieroptionen.|  
   
  Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERSTREAM definiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter die folgende zusätzliche Eigenschaft.  
   
-|Eigenschafts-ID|Description|  
+|Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|SSPROP_STREAM_XMLROOT|Typ: VT_BSTR R/W: Lese-/Schreibzugriff<br /><br /> Beschreibung: Das Ergebnis einer FOR XML-Abfrage möglicherweise nicht wohlgeformtes Dokument. Wenn diese Eigenschaft angegeben ist, wird das Ergebnis einer „select … for XML“-Abfrage von einem Stammtag umschlossen, das von dieser Eigenschaft bereitgestellt wird, um ein wohlgeformtes XML-Dokument zurückzugeben. Wenn die Abfrage in einem Browser ausgeführt wird, führt das möglicherweise dazu, dass der Browser beim Laden des Ergebnisses Parserfehler anzeigt. Um den Fehler zu vermeiden, unterstützt SQL ISAPI das Schlüsselwort ROOT. Dieses Schlüsselwort wird der SSPROP_STREAM_XMLROOT-Eigenschaft zugeordnet.|  
+|SSPROP_STREAM_XMLROOT|Typ: VT_BSTR R/W: Lesen/Schreiben<br /><br /> Beschreibung: Das Ergebnis einer FOR XML-Abfrage ist möglicherweise kein wohlgeformtes Dokument. Wenn diese Eigenschaft angegeben ist, wird das Ergebnis einer „select … for XML“-Abfrage von einem Stammtag umschlossen, das von dieser Eigenschaft bereitgestellt wird, um ein wohlgeformtes XML-Dokument zurückzugeben. Wenn die Abfrage in einem Browser ausgeführt wird, führt das möglicherweise dazu, dass der Browser beim Laden des Ergebnisses Parserfehler anzeigt. Um den Fehler zu vermeiden, unterstützt SQL ISAPI das Schlüsselwort ROOT. Dieses Schlüsselwort wird der SSPROP_STREAM_XMLROOT-Eigenschaft zugeordnet.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Datenquellenobjekte &#40;OLE-DB&#41;](data-source-objects-ole-db.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Datenquellen Objekte &#40;OLE DB&#41;](data-source-objects-ole-db.md)  
   
   

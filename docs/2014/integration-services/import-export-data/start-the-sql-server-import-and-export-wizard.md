@@ -1,5 +1,5 @@
 ---
-title: Ausführen des SQLServer Import / Export-Assistenten | Microsoft-Dokumentation
+title: Ausführen des SQL Server-Import/Export-Assistenten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -16,34 +16,34 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768032"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ausführen des SQL Server-Import/Export-Assistenten
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent stellt die einfachste Methode zum Kopieren von Daten zwischen Datenquellen und zum Erstellen von Basispaketen bereit. Weitere Informationen zum Assistenten finden Sie unter [SQL Server-Import / Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent stellt die einfachste Methode zum Kopieren von Daten zwischen Datenquellen und zum Erstellen von Basispaketen bereit. Weitere Informationen zum Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md).  
   
- Ein Video, das veranschaulicht, wie die SQL Server-Import / Export-Assistenten zum Erstellen eines Pakets, die Daten aus einer SQL Server-Datenbank in eine Microsoft Excel-Kalkulationstabelle exportiert werden, finden Sie unter [Exportieren von SQL Server-Daten nach Excel (SQL Server-Video)](https://go.microsoft.com/fwlink/?LinkId=131024).  
+ Ein Video, das veranschaulicht, wie der SQL Server-Import/Export-Assistent zum Erstellen eines Pakets verwendet wird, das Daten aus einer SQL Server Datenbank in ein Microsoft Excel-Arbeitsblatt exportiert, finden Sie unter [Exportieren von SQL Server Daten nach Excel (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131024).  
   
 ### <a name="to-start-the-sql-server-import-and-export-wizard"></a>So starten Sie den SQL Server-Import/Export-Assistenten  
   
--   Auf der **starten** Startmenü **Programme**, zeigen Sie auf**Microsoft SQL Server** , und klicken Sie dann auf **importieren und Exportieren von Daten**.  
+-   Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf**Microsoft SQL Server** , und klicken Sie dann auf **Daten importieren und exportieren**.  
   
-     -oder-  
+     Oder  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], mit der rechten Maustaste die **SSIS-Pakete** Ordner, und klicken Sie dann auf **SSISImport / Export-Assistenten**.  
+     Klicken [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in mit der rechten Maustaste auf den Ordner **SSIS-Pakete** , und klicken Sie dann auf **ssisimport und Export-Assistent**.  
   
-     -oder-  
+     Oder  
   
-     In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf die **Projekt** Menü klicken Sie auf **SSISImport / Export-Assistenten**.  
+     Klicken [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in im Menü **Projekt** auf **ssisimport und Export-Assistent**.  
   
-     -oder-  
+     Oder  
   
-     In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], Herstellen einer Verbindung mit der [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Servertyp aus, erweitern Sie Datenbanken, mit der rechten Maustaste in einer Datenbank, zeigen Sie auf **Aufgaben**, und klicken Sie dann auf **Importdaten** oder **Exportieren von Daten**.  
+     Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit dem Servertyp her, erweitern **Sie Datenbanken**, klicken Sie mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Daten importieren** bzw  
   
-     -oder-  
+     Oder  
   
      Führen Sie in einem Eingabeaufforderungsfenster DTSWizard.exe aus. Diese Datei ist im Verzeichnis C:\Programme\Microsoft SQL Server\100\DTS\Binn gespeichert.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "62768032"
   
     -   Geben Sie an, ob eine neue Datenbank erstellt werden soll, und legen Sie die Datenbankeigenschaften fest. Die folgenden Eigenschaften können nicht konfiguriert werden, und der Assistent verwendet die angegebenen Standardwerte:  
   
-        |Eigenschaft|Wert|  
+        |Eigenschaft|value|  
         |--------------|-----------|  
         |Sortierung|Latin1_General_CS_AS_KS_WS|  
         |Wiederherstellungsmodell|Vollständig|  
-        |Volltextindizierung verwenden|Wahr|  
+        |Volltextindizierung verwenden|True|  
   
     -   Wählen Sie aus, ob Daten aus Tabellen oder Sichten kopiert werden sollen oder ob Abfrageergebnisse kopiert werden sollen.  
   
@@ -117,16 +117,16 @@ ms.locfileid: "62768032"
   
 6.  Speichern Sie ein Paket, und führen Sie es aus.  
   
-     Falls der Assistent in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder an der Eingabeaufforderung gestartet wird, kann das Paket sofort ausgeführt werden. Optional können Sie das Paket zum Speichern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Msdb** Datenbank oder im Dateisystem. Weitere Informationen zu den **Msdb** finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](../service/package-management-ssis-service.md).  
+     Falls der Assistent in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder an der Eingabeaufforderung gestartet wird, kann das Paket sofort ausgeführt werden. Optional können Sie das Paket in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** -Datenbank oder im Dateisystem speichern. Weitere Informationen zur **msdb** -Datenbank finden Sie unter [Paketverwaltung &#40;SSIS-Dienst&#41;](../service/package-management-ssis-service.md).  
   
-     Beim Speichern des Pakets können Sie die Paketschutzebene festlegen und das Kennwort angeben, wenn für die Schutzebene ein Kennwort verwendet wird. Weitere Informationen zu paketschutzebenen finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](../security/access-control-for-sensitive-data-in-packages.md).  
+     Beim Speichern des Pakets können Sie die Paketschutzebene festlegen und das Kennwort angeben, wenn für die Schutzebene ein Kennwort verwendet wird. Weitere Informationen zu Paket Schutz Ebenen finden Sie unter [Access Control für sensible Daten in-Paketen](../security/access-control-for-sensitive-data-in-packages.md).  
   
      Falls der Assistent in einem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] gestartet wird, kann das Paket nicht im Assistenten ausgeführt werden. Stattdessen wird das Paket dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt hinzugefügt, in dem Sie den Assistenten gestartet haben. Sie können das Paket dann in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ausführen.  
   
     > [!NOTE]  
-    >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], die Möglichkeit, das vom Assistenten erstellte Paket speichern ist nicht verfügbar.  
+    >  In [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]ist die Option zum Speichern des vom Assistenten erstellten Pakets nicht verfügbar.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Import/Export-Assistent](import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Erstellen von Paketen in SQL Server-Datentools](../create-packages-in-sql-server-data-tools.md)  
   

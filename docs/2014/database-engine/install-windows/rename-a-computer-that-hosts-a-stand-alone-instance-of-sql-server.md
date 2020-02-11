@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bd9e18d1dfe7226d043a7c8c968999da680da08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62775007"
 ---
 # <a name="rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server"></a>Umbenennen eines Computers, der eine eigenständige Instanz von SQL Server hostet
@@ -31,7 +31,7 @@ ms.locfileid: "62775007"
   
  Die folgenden Schritte können nicht verwendet werden, um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]umzubenennen. Die Schritte können nur verwendet werden, um den Teil des Instanznamens umzubenennen, der dem Computernamen entspricht. Sie können beispielsweise einen Computer mit dem Namen MB1 umbenennen (z. B. in MB2), der eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit dem Namen Instance1 hostet. Der Teil des Namens, der sich auf die Instanz bezieht, Instance1, bleibt jedoch unverändert. In diesem Beispiel wird \\\\*ComputerName*\\*InstanceName* von \\\MB1\Instance1 in \\\MB2\Instance1 geändert.  
   
- **Vorbereitungen**  
+ **Voraussetzungen**  
   
  Bevor Sie den Umbenennungsprozess beginnen, überprüfen Sie die folgenden Informationen:  
   
@@ -109,7 +109,7 @@ ms.locfileid: "62775007"
   
  **Clientaliasnamen**: Das Umbenennen von Computern wirkt sich auf Clientaliasnamen aus, die Named Pipes verwenden. Wenn z. B. ein Alias "PROD_SRVR" erstellt wurde, um auf SRVR1 zu verweisen, und dieser das Named Pipes-Protokoll verwendet, lautet der Pipe-Name `\\SRVR1\pipe\sql\query`. Nachdem der Computer umbenannt wurde, ist der Pfad der Named Pipe nicht mehr gültig. Weitere Informationen zu Named Pipes finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes](https://go.microsoft.com/fwlink/?LinkId=111063).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)  
   
   

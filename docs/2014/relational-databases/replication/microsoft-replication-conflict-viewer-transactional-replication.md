@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62714867"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Replikationskonflikt-Viewer von Microsoft (Transaktionsreplikation)
@@ -25,7 +25,7 @@ ms.locfileid: "62714867"
 > [!NOTE]  
 >  Der Replikationskonflikt-Viewer zeigt Konflikte an, die bei der Mergereplikation und der Transaktionsreplikation auftreten. Bei der Transaktionsreplikation können Sie den Replikationskonflikt-Viewer verwenden, um Konfliktdaten anzuzeigen, aber Sie können keine andere Lösung für den Konflikt auswählen.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  Der Replikationskonflikt-Viewer ist in zwei Abschnitte unterteilt. Der obere Abschnitt des Dialogfelds zeigt die Konfliktliste für die ausgewählte Tabelle. Wenn Sie auf ein Element in der Konfliktliste klicken, werden die Details des Konflikts im unteren Abschnitt des Dialogfelds angezeigt.  
   
  Die Konfliktdaten im unteren Abschnitt werden in zwei entsprechenden Spalten angezeigt (**Konfliktgewinner** und **Konfliktverlierer**). Wenn ein Konflikt zwischen aktualisierten und gelöschten Daten vorhanden ist, können möglicherweise keine Daten für die gelöschte Seite des Konflikts angezeigt werden. In diesem Fall zeigt der Replikationskonflikt-Viewer eine Meldung in einer der beiden Spalten an, die die Zeile angibt, die an einem Speicherort gelöscht und an einem anderen aktualisiert wurde. Sie gibt außerdem die vorgeschlagene Lösung an.  
@@ -36,7 +36,7 @@ ms.locfileid: "62714867"
  **Veröffentlichung**  
  Wählen Sie eine Veröffentlichung aus, die Tabellen mit Konflikten enthält.  
   
- **Tabelle**  
+ **Table**  
  Wählen Sie eine Tabelle aus, die Konflikte enthält.  
   
  **Filter definieren**  
@@ -45,13 +45,13 @@ ms.locfileid: "62714867"
  **Filter anwenden oder entfernen**  
  Klicken Sie auf diese Option, um einen Filter anzuwenden oder zu entfernen, der im Dialogfeld **Filter definieren** definiert wurde.  
   
- **Alles auswählen**  
+ **Alles markieren**  
  Wählt alle Konflikte aus, die im Raster aufgeführt sind.  
   
  **Keine auswählen**  
  Macht die Auswahl für alle Konflikte rückgängig, die im Raster aufgeführt sind.  
   
- **Entfernen**  
+ **Remove**  
  Entfernt die ausgewählten Konflikte aus dem Viewer und die zugeordneten Metadaten aus den Replikationssystemtabellen.  
   
  **Alle Spalten anzeigen**  
@@ -60,13 +60,13 @@ ms.locfileid: "62714867"
  **Die ersten fünf Spalten und Spalten mit Konfliktdaten anzeigen**  
  Zeigt die ersten fünf Spalten und alle Spalten mit Konflikten an. Diese Option ist hilfreich, wenn die Tabelle über eine große Anzahl von Spalten verfügt, Sie aber nur diejenigen anzeigen möchten, die für die Konfliktlösung am wichtigsten sind. Die ersten fünf Spalten sind in diese Sicht immer einbezogen, da Felder zum Kennzeichnen einer Zeile, z. B. der Primärschlüssel oder Namensfelder, sich oft in den ersten Spalten einer Tabelle befinden.  
   
- **Spalteninformationen anzeigen** ( **…** )  
- Klicken Sie, um Spalteninformationen anzuzeigen: **Tabellenname**, **Spaltenname**, **Datentyp** und **Spaltenwert**.  
+ **Spalten Informationen anzeigen** (**...**)  
+ Zeigt die Spalteninformationen an: **Tabellenname**, **Spaltenname**, **Datentyp**und **Spaltenwert**.  
   
  **Details dieses Konflikts protokollieren**  
  Aktivieren Sie dieses Kontrollkästchen, um die Details eines Konflikts in eine Datei zu speichern. Zeigen Sie auf das Menü **Ansicht** , und klicken Sie auf **Optionen**, um einen Speicherort für die Datei anzugeben. Geben Sie einen Wert ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen ( **...** ), und navigieren Sie zur entsprechenden Datei. Klicken Sie auf **OK** , um das Dialogfeld **Optionen** zu beenden.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Konflikterkennung bei der Peer-zu-Peer-Replikation](transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
  [Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Elementeigenschaften (MDX) | Microsoft-Dokumentation
+title: Verwenden von Element Eigenschaften (MDX) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66074161"
 ---
 # <a name="using-member-properties-mdx"></a>Verwenden von Elementeigenschaften (MDX)
@@ -40,10 +40,10 @@ ms.locfileid: "66074161"
   
  Weitere Informationen finden Sie unter [Benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
- Sowohl systeminterne und benutzerdefinierte Elementeigenschaften können mithilfe des abgerufen werden die `PROPERTIES` Schlüsselwort oder [Eigenschaften](/sql/mdx/properties-mdx) Funktion.  
+ Sowohl intrinsische als auch benutzerdefinierte Element Eigenschaften können mithilfe des- `PROPERTIES` Schlüssel Worts oder der [Properties](/sql/mdx/properties-mdx) -Funktion abgerufen werden.  
   
 ## <a name="using-the-properties-keyword"></a>Verwenden des PROPERTIES-Schlüsselworts  
- Das `PROPERTIES`-Schlüsselwort gibt die Elementeigenschaften an, die für eine bestimmte Achsendimension verwendet werden müssen. Die `PROPERTIES` Schlüsselwort ist verborgen, innerhalb der `<axis specification>` -Klausel der MDX- [wählen](/sql/mdx/mdx-data-manipulation-select) Anweisung:  
+ Das `PROPERTIES`-Schlüsselwort gibt die Elementeigenschaften an, die für eine bestimmte Achsendimension verwendet werden müssen. Das `PROPERTIES` Schlüsselwort ist in der `<axis specification>` -Klausel der [Select](/sql/mdx/mdx-data-manipulation-select) -Anweisung von MDX verborgen:  
   
 ```  
 SELECT [<axis_specification>  
@@ -69,11 +69,11 @@ SELECT [<axis_specification>
   
  Die Aufteilung der Syntax von `<property>` variiert abhängig davon, welche Eigenschaft abgefragt wird:  
   
--   Bei einer kontextabhängigen systeminternen Elementeigenschaft muss der Name der Dimension oder der Ebene vor der Eigenschaft stehen. Nicht kontextabhängige systeminterne Elementeigenschaften können dagegen nicht durch den Dimensions- oder Ebenennamen qualifiziert werden. Weitere Informationen zur Verwendung der `PROPERTIES` -Schlüsselworts mit systeminternen Elementeigenschaften finden Sie unter [integrierte Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-intrinsic-member-properties.md).  
+-   Bei einer kontextabhängigen systeminternen Elementeigenschaft muss der Name der Dimension oder der Ebene vor der Eigenschaft stehen. Nicht kontextabhängige systeminterne Elementeigenschaften können dagegen nicht durch den Dimensions- oder Ebenennamen qualifiziert werden. Weitere Informationen zur Verwendung des `PROPERTIES` -Schlüssel Worts mit systeminternen Element Eigenschaften finden Sie unter systeminterne Element [Eigenschaften &#40;MDX-&#41;](mdx-member-properties-intrinsic-member-properties.md).  
   
--   Bei einer benutzerdefinierten Elementeigenschaft sollte der Name der Ebene vorangestellt werden, in der sie sich befindet. Weitere Informationen zur Verwendung der `PROPERTIES` -Schlüsselworts mit benutzerdefinierten Elementeigenschaften finden Sie unter [benutzerdefinierte Elementeigenschaften &#40;MDX&#41;](mdx-member-properties-user-defined-member-properties.md).  
+-   Bei einer benutzerdefinierten Elementeigenschaft sollte der Name der Ebene vorangestellt werden, in der sie sich befindet. Weitere Informationen zur Verwendung des `PROPERTIES` Schlüssel Worts mit benutzerdefinierten Element Eigenschaften finden Sie unter [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
-## <a name="see-also"></a>Siehe auch  
- [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen und Verwenden von Eigenschafts Werten &#40;MDX-&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

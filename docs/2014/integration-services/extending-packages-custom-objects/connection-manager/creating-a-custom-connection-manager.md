@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2fced98b5844105aa0f333a691cb747656112c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768926"
 ---
 # <a name="creating-a-custom-connection-manager"></a>Erstellen eines benutzerdefinierten Verbindungs-Managers
@@ -43,7 +43,7 @@ ms.locfileid: "62768926"
  Konfigurieren Sie beide Projekte für das Signieren der Assemblys, die bei der Erstellung erzeugt werden, mit einer Schlüsseldatei mit starkem Namen.  
   
 ### <a name="applying-the-dtsconnection-attribute"></a>Zuweisen des 'DtsConnection'-Attributs  
- Weisen Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Verbindungs-Manager zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name, Beschreibung und Verbindungstyp des Verbindungs-Managers. Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> und `Description` Eigenschaften entsprechen der **Typ** und `Description` in angezeigten Spalten der **SSIS-Verbindungs-Manager hinzufügen** Dialogfeld wird angezeigt, wenn Konfigurieren von Verbindungen für ein Paket in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)].  
+ Weisen Sie das <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute>-Attribut der Klasse zu, die Sie erstellt haben, um sie als Verbindungs-Manager zu kennzeichnen. Dieses Attribut stellt Entwurfszeitinformationen bereit, z. B. Name, Beschreibung und Verbindungstyp des Verbindungs-Managers. Die <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.ConnectionType%2A> Eigenschaften `Description` und entsprechen dem **Typ** und `Description` den Spalten, die im Dialogfeld **SSIS-Verbindungs-Manager hinzufügen** angezeigt werden. dieses Dialogfeld wird beim [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]Konfigurieren von Verbindungen für ein Paket in angezeigt.  
   
  Verwenden Sie die <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute.UITypeName%2A>-Eigenschaft, um den Verbindungs-Manager mit der individuellen Benutzeroberfläche zu verknüpfen. Um das für diese Eigenschaft erforderliche öffentliche Schlüsseltoken zu erhalten, können Sie **sn.exe -t** verwenden. Damit zeigen Sie das öffentliche Schlüsseltoken aus der Schlüsselpaardatei (.snk) an, die Sie für das Signieren der Benutzeroberflächenassembly verwenden möchten.  
   
@@ -73,9 +73,9 @@ ConnectionManagerBase
 ## <a name="building-deploying-and-debugging-a-custom-connection-manager"></a>Erstellen, Bereitstellen und Debuggen eines benutzerdefinierten Verbindungs-Managers  
  Die Schritte zum Erstellen, Bereitstellen und Debuggen eines benutzerdefinierten Verbindungs-Managers in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ähneln denen für andere Typen benutzerdefinierter Objekte. Weitere Informationen finden Sie unter [Building, Deploying, and Debugging Custom Objects](../building-deploying-and-debugging-custom-objects.md) (Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten).  
   
-![Integration Services (kleines Symbol)](../../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Codieren eines benutzerdefinierten Verbindungs-Managers](coding-a-custom-connection-manager.md)   
  [Entwickeln einer Benutzeroberfläche für einen benutzerdefinierten Verbindungs-Manager](developing-a-user-interface-for-a-custom-connection-manager.md)  
   

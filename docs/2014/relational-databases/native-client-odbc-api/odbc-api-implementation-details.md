@@ -1,5 +1,5 @@
 ---
-title: ODBC-API-Implementierungsdetails | Microsoft-Dokumentation
+title: Details zur ODBC-API-Implementierung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a8370db6cfcf3d410e563a0134221d0d48da09a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62715087"
 ---
 # <a name="odbc-api-implementation-details"></a>ODBC API Implementation Details
   In diesem Abschnitt werden die ODBC-Funktionen dokumentiert, die bei Verwendung mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifisches Verhalten zeigen. Nicht alle ODBC-Funktionen werden hier dokumentiert. In den einzelnen Themen werden nur die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifischen Probleme bei ODBC-Funktionen erörtert. Sie stellen keine vollständige Referenz für die ODBC-Funktionen dar.  
   
- Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber entspricht der ODBC 3.51-Spezifikation und bei Verwendung des Windows 7-SDK der ODBC 3.8-Spezifikation. Eine umfassende Referenz für ODBC-Anzeigen der [ODBC Programmer's Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
+ Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber entspricht der ODBC 3.51-Spezifikation und bei Verwendung des Windows 7-SDK der ODBC 3.8-Spezifikation. Eine umfassende ODBC-Referenz finden Sie in der [ODBC Programmer es Reference](https://go.microsoft.com/fwlink/?LinkId=45250) online.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62715087"
   
 -   [SQLFreeHandle](sqlfreehandle.md)  
   
--   [SQLFreeStmt](sqlfreestmt.md)  
+-   ['SQLFreeStmt'](sqlfreestmt.md)  
   
 -   [SQLGetConnectAttr](sqlgetconnectattr.md)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62715087"
   
 -   [SQLGetInfo](sqlgetinfo.md)  
   
--   [SQLGetStmtAttr](sqlgetstmtattr.md)  
+-   ['SQLGetStmtAttr'](sqlgetstmtattr.md)  
   
 -   [SQLGetTypeInfo](sqlgettypeinfo.md)  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62715087"
   
 -   [SQLProcedureColumns](sqlprocedurecolumns.md)  
   
--   [SQLProcedures](sqlprocedures.md)  
+-   ['SQLProcedures'](sqlprocedures.md)  
   
 -   [SQLPutData](sqlputdata.md)  
   
@@ -123,16 +123,16 @@ ms.locfileid: "62715087"
   
 -   [SQLSetStmtAttr](sqlsetstmtattr.md)  
   
--   [SQLSpecialColumns](sqlspecialcolumns.md)  
+-   ['SQLSpecialColumns'](sqlspecialcolumns.md)  
   
--   [SQLStatistics](../statistics/statistics.md)  
+-   ['SQLStatistics'](../statistics/statistics.md)  
   
 -   [SQLTablePrivileges](sqltableprivileges.md)  
   
 -   [SQLTables](sqltables.md)  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server Native Client &#40;ODBC&#41; Verweis](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [SQL Server Native Client &#40;ODBC-&#41; Referenz](../../database-engine/dev-guide/sql-server-native-client-odbc-reference.md)   
  [Erstellen von Anwendungen mit SQL Server Native Client](../native-client/applications/building-applications-with-sql-server-native-client.md)  
   
   

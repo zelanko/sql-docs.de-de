@@ -1,5 +1,5 @@
 ---
-title: Unterstützung für verteilte Abfragen in Schemarowsets | Microsoft-Dokumentation
+title: Unterstützung verteilter Abfragen in Schemarowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 24411ceb757414f1a70f0f10bdf5b2c7660e2cd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62667596"
 ---
 # <a name="distributed-query-support-in-schema-rowsets"></a>Verteilte Abfrageunterstützung für Schemarowsets
-  Zur Unterstützung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verteilte Abfragen, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter **IDBSchemaRowset** Schnittstelle gibt Metadaten auf Verbindungsservern zurück.  
+  Zur unter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Stützung verteilter Abfragen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gibt die **IDBSchemaRowset** -Schnittstelle von Native Client OLE DB-Anbieter Metadaten auf Verbindungs Servern zurück.  
   
- Wenn die DBPROPSET_SQLSERVERSESSION-Eigenschaft SSPROP_QUOTEDCATALOGNAMES auf VARIANT_TRUE festgelegt wurde, kann für den Katalognamen ein Bezeichner in Anführungszeichen angegeben werden (beispielsweise "my.catalog"). Bei der Ausgabe eines Schemarowsets angegeben von Catalog, beschränken die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter erkennt einen zweiteiligen Namen mit dem verknüpften Server und Katalog-Namen. Angeben von für die Schemarowsets in der folgenden Tabelle, eine mit dem zweiteiligen Katalognamens in Form _Linked_server_ **.** _Katalog_ Ausgabe auf den betreffenden Katalog des genannten Verbindungsservers beschränkt.  
+ Wenn die DBPROPSET_SQLSERVERSESSION-Eigenschaft SSPROP_QUOTEDCATALOGNAMES auf VARIANT_TRUE festgelegt wurde, kann für den Katalognamen ein Bezeichner in Anführungszeichen angegeben werden (beispielsweise "my.catalog"). Wenn die Schemarowset-Ausgabe nach Katalog [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eingeschränkt wird, erkennt der Native Client OLE DB-Anbieter einen zweiteiligen Namen, der den Verbindungs Server und den Katalognamen enthält. Geben Sie für die Schemarowsets in der folgenden Tabelle einen zweiteiligen Katalognamen als _linked_server_an **.** der _Katalog_ schränkt die Ausgabe in den entsprechenden Katalog des benannten Verbindungs Servers ein.  
   
 |Schemarowset|Katalogeinschränkung|  
 |-------------------|-------------------------|  
@@ -43,10 +43,10 @@ ms.locfileid: "62667596"
 > [!NOTE]  
 >  Zur Beschränkung eines Schemarowsets auf alle Kataloge eines Verbindungsservers, verwenden Sie die Syntax *linked_server* (wobei der Punkt als Trennzeichen Teil der Namensangabe ist). Diese Syntax ist gleichbedeutend mit der Angabe von NULL für die Katalognamensbeschränkung und wird auch verwendet, wenn der Verbindungsserver eine Datenquelle angibt, die Kataloge nicht unterstützt.  
   
- Die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert das Schemarowset LINKEDSERVERS, Rückgabe einer Liste von OLE DB-Datenquellen, die als Verbindungsserver registriert.  
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter definiert das Schemarowset LINKEDSERVERS und gibt eine Liste der OLE DB Datenquellen zurück, die als Verbindungs Server registriert sind.  
   
-## <a name="see-also"></a>Siehe auch  
- [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](schema-rowset-support-ole-db.md)   
- [LINKEDSERVERS-Rowset &#40;OLE-DB&#41;](schema-rowsets-linkedservers-rowset.md)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Schemarowset-Unterstützung &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)   
+ [LINKEDSERVERS-Rowset &#40;OLE DB&#41;](schema-rowsets-linkedservers-rowset.md)  
   
   

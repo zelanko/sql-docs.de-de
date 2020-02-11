@@ -1,5 +1,5 @@
 ---
-title: Konfigurieren von Measureeigenschaften | Microsoft-Dokumentation
+title: Konfigurieren von Measure-Eigenschaften | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -42,10 +42,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b1acd9e33865f1f60c1d1134e3173af4e4a562b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66076605"
 ---
 # <a name="configure-measure-properties"></a>Konfigurieren von Measureeigenschaften
@@ -58,7 +58,8 @@ ms.locfileid: "66076605"
   
 |Eigenschaft|Definition|  
 |--------------|----------------|  
-|`AggregateFunction`|Erforderlich. Bestimmt, wie Measures aggregiert werden. `Sum` ist die Standardaggregation. Weitere Informationen und eine Beschreibung zu den einzelnen Funktionen finden Sie unter [Use Aggregate Functions](use-aggregate-functions.md) .|  
+|`AggregateFunction`|Erforderlich. Bestimmt, wie Measures aggregiert werden. 
+  `Sum` ist die Standardaggregation. Weitere Informationen und eine Beschreibung zu den einzelnen Funktionen finden Sie unter [Use Aggregate Functions](use-aggregate-functions.md) .|  
 |`DataType`|Erforderlich. Gibt den Datentyp der zugrunde liegenden Faktentabellenspalte an, an die das Measure gebunden ist. Dieser Wert wird standardmäßig aus der Quellspalte geerbt.|  
 |`Description`|Stellt eine Beschreibung des Measures bereit, das in Clientanwendungen möglicherweise offen gelegt wird.|  
 |`DisplayFolder`|Gibt den Ordner an, in dem das Measure angezeigt wird, wenn Benutzer die Verbindung zu dem Cube erstellen. Wenn ein Cube viele Measures enthält, können Sie sie mithilfe von Anzeigeordnern kategorisieren und dem Benutzer das Durchsuchen erleichtern.|  
@@ -69,8 +70,8 @@ ms.locfileid: "66076605"
 |`Source`|Erforderlich. Gibt die Spalte in der Datenquellensicht an, an die das Measure gebunden ist. Siehe [Datenquellen und Bindungen &#40;SSAS – mehrdimensional&#41;](data-sources-and-bindings-ssas-multidimensional.md).|  
 |`Visible`|Bestimmt die Sichtbarkeit des Measures in Clientanwendungen.|  
   
-## <a name="see-also"></a>Siehe auch  
- [Konfigurieren von Measuregruppeneigenschaften](configure-measure-group-properties.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Konfigurieren von Measure-Gruppen Eigenschaften](configure-measure-group-properties.md)   
  [Ändern von Measures](../lesson-3-1-modifying-measures.md)  
   
   

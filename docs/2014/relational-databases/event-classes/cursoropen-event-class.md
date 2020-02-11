@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a9cdb7fbddd53eb9e2dfbc36d7a86b6bac2619bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663453"
 ---
 # <a name="cursoropen-event-class"></a>CursorOpen-Ereignisklasse
@@ -28,7 +28,7 @@ ms.locfileid: "62663453"
   
 ## <a name="cursoropen-event-class-data-columns"></a>Datenspalten der CursorOpen-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
@@ -39,7 +39,7 @@ ms.locfileid: "62663453"
 |**GroupID**|**int**|ID der Arbeitsauslastungsgruppe, in der das SQL-Ablaufverfolgungsereignis ausgelöst wird.|66|Ja|  
 |**Handle**|**int**|Eine ganze Zahl, die von ODBC, OLE DB oder DB-Library zum Koordinieren der Ausführung mit dem Server verwendet wird.|33|Ja|  
 |**HostName**|**nvarchar**|Der Name des Computers, auf dem der Client ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Hostname vom Client bereitgestellt wird. Der Hostname kann mithilfe der HOST_NAME-Funktion bestimmt werden.|8|Ja|  
-|**IntegerData**|**int**|Cursortyp. Die Werte sind:<br /><br /> 1 = Keyset<br /><br /> 2 = Dynamisch<br /><br /> 4 = Vorwärtscursor<br /><br /> 8 = Statisch<br /><br /> 16 = Schneller Vorlauf|25|Ja|  
+|**IntegerData**|**int**|Cursortyp. Werte:<br /><br /> 1 = Keyset<br /><br /> 2 = Dynamisch<br /><br /> 4 = Vorwärtscursor<br /><br /> 8 = Statisch<br /><br /> 16 = Schneller Vorlauf|25|Ja|  
 |**IsSystem**|**int**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist. 1 = System, 0 = Benutzer.|60|Ja|  
 |**LoginName**|**nvarchar**|Der Anmeldename des Benutzers ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherheitsanmeldung oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldeinformationen im Format DOMAIN\username).|11|Ja|  
 |**LoginSid**|**image**|Die Sicherheits-ID (Security Identifier, SID) des angemeldeten Benutzers. Diese Informationen finden Sie in der **sys.server_principals** -Katalogsicht. Die SID ist für jede Anmeldung beim Server eindeutig.|41|Ja|  
@@ -53,7 +53,7 @@ ms.locfileid: "62663453"
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
 |**XactSequence**|**bigint**|Das Token zur Beschreibung der aktuellen Transaktion.|50|Ja|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Cursor](../cursors.md)  

@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 37a148393d66a7434fda4461b704ee81b7e05223
-ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/23/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72798080"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Registrieren einer Instanz von SQL Server (SQL Server-Hilfsprogramm)
@@ -67,7 +67,7 @@ ms.locfileid: "72798080"
  Weitere Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogrammkonzepten finden Sie unter [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md).  
   
 > [!IMPORTANT]  
->  Der Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramms kann parallel mit Sammlungssätzen verwendet werden, die nicht zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm gehören. Eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann also von anderen Sammlungssätzen überwacht werden, während sie einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm zugeordnet ist. Beachten Sie jedoch, dass alle Sammlungssätze für die verwaltete Instanz ihre Daten in das UMDW (Utility Management Data Warehouse) hochladen. Weitere Informationen finden Sie unter [Überlegungen zum Ausführen von Hilfsprogramm- und Nicht-Hilfsprogramm-Sammlungssätzen auf derselben Instanz von SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) und [Konfigurieren des Data Warehouse für den Steuerungspunkt für das Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
+>  Der Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms kann parallel mit Sammlungssätzen verwendet werden, die nicht zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm gehören. Eine verwaltete Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann also von anderen Sammlungssätzen überwacht werden, während sie einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm zugeordnet ist. Beachten Sie jedoch, dass alle Sammlungssätze für die verwaltete Instanz ihre Daten in das UMDW (Utility Management Data Warehouse) hochladen. Weitere Informationen finden Sie unter [Überlegungen zum Ausführen von Hilfsprogramm- und Nicht-Hilfsprogramm-Sammlungssätzen auf derselben Instanz von SQL Server](run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) und [Konfigurieren des Data Warehouse für den Steuerungspunkt für das Hilfsprogramm &#40;SQL Server-Hilfsprogramm&#41;](configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
 ## <a name="wizard-steps"></a>Schritte des Assistenten  
  Die folgenden Abschnitte enthalten ausführliche Informationen zu jeder Seite im Assistentenworkflow. Klicken Sie auf einen Link, um zu den Details für eine Assistentenseite zu navigieren. Weitere Informationen zu einem PowerShell-Skript dieses Vorgangs finden Sie im PowerShell- [Beispiel](#PowerShell_enroll).  
@@ -92,17 +92,17 @@ ms.locfileid: "72798080"
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
 ##  <a name="Instance_name"></a> Angeben der Instanz von SQL Server  
- Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus dem Verbindungs Dialogfeld auszuwählen, klicken Sie auf **verbinden...** . Geben Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanznamen im Format "computername\instancename" an. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen, klicken Sie auf **Verbinden**. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
-##  <a name="Connection_dialog"></a> Verbindungsdialogfeld  
+##  <a name="Connection_dialog"></a> Dialogfeld „Verbindung“  
  Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
 > [!NOTE]  
 >  Wenn die Verbindung verschlüsselt ist, wird dieser Verbindungstyp verwendet. Wenn die Verbindung nicht verschlüsselt ist, stellt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm über eine verschlüsselte Verbindung erneut eine Verbindung her.  
   
- Klicken Sie auf **Verbinden**, um den Vorgang fortzusetzen.  
+ Klicken Sie auf **Verbinden...** , um den Vorgang fortzusetzen.  
   
 ##  <a name="Proxy_configuration"></a> Konto des Hilfsprogramm-Sammlungssatzes  
  Geben Sie ein Windows-Domänenkonto an, um den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms auszuführen. Dieses Konto wird als Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms verwendet. Alternativ können Sie das vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto verwenden. Um die Überprüfungsanforderungen zu erfüllen, geben Sie das Konto unter Beachtung folgender Richtlinien an.  
@@ -145,9 +145,9 @@ ms.locfileid: "72798080"
   
  Einstellungen verwalteter Instanzen:  
   
--   Name der SQL Server-Instanz: ComputerName\InstanceName  
+-   SQL Server-Instanzname: ComputerName\InstanceName (Computername\Instanzname)  
   
--   Konto des Hilfsprogramm-Sammlungssatzes: DomainName\UserName  
+-   Konto des Hilfsprogramm-Sammlungssatzes: DomainName\UserName (Domänenname\Benutzername)  
   
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "72798080"
 >   
 >  Beim Ausführen einer Transact-SQL-Anweisung oder eines Batches ist eine Ausnahme aufgetreten. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Weitere Informationen: Konnte keine Informationen zu Windows NT Gruppe/Benutzer abrufen '\<DomainName\AccountName>', Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
+>  Zusätzliche Informationen:  Die Informationen über Windows NT-Gruppe oder -Benutzer „\<<DomainName\AccountName>“ (Domänenname\Kontoname) konnten nicht abgerufen werden. Fehlercode 0x5. (Microsoft SQL Server, Fehler: 15404)  
 >   
 >  Weitere Informationen zur Fehlerbehebung finden Sie unter [Problembehandlung beim SQL Server-Hilfsprogramm](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   
@@ -194,7 +194,7 @@ $InstanceConnection = new-object -Type Microsoft.SqlServer.Management.Sdk.Sfc.Sq
 $ManagedInstance = $Utility.EnrollInstance($InstanceConnection, "ProxyAccount", "ProxyPassword");  
 ```  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](sql-server-utility-features-and-tasks.md)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Problembehandlung beim SQL Server-Hilfsprogramm](../../database-engine/troubleshoot-the-sql-server-utility.md)  

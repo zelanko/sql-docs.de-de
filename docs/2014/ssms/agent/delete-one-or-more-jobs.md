@@ -17,20 +17,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0d9df271c457cb0f05f9fdfe70952b6d02224963
-ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/22/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "72783260"
 ---
 # <a name="delete-one-or-more-jobs"></a>Löschen eines oder mehrerer Aufträge
-  In diesem Thema wird beschrieben, wie Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder SQL Server Management Objects löschen können.  
+  In diesem Thema wird beschrieben, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie-Agent [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Aufträge [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in [!INCLUDE[tsql](../../includes/tsql-md.md)]mithilfe von, oder SQL Server Management Objects gelöscht werden.  
   
  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungsmaßnahmen  
+##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Security  
+###  <a name="Security"></a> Sicherheit  
  Sie können nur Aufträge löschen, die in Ihrem Besitz sind, es sei denn, Sie sind ein Mitglied der festen Serverrolle **sysadmin** .  
   
  
@@ -78,7 +78,7 @@ ms.locfileid: "72783260"
     GO  
     ```  
   
- Weitere Informationen finden Sie unter [sp_delete_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
+ Weitere Informationen finden Sie unter [sp_delete_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-job-transact-sql).  
 
 ##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
 

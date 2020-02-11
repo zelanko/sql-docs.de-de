@@ -13,13 +13,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62762331"
 ---
-# <a name="mssqlserver7906"></a>MSSQLSERVER_7906
+# <a name="mssqlserver_7906"></a>MSSQLSERVER_7906
     
 ## <a name="details"></a>Details  
   
@@ -30,7 +30,7 @@ ms.locfileid: "62762331"
 |Ereignisquelle|MSSQLSERVER|  
 |Komponente|SQLEngine|  
 |Symbolischer Name|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Meldungstext|Datenbankfehler: Die Datei 'FILE' ist keine gültige Filestream-Datei.|  
+|Meldungstext|Datenbankfehler: Die Datei 'FILE' ist keine gültige FileStream-Datei.|  
   
 ## <a name="explanation"></a>Erklärung  
  Außer einigen speziellen Dateien wie filestream.hdr sollten keine Dateien direkt unter dem Filestream-Datenspeicher vorhanden sein.  
@@ -48,6 +48,6 @@ ms.locfileid: "62762331"
  Stellen Sie die Datenbank aus der Sicherung wieder her, wenn das Problem nicht hardwarebezogen ist und eine bekannte intakte Sicherungskopie vorhanden ist.  
   
 ### <a name="run-dbcc-checkdb"></a>Ausführen von DBCC CHECKDB  
- Nicht verfügbar. Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
+ Nicht zutreffend Dieser Fehler kann nicht repariert werden. Wenn Sie die Datenbank nicht mithilfe einer Sicherung wiederherstellen können, wenden Sie sich an den Kundenservice und -support von [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
   

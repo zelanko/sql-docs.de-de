@@ -11,19 +11,19 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62653783"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugriff auf den Webdienst
+# <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugreifen auf den Webdienst
   Nachdem Sie dem Projekt einen Verweis auf den Berichtsserver-Webdienst hinzugefügt haben, besteht der nächste Schritt darin, eine Instanz der Proxyklasse des Webdiensts zu erstellen. Auf die Methoden des Webdiensts kann durch Aufrufen der Methoden in der Proxyklasse zugegriffen werden. Wenn diese Methoden von Ihrer Anwendung aufgerufen werden, behandelt der von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generierte Proxyklassencode die Kommunikation zwischen Ihrer Anwendung und dem Webdienst.  
   
  Zuerst erstellen Sie <xref:ReportService2010.ReportingService2010> - eine Instanz der Proxyklasse des Webdiensts. Dann rufen Sie die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts mithilfe der Proxyklasse auf. Sie verwenden diesen Aufruf zum Abrufen des Namens und der Beschreibung eines der Beispielsberichte, Company Sales.  
   
 > [!NOTE]  
->  Beim Zugreifen auf einen Webdienst, der unter [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services ausgeführt wird, müssen Sie "$SQLExpress" an den "ReportServer"-Pfad anfügen. Zum Beispiel:  
+>  Beim Zugreifen auf einen Webdienst, der unter [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services ausgeführt wird, müssen Sie "$SQLExpress" an den "ReportServer"-Pfad anfügen. Beispiel:  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62653783"
   
 4.  Speichern Sie die Projektmappe.  
   
- Der Beispielcode in dieser exemplarischen Vorgehensweise verwendet die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts, um Eigenschaften des Beispielberichts Company Sales 2012 abzurufen. Die <xref:ReportService2010.ReportingService2010.GetProperties%2A> Methode akzeptiert zwei Argumente: den Namen des Berichts für die abzurufenden Informationen und ein Array von **Property []** Objekten, das die Namen der Eigenschaften enthält, dessen Werte Sie abrufen möchten. Die Methode gibt auch ein Array von **Property[]** -Objekten zurück, die die Namen und Werte der Eigenschaften enthalten, die im Eigenschaftenargument angegeben sind.  
+ Der Beispielcode in dieser exemplarischen Vorgehensweise verwendet die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts, um Eigenschaften des Beispielberichts Company Sales 2012 abzurufen. Die <xref:ReportService2010.ReportingService2010.GetProperties%2A> -Methode benötigt zwei Argumente: den Namen des Berichts, für den Sie Eigenschafts Informationen abrufen möchten, und ein Array von **Property []** -Objekten, das die Namen der Eigenschaften enthält, deren Werte Sie abrufen möchten. Die Methode gibt auch ein Array von **Property[]** -Objekten zurück, die die Namen und Werte der Eigenschaften enthalten, die im Eigenschaftenargument angegeben sind.  
   
 > [!NOTE]  
 >  Wenn Sie ein leeres **Property[]** -Array für das Eigenschaftenargument angeben, werden alle verfügbaren Eigenschaften zurückgegeben.  
@@ -122,8 +122,8 @@ ms.locfileid: "62653783"
   
  Weitere Informationen zum Erstellen und Verwenden einer Proxyklasse für den Berichtsserver-Webdienst finden Sie unter [Creating the Web Service Proxy](../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Lektion 4: Ausführen der Anwendung &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)   
- [Zugreifen auf die Berichtsserver-Webdienst mit Visual Basic oder Visual C#&#35; &#40;SSRS-Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
+ [Zugreifen auf den Report Server-Webdienst mithilfe von Visual Basic oder Visual C&#35; &#40;SSRS-Tutorial&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

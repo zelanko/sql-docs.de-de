@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9918aca57caaef0dc460e810f5ed5ca2d1106ac3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62663809"
 ---
 # <a name="broker-event-category"></a>Broker (Ereigniskategorie)
@@ -28,22 +28,22 @@ ms.locfileid: "62663809"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Description|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Broker:Activation (Ereignisklasse)](broker-activation-event-class.md)|Ein Ereignis, das generiert wird, wenn durch eine Warteschlangenüberwachung eine gespeicherte Aktivierungsprozedur gestartet wird.|  
-|[Broker:Connection (Ereignisklasse)](broker-connection-event-class.md)|Ein Ereignis, das generiert wird, um den Status einer von Service Broker verwalteten Transportverbindung zu melden.|  
-|[Broker:Conversation (Ereignisklasse)](broker-conversation-event-class.md)|Ein Ereignis, das generiert wird, um den Fortschritt einer Konversation zu melden.|  
-|[Broker:Conversation Group (Ereignisklasse)](broker-conversation-group-event-class.md)|Ein Ereignis, das generiert wird, wenn die Datenbank eine Konversationsgruppe erstellt oder löscht.|  
+|[Broker:Connection-Ereignisklasse](broker-connection-event-class.md)|Ein Ereignis, das generiert wird, um den Status einer von Service Broker verwalteten Transportverbindung zu melden.|  
+|[Broker:Conversation-Ereignisklasse](broker-conversation-event-class.md)|Ein Ereignis, das generiert wird, um den Fortschritt einer Konversation zu melden.|  
+|[Broker:Conversation Group-Ereignisklasse](broker-conversation-group-event-class.md)|Ein Ereignis, das generiert wird, wenn die Datenbank eine Konversationsgruppe erstellt oder löscht.|  
 |[Broker:Corrupted Message (Ereignisklasse)](broker-corrupted-message-event-class.md)|Ein Ereignis, das zum Angeben einer fehlerhaften, von der Datenbank erhaltenen Nachricht generiert wird.|  
-|[Broker:Forwarded Message Dropped (Ereignisklasse)](broker-forwarded-message-dropped-event-class.md)|Ein Ereignis, das generiert wird, wenn SQL Server eine Service Broker-Nachricht löscht, die hätte weitergeleitet werden sollen.|  
-|[Broker:Forwarded Message Sent (Ereignisklasse)](broker-forwarded-message-sent-event-class.md)|Ein Ereignis, das generiert wird, wenn SQL Server eine Service Broker-Nachricht weiterleitet.|  
+|[Broker:Forwarded Message Dropped-Ereignisklasse](broker-forwarded-message-dropped-event-class.md)|Ein Ereignis, das generiert wird, wenn SQL Server eine Service Broker-Nachricht löscht, die hätte weitergeleitet werden sollen.|  
+|[Broker:Forwarded Message Sent-Ereignisklasse](broker-forwarded-message-sent-event-class.md)|Ein Ereignis, das generiert wird, wenn SQL Server eine Service Broker-Nachricht weiterleitet.|  
 |[Broker:Message Classify (Ereignisklasse)](broker-message-classify-event-class.md)|Ein Ereignis, das generiert wird, wenn Service Broker das Routing für eine Nachricht bestimmt.|  
 |[Broker:Message Drop (Ereignisklasse)](broker-message-drop-event-class.md)|Ein Ereignis, das generiert wird, wenn Service Broker eine empfangene Nachricht nicht beibehalten kann, die in dieser Instanz an einen Dienst weitergeleitet werden sollte.|  
 |[Broker:Remote Message Ack (Ereignisklasse)](broker-remote-message-ack-event-class.md)|Ein Ereignis, das generiert wird, wenn Service Broker eine Nachrichtenbestätigung sendet oder empfängt.|  
   
  Service Broker bietet auch zwei Sicherheitsüberwachungsereignisse. Weitere Informationen zu diesen Ereignissen finden Sie unter [Audit Broker Login (Ereignisklasse)](audit-broker-login-event-class.md) und [Audit Broker Conversation (Ereignisklasse)](audit-broker-conversation-event-class.md).  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Sicherheitsüberwachung-Ereigniskategorie](https://docs.microsoft.com/bi-reference/trace-events/security-audit-event-category)  
   
   

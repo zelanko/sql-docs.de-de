@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a76c3675ceb3cf84c7812b4f9d95d61f9f830a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62661951"
 ---
 # <a name="objects-event-category"></a>Objekte (Ereigniskategorie)
@@ -28,14 +28,14 @@ ms.locfileid: "62661951"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|Beschreibung|  
+|Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Auto Stats-Ereignisklasse](auto-stats-event-class.md)|Gibt an, dass eine automatische Aktualisierung der Index- und Spaltenstatistiken aufgetreten ist.|  
 |[Object:Altered-Ereignisklasse](object-altered-event-class.md)|Gibt an, dass ein Objekt geändert wurde, z. B. durch die ALTER DATABASE-Anweisung oder die ALTER TABLE-Anweisung.|  
 |[Object:Created-Ereignisklasse](object-created-event-class.md)|Gibt an, dass ein Objekt erstellt wurde, z. B. durch die CREATE INDEX-Anweisung, die CREATE TABLE-Anweisung oder die CREATE DATABASE-Anweisung.|  
 |[Object:Deleted-Ereignisklasse](object-deleted-event-class.md)|Gibt an, dass ein Objekt gelöscht wurde, z. B. durch die DROP INDEX-Anweisung oder die DROP TABLE-Anweisung.|  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)  
   
   

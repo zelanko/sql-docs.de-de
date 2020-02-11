@@ -36,22 +36,22 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc3a08e707f6b51059145c69fdee15f78c933135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "66091232"
 ---
 # <a name="using-reports"></a>Verwenden von Berichten
   Für jede Komponente wird ein separater Bericht generiert und bei Bedarf für jede Instanz, die der Analyse-Assistent des Upgrade Advisors auf einem Server analysiert. Der Bericht enthält Details über bekannte Probleme, die eine Aktualisierung beeinflussen. Er enthält zudem Links zu Informationen und Maßnahmenvorschlägen zur Behebung der identifizierten Probleme.  
   
 > [!NOTE]  
->  Wenn der Upgrade Advisor-Berichts-Viewer keine Berichte im standardberichtsverzeichnis findet, können Sie einen Bericht aus einem anderen Verzeichnis laden, indem Sie mit der **geöffneten Bericht** Link.  
+>  Wenn der Berichts-Viewer des Upgrade Advisors keine Berichte im Standardverzeichnis für Berichte findet, können Sie einen Bericht mithilfe des Links **Bericht öffnen** aus einem anderen Verzeichnis laden.  
   
 ## <a name="viewing-reports"></a>Anzeigen von Berichten  
- Mit dem Berichts-Viewer des Upgrade Advisors zeigen Sie Berichte des Upgrade Advisors an. Klicken Sie zum Anzeigen von Berichten auf der Startseite des Upgrade Advisors **Viewer des Upgrade Advisors Bericht starten**.  
+ Mit dem Berichts-Viewer des Upgrade Advisors zeigen Sie Berichte des Upgrade Advisors an. Klicken Sie zum Anzeigen von Berichten auf der Startseite des Upgrade Advisors auf Berichts-Viewer des Upgrade **Advisors starten**.  
   
- Nachdem Sie einen Bericht für einen Server geladen haben, können Sie eine Komponente wählen, deren Updateprobleme Sie anzeigen möchten. Sie können einen Filter Anwenden der **Filtern nach** Feld, um Folgendes anzuzeigen:  
+ Nachdem Sie einen Bericht für einen Server geladen haben, können Sie eine Komponente wählen, deren Updateprobleme Sie anzeigen möchten. Sie können einen Filter aus dem Feld **Filtern nach** anwenden, um Folgendes anzuzeigen:  
   
 -   Alle Probleme  
   
@@ -65,27 +65,27 @@ ms.locfileid: "66091232"
   
 -   Ungelöste Probleme  
   
- Wenn der Bericht mehr als 20 Probleme enthält, können Sie wechseln zur nächsten oder vorherigen Gruppe von Problemen durch Klicken auf **nächsten 20** oder **vorherige 20** oben oder unteren Rand der Liste der Probleme.  
+ Wenn für den Bericht mehr als 20 Probleme vorliegen, können Sie zur nächsten oder vorherigen Gruppe von Problemen wechseln, indem Sie oben oder unten in der Liste Probleme auf **weiter 20** oder **vorherige 20** klicken.  
   
- Sie können bis zu fünf gespeicherte Berichte anzeigen, indem Sie die Berichte aus der **Bericht** im Dropdown Listenfeld. Die Berichte werden nach dem Zeitstempel für ihren Generierungszeitpunkt aufgeführt.  
+ Sie können bis zu fünf gespeicherte Berichte anzeigen, indem Sie im Dropdown-Listenfeld **Bericht** die Berichte auswählen. Die Berichte werden nach dem Zeitstempel für ihren Generierungszeitpunkt aufgeführt.  
   
-## <a name="report-format"></a>Berichtsformat  
+## <a name="report-format"></a>Berichtformat  
  Der Berichts-Viewer zeigt Berichtsprobleme in drei Spalten an. Jedes Problem ist reduzierbar, damit Sie die Beschreibung ausblenden können, um nur die Schlüsselinformationen zu sehen.  
   
- Die erste Spalte ist der **Wichtigkeit** Spalte. Symbole geben die Wichtigkeit jedes Problems an: Ein roter Kreis mit einem X steht für blockierende oder wichtige Probleme und ein gelbes Dreieck mit einem Ausrufungszeichen für Warnungen oder Informationen. Die zweite Spalte, **Zeitpunkt der Behebung**, gibt an, wenn das Problem behoben werden muss. Sie können den Bericht nach sortieren die **Wichtigkeit** oder **Zeitpunkt der Behebung** Spalte. Die dritte Spalte **Beschreibung**, wird der Titel des Problems.  
+ Die erste Spalte ist die Spalte **Wichtigkeit** . Symbole geben die Wichtigkeit jedes Problems an: Ein roter Kreis mit einem X steht für blockierende oder wichtige Probleme und ein gelbes Dreieck mit einem Ausrufungszeichen für Warnungen oder Informationen. Die zweite Spalte gibt **an**, wann das Problem behoben werden muss. Sie können den Bericht entweder nach der **Wichtigkeit** oder **nach dem Zeitpunkt der Korrektur** der Spalte sortieren. In der dritten Spalte, **Beschreibung**, wird der Titel des Problems aufgelistet.  
   
- Sie können die Anzeige eines Problems erweitern, um zusätzliche Informationen, einen Link zu detaillierten Informationen über Abhilfe und einen Link zu Problemdetails einzublenden. Wenn Sie den Link anklicken, um detaillierte Informationen über das Problem zu erhalten, wird ein Hilfethema mit Informationen darüber und Anweisungen zur Behebung des Problems angezeigt. Nachdem Sie ein Problem behoben haben, oder um Ihre maßnahmenelemente zu verwalten, Sie Probleme, die als abgeschlossen, durch Auswählen markieren können der **dieses Problem wurde behoben** Kontrollkästchen. Wenn Sie die gelösten Probleme aus der Liste der Upgradeprobleme entfernen möchten, klicken Sie auf **aktualisieren**. Das Problem wird nicht erneut angezeigt, bis Sie entweder den Analyse-Assistenten für dieselbe Komponente ausführen oder Anwenden der **behobene Probleme** aus dem Filtern der **Filtern nach** Option.  
+ Sie können die Anzeige eines Problems erweitern, um zusätzliche Informationen, einen Link zu detaillierten Informationen über Abhilfe und einen Link zu Problemdetails einzublenden. Wenn Sie den Link anklicken, um detaillierte Informationen über das Problem zu erhalten, wird ein Hilfethema mit Informationen darüber und Anweisungen zur Behebung des Problems angezeigt. Nachdem Sie ein Problem behoben oder die Aktions Elemente verwaltet haben, können Sie die Probleme als abgeschlossen markieren, indem Sie das Kontrollkästchen **dieses Problem wurde gelöst** auswählen. Wenn Sie die aufgelösten Probleme aus der Liste der Upgradeprobleme entfernen möchten, klicken Sie auf **Aktualisieren**. Das Problem wird erst wieder angezeigt, wenn Sie den Analyse-Assistenten des Upgrade Advisors für dieselbe Komponente ausführen oder den Filter für **aufgelöste Probleme** aus der Option **Filtern nach** anwenden.  
   
 ## <a name="report-files"></a>Berichtsdateien  
- Analyse Assistent von Upgrade Advisor erzeugt Berichte im die eigene\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor\110\Reports-Verzeichnis und erstellt ein Unterverzeichnis für jeden Server, den Sie analysieren. Die Berichtdateien sind XML-Dateien, die einer bestimmten Benennungskonvention entsprechen. Wenn Sie den Berichts-Viewer des Upgrade Advisors starten, werden die Berichtsdateien im Standardverzeichnis angezeigt. Wenn Sie Berichtsdateien in diesen Ordner kopieren, müssen sie der Benennungskonvention entsprechen, da der Berichts-Viewer sie sonst nicht automatisch anzeigt.  
+ Der Analyse-Assistent des Upgrade Advisors erstellt Berichte im Verzeichnis\\ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] My Documents Upgrade advisor\110\reports und erstellt ein Unterverzeichnis für jeden Server, den Sie analysieren. Die Berichtdateien sind XML-Dateien, die einer bestimmten Benennungskonvention entsprechen. Wenn Sie den Berichts-Viewer des Upgrade Advisors starten, werden die Berichtsdateien im Standardverzeichnis angezeigt. Wenn Sie Berichtsdateien in diesen Ordner kopieren, müssen sie der Benennungskonvention entsprechen, da der Berichts-Viewer sie sonst nicht automatisch anzeigt.  
   
  Wenn Sie die Informationen an andere Personen weitergeben möchten, können Sie ihnen den XML-Bericht senden. Wenn Sie eine andere Anwendung verwenden möchten, können Sie den Bericht alternativ in eine Datei im CSV-Format exportieren, anhand derer Sie eine Kalkulationstabelle, eine Textdatei oder eine E-Mail-Nachricht erstellen können.  
   
-## <a name="see-also"></a>Siehe auch  
- [Vorgehensweise: Zeigen Sie einen der Upgrade Advisor-Bericht](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Vorgehensweise: Anzeigen eines Berichts des Upgrade Advisors](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
  [Vorgehensweise: Exportieren von Berichten](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Vorgehensweise: Filterberichte](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Vorgehensweise: Filtern von Berichten](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Beheben von Upgradeproblemen](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;neu&#93;](sql-server-2014-upgrade-advisor.md)  
+ [SQL Server 2014 Upgrade Advisor &#91;neuen&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

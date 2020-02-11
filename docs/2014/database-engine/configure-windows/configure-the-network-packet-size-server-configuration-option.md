@@ -16,14 +16,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bd992f16158e7286db668256dc5963d83dbd4b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62786999"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Netzwerkpaketgröße
-  In diesem Thema wird beschrieben, wie so konfigurieren Sie die `network packet size` Serverkonfigurationsoption in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]. Die `network packet size` Option legt fest, die Paketgröße (in Byte), die im gesamten Netzwerk verwendet wird. Pakete sind die Datenabschnitte fester Größe, die Anforderungen und Ergebnisse zwischen Clients und Servern übertragen. Die Standardpaketgröße beträgt 4.096 Bytes.  
+  In diesem Thema wird beschrieben, wie `network packet size` die Server Konfigurationsoption [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von [!INCLUDE[tsql](../../includes/tsql-md.md)]oder konfiguriert wird. Mit `network packet size` der-Option wird die Paketgröße (in Bytes) festgelegt, die im gesamten Netzwerk verwendet wird. Pakete sind die Datenabschnitte fester Größe, die Anforderungen und Ergebnisse zwischen Clients und Servern übertragen. Die Standardpaketgröße beträgt 4.096 Bytes.  
   
 > [!NOTE]  
 >  Sie sollten die Paketgröße nur dann ändern, wenn Sie sicher sind, dass die Leistung dadurch verbessert werden kann. Für die meisten Anwendungen empfiehlt sich die Standardpaketgröße.  
@@ -36,7 +36,7 @@ ms.locfileid: "62786999"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So konfigurieren Sie die Option Netzwerkpaketgröße mit:**  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62786999"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Nachverfolgung:**  [Nach dem Konfigurieren der Option Netzwerkpaketgröße](#FollowUp)  
+-   **Nachverfolgung:**  [Nach dem Konfigurieren der Option „Netzwerkpaketgröße“](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Vorbereitungen  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62786999"
 ####  <a name="Permissions"></a> Berechtigungen  
  Die Ausführungsberechtigungen für **sp_configure** ohne Parameter oder nur mit dem ersten Parameter werden standardmäßig allen Benutzern erteilt. Zum Ausführen von **sp_configure** mit beiden Parametern zum Ändern einer Konfigurationsoption oder zum Ausführen der RECONFIGURE-Anweisung muss einem Benutzer die ALTER SETTINGS-Berechtigung auf Serverebene erteilt worden sein. Die ALTER SETTINGS-Berechtigung ist in den festen Serverrollen **sysadmin** und **serveradmin** eingeschlossen.  
   
-##  <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-configure-the-network-packet-size-option"></a>So konfigurieren Sie die Option Netzwerkpaketgröße  
   
@@ -103,12 +103,12 @@ GO
   
 ```  
   
- Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)angezeigt oder konfiguriert wird.  
+ Weitere Informationen finden Sie unter [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)ausgeführt wird.  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren der Option Netzwerkpaketgröße  
+##  <a name="FollowUp"></a>Nachverfolgung: nach dem Konfigurieren der Option Netzwerk Paketgröße  
  Die Einstellung tritt ohne Neustarten des Servers sofort in Kraft.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [RECONFIGURE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reconfigure-transact-sql)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  

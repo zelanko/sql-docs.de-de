@@ -1,5 +1,5 @@
 ---
-title: Berechnete Measure-Darstellung (tabellarisch) | Microsoft-Dokumentation
+title: Darstellung eines berechneten Measures (tabellarisch) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9fb706a5175a2eb673e8f175a154f681b3af3c43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62757664"
 ---
 # <a name="calculated-measure-representation-tabular"></a>Darstellung eines berechneten Measures (tabellarisch)
@@ -23,7 +23,7 @@ ms.locfileid: "62757664"
 ## <a name="calculated-measure-representation"></a>Darstellung eines berechneten Measures  
   
 ### <a name="calculated-measure-in-amo"></a>Berechnetes Measure in AMO  
- Wenn AMO zum Verwalten eines berechneten Measures in einem tabellarischen Modell verwendet wird, besteht eine 1:1-Entsprechung zwischen dem logischen Objekt des berechneten Measures und einem Measure, das in einem <xref:Microsoft.AnalysisServices.Command>-Objekt des <xref:Microsoft.AnalysisServices.MdxScript>-Objekts definiert ist. Jede **berechnete Measure** ist definiert als eine `CREATE MEASURE` Ausdruck innerhalb einer <xref:Microsoft.AnalysisServices.Command> Objekt aus, und durch ein Semikolon getrennt. Alle berechneten Measures in einem tabellarischen Modell entsprechen der `CREATE MEASURE`-Auflistungszeichenfolge in einem Befehlsobjekt in einem <xref:Microsoft.AnalysisServices.MdxScript>-Objekt. Für jedes berechnete Measure besteht eine 1:1-Zuordnung zu einer <xref:Microsoft.AnalysisServices.CalculationProperty>.  
+ Wenn AMO zum Verwalten eines berechneten Measures in einem tabellarischen Modell verwendet wird, besteht eine 1:1-Entsprechung zwischen dem logischen Objekt des berechneten Measures und einem Measure, das in einem <xref:Microsoft.AnalysisServices.Command>-Objekt des <xref:Microsoft.AnalysisServices.MdxScript>-Objekts definiert ist. Jedes **berechnete Measure** wird als `CREATE MEASURE` Ausdruck innerhalb eines <xref:Microsoft.AnalysisServices.Command> -Objekts definiert und durch ein Semikolon getrennt. Alle berechneten Measures in einem tabellarischen Modell entsprechen der `CREATE MEASURE`-Auflistungszeichenfolge in einem Befehlsobjekt in einem <xref:Microsoft.AnalysisServices.MdxScript>-Objekt. Für jedes berechnete Measure besteht eine 1:1-Zuordnung zu einer <xref:Microsoft.AnalysisServices.CalculationProperty>.  
   
  Der folgende Codeausschnitt veranschaulicht, wie ein berechnetes Measure erstellt wird.  
   

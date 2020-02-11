@@ -17,16 +17,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62768956"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Erstellen eines Ziels mit der Skriptkomponente
   Zielkomponenten dienen im Datenfluss eines [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakets dazu, von Upstreamquellen empfangene Daten und Transformationen in einer Datenquelle zu speichern. Gewöhnlich stellt die Zielkomponente über einen vorhandenen Verbindungs-Manager eine Verbindung mit der Datenquelle her.  
   
- Eine Übersicht über die Skriptkomponente, finden Sie unter [Extending the Data Flow mit der Skriptkomponente] (.. / extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
+ Eine Übersicht über die Skript Komponente finden Sie unter [Erweitern des Datenflusses mit der Skript Komponente] (.). /extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md.  
   
  Die Skriptkomponente und der Infrastrukturcode, den sie generieren, erleichtern Ihnen die Entwicklung benutzerdefinierter Datenflusskomponenten deutlich. Zum Verständnis der Funktionsweise dieser Skriptkomponente kann es jedoch hilfreich sein, sich mit den im Abschnitt [Developing a Custom Data Flow Component (Entwickeln einer benutzerdefinierten Datenflusskomponente)](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md) beschriebenen Schritten für die Entwicklung einer benutzerdefinierten Datenflusskomponente vertraut zu machen, und zwar insbesondere mit [Developing a Custom Destination Component (Entwickeln einer benutzerdefinierten Zielkomponente)](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md).  
   
@@ -57,32 +57,32 @@ ms.locfileid: "62768956"
 ### <a name="configuring-inputs-and-input-columns"></a>Konfigurieren von Eingaben und Eingabespalten  
  Eine Zielkomponente verfügt über eine Eingabe und keine Ausgaben.  
   
- Die Spaltenliste auf der Seite **Eingabespalten** im **Transformations-Editor für Skripterstellung** zeigt die von der Ausgabe der Upstreamkomponente im Datenfluss verfügbaren Spalten an. Wählen Sie die Spalten aus, die Sie speichern möchten.  
+ Auf der Seite **Eingabe Spalten** des **Transformations-Editors für Skript**Erstellung zeigt die Spaltenliste die verfügbaren Spalten aus der Ausgabe der Upstreamkomponente im Datenfluss an. Wählen Sie die Spalten aus, die Sie speichern möchten.  
   
  Weitere Informationen über die Seite **Eingabespalten** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Input Columns Page) (Transformations-Editor für Skripterstellung (Seite „Eingabespalten“))](../script-transformation-editor-input-columns-page.md).  
   
  Auf der Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** wird eine einzelne Eingabe angezeigt, die Sie umbenennen können. Verwenden Sie die im automatisch generierten Code erstellte Accessoreigenschaft, um mit dem Namen in Ihrem Skript auf die Eingabe zu verweisen.  
   
- Weitere Informationen über die Seite **Eingaben und Ausgaben** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).  
+ Weitere Informationen über die Seite **Eingaben und Ausgaben** des **Transformations-Editors für Skripterstellung** finden Sie unter [Script Transformation Editor (Inputs and Outputs Page) (Transformations-Editor für Skripterstellung (Seite „Eingaben und Ausgaben“))](../script-transformation-editor-inputs-and-outputs-page.md).  
   
 ### <a name="adding-variables"></a>Hinzufügen von Variablen  
- Wenn Sie die vorhandenen Variablen in Ihrem Skript verwenden möchten, können Sie hinzufügen, sie in der `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftsfeldern für die **Skript** auf der Seite die **Transformations-Editor**.  
+ Wenn Sie vorhandene Variablen in Ihrem Skript verwenden möchten, können Sie diese `ReadOnlyVariables` in den Eigenschaften Feldern und `ReadWriteVariables` auf der Seite **Skript** des **Transformations-Editors für Skript**Erstellung hinzufügen.  
   
- Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Auslassungspunkte ( **...** ) neben dem `ReadOnlyVariables` und `ReadWriteVariables` Eigenschaftenfelder, und wählen Sie dann die Variablen in der **Variablen auswählen** Dialogfeld.  
+ Wenn Sie mehrere Variablen in die Eigenschaftsfelder hinzufügen, trennen Sie die Variablennamen durch Kommas. Sie können auch mehrere Variablen auswählen, indem Sie auf die Schaltfläche mit den Auslassungs Punkten (**...**) neben den `ReadOnlyVariables` Eigenschaften Feldern und `ReadWriteVariables` klicken und dann die Variablen im Dialogfeld **Variablen auswählen** auswählen.  
   
  Allgemeine Informationen über das Verwenden von Variablen mit der Skriptkomponente finden Sie unter [Using Variables in the Script Component (Verwenden von Variablen in der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
  Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Script Page) (Transformations-Editor für Skripterstellung (Seite „Skript“))](../script-transformation-editor-script-page.md).  
   
 ## <a name="scripting-a-destination-component-in-code-design-mode"></a>Schreiben einer Zielkomponente im Codeentwurfsmodus  
- Nachdem Sie die Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite **Skript** [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.  
+ Nachdem Sie die Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite [!INCLUDE[msCoName](../../includes/msconame-md.md)]Skript[!INCLUDE[msCoName](../../includes/msconame-md.md)]** Visual Basic oder ** Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.  
   
  Wichtige Informationen, die alle Arten von Komponenten betreffen, die mithilfe der Skriptkomponente erstellt wurden, finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).  
   
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code  
  Wenn Sie nach der Erstellung und Konfiguration einer Zielkomponente die VSTA IDE öffnen, wird die bearbeitbare `ScriptMain`-Klasse im Code-Editor mit einem Stub für die `ProcessInputRow`-Methode angezeigt. In der `ScriptMain`-Klasse schreiben Sie Ihren benutzerdefinierten Code, und `ProcessInputRow` ist die wichtigste Methode in einer Zielkomponente.  
   
- Wenn Sie öffnen die **-Projekt-Explorer** Fenster in VSTA können Sie sehen, dass die Skriptkomponente auch schreibgeschützte generiert hat `BufferWrapper` und `ComponentWrapper` Projektelemente. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.  
+ Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und `ComponentWrapper` -Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.  
   
  Zur Laufzeit ruft die Datenfluss-Engine die `ProcessInput`-Methode in der `UserComponent`-Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ProcessInput%2A>-Methode der übergeordneten <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent>-Klasse überschreibt. Die `ProcessInput`-Methode durchläuft der Reihe nach in Schleifen die Zeilen im Eingabepuffer und ruft für jede Zeile einmal die `ProcessInputRow`-Methode auf.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62768956"
  In den folgenden Beispielen wird der Code veranschaulicht, der in der `ScriptMain`-Klasse zur Erstellung einer Zielkomponente erforderlich ist.  
   
 > [!NOTE]
->  Diese Beispiele verwenden die **Person.Address** -Tabelle in der `AdventureWorks` -Beispieldatenbank erstellt und übergeben Sie die ersten und vierten-Spalten, die **Int * AddressID*** und **Nvarchar (30) City**Spalten, durch den Datenfluss. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
+>  In diesen Beispielen wird die Tabelle **Person. Address** in `AdventureWorks` der-Beispieldatenbank verwendet und die erste und vierte Spalte, die Spalten **int * adressssid*** und **nvarchar (30) City** , durch den Datenfluss übergeben. Die gleichen Daten werden in den Quellen-, Transformations- und Zielbeispielen in diesem Abschnitt verwendet. Zusätzliche Voraussetzungen und Annahmen werden für jedes Beispiel dokumentiert.  
   
 ### <a name="adonet-destination-example"></a>Beispiel ADO.NET-Ziel  
  Dieses Beispiel zeigt eine Zielkomponente, die einen vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)]-Verbindungs-Manager zum Speichern von Daten aus dem Datenfluss in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tabelle verwendet.  
@@ -119,7 +119,7 @@ ms.locfileid: "62768956"
   
 3.  Fügen Sie der Oberfläche des Datenfluss-Designers eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Ziel.  
   
-4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit den `AdventureWorks` -Beispieldatenbank, die enthält mindestens die **AddressID** und **City** Spalten.  
+4.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Diese Ausgabe sollte Daten aus der Tabelle **Person. Address** der `AdventureWorks` Beispieldatenbank bereitstellen, die mindestens die Spalten **adressssid** und **City** enthält.  
   
 5.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Wählen Sie auf der Seite **Eingabespalten** die Eingabespalten **AddressID** und **City** aus.  
   
@@ -236,11 +236,11 @@ public class ScriptMain:
   
 2.  Fügen Sie der Oberfläche des Datenfluss-Designers eine neue Skriptkomponente hinzu, und konfigurieren Sie sie als Ziel.  
   
-3.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Geben Sie diese Ausgabe sollte Daten aus der **Person.Address** Tabelle mit der `AdventureWorks` -Beispieldatenbank erstellt und enthalten sollte mindestens die **AddressID** und **City** Spalten.  
+3.  Verbinden Sie die Ausgabe einer Upstreamquelle oder Transformation mit der Zielkomponente im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Designer. (Sie können eine Quelle ohne Transformationen direkt mit einem Ziel verbinden.) Diese Ausgabe sollte Daten aus der Tabelle **Person. Address** der `AdventureWorks` Beispieldatenbank bereitstellen und sollte mindestens die Spalten **adressssid** und **City** enthalten.  
   
 4.  Öffnen Sie den **Transformations-Editor für Skripterstellung**. Wählen Sie auf der Seite **Eingabespalten** die Spalten **AddressID** und **City** aus.  
   
-5.  Geben Sie der Eingabe auf der Seite **Eingaben und Ausgaben** einen aussagekräftigeren Namen, z.B. **MyAddressInput**.  
+5.  Benennen Sie die Eingabe auf der Seite **Eingaben und Ausgaben** mit einem aussagekräftigeren Namen, z. b. **MyAddressInput**.  
   
 6.  Fügen Sie auf der Seite **Verbindungs-Manager** den Verbindungs-Manager für Flatfiles mit einem aussagekräftigen Namen hinzu, z.B. **MyFlatFileDestConnectionManager**, oder erstellen Sie diesen.  
   
@@ -349,10 +349,10 @@ public class ScriptMain:
 }  
 ```  
   
-![Integration Services (kleines Symbol)](../media/dts-16.gif "Integration Services (kleines Symbol)")**bleiben oben, um das Datum mit Integration Services**<br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
+![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
-## <a name="see-also"></a>Siehe auch  
- [Creating a Source with the Script Component (Erstellen einer Quelle mit der Skriptkomponente)](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Erstellen einer Quelle mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [Entwickeln einer benutzerdefinierten Zielkomponente](../extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
   
   
