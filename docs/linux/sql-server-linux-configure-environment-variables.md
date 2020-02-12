@@ -44,7 +44,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-| Umgebungsvariable | BESCHREIBUNG |
+| Umgebungsvariable | Beschreibung |
 |-----|-----|
 | **ACCEPT_EULA** | Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
 | **MSSQL_SA_PASSWORD** | Konfigurieren des Benutzerkennworts des Systemadministrators. |
@@ -68,7 +68,7 @@ Sie können mehrere verschiedene Umgebungsvariablen verwenden, um SQL Server 201
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-| Umgebungsvariable | BESCHREIBUNG |
+| Umgebungsvariable | Beschreibung |
 |-----|-----|
 | **ACCEPT_EULA** | Legen Sie für die Variable **ACCEPT_EULA** einen beliebigen Wert fest, um Ihre Zustimmung zum [End-User Licensing Agreement (Benutzerlizenzvertrag)](https://go.microsoft.com/fwlink/?LinkId=746388) zu geben. Diese Einstellung ist für das SQL Server-Image zwingend erforderlich. |
 | **MSSQL_SA_PASSWORD** | Konfigurieren des Benutzerkennworts des Systemadministrators. |

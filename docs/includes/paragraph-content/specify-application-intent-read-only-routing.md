@@ -1,6 +1,6 @@
 ---
-title: Includedatei
-description: Includedatei
+title: include file
+description: include file
 services: sql-database
 author: MightyPen
 ms.service: sql-database
@@ -9,42 +9,42 @@ ms.date: 04/05/2018
 ms.author: genemi
 ms.custom: include file
 ms.openlocfilehash: 0e7d549c2f3b02349007815019cc47647f172f73
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "68213534"
 ---
 ## <a name="specifying-application-intent"></a>Angeben des Anwendungszwecks
 
-Das Schlüsselwort **ApplicationIntent** kann in der Verbindungszeichenfolge angegeben werden. Die Werte zugewiesen sind **"ReadWrite"** oder **ReadOnly**. Der Standardwert ist **"ReadWrite"** .
+Das Schlüsselwort **ApplicationIntent** kann in Ihrer Verbindungszeichenfolge angegeben werden. Es können die Werte **ReadWrite** oder **ReadOnly** zugewiesen werden. Der Standardwert lautet **ReadWrite**.
 
-Wenn **ApplicationIntent = ReadOnly**, fordert der Client eine lesearbeitslast aus, wenn eine Verbindung herstellen. Der Server erzwingt den Versuch zur Verbindungszeit und während einer **verwenden** database-Anweisung.
+Im Fall von **ApplicationIntent=ReadOnly** fordert der Client eine Leseworkload an, wenn eine Verbindung hergestellt wird. Der Server erzwingt die Absicht zur Verbindungszeit und während einer **USE**-Datenbankanweisung.
 
 Das Schlüsselwort **ApplicationIntent** funktioniert nicht mit schreibgeschützten Legacydatenbanken.  
 
 
-#### <a name="targets-of-readonly"></a>Ziele ReadOnly
+#### <a name="targets-of-readonly"></a>Ziele von ReadOnly
 
-Wenn eine Verbindung auswählt **ReadOnly**, eine der folgenden speziellen Konfigurationen, die für die Datenbank vorhanden sind, können die Verbindung zugewiesen:
+Wenn eine Verbindung **ReadOnly** auswählt, wird sie einer der folgenden speziellen Konfigurationen zugewiesen, die für die Datenbank vorhanden sein können:
 
 - [Always On](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)
-    - Eine Datenbank kann Lesearbeitslasten in der Always On-Zieldatenbank zulassen bzw. nicht zulassen. Diese Option wird gesteuert durch Verwendung der **ALLOW_CONNECTIONS** -Klausel der **PRIMARY_ROLE** und **SECONDARY_ROLE** Transact-SQL-Anweisungen.
+    - Eine Datenbank kann Lesearbeitslasten in der Always On-Zieldatenbank zulassen bzw. nicht zulassen. Diese Auswahl wird mit der **ALLOW_CONNECTIONS**-Klausel der Transact-SQL-Anweisungen **PRIMARY_ROLE** und **SECONDARY_ROLE** gesteuert.
 
 - [Georeplikation](https://docs.microsoft.com/azure/sql-database/sql-database-geo-replication-overview)
 
 - [Horizontale Leseskalierung](https://docs.microsoft.com/azure/sql-database/sql-database-read-scale-out)
 
-Wenn keines dieser spezielle Ziele verfügbar sind, wird die reguläre Datenbank gelesen werden.
+Wenn keins dieser speziellen Ziele verfügbar ist, erfolgt der Lesevorgang in der regulären Datenbank.
 
 &nbsp;
 
-Die **ApplicationIntent** kann der Schlüsselwort *schreibgeschütztes routing*.
+Das Schlüsselwort **ApplicationIntent** aktiviert das *schreibgeschützte Routing*.
 
 
 ## <a name="read-only-routing"></a>Schreibgeschütztes Routing
 
-Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. Um schreibgeschütztes routing zu aktivieren, gelten die folgenden:
+Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des schreibgeschützten Replikats einer Datenbank sicherstellen kann. Zum Aktivieren des schreibgeschützten Routings gelten sämtliche der folgenden Voraussetzungen:
 
 - Sie müssen eine Verbindung zum Verfügbarkeitsgruppenlistener einer AlwaysOn-Verfügbarkeitsgruppe herstellen.
 
@@ -52,7 +52,7 @@ Das schreibgeschützte Routing ist eine Funktion, die die Verfügbarkeit des sch
 
 - Die Verfügbarkeitsgruppe muss vom Datenbankadministrator konfiguriert werden, um schreibgeschütztes Routing zu aktivieren.
 
-Mehrere Verbindungen mithilfe von schreibgeschütztem routing nicht alle mit demselben schreibgeschützten Replikat herstellen kann. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie können sicherstellen, dass alle schreibgeschützten Anforderungen mit demselben schreibgeschützten Replikat herstellen. Stellen Sie sicher diese gleichheitsprüfungen von *nicht* übergeben einen verfügbarkeitsgruppenlistener an das **Server** Schlüsselwort für Verbindungszeichenfolgen. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.
+Mehrere Verbindungen, die jeweils das schreibgeschützte Routing verwenden, erfolgen möglicherweise nicht alle mit demselben schreibgeschützten Replikat. Änderungen in der Datenbanksynchronisierung oder Änderungen in der Routingkonfiguration des Servers können zu Clientverbindungen mit anderen schreibgeschützten Replikaten führen. Sie können sicherstellen, dass alle schreibgeschützten Anforderungen eine Verbindung mit demselben schreibgeschützten Replikat herstellen. Um dies zu erreichen, übergeben Sie *keinen* Verfügbarkeitsgruppenlistener an das Schlüsselwort **Server** der Verbindungszeichenfolge. Geben Sie stattdessen den Namen der schreibgeschützten Instanz an.
 
-Schreibgeschütztes routing dauert länger als eine Verbindung mit dem primären Replikat. Die längere Dauer liegt darin begründet, dass schreibgeschütztes Routing zunächst eine Verbindung mit dem primären Replikat herstellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat sucht. Aufgrund dieser mehrere Staps sollten Sie Ihre Anmeldungstimeout auf mindestens 30 Sekunden erhöhen.
+Das schreibgeschützte Routing kann länger dauern als das Herstellen einer Verbindung mit der primären Instanz. Die längere Dauer liegt darin begründet, dass schreibgeschütztes Routing zunächst eine Verbindung mit dem primären Replikat herstellt und dann nach dem besten verfügbaren lesbaren sekundären Replikat sucht. Da mehrere Schritte ausgeführt werden, sollten Sie das Anmeldungstimeout auf mindestens 30 Sekunden erhöhen.
 

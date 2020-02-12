@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96479cfd42c8a08295a600ef3de4137b66aa106d
-ms.sourcegitcommit: add39e028e919df7d801e8b6bb4f8ac877e60e17
+ms.openlocfilehash: 6b5f2c8dac062f147326a0b9fcfb7120f0648729
+ms.sourcegitcommit: b78f7ab9281f570b87f96991ebd9a095812cc546
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119377"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "74165427"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Konfigurieren von Kubernetes auf mehreren Computern für SQL Server-Big Data-Cluster-Bereitstellungen
 
@@ -104,12 +104,14 @@ Nachdem Sie die vorherigen Befehle auf den einzelnen Computern ausgeführt haben
    EOF
    ```
 
-1. Initialisieren Sie den Kubernetes-Master auf diesem Computer. Die erfolgreiche Initialisierung des Kubernetes-Masters sollte ausgegeben werden.
+1. Initialisieren Sie den Kubernetes-Master auf diesem Computer. Im folgenden Beispielskript wird die Kubernetes-Version `1.15.0` festgelegt. Welche Version Sie verwenden, hängt von Ihrem Kubernetes-Cluster ab.
 
    ```bash
-   KUBE_VERSION=1.11.3
+   KUBE_VERSION=1.15.0
    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --kubernetes-version=$KUBE_VERSION
    ```
+
+   Die erfolgreiche Initialisierung des Kubernetes-Masters sollte ausgegeben werden.
 
 1. Beachten Sie den `kubeadm join`-Befehl, den Sie auf den anderen Servern für den Beitritt zum Kubernetes-Cluster verwenden müssen. Kopieren Sie diesen zur späteren Verwendung.
 
@@ -143,7 +145,7 @@ Führen Sie auf allen anderen Computern den Befehl `kubeadm join` aus, den Sie i
 
 ## <a name="view-the-cluster-status"></a>Anzeigen des Clusterstatus
 
-Überprüfen Sie die Verbindung mit Ihrem Cluster mit dem Befehl [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands), um eine Liste der Clusterknoten zurückzugeben.
+Überprüfen Sie die Verbindung mit Ihrem Cluster mithilfe des Befehls [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands), um eine Liste der Clusterknoten zurückzugeben.
 
 ```bash
 kubectl get nodes
