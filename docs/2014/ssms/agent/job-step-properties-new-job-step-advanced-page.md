@@ -1,5 +1,5 @@
 ---
-title: 'Auftragsschritteigenschaften: Neuer Auftragsschritt (Seite erweitert) | Microsoft-Dokumentation'
+title: 'Auftrags Schritt-Eigenschaften: neuer Auftrags Schritt (Seite "Erweitert") | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0bc24411ebceb0601f00ca659452b55596d869c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62937195"
 ---
-# <a name="job-step-properties-new-job-step-advanced-page"></a>Auftragsschritteigenschaften: Neuer Auftragsschritt (Seite „Erweitert“)
-  Mithilfe dieser Seite können Sie die Eigenschaften für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftragsschritt anzeigen und ändern.  
+# <a name="job-step-properties-new-job-step-advanced-page"></a>Auftragsschritt-Eigenschaften: Neuer Auftragsschritt (Seite „Erweitert“)
+  Mithilfe dieser Seite können Sie die Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags Schritts anzeigen und ändern.  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Aktion bei Erfolg**  
  Legt fest, welche Aktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bei erfolgreicher Auftragsausführung ausführen soll.  
   
  **Wiederholungsversuche**  
  Legt fest, wie oft vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent versucht werden soll, einen fehlgeschlagenen Auftragsschritt erneut auszuführen.  
   
- **Wiederholungsintervall (Min)**  
+ **Wiederholungsintervall (Minuten)**  
  Legt fest, wie lange der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bis zum nächsten Wiederholungsversuch warten soll.  
   
  **Aktion bei Fehler**  
@@ -57,7 +57,7 @@ ms.locfileid: "62937195"
  **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
  Fügt die Ausgabe an den vorhandenen Inhalt der Tabelle an. Andernfalls wird der vorige Inhalt der Tabelle bei jeder Ausführung des Auftragsschritts überschrieben.  
   
- **Schrittausgabe in Verlauf einschließen**  
+ **Schritt Ausgabe in Verlauf einschließen**  
  Wählen Sie diese Option aus, wenn die Ausgabe des Auftragsschritts in den Auftragsverlauf aufgenommen werden soll.  
   
  **Ausführen als Benutzer**  
@@ -85,7 +85,7 @@ ms.locfileid: "62937195"
  **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
  Fügt die Ausgabe an den vorhandenen Inhalt der Tabelle an. Andernfalls wird der vorige Inhalt der Tabelle bei jeder Ausführung des Auftragsschritts überschrieben.  
   
- **Schrittausgabe in Verlauf einschließen**  
+ **Schritt Ausgabe in Verlauf einschließen**  
  Wählen Sie diese Option aus, wenn die Ausgabe des Auftragsschritts in den Auftragsverlauf aufgenommen werden soll.  
   
 ## <a name="options-for-powershell-job-steps"></a>Optionen für PowerShell-Auftragsschritte  
@@ -110,7 +110,7 @@ ms.locfileid: "62937195"
  **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
  Fügt die Ausgabe an den vorhandenen Inhalt der Tabelle an. Andernfalls wird der vorige Inhalt der Tabelle bei jeder Ausführung des Auftragsschritts überschrieben.  
   
- **Schrittausgabe in Verlauf einschließen**  
+ **Schritt Ausgabe in Verlauf einschließen**  
  Wählen Sie diese Option aus, wenn die Ausgabe des Auftragsschritts in den Auftragsverlauf aufgenommen werden soll.  
   
 ## <a name="options-for-replication-queue-reader-job-steps"></a>Optionen für Auftragsschritte des Replikation-Warteschlangenlesers  
@@ -142,10 +142,10 @@ ms.locfileid: "62937195"
  **Ausgabe an vorhandenen Eintrag in Tabelle anfügen**  
  Fügt die Ausgabe an den vorhandenen Inhalt der Tabelle an. Andernfalls wird der vorige Inhalt der Tabelle bei jeder Ausführung des Auftragsschritts überschrieben.  
   
- **Schrittausgabe in Verlauf einschließen**  
+ **Schritt Ausgabe in Verlauf einschließen**  
  Wählen Sie diese Option aus, wenn die Ausgabe des Auftragsschritts in den Auftragsverlauf aufgenommen werden soll.  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Auftragsschritten](manage-job-steps.md)  
   
   

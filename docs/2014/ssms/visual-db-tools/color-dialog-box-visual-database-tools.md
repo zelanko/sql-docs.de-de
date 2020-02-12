@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29d748f6ff75fc46bef3f667e50aa9cbd92bff5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62936695"
 ---
 # <a name="color-dialog-box-visual-database-tools"></a>Farbe (Dialogfeld) (Visual Database Tools)
   Das Dialogfeld **Farbe** gibt den RGB-Wert einer vom Benutzer ausgewählten Farbe zurück. Der Benutzer kann aus einer vom Bildschirmtreiber bestimmten Palette mit Grundfarben oder aus einer Palette mit benutzerdefinierten Farben auswählen. Wählen Sie aus den Grundfarben aus, oder erstellen Sie benutzerdefinierte Farben. Definieren Sie Farben durch Klicken in die Farbmatrix oder durch Eingabe in die Felder **Farbt.:** , **Sätt.:** , **Hell.:** , **Rot:** , **Grün:** und **Blau:** .  
   
-## <a name="options"></a>Optionen  
+## <a name="options"></a>Tastatur  
  **Grundfarben**  
  Vordefinierte, durch den Bildschirmtreiber bestimmte Farben.  
   
@@ -38,10 +38,10 @@ ms.locfileid: "62936695"
  Helligkeits-Symbolleiste  
  Ziehen Sie den Schieberegler, um die Brillanz oder relative Helligkeit oder Dunkelheit einer Farbe zu ändern. Der entsprechende numerische Wert wird in **Lum**angezeigt.  
   
- **Farbe**  
+ **Color**  
  Zeigt die zurzeit ausgewählte Farbe an.  
   
- **Farbt.:**  
+ **Hue**  
  Der Farbtonwert der ausgewählten Farbe.  
   
  **Sätt.:**  

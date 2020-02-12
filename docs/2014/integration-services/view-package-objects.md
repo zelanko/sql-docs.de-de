@@ -20,16 +20,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 78a9b551ae44348de1c007533be3606b33c974cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 06/15/2019
+ms.lasthandoff: 02/08/2020
 ms.locfileid: "62926280"
 ---
 # <a name="view-package-objects"></a>Anzeigen von Paketobjekten
   Im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer stellt die Registerkarte **Paket-Explorer** eine Explorer-Sicht des Pakets bereit. Diese Sicht gibt die Containerhierarchie der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Architektur wieder. Der Paketcontainer befindet sich ganz oben in der Hierarchie, und Sie erweitern das Paket, um die Verbindungen, ausführbaren Dateien, Ereignishandler, Protokollanbieter, Rangfolgeneinschränkungen und Variablen im Paket anzuzeigen.  
   
- Die ausführbaren Dateien, also die Container und Tasks im Paket, können Ereignishandler, Rangfolgeneinschränkungen und Variablen einschließen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt eine geschachtelte Hierarchie von Containern, und der For-Schleifencontainer, der Foreach-Schleifencontainer und der Sequenzcontainer können andere ausführbare Dateien einschließen.  
+ Die ausführbaren Dateien, also die Container und Tasks im Paket, können Ereignishandler, Rangfolgeneinschränkungen und Variablen einschließen. 
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt eine geschachtelte Hierarchie von Containern, und der For-Schleifencontainer, der Foreach-Schleifencontainer und der Sequenzcontainer können andere ausführbare Dateien einschließen.  
   
  Falls ein Paket einen Datenfluss enthält, wird im **Paket-Explorer** der Datenflusstask aufgelistet, und er enthält den Ordner **Komponenten** , in dem die Datenflusskomponenten aufgelistet werden.  
   
@@ -37,16 +38,16 @@ ms.locfileid: "62926280"
   
  Das folgende Diagramm zeigt eine Strukturansicht eines einfachen Pakets.  
   
- ![Screenshot der Registerkarte „Package-Explorer“](media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
+ ![Screenshot der Registerkarte "Paket-Explorer"](media/packageexplorer.gif "Screenshot der Registerkarte "Paket-Explorer"")  
   
 ### <a name="to-view-package-content"></a>So zeigen Sie den Paketinhalt an  
   
 -   [Anzeigen von Paketobjekten im Paket-Explorer](../../2014/integration-services/view-package-objects-in-package-explorer.md)  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](control-flow/integration-services-tasks.md)   
- [SQL Server Integration Services-Container](control-flow/integration-services-containers.md)   
- [Rangfolgeneinschränkungen](control-flow/precedence-constraints.md)   
+ [Integration Services-Container](control-flow/integration-services-containers.md)   
+ [Rang folgen Einschränkungen](control-flow/precedence-constraints.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)   
  [Integration Services-Protokollierung &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
