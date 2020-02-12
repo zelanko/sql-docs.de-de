@@ -11,10 +11,10 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 12/26/2019
 ms.openlocfilehash: a6907422afd32296b88d8160af4c35692277e94e
-ms.sourcegitcommit: 3c65b43ba5a00585be7840df300d9183dc6fb606
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/28/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "75521730"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Versionshinweise für Azure Data Studio
@@ -598,7 +598,7 @@ Besonders an der im April veröffentlichten Public Preview hervorzuheben ist die
 | :----- | :------ |
 | [Neue Benutzeroberfläche für Benachrichtigungen](https://code.visualstudio.com/updates/v1_21#_new-notifications-ui). | Sie können nun Benachrichtigungen in SQL Operations Studio einfach verwalten und analysieren. |
 | [Verwendung mehrerer integrierter Terminals](https://code.visualstudio.com/updates/v1_21#_split-terminals). | Sie können nun mit mehreren Terminals gleichzeitig arbeiten. |
-| [Speichern von großen und geschützten Dateien](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges). | Sie können nun Dateien, die von Administratoren geschützt wurden und \>256 MB überschreiten, in SQL Operations Studio speichern. |
+| [Speichern von großen und geschützten Dateien](https://code.visualstudio.com/updates/v1_20#_save-files-that-need-admin-privileges). | Sie können nun Dateien, die von Administratoren geschützt wurden und 256 MB überschreiten, in SQL Operations Studio speichern. |
 | [Verbesserte Unterstützung großer Dateien](https://code.visualstudio.com/updates/v1_21#_text-buffer-improvements). | Der Textpuffer wurde für große Dateien optimiert. |
 | [Verbesserte Suche nach Einstellungen](https://code.visualstudio.com/updates/v1_20#_settings-search). | Sie können nun mithilfe natürlicher Sprache leicht die richtigen Einstellungen finden. |
 | [Globale Codeausschnitte](https://code.visualstudio.com/updates/v1_20#_global-snippets). | Sie können nun Codeausschnitte für alle Dateitypen erstellen. |

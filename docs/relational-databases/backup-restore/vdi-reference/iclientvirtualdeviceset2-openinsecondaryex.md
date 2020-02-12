@@ -10,10 +10,10 @@ ms.topic: reference
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: cd89359ecbcc920fe03ed4b2bc7d90fd01592476
-ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70847561"
 ---
 # <a name="iclientvirtualdeviceset2openinsecondaryex-vdi"></a>IClientVirtualDeviceSet2::OpenInSecondaryEx (VDI)
@@ -45,7 +45,7 @@ HRESULT IClientVirtualDeviceSet2::OpenInSecondaryEx (
 | VD_E_PROTOCOL | Die Gruppe virtueller Geräte wurde geöffnet oder akzeptiert keine Öffnungsanforderungen von sekundären Clients. |
 | VD_E_ABORT | Der Vorgang wird abgebrochen. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Wenn ein Modell mit mehreren Prozessen genutzt wird, ist der primäre Client dafür verantwortlich, eine planmäßige und unplanmäßige Beendigung der sekundären Clients zu erkennen.
 
