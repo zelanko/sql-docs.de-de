@@ -19,10 +19,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1876c16455876931d6a5c1d091d9d4c0dc860fcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68103426"
 ---
 # <a name="create-statistics"></a>Erstellen von Statistiken
@@ -96,10 +96,10 @@ ms.locfileid: "68103426"
      **NULL-Werte zulassen**  
      Gibt an, ob die Spalte NULL-Werte annimmt.  
   
-     **Hinzufügen**  
+     **Add (Hinzufügen)**  
      Fügt dem Statistikraster zusätzliche Spalten aus der Tabelle hinzu.  
   
-     **Entfernen**  
+     **Remove**  
      Entfernt die ausgewählte Spalte aus dem Statistikraster.  
   
      **Nach oben**  
@@ -117,7 +117,7 @@ ms.locfileid: "68103426"
      Die folgende Eigenschaft wird auf der Seite **Filter** im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ angezeigt.  
   
      **Filterausdruck**  
-     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Beispiel: `Production.ProductSubcategoryID IN ( 1,2,3 )`  
+     Definiert, welche Datenzeilen in die gefilterte Statistik eingeschlossen werden sollen. Zum Beispiel, `Production.ProductSubcategoryID IN ( 1,2,3 )`  
   
 5.  Klicken Sie im Dialogfeld **Neue Statistik für Tabelle**_Tabellenname_ auf der Seite **Allgemein** auf **Hinzufügen**.  
   
@@ -135,7 +135,7 @@ ms.locfileid: "68103426"
      **Identität**  
      Gibt eine Identitätsspalte an, wenn diese Option aktiviert ist.  
   
-     **Allow NULLs**  
+     **NULL-Werte zulassen**  
      Gibt an, ob die Spalte NULL-Werte annimmt.  
   
 6.  Aktivieren Sie im Dialogfeld **Spalten auswählen** das oder die Kontrollkästchen der einzelnen Spalten, für die Sie eine Statistik erstellen möchten, und klicken Sie auf **OK**.  
