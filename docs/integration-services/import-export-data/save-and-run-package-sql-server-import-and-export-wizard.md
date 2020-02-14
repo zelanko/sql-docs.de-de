@@ -12,10 +12,10 @@ ms.assetid: b582c462-3d7a-4a4c-a2a2-2c79fedab75a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: b1275f5cbb718f34ba1386d6d6313dd662901900
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71284938"
 ---
 # <a name="save-and-run-package-sql-server-import-and-export-wizard"></a>Speichern und Ausführen von Paketen (SQL Server-Import/Export-Assistent)
@@ -23,14 +23,14 @@ ms.locfileid: "71284938"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Nachdem Sie die Datenquelle und das Ziel angegeben haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie Ihre Einstellungen möglicherweise auch als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket (SSIS) speichern, um es anzupassen und später wiederzuverwenden.
+  Nachdem Sie die Datenquelle und das Ziel angegeben haben, zeigt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Import/Export-Assistent **Paket speichern und ausführen**. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie Ihre Einstellungen möglicherweise auch als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket (SSIS-Paket) speichern, um es anzupassen und später wiederzuverwenden.
   
 **Was ist ein Paket?** Der Assistent verwendet SQL Server Integration Services (SSIS) zum Kopieren von Daten. In SSIS stellt das Paket die Basiseinheit dar. Der Assistent erstellt ein SSIS-Paket im Arbeitsspeicher, während Sie die Seiten des Assistenten durchlaufen und Optionen festlegen.
   
 ## <a name="screen-shot-of-the-save-and-run-package-page"></a>Screenshot der Seite „Paket speichern und ausführen“  
 Die folgende Abbildung zeigt die Seite **Paket speichern und ausführen** des Assistenten. 
    
-![Speichern und Ausführen der Paketseite des Import/Export-Assistenten](../../integration-services/import-export-data/media/save-and-run.png "Save and run package page of the Import and Export Wizard") 
+![Seite „Paket speichern und ausführen“ im Import/Export-Assistenten](../../integration-services/import-export-data/media/save-and-run.png "Seite „Paket speichern und ausführen“ im Import/Export-Assistenten") 
   
 ## <a name="run-and-save-the-package"></a>Ausführen und Speichern des Pakets 
  Um den Vorgang fortzusetzen, müssen Sie mindestens eine der beiden folgenden Optionen auswählen.  
@@ -60,7 +60,7 @@ Wenn Sie den Assistenten in einem Integration Services-Projekt in Visual Studio 
 
  Wählen Sie den Zielserver aus, und geben Sie die Anmeldeinformationen zum Herstellen der Verbindung mit dem Server auf der nächsten Seite, **SSIS-Paket speichern**, an. Weitere Informationen finden Sie unter [SSIS-Paket speichern](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  
   
- **File system**  
+ **Dateisystem**  
  Wählen Sie diese Option aus, um das Paket als Datei mit der Erweiterung **DTSX** zu speichern.  
   
  Sie wählen auf der nächsten Seite, **SSIS-Paket speichern**, den Zielordner und Dateinamen für das Paket aus. Weitere Informationen finden Sie unter [SSIS-Paket speichern](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).  

@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68140813"
 ---
 # <a name="cursors"></a>Cursor
@@ -71,7 +71,7 @@ Ein Vorwärtscursor wird als `FORWARD_ONLY` und `READ_ONLY` angegeben und unters
   
  Obwohl die Datenbank-API-Cursormodelle einen Vorwärtscursor als unterschiedlichen Cursortyp betrachten, gilt dies nicht für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] betrachtet sowohl die Vorwärts- als auch Bildlauffunktion als Optionen, die für statische, keysetgesteuerte und dynamische Cursor übernommen werden können. [!INCLUDE[tsql](../includes/tsql-md.md)] -Cursor unterstützen statische Vorwärtscursor sowie keysetgesteuerte und dynamische Cursor. Die Datenbank-API-Cursormodelle gehen davon aus, dass statische, keysetgesteuerte und dynamische Cursor immer bildlauffähig sind. Wenn das Cursorattribut oder die Cursoreigenschaft einer Datenbank-API auf FORWARD_ONLY festgelegt ist, wird dies von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] als dynamischer Vorwärtscursor implementiert.  
   
-### <a name="static"></a>STATIC-Cursor  
+### <a name="static"></a>statischen  
  Das vollständige Resultset eines statischen Cursors wird in **tempdb** erstellt, wenn der Cursor geöffnet wird. Ein statischer Cursor zeigt das Resultset immer so an, wie es zur Verfügung stand, als der Cursor geöffnet wurde. Statische Cursor erkennen wenige oder keine Änderungen, beanspruchen beim Durchführen eines Bildlaufs jedoch relativ wenig Ressourcen.  
   
 Der Cursor spiegelt jedoch keinerlei Änderungen wider, die in der Datenbank ausgeführt wurden und die sich entweder auf die Mitgliedschaft des Resultsets oder auf Änderungen an den Werten in den Spalten der Zeilen beziehen, aus denen das Resultset besteht. Ein statischer Cursor zeigt neue Zeilen, die nach dem Öffnen des Cursors in die Datenbank eingefügt wurden, nicht an, selbst wenn sie die Suchbedingungen der `SELECT`-Anweisung des Cursors erfüllen. Wenn Zeilen, aus denen sich das Resultset zusammensetzt, von anderen Benutzern aktualisiert werden, werden die neuen Datenwerte im statischen Cursor nicht angezeigt. Der statische Cursor zeigt Zeilen an, die nach dem Öffnen des Cursors aus der Datenbank entfernt wurden. Die Operationen `UPDATE`, `INSERT` oder `DELETE` werden in einem statischen Cursor nicht widergespiegelt (es sei denn, der Cursor wird geschlossen und wieder geöffnet). Selbst Änderungen, die mithilfe derselben Verbindung, die den Cursor öffnete, durchgeführt wurden, sind nicht enthalten.  
@@ -88,8 +88,8 @@ Der Cursor spiegelt jedoch keinerlei Änderungen wider, die in der Datenbank aus
 ### <a name="keyset"></a>Keyset  
 Die Mitgliedschaft und Reihenfolge der Zeilen in einem keysetgesteuerten Cursor werden beim Öffnen des Cursors festgelegt. Keysetgesteuerte Cursor werden von einer Reihe von eindeutigen Bezeichnern (Schlüssel) gesteuert, die als das Keyset bezeichnet werden. Die Schlüssel werden anhand einer Reihe von Spalten erstellt, die die Zeilen im Resultset eindeutig identifizieren. Das Keyset ist die Menge der Schlüsselwerte aus allen Zeilen, die zum Zeitpunkt des Öffnens des Cursors die Kriterien der `SELECT`-Anweisung erfüllten. Das Keyset eines keysetgesteuerten Cursors wird in **tempdb** erstellt, wenn der Cursor geöffnet wird.  
   
-### <a name="dynamic"></a>Dynamic  
-Dynamische Cursor sind das Gegenteil von statischen Cursorn. Dynamische Cursor spiegeln alle Änderungen an den Zeilen in den Resultsets beim Durchführen eines Bildlaufs durch den Cursor wider. Die Datenwerte, Reihenfolge und Mitgliedschaft der Zeilen im Resultset können sich bei jedem Abrufvorgang ändern. Jede `UPDATE`-, `INSERT`- und `DELETE`-Anweisung, die von einem Benutzer ausgeführt wurde, ist über den Cursor sichtbar. Updates sind sofort sichtbar, wenn sie über den Cursor mithilfe einer API-Funktion, wie z.B. **SQLSetPos**, oder der `WHERE CURRENT OF`-Klausel von [!INCLUDE[tsql](../includes/tsql-md.md)] ausgeführt wurden. Updates, die außerhalb des Cursors ausgeführt werden, sind nur dann sichtbar, wenn ein Commit für sie ausgeführt wurde, es sei denn, die Transaktionsisolationsstufe des Cursors wurde so festgelegt, dass ein Commit vor dem Lesevorgang nicht ausgeführt sein muss. Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
+### <a name="dynamic"></a>Dynamisch  
+Dynamische Cursor sind das Gegenteil von statischen Cursorn. Dynamische Cursor spiegeln alle Änderungen an den Zeilen in den Resultsets beim Durchführen eines Bildlaufs durch den Cursor wider. Die Datenwerte, Reihenfolge und Mitgliedschaft der Zeilen im Resultset können sich bei jedem Abrufvorgang ändern. Jede `UPDATE`-, `INSERT`- und `DELETE`-Anweisung, die von einem Benutzer ausgeführt wurde, ist über den Cursor sichtbar. Updates sind sofort sichtbar, wenn sie über den Cursor mithilfe einer API-Funktion, wie z. B. **SQLSetPos**, oder der `WHERE CURRENT OF`-Klausel von [!INCLUDE[tsql](../includes/tsql-md.md)] ausgeführt wurden. Updates, die außerhalb des Cursors ausgeführt werden, sind nur dann sichtbar, wenn ein Commit für sie ausgeführt wurde, es sei denn, die Transaktionsisolationsstufe des Cursors wurde so festgelegt, dass ein Commit vor dem Lesevorgang nicht ausgeführt sein muss. Weitere Informationen zu Isolationsstufen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md). 
  
 > [!NOTE]
 > Für dynamische Cursorpläne werden nie räumliche Indizes verwendet.  

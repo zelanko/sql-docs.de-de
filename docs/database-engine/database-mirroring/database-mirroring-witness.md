@@ -15,10 +15,10 @@ ms.assetid: 05606de8-90c3-451a-938d-1ed34211dad7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 4dcb3d5669e62836f859252749469703bf26d29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68043884"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
@@ -30,7 +30,7 @@ ms.locfileid: "68043884"
   
  In der folgende Abbildung wird eine Sitzung im Modus für hohe Sicherheit mit einem Zeugen dargestellt.  
   
- ![Datenbank-Spiegelungssitzung mit einem Zeugen](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "Mirroring session with a witness")  
+ ![Spiegelungssitzung mit einem Zeugen](../../database-engine/database-mirroring/media/dbm-3-way-session-intro.gif "Spiegelungssitzung mit einem Zeugen")  
   
  **In diesem Thema:**  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68043884"
 ##  <a name="InMultipleSessions"></a> Verwenden eines Zeugen in mehreren Sitzungen  
  Eine bestimmte Serverinstanz kann als Zeuge in gleichzeitigen Datenbank-Spiegelungssitzungen agieren – jeweils für eine unterschiedliche Datenbank. Verschiedene Sitzungen können dabei mit unterschiedlichen Partnern ablaufen. In der folgenden Abbildung ist eine Serverinstanz dargestellt, die Zeuge zweier Datenbank-Spiegelungssitzungen mit unterschiedlichen Partnern ist.  
   
- ![Serverinstanz als Zeuge für zwei Datenbanken](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Server instance that is a witness for 2 databases")  
+ ![Serverinstanz als Zeuge für zwei Datenbanken](../../database-engine/database-mirroring/media/dbm-witness-in-2-sessions.gif "Serverinstanz als Zeuge für zwei Datenbanken")  
   
  Eine einzelne Serverinstanz kann auch gleichzeitig in bestimmten Sitzungen als Zeuge und in anderen als Partner eingesetzt werden. In der Praxis fungiert eine Serverinstanz jedoch in der Regel entweder als Zeuge oder als Partner. Das ist darauf zurückzuführen, dass als Partner nur leistungsfähige Computer mit entsprechender Hardware zur Unterstützung einer Produktionsdatenbank verwendet werden können, während der Zeuge unter jedem verfügbaren Windows-System ausgeführt werden kann, das Unterstützung für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]bietet.  
   

@@ -11,10 +11,10 @@ ms.assetid: dfd2b639-8fd4-4cb9-b134-768a3898f9e6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 767de0e7c255a96ba9aa4b2c7201c423b1269d80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68014679"
 ---
 # <a name="monitor-performance-for-always-on-availability-groups"></a>Überwachen der Leistung von Always On-Verfügbarkeitsgruppen
@@ -24,7 +24,7 @@ ms.locfileid: "68014679"
 ##  <a name="data-synchronization-process"></a>Datensynchronisierungsprozess  
  Um die Zeit bis zur vollständigen Synchronisierung einzuschätzen und den Engpass zu identifizieren, müssen Sie den Synchronisierungsprozess verstehen. Leistungsengpässe können an einer beliebigen Stelle im Prozess auftreten. Durch die Ermittlung des Engpasses können Sie den zugrunde liegenden Problemen besser auf den Grund gehen. Der folgende Abbildung und Tabelle veranschaulichen den Datensynchronisierungsprozess:  
   
- ![Datensynchronisierung von Verfügbarkeitsgruppen](media/always-onag-datasynchronization.gif "Availability group data synchronization")  
+ ![Datensynchronisierung für Verfügbarkeitsgruppen](media/always-onag-datasynchronization.gif "Datensynchronisierung für Verfügbarkeitsgruppen")  
   
 |||||  
 |-|-|-|-|  
@@ -56,7 +56,7 @@ ms.locfileid: "68014679"
 ##  <a name="estimating-failover-time-rto"></a>Einschätzen der Failoverzeit (RTO)  
  Die RTO in Ihrer SLA hängt von der Failoverzeit Ihrer Always On-Implementierung an einem bestimmten Zeitpunkt ab, die mit der folgenden Formel ausgedrückt werden kann:  
   
- ![Verfügbarkeitsgruppen – Berechnung der RTO](media/always-on-rto.gif "Availability groups RTO calculation")  
+ ![Verfügbarkeitsgruppen: RTO-Berechnung](media/always-on-rto.gif "Verfügbarkeitsgruppen: RTO-Berechnung")  
   
 > [!IMPORTANT]  
 >  Wenn eine Verfügbarkeitsgruppe mehr als eine Verfügbarkeitsdatenbank enthält, wird die Verfügbarkeitsdatenbank mit dem höchsten Tfailover-Wert zum Grenzwert für die RTO-Konformität.  
@@ -65,7 +65,7 @@ ms.locfileid: "68014679"
   
  Um für ein Failover bereit zu sein, muss das sekundäre Replikat lediglich eine Wiederholung ausführen, um das Ende des Protokolls zu erreichen. Die Wiederholungszeit, Tredo, wird mit der folgenden Formel berechnet:  
   
- ![Berechnung der Wiederholungszeit von Verfügbarkeitsgruppen](media/always-on-redo.gif "Availability groups redo time calculation")  
+ ![Verfügbarkeitsgruppen: Berechnung der Wiederholungszeit](media/always-on-redo.gif "Verfügbarkeitsgruppen: Berechnung der Wiederholungszeit")  
   
  Hierbei steht *redo_queue* für den Wert in [redo_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) und *redo_rate* für den Wert in [redo_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68014679"
 ## <a name="estimating-potential-data-loss-rpo"></a>Einschätzen des möglichen Datenverlusts (RPO)  
  Die RPO in Ihrer SLA hängt von dem möglichen Datenverlust Ihrer Always On-Implementierung zu einem beliebigen Zeitpunkt ab. Dieser mögliche Datenverlust kann mit der folgenden Formel ausgedrückt werden:  
   
- ![Verfügbarkeitsgruppen – Berechnung der RPO](media/always-on-rpo.gif "Availability groups RPO calculation")  
+ ![Verfügbarkeitsgruppen: RPO-Berechnung](media/always-on-rpo.gif "Verfügbarkeitsgruppen: RPO-Berechnung")  
   
  Hierbei steht *log_send_queue* für den Wert von [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) und *log generation rate* für den Wert von [SQL Server: Datenbank > Geleerte Protokollbytes/Sekunde](~/relational-databases/performance-monitor/sql-server-databases-object.md).  
   
@@ -404,7 +404,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
              Mit dieser Einstellung können die Ergebnisse der Richtlinienauswertung auf dem Always On-Dashboard angezeigt werden.  
   
-        -   **Beschreibung:** **Das aktuelle Replikat ist eine RTO, die 10 Minuten überschreitet. Hierbei wird von einem Mehraufwand von 1 Minute für die Erkennung und das Failover ausgegangen. Sie sollten Leistungsprobleme in der jeweiligen Serverinstanz sofort untersuchen.**  
+        -   **Beschreibung**: **Das aktuelle Replikat ist eine RTO, die 10 Minuten überschreitet. Hierbei wird von einem Mehraufwand von 1 Minute für die Erkennung und das Failover ausgegangen. Sie sollten Leistungsprobleme in der jeweiligen Serverinstanz sofort untersuchen.**  
   
         -   **Anzuzeigender Text:** **RTO wurde überschritten.**  
   
@@ -428,7 +428,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
   
         -   **Kategorie:** **Availability database warnings** (Warnungen zu Verfügbarkeitsdatenbanken)  
   
-        -   **Beschreibung:** **Die Verfügbarkeitsdatenbank hat Ihre RPO von einer Stunde überschritten. Sie sollten Leistungsprobleme in den Verfügbarkeitsreplikaten sofort untersuchen.**  
+        -   **Beschreibung**: **Die Verfügbarkeitsdatenbank hat Ihre RPO von einer Stunde überschritten. Sie sollten Leistungsprobleme in den Verfügbarkeitsreplikaten sofort untersuchen.**  
   
         -   **Anzuzeigender Text:** **RPO wurde überschritten.**  
   
@@ -439,7 +439,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
 ##  <a name="BKMK_SCENARIOS"></a> Leistungsbezogene Problembehandlungsszenarien  
  Die folgende Tabelle enthält die allgemeinen leistungsbezogenen Problembehandlungsszenarien.  
   
-|Szenario|und Beschreibung|  
+|Szenario|Beschreibung|  
 |--------------|-----------------|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RTO überschritten](troubleshoot-availability-group-exceeded-rto.md)|Nach einem automatischen Failover oder einem geplanten manuellen Failover ohne Datenverlust überschreitet die Failoverzeit die RTO. Ein anderer Fall: Wenn Sie die Failoverzeit eines sekundären Replikats im synchronen Commitmodus (z.B. eines Partners für das automatische Failover) einschätzen, stellen Sie fest, dass diese Ihre RTO überschreitet.|  
 |[Problembehandlung: Verfügbarkeitsgruppe hat RPO überschritten](troubleshoot-availability-group-exceeded-rpo.md)|Nachdem Sie ein erzwungenes manuelles Failover ausgeführt haben, ist der Datenverlust größer als Ihre RPO. Ein anderer Fall: Wenn Sie den möglichen Datenverlust eines sekundäres Replikats im asynchronen Commitmodus berechnen, stellen Sie fest, dass dieser Ihre RPO überschreitet.|  
@@ -448,7 +448,7 @@ Um die Richtlinien zu erstellen, befolgen Sie die nachfolgenden Anweisungen für
 ##  <a name="BKMK_XEVENTS"></a> Nützliche erweiterte Ereignisse  
  Für die Behandlung von Problemen mit Replikaten im Zustand **Wird synchronisiert** sind folgende erweiterte Ereignisse nützlich.  
   
-|Ereignisname|Kategorie|Channel|Verfügbarkeitsreplikat|  
+|Veranstaltungsname|Category|Channel|Verfügbarkeitsreplikat|  
 |----------------|--------------|-------------|--------------------------|  
 |redo_caught_up|Transaktionen|Debuggen|Secondary|  
 |redo_worker_entry|Transaktionen|Debuggen|Secondary|  

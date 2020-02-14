@@ -25,10 +25,10 @@ ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fc38de8bffc09461dc69a24acf15ce143276422b
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73843629"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "73843629"
 
   Gibt einen Wert mit einem Bitmuster zurück, das die Anweisungs-, Objekt- oder Spaltenberechtigungen für den aktuellen Benutzer angibt.  
   
- **Wichtig** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) und [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). Wenn die PERMISSIONS-Funktion weiterhin verwendet wird, verlangsamt sich möglicherweise die Leistung.  
+ **Wichtig**[!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md) und [Has_Perms_By_Name](../../t-sql/functions/has-perms-by-name-transact-sql.md). Wenn die PERMISSIONS-Funktion weiterhin verwendet wird, verlangsamt sich möglicherweise die Leistung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Mithilfe von PERMISSIONS kann festgestellt werden, ob der aktuelle Benutzer über die Berechtigungen verfügt, die zum Ausführen einer Anweisung oder zum Erteilen einer Berechtigung für einen anderen Benutzer mithilfe von GRANT erforderlich sind.  
   
  Die Berechtigungsinformationen werden in Form eines 32-Bit-Bitmusters zurückgegeben.  
@@ -80,7 +80,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
 |32|0x20|CREATE DEFAULT|  
 |64|0x40|BACKUP DATABASE|  
 |128|0x80|BACKUP LOG|  
-|256|0x100|Reserviert.|  
+|256|0x100|Reserved|  
   
  Die folgende Tabelle zeigt die für Objektberechtigungen verwendeten Bits, die zurückgegeben werden, wenn nur *objectid* angegeben wird.  
   

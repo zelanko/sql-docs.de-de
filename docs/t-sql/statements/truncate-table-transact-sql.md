@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 115aba36783857d5a0915822cb6f8ff810562f16
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68100076"
 ---
 # <a name="truncate-table-transact-sql"></a>TRUNCATE TABLE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68100076"
 
 Entfernt alle Zeilen oder angegebenen Partitionen einer Tabelle, ohne die einzelnen Löschungen zu protokollieren. TRUNCATE TABLE entspricht DELETE ohne WHERE-Klausel. TRUNCATE TABLE ist jedoch schneller und verwendet weniger Systemressourcen und Ressourcen für die Transaktionsprotokollierung.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -107,7 +107,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
   
  Wenn die Tabelle eine Identitätsspalte enthält, wird der Zähler für diese Spalte auf den Ausgangswert zurückgesetzt, der für die Spalte definiert ist. Wenn kein Ausgangswert definiert wurde, wird der Standardwert 1 verwendet. Falls Sie den Wert des Identitätszählers erhalten möchten, verwenden Sie stattdessen DELETE.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Sie können TRUNCATE TABLE nicht für Tabellen verwenden, für die Folgendes gilt:  
   
 -   Auf die Tabelle wird mit einer FOREIGN KEY-Einschränkung verwiesen. (Sie können eine Tabelle abschneiden, die einen Fremdschlüssel mit einem Verweis auf sich aufweist.)  
@@ -127,7 +127,7 @@ TRUNCATE TABLE { database_name.schema_name.table_name | schema_name.table_name |
 - TRUNCATE TABLE kann nicht innerhalb einer Transaktion ausgeführt werden.
   
 ## <a name="truncating-large-tables"></a>Abschneiden von großen Tabellen  
- In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Tabellen gelöscht oder abgeschnitten werden, die mehr als 128 Blöcke enthalten, ohne simultane Sperren für alle Blöcke aufrechtzuerhalten, die für den Löschvorgang erforderlich sind.  
+ In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Tabellen gelöscht oder abgeschnitten werden, die mehr als 128 Blöcke enthalten, ohne simultane Sperren für alle Blöcke aufrechtzuerhalten, die für den Löschvorgang erforderlich sind.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die mindestens erforderliche Berechtigung ist ALTER für *table_name*. Die Berechtigungen für TRUNCATE TABLE liegen standardmäßig beim Tabellenbesitzer, bei Mitgliedern der festen Serverrolle sysadmin und der festen Datenbankrollen db_owner und db_ddladmin. Die Berechtigungen sind nicht übertragbar. Sie können jedoch die TRUNCATE TABLE-Anweisung innerhalb eines Moduls einbinden, z. B. eine gespeicherte Prozedur, und mit der EXECUTE AS-Klausel für das Modul die passenden Berechtigungen erteilen.  

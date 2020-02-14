@@ -30,10 +30,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/10/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72252047"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "72252047"
 
   Generiert eine Fehlermeldung und initiiert die Verarbeitung von Fehlern für die Sitzung. RAISERROR kann entweder auf eine benutzerdefinierte, in der Katalogsicht „sys.messages“ gespeicherte Meldung verweisen oder eine Meldung dynamisch erstellen. Die Meldung wird als Serverfehlermeldung an die aufrufende Anwendung oder an einen zugeordneten CATCH-Block eines TRY...CATCH-Konstrukts zurückgegeben. In neuen Anwendungen sollte stattdessen [THROW](../../t-sql/language-elements/throw-transact-sql.md) verwendet werden.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -82,7 +82,7 @@ RAISERROR ( { msg_str | @local_variable }
   
  Ist ein Code, der den Abstand und die Ausrichtung des ersetzten Werts bestimmt.  
   
-|Code|Präfix oder Ausrichtung|und Beschreibung|  
+|Code|Präfix oder Ausrichtung|Beschreibung|  
 |----------|-----------------------------|-----------------|  
 |- (Minus)|Linksbündig|Der Argumentwert wird innerhalb der angegebenen Feldbreite linksbündig ausgegeben.|  
 |+ (Plus)|Zeichenpräfix|Dem Argumentwert wird ein Plus- (+) oder Minuszeichen (-) vorangestellt, wenn der Wert einen Datentyp mit Vorzeichen aufweist.|  
@@ -112,7 +112,7 @@ RAISERROR ( { msg_str | @local_variable }
 |------------------------|----------------|  
 |d oder i|Ganze Zahl mit Vorzeichen|  
 |o|Oktal ohne Vorzeichen|  
-|s|Zeichenfolge|  
+|s|String|  
 |u|Ganze Zahl ohne Vorzeichen|  
 |x oder X|Hexadezimal ohne Vorzeichen|  
   
@@ -120,7 +120,7 @@ RAISERROR ( { msg_str | @local_variable }
 >  Diese Typspezifikationen basieren auf den ursprünglich für die **printf**-Funktion in der Standardbibliothek für C definierten Typspezifikationen. Die in RAISERROR-Meldungszeichenfolgen verwendeten Typspezifikationen werden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datentypen zugeordnet, während die in **printf** verwendeten Spezifikationen Datentypen der Programmiersprache C zugeordnet werden. In **printf** verwendete Typspezifikationen werden nicht von RAISERROR unterstützt, wenn [!INCLUDE[tsql](../../includes/tsql-md.md)] nicht über einen mit dem zugeordneten C-Datentyp vergleichbaren Datentyp verfügt. So wird die *%p*-Spezifikation für Zeiger beispielsweise nicht in RAISERROR unterstützt, da [!INCLUDE[tsql](../../includes/tsql-md.md)] über keinen Zeigerdatentyp verfügt.  
   
 > [!NOTE]  
->  Zum Konvertieren eines Werts in den [!INCLUDE[tsql](../../includes/tsql-md.md)]**bigint**-Datentyp müssen Sie **%I64d** angeben.  
+>  Zum Konvertieren eines Werts in den [!INCLUDE[tsql](../../includes/tsql-md.md)]-Datentyp **bigint** müssen Sie **%I64d** angeben.  
   
  *\@local_variable*  
  Eine Variable eines beliebigen Zeichendatentyps, die eine Zeichenfolge enthält, die auf die gleiche Weise wie *msg_str* formatiert ist. *\@local_variable* muss auf **char** oder **varchar** festgelegt oder implizit in diese Datentypen konvertierbar sein.  
@@ -157,13 +157,13 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Option*  
  Ist eine benutzerdefinierte Option für den Fehler und kann einer der Werte in der folgenden Tabelle sein.  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
-|LOG|Protokolliert den Fehler in dem Fehler- und dem Anwendungsprotokoll für die Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Im Fehlerprotokoll protokollierte Fehler sind derzeit auf maximal 440 Bytes beschränkt. Nur Mitglieder der festen Serverrolle „sysadmin“ oder Benutzer mit ALTER TRACE-Berechtigungen können WITH LOG angeben.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
+|PROTOKOLL|Protokolliert den Fehler im Fehler- und im Anwendungsprotokoll für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz. Im Fehlerprotokoll protokollierte Fehler sind derzeit auf maximal 440 Bytes beschränkt. Nur Mitglieder der festen Serverrolle „sysadmin“ oder Benutzer mit ALTER TRACE-Berechtigungen können WITH LOG angeben.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Sendet Meldungen sofort an den Client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |SETERROR|Legt die Werte @@ERROR und ERROR_NUMBER unabhängig vom Schweregrad auf *msg_id* oder 50000 fest.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die von RAISERROR generierten Fehler sind mit Fehlern vergleichbar, die durch den [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Code generiert werden. Die von RAISERROR angegebenen Werte werden von den Systemfunktionen ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY, ERROR_STATE und @@ERROR gemeldet. Wird RAISERROR mit einem Schweregrad von 11 oder höher in einem TRY-Block ausgeführt, wird die Steuerung an den zugeordneten CATCH-Block übertragen. Der Fehler wird an den Aufrufer zurückgegeben, wenn RAISERROR ausgeführt wird:  
   
 -   Außerhalb des Bereichs eines beliebigen TRY-Blocks.  

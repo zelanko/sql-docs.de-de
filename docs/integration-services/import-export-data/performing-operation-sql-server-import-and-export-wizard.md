@@ -12,10 +12,10 @@ ms.assetid: 83259509-71d6-4a64-a7f2-4e9603b30bd4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 22f9918800930be9534441d2bb3706ad7844e9f7
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285365"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Vorgang wird ausgeführt (SQL Server-Import/Export-Assistent)
@@ -28,12 +28,12 @@ Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschlie
 ## <a name="screen-shot---operation-in-progress"></a>Screenshot: Vorgang wird ausgeführt 
  Der folgende Screenshot zeigt die Seite **Vorgang wird ausgeführt** des Assistenten während der Vorgang noch ausgeführt wird.  
   
- ![Seite „Vorgang wird ausgeführt“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/performing-operation1.png "Seite „Vorgang wird ausgeführt“ des Import/Export-Assistenten")  
+ ![Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten](../../integration-services/import-export-data/media/performing-operation1.png "Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten")  
 
 ## <a name="screen-shot---operation-completed"></a>Screenshot: Vorgang wurde abgeschlossen 
  Der folgende Screenshot zeigt die Seite **Vorgang wird ausgeführt** des Assistenten nachdem der Vorgang abgeschlossen wurde. Klicken Sie auf ein Element in der Spalte **Nachricht** , um weitere Informationen zum jeweiligen Schritt zu erhalten.  
   
- ![Seite „Vorgang wird ausgeführt“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/performing-operation2.png "Seite „Vorgang wird ausgeführt“ des Import/Export-Assistenten")  
+ ![Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten](../../integration-services/import-export-data/media/performing-operation2.png "Seite „Vorgang wird ausgeführt“ im Import/Export-Assistenten")  
   
 ## <a name="watch-the-progress-of-the-operation"></a>Überwachen des Vorgangsstatus
  **Aktion**  
@@ -42,11 +42,11 @@ Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschlie
  **Status**  
  Zeigt an, ob die einzelnen Schritte erfolgreich ausgeführt wurden oder fehlerhaft sind.  
   
- **Nachricht**  
+ **Meldung**  
  Zeigt Informationen und Fehlermeldungen zu dem Schritt an. Klicken Sie auf ein Element in dieser Spalte, um weitere Informationen zum jeweiligen Schritt zu erhalten.
 
 ## <a name="interrupt-the-operation-or-save-the-results"></a>Unterbrechen des Vorgangs oder Speichern der Ergebnisse
- **Stop**  
+ **Beenden**  
  Mit der Schaltfläche **Beenden** können Sie den Vorgang ggf. unterbrechen.  
   
  **Report**  
@@ -57,7 +57,7 @@ Nachdem Sie Ihre Auswahl im Assistenten überprüft und auf der Seite **Abschlie
 -   Wenn Sie den Vorgang sofort ausgeführt haben, können Sie das ausgewählte Ziel öffnen, um die Daten zu überprüfen, die der Assistent kopiert hat.  
 -   Wenn Sie das vom Assistenten erstellte SSIS-Paket gespeichert haben, können Sie es in SQL Server Data Tools öffnen, um es anzupassen und wiederzuverwenden. Informationen zur Anpassung des gespeicherten Pakets und zur späteren erneuten Ausführung finden Sie unter [Speichern des SSIS-Pakets](../../integration-services/import-export-data/save-ssis-package-sql-server-import-and-export-wizard.md).
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 
 

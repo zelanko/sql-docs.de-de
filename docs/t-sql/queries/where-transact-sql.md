@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67948216"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67948216"
 
   Gibt die Suchbedingung für die von einer Abfrage zurückgegebenen Zeilen an.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67948216"
 ```  
   
 ## <a name="arguments"></a>Argumente  
-\< *search_condition* > Definiert die Bedingung, die erfüllt sein muss, damit die Zeilen zurückgegeben werden. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
+\< *search_condition* > definiert die Bedingung, die erfüllt sein muss, damit die Zeilen zurückgegeben werden. Es gibt keinen Höchstwert hinsichtlich der Anzahl von Prädikaten in einer Suchbedingung. Weitere Informationen zu Suchbedingungen und Prädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird gezeigt, wie einige allgemeine Suchbedingungen in der `WHERE`-Klausel verwendet werden.  
@@ -78,7 +78,7 @@ FROM DimEmployee
 WHERE EmployeeKey  <= 500;  
 ```  
   
-### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D. Suchen nach Zeilen, die eine von drei Bedingungen erfüllen  
+### <a name="d-finding-rows-that-meet-any-of-three-conditions"></a>D: Suchen nach Zeilen, die eine von drei Bedingungen erfüllen  
   
 ```  
 -- Uses AdventureWorksDW  

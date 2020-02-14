@@ -17,10 +17,10 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 66d7ac0e15ebfee2c79a90f8c5041ba899dbff93
-ms.sourcegitcommit: b7618a2a7c14478e4785b83c4fb2509a3e23ee68
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73926039"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
@@ -31,7 +31,7 @@ Microsoft SQL Server 2016 Express LocalDB ist ein Feature von [SQL Server Expres
 
 Bei der Installation von LocalDB wird ein minimalen Satz von Dateien kopiert, der für den Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erforderlich ist. Sobald LocalDB installiert ist, können Sie mithilfe einer speziellen Verbindungszeichenfolge eine Verbindung herstellen. Wenn eine Verbindung hergestellt wird, wird die erforderliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur automatisch erstellt und gestartet. Sie ermöglicht der Anwendung, die Datenbank zu verwenden, und zwar ohne komplexe Konfigurationstasks. Mit Developer Tools können Entwickler [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bereitstellen, womit sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schreiben und testen können, und zwar ohne dabei eine vollständige Serverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten zu müssen. 
 
-## <a name="try-it-out"></a>Probieren Sie es aus. 
+## <a name="try-it-out"></a>Probieren Sie es aus! 
 
 - Um SQL Server Express LocalDB herunterzuladen und zu installieren, navigieren Sie zur Seite **[Downloads für SQL Server](https://www.microsoft.com/sql-server/sql-server-editions-express)** . LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
 
@@ -48,11 +48,11 @@ Wählen Sie während der Installation auf der Seite **Featureauswahl/Freigegeben
 
 Eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB wird mit dem Hilfsprogramm `SqlLocalDB.exe` verwaltet. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] LocalDB sollte anstelle des veralteten [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]-Benutzerinstanzfeatures verwendet werden.
 
-## <a name="description"></a>und Beschreibung
+## <a name="description"></a>Beschreibung
 
 Das LocalDB-Setupprogramm installiert mithilfe von `SqlLocalDB.msi` die notwendigen Dateien auf dem Computer. Nach der Installation ist LocalDB eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert, der normalerweise verborgen ist. Beispiel: `C:\Users\<user>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\`. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner `C:\Users\<user>\Documents\`.
 
-Weitere Informationen zur Einbindung von LocalDB in eine Anwendung finden Sie unter [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] [Übersicht über lokale Daten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)), [Erstellen einer Datenbank und Hinzufügen von Tabellen in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
+Weitere Informationen zur Einbindung von LocalDB in eine Anwendung finden Sie unter [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][Übersicht über lokale Daten](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/ms233817(v=vs.110)) und [Erstellen einer Datenbank und Hinzufügen von Tabellen in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer).
 
 Weitere Informationen zur LocalDB-API finden Sie in der [Referenz zu SQL Server Express LocalDB](../../relational-databases/sql-server-express-localdb-reference.md).
 
@@ -90,7 +90,7 @@ Nur ein Administrator auf dem Computer kann eine freigegebene Instanz von LocalD
 
 ### <a name="connect-to-the-automatic-instance"></a>Herstellen einer Verbindung mit der automatischen Instanz
 
-Die einfachste Möglichkeit zur Verwendung von LocalDB besteht darin, mit der Verbindungszeichenfolge `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` eine Verbindung mit der automatischen Instanz herzustellen, deren Besitzer der aktuelle Benutzer ist. Um mithilfe des Dateinamens eine Verbindung mit einer bestimmten Datenbank herzustellen, verwenden Sie eine ähnliche Verbindungszeichenfolge wie `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
+Die einfachste Möglichkeit zur Verwendung von LocalDB besteht darin, mit der Verbindungszeichenfolge `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` eine Verbindung mit der automatischen Instanz herzustellen, deren Besitzer der aktuelle Benutzer ist. Um eine bestimmte Datenbank herstellen einer Verbindung mit dem Dateinamen verbinden mithilfe einer Verbindungszeichenfolge ähnlich wie `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
 >[!NOTE]
 >Wenn ein Benutzer zum ersten Mal auf einem Computer versucht, eine Verbindung mit LocalDB herzustellen, muss die automatische Instanz sowohl erstellt als auch gestartet werden. Die zusätzliche Zeit, die für das Erstellen der Instanz benötigt wird, kann dazu führen, dass der Verbindungsversuch abgebrochen und eine Timeoutmeldung ausgegeben wird. Warten Sie in diesem Fall einige Sekunden, bis der Erstellungsvorgang vollständig abgeschlossen ist, und stellen Sie dann erneut eine Verbindung her.
@@ -113,11 +113,11 @@ REM Gather information about the instance of LocalDB
 |||
 |-|-|
 |Name|`LocalDBApp1`|
-|Versionsoptionen|\<aktuelle Version>|
+|Version|\<aktuelle Version>|
 |Freigegebener Name|""|
 |Besitzer|„\<Ihr Windows-Benutzerkonto>“|
 |Automatisch erstellen|Nein|
-|Status|Ausführen|
+|State|„Wird ausgeführt“|
 |Letzte Startzeit|\<Datum und Uhrzeit>|
 |Instanz-Pipename|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 

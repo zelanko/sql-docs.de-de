@@ -1,7 +1,7 @@
 ---
 title: HAVING (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 01/21/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,19 +21,19 @@ ms.assetid: 55650709-001e-42f4-902f-ead09a3c34af
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7cba43ad87b39122f6cd3d3ae7328b963e6fb1e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a574e3f7348c4641665b067193c54604145386c
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948435"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76315610"
 ---
 # <a name="select---having-transact-sql"></a>SELECT – HAVING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Gibt eine Suchbedingung für eine Gruppe oder ein Aggregat an. HAVING kann nur mit der SELECT-Anweisung verwendet werden. HAVING wird in der Regel mit einer GROUP BY-Klausel verwendet. Wenn GROUP BY nicht verwendet wird, gibt es eine implizite einzelne, aggregierte Gruppe.   
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -59,8 +59,8 @@ HAVING SUM(LineTotal) > 100000.00
 ORDER BY SalesOrderID ;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
- Im folgenden Beispiel wird mit einer `HAVING`-Klausel die Gesamtsumme für jeden `SalesAmount` aus der `FactInternetSales`-Tabelle abgerufen, wenn `OrderDateKey` im Jahr 2004 oder später ist.  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+ Im folgenden Beispiel wird eine `HAVING`-Klausel zum Abrufen der Summe von `SalesAmount` verwendet, die `80000` für alle `OrderDateKey`-Werte aus der `FactInternetSales`-Tabelle überschreiten.  
   
 ```sql
 -- Uses AdventureWorks  

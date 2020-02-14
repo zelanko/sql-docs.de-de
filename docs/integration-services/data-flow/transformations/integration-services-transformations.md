@@ -22,10 +22,10 @@ ms.assetid: c70c4f6e-82dd-4948-b923-fd5193f67f7e
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 26b22a82491d3f4c586c3fb259bf50c6d7216367
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297902"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
@@ -33,12 +33,12 @@ ms.locfileid: "71297902"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
+  Bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
   
 ## <a name="business-intelligence-transformations"></a>Business Intelligence-Transformationen  
  Die folgenden Transformationen führen Business Intelligence-Vorgänge aus, wie z. B. das Bereinigen von Daten, Text Mining und das Ausführen von Data Mining-Vorhersageabfragen.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für langsam veränderliche Dimensionen](../../../integration-services/data-flow/transformations/slowly-changing-dimension-transformation.md)|Diese Transformation konfiguriert das Aktualisieren einer langsam veränderlichen Dimension.|  
 |[Transformation für Fuzzygruppierung](../../../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md)|Diese Transformation standardisiert Werte in Spaltendaten.|  
@@ -51,7 +51,7 @@ ms.locfileid: "71297902"
 ## <a name="row-transformations"></a>Zeilentransformationen  
  Mit den folgenden Transformationen werden Spaltenwerte aktualisiert und neue Spalten erstellt. Die Transformation wird auf jede Zeile in der Transformationseingabe angewendet.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation zum Zuordnen der Zeichen](../../../integration-services/data-flow/transformations/character-map-transformation.md)|Diese Transformation wendet Zeichenfolgenfunktionen auf Zeichendaten an.|  
 |[Transformation für das Kopieren von Spalten](../../../integration-services/data-flow/transformations/copy-column-transformation.md)|Diese Transformation fügt der Transformationsausgabe Kopien von Eingabespalten hinzu.|  
@@ -65,7 +65,7 @@ ms.locfileid: "71297902"
 ## <a name="rowset-transformations"></a>Rowsettransformationen  
  Mit den folgenden Transformationen werden neue Rowsets erstellt. Rowsets schließen Aggregatwerte und sortierte Werte, Stichprobenrowsets oder pivotierte bzw. nicht pivotierte Rowsets ein.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für das Aggregieren](../../../integration-services/data-flow/transformations/aggregate-transformation.md)|Diese Transformation führt Aggregationen aus, wie z. B. AVERAGE, SUM und COUNT.|  
 |[Transformation zum Sortieren](../../../integration-services/data-flow/transformations/sort-transformation.md)|Diese Transformation sortiert Daten.|  
@@ -77,21 +77,21 @@ ms.locfileid: "71297902"
 ## <a name="split-and-join-transformations"></a>Transformationen für Teilen und Verknüpfen  
  Mit den folgenden Transformationen werden Zeilen an verschiedene Ausgaben verteilt, Kopien der Transformationseingaben erstellt, mehrere Eingaben zu einer einzigen Ausgabe verknüpft sowie Suchvorgänge ausgeführt.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Transformation für bedingtes Teilen](../../../integration-services/data-flow/transformations/conditional-split-transformation.md)|Diese Transformation routet Datenzeilen an andere Ausgaben.|  
 |[Transformation für Multicast](../../../integration-services/data-flow/transformations/multicast-transformation.md)|Diese Transformation verteilt Datasets an mehrere Ausgaben.|  
 |[Transformation für UNION ALL](../../../integration-services/data-flow/transformations/union-all-transformation.md)|Diese Transformation führt mehrere Datasets zusammen.|  
 |[Transformation für Zusammenführen](../../../integration-services/data-flow/transformations/merge-transformation.md)|Diese Transformation führt zwei sortierte Datasets zusammen.|  
 |[Transformation für Zusammenführungsjoin](../../../integration-services/data-flow/transformations/merge-join-transformation.md)|Diese Transformation verknüpft zwei Datasets mithilfe eines FULL-, LEFT- oder INNER-Joins.|  
-|[Transformation für Suche](../../../integration-services/data-flow/transformations/lookup-transformation.md)|Diese Transformation sucht Werte in einer Verweistabelle mithilfe einer genauen Übereinstimmung.|  
+|[Suchtransformation](../../../integration-services/data-flow/transformations/lookup-transformation.md)|Diese Transformation sucht Werte in einer Verweistabelle mithilfe einer genauen Übereinstimmung.|  
 |[Cachetransformation](../../../integration-services/data-flow/transformations/cache-transform.md)|Die Transformation, die Daten aus einer verbundenen Datenquelle im Datenfluss in einen Cacheverbindungs-Manager schreibt, der die Daten in einer Cachedatei speichert. Die Transformation für Suche führt Suchvorgänge in den Daten der Cachedatei aus.|  
-|[Balanced Data Distributor (BDD)-Transformation](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|Die Transformation verteilt Puffer mit eingehenden Zeilen gleichmäßig auf Ausgaben für separate Threads, um die Leistung von SSIS-Paketen zu verbessern, die auf Mehrkern- und Mehrprozessorservern ausgeführt werden.|  
+|[Balanced Data Distributor-Transformation](../../../integration-services/data-flow/transformations/balanced-data-distributor-transformation.md)|Die Transformation verteilt Puffer mit eingehenden Zeilen gleichmäßig auf Ausgaben für separate Threads, um die Leistung von SSIS-Paketen zu verbessern, die auf Mehrkern- und Mehrprozessorservern ausgeführt werden.|  
   
 ## <a name="auditing-transformations"></a>Überwachen von Transformationen  
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  
   
-|Transformation|und Beschreibung|  
+|Transformation|Beschreibung|  
 |--------------------|-----------------|  
 |[Überwachungstransformation](../../../integration-services/data-flow/transformations/audit-transformation.md)|Diese Transformation stellt dem Datenfluss in einem Paket Informationen zur Umgebung zur Verfügung.|  
 |[Transformation für Zeilenanzahl](../../../integration-services/data-flow/transformations/row-count-transformation.md)|Diese Transformation zählt die Zeilen in einem Datenfluss und speichert die endgültige Anzahl in einer Variablen.|  

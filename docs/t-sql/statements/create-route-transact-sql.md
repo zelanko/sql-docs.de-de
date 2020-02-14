@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006506"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68006506"
 
   Fügt der Routingtabelle der aktuellen Datenbank eine neue Route hinzu. Bei ausgehenden Nachrichten bestimmt [!INCLUDE[ssSB](../../includes/sssb-md.md)] das Routing durch eine Prüfung der Routingtabelle in der lokalen Datenbank. Bei Nachrichten in Konversationen, die aus einer anderen Instanz stammen, sowie bei Nachrichten, die weitergeleitet werden sollen, prüft [!INCLUDE[ssSB](../../includes/sssb-md.md)] die Routen in **msdb**.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -63,7 +63,7 @@ WITH
  AUTHORIZATION *owner_name*  
  Legt den Benutzer oder die Rolle der angegebenen Datenbank als Besitzer der Route fest. Für *owner_name* kann der Name eines beliebigen gültigen Benutzers oder einer beliebigen Rolle verwendet werden, wenn der aktuelle Benutzer Mitglied der festen Datenbankrolle **db_owner** oder der festen Serverrolle **sysadmin** ist. Andernfalls muss *owner_name* der Name des aktuellen Benutzers, der Name eines Benutzers, für den der aktuelle Benutzer IMPERSONATE-Berechtigungen besitzt, oder der Name einer Rolle sein, der der aktuelle Benutzer angehört. Wird diese Klausel weggelassen, gehört die Route dem aktuellen Benutzer.  
   
- mit  
+ WITH  
  Führt die Klauseln ein, über die die zurzeit erstellte Route definiert wird.  
   
  SERVICE_NAME = **'** _service\_name_ **'**  
@@ -109,7 +109,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Gibt die Netzwerkadresse für eine gespiegelte Datenbank an, wobei *next_hop_address* als Host für die gespiegelte Datenbank dient. *next_hop_mirror_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *DNS_Name* | *NetBIOS_Name* | *IP_Adresse* } **:** *Portnummer*  
   
  Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
@@ -174,7 +174,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://192.168.10.2:1234' ;  
 ```  
   
-### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D. Erstellen einer Route zu einem Weiterleitungsbroker  
+### <a name="d-creating-a-route-to-a-forwarding-broker"></a>D: Erstellen einer Route zu einem Weiterleitungsbroker  
  Im folgenden Beispiel wird eine Route zum Weiterleitungsbroker auf dem Server `dispatch.Adventure-Works.com` erstellt. Da weder der Dienstname noch die Broker-Instanz-ID angegeben sind, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Route für Dienste, für die keine andere Route definiert ist.  
   
 ```  

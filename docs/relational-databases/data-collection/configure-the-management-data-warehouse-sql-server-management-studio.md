@@ -23,10 +23,10 @@ ms.assetid: 23a584f3-c5e1-414c-9afe-73cd7efbda4b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 54badd0404ee5360aef4a7bc095c236e5b31f79d
-ms.sourcegitcommit: d00ba0b4696ef7dee31cd0b293a3f54a1beaf458
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74056474"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
@@ -93,7 +93,7 @@ ms.locfileid: "74056474"
   
  Geben Sie eine Anmeldung durch Aktivieren des Kontrollkästchens **Zuordnen** für die Anmeldung an.  
   
- **Mitgliedschaft in Datenbankrolle für:**  *\<Data Warehouse-Name>*  
+ **Mitgliedschaft in Datenbankrolle für:** *\<Data Warehouse-Name>*  
  Wählen Sie die Verwaltungs-Data Warehouse-Rolle aus, der der Anmeldenamen zugeordnet ist. Aktivieren Sie zu diesem Zweck das bzw. die entsprechenden Kontrollkästchen:  
   
 -   **mdw_admin**  
@@ -119,7 +119,7 @@ ms.locfileid: "74056474"
  **Beenden**  
  Beendet die Verarbeitung des Assistenten.  
   
- **Bericht**  
+ **Report**  
  Zeigt einen Bericht über die Datensammlungskonfiguration an. Die folgenden Berichtsoptionen stehen zur Verfügung:  
   
 -   Bericht anzeigen  
@@ -130,7 +130,7 @@ ms.locfileid: "74056474"
   
 -   Bericht als E-Mail senden  
   
- **Schließen**  
+ **Close**  
  Schließen Sie den Assistenten.  
   
 ## <a name="see-also"></a>Weitere Informationen  

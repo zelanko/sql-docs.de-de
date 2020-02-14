@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4e33a8add08837fb71c0d0558d6bbe7f3ae9197c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115266"
 ---
 # <a name="memory-management-architecture-guide"></a>Handbuch zur Architektur der Speicherverwaltung
@@ -54,7 +54,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 > [!NOTE]
 > Die folgende Tabelle enthält eine Spalte für 32-Bit-Versionen, die nicht mehr verfügbar sind.
 
-| |32-Bit <sup>1</sup> |64-Bit|
+| |32-Bit <sup>1</sup> |64 Bit|
 |-------|-------|-------| 
 |Konventioneller Arbeitsspeicher |Alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung: <br>– 2 GB<br>– 3 GB mit Startparameter „/3gb“ <sup>2</sup> <br>– 4 GB unter WOW64 <sup>3</sup> |Alle Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Bis zu der für den virtuellen Prozessadressraum geltenden Beschränkung: <br>– 7 TB mit IA64-Architektur (IA64 wird in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] und höher nicht unterstützt)<br>– Maximum des Betriebssystems mit X64 Architektur <sup>4</sup>
 |AWE-Mechanismus (Ermöglicht [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , auf 32-Bit-Plattformen über die Beschränkung für den virtuellen Prozessadressraum hinauszugehen.) |Standard-, Enterprise- und Developer-Editionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Pufferpool kann auf bis zu 64 GB Arbeitsspeicher zugreifen.|Nicht zutreffend <sup>5</sup> |
@@ -63,7 +63,7 @@ Mithilfe von AWE und der Berechtigung „Locked Pages in Memory“ können Sie f
 <sup>1</sup> Ab [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]sind 32-Bit-Versionen nicht verfügbar.  
 <sup>2</sup> „/3gb“ ist ein Startparameter des Betriebssystems. Weitere Informationen finden Sie in der MSDN Library.  
 <sup>3</sup> WOW64 (Windows on Windows 64) ist ein Modus, in dem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32-Bit) unter einem 64-Bit-Betriebssystem ausgeführt wird.  
-<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition unterstützt bis zu 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition unterstützt Betriebssystemmaximum.  
+<sup>4</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition unterstützt bis zu 128 GB. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition unterstützt Betriebssystemmaximum.  
 <sup>5</sup> Beachten Sie, dass die Option „sp_configure awe enabled“ in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)](64-Bit) vorhanden ist, jedoch ignoriert wird.    
 <sup>6</sup> Wenn die Berechtigung „Lock Pages in Memory (LPIM)“ erteilt wird (entweder für 32-Bit zur Unterstützung von AWE oder für 64-Bit als eigenständige Option), wird empfohlen, auch die Option „Max. Serverarbeitsspeicher“ festzulegen. Weitere Informationen zu LPIM finden Sie unter [Konfigurationsoptionen für den Serverarbeitsspeicher](../database-engine/configure-windows/server-memory-server-configuration-options.md#lock-pages-in-memory-lpim).
 
@@ -107,10 +107,10 @@ Dieses Verhalten wird normalerweise während folgender Vorgänge beobachtet:
 -  Ablaufverfolgungsvorgänge, die große Eingabeparameter speichern müssen.
 
 <a name="#changes-to-memory-management-starting-with-includesssql11includessssql11-mdmd"></a>
-## <a name="changes-to-memorytoreserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
+## <a name="changes-to-memory_to_reserve-starting-with-includesssql11includessssql11-mdmd"></a>Änderungen an "memory_to_reserve" ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]
 In früheren Versionen von SQL Server ([!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] und [!INCLUDE[ssKilimanjaro](../includes/ssKilimanjaro-md.md)]) reservierte die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Arbeitsspeicherverwaltung einen Teil des virtuellen Prozessadressbereichs (Process Virtual Address Space, VAS) für die Verwendung durch die **Mehrseitenbelegung (Multi-Page Allocation, MPA)** , **CLR-Belegung**, Speicherbelegungen für **Threadstapel** im SQL Server-Prozess und **Direkte Belegungen von Windows (Direct Windows Allocations, DWA)** . Dieser Teil des virtuellen Adressbereichs wird auch als „Zu belassender Arbeitsspeicher“ oder „Nicht-Pufferpool“-Bereich bezeichnet.
 
-Der virtuelle Adressbereich, der für diese Zuteilungen reserviert ist, wird durch die Konfigurationsoption _**memory\_to\_reserve**_ festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Um diesen Standardwert außer Kraft zu setzen, verwenden Sie den Startparameter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] *-g*. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
+Der virtuelle Adressbereich, der für diese Zuteilungen reserviert ist, wird durch die Konfigurationsoption _**memory\_to\_reserve**_ festgelegt. Der von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendete Standardwert ist 256 MB. Verwenden Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Startparameter *-g*, um den Standardwert zu überschreiben. Informationen zum Startparameter *-g* finden Sie auf der Dokumentationsseite zu [Startoptionen für den Datenbank-Engine-Dienst](../database-engine/configure-windows/database-engine-service-startup-options.md).
 
 Da seit [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Speicherbelegungen oberhalb von 8 KB ebenfalls von der Seitenbelegung beliebiger Größe vorgenommen werden, schließt der Wert von *memory_to_reserve* die Mehrseitenbelegungen nicht ein. Von dieser Änderung abgesehen bleibt bei dieser Konfigurationsoption alles unverändert.
 

@@ -12,10 +12,10 @@ ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296264"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>Datentypzuordnung überprüfen (SQL Server-Import/Export-Assistent)
@@ -36,7 +36,7 @@ Wenn Sie eine Datentypzuordnung festgelegt haben, die nicht erfolgreich in die *
  -   Das Warnsymbol in der Zeile der Liste **Tabelle** gibt an, dass ein Problem beim Konvertieren von mindestens einer Spalte mit Daten von den Abfrageergebnissen in einen kompatiblen Datentyp in der Zieltabelle aufgetreten ist.
  -   Das Warnsymbol in der ersten Zeile in der Liste **Datentypzuordnung** gibt an, dass die Zuordnung des Datentyps **int** der Quellspalte zum Datentyp **smalldatetime** der Zielspalte möglicherweise zu einem Datenverlust führt.
  
- ![Seite „Datentypzuordnung überprüfen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/review-mapping.png "Review Data Type Mapping page of the Import and Export Wizard") 
+ ![Datentypzuordnung überprüfen (Seite des Server-Import/Export-Assistenten)](../../integration-services/import-export-data/media/review-mapping.png "Datentypzuordnung überprüfen (Seite des Server-Import/Export-Assistenten)") 
  
 ## <a name="review-the-source-and-destination-tables"></a>Überprüfen der Quell- und Zielschematabellen  
  Der obere Abschnitt der Seite **Datentypenzuordnung überprüfen** besteht aus der Liste **Tabelle** , in der die Tabellen aufgelistet sind, die aus der Quelle in das Ziel kopiert werden sollen. Wählen Sie eine Tabelle in der Liste **Tabelle** aus, um Konvertierungsinformationen zu einer einzelnen Tabelle zu sehen. Die Konvertierungsinformationen für die einzelnen Spalten der ausgewählten Tabelle werden im Raster **Datentypzuordnung** im unteren Abschnitt der Seite angezeigt.
@@ -47,7 +47,7 @@ In diesem Beispiel werden die Ergebnisse der Abfrage, die der Benutzer angegeben
   
  In der folgenden Tabelle werden die Spalten in der Liste **Tabelle** beschrieben.  
   
-|Spalte|und Beschreibung|  
+|Column|Beschreibung|  
 |------------|-----------------|  
 |(Quellsymbol)|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /> - Ein **grünes** Häkchen gibt an, dass der Assistent erwartet, dass alle Datentypkonvertierungen für diese Tabelle erfolgreich sind.<br />- Ein **gelbes** Warnsymbol gibt an, dass Sie die einzelnen Konvertierungen überprüfen sollten, die der Assistent ausführt. Um diese Konvertierungen zu prüfen, wählen Sie die Tabelle aus und prüfen dann die Konvertierungen für einzelne Spalten in der Liste **Datentypzuordnung** .<br />- Ein **rotes** Fehlersymbol gibt an, dass der Assistent einige der Konvertierungen für diese Tabelle nicht zuverlässig ausführen kann.|  
 |**Quelle**|Der Name der Quelltabelle.|  
@@ -63,11 +63,11 @@ In diesem Beispiel wird jede Spalte an der Quelle in eine Spalte mit dem gleiche
 
 In der folgenden Tabelle werden die Spalten in der Liste **Datentypzuordnung** beschrieben. 
 
-|Spalte|und Beschreibung|  
+|Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |(Konvertierungssymbol)|Gibt die Wahrscheinlichkeit des Erfolgs für die Datentypkonvertierungen an:<br /> - Ein **grünes** Häkchen gibt an, dass der Assistent erwartet, dass die Datentypkonvertierung für diese Spalte erfolgreich ist.<br />- Ein **gelbes** Warnsymbol gibt an, dass Sie die Konvertierung überprüfen sollten, die der Assistent ausführt. Doppelklicken Sie auf die Spalte, um das Dialogfeld **Spaltenkonvertierungsdetails** anzuzeigen und die Konvertierung zu überprüfen. Weitere Informationen finden Sie im Dialogfeld [Spaltenkonvertierungsdetails](../../integration-services/import-export-data/column-conversion-details-dialog-box-sql-server-import-and-export-wizard.md).<br />- Ein **rotes** Fehlersymbol gibt an, dass der Assistent die Konvertierung nicht zuverlässig ausführen kann.|  
 |**Quellspalte**|Der Name der Quellspalte|  
-|**Quelltyp**|Der Datentyp der Quellspalte|  
+|**Quellentyp**|Der Datentyp der Quellspalte|  
 |**Zielspalte**|Der Name der Zielspalte|  
 |**Zieltyp**|Der Datentyp der Zielspalte|  
 |**Konvertieren**|Geben Sie an, ob die geplante Konvertierung fortgesetzt werden soll:<br /> - Aktivieren Sie das Kontrollkästchen, damit der Assistent mit der geplanten Konvertierung fortfährt.<br />- Deaktivieren Sie das Kontrollkästchen, um die Datentypkonvertierung abzubrechen.|  
@@ -97,6 +97,6 @@ Dieses Beispiel zeigt die Standardwerte für die zwei Optionen zur globalen Fehl
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie die Warnungen überprüft und Konvertierungs- und Fehlerbehandlungsoptionen angegeben haben, leitet Sie die Seite **Datentypzuordnung überprüfen** zurück zum Dialogfeld **Spaltenzuordnungen** . Weitere Informationen finden Sie unter [Spaltenzuordnungen](../../integration-services/import-export-data/column-mappings-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 [Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)
 

@@ -19,10 +19,10 @@ ms.author: mikeray
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909752"
 ---
 # <a name="how-online-index-operations-work"></a>Funktionsweise von Onlineindexvorgängen
@@ -39,7 +39,7 @@ ms.locfileid: "67909752"
   
      Die bereits vorhandenen Indizes stehen den gleichzeitigen Benutzern für Auswahl-, Einfüge-, Update- und Löschvorgänge zur Verfügung. Hierzu zählen auch Masseneinfügungen (wir unterstützt aber nicht empfohlen) und implizite Updates durch Trigger und Einschränkungen der referenziellen Integrität. Alle bereits vorhandenen Indizes sind für Abfragen und Suchvorgänge verfügbar. Dies bedeutet, dass sie vom Abfrageoptimierer ausgewählt und gegebenenfalls in Indexhinweisen angegeben werden können.  
   
--   **Target**  
+-   **Ziel**  
   
      Das Ziel bzw. die Ziele stellen den neuen Index (Heap) oder eine Gruppe neuer Indizes dar, die erstellt oder neu erstellt wird. Einfüge-, Update- und Löschvorgänge durch den Benutzer an der Quelle werden von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] während des Indexvorgangs auf das Ziel angewendet. Wenn der Onlineindexvorgang beispielsweise einen gruppierten Index neu erstellt, ist der neu erstellte gruppierte Index das Ziel, [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt nicht gruppierte Indizes nicht neu, wenn ein gruppierter Index neu erstellt wird.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67909752"
   
  Die folgende Abbildung zeigt den Prozess der Onlineerstellung eines anfänglichen gruppierten Indexes. Das Quellobjekt (der Heap) weist keine anderen Indizes auf. Die Aktivitäten der Quell- und Zielstrukturen werden für die einzelnen Phasen dargestellt. Außerdem werden gleichzeitige Auswahl-, Einfüge-, Update- und Löschvorgänge von Benutzern angezeigt. Die Vorbereitungs-, Erstellungs- und Endphase werden zusammen mit dem in der jeweiligen Phase verwendeten Sperrmodus angezeigt.  
   
- ![Während eines Onlineindexvorgangs ausgeführte Aktionen](../../relational-databases/indexes/media/online-index.gif "Activities performed during online index operation")  
+ ![Während eines Onlineindexvorgangs ausgeführte Aktionen](../../relational-databases/indexes/media/online-index.gif "Während eines Onlineindexvorgangs ausgeführte Aktionen")  
   
 ## <a name="source-structure-activities"></a>Quellstrukturaktivitäten  
  Die folgende Tabelle enthält die Aktivitäten in Bezug auf die Quellstrukturen während der einzelnen Phasen des Indexvorgangs und die entsprechende Sperrstrategie.  
@@ -62,7 +62,7 @@ ms.locfileid: "67909752"
 |Phase|Quellaktivität|Quellsperren|  
 |-----------|---------------------|------------------|  
 |Vorbereitung<br /><br /> Kurze Phase|Vorbereitung der Systemmetadaten auf die Erstellung der neuen leeren Indexstruktur.<br /><br /> Es wird eine Momentaufnahme der Tabelle definiert. Das heißt, dass mithilfe der Zeilenversionsverwaltung eine Lesekonsistenz auf Transaktionsebene ermöglicht wird.<br /><br /> Gleichzeitige Schreibvorgänge an der Quelle durch Benutzer werden für einen kurzen Zeitraum gesperrt.<br /><br /> Es werden mit Ausnahme der Erstellung mehrerer nicht gruppierter Indizes keine gleichzeitigen DDL-Vorgänge zugelassen.|S (Shared) für Tabelle*<br /><br /> Beabsichtigte freigegebene Sperre (Intent Shared, IS)<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE\*\*|  
-|Erstellen<br /><br /> Hauptphase|Die Daten werden gescannt, sortiert, zusammengeführt und in Massenladevorgängen in das Ziel eingefügt.<br /><br /> Gleichzeitige Auswahl-, Einfüge-, Update- und Löschvorgänge durch Benutzer werden sowohl auf die bereits vorhandenen Indizes als auch auf sämtliche neu erstellten Indizes angewendet.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
+|Entwickeln<br /><br /> Hauptphase|Die Daten werden gescannt, sortiert, zusammengeführt und in Massenladevorgängen in das Ziel eingefügt.<br /><br /> Gleichzeitige Auswahl-, Einfüge-, Update- und Löschvorgänge durch Benutzer werden sowohl auf die bereits vorhandenen Indizes als auch auf sämtliche neu erstellten Indizes angewendet.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Endphase<br /><br /> Kurze Phase|Alle Transaktionen ohne Commit müssen abgeschlossen werden, bevor diese Phase gestartet wird. Je nach der eingerichteten Sperre werden alle neuen Lese- und Schreibtransaktionen durch Benutzer für einen kurzen Zeitraum gesperrt, bis diese Phase abgeschlossen ist.<br /><br /> Sie Systemmetadaten werden aktualisiert; d. h., die Quelle wurde durch das Ziel ersetzt.<br /><br /> Die Quelle wird gelöscht, falls dies erforderlich ist. Beispielsweise nach dem erneuten Erstellen oder dem Löschen eines gruppierten Indexes.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S für die Tabelle, sofern ein nicht gruppierter Index erstellt wird.\*<br /><br /> Schemaänderungssperre (SCH-M, Schema Modification), sofern eine Quellstruktur (Index oder Tabelle) gelöscht wird.\*|  
   
  \* Der Indexvorgang wartet, bis Updatetransaktionen ohne Commit abgeschlossen sind, bevor er die S- oder SCH-M-Sperre für die Tabelle einrichtet.  
@@ -77,8 +77,8 @@ ms.locfileid: "67909752"
 |Phase|Zielaktivität|Zielsperren|  
 |-----------|---------------------|------------------|  
 |Vorbereitung|Neuer Index wird erstellt und auf schreibgeschützt festgelegt.|IS|  
-|Erstellen|Daten werden aus der Quelle eingefügt.<br /><br /> Änderungen durch den Benutzer (Einfügungen, Updates, Löschungen), die auf die Quelle angewendet werden, werden angewendet.<br /><br /> Diese Aktivität ist für den Benutzer sichtbar.|IS|  
-|Endphase|Indexmetadaten werden aktualisiert.<br /><br /> Lese-/Schreibstatus wird für Index festgelegt.|S<br /><br /> oder<br /><br /> SCH-M|  
+|Entwickeln|Daten werden aus der Quelle eingefügt.<br /><br /> Änderungen durch den Benutzer (Einfügungen, Updates, Löschungen), die auf die Quelle angewendet werden, werden angewendet.<br /><br /> Diese Aktivität ist für den Benutzer sichtbar.|IS|  
+|Endphase|Indexmetadaten werden aktualisiert.<br /><br /> Lese-/Schreibstatus wird für Index festgelegt.|E<br /><br /> oder<br /><br /> SCH-M|  
   
  Der Zugriff auf das Ziel durch SELECT-Anweisungen, die vom Benutzer ausgegeben werden, ist erst nach Abschluss des Vorgangs möglich.  
   

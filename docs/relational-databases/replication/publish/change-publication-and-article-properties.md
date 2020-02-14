@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4c4338893ea7cd38743967df8b3523def58df9fd
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: fe3d184b1a64dded731c0746a8264b4dc5809dd7
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710961"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286637"
 ---
 # <a name="change-publication-and-article-properties"></a>Ändern von Veröffentlichungs- und Artikeleigenschaften
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "71710961"
   
 ## <a name="publication-properties-for-snapshot-and-transactional-replication"></a>Veröffentlichungseigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changepublication**|**sync_method**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -38,13 +38,13 @@ ms.locfileid: "71710961"
 |Ändern der Momentaufnahmekomprimierung|**sp_changepublication**|**compress_snapshot**|Neue Momentaufnahme|  
 |Ändern der FTP-Momentaufnahmeoptionen|**sp_changepublication**|**enabled_for_internet**<br /><br /> **ftp_address**<br /><br /> **ftp_login**<br /><br /> **ftp_password**<br /><br /> **ftp_port**<br /><br /> **ftp_subdirectory**|Neue Momentaufnahme|  
 |Ändern des Skriptspeicherorts vor und nach der Momentaufnahme|**sp_changepublication**|**pre_snapshot_script**<br /><br /> **post_snapshot_script**|Neue Momentaufnahme (auch bei Änderung des Skriptinhalts notwendig)<br /><br /> Zum Anwenden des neuen Skripts auf den Abonnenten ist eine erneute Initialisierung erforderlich.|  
-|Aktivieren bzw. Deaktivieren der Unterstützung für Nicht-[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten|**sp_changepublication**|**is_enabled_for_het_sub**|Neue Momentaufnahme|  
+|Aktivieren oder Deaktivieren der Unterstützung für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Benutzer ohne Abonnement|**sp_changepublication**|**is_enabled_for_het_sub**|Neue Momentaufnahme|  
 |Ändern der Konfliktberichterstellung bei Abonnements mit verzögertem Update über eine Warteschlange|**sp_changepublication**|**centralized_conflicts**|Änderung nur möglich, wenn keine aktiven Abonnements vorhanden sind.|  
 |Ändern der Richtlinie zur Konfliktlösung bei Abonnements mit verzögertem Update über eine Warteschlange|**sp_changepublication**|**conflict_policy**|Änderung nur möglich, wenn keine aktiven Abonnements vorhanden sind.|  
   
 ## <a name="article-properties-for-snapshot-and-transactional-replication"></a>Artikeleigenschaften für die Momentaufnahme- und Transaktionsreplikation  
   
-|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels|**sp_droparticle**|Alle Parameter|Artikel können vor dem Erstellen von Abonnements gelöscht werden. Bei Verwendung von gespeicherten Prozeduren kann ein Abonnement eines Artikels gelöscht werden; wird dagegen [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]verwendet, muss das gesamte Abonnement gelöscht, neu erstellt und synchronisiert werden. Weitere Informationen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).|  
 |Ändern eines Spaltenfilters|**sp_articlecolumn**|`@column`<br /><br /> `@operation`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
@@ -62,7 +62,7 @@ ms.locfileid: "71710961"
   
 ## <a name="publication-properties-for-merge-replication"></a>Veröffentlichungseigenschaften für die Mergereplikation  
   
-|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Ändern des Momentaufnahmeformats|**sp_changemergepublication**|**sync_mode**|Neue Momentaufnahme|  
 |Ändern des Momentaufnahmespeicherorts|**sp_changemergepublication**|**alt_snapshot_folder**<br /><br /> **snapshot_in_defaultfolder**|Neue Momentaufnahme|  
@@ -75,13 +75,13 @@ ms.locfileid: "71710961"
 |Ändern eines Joinfilters oder logischen Datensatzes|**sp_changemergefilter**|`@property`<br /><br /> `@value`|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Deaktivieren der Verwendung parametrisierter Filter (das Aktivieren parametrisierter Filter erfordert keine besonderen Aktionen)|**sp_changemergepublication**|Wert **false** für **dynamic_filters**|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Aktivieren oder Deaktivieren der Verwendung von vorausberechneten Partitionen|**sp_changemergepublication**|**use_partition_groups**|Neue Momentaufnahme|  
-|Aktivieren bzw. Deaktivieren der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Partitionsoptimierung|**sp_changemergepublication**|**keep_partition_changes**|Erneutes Initialisieren von Abonnements|  
+|Aktivieren oder Deaktivieren der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)]-Partitionsoptimierung|**sp_changemergepublication**|**keep_partition_changes**|Erneutes Initialisieren von Abonnements|  
 |Aktivieren bzw. Deaktivieren der Abonnementpartitionsüberprüfung|**sp_changemergepublication**|**validate_subscriber_info**|Erneutes Initialisieren von Abonnements|  
 |Ändern des Veröffentlichungskompatibilitätsgrades auf 80sp3 oder niedriger|**sp_changemergepublication**|**publication_compatibility_level**|Neue Momentaufnahme|  
   
 ## <a name="article-properties-for-merge-replication"></a>Artikeleigenschaften für die Mergereplikation  
   
-|und Beschreibung|Gespeicherte Prozedur|Eigenschaften|Anforderungen|  
+|Beschreibung|Gespeicherte Prozedur|Eigenschaften|Requirements (Anforderungen)|  
 |-----------------|----------------------|----------------|------------------|  
 |Löschen eines Artikels, der den zuletzt parametrisierten Filter in der Veröffentlichung enthält|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  
 |Löschen eines Artikels, der einem Joinfilter oder einem logischen Datensatz übergeordnet ist (mit der Nebenwirkung, dass der Join gelöscht wird).|**sp_dropmergearticle**|Alle Parameter|Neue Momentaufnahme<br /><br /> Erneutes Initialisieren von Abonnements|  

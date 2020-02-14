@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 21d23387b3d17f54cbd6cfed3398cf5a0e8cffe6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 3f6fc6a82b0559282bf2ae714213bb8434c07bd0
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770800"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286890"
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68770800"
   
  Mithilfe von Zeilenfiltern können Sie eine zu veröffentlichende Teilmenge von Zeilen aus einer Tabelle angeben. Mithilfe von Zeilenfiltern können Sie Zeilen entfernen, die Benutzern nicht angezeigt werden sollen (z. B. Zeilen mit vertraulichen oder streng vertraulichen Informationen). Mit Zeilenfiltern können Sie auch unterschiedliche Datenpartitionen erstellen, die an verschiedene Abonnenten übermittelt werden. Indem Sie unterschiedliche Datenpartitionen für verschiedene Abonnenten veröffentlichen, können Sie auch Konflikte vermeiden, die andernfalls dadurch entstehen würden, dass mehrere Abonnenten dieselben Daten aktualisieren.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  Dieses Dialogfeld umfasst einen zweistufigen Vorgang für die Transaktions- und Momentaufnahmeveröffentlichungen sowie einen dreistufigen Vorgang für Mergeveröffentlichungen. Für alle Veröffentlichungstypen ist es erforderlich, dass Sie eine zu filternde Tabelle und eine oder mehrere Spalten auswählen, die im Filter eingeschlossen sein sollen. Der Filter wird als standardmäßige WHERE-Klausel definiert.  
   
 1.  **Wählen Sie die zu filternde Tabelle aus**  

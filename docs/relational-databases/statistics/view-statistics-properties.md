@@ -16,10 +16,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 45c297ea29dbab974f72f4ecf69deb5c65f57bbb
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72908016"
 ---
 # <a name="view-statistics-properties"></a>Anzeigen von Statistikeigenschaften
@@ -59,9 +59,9 @@ ms.locfileid: "72908016"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Statistikobjekt, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-6.  Wählen Sie im Dialogfeld **Statistikeigenschaften –** _statistics_name_ im Bereich **Seite auswählen** die Option **Details**aus.  
+6.  Klicken Sie im Dialogfeld **Statistikeigenschaften -** _statistics_name_ im Bereich **Seite auswählen** auf die Option **Details**.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Statistikeigenschaften –**  **statistics_name** _statistics_name_ angezeigt.  
+     Die folgenden Eigenschaften werden auf der Seite **Details** im Dialogfeld **Statistikeigenschaften -** _statistics_name_ angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
@@ -77,7 +77,7 @@ ms.locfileid: "72908016"
      **Name**  
      Name des Statistikobjekts.  
   
-     **Updated**  
+     **Aktualisiert**  
      Datum und Uhrzeit des letzten Updates der Statistik.  
   
      **Zeilen**  

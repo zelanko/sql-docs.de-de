@@ -37,10 +37,10 @@ ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: d5675f7c62ce43a9e41770075cd4a97253ea051e
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981765"
 ---
 # <a name="hints-transact-sql---table"></a>Hinweise (Transact-SQL): Tabelle
@@ -51,7 +51,7 @@ ms.locfileid: "73981765"
 > [!CAUTION]  
 >  Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfrageoptimierer in der Regel den optimalen Ausführungsplan für eine Abfrage auswählt, wird empfohlen, dass erfahrene Entwickler und Datenbankadministratoren Hinweise nur dann verwenden, wenn alle anderen Möglichkeiten sich als unzureichend erwiesen haben.  
   
- **Gilt für:**  
+ **Anwendungsbereich:**  
   
  [DELETE](../../t-sql/statements/delete-transact-sql.md)  
   
@@ -63,7 +63,7 @@ ms.locfileid: "73981765"
   
  [MERGE](../../t-sql/statements/merge-transact-sql.md)  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -121,7 +121,7 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
-WITH **(** \<<table_hint> **)** [ [ **,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 Bis auf einige Ausnahmen werden Tabellenhinweise nur dann in der FROM-Klausel unterstützt, wenn die Hinweise mit dem WITH-Schlüsselwort angegeben werden. Tabellenhinweise müssen zudem mit Klammern angegeben werden.  
   
 > [!IMPORTANT]  
@@ -192,7 +192,7 @@ Gibt an, dass der Abfrageoptimierer nur einen Indexsuchvorgang als Zugriffspfad 
   
 Der FORCESEEK-Hinweis kann folgendermaßen angegeben werden:  
   
-|Syntax|Beispiel|und Beschreibung|  
+|Syntax|Beispiel|Beschreibung|  
 |------------|-------------|-----------------|  
 |Ohne Index oder INDEX-Hinweis|`FROM dbo.MyTable WITH (FORCESEEK)`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über einen beliebigen relevanten Index.|  
 |Mit einem INDEX-Hinweis kombiniert|`FROM dbo.MyTable WITH (FORCESEEK, INDEX (MyIndex))`|Der Abfrageoptimierer berücksichtigt nur Indexsuchvorgänge für den Zugriff auf die Tabelle oder Sicht über den angegebenen Index.|  
@@ -354,7 +354,7 @@ Bei Angabe von UPDLOCK werden die Isolationsstufenhinweise READCOMMITTED und REA
 XLOCK  
 Gibt an, dass exklusive Sperren zu verwenden und aufrechtzuerhalten sind, bis die Transaktion abgeschlossen ist. Wenn die exklusiven Sperren mit ROWLOCK, PAGLOCK oder TABLOCK angegeben werden, werden sie auf die entsprechende Ebene der Granularität angewendet.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Tabellenhinweise werden ignoriert, wenn der Abfrageplan nicht auf die Tabelle zugreift. Dies ist möglicherweise darauf zurückzuführen, dass der Optimierer überhaupt nicht auf die Tabelle oder stattdessen auf eine indizierte Sicht zugreift. In letzterem Fall kann der Zugriff auf eine indizierte Sicht verhindert werden, indem der Abfragehinweis OPTION (EXPAND VIEWS) verwendet wird.  
   
 Alle Sperrhinweise werden an alle Tabellen und Sichten weitergeleitet, auf die der Abfrageplan zugreift, auch an Tabellen und Sichten, auf die in einer Sicht verwiesen wird. Zusätzlich nimmt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die entsprechenden Sperrkonsistenzprüfungen vor.  

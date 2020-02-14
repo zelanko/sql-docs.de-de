@@ -12,10 +12,10 @@ ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a16e270acae2a2685bcaf53045883eaa078ab03d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285934"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
@@ -32,7 +32,7 @@ Wenn Sie nicht alle Spalten der ausgewählten Tabelle kopieren möchten, können
  
  In diesem Beispiel erstellt der Assistent eine neue Zieltabelle, weil **Zieltabelle erstellen** ausgewählt ist. Standardmäßig weist der Assistent jeder Spalte in der neuen Zieltabelle die Namen, Datentypen und Eigenschaften zu, die denen der zugehörigen Quelltabelle entsprechen. 
   
- ![Seite „Spaltenzuordnungen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/column-mappings.png "Column mappings page of the Import and Export Wizard")  
+ ![Seite „Spaltenzuordnungen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/column-mappings.png "Seite „Spaltenzuordnungen“ des Import/Export-Assistenten")  
   
 ## <a name="review-the-source-and-destination"></a>Überprüfen der Quelle und des Ziels 
 ![Seite „Spaltenzuordnungen“, Abschnitt „Quelle und Ziel“](../../integration-services/import-export-data/media/column-mappings-page-source-and-destination-section.png)
@@ -108,7 +108,7 @@ Die Liste **Zuordnungen** enthält die folgenden Spalten.
 -    **Genauigkeit**  
     Geben Sie ggf. die Genauigkeit der numerischen Daten (d.h. die Anzahl von Ziffern) in der Zielspalte an.  
   
- -   **Dezimalstellen**  
+ -   **Skalieren**  
     Geben Sie ggf. den Bereich (d.h. die Anzahl von Dezimalstellen) der numerischen Daten in der Zielspalte an.  
   
 ## <a name="whats-next"></a>Wie geht es weiter?  
@@ -116,7 +116,7 @@ Die Liste **Zuordnungen** enthält die folgenden Spalten.
   
  Wenn Sie eine Zuordnung festgelegt haben, die nicht erfolgreich in die Liste **Zuordnungen** übernommen werden kann, leitet Sie das Dialogfeld **Spaltenzuordnungen** zur Seite **Datentypzuordnung überprüfen** um. Auf dieser Seite können Sie die Warnungen überprüfen, Konvertierungsoptionen angeben und außerdem festlegen, wie Fehler behandelt werden sollen. Weitere Informationen finden Sie unter [Datentypzuordnung überprüfen](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 [Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)  
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

@@ -16,10 +16,10 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 5c94d2d60bf851742aca68d5b7bc25ea4d8afd9c
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/12/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72289321"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>Analysieren eines tatsächlichen Ausführungsplans
@@ -50,4 +50,4 @@ Die Problembehandlung der Abfrageleistung erfordert umfangreiche Kenntnisse im V
 
 4.  Wählen Sie die Registerkarte „Szenarien“ aus, um Details zu den Problemen anzuzeigen, die für den tatsächlichen Ausführungsplan gefunden wurden. Für jeden aufgelisteten Operator im linken Bereich zeigt der rechte Bereich Details zum Szenario im Link *Klicken Sie hier, um weitere Informationen zu diesem Szenario zu erhalten* sowie mögliche Gründe an, um dieses Szenario zu erläutern.
 
-    ![Ergebnisse der Ausführungsplananalyse](../../relational-databases/performance/media/plananalysis-scenarios.png "Ergebnisse der Ausführungsplananalyse") 
+    ![Ergebnisse der Analyse des Ausführungsplans](../../relational-databases/performance/media/plananalysis-scenarios.png "Ergebnisse der Analyse des Ausführungsplans") 

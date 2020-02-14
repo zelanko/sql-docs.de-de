@@ -15,10 +15,10 @@ ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a42a4a17a1eee9222318e2b508b28d190361d85e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012778"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff
@@ -38,7 +38,7 @@ ms.locfileid: "68012778"
 4.  Geben Sie im Feld **Geben Sie die Namen der auszuwählenden Objekte ein** den Namen der Pro-Dienst-SID aus dem Thema [**Konfigurieren von Windows-Dienstkonten und -Berechtigungen**](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)der Onlinedokumentation ein. (Verwenden Sie als Pro-Dienst-SID-Namen des [!INCLUDE[ssDE](../../includes/ssde-md.md)] s **NT SERVICE\MSSQLSERVER** für eine Standardinstanz bzw. **NT SERVICE\MSSQL$InstanceName** für eine benannte Instanz.)  
   
 5.  Klicken Sie auf **Namen überprüfen** , um den Eintrag zu überprüfen. (Wenn bei der Überprüfung ein Fehler zurückgegeben wird, kann dies darauf hindeuten, dass der Name nicht gefunden wurde. Wenn Sie auf **OK**klicken, wird das Dialogfeld **Mehrere Namen gefunden** angezeigt. den Pro-Dienst-SID-Namen – entweder **MSSQLSERVER** oder **NT SERVICE\MSSQL$InstanceName**– aus, und klicken Sie auf **OK**.  Klicken Sie erneut auf **OK** , um zum Dialogfeld **Berechtigungen** zurückzukehren.)   
-6.  Wählen Sie im Feld **Gruppen- oder Benutzernamen** den Pro-Dienst-SID-Namen aus, und aktivieren Sie im Feld **Berechtigungen für** \<Name> für **Vollzugriff** das Kontrollkästchen **Zulassen**.  
+6.  Wählen Sie im Feld **Gruppen- oder Benutzernamen** den Pro-Dienst-SID-Namen aus, und aktivieren Sie dann im Feld **Berechtigungen für** \<Name> für **Vollzugriff** das Kontrollkästchen **Zulassen**.  
   
 7. Klicken Sie auf **Anwenden**und dann zweimal auf **OK** , um das Dialogfeld zu schließen.  
   

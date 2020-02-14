@@ -12,10 +12,10 @@ ms.assetid: fbf0aa37-fd9e-47e1-82b4-26c1359ec3da
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: a945c51a5ba75c20a0925a4f548d98765379459b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296366"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Assistenten abschließen (SQL Server-Import/Export-Assistent)
@@ -28,7 +28,7 @@ Nachdem Sie angegeben haben, ob der Kopiervorgang sofort ausgeführt werden soll
 ## <a name="screen-shot-of-the-complete-the-wizard-page"></a>Screenshot der Seite „Assistenten abschließen“ 
  Der folgende Screenshot zeigt ein einfaches Beispiel der Seite **Assistenten abschließen** des Assistenten.  
   
- ![Seite „Assistenten abschließen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/complete.png "Seite „Assistenten abschließen“ des Import/Export-Assistenten")  
+ ![Seite „Assistenten abschließen“ im Import/Export-Assistenten](../../integration-services/import-export-data/media/complete.png "Seite „Assistenten abschließen“ im Import/Export-Assistenten")  
   
 ## <a name="review-the-options-you-selected"></a>Überprüfen der ausgewählten Optionen  
  
@@ -41,6 +41,6 @@ Nachdem Sie angegeben haben, ob der Kopiervorgang sofort ausgeführt werden soll
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Überprüfen Sie die im Assistenten ausgewählten Optionen, und klicken Sie dann auf **Fertig stellen**. Die nächste Seite ist **Vorgang wird ausgeführt**. Auf dieser Seite sehen Sie den Status und das Ergebnis des Vorgangs, den Sie auf den vorherigen Seiten konfiguriert haben. Weitere Informationen finden Sie unter [Ausführen des Vorgangs](../../integration-services/import-export-data/performing-operation-sql-server-import-and-export-wizard.md).
  
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)
 

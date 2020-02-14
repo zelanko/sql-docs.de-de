@@ -15,10 +15,10 @@ ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68084094"
 ---
 # <a name="log-file-viewer-f1-help"></a>Protokolldatei-Viewer (F1-Hilfe)
@@ -29,11 +29,11 @@ ms.locfileid: "68084094"
   
  Die Anzahl der angezeigten Zeilen für Überwachungsprotokolle kann auf der Seite **SQL Server Objekt-Explorer/Befehle** im Dialogfeld **Extras/Optionen** konfiguriert werden. Beschreibungen der Spalten, die für Überwachungsprotokolle angezeigt werden, finden Sie unter [sys.fn_get_audit_file &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md).  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Protokoll laden**  
  Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  
   
- **Exportieren**  
+ **Export**  
  Öffnen Sie ein Dialogfeld, in dem Sie die im Raster **Protokolldateizusammenfassung** angezeigten Informationen in eine Textdatei exportieren können.  
   
  **Aktualisieren**  
@@ -42,7 +42,7 @@ ms.locfileid: "68084094"
  **Filter**  
  Öffnen Sie ein Dialogfeld, in dem Sie zum Filtern der Protokolldatei verwendete Einstellungen angeben können, z.B. Filterkriterien wie **Verbindung**, **Datum**oder **Allgemein** .  
   
- **Suchen**  
+ **Suchen,**  
  Durchsuchen Sie die Protokolldatei nach bestimmtem Text. Das Suchen mit Platzhalterzeichen wird nicht unterstützt.  
   
  **Beenden**  
@@ -58,13 +58,13 @@ ms.locfileid: "68084094"
  Der Name der Instanz, bei der das Ereignis aufgetreten ist. Dieser wird im Format *Computername*\\*Instanzname*.  
   
 ## <a name="frequently-displayed-columns"></a>Häufig angezeigte Spalten  
- **Datum**  
+ **Date**  
  Zeigt das Datum des Ereignisses an.  
   
  **Quelle**  
  Zeigt die Ausgangsfunktion an, mit dem das Ereignis erstellt wurde, z. B. den Namen des Diensts (z. B. MSSQLSERVER). Dies wird nicht für alle Protokolltypen angezeigt.  
   
- **MessageBox**  
+ **Meldung**  
  Zeigt die Meldungen an, die dem Ereignis zugeordnet sind.  
   
  **Protokolltyp**  

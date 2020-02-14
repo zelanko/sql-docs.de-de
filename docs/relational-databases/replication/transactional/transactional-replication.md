@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 986461eb17ed8c5980139fd8789f4fcbed458734
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 745001fb70cf3e210a1e5646fb198acfecdc8cee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251080"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76286947"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "71251080"
   
  Die folgende Abbildung zeigt die wichtigsten Komponenten der Transaktionsreplikation.  
   
- ![Komponenten und Datenfluss für Transaktionsreplikation](../../../relational-databases/replication/transactional/media/trnsact.gif "Komponenten und Datenfluss für Transaktionsreplikation")  
+ ![Komponenten und Datenfluss der Transaktionsreplikation](../../../relational-databases/replication/transactional/media/trnsact.gif "Komponenten und Datenfluss der Transaktionsreplikation")  
   
 ##  <a name="Dataset"></a> Anfangsdataset  
  Bevor ein neuer Abonnent einer Transaktionsreplikation inkrementelle Änderungen von einem Verleger erhalten kann, muss der Abonnent Tabellen mit demselben Schema und denselben Daten wie die Tabellen auf dem Verleger enthalten. Das Anfangsdataset ist in der Regel eine Momentaufnahme, die vom Momentaufnahme-Agent erstellt und vom Verteilungs-Agent verteilt und angewendet wird. Das Anfangsdataset kann auch über eine Sicherung oder andere Methoden, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services, bereitgestellt werden.  
@@ -78,7 +78,7 @@ ms.locfileid: "71251080"
 ## <a name="publication-types"></a>Veröffentlichungstypen 
 Die Transaktionsreplikation stellt vier Veröffentlichungstypen bereit:  
   
-|Veröffentlichungstyp|und Beschreibung|  
+|Veröffentlichungstyp|Beschreibung|  
 |----------------------|-----------------|  
 |Standardmäßige Transaktionsveröffentlichung|Geeignet für Topologien, in denen alle Daten auf dem Abonnenten schreibgeschützt sind (von der Transaktionsreplikation wird dies auf dem Abonnenten nicht erzwungen).<br /><br /> Diese Transaktionsveröffentlichungen werden standardmäßig bei der Verwendung von Transact-SQL oder Replikationsverwaltungsobjekten (RMO) erstellt. Im Assistenten für neue Veröffentlichung werden sie erstellt, wenn auf der Seite **Veröffentlichungstyp** die Option **Transaktionsveröffentlichung** ausgewählt wird.<br /><br /> Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
 |Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> – Jeder Speicherort verfügt über identische Daten auf einem Verleger und einem Abonnenten. <br /> – Zeilen können auf dem Abonnenten aktualisiert werden.<br /> – Diese Topologie eignet sich für Serverumgebungen am besten, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  

@@ -20,10 +20,10 @@ ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: be976ec58ae275f37262f136a2896ffb6a9c7677
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71287872"
 ---
 # <a name="use-property-expressions-in-packages"></a>Verwenden von Eigenschaftsausdrücken in Paketen
@@ -45,7 +45,7 @@ ms.locfileid: "71287872"
   
 -   Variablen in Ausdrücken können durch die Skripts aktualisiert werden, die vom Skripttask und der Skriptkomponente ausgeführt werden.  
   
- Die Ausdrücke werden mithilfe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ausdruckssprache erstellt. Die Ausdrücke können Systemvariablen oder benutzerdefinierte Variablen verwenden sowie die Operatoren, Funktionen und Typumwandlungen, die von der Ausdruckssprache bereitgestellt werden.  
+ Die Ausdrücke werden mithilfe der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Ausdruckssprache erstellt. Die Ausdrücke können Systemvariablen oder benutzerdefinierte Variablen verwenden sowie die Operatoren, Funktionen und Typumwandlungen, die von der Ausdruckssprache bereitgestellt werden.  
   
 > [!NOTE]  
 >  Die Namen von benutzerdefinierten und Systemvariablen unterscheiden nach Groß-/Kleinschreibung.  
@@ -71,7 +71,7 @@ ms.locfileid: "71287872"
   
  Im folgenden Diagramm werden die Benutzeroberflächen angezeigt, die Sie verwenden, um Eigenschaftsausdrücke hinzuzufügen, zu ändern oder zu entfernen.  
   
- ![Benutzeroberfläche für Eigenschaftsausdrücke](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "The user interface for property expressions")  
+ ![Benutzeroberfläche für Eigenschaftsausdrücke](../../integration-services/expressions/media/ssis-propertyexpressionui.gif "Benutzeroberfläche für Eigenschaftsausdrücke")  
   
  Klicken Sie im Fenster **Eigenschaften** und auf der Seite **Ausdrücke** auf der Sammlungsebene **Ausdrücke** auf die Schaltfläche zum Durchsuchen **(…)** , um das Dialogfeld **Eigenschaftsausdruck-Editor** zu öffnen. Der Eigenschaftsausdruck-Editor ermöglicht das Zuordnen einer Eigenschaft zu einem Ausdruck und das Eingeben eines Eigenschaftsausdrucks. Wenn Sie die grafischen Ausdruckstools zum Erstellen und anschließenden Überprüfen des Ausdrucks verwenden möchten, klicken Sie auf der Ausdrucksebene auf die Schaltfläche zum Durchsuchen **(…)** , um das Dialogfeld **Ausdrucks-Generator** zu öffnen. Erstellen bzw. ändern Sie anschließend den Ausdruck, und überprüfen Sie ihn bei Bedarf.  
   

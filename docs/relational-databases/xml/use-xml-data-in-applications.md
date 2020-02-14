@@ -26,10 +26,10 @@ ms.assetid: 5dabf7e0-c6df-451d-a070-4661f84607fd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 998504b936681c5e20d185ab17b787630a6ae2f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68039153"
 ---
 # <a name="use-xml-data-in-applications"></a>Verwenden von XML-Daten in Anwendungen
@@ -146,14 +146,14 @@ Row 2
 ```  
   
 ## <a name="handling-xml-from-an-xml-type-column-by-using-adonet"></a>Verarbeiten von XML in einer Spalte vom Typ xml mithilfe von ADO.NET  
- Um XML in einer **xml** -Datentypspalte mithilfe von ADO.NET und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu verarbeiten, können Sie das Standardverhalten der **SqlCommand** -Klasse verwenden. Eine **xml** -Datentypspalte und ihre Werte können z. B. mit einem **SqlDataReader**auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer **xml** -Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem **XmlReader** -Typ zuweisen.  
+ Um XML in einer Spalte vom Datentyp **xml** mithilfe von ADO.NET und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu verarbeiten, können Sie das Standardverhalten der **SqlCommand**-Klasse verwenden. Eine **xml** -Datentypspalte und ihre Werte können z. B. mit einem **SqlDataReader**auf dieselbe Weise abgerufen werden wie eine beliebige SQL-Spalte. Wenn Sie jedoch mit dem Inhalt einer **xml** -Datentypspalte als XML arbeiten möchten, müssen Sie den Inhalt zunächst einem **XmlReader** -Typ zuweisen.  
   
- Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über die XML-Spaltenwerte in einem Datenleser in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] -SDK-Dokumentation.  
+ Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über XML-Spaltenwerte in einem Datenleser in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK-Dokumentation.  
   
 ## <a name="handling-an-xml-type-column-in-parameters-by-using-adonet"></a>Verarbeiten einer Spalte vom Typ xml in Parametern mithilfe von ADO.NET  
  Um einen xml-Datentyp, der als Parameter in ADO.NET und [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]übergeben wird, zu verarbeiten, können Sie den Wert als eine Instanz des **SqlXml** -Datentyps angeben. Es ist keine besondere Verarbeitung erforderlich, da die **xml** -Datentypspalten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Parameterwerte auf dieselbe Weise annehmen können wie andere Spalten und Datentypen, z. B. **string** oder **integer**.  
   
- Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über die als Befehlsparameter verwendeten XML-Werte in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] -SDK-Dokumentation.  
+ Weitere Informationen sowie einen Beispielcode finden Sie im Abschnitt über XML-Werte als Befehlsparameter in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] SDK-Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [XML-Daten &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  

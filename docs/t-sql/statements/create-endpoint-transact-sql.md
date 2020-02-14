@@ -32,10 +32,10 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a320b01433ad95f4bd695a3f700b7e7bb9ba653
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67902825"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
@@ -55,7 +55,7 @@ ms.locfileid: "67902825"
   
 > **HINWEIS:** Systemeigene XML-Webdienste (SOAP-/HTTP-Endpunkte) wurden in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] entfernt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -147,7 +147,7 @@ FOR DATABASE_MIRRORING (
  LISTENER_PORT **=** _listenerPort_  
  Gibt die Portnummer an, die für Verbindungen vom Service Broker-TCP/IP überwacht wird. Gemäß der Konvention wird 4022 verwendet, aber jede Zahl zwischen 1024 und 32767 ist gültig.  
   
- LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*IP-Adresse_V6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  Gibt die IP-Adresse an, auf der der Endpunkt lauscht. Der Standardwert ist ALL. Das bedeutet, dass die Überwachung lässt eine Verbindung an einer gültigen IP-Adresse zulässt.  
   
  Wenn Sie die Datenbankspiegelung mit einer IP-Adresse anstelle eines vollqualifizierten Domänennamens (`ALTER DATABASE SET PARTNER = partner_IP_address` oder `ALTER DATABASE SET WITNESS = witness_IP_address`) konfigurieren, müssen Sie beim Erstellen von Spiegelungsendpunkten `LISTENER_IP =IP_address` anstelle von `LISTENER_IP=ALL` angeben.  
@@ -169,7 +169,7 @@ FOR DATABASE_MIRRORING (
  **\<authentication_options> ::=**  
   
  **WINDOWS** [ { NTLM | KERBEROS | **NEGOTIATE** } ]  
- Gibt an, dass der Endpunkt mithilfe des Windows-Authentifizierungsprotokolls die Endpunkte authentifizieren soll. Dies ist die Standardeinstellung.  
+ Gibt an, dass der Endpunkt mithilfe des Windows-Authentifizierungsprotokolls die Endpunkte authentifizieren soll. Dies ist die Standardoption.  
   
  Wenn Sie eine Autorisierungsmethode angeben (NTLM oder KERBEROS), wird immer diese Methode als Authentifizierungsprotokoll verwendet. Mit dem Standardwert NEGOTIATE verwendet der Endpunkt das Windows-Aushandlungsprotokoll, um NTLM oder Kerberos auszuwählen.  
   
@@ -227,7 +227,7 @@ FOR DATABASE_MIRRORING (
  Nachrichten werden weitergeleitet, falls eine Weiterleitungsadresse verfügbar ist.  
   
  DISABLED  
- Nachrichten für externe Dienste werden verworfen. Dies ist die Standardeinstellung.  
+ Nachrichten für externe Dienste werden verworfen. Dies ist die Standardoption.  
   
  MESSAGE_FORWARD_SIZE **=** _Weiterleitungsgröße_  
  Gibt an, wie viel Speicherplatz dem Endpunkt zum Speichern weiterzuleitender Nachrichten maximal in MB zugeordnet werden soll.  
@@ -316,7 +316,7 @@ GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
 
 ```
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [DROP ENDPOINT (Transact-SQL)](../../t-sql/statements/drop-endpoint-transact-sql.md)   

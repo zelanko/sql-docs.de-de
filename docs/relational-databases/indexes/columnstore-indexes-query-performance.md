@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc6409f7a8f5fc15568e583aa50552667f2dd874
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71816716"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore-Indizes: Abfrageleistung
@@ -42,7 +42,7 @@ ms.locfileid: "71816716"
     
  Der Speicherplatz, der für das Erstellen eines Columnstore-Indexes erforderlich ist, hängt von der Anzahl von Spalten, der Anzahl der Zeichenfolgenspalten, dem Grad der Parallelität (Degree of Parallelism, DOP) und von den Eigenschaften der Daten ab. Wenn die Tabelle beispielsweise weniger als eine Million Zeilen aufweist, verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur einen Thread, um den Columnstore-Index zu erstellen.    
     
- Wenn die Tabelle mehr als eine Million Zeilen aufweist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber keine ausreichend dimensionierte Arbeitsspeicherzuweisung abrufen kann, um den Index mit MAXDOP zu erstellen, verringert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `MAXDOP` automatisch nach Bedarf, um es auf den verfügbaren Arbeitsspeicher zu beschränken.  In bestimmten Fällen muss DOP auf eins verringert werden, um den Index mit eingeschränktem Arbeitsspeicher zu erstellen.    
+ Wenn die Tabelle mehr als eine Million Zeilen aufweist, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aber keine ausreichend dimensionierte Arbeitsspeicherzuweisung abrufen kann, um den Index mit MAXDOP zu erstellen, verringert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]`MAXDOP` automatisch nach Bedarf, um es auf den verfügbaren Arbeitsspeicher zu beschränken.  In bestimmten Fällen muss DOP auf eins verringert werden, um den Index mit eingeschränktem Arbeitsspeicher zu erstellen.    
     
  Ab SQL [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] wird die Abfrage immer im Batchmodus ausgeführt. In früheren Versionen wird die Batchausführung nur verwendet, wenn DOP größer als 1 ist.    
     
@@ -94,9 +94,9 @@ ms.locfileid: "71816716"
 |Batchmodusoperatoren|Einsatz|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Kommentare|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML-Vorgänge (Insert, Delete, Update, Merge)||nein|nein|nein|DML ist kein Batchmodusvorgang, da es nicht parallel ist. Auch wenn die serielle Batchmodusverarbeitung aktiviert wird, kommt es zu keiner maßgeblichen Leistungssteigerung, wenn DML im Batchmodus verarbeitet wird.|    
-|Columnstore Index Scan|SCAN|NA|ja|ja|Bei Columnstore-Indizes kann das Prädikat mittels Push an den SCAN-Knoten übertragen werden.|    
+|Columnstore Index Scan|SCAN|Nicht verfügbar|ja|ja|Bei Columnstore-Indizes kann das Prädikat mittels Push an den SCAN-Knoten übertragen werden.|    
 |Columnstore Index Scan (nicht gruppiert)|SCAN|ja|ja|ja|ja|    
-|Index Seek||NA|NA|nein|Es wird ein Suchvorgang im Zeilenmodus durch einen nicht gruppierten B-Strukturindex durchgeführt.|    
+|Index Seek||Nicht verfügbar|Nicht verfügbar|nein|Es wird ein Suchvorgang im Zeilenmodus durch einen nicht gruppierten B-Strukturindex durchgeführt.|    
 |Compute Scalar|Ausdruck, dessen Auswertung einen Skalarwert ergibt.|ja|ja|ja|Es gibt jedoch einige Einschränkungen hinsichtlich des Datentyps. Dies gilt für alle Batchmodusoperatoren.|    
 |Verkettung|UNION und UNION ALL|nein|ja|ja||    
 |filter|Anwenden von Prädikaten|ja|ja|ja||    
@@ -106,9 +106,9 @@ ms.locfileid: "71816716"
 |Nested Loops||nein|nein|nein||    
 |Singlethread-Abfragen unter MAXDOP 1||nein|nein|ja||    
 |Singlethread-Abfragen mit einem seriellen Abfrageplan||nein|nein|ja||    
-|Sort|Order by-Klausel für SCAN mit Columnstore-Index|nein|nein|ja||    
+|sort|Order by-Klausel für SCAN mit Columnstore-Index|nein|nein|ja||    
 |Top Sort||nein|nein|ja||    
-|Window Aggregates||NA|NA|ja|Neuer Operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
+|Window Aggregates||Nicht verfügbar|Nicht verfügbar|ja|Neuer Operator in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
 <sup>1</sup> Gilt für [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium-Tarife, Standard-Tarife (S3 und höher), alle vCore-Tarife sowie [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
     
@@ -127,7 +127,7 @@ ms.locfileid: "71816716"
     
  Aggregatweitergabe wird durch effiziente Aggregation von komprimierten/codierten Daten bei Cache-entlastender Ausführung und durch Nutzung von SIMD weiter beschleunigt.    
     
- ![aggregate pushdown](../../relational-databases/indexes/media/aggregate-pushdown.jpg "aggregate pushdown")    
+ ![Aggregatweitergabe](../../relational-databases/indexes/media/aggregate-pushdown.jpg "Aggregatweitergabe")    
     
 Die Aggregatweitergabe wird beispielsweise in den beiden folgenden Abfragen durchgeführt:    
     

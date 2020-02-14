@@ -28,10 +28,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2d3a0a9b09696959ba14c97c237e9e8ef9927db6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982924"
 ---
 # <a name="is_member-transact-sql"></a>IS_MEMBER (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "73982924"
 
   Zeigt an, ob der aktuelle Benutzer ein Mitglied der angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gruppe oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankrolle ist. Die IS_MEMBER-Funktion wird für Azure Active Directory-Gruppen nicht unterstützt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -49,21 +49,21 @@ IS_MEMBER ( { 'group' | 'role' } )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **'** *group* **'**  
+ **'** *Gruppe* **'**  
 **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher
   
  Der Name der Windows-Gruppe, die überprüft wird. Dieser muss das Format *Domäne*\\*Gruppe* aufweisen. *group* ist vom Datentyp **sysname**.  
   
- **'** *role* **'**  
+ **'** *Rolle* **'**  
  Der Name der zu überprüfenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Rolle. *role* ist vom Datentyp **sysname** und kann feste Datenbankrollen oder benutzerdefinierte Rollen, nicht jedoch Serverrollen einschließen.  
   
 ## <a name="return-types"></a>Rückgabetypen  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  IS_MEMBER gibt folgende Werte zurück.  
   
-|Rückgabewert|und Beschreibung|  
+|Rückgabewert|Beschreibung|  
 |------------------|-----------------|  
 |0|Der aktuelle Benutzer ist kein Mitglied von *group* oder *role*.|  
 |1|Der aktuelle Benutzer ist ein Mitglied von *group* oder *role*.|  
@@ -73,7 +73,7 @@ IS_MEMBER ( { 'group' | 'role' } )
   
  Um einer Datenbankrolle Elemente hinzuzufügen bzw. um diese aus ihr zu entfernen, verwenden Sie [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Um einer Serverrolle Elemente hinzuzufügen bzw. um diese aus ihr zu entfernen, verwenden Sie [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
- Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Die feste Datenbankrolle **db_owner** besitzt z.B. die Berechtigung **CONTROL DATABASE**. Wenn der Benutzer die **CONTROL DATABASE**-Berechtigung besitzt, aber nicht Mitglied der Rolle ist, meldet diese Funktion ordnungsgemäß, dass der Benutzer nicht Mitglied der **db_owner**-Rolle ist, obwohl er dieselben Berechtigungen besitzt.  
+ Diese Funktion wertet die Rollenmitgliedschaft aus, nicht die zugrunde liegende Berechtigung. Die feste Datenbankrolle **db_owner** besitzt z.B. die Berechtigung **CONTROL DATABASE**. Wenn der Benutzer die **CONTROL DATABASE**-Berechtigung besitzt, aber nicht Mitglied der Rolle ist, meldet diese Funktion ordnungsgemäß, dass der Benutzer nicht Mitglied der **db_owner**-Rolle ist, obwohl er die gleichen Berechtigungen besitzt.  
   
  Mitglieder der festen Serverrolle **sysadmin** treten jeder Datenbank als **dbo**-Benutzer bei. Wenn die Berechtigungen der Mitglieder der festen **sysadmin**-Serverrolle überprüft werden, werden auch die Berechtigungen für **dbo**, aber nicht die ursprünglichen Anmeldeinformationen, überprüft. Da **dbo** nicht zu einer Datenbankrolle hinzugefügt werden kann und in Windows-Gruppen nicht vorhanden ist, gibt **dbo** immer 0 (null) (oder NULL, wenn die Rolle nicht vorhanden ist) zurück.  
   

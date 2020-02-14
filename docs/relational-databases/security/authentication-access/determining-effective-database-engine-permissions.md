@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67995627"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Ermitteln effektiver Datenbank-Engine-Berechtigungen
@@ -92,7 +92,7 @@ Dieses System ist flexibel, was bedeutet, dass es kompliziert sein kann, wenn di
 
 Berechtigungen können auf Serverebene, Datenbankebene, Schemaebene oder Objektebene usw. erteilt werden. Es gibt 26 Ebenen (genannt Klassen). Die vollständige Liste der Klassen in alphabetischer Reihenfolge lautet: `APPLICATION ROLE`, `ASSEMBLY`, `ASYMMETRIC KEY`, `AVAILABILITY GROUP`, `CERTIFICATE`, `CONTRACT`, `DATABASE`, `DATABASE` `SCOPED CREDENTIAL`, `ENDPOINT`, `FULLTEXT CATALOG`, `FULLTEXT STOPLIST`, `LOGIN`, `MESSAGE TYPE`, `OBJECT`, `REMOTE SERVICE BINDING`, `ROLE`, `ROUTE`, `SCHEMA`, `SEARCH PROPERTY LIST`, `SERVER`, `SERVER ROLE`, `SERVICE`, `SYMMETRIC KEY`, `TYPE`, `USER` und `XML SCHEMA COLLECTION`. (Einige Klassen sind für bestimmte Typen von SQL Server nicht verfügbar.) Vollständige Informationen zu jeder Klasse erfordern eine andere Abfrage.
 
-### <a name="principals"></a>Prinzipale
+### <a name="principals"></a>Principals
 
 Dateiberechtigungen werden an Prinzipale erteilt. Prinzipale können Serverrollen, Anmeldenamen, Datenbankrollen oder Benutzer sein. Anmeldungen können Windows-Gruppen darstellen, die viele Windows-Benutzer enthalten. Da Windows-Gruppen nicht von SQL Server verwaltet werden, weiß SQL Server nicht immer, wer Mitglied einer Windows-Gruppe ist. Wenn ein Windows-Benutzer mit SQL Server verbunden ist, enthält das Anmeldungspaket das Token der Windows-Gruppenmitgliedschaft für den Benutzer.
 

@@ -24,10 +24,10 @@ ms.assetid: a7f95ddc-5154-4ed5-8117-c9fcf2221f13
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 3f8ebb1119e84caa80c0faa03c5c1405992723b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006344"
 ---
 # <a name="database-mirroring-sql-server"></a>Datenbankspiegelung (SQL Server)
@@ -103,7 +103,7 @@ ms.locfileid: "68006344"
  Sendewarteschlange  
  Entspricht nicht gesendeten Transaktionsprotokoll-Datensätzen, die auf dem Protokolldatenträger des Prinzipalservers gesammelt wurden.  
   
- Sitzung  
+ session  
  Entspricht der Beziehung, die bei der Datenbankspiegelung zwischen dem Prinzipalserver, Spiegelserver und ggf. dem Zeugenserver (sofern vorhanden) auftritt.  
   
  Entspricht nach dem Start oder Fortsetzen einer Spiegelungssitzung dem Prozess, durch den Protokolldatensätze der Prinzipaldatenbank, die sich auf dem Prinzipalserver angesammelt haben, an den Spiegelserver gesendet werden. Der Spiegelserver schreibt diese Protokolldatensätze so schnell wie möglich auf den Datenträger, um wieder auf den Stand des Prinzipalservers zu kommen.  
@@ -145,19 +145,19 @@ ms.locfileid: "68006344"
   
  Es existieren zwei Betriebsmodi für die Datenbankspiegelung. Einer der Modi, der *Modus für hohe Sicherheit* unterstützt synchrone Vorgänge. Zu Beginn einer Sitzung im Modus für hohe Sicherheit synchronisiert der neue Spiegelserver die neue Spiegeldatenbank so schnell wie möglich mit der Prinzipaldatenbank. Sobald die Datenbanken synchronisiert wurden, wird für eine Transaktion auf beiden Partnern ein Commit ausgeführt, jedoch mit dem Risiko einer erhöhten Transaktionslatenzzeit.  
   
- Der zweite Betriebsmodus, der *Modus für hohe Leistung*, wird asynchron ausgeführt. Der Spiegelserver versucht, mit den Protokolldatensätzen, die vom Prinzipalserver gesendet werden, Schritt zu halten. Die Spiegeldatenbank hinkt eventuell hinter der Prinzipaldatenbank hinterher. Der Abstand zwischen den beiden Datenbanken ist jedoch im Allgemeinen sehr klein. Er kann jedoch erheblich größer werden, wenn der Prinzipalserver stark ausgelastet ist oder wenn das System des Spiegelservers überlastet ist.  
+ Der zweite Betriebsmodus, der *Modus für hohe Leistung*, wird asynchron ausgeführt. Der Spiegelserver versucht, mit den Protokolldatensätzen, die vom Prinzipalserver gesendet werden, Schritt zu halten. Bei der Spiegeldatenbank kann im Vergleich zur Prinzipaldatenbank zu etwas Verzögerung auftreten. Der Abstand zwischen den beiden Datenbanken ist jedoch im Allgemeinen sehr klein. Er kann jedoch erheblich größer werden, wenn der Prinzipalserver stark ausgelastet ist oder wenn das System des Spiegelservers überlastet ist.  
   
  Sobald der Prinzipalserver im Modus für hohe Leistung einen Protokolldatensatz an den Spiegelserver sendet, wird vom Prinzipalserver eine Bestätigung an den Client gesendet. Der Prinzipalserver wartet dabei nicht auf eine Bestätigung des Spiegelservers. Dies bedeutet, dass für die Transaktionen ein Commit ausgeführt wird, ohne darauf zu warten, dass der Spiegelserver das Protokoll auf den Datenträger schreibt. Dieser asynchrone Betrieb bewirkt, dass der Prinzipalserver mit minimaler Transaktionslatenzzeit ausgeführt werden kann, wobei jedoch das Risiko eines möglichen Datenverlustes besteht.  
   
  Alle Datenbank-Spiegelungssitzungen unterstützen nur einen Prinzipalserver und einen Spiegelserver. Diese Konfiguration wird in der folgenden Abbildung dargestellt.  
   
- ![Partner in einer Datenbank-Spiegelungssitzung](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "Partners in a database mirroring session")  
+ ![Partner in einer Datenbankspiegelungssitzung](../../database-engine/database-mirroring/media/dbm-2-way-session-intro.gif "Partner in einer Datenbankspiegelungssitzung")  
   
  Der Modus für hohe Sicherheit mit automatischem Failover erfordert eine dritte Serverinstanz, die als *Zeuge*bezeichnet wird. Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Der Zeuge unterstützt das automatische Failover dadurch, dass er überprüft, ob der Prinzipalserver aktiv und funktionsfähig ist. Der Spiegelserver initiiert das automatische Failover nur, wenn der Spiegel und der Zeuge miteinander verbunden bleiben, nachdem beide vom Prinzipalserver getrennt wurden.  
   
  Die folgende Abbildung zeigt eine Konfiguration mit einem Zeugen.  
   
- ![Spiegelungssitzung mit einem Zeugen](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "A mirroring session that includes a witness")  
+ ![Spiegelungssitzung mit einem Zeugen](../../database-engine/database-mirroring/media/dbm-3-way-session-intro-ov.gif "Spiegelungssitzung mit einem Zeugen")  
   
  Weitere Informationen finden Sie weiter unten in diesem Thema unter [Rollenwechsel](#RoleSwitching).  
   
@@ -182,13 +182,13 @@ ms.locfileid: "68006344"
   
  Es stehen die folgenden drei Arten des Rollenwechsels zur Verfügung:  
   
--   *Automatic failover*  
+-   *Automatisches Failover*  
   
      Voraussetzung dafür sind der Modus für hohe Sicherheit und die Präsenz des Spiegelservers und eines Zeugen. Die Datenbank muss bereits synchronisiert worden sein, und der Zeuge muss mit dem Spiegelserver verbunden sein.  
   
      Aufgabe des Zeugen ist es, zu überprüfen, ob ein bestimmter Partnerserver betriebsbereit ist und funktioniert. Wenn der Spiegelserver die Verbindung zum Prinzipalserver verliert, der Zeuge jedoch weiterhin mit dem Prinzipalserver verbunden ist, initiiert der Spiegelserver kein Failover. Weitere Informationen finden Sie unter [Datenbank-Spiegelungszeuge](../../database-engine/database-mirroring/database-mirroring-witness.md).  
   
--   *Manual failover*  
+-   *Manuelles Failover*  
   
      Voraussetzung ist der Modus für hohe Sicherheit. Die Partner müssen miteinander verbunden sein, und die Datenbank muss bereits synchronisiert worden sein.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "68006344"
   
  Die folgende Abbildung veranschaulicht zwei Serverinstanzen, die zusammen als Partner an zwei Spiegelungssitzungen teilnehmen. Eine Sitzung wird für eine Datenbank namens **Db_1**und die andere für eine Datenbank namens **Db_2**ausgeführt.  
   
- ![Zwei Serverinstanzen in zwei gleichzeitigen Sitzungen](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "Two server instances in two concurrent sessions")  
+ ![Zwei Serverinstanzen in zwei gleichzeitigen Sitzungen](../../database-engine/database-mirroring/media/dbm-concurrent-sessions.gif "Zwei Serverinstanzen in zwei gleichzeitigen Sitzungen")  
   
  Jede der Datenbanken ist unabhängig von den anderen. Beispielsweise könnte eine Serverinstanz zunächst der Spiegelserver für zwei Datenbanken sein. Wenn eine dieser Datenbanken ein Failover ausführt, wird die Serverinstanz zum Prinzipalserver für die Datenbank, die das Failover ausgeführt hat, während sie der Spiegelserver für die andere Datenbank bleibt.  
   
@@ -225,7 +225,7 @@ ms.locfileid: "68006344"
 >  Da gespiegelte Datenbanken voneinander unabhängig sind, ist für die Datenbanken kein Failover als Gruppe möglich.  
   
 ###  <a name="ClientConnections"></a> Clientverbindungen  
- Unterstützung für Clientverbindungen wird vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellt. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+ Unterstützung für Clientverbindungen wird vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellt. Weitere Informationen finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)ausgetauscht werden.  
   
   
 ###  <a name="ImpactOfPausing"></a> Auswirkungen des Anhaltens einer Sitzung auf das Prinzipaltransaktionsprotokoll  
@@ -243,7 +243,7 @@ ms.locfileid: "68006344"
   
 -   [Volltextkataloge](../../database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md)  
   
--   [Datenbank-Momentaufnahmen](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+-   [Datenbankmomentaufnahmen](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
 -   [Replikation](../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)  
   
@@ -333,7 +333,7 @@ ms.locfileid: "68006344"
   
 -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
--   [Manuelles Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
+-   [Manueller Failover für eine Datenbank-Spiegelungssitzung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-sql-server-management-studio.md)  
   
 -   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md)  
   

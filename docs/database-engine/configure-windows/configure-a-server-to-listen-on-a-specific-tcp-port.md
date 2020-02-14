@@ -18,10 +18,10 @@ ms.assetid: 2276a5ed-ae3f-4855-96d8-f5bf01890640
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 48736a721cad475c6956e1715a3912481bc83c40
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68012918"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port"></a>Konfigurieren eines Servers für das Überwachen eines bestimmten TCP-Ports
@@ -53,15 +53,15 @@ Da Port 1433 der bekannte Standard für [!INCLUDE[ssNoVersion](../../includes/ss
   
 3.  Wenn im Dialogfeld **Dynamische TCP-Ports** durch den Wert **0**angezeigt wird, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] dynamische Ports überwacht, löschen Sie die Null.  
   
-     ![TCP_Ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
+     ![TCP_ports](../../database-engine/configure-windows/media/tcp-ports.png "TCP_ports")  
   
-4.  Geben Sie im Dialogfeld **Eigenschaften** von **IP**_n_ im Feld **TCP-Port** box, type the port number you want this Eigenschaften von IP address to listen on, and then click **OK**. Sie können mehrere Ports angegeben, indem Sie sie durch ein Komma trennen.
+4.  Geben Sie im Dialogfeld **Eigenschaften** von **IP**_n_ im Feld **TCP-Port** die Portnummer ein, an der diese IP-Adresse lauschen soll, und klicken Sie auf **OK**. Sie können mehrere Ports angegeben, indem Sie sie durch ein Komma trennen.
 
     > [!NOTE] 
     > Wenn die Einstellung **Alle überwachen** auf der Registerkarte **Protokoll** auf „Ja“ festgelegt ist, werden nur die Werte **TCP Port** (TCP-Port) und **TCP Dynamic Port** (Dynamischer TCP-Port) unter **IPAll** verwendet, und individuelle **IP**_n_-Abschnitte werden ignoriert. Wenn die Einstellung **Alle überwachen** auf „Nein“ festgelegt ist, werden die Werte**TCP Port** und **TCP Dynamic Port** unter **IPAll** ignoriert, und die Einstellungen **TCP Port**, **TCP Dynamic Port** und **Enabled** (Aktiviert) werden stattdessen für die jeweiligen **IP**_n_-Abschnitte verwendet.
     > Jeder **IP**_n_-Abschnitt verfügt über die Einstellung **Aktiviert** mit dem Standardwert „Nein“, wodurch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese IP-Adresse ignoriert, auch wenn dafür ein Port definiert ist.  
   
-5.  Klicken Sie im Konsolenbereich auf **SQL Server-Dienste**.  
+5.  Klicken Sie im linken Bereich auf **SQL Server-Dienste**.  
   
 6.  Klicken Sie im Detailbereich mit der rechten Maustaste auf **SQL Server (** \<Instanzname> **)** , und klicken Sie dann auf **Neu starten**, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu beenden und neu zu starten.  
   

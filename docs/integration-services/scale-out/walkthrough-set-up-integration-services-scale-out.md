@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
 ms.openlocfilehash: d3b6ea9f53a54b7f02042b85781bc8fe24028a69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67896136"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services Scale Out (SSIS; horizontales Hochskalieren)
@@ -64,13 +64,13 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
 3.  Geben Sie auf der Seite **Masterkonfiguration für horizontales Hochskalieren von Integration Services** die Portnummer an, über die Master für horizontales Hochskalieren und Worker für horizontales Hochskalieren kommunizieren. Die Standardportnummer ist 8391.  
 
-    ![Konfiguration von Scale Out-Master](media/master-config.PNG "Master Config")
+    ![Masterkonfiguration](media/master-config.PNG "Masterkonfiguration")
 
 4.  Geben Sie das SSL-Zertifikat, mit dem die Kommunikation zwischen dem Scale Out-Master und dem Scale Out-Worker geschützt wird, mit einer der folgenden folgendermaßen an.
     * Lassen Sie durch den Setupvorgang ein selbstsigniertes SSL-Standardzertifikat erstellen, indem Sie auf **Neues SSL-Zertifikat erstellen** klicken.  Das Standardzertifikat wird unter „Vertrauenswürdige Stammzertifizierungsstellen“, „Lokaler Computer“ installiert. Sie können die allgemeinen Namen in diesem Zertifikat angeben. Der Hostname des Masterendpunkts sollte in den allgemeinen Namen enthalten sein. Standardmäßig sind der Computername und die IP-Adresse des Masterknotens nicht enthalten.
     * Wählen Sie ein vorhandenes SSL-Zertifikat auf dem lokalen Computer aus, indem Sie zuerst auf **vorhandenes SSL-Zertifikat verwenden** und dann auf **Durchsuchen** klicken. Der Fingerabdruck des Zertifikats wird im Textfeld angezeigt. Nach Klicken auf **Durchsuchen** werden Zertifikate angezeigt, die in „Vertrauenswürdige Stammzertifizierungsstellen“, „Lokaler Computer“ gespeichert sind. Das Zertifikat, das Sie auswählen, muss hier gespeichert sein.       
 
-    ![Konfiguration von Scale Out-Master (2)](media/master-config-2.PNG "Master Config 2")
+    ![Masterkonfiguration 2](media/master-config-2.PNG "Masterkonfiguration 2")
   
 5.  Schließen Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ab.
 
@@ -78,7 +78,7 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
 Führen Sie die Anweisungen aus, die unter [Installieren von SQL Server von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)angegeben sind. Führen Sie die folgenden Schritte aus, um die Parameter für den Scale Out-Master festzulegen:
  
-1.  Fügen Sie dem Parameter `/FEATURES` `IS_Master` hinzu
+1.  Fügen Sie dem Parameter `/FEATURES``IS_Master` hinzu
 
 2.  Konfigurieren Sie den Scale Out-Master, indem Sie die folgenden Parameter und deren Werte angeben:
     -   `/ISMASTERSVCACCOUNT`
@@ -105,7 +105,7 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
 2.  Wählen Sie auf der Seite **Serverkonfiguration** das Konto aus, unter dem der Dienst **Worker für horizontales Hochskalieren von SQL Server Integration Services** ausgeführt werden soll, und wählen Sie den **Starttyp**aus.
 
-    ![Serverkonfiguration (2)](media/server-config-2.PNG "Server Config 2")
+    ![Serverkonfiguration 2](media/server-config-2.PNG "Serverkonfiguration 2")
 
 3.  Geben Sie auf der Seite **Workerkonfiguration für horizontales Hochskalieren von Integration Services** den Endpunkt an, über den eine Verbindung mit Master für horizontales Hochskalieren hergestellt wird. 
 
@@ -113,7 +113,7 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
     - Für eine Umgebung mit **mehreren Computern** besteht der Endpunkt aus dem Namen oder der IP-Adresse des Computers, auf dem der Scale Out-Master installiert ist, und der Portnummer, die während der Installation des Scale Out-Masters angegeben wurde.
    
-    ![Konfiguration von Scale Out-Worker (1)](media/worker-config.PNG "Worker Config 1")    
+    ![Workerkonfiguration 1](media/worker-config.PNG "Workerkonfiguration 1")    
 
     > [!NOTE]
     > Sie können die Konfiguration des Workers an dieser Stelle überspringen und den [Scale Out-Manager](integration-services-ssis-scale-out-manager.md) verwenden, um den Scale Out-Worker und den Scale Out-Master einander zuzuordnen.
@@ -122,7 +122,7 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
   
     Klicken Sie auf **Durchsuchen** , um nach der Zertifikatdatei (*.cer) zu suchen. Wählen Sie die Datei `SSISScaleOutMaster.cer` aus, die sich auf dem Computer, auf dem der Scale Out-Master installiert ist, unter `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` befindet, um das SSL-Standardzertifikat zu verwenden.   
 
-    ![Konfiguration von Scale Out-Worker (2)](media/worker-config-2.PNG "Worker Config 2")
+    ![Workerkonfiguration 2](media/worker-config-2.PNG "Workerkonfiguration 2")
 
     > [!NOTE]
     > Ist das vom Scale Out-Master verwendete SSL-Zertifikat selbstsigniert, muss auf dem Computer mit dem Scale Out-Master ein entsprechendes SSL-Zertifikat des Clients installiert sein. Wenn Sie auf der Seite **Integration Services Scale Out Worker Configuration (Konfiguration für den Integration Services Scale Out-Worker)** den Dateipfad für das Client SSL-Zertifikat bereitstellen, wird es automatisch installiert. Andernfalls müssen Sie das Zertifikat später manuell installieren. 

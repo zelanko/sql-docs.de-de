@@ -14,10 +14,10 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: c0bb4dfc3a0ac9109b210cfe02fb6a2e743f0ce5
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907953"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Problembehandlung bei Oracle-Verlegern
@@ -134,7 +134,7 @@ ms.locfileid: "72907953"
   
  Wenn der OLE DB-Anbieter von Oracle installiert ist, stellen Sie sicher, dass er registriert ist. Führen Sie zum Registrieren der Anbieter-DLL den folgenden Befehl in dem Verzeichnis aus, in dem die DLL installiert ist. Beenden Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, und starten Sie sie dann erneut:  
   
-1.  `regsvr32 OraOLEDB10.dll` oder `regsvr32 OraOLEDB.dll`.  
+1.  `regsvr32 OraOLEDB10.dll` oder `regsvr32 OraOLEDB.dll`  
   
 ## <a name="sql-server-error-21626-or-error-21627-is-raised"></a>SQL Server-Fehler 21626 oder 21627 wurde ausgelöst  
  Um zu überprüfen, ob die Umgebung zum Veröffentlichen mit Oracle ordnungsgemäß konfiguriert ist, versucht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit den Anmeldeinformationen, die Sie während der Konfiguration angegeben haben, eine Verbindung mit dem Oracle-Verleger herzustellen. Wenn der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler keine Verbindung mit dem Oracle-Verleger herstellen kann, wird die folgende Fehlermeldung angezeigt:  
@@ -244,7 +244,7 @@ ms.locfileid: "72907953"
   
  **So löschen Sie die Zuordnung eines Oracle-Verlegers (Transact-SQL)**  
   
--   Führen Sie **sp_dropdistpublisher**aus. Weitere Informationen finden Sie unter [Sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
+-   Führen Sie **sp_dropdistpublisher**aus. Weitere Informationen finden Sie unter [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

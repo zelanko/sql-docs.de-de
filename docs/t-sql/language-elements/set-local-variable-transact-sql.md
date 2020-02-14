@@ -19,10 +19,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 770ef448094e764bcc1ca970354941c0d1d03d4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68072283"
 ---
 # <a name="set-local_variable-transact-sql"></a>SET @local_variable (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68072283"
 
 Legt die angegebene lokale Variable, die zuvor mit der Anweisung DECLARE @*local_variable* erstellt wurde, auf den angegebenen Wert fest.  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 Syntax für SQL Server und Azure SQL-Datenbank:
@@ -66,7 +66,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
 ```  
   
 ## <a name="arguments"></a>Argumente  
-**@** _local_variable_  
+**@** _lokale_Variable_  
 Der Name einer Variablen eines beliebigen Typs mit Ausnahme von **cursor**, **text**, **ntext**, **image** oder **table**. Variablennamen müssen mit einem at-Zeichen ( **@** ) beginnen. Variablennamen müssen die Regeln für [Bezeichner](../../relational-databases/databases/database-identifiers.md) erfüllen.  
   
 *property_name*  
@@ -81,10 +81,10 @@ Der Name eines benutzerdefinierten CLR-Typs (Common Language Runtime).
 `{ . | :: }`  
 Gibt eine Methode für einen benutzerdefinierten CLR-Typ an. Verwenden Sie bei einer Instanzmethode (nicht statisch) einen Punkt ( **.** ). Verwenden Sie bei einer statischen Methode zwei Doppelpunkte( **::** ). Zum Aufrufen einer Methode, Eigenschaft oder eines Felds eines CLR-benutzerdefinierten Typs müssen Sie über die EXECUTE-Berechtigung für den Typ verfügen.  
   
-_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
+_Methodenname_ **(** _Argument_ [ **,** ... *n*] **)**  
 Methode eines benutzerdefinierten Typs, die ein oder mehrere Argumente umfassen kann, um den Status einer Instanz eines Typs zu ändern. Statische Methoden müssen öffentlich sein.  
   
-**@** _SQLCLR_local_variable_  
+**@** _SQLCLR_lokale_Variable_  
 Variable, deren Typ sich in einer Assembly befindet. Weitere Informationen finden Sie unter [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
 *mutator_method*  
@@ -227,7 +227,7 @@ SET @NewBalance *= 10;
 SELECT @NewBalance;  
 ```  
   
-### <a name="d-using-set-with-a-global-cursor"></a>D. Verwenden von SET mit einem globalen Cursor  
+### <a name="d-using-set-with-a-global-cursor"></a>D: Verwenden von SET mit einem globalen Cursor  
 Im folgenden Beispiel wird eine lokale Variable erstellt und anschließend für die Cursorvariable der globale Cursorname festgelegt.  
   
 ```  
@@ -306,7 +306,7 @@ DECLARE @p Point = CONVERT(Point, '')
 SET @p.SetXY(22, 23);  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="j-printing-the-value-of-a-variable-initialized-by-using-set"></a>J. Drucken des Werts einer Variablen, die mit SET initialisiert wurde  
 Im folgenden Beispiel wird die `@myvar`-Variable erstellt, ein Zeichenfolgenwert in die Variable aufgenommen und der Wert der `@myvar`-Variablen ausgedruckt.  

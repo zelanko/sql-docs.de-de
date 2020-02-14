@@ -15,10 +15,10 @@ author: pmasl
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4c19e3ad3589cad6f7503ff9f0e92c090bef5035
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72305195"
 ---
 # <a name="thread-and-task-architecture-guide"></a>Handbuch zur Thread- und Taskarchitektur
@@ -46,7 +46,7 @@ Ein **Arbeitsthread** in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)],
 Ein **Planer**, auch bekannt als SOS-Planer, verwaltet Arbeitsthreads, die Verarbeitungszeit benötigen, um Aufgaben im Rahmen von Tasks auszuführen. Jeder Planer ist einem einzelnen Prozessor (CPU) zugeordnet. Die Zeit, die ein Worker in einem Planer aktiv bleiben kann, wird als Betriebssystemquantum bezeichnet, wobei das Maximum bei 4 ms liegt. Nach Ablauf seiner Quantumzeit gibt ein Worker seine Zeit an andere Worker weiter, die auf CPU-Ressourcen zugreifen müssen, und ändert seinen Zustand. Diese Zusammenarbeit zwischen Workern zur Maximierung des Zugriffs auf CPU-Ressourcen wird als **kooperative Planung** oder auch nicht präemptive Planung bezeichnet. Die Änderung des Workerzustands wiederum wird an den Task, der diesem Worker zugeordnet ist, und an die mit dem Task verbundene Anforderung weitergegeben. Weitere Informationen zu Zuständen von Workern finden Sie unter [sys.dm_os_workers](../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). Weitere Informationen zu Planern finden Sie unter [sys.dm_os_schedulers](../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
 
 ### <a name="allocating-threads-to-a-cpu"></a>Zuteilen von Threads zu einer CPU
-Standardmäßig startet jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jeden Thread, und das Betriebssystem verteilt Threads von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen je nach Last auf die Prozessoren (CPUs) eines Computers. Wenn Prozessaffinität auf Betriebssystemebene aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Im Gegensatz nimmt die [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-**Arbeitsthreads** eine Zuweisung zu **Planern** vor, die die Threads gleichmäßig auf die CPUs verteilen.
+Standardmäßig startet jede Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] jeden Thread, und das Betriebssystem verteilt Threads von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen je nach Last auf die Prozessoren (CPUs) eines Computers. Wenn Prozessaffinität auf Betriebssystemebene aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. Im Gegensatz dazu weist [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-**Arbeitsthreads** zu **Planern** zu, die die Threads gleichmäßig auf die CPUs verteilen.
     
 Um Multitasking zu ermöglichen, z. B. wenn mehrere Anwendungen auf dieselbe CPU-Gruppe zugreifen, verschiebt das Betriebssystem mitunter Arbeitsthreads zwischen verschiedenen CPUs. Obwohl dies aus der Sicht des Betriebssystems effizient ist, kann diese Aktivität die Leistung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bei starker Systemauslastung reduzieren, da jeder Prozessorcache wiederholt mit Daten geladen wird. Durch das Zuweisen von CPUs für bestimmte Threads kann unter diesen Bedingungen die Leistung verbessert werden, weil das erneute Laden von Daten in den Prozessor entfällt und die Threadmigration zwischen CPUs reduziert wird (wodurch der Kontextwechsel reduziert wird). Diese Zuordnung zwischen einem Thread und einem Prozessor wird als Prozessoraffinität bezeichnet. Wenn Affinität aktiviert wurde, weist das Betriebssystem jeden Thread einer bestimmten CPU zu. 
 

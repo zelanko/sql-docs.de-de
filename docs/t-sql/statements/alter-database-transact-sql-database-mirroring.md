@@ -18,10 +18,10 @@ ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065819"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>ALTER DATABASE- (Transact-SQL)-Datenbankspiegelung
@@ -38,7 +38,7 @@ Steuert die Datenbankspiegelung für eine Datenbank. Werte, die mit den Optionen
 
 Informationen zu ALTER DATABASE-Optionen finden Sie unter [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md). Informationen zu ALTER DATABASE SET-Optionen finden Sie unter [ALTER DATABASE SET-Optionen](../../t-sql/statements/alter-database-transact-sql-set-options.md).
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>Syntax
 
@@ -85,7 +85,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > Pro SET PARTNER-Klausel ist nur eine \<partner_option> zugelassen.
 
-**'** _partner_server_ **'** Gibt die Netzwerkadresse des Servers einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an, die als Failoverpartner in einer neuen Datenbank-Spiegelungssitzung fungiert. Jede Sitzung erfordert zwei Partner, von denen einer als Prinzipalserver, der andere als Spiegelserver beginnt. Die beiden Partner sollten sich auf unterschiedlichen Computern befinden.
+**'** _partner_server_ **'** Gibt die Netzwerkadresse des Servers einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz an, die als Failoverpartner in einer neuen Datenbankspiegelungs-Sitzung fungiert. Jede Sitzung erfordert zwei Partner, von denen einer als Prinzipalserver, der andere als Spiegelserver beginnt. Die beiden Partner sollten sich auf unterschiedlichen Computern befinden.
 
 Diese Option wird einmal pro Sitzung für jeden Partner angegeben. Für das Starten einer Datenbank-Spiegelungssitzung sind zwei ALTER DATABASE *Datenbank* SET PARTNER **='** _partner_server_ **'** -Anweisungen erforderlich. Ihre Reihenfolge ist wichtig. Stellen Sie zuerst eine Verbindung mit dem Spiegelserver her, und geben Sie die Prinzipalserverinstanz als *partner_server* (SET PARTNER **='** _principal_server_ **'** ) an. Stellen Sie anschließend eine Verbindung mit dem Prinzipalserver her, und geben Sie die Spiegelserverinstanz als *partner_server* (SET PARTNER **='** _mirror_server_ **'** ) an; auf diese Weise wird eine Datenbank-Spiegelungssitzung zwischen diesen beiden Partnern gestartet. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
@@ -93,7 +93,7 @@ Der Wert von *partner_server* ist eine Server-Netzwerkadresse. Diese hat folgend
 
 TCP **://** _\<Systemadresse>_ **:** _\<Port>_
 
-Dabei gilt:
+Hierbei gilt:
 
 - *\<system-address>* ist eine Zeichenfolge, z.B. ein Systemname, ein vollqualifizierter Domänenname oder eine IP-Adresse, die das Zielcomputersystem eindeutig identifiziert.
 - *\<port>* ist eine Portnummer, die dem Spiegelungsendpunkt der Partnerserverinstanz zugeordnet ist.
@@ -179,7 +179,7 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 > [!NOTE]
 > Pro SET WITNESS-Klausel ist nur eine \<witness_option> zugelassen.
 
- **'** _witness_server_ **'** Gibt eine Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, die als Zeugenserver für die Datenbank-Spiegelungssitzung agiert. Sie können SET WITNESS-Anweisungen nur auf dem Prinzipalserver angeben.
+ **'** _witness_server_ **'** Gibt eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz an, die als Zeugenserver für die Datenbankspiegelungs-Sitzung agiert. Sie können SET WITNESS-Anweisungen nur auf dem Prinzipalserver angeben.
 
 In einer SET WITNESS **='** _witness_server_ **'** -Anweisung ist die Syntax von *witness_server* mit der Syntax von *partner_server* identisch.
 

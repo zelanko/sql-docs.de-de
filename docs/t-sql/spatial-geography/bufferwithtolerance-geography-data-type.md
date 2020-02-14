@@ -18,10 +18,10 @@ ms.assetid: f1783e6b-0f17-464f-b1c7-1c3f7d8aa042
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: ac8532f2cc5d8e2f50c0408ce983a61626748fb1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68066542"
 ---
 # <a name="bufferwithtolerance-geography-data-type"></a>BufferWithTolerance (geography-Datentyp)
@@ -42,7 +42,7 @@ Diese geography-Datentypmethode unterstützt Instanzen von **FullGlobe** oder r�
 _distance_  
 Ein **float**-Ausdruck, der den Abstand zu der **geometry**-Instanz angibt, um die der Puffer berechnet werden soll.  
   
-Der maximale Abstand des Puffers darf 0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 Umfang der Erde) oder den vollständigen Umfang der Erde nicht überschreiten.  
+Der maximale Abstand des Puffers darf 0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0,999 \* 1/2 Erdumfang) oder den vollständigen Umfang der Erde nicht überschreiten.  
   
 _tolerance_  
 Ein **float** -Ausdruck, der die Toleranz des Pufferabstands angibt.  
@@ -68,7 +68,7 @@ Diese Methode löst eine **ArgumentException** aus, wenn _distance_ keine Zahl (
   
 Diese Methode löst eine **ArgumentException** in **FullGlobe**-Instanzen aus, bei denen der Abstand des Puffers die folgende Einschränkung überschreitet:  
   
-0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Umfang der Erde)  
+0,999 \* _π_ * minorAxis \* minorAxis / majorAxis (~0.999 \* 1/2 Erdumfang)  
   
 Die Abweichung zwischen dem theoretischen und dem berechneten Puffer beträgt max(tolerance, extents \* 1,E-7), wobei die Toleranz der Wert des Parameters _tolerance_ ist. Weitere Informationen zu Erweiterungen finden Sie unter [geography-Datentyp-Methodenverweis](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e).  
   

@@ -18,10 +18,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1c6be1e3a8b05daf16ec845a307679620d2b1d00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68048709"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
@@ -56,7 +56,7 @@ ms.locfileid: "68048709"
   
 7.  Klicken Sie auf **Hinzufügen**, um die räumliche Spalte anzugeben, die indiziert werden soll.  
   
-8.  Wählen Sie im Dialogfeld **Spalten auswählen aus**  *\<Tabellenname>* eine Spalte des Typs **Geometrie** oder **Geografie** aus, indem Sie das betreffende Kontrollkästchen aktivieren. Alle anderen räumlichen Spalten werden daraufhin nicht editierbar. Wenn Sie eine andere räumliche Spalte auswählen möchten, müssen Sie zuerst die Auswahl der aktuell ausgewählten Spalte aufheben. Wenn Sie fertig sind, klicken Sie auf **OK**.  
+8.  Wählen Sie im Dialogfeld **Spalten auswählen aus** *\<Tabellenname>* eine Spalte vom Typ **Geometrie** oder **Geografie** aus, indem Sie das entsprechende Kontrollkästchen aktivieren. Alle anderen räumlichen Spalten werden daraufhin nicht editierbar. Wenn Sie eine andere räumliche Spalte auswählen möchten, müssen Sie zuerst die Auswahl der aktuell ausgewählten Spalte aufheben. Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
 9. Überprüfen Sie die Spaltenauswahl im Raster **Indexschlüsselspalten** .  
   
@@ -111,7 +111,7 @@ ms.locfileid: "68048709"
  [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)  
   
  **So löschen Sie einen Index mit Management Studio**  
- [Löschen eines Indexes](../../relational-databases/indexes/delete-an-index.md)  
+ [Index löschen](../../relational-databases/indexes/delete-an-index.md)  
   
  **So löschen Sie mit dem Tabellen-Designer in Management Studio einen räumlichen Index**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>So löschen Sie einen räumlichen Index im Tabellen-Designer  

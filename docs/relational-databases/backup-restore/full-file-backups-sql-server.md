@@ -20,10 +20,10 @@ ms.assetid: a716bf8d-0c5a-490d-aadd-597b3b0fac0c
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1d70bf0d8e99d24ee0d7ea9e046090ba4ed32453
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67939613"
 ---
 # <a name="full-file-backups-sql-server"></a>Vollständige Dateisicherungen (SQL Server)
@@ -82,7 +82,7 @@ ms.locfileid: "67939613"
   
  Das Wiederherstellen einer Datenbank unter ausschließlicher Verwendung von Datei- und Protokollsicherungen kann komplex sein. Deshalb ist es eine bewährte Methode, wenn möglich vor der ersten Dateisicherung eine vollständige Datenbanksicherung auszuführen und die Protokollsicherungen zu starten. In der folgenden Abbildung wird eine Strategie veranschaulicht, bei der eine vollständige Datenbanksicherung ausgeführt wird (zum Zeitpunkt t1), kurz nachdem die Datenbank erstellt wurde (zum Zeitpunkt t0). Die erste Datenbanksicherung ermöglicht das Starten von Transaktionsprotokollsicherungen. Transaktionsprotokollsicherungen sind in regelmäßigen Abständen geplant. Dateisicherungen werden in Intervallen durchgeführt, die den Geschäftsanforderungen der Datenbank am ehesten entsprechen. In dieser Abbildung wird veranschaulicht, wie die vier Dateigruppen nacheinander gesichert werden. Die Reihenfolge der Sicherung – A, C, B, A – entspricht den Geschäftsanforderungen der Datenbank.  
   
- ![Strategie, die Datenbank-, Datei- und Protokollsicherungen kombiniert](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategy combining database, file, and log backups")  
+ ![Strategie, die Datenbank-, Datei- und Protokollsicherungen kombiniert](../../relational-databases/backup-restore/media/bnr-rmfull-3-fulldb-filegrps-log-backups.gif "Strategie, die Datenbank-, Datei- und Protokollsicherungen kombiniert")  
   
 > [!NOTE]  
 >  Beim vollständigen Wiederherstellungsmodell müssen Sie beim Wiederherstellen einer Dateisicherung mit Lese-/Schreibzugriff einen Rollforward für das Transaktionsprotokoll ausführen, um die Konsistenz der Datei mit dem Rest der Datenbank sicherzustellen. Um einen Rollforward für viele Transaktionsprotokollsicherungen zu vermeiden, sollten Sie differenzielle Dateisicherungen verwenden. Weitere Informationen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/differential-backups-sql-server.md).  

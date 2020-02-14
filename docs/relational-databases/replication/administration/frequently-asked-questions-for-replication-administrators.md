@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 99be52de235c676137981021b9e926aba7320f43
-ms.sourcegitcommit: 02d44167a1ee025ba925a6fefadeea966912954c
+monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: f05b8d942a87f749fc5e1c1235d8410558603507
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322030"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76910163"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -113,7 +113,10 @@ ms.locfileid: "75322030"
   
 ### <a name="does-replication-work-over-low-bandwidth-connections-does-it-use-compression"></a>Ist die Replikation über Verbindungen mit geringer Bandbreite funktionsfähig? Wird hierbei eine Komprimierung angewendet?  
  Ja, die Replikation ist über Verbindungen mit geringer Bandbreite funktionsfähig. Für Verbindungen über TCP/IP wird die vom Protokoll bereitgestellte Komprimierung verwendet. Eine zusätzliche Komprimierung findet jedoch nicht statt. Für Websynchronisierungsverbindungen über HTTPS wird neben der vom Protokoll bereitgestellten Komprimierung eine zusätzliche Komprimierung der XML-Dateien angewendet, um Änderungen zu replizieren.  
-  
+
+### <a name="can-i-configure-replication-if-i-connect-to-the-server-by-using-the-ip-address"></a>Kann ich die Replikation konfigurieren, wenn ich eine Verbindung zum Server über die IP-Adresse herstelle? 
+Nein, die Replikation funktioniert nur, wenn Sie den tatsächlichen Servernamen verwenden. Ab SQL Server Management Studio 18.0 (SSMS) kann die Replikation mithilfe des tatsächlichen Servernamens und der Portnummer konfiguriert werden. 
+
 ## <a name="logins-and-object-ownership"></a>Benutzernamen und Objektbesitz  
   
 ### <a name="are-logins-and-passwords-replicated"></a>Werden Benutzernamen und Kennwörter repliziert?  

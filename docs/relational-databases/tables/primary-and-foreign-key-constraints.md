@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b738bd06abe616adc846727dd5721b7204e340c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67999434"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
@@ -43,7 +43,7 @@ ms.locfileid: "67999434"
   
  Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor**-Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID** aufweist. Dies verhindert die Einfügung doppelter Zeilen.  
   
- ![Zusammengesetzte PRIMARY KEY-Einschränkung](../../relational-databases/tables/media/fund04.gif "Composite PRIMARY KEY constraint")  
+ ![Zusammengesetzte Primärschlüsseleinschränkung](../../relational-databases/tables/media/fund04.gif "Zusammengesetzte Primärschlüsseleinschränkung")  
   
 -   Eine Tabelle kann nur eine PRIMARY KEY-Einschränkung enthalten.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "67999434"
 ##  <a name="Tasks"></a> Verwandte Aufgaben  
  In der folgenden Tabelle sind die PRIMARY KEY- und FOREIGN KEY-Einschränkungen zugeordneten häufigen Tasks aufgeführt.  
   
-|Task|Thema|  
+|Aufgabe|Thema|  
 |----------|-----------|  
 |Beschreibt, wie ein Primärschlüssel erstellt wird.|[Erstellen von Primärschlüsseln](../../relational-databases/tables/create-primary-keys.md)|  
 |Beschreibt, wie ein Primärschlüssel gelöscht wird.|[Löschen von Primärschlüsseln](../../relational-databases/tables/delete-primary-keys.md)|  

@@ -26,10 +26,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: a50c5344f8742a8483d952b8cab3b03d8d666b31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68057910"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informationen zum Protokollversand (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "68057910"
  primären Servers  
  Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die der Produktionsserver ist.  
   
- primären Datenbank  
+ primäre Datenbank  
  Die Datenbank auf dem primären Server, die Sie auf einem anderen Server sichern möchten. Die gesamte Verwaltung der Protokollversandkonfiguration über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erfolgt von der primären Datenbank aus.  
   
  sekundären Servers  
@@ -126,7 +126,7 @@ ms.locfileid: "68057910"
   
  Die primäre Serverinstanz und die sekundäre Serverinstanz senden ihre eigenen Verlaufs- und Statusinformationen an die Überwachungsserverinstanz.  
   
- ![Die Konfiguration zeigt Sicherungs-, Kopier- und Wiederherstellungsaufträge an](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Configuration showing backup, copy, & restore jobs")  
+ ![Konfiguration, die Sicherungs-, Kopier- & Wiederherstellungsaufträge anzeigt](../../database-engine/log-shipping/media/ls-typical-configuration.gif "Konfiguration, die Sicherungs-, Kopier- & Wiederherstellungsaufträge anzeigt")  
   
 ##  <a name="Interoperability"></a> Interoperabilität  
  Der Protokollversand kann mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden:  
@@ -163,6 +163,6 @@ ms.locfileid: "68057910"
 -   [Verwaltung von Anmeldenamen und Aufträgen nach einem Rollenwechsel &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
+ [Übersicht zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

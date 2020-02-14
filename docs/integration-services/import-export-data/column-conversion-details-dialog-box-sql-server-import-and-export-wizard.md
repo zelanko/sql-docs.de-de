@@ -12,10 +12,10 @@ ms.assetid: e2d00a39-dfbd-4821-a4d8-a5bd1164ed4d
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 531d7e5a0f945a8d0dd5570d95843164fbc98734
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296348"
 ---
 # <a name="column-conversion-details-dialog-box-sql-server-import-and-export-wizard"></a>Dialogfeld 'Spaltenkonvertierungsdetails' (SQL Server-Import/Export-Assistent)
@@ -37,10 +37,10 @@ Dieses Beispiel zeigt Ihnen die folgenden Sachverhalte.
 -   Der Assistent erkennt: *Diese Spalte muss nicht konvertiert werden*.
  
   
- ![Seite „Spaltenkonvertierung“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/column-conversion.png "Seite „Spaltenkonvertierung“ des Import/Export-Assistenten") 
+ ![Seite „Spaltenkonvertierungsdetails“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/column-conversion.png "Seite „Spaltenkonvertierungsdetails“ des Import/Export-Assistenten") 
   
 ## <a name="whats-next"></a>Wie geht es weiter?  
  Nachdem Sie die Spaltenkonvertierungsdetails überprüft und auf **OK**geklickt haben, kehren Sie im Dialogfeld **Spaltenkonvertierungsdetails** zur Seite **Datentypzuordnung überprüfen** zurück. Weitere Informationen finden Sie unter [Datentypzuordnung überprüfen](../../integration-services/import-export-data/review-data-type-mapping-sql-server-import-and-export-wizard.md).  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Zuordnung von Datentypen mit dem SQL Server-Import/Export-Assistenten](../../integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard.md)

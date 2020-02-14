@@ -13,10 +13,10 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68006356"
 ---
 # <a name="database-mirroring-operating-modes"></a>Betriebsmodi der Datenbankspiegelung
@@ -54,7 +54,7 @@ ms.locfileid: "68006356"
   
  Die folgende Abbildung veranschaulicht die Konfiguration einer Sitzung im Modus für hohe Leistung.  
   
- ![Reine Partnerkonfiguration einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Partner-only configuration of a session")  
+ ![Reine Partnerkonfiguration einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-performance-mode.gif "Reine Partnerkonfiguration einer Sitzung")  
   
  Sobald im Modus für hohe Leistung der Prinzipalserver das Protokoll für eine Transaktion an den Spiegelserver sendet, wird vom Prinzipalserver eine Bestätigung an den Client gesendet, ohne auf eine Bestätigung vom Spiegelserver zu warten. Für Transaktionen wird ein Commit ausgeführt, ohne darauf zu warten, dass der Spiegelserver das Protokoll auf dem Datenträger speichert. Im asynchronen Betrieb kann der Prinzipalserver mit minimaler Transaktionslatenzzeit ausgeführt werden.  
   
@@ -145,14 +145,14 @@ ms.locfileid: "68006356"
 ###  <a name="HighSafetyWithOutAutoFailover"></a> Modus für hohe Sicherheit ohne automatisches Failover  
  Die folgende Abbildung veranschaulicht die Konfiguration des Modus für hohe Sicherheit ohne automatisches Failover. Die Konfiguration besteht nur aus den zwei Partnern.  
   
- ![Partnerkommunikation ohne Zeugen](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partners communicating without a witness")  
+ ![Partnerkommunikation ohne Zeugen](../../database-engine/database-mirroring/media/dbm-high-protection-mode.gif "Partnerkommunikation ohne Zeugen")  
   
  Wenn die Partner verbunden sind und die Datenbank bereits synchronisiert ist, wird das manuelle Failover unterstützt. Wenn die Spiegelserverinstanz ausfällt, bleibt die Prinzipalserverinstanz in Betrieb und wird ungeschützt ausgeführt (d. h., ohne die Spiegelung der Daten). Wenn der Prinzipalserver ausfällt, wird die Spiegelung unterbrochen, der Dienst kann aber auf dem Spiegelserver erzwungen werden (mit möglichem Datenverlust). Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)herunter.  
   
 ###  <a name="HighSafetyWithAutoFailover"></a> Modus für hohe Sicherheit mit automatischem Failover  
- Automatisches Failover bietet eine hohe Verfügbarkeit, indem sichergestellt wird, dass die Datenbank trotz Ausfall eines Servers weiterhin bedient wird. Zur Unterstützung eines automatischen Failovers muss die Sitzung eine dritte Serverinstanz besitzen, den *Zeugen*, der sich idealerweise auf einem dritten Computer befindet. Die folgende Abbildung veranschaulicht die Konfiguration einer Sitzung im Modus für hohe Sicherheit mit automatischem Failover.  
+ Automatisches Failover bietet Hochverfügbarkeit, indem sichergestellt wird, dass die Datenbank trotz Ausfall eines Servers weiterhin bedient wird. Zur Unterstützung eines automatischen Failovers muss die Sitzung eine dritte Serverinstanz besitzen, den *Zeugen*, der sich idealerweise auf einem dritten Computer befindet. Die folgende Abbildung veranschaulicht die Konfiguration einer Sitzung im Modus für hohe Sicherheit mit automatischem Failover.  
   
- ![Der Zeuge und die zwei Partner einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "The witness and two partners of a session")  
+ ![Zeuge und die zwei Partner einer Sitzung](../../database-engine/database-mirroring/media/dbm-high-availability-mode.gif "Zeuge und die zwei Partner einer Sitzung")  
   
  Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Der Zeuge unterstützt das automatische Failover einfach dadurch, dass er prüft, ob der Prinzipalserver aktiv und funktionsfähig ist. Der Spiegelserver initiiert das automatische Failover nur, wenn der Spiegel und der Zeuge miteinander verbunden bleiben, nachdem beide vom Prinzipalserver getrennt wurden.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68006356"
   
 -   Wenn der Prinzipalserver unter den oben aufgeführten Bedingungen ausfällt, findet ein automatisches Failover statt. Der Spiegelserver wechselt in die Rolle des Prinzipals und bietet seine Datenbank als Prinzipaldatenbank an.  
   
--   Wenn der Prinzipalserver ausfällt, da diese Bedingungen nicht erfüllt sind, kann die Ausführung des Diensts (mit möglichem Datenverlust) gegebenenfalls erzwungen werden. Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
+-   Wenn der Prinzipalserver ausfällt, da diese Bedingungen nicht erfüllt sind, kann die Ausführung des Diensts (mit möglichem Datenverlust) gegebenenfalls erzwungen werden. Weitere Informationen finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)herunter.  
   
 -   Wenn nur der Spiegelserver nicht mehr verfügbar ist, setzen der Prinzipal und der Zeuge ihren Betrieb fort.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "68006356"
  In diesem Abschnitt wird eine Datenbank-Spiegelungssitzung im Hinblick auf die ALTER DATABASE-Einstellungen und die Status der gespiegelten Datenbank und des Zeugen (sofern vorhanden) beschrieben. Der Abschnitt ist für Benutzer bestimmt, die Datenbankspiegelungen primär oder ausschließlich mit [!INCLUDE[tsql](../../includes/tsql-md.md)]anstelle von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwalten.  
   
 > [!TIP]  
->  Als Alternative zu [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie den Betriebsmodus einer Sitzung im Objekt-Explorer mithilfe der Seite **Spiegelung** des Dialogfelds **Datenbankeigenschaften** steuern. Weitere Informationen finden Sie im Abschnitt zu [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
+>  Als Alternative zu [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie den Betriebsmodus einer Sitzung im Objekt-Explorer mithilfe der Seite **Spiegelung** des Dialogfelds **Datenbankeigenschaften** steuern. Weitere Informationen finden Sie unter [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
  **In diesem Abschnitt:**  
   
@@ -247,7 +247,7 @@ ms.locfileid: "68006356"
 ###  <a name="ViewWitness"></a> Anzeigen der Sicherheitseinstellung und des Status des Zeugen  
  Verwenden Sie zum Anzeigen der Sicherheitseinstellung und des Status des Zeugen für eine Datenbank die **sys.database_mirroring** -Katalogsicht. Die wichtigen Spalten sind die folgenden:  
   
-|Faktor|Spalte|und Beschreibung|  
+|Faktor|Spalten|Beschreibung|  
 |------------|-------------|-----------------|  
 |Transaktionssicherheit|**mirroring_safety_level** oder **mirroring_safety_level_desc**|Transaktionssicherheitseinstellung für Updates der Spiegeldatenbank:<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL= Datenbank ist nicht online.|  
 |Ist ein Zeuge vorhanden?|**mirroring_witness_name**|Servername des Datenbankspiegelungszeugen oder NULL. Damit wird angegeben, das kein Zeuge vorhanden ist.|  

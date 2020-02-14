@@ -19,10 +19,10 @@ ms.assetid: 28ea8120-0a79-4029-93f0-07d521b32bee
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 50938fe4f3be40f280340fff5bfbca23ac8b1b44
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680980"
 ---
 # <a name="integration-services-ssis-projects-and-solutions"></a>SQL Server Integration Services-Projekte und Projektmappen (SSIS)
@@ -68,7 +68,7 @@ ms.locfileid: "71680980"
   
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.  
   
-|Ordner|und Beschreibung|  
+|Ordner|Beschreibung|  
 |------------|-----------------|
 |Verbindungs-Manager|Enthält Projektverbindungs-Manager. Weitere Informationen finden Sie unter [Integration Services-Verbindungen (SSIS)](../integration-services/connection-manager/integration-services-ssis-connections.md).|
 |[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../integration-services/integration-services-ssis-packages.md).|  
@@ -91,7 +91,7 @@ ms.locfileid: "71680980"
   
  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf ein Integration Services-Projekt, und wählen Sie **Eigenschaften** aus, um die Eigenschaftsseiten für das Projekt zu öffnen. Klicken Sie in der Registerkarte **Allgemein** in den **Konfigurationseigenschaften** auf die Eigenschaft **TargetServerVersion**, und wählen Sie dann SQL Server 2017, 2016, 2014 oder 2012 aus.  
   
- ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion property in project properties dialog box")  
+ ![TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“](../integration-services/media/targetserverversion2.png "TargetServerVersion-Eigenschaft im Dialogfeld „Projekteigenschaften“")  
 
 ## <a name="create-a-new-integration-services-project"></a>Erstellen eines neuen SQL Server Integration Services-Projekts  
   
@@ -109,7 +109,7 @@ ms.locfileid: "71680980"
   
      Der Projektmappenname wird automatisch aktualisiert und an den Projektnamen angepasst.  
   
-5.  Um einen separaten Ordner für die Projektmappendatei zu erstellen, aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**. Diese Option ist die Standardeinstellung.  
+5.  Um einen separaten Ordner für die Projektmappendatei zu erstellen, aktivieren Sie das Kontrollkästchen **Projektmappenverzeichnis erstellen**. Dies ist die Standardoption.  
   
 6.  Wenn die Software für die Quellcodeverwaltung auf dem Computer installiert ist, wählen Sie **Zur Quellcodeverwaltung hinzufügen**  aus, um das Projekt der Quellcodeverwaltung zuzuordnen.  
   

@@ -30,10 +30,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/19/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68344596"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
@@ -57,17 +57,17 @@ ms.locfileid: "68344596"
 - Anwendungsrolle
   
 ## <a name="sa-login"></a>Anmeldename „sa“  
- Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa`-Anmeldename ist ein Prinzipal auf Serverebene. Er wird standardmäßig bei der Installation einer Instanz erstellt. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist die Standarddatenbank von sa „Master“. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der Anmeldename `sa` ist ein Mitglied der festen Rolle auf Serverebene `sysadmin`. Der `sa`-Anmeldename besitzt alle Berechtigungen auf dem Server und kann nicht beschränkt werden. Der `sa`-Anmeldename kann nicht gelöscht werden. Jedoch kann er deaktiviert werden, sodass er nicht verwendet werden kann.
+ Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa`-Anmeldename ist ein Serverebenenprinzipal. Er wird standardmäßig bei der Installation einer Instanz erstellt. Ab [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]ist die Standarddatenbank von sa „Master“. Dieses Verhalten unterscheidet sich von früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Der Anmeldename `sa` ist ein Mitglied der festen Rolle auf Serverebene `sysadmin`. Der `sa`-Anmeldename besitzt alle Berechtigungen auf dem Server und kann nicht beschränkt werden. Der `sa`-Anmeldename kann nicht gelöscht werden. Jedoch kann er deaktiviert werden, sodass er nicht verwendet werden kann.
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo-Benutzer und dbo-Schema
 
-Der `dbo`-Benutzer ist ein spezieller Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, der `sa`-Anmeldename und die Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer auf. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank; er unterliegt keinen Beschränkungen und kann nicht gelöscht werden. `dbo` steht für Datenbankbesitzer. Doch das `dbo`-Benutzerkonto ist nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank aufgezeichnet ist.     
+Der `dbo`-Benutzer ist ein spezieller Benutzerprinzipal in jeder Datenbank. Alle SQL Server-Administratoren, Mitglieder der festen Serverrolle `sysadmin`, der `sa`-Anmeldename und die Besitzer der Datenbank treten in Datenbanken als `dbo`-Benutzer auf. Der `dbo`-Benutzer besitzt alle Berechtigungen in der Datenbank; er unterliegt keinen Beschränkungen und kann nicht gelöscht werden. Zwar steht `dbo` für Datenbankbesitzer, doch ist das `dbo`-Benutzerkonto nicht identisch mit der festen Datenbankrolle `db_owner`, und die feste Datenbankrolle `db_owner` ist wiederum nicht identisch mit dem Benutzerkonto, das als Besitzer der Datenbank vermerkt ist.     
 Der `dbo`-Benutzer besitzt das `dbo`-Schema. Das `dbo`-Schema ist das Standardschema für alle Benutzer, sofern kein anderes Schema angegeben wird.  Das `dbo`-Schema kann nicht gelöscht werden.
   
 ## <a name="public-server-role-and-database-role"></a>Serverrolle und Datenbankrolle „public“  
 Jeder Anmeldename gehört zu der festen Serverrolle `public`, und jeder Datenbankbenutzer gehört zu der Datenbankrolle `public`. Wenn einem Anmeldenamen oder Benutzer keine bestimmten Berechtigungen für ein sicherungsfähiges Element erteilt oder verweigert werden, erbt der Anmeldename oder Benutzer die Berechtigungen, die der Datenbankrolle public für dieses sicherungsfähige Element erteilt wurden. Die feste Serverrolle `public` und die feste Datenbankrolle `public` können nicht gelöscht werden. Sie können jedoch Berechtigungen für die Rollen `public` widerrufen. Es gibt viele Berechtigungen, die den Rollen `public` standardmäßig zugewiesen sind. Die meisten dieser Berechtigungen sind für Routinevorgänge in der Datenbank erforderlich. Diese Vorgänge sollten von jedem ausgeführt werden können. Gehen Sie beim Aufheben der Berechtigungen von public-Anmeldenamen oder -Benutzern vorsichtig vor, da sich die Aufhebung auf alle Anmeldenamen/Benutzer auswirkt. Im Allgemeinen sollten Sie public-Berechtigungen nicht verweigern, da die DENY-Anweisung alle GRANT-Anweisungen außer Kraft setzt, die Sie möglicherweise einzelnen Benutzern gewähren. 
   
-## <a name="informationschema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA und sys-Benutzer und -Schemas 
+## <a name="information_schema-and-sys-users-and-schemas"></a>INFORMATION_SCHEMA und sys-Benutzer und -Schemas 
  Jede Datenbank enthält zwei Entitäten, die in Katalogsichten als Benutzer angezeigt werden: `INFORMATION_SCHEMA` und `sys`. Diese Entitäten sind für die interne Verwendung durch die Datenbank-Engine erforderlich. Sie können nicht geändert oder gelöscht werden.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Zertifikatbasierte SQL Server-Anmeldenamen  

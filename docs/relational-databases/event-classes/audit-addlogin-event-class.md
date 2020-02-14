@@ -13,15 +13,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 202baede7eed746a581a11d165fe6d7b0fb5afdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67903603"
 ---
 # <a name="audit-addlogin-event-class"></a>Audit Addlogin-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Die **Audit Addlogin** -Ereignisklasse tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename hinzugefügt oder entfernt wird.  
+  Die Ereignisklasse **Audit Addlogin** tritt auf, wenn ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename hinzugefügt oder entfernt wird.  
   
  Wenn Sie beim Hinzufügen des Anmeldenamens zusätzliche Eigenschaften festlegen, z. B. eine Standarddatenbank, sind die Informationen zu diesen Eigenschaften in der **TextData** -Spalte dieses Ereignisses zu finden. Wenn Sie diese Eigenschaften beim Hinzufügen eines Anmeldenamens festlegen, tritt kein Ereignis der **Audit Login Change Property** -Ereignisklasse auf.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "67903603"
   
 ## <a name="audit-addlogin-event-class-data-columns"></a>Datenspalten der Audit Addlogin-Ereignisklasse  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**ApplicationName**|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |**ClientProcessID**|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
@@ -51,7 +51,7 @@ ms.locfileid: "67903603"
 |**SessionLoginName**|**Nvarchar**|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie z. B. mit Login1 eine Verbindung zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und mit Login2 eine Anweisung ausführen, zeigt **SessionLoginName** Login1 an, und **LoginName** zeigt Login2 an. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |**SPID**|**int**|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  
 |**StartTime**|**datetime**|Zeitpunkt, zu dem das Ereignis begonnen hat (falls vorhanden).|14|Ja|  
-|**Success**|**int**|1 = Erfolg 0 = Fehler. Der Wert 1 zeigt z. B. den Erfolg einer Berechtigungsüberprüfung an und der Wert 0 das Fehlschlagen dieser Überprüfung.|23|Ja|  
+|**Erfolgreich**|**int**|1 = Erfolg 0 = Fehler. Der Wert 1 zeigt z. B. den Erfolg einer Berechtigungsüberprüfung an und der Wert 0 das Fehlschlagen dieser Überprüfung.|23|Ja|  
 |**TargetLoginName**|**nvarchar**|Hinzuzufügender oder zu löschender Anmeldename|42|Ja|  
 |**TargetLoginSid**|**image**|Sicherheits-ID (SID) des Zielanmeldenamens (falls als Parameter übergeben)|43|Ja|  
 |**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Ja|  

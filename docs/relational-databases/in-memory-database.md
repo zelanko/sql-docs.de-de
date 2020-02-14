@@ -1,39 +1,47 @@
 ---
-title: In-Memory Database | Microsoft-Dokumentation
-ms.date: 05/22/2019
+title: Features und Technologien für In-Memory-Datenbanksysteme
+ms.date: 10/30/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
-- in-memory database
-- feature, in-memory database
+- in-memory systems
+- in-memory technologies
+- in-memory features
+- database, in-memory database
+- system, in-memory system
+- features, in-memory features
 - in-memory
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: briancarrig
 ms.author: brcarrig
 manager: amitban
-ms.openlocfilehash: d61ea85f5c1d7784faaf1d094e2fa858bffcd8c2
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: df8bb9e603d5455a2e42393df4c40956000cb037
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68255411"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76831597"
 ---
-# <a name="in-memory-database"></a>In-Memory Database
+# <a name="in-memory-database-systems-and-technologies"></a>In-Memory-Datenbanksysteme und -Technologien
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-In-Memory Database ist ein Oberbegriff für die Funktionen in SQL Server, die In-Memory-basierte Technologien nutzen. Da immer neue In-Memory-basierte Funktionen entwickelt werden, wird diese Seite weiterhin aktualisiert.
+Diese Seite ist als Referenzseite für In-Memory-Features und -Technologien in SQL Server gedacht. Ein In-Memory-Datenbanksystem ist ein Datenbanksystem, das so konzipiert ist, dass es die in modernen Datenbanksystemen verfügbaren größeren Arbeitsspeicherkapazitäten nutzt. In-Memory-Datenbanken können relational oder nicht relational sein.
+
+Häufig wird angenommen, dass die bessere Leistung von In-Memory-Datenbanksystemen hauptsächlich darauf zurückzuführen ist, dass auf Daten im Arbeitsspeicher (um ein Vielfaches) schneller zugegriffen werden kann als auf Daten auf dem schnellsten Datenträgersubsystem. Allerdings passt bei vielen SQL Server-Arbeitsauslastungen der gesamte Arbeitssatz in den verfügbaren Arbeitsspeicher. Viele In-Memory-Datenbanksysteme können Daten persistent auf Datenträgern speichern, und möglicherweise passt nicht immer das gesamte Dataset in den verfügbaren Arbeitsspeicher.
+
+Bei Arbeitsauslastungen von relationalen Datenbanken ist ein schneller flüchtiger Cache vor deutlich langsameren, aber langlebigen Medien üblich. Hierfür sind bestimmte Ansätze bei der Arbeitsauslastungsverwaltung erforderlich. Die Möglichkeiten, die sich durch schnellere Übertragungsraten von Arbeitsspeichern, größere Kapazität oder sogar persistenten Speicher ergeben, erleichtern die Entwicklung von neuen Features und Technologien, die neue Ansätze für die Arbeitsauslastungsverwaltung von relationalen Datenbanken vorantreiben können.
 
 ## <a name="hybrid-buffer-pool"></a>Hybrider Pufferpool
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Mit dem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) kann die Datenbank-Engine direkt auf Datenseiten in Datenbankdateien zugreifen, die auf Geräten mit persistentem Speicher (PMEM) gespeichert sind.
+Bei einem [hybriden Pufferpool](../database-engine/configure-windows/hybrid-buffer-pool.md) wird der Pufferpool für Datenbankdateien, die auf byteadressierbaren Speichergeräten mit persistentem Speicher liegen, für Windows- und Linuxplattformen mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] erweitert.
 
-## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte TempDB-Metadaten
+## <a name="memory-optimized-tempdb-metadata"></a>Speicheroptimierte `tempdb`-Metadaten
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
@@ -43,14 +51,16 @@ Mit [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] wird eine neue Funkt
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[In-Memory-OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) ist in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../includes/sssds-md.md)] die wichtigste verfügbare Technologie für die Optimierung der Transaktionsverarbeitung, das Erfassen und Laden von Daten sowie für vorübergehende Datenszenarios.
+[In-Memory-OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) ist eine in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und [!INCLUDE[ssSDS](../includes/sssds-md.md)] verfügbare Datenbanktechnologie für die Optimierung der Transaktionsverarbeitung, des Erfassens und Ladens von Daten sowie vorübergehender Datenszenarios.
 
-**Gilt für:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] bis [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
-
-## <a name="persistent-memory-support-for-linux"></a>Unterstützung von persistentem Speicher für Linux
+## <a name="configuring-persistent-memory-support-for-linux"></a>Unterstützung für persistenten Speicher konfigurieren unter Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] bietet Unterstützung für Geräte mit persistentem Speicher (PMEM) unter Linux und dadurch vollständige Optimierung von Daten- und Transaktionsprotokolldateien, die im [persistenten Speicher](../linux/sql-server-linux-configure-pmem.md) abgelegt werden.
+[!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] beschreibt, wie Sie persistenten Speicher unter Verwendung des [persistenten Speichers](../linux/sql-server-linux-configure-pmem.md) des Hilfsprogramms `ndctl` konfigurieren.
 
-**Gilt für:** [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] bis [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+## <a name="persisted-log-buffer"></a>Persistenter Protokollpuffer
+
+Mit dem Service Pack 1 von [!INCLUDE[ssSQL16](../includes/sssql16-md.md)] wurde die Leistung bei schreibintensiven Arbeitsauslastungen, die mit WRITELOG-Wartevorgängen verbunden waren, optimiert. Der Protokollpuffer wird im persistenten Speicher gespeichert. Dieser kleine Puffer (20 MB pro Benutzerdatenbank) muss auf einen Datenträger geleert werden, damit die im Transaktionsprotokoll erfassten Transaktionen festgeschrieben werden. Bei schreibintensiven OLTP-Arbeitsauslastungen kann dieser Leerungsmechanismus zu einem Engpass werden. Mit dem Protokollpuffer im persistenten Speicher wird die Anzahl von für das Festschreiben des Protokolls erforderlichen Vorgängen verringert, wodurch die Gesamtdauer von Transaktionen optimiert und die Leistung der Arbeitsauslastungen verbessert wird. Dieser Prozess wurde ursprünglich als [Tail of Log Caching]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/) (Protokollfragmentzwischenspeicherung) eingeführt. Dies wurde allerdings als Widerspruch zur [Protokollfragmentsicherung](./backup-restore/tail-log-backups-sql-server.md) sowie zu der traditionellen Auffassung, dass ein Protokollfragment der Teil eines Transaktionsprotokolls ist, der festgeschrieben, aber noch nicht gesichert wurde, wahrgenommen. Da die offizielle Bezeichnung für das Feature „Persisted Log Buffer“ (persistenter Protokollpuffer) ist, wird diese Bezeichnung hier verwendet.
+
+Weitere Informationen finden Sie unter [Hinzufügen eines persistenten Protokollpuffers zu einer Datenbank](./databases/add-persisted-log-buffer.md).

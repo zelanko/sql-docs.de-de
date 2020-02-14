@@ -21,10 +21,10 @@ ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 78aa101ac0f7c86bc2563f7cf0151e7f976a5b80
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296185"
 ---
 # <a name="integration-services-ssis-packages"></a>Integration Services-Pakete (SSIS)
@@ -32,13 +32,13 @@ ms.locfileid: "71296185"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Bei einem Paket handelt es sich um eine organisierte Auflistung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
+  Bei einem Paket handelt es sich um eine organisierte Sammlung von Verbindungen, Ablaufsteuerungselementen, Datenflusselementen, Ereignishandlern, Variablen, Parametern und Konfigurationen, die Sie entweder mit den grafischen Designtools von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] oder programmgesteuert erstellen.  Sie speichern dann das fertige Paket in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher oder im Dateisystem, oder Sie können das ssISnoversion-Projekt auf dem Server [!INCLUDE[ssIS](../includes/ssis-md.md)] bereitstellen. Das Paket ist jene Arbeitseinheit, die abgerufen, ausgeführt und gespeichert wird.  
   
  Wenn Sie ein Paket erstellen, ist es zunächst ein leeres Objekt ohne Funktionalität. Um einem Paket Funktionalität hinzuzufügen, fügen Sie ihm eine Ablaufsteuerung und optional mindestens einen Datenfluss hinzu.  
   
  Das folgende Diagramm zeigt ein einfaches Paket, das eine Ablaufsteuerung mit einem Datenflusstask enthält, der wiederum einen Datenfluss enthält.  
   
- ![Paket mit Ablaufsteuerung und Datenfluss](../integration-services/media/ssis-package.gif "A package with a control flow and a data flow")  
+ ![Paket mit einer Ablaufsteuerung und einem Datenfluss](../integration-services/media/ssis-package.gif "Paket mit einer Ablaufsteuerung und einem Datenfluss")  
   
  Nachdem Sie das Basispaket erstellt haben, können Sie erweiterte Funktionen hinzufügen, wie z. B. Protokollierung und Variablen, um die Funktionalität des Pakets zu erweitern. Weitere Informationen finden Sie im Abschnitt zu Objekten, die die Paketfunktionalität erweitern.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "71296185"
 ### <a name="event-handlers"></a>Ereignishandler  
  Ein Ereignishandler ist ein Workflow, der als Reaktion auf die Ereignisse ausgeführt wird, die von einem Paket, einem Task oder Container ausgelöst werden. Beispielsweise können Sie mit einem Ereignishandler den Speicherplatz überprüfen, wenn ein Ereignis vor der Ausführung oder ein Fehler auftritt, und eine E-Mail-Nachricht senden, um dem Administrator den verfügbaren Speicherplatz oder Fehlerinformationen zu melden. Ein Ereignishandler ist wie ein Paket aufgebaut, mit einer Ablaufsteuerung und optionalen Datenflüssen. Ereignishandler können einzelnen Tasks oder Containern im Paket hinzugefügt werden. Weitere Informationen finden Sie unter [Integration Services-Ereignishandler &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md).  
   
-### <a name="configurations"></a>Konfigurationen  
+### <a name="configurations"></a>Configurations  
  Eine Konfiguration enthält Paare aus einer Eigenschaft und einem Wert, die die Eigenschaften des Pakets und der zugehörigen Tasks, Containers, Variablen, Verbindungen und Ereignishandler beschreiben, wenn das Paket ausgeführt wird. Mithilfe von Konfigurationen können Eigenschaften aktualisiert werden, ohne das Paket zu ändern. Wenn das Paket ausgeführt wird, werden die Konfigurationsinformationen geladen und die Eigenschaftswerte aktualisiert. Beispielsweise kann mit einer Konfiguration die Verbindungszeichenfolge der Verbindung aktualisiert werden.  
   
  Die Konfiguration wird gespeichert und mit dem Paket bereitgestellt, wenn das Paket auf einem anderen Computer installiert wird. Die Konfigurationswerte können aktualisiert werden, wenn das Paket installiert wird, damit das Paket in einer anderen Umgebung unterstützt wird. Weitere Informationen finden Sie unter [Erstellen von Paketkonfigurationen](../integration-services/packages/create-package-configurations.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "71296185"
 ### <a name="logging-and-log-providers"></a>Protokollierung und Protokollanbieter  
  Bei einem Protokoll handelt es sich um eine Auflistung von Informationen zu dem Paket, die beim Ausführen des Pakets gesammelt werden. Beispielsweise kann ein Protokoll die Start- und Beendigungszeit für die Ausführung eines Pakets bereitstellen. Ein Protokollanbieter definiert den Zieltyp und das Format, der bzw. das vom Paket und dessen Containern und Tasks zum Protokollieren von Laufzeitinformationen verwendet werden kann. Die Protokolle sind einem Paket zugeordnet, aber die Tasks und Container im Paket können Informationen in einem beliebigen Paketprotokoll protokollieren. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält eine Reihe von integrierten Protokollanbietern für die Protokollierung. Beispielsweise enthält [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Protokollanbieter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] und Textdateien. Darüber hinaus können Sie benutzerdefinierte Protokollanbieter erstellen und zur Protokollierung verwenden. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-### <a name="variables"></a>Variablen  
+### <a name="variables"></a>Variables  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] unterstützt Systemvariablen und benutzerdefinierte Variablen. Die Systemvariablen stellen nützliche Informationen zu Paketobjekten zur Laufzeit bereit, und mit benutzerdefinierten Variablen werden benutzerdefinierte Szenarios in Paketen unterstützt. Beiden Arten von Variablen können in Ausdrücken, Skripts und Konfigurationen verwendet werden.  
   
  Die Variablen auf Paketebene schließen die vordefinierten Systemvariablen ein, die für ein Paket verfügbar sind, und die benutzerdefinierten Variablen für den Paketbereich. Weitere Informationen finden Sie unter [Integration Services-Variablen (SSIS)](../integration-services/integration-services-ssis-variables.md).  
@@ -77,7 +77,7 @@ ms.locfileid: "71296185"
  Das Paketobjekt kann so konfiguriert werden, dass Funktionen, wie z. B. das erneute Starten des Pakets an Prüfpunkten, das Signieren des Pakets mit einem digitalen Zertifikat, das Festlegen der Paketschutzebene und das Sicherstellen der Datenintegrität, mithilfe von Transaktionen unterstützt werden.  
   
 ### <a name="restarting-packages"></a>Erneutes Starten von Paketen  
- Das Paket schließt Prüfpunkteigenschaften ein, mit denen Sie das Paket neu starten können, wenn bei Tasks ein Fehler auftritt. Wenn z. B. ein Paket zwei Datenflusstasks aufweist, die zwei verschiedene Tabellen aktualisieren, und beim zweiten Task ein Fehler auftritt, kann das Paket erneut ausgeführt werden, ohne den ersten Datenflusstask zu wiederholen. Das erneute Starten eines Pakets kann bei zeitaufwändigen Paketen Zeit sparen. Neustart bedeutet, dass nicht das gesamte Paket erneut ausgeführt werden muss, sondern nur ab dem fehlerhaften Task. Weitere Informationen finden Sie unter [Restart Packages by Using Checkpoints](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
+ Das Paket schließt Prüfpunkteigenschaften ein, mit denen Sie das Paket neu starten können, wenn bei Tasks ein Fehler auftritt. Wenn z. B. ein Paket zwei Datenflusstasks aufweist, die zwei verschiedene Tabellen aktualisieren, und beim zweiten Task ein Fehler auftritt, kann das Paket erneut ausgeführt werden, ohne den ersten Datenflusstask zu wiederholen. Das erneute Starten eines Pakets kann bei zeitaufwändigen Paketen Zeit sparen. Neustart bedeutet, dass nicht das gesamte Paket erneut ausgeführt werden muss, sondern nur ab dem fehlerhaften Task. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../integration-services/packages/restart-packages-by-using-checkpoints.md).  
   
 ### <a name="securing-packages"></a>Sichern von Paketen  
  Ein Paket kann mit einer digitalen Signatur signiert und mit einem Kennwort oder Benutzerschlüssel verschlüsselt werden. Mit einer digitalen Signatur wird die Quelle des Pakets authentifiziert. Sie müssen jedoch auch [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] konfigurieren, um die digitale Signatur zu überprüfen, wenn das Paket lädt. Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md) und [Zugriffssteuerung für vertrauliche Daten in Paketen](../integration-services/security/access-control-for-sensitive-data-in-packages.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "71296185"
 ## <a name="custom-log-entries-available-on-the-package"></a>Verfügbare benutzerdefinierte Protokolleinträge für Pakete  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md).  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**PackageStart**|Zeigt den Beginn der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |**PackageEnd**|Zeigt den Abschluss der Paketausführung an.<br /><br /> Hinweis: Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  

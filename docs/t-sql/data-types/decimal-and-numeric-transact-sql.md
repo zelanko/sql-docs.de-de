@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71682100"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal und numeric (Transact-SQL)
@@ -46,9 +46,9 @@ Die maximale Gesamtanzahl der zu speichernden Dezimalstellen. Diese Zahl schlie�
 >  Informatica unterstützt unabhängig von der angegebenen Präzision und dem Dezimalstellenwert nur 16 signifikante Ziffern.  
   
 *s* (Dezimalstellenwert)  
-Die Anzahl von Dezimalstellen die rechts vom Dezimaltrennzeichen gespeichert werden. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Die Anzahl von Dezimalstellen muss ein Wert zwischen 0 und *p* sein und kann nur festgelegt werden, wenn die Genauigkeit angegeben wird. Der Standardwert ist 0; daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
+Die Anzahl von Dezimalstellen die rechts vom Dezimaltrennzeichen gespeichert werden. Diese Anzahl wird von *p* subtrahiert, um die maximale Anzahl der Stellen links von der Dezimalstelle zu bestimmen. Die Anzahl von Dezimalstellen muss ein Wert zwischen 0 und *p* sein und kann nur festgelegt werden, wenn die Genauigkeit angegeben wird. Der Standardwert ist 0 (null). Daher gilt: 0 <= *s* \<= *p*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.
   
-|Genauigkeit|Speicherplatz in Bytes|  
+|Precision|Speicherplatz in Bytes|  
 |---|---|
 |1 – 9|5|  
 |10–19|9|  
@@ -99,7 +99,7 @@ MyDecimalColumn                         MyNumericColumn
   
 ```  
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

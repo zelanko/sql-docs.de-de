@@ -33,10 +33,10 @@ ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68134434"
 ---
 # <a name="database-mail-configuration-objects"></a>Konfigurationsobjekte für Datenbank-E-Mail
@@ -51,7 +51,7 @@ ms.locfileid: "68134434"
 ##  <a name="VisualElement"></a> Beziehung der Konfigurationsobjekte für Datenbank-E-Mail  
  In der Abbildung werden zwei Profile, drei Konten und drei Benutzer veranschaulicht. Benutzer 1 kann auf Profil 1 zugreifen. Dieses Profil verwendet Konto 1 und Konto 2. Benutzer 3 kann auf Profil 2 zugreifen. Dieses Profil verwendet Konto 2 und Konto 3. Benutzer 2 kann auf Profil 1 und Profil 2 zugreifen.  
   
- ![Beziehung von Benutzern, Profilen und Konten](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Relationship of users, profiles, and accounts")  
+ ![Beziehung von Benutzern, Profilen und Konten](../../relational-databases/database-mail/media/databasemailprofileaccount.gif "Beziehung von Benutzern, Profilen und Konten")  
   
   
 ##  <a name="DBAccount"></a> Datenbank-E-Mail-Konto  
@@ -79,7 +79,7 @@ ms.locfileid: "68134434"
   
 -   Der Name des E-Mail-Servers.  
   
--   Der Typ des E-Mail-Servers. Bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]handelt es sich dabei immer um Simple Mail Transfer Protocol (SMTP).  
+-   Der Typ des E-Mail-Servers. Bei [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] handelt es sich dabei immer um das Simple Mail Transfer Protocol (SMTP).  
   
 -   Die Portnummer des E-Mail-Servers  
   
@@ -128,14 +128,14 @@ ms.locfileid: "68134434"
   
 ### <a name="database-mail-settings"></a>Datenbank-E-Mail-Einstellungen  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)|Ändert Konfigurationseinstellungen für Datenbank-E-Mail.|  
 |[sysmail_help_configure_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql.md)|Zeigt Konfigurationseinstellungen für Datenbank-E-Mail an.|  
   
 ### <a name="accounts-and-profiles"></a>Konten und Profile  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)|Fügt einem Datenbank-E-Mail-Profil ein E-Mail-Konto hinzu.|  
 |[sysmail_delete_account_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql.md)|Löscht ein Datenbank-E-Mail-Konto.|  
@@ -148,9 +148,9 @@ ms.locfileid: "68134434"
 |[sysmail_update_profile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profile-sp-transact-sql.md)|Ändert die Beschreibung oder den Namen eines Datenbank-E-Mail-Profils.|  
 |[sysmail_update_profileaccount_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)|Aktualisiert die Sequenznummer eines Kontos innerhalb eines Datenbank-E-Mail-Profils.|  
   
-### <a name="security"></a>Security  
+### <a name="security"></a>Sicherheit  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql.md)|Erteilt einem Datenbankprinzipal die Berechtigung, ein Datenbank-E-Mail-Profil zu verwenden.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](../../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md)|Entfernt die Berechtigung eines Datenbankbenutzers, ein öffentliches oder privates Datenbank-E-Mail-Profil zu verwenden.|  
@@ -159,7 +159,7 @@ ms.locfileid: "68134434"
   
 ### <a name="system-state"></a>Systemstatus  
   
-|Name|und Beschreibung|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql.md)|Startet das externe Datenbank-E-Mail-Programm und die zugehörige SQL Service Broker-Warteschlange.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql.md)|Beendet das externe Datenbank-E-Mail-Programm und die zugehörige SQL Service Broker-Warteschlange.|  

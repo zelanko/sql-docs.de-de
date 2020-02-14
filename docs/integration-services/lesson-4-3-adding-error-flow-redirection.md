@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 3: Hinzufügen der Fehlerflussumleitung | Microsoft-Dokumentation'
+title: 'Schritt 3: Hinzufügen der Fehlerflussumleitung | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 01/07/2019
 ms.prod: sql
@@ -11,10 +11,10 @@ ms.assetid: 5683a45d-9e73-4cd5-83ca-fae8b26b488c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 4a3626878ba4be6d56bb56b545f3d0cdc24a407a
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283195"
 ---
 # <a name="lesson-4-3-add-error-flow-redirection"></a>Lektion 4.3: Hinzufügen der Fehlerflussumleitung
@@ -55,7 +55,7 @@ Standardmäßig enthalten die beiden zusätzlichen Spalten **ErrorCode** und **E
   
 10. Überprüfen Sie auf der Seite **Skript**, ob die **LocaleID**-Eigenschaft auf **Englisch (USA)** festgelegt ist.
   
-11. Klicken Sie auf **Edit Script** (Skript bearbeiten), um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen. Geben Sie in der Methode **Input0_ProcessInputRow** den folgenden Code ein, oder fügen Sie ihn ein:  
+11. Klicken Sie auf **Skript bearbeiten**, um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] Tools for Applications (VSTA) zu öffnen. Geben Sie in der Methode **Input0_ProcessInputRow** den folgenden Code ein, oder fügen Sie ihn ein:  
   
     [Visual Basic]  
   

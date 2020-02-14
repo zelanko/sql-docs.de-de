@@ -12,10 +12,10 @@ ms.assetid: f60e1a19-2ea6-403c-89ab-3e60ac533ea0
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3d3019419538c05efc28ceabc5324d373500f65c
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71285137"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Quelltabellen und -sichten auswählen (SQL Server-Import/Export-Assistent)
@@ -33,14 +33,14 @@ ms.locfileid: "71285137"
  
 In diesem Beispiel enthält die Liste **Quelle** alle Tabellen der AdventureWorks-Beispieldatenbank. Die ausgewählte Zeile zeigt an, dass der Benutzer die Tabelle **Sales.Customer** von der Quelle in die neue Tabelle **Sales.CustomerNew** des Ziels kopieren möchte. 
    
- ![Seite „Tabellen auswählen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/select-tables1.png "Select tables page of the Import and Export Wizard")
+ ![Seite „Tabellen auswählen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/select-tables1.png "Seite „Tabellen auswählen“ des Import/Export-Assistenten")
   
 ## <a name="screen-shot---if-you-provided-a-query"></a>Screenshot: Wenn Sie eine Abfrage bereitgestellt haben  
  Der folgende Screenshot zeigt ein Beispiel der Seite **Quelltabellen und -sichten auswählen** des Assistenten, wenn Sie zuvor die Option **Abfrage zum Angeben der zu übertragenden Daten schreiben** auf der Seite **Tabelle kopieren oder Datenbank abfragen** ausgewählt haben. Die Liste **Quelle** enthält nur eine einzige Zeile. In dieser stellt das Element `[Query]` die Abfrage dar, die Sie auf der Seite **Quellabfrage angeben** bereitgestellt haben.
  
 In diesem Beispiel möchte der Benutzer die Abfrageergebnisse aus der Quelle in die **Sales.CustomerNew** am Ziel kopieren.  
     
- ![Seite „Tabellen auswählen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/select-tables2.png "Select tables page of the Import and Export Wizard")  
+ ![Seite „Tabellen auswählen“ des Import/Export-Assistenten](../../integration-services/import-export-data/media/select-tables2.png "Seite „Tabellen auswählen“ des Import/Export-Assistenten")  
 
 ## <a name="select-source-and-destination-tables"></a>Auswählen von Quell- und Zieltabellen 
 **Quelle**  
@@ -89,9 +89,9 @@ Wenn Sie Daten nach Excel exportieren, können Sie das Ziel wie folgt angeben.
 > Wenn Sie Excel als Quelle oder Ziel verwenden, sollten Sie auf **Zuordnungen bearbeiten** klicken und die Datentypzuordnungen auf der Seite **Spaltenzuordnungen** überprüfen. 
 
 ## <a name="whats-next"></a>Wie geht es weiter?  
- Nach der Auswahl der zu kopierenden vorhandenen Tabellen und Sichten und dem Zuordnen dieser zu ihren Zielen ist **Paket speichern und ausführen**die nächste Seite. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie möglicherweise auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket speichern, das der Assistent erstellt hat, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
+ Nach der Auswahl der zu kopierenden vorhandenen Tabellen und Sichten und dem Zuordnen dieser zu ihren Zielen ist **Paket speichern und ausführen**die nächste Seite. Auf dieser Seite geben Sie an, ob der Kopiervorgang sofort ausgeführt werden soll. Abhängig von Ihrer Konfiguration können Sie möglicherweise auch das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket speichern, das der Assistent erstellt hat, um es anzupassen und später wiederzuverwenden. Weitere Informationen finden Sie unter [Paket speichern und ausführen](../../integration-services/import-export-data/save-and-run-package-sql-server-import-and-export-wizard.md).
  
- ## <a name="see-also"></a>Siehe auch
+ ## <a name="see-also"></a>Weitere Informationen
 [Erste Schritte mit diesem einfachen Beispiel des Import/Export-Assistenten](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md)  
 [Load data from or to Excel with SQL Server Integration Services (SSIS) (Laden von Daten aus oder in Excel mit SQL Server Integration Services (SSIS))](../load-data-to-from-excel-with-ssis.md)
 

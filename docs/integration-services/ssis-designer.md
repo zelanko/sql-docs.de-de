@@ -25,10 +25,10 @@ ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3c458257766e52898d0924b2f8ad57ddd2423b19
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295667"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
@@ -52,7 +52,7 @@ ms.locfileid: "71295667"
   
  Im folgenden Diagramm werden der [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer und das Fenster **Toolbox** angezeigt.  
   
- ![Screenshot des SSIS-Designers und der Toolbox](../integration-services/media/denali-designerandtoolbox.gif "Screenshot of SSIS Designer and Toolbox")  
+ ![Screenshot von SSIS-Designer und -Toolbox](../integration-services/media/denali-designerandtoolbox.gif "Screenshot von SSIS-Designer und -Toolbox")  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält zusätzliche Dialogfelder und Fenster, um Paketen Funktionalität hinzuzufügen, und [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt Fenster und Dialogfelder zum Konfigurieren der Entwicklungsumgebung und zum Verwenden von Paketen bereit. Weitere Informationen finden Sie unter [SQL Server Integration Services-Benutzeroberfläche](../integration-services/integration-services-user-interface.md).  
   
@@ -148,7 +148,7 @@ Verwenden Sie die Registerkarte **Datenfluss** des [!INCLUDE[ssIS](../includes/s
 ## <a name="event-handlers-tab"></a>Registerkarte Ereignishandler
   Verwenden Sie die Registerkarte **Ereignishandler** von [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer zum Erstellen eines Steuerungsflusses in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket. Ein Ereignishandler wird als Reaktion auf ein Ereignis ausgeführt, das von einem Paket, Task oder Container ausgelöst wird.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  **Ausführbare Datei**  
  Wählen Sie die ausführbare Datei aus, für die Sie einen Ereignishandler erstellen möchten. Bei der ausführbaren Datei kann es sich um ein Paket, einen Task oder Container im Paket handeln.  
   

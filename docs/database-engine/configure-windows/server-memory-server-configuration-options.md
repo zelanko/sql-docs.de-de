@@ -22,10 +22,10 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: pmasl
 ms.author: mikeray
 ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "69028740"
 ---
 # <a name="server-memory-configuration-options"></a>Konfigurationsoptionen für den Serverarbeitsspeicher
@@ -55,7 +55,7 @@ Sie können die Serveroptionen **Min. Serverarbeitsspeicher** und **Max. Servera
 
 <a name="max_server_memory"></a> Verwenden Sie **max_server_memory**, um sicherzustellen, dass beim Betriebssystem kein nachteiliger Arbeitsspeichermangel eintritt. Um den maximalen Serverarbeitsspeicher zu konfigurieren, überwachen Sie den Gesamtverbrauch des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses, um die Arbeitsspeicheranforderungen zu bestimmen. Hier folgen genauere Angaben für diese Berechnungen für eine Einzelinstanz:
 - Reservieren Sie vom gesamten Arbeitsspeicher des Betriebssystems 1 GB–4 GB für das Betriebssystem selbst.
-- Subtrahieren Sie anschließend das Äquivalent der potenziellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsspeicherbelegungen außerhalb des Steuerelements **Max. Serverarbeitsspeicher**, bestehend aus **Stapelgröße <sup>1</sup> \* max. Anzahl der berechneten Arbeitsthreads <sup>2</sup>** . Der Rest sollte die Einstellung „max_server_memory“ für die Einrichtung einer einzelnen Instanz bilden.
+- Subtrahieren Sie anschließend das Äquivalent der potenziellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Arbeitsspeicherbelegungen außerhalb des Steuerelements **Max. Serverarbeitsspeicher**, bestehend aus **Stapelgröße <sup>1</sup> \* max. Anzahl von berechneten Arbeitsthreads <sup>2</sup>** . Der Rest sollte die Einstellung „max_server_memory“ für die Einrichtung einer einzelnen Instanz bilden.
 
 <sup>1</sup> Informationen zu den Threadstapelgrößen der einzelnen Architekturen finden Sie im [Handbuch zur Architektur der Speicherverwaltung](../../relational-databases/memory-management-architecture-guide.md#stacksizes).
 
@@ -80,7 +80,7 @@ Mit dieser Windows-Richtlinie werden die Konten bestimmt, die einen Prozess zum 
   
 Entfernen Sie zum Deaktivieren der Option **Sperren von Seiten im Speicher** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Benutzerrecht *Sperren von Seiten im Speicher* für das Konto mit der Ausführungsberechtigung für sqlserver.exe (das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Startkonto).  
  
-Das Festlegen dieser Option wirkt sich nicht auf die [dynamische Arbeitsspeicherveraltung](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ermöglicht ein Anwachsen oder Schrumpfen aufgrund der Anforderungen anderer Arbeitsspeicherclerks. Bei der Verwendung des Benutzerrechts *Sperren von Seiten im Speicher* empfiehlt es sich, einen oberen Grenzwert für **Max. Serverarbeitsspeicher** festzulegen, wie [oben ausführlich beschrieben](#max_server_memory).
+Das Festlegen dieser Option wirkt sich nicht auf die [dynamische Arbeitsspeicherverwaltung](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management) von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ermöglicht ein Erweitern oder Verkleinern aufgrund der Anforderungen anderer Arbeitsspeicherclerks. Bei der Verwendung des Benutzerrechts *Sperren von Seiten im Speicher* empfiehlt es sich, einen oberen Grenzwert für **Max. Serverarbeitsspeicher** festzulegen, wie [oben ausführlich beschrieben](#max_server_memory).
 
 > [!IMPORTANT]
 > Das Festlegen dieser Option sollte nur bei Bedarf erfolgen, nämlich wenn es Anzeichen gibt, dass der sqlservr-Prozess ausgelagert wird. In diesem Fall wird im Fehlerprotokoll der Fehler 17890 gemeldet, ähnlich wie im folgenden Beispiel: `A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: #### seconds. Working set (KB): ####, committed (KB): ####, memory utilization: ##%.`

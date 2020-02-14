@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/23/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70009406"
 ---
 # <a name="columnstore-indexes-overview"></a>Columnstore-Indizes: Übersicht
@@ -61,7 +61,7 @@ Ein Spaltensegment ist eine Spalte mit Daten aus der Zeilengruppe.
 -   Jede Zeilengruppe enthält ein Spaltensegment für jede Spalte in der Tabelle.  
 -   Jedes Spaltensegment wird zusammenhängend komprimiert und auf physischen Medien gespeichert.  
   
-![Column segment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+![Spaltensegment](../../relational-databases/indexes/media/sql-server-pdw-columnstore-columnsegment.gif "Spaltensegment")  
   
 #### <a name="clustered-columnstore-index"></a>Gruppierter Columnstore-Index
 Ein gruppierter Columnstore-Index ist der physische Speicher für die gesamte Tabelle.    
@@ -133,12 +133,12 @@ Alle Spalten in einem Columnstore-Index werden in den Metadaten als eingeschloss
 |[sys.dm_db_column_store_row_group_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-operational-stats-transact-sql.md)|[sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)|  
 |[sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)||  
   
-## <a name="related-tasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a>Zugehörige Aufgaben  
 Alle relationalen Tabellen, sofern Sie sie nicht als gruppierten Columnstore-Index festlegen, verwenden Rowstore als zugrundeliegendes Datenformat. `CREATE TABLE` erstellt eine Rowstore-Tabelle, es sei denn, Sie geben die Option `WITH CLUSTERED COLUMNSTORE INDEX` an.  
   
 Beim Erstellen einer Tabelle mit der `CREATE TABLE`-Anweisung können Sie die Tabelle als Columnstore erstellen, indem Sie die Option `WITH CLUSTERED COLUMNSTORE INDEX` angeben. Wenn Sie bereits über eine Rowstore-Tabelle verfügen, die Sie in einen Columnstore konvertieren möchten, können Sie die Anweisung `CREATE COLUMNSTORE INDEX` verwenden.  
   
-|Task|Referenzthemen|Hinweise|  
+|Aufgabe|Referenzthemen|Notizen|  
 |----------|----------------------|-----------|  
 |Erstellen einer Tabelle als Columnstore.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie die Tabelle als gruppierten Columnstore-Index erstellen. Sie müssen nicht zuerst eine Rowstore-Tabelle erstellen, die Sie dann in Columnstore konvertieren.|  
 |Erstellen Sie eine In-Memory-Tabelle mit einem Columnstore-Index.|[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)|Ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]können Sie eine speicheroptimierte Tabelle mit einem Columnstore-Index erstellen. Der Columnstore-Index kann auch nach dem Erstellen der Tabelle mit der `ALTER TABLE ADD INDEX`-Syntax hinzugefügt werden.|  
@@ -156,7 +156,7 @@ Beim Erstellen einer Tabelle mit der `CREATE TABLE`-Anweisung können Sie die Ta
 |Defragmentieren eines Columnstore-Index.|[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE` defragmentiert Columnstore-Indizes online.|  
 |Zusammenführen von Tabellen mit Columnstore-Indizes.|[MERGE &#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Columnstore-Indizes: Laden von Daten](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore-Indizes: Zusammenfassung der Features für Produktversionen](~/relational-databases/indexes/columnstore-indexes-what-s-new.md)   
  [Columnstore-Indizes: Abfrageleistung](~/relational-databases/indexes/columnstore-indexes-query-performance.md)   

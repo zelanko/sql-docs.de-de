@@ -41,10 +41,10 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68038831"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
@@ -56,7 +56,7 @@ ms.locfileid: "68038831"
   
     -   [Was ist die Funktion dieser Dienste?](#Services)  
   
-    -   [Zusätzliche Informationen](#MoreInformation)  
+    -   [Weitere Informationen](#MoreInformation)  
   
     -   [Security](#Security)  
   
@@ -125,9 +125,9 @@ ms.locfileid: "68038831"
   
 #### <a name="starting-includessnoversionincludesssnoversion-mdmd-configuration-manager"></a>Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers  
   
-1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], danach auf **Konfigurationstools**, und klicken Sie auf **SQL Server-Konfigurations-Manager**.  
+1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], zeigen Sie auf **Konfigurationstools**, und klicken Sie dann auf **SQL Server-Konfigurations-Manager**.  
   
-     Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
+     Da der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ein Snap-In für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Verwaltungskonsolenprogramm und kein eigenständiges Programm ist, wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager in neueren Versionen von Windows nicht als Anwendung angezeigt. Nachfolgend sind die Pfade der letzten vier Versionen aufgeführt (unter der Annahme, dass Windows auf Laufwerk C installiert wurde).  
   
     |||  
     |-|-|  
@@ -187,7 +187,7 @@ ms.locfileid: "68038831"
 3.  Klicken Sie bei der Frage, ob die Aktion ausgeführt werden soll, auf **Ja**.  
   
 ##  <a name="CommandPrompt"></a> Über das Eingabeaufforderungsfenster mit Net-Befehlen  
- Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste können anhand von [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Befehlen von **-Befehlen von** Windows gestartet, beendet oder angehalten werden.  
+ Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste können mithilfe von **net**-Befehlen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows gestartet, beendet oder pausiert werden.  
   
 ###  <a name="dbDefault"></a> So starten Sie die Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -195,7 +195,7 @@ ms.locfileid: "68038831"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     -oder-  
+     Oder  
   
      **net start MSSQLSERVER**  
   
@@ -205,7 +205,7 @@ ms.locfileid: "68038831"
   
      **net start "SQL Server (** *Instanzname* **)"**  
   
-     -oder-  
+     Oder  
   
      **net start MSSQL$** *Instanzname*  
   
@@ -215,7 +215,7 @@ ms.locfileid: "68038831"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     -oder-  
+     Oder  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -228,7 +228,7 @@ ms.locfileid: "68038831"
   
      **net start "SQL Server-Agent (MSSQLSERVER)"**  
   
-     -oder-  
+     Oder  
   
      **net start SQLSERVERAGENT**  
   
@@ -236,9 +236,9 @@ ms.locfileid: "68038831"
   
 -   Geben Sie an einer Eingabeaufforderung einen der folgenden Befehle ein. Ersetzen Sie *Instanzname* durch den Namen der Instanz, die Sie verwalten möchten.  
   
-     **net start "SQL Server-Agent(** *Instanzname* **)"**  
+     **net start "SQL Server Agent(** *Instanzname* **)"**  
   
-     -oder-  
+     Oder  
   
      **net start SQLAgent$** *Instanzname*  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68038831"
   
      **net start "SQL Server Browser"**  
   
-     -oder-  
+     Oder  
   
      **net start SQLBrowser**  
   
@@ -358,7 +358,7 @@ ms.locfileid: "68038831"
  [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [SQL Server-Konfigurations-Manager](../../relational-databases/sql-server-configuration-manager.md)   
  [Starten von SQL Server mit Minimalkonfiguration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)   
- [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
+ [Von den Editionen von SQL Server 2016 unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)  
   
   
 

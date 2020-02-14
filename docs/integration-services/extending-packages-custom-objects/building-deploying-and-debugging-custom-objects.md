@@ -13,10 +13,10 @@ ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 112a925c051b5345933ee4c8fc1fb3b1147c2e48
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71297318"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Erstellen, Bereitstellen und Debuggen von benutzerdefinierten Objekten
@@ -91,7 +91,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 |Benutzerdefiniertes Objekt|Bereitstellungsordner|  
 |-------------------|-----------------------|  
-|Task|Aufgaben|  
+|Aufgabe|Aufgaben|  
 |Ziel-Editor für Dimensionsverarbeitung|Verbindungen|  
 |Protokollanbieter|LogProviders|  
 |Datenflusskomponente|PipelineComponents|  
@@ -134,7 +134,7 @@ copy $(TargetFileName) "C:\Program Files\Microsoft SQL Server\130\DTS\LogProvide
   
 2.  Wählen Sie unter **Projekteigenschaften** auf der Registerkarte **Debuggen** die Option **Externes Programm starten** als **Startaktion** aus, und gehen Sie zu **dtexec.exe**, standardmäßig unter „C:\Programme\Microsoft SQL Server\130\DTS\Binn“ installiert.  
   
-3.  Geben Sie im Textfeld **Befehlszeilenoptionen** unter **Startoptionen** die Befehlszeilenargumente ein, die zum Ausführen eines Pakets erforderlich sind, das die Komponente verwendet. Oftmals besteht das Befehlszeilenargument aus dem /F[ILE]-Schalter gefolgt vom Pfad und dem Namen der .dtsx-Datei. Weitere Informationen finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
+3.  Geben Sie im Textfeld **Befehlszeilenoptionen** unter **Startoptionen** die Befehlszeilenargumente ein, die zum Ausführen eines Pakets erforderlich sind, das die Komponente verwendet. Oftmals besteht das Befehlszeilenargument aus dem /F[ILE]-Schalter gefolgt vom Pfad und dem Namen der .dtsx-Datei. Weitere Informationen finden Sie [hier](../../integration-services/packages/dtexec-utility.md).  
   
 4.  Legen Sie sofern erforderlich im Quellcode Breakpoints in den Laufzeitmethoden der Komponente fest.  
   

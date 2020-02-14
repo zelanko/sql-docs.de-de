@@ -24,10 +24,10 @@ ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68065736"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
@@ -35,7 +35,7 @@ ms.locfileid: "68065736"
 
   Dieses Thema enthält die ALTER DATABASE-Syntax zum Festlegen von [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Optionen in einer sekundären Datenbank. Pro ALTER DATABASE-Anweisung ist nur eine SET HADR-Option erlaubt. Diese Optionen werden nur auf sekundären Replikaten unterstützt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -123,10 +123,10 @@ ALTER DATABASE database_name
 ## <a name="database-states"></a>Datenbankstatus  
  Wenn eine sekundäre Datenbank mit einer Verfügbarkeitsgruppe verbunden wird, ändert das lokale sekundäre Replikat den Status dieser sekundären Datenbank von RESTORING in ONLINE. Wenn eine sekundäre Datenbank aus der Verfügbarkeitsgruppe entfernt wird, wird sie vom lokalen sekundären Replikat auf den Status RESTORING zurückgesetzt. Dies ermöglicht Ihnen, nachfolgende Protokollsicherungen aus der primären Datenbank auf diese sekundäre Datenbank anzuwenden.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Beschränkungen  
  Führen Sie ALTER DATABASE-Anweisungen außerhalb von Transaktionen und Batches aus.  
   
-## <a name="security"></a>Security  
+## <a name="security"></a>Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank. Das Verknüpfen einer Datenbank mit einer Verfügbarkeitsgruppe erfordert die Mitgliedschaft in der festen **db_owner**-Datenbankrolle.  

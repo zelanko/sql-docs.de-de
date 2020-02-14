@@ -19,10 +19,10 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 3cba502e5f89c39df67b74909f3185ad45c659e2
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71298355"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
@@ -52,7 +52,7 @@ ms.locfileid: "71298355"
  Wenn die Ergebnisse eine Schachtelung einschließen, wird das Ergebnis vor dem Speichern vereinfacht. Durch das Vereinfachen eines Ergebnisses wird das geschachtelte Resultset in eine Tabelle geändert. Beispielsweise werden durch das Vereinfachen eines geschachtelten Ergebnisses mit einer **Customer** -Spalte und einer geschachtelten **Product** -Spalte der **Customer** -Spalte Zeilen hinzugefügt, um eine Tabelle zu erstellen, die Produktdaten für jeden Kunden enthält. Beispielsweise wird ein Kunde mit drei verschiedenen Produkten zu einer Tabelle mit drei Zeilen, wobei der Kunde in jeder Zeile wiederholt und in jeder Zeile ein anderes Produkt hinzugefügt wird. Falls das FLATTENED-Schlüsselwort ausgelassen wird, enthält die Tabelle nur die **Customer** -Spalte und nur eine einzige Zeile pro Kunde. Weitere Informationen finden Sie unter [SELECT &#40;DMX&#41;](../../dmx/select-dmx.md).  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>Konfiguration des Data Mining-Abfragetasks  
- Der Data Mining-Abfragetask erfordert zwei Verbindungen. Die erste Verbindung ist ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungs-Manager, der eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt herstellt, die bzw. das die Miningstruktur und das Miningmodell enthält. Die zweite Verbindung ist ein OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellt, die die Tabelle enthält, in die der Task schreibt. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) und [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
+ Der Data Mining-Abfragetask erfordert zwei Verbindungen. Die erste Verbindung ist ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Verbindungs-Manager, der eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt herstellt, die bzw. das die Miningstruktur und das Miningmodell enthält. Die zweite Verbindung ist ein OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herstellt, die die Tabelle enthält, in die der Task schreibt. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md) und [OLE DB Connection Manager](../../integration-services/connection-manager/ole-db-connection-manager.md).  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "71298355"
  Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
   
 ### <a name="mining-model-tab-options"></a>Optionen der Registerkarte Miningmodell  
- **Verbindung**  
+ **Connection**  
  Wählen Sie einen vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Verwandte Themen:**  [Analysis Services-Verbindungs-Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
@@ -133,10 +133,10 @@ ms.locfileid: "71298355"
  **Variablenname**  
  Wählen Sie in der Liste eine Variable aus, um sie dem Parameter zuzuordnen.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt der Liste einen Parameter hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie einen Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
   
 ### <a name="result-set-tab-options"></a>Optionen der Registerkarte Resultset  
@@ -151,10 +151,10 @@ ms.locfileid: "71298355"
  **Ergebnistyp**  
  Gibt an, ob eine einzelne Zeile oder ein vollständiges Resultset zurückgegeben werden soll.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt ein Resultset zur Liste hinzu.  
   
- **Entfernen**  
+ **Remove**  
  Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
 ## <a name="data-mining-query-task-editor-output-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Ausgabe)
   Mithilfe der Registerkarte **Ausgabe** des Dialogfelds **Editor für Data Mining-Abfragetasks** können Sie das Ziel der Vorhersageabfrage angeben.  
@@ -172,7 +172,7 @@ ms.locfileid: "71298355"
  Geben Sie eine Beschreibung für den Data Mining-Abfragetask ein.  
   
 ### <a name="output-tab-options"></a>Optionen der Registerkarte Ausgabe  
- **Verbindung**  
+ **Connection**  
  Wählen Sie einen Verbindungs-Manager aus der Liste aus, oder klicken Sie auf **Neu** , um einen neuen Verbindungs-Manager zu erstellen.  
   
  **Neu**  

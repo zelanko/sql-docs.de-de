@@ -26,10 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf9b8222453cea1bdaecad25256819aa7bcb1366
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67909548"
 ---
 # <a name="set-index-options"></a>Festlegen von Indexoptionen
@@ -65,7 +65,7 @@ In diesem Thema wird beschrieben, wie die Eigenschaften eines Indexes in [!INCLU
 
 Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.
 
-## <a name="SSMSProcedure"></a> Verwendung von SQL Server Management Studio
+## <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
 ### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>So ändern Sie die Eigenschaften eines Indexes im Tabellen-Designer
 
@@ -76,7 +76,7 @@ Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.
 5. Wählen Sie den Index aus, den Sie ändern möchten. Seine Eigenschaften werden im Hauptraster angezeigt.
 6. Ändern Sie die Einstellungen beliebiger oder aller Eigenschaften, um den Index anzupassen.
 7. Klicken Sie auf **Schließen**.
-8. Klicken Sie im Menü **Datei** auf **Speichern**_table_name_.
+8. Klicken Sie im Menü **Datei** auf **Save**_Tabellenname_.
 
 ### <a name="to-modify-the-properties-of-an-index-in-object-explorer"></a>So ändern Sie die Eigenschaften eines Indexes in Objekt-Explorer
 
@@ -87,7 +87,7 @@ Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.
 5. Klicken Sie mit der rechten Maustaste auf den Index, dessen Eigenschaften Sie ändern möchten, und wählen Sie **Eigenschaften**aus.
 6. Wählen Sie unter **Seite auswählen**die Option **Optionen**aus.
 7. Ändern Sie die Einstellungen beliebiger oder aller Eigenschaften, um den Index anzupassen.
-8. Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie im Dialogfeld **Indexeigenschaften –**  **Allgemein** _Allgemein_ aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
+8. Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie auf der Seite **Allgemein** im Dialogfeld **Index Properties –** _Indexname_ (Indexeigenschaften – Indexname) aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](../../relational-databases/indexes/index-properties-f1-help.md).
 
 ## <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 

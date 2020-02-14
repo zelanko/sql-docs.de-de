@@ -22,18 +22,18 @@ ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a308225e96c740680b2df243f35cac216f53e3e9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024300"
 ---
-# <a name="indexcol-transact-sql"></a>INDEX_COL (Transact-SQL)
+# <a name="index_col-transact-sql"></a>INDEX_COL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Gibt den Namen einer indizierten Spalte zurück. Gibt für XML-Indizes NULL zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -69,7 +69,7 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="a-using-indexcol-to-return-an-index-column-name"></a>A. Zurückgeben eines Indexspaltennamens mit INDEX_COL  
+### <a name="a-using-index_col-to-return-an-index-column-name"></a>A. Zurückgeben eines Indexspaltennamens mit INDEX_COL  
  Im folgenden Beispiel werden die Spaltennamen der beiden Schlüsselspalten im Index `PK_SalesOrderDetail_SalesOrderID_LineNumber` zurückgegeben.  
   
 ```  

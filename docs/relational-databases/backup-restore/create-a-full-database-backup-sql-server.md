@@ -16,10 +16,10 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: fe0c9a950221317cb4a9088bae7629fc0c894165
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710323"
 ---
 # <a name="create-a-full-database-backup"></a>Erstellen einer vollständigen Datenbanksicherung
@@ -58,9 +58,9 @@ Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **
 ## <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
 > [!NOTE]
-> Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Sicherungstask angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und ein Ziel für das Skript auswählen.
+> Wenn Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] einen Sicherungstask angeben, können Sie das entsprechende [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript von [!INCLUDE[tsql](../../includes/tsql-md.md)] generieren, indem Sie auf die Schaltfläche **Skript** klicken und ein Ziel für das Skript auswählen.
 
-1. Klicken Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um die Serverstruktur zu erweitern.
+1. Erweitern Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Serverstruktur.
 
 1. Erweitern Sie **Datenbanken**, und wählen Sie eine Benutzerdatenbank aus, oder erweitern Sie **Systemdatenbanken** , und wählen Sie eine Systemdatenbank aus.
 
@@ -136,7 +136,7 @@ GO
 
 In diesem Beispiel wird die `SQLTestDB`-Datenbank auf dem Datenträger am standardmäßigen Sicherungsspeicherort gesichert.
 
-1. Klicken Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um die Serverstruktur zu erweitern.
+1. Erweitern Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Serverstruktur.
 
 1. Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `SQLTestDB`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...** .
 
@@ -150,7 +150,7 @@ In diesem Beispiel wird die `SQLTestDB`-Datenbank auf dem Datenträger am standa
 
 In diesem Beispiel wird die `SQLTestDB`-Datenbank auf dem Datenträger am Speicherort Ihrer Wahl gesichert.
 
-1. Klicken Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um die Serverstruktur zu erweitern.
+1. Erweitern Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Serverstruktur.
 
 1. Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `SQLTestDB`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...** .
 
@@ -172,7 +172,7 @@ In diesem Beispiel wird die `SQLTestDB`-Datenbank auf dem Datenträger am Speich
 
 In diesem Beispiel wird die `SQLTestDB`-Datenbank mit Verschlüsselung am standardmäßigen Sicherungsspeicherort gesichert.
 
-1. Klicken Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um die Serverstruktur zu erweitern.
+1. Erweitern Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Serverstruktur.
 
 1. Erweitern Sie **Datenbanken** und dann **Systemdatenbanken**, klicken Sie mit der rechten Maustaste auf `master`, und klicken Sie dann auf **Neue Abfrage**, um ein Abfragefenster mit einer Verbindung zu Ihrer `SQLTestDB`-Datenbank zu öffnen.
 
@@ -198,19 +198,19 @@ In diesem Beispiel wird die `SQLTestDB`-Datenbank mit Verschlüsselung am standa
 
 1. Wählen Sie in der Dropdownliste „Algorithmus“ den Eintrag **AES 256** aus.
 
-1. Wählen Sie in der Dropdownliste **Zertifikat oder asymmetrischer Schlüssel** `MyCertificate`aus.
+1. Wählen Sie in der Dropdownliste **Zertifikat oder asymmetrischer Schlüssel**`MyCertificate`aus.
 
-1. Wählen Sie **OK**.
+1. Klicken Sie auf **OK**.
 
 ![Verschlüsselte Sicherung](media/create-a-full-database-backup-sql-server/encrypted-backup.png)
 
-#### <a name="d-back-up-to-the-azure-blob-storage-service"></a>D. Sichern im Azure Blob Storage-Dienst
+#### <a name="d-back-up-to-the-azure-blob-storage-service"></a>D: Sichern im Azure Blob Storage-Dienst
 
 Im nachstehenden Beispiel wird eine vollständige Sicherung der `SQLTestDB`-Datenbank in den Azure Blob Storage-Dienst ausgeführt. Dabei wird in diesem Beispiel davon ausgegangen, dass Sie bereits über ein Speicherkonto mit einem Blobcontainer verfügen. In diesem Beispiel wird eine Shared Access Signature für Sie erstellt. Dies ist nicht möglich, wenn der Container bereits über eine vorhandene Shared Access Signatur verfügt.
 
 Wenn Sie noch keinen Azure-Blobcontainer in einem Speicherkonto haben, erstellen Sie zunächst einen, bevor Sie fortfahren. Weitere Informationen finden Sie unter [Erstellen eines universellen Speicherkontos](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=azure-portal) und [Erstellen eines Containers](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal#create-a-container).
 
-1. Klicken Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], um die Serverstruktur zu erweitern.
+1. Erweitern Sie im **Objekt-Explorer** nach dem Herstellen einer Verbindung mit der entsprechenden Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die Serverstruktur.
 
 1. Erweitern Sie die **Datenbank**, klicken Sie mit der rechten Maustaste auf `SQLTestDB`,zeigen Sie auf **Tasks**, und klicken Sie anschließend auf **Sichern...** .
 
@@ -251,7 +251,7 @@ Die grundlegende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Syntax zum Erstell
 
  BACKUP DATABASE *database* TO *backup_device* [ **,** ...*n* ] [ WITH *with_options* [ **,** ...*o* ] ] ;
 
-|Option|und Beschreibung|
+|Option|Beschreibung|
 |------------|-----------------|
 |*database*|Die Datenbank, für die eine Sicherungskopie erstellt werden soll.|
 |*Sicherungsmedium* [ **,** ...*n* ]|Gibt eine Liste an, die zwischen 1 und 64 Sicherungsmedien für den Sicherungsvorgang enthalten kann. Sie können ein physisches Sicherungsmedium angeben oder ein entsprechendes logisches Sicherungsmedium, sofern es bereits definiert wurde. Geben Sie das physische Sicherungsmedium mithilfe der Option DISK oder TAPE an:<br /><br /> { DISK &#124; TAPE } **=** _physical\_backup\_device\_name_<br /><br /> Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.|
@@ -412,7 +412,7 @@ Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $back
 - [Wiederherstellen einer Datenbank an einem neuen Speicherort &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)
 - [Verwenden des Wartungsplanungs-Assistenten](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 
 - [Problembehandlung bei der Sicherung von SQL Server und Wiederherstellungsvorgänge](https://support.microsoft.com/kb/224071)
 - [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)

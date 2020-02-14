@@ -11,10 +11,10 @@ ms.assetid: 5ae69ddf-27c3-467c-9af1-c89ec383f661
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: d1b067ae6f35f9f96f7f0f7207cb6d09456a177f
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71293402"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
@@ -81,7 +81,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
 ## <a name="getting-started-with-the-change-data-capture-components"></a>Erste Schritte mit den Change Data Capture-Komponenten  
  Ein typisches CDC-Paket verarbeitet Änderungen an einer Gruppe von Tabellen. Die folgende Abbildung zeigt den grundlegenden Ablaufsteuerungsteil dieses CDC-Pakettyps. Das Paket wird als Trickle-Feed-Verarbeitungspaket bezeichnet.  
   
- ![Ablaufsteuerung des Trickle-Feed-Verarbeitungspakets](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Ablaufsteuerung des Trickle-Feed-Verarbeitungspakets")  
+ ![Paketablaufsteuerung für Trickle-Feed-Verarbeitung](../../integration-services/data-flow/media/tricklefeedprocessing.gif "Paketablaufsteuerung für Trickle-Feed-Verarbeitung")  
   
  Diese [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Ablaufsteuerung enthält zwei CDC-Steuerungstasks und den Datenflusstask. Der erste Task mit dem Namen **Get CDC Processing Range** legt den LSN-Bereich für die Änderungen fest, die im Datenflusstask mit dem Namen **Process Changes**verarbeitet werden. Dieser Bereich wird auf Grundlage dessen festgelegt, was während der letzten Paketausführung verarbeitet und in einem permanenten Speicher gespeichert wurde.  
   
@@ -89,7 +89,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  Die folgende Abbildung zeigt den Datenfluss für die **Änderungsverarbeitung** und veranschaulicht, wie Änderungen verarbeitet werden.  
   
- ![Datenfluss für die Änderungsverarbeitung](../../integration-services/data-flow/media/processchangesdataflow.gif "Datenfluss für die Änderungsverarbeitung")  
+ ![Datenfluss für Änderungsverarbeitung](../../integration-services/data-flow/media/processchangesdataflow.gif "Datenfluss für Änderungsverarbeitung")  
   
  Die folgenden Schritte werden in der Abbildung dargestellt:  
   
@@ -125,11 +125,11 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  Die folgende Abbildung zeigt ein SSIS-Paket, das die ersten zwei Szenarien unterstützt:  
   
- ![SSIS-Paket, das die ersten zwei Szenarien unterstützt](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS-Paket, das die ersten zwei Szenarien unterstützt")  
+ ![SSIS-Paketbehandlung für die ersten beiden Szenarios](../../integration-services/data-flow/media/scenarioonetwo.gif "SSIS-Paketbehandlung für die ersten beiden Szenarios")  
   
  Die folgende Abbildung zeigt ein SSIS-Paket, das das dritte Szenario unterstützt:  
   
- ![SSIS-Paket, das das dritte Szenario unterstützt](../../integration-services/data-flow/media/scenario3.gif "SSIS-Paket, das das dritte Szenario unterstützt")  
+ ![SSIS-Paketbehandlung, Szenario 3](../../integration-services/data-flow/media/scenario3.gif "SSIS-Paketbehandlung, Szenario 3")  
   
  Nach dem anfänglich geladenen Paket wird ein Trickle-Feed-Updatepaket nach einem Zeitplan wiederholt ausgeführt, um Änderungen zu verarbeiten, sobald sie verfügbar werden.  
   
@@ -173,7 +173,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
 ## <a name="cdc-state"></a>CDC-Status  
  Jeder CDC-Gruppe ist ein Status zugeordnet, der durch eine Zeichenfolge mit einem bestimmten Format dargestellt wird. Weitere Informationen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md). In der folgenden Tabelle sind die möglichen CDC-Statuswerte aufgeführt.  
   
-|Status|und Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0-(INITIAL)|Der Status, bevor alle Pakete in der aktuellen CDC-Gruppe ausgeführt werden. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Der Status beim Start des anfänglich geladenen Pakets. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den **MarkInitialLoadStart** -Vorgang.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../../integration-services/control-flow/cdc-control-task.md).|  
@@ -188,7 +188,7 @@ Nach der Installation der Komponenten wird eine Meldung angezeigt. Klicken Sie a
   
  Wenn Sie am Ende eines anfänglich geladenen Pakets z. B. versuchen, den Status auf ILEND festzulegen, und der Status TFSTART lautet, befindet sich die CDC-Gruppe in einem Fehlerstatus, und das Trickle-Feed-Updatepaket wird nicht ausgeführt (das anfänglich geladene Paket wird ausgeführt).  
   
- ![Statusdiagramm](../../integration-services/data-flow/media/statediagram.gif "Statusdiagramm")  
+ ![Zustandsdiagramm](../../integration-services/data-flow/media/statediagram.gif "Zustandsdiagramm")  
   
  Sobald das anfänglich geladene Paket erfolgreich ausgeführt wurde, wird das Trickle-Feed-Updatepaket nach einem zuvor festgelegten Zeitplan wiederholt ausgeführt, um Änderungen an den Quelltabellen zu verarbeiten. Jede Ausführung des Trickle-Feed-Updatepakets ist eine CDC-Ausführung.  
   

@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a56192c7aa54d9b5fe215b8f793d90d6e814238e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67929050"
 ---
 # <a name="set-deadlock_priority-transact-sql"></a>SET DEADLOCK_PRIORITY (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67929050"
 
   Gibt die relative Bedeutung an, um zu bestimmen, ob die aktuelle Sitzung die Verarbeitung fortsetzt, wenn ein Deadlock mit einer anderen Sitzung vorliegt.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -60,10 +60,10 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
  \<numeric-priority>  
  Ein Bereich ganzer Zahlen (-10 bis 10) zur Darstellung der 21 Stufen der Deadlockpriorität. Über diesen Bereich wird angegeben, dass die aktuelle Sitzung das Deadlockopfer ist, wenn für andere Sitzungen in der Deadlockkette ein höherer Wert für die Deadlockpriorität festgelegt wurde. Die aktuelle Sitzung ist dann nicht das Deadlockopfer, wenn für die anderen Sitzungen eine Deadlockpriorität festgelegt wurde, die niedriger ist als der Wert der aktuellen Sitzung. Außerdem wird angegeben, dass die aktuelle Sitzung als Deadlockopfer in Frage kommt, wenn für andere Sitzungen der gleiche Wert für die Deadlockpriorität festgelegt ist wie für die aktuelle Sitzung. LOW entspricht -5, NORMAL entspricht 0 und HIGH entspricht 5.  
   
- **@** *deadlock_var*  
+ **@** *Deadlock_Variable*  
  Eine Zeichenvariable, die die Deadlockpriorität angibt. Für die Variable muss einer der Werte 'LOW', 'NORMAL' oder 'HIGH' festgelegt werden. Die Variable muss groß genug sein, um die gesamte Zeichenfolge aufzunehmen.  
   
- **@** *deadlock_intvar*  
+ **@** *ganzzahlige_Deadlock_Variable*  
  Eine ganzzahlige Variable, die die Deadlockpriorität angibt. Für die Variable muss ein ganzzahliger Wert innerhalb des Bereichs (-10 bis 10) angegeben werden.  
   
 ## <a name="remarks"></a>Bemerkungen  

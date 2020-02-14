@@ -12,10 +12,10 @@ ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
 ms.openlocfilehash: 8d13d6df17cad82076813c5fee93ed794d3439f2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68892587"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>Upgraden von PowerPivot für SharePoint
@@ -30,7 +30,7 @@ ms.locfileid: "68892587"
   
  **In diesem Artikel:**  
   
- [Erforderliche Komponenten](#bkmk_prereq)  
+ [Voraussetzungen](#bkmk_prereq)  
   
  [Aktualisieren einer vorhandenen SharePoint 2013-Farm](#bkmk_uprgade_sharepoint2013)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68892587"
   
 -   Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) wird parallel zu den Vorgängerversionen installiert. Das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Add-In wird z.B. im Ordner `c:\Program Files\Microsoft SQL Server\130\Tools\PowerPivotTools`installiert.  
   
-##  <a name="bkmk_prereq"></a> Erforderliche Komponenten  
+##  <a name="bkmk_prereq"></a> Voraussetzungen  
  **Berechtigungen**  
   
 -   Sie müssen Farmadministrator sein, um für eine [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Installation ein Upgrade durchzuführen. Sie müssen lokaler Administrator sein, um SQL Server-Setup auszuführen.  
@@ -67,9 +67,9 @@ ms.locfileid: "68892587"
   
  **SQL Server:**  
   
--   Wenn die vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Installation [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]ist, benötigen Sie [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) für ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Wenn die vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Installation [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] ist, benötigen Sie [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Service Pack 2 (SP2) für ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
--   Wenn die vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Installation [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]ist, benötigen Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) für ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
+-   Wenn die vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Installation [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ist, benötigen Sie [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1 (SP1) für ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)].  
   
  **SharePoint 2010:**  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68892587"
 ##  <a name="bkmk_uprgade_sharepoint2013"></a> Aktualisieren einer vorhandenen SharePoint 2013-Farm  
  Gehen Sie wie folgt vor, um ein Upgrade für eine [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung in SharePoint 2013 auszuführen:  
   
- ![upgrade powerpivot für sharepoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "powerpivot for sharepoint 2013 upgrade")  
+ ![Upgrade von PowerPivot für SharePoint 2013](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2013.png "Upgrade von PowerPivot für SharePoint 2013")  
   
 1.  Führen Sie [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup auf Back-End-Servern aus, auf denen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] im SharePoint-Modus ausgeführt wird. Wenn der Server mehrere Instanzen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]hostet, führen Sie mindestens für die **POWERPIVOT** -Instanz ein Upgrade aus. In der folgenden Liste sind die Schritte des Setup-Assistenten zusammengefasst, die bei einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Upgrade ausgeführt werden:  
   
@@ -94,11 +94,11 @@ ms.locfileid: "68892587"
   
 3.  Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint-Add-In (**spPowerPivot.msi**) auf jedem Server in der SharePoint 2013-Farm aus, um die Datenanbieter zu installieren. Eine Ausnahme bilden Server, auf denen der SQL Server-Setup-Assistent ausgeführt wurde, da die Datenanbieter dadurch ebenfalls aktualisiert werden. Weitere Informationen finden Sie unter [Herunterladen von Microsoft SQL Server 2014 Power Pivot für Microsoft SharePoint 2013](https://www.microsoft.com/download/details.aspx?id=42300) und [Installieren oder Deinstallieren von Power Pivot für SharePoint-Add-Ins (SharePoint 2013)](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013).  
   
-4.  **Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“** für einen der SharePoint-Anwendungsserver aus, um die SharePoint-Farm mit den aktualisierten Lösungsdateien zu konfigurieren, die vom Add-In installiert werden. Die SharePoint-Zentraladministration kann für diesen Schritt nicht verwendet werden. Weitere Informationen finden Sie unter den folgenden Links:  
+4.  **Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013“** für einen der SharePoint-Anwendungsserver aus, um die SharePoint-Farm mit den aktualisierten Lösungsdateien zu konfigurieren, die vom Add-In installiert werden. Die SharePoint-Zentraladministration kann für diesen Schritt nicht verwendet werden. Weitere Informationen finden Sie unter  
   
     1.  Geben Sie im Windows-Startbildschirm **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** ein, und klicken Sie in den Suchergebnissen auf **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013**. Beachten Sie, dass bei der Suche beide Versionen des Konfigurationstools zurückgegeben werden können.  
   
-         ![zwei powerpivot-konfigurationstools](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "two powerpivot configuration tools")  
+         ![Zwei PowerPivot-Konfigurationstools](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/as-powerpivot-configtools-bothicons.gif "Zwei PowerPivot-Konfigurationstools")  
   
          oder  
   
@@ -127,7 +127,7 @@ ms.locfileid: "68892587"
   
     9. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten mit folgenden Meldungen vergleichbare **Fehler** auf: „**Die Daten konnten nicht aktualisiert werden**“ oder „**Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang**.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
   
-     Weitere Informationen finden Sie unter den folgenden Links:  
+     Weitere Informationen finden Sie unter  
   
     -   [Power Pivot-Konfigurationstools](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "68892587"
 ##  <a name="bkmk_uprgade_sharepoint2010"></a> Aktualisieren einer vorhandenen SharePoint 2010-Farm  
  Um ein Upgrade für eine [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] -Bereitstellung in SharePoint 2010 auszuführen, gehen Sie wie folgt vor:  
   
- ![upgradepowerpivot für sharepoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "powerpivot for sharepoint 2010 upgrade")  
+ ![Upgrade von PowerPivot für SharePoint 2010](../../database-engine/install-windows/media/as-powepivot-upgrade-flow-sharepoint2010.png "Upgrade von PowerPivot für SharePoint 2010")  
   
 1.  Laden Sie [Service Pack 2 für Microsoft SharePoint 2010](https://www.microsoft.com/download/details.aspx?id=39672) herunter, und wenden Sie es auf alle Server in der Farm an. Überprüfen Sie, ob die Installation von Share Point SP2 erfolgreich abgeschlossen wurde. Öffnen Sie in der Zentraladministration auf der Seite Upgrade und Migration die Seite Produkt- und Patchinstallationsstatus überprüfen, um Statusmeldungen zu SP2 anzuzeigen.  
   
@@ -201,13 +201,13 @@ ms.locfileid: "68892587"
   
     9. Klicken Sie zum Fortsetzen des Vorgangs auf **Ja** .  
   
-    10. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten z.B. folgende Fehler auf: „Die Daten konnten nicht aktualisiert werden.“ oder „Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Wiederholen Sie den Vorgang.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
+    10. Die Aktualisierung von Lösungen und Funktionen in der Farm kann mehrere Minuten dauern. Während dieser Zeit treten bei Verbindungsanforderungen für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Daten z.B. folgende Fehler auf: „Die Daten konnten nicht aktualisiert werden.“ oder „Fehler bei dem Versuch, die angeforderte Aktion auszuführen. Versuchen Sie es erneut.“ Nach dem Upgrade ist der Server verfügbar, und diese Fehler treten nicht mehr auf.  
   
 8.  **Wiederholen Sie den Vorgang** für jeden SQL Server Analysis Services-Dienst ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) in der Farm: 1) Führen Sie SQL Server-Setup aus, 2) Führen Sie das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Konfigurationstool aus.  
   
 9. Überprüfen Sie, ob das Upgrade erfolgreich ausgeführt wurde, indem Sie die Schritte nach dem Upgrade durchführen und die Version der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server in der Farm überprüfen. Weitere Informationen finden Sie unter [Überprüfungstasks nach dem Upgrade](#verify) in diesem Artikel und im folgenden Abschnitt.  
   
-10. **Beheben von Fehlern**  
+10. **Problembehandlung**  
   
      Sie können Fehlerinformationen für jede Aktion im Bereich "Parameter" anzeigen.  
   
@@ -346,7 +346,7 @@ Get-PowerPivotSystemService
 ##  <a name="verify"></a> Überprüfungstasks nach dem Upgrade  
  Führen Sie nach dem Abschließen des Upgrades die folgenden Schritte durch, um zu prüfen, ob der Server funktionstüchtig ist.  
   
-|Task|Link|  
+|Aufgabe|Link|  
 |----------|----------|  
 |Überprüfen Sie, ob der Dienst auf allen Computern mit [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint ausgeführt wird.|[Starten oder Beenden eines Power Pivot für SharePoint-Servers](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server)|  
 |Überprüfen Sie die Funktionsaktivierung auf der Website-Sammlungsebene.|[Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca)|  

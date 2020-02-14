@@ -19,10 +19,10 @@ ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/17/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68300436"
 ---
 # <a name="database-snapshots-sql-server"></a>Datenbank-Momentaufnahmen (SQL Server)
@@ -109,7 +109,7 @@ Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [
 ##  <a name="LimitationsRequirements"></a> Voraussetzungen und Einschränkungen bei Datenbankmomentaufnahmen  
  **In diesem Abschnitt:**  
   
--   [Erforderliche Komponenten](#Prerequisites)  
+-   [Voraussetzungen](#Prerequisites)  
   
 -   [Einschränkungen für die Quelldatenbank](#LimitsOnSourceDb)  
   
@@ -119,7 +119,7 @@ Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [
   
 -   [Datenbankmomentaufnahmen mit Offlinedateigruppen](#OfflineFGs)  
   
-###  <a name="Prerequisites"></a> Erforderliche Komponenten  
+###  <a name="Prerequisites"></a> Voraussetzungen  
  Die Quelldatenbank, die ein Wiederherstellungsmodell verwenden kann, muss die folgenden Voraussetzungen erfüllen:  
   
 -   Die Serverinstanz muss auf einer Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, die Datenbankmomentaufnahmen unterstützt. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -136,7 +136,7 @@ Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [
   
 -   Die Quelldatenbank kann nicht als skalierbare freigegebene Datenbank konfiguriert werden.  
 
--   Die Quelldatenbank darf keine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten.  Weitere Informationen finden Sie unter [Nicht unterstützte SQL Server-Funktionen für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
+-   Die Quelldatenbank darf keine MEMORY_OPTIMIZED_DATA-Dateigruppe enthalten.  Weitere Informationen finden Sie unter [Nicht unterstützte SQL Server-Features für In-Memory OLTP](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).
   
 > [!NOTE]  
 >  Alle Wiederherstellungsmodelle unterstützen Datenbankmomentaufnahmen.  
@@ -197,7 +197,7 @@ Eine Datenbankmomentaufnahme ist eine schreibgeschützte statische Sicht einer [
     > [!NOTE]  
     >  In einer SELECT-Anweisung, die für eine Datenbankmomentaufnahme ausgeführt wird, darf keine FILESTREAM-Spalte angegeben werden, da andernfalls die folgende Fehlermeldung zurückgegeben wird: `Could not continue scan with NOLOCK due to data movement.`  
   
--   Wenn Statistiken zu einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind, erstellt und verwaltet [!INCLUDE[ssDE](../../includes/ssde-md.md)] temporäre Statistiken in tempdb. Weitere Informationen finden Sie unter [Statistics](../../relational-databases/statistics/statistics.md).  
+-   Wenn Statistiken zu einer schreibgeschützten Momentaufnahme fehlen oder veraltet sind, erstellt und verwaltet [!INCLUDE[ssDE](../../includes/ssde-md.md)] temporäre Statistiken in tempdb. Weitere Informationen finden Sie unter [Verwalten von Statistiken für Tabellen in SQL Data Warehouse](../../relational-databases/statistics/statistics.md).  
   
 ###  <a name="DiskSpace"></a> Anforderungen an den Datenträgerspeicher  
  Datenbankmomentaufnahmen belegen Datenträgerspeicher. Wenn für eine Datenbankmomentaufnahme nicht genügend Speicherplatz vorhanden ist, wird er als fehlerverdächtig gekennzeichnet und muss gelöscht werden. (Auf die Quelldatenbank hat dies jedoch keine Auswirkungen. Aktionen in ihr werden normal fortgesetzt.) Im Vergleich zu einer vollständigen Kopie einer Datenbank sind Momentaufnahmen jedoch äußerst speicherplatzeffizient. Bei einer Momentaufnahme ist nur genügend Speicher für die Seiten erforderlich, die während seiner Lebensdauer geändert werden. Im Allgemeinen werden Momentaufnahmen nur für eine begrenzte Zeit gespeichert. Daher spielt ihre Größe keine wesentliche Rolle.  

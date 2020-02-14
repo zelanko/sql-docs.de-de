@@ -14,19 +14,19 @@ ms.assetid: bed788b0-a68e-4fb1-b001-03bf09ff868e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 91d3a7b23602b631d51904fa5e2b68821725d77e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67987175"
 ---
 # <a name="sql-server-clr-object"></a>SQL Server, CLR-Objekt
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Das **SQLServer:CLR** -Objekt liefert Indikatoren für die Überwachung der CLR-Ausführung (Common Language Runtime) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Das Objekt **SQLServer:CLR** bietet Leistungsindikatoren zum Überwachen der CLR-Ausführung (Common Language Runtime) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- In der folgenden Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **CLR** -Indikatoren beschrieben.  
+ In der folgenden Tabelle werden die **CLR**-Leistungsindikatoren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben.  
   
-|CLR-Indikatoren|und Beschreibung|  
+|CLR-Indikatoren|Beschreibung|  
 |------------------|-----------------|  
 |**CLR Execution**|Gesamtausführungszeit in CLR ( Mikrosekunden ).|  
   

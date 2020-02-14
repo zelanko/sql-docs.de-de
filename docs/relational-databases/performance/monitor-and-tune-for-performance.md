@@ -30,10 +30,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68020248"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Überwachen und Optimieren der Leistung
@@ -43,7 +43,7 @@ ms.locfileid: "68020248"
  Durch die fortlaufende Auswertung der Datenbankleistung können Sie die Antwortzeiten minimieren und den Durchsatz maximieren, um so die optimale Leistung zu erzielen. Die effiziente Netzwerklast, Datenträger-E/A und CPU-Nutzung sind der Schlüssel zu Höchstleistungen. Hierzu müssen Sie die Anwendungsanforderungen gründlich analysieren, die logische und physische Struktur der Daten kennen, die Datenbanknutzung bewerten und Kompromisse zwischen gegensätzlichen Nutzungen, wie etwa OLTP (Online Transaction Processing) im Gegensatz zur Entscheidungsunterstützung, aushandeln.  
   
 ## <a name="monitoring-and-tuning-databases-for-performance"></a>Überwachen und Optimieren von Datenbanken für die Leistung  
- Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Microsoft Windows stellen Hilfsprogramme bereit, mit denen der aktuelle Zustand der Datenbank angezeigt und die Leistung unter veränderten Bedingungen nachverfolgt werden kann. Es gibt eine Reihe von Tools und Methoden, mit denen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]überwachen können. Überwachen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht Ihnen Folgendes:  
+ Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Microsoft Windows stellen Hilfsprogramme bereit, mit denen der aktuelle Zustand der Datenbank angezeigt und die Leistung unter veränderten Bedingungen nachverfolgt werden kann. Es gibt eine Reihe von Tools und Methoden, mit denen Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwachen können. Überwachen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht Ihnen Folgendes:  
   
 -   Ermitteln, ob die Leistung verbessert werden kann. Indem Sie beispielsweise die Antwortzeiten für häufig verwendete Abfragen überwachen, können Sie ermitteln, ob Änderungen an der Abfrage oder den Indizes in den Tabellen erforderlich sind.  
   
@@ -66,7 +66,7 @@ Mit steigender Benutzerzahl nimmt auch der Wettstreit um die Ressourcen eines Se
   
 ## <a name="monitoring-and-performance-tuning-tasks"></a>Überwachungs- und Leistungsoptimierungstasks  
   
-|Thema| Task|  
+|Thema| Aufgabe|  
 |-----------|----------------------|  
 |[Überwachen von SQL Server-Komponenten](../../relational-databases/performance/monitor-sql-server-components.md)|Erforderliche Schritte zum Überwachen beliebiger SQL Server-Komponenten, z.B. Aktivitätsmonitor, erweiterte Ereignisse und dynamische Verwaltungssichten und -funktionen usw.|  
 |[Tools für die Leistungsüberwachung und -optimierung](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)|Listet die Überwachungs- und Optimierungstools auf, die mit SQL Server verfügbar sind, z.B. Live-Abfragestatistiken und den Datenbankoptimierungsratgeber.|  
@@ -80,7 +80,7 @@ Mit steigender Benutzerzahl nimmt auch der Wettstreit um die Ressourcen eines Se
 |[Überwachen der Ressourcenverwendung](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Verenden des Systemmonitors (auch als „perfmon“ bezeichnet) zum Messen der Leistung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter Verwendung von Leistungsindikatoren.|  
 
   
-## <a name="see-also"></a>Siehe auch  
+## <a name="see-also"></a>Weitere Informationen  
  [Automatisierte Verwaltung in einem Unternehmen](../../ssms/agent/automated-administration-across-an-enterprise.md)    
  [Vergleichen und Analysieren von Ausführungsplänen](../../relational-databases/performance/compare-and-analyze-execution-plans.md)    
  [Anzeigen und Speichern von Ausführungsplänen](../../relational-databases/performance/display-and-save-execution-plans.md)    

@@ -20,10 +20,10 @@ ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 28393d15ade12562dbcaa4af457bf0de0e51948b
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71295024"
 ---
 # <a name="view-package-objects"></a>Anzeigen von Paketobjekten
@@ -41,7 +41,7 @@ ms.locfileid: "71295024"
   
  Das folgende Diagramm zeigt eine Strukturansicht eines einfachen Pakets.  
   
- ![Screenshot der Registerkarte „Package-Explorer“](../integration-services/media/packageexplorer.gif "Screenshot of the Package Explorer tab")  
+ ![Screenshot der Registerkarte „Paket-Explorer“](../integration-services/media/packageexplorer.gif "Screenshot der Registerkarte „Paket-Explorer“")  
   
 ## <a name="view-the-package-structure-and-content"></a>Anzeigen der Paketstruktur und des Paketinhalts  
   
@@ -63,7 +63,7 @@ ms.locfileid: "71295024"
  
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Tasks](../integration-services/control-flow/integration-services-tasks.md)   
- [SQL Server Integration Services-Container](../integration-services/control-flow/integration-services-containers.md)   
+ [Integration Services-Container](../integration-services/control-flow/integration-services-containers.md)   
  [Rangfolgeneinschränkungen](../integration-services/control-flow/precedence-constraints.md)   
  [Integration Services-Variablen &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md)   

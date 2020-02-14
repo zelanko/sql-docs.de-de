@@ -14,10 +14,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b01305a689f7dbe7937560350200d3e81a1785dd
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72909819"
 ---
 # <a name="query-store-usage-scenarios"></a>Verwendungsszenarien für den Abfragespeicher
@@ -26,10 +26,10 @@ ms.locfileid: "72909819"
   Der Abfragespeicher kann in einer großen Bandbreite von Szenarien eingesetzt werden, wenn das Nachverfolgen und Sicherstellen einer vorhersagbaren Arbeitsleistung entscheidend ist. Diese Beispiele dienen zur Veranschaulichung:  
   
 -   Bestimmen und Reparieren von Abfragen mit Planauswahlregression  
--   Erkennen und Optimieren der Abfragen mit dem höchsten Ressourcenverbrauch  
+-   Ermitteln und Optimieren von Abfragen mit dem höchsten Ressourcenverbrauch  
 -   A/B-Tests  
 -   Aufrechterhalten einer stabilen Leistung während des Upgrades auf das neuere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
--   Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
+-   Erkennen und Verbessern von Ad-hoc-Workloads  
   
 ## <a name="pinpoint-and-fix-queries-with-plan-choice-regressions"></a>Bestimmen und Reparieren von Abfragen mit Planauswahlregression  
  Im Rahmen seiner normalen Abfrageausführung kann der Abfrageoptimierer entscheiden, einen anderen Plan zu wählen, da sich wichtige Eingangsparameter geändert haben: die Datenkardinalität hat sich geändert, es wurden Indizes erstellt, geändert oder gelöscht, Statistikinformationen wurden aktualisiert usw. Meistens funktioniert der neue Plan besser oder in etwa gleich gut wie der zuvor verwendete. Es gibt jedoch Fälle, in denen der neue Plan deutlich schlechter funktioniert – diese Situation wird als Planauswahl-Änderungsregression bezeichnet. Vor der Einführung des Abfragespeichers war das ein schwer zu erkennendes und behebendes Problem, da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] keinen integrierten Datenspeicher bereitstellte, in dem Benutzer nach Ausführungsplänen suchen konnten, die im Lauf der Zeit verwendet worden waren.  
@@ -46,7 +46,7 @@ ms.locfileid: "72909819"
   
  Eine detaillierte Beschreibung des Szenarios finden Sie im Blog [Query Store: A flight data recorder for your database (Abfragespeicher: Ein Flugdatenschreiber für Ihre Datenbank)](https://azure.microsoft.com/blog/query-store-a-flight-data-recorder-for-your-database/).  
   
-## <a name="identify-and-tune-top-resource-consuming-queries"></a>Erkennen und Optimieren der Abfragen mit dem höchsten Ressourcenverbrauch  
+## <a name="identify-and-tune-top-resource-consuming-queries"></a>Ermitteln und Optimieren von Abfragen mit dem höchsten Ressourcenverbrauch  
  Zwar können im Rahmen Ihrer Arbeitsauslastung Tausende Abfragen generiert werden, normalerweise verwendet jedoch nur eine Handvoll den größten Teil der Systemressourcen und erfordert daher Ihre Aufmerksamkeit. Unter den Abfragen mit dem größten Ressourcenverbrauch finden sich üblicherweise zurückgestellte Abfragen oder solche, die mit weiterer Optimierung verbessert werden können.  
   
  Die Untersuchung lässt sich am einfachsten durch Öffnen von **Abfragen mit dem höchsten Ressourcenverbrauch** in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]beginnen. Die Benutzeroberfläche ist in drei Bereiche unterteilt: Ein Histogramm, das die Abfragen mit dem höchsten Ressourcenverbrauch darstellt (links), eine Planzusammenfassung für die ausgewählte Abfrage (rechts) und einen visuellen Abfrageplan für den ausgewählten Plan (unten). Klicken Sie auf die Schaltfläche **Konfigurieren** , um die Anzahl der zu analysierenden Abfragen und das untersuchte Zeitintervall zu steuern. Darüber hinaus können Sie unter verschiedenen Dimensionen des Ressourcenverbrauchs (Dauer, CPU, Arbeitsspeicher, E/A, Anzahl der Ausführungen) und der Baseline (Mittel, Min, Max, Summe, Standardabweichung) wählen.  
@@ -61,7 +61,7 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
   
 2.  Überprüfen Sie, ob der Optimierer Hinweise auf fehlende Indizes im XML-Plan gibt. Wenn das der Fall ist, erstellen Sie den fehlenden Index, und verwenden Sie den Abfragespeicher, um die Abfrageleistung nach erfolgter Indexerstellung zu bewerten  
   
-3.  Vergewissern Sie sich, dass die Statistikinformationen für die von der Abfrage verwendeten zugrundeliegenden Tabellen auf dem aktuellen Stand sind.  
+3.  Vergewissern Sie sich, dass die Statistiken für die zugrunde liegenden Tabellen aktuell sind, die von der Abfrage verwendet werden.  
   
 4.  Überprüfen Sie, ob die von der Abfrage verwendeten Indizes defragmentiert sind.  
   
@@ -74,7 +74,7 @@ Wenn Sie eine Abfrage mit nicht optimaler Leistung identifiziert haben, richtet 
   
 -   Hinzufügen neuer Hardware auf dem Server.  
   
--   Erstellen von fehlenden Indizes für Tabellen, auf die aufwändige Abfragen verweisen.  
+-   Erstellen von fehlenden Indizes in Tabellen, auf die von aufwendigen Abfragen verwiesen wird  
   
 -   Anwenden einer Filterrichtlinie für Sicherheit auf Zeilenebene. Weitere Informationen finden Sie unter [Optimieren von Sicherheit auf Zeilenebene mithilfe des Abfragespeichers](https://blogs.msdn.com/b/sqlsecurity/archive/2015/07/21/optimizing-rls-performance-with-the-query-store.aspx).  
   
@@ -127,15 +127,15 @@ Seit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] sind alle Änderungen des
   
 5.  Verwenden Sie den Abfragespeicher für die Analyse und Reparaturen mithilfe zurückgestellter Abfragen: Im Allgemeinen sollten die neuen Änderungen des Abfrageoptimierers bessere Pläne erzeugen. Jedoch verfügen Sie in Form des Abfragespeichers über eine einfache Möglichkeit, Planauswahlregressionen durchzuführen und falsche Entscheidungen mithilfe des Mechanismus zum Durchsetzen von Plänen zu korrigieren. Ab [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] wird bei Verwendung der [Automatischen Plankorrektur](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) dieser Schritt automatisch durchgeführt.  
 
-    A.  Erzwingen Sie für alle Fälle, in denen Regressionen auftreten, den zuvor bekannten geeigneten Plan im Abfragespeicher.  
+    a.  Erzwingen Sie für alle Fälle, in denen Regressionen auftreten, den zuvor bekannten geeigneten Plan im Abfragespeicher.  
   
-    B.  Falls Abfragepläne nicht erzwungen werden können oder die Leistung weiterhin unzureichend ist, ziehen Sie in Betracht, die vorherige Einstellung des [Datenbank-Kompatibilitätsgrads](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) wiederherzustellen und sich anschließend an den Microsoft-Kundensupport zu wenden.  
+    b.  Falls Abfragepläne nicht erzwungen werden können oder die Leistung weiterhin unzureichend ist, ziehen Sie in Betracht, die vorherige Einstellung des [Datenbank-Kompatibilitätsgrads](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) wiederherzustellen und sich anschließend an den Microsoft-Kundensupport zu wenden.  
     
 > [!TIP]
-> Verwenden Sie die [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Aufgabe *Datenbank aktualisieren*, um den [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) der Datenbank zu aktualisieren. Ausführliche Informationen finden Sie unter [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
+> Verwenden Sie den [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Task *Datenbankupgrade*, um ein Upgrade für den [Datenbank-Kompatibilitätsgrad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades) der Datenbank durchzuführen. Ausführliche Informationen finden Sie unter [Upgraden von Datenbanken mit dem Abfrageoptimierungs-Assistenten](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
   
-## <a name="identify-and-improve-ad-hoc-workloads"></a>Erkennen und Verbessern von Ad-hoc-Arbeitsauslastungen  
-Einige Arbeitsauslastungen weisen keine dominierenden Abfragen auf, die sich optimieren lassen, um die Gesamtleistung der Anwendung zu verbessern. Diese Workloads zeichnen sich normalerweise durch eine relativ große Anzahl verschiedener Abfragen aus, von denen jede einen Teil der Systemressourcen beansprucht. Aufgrund ihrer Einzigartigkeit werden solche Abfragen nur sehr selten ausgeführt (normalerweise nur einmal, daher die Bezeichnung „ad-hoc“), daher ist ihr Ressourcenverbrauch zur Laufzeit nicht kritisch. Da andererseits die Anwendung unterm Strich ständig neue Abfragen generiert, wird ein erheblicher Teil der Systemressourcen für die Kompilierung von Abfragen aufgewendet, was nicht optimal ist. Das ist auch für den Abfragespeicher keine ideale Situation, da die große Anzahl an Abfragen und Plänen den vorgesehenen Speicherplatz schnell erschöpft und der Abfragespeicher so sehr bald in den schreibgeschützten Modus versetzt werden muss. Wenn Sie die **Richtlinie zur größenbasierten Bereinigung** ([dringend empfohlen](best-practice-with-the-query-store.md) , um den Abfragespeicher stets betriebsbereit zu halten) aktiviert haben, bereinigen Hintergrundprozesse während des größten Teils der Zeit die Strukturen des Abfragespeichers, was ebenfalls in erheblichem Maß Systemressourcen verbraucht.  
+## <a name="identify-and-improve-ad-hoc-workloads"></a>Erkennen und Verbessern von Ad-hoc-Workloads  
+Einige Workloads weisen keine besonders häufig ausgeführten Abfragen auf, die Sie optimieren können, um die Gesamtleistung einer Anwendung zu verbessern. Diese Workloads zeichnen sich normalerweise durch eine relativ große Anzahl verschiedener Abfragen aus, von denen jede einen Teil der Systemressourcen beansprucht. Aufgrund ihrer Einzigartigkeit werden solche Abfragen nur sehr selten ausgeführt (normalerweise nur einmal, daher die Bezeichnung „ad-hoc“), daher ist ihr Ressourcenverbrauch zur Laufzeit nicht kritisch. Da andererseits die Anwendung unterm Strich ständig neue Abfragen generiert, wird ein erheblicher Teil der Systemressourcen für die Kompilierung von Abfragen aufgewendet, was nicht optimal ist. Das ist auch für den Abfragespeicher keine ideale Situation, da die große Anzahl an Abfragen und Plänen den vorgesehenen Speicherplatz schnell erschöpft und der Abfragespeicher so sehr bald in den schreibgeschützten Modus versetzt werden muss. Wenn Sie die **Richtlinie zur größenbasierten Bereinigung** ([dringend empfohlen](best-practice-with-the-query-store.md) , um den Abfragespeicher stets betriebsbereit zu halten) aktiviert haben, bereinigen Hintergrundprozesse während des größten Teils der Zeit die Strukturen des Abfragespeichers, was ebenfalls in erheblichem Maß Systemressourcen verbraucht.  
   
  Die Ansicht **Abfragen mit dem höchstem Ressourcenverbrauch** gibt Ihnen einen ersten Hinweis auf die Ad-hoc-Natur Ihrer Arbeitsauslastung:  
   

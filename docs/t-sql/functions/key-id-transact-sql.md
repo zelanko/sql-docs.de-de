@@ -21,10 +21,10 @@ ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 3ccf2da9a32cb932dc206d702d6303ffa85e0664
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68109340"
 ---
 # <a name="key_id-transact-sql"></a>KEY_ID (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "68109340"
 
   Gibt die ID eines symmetrischen Schlüssels in der aktuellen Datenbank zurück.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -42,7 +42,7 @@ Key_ID ( 'Key_Name' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- **'** *Key_Name* **'**  
+ **'** *Schlüsselname* **'**  
  Der Name eines symmetrischen Schlüssels in der Datenbank.  
   
 ## <a name="return-types"></a>Rückgabetypen  

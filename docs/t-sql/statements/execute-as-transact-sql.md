@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: 9d6abc08f6ba46792d92887ca22f1a37b48e05cc
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.openlocfilehash: ee3854c45678cb29989849a6ee8b28e821b6d830
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "73981002"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76287837"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "73981002"
   
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73981002"
 ```  
   
 ## <a name="arguments"></a>Argumente  
- Anmeldung  
+ LOGIN  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, dass es sich bei dem Ausführungskontext, dessen Identität übernommen werden soll, um einen Anmeldenamen handelt. Der Bereich des Identitätswechsels liegt auf Serverebene.  
@@ -63,7 +63,7 @@ ms.locfileid: "73981002"
 > [!NOTE]  
 >  Diese Option ist in einer eigenständigen Datenbank, in SQL-Datenbank oder in SQL Data Warehouse nicht verfügbar.  
   
- Benutzer  
+ USER  
  Gibt an, dass der Kontext, der als Identität angenommen werden soll, ein Benutzer in der aktuellen Datenbank ist. Der Identitätswechselbereich ist auf die aktuelle Datenbank beschränkt. Bei einem Kontextwechsel zu einem Datenbankbenutzer werden die Berechtigungen auf Serverebene dieses Benutzers nicht geerbt.  
   
 > [!IMPORTANT]  
@@ -96,7 +96,7 @@ Bei Verwendung außerhalb eines Moduls weist die Anweisung keine Aktion auf.
  > [!NOTE]  
 >  Diese Option ist in SQL Data Warehouse nicht verfügbar.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Die Änderung des Ausführungskontexts bleibt wirksam, bis eine der folgenden Bedingungen auftritt:  
   
 -   Eine andere EXECUTE AS-Anweisung wird ausgeführt.  
@@ -120,7 +120,7 @@ Sie können einen Ausführungskontextstapel erstellen, indem Sie die EXECUTE AS-
   
 Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorhanden), und der Benutzer nicht mit **WITHOUT LOGIN** erstellt wurde, erzeugt **EXECUTE AS** einen Fehler für den Benutzer.  
   
-## <a name="best-practice"></a>Bewährte Methoden  
+## <a name="best-practice"></a>Bewährte Methode  
  Geben Sie einen Anmelde- oder Benutzernamen an, der die geringsten Privilegien besitzt, die zum Ausführen der Vorgänge in der Sitzung erforderlich sind. Geben Sie z. B. keinen Anmeldenamen mit Berechtigungen auf Serverebene an, wenn nur Berechtigungen auf Datenbankebene erforderlich sind. Oder geben Sie nur dann ein Datenbankbesitzerkonto an, wenn diese Berechtigungen tatsächlich erforderlich sind.  
   
 > [!CAUTION]  
@@ -129,9 +129,9 @@ Wenn der Benutzer verwaist ist (der zugeordnete Anmeldename ist nicht mehr vorha
 ## <a name="using-with-no-revert"></a>Verwenden von WITH NO REVERT  
  Wenn die EXECUTE AS-Anweisung die optionale WITH NO REVERT-Klausel enthält, kann der Ausführungskontext einer Sitzung nicht mithilfe von REVERT oder durch Ausführen einer anderen EXECUTE AS-Anweisung zurückgesetzt werden. Der von der Anweisung festgelegte Kontext bleibt aktiv, bis die Sitzung gelöscht wird.  
   
- Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wird, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *@varbinary_variable* -Wert enthält.  
+ Wenn die WITH NO REVERT COOKIE = @*varbinary_variable*-Klausel angegeben wird, übergibt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] den Cookiewert an @*varbinary_variable*. Der von dieser Anweisung festgelegte Ausführungskontext kann nur auf einen vorherigen Kontext zurückgesetzt werden, wenn die aufrufende REVERT WITH COOKIE = @*varbinary_variable*-Anweisung den gleichen *\@varbinary_variable*-Wert enthält.  
   
- Diese Option ist in einer Umgebung nützlich, in der Verbindungspools verwendet werden. Mithilfe von Verbindungspools wird eine Gruppe von Datenbankverbindungen verwaltet, die von Anwendungen auf einem Anwendungsserver wiederverwendet werden können. Da nur der Aufrufer der EXECUTE AS-Anweisung den an *@varbinary_variable* übergebenen Wert kennt, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext von keinem anderen Benutzer geändert werden kann.  
+ Diese Option ist in einer Umgebung nützlich, in der Verbindungspools verwendet werden. Mithilfe von Verbindungspools wird eine Gruppe von Datenbankverbindungen verwaltet, die von Anwendungen auf einem Anwendungsserver wiederverwendet werden können. Da nur der Aufrufer der EXECUTE AS-Anweisung den an *\@varbinary_variable* übergebenen Wert kennt, kann der Aufrufer sicherstellen, dass der eingerichtete Ausführungskontext von keinem anderen Benutzer geändert werden kann.  
   
 ## <a name="determining-the-original-login"></a>Bestimmen des ursprünglichen Anmeldenamens  
  Verwenden Sie die [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md)-Funktion, um den Anmeldenamen zurückzugeben, der die Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz hergestellt hat. Mit dieser Funktion können Sie die Identität des ursprünglichen Anmeldenamens in Sitzungen zurückgeben, in denen zahlreiche explizite oder implizite Kontextwechsel vorkommen.  

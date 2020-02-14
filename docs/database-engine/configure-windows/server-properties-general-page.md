@@ -15,15 +15,15 @@ ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: dbc306b3ec8d23c4ddc7aec6477c407f21e345a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025484"
 ---
 # <a name="server-properties---general-page"></a>Servereigenschaften (Seite „Allgemein“)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Auf dieser Seite können Sie schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation anzeigen.  
+  Auf dieser Seite können Sie sich schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation anzeigen lassen.  
   
 ## <a name="property-grid"></a>Eigenschaftsraster  
  Zeigt die Eigenschaften des ausgewählten Servers an, z. B. Servername, Betriebssystem des Servers oder Anzahl der Prozessoren.  
@@ -31,13 +31,13 @@ ms.locfileid: "68025484"
  **Name**  
  Zeigt den Namen der Serverinstanz an.  
   
- **Product**  
+ **Produkt**  
  Zeigt die aktuell ausgeführte Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an.  
   
  **Betriebssystem**  
  Zeigt das aktuell ausgeführte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Betriebssystem an.  
   
- **Platform**  
+ **Plattform**  
  Beschreibt das Betriebssystem und die Hardware für die Ausführung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **Version**  
@@ -46,7 +46,7 @@ ms.locfileid: "68025484"
  **Sprache**  
  Zeigt die Sprache an, die von der ausgeführten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt wird.  
   
- **Speicher**  
+ **Memory**  
  Zeigt den Umfang des RAM auf dem Server an.  
   
  **Prozessoren**  

@@ -15,10 +15,10 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: e70998bed1ed0f2681009622cfb086baa79dcf02
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73982014"
 ---
 # <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
@@ -26,7 +26,7 @@ ms.locfileid: "73982014"
 
   Gibt eine Gruppe von Optionen an, die auf einen Index angewendet werden können, der Teil einer mit [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) erstellten Einschränkungsdefinition ist.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73982014"
   
  Gibt die Auffüllung von Indizes an. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Der Prozentsatz des mit FILLFACTOR angegebenen freien Speicherplatzes wird für die Zwischenebenenseiten des Indexes angewendet.  
   
  OFF oder *fillfactor* ist nicht angegeben  
@@ -89,7 +89,7 @@ ms.locfileid: "73982014"
  IGNORE_DUP_KEY **=** { ON | **OFF** }  
  Gibt den Antworttyp an, wenn ein Einfügevorgang versucht, doppelte Schlüsselwerte in einen eindeutigen Index einzufügen. Die IGNORE_DUP_KEY-Option gilt nur für Einfügevorgänge nach dem Erstellen oder Neuerstellen des Index. Beim Ausführen von [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) oder [UPDATE](../../t-sql/queries/update-transact-sql.md) hat die Option keine Auswirkungen. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Eine Warnmeldung wird ausgegeben, wenn doppelte Schlüsselwerte in einen eindeutigen Index eingefügt werden. Es schlagen nur die Zeilen fehl, die gegen die Eindeutigkeitseinschränkung verstoßen.  
   
  OFF  
@@ -104,7 +104,7 @@ ms.locfileid: "73982014"
  STATISTICS_NORECOMPUTE **=** { ON | **OFF** }  
  Gibt an, ob Statistiken neu berechnet werden. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Veraltete Indexstatistiken werden nicht automatisch neu berechnet.  
   
  OFF  
@@ -115,7 +115,7 @@ ms.locfileid: "73982014"
   
  Gibt an, ob Zeilensperren zulässig sind. Der Standardwert ist ON.  
   
- ON  
+ EIN  
  Zeilensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Zeilensperren verwendet werden.  
   
  OFF  
@@ -126,7 +126,7 @@ ms.locfileid: "73982014"
   
  Gibt an, ob Seitensperren zulässig sind. Der Standardwert ist ON.  
   
- ON  
+ EIN  
  Seitensperren sind beim Zugriff auf den Index zulässig. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] bestimmt, wann Seitensperren verwendet werden.  
   
  OFF  
@@ -136,14 +136,14 @@ ms.locfileid: "73982014"
 
 **Gilt für**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] und höher.
 
-Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](./create-index-transact-sql.md#sequential-keys) auf der CREATE INDEX-Seite.
+Gibt an, ob der Konflikt beim Einfügen der letzten Seite optimiert werden soll. Der Standardwert ist OFF. Weitere Informationen finden Sie im Abschnitt [Sequenzielle Schlüssel](./create-index-transact-sql.md#sequential-keys) auf der CREATE INDEX-Seite.
  
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt an, ob Sortierungsergebnisse in **tempdb** gespeichert werden sollen. Der Standardwert ist OFF.  
   
- ON  
+ EIN  
  Die Zwischenergebnisse von Sortierungen, mit denen der Index erstellt wird, werden in **tempdb** gespeichert. Dadurch kann sich die zum Erstellen eines Index erforderliche Zeit verringern, wenn sich **tempdb** in anderen Datenträgersätzen befindet als die Benutzerdatenbank. Sie erhöht jedoch den Betrag an Speicherplatz, der während der Indexerstellung verwendet wird.  
   
  OFF  
@@ -157,7 +157,7 @@ Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite op
 > [!NOTE]  
 >  Eindeutige nicht gruppierte Indizes können nicht online erstellt werden. Dies schließt Indizes ein, die aufgrund einer UNIQUE- oder PRIMARY KEY-Einschränkung erstellt werden.  
   
- ON  
+ EIN  
  Lang andauernde Sperren werden nicht für die Dauer des Indexvorgangs aufrechterhalten. Während der Hauptphase des Indexvorgangs wird nur eine beabsichtigte freigegebene Sperre für die Quelltabelle aufrechterhalten. Dadurch können Abfragen oder Updates für die zugrunde liegende Tabelle und die Indizes fortgesetzt werden. Zu Beginn des Vorgangs wird für sehr kurze Zeit eine freigegebene Sperre (S) für das Quellobjekt aufrechterhalten. Am Ende des Vorgangs wird für die Quelle für kurze Zeit eine freigegebene Sperre (S) aktiviert, wenn ein nicht gruppierter Index erstellt wird. Eine Schemaänderungssperre (SCH-M) wird aktiviert, wenn ein gruppierter Index online erstellt oder gelöscht und wenn ein gruppierter oder nicht gruppierter Index neu erstellt wird. Obwohl die Onlineindexsperren kurze Metadatensperren sind, muss insbesondere die Sch-M-Sperre warten, bis alle blockierenden Transaktionen für diese Tabelle abgeschlossen sind. Während der Wartezeit sperrt die Sch-M-Sperre alle anderen Transaktionen, die an dieser Sperre warten, wenn sie auf die gleiche Tabelle zugreifen. ONLINE kann nicht auf ON festgelegt werden, wenn ein Index auf einer lokalen temporären Tabelle erstellt wird.  
   
 > [!NOTE]  
@@ -169,7 +169,7 @@ Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite op
  Weitere Informationen finden Sie unter [Funktionsweise von Onlineindexvorgängen](../../relational-databases/indexes/how-online-index-operations-work.md).  
   
 > [!NOTE]
->  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
+>  Onlineindexvorgänge sind nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
  MAXDOP **=** _max_degree_of_parallelism_  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
@@ -190,7 +190,7 @@ Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite op
  DATA_COMPRESSION  
  **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
- Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Folgende Optionen stehen zur Verfügung:  
+ Gibt die Datenkomprimierungsoption für die angegebene Tabelle, die Partitionsnummer oder den Bereich von Partitionen an. Die folgenden Optionen sind verfügbar:  
   
  Keine  
  Die Tabelle oder die angegebenen Partitionen werden nicht komprimiert. Gilt nur für rowstore-Tabellen und nicht für columnstore-Tabellen.  
@@ -213,7 +213,7 @@ Gibt an, ob der Speicherkonflikt bei Einfügevorgängen für die letzte Seite op
   
  Weitere Informationen zur Datenkomprimierung finden Sie unter [Datenkomprimierung](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt die Partitionen an, für die die DATA_COMPRESSION-Einstellung gilt. Wenn die Tabelle nicht partitioniert ist, erzeugt das ON PARTITIONS-Argument einen Fehler. Wenn die ON PARTITIONS-Klausel nicht angegeben ist, gilt die DATA_COMPRESSION-Option für alle Partitionen einer partitionierten Tabelle.  
   
@@ -257,7 +257,7 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  **SWITCH** oder eine Neuerstellung eines Onlineindexes wird abgeschlossen, sobald es keine blockierenden Vorgänge für diese Tabelle gibt. *WAIT_AT_LOW_PRIORITY* gibt an, dass der Vorgang wartet, wenn **SWITCH** oder die Neuerstellung des Onlineindexes nicht sofort abgeschlossen werden kann. Der Vorgang hält Sperren mit niedriger Priorität an und lässt die Fortsetzung anderer Vorgänge zu, die Sperren enthalten, die mit der DDL-Anweisung in Konflikt stehen. Die Option **WAIT AT LOW PRIORITY** wegzulassen, entspricht `WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)`.  
   
 MAX_DURATION = *time* [**MINUTES** ]  
- Die Wartezeit (ein ganzzahliger Wert, in Minuten angegeben), die von **SWITCH** oder der Onlineneuerstellung des Indexes gesperrt wird, die abgerufen werden muss, wartet beim Ausführen des DDL-Befehls. SWITCH oder die Online-Neuerstellung des Index versucht sofort, den Vorgang abzuschließen. Wenn der Vorgang während des **MAX_DURATION**-Zeitraums blockiert wird, wird eine der **ABORT_AFTER_WAIT**-Aktionen ausgeführt. Der **MAX_DURATION**-Zeitraum wird immer in Minuten angegeben. Das Wort **MINUTES** kann weggelassen werden.  
+ Die Wartezeit (ein ganzzahliger Wert, in Minuten angegeben), die von **SWITCH** oder der Onlineneuerstellung des Indexes gesperrt wird, die abgerufen werden muss, wartet beim Ausführen des DDL-Befehls. SWITCH oder die Online-Neuerstellung des Index versucht sofort, den Vorgang abzuschließen. Wenn der Vorgang während des **MAX_DURATION**-Zeitraums blockiert wird, wird eine der **ABORT_AFTER_WAIT**-Aktionen ausgeführt. **MAX_DURATION** wird immer in Minuten angegeben, und das Wort **MINUTES** kann ausgelassen werden.  
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
  Keine  
@@ -270,7 +270,7 @@ BLOCKERS
  Bricht alle Benutzertransaktionen ab, die derzeit **SWITCH** oder den DDL-Vorgang zur Neuerstellung des Onlineindexes blockieren, sodass der Vorgang fortgesetzt werden kann.  
  BLOCKERS erfordert die **ALTER ANY CONNECTION**-Berechtigung.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  Eine vollständige Beschreibung der Indexoptionen finden Sie unter [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

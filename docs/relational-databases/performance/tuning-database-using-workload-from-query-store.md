@@ -12,10 +12,10 @@ ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 4abca73a7d1ac259034987a494f5d7395b507a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113173"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Datenbankoptimierung mithilfe der Arbeitsauslastung aus dem Abfragespeicher
@@ -24,7 +24,7 @@ ms.locfileid: "68113173"
 
 Die Funktion [Abfragespeicher](../../relational-databases/performance/how-query-store-collects-data.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erfasst automatisch einen Verlauf der Abfragen, Pläne und Laufzeitstatistiken und speichert diese Informationen in der Datenbank. Der [Datenbankoptimierungsratgeber (Database Engine Tuning Advisor, DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) unterstützt eine neue Option, bei der man den Abfragespeicher verwenden kann, um automatisch eine entsprechende Arbeitsauslastung für die Optimierung auszuwählen. Viele Benutzer müssen dadurch nicht mehr explizit eine Arbeitsauslastung für die Optimierung erfassen. Diese Funktion ist nur verfügbar, wenn in der Datenbank die Abfragespeicherfunktion aktiviert ist. 
   
-Diese Funktion ist mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** oder höher verfügbar. 
+Dieses Feature ist mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **v16.4** oder höher verfügbar. 
   
 ## <a name="how-to-tune-a-workload-from-query-store-in-database-engine-tuning-advisor-gui"></a>So optimieren Sie eine Arbeitsauslastung aus dem Abfragespeicher in der GUI des Datenbankoptimierungsratgebers
 Wählen Sie über die DTA GUI das Optionsfeld **Abfragespeicher** im Bereich **Allgemein** aus, um diese Funktion zu aktivieren (siehe folgende Abbildung).

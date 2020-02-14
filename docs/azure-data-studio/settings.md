@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: a874aaf9ec136ff9ea27cbeaa92011a07f3718c7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67959270"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Ändern von Benutzer- und Arbeitsbereichseinstellungen
@@ -61,6 +61,6 @@ Standardmäßig ist Hot-Exit deaktiviert. Aktivieren Sie Hot-Exit, indem Sie die
 
 Um mühelos zu erkennen, mit welchen Verbindungen Sie arbeiten, können Sie die Farben der geöffneten Registerkarten im Editor so festlegen, dass sie mit der Farbe der Servergruppe übereinstimmen, zu denen die Verbindung gehört. Standardmäßig sind Registerkartenfarben deaktiviert. Aktivieren Sie Registerkartenfarben, indem Sie die `sql.tabColorMode`-Einstellung bearbeiten.
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
 Da [!INCLUDE[name-sos](../includes/name-sos-short.md)] die Funktionalität von Benutzer- und Arbeitsbereichseinstellungen von Visual Studio Code erbt, finden Sie ausführliche Informationen zu den Einstellungen im Artikel [User and Workspace Settings](https://code.visualstudio.com/docs/getstarted/settings) (Benutzer- und Arbeitsbereichseinstellungen).

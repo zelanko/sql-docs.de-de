@@ -13,10 +13,10 @@ ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 13b4922d1fba2d41878217cadc8d47d45928b4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68025214"
 ---
 # <a name="set-warning-thresholds"></a>Schwellenwerte für Warnung festlegen
@@ -29,20 +29,20 @@ ms.locfileid: "68025214"
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
  *Serverinstanz und zugehöriger Verbindungsstatus*  
  Name einer Partnerserverinstanz in der Form *SYSTEM***\\***INSTANZNAME*. Für eine Standardserverinstanz wird nur der Systemname angezeigt.  
   
  Dieses Feld zeigt auch an, ob der Monitor zum aktuellen Zeitpunkt mit der Serverinstanz verbunden ist. Folgende Werte sind für den Verbindungsstatus möglich:  
   
--   **Nicht verbunden mit**  *Name der Serverinstanz*  
+-   **Nicht verbunden mit** *Name_der_Serverinstanz*  
   
--   **Verbindung wird hergestellt:**  *Name der Serverinstanz*  
+-   **Verbindung wird hergestellt** *Name_der_Serverinstanz*  
   
--   **Verbunden mit**  *Name der Serverinstanz*  
+-   **Verbunden mit***Name_der_Serverinstanz*  
   
     > [!NOTE]  
-    >  Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, lautet dieser Statuts **Verbunden mit** *Name der Serverinstanz* **(Begrenzte Berechtigungen)** .  
+    >  Wenn Sie kein Mitglied der festen Serverrolle **sysadmin** sind, lautet dieser Statuts **Verbunden mit** *Name_der_Serverinstanz* **(Begrenzte Berechtigungen)** .  
   
  Der Name jeder der Partnerserverinstanzen wird in einem separaten Feld für die *Serverinstanz und den zugehörigen Verbindungsstatus* angezeigt. Das oberste Feld listet den Prinzipalserver auf, wenn die Ausführung des Monitors gestartet wurde.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68025214"
  **Warnungen**  
  Listet die unterstützten Warnungen auf:  
   
-|Warnung|und Beschreibung|  
+|Warnung|BESCHREIBUNG|  
 |-------------|-----------------|  
 |**Warnhinweis anzeigen, wenn das nicht gesendete Protokoll den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl der Kilobytes (KB) des nicht gesendeten Protokolls in der Sendewarteschlange auf dem Prinzipal an.|  
 |**Warnhinweis anzeigen, wenn das nicht wiederhergestellte Protokoll den Schwellenwert überschreitet.**|Der Schwellenwert gibt die Anzahl an KB der Wiederholungswarteschlange auf der Spiegelserverinstanz an.|  
@@ -76,7 +76,7 @@ ms.locfileid: "68025214"
  **Aktiviert für '** *\<Serverinstanz>* **'**  
  Ein leeres Kontrollkästchen gibt an, dass die Warnung zum jetzigen Zeitpunkt auf der Serverinstanz deaktiviert ist. Klicken Sie auf das zugehörige Kontrollkästchen, um eine Warnung zu aktivieren.  
   
- **Schwellenwert auf '** *\<Serverinstanz>* **'**  
+ **Schwellenwert auf '** *\<server_instance>* **'**  
  Legen Sie den Schwellenwert auf der linken Seite der Spalte fest, wenn eine Warnung aktiviert ist. Ein Ereignis tritt beim Erreichen des angegebenen Schwellenwerts auf, wenn die Statustabelle aktualisiert wird. Wenn Sie einen Schwellenwert nach dem Konfigurieren eines Werts deaktivieren, verbleibt der betreffende Wert in diesem Feld und wird verwendet, sobald Sie die Warnung wieder aktivieren.  
   
  Wenn eine Warnung nicht aktiviert ist, ist dieses Feld inaktiv.  

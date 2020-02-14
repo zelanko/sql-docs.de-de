@@ -11,10 +11,10 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 6ebbc82f5570fb97d7b1169563bfde7c67f5be0d
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296013"
 ---
 # <a name="lesson-3-add-logging-with-ssis"></a>Lektion 3: Hinzufügen der Protokollierung mit SSIS
@@ -23,7 +23,7 @@ ms.locfileid: "71296013"
 
 
 
-[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst Protokollierungsfunktionen für die Problembehandlung und das Überwachen der Paketausführung mithilfe einer Reihe von Task- und Containerereignissen. Die Protokollierungsfeatures sind flexibel. Sie können die Protokollierung auf Paketebene oder für individuelle Tasks oder Container in dem Paket aktivieren. Wählen Sie aus, welche Ereignisse protokolliert werden sollen, und erstellen Sie mehrere Protokolle für ein einzelnes Paket.  
+[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] umfasst Protokollierungsfunktionen für die Problembehandlung und Überwachung der Paketausführung mithilfe einer Reihe von Task- und Containerereignissen. Die Protokollierungsfeatures sind flexibel. Sie können die Protokollierung auf Paketebene oder für individuelle Tasks oder Container in dem Paket aktivieren. Wählen Sie aus, welche Ereignisse protokolliert werden sollen, und erstellen Sie mehrere Protokolle für ein einzelnes Paket.  
   
 Die Protokolle werden von Protokollanbietern erstellt. Jeder Protokollanbieter ist in der Lage, Protokollierungsinformationen in verschiedenen Formaten und Zieltypen zu schreiben. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt die folgenden Protokollanbieter bereit:  
   

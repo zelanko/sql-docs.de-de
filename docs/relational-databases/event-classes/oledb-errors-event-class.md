@@ -13,21 +13,21 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68115840"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors-Ereignisklasse
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Die OLEDB Errors-Ereignisklasse tritt in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn beim Aufruf eines OLE DB-Anbieters ein Fehler zurückgegeben wird. Verwenden Sie diese Ereignisklasse in Ablaufverfolgungen, um ein fehlgeschlagenes HRESULT von einem OLE DB-Anbieter anzuzeigen.  
+  Die Ereignisklasse „OLEDB Errors“ tritt in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn beim Aufruf eines OLE DB-Anbieters ein Fehler zurückgegeben wird. Verwenden Sie diese Ereignisklasse in Ablaufverfolgungen, um ein fehlgeschlagenes HRESULT von einem OLE DB-Anbieter anzuzeigen.  
   
  Wenn die OLEDB Errors-Ereignisklasse in eine Ablaufverfolgung eingeschlossen ist, ist der Verarbeitungsaufwand davon abhängig, wie häufig im Rahmen der Ablaufverfolgung OLE DB-Anbieterfehler für die Datenbank auftreten. Wenn solche Fehler häufig auftreten, kann die Gesamtleistung durch die Ablaufverfolgung erheblich beeinträchtigt werden.  
   
 ## <a name="oledb-errors-event-class-data-columns"></a>OLEDB Errors-Ereignisklasse (Datenspalten)  
   
-|Datenspaltenname|Datentyp|und Beschreibung|Column ID|Filterbar|  
+|Datenspaltenname|Datentyp|Beschreibung|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|**nvarchar**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|**int**|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  

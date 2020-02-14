@@ -20,10 +20,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68113381"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Reduzieren der Optimierungsauslastung des Produktionsservers
@@ -59,7 +59,7 @@ ms.locfileid: "68113381"
   
  Die folgende Abbildung veranschaulicht das Szenario mit dem Testserver und dem Produktionsserver:  
   
- ![Datenbankoptimierungsratgeber: Testserververwendung](../../relational-databases/performance/media/testsvr.gif "Database Engine Tuning Advisor test server usage")  
+ ![Datenbankoptimierungsratgeber: Testserververwendung](../../relational-databases/performance/media/testsvr.gif "Datenbankoptimierungsratgeber: Testserververwendung")  
   
 > [!NOTE]  
 >  Die Funktion der Optimierung mit einem Testserver wird auf der grafischen Benutzeroberfläche (Graphical User Interface, GUI) des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers nicht unterstützt.  

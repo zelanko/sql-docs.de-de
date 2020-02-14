@@ -21,10 +21,10 @@ ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72006068"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
@@ -32,7 +32,7 @@ ms.locfileid: "72006068"
 
 Ändert globale Konfigurationseinstellungen für den aktuellen Server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
 
@@ -146,7 +146,7 @@ Eine Liste mit mindestens einem NUMA-Knoten. NUMA-Knoten-IDs beginnen bei 0 und 
 DIAGNOSTICS LOG  
 Startet oder beendet die Protokollierung von Diagnosedaten, die die sp_server_diagnostics-Prozedur erfasst. Dieses Argument legt außerdem SQLDIAG-Protokollkonfigurationsparameter wie die Anzahl der Protokolldateirollover, die Protokolldateigröße und den Dateispeicherort fest. Weitere Informationen finden Sie unter [Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls](../../sql-server/failover-clusters/windows/view-and-read-failover-cluster-instance-diagnostics-log.md).  
   
-ON  
+EIN  
 Startet die [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Protokollierung von Diagnosedaten an dem in der PATH-Dateioption angegebenen Speicherort. Dies ist das Standardargument.  
   
 OFF  
@@ -220,7 +220,7 @@ Weitere Informationen finden Sie unter [Ändern des HADR-Clusterkontexts der Ser
   
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]).    
   
-ON  
+EIN  
 Aktiviert die Pufferpoolerweiterungsoption. Diese Option erweitert die Größe des Pufferpools, indem sie permanenten (nicht flüchtigen) Speicher verwendet. Permanenter Speicher wie Solid State Drives (SSD) behält nicht modifizierte Datenseiten im Pool bei. Weitere Informationen zu diesem Feature finden Sie im Artikel zur [Pufferpoolerweiterung](../../database-engine/configure-windows/buffer-pool-extension.md). Die Pufferpoolerweiterung ist nicht in jeder Edition von SQL Server verfügbar. Weitere Informationen finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Features](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 FILENAME = 'os_file_path_and_name'  
@@ -241,7 +241,7 @@ Deaktiviert die Pufferpoolerweiterungsoption. Deaktivieren Sie die Pufferpoolerw
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]).  
   
-ON  
+EIN  
 Aktiviert die automatische Partitionierung, um große NUMA-Hardwareknoten in kleine NUMA-Knoten aufzuteilen. Das Ändern des ausgeführten Werts erfordert einen Neustart der Datenbank-Engine.  
   
 OFF  
@@ -260,7 +260,7 @@ Deaktiviert die automatische Softwarepartitionierung, um große NUMA-Hardwarekno
 
 **Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).
 
-ON <br>
+EIN <br>
 Aktiviert alle Features auf Instanzebene, die Teil der [In-Memory Database](../../relational-databases/in-memory-database.md)-Featurefamilie sind. Hierzu gehören derzeit [speicheroptimierte tempdb-Metadaten](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata) und der [hybride Pufferpool](../../database-engine/configure-windows/hybrid-buffer-pool.md). Diese Option erfordert einen Neustart, um wirksam zu werden.
 
 OFF <br>
@@ -294,7 +294,7 @@ Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../
   
 ## <a name="examples"></a>Beispiele  
   
-|Kategorie|Funktionssyntaxelemente|  
+|Category|Funktionssyntaxelemente|  
 |--------------|------------------------------|  
 |[Festlegen der Prozessaffinität](#Affinity)|CPU • NUMANODE • AUTO|  
 |[Festlegen der Optionen des Diagnoseprotokolls](#Diagnostic)|ON • OFF • PATH • MAX_SIZE|  
@@ -336,7 +336,7 @@ ALTER SERVER CONFIGURATION
 SET PROCESS AFFINITY CPU=60 TO 200;  
 ```  
   
-#### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. Festlegen der Affinität auf einem System, das über zwei CPUs verfügt, für CPU 0  
+#### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D: Festlegen der Affinität auf einem System, das über zwei CPUs verfügt, für CPU 0  
 Im folgenden Beispiel wird die Affinität auf einem Computer, der über zwei CPUs verfügt, auf `CPU=0` festgelegt. Vor Ausführung der folgenden Anweisung ist die interne Affinitätsbitmaske 00.  
   
 ```sql  
@@ -379,7 +379,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-#### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Angeben der maximalen Größe jedes Diagnoseprotokolls  
+#### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D: Angeben der maximalen Größe jedes Diagnoseprotokolls  
 Im folgenden Beispiel wird die maximale Größe jedes Diagnoseprotokolls auf 10 Megabytes festgelegt.  
   
 ```sql  
@@ -464,7 +464,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_P
 GO
 ```
 
-#### <a name="d-enable-hybrid-buffer-pool"></a>D. Aktivieren des hybriden Pufferpools
+#### <a name="d-enable-hybrid-buffer-pool"></a>D: Aktivieren des hybriden Pufferpools
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED HYBRID_BUFFER_POOL = ON;

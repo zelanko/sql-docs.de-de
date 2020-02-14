@@ -13,10 +13,10 @@ ms.assetid: 39a51586-6977-4c45-b80b-0157a54ad510
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 9acb58bf89d23e58ac23f96141f2a5b4dd551019
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71294118"
 ---
 # <a name="incorporate-a-data-profiling-task-in-package-workflow"></a>Einschließen einer Datenprofilerstellungs-Tasks in den Paket-Workflow
@@ -24,7 +24,7 @@ ms.locfileid: "71294118"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung sind oder übertrieben. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
+  Datenprofilerstellung und Cleanup sind in den Anfangsphasen keine Kandidaten für einen automatisierten Prozess. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] erfordert die Ausgabe des Datenprofilerstellungs-Tasks normalerweise eine visuelle Analyse und menschliches Urteilsvermögen, um zu bestimmen, ob gemeldete Verstöße von Bedeutung oder übertrieben sind. Auch nach Erkennen eines Datenqualitätsproblems ist nach wie vor ein sorgfältig durchdachter Plan erforderlich, der den besten Bereinigungsansatz beinhaltet.  
   
  Nachdem Kriterien für die Datenqualität festgelegt wurden, möchten Sie jedoch möglicherweise eine regelmäßige Analyse und Bereinigung der Datenquelle automatisieren. Betrachten Sie folgende Szenarios:  
   
@@ -49,7 +49,7 @@ ms.locfileid: "71294118"
   
  Beim Integrieren des Datenprofilerstellungs-Tasks in den Workflow eines Pakets berücksichtigen Sie die beiden folgenden Taskfunktionen:  
   
--   **Taskausgabe**. Der Datenprofilerstellungs-Task schreibt die Ausgabe in eine Datei oder eine Paketvariable im XML-Format, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Daher müssen Sie die XML-Ausgabe abfragen, wenn Sie die Profilergebnisse im bedingten Workflow eines Pakets verwenden möchten. Zur Abfrage dieser XML-Ausgabe verwenden Sie am besten die Xpath-Abfragesprache. Um sich die Struktur dieser XML-Ausgabe anzusehen, können Sie eine Beispielausgabedatei oder das Schema selbst öffnen. Zum Öffnen der Ausgabedatei oder des Schemas können Sie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], einen anderen XML-Editor oder einen Texteditor wie Notepad verwenden.  
+-   **Taskausgabe**. Der Datenprofilerstellungs-Task schreibt die Ausgabe in eine Datei oder eine Paketvariable im XML-Format, das dem Schema DataProfile.xsd entsprechend strukturiert ist. Daher müssen Sie die XML-Ausgabe abfragen, wenn Sie die Profilergebnisse im bedingten Workflow eines Pakets verwenden möchten. Zur Abfrage dieser XML-Ausgabe verwenden Sie am besten die Xpath-Abfragesprache. Um sich die Struktur dieser XML-Ausgabe anzusehen, können Sie eine Beispielausgabedatei oder das Schema selbst öffnen. Sie können zum Öffnen der Ausgabedatei oder des Schemas [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], einen anderen XML-Editor oder einen Text-Editor wie Notepad verwenden.  
   
     > [!NOTE]  
     >  Einige der im Datenprofil-Viewer angezeigten Profilergebnisse sind berechnete Werte, die nicht direkt in der Ausgabe zu finden sind. Die Ausgabe des Profils für das Spalten-NULL-Verhältnis enthält beispielsweise die Gesamtzahl der Zeilen und die Anzahl der Zeilen mit NULL-Werten. Zur Berechnung des Spalten-NULL-Verhältnisses müssen Sie diese beiden Werte abfragen und anschließend den Prozentanteil der Zeilen mit NULL-Werten berechnen.  

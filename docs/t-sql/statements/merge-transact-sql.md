@@ -25,10 +25,10 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71680836"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
@@ -46,7 +46,7 @@ FROM tbl_B
 WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);  
 ```  
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -207,7 +207,7 @@ Ein alternativer Name, über den auf eine Tabelle verwiesen wird.
 USING \<table_source>  
 Gibt die Datenquelle an, die basierend auf \<merge_search condition> mit den Datenzeilen in *target_table* abgeglichen wird. Das Ergebnis dieser Zuordnung legt die Aktionen fest, die von den WHEN-Klauseln der MERGE-Anweisung ausgeführt werden. \<table_source> kann eine Remotetabelle oder eine abgeleitete Tabelle sein, die auf Remotetabellen zugreift.
   
-\<table_source> kann eine abgeleitete Tabelle sein, die mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Tabelle durch Angeben mehrerer Zeilen erstellt.  
+\<Quelltabelle> kann eine abgeleitete Tabelle sein, die mit dem [Tabellenwertkonstruktor](../../t-sql/queries/table-value-constructor-transact-sql.md) von [!INCLUDE[tsql](../../includes/tsql-md.md)] eine Tabelle durch Angeben mehrerer Zeilen erstellt.  
   
 Weitere Informationen zur Syntax und zu den Argumenten dieser Klausel finden Sie unter [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
@@ -285,7 +285,7 @@ Gibt die Suchbedingungen an, die zum Angeben von \<merge_search_condition> oder 
 \<Graph-Suchmuster >  
 Gibt das Graph-Vergleichsmuster an. Weitere Informationen zu den Argumenten für diese Klausel finden Sie unter [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Bemerkungen
 
 Mindestens eine der drei MATCHED-Klauseln muss angegeben werden, dies kann jedoch in beliebiger Reihenfolge erfolgen. Eine Variable in derselben MATCHED-Klausel kann nicht mehr als einmal aktualisiert werden.  
   
@@ -313,39 +313,39 @@ Wenn für *target_table* der INSTEAD OF INSERT-Trigger definiert ist, wird der E
 
 Erfordert die SELECT-Berechtigung für die Quelltabelle und die INSERT-, UPDATE- oder DELETE-Berechtigung für die Zieltabelle. Weitere Informationen finden Sie im Abschnitt „Berechtigungen“ in den Artikeln zu [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) und [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
-## <a name="optimizing-merge-statement-performance"></a>Optimieren der Leistung von MERGE-Anweisungen
+## <a name="optimizing-merge-statement-performance"></a>Optimieren der Leistung bei MERGE-Anweisungen
 
-Mit der MERGE-Anweisung können Sie die einzelnen DML-Anweisungen durch eine einzelne Anweisung ersetzen. Auf diese Weise können Sie die Abfrageleistung verbessern, weil die Vorgänge innerhalb einer einzelnen Anweisung ausgeführt werden und so die Anzahl der Verarbeitungsvorgänge für die Daten in der Quell- und Zieltabelle minimiert wird. Leistungssteigerungen sind jedoch von richtigen Indizes, Joins und anderen Faktoren abhängig.
+Mit der MERGE-Anweisung können Sie die einzelnen DML-Anweisungen durch eine einzelne Anweisung ersetzen. Auf diese Weise können Sie die Abfrageleistung verbessern, da die Vorgänge innerhalb einer einzelnen Anweisung ausgeführt und so die Anzahl der Verarbeitungsvorgänge für die Daten in der Quell- und Zieltabelle minimiert werden. Leistungssteigerungen sind jedoch von richtigen Indizes, Joins und anderen Fragen abhängig.
 
-### <a name="index-best-practices"></a>Bewährte Methoden für Indizes
+### <a name="index-best-practices"></a>Bewährte Methoden zum Indizieren
 
 Zur Leistungsverbesserung der MERGE-Anweisung werden die folgenden Indexrichtlinien empfohlen:
 
 - Erstellen Sie einen eindeutigen und umfassenden Index für die Joinspalten der Quelltabelle.
 - Erstellen Sie für die Joinspalten in der Zieltabelle einen eindeutigen gruppierten Index.
 
-Mit diesen Indizes wird sichergestellt, dass die Joinschlüssel eindeutig und die Daten in den Tabellen sortiert sind. Die Abfrageleistung wird verbessert, weil der Abfrageoptimierer keine zusätzliche Validierung ausführen muss, um doppelte Zeilen zu suchen und zu aktualisieren, und zusätzliche Sortiervorgänge nicht erforderlich sind.
+Mit diesen Indizes wird sichergestellt, dass die Joinschlüssel eindeutig und die Daten in den Tabellen sortiert sind. Die Abfrageleistung wird verbessert, da der Abfrageoptimierer keine zusätzliche Validierung ausführen muss, um doppelte Zeilen zu suchen und zu aktualisieren, und zusätzliche Sortiervorgänge nicht erforderlich sind.
 
 ### <a name="join-best-practices"></a>Bewährte Methoden für JOIN
 
-Zur Leistungsverbesserung der MERGE-Anweisung und zur Sicherstellung richtiger Ergebnisse werden die folgenden Joinrichtlinien empfohlen:
+Zur Leistungsverbesserung der MERGE-Anweisung und Sicherstellung richtiger Ergebnisse werden die folgenden Joinrichtlinien empfohlen:
 
 - Geben Sie in der ON <merge_search_condition>-Klausel nur Suchbedingungen an, die die Kriterien für den Vergleich von Daten in den Quell- und Zieltabellen bestimmen. Geben Sie also nur Spalten aus der Zieltabelle an, die mit den entsprechenden Spalten der Quelltabelle verglichen werden. 
 - Fügen Sie keine Vergleiche mit anderen Werten, z. B. einer Konstante, ein.
 
-Verwenden Sie zum Filtern von Zeilen aus den Quell- oder Zieltabellen eine der folgenden Methoden.
+Zum Filtern von Zeilen aus der Quell- oder Zieltabelle verwenden Sie eine der folgenden Methoden:
 
 - Geben Sie die Suchbedingung für die Zeilenfilterung in der entsprechenden WHEN-Klausel an. Beispiel: WHEN NOT MATCHED AND S.EmployeeName LIKE 'S%' THEN INSERT....
-- Definieren Sie für die Quelle oder das Ziel eine Sicht, die die gefilterten Zeilen zurückgibt, und verweisen Sie auf die Sicht als Quell- oder Zieltabelle. Wenn die Sicht für die Zieltabelle definiert ist, müssen alle Aktionen für die Tabelle die Bedingungen zum Aktualisieren von Sichten erfüllen. Weitere Informationen zum Aktualisieren von Daten mithilfe von Sichten finden Sie unter „Ändern von Daten über eine Sicht“.
-- Mit der `WITH <common table expression>`-Klausel können Sie Zeilen aus den Quell- oder Zieltabellen filtern. Diese Methode ähnelt dem Angeben zusätzlicher Suchkriterien in der ON-Klausel und kann zu falschen Ergebnissen führen. Es wird empfohlen, die Verwendung dieser Methode zu vermeiden oder vor der Implementierung gründlich zu testen.
+- Definieren Sie in der Quelle oder im Ziel eine Sicht, die die gefilterten Zeilen zurückgibt, und verweisen Sie auf die Sicht als Quell- oder Zieltabelle. Wenn die Sicht für die Zieltabelle definiert ist, müssen alle Aktionen für die Tabelle die Bedingungen zum Aktualisieren von Sichten erfüllen. Weitere Informationen zum Aktualisieren von Daten mithilfe von Sichten finden Sie unter „Ändern von Daten über eine Sicht“.
+- Mit der `WITH <common table expression>`-Klausel können Sie Zeilen aus den Quell- oder Zieltabellen filtern. Diese Methode ähnelt dem Angeben zusätzlicher Suchkriterien in der ON-Klausel und kann zu falschen Ergebnissen führen. Es wird empfohlen, die Verwendung dieser Methode zu vermeiden oder diese vor der Implementierung gründlich zu testen.
 
-Der Joinvorgang in der MERGE-Anweisung wird auf dieselbe Weise optimiert wie ein Join in einer SELECT-Anweisung. Das heißt, beim Verarbeiten von Joins durch SQL Server wählt der Abfrageoptimierer (aus verschiedenen Möglichkeiten) die effizienteste Methode aus. Wenn Quelle und Ziel von ähnlicher Größe sind und die zuvor beschriebenen Indizierungsrichtlinien auf die Quell- und Zieltabellen angewendet werden, bildet ein Merge Join-Operator den effizientesten Abfrageplan. Das liegt daran, dass beide Tabellen einmalig durchsucht werden und die Daten nicht sortiert werden müssen. Wenn die Quelltabelle kleiner als die Zieltabelle ist, ist ein Nested Loops-Operator vorzuziehen.
+Der Joinvorgang in der MERGE-Anweisung wird auf dieselbe Weise optimiert wie ein Join in einer SELECT-Anweisung. Das heißt, beim Verarbeiten von Joins durch SQL Server wählt der Abfrageoptimierer (aus verschiedenen Möglichkeiten) die effizienteste Methode aus. Wenn Quelle und Ziel von ähnlicher Größe sind und die zuvor beschriebenen Indizierungsrichtlinien auf die Quell- und Zieltabellen angewendet werden, bildet ein Merge Join-Operator den effizientesten Abfrageplan. Das liegt daran, dass beide Tabellen einmal durchsucht werden und anschließend keine Notwendigkeit vorliegt, die Daten zu sortieren. Wenn die Quelltabelle kleiner als die Zieltabelle ist, ist ein Nested Loops-Operator vorzuziehen.
 
-Sie können die Verwendung eines bestimmten Joins erzwingen, indem Sie in der MERGE-Anweisung die `OPTION (<query_hint>)`-Klausel angeben. Es wird empfohlen, als Abfragehinweis für MERGE-Anweisungen nicht den Hashjoin zu verwenden, weil dieser Jointyp keine Indizes verwendet.
+Sie können die Verwendung einer bestimmten Join erzwingen, indem Sie in der MERGE-Anweisung die `OPTION (<query_hint>)`-Klausel angeben. Es wird empfohlen, als Abfragehinweis für MERGE-Anweisungen nicht den Hashjoin zu verwenden, da von diesem Jointyp keine Indizes verwendet werden.
 
 ### <a name="parameterization-best-practices"></a>Bewährte Methoden für die Parametrisierung
 
-Wenn eine der SELECT-, INSERT-, UPDATE- oder DELETE-Anweisungen ohne Parameter ausgeführt wird, kann der SQL Server-Abfrageoptimierer die Anweisung intern parametrisieren. Dies bedeutet, dass alle eventuell in der Abfrage enthaltenen Literalwerte durch Parameter ersetzt werden. Beispielsweise kann die Anweisung „INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10)“ intern als „INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)“ implementiert werden. Dieser als einfache Parametrisierung bezeichnete Vorgang erhöht die Wahrscheinlichkeit, dass die relationale Engine neue SQL-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuordnet. Möglicherweise wird die Abfrageleistung verbessert, da die Häufigkeit der Abfragekompilierungen und Neukompilierungen verringert wird. Die einfache Parametrisierung wird vom Abfrageoptimierer nicht auf MERGE-Anweisungen angewendet. Deshalb ist die Leistung bei der Ausführung von MERGE-Anweisungen mit Literalwerten nicht so hoch wie bei einzelnen INSERT-, UPDATE- oder DELETE-Anweisungen, weil bei jeder Ausführung der MERGE-Anweisung ein neuer Plan kompiliert wird.
+Wenn eine der SELECT-, INSERT-, UPDATE- oder DELETE-Anweisungen ohne Parameter ausgeführt wird, kann der SQL Server-Abfrageoptimierer die Anweisung intern parametrisieren. Dies bedeutet, dass alle eventuell in der Abfrage enthaltenen Literalwerte durch Parameter ersetzt werden. Beispielsweise kann die Anweisung „INSERT dbo.MyTable (Col1, Col2) VALUES (1, 10)“ intern als „INSERT dbo.MyTable (Col1, Col2) VALUES (@p1, @p2)“ implementiert werden. Dieser als einfache Parametrisierung bezeichnete Vorgang erhöht die Wahrscheinlichkeit, dass die relationale Engine neue SQL-Anweisungen vorhandenen, zuvor kompilierten Ausführungsplänen zuordnet. Möglicherweise wird die Abfrageleistung verbessert, da die Häufigkeit der Abfragekompilierungen und Neukompilierungen reduziert wird. Die einfache Parametrisierung wird vom Abfrageoptimierer nicht auf MERGE-Anweisungen angewendet. Daher ist die Leistung bei der Ausführung von MERGE-Anweisungen mit Literalwerten nicht so hoch wie bei einzelnen INSERT-, UPDATE- oder DELETE-Anweisungen, da bei jeder Ausführung der MERGE-Anweisung ein neuer Plan kompiliert wird.
 
 Um die Abfrageleistung zu verbessern, werden die folgenden Parametrisierungsrichtlinien empfohlen:
 
@@ -355,17 +355,17 @@ Um die Abfrageleistung zu verbessern, werden die folgenden Parametrisierungsrich
 
 ### <a name="top-clause-best-practices"></a>Bewährte Methoden für die TOP-Klausel
 
-In der MERGE-Anweisung gibt die TOP-Klausel die Anzahl oder den Prozentsatz der Zeilen an, auf die sich das Verknüpfen der Quelltabelle mit der Zieltabelle auswirkt, nachdem Zeilen entfernt wurden, auf die keine INSERT-, UPDATE- oder DELETE-Aktion angewendet wird. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise „TOP (10)“ angegeben wird, sind 10 Zeilen betroffen. Von diesen Zeilen können 7 aktualisiert und 3 eingefügt werden, oder 1 Zeile kann gelöscht, 5 können aktualisiert und 4 eingefügt werden usw.
+In der MERGE-Anweisung gibt die TOP-Klausel die Anzahl oder den Prozentsatz der Zeilen an, auf die sich das Verknüpfen der Quelltabelle mit der Zieltabelle auswirkt, nachdem Zeilen, auf die keine INSERT-, UPDATE- oder DELETE-Aktion angewendet wird, entfernt wurden. Die TOP-Klausel verringert zudem die Anzahl der verknüpften Zeilen auf den angegebenen Wert, und die INSERT-, UPDATE- oder DELETE-Aktionen werden ungeordnet auf die verbliebenen verknüpften Zeilen angewendet. Dies bedeutet, dass für die Verteilung der Zeilen auf die in den WHEN-Klauseln definierten Aktionen keine bestimmte Reihenfolge gilt. Wenn beispielsweise TOP (10) angegeben wird, sind 10 Zeilen betroffen. Von diesen Zeilen können sieben aktualisiert und drei eingefügt werden, oder eine Zeile kann gelöscht, fünf können aktualisiert und vier eingefügt werden usw.
 
-Häufig wird die TOP-Klausel zur Batchausführung von DML-Vorgängen (Data Manipulation Language) für eine umfangreiche Tabelle verwendet. Wenn Sie die TOP-Klausel zu diesem Zweck in der MERGE-Anweisung verwenden, müssen Sie sich der folgenden Auswirkungen bewusst sein.
+Häufig wird die TOP-Klausel zum batchweisen Ausführen von DML (Data Manipulation Language)-Vorgängen für eine umfangreiche Tabelle verwendet. Wenn Sie die TOP-Klausel zu diesem Zweck in der MERGE-Anweisung verwenden, müssen Sie sich der folgenden Auswirkungen bewusst sein.
 
 - Die E/A-Leistung ist möglicherweise betroffen.
 
-  Die MERGE-Anweisung führt einen vollständigen Tabellenscan der Quell- und Zieltabellen aus. Durch die Aufteilung des Vorgangs in Batches wird die Anzahl von Schreibvorgängen pro Batch reduziert. Für jeden Batch wird jedoch ein vollständiger Tabellenscan der Quell- und der Zieltabellen ausgeführt. Die resultierende Leseaktivität wirkt sich möglicherweise auf die Leistung der Abfrage aus.
+  Die MERGE-Anweisung führt einen vollständigen Tabellenscan der Quell- und der Zieltabelle aus. Durch Aufteilung des Vorgangs in Batches wird die Anzahl der Schreibvorgänge pro Batch reduziert. Für jeden Batch wird jedoch ein vollständiger Tabellenscan der Quell- und der Zieltabelle ausgeführt. Die resultierende Leseaktivität wirkt sich möglicherweise auf die Leistung der Abfrage aus.
 
 - Es können falsche Ergebnisse auftreten.
 
-  Es sollte unbedingt sichergestellt werden, dass alle aufeinander folgenden Batches neuen Zeilen zugeordnet sind, andernfalls kann ein unerwünschtes Verhalten auftreten, z. B. das Einfügen doppelter Zeilen in die Zieltabelle. Dies kann passieren, wenn die Quelltabelle eine Zeile enthält, die nicht im Zielbatch, aber in der Zieltabelle insgesamt enthalten war.
+  Es sollte unbedingt sichergestellt werden, dass alle aufeinander folgenden Batches neuen Zeilen zugeordnet sind, andernfalls kann ein unerwünschtes Verhalten auftreten, z. B. das Einfügen doppelter Zeilen in die Zieltabelle. Dies kann der Fall sein, wenn die Quelltabelle eine Zeile enthält, die nicht im Zielbatch, aber in der Zieltabelle insgesamt enthalten war.
 
 - So stellen Sie die Richtigkeit der Ergebnisse sicher
 
@@ -383,9 +383,9 @@ Zur Leistungsverbesserung des Massenladevorgangs werden die folgenden Richtlinie
 - Erstellen Sie für die Joinspalten in der Zieltabelle einen gruppierten Index.
 - Geben Sie mithilfe des ORDER-Hinweises und des UNIQUE-Hinweises in der `OPENROWSET(BULK…)`-Klausel an, wie die Quelldatendatei sortiert ist.
 
-  Standardmäßig geht der Massenvorgang davon aus, dass die Datendatei nicht sortiert ist. Daher ist es wichtig, dass die Quelldaten anhand des gruppierten Indexes für die Zieltabelle sortiert sind und die Reihenfolge mit dem ORDER-Hinweis angegeben wird, sodass der Abfrageoptimierer einen effizienteren Abfrageplan generieren kann. Hinweise werden zur Laufzeit validiert. Wenn der Datenstrom nicht mit den angegebenen Hinweisen übereinstimmt, wird ein Fehler ausgelöst.
+  Standardmäßig geht der Massenvorgang davon aus, dass die Datendatei nicht sortiert ist. Daher ist es wichtig, dass die Quelldaten anhand des gruppierten Indexes für die Zieltabelle sortiert sind und die Reihenfolge mit dem ORDER-Hinweis angegeben wird, sodass der Abfrageoptimierer einen effizienteren Abfrageplan generieren kann. Hinweise werden zur Laufzeit validiert. Wenn der Datenstrom mit den angegebenen Hinweisen nicht übereinstimmt, wird ein Fehler ausgelöst.
 
-Mit diesen Richtlinien wird sichergestellt, dass die Joinschlüssel eindeutig sind und die Sortierreihenfolge der Daten in der Quelldatei mit der Zieltabelle übereinstimmt. Die Abfrageleistung wird verbessert, da keine zusätzlichen Sortiervorgänge erforderlich sind und keine unnötigen Datenkopien angefordert werden.
+Mit diesen Richtlinien wird sichergestellt, dass die Joinschlüssel eindeutig sind und die Sortierreihenfolge der Daten in der Quelldatei mit der Zieltabelle übereinstimmt. Die Abfrageleistung wird verbessert, da zusätzliche Sortiervorgänge nicht erforderlich sind und keine nicht benötigten Datenkopien angefordert werden.
 
 ### <a name="measuring-and-diagnosing-merge-performance"></a>Messen und Diagnostizieren der MERGE-Leistung
 
@@ -393,7 +393,7 @@ Die folgenden Funktionen stehen Ihnen zur Verfügung, um die Leistung von MERGE-
 
 - Geben Sie mithilfe des merge stmt-Indikators in der dynamischen Verwaltungssicht [sys.dm_exec_query_optimizer_info](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-optimizer-info-transact-sql.md) die Anzahl von Abfrageoptimierungen für MERGE-Anweisungen zurück.
 - Geben Sie mithilfe des merge_action_type-Attributs in der dynamischen Verwaltungssicht [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md) den Typ des Triggerausführungsplans zurück, der als Ergebnis einer MERGE-Anweisung verwendet wird.
-- Erfassen Sie mit der SQL-Ablaufverfolgung auf dieselbe Weise Problembehandlungsdaten für die MERGE-Anweisung wie für andere DML-Anweisungen (Data Manipulation Language). Weitere Informationen finden Sie unter [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
+- Erfassen Sie mit der SQL-Ablaufverfolgung Problembehandlungsdaten für die MERGE-Anweisung auf dieselbe Weise wie für andere DML (Data Manipulation Language)-Anweisungen. Weitere Informationen finden Sie unter [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).
 
 ## <a name="examples"></a>Beispiele  
 
@@ -523,7 +523,7 @@ FROM @SummaryOfChanges
 GROUP BY Change;  
 ```  
   
-### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D. Einfügen der Ergebnisse der MERGE-Anweisung in eine andere Tabelle
+### <a name="d-inserting-the-results-of-the-merge-statement-into-another-table"></a>D: Einfügen der Ergebnisse der MERGE-Anweisung in eine andere Tabelle
 
 Im folgenden Beispiel werden aus der OUTPUT-Klausel einer MERGE-Anweisung zurückgegebene Daten erfasst und in eine andere Tabelle eingefügt. Die MERGE-Anweisung aktualisiert die `Quantity`-Spalte der `ProductInventory`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank täglich auf der Grundlage der Bestellungen, die in der `SalesOrderDetail`-Tabelle verarbeitet werden. In diesem Beispiel werden die aktualisierten Zeilen erfasst und in eine andere Tabelle eingefügt, in der Bestandsänderungen nachverfolgt werden.  
   

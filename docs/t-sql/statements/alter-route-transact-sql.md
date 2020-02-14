@@ -23,10 +23,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67927188"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67927188"
   Verändert die Routeninformationen für eine vorhandene Route in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -56,7 +56,7 @@ WITH
  *route_name*  
  Der Name der zu ändernden Route. Server-, Datenbank- und Schemaname können nicht angegeben werden.  
   
- mit  
+ WITH  
  Führt die Klauseln ein, die die Route definieren, die gerade geändert wird.  
   
  SERVICE_NAME **='** _service\_name_ **'**  
@@ -87,7 +87,7 @@ WHERE database_id = DB_ID();
 
  Gibt die Netzwerkadresse für diese Route an. *next_hop_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP://** { *dns_name* | *netbios_name* |*ip_address* } **:** *port_number*  
+ **TCP://** { *DNS_Name* | *NetBIOS_Name* |*IP_Adresse* } **:** *Portnummer*  
   
  Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
@@ -111,7 +111,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
  MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Gibt die Netzwerkadresse für den Spiegelserver eines gespiegelten Paars an, dessen Prinzipalserver die Adresse *next_hop_address* besitzt. *next_hop_mirror_address* gibt eine TCP/IP-Adresse mit folgendem Format an:  
   
- **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *DNS_Name* | *NetBIOS_Name* | *IP_Adresse* } **:** *Portnummer*  
   
  Der angegebene Wert für *port_number* muss mit der Portnummer für den [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Endpunkt einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf dem angegebenen Computer übereinstimmen. Dieser kann durch Ausführen der folgenden Abfrage in der ausgewählten Datenbank abgerufen werden:  
   
@@ -171,7 +171,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://10.2.19.72:1234';  
 ```  
   
-### <a name="d-changing-the-database-and-address-for-a-route"></a>D. Ändern der Datenbank und Adresse für eine Route  
+### <a name="d-changing-the-database-and-address-for-a-route"></a>D: Ändern der Datenbank und Adresse für eine Route  
  Im folgenden Beispiel wird die Netzwerkadresse für die Route `ExpenseRoute` in den TCP-Port `1234` auf dem Host mit dem DNS-Namen `www.Adventure-Works.com` geändert. Zudem wird die Zieldatenbank in die durch den eindeutigen Bezeichner `D8D4D268-00A3-4C62-8F91-634B89B1E317` identifizierte Datenbank geändert.  
   
 ```  

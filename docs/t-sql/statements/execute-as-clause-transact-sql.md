@@ -26,10 +26,10 @@ ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2dfba9eef86ab77ec114bc74712d9573fb5e4c48
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70155058"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS-Klausel (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "70155058"
   
  Durch Angeben des Kontexts, in dem das Modul ausgeführt wird, können Sie steuern, mit welchem Benutzerkonto [!INCLUDE[ssDE](../../includes/ssde-md.md)] Berechtigungen für Objekte, auf die im Modul verwiesen wird, überprüft. Dies bietet zusätzliche Flexibilität und Kontrolle bei der Verwaltung von Berechtigungen für die Objektkette, die zwischen benutzerdefinierten Modulen und den Objekten vorhanden ist, auf die von diesen Modulen verwiesen wird. Berechtigungen müssen nur Benutzern für das Modul selbst erteilt werden, ohne dass ihnen explizite Berechtigungen für die Objekte, auf die verwiesen wird, erteilt werden müssen. Nur das Benutzerkonto, unter dem das Modul ausgeführt wird, benötigt Berechtigungen für die Objekte, auf die das Modul zugreift.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -184,7 +184,7 @@ GO
   
  Verwenden Sie die Katalogsicht [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md), um die Definition des Moduls mit dem angegebenen Ausführungskontext anzuzeigen.  
   
-## <a name="best-practice"></a>Bewährte Methoden  
+## <a name="best-practice"></a>Bewährte Methode  
  Geben Sie einen Anmeldenamen oder einen Benutzer an, der die mindestens erforderlichen Privilegien zum Ausführen der im Modul definierten Vorgänge aufweist. Geben Sie z. B. kein Datenbankbesitzer-Konto an, außer diese Berechtigungen sind erforderlich.  
   
 ## <a name="permissions"></a>Berechtigungen  

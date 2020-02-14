@@ -14,17 +14,17 @@ ms.assetid: 123bb7af-1367-4bde-bfcb-76d36799b905
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: be0ff34acb9d7743ae096f8ecd2b0ad3ed8a4e28
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68089843"
 ---
 # <a name="differential-backups-sql-server"></a>Differenzielle Sicherungen (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Dieses Thema zu Sicherung und Wiederherstellung ist für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken relevant.  
   
- Eine differenzielle Sicherung basiert auf der aktuellsten, zuvor ausgeführten vollständigen Datensicherung. Mit einer differenziellen Sicherung werden nur die Daten erfasst, die sich seit dieser vollständigen Sicherung geändert haben. Die vollständige Sicherung, auf der eine differenzielle Sicherung basiert wird, wird als *Basis* der differenziellen Sicherung bezeichnet. Vollständige Sicherungen, mit Ausnahme von Kopiesicherungen, können als Basis für eine Reihe differenzieller Sicherungen dienen, einschließlich Datenbanksicherungen, Teilsicherungen und Dateisicherungen. Die Basissicherung für eine differenzielle Dateisicherung kann in einer vollständigen Sicherung, einer Dateisicherung oder einer Teilsicherung enthalten sein.  
+ Diese Sicherung basiert auf der letzten vollständigen Datensicherung. Mit einer differenziellen Sicherung werden nur die Daten erfasst, die sich seit dieser vollständigen Sicherung geändert haben. Die vollständige Sicherung, auf der eine differenzielle Sicherung basiert wird, wird als *Basis* der differenziellen Sicherung bezeichnet. Vollständige Sicherungen, mit Ausnahme von Kopiesicherungen, können als Basis für eine Reihe differenzieller Sicherungen dienen, einschließlich Datenbanksicherungen, Teilsicherungen und Dateisicherungen. Die Basissicherung für eine differenzielle Dateisicherung kann in einer vollständigen Sicherung, einer Dateisicherung oder einer Teilsicherung enthalten sein.  
   
   
 ##  <a name="Benefits"></a> Vorteile  
@@ -40,7 +40,7 @@ ms.locfileid: "68089843"
   
  In der folgenden Abbildung wird die Funktionsweise einer differenziellen Sicherung veranschaulicht. Die Abbildung zeigt 24 Datenblöcke, von denen sechs geändert wurden. Die differenzielle Sicherung enthält nur diese sechs Datenblöcke. Der differenzielle Sicherungsvorgang basiert auf einer Bitmapseite, die für jeden Block ein Bit enthält. Für jeden seit der Basissicherung aktualisierten Block wird das Bit in der Bitmap auf 1 festgelegt.  
   
- ![Differenzielle Bitmuster werden geänderte Blöcke identifiziert](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "Differential bitmap identifies changed extents")  
+ ![Das differenzielle Bitmuster identifiziert geänderte Blöcke](../../relational-databases/backup-restore/media/bnr-how-diff-backups-work.gif "Das differenzielle Bitmuster identifiziert geänderte Blöcke")  
   
 > [!NOTE]  
 >  Durch eine Kopiesicherung erfolgt keine Aktualisierung des differenziellen Bitmusters. Daher hat eine Kopiesicherung keine Auswirkungen auf die nachfolgenden differenziellen Sicherungen.  

@@ -22,10 +22,10 @@ ms.assetid: c3913c15-66aa-4b61-89b5-68488fa5f0a4
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: c4b3337be486123545a187337949da1c160343ad
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71286547"
 ---
 # <a name="coding-and-debugging-the-script-component"></a>Codieren und Debuggen der Skriptkomponente
@@ -172,9 +172,9 @@ public class ScriptMain : UserComponent
   
 |Funktion des Pakets|Zugriffsmethode|  
 |---------------------|-------------------|  
-|Variablen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Variables**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Variables**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.<br /><br /> Die **PreExecute**-Methode kann nur auf schreibgeschützte Variablen zugreifen. Die **PostExecute**-Methode kann sowohl auf schreibgeschützte Variablen als auch auf Lese-/Schreibvariablen zugreifen.|  
+|Variables|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Variables**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Variables**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.<br /><br /> Die **PreExecute**-Methode kann nur auf Variablen für den Lesezugriff zugreifen. Die **PostExecute**-Methode kann sowohl auf schreibgeschützte Variablen als auch auf Lese-/Schreibvariablen zugreifen.|  
 |Verbindungen|Verwenden Sie die benannten, typisierten Accessoreigenschaften in der **Connections**-Collectionklasse im **ComponentWrapper**-Projektelement, die über die **Connections**-Eigenschaft der **ScriptMain**-Klasse bereitgestellt werden.|  
-|Ereignisse|Ereignisse werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der **ScriptMain**-Klasse und den **Fire\<X>** -Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle ausgelöst.|  
+|Events|Ereignisse werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.ComponentMetaData%2A>-Eigenschaft der **ScriptMain**-Klasse und den **Fire\<X>** -Methoden der <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100>-Schnittstelle ausgelöst.|  
 |Protokollierung|Protokollierungen werden mit der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent.Log%2A>-Methode der **ScriptMain**-Klasse ausgeführt.|  
   
 ## <a name="debugging-the-script-component"></a>Debuggen der Skriptkomponente  

@@ -14,10 +14,10 @@ author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
-ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/25/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "72907208"
 ---
 # <a name="polygon"></a>Polygon
@@ -108,7 +108,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
 ## <a name="examples"></a>Beispiele  
 ### <a name="example-a"></a>Beispiel A.  
-Im folgenden Beispiel wird eine einfache `geometry`-Instanz des Typs `Polygon` mit einem Abstand und dem SRID 10 erstellt.
+Im folgenden Beispiel wird eine einfache `geometry`-`Polygon`-Instanz mit einem Zwischenraum und der SRID 10 erstellt.
   
 ```sql  
 DECLARE @g geometry;  
@@ -153,7 +153,7 @@ SET @g = @g.MakeValid();
 SELECT @g.ToString()  
 ```  
   
-Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()` `LINESTRING(1 3, 1 5)`zurück.  
+Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()``LINESTRING(1 3, 1 5)`zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [STArea &#40;geometry-Datentyp&#41;](../../t-sql/spatial-geometry/starea-geometry-data-type.md)   

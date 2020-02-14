@@ -18,10 +18,10 @@ ms.assetid: 84785aba-b2c1-4821-9e9d-a363c73dcb37
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: db49332ec2710586e9cae23c3e41ee4aff42b486
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68136968"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation
@@ -30,7 +30,7 @@ ms.locfileid: "68136968"
   
 -   Synchronisieren von Daten mobiler Benutzer über das Internet.  
   
--   Synchronisieren von Daten zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken über eine Unternehmensfirewall hinweg.  
+-   Synchronisieren von Daten zwischen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken über eine Unternehmensfirewall hinweg.  
   
  Ein Außendienstmitarbeiter kann z. B. die Websynchronisierung verwenden. Einige Vertriebsmitarbeiter des Unternehmens, [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)], besuchen verschiedene Geschäfte und Lieferanten in ihren jeweiligen Regionen. Bei längeren Reisen übernachten die Mitarbeiter in Hotels und benötigen am Ende jeden Tages eine praktische Möglichkeit zum Hochladen der Verkaufsdaten und Herunterladen eventueller Produktupdates.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68136968"
   
  Die folgende Abbildung zeigt einige Komponenten der Websynchronisierung für die Mergereplikation.  
   
- ![Komponenten und Datenfluss für Websynchronisierung](../../relational-databases/replication/media/web-sync01.gif "Web synchronization components and data flow")  
+ ![Komponenten und Datenfluss für die Websynchronisierung](../../relational-databases/replication/media/web-sync01.gif "Komponenten und Datenfluss für die Websynchronisierung")  
   
  Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Mit dem **–InternetUrl** -Parameter für den Merge-Agent wird der Standort des Computers mit IIS angegeben.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "68136968"
   
  Für alle Computer, die an einer Websynchronisierung teilnehmen, ist[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder eine höhere Version erforderlich.  
   
-### <a name="synchronization-process"></a>Synchronisierungsprozess  
+### <a name="synchronization-process"></a>Synchronisierungsvorgang  
  Die folgenden Schritte erfolgen bei der Synchronisierung:  
   
 1.  Der Merge-Agent wird auf dem Abonnenten gestartet. Dieser Agent führt die folgenden Aufgaben aus:  
@@ -83,6 +83,6 @@ ms.locfileid: "68136968"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren der Websynchronisierung](../../relational-databases/replication/configure-web-synchronization.md)   
- [Topologies for Web Synchronization](../../relational-databases/replication/topologies-for-web-synchronization.md)  
+ [Topologien für die Websynchronisierung](../../relational-databases/replication/topologies-for-web-synchronization.md)  
   
   

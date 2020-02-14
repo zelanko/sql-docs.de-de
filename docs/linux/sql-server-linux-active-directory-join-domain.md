@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 9bc52bc1708d4ca6e06e5cc78399e12615860d27
-ms.sourcegitcommit: 792c7548e9a07b5cd166e0007d06f64241a161f8
+ms.openlocfilehash: 5999a50e793cb29ea67075d0fa36454cdb58a67d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 12/19/2019
-ms.locfileid: "75224505"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761874"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Verknüpfen eines Hosts für SQL Server für Linux mit einer Active Directory-Domäne
 
@@ -27,7 +27,7 @@ Dieser Artikel enthält allgemeine Anleitungen zum Verknüpfen eines Hostcompute
 Bevor Sie die Active Directory-Authentifizierung konfigurieren können, müssen Sie einen Active Directory-Domänencontroller (Windows) für Ihr Netzwerk einrichten. Verknüpfen Sie dann Ihren Host für SQL Server für Linux mit einer Active Directory-Domäne.
 
 > [!IMPORTANT]
-> Die in diesem Artikel beschriebenen Beispielschritte dienen nur zur Veranschaulichung. Die tatsächlichen Schritte können sich je nach Konfiguration Ihrer gesamten Umgebung geringfügig unterscheiden. Setzen Sie sich mit den System- und Domänenadministratoren für Ihre Umgebung in Verbindung, um genaue Informationen zur Konfiguration, Anpassung und zur Behandlung von möglicherweise auftretenden Problemen zu erhalten.
+> Die in diesem Artikel beispielhaft beschriebenen Schritte dienen lediglich zur Orientierung und beziehen sich auf die Betriebssysteme Ubuntu 16.04, Red Hat Enterprise Linux (RHEL) 7.x und SUSE Enterprise Linux (SLES) 12. Die tatsächlichen Schritte können sich je nach Konfiguration Ihrer gesamten Umgebung und Version des Betriebssystems geringfügig unterscheiden. So verwendet Ubuntu 18.04 als Tool für die Netzwerkverwaltung und -konfiguration beispielsweise Netplan, während Red Hat Enterprise Linux (RHEL) 8.x unter anderem nmcli verwendet. Es wird empfohlen, dass Sie sich mit den System- und Domänenadministratoren für Ihre Umgebung in Verbindung setzen, um genaue Informationen zu Tools, Konfiguration und Anpassung sowie zur Behandlung von möglicherweise auftretenden Problemen zu erhalten.
 
 ## <a name="check-the-connection-to-a-domain-controller"></a>Überprüfen der Verbindung mit einem Domänencontroller
 
@@ -43,7 +43,7 @@ ping contoso.com
 
 Wenn eine dieser Namensprüfungen fehlschlägt, aktualisieren Sie Ihre Domänensuchliste. In den folgenden Abschnitten finden Sie Anweisungen für Ubuntu, Red Hat Enterprise Linux (RHEL) und SuSE Linux Enterprise Server (SLES).
 
-### <a name="ubuntu"></a>Ubuntu
+### <a name="ubuntu-1604"></a>Ubuntu 16.04
 
 1. Bearbeiten Sie die Datei **/etc/network/interfaces** so, dass Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird:
 
@@ -71,7 +71,7 @@ Wenn eine dieser Namensprüfungen fehlschlägt, aktualisieren Sie Ihre Domänens
    nameserver **<AD domain controller IP address>**
    ```
 
-### <a name="rhel"></a>RHEL
+### <a name="rhel-7x"></a>RHEL 7.x
 
 1. Bearbeiten Sie die Datei **/etc/sysconfig/network-scripts/ifcfg-eth0** so, dass Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird. Stattdessen können Sie auch eine andere Konfigurationsdatei entsprechend bearbeiten:
 
@@ -100,7 +100,7 @@ Wenn eine dieser Namensprüfungen fehlschlägt, aktualisieren Sie Ihre Domänens
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
    ```
 
-### <a name="sles"></a>SLES
+### <a name="sles-12"></a>SLES 12
 
 1. Bearbeiten Sie die Datei **/etc/sysconfig/network/config** so, dass die IP-Adresse des Active Directory-Domänencontrollers für DNS-Abfragen verwendet und Ihre Active Directory-Domäne in die Domänensuchliste aufgenommen wird:
 
@@ -178,7 +178,7 @@ Führen Sie die folgenden Schritte aus, um einen SQL Server-Host mit einer Acti
 
    SQL Server verwendet SSSD und NSS, um Benutzerkonten und Gruppen Sicherheits-IDs zuzuordnen. SSSD muss konfiguriert sein und ausgeführt werden, damit SQL Server erfolgreich Anmeldeinformationen für AD erstellen kann. **realmd** tut dies in der Regel zwar automatisch beim Domänenbeitritt, aber in einigen Fällen müssen Sie sich selbst darum kümmern.
 
-   Weitere Informationen finden Sie unter [Manuelles Konfigurieren von SSSD](https://access.redhat.com/articles/3023951) und [Konfigurieren von NSS für SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Weitere Informationen finden Sie unter [Manuelles Konfigurieren von SSSD](https://access.redhat.com/articles/3023951) und [Konfigurieren von NSS für SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Überprüfen Sie, ob Sie jetzt über die Domäne Informationen zum Benutzer erfassen und als dieser Benutzer ein Kerberos-Ticket abrufen können. Im folgenden Beispiel werden dafür die Befehle **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) und [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) verwendet.
 

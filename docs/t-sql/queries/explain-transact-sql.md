@@ -11,17 +11,17 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: af27b58b2e4dd1f5e5b743e4a905dfee8cebc497
-ms.sourcegitcommit: baa40306cada09e480b4c5ddb44ee8524307a2ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/06/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73659422"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  Gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung an, ohne die Anweisung auszuführen. Verwenden Sie EXPLAIN, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen. `WITH RECOMMENDATIONS` gilt für Azure SQL Data Warehouse (Vorschau).
+  Dieser Befehl gibt den Abfrageplan für eine [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)]-Anweisung zurück, ohne die Anweisung auszuführen. Verwenden Sie EXPLAIN, um eine Vorschau der Vorgänge zu erhalten, die Datenverschiebungen erfordern, und um die ungefähren Kosten der Abfragevorgänge anzuzeigen. `WITH RECOMMENDATIONS` gilt für Azure SQL Data Warehouse (Vorschau).
   
  Weitere Informationen zu Abfrageplänen finden Sie unter „Understanding Query Plans“ (Informationen zu Abfrageplänen) in der [!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)].  
   
@@ -81,7 +81,7 @@ Gibt den Abfrageplan mit Empfehlungen zur Leistungsoptimierung der SQL-Anweisung
 |--------------------|-------------|-------------|  
 |BROADCAST_MOVE, DISTRIBUTE_REPLICATED_TABLE_MOVE, MASTER_TABLE_MOVE, PARTITION_MOVE, SHUFFLE_MOVE und TRIM_MOVE|`<operation_cost>`-Element mit diesen Attributen. Die Werte spiegeln nur den lokalen Vorgang wieder:<br /><br /> -   *cost* sind die Kosten für den lokalen Operator und zeigen die geschätzte Zeit für die Ausführung des Vorgangs in Millisekunden an.<br />-   *accumulative_cost* ist die Summe aller betrachteten Vorgänge im Plan einschließlich der addierten Werte für parallele Vorgänge in Millisekunden.<br />-   *average_rowsize* ist die geschätzte durchschnittliche Zeilengröße von Zeilen (in Byte), die während des Vorgangs abgerufen und übergeben werden.<br />-   *output_rows* ist die Ausgabekardinalität (Knoten) und zeigt die Anzahl der ausgegebenen Zeilen an.<br /><br /> `<location>`: Die Knoten oder Verteilungen, in denen der Vorgang stattfindet. Folgende Optionen sind verfügbar: „Control“, „ComputeNode“, „AllComputeNodes“, „AllDistributions“, „SubsetDistributions“, „Distribution“ und „SubsetNodes“.<br /><br /> `<source_statement>`: Die Quelldaten für den SHUFFLE_MOVE-Vorgang.<br /><br /> `<destination_table>`: Die interne temporäre Tabelle, in die die Daten verschoben werden.<br /><br /> `<shuffle_columns>`: (Gilt nur für SHUFFLE_MOVE-Vorgänge). Eine oder mehrere Spalten, die als Verteilungsspalten für die temporäre Tabelle verwendet werden.|`<operation_cost cost="40" accumulative_cost="40" average_rowsize = "50" output_rows="100"/>`<br /><br /> `<location distribution="AllDistributions" />`<br /><br /> `<source_statement type="statement">SELECT [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d].[dist_date] FROM [qatest].[dbo].[flyers] [TableAlias_3b77ee1d8ccf4a94ba644118b355db9d]       </source_statement>`<br /><br /> `<destination_table>Q_[TEMP_ID_259]_[PARTITION_ID]</destination_table>`<br /><br /> `<shuffle_columns>dist_date;</shuffle_columns>`|  
 |MetaDataCreate_Operation|`<source_table>`: Die Quelltabelle für den Vorgang.<br /><br /> `<destination_table>`: Die Zieltabelle für den Vorgang.|`<source_table>databases</source_table>`<br /><br /> `<destination_table>MetaDataCreateLandingTempTable</destination_table>`|  
-|ON|`<location>`: Siehe `<location>` weiter oben.<br /><br /> `<sql_operation>`: Identifiziert den SQL-Befehl, der auf einem Knoten ausgeführt wird.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
+|EIN|`<location>`: Siehe `<location>` weiter oben.<br /><br /> `<sql_operation>`: Identifiziert den SQL-Befehl, der auf einem Knoten ausgeführt wird.|`<location permanent="false" distribution="AllDistributions">Compute</location>`<br /><br /> `<sql_operation type="statement">CREATE TABLE [tempdb].[dbo]. [Q_[TEMP_ID_259]]_ [PARTITION_ID]]]([dist_date] DATE) WITH (DISTRIBUTION = HASH([dist_date]),) </sql_operation>`|  
 |RemoteOnOperation|`<DestinationCatalog>`: Der Zielkatalog.<br /><br /> `<DestinationSchema>`: Das Zielschema in DestinationCatalog.<br /><br /> `<DestinationTableName>`: Name der Zieltabelle oder „TableName“.<br /><br /> `<DestinationDatasource>`: Der Name der Zieldatenquelle.<br /><br /> `<Username>` und `<Password>`: Diese Felder geben an, dass möglicherweise Benutzername und Kennwort für das Ziel erforderlich sind.<br /><br /> `<CreateStatement>`: Die Anweisung zum Erstellen der Tabelle für die Zieldatenbank.|`<DestinationCatalog>master</DestinationCatalog>`<br /><br /> `<DestinationSchema>dbo</DestinationSchema>`<br /><br /> `<DestinationTableName>TableName</DestinationTableName>`<br /><br /> `<DestinationDatasource>DestDataSource</DestinationDatasource>`<br /><br /> `<Username>...</Username>`<br /><br /> `<Password>...</Password>`<br /><br /> `<CreateStatement>CREATE TABLE [master].[dbo].[TableName] ([col1] BIGINT) ON [PRIMARY] WITH(DATA_COMPRESSION=PAGE);</CreateStatement>`|  
 |RETURN|`<resultset>`: Der Bezeichner für das Resultset.|`<resultset>RS_19</resultset>`|  
 |RND_ID|`<identifier>`: Der Bezeichner für das erstellte Objekt.|`<identifier>TEMP_ID_260</identifier>`|  
@@ -615,7 +615,7 @@ FROM   (SELECT CONVERT (INT, [T2_1].[col], 0) AS [col]
 </dsql_query>
 ```
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CREATE MATERIALIZED VIEW AS SELECT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-materialized-view-as-select-transact-sql?view=azure-sqldw-latest)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   

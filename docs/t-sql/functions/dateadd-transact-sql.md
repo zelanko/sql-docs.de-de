@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed302e9361e46b8403cea168201fc6cadaa17986
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68026193"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
@@ -40,7 +40,7 @@ Diese Funktion fügt einen angegebenen *number*-Wert (als ganze Zahl mit Vorzeic
   
 Unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md) finden Sie eine Übersicht über alle [!INCLUDE[tsql](../../includes/tsql-md.md)] Datums- und Uhrzeitdatentypen und zugehörige Funktionen.
   
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntax  
   
@@ -71,7 +71,7 @@ Der Teil des *date*-Werts, zu dem `DATEADD` einen **ganzzahligen** *number*-Wert
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
   
-*number*  
+*Zahl*  
 Ein Ausdruck, der in einen [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)-Wert aufgelöst werden kann, den `DATEADD` zu einem *datepart*-Argument von *date* hinzufügt. `DATEADD` akzeptiert für *number* benutzerdefinierte Variablenwerte. `DATEADD` schneidet einen angegebenen *number*-Wert ab, wenn dieser einen Dezimalbruch aufweist. In diesem Fall wird der *number*-Wert nicht gerundet.
   
 *date*  
@@ -127,7 +127,7 @@ SELECT DATEADD(year,-2147483647, '20060731');
 ```  
   
 ## <a name="return-values-for-a-smalldatetime-date-and-a-second-or-fractional-seconds-datepart"></a>Rückgabewerte für ein Datum vom Typ smalldatetime und einen datepart-Wert in Sekunden oder Sekundenbruchteilen  
-Die Sekundenangabe eines [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)-Werts ist immer 00. Bei dem **smalldatetime**-Wert *date* gilt Folgendes: 
+Die Sekundenangabe eines [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)-Werts ist immer 00. Für einen **smalldatetime**-*date*-Wert gilt Folgendes: 
 
 -   Bei dem *datepart*-Wert **second** und einem *number*-Wert zwischen -30 und +29 nimmt `DATEADD` keine Änderungen vor.  
 -   Bei dem *datepart*-Wert **second** und einem *number*-Wert, der niedriger als -30 oder höher als +29 ist, beginnt `DATEADD` bei einer Minute mit der Hinzufügung.  
@@ -368,7 +368,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [CAST und CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
   
   

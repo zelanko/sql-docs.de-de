@@ -21,10 +21,10 @@ ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68212740"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>Zertifikatverwaltung (SQL Server-Konfigurations-Manager)
@@ -45,7 +45,7 @@ SSL/TLS-Zertifikate werden oft dazu verwendet, den Zugriff auf SQL Server zu sic
   
 1. Erweitern Sie im SQL Server-Konfigurations-Manager im Konsolenbereich den Knoten **SQL Server-Netzwerkkonfiguration**.  
   
-2. Klicken Sie mit der rechten Maustaste auf **Protokolle für** *&lt;Instanzname&gt;* und dann auf **Eigenschaften**.  
+2. Klicken Sie mit der rechten Maustaste auf **Protokolle für** *&lt;Instanzname&gt;* , und klicken Sie dann auf **Eigenschaften**.  
   
 3. Wählen Sie die Registerkarte **Zertifikat** und anschließend **Importieren** aus.  
   
@@ -58,7 +58,7 @@ SSL/TLS-Zertifikate werden oft dazu verwendet, den Zugriff auf SQL Server zu sic
   
 1. Erweitern Sie im SQL Server-Konfigurations-Manager im Konsolenbereich den Knoten **SQL Server-Netzwerkkonfiguration**.
   
-2. Klicken Sie mit der rechten Maustaste auf **Protokolle für** *&lt;Instanzname&gt;* und dann auf **Eigenschaften**. 
+2. Klicken Sie mit der rechten Maustaste auf **Protokolle für** *&lt;Instanzname&gt;* , und klicken Sie dann auf **Eigenschaften**. 
 
 3. Wählen Sie die Registerkarte **Zertifikat** und anschließend **Importieren** aus.
 
@@ -81,7 +81,7 @@ SSL/TLS-Zertifikate werden oft dazu verwendet, den Zugriff auf SQL Server zu sic
   
 1. Erweitern Sie im SQL Server-Konfigurations-Manager im Konsolenbereich den Knoten **SQL Server-Netzwerkkonfiguration**.
   
-2. Klicken Sie mit der rechten Maustaste auf **Protokolle für** *&lt;Instanzname&gt;* und dann auf **Eigenschaften**.  
+2. Klicken Sie mit der rechten Maustaste auf **Protokolle für** *&lt;Instanzname&gt;* , und klicken Sie dann auf **Eigenschaften**.  
   
 3. Wählen Sie die Registerkarte **Zertifikat** und anschließend **Importieren** aus.  
   

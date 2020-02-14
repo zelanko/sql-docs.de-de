@@ -11,10 +11,10 @@ ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71283014"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Lektion 6.4: Bereitstellen des Pakets aus Lektion 6
@@ -60,13 +60,13 @@ Diese Aufgabe umfasst folgende Schritte:
   
 3.  Erweitern Sie den Ordner **SSIS-Tutorial**, klicken Sie mit der rechten Maustaste auf **Projekte** und dann auf **Pakete importieren**.  
   
-4.  Klicken Sie auf der Seite **Einführung** des **Assistenten zum Konvertieren von Integration Services-Projekten** auf **Weiter**.  
+4.  Klicken Sie auf der Seite **Einführung**des**Assistenten zum Konvertieren von Integration Services-Projekten** auf **Weiter**.  
   
 5.  Stellen Sie auf der Seite **Pakete suchen** sicher, dass das **Dateisystem** in der Liste **Quelle** ausgewählt ist, und klicken Sie auf **Durchsuchen**.  
   
 6.  Navigieren Sie im Dialogfeld **Nach Ordner suchen** zum Ordner mit dem Projekt „SSIS-Tutorial“, und klicken Sie dann auf **OK**.  
   
-7.  Wählen Sie **Weiter**aus.  
+7.  Wählen Sie **Weiter** aus.  
   
 8.  Auf der Seite „Pakete auswählen“ sollten alle sechs Pakete aus dem SSIS-Tutorial angezeigt werden. Wählen Sie in der Liste **Pakete** die Datei **Lesson 6.dtsx** aus, und klicken Sie dann auf **Weiter**.  
   

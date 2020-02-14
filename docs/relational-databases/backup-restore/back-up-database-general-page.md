@@ -13,10 +13,10 @@ ms.assetid: 5c344dfd-1ad3-41cc-98cd-732973b4a162
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e3bbac9bbdc12e5f2c1a0fb318a91860e44131d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67940923"
 ---
 # <a name="back-up-database-general-page"></a>Datenbank sichern (Seite Allgemein)
@@ -26,7 +26,7 @@ ms.locfileid: "67940923"
  Weitere Informationen zu grundlegenden Sicherungskonzepten finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-[BACKUP](../../t-sql/statements/backup-transact-sql.md)-Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
  **So verwenden Sie SQL Server Management Studio zum Erstellen einer Sicherung**  
   
@@ -39,11 +39,11 @@ ms.locfileid: "67940923"
   
  **So erstellen Sie eine Teilsicherung**  
   
--   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](../../t-sql/statements/backup-transact-sql.md) -Anweisung mit der Option PARTIAL verwenden.  
+-   Für eine Teilsicherung müssen Sie die [BACKUP](../../t-sql/statements/backup-transact-sql.md)-Anweisung ([!INCLUDE[tsql](../../includes/tsql-md.md)]) mit der Option PARTIAL verwenden.  
   
-## <a name="options"></a>enthalten  
+## <a name="options"></a>Tastatur  
   
-### <a name="source"></a>Quelle  
+### <a name="source"></a>`Source`  
  Mithilfe der Optionen des Bereichs **Quelle** werden die Datenbank identifiziert und der Sicherungstyp und die Sicherungskomponente für den Sicherungsvorgang angegeben.  
   
  **Datenbank**  
@@ -55,7 +55,7 @@ ms.locfileid: "67940923"
  **Sicherungstyp**  
  Wählen Sie den Sicherungstyp aus, der für die angegebene Datenbank ausgeführt werden soll.  
   
-|Sicherungstyp|Verfügbar für|Restrictions|  
+|Sicherungstyp|Verfügbar für|Beschränkungen|  
 |-----------------|-------------------|------------------|  
 |Vollständig|Datenbanken, Dateien und Dateigruppen|Bei der **master** -Datenbank sind nur vollständige Sicherungen möglich.<br /><br /> Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
 |Differenziell|Datenbanken, Dateien und Dateigruppen|Beim einfachen Wiederherstellungsmodell sind Datei- und Dateigruppensicherungen nur für schreibgeschützte Dateigruppen verfügbar.|  
@@ -77,7 +77,7 @@ ms.locfileid: "67940923"
 |**Datenbank**|Gibt an, dass die gesamte Datenbank gesichert werden soll.|  
 |**Dateien und Dateigruppen**|Gibt an, dass die angegebenen Dateien und/oder Dateigruppen gesichert werden sollen.<br /><br /> Durch das Auswählen dieser Option wird das Dialogfeld **Dateien und Dateigruppen auswählen** geöffnet. Nach dem Auswählen der zu sichernden Dateigruppen oder Dateien und dem Klicken auf **OK**wird die Auswahl im Feld **Dateien und Dateigruppen** angezeigt.|  
   
-### <a name="destination"></a>Ziel  
+### <a name="destination"></a>Destination  
  Mit den Optionen des Bereichs **Ziel** können Sie den Typ des Sicherungsmediums für den Sicherungsvorgang angeben und ein vorhandenes logisches oder physisches Sicherungsmedium suchen.  
   
 > [!NOTE]  
@@ -94,15 +94,15 @@ ms.locfileid: "67940923"
   
  Welche Optionen als Nächstes angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. Wenn Sie einen Datenträger oder ein Band auswählen, werden die folgenden Optionen angezeigt:  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügt der Liste **Sichern auf** eine Datei oder ein Medium hinzu. Sie können auf 64 Medien gleichzeitig auf einem lokalen Datenträger oder Remotedatenträger sichern. Verwenden Sie den vollqualifizierten UNC-Namen (Universal Naming Convention), um eine Datei auf einem Remotedatenträger anzugeben. Weitere Informationen finden Sie unter [Sicherungsmedien &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)aufgezeichnet wurde.  
  
  
   
- **Entfernen**  
+ **Remove**  
  Entfernt mindestens ein aktuell ausgewähltes Medium aus der Liste **Sichern auf** .  
   
- **Inhalt**  
+ **Contents**  
 Zeigt den Medieninhalt des ausgewählten Mediums an, sofern es vorhanden ist.  Die Schaltfläche führt keine Funktion aus, wenn eine **URL** angegeben ist. 
    
 Dialogfeld**Sicherungsziel auswählen** : Das Dialogfeld **Sicherungsziel auswählen** wird angezeigt, nachdem Sie die Option **Hinzufügen**auswählen.   Welche Optionen angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. 

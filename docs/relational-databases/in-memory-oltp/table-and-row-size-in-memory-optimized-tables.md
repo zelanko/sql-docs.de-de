@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a3d52368ac0eaeba118d0ba6e7abc88ef5e69db9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063142"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Tabellen- und Zeilengröße in speicheroptimierten Tabellen
@@ -39,7 +39,7 @@ Es gibt bestimmte Szenarios, in denen es nützlich ist, die Größe der Zeile un
 
 Eine speicheroptimierte Tabelle besteht aus einer Auflistung von Zeilen und Indizes, die Zeiger auf die Zeilen enthalten. Die folgende Abbildung zeigt eine Tabelle mit Indizes und Zeilen, die wiederum Zeilenüberschriften und Text enthalten:  
   
-![Speicheroptimierte Tabelle](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Speicheroptimierte Tabelle")  
+![Speicheroptimierte Tabelle.](../../relational-databases/in-memory-oltp/media/hekaton-guide-1.gif "Speicheroptimierte Tabelle")  
 Speicheroptimierte Tabelle, bestehend aus Indizes und Zeilen.  
 
 ##  <a name="bkmk_TableSize"></a> Berechnen der Tabellengröße
@@ -73,13 +73,13 @@ Die Zeilengröße wird berechnet, indem die Überschrift und der Text addiert we
   
 Die folgende Abbildung veranschaulicht die Zeilenstruktur für eine Tabelle mit zwei Indizes:  
   
-![Zeilenstruktur für eine Tabelle mit zwei Indizes.](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Row structure for a table that has two indexes.")  
+![Zeilenstruktur für eine Tabelle, die zwei Indizes umfasst](../../relational-databases/in-memory-oltp/media/hekaton-tables-4.gif "Zeilenstruktur für eine Tabelle, die zwei Indizes umfasst")  
   
 Die Zeitstempel für Beginn und Ende geben den Zeitraum an, in dem eine bestimmte Zeilenversion gültig ist. Für Transaktionen, die in diesem Intervall beginnen, ist diese Zeilenversion sichtbar. Weitere Informationen finden Sie unter [Transaktionen mit speicheroptimierten Tabellen](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md).  
   
 Die Indexzeiger zeigen auf die nächste Zeile in der Kette, die dem Hashbucket angehört. Die folgende Abbildung veranschaulicht die Struktur einer Tabelle mit zwei Spalten (Name, Ort) und mit zwei Indizes: einem für den Spaltennamen und einen für den Spaltenort.  
   
-![Die Struktur einer Tabelle mit zwei Spalten und Indizes.](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Structure of a table with two columns and indexes.")  
+![Struktur einer Tabelle mit zwei Spalten und Indizes](../../relational-databases/in-memory-oltp/media/hekaton-tables-5.gif "Struktur einer Tabelle mit zwei Spalten und Indizes")  
   
 In dieser Abbildung werden die Namen John und Jane zum ersten Hashbucket hinzugefügt. Susan wird dem zweiten Hashbucket hinzugefügt. Die Städte Beijing (Peking) und Bogota werden dem ersten Hashbucket hinzugefügt. Paris und Prag werden dem zweiten Hashbucket hinzugefügt.  
   
@@ -99,14 +99,14 @@ Ein ∞-Endzeitstempel (unendlich) bedeutet, dass es sich um die derzeit gültig
   
 Eine Zeit, die größer als 200 ist, enthält die Tabelle die folgenden Zeilen:  
   
-|Name|Ort|  
+|Name|City|  
 |----------|----------|  
-|John|Beijing (Peking)|  
+|John|Peking (Beijing)|  
 |Jane|Prag|  
   
 Allerdings wird jeder aktiven Transaktion mit Anfangszeit 100 die folgende Version der Tabelle angezeigt:  
   
-|Name|Ort|  
+|Name|City|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prag|  
@@ -124,14 +124,14 @@ Es gibt zwei verschiedene Berechnungen für die Zeilentextgröße: die berechnet
   
 In der folgenden Tabelle wird die Berechnung der Zeilentextgröße beschrieben, die wie folgt angegeben wird: *actual row body size* = SUM(*size of shallow types*) + 2 + 2 * *number of deep type columns*.  
   
-|Abschnitt|Größe|Kommentare|  
+|`Section`|Size|Kommentare|  
 |-------------|----------|--------------|  
 |Spalten flacher Typen|SUM([Größe flacher Typen]) Die Größe (in Bytes) der einzelnen Typen lautet wie folgt:<br /><br /> **Bit**: 1<br /><br /> **tinyint**: 1<br /><br /> **Smallint**: 2<br /><br /> **Int**: 4<br /><br /> **Real**: 4<br /><br /> **Smalldatetime**: 4<br /><br /> **Smallmoney**: 4<br /><br /> **Bigint**: 8<br /><br /> **Datetime**: 8<br /><br /> **Datetime2**: 8<br /><br /> **Float**: 8<br /><br /> **Money**: 8<br /><br /> **Numeric** (Genauigkeit <=18): 8<br /><br /> **Time**: 8<br /><br /> **Numeric**(Genauigkeit>18): 16<br /><br /> **Uniqueidentifier**: 16||  
-|Auffüllung flacher Spalten|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Offsetarray für Spalten tiefer Typen|Folgende Werte sind möglich:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Auffüllung flacher Spalten|Mögliche Werte:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die gesamte Datengröße der flachen Spalten eine ungerade Zahl darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Offsetarray für Spalten tiefer Typen|Mögliche Werte:<br /><br /> 0, wenn keine Spalten tiefer Typen vorhanden sind<br /><br /> 2 + 2 * [number of deep type columns] andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |NULL-Array|[number of nullable columns] / 8, aufgerundet auf vollständige Bytes.|Das Array verfügt über ein Bit pro Spalte, die NULL zulässt. Dies wird auf vollständige Bytes aufgerundet.|  
-|NULL-Arrayauffüllung|Folgende Werte sind möglich:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
-|Auffüllung|Wenn keine Spalten tiefer Typen vorhanden sind: 0 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|NULL-Arrayauffüllung|Mögliche Werte:<br /><br /> 1, wenn Spalten tiefer Typen vorhanden sind und die Größe des NULL-Arrays eine ungerade Anzahl von Bytes darstellt.<br /><br /> 0 andernfalls|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
+|Auffüllen|Wenn keine Spalten tiefer Typen vorhanden sind: 0 0<br /><br /> Wenn Spalten tiefer Typen vorhanden sind, wird eine 0-7-Byte-Auffüllung hinzugefügt, basierend auf der größten Ausrichtung, die für eine flache Spalte erforderlich ist. Jede flache Spalte erfordert eine Ausrichtung gleich ihrer Größe, wie oben beschrieben. Nur GUID-Spalten erfordern eine Ausrichtung von einem Byte (nicht 16) und numerische Spalten immer eine Ausrichtung von 8 Bytes (nie 16). Die größte Ausrichtungsanforderung unter allen flachen Spalten wird verwendet, und eine 0-7-Byte-Auffüllung wird so hinzugefügt, dass die bisherige Gesamtgröße (ohne die Spalten tiefer Typen) ein Vielfaches der erforderlichen Ausrichtung ergibt.|Tiefe Typen sind die Typen (var)binary und (n)(var)char.|  
 |Spalten tiefer Typen mit fester Länge|SUM(*size of fixed length deep type columns*)<br /><br /> Die Größe jeder Spalte lautet wie folgt:<br /><br /> i für char(i) und binary(i).<br /><br /> 2 * i für nchar(i)|Spalten tiefer Typen mit fester Länge sind Spalten des Typs char(i), nchar(i) oder binary(i).|  
 |Spalten tiefer Typen mit variabler Länge *computed size*|SUM(*computed size of variable length deep type columns*)<br /><br /> Die berechnete Größe jeder Spalte lautet wie folgt:<br /><br /> i für varchar(i) und varbinary(i)<br /><br /> 2 * i für nvarchar(i)|Diese Zeile wird nur auf *computed row body size* angewendet.<br /><br /> Spalten tiefer Typen mit variabler Länge sind Spalten des Typs varchar(i), nvarchar(i) oder varbinary(i). Die berechnete Größe wird durch die maximale Länge (i) der Spalte bestimmt.|  
 |Spalten tiefer Typen mit variabler Länge *actual size*|SUM(*actual size of variable length deep type columns*)<br /><br /> Die tatsächliche Größe jeder Spalte lautet wie folgt:<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für varchar(i).<br /><br /> 2 * n, wobei n der Anzahl der in der Spalte gespeicherten Zeichen entspricht; für nvarchar(i).<br /><br /> n, wobei n der Anzahl der in der Spalte gespeicherten Bytes ist; für varbinary(i).|Diese Zeile wird nur auf *actual row body size* angewendet.<br /><br /> Die tatsächliche Größe wird durch die Daten bestimmt, die in den Spalten der Zeile gespeichert werden.|   
@@ -194,7 +194,7 @@ Als Nächstes berechnen wir [actual row body size]:
   
 -   NULL-Arrayauffüllung = 1, da die NULL-Arraygröße ungerade ist und eine Spalte tiefen Typs vorhanden ist.  
   
--   Auffüllung  
+-   Auffüllen  
   
     -   8 ist die größte Ausrichtungsanforderung.  
   

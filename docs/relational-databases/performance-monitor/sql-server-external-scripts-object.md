@@ -16,10 +16,10 @@ ms.assetid: 8a75ccce-b174-4937-bc92-8e413b55afe1
 author: julieMSFT
 ms.author: jrasnick
 ms.openlocfilehash: 36093a4cd91943b3db214dcb9cdeb55bda7399c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68093500"
 ---
 # <a name="sql-server-external-scripts-object"></a>SQL Server, Externes Skript-Objekt
@@ -27,9 +27,9 @@ ms.locfileid: "68093500"
 
   Das **SQLServer:Externes Skript** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren zum Überwachen der Aktionen in Verbindung mit der Ausführung externer Skripts bereit. Informationen zum Ausführen von externen Skripts finden Sie unter [sp_execute_external_script &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).  
   
- Diese Tabelle beschreibt die Leistungsindikatoren für **externe Skripts** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ In dieser Tabelle werden die **External Scripts**-Zähler in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschrieben.  
   
-|Leistungsindikatoren für externe SQL Server-Skripts|und Beschreibung|  
+|Leistungsindikatoren für externe SQL Server-Skripts|Beschreibung|  
 |------------------------------------------|-----------------|  
 |**Execution Errors**|Die Anzahl von Fehlern beim Ausführen externer Skripts.|  
 |**Implied Auth. Anmeldungen**|Die Anzahl von Anmeldungen über Satellitenprozesse, die über die implizite Authentifizierung authentifiziert wurden.|  

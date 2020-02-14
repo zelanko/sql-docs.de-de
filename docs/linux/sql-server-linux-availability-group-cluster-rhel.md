@@ -5,17 +5,17 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: bf888d42215f3a4ee7c44b782b82c55f85afa041
-ms.sourcegitcommit: 21e6a0c1c6152e625712a5904fce29effb08a2f9
+ms.openlocfilehash: be817f1fffd734dcf86f3b35d3215decbc9eb28d
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75884037"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76706287"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Konfigurieren von RHEL-Clustern für eine SQL Server-Verfügbarkeitsgruppe
 
@@ -50,7 +50,7 @@ Die Schritte zum Erstellen einer Verfügbarkeitsgruppe auf Linux-Servern für Ho
    
    >Ein Linux-Cluster verwendet Fencing, um den Cluster in einen bekannten Zustand zurückzusetzen. Wie das Fencing konfiguriert wird, hängt von der Verteilung und der Umgebung ab. Derzeit ist Fencing in einigen Cloudumgebungen nicht verfügbar. Weitere Informationen finden Sie unter [Supportrichtlinien für RHEL-Hochverfügbarkeitscluster – Virtualisierungsplattformen](https://access.redhat.com/articles/29440).
 
-5. [Fügen Sie die Verfügbarkeitsgruppe als Ressource im Cluster hinzu](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+4. [Fügen Sie die Verfügbarkeitsgruppe als Ressource im Cluster hinzu](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## <a name="configure-high-availability-for-rhel"></a>Konfigurieren der Hochverfügbarkeit für RHEL
 
@@ -84,8 +84,16 @@ Jeder Knoten im Cluster muss über ein entsprechendes Abonnement für RHEL und d
 
 1. Aktivieren Sie das Repository.
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 Weitere Informationen finden Sie unter [Pacemaker – der hochverfügbare Open-Source-Cluster](https://clusterlabs.org/pacemaker/). 
@@ -161,12 +169,19 @@ Weitere Informationen zu Pacemaker-Clustereigenschaften finden Sie unter [Pacema
 
 Verwenden Sie den Befehl `pcs resource create`, und legen Sie die Ressourceneigenschaften fest, um die Verfügbarkeitsgruppenressource zu erstellen. Mit dem folgenden Befehl wird eine `ocf:mssql:ag`-Ressource vom Typ Master/Slave für die Verfügbarkeitsgruppe mit dem Namen `ag1` erstellt.
 
+**RHEL 7**
+
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> Mit der Verfügbarkeit von **RHEL 8** hat sich die Syntax für das Erstellen geändert. Wenn Sie **RHEL 8** verwenden, ist die Terminologie nun nicht mehr `master`, sondern `promotable`. Verwenden Sie den folgenden Befehl zum Erstellen anstelle des obigen Befehls: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`.
+**RHEL 8**
+
+Mit der Verfügbarkeit von **RHEL 8** hat sich die Syntax für das Erstellen geändert. Wenn Sie **RHEL 8** verwenden, ist die Terminologie nun nicht mehr `master`, sondern `promotable`. Verwenden Sie anstelle des obigen Befehls den folgenden Befehl zum Erstellen: 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

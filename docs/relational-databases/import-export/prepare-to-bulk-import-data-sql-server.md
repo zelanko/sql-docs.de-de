@@ -19,10 +19,10 @@ ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: b65577b7f6b69bd4fb27392a7d71a2d68f17d7c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68063166"
 ---
 # <a name="prepare-to-bulk-import-data-sql-server"></a>Vorbereiten des Massenimports von Daten (SQL Server)
@@ -36,11 +36,11 @@ ms.locfileid: "68063166"
 > [!NOTE]  
 >  Der Massenimport von Daten in eine Remotetabelle wird nicht unterstützt.  
   
- Befolgen Sie beim Massenimport von Daten aus einer Datendatei in eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]diese Richtlinien:  
+ Befolgen Sie beim Massenimport von Daten aus einer Datendatei in eine Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese Richtlinien:  
   
 -   Erlangen Sie die erforderlichen Berechtigungen für Ihr Benutzerkonto.  
   
-     Das Benutzerkonto, in dem Sie das Hilfsprogramm **bcp**, die BULK INSERT-Anweisung oder die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung verwenden, muss über die erforderlichen Berechtigungen für die Tabelle verfügen (zugewiesen vom Tabellenbesitzer). Weitere Informationen zu den Berechtigungen, die von jeder Methode benötigt werden, finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md) und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
+     Das Benutzerkonto, in dem Sie das Hilfsprogramm **bcp**, die BULK INSERT-Anweisung oder die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung verwenden, muss über die erforderlichen Berechtigungen für die Tabelle verfügen (zugewiesen vom Tabellenbesitzer). Weitere Informationen zu den Berechtigungen, die von jeder Methode benötigt werden, finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)und [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md).  
   
 -   Verwenden Sie das massenprotokollierte Wiederherstellungsmodell.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "68063166"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Importieren und Exportieren von Massendaten mithilfe des bcp-Hilfsprogramms &#40;SQL Server&#41;](../../relational-databases/import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md)   
- [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
+ [Importieren von Massendaten mithilfe von BULK INSERT oder OPENROWSET(BULK...) &#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](../../relational-databases/import-export/data-formats-for-bulk-import-or-bulk-export-sql-server.md)   

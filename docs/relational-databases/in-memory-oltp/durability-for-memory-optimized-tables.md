@@ -11,10 +11,10 @@ ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ca651634947e730df4ae4dda70999c7839521659
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "67942806"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Dauerhaftigkeit für speicheroptimierte Tabellen
@@ -54,7 +54,7 @@ ms.locfileid: "67942806"
 ## <a name="populating-data-and-delta-files"></a>Auffüllen von Daten- und Änderungsdateien  
  Die Daten- und Änderungsdateien werden anhand der Datensätze des Transaktionsprotokolls aufgefüllt, die beim Commit von Transaktionen für speicheroptimierte Tabellen generiert wurden. Die Informationen über die eingefügten und gelöschten Zeilen werden an die entsprechenden Daten- und Änderungsdateien angehängt. Im Gegensatz zu datenträgerbasierte Tabellen, bei denen Daten-/Indexseiten in zufälligen E/A-Vorgängen nach einem Prüfpunkt geleert werden, wird die Persistenz von speicheroptimierten Tabellen in einem kontinuierlichen Hintergrundvorgang erreicht. Es wird auf mehrere Änderungsdateien zugegriffen, da alle Zeilen, die durch beliebige vorherige Transaktionen eingefügt wurden, durch eine Transaktion gelöscht oder aktualisiert werden können. Löschinformationen werden immer am Ende der Änderungsdatei angefügt. Eine Transaktion mit einem Commitzeitstempel von 600 fügt eine neue Zeile ein und löscht Zeilen, die durch Transaktionen mit einem Commitzeitstempel von 150, 250 und 450 eingefügt wurden, wie in der Abbildung unten dargestellt. Alle vier Datei-E/A-Vorgänge (drei für gelöschte Zeilen und einer für neu eingefügte Zeilen) sind reine Anfügungen an die entsprechenden Änderungs- und Datendateien.  
   
- ![Lesen Sie die Protokolldatensätze für speicheroptimierte Tabellen.](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Read log records for memory-optimized tables.")  
+ ![Protokolldatensätze für speicheroptimierte Tabellen lesen](../../relational-databases/in-memory-oltp/media/read-logs-hekaton.gif "Protokolldatensätze für speicheroptimierte Tabellen lesen")  
   
 ## <a name="accessing-data-and-delta-files"></a>Zugreifen auf Daten- und Änderungsdateien  
  Auf Daten-/Änderungsdateipaare wird in den folgenden Fällen zugegriffen:  
@@ -82,7 +82,7 @@ ms.locfileid: "67942806"
   
  Im Beispiel unten sind für die speicheroptimierte Tabellendateigruppe vier Daten-/Änderungsdateipaare mit Daten aus vorhergehenden Transaktionen bei Zeitstempel 500 vorhanden. Beispielsweise entsprechen die ersten Zeilen in der Datendatei Transaktionen mit einem Zeitstempel, der größer als 100 und kleiner oder gleich 200 ist, alternativ ausgedrückt als (100, 200). Die zweite und dritte Datendatei werden nach Berücksichtigung der als gelöscht gekennzeichneten Zeilen zu weniger als 50 % gefüllt angezeigt. Der Zusammenführungsvorgang kombiniert diese beiden CFPs und erstellt ein neues CFP mit Transaktionen, deren Zeitstempel größer als 200 und kleiner oder gleich 400 ist. Dies entspricht dem kombinierten Bereich dieser beiden CFPs. Es wird ein weiteres CFP mit dem Bereich (500, 600) angezeigt, und eine nicht leere Änderungsdatei für den Transaktionsbereich (200, 400) gibt an, dass der Zusammenführungsvorgang parallel zur Transaktionsaktivität erfolgen kann, einschließlich des Löschens mehrerer Zeilen aus den Quell-CFPs.  
   
- ![Diagramm zeigt eine speicheroptimierte Tabellendateigruppe an](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "Diagram shows memory optimized table file group")  
+ ![Diagramm der speicheroptimierten Tabellendateigruppe](../../relational-databases/in-memory-oltp/media/storagediagram-hekaton.png "Diagramm der speicheroptimierten Tabellendateigruppe")  
   
  In einem Hintergrundthread werden alle geschlossenen CFPs mithilfe einer Zusammenführungsrichtlinie ausgewertet und dann eine oder mehrere Zusammenführungsanforderungen für die qualifizierenden CFPs initiiert. Diese Zusammenführungsanforderungen werden vom Offline-Prüfpunktthread verarbeitet. Die Auswertung der Zusammenführungsrichtlinie erfolgt in regelmäßigen Abständen sowie beim Schließen eines Prüfpunkts.  
   

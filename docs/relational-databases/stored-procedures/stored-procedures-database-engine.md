@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "70148297"
 ---
 # <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbank-Engine)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
+  Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
   
 -   Annehmen von Eingabeparametern und Zurückgeben mehrerer Werte in Form von Ausgabeparametern an das aufrufende Programm.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "70148297"
 ## <a name="types-of-stored-procedures"></a>Typen von gespeicherten Prozeduren  
 
  **Benutzerdefiniert**  
- Eine benutzerdefinierte Prozedur kann in einer benutzerdefinierten Datenbank sowie in allen Systemdatenbanken außer der **Ressourcendatenbank** erstellt werden. Die Prozedur kann entweder in [!INCLUDE[tsql](../../includes/tsql-md.md)] oder als Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime) entwickelt werden.  
+ Eine benutzerdefinierte Prozedur kann in einer benutzerdefinierten Datenbank sowie in allen Systemdatenbanken außer der **Ressourcendatenbank** erstellt werden. Die Prozedur kann entweder in [!INCLUDE[tsql](../../includes/tsql-md.md)] oder als Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR-Methode (Common Language Runtime) entwickelt werden.  
   
  **Temporär**  
  Temporäre Prozeduren stellen eine Art benutzerdefinierter Prozedur dar. Temporäre Prozeduren verhalten sich wie dauerhafte Prozeduren, mit der Ausnahme, dass temporäre Prozeduren in **tempdb**gespeichert werden. Es gibt zwei Arten von temporären Prozeduren: lokale und globale temporäre Prozeduren. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Die Namen lokaler temporärer Prozeduren beginnen mit einem einzelnen Nummernzeichen (#). Sie sind nur im Rahmen der aktuellen Benutzerverbindung sichtbar und werden gelöscht, sobald die Verbindung getrennt wird. Die Namen globaler temporärer Prozeduren beginnen mit zwei Nummernzeichen (##). Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar und werden am Ende der letzten Sitzung, in der die Prozedur verwendet wird, gelöscht.  

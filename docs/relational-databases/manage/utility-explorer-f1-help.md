@@ -20,10 +20,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 1dd8c492c2353793ad195cea9606a89c502dc5f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68024480"
 ---
 # <a name="utility-explorer-f1-help"></a>Hilfsprogramm-Explorer (F1-Hilfe)
@@ -123,11 +123,11 @@ ms.locfileid: "68024480"
  Listenansicht  
  In der Listenansicht im oberen Bereich werden Daten zu einzelnen Datenebenenanwendungen angezeigt. Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Datenebenenanwendungen nach Auslastungskategorie an:  
   
--   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Normal ausgelastet"): Zahl der Datenschichtanwendungen, die gegen keine Richtlinien zur Ressourcenverwendung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): Die Anzahl der Datenschichtanwendungen, die nicht gegen die Richtlinien zur Ressourcenauslastung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Abwärtspfeil ![](../../relational-databases/manage/media/utility-down-arrow.gif "Hilfsprogramm_Abwärtspfeil"): Die Ressourcen sind unterausgelastet.  
+-   Grüner Pfeil nach unten ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): Die Ressourcen sind unterausgelastet.  
   
--   Roter Aufwärtspfeil ![](../../relational-databases/manage/media/utility-up-arrow.gif "Hilfsprogramm_Aufwärtspfeil"): Die Ressourcen sind überausgelastet.  
+-   Roter Pfeil nach oben ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
@@ -265,11 +265,11 @@ ms.locfileid: "68024480"
   
  Zustandssymbole zeigen den Zusammenfassungsstatus für die einzelnen Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nach Auslastungskategorie an:  
   
--   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Normal ausgelastet"): Die Anzahl verwalteter Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die gegen keine Richtlinien zur Ressourcenverwendung verstoßen. Die Ressourcen sind normal ausgelastet.  
+-   Grünes Häkchen ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized"): Die Anzahl der verwalteten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die nicht gegen Richtlinien zur Ressourcenauslastung verstoßen. Die Ressourcen sind normal ausgelastet.  
   
--   Grüner Abwärtspfeil ![](../../relational-databases/manage/media/utility-down-arrow.gif "Hilfsprogramm_Abwärtspfeil"): Die Ressourcen sind unterausgelastet.  
+-   Grüner Pfeil nach unten ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow"): Die Ressourcen sind unterausgelastet.  
   
--   Roter Aufwärtspfeil ![](../../relational-databases/manage/media/utility-up-arrow.gif "Hilfsprogramm_Aufwärtspfeil"): Die Ressourcen sind überausgelastet.  
+-   Roter Pfeil nach oben ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow"): Die Ressourcen sind überausgelastet.  
   
  Die Abfolge der Spalten in der Listenansicht kann geändert werden, indem Sie sie nach links oder nach rechts ziehen. Sie können Spalten in der Listenansicht hinzufügen oder löschen, indem Sie mit der rechten Maustaste auf die Spaltenüberschriften klicken und die Spalten auswählen bzw. deren Auswahl aufheben. Darüber hinaus enthält das Kontextmenü Sortieroptionen. Die Sortierung kann auch aktiviert werden, indem Sie oben auf den Spaltennamen klicken.  
   
@@ -313,7 +313,7 @@ ms.locfileid: "68024480"
   
 -   Sortierung:  
   
--   Case Sensitive (Beachtet Groß-/Kleinbuchstaben): (True oder False)  
+-   Case Sensitive (Beachtet Groß-/Kleinschreibung): (True oder False)  
   
 -   Sprache:  
   
@@ -480,7 +480,7 @@ Verwenden Sie die Registerkarten der Hilfsprogrammverwaltung zum Verwalten von R
  
 **Registerkarte Data Warehouse** Zeigt Konfigurationsdetails für das UMDW (Utility Management Data Warehouse) an.  
   
- Datenbeibehaltung  
+ Datenaufbewahrung  
  Geben Sie die Beibehaltungsdauer von Auslastungsdaten an, die für verwaltete Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gesammelt wurden. Der Standardzeitraum beträgt ein Jahr. Der Minimalwert beträgt einen Monat. Der längste unterstützte Wert beträgt zwei Jahre.  
   
  Konfigurationsinformationen für das Hilfsprogramm-Data Warehouse  

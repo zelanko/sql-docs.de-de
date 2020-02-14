@@ -1,5 +1,5 @@
 ---
-title: 'Lernprogramm: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016'
+title: 'Tutorial: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016'
 ms.custom: seo-dt-2019
 ms.date: 01/10/2019
 ms.prod: sql
@@ -15,13 +15,13 @@ ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: aba8d7e3dc7aaf48523303ad6f63682c888b3c46
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095694"
 ---
-# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Lernprogramm: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016
+# <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>Tutorial: Verwenden des Microsoft Azure Blob Storage-Diensts mit SQL Server 2016
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Willkommen zum Tutorial über das Arbeiten mit SQL Server 2016 im Dienst Microsoft Azure Blob Storage. Dieses Tutorial hilft Ihnen dabei, zu verstehen, wie der Dienst Microsoft Azure Blob Storage für SQL Server-Datendateien und SQL Server-Sicherungen verwendet wird.  
@@ -53,7 +53,7 @@ Eine SAS ist ein URI, der eingeschränkte Zugriffsrechte für Container, Blobs, 
   
 Sie können eine gespeicherte Zugriffsrichtlinie und eine SAS mithilfe von Azure PowerShell, mithilfe des Azure Storage SDKs, der Azure-REST-API oder einem Hilfsprogramm von Drittanbietern erstellen. Dieses Tutorial veranschaulicht, wie ein Azure PowerShell-Skript verwendet wird, um diesen Vorgang abzuschließen. Das Skript verwendet das Bereitstellungsmodell des Ressourcen-Managers und erstellt die nachstehenden neuen Ressourcen.  
   
--   Ressourcengruppe   
+-   Resource group   
 -   Speicherkonto  
 -   Azure-Blobcontainer   
 -   SAS-Richtlinie    
@@ -481,10 +481,10 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 ## <a name="see-also"></a>Weitere Informationen
 
 [SQL Server-Datendateien in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Datei-Momentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [SQL Server-Sicherung in URL](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [Shared Access Signatures, Teil 1: Grundlagen zum SAS-Modell](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
-[Erstellen von Containern](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
+[Erstellen eines Containers](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
 [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx)  
 [Abrufen der Container-ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx)
 [Anmeldeinformationen &#40;Datenbank-Engine&#41;](../relational-databases/security/authentication-access/credentials-database-engine.md)  
@@ -492,4 +492,4 @@ Um die Ressourcengruppe zu löschen, führen Sie den folgenden PowerShell-Code a
 [sys.credentials &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots &#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot (Transact-SQL)](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)[Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  

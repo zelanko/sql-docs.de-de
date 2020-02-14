@@ -12,10 +12,10 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: e32c215050b8ee7ec74bee51f7330dbb793814cd
-ms.sourcegitcommit: 09ccd103bcad7312ef7c2471d50efd85615b59e8
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/07/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73729864"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
@@ -112,9 +112,9 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
  Gibt die Sortierung für den Ausdruck an. Bei der Sortierung muss es sich um eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützte Windows-Sortierung handeln. Eine Liste mit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützten Windows-Sortierungen finden Sie unter [Name der Windows-Sortierung (Transact-SQL)](windows-collation-name-transact-sql.md).  
   
  `NULL` | `NOT NULL`  
- Gibt an, ob `NULL`-Werte in der Spalte zulässig sind. Der Standardwert ist `NULL`.  
+ Gibt an, ob `NULL`-Werte in der Spalte zulässig sind. Der Standardwert lautet `NULL`.  
   
- [ `CONSTRAINT` *constraint_name* ] `DEFAULT` *constant_expression*  
+ [`CONSTRAINT` *constraint_name*] `DEFAULT` *constant_expression*  
  Gibt den Standardspaltenwert an.  
   
  | Argument | Erklärung |
@@ -150,7 +150,7 @@ Informationen zum Auswählen der besten Verteilungsmethode und zur Verwendung vo
 ### <a name="TablePartitionOptions"></a> Tabellenpartitionsoptionen
 Einen Leitfaden zur Verwendung von Tabellenpartitionen finden Sie unter [Partitionieren von Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
- `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
+ `PARTITION` (*partition_column_name*`RANGE` [`LEFT` | `RIGHT`] `FOR VALUES` ([*boundary_value* [,...*n*]]))   
 Erstellt eine oder mehrere Tabellenpartitionen. Diese Partitionen sind horizontale Tabellenslices, mit deren Hilfe Sie Vorgänge für Teilmengen von Zeilen ausführen können, unabhängig davon, ob die Tabelle als Heap, gruppierter Index oder gruppierter Columnstore-Index gespeichert ist. Im Gegensatz zur Verteilungsspalte bestimmen Tabellenpartitionen nicht die Verteilung für den Speicherort der einzelnen Zeilen. Vielmehr bestimmten Tabellenpartitionen, wie die Zeilen in den einzelnen Verteilungen gruppiert und gespeichert werden.  
 
 | Argument | Erklärung |
@@ -187,7 +187,7 @@ Eine Tabelle mit Datentypkonvertierungen finden Sie im Abschnitt über implizite
  `datetime2` [ ( *n* ) ]  
 Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruchteilen angegeben werden kann. Der Standardwert für *n* ist `7`.  
   
-|Wert *n*|Genauigkeit|Dezimalstellen|  
+|Wert *n*|Precision|Skalieren|  
 |--:|--:|-:|  
 |`0`|19|0|  
 |`1`|21|1|  
@@ -213,7 +213,7 @@ Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruc
  `float` [ ( *n* ) ]  
  Ungefähre Zahlendatentypen für numerische Gleitkommadaten. Gleitkommadaten sind Näherungswerte. Deshalb können nicht alle Werte im Bereich des Datentyps exakt dargestellt werden. *n* gibt die Anzahl der Bits zum Speichern der Mantisse von `float` in wissenschaftlicher Schreibweise an. Somit gibt *n* die Genauigkeit und die Speichergröße vor. Wenn *n* angegeben ist, muss es sich um einen Wert zwischen `1` und `53` handeln. Der Standardwert von *n* lautet `53`.  
   
-| Wert *n* | Genauigkeit | Speichergröße |  
+| Wert *n* | Precision | Speichergröße |  
 | --------: | --------: | -----------: |  
 | 1-24   | 7 Stellen  | 4 Byte      |  
 | 25-53  | 15 Stellen | 8 Byte      |  
@@ -234,7 +234,7 @@ Entspricht `datetime`, jedoch mit der Ausnahme, dass die Anzahl von Sekundenbruc
  *scale*  
  Die maximal speicherbare Zahl an Dezimalstellen rechts vom Dezimalkomma. *Scale* muss in einem Bereich zwischen `0` und *precision* liegen. *scale* kann nur angegeben werden, wenn *precision* angegeben wird. Der Standardwert lautet `0`; daher gilt: `0` <= *scale* <= *precision*. Die maximalen Speichergrößen variieren abhängig von der Genauigkeit.  
   
-| Genauigkeit | Speicherplatz in Bytes  |  
+| Precision | Speicherplatz in Bytes  |  
 | ---------: |-------------: |  
 |  1-9       |             5 |  
 | 10–19      |             9 |  
@@ -317,7 +317,7 @@ Eine Columnstore-Tabelle ist eine in spaltenweiser Reihenfolge gespeicherte Tabe
 
 Um aus einer Rowstore-Tabelle eine Columnstore-Tabelle zu machen, müssen alle in der Tabelle vorhandenen Indizes gelöscht und ein gruppierter Columnstore-Index erstellt werden. Ein Beispiel hierzu finden Sie unter [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md).
 
-Weitere Informationen dazu finden Sie in diesen Artikeln:
+Weitere Informationen und Beispiele finden Sie in diesen Artikeln:
 - [Columnstore-Indizes: Zusammenfassung der Features für Produktversionen](https://msdn.microsoft.com/library/dn934994/)
 - [Indizieren von Tabellen in SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)
 - [Beschreibung von Columnstore-Indizes](~/relational-databases/indexes/columnstore-indexes-overview.md) 
@@ -583,7 +583,7 @@ WITH
 ```  
   
 <a name="SeeAlso"></a>
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
  
 [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
 [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   

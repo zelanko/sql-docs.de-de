@@ -26,10 +26,10 @@ ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
-ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73064683"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "73064683"
 
   Definiert eine Prioritätsebene und die Gruppe von Kriterien, anhand derer bestimmt wird, welchen [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Konversationen die Prioritätsebene zugeordnet wird. Die Prioritätsebene wird jedem Konversationsendpunkt zugeordnet, der die gleiche Kombination aus Verträgen und Diensten verwendet, die für die Konversationspriorität angegeben sind. Die Prioritätswerte liegen zwischen 1 (niedrig) und 10 (hoch). Der Standardwert ist 5.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -57,7 +57,7 @@ FOR CONVERSATION
   
 ## <a name="arguments"></a>Argumente  
  *ConversationPriorityName*  
- Gibt den Namen für diese Konversationspriorität an. Der Name muss in der aktuellen Datenbank eindeutig sein und den Regeln für [!INCLUDE[ssDE](../../includes/ssde-md.md)] [Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
+ Gibt den Namen für diese Konversationspriorität an. Der Name muss in der aktuellen Datenbank eindeutig sein und den Regeln für [!INCLUDE[ssDE](../../includes/ssde-md.md)]-[Bezeichner](../../relational-databases/databases/database-identifiers.md) entsprechen.  
   
  SET  
  Gibt die Kriterien an, anhand derer bestimmt wird, ob die Konversationspriorität für eine Konversation übernommen wird. Wenn angegeben, muss SET mindestens ein Kriterium enthalten: CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME oder PRIORITY_LEVEL. Wenn SET nicht angegeben wird, werden für alle drei Kriterien die Standardwerte festgelegt.  
@@ -110,7 +110,7 @@ FOR CONVERSATION
  PRIORITY_LEVEL = { *PriorityValue* | **DEFAULT** }  
  Gibt die Priorität an, die jedem Konversationsendpunkt zugeordnet werden soll, der die für die Konversationspriorität angegebenen Verträge und Dienste verwendet. *PriorityValue* muss ein ganzahliges Literal zwischen 1 (niedrigste Priorität) und 10 (höchste Priorität) sein. Der Standardwert ist 5.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
  In [!INCLUDE[ssSB](../../includes/sssb-md.md)] werden Prioritätsebenen Konversationsendpunkte zugeordnet. Mithilfe der Prioritätsebene wird die Priorität der dem Endpunkt zugeordneten Vorgänge gesteuert. Jede Konversation verfügt über zwei Konversationsendpunkte:  
   
 -   Der Konversationsendpunkt für den Initiator ordnet eine Seite der Konversation dem Initiatordienst und der Initiatorwarteschlange zu. Der Konversationsendpunkt für den Initiator wird beim Ausführen der BEGIN DIALOG-Anweisung erstellt. Zu den dem Konversationsendpunkt für den Initiator zugeordneten Vorgängen zählen folgende:  
@@ -217,7 +217,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
          PRIORITY_LEVEL = 3);  
 ```  
   
-### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. Erstellen von drei Prioritätsebenen für einen Zieldienst mithilfe von Diensten  
+### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D: Erstellen von drei Prioritätsebenen für einen Zieldienst mithilfe von Diensten  
  Unterstützt ein System, das drei Leistungsstufen bietet: Gold (hoch), Silber (mittel) und Bronze (niedrig). Es gibt einen Vertrag, aber jede Ebene weist einen separaten Initiatordienst auf. Alle Initiatordienste kommunizieren mit einem zentralen Zieldienst.  
   
 ```sql  

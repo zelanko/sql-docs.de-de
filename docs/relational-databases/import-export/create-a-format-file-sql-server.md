@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fb0199e5ec3bc083d7a6e2087ec86c04c233436b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68035820"
 ---
 # <a name="create-a-format-file-sql-server"></a>Erstellen einer Formatdatei (SQL Server)
@@ -29,14 +29,14 @@ ms.locfileid: "68035820"
  Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben.  
   
 > [!NOTE]  
->  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** liest z. B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] **bcp** liest keine Formatdateien der Version 11.0, die von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] **bcp** generiert wurden.  
+>  Die zum Lesen der Formatdatei verwendete Version des Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, identisch oder eine höhere Version sein. Das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Hilfsprogramm **bcp** liest z. B. Formatdateien der Version 10.0, die von **bcp** in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] generiert wurden, aber das [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]-Hilfsprogramm **bcp** liest keine Formatdateien der Version 11.0, die von **bcp** in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] generiert wurden.  
   
  In diesem Thema wird die Verwendung des [Hilfsprogramms bcp](../../tools/bcp-utility.md) zum Erstellen einer Formatdatei für eine bestimmte Tabelle erläutert. Die Formatdatei basiert auf der angegebenen Datentypoption ( **-n**, **-c**, **-w**oder **-N**) sowie auf den Tabellen- bzw. Sichttrennzeichen.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Erstellen einer Nicht-XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Die **format** -Option erfordert außerdem die **-f** -Option, z.B.:  
   
- **bcp** _Tabelle_oder_Ansicht_ **format** nul **-f**_Formatdateiname_  
+ **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
 > Um Nicht-XML-Formatdateien klar zu kennzeichnen, empfiehlt es sich, als Dateierweiterung FMT zu verwenden, beispielsweise "MeineTabelle.fmt".  
@@ -52,7 +52,7 @@ ms.locfileid: "68035820"
   
 -   C. Erstellen einer Nicht-XML-Formatdatei für systemeigene Unicode-Daten  
   
--   D. Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
+-   D: Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
   
 -   F. Verwenden einer Formatdatei mit der Codeseitenoption  
   
@@ -63,9 +63,9 @@ ms.locfileid: "68035820"
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** _Formatdatei_|Gibt die Nicht-XML-Formatdatei an.|  
+|**formatnul-f** _format_file_|Gibt die Nicht-XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
@@ -93,9 +93,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -n -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** _Formatdatei_|Gibt eine Nicht-XML-Formatdatei an.|  
+|**formatnul-f** _format_file_|Gibt eine Nicht-XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
@@ -127,7 +127,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
   
  Weitere Informationen zur Verwendung von nativen Unicode-Daten finden Sie unter [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
-#### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
+#### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D: Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten  
  Verwenden Sie zum Erstellen einer Nicht-XML-Formatdatei für Unicode-Zeichendaten für die `HumanResources.Department`-Tabelle den folgenden Befehl:  
   
 ```cmd
@@ -168,7 +168,7 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
 ## <a name="creating-an-xml-format-file"></a>Erstellen einer XML-Formatdatei  
  Geben Sie bei der Ausführung eines **bcp** -Befehls zum Erstellen einer Formatdatei das **format** -Argument an, und verwenden Sie **nul** anstatt eines Datendateipfads. Für die Option **format** ist immer auch die Option **-f** erforderlich. Zum Erstellen einer XML-Formatdatei muss zudem die Option **-x** angegeben werden, wie im Folgenden dargestellt:  
   
- **bcp** _Tabelle_oder_Ansicht_ **format nul -f** _Formatdateiname_ **-x**  
+ **bcp** _table_or_view_ **format nul-f** _format_file_name_ **-x**  
   
 > [!NOTE]  
 > Um eine XML-Formatdatei klar zu kennzeichnen, empfiehlt es sich, die Dateierweiterung XML zu verwenden, beispielsweise "MeineTabelle.xml".  
@@ -191,9 +191,9 @@ Im Folgenden ist ein Beispiel für die Formatdatei ohne Sortierungsinformationen
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
+|**formatnul-f** _format_file_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-c**|Gibt Zeichendaten an.|  
 |**-t** `,`|Gibt ein Komma ( **,** ) als Feldabschlusszeichen an.<br /><br /> Hinweis: Wenn von der Datendatei das Standardfeldabschlusszeichen (`\t`) verwendet wird, ist der **-t**-Schalter nicht erforderlich.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
@@ -231,9 +231,9 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
   
  Der Befehl **bcp** enthält die folgenden Qualifizierer.  
   
-|Qualifizierer|und Beschreibung|  
+|Qualifizierer|Beschreibung|  
 |----------------|-----------------|  
-|**formatnul-f** _Formatdatei_ **-x**|Gibt die XML-Formatdatei an.|  
+|**formatnul-f** _format_file_ **-x**|Gibt die XML-Formatdatei an.|  
 |**-n**|Gibt systemeigene Datentypen an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
@@ -266,7 +266,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.x
  Informationen zur Syntax dieser Formatdatei finden Sie unter [Nicht-XML-Formatdateien &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md). Informationen zur Verwendung nativer Daten finden Sie unter [Verwenden des nativen Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).  
   
 ## <a name="mapping-data-fields-to-table-columns"></a>Zuordnen von Datenfeldern zu Tabellenspalten  
- In einer mit **bcp**erstellten Formatdatei werden alle Tabellenspalten in ihrer Reihenfolge beschrieben. Sie können die Formatdatei ändern, um Tabellenzeilen neu anzuordnen oder auszulassen. Auf diese Weise können Sie Formatdateien an Datendateien anpassen, deren Felder nicht direkt Tabellenspalten zugeordnet werden können. Weitere Informationen finden Sie in folgenden Themen:  
+ In einer mit **bcp**erstellten Formatdatei werden alle Tabellenspalten in ihrer Reihenfolge beschrieben. Sie können die Formatdatei ändern, um Tabellenzeilen neu anzuordnen oder auszulassen. Auf diese Weise können Sie Formatdateien an Datendateien anpassen, deren Felder nicht direkt Tabellenspalten zugeordnet werden können. Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-skip-a-table-column-sql-server.md)  
   

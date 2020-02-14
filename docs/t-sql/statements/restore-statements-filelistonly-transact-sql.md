@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 892b18ac9780054cafe90d62569afb63f8261b3e
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/02/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68742981"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE-Anweisungen - FILELISTONLY (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68742981"
 > [!NOTE]  
 >  Eine Beschreibung der Argumente finden Sie unter [RESTORE-Argumente &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlinksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -86,13 +86,13 @@ FROM <backup_device>
 ## <a name="result-sets"></a>Resultsets  
  Ein Client kann mit RESTORE FILELISTONLY eine Liste der in einem Sicherungssatz enthaltenen Dateien abrufen. Diese Informationen werden als Resultset zurückgegeben, das eine Zeile für jede Datei enthält.  
   
-|Spaltenname|Datentyp|und Beschreibung|  
+|Spaltenname|Datentyp|Beschreibung|  
 |-|-|-|  
 |LogicalName|**nvarchar(128)**|Logischer Name der Datei.|  
 |PhysicalName|**nvarchar(260)**|Physischer Name oder Betriebssystemname der Datei.|  
-|Typ|**char(1)**|Einer der folgenden Dateitypen:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldatei<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendatei<br /><br /> **F** = Volltextkatalog<br /><br /> **S** = FileStream, FileTable oder [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Container|  
+|type|**char(1)**|Einer der folgenden Dateitypen:<br /><br /> **L** = Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Protokolldatei<br /><br /> **D** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datendatei<br /><br /> **F** = Volltextkatalog<br /><br /> **S** = FileStream, FileTable oder [!INCLUDE[hek_2](../../includes/hek-2-md.md)]-Container|  
 |FileGroupName|**nvarchar(128)** NULL|Name der Dateigruppe, die die Datei enthält.|  
-|Größe|**numeric(20,0)**|Aktuelle Größe in Bytes.|  
+|Size|**numeric(20,0)**|Aktuelle Größe in Bytes.|  
 |MaxSize|**numeric(20,0)**|Maximal zulässige Größe in Bytes.|  
 |FileID|**bigint**|Eindeutiger Dateibezeichner in der Datenbank.|  
 |CreateLSN|**numeric(25,0)**|Protokollfolgenummer, bei der die Datei erstellt wurde.|  
@@ -111,8 +111,8 @@ FROM <backup_device>
 |TDEThumbprint|**varbinary(32)** NULL|Zeigt den Fingerabdruck des Datenbankverschlüsselungs-Schlüssels an. Der Verschlüsselungsfingerabdruck ist ein SHA-1-Hash des Zertifikats, mit dem der Schlüssel verschlüsselt wurde. Informationen zur Datenbankverschlüsselung finden Sie unter [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).|  
 |SnapshotURL|**nvarchar(360)** NULL|Die URL für die Azure-Momentaufnahme der in der FILE_SNAPSHOT-Sicherung enthaltenen Datenbankdatei. Gibt NULL zurück, wenn keine FILE_SNAPSHOT-Sicherung vorhanden ist.|  
   
-## <a name="security"></a>Security  
- Bei einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz, einen Sicherungssatz oder für beides angegeben werden. Wurde ein Kennwort für einen Mediensatz oder Sicherungssatz definiert, müssen die richtigen Kennwörter in der RESTORE-Anweisung angegeben werden. Über diese Kennwörter werden nicht autorisierte Wiederherstellungsvorgänge und nicht autorisiertes Anfügen von Sicherungssätzen an Medien mithilfe der Tools von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindert. Mit einem Kennwort kann jedoch das Überschreiben eines Mediums mithilfe der Option FORMAT der BACKUP-Anweisung nicht verhindert werden.  
+## <a name="security"></a>Sicherheit  
+ Bei einem Sicherungsvorgang können optional Kennwörter für einen Mediensatz, einen Sicherungssatz oder für beides angegeben werden. Wurde ein Kennwort für einen Mediensatz oder Sicherungssatz definiert, müssen die richtigen Kennwörter in der RESTORE-Anweisung angegeben werden. Über diese Kennwörter werden nicht autorisierte Wiederherstellungsoptionen und unbefugtes Anfügen von Sicherungssätzen an Medien mithilfe der Tools von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verhindert. Mit einem Kennwort kann jedoch das Überschreiben eines Mediums mithilfe der Option FORMAT der BACKUP-Anweisung nicht verhindert werden.  
   
 > [!IMPORTANT]  
 >  Dieses Kennwort bietet also nur unzureichenden Schutz. Es soll vermeiden, dass autorisierte wie nicht autorisierte Benutzer mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools fehlerhafte Wiederherstellungen durchführen. Es verhindert jedoch nicht das Lesen der Sicherungsdaten mit anderen Mitteln oder das Ersetzen des Kennworts. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Eine bewährte Methode für den Schutz von Sicherungen ist das Verwahren von Sicherungsbändern an einem sicheren Ort oder das Sichern in Datenträgerdateien, die durch eine adäquate Zugriffssteuerungsliste (ACL, Access Control List) geschützt sind. Die ACLs sollten für den Verzeichnisstamm eingerichtet werden, unter dem die Sicherungen erstellt werden.  

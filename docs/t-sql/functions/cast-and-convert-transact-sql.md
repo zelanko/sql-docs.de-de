@@ -35,12 +35,12 @@ ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5839bfa470bfc7a35c924f1710b1d78f86cb1245
-ms.sourcegitcommit: f688a37bb6deac2e5b7730344165bbe2c57f9b9c
+ms.openlocfilehash: 943d0e840c0c407e66f0d47deec4c1e78fc57afa
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73843434"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76761645"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST und CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ CAST ( expression AS data_type [ ( length ) ] )
 CONVERT ( data_type [ ( length ) ] , expression [ , style ] )  
 ```  
 
-![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 ## <a name="arguments"></a>Argumente  
 *expression*  
@@ -129,20 +129,20 @@ Bei der Konvertierung von **smalldatetime**-Daten in Zeichendaten werden bei For
 Bei der Konvertierung von Zeichendaten in **datetimeoffset** wird unter Verwendung eines Formats mit einer Zeitangabe ein Zeitzonenoffset an das Ergebnis angehängt.
   
 ## <a name="float-and-real-styles"></a>float- und real-Formate
-Bei dem **Ausdruck** **float** oder *real* kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
+Wenn *expression* **float** oder **real** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|value|Ausgabe|  
+|value|Output|  
 |---|---|
 |**0** (Standardwert)|Maximal 6 Ziffern. Wird ggf. in der wissenschaftlichen Schreibweise verwendet.|  
 |**1**|Immer 8 Ziffern. Wird immer in der wissenschaftlichen Schreibweise verwendet.|  
 |**2**|Immer 16 Ziffern. Wird immer in der wissenschaftlichen Schreibweise verwendet.|  
-|**3**|Immer 17 Ziffern. Wird für die verlustlose Konvertierung verwendet. Mit diesem Format wird garantiert, dass jeder eindeutige „float“- oder „real“-Wert in eine eindeutige Zeichenfolge konvertiert wird.<br /><br /> **Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**3**|Immer 17 Ziffern. Wird für die verlustlose Konvertierung verwendet. Mit diesem Format wird garantiert, dass jeder eindeutige „float“- oder „real“-Wert in eine eindeutige Zeichenfolge konvertiert wird.<br /><br /> **Anwendungsbereich:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (ab [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]) und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**126, 128, 129**|Aufgenommen zur Kompatibilität mit Legacykomponenten, in zukünftigen Releases sind diese Werte möglicherweise als veraltet gekennzeichnet.|  
   
 ## <a name="money-and-smallmoney-styles"></a>money- und smallmoney-Formate
-Bei dem **Ausdruck** **money** oder *smallmoney* kann *style* einer der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
+Wenn *expression* **money** oder **smallmoney** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|value|Ausgabe|  
+|value|Output|  
 |---|---|
 |**0** (Standardwert)|Links vom Dezimaltrennzeichen werden keine Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 4235.98.|  
 |**1**|Links vom Dezimaltrennzeichen werden Tausendertrennzeichen eingefügt, rechts vom Dezimaltrennzeichen stehen zwei Ziffern<br /><br />Beispiel: 3,510.92.|  
@@ -150,9 +150,9 @@ Bei dem **Ausdruck** **money** oder *smallmoney* kann *style* einer der in der f
 |**126**|Entspricht Format 2 bei der Konvertierung in char(n) oder varchar(n)|  
   
 ## <a name="xml-styles"></a>xml-Formate
-Wenn **expression** *xml* ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
+Wenn *expression* **xml** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Andere Werte werden als 0 verarbeitet.
   
-|value|Ausgabe|  
+|value|Output|  
 |---|---|
 |**0** (Standardwert)|Standardanalyseverhalten verwenden, bei dem bedeutungslose Leerzeichen verworfen werden und interne DTD-Teilmengen nicht zulässig sind.<br /><br />**Hinweis:** Beim Konvertieren in den **XML**-Datentyp werden bedeutungslose Leerzeichen aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anders behandelt als in XML 1.0. Weitere Informationen finden Sie unter [Erstellen von Instanzen der XML-Daten](../../relational-databases/xml/create-instances-of-xml-data.md).|  
 |**1**|Bedeutungslose Leerzeichen erhalten. Mit dieser Formateinstellung wird festgelegt, dass die Standardbehandlung **xml:space** dem Verhalten von **xml:space="preserve"** entspricht.|  
@@ -160,12 +160,12 @@ Wenn **expression** *xml* ist, kann *style* einen der in der folgenden Tabelle a
 |**3**|Bedeutungslose Leerzeichen erhalten und die Verarbeitung begrenzter interner DTD-Teilmengen aktivieren.|  
   
 ## <a name="binary-styles"></a>Binäre Formate
-Wenn **expression** **binary(n)** , **char(n)** , **varbinary(n)** oder *varchar(n)* ist, kann *style* einer der in der folgenden Tabelle aufgelisteten Werte sein. Bei Formatwerten, die nicht in der Tabelle aufgelistet sind, wird ein Fehler zurückgegeben.
+Wenn *expression* **binary(n)** , **char(n)** , **varbinary(n)** oder **varchar(n)** ist, kann *style* einen der in der folgenden Tabelle aufgelisteten Werte aufweisen. Bei Formatwerten, die nicht in der Tabelle aufgelistet sind, wird ein Fehler zurückgegeben.
   
-|value|Ausgabe|  
+|value|Output|  
 |---|---|
 |**0** (Standardwert)|Übersetzt ASCII-Zeichen in binäre Bytes bzw. binäre Bytes in ASCII-Zeichen. Jedes Zeichen bzw. Byte wird 1:1 konvertiert.<br /><br /> Bei einem binären *data_type* werden die Zeichen 0x links neben dem Ergebnis hinzugefügt.|  
-|**1**, **2**|Bei einem binären *data_type* muss der Ausdruck ein Zeichenausdruck sein. *expression* muss aus einer **geraden** Anzahl hexadezimaler Zeichen bestehen (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Wenn der Ausdruck *style* auf 1 festgelegt ist, müssen die 0x die ersten beiden Zeichen sein. Wenn der Ausdruck eine ungerade Anzahl an Zeichen oder ein ungültiges Zeichen enthält, wird ein Fehler ausgelöst.<br /><br /> Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird das Ergebnis rechts abgeschnitten.<br /><br /> Bei *data_types* mit fester Länge, die länger sind als das konvertierte Ergebnis, wird im Ergebnis rechts die entsprechende Anzahl Nullen angehängt.<br /><br /> Für den Zeichentyp *data_type* ist ein binärer Ausdruck erforderlich. Jedes Binärzeichen wird in zwei Hexadezimalzeichen konvertiert. Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird der Ausdruck rechts abgeschnitten.<br /><br /> Bei dem Zeichentyp *data_type* mit fester Länge werden rechts neben dem konvertierten Ausdruck Leerzeichen hinzugefügt, um eine gerade Anzahl an Hexadezimalstellen zu erhalten, wenn die Länge des konvertierten Ergebnisses kleiner ist als die Länge von *data_type*.<br /><br /> Bei *style* 1 werden links neben dem konvertierten Ergebnis die Zeichen 0x hinzugefügt.|  
+|**1**, **2**|Bei einem binären *data_type* muss der Ausdruck ein Zeichenausdruck sein. *expression* muss aus einer **geraden** Anzahl hexadezimaler Zeichen bestehen (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). Wenn *style* auf 1 festgelegt wird, müssen die Zeichen 0x die ersten beiden Zeichen im Ausdruck sein. Wenn der Ausdruck eine ungerade Anzahl an Zeichen oder ein ungültiges Zeichen enthält, wird ein Fehler ausgelöst.<br /><br /> Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird das Ergebnis rechts abgeschnitten.<br /><br /> Bei *data_types* mit fester Länge, die länger sind als das konvertierte Ergebnis, wird im Ergebnis rechts die entsprechende Anzahl Nullen angehängt.<br /><br /> Für den Zeichentyp *data_type* ist ein binärer Ausdruck erforderlich. Jedes Binärzeichen wird in zwei Hexadezimalzeichen konvertiert. Wenn die Länge des konvertierten Ausdrucks die Länge von *data_type* übersteigt, wird der Ausdruck rechts abgeschnitten.<br /><br /> Bei dem Zeichentyp *data_type* mit fester Länge werden rechts neben dem konvertierten Ausdruck Leerzeichen hinzugefügt, um eine gerade Anzahl an Hexadezimalstellen zu erhalten, wenn die Länge des konvertierten Ergebnisses kleiner ist als die Länge von *data_type*.<br /><br /> Bei *style* 1 werden links neben dem konvertierten Ergebnis die Zeichen 0x hinzugefügt.|  
   
 ## <a name="implicit-conversions"></a>Implizite Konvertierungen
 Bei impliziten Konvertierungen ist keine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. Bei expliziten Konvertierungen ist eine Spezifikation der CAST- oder CONVERT-Funktion erforderlich. In der folgenden Abbildung werden alle expliziten und impliziten Datentypkonvertierungen aufgeführt, die für die vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-System bereitgestellten Datentypen zulässig sind. Dazu gehören **bigint**, **sql_variant** und **xml**. Es gibt keine implizite Konvertierung bei der Zuweisung vom **sql_variant**-Datentyp, eine implizite Konvertierung zum **sql_variant**-Datentyp findet jedoch statt.
@@ -269,14 +269,14 @@ Gail        Erickson      Ms.    *
   
 Beim Konvertieren von Datentypen mit unterschiedlichen Dezimalstellen gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manchmal einen abgeschnittenen oder einen gerundeten Ergebniswert zurück. In dieser Tabelle wird das Verhaltensmuster veranschaulicht.
   
-|Von|Aktion|Verhalten|  
+|From|To|Verhalten|  
 |---|---|---|
 |**numeric**|**numeric**|Round|  
-|**numeric**|**int**|Abschneiden|  
+|**numeric**|**int**|Truncate|  
 |**numeric**|**money**|Round|  
 |**money**|**int**|Round|  
 |**money**|**numeric**|Round|  
-|**float**|**int**|Abschneiden|  
+|**float**|**int**|Truncate|  
 |**float**|**numeric**|Round<br /><br /> Die Konvertierung der **float**-Werte, die eine wissenschaftliche Schreibweise für **decimal** oder **numeric** verwenden, ist auf Werte mit einer Genauigkeit von 17 Stellen beschränkt. Alle Werte mit einer Genauigkeit von mehr als 17 Stellen werden auf Null gerundet.|  
 |**float**|**datetime**|Round|  
 |**datetime**|**int**|Round|  
@@ -453,7 +453,7 @@ The list price is 364.09
 The list price is 364.09  
 ```  
   
-### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Verwenden von CAST zur Generierung besser lesbaren Texts  
+### <a name="d-using-cast-to-produce-more-readable-text"></a>D: Verwenden von CAST zur Generierung besser lesbaren Texts  
 Im folgenden Beispiel wird CAST in der SELECT-Liste verwendet, um die `Name`-Spalte in eine **char(10)** -Spalte zu konvertieren. Die Datenbank AdventureWorksDW wird verwendet.
   
 ```sql
@@ -702,7 +702,7 @@ Im folgenden Beispiel werden zuerst `GETDATE()`-Werte verwendet. `CONVERT` wird 
 |104|`SELECT CONVERT(nvarchar, GETDATE(), 104)`|23.08.2019|
 |105|`SELECT CONVERT(nvarchar, GETDATE(), 105)`|23-08-2019|
 |106|`SELECT CONVERT(nvarchar, GETDATE(), 106)`|23 Aug 2019|
-|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|Aug 23, 2019|
+|107|`SELECT CONVERT(nvarchar, GETDATE(), 107)`|23. August 2019|
 |110|`SELECT CONVERT(nvarchar, GETDATE(), 110)`|08-23-2019|
 |111|`SELECT CONVERT(nvarchar, GETDATE(), 111)`|2019/08/23|
 |112|`SELECT CONVERT(nvarchar, GETDATE(), 112)`|20190823|
@@ -760,7 +760,7 @@ SELECT @notastring + '1'
 
 In diesem Fall kann die Zeichenfolge `'1'` in den Integerwert 1 konvertiert werden, sodass die SELECT-Anweisung den Wert 2 zurückgibt. Wenn die angegebenen Datentypen Integerwerte sind, führt der Operator + nicht zu einer Zeichenfolgenverkettung, sondern zu einer mathematischen Addition.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="l-using-cast-and-convert"></a>L. Verwenden von CAST und CONVERT  
 In diesem Beispiele werden die Namen der Produkte abgerufen, deren Listenpreis mit der Ziffer `3` beginnt. Der `ListPrice`-Wert dieser Produkte wird in einen **int**-Wert konvertiert. Verwendet wird die Datenbank `AdventureWorksDW2016`.
@@ -803,7 +803,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```  
   
 ### <a name="n-using-cast-with-the-like-clause"></a>N. Verwenden von CAST mit der LIKE-Klausel  
-Im folgenden Beispiel wird die Spalte **money** `ListPrice` in eine Spalte des Typs **int** und anschließend in eine Spalte des Typs **char(20)** umgewandelt, damit sie mit der LIKE-Klausel verwendet werden kann. In diesem Beispiel wird die `AdventureWorksDW2016`-Datenbank verwendet.  
+Im folgenden Beispiel wird die Spalte **money**`ListPrice` in eine Spalte des Typs **int** und anschließend in eine Spalte des Typs **char(20)** umgewandelt, damit sie mit der LIKE-Klausel verwendet werden kann. In diesem Beispiel wird die `AdventureWorksDW2016`-Datenbank verwendet.  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  
@@ -848,7 +848,7 @@ UnconvertedText         UsingCast               UsingConvertFrom_ISO8601
 2010-07-25T13:50:38.544 07/25/2010 1:50:38 PM   07/25/2010 1:50:38 PM  
 ```  
 
-## <a name="see-also"></a>Siehe auch
+## <a name="see-also"></a>Weitere Informationen
 [Rangfolge der Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md)       
 [Datentypkonvertierung &#40;Datenbank-Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)     
 [FORMAT &#40;Transact-SQL&#41;](../../t-sql/functions/format-transact-sql.md)      

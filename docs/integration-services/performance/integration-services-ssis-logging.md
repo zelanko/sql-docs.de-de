@@ -30,10 +30,10 @@ ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71282565"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
@@ -41,9 +41,9 @@ ms.locfileid: "71282565"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] umfasst Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
   
- Sie können den Protokollierungsbereich konfigurieren, der während einer Paketausführung auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server auftritt. Weitere Informationen finden Sie unter [Enable Logging for Package Execution on the SSIS Server](#server_logging).  
+ Sie können den Protokollierungsbereich konfigurieren, der während einer Paketausführung auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server auftritt. Weitere Informationen finden Sie unter [Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server](#server_logging).  
   
  Sie können die Protokollierung auch einschließen, wenn Sie ein Paket mit dem Eingabeaufforderungs-Hilfsprogramm **dtecex** ausführen. Weitere Informationen zu den Befehlszeilenargumenten, die die Protokollierung unterstützen, finden Sie unter [dtexec Utility](../../integration-services/packages/dtexec-utility.md).  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71282565"
   
  In der folgenden Tabelle sind die ProgID und die ClassID für die Protokollanbieter von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] aufgeführt, sowie der Speicherort der Protokolle, in die Protokollanbieter schreiben.  
   
-|Protokollanbieter|ProgID|ClassID|Speicherort|  
+|Protokollanbieter|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |Textdatei|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der Textdatei an.|  
 |SQL Server Profiler|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|Der vom Protokollanbieter verwendete Dateiverbindungs-Manager gibt den Pfad der von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]verwendeten Textdatei an.|  
@@ -99,7 +99,7 @@ ms.locfileid: "71282565"
 #### <a name="log-schema"></a>Protokollschema  
  In der folgenden Tabelle werden die Elemente im Protokollschema beschrieben.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |Computer|Der Name des Computers, auf dem das Protokollereignis auftrat.|  
 |Operator|Die Identität des Benutzers, der das Paket gestartet hat.|  
@@ -111,7 +111,7 @@ ms.locfileid: "71282565"
   
  Die folgende Tabelle beschreibt drei zusätzliche Elemente des Protokollschemas, die auf der Registerkarte **Details** des Dialogfensters **SSIS-Protokolle konfigurieren** nicht verfügbar sind.  
   
-|Element|und Beschreibung|  
+|Element|Beschreibung|  
 |-------------|-----------------|  
 |StartTime|Der Zeitpunkt, zu dem der Container oder der Task die Ausführung beginnt.|  
 |EndTime|Der Zeitpunkt, zu dem der Container oder der Task die Ausführung beendet.|  
@@ -122,7 +122,7 @@ ms.locfileid: "71282565"
   
  In der folgenden Tabelle werden die vordefinierten Ereignisse beschrieben, die beim Auftreten von Laufzeitereignissen zum Schreiben von Protokolleinträgen aktiviert werden können. Diese Protokolleinträge gelten für ausführbare Dateien, das Paket sowie die im Paket enthaltenen Tasks und Container. Der Name des Protokolleintrags entspricht dem Namen des ausgelösten Laufzeitereignisses, mit dem das Schreiben des Protokolleintrags verursacht wurde.  
   
-|Ereignisse|und Beschreibung|  
+|Events|Beschreibung|  
 |------------|-----------------|  
 |**OnError**|Schreibt einen Protokolleintrag, wenn ein Fehler auftritt.|  
 |**OnExecStatusChanged**|Schreibt einen Protokolleintrag, wenn ein Task (nicht ein Container) während des Debuggens angehalten oder wieder aufgenommen wurde.|  
@@ -137,7 +137,7 @@ ms.locfileid: "71282565"
 |**OnVariableValueChanged**|Schreibt einen Protokolleintrag, wenn sich der Wert einer Variablen ändert.|  
 |**OnWarning**|Schreibt einen Protokolleintrag, wenn eine Warnung auftritt.|  
 |**PipelineComponentTime**|Schreibt für jede Datenflusskomponente einen Protokolleintrag für jede Phase der Überprüfung und der Ausführung. Der Protokolleintrag gibt die Verarbeitungszeit für jede Phase an.|  
-|**Diagnostic**<br /><br /> **DiagnosticEx**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandlung von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Protokollieren Sie das **DiagnosticEx** -Ereignis, wenn Sie die Spaltennamen für Spalten im Datenfluss finden möchten, die Fehler enthalten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> Hinweis: Wenn Sie das **DiagnosticEx**-Ereignis mit dem SQL Server-Protokollanbieter protokollieren, wird die Ausgabe möglicherweise abgeschnitten. Das **message** -Feld des SQL Server-Protokollanbieters ist vom Typ „nvarchar(2048)“. Verwenden Sie beim Protokollieren des **DiagnosticEx** -Ereignisses einen anderen Protokollanbieter, um eine abgeschnittene Ausgabe zu vermeiden.|  
+|**Diagnostic**<br /><br /> **DiagnosticEx**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../../integration-services/troubleshooting/troubleshooting-tools-for-package-execution.md).<br /><br /> Protokollieren Sie das **DiagnosticEx** -Ereignis, wenn Sie die Spaltennamen für Spalten im Datenfluss finden möchten, die Fehler enthalten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners. Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> Hinweis: Wenn Sie das **DiagnosticEx**-Ereignis mit dem SQL Server-Protokollanbieter protokollieren, wird die Ausgabe möglicherweise abgeschnitten. Das **message** -Feld des SQL Server-Protokollanbieters ist vom Typ „nvarchar(2048)“. Verwenden Sie beim Protokollieren des **DiagnosticEx** -Ereignisses einen anderen Protokollanbieter, um eine abgeschnittene Ausgabe zu vermeiden.|  
   
  Das Paket und viele Tasks verfügen über benutzerdefinierte Protokolleinträge, die für die Protokollierung aktiviert werden können. Der Task „Mail senden“ stellt z.B. den benutzerdefinierten Protokolleintrag **SendMailTaskBegin** bereit, mit dem im Zeitraum zwischen dem Beginn der Ausführung des Tasks „Mail senden“ und dem Senden einer E-Mail-Nachricht Informationen protokolliert werden. Weitere Informationen finden Sie unter [Custom Messages for Logging](#custom_messages).  
   
@@ -180,7 +180,7 @@ ms.locfileid: "71282565"
 #### <a name="use-the-pipelinecomponenttime-event"></a>Verwenden des PipelineComponentTime-Ereignisses  
  Das PipelineComponentTime-Ereignis stellt möglicherweise den nützlichsten benutzerdefinierten Protokolleintrag dar. Dieser Protokolleintrag meldet den Zeitaufwand in Millisekunden, den jede Komponente im Datenfluss für die fünf Hauptverarbeitungsschritte jeweils aufbringt. In der folgenden Tabelle werden diese Verarbeitungsschritte beschrieben. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Entwickler kennen diese Schritte als Hauptmethoden einer <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
-|Schritt|und Beschreibung|  
+|Schritt|Beschreibung|  
 |----------|-----------------|  
 |Überprüfen|Die Komponente überprüft Eigenschaftswerte und Konfigurationseinstellungen auf ihre Gültigkeit.|  
 |PreExecute|Die Komponente führt eine einmalige Verarbeitung aus, bevor sie mit der Verarbeitung von Datenzeilen beginnt.|  
@@ -224,7 +224,7 @@ ms.locfileid: "71282565"
   
 ### <a name="to-enable-logging-in-a-package"></a>So aktivieren Sie die Protokollierung in einem Paket  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Menü **SSIS** auf **Protokollierung**.  
   
@@ -232,7 +232,7 @@ ms.locfileid: "71282565"
   
 4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung>** , um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
   
-    -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
+    -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)  
   
     -   Verwenden Sie für [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]einen Dateiverbindungs-Manager.  
   
@@ -283,7 +283,7 @@ ms.locfileid: "71282565"
 ###  <a name="container"></a> Konfigurieren Sie die Optionen im Bereich "Container".  
  Mithilfe des **Container** -Bereichs des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie das Paket und seine Container für das Protokollieren aktivieren.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Container**  
  Aktivieren Sie die Kontrollkästchen in der hierarchischen Sicht, um das Paket und seine Container für die Protokollierung zu aktivieren:  
   
@@ -298,11 +298,11 @@ ms.locfileid: "71282565"
 ###  <a name="provider"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Anbieter und Protokolle".  
  Verwenden Sie die Registerkarte **Anbieter und Protokolle** des Dialogfelds **SSIS-Protokolle konfigurieren** , um Protokolle für das Aufzeichnen von Laufzeitereignissen zu erstellen und zu konfigurieren.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Anbietertyp**  
  Wählen Sie einen Protokollanbietertyp aus der Liste aus.  
   
- **Hinzufügen**  
+ **Add (Hinzufügen)**  
  Fügen Sie der Auflistung der Protokollanbieter des Pakets ein Protokoll des angegebenen Typs hinzu.  
   
  **Name**  
@@ -322,7 +322,7 @@ ms.locfileid: "71282565"
 ###  <a name="detail"></a> Konfigurieren Sie die Optionen auf der Registerkarte "Details".  
  Auf der Registerkarte **Details** des Dialogfelds **SSIS-Protokolle konfigurieren** können Sie die Ereignisse für das Protokollieren sowie die zu protokollierenden Informationsdetails aktivieren. Die Informationen, die Sie auswählen, gelten für alle Protokollanbieter im Paket. Sie können z. B. nicht einige Informationen in die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz und andere Informationen in eine Textdatei schreiben.  
   
-#### <a name="options"></a>enthalten  
+#### <a name="options"></a>Tastatur  
  **Ereignisse**  
  Aktivieren oder Deaktivieren von Ereignissen für die Protokollierung.  
   
@@ -332,15 +332,15 @@ ms.locfileid: "71282565"
  **Erweitert**  
  Auswählen oder Löschen zu protokollierender Ereignisse und Auswählen oder Löschen von Informationen, die für jedes Ereignis protokolliert werden sollen. Klicken Sie auf **Standard** , um alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse auszublenden. Die folgenden Informationen sind für die Protokollierung verfügbar:  
   
-|value|und Beschreibung|  
+|value|Beschreibung|  
 |-----------|-----------------|  
 |**Computer**|Der Name des Computers, auf dem das protokollierte Ereignis aufgetreten ist.|  
-|**Ist gleich**|Der Benutzername der Person, die das Paket gestartet hat.|  
+|**Operator**|Der Benutzername der Person, die das Paket gestartet hat.|  
 |**SourceName**|Der Name des Pakets, Containers oder Tasks, in dem das protokollierte Ereignis aufgetreten ist.|  
 |**SourceID**|GUID (Global Unique Identifier) des Pakets, Containers oder Tasks, in dem das protokollierte Ereignis aufgetreten ist.|  
 |**ExecutionID**|Der global eindeutige Bezeichner der Paketausführungsinstanz.|  
 |**MessageText**|Eine dem Protokolleintrag zugeordnete Meldung.|  
-|**DataBytes**|Zur künftigen Verwendung reserviert.|  
+|**DataBytes**|Für die zukünftige Verwendung reserviert.|  
   
  **Grundlegend**  
  Wählen Sie zu protokollierende Ereignisse aus, oder löschen Sie diese. Diese Option blendet alle Protokollierungsdetails mit Ausnahme der Liste der Ereignisse aus. Wenn Sie ein Ereignis auswählen, werden standardmäßig alle Protokollierungsdetails für das Ereignis ausgewählt. Klicken Sie auf **Erweitert** , um alle Protokollierungsdetails anzuzeigen.  
@@ -358,7 +358,7 @@ ms.locfileid: "71282565"
   
 ### <a name="to-configure-logging-for-a-container"></a>So konfigurieren Sie die Protokollierung für einen Container  
   
-1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Projekt mit dem gewünschten Paket.  
+1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Projekt mit dem gewünschten Paket.  
   
 2.  Klicken Sie im Menü **SSIS** auf **Protokollierung**.  
   
@@ -410,11 +410,11 @@ ms.locfileid: "71282565"
 ### <a name="select-a-logging-level"></a>Auswählen eines Protokolliergrads  
  Die folgenden integrierten Protokolliergrade sind verfügbar. Sie können auch einen vorhandenen benutzerdefinierten Protokolliergrad auswählen. Dieses Thema enthält eine Beschreibung benutzerdefinierter Protokolliergrade.  
   
-|Protokolliergrad|und Beschreibung|  
+|Protokolliergrad|Beschreibung|  
 |-------------------|-----------------|  
-|None|Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
-|Standard|Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
-|RuntimeLineage|Sammelt die Daten, die zum Nachverfolgen von Informationen über die Datenherkunft im Datenfluss benötigt werden. Sie können diese Herkunftsinformationen analysieren, um die Herkunftsbeziehung zwischen Tasks zuzuordnen. Unabhängige Softwareentwickler (ISVs) und Entwickler können mit diesen Informationen benutzerdefinierte Herkunftszuordnungstools erstellen.|  
+|Keine|Die Protokollierung ist deaktiviert. Nur der Status der Ausführung von Paketen wird protokolliert.|  
+|Basic|Alle Ereignisse werden protokolliert, außer benutzerdefinierten und Diagnose-Ereignissen. Dies ist der Standardwert.|  
+|RuntimeLineage|Sammelt die Daten, die zum Nachverfolgen von Informationen über die Datenherkunft im Datenfluss benötigt werden. Sie können diese Herkunftsinformationen analysieren, um die Herkunftsbeziehung zwischen Tasks zu bestimmen. Unabhängige Softwareentwickler (ISVs) und Entwickler können mit diesen Informationen benutzerdefinierte Herkunftszuordnungstools erstellen.|  
 |Leistung|Nur Leistungsstatistiken sowie OnError- und OnWarning-Ereignisse werden protokolliert.<br /><br /> In dem Bericht **Ausführungsleistung** wird die aktive Zeit und die Gesamtzeit für Datenflusskomponenten des Pakets angezeigt. Diese Informationen sind verfügbar, wenn der Protokolliergrad der letzten Paketausführung auf **Leistung** oder **Ausführlich**festgelegt wurde. Weitere Informationen finden Sie unter [Berichte für den Integration Services-Server](../../integration-services/performance/monitor-running-packages-and-other-operations.md#reports).<br /><br /> In der [catalog.execution_component_phases](../../integration-services/system-views/catalog-execution-component-phases.md) -Sicht werden die Start- und Beendigungszeiten der Datenflusskomponenten für jede Ausführungsphase angezeigt. In dieser Sicht werden die Informationen für diese Komponenten nur angezeigt, wenn der Protokolliergrad der Paketausführung auf **Leistung** oder **Ausführlich**festgelegt ist.|  
 |Ausführlich|Alle Ereignisse werden protokolliert, einschließlich benutzerdefinierter Ereignisse und Diagnose-Ereignissen.<br /><br /> Zu benutzerdefinierten Ereignissen zählen auch die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Tasks protokollierten Ereignisse. Weitere Informationen zu benutzerdefinierten Ereignissen finden Sie unter [Benutzerdefinierte Meldungen für die Protokollierung](#custom_messages).<br /><br /> Ein Beispiel für ein Diagnoseereignis ist das **DiagnosticEx** -Ereignis. Immer wenn ein „Paket ausführen“-Task ein untergeordnetes Paket ausführt, erfasst dieses Ereignis die an untergeordnete Pakete übergebenen Parameterwerte.<br /><br /> Das **DiagnosticEx** -Ereignis hilft Ihnen auch dabei, die Namen der Spalten abzurufen, in denen Fehler auf Zeilenebene auftreten. Dieses Ereignis schreibt eine Herkunftszuordnung für den Datenfluss in das Protokoll. Sie können den Spaltennamen dann in dieser Herkunftszuordnung nachschlagen, und zwar anhand des von einer Fehlerausgabe erfassten Spaltenbezeichners.  Weitere Informationen finden Sie unter [Fehlerbehandlung in Daten](../../integration-services/data-flow/error-handling-in-data.md).<br /><br /> Der Wert der Meldungsspalte für **DiagnosticEx** ist XML-Text. Fragen Sie zum Anzeigen des Meldungstexts für eine Paketausführung die Sicht [catalog.operation_messages &#40;SSISDB-Datenbank&#41;](../../integration-services/system-views/catalog-operation-messages-ssisdb-database.md) ab. Beachten Sie, dass Leerraum in der XML-Ausgabe beim **DiagnosticEx** -Ereignis nicht beibehalten wird, um die Größe des Protokolls zu verringern. Kopieren Sie das Protokoll in einen XML-Editor wie z.B. Visual Studio, der XML-Formatierung und Syntaxhervorhebung unterstützt, um die Lesbarkeit zu verbessern.<br /><br /> In der [catalog.execution_data_statistics](../../integration-services/system-views/catalog-execution-data-statistics.md) -Sicht wird eine Zeile angezeigt, sobald eine Datenflusskomponente Daten zur Paketausführung an eine Downstreamkomponente sendet. Der Protokolliergrad muss auf **Ausführlich** festgelegt werden, um diese Informationen in der Sicht zu erfassen.|  
   
@@ -459,7 +459,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
   
  [SQL ausführen (Task)](#ExecuteSQL)  
   
- [Task Dateisystem](#FileSystem)  
+ [Task „Dateisystem“](#FileSystem)  
   
  [FTP-Task](#FTP)  
   
@@ -475,7 +475,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
   
  [Aufträge übertragen (Task)](#TransferJobs)  
   
- [Task "Anmeldungen übertragen"](#TransferLogins)  
+ [Task „Anmeldungen übertragen“](#TransferLogins)  
   
  [In master gespeicherte Prozeduren übertragen (Task)](#TransferMasterStoredProcedures)  
   
@@ -494,7 +494,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="Package"></a> Paket  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für Pakete aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**PackageStart**|Zeigt den Beginn der Paketausführung an. Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
 |**PackageEnd**|Zeigt den Abschluss der Paketausführung an. Dieser Protokolleintrag wird automatisch in das Protokoll geschrieben. Dieser Eintrag kann nicht ausgeschlossen werden.|  
@@ -503,16 +503,16 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="BulkInsert"></a> Masseneinfügungstask  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Masseneinfügungstask aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**DTSBulkInsertTaskBegin**|Zeigt den Beginn der Masseneinfügung an.|  
 |**DTSBulkInsertTaskEnd**|Zeigt die Fertigstellung der Masseneinfügung an.|  
 |**DTSBulkInsertTaskInfos**|Enthält beschreibende Informationen zum Task.|  
   
-####  <a name="DataFlow"></a> Datenflusstask  
+####  <a name="DataFlow"></a> Data Flow Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Datenflusstask aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**BufferSizeTuning**|Zeigt an, dass der Datenflusstask die Größe des Puffers geändert hat. Der Protokolleintrag beschreibt die Gründe für die Größenänderung und listet die temporäre neue Puffergröße auf.|  
 |**OnPipelinePostEndOfRowset**|Gibt an, dass eine Komponente das Signal für das Ende des Rowsets erhalten hat. Dieses Signal wird durch den letzten Aufruf der **ProcessInput** -Methode festgelegt. Für jede Komponente im Datenfluss, die eine Eingabe verarbeitet, wird ein Eintrag geschrieben. Der Eintrag schließt den Namen der Komponente ein.|  
@@ -528,7 +528,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="ExecuteDTS200"></a> DTS 2000 ausführen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task DTS 2000 ausführen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**ExecuteDTS80PackageTaskBegin**|Zeigt an, dass die Ausführung eines DTS 2000-Pakets über den Task gestartet wurde.|  
 |**ExecuteDTS80PackageTaskEnd**|Zeigt an, dass die Ausführung über den Task beendet wurde.<br /><br /> Hinweis: Das DTS 2000-Paket kann nach Beendigung des Tasks mit der Ausführung fortfahren.|  
@@ -538,7 +538,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="ExecuteProcess"></a> Prozess ausführen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Prozess ausführen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**ExecuteProcessExecutingProcess**|Enthält Informationen zum Ausführprozess der zur Ausführung konfigurierten ausführbaren Datei.<br /><br /> Es werden zwei Protokolleinträge geschrieben. Der eine Protokolleintrag enthält Informationen über den Namen und Speicherort der vom Task ausgeführten ausführbaren Datei, im anderen Eintrag wird das Beenden der ausführbaren Datei erfasst.|  
 |**ExecuteProcessVariableRouting**|Enthält Informationen darüber, welche Variablen an die Eingabe und an die Ausgaben der ausführbaren Datei geleitet werden. Es werden Protokolleinträge für stdin (für die Eingabe), für stdout (für die Ausgabe) und für stderr (für die Fehlerausgabe) geschrieben.|  
@@ -546,21 +546,21 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="ExecuteSQL"></a> SQL ausführen (Task)  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task <legacyBold>SQL ausführen</legacyBold> beschrieben.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**ExecuteSQLExecutingQuery**|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
   
 ####  <a name="FileSystem"></a> Task Dateisystem  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task "Dateisystem" beschrieben.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**FileSystemOperation**|Berichtet den vom Task durchgeführten Vorgang. Der Protokolleintrag wird geschrieben, wenn der Dateisystemvorgang begonnen wird, und schließt Informationen über die Quelle und das Ziel ein.|  
   
 ####  <a name="FTP"></a> FTP-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den FTP-Task aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**FTPConnectingToServer**|Zeigt an, dass mit dem Task eine Verbindung zum FTP-Server initiiert wurde.|  
 |**FTPOperation**|Berichtet den Beginn und Typ des vom Task ausgeführten FTP-Vorgangs.|  
@@ -568,7 +568,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="MessageQueue"></a> Nachrichtenwarteschlange (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Nachrichtenwarteschlange aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**MSMQAfterOpen**|Zeigt an, dass das Öffnen der Warteschlange beendet wurde.|  
 |**MSMQBeforeOpen**|Zeigt an, dass das Öffnen der Warteschlange begonnen wurde.|  
@@ -582,14 +582,14 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="Script"></a> Skripttask  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Skripttask beschrieben.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**ScriptTaskLogEntry**|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Für jeden Aufruf der **Log** -Methode des **Dts** -Objekts wird jeweils ein Protokolleintrag geschrieben. Der Eintrag wird beim Ausführen des Codes geschrieben. Weitere Informationen finden Sie unter [Logging in the Script Task](../../integration-services/extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
 ####  <a name="SendMail"></a> Mail senden (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task 'Mail senden' aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**SendMailTaskBegin**|Zeigt an, dass das Senden einer E-Mail-Nachricht begonnen wurde.|  
 |**SendMailTaskEnd**|Zeigt an, dass das Senden einer E-Mail-Nachricht beendet wurde.|  
@@ -598,7 +598,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferDatabase"></a> Datenbanken übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Datenbanken übertragen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**SourceDB**|Gibt die vom Task kopierte Datenbank an.|  
 |**SourceSQLServer**|Gibt den Computer an, von dem die Datenbank kopiert wurde.|  
@@ -606,7 +606,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferErrorMessages"></a> Fehlermeldungen übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Fehlermeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**TransferErrorMessagesTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von Fehlermeldungen beendet wurde.|  
 |**TransferErrorMessagesTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von Fehlermeldungen gestartet wurde.|  
@@ -614,7 +614,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferJobs"></a> Aufträge übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Aufträge übertragen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**TransferJobsTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen beendet wurde.|  
 |**TransferJobsTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen gestartet wurde.|  
@@ -622,7 +622,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferLogins"></a> Task "Anmeldungen übertragen"  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task Anmeldungen übertragen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**TransferLoginsTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von Anmeldungen beendet wurde.|  
 |**TransferLoginsTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von Anmeldungen gestartet wurde.|  
@@ -630,7 +630,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferMasterStoredProcedures"></a> In master gespeicherte Prozeduren übertragen (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task In master gespeicherte Prozeduren übertragen aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**TransferStoredProceduresTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, beendet wurde.|  
 |**TransferStoredProceduresTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von benutzerdefinierten gespeicherten Prozeduren, die in der **master** -Datenbank gespeichert sind, gestartet wurde.|  
@@ -638,7 +638,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="TransferSQLServerObjects"></a> SQL Server-Objekte kopieren (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Objekte kopieren aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**TransferSqlServerObjectsTaskFinishedTransferringObjects**|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten beendet wurde.|  
 |**TransferSqlServerObjectsTaskStartTransferringObjects**|Zeigt an, dass das Übertragen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankobjekten gestartet wurde.|  
@@ -646,7 +646,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="WebServices"></a> Webdienste (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task Webdienste aktiviert werden können.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**WSTaskBegin**|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |**WSTaskEnd**|Eine Webdienstmethode wurde beendet.|  
@@ -655,7 +655,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="WMIDataReader"></a> WMI-Datenleser (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Datenleser aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**WMIDataReaderGettingWMIData**|Zeigt an, dass das Lesen der WMI-Daten begonnen wurde.|  
 |**WMIDataReaderOperation**|Berichtet die vom Task ausgeführte WQL-Abfrage.|  
@@ -663,7 +663,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="WMIEventWatcher"></a> WMI-Ereignisüberwachung (Task)  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Ereignisüberwachung aufgelistet.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**WMIEventWatcherEventOccurred**|Zeigt an, dass das vom Task überwachte Ereignis aufgetreten ist.|  
 |**WMIEventWatcherTimedout**|Zeigt an, dass beim Task ein Timeout eingetreten ist.|  
@@ -672,7 +672,7 @@ SQL Server Integration Services stellt einen umfangreichen Satz an benutzerdefin
 ####  <a name="XML"></a> XML-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den XML-Task beschrieben.  
   
-|Protokolleintrag|und Beschreibung|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |**XMLOperation**|Stellt Informationen über den vom Task durchgeführten Vorgang bereit.|  
 

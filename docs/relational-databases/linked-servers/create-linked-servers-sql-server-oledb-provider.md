@@ -11,10 +11,10 @@ ms.author: pelopes
 manager: rothj
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 933a37dd4ef627796b7688510bd235c80db417be
-ms.sourcegitcommit: 15fe0bbba963d011472cfbbc06d954d9dbf2d655
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/14/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "74095996"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Verteilte Microsoft SQL Server-Abfragen: OLE DB-Konnektivität
@@ -98,7 +98,7 @@ Momentaufnahmecursor werden zum Öffnungszeitpunkt des Cursor aufgefüllt, und d
 
 Keysetcursor werden zum Öffnungszeitpunkt des Cursors aufgefüllt, und das Resultset bleibt während der gesamten Lebensdauer des Cursors unverändert. UPDATE- und DELETE-Anweisungen für zugrunde liegende Tabellen sind jedoch im Cursor sichtbar, wenn die Zeilen besucht werden. INSERT-Anweisungen für zugrunde liegende Tabellen, die sich auf die Cursormitgliedschaft auswirken können, sind nicht sichtbar.
 
-Eine Remotetabelle kann durch einen Cursor aktualisiert oder gelöscht werden, der für eine verteilte Abfrage definiert ist und auf die Remotetabelle verweist, wenn der Anbieter die Bedingungen für Updates und Löschungen für die Remotetabelle erfüllt (z. B. `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`). Weitere Informationen finden Sie weiter unten in diesem Artikel im Abschnitt zu \"UPDATE- und DELETE-Anweisungen\".
+Eine Remotetabelle kann über einen Cursor aktualisiert oder gelöscht werden, der für eine verteilte Abfrage definiert ist und auf die Remotetabelle verweist, wenn der Anbieter die Bedingungen für Updates und Löschungen für die Remotetabelle erfüllt (z. B. `UPDATE` \| DELETE `<remote-table>` `WHERE` CURRENT OF `<cursor-name>`). Weitere Informationen finden Sie weiter unten in diesem Artikel im Abschnitt zu \"UPDATE- und DELETE-Anweisungen\".
 
 #### <a name="keyset-cursor-support-requirements"></a>Anforderungen für die Keysetcursorunterstützung
 
@@ -190,18 +190,18 @@ Die folgenden allgemeinen Schritte werden beim Herstellen einer Verbindung mit e
 
    SQL Server erfasst mehrere Anbietereigenschaften, die für Auswertung verteilter Abfragen verwendet werden sollen. Diese Eigenschaften werden durch Aufruf von `IDBProperties::GetProperties` abgerufen. Alle dieser Eigenschaften sind optional. Wenn jedoch alle relevanten Eigenschaften unterstützt werden, kann SQL Server die Funktionen des Anbieters in vollem Umfang ausschöpfen. `DBPROP_SQLSUPPORT` ist beispielsweise erforderlich, um zu ermitteln, ob SQL Server Abfragen an den Anbieter senden kann. Wenn diese Eigenschaft nicht unterstützt wird, verwendet SQL Server den Remoteanbieter nicht als SQL-Befehlsanbieter, auch wenn es sich dabei um einen solchen handelt. In der folgenden Tabelle gibt die Spalte „Standardwert“ an, welchen Wert SQL Server erwartet, wenn der Anbieter die Eigenschaft nicht unterstützt.
 
-Eigenschaft| Standardwert| Verwenden Sie |
+Eigenschaft| Standardwert| Zweck |
 |:----|:----|:----|
-|`DBPROP_DBMSNAME`|None|Wird für Fehlermeldungen verwendet.|
-|`DBPROP_DBMSVER` |None|Wird für Fehlermeldungen verwendet.|
-|`DBPROP_PROVIDERNAME`|None|Wird für Fehlermeldungen verwendet.|
+|`DBPROP_DBMSNAME`|Keine|Wird für Fehlermeldungen verwendet.|
+|`DBPROP_DBMSVER` |Keine|Wird für Fehlermeldungen verwendet.|
+|`DBPROP_PROVIDERNAME`|Keine|Wird für Fehlermeldungen verwendet.|
 |`DBPROP_PROVIDEROLEDBVER1`|1.5|Wird zum Bestimmen der Verfügbarkeit von 2.0-Features verwendet.
-|`DBPROP_CONCATNULLBEHAVIOR`|None|Wird verwendet, um zu ermitteln, ob das `NULL`-Verkettungsverhalten des Anbieter dem von SQL Server entspricht.|
-|`DBPROP_NULLCOLLATION`|None|Lässt die Verwendung von Sortierung/Index nur zu, wenn `NULLCOLLATION` mit dem Sortierungsverhalten der SQL Server-Instanz „NULL“ übereinstimmt.|
-|`DBPROP_OLEOBJECTS`|None|Bestimmt, ob der Anbieter strukturierte Speicherschnittstellen für LOB-Spalten unterstützt.|
-|`DBPROP_STRUCTUREDSTORAGE`|None|Bestimmt, welche strukturierten Speicherschnittstellen für LOB-Typen unterstützt werden (`ILockBytes`, `Istream` oder `ISequentialStream`).|
+|`DBPROP_CONCATNULLBEHAVIOR`|Keine|Wird verwendet, um zu ermitteln, ob das `NULL`-Verkettungsverhalten des Anbieter dem von SQL Server entspricht.|
+|`DBPROP_NULLCOLLATION`|Keine|Lässt die Verwendung von Sortierung/Index nur zu, wenn `NULLCOLLATION` mit dem Sortierungsverhalten der SQL Server-Instanz „NULL“ übereinstimmt.|
+|`DBPROP_OLEOBJECTS`|Keine|Bestimmt, ob der Anbieter strukturierte Speicherschnittstellen für LOB-Spalten unterstützt.|
+|`DBPROP_STRUCTUREDSTORAGE`|Keine|Bestimmt, welche strukturierten Speicherschnittstellen für LOB-Typen unterstützt werden (`ILockBytes`, `Istream` oder `ISequentialStream`).|
 |`DBPROP_MULTIPLESTORAGEOBJECTS`|False|Bestimmt, ob mehrere LOB-Spalten gleichzeitig geöffnet sein können.|
-|`DBPROP_SQLSUPPORT`|None|Bestimmt, ob SQL-Abfragen an den Anbieter gesendet werden können.|
+|`DBPROP_SQLSUPPORT`|Keine|Bestimmt, ob SQL-Abfragen an den Anbieter gesendet werden können.|
 |`DBPROP_CATALOGLOCATION`|`DBPROPVAL_CL_START`|Wird zum Erstellen mehrteiliger Tabellennamen verwendet.
 |`SQLPROP_DYNAMICSQL`|False|SQL Server-spezifische Eigenschaft: Rückgabe von `VARIANT_TRUE` gibt an, dass `?`-Parametermarker für die Ausführung parametrisierter Abfragen unterstützt werden.
 |`SQLPROP_NESTEDQUERIES`|False|SQL Server-spezifische Eigenschaft: Rückgabe von `VARIANT_TRUE` gibt an, dass der Anbieter geschachtelte `SELECT`-Anweisungen in der `FROM`-Klausel unterstützt.
@@ -238,7 +238,7 @@ Wenn `IDBSchemaRowset` unterstützt wird, werden die Schemarowsets `TABLES`, `CO
 
 SQL Server ruft die Spalten `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`, `TABLE_TYPE` und `TABLE_GUID` aus dem Schemarowset `TABLES` ab, indem Einschränkungen gemäß der oben beschriebenen Regeln festgelegt werden.
 
-SQL Server ruft die Spalten `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`, `COLUMN_NAME`, `COLUMN_GUID`, `ORDINAL_POSITION`, `COLUMN_FLAGS`, `IS_NULLABLE`, `DATA_TYPE`, `TYPE_GUID`, `CHARACTER_MAXIMUM_LENGTH`, `NUMERIC_PRECISION` und `NUMERIC_SCALE` aus dem Schemarowset `COLUMNS` ab. `COLUMN_NAME`, `DATA_TYPE` und `ORDINAL_POSITION` müssen gültige Werte ungleich NULL zurückgeben. Wenn `DATA_TYPE` `DBTYPE_NUMERIC` oder `DBTYPE_DECIMAL` entspricht, müssen die entsprechenden Werte von `NUMERIC_PRECISION` und `NUMERIC_SCALE` gültige Nicht-NULL-Werte sein.
+SQL Server ruft die Spalten `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`, `COLUMN_NAME`, `COLUMN_GUID`, `ORDINAL_POSITION`, `COLUMN_FLAGS`, `IS_NULLABLE`, `DATA_TYPE`, `TYPE_GUID`, `CHARACTER_MAXIMUM_LENGTH`, `NUMERIC_PRECISION` und `NUMERIC_SCALE` aus dem Schemarowset `COLUMNS` ab. `COLUMN_NAME`, `DATA_TYPE` und `ORDINAL_POSITION` müssen gültige Werte ungleich NULL zurückgeben. Wenn `DATA_TYPE``DBTYPE_NUMERIC` oder `DBTYPE_DECIMAL` entspricht, müssen die entsprechenden Werte von `NUMERIC_PRECISION` und `NUMERIC_SCALE` gültige Nicht-NULL-Werte sein.
 
 SQL Server sucht im optionalen Schemarowset `INDEXES` nach Indizes für die angegebene Remotetabelle, indem Einschränkungen gemäß der oben beschriebenen Regeln festgelegt werden. SQL Server ruft dann die Spalten `TABLE_CATALOG`, `TABLE_SCHEMA`, `TABLE_NAME`, `INDEX_CATALOG`, `INDEX_SCHEMA`, `INDEX_NAME`, `PRIMARY_KEY`, `UNIQUE`, `CLUSTERED`, `FILL_FACTOR`, `ORDINAL_POSITION`, `COLUMN_NAME`, `COLLATION`, `CARDINALITY` und `PAGES` aus den gefundenen übereinstimmenden Indexeinträgen ab.
 
@@ -383,7 +383,7 @@ Ordnen Sie native SQL Server-Datentypen zu OLE DB-Datentypen mithilfe derselben 
 
 - Es liegt eine zulässige implizite Konvertierung von `S1` in den anderen SQL Server-Typ `S2` vor, durch die `S2` in der Zuordnungstabelle dem Typ `T` zugeordnet wird.
 
-#### <a name="large-object-lob-handling"></a>Verarbeitung von Large Objects (LOB)
+#### <a name="large-object-lob-handling"></a>Behandlung großer Objekte (Large Object, LOB)
 
 Wenn Spalten der Typen `DBTYPE_STR`, `DBTYPE_WSTR` oder `DBTYPE_BSTR` auch `DBCOLUMNFLAGS_ISLONG` enthalten oder ihre maximale Länge 4.000 Zeichen überschreitet (bzw. keine maximale Länge gemeldet wird), behandelt SQL Server sie wie in der Zuordnungstabelle angegeben entsprechend als `text`- oder `ntext`-Spalte. Ähnlich gilt für `DBTYPE_BYTES`-Spalten, dass die Spalten wie `image`-Spalten behandelt werden, wenn `DBCOLUMNFLAGS_ISLONG` festgelegt ist oder die maximale Länge über 8.000 Byte liegt (oder wenn die maximale Länge nicht gemeldet wird). Die Spalten `Text`, `ntext` und `image` werden als LOB-Spalten bezeichnet.
 
@@ -427,7 +427,7 @@ SQL Server verwendet das OLE DB-Fehlerobjekt gemäß OLE DB. Einige der allgemei
 
 Weitere Informationen zur Verwendung des Fehlerobjekts des Anbieters finden Sie in der OLE DB-Dokumentation.
 
-### <a name="security"></a>Security
+### <a name="security"></a>Sicherheit
 
 Wenn ein Benutzer eine Verbindung mit einem OLE DB-Anbieter herstellt, fordert der Anbieter in der Regel eine Benutzer-ID und ein Kennwort an, es sei denn, der Benutzer möchte als integrierter Sicherheitsbenutzer authentifiziert werden. Bei verteilten Abfragen agiert SQL Server als Benutzer des OLE DB-Anbieters für die SQL Server-Anmeldung, die die verteilte Abfrage ausführt. SQL Server ordnet die aktuelle SQL Server-Anmeldung einer Benutzer-ID und einem Kennwort auf dem Verbindungsserver zu.
 
@@ -495,7 +495,7 @@ Wenn der Anbieter SQL-Features unterstützt, die nicht durch die in „DBPROP_SQ
 
 - SQLPROP_GROUPBY. Diese Eigenschaft ist für Anbieter von Interesse, die die minimale SQL-Ebene unterstützen. Diese Eigenschaft gibt an, dass der Anbieter die Klauseln „GROUP BY“ und „HAVING“ in der `SELECT`-Anweisung unterstützt. Außerdem gibt diese Eigenschaft auch an, dass der Anbieter die fünf Aggregatfunktionen „MIN“, „MAX“, „SUM“, „COUNT“ und „AVG“ unterstützt. „DISTINCT“ wird für das Argument dieser Aggregatfunktionen möglicherweise nicht vom Anbieter unterstützt.
 
-- SQLPROP_SUBQUERIES. Diese Eigenschaft ist für Anbieter wichtig, die die minimale SQL-Ebene unterstützen. Sie gibt an, dass der Anbieter (wie in der SQL-92-Einstiegsebene angegeben) Unterabfragen unterstützt. Dies schließt Unterabfragen in der `SELECT`-Liste und der `WHERE`-Klausel mit Unterstützung für korrelierte Unterabfragen sowie `IN`-, `EXISTS`-, `ALL`- und `ANY`-Operatoren mit ein.
+- SQLPROP_SUBQUERIES. Diese Eigenschaft ist für Anbieter von Interesse, die die minimale SQL-Ebene unterstützen. Sie gibt an, dass der Anbieter (wie in der SQL-92-Einstiegsebene angegeben) Unterabfragen unterstützt. Dies schließt Unterabfragen in der `SELECT`-Liste und der `WHERE`-Klausel mit Unterstützung für korrelierte Unterabfragen sowie `IN`-, `EXISTS`-, `ALL`- und `ANY`-Operatoren mit ein.
 
 - SQLPROP_DATELITERALS. Diese Eigenschaft ist für alle Anbieter von Interesse (einschließlich derjenigen, die die SQL-92-Einstiegsebene unterstützen). Unterstützung für die Standardliteralsyntax für datetime-Literale ist nicht Teil der SQL-92-Einstiegsebene. Diese SQL Server-spezifische Eigenschaft gibt an, dass der Anbieter (gemäß SQL-92-Standard) die datetime-Literalsyntax unterstützt.
 
@@ -606,7 +606,7 @@ Dieses Szenario ähnelt dem Szenario zu Remoteabfragen mit der Ausnahme, dass de
 
 Eine Liste aller von SQL Server verwendeten OLE DB-Schnittstellen finden Sie unter [Von SQL Server verwendete OLE DB-Schnittstellen](#appendixa).
 
-### <a name="conclusion"></a>Fazit
+### <a name="conclusion"></a>Zusammenfassung
 
 Microsoft SQL Server bietet die stabilsten Tools für den Zugriff auf Daten aus heterogenen Datenquellen. Durch grundlegende Kenntnisse im Umgang mit den von SQL Server verfügbar gemachten OLE DB-Schnittstellen haben Entwickler ein hohes Maß an Kontrolle und Optionen hinsichtlich verteilter Abfragen.
 
@@ -616,7 +616,7 @@ In der folgenden Tabelle werden alle OLE DB-Schnittstellen aufgelistet, die von 
 
 Im Fall der optionalen Schnittstellen gibt die Spalte „Szenarien“ ein oder mehrere der sechs Szenarios an, die die angegebene Schnittstelle verwenden. Die `IRowsetChange`-Schnittstelle in Basistabellenrowsets ist beispielsweise eine optionale Schnittstelle. Diese Schnittstelle wird in den `UPDATE`-, „DELETE“- und `INSERT`-Anweisungsszenarios verwendet. Wenn diese Schnittstelle nicht unterstützt wird, können „UPDATE“-, „DELETE“- und `INSERT`-Anweisungen nicht für diesen Anbieter unterstützt werden. Einige der anderen optionalen Schnittstellen sind in der Spalte „Szenarien“ als \"Leistung\" gekennzeichnet. Dies gibt an, dass die Schnittstellen eine bessere allgemeine Leistung aufweisen. Wenn die `IDBSchemaRowset`-Schnittstelle beispielsweise nicht unterstützt wird, muss SQL Server das Rowset zweimal öffnen: einmal für die Metadaten und einmal für die Ausführung der Abfrage. Durch die Unterstützung von `IDBSchemaRowset` wird die Leistung von SQL Server verbessert.
 
-|Objekt|Schnittstelle|Required|Kommentare|Szenarien|
+|Object|Schnittstelle|Erforderlich|Kommentare|Szenarien|
 |:-----|:-----|:-----|:-----|:-----|
 |Datenquellenobjekt|`IDBInitialize`|Ja|Initialisieren und Einrichten von Daten und Sicherheitskontext.| |
 | |`IDBCreateSession`|Ja|Erstellen eines Datenbanksitzungsobjekts.| |
@@ -640,7 +640,7 @@ Im Fall der optionalen Schnittstellen gibt die Spalte „Szenarien“ ein oder m
 | |`IColumnsInfo`|Ja|Abrufen von Informationen über Spalten in einem Rowset.|Indizierter Zugriff, Leistung.|
 | |`IRowsetInfo`|Ja|Abrufen von Informationen über Rowseteigenschaften.|Indizierter Zugriff, Leistung.|
 | |`IRowsetIndex`|Ja|Wird nur für Rowsets in einem Index benötigt; verwendet für Indizierungsfunktionen (Bereich festlegen, Suchen).|Indizierter Zugriff, Leistung.|
-|Befehl|`ICommand`|Ja| |Remoteabfrage, Pass-Through-Abfrage.|
+|Get-Help|`ICommand`|Ja| |Remoteabfrage, Pass-Through-Abfrage.|
 | |`ICommandText`|Ja|Wird zum Definieren des Abfragetexts verwendet.|Remoteabfrage, Pass-Through-Abfrage.|
 | |`IColumnsInfo`|Ja|Wird zum Abfragen von Spaltenmetadaten für Abfrageergebnisse verwendet.|Remoteabfrage, Pass-Through-Abfrage.|
 | |`ICommandProperties`|Ja|Wird zum Angeben erforderlicher Eigenschaften für Rowsets verwendet, die vom Befehl zurückgegeben werden.|Remoteabfrage, Pass-Through-Abfrage.|
@@ -680,7 +680,7 @@ SQL Server verwendet die folgende Teilmenge der SQL-Sprache für von SQL-Befehls
 
    - Tabellenaliase ohne das AS-Schlüsselwort.
 
-1. Die `WHERE`-Klausel verwendet Unterabfragen mit `NOT`, `EXISTS`, `ANY` und `ALL`.
+1. Die `WHERE`-Klausel verwendet Unterabfragen mit `NOT` `EXISTS`, `ANY` und `ALL`.
 
 1. Ausdrücke:
 

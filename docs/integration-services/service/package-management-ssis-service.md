@@ -28,10 +28,10 @@ ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
 author: chugugrace
 ms.author: chugu
 ms.openlocfilehash: 33ce0a748381e425371b6f36c1ceeaaba4b62501
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 09/26/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71296878"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
@@ -41,7 +41,7 @@ ms.locfileid: "71296878"
 
   Die Paketverwaltung umfasst das Überwachen, Verwalten, Importieren und Exportieren von Paketen.  
  
- ## <a name="package-store"></a>-Paketspeicher  
+ ## <a name="package-store"></a>Paketspeicher  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt zwei Ordner auf oberster Ebene für den Zugriff auf Pakete zur Verfügung: 
  - **Ausgeführte Pakete** 
  - **Gespeicherte Pakete**
@@ -110,7 +110,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
   
  Sie können ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket aus folgenden Speicherorten importieren bzw. in folgende Speicherorte exportieren:  
   
--   Sie können ein Paket importieren, das in einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], im Dateisystem oder im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher gespeichert ist. Das importierte Pakete wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder in einem Ordner im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher gespeichert.  
+-   Sie können ein Paket importieren, das in einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, im Dateisystem oder im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketspeicher gespeichert ist. Das importierte Pakete wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder in einem Ordner im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher gespeichert.  
   
 -   Sie können ein Paket exportieren, das in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], im Dateisystem oder im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher in einem anderen Speicherformat und an einem anderen Speicherort gespeichert ist.  
   
@@ -195,9 +195,9 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Paketspeicherort**  
- Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
+ Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen sind verfügbar:  
   
  **SQL Server**  
   
@@ -217,11 +217,11 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
  **Authentifizierungstyp**  
  Wählen Sie einen Authentifizierungstyp aus.  
   
- **User name**  
- Stellen Sie einen Benutzernamen bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
+ **Benutzername**  
+ Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, stellen Sie einen Benutzernamen bereit.  
   
  **Kennwort**  
- Stellen Sie ein Kennwort bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
+ Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)** , und suchen Sie das Paket.  
@@ -235,9 +235,9 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 ## <a name="export-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche des Dialogfelds Paket exportieren
   Verwenden Sie das in **verfügbare Dialogfeld** Paket exportieren [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paket an einen anderen Speicherort zu exportieren und optional die Schutzebene zu ändern.  
   
-### <a name="options"></a>enthalten  
+### <a name="options"></a>Tastatur  
  **Paketspeicherort**  
- Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen stehen zur Verfügung:  
+ Wählen Sie den Speichertyp aus, in den das Paket exportiert werden soll. Die folgenden Optionen sind verfügbar:  
   
  **SQL Server**  
   
@@ -257,11 +257,11 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
  **Authentifizierungstyp**  
  Wählen Sie einen Authentifizierungstyp aus.  
   
- **User name**  
- Stellen Sie einen Benutzernamen bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
+ **Benutzername**  
+ Wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden, stellen Sie einen Benutzernamen bereit.  
   
  **Kennwort**  
- Stellen Sie ein Kennwort bereit, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
+ Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um nach dem Ordner zu suchen, in dem das Paket gespeichert werden soll.  
@@ -271,7 +271,7 @@ Sie können ein ausgeführtes Paket im Ordner **Ausgeführte Pakete** beenden, i
 
 ## <a name="back-up-and-restore-packages"></a>Sichern und Wiederherstellen von Paketen
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete können im Dateisystem oder in „msdb“, einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemdatenbank, gespeichert werden. In „msdb“ gespeicherte Pakete können mit den Sicherungs- und Wiederherstellungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesichert und wiederhergestellt werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete können im Dateisystem oder in msdb, einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Systemdatenbank, gespeichert werden. In „msdb“ gespeicherte Pakete können mit den Sicherungs- und Wiederherstellungsfunktionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gesichert und wiederhergestellt werden.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Sichern und Wiederherstellen der msdb-Datenbank zu erhalten:  
   

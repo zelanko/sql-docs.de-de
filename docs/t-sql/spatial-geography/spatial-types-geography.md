@@ -18,16 +18,16 @@ ms.assetid: d9e4952a-1841-4465-a64b-11e9288dba1d
 author: MladjoA
 ms.author: mlandzic
 ms.openlocfilehash: 5b98f2283cfb9d89277ad97ffc7a883e43a42b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68042517"
 ---
 # <a name="spatial-types---geography"></a>Räumliche Typen - geography
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Der Räumlichkeitsdatentyp **geography** wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als .NET-CLR-Datentyp (Common Language Runtime) implementiert. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  
+  Der Räumlichkeitsdatentyp **geography** wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als .NET-CLR-Datentyp (Common Language Runtime) implementiert. Dieser Typ stellt Daten in einem Erdkugel-Koordinatensystem dar. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp **geography** speichert elliptische Daten (Globusmodell) wie GPS-Koordinaten in Längen- und Breitengraden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt einen Satz von Methoden für den räumlichen **geography**-Datentyp. Dazu gehören Methoden für **geography**, die im OGC-Standard (Open Geospatial Consortium) sowie in einer Gruppe von [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Erweiterungen dieses Standards definiert sind.  
  

@@ -13,10 +13,10 @@ ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "71710828"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
@@ -25,7 +25,7 @@ ms.locfileid: "71710828"
   
  Die folgende Abbildung zeigt alle möglichen Verbindungen, manche Verbindungen sind jedoch in einer bestimmten Topologie möglicherweise nicht erforderlich. Beispielsweise ist eine Verbindung zu einem FTP-Server nur erforderlich, wenn die Momentaufnahme mithilfe von FTP übermittelt wird.  
   
- ![Komponenten und Verbindungen in der Websynchronisierung](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Components and connections in Web synchronization")  
+ ![Komponenten und Verbindungen in der Websynchronisierung](../../../relational-databases/replication/security/media/websyncarchitecture.gif "Komponenten und Verbindungen in der Websynchronisierung")  
   
  In den folgenden Tabellen werden die in der Abbildung dargestellten Komponenten und Verbindungen beschrieben.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "71710828"
 |----------------------------|-------------------------------------------|  
 |Windows-Authentifizierung|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyLogin%2A> und <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyPassword%2A> mit <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetProxyServer%2A>.<br /><br /> Merge-Agentbefehlszeile: **-InternetProxyLogin** und **-InternetProxyPassword** mit **-InternetProxyServer**.|  
   
-## <a name="d-connection-to-iis"></a>D. Verbindung zu IIS  
+## <a name="d-connection-to-iis"></a>D: Verbindung zu IIS  
  Nach Herstellen der Verbindung zum Abonnenten und Extrahieren von Änderungen aus der Abonnementdatenbank führt der Merge-Agent eine HTTPS-Anforderung an [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Internetinformationsdienste (Internet Information Services, IIS) aus und lädt Datenänderungen als XML-Nachricht herunter. Der Merge-Agent muss über eine Anmeldeberechtigung für IIS verfügen.  
   
 |Authentifizierungstyp|Stelle, an der die Authentifizierung angegeben wird|  
@@ -80,7 +80,7 @@ ms.locfileid: "71710828"
   
  Die Mergereplikationssynchronisierung stellt die Verbindung zum Verleger entweder mithilfe der Windows-Authentifizierung oder der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung her. Die Windows-Benutzer- oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung, die Sie angeben, muss folgende Kriterien erfüllen:  
   
--   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verlegers](../../../relational-databases/replication/security/secure-the-publisher.md).  
+-   Sie muss in der Veröffentlichungszugriffsliste (Publication Access List oder PAL) enthalten sein. Weitere Informationen finden Sie unter [Schützen des Verteilers](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
 -   Sie muss mit einem Benutzer in der Veröffentlichungsdatenbank verknüpft sein.  
   

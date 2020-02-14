@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
 ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 08/03/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "68770751"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
@@ -93,7 +93,7 @@ distrib [-?]
  Druckt alle verfügbaren Parameter.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
- Der Name des Verlegers. Geben Sie *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
+ Der Name des Verlegers. Geben Sie den *server_name* für die Standardinstanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an. Geben Sie _server_name_ **\\** _instance_name_ für eine benannte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf diesem Server an.  
   
  **-PublisherDB** _publisher_database_  
  Der Name der Verlegerdatenbank.  
@@ -113,7 +113,7 @@ distrib [-?]
  **-CommitBatchSize** _commit_batch_size_  
  Die Anzahl von Transaktionen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert ist 100, der maximale Wert beträgt 10.000.
   
- **-CommitBatchThreshold**  _commit_batch_threshold_  
+ **-CommitBatchThreshold** _commit_batch_threshold_  
  Die Anzahl von Replikationsbefehlen, die an den Abonnenten ausgegeben werden sollen, bevor eine COMMIT-Anweisung ausgegeben wird. Der Standardwert ist 1.000, der maximale Wert beträgt 10.000. 
   
  **-Continuous**  
@@ -137,7 +137,7 @@ distrib [-?]
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendet wird.  
   
-|Wert von EncryptionLevel|und Beschreibung|  
+|Wert von EncryptionLevel|Beschreibung|  
 |---------------------------|-----------------|  
 |**0**|Gibt an, dass SSL nicht verwendet wird.|  
 |**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
@@ -166,13 +166,13 @@ distrib [-?]
  **-FtpPort** _ftp_port_  
  Die Anschlussnummer des FTP-Diensts für den Verteiler. Wenn keine Portnummer angegeben wird, wird die Standardportnummer für den FTP-Dienst (21) verwendet.  
   
- **-FtpUserName** _FTP-Benutzername_  
+ **-FtpUserName** _ftp_user_name_  
  Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird. Wenn kein Benutzername angegeben wird, wird **anonymous** verwendet.  
   
  **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
  Gibt den Umfang des Verlaufs an, der während eines Verteilungsvorgangs protokolliert wird. Sie können die negativen Auswirkungen der Verlaufsprotokollierung auf die Leistung minimieren, indem Sie den Wert **1**auswählen.  
   
-|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|und Beschreibung|  
+|Wert von <legacyBold>HistoryVerboseLevel</legacyBold>|Beschreibung|  
 |-------------------------------|-----------------|  
 |**0**|Statusmeldungen werden entweder an der Konsole ausgegeben oder in eine Ausgabedatei geschrieben. Verlaufsdatensätze werden nicht in der Verteilungsdatenbank protokolliert.|  
 |**1**|Standard. Aktualisieren Sie immer eine vorherige Verlaufsmeldung mit dem gleichen Status (Start, Status, Erfolg usw.). Wenn kein vorheriger Datensatz mit dem gleichen Status vorhanden ist, fügen Sie einen neuen Datensatz ein.|  
@@ -197,7 +197,7 @@ distrib [-?]
 > [!NOTE]  
 >  Wenn sowohl -MaxDeliveredTransactions als auch -Continuous angegeben wird, übermittelt der Verteilungs-Agent die angegebene Anzahl der Transaktionen und wird dann (obwohl -Continuous angegeben wurde) beendet. Nachdem der Auftrag abgeschlossen wurde, müssen Sie den Verteilungs-Agent neu starten.  
   
- **-MessageInterval**  _message_interval_  
+ **-MessageInterval** _message_interval_  
  Das für die Verlaufsprotokollierung verwendete Zeitintervall. Ein Verlaufsereignis wird protokolliert, wenn einer der folgenden Parameter erreicht wird:  
   
 -   Der Wert von **TransactionsPerHistory** wird erreicht, nachdem das letzte Verlaufsereignis protokolliert wurde.  
@@ -218,13 +218,13 @@ distrib [-?]
  **-PacketSize** _packet_size_  
  Die Paketgröße in Bytes. Der Standardwert ist 4096 (Bytes).  
   
- **-PollingInterval** _polling_interval__  
+ **-PollingInterval** _polling_interval_  
  Gibt an, wie häufig replizierte Transaktionen aus der Verteilungsdatenbank abgefragt werden (in Sekunden). Die Standardeinstellung ist 5 Sekunden.  
   
  **-ProfileName** _profile_name_  
- Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replikations-Agent-Profile](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
+ Gibt ein Agentprofil an, das für Agentparameter verwendet werden soll. Wenn **ProfileName** den Wert NULL aufweist, wird das Agentprofil deaktiviert. Wenn **ProfileName** nicht angegeben ist, wird das Standardprofil für den Agenttyp verwendet. Weitere Informationen finden Sie unter [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
- **-Publication** _Veröffentlichung_  
+ **-Publication** _publication_  
  Der Name der Veröffentlichung. Dieser Parameter ist nur gültig, wenn die Veröffentlichung so festgelegt ist, dass sie immer eine Momentaufnahme für neue oder neu initialisierte Abonnements zur Verfügung hat.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
@@ -251,7 +251,7 @@ distrib [-?]
  **-SubscriberType** [ **0**| **1**| **3**]  
  Gibt den Typ der vom Verteilungs-Agent verwendeten Abonnentenverbindung an.  
   
-|Wert von SubscriberType|und Beschreibung|  
+|Wert von SubscriberType|Beschreibung|  
 |--------------------------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |**1**|ODBC-Datenquelle (ODBC data source)|  

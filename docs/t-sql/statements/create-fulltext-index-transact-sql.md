@@ -22,10 +22,10 @@ ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 5d51385ff820155d805803773265f39cd8598df6
-ms.sourcegitcommit: e37636c275002200cf7b1e7f731cec5709473913
+ms.sourcegitcommit: b2e81cb349eecacee91cd3766410ffb3677ad7e2
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 11/13/2019
+ms.lasthandoff: 02/01/2020
 ms.locfileid: "73981891"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "73981891"
 
   Erstellt einen Volltextindex für eine Tabelle oder eine indizierte Sicht in einer Datenbank in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pro Tabelle oder indizierter Sicht ist nur ein Volltextindex zulässig, und jeder Volltextindex gilt für eine einzelne Tabelle oder indizierte Sicht. Ein Volltextindex kann bis zu 1024 Spalten enthalten.  
   
- ![Themenlinksymbol](../../database-engine/configure-windows/media/topic-link.gif "Themenlink (Symbol)") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -96,14 +96,14 @@ Wird der Wert im Format Doppelbyte-Zeichensatz (Double-Byte Character Set, DBCS)
   
 Ressourcen, wie die Wörtertrennung und die Wortstammerkennung, müssen für die mit *language_term* angegebene Sprache aktiviert sein. Falls die angegebene Sprache von den Ressourcen nicht unterstützt wird, gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler zurück.  
   
-Verwenden Sie die gespeicherte Prozedur sp_configure, um auf Informationen zur Standardvolltextsprache der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zuzugreifen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)noch nicht kennen.  
+Verwenden Sie die gespeicherte Prozedur „sp_configure“, um auf Informationen zur Volltext-Standardsprache der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz zuzugreifen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)noch nicht kennen.  
   
 Verwenden Sie die neutrale (0x0) Sprachenressource für Nicht-BLOB- und Nicht-XML-Spalten mit Textdaten in mehreren Sprachen oder für Fälle, in denen die Sprache des in der Spalte gespeicherten Texts unbekannt ist. Zuerst sollten Sie jedoch die möglichen Folgen der Verwendung der neutralen (0x0) Sprachressource verstehen. Informationen zu den möglichen Lösungen und Folgen der Verwendung der neutralen (0x0) Sprachressource finden Sie unter [Auswählen einer Sprache beim Erstellen eines Volltextindex](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   
 Für Dokumente, die in XML- oder BLOB-Spalten gespeichert werden, wird die Sprachcodierung im Dokument bei der Indizierung verwendet. In XML-Spalten wird die Sprache z.B. mit dem **xml:lang**-Attribut in XML-Dokumenten identifiziert. Zur Abfragezeit wird der Wert, der vorher in *language_term* angegeben wurde, die Standardsprache, die für Volltextabfragen verwendet wird, es sei denn *language_term* wird als Teil einer Volltextabfrage angegeben.  
   
 STATISTICAL_SEMANTICS       
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) 
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher) 
   
 Erstellt den zusätzlichen Schlüsselausdruck und die Dokumentähnlichkeitsindizes, die Teil der statistischen semantischen Indizierung sind. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -143,7 +143,7 @@ Gibt an, dass die Standardvolltext-Systemstoppliste STOPLIST für diesen Volltex
 Gibt den Namen der Stoppliste an, die dem Volltextindex zugeordnet werden soll.  
   
 SEARCH PROPERTY LIST [ = ] *property_list_name*       
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)  
+**Gilt für:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher)  
   
 Ordnet dem Index eine Sucheigenschaftenliste zu.  
  
@@ -153,7 +153,7 @@ Gibt an, dass dem Volltextindex keine Eigenschaftenliste zugeordnet werden soll.
 *property_list_name*       
 Gibt den Namen der Sucheigenschaftenliste an, die dem Volltextindex zugeordnet werden soll.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>Bemerkungen  
 Weitere Informationen zu Volltextindizes finden Sie unter [Erstellen und Verwalten von Volltextindizes](../../relational-databases/search/create-and-manage-full-text-indexes.md).  
   
 Für **xml**-Spalten können Sie einen Volltextindex erstellen, mit dem der Inhalt der XML-Elemente indiziert, das XML-Markup jedoch ignoriert wird. Attributwerte werden volltextindiziert, sofern es sich nicht um numerische Werte handelt. Elementtags werden als Tokenbegrenzungen verwendet. Wohlgeformte XML- oder HTML-Dokumente und -Fragmente in mehreren Sprachen werden unterstützt. Weitere Informationen finden Sie unter [Verwenden der Volltextsuche mit XML-Spalten](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -163,11 +163,11 @@ Es ist empfehlenswert, als Indexschlüsselspalte einen Integer-Datentyp zu verwe
 ## <a name="interactions-of-change-tracking-and-no-population-parameter"></a>Interaktionen zwischen der Änderungsnachverfolgung und dem Parameter NO POPULATION  
  Ob der Volltextindex aufgefüllt wird, hängt davon ab, ob die Änderungsnachverfolgung aktiviert wurde und WITH NO POPULATION in der ALTER FULLTEXT INDEX-Anweisung angegeben ist. In der folgenden Tabelle wird das Ergebnis ihrer Interaktion zusammengefasst.  
   
-|Änderungsnachverfolgung|WITH NO POPULATION|Ergebnis|  
+|Change Tracking|WITH NO POPULATION|Ergebnis|  
 |---------------------|------------------------|------------|  
 |Nicht aktiviert|Nicht angegeben|Der Index wird vollständig aufgefüllt.|  
-|Nicht aktiviert|Specified|Der Index wird nicht aufgefüllt, bevor eine Anweisung ALTER FULLTEXT INDEX...START POPULATION ausgegeben wird.|  
-|Aktiviert|Specified|Ein Fehler wird ausgelöst, und der Index wird nicht geändert.|  
+|Nicht aktiviert|Angegeben|Der Index wird nicht aufgefüllt, bevor eine Anweisung ALTER FULLTEXT INDEX...START POPULATION ausgegeben wird.|  
+|Aktiviert|Angegeben|Ein Fehler wird ausgelöst, und der Index wird nicht geändert.|  
 |Aktiviert|Nicht angegeben|Der Index wird vollständig aufgefüllt.|  
   
  Weitere Informationen zum Auffüllen von Volltextindizes finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).  
